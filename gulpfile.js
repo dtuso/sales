@@ -3,10 +3,10 @@ var swig = require('gulp-swig');
 var less = require('gulp-less');
 
 var paths = {
-  templates: ['./sales/**/*.html'],
-  layouts: ['./layouts/**/*.html'],
-  less: './sales/**/*.less',
-  json: './sales/**/*.json'
+  templates: ['./src/sales/**/*.html'],
+  layouts: ['./src/layouts/**/*.html'],
+  less: './src/sales/**/*.less',
+  json: ['./_globals.json','./src/sales/**/*.json']
 };
 
 var swigOpts = {
@@ -14,7 +14,7 @@ var swigOpts = {
   setup: function(swig) {
     swig.setDefaults({
       cache: false,
-      loader: swig.loaders.fs('./layouts'),
+      loader: swig.loaders.fs('./src/layouts'),
       locals: require('./_globals.json')
     });
   }
