@@ -6,27 +6,27 @@
   <head>
 
     <meta charset="utf-8" />
-    <title>{{ meta.title }}</title>
+    <title>{{ metaTitle }}</title>
 
-    <meta name="description" content="{{ meta.description }}" />
-    <meta name="keywords" content="{{ meta.keywords }}" />
+    <meta name="description" content="{{ metaDescription }}" />
+    <meta name="keywords" content="{{ metaKeywords }}" />
 
     <!-- Facebook Open Graph Meta Data -->
-    <meta property="og:title" content="{{ meta.og.title }}" />
+    <meta property="og:title" content="{{ metaOgTitle }}" />
     <meta property="og:type" content="product" />
-    <meta property="og:url" content="[@T[link:<external linktype='siteurl' path='{{ meta.canonicalPath }}' secure='false' parammode='explicit'/>]@T]" />
-    <meta property="og:image" content="[@T[link:<imageroot />]@T]{{ meta.og.image }}" />
+    <meta property="og:url" content="[@T[link:<external linktype='siteurl' path='{{ metaCanonicalPath }}' secure='false' parammode='explicit'/>]@T]" />
+    <meta property="og:image" content="[@T[link:<imageroot />]@T]{{ metaOgImage }}" />
     <meta property="og:site_name" content="[@T[companyname:name]@T]" />
-    <meta property="fb:app_id" content="{{ meta.og.app_id }}" />
-    <meta property="fb:admins" content="{{ meta.og.admins }}" />
-    <meta property="og:description" content="{{ meta.og.description }}" />
+    <meta property="fb:app_id" content="{{ metaOgAppID }}" />
+    <meta property="fb:admins" content="{{ metaOgAdmins }}" />
+    <meta property="og:description" content="{{ metaOgDescription }}" />
 
     <link rel="shortcut icon" href="[@T[link:<imageroot />]@T]assets/godaddy.ico" />
-    <link rel="canonical" href="[@T[link:<external linktype='siteurl' path='{{ meta.canonicalPath }}' secure='false' parammode='explicit'/>]@T]"/>
+    <link rel="canonical" href="[@T[link:<external linktype='siteurl' path='{{ metaCanonicalPath }}' secure='false' parammode='explicit'/>]@T]"/>
 
     <!-- Global CSS and Page CSS -->
     <link href="[@T[link:<cssroot />]@T]fos/201401/global/css/{{ cssVersion }}/combined-{{ cssVersion }}.min.css" rel="stylesheet" type="text/css">
-    <link href="[@T[link:<cssroot />]@T]{{ meta.cssPath }}styles.min.css" rel="stylesheet" type="text/css">
+    <link href="[@T[link:<cssroot />]@T]{{ assetPath }}styles.min.css" rel="stylesheet" type="text/css">
 
     <!-- IE SUPPORT FOR HTML5 and Bootstrap 3 -->
     <!--[if lt IE 9]>

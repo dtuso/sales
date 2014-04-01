@@ -4,7 +4,9 @@ var less = require('gulp-less');
 
 var paths = {
   templates: ['./sales/**/*.html'],
-  less: './sales/**/*.less'
+  layouts: ['./layouts/**/*.html'],
+  less: './sales/**/*.less',
+  json: './sales/**/*.json'
 };
 
 var swigOpts = {
@@ -40,6 +42,7 @@ gulp.task('lessmin', function() {
 
 gulp.task('watch', function() {
   gulp.watch(paths.templates, ['templates']);
+  gulp.watch(paths.json, ['templates']);
   gulp.watch(paths.less, ['less', 'lessmin']);
 });
 
