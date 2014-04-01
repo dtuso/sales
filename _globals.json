@@ -1,0 +1,19 @@
+{
+  "jqueryVersion": "1.8.3",
+  "cssVersion": "3.2.0",
+  "jsVersion": "2.1.0",
+  "assetPath": "fos/",
+  "meta": {
+    "title": "GoDaddy",
+    "description": "",
+    "keywords": "",
+    "canonicalPath": "",
+    "og": {
+      "title": "",
+      "image": "",
+      "description": "",
+      "app_id": "115696031791232",
+      "admins": "633356800"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "assetPath": "fos/201401/hosting/website-builder/",
+  "meta": {
+    "title": "[@L[cds.sales/gd/hosting/website-builder:page-title]@L]",
+    "description": "[@L[cds.sales/gd/hosting/website-builder:meta-description]@L]",
+    "keywords": "[@L[cds.sales/gd/hosting/website-builder:meta-keywords]@L]",
+    "canonicalPath": "/hosting/website-builder.aspx",
+    "og": {
+      "title": "[@L[cds.sales/gd/hosting/website-builder:og-title]@L]",
+      "image": "fos/201401/hosting/website-builder/img/og.png",
+      "description": "[@L[cds.sales/gd/hosting/website-builder:og-description]@L]"
+    }
+  }
+}
