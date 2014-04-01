@@ -1,7 +1,6 @@
 var gulp = require('gulp');
 var swig = require('gulp-swig');
 var less = require('gulp-less');
-var minify = require('gulp-minify-css');
 
 var paths = {
   templates: ['./sales/**/*.html'],
