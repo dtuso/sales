@@ -12,12 +12,12 @@
         "fullName": "Colyn Brown",
         "username": "clbrown"
       },
-      "jiraTicket": "false",
+      "jiraTicket": false,
       "comments": "Prep for new build process",
       "url": "http://www.dev-godaddy.com/hosting/website-builder.aspx"
     }
   },
-  "assetPath": "fos/201401/hosting/website-builder/",
+  "assetPath": "fos/201401/sales/hosting/website-builder/",
   "metaTitle": "[@L[cds.sales/gd/hosting/website-builder:page-title]@L]",
   "metaDescription": "[@L[cds.sales/gd/hosting/website-builder:meta-description]@L]",
   "metaKeywords": "[@L[cds.sales/gd/hosting/website-builder:meta-keywords]@L]",

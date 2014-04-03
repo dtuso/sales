@@ -6,7 +6,7 @@
     },
     "cdsLocation": "sales/domainaddon/domain-backorders.aspx",
     "draft": {
-      "id": false,
+      "id": "533cd571f778fc35c4203ac7",
       "createdDate": "2014-04-02",
       "createdBy": {
         "fullName": "Colyn Brown",
@@ -17,7 +17,7 @@
       "url": "http://www.dev-godaddy.com/domainaddon/domain-backorders.aspx"
     }
   },
-  "assetPath": "fos/201401/domainaddon/domain-backorders/",
+  "assetPath": "201401/sales/domainaddon/domain-backorders/",
   "metaTitle": "[@L[cds.sales/gd/domainaddon/domain-backorders2:MetaTitle]@L]",
   "metaDescription": "[@L[cds.sales/gd/domainaddon/domain-backorders2:MetaDescription]@L]",
   "metaKeywords": "[@L[cds.sales/gd/domainaddon/domain-backorders2:MetaKeywords]@L]",
