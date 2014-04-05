@@ -26,10 +26,19 @@ git clone git@github.secureserver.net:FOS-CDS-Pages/Sales.git && cd Sales
 If you're not an owner, you can fork the respository using the button in the upper right. Once forked, use either the
 command line or your GUI to clone the repo.
 
+**Install global dependencies**
 
-**Install dependencies**
+#### Gulp
 
-Before you do anything, it is important that you install any dependencies associated to this repo via the ```package.json``` file.
+This new repository requires [GulpJS](http://www.gulpjs.com) for running the build tasks. You'll need to make sure it's installed.
+
+```
+sudo npm install -g gulp
+```
+
+**Install local dependencies**
+
+Before you do anything, it is important that you install any local dependencies associated to this repo via the ```package.json``` file.
 Dependencies are installed via the node package manager, ```npm``` so you have to make sure you have node installed.
 See [Node Website](http://www.nodejs.org/) for more information.
 
@@ -38,6 +47,10 @@ Once you've ensured node is installed, open your project folder in terminal or t
 ```
 npm install
 ```
+
+This will find and install any dependencies you have listed in the ```package.json``` file.
+
+
 
 Tasks
 =====
