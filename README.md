@@ -73,3 +73,14 @@ This task simply takes any images you have and copies them to the build folder a
 #### WATCH
 A watch task is set up so that any changes made to any of the above files, their associated tasks will automatically get run.
 For example, if you make a change to your html file, upon save, Gulp will execute the templates task.
+
+CDSM Tool
+=====
+
+TODO: Describe CDS API process.
+
+Roadmap
+=====
+
+ * i18n support / language token generation
+ * 
