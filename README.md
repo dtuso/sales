@@ -9,7 +9,7 @@ There are trade-offs of course. While it will now be easier to manage all repos,
 careful to manage merges and conflicts, as this repository will be modified by many developers working on many different
 projects.
 
-## Ownership
+### Ownership
 
 Ownership will only be assigned to designated page champions. All other developers, as a matter of course, will need to
 fork this repostiory, make, commit, and push their changes, then do a merge request.
@@ -17,13 +17,23 @@ fork this repostiory, make, commit, and push their changes, then do a merge requ
 Install
 =====
 
-Clone repo
+If you're an owner, you can clone the repo directly:
 
 ```
 git clone git@github.secureserver.net:FOS-CDS-Pages/Sales.git && cd Sales
 ```
 
-Install dependencies
+If you're not an owner, you can fork the respository using the button in the upper right. Once forked, use either the
+command line or your GUI to clone the repo.
+
+
+**Install dependencies**
+
+Before you do anything, it is important that you install any dependencies associated to this repo via the ```package.json``` file.
+Dependencies are installed via the node package manager, ```npm``` so you have to make sure you have node installed.
+See [Node Website](http://www.nodejs.org/) for more information.
+
+Once you've ensured node is installed, open your project folder in terminal or the git shell. Then type this command:
 
 ```
 npm install
