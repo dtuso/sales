@@ -1,18 +1,18 @@
 {
   "page": {
     "champion": {
-      "name": "COLYN BROWN",
-      "email": "clbrown@godaddy.com"
+      "name": "David Utley",
+      "email": "dutley@godaddy.com"
     },
     "cdsLocation": "sales/hosting/website-builder.aspx",
     "draft": {
-      "id": false,
+      "id": "533f00b4f778fc3cdc40935b",
       "createdDate": "2014-04-02",
       "createdBy": {
         "fullName": "Colyn Brown",
         "username": "clbrown"
       },
-      "jiraTicket": false,
+      "jiraTicket": "None",
       "comments": "Prep for new build process",
       "url": "http://www.dev-godaddy.com/hosting/website-builder.aspx"
     }

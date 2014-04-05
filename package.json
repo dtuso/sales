@@ -16,8 +16,7 @@
   },
   "dependencies": {
     "yargs": "^1.2.1",
-    "node-simple-cache": "git+ssh://git@github.secureserver.net:FOS-CDS-Pages/node-simple-cache.git",
-    "prompt": "^0.2.12",
-    "gulp-changed": "^0.3.0"
+    "lodash": "^2.4.1",
+    "gulp-jade": "^0.4.2"
   }
 }
