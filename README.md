@@ -56,10 +56,30 @@ Tasks
 Tasks are now executed with [GulpJS](http://www.gulpjs.com) instead of Grunt. It would be helpful to get more
 acquainted with Gulp before continuing.
 
-### LESS, LESSMIN
-These two tasks will compile and minify any less files you have in your CSS folder.
+#### LESS, LESSMIN
+These two tasks will compile and minify any less files you have in your CSS folder. The compiled CSS, gets copied
+to the ```build``` folder and out to the image server.
 
-### TEMPLATES
-This task will render your templates, preparing them for CDS importing. The task uses a gulp plugin called [gulp-swig](https://www.npmjs.org/package/gulp-swig)
-render templates using the Swig JS template engine. This lets you use layouts, variables, includes within your pages to help keep things [DRY](http://en.wikipedia.org/wiki/Don't_repeat_yourself)
+#### TEMPLATES
+This task will render your templates, preparing them for CDS importing. The task uses a gulp plugin called
+[gulp-swig](https://www.npmjs.org/package/gulp-swig) which renders your templates using the Swig JS template engine. This
+lets you use layouts, variables, and includes within your pages to help keep things
+[DRY](http://en.wikipedia.org/wiki/Don't_repeat_yourself). The compiled templates get copied to the ```build``` folder and
+out to the image server.
 
+#### IMAGES
+This task simply takes any images you have and copies them to the build folder and out to the image server.
+
+#### WATCH
+A watch task is set up so that any changes made to any of the above files, their associated tasks will automatically get run.
+For example, if you make a change to your html file, upon save, Gulp will execute the templates task.
+
+CDSM Tool
+=====
+
+TODO: Describe CDS API process.
+
+Roadmap
+=====
+
+ * i18n support / language token generation
