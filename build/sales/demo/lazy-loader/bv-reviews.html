@@ -61,8 +61,7 @@ END DOC BLOCK -->
 
     <!-- Global CSS and Page CSS -->
     <link href="[@T[link:<cssroot />]@T]fos/201401/global/css/3.2.0/combined-3.2.0.min.css" rel="stylesheet" type="text/css">
-    <link href="[@T[link:<cssroot />]@T]fos/styles.min.css" rel="stylesheet" type="text/css">
-
+    
     <!-- IE SUPPORT FOR HTML5 and Bootstrap 3 -->
     <!--[if lt IE 9]>
       <link href="[@T[link:<cssroot />]@T]fos/201401/global/css/bootstrap-ie7fix.min.css" rel="stylesheet" type="text/css" />
@@ -80,14 +79,12 @@ END DOC BLOCK -->
 
       
 
-<!-- HI RYAN -->
-
-<div class="container">
-  <button id="loadReviews">Load Reviews</button>
-</div>
-<div class="container">
-  [@P[userControl:<Data location="~/Shared/Tabs/controls/BVReviewsNoJS.ascx"><Parameters><Parameter key="ProductId" value="website_builder" /><Parameter key="ReviewNumber" value="4" /></Parameters></Data>]@P]
-</div>
+    <div class="container">
+      <button class="btn" id="loadReviews">Load Reviews</button>
+    </div>
+    <div class="container">
+      [@P[userControl:<Data location="~/Shared/Tabs/controls/BVReviewsNoJS.ascx"><Parameters><Parameter key="ProductId" value="website_builder" /><Parameter key="ReviewNumber" value="4" /></Parameters></Data>]@P]
+    </div>
 
 
 
@@ -102,44 +99,44 @@ END DOC BLOCK -->
     <script src="[@T[link:<javascriptroot />]@T]fos/script/atlantis_jquery14.min.js" type="text/javascript"></script>
     <script src="[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2" type="text/javascript"></script>
     <script src="[@T[link:<javascriptroot />]@T]fos/201401/global/vendor/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-  	<script src="[@T[link:<javascriptroot />]@T]fos/201401/global/js/2.1.0/global-2.1.0.min.js" type="text/javascript" ></script>
+    <script src="[@T[link:<javascriptroot />]@T]fos/201401/global/js/2.1.0/global-2.1.0.min.js" type="text/javascript" ></script>
     
 
-<script type="text/javascript">
-  var loadReviews = function(){
-    if (typeof $BV != "undefined") {
-      $BV.configure("global", {
-        allowSamePageSubmission: true,
-        userToken: "[@P[userControl:<Data location="~/Shared/BazaarVoice/SessionUserToken.ascx"></Data>]@P]",
-        doLogin: function(successCallback, successUrl) {
-          $('#g-modal-loginAcct').modal({
-            overlayId: "g-modal-overlay",
-            close: "false",
-            autoPosition: "true"
+    <script type="text/javascript">
+      var loadReviews = function(){
+        if (typeof $BV != "undefined") {
+          $BV.configure("global", {
+            allowSamePageSubmission: true,
+            userToken: "[@P[userControl:<Data location="~/Shared/BazaarVoice/SessionUserToken.ascx"></Data>]@P]",
+            doLogin: function(successCallback, successUrl) {
+              $('#g-modal-loginAcct').modal({
+                overlayId: "g-modal-overlay",
+                close: "false",
+                autoPosition: "true"
+              });
+            },
+            doScrollSubmission: function () {
+              return false;
+            }
           });
-        },
-        doScrollSubmission: function () {
-          return false;
+          $BV.ui("rr", "show_reviews", {
+            productId: "website_builder",
+            num: 4,
+            doShowContent: function() {}
+          });
         }
+      };
+      $('#loadReviews').on('click', function(e){
+        e.preventDefault();
+        (function() {
+          var bv = document.createElement('script'); bv.type = 'text/javascript';
+          bv.async = true;
+          bv.src = '[@P[userControl:<Data location="~/Scripts/BVScriptUrlOnly.ascx"></Data>]@P]';
+          bv.onload = loadReviews;
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(bv);
+        })();
       });
-      $BV.ui("rr", "show_reviews", {
-        productId: "website_builder",
-        num: 4,
-        doShowContent: function() {}
-      });
-    }
-  };
-  $('#loadReviews').on('click', function(e){
-    e.preventDefault();
-    (function() {
-        var bv = document.createElement('script'); bv.type = 'text/javascript';
-        bv.async = true;
-        bv.src = '[@P[userControl:<Data location="~/Scripts/BVScriptUrlOnly.ascx"></Data>]@P]';
-        bv.onload = loadReviews;
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(bv);
-    })();
-  });
-</script>
+    </script>
 
 
 
