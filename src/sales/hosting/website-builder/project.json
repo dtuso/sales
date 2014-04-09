@@ -1,0 +1,49 @@
+{
+  "website-builder.html": {
+    "cdsDetails": {
+      "champion": {
+        "name": "David Utley",
+        "email": "dutley@godaddy.com"
+      },
+      "cdsLocation": "sales/hosting/website-builder.aspx",
+      "draft": {
+        "id": "5345cf82f778fc0e805a9217",
+        "createdDate": "2014-04-02",
+        "createdBy": {
+          "fullName": "Colyn Brown",
+          "username": "clbrown"
+        },
+        "jiraTicket": "None",
+        "comments": "Prep for new build process",
+        "url": "http://www.dev-godaddy.com/hosting/website-builder.aspx"
+      }
+    },
+    "assetPath": "fos/201401/sales/hosting/website-builder/",
+    "metaTitle": "[@L[cds.sales/gd/hosting/website-builder:page-title]@L]",
+    "metaDescription": "[@L[cds.sales/gd/hosting/website-builder:meta-description]@L]",
+    "metaKeywords": "[@L[cds.sales/gd/hosting/website-builder:meta-keywords]@L]",
+    "metaCanonicalPath": "/hosting/website-builder.aspx",
+    "metaOgTitle": "[@L[cds.sales/gd/hosting/website-builder:og-title]@L]",
+    "metaOgImage": "fos/201401/hosting/website-builder/img/og.png",
+    "metaOgDescription": "[@L[cds.sales/gd/hosting/website-builder:og-description]@L]"
+  },
+  "website-builder.language": {
+    "cdsDetails": {
+      "champion": {
+        "name": "David Utley",
+        "email": "dutley@godaddy.com"
+      },
+      "cdsLocation": "localization/sales/hosting/website-builder/en",
+      "draft": {
+        "id": "5345d1b0f778fc0e805a921f",
+        "createdDate": "2014-04-02",
+        "createdBy": {
+          "fullName": "Colyn Brown",
+          "username": "clbrown"
+        },
+        "jiraTicket": "None",
+        "comments": "Prep for new build process"
+      }
+    }
+  }
+}

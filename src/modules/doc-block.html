@@ -1,0 +1,33 @@
+<!-- DOC BLOCK (DO NOT REMOVE)
+
+
+
+
+
+
+    IMPORTANT:
+      If version control is enabled for this page all changes to this page must also go through version control.
+
+    VERSION CONTROL:
+      https://github.secureserver.net/FOS-CDS-Pages/Sales
+
+    WEB PAGE CHAMPION:
+      {{ cdsDetails.champion.name }} <{{ cdsDetails.champion.email }}>
+
+    DRAFT DETAILS:
+      Name:         {{ cdsDetails.draft.createdDate }} - {{ cdsDetails.draft.createdBy.username }} - {{ cdsDetails.draft.jiraTicket }}
+      Created Date: {{ cdsDetails.draft.createdDate }}
+      Created By:   {{ cdsDetails.draft.createdBy.fullName }} <{{ cdsDetails.draft.createdBy.username }}>
+      JIRA Ticket:  {{ cdsDetails.draft.jiraTicket }}
+      Comments:     {{ cdsDetails.draft.comments }}
+{% if cdsDetails.draft.url %}
+    PREVIEW URL:
+      {{ cdsDetails.draft.url }}{% if cdsDetails.draft.id %}?version={{ cdsDetails.cdsLocation }}|{{cdsDetails.draft.id}}{% endif %}
+{% endif %}
+
+
+
+
+
+
+END DOC BLOCK -->

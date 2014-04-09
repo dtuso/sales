@@ -1,0 +1,23 @@
+{
+  "bv-reviews.html": {
+    "cdsDetails": {
+      "champion": {
+        "name": "COLYN BROWN",
+        "email": "clbrown@godaddy.com"
+      },
+      "cdsLocation": "sales/demo/lazy-loader/bv-reviews.html",
+      "draft": {
+        "id": "53443788f778fc1c24d29041",
+        "createdDate": "2014-04-08",
+        "createdBy": {
+          "fullName": "Colyn Brown",
+          "username": "clbrown"
+        },
+        "jiraTicket": "FOS-14691",
+        "comments": "Demo lazy loaded bv reviews",
+        "url": "http://www.dev-godaddy.com/demo/lazy-loader/bv-reviews.html"
+      }
+    },
+    "metaCanonicalPath": "/demo/lazy-loader/bv-reviews.html"
+  }
+}

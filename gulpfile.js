@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var changed = require('gulp-changed');
 var swig = require('gulp-swig');
 var less = require('gulp-less');
 var cdsm = require('gulp-cdsm');
@@ -6,6 +7,7 @@ var args = require('yargs').argv;
 var _ = require('lodash');
 var paths = require('./paths.json');
 var jade = require('gulp-jade');
+var path = require('path');
 
 function getUserHome() {
   return process.env[(process.platform === 'win32') ? 'USERPROFILE' : 'HOME'];
@@ -21,7 +23,7 @@ var theme = args.theme || 'scotty';
 var rootAssetPath = (process.platform === 'win32') ? '\\\\g1dwimages001\\images\\fos\\sales\\themes\\' + theme + '\\' : '/Volumes/images/fos/sales/themes/' + theme + '/';
 
 var paths = {
-  templates: ['./src/sales/' + baseFilePath + '/*.html'],
+  templates: ['./src/sales/' + baseFilePath + '/*.html', './src/sales/' + baseFilePath + '/*.language'],
   layouts: ['./src/layouts/' + baseFilePath + '/*.html'],
   less: './src/sales/' + baseFilePath + '/css/**/*.less',
   images: './src/sales/' + baseFilePath + '/img/**/*',
@@ -30,8 +32,20 @@ var paths = {
   assets: rootAssetPath + baseFilePath
 };
 
+console.log(paths);
+
+var getProjectData = function(file) {
+  var fileName = path.basename(file.path);
+  var projectFilePath = path.join(path.dirname(file.path), 'project.json');
+  return require(projectFilePath)[fileName];
+}
+
+var cdsmOpts = {
+  projectData: getProjectData
+};
+
 var swigOpts = {
-  load_json: true,
+  data: getProjectData,
   setup: function(swig) {
     swig.setDefaults({
       cache: false,
@@ -43,18 +57,9 @@ var swigOpts = {
 
 gulp.task('templates', function() {
   gulp.src(paths.templates)
+    .pipe(changed(paths.build))
     .pipe(swig(swigOpts))
-    .pipe(cdsm())
-    .pipe(gulp.dest(paths.build))
-});
-
-/* Experimental Jade Template Rendering */
-gulp.task('jade', function() {
-  gulp.src(['./src/sales/' + baseFilePath + '/*.jade'])
-    .pipe(jade({
-      pretty: true,
-      locals: require('./_globals.json')
-    }))
+    .pipe(cdsm(cdsmOpts))
     .pipe(gulp.dest(paths.build))
 });
 

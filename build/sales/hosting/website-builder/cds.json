@@ -1,7 +1,12 @@
 {
+ "website-builder.language": {
+  "location": "localization/sales/hosting/website-builder/en",
+  "id": "5345b4d9f778fc0e805a91b1",
+  "name": "asdasd"
+ },
  "website-builder.html": {
   "location": "sales/hosting/website-builder.aspx",
-  "id": "53432bedf778fc21b894439d",
-  "name": "2014-04-07 - clbrown - TEST"
+  "id": "533f00b4f778fc3cdc40935b",
+  "name": null
  }
 }
