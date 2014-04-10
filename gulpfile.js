@@ -32,8 +32,6 @@ var paths = {
   assets: rootAssetPath + baseFilePath
 };
 
-console.log(paths);
-
 var getProjectData = function(file) {
   var fileName = path.basename(file.path);
   var projectFilePath = path.join(path.dirname(file.path), 'project.json');
