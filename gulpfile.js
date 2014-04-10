@@ -70,8 +70,8 @@ gulp.task('templates', function() {
 gulp.task('less', function() {
   gulp.src(paths.less)
     .pipe(less())
-    .pipe(gulp.dest(paths.assets + '/css/'))
-    .pipe(gulp.dest(paths.build + '/css/'));
+    .pipe(gulp.dest(paths.build + '/css/'))
+    .pipe(gulp.dest(paths.assets + '/css/'));
 });
 
 gulp.task('cssmin', function() {
@@ -80,8 +80,8 @@ gulp.task('cssmin', function() {
     .pipe(rename(({
       suffix: '.min'
     })))
-    .pipe(gulp.dest(paths.assets + '/css/'))
-    .pipe(gulp.dest(paths.build + '/css/'));
+    .pipe(gulp.dest(paths.build + '/css/'))
+    .pipe(gulp.dest(paths.assets + '/css/'));
 });
 
 gulp.task('images', function() {
