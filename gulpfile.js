@@ -83,7 +83,7 @@ gulp.task('language', function() {
     .pipe(gulp.dest(paths.build));
 });
 
-gulp.task('html-deploy', function() {
+gulp.task('templates-deploy', function() {
   gulp.src(['./build/sales/' + baseFilePath + '/**/*.html'])
     .pipe(cdsm(cdsmOpts));
 });
@@ -98,7 +98,7 @@ gulp.task('projectfile', function() {
     .pipe(gulp.dest(paths.build));
 });
 
-gulp.task('less', function() {
+gulp.task('styles', function() {
   gulp.src(paths.less)
     .pipe(less())
     .pipe(gulp.dest(paths.build + '/css/'))
@@ -114,7 +114,7 @@ gulp.task('images', function() {
     .pipe(gulp.dest(paths.build + '/img/'));
 });
 
-gulp.task('assetdeploy', function() {
+gulp.task('assets-deploy', function() {
   gulp.src(paths.build+'/**/*')
     .pipe(gulp.dest(paths.assets));
 });
@@ -122,13 +122,13 @@ gulp.task('assetdeploy', function() {
 gulp.task('watch', function() {
   gulp.watch(paths.templates, ['templates','projectfile']);
   gulp.watch(paths.language, ['language','projectfile']);
-  gulp.watch('./build/sales/' + baseFilePath + '/**/*.html', ['html-deploy']);
+  gulp.watch('./build/sales/' + baseFilePath + '/**/*.html', ['templates-deploy']);
   gulp.watch('./build/sales/' + baseFilePath + '/**/*.language', ['language-deploy']);
   gulp.watch(paths.json, ['templates']);
-  gulp.watch(paths.less, ['less']);
+  gulp.watch(paths.less, ['styles']);
   gulp.watch(paths.images, ['images']);
 });
 
-gulp.task('deploy', ['html-deploy', 'language-deploy']);
-gulp.task('assets', ['less', 'images', 'assetdeploy']);
+gulp.task('deploy', ['templates-deploy', 'language-deploy']);
+gulp.task('assets', ['styles', 'images', 'assets-deploy']);
 gulp.task('default', ['watch']);
