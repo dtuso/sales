@@ -9,6 +9,11 @@ var paths = require('./paths.json');
 var jade = require('gulp-jade');
 var path = require('path');
 var rename = require("gulp-rename");
+var cssmin = require('gulp-cssmin');
+
+var p = function(arg) {
+  return path.normalize(arg);
+};
 
 function getUserHome() {
   return process.env[(process.platform === 'win32') ? 'USERPROFILE' : 'HOME'];
@@ -24,17 +29,13 @@ var theme = args.theme || 'scotty';
 var rootAssetPath = (process.platform === 'win32') ? '\\\\g1dwimages001\\images\\fos\\sales\\themes\\' + theme + '\\' : '/Volumes/images/fos/sales/themes/' + theme + '/';
 
 var paths = {
-  templates: ['./src/sales/' + baseFilePath + '/*.html', './src/sales/' + baseFilePath + '/*.language'],
-  layouts: ['./src/layouts/' + baseFilePath + '/*.html'],
-  less: './src/sales/' + baseFilePath + '/css/**/*.less',
-  images: './src/sales/' + baseFilePath + '/img/**/*',
-  json: ['./_globals.json', './src/sales/' + baseFilePath + '/*.json'],
-  build: './build/sales/' + baseFilePath,
+  templates: [p('./src/sales/' + baseFilePath + '/*.html'), p('./src/sales/' + baseFilePath + '/*.language')],
+  layouts: [p('./src/layouts/' + baseFilePath + '/*.html')],
+  less: p('./src/sales/' + baseFilePath + '/css/**/*.less'),
+  images: p('./src/sales/' + baseFilePath + '/img/**/*'),
+  json: [p('./_globals.json', './src/sales/' + baseFilePath + '/*.json')],
+  build: p('./build/sales/' + baseFilePath),
   assets: rootAssetPath + baseFilePath
-};
-
-var renameCssFile = function(path) {
-  path.extname = ".min.css"
 };
 
 var getProjectData = function(file) {
@@ -73,12 +74,12 @@ gulp.task('less', function() {
     .pipe(gulp.dest(paths.build + '/css/'));
 });
 
-gulp.task('lessmin', function() {
-  gulp.src(paths.less)
-    .pipe(less({
-      compress: true
-    }))
-    .pipe(rename(renameCssFile))
+gulp.task('cssmin', function() {
+  gulp.src([paths.build + '/css/*.css', '!' + paths.build + '/css/*.min.*'])
+    .pipe(cssmin())
+    .pipe(rename(({
+      suffix: '.min'
+    })))
     .pipe(gulp.dest(paths.assets + '/css/'))
     .pipe(gulp.dest(paths.build + '/css/'));
 });
