@@ -1,13 +1,14 @@
 var gulp = require('gulp');
 var changed = require('gulp-changed');
 var swig = require('gulp-swig');
-var less = require('./vendor/gulp-less');
+var less = require('gulp-less');
 var cdsm = require('gulp-cdsm');
 var args = require('yargs').argv;
 var _ = require('lodash');
 var paths = require('./paths.json');
 var jade = require('gulp-jade');
 var path = require('path');
+var rename = require("gulp-rename");
 
 function getUserHome() {
   return process.env[(process.platform === 'win32') ? 'USERPROFILE' : 'HOME'];
@@ -30,6 +31,10 @@ var paths = {
   json: ['./_globals.json', './src/sales/' + baseFilePath + '/*.json'],
   build: './build/sales/' + baseFilePath,
   assets: rootAssetPath + baseFilePath
+};
+
+var renameCssFile = function(path) {
+  path.extname = ".min.css"
 };
 
 var getProjectData = function(file) {
@@ -73,6 +78,7 @@ gulp.task('lessmin', function() {
     .pipe(less({
       compress: true
     }))
+    .pipe(rename(renameCssFile))
     .pipe(gulp.dest(paths.assets + '/css/'))
     .pipe(gulp.dest(paths.build + '/css/'));
 });

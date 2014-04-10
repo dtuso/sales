@@ -19,6 +19,7 @@
     "gulp-changed": "^0.3.0"
   },
   "dependencies": {
-    "gulp-cdsm": "git+ssh://git@github.secureserver.net:WebOps/gulp-cdsm.git"
+    "gulp-cdsm": "git+ssh://git@github.secureserver.net:WebOps/gulp-cdsm.git",
+    "gulp-rename": "^1.2.0"
   }
 }
