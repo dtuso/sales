@@ -6,44 +6,50 @@
 <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="[@T[localization:<language full="true" />]@T]"> <![endif]-->
 <!--[if IE 8]>    <html class="no-js lt-ie9" lang="[@T[localization:<language full="true" />]@T]"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="[@T[localization:<language full="true" />]@T]"> <!--<![endif]-->
+
   <head>
+    {% block metahead %}
 
-    <meta charset="utf-8" />
-    <title>{{ metaTitle }}</title>
+      <meta charset="utf-8" />
+      <title>{{ metaTitle }}</title>
 
-    <meta name="description" content="{{ metaDescription }}" />
-    <meta name="keywords" content="{{ metaKeywords }}" />
+      <meta name="description" content="{{ metaDescription }}" />
+      <meta name="keywords" content="{{ metaKeywords }}" />
 
-    <!-- Facebook Open Graph Meta Data -->
-    <meta property="og:title" content="{{ metaOgTitle }}" />
-    <meta property="og:type" content="product" />
-    <meta property="og:url" content="[@T[link:<external linktype='siteurl' path='{{ metaCanonicalPath }}' secure='false' parammode='explicit'/>]@T]" />
-    {% if metaOgImage %}
-    <meta property="og:image" content="[@T[link:<imageroot />]@T]{{ metaOgImage }}" />
-    {% endif %}
-    <meta property="og:site_name" content="[@T[companyname:name]@T]" />
-    <meta property="fb:app_id" content="{{ metaOgAppID }}" />
-    <meta property="fb:admins" content="{{ metaOgAdmins }}" />
-    <meta property="og:description" content="{{ metaOgDescription }}" />
+      <!-- Facebook Open Graph Meta Data -->
+      <meta property="og:title" content="{{ metaOgTitle }}" />
+      <meta property="og:type" content="product" />
+      <meta property="og:url" content="[@T[link:<external linktype='siteurl' path='{{ metaCanonicalPath }}' secure='false' parammode='explicit'/>]@T]" />
+      {% if metaOgImage %}
+      <meta property="og:image" content="[@T[link:<imageroot />]@T]{{ metaOgImage }}" />
+      {% endif %}
+      <meta property="og:site_name" content="[@T[companyname:name]@T]" />
+      <meta property="fb:app_id" content="{{ metaOgAppID }}" />
+      <meta property="fb:admins" content="{{ metaOgAdmins }}" />
+      <meta property="og:description" content="{{ metaOgDescription }}" />
 
-    <link rel="shortcut icon" href="[@T[link:<imageroot />]@T]assets/godaddy.ico" />
-    <link rel="canonical" href="[@T[link:<external linktype='siteurl' path='{{ metaCanonicalPath }}' secure='false' parammode='explicit'/>]@T]"/>
+      <link rel="shortcut icon" href="[@T[link:<imageroot />]@T]assets/godaddy.ico" />
+      <link rel="canonical" href="[@T[link:<external linktype='siteurl' path='{{ metaCanonicalPath }}' secure='false' parammode='explicit'/>]@T]"/>
 
-    <!-- Global CSS and Page CSS -->
-    <link href="[@T[link:<cssroot />]@T]fos/201401/global/css/{{ cssVersion }}/combined-{{ cssVersion }}.min.css" rel="stylesheet" type="text/css">
-    {% if assetPath %}
-    <link href="[@T[link:<cssroot />]@T]{{ assetPath }}css/styles.min.css" rel="stylesheet" type="text/css">
-    {% endif %}
-    <!-- IE SUPPORT FOR HTML5 and Bootstrap 3 -->
-    <!--[if lt IE 9]>
-      <link href="[@T[link:<cssroot />]@T]fos/201401/global/css/bootstrap-ie7fix.min.css" rel="stylesheet" type="text/css" />
-      <script src="[@T[link:<javascriptroot />]@T]fos/201401/global/js/html5shiv.js"></script>
-    <![endif]-->
+      <!-- Global CSS and Page CSS -->
+      <link href="[@T[link:<cssroot />]@T]fos/201401/global/css/{{ cssVersion }}/combined-{{ cssVersion }}.min.css" rel="stylesheet" type="text/css">
+      {% if assetPath %}
+      <link href="[@T[link:<cssroot />]@T]{{ assetPath }}css/styles.min.css" rel="stylesheet" type="text/css">
+      {% endif %}
+      <!-- IE SUPPORT FOR HTML5 and Bootstrap 3 -->
+      <!--[if lt IE 9]>
+        <link href="[@T[link:<cssroot />]@T]fos/201401/global/css/bootstrap-ie7fix.min.css" rel="stylesheet" type="text/css" />
+        <script src="[@T[link:<javascriptroot />]@T]fos/201401/global/js/html5shiv.js"></script>
+      <![endif]-->
 
-    <script src="[@T[link:<javascriptroot />]@T]fos/201401/global/vendor/jquery/1.8.3/jquery.min.js"></script>
-    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags" />]@P]
+      <script src="[@T[link:<javascriptroot />]@T]fos/201401/global/vendor/jquery/1.8.3/jquery.min.js"></script>
+      [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags" />]@P]
+
+
+    {% endblock %}
 
   </head>
+
   <body>
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header" />]@P]
 

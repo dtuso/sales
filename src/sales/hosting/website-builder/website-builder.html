@@ -1,8 +1,83 @@
 {% extends 'base.html' %}
-{% block body %}
 
-<!-- START main-banner -->
-  <section class="main-banner main-banner-website-builder">
+{% block metahead %}
+  {% parent %}
+
+  ##if(countrySiteAny(es,pt))
+      <!-- International Background Images -->
+      <style type="text/css">
+      .tab-content-plans-pricing-bg-website-builder {
+        background-image: url("[@T[link:<cssroot />]@T]fos/201401/hosting/website-builder/img/LATAM_planbg.jpg");
+      }
+      .plan-pricing-help {
+        background-image: url("[@T[link:<cssroot />]@T]fos/201401/hosting/website-builder/img/LATAM_bg-here-to-help.jpg");
+        background-position: -100px 0;
+      }
+      </style>
+  ##endif
+
+  ##if(countrySiteAny(in,pk))
+      <!-- International Background Images -->
+      <style type="text/css">
+      .tab-content-plans-pricing-bg-website-builder {
+        background-image: url("[@T[link:<cssroot />]@T]fos/201401/hosting/website-builder/img/IN_planbg.jpg");
+      }
+      .plan-pricing-help {
+        background-image: url("[@T[link:<cssroot />]@T]fos/201401/hosting/website-builder/img/IN_bg-here-to-help.jpg");
+      }
+      </style>
+  ##endif
+
+  ##if(countrySiteAny(my, ph, sg))
+      <!-- International Background Images -->
+      <style type="text/css">
+      .tab-content-plans-pricing-bg-website-builder {
+        background-image: url("[@T[link:<cssroot />]@T]fos/201401/hosting/website-builder/img/ASIA_planbg.jpg");
+      }
+      .plan-pricing-help {
+        background-image: url("[@T[link:<cssroot />]@T]fos/201401/hosting/website-builder/img/ASIA_bg-here-to-help.jpg");
+      }
+      </style>
+  ##endif
+
+  ##if(activeLanguageAny(en))
+  <style>
+  .tab-content-plans-pricing-bg-website-builder {
+      background-image: url("[@T[link:<cssroot />]@T]fos/201401/hosting/website-builder/img/wsb_banner_content_eng.jpg");
+    }
+  </style>
+  ##else
+  <style>
+  .tab-content-plans-pricing-bg-website-builder {
+      background-image: url("[@T[link:<cssroot />]@T]fos/201401/hosting/website-builder/img/wsb_banner_content_int.jpg");
+    }
+  </style>
+  ##endif
+
+  <style>
+    .main-banner.main-banner-website-builder {
+      background-image: url("[@T[link:<cssroot />]@T]fos/201401/hosting/website-builder/img/header_top_wsb_fixed2.jpg");
+    }
+    .main-banner-content.main-banner-content-website-builder > .misc-banner-content-website-builder,
+    .misc-banner-link {
+      color: #fff !important;
+    }
+  </style>
+
+  <style type="text/css">
+      .seo-content {
+      height: 480px;
+    }
+  </style>
+  <style>
+    .vat-tax-message { line-height:16px;width:302px;margin-bottom:5px;margin-top:-3px; }
+    </style>
+
+
+{% endblock %}
+
+{% block body %}
+ <section class="main-banner main-banner-website-builder">
       <div class="l-main-container container main-banner-content main-banner-content-website-builder">
         <span class="ribbon ribbon-right">
             <i class="marquee-flag marquee-flag-[@T[localization:<language />]@T] marquee-flag-free-domain-included"></i>
@@ -774,42 +849,42 @@
 {% block footer %}
     <script type="text/javascript">
 
-      var ytPlayerList = {}; // Maps youtube player with its appropiate iframe based on the iframe id
+  var ytPlayerList = {}; // Maps youtube player with its appropiate iframe based on the iframe id
 
-      function onYouTubeIframeAPIReady() {
-          $('.embedVideo').gdVideos();
+  function onYouTubeIframeAPIReady() {
+      $('.embedVideo').gdVideos();
+  }
+
+  function onPlayerReady (event) {
+      ytPlayerList[$(event.target.getIframe()).attr('id')] = event.target;
+  }
+
+  $(function () {
+    if (!$('html').hasClass('lt-ie8')) {
+      if ($('.embedVideo').length > 0) {
+        var tag = document.createElement('script'),
+        firstScriptTag = document.getElementsByTagName('script')[0];
+        tag.src = "//www.youtube.com/iframe_api";
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
       }
+    } else {
+      $('.embedVideoIE7').gdVideos();
+    }
+    $('.rating-stars-init').ratingStars();
+    $('.isToolTip').tooltip();
+    $('.equal-height').setColumnsEqualHeight();
+    $('.select-box').setSelectBox();
+    $('.tab-link').tabLinks();
 
-      function onPlayerReady (event) {
-          ytPlayerList[$(event.target.getIframe()).attr('id')] = event.target;
-      }
-
-      $(function () {
-        if (!$('html').hasClass('lt-ie8')) {
-          if ($('.embedVideo').length > 0) {
-            var tag = document.createElement('script'),
-            firstScriptTag = document.getElementsByTagName('script')[0];
-            tag.src = "//www.youtube.com/iframe_api";
-            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-          }
-        } else {
-          $('.embedVideoIE7').gdVideos();
-        }
-        $('.rating-stars-init').ratingStars();
-        $('.isToolTip').tooltip();
-        $('.equal-height').setColumnsEqualHeight();
-        $('.select-box').setSelectBox();
-        $('.tab-link').tabLinks();
-
-      });
+  });
 
 
-      $('.js-open-overview').on('click', function(e){
-        e.preventDefault();
-        window.location.hash = '';
-        $('a[href="#plans-pricing"]').tab('show');
-        window.location.hash = '#plans-pricing';
-      });
+  $('.js-open-overview').on('click', function(e){
+    e.preventDefault();
+    window.location.hash = '';
+    $('a[href="#plans-pricing"]').tab('show');
+    window.location.hash = '#plans-pricing';
+  });
 
-    </script>
+</script>
 {% endblock %}
