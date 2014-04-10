@@ -8,7 +8,6 @@ var _ = require('lodash');
 var paths = require('./paths.json');
 var jade = require('gulp-jade');
 var path = require('path');
-var rename = require("gulp-rename");
 var cssmin = require('gulp-cssmin');
 
 var p = function(arg) {
@@ -53,26 +52,34 @@ var cdsmOpts = {
   projectData: getProjectData
 };
 
-var swigOpts = {
-  data: getProjectData,
-  setup: function(swig) {
+var swigSetup = function(swig) {
     swig.setDefaults({
       cache: false,
       loader: swig.loaders.fs('./src/layouts'),
       locals: require('./_globals.json')
     });
-  }
+  };
+
+var swigTplOpts = {
+  data: getProjectData,
+  setup: swigSetup
+};
+
+var swigLangOpts = {
+  data: getProjectData,
+  ext:'.language',
+  setup: swigSetup
 };
 
 gulp.task('templates', function() {
   gulp.src(paths.templates)
-    .pipe(swig(swigOpts))
+    .pipe(swig(swigTplOpts))
     .pipe(gulp.dest(paths.build));
 });
 
 gulp.task('language', function() {
   gulp.src(paths.language)
-    .pipe(swig(swigOpts))
+    .pipe(swig(swigLangOpts))
     .pipe(gulp.dest(paths.build));
 });
 
