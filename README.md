@@ -56,23 +56,73 @@ Tasks
 Tasks are now executed with [GulpJS](http://www.gulpjs.com) instead of Grunt. It would be helpful to get more
 acquainted with Gulp before continuing.
 
-#### LESS, LESSMIN
-These two tasks will compile and minify any less files you have in your CSS folder. The compiled CSS, gets copied
-to the ```build``` folder and out to the image server.
-
 #### TEMPLATES
 This task will render your templates, preparing them for CDS importing. The task uses a gulp plugin called
 [gulp-swig](https://www.npmjs.org/package/gulp-swig) which renders your templates using the Swig JS template engine. This
 lets you use layouts, variables, and includes within your pages to help keep things
-[DRY](http://en.wikipedia.org/wiki/Don't_repeat_yourself). The compiled templates get copied to the ```build``` folder and
-out to the image server.
+[DRY](http://en.wikipedia.org/wiki/Don't_repeat_yourself). The compiled templates get copied to the ```build``` folder.
+```
+gulp templates --src website-builder
+```
+
+#### LANGUAGE
+This task will render/copy your ```.language``` files to the build folder.
+```
+gulp language --src website-builder
+```
+
+#### STYLES
+These two tasks will compile and minify any less files you have in your CSS folder. The compiled CSS, gets copied
+to the ```build``` folder.
+```
+gulp styles --src website-builder
+```
 
 #### IMAGES
-This task simply takes any images you have and copies them to the build folder and out to the image server.
+This task will copy your images folder to the build folder.
+```
+gulp images-deploy --src website-builder
+```
+
+#### TEMPLATES-DEPLOY
+This task will copy any html files found on the build folder to CDS.
+```
+gulp templates-deploy --src website-builder
+```
+
+#### LANGUAGE-DEPLOY
+This task will copy any language files found on the build folder to CDS.
+```
+gulp language-deploy --src website-builder
+```
+
+#### ASSETS-DEPLOY
+This task will copy any images and CSS files found in the build folder to the image server.
+```
+gulp assets-deploy --src website-builder
+```
 
 #### WATCH
 A watch task is set up so that any changes made to any of the above files, their associated tasks will automatically get run.
 For example, if you make a change to your html file, upon save, Gulp will execute the templates task.
+```
+gulp watch --src website-builder
+```
+
+### Task Aliases
+These tasks are aliases that combine one or more tasks into one:
+
+#### DEPLOY
+This task combines the ```templates-deploy``` and ```language-deploy``` tasks.
+```
+gulp deploy --src website-builder
+```
+
+#### ASSETS
+This task combines the ```styles```, ```images```, and ```assets-deploy``` tasks.
+```
+gulp assets --src website-builder
+```
 
 CDSM Tool
 =====
