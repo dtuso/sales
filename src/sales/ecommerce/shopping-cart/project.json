@@ -1,0 +1,48 @@
+{
+  "shopping-cart.html": {
+    "cdsDetails": {
+      "champion": {
+        "name": "David Utley",
+        "email": "dutley@godaddy.com"
+      },
+      "cdsLocation": "sales/ecommerce/shopping-cart.aspx",
+      "draft": {
+        "id": "52e7ed48f778fc64d02f0c85",
+        "createdDate": "2014-04-02",
+        "createdBy": {
+          "fullName": "Sergio Lopez",
+          "username": "sylopez"
+        },
+        "jiraTicket": "FOS-12513",
+        "comments": "LP Reskin",
+        "url": "http://www.dev-godaddy.com/ecommerce/shopping-cart.aspx"
+      }
+    },
+    "assetPath": "fos/201401/sales/ecommerce/shopping-cart/",
+    "metaTitle": "[@L[cds.sales/gd/ecommerce/shopping-cart:MetaTitle]@L]",
+    "metaDescription": "[@L[cds.sales/gd/ecommerce/shopping-cart:MetaDescription]@L]",
+    "metaKeywords": "[@L[cds.sales/gd/ecommerce/shopping-cart:MetaKeywords]@L]",
+    "metaCanonicalPath": "/ecommerce/shopping-cart.aspx",
+    "metaOgTitle": "[@L[cds.sales/gd/ecommerce/shopping-cart:MetaTitle]@L]",
+    "metaOgDescription": "[@L[cds.sales/gd/ecommerce/shopping-cart:og-description]@L]"
+  },
+  "shopping-cart.language": {
+    "cdsDetails": {
+      "champion": {
+        "name": "David Utley",
+        "email": "dutley@godaddy.com"
+      },
+      "cdsLocation": "localization/sales/ecommerce/shopping-cart/en",
+      "draft": {
+        "id": "5339f099f778fc1594f33dcc",
+        "createdDate": "2014-04-02",
+        "createdBy": {
+          "fullName": "Sergio Lopez",
+          "username": "sylopez"
+        },
+        "jiraTicket": "FOS-12513",
+        "comments": "LP Reskin"
+      }
+    }
+  }
+}

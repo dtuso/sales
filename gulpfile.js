@@ -38,7 +38,7 @@ var getProjectData = function(file) {
   var fileName = path.basename(file.path);
   var projectFilePath = path.join(path.dirname(file.path), 'project.json');
   return require(projectFilePath)[fileName];
-}
+};
 
 var cdsmOpts = {
   projectData: getProjectData
@@ -60,7 +60,7 @@ gulp.task('templates', function() {
     .pipe(changed(paths.build))
     .pipe(swig(swigOpts))
     .pipe(cdsm(cdsmOpts))
-    .pipe(gulp.dest(paths.build))
+    .pipe(gulp.dest(paths.build));
 });
 
 gulp.task('less', function() {

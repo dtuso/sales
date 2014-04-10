@@ -1,0 +1,277 @@
+{% include '../modules/doc-block.html' %}
+<phrase key="MetaTitle" />
+Shopping Cart | Build Your eCommerce Website - Go Daddy
+<phrase key="MetaDescription" />
+Creating an online business with Quick Shopping Cart is simple, fast, and affordable. Start your own eCommerce website and sell online today!
+<phrase key="MetaKeywords" />
+shopping cart, best shopping cart, shopping carts, ecommerce shopping cart, online shopping cart, best shopping cart software, shopping cart software, ecommerce shopping cart software
+<phrase key="TabPlansPricing" />
+Plans &amp; Pricing
+<phrase key="TabFeatures" />
+Features
+<phrase key="TabCustomerReviews" />
+Customer Reviews
+<phrase key="TabFAQ" />
+FAQ
+<phrase key="MastHeadTitle" />
+QUICK SHOPPING CART
+<phrase key="LabelReadReviews" />
+Read Reviews
+<phrase key="MastHeadSubTitle" />
+Everything you need to<br/>open an online store
+<phrase key="MastHeadListItem1" />
+<strong>Quick and Easy</strong> - no programming required
+<phrase key="MastHeadListItem2" />
+<strong>Accept credit cards</strong> - Low processing rates
+<phrase key="MastHeadListItem3" />
+<strong>Trusted &amp; reliable</strong> - 50,000+ Stores worldwide
+<phrase key="MiscBannerTitle" />
+Over 60,000 stores count on us<br/>to sell their products online
+<phrase key="MiscBannerText1" />
+You don&#39;t need technical skills to build a successful online store. Quick Shopping Cart makes it easy to create an eye-catching store that will attract customers, accept credit cards, provide real-time shipping quotes, even integrate with Google® and eBay&reg; – all with no setup fees, so you can start selling online for less.
+<phrase key="MiscBannerText2" />
+Paula Silinger, GoDaddy customer<br/>RicketyRack.com
+<phrase key="StartingAt" />
+Starting at
+<phrase key="PerMonth" />
+/month
+<phrase key="PerMo" />
+/mo
+<phrase key="Save" />
+SAVE
+<phrase key="Months" />
+months
+<phrase key="Month" />
+month
+<phrase key="1" />
+1
+<phrase key="12" />
+12
+<phrase key="24" />
+24
+<phrase key="36" />
+36
+<phrase key="OnSale" />
+ON SALE
+<phrase key="AddToCartButton" />
+Add to Cart
+<phrase key="PlansTitleStarter" />
+Starter
+<phrase key="PlansStarterDomain" />
+<strong class="secondary-color">FREE</strong> <a class="isToolTip" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="One FREE .COM, .CO, .NET or .ORG with purchase of a new 12-, 24- or 36-month plan. Plus ICANN fee of [@T[currencyprice:<price usdamount="18" dropdecimal="false" />]@T] per domain name per year. You must add the domain name into your cart before purchase, and you must select a domain term length equal to or less than the term length of your plan to qualify for the free domain offer. If you purchase a domain name for a term longer than the term of the plan, you will be charged for the additional registration term at the then-current rate. Cannot be used in conjunction with any other offer, sale, discount or promotion. Free domain offer applies only to the initial purchase term. After the initial purchase term, domains purchased through this offer will renew at the then-current renewal price." data-ci="88794"><strong>Domain</strong> w/ Annual Plan^</a>
+<phrase key="PlansStarterProducts" />
+<strong>20</strong> Products
+<phrase key="PlansStarterImages" />
+<strong>1</strong> Image Per Product
+<phrase key="PlansStarterSpace" />
+<strong>1 GB</strong> Disk Space
+<phrase key="PlansStarterBandwidth" />
+<strong>150 GB</strong> Bandwidth
+<phrase key="PlansStarterMobile" />
+<strong>Mobile Optimized Store</strong> Basic
+<phrase key="PlansTitleProfessional" />
+Professional
+<phrase key="PlansProDomain" />
+<strong class="secondary-color">FREE</strong> <a class="isToolTip" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="One FREE .COM, .CO, .NET or .ORG with purchase of a new 12-, 24- or 36-month plan. Plus ICANN fee of [@T[currencyprice:<price usdamount="18" dropdecimal="false" />]@T] per domain name per year. You must add the domain name into your cart before purchase, and you must select a domain term length equal to or less than the term length of your plan to qualify for the free domain offer. If you purchase a domain name for a term longer than the term of the plan, you will be charged for the additional registration term at the then-current rate. Cannot be used in conjunction with any other offer, sale, discount or promotion. Free domain offer applies only to the initial purchase term. After the initial purchase term, domains purchased through this offer will renew at the then-current renewal price."data-ci="88794"><strong>Domain</strong> w/ Annual Plan^</a>
+<phrase key="PlansProProducts" />
+<strong>100</strong> Products
+<phrase key="PlansProImages" />
+<strong>5</strong> Image Per Product
+<phrase key="PlansProSpace" />
+<strong>10 GB</strong> Disk Space
+<phrase key="PlansProBandwidth" />
+<strong>500 GB</strong> Bandwidth
+<phrase key="PlansProMobile" />
+<strong>Mobile Optimized Store</strong> Customizable
+<phrase key="PlansProCoupons" />
+Product-specific coupons
+<phrase key="PlansProWarehouses" />
+Drop-ship from multiple warehouses
+<phrase key="PlansProMerchant" />
+<strong><span class="secondary-color">FREE</span> Merchant Account</strong> ([@T[currencyprice:<price usdamount="5999" dropdecimal="false" />]@T] value)
+<phrase key="PlansTitleUnlimited" />
+Unlimited
+<phrase key="PlansUnlimitedDomain" />
+<strong class="secondary-color">FREE</strong> <a class="isToolTip" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="One FREE .COM, .CO, .NET or .ORG with purchase of a new 12-, 24- or 36-month plan. Plus ICANN fee of [@T[currencyprice:<price usdamount="18" dropdecimal="false" />]@T] per domain name per year. You must add the domain name into your cart before purchase, and you must select a domain term length equal to or less than the term length of your plan to qualify for the free domain offer. If you purchase a domain name for a term longer than the term of the plan, you will be charged for the additional registration term at the then-current rate. Cannot be used in conjunction with any other offer, sale, discount or promotion. Free domain offer applies only to the initial purchase term. After the initial purchase term, domains purchased through this offer will renew at the then-current renewal price." data-ci="88794"><strong>Domain</strong> w/ Annual Plan^</a>
+<phrase key="PlansUnlimitedProducts" />
+<strong>100</strong> Products
+<phrase key="PlansUnlimitedImages" />
+<strong>5</strong> Image Per Product
+<phrase key="PlansUnlimitedSpace" />
+<strong>10 GB</strong> Disk Space
+<phrase key="PlansUnlimitedBandwidth" />
+<strong>500 GB</strong> Bandwidth
+<phrase key="PlansUnlimitedMobile" />
+<strong>Mobile Optimized Store</strong> Customizable
+<phrase key="PlansUnlimitedCoupons" />
+Product-specific coupons
+<phrase key="PlansUnlimitedWarehouses" />
+Drop-ship from multiple warehouses
+<phrase key="PlansUnlimitedMerchant" />
+<strong><span class="secondary-color">FREE</span> Merchant Account</strong> ([@T[currencyprice:<price usdamount="5999" dropdecimal="false" />]@T] value)
+<phrase key="PlansUnlimitedSSL" />
+<strong><span class="secondary-color">FREE</span> <a class="isToolTip" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="A [@T[productprice:<current productid="3604" dropdecimal="flase" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]/yr value, your [@T[companyname:name]@T] SSL certificate keeps transactions with your website secure. Take advantage of 256-bit encryption and 99.9% browser recognition. It’s all free for the initial plan term purchased." data-ci="88795">SSL Certificate</a></strong> ([@T[currencyprice:<price usdamount="6999" dropdecimal="false" />]@T] value)
+<phrase key="MainPageContentTabContent0Features2Title" />
+We&#039;ll have your eCommerce store up and running fast!
+<phrase key="HeaderContentSubHeadingList5" />
+We designed Quick Shopping Cart to include everything you need to easily create, promote and manage your store. Check out the features below to see how you can create a world-class online store with limitless potential.
+<phrase key="MainPageContentTabContentTitle0" />
+Start selling right away
+<phrase key="MainPageContentTabContent0List0" />
+<strong>Fast, easy set up.</strong> No programming required.
+<phrase key="MainPageContentTabContent0List1" />
+Choose from <strong>1,500+ design and color combinations.</strong>
+<phrase key="MainPageContentTabContent0List2" />
+<strong>Customize with your logo</strong>, brand and product images.
+<phrase key="MainPageContentTabContent0List3" />
+<strong>Boost revenue</strong> with cross-sells, up-sells and featured products.
+<phrase key="MainPageContentTabContentTitle1" />
+Attract new customers
+<phrase key="MainPageContentTabContent1List0" />
+<strong>Show customers they matter</strong> by letting them rate &amp; review products.
+<phrase key="MainPageContentTabContent1List1" />
+<strong>Increase your visibility</strong> with search-friendly URLs.
+<phrase key="MainPageContentTabContent1List2" />
+<strong>Get started with free Google, Bing and Facebook ad credits.*</strong>
+<phrase key="MainPageContentTabContent1List3" />
+<strong>Easily add your products to Google<sup>&reg;</sup> and eBay<sup>&reg;</sup>.</strong>
+<phrase key="MainPageContentTabContent1List4" />
+<strong>Allow visitors to share your pages on Facebook, Twitter<sup>&reg;</sup> and more.</strong>
+<phrase key="MainPageContentTabContentTitle2" />
+Make your store mobile-friendly
+<phrase key="MainPageContentTabContent2List0" />
+<strong>Automatically convert your Web store to mobile.</strong> You don&#039;t have to lift a finger.
+<phrase key="MainPageContentTabContent2List1" />
+<strong>Optimize for the most popular smartphones</strong> — iPhone<sup>&reg;</sup>, Android<sup>&reg;</sup>, Blackberry<sup>&reg;</sup> and others.
+<phrase key="MainPageContentTabContentTitle3" />
+Give customers a choice
+<phrase key="MainPageContentTabContent3List0" />
+<strong>Accept all major credit cards</strong> through payment gateways.
+<phrase key="MainPageContentTabContent3List1" />
+<strong>Get real-time shipping rate</strong> quotes from UPS, FedEx, the USPS and FreightCenter — or create your own table.
+<phrase key="MainPageContentTabContent3List2" />
+<strong>Figure costs</strong> with built-in shipping and tax calculators.
+<phrase key="MainPageContentTabContentTitle4" />
+Manage orders & customers from anywhere
+<phrase key="MainPageContentTabContent4List1" />
+<strong>Easily see new orders</strong>, inventory and member activity.
+<phrase key="MainPageContentTabContent4List2" />
+<strong>Search and filter orders</strong> and export to Microsoft® Excel.
+<phrase key="MainPageContentTabContent4List3" />
+<strong>Enter shipping/tracking data</strong> and print shipping labels.
+<phrase key="MainPageContentTabContent4List4" />
+<strong>Get notified via email whenever an order is placed.</strong>
+<phrase key="MainPageContentTabContent4List5" />
+<strong>Track product inventory</strong> and set minimum thresholds.
+<phrase key="MainPageContentTabContentTitle5" />
+Keep your store online and safe
+<phrase key="MainPageContentTabContent5List0" />
+<strong>FREE hosting</strong> with guaranteed 99.9% uptime.
+<phrase key="MainPageContentTabContent5List1" />
+<strong>Protects your store</strong> with <a class="isToolTip" data-toggle="tooltip" data-placement="bottom" title="" data-original-title=" Level 1 PCI Certification means your Web store protects cardholder data by conforming to the security standards set by the Payment Card Industry (PCI) Security Standards Council™. This certification is generally reserved for online retailers who process thousands of credit card transaction per month. " data-ci="88797">Level 1 PCI Certification</a>.
+<phrase key="MainPageContentTabContent5List2" />
+<strong>Securely process credit cards</strong> with a FREE SSL Certificate (Premium Plan), a [@T[currencyprice:<price usdamount="6999" dropdecimal="false" />]@T] value.
+<phrase key="MainPageContentTabContent5List3" />
+<strong>Free 24/7 phone and online support.</strong>
+<phrase key="MainPageContentTabContentTitle6" />
+Make your business global
+<phrase key="MainPageContentTabContent6List0" />
+<strong>Sell to customers all over the world</strong> in any of <a class="isToolTip" data-html="true" data-toggle="tooltip" data-placement="bottom" title="United States Dollar $ USD <br/> Australian Dollar A$ AUD <br/> British Pound £ GBP <br/> Canadian Dollar C$ CAD <br/> Danish Kroner DKK <br/> Euro € EUR <br/> Hong Kong Dollar HK$ <br/> Israeli New Shekel ₪ ILS <br/> Japanese Yen ¥ JPY <br/> Mexican Peso $ MXN <br/> Malaysian Ringgit  MYR <br/> New Zealand Dollar $ NZD <br/> Philippine Pesos ₱  PHP <br/> Polish Zlotys PLN <br/> Swedish Krona SEK <br/> Singapore Dollar $ SGD <br/> Thai Baht THB <br/> Turkish Lira TRY">18 currencies</a>.
+<phrase key="MainPageContentTabContent6List1" />
+<strong>Make it easy for them to pay the way they want</strong>, including PayPal<sup>&reg;</sup> and COD.
+<phrase key="MainPageContentTabContent6List2" />
+<strong>Ship to the US, Canada, Mexico</strong> and 100+ other countries.
+<phrase key="MainPageContentTabContentTitle7" />
+FREE Support – all day, every day
+<phrase key="MainPageContentTabContent7Text" />
+We understand that you don’t always have time to work on your website during “business hours.” That’s why our award-winning support staff is here 24/7/365. If inspiration strikes at 2am on a Tuesday, one of our friendly, knowledgeable web pros will be here to help you make the most of it.
+<phrase key="ChooseYourPackage" />
+Choose you Package
+<phrase key="PlanSummaryTitle1" />
+All Plans Include
+<phrase key="PlanSummaryTitle2" />
+Support
+<phrase key="PlanSummaryText1" />
+<strong class="secondary-color">FREE</strong>  <a class="isToolTip" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="One FREE .COM, .CO, .NET or .ORG with purchase of a new 12-, 24- or 36-month plan. Plus ICANN fee of [@T[currencyprice:<price usdamount="18" dropdecimal="false" />]@T] per domain name per year. You must add the domain name into your cart before purchase, and you must select a domain term length equal to or less than the term length of your plan to qualify for the free domain offer. If you purchase a domain name for a term longer than the term of the plan, you will be charged for the additional registration term at the then-current rate. Cannot be used in conjunction with any other offer, sale, discount or promotion. Free domain offer applies only to the initial purchase term. After the initial purchase term, domains purchased through this offer will renew at the then-current renewal price." data-ci="88799">Domain w/ Annual Plan<sup>^</sup></a>
+<phrase key="PlanSummaryText2" />
+<strong class="secondary-color">FREE</strong> [@T[currencyprice:<price usdamount="10000" dropdecimal="true" />]@T] <a class="isToolTip" data-html="true" data-toggle="tooltip" data-placement="bottom" title="Restrictions apply to Google AdWords creditOne promotional credit per customer for a new Google AdWords account. Products purchased using a Gift Card or Alipay do not provide eligibility for advertising credits. Minimum spend [@T[currencyprice:<price usdamount="2500" dropdecimal="false" />]@T]. Offer valid to US & Canada residents only, excluding government controlled entities and parties. Other restrictions apply." data-ci="88800">Google AdWords Credit</a>
+<phrase key="PlanSummaryText3" />
+<strong class="secondary-color">FREE</strong> [@T[currencyprice:<price usdamount="10000" dropdecimal="true" />]@T] <a class="isToolTip" data-html="true" data-toggle="tooltip" data-placement="bottom" title="Restrictions apply to Bing Ads creditOne promotional credit per customer for a new Microsoft<sup class='supsymbol'>&reg;</sup> Advertiser account. Products purchased using a Gift Card or Alipay do not provide eligibility for advertising credits. Offer valid to US residents only, other restrictions apply." data-ci="88801">Bing Ads Credit</a>
+<phrase key="PlanSummaryText4" />
+<strong class="secondary-color">FREE</strong> [@T[currencyprice:<price usdamount="5000" dropdecimal="true" />]@T] <a class="isToolTip" data-html="true" data-toggle="tooltip" data-placement="bottom" title="Restrictions apply to Facebook Ad credit One promotional credit per customer for a new Facebook<sup class='supsymbol'>&reg;</sup> Advertiser account. Products purchased using a Gift Card or Alipay do not provide eligibility for advertising credits. Offer valid only for purchase of advertising in the US, Canada, UK, and Australia. Other restrictions apply." data-ci="88802">Facebook Ad Credit</a>
+<phrase key="PlanSummaryText5" />
+Real-time shipping quotes
+<phrase key="PlanSummaryText6" />
+Fraud Management Tools
+<phrase key="PlanSummaryText7" />
+<strong class="secondary-color">FREE</strong> 24/7 Customer Support – [@T[supportphone:<technical />]@T]
+<phrase key="FaqTitleSlide0" />
+What is Quick Shopping Cart?
+<phrase key="FaqTitleSlide0Text0" />
+Quick Shopping Cart is our streamlined <strong>ecommerce shopping cart</strong> software that makes it easy for anyone to start an online business. With our online shopping cart, you can create, publish, and manage your very own eCommerce website.
+<phrase key="FaqTitleSlide0Text1" />
+We have different plans to choose from. So, you can tailor Quick Shopping Cart to be <strong>the best shopping cart software</strong> to suit your needs.
+<phrase key="FaqTitleSlide0Text2" />
+For more information, see the <a target="new" href="[@T[link:<external linktype="communityurl" path="help/category/267/" secure="false"/>]@T]" class="g-a" data-ci="88804">Quick Shopping Cart product support page.</a>
+<phrase key="FaqTitleSlide1" />
+Why should I use Quick Shopping Cart?
+<phrase key="FaqTitleSlide1Text0" />
+Quick Shopping Cart walks you through everything it takes to sell online. It&#039;s simple, fast and affordable, and doesn&#039;t require any technical skills. It has more than 1,500 design and color combinations to choose from which lets you customize your <strong>ecommerce shopping cart</strong> according to your style preferences.
+<phrase key="FaqTitleSlide1Text1" />
+For more information, see Walkthrough: Designing Your Store in <a target="new" href="[@T[link:<external linktype="communityurl" path="help/article/5398/" secure="false"/>]@T]" class="g-a" data-ci="88805">Quick Shopping Cart.</a>
+<phrase key="FaqTitleSlide2" />
+Which plan should I choose?
+<phrase key="FaqTitleSlide2Text0" />
+Quick Shopping Cart offers multiple plans that fit a variety of online business needs. These plans vary based on the number of different products you plan to sell online, the amount of images you want to display for each product, and your disk space and bandwidth requirements.
+<phrase key="FaqTitleSlide2Text1" />
+We recommend that you select the <strong>best shopping cart</strong> plan based on the total number of different products you&#039;re offering, and how many images you want to display for each product.
+<phrase key="FaqTitleSlide2Text2" />
+For more information, see <a target="new" href="[@T[link:<external linktype="communityurl" path="help/article/701/" secure="false"/>]@T]" class="g-a" data-ci="88806">How do I select the right plan for my business?</a>
+<phrase key="FaqTitleSlide3" />
+How does Quick Shopping Cart work?
+<phrase key="FaqTitleSlide3Text0" />
+Our <strong>shopping cart software</strong> includes hosting and all the other tools you need to establish your eCommerce website. The built-in Store Setup Wizard guides you through configuring your online store.
+<phrase key="FaqTitleSlide3Text1" />
+Just start by telling us your company name and selecting a template that best works for you. Then, you can add your own logo, change colors and fonts, and continue to customize the other store design elements through our <strong>eCommerce shopping cart</strong> software.
+<phrase key="FaqTitleSlide3Text2" />
+Next, add products to your catalog and create categories for organizing your products on your storefront. You can also add compelling images to your products to make them stand out to customers online.
+<phrase key="FaqTitleSlide3Text3" />
+Finally, decide how you want your customers to pay you, select your tax and shipping options, and then publish your shopping cart website.
+<phrase key="FaqTitleSlide4" />
+How does accepting payments online work?
+<phrase key="FaqTitleSlide4Text0" />
+Our <strong>shopping cart software</strong> is a key component for accepting payments online. It meets Payment Card Industry (PCI) security standards, protects you as an online business owner, and protects your information. With our shopping cart, there are several ways you can accept credit card payments. This includes accepting payments online using PayPal, and accepting payments directly through your eCommerce website using a payment gateway.
+<phrase key="FaqTitleSlide4Text1" />
+For more information, see <a target="new" href="[@T[link:<external linktype="communityurl" path="help/article/718/" secure="false"/>]@T]" class="g-a" data-ci="88807">How does collecting payments online work?</a>
+<phrase key="FaqTitleSlide5" />
+Do I need an SSL certificate?
+<phrase key="FaqTitleSlide5Text0" />
+An SSL certificate authenticates your website&#039;s identity and encrypts the data transferred through your website. If you plan to accept credit cards directly through your online shopping cart, then you need to have an SSL certificate. Having an SSL certificate will protect the credit information submitted by your customers when you sell your products online.
+<phrase key="FaqTitleSlide6" />
+How do I manage my online store?
+<phrase key="FaqTitleSlide6Text0" />
+You can receive email notifications for orders placed on your storefront, view your top sellers and inventory at a glance, and track customers through member profiles. You can also use Microsoft&reg; Excel to manage your products in bulk and Quickbooks&trade; to manage your receipt information.
+<phrase key="FaqTitleSlide7" />
+Can I give someone else access to manage my online store?
+<phrase key="FaqTitleSlide7Text0" />
+Our shopping carts let you create site administrator roles for your members, which give them access to selected areas of your eCommerce website builder. Members set up as site administrators can have full access to manage your online store. You can add members, set up unique passwords for them to log in with, or remove members at any time.
+<phrase key="ContentDisclaimerSymbols" />
+&#134;, &#8225;, &#8225;&#8225;, ^, <sup>*</sup>, 1
+<phrase key="ContentDisclaimerLink" />
+Click here for product disclaimers and legal policies.
+<phrase key="ContentDicalimerText" />
+Third-party logos and registered marks including Google, Bing, Facebook and others are property of their respective owners. All rights reserved.
+<phrase key="ContentDicalimerModalTitle" />
+Disclaimers
+<phrase key="ContentDicalimerModalList0" />
+&#134; See the Web Hosting and Virtual Private Hosting Agreement
+<phrase key="ContentDicalimerModalList1" />
+&#8225; Annual discounts available on NEW purchases only.
+<phrase key="ContentDicalimerModalList2" />
+&#8225;&#8225; SSL certificate is free only for the initial plan term purchased, after which it will automatically renew at the then-current rate.
+<phrase key="ContentDicalimerModalList3" />
+^ One FREE .COM, .CO, .NET or .ORG with purchase of a new 12-, 24- or 36-month plan. Plus ICANN fee of [@T[currencyprice:<price usdamount="18" dropdecimal="false" />]@T] per domain name per year. You must add the domain name into your cart before purchase, and you must select a domain term length equal to or less than the term length of your plan to qualify for the free domain offer. If you purchase a domain name for a term longer than the term of the plan, you will be charged for the additional registration term at the then-current rate. Cannot be used in conjunction with any other offer, sale, discount or promotion. Free domain offer applies only to the initial purchase term. After the initial purchase term, domains purchased through this offer will renew at the then-current renewal price.
+<phrase key="ContentDicalimerModalList4" />
+<sup>1</sup> Performance may begin to slow at varying numbers of products depending on potential physical and practical constraints, including (but not limited to): system architecture, system capacity, system load, end-user Internet connectivity and end-user computer configurations.
+<phrase key="ContentDicalimerModalList5" />
+Products will automatically renew until cancelled. You may turn off the auto-renewal feature by visiting your GoDaddy account.
