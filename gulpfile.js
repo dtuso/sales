@@ -71,11 +71,7 @@ gulp.task('less', function() {
   gulp.src(paths.less)
     .pipe(less())
     .pipe(gulp.dest(paths.build + '/css/'))
-    .pipe(gulp.dest(paths.assets + '/css/'));
-});
-
-gulp.task('cssmin', function() {
-  gulp.src([paths.build + '/css/*.css', '!' + paths.build + '/css/*.min.*'])
+    .pipe(gulp.dest(paths.assets + '/css/'))
     .pipe(cssmin())
     .pipe(rename(({
       suffix: '.min'
@@ -93,9 +89,9 @@ gulp.task('images', function() {
 gulp.task('watch', function() {
   gulp.watch(paths.templates, ['templates']);
   gulp.watch(paths.json, ['templates']);
-  gulp.watch(paths.less, ['less', 'lessmin']);
+  gulp.watch(paths.less, ['less']);
   gulp.watch(paths.images, ['images']);
 });
 
-gulp.task('assets', ['less', 'lessmin', 'images']);
+gulp.task('assets', ['less', 'images']);
 gulp.task('default', ['watch']);
