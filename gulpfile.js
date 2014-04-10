@@ -29,7 +29,8 @@ var theme = args.theme || 'scotty';
 var rootAssetPath = (process.platform === 'win32') ? '\\\\g1dwimages001\\images\\fos\\sales\\themes\\' + theme + '\\' : '/Volumes/images/fos/sales/themes/' + theme + '/';
 
 var paths = {
-  templates: [p('./src/sales/' + baseFilePath + '/*.html'), p('./src/sales/' + baseFilePath + '/*.language')],
+  templates: [p('./src/sales/' + baseFilePath + '/*.html')],
+  language: [p('./src/sales/' + baseFilePath + '/*.language')],
   layouts: [p('./src/layouts/' + baseFilePath + '/*.html')],
   less: p('./src/sales/' + baseFilePath + '/css/**/*.less'),
   images: p('./src/sales/' + baseFilePath + '/img/**/*'),
@@ -40,8 +41,12 @@ var paths = {
 
 var getProjectData = function(file) {
   var fileName = path.basename(file.path);
+  var assetPath = 'fos/sales/themes/' + theme + '/' + baseFilePath;
   var projectFilePath = path.join(path.dirname(file.path), 'project.json');
-  return require(projectFilePath)[fileName];
+  var data = require(projectFilePath);
+  data = data[fileName] || {};
+  data.assetPath = assetPath;
+  return data;
 };
 
 var cdsmOpts = {
@@ -61,9 +66,28 @@ var swigOpts = {
 
 gulp.task('templates', function() {
   gulp.src(paths.templates)
-    .pipe(changed(paths.build))
     .pipe(swig(swigOpts))
-    .pipe(cdsm(cdsmOpts))
+    .pipe(gulp.dest(paths.build));
+});
+
+gulp.task('language', function() {
+  gulp.src(paths.language)
+    .pipe(swig(swigOpts))
+    .pipe(gulp.dest(paths.build));
+});
+
+gulp.task('html-deploy', function() {
+  gulp.src(['./build/sales/' + baseFilePath + '/**/*.html'])
+    .pipe(cdsm(cdsmOpts));
+});
+
+gulp.task('language-deploy', function() {
+  gulp.src(['./build/sales/' + baseFilePath + '/**/*.language'])
+    .pipe(cdsm(cdsmOpts));
+});
+
+gulp.task('projectfile', function() {
+  gulp.src(p('./src/sales/' + baseFilePath + '/project.json'))
     .pipe(gulp.dest(paths.build));
 });
 
@@ -71,27 +95,33 @@ gulp.task('less', function() {
   gulp.src(paths.less)
     .pipe(less())
     .pipe(gulp.dest(paths.build + '/css/'))
-    .pipe(gulp.dest(paths.assets + '/css/'))
     .pipe(cssmin())
     .pipe(rename(({
       suffix: '.min'
     })))
-    .pipe(gulp.dest(paths.build + '/css/'))
-    .pipe(gulp.dest(paths.assets + '/css/'));
+    .pipe(gulp.dest(paths.build + '/css/'));
 });
 
 gulp.task('images', function() {
   gulp.src(paths.images)
-    .pipe(gulp.dest(paths.assets + '/img/'))
     .pipe(gulp.dest(paths.build + '/img/'));
 });
 
+gulp.task('assetdeploy', function() {
+  gulp.src(paths.build+'/**/*')
+    .pipe(gulp.dest(paths.assets));
+});
+
 gulp.task('watch', function() {
-  gulp.watch(paths.templates, ['templates']);
+  gulp.watch(paths.templates, ['templates','projectfile']);
+  gulp.watch(paths.language, ['language','projectfile']);
+  gulp.watch('./build/sales/' + baseFilePath + '/**/*.html', ['html-deploy']);
+  gulp.watch('./build/sales/' + baseFilePath + '/**/*.language', ['language-deploy']);
   gulp.watch(paths.json, ['templates']);
   gulp.watch(paths.less, ['less']);
   gulp.watch(paths.images, ['images']);
 });
 
-gulp.task('assets', ['less', 'images']);
+gulp.task('deploy', ['html-deploy', 'language-deploy']);
+gulp.task('assets', ['less', 'images', 'assetdeploy']);
 gulp.task('default', ['watch']);
