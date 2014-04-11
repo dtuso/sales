@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "proj": "./bin/proj.js"
   },
   "author": "",
   "license": "ISC",
@@ -17,7 +18,8 @@
     "yargs": "^1.2.1",
     "lodash": "^2.4.1",
     "gulp-changed": "^0.3.0",
-    "gulp-cssmin": "^0.1.4"
+    "gulp-cssmin": "^0.1.4",
+    "prompt": "^0.2.12"
   },
   "dependencies": {
     "gulp-cdsm": "git+ssh://git@github.secureserver.net:WebOps/gulp-cdsm.git",
