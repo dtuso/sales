@@ -1,0 +1,240 @@
+<!-- DOC BLOCK (DO NOT REMOVE)
+
+
+
+
+
+
+    IMPORTANT:
+      If version control is enabled for this page all changes to this page must also go through version control.
+
+    VERSION CONTROL:
+      https://github.secureserver.net/FOS-CDS-Pages/Sales
+
+    WEB PAGE CHAMPION:
+      Colyn Brown <clbrown@godaddy.com>
+
+    DRAFT DETAILS:
+      Name:         2014-04-11 - clbrown - FOS-18605
+      Created Date: 2014-04-11
+      Created By:   Colyn Brown <clbrown>
+      JIRA Ticket:  FOS-18605
+      Comments:     Fixing overflow issues
+
+
+
+
+
+
+
+END DOC BLOCK -->
+<phrase key="MetaTitle" />
+Signing Certificate | Protect Your Digital Work - GoDaddy
+<phrase key="MetaDescription" />
+Prove your software is legitimate with a digital signature. Inspire user confidence by authenticating the source and integrity of your code with a GoDaddy Code Signing Certificate.
+<phrase key="MetaKeywords" />
+code, code sign, code signing, code signing certificates, online security, software security, software developer, content publisher, activex, active x, time-stamping, signed code, microsoft authenticode
+<phrase key="MainTitle" />
+Code &amp; Driver Signing Certificates
+<phrase key="MainSubTitle" />
+Secure your code and earn your customers&#39; trust
+<phrase key="ContentTabLink1" />
+Pricing
+<phrase key="ContentTabLink2" />
+Features
+<phrase key="ContentTabLink3" />
+FAQ
+<phrase key="TabContentPlanPricingTabHeaderText" />
+You&#39;ve worked too hard to leave your code unprotected.
+<phrase key="TabContentPlanPricingTabSubHeaderText" />
+As an independent developer or programmer, your code is your reputation. If your release is hacked, infected, or altered in any way, customers won&#39;t trust you enough to give you a second chance. Protect yourself, your customers and your good name with the rock-solid security of a code or driver signing certificate.
+<phrase key="LinkViewOurDesignsText" />
+Call [@T[supportphone:<hostingexchange/>]@T] now to get yours today.
+<phrase key="PlanBoxCodeSigningCertificate" />
+Code Signing Certificate
+<phrase key="YearText" />
+year
+<phrase key="YearsText" />
+years
+<phrase key="PlanBoxYear" />
+yr
+<phrase key="1-year" />
+1 year
+<phrase key="2-year" />
+2 years
+<phrase key="3-year" />
+3 years
+<phrase key="Save" />
+Save
+<phrase key="Save10Percent" />
+ Save 10%&#8225;
+<phrase key="Save15Percent" />
+ Save 15%&#8225;
+<phrase key="SelectQuantity" />
+Select Quantity
+<phrase key="PlanboxCartBtn" />
+Add to Cart
+<phrase key="PlanBoxCodeSigningCertificateDetails01Text" />
+<strong>Validates</strong> and secures your code
+<phrase key="PlanBoxCodeSigningCertificateDetails02Text" />
+<strong>Eliminates</strong> security warnings during download and installation
+<phrase key="PlanBoxCodeSigningCertificateDetails03Text" />
+<strong>Protects</strong> with your choice of SHA-1 or SHA-2 encryption
+<phrase key="PlanBoxCodeSigningCertificateDetails04Text" />
+<strong>Includes</strong> free <a data-ci="88732" type="button" class="isToolTip" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Includes a FREE website Malware Scanner to monitor your site to ensure hackers haven't infected it with malicious links. Hackers target legitimate business sites to spread worms, Trojans, viruses and spyware. Malware Scanner will notify you if malicious links exist and provide instruction on how to remove them.">malware scanner</a>
+<phrase key="PlanBoxDriverSigningCertificate" />
+Driver Signing Certificate
+<phrase key="PlanBoxDriverSigningCertificateDetails01Text" />
+<strong>Required</strong> for all Microsoft<sup>&reg;</sup> hardware drivers, Windows Vista<sup>&reg;</sup> or later
+<phrase key="PlanBoxDriverSigningCertificateDetails02Text" />
+<strong>Validates</strong> and secures your code
+<phrase key="PlanBoxDriverSigningCertificateDetails03Text" />
+<strong>Eliminates</strong> security warnings during download and installation
+<phrase key="PlanBoxDriverSigningCertificateDetails04Text" />
+<strong>Provides</strong> high-grade SHA-1 encryption
+<phrase key="PlanBoxDriverSigningCertificateDetails05Text" />
+<strong>Reinforces</strong> security with <a data-ci="88732" type="button" class="isToolTip" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Cross-certificate validation occurs when a certificate is issued by one Certificate Authority (CA) — in this case, GoDaddy — and is used to sign the public key for the root certificate of another CA, such as Microsoft&reg;. This increases security by creating a chain of trust across multiple CAs.">cross-certificate validation</a>
+<phrase key="PlanBoxDriverSigningCertificateDetails06Text" />
+<strong>Includes</strong> free <a data-ci="88732" type="button" class="isToolTip" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Includes a FREE website Malware Scanner to monitor your site to ensure hackers haven't infected it with malicious links. Hackers target legitimate business sites to spread worms, Trojans, viruses and spyware. Malware Scanner will notify you if malicious links exist and provide instruction on how to remove them.">malware scanner</a>
+<phrase key="FeaturesListTitle1" />
+Our Code Signing Certificates:
+<phrase key="FeaturesListItem1" />
+Authenticate the source and integrity of your code.
+<phrase key="FeaturesListItem2" />
+Eliminate "Unidentified Publisher" warnings.
+<phrase key="FeaturesListItem3" />
+Inspire confidence from users by showing them your code is trustworthy.
+<phrase key="FeaturesListItem4" />
+Digitally sign software objects, device drivers, configuration files, macros, and more.
+<phrase key="FeaturesListTitle2" />
+Our Driver Signing Certificates:
+<phrase key="FeaturesListItem5" />
+Approve your software for use on Windows<sup>&reg;</sup> operating systems. A driver signing certificate is required for all hardware drivers, Windows Vista or later.
+<phrase key="FeaturesListItem6" />
+Authenticate the source and integrity of your hardware driver code.
+<phrase key="FeaturesListItem7" />
+Eliminate "Unidentified Publisher" warnings.
+<phrase key="FeaturesListItem8" />
+Inspire confidence from users by showing them your code is trustworthy.
+<phrase key="FeaturesListItem9" />
+Digitally sign software objects, device drivers, configuration files, macros, and more.
+<phrase key="ContentDisclaimerSymbols" />
+&#8225;
+<phrase key="ContentDisclaimerLink" />
+Click here for product disclaimers and legal policies.
+<phrase key="ContentDicalimerText" />
+Third-party logos and marks are registered trademarks of their respective owners. All rights reserved.
+<phrase key="DisclaimerModalHeader" />
+Disclaimers
+<phrase key="DisclaimerModalItem01" />
+&#8225; Annual discounts available on NEW purchases only.
+<phrase key="DisclaimerModalItem02" />
+Products will automatically renew until cancelled. You may turn off the auto-renewal feature by visiting your GoDaddy account.
+<phrase key="TabContentFeaturesTabHeaderText" />
+Trust our code to protect yours.
+<phrase key="TabContentFeaturesTabSubHeaderText" />
+Bad things can happen to your code when it&rsquo;s distributed online. It can be hacked before it reaches the user, stolen by another developer, or just never get installed because the &ldquo;Unidentified Publisher&rdquo; warning scares off your customers. Fortunately, a GoDaddy Code or Driver Signing Certificate makes it easy to protect your code — and your customers — from these and other issues.
+<phrase key="TabFeatures1CurrentFeaturesTitle" />
+Both certificates:
+<phrase key="TabFeatures1FeatureListItems1" />
+Secure your software with the same industry-standard encryption used for SSL Certificates, making it impossible for others to alter your code.
+<phrase key="TabFeatures1FeatureListItems2" />
+Act as a digital &lsquo;safety seal&rsquo; to show customers that your code has not been tampered with in any way.
+<phrase key="TabFeatures1FeatureListItems3" />
+Display your name or your company&rsquo;s name, instead of &ldquo;Unidentified Publisher,&rdquo; during download and installation, so customers know you&rsquo;re a legitimate developer.
+<phrase key="TabFeatures1FeatureListItems4" />
+Work with several types of files and languages, including .EXE, .CAB, .DLL, .OCX, Java, HTML, ActiveX, even Microsoft<sup>&reg;</sup> Office Macros and any other file types that support digital signatures.
+<phrase key="TabFeatures1FeatureListItems5" />
+Include time-stamps so users know that your code went through the verification process, even if you allow the certificate to expire.
+<phrase key="TabFeatures2CurrentFeaturesTitle" />
+Driver signing:
+<phrase key="TabFeatures2FeatureListItems1" />
+Is required by Microsoft for all hardware drivers for Windows Vista or later. Customers will not be able to install your software unless it was signed with a driver signing certificate.
+<phrase key="TabFeatures2FeatureListItems2" />
+Is designed specifically to protect and validate hardware drivers developed for Microsoft operating systems, Windows Vista or later.
+<phrase key="TabFeatures2FeatureListItems3" />
+Is verified through both GoDaddy and Microsoft via cross-certificate validation, adding an extra level of security and assurance for your customers.
+<phrase key="PackageBtn" />
+Choose your Package
+<phrase key="FaqList1Title" />
+What is a code signing certificate?
+<phrase key="FaqList1Item1" />
+With increasingly active content on the Internet, end users require a method of verifying the legitimacy of downloadable Web content.
+<phrase key="FaqList1Item2" />
+Code signing is a digital signature placed on software and other executable files and scripts. Code signatures prove the identity of software authors and validates that the software hasn&#39;t been tampered with since its original distribution.
+<phrase key="FaqList1Item3" />
+<strong>Code signs</strong> don&#39;t alter the software – it&#39;s just an added layer of assurance for your end users.
+<phrase key="FaqList1Item4" />
+When software is purchased from a store, it&#39;s easy to tell who published the software – and if the package was tampered with. Unfortunately, these factors aren&#39;t as obvious when software is purchased online. As a result, end users take on a certain amount of risk when downloading Java applets, plugins, Microsoft<sup>&reg;</sup> <strong>ActiveX</strong><sup>&reg;</sup> controls, and other executables over the Internet.
+<phrase key="FaqList1Item5" />
+<strong>Code signing certificates</strong> help inspire the same level of trust in your software that customers would have if they purchased your software in a store.
+<phrase key="FaqList1Item6" />
+Improve your <strong>software security</strong> with a digital signature. Inspire user confidence by authenticating the source and integrity of your <strong>code</strong> with a GoDaddy Code Signing Certificate.
+<phrase key="FaqList1Item7" />
+For more information, see our <a data-ci="88736" href="[@T[link:<external linktype="communityurl" path="help/category/693" secure="false"/>]@T]" target="_blank">Code Signing Certificate product support page.</a>
+<phrase key="FaqList2Title" />
+Who needs a code signing certificate?
+<phrase key="FaqList2Item1" />
+Online security vigilance is at an all-time high. Most Web users won&#39;t download software unless you can prove it&#39;s legitimate. <strong>Code signing</strong> certificates inspire confidence and give you the proof you need to validate your code.
+<phrase key="FaqList2Item2" />
+<strong>Software developers</strong> can use code signing certificates to provide extra assurance to their customers about who produced the content and that it&#39;s not tampered with. Signed code also prevents unidentified third parties from altering the code before it&#39;s distributed.
+<phrase key="FaqList2Item3" />
+<strong>Content publishers</strong> can digitally sign software components, macros, firmware images, virus updates, configuration files or other types of content for secure delivery over the Internet or other mechanisms.
+<phrase key="FaqList2Item4" />
+Code signing is particularly important when the source of a given piece of code might not be obvious – for example <strong>Active X</strong> controls, Java applets, and other active Web scripting codes.
+<phrase key="FaqList2Item5" />
+Most Web users understand the potential risks involved with downloading content from the Internet. It&#39;s important your end users can trust the code you publish on the Internet. Code signing certificates help confirm software security and assurance with your customers.
+<phrase key="FaqList2Item6" />
+For more information, see our <a data-ci="88737" href="[@T[link:<external linktype="communityurl" path="help/article/4833" secure="false"/>]@T]" target="_blank">Code Signing Frequently Asked Questions.</a>
+<phrase key="FaqList3Title" />
+How does code signing work?
+<phrase key="FaqList3Item1" />
+Newer operating systems and Internet browsers are often set to higher online security levels, which often require signed content. For example, Internet Explorer<sup>&reg;</sup> uses Authenticode<sup>&reg;</sup> technology to identify the publisher of signed software and verify that it hasn&#39;t been tampered with.
+<phrase key="FaqList3Item2" />
+When a code signed file is downloaded from a website, the certificate is extracted from the file. The browser cross-checks this information with an internal list of certificate authorities, and then verifies the signature in the certificate.
+<phrase key="FaqList3Item3" />
+If the signed software is tampered with in any way, the digital signature breaks and alerts customers that the code has been altered and is not trustworthy.
+<phrase key="FaqList3Item4" />
+For more information, see <a data-ci="88738" href="[@T[link:<external linktype="communityurl" path="help/article/5087" secure="false"/>]@T]" target="_blank">Using Your Code Signing Certificate.</a>
+<phrase key="FaqList4Title" />
+How does someone know they can trust my signature?
+<phrase key="FaqList4Item1" />
+When someone attempts to download or run unsigned code, their browser attempts to validate the security of the downloaded content. A security warning pops up or the Web page content fails to load, depending on the browser security settings. These warnings create suspicion and confusion for the user.
+<phrase key="FaqList4Item2" />
+Digitally signing code prevents unnecessary warning dialogues when end users attempt to run the signed application or executable file.
+<phrase key="FaqList5Title" />
+After I purchase a Code Signing Certificate, what do I need to do?
+<phrase key="FaqList5Item1" />
+After you purchase a code signing certificate, you need to provide a certificate signing request (CSR) from the computer that is signing the code. Depending on the use of the certificate, you can create the CSR automatically, or you can use a tool like OpenSSL to generate the CSR.
+<phrase key="FaqList5Item2" />
+After you submit your request, we verify the company information you supplied. The Registration Authority (RA) might contact you to provide additional information, if required. You can monitor the validation process through your account.
+<phrase key="FaqList5Item3" />
+Once the code signing certificate is issued, we&#39;ll send you an email with a link to download and install the certificate file and any associated intermediate certificates.
+<phrase key="FaqList5Item4" />
+You can even time-stamp your signature block using Authenticode to show the validity of your certificate at the time the code was signed.
+<phrase key="FaqList5Item5" />
+For more information, see <a href="[@T[link:<external linktype="communityurl" path="help/article/4777" secure="false"/>]@T]" target="_blank">Requesting a Code Signing Certificate.</a>
+<phrase key="Support11622TabText" />
+Support
+<phrase key="SupportSubTitle1" />
+<strong>Receive support and exchange ideas. Join the Design Services Group on GoDaddy Support to:</strong>
+<phrase key="SupportSubText1" />
+Get direct access to info and news that interests you
+<phrase key="SupportSubText2" />
+Interact with other members
+<phrase key="SupportSubText3" />
+Gain access to new features
+<phrase key="SupportSubText4" />
+Check out beta releases
+<phrase key="SupportSubText5" />
+Find discount codes
+<phrase key="SupportSubText6" />
+Participate in polls and much more
+<phrase key="SupportSubTitle2" />
+<strong>Receive support and exchange ideas. Join the Design Services Group on GoDaddy Support to:</strong>
+<phrase key="SupportSubText7" />
+Technical support and sales: (480) 463-8300 FASTEST! Expected Wait Time: 15 minutes
+<phrase key="SupportSubText8" />
+Email support: <a data-ci="88734" href="[@T[link:<external linktype="communityurl" path="/" secure="false"/>]@T]" target="_blank">Access Email Support System</a> Expected Wait Time: 8 hours
+<phrase key="starting-at" />
+Starting at

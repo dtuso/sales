@@ -1,0 +1,48 @@
+{
+  "code-signing-certificate.html": {
+    "cdsDetails": {
+      "champion": {
+        "name": "Colyn Brown",
+        "email": "clbrown@godaddy.com"
+      },
+      "cdsLocation": "sales/ssl/code-signing-certificate.aspx",
+      "draft": {
+        "id": "53486f13f778fc127887b845",
+        "createdDate": "2014-04-11",
+        "createdBy": {
+          "fullName": "Colyn Brown",
+          "username": "clbrown"
+        },
+        "jiraTicket": "FOS-18605",
+        "comments": "Fixing overflow issues",
+        "url": "http://www.dev-godaddy.com/ssl/code-signing-certificate.aspx"
+      }
+    },
+    "metaTitle": "[@L[cds.sales/gd/ssl/code-signing-certificate2:MetaTitle]@L]",
+    "metaDescription": "[@L[cds.sales/gd/ssl/code-signing-certificate2:MetaDescription]@L]",
+    "metaKeywords": "[@L[cds.sales/gd/ssl/code-signing-certificate2:MetaKeywords]@L]",
+    "metaCanonicalPath": "/ssl/code-signing-certificate.aspx",
+    "metaOgTitle": "[@L[cds.sales/gd/ssl/code-signing-certificate2:MetaTitle]@L]",
+    "metaOgImage": "fos/icn/Code_Signing.jpg",
+    "metaOgDescription": "[@L[cds.sales/gd/ssl/code-signing-certificate2:MetaDescription]@L]"
+  },
+  "code-signing-certificate.language": {
+    "cdsDetails": {
+      "champion": {
+        "name": "Colyn Brown",
+        "email": "clbrown@godaddy.com"
+      },
+      "cdsLocation": "localization/sales/gd/ssl/code-signing-certificate2/en",
+      "draft": {
+        "id": "53487dbaf778fc127887b877",
+        "createdDate": "2014-04-11",
+        "createdBy": {
+          "fullName": "Colyn Brown",
+          "username": "clbrown"
+        },
+        "jiraTicket": "FOS-18605",
+        "comments": "Fixing overflow issues"
+      }
+    }
+  }
+}

@@ -3,5 +3,6 @@
   "domain-backorders": "domainaddon/domain-backorders/",
   "demo-bv-reviews": "demo/lazy-loader/",
   "search": "domains/search/",
+  "csc": "ssl/code-signing-certificate/",
   "qsc": "ecommerce/shopping-cart/"
 }
