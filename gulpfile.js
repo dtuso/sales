@@ -9,6 +9,7 @@ var paths = require('./paths.json');
 var jade = require('gulp-jade');
 var path = require('path');
 var cssmin = require('gulp-cssmin');
+var rename = require('gulp-rename');
 
 var p = function(arg) {
   return path.normalize(arg);
@@ -30,6 +31,7 @@ var rootAssetPath = (process.platform === 'win32') ? '\\\\g1dwimages001\\images\
 var paths = {
   templates: [p('./src/sales/' + baseFilePath + '/*.html')],
   language: [p('./src/sales/' + baseFilePath + '/*.language')],
+  projectfile: [p('./src/sales/' + baseFilePath + '/project.json')],
   layouts: [p('./src/layouts/' + baseFilePath + '/*.html')],
   less: p('./src/sales/' + baseFilePath + '/css/**/*.less'),
   images: p('./src/sales/' + baseFilePath + '/img/**/*'),
@@ -53,12 +55,12 @@ var cdsmOpts = {
 };
 
 var swigSetup = function(swig) {
-    swig.setDefaults({
-      cache: false,
-      loader: swig.loaders.fs('./src/layouts'),
-      locals: require('./_globals.json')
-    });
-  };
+  swig.setDefaults({
+    cache: false,
+    loader: swig.loaders.fs('./src/layouts'),
+    locals: require('./_globals.json')
+  });
+};
 
 var swigTplOpts = {
   data: getProjectData,
@@ -67,17 +69,17 @@ var swigTplOpts = {
 
 var swigLangOpts = {
   data: getProjectData,
-  ext:'.language',
+  ext: '.language',
   setup: swigSetup
 };
 
-gulp.task('templates', function() {
+gulp.task('templates', ['projectfile'], function() {
   gulp.src(paths.templates)
     .pipe(swig(swigTplOpts))
     .pipe(gulp.dest(paths.build));
 });
 
-gulp.task('language', function() {
+gulp.task('language', ['projectfile'], function() {
   gulp.src(paths.language)
     .pipe(swig(swigLangOpts))
     .pipe(gulp.dest(paths.build));
@@ -114,21 +116,27 @@ gulp.task('images', function() {
     .pipe(gulp.dest(paths.build + '/img/'));
 });
 
-gulp.task('assets-deploy', function() {
-  gulp.src(paths.build+'/**/*')
-    .pipe(gulp.dest(paths.assets));
+gulp.task('images-deploy', function() {
+  gulp.src(paths.build + '/img/**/*')
+    .pipe(gulp.dest(paths.assets + '/img/'));
+});
+
+gulp.task('styles-deploy', function() {
+  gulp.src(paths.build + '/css/**/*')
+    .pipe(gulp.dest(paths.assets + '/css/'));
 });
 
 gulp.task('watch', function() {
-  gulp.watch(paths.templates, ['templates','projectfile']);
-  gulp.watch(paths.language, ['language','projectfile']);
-  gulp.watch('./build/sales/' + baseFilePath + '/**/*.html', ['templates-deploy']);
-  gulp.watch('./build/sales/' + baseFilePath + '/**/*.language', ['language-deploy']);
-  gulp.watch(paths.json, ['templates']);
+  gulp.watch(paths.templates, ['templates', 'projectfile']);
+  gulp.watch(paths.projectfile, ['projectfile']);
+  gulp.watch(paths.language, ['language', 'projectfile']);
+  gulp.watch(paths.build + '/**/*.html', ['templates-deploy']);
+  gulp.watch(paths.build + '/**/*.language', ['language-deploy']);
+  gulp.watch(paths.build + '/css/', ['styles-deploy']);
   gulp.watch(paths.less, ['styles']);
   gulp.watch(paths.images, ['images']);
 });
 
-gulp.task('deploy', ['templates-deploy', 'language-deploy']);
-gulp.task('assets', ['styles', 'images', 'assets-deploy']);
+gulp.task('build', ['templates', 'language', 'projectfile', 'styles', 'images']);
+gulp.task('deploy', ['templates-deploy', 'language-deploy', 'images-deploy', 'styles-deploy']);
 gulp.task('default', ['watch']);

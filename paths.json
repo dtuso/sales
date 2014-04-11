@@ -2,5 +2,6 @@
   "website-builder": "hosting/website-builder/",
   "domain-backorders": "domainaddon/domain-backorders/",
   "demo-bv-reviews": "demo/lazy-loader/",
+  "search": "domains/search/",
   "qsc": "ecommerce/shopping-cart/"
 }
