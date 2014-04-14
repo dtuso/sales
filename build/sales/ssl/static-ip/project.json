@@ -1,0 +1,48 @@
+{
+  "static-ip.html": {
+    "cdsDetails": {
+      "champion": {
+        "name": "Colyn Brown",
+        "email": "clbrown@godaddy.com"
+      },
+      "cdsLocation": "sales/ssl/static-ip.aspx",
+      "draft": {
+        "id": "534c61a8f778fc304463c544",
+        "createdDate": "2014-04-14",
+        "createdBy": {
+          "fullName": "Tom DeMichele",
+          "username": "tdemichele"
+        },
+        "jiraTicket": "FOS-18599",
+        "comments": "replacing background image based on culture",
+        "url": "http://www.dev-godaddy.com/ssl/static-ip.aspx"
+      }
+    },
+    "metaTitle": "[@L[cds.sales/gd/ssl/dedicated-ip:MetaTitle]@L]",
+    "metaDescription": "[@L[cds.sales/gd/ssl/dedicated-ip:MetaDescription]@L]",
+    "metaKeywords": "[@L[cds.sales/gd/ssl/dedicated-ip:MetaKeywords]@L]",
+    "metaCanonicalPath": "/ssl/static-ip.aspx",
+    "metaOgTitle": "[@L[cds.sales/gd/ssl/dedicated-ip:MetaTitle]@L]",
+    "metaOgImage": "fos/201401/ssl/static-ip/img/og-img-dedicated-ip.png",
+    "metaOgDescription": "[@L[cds.sales/gd/ssl/dedicated-ip:MetaDescription]@L]"
+  },
+  "static-ip.language": {
+    "cdsDetails": {
+      "champion": {
+        "name": "Colyn Brown",
+        "email": "clbrown@godaddy.com"
+      },
+      "cdsLocation": "localization/sales/gd/ssl/dedicated-ip/en",
+      "draft": {
+        "id": "534c640bf778fc304463c547",
+        "createdDate": "2014-04-14",
+        "createdBy": {
+          "fullName": "Colyn Brown",
+          "username": "clbrown"
+        },
+        "jiraTicket": "None",
+        "comments": "Prep for github"
+      }
+    }
+  }
+}

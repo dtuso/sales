@@ -1,0 +1,305 @@
+{% extends 'base.html' %}
+
+{% block metahead %}
+  {% parent %}
+ ##if(countrySiteAny(es,pt))
+      <!-- International Background Images -->
+      <style type="text/css">
+      .tab-content-pricing-bg-dedicated-ip {
+          background-image: url("[@T[link:<cssroot />]@T]fos/201401/ssl/static-ip/img/LATAM-bg-misc-banner-dedicated-ip.jpg");
+      }
+      </style>
+  ##endif
+
+  ##if(countrySiteAny(in,pk))
+      <!-- International Background Images -->
+      <style type="text/css">
+      .tab-content-pricing-bg-dedicated-ip {
+        background-image: url("[@T[link:<cssroot />]@T]fos/201401/ssl/static-ip/img/IN-bg-misc-banner-dedicated-ip.jpg");
+      }
+      </style>
+  ##endif
+
+  ##if(countrySiteAny(my, ph, sg))
+      <!-- International Background Images -->
+      <style type="text/css">
+      .tab-content-pricing-bg-dedicated-ip {
+        background-image: url("[@T[link:<cssroot />]@T]fos/201401/ssl/static-ip/img/ASIA-bg-misc-banner-dedicated-ip.jpg");
+      }
+      </style>
+  ##endif
+
+     ##if(countrySiteAny(tr))
+      <!-- International Background Images -->
+      <style type="text/css">
+      .tab-content-pricing-bg-dedicated-ip {
+        background-image: url("[@T[link:<cssroot />]@T]fos/201401/ssl/static-ip/img/MED_bg-misc-banner-dedicated-ip.jpg");
+  }
+      </style>
+  ##endif
+
+     ##if(countrySiteAny(no,dk,fi,se,at,pl,hu,ru,ua,gr))
+      <!-- International Background Images -->
+      <style type="text/css">
+      .tab-content-pricing-bg-dedicated-ip {
+        background-image: url("[@T[link:<cssroot />]@T]fos/201401/ssl/static-ip/img/NOR_bg-misc-banner-dedicated-ip.jpg");
+  }
+
+  </style>
+  ##endif
+
+{% endblock %}
+
+{% block footer %}
+<script>
+    $(function () {
+      $('.equal-height').setColumnsEqualHeight();
+      $('.select-box').setSelectBox();
+      $('.tab-link').tabLinks();
+      // CI code click tracker
+      if (typeof FastballEvent_MouseClick === 'function' && typeof fbiLibCheckQueue === 'function') {
+        $('[data-ci]').click(function(e){
+          $this = $(this);
+          FastballEvent_MouseClick(e,$this.attr('data-ci'),$(this)[0],'a');
+          fbiLibCheckQueue();
+        });
+      }
+    });
+  </script>
+{% endblock %}
+
+{% block body %}
+
+   <!-- Start main-banner -->
+    <section class="main-banner main-banner-dedicated-ip">
+      <div class="l-main-container container main-banner-content main-banner-content-dedicated-ip">
+        <div class="ribbon ribbon-right" data-ci="88303"><i class="marquee-flag marquee-flag-[@T[localization:<language />]@T] marquee-flag-money-back-guarantee"></i></div>
+        <h1 class="main-banner-title"><strong>[@L[cds.sales/gd/ssl/dedicated-ip:MainBannerTitle]@L]</strong></h1>
+        <h2 class="main-banner-subtitle">[@L[cds.sales/gd/ssl/dedicated-ip:MainBannerSubtitle]@L]</h2>
+
+      </div>
+    </section>
+    <!-- End main-banner -->
+
+    <!-- Start main-tabs -->
+    <section class="main-tabs">
+      <div class="container">
+      <ul class="nav nav-tabs">
+        <li class="nav-tabs-item active"><a class="nav-tabs-link"  data-ci="88304" href="#pricing" data-toggle="tab">[@L[cds.sales/gd/ssl/dedicated-ip:MainPageContentTabContent0TabText]@L]</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
+        <li class="nav-tabs-item"><a class="nav-tabs-link" href="#faq" data-ci="88305" data-toggle="tab">[@L[cds.sales/gd/ssl/dedicated-ip:MainPageContentTabContent1TabText]@L]</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
+      </ul>
+      </div>
+    </section>
+    <!-- End main-tabs -->
+
+    <!-- Start main-tabs panes -->
+    <div class="tab-content no-margin-top">
+      <div class="tab-pane active tab-content-pricing-bg-dedicated-ip active" id="pricing">
+      <!-- Start content -->
+      <section class="l-main-container container">
+        <!-- Start misc-banner -->
+        <section class="misc-banner">
+          <div class="l-main-container container misc-banner-content misc-banner-content-dedicated-ip">
+          <h2>[@L[cds.sales/gd/ssl/dedicated-ip:MainPageContentTabContent0HeaderText]@L]</h2>
+          <p>[@L[cds.sales/gd/ssl/dedicated-ip:MainPageContentTabContent0SubheaderText]@L]</p>
+          </div>
+        </section>
+        <!-- End misc-banner -->
+        <div class="row tab-content equal-height">
+          <div class="col-xs-4">
+            <div class="grid-column no-padding-bottom">
+              <h2>[@L[cds.sales/gd/ssl/dedicated-ip:HeaderContentCustomContentList1]@L]</h2>
+              <form action="[@T[link:<relative path="/CDS/Widgets/WidgetsPostHandlers/DedIPAddToCartPostHandler.ashx" parammode="common" />]@T]" name="frmStaticIp" id="frmStaticIp" method="post">
+                <p class="starting-at starting-at-alternate-top-spacing"><span class="starting-at-above">[@L[cds.sales/gd/ssl/dedicated-ip:StartingAt]@L]</span><span class="starting-at-price">[@T[productprice:<current productid="4601" period="monthly" />]@T]</span><span class="starting-at-small">[@L[cds.sales/gd/ssl/dedicated-ip:PerMonth]@L]</span></p>
+
+                <input type="hidden" name="selectedPlan" id="selectedPlan" class="selectedPlan" value="frmStaticIp_0">
+                <input type="hidden" name="formSubmitButton" id="formSubmitButton" value="Add-to-Cart">
+                <input type="hidden" name="itc" value="slp_sslsupt">
+                <input type="hidden" name="nocos" value="False">
+                <input type="hidden" name="config" value="ssl3">
+                <input type="hidden" name="sdc" value="True">
+                <input type="hidden" name="newxs" value="False">
+                <input type="hidden" name="cicode" value="88306">
+                <input type="hidden" name="prog_id" value="GoDaddy">
+
+                <div class="select-box first">
+                  <div class="select-box-head">
+                    <div class="select-box-current">
+                      <span>3 [@L[cds.sales/gd/ssl/dedicated-ip:Months]@L]</span>
+                      <span class="price">[@T[productprice:<current productid="4601" period="monthly" />]@T][@L[cds.sales/gd/ssl/dedicated-ip:Mo]@L]</span>
+                    </div>
+                    <div class="select-box-cta"><i class="ico ico-download"></i></div>
+                  </div><!-- select-box-head -->
+                  <div class="select-box-body">
+                    <ul class="select-box-options">
+                      <li class="selected">
+                        <label>
+                          <input type="radio" name="product" id="4601_1_3" value="4601|1|3" class="defaultPlan" checked="true">
+                          <span>3 [@L[cds.sales/gd/ssl/dedicated-ip:Months]@L]</span>
+                          <span class="price">[@T[productprice:<current productid="4601" period="monthly" />]@T]</span>
+                          <span class="mo">[@L[cds.sales/gd/ssl/dedicated-ip:Mo]@L]</span>
+                        </label>
+                      </li>
+                      <li>
+                        <label>
+                          <input type="radio" name="product" id="4601_1_12" value="4601|1|12">
+                          <span>12 [@L[cds.sales/gd/ssl/dedicated-ip:Months]@L]</span>
+                          <span class="price">[@T[productprice:<current productid="4601" period="monthly" />]@T]</span>
+                          <span class="mo">[@L[cds.sales/gd/ssl/dedicated-ip:Mo]@L]</span>
+                        </label>
+                      </li>
+                      <li>
+                        <label>
+                          <input type="radio" name="product" id="4601_1_12" value="4601|1|24">
+                          <span>24 [@L[cds.sales/gd/ssl/dedicated-ip:Months]@L]</span>
+                          <span class="price">[@T[productprice:<current productid="4601" period="monthly" />]@T]</span>
+                          <span class="mo">[@L[cds.sales/gd/ssl/dedicated-ip:Mo]@L]</span>
+                        </label>
+                      </li>
+                      <li>
+                        <label>
+                          <input type="radio" name="product" id="4601_1_12" value="4601|1|36">
+                          <span>36 [@L[cds.sales/gd/ssl/dedicated-ip:Months]@L]</span>
+                          <span class="price">[@T[productprice:<current productid="4601" period="monthly" />]@T]</span>
+                          <span class="mo">[@L[cds.sales/gd/ssl/dedicated-ip:Mo]@L]</span>
+                        </label>
+                      </li>
+                    </ul>
+                  </div><!-- select-box-body -->
+                </div><!-- select-box -->
+
+
+                <p class="no-margin-bottom"><button type="submit" data-form="addtocart-form" class="btn btn-warning btn-block js-addtocart-btn btn--push-down btn-lg">[@L[cds.sales/gd/ssl/dedicated-ip:AddToCart]@L]</button></p>
+              </form>
+              <ul class="plan-pricing-list plan-pricing-list-alternate">
+                <li class="two-lines">[@L[cds.sales/gd/ssl/dedicated-ip:MainPageContentTabContent0PlanBox0PlanDetail1]@L]</li>
+                <li class="two-lines">[@L[cds.sales/gd/ssl/dedicated-ip:MainPageContentTabContent0PlanBox0PlanDetail2]@L]</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xs-8">
+            <div class="grid-column accounting-grid-column">
+              <div class="row-icon-left accounting-bullet-list">
+                <i class="ico ico-keys"></i>
+                <h2 class="h2-alternate">[@L[cds.sales/gd/ssl/dedicated-ip:MainPageContentTabContent0FeaturesListTitle1]@L]</h2>
+                <p>[@L[cds.sales/gd/ssl/dedicated-ip:MainPageContentTabContent0FeaturesListText1]@L]</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End content -->
+      <!-- Start plan-summary -->
+      <section class="plan-summary l-main-content no-padding-top">
+        <div class="container l-main-container">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="plan-summary-container">
+                <!-- Start Plan-summary nav tabs -->
+                <ul class="nav nav-tabs plan-summary-tabs">
+                  <li class="nav-tabs-item plan-summary-tabs-item active">
+                    <a href="#ps-support" class="nav-tabs-link plan-summary-nav-tabs-link" data-toggle="tab">[@L[cds.sales/gd/ssl/dedicated-ip:MainContentFooterPagesTabText]@L]</a>
+                  </li>
+                </ul>
+                <!-- End Plan-summary nav tabs -->
+
+                <!-- Start Plan-summary Tab panes -->
+
+                <div class="row tab-content equal-height no-margin-top">
+                  <div class="col-xs-6">
+                    <div class="tab-content no-margin-bottom no-margin-top">
+                      <div class="tab-pane active" id="ps-support">
+                        <p><strong>[@L[cds.sales/gd/ssl/dedicated-ip:PlanSummaryTitle1]@L]</strong></p>
+                        <ul class="plan-summary-tab-pane-list plan-summary-tab-pane-list-columns no-margin-left bullets-insde">
+                          <li>[@L[cds.sales/gd/ssl/dedicated-ip:PlanSummaryText1]@L]</li>
+                          <li>[@L[cds.sales/gd/ssl/dedicated-ip:PlanSummaryText2]@L]</li>
+                          <li>[@L[cds.sales/gd/ssl/dedicated-ip:PlanSummaryText3]@L]</li>
+                          <li>[@L[cds.sales/gd/ssl/dedicated-ip:PlanSummaryText4]@L]</li>
+                          <li>[@L[cds.sales/gd/ssl/dedicated-ip:PlanSummaryText5]@L]</li>
+                          <li>[@L[cds.sales/gd/ssl/dedicated-ip:PlanSummaryText6]@L]</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-xs-6">
+                    <div class="tab-content no-margin-bottom no-margin-top">
+                      <div class="tab-pane active" id="ps-support">
+                        <p><strong>[@L[cds.sales/gd/ssl/dedicated-ip:PlanSummaryTitle2]@L]</strong></p>
+                        <ul class="plan-summary-tab-pane-list plan-summary-tab-pane-list-columns no-margin-left bullets-insde">
+                          <li>[@L[cds.sales/gd/ssl/dedicated-ip:PlanSummaryText7]@L]</li>
+                          <li>[@L[cds.sales/gd/ssl/dedicated-ip:PlanSummaryText8]@L]</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <!-- End Plan-summary Tab panes -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End plan-summary -->
+
+      <section class="container l-main-container content-disclaimer">
+        <p><small class="small-print">[@L[cds.sales/gd/ssl/dedicated-ip:DisclaimerText]@L]</small></p>
+      </section>
+
+      </div>
+      <div class="tab-pane" id="faq">
+      <section class="tab-content-top-spacing">
+        <div class="container l-main-container">
+          <div class="row tab-content">
+            <div class="col-xs-12">
+              <div class="grid-column tab-content-column-alternate">
+                <h2 class="h2-alternate">[@L[cds.sales/gd/ssl/dedicated-ip:Faq1Title]@L]</h2>
+                <p>[@L[cds.sales/gd/ssl/dedicated-ip:Faq1Text1]@L]</p>
+                <p>[@L[cds.sales/gd/ssl/dedicated-ip:Faq1Text2]@L]</p>
+                <hr/>
+
+                <h2 class="h2-alternate">[@L[cds.sales/gd/ssl/dedicated-ip:Faq2Title]@L]</h2>
+                <p>[@L[cds.sales/gd/ssl/dedicated-ip:Faq2Text1]@L]</p>
+                <ul class="bullets-insde">
+                  <li>[@L[cds.sales/gd/ssl/dedicated-ip:Faq2listItem1]@L]</li>
+                  <li>[@L[cds.sales/gd/ssl/dedicated-ip:Faq2listItem2]@L]</li>
+                  <li>[@L[cds.sales/gd/ssl/dedicated-ip:Faq2listItem3]@L]</li>
+                </ul>
+                <p>[@L[cds.sales/gd/ssl/dedicated-ip:Faq2Text2]@L]</p>
+
+                <hr/>
+
+                <h2 class="h2-alternate">[@L[cds.sales/gd/ssl/dedicated-ip:Faq5Title]@L]</h2>
+                <p>[@L[cds.sales/gd/ssl/dedicated-ip:Faq5Text1]@L]</p>
+                <p>[@L[cds.sales/gd/ssl/dedicated-ip:Faq5Text2]@L]</p>
+                <p>[@L[cds.sales/gd/ssl/dedicated-ip:Faq5Text3]@L]</p>
+                <p>[@L[cds.sales/gd/ssl/dedicated-ip:Faq5Text4]@L]</p>
+
+                <hr/>
+
+                <h2 class="h2-alternate">[@L[cds.sales/gd/ssl/dedicated-ip:Faq3Title]@L]</h2>
+                <p>[@L[cds.sales/gd/ssl/dedicated-ip:Faq3Text1]@L]</p>
+                <p>[@L[cds.sales/gd/ssl/dedicated-ip:Faq3Text2]@L]</p>
+                <p>[@L[cds.sales/gd/ssl/dedicated-ip:Faq3Text3]@L]</p>
+                <p>[@L[cds.sales/gd/ssl/dedicated-ip:Faq3Text4]@L]</p>
+                <p>[@L[cds.sales/gd/ssl/dedicated-ip:Faq3Text5]@L]</p>
+
+                <hr/>
+
+                <h2 class="h2-alternate">[@L[cds.sales/gd/ssl/dedicated-ip:Faq4Title]@L]</h2>
+                <p>[@L[cds.sales/gd/ssl/dedicated-ip:Faq4Text1]@L]</p>
+                <p>[@L[cds.sales/gd/ssl/dedicated-ip:Faq4Text2]@L]</p>
+                <p>[@L[cds.sales/gd/ssl/dedicated-ip:Faq4Text3]@L]</p>
+
+              </div>
+            </div>
+          </div>
+          <a href="#pricing" class="btn btn-primary btn-lg btn-block js-open-overview tab-link" data-ci="88311"><i class="ico ico-gt"></i>[@L[cds.sales/gd/ssl/dedicated-ip:ChooseYourPackage]@L]</a>
+        </div>
+      </section>
+
+      </div>
+    </div>
+    <!-- End main-tabs panes -->
+{% endblock %}
