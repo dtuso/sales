@@ -4,5 +4,6 @@
   "demo-bv-reviews": "demo/lazy-loader/",
   "search": "domains/search/",
   "csc": "ssl/code-signing-certificate/",
+  "gtld": "tlds/gtld/",
   "qsc": "ecommerce/shopping-cart/"
 }

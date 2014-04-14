@@ -135,3 +135,12 @@ html[lang*=pl] .grid-column h2,
 html[lang*=de] .grid-column h2 {
   font-size: 2.0em;
 }
+html[lang*=fi] .select-box-body > ul > li span:last-child,
+html[lang*=ru] .select-box-body > ul > li span:last-child,
+html[lang*=el] .select-box-body > ul > li span:last-child,
+html[lang*=pl] .select-box-body > ul > li span:last-child,
+html[lang*=de] .select-box-body > ul > li span:last-child {
+  display: block;
+  float: none;
+  text-align: center;
+}
