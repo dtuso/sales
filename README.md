@@ -17,14 +17,20 @@ fork this repostiory, make, commit, and push their changes, then do a merge requ
 Install
 =====
 
-If you're an owner, you can clone the repo directly:
+First, fork the repo so that you create a copy of it into your own account, using the fork button at the upper right.
+Once forked, clone the new repository to your computer using the command below (replace [USERNAME] with your username):
 
 ```
-git clone git@github.secureserver.net:FOS-CDS-Pages/Sales.git && cd Sales
+git clone git@github.secureserver.net:[USERNAME]/Sales.git && cd Sales
 ```
 
-If you're not an owner, you can fork the respository using the button in the upper right. Once forked, use either the
-command line or your GUI to clone the repo.
+Once cloned, you have to create an ```upstream`` source. This creates a connection back to main repository so that you
+can make sure your repo stays in sync with the original one. I don't know if you can do this with the GUI so you'll have to
+do this in the terminal or shell:
+
+```
+git remote add upstream git@github.secureserver.net:FOS-CDS-Pages/Sales.git
+```
 
 **Install global dependencies**
 
