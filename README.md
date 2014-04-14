@@ -24,13 +24,21 @@ Once forked, clone the new repository to your computer using the command below (
 git clone git@github.secureserver.net:[USERNAME]/Sales.git && cd Sales
 ```
 
-Once cloned, you have to create an ```upstream`` source. This creates a connection back to main repository so that you
+Once cloned, you have to create an ```upstream``` source. This creates a connection back to main repository so that you
 can make sure your repo stays in sync with the original one. I don't know if you can do this with the GUI so you'll have to
 do this in the terminal or shell:
 
 ```
 git remote add upstream git@github.secureserver.net:FOS-CDS-Pages/Sales.git
 ```
+
+Now that you have connection back to the originating repository, make sure you have the latest content:
+
+```
+git pull upstream master
+```
+
+Do this daily to make sure you're never too far off.
 
 **Install global dependencies**
 
