@@ -1,0 +1,148 @@
+<!-- DOC BLOCK (DO NOT REMOVE)
+
+
+
+
+
+
+    IMPORTANT:
+      If version control is enabled for this page all changes to this page must also go through version control.
+
+    VERSION CONTROL:
+      https://github.secureserver.net/FOS-CDS-Pages/Sales
+
+    WEB PAGE CHAMPION:
+      Colyn Brown <clbrown@godaddy.com>
+
+    DRAFT DETAILS:
+      Name:         2014-04-14 - clbrown - None
+      Created Date: 2014-04-14
+      Created By:   Colyn Brown <clbrown>
+      JIRA Ticket:  None
+      Comments:     Prep for github
+
+
+
+
+
+
+
+END DOC BLOCK -->
+<phrase key="MetaTitle" />
+Static IP Hosting | Tackle Your Advanced Hosting Needs - GoDaddy
+<phrase key="MetaDescription" />
+Get a dedicated IP address for your hosting account today. We have the control you need for all of your domains.
+<phrase key="MetaKeywords" />
+static ip, dedicated IP, unique address, unique url, hosting IP
+<phrase key="MainPageContentTabContent0TabText" />
+Pricing
+<phrase key="MainPageContentTabContent1TabText" />
+FAQ
+<phrase key="RibbonText" />
+Money Back Guarantee
+<phrase key="RibbonLinkText" />
+Learn More
+<phrase key="MainBannerTitle" />
+Dedicated IP
+<phrase key="MainBannerSubtitle" />
+Build your business on its own unique IP address
+<phrase key="MainPageContentTabContent0HeaderText" />
+Get the solution for your advanced hosting needs.
+<phrase key="MainPageContentTabContent0SubheaderText" />
+A Dedicated Hosting IP gives your hosting account and website a unique IP address, one that&#039;s not shared by any other accounts on the same server. So if you need direct access to your site, even when your DNS records are being propagated, or are planning to add an SSL Certificate, a Dedicated Hosting IP may be for you.
+<phrase key="HeaderContentCustomContentList1" />
+Dedicated Hosting IP
+<phrase key="StartingAt" />
+Starting at
+<phrase key="PerMonth" />
+/month
+<phrase key="AddToCart" />
+Add To Cart
+<phrase key="ChooseYourPackage" />
+Choose your Package
+<phrase key="Months" />
+months
+<phrase key="Mo" />
+/mo
+<phrase key="SelectQuanity" />
+Select Quanity
+<phrase key="MainPageContentTabContent0PlanBox0PlanDetail1" />
+FTP Account Access
+<phrase key="MainPageContentTabContent0PlanBox0PlanDetail2" />
+Accepts SSL Certificates
+<phrase key="MainPageContentTabContent0FeaturesListTitle1" />
+Access your site anytime
+<phrase key="MainPageContentTabContent0FeaturesListText1" />
+Get to your site even when your domain name is not available, such as during domain propagation periods. Just type your Dedicated Hosting IP address into your web browser bar!
+<phrase key="MainContentFooterPagesTabText" />
+Support
+<phrase key="PlanSummaryTitle1" />
+Recieve support and exchange ideas. Join the Community on GoDaddy Support to:
+<phrase key="PlanSummaryTitle2" />
+Our experts sales and support staff are available 24/7.
+<phrase key="PlanSummaryText1" />
+Get direct acces to info and news that interests you
+<phrase key="PlanSummaryText2" />
+Interact with other members
+<phrase key="PlanSummaryText3" />
+Gain acces to new features
+<phrase key="PlanSummaryText4" />
+Check out beta releases
+<phrase key="PlanSummaryText5" />
+Find discount codes
+<phrase key="PlanSummaryText6" />
+Participate in polls and much more
+<phrase key="PlanSummaryText7" />
+Technical support and sales: 866-938-1119 Fastest! Expected Wait time: 6 minutes
+<phrase key="PlanSummaryText8" />
+Email support: <a href="[@T[link:<external linktype="HELPURL" path="/" secure="false"/>]@T]" data-ci="88307">Access Email Support System</a> Expected Wait Time: 4 hours
+<phrase key="DisclaimerText" />
+Third-party logos and marks are registered trademarks of their respective owners. All rights reserved.
+<phrase key="Faq1Title" />
+What is a Dedicated IP?
+<phrase key="Faq1Text1" />
+If you don&#039;t have a Dedicated IP (Internet Protocol) address, your hosting account shares its server&#039;s IP address with other hosting accounts. In most cases, that&#039;s all right. But, you might need the unique address that a Dedicated IP – also known as a static IP – provides if you have a large dedicated hosting website with SSL encryption or heavy traffic.
+<phrase key="Faq1Text2" />
+For more information, see our <a href="[@T[link:<external linktype="communityurl" path="help/category/58" secure="false"/>]@T]" data-ci="88308">Web Hosting</a> Support page.
+<phrase key="Faq2Title" />
+Why would I need a Dedicated IP?
+<phrase key="Faq2Text1" />
+There are many reasons for needing a Dedicated IP address. For example:
+<phrase key="Faq2listItem1" />
+Direct Access - With a Unique IP address, you can view your website using a hosting IP address, or you can have direct access to your website&#039;s files using FTP or a Web browser.
+<phrase key="Faq2listItem2" />
+Updating DNS – When you update your domain name&#039;s DNS, your site becomes inaccessible for 24-48 hours. This can cause major issues for you if you need to FTP or preview any changes. With a unique address (Dedicated IP), you can upload content and preview your website with no problems! All you need to do is type your Dedicated IP address into your browser and your site will come up.
+<phrase key="Faq2listItem3" />
+SSL Certificates – SSL certificates require a Dedicated IP address. A website that requests personal or payment information should have SSL protection, but SSLs require a static IP (Dedicated IP) to work. With a Dedicated IP, you are able to set up an SSL that redirects your visitors through an encrypted hosting connection. (Our SSL certificates include a Dedicated IP, so you do not need to purchase a Dedicated IP credit separately if you are adding a certificate to your site on your shared hosting account.)
+<phrase key="Faq2Text2" />
+For more information, see <a href="[@T[link:<external linktype="communityurl" path="help/article/1054" secure="false"/>]@T]" data-ci="88309">Who Needs a Dedicated IP Address</a>?
+<phrase key="Faq3Title" />
+How do I purchase a Dedicated IP for my hosting account?
+<phrase key="Faq3Text1" />
+Purchasing a Dedicated IP is easy through your Account Manager. From the main navigation bar, click on Hosting & Servers, and then select Dedicated IP. Choose the length of Dedicated IP service you want to purchase, and then proceed to checkout.
+<phrase key="Faq3Text2" />
+It&#039;s always a good rule of thumb to pre-pay for the same service length on your shared hosting and Dedicated IP addresses. That way, when it comes time to renew, you won&#039;t need to worry about forgetting to renew one of your IPs.
+<phrase key="Faq3Text3" />
+Once you complete your purchase, go to the Web hosting area in your Account Manager and apply the credit.
+<phrase key="Faq3Text4" />
+Looking for a Dedicated IP for your SSL certificate? No need to! Our SSLs already come with a Dedicated IP attached to them. When you apply the SSL to the hosting account, we assign the new Dedicated IP to the server.
+<phrase key="Faq3Text5" />
+Interested in purchasing a Dedicated IP? Visit our <a href="#pricing" class="tab-link underlined" data-ci="88310">pricing page</a> for more information.
+<phrase key="Faq4Title" />
+How do I add a Dedicated IP to my shared hosting account?
+<phrase key="Faq4Text1" />
+To add a Dedicated IP to your hosting account, simply log in to your account and click on Web Hosting, and then click the Options button next to the account you want to work with. From the Customize tab you can select to purchase a new Dedicated IP or apply a Dedicated IP credit that you already have.
+<phrase key="Faq4Text2" />
+After you add the Dedicated IP, it can take 24 - 48 hours before it&#039;s active on your hosting account.
+<phrase key="Faq4Text3" />
+For more information, see Adding a Dedicated IP Address from Your Hosting Account.
+<phrase key="Faq5Title" />
+What are the advantages of a Dedicated IP?
+<phrase key="Faq5Text1" />
+Dedicated IP addresses are very exclusive and secure, while shared IP addresses are not. Most domain names share their IP addresses with hundreds of domain names. Therefore, if one domain name causes issues, all of the domain names can be impacted.
+<phrase key="Faq5Text2" />
+Some search engines or ISPs will penalize an IP address if one of its domain names sends spam email. With a Dedicated IP, you can avoid the disadvantages that come with sharing your IP address with other users.
+<phrase key="Faq5Text3" />
+Online experts believe that a static IP or Dedicated IP address can boost search engine ranking results. Search engines like unique addresses because your domain name isn't associated with or connected to other domain names.
+<phrase key="Faq5Text4" />
+For more information, see <a target="_faq" href="[@T[link:<external linktype="communityurl" path="help/1057" secure="false"/>]@T]" data-ci="88503">Adding a Dedicated IP Address from Your Hosting Account</a>.
