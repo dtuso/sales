@@ -138,10 +138,12 @@ This task combines the ```styles```, ```images```, and ```assets-deploy``` tasks
 gulp assets --src website-builder
 ```
 
-CDSM Tool
+Project Data (project.json)
 =====
 
-TODO: Describe CDS API process.
+Every page (or group of pages) gets a ```project.json``` file. This primary purpose for this file is to provide details
+about where each page lives in CDS.
+
 
 Roadmap
 =====
