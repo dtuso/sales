@@ -144,6 +144,14 @@ Creating/Updating Project Files
 Each project is represented in a sub-folder under the ```./src/``` folder. The path directly correlates with the path that you'll find in CDS 2; this is just for
 organization and useful for finding things, not technically required for it to work. This is where all changes will be made.
 
+Each folder will minimally contain:
+
+ * the project data file (ex. src/sales/ssl/static-ip/project.json)
+ * the html source (ex. src/sales/ssl/static-ip/static-ip.html)
+ * a copy of the english dictionary (ex. src/sales/ssl/static-ip/static-ip.language)
+ * an images folder (ex. src/sales/ssl/static-ip/img/)
+ * a css folder (ex. src/sales/ssl/static-ip/css/)
+ * a LESS file (ex. src/sales/ssl/static-ip/css/styles.less)
 
 Roadmap
 =====

@@ -44,9 +44,12 @@ var getProjectData = function(file) {
   var fileName = path.basename(file.path);
   var assetPath = 'fos/sales/themes/' + theme + '/' + baseFilePath;
   var projectFilePath = path.join(path.dirname(file.path), 'project.json');
+  var cicodesFilePath = path.join(path.dirname(file.path), 'cicodes.json');
   var data = require(projectFilePath);
+  var ciCodes = require(cicodesFilePath);
   data = data[fileName] || {};
   data.assetPath = assetPath;
+  data = _.extend(data, ciCodes);
   return data;
 };
 
