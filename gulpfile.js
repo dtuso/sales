@@ -99,7 +99,7 @@ gulp.task('language-deploy', function() {
 });
 
 gulp.task('projectfile', function() {
-  gulp.src(p('./src/sales/' + baseFilePath + '/project.json'))
+  gulp.src(p('./src/sales/' + baseFilePath + '/*.json'))
     .pipe(gulp.dest(paths.build));
 });
 
