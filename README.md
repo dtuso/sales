@@ -3,21 +3,21 @@ About
 
 This repository is now the single place to store all pages, where previously each individual page (at a project level,
 not strictly), was a separate repository. The reason for this change is it became apparent that managing that growing
-list of repos, was getting to be more and more difficult, especially as each has its own version of Grunt.
+list of repositories, was getting to be more and more difficult, especially as each has its own version of Grunt.
 
-There are trade-offs of course. While it will now be easier to manage all repos, as a team, we'll have to be especially
+There are trade-offs of course. While it will now be easier to manage all repositories, as a team, we'll have to be especially
 careful to manage merges and conflicts, as this repository will be modified by many developers working on many different
 projects.
 
 ### Ownership
 
 Ownership will only be assigned to designated page champions. All other developers, as a matter of course, will need to
-fork this repostiory, make, commit, and push their changes, then do a merge request.
+fork this repository, make, commit, and push their changes, then do a merge request.
 
 Install
 =====
 
-First, fork the repo so that you create a copy of it into your own account, using the fork button at the upper right.
+First, fork the repository so that you create a copy of it into your own account, using the fork button at the upper right.
 Once forked, clone the new repository to your computer using the command below (replace [USERNAME] with your username):
 
 ```
@@ -25,7 +25,7 @@ git clone git@github.secureserver.net:[USERNAME]/Sales.git && cd Sales
 ```
 
 Once cloned, you have to create an ```upstream``` source. This creates a connection back to main repository so that you
-can make sure your repo stays in sync with the original one. I don't know if you can do this with the GUI so you'll have to
+can make sure your repository stays in sync with the original one. I don't know if you can do this with the GUI so you'll have to
 do this in the terminal or shell:
 
 ```
@@ -52,7 +52,7 @@ sudo npm install -g gulp
 
 **Install local dependencies**
 
-Before you do anything, it is important that you install any local dependencies associated to this repo via the ```package.json``` file.
+Before you do anything, it is important that you install any local dependencies associated to this repository via the ```package.json``` file.
 Dependencies are installed via the node package manager, ```npm``` so you have to make sure you have node installed.
 See [Node Website](http://www.nodejs.org/) for more information.
 
@@ -138,10 +138,12 @@ This task combines the ```styles```, ```images```, and ```assets-deploy``` tasks
 gulp assets --src website-builder
 ```
 
-CDSM Tool
+Creating/Updating Project Files
 =====
 
-TODO: Describe CDS API process.
+Each project is represented in a sub-folder under the ```./src/``` folder. The path directly correlates with the path that you'll find in CDS 2; this is just for
+organization and useful for finding things, not technically required for it to work. This is where all changes will be made.
+
 
 Roadmap
 =====
