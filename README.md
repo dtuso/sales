@@ -9,11 +9,6 @@ There are trade-offs of course. While it will now be easier to manage all reposi
 careful to manage merges and conflicts, as this repository will be modified by many developers working on many different
 projects.
 
-### Ownership
-
-Ownership will only be assigned to designated page champions. All other developers, as a matter of course, will need to
-fork this repository, make, commit, and push their changes, then do a merge request.
-
 Install
 =====
 
