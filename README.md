@@ -17,6 +17,8 @@ fork this repository, make, commit, and push their changes, then do a merge requ
 Install
 =====
 
+### Step 1: Fork and Clone
+
 First, fork the repository so that you create a copy of it into your own account, using the fork button at the upper right.
 Once forked, clone the new repository to your computer using the command below (replace [USERNAME] with your username):
 
@@ -40,7 +42,13 @@ git pull upstream master
 
 Do this daily to make sure you're never too far off.
 
+### Step 2: Install Dependencies
+
 **Install global dependencies**
+
+#### NodeJS
+
+Make sure you have NodeJS installed. It's available for both Windows and OS X at [NodeJS](http://www.nodejs.org)
 
 #### Gulp
 
@@ -50,7 +58,7 @@ This new repository requires [GulpJS](http://www.gulpjs.com) for running the bui
 sudo npm install -g gulp
 ```
 
-**Install local dependencies**
+#### Package Dependencies
 
 Before you do anything, it is important that you install any local dependencies associated to this repository via the ```package.json``` file.
 Dependencies are installed via the node package manager, ```npm``` so you have to make sure you have node installed.
