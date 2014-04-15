@@ -135,12 +135,20 @@ html[lang*=pl] .grid-column h2,
 html[lang*=de] .grid-column h2 {
   font-size: 2.0em;
 }
-html[lang*=fi] .select-box-body > ul > li span:last-child,
-html[lang*=ru] .select-box-body > ul > li span:last-child,
-html[lang*=el] .select-box-body > ul > li span:last-child,
-html[lang*=pl] .select-box-body > ul > li span:last-child,
-html[lang*=de] .select-box-body > ul > li span:last-child {
+html[lang*=fi] .select-box-body span.price,
+html[lang*=ru] .select-box-body span.price,
+html[lang*=el] .select-box-body span.price,
+html[lang*=pl] .select-box-body span.price,
+html[lang*=de] .select-box-body span.price {
+  text-align: right;
+  float: right;
+}
+html[lang*=fi] .select-box-body span.save,
+html[lang*=ru] .select-box-body span.save,
+html[lang*=el] .select-box-body span.save,
+html[lang*=pl] .select-box-body span.save,
+html[lang*=de] .select-box-body span.save {
+  text-align: right;
   display: block;
-  float: none;
-  text-align: center;
+  float: none !important;
 }

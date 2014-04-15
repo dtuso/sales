@@ -124,12 +124,12 @@
   float: right;
 }
 .select-box-current-quantity {
-width: 90%;
-height: 100%;
-float: left;
+  width: 90%;
+  height: 100%;
+  float: left;
 }
 .bullet-list{
-list-style: initial;
+  list-style: initial;
 }
 /* INTERNATIONAL FIXES */
 html[lang*=fi] .grid-column h2,
@@ -140,12 +140,18 @@ html[lang*=de] .grid-column h2 {
   font-size: 2.0em;
 }
 
-html[lang*=fi] .select-box-body>ul>li span:last-child,
-html[lang*=ru] .select-box-body>ul>li span:last-child,
-html[lang*=el] .select-box-body>ul>li span:last-child,
-html[lang*=pl] .select-box-body>ul>li span:last-child,
-html[lang*=de] .select-box-body>ul>li span:last-child {
-  display: block;
-  float: none;
-  text-align: center;
+html[lang*=fi] .select-box-body span,
+html[lang*=ru] .select-box-body span,
+html[lang*=el] .select-box-body span,
+html[lang*=pl] .select-box-body span,
+html[lang*=de] .select-box-body span {
+  &.price {
+    text-align: right;
+    float: right;
+  }
+  &.save {
+    text-align: right;
+    display: block;
+    float: none !important;
+  }
 }

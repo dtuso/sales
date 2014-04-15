@@ -7,14 +7,14 @@
       },
       "cdsLocation": "sales/ssl/code-signing-certificate.aspx",
       "draft": {
-        "id": "53486f13f778fc127887b845",
-        "createdDate": "2014-04-11",
+        "id": "534c201af778fc30643fd8de",
+        "createdDate": "2014-04-14",
         "createdBy": {
-          "fullName": "Colyn Brown",
-          "username": "clbrown"
+          "fullName": "Leon Kim",
+          "username": "lkim"
         },
-        "jiraTicket": "FOS-18605",
-        "comments": "Fixing overflow issues",
+        "jiraTicket": "FOS-18602",
+        "comments": "images updated in specific markets",
         "url": "http://www.dev-godaddy.com/ssl/code-signing-certificate.aspx"
       }
     },
