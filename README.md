@@ -113,10 +113,18 @@ This task will copy any language files found on the build folder to CDS.
 gulp language-deploy --src website-builder
 ```
 
-#### ASSETS-DEPLOY
-This task will copy any images and CSS files found in the build folder to the image server.
+#### STYLES-DEPLOY
+This task will copy any CSS files found in the build folder to the image server.
+
 ```
-gulp assets-deploy --src website-builder
+gulp styles-deploy --src website-builder
+```
+
+#### IMAGES-DEPLOY
+This task will copy any image files found in the build folder to the image server.
+
+```
+gulp images-deploy --src website-builder
 ```
 
 #### WATCH
@@ -129,16 +137,24 @@ gulp watch --src website-builder
 ### Task Aliases
 These tasks are aliases that combine one or more tasks into one:
 
+#### BUILD
+This task combines the 'templates', 'language', 'projectfile', 'styles', and 'images' tasks.
+
+```
+gulp build --src website-builder
+```
+
 #### DEPLOY
-This task combines the ```templates-deploy``` and ```language-deploy``` tasks.
+This task combines the 'templates-deploy', 'language-deploy', 'images-deploy', and 'styles-deploy' tasks.
 ```
 gulp deploy --src website-builder
 ```
 
-#### ASSETS
-This task combines the ```styles```, ```images```, and ```assets-deploy``` tasks.
+#### ASSETS-DEPLOY
+This task combines the 'images-deploy', and 'styles-deploy' tasks.
+
 ```
-gulp assets --src website-builder
+gulp assets-deploy --src website-builder
 ```
 
 Creating/Updating Project Files
