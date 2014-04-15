@@ -153,7 +153,6 @@ Each folder will minimally contain:
  * a css folder (ex. src/sales/ssl/static-ip/css/)
  * a LESS file (ex. src/sales/ssl/static-ip/css/styles.less)
 
-
 Roadmap
 =====
 

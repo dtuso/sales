@@ -142,4 +142,5 @@ gulp.task('watch', function() {
 
 gulp.task('build', ['templates', 'language', 'projectfile', 'styles', 'images']);
 gulp.task('deploy', ['templates-deploy', 'language-deploy', 'images-deploy', 'styles-deploy']);
+gulp.task('assets-deploy', ['images-deploy', 'styles-deploy']);
 gulp.task('default', ['watch']);
