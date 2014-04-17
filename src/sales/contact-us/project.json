@@ -1,0 +1,49 @@
+{
+  "contact-us.html": {
+    "cdsDetails": {
+      "champion": {
+        "name": "None",
+        "email": "none"
+      },
+      "cdsLocation": "sales/contact-us.aspx",
+      "draft": {
+        "id": "534acdacf778fc26f4f41fa1",
+        "createdDate": "2014-04-13",
+        "createdBy": {
+          "fullName": "Scott Williams",
+          "username": "stwilliams"
+        },
+        "jiraTicket": "FOS-17211",
+        "comments": "Initial page build",
+        "url": "http://www.dev-godaddy.com/contact-us.aspx"
+      }
+    },
+    "assetPath": "fos/201401/sales/contact-us/",
+    "metaTitle": "[@L[cds.sales/contact-us:page-title]@L]",
+    "metaDescription": "[@L[cds.sales/contact-us:meta-description]@L]",
+    "metaKeywords": "[@L[cds.sales/contact-us:meta-keywords]@L]",
+    "metaCanonicalPath": "/hosting/website-builder.aspx",
+    "metaOgTitle": "[@L[cds.sales/contact-us:og-title]@L]",
+    "metaOgImage": "fos/201401/contact-us/img/og.png",
+    "metaOgDescription": "[@L[cds.sales/contact-us:og-description]@L]"
+  },
+  "contact-us.language": {
+    "cdsDetails": {
+      "champion": {
+        "name": "None",
+        "email": "none"
+      },
+      "cdsLocation": "localization/sales/contact-us/en",
+      "draft": {
+        "id": "534aec91f778fc26f4f41fae",
+        "createdDate": "2014-04-13",
+        "createdBy": {
+          "fullName": "Scott Williams",
+          "username": "stwilliams"
+        },
+        "jiraTicket": "FOS-17211",
+        "comments": "Initial page build"
+      }
+    }
+  }
+}
