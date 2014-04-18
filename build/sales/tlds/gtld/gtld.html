@@ -87,6 +87,15 @@ END DOC BLOCK -->
     </style>
 ##endif
 
+##if(!countrySiteAny(us,ca))
+    <!-- International Background Images -->
+    <style type="text/css">
+      .bg-images > .bg-slide1 {
+      background-image: url("[@T[link:<cssroot />]@T]/fos/201401/tlds/gtld/img/GLOBAL_bg-main-banner-club.jpg") !important;
+      }
+    </style>
+##endif
+
 ##if(countrySiteAny(my, ph, sg))
     <!-- International Background Images -->
     <style type="text/css">
