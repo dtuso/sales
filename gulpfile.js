@@ -135,7 +135,7 @@ gulp.task('watch', function() {
   gulp.watch(paths.language, ['language', 'projectfile']);
   gulp.watch(paths.build + '/**/*.html', ['templates-deploy']);
   gulp.watch(paths.build + '/**/*.language', ['language-deploy']);
-  gulp.watch(paths.build + '/css/', ['styles-deploy']);
+  gulp.watch(paths.build + '/css/*.css', ['styles-deploy']);
   gulp.watch(paths.less, ['styles']);
   gulp.watch(paths.images, ['images']);
 });

@@ -31,9 +31,9 @@
   padding: 0;
   list-style: none;
 }
-.main-banner-text .main-banner-list .main-banner-list-location{
-margin: 0;
-padding: 0;
+.main-banner-text .main-banner-list .main-banner-list-location {
+  margin: 0;
+  padding: 0;
 }
 .main-banner-text .main-banner-list .main-banner-list-location h3.main-banner-list-location-title {
   color: #FFF;
@@ -43,7 +43,7 @@ padding: 0;
   margin-top: 0;
   font-weight: 100;
 }
-.main-banner-text .main-banner-list .main-banner-list-location li{
+.main-banner-text .main-banner-list .main-banner-list-location li {
   padding: 0;
   margin: 0;
 }
@@ -61,7 +61,7 @@ padding: 0;
   margin-bottom: 0.074074074em;
   margin-top: 0;
   line-height: 1;
-  *line-height:1.3em;
+  *line-height: 1.3em;
 }
 .main-banner-text .main-banner-support-information {
   color: #FFF;
@@ -112,7 +112,7 @@ padding: 0;
   color: #333;
   font-size: 36px;
   font-weight: 100;
-  margin:30px 30px 10px 30px;
+  margin: 30px 30px 10px 30px;
 }
 .main-content .row.tab-content {
   padding: 0 30px 50px;
@@ -121,7 +121,7 @@ padding: 0;
   background-color: #FFF;
   margin-top: 30px;
 }
-.main-content ul.marketList ,
+.main-content ul.marketList,
 .main-content ul.marketList ul {
   margin: 0;
   padding: 0;
@@ -171,7 +171,7 @@ padding: 0;
 .main-content .marketList .supportPhone a,
 .main-content .marketList .supportPhone a:link,
 .main-content .marketList .supportPhone a:visited,
-.main-content .marketList .supportPhone a:hover{
+.main-content .marketList .supportPhone a:hover {
   text-decoration: none;
   color: #333;
   font-size: 14px;
@@ -193,6 +193,6 @@ padding: 0;
   padding-bottom: 10px;
 }
 #pcHtmlPhModal,
-#pcScriptPh{
-  *position:absolute;
+#pcScriptPh {
+  *position: absolute;
 }

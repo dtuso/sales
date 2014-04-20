@@ -1,4 +1,33 @@
-{% include '../modules/doc-block.html' %}
+<!-- DOC BLOCK (DO NOT REMOVE)
+
+
+
+
+
+
+    IMPORTANT:
+      If version control is enabled for this page all changes to this page must also go through version control.
+
+    VERSION CONTROL:
+      https://github.secureserver.net/FOS-CDS-Pages/Sales
+
+    WEB PAGE CHAMPION:
+      None <none>
+
+    DRAFT DETAILS:
+      Name:         2014-04-13 - stwilliams - FOS-17211
+      Created Date: 2014-04-13
+      Created By:   Scott Williams <stwilliams>
+      JIRA Ticket:  FOS-17211
+      Comments:     Initial page build
+
+
+
+
+
+
+
+END DOC BLOCK -->
 <phrase key="page-title" />
 Contact Us
 <phrase key="meta-description" />
