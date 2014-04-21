@@ -7,14 +7,14 @@
       },
       "cdsLocation": "sales/ssl/code-signing-certificate.aspx",
       "draft": {
-        "id": "534de445f778fc1fd011ee65",
-        "createdDate": "2014-04-14",
+        "id": "53553155f778fc1f281ccf57",
+        "createdDate": "2014-04-21",
         "createdBy": {
-          "fullName": "Leon Kim",
-          "username": "lkim"
+          "fullName": "Byron Lunt",
+          "username": "blunt"
         },
-        "jiraTicket": "FOS-18602",
-        "comments": "images updated in specific markets",
+        "jiraTicket": "FOS-18701, FOS-19528",
+        "comments": "fixed some i18n layout issues",
         "url": "http://www.dev-godaddy.com/ssl/code-signing-certificate.aspx"
       }
     },
@@ -25,7 +25,7 @@
     "metaOgTitle": "[@L[cds.sales/gd/ssl/code-signing-certificate2:MetaTitle]@L]",
     "metaOgImage": "fos/icn/Code_Signing.jpg",
     "metaOgDescription": "[@L[cds.sales/gd/ssl/code-signing-certificate2:MetaDescription]@L]",
-    "cssVersionOverride" : "4"
+    "cssVersionOverride" : "5"
   },
   "code-signing-certificate.language": {
     "cdsDetails": {
