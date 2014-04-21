@@ -7,14 +7,14 @@
       },
       "cdsLocation": "sales/ssl/code-signing-certificate.aspx",
       "draft": {
-        "id": false,
-        "createdDate": "2014-04-23",
+        "id": "53553155f778fc1f281ccf57",
+        "createdDate": "2014-04-21",
         "createdBy": {
-          "fullName": "Colyn Brown",
-          "username": "clbrown"
+          "fullName": "Byron Lunt",
+          "username": "blunt"
         },
-        "jiraTicket": "FOS-19972",
-        "comments": "Fixed money back guarantee banner",
+        "jiraTicket": "FOS-18701, FOS-19528",
+        "comments": "fixed some i18n layout issues",
         "url": "http://www.dev-godaddy.com/ssl/code-signing-certificate.aspx"
       }
     },
