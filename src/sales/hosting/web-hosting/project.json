@@ -14,7 +14,7 @@
           "username": "clbrown"
         },
         "jiraTicket": "FOS-19451",
-        "comments": "Prep for github",
+        "comments": "Prep for github; added new global 3.3.0; added new i18n marquee flag",
         "url": "http://www.dev-godaddy.com/hosting/web-hosting.aspx"
       }
     },
