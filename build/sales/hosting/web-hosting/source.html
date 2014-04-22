@@ -1,6 +1,6 @@
 ---
 location: sales/hosting/web-hosting.aspx
-id: 5355a7a0f778fc07dc24f465
+id: 5355e80df778fc07dc24f46b
 ---
 ##if(false)
 <!-- DOC BLOCK (DO NOT REMOVE)
@@ -27,7 +27,7 @@ id: 5355a7a0f778fc07dc24f465
       Comments:     Prep for github; added new global 3.3.0; added new i18n marquee flag
 
     PREVIEW URL:
-      http://www.dev-godaddy.com/hosting/web-hosting.aspx?version=sales/hosting/web-hosting.aspx|5355a7a0f778fc07dc24f465
+      http://www.dev-godaddy.com/hosting/web-hosting.aspx?version=sales/hosting/web-hosting.aspx|5355e80df778fc07dc24f46b
 
 
 
@@ -70,7 +70,7 @@ END DOC BLOCK -->
 
       <!-- Global CSS and Page CSS -->
 
-      <link href="[@T[link:<css path='fos/201401/global/css/3.3.0/combined-3.3.0.css' />]@T]" rel="stylesheet" type="text/css">
+      <link href="[@T[link:<css path='fos/201401/global/css/3.4.0/combined-3.4.0.css' />]@T]" rel="stylesheet" type="text/css">
       
       <link href="[@T[link:<cssroot />]@T]fos/sales/themes/scotty/hosting/web-hosting/css/styles.min.css" rel="stylesheet" type="text/css">
       
@@ -97,16 +97,10 @@ END DOC BLOCK -->
       
         <!-- Start main-banner -->
       <section class="main-banner main-banner-web-hosting h1-fix">
-  ##if(activeLanguageAny(pt))
-    <span class="top-left-ribbon pt"></span>
-  ##elseif(activeLanguageAny(es))
-    <span class="top-left-ribbon es"></span>
-  ##else
-    <span class="top-left-ribbon"></span>
-  ##endif
+      <span class="left-corner-ribbon money-back-guarantee-light [@T[localization:<language full="true" />]@T] [@T[localization:<language />]@T]"></span>
     <div class="l-main-container container main-banner-content main-banner-content-web-hosting">
       <span class="ribbon ribbon-right">
-            <i class="marquee-flag marquee-flag-[@T[localization:<language full="true" />]@T] marquee-flag-sale"></i>
+            <i class="marquee-flag sale [@T[localization:<language full="true" />]@T] [@T[localization:<language />]@T]"></i>
         </span>
 
         <!-- Start rating-stars -->

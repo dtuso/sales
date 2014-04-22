@@ -11,16 +11,10 @@ id: {{ cdsDetails.draft.id }}
 {% block body %}
         <!-- Start main-banner -->
       <section class="main-banner main-banner-web-hosting h1-fix">
-  ##if(activeLanguageAny(pt))
-    <span class="top-left-ribbon pt"></span>
-  ##elseif(activeLanguageAny(es))
-    <span class="top-left-ribbon es"></span>
-  ##else
-    <span class="top-left-ribbon"></span>
-  ##endif
+      <span class="left-corner-ribbon money-back-guarantee-light [@T[localization:<language full="true" />]@T] [@T[localization:<language />]@T]"></span>
     <div class="l-main-container container main-banner-content main-banner-content-web-hosting">
       <span class="ribbon ribbon-right">
-            <i class="marquee-flag marquee-flag-[@T[localization:<language full="true" />]@T] marquee-flag-sale"></i>
+            <i class="marquee-flag sale [@T[localization:<language full="true" />]@T] [@T[localization:<language />]@T]"></i>
         </span>
 
         <!-- Start rating-stars -->
