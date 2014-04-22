@@ -32,7 +32,8 @@
       <link rel="canonical" href="[@T[link:<external linktype='siteurl' path='{{ metaCanonicalPath }}' secure='false' parammode='explicit'/>]@T]"/>
 
       <!-- Global CSS and Page CSS -->
-      <link href="[@T[link:<cssroot />]@T]fos/201401/global/css/{{ cssVersion }}/combined-{{ cssVersion }}.min.css" rel="stylesheet" type="text/css">
+
+      <link href="[@T[link:<css path='fos/201401/global/css/{{ cssVersion }}/combined-{{ cssVersion }}.css' />]@T]" rel="stylesheet" type="text/css">
       {% if assetPath %}
       <link href="[@T[link:<cssroot />]@T]{{ assetPath }}css/styles.min.css{% if cssVersionOverride %}?v={{cssVersionOverride}}{% endif %}" rel="stylesheet" type="text/css">
       {% endif %}
