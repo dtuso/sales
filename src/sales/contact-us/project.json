@@ -7,8 +7,8 @@
       },
       "cdsLocation": "sales/contact-us.aspx",
       "draft": {
-        "id": "53531ecef778fc3898378630",
-        "createdDate": "2014-04-19",
+        "id": "53559f71f778fc07dc24f464",
+        "createdDate": "2014-04-20",
         "createdBy": {
           "fullName": "Sergio Lopez",
           "username": "sylopez"
@@ -35,14 +35,14 @@
       },
       "cdsLocation": "localization/sales/contact-us/en",
       "draft": {
-        "id": "534aec91f778fc26f4f41fae",
-        "createdDate": "2014-04-13",
+        "id": false,
+        "createdDate": "2014-04-21",
         "createdBy": {
-          "fullName": "Scott Williams",
-          "username": "stwilliams"
+          "fullName": "Sergio Lopez",
+          "username": "sylopez"
         },
         "jiraTicket": "FOS-17211",
-        "comments": "Initial page build"
+        "comments": "Seo Updates"
       }
     }
   }

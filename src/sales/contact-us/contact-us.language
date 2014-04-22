@@ -1,17 +1,21 @@
 {% include '../modules/doc-block.html' %}
 <phrase key="page-title" />
-Contact Us
+GoDaddy Global Support | Contact Us – GoDaddy
 <phrase key="meta-description" />
-How to contact global support. 
+GoDaddy's Global support contact information. 
 <phrase key="meta-keywords" />
 Support, global, contact, help, international support, contact us
 <phrase key="og-title" />
 Contact Us
 <phrase key="og-description" />
-How to contact global support.
+GoDaddy's Global support contact information. 
 <phrase key="main-banner-title" />
 Contact Us
 <phrase key="content-title" />
 Global Support
 <phrase key="disclaimer" />
 Call charges to free phone numbers may vary when calling from outside the area, abroad or from a mobile phone depending on your specific phone plan.
+<phrase key="acessible-in-country" />
+Only accessible in country
+<phrase key="additional-languages" />
+To find the support number for additional languages, see below.
