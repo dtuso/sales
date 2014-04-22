@@ -64,7 +64,7 @@ var swigLangOpts = {
 
 gulp.task('html', function() {
   gulp.src(paths.templates)
-    .pipe(changed(paths.build))
+   // .pipe(changed(paths.templates))
     .pipe(swig(swigTplOpts))
     .pipe(cdsm())
     .pipe(gulp.dest(paths.build));
