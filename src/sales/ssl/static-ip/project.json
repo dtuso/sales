@@ -7,14 +7,14 @@
       },
       "cdsLocation": "sales/ssl/static-ip.aspx",
       "draft": {
-        "id": "534c61a8f778fc304463c544",
-        "createdDate": "2014-04-14",
+        "id": "5355b94ef778fc118080424b",
+        "createdDate": "2014-04-22",
         "createdBy": {
           "fullName": "Tom DeMichele",
           "username": "tdemichele"
         },
-        "jiraTicket": "FOS-18599",
-        "comments": "replacing background image based on culture",
+        "jiraTicket": "FOS-19223",
+        "comments": "making deal image vary by culture",
         "url": "http://www.dev-godaddy.com/ssl/static-ip.aspx"
       }
     },
@@ -24,7 +24,8 @@
     "metaCanonicalPath": "/ssl/static-ip.aspx",
     "metaOgTitle": "[@L[cds.sales/gd/ssl/dedicated-ip:MetaTitle]@L]",
     "metaOgImage": "fos/201401/ssl/static-ip/img/og-img-dedicated-ip.png",
-    "metaOgDescription": "[@L[cds.sales/gd/ssl/dedicated-ip:MetaDescription]@L]"
+    "metaOgDescription": "[@L[cds.sales/gd/ssl/dedicated-ip:MetaDescription]@L]",
+    "cssVersion": "3.3.0"
   },
   "static-ip.language": {
     "cdsDetails": {

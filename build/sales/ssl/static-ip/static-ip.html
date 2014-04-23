@@ -16,14 +16,14 @@
       Colyn Brown <clbrown@godaddy.com>
 
     DRAFT DETAILS:
-      Name:         2014-04-14 - tdemichele - FOS-18599
-      Created Date: 2014-04-14
+      Name:         2014-04-22 - tdemichele - FOS-19223
+      Created Date: 2014-04-22
       Created By:   Tom DeMichele <tdemichele>
-      JIRA Ticket:  FOS-18599
-      Comments:     replacing background image based on culture
+      JIRA Ticket:  FOS-19223
+      Comments:     making deal image vary by culture
 
     PREVIEW URL:
-      http://www.dev-godaddy.com/ssl/static-ip.aspx?version=sales/ssl/static-ip.aspx|534c61a8f778fc304463c544
+      http://www.dev-godaddy.com/ssl/static-ip.aspx?version=sales/ssl/static-ip.aspx|5355b94ef778fc118080424b
 
 
 
@@ -65,7 +65,7 @@ END DOC BLOCK -->
       <link rel="canonical" href="[@T[link:<external linktype='siteurl' path='/ssl/static-ip.aspx' secure='false' parammode='explicit'/>]@T]"/>
 
       <!-- Global CSS and Page CSS -->
-      <link href="[@T[link:<cssroot />]@T]fos/201401/global/css/3.2.0/combined-3.2.0.min.css" rel="stylesheet" type="text/css">
+      <link href="[@T[link:<cssroot />]@T]fos/201401/global/css/3.3.0/combined-3.3.0.min.css" rel="stylesheet" type="text/css">
       
       <link href="[@T[link:<cssroot />]@T]fos/sales/themes/scotty/ssl/static-ip/css/styles.min.css" rel="stylesheet" type="text/css">
       
@@ -140,7 +140,9 @@ END DOC BLOCK -->
    <!-- Start main-banner -->
     <section class="main-banner main-banner-dedicated-ip">
       <div class="l-main-container container main-banner-content main-banner-content-dedicated-ip">
-        <div class="ribbon ribbon-right" data-ci="88303"><i class="marquee-flag marquee-flag-[@T[localization:<language />]@T] marquee-flag-money-back-guarantee"></i></div>
+                <div class="ribbon ribbon-right" data-ci="88303">
+                <i class="marquee-flag marquee-flag-[@T[localization:<language />]@T] marquee-flag-[@T[localization:<language full='true'/>]@T] marquee-flag-money-back-guarantee"></i>
+                </div>
         <h1 class="main-banner-title"><strong>[@L[cds.sales/gd/ssl/dedicated-ip:MainBannerTitle]@L]</strong></h1>
         <h2 class="main-banner-subtitle">[@L[cds.sales/gd/ssl/dedicated-ip:MainBannerSubtitle]@L]</h2>
 
