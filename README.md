@@ -41,6 +41,22 @@ Do this daily to make sure you're never too far off.
 
 **Install global dependencies**
 
+#### CDS Command Line Interface (cds-cli)
+
+You must install the cds global command line interface. This is used to managing authentication with the CDSM related tasks.
+
+```
+$ npm install -g git+ssh://git@github.secureserver.net:WebOps/cds-cli.git
+```
+
+This installs a new command ```cds``` for running several different requests against the CDS API. For this repository, you just need to use it for authenticating:
+
+```
+$ cds login
+```
+
+For more detail see [WebOps/cds-cli](https://github.secureserver.net/WebOps/cds-cli)
+
 #### NodeJS
 
 Make sure you have NodeJS installed. It's available for both Windows and OS X at [NodeJS](http://www.nodejs.org)
