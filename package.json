@@ -1,6 +1,6 @@
 {
   "name": "Sales",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
   "author": "clbrown@godaddy.com",
@@ -13,9 +13,13 @@
     "gulp-rename": "^1.2.0",
     "gulp-swig": "^0.5.1",
     "lodash": "^2.4.1",
-    "lodash": "^2.4.1",
-    "gulp-changed": "^0.3.0",
-    "gulp-cssmin": "^0.1.4",
     "gulp-cdsm": "git+ssh://git@github.secureserver.net:WebOps/gulp-cdsm.git"
+  },
+  "dependencies": {
+    "gulp-front-matter": "^1.0.0",
+    "gulp-header": "^1.0.2",
+    "minimist": "0.0.8",
+    "moment": "^2.6.0",
+    "username": "^0.1.1"
   }
 }

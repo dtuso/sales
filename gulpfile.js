@@ -8,6 +8,8 @@ var fs = require('fs');
 var cssmin = require('gulp-cssmin');
 var rename = require('gulp-rename');
 var cdsm = require('gulp-cdsm');
+var fm = require('gulp-front-matter');
+var argv = require('minimist')(process.argv.slice(2));
 
 var theme = 'scotty';
 var rootAssetPath = (process.platform === 'win32') ? '\\\\g1dwimages001\\images\\fos\\sales\\themes\\' + theme + '\\' : '/Volumes/images/fos/sales/themes/' + theme + '/';
@@ -20,6 +22,9 @@ var paths = {
   build: './build/sales/',
   assets: rootAssetPath
 };
+
+var assetSrcPaths = require('./paths.json');
+var assetSrcPath = assetSrcPaths[argv.src];
 
 var getProjectData = function(file) {
   var fileName = path.basename(file.path);
@@ -62,6 +67,7 @@ var swigLangOpts = {
 gulp.task('html', function() {
   gulp.src(paths.templates)
     .pipe(changed(paths.build))
+    .pipe(fm())
     .pipe(swig(swigTplOpts))
     .pipe(cdsm())
     .pipe(gulp.dest(paths.build));
@@ -76,14 +82,16 @@ gulp.task('language', function() {
 });
 
 gulp.task('styles', function() {
-  gulp.src(paths.less)
-    .pipe(less())
-    .pipe(gulp.dest(paths.build))
-    .pipe(cssmin())
-    .pipe(rename(({
-      suffix: '.min'
-    })))
-    .pipe(gulp.dest(paths.build));
+  if (assetSrcPath) {
+    gulp.src(paths.less)
+      .pipe(less())
+      .pipe(gulp.dest(paths.build))
+      .pipe(cssmin())
+      .pipe(rename(({
+        suffix: '.min'
+      })))
+      .pipe(gulp.dest(paths.build));
+  }
 });
 
 gulp.task('images', function() {
@@ -91,10 +99,17 @@ gulp.task('images', function() {
     .pipe(gulp.dest(paths.build));
 });
 
+gulp.task('assets-deploy', function() {
+  if (assetSrcPath) {
+    gulp.src(assetSrcPath+'/**/*', {cwd: './build/sales/'})
+      .pipe(gulp.dest(path.join(paths.assets,assetSrcPath)));
+  }
+});
+
 gulp.task('watch', function() {
   gulp.watch(paths.templates, ['html']);
   gulp.watch(paths.language, ['language']);
-  gulp.watch(paths.less, ['styles']);
+  gulp.watch(paths.less, ['styles', 'styles-deploy']);
   gulp.watch(paths.images, ['images']);
 });
 
