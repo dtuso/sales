@@ -43,7 +43,7 @@ Do this daily to make sure you're never too far off.
 
 #### CDS Command Line Interface (cds-cli)
 
-You must install the cds global command line interface. This is used to managing authentication with the CDSM related tasks.
+You must install the cds global command line interface. This is used for managing authentication with the CDSM related tasks.
 
 ```
 $ npm install -g git+ssh://git@github.secureserver.net:WebOps/cds-cli.git
