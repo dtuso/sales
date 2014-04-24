@@ -2,17 +2,14 @@ var gulp = require('gulp');
 var changed = require('gulp-changed');
 var swig = require('gulp-swig');
 var less = require('gulp-less');
-var args = require('yargs').argv;
 var _ = require('lodash');
-var jade = require('gulp-jade');
 var path = require('path');
 var fs = require('fs');
 var cssmin = require('gulp-cssmin');
 var rename = require('gulp-rename');
-var chalk = require('chalk');
 var cdsm = require('gulp-cdsm');
 
-var theme = args.theme || 'scotty';
+var theme = 'scotty';
 var rootAssetPath = (process.platform === 'win32') ? '\\\\g1dwimages001\\images\\fos\\sales\\themes\\' + theme + '\\' : '/Volumes/images/fos/sales/themes/' + theme + '/';
 
 var paths = {
@@ -72,7 +69,9 @@ gulp.task('html', function() {
 
 gulp.task('language', function() {
   gulp.src(paths.language)
+    .pipe(changed(paths.build))
     .pipe(swig(swigLangOpts))
+    .pipe(cdsm())
     .pipe(gulp.dest(paths.build));
 });
 
@@ -85,12 +84,6 @@ gulp.task('styles', function() {
       suffix: '.min'
     })))
     .pipe(gulp.dest(paths.build));
-});
-
-gulp.task('upload', function() {
-  gulp.src(paths.templates)
-    .pipe(changed(paths.build))
-    .pipe(cdsm());
 });
 
 gulp.task('images', function() {

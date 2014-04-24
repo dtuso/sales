@@ -35,7 +35,7 @@
       },
       "cdsLocation": "localization/sales/gd/ssl/code-signing-certificate2/en",
       "draft": {
-        "id": "53487dbaf778fc127887b877",
+        "id": false,
         "createdDate": "2014-04-11",
         "createdBy": {
           "fullName": "Colyn Brown",

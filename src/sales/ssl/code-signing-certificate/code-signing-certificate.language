@@ -1,3 +1,7 @@
+---
+location: {{ cdsDetails.cdsLocation }}
+id: {{ cdsDetails.draft.id }}
+---
 {% include '../modules/doc-block.html' %}
 <phrase key="MetaTitle" />
 Signing Certificate | Protect Your Digital Work - GoDaddy
