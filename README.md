@@ -55,6 +55,7 @@ This installs a new command ```cds``` for running several different requests aga
 $ cds login
 ```
 
+
 **NOTE FOR WINDOWS USERS: ** the newly created ```cds``` command is installed using NPM but for some reason for windows it doesn't install it correctly.
 Until this issue can be resolved [Fix-CDS-CLI](wiki/Fix-CDS-CLI)
 
