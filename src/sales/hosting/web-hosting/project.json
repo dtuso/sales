@@ -7,13 +7,13 @@
       },
       "cdsLocation": "sales/hosting/web-hosting.aspx",
       "draft": {
-        "id": "5358085ef778fc255444b879",
-        "createdDate": "2014-04-22",
+        "id": "535ae4cff778fc132872f3d6",
+        "createdDate": "2014-04-25",
         "createdBy": {
-          "fullName": "Sergio Lopez",
-          "username": "sylopez"
+          "fullName": "Leon Kim",
+          "username": "lkim"
         },
-        "jiraTicket": "None",
+        "jiraTicket": "FOS-20028",
         "comments": "Fixing Images",
         "url": "http://www.dev-godaddy.com/hosting/web-hosting.aspx"
       }
