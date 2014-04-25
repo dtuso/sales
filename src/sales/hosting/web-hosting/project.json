@@ -25,8 +25,7 @@
     "metaCanonicalPath": "/hosting/web-hosting.aspx",
     "metaOgTitle": "[@L[cds.sales/gd/hosting/web-hosting:og-title]@L]",
     "metaOgImage": "fos/hp/rebrand/img/gd_rebrand_og.png",
-    "metaOgDescription": "[@L[cds.sales/gd/hosting/web-hosting:og-description]@L]",
-    "cssVersionOverride": "1"
+    "metaOgDescription": "[@L[cds.sales/gd/hosting/web-hosting:og-description]@L]"
   },
   "web-hosting.language": {
     "cdsDetails": {
