@@ -1,5 +1,5 @@
 {
-  "source.html": {
+  "web-hosting.html": {
     "cdsDetails": {
       "champion": {
         "name": "Colyn Brown",
@@ -7,23 +7,44 @@
       },
       "cdsLocation": "sales/hosting/web-hosting.aspx",
       "draft": {
-        "id": "5355e80df778fc07dc24f46b",
-        "createdDate": "2014-04-21",
+        "id": "5358085ef778fc255444b879",
+        "createdDate": "2014-04-22",
         "createdBy": {
-          "fullName": "Colyn Brown",
-          "username": "clbrown"
+          "fullName": "Sergio Lopez",
+          "username": "sylopez"
         },
-        "jiraTicket": "FOS-19451",
-        "comments": "Prep for github; added new global 3.3.0; added new i18n marquee flag",
+        "jiraTicket": "None",
+        "comments": "Fixing Images",
         "url": "http://www.dev-godaddy.com/hosting/web-hosting.aspx"
       }
     },
+    "assetPath": "fos/201401/sales/hosting/web-hosting/",
     "metaTitle": "[@L[cds.sales/gd/hosting/web-hosting:page-title]@L]",
     "metaDescription": "[@L[cds.sales/gd/hosting/web-hosting:meta-description]@L]",
     "metaKeywords": "[@L[cds.sales/gd/hosting/web-hosting:meta-keywords]@L]",
     "metaCanonicalPath": "/hosting/web-hosting.aspx",
-    "metaOgTitle": "[@L[cds.sales/gd/hosting/web-hosting:page-title]@L]",
+    "metaOgTitle": "[@L[cds.sales/gd/hosting/web-hosting:og-title]@L]",
     "metaOgImage": "fos/hp/rebrand/img/gd_rebrand_og.png",
-    "metaOgDescription": "[@L[cds.sales/gd/hosting/web-hosting:meta-description]@L]"
+    "metaOgDescription": "[@L[cds.sales/gd/hosting/web-hosting:og-description]@L]",
+    "cssVersionOverride": "1"
+  },
+  "web-hosting.language": {
+    "cdsDetails": {
+      "champion": {
+        "name": "Colyn Brown",
+        "email": "clbrown@godaddy.com"
+      },
+      "cdsLocation": "localization/sales/hosting/web-hosting/en",
+      "draft": {
+        "id": "5345d1b0f778fc0e805a921f",
+        "createdDate": "2014-04-02",
+        "createdBy": {
+          "fullName": "Colyn Brown",
+          "username": "clbrown"
+        },
+        "jiraTicket": "None",
+        "comments": "Prep for new build process"
+      }
+    }
   }
 }

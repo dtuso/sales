@@ -1,5 +1,6 @@
 {
   "website-builder": "./hosting/website-builder/",
+  "web-hosting": "./hosting/web-hosting/",
   "domain-backorders": "./domainaddon/domain-backorders/",
   "demo-bv-reviews": "./demo/lazy-loader/",
   "search": "./domains/search/",

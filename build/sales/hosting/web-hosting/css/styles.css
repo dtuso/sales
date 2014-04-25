@@ -1,39 +1,6 @@
-/* DOCBLOCK */
-/*
-<!-- DOC BLOCK (DO NOT REMOVE)
-
-
-
-
-
-
-    IMPORTANT:
-      If version control is enabled for this page all changes to this page must also go through version control.
-
-    VERSION CONTROL:
-      https://github.secureserver.net/FOS-CDS-Pages/Sales
-
-    WEB PAGE CHAMPION:
-      Colyn Brown <clbrown@godaddy.com>
-
-    DRAFT DETAILS:
-      Name:         2014-04-21 - clbrown - FOS-19451
-      Created Date: 2014-04-21
-      Created By:   Colyn Brown <clbrown>
-      JIRA Ticket:  FOS-19451
-      Comments:     Fixed some layout issues
-
-
-
-
-END DOC BLOCK -->
-*/
-/* END DOCBLOCK */
-/**
-  * Overrides
-**/
 .nav-tabs-item > .nav-tabs-link {
-  font-size: 1.15em;
+  font-size: 1.1em;
+  padding: 0 1.5em;
 }
 .not-finding-section .starting-at-above {
   margin-top: -0.75em;
