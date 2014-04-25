@@ -57,7 +57,7 @@ $ cds login
 
 
 **NOTE FOR WINDOWS USERS: ** the newly created ```cds``` command is installed using NPM but for some reason for windows it doesn't install it correctly.
-Until this issue can be resolved [Fix-CDS-CLI](wiki/Fix-CDS-CLI)
+Until this issue can be resolved [Fix-CDS-CLI](https://github.secureserver.net/FOS-CDS-Pages/Sales/wiki/Fix-CDS-CLI)
 
 For more detail see [WebOps/cds-cli](https://github.secureserver.net/WebOps/cds-cli)
 
