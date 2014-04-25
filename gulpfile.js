@@ -40,7 +40,7 @@ var getProjectData = function(file) {
   }
 
   data = data[fileName] || {};
-  data.assetPath = 'fos/sales/themes/' + theme + '/' + path.dirname(path.normalize(file.path).split('/src/sales/')[1]) + '/';
+  data.assetPath = 'fos/sales/themes/' + theme + '/' + path.dirname(file.relative).replace('\\', '/') + '/';
   data = _.extend(data, ciCodes);
   return data;
 };
@@ -109,7 +109,7 @@ gulp.task('assets-deploy', function() {
 gulp.task('watch', function() {
   gulp.watch(paths.templates, ['html']);
   gulp.watch(paths.language, ['language']);
-  gulp.watch(paths.less, ['styles', 'styles-deploy']);
+  gulp.watch(paths.less, ['styles', 'assets-deploy']);
   gulp.watch(paths.images, ['images']);
 });
 
