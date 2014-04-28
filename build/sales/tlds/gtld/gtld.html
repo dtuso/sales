@@ -16,14 +16,14 @@
       Joel Conrad <jconrad@godaddy.com>
 
     DRAFT DETAILS:
-      Name:         2014-04-14 - asunkenapally - FOS-19192
-      Created Date: 2014-04-14
-      Created By:   Anusha <asunkenapally>
-      JIRA Ticket:  FOS-19192
-      Comments:     css change for dynamic width of the search box
+      Name:         2014-04-22 - mjamal- 04-24-2014
+      Created Date: 2014-04-22
+      Created By:   Mohseen Jamal - mjamal
+      JIRA Ticket:  FOS-19459
+      Comments:    
 
     PREVIEW URL:
-      http://www.dev-godaddy.com/tlds/gtld.aspx?version=sales/tlds/gtld.aspx|534c2523f778fc304463c53f
+      http://www.dev-godaddy.com/tlds/gtld.aspx?version=sales/tlds/gtld.aspx|53598cdaf778fc0fb0c917f7
 
 
 
@@ -63,20 +63,15 @@ END DOC BLOCK -->
       <link rel="canonical" href="[@T[link:<external linktype='siteurl' path='/tlds/gtld.aspx' secure='false' parammode='explicit'/>]@T]"/>
 
       <!-- Global CSS and Page CSS -->
-
-      <link href="[@T[link:<css path='fos/201401/global/css/3.4.1/combined-3.4.1.css' />]@T]" rel="stylesheet" type="text/css">
+      <link href="[@T[link:<cssroot />]@T]fos/201401/global/css/3.2.0/combined-3.2.0.min.css" rel="stylesheet" type="text/css">
       
-      <!--  -->
-      <link href="[@T[link:<css path='fos/sales/themes/scotty/tlds/gtld/css/styles.css' />]@T]" rel="stylesheet" type="text/css">
+      <link href="[@T[link:<cssroot />]@T]fos/sales/themes/scotty/tlds/gtld/css/styles.css" rel="stylesheet" type="text/css">
       
       <!-- IE SUPPORT FOR HTML5 and Bootstrap 3 -->
       <!--[if lt IE 9]>
         <link href="[@T[link:<cssroot />]@T]fos/201401/global/css/bootstrap-ie7fix.min.css" rel="stylesheet" type="text/css" />
         <script src="[@T[link:<javascriptroot />]@T]fos/201401/global/js/html5shiv.js"></script>
       <![endif]-->
-      <!--[if lt IE 8]>
-        <link href="[@T[link:<cssroot />]@T]fos/201401/global/css/bootstrap-ie7fix.min.css" rel="stylesheet" type="text/css" />
-      <![endif]-->    
 
       <script src="[@T[link:<javascriptroot />]@T]fos/201401/global/vendor/jquery/1.8.3/jquery.min.js"></script>
       [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags" />]@P]
@@ -91,11 +86,11 @@ END DOC BLOCK -->
     }
     </style>
 ##endif
-
-##if(!countrySiteAny(us,ca))
+        
+##if(!countrySiteAny(www,ca))
     <!-- International Background Images -->
     <style type="text/css">
-      .bg-images > .bg-slide1 {
+      .bg-images > .bg-slide2 {
       background-image: url("[@T[link:<cssroot />]@T]/fos/201401/tlds/gtld/img/GLOBAL_bg-main-banner-club.jpg") !important;
       }
     </style>
@@ -109,15 +104,15 @@ END DOC BLOCK -->
     }
     </style>
 ##endif
-    <style type="text/css">
-      .bg-images{height:100%;}
-      .bg-images > .bg-slide {height:100%;}
-    </style>
+        <style type="text/css">
+          .bg-images{height:100%;}
+          .bg-images > .bg-slide {height:100%;}
+        </style>
 
 
   </head>
 
-  <body>
+  <body id="pageBody">
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header" />]@P]
 
     <div class="border-box" role="main">
@@ -155,30 +150,30 @@ END DOC BLOCK -->
                   <div class="carousel-inner carousel-inner-container">
                     <div class="item carousel-inner-item carousel-inner-item-gtld carousel-inner-item-gtld-2 active">
                       <div class="carousel-inner-text-container carousel-inner-text-cointainer-gtld">
-                        <p class="domain no-margin-bottom"><strong>[@L[cds.sales/gd/tlds/gtld:MainBannerCarouselSlide2Text1]@L]</strong></p>
-                        <p class="no-margin-bottom">[@L[cds.sales/gd/tlds/gtld:MainBannerCarouselSlide2Text2]@L]</p>
-                        <p class="no-margin-bottom"><a class="underlined" data-ci="89140" href="[@T[link:<relative path="~/tlds/club"/>]@T]">[@L[cds.sales/gd/tlds/gtld:MainPreRegister]@L]</a></p>
+                        <p class="domain no-margin-bottom"><strong>.london</strong></p>
+                        <p class="no-margin-bottom">[@L[cds.sales/gd/tlds/gtld:MarketingTagLineLondon]@L]</p>
+                        <p class="no-margin-bottom"><a class="underlined" data-ci="90057" href="[@T[link:<relative path="~/tlds/london"/>]@T]">[@L[cds.sales/gd/tlds/gtld:MainPreRegister]@L]</a></p>
                       </div>
                     </div>
                     <div class="item carousel-inner-item carousel-inner-item-gtld carousel-inner-item-gtld-4">
                       <div class="carousel-inner-text-container carousel-inner-text-cointainer-gtld">
-                        <p class="domain no-margin-bottom"><strong>[@L[cds.sales/gd/tlds/gtld:NinjaHeader]@L]</strong></p>
-                        <p class="no-margin-bottom">[@L[cds.sales/gd/tlds/gtld:MainBannerCarouselSlide2TextNinja]@L]</p>
-                        <p class="no-margin-bottom"><a class="underlined" data-ci="89639" href="[@T[link:<relative path="~/tlds/ninja"/>]@T]">[@L[cds.sales/gd/tlds/gtld:MainPreRegister]@L]</a></p>
+                        <p class="domain no-margin-bottom"><strong>.club</strong></p>
+                        <p class="no-margin-bottom">[@L[cds.sales/gd/tlds/gtld:MainBannerCarouselSlide2Text2]@L]</p>
+                        <p class="no-margin-bottom"><a class="underlined" data-ci="89140" href="[@T[link:<relative path="~/tlds/club"/>]@T]">[@L[cds.sales/gd/tlds/gtld:MainPreRegister]@L]</a></p>
                       </div>
                     </div>
                     <div class="item carousel-inner-item carousel-inner-item-gtld carousel-inner-item-gtld-1">
                       <div class="carousel-inner-text-container carousel-inner-text-cointainer-gtld">
-                        <p class="domain no-margin-bottom"><strong>[@L[cds.sales/gd/tlds/gtld:EmailHeader]@L]</strong></p>
-                        <p>[@L[cds.sales/gd/tlds/gtld:MainBannerCarouselSlide3TextEmail]@L]</p>
-                        <p class="no-margin-bottom"><a class="underlined" data-ci="89641" href="[@T[link:<relative path="~/tlds/email"/>]@T]">[@L[cds.sales/gd/tlds/gtld:MarketingSlideLinkText]@L]</a></p>
+                        <p class="domain no-margin-bottom"><strong>.guru</strong></p>
+                        <p class="no-margin-bottom">[@L[cds.sales/gd/tlds/gtld:MainBannerCarouselSlide4Text2]@L]</p>
+                        <p class="no-margin-bottom"><a class="underlined" data-ci="89138" href="[@T[link:<relative path="~/tlds/guru"/>]@T]">[@L[cds.sales/gd/tlds/gtld:MarketingSlideLinkText]@L]</a></p>
                       </div>
                     </div>
                     <div class="item carousel-inner-item carousel-inner-item-gtld carousel-inner-item-gtld-5">
                       <div class="carousel-inner-text-container carousel-inner-text-cointainer-gtld">
-                        <p class="domain no-margin-bottom"><strong>[@L[cds.sales/gd/tlds/gtld:MainBannerCarouselSlide4Text1]@L]</strong></p>
-                        <p class="no-margin-bottom">[@L[cds.sales/gd/tlds/gtld:MainBannerCarouselSlide4Text2]@L]</p>
-                        <p class="no-margin-bottom"><a class="underlined" data-ci="89138" href="[@T[link:<relative path="~/tlds/guru"/>]@T]">[@L[cds.sales/gd/tlds/gtld:MarketingSlideLinkText]@L]</a></p>
+                        <p class="domain no-margin-bottom"><strong>.company</strong></p>
+                        <p class="no-margin-bottom">[@L[cds.sales/gd/tlds/gtld:MarketingTagLineCompany]@L]</p>
+                        <p class="no-margin-bottom"><a class="underlined" data-ci="90067" href="[@T[link:<relative path="~/tlds/company"/>]@T]">[@L[cds.sales/gd/tlds/gtld:MarketingSlideLinkText]@L]</a></p>
                       </div>
                     </div>
                   </div>
@@ -460,14 +455,6 @@ END DOC BLOCK -->
   });
 </script>
 
-<script type="text/javascript">
-var form = $('#domain_search_form');
-var button = $("#domain_search_input_label").siblings("button");
-var label = $('#domain_search_input_label');
-var width = form.width()-(button.width()+parseInt(button.css('padding-left').replace('px',''))+parseInt(button.css('padding-right').replace('px','')))+'px';
-label.css('width', width);
-$('.search-form-input-gtld').css('max-width', width);
-</script>
 
   </body>
 </html>
