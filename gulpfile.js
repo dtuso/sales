@@ -76,6 +76,7 @@ gulp.task('html', function() {
 gulp.task('language', function() {
   gulp.src(paths.language)
     .pipe(changed(paths.build))
+    .pipe(fm())
     .pipe(swig(swigLangOpts))
     .pipe(cdsm())
     .pipe(gulp.dest(paths.build));
