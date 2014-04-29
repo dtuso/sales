@@ -9,5 +9,6 @@
   "static-ip": "./ssl/static-ip/",
   "gtld": "./tlds/gtld/",
   "qsc": "./ecommerce/shopping-cart/",
+  "home": "./homepage/",
   "contact-us": "./contact-us/"
 }
