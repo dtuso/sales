@@ -18,13 +18,13 @@
         "url": "http://www.dev-godaddy.com/ssl/ssl-certificates.aspx"
       }
     },
-    "metaTitle": "[@L[cds.sales/ssl/ssl-certificates:MetaTitle]@L]",
+    "metaTitle": "[@L[cds.sales/gd/ssl/ssl-certificates:MetaTitle]@L]",
     "metaDescription": "[@L[cds.sales/gd/ssl/ssl-certificates:MetaDescription]@L]",
-    "metaKeywords": "[@L[cds.sales/ssl/ssl-certificates:MetaKeywords]@L]",
+    "metaKeywords": "[@L[cds.sales/gd/ssl/ssl-certificates:MetaKeywords]@L]",
     "metaCanonicalPath": "/ssl/ssl-certificates.aspx",
-    "metaOgTitle": "[@L[cds.sales/ssl/ssl-certificates:MetaTitle]@L]",
+    "metaOgTitle": "[@L[cds.sales/gd/ssl/ssl-certificates:MetaTitle]@L]",
     "metaOgImage": "",
-    "metaOgDescription": "[@L[cds.sales/ssl/ssl-certificates:MetaDescription]@L]",
+    "metaOgDescription": "[@L[cds.sales/gd/ssl/ssl-certificates:MetaDescription]@L]",
     "cssVersionOverride" : "1"
   },
   "source.language": {
@@ -35,7 +35,7 @@
       },
       "cdsLocation": "localization/sales/gd/ssl/ssl-certificates/en",
       "draft": {
-        "id": false,
+        "id": "535fea43f778fc0784730f8d",
         "createdDate": "2014-04-28",
         "createdBy": {
           "fullName": "Colyn Brown",

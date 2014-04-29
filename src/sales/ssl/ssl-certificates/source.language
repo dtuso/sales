@@ -1,11 +1,9 @@
 ---
 location: localization/sales/gd/ssl/ssl-certificates/en
-id: 535fdf40f778fc0784730f59
+id: 535fea43f778fc0784730f8d
 name: FOS-11169
 ---
 {% include '../modules/doc-block.html' %}
-<phrase key="lang" />
-en_US
 <phrase key="MetaTitle" />
 SSL Certificates | Secure Your Data & Transactions - GoDaddy
 <phrase key="MetaDescription" />
