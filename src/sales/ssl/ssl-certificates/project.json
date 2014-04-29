@@ -1,0 +1,49 @@
+{
+  "source.html": {
+    "cdsDetails": {
+      "champion": {
+        "name": "Dominic Tuso",
+        "email": "dtuso@godaddy.com"
+      },
+      "cdsLocation": "sales/ssl/ssl-certificates.aspx",
+      "draft": {
+        "id": "535fd794f778fc0784730f54",
+        "createdDate": "2014-04-28",
+        "createdBy": {
+          "fullName": "Colyn Brown",
+          "username": "clbrown"
+        },
+        "jiraTicket": "FOS-11169",
+        "comments": "Reskin",
+        "url": "http://www.dev-godaddy.com/ssl/ssl-certificates.aspx"
+      }
+    },
+    "metaTitle": "[@L[cds.sales/ssl/ssl-certificates:MetaTitle]@L]",
+    "metaDescription": "[@L[cds.sales/gd/ssl/ssl-certificates:MetaDescription]@L]",
+    "metaKeywords": "[@L[cds.sales/ssl/ssl-certificates:MetaKeywords]@L]",
+    "metaCanonicalPath": "/ssl/ssl-certificates.aspx",
+    "metaOgTitle": "[@L[cds.sales/ssl/ssl-certificates:MetaTitle]@L]",
+    "metaOgImage": "",
+    "metaOgDescription": "[@L[cds.sales/ssl/ssl-certificates:MetaDescription]@L]",
+    "cssVersionOverride" : "1"
+  },
+  "source.language": {
+    "cdsDetails": {
+      "champion": {
+        "name": "Dominic Tuso",
+        "email": "dtuso@godaddy.com"
+      },
+      "cdsLocation": "localization/sales/gd/ssl/ssl-certificates/en",
+      "draft": {
+        "id": false,
+        "createdDate": "2014-04-28",
+        "createdBy": {
+          "fullName": "Colyn Brown",
+          "username": "clbrown"
+        },
+        "jiraTicket": "FOS-11169",
+        "comments": "Reskin"
+      }
+    }
+  }
+}
