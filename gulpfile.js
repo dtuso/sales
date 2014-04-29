@@ -14,6 +14,9 @@ var argv = require('minimist')(process.argv.slice(2));
 var theme = 'scotty';
 var rootAssetPath = (process.platform === 'win32') ? '\\\\g1dwimages001\\images\\fos\\sales\\themes\\' + theme + '\\' : '/Volumes/images/fos/sales/themes/' + theme + '/';
 
+var assetSrcPaths = require('./paths.json');
+var assetSrcPath = assetSrcPaths[argv.src];
+
 var paths = {
   templates: ['./src/sales/**/*.html'],
   language: ['./src/sales/**/*.language'],
@@ -22,9 +25,6 @@ var paths = {
   build: './build/sales/',
   assets: rootAssetPath
 };
-
-var assetSrcPaths = require('./paths.json');
-var assetSrcPath = assetSrcPaths[argv.src];
 
 var getProjectData = function(file) {
   var fileName = path.basename(file.path);
@@ -65,39 +65,41 @@ var swigLangOpts = {
 };
 
 gulp.task('html', function() {
-  gulp.src(paths.templates)
+  gulp.src(assetSrcPath+'/**/*.html', {cwd: './src/sales/'})
     .pipe(changed(paths.build))
-    .pipe(fm())
+    .pipe(fm({remove:true}))
     .pipe(swig(swigTplOpts))
     .pipe(cdsm())
-    .pipe(gulp.dest(paths.build));
+    .pipe(gulp.dest(path.join(paths.build,assetSrcPath)));
 });
 
 gulp.task('language', function() {
-  gulp.src(paths.language)
+  gulp.src(assetSrcPath+'/**/*.language', {cwd: './src/sales/'})
     .pipe(changed(paths.build))
-    .pipe(fm())
+    .pipe(fm({remove:true}))
     .pipe(swig(swigLangOpts))
     .pipe(cdsm())
-    .pipe(gulp.dest(paths.build));
+    .pipe(gulp.dest(path.join(paths.build,assetSrcPath)));
 });
 
 gulp.task('styles', function() {
   if (assetSrcPath) {
-    gulp.src(paths.less)
+    gulp.src(assetSrcPath+'/**/css/*.less', {cwd: './src/sales/'})
       .pipe(less())
-      .pipe(gulp.dest(paths.build))
+      .pipe(gulp.dest(path.join(paths.build,assetSrcPath)))
       .pipe(cssmin())
       .pipe(rename(({
         suffix: '.min'
       })))
-      .pipe(gulp.dest(paths.build));
+      .pipe(gulp.dest(path.join(paths.build,assetSrcPath)));
   }
 });
 
 gulp.task('images', function() {
-  gulp.src(paths.images)
-    .pipe(gulp.dest(paths.build));
+  if (assetSrcPath) {
+    gulp.src(assetSrcPath+'/**/img/*', {cwd: './src/sales/'})
+      .pipe(gulp.dest(path.join(paths.build,assetSrcPath)));
+  }
 });
 
 gulp.task('assets-deploy', function() {

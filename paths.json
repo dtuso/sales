@@ -5,6 +5,7 @@
   "demo-bv-reviews": "./demo/lazy-loader/",
   "search": "./domains/search/",
   "csc": "./ssl/code-signing-certificate/",
+  "ssl": "./ssl/ssl-certificates/",
   "static-ip": "./ssl/static-ip/",
   "gtld": "./tlds/gtld/",
   "qsc": "./ecommerce/shopping-cart/",
