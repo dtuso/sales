@@ -1,0 +1,132 @@
+---
+location: sales/homepage/default.en.us
+id: 53600622f778fc0784730f98
+name: FOS-12345
+---
+{% extends 'layout.html' %}
+{% block body %}
+
+<!-- Domain Search Section -->
+  <div class="gdhp-search-section">
+    <div class="gdhp-main-top">
+      <form method="post" data-url="[@T[link:<relative path="~/api/dpp/search/single"/>]@T]" action="[@T[link:<relative path="/domains/searchresults-new.aspx"/>]@T]" class="search-form search-form-alternate search-form-certified">
+        <div class="gdhp-search-box">
+        <input type="text" id="searchDomainName" name="domainToCheck" class="search-form-input searchInput helveticafont" autocomplete="off" maxlength="63" title="[@L[cds.sales/homepage:sb-search-title]@L]"/>
+        <button type="submit" name="searchButton" data-ci="54814" class="btn btn-primary btn-lg hp-search">[@L[cds.sales/homepage/segments/default:domain-banner-search-btn]@L]</button>
+        </div>
+        <div class="clearfix"></div>
+      </form>
+    </div>
+  </div>
+<!-- End Domain Search -->
+  ##if(activeLanguageAny([en-us]) && targetMessageTagAny(sales_hp,hpmarquee_dom,hpmarquee_host,hpmarquee_wsb))
+    [@P[tmsdocument:<data interactionpoint="sales_hp"><MessageTags><MessageTag>hpmarquee_dom</MessageTag><MessageTag>hpmarquee_host</MessageTag><MessageTag>hpmarquee_wsb</MessageTag></MessageTags></data>]@P]
+  ##else
+    [@P[cdsDocument:<data app="sales" location="homepage/locals/en-us/topmarquee" /> ]@P]
+  ##endif
+  <div class="top-banner-lower-content">
+    <div class="top-lower-content">   
+        <span class="search-links">
+          <a href="[@T[link:<relative path='/tlds/co-domain.aspx'><param name='ci' value='83052' /><param name='tld' value='CO' /></relative>]@T]"><span id="co-icon"></span><span>[@T[productprice:<current productid="56401" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T][@L[cds.sales/homepage:term-length-year]@L]</span></a>
+          <a href="[@T[link:<relative path='/tlds/com.aspx'><param name='ci' value='89151' /><param name='tld' value='COM' /></relative>]@T]"><span id="com-icon"></span><span id="com-price">[@T[productprice:<current productid="101" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T][@L[cds.sales/homepage:term-length-year]@L]*</span></a>
+          <a href="[@T[link:<relative path='/tlds/org.aspx'><param name='ci' value='89152' /><param name='tld' value='ORG' /></relative>]@T]"><span id="org-icon"></span><span id="org-price">[@T[productprice:<current productid="12101" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T][@L[cds.sales/homepage:term-length-year]@L]*</span></a>
+          <a href="[@T[link:<relative path='/tlds/club'><param name='ci' value='89153' /><param name='tld' value='CLUB' /></relative>]@T]"><span id="club-icon"></span><span id="club-price">[@T[productprice:<current productid="172137" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T][@L[cds.sales/homepage:term-length-year]@L]*</span></a>
+        </span>
+        <div class="gdhp-share">
+          <div class="fosshare" data-twshareurl="[@T[link:<external linktype='XDOTCO' path='/wwwGD' />]@T]" data-twtext="[@L[cds.sales/homepage:twitter-text-gdbl]@L]" data-twrelated="GoDaddy" data-shareurl="[@T[link:<relative path='/'/>]@T]" data-buttons="google,facebook,twitter"></div>
+        </div>
+    </div>
+  </div>
+  
+  <!-- MY PODS!!!! -->
+  {% include './locals/pods.html' %}
+
+  [@P[cdsDocument:<data app="sales" location="homepage/locals/en-us/lowermarquee" /> ]@P]
+    <div class="why-us-wrap">
+      <div class="why-us-content">
+        <div class="why-us-headline-wrap">
+          <span class="why-us-headline b condensed">[@L[cds.sales/homepage/segments/default:whyus-text-area]@L]</span>
+        </div>
+        <div class="why-us-circles">
+          <ul>
+            <li>
+              <div class="circle1"></div><div class="circle-text">[@L[cds.sales/homepage:whyus-img-text-1]@L]</div>
+            </li>
+            <li>
+              <div class="circle2"></div><div class="circle-text">[@L[cds.sales/homepage:whyus-img-text-2]@L]</div>
+            </li>
+            <li>
+              <div class="circle3"></div><div class="circle-text">[@L[cds.sales/homepage:whyus-img-text-3]@L]</div>
+            </li>
+            <li>
+              <div class="circle4"></div><div class="circle-text">[@L[cds.sales/homepage:whyus-img-text-4]@L]</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  <!-- FAQ Slider -->
+  <div id="faqSlider">
+    <div class="gd-nav-container">
+      <div class="gd-swipe" data-gd-swipe='{"auto":0}'>
+        <div class="gd-swipe-wrap">
+          <div class="gd-swipe-item">
+            <div class="gd-swipe-head"><h2>[@L[cds.sales/homepage:faq-slide-1-title]@L]</h2></div>
+            <div class="gd-swipe-body">
+              [@L[cds.sales/homepage:faq-slide-1-content]@L]
+            </div>
+          </div>
+          <div class="gd-swipe-item">
+            <div class="gd-swipe-head"></div>
+            <div class="gd-swipe-body">
+              [@L[cds.sales/homepage:faq-slide-2-content]@L]
+            </div>
+          </div>
+          <div class="gd-swipe-item">
+            <div class="gd-swipe-head"><h2>[@L[cds.sales/homepage:faq-slide-3-title]@L]</h2></div>
+            <div class="gd-swipe-body">
+              [@L[cds.sales/homepage:faq-slide-3-content]@L]
+            </div>
+          </div>
+          <div class="gd-swipe-item">
+            <div class="gd-swipe-head"></div>
+            <div class="gd-swipe-body">
+              [@L[cds.sales/homepage:faq-slide-4-content]@L]
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="#" data-slide="prev" class="arrow-left" data-ci="84408"><i class="ico ico-carousel-arrow-left"></i></a>
+      <a href="#" data-slide="next" class="arrow-right" data-ci="84409"><i class="ico ico-carousel-arrow-right"></i></a>
+      <div class="gd-swipe-bottom-nav"></div>
+    </div>
+  </div>
+        <!-- Page Disclaimer -->
+  <div id="disclaimers">
+    <section class="container l-main-container content-disclaimer">
+        <p class="no-margin-bottom"><a class="simple-link" href="#" data-toggle="modal" data-target="#myModal" data-ci="86765">[@L[cds.sales/homepage:disclaimer-text]@L]</a></p>
+    <section/>
+      <div class="modal fade" id="myModal">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                      <p class="modal-title"><strong>[@L[cds.sales/homepage:disclaimer-modal-title]@L]</strong></p>
+                  </div>
+                  <div class="modal-body">
+                   <div class="g-modal-content">
+                     <p>[@L[cds.sales/homepage:disclaimer-modal-first-content]@L]<p>
+                     <p>[@L[cds.sales/homepage:disclaimer-modal-third-content]@L]</p>
+                     <p>[@L[cds.sales/homepage:disclaimer-modal-fourth-content]@L]</p>
+                     ##if(countrySiteAny(au))
+                     <p>[@L[cds.sales/homepage:disclaimer-modal-second-content]@L]<p>
+                       ##endif
+                   </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>    
+
+{% endblock %}
