@@ -1,0 +1,192 @@
+---
+location: localization/sales/gd/ssl/ssl-certificates/en
+id: 535fea43f778fc0784730f8d
+name: FOS-11169
+---
+{% include '../modules/doc-block.html' %}
+<phrase key="MetaTitle" />
+SSL Certificates | Secure Your Data & Transactions - GoDaddy
+<phrase key="MetaDescription" />
+Secure your web site with both industry-standard 128-bit encryption and high grade 256-bit encryption with an SSL certificate.
+<phrase key="MetaKeywords" />
+ssl certificates, ssl certificate, ssl, ssl cert, ssl certs, secure website
+<phrase key="MastHeadTitle" />
+SSL Certificates
+<phrase key="LabelReadReviews" />
+Read Reviews
+<phrase key="MastHeadSubTitle" />
+Keep payments & <br > customer data private
+<phrase key="MastHeadListItem1" />
+We’re here to help you, 24/7/365
+<phrase key="MastHeadListItem2" />
+Call our dedicated security team at (480) 463-8887.
+<phrase key="deluxe" />
+As low as 
+<phrase key="mo" />
+/yr
+<phrase key="add-and-configure" />
+Get Started
+<phrase key="ContentTabLabe1" />
+Plans & Pricing
+<phrase key="ContentTabLabe2" />
+Features
+<phrase key="ContentTabLabe3" />
+FAQ
+<phrase key="ContentTabLabe4" />
+Customer Reviews
+<phrase key="plansPricingTitle" />
+Secure transactions and customer data.
+<phrase key="plansPricingText" />
+GoDaddy SSL Certificates are a simple and cost-effective way to protect the private information – passwords, credit card numbers – submitted to your website. Customers will buy with confidence, knowing that the information they enter on any secured page is protected. It’s all backed by our dedicated security team.
+<phrase key="plansPricingOne" />
+Protect One Website
+<phrase key="plansPricingMultiple" />
+Protect Multiple Websites
+<phrase key="plansPricingAll" />
+Protect All Subdomains
+<phrase key="startingAt" />
+Starting at
+<phrase key="year" />
+year
+<phrase key="plansPricingMultipleDesc" />
+"Multiple Domains UCC"
+<phrase key="plansPricingAllDesc" />
+"Wildcard"
+<phrase key="1year" />
+1 year
+<phrase key="2years" />
+2 years
+<phrase key="3years" />
+3 years
+<phrase key="save" />
+Save
+<phrase key="DiscalimerSymbol" />
+&#8225;
+<phrase key="cartButton" />
+Add to Cart
+<phrase key="plansPricingExampleLabel" />
+Example:
+<phrase key="plansPricingExampleItem1" />
+ProtectMyVisitors.com
+<phrase key="plansPricingExampleItem2" />
+SecureMyWebsites.net
+<phrase key="plansPricingExampleItem3" />
+Mobile.ProtectMyVisitors.com
+<phrase key="PlansIncludeTabText" />
+All Plans Include
+<phrase key="PlansIcludeText1" />
+Keeps payments & customer data private
+<phrase key="PlansIcludeText2" />
+Secures your site fast
+<phrase key="PlansIcludeText3" />
+Backed by up to $1,000,000 in liability protection
+<phrase key="PlansIcludeText4" />
+Free 24/7 award-winning support
+<phrase key="PlansIcludeText5" />
+Supports strong SHA-2 & 2048-bit encryption
+<phrase key="PlansIcludeText6" />
+Compatible with all major browsers
+<phrase key="PlansIcludeText7" />
+One certificate covers unlimited servers
+<phrase key="PlansIcludeText8" />
+One-click installation for GoDaddy hosted accounts
+<phrase key="MainPageContentTabContent1title" />
+Why choose a GoDaddy SSL Certificate?
+<phrase key="MainPageContentTabContent1text1" />
+Choosing GoDaddy means you will benefit from the highest levels of security the industry offers, all backed by our friendly and dedicated security team.
+<phrase key="MainPageContentTabContent1text2" />
+GoDaddy's award-winning SSL Certificates work with all major browsers and devices, and they protect an unlimited number of servers. Get peace of mind with up to $1,000,000 in liability protection included with each certificate. We’re here to help you, 24/7/365.
+<phrase key="MainPageContentTabContent1text3" />
+Call our dedicated security team at <strong>(480) 463-8887</strong>
+<phrase key="MainPageContentTabContent2title" />
+Follow the leader
+<phrase key="MainPageContentTabContent2text" />
+Use the SSL Certificates trusted by many of the world's biggest companies.
+<phrase key="MainPageContentTabContent3title1" />
+Secure your site fast
+<phrase key="MainPageContentTabContent3List1" />
+One-click installation for GoDaddy hosted accounts
+<phrase key="MainPageContentTabContent3List2" />
+Standard SSL issued in minutes
+<phrase key="MainPageContentTabContent3List3" />
+One certificate covers unlimited servers
+<phrase key="MainPageContentTabContent3List4" />
+Supports strong SHA-2 and 2048-bit encryption
+<phrase key="MainPageContentTabContentOfferText1" />
+Exclusive offer for Open Source projects
+<phrase key="MainPageContentTabContentOfferText2" />
+Get a FREE 1 year Standard SSL Certificate! <a href="#">>Apply Now!</a>
+<phrase key="MainPageContentTabContent5FAQTitle1" />
+What is an SSL Certificate?
+<phrase key="MainPageContentTabContent5FAQList1A" />
+SSL stands for Secure Socket Layer. It might sound complex, but itPlans & Pricings really not. SSL Certificates validate your websitePlans & Pricings identity, and encrypt the information visitors send to, or receive from, your site. This keeps thieves from spying on any exchange between you and your shoppers.
+<phrase key="MainPageContentTabContent5FAQList1B" />
+When you have an SSL Certificate protecting your website, your customers can rest assured that the information they enter on any secured page is private and canPlans & Pricingt be viewed by cyber crooks. GoDaddy makes it easy to install your certificate and secure your server.
+<phrase key="MainPageContentTabContent5FAQList1C" />
+For more information, see <a target="_blank" href="http://support.godaddy.com/help/article/542/what-are-ssl-certificates?ci=85285" data-ci="89608">Defining SSL Certificates.</a>
+<phrase key="MainPageContentTabContent5FAQTitle2" />
+What are the benefits of having an SSL Certificate on my website?
+<phrase key="MainPageContentTabContent5FAQList2A" />
+GoDaddy SSL Certificates inspire trust and show visitors that you value their privacy. An <strong>SSL Cert</strong> protects your customersPlans & Pricing sensitive information such as their name, address, password, or credit card number by encrypting the data during transmission from their computer to your web server. SSL is the standard for web security, and a <strong>Server Certificate</strong> is required by most merchant account services &ndash; youPlans & Pricingll need one if you plan to accept credit cards on your website.
+<phrase key="MainPageContentTabContent5FAQList2B" />
+For more information, see <a target="_blank" href="http://support.godaddy.com/help/article/847/how-does-an-ssl-certificate-work?ci=85286" data-ci="89609">How does an SSL certificate work?</a>
+<phrase key="MainPageContentTabContent5FAQTitle3" />
+How will people know my website is safe?
+<phrase key="MainPageContentTabContent5FAQList3A" />
+How you build your website is entirely up to you. In fact, most basic <strong>secure websites</strong> can be hand-coded using HTML.
+<phrase key="MainPageContentTabContent5FAQList3B" />
+When a visitor enters an SSL-protected page on your website, their browser bar displays a padlock icon and the https:// prefix in the URL address. While most Internet users know to look for those SSL indicators, you can also add a site seal to your website to show visitors your site is verified and secured. Visitors can click the seal to view your certificate&#039;s status and details, seeing for themselves that it&#039;s safe to send sensitive information to your website. Websites protected by GoDaddy&#039;s Premium EV SSL display a green browser bar as well, giving users the green light.
+<phrase key="MainPageContentTabContent5FAQList3C" />
+For more information, see <a target="_blank" href="http://support.godaddy.com/help/article/6723/verifying-a-certificates-validity-on-your-computer?ci=85287" data-ci="89610">Verifying a Certificate&#039;s Validity on Your Computer.</a>
+<phrase key="MainPageContentTabContent5FAQTitle4" />
+What is the difference between Standard SSL and Premium SSL?
+<phrase key="MainPageContentTabContent5FAQList4A" />
+All SSL-protected sites display the https:// prefix in the URL address bar. Sites protected with a Premium EV SSL Certificate display a green browser bar to quickly assure visitors that the organization&#039;s legal and physical existence was verified according to strict industry standards.
+<phrase key="MainPageContentTabContent5FAQList4B" />
+GoDaddy’s Premium EV SSL Certificate involves the most extensive vetting process. We verify the control of the domain and legitimacy of your company by validating the legal name, address, phone number and other business information. The process takes about 30 days, but we&#039;ve got you covered during that time. EV SSL Certs come with a free Standard SSL to use during the vetting process, so you can keep your transactions secure while you wait.
+<phrase key="MainPageContentTabContent5FAQList4C" />
+For more information, see <a target="_blank" href="http://support.godaddy.com/help/article/2201/what-are-the-advantages-of-a-premium-extended-validation-ev-ssl-certificate-for-your-business?ci=85288" data-ci="89611">What are the advantages of a Premium Extended Validation (EV) SSL Certificate for your business?</a>
+<phrase key="MainPageContentTabContent5FAQTitle5" />
+Why should I buy an SSL from GoDaddy?
+<phrase key="MainPageContentTabContent5FAQList5A" />
+For one thing, our <span>SSL certs</span> cover unlimited <span>secure servers</span>. They support up to 256-bit encryption and they&#039;re recognized by all of the major desktop and mobile browsers on the market. Plus, they&#039;re backed by the industry&#039;s best 24/7 phone service and support. There&#039;s absolutely no technical difference between GoDaddy SSL Certificates and those offered by other companies &ndash; they simply cost less. Is it any wonder we&#039;re the largest provider of net new SSL Certificates in the world?
+<phrase key="MainPageContentTabContent5FAQList5B" />
+For more information, see <a target="_blank" href="http://support.godaddy.com/help/article/848/what-is-the-encryption-strength-of-your-ssl-certificates?ci=85289" data-ci="89612">What is the encryption strength of your SSL certificates?</a>
+<phrase key="MainPageContentTabContent5FAQTitle6" />
+Which SSL do I need?
+<phrase key="MainPageContentTabContent5FAQList6A" />
+Some configurations require a specific type of SSL Cert. Do you need to cover multiple domains with a UCC (Unified Communications Certificate), or unlimited subdomains with a Wildcard SSL? Use these questions as a guideline to help find the SSL you need to cover multiple <span>secure sites:</span>
+<phrase key="MainPageContentTabContent5FAQList6BList0" />
+Where are you located? Our certificates are issued worldwide with a few restrictions. Check <a target="_blank" href="http://support.godaddy.com/help/article/853/which-countries-are-currently-supported-for-certificate-issuance?ci-85290" data-ci="89613">this list</a> to find out if you&#039;re covered.
+<phrase key="MainPageContentTabContent5FAQList6BList1" />
+Is this for a business or personal website?
+<phrase key="MainPageContentTabContent5FAQList6BList2" />
+Which type of web hosting server do you use?
+<phrase key="MainPageContentTabContent5FAQList6BList3" />
+How many unique domains do you want to secure with HTTPS?
+<phrase key="MainPageContentTabContent5FAQList6BList4" />
+Do you need an SSL Certificate that supports Intel vPro technology for remote PC management? Check out our Deluxe Certificate.
+<phrase key="MainPageContentTabContent5FAQList6BList5" />
+Do you run an Open Source project? <a target="_blank" href="http://www.godaddy.com/ssl/ssl-open-source.aspx?ci=37130" data-ci="89614">Apply now</a> to get a FREE 1-year Standard SSL Certificate!
+<phrase key="MainPageContentTabContent5FAQList6C" />
+For more information, see <a target="_blank" href="http://support.godaddy.com/help/article/5342/which-ssl-do-i-need?ci=85291" data-ci="89615">Finding the SSL You Need.</a>
+<phrase key="MainPageContentTabContent5FAQTitle7" />
+What happens after I purchase an SSL Certificate?
+<phrase key="MainPageContentTabContent5FAQList7A" />
+After you purchase the SSL, take about 10-15 minutes to activate the credit and submit a request for the certificate to use on your website. We&#039;ll verify your request and keep in touch with you through the process. When the SSL Certificate is issued, we&#039;ll send you an email with details for completing installation, making your server a <span>secure server.</span>
+<phrase key="MainPageContentTabContent5FAQList7B" />
+For more information, see <a target="_blank" href="http://support.godaddy.com/help/article/562/requesting-a-standard-or-wildcard-ssl-certificate?ci=85292" data-ci="89616">Requesting a Standard SSL Certificate.</a>
+<phrase key="ChooseYourPackage" />
+Choose Your Package
+<phrase key="DisclaimerContentSymbols" />
+&#8225;
+<phrase key="DisclaimerContentLinkText" />
+Click here for product disclaimers and legal policies
+<phrase key="DisclaimerContentDisclaimer" />
+Third-party logos and marks are registered trademarks of their respective owners. All rights reserved.
+<phrase key="DisclaimerModalTitle" />
+Disclaimers
+<phrase key="DisclaimerModalListItem1" />
+<sup>&#8225;</sup>Annual discounts available on NEW purchases only.
+<phrase key="DisclaimerModalListItem2" />
+Products will automatically renew until cancelled. You may turn off the auto-renewal feature by visiting your GoDaddy account.
