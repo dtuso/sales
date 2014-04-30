@@ -1,3 +1,8 @@
+---
+location: localization/sales/gd/tlds/gtld/en
+id: false
+name: FOS-19459
+---
 {% include '../modules/doc-block.html' %}
 <phrase key="MetaDescription" />
 gTLDs or Generic Top Level Domains are the latest way for you to secure the perfect domain name. With a gTLD you'll be able to bypass back orders and avoid auctions. And with [@T[companyname:name]@T] you get the best price and our award winning tech support!
@@ -43,6 +48,10 @@ Launch your next project with .VENTURES
 Offer guidance with .GURU
 <phrase key="MarketingTagLine4"/>
 Show diners what's cookin' with .MENU
+<phrase key="MarketingTagLineLondon"/>
+Court 8 million shoppers with .LONDON
+<phrase key="MarketingTagLineCompany"/>
+.COMPANY says you’re in business
 <phrase key="MarketingSlideLinkText"/>
 Register now
 <phrase key="MarketingSlidePreLinkText"/>
@@ -112,37 +121,37 @@ What are TLDs and new TLDs?
 <phrase key="SlideOneContent" comment="The line breaks and indentation are required to work on the SEO Slider, please keep during translation. Reach out to WebOps with questions." />
 
                                     TLD stands for top-level domain. A domain is what you type into the address bar of your Web browser to get to a website, like www.GoDaddy.com. New TLDs refer to new domain extensions that are about to become available.
-
+                                
 <phrase key="SlideTwoHeader" />
 Why are there new TLDs?
 <phrase key="SlideTwoContent" comment="The line breaks and indentation are required to work on the SEO Slider, please keep during translation. Reach out to WebOps with questions." />
 
                                     New domain extensions have been created because finding a relevant, available domain name can be difficult. ICANN is releasing hundreds of new domain extensions to increase availability and change how people find information online.
-
+                                
 <phrase key="SlideThreeHeader" />
 Why do new TLDs matter to me?
 <phrase key="SlideThreeContent" comment="The line breaks and indentation are required to work on the SEO Slider, please keep during translation. Reach out to WebOps with questions." />
 
                                     New domain extensions let you create a relevant name that defines your website, brand, business, group or organization. Registering a new TLD that represents your market can increase customer trust and set you apart from competitors.
-
+                                
 <phrase key="SlideFourHeader" />
 When will new TLDs be available?
 <phrase key="SlideFourContent" comment="The line breaks and indentation are required to work on the SEO Slider, please keep during translation. Reach out to WebOps with questions." />
 
                                     We expect the first groups of new TLDs to launch in November 2013. Check back for more information on release dates, registration requirements, pre-registration and other important details.
-
+                                
 <phrase key="SlideFiveHeader" />
 How is ICANN involved?
 <phrase key="SlideFiveContent" comment="The line breaks and indentation are required to work on the SEO Slider, please keep during translation. Reach out to WebOps with questions." />
 
                                     ICANN is the Internet Corporation for Assigned Names and Numbers, a non-profit group responsible for the coordination and oversight of the global Internet system. You can find out more about them at www.icann.org.
-
+                                
 <phrase key="SlideSixHeader" />
 What are the new TLD registration phases: Trademarks Owners, Priority Pre-registration, Pre-registration and General Availability?
 <phrase key="SlideSixContent" comment="The line breaks and indentation are required to work on the SEO Slider, please keep during translation. Reach out to WebOps with questions." />
 
-                                    Each registration phase has a defined date for acceptance and processing. The first registration period is always reserved for Trademark Owners. The second phase is Priority Pre-registration – for a premium, you can increase your chances of getting a non-trademarked domain. Pre-registration comes next and allows you to get a jump on General Availability, which is open to the public. During the final phase, names are awarded on a first come, first served basis.
-
+                                    Each registration phase has a defined date for acceptance and processing. The first registration period is always reserved for Trademark Owners. The second phase is Priority Pre-registration – for a premium, you can increase your chances of getting a non-trademarked domain. Pre-registration comes next and allows you to get a jump on General Availability, which is open to the public. During the final phase, names are awarded on a first come, first served basis. 
+                                
 <phrase key="Previous" />
 Previous
 <phrase key="Next" />
@@ -365,8 +374,14 @@ Search Domains
 Enter a <b>Domain Name</b>
 <phrase key="NinjaHeader" />
 .ninja
+<phrase key="LondonHeader" />
+.london
+<phrase key="LondonCompany" />
+.company
 <phrase key="EmailHeader" />
 .email
+<phrase key="ClubHeader" />
+.club
 <phrase key="MainBannerCarouselSlide2TextNinja" />
 Show off your .NINJA skills
 <phrase key="MainBannerCarouselSlide3TextEmail" />
