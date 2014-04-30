@@ -41,7 +41,6 @@ var getProjectData = function(file) {
 
   data = data[fileName] || {};
   data.assetPath = 'fos/sales/themes/' + theme + '/' + path.dirname(path.normalize(assetSrcPath+file.relative)).replace('\\', '/') + '/';
-  console.log(data.assetPath);
   data = _.extend(data, ciCodes);
   return data;
 };
