@@ -16,5 +16,9 @@
     "gulp-front-matter": "^1.0.0",
     "minimist": "0.0.8",
     "gulp-cdsm": "git+ssh://git@github.secureserver.net:WebOps/gulp-cdsm.git"
+  },
+  "dependencies": {
+    "request": "^2.34.0",
+    "rimraf": "^2.2.6"
   }
 }

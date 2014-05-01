@@ -1,10 +1,15 @@
+---
+location: sales/ecommerce/shopping-cart.aspx
+id: 52e7ed48f778fc64d02f0c85
+name: FOS-19218
+---
 {% extends 'base.html' %}
 {% block body %}
         <!-- Start main-banner -->
         <section class="main-banner main-banner-online-store">
             <div class="l-main-container container main-banner-content main-banner-content-online-store">
                 <a href="" class="ribbon ribbon-right" data-ci="88781">
-                    <i class="marquee-flag marquee-flag-money-back-guarantee"></i>
+                    <i class="marquee-flag money-back-guarantee [@T[localization:<language full="true" />]@T] [@T[localization:<language />]@T]"></i>
                 </a>
                 <h1 class="main-banner-title main-banner-title-alternate">[@L[cds.sales/gd/ecommerce/shopping-cart:MastHeadTitle]@L]</h1>
                 <!-- Start rating-stars -->
@@ -45,7 +50,7 @@
                 <!-- Start content -->
                 <section class="l-main-container container">
                     <!-- Start misc-banner -->
-                    <section class="misc-banner">
+                    <section class="misc-banner" id="pricing">
                         <div class="l-main-container container misc-banner-content misc-banner-content-web-hosting">
                             <h2>[@L[cds.sales/gd/ecommerce/shopping-cart:MiscBannerTitle]@L]</h2>
                             <p>[@L[cds.sales/gd/ecommerce/shopping-cart:MiscBannerText1]@L]</p>
@@ -174,7 +179,7 @@
                         </div><!-- col-xs-4 -->
 
                         <div class="col-xs-4">
-                            <div class="grid-column no-padding-bottom relative">
+                            <div class="grid-column no-padding-bottom ">
                                 <h2>[@L[cds.sales/gd/ecommerce/shopping-cart:PlansTitleProfessional]@L]</h2>
                                 <p class="starting-at starting-at-alternate-top-spacing"><span class="starting-at-above">[@L[cds.sales/gd/ecommerce/shopping-cart:StartingAt]@L]</span><span class="starting-at-price">[@T[productprice:<current productid="6802" period="monthly" />]@T]<span class="starting-at-small">[@L[cds.sales/gd/ecommerce/shopping-cart:PerMonth]@L]</span></p>
                                 <p class="margin-bottom-12"><span class="tertiary-color line-through">[@T[productprice:<current productid="78" period="monthly" />]@T]</span> <span class="secondary-color"><strong>[@T[productcompare:<percent primaryproductid="6802" secondaryproductid="78" hidebelow="1"><html><![CDATA[[@L[cds.sales/gd/ecommerce/shopping-cart:Save]@L] {0}%]]></html></percent>]@T]</strong></span></p>
@@ -291,7 +296,7 @@
                         </div><!-- col-xs-4 -->
 
                         <div class="col-xs-4">
-                            <div class="grid-column no-padding-bottom relative">
+                            <div class="grid-column no-padding-bottom ">
                                 <span class="badge badge-small badge-important badge-upper-right">Best Value</span>
                                 <h2>[@L[cds.sales/gd/ecommerce/shopping-cart:PlansTitleUnlimited]@L]</h2>
                                 <p class="starting-at starting-at-alternate-top-spacing"><span class="starting-at-above">[@L[cds.sales/gd/ecommerce/shopping-cart:StartingAt]@L]</span><span class="starting-at-price">[@T[productprice:<current productid="6812" period="monthly" />]@T]<span class="starting-at-small">[@L[cds.sales/gd/ecommerce/shopping-cart:PerMonth]@L]</span></p>
@@ -716,12 +721,19 @@
 {% endblock %}
 
 {% block footer %}
+    <script src="[@T[link:<javascriptroot />]@T]fos/lib/solazy/jquery.solazy.1.2.1.min.js" type="text/javascript" ></script>
     <script>
         $(function () {
             $('.rating-stars-init').ratingStars();
             $('.tab-link').tabLinks();
-            $('.isToolTip').tooltip();
+            $('.isToolTip').tooltip({placement:'bottom'});
             $('.select-box').setSelectBox();
         });
+        $('.js-open-overview').on('click', function(e){
+            e.preventDefault();
+            window.location.hash = '';
+            $('a[href="#plans-pricing"]').tab('show');
+            window.location.hash = '#pricing';
+        });        
     </script>
 {% endblock %}
