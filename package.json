@@ -1,6 +1,6 @@
 {
   "name": "Sales",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "",
   "main": "gulpfile.js",
   "author": "clbrown@godaddy.com",
@@ -11,7 +11,7 @@
     "gulp-cssmin": "^0.1.4",
     "gulp-less": "^1.2.3",
     "gulp-rename": "^1.2.0",
-    "gulp-swig": "^0.5.1",
+    "gulp-swig": "^0.6.0",
     "lodash": "^2.4.1",
     "gulp-cdsm": "git+ssh://git@github.secureserver.net:WebOps/gulp-cdsm.git"
   },
