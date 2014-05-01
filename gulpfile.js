@@ -10,9 +10,13 @@ var rename = require('gulp-rename');
 var cdsm = require('gulp-cdsm');
 var fm = require('gulp-front-matter');
 var argv = require('minimist')(process.argv.slice(2));
+var pkg = require('./package.json');
 
 var theme = 'scotty';
 var rootAssetPath = (process.platform === 'win32') ? '\\\\g1dwimages001\\images\\fos\\sales\\themes\\' + theme + '\\' : '/Volumes/images/fos/sales/themes/' + theme + '/';
+
+var assetSrcPaths = require('./paths.json');
+var assetSrcPath = assetSrcPaths[argv.src];
 
 var paths = {
   templates: ['./src/sales/**/*.html'],
@@ -22,9 +26,6 @@ var paths = {
   build: './build/sales/',
   assets: rootAssetPath
 };
-
-var assetSrcPaths = require('./paths.json');
-var assetSrcPath = assetSrcPaths[argv.src];
 
 var getProjectData = function(file) {
   var fileName = path.basename(file.path);
@@ -40,7 +41,7 @@ var getProjectData = function(file) {
   }
 
   data = data[fileName] || {};
-  data.assetPath = 'fos/sales/themes/' + theme + '/' + path.dirname(file.relative).replace('\\', '/') + '/';
+  data.assetPath = 'fos/sales/themes/' + theme + '/' + path.dirname(path.normalize(assetSrcPath+file.relative)).replace('\\', '/') + '/';
   data = _.extend(data, ciCodes);
   return data;
 };
@@ -65,39 +66,41 @@ var swigLangOpts = {
 };
 
 gulp.task('html', function() {
-  gulp.src(paths.templates)
+  gulp.src(assetSrcPath+'/**/*.html', {cwd: './src/sales/'})
     .pipe(changed(paths.build))
-    .pipe(fm())
+    .pipe(fm({remove:true}))
     .pipe(swig(swigTplOpts))
     .pipe(cdsm())
-    .pipe(gulp.dest(paths.build));
+    .pipe(gulp.dest(path.join(paths.build,assetSrcPath)));
 });
 
 gulp.task('language', function() {
-  gulp.src(paths.language)
+  gulp.src(assetSrcPath+'/**/*.language', {cwd: './src/sales/'})
     .pipe(changed(paths.build))
-    .pipe(fm())
+    .pipe(fm({remove:true}))
     .pipe(swig(swigLangOpts))
     .pipe(cdsm())
-    .pipe(gulp.dest(paths.build));
+    .pipe(gulp.dest(path.join(paths.build,assetSrcPath)));
 });
 
 gulp.task('styles', function() {
   if (assetSrcPath) {
-    gulp.src(paths.less)
+    gulp.src(assetSrcPath+'/**/css/*.less', {cwd: './src/sales/'})
       .pipe(less())
-      .pipe(gulp.dest(paths.build))
+      .pipe(gulp.dest(path.join(paths.build,assetSrcPath)))
       .pipe(cssmin())
       .pipe(rename(({
         suffix: '.min'
       })))
-      .pipe(gulp.dest(paths.build));
+      .pipe(gulp.dest(path.join(paths.build,assetSrcPath)));
   }
 });
 
 gulp.task('images', function() {
-  gulp.src(paths.images)
-    .pipe(gulp.dest(paths.build));
+  if (assetSrcPath) {
+    gulp.src(assetSrcPath+'/**/img/*', {cwd: './src/sales/'})
+      .pipe(gulp.dest(path.join(paths.build,assetSrcPath)));
+  }
 });
 
 gulp.task('assets-deploy', function() {
@@ -114,5 +117,12 @@ gulp.task('watch', function() {
   gulp.watch(paths.images, ['images']);
 });
 
+gulp.task('update', function(){
+  updater.update();
+});
+
 gulp.task('build', ['html', 'language', 'styles', 'images']);
 gulp.task('default', ['watch']);
+
+var updater = require('./lib/updater.js');
+updater();

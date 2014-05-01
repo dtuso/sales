@@ -53,16 +53,16 @@
   z-index: 1;
 }
 .bg-images > .bg-slide1 {
-  background-image: url("../img/bg-main-banner-club.jpg");
+  background-image: url("../img/bg-main-banner-london.jpg");
 }
 .bg-images > .bg-slide2 {
-  background-image: url("../img/bg-main-banner-ninja.jpg");
+  background-image: url("../img/bg-main-banner-club.jpg");
 }
 .bg-images > .bg-slide3 {
-  background-image: url("../img/bg-main-banner-email.jpg");
+  background-image: url("../img/bg-main-banner-guru.jpg");
 }
 .bg-images > .bg-slide4 {
-  background-image: url("../img/bg-main-banner-guru.jpg");
+  background-image: url("../img/bg-main-banner-company.jpg");
 }
 .main-banner-title {
   font-weight: bold;
@@ -418,6 +418,12 @@
 }
 .discover-domains-details-table-row > td.lastChild > .btn-primary {
   width: 100%;
+  white-space: normal;
+  word-wrap: break-word;
+  padding-top: .757142857em;
+  padding-bottom: .757142857em;
+  line-height: normal;
+  float: left;
 }
 .lt-ie8 .discover-domains-details-table-row > td.lastChild > .btn-primary {
   padding-left: 0;
@@ -539,4 +545,9 @@
   color: #7db701;
   max-width: 770px;
   width: 1000px;
+}
+.btn-search-form-gtld {
+  position: absolute;
+  right: 0px;
+  float: right;
 }
