@@ -58,6 +58,74 @@ name: FOS-19972
                 window.location.hash = '#prices';
             });
         });
+        
+        // gdSideBySideAlign plugin
+        (function ( $, window, document, undefined ) {
+
+          var pluginName = 'gdSideBySideAlign',
+              defaults = {
+                bailIfRowCountsMismatch : true
+          };
+
+         function GDSideBySideAlign( element, options ) {
+            this.element = element;
+           this.options = $.extend( {}, defaults, options);
+            this._defaults = defaults;
+            this._name = pluginName;
+           this.init();
+         }
+
+          GDSideBySideAlign.prototype.init = function () {
+
+          // Find the columns
+          var $columns = $(this.element).find('[data-gd-sidebysidealign-col]');
+
+          if($columns.length == 0) {
+            return; // bail if no columns found
+          }
+
+          // Make sure columns have an equal number of rows
+          var numRows = 0, equalLength = true;
+          $.each($columns, function(idx,item){
+            var $rows = $(item).find('[data-gd-sidebysidealign-row]');
+            if(numRows == 0) {
+              numRows = $rows.length;
+            }
+            if(equalLength) {
+              if(numRows != $rows.length) equalLength = false;
+            }
+          });
+          if(numRows==0 || !equalLength && this.options.bailIfRowCountsMismatch) {
+            return; // bail if no rows, or rows are not equal length
+          }
+
+          // loop thru each row and grab the largest cell height and apply to each cell in that row
+          for(var i=1; i<=numRows; i++) {
+            var $cells = $columns.find('[data-gd-sidebysidealign-row="' + i + '"]' );
+            var maxHeight = 0;
+            $.each($cells,function(idx, cell){
+              maxHeight = Math.max(maxHeight, $(cell).height());
+            });
+            $cells.height(maxHeight);
+          }
+
+        }; /* end GDSideBySideAlign.prototype.init */
+
+        // register the function to be used
+        $.fn[pluginName] = function ( options ) {
+         return this.each(function () {
+            if (!$.data(this, 'plugin_' + pluginName)) {
+              $.data(this, 'plugin_' + pluginName, new GDSideBySideAlign( this, $(this).data('gd-sidebysidealign') || options ));
+            }
+          });
+        };
+
+        // load the plugin
+        $(document).ready(function(){
+          $('[data-gd-sidebysidealign]').gdSideBySideAlign();
+        });
+
+        })( jQuery, window, document );
     </script>
 {% endblock %}
 
@@ -99,11 +167,16 @@ name: FOS-19972
                         </div>
                     </section>
                     <!-- End misc-banner -->
-                    <div id="prices" class="row equal-height">
-                        <div id="code-signing" class="col-xs-4 relative">
+                    <div id="prices" class="row equal-height" data-gd-sidebysidealign="{}">
+                        <div id="code-signing" class="col-xs-4 relative" data-gd-sidebysidealign-col="1">
                             <div class="grid-column no-padding-bottom">
+                              <div data-gd-sidebysidealign-row="1">
                                 <h2>[@L[cds.sales/gd/ssl/code-signing-certificate2:PlanBoxCodeSigningCertificate]@L]</h2>
-                               <p class="starting-at starting-at-alternate-top-spacing"><span class="starting-at-above">[@L[cds.sales/gd/ssl/code-signing-certificate2:starting-at]@L]</span><span class="starting-at-price">[@T[productprice:<current productid="3683" period="yearly" />]@T]</span><span class="starting-at-small">/[@L[cds.sales/gd/ssl/code-signing-certificate2:PlanBoxYear]@L]</span></p>
+                               </div>
+                               <div data-gd-sidebysidealign-row="2">
+                                <p class="starting-at starting-at-alternate-top-spacing"><span class="starting-at-above">[@L[cds.sales/gd/ssl/code-signing-certificate2:starting-at]@L]</span><span class="starting-at-price">[@T[productprice:<current productid="3683" period="yearly" />]@T]</span><span class="starting-at-small">/[@L[cds.sales/gd/ssl/code-signing-certificate2:PlanBoxYear]@L]</span></p>
+                               </div>
+                               <div data-gd-sidebysidealign-row="3">
                                 <form action="[@T[link:<relative path="/CDS/Widgets/WidgetsPostHandlers/CodeSignAddToCartPostHandler.ashx" parammode="common" />]@T]" name="frmCodeSign" id="frmCodeSign" method="post">
                                     <input type="hidden" name="formSubmitButton" id="formSubmitButton" value="Add-to-Cart" />
                                     <input type="hidden" name="itc" value="slp_codeSign" />
@@ -251,21 +324,26 @@ name: FOS-19972
                                     </div><!-- select-box -->
                                     <p class="no-margin-bottom"><button data-ci="88728" type="submit" class="btn btn-warning btn-block btn-lg">[@L[cds.sales/gd/ssl/code-signing-certificate2:PlanboxCartBtn]@L]</button></p>
                                 </form>
-
+                              </div>
                                 <ul class="plan-pricing-list plan-pricing-list-alternate">
-                                    <li ><i class="ico ico-empty"></i></li>
-                                    <li>[@L[cds.sales/gd/ssl/code-signing-certificate2:PlanBoxCodeSigningCertificateDetails01Text]@L]</li>
-                                    <li class="two-lines">[@L[cds.sales/gd/ssl/code-signing-certificate2:PlanBoxCodeSigningCertificateDetails02Text]@L]</li>
-                                    <li class="two-lines">[@L[cds.sales/gd/ssl/code-signing-certificate2:PlanBoxCodeSigningCertificateDetails03Text]@L]</li>
-                                    <li ><i class="ico ico-empty"></i></li>
-                                    <li>[@L[cds.sales/gd/ssl/code-signing-certificate2:PlanBoxCodeSigningCertificateDetails04Text]@L]</li>
+                                    <li data-gd-sidebysidealign-row="4"><i class="ico ico-empty"></i></li>
+                                    <li data-gd-sidebysidealign-row="5">[@L[cds.sales/gd/ssl/code-signing-certificate2:PlanBoxCodeSigningCertificateDetails01Text]@L]</li>
+                                    <li data-gd-sidebysidealign-row="6">[@L[cds.sales/gd/ssl/code-signing-certificate2:PlanBoxCodeSigningCertificateDetails02Text]@L]</li>
+                                    <li data-gd-sidebysidealign-row="7">[@L[cds.sales/gd/ssl/code-signing-certificate2:PlanBoxCodeSigningCertificateDetails03Text]@L]</li>
+                                    <li data-gd-sidebysidealign-row="8"><i class="ico ico-empty"></i></li>
+                                    <li data-gd-sidebysidealign-row="9">[@L[cds.sales/gd/ssl/code-signing-certificate2:PlanBoxCodeSigningCertificateDetails04Text]@L]</li>
                                 </ul>
                             </div>
                         </div>
-                        <div id="driver-signing" class="col-xs-4 relative">
+                        <div id="driver-signing" class="col-xs-4 relative" data-gd-sidebysidealign-col="2">
                             <div class="grid-column no-padding-bottom">
+                              <div data-gd-sidebysidealign-row="1">
                                 <h2>[@L[cds.sales/gd/ssl/code-signing-certificate2:PlanBoxDriverSigningCertificate]@L]</h2>
+                              </div>
+                              <div data-gd-sidebysidealign-row="2">
                                 <p class="starting-at starting-at-alternate-top-spacing"><span class="starting-at-above">[@L[cds.sales/gd/ssl/code-signing-certificate2:starting-at]@L]</span><span class="starting-at-price">[@T[productprice:<current productid="1153" period="yearly" />]@T]</span><span class="starting-at-small">/[@L[cds.sales/gd/ssl/code-signing-certificate2:PlanBoxYear]@L]</span></p>
+                              </div>
+                              <div data-gd-sidebysidealign-row="3">
                                 <form action="[@T[link:<relative path="/CDS/Widgets/WidgetsPostHandlers/CodeSignAddToCartPostHandler.ashx" parammode="common" />]@T]" name="frmCodeSign" id="frmCodeSign" method="post">
                                     <input type="hidden" name="formSubmitButton" id="formSubmitButton" value="Add-to-Cart" />
                                     <input type="hidden" name="itc" value="slp_codeSign" />
@@ -407,14 +485,14 @@ name: FOS-19972
                                     </div><!-- select-box -->
                                     <p class="no-margin-bottom"><button data-ci="88731" type="submit" class="btn btn-warning btn-block btn-lg">[@L[cds.sales/gd/ssl/code-signing-certificate2:PlanboxCartBtn]@L]</button></p>
                                 </form>
-
+                              </div>
                                 <ul class="plan-pricing-list plan-pricing-list-alternate">
-                                    <li class="two-lines">[@L[cds.sales/gd/ssl/code-signing-certificate2:PlanBoxDriverSigningCertificateDetails01Text]@L]</li>
-                                    <li>[@L[cds.sales/gd/ssl/code-signing-certificate2:PlanBoxDriverSigningCertificateDetails02Text]@L]</li>
-                                    <li class="two-lines">[@L[cds.sales/gd/ssl/code-signing-certificate2:PlanBoxDriverSigningCertificateDetails03Text]@L]</li>
-                                    <li>[@L[cds.sales/gd/ssl/code-signing-certificate2:PlanBoxDriverSigningCertificateDetails04Text]@L]</li>
-                                    <li class="two-lines">[@L[cds.sales/gd/ssl/code-signing-certificate2:PlanBoxDriverSigningCertificateDetails05Text]@L]</li>
-                                    <li>[@L[cds.sales/gd/ssl/code-signing-certificate2:PlanBoxDriverSigningCertificateDetails06Text]@L]</li>
+                                    <li data-gd-sidebysidealign-row="4">[@L[cds.sales/gd/ssl/code-signing-certificate2:PlanBoxDriverSigningCertificateDetails01Text]@L]</li>
+                                    <li data-gd-sidebysidealign-row="5">[@L[cds.sales/gd/ssl/code-signing-certificate2:PlanBoxDriverSigningCertificateDetails02Text]@L]</li>
+                                    <li data-gd-sidebysidealign-row="6">[@L[cds.sales/gd/ssl/code-signing-certificate2:PlanBoxDriverSigningCertificateDetails03Text]@L]</li>
+                                    <li data-gd-sidebysidealign-row="7">[@L[cds.sales/gd/ssl/code-signing-certificate2:PlanBoxDriverSigningCertificateDetails04Text]@L]</li>
+                                    <li data-gd-sidebysidealign-row="8">[@L[cds.sales/gd/ssl/code-signing-certificate2:PlanBoxDriverSigningCertificateDetails05Text]@L]</li>
+                                    <li data-gd-sidebysidealign-row="9">[@L[cds.sales/gd/ssl/code-signing-certificate2:PlanBoxDriverSigningCertificateDetails06Text]@L]</li>
                                 </ul>
                             </div>
                         </div>
