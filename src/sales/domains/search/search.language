@@ -1,8 +1,8 @@
 {% include '../modules/doc-block.html' %}
 <phrase key="MetaTitle" />
-GoDaddy Domains | New names, new opportunities
+Domain Search | Advanced Domain Name Search Tool - [@T[companyname:name]@T]
 <phrase key="MetaDescription" />
-GoDaddy Domain Search tool you can instantly find the Domain Name that you&#39;ve been looking for. Save big on your domain purchases by registering your domain names in bulk.
+[@T[companyname:name]@T] Domain Search tool you can instantly find the Domain Name that you&#39;ve been looking for. Save big on your domain purchases by registering your domain names in bulk.
 <phrase key="MetaKeywords" />
 domain name search, domain search, domain names search, search domain names, search domain, check domain, check domain name, search domains
 <phrase key="SalesHeaderSubHeading" />
@@ -14,11 +14,11 @@ Enter a domain name
 <phrase key="SalesHeaderBtnText" />
 Search Domain
 <phrase key="SalesHeaderListItem1Text" />
-Big savings over other registrars.
+<span class="listItemsbold">Big Savings </span><span class="listItems">over other registrars.</span>
 <phrase key="SalesHeaderListItem2Text" />
-More people trust GoDaddy with their domains than anyone else.
+<span class="listItemsbold">More people trust </span><span class="listItems">[@T[companyname:name]@T] with their domains than anyone else.</span>
 <phrase key="SalesHeaderListItem3Text" />
-World-class 24/7 help building your online business.
+<span class="listItemsbold">World Class 24/7 </span><span class="listItems">help building your online business.</span>
 <phrase key="CarouselSideLink1" />
 Domain Pricing
 <phrase key="CarouselSideLink2" />
@@ -31,18 +31,24 @@ Register
 Get the domain that will never go out of style.
 <phrase key="PricesDotCoText" />
 Get the recognizable domain.
+<phrase key="PricesDotClubText" />
+.CLUB is the domain name for clubs and organizations of all kinds!
 <phrase key="PricesDotOrgText" />
 Build trust with this well-known and respected domain.
 <phrase key="PricesDotGuruText" />
-Offer guidance with .guru.
+Offer guidance with .GURU.
+<phrase key="PricesDotUnoText" comment="DO NOT TRANSLATE"/>
+El Internet en Español
+<phrase key="PricesDotMenuText" />
+Show diners what's cookin' with .MENU
 <phrase key="WhyGoDaddyTab" />
-Why GoDaddy?
+Why [@T[companyname:name]@T]?
 <phrase key="DomainOptionsTab" />
 Domain Options
 <phrase key="FaqTab" />
 FAQ
 <phrase key="WhyGoDaddyMiscBannerTitle" />
-Why choose GoDaddy?
+Why choose [@T[companyname:name]@T]?
 <phrase key="WhyGoDaddyMiscBannerText" />
 The right domain name can set you up for future success. Don&apos;t leave it to chance. Go with the world leader.
 <phrase key="WhyGoDaddyMiscBannerListTitle0" />
@@ -56,7 +62,7 @@ More than 12 million customers count on us to help them find the right name and 
 <phrase key="WhyGoDaddyMiscBannerListText1" />
 We offer the widest selection of domains on the Web. There&apos;s no better place to find the name that&apos;s right for your business.
 <phrase key="WhyGoDaddyMiscBannerListText2" />
-Our award-winning domain experts are here 24/7 to help you any way they can. Call them anytime at 866-938-1119.
+Our award-winning domain experts are here 24/7 to help you any way they can. Call them anytime at [@T[supportphone:<technical />]@T].
 <phrase key="PreRegisterNow" />
 Pre-Register Now!
 <phrase key="PreRegister" />
@@ -65,50 +71,114 @@ Pre-Register
 Learn More
 <phrase key="New" />
 New
+<phrase key="WhyGoDaddyBoxesListTitleAU0" />
+.org
+<phrase key="WhyGoDaddyBoxesListTitleAU1" />
+.com
 <phrase key="WhyGoDaddyBoxesListTitle0" />
-.gallery
+.guru
+<phrase key="WhyGoDaddyBoxesListTitleEu" />
+.eu
 <phrase key="WhyGoDaddyBoxesListTitle1" />
-.clothing
+.ventures
+<phrase key="WhyGoDaddyBoxesListTitleDe" />
+.de
 <phrase key="WhyGoDaddyBoxesListTitle2" />
-.bike
+.estate
+<phrase key="WhyGoDaddyBoxesListTitleGuru" />
+.guru
+<phrase key="WhyGoDaddyBoxesListTitleTips" />
+.tips
+<phrase key="WhyGoDaddyBoxesListTitleUno" />
+.uno
+<phrase key="WhyGoDaddyBoxesListTitleNinja" />
+.ninja
+<phrase key="WhyGoDaddyBoxesListTitleReviews" />
+.reviews
+<phrase key="WhyGoDaddyBoxesListTitlePhotography" />
+.photography
+<phrase key="WhyGoDaddyBoxesListTitle11" />
+.menu
+<phrase key="WhyGoDaddyBoxesListTitleNl" />
+.nl
+<phrase key="WhyGoDaddyBoxesListTitleCoUk" />
+.co.uk
+<phrase key="WhyGoDaddyBoxesListTitleBuzz" />
+.buzz
+<phrase key="WhyGoDaddyBoxesListTitleDirectory" />
+.directory
+<phrase key="WhyGoDaddyBoxesListTitleMobi" />
+.mobi
+<phrase key="WhyGoDaddyBoxesListTitlePhotos" />
+.photos
+<phrase key="WhyGoDaddyBoxesListTitleTv" />
+.tv
+<phrase key="WhyGoDaddyBoxesListTitleFr" />
+.fr
+<phrase key="WhyGoDaddyBoxesListTitleMe" />
+.me
+<phrase key="WhyGoDaddyBoxesListTitleIt" />
+.it
+<phrase key="WhyGoDaddyBoxesListTitleToday" />
+.today
+<phrase key="WhyGoDaddyBoxesListTitleCl" />
+.cl
+<phrase key="WhyGoDaddyBoxesListTextCl" />
+.CL stands for Chile.
+<phrase key="WhyGoDaddyBoxesListTextToday" />
+.TODAY delivers the latest news
+<phrase key="WhyGoDaddyBoxesListTextIt" />
+Romance Italians with .IT.
+<phrase key="WhyGoDaddyBoxesListTextTv" />
+Brand your site with the domain made for video.
+<phrase key="WhyGoDaddyBoxesListTextFr" />
+Engage the French with .FR.
+<phrase key="WhyGoDaddyBoxesListTextMe" />
+Get the personal domain.
 <phrase key="WhyGoDaddyBoxesListText0" />
-Open your own virtual .GALLERY
+Show off your .NINJA skills.
+<phrase key="WhyGoDaddyBoxesListTextDirectory" />
+.DIRECTORY means online listings.
+<phrase key="WhyGoDaddyBoxesListTextBuzz" />
+Start a .BUZZ online.
 <phrase key="WhyGoDaddyBoxesListText1" />
-.CLOTHING never goes out of style.
+Offer guidance with .GURU
 <phrase key="WhyGoDaddyBoxesListText2" />
-Join the ride with .BIKE
+Be the go-to source with .REVIEWS
+<phrase key="WhyGoDaddyBoxesListText11" />
+Show diners what's cookin with .MENU
 <phrase key="WhyGoDaddyTitle" />
 Finally, a web address that tells people exactly what you do.
 <phrase key="WhyGoDaddyListTitle0" />
-New domains <strong>available</strong> for pre-registration:
+New domains <strong>available</strong>:
 <phrase key="WhyGoDaddyListTitle1" />
-New domains <strong>coming soon</strong> for pre-registration:
+New domains <strong>coming soon</strong>:
 <phrase key="WhyGoDaddyListText0-0" />
-<strong>.estate</strong>
-<phrase key="WhyGoDaddyListText0-1" />
-<strong>.photography</strong>
-<phrase key="WhyGoDaddyListText0-2" />
-<strong>.ventures</strong>
-<phrase key="WhyGoDaddyListText0-3" />
 <strong>.guru</strong>
-<phrase key="WhyGoDaddyListText1-0" />
+<phrase key="WhyGoDaddyListText0-1" />
 <strong>.club</strong>
+<phrase key="WhyGoDaddyListText0-2" />
+<strong>.email</strong>
+<phrase key="WhyGoDaddyListText0-3" />
+<strong>.house</strong>
+<phrase key="WhyGoDaddyListText1-0" />
+<strong>.xyz</strong>
 <phrase key="WhyGoDaddyListText1-1" />
-<strong>.nyc</strong>
+<strong>.vegas</strong>
 <phrase key="WhyGoDaddyListText1-2" />
-<strong>.realestate</strong>
-<phrase key="WhyGoDaddyListText1-3" />
 <strong>.app</strong>
+<phrase key="WhyGoDaddyListText1-3" />
+<strong>.wiki</strong>
 <phrase key="WhyGoDaddyCTAText0" />
-Hundreds of New domains specific to you.
+Hundreds of new domains specific to you.
 <phrase key="WhyGoDaddyCTAText1" />
 See all our new domains
 <phrase key="FaqLine1Title" />
-No one does domain names like GoDaddy.
+No one does domain names like [@T[companyname:name]@T].
 <phrase key="FaqLine1Text1" />
-A domain is your key to doing business around the world - right from your office, living room or even your couch. And finding the right name is as easy as a <strong>domain name search</strong> at GoDaddy. Just enter the domain you want in the search box and we&#39;ll give you the results, along with similar domains you may not have considered.
+A domain is your key to doing business around the world - right from your office, living room or even your couch. And finding the right name is as easy as a <strong>domain name search</strong> at [@T[companyname:name]@T]. Just enter the domain you want in the search box and we&#39;ll give you the results, along with similar domains you may not have considered.
 <phrase key="FaqLine1Text2" />
-Most importantly, GoDaddy isn&#39;t just about domain names; it&#39;s a one-stop shop for anything you need to get online. From building your own website to attracting new customers to securing their data when they make a purchase, GoDaddy has you covered from the moment you decide you want to put your business on the Web.
+Most importantly, [@T[companyname:name]@T] isn&#39;t just about domain names; it&#39;s a one-stop shop for anything you need to get online. From building your own website to attracting new customers to securing their data when they make a purchase, [@T[companyname:name]@T] has you covered from the moment you decide you want to put your business on the Web.
 <phrase key="FaqLine2Title" />
 From general to specialized names, our domain search delivers.
 <phrase key="FaqLine2Text1" />
@@ -118,7 +188,7 @@ That&#39;s why we offer virtually every top-level domain on the Web. When you se
 <phrase key="FaqLine3Title" />
 Domains are universal - and so are our payment options.
 <phrase key="FaqLine3Text1" />
-After seeing how easy it is to use our domain names search, you&#39;ll want a payment process that&#39;s just as simple. Lucky for you, we accept all major credit cards, including VISA, MasterCard, Discover and American Express, as well as debit cards, PayPal$reg; and payment by check. You can even use our own payment system called GoodAsGold, which allows you to fund your GoDaddy account via wire transfer or by mailing a check or money order. And if you prefer to order over the phone instead of online, our customer care consultants are here to help, 24/7/365.
+After seeing how easy it is to use our domain names search, you&#39;ll want a payment process that&#39;s just as simple. Lucky for you, we accept all major credit cards, including VISA, MasterCard, Discover and American Express, as well as debit cards, PayPal&reg; and payment by check. You can even use our own payment system called GoodAsGold, which allows you to fund your [@T[companyname:name]@T] account via wire transfer or by mailing a check or money order. And if you prefer to order over the phone instead of online, our customer care consultants are here to help, 24/7/365.
 <phrase key="FaqLine4Title" />
 Award-winning service and support. All day. Every day.
 <phrase key="FaqLine4Text1" />
@@ -126,11 +196,11 @@ While it&#39;s easy to search domain names on our website, sometimes there&#39;s
 <phrase key="FaqLine4Text2" />
 Best of all, our in-house experts are trained to help with whatever you need, from choosing the right domain name to any technical issues you may have. Whether you&#39;re just getting started or you&#39;re already an online pro, we&#39;ve got you covered.
 <phrase key="FaqLine5Title" />
-Search domains with GoDaddy and find success online.
+Search domains with [@T[companyname:name]@T] and find success online.
 <phrase key="FaqLine5Text1" />
-We earned our place as the world&#39;s leading domain name registrar by treating our customers right. When you get a domain name from GoDaddy, you get everything you need to create a basic online presence, including our InstantPage&reg; site builder with hosting and more.
+We earned our place as the world&#39;s leading domain name registrar by treating our customers right. When you get a domain name from [@T[companyname:name]@T], you get everything you need to create a basic online presence, including our InstantPage&reg; site builder with hosting and more.
 <phrase key="FaqLine5Text2" />
-And we back all of our products with our award-winning 24/7 service and support. If you ever have a question, our expert customer care consultants are ready and waiting to help. When you&#39;re ready to get your business online, GoDaddy simply can&#39;t be beat.
+And we back all of our products with our award-winning 24/7 service and support. If you ever have a question, our expert customer care consultants are ready and waiting to help. When you&#39;re ready to get your business online, [@T[companyname:name]@T] simply can&#39;t be beat.
 <phrase key="FaqLine6Title" />
 What is Private Registration and why is it needed?
 <phrase key="FaqLine6Text1" />
@@ -146,17 +216,17 @@ Private registration through Domains By Proxy gives you full control over your <
 <phrase key="FaqLine7Text2" />
 Domains By Proxy even creates a private and unique email address for each domain name. You get to decide if you want the email forwarded to you, filtered, or completely blocked. All of these benefits and more will ensure that both you and your domain name are safe and secure.
 <phrase key="FaqLine7Text3" />
-For more information, see <a target="_blank" href="[@T[link:<external linktype='communityurl' path='help/article/421' secure='false'/>]@T]" class="underlined">What is the difference between public and private domain name registration?.</a>
+For more information, see <a target="_blank" data-ci="88040" href="[@T[link:<external linktype='communityurl' path='help/article/421' secure='false'/>]@T]" class="underlined">What is the difference between public and private domain name registration?</a>
 <phrase key="FaqLine8Title" />
 Is my domain name eligible for Private Registration?
 <phrase key="FaqLine8Text1" />
 You can add private domain name registration to many domain name extensions, but some domain name registries do not allow private registration.
 <phrase key="FaqLine8Text2" />
-For more information, see <a target="_blank" href="[@T[link:<external linktype='communityurl' path='help/article/420' secure='false'/>]@T]"" class="underlined">What is the difference between public and private domain name registration?</a>.
+For more information, see <a target="_blank" data-ci="88041" href="[@T[link:<external linktype='communityurl' path='help/article/420' secure='false'/>]@T]" class="underlined">What is the difference between public and private domain name registration?</a>
 <phrase key="FaqLine9Title" />
 Why do I have a separate Domains By Proxy account?
 <phrase key="FaqLine9Text1" />
-Domains By Proxy is an affiliate company that is separate from your GoDaddy account. Your Domains By Proxy account will further protect your private domain names and information. You cannot update, move, or transfer a domain name into a separate account if it has privacy. Therefore, domain hijackers would need to know your Domains By Proxy login information to cancel your private registration and steal your domain name. The additional layer of security that Domains By Proxy provides will give you a peace of mind you deserve.
+Domains By Proxy is an affiliate company that is separate from your [@T[companyname:name]@T] account. Your Domains By Proxy account will further protect your private domain names and information. You cannot update, move, or transfer a domain name into a separate account if it has privacy. Therefore, domain hijackers would need to know your Domains By Proxy login information to cancel your private registration and steal your domain name. The additional layer of security that Domains By Proxy provides will give you a peace of mind you deserve.
 <phrase key="FaqLine10Title" />
 What can I do in my Domains By Proxy account?
 <phrase key="FaqLine10Text1" />
@@ -168,9 +238,9 @@ Domains By Proxy makes it easy to prove you&#39;re the rightful owner of your do
 <phrase key="FaqLine11Title" />
 How can I access my Domains By Proxy account?
 <phrase key="FaqLine11Text1" />
-Visit <a href="https://www.domainsbyproxy.com/" target="_blank" class="underlined">DomainsByProxy.com</a> and enter the Domains By Proxy Private Registration username and password that we send to you via email when you purchase private domain registration. If you don&#39;t have the email and you do not remember your login information, don&#39;t worry! You can retrieve the customer number, request a password hint, and reset the password on Domains By Proxy&#39;s website.
+Visit <a data-ci="88042" href="https://www.domainsbyproxy.com/" target="_blank" class="underlined">DomainsByProxy.com</a> and enter the Domains By Proxy Private Registration username and password that we send to you via email when you purchase private domain registration. If you don&#39;t have the email and you do not remember your login information, don&#39;t worry! You can retrieve the customer number, request a password hint, and reset the password on Domains By Proxy&#39;s website.
 <phrase key="FaqLine11Text2" />
-For more information, see <a target="_blank" href="[@T[link:<external linktype='communityurl' path='help/article/4497' secure='false'/>]@T]" class="underlined">Retrieving Your Domains By Proxy Login Information</a>.
+For more information, see <a target="_blank" data-ci="88043" href="[@T[link:<external linktype='communityurl' path='help/article/4497' secure='false'/>]@T]" class="underlined">Retrieving Your Domains By Proxy Login Information</a>.
 <phrase key="FaqChooseDomainNameButton" />
 Choose your Domain Name
 <phrase key="PrivateRegistrationTab" />
@@ -180,25 +250,25 @@ Protected Registration
 <phrase key="CertifiedDomainsTab" />
 Certified Domains
 <phrase key="SalesPrivateBtnText" />
-Search for Private Domains
+Search Domains
 <phrase key="PrivateRegistrationTitle" />
 Keep your domain private, locked, and secure!
 <phrase key="PrivateRegistrationSubTitle" />
 How much is privacy worth to you?
 <phrase key="PrivateRegistrationText1" />
-Did you know that anytime you register a domain, <strong>your personal information is exposed 24 hours a day</strong>? Your name. Your address. Your phone number. Your email. It&#58;s all published online for anyone to see, as <a class="isToolTip" data-toggle="tooltip" title="The Internet Corporation of Assigned Names and Numbers(ICANN) requires accredited registars to publish the registrant's contact information, as well as other details, in the WHOIS database, which is available to the public 24/7">mandated by ICANN</a>. But you have the power to change this. With Private Registration&hellip;
+Did you know that anytime you register a domain, <strong>your personal information is exposed 24 hours a day</strong>? Your name. Your address. Your phone number. Your email. It&#39;s all published online for anyone to see, as <a class="isToolTip" data-toggle="tooltip" title="The Internet Corporation of Assigned Names and Numbers (ICANN) requires accredited registars to publish the registrant's contact information, as well as other details, in the WHOIS database, which is available to the public 24/7.">mandated by ICANN</a>. But you have the power to change this. With Private Registration&hellip;
 <phrase key="PrivateRegistrationItem1" />
-<strong>Your domain is registered under the name Domains By Proxy</strong>, so its information is made public — not yours. <a class="popup-url" href="[@T[link:<external linktype="DBPURL" path="popup/whoisexample.aspx" secure="false"><param name="ci" value="5165" /></external>]@T]">See the difference</a>
+<strong>Your domain is registered under the name Domains By Proxy</strong>, so its information is made public — not yours. <a data-ci="88035" class="popup-url" href="[@T[link:<external linktype="DBPURL" path="popup/whoisexample.aspx" secure="false"></external>]@T]">See the difference</a>
 <phrase key="PrivateRegistrationItem2" />
 <strong>You retain full control of your domain</strong>. You can cancel, sell, renew or transfer your domain, set up name servers for your domain and resolve disputes involving your domain.
 <phrase key="PrivateRegistrationItem3" />
 <strong>You manage and control all email addressed to the domain</strong>, as well as the domain's contact information, with Domains By Proxy's patented registration and email handling systems.
 <phrase key="PrivateRegistrationItem4" />
-<strong>You&#58;re still accountable for your actions</strong>. Don&#58;t even think about using a private registration to transmit spam, violate the law or engage in <a href="#" data-toggle="modal" data-target="#moralModal">morally objectionable activities</a>.
+<strong>You&#39;re still accountable for your actions</strong>. Don&#39;t even think about using a private registration to transmit spam, violate the law or engage in <a href="#" data-toggle="modal" data-target="#moralModal">morally objectionable activities</a>.
 <phrase key="PrivateRegistrationLink1" />
 Learn how to add Privacy to my existing domains
 <phrase key="PrivateRegistrationLink2" />
-What does my domain look like without Private Protection
+What does my domain look like without Privacy Protection&#63;
 <phrase key="ProtectedRegistrationTitle" />
 Protect yourself from spam, scams, and prying eyes.
 <phrase key="ProtectedRegistrationSubTitle1" />
@@ -230,11 +300,11 @@ Inspire trust with a Certified Domain validation seal.
 <phrase key="CertifiedRegistrationSubTitle1" />
 Inspire trust with a Certified Domain validation seal.
 <phrase key="CertifiedRegistrationText1" />
-Thanks to phishing, pharming, and a long list of other scams, Web visitors grow more wary by the day. But there is something you can do to reassure them you&#58;re one of the good guys: Put a Certified Domain validation seal on your website. <a class="popup-url" href="[@T[link:<external linktype="STARFIELDSEALURL" path="siteseal/verify" secure="false"><param name="ci" value="80777" /><param name="sealId" value="cb55dcfeb7e9372266d4979a298dc088fc092c034e6a8ca8ccce8457af486453" /></external>]@T]">View Sample Certification</a>.
+Thanks to phishing, pharming, and a long list of other scams, Web visitors grow more wary by the day. But there is something you can do to reassure them you&#39;re one of the good guys: Put a Certified Domain validation seal on your website. <a class="popup-url" href="[@T[link:<external linktype="STARFIELDSEALURL" path="siteseal/verify" secure="false"><param name="ci" value="80777" /><param name="sealId" value="cb55dcfeb7e9372266d4979a298dc088fc092c034e6a8ca8ccce8457af486453" /></external>]@T]">View Sample Certification</a>.
 <phrase key="CertifiedRegistrationItem1" />
 To acquire Certified Domain accreditation, you must undergo a credentials check that confirms the contact information provided with your domain registration.
 <phrase key="CertifiedRegistrationItem2" />
-Once the credentials have been authenticated, GoDaddy electronically issues a non-transferable Certified Domain seal that you can load to your website and WhoIs display. This process can generally be completed in 10 minutes, with the Certified Domain seal issued to your site within 1 business day.
+Once the credentials have been authenticated, [@T[companyname:name]@T] electronically issues a non-transferable Certified Domain seal that you can load to your website and WhoIs display. This process can generally be completed in 10 minutes, with the Certified Domain seal issued to your site within 1 business day.
 <phrase key="CertifiedRegistrationItem3" />
 The seal remains there until it expires or until a change in your domain contact information makes it necessary for you to reapply for accreditation.
 <phrase key="CertifiedRegistrationText2" />
@@ -244,7 +314,7 @@ Search for Certified Domains
 <phrase key="MainPageContentTabContent1title1" />
 Your personal information is safe with us.
 <phrase key="MainPageContentTabContent1text1" />
-By having your domain registered with GoDaddy and your personal information protected by our affiliate company, Domains By Proxy<sup>&reg;</sup>, you get two unique and powerful layers of security. In addition to your registrar account, you'll receive a separate account for managing your Private Registration, which can go a long way towards thwarting domain name hijackers.
+By having your domain registered with [@T[companyname:name]@T] and your personal information protected by our affiliate company, Domains By Proxy<sup>&reg;</sup>, you get two unique and powerful layers of security. In addition to your registrar account, you'll receive a separate account for managing your Private Registration, which can go a long way towards thwarting domain name hijackers.
 <phrase key="MainPageContentTabContent1text2" />
 You might not think your domain name is valuable, but it is. Domain name hijacking has increased exponentially in recent years, with thieves worldwide attempting to steal domains to facilitate scams, relay spam and fraudulent information, spread malware, and worse. Don't let this happen to you - keep your domain safe and secure with Private Registration.
 <phrase key="MainPageContentTabContent1text3" />
@@ -268,17 +338,17 @@ Your identity is nobody's business but ours.<sup>&reg;</sup>
 <phrase key="MainPageContentTabContent1text11" />
 Domains By Proxy was launched in 2002 to address one of the biggest shortcomings of the Internet — loss of privacy. In fact, Domains By Proxy was the very first Internet WHOIS privacy service, and was created in direct response to consumer demand. Supported by a patented private registration process, Domains By Proxy believes that now, more than ever, you should be able to keep your personal contact information private when you register a domain name.
 <phrase key="DisclaimerContentSymbols" />
-<sup>*</sup>,<sup>**</sup>, <sup>***</sup>, <sup>&#134;</sup>, <sup>&#134;&#134;</sup>, <sup>+</sup>, <sup>++</sup>, <sup>^^</sup>, <sup>^^^</sup>, <sup>&#177;</sup>
+<sup>*</sup>, <sup>***</sup>, <sup>&#134;</sup>, <sup>&#134;&#134;</sup>, <sup>+</sup>, <sup>++</sup>, <sup>^^</sup>, <sup>^^^</sup>, <sup>&#177;</sup> 
 <phrase key="DisclaimerContentLinkText" />
 Click here for product disclaimers and legal policies
 <phrase key="DisclaimerModalTitle" />
 Disclaimer
 <phrase key="DisclaimerModalListItem1" />
-<sup>*</sup> Plus <a href="#">ICANN fee</a> of 18¢ per domain name year for COM, NET, ORG, BIZ, INFO, ASIA, JOBS, XXX, MOBI, MENU, UNO, BUILD, LUXURY, ESTATE, PHOTOGRAPHY, VENTURES, GURU, GALLERY, CLOTHING, BIKE, HOLDINGS, PLUMBING, SINGLES, CAMERA, LIGHTING, EQUIPMENT, GRAPHICS, CONSTRUCTION, CONTRACTORS, DIRECTORY, LAND, TECHNOLOGY, TODAY and KITCHEN. Certain TLDs and ccTLDs require a minimum registration period that exceeds one year.
+<sup>*</sup> Plus ICANN fee of [@T[currencyprice:<price usdamount="18" dropdecimal="false" />]@T]/yr.
 <phrase key="DisclaimerModalListItem2" />
 <sup>***</sup> Domains with bulk pricing do not qualify for additional promotional discounts.
 <phrase key="DisclaimerModalListItem3" />
-<sup>&#134;</sup> Free GoDaddy Photo Album service is ad-supported. Free InstantPage<sup>&reg;</sup>/Hosting with Website Builder and GoDaddy Photo Album are not included with .XXX domain registrations. All comparison prices are accurate as of 6/12/2013 and are subject to change without notice.
+<sup>&#134;</sup> Free [@T[companyname:name]@T] Photo Album service is ad-supported. Free InstantPage<sup>&reg;</sup>/Hosting with Website Builder and [@T[companyname:name]@T] Photo Album are not included with .XXX domain registrations. All comparison prices are accurate as of 6/12/2013 and are subject to change without notice.
 <phrase key="DisclaimerModalListItem4" />
 <sup>&#134;&#134;</sup> .CA domain names will be registered through Go Daddy Domains Canada, Inc., a CIRA certified registrar.
 <phrase key="DisclaimerModalListItem5" />
@@ -288,20 +358,98 @@ Disclaimer
 <phrase key="DisclaimerModalListItem7" />
 <sup>^^</sup> Discount based on current retail value.
 <phrase key="DisclaimerModalListItem8" />
-<sup>^^^</sup> Buy a new .COM or .CO, get one new .INFO for FREE for 1st year only. Not valid on renewals or transfers. Plus ICANN fee of 18¢ per domain per year.
+<sup>^^^</sup> Buy a new .COM or .CO, get one new .INFO for FREE for 1st year only. Not valid on renewals or transfers. Plus ICANN fee of [@T[currencyprice:<price usdamount="18" dropdecimal="false" />]@T] per domain per year.
 <phrase key="DisclaimerModalListItem9" />
 <sup>&#177;</sup> com.au, net.au, and org.au domain names can only be registered for 2 years.
+<phrase key="MainBannerCarouselSlide1TextAU" />
+New domains are here! <strong>.TIPS</strong>, <strong>.GURU</strong>, <strong>.TODAY</strong> are now available. Plus, pre-register <strong>.CLUB</strong>, <strong>.REVIEWS</strong>, <strong>.NINJA</strong> and more. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Get yours now</a>
 <phrase key="MainBannerCarouselSlide1Text1" />
-New domains are here! Pre-registration is officially open for <strong>.MENU</strong>, <strong>.UNO</strong> and more. <span class="br"></span><a href="#">Pre-register Now!</a>
+New domains are here - <strong>.CLUB</strong>, <strong>.GURU</strong>, <strong>.EMAIL </strong>and <strong>.TODAY </strong> are some of the most popular.<span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Get yours now!</a>
 <phrase key="MainBannerCarouselSlide2Text1" />
-Pre-register now!
+.NINJA domains are now available for pre-registration.
+<phrase key="MainBannerCarouselSlide1TextAllLine1" />
+Court 8 million shoppers with .LONDON - now available.
+<phrase key="MainBannerCarouselSlide1TextAllLine2" />
+Pre-register today! 
 <phrase key="MainBannerCarouselSlide2Text2" />
-Launch your next project with .VENTURES
+Show off your .NINJA skills.
 <phrase key="MainBannerCarouselSlide2Link" />
-Get started
+Pre-Register now!
+<phrase key="MainBannerCarouselSlide3LinkAU"/>
+Pre-register now!
 <phrase key="MainBannerCarouselSlide3Text1" />
-Simple and Effective
+Make a name for yourself!
 <phrase key="MainBannerCarouselSlide3Text2" />
-"The process to creating and managing the domain is very simple and effective, I totally recommend GoDaddy."
+Save up to 57% on these great domains&#58;
 <phrase key="MainBannerCarouselSlide3Text3" />
--Adolfo, Montevideo, Uruguay
+It's Go Time! Get online today. It all starts with a domain name - Save 50% and more on these domains: <a data-ci="88402" href="[@T[link:<relative path="/tlds/com"></relative>]@T]">.COM</a>, <a data-ci="88582" href="[@T[link:<relative path="/tlds/co-domain"></relative>]@T]">.CO</a>, <a data-ci="88404" href="[@T[link:<relative path="/tlds/org.aspx"></relative>]@T]">.ORG</a>, <a data-ci="90058" href="[@T[link:<relative path="/tlds/biz.aspx"></relative>]@T]">.BIZ</a>
+<phrase key="InBizDetail" />
+Get a domain that's all business
+<phrase key="RegisterText"/>
+Register
+<phrase key="PricesDotInText"/>
+Connect with millions and share the latest trends
+<phrase key="MainBannerCarouselSlide2Text1AU" />
+Get your .COM.AU today! Trust the world's largest registrar with your online presence.
+<phrase key="PricesDotComAUText" />
+The preferred option for Australian businesses.
+<phrase key="PricesDotNetText" />
+The domain for entrepreneurs.
+<phrase key="PricesDotCoDomainText" />
+Get the recognizable domain
+<phrase key="OrgTextPod" />
+Build trust with this well-known and respected domain.
+<phrase key="ComTextPod1" />
+Get the domain that will never go out of style.
+<phrase key="WhyGoDaddyBoxesListTitle01" />
+.net
+<phrase key="WhyGoDaddyBoxesListTitle21" />
+.co.in
+<phrase key="WhyGoDaddyBoxesListTitleCo" />
+.co
+<phrase key="WhyGoDaddyBoxesListText01" />
+.NET is the domain for entrepreneurs
+<phrase key="WhyGoDaddyBoxesListText21" />
+Be part of the .IN crowd
+<phrase key="PricesDotVeText"/>
+.VE stands for Venezuela.
+<phrase key="PricesDotInfoText"/>
+Share your info with the world.
+<phrase key="PricesDotEsText"/>
+All-purpose domain for sites aimed at Spanish-speakers.
+<phrase key="WhyGoDaddyBoxesListTextUno"/>
+El Internet en Español.
+<phrase key="PricesDotBrText"/>
+Reach out to millions of potential customers with .COM.BR or .NET.BR.
+<phrase key="PricesDotAtText"/>
+Address Austrians with .AT.
+<phrase key="PricesDotDeText"/>
+Say guten tag to Germany with .DE.
+<phrase key="WhyGoDaddyBoxesListTextEu"/>
+THE domain for the European community.
+<phrase key="WhyGoDaddyBoxesListTextOrg"/>
+THE domain for the European community.
+<phrase key="PricesDotBeText"/>
+Get into Belgium with .BE.
+<phrase key="PricesDotNlText"/>
+.NL belongs to the Dutch.
+<phrase key="PricesDotDkText"/>
+.DK belongs to Denmark.
+<phrase key="PricesDotTipsText"/>
+They have questions, .TIPS has answers.
+<phrase key="PricesDotMyText"/>
+Show your customers you do business in the UK.
+<phrase key="PricesDotSeText"/>
+.SE is Sweden’s domain.
+<phrase key="PricesDotChText"/>
+Speak to Swiss shoppers with .CH
+<phrase key="PricesDotFlText"/>
+Cater to the on-the-go crowd.
+<phrase key="PricesDotPhotosText"/>
+Sharpen your image with .PHOTOS.
+<phrase key="PricesDotSgText"/>
+.SG means Singapore.
+<phrase key="PricesDotEmailText"/>
+.EMAIL delivers.
+<phrase key="PricesDotLondonText"/>
+Speak to Londoners with .LONDON.
