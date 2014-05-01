@@ -117,10 +117,6 @@ gulp.task('watch', function() {
   gulp.watch(paths.images, ['images']);
 });
 
-gulp.task('update', function(){
-  updater.update();
-});
-
 gulp.task('build', ['html', 'language', 'styles', 'images']);
 gulp.task('default', ['watch']);
 
