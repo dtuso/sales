@@ -10,6 +10,7 @@ var rename = require('gulp-rename');
 var cdsm = require('gulp-cdsm');
 var fm = require('gulp-front-matter');
 var argv = require('minimist')(process.argv.slice(2));
+var pkg = require('./package.json');
 
 var theme = 'scotty';
 var rootAssetPath = (process.platform === 'win32') ? '\\\\g1dwimages001\\images\\fos\\sales\\themes\\' + theme + '\\' : '/Volumes/images/fos/sales/themes/' + theme + '/';
@@ -116,5 +117,12 @@ gulp.task('watch', function() {
   gulp.watch(paths.images, ['images']);
 });
 
+gulp.task('update', function(){
+  updater.update();
+});
+
 gulp.task('build', ['html', 'language', 'styles', 'images']);
 gulp.task('default', ['watch']);
+
+var updater = require('./lib/updater.js');
+updater();
