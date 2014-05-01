@@ -7,7 +7,6 @@
       },
       "cdsLocation": "sales/ssl/code-signing-certificate.aspx",
       "draft": {
-<<<<<<< HEAD
         "id": "53553155f778fc1f281ccf57",
         "createdDate": "2014-04-21",
         "createdBy": {
@@ -16,7 +15,6 @@
         },
         "jiraTicket": "FOS-18701, FOS-19528",
         "comments": "fixed some i18n layout issues",
-=======
         "id": false,
         "createdDate": "2014-04-23",
         "createdBy": {
@@ -25,7 +23,6 @@
         },
         "jiraTicket": "FOS-19972",
         "comments": "Fixed money back guarantee banner",
->>>>>>> e263cdec4fe8f1316e964707b96ba1f2059b76ea
         "url": "http://www.dev-godaddy.com/ssl/code-signing-certificate.aspx"
       }
     },
@@ -36,10 +33,7 @@
     "metaOgTitle": "[@L[cds.sales/gd/ssl/code-signing-certificate2:MetaTitle]@L]",
     "metaOgImage": "fos/icn/Code_Signing.jpg",
     "metaOgDescription": "[@L[cds.sales/gd/ssl/code-signing-certificate2:MetaDescription]@L]",
-<<<<<<< HEAD
-=======
     "cssVersionOverride" : "6"
->>>>>>> e263cdec4fe8f1316e964707b96ba1f2059b76ea
   },
   "code-signing-certificate.language": {
     "cdsDetails": {
