@@ -129,12 +129,16 @@
 }
 /* INTERNATIONAL FIXES */
 html[lang*=br] .grid-column h2,
+html[lang*=sv] .grid-column h2,
 html[lang*=fi] .grid-column h2,
 html[lang*=ru] .grid-column h2,
 html[lang*=el] .grid-column h2,
 html[lang*=pl] .grid-column h2,
 html[lang*=de] .grid-column h2 {
   font-size: 2.0em;
+}
+html[lang*=nb] .grid-column h2 {
+  font-size: 1.9em;
 }
 html[lang*=br] .select-box-body span.price,
 html[lang*=fi] .select-box-body span.price,
