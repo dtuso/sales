@@ -16,14 +16,14 @@
       Colyn Brown <clbrown@godaddy.com>
 
     DRAFT DETAILS:
-      Name:         2014-04-14 - lkim - FOS-18602
-      Created Date: 2014-04-14
-      Created By:   Leon Kim <lkim>
-      JIRA Ticket:  FOS-18602
-      Comments:     images updated in specific markets
+      Name:         2014-04-23 - clbrown - FOS-19972
+      Created Date: 2014-04-23
+      Created By:   Colyn Brown <clbrown>
+      JIRA Ticket:  FOS-19972
+      Comments:     Fixed money back guarantee banner
 
     PREVIEW URL:
-      http://www.dev-godaddy.com/ssl/code-signing-certificate.aspx?version=sales/ssl/code-signing-certificate.aspx|534de445f778fc1fd011ee65
+      http://www.dev-godaddy.com/ssl/code-signing-certificate.aspx
 
 
 
@@ -65,15 +65,20 @@ END DOC BLOCK -->
       <link rel="canonical" href="[@T[link:<external linktype='siteurl' path='/ssl/code-signing-certificate.aspx' secure='false' parammode='explicit'/>]@T]"/>
 
       <!-- Global CSS and Page CSS -->
-      <link href="[@T[link:<cssroot />]@T]fos/201401/global/css/3.2.0/combined-3.2.0.min.css" rel="stylesheet" type="text/css">
+
+      <link href="[@T[link:<css path='fos/201401/global/css/3.4.1/combined-3.4.1.css' />]@T]" rel="stylesheet" type="text/css">
       
-      <link href="[@T[link:<cssroot />]@T]fos/sales/themes/scotty/ssl/code-signing-certificate/css/styles.min.css?v=4" rel="stylesheet" type="text/css">
+      <!-- 6 -->
+      <link href="[@T[link:<css path='fos/sales/themes/scotty/ssl/code-signing-certificate/css/styles.css' />]@T]?v=6" rel="stylesheet" type="text/css">
       
       <!-- IE SUPPORT FOR HTML5 and Bootstrap 3 -->
       <!--[if lt IE 9]>
         <link href="[@T[link:<cssroot />]@T]fos/201401/global/css/bootstrap-ie7fix.min.css" rel="stylesheet" type="text/css" />
         <script src="[@T[link:<javascriptroot />]@T]fos/201401/global/js/html5shiv.js"></script>
       <![endif]-->
+      <!--[if lt IE 8]>
+        <link href="[@T[link:<cssroot />]@T]fos/201401/global/css/bootstrap-ie7fix.min.css" rel="stylesheet" type="text/css" />
+      <![endif]-->    
 
       <script src="[@T[link:<javascriptroot />]@T]fos/201401/global/vendor/jquery/1.8.3/jquery.min.js"></script>
       [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags" />]@P]
@@ -121,7 +126,7 @@ END DOC BLOCK -->
  <!-- Start main-banner -->
 
         <section class="main-banner main-banner-csc">
-            <div class="l-main-container container main-banner-content"><a data-ci="88722" class="ribbon ribbon-right"><i class="marquee-flag marquee-flag-[@T[localization:<language />]@T] marquee-flag-money-back-guarantee"></i></a>
+            <div class="l-main-container container main-banner-content"><a data-ci="88722" class="ribbon ribbon-right"><i class="marquee-flag [@T[localization:<language />]@T] [@T[localization:<language full="true" />]@T] money-back-guarantee"></i></a>
                 <h1 class="main-banner-title">[@L[cds.sales/gd/ssl/code-signing-certificate2:MainTitle]@L]</h1>
                 <h2 class="main-banner-subtitle">[@L[cds.sales/gd/ssl/code-signing-certificate2:MainSubTitle]@L]</h2>
             </div>

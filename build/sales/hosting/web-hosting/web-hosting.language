@@ -1,0 +1,1021 @@
+<!-- DOC BLOCK (DO NOT REMOVE)
+
+
+
+
+
+
+    IMPORTANT:
+      If version control is enabled for this page all changes to this page must also go through version control.
+
+    VERSION CONTROL:
+      https://github.secureserver.net/FOS-CDS-Pages/Sales
+
+    WEB PAGE CHAMPION:
+      Colyn Brown <clbrown@godaddy.com>
+
+    DRAFT DETAILS:
+      Name:         2014-04-02 - clbrown - None
+      Created Date: 2014-04-02
+      Created By:   Colyn Brown <clbrown>
+      JIRA Ticket:  None
+      Comments:     Prep for new build process
+
+
+
+
+
+
+
+END DOC BLOCK -->
+<phrase key="page-title" />
+Web Hosting | Lightning Fast Hosting & One Click Setup  - [@T[companyname:name]@T]
+<phrase key="page-title-es" />
+Web Hosting | Spanish Friendly Web Hosting Provider - [@T[companyname:name]@T]
+<phrase key="page-title-au" />
+Web Hosting | Reliable Hosting Solutions for Australia - [@T[companyname:name]@T]
+<phrase key="page-title-ca" />
+Web Hosting | Canada's Premier Web Hosting Provider - [@T[companyname:name]@T]
+<phrase key="page-title-in" />
+Web Hosting | India's World Class Hosting Provider - [@T[companyname:name]@T]
+<phrase key="page-title-uk" />
+Web Hosting | The UK's Premier Web Hosting Provider - [@T[companyname:name]@T]
+<phrase key="meta-description" />
+[@T[companyname:name]@T]'s Reliable Web Hosting keeps your website up and running. Featuring 99.9% uptime guarantee and award winning 24/7 tech support!
+<phrase key="meta-keywords" />
+web hosting, web host, hosting, hosting company, best web hosting
+<phrase key="og-title" />
+Web Hosting from [@T[companyname:name]@T] | Always Up. Always Fast.
+<phrase key="og-description" />
+Your website is only as good as your hosting plan. See how [@T[companyname:name]@T] Web Hosting runs circles around the competition with blazing-fast load times, one click installation for WordPress&reg; and other apps, and unbeatable 24/7 support.
+<phrase key="twitter-text" />
+Props to [@T[companyname:name]@T] for making their #hosting so easy (and the price is pretty awesome too). Check it out here
+<phrase key="masthead-title" />
+Web Hosting | <span>Easy, reliable &amp; always lightning-fast</span>
+<phrase key="manager-cp-link" />
+<span class="manager-link">Looking for cPanel/Plesk hosting? Click <a href="#">here</a></span>
+<phrase key="manager-4gh-link" />
+<span class="manager-link">Looking for 4GH hosting? Click <a href="#">here</a></span>
+<phrase key="first-slide-title" />
+Powerful hosting with cPanel<sup class="supsymbol">&reg;</sup> or Parallels<sup class="supsymbol">&reg;</sup> Plesk
+<phrase key="first-slide-content" />
+<li>Guaranteed 99.9% uptime</li><li>Easy, one-click setup</li><li>Unlimited Bandwidth</li><li>Award-winning 24/7 support</li>
+<phrase key="first-slide-content-cp" />
+<li>Unlimited disk space and bandwidth</li><li>Flexible, easy-to-use control panels</li><li>Guaranteed 99.9% uptime</li><li>Award-winning 24/7 support</li>
+<phrase key="first-slide-btn" />
+Get Started
+<phrase key="first-slide-price" />
+As low as
+<phrase key="second-slide-title" />
+<span>NEW!</span> Windows Server 2012 Hosting with Parallels<sup class="supsymbol">&reg;</sup> Plesk Panel
+<phrase key="second-slide-content" />
+<li>Unlimited disk space and bandwidth</li><li>Flexible, easy-to-use control panel</li><li>Guaranteed 99.9% uptime</li><li>Award-winning 24/7 support</li>
+<phrase key="third-slide-title" />
+Claim your free domain name
+<phrase key="third-slide-content" />
+Get a .COM, .CO, .NET, or .ORG with any annual hosting plan.<sup class="supsymbol">&lowast;</sup>
+<phrase key="third-slide-content-in" />
+Get a .COM, .CO, .IN, .NET, or .ORG with any annual hosting plan.<sup class="supsymbol">&lowast;</sup>
+<phrase key="fourth-slide-title" />
+We're here to help you, 24/7/365
+<phrase key="fourth-slide-content" />
+Free, award-winning support, on the phone or online.
+<phrase key="restrictions-apply" />
+Restrictions apply
+<phrase key="economy-title" />
+Economy
+<phrase key="economy-domain" />
+<strong>Free Domain</strong>
+<phrase key="economy-website" />
+<strong>1</strong> Website
+<phrase key="economy-bandwidth" />
+<strong>Unlimited</strong> Bandwidth
+<phrase key="economy-diskspace" />
+<strong>100 GB</strong> Disk Space
+<phrase key="economy-databases" />
+<strong>10</strong> MySQL Databases (Linux&nbsp;OS)<br/>1 MS SQL Database (Windows OS)
+<phrase key="economy-databases-cp" />
+<strong>10 </strong>MySQL <a class="isToolTip" data-toggle="tooltip" title="MySQL (Linux) 1 GB storage per database.">Databases</a> (Linux&nbsp;OS)<br/>1 MS SQL<a class="isToolTip" data-toggle="tooltip" title="MS SQL (Windows) 200 MB storage per database."> Database</a> (Windows OS)
+<phrase key="email-tooltip" />
+Economy Plan includes up to 100 addresses and up to 100 MB of total storage, the Deluxe plan includes up to 500 addresses and up to 500 MB of total storage and the Ultimate plan includes up to 1000 addresses and up to 1GB of total storage.
+<phrase key="100-economy" />
+<strong>100</strong>
+<phrase key="economy-emails-cp" />
+Email Addresses 
+<phrase key="google-adwords-tm" />
+Google<sup class="supsymbol">&reg;</sup> AdWords Credit
+<phrase key="google-adwords" />
+Google AdWords Credit
+<phrase key="google-adwords-restrictions" />
+Restrictions apply to Google AdWords credit
+<phrase key="google-adwords-desc" />
+One promotional credit per customer for a new Google AdWords account. Products purchased using a Gift Card or Alipay do not provide eligibility for advertising credits. Minimum spend [@T[currencyprice:<price usdamount="2500" dropdecimal="false" />]@T]. Offer valid to US & Canada residents only, excluding government controlled entities and parties. Other restrictions apply. <a href=&quot;javascript:void(window.open('[@T[link:<relative path='/popups/google-adwords.aspx'><param name='ci' value='81141' /><param name='app_hdr' value='99' /></relative>]@T]','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=550,height=675'))&quot;>View Details</a>
+<phrase key="google-adwords-desc-left" />
+Restrictions apply to Google AdWords credit<span class="left">One promotional credit per customer for a new Google AdWords account. Products purchased using a Gift Card or Alipay do not provide eligibility for advertising credits. Minimum spend [@T[currencyprice:<price usdamount="2500" dropdecimal="false" />]@T]. Offer valid to US & Canada residents only, excluding government controlled entities and parties. Other restrictions apply.
+<phrase key="bing-adwords" />
+Bing Ads Credit
+<phrase key="ultimate-bing-adwords" />
+Bing Ads Credit
+<phrase key="bing-adwords-restrictions" />
+Restrictions apply to Bing Ads credit
+<phrase key="bing-adwords-desc" />
+One promotional credit per customer for a new Microsoft<sup class='supsymbol'>&reg;</sup> Advertiser account. Products purchased using a Gift Card or Alipay do not provide eligibility for advertising credits. Offer valid to US residents only, other restrictions apply.<br/><a href=&quot;javascript:void(window.open('[@T[appSetting:<setting name='BING_AD_CREDIT_LINK' />]@T]','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=1060,height=675'))&quot;>View Details</a>
+<phrase key="bing-adwords-desc-left" />
+Restrictions apply to Bing Ads credit<span class="left">One promotional credit per customer for a new Microsoft<sup class="supsymbol">&reg;</sup> Advertiser account. Products purchased using a Gift Card or Alipay do not provide eligibility for advertising credits. Offer valid to US residents only, other restrictions apply.
+<phrase key="facebook-adwords-tm" />
+Facebook<sup class="supsymbol">&reg;</sup> Ad Credit
+<phrase key="facebook-adwords" />
+Facebook Ad Credit
+<phrase key="facebook-adwords-restrictions" />
+Restrictions apply to Facebook Ad credit 
+<phrase key="facebook-adwords-desc" />
+One promotional credit per customer for a new Facebook<sup class='supsymbol'>&reg;</sup> Advertiser account. Products purchased using a Gift Card or Alipay do not provide eligibility for advertising credits. Offer valid only for purchase of advertising in the US, Canada, UK, and Australia. Other restrictions apply. <a href=&quot;javascript:void(window.open('[@T[link:<relative path='/popups/facebook-ads.aspx'><param name='ci' value='46426' /><param name='app_hdr' value='99' /></relative>]@T]','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=550,height=675'))&quot;>View Details</a>
+<phrase key="facebook-adwords-desc-left" />
+Restrictions apply to Facebook Ad credit <span class="left">One promotional credit per customer for a new Facebook<sup class="supsymbol">&reg;</sup> Advertiser account. Products purchased using a Gift Card or Alipay do not provide eligibility for advertising credits. Offer valid only for purchase of advertising in the US, Canada, UK, and Australia. Other restrictions apply.
+<phrase key="10-fotolia" />
+<strong>10</strong>
+<phrase key="fotolia-adwords-tm" />
+Fotolia<sup class="supsymbol">&reg;</sup>
+<phrase key="fotolia-adwords" />
+Fotolia Photo Credits
+<phrase key="fotolia-adwords-restrictions" />
+Restrictions apply to Fotolia credits 
+<phrase key="fotolia-adwords-desc" />
+One free promotional credit per customer, good for ten free download credits at Fotolia. Products purchased using a Gift Card or Alipay do not provide eligibility for photography credits. Other restrictions apply. <a href=&quot;javascript:void(window.open('[@T[link:<relative path='/popups/fotolia.aspx'><param name='app_hdr' value='99' /></relative>]@T]','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=550,height=675'))&quot;>View Details</a>
+<phrase key="deluxe-title" />
+Deluxe
+<phrase key="deluxe-domain" />
+<strong>Free Domain</strong>
+<phrase key="deluxe-websites" />
+<strong>Unlimited</strong> Websites
+<phrase key="deluxe-bandwidth" />
+<strong>Unlimited</strong> Bandwidth
+<phrase key="deluxe-diskspace" />
+<strong>Unlimited</strong> Disk Space
+<phrase key="deluxe-databases" />
+<strong>25</strong> MySQL Databases (Linux&nbsp;OS)<br/>2 MS SQL Database (Windows OS)
+<phrase key="deluxe-databases-cp" />
+<strong>25 </strong>MySQL <a class="isToolTip" data-toggle="tooltip" title="MySQL (Linux) 1 GB storage per database.">Databases</a> (Linux&nbsp;OS)<br/>2 MS SQL<a class="isToolTip" data-toggle="tooltip" title="MS SQL (Windows) 200 MB storage per database."> Database</a> (Windows OS)
+<phrase key="500-deluxe" />
+<strong>500</strong>
+<phrase key="deluxe-emails-cp" />
+Email Addresses
+<phrase key="deluxe-mobile" />
+<strong>Customizable</strong> Mobile Site <span class="g-toolTip"><span>Instantly optimize your site for smartphones and tablets with our mobile site converter, powered by DudaMobile. Linux plans only.</span></span>
+<phrase key="unlimited-title" />
+Ultimate
+<phrase key="unlimited-domain" />
+<strong>Free Domain</strong>
+<phrase key="unlimited-websites" />
+<strong>Unlimited</strong> Websites
+<phrase key="unlimited-bandwidth" />
+<strong>Unlimited</strong> Bandwidth
+<phrase key="unlimited-diskspace" />
+<strong>Unlimited</strong> Disk Space
+<phrase key="unlimited-databases" />
+<strong>Unlimited</strong> Databases
+<phrase key="unlimited-databases-cp" />
+<strong>Unlimited </strong><a class="isToolTip" data-toggle="tooltip" title="MySQL (Linux) 1 GB storage per database. MS SQL (Windows) 200 MB storage per database.">Databases</a>
+<phrase key="1000-unlimited" />
+<strong>1000</strong>
+<phrase key="unlimited-emails-cp" />
+Email Addresses
+<phrase key="unlimited-mobile" />
+<strong>Customizable</strong> Mobile Site <span class="g-toolTip"><span class="left">Instantly optimize your site for smartphones and tablets with our mobile site converter, powered by DudaMobile. Linux plans only.</span></span>
+<phrase key="unlimited-wsa" />
+<strong>Website Accelerator</strong> <span class="g-toolTip"><span class="left">[@T[companyname:name]@T] Website Accelerator uses a Content Delivery Network (CDN) to automatically increase your website's speed, because faster websites keep more customers. Applicable to non-SSL Linux U.S. accounts.</span></span>
+<phrase key="unlimited-dns" />
+<strong>Premium DNS</strong>
+<phrase key="unlimited-dns-tooltip" />
+A [@T[productprice:<current productid="70852" dropdecimal="flase" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]/yr value, our Premium DNS makes it easy to resolve common issues that prevent people from accessing your site, improving your overall performance, availability, and security.
+<phrase key="unlimited-ssl" />
+<strong>SSL Certificate</strong>
+<phrase key="unlimited-ssl-restrictions" />
+Restrictions apply to SSL Certificate
+<phrase key="unlimited-ssl-desc" />
+A [@T[productprice:<current productid="3604" dropdecimal="flase" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]/yr value, your [@T[companyname:name]@T] SSL certificate keeps transactions with your website secure. Take advantage of 256-bit encryption and 99.9% browser recognition. It’s all free for the initial plan term purchased. Not available with Website Accelerator.
+<phrase key="unlimited-malware" />
+<strong>Malware Scanner</strong> <span class="g-toolTip"><span class="left">FREE one-page Malware Scanner monitors your site to ensure hackers haven't infected it with malicious links. Hackers target legitimate business sites to spread worms, Trojans, viruses and spyware. Malware Scanner will notify you if malicious links exist and provide instruction on how to remove them.</span></span>
+<phrase key="plan-domain" />
+<strong>Free Domain</strong> <p class="g-toolTip">Restrictions apply <span>One FREE .COM, .CO, .NET or .ORG with purchase of a new 12-, 24- or 36-month plan. Plus ICANN fee of [@T[currencyprice:<price usdamount="18" dropdecimal="false" />]@T] per domain name per year. You must add the domain name into your cart before purchase, and you must select a domain term length equal to or less than the term length of your plan to qualify for the free domain offer. If you purchase a domain name for a term longer than the term of the plan, you will be charged for the additional registration term at the then-current rate. Cannot be used in conjunction with any other offer, sale, discount or promotion. Free domain offer applies only to the initial purchase term. After the initial purchase term, domains purchased through this offer will renew at the then-current renewal price.</span></p>
+<phrase key="plan-domain-in" />
+<strong>Free Domain</strong> <p class="g-toolTip">Restrictions apply <span>One FREE .COM, .CO, .IN, .NET or .ORG with purchase of a new 12-, 24- or 36-month plan. Plus ICANN fee of [@T[currencyprice:<price usdamount="18" dropdecimal="false" />]@T] per domain name per year. You must add the domain name into your cart before purchase, and you must select a domain term length equal to or less than the term length of your plan to qualify for the free domain offer. If you purchase a domain name for a term longer than the term of the plan, you will be charged for the additional registration term at the then-current rate. Cannot be used in conjunction with any other offer, sale, discount or promotion. Free domain offer applies only to the initial purchase term. After the initial purchase term, domains purchased through this offer will renew at the then-current renewal price.</span></p>
+<phrase key="popular-tag" />
+Best Value
+<phrase key="onSale" />
+On Sale
+<phrase key="save" />
+Save
+<phrase key="mo" />
+/mo
+<phrase key="month" />
+/month
+<phrase key="1-month" />
+1 month
+<phrase key="3-months" />
+3 months
+<phrase key="12-months" />
+12 months
+<phrase key="24-months" />
+24 months
+<phrase key="36-months" />
+36 months
+<phrase key="reg-price" />
+Regular price
+<phrase key="planbox-cart-btn" />
+Add to Cart
+<phrase key="view-details" />
+View Details
+<phrase key="vat-price" />
+Prices exclude 20% VAT where applicable
+<phrase key="show-more" />
+More Plan Details
+<phrase key="web-hosting-11166" />
+Web Hosting
+<phrase key="web-hosting-looking-for-11166" />
+Looking for hosting that’s easy, reliable and lightning-fast? 
+<phrase key="web-hosting-looking-for-description-11166" />
+Take charge with industry-standard cPanel or Parallels<sup>&reg;</sup> Plesk control panels; 24/7/365 free, support on the phone or online; and 99.9% uptime<sup>*</sup> and money-back guarantees<sup>*</sup>. With our award-winning data center, you’ll know your site is always up and running. GoDaddy Website Hosting is a flexible solution for businesses using a designer to create their website and a powerful option for designers and developers with hundreds of web applications just a click away. 
+<phrase key="economy-plan-website-11166" />
+Host a single Website
+<phrase key="economy-plan-starting-at-11166" />
+As low as [@T[productprice:<current productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses"  />]@T]/month
+<phrase key="economy-plan-storage-11166" />
+<b>100 GB</b> Storage
+<phrase key="economy-plan-core-features-11166" />
+<b>All Core Features</b> listed below
+<phrase key="deluxe-plan-heading-11166" />
+Deluxe [Best Value]
+<phrase key="deluxe-plan-websites-11166" />
+Host unlimited Websites
+<phrase key="deluxe-plan-starting-at-11166" />
+As low as [@T[productprice:<current productid="32059" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/month
+<phrase key="deluxe-plan-storage-11166" />
+<a class="isToolTip" data-toggle="tooltip" title="" data-original-title="Our Web Hosting plans are designed to host most personal, small business and organization websites. We don't limit the amount of storage and bandwidth your site can use as long as it complies with our Hosting Agreement. Should your website bandwidth or storage usage present a risk to the stability, performance or uptime of our servers, we will notify you via email and you may be required to upgrade to a Virtual Private Server or Dedicated (Private) Server, or we may restrict the resources your website is using. It’s very rare that a website violates our Hosting Agreement and is typically only seen in sites that use hosting for file sharing or storage."><b>Unlimited</b></a> Storage
+<phrase key="ultimate-plan-websites-11166" />
+Host unlimited Websites
+<phrase key="ultimate-plan-starting-at-11166" />
+As low as [@T[productprice:<current productid="32082" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/month
+<phrase key="ultimate-plan-all-benefits-of-11166" />
+All the benefits of <b>Deluxe</b> plus <b><a class="isToolTip" data-toggle="tooltip" title="" data-original-title="A [@T[productprice:<current productid='70852' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' />]@T]/yr value, our Premium DNS makes it easy to resolve common issues that prevent people from accessing your site, improving your overall performance, availability, and security.">Premium DNS</a></b> and <b>SSL Certificate</b><br> <a class='isToolTip smallHoverText' data-toggle='tooltip' title='' data-original-title='A [@T[productprice:<current productid="3608" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]/yr value, your GoDaddy SSL certificate keeps transactions with your website secure. Take advantage of 256-bit encryption and 99.9% browser recognition. Free for initial purchase term, after which SSL certificate will automatically renew at the then-current rate.'>Restrictions apply to SSL Certificate</a>
+<phrase key="all-plans-include-mt-11166" />
+Economy/Deluxe/Ultimate Plans Include
+<phrase key="all-plans-include-11166" />
+All Plans Include
+<phrase key="all-plan-core-features-11166" />
+<b>All Core Features</b> listed below
+<phrase key="all-plan-features-free-domain-11166" />
+Free Domain with annual plan <a class="isToolTip restrictions-link" data-toggle="tooltip" title="" data-original-title="One FREE .COM, .CO, .NET or .ORG with purchase of a new 12-, 24- or 36-month plan. Plus ICANN fee of [@T[currencyprice:<price usdamount='18' dropdecimal='false' />]@T] per domain name per year. You must add the domain name into your cart before purchase, and you must select a domain term length equal to or less than the term length of your plan to qualify for the free domain offer. If you purchase a domain name for a term longer than the term of the plan, you will be charged for the additional registration term at the then-current rate. Cannot be used in conjunction with any other offer, sale, discount or promotion. Free domain offer applies only to the initial purchase term. After the initial purchase term, domains purchased through this offer will renew at the then-current renewal price.">Restrictions apply</a>
+<phrase key="all-plan-features-free-email-11166" />
+<a class="isToolTip" data-toggle="tooltip" title="" data-original-title="100 Email Addresses with Economy, 500 Email Addresses with Deluxe and 1000 Email Addresses with Ultimate.">Free Email Addresses </a>
+<phrase key="all-plan-features-one-click-install-11166" />
+One-click install of <a class="isToolTip" data-toggle="tooltip" title="" data-original-title="Over 150 free applications available with cPanel for Linux and over 70 free applications available with Parallels Plesk for Windows">200+</a> Free Applications
+<phrase key="all-plan-features-unlimited-bandwidth-11166" />
+Unlimited Monthly Bandwidth
+<phrase key="all-plan-features-databases-11166" />
+<a class="isToolTip" data-toggle="tooltip" title="" data-original-title="10 MySQL Databases (Linux OS) and 1 MS SQL Database (Windows OS) with Economy, 25 MySQL Databases (Linux OS) and 2 MS SQL Databases (Windows OS) with Deluxe, and Unlimited Databases with Ultimate.">1GB storage MySQL Linux and 200 MB storage Windows SQL Databases </a>
+<phrase key="all-plans-features-control-panel-11166" />
+Flexible, easy-to-use control panel
+<phrase key="all-plans-features-ddos-protection-11166" />
+24/7 security monitoring and DDoS protection
+<phrase key="all-plans-features-technical-support-11166" />
+Award-winning 24/7 technical support
+<phrase key="all-plans-features-uptime-guarantee-11166" />
+<sup>*</sup>99.9% uptime guarantee 
+<phrase key="all-plans-features-money-back-guarantee-11166" />
+<sup>*</sup>Money-back guarantee
+<phrase key="restrictions-apply-11166" />
+Restrictions Apply
+<phrase key="all-plan-features-adword-credit-11166" />
+[@T[currencyprice:<price usdamount="10000" dropdecimal="false" />]@T] Google AdWords Credit - 
+<phrase key="all-plan-features-adword-credit-hover-text-11166" />
+One promotional credit per customer for a new Google AdWords account. Products purchased using a Gift Card or Alipay do not provide eligibility for advertising credits. Minimum spend [@T[currencyprice:<price usdamount="2500" dropdecimal="false" />]@T]. Offer valid to US &amp; Canada residents only, excluding government controlled entities and parties. Other restrictions apply. <a href="javascript:void(window.open('http://www.godaddy.com/popups/google-adwords.aspx?ci=81141&app_hdr=99','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=550,height=675'))">View Details</a>
+<phrase key="all-plan-features-bing-credit-11166" />
+[@T[currencyprice:<price usdamount="10000" dropdecimal="false" />]@T] Bing Ads Credit - 
+<phrase key="all-plan-features-bing-credit-hover-text-11166" />
+One promotional credit per customer for a new Microsoft<sup>&reg;</sup> Advertiser account. Products purchased using a Gift Card or Alipay do not provide eligibility for advertising credits. Offer valid to US residents only, other restrictions apply. <a data-ci="89593" href="javascript:void(window.open('https://advertise.bingads.microsoft.com/en-us/godaddy/learn','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=1060,height=675'))">View Details</a>
+<phrase key="all-plan-features-facebook-credit-11166" />
+[@T[currencyprice:<price usdamount="5000" dropdecimal="false" />]@T] Facebook Ad Credit - 
+<phrase key="all-plan-features-facebook-credit-hover-text-11166" />
+One promotional credit per customer for a new Facebook<sup>&reg;</sup> Advertiser account. Products purchased using a Gift Card or Alipay do not provide eligibility for advertising credits. Offer valid only for purchase of advertising in the US, Canada, UK, and Australia. Other restrictions apply. <a href="javascript:void(window.open('http://www.godaddy.com/popups/facebook-ads.aspx?ci=46426&app_hdr=99','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=550,height=675'))">View Details</a>
+<phrase key="all-plan-features-fotolia-credit-11166" />
+10 Fotolia Photo Credits - 
+<phrase key="all-plan-features-fotolia-credit-hover-text-11166" />
+One free promotional credit per customer, good for ten free download credits at Fotolia. Products purchased using a Gift Card or Alipay do not provide eligibility for photography credits. Other restrictions apply. <a data-ci="89592" href="javascript:void(window.open('http://www.godaddy.com/popups/fotolia.aspx?app_hdr=99','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=550,height=675'))">View Details</a>
+<phrase key="all-plan-features-what-we-mean-credit-11166" />
+What we mean by <a class="isToolTip" data-toggle="tooltip" title="" data-original-title="Our Web Hosting plans are designed to host most personal, small business and organization websites. We don't limit the amount of storage and bandwidth your site can use as long as it complies with our Hosting Agreement. Should your website bandwidth or storage usage present a risk to the stability, performance or uptime of our servers, we will notify you via email and you may be required to upgrade to a Virtual Private Server or Dedicated (Private) Server, or we may restrict the resources your website is using. It’s very rare that a website violates our Hosting Agreement and is typically only seen in sites that use hosting for file sharing or storage.">Unlimited Storage and Bandwidth</a>
+<phrase key="media-temple-title-11166" />
+Premium
+<phrase key="media-temple-subtitle-11166" />
+Media Temple Grid Web Hosting 
+<phrase key="media-temple-description-11166" />
+Built to handle any traffic spike, from hundreds of visitors to hundreds of thousands.
+<phrase key="media-temple-price-11166" />
+[@T[currencyprice:<price usdamount="2000" dropdecimal="false" />]@T]<span class="shrink-per-month">/month</span>
+<phrase key="media-temple-features-100-websites-11166" />
+Host up to <b>100 Websites</b>
+<phrase key="media-temple-features-1-tb-bandwidth-11166" />
+<b>1 TB</b> Monthly Bandwidth
+<phrase key="media-temple-features-100-gb-storage-11166" />
+<b>100 GB</b> Storage
+<phrase key="media-temple-features-support-11166" />
+<b>24/7/365 Support</b> – Real, live engineers via chat, Twitter and phone
+<phrase key="media-temple-features-11166" />
+<b>1,000</b> Email Addresses
+<phrase key="media-temple-features-cloud-tech-11166" />
+<b>CloudTech Premium Support</b> – Optional paid services for help that’s above and beyond
+<phrase key="media-temple-features-one-click-11166" />
+<b>One-click</b> app installs
+<phrase key="media-temple-features-money-back-11166" />
+<b>Money-back</b> guarantee
+<phrase key="customer-testimonial-watch-video-11166" />
+Watch Video
+<phrase key="customer-testimonial-name-11166" />
+Dave Cox, Digital Coconut 
+<phrase key="customer-testimonial-11166" />
+"Because our team works remotely, we really depend on our GoDaddy hosting and website to keep everyone connected.”
+<phrase key="customer-testimonial-read-more-reviews-11166" />
+Read more reviews
+<phrase key="not-finding-title-11166" />
+<b>NOT FINDING WHAT YOU NEED?</b> You might want… 
+<phrase key="not-finding-website-builder-11166" />
+WEBSITE BUILDER 
+<phrase key="not-finding-website-builder-desc-11166" />
+Use our do-it-yourself site designer to create a beautiful site. Hosting included.
+<phrase key="not-finding-website-builder-perfect-for-11166" />
+<em>Perfect for:</em> Individuals, small and growing businesses
+<phrase key="not-finding-website-builder-as-low-as-11166" />
+<span class="starting-at-above">As low as</span><span class="starting-at-price">[@T[productprice:<current productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span>/mo
+<phrase key="not-finding-learn-more-11166" />
+Learn more
+<phrase key="not-finding-managed-wordpress-11166" />
+MANAGED WORDPRESS
+<phrase key="not-finding-managed-wordpress-desc-11166" />
+Get the power of WordPress with the ease of fully-managed hosting and security.
+<phrase key="not-finding-managed-wordpress-perfect-for-11166" />
+<em>Perfect for:</em> Bloggers, freelancers, web designers and businesses that use a designer
+<phrase key="not-finding-managed-wordpress-as-low-as-11166" />
+<span class="starting-at-above">As low as</span><span class="starting-at-price">[@T[productprice:<current productid="32759" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span>/mo
+<phrase key="not-finding-vps-11166" />
+VIRTUAL PRIVATE SERVERS
+<phrase key="not-finding-vps-desc-11166" />
+Get hosting that will grow as your needs grow with control of your own virtual server.
+<phrase key="not-finding-vps-perfect-for-11166" />
+<em>Perfect for:</em> High traffic sites
+<phrase key="not-finding-vps-as-low-as-11166" />
+<span class="starting-at-above">As low as</span><span class="starting-at-price">[@T[productprice:<current productid="3044" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span>/mo
+<phrase key="learn-more-about-web-hosting-11166" />
+Learn more about Web Hosting
+<phrase key="features-tab-load-time-title-11166" />
+Fast sites = happy visitors
+<phrase key="features-tab-fastest-load-times-11166" />
+Fastest load times!
+<phrase key="features-tab-first-load-time-text-11166" />
+Did you know a 1 second delay in your website page load time can cause a <span class="g-toolTip">7% reduction in conversion<span>Source: <a data-ci="89591" href="http://blog.kissmetrics.com/loading-time" target="_BLANK">KISSmetrics</a></span></span>? This can have a huge impact on your bottom line which is why we work hard to maintain top page load times in the industry.
+<phrase key="features-tab-load-time-bullet1-11166" />
+<a class="isToolTip" data-toggle="tooltip" title="" data-original-title="US comparison 90-day average among top competitors.">Fastest page load times</a> using cPanel for Linux 
+<phrase key="features-tab-load-time-bullet2-11166" />
+High-performance servers for fastest load times
+<phrase key="features-tab-apps-title-11166" />
+App installs just a click away 
+<phrase key="features-tab-first-apps-text-11166" />
+Our one-click install process has all your Web hosting app needs covered, making it easy to build, enhance and manage your site.
+<phrase key="features-tab-apps-bullet1-11166" />
+Need a content management system (CMS) for your Website? Joomla and Drupal are just a click away
+<phrase key="features-tab-apps-bullet2-11166" />
+Maybe you want to sell products on your website. Try Magneto with one-click.
+<phrase key="features-tab-easy-title-11166" />
+Powerful hosting made easy
+<phrase key="features-tab-first-easy-text-11166" />
+With its user-friendly control panels featuring cPanel<sup>&reg;</sup> and Parallels Plesk, our Hosting puts you in charge. And thanks to our award-winning data centers, lightning-fast load times and 24/7 monitoring, you know your site will always be safe, secure and online – guaranteed<sup>*</sup>. 
+<phrase key="features-tab-security-title-11166" />
+Award-winning security keeps your site safe
+<phrase key="features-tab-first-security-text-11166" />
+Keeping a website secure is a full time job. That’s why our security team is on the job 24/7, monitoring your site for suspicious activity and protecting it against brute force and DDoS attacks.
+<phrase key="features-tab-what-is-title-11166" />
+What is Hosting? 
+<phrase key="features-tab-first-what-is-text-11166" />
+<p>Make sure friends, family and customers can see your website.</p>
+<p>Hosting is what makes it possible for others to view your website over the Internet. Without it, you’re the only one who will ever get a look. GoDaddy serves up…</p>
+<phrase key="features-tab-what-is-bullet1-11166" />
+One-click set-up
+<phrase key="features-tab-what-is-bullet2-11166" />
+Unlimited storage and bandwidth
+<phrase key="features-tab-what-is-bullet3-11166" />
+Scalability to fit your needs
+<phrase key="features-tab-what-is-bullet4-11166" />
+24/7 secure monitoring
+<phrase key="features-tab-not-finding-managed-wordpress-title-11166" />
+MANAGED WORDPRESS
+<phrase key="features-tab-not-finding-managed-wordpress-text-11166" />
+Get the power of WordPress with the ease of fully-managed hosting and security.
+<phrase key="features-tab-not-finding-managed-wordpress-bullet1-11166" />
+Server setup, security backups and performance optimization managed for you
+<phrase key="features-tab-not-finding-managed-wordpress-bullet2-11166" />
+1000s of themes and plugins
+<phrase key="features-tab-not-finding-managed-wordpress-bullet3-11166" />
+One-click migration tool
+<phrase key="compare-plans-tab-title-11166" />
+Compare Plans
+<phrase key="compare-plans-parallels-plesk-11166" />
+Parallels Plesk
+<phrase key="compare-plans-cpanel-unlimited-11166" />
+Unlimited
+<phrase key="compare-plans-cpanel-11166" />
+cPanel
+<phrase key="compare-plans-choose-your-package-11166" />
+Choose your Package
+<phrase key="compare-plans-economy-11166" />
+Economy
+<phrase key="compare-plans-deluxe-11166" />
+Deluxe
+<phrase key="compare-plans-ultimate-11166" />
+Ultimate
+<phrase key="compare-plans-core-features-11166" />
+Core Features
+<phrase key="compare-plans-core-features-free-domain-11166" />
+Free Domain with annual plan <a class="isToolTip smallTt restrictions-apply" data-toggle="tooltip" title="" data-original-title="One FREE .COM, .CO, .NET or .ORG with purchase of a new 12-, 24- or 36-month plan. Plus ICANN fee of [@T[currencyprice:<price usdamount='18' dropdecimal='false' />]@T] per domain name per year. You must add the domain name into your cart before purchase, and you must select a domain term length equal to or less than the term length of your plan to qualify for the free domain offer. If you purchase a domain name for a term longer than the term of the plan, you will be charged for the additional registration term at the then-current rate. Cannot be used in conjunction with any other offer, sale, discount or promotion. Free domain offer applies only to the initial purchase term. After the initial purchase term, domains purchased through this offer will renew at the then-current renewal price.">Restrictions apply</a>
+<phrase key="compare-plans-cpanel-core-features-free-domain-11166" />
+Free Domain with annual plan
+<phrase key="compare-plans-core-features-websites-11166" />
+Websites
+<phrase key="compare-plans-core-features-websites-economy-11166" />
+1
+<phrase key="compare-plans-core-features-websites-unlimited-11166" />
+Unlimited
+<phrase key="compare-plans-core-features-websites-economy-11166" />
+1
+<phrase key="compare-plans-core-features-websites-unlimited-11166" />
+Unlimited
+<phrase key="compare-plans-core-features-disk-space-11166" />
+Disk Space
+<phrase key="compare-plans-core-features-disk-space-economy-11166" />
+100 GB
+<phrase key="compare-plans-core-features-disk-space-unlimited-11166" />
+<a class="isToolTip" data-toggle="tooltip" title="" data-original-title="Our Web Hosting plans are designed to host most personal, small business and organization websites. We don't limit the amount of storage and bandwidth your site can use as long as it complies with our Hosting Agreement. Should your website bandwidth or storage usage present a risk to the stability, performance or uptime of our servers, we will notify you via email and you may be required to upgrade to a Virtual Private Server or Dedicated (Private) Server, or we may restrict the resources your website is using. It’s very rare that a website violates our Hosting Agreement and is typically only seen in sites that use hosting for file sharing or storage.">Unlimited</a>
+<phrase key="compare-plans-cpanel-core-features-disk-space-unlimited-11166" />
+<a class="isToolTip" data-toggle="tooltip" title="" data-original-title="   Our Web Hosting plans are designed to host most personal, small business and organization websites, so we don't constrain the amount of storage and bandwidth your site can use provided it complies with our Hosting Agreement. In the event the bandwidth or storage usage of your website presents a risk to the stability, performance or uptime of our servers, you may be required to upgrade to a VPS or Dedicated Server, or we may take action to restrict the resources your website is using. It’s very rare that a website violates our Hosting Agreement and is typically only seen for sites using their hosting for file sharing or storage.">Unlimited</a>
+<phrase key="compare-plans-core-features-monthly-bandwidth-11166" />
+Monthly Bandwidth
+<phrase key="compare-plans-core-features-monthly-bandwidth-unlimited-11166" />
+<a class="isToolTip" data-toggle="tooltip" title="" data-original-title="Our Web Hosting plans are designed to host most personal, small business and organization websites. We don't limit the amount of storage and bandwidth your site can use as long as it complies with our Hosting Agreement. Should your website bandwidth or storage usage present a risk to the stability, performance or uptime of our servers, we will notify you via email and you may be required to upgrade to a Virtual Private Server or Dedicated (Private) Server, or we may restrict the resources your website is using. It’s very rare that a website violates our Hosting Agreement and is typically only seen in sites that use hosting for file sharing or storage.">Unlimited</a>
+<phrase key="compare-plans-core-features-file-transfer-unlimited-11166" />
+Unlimited
+<phrase key="compare-plans-core-features-ftp-users-11166" />
+<a class="isToolTip" data-toggle="tooltip" title="" data-original-title="1 primary, 49 additional">FTP Users</a>
+<phrase key="compare-plans-core-features-ftp-users-50-unlimited-11166" />
+50‡‡
+<phrase key="compare-plans-cpanel-core-features-ftp-users-11166" />
+FTP Users
+<phrase key="compare-plans-cpanel-core-features-ftp-users-economy-11166" />
+50
+<phrase key="compare-plans-databases-11166" />
+Databases
+<phrase key="compare-plans-databases-sql2012-11166" />
+SQL 2012 Hosting
+<phrase key="compare-plans-databases-mssql-11166" />
+MS SQL
+<phrase key="compare-plans-databases-mssql-economy-11166" />
+1 x 200 MB
+<phrase key="compare-plans-databases-mssql-deluxe-11166" />
+2 x 200 MB
+<phrase key="compare-plans-databases-mssql-ultimate-11166" />
+Unlimited x 200 MB
+<phrase key="compare-plans-databases-mysql-11166" />
+MySQL
+<phrase key="compare-plans-databases-mysql-economy-11166" />
+10 x 1 GB
+<phrase key="compare-plans-databases-mysql-deluxe-11166" />
+25 x 1 GB
+<phrase key="compare-plans-databases-mysql-ultimate-11166" />
+Unlimited x 1 GB
+<phrase key="compare-plans-databases-database-backup-11166" />
+Database Backup/Restore
+<phrase key="compare-plans-databases-direct-database-11166" />
+<a class="isToolTip" data-toggle="tooltip" title="" data-original-title="Allows users direct access to their public MS SQL via Database Manager tools.">Direct Database Access</a>
+<phrase key="compare-plans-databases-microsoft-access-11166" />
+Microsoft Access 2007, 2010
+<phrase key="platforms-tab-title-11166" />
+Platforms
+<phrase key="platforms-tab-main-header-11166" />
+Choose your platform – Linux or Windows 
+<phrase key="platforms-tab-main-text-11166" />
+GoDaddy uses industry-standard control panels giving you the flexibility to choose the platform that works best for your needs. Choose from cPanel for Linux or Parallels Plesk for Windows. If you plan on using a Web application to blog, podcast, or create a shopping cart and you are working with a designer or developer to build your site, check to see what operating system the application needs (Linux or Windows) or what software language will be used, before purchasing your hosting account.
+<phrase key="platforms-tab-cpanel-module-title-11166" />
+cPanel for Linux
+<phrase key="platforms-tab-cpanel-module-tour-link-11166" />
+Take a Tour
+<phrase key="platforms-tab-cpanel-module-panel-bullet-title-11166" />
+Each Linux plan includes:
+<phrase key="platforms-tab-cpanel-module-panel-bullet1-11166" />
+<b>cPanel</b>: Access all the hosting features and settings you need with this industry-standard control panel.
+<phrase key="platforms-tab-cpanel-module-panel-bullet2-11166" />
+<b>CloudLinux</b>: Keep your site online with truly balanced CPU, RAM and Disk IO limits.
+<phrase key="platforms-tab-cpanel-module-panel-bullet3-11166" />
+<b>CageFS</b>: Protect your Web content 24/7 with this virtualized file system.
+<phrase key="platforms-tab-cpanel-module-panel-bullet4-11166" />
+<b>Free Applications</b>: Instantly install over 150 applications on your website with just a few clicks.
+<phrase key="platforms-tab-cpanel-module-panel-bottom-text-11166" />
+<b>Choose Linux if</b> you're going to use PHP, Perl or CGI scripting. Our Linux accounts use a MySQL database.
+<phrase key="platforms-tab-plesk-module-title-11166" />
+Parallels Plesk for Windows
+<phrase key="platforms-tab-plesk-windows-module-panel-bullet-title-11166" />
+Each Windows plan includes:
+<phrase key="platforms-tab-plesk-windows-module-panel-bullet1-11166" />
+<b>Parallels Plesk Panel</b>: Easily manage your server, email accounts and more with this popular, award-winning control panel.
+<phrase key="platforms-tab-plesk-windows-module-panel-bullet2-11166" />
+<b>Windows Server 2012</b>: Take control of your hosting with Microsoft’s newest and most powerful server operating system.
+<phrase key="platforms-tab-plesk-windows-module-panel-bullet3-11166" />
+<b>Free Applications</b>: Instantly install over 70 applications on your website with just a few clicks.
+<phrase key="platforms-tab-plesk-windows-module-panel-bottom-text-11166" />
+<b>Choose Windows if</b> you're going to use ASP or ASP.NET. Our Windows hosting customers typically use a SQL Server (MS SQL).
+<phrase key="compare-plans-domains-11166" />
+Domains
+<phrase key="compare-plans-domains-dns-management-11166" />
+DNS Management
+<phrase key="compare-plans-domains-dns-management-unlimited-11166" />
+Premium
+<phrase key="compare-plans-cpanel-domains-dns-management-unlimited-11166" />
+Premium DNS
+<phrase key="compare-plans-domains-access-www-11166" />
+Access without "www."
+<phrase key="compare-plans-domains-external-domains-11166" />
+<a class="isToolTip" data-toggle="tooltip" title="" data-original-title="Domains registered elsewhere may be pointed/used with our hosting plans.">External Domains</a>
+<phrase key="compare-plans-domains-external-domains-economy-11166" />
+Unlimited
+<phrase key="compare-plans-domains-external-domains-unlimited-11166" />
+Unlimited<sup>&ordm;&ordm;</sup>
+<phrase key="compare-plans-domains-subdomain-11166" />
+<a class="isToolTip" data-toggle="tooltip" title="" data-original-title='Subdomain may be setup from aliases as well as the primary domain. Additionally, subdomains may be "pointed" to any subdirectory in the hosting account.'>Subdomains</a>
+<phrase key="compare-plans-domains-subdomain-economy-11166" />
+25
+<phrase key="compare-plans-domains-subdomain-400-11166" />
+400
+<phrase key="compare-plans-domains-multiple-web-sites-11166" />
+<a class="isToolTip" data-toggle="tooltip" title="" data-original-title="Multiple domains may be hosted within a single hosting account, sharing the same diskspace and bandwidth quotas.">Multiple Web Sites</a>
+<phrase key="compare-plans-domains-multiple-web-sites-unlimited-11166" />
+Unlimited
+<phrase key="compare-plans-cpanel-domains-multiple-web-sites-unlimited-11166" />
+Unlimited<sup>&ordm;&ordm;</sup>
+<phrase key="compare-plans-domains-alias-11166" />
+<a class="isToolTip" data-toggle="tooltip" title="" data-original-title="Aliases allow you to point more than one domain name to an existing hosting account.">Alias Domains</a>
+<phrase key="compare-plans-domains-alias-unlimited-11166" />
+Unlimited
+<phrase key="compare-plans-general-features-11166" />
+General Features
+<phrase key="compare-plans-cpanel-general-features-cpanel-11166" />
+cPanel
+<phrase key="compare-plans-cpanel-general-features-cpanel-plans-11166" />
+11.40.1
+<phrase key="compare-plans-cpanel-general-features-easy-application-11166" />
+Easy Application Installer
+<phrase key="compare-plans-cpanel-general-features-phpmyadmin-11166" />
+phpMyAdmin
+<phrase key="compare-plans-cpanel-general-features-cloud-linux-11166" />
+CloudLinux
+<phrase key="compare-plans-cpanel-general-features-cageFS-11166" />
+CageFS
+<phrase key="compare-plans-cpanel-general-features-password-protect-11166" />
+Password Protect Dictionaries
+<phrase key="compare-plans-cpanel-general-features-account-exec-11166" />
+<a class="isToolTip" data-toggle="tooltip" title="" data-original-title="The AccountExec service allows you to give trusted individuals access to your hosting account without having to give up your password. You assign multiple AccountExecs, each with their own specific roles and limited access.">Assign an AccountExec</a>
+<phrase key="compare-plans-cpanel-general-features-ssh-11166" />
+SSH Access (Secure Shell)
+<phrase key="compare-plans-cpanel-general-features-ftp-over-ssl-11166" />
+<a class="isToolTip" data-toggle="tooltip" title="" data-original-title="FTPS is a secure version of the FTP protocal that encrypts user credientials and data as it travels across the network.">FTP over SSL (FTPS)</a>
+<phrase key="compare-plans-cpanel-general-features-raw-access-11166" />
+Raw Access Logs
+<phrase key="compare-plans-cpanel-general-features-site-statistics-11166" />
+Site Statistics
+<phrase key="compare-plans-cpanel-general-features-premium-dns-11166" />
+Premium DNS
+<phrase key="compare-plans-cpanel-general-features-ssl-cert-11166" />
+SSL Certificate<sup>††</sup>
+<phrase key="compare-plans-cpanel-general-features-cron-jobs-11166" />
+Cron Jobs
+<phrase key="compare-plans-cpanel-general-features-file-image-magick-11166" />
+ImageMagick
+<phrase key="compare-plans-cpanel-general-features-150-free-apps-11166" />
+150+ Free Applications
+<phrase key="compare-plans-cpanel-general-features-imagemagick-11166" />
+Premium DNS
+<phrase key="compare-plans-general-features-windows-server-11166" />
+Windows Server 2012 R1
+<phrase key="compare-plans-general-features-plesk-11166" />
+Plesk Panel 11.5 for Windows
+<phrase key="compare-plans-general-features-ftp-over-ssl-11166" />
+<a class="isToolTip" data-toggle="tooltip" title="" data-original-title="FTPS is a secure version of the FTP protocol that encrypts user credentials and data as it travels across the network.">FTP over SSL (FTPS)</a>
+<phrase key="compare-plans-general-features-raw-access-11166" />
+Raw Access Logs
+<phrase key="compare-plans-general-features-site-statistics-11166" />
+Site Statistics
+<phrase key="compare-plans-general-features-premium-dns-11166" />
+Premium DNS
+<phrase key="compare-plans-general-features-ssl-certificates-11166" />
+SSL Certificate <a class="isToolTip restrictions-link" data-toggle="tooltip" title="" data-original-title='A [@T[productprice:<current productid="3604" dropdecimal="flase" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]/yr value, your GoDaddy SSL certificate keeps transactions with your website secure. Take advantage of 256-bit encryption and 99.9% browser recognition. Free for initial purchase term, after which SSL certificate will automatically renew at the then-current rate.'>Restrictions apply</a>
+<phrase key="compare-plans-general-features-support-11166" />
+24/7 Phone/Email Support
+<phrase key="compare-plans-general-features-scheduled-tasks-11166" />
+Scheduled Tasks
+<phrase key="compare-plans-general-features-file-manager-11166" />
+File Manager
+<phrase key="compare-plans-general-features-web-deploy-11166" />
+Microsoft Web Deploy
+<phrase key="compare-plans-general-features-webmatrix-11166" />
+Microsoft WebMatrix
+<phrase key="compare-plans-general-features-free-applications-11166" />
+70+ Free Applications
+<phrase key="compare-plans-general-features-drupal-11166" />
+Drupal
+<phrase key="compare-plans-general-features-wordpress-11166" />
+WordPress<sup>&reg;</sup>
+<phrase key="compare-plans-general-features-joomla-11166" />
+joomla<sup>&reg;</sup>
+<phrase key="compare-plans-cpanel-general-features-magento-11166" />
+Magento<sup>&reg;</sup>
+<phrase key="compare-plans-general-features-phpbb-11166" />
+phpbb
+<phrase key="compare-plans-language-support-11166" />
+Language Support
+<phrase key="compare-plans-language-support-server-side-11166" />
+Server Side Includes (SSI)
+<phrase key="compare-plans-language-support-asp-11166" />
+ASP
+<phrase key="compare-plans-language-support-asp-net-4-11166" />
+ASP.NET v4.0
+<phrase key="compare-plans-language-support-asp-net-2-3-11166" />
+ASP.NET v2.0/3.0/3.5
+<phrase key="compare-plans-language-support-asp-net-ajax-11166" />
+ASP.NET AJAX
+<phrase key="compare-plans-language-support-php5-11166" />
+PHP5 Hosting
+<phrase key="compare-plans-language-support-cgi-11166" />
+CGI
+<phrase key="compare-plans-language-support-asp-mv3-11166" />
+ASP.NET MVC3<a class="isToolTip" data-toggle="tooltip" title="" data-original-title="^ Only available with ASP.NET 4.0"><sup>^</sup></a>
+<phrase key="compare-plans-language-support-iis8-11166" />
+IIS8 Hosting
+<phrase key="compare-plans-language-support-silverlight-11166" />
+Silverlight 5 Hosting<a class="isToolTip" data-toggle="tooltip" title="" data-original-title="^ Only available with ASP.NET 4.0"><sup>^</sup></a>, Silverlight 4
+<phrase key="compare-plans-language-support-perl-11166" />
+PERL
+<phrase key="compare-plans-cpanel-language-support-php-54-11166" />
+PHP 5.4<sup>*</sup> (Also Support PHP 5.2-5.5)
+<phrase key="compare-plans-cpanel-language-support-php-ini-11166" />
+Custom PHP.ini
+<phrase key="compare-plans-cpanel-language-support-python-11166" />
+Python
+<phrase key="compare-plans-email-features-11166" />
+Email Features
+<phrase key="compare-plans-email-features-addresses-11166" />
+Number of Addresses
+<phrase key="compare-plans-email-features-addresses-economy-11166" />
+100
+<phrase key="compare-plans-email-features-addresses-deluxe-11166" />
+500
+<phrase key="compare-plans-email-features-addresses-ultimate-11166" />
+1000
+<phrase key="compare-plans-email-features-storage-11166" />
+Total Email Storage
+<phrase key="compare-plans-email-features-storage-economy-11166" />
+100 MB
+<phrase key="compare-plans-email-features-storage-deluxe-11166" />
+500 MB
+<phrase key="compare-plans-email-features-storage-ultimate-11166" />
+1 GB
+<phrase key="compare-plans-email-features-webmail-11166" />
+Webmail
+<phrase key="compare-plans-cpanel-email-features-pop-3-11166" />
+POP 3 Accounts
+<phrase key="compare-plans-cpanel-email-features-smtp-11166" />
+SMTP
+<phrase key="compare-plans-cpanel-email-features-imap-11166" />
+IMAP
+<phrase key="compare-plans-email-features-forwarding-11166" />
+Forwarding
+<phrase key="compare-plans-email-features-auto-responders-11166" />
+Auto-Responder
+<phrase key="compare-plans-email-features-catch-all-11166" />
+Catch-All Email Address
+<phrase key="compare-plans-email-features-fraud-virus-11166" />
+Fraud, Virus &amp; Spam Protection
+<phrase key="compare-plans-email-features-sender-id-11166" />
+<a class="isToolTip" data-toggle="tooltip" title="" data-original-title="Verify that messages are from the person they say they're from. Sender ID authenticates incoming email, validating the sender's email adress against the sender's Internet Protocol (IP). Authenticated messages are less likely to be spam.">Sender ID</a>
+<phrase key="compare-plans-email-features-email-privacy-11166" />
+Email privacy &amp; protection with 256-Bit Encryption
+<phrase key="platform-title" />
+Choose your platform &minus; Linux or Windows
+<phrase key="cpanel-tab-title" />
+cPanel for Linux
+<phrase key="plesk-tab-title" />
+Parallels Plesk for Windows
+<phrase key="cpanel-content" />
+<h3>Each Linux plan includes:</h3><p><strong>cPanel:</strong> Access all the hosting features and settings you need with this industry-standard control panel.</p><p><strong>CloudLinux:</strong> Keep your site online with our truly balanced CPU, RAM and Disk IO limits.</p><p><strong>CageFS:</strong> Protect your Web content 24/7 with this virtualized file system.</p><p><strong>Free Applications:</strong> Instantly install over 150 applications on your website with just a few clicks.</p>
+<phrase key="plesk-content" />
+<h3>Each Windows plan includes:</h3><p><strong>Parallels Plesk Panel:</strong> Easily manage your server, email accounts and more with this popular, award-winning control panel.</p><p><strong>Windows Server 2012:</strong> Take control of your hosting with Microsoft’s newest and most powerful server operating system.</p><p><strong>Free Applications:</strong> Instantly install over 70 applications on your website with just a few clicks.</p>
+<phrase key="datacenter-title" />
+Always up,<br />always fast
+<phrase key="datacenter-content" />
+Count on our state-of-the-art data centers to deliver 99.9% guaranteed uptime, lightning-fast load times and advanced security.<br />
+<a target="_blank" href="#">Learn more about our performance</a>
+<phrase key="apps-title" />
+All the tools you need
+<phrase key="apps-content" />
+From one-click installation for WordPress<sup class="supsymbol">&reg;</sup> and other top apps to automatic mobile conversion for your site, our hosting plans are fully loaded.
+<phrase key="apps-content-cp" />
+<p>From industry-standard control panels like Plesk and cPanel to one-click installation for WordPress and hundreds of other top apps, our hosting plans make it easy to build, enhance and manage your site.</p>
+<phrase key="hosting-solution" />
+Need a different hosting solution?
+<phrase key="word-press" />
+Managed WordPress
+<phrase key="vps" />
+Virtual Private Servers (VPS)
+<phrase key="dedicated" />
+Private Servers
+<phrase key="managed" />
+Managed Hosting
+<phrase key="first-solution-content" />
+Get the power of WordPress for your site or blog and the ease of fully-managed hosting, setup and security
+<phrase key="second-solution-content" />
+Gives you the ability to customize RAM, storage and bandwidth and lets you easily add more capacity anytime.
+<phrase key="third-solution-content" />
+An entire server dedicated to your site. Design and modify it to fit your needs with full admin access.
+<phrase key="fourth-solution-content" />
+Our experts will set up and manage your dedicated server including all installations, configurations, and system administration.
+<phrase key="learn-more" />
+Learn More
+<phrase key="faq-first-slide-title-cp" />
+How does Web Hosting work?
+<phrase key="faq-first-slide-content-cp" />
+<p>
+Once you purchase a <strong>Web hosting plan</strong>, [@T[companyname:name]@T] stores your site on one of our servers and assigns it a unique DNS. The DNS serves as the address that allows people around the world to find and view your website. This unique address is required in order for people to view your site.
+</p>
+<p>
+By purchasing a website hosting package, you're basically buying space on one of our servers. It’s similar to the space on a computer’s hard drive, but the server allows your website’s files to be accessed from anywhere.
+</p>
+<p>
+For more information, visit our <a class="underlined" href="[@T[link:<external linktype="communityurl" path="help/category/58/web-hosting" secure="false"/>]@T]" target="_blank">Web Hosting product support page.</a>
+</p>
+<phrase key="faq-first-slide-title" />
+What is web hosting?
+<phrase key="faq-first-slide-content" />
+<p>
+<span>Web hosting</span> is what makes your website viewable to people all over the world. <span>Hosting</span> makes it possible for others to view your website over the Internet – without it; you're the only one who would ever see your <span>Web pages</span>.
+</p>
+<p>
+ A <span>website hosting</span> provider stores your site on their server, giving it a unique address (DNS). It is through this address that people anywhere in the world can find, open, and interact with your site.
+</p>
+<p>
+ Simply put, when you buy website hosting, you're buying space on a server. This is not unlike the space on your computer's hard drive – except that now your files can be opened from anywhere.
+</p>
+<p>
+Hosting couldn't be easier at [@T[companyname:name]@T]. You get <span>secure hosting</span> plans with unlimited bandwidth.
+</p>
+<p>
+  For more information, visit our <a href="[@T[link:<external linktype="communityurl" path="help/category/58/web-hosting" secure="false"/>]@T]" target="_blank">Web Hosting product support page.</a>
+</p>
+<phrase key="faq-second-slide-title-cp" />
+What kind of Web Hosting do I need?
+<phrase key="faq-second-slide-content-cp" />
+<p>
+We offer both Windows and Linux <strong>hosting</strong>. Which one you need depends on what you want to do with your site, like whether you want to create a shopping cart, blog or podcast with a specific Web application. If you're not sure if you need Windows or Linux, you can always call [@T[companyname:name]@T] hosting support team. We're here to help 24/7.
+</p>
+<p>
+The link below offers a simple, step-by-step guide to picking the best <strong>web hosting package</strong> for your site. Our different packages to find one that fits the size of your website and the traffic it generates. And as always, our award-winning 24/7 support can answer any of your questions.
+</p>
+<p>
+For more information, see <a class="underlined" href="[@T[link:<external linktype="communityurl" path="help/article/2520/" secure="false"/>]@T]" target="_blank">Should I choose a Windows or Linux hosting account?</a>
+</p>
+<phrase key="faq-second-slide-title" />
+Which Web hosting plan should I choose?
+<phrase key="faq-second-slide-content" />
+<p>
+ If you plan on using a Web application to blog, podcast, or create a shopping cart, check to see what language the developers used to create the application. Knowing the type of development language and sql database the application connects with can help you determine whether or not you need Windows hosting or Linux hosting.
+</p>
+<p>
+ Once you decide between Windows and Linux, you need to determine which <span>Web hosting package</span> best suits your needs. Depending on the size of your website and how much Web traffic you're expecting to generate, hosting couldn't be easier with [@T[companyname:name]@T]. With our award-winning 24x7 tech support you'll get the <span>website hosting service</span> you want at the right price.
+</p>
+<p>For more information, see <a href="[@T[link:<external linktype="communityurl" path="help/article/2520/" secure="false"/>]@T]" target="_blank">Should I choose a Windows or Linux hosting account?</a></p>
+<phrase key="faq-third-slide-title" />
+What can I use to build my website?
+<phrase key="faq-third-slide-content-cp" />
+<p>
+  You can build your website in several different ways – from hand-coding with HTML to using a website builder program.
+</p>
+<p>
+  If you require a lot of functionality and versatility from your website, you’ll benefit from programs and applications that can help you build your site. Our <strong>Web hosting</strong> plans give you access to free, server-side applications that can be used to develop and customize your website, including popular Content Management System (CMS) applications like WordPress<sup class="supsymbol">&reg;</sup> and Joomla!<sup class="supsymbol">&reg;</sup>.
+</p>
+<p>
+  We try to make building your website as simple as possible. If you prefer to use popular Web design software such as Adobe Dreamweaver<sup class="supsymbol">&reg;</sup>, Microsoft Expression<sup class="supsymbol">&reg;</sup>, and Apple iWeb, you can easily upload your files to your [@T[companyname:name]@T] hosting account.
+</p> 
+<p>
+  For more information, see <a class="underlined" href="[@T[link:<external linktype="communityurl" path="help/article/1724/" secure="false"/>]@T]" target="_blank">Installing Hosting Quick-Install Applications.</a>
+</p>
+<phrase key="faq-third-slide-content" />
+<p>
+ How you <span>build your own website</span> is entirely up to you. In fact, most basic websites can be hand-coded using HTML.
+</p>
+<p>
+  The more functionality and versatility you require from your website, the more you might need to rely on programs and applications to help build your site. Our Linux and Windows <span>Web hosting plans</span> include a number of free server-side applications that you can use when developing and customizing your websites.
+</p>
+<p>
+ We've made it easy to install popular Content Management System (CMS) applications like WordPress<sup class="supsymbol">&reg;</sup> and Joomla!<sup class="supsymbol">&reg;</sup> through the [@T[companyname:name]@T] Hosting Connection<sup class="supsymbol">&reg;</sup> from your Hosting Control Center.
+</p>
+<p>
+ In addition to the Hosting Connection applications, you can use popular Web design software such as Adobe Dreamweaver<sup class="supsymbol">&reg;</sup>, Microsoft Expression<sup class="supsymbol">&reg;</sup>, and Apple iWeb to build your site.
+</p>
+<p>
+ For more information, see <a href="[@T[link:<external linktype="communityurl" path="help/article/1724/" secure="false"/>]@T]" target="_blank">Installing Hosting Quick-Install Applications.</a>
+</p>
+<phrase key="faq-fourth-slide-title" />
+How do I transfer my Web pages to your server?
+<phrase key="faq-fourth-slide-content-cp" />
+<p>
+  If you’ve built your website in a HTML editor, like Dreamweaver or Microsoft Expression Studio, you have to upload your website files via FTP (File Transfer Protocol). We have a built-in FTP File Manager that you can access in our Hosting Control Center.
+</p>
+<p>
+  However, if your files are larger than 20 MB, we recommend using the tool FileZilla, which works with Windows<sup class="supsymbol">&reg;</sup>, Mac<sup class="supsymbol">&reg;</sup>, and Linux<sup class="supsymbol">&reg;</sup> operating systems, or another third-party FTP client.
+</p>
+<p>
+  For more information, see <a class="underlined" href="[@T[link:<external linktype="communityurl" path="help/article/96/" secure="false"/>]@T]" target="_blank">Uploading Files to Your Website (FTP).</a>
+</p>
+<phrase key="faq-fourth-slide-content" />
+<p>
+ Let's say you've built your own Web page using an HTML editor like Dreamweaver or Microsoft Expression Studio. Before you can view your website on the Internet, you'll need to upload the pages you've created from your computer to our server via FTP (File Transfer Protocol).
+</p>
+<p>
+ You can use our built-in FTP File Manager located inside the Hosting Control Center.
+</p>
+<p>
+ Or, if you have large files to upload (20 MB+), try using FileZilla, a free tool that works with Windows<sup class="supsymbol">&reg;</sup>, Mac<sup class="supsymbol">&reg;</sup>, and Linux<sup class="supsymbol">&reg;</sup> operating systems. You can also send your files using other third-party FTP software.
+</p>
+<p>
+ For more information, see <a href="[@T[link:<external linktype="communityurl" path="help/article/96/" secure="false"/>]@T]" target="_blank">Uploading Files to Your Website (FTP)</a>.
+</p>
+<phrase key="faq-fifth-slide-title" />
+If I already have a website, can I transfer it to your Web hosting?
+<phrase key="faq-fifth-slide-content-cp" />
+<p>
+  Moving your website to [@T[companyname:name]@T] is a simple process. If you have access to your existing website files, you can upload them through our Hosting Control Center or via an FTP client. If you don’t have a current copy of your website, you should be able to request one from your current website <strong>hosting provider</strong>.
+</p>
+<p>
+  If you have any questions along the way, our 24/7 support team is here to assist you. We can help you determine the best method for transitioning your website to a [@T[companyname:name]@T] account.
+</p>
+<p>
+  For more information, see <a class="underlined" href="[@T[link:<external linktype="communityurl" path="help/article/1414/" secure="false"/>]@T]" target="_blank">Transferring Your Hosting Account.</a>
+</p>
+<phrase key="faq-fifth-slide-content" />
+<p>
+In most cases, moving your <span>website hosting</span> to [@T[companyname:name]@T] is a relatively easy process. If you have access to your existing website files, you can simply upload them using an FTP client or through the Hosting Control Center. If you don't have a backup of your website files, you should be able to get a copy of them from your current website <span>hosting provider</span>.
+</p>
+<p>
+Don't worry! We're a very experienced <span>hosting company</span> and we'll be here to guide you during the entire transfer process. Our 24x7 teams will assist you in determining the best method for transferring your website to [@T[companyname:name]@T] Web hosting.
+</p>
+<p>
+For more information, see <a href="[@T[link:<external linktype="communityurl" path="help/article/1414/" secure="false"/>]@T]" target="_blank">Transferring Your Hosting Account</a>.
+</p>
+<phrase key="faq-sixth-slide-title" />
+Can I see who's visiting my site?
+<phrase key="faq-sixth-slide-content-cp" />
+<p>
+  Yes! All [@T[companyname:name]@T] <span>hosting accounts</span> come with site statistics feature which allows you to gather information about your website. You can see how many people visit your site, what keywords they use to find your site, which pages on your site they visit the most and much more.
+</p>
+<p>
+  You can view your statistics by going to yourpersonaldomain/stats (replace "yourpersonaldomain" with your actual domain name) and entering your FTP username and password.
+</p>
+<p>
+  For more information, see <a href="[@T[link:<external linktype="communityurl" path="help/article/92/" secure="false"/>]@T]" target="_blank">Setting up Standard Web Statistics for Your Web Site.</a>
+</p>
+<phrase key="faq-sixth-slide-content" />
+<p>
+  Yes! Every <span>website hosting</span> account comes with a Web statistics feature that, once enabled, lets you gather Web traffic information about your website – for example, how many people visit it, what keywords they type in to find you, and which pages on your site they visit most often.
+</p>
+<p>
+To view your traffic statistics, go to yourpersonaldomain/stats (replacing "yourpersonaldomain" with your actual domain name) and key in your FTP username and password.
+</p>
+<p>
+For more information, see <a href="[@T[link:<external linktype="communityurl" path="help/article/4146/" secure="false"/>]@T]" target="_blank">Setting up Standard Web Statistics for Your Web Site</a>.
+</p>
+<phrase key="faq-seventh-slide-title" />
+I just bought a hosting plan. Now what?
+<phrase key="faq-seventh-slide-content-cp" />
+<p>
+  The first step is to activate your account. Just go to [@T[companyname:name]@T].com and click on My Account. You’ll be asked to enter your customer number or username and your password.
+</p>
+<p>
+  Once you’re logged in, you’ll see a list of products. Select the gray box next to <strong>Web hosting</strong> then pick the account you want to activate. Next, click the Launch button for that account.
+</p>
+<p>
+  You just have a few more steps to go.
+</p>
+<p>
+  Click on the Enter domain box then type in the domain name or choose the name from the list.
+</p>
+<p>
+  Enter your own FTP username or select the one we suggest. Create and confirm your password, click Finish and you’re done!
+</p>
+<p>
+  After you’ve completed these steps, it can take anywhere from 30 minutes to 24 hours for your new account to be fully active. Once everything is up and running, we’ll send you an email with all of the account details.
+</p>
+<p>
+  For more information, see <a class="underlined" href="[@T[link:<external linktype="communityurl" path="help/article/1361/" secure="false"/>]@T]" target="_blank">Getting Started with Your Hosting Account.</a>
+</p>
+<phrase key="faq-seventh-slide-content" />
+<p>
+  The first thing to do is activate your account. Go to [@T[companyname:name]@T].com and click on the My Account button. Type your Customer Number or Login Name and Password into the boxes and click the Enter key on your keyboard.
+</p>
+<p>
+In the list of products that displays, select the gray box next to Web Hosting. Pick the account you'd like to activate (if there's more than one) and click the Launch button for that account.
+</p>
+<p>
+ The next few steps are pretty easy – just click on the Enter domain box and type in the domain name you want to use for your web site or choose it from the list.
+</p>
+<p>
+ Type in your own FTP username or use the one we suggest and create a password. Confirm your FTP password and click Finish. Done!
+</p>
+<p>
+ It might take anywhere from 30 minutes to 24 hours for your hosting account to be up and running. We'll email you all of the account details once it's ready to go.
+</p>
+<p>
+For more information, see <a href="[@T[link:<external linktype="communityurl" path="help/article/1361/" secure="false"/>]@T]" target="_blank">Getting Started with Your Hosting Account</a>.
+</p>
+<phrase key="faq-eighth-slide-title" />
+Can I host multiple domain names with my hosting account?
+<phrase key="faq-eighth-slide-content-cp" />
+<p>
+  Our Deluxe and Ultimate plans can host multiple websites. You can also use these plans to set up various names (aliases) for your site and direct visitors to specific pages.
+</p>
+<p>
+  With the [@T[companyname:name]@T] Hosting Control Center, you can also change the primary domain on your account, remove domains or move them from your account to another.
+</p>
+<p>
+  For more information, see <a class="underlined" href="[@T[link:<external linktype="communityurl" path="help/article/4688/" secure="false"/>]@T]" target="_blank">Managing Your Hosting Account Domains</a>
+</p>
+<phrase key="faq-eighth-slide-content" />
+<p>
+Did you know one hosting package can be used to host multiple websites (Deluxe and Ultimate hosting accounts only)? Or that you can set up various names (aliases) for your site, directing visitors to specific pages?
+</p>
+<p>
+[@T[companyname:name]@T] allows you to do that and so much more. You may also change the primary domain on your hosting account, remove domains or move domains from your hosting account to another from our Hosting Control Center.
+</p>
+<p>
+For more information, see <a href="[@T[link:<external linktype="communityurl" path="help/article/4688/" secure="false"/>]@T]" target="_blank">Managing Your Hosting Account Domains</a>.
+</p>
+<phrase key="disclaimers" />
+<p>Third-party logos and marks are registered trademarks of their respective owners. All rights reserved.</p>
+<p><a href="javascript:void(0);"><sup class="supsymbol">&dagger;</sup>, <sup class="supsymbol">&lowast;</sup> Click here for product disclaimers and legal policies</a>
+<phrase key="disclaimer-modal-header" />
+Disclaimers
+<phrase key="modal-disclaimer-1" />
+<a href="[@T[link:<relative path='/agreements/showdoc.aspx' secure='false'><param name='ci' value='78457' /><param name='pageid' value='HOSTING_SA' /></relative>]@T]" target="_blank"><sup class="supsymbol">&dagger;</sup>See the Web Hosting and Virtual Private Hosting Agreement terms of service for details.</a>
+<phrase key="modal-disclaimer-2" />
+&lowast; One FREE .COM, .CO, .NET or .ORG with purchase of a new 12-, 24- or 36-month plan. Plus ICANN fee of [@T[currencyprice:<price usdamount="18" dropdecimal="false" />]@T] per domain name per year. You must add the domain name into your cart before purchase, and you must select a domain term length equal to or less than the term length of your plan to qualify for the free domain offer. If you purchase a domain name for a term longer than the term of the plan, you will be charged for the additional registration term at the then-current rate. Cannot be used in conjunction with any other offer, sale, discount or promotion. Free domain offer applies only to the initial purchase term. After the initial purchase term, domains purchased through this offer will renew at the then-current renewal price.
+<phrase key="modal-disclaimer-3" />
+&lowast; One FREE .COM, .CO, .IN, .NET or .ORG with purchase of a new 12-, 24- or 36-month plan. Plus ICANN fee of [@T[currencyprice:<price usdamount="18" dropdecimal="false" />]@T] per domain name per year. You must add the domain name into your cart before purchase, and you must select a domain term length equal to or less than the term length of your plan to qualify for the free domain offer. If you purchase a domain name for a term longer than the term of the plan, you will be charged for the additional registration term at the then-current rate. Cannot be used in conjunction with any other offer, sale, discount or promotion. Free domain offer applies only to the initial purchase term. After the initial purchase term, domains purchased through this offer will renew at the then-current renewal price.
+<phrase key="modal-disclaimer-4" />
+Products will automatically renew until cancelled. You may turn off the auto-renewal feature by visiting your [@T[companyname:name]@T] account.
+<phrase key="modal-disclaimer-11166" />
+  <p><sup>&Dagger;&Dagger;</sup> Applicable to accounts set up with Windows IIS7 only. Accounts set up with Windows IIS6 will have 1 FTP User Account.</p>
+  <p><sup>&ordm;&ordm;</sup> While Deluxe and Unlimited Web Hosting Plans support and host unlimited Web Sites, owners of single plans with more than 400 Web Sites may experience periodic decreases in performance.</p>
+  <p><sup>&dagger;&dagger;</sup>SSL certificate is free only for the initial hosting plan term purchased, after which it will automatically renew at the then-current rate.</p>
+
+<phrase key="labelNew" />
+New
+<phrase key="mastheadTitle" />
+Web Hosting
+<phrase key="mastheadTitle-11166-sideB" />
+Fast, Secure, reliable<br> hosting trusted by millions.  
+<phrase key="mastheadSubTitle" />
+Easy, reliable &amp; always lightning-fast
+<phrase key="mastheadSubTitle-11166-sideB" />
+Industry's <a class="isToolTip" data-toggle="tooltip" title="" data-original-title="US comparison 90-day average among top competitors.">fastest page load times</a>  using cPanel<sup>&reg;</sup> for Linux<br> 99.9% Uptime Guarantee<sup>*</sup>
+<phrase key="labelReadReviews" />
+Read Reviews
+<phrase key="starting-at" />
+Starting at
+<phrase key="as-low-as" />
+As low as
+<phrase key="DisclaimerContentSymbols" />
+&#8225;, * 
+<phrase key="DisclaimerContentSymbols-11166" />  
+&#8225;, *, &Dagger;&Dagger;, &ordm;&ordm;, &dagger;&dagger; &nbsp;
+<phrase key="DisclaimerContentDisclaimer" />
+Third-party logos and marks are registered trademarks of their respective owners. All rights reserved.
+<phrase key="DisclaimerContentLinkText" />
+Click here for product disclaimers and legal policies.
+<phrase key="choose-your-package" />
+Choose your Web Hosting Package
+<phrase key="Months" />
+Months
+<phrase key="TabContentLink1" />
+Plans &amp; Pricing
+<phrase key="TabContentLink2" />
+Features
+<phrase key="TabContentLink3" />
+Reviews
+<phrase key="TabContentLink4" />
+FAQ
+<phrase key="mainListGuarantee" />
+99.9% uptime guarantee*
+<phrase key="restristions-apply-tooltip" />
+One FREE .COM, .CO, .NET or .ORG with purchase of a new 12-, 24- or 36-month plan. Plus ICANN fee of [@T[currencyprice:<price usdamount="18" dropdecimal="false" />]@T] per domain name per year. You must add the domain name into your cart before purchase, and you must select a domain term length equal to or less than the term length of your plan to qualify for the free domain offer. If you purchase a domain name for a term longer than the term of the plan, you will be charged for the additional registration term at the then-current rate. Cannot be used in conjunction with any other offer, sale, discount or promotion. Free domain offer applies only to the initial purchase term. After the initial purchase term, domains purchased through this offer will renew at the then-current renewal price.

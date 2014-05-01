@@ -1,4 +1,0 @@
-#!/usr/bin/env node
-
-var prompt = require('prompt');
-console.log('CDS!');

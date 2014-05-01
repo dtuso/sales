@@ -1,4 +1,4 @@
-##if(false)
+{% block cdsm %}{% endblock %}##if(false)
 {% include '../modules/doc-block.html' %}
 ##endif
 <!DOCTYPE html>
@@ -32,15 +32,20 @@
       <link rel="canonical" href="[@T[link:<external linktype='siteurl' path='{{ metaCanonicalPath }}' secure='false' parammode='explicit'/>]@T]"/>
 
       <!-- Global CSS and Page CSS -->
-      <link href="[@T[link:<cssroot />]@T]fos/201401/global/css/{{ cssVersion }}/combined-{{ cssVersion }}.min.css" rel="stylesheet" type="text/css">
+
+      <link href="[@T[link:<css path='fos/201401/global/css/{{ cssVersion }}/combined-{{ cssVersion }}.css' />]@T]" rel="stylesheet" type="text/css">
       {% if assetPath %}
-      <link href="[@T[link:<cssroot />]@T]{{ assetPath }}css/styles.min.css{% if cssVersionOverride %}?v={{cssVersionOverride}}{% endif %}" rel="stylesheet" type="text/css">
+      <!-- {{cssVersionOverride}} -->
+      <link href="[@T[link:<css path='{{ assetPath }}css/styles.css' />]@T]{% if cssVersionOverride %}?v={{cssVersionOverride}}{% endif %}" rel="stylesheet" type="text/css">
       {% endif %}
       <!-- IE SUPPORT FOR HTML5 and Bootstrap 3 -->
       <!--[if lt IE 9]>
         <link href="[@T[link:<cssroot />]@T]fos/201401/global/css/bootstrap-ie7fix.min.css" rel="stylesheet" type="text/css" />
         <script src="[@T[link:<javascriptroot />]@T]fos/201401/global/js/html5shiv.js"></script>
       <![endif]-->
+      <!--[if lt IE 8]>
+        <link href="[@T[link:<cssroot />]@T]fos/201401/global/css/bootstrap-ie7fix.min.css" rel="stylesheet" type="text/css" />
+      <![endif]-->    
 
       <script src="[@T[link:<javascriptroot />]@T]fos/201401/global/vendor/jquery/1.8.3/jquery.min.js"></script>
       [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags" />]@P]

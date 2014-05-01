@@ -41,6 +41,26 @@ Do this daily to make sure you're never too far off.
 
 **Install global dependencies**
 
+#### CDS Command Line Interface (cds-cli)
+
+You must install the cds global command line interface. This is used for managing authentication with the CDSM related tasks.
+
+```
+$ npm install -g git+ssh://git@github.secureserver.net:WebOps/cds-cli.git
+```
+
+This installs a new command ```cds``` for running several different requests against the CDS API. For this repository, you just need to use it for authenticating:
+
+```
+$ cds login
+```
+
+
+**NOTE FOR WINDOWS USERS: ** the newly created ```cds``` command is installed using NPM but for some reason for windows it doesn't install it correctly.
+Until this issue can be resolved [Fix-CDS-CLI](https://github.secureserver.net/FOS-CDS-Pages/Sales/wiki/Fix-CDS-CLI)
+
+For more detail see [WebOps/cds-cli](https://github.secureserver.net/WebOps/cds-cli)
+
 #### NodeJS
 
 Make sure you have NodeJS installed. It's available for both Windows and OS X at [NodeJS](http://www.nodejs.org)
@@ -73,88 +93,58 @@ Tasks
 Tasks are now executed with [GulpJS](http://www.gulpjs.com) instead of Grunt. It would be helpful to get more
 acquainted with Gulp before continuing.
 
-#### TEMPLATES
+#### HTML
 This task will render your templates, preparing them for CDS importing. The task uses a gulp plugin called
 [gulp-swig](https://www.npmjs.org/package/gulp-swig) which renders your templates using the Swig JS template engine. This
 lets you use layouts, variables, and includes within your pages to help keep things
 [DRY](http://en.wikipedia.org/wiki/Don't_repeat_yourself). The compiled templates get copied to the ```build``` folder.
 ```
-gulp templates --src website-builder
+gulp html
 ```
 
 #### LANGUAGE
+
 This task will render/copy your ```.language``` files to the build folder.
 ```
-gulp language --src website-builder
+gulp language
 ```
 
 #### STYLES
+
 These two tasks will compile and minify any less files you have in your CSS folder. The compiled CSS, gets copied
 to the ```build``` folder.
+
 ```
-gulp styles --src website-builder
+gulp styles
 ```
 
 #### IMAGES
+
 This task will copy your images folder to the build folder.
-```
-gulp images-deploy --src website-builder
-```
-
-#### TEMPLATES-DEPLOY
-This task will copy any html files found on the build folder to CDS.
-```
-gulp templates-deploy --src website-builder
-```
-
-#### LANGUAGE-DEPLOY
-This task will copy any language files found on the build folder to CDS.
-```
-gulp language-deploy --src website-builder
-```
-
-#### STYLES-DEPLOY
-This task will copy any CSS files found in the build folder to the image server.
 
 ```
-gulp styles-deploy --src website-builder
-```
-
-#### IMAGES-DEPLOY
-This task will copy any image files found in the build folder to the image server.
-
-```
-gulp images-deploy --src website-builder
+gulp images
 ```
 
 #### WATCH
+
 A watch task is set up so that any changes made to any of the above files, their associated tasks will automatically get run.
 For example, if you make a change to your html file, upon save, Gulp will execute the templates task.
+
 ```
-gulp watch --src website-builder
+gulp watch
 ```
 
 ### Task Aliases
+
 These tasks are aliases that combine one or more tasks into one:
 
 #### BUILD
-This task combines the 'templates', 'language', 'projectfile', 'styles', and 'images' tasks.
+
+This task combines the 'html', 'language', 'styles', and 'images' tasks.
 
 ```
-gulp build --src website-builder
-```
-
-#### DEPLOY
-This task combines the 'templates-deploy', 'language-deploy', 'images-deploy', and 'styles-deploy' tasks.
-```
-gulp deploy --src website-builder
-```
-
-#### ASSETS-DEPLOY
-This task combines the 'images-deploy', and 'styles-deploy' tasks.
-
-```
-gulp assets-deploy --src website-builder
+gulp build
 ```
 
 Creating/Updating Project Files

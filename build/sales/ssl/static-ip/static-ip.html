@@ -16,14 +16,14 @@
       Colyn Brown <clbrown@godaddy.com>
 
     DRAFT DETAILS:
-      Name:         2014-04-14 - tdemichele - FOS-18599
-      Created Date: 2014-04-14
+      Name:         2014-04-22 - tdemichele - FOS-19223
+      Created Date: 2014-04-22
       Created By:   Tom DeMichele <tdemichele>
-      JIRA Ticket:  FOS-18599
-      Comments:     replacing background image based on culture
+      JIRA Ticket:  FOS-19223
+      Comments:     making deal image vary by culture
 
     PREVIEW URL:
-      http://www.dev-godaddy.com/ssl/static-ip.aspx?version=sales/ssl/static-ip.aspx|534c61a8f778fc304463c544
+      http://www.dev-godaddy.com/ssl/static-ip.aspx?version=sales/ssl/static-ip.aspx|5355b94ef778fc118080424b
 
 
 
@@ -65,15 +65,20 @@ END DOC BLOCK -->
       <link rel="canonical" href="[@T[link:<external linktype='siteurl' path='/ssl/static-ip.aspx' secure='false' parammode='explicit'/>]@T]"/>
 
       <!-- Global CSS and Page CSS -->
-      <link href="[@T[link:<cssroot />]@T]fos/201401/global/css/3.2.0/combined-3.2.0.min.css" rel="stylesheet" type="text/css">
+
+      <link href="[@T[link:<css path='fos/201401/global/css/3.3.0/combined-3.3.0.css' />]@T]" rel="stylesheet" type="text/css">
       
-      <link href="[@T[link:<cssroot />]@T]fos/sales/themes/scotty/ssl/static-ip/css/styles.min.css" rel="stylesheet" type="text/css">
+      <!--  -->
+      <link href="[@T[link:<css path='fos/sales/themes/scotty/ssl/static-ip/css/styles.css' />]@T]" rel="stylesheet" type="text/css">
       
       <!-- IE SUPPORT FOR HTML5 and Bootstrap 3 -->
       <!--[if lt IE 9]>
         <link href="[@T[link:<cssroot />]@T]fos/201401/global/css/bootstrap-ie7fix.min.css" rel="stylesheet" type="text/css" />
         <script src="[@T[link:<javascriptroot />]@T]fos/201401/global/js/html5shiv.js"></script>
       <![endif]-->
+      <!--[if lt IE 8]>
+        <link href="[@T[link:<cssroot />]@T]fos/201401/global/css/bootstrap-ie7fix.min.css" rel="stylesheet" type="text/css" />
+      <![endif]-->    
 
       <script src="[@T[link:<javascriptroot />]@T]fos/201401/global/vendor/jquery/1.8.3/jquery.min.js"></script>
       [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags" />]@P]
@@ -140,7 +145,9 @@ END DOC BLOCK -->
    <!-- Start main-banner -->
     <section class="main-banner main-banner-dedicated-ip">
       <div class="l-main-container container main-banner-content main-banner-content-dedicated-ip">
-        <div class="ribbon ribbon-right" data-ci="88303"><i class="marquee-flag marquee-flag-[@T[localization:<language />]@T] marquee-flag-money-back-guarantee"></i></div>
+                <div class="ribbon ribbon-right" data-ci="88303">
+                <i class="marquee-flag marquee-flag-[@T[localization:<language />]@T] marquee-flag-[@T[localization:<language full='true'/>]@T] marquee-flag-money-back-guarantee"></i>
+                </div>
         <h1 class="main-banner-title"><strong>[@L[cds.sales/gd/ssl/dedicated-ip:MainBannerTitle]@L]</strong></h1>
         <h2 class="main-banner-subtitle">[@L[cds.sales/gd/ssl/dedicated-ip:MainBannerSubtitle]@L]</h2>
 
@@ -202,33 +209,41 @@ END DOC BLOCK -->
                       <li class="selected">
                         <label>
                           <input type="radio" name="product" id="4601_1_3" value="4601|1|3" class="defaultPlan" checked="true">
+                          <div>
                           <span>3 [@L[cds.sales/gd/ssl/dedicated-ip:Months]@L]</span>
-                          <span class="price">[@T[productprice:<current productid="4601" period="monthly" />]@T]</span>
-                          <span class="mo">[@L[cds.sales/gd/ssl/dedicated-ip:Mo]@L]</span>
+                          <span class="price">[@T[productprice:<current productid="4601" period="monthly" />]@T][@L[cds.sales/gd/ssl/dedicated-ip:Mo]@L]</span>
+                          <span class="mo"></span>
+                          </div>
                         </label>
                       </li>
                       <li>
                         <label>
                           <input type="radio" name="product" id="4601_1_12" value="4601|1|12">
+                          <div>
                           <span>12 [@L[cds.sales/gd/ssl/dedicated-ip:Months]@L]</span>
-                          <span class="price">[@T[productprice:<current productid="4601" period="monthly" />]@T]</span>
-                          <span class="mo">[@L[cds.sales/gd/ssl/dedicated-ip:Mo]@L]</span>
+                          <span class="price">[@T[productprice:<current productid="4601" period="monthly" />]@T][@L[cds.sales/gd/ssl/dedicated-ip:Mo]@L]</span>
+                          <span class="mo"></span>
+                          </div>
                         </label>
                       </li>
                       <li>
                         <label>
                           <input type="radio" name="product" id="4601_1_12" value="4601|1|24">
+                          <div>
                           <span>24 [@L[cds.sales/gd/ssl/dedicated-ip:Months]@L]</span>
-                          <span class="price">[@T[productprice:<current productid="4601" period="monthly" />]@T]</span>
-                          <span class="mo">[@L[cds.sales/gd/ssl/dedicated-ip:Mo]@L]</span>
+                          <span class="price">[@T[productprice:<current productid="4601" period="monthly" />]@T][@L[cds.sales/gd/ssl/dedicated-ip:Mo]@L]</span>
+                          <span class="mo"></span>
+                          </div>
                         </label>
                       </li>
                       <li>
                         <label>
                           <input type="radio" name="product" id="4601_1_12" value="4601|1|36">
+                          <div>
                           <span>36 [@L[cds.sales/gd/ssl/dedicated-ip:Months]@L]</span>
-                          <span class="price">[@T[productprice:<current productid="4601" period="monthly" />]@T]</span>
-                          <span class="mo">[@L[cds.sales/gd/ssl/dedicated-ip:Mo]@L]</span>
+                          <span class="price">[@T[productprice:<current productid="4601" period="monthly" />]@T][@L[cds.sales/gd/ssl/dedicated-ip:Mo]@L]</span>
+                          <span class="mo"></span>
+                          </div>
                         </label>
                       </li>
                     </ul>

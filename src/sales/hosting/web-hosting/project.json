@@ -1,0 +1,49 @@
+{
+  "web-hosting.html": {
+    "cdsDetails": {
+      "champion": {
+        "name": "Colyn Brown",
+        "email": "clbrown@godaddy.com"
+      },
+      "cdsLocation": "sales/hosting/web-hosting.aspx",
+      "draft": {
+        "id": "535ae4cff778fc132872f3d6",
+        "createdDate": "2014-04-25",
+        "createdBy": {
+          "fullName": "Leon Kim",
+          "username": "lkim"
+        },
+        "jiraTicket": "FOS-20028",
+        "comments": "Fixing Images",
+        "url": "http://www.dev-godaddy.com/hosting/web-hosting.aspx"
+      }
+    },
+    "assetPath": "fos/201401/sales/hosting/web-hosting/",
+    "metaTitle": "[@L[cds.sales/gd/hosting/web-hosting:page-title]@L]",
+    "metaDescription": "[@L[cds.sales/gd/hosting/web-hosting:meta-description]@L]",
+    "metaKeywords": "[@L[cds.sales/gd/hosting/web-hosting:meta-keywords]@L]",
+    "metaCanonicalPath": "/hosting/web-hosting.aspx",
+    "metaOgTitle": "[@L[cds.sales/gd/hosting/web-hosting:og-title]@L]",
+    "metaOgImage": "fos/hp/rebrand/img/gd_rebrand_og.png",
+    "metaOgDescription": "[@L[cds.sales/gd/hosting/web-hosting:og-description]@L]"
+  },
+  "web-hosting.language": {
+    "cdsDetails": {
+      "champion": {
+        "name": "Colyn Brown",
+        "email": "clbrown@godaddy.com"
+      },
+      "cdsLocation": "localization/sales/hosting/web-hosting/en",
+      "draft": {
+        "id": "5345d1b0f778fc0e805a921f",
+        "createdDate": "2014-04-02",
+        "createdBy": {
+          "fullName": "Colyn Brown",
+          "username": "clbrown"
+        },
+        "jiraTicket": "None",
+        "comments": "Prep for new build process"
+      }
+    }
+  }
+}
