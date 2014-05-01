@@ -18,7 +18,7 @@
     "gulp-cdsm": "git+ssh://git@github.secureserver.net:WebOps/gulp-cdsm.git"
   },
   "dependencies": {
-    "exec": "^0.1.1",
-    "request": "^2.34.0"
+    "request": "^2.34.0",
+    "rimraf": "^2.2.6"
   }
 }
