@@ -1,24 +1,24 @@
 {
-  "web-hosting.html": {
+  "about-godaddy.html": {
     "cdsDetails": {
       "champion": {
-        "name": "Colyn Brown",
-        "email": "clbrown@godaddy.com"
+        "name": "None currently",
+        "email": "everyone@"
       },
-      "cdsLocation": "sales/hosting/web-hosting.aspx",
+      "cdsLocation": "sales/newscenter/about-godaddy.aspx",
       "draft": {
-        "id": "535ae4cff778fc132872f3d6",
-        "createdDate": "2014-04-25",
+        "id": "5362d0cdf778fc27b88b10a1",
+        "createdDate": "2014-05-01",
         "createdBy": {
-          "fullName": "Leon Kim",
-          "username": "lkim"
+          "fullName": "Dominic Tuso",
+          "username": "dtuso"
         },
-        "jiraTicket": "FOS-20028",
+        "jiraTicket": "FOS-18668",
         "comments": "Fixing Images",
-        "url": "http://www.dev-godaddy.com/hosting/web-hosting.aspx"
+        "url": "http://www.dev-godaddy.com/newscenter/about-godaddy.aspx"
       }
     },
-    "assetPath": "fos/201401/sales/hosting/web-hosting/",
+    "assetPath": "fos/201401/sales/newscenter/about-godaddy/",
     "metaTitle": "[@L[cds.sales/gd/hosting/web-hosting:page-title]@L]",
     "metaDescription": "[@L[cds.sales/gd/hosting/web-hosting:meta-description]@L]",
     "metaKeywords": "[@L[cds.sales/gd/hosting/web-hosting:meta-keywords]@L]",
@@ -30,18 +30,18 @@
   "web-hosting.language": {
     "cdsDetails": {
       "champion": {
-        "name": "Colyn Brown",
-        "email": "clbrown@godaddy.com"
+        "name": "None currently",
+        "email": "everyone@"
       },
-      "cdsLocation": "localization/sales/hosting/web-hosting/en",
+      "cdsLocation": "localization/sales/newscenter/about-godaddy/en",
       "draft": {
-        "id": "5345d1b0f778fc0e805a921f",
-        "createdDate": "2014-04-02",
+        "id": "5362d074f778fc27b88b10a0",
+        "createdDate": "2014-05-01",
         "createdBy": {
-          "fullName": "Colyn Brown",
-          "username": "clbrown"
+          "fullName": "Dominic Tuso",
+          "username": "dtuso"
         },
-        "jiraTicket": "None",
+        "jiraTicket": "FOS-18668",
         "comments": "Prep for new build process"
       }
     }

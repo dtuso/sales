@@ -10,5 +10,6 @@
   "gtld": "./tlds/gtld/",
   "qsc": "./ecommerce/shopping-cart/",
   "home": "./homepage/",
-  "contact-us": "./contact-us/"
+  "contact-us": "./contact-us/",
+  "about-godaddy": "./newscenter/about-godaddy"
 }
