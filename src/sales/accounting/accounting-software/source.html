@@ -1,0 +1,846 @@
+---
+location: sales/accounting/accounting-software.aspx
+id: 5362f3e8f778fc27b88b10a4
+name: FOS-20111
+---
+{% extends 'base.html' %}
+
+{% block metahead %}
+  {% parent %}
+
+    <style>
+         .tab-content {
+              position: relative;
+         }
+    </style>
+
+{% endblock %}
+
+{% block footer %}
+  <script src="[@T[link:<javascriptroot />]@T]fos/lib/solazy/jquery.solazy.1.2.1.min.js" type="text/javascript" ></script>
+
+    <script type="text/javascript">
+
+    $( document ).ready(function() {
+      
+      
+        // Fastball click capturing
+        $('[data-ci]').click(function (e) {
+            $this = $(this);
+            FastballEvent_MouseClick(e, $this.attr('data-ci'), $this[0], 'a');
+            fbiLibCheckQueue();
+        });
+      
+        var autoplay = '\&autoplay=1';
+        var src = $('#myVideoModal iframe').attr('src');
+        $('#myVideoModal').on('hidden.bs.modal', function () {          
+            $('#myVideoModal iframe').removeAttr('src');
+            $('#myVideoModal iframe').attr('src',src);
+        })
+        
+        $('#myVideoModal').on('show.bs.modal', function () {          
+            $('#myVideoModal iframe').attr('src',src + autoplay);
+        })
+    }); 
+
+
+        $(function () {
+            $('.select-box').setSelectBox();
+            $('.isToolTip').tooltip();
+        });    
+    $('.js-open-overview').on('click', function(e){
+        e.preventDefault();
+        $('a[href="#overview"]').tab('show');
+        window.location.hash = '#overview';
+    });
+  
+  
+    
+    $('.addtocart-form').on('submit', function(e){
+        e.preventDefault();
+        var $form = $( this );
+        var fields =  $form.serializeObject();
+        var urlsplit =  $form.data('addtocart').split('?');
+        var params = [fields['itc'],fields['ci'],fields['qty'],fields['package']];
+         var url = urlsplit[0] + '/' + params.join('/');
+
+  if (urlsplit[1]) {
+          url += '?' + urlsplit[1];
+        }
+      
+      $.get( url, function( data ) {
+      ##if(isManager())
+        var carturl = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]';
+                ##else
+           var carturl = '[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]';
+       ##endif
+   window.location = carturl;
+      });
+    });
+    
+  
+  <!-- /fos/office365/js/office365-lp.20140310.js -->  
+  $("[data-seperate-currency-symbol]").each(function(){
+    var $this = $(this);
+    var thisData = $this.data('seperate-currency-symbol');
+    var newClass = thisData['newClass'];
+    var newTagName = thisData['newTagName'];
+    var val = $this.text();
+    var newVal = wrapSymbol(val,newClass,newTagName);
+    
+    if(val!=newVal){
+      $this.html(newVal);
+      $this.wrapInner('<div class="split-symbol-price-wrap"></div>');
+    }
+
+    function wrapSymbol(val,classToAdd,tagName){
+      var symbols = ['Ø¯.Ø¥', 'AR$', 'A$', 'R$', 'C$', 'CHF', 'CL$', 'Â¥', 'CO$', 'kr', 'Â£', 'â‚¬', 'Â£', 'HK$', 'Rp', 'â‚ª', 'Rs', 'â‚©', '.Ø¯.Ù…', 'MXN', 'RM', 'NZ$', 'S/.', 'â‚±', 'â‚¨', 'zÅ‚', 'ï·¼', 'kr', 'SG$', 'à¸¿', 'TL', 'NT$', 'â‚´', '$U', '$', 'Bs.', 'â‚«', 'R'];
+      for(var i = 0 ; i < symbols.length;i++){
+        if(val.indexOf(symbols[i])>-1){
+          if(checkRtl(val)){
+            return val.replace(symbols[i],'<'+tagName+' class="'+classToAdd+' rtl">'+symbols[i]+'</'+tagName+'>');
+          } else {
+            return val.replace(symbols[i],'<'+tagName+' class="'+classToAdd+'">'+symbols[i]+'</'+tagName+'>');
+          }
+        }
+      }
+    }
+
+     function checkRtl( character ) {
+      var RTL = ['Ø§','Ø¨','Ù¾','Øª','Ø³','Ø¬','Ú†','Ø­','Ø®','Ø¯','Ø°','Ø±','Ø²','Ú˜','Ø³','Ø´','Øµ','Ø¶','Ø·','Ø¸','Ø¹','Øº','Ù','Ù‚','Ú©','Ú¯','Ù„','Ù…','Ù†','Ùˆ','Ù‡','ÛŒ'];
+      var arr = character.split('');
+      for(var i = 0; i < arr.length ; i++){
+        
+        if(jQuery.inArray( arr[i], RTL ) > -1){
+          return true;
+        }
+      }
+      return false;
+    }
+
+  });
+      
+  
+</script>
+
+{% endblock %}
+
+{% block body %}
+
+ ##if(splitTestingSideIsActive(1196, B))
+<section class="main-banner main-banner-syib no-padding-top split-b">
+  <div class="group">
+    <div class="column1">
+      <span class="masthead-title">[@L[cds.sales/accounting/accounting-software:HeaderContentDescription]@L]</span>
+      <span class="masthead-tagline">[@L[cds.sales/accounting/accounting-software:HeaderContentMainHeading2]@L]</span>
+      <a class="btn btn-primary btn-lg" data-ci="86772" href="http://bookkeeping.godaddy.com/prospect_tour?cc=GDOBDEF" target="_blank" style="min-width: 208px;">[@L[cds.sales/accounting/accounting-software:HeaderCtaButton]@L]</a>
+    </div>
+  
+    <div class="column2">
+      <div class="list-box">
+        <span class="list-title">[@L[cds.sales/accounting/accounting-software:HeaderListTitle]@L]</span>
+        <ul>
+          <li><div class="check-mark"></div>[@L[cds.sales/accounting/accounting-software:HeaderListItem1]@L]</li>
+          <li><div class="check-mark"></div>[@L[cds.sales/accounting/accounting-software:HeaderListItem2]@L]</li>
+          <li><div class="check-mark"></div>[@L[cds.sales/accounting/accounting-software:HeaderListItem3]@L] <span class="price">[@T[productprice:<current productid="2699" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T] /[@L[cds.sales/accounting/accounting-software:Month]@L]</span></li>
+        </ul>
+      </div>
+      <div class="list-box-shadow"></div>
+    </div>
+  </div>
+  
+  <div class="modal fade videoModal" id="myVideoModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="modal-header-close close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        </div>
+        <div class="modal-body">
+          <iframe width="854" height="480" src="//www.youtube.com/embed/tc8CHcfnUUs?html5=1&rel=0" autoplay scrolling="no" frameborder="0" allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+##else
+<section class="main-banner main-banner-syib no-padding-top ">
+    <div class="l-main-container container main-banner-content main-banner-content-syib">
+        <!-- Ribbon
+        <span class="ribbon ribbon-right">
+            <span class="ribbon-text ribbon-three-lines "><span class="ribbon-text-36">[@L[cds.sales/accounting/accounting-software:HeaderRibbonText]@L]</span>
+            <i class="ico ico-ribbon-bottom"></i>
+        </span>
+        -->
+       <h1 class="main-banner-title main-banner-title-alternate"><strong>[@L[cds.sales/accounting/accounting-software:HeaderContentDescription]@L]</strong></h1>
+          <p class="main-banner-subtitle main-banner-subtitle-alternate">[@L[cds.sales/accounting/accounting-software:HeaderContentMainHeading]@L]</p>
+        <a class="btn btn-primary btn-lg" data-ci="86772" href="http://bookkeeping.godaddy.com/prospect_tour?cc=GDOBDEF" target="_blank" style="min-width: 208px;">[@L[cds.sales/accounting/accounting-software:HeaderCtaButton]@L]</a>
+        <div class="modal fade videoModal" id="myVideoModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="modal-header-close close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              </div>
+              <div class="modal-body">
+                <iframe width="854" height="480" src="//www.youtube.com/embed/tc8CHcfnUUs?html5=1&rel=0" autoplay scrolling="no" frameborder="0" allowfullscreen>
+                </iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</section>
+##endif
+<!-- End main-banner -->
+
+<!-- Start main-tabs -->
+<section class="main-tabs" id="main-tabs">
+  <div class="container">
+    <ul class="nav nav-tabs">
+      <li class="nav-tabs-item active"><a class="nav-tabs-link" href="#overview" data-toggle="tab" data-ci="86761">[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent0TabText]@L]</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
+      <li class="nav-tabs-item"><a class="nav-tabs-link" href="#how-it-works" data-toggle="tab" data-ci="86762">[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent1TabText]@L]</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
+      <li class="nav-tabs-item"><a class="nav-tabs-link" href="#ours-vs-theirs" data-toggle="tab" data-ci="86763">[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent2TabText]@L]</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
+      <li class="nav-tabs-item"><a class="nav-tabs-link" href="#faq" data-toggle="tab" data-ci="86764">[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent3TabText]@L]</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
+    </ul>
+  </div>
+</section>
+<!-- End main-tabs -->
+
+<!-- Start main-tabs panes -->
+<div class="tab-content no-margin-top">
+  <div class="tab-pane active tab-content-overview-bg-syiab active" id="overview" data-solazy='{"src":"[@T[link:<imageroot />]@T]fos/201401/accounting/img/bg-tab-content-overview-syiab.jpg","method":"background","condition":{"css":"display:block","selector":"#overview"}}' >
+    <!-- start Money-Back banner-->
+    <span class="left-corner-ribbon money-back-guarantee-dark en-US en"></span>
+    <!--End Money-Back banner-->
+    <!-- Start content -->
+<section class="l-main-container container">
+
+    <!-- Start misc-banner -->
+    <section class="misc-banner">
+      <div class="l-main-container container misc-banner-content misc-banner-content-syiab">
+        <p class="font-18"><strong>[@L[cds.sales/accounting/accounting-software:MiscBannerLogosTitle]@L]</strong></p>
+        <ul class="ico-bookkepping">
+            <li><i class="ico ico-small-buisness"></i><span class="ico-text">[@L[cds.sales/accounting/accounting-software:MiscBannerLogoText1]@L]</span></li>
+            <li><i class="ico ico-tec-chrunch"></i><span class="ico-text">[@L[cds.sales/accounting/accounting-software:MiscBannerLogoText2]@L]</span></li>
+            <li><i class="ico ico-business-journal"></i><span class="ico-text">[@L[cds.sales/accounting/accounting-software:MiscBannerLogoText3]@L]</span></li>
+            <li><i class="ico ico-cnbc"></i><span class="ico-text">[@L[cds.sales/accounting/accounting-software:MiscBannerLogoText4]@L]</span></li>
+            <li><i class="ico ico-fox-business"></i><span class="ico-text">[@L[cds.sales/accounting/accounting-software:MiscBannerLogoText5]@L]</span></li>
+        </ul>
+        <h2>[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent0HeaderText]@L]</h2>
+        <p>[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent0SubheaderText]@L]</p>
+        <a class="accounting-banner-video-link" data-toggle="modal" data-target="#myVideoModal" data-ci="86760">
+          <i class="ico ico-gt-alternate"></i>
+            <span><strong>[@L[cds.sales/accounting/accounting-software:WatchVideoHeaderLink]@L]</strong></span>
+        </a>
+      </div>
+    </section>
+    <!-- End misc-banner -->
+    <div class="row tab-content equal-height">
+        <div class="col-xs-4">
+            <div class="grid-column no-padding-bottom">
+                <h2>[@L[cds.sales/accounting/accounting-software:HeaderContentCustomContentList1]@L]</h2>
+                <p class="starting-at starting-at-alternate-top-spacing"><span class="starting-at-above">[@L[cds.sales/accounting/accounting-software:StartingAt]@L]</span>
+                  <span class="starting-at-price">[@T[productprice:<current productid="2699" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="starting-at-small">[@L[cds.sales/accounting/accounting-software:PerMonth]@L]</span></p>
+                ##if(countrySiteAny(uk))
+                     <div class="vat-tax-message">[@L[cds.sales/accounting/accounting-software:vat-price]@L]</div>
+                ##endif               
+              <form class="addtocart-form" action="[@T[link:<external linktype="carturl" path="/basket.aspx" secure="true"/>]@T]" method="post" data-addtocart="[@T[link:<relative path="~/api/package/add" />]@T]">
+                <input type="hidden" name="itc" value="slp_outright_plus" />
+                <input type="hidden" name="ci" value="78055" />
+                <input type="hidden" name="qty" value="1" />
+                <div class="select-box">
+                    <div class="select-box-head">
+                        <div class="select-box-current">
+                            <span>12 [@L[cds.sales/accounting/accounting-software:Month]@L]</span>
+                            <span class="price">[@T[productprice:<current productid="2699" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T] /[@L[cds.sales/accounting/accounting-software:MO]@L]</span>
+                            <span class="save"></span>
+                        </div>
+                        <div class="select-box-cta"><i class="ico ico-download"></i></div>
+                    </div><!-- select-box-head -->
+                    <div class="select-box-body">
+                        <ul class="select-box-options">
+                            <li>
+                                <div>
+                                  <label>
+                                  <input type="radio" name="package" value="gdob_1month" />
+                                    <span class="months">1 [@L[cds.sales/accounting/accounting-software:Month]@L]</span>
+                                    <span class="price">[@T[productprice:<current productid="2697" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T] /[@L[cds.sales/accounting/accounting-software:MO]@L]</span>
+                                    <span class="save"></span>
+                                    </label>
+                                </div>
+                            </li>
+                            <li class="selected">
+                                <div>
+                                  <label>
+                                  <input type="radio" name="package" checked="true" value="gdob_1year" />
+                                    <span class="months">12 [@L[cds.sales/accounting/accounting-software:Months]@L]</span>
+                                    <span class="price">[@T[productprice:<current productid="2699" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T] /[@L[cds.sales/accounting/accounting-software:MO]@L]</span>
+                                    <span class="save">[@L[cds.sales/accounting/accounting-software:Save]@L] 16%‡</span>
+                                    </label>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div><!-- select-box-body -->
+                </div><!-- select-box -->
+
+                <p class="no-margin-bottom"><button type="submit" class="btn btn-warning btn-block btn-lg">[@L[cds.sales/accounting/accounting-software:AddToCart]@L]</button></p>
+              </form>
+                <ul class="plan-pricing-list plan-pricing-list-alternate">
+                    <li class="two-lines">[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent0PlanBox0PlanDetail1]@L]</li>
+                    <li class="two-lines">[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent0PlanBox0PlanDetail2]@L]</li>
+                    <li class="two-lines">[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent0PlanBox0PlanDetail3]@L]</li>
+                    <li class="two-lines padding-bottom-15">[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent0PlanBox0PlanDetail4]@L]</li>
+                </ul>
+            </div>
+              
+         
+        </div>
+        <div class="col-xs-8">
+            <div class="grid-column accounting-grid-column">
+                <div class="row-icon-left accounting-bullet-list">
+                    <i class="ico ico-simplified-bookkeping"></i>
+                    <h2 class="h2-alternate">[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent0FeaturesListTitle1]@L]</h2>
+                    <ul>
+                        <li>[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent0FeaturesListText1]@L]</li>
+                    </ul>
+                </div>
+                <div class="row-icon-left accounting-bullet-list">
+                    <i class="ico ico-invoicing"></i>
+                    <h2 class="h2-alternate">[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent0FeaturesListTitle2]@L]</h2>
+                    <ul>
+                        <li>[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent0FeaturesListText2]@L]</li>
+                    </ul>
+                </div>
+                <div class="row-icon-left accounting-bullet-list">
+                    <i class="ico ico-tax-tools"></i>
+                    <h2 class="h2-alternate">[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent0FeaturesListTitle3]@L]</h2>
+                    <ul>
+                        <li>[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent0FeaturesListText3]@L]</li>
+                    </ul>
+                </div>
+                <div class="row-icon-left accounting-bullet-list">
+                    <i class="ico ico-time-tracking"></i>
+                    <h2 class="h2-alternate">[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent0FeaturesListTitle4]@L]</h2>
+                    <ul>                        
+                        <li>[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent0FeaturesListText4]@L]</li>
+                    </ul>
+                </div>
+                <div class="row-icon-left accounting-bullet-list">
+                    <i class="ico ico-online-payments"></i>
+                    <h2 class="h2-alternate">[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent0FeaturesListTitle5]@L]</h2>
+                    <ul>
+                        <li>[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent0FeaturesListText5]@L]</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row tab-content">
+        <div class="col-xs-12">
+            <div class="grid-column tab-content-column tab-content-right tab-content-easy-bookkeeping-SYIAB" data-solazy='{"src":"[@T[link:<imageroot />]@T]fos/201401/accounting/img/bg-easy-bookkeeping.png","method":"background","condition":{"css":"display:block","selector":"#overview"}}'>
+                <h2 class="tab-content-title">[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent0title0]@L]</h2>
+                <p><strong>[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent0titleSub0]@L]</strong></p>
+                <p>[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent0text0]@L]</p>
+                <p class="no-margin-bottom">[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent0text0Sub]@L]</p>
+            </div>
+        </div>
+    </div>
+    <div class="row tab-content">
+        <div class="col-xs-12">
+            <div class="grid-column tab-content-column tab-content-left tab-content-create-send-and-track-invoices-SYIAB" data-solazy='{"src":"[@T[link:<imageroot />]@T]fos/201401/accounting/img/bg-create-send-and-track-invoices.jpg","method":"background","condition":{"css":"display:block","selector":"#overview"}}'>
+                <h2 class="tab-content-title">[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent0title1]@L]</h2>
+                <p><strong>[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent0titleSub1]@L]</strong></p>
+                <p>[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent0text1]@L]</p>
+                <p class="no-margin-bottom">[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent0text1Sub]@L]</p>
+            </div>
+        </div>
+    </div>
+    <div class="row tab-content">
+        <div class="col-xs-12">
+            <div class="grid-column tab-content-column tab-content-right tab-content-track-and-simplify-your-taxes-SYIAB" data-solazy='{"src":"[@T[link:<imageroot />]@T]fos/201401/accounting/img/bg-track-and-simplify-your-taxes.png","method":"background","condition":{"css":"display:block","selector":"#overview"}}'>
+                <span class="badge-track-and-simplify-your-taxes"><strong>[@L[cds.sales/accounting/accounting-software:OnlyFromGoDaddy]@L]</strong></span>
+                <h2 class="tab-content-title">[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent0title2]@L]</h2>
+                <p><strong>[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent0titleSub2]@L]</strong></p>
+                <p>[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent0text2]@L]</p> 
+                <p class="no-margin-bottom">[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent0text2Sub]@L]</p>
+            </div>
+        </div>
+    </div>
+    <section class="carousel-container overview-carousel-container-SYIAB">
+  <div class="container overview-container-SYIAB">
+    <div data-ride="carousel" class="carousel slide " id="carousel-init">
+      <!-- Wrapper for slides -->
+      <div class="carousel-content-container">
+        <div class="carousel-inner carousel-inner-container overview-carousel-inner-container-SYIAB">
+          <div class="item carousel-inner-item overview-carousel-inner-item-SYIAB active">
+            <div class="carousel-inner-text-container">
+              <p class="font-18 testimonial-title"><strong>[@L[cds.sales/accounting/accounting-software:CustomerTestimonialMainTitle]@L]</strong></p>
+              <div class="content-left-SYIAB face-SYIBA testimonial-access-vintage"  data-solazy='{"src":"[@T[link:<imageroot />]@T]fos/201401/accounting/img/bg-testimonial-access-vintage.png","method":"background","condition":{"css":"display:block","selector":"#overview"}}'>
+                <h3 class="carousel-inner-title">[@L[cds.sales/accounting/accounting-software:CustomerTestimonialTitle1]@L]</h3>
+                <p class="carousel-inner-text">[@L[cds.sales/accounting/accounting-software:CustomerTestimonialText1]@L]</p>
+              </div>
+              <div class="testimonial-carousel-footer">
+                <hr/>
+                <span class="font-18 testimonials-name"><strong>[@L[cds.sales/accounting/accounting-software:CustomerTestimonialClientName1]@L]</strong></span>
+                <span class="testimonials-company"><em>[@L[cds.sales/accounting/accounting-software:CustomerTestimonialCompany1]@L]</em></span>
+              </div>
+            </div>
+          </div>
+          <div class="item carousel-inner-item overview-carousel-inner-item-SYIAB">
+            <div class="carousel-inner-text-container">
+              <p class="font-18 testimonial-title"><strong>[@L[cds.sales/accounting/accounting-software:CustomerTestimonialMainTitle]@L]</strong></p>
+              <div class="content-left-SYIAB face-SYIBA testimonial-great-lakes-tack" data-solazy='{"src":"[@T[link:<imageroot />]@T]fos/201401/accounting/img/bg-testimonial-great-lakes-tack.png","method":"background","condition":{"css":"display:block","selector":"#overview"}}'>
+                <h3 class="carousel-inner-title">[@L[cds.sales/accounting/accounting-software:CustomerTestimonialTitle2]@L]</h3>
+                <p class="carousel-inner-text">[@L[cds.sales/accounting/accounting-software:CustomerTestimonialText2]@L]</p>
+              </div>
+              <div class="testimonial-carousel-footer">
+                <hr/>
+                <span class="font-18 testimonials-name"><strong>[@L[cds.sales/accounting/accounting-software:CustomerTestimonialClientName2]@L]</strong></span>
+                <span class="testimonials-company"><em>[@L[cds.sales/accounting/accounting-software:CustomerTestimonialCompany2]@L]</em></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Controls -->
+        <a data-slide="prev" href="#carousel-init" class="left carousel-control-btn ico ico-carousel-arrow-left overview-carousel-control-SYIAB"></a>
+        <a data-slide="next" href="#carousel-init" class="right carousel-control-btn ico ico-carousel-arrow-right overview-carousel-control-SYIAB"></a>
+      </div>
+      <!-- Indicators -->
+      <ol class="carousel-indicators carousel-indicators-list">
+        <li class="carousel-indicators-obj active"><a href="#" data-slide-to="0" data-target="#carousel-init"></a></li>
+        <li class="carousel-indicators-obj"><a href="#" data-slide-to="1" data-target="#carousel-init"></a></li>
+      </ol>      
+    </div>
+  </div>
+</section>
+
+    
+    
+</section>
+<!-- End content -->
+<!-- Start plan-summary -->
+<section class="plan-summary l-main-content">
+    <div class="container l-main-container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="plan-summary-container">
+                    <!-- Start Plan-summary nav tabs -->
+                    <ul class="nav nav-tabs plan-summary-tabs">
+                        <li class="nav-tabs-item plan-summary-tabs-item active">
+                            <a href="#ps-support" class="nav-tabs-link plan-summary-nav-tabs-link" data-toggle="tab">[@L[cds.sales/accounting/accounting-software:MainContentFooterPagesTabText]@L]</a>
+                        </li>
+                    </ul>
+                    <!-- End Plan-summary nav tabs -->
+
+                    <!-- Start Plan-summary Tab panes -->
+                    <div class="tab-content no-margin-bottom">
+                        <div class="tab-pane active" id="ps-support">
+                            <p><strong>[@L[cds.sales/accounting/accounting-software:PlanSummaryTitle1]@L]</strong></p>
+                            <ul class="plan-summary-tab-pane-list plan-summary-tab-pane-list-columns no-margin-left">
+                                <li>[@L[cds.sales/accounting/accounting-software:PlanSummaryText1]@L]</li>
+                                <li>[@L[cds.sales/accounting/accounting-software:PlanSummaryText2]@L]</li>
+                                <li>[@L[cds.sales/accounting/accounting-software:PlanSummaryText4]@L]</li>
+                            </ul>
+                            <ul class="plan-summary-tab-pane-list plan-summary-tab-pane-list-columns plan-summary-tab-pane-list-two-columns">
+                                <li>[@L[cds.sales/accounting/accounting-software:PlanSummaryText5]@L]</li>
+                                <li>[@L[cds.sales/accounting/accounting-software:PlanSummaryText6]@L]</li>
+                            </ul>
+                            <p><strong>[@L[cds.sales/accounting/accounting-software:PlanSummaryTitle2]@L]</strong></p>
+                            <ul class="plan-summary-tab-pane-list plan-summary-tab-pane-list-columns no-margin-left no-margin-bottom">
+                                <li>[@L[cds.sales/accounting/accounting-software:PlanSummaryText7]@L] <strong>[@T[supportphone:<technical />]@T]</strong> [@L[cds.sales/accounting/accounting-software:PlanSummaryText8]@L]</li>
+                            </ul>
+                            <ul class="plan-summary-tab-pane-list plan-summary-tab-pane-list-columns no-margin-bottom plan-summary-tab-pane-list-two-columns">
+                                <li>[@L[cds.sales/accounting/accounting-software:PlanSummaryText9]@L]</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Plan-summary Tab panes -->
+            </div>
+        </div>    
+    </div>
+</section>
+<!-- End plan-summary -->
+
+  </div>
+  <div class="tab-pane" id="how-it-works">
+    <section class="l-main-content">
+    <div class="container l-main-container">
+        <div class="tab-header tab-header-SYIAB-howitworks tab-header-zone">
+          <div class="tab-header-left-zone">  
+            <h2 class="tab-header-title">[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent0Features2Title]@L]</h2>
+            <p class="no-margin-bottom">[@L[cds.sales/accounting/accounting-software:HeaderContentSubHeadingList5]@L]</p>
+          </div>   
+          <form class="addtocart-form" action="[@T[link:<external linktype="carturl" path="/basket.aspx" secure="true"/>]@T]" method="post" data-addtocart="[@T[link:<relative path="~/api/package/add" />]@T]">
+            <input type="hidden" name="itc" value="slp_outright_plus" />
+            <input type="hidden" name="ci" value="89204" />
+            <input type="hidden" name="qty" value="1" />
+            <input type="hidden" name="package" value="gdob_1year" />
+            <div class="add-to-cart-wrapper">                
+              <div class="add-to-cart-left-zone">
+                <div class="add-to-cart-header-wrapper">
+                  <h3 class="add-to-cart-header">[@L[cds.sales/accounting/accounting-software:HeaderforAddToCart]@L]</h3>
+                </div>
+                <div class="add-to-cart-price-wrapper">            
+                  <div class="add-to-cart-startingat" style="float: inherit;">
+                    [@L[cds.sales/accounting/accounting-software:StartingAt]@L]
+                  </div>
+                  <div class="add-to-cart-price" data-seperate-currency-symbol='{"newClass":"sup-symbol-price","newTagName":"span"}'> 
+                    [@T[productprice:<current productid="2699" dropdecimal="false" period="monthly" negative="parentheses" />]@T]
+                  </div>
+                  <div class="add-to-cart-month">
+                    /[@L[cds.sales/accounting/accounting-software:MO]@L]
+                  </div>
+                </div>
+              </div>
+              <div class="js-plan-column add-to-cart-button-wrapper">
+                <button type="submit" class="btn btn-warning btn-block btn-lg">[@L[cds.sales/accounting/accounting-software:AddToCart]@L]</button>
+              </div>           
+            </div>
+          </form>
+        </div>
+        <div class="row tab-content" style="clear:both;">
+            <div class="col-xs-12">
+                <div class="grid-column tab-content-column tab-content-right tab-content-easy-bookkeeping-SYIAB" data-solazy='{"src":"[@T[link:<imageroot />]@T]fos/201401/accounting/img/bg-easy-bookkeeping.png","method":"background","condition":{"css":"display:block","selector":"#how-it-works"}}'>
+                    <h2 class="tab-content-title">[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent0title0]@L]</h2>
+                    <p><strong>[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent0titleSub0]@L]</strong></p>
+                    <p>[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent0text0]@L]</p>
+                    <p class="no-margin-bottom">[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent0text0Sub]@L]</p>
+                </div>
+            </div>
+        </div>
+        <div class="row tab-content">
+            <div class="col-xs-12">
+                <div class="grid-column tab-content-column tab-content-left tab-content-create-send-and-track-invoices-SYIAB" data-solazy='{"src":"[@T[link:<imageroot />]@T]fos/201401/accounting/img/bg-create-send-and-track-invoices.jpg","method":"background","condition":{"css":"display:block","selector":"#how-it-works"}}'>
+                    <h2 class="tab-content-title">[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent0title1]@L]</h2>
+                    <p><strong>[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent0titleSub1]@L]</strong></p>
+                    <p>[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent0text1]@L]</p>
+                    <p class="no-margin-bottom">[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent0text1Sub]@L]</p>
+                </div>
+            </div>
+        </div>
+        <div class="row tab-content">
+            <div class="col-xs-12">
+                <div class="grid-column tab-content-column tab-content-right tab-content-track-and-simplify-your-taxes-SYIAB" data-solazy='{"src":"[@T[link:<imageroot />]@T]fos/201401/accounting/img/bg-track-and-simplify-your-taxes.png","method":"background","condition":{"css":"display:block","selector":"#how-it-works"}}'>
+                    <span class="badge-track-and-simplify-your-taxes"><strong>[@L[cds.sales/accounting/accounting-software:OnlyFromGoDaddy]@L]</strong></span>
+                    <h2 class="tab-content-title">[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent0title2]@L]</h2>
+                    <p><strong>[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent0titleSub2]@L]</strong></p>
+                    <p>[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent0text2]@L]</p> 
+                    <p class="no-margin-bottom">[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent0text2Sub]@L]</p>
+                </div>
+            </div>
+        </div>
+        <div class="row tab-content">
+            <div class="col-xs-12">
+                <div class="grid-column tab-content-column tab-content-left tab-content-easily-track-your-time-SYIAB" data-solazy='{"src":"[@T[link:<imageroot />]@T]fos/201401/accounting/img/bg-easily-track-your-time.png","method":"background","condition":{"css":"display:block","selector":"#how-it-works"}}'>
+                    <h2 class="tab-content-title">[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent0title3]@L]</h2>
+                    <p><strong>[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent0titleSub3]@L]</strong></p>
+                    <p class="no-margin-bottom">[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent0text3]@L]</p>
+                </div>
+            </div>
+        </div>
+        <div class="row tab-content">
+            <div class="col-xs-12">
+                <div class="grid-column tab-content-column tab-content-right tab-content-now-you-get-paid-faster-SYIAB" data-solazy='{"src":"[@T[link:<imageroot />]@T]fos/201401/accounting/img/bg-now-you-get-paid-faster.png","method":"background","condition":{"css":"display:block","selector":"#how-it-works"}}'>
+                    <h2 class="tab-content-title">[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent0title4]@L]</h2>
+                    <p><strong>[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent0titleSub4]@L]</strong></p>
+                    <p>[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent0text4]@L]</p>
+                    <p class="no-margin-bottom">[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent0text4Sub]@L]</p>
+                </div>
+            </div>
+        </div>
+        <div class="row tab-content">
+            <div class="col-xs-12">
+                <div class="grid-column tab-content-column tab-content-left tab-content-GoDaddy-uses-the-same-security-measures-that-banks-use-SYIAB" data-solazy='{"src":"[@T[link:<imageroot />]@T]fos/201401/accounting/img/bg-GoDaddy-uses-the-same-security-measures-that-banks-use.png","method":"background","condition":{"css":"display:block","selector":"#how-it-works"}}'>
+                    <h2 class="tab-content-title">[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent0title5]@L]</h2>
+                    <p>[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent0text5]@L]</p>
+                    <p class="no-margin-bottom">[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent0text5Sub]@L]</p>
+                </div>
+            </div>
+        </div>
+        <div class="row tab-content">
+            <div class="col-xs-12">
+              <form class="addtocart-form" action="[@T[link:<external linktype="carturl" path="/basket.aspx" secure="true"/>]@T]" method="post" data-addtocart="[@T[link:<relative path="~/api/package/add" />]@T]">
+                <input type="hidden" name="itc" value="slp_outright_plus" />
+                <input type="hidden" name="ci" value="89207" />
+                <input type="hidden" name="qty" value="1" />
+                <input type="hidden" name="package" value="gdob_1year" />
+                <button type="submit" class="btn btn-primary btn-lg btn-block btn-lg" style="font-family: HelveticaNeue-CondensedBold, Helvetica Neue, Helvetica, Arial, sans-serif;"><i class="ico ico-gt" style="margin-top: -7px;"></i><span style="font-weight: bold; font-size: 24px;">[@L[cds.sales/accounting/accounting-software:cta]@L]</span> <span style="font-size: 24px;">[@L[cds.sales/accounting/accounting-software:ChooseYourPackage]@L]/[@L[cds.sales/accounting/accounting-software:MO]@L]</span></button>
+              </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+  </div>
+  <div class="tab-pane" id="ours-vs-theirs">
+    <section class="l-main-content">
+    <div class="container l-main-container">
+        <div class="tab-header tab-header-SYIAB-oursvstheirs tab-header-zone">
+          <div class="tab-header-left-zone">
+            <h2 class="tab-header-title">[@L[cds.sales/accounting/accounting-software:HeaderContentHeadingList0]@L]</h2>
+            <p>[@L[cds.sales/accounting/accounting-software:HeaderContentSubHeadingList6]@L]</p>
+          </div>
+          <form class="addtocart-form" action="[@T[link:<external linktype="carturl" path="/basket.aspx" secure="true"/>]@T]" method="post" data-addtocart="[@T[link:<relative path="~/api/package/add" />]@T]">
+           <input type="hidden" name="itc" value="slp_outright_plus" />
+           <input type="hidden" name="ci" value="89205" />
+           <input type="hidden" name="qty" value="1" />
+           <input type="hidden" name="package" value="gdob_1year" />
+           <div class="add-to-cart-wrapper">
+            <div class="add-to-cart-left-zone">
+              <div class="add-to-cart-header-wrapper">
+                <h3 class="add-to-cart-header">[@L[cds.sales/accounting/accounting-software:HeaderforAddToCart]@L]</h3>
+              </div>
+              <div class="add-to-cart-price-wrapper">
+                <div class="add-to-cart-startingat">
+                  [@L[cds.sales/accounting/accounting-software:StartingAt]@L]
+                </div>
+                <div class="add-to-cart-price" data-seperate-currency-symbol='{"newClass":"sup-symbol-price","newTagName":"span"}'>
+                  [@T[productprice:<current productid="2699" dropdecimal="false" period="monthly" negative="parentheses" />]@T]
+                </div>
+                <div class="add-to-cart-month">
+                  /[@L[cds.sales/accounting/accounting-software:MO]@L]
+                </div>
+              </div>
+            </div>
+            <div class="js-plan-column add-to-cart-button-wrapper">
+              <button type="submit" class="btn btn-warning btn-block btn-lg">[@L[cds.sales/accounting/accounting-software:AddToCart]@L]</button>
+            </div>
+           </div>
+          </form>
+        </div>
+        <div class="row tab-content" style="clear:both;">
+            <div class="col-xs-12">
+                <div class="grid-column tab-content-column-alternate">
+                    <table>
+                        <thead>
+                            <tr class="thead-row thead-row-4c">
+                                <th></th>
+                                <th class="th-active">[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent1title3]@L]</th>
+                                <th>[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent1title1]@L]</th>
+                                <th>[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent1title2]@L]</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="tbody-row tbody-row-4c">
+                                <th>[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent1text0]@L]</th>
+                                <td class="td-active"><i class="ico ico-check-orange"></i></td>
+                                <td></td>
+                                <td><i class="ico ico-check-gray"></i></td>
+                            </tr>
+                            <tr class="tbody-row tbody-row-4c">
+                                <th>[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent1text1]@L]</th>
+                                <td class="td-active"><i class="ico ico-check-orange"></i></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr class="tbody-row tbody-row-4c">
+                                <th>[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent1text2]@L]</th>
+                                <td class="td-active"><i class="ico ico-check-orange"></i></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr class="tbody-row tbody-row-4c">
+                                <th>[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent1text3]@L]</th>
+                                <td class="td-active"><i class="ico ico-check-orange"></i></td>
+                                <td></td>
+                                <td><i class="ico ico-check-gray"></i></td>
+                            </tr>
+                            <tr class="tbody-row tbody-row-4c">
+                                <th>[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent1text4]@L]</th>
+                                <td class="td-active"><i class="ico ico-check-orange"></i></td>
+                                <td></td>
+                                <td><i class="ico ico-check-gray"></i></td>
+                            </tr>
+                            <tr class="tbody-row tbody-row-4c">
+                                <th>[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent1text5]@L]</th>
+                                <td class="td-active"><i class="ico ico-check-orange"></i></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr class="tbody-row tbody-row-4c">
+                                <th>[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent1text6]@L]</th>
+                                <td class="td-active"><i class="ico ico-check-orange"></i></td>
+                                <td><i class="ico ico-check-gray"></i></td>
+                                <td></td>
+                            </tr>
+                            <tr class="tbody-row tbody-row-4c">
+                                <th>[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent1text7]@L]</th>
+                                <td class="td-active"><i class="ico ico-check-orange"></i></td>
+                                <td><i class="ico ico-check-gray"></i></td>
+                                <td></td>
+                            </tr>
+                            <!--tr class="tbody-row tbody-row-4c">
+                                <th>[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent1text8]@L]</th>
+                                <td class="td-active"><i class="ico ico-check-orange"></i></td>
+                                <td></td>
+                                <td><i class="ico ico-check-gray"></i></td>
+                            </tr-->
+                            <tr class="tbody-row tbody-row-4c">
+                                <th>[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent1text9]@L]</th>
+                                <td class="td-active extra-font-SYIAB tertiary-color"><strong>[@T[currencyprice:<price usdamount="25" dropdecimal="false" dropsymbol="false" htmlsymbol="false" negative="parenthesis" />]@T]</strong></td>
+                                <td></td>
+                                <td class="extra-font-SYIAB tertiary-color"><strong>[@T[currencyprice:<price usdamount="50" dropdecimal="false" dropsymbol="false" htmlsymbol="false" negative="parenthesis" />]@T]</strong></td>
+                            </tr>
+                            <tr class="tbody-row tbody-row-4c">
+                                <th>[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent1text10]@L]</th>
+                                <td class="td-active"><i class="ico ico-check-orange"></i></td>
+                                <td></td>
+                                <td><i class="ico ico-check-gray"></i></td>
+                            </tr>
+                            <tr class="tbody-row tbody-row-4c">
+                                <th>[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent1text11]@L]</th>
+                                <td class="td-active extra-font-SYIAB secondary-color"><strong>[@T[productprice:<current productid="2697" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strong></td>
+                                <td class="tertiary-color">[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent1text11Sub]@L]</td>
+                                <td class="extra-font-SYIAB tertiary-color"><strong>[@T[currencyprice:<price usdamount="1295" dropdecimal="false" dropsymbol="false" htmlsymbol="false" negative="parenthesis" />]@T]</strong></td>
+                            </tr>
+                            <tr>
+                              <td colspan="4"><p class="text-right"><small>[@L[cds.sales/accounting/accounting-software:InformationUpdatedDate]@L]</small></p></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <form class="addtocart-form" action="[@T[link:<external linktype="carturl" path="/basket.aspx" secure="true"/>]@T]" method="post" data-addtocart="[@T[link:<relative path="~/api/package/add" />]@T]">
+            <input type="hidden" name="itc" value="slp_outright_plus" />
+            <input type="hidden" name="ci" value="89208" />
+            <input type="hidden" name="qty" value="1" />
+            <input type="hidden" name="package" value="gdob_1year" />
+            <button type="submit" class="btn btn-primary btn-lg btn-block btn-lg" style="font-family: HelveticaNeue-CondensedBold, Helvetica Neue, Helvetica, Arial, sans-serif;"><i class="ico ico-gt" style="margin-top: -7px;"></i><span style="font-weight: bold; font-size: 24px;">[@L[cds.sales/accounting/accounting-software:cta]@L]</span>&nbsp;<span style="font-size: 24px;">[@L[cds.sales/accounting/accounting-software:ChooseYourPackage]@L]/[@L[cds.sales/accounting/accounting-software:MO]@L]</span></button>
+        </form>
+    </div>
+</section>
+
+  </div>
+  <div class="tab-pane" id="faq">
+    <section class="tab-content-top-spacing">
+    <div class="container l-main-container">
+        <div class="row tab-content">
+            <div class="col-xs-12">
+                <div class="grid-column tab-content-column-alternate">
+                  <div><h2 class="h2-alternate">[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent5FAQTitle1]@L]</h2></div>
+                  <div><p>[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent5FAQList1]@L]</p></div>
+                  <div style="max-width: 368px;float: left;padding-bottom: 13px;margin-left: 19px;">
+                    <ul>
+                        <li>[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent5FAQList1Item1]@L]</li>
+                        <li>[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent5FAQList1Item2]@L]</li>
+                        <li>[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent5FAQList1Item3]@L]</li>
+                        <li>[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent5FAQList1Item4]@L]</li>
+                        <li>[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent5FAQList1Item5]@L]</li>
+                        <li>[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent5FAQList1Item6]@L]</li>
+                    </ul>
+                  </div>
+                  <form class="addtocart-form" action="[@T[link:<external linktype="carturl" path="/basket.aspx" secure="true"/>]@T]" method="post" data-addtocart="[@T[link:<relative path="~/api/package/add" />]@T]">
+                    <input type="hidden" name="itc" value="slp_outright_plus" />
+                    <input type="hidden" name="ci" value="89206" />
+                    <input type="hidden" name="qty" value="1" />
+                    <input type="hidden" name="package" value="gdob_1year" />
+                    <div class="add-to-cart-wrapper">
+                    <div class="add-to-cart-left-zone">
+                      <div class="add-to-cart-header-wrapper">
+                        <h3 class="add-to-cart-header">[@L[cds.sales/accounting/accounting-software:HeaderforAddToCart]@L]</h3>
+                      </div>
+                      <div class="add-to-cart-price-wrapper">
+                        <div class="add-to-cart-startingat">
+                          [@L[cds.sales/accounting/accounting-software:StartingAt]@L]
+                        </div>
+                        <div class="add-to-cart-price" data-seperate-currency-symbol='{"newClass":"sup-symbol-price","newTagName":"span"}'>
+                          [@T[productprice:<current productid="2699" dropdecimal="false" period="monthly" negative="parentheses" />]@T]
+                        </div>
+                        <div class="add-to-cart-month">
+                          /[@L[cds.sales/accounting/accounting-software:MO]@L]
+                        </div>
+                      </div>
+                     </div>
+                     <div class="js-plan-column add-to-cart-button-wrapper">
+                      <button type="submit" class="btn btn-warning btn-block btn-lg">[@L[cds.sales/accounting/accounting-software:AddToCart]@L]</button>
+                     </div>
+                    </div>
+                  </form>
+                  <div style="clear: both;">
+                    <hr/>
+
+                    <h2 class="h2-alternate">[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent5FAQTitle2]@L]</h2>
+                    <p>[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent5FAQList2A]@L]</p>
+                    <p>[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent5FAQList2B]@L]</p>
+
+                    <hr/>
+
+                    <h2 class="h2-alternate">[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent5FAQTitle3]@L]</h2>
+                    <p>[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent5FAQList3]@L]</p>
+
+                    <hr/>
+
+                    <h2 class="h2-alternate">[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent5FAQTitle4]@L]</h2>
+                    <p>[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent5FAQList4]@L]</p>
+
+                    <hr/>
+
+                    <h2 class="h2-alternate">[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent5FAQTitle5]@L]</h2>
+                    <p>[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent5FAQList5A]@L]</p>
+                    <p>[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent5FAQList5B]@L]</p>
+
+                    <hr/>
+
+                    <h2 class="h2-alternate">[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent5FAQTitle6]@L]</h2>
+                    <p>[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent5FAQList6]@L]</p>
+
+                    <hr/>
+
+                    <h2 class="h2-alternate">[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent5FAQTitle7]@L]</h2>
+                    <p>[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent5FAQList7]@L]</p>
+
+                    <hr/>
+
+                    <h2 class="h2-alternate">[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent5FAQTitle8]@L]</h2>
+                    <p>[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent5FAQList8A]@L]</p>
+                    <p>[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent5FAQList8B]@L]</p>
+
+                    <hr/>
+
+                    <h2 class="h2-alternate">[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent5FAQTitle9]@L]</h2>
+                    <p class="no-margin-bottom">[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent5FAQList9]@L]</p>
+        
+                </div>
+              </div>
+            </div>
+        </div>
+        <form class="addtocart-form" action="[@T[link:<external linktype="carturl" path="/basket.aspx" secure="true"/>]@T]" method="post" data-addtocart="[@T[link:<relative path="~/api/package/add" />]@T]">
+            <input type="hidden" name="itc" value="slp_outright_plus" />
+            <input type="hidden" name="ci" value="80209" />
+            <input type="hidden" name="qty" value="1" />
+            <input type="hidden" name="package" value="gdob_1year" />
+          <button type="submit" class="btn btn-primary btn-lg btn-block btn-lg" style="font-family: HelveticaNeue-CondensedBold, Helvetica Neue, Helvetica, Arial, sans-serif;"><i class="ico ico-gt" style="margin-top: -7px;"></i><span style="font-weight: bold; font-size: 24px;">[@L[cds.sales/accounting/accounting-software:cta]@L]</span>&nbsp;<span style="font-size: 24px;">[@L[cds.sales/accounting/accounting-software:ChooseYourPackage]@L]/[@L[cds.sales/accounting/accounting-software:MO]@L]</span></button>
+        </form>
+    </div>
+</section>
+   
+  </div>
+</div>
+<!-- End main-tabs panes -->
+<section class="container l-main-container content-disclaimer">
+    <p class="no-margin-bottom"><small class="small-print">[@L[cds.sales/accounting/accounting-software:DisclaimerContentSymbols]@L]<a class="simple-link" href="#" data-toggle="modal" data-target="#myModal" data-ci="86765">[@L[cds.sales/accounting/accounting-software:DisclaimerContentLinkText]@L]</a></small></p>
+    <p><small class="small-print">[@L[cds.sales/accounting/accounting-software:DisclaimerContentDisclaimer]@L]</small></p>
+</section>
+
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <p class="modal-title"><strong>[@L[cds.sales/accounting/accounting-software:DisclaimerModalTitle]@L]</strong></p>
+            </div>
+            <div class="modal-body">
+                <ul class="accounting-modal-list">
+                    <li>[@L[cds.sales/accounting/accounting-software:DisclaimerModalListItem1]@L]</li>
+                    <li>[@L[cds.sales/accounting/accounting-software:DisclaimerModalListItem2]@L]</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
