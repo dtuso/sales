@@ -120,6 +120,7 @@ gulp.task('watch', function() {
 
 
 gulp.task('build', ['html', 'language', 'styles', 'images']);
+gulp.task('css-build-deploy', ['styles', 'assets-deploy']);
 gulp.task('default', ['watch']);
 
 updater();
