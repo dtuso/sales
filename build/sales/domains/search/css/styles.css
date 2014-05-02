@@ -10,7 +10,7 @@
   font-size: 18px;
   font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue" "Segoe UI", Segoe, Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: bold;
-  color: #333;
+  color: #333333;
   background: url("../img/check.png") no-repeat 1px;
   padding-left: 20px;
 }
@@ -30,7 +30,7 @@ div.pod-shadow {
   height: 17px;
 }
 .grid-columns {
-  background: none repeat scroll 0 0 #FFF;
+  background: none repeat scroll 0 0 #FFFFFF;
   border: 1px solid #D3D3D3;
   height: 100%;
   padding: 1.12857em;
@@ -43,7 +43,7 @@ div.pod-shadow {
   margin-bottom: 1em;
 }
 .main-panel {
-  color: #333;
+  color: #333333;
   padding-bottom: 65px;
   padding-top: 4.071428571em;
   text-align: center;
@@ -56,9 +56,9 @@ div.pod-shadow {
   zoom: 1;
 }
 .main-panel-subtitle {
-  color: #333;
+  color: #333333;
   font-weight: bold;
-  margin-bottom: .208333333em;
+  margin-bottom: 0.208333333em;
   text-transform: uppercase;
 }
 .main-panel-title {
@@ -80,7 +80,7 @@ div.pod-shadow {
   background-repeat: no-repeat;
   background-position: center top;
   padding-bottom: 4.285714286em;
-  padding-top: 4.28571429em;
+  padding-top: 4.285714286em;
 }
 .main-banner-carousel {
   float: left;
@@ -105,8 +105,13 @@ div.pod-shadow {
 .lt-ie8 .carousel-indicators-list > li {
   display: inline;
 }
+.carousel-inner-item-ds-1 {
+  /*padding-left: 5em;
+  padding-right: 5em;
+  padding-top: 2.0625em;*/
+}
 .carousel-inner-item-ds-2 .carousel-inner-text-container > p {
-  margin-bottom: 0;
+  margin-bottom: 0px;
 }
 .carousel-inner-item-ds-2 .carousel-inner-text-container > p:first-child {
   margin-top: 6px;
@@ -127,7 +132,7 @@ div.pod-shadow {
   width: 23%;
 }
 .links-container > a {
-  color: #fff;
+  color: #ffffff;
   display: block;
   margin-top: 0.875em;
 }
@@ -143,7 +148,7 @@ div.pod-shadow {
   text-align: left;
 }
 .domain-search-prices .grid-column {
-  padding-bottom: .5em;
+  padding-bottom: 0.5em;
   padding-top: 3.571em;
 }
 .domain-search-prices .ico {
@@ -166,21 +171,21 @@ div.pod-shadow {
   margin-bottom: 0.714em;
 }
 .faq .h2-alternate {
-  margin-bottom: 0.75em;
+  margin-bottom: 0.750em;
 }
 .faq .tab-content-column-alternate {
   padding-top: 2.714em;
   padding-bottom: 2.714em;
 }
 .tab-content-tabs {
-  margin-top: 4.28571429em;
+  margin-top: 4.285714286em;
 }
 .plan-summary-container-do {
   background-image: url("../img/bg-tab-content-domain-options-do.jpg");
   background-repeat: no-repeat;
   background-position: center top;
   min-height: 787px;
-  padding-bottom: 0.57142857em;
+  padding-bottom: 0.571428571em;
 }
 .lt-ie9 .plan-summary-container-do {
   min-height: 729px;
@@ -189,7 +194,7 @@ div.pod-shadow {
   margin-bottom: 0;
 }
 .nav-tabs.plan-summary-tabs-do {
-  margin-bottom: 2.78571429em;
+  margin-bottom: 2.785714286em;
 }
 .tab-content-whygoDaddy-bg-ds {
   background-image: url("../img/domains_background.jpg");
@@ -200,15 +205,42 @@ div.pod-shadow {
   min-height: 549px;
   min-width: 1000px;
 }
+html:lang(tr) .tab-content-whygoDaddy-bg-ds {
+  background-image: url("../img/MED_domains_background.jpg");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-height: 614px;
+  min-height: 549px;
+  min-width: 1000px;
+}
+html:lang(pl) .tab-content-whygoDaddy-bg-ds,
+html:lang(da) .tab-content-whygoDaddy-bg-ds,
+html:lang(fi) .tab-content-whygoDaddy-bg-ds,
+html:lang(nb) .tab-content-whygoDaddy-bg-ds,
+html:lang(sv) .tab-content-whygoDaddy-bg-ds,
+html:lang(de) .tab-content-whygoDaddy-bg-ds,
+html:lang(hu) .tab-content-whygoDaddy-bg-ds,
+html:lang(ru) .tab-content-whygoDaddy-bg-ds,
+html:lang(uk) .tab-content-whygoDaddy-bg-ds,
+html:lang(el) .tab-content-whygoDaddy-bg-ds {
+  background-image: url("../img/NOR_domains_background.jpg");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-height: 614px;
+  min-height: 549px;
+  min-width: 1000px;
+}
 .misc-banner-content.misc-banner-content-syiab {
   padding-top: 4.285714286em;
-  padding-bottom: 2.28571429em;
+  padding-bottom: 2.285714286em;
 }
 .misc-banner-content.misc-banner-content-syiab > * {
   color: #ffffff;
 }
 .misc-banner-content.misc-banner-content-syiab > h2 {
-  margin-right: 9.44444444em;
+  margin-right: 9.444444444em;
 }
 .misc-banner-content.misc-banner-content-syiab > h4 {
   margin-right: 9.444444444em;
@@ -217,14 +249,14 @@ div.pod-shadow {
   font-family: 'HelveticaNeue-CondensedBold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 .misc-banner-content.misc-banner-content-syiab > p {
-  margin-right: 40.71428571em;
+  margin-right: 38.71428571em;
   margin-bottom: 15px;
 }
 .lt-ie9 .misc-banner-content.misc-banner-content-syiab {
   width: 960px;
 }
 .plan-summary-tabs-item-do > .plan-summary-nav-tabs-link {
-  font-size: 1.42857143em;
+  font-size: 1.428571429em;
 }
 .tab-subtitle {
   font-size: 1.142857143em;
@@ -232,6 +264,8 @@ div.pod-shadow {
 }
 .tab-pane-do > .h2-alternate {
   margin-bottom: 0.625em;
+  max-width: 765px;
+  white-space: pre-wrap;
 }
 .tab-pane-do > .tab-subtitle {
   margin-right: 16.5625em;
@@ -241,7 +275,7 @@ div.pod-shadow {
   margin-right: 18.92857143em;
 }
 .tab-pane-do > ul > li {
-  margin-top: 0.71428571em;
+  margin-top: 0.714285714em;
 }
 .tab-pane-do > ul > li:first-child {
   margin-top: 0;
@@ -251,18 +285,18 @@ div.pod-shadow {
   padding: 0.642857em 1.5em;
 }
 .list-item {
-  border-bottom: .071428571em solid #d4d4d4;
+  border-bottom: 0.071428571em solid #d4d4d4;
   list-style-type: none;
   overflow: hidden;
-  padding: 0.78571429em 0.71428571em 0.85714286em 0.71428571em;
+  padding: 0.785714286em 0.714285714em 0.857142857em 0.714285714em;
 }
 .list-item:first-child {
-  padding-bottom: .428571429em;
+  padding-bottom: 0.428571429em;
   padding-top: 0;
 }
 .list-item-text {
   float: left;
-  font-size: 1.71428571em;
+  font-size: 1.714285714em;
 }
 .list-item-button {
   color: #f0f6e9;
@@ -291,7 +325,7 @@ div.pod-shadow {
   margin-right: 18.92857143em;
 }
 .lt-ie9 .hundreds-domains {
-  margin-left: 0!important;
+  margin-left: 0 !important;
   padding: 25px 30px;
   max-width: 940px;
 }
@@ -313,7 +347,7 @@ div.pod-shadow {
   min-width: 218px;
   padding-top: 14px;
   padding-bottom: 13px;
-  margin-left: 0!important;
+  margin-left: 0px !important;
   padding-left: 20px;
   padding-right: 20px;
   vertical-align: top;
@@ -321,7 +355,7 @@ div.pod-shadow {
 .lt-ie8 .search-form-certified > .btn-primary {
   min-width: 218px;
   padding-top: 9px;
-  margin-left: 0!important;
+  margin-left: 0px !important;
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -361,7 +395,7 @@ div.pod-shadow {
   min-height: 239px;
 }
 .tab-content-your-identity > .tab-content-title {
-  padding-right: 7.29166667em;
+  padding-right: 7.291666667em;
 }
 .lt-ie8 #why-goDaddy > .white-bg {
   margin-top: 50px;
@@ -379,8 +413,306 @@ div.pod-shadow {
 .iframe-modal {
   width: 100%;
   height: 600px;
-  border: 0;
+  border: 0px;
 }
 ul.main-page-main-list {
   list-style-type: none;
+}
+.tabheading {
+  background-color: transparent;
+}
+.submitbtn {
+  float: right;
+  left: 55%;
+  max-width: 350px;
+}
+.tabData {
+  width: 245px;
+  text-align: center;
+}
+.searchBoxForm {
+  border: #d4d4d4 solid 1px;
+}
+/* line 5, ../scss/tldlogos.scss */
+.tldlogo {
+  background-image: url('../img/tldlogos-s8515bc2b63.png');
+  background-repeat: no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+}
+/* line 14, ../scss/tldlogos.scss */
+.tldlogo-dot-at {
+  background-position: -93px -800px;
+  height: 40px;
+  width: 42px;
+}
+/* line 14, ../scss/tldlogos.scss */
+.tldlogo-dot-be {
+  background-position: -104px -760px;
+  height: 40px;
+  width: 51px;
+}
+/* line 14, ../scss/tldlogos.scss */
+.tldlogo-dot-biz {
+  background-position: -49px -800px;
+  height: 40px;
+  width: 44px;
+}
+/* line 14, ../scss/tldlogos.scss */
+.tldlogo-dot-br {
+  background-position: -57px -680px;
+  height: 40px;
+  width: 24px;
+}
+/* line 14, ../scss/tldlogos.scss */
+.tldlogo-dot-build {
+  background-position: 0 -560px;
+  height: 40px;
+  width: 67px;
+}
+/* line 14, ../scss/tldlogos.scss */
+.tldlogo-dot-ca {
+  background-position: 0 -800px;
+  height: 40px;
+  width: 49px;
+}
+/* line 14, ../scss/tldlogos.scss */
+.tldlogo-dot-ch {
+  background-position: -81px -680px;
+  height: 40px;
+  width: 52px;
+}
+/* line 14, ../scss/tldlogos.scss */
+.tldlogo-dot-cl {
+  background-position: 0 -240px;
+  height: 40px;
+  width: 38px;
+}
+/* line 14, ../scss/tldlogos.scss */
+.tldlogo-dot-club {
+  background-position: 0 -600px;
+  height: 40px;
+  width: 73px;
+}
+/* line 14, ../scss/tldlogos.scss */
+.tldlogo-dot-co-in {
+  background-position: 0 -640px;
+  height: 40px;
+  width: 75px;
+}
+/* line 14, ../scss/tldlogos.scss */
+.tldlogo-dot-co-nz {
+  background-position: -67px -560px;
+  height: 40px;
+  width: 84px;
+}
+/* line 14, ../scss/tldlogos.scss */
+.tldlogo-dot-co-uk {
+  background-position: -75px -640px;
+  height: 40px;
+  width: 76px;
+}
+/* line 14, ../scss/tldlogos.scss */
+.tldlogo-dot-co {
+  background-position: 0 -160px;
+  height: 40px;
+  width: 31px;
+}
+/* line 14, ../scss/tldlogos.scss */
+.tldlogo-dot-com-au {
+  background-position: -38px -240px;
+  height: 40px;
+  width: 119px;
+}
+/* line 14, ../scss/tldlogos.scss */
+.tldlogo-dot-com-co {
+  background-position: 0 -200px;
+  height: 40px;
+  width: 36px;
+}
+/* line 14, ../scss/tldlogos.scss */
+.tldlogo-dot-com-mx {
+  background-position: -36px -200px;
+  height: 40px;
+  width: 119px;
+}
+/* line 14, ../scss/tldlogos.scss */
+.tldlogo-dot-com {
+  background-position: -63px -520px;
+  height: 40px;
+  width: 88px;
+}
+/* line 14, ../scss/tldlogos.scss */
+.tldlogo-dot-company {
+  background-position: 0 0;
+  height: 40px;
+  width: 157px;
+}
+/* line 14, ../scss/tldlogos.scss */
+.tldlogo-dot-de {
+  background-position: 0 -360px;
+  height: 40px;
+  width: 53px;
+}
+/* line 14, ../scss/tldlogos.scss */
+.tldlogo-dot-democrat {
+  background-position: -57px -440px;
+  height: 40px;
+  width: 97px;
+}
+/* line 14, ../scss/tldlogos.scss */
+.tldlogo-dot-dk {
+  background-position: 0 -400px;
+  height: 40px;
+  width: 53px;
+}
+/* line 14, ../scss/tldlogos.scss */
+.tldlogo-dot-email {
+  background-position: -60px -480px;
+  height: 40px;
+  width: 94px;
+}
+/* line 14, ../scss/tldlogos.scss */
+.tldlogo-dot-es {
+  background-position: 0 -320px;
+  height: 40px;
+  width: 50px;
+}
+/* line 14, ../scss/tldlogos.scss */
+.tldlogo-dot-estate {
+  background-position: 0 -840px;
+  height: 40px;
+  width: 107px;
+}
+/* line 14, ../scss/tldlogos.scss */
+.tldlogo-dot-fr {
+  background-position: 0 -120px;
+  height: 40px;
+  width: 31px;
+}
+/* line 14, ../scss/tldlogos.scss */
+.tldlogo-dot-futbol {
+  background-position: -31px -120px;
+  height: 40px;
+  width: 123px;
+}
+/* line 14, ../scss/tldlogos.scss */
+.tldlogo-dot-guru {
+  background-position: -73px -600px;
+  height: 40px;
+  width: 82px;
+}
+/* line 14, ../scss/tldlogos.scss */
+.tldlogo-dot-in {
+  background-position: 0 -680px;
+  height: 40px;
+  width: 57px;
+}
+/* line 14, ../scss/tldlogos.scss */
+.tldlogo-dot-info {
+  background-position: 0 -440px;
+  height: 40px;
+  width: 57px;
+}
+/* line 14, ../scss/tldlogos.scss */
+.tldlogo-dot-it {
+  background-position: 0 -280px;
+  height: 40px;
+  width: 35px;
+}
+/* line 14, ../scss/tldlogos.scss */
+.tldlogo-dot-london {
+  background-position: 0 -80px;
+  height: 40px;
+  width: 134px;
+}
+/* line 14, ../scss/tldlogos.scss */
+.tldlogo-dot-luxury {
+  background-position: 0 -880px;
+  height: 40px;
+  width: 124px;
+}
+/* line 14, ../scss/tldlogos.scss */
+.tldlogo-dot-me {
+  background-position: -129px -400px;
+  height: 40px;
+  width: 28px;
+}
+/* line 14, ../scss/tldlogos.scss */
+.tldlogo-dot-menu {
+  background-position: 0 -760px;
+  height: 40px;
+  width: 104px;
+}
+/* line 14, ../scss/tldlogos.scss */
+.tldlogo-dot-my {
+  background-position: 0 -520px;
+  height: 40px;
+  width: 63px;
+}
+/* line 14, ../scss/tldlogos.scss */
+.tldlogo-dot-net {
+  background-position: 0 -480px;
+  height: 40px;
+  width: 60px;
+}
+/* line 14, ../scss/tldlogos.scss */
+.tldlogo-dot-ninja {
+  background-position: 0 -720px;
+  height: 40px;
+  width: 98px;
+}
+/* line 14, ../scss/tldlogos.scss */
+.tldlogo-dot-nl {
+  background-position: -107px -840px;
+  height: 40px;
+  width: 41px;
+}
+/* line 14, ../scss/tldlogos.scss */
+.tldlogo-dot-org {
+  background-position: -53px -400px;
+  height: 40px;
+  width: 76px;
+}
+/* line 14, ../scss/tldlogos.scss */
+.tldlogo-dot-photography {
+  background-position: 0 -40px;
+  height: 40px;
+  width: 155px;
+}
+/* line 14, ../scss/tldlogos.scss */
+.tldlogo-dot-photos {
+  background-position: -31px -160px;
+  height: 40px;
+  width: 120px;
+}
+/* line 14, ../scss/tldlogos.scss */
+.tldlogo-dot-se {
+  background-position: -50px -320px;
+  height: 40px;
+  width: 51px;
+}
+/* line 14, ../scss/tldlogos.scss */
+.tldlogo-dot-sg {
+  background-position: -98px -720px;
+  height: 40px;
+  width: 52px;
+}
+/* line 14, ../scss/tldlogos.scss */
+.tldlogo-dot-social {
+  background-position: -53px -360px;
+  height: 40px;
+  width: 101px;
+}
+/* line 14, ../scss/tldlogos.scss */
+.tldlogo-dot-uno {
+  background-position: -35px -280px;
+  height: 40px;
+  width: 29px;
+}
+/* line 14, ../scss/tldlogos.scss */
+.tldlogo-dot-ve {
+  background-position: -101px -320px;
+  height: 40px;
+  width: 51px;
 }
