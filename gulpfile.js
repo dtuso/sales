@@ -122,5 +122,4 @@ gulp.task('watch', function() {
 gulp.task('build', ['html', 'language', 'styles', 'images']);
 gulp.task('default', ['watch']);
 
-
 updater();
