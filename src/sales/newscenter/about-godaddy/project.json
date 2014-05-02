@@ -19,11 +19,12 @@
       }
     },
     "assetPath": "fos/201401/sales/newscenter/about-godaddy/",
-    "metaTitle": "[@L[cds.sales/gd/hosting/web-hosting:page-title]@L]",
-    "metaDescription": "[@L[cds.sales/gd/hosting/web-hosting:meta-description]@L]",
-    "metaKeywords": "[@L[cds.sales/gd/hosting/web-hosting:meta-keywords]@L]",
-    "metaCanonicalPath": "/hosting/web-hosting.aspx",
-    "metaOgTitle": "[@L[cds.sales/gd/hosting/web-hosting:og-title]@L]",
+    "metaTitle": "[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-11-AboutGoDaddyMoreAboutTheWorldS1Domain]@L]",
+    "metaDescription": "[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-9-GoDaddyWhoWeAreAndWhatWeDo]@L]",
+    "metaKeywords": "[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-5-GoDaddyGodaddyNewsReleasesGoDaddy]@L]",
+    "metaCanonicalPath": "/newscenter/about-godaddy.aspx",
+    "metaOgAdmins": "633356800"
+    "metaOgTitle": "[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-9-GoDaddyWhoWeAreAndWhatWeDo]@L]",
     "metaOgImage": "fos/hp/rebrand/img/gd_rebrand_og.png",
     "metaOgDescription": "[@L[cds.sales/gd/hosting/web-hosting:og-description]@L]"
   },
