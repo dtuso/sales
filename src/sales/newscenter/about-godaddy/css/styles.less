@@ -11,6 +11,7 @@
     -webkit-font-smoothing: antialiased !important;
     border: none !important;
 }
+
 /*this class will be used by default in js if no type is specified*/
 .messenger.info {
     background-color: #262626;
@@ -77,7 +78,7 @@
 
 
 .solazy{
-  background:url(../img/icon/loading-spinner-med.gif) center center no-repeat;
+  background:url(../img/loading-spinner-med.gif) center center no-repeat;
 }
 
 
@@ -296,6 +297,13 @@
   font-size:28px;
   padding-bottom:.83em;
 }
+#corporate .section.about-us,
+#corporate .section.about-us p,
+#corporate .section.about-us h2,
+#corporate .section.about-us div {
+  color: white;
+}
+
 #corporate .section.about-us {
   border-top: 1px solid #6d9b0c;
   background-color: #7db701;
@@ -326,13 +334,13 @@
   text-transform: lowercase;
   font-weight: bold;
   font-size: 22px;
-  background-image: url(../img/about-us/icon-down.png);
+  background-image: url(../img/icon-down.png);
   background-repeat: no-repeat;
   background-position: center bottom;
   padding-bottom: 30px;
 }
 #corporate .section.story {
-  background-image: url(../img/story/bg.jpg);
+  background-image: url(../img/bg.jpg);
 }
 #corporate .section.story .inner {
   height: 620px;
@@ -407,7 +415,7 @@ html[lang*=de] #corporate .section.story .inner > .team  p {
     display: inline-block;
     width: 8px;
     height: 16px;
-    background-image: url(../img/news-releases/next.png);
+    background-image: url(../img/next.png);
     background-repeat: no-repeat;
     background-position: left center;
     margin-bottom: -3px;
@@ -513,7 +521,7 @@ html[lang*=fr] #corporate .section.godaddy-is .fact .yui3-c .customer-support {
   font-size: 14px;
 }
 #corporate .section.news .play {
-  background-image: url(../img/in-the-news/play.png);
+  background-image: url(../img/play.png);
   position: absolute;
   width: 49px;
   height: 49px;
@@ -547,7 +555,7 @@ html[lang*=fr] #corporate .section.godaddy-is .fact .yui3-c .customer-support {
 }
 #corporate .section.news .view-more .title {
   display: inline-block;
-  background-image: url(../img/in-the-news/next.png);
+  background-image: url(../img/news-next.png);
   background-repeat: no-repeat;
   background-position: left center;
   padding: 0 0 0 15px;
@@ -567,7 +575,7 @@ html[lang*=fr] #corporate .section.godaddy-is .fact .yui3-c .customer-support {
   color: white;
 }
 #corporate .section.news.news-releases .view-more .title {
-  background-image: url(../img/news-releases/next.png);
+  background-image: url(../img/news-next.png);
 }
 #corporate .section.customers {
   padding: 0;
@@ -662,7 +670,7 @@ html[lang*=fr] #corporate .section.godaddy-is .fact .yui3-c .customer-support {
   display: block;
 }
 #corporate .section.customers .slider .item .video .play {
-  background-image: url(../img/in-the-news/play.png);
+  background-image: url(../img/play.png);
   position: absolute;
   width: 49px;
   height: 49px;
@@ -671,7 +679,9 @@ html[lang*=fr] #corporate .section.godaddy-is .fact .yui3-c .customer-support {
   margin-top: -24.5px;
   margin-left: -24.5px;
 }
-#corporate .section.customers .slider .item.dark {
+#corporate .section.customers .slider .item.dark,
+
+#corporate .section.customers .slider .item.dark p {
   color: white;
 }
 #corporate .section.customers .slider .item.dark a {
@@ -688,24 +698,29 @@ html[lang*=pt] #corporate .section.customers .slider .summary .summary-resize p,
 html[lang*=it] #corporate .section.customers .slider .summary .summary-resize p {
   font-size: 14px;
 }
+#corporate .section.customers .slider .summary .summary-resize p {
+  margin-bottom: 0px !important; 
+}
 #corporate .section.customers .slider .item.right .summary {
   float: right;
 }
 #corporate .section.customers .slider .item.light-bg .summary {
-  background-image: url(../img/customers/light-bg.png);
+  background-image: url(../img/light-bg.png);
   padding: 10px 20px;
   width: 400px;
+
 }
 #corporate .section.customers .video-player {
-  background-image: url(../img/customers/video-bg.png);
+  background-image: url(../img/video-bg.png);
 }
+
 #corporate .section.customers .video-player .inner {
   width: 1000px;
   height: 550px;
   margin: 115px auto 0;
 }
 #corporate .section.customers .video-player .close-button {
-  background-image: url(../img/icon/close-light.png);
+  background-image: url(../img/close-light.png);
 }
 #corporate .section.customers .nav {
   position: absolute;
@@ -717,7 +732,7 @@ html[lang*=it] #corporate .section.customers .slider .summary .summary-resize p 
 #corporate .section.customers .nav .button {
   cursor: pointer;
   position: absolute;
-  background-image: url(../img/customers/left-right.png);
+  background-image: url(../img/left-right.png);
   width: 24px;
   height: 65px;
 }
@@ -760,7 +775,7 @@ html[lang*=it] #corporate .section.customers .slider .summary .summary-resize p 
   cursor: default;
 }
 #corporate .section.office {
-  background-image: url(../img/office/bg.jpg);
+  background-image: url(../img/office-bg.jpg);
 }
 #corporate .section.office .text {
   font-size: 40px;
@@ -773,7 +788,7 @@ html[lang*=it] #corporate .section.customers .slider .summary .summary-resize p 
   position: relative;
 }
 #corporate .section.team > .inner {
-  height: 638px;
+  height: 738px;
 }
 #corporate .section.team h2 {
   position: relative;
@@ -852,7 +867,7 @@ html[lang*=it] #corporate .section.customers .slider .summary .summary-resize p 
 }
 #corporate .section.team .mask {
   position: absolute;
-  background-image: url(../img/team/mask.png);
+  background-image: url(../img/mask.png);
   width: 100%;
   height: 100%;
 }
@@ -894,7 +909,7 @@ html[lang*=it] #corporate .section.customers .slider .summary .summary-resize p 
   width: 100%;
   color: white;
   text-align: center;
-  background-image: url(../img/team/plus.png);
+  background-image: url(../img/team-plus.png);
   background-repeat: no-repeat;
   background-position: center bottom;
   margin-bottom: 20px;
@@ -1070,35 +1085,36 @@ left: -485px;
   width: 30px;
   height: 30px;
 }
+
 #corporate .section.team .bio .nav .icons .icon.linkedin {
-  background: url(../img/icon/linkedin2.png) 0 0 no-repeat;
+  background: url(../img/linkedin2.png) 0 0 no-repeat;
 }
 #corporate .section.team .bio.dark .nav .icons .icon.linkedin {
-  background: url(../img/icon/linkedin2.png) 0 0 no-repeat;
+  background: url(../img/linkedin2.png) 0 0 no-repeat;
 }
 #corporate .section.team .bio .nav .icons .icon.facebook {
-  background: url(../img/icon/facebook.png) 0 0 no-repeat;
+  background: url(../img/facebook.png) 0 0 no-repeat;
 }
 #corporate .section.team .bio.dark .nav .icons .icon.facebook {
-  background: url(../img/icon/facebook2.png) 0 0 no-repeat;
+  background: url(../img/facebook2.png) 0 0 no-repeat;
 }
 #corporate .section.team .bio .nav .icons .icon.twitter {
-  background: url(../img/icon/twitter.png) 0 0 no-repeat;
+  background: url(../img/twitter.png) 0 0 no-repeat;
 }
 #corporate .section.team .bio.dark .nav .icons .icon.twitter {
-  background: url(../img/icon/twitter2.png) 0 0 no-repeat;
+  background: url(../img/twitter2.png) 0 0 no-repeat;
 }
 #corporate .section.team .bio .nav .icons .icon.blog {
-  background: url(../img/icon/blog.png) 0 0 no-repeat;
+  background: url(../img/blog.png) 0 0 no-repeat;
 }
 #corporate .section.team .bio.dark .nav .icons .icon.blog {
-  background: url(../img/icon/blog2.png) 0 0 no-repeat;
+  background: url(../img/blog2.png) 0 0 no-repeat;
 }
 #corporate .section.team .bio .nav .icons .icon.resumup {
-  background: url(../img/icon/resumup.png) 0 0 no-repeat;
+  background: url(../img/resumup.png) 0 0 no-repeat;
 }
 #corporate .section.team .bio.dark .nav .icons .icon.resumup {
-  background: url(../img/icon/resumup2.png) 0 0 no-repeat;
+  background: url(../img/resumup2.png) 0 0 no-repeat;
 }
 #corporate .section.team .bio .part p {
   padding-bottom:.5em;
@@ -1191,7 +1207,7 @@ left: -485px;
   z-index:1;
 }
 #corporate .section.contact-us .info {
-  background-image: url(../img/icon/info.png);
+  background-image: url(../img/info.png);
   background-repeat: no-repeat;
   background-position: left center;
   padding-left: 48px;
@@ -1291,7 +1307,7 @@ left: -485px;
 #corporate .section .close-button {
   width: 23px;
   height: 23px;
-  background-image: url(../img/icon/close.png);
+  background-image: url(../img/close.png);
   position: absolute;
   cursor: pointer;
 }
@@ -1299,7 +1315,7 @@ left: -485px;
 #corporate .section .dark .close-button {
   width: 23px;
   height: 23px;
-  background-image: url(../img/icon/close2.png);
+  background-image: url(../img/close2.png);
   position: absolute;
   cursor: pointer;
 }
@@ -1330,7 +1346,7 @@ left: -485px;
   margin: 30px auto;
 }
 #corporate .news-article .back a {
-  background-image: url(../img/news-releases/back.png);
+  background-image: url(../img/back.png);
   background-repeat: no-repeat;
   background-position: left center;
   padding-left: 15px;
@@ -1503,7 +1519,7 @@ left: -485px;
   color: #686868;
   position: relative;
   background-color: white;
-  background-image: url(../img/icon/dropdown.png);
+  background-image: url(../img/dropdown.png);
   background-repeat: no-repeat;
   background-position: right 18px;
   height: 41px;

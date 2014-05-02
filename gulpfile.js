@@ -21,6 +21,7 @@ var assetSrcPath = assetSrcPaths[argv.src];
 
 var paths = {
   templates: ['./src/sales/**/*.html'],
+  project: ['./src/sales/**/project.json'],
   language: ['./src/sales/**/*.language'],
   less: ['./src/sales/**/css/**/*.less'],
   images: ['./src/sales/**/img/**/*.jpg', './src/sales/**/img/**/*.png'],
@@ -42,7 +43,7 @@ var getProjectData = function(file) {
   }
 
   data = data[fileName] || {};
-  data.assetPath = 'fos/sales/themes/' + theme + '/' + path.dirname(path.normalize(assetSrcPath+file.relative)).replace('\\', '/') + '/';
+  data.assetPath = 'fos/sales/themes/' + theme + '/' + path.dirname(path.normalize(assetSrcPath + '/' + file.relative)).replace('\\', '/') + '/'; 
   data = _.extend(data, ciCodes);
   return data;
 };
@@ -112,10 +113,10 @@ gulp.task('assets-deploy', function() {
 });
 
 gulp.task('watch', function() {
-  gulp.watch(paths.templates, ['html']);
+  gulp.watch([paths.templates,paths.project], ['html']);
   gulp.watch(paths.language, ['language']);
   gulp.watch(paths.less, ['styles', 'assets-deploy']);
-  gulp.watch(paths.images, ['images']);
+  gulp.watch(paths.images, ['images', 'assets-deploy']);
 });
 
 
