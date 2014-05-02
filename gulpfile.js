@@ -66,6 +66,12 @@ var swigLangOpts = {
   setup: swigSetup
 };
 
+var swigConfigOpts = {
+  data: getProjectData,
+  ext: '.config',
+  setup: swigSetup
+};
+
 gulp.task('html', function() {
   gulp.src(assetSrcPath+'/**/*.html', {cwd: './src/sales/'})
     .pipe(changed(paths.build))
@@ -118,6 +124,14 @@ gulp.task('watch', function() {
   gulp.watch(paths.images, ['images']);
 });
 
+gulp.task('config', function() {
+  gulp.src(assetSrcPath+'/**/*.config', {cwd: './src/sales/'})
+    .pipe(changed(paths.build))
+    .pipe(fm({remove:true}))
+    .pipe(swig(swigConfigOpts))
+    .pipe(cdsm())
+    .pipe(gulp.dest(path.join(paths.build,assetSrcPath)));
+});
 
 gulp.task('build', ['html', 'language', 'styles', 'images']);
 gulp.task('css-build-deploy', ['styles', 'assets-deploy']);
