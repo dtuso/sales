@@ -13,14 +13,17 @@
       https://github.secureserver.net/FOS-CDS-Pages/Sales
 
     WEB PAGE CHAMPION:
-       <>
+      COLYN BROWN <clbrown@godaddy.com>
 
     DRAFT DETAILS:
-      Name:          -  - 
-      Created Date: 
-      Created By:    <>
-      JIRA Ticket:  
-      Comments:     
+      Name:         2014-04-02 - clbrown - FOS-12354
+      Created Date: 2014-04-02
+      Created By:   Colyn Brown <clbrown>
+      JIRA Ticket:  FOS-12354
+      Comments:     Preparing for Cart API
+
+    PREVIEW URL:
+      http://www.dev-godaddy.com/domainaddon/domain-backorders.aspx?version=sales/domainaddon/domain-backorders.aspx|533cd571f778fc35c4203ac7
 
 
 
@@ -40,23 +43,23 @@ END DOC BLOCK -->
     
 
       <meta charset="utf-8" />
-      <title>GoDaddy</title>
+      <title>[@L[cds.sales/gd/domainaddon/domain-backorders2:MetaTitle]@L]</title>
 
-      <meta name="description" content="" />
-      <meta name="keywords" content="" />
+      <meta name="description" content="[@L[cds.sales/gd/domainaddon/domain-backorders2:MetaDescription]@L]" />
+      <meta name="keywords" content="[@L[cds.sales/gd/domainaddon/domain-backorders2:MetaKeywords]@L]" />
 
       <!-- Facebook Open Graph Meta Data -->
-      <meta property="og:title" content="" />
+      <meta property="og:title" content="[@L[cds.sales/gd/domainaddon/domain-backorders2:MetaTitle]@L]" />
       <meta property="og:type" content="product" />
-      <meta property="og:url" content="[@T[link:<external linktype='siteurl' path='' secure='false' parammode='explicit'/>]@T]" />
+      <meta property="og:url" content="[@T[link:<external linktype='siteurl' path='/domainaddon/domain-backorders.aspx' secure='false' parammode='explicit'/>]@T]" />
       
       <meta property="og:site_name" content="[@T[companyname:name]@T]" />
       <meta property="fb:app_id" content="115696031791232" />
       <meta property="fb:admins" content="633356800" />
-      <meta property="og:description" content="" />
+      <meta property="og:description" content="[@L[cds.sales/gd/domainaddon/domain-backorders2:MetaDescription]@L]" />
 
       <link rel="shortcut icon" href="[@T[link:<imageroot />]@T]assets/godaddy.ico" />
-      <link rel="canonical" href="[@T[link:<external linktype='siteurl' path='' secure='false' parammode='explicit'/>]@T]"/>
+      <link rel="canonical" href="[@T[link:<external linktype='siteurl' path='/domainaddon/domain-backorders.aspx' secure='false' parammode='explicit'/>]@T]"/>
 
       <!-- Global CSS and Page CSS -->
 
@@ -128,7 +131,10 @@ END DOC BLOCK -->
                     <div class="grid-column no-padding-bottom left-side">
                         <h2>[@L[cds.sales/gd/domainaddon/domain-backorders2:PlanPricingContentRightTitle]@L]</h2>
                         <p class="starting-at"><span class="starting-at-price">$20.98</span><span class="starting-at-small">[@L[cds.sales/gd/domainaddon/domain-backorders2:PlanPricingContentRightEach]@L]</span></p>
-
+                        <form action="[@T[link:<external linktype="carturl" path="/basket.aspx" secure="true"/>]@T]" method="post" id="cart-form">
+                        <input type="hidden" name="itc" value="slp_backorder" />
+                        <input type="hidden" name="ci" value="89096" />
+                        <input type="hidden" name="package" value="domain_backorders_credits" />
                         <div class="select-box">
                             <div class="select-box-head">
                                 <div class="select-box-current">
@@ -140,31 +146,35 @@ END DOC BLOCK -->
                             <div class="select-box-body">
                                 <ul class="select-box-options">
                                     <li class="selected">
-                                        <div>
+                                        <label>
                                             <span>1-19 [@L[cds.sales/gd/domainaddon/domain-backorders2:PlanPricingContentRightCredits]@L]</span>
-                                            <span class="price">$20.98</span><span class="secondary-color">[@L[cds.sales/gd/domainaddon/domain-backorders2:PlanPricingContentRightEa]@L]</span>
-                                        </div>
+                                            <span class="price">[@T[currencyprice:<price usdamount="2098" dropsymbol="false" htmlsymbol="false" />]@T]</span><span class="secondary-color">[@L[cds.sales/gd/domainaddon/domain-backorders2:PlanPricingContentRightEa]@L]</span>
+                                            <span></span>
+                                        </label>
                                     </li>
                                     <li>
-                                        <div>
+                                        <label>
                                             <span>20-49 [@L[cds.sales/gd/domainaddon/domain-backorders2:PlanPricingContentRightCredits]@L]</span>
-                                            <span class="price">$19.93</span>
-                                            <span class="secondary-color">[@L[cds.sales/gd/domainaddon/domain-backorders2:PlanPricingContentRightEa]@L] [@L[cds.sales/gd/domainaddon/domain-backorders2:PlanPricingContentRightSave]@L] 5%<sup>&#8225;</sup></span>
-                                        </div>
+                                            <span class="price">[@T[currencyprice:<price usdamount="1993" dropsymbol="false" htmlsymbol="false" />]@T]</span>
+                                            <span class="secondary-color">[@L[cds.sales/gd/domainaddon/domain-backorders2:PlanPricingContentRightEa]@L]</span>
+                                            <span>[@L[cds.sales/gd/domainaddon/domain-backorders2:PlanPricingContentRightSave]@L] 5%<sup>&#8225;</sup></span>
+                                        </label>
                                     </li>
                                     <li>
-                                        <div>
+                                        <label>
                                             <span>50-99 [@L[cds.sales/gd/domainaddon/domain-backorders2:PlanPricingContentRightCredits]@L]</span>
-                                            <span class="price">$18.88</span>
-                                            <span class="secondary-color">[@L[cds.sales/gd/domainaddon/domain-backorders2:PlanPricingContentRightEa]@L] [@L[cds.sales/gd/domainaddon/domain-backorders2:PlanPricingContentRightSave]@L] 10%<sup>&#8225;</sup></span>
-                                        </div>
+                                            <span class="price">[@T[currencyprice:<price usdamount="1888" dropsymbol="false" htmlsymbol="false" />]@T]</span>
+                                            <span class="secondary-color">[@L[cds.sales/gd/domainaddon/domain-backorders2:PlanPricingContentRightEa]@L]</span>
+                                            <span>[@L[cds.sales/gd/domainaddon/domain-backorders2:PlanPricingContentRightSave]@L] 10%<sup>&#8225;</sup></span>
+                                        </label>
                                     </li>
                                     <li>
-                                        <div>
+                                        <label>
                                             <span>100+ [@L[cds.sales/gd/domainaddon/domain-backorders2:PlanPricingContentRightCredits]@L]</span>
-                                            <span class="price">$16.78</span>
-                                            <span class="secondary-color">[@L[cds.sales/gd/domainaddon/domain-backorders2:PlanPricingContentRightEa]@L] [@L[cds.sales/gd/domainaddon/domain-backorders2:PlanPricingContentRightSave]@L] 20%<sup>&#8225;</sup></span>
-                                        </div>
+                                            <span class="price">[@T[currencyprice:<price usdamount="1678" dropsymbol="false" htmlsymbol="false" />]@T]</span>
+                                            <span class="secondary-color">[@L[cds.sales/gd/domainaddon/domain-backorders2:PlanPricingContentRightEa]@L]</span>
+                                            <span>[@L[cds.sales/gd/domainaddon/domain-backorders2:PlanPricingContentRightSave]@L] 20%<sup>&#8225;</sup></span>
+                                        </label>
                                     </li>
                                 </ul>
                             </div><!-- select-box-body -->
@@ -172,20 +182,27 @@ END DOC BLOCK -->
 
                         <p class="text-db"><strong>[@L[cds.sales/gd/domainaddon/domain-backorders2:PlanPricingContentRightSelectQuantity]@L]</strong></p>
 
-                        <input type="text" autocomplete="off" class="search-form-input-db" placeholder="" />
+                        <input type="text" name="quantity" min="1" max="1000" value="1" />
 
                         <p class="text-db"><strong>[@L[cds.sales/gd/domainaddon/domain-backorders2:PlanPricingContentRightBackorderType]@L]</strong></p>
 
                         <section class="radio-seccion">
                             <ul class="no-bullets no-margin-bottom">
-                              <li><input type="radio" name="registration" value="public" /> <label>[@L[cds.sales/gd/domainaddon/domain-backorders2:PlanPricingContentRightPublic]@L]</label></li>
-                              <li><input type="radio" name="registration" value="private" /> <label title="Private registration protects your identity by keeping your name, address and other personal information out of the public WHOIS database. Not available for .US domains." data-html="true" class="isToolTip" data-original-title="">[@L[cds.sales/gd/domainaddon/domain-backorders2:PlanPricingContentRightPrivate]@L]</label></li>
+                              <li>
+                                <input type="radio" name="registration_type" value="public" checked="1" /> <label>[@L[cds.sales/gd/domainaddon/domain-backorders2:PlanPricingContentRightPublic]@L]</label>
+                              </li>
+                              <li>
+                                <input type="radio" name="registration_type" value="private" />
+                                <label title="[@L[cds.sales/gd/domainaddon/domain-backorders2:QuickHelp5QuickHelpItems80Text]@L]" data-html="true" class="isToolTip" data-original-title="">[@L[cds.sales/gd/domainaddon/domain-backorders2:PlanPricingContentRightPrivate]@L]</label>
+                              </li>
 
                             </ul>
                             <span class="secondary-color ">$9.99 [@L[cds.sales/gd/domainaddon/domain-backorders2:PlanPricingContentRightAditional]@L]</span>
                         </section>
+                        <p class="no-margin-bottom"><button type="submit" class="btn btn-warning btn-block btn-lg">[@L[cds.sales/shared/planbox:add-to-cart]@L]</button></p>
+                        </form>
 
-                        <p class="no-margin-bottom"><a href="#" class="btn btn-warning btn-block js-addtocart-btn btn--push-down btn-lg">Add to Cart</a></p>
+
                         <ul class="plan-pricing-list plan-pricing-list-alternate">
                             <li class="two-lines">[@L[cds.sales/gd/domainaddon/domain-backorders2:PlanPricingContentRightList0]@L]</li>
                             <li class="two-lines">[@L[cds.sales/gd/domainaddon/domain-backorders2:PlanPricingContentRightList1]@L]</li>
@@ -387,6 +404,63 @@ END DOC BLOCK -->
       $('.tab-link').tabLinks();
       $('.select-box').setSelectBox();
       $('.isToolTip').tooltip();
+
+      var $cartForm = $('#cart-form');
+      $cartForm.on('submit', function(e){
+        e.preventDefault();
+        var props = $(this).serializeObject();
+        var itc = props.itc;
+        var ci = props.ci;
+        var qty = parseInt(props.quantity || 0);
+        var pkg = props.package;
+
+        if (!qty || (qty && ( qty > 1000 || qty < 1 ))) {
+          alert('Please enter a quantity.');
+        } else {
+          var urlparams = [itc,ci,qty,pkg].join('/');
+
+          var url = '[@T[link:<relative path="api/package/add" secure="false" parammode="explicit"/>]@T]/' + urlparams;
+
+          var addCartItem = function(url) {
+            return $.ajax({
+              type: 'POST',
+              url: url,
+              dataType: 'json'
+            });
+          };
+
+          // Start Cart Submit
+          addCartItem(url).then(function(data){
+
+            if (data.Success) {
+              if (props.registration_type == 'private') {
+                urlparams = [itc,ci,1,'domain_backorders_private'].join('/');
+                var regurl = '[@T[link:<relative path="api/package/add" secure="false" parammode="explicit"/>]@T]/' + urlparams;
+                return addCartItem(regurl);
+              } else {
+                return data;
+              }
+            }
+
+          // Then redirect to cart
+          }).then(function(data){
+
+            ##if(isManager())
+              var carturl = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]';
+            ##else
+              var carturl = '[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]';
+            ##endif
+            window.location = carturl;
+
+          });
+
+
+
+        }
+
+      });
+
+
     });
 
     $(document).ready(function(){

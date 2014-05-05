@@ -1,0 +1,200 @@
+<!-- DOC BLOCK (DO NOT REMOVE)
+
+
+
+
+
+
+    IMPORTANT:
+      If version control is enabled for this page all changes to this page must also go through version control.
+
+    VERSION CONTROL:
+      https://github.secureserver.net/FOS-CDS-Pages/Sales
+
+    WEB PAGE CHAMPION:
+      COLYN BROWN <clbrown@godaddy.com>
+
+    DRAFT DETAILS:
+      Name:         2014-05-05 - clbrown - FOS-12354
+      Created Date: 2014-05-05
+      Created By:   Colyn Brown <clbrown>
+      JIRA Ticket:  FOS-12354
+      Comments:     Preparing for Cart API
+
+
+
+
+
+
+
+END DOC BLOCK -->
+<phrase key="MetaTitle" />
+Domain Backorders | Secure Your Dream Domain - GoDaddy
+<phrase key="MetaDescription" />
+Is your Domain Name already taken? Secure a chance to grab the Domain the INSTANT it becomes available with a Domain Backorder!
+<phrase key="MetaKeywords" />
+domain backorder, domain backorders, backorder domain, domain backorder, back order domain name
+<phrase key="HeaderContentMainHeading" />
+Domain Backorders
+<phrase key="HeaderContentDescription" />
+Secure your chance at the domain you really want.
+<phrase key="TabLink0" />
+Plans & Pricing
+<phrase key="TabLink1" />
+FAQ
+<phrase key="PlanPricingMiscBannerTitle0" />
+When your dream domain becomes available, you&#039;ll be ready.
+<phrase key="PlanPricingMiscBannerText0" />
+With GoDaddy Domain Backorders, you choose the name and we&#039;ll put you in position to get it. Just choose your .COM, .CO, .INFO, .ORG, .NET, .ME, .MOBI, .US, or .BIZ and we&#039;ll do the rest – it&#039;s that easy! Find out below how the backorder process works.
+<phrase key="PlanPricingContentRightTitle" />
+Domain Backorders
+<phrase key="PlanPricingContentRightEach" />
+/each
+<phrase key="PlanPricingContentRightCredits" />
+credits
+<phrase key="PlanPricingContentRightEa" />
+/ea
+<phrase key="PlanPricingContentRightSave" />
+Save
+<phrase key="PlanPricingContentRightSelectQuantity" />
+Select Quantity:
+<phrase key="PlanPricingContentRightBackorderType" />
+Backorder type:
+<phrase key="PlanPricingContentRightList0" />
+<span class="br"><strong>Includes registration cost</strong></span> and ICANN Fee
+<phrase key="PlanPricingContentRightList1" />
+<span class="br"><strong>FREE daily monitoring</strong></span> keeps an eye on your domain
+<phrase key="PlanPricingContentRightList2" />
+<span class="br"><strong>FREE one-year membership</strong></span> to <a href="[@T[link:<external linktype='siteurl' path='/auctions/domain-auctions.aspx' secure='false' parammode='explicit'/>]@T]"><span class="underlined">GoDaddy Auctions</span><sup class="regimark"></sup></a>, a [@T[currencyprice:<price usdamount="499" dropdecimal="true" dropsymbol="false" htmlsymbol="false" />]@T] value
+<phrase key="PlanPricingContentRightList3" />
+<span class="br"><strong>Valid until successful.</strong></span> <span class="br">If you don&#039;t get the domain,</span> just re-assign to a different name.
+<phrase key="PlanPricingContentRightPublic" />
+Public Registration
+<phrase key="PlanPricingContentRightPrivate" />
+Private Registration
+<phrase key="PlanPricingContentRightAditional" />
+additional per credit
+<phrase key="HighlightListTile0" />
+Fast and easy
+<phrase key="HighlightListTile1" />
+Automatic bidding
+<phrase key="HighlightListTile2" />
+Instant notification
+<phrase key="HighlightListTile3" />
+Win or try again
+<phrase key="HighlightListTile4" />
+Protect your privacy
+<phrase key="HighlightListText0" />
+Once you purchase a backorder credit, putting it to use is as simple as logging into your account, clicking on "Domain Backorders" in the "My Products" section and applying it to the name you want.
+<phrase key="HighlightListText1" />
+All backordered domains go through an auction process. If you are the first to backorder a specific domain, we&#039;ll use your backorder payment to place the opening bid – no additional charges are made.
+<phrase key="HighlightListText2" />
+There may be multiple people interested in the same domain. If you are not the first person to place a backorder on a domain, you will be notified when the domain goes to auction.
+<phrase key="HighlightListText3" />
+If you are the only person to backorder the domain, you will receive the domain at no additional cost, which also includes the first year&#039;s registration fee. If you are outbid in the auction, you will be notified that you can either place a higher bid or move your backorder credit to a different domain – backorder credits do not expire.
+<phrase key="HighlightListText4" />
+Hide your identity from the former domain owner and other prying eyes. Adding Private Registration to your backorder keeps your name, address, email and phone number from being listed in the public WHOIS database, so your personal information remains safe and secure.
+<phrase key="FaqLine1Title" />
+What is domain backordering?
+<phrase key="FaqLine1Text1" />
+Placing a domain backorder is essentially like putting a reservation on a domain name registered to someone else. If that domain name expires, you get a chance to register it before it's available to the public.
+<phrase key="FaqLine1Text2" />
+For more information, visit our <a href="[@T[link:<external linktype='communityurl' path='help/topic/903' secure='false'/>]@T]" target="_blank">Domain Backorders and Monitoring support page.</a>
+<phrase key="FaqLine2Title" />
+How do I backorder a domain name at GoDaddy?
+<phrase key="FaqLine2Text1" />
+If you don't know <strong>how to backorder a domain</strong> name, you're not alone. The process can vary slightly from registrar to registrar, but the general process is the same across the Web. When you backorder a domain name, we apply your payment to the domain name when it expires. If you're the only one who backordered the domain name, it's yours at no additional cost. If it goes to auction, we use your backorder payment to place the opening bid. You can continue to bid on the domain name, or simply move your backorder credit to another domain name.
+<phrase key="FaqLine2Text2" />
+For more information, see <a href="[@T[link:<external linktype='communityurl' path='help/article/598' secure='false'/>]@T]" target="_blank">Setting up Backorders.</a>
+<phrase key="FaqLine3Title" />
+Are domain backorders guaranteed?
+<phrase key="FaqLine3Text1" />
+While we cannot guarantee that you will secure your dream domain name, we will make every attempt to acquire it on your behalf. If the current registrant doesn't renew the domain name, we use every registration channel at our disposal to register it for you. Our backorder process gives all of our customers the chance to get the domain names they want.
+<phrase key="FaqLine3Text2" />
+For more information, see <a href="[@T[link:<external linktype='communityurl' path='help/article/600' secure='false'/>]@T]" target="_blank">Does Domain Backorders guarantee domain name registration?</a>
+<phrase key="FaqLine4Title" />
+How do I know when a backordered domain name becomes available?
+<phrase key="FaqLine4Text1" />
+If you purchase a <strong>domain name backorder</strong>, we notify you as soon as it becomes available. Plus, when you place a backorder at GoDaddy, we give you free daily monitoring tools to keep an eye on the domain name.
+<phrase key="FaqLine4Text2" />
+For more information, see <a href="[@T[link:<external linktype='communityurl' path='help/article/576' secure='false'/>]@T]" target="_blank">What is Domain Name Monitoring?</a>
+<phrase key="FaqLine5Title" />
+Why should I place my domain backorder at GoDaddy?
+<phrase key="FaqLine5Text1" />
+When you <strong>backorder a domain</strong> name at GoDaddy, we give you more than just an opportunity to secure your dream domain name. Every backorder includes free Domain Monitoring, a one-year membership to GoDaddy Auctions<sup class="regimark"></sup>, one year of domain name registration, and proceeds toward your first bid if the domain name you backordered goes to auction. If your backorder is successful, we give you a free site builder, an email account, and more.
+<phrase key="FaqLine5Text2" />
+For more information, see <a href="[@T[link:<external linktype='communityurl' path='help/article/597' secure='false'/>]@T]" target="_blank">What is Domain Backorders?</a>
+<phrase key="FaqLine6Title" />
+I purchased a domain name backorder. What happens now?
+<phrase key="FaqLine6Text1" />
+The next step is to use your Domain Monitoring membership to monitor the progress of your backorder. After you backorder a domain name, we check its status daily and send you email notifications whenever there's a change. After the current registration expires, we attempt to capture the domain name before the registry releases it to the public. If we are successful and you are the only backorder holder, you become the domain name registrant. If there are multiple backorder holders, you can participate in an auction to win the domain name.
+<phrase key="FaqLine6Text2" />
+For more information, see <a href="[@T[link:<external linktype='communityurl' path='help/article/903' secure='false'/>]@T]" target="_blank">Using the GoDaddy Auctions<sup class="regimark"></sup> Watch List.</a>
+<phrase key="FaqLine7Title" />
+Where can I view my domain backorder?
+<phrase key="FaqLine7Text1" />
+You can log in to your GoDaddy account to view and monitor your backorder in the Domain Manager. That's where we display all of the important information you need, including status updates and the domain name's expiration date.
+<phrase key="FaqLine7Text2" />
+For more information, see <a href="[@T[link:<external linktype='communityurl' path='help/article/3682' secure='false'/>]@T]" target="_blank">Viewing Your Backordered and Monitored Domain Names.</a>
+<phrase key="FaqLine8Title" />
+Can I add privacy to my domain name backorder?
+<phrase key="FaqLine8Text1" />
+Yes. By default, your personal contact information is publicly displayed in the Whois database when you register a domain name. Don't worry – it's easy to protect yourself by adding Domains By Proxy<sup>&reg;</sup> Private Registration to your backorder.
+<phrase key="FaqLine8Text2" />
+For more information, see <a href="[@T[link:<external linktype='communityurl' path='help/article/1017' secure='false'/>]@T]" target="_blank">Adding Privacy to Backordered Domain Names.</a>
+<phrase key="FaqLine9Title" />
+When can I expect to receive the backordered domain name in my account?
+<phrase key="FaqLine9Text1" />
+If we are successful in our attempt to secure your dream domain, we register the domain name to you and then put it in your account within 45 days. One year of domain name registration is included in the cost of your backorder.
+<phrase key="FaqLine9Text2" />
+For more information, see What is <a href="[@T[link:<external linktype='communityurl' path='help/article/597' secure='false'/>]@T]" target="_blank">Domain Backorders?</a>
+<phrase key="FaqLine10Title" />
+My backorder was unsuccessful. What should I do?
+<phrase key="FaqLine10Text1" />
+If your domain name backorder is unsuccessful, we recommend trying again with a different domain name. Moving your backorder to another domain name is fast and free.
+<phrase key="FaqLine10Text2" />
+For more information, see <a href="[@T[link:<external linktype='communityurl' path='help/article/6007' secure='false'/>]@T]" target="_blank">Changing a Backorder to a Different Domain Name.</a>
+<phrase key="PacakgeBtn" />
+Choose Your Package
+<phrase key="MainContentFooterPagesTabText" />
+Support
+<phrase key="PlanSummaryTitle1" />
+Receive support and exchange ideas. Join the product group of your choice on GoDaddy Support to:
+<phrase key="PlanSummaryTitle2" />
+Our expert sales and support staff are available 24/7:
+<phrase key="PlanSummaryText1" />
+Get direct access to info and news that interests you
+<phrase key="PlanSummaryText2" />
+Gain access to new features
+<phrase key="PlanSummaryText3" />
+Find discount codes
+<phrase key="PlanSummaryText4" />
+Interact with other members
+<phrase key="PlanSummaryText5" />
+Check out beta releases
+<phrase key="PlanSummaryText6" />
+Participate in polls and much more
+<phrase key="PlanSummaryText7" />
+Technical support and sales:
+<phrase key="PlanSummaryText8" />
+FASTEST! Expected Wait Time: 11 minutes
+<phrase key="PlanSummaryText9" />
+Email support: <a href="[@T[link:<external linktype='communityurl' path='/' secure='false' />]@T]" target="_blank">Access Email Support System</a> Expected Wait Time: 6 hours
+<phrase key="PlanSummaryTechSupportPhone" />
+[@T[supportphone:<domains />]@T]
+<phrase key="DisclaimerContentSymbols" />
+&#8225;
+<phrase key="DisclaimerContentLinkText" />
+Click here for product disclaimers and legal policies.
+<phrase key="DisclaimerContentDisclaimer" />
+Third-party logos and marks are registered trademarks of their respective owners. All rights reserved.
+<phrase key="DisclaimerModalTitle" />
+Disclaimers
+<phrase key="DisclaimerModalListItem1" />
+Domains placed on backorder prior to March 2009, as well as those already backordered through an authorized GoDaddy reseller, are limited to the original backorder request.
+<phrase key="DisclaimerModalListItem2" />
+&#8225; Annual discounts available on NEW purchases only.
+<phrase key="DisclaimerModalListItem3" />
+Products will automatically renew until cancelled. You may turn off the auto-renewal feature by visiting your GoDaddy account.
+<phrase key="QuickHelp5QuickHelpItems80Text" />
+Private registration protects your identity by keeping your name, address and other personal information out of the public WHOIS database. Not available for .US domains.
