@@ -1,0 +1,10 @@
+.DS_Store
+/node_modules/
+/.tmp/
+./lib/.salesupdate
+<<<<<<< HEAD
+/lib/.salesupdate
+=======
+/lib/.salesupdate
+lib/.salesupdate
+>>>>>>> 9faa6be5d3a4fb058bc9f3dc66a121aabe54f14f

@@ -342,12 +342,14 @@
 #corporate .section.story {
   background-image: url(../img/bg.jpg);
 }
-#corporate .section.story .inner {
-  height: 620px;
-}
+
 #corporate .section.story .team {
   margin-top: 195px;
   width: 270px;
+}
+
+#section-story  h2 {
+  margin-bottom:0px;  
 }
 #corporate .section.story .inner > h2 {
   color: #fff;
@@ -389,7 +391,6 @@ html[lang*=de] #corporate .section.story .inner > .team  p {
   font-size: 36px;
   color: #FFFFFF;
 }
-
 #corporate .section.latam-news-releases .news-release-article-wrapper:hover{
   cursor: pointer;
 }
@@ -482,6 +483,25 @@ html[lang*=fr] #corporate .section.godaddy-is .fact .yui3-c .customer-support {
   position: relative;
   cursor: pointer;
 }
+
+#corporate .section.news .yui3-c h3 {
+  line-height: 29px;
+}
+
+#corporate .section.news .yui3-c p {
+  line-height: 20px;
+}
+
+#corporate .section.news .yui3-c div {
+  line-height: 17px;
+}
+
+#corporate .news-release-white h3,
+#corporate .news-release-white p,
+#corporate .news-release-white div {
+  color:white;
+}
+
 #corporate .section.news .content {
   width: 100%;
   height: 542px;
@@ -503,10 +523,11 @@ html[lang*=fr] #corporate .section.godaddy-is .fact .yui3-c .customer-support {
   width: 100%;
   height: 100%;
 }
+
 #corporate .section.news .summary {
   position: absolute;
   bottom: 0;
-  padding: 20px;
+  padding: 10px 9px;
 }
 #corporate .section.news .summary h3 {
   margin-top: 10px;
@@ -570,12 +591,13 @@ html[lang*=fr] #corporate .section.godaddy-is .fact .yui3-c .customer-support {
 #corporate .section.news.news-releases h2 {
   color: white;
 }
+
 #corporate .section.news.news-releases .view-more {
   border-color: #9ab365;
   color: white;
 }
 #corporate .section.news.news-releases .view-more .title {
-  background-image: url(../img/news-next.png);
+  background-image: url(../img/releases-next.png);
 }
 #corporate .section.customers {
   padding: 0;
@@ -1565,31 +1587,44 @@ left: -485px;
   clear: both;
   margin-bottom: 10px;
 }
-  #corporate .captcha-wrapper .LBD_CaptchaDiv{
-    float: left;
-    width: 140px !important;
-    margin-top: 5px;
-  }
+#corporate .captcha-wrapper .LBD_CaptchaDiv{
+  float: left;
+  width: 140px !important;
+  margin-top: 5px;
+}
 
-  #corporate .captcha-wrapper span{
-    display: none;
-  }
+#corporate .captcha-wrapper span{
+  display: none;
+}
 
-    #corporate .captcha-wrapper .LBD_CaptchaImage{
-      border: 1px solid #b3b3b3;
-      margin-right: 10px;
-    }
+#corporate .captcha-wrapper .LBD_CaptchaImage{
+  border: 1px solid #b3b3b3;
+  margin-right: 10px;
+}
 
-  #corporate .captcha-wrapper .LBD_CaptchaImage{
-    float: left;
-  }
+#corporate .captcha-wrapper .LBD_CaptchaImage{
+  float: left;
+}
 
-  #corporate .captcha-wrapper input[type=text]{
-    display: block;
-    height: 39px;
-    line-height: 39px;
-    border: 1px solid #b3b3b3;
-    padding: 0 10px;
-    margin-left: 20px;
-    float: left;
-  }
+#corporate .captcha-wrapper input[type=text]{
+  display: block;
+  height: 39px;
+  line-height: 39px;
+  border: 1px solid #b3b3b3;
+  padding: 0 10px;
+  margin-left: 20px;
+  float: left;
+}
+
+#section-contact-us,
+#section-team {
+  background-color: #fff;
+}
+
+#section-customers p {
+  margin: 0px;
+}
+body {
+  /* fixes the new cm layout issue with grey just above the bottom common footer. */
+  background-color: white!important;
+}
