@@ -128,6 +128,7 @@
   list-style: initial;
 }
 /* INTERNATIONAL FIXES */
+html[lang*=nl] .grid-column h2,
 html[lang*=br] .grid-column h2,
 html[lang*=sv] .grid-column h2,
 html[lang*=fi] .grid-column h2,
