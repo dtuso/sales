@@ -5,9 +5,23 @@ This repository is now the single place to store all pages, where previously eac
 not strictly), was a separate repository. The reason for this change is it became apparent that managing that growing
 list of repositories, was getting to be more and more difficult, especially as each has its own version of Grunt.
 
-There are trade-offs of course. While it will now be easier to manage all repositories, as a team, we'll have to be especially
-careful to manage merges and conflicts, as this repository will be modified by many developers working on many different
-projects.
+There are trade-offs of course. While it will now be easier to manage all repositories, as a team, we'll have to be especially careful to manage merges and conflicts, as this repository will be modified by many developers working on many different projects.
+
+---
+
+UPDATE: The build folder is no longer being included into the repository because of the exponential growth. If you need to review and search the compiled output in lieu of it being gone, note that the contents of the folder has been moved to:
+
+Via Windows
+
+```
+I:\Delta\Developer\FOS-CDS-Sales-Backup
+```
+
+Via OS X
+
+```
+smb://jomax.paholdings.com/data/Delta/Developer/FOS-CDS-Sales-Backup
+```
 
 Install
 =====

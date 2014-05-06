@@ -1,1 +1,23 @@
-{}
+{
+  "ciCodes": {
+    "plans": "89089",
+    "faq": "89090",
+    "disclaimer": "89091",
+    "publicreg": "89089",
+    "privatereg": "89089",
+    "addtocart": "89096",
+    "auctions": "89097",
+    "support": "89098",
+    "faqDomainSupport": "89099",
+    "faqSetup": "89100",
+    "faqGuarantee": "89101",
+    "faqWhatIsDomainMonitoring": "89102",
+    "faqWhatIsDomain": "89103",
+    "faqWatchList": "89104",
+    "faqViewingDomains": "89105",
+    "faqDomainPrivacy": "89106",
+    "faqDomainQuestion": "89107",
+    "faqChangingName": "89108",
+    "faqChooseYourPackage": "89109"
+  }
+}

@@ -35,14 +35,14 @@
       },
       "cdsLocation": "localization/sales/gd/ssl/ssl-certificates/en",
       "draft": {
-        "id": "535fea43f778fc0784730f8d",
-        "createdDate": "2014-04-28",
+        "id": false,
+        "createdDate": "2014-05-06",
         "createdBy": {
-          "fullName": "Colyn Brown",
-          "username": "clbrown"
+          "fullName": "Dominic Tuso",
+          "username": "dtuso"
         },
-        "jiraTicket": "FOS-11169",
-        "comments": "Reskin"
+        "jiraTicket": "FOS-20408",
+        "comments": "fix extra words where apostrophes should be"
       }
     }
   }
