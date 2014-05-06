@@ -35,14 +35,14 @@
       },
       "cdsLocation": "localization/sales/gd/ssl/dedicated-ip/en",
       "draft": {
-        "id": "53683044f778fc1100fa392c",
+        "id": "53690d42f778fc1100fa3932",
         "createdDate": "2014-05-05",
         "createdBy": {
           "fullName": "Dominic Tuso",
           "username": "dtuso"
         },
         "jiraTicket": "FOS-20029",
-        "comments": "Spelling error for receive"
+        "comments": "Spelling error fix"
       }
     }
   }
