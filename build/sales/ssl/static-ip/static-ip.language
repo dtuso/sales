@@ -15,11 +15,11 @@
       Colyn Brown <clbrown@godaddy.com>
 
     DRAFT DETAILS:
-      Name:         2014-04-14 - clbrown - None
-      Created Date: 2014-04-14
-      Created By:   Colyn Brown <clbrown>
-      JIRA Ticket:  None
-      Comments:     Prep for github
+      Name:         2014-05-05 - dtuso - FOS-20029
+      Created Date: 2014-05-05
+      Created By:   Dominic Tuso <dtuso>
+      JIRA Ticket:  FOS-20029
+      Comments:     Spelling error for receive
 
 
 
@@ -77,7 +77,7 @@ Get to your site even when your domain name is not available, such as during dom
 <phrase key="MainContentFooterPagesTabText" />
 Support
 <phrase key="PlanSummaryTitle1" />
-Recieve support and exchange ideas. Join the Community on GoDaddy Support to:
+Receive support and exchange ideas. Join the Community on GoDaddy Support to:
 <phrase key="PlanSummaryTitle2" />
 Our experts sales and support staff are available 24/7.
 <phrase key="PlanSummaryText1" />

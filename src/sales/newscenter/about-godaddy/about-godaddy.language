@@ -1,3 +1,8 @@
+---
+location: sales/newscenter/about-godaddy.aspx
+id: 5362d0cdf778fc27b88b10a1
+name: FOS-18668
+---
 {% include '../modules/doc-block.html' %}
 <phrase key="NewsCenterAbout-AFinePortraitsVideo" />
 <div class="video" data-video="JQwTqt8gkjM">
