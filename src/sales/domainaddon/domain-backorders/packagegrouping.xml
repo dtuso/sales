@@ -1,0 +1,323 @@
+---
+location: packages/packagegrouping
+id: 5367e177f778fc26c405ca9a
+name: FOS-12354
+---
+<PackageGroups>
+  <PackageGroup Name="Hosting" ProductGroupId="1">
+    <Packages>
+      <Package id="host_GridHostUnlDiabloLinMo_us" />
+      <Package id="host_GridHostUnlDiabloLin1Yr_us" />
+      <Package id="host_GridHostUnlDiabloLin2Yr_us" />
+      <Package id="host_GridHostUnlDiabloLin3Yr_us" />
+      <Package id="host_GridHostUnlDiabloLin4Yr_us" />
+      <Package id="host_GridHostUnlDiabloLin5Yr_us" />
+      <Package id="host_GridHostDlxDiabloLinMo_us" />
+      <Package id="host_GridHostDlxDiabloLin1Yr_us" />
+      <Package id="host_GridHostDlxDiabloLin2Yr_us" />
+      <Package id="host_GridHostDlxDiabloLin3Yr_us" />
+      <Package id="host_GridHostDlxDiabloLin4Yr_us" />
+      <Package id="host_GridHostDlxDiabloLin5Yr_us" />
+      <Package id="host_GridHostEcoDiabloLinMo_us" />
+      <Package id="host_GridHostEcoDiabloLin3Mo_us" />
+      <Package id="host_GridHostEcoDiabloLin1Yr_us" />
+      <Package id="host_GridHostEcoDiabloLin2Yr_us" />
+      <Package id="host_GridHostEcoDiabloLin3Yr_us" />
+      <Package id="host_GridHostEcoDiabloLin4Yr_us" />
+      <Package id="host_GridHostEcoDiabloLin5Yr_us" />
+      <Package id="host_GridHostUnlAngeloWinMo_us" />
+      <Package id="host_GridHostUnlAngeloWin1Yr_us" />
+      <Package id="host_GridHostUnlAngeloWin2Yr_us" />
+      <Package id="host_GridHostUnlAngeloWin3Yr_us" />
+      <Package id="host_GridHostUnlAngeloWin4Yr_us" />
+      <Package id="host_GridHostUnlAngeloWin5Yr_us" />
+      <Package id="host_GridHostDlxAngeloWinMo_us" />
+      <Package id="host_GridHostDlxAngeloWin3Mo_us" />
+      <Package id="host_GridHostDlxAngeloWin1Yr_us" />
+      <Package id="host_GridHostDlxAngeloWin2Yr_us" />
+      <Package id="host_GridHostDlxAngeloWin3Yr_us" />
+      <Package id="host_GridHostDlxAngeloWin4Yr_us" />
+      <Package id="host_GridHostDlxAngeloWin5Yr_us" />
+      <Package id="host_GridHostEcoAngeloWinMo_us" />
+      <Package id="host_GridHostEcoAngeloWin1Yr_us" />
+      <Package id="host_GridHostEcoAngeloWin2Yr_us" />
+      <Package id="host_GridHostEcoAngeloWin3Yr_us" />
+      <Package id="host_GridHostEcoAngeloWin4Yr_us" />
+      <Package id="host_GridHostEcoAngeloWin5Yr_us" />
+      <Package id="wordpres_BasicMo_us" />
+      <Package id="wordpres_Basic1Yr_us" />
+      <Package id="wordpres_Basic2Yr_us" />
+      <Package id="wordpres_Basic3Yr_us" />
+      <Package id="wordpres_Basic5Yr_us" />
+      <Package id="wordpres_dlxMo_us" />
+      <Package id="wordpres_dlx1Yr_us" />
+      <Package id="wordpres_dlx2Yr_us" />
+      <Package id="wordpres_dlx3Yr_us" />
+      <Package id="wordpres_dlx5Yr_us" />
+      <Package id="wordpres_PremMo_us" />
+      <Package id="wordpres_Prem1Yr_us" />
+      <Package id="wordpres_Prem2Yr_us" />
+      <Package id="wordpres_Prem3Yr_us" />
+      <Package id="wordpres_Prem5Yr_us" />
+      <Package id="reseller_Basic1Yr_us" />
+      <Package id="reseller_Basic2Yr_us" />
+      <Package id="reseller_Basic3Yr_us" />
+      <Package id="reseller_Basic5Yr_us" />
+      <Package id="reseller_Pro1Yr_us" />
+      <Package id="reseller_Pro2Yr_us" />
+      <Package id="reseller_Pro3Yr_us" />
+      <Package id="reseller_Pro5Yr_us" />
+      <Package id="reseller_Super1Yr_us" />
+      <Package id="reseller_Super2Yr_us" />
+      <Package id="reseller_Super3Yr_us" />
+      <Package id="reseller_Super5Yr_us" />
+    </Packages>
+  </PackageGroup>
+  <PackageGroup Name="Office365" ProductGroupId="99">
+    <Packages>
+      <Package id="OfficeEmailMsftMo" />
+      <Package id="OfficeEmailMsft1Yr" />
+      <Package id="OfficeEmailMsft2Yr" />
+      <Package id="OfficeBusMsftMo" />
+      <Package id="OfficeBusMsft1Yr" />
+      <Package id="OfficeBusMsft2Yr" />
+      <Package id="OfficeBusPremMsftMo" />
+      <Package id="OfficeBusPremMsft3Mo" />
+      <Package id="OfficeBusPremMsft1Yr" />
+      <Package id="OfficeBusPremMsft2Yr" />
+      <Package id="Office365ConfigData" />
+    </Packages>
+  </PackageGroup>
+  <PackageGroup Name="SSL" ProductGroupId="22">
+    <Packages>
+      <Package id="ssl_std_1" />
+      <Package id="ssl_std_2" />
+      <Package id="ssl_std_3" />
+      <Package id="ssl_std_4" />
+      <Package id="ssl_std_5" />
+      <Package id="ssl_std_1_5" />
+      <Package id="ssl_std_2_5" />
+      <Package id="ssl_std_3_5" />
+      <Package id="ssl_std_4_5" />
+      <Package id="ssl_std_5_5" />
+      <Package id="ssl_std_1_10" />
+      <Package id="ssl_std_2_10" />
+      <Package id="ssl_std_3_10" />
+      <Package id="ssl_std_4_10" />
+      <Package id="ssl_std_5_10" />
+      <Package id="ssl_std_1_15" />
+      <Package id="ssl_std_2_15" />
+      <Package id="ssl_std_3_15" />
+      <Package id="ssl_std_4_15" />
+      <Package id="ssl_std_5_15" />
+      <Package id="ssl_std_1_20" />
+      <Package id="ssl_std_2_20" />
+      <Package id="ssl_std_3_20" />
+      <Package id="ssl_std_4_20" />
+      <Package id="ssl_std_5_20" />
+      <Package id="ssl_std_1_30" />
+      <Package id="ssl_std_2_30" />
+      <Package id="ssl_std_3_30" />
+      <Package id="ssl_std_4_30" />
+      <Package id="ssl_std_5_30" />
+      <Package id="ssl_std_1_40" />
+      <Package id="ssl_std_2_40" />
+      <Package id="ssl_std_3_40" />
+      <Package id="ssl_std_4_40" />
+      <Package id="ssl_std_5_40" />
+      <Package id="ssl_std_1_50" />
+      <Package id="ssl_std_2_50" />
+      <Package id="ssl_std_3_50" />
+      <Package id="ssl_std_4_50" />
+      <Package id="ssl_std_5_50" />
+      <Package id="ssl_std_1_100" />
+      <Package id="ssl_std_2_100" />
+      <Package id="ssl_std_3_100" />
+      <Package id="ssl_std_4_100" />
+      <Package id="ssl_std_5_100" />
+      <Package id="ssl_std_1_wc" />
+      <Package id="ssl_std_2_wc" />
+      <Package id="ssl_std_3_wc" />
+      <Package id="ssl_std_4_wc" />
+      <Package id="ssl_std_5_wc" />
+      <Package id="ssl_dlx_1" />
+      <Package id="ssl_dlx_2" />
+      <Package id="ssl_dlx_3" />
+      <Package id="ssl_dlx_1_5" />
+      <Package id="ssl_dlx_2_5" />
+      <Package id="ssl_dlx_3_5" />
+      <Package id="ssl_dlx_1_10" />
+      <Package id="ssl_dlx_2_10" />
+      <Package id="ssl_dlx_3_10" />
+      <Package id="ssl_dlx_1_15" />
+      <Package id="ssl_dlx_2_15" />
+      <Package id="ssl_dlx_3_15" />
+      <Package id="ssl_dlx_1_20" />
+      <Package id="ssl_dlx_2_20" />
+      <Package id="ssl_dlx_3_20" />
+      <Package id="ssl_dlx_1_30" />
+      <Package id="ssl_dlx_2_30" />
+      <Package id="ssl_dlx_3_30" />
+      <Package id="ssl_dlx_1_40" />
+      <Package id="ssl_dlx_2_40" />
+      <Package id="ssl_dlx_3_40" />
+      <Package id="ssl_dlx_1_50" />
+      <Package id="ssl_dlx_2_50" />
+      <Package id="ssl_dlx_3_50" />
+      <Package id="ssl_dlx_1_100" />
+      <Package id="ssl_dlx_2_100" />
+      <Package id="ssl_dlx_3_100" />
+      <Package id="ssl_dlx_1_wc" />
+      <Package id="ssl_dlx_2_wc" />
+      <Package id="ssl_dlx_3_wc" />
+      <Package id="ssl_prm_1" />
+      <Package id="ssl_prm_2" />
+    </Packages>
+  </PackageGroup>
+  <PackageGroup Name="Locu" ProductGroupId="104">
+    <Packages>
+      <Package id="locu_BasicQtr" />
+      <Package id="locu_Basic1Yr" />
+      <Package id="locu_Basic2Yr" />
+      <Package id="locu_Basic3Yr" />
+      <Package id="locu_Basic5Yr" />
+      <Package id="locu_PremQtr" />
+      <Package id="locu_Prem1Yr" />
+      <Package id="locu_Prem2Yr" />
+      <Package id="locu_Prem3Yr" />
+      <Package id="locu_Prem5Yr" />
+      <Package id="locu_PremPlusQtr" />
+      <Package id="locu_PremPlus1Yr" />
+      <Package id="locu_PremPlus2Yr" />
+      <Package id="locu_PremPlus3Yr" />
+      <Package id="locu_PremPlus5Yr" />
+    </Packages>
+  </PackageGroup>
+  <PackageGroup Name="SEV" ProductGroupId="13">
+    <Packages>
+      <Package id="sev_1yr" />
+      <Package id="sev_2yr" />
+      <Package id="sev_3yr" />
+    </Packages>
+  </PackageGroup>
+  <PackageGroup Name="usfoods" ProductGroupId="5">
+    <Packages>
+      <Package id="wsb_bus_12mo" />
+      <Package id="web_design_service_standard_12mo" />
+      <Package id="eem_delux_12mo" />
+    </Packages>
+  </PackageGroup>
+  <PackageGroup Name="gdob" ProductGroupId="1">
+    <Packages>
+      <Package id="gdob_1month" />
+      <Package id="gdob_1year" />
+    </Packages>
+  </PackageGroup>
+  <PackageGroup Name="bobsblog" ProductGroupId="1">
+    <Packages>
+      <Package id="RulesPosterSmall" />
+      <Package id="RulesPosterMedium" />
+      <Package id="RulesPosterLarge" />
+      <Package id="RulesPosterSignedSmall" />
+      <Package id="RulesPosterSignedMedium" />
+      <Package id="RulesPosterSignedLarge" />
+    </Packages>
+  </PackageGroup>
+  <PackageGroup Name="security" ProductGroupId="107">
+    <Packages>
+      <Package id="sitelock_Basic1Yr" />
+      <Package id="sitelock_Basic2Yr" />
+      <Package id="sitelock_Basic3Yr" />
+      <Package id="sitelock_Basic5Yr" />
+      <Package id="sitelock_dlx1Yr" />
+      <Package id="sitelock_dlx2Yr" />
+      <Package id="sitelock_dlx3Yr" />
+      <Package id="sitelock_dlx5Yr" />
+      <Package id="sitelock_Prem1Yr" />
+      <Package id="sitelock_Prem2Yr" />
+      <Package id="sitelock_Prem3Yr" />
+      <Package id="sitelock_Prem5Yr" />
+    </Packages>
+  </PackageGroup>
+  <PackageGroup Name="redemptioncodes" ProductGroupId="1">
+    <Packages>
+      <Package id="dittoMusicDomain" />
+    </Packages>
+  </PackageGroup>
+  <PackageGroup Name="turnkeyreseller" ProductGroupId="33">
+    <Packages>
+      <Package id="turnkeyreseller_Basic1Yr" />
+      <Package id="turnkeyreseller_Basic2Yr" />
+      <Package id="turnkeyreseller_Basic3Yr" />
+      <Package id="turnkeyreseller_Basic5Yr" />
+      <Package id="turnkeyreseller_Pro1Yr" />
+      <Package id="turnkeyreseller_Pro2Yr" />
+      <Package id="turnkeyreseller_Pro3Yr" />
+      <Package id="turnkeyreseller_Pro5Yr" />
+      <Package id="turnkeyreseller_Super1Yr" />
+      <Package id="turnkeyreseller_Super2Yr" />
+      <Package id="turnkeyreseller_Super3Yr" />
+      <Package id="turnkeyreseller_Super5Yr" />
+    </Packages>
+  </PackageGroup>
+  <PackageGroup Name="logodesign" ProductGroupId="52">
+    <Packages>
+      <Package id="logodesign_standard" />
+      <Package id="logodesign_deluxe" />
+    </Packages>
+  </PackageGroup>
+  <PackageGroup Name="quickshoppingcart" ProductGroupId="23">
+    <Packages>
+      <Package id="qsc_economy1month" />
+      <Package id="qsc_economy1year" />
+      <Package id="qsc_economy2year" />
+      <Package id="qsc_economy3year" />
+      <Package id="qsc_deluxe1month" />
+      <Package id="qsc_deluxe1year" />
+      <Package id="qsc_deluxe2year" />
+      <Package id="qsc_deluxe3year" />
+      <Package id="qsc_premium1month" />
+      <Package id="qsc_premium1year" />
+      <Package id="qsc_premium2year" />
+      <Package id="qsc_premium3year" />
+    </Packages>
+  </PackageGroup>
+  <PackageGroup Name="domainlpconfigs" ProductGroupId="1">
+    <Packages>
+      <Package id="domainlp_in" />
+      <Package id="domainlp_es" />
+      <Package id="domainlp_us" />
+      <Package id="domainlp_br" />
+      <Package id="domainlp_au" />
+      <Package id="domainlp_ve" />
+      <Package id="domainlp_at" />
+      <Package id="domainlp_be" />
+      <Package id="domainlp_dk" />
+      <Package id="domainlp_my" />
+      <Package id="domainlp_nl" />
+      <Package id="domainlp_pt" />
+      <Package id="domainlp_pl" />
+      <Package id="domainlp_se" />
+      <Package id="domainlp_de" />
+      <Package id="domainlp_ch" />
+      <Package id="domainlp_fi" />
+      <Package id="domainlp_gr" />
+      <Package id="domainlp_it" />
+      <Package id="domainlp_fr" />
+      <Package id="domainlp_ru" />
+      <Package id="domainlp_ua" />
+      <Package id="domainlp_tr" />
+      <Package id="domainlp_no" />
+      <Package id="domainlp_cl" />
+      <Package id="domainlp_uk" />
+      <Package id="domainlp_ie" />
+      <Package id="domainlp_sg" />
+    </Packages>
+  </PackageGroup>
+  <PackageGroup Name="domainbackorders" ProductGroupId="1">
+    <Packages>
+      <Package id="domain_backorders_credits" />
+      <Package id="domain_backorders_private" />
+    </Packages>
+  </PackageGroup>
+</PackageGroups>
