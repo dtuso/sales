@@ -33,9 +33,9 @@
         "name": "Colyn Brown",
         "email": "clbrown@godaddy.com"
       },
-      "cdsLocation": "localization/sales/gd/ssl/static-ip/en",
+      "cdsLocation": "localization/sales/gd/ssl/dedicated-ip/en",
       "draft": {
-        "id": "53681c06f778fc1100fa3925",
+        "id": "53683044f778fc1100fa392c",
         "createdDate": "2014-05-05",
         "createdBy": {
           "fullName": "Dominic Tuso",

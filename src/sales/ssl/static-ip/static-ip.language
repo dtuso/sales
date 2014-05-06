@@ -1,6 +1,6 @@
 ---
-location: localization/sales/gd/ssl/static-ip/en
-id: 53681c06f778fc1100fa3925
+location: localization/sales/gd/ssl/dedicated-ip/en
+id: 53683044f778fc1100fa392c
 name: FOS-20029
 ---
 {% include '../modules/doc-block.html' %}
