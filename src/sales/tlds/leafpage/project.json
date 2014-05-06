@@ -1,0 +1,47 @@
+{
+  "gtld.html": {
+    "cdsDetails": {
+      "champion": {
+        "name": "Joel Conrad",
+        "email": "jconrad@godaddy.com"
+      },
+      "cdsLocation": "sales/tlds/gtld.aspx",
+      "draft": {
+        "id": "5360434df778fc1808589225",
+        "createdDate": "2014-04-29",
+        "createdBy": {
+          "fullName": "Mohseen",
+          "username": "mjamal"
+        },
+        "jiraTicket": "FOS-19459",
+        "comments": "gTLD LP update for .LONDON launch",
+        "url": "http://www.dev-godaddy.com/tlds/gtld.aspx"
+      }
+    },
+    "metaTitle": "[@L[cds.sales/gd/tlds/gtld:MetaTitle]@L]",
+    "metaDescription": "[@L[cds.sales/gd/tlds/gtld:MetaDescription]@L]",
+    "metaKeywords": "[@L[cds.sales/gd/tlds/gtld:MetaKeywords]@L]",
+    "metaCanonicalPath": "/tlds/gtld.aspx",
+    "metaOgTitle": "[@L[cds.sales/gd/tlds/gtld:MetaTitle]@L]",
+    "metaOgDescription": "[@L[cds.sales/gd/tlds/gtld:MetaDescription]@L]"
+  },
+  "gtld.language": {
+    "cdsDetails": {
+      "champion": {
+        "name": "Joel Conrad",
+        "email": "jconrad@godaddy.com"
+      },
+      "cdsLocation": "localization/sales/gd/tlds/gtld/en",
+      "draft": {
+        "id": "false",
+        "createdDate": "2014-04-29",
+        "createdBy": {
+          "fullName": "Mohseen Jamal",
+          "username": "mjamal"
+        },
+        "jiraTicket": "FOS-19459",
+        "comments": "gTLD LP update for .LONDON launch"
+      }
+    }
+  }
+}
