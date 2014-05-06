@@ -16,14 +16,14 @@
       David Utley <dutley@godaddy.com>
 
     DRAFT DETAILS:
-      Name:         2014-04-02 - clbrown - None
-      Created Date: 2014-04-02
-      Created By:   Colyn Brown <clbrown>
-      JIRA Ticket:  None
-      Comments:     Prep for new build process
+      Name:         2014-05-05 - blunt - FOS-14231
+      Created Date: 2014-05-05
+      Created By:   Byron Lunt <blunt>
+      JIRA Ticket:  FOS-14231
+      Comments:     adding some internationalized images and syncing with github
 
     PREVIEW URL:
-      http://www.dev-godaddy.com/hosting/website-builder.aspx?version=sales/hosting/website-builder.aspx|5345cf82f778fc0e805a9217
+      http://www.dev-godaddy.com/hosting/website-builder.aspx?version=sales/hosting/website-builder.aspx|5368215bf778fc1100fa392b
 
 
 
@@ -41,14 +41,42 @@ END DOC BLOCK -->
 
   <head>
     
-  
 
       <meta charset="utf-8" />
-      <title>[@L[cds.sales/gd/hosting/website-builder:page-title]@L]</title>
+      
+  ##if(activeLanguageAny(es))
+  <title>[@L[cds.sales/gd/hosting/website-builder:page-title-es]@L]</title>
+  ##elseif(countrySiteAny(au))
+  <title>[@L[cds.sales/gd/hosting/website-builder:page-title-au]@L]</title>
+  ##elseif(countrySiteAny(ca))
+  <title>[@L[cds.sales/gd/hosting/website-builder:page-title-ca]@L]</title>
+  ##elseif(countrySiteAny(in))
+  <title>[@L[cds.sales/gd/hosting/website-builder:page-title-in]@L]</title>
+  ##elseif(countrySiteAny(uk))
+  <title>[@L[cds.sales/gd/hosting/website-builder:page-title-uk]@L]</title>
+  ##else
+  <title>[@L[cds.sales/gd/hosting/website-builder:page-title]@L]</title>
+  ##endif
 
-      <meta name="description" content="[@L[cds.sales/gd/hosting/website-builder:meta-description]@L]" />
+      
+  ##if(activeLanguageAny(es))
+  <meta name="description" content="[@L[cds.sales/gd/hosting/website-builder:meta-description-es]@L]" />
+  ##elseif(countrySiteAny(au))
+  <meta name="description" content="[@L[cds.sales/gd/hosting/website-builder:meta-description-au]@L]" />
+  ##elseif(countrySiteAny(ca))
+  <meta name="description" content="[@L[cds.sales/gd/hosting/website-builder:meta-description-ca]@L]" />
+  ##elseif(countrySiteAny(in))
+  <meta name="description" content="[@L[cds.sales/gd/hosting/website-builder:meta-description-in]@L]" />
+  ##elseif(countrySiteAny(uk))
+  <meta name="description" content="[@L[cds.sales/gd/hosting/website-builder:meta-description-uk]@L]" />
+  ##else
+  <meta name="description" content="[@L[cds.sales/gd/hosting/website-builder:meta-description]@L]" />
+  ##endif
+
       <meta name="keywords" content="[@L[cds.sales/gd/hosting/website-builder:meta-keywords]@L]" />
-
+      
+  
+      
       <!-- Facebook Open Graph Meta Data -->
       <meta property="og:title" content="[@L[cds.sales/gd/hosting/website-builder:og-title]@L]" />
       <meta property="og:type" content="product" />
@@ -68,8 +96,8 @@ END DOC BLOCK -->
 
       <link href="[@T[link:<css path='fos/201401/global/css/3.4.1/combined-3.4.1.css' />]@T]" rel="stylesheet" type="text/css">
       
-      <!--  -->
-      <link href="[@T[link:<css path='fos/sales/themes/scotty/hosting/website-builder/css/styles.css' />]@T]" rel="stylesheet" type="text/css">
+      <!-- 0 -->
+      <link href="[@T[link:<css path='fos/sales/themes/scotty/hosting/website-builder/css/styles.css' />]@T]?v=0" rel="stylesheet" type="text/css">
       
       <!-- IE SUPPORT FOR HTML5 and Bootstrap 3 -->
       <!--[if lt IE 9]>
@@ -86,76 +114,86 @@ END DOC BLOCK -->
 
     
 
-  ##if(countrySiteAny(es,pt))
-      <!-- International Background Images -->
-      <style type="text/css">
-      .tab-content-plans-pricing-bg-website-builder {
-        background-image: url("[@T[link:<cssroot />]@T]fos/201401/hosting/website-builder/img/LATAM_planbg.jpg");
-      }
-      .plan-pricing-help {
-        background-image: url("[@T[link:<cssroot />]@T]fos/201401/hosting/website-builder/img/LATAM_bg-here-to-help.jpg");
-        background-position: -100px 0;
-      }
-      </style>
-  ##endif
-
-  ##if(countrySiteAny(in,pk))
-      <!-- International Background Images -->
-      <style type="text/css">
-      .tab-content-plans-pricing-bg-website-builder {
-        background-image: url("[@T[link:<cssroot />]@T]fos/201401/hosting/website-builder/img/IN_planbg.jpg");
-      }
-      .plan-pricing-help {
-        background-image: url("[@T[link:<cssroot />]@T]fos/201401/hosting/website-builder/img/IN_bg-here-to-help.jpg");
-      }
-      </style>
-  ##endif
-
-  ##if(countrySiteAny(my, ph, sg))
-      <!-- International Background Images -->
-      <style type="text/css">
-      .tab-content-plans-pricing-bg-website-builder {
-        background-image: url("[@T[link:<cssroot />]@T]fos/201401/hosting/website-builder/img/ASIA_planbg.jpg");
-      }
-      .plan-pricing-help {
-        background-image: url("[@T[link:<cssroot />]@T]fos/201401/hosting/website-builder/img/ASIA_bg-here-to-help.jpg");
-      }
-      </style>
-  ##endif
-
-  ##if(activeLanguageAny(en))
-  <style>
-  .tab-content-plans-pricing-bg-website-builder {
-      background-image: url("[@T[link:<cssroot />]@T]fos/201401/hosting/website-builder/img/wsb_banner_content_eng.jpg");
+##if(countrySiteAny(in,pk))
+    <!-- International Background Images -->
+    <style type="text/css">
+    .tab-content-plans-pricing-bg-website-builder {
+      background-image: url("[@T[link:<cssroot />]@T]fos/201401/hosting/website-builder/img/IN_planbg.jpg");
     }
-  </style>
-  ##else
-  <style>
-  .tab-content-plans-pricing-bg-website-builder {
-      background-image: url("[@T[link:<cssroot />]@T]fos/201401/hosting/website-builder/img/wsb_banner_content_int.jpg");
+    .plan-pricing-help {
+      background-image: url("[@T[link:<cssroot />]@T]fos/201401/hosting/website-builder/img/IN_bg-here-to-help.jpg");
     }
-  </style>
-  ##endif
-
-  <style>
-    .main-banner.main-banner-website-builder {
-      background-image: url("[@T[link:<cssroot />]@T]fos/201401/hosting/website-builder/img/header_top_wsb_fixed2.jpg");
-    }
-    .main-banner-content.main-banner-content-website-builder > .misc-banner-content-website-builder,
-    .misc-banner-link {
-      color: #fff !important;
-    }
-  </style>
-
-  <style type="text/css">
-      .seo-content {
-      height: 480px;
-    }
-  </style>
-  <style>
-    .vat-tax-message { line-height:16px;width:302px;margin-bottom:5px;margin-top:-3px; }
     </style>
+##endif
 
+##if(countrySiteAny(my, ph, sg))
+    <!-- International Background Images -->
+    <style type="text/css">
+    .tab-content-plans-pricing-bg-website-builder {
+      background-image: url("[@T[link:<cssroot />]@T]fos/201401/hosting/website-builder/img/ASIA_planbg.jpg");
+    }
+    .plan-pricing-help {
+      background-image: url("[@T[link:<cssroot />]@T]fos/201401/hosting/website-builder/img/ASIA_bg-here-to-help.jpg");
+    }
+    </style>
+##endif
+
+##if(countrySiteAny(tr))
+<style>
+.tab-content-plans-pricing-bg-website-builder {
+    background-image: url("[@T[link:<cssroot />]@T]fos/201401/hosting/website-builder/img/update_MED_wsb_banner_content_eng.jpg");
+  }
+</style>
+##elseif(countrySiteAny(dk,fi,no,se,at,pl,hu,ru,ua,gr))
+<style>
+.tab-content-plans-pricing-bg-website-builder {
+    background-image: url("[@T[link:<cssroot />]@T]fos/201401/hosting/website-builder/img/NOR_wsb_banner_content_eng.min.jpg");
+  }
+</style>
+##elseif(activeLanguageAny(en))
+<style>
+.tab-content-plans-pricing-bg-website-builder {
+  background-image: url("[@T[link:<cssroot />]@T]fos/201401/hosting/website-builder/img/wsb_banner_content_eng.jpg");
+}
+</style>
+##else
+<style type="text/css">
+.tab-content-plans-pricing-bg-website-builder {
+  background-image: url("[@T[link:<cssroot />]@T]fos/201401/hosting/website-builder/img/wsb_banner_content_int.jpg");
+}
+</style>
+##endif
+
+##if(activeLanguageAny(en))
+##else
+<style>
+.xsell-tile {
+  width: auto;
+}
+.xsell-content {
+  width: auto;
+  margin-top: -20px;
+}
+</style>
+##endif
+
+<style>
+  .main-banner-content.main-banner-content-website-builder > .misc-banner-content-website-builder,
+  .misc-banner-link {
+    color: #fff !important;
+  }
+</style>
+<style>
+  .vat-tax-message { line-height:16px;width:302px;margin-bottom:5px;margin-top:-3px; }
+</style>
+
+<!--[if lt IE 8]>
+<style>
+  .main-banner-text {
+    width:495px;
+  }
+</style>
+<![endif]-->
 
 
 
@@ -167,15 +205,29 @@ END DOC BLOCK -->
     <div class="border-box" role="main">
 
       
- <section class="main-banner main-banner-website-builder">
+
+  <!-- Start main-banner -->  
+  ##if(activeLanguageAny(en))
+  <section class="main-banner main-banner-website-builder">
       <div class="l-main-container container main-banner-content main-banner-content-website-builder">
         <span class="ribbon ribbon-right">
-            <i class="marquee-flag marquee-flag-[@T[localization:<language />]@T] marquee-flag-free-domain-included"></i>
+            <i class="marquee-flag marquee-flag-[@T[localization:<language />]@T] marquee-flag-[@T[localization:<language full='true'/>]@T] marquee-flag-free-domain-included"></i>
         </span>
         <div class="main-banner-text">
-          <h1 class="main-banner-title condensed"><strong>[@L[cds.sales/gd/hosting/website-builder:main-banner-subtitle]@L]</strong></h1>
+  ##else
+   <section>
+      <div class="marquee marquee-bg">
+        <div class="marquee-content marquee-font">
+          <span class="ribbon ribbon-right absolute-position">
+            <i class="marquee-flag marquee-flag-[@T[localization:<language />]@T] marquee-flag-[@T[localization:<language full='true'/>]@T] marquee-flag-free-domain-included"></i>
+          </span>
+          <span class="marquee-text-1 marquee-font-light">[@L[cds.sales/gd/hosting/website-builder:your-website]@L]</span>
+          <span class="marquee-text-2 marquee-font-light">[@L[cds.sales/gd/hosting/website-builder:here-too]@L]</span>  
+          <div class="main-banner-text text-padding">
+  ##endif 
+          <h1 class="main-banner-title condensed right-padding"><strong>[@L[cds.sales/gd/hosting/website-builder:main-banner-subtitle]@L]</strong></h1>
           <h2 class="main-banner-subtitle main-banner-subtitle-alternate">[@L[cds.sales/gd/hosting/website-builder:main-banner-title]@L]</h2>
-          <ul class="main-banner-list">
+          <ul class="main-banner-list no-wrap">
               <li><span class="wsb-black-check"></span><span class="wsb-li-content">[@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-1]@L]</span></li>
               <li><span class="wsb-black-check"></span><span class="wsb-li-content">[@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-2]@L]</span></li>
               <li><span class="wsb-black-check"></span><span class="wsb-li-content">[@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-3]@L]</span></li>
@@ -191,7 +243,10 @@ END DOC BLOCK -->
           </form>
         </div>
       </div>
-  </section>
+     ##if(!activeLanguageAny(en))
+     </div>
+     ##endif
+  </section>  
   <!-- End main-banner -->
 
   <!-- Start main-tabs -->
@@ -221,9 +276,10 @@ END DOC BLOCK -->
       </div>
     </section>
     <!-- End misc-banner -->
-        <div class="row">
-            <div class="col-xs-4" id="column-1">
+        <div class="row" data-gd-sidebysidealign="{}">
+            <div class="col-xs-4" id="column-1" data-gd-sidebysidealign-col="1">
                 <div class="grid-column no-padding-bottom relative">
+                  <div data-gd-sidebysidealign-row="1">
                     <h2>
                       ##if(countrySiteAny(uk))
                       [@L[cds.sales/gd/hosting/website-builder:economy-title]@L]
@@ -231,13 +287,15 @@ END DOC BLOCK -->
                       [@L[cds.sales/gd/hosting/website-builder:personal-title]@L]
                       ##endif
                     </h2>
-                    <p class="font-16 margin-bottom-12">
+                    <p class="font-16 margin-bottom-12 price-description-lead">
                       ##if(countrySiteAny(uk))
                       [@L[cds.sales/gd/hosting/website-builder:economy-description]@L]
                        ##else
                       [@L[cds.sales/gd/hosting/website-builder:personal-description]@L]
                       ##endif
                     </p>
+                  </div>
+                  <div data-gd-sidebysidealign-row="2">
                     <p class="starting-at">
                         <span class="starting-at-price">[@T[productprice:<current productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T][@L[cds.sales/gd/hosting/website-builder:month]@L]</span>
                     </p>
@@ -252,6 +310,8 @@ END DOC BLOCK -->
                        <div class="vat-tax-message">[@L[cds.sales/gd/hosting/website-builder:vat-price]@L]</div>
                     ##endif
                   </div>
+                  </div>
+                  <div data-gd-sidebysidealign-row="3">
                         <form id="addtocart-form" method="POST" action="[@T[link:<relative path="~/hosting/website-builder-config.aspx" />]@T]">
                         <div class="select-box">
                             <div class="select-box-head">
@@ -339,31 +399,35 @@ END DOC BLOCK -->
                         </div><!-- select-box -->
                     <p><button type="submit" data-form="addtocart-form" class="btn btn-warning btn-block js-addtocart-btn btn--push-down btn-lg" data-ci="87842">[@L[cds.sales/gd/hosting/website-builder:planbox-cart-btn]@L]</button></p>
                         </form>
+                  </div>
                     <ul class="plan-pricing-list">
-                        <li class="two-lines">[@L[cds.sales/gd/hosting/website-builder:plan-domain]@L]<span class="br"></span><a class="simple-link websitebuilder-tooltip isToolTip item-note" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltip]@L]">[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-restricitons]@L]</a></li>
-                        <li>
+                        <li data-gd-sidebysidealign-row="4">[@L[cds.sales/gd/hosting/website-builder:plan-domain]@L]<span class="br"></span><a class="simple-link websitebuilder-tooltip isToolTip item-note" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltip]@L]">[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-restricitons]@L]</a></li>
+                        <li data-gd-sidebysidealign-row="5">
                             ##if(countrySiteAny(uk))
                             [@L[cds.sales/gd/hosting/website-builder:economy-themes]@L]
                             ##else
                             [@L[cds.sales/gd/hosting/website-builder:personal-themes]@L]
                             ##endif
                         </li>
-                        <li>[@L[cds.sales/gd/hosting/website-builder:business-pages]@L]</li>
-                        <li>[@L[cds.sales/gd/hosting/website-builder:economy-diskspace]@L]</li>
-                        <li>[@L[cds.sales/gd/hosting/website-builder:economy-bandwidth]@L]</li>
-                        <li>-</li>
-                        <li>-</li>
-                        <li>-</li>
-                        <li>-</li>
-                        <li>-</li>
+                        <li data-gd-sidebysidealign-row="6">[@L[cds.sales/gd/hosting/website-builder:business-pages]@L]</li>
+                        <li data-gd-sidebysidealign-row="7">[@L[cds.sales/gd/hosting/website-builder:economy-diskspace]@L]</li>
+                        <li data-gd-sidebysidealign-row="8">[@L[cds.sales/gd/hosting/website-builder:economy-bandwidth]@L]</li>
+                        <li data-gd-sidebysidealign-row="9">-</li>
+                        <li data-gd-sidebysidealign-row="10">-</li>
+                        <li data-gd-sidebysidealign-row="11">-</li>
+                        <li data-gd-sidebysidealign-row="12">-</li>
+                        <li data-gd-sidebysidealign-row="13">-</li>
                     </ul>
                 </div>
             </div>
-            <div class="col-xs-4" id="column-2">
+            <div class="col-xs-4" id="column-2" data-gd-sidebysidealign-col="2">
                 <div class="grid-column no-padding-bottom relative">
+                  <div data-gd-sidebysidealign-row="1">
                     <span class="badge badge-small badge-important badge-upper-right">[@L[cds.sales/gd/hosting/website-builder:popular-tag]@L]</span>
                     <h2>[@L[cds.sales/gd/hosting/website-builder:business-title]@L]</h2>
-                    <p class="font-16 margin-bottom-12 ">[@L[cds.sales/gd/hosting/website-builder:business-description]@L]</p>
+                    <p class="font-16 margin-bottom-12 price-description-lead">[@L[cds.sales/gd/hosting/website-builder:business-description]@L]</p>
+                  </div>
+                  <div data-gd-sidebysidealign-row="2">
                   <p class="starting-at"><span class="starting-at-price">[@T[productprice:<current productid="7509" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses"  />]@T][@L[cds.sales/gd/hosting/website-builder:month]@L]</span></p>
                    ##if(productHasSavingsMoreThan(7509, 7509, 0))
                         <p class="margin-bottom-12">
@@ -374,6 +438,8 @@ END DOC BLOCK -->
                         ##if(countrySiteAny(uk))
                             <div class="vat-tax-message">[@L[cds.sales/gd/hosting/website-builder:vat-price]@L]</div>
                         ##endif
+                  </div>
+                  <div data-gd-sidebysidealign-row="3">
                         <form id="addtocart-form2" method="POST" action="[@T[link:<relative path="~/hosting/website-builder-config.aspx" />]@T]">
                         <div class="select-box">
                             <div class="select-box-head">
@@ -461,31 +527,35 @@ END DOC BLOCK -->
                         </div><!-- select-box -->
                     <p><button type="submit" data-form="addtocart-form" class="btn btn-warning btn-block js-addtocart-btn btn--push-down btn-lg" data-ci="87843">[@L[cds.sales/gd/hosting/website-builder:planbox-cart-btn]@L]</button></p>
                         </form>
+                  </div>
                     <ul class="plan-pricing-list">
-                        <li class="two-lines">[@L[cds.sales/gd/hosting/website-builder:plan-domain]@L]<span class="br"></span><a class="simple-link websitebuilder-tooltip isToolTip item-note" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltip]@L]">[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-restricitons]@L]</a></li>
-                        <li>
+                        <li data-gd-sidebysidealign-row="4">[@L[cds.sales/gd/hosting/website-builder:plan-domain]@L]<span class="br"></span><a class="simple-link websitebuilder-tooltip isToolTip item-note" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltip]@L]">[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-restricitons]@L]</a></li>
+                        <li data-gd-sidebysidealign-row="5">
                             ##if(countrySiteAny(uk))
                             [@L[cds.sales/gd/hosting/website-builder:business-themes-uk]@L]
                             ##else
                             [@L[cds.sales/gd/hosting/website-builder:business-themes]@L]
                             ##endif
                         </li>
-                        <li>[@L[cds.sales/gd/hosting/website-builder:unlimited-pages]@L]</li>
-                        <li>[@L[cds.sales/gd/hosting/website-builder:business-diskspace]@L]</li>
-                        <li>[@L[cds.sales/gd/hosting/website-builder:business-bandwidth]@L]</li>
-                        <li>[@L[cds.sales/gd/hosting/website-builder:business-email]@L]</li>
-                        <li>[@L[cds.sales/gd/hosting/website-builder:business-mobile]@L]</li>
-                        <li>-</li>
-                        <li>-</li>
-                        <li>-</li>
+                        <li data-gd-sidebysidealign-row="6">[@L[cds.sales/gd/hosting/website-builder:unlimited-pages]@L]</li>
+                        <li data-gd-sidebysidealign-row="7">[@L[cds.sales/gd/hosting/website-builder:business-diskspace]@L]</li>
+                        <li data-gd-sidebysidealign-row="8">[@L[cds.sales/gd/hosting/website-builder:business-bandwidth]@L]</li>
+                        <li data-gd-sidebysidealign-row="9">[@L[cds.sales/gd/hosting/website-builder:business-email]@L]</li>
+                        <li data-gd-sidebysidealign-row="10">[@L[cds.sales/gd/hosting/website-builder:business-mobile]@L]</li>
+                        <li data-gd-sidebysidealign-row="11">-</li>
+                        <li data-gd-sidebysidealign-row="12">-</li>
+                        <li data-gd-sidebysidealign-row="13">-</li>
                     </ul>
                 </div>
             </div>
-            <div class="col-xs-4"id="column-3">
+            <div class="col-xs-4"id="column-3" data-gd-sidebysidealign-col="3">
                 <div class="grid-column no-padding-bottom relative">
+                  <div data-gd-sidebysidealign-row="1">
                     <span class="badge badge-small badge-important badge-upper-right">[@L[cds.sales/gd/hosting/website-builder:wsb-plus-seo]@L]</span>
                     <h2>[@L[cds.sales/gd/hosting/website-builder:unlimited-title]@L]</h2>
-                    <p class="font-16 margin-bottom-12">[@L[cds.sales/gd/hosting/website-builder:unlimited-description]@L]</p>
+                    <p class="font-16 margin-bottom-12 price-description-lead">[@L[cds.sales/gd/hosting/website-builder:unlimited-description]@L]</p>
+                  </div>
+                  <div data-gd-sidebysidealign-row="2">
                         <p class="starting-at"><span class="starting-at-price">[@T[productprice:<current productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses"  />]@T][@L[cds.sales/gd/hosting/website-builder:month]@L]</span>
                         </p>
                         ##if(productHasSavingsMoreThan(7514, 7514, 0))
@@ -497,12 +567,14 @@ END DOC BLOCK -->
                         ##if(countrySiteAny(uk))
                              <div class="vat-tax-message">[@L[cds.sales/gd/hosting/website-builder:vat-price]@L]</div>
                         ##endif
+                  </div>
+                  <div data-gd-sidebysidealign-row="3">
                         <form id="addtocart-form3" method="POST" action="[@T[link:<relative path="~/hosting/website-builder-config.aspx" />]@T]">
                         <div class="select-box">
                             <div class="select-box-head">
                                 <div class="select-box-current">
                                     <span class="price-left">[@L[cds.sales/gd/hosting/website-builder:12-months]@L]</span>
-                                    <span class="price">[@T[productprice:<current productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses"  />]@T]</span>
+                                    <span class="price">[@T[productprice:<current productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses"  />]@T][@L[cds.sales/gd/hosting/website-builder:month]@L]</span>
                                     ##if(productHasSavingsMoreThan(7514, 7514, 0))
                                     <span class="save price-right">[@L[cds.sales/gd/hosting/website-builder:onSale]@L]</span>
                                     ##endif
@@ -518,7 +590,7 @@ END DOC BLOCK -->
                                                 <span class="price-left">[@L[cds.sales/gd/hosting/website-builder:1-month]@L]</span>
                                                 <span class="price">[@T[productprice:<current productid="7503" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses"  />]@T][@L[cds.sales/gd/hosting/website-builder:month]@L]</span>
                                                 ##if(productHasSavingsMoreThan(7503, 7503, 0))
-                                                <span class="save">[@L[cds.sales/gd/hosting/website-builder:onSale]@L]</span>
+                                                <span class="save price-right">[@L[cds.sales/gd/hosting/website-builder:onSale]@L]</span>
                                                 <div>
                                                   <span class="price-left">&nbsp;</span>
                                                   <span>[@T[productprice:<template productid="7503" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T][@L[cds.sales/gd/hosting/website-builder:month]@L]</span>
@@ -584,23 +656,24 @@ END DOC BLOCK -->
                         </div><!-- select-box -->
                     <p><button type="submit" data-form="addtocart-form" class="btn btn-warning btn-block js-addtocart-btn btn--push-down btn-lg" data-ci="87844">[@L[cds.sales/gd/hosting/website-builder:planbox-cart-btn]@L]</button></p>
                         </form>
+                  </div>
                     <ul class="plan-pricing-list">
-                        <li class="two-lines">[@L[cds.sales/gd/hosting/website-builder:plan-domain]@L]<span class="br"></span><a class="simple-link websitebuilder-tooltip isToolTip item-note" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltip]@L]">[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-restricitons]@L]</a></li>
-                        <li>
+                        <li data-gd-sidebysidealign-row="4">[@L[cds.sales/gd/hosting/website-builder:plan-domain]@L]<span class="br"></span><a class="simple-link websitebuilder-tooltip isToolTip item-note" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltip]@L]">[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-restricitons]@L]</a></li>
+                        <li data-gd-sidebysidealign-row="5">
                              ##if(countrySiteAny(uk))
                             [@L[cds.sales/gd/hosting/website-builder:unlimited-themes-uk]@L]
                             ##else
                             [@L[cds.sales/gd/hosting/website-builder:unlimited-themes]@L]
                             ##endif
                         </li>
-                        <li>[@L[cds.sales/gd/hosting/website-builder:unlimited-pages]@L]</li>
-                        <li>[@L[cds.sales/gd/hosting/website-builder:unlimited-diskspace]@L]</li>
-                        <li>[@L[cds.sales/gd/hosting/website-builder:unlimited-bandwidth]@L]</li>
-                        <li>[@L[cds.sales/gd/hosting/website-builder:unlimited-email]@L]</li>
-                        <li>[@L[cds.sales/gd/hosting/website-builder:unlimited-mobile]@L]</li>
-                        <li class="two-lines">[@L[cds.sales/gd/hosting/website-builder:unlimited-seo]@L]</li>
-                        <li>[@L[cds.sales/gd/hosting/website-builder:unlimited-social]@L]</li>
-                        <li class="two-lines">[@L[cds.sales/gd/hosting/website-builder:unlimited-ssl]@L]</li>
+                        <li data-gd-sidebysidealign-row="6">[@L[cds.sales/gd/hosting/website-builder:unlimited-pages]@L]</li>
+                        <li data-gd-sidebysidealign-row="7">[@L[cds.sales/gd/hosting/website-builder:unlimited-diskspace]@L]</li>
+                        <li data-gd-sidebysidealign-row="8">[@L[cds.sales/gd/hosting/website-builder:unlimited-bandwidth]@L]</li>
+                        <li data-gd-sidebysidealign-row="9">[@L[cds.sales/gd/hosting/website-builder:unlimited-email]@L]</li>
+                        <li data-gd-sidebysidealign-row="10">[@L[cds.sales/gd/hosting/website-builder:unlimited-mobile]@L]</li>
+                        <li data-gd-sidebysidealign-row="11">[@L[cds.sales/gd/hosting/website-builder:unlimited-seo]@L]</li>
+                        <li data-gd-sidebysidealign-row="12">[@L[cds.sales/gd/hosting/website-builder:unlimited-social]@L]</li>
+                        <li data-gd-sidebysidealign-row="13">[@L[cds.sales/gd/hosting/website-builder:unlimited-ssl]@L]</li>
                     </ul>
                 </div>
             </div>
@@ -623,7 +696,7 @@ END DOC BLOCK -->
                         <i class="ico ico-gt-circle-alternate"></i><span class="br"></span>
                         <span class="video-link-text-alternate font-18"><strong>[@L[cds.sales/gd/hosting/website-builder:video-link-text]@L]</strong></span>
                     </a>
-                    ##endif
+                    
                 </div>
                  <div class="modal fade videoModal myVideoModal" id="myVideoModal">
                   <div class="modal-dialog">
@@ -638,7 +711,7 @@ END DOC BLOCK -->
                         <iframe class="embedVideoIE7" width="854" height="480" src="//www.youtube.com/embed/wXlQyXhIsH8?html5=1&rel=0" autoplay scrolling="no" frameborder="0" allowfullscreen>
                         </iframe>
                         <![endif]-->
-                        ##else
+                        ##elseif(activeLanguageAny(en))
                         <div class="embedVideo" id="ytplayer1" data-id="-HtVJyxSQmw"></div>
                         <!--[if lt IE 8]>
                         <iframe class="embedVideoIE7" width="854" height="480" src="//www.youtube.com/embed/-HtVJyxSQmw?html5=1&rel=0" autoplay scrolling="no" frameborder="0" allowfullscreen>
@@ -650,6 +723,7 @@ END DOC BLOCK -->
                   </div>
                 </div>
             </div>
+          ##endif
         </div>
         <div class="row tab-content equal-height">
             <div class="col-xs-6">
@@ -667,7 +741,7 @@ END DOC BLOCK -->
                     <p class="no-margin-bottom"><em>[@L[cds.sales/gd/hosting/website-builder:they-can-company]@L]</em></p>
                     ##if(activeLanguageAny(en))
                     <a href="#" class="video-link" data-toggle="modal" data-target="#myVideoModal2" data-ci="87764"><i class="ico ico-gt-circle-alternate"></i><span class="br"></span><span class="video-link-text-alternate font-18"><strong>[@L[cds.sales/gd/hosting/website-builder:video-link-text]@L]</strong></span></a>
-                    ##endif
+                    
                     <div class="modal fade videoModal myVideoModal" id="myVideoModal2">
                           <div class="modal-dialog">
                             <div class="modal-content">
@@ -684,6 +758,7 @@ END DOC BLOCK -->
                             </div>
                         </div>
                     </div>
+                  ##endif
                 </div>
             </div>
         </div>
@@ -698,7 +773,7 @@ END DOC BLOCK -->
                     <p><strong>[@L[cds.sales/gd/hosting/website-builder:seofs-label]@L]</strong></p>
                     <div class="plan-pricing-seo-business-plus">
                         <h4>[@L[cds.sales/gd/hosting/website-builder:unlimited-plan-title]@L]</h4>
-                        <p class="secondary-color no-margin-bottom"><small>[@L[cds.sales/gd/hosting/website-builder:plans-from]@L]</small> <span class="seo-business-plus"><strong>[@T[productprice:<current productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses"  />]@T]</strong></span>[@L[cds.sales/gd/hosting/website-builder:mo]@L]</p>
+                      <p class="secondary-color no-margin-bottom"><small>[@L[cds.sales/gd/hosting/website-builder:plans-from]@L]</small> <span class="seo-business-plus"><strong>[@T[productprice:<current productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses"  />]@T]</strong></span>[@L[cds.sales/gd/hosting/website-builder:mo]@L]</p>
                         <form class="seo-business-plus-form" id="addtocart-form" method="POST" action="[@T[link:<relative path="~/hosting/website-builder-config.aspx" />]@T]">
                             <label>
                                 <input type="radio" checked="checked" name="product" value="7514|1|1" />
@@ -736,6 +811,7 @@ END DOC BLOCK -->
             <div class="xsell-content-line"><a href="[@T[link:<relative path="~/hosting/wordpress-hosting.aspx" />]@T]" data-ci="88753"><span class="xsell-learn"><i class="ico ico-gt-circle-small-alternate"></i>&nbsp;[@L[cds.sales/gd/hosting/website-builder:learn-more]@L]</span></a></div>
           </div>
         </div>
+        ##if(activeLanguageAny(en))
         <div class="xsell-tile left-bar">
           <div class="qsc-xsell"></div>
           <div class="xsell-content">
@@ -747,6 +823,7 @@ END DOC BLOCK -->
             <div class="xsell-content-line"><a href="[@T[link:<relative path="~/ecommerce/shopping-cart-new1.aspx" />]@T]" data-ci="88754"><span class="xsell-learn"><i class="ico ico-gt-circle-small-alternate"></i>&nbsp;[@L[cds.sales/gd/hosting/website-builder:learn-more]@L]</span></a></div>
           </div>
         </div>
+        ##endif
       </div>
       ##if(activeLanguageAny(es,[pt-br]))
       <div class="xsell-bottom">
@@ -935,7 +1012,6 @@ END DOC BLOCK -->
 
 
 
-
     </div>
 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer" />]@P]
@@ -948,7 +1024,10 @@ END DOC BLOCK -->
     <script src="[@T[link:<javascriptroot />]@T]fos/201401/global/vendor/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
     <script src="[@T[link:<javascriptroot />]@T]fos/201401/global/js/2.1.0/global-2.1.0.min.js" type="text/javascript" ></script>
     
-    <script type="text/javascript">
+  <script src="[@T[link:<js path='fos/sales/themes/scotty/hosting/website-builder/js/website-builder.js' />]@T]" type="text/javascript"></script>
+  <script src="[@T[link:<js path='fos/201401/global/js/plugins.js' />]@T]" type="text/javascript"></script>
+
+  <script type="text/javascript">
 
   var ytPlayerList = {}; // Maps youtube player with its appropiate iframe based on the iframe id
 
@@ -987,6 +1066,73 @@ END DOC BLOCK -->
     window.location.hash = '#plans-pricing';
   });
 
+  // gdSideBySideAlign plugin
+  (function ( $, window, document, undefined ) {
+
+    var pluginName = 'gdSideBySideAlign',
+        defaults = {
+          bailIfRowCountsMismatch : true
+    };
+
+    function GDSideBySideAlign( element, options ) {
+      this.element = element;
+      this.options = $.extend( {}, defaults, options);
+      this._defaults = defaults;
+      this._name = pluginName;
+      this.init();
+    }
+
+    GDSideBySideAlign.prototype.init = function () {
+
+        // Find the columns
+        var $columns = $(this.element).find('[data-gd-sidebysidealign-col]');
+
+        if($columns.length == 0) {
+          return; // bail if no columns found
+        }
+
+        // Make sure columns have an equal number of rows
+        var numRows = 0, equalLength = true;
+        $.each($columns, function(idx,item){
+          var $rows = $(item).find('[data-gd-sidebysidealign-row]');
+          if(numRows == 0) {
+            numRows = $rows.length;
+          }
+          if(equalLength) {
+            if(numRows != $rows.length) equalLength = false;
+          }
+        });
+        if(numRows==0 || !equalLength && this.options.bailIfRowCountsMismatch) {
+          return; // bail if no rows, or rows are not equal length
+        }
+
+        // loop thru each row and grab the largest cell height and apply to each cell in that row
+        for(var i=1; i<=numRows; i++) {
+          var $cells = $columns.find('[data-gd-sidebysidealign-row="' + i + '"]' );
+          var maxHeight = 0;
+          $.each($cells,function(idx, cell){
+            maxHeight = Math.max(maxHeight, $(cell).height());
+          });
+          $cells.height(maxHeight);
+        }
+
+    }; /* end GDSideBySideAlign.prototype.init */
+
+    // register the function to be used
+    $.fn[pluginName] = function ( options ) {
+      return this.each(function () {
+        if (!$.data(this, 'plugin_' + pluginName)) {
+          $.data(this, 'plugin_' + pluginName, new GDSideBySideAlign( this, $(this).data('gd-sidebysidealign') || options ));
+        }
+      });
+    };
+
+    // load the plugin
+    $(document).ready(function(){
+      $('[data-gd-sidebysidealign]').gdSideBySideAlign();
+    });
+
+  })( jQuery, window, document );
 </script>
 
   </body>

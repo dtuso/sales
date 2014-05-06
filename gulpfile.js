@@ -6,6 +6,7 @@ var _ = require('lodash');
 var path = require('path');
 var fs = require('fs');
 var cssmin = require('gulp-cssmin');
+var uglify = require('gulp-uglifyjs');
 var rename = require('gulp-rename');
 var cdsm = require('gulp-cdsm');
 var fm = require('gulp-front-matter');
@@ -104,6 +105,16 @@ gulp.task('styles', function() {
   }
 });
 
+gulp.task('scripts', function() {
+  if (assetSrcPath) {
+  gulp.src(assetSrcPath+'/**/js/*.js', {cwd: './src/sales/'})
+    .pipe(gulp.dest(path.join(paths.build,assetSrcPath)))
+    .pipe(uglify())
+    .pipe(rename(({suffix: '.min'})))
+    .pipe(gulp.dest(path.join(paths.build,assetSrcPath)));
+  }
+});
+
 gulp.task('images', function() {
   if (assetSrcPath) {
     gulp.src(assetSrcPath+'/**/img/*', {cwd: './src/sales/'})
@@ -134,7 +145,7 @@ gulp.task('config', function() {
     .pipe(gulp.dest(path.join(paths.build,assetSrcPath)));
 });
 
-gulp.task('build', ['html', 'language', 'styles', 'images']);
+gulp.task('build', ['html', 'language', 'styles', 'scripts', 'images']);
 gulp.task('css-build-deploy', ['styles', 'assets-deploy']);
 gulp.task('default', ['watch']);
 
