@@ -15,11 +15,11 @@
       Dominic Tuso <dtuso@godaddy.com>
 
     DRAFT DETAILS:
-      Name:         2014-04-28 - clbrown - FOS-11169
-      Created Date: 2014-04-28
-      Created By:   Colyn Brown <clbrown>
-      JIRA Ticket:  FOS-11169
-      Comments:     Reskin
+      Name:         2014-05-06 - dtuso - FOS-20408
+      Created Date: 2014-05-06
+      Created By:   Dominic Tuso <dtuso>
+      JIRA Ticket:  FOS-20408
+      Comments:     fix extra words where apostrophes should be
 
 
 
@@ -143,15 +143,15 @@ Get a FREE 1 year Standard SSL Certificate! <a href="[@T[link:<relative path='/s
 <phrase key="MainPageContentTabContent5FAQTitle1" />
 What is an SSL Certificate?
 <phrase key="MainPageContentTabContent5FAQList1A" />
-SSL stands for Secure Socket Layer. It might sound complex, but itPlans & Pricings really not. SSL Certificates validate your websitePlans & Pricings identity, and encrypt the information visitors send to, or receive from, your site. This keeps thieves from spying on any exchange between you and your shoppers.
+SSL stands for Secure Socket Layer. It might sound complex, but it&#039;s really not. SSL Certificates validate your website&#039;s identity, and encrypt the information visitors send to, or receive from, your site. This keeps thieves from spying on any exchange between you and your shoppers.
 <phrase key="MainPageContentTabContent5FAQList1B" />
-When you have an SSL Certificate protecting your website, your customers can rest assured that the information they enter on any secured page is private and canPlans & Pricingt be viewed by cyber crooks. GoDaddy makes it easy to install your certificate and secure your server.
+When you have an SSL Certificate protecting your website, your customers can rest assured that the information they enter on any secured page is private and can&#039;t be viewed by cyber crooks. GoDaddy makes it easy to install your certificate and secure your server.
 <phrase key="MainPageContentTabContent5FAQList1C" />
 For more information, see <a target="_blank" href="[@T[link:<external linktype='communityurl' path='help/article/542' secure='false'/>]@T]" data-ci="89608">Defining SSL Certificates.</a>
 <phrase key="MainPageContentTabContent5FAQTitle2" />
 What are the benefits of having an SSL Certificate on my website?
 <phrase key="MainPageContentTabContent5FAQList2A" />
-GoDaddy SSL Certificates inspire trust and show visitors that you value their privacy. An <strong>SSL Cert</strong> protects your customersPlans & Pricing sensitive information such as their name, address, password, or credit card number by encrypting the data during transmission from their computer to your web server. SSL is the standard for web security, and a <strong>Server Certificate</strong> is required by most merchant account services &ndash; youPlans & Pricingll need one if you plan to accept credit cards on your website.
+GoDaddy SSL Certificates inspire trust and show visitors that you value their privacy. An <strong>SSL Cert</strong> protects your customers&#039; sensitive information such as their name, address, password, or credit card number by encrypting the data during transmission from their computer to your web server. SSL is the standard for web security, and a <strong>Server Certificate</strong> is required by most merchant account services &ndash; you&#039;ll need one if you plan to accept credit cards on your website.
 <phrase key="MainPageContentTabContent5FAQList2B" />
 For more information, see <a target="_blank" href="[@T[link:<external linktype='communityurl' path='help/article/847' secure='false'/>]@T]" data-ci="89609">How does an SSL certificate work?</a>
 <phrase key="MainPageContentTabContent5FAQTitle3" />
