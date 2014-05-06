@@ -1,3 +1,8 @@
+---
+location: localization/sales/gd/ssl/static-ip/en
+id: 53681c06f778fc1100fa3925
+name: FOS-20029
+---
 {% include '../modules/doc-block.html' %}
 <phrase key="MetaTitle" />
 Static IP Hosting | Tackle Your Advanced Hosting Needs - GoDaddy
@@ -48,7 +53,7 @@ Get to your site even when your domain name is not available, such as during dom
 <phrase key="MainContentFooterPagesTabText" />
 Support
 <phrase key="PlanSummaryTitle1" />
-Recieve support and exchange ideas. Join the Community on GoDaddy Support to:
+Receive support and exchange ideas. Join the Community on GoDaddy Support to:
 <phrase key="PlanSummaryTitle2" />
 Our experts sales and support staff are available 24/7.
 <phrase key="PlanSummaryText1" />

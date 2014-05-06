@@ -37,7 +37,7 @@
       },
       "cdsLocation": "localization/sales/newscenter/about-godaddy/en",
       "draft": {
-        "id": "5362d074f778fc27b88b10a0",
+        "id": false,
         "createdDate": "2014-05-01",
         "createdBy": {
           "fullName": "Dominic Tuso",
