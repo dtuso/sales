@@ -9,23 +9,22 @@ name: FOS-20310 gitHub
 
     {% parent %}
 
-    <link href="[@T[link:<cssroot />]@T]fos/201401/wp-hosting/css/wp-hosting.1.0.4.min.css" rel="stylesheet" type="text/css" />
     <style>
       .sale-right { float:right; }
       .vat-tax-message { line-height:16px;width:302px;margin-bottom:5px;margin-top:-3px; }
       ##if(activeLanguageAny([en-my],[en-ph],[en-sg]))
         .tab-content-overview-bg-wp {
-              background-image: url("[@T[link:<imageroot />]@T]fos/201401/wp-hosting/img/bg-misc-banner-wp-hosting-ap.jpg");
+          background-image: url("[@T[link:<imageroot />]@T]fos/201401/wp-hosting/img/bg-misc-banner-wp-hosting-ap.jpg");
         }
       ##elseif(activeLanguageAny([en-in]))
         .tab-content-overview-bg-wp {
-              background-image: url("[@T[link:<imageroot />]@T]fos/201401/wp-hosting/img/bg-misc-banner-wp-hosting-in.jpg");
+          background-image: url("[@T[link:<imageroot />]@T]fos/201401/wp-hosting/img/bg-misc-banner-wp-hosting-in.jpg");
         }
       ##endif
       ##if(activeLanguageAny(en))     
       ##else
         .featured-product .website-builder {
-              background-image: url("[@T[link:<imageroot />]@T]fos/201401/wp-hosting/img/GLOBAL_bg-products-wsb.jpg");
+          background-image: url("[@T[link:<imageroot />]@T]fos/201401/wp-hosting/img/GLOBAL_bg-products-wsb.jpg");
         }
       ##endif
     </style>
@@ -207,8 +206,7 @@ name: FOS-20310 gitHub
                   </div><!-- select-box -->  
                 </div>
                 <div data-gd-sidebysidealign-row="4">
-                  <p class="no-margin-bottom"><button type="button" data-plan="wordpres_Basic1Yr_us" data-isqualified="1" data-ci="86783" class="btn btn-warning btn-block js-addtocart-btn btn--push-down btn-lg add-to-cart-btn">[@L[cds.sales/accounting/accounting-software:AddToCart]@L]</button>
-                  </p>
+                  <p class="no-margin-bottom"><button type="button" data-plan="wordpres_Basic1Yr_us" data-isqualified="1" data-ci="86783" class="btn btn-warning btn-block js-addtocart-btn btn--push-down btn-lg add-to-cart-btn">[@L[cds.sales/accounting/accounting-software:AddToCart]@L]</button></p>
                 </div>
 
                 <ul class="plan-pricing-list plan-pricing-list-alternate">
@@ -346,8 +344,7 @@ name: FOS-20310 gitHub
                   </div><!-- select-box -->
                 </div>
                 <div data-gd-sidebysidealign-row="4">
-                  <p class="no-margin-bottom"><button type="button" data-plan="wordpres_dlx1Yr_us" data-isqualified="1" data-ci="86784" class="btn btn-warning btn-block js-addtocart-btn btn--push-down btn-lg add-to-cart-btn">[@L[cds.sales/accounting/accounting-software:AddToCart]@L]</button>
-                  </p>
+                  <p class="no-margin-bottom"><button type="button" data-plan="wordpres_dlx1Yr_us" data-isqualified="1" data-ci="86784" class="btn btn-warning btn-block js-addtocart-btn btn--push-down btn-lg add-to-cart-btn">[@L[cds.sales/accounting/accounting-software:AddToCart]@L]</button></p>
                 </div>    
                 <ul class="plan-pricing-list plan-pricing-list-alternate">
                   <li class="two-lines padding-bottom-15" data-gd-sidebysidealign-row="5">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-9-25000MonthlyVisitorsOnUpTo5]@L]</li>
@@ -766,7 +763,6 @@ name: FOS-20310 gitHub
 $('.equal-height').setColumnsEqualHeight();
 $('.select-box').setSelectBox();
 
-
 $('.add-to-cart-btn').on('click', function() {
     var url = '[@T[link:<relative path="/api/package" parammode="explicit"/>]@T]';
     var planselected = $(this).attr('data-plan');
@@ -805,10 +801,7 @@ $('.add-to-cart-btn').on('click', function() {
 
 $('.select-box-options > li').click(function () {
     var li = $(this);
-    li
-      .parents('.plan').find('button.add-to-cart-btn')
-      .attr('data-plan', li.attr('data-plan'))
-      .attr('data-isqualified', li.attr('data-isqualified'));
+    li.parents('.plan').find('button.add-to-cart-btn').attr('data-plan', li.attr('data-plan')).attr('data-isqualified', li.attr('data-isqualified'));
 });
 
 function getParameterByName(name) {
