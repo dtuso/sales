@@ -7,14 +7,14 @@
       },
       "cdsLocation": "sales/tlds/gtld.aspx",
       "draft": {
-        "id": "5360434df778fc1808589225",
-        "createdDate": "2014-04-29",
+        "id": "5369380af778fc265c57f9aa",
+        "createdDate": "2014-05-06",
         "createdBy": {
-          "fullName": "Mohseen",
-          "username": "mjamal"
+          "fullName": "Joel",
+          "username": "jconrad"
         },
-        "jiraTicket": "FOS-19459",
-        "comments": "gTLD LP update for .LONDON launch",
+        "jiraTicket": "FOS-20541",
+        "comments": "Fix for login modal issue",
         "url": "http://www.dev-godaddy.com/tlds/gtld.aspx"
       }
     },
@@ -34,13 +34,13 @@
       "cdsLocation": "localization/sales/gd/tlds/gtld/en",
       "draft": {
         "id": "false",
-        "createdDate": "2014-04-29",
+        "createdDate": "2014-05-06",
         "createdBy": {
-          "fullName": "Mohseen Jamal",
-          "username": "mjamal"
+          "fullName": "Joel Conrad",
+          "username": "jconrad"
         },
-        "jiraTicket": "FOS-19459",
-        "comments": "gTLD LP update for .LONDON launch"
+        "jiraTicket": "FOS-20541",
+        "comments": "Fix for login modal issue"
       }
     }
   }
