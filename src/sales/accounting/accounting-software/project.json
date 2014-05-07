@@ -1,0 +1,49 @@
+{
+  "source.html": {
+    "cdsDetails": {
+      "champion": {
+        "name": "Colyn Brown",
+        "email": "clbrown@godaddy.com"
+      },
+      "cdsLocation": "sales/accounting/accounting-software.aspx",
+      "draft": {
+        "id": "53694d83f778fc1100fa3948",
+        "createdDate": "2014-05-06",
+        "createdBy": {
+          "fullName": "Leon Kim", 
+          "username": "lkim"
+        },
+        "jiraTicket": "FOS-20111",
+        "comments": "preparing for github",
+        "url": "http://www.dev-godaddy.com/accounting/accounting-software.aspx"
+      }
+    },
+    "metaTitle": "[@L[cds.sales/accounting/accounting-software:MetaTitle]@L]",
+    "metaDescription": "[@L[cds.sales/accounting/accounting-software:MetaDescription]@L]",
+    "metaKeywords": "[@L[cds.sales/accounting/accounting-software:MetaKeywords]@L]",
+    "metaCanonicalPath": "/accounting/accounting-software.aspx",
+    "metaOgTitle": "[@L[cds.sales/accounting/accounting-software:MetaTitle]@L]",
+    "metaOgImage": "",
+    "metaOgDescription": "[@L[cds.sales/accounting/accounting-software:MetaDescription]@L]",
+    "cssVersionOverride" : false
+  },
+  "source.language": {
+    "cdsDetails": {
+      "champion": {
+        "name": "Colyn Brown",
+        "email": "clbrown@godaddy.com"
+      },
+      "cdsLocation": "localization/sales/accounting/accounting-software/en",
+      "draft": {
+        "id": "5362f3e9f778fc27b88b10a5",
+        "createdDate": "2014-05-01",
+        "createdBy": {
+          "fullName": "Leon Kim", 
+          "username": "lkim"
+        },
+        "jiraTicket": "FOS-20111",
+        "comments": "preparing for github"
+      }
+    }
+  }
+}

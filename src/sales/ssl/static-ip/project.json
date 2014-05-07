@@ -35,14 +35,14 @@
       },
       "cdsLocation": "localization/sales/gd/ssl/dedicated-ip/en",
       "draft": {
-        "id": "534c640bf778fc304463c547",
-        "createdDate": "2014-04-14",
+        "id": "53690d42f778fc1100fa3932",
+        "createdDate": "2014-05-05",
         "createdBy": {
-          "fullName": "Colyn Brown",
-          "username": "clbrown"
+          "fullName": "Dominic Tuso",
+          "username": "dtuso"
         },
-        "jiraTicket": "None",
-        "comments": "Prep for github"
+        "jiraTicket": "FOS-20029",
+        "comments": "Spelling error fix"
       }
     }
   }

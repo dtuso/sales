@@ -6,6 +6,7 @@ var _ = require('lodash');
 var path = require('path');
 var fs = require('fs');
 var cssmin = require('gulp-cssmin');
+var uglify = require('gulp-uglifyjs');
 var rename = require('gulp-rename');
 var cdsm = require('gulp-cdsm');
 var fm = require('gulp-front-matter');
@@ -21,6 +22,7 @@ var assetSrcPath = assetSrcPaths[argv.src];
 
 var paths = {
   templates: ['./src/sales/**/*.html'],
+  project: ['./src/sales/**/project.json'],
   language: ['./src/sales/**/*.language'],
   less: ['./src/sales/**/css/**/*.less'],
   images: ['./src/sales/**/img/**/*.jpg', './src/sales/**/img/**/*.png'],
@@ -42,7 +44,7 @@ var getProjectData = function(file) {
   }
 
   data = data[fileName] || {};
-  data.assetPath = 'fos/sales/themes/' + theme + '/' + path.dirname(path.normalize(assetSrcPath+file.relative)).replace('\\', '/') + '/';
+  data.assetPath = 'fos/sales/themes/' + theme + '/' + path.dirname(path.normalize(assetSrcPath + '/' + file.relative)).replace('\\', '/') + '/'; 
   data = _.extend(data, ciCodes);
   return data;
 };
@@ -63,6 +65,12 @@ var swigTplOpts = {
 var swigLangOpts = {
   data: getProjectData,
   ext: '.language',
+  setup: swigSetup
+};
+
+var swigConfigOpts = {
+  data: getProjectData,
+  ext: '.config',
   setup: swigSetup
 };
 
@@ -97,6 +105,16 @@ gulp.task('styles', function() {
   }
 });
 
+gulp.task('scripts', function() {
+  if (assetSrcPath) {
+  gulp.src(assetSrcPath+'/**/js/*.js', {cwd: './src/sales/'})
+    .pipe(gulp.dest(path.join(paths.build,assetSrcPath)))
+    .pipe(uglify())
+    .pipe(rename(({suffix: '.min'})))
+    .pipe(gulp.dest(path.join(paths.build,assetSrcPath)));
+  }
+});
+
 gulp.task('images', function() {
   if (assetSrcPath) {
     gulp.src(assetSrcPath+'/**/img/*', {cwd: './src/sales/'})
@@ -112,15 +130,23 @@ gulp.task('assets-deploy', function() {
 });
 
 gulp.task('watch', function() {
-  gulp.watch(paths.templates, ['html']);
+  gulp.watch([paths.templates,paths.project], ['html']);
   gulp.watch(paths.language, ['language']);
   gulp.watch(paths.less, ['styles', 'assets-deploy']);
-  gulp.watch(paths.images, ['images']);
+  gulp.watch(paths.images, ['images', 'assets-deploy']);
 });
 
+gulp.task('config', function() {
+  gulp.src(assetSrcPath+'/**/*.config', {cwd: './src/sales/'})
+    .pipe(changed(paths.build))
+    .pipe(fm({remove:true}))
+    .pipe(swig(swigConfigOpts))
+    .pipe(cdsm())
+    .pipe(gulp.dest(path.join(paths.build,assetSrcPath)));
+});
 
-gulp.task('build', ['html', 'language', 'styles', 'images']);
+gulp.task('build', ['html', 'language', 'styles', 'scripts', 'images']);
+gulp.task('css-build-deploy', ['styles', 'assets-deploy']);
 gulp.task('default', ['watch']);
-
 
 updater();

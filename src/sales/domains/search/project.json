@@ -5,25 +5,26 @@
         "name": "Adam Smith",
         "email": "absmith@godaddy.com"
       },
-      "cdsLocation": "sales/domains/search-new.aspx",
+      "cdsLocation": "sales/domains/domain-name-search.aspx",
       "draft": {
-        "id": "53475256f778fc16dc8891c9",
-        "createdDate": "2014-04-09",
+        "id": "5362d392f778fc27b88b10a2",
+        "createdDate": "2014-05-01",
         "createdBy": {
-          "fullName": "Pooja Singhvi",
-          "username": "psinghvi"
+          "fullName": "Adam Smith",
+          "username": "absmith"
         },
-        "jiraTicket": "FOS-18880",
-        "comments": "Country Site Control for Pod updates",
-        "url": "http://www.dev-godaddy.com/domains/search-new.aspx"
+        "jiraTicket": "",
+        "comments": "Adding to Sales Repository",
+        "url": "http://www.dev-godaddy.com/domains/domain-name-search.aspx"
       }
     },
-    "metaTitle": "[@L[cds.sales/gd/domains/search-new:MetaTitle]@L]",
-    "metaDescription": "[@L[cds.sales/gd/domains/search-new:MetaDescription]@L]",
-    "metaKeywords": "[@L[cds.sales/gd/domains/search-new:MetaKeywords]@L]",
-    "metaCanonicalPath": "/domains/search-new.aspx",
-    "metaOgTitle": "[@L[cds.sales/gd/domains/search-new:MetaTitle]@L]",
-    "metaOgDescription": "[@L[cds.sales/gd/domains/search-new:MetaDescription]@L]"
+    "cssVersionOverride" : "14",
+    "metaTitle": "[@L[cds.sales/gd/domains/domain-name-search:MetaTitle]@L]",
+    "metaDescription": "[@L[cds.sales/gd/domains/domain-name-search:MetaDescription]@L]",
+    "metaKeywords": "[@L[cds.sales/gd/domains/domain-name-search:MetaKeywords]@L]",
+    "metaCanonicalPath": "/domains/domain-name-search.aspx",
+    "metaOgTitle": "[@L[cds.sales/gd/domains/domain-name-search:MetaTitle]@L]",
+    "metaOgDescription": "[@L[cds.sales/gd/domains/domain-name-search:MetaDescription]@L]"
   },
   "search.language": {
     "cdsDetails": {
@@ -31,7 +32,7 @@
         "name": "Adam Smith",
         "email": "absmith@godaddy.com"
       },
-      "cdsLocation": "localization/sales/gd/domains/search-new/en",
+      "cdsLocation": "localization/sales/gd/domains/domain-name-search/en",
       "draft": {
         "id": "534752a5f778fc16dc8891ca",
         "createdDate": "2014-04-09",

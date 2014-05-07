@@ -7,14 +7,14 @@
       },
       "cdsLocation": "sales/hosting/website-builder.aspx",
       "draft": {
-        "id": "5345cf82f778fc0e805a9217",
-        "createdDate": "2014-04-02",
+        "id": "5368215bf778fc1100fa392b",
+        "createdDate": "2014-05-05",
         "createdBy": {
-          "fullName": "Colyn Brown",
-          "username": "clbrown"
+          "fullName": "Byron Lunt",
+          "username": "blunt"
         },
-        "jiraTicket": "None",
-        "comments": "Prep for new build process",
+        "jiraTicket": "FOS-14231",
+        "comments": "adding some internationalized images and syncing with github",
         "url": "http://www.dev-godaddy.com/hosting/website-builder.aspx"
       }
     },
@@ -25,7 +25,8 @@
     "metaCanonicalPath": "/hosting/website-builder.aspx",
     "metaOgTitle": "[@L[cds.sales/gd/hosting/website-builder:og-title]@L]",
     "metaOgImage": "fos/201401/hosting/website-builder/img/og.png",
-    "metaOgDescription": "[@L[cds.sales/gd/hosting/website-builder:og-description]@L]"
+    "metaOgDescription": "[@L[cds.sales/gd/hosting/website-builder:og-description]@L]",
+    "cssVersionOverride" : "0"
   },
   "website-builder.language": {
     "cdsDetails": {

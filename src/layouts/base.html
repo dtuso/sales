@@ -8,14 +8,14 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="[@T[localization:<language full="true" />]@T]"> <!--<![endif]-->
 
   <head>
-    {% block metahead %}
+    
 
       <meta charset="utf-8" />
-      <title>{{ metaTitle }}</title>
-
-      <meta name="description" content="{{ metaDescription }}" />
-      <meta name="keywords" content="{{ metaKeywords }}" />
-
+      {% block pageTitle %}<title>{{ metaTitle }}</title>{% endblock %}
+      {% block pageDescription %}<meta name="description" content="{{ metaDescription }}" />{% endblock %}
+      {% block pageKeywords %}<meta name="keywords" content="{{ metaKeywords }}" />{% endblock %}
+      {% block metahead %}
+      
       <!-- Facebook Open Graph Meta Data -->
       <meta property="og:title" content="{{ metaOgTitle }}" />
       <meta property="og:type" content="product" />

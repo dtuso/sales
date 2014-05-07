@@ -1,1 +1,54 @@
-{}
+{ 
+  "gTLD Slides" : [
+      { ".LONDON Slide Link" : [
+          { "ITC ID" : "90057" },
+          { "ITC Code" : "" },
+          { "Description" : ".LONDON Slide Link" }
+        ]
+      },
+      { ".CLUB Slide Link" : [
+          { "ITC ID" : "89140" },
+          { "ITC Code" : "" },
+          { "Description" : ".CLUB Slide Link" }
+        ]
+      },
+      { ".GURU Slide Link" : [
+          { "ITC ID" : "89138" },
+          { "ITC Code" : "" },
+          { "Description" : ".GURU Slide Link" }
+        ]
+      },
+      { ".COMPANY Slide Link" : [
+          { "ITC ID" : "90067" },
+          { "ITC Code" : "" },
+          { "Description" : ".COMPANY Slide Link" }
+        ]
+      }
+    ],
+  "Everything Else" : [
+    { "Discover New Domains Link" : [
+        { "ITC ID" : "89141" },
+        { "ITC CODE" : "" },
+        { "Description" : "Discover New Domains Link" }
+      ]
+    },
+    { "How it Works Link" : [
+        { "ITC ID" : "89142" },
+        { "ITC CODE" : "" },
+        { "Description" : "How it Works Link" }
+      ]
+    },
+    { "FAQ Link" : [
+        { "ITC ID" : "89139" },
+        { "ITC CODE" : "" },
+        { "Description" : "FAQ Link" }
+      ]
+    },
+    { "Learn More Link" : [
+        { "ITC ID" : "89143" },
+        { "ITC CODE" : "" },
+        { "Description" : "Learn More Link" }
+      ]
+    }
+  ]
+}
