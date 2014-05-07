@@ -63,7 +63,7 @@ var getProjectData = function(file) {
     data.cdsDetails.draft.location = file.frontMatter.location;
     data.cdsDetails.draft.id = file.frontMatter.id;
     data.cdsDetails.draft.name = file.frontMatter.name;
-    data.cdsDetails.draft.modifiedDate = moment().format('YYYY-MM-DD git h:mm:ss a');
+    data.cdsDetails.draft.modifiedDate = moment().format('YYYY-MM-DD h:mm:ss a');
     data.cdsDetails.draft.user = {
       username: username.sync()
     };
