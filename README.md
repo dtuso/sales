@@ -133,6 +133,15 @@ to the ```build``` folder.
 gulp styles
 ```
 
+#### SCRIPTS
+
+This tasks will minify any JavaScript files you have in your JS folder and then concatenate them into a single file 
+named 'allPageScripts.js' which you need to reference in your page. The compiled JavaScript, gets copied to the ```build``` folder.
+
+```
+gulp scripts
+```
+
 #### IMAGES
 
 This task will copy your images folder to the build folder.
@@ -156,7 +165,7 @@ These tasks are aliases that combine one or more tasks into one:
 
 #### BUILD
 
-This task combines the 'html', 'language', 'styles', and 'images' tasks.
+This task combines the 'html', 'language', 'styles', 'scripts', and 'images' tasks.
 
 ```
 gulp build
