@@ -29,9 +29,9 @@ FAQ
 <phrase key="Tab1Header" />
 Our VPS Hosting is made to grow as your needs grow.
 <phrase key="Tab1HeaderText" />
-Get all the power and control of your own Virtual Server for less! With a GoDaddy VPS, your RAM and storage are guaranteed - we never overload. Plus, you can add more capacity anytime with just a few clicks*. Not sure how to set it up? Our exclusive Server Concierge will help get your server up and running fast! Just choose the plan that&#039;s right for you, customize your bandwidth, control panel (Parallels<sup>&reg;</sup> Plesk Panel or cPanel<sup>&reg;</sup>) and backup options and leave the rest to us. Call <strong> [@T[support:<serverSupportPhone/>]@T]</strong> to get started now.
+Get all the power and control of your own Virtual Server for less! With a GoDaddy VPS, your RAM and storage are guaranteed - we never overload. Plus, you can add more capacity anytime with just a few clicks*. Just choose the plan that&#039;s right for you, customize your bandwidth, control panel (Parallels<sup>&reg;</sup> Plesk Panel or cPanel<sup>&reg;</sup>) and backup options and leave the rest to us. Call <strong> [@T[support:<serverSupportPhone/>]@T]</strong> to get started now.
 <phrase key="NeedHelpBagde" />
-Need Help? Call 24/7.
+Need Help? Call
 <phrase key="NeedHelpBadgePhone" />
 [@T[support:<serverSupportPhone/>]@T]
 <phrase key="SelectOS" />
@@ -56,6 +56,10 @@ Starting at
 mo
 <phrase key="PerMonthFull" />
 month
+<phrase key="month" />
+month
+<phrase key="months" />
+months
 <phrase key="1Month" />
 1 month
 <phrase key="6Month" />
@@ -66,6 +70,10 @@ month
 24 months
 <phrase key="SaveText" />
 SAVE
+<phrase key="Save10Text" />
+SAVE 10%
+<phrase key="Save20Text" />
+SAVE 20%
 <phrase key="DiscalimerSymbol" />
 &#135;
 <phrase key="CartButton" />
@@ -137,13 +145,13 @@ Free rapid setup
 <phrase key="SupportSubText4" />
 FTP access
 <phrase key="SupportSubText5" />
-<strong class="secondary-color">FREE!</strong> <a class="isToolTip" data-html="true" href="javascript:atl_PopUp(&#039;http://www.godaddy.com/popups/fotolia.aspx?ci=21223&amp;app_hdr=99&#039;,&#039;foto_popup&#039;,&#039;left=50,top=50,scrollbars=yes,resizable=yes,width=600,height=550&#039;);" title="<strong>What can you do with 10 FREE credits from Fotolia.com?</strong><br />Fotolia&reg; has over 8,000,000 royalty-free photos, illustrations and videos available for your use. Quickly search and find images that will capture attention and add visual punch to your website. Use your free credits toward any photo, illustration or video; additional images start at just [@T[currencyprice:<price usdamount="75" dropdecimal="false" />]@T] each." data-ci="88973">10 Fotolia<sup>&reg;</sup> Credits;</a><sup>&#094;</sup>
+<strong class="secondary-color">FREE!</strong> <a class="isToolTip" data-html="true" href="javascript:atl_PopUp(&#039;[@T[link:<relative path='/popups/fotolia.aspx'><param name='app_hdr' value='99' /></relative>]@T]&#039;,&#039;foto_popup&#039;,&#039;left=50,top=50,scrollbars=yes,resizable=yes,width=600,height=550&#039;);" title="<strong>What can you do with 10 FREE credits from Fotolia.com?</strong><br />Fotolia&reg; has over 8,000,000 royalty-free photos, illustrations and videos available for your use. Quickly search and find images that will capture attention and add visual punch to your website. Use your free credits toward any photo, illustration or video; additional images start at just [@T[currencyprice:<price usdamount="75" dropdecimal="false" />]@T] each." data-ci="88973">10 Fotolia<sup>&reg;</sup> Credits;</a><sup>&#094;</sup>
 <phrase key="SupportSubText6" />
 <a href="javascript:atl_PopUp(&#039;[@T[link:<external linktype="communityurl" path="help/article/1419/" secure="false"/>]@T]&#039;,&#039;display2&#039;,&#039;left=20,top=20,scrollbars=yes,resizable=yes,width=800,height=700&#039;);" data-ci="88974">Bandwidth Overage Protection</a>
 <phrase key="SupportSubText7" />
 Best-of-breed routers and servers
 <phrase key="SupportSubText8" />
-<a href="javascript:atl_PopUp('http://www.godaddy.com/popups/tipping-point.aspx?ci=19494&app_hdr=99','tpips_popup','left=50,top=50,scrollbars=yes,resizable=yes,width=600,height=150');" data-ci="88975">TippingPoint<sup>®</sup> Intrusion Prevention Systems</a>
+<a href="javascript:atl_PopUp('[@T[link:<relative path='/popups/tipping-point.aspx'><param name='app_hdr' value='99' /></relative>]@T]','tpips_popup','left=50,top=50,scrollbars=yes,resizable=yes,width=600,height=150');" data-ci="88975">TippingPoint<sup>®</sup> Intrusion Prevention Systems</a>
 <phrase key="SupportSubText9" />
 24/7 telephone, email and Web-based tech support
 <phrase key="SupportSubText10" />
@@ -175,7 +183,7 @@ Disclaimer
 <phrase key="DisclaimerModalItem02" />
 &#8224;&#8224;&#8224; SSL certificate is free only for the initial hosting plan term purchased, after which it will automatically renew at the then-current rate.
 <phrase key="DisclaimerModalItem03" />
-&#94; One promotional credit per customer, good for ten free download credits at Fotolia®. Products purchased using a Gift Card or Alipay do not provide eligibility for photography credits. Other restrictions apply. <a href="http://www.godaddy.com/popups/fotolia.aspx?app_hdr=99&ci=21223&isc=gtnila43" target="_blank" data-ci="88979">View details.</a>
+&#94; One promotional credit per customer, good for ten free download credits at Fotolia®. Products purchased using a Gift Card or Alipay do not provide eligibility for photography credits. Other restrictions apply. <a href="javascript:atl_PopUp(&#039;[@T[link:<relative path='/popups/fotolia.aspx'><param name='app_hdr' value='99' /></relative>]@T]&#039;,&#039;foto_popup&#039;,&#039;left=50,top=50,scrollbars=yes,resizable=yes,width=600,height=550&#039;);" target="_blank" data-ci="88979">View details.</a>
 <phrase key="DisclaimerModalItem04" />
 ** Additional bandwidth and Assisted Service Plan fees do not participate in the yearly discount. Bandwidth included in the base package is prepaid, whereas any additional bandwidth selected will be billed monthly.
 <phrase key="DisclaimerModalItem05" />
@@ -347,31 +355,33 @@ Assisted Service Plan.
 <phrase key="ExpertHandsTitle" />
 Expert Hands<sup>&reg;</sup>
 <phrase key="ExpertHandsDescription" />
-Need help administering your server? Make the most of your Virtual Private Server by letting our expert staff help you with your specific needs at a 30-minute rate of [@T[currencyprice:<price usdamount="4999" dropdecimal="false" />]@T] Call [@T[support:<serverSupportPhone/>]@T] for a quote.
+Need help administering your server? Make the most of your Private Server by letting our expert staff help you with your specific needs. Call [@T[support:<serverSupportPhone/>]@T] for pricing and assistance.
 <phrase key="ExpertHandsList1Title" />
 Expert Hands services include:
 <phrase key="ExpertHandsList1Text1" />
-<span class="secondary-color">FREE</span> diagnosis
+Intrusion Prevention
 <phrase key="ExpertHandsList1Text2" />
-Install 3rd-party Web-based software or add-on module to a control panel
+Firewall Rules
 <phrase key="ExpertHandsList1Text3" />
-Database assistance, such as data import/export
+Server Setup (add 1 domain, configure DNS, add 1 email address, provide settings for customer to upload website content)
 <phrase key="ExpertHandsList1Text4" />
-Optimization of MySQL<sup>&reg;</sup> Databases and Apache<sup>&reg;</sup> webservice
+Advanced Performance analysis
 <phrase key="ExpertHandsList1Text5" />
-Port changes such as ssh, rdc and remote database access
+Apache Tuning
 <phrase key="ExpertHandsList1Text6" />
-Dedicated and VPS password resets
+MySQL Optimization
 <phrase key="ExpertHandsList1Text7" />
-Dedicated and VPS backup/restore (only with FTP back-up add-on)
+Application Support (Install/update/configure)
 <phrase key="ExpertHandsList1Text8" />
-Installation of 3rd-party SSL Certificates
+Patching Control Panel
 <phrase key="ExpertHandsList1Text9" />
-Migration of content to customer's server or Web hosting account
+Patching Apps
 <phrase key="ExpertHandsList1Text10" />
-PHP/ASP Modules (per module)
+Database assistance, such as data import/export
 <phrase key="ExpertHandsList1Text11" />
-Configuration of game servers
+Port changes such as ssh, rdc and remote database access
+<phrase key="ExpertHandsList1Text12" />
+Security Scans and Audits
 <phrase key="ExpertHandsList2Title" />
 Expert Hands services will not perform the following tasks:
 <phrase key="ExpertHandsList2Text1" />
