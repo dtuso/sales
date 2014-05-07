@@ -1,21 +1,31 @@
-var gulp = require('gulp');
-var changed = require('gulp-changed');
-var swig = require('gulp-swig');
-var less = require('gulp-less');
-var _ = require('lodash');
-var path = require('path');
-var fs = require('fs');
-var cssmin = require('gulp-cssmin');
-var uglify = require('gulp-uglify');
-var concat = require('gulp-concat');
-var rename = require('gulp-rename');
-var cdsm = require('gulp-cdsm');
-var fm = require('gulp-front-matter');
-var argv = require('minimist')(process.argv.slice(2));
-var pkg = require('./package.json');
-var updater = require('./lib/updater.js');
-var username = require('username');
-var moment = require('moment');
+try {
+
+  var gulp = require('gulp');
+  var changed = require('gulp-changed');
+  var swig = require('gulp-swig');
+  var less = require('gulp-less');
+  var _ = require('lodash');
+  var path = require('path');
+  var fs = require('fs');
+  var cssmin = require('gulp-cssmin');
+  var uglify = require('gulp-uglify');
+  var concat = require('gulp-concat');
+  var rename = require('gulp-rename');
+  var cdsm = require('gulp-cdsm');
+  var fm = require('gulp-front-matter');
+  var argv = require('minimist')(process.argv.slice(2));
+  var pkg = require('./package.json');
+  var updater = require('./lib/updater.js');
+  var username = require('username');
+  var moment = require('moment');
+
+} catch (e) {
+
+  console.log(e.toString());
+  console.log('Please run `npm install`\n');
+  process.exit(1);
+
+}
 
 var theme = 'scotty';
 var rootAssetPath = (process.platform === 'win32') ? '\\\\g1dwimages001\\images\\fos\\sales\\themes\\' + theme + '\\' : '/Volumes/images/fos/sales/themes/' + theme + '/';
@@ -53,7 +63,7 @@ var getProjectData = function(file) {
     data.cdsDetails.draft.location = file.frontMatter.location;
     data.cdsDetails.draft.id = file.frontMatter.id;
     data.cdsDetails.draft.name = file.frontMatter.name;
-    data.cdsDetails.draft.modifiedDate = moment().format('YYYY-MM-DD h:mm:ss a');
+    data.cdsDetails.draft.modifiedDate = moment().format('YYYY-MM-DD git h:mm:ss a');
     data.cdsDetails.draft.user = {
       username: username.sync()
     };
