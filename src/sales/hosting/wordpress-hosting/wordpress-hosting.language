@@ -1,7 +1,7 @@
 ---
-location: localization/sales/newscenter/about-godaddy/en
-id: 5362d0cdf778fc27b88b10a1
-name: FOS-18668
+location: localization/sales/hosting/wordpress-hosting/en
+id: false
+name: FOS-20310
 ---
 {% include '../modules/doc-block.html' %}
 <phrase key="NewsCenterAbout-AFinePortraitsVideo" />
