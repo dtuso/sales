@@ -1,7 +1,7 @@
 ---
 location: localization/sales/newscenter/about-godaddy/en
-id: 5362d0cdf778fc27b88b10a1
-name: FOS-18668
+id: 536a8334f778fc0228251d7c
+name: FOS-20455
 ---
 {% include '../modules/doc-block.html' %}
 <phrase key="NewsCenterAbout-AFinePortraitsVideo" />
@@ -84,7 +84,7 @@ Vice President,<br />Hosting
 <phrase key="NewsCenterAbout-2-JamesCarroll" />
 James Carroll
 <phrase key="NewsCenterAbout-4-SeniorVicePresidentInternational" />
-Senior Vice President, International
+Executive Vice President, International
 <phrase key="NewsCenterAbout-2-NimaKelly" />
 Nima Kelly
 <phrase key="NewsCenterAbout-2-GeneralCounsel" />
