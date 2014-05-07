@@ -6,7 +6,8 @@ var _ = require('lodash');
 var path = require('path');
 var fs = require('fs');
 var cssmin = require('gulp-cssmin');
-var uglify = require('gulp-uglifyjs');
+var uglify = require('gulp-uglify');
+var concat = require('gulp-concat');
 var rename = require('gulp-rename');
 var cdsm = require('gulp-cdsm');
 var fm = require('gulp-front-matter');
@@ -108,6 +109,7 @@ gulp.task('styles', function() {
 gulp.task('scripts', function() {
   if (assetSrcPath) {
   gulp.src(assetSrcPath+'/**/js/*.js', {cwd: './src/sales/'})
+    .pipe(concat('js/allPageScripts.js'))
     .pipe(gulp.dest(path.join(paths.build,assetSrcPath)))
     .pipe(uglify())
     .pipe(rename(({suffix: '.min'})))
