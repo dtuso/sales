@@ -38,13 +38,13 @@
       "cdsLocation": "localization/sales/newscenter/about-godaddy/en",
       "draft": {
         "id": false,
-        "createdDate": "2014-05-01",
+        "createdDate": "2014-05-07",
         "createdBy": {
           "fullName": "Dominic Tuso",
           "username": "dtuso"
         },
-        "jiraTicket": "FOS-18668",
-        "comments": "Prep for new build process"
+        "jiraTicket": "FOS-20455",
+        "comments": "Change James Carroll's title"
       }
     }
   }
