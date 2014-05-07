@@ -46,7 +46,8 @@ git remote add upstream https://github.secureserver.net/FOS-CDS-Pages/Sales.git
 Now that you have connection back to the originating repository, make sure you have the latest content:
 
 ```
-git pull upstream master
+git fetch upstream master
+git rebase upstream/master
 ```
 
 Do this daily to make sure you're never too far off.
