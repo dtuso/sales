@@ -5,15 +5,35 @@
         "name": "Dominic Tuso",
         "email": "dtuso@godaddy.com"
       },
-      "cdsLocation": "sales/ssl/ssl-certificates.aspx",
       "draft": {
-        "id": "53644aaff778fc2fb83dadfe",
-        "createdDate": "2014-05-02",
         "createdBy": {
           "fullName": "Colyn Brown",
           "username": "clbrown"
         },
-        "jiraTicket": "FOS-11169",
+        "comments": "Reskin",
+        "url": "http://www.dev-godaddy.com/ssl/ssl-certificates.aspx"
+      }
+    },
+    "metaTitle": "[@L[cds.sales/gd/ssl/ssl-certificates:MetaTitle]@L]",
+    "metaDescription": "[@L[cds.sales/gd/ssl/ssl-certificates:MetaDescription]@L]",
+    "metaKeywords": "[@L[cds.sales/gd/ssl/ssl-certificates:MetaKeywords]@L]",
+    "metaCanonicalPath": "/ssl/ssl-certificates.aspx",
+    "metaOgTitle": "[@L[cds.sales/gd/ssl/ssl-certificates:MetaTitle]@L]",
+    "metaOgImage": "",
+    "metaOgDescription": "[@L[cds.sales/gd/ssl/ssl-certificates:MetaDescription]@L]",
+    "cssVersionOverride" : "1"
+  },
+  "source-b.html": {
+    "cdsDetails": {
+      "champion": {
+        "name": "Dominic Tuso",
+        "email": "dtuso@godaddy.com"
+      },
+      "draft": {
+        "createdBy": {
+          "fullName": "Colyn Brown",
+          "username": "clbrown"
+        },
         "comments": "Reskin",
         "url": "http://www.dev-godaddy.com/ssl/ssl-certificates.aspx"
       }

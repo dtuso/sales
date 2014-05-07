@@ -14,6 +14,8 @@ var fm = require('gulp-front-matter');
 var argv = require('minimist')(process.argv.slice(2));
 var pkg = require('./package.json');
 var updater = require('./lib/updater.js');
+var username = require('username');
+var moment = require('moment');
 
 var theme = 'scotty';
 var rootAssetPath = (process.platform === 'win32') ? '\\\\g1dwimages001\\images\\fos\\sales\\themes\\' + theme + '\\' : '/Volumes/images/fos/sales/themes/' + theme + '/';
@@ -32,6 +34,7 @@ var paths = {
 };
 
 var getProjectData = function(file) {
+
   var fileName = path.basename(file.path);
   var projectFilePath = path.join(path.dirname(file.path), 'project.json');
   var cicodesFilePath = path.join(path.dirname(file.path), 'cicodes.json');
@@ -45,7 +48,18 @@ var getProjectData = function(file) {
   }
 
   data = data[fileName] || {};
-  data.assetPath = 'fos/sales/themes/' + theme + '/' + path.dirname(path.normalize(assetSrcPath + '/' + file.relative)).replace('\\', '/') + '/'; 
+
+  if (file.frontMatter) {
+    data.cdsDetails.draft.location = file.frontMatter.location;
+    data.cdsDetails.draft.id = file.frontMatter.id;
+    data.cdsDetails.draft.name = file.frontMatter.name;
+    data.cdsDetails.draft.modifiedDate = moment().format('YYYY-MM-DD h:mm:ss a');
+    data.cdsDetails.draft.user = {
+      username: username.sync()
+    };
+  }
+
+  data.assetPath = 'fos/sales/themes/' + theme + '/' + path.dirname(path.normalize(assetSrcPath + '/' + file.relative)).replace('\\', '/') + '/';
   data = _.extend(data, ciCodes);
   return data;
 };
@@ -77,7 +91,7 @@ var swigConfigOpts = {
 
 gulp.task('html', function() {
   gulp.src(assetSrcPath+'/**/*.html', {cwd: './src/sales/'})
-    .pipe(changed(paths.build))
+    .pipe(changed(path.join(paths.build,assetSrcPath)))
     .pipe(fm({remove:true}))
     .pipe(swig(swigTplOpts))
     .pipe(cdsm())
