@@ -16,7 +16,7 @@
 
     DRAFT DETAILS:
       Modified Date:  {{ cdsDetails.draft.modifiedDate }}
-      Created By:     {{ cdsDetails.draft.user.username }}
+      Created By:     {{ cdsDetails.draft.user.username|safe }}
       JIRA Ticket:    {{ cdsDetails.draft.name }}
       Comments:       {{ cdsDetails.draft.comments }}
 {% if cdsDetails.draft.url %}

@@ -1,26 +1,24 @@
 try {
 
   // Gulp plugins
-  var gulp     = require('gulp');
-  var cdsm     = require('gulp-cdsm');
-  var changed  = require('gulp-changed');
-  var concat   = require('gulp-concat');
-  var cssmin   = require('gulp-minify-css');
-  var fm       = require('gulp-front-matter');
-  var gulpif   = require('gulp-if');
-  var less     = require('gulp-less');
-  var rename   = require('gulp-rename');
-  var swig     = require('gulp-swig');
-  var uglify   = require('gulp-uglify');
+  var gulp      = require('gulp');
+  var cdsm      = require('gulp-cdsm');
+  var changed   = require('gulp-changed');
+  var concat    = require('gulp-concat');
+  var cssmin    = require('gulp-minify-css');
+  var fm        = require('gulp-front-matter');
+  var gulpif    = require('gulp-if');
+  var less      = require('gulp-less');
+  var rename    = require('gulp-rename');
+  var swig      = require('gulp-swig');
+  var uglify    = require('gulp-uglify');
 
   // utilities
-  var path     = require('path');
-  var fs       = require('fs');
-  var _        = require('lodash');
-  var argv     = require('minimist')(process.argv.slice(2));
-  var updater  = require('./lib/updater.js');
-  var username = require('username');
-  var moment   = require('moment');
+  var path      = require('path');
+  var fs        = require('fs');
+  var argv      = require('minimist')(process.argv.slice(2));
+  var notifier  = require('./lib/updater.js');
+  var getData   = require('./lib/project-data.js');
 
 } catch (e) {
 
@@ -57,37 +55,6 @@ var paths = {
   assets    : path.join(rootAssetPath,assetSrcPath)
 };
 
-var getProjectData = function(file) {
-
-  var fileName = path.basename(file.path);
-  var projectFilePath = path.join(path.dirname(file.path), 'project.json');
-  var cicodesFilePath = path.join(path.dirname(file.path), 'cicodes.json');
-  var data = {};
-  if (fs.existsSync(projectFilePath)) {
-    data = require(projectFilePath);
-  }
-  var ciCodes = {};
-  if (fs.existsSync(cicodesFilePath)) {
-    ciCodes = require(cicodesFilePath);
-  }
-
-  data = data[fileName] || {};
-
-  if (file.frontMatter && data.cdsDetails && data.cdsDetails.dra) {
-    data.cdsDetails.draft.location = file.frontMatter.location;
-    data.cdsDetails.draft.id = file.frontMatter.id;
-    data.cdsDetails.draft.name = file.frontMatter.name;
-    data.cdsDetails.draft.modifiedDate = moment().format('YYYY-MM-DD h:mm:ss a');
-    data.cdsDetails.draft.user = {
-      username: username.sync()
-    };
-  }
-
-  data.assetPath = 'fos/sales/themes/' + theme + '/' + path.dirname(path.normalize(assetSrcPath + '/' + file.relative)).replace('\\', '/') + '/';
-  data = _.extend(data, ciCodes);
-  return data;
-};
-
 var swigSetup = function(swig) {
   swig.setDefaults({
     cache: false,
@@ -95,6 +62,11 @@ var swigSetup = function(swig) {
     locals: require('./_globals.json')
   });
 };
+
+var getProjectData = getData({
+  theme: theme,
+  assetSrcPath: assetSrcPath
+});
 
 var swigTplOpts = {
   data: getProjectData,
@@ -176,9 +148,8 @@ gulp.task('watch', function() {
   gulp.watch(paths.images, ['images', 'assets-deploy']);
 });
 
-
 gulp.task('build', ['html', 'language', 'styles', 'scripts', 'images']);
 gulp.task('css-build-deploy', ['styles', 'assets-deploy']);
 gulp.task('default', ['watch']);
 
-updater();
+notifier();
