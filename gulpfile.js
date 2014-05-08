@@ -36,6 +36,11 @@ var rootAssetPath = (process.platform === 'win32') ? '\\\\g1dwimages001\\images\
 var assetSrcPaths = require('./paths.json');
 var assetSrcPath = assetSrcPaths[argv.src||'all'];
 
+if (!assetSrcPath) {
+  console.log('Please provide a proper source path.');
+  process.exit(1);
+}
+
 var ignoreCDS = argv['ignore-cds'] || false;
 
 if (!argv.src || argv.src == 'all') {
@@ -48,8 +53,8 @@ var paths = {
   language  : ['./src/sales/**/*.language'],
   less      : ['./src/sales/**/css/**/*.less'],
   images    : ['./src/sales/**/img/**/*.jpg', './src/sales/**/img/**/*.png'],
-  build     : './build/sales/',
-  assets    : rootAssetPath
+  build     : path.join('./build/sales/',assetSrcPath),
+  assets    : path.join(rootAssetPath,assetSrcPath)
 };
 
 var getProjectData = function(file) {
@@ -68,7 +73,7 @@ var getProjectData = function(file) {
 
   data = data[fileName] || {};
 
-  if (file.frontMatter && data.cdsDetails && data.cdsDetails.draft) {
+  if (file.frontMatter && data.cdsDetails && data.cdsDetails.dra) {
     data.cdsDetails.draft.location = file.frontMatter.location;
     data.cdsDetails.draft.id = file.frontMatter.id;
     data.cdsDetails.draft.name = file.frontMatter.name;
@@ -109,59 +114,59 @@ var swigConfigOpts = {
 };
 
 gulp.task('html', function() {
-  gulp.src(assetSrcPath+'/**/*.html', {cwd: './src/sales/'})
-    .pipe(changed(path.join(paths.build,assetSrcPath)))
+  return gulp.src('./**/*.html', {cwd: path.join('./src/sales/', assetSrcPath)})
+    .pipe(changed(paths.build))
     .pipe(fm({remove:true}))
     .pipe(swig(swigTplOpts))
     .pipe(gulpif(!ignoreCDS, cdsm()))
-    .pipe(gulp.dest(path.join(paths.build,assetSrcPath)));
+    .pipe(gulp.dest(paths.build));
 });
 
 gulp.task('language', function() {
-  gulp.src(assetSrcPath+'/**/*.language', {cwd: './src/sales/'})
+  return gulp.src('./**/*.language', {cwd: path.join('./src/sales/', assetSrcPath)})
     .pipe(changed(paths.build))
     .pipe(fm({remove:true}))
     .pipe(swig(swigLangOpts))
     .pipe(gulpif(!ignoreCDS, cdsm()))
-    .pipe(gulp.dest(path.join(paths.build,assetSrcPath)));
+    .pipe(gulp.dest(paths.build));
 });
 
 gulp.task('styles', function() {
-  if (assetSrcPath) {
-    gulp.src(assetSrcPath+'/**/css/*.less', {cwd: './src/sales/'})
-      .pipe(less())
-      .pipe(gulp.dest(path.join(paths.build,assetSrcPath)))
-      .pipe(cssmin())
-      .pipe(rename(({
-        suffix: '.min'
-      })))
-      .pipe(gulp.dest(path.join(paths.build,assetSrcPath)));
-  }
+  return gulp.src('./**/css/*.less', {cwd: path.join('./src/sales/', assetSrcPath)})
+    .pipe(less())
+    .pipe(gulp.dest(paths.build))
+    .pipe(cssmin())
+    .pipe(rename(({
+      suffix: '.min'
+    })))
+    .pipe(gulp.dest(paths.build));
 });
 
 gulp.task('scripts', function() {
-  if (assetSrcPath) {
-  gulp.src(assetSrcPath+'/**/js/*.js', {cwd: './src/sales/'})
-    .pipe(concat('js/allPageScripts.js'))
-    .pipe(gulp.dest(path.join(paths.build,assetSrcPath)))
+  return gulp.src(['./**/js/*.js'], {cwd: path.join('./src/sales/', assetSrcPath)})
+    .pipe(gulp.dest(paths.build))
     .pipe(uglify())
     .pipe(rename(({suffix: '.min'})))
-    .pipe(gulp.dest(path.join(paths.build,assetSrcPath)));
-  }
+    .pipe(gulp.dest(paths.build));
 });
 
 gulp.task('images', function() {
-  if (assetSrcPath) {
-    gulp.src(assetSrcPath+'/**/img/*', {cwd: './src/sales/'})
-      .pipe(gulp.dest(path.join(paths.build,assetSrcPath)));
-  }
+  return gulp.src(['./**/img/*.png','./**/img/*.jpg'], {cwd: path.join('./src/sales/', assetSrcPath)})
+    .pipe(gulp.dest(paths.build));
 });
 
-gulp.task('assets-deploy', function() {
-  if (assetSrcPath) {
-    gulp.src(assetSrcPath+'/**/*', {cwd: './build/sales/'})
-      .pipe(gulp.dest(path.join(paths.assets,assetSrcPath)));
-  }
+gulp.task('assets-deploy', ['build'], function() {
+  return gulp.src(['./**/*.*'], {cwd: paths.build})
+    .pipe(gulp.dest(paths.assets));
+});
+
+gulp.task('config', function() {
+  return gulp.src(['./**/*.config'], {cwd: path.join('./src/sales/', assetSrcPath)})
+    .pipe(changed(paths.build))
+    .pipe(fm({remove:true}))
+    .pipe(swig(swigConfigOpts))
+    .pipe(gulpif(!ignoreCDS, cdsm()))
+    .pipe(gulp.dest(paths.build));
 });
 
 gulp.task('watch', function() {
@@ -171,14 +176,6 @@ gulp.task('watch', function() {
   gulp.watch(paths.images, ['images', 'assets-deploy']);
 });
 
-gulp.task('config', function() {
-  gulp.src(assetSrcPath+'/**/*.config', {cwd: './src/sales/'})
-    .pipe(changed(paths.build))
-    .pipe(fm({remove:true}))
-    .pipe(swig(swigConfigOpts))
-    .pipe(cdsm())
-    .pipe(gulp.dest(path.join(paths.build,assetSrcPath)));
-});
 
 gulp.task('build', ['html', 'language', 'styles', 'scripts', 'images']);
 gulp.task('css-build-deploy', ['styles', 'assets-deploy']);

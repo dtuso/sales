@@ -1,6 +1,6 @@
 ---
-location: {{ cdsDetails.cdsLocation }}
-id: {{ cdsDetails.draft.id }}
+location: localization/sales/gd/ssl/code-signing-certificate2/en
+id: false
 ---
 {% include '../modules/doc-block.html' %}
 <phrase key="MetaTitle" />

@@ -1,6 +1,6 @@
 {
   "all": "./",
-  "website-builder": "./hosting/website-builder/",
+  "wsb": "./hosting/website-builder/",
   "accounting": "./accounting/accounting-software/",
   "web-hosting": "./hosting/web-hosting/",
   "wp": "./hosting/wordpress-hosting/",
