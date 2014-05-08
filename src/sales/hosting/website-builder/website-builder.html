@@ -1,7 +1,7 @@
 ---
 location: sales/hosting/website-builder.aspx
-id: 536bd2d7f778fc3434fabbf2
-name: FOS-14231 - It was decided to pull the concat operation, so changed the name of the js file
+id: 536bf9a8f778fc3434b3a973
+name: FOS-20673 (Subtask of 14231) - correct issues
 ---
 {% extends 'base.html' %}
 {% block pageTitle %}
@@ -612,7 +612,7 @@ name: FOS-14231 - It was decided to pull the concat operation, so changed the na
                         <i class="ico ico-gt-circle-alternate"></i><span class="br"></span>
                         <span class="video-link-text-alternate font-18"><strong>[@L[cds.sales/gd/hosting/website-builder:video-link-text]@L]</strong></span>
                     </a>
-                    
+                    ##endif
                 </div>
                  <div class="modal fade videoModal myVideoModal" id="myVideoModal">
                   <div class="modal-dialog">
@@ -627,7 +627,7 @@ name: FOS-14231 - It was decided to pull the concat operation, so changed the na
                         <iframe class="embedVideoIE7" width="854" height="480" src="//www.youtube.com/embed/wXlQyXhIsH8?html5=1&rel=0" autoplay scrolling="no" frameborder="0" allowfullscreen>
                         </iframe>
                         <![endif]-->
-                        ##elseif(activeLanguageAny(en))
+                        ##else
                         <div class="embedVideo" id="ytplayer1" data-id="-HtVJyxSQmw"></div>
                         <!--[if lt IE 8]>
                         <iframe class="embedVideoIE7" width="854" height="480" src="//www.youtube.com/embed/-HtVJyxSQmw?html5=1&rel=0" autoplay scrolling="no" frameborder="0" allowfullscreen>
@@ -639,7 +639,6 @@ name: FOS-14231 - It was decided to pull the concat operation, so changed the na
                   </div>
                 </div>
             </div>
-          ##endif
         </div>
         <div class="row tab-content equal-height">
             <div class="col-xs-6">
@@ -657,7 +656,7 @@ name: FOS-14231 - It was decided to pull the concat operation, so changed the na
                     <p class="no-margin-bottom"><em>[@L[cds.sales/gd/hosting/website-builder:they-can-company]@L]</em></p>
                     ##if(activeLanguageAny(en))
                     <a href="#" class="video-link" data-toggle="modal" data-target="#myVideoModal2" data-ci="87764"><i class="ico ico-gt-circle-alternate"></i><span class="br"></span><span class="video-link-text-alternate font-18"><strong>[@L[cds.sales/gd/hosting/website-builder:video-link-text]@L]</strong></span></a>
-                    
+                    ##endif
                     <div class="modal fade videoModal myVideoModal" id="myVideoModal2">
                           <div class="modal-dialog">
                             <div class="modal-content">
@@ -674,7 +673,6 @@ name: FOS-14231 - It was decided to pull the concat operation, so changed the na
                             </div>
                         </div>
                     </div>
-                  ##endif
                 </div>
             </div>
         </div>
