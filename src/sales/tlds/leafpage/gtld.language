@@ -1,5 +1,131 @@
 ---
-location: localization/sales/gd/tlds/gtld/en
+location: localization/tldleaf/_template/en
 id: false
-name: FOS-19459
+name: 
 ---
+<phrase key="all.gtld.logo" comment="DO NOT TRANSLATE THIS PHRASE"/>
+
+<phrase key="all.gtld.banner" comment="DO NOT TRANSLATE"/>
+gtld-banner.jpg
+<phrase key="all.limitations.symbols" />
+*
+<phrase key="all.limitations.link" />
+Click here for product limitations.
+<phrase key="all.limitations.modal.header" />
+Product Limitations
+<phrase key="all.limitations.modal.content" />
+<p>* Plus <a href='[@T[link:<relative path="/domains/popups/icannfee.aspx"><param name="ci" value="85410" /></relative>]@T]' target='_blank'>ICANN fee</a> of [@T[IcannFeePriceText:<tokendata qty="1" />]@T] per year.</p>
+<phrase key="mobile.disclaimer.icann" />
+* Plus ICANN fee of [@T[currencyprice:<price usdamount="18" dropdecimal="false" />]@T] per year.
+<phrase key="all.tooltip.link"/>
+Details
+<phrase key="all.tooltip.close"/>
+Close
+<phrase key="all.page.h1" comment=""  />
+New Domains | <span>Get a <em class="gtld">.[@D[gtld]@D]</em> domain name</span>
+<phrase key="all.marketing.content.1" />
+<h2><span>What is </span><em class="gtld">.[@D[gtld]@D]</em><span>?</span></h2><p>Connect with free spirits and modern-day explorers with the domain created especially for cruise lines, resorts, adventure outfitters, hotels and other travel-related businesses.<br><br><span>Put</span> <em class="gtld">.[@D[gtld]@D]</em> <span>after your name and tell the world to start packing.</span></p>
+<phrase key="all.marketing.content.2" />
+<h2>Your perfect domain name is waiting.</h2><p><span>With hundreds of new domains coming to the web, finding an address that fits your business is easier than ever. Advertise your love of travel with</span> <em class="gtld">.[@D[gtld]@D]</em><span>.</span></p>
+<phrase key="mobile.title" comment="" />
+.[@D[gtld]@D] Domain Names
+<phrase key="ga.og.title" comment="" />
+Get a name that's perfect for you – .[@D[gtld]@D]
+<phrase key="ga.og.description" comment="" />
+Hundreds of new domains including .[@D[gtld]@D] are about to hit the Web. Which means you can get a memorable Web address that's tailored to your industry, your audience – even your city. Click to reserve your .[@D[gtld]@D] and browse more new domains.
+<phrase key="ga.page.title" comment=""  />
+.[@D[gtld]@D] Domains | Register .[@D[gtld]@D] gTLDs  - [@T[companyname:name]@T]
+<phrase key="ga.meta.description" comment=""  />
+Register your .[@D[gtld]@D] domains with [@T[companyname:name]@T] and learn more about new gTLDs.
+<phrase key="ga.meta.keywords" />
+.[@D[gtld]@D], .[@D[gtld]@D] domains, .[@D[gtld]@D] domain, .[@D[gtld]@D] domain registration, register .[@D[gtld]@D] domains, .[@D[gtld]@D] domain names
+<phrase key="ga.twitter.text" comment="" />
+Keeping my eye on a new .[@D[gtld]@D] domain name. Check out all the new domains soon to be released @[@T[companyname:name]@T].
+<phrase key="ga.social.media.share.text" />
+Share this page:
+<phrase key="ga.header.content" comment="{0} will be replaced with a formatted price." />
+<p id="tld-headline"><em class="gtld">.[@D[gtld]@D]</em><span> Let the adventure begin!</span></p><p id="tld-subheadline">Available now!</p><p id="tld-pricetagline">Starting at</p><p id="tld-priceline"><span id="ga-head-price">{0}</span><span>*/yr</span></p>
+<phrase key="ga.search.button.text"/>
+Go
+<phrase key="prereg.og.title" comment="" />
+Get a name that's perfect for you – .[@D[gtld]@D]
+<phrase key="prereg.og.description" comment="" />
+Hundreds of new domains including .[@D[gtld]@D] are about to hit the Web. Which means you can get a memorable Web address that's tailored to your industry, your audience – even your city. Click to reserve your .[@D[gtld]@D] and browse more new domains.
+<phrase key="prereg.page.title" comment=""  />
+.[@D[gtld]@D] Domain Names | Pre-register a New .[@D[gtld]@D] gTLD - [@T[companyname:name]@T]
+<phrase key="prereg.meta.description" comment=""  />
+Pre-register your ..[@D[gtld]@D] with [@T[companyname:name]@T] and discover other gTLD extensions.
+<phrase key="prereg.meta.keywords" />
+.[@D[gtld]@D], .[@D[gtld]@D] domains, .[@D[gtld]@D] domain, .[@D[gtld]@D] domain registration, register .[@D[gtld]@D] domains, .[@D[gtld]@D] domain names
+<phrase key="prereg.twitter.text" comment="" />
+Keeping my eye on a new .[@D[gtld]@D] domain name. Check out all the new domains soon to be released at @[@T[companyname:name]@T].
+<phrase key="prereg.social.media.share.text" />
+Share this page:
+<phrase key="prereg.header.content" comment="{0} will be a formatted price ($MXNXXX.XX), please move the html span tag with the price during translation, do not tranlate the id='' attribute nor it's value" />
+<p id="tld-headline"><em class="gtld">.[@D[gtld]@D]</em><span> Let the adventure begin!</span></p><p id="tld-subheadline">It's coming soon! Pre-register now!</p><p id="tld-pricetagline">Starting at</p><p id="tld-priceline"><span id="pre-reg-price">{0}</span><span>*/yr</span></p>
+<phrase key="prereg.search.button.text"/>
+Go
+<phrase key="prereg.phases.title" />
+When can I get it?
+<phrase key="prereg.ga.preregistration.title" />
+Pre-Registration
+<phrase key="prereg.ga.preregistration.tooltip" comment="tooltip"/>
+Anyone may pre-register a <em class="gtld">.[@D[gtld]@D]</em> during this phase. Multiple applications for the same domain will go to auction. If for some reason you don’t get the domain you want, [@T[companyname:name]@T] will refund your registration fee. The application fee is non-refundable however.
+<phrase key="prereg.ga.preregistration.priceline" comment="{0} will be a formatted price ($MXNXXX.XX), please move the html span tag with the price during translation, do not tranlate the id='' attribute nor it's value" />
+<span>Starting at  </span><span id='ga-price'>{0}</span><span id="ga-price-dur">*/yr</span>
+<phrase key="prereg.ga.preregistration.content" comment=""/>
+Beat the rush to stake your claim.<br/><br/>Sit back while [@T[companyname:name]@T] works to secure your domain.
+<phrase key="prereg.lr.priority.title" />
+Priority Pre-Registration
+<phrase key="prereg.lr.priority.tooltip" comment="tooltip"/>
+This period gives you early access to the most sought-after domains, with all applications reviewed after Priority Pre-registration closes. Multiple applications for the same domain will go to auction. If for some reason you don’t get the domain you want, [@T[companyname:name]@T] will refund your registration fee. The application fee is non-refundable however.
+<phrase key="prereg.lr.priority.priceline" comment="{0} will be a formatted price ($MXNXXX.XX), please move the html span tag with the price during translation, do not tranlate the id='' attribute nor it's value" />
+<span>Starting at </span><span id='lr-price'>{0}</span><span id="lr-price-dur">*</span>
+<phrase key="prereg.lr.priority.content" comment="" />
+For a small premium, jump the line with early access.
+<phrase key="prereg.lr.priority.during" comment="{0} will be a date (Jan 1st, 2001), please move the html span tag with the price during translation, do not tranlate the id='' attribute nor it's value" />
+<span>Pre-register until </span><span id='prereg-lr-during'>{0}</span>
+<phrase key="prereg.sr.trademark.title" />
+Trademark Owners
+<phrase key="prereg.sr.trademark.tooltip" comment="tooltip"/>
+This phase is for trademark holders only and you must prove you own the rights to the string you wish to register. All applications will be reviewed and awarded after the phase closes. If for some reason you don’t get the domain you want, [@T[companyname:name]@T] will refund your registration fee. The application fee is non-refundable however.
+<phrase key="prereg.sr.trademark.priceline" comment="{0} will be a formatted price ($MXNXXX.XX), please move the html span tag with the price during translation, do not tranlate the id='' attribute nor it's value" />
+<span>Starting at </span><span id='sr-price'>{0}</span><span id="sr-price-dur">*</span>
+<phrase key="prereg.sr.trademark.content" />
+<span style="color:#333333;">Secure the </span><em class="gtld">.[@D[gtld]@D]</em> <span style="color:#333333;">domain of your trademarked brand.</span>
+<phrase key="prereg.sr.trademark.during" comment="{0} will be a date (Jan 1st, 2001), please move the html span tag with the price during translation, do not tranlate the id='' attribute nor it's value" />
+<span>Ends </span><span id='prereg-sr-during'>{0}</span>
+<phrase key="prereg.sr.trademark.mobile.available" />
+<span>To register your trademark-protected </span><em class="gtld">.[@D[gtld]@D]</em><span> domains, hop on our desktop website.</span>
+<phrase key="prereg.sr.trademark.mobile.unavailable" />
+<span>Soon you’ll be able to pre-register your trademark-protected </span><em class="gtld">.[@D[gtld]@D]</em><span> domains.</span>
+<phrase key="prereg.phase.AsLowAs" comment="{0} is to show different subphases of the pre-reg time.  For example Phase 1, Phase 2, Phase 3. {1} is for pricing" />
+<span class="pre-reg-phase-title">Phase {0}</span> - <span class="pre-reg-phase-aslowas">Starting at </span><span class="pre-reg-phase-price">{1}*</span>
+<phrase key="prereg.phase.dates" comment="{0} is for an date/time" />
+<span class="pre-reg-phase-dates">Ends: {0}</span>
+<phrase key="watch.og.title" comment="" />
+Get a name that's perfect for you – .[@D[gtld]@D]
+<phrase key="watch.og.description" comment="" />
+Hundreds of new domains including .[@D[gtld]@D] are about to hit the Web. Which means you can get a memorable Web address that's tailored to your industry, your audience – even your city. Click to reserve your .[@D[gtld]@D] and browse more new domains.
+<phrase key="watch.page.title" comment=""  />
+.[@D[gtld]@D] Domains | Watch .[@D[gtld]@D] gTLDs  - [@T[companyname:name]@T]
+<phrase key="watch.meta.description" comment=""  />
+Watch your .[@D[gtld]@D] domains with [@T[companyname:name]@T] and learn more about new gTLDs. 
+<phrase key="watch.meta.keywords" />
+.[@D[gtld]@D], .[@D[gtld]@D] domains, .[@D[gtld]@D] domain, .[@D[gtld]@D] domain registration, register .[@D[gtld]@D] domains, .[@D[gtld]@D] domain names
+<phrase key="watch.twitter.text" comment="" />
+Keeping my eye on a new .[@D[gtld]@D] domain name. Check out all the new domains soon to be released at @[@T[companyname:name]@T]
+<phrase key="watch.social.media.share.text" />
+Share this page:
+<phrase key="watch.header.content" comment="" />
+<p id="tld-headline"><em class="gtld">.[@D[gtld]@D]</em><span> Let the adventure begin!</span></p><p id="tld-subheadline">We'll let you know when it's ready.</p>
+<phrase key="watch.header.button.follow" />
+Follow
+<phrase key="watch.header.button.following" />
+Following
+<phrase key="watch.header.button.unfollow" />
+Unfollow
+<phrase key="watch.marketing.content" comment="" />
+<p><span>Add it to your Watch List and we'll let you know when it's available. Just click</span> <strong>Follow</strong><span>, enter your email address and we'll do the rest.</span></p>
+<phrase key="watch.available.text" />
+Registration Available Soon

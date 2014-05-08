@@ -1,16 +1,16 @@
 ---
 location: sales/domains/domain-name-search.aspx
-id: 5362d392f778fc27b88b10a2
-name: testing
+id: false
+name: FOS-16128
 ---
 {% extends 'base.html' %}
 {% block metahead %}
 {% parent %}
     <style type="text/css">
-      .btn-new-width{
-        min-width: 104px;
-      }
-     .londonimg {background-image: url("[@T[link:<imageroot />]@T]fos/201401/domains/search/img/london.png");}
+      .btn-new-width{min-width: 104px;}
+      .londonimg {background-image: url("[@T[link:<imageroot />]@T]fos/201401/domains/search/img/london.png");}
+      .left {float:left}
+      .right {float:right}
     </style>
     
     <!--[if lt IE 9]>
@@ -50,7 +50,7 @@ name: testing
 
 
     <!-- Start page main -->
-    <div class="border-box" role="main">
+
         <!-- Start main-panel -->
         <section class="white-bg main-panel">
             <h1 class="main-panel-subtitle">[@L[cds.sales/gd/domains/domain-name-search:SalesHeaderSubHeading]@L]</h1>
@@ -406,7 +406,6 @@ name: testing
               </div>
         </div>
 
-    </div> <!-- /main -->
 {% endblock %}
 
 {% block footer %}
