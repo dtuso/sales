@@ -1,0 +1,433 @@
+body {
+    line-height: 1;
+    font-family: HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", "Segoe UI", Segoe, Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+}
+h1, h2, h3, h4 {
+    font-weight: 300;
+}
+strong {
+    font-weight: 600;
+}
+.info-section {
+    position: relative;
+    clear: both;
+    padding: 20px;
+    line-height: 1.428571429;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.info-section h3 {
+    font-size: 36px;
+    margin-bottom: 1em;
+    line-height: 1.1;
+}
+.info-section h4 {
+    font-size: 28px;
+    margin-bottom: 1em;
+    line-height: 1.1;
+}
+.info-section h5 {
+    font-weight: 700;
+    margin-bottom: 1em;
+}
+.info-section p {
+    margin-bottom: 1.25em;
+}
+.faq-item:hover {
+    cursor: pointer;
+}
+.wrap {
+    width: 1000px;
+    margin: 0 auto;
+}
+.caret-link {
+    text-align: center;
+}
+div.caret-link {
+    font-size: 24px;
+}
+.caret-link>a {
+    color: #3282E6;
+    text-decoration: none;
+    display: inline-block;
+    margin: 15px;
+}
+.caret-link>a:after {
+    display: inline-block;
+    font-size: 2em;
+    line-height: .5em;
+    vertical-align: -.15em;
+    margin-left: .2em;
+}
+.row {
+    clear: both;
+    overflow: hidden;
+}
+.row+.caret-link {
+    margin-top: 40px;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.col {
+    float: left;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0 15px;
+}
+#follow h2 {
+    font-size: 48px;
+    text-align: center;
+    color: #79b800;
+    margin-bottom: .25em;
+}
+#questions, #infographic {
+    background-color: #79b800;
+    color: #fff;
+    clear: both;
+}
+#domain-names, #view-infographic, #faq {
+    background-color: #ededed;
+}
+#domain-names .col {
+    width: 33.33333333333333%;
+    *width: 30%}
+#features-benefits .col {
+    width: 50%;
+    *width: 45%}
+.faq-item {
+    padding-left: 40px;
+    margin-bottom: 2em;
+}
+.faq-item-hdr {
+    font-weight: 700;
+    margin-bottom: 1em;
+}
+.faq-item-hdr:before {
+    content: "+";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin-left: -40px;
+    text-align: center;
+    line-height: 12px;
+    font-size: 30px;
+    font-weight: 400;
+}
+.faq-item-content {
+    display: none;
+}
+.open .faq-item-hdr:before {
+    content: "-"}
+.open .faq-item-content {
+    display: block;
+}
+#questions {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+#infographic {
+    margin-top: 55px;
+}
+#infographic .wrap {
+    background: url(img/infographic.gif) no-repeat;
+    min-height: 1438px;
+    position: relative;
+    font-size: 24px;
+    line-height: 1.3;
+}
+.info-content {
+    position: absolute;
+}
+#infographic h4 {
+    font-size: 48px;
+    line-height: 1;
+    margin-bottom: .25em;
+}
+#infographic h3 {
+    font-size: 40px;
+    line-height: 1;
+    margin-bottom: .25em;
+}
+#infographic h3 .big {
+    display: block;
+    font-size: 1.85em;
+    text-transform: uppercase;
+    font-family: "Helvetica Neue", "Segoe UI", Segoe, Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 100;
+}
+#infographic h3 em {
+    font-style: italic;
+}
+.domain-container {
+    background-color: #fff;
+    color: #356b00;
+    padding: 20px;
+    margin-top: 30px;
+    -moz-box-shadow: 12px 12px 0 #9bca3f;
+    -webkit-box-shadow: 12px 12px 0 #9bca3f;
+    box-shadow: 12px 12px 0 #9bca3f;
+    width: 95%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+}
+.domain-container em {
+    font-style: italic;
+    color: #ff7900;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.domain-container.big {
+    font-size: 40px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 40px;
+}
+.domain-container-tip {
+    position: absolute;
+    font-size: 14px;
+    color: #fff;
+    padding: 5px 20px;
+    text-align: center;
+}
+.domain-container-tip:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-left: -5px;
+}
+.domain-container-tip.domain {
+    background-color: #356b00;
+}
+.domain-container-tip.domain:after {
+    border-top: 10px solid #356b00;
+    bottom: -10px;
+}
+.domain-container-tip.tld {
+    background-color: #ff7900;
+}
+.domain-container-tip.tld:after {
+    border-bottom: 10px solid #ff7900;
+    top: -10px;
+}
+#story-hdr {
+    top: 40px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+#story-1 {
+    top: 292px;
+    left: 480px;
+    width: 360px;
+}
+#story-2 {
+    left: 347px;
+    top: 570px;
+    width: 545px;
+}
+#story-3 {
+    top: 890px;
+    left: 30px;
+    width: 300px;
+}
+#story-extra-1 {
+    top: 398px;
+    left: 68px;
+    width: 115px;
+    text-align: center;
+    font-size: 22px;
+    color: #79b800;
+    font-style: italic;
+    line-height: 1.1;
+}
+#story-extra-2 {
+    top: 560px;
+    left: 45px;
+    width: 135px;
+    text-align: right;
+    font-size: 30px;
+    color: #356b00;
+    font-style: italic;
+    line-height: 1.1;
+}
+#story-extra-3 {
+    top: 400px;
+    left: 212px;
+    width: 100px;
+    text-align: center;
+    color: #ff84ea;
+    font-size: 36px;
+    line-height: 1.1;
+}
+#story-extra-4 {
+    top: 930px;
+    left: 590px;
+    width: 130px;
+    text-align: center;
+    font-size: 30px;
+    color: #356b00;
+    font-style: italic;
+    line-height: 1.1;
+}
+#story-extra-5 {
+    top: 1330px;
+    left: 360px;
+    width: 300px;
+    text-align: right;
+    font-size: 30px;
+    color: #356b00;
+    font-style: italic;
+    line-height: 1.1;
+}
+#story-extra-6 {
+    top: 1158px;
+    left: 653px;
+    font-size: 14px;
+    color: #ff84ea;
+    font-weight: 700;
+    font-style: italic;
+}
+#masthead {
+    color: #333;
+    margin: 0 auto;
+    position: relative;
+    width: 1000px;
+}
+#masthead .flt-btn {
+    min-width: 140px;
+    font-size: 18px;
+    line-height: 1.35;
+    margin-top: 30px;
+}
+#masthead h3 {
+    font-size: 45px;
+    font-weight: 400;
+    line-height: 48px;
+    margin-bottom: .25em;
+}
+#masthead h4 {
+    font-size: 28px;
+    line-height: 28px;
+}
+.masthead-content {
+    display: table;
+    width: 100%}
+.masthead-content>div {
+    display: table-cell;
+    vertical-align: middle;
+    *float: left;
+}
+.masthead-copy {
+    padding-right: 30px;
+}
+.masthead-media {
+    width: 533px;
+}
+#masthead .slideshow-description li {
+    line-height: 20px!important;
+}
+.masthead-title {
+    margin: 15px 0 6px;
+}
+p.bottom {
+    right: 0;
+}
+#disclaimers {
+    font-size: 10px;
+    margin: 0 auto;
+    line-height: 12px;
+    width: 1000px;
+}
+#g-modal-overlay {
+    background-color: #868686;
+    display: none;
+    height: 100%;
+    left: 0;
+    opacity: .8;
+    position: absolute;
+    top: 0;
+    width: 100%}
+#simplemodal-container {
+    position: absolute!important;
+}
+.g-modal {
+    background-color: #FFF;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .8);
+    color: #707070;
+    display: none;
+    font-size: 14px;
+    line-height: 1.3;
+    padding: 15px 20px 20px;
+    position: absolute;
+}
+.g-modal-close {
+    background: url(//img2.wsimg.com/fos/wsb/rebrand/img/wsbv7_sprite.png) no-repeat scroll -245px -112px rgba(0, 0, 0, 0);
+    cursor: pointer;
+    display: block;
+    height: 15px;
+    overflow: hidden;
+    position: absolute;
+    right: 15px;
+    text-indent: -9999em;
+    top: 15px;
+    width: 15px;
+}
+.g-modal-header {
+    border-bottom: 1px solid #CCC;
+    color: #333;
+    font-size: 24px;
+    font-weight: 400;
+    padding-bottom: 2px;
+}
+.g-modal-content {
+    overflow: auto;
+    position: relative;
+    width: 600px;
+}
+.g-modal-content p {
+    margin: 15px 0;
+}
+.g-modal-buttonpane {
+    font-size: 12px;
+    margin-top: 8px;
+    position: relative;
+    text-align: center;
+}
+.g-modal-footer {
+    background: none repeat scroll 0 0 #DBDBDB;
+    padding: 15px;
+    text-align: center;
+}
+.circle-caret span {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin-right: 15px;
+    background: url(../img/sprite-3.png) no-repeat -72px -78px;
+}
+.caret-link>a>span {
+    width: 20px;
+    height: 18px;
+    display: inline-block;
+    margin-right: 15px;
+    background: url("img/sprite-3-new.png") no-repeat scroll -72px -78px rgba(0, 0, 0, 0);
+    color: #3282E6;
+}
+a:hover {
+    text-decoration: underline;
+}
