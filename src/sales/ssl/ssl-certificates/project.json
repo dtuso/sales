@@ -39,6 +39,26 @@
     "metaOgDescription": "[@L[cds.sales/gd/ssl/ssl-certificates:MetaDescription]@L]",
     "cssVersionOverride" : "1"
   },
+  "config.html": {
+    "cdsDetails": {
+      "champion": {
+        "name": "Dominic Tuso",
+        "email": "dtuso@godaddy.com"
+      },
+      "draft": {
+        "comments": "Reskin",
+        "url": "http://www.dev-godaddy.com/ssl/ssl-certificates-config.aspx"
+      }
+    },
+    "metaTitle": "[@L[cds.sales/gd/ssl/ssl-certificates:MetaTitle]@L]",
+    "metaDescription": "[@L[cds.sales/gd/ssl/ssl-certificates:MetaDescription]@L]",
+    "metaKeywords": "[@L[cds.sales/gd/ssl/ssl-certificates:MetaKeywords]@L]",
+    "metaCanonicalPath": "/ssl/ssl-certificates.aspx",
+    "metaOgTitle": "[@L[cds.sales/gd/ssl/ssl-certificates:MetaTitle]@L]",
+    "metaOgImage": "",
+    "metaOgDescription": "[@L[cds.sales/gd/ssl/ssl-certificates:MetaDescription]@L]",
+    "cssVersionOverride" : "1"
+  },
   "source.language": {
     "cdsDetails": {
       "champion": {
