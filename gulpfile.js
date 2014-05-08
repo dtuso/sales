@@ -5,7 +5,7 @@ try {
   var cdsm     = require('gulp-cdsm');
   var changed  = require('gulp-changed');
   var concat   = require('gulp-concat');
-  var cssmin   = require('gulp-cssmin');
+  var cssmin   = require('gulp-minify-css');
   var fm       = require('gulp-front-matter');
   var gulpif   = require('gulp-if');
   var less     = require('gulp-less');
