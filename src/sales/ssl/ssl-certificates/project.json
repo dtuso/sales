@@ -6,10 +6,6 @@
         "email": "dtuso@godaddy.com"
       },
       "draft": {
-        "createdBy": {
-          "fullName": "Colyn Brown",
-          "username": "clbrown"
-        },
         "comments": "Reskin",
         "url": "http://www.dev-godaddy.com/ssl/ssl-certificates.aspx"
       }
@@ -30,12 +26,8 @@
         "email": "dtuso@godaddy.com"
       },
       "draft": {
-        "createdBy": {
-          "fullName": "Colyn Brown",
-          "username": "clbrown"
-        },
         "comments": "Reskin",
-        "url": "http://www.dev-godaddy.com/ssl/ssl-certificates.aspx"
+        "url": "http://www.dev-godaddy.com/ssl/ssl-certificates-b"
       }
     },
     "metaTitle": "[@L[cds.sales/gd/ssl/ssl-certificates:MetaTitle]@L]",
@@ -55,13 +47,6 @@
       },
       "cdsLocation": "localization/sales/gd/ssl/ssl-certificates/en",
       "draft": {
-        "id": false,
-        "createdDate": "2014-05-06",
-        "createdBy": {
-          "fullName": "Dominic Tuso",
-          "username": "dtuso"
-        },
-        "jiraTicket": "FOS-20408",
         "comments": "fix extra words where apostrophes should be"
       }
     }
