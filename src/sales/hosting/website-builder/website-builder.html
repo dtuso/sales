@@ -1,7 +1,7 @@
 ---
 location: sales/hosting/website-builder.aspx
-id: 536b03cdf778fc0228ceeff8
-name: FOS-14231 - Updated the ribbon to work with the new global css file
+id: 536bd2d7f778fc3434fabbf2
+name: FOS-14231 - It was decided to pull the concat operation, so changed the name of the js file
 ---
 {% extends 'base.html' %}
 {% block pageTitle %}
@@ -929,7 +929,7 @@ name: FOS-14231 - Updated the ribbon to work with the new global css file
 {% endblock %}
 
 {% block footer %}
-  <script src="[@T[link:<js path='fos/sales/themes/scotty/hosting/website-builder/js/allPageScripts.js' />]@T]" type="text/javascript"></script>
+  <script src="[@T[link:<js path='fos/sales/themes/scotty/hosting/website-builder/js/website-builder.js' />]@T]" type="text/javascript"></script>
   <script src="[@T[link:<js path='fos/201401/global/js/plugins.js' />]@T]" type="text/javascript"></script>
 
   <script type="text/javascript">

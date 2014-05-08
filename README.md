@@ -139,8 +139,8 @@ gulp styles
 
 #### SCRIPTS
 
-This tasks will minify any JavaScript files you have in your JS folder and then concatenate them into a single file 
-named 'allPageScripts.js' which you need to reference in your page. The compiled JavaScript, gets copied to the ```build``` folder.
+This tasks will minify any JavaScript files you have in your JS folder. The a copy of the original as well as the minified JavaScript
+gets copied to the ```build``` folder.
 
 ```
 gulp scripts
