@@ -22,6 +22,7 @@
   "dependencies": {
     "chalk": "^0.4.0",
     "fullname": "^0.1.0",
+    "gulp-if": "^1.1.0",
     "moment": "^2.6.0",
     "request": "^2.34.0",
     "rimraf": "^2.2.6",

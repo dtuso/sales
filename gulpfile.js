@@ -1,23 +1,26 @@
 try {
 
-  var gulp = require('gulp');
-  var changed = require('gulp-changed');
-  var swig = require('gulp-swig');
-  var less = require('gulp-less');
-  var _ = require('lodash');
-  var path = require('path');
-  var fs = require('fs');
-  var cssmin = require('gulp-cssmin');
-  var uglify = require('gulp-uglify');
-  var concat = require('gulp-concat');
-  var rename = require('gulp-rename');
-  var cdsm = require('gulp-cdsm');
-  var fm = require('gulp-front-matter');
-  var argv = require('minimist')(process.argv.slice(2));
-  var pkg = require('./package.json');
-  var updater = require('./lib/updater.js');
+  // Gulp plugins
+  var gulp     = require('gulp');
+  var cdsm     = require('gulp-cdsm');
+  var changed  = require('gulp-changed');
+  var concat   = require('gulp-concat');
+  var cssmin   = require('gulp-cssmin');
+  var fm       = require('gulp-front-matter');
+  var gulpif   = require('gulp-if');
+  var less     = require('gulp-less');
+  var rename   = require('gulp-rename');
+  var swig     = require('gulp-swig');
+  var uglify   = require('gulp-uglify');
+
+  // utilities
+  var path     = require('path');
+  var fs       = require('fs');
+  var _        = require('lodash');
+  var argv     = require('minimist')(process.argv.slice(2));
+  var updater  = require('./lib/updater.js');
   var username = require('username');
-  var moment = require('moment');
+  var moment   = require('moment');
 
 } catch (e) {
 
@@ -31,16 +34,22 @@ var theme = 'scotty';
 var rootAssetPath = (process.platform === 'win32') ? '\\\\g1dwimages001\\images\\fos\\sales\\themes\\' + theme + '\\' : '/Volumes/images/fos/sales/themes/' + theme + '/';
 
 var assetSrcPaths = require('./paths.json');
-var assetSrcPath = assetSrcPaths[argv.src];
+var assetSrcPath = assetSrcPaths[argv.src||'all'];
+
+var ignoreCDS = argv['ignore-cds'] || false;
+
+if (!argv.src || argv.src == 'all') {
+  ignoreCDS = true;
+}
 
 var paths = {
-  templates: ['./src/sales/**/*.html'],
-  project: ['./src/sales/**/project.json'],
-  language: ['./src/sales/**/*.language'],
-  less: ['./src/sales/**/css/**/*.less'],
-  images: ['./src/sales/**/img/**/*.jpg', './src/sales/**/img/**/*.png'],
-  build: './build/sales/',
-  assets: rootAssetPath
+  templates : ['./src/sales/**/*.html'],
+  project   : ['./src/sales/**/project.json'],
+  language  : ['./src/sales/**/*.language'],
+  less      : ['./src/sales/**/css/**/*.less'],
+  images    : ['./src/sales/**/img/**/*.jpg', './src/sales/**/img/**/*.png'],
+  build     : './build/sales/',
+  assets    : rootAssetPath
 };
 
 var getProjectData = function(file) {
@@ -59,7 +68,7 @@ var getProjectData = function(file) {
 
   data = data[fileName] || {};
 
-  if (file.frontMatter) {
+  if (file.frontMatter && data.cdsDetails && data.cdsDetails.draft) {
     data.cdsDetails.draft.location = file.frontMatter.location;
     data.cdsDetails.draft.id = file.frontMatter.id;
     data.cdsDetails.draft.name = file.frontMatter.name;
@@ -104,7 +113,7 @@ gulp.task('html', function() {
     .pipe(changed(path.join(paths.build,assetSrcPath)))
     .pipe(fm({remove:true}))
     .pipe(swig(swigTplOpts))
-    .pipe(cdsm())
+    .pipe(gulpif(!ignoreCDS, cdsm()))
     .pipe(gulp.dest(path.join(paths.build,assetSrcPath)));
 });
 
@@ -113,7 +122,7 @@ gulp.task('language', function() {
     .pipe(changed(paths.build))
     .pipe(fm({remove:true}))
     .pipe(swig(swigLangOpts))
-    .pipe(cdsm())
+    .pipe(gulpif(!ignoreCDS, cdsm()))
     .pipe(gulp.dest(path.join(paths.build,assetSrcPath)));
 });
 
