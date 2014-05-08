@@ -1,7 +1,7 @@
 ---
 location: sales/hosting/website-builder.aspx
-id: 5368215bf778fc1100fa392b
-name: FOS-14231 - Syncing up Github 
+id: 536b03cdf778fc0228ceeff8
+name: FOS-14231 - Updated the ribbon to work with the new global css file
 ---
 {% extends 'base.html' %}
 {% block pageTitle %}
@@ -127,7 +127,7 @@ name: FOS-14231 - Syncing up Github
   <section class="main-banner main-banner-website-builder">
       <div class="l-main-container container main-banner-content main-banner-content-website-builder">
         <span class="ribbon ribbon-right">
-            <i class="marquee-flag marquee-flag-[@T[localization:<language />]@T] marquee-flag-[@T[localization:<language full='true'/>]@T] marquee-flag-free-domain-included"></i>
+            <i class="marquee-flag [@T[localization:<language full="true" />]@T] [@T[localization:<language />]@T] marquee-flag-free-domain-included"></i>
         </span>
         <div class="main-banner-text">
   ##else
@@ -135,7 +135,7 @@ name: FOS-14231 - Syncing up Github
       <div class="marquee marquee-bg">
         <div class="marquee-content marquee-font">
           <span class="ribbon ribbon-right absolute-position">
-            <i class="marquee-flag marquee-flag-[@T[localization:<language />]@T] marquee-flag-[@T[localization:<language full='true'/>]@T] marquee-flag-free-domain-included"></i>
+            <i class="marquee-flag [@T[localization:<language full="true" />]@T] [@T[localization:<language />]@T] marquee-flag-free-domain-included"></i>
           </span>
           <span class="marquee-text-1 marquee-font-light">[@L[cds.sales/gd/hosting/website-builder:your-website]@L]</span>
           <span class="marquee-text-2 marquee-font-light">[@L[cds.sales/gd/hosting/website-builder:here-too]@L]</span>  
