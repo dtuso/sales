@@ -14,5 +14,6 @@
   "qsc": "./ecommerce/shopping-cart/",
   "contact-us": "./contact-us/",
   "about-godaddy": "./newscenter/about-godaddy",
-  "leaf-pages": "./tlds/leafpage"
+  "leaf-pages": "./tlds/leafpage",
+  "what-is-a-gtld": "./domains/what-is-a-gtld"
 }

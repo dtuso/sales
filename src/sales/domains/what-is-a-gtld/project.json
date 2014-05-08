@@ -1,0 +1,38 @@
+{
+  "whatisagtld.html": {
+    "cdsDetails": {
+      "champion": {
+        "name": "Joel Conrad",
+        "email": "jconrad@godaddy.com"
+      },
+      "cdsLocation": "sales/domains/what-is-a-gtld.aspx",
+      "draft": {
+        "createdDate": "2014-05-08",
+        "comments": "Adding to gitHub",
+        "url": "http://www.dev-godaddy.com/domains/what-is-a-gtld.aspx"
+      }
+    },
+    "cssVersionOverride" : "",
+    "metaTitle": "[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-11-WhatIsAGTLDLearnMoreAboutNew]@L]",
+    "metaDescription": "[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-25-GenericTopLevelDomainsOrGTLDSAre]@L]",
+    "metaKeywords": "[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-10-WhatIsAGtldNewGtldsNewGtld]@L]",
+    "metaCanonicalPath": "/domains/what-is-a-gtld.aspx",
+    "metaOgTitle": "[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-5-WhatIsAGTLD]@L]",
+    "metaOgDescription": "[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-25-GenericTopLevelDomainsOrGTLDSAre]@L]",
+    "metaOgAppID": "115696031791232",
+    "metaOgAdmins": "633356800"
+  },
+  "whatisagtld.language": {
+    "cdsDetails": {
+      "champion": {
+        "name": "Joel Conrad",
+        "email": "jconrad@godaddy.com"
+      },
+      "cdsLocation": "localization/sales/domains/what-is-a-gtld/en",
+      "draft": {
+        "createdDate": "2014-05-08",
+        "comments": "Adding to gitHub"
+      }
+    }
+  }
+}

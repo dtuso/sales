@@ -1,0 +1,379 @@
+---
+location: sales/domains/what-is-a-gtld.aspx
+id: false
+name: FOS-20469
+---
+{% extends 'base.html' %}
+{% block metahead %}
+{% parent %}
+    <style>
+      #story-extra-2 {
+        top: 610px;
+        font-size: 25px;
+      }
+      html[lang*=tr] #story-extra-6 {
+        font-size: 12px;
+      }
+      html[lang*=ua] #infographic h4 {
+        font-size: 42px;        
+      }
+      html[lang*=tr] #story-extra-3 {
+        font-size: 28px;
+        top: 400px;
+        width: 100px;
+      }
+      html[lang*=fi] #story-extra-4 {     
+        font-size: 30px;
+        left: 580px;
+        top: 930px;
+        width: 130px;
+      }
+      html[lang*=gr] #story-extra-4 {     
+        font-size: 25px;
+        left: 585px;
+        top: 930px;
+        width: 130px;
+      }
+      html[lang*=nl] #story-extra-4 {     
+        font-size: 25px;
+        left: 590px;
+        top: 945px;
+        width: 130px;
+      }
+      html[lang*=pt] #story-extra-4 {     
+        font-size: 30px;
+        left: 580px;
+        top: 935x;
+        width: 150px;
+      }
+      html[lang*=tr] #story-extra-4 {     
+        font-size: 30px;
+        left: 575px;
+        top: 930px;
+        width: 130px;
+      }
+      html[lang*=fr] #story-extra-5
+      {
+        font-size: 30px;
+        left: 310px;
+        top: 1330px;
+        width: 350px;
+      }
+      ##if(!activeLanguageAny(en, es))
+      .masthead-content>div.masthead-media{display:none}
+      ##endif
+    </style>
+{% endblock %}
+
+{% block body %}
+<div id="masthead">
+    <h1 class="masthead-title">[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-5-WhatIsAGTLD]@L]</h1>
+    <div class="masthead-content">
+        <div class="masthead-copy">
+            <h3>[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-6-100sOfNewdomainsAreComing]@L]</h3>  
+            <h4>[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-8-HereSWhatYouNeedToKnow]@L]</h4>
+            <a class="flt-btn flt-btn-grn" href="[@T[link:<relative path='tlds/gtld.aspx'><param name='ci' value='85444' /></relative>]@T]">[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-4-BrowseNewDomainsNow]@L]</a>
+        </div>
+        <div class="masthead-media">
+          <iframe width="533" height="315" src="//www.youtube.com/embed/25XTscbsqWg?rel=0&wmode=transparent" frameborder="0" allowfullscreen></iframe>
+        </div>  
+    </div>
+</div>
+<div id="infographic">
+    <div class="wrap">    
+        <div class="info-content" id="story-hdr">
+            <h3>[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-8-FindTheDomainNameThatFitsYourBusiness]@L]</h3>
+        </div>
+        
+        <div class="info-content" id="story-1">
+            <h4>[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-3-MeetCate]@L]</h4>
+            [@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-17-CateNeedsAWebsiteToAttractMoreCustomers]@L]
+        </div>
+        
+        <div class="info-content" id="story-2">
+            <h4>[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-6-WhatSADomainName]@L]</h4>
+            [@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-17-WithTheRightDomainNameAndWebsiteCate]@L]
+            <div class="domain-container big">
+                [@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-2-CatesDomainNameCom]@L]
+                <div class="domain-container-tip domain" style="top:-20px; left:130px;">[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-2-DomainName]@L]</div>
+                <div class="domain-container-tip tld" style="bottom:-20px; right:15px;">[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-2-DomainExtension]@L]</div>
+            </div>
+        </div>
+        
+        <div class="info-content" id="story-3">
+            <h4>[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-3-ComingSoon]@L]</h4>
+            [@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-21-CateWillSoonHaveHundredsOfDomainName]@L]
+            <div class="domain-container">
+                [@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-8-CatesCakesMENUCatesCakesFOODCatesCakesEATCatesCakesNYC]@L]
+            </div>
+        </div>
+        
+        <div class="info-content" id="story-extra-1">[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-2-CateSCart]@L]</div>
+        <div class="info-content" id="story-extra-2">[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-4-CateSFirstBusiness]@L]</div>
+        <div class="info-content" id="story-extra-3">[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-1-Cate]@L]</div>
+        <div class="info-content" id="story-extra-4">[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-5-CateSBusinessNow]@L]</div>
+        <div class="info-content" id="story-extra-5">[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-9-CateSNewCustomersTheyFoundHerOnline]@L]</div>
+        <div class="info-content" id="story-extra-6">[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-2-CatesCakesNYC]@L]</div>
+        
+    </div>
+</div>
+<div class="info-section" id="follow">
+  <h2>[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-5-FollowPreRegisterGO]@L]</h2>
+  <div class="caret-link"> 
+    <a href="[@T[link:<relative path='tlds/gtld.aspx'><param name='ci' value='85445' /></relative>]@T]"><span class="circle-caret"></span>[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-5-SeeAllOurNewDomains]@L]</a></div>
+</div>
+<div class="info-section" id="domain-names" style="padding-bottom: 10px;">
+  <div class="wrap">
+        <div class="row">
+            <div class="col">
+                <h4>[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-8-100sOfNewDomainsAreHeadedYourWay]@L]</h4>
+            </div>
+            <div class="col">
+                <h4>[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-7-WhyAreNewDomainsBeingCreated]@L]</h4>
+            </div>
+            <div class="col">
+                <h4>[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-3-NewDomainsTimetable]@L]</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+               <p>[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-73-AsOfEarly2013ThereWereJust22]@L]</p>
+            </div>
+            <div class="col">
+               <p>[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-46-AfterNearly30YearsItSBecomeIncreasingly]@L]</p>
+            </div>
+            <div class="col">
+               <p>[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-53-TheFirstOfTheNewDomainsWillBe]@L]</p>
+            </div>
+        </div>
+        <div class="caret-link" ><a style="margin:15px 15px 0px 15px;" href="[@T[link:<relative path='tlds/gtld.aspx'><param name='ci' value='85446' /></relative>]@T]"><span class="circle-caret"></span>[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-3-BrowseNamesNow]@L]</a></div>
+    </div>
+</div>
+##if(activeLanguageAny(en))
+<div class="info-section" id="view-infographic">
+  <div class="wrap" style="padding-bottom:0px"> 
+    <div class="caret-link">
+      <a  class="infographic" style="cursor:pointer" ><span class="circle-caret"></span>[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-10-ViewOurInfographicForMoreInformationOnThe]@L]</a>
+      <img class="infographic" style="cursor:pointer; vertical-align:middle; margin: 0 0 0 -7px" src="[@T[link:<imageroot />]@T]fos/tlds/learn_more/images/BCA-637_gTLDs_Industry_Stats_Infographics_V8_tall_thmbnl.png"/>
+    </div>
+  </div>
+</div> 
+ ##endif  
+
+<div class="info-section" id="features-benefits">
+  <div class="wrap">
+        <div class="row">
+            <div class="col">
+                <h3>[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-3-FeaturesAndBenefits]@L]</h3>
+           </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h5>[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-16-AttractNewCustomersWithADomainSpecificTo]@L]</h5>
+                
+               <p>[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-47-HundredsOfTargetedDomainsMENUREALTORNYCAre]@L]</p>
+               <h5>[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-7-GetTheNameYouReallyWant]@L]</h5>
+               
+               <p>[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-32-TheseDomainsAreAllBrandNewSoYour]@L]</p>
+            </div>
+            <div class="col">
+                <h5>[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-4-MakeItMemorable]@L]</h5>
+                
+               <p>[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-35-NowThatPartOfYourWebsiteDescriptionAppears]@L]</p>
+               
+               <h5>[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-5-ExpandYourFootprintOnline]@L]</h5>
+               
+               <p>[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-63-GoDaddyDomainsWorkWithAnyWebsiteNoMatter]@L]</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="info-section" id="faq">
+  <div class="wrap">
+        <div class="row">
+            <div class="col">
+                <h3>[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-1-FAQs]@L]</h3>
+                <div id="faq-block">
+
+                    <div class="faq-item">
+                      <div class="faq-item-hdr"> [@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-10-WillAllTheNewDomainsBeAvailableTo]@L] </div>
+                      <div class="faq-item-content">
+                        <p> [@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-52-NoWhileThereWillBeOver700New]@L] </p>
+                      </div>
+                    </div>
+                    <div class="faq-item">
+                      <div class="faq-item-hdr"> [@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-10-WillTheNewDomainsChangeHowTheInternet]@L] </div>
+                      <div class="faq-item-content">
+                        <p> [@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-25-NoTheyMayChangeTheWayPeopleFind]@L] </p>
+                      </div>
+                    </div>
+                  <div class="faq-item">
+                      <div class="faq-item-hdr"> [@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-10-WhyDoIneedOneOfTheseNewDomainExtensions]@L]</div>
+                      <div class="faq-item-content">
+                        <p> [@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-25-WithDotComNearingItsBirthday]@L] </p>
+                      </div>
+                    </div>
+                    <div class="faq-item">
+                      <div class="faq-item-hdr"> [@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-8-HowMuchWillTheNewDomainsCost]@L] </div>
+                      <div class="faq-item-content">
+                        <p> [@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-39-PricesWillVaryForTheNewDomainsAnd]@L] </p>
+                      </div>
+                    </div>
+                    <div class="faq-item">
+                      <div class="faq-item-hdr"> [@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-7-WhatMakesAGreatDomainName]@L] </div>
+                      <div class="faq-item-content">
+                        <p> [@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-45-PickingTheRightDomainIsHugeLookFor]@L]</p>
+                      </div>
+                    </div>
+                    <div class="faq-item">
+                      <div class="faq-item-hdr"> [@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-11-WhatAreTheBenefitsOfPreRegisteringA]@L] </div>
+                      <div class="faq-item-content">
+                        <p> [@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-52-CompetitionForSomeOfTheNewDomainsIs]@L] </p>
+                        <p> [@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-23-MuchLikeStandingInLineForTicketsThe]@L] </p>
+                      </div>
+                    </div>
+                    <div class="faq-item">
+                      <div class="faq-item-hdr"> [@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-13-CanIPreRegisterADomainThatS]@L] </div>
+                      <div class="faq-item-content">
+                        <p> [@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-28-YesIfMoreThanOnePersonPreRegisters]@L] </p>
+                      </div>
+                    </div>
+                    <div class="faq-item">
+                      <div class="faq-item-hdr"> [@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-11-DoesPreRegisteringADomainGuaranteeILl]@L] </div>
+                      <div class="faq-item-content">
+                        <p> [@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-39-NoPreRegisteringADomainReservesYourPlace]@L] </p>
+                        <p> [@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-53-IfWeAreUnableToGetTheName]@L] </p>
+                        <p> [@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-31-IfGoDaddySecuresTheNameAndMoreThan]@L] </p>
+                      </div>
+                    </div>
+                    <div class="faq-item">
+                      <div class="faq-item-hdr"> [@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-6-IsAPreRegistrationBinding]@L] </div>
+                      <div class="faq-item-content">
+                        <p> [@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-22-NoYouCanCancelYourPreRegistrationRequest]@L] </p>
+                      </div>
+                    </div>
+                  <div class="faq-item">
+                      <div class="faq-item-hdr"> [@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-6-WhatsTheDifferenceBetweenRegular]@L] </div>
+                      <div class="faq-item-content">
+                        <p> [@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-22-APriorityPreRegistrationIsSubmitted]@L] </p>
+                      </div>
+                    </div>
+                  <div class="faq-item">
+                      <div class="faq-item-hdr"> [@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-6-IfIApplyforAPriorityPre-reg]@L] </div>
+                      <div class="faq-item-content">
+                        <p> [@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-22-NoPriorityPreRegistrationGives]@L] </p>
+                      </div>
+                    </div>
+                 <div class="faq-item">
+                      <div class="faq-item-hdr"> [@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-6-WhatIfAParticularDomain]@L] </div>
+                      <div class="faq-item-content">
+                        <p> [@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-22-MultipleApplicationsForTheSameDomain]@L] </p>
+                      </div>
+                    </div>
+                    <div class="faq-item">
+                      <div class="faq-item-hdr"> [@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-12-HowDoIRegisterADomainWithMy]@L] </div>
+                      <div class="faq-item-content">
+                        <p> [@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-25-ICANNProtectsTrademarkOwnersByLettingThemReserve]@L] </p>
+                        <p> [@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-31-ToBeSureYouDonTMissThis]@L]  </p>
+                      </div>
+                    </div>
+                    <div class="faq-item">
+                      <div class="faq-item-hdr"> [@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-10-WillThereBeDomainsInLanguagesOtherThan]@L] </div>
+                      <div class="faq-item-content">
+                        <p> [@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-27-YesForTheFirstTimeSpeakersOfNearly]@L] </p>
+                        <p> [@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-20-ThisWillBeAHugeBoonForCompanies]@L] </p>
+                      </div>
+                    </div>
+                    <div class="faq-item">
+                      <div class="faq-item-hdr"> [@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-12-IsThereAnyReasonToRegisterMoreThan]@L] </div>
+                      <div class="faq-item-content">
+                        <p> [@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-59-YesBusinessesOftenRegisterDifferentDomainsToExpand]@L] </p>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="info-section" id="now">
+  <div class="wrap">
+        <div class="row">
+            <div class="col">
+                <h3>[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-6-WhatShouldIDoNow]@L]</h3>
+                <p>[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-62-TheNewDomainsWillBeReleasedOverThe]@L] </p>
+           </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Page Disclaimer -->
+<div id="disclaimers">
+  <p>[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-16-ThirdPartyLogosAndMarksAreRegisteredTrademarks]@L]</p>
+  <p><a class="disclaimer" href="javascript:void(0);">[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-9-ClickHereForProductDisclaimersAndLegal]@L]</a></p>
+  <div id="disclaimer-modal" class="g-modal" style="display:none;">
+  <a href="javascript:void(0);" class="g-modal-close"><span>[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-1-Close]@L]</span></a>
+    <div class="g-modal-header"> <span class="g-modal-titlebar">[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-1-Disclaimers]@L]</span> </div>
+    <div class="g-modal-content">
+      <p>[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-139-OneFREECOMCONETOrORG]@L] </p>
+      <p>[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-20-ProductsWillAutomaticallyRenewUntilCancelledYouMay]@L] </p>
+    </div>
+  </div>
+  <div id="g-modal-overlay" class="g-modal-overlay" style="display:none;"></div>
+</div>
+<div id="infographics">
+  <div id="infographic-modal" class="g-modal" style="display:none;"> 
+    <a href="javascript:void(0);" class="g-modal-close"><span>[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-1-Close]@L]</span></a>
+    <div class="g-modal-header"> <span class="g-modal-titlebar">100s of New Domains Are Coming</span> </div>
+    <div class="g-modal-content" style="width: auto;height:840px;overflow-x:hidden"><img src="[@T[link:<imageroot />]@T]fos/tlds/learn_more/images/BCA-637_gTLDs_Industry_Stats_Infographics_V8_tall.png"/></div>
+  </div>
+  <div id="g-modal-overlay" class="g-modal-overlay" style="display:none;"></div>
+</div>
+{% endblock %}
+
+{% block footer %}
+
+    <script src="[@T[link:<javascriptroot />]@T]fos/script/sales17.js" type="text/javascript"></script>
+    <script src="[@T[link:<javascriptroot />]@T]fos/hp/rebrand/js/homepage_script_20130828.min.js" type="text/javascript"></script>
+    <script src="[@T[link:<javascriptroot />]@T]shared/js/jquery.plugins.min.20111019.js" type="text/javascript" ></script>
+    <script src="[@T[link:<javascriptroot />]@T]starfield/fos.share/v1.2/fos.share.js" id="fosShareScript" ></script>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('.faq-item').click(function(){
+         if($(this).hasClass('open')){
+             $(this).find('.faq-item-content').slideUp(200);
+             $(this).delay(200).removeClass('open');
+
+         }
+         else{
+             $(this).find('.faq-item-content').slideDown(200);
+             $(this).delay(200).addClass('open');
+           }
+        })
+        $(".disclaimer").click(function () {
+          $("#disclaimer-modal").modal({
+            overlayId: "g-modal-overlay",
+            close: "false", // disables default close button
+            autoPosition: "true"
+           });
+         });
+
+        $(".g-modal-close, .close").click(function () {
+          $.modal.close();
+          });
+
+        $('.infographic').click(function(){
+          $('#infographic-modal').modal({
+            overlayId: 'g-modal-overlay',
+            close: 'false', // disables default close button
+            autoPosition: 'true'
+          });
+        });
+      });
+    </script>
+    <![endif]-->
+    <!-- endbuild -->
+    {% endblock %}

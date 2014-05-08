@@ -1,0 +1,186 @@
+---
+location: localization/sales/domains/what-is-a-gtld/en
+id: false
+name: FOS-16128
+---
+{% include '../modules/doc-block.html' %}
+<phrase key="WhatIsAGTld-25-GenericTopLevelDomainsOrGTLDSAre" />
+Generic Top-Level Domains or gTLD's are here! Learn more about how a gTLD might be right for your business or personal website.
+<phrase key="WhatIsAGTld-11-WhatIsAGTLDLearnMoreAboutNew" />
+What is a gTLD | Learn More About New gTLD's - GoDaddy
+<phrase key="WhatIsAGTld-10-WhatIsAGtldNewGtldsNewGtld" />
+what is a gtld?, new gtlds, new gtld, gtlds, gtld
+<phrase key="WhatIsAGTld-5-WhatIsAGTLD" />
+What is a gTLD?
+<phrase key="WhatIsAGTld-6-100sOfNewdomainsAreComing" />
+100s of new<br>domains are coming!
+<phrase key="WhatIsAGTld-8-HereSWhatYouNeedToKnow" />
+Here’s what you need to know.
+<phrase key="WhatIsAGTld-4-BrowseNewDomainsNow" />
+Browse New Domains Now
+<phrase key="WhatIsAGTld-8-FindTheDomainNameThatFitsYourBusiness" />
+Find the <em>Domain Name</em> that fits
+            <span class="big">your business</span>
+<phrase key="WhatIsAGTld-3-MeetCate" comment="Check with PM to change Cate to market specific name." />
+Meet Cate.
+<phrase key="WhatIsAGTld-17-CateNeedsAWebsiteToAttractMoreCustomers" comment="Check with PM to change Cate to market specific name." />
+Cate needs a website to attract more customers. But first she needs the right domain name.
+<phrase key="WhatIsAGTld-6-WhatSADomainName" />
+She wants a domain name.
+<phrase key="WhatIsAGTld-17-WithTheRightDomainNameAndWebsiteCate" comment="Check with PM to change Cate's to market specific name." />
+Cate needs a domain in order to build a website so her customers can easily find her business online.
+<phrase key="WhatIsAGTld-2-CatesDomainNameCom" comment="Check with PM to change CatesDomainName to market specific name." />
+CatesDomainName<em>.com</em>
+<phrase key="WhatIsAGTld-2-DomainName" />
+Domain Name
+<phrase key="WhatIsAGTld-2-DomainExtension" />
+Domain Extension
+<phrase key="WhatIsAGTld-3-ComingSoon" />
+But wait!
+<phrase key="WhatIsAGTld-21-CateWillSoonHaveHundredsOfDomainName" comment="Check with PM to change Cate to market specific name." />
+Cate will soon have hundreds of new domain extensions to choose from. Her options are about to improve.
+<phrase key="WhatIsAGTld-8-CatesCakesMENUCatesCakesFOODCatesCakesEATCatesCakesNYC" comment="Check with PM to change CatesCakes to market specific name." />
+CatesCakes<em>.MENU</em>
+                CatesCakes<em>.FOOD</em>
+                CatesCakes<em>.EAT</em>
+                CatesCakes<em>.NYC</em>
+<phrase key="WhatIsAGTld-2-CateSCart" comment="Check with PM to change Cate's to market specific name." />
+Cate's<br>Cakes
+<phrase key="WhatIsAGTld-4-CateSFirstBusiness" comment="Check with PM to change Cate's to market specific name." />
+Cate's first business
+<phrase key="WhatIsAGTld-1-Cate" comment="Check with PM to change Cate to market specific name." />
+Cate
+<phrase key="WhatIsAGTld-5-CateSBusinessNow" comment="Check with PM to change Cate's to market specific name." />
+Cate's business now.
+<phrase key="WhatIsAGTld-9-CateSNewCustomersTheyFoundHerOnline" comment="Check with PM to change Cate's to market specific name." />
+Cate's new customers. They found her online.
+<phrase key="WhatIsAGTld-2-CatesCakesNYC" comment="Check with PM to change CatesCakes.NYC to market specific name." />
+CatesCakes.NYC
+<phrase key="WhatIsAGTld-5-FollowPreRegisterGO" />
+Follow. Pre-Register. GO!
+<phrase key="WhatIsAGTld-5-SeeAllOurNewDomains" />
+See all our new domains
+<phrase key="WhatIsAGTld-8-100sOfNewDomainsAreHeadedYourWay" />
+New names, new opportunities
+<phrase key="WhatIsAGTld-7-WhyAreNewDomainsBeingCreated" />
+Why are new domain extensions being created?
+<phrase key="WhatIsAGTld-3-NewDomainsTimetable" />
+Improve your chances – Follow your favorites!
+<phrase key="WhatIsAGTld-73-AsOfEarly2013ThereWereJust22" />
+Until November 7, 2013, there were just 22 domain extensions including .COM, .NET and .ORG. Eventually there will be 700+ new extensions specific to your industry, interest, city or region. For the first time, there will also be domain extensions in non-Latin characters — Arabic, Chinese and languages based on the Cyrillic alphabet.
+<phrase key="WhatIsAGTld-46-AfterNearly30YearsItSBecomeIncreasingly" />
+After nearly 30 years, it’s hard to find a good web address because many of the best domains are taken. ICANN*, the non-profit body that governs the Internet, has authorized the creation of hundreds of new domain extensions to increase your choices and encourage innovation.   
+<phrase key="WhatIsAGTld-53-TheFirstOfTheNewDomainsWillBe" />
+Pre-registration for the first of the new domains began in November 2013, with others to follow over the next two years. To give yourself the best chance of getting the right website address, Follow the one you want. We’ll email you when pre-registration begins.
+<phrase key="WhatIsAGTld-3-BrowseNamesNow" />
+Browse names now
+<phrase key="WhatIsAGTld-10-ViewOurInfographicForMoreInformationOnThe" />
+View our infographic for more information on the new domains
+<phrase key="WhatIsAGTld-3-FeaturesAndBenefits" />
+What’s in it for you
+<phrase key="WhatIsAGTld-16-AttractNewCustomersWithADomainSpecificTo" />
+Attract new customers.
+<phrase key="WhatIsAGTld-47-HundredsOfTargetedDomainsMENUREALTORNYCAre" />
+Hundreds of targeted domains – .MENU, .NYC, .CLUB, .SHOP, .企业 (enterprise) – are headed your way. With more domain extensions available, you can finally get a domain that tells people exactly what you do. Even reach customers where you do business with a domain that specifies your city or region.
+<phrase key="WhatIsAGTld-7-GetTheNameYouReallyWant" />
+Get the name you really want.
+<phrase key="WhatIsAGTld-32-TheseDomainsAreAllBrandNewSoYour" />
+These domains are all brand new, so your chances of getting the web address you really want are better than they’ve been in years. And by that, we mean <em>decades</em>.
+<phrase key="WhatIsAGTld-4-MakeItMemorable" />
+Make it memorable.
+<phrase key="WhatIsAGTld-35-NowThatPartOfYourWebsiteDescriptionAppears" />
+Now that part of your website description is contained in the domain extension – Brighton.CAFE, for example – many web addresses will be shorter overall. And shorter is always easier for customers to remember. 
+<phrase key="WhatIsAGTld-5-ExpandYourFootprintOnline" />
+Expand your footprint online.
+<phrase key="WhatIsAGTld-63-GoDaddyDomainsWorkWithAnyWebsiteNoMatter" />
+You now have more options to register multiple domains that apply to you –.PHOTOGRAPHY, .PHOTOS and .CAMERA for example – then forward your new domains to your existing website or use them to create new sites. The more points of access you open to your business online, the more shoppers will find you.
+<phrase key="WhatIsAGTld-1-FAQs" />
+FAQs
+<phrase key="WhatIsAGTld-10-WillAllTheNewDomainsBeAvailableTo" />
+Will all the new domains be available to me?
+<phrase key="WhatIsAGTld-52-NoWhileThereWillBeOver700New" />
+No. While there will be over 700 new domains that will be available to you, there will be another 600 or so new domains that are trademarked names – .FORD, .GUCCI, .DUPONT – and, although the owners could open them to the general public, they’ll most likely reserve them for internal use.
+<phrase key="WhatIsAGTld-10-WillTheNewDomainsChangeHowTheInternet" />
+Will the new domains change how the Internet works?
+<phrase key="WhatIsAGTld-25-NoTheyMayChangeTheWayPeopleFind" />
+No. They may change the way people find information on the web though. And they may also impact how businesses build their online presence.
+<phrase key="WhatIsAGTld-8-HowMuchWillTheNewDomainsCost" />
+How much will the new domains cost?
+<phrase key="WhatIsAGTld-39-PricesWillVaryForTheNewDomainsAnd" />
+Prices will vary for the new domains, and when available, pricing information for a new domain will be available on the <a href="[@T[link:<relative path='tlds/gtld.aspx'><param name='ci' value='85448' /></relative>]@T]">www.godaddy.com/newdomains</a> page. For many of the new domains, pricing has not yet been determined.
+<phrase key="WhatIsAGTld-7-WhatMakesAGreatDomainName" />
+What makes a great domain name?
+<phrase key="WhatIsAGTld-45-PickingTheRightDomainIsHugeLookFor" />
+Picking the right domain is huge. Look for a name that's memorable, easy to spell and that’s personalized to you or your business.  Using ‘real’ words in your domain name, instead of made up names, will also help you get found online.
+<phrase key="WhatIsAGTld-11-WhatAreTheBenefitsOfPreRegisteringA" />
+What are the benefits of pre-registering a domain name?
+<phrase key="WhatIsAGTld-52-CompetitionForSomeOfTheNewDomainsIs" comment="Check with PM to change CatesCakes to market specific name." />
+Competition for some of the new domains is likely to be intense. Pre-registering a domain name may give you an advantage over the others wishing to register the exact same domain name.  And while there are hundreds of new domains available, there is only one CatesCakes.NYC or CatesCakes.MENU.
+<phrase key="WhatIsAGTld-23-MuchLikeStandingInLineForTicketsThe" />
+Much like standing in line for tickets, the earlier you get there the more likely you are to get seat you want.
+<phrase key="WhatIsAGTld-13-CanIPreRegisterADomainThatS" />
+Can I pre-register a domain that’s already been pre-registered?
+<phrase key="WhatIsAGTld-28-YesIfMoreThanOnePersonPreRegisters" />
+Yes. If more than one person pre-registers the same domain at GoDaddy, all applicants will be invited to a private auction to decide who gets it.
+<phrase key="WhatIsAGTld-11-DoesPreRegisteringADomainGuaranteeILl" />
+Does pre-registering a domain guarantee I’ll get it?
+<phrase key="WhatIsAGTld-39-NoPreRegisteringADomainReservesYourPlace" />
+No. Pre-registering a domain reserves your place in our queue for that domain. The instant the registration phase opens, we’ll submit our list of registrations electronically using our industry-leading technology to give you an edge.
+<phrase key="WhatIsAGTld-53-IfWeAreUnableToGetTheName" />
+If we are unable to get the name, we’ll refund your registration cost. Any application fees that may have been collected for the Priority Pre-Registration and Trademark phases will be non-refundable however.  There are no application fees for the standard Pre-Registration phase.   Application fees will vary by domain.
+<phrase key="WhatIsAGTld-31-IfGoDaddySecuresTheNameAndMoreThan" />
+If GoDaddy secures the name and more than one person or company has pre-registered it, all parties will be invited to a private auction to decide who gets it.
+<phrase key="WhatIsAGTld-6-IsAPreRegistrationBinding" />
+Is a pre-registration binding?
+<phrase key="WhatIsAGTld-22-NoYouCanCancelYourPreRegistrationRequest" />
+No. You can cancel your pre-registration request and we’ll happily refund your domain fee. Application fees are non-refundable.
+<phrase key="WhatIsAGTld-12-HowDoIRegisterADomainWithMy" />
+How do I register a domain with my trademark in it?
+<phrase key="WhatIsAGTld-25-ICANNProtectsTrademarkOwnersByLettingThemReserve" />
+ICANN protects trademark owners by letting them reserve their trademarked names first before anyone else is allowed to submit registrations for a particular domain.
+<phrase key="WhatIsAGTld-31-ToBeSureYouDonTMissThis" />
+To be sure you don’t miss this registration period, Follow any domains you’re considering. We’ll let you know when they’re open to trademark holders. <span class="caret-link"><a href="[@T[link:<relative path='tlds/gtld.aspx'></relative>]@T]">Browse names now</a></span>
+<phrase key="WhatIsAGTld-10-WillThereBeDomainsInLanguagesOtherThan" />
+Will there be domains in languages other than English?
+<phrase key="WhatIsAGTld-27-YesForTheFirstTimeSpeakersOfNearly" />
+Yes. For the first time, speakers of nearly three dozen languages – including Arabic, Chinese, and languages based on the Cyrillic alphabet will have their own domains.
+<phrase key="WhatIsAGTld-20-ThisWillBeAHugeBoonForCompanies" />
+This will be a huge boon for companies that promote their products in countries where these languages are spoken.
+<phrase key="WhatIsAGTld-12-IsThereAnyReasonToRegisterMoreThan" />
+Is there any reason to register more than one domain name?
+<phrase key="WhatIsAGTld-59-YesBusinessesOftenRegisterDifferentDomainsToExpand" comment="Check with PM to change 'CatesCake.COM', 'CatesCakes' to market specific name." />
+Yes. Businesses often register different domains to expand their digital footprint. So for example, if you own CatesCake.COM you might also want to register  CatesCakes.MENU and CatesCakes.NYC. You can forward the new domains to your existing website or use them to create new ones. This increases the odds that new customers will find you online.
+<phrase key="WhatIsAGTld-6-WhatShouldIDoNow" />
+What should I do now?
+<phrase key="WhatIsAGTld-62-TheNewDomainsWillBeReleasedOverThe" />
+The 700+ new domains will be released in waves over the next two years. To increase your chances of getting the domains you want, <span style="font-weight:bold">Register</span> the ones that are available and <span style="font-weight:bold">Follow</span> any that interest you but haven’t been released yet. We’ll email you before pre-registration begins. <br> You can also call <span style="font-weight:bold">[@T[supportphone:<technical />]@T] </span> anytime, for free round-the-clock help to understand your options.    <span class="caret-link"><a href="[@T[link:<relative path='tlds/gtld.aspx'><param name='ci' value='85449' /></relative>]@T]">Pre-register or Follow new domains</a></span>
+<phrase key="WhatIsAGTld-10-HaveQuestionsCallUsAt" />
+Have Questions? Call us at [@T[supportphone:<technical />]@T]. Anytime.
+<phrase key="WhatIsAGTld-16-ThirdPartyLogosAndMarksAreRegisteredTrademarks" />
+Third-party logos and marks are registered trademarks of their respective owners. All rights reserved.
+<phrase key="WhatIsAGTld-9-ClickHereForProductDisclaimersAndLegal" />
+* Click here for product disclaimers and legal policies
+<phrase key="WhatIsAGTld-1-Close" />
+close
+<phrase key="WhatIsAGTld-1-Disclaimers" />
+Disclaimers
+<phrase key="WhatIsAGTld-139-OneFREECOMCONETOrORG" />
+&lowast; One FREE .COM, .CO, .NET or .ORG with purchase of a new 12-, 24- or 36-month plan. Plus ICANN fee of $0.18 per domain name per year. You must add the domain name into your cart before purchase, and you must select a domain term length equal to or less than the term length of your plan to qualify for the free domain offer. If you purchase a domain name for a term longer than the term of the plan, you will be charged for the additional registration term at the then-current rate. Cannot be used in conjunction with any other offer, sale, discount or promotion. Free domain offer applies only to the initial purchase term. After the initial purchase term, domains purchased through this offer will renew at the then-current renewal price.
+<phrase key="WhatIsAGTld-20-ProductsWillAutomaticallyRenewUntilCancelledYouMay" />
+Products will automatically renew until cancelled. You may turn off the auto-renewal feature by visiting your GoDaddy account.
+<phrase key="WhatIsAGTld-10-WhyDoIneedOneOfTheseNewDomainExtensions"/>
+Why do I need one of these new domain extensions?
+<phrase key="WhatIsAGTld-25-WithDotComNearingItsBirthday"/>
+With .COM nearing its 30th birthday, it’s no surprise that many of the best and most valuable domain names have already been registered. This has long been a frustration for business owners, forcing them to make up names for their businesses just to find a domain name available for use with their web address.<br> <br> With the introduction of new domain extensions, you have a fresh chance to get the domain name you really want. Because many of the new domain extensions are specific to particular industries, interests, or locations your Web address can now tell people exactly what you do (or where you do it). This makes the new domains easy to remember and you easier to find online. And that is what it’s all about.
+<phrase key="WhatIsAGTld-6-WhatsTheDifferenceBetweenRegular" />
+What’s the difference between regular Pre-registration and Priority Pre-registration?
+<phrase key="WhatIsAGTld-22-APriorityPreRegistrationIsSubmitted" />
+A <span style="font-weight:bold">Priority Pre-registration</span> is submitted before a <span style="font-weight:bold">regular Pre-registration</span>, improving your chance of getting the name you want when it becomes available.<br/><br/> Pricing and renewal fees may be higher for <span style="font-weight:bold">Priority Pre-registration</span> and there may also be non-refundable application fees with this type of registration.
+<phrase key="WhatIsAGTld-6-IfIApplyforAPriorityPre-reg" />
+If I apply for a Priority Pre-registration should I also submit an application during regular Pre-registration?
+<phrase key="WhatIsAGTld-22-NoPriorityPreRegistrationGives" />
+No. Priority Pre-registration gives you the best possible chance of getting the domain, as all Priority pre-registrations are submitted before regular Pre-registrations. If there are multiple applications for the same domain name, the registry will hold a private auction, with the domain name awarded to the highest bidder.
+<phrase key="WhatIsAGTld-6-WhatIfAParticularDomain" />
+What if a particular domain has multiple applicants from multiple registrars?
+<phrase key="WhatIsAGTld-22-MultipleApplicationsForTheSameDomain" />
+<p> Multiple applications for the same domain name are handled differently, depending on if they’re submitted during Priority Pre-registration or regular Pre-registration.<br/><br/> For multiple applications submitted during Priority Pre-Registration, the company that owns and regulates the domain extension will hold a private auction to determine the owner. If GoDaddy secures a domain with multiple applicants during regular Pre-registration, we’ll hold a private auction to determine ownership.</p>
