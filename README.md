@@ -60,9 +60,21 @@ Do this daily to make sure you're never too far off.
 
 **Install global dependencies**
 
+#### NodeJS
+
+Make sure you have NodeJS installed. It's available for both Windows and OS X at [NodeJS](http://www.nodejs.org)
+
+#### Gulp
+
+This new repository requires [GulpJS](http://www.gulpjs.com) for running the build tasks. You'll need to make sure it's installed.
+
+```
+sudo npm install -g gulp
+```
+
 #### CDS Command Line Interface (cds-cli)
 
-You must install the cds global command line interface. This is used for managing authentication with the CDSM related tasks.
+You must also install the cds global command line interface. This is used for managing authentication with the CDSM related tasks.
 
 ```
 $ npm install -g git+ssh://git@github.secureserver.net:WebOps/cds-cli.git
@@ -79,18 +91,6 @@ $ cds login
 Until this issue can be resolved [Fix-CDS-CLI](https://github.secureserver.net/FOS-CDS-Pages/Sales/wiki/Fix-CDS-CLI)
 
 For more detail see [WebOps/cds-cli](https://github.secureserver.net/WebOps/cds-cli)
-
-#### NodeJS
-
-Make sure you have NodeJS installed. It's available for both Windows and OS X at [NodeJS](http://www.nodejs.org)
-
-#### Gulp
-
-This new repository requires [GulpJS](http://www.gulpjs.com) for running the build tasks. You'll need to make sure it's installed.
-
-```
-sudo npm install -g gulp
-```
 
 #### Package Dependencies
 
