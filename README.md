@@ -1,3 +1,7 @@
+**Full documenation (under construction) can/will be found here:**
+
+https://github.secureserver.net/FOS-CDS-Pages/Sales/wiki/_pages
+
 About
 =====
 
