@@ -35,15 +35,8 @@
         "name": "None currently",
         "email": "everyone@"
       },
-      "cdsLocation": "localization/sales/hosting/wordpress-hosting",
+      "cdsLocation": "localization/sales/hosting/wordpress-hosting/en",
       "draft": {
-        "id": false,
-        "createdDate": "2014-05-01",
-        "createdBy": {
-          "fullName": "Dominic Tuso",
-          "username": "dtuso"
-        },
-        "jiraTicket": "FOS-18668",
         "comments": "Prep for new build process"
       }
     }
