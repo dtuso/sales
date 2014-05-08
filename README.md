@@ -112,6 +112,8 @@ Tasks
 Tasks are now executed with [GulpJS](http://www.gulpjs.com) instead of Grunt. It would be helpful to get more
 acquainted with Gulp before continuing.
 
+More detail on tasks can be found here https://github.secureserver.net/FOS-CDS-Pages/Sales/wiki/Tasks
+
 #### HTML
 This task will render your templates, preparing them for CDS importing. The task uses a gulp plugin called
 [gulp-swig](https://www.npmjs.org/package/gulp-swig) which renders your templates using the Swig JS template engine. This
