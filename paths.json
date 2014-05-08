@@ -13,5 +13,6 @@
   "qsc": "./ecommerce/shopping-cart/",
   "home": "./homepage/",
   "contact-us": "./contact-us/",
-  "about-godaddy": "./newscenter/about-godaddy"
+  "about-godaddy": "./newscenter/about-godaddy",
+  "leaf-pages": "./tlds/leafpage"
 }
