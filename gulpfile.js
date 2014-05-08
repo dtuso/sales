@@ -115,15 +115,8 @@ gulp.task('styles', function() {
 });
 
 gulp.task('scripts', function() {
-<<<<<<< HEAD
   return gulp.src(['./**/js/*.js'], {cwd: path.join('./src/sales/', assetSrcPath)})
     .pipe(gulp.dest(paths.build))
-=======
-  if (assetSrcPath) {
-  gulp.src(assetSrcPath+'/**/js/*.js', {cwd: './src/sales/'})
-    .pipe(concat('js/allPageScripts.js'))
-    .pipe(gulp.dest(path.join(paths.build,assetSrcPath)))
->>>>>>> swapped out JavaScript minifier for one that works better, updated documentation on new scripts build task, and updated website builder to use new minified combined file.
     .pipe(uglify())
     .pipe(rename(({suffix: '.min'})))
     .pipe(gulp.dest(paths.build));
