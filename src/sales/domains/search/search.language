@@ -1,3 +1,8 @@
+---
+location: localization/sales/gd/domains/domain-name-search/en
+id: false
+name: FOS-16128
+---
 {% include '../modules/doc-block.html' %}
 <phrase key="MetaTitle" />
 Domain Search | Advanced Domain Name Search Tool - [@T[companyname:name]@T]
@@ -33,10 +38,14 @@ Get the domain that will never go out of style.
 Get the recognizable domain.
 <phrase key="PricesDotClubText" />
 .CLUB is the domain name for clubs and organizations of all kinds!
+<phrase key="PricesDotClubRegisterText" />
+Just launched! Get organized with <strong>.club</strong>.
+<phrase key="GetYoursNowText" />
+Get yours now!
 <phrase key="PricesDotOrgText" />
 Build trust with this well-known and respected domain.
 <phrase key="PricesDotGuruText" />
-Offer guidance with .GURU.
+Offer guidance with <strong>.guru<strong>
 <phrase key="PricesDotUnoText" comment="DO NOT TRANSLATE"/>
 El Internet en Español
 <phrase key="PricesDotMenuText" />
@@ -89,6 +98,8 @@ New
 .guru
 <phrase key="WhyGoDaddyBoxesListTitleTips" />
 .tips
+<phrase key="WhyGoDaddyBoxesListTitleExpert" />
+.expert
 <phrase key="WhyGoDaddyBoxesListTitleUno" />
 .uno
 <phrase key="WhyGoDaddyBoxesListTitleNinja" />
@@ -123,8 +134,12 @@ New
 .today
 <phrase key="WhyGoDaddyBoxesListTitleCl" />
 .cl
+<phrase key="WhyGoDaddyBoxesListTitleEmail" />
+.email
 <phrase key="WhyGoDaddyBoxesListTextCl" />
 .CL stands for Chile.
+<phrase key="WhyGoDaddyBoxesListTextExpert" />
+You have the answers. Share them with <strong>.expert</strong>
 <phrase key="WhyGoDaddyBoxesListTextToday" />
 .TODAY delivers the latest news
 <phrase key="WhyGoDaddyBoxesListTextIt" />
@@ -138,7 +153,7 @@ Get the personal domain.
 <phrase key="WhyGoDaddyBoxesListText0" />
 Show off your .NINJA skills.
 <phrase key="WhyGoDaddyBoxesListTextDirectory" />
-.DIRECTORY means online listings.
+<strong>.directory</strong> means online listings.
 <phrase key="WhyGoDaddyBoxesListTextBuzz" />
 Start a .BUZZ online.
 <phrase key="WhyGoDaddyBoxesListText1" />
@@ -154,21 +169,21 @@ New domains <strong>available</strong>:
 <phrase key="WhyGoDaddyListTitle1" />
 New domains <strong>coming soon</strong>:
 <phrase key="WhyGoDaddyListText0-0" />
-<strong>.guru</strong>
-<phrase key="WhyGoDaddyListText0-1" />
 <strong>.club</strong>
+<phrase key="WhyGoDaddyListText0-1" />
+<strong>.london</strong>
 <phrase key="WhyGoDaddyListText0-2" />
-<strong>.email</strong>
+<strong>.tips</strong>
 <phrase key="WhyGoDaddyListText0-3" />
-<strong>.house</strong>
+<strong>.today</strong>
 <phrase key="WhyGoDaddyListText1-0" />
-<strong>.xyz</strong>
-<phrase key="WhyGoDaddyListText1-1" />
 <strong>.vegas</strong>
+<phrase key="WhyGoDaddyListText1-1" />
+<strong>.nyc</strong>
 <phrase key="WhyGoDaddyListText1-2" />
-<strong>.app</strong>
-<phrase key="WhyGoDaddyListText1-3" />
 <strong>.wiki</strong>
+<phrase key="WhyGoDaddyListText1-3" />
+<strong>.website</strong>
 <phrase key="WhyGoDaddyCTAText0" />
 Hundreds of new domains specific to you.
 <phrase key="WhyGoDaddyCTAText1" />
@@ -258,7 +273,7 @@ How much is privacy worth to you?
 <phrase key="PrivateRegistrationText1" />
 Did you know that anytime you register a domain, <strong>your personal information is exposed 24 hours a day</strong>? Your name. Your address. Your phone number. Your email. It&#39;s all published online for anyone to see, as <a class="isToolTip" data-toggle="tooltip" title="The Internet Corporation of Assigned Names and Numbers (ICANN) requires accredited registars to publish the registrant's contact information, as well as other details, in the WHOIS database, which is available to the public 24/7.">mandated by ICANN</a>. But you have the power to change this. With Private Registration&hellip;
 <phrase key="PrivateRegistrationItem1" />
-<strong>Your domain is registered under the name Domains By Proxy</strong>, so its information is made public — not yours. <a data-ci="88035" class="popup-url" href="[@T[link:<external linktype="DBPURL" path="popup/whoisexample.aspx" secure="false"></external>]@T]">See the difference</a>
+<strong>Your domain is registered under the name Domains By Proxy</strong>, so its information is made public — not yours. <a class="isToolTip" data-toggle="tooltip" data-html="true" title="<span>Without Privacy, your info appears in the public WHOIS database.<br><br><div class='clearfix'><span class='left'><span class='weight-bold'><strong>Your info without Privacy</strong></span><br>John Smith<br>john@YourDomain.com<br>1234 Elm Street<br>Hometown, AZ 85000<br>(480) 555-5555<br></span><span class='right' style='margin:0 0 0 70px'><span class='weight-bold'><strong>Your info with Privacy</strong></span><br>DomainsByProxy.com<br>ProxiedDomain@DomainsByProxy.com<br>14747 N Northsight Blvd<br>Suite 111, PMB 309<br>Scottsdale, AZ 85260<br>+1.480.642.2599<br></span></div></span>">See the difference</a>
 <phrase key="PrivateRegistrationItem2" />
 <strong>You retain full control of your domain</strong>. You can cancel, sell, renew or transfer your domain, set up name servers for your domain and resolve disputes involving your domain.
 <phrase key="PrivateRegistrationItem3" />
@@ -365,6 +380,12 @@ Disclaimer
 New domains are here! <strong>.TIPS</strong>, <strong>.GURU</strong>, <strong>.TODAY</strong> are now available. Plus, pre-register <strong>.CLUB</strong>, <strong>.REVIEWS</strong>, <strong>.NINJA</strong> and more. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Get yours now</a>
 <phrase key="MainBannerCarouselSlide1Text1" />
 New domains are here - <strong>.CLUB</strong>, <strong>.GURU</strong>, <strong>.EMAIL </strong>and <strong>.TODAY </strong> are some of the most popular.<span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Get yours now!</a>
+<phrase key="MainBannerCarouselSlide2Text" />
+New domains are here! Check out <strong>.guru</strong>, <strong>.wiki</strong>, <strong>.email </strong> and <strong>.london</strong><span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Get yours now!</a>
+<phrase key="MainBannerCarouselSlide2Text11" />
+<strong>.uno</strong> - El Internet en Español. Only 
+<phrase key="MainBannerCarouselSlide2Text12" />
+, Save 75%
 <phrase key="MainBannerCarouselSlide2Text1" />
 .NINJA domains are now available for pre-registration.
 <phrase key="MainBannerCarouselSlide1TextAllLine1" />
@@ -383,6 +404,10 @@ Make a name for yourself!
 Save up to 57% on these great domains&#58;
 <phrase key="MainBannerCarouselSlide3Text3" />
 It's Go Time! Get online today. It all starts with a domain name - Save 50% and more on these domains: <a data-ci="88402" href="[@T[link:<relative path="/tlds/com"></relative>]@T]">.COM</a>, <a data-ci="88582" href="[@T[link:<relative path="/tlds/co-domain"></relative>]@T]">.CO</a>, <a data-ci="88404" href="[@T[link:<relative path="/tlds/org.aspx"></relative>]@T]">.ORG</a>, <a data-ci="90058" href="[@T[link:<relative path="/tlds/biz.aspx"></relative>]@T]">.BIZ</a>
+<phrase key="MainBannerCarouselSlide3TextNonAU" />
+It's Go Time! Get online now with your own domain name. Save 50% and more on <a data-ci="88402" href="[@T[link:<relative path="/tlds/com"></relative>]@T]"><strong>.com</strong></a>, <a data-ci="88582" href="[@T[link:<relative path="/tlds/co-domain"></relative>]@T]"><strong>.co</strong></a>, <a data-ci="90058" href="[@T[link:<relative path="/tlds/biz.aspx"></relative>]@T]"><strong>.biz</strong></a> and <a data-ci="89741" href="[@T[link:<relative path="/tlds/mobi.aspx"></relative>]@T]"><strong>.mobi</strong></a>.
+<phrase key="MainBannerCarouselSlide3TextAU" />
+It's Go Time! Get online now with your own domain name. Save 50% and more on <a data-ci="88402" href="[@T[link:<relative path="/tlds/com"></relative>]@T]"><strong>.com</strong></a>, <a data-ci="88582" href="[@T[link:<relative path="/tlds/co-domain"></relative>]@T]"><strong>.co</strong></a>, <a data-ci="90058" href="[@T[link:<relative path="/tlds/biz.aspx"></relative>]@T]"><strong>.biz</strong></a> and <a data-ci="89741" href="[@T[link:<relative path="/tlds/au-domain.aspx"></relative>]@T]"><strong>.net.au</strong></a>.
 <phrase key="InBizDetail" />
 Get a domain that's all business
 <phrase key="RegisterText"/>
@@ -450,6 +475,6 @@ Sharpen your image with .PHOTOS.
 <phrase key="PricesDotSgText"/>
 .SG means Singapore.
 <phrase key="PricesDotEmailText"/>
-.EMAIL delivers.
+<strong>.email</strong> delivers.
 <phrase key="PricesDotLondonText"/>
-Speak to Londoners with .LONDON.
+Court 8 million shoppers with .london

@@ -1,13 +1,22 @@
 ---
 location: sales/tlds/gtldga.aspx
-id: false
+id: 536bb5d6f778fc3434d3cb6a
 name: testing
 ---
 {% extends 'base.html' %}
 
+{% block pageTitle %}<title>[@L[cds.tldleaf/[@D[gtld]@D]:ga.page.title]@L]</title>{% endblock %}
+{% block pageDescription %}<meta name="description" content="[@L[cds.tldleaf/[@D[gtld]@D]:ga.meta.description]@L]" />{% endblock %}
+{% block pageKeywords %}<meta name="keywords" content="[@L[cds.tldleaf/[@D[gtld]@D]:ga.meta.keywords]@L]" />{% endblock %}
+
 {% block metahead %}
+
  
 {% parent %}
+    <!-- Old Global CSS -->
+
+    <link href="[@T[link:<cssroot />]@T]fos/global/build/0.2.0/gd-fos-global.min.css" rel="stylesheet" type="text/css" />
+
     <style>
       #pcf {clear:both;}      
       #main-wrap .header{background:url('[@T[link:<imageroot />]@T]tldleafpages/[@D[gtld]@D]/fos/[@L[cds.tldleaf/[@D[gtld]@D]:all.gtld.banner]@L]');}
@@ -89,15 +98,13 @@ name: testing
 {% endblock %}
 
 {% block footer %}
+    <script src="[@T[link:<javascriptroot />]@T]shared/js/jquery.plugins.min.20111019.js" type="text/javascript" ></script>
+    <script src="[@T[link:<javascriptroot />]@T]starfield/fos.share/v1.3/fos.share-20140205.min.js" id="fosShareScript" ></script>
+    <script src="[@T[link:<cssroot />]@T]fos/201401/tlds/tld-leaf/js/tld-leaf-page.min.js"></script>
+
     <!--[if lte IE 8]>
     <script src="[@T[link:<javascriptroot />]@T]fos/script/JSON2.min.js"></script>
     <![endif]-->
-
-    <script src="[@T[link:<javascriptroot />]@T]fos/script/atlantis_jquery14.min.js" type="text/javascript"></script>
-    <script src="[@T[link:<javascriptroot />]@T]shared/js/jquery.plugins.min.20111019.js" type="text/javascript" ></script>
-    <script src="[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2" type="text/javascript"></script>
-    <script src="[@T[link:<javascriptroot />]@T]starfield/fos.share/v1.3/fos.share-20140205.min.js" id="fosShareScript" ></script>
-    <script src="[@T[link:<cssroot />]@T]fos/201401/tlds/tld-leaf/js/tld-leaf-page.min.js"></script>
       
     <script type="text/javascript">
             
