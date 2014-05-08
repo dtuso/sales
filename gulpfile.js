@@ -142,7 +142,8 @@ gulp.task('config', function() {
 });
 
 gulp.task('watch', function() {
-  gulp.watch([paths.templates,paths.project], ['html']);
+  gulp.watch(paths.templates, ['html']);
+  gulp.watch(paths.project, ['html','language']);
   gulp.watch(paths.language, ['language']);
   gulp.watch(paths.less, ['styles', 'assets-deploy']);
   gulp.watch(paths.images, ['images', 'assets-deploy']);

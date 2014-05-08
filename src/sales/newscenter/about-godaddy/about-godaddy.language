@@ -5,7 +5,7 @@ name: FOS-20455
 ---
 {% include '../modules/doc-block.html' %}
 <phrase key="NewsCenterAbout-AFinePortraitsVideo" />
-<div class="video" data-video="JQwTqt8gkjM">
+<div class="video" data-video="JQwTqt8gkjM"> 
 <img src="[@T[link:<imageroot />]@T]fos/newscenter/about_godaddy/img/customers/fine-portraits-preview.jpg" width="333" height="177" />
 <span class="play"></span>
 </div>
