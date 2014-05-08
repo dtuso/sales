@@ -1,5 +1,6 @@
 {
-  "website-builder": "./hosting/website-builder/",
+  "all": "./",
+  "wsb": "./hosting/website-builder/",
   "accounting": "./accounting/accounting-software/",
   "web-hosting": "./hosting/web-hosting/",
   "wp": "./hosting/wordpress-hosting/",
@@ -11,7 +12,7 @@
   "static-ip": "./ssl/static-ip/",
   "gtld": "./tlds/gtld/",
   "qsc": "./ecommerce/shopping-cart/",
-  "home": "./homepage/",
   "contact-us": "./contact-us/",
-  "about-godaddy": "./newscenter/about-godaddy"
+  "about-godaddy": "./newscenter/about-godaddy",
+  "leaf-pages": "./tlds/leafpage"
 }
