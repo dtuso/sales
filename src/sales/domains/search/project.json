@@ -5,9 +5,7 @@
         "name": "Adam Smith",
         "email": "absmith@godaddy.com"
       },
-      "cdsLocation": "sales/domains/domain-name-search.aspx",
       "draft": {
-        "createdDate": "2014-05-08",
         "comments": "Updating Privacy ToolTip",
         "url": "http://www.dev-godaddy.com/domains/domain-name-search.aspx"
       }
@@ -26,9 +24,7 @@
         "name": "Adam Smith",
         "email": "absmith@godaddy.com"
       },
-      "cdsLocation": "localization/sales/gd/domains/domain-name-search/en",
       "draft": {
-        "createdDate": "2014-05-08",
         "comments": "Updating Privacy ToolTip"
       }
     }
