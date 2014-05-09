@@ -44,8 +44,8 @@ name: FOS-20289
 {% endblock %}
 
 {% block body %}
-    
-     <!-- Start main-panel -->
+
+        <!-- Start main-panel -->
         <section class="white-bg main-panel">
             <h1 class="main-panel-subtitle">[@L[cds.sales/gd/domains/domain-name-search:SalesHeaderSubHeading]@L]</h1>
             <h2 class="main-panel-title">[@L[cds.sales/gd/domains/domain-name-search:SalesHeaderMainHeading]@L]</h2>
@@ -488,8 +488,11 @@ name: FOS-20289
         url='[@T[link:<relative path="~/api/package/config/domainlp_mx"/>]@T]';
       ##elseif(activeLanguageAny([es-pe]))
         url='[@T[link:<relative path="~/api/package/config/domainlp_pe"/>]@T]';
+<<<<<<< HEAD
       ##elseif(activeLanguageAny([es-us]))
         url='[@T[link:<relative path="~/api/package/config/domainlp_es-us"/>]@T]';
+=======
+>>>>>>> FOS-19460--Final-updates
       ##else
         url='[@T[link:<relative path="~/api/package/config/domainlp_us"/>]@T]';
       ##endif
