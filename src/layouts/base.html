@@ -35,7 +35,6 @@
 
       <link href="[@T[link:<css path='fos/201401/global/css/{{ cssVersion }}/combined-{{ cssVersion }}.css' />]@T]" rel="stylesheet" type="text/css">
       {% if assetPath %}
-      <!-- {{cssVersionOverride}} -->
       <link href="[@T[link:<css path='{{ assetPath }}css/styles.css' />]@T]{% if cssVersionOverride %}?v={{cssVersionOverride}}{% endif %}" rel="stylesheet" type="text/css">
       {% endif %}
       <!-- IE SUPPORT FOR HTML5 and Bootstrap 3 -->
