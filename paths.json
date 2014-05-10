@@ -1,5 +1,6 @@
 {
   "all": "./",
+  "home": "./homepage/",
   "wsb": "./hosting/website-builder/",
   "accounting": "./accounting/accounting-software/",
   "web-hosting": "./hosting/web-hosting/",
