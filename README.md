@@ -103,6 +103,8 @@ lets you use layouts, variables, and includes within your pages to help keep thi
 gulp html
 ```
 
+Running this task requires you to be logged in if you want your content uploaded to CDS. At the command prompt just type: ```node login``` and type in your username and password.
+
 #### LANGUAGE
 
 This task will render/copy your ```.language``` files to the build folder.
