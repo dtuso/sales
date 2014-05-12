@@ -72,26 +72,6 @@ This new repository requires [GulpJS](http://www.gulpjs.com) for running the bui
 sudo npm install -g gulp
 ```
 
-#### CDS Command Line Interface (cds-cli)
-
-You must also install the cds global command line interface. This is used for managing authentication with the CDSM related tasks.
-
-```
-$ npm install -g git+ssh://git@github.secureserver.net:WebOps/cds-cli.git
-```
-
-This installs a new command ```cds``` for running several different requests against the CDS API. For this repository, you just need to use it for authenticating:
-
-```
-$ cds login
-```
-
-
-**NOTE FOR WINDOWS USERS: ** the newly created ```cds``` command is installed using NPM but for some reason for windows it doesn't install it correctly.
-Until this issue can be resolved [Fix-CDS-CLI](https://github.secureserver.net/FOS-CDS-Pages/Sales/wiki/Fix-CDS-CLI)
-
-For more detail see [WebOps/cds-cli](https://github.secureserver.net/WebOps/cds-cli)
-
 #### Package Dependencies
 
 Before you do anything, it is important that you install any local dependencies associated to this repository via the ```package.json``` file.
