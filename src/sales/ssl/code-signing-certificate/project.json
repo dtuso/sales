@@ -5,15 +5,7 @@
         "name": "Colyn Brown",
         "email": "clbrown@godaddy.com"
       },
-      "cdsLocation": "sales/ssl/code-signing-certificate.aspx",
       "draft": {
-        "id": "53629aa3f778fc27b88b1091",
-        "createdDate": "2014-05-01",
-        "createdBy": {
-          "fullName": "Byron Lunt", 
-          "username": "blunt"
-        },
-        "jiraTicket": "FOS-18701, FOS-19528",
         "comments": "fixed some i18n layout issues",
         "url": "http://www.dev-godaddy.com/ssl/code-signing-certificate.aspx"
       }
@@ -33,15 +25,7 @@
         "name": "Colyn Brown",
         "email": "clbrown@godaddy.com"
       },
-      "cdsLocation": "localization/sales/gd/ssl/code-signing-certificate2/en",
       "draft": {
-        "id": false,
-        "createdDate": "2014-04-11",
-        "createdBy": {
-          "fullName": "Colyn Brown",
-          "username": "clbrown"
-        },
-        "jiraTicket": "FOS-18605",
         "comments": "Fixing overflow issues"
       }
     }
