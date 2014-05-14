@@ -967,14 +967,13 @@ html[lang*=it] #corporate .section.team .info .text {
   font-size: 14px;
 }
 
-#corporate .section.team .person.gregory-mondre .info .text, #corporate .section.team .person.richard-kimball .info .text, #corporate .section.team .person.david-popowitz .info .text{
+#corporate .section.team .person.gregory-mondre .info .text,#corporate .section.team .person.richard-kimball .info .text,#corporate .section.team .person.david-popowitz .info .text{
   line-height:18px;
 }
-
 #corporate .section.team .person.david-popowitz .info .text{
   line-height:17px;
 }
-#corporate .section.team .person.gregory-mondre .info .text, #corporate .section.team .person.richard-kimball .info .text{
+#corporate .section.team .person.gregory-mondre .info .text,#corporate .section.team .person.richard-kimball .info .text{
   line-height:18px;
 }
 #corporate .section.team .info .text .name {
@@ -1004,6 +1003,7 @@ left: -485px;
 #corporate .section.team .bio .photo {
   position: absolute;
   left: 50%;
+
   /*min-width:1280px;
   width:100%;*/
 }
@@ -1031,7 +1031,7 @@ left: -485px;
 }
 #corporate .section.team .bio.right > .inner {
   margin: 0 0 0 -55px;
-  left:50%;
+  left:52%;
 }
 #corporate .section.team .bios .bio .inner .part{
   overflow-y:auto;
@@ -1039,27 +1039,34 @@ left: -485px;
   padding-right: 20px;
   padding-top:.5em;
   padding-bottom:.5em;
-  line-height: 24px;
+  line-height: 22px;
 }
 #corporate .section.team .bio.gregory-mondre > .inner .part {
-  line-height:23px;
+  max-height: 317px;
 }
+#corporate .section.team .bio.blake-irving2 > .inner .part,
 #corporate .section.team .bio.blake-irving > .inner .part {
-  line-height:22px;
+  max-height: 337px;
 }
+#corporate .section.team .bio.richard-kimball > .inner .part, 
 #corporate .section.team .bio.herald-yun-chen > .inner .part {
-  line-height:21px;
+  max-height: 309px;
 }
+#corporate .section.team .bio.jeffrey-saper > .inner .part,
 #corporate .section.team .bio.bob-parsons > .inner .part{
-  line-height:19px;
+  max-height: 370px;
 }
-#corporate .section.team .bio.jeffrey-saper > .inner .part, #corporate .section.team .bio.adam-clammer > .inner .part  {
-  line-height:18px;
+#corporate .section.team .bio.charles-robel > .inner .part,
+#corporate .section.team .bio.adam-clammer > .inner .part  {
+  max-height: 247px;  
 }
-#corporate .section.team .bio.richard-kimball > .inner .part, #corporate .section.team .bio.blake-irving2 > .inner .part, #corporate .section.team .bio.charles-robel > .inner .part {
-  line-height:17px;
+
+#corporate .section.team .bio.dark > .inner p {
+  margin-bottom: 10px;
 }
-#corporate .section.team .bio.dark > .inner, #corporate .section.team .bio.dark > .inner a{
+#corporate .section.team .bio.dark > .inner,
+#corporate .section.team .bio.dark > .inner p,  
+#corporate .section.team .bio.dark > .inner a {
   color:#fff;
 }
 #corporate .section.team .bio > .inner .close-button {
@@ -1142,7 +1149,8 @@ left: -485px;
   background: url(../img/resumup2.png) 0 0 no-repeat;
 }
 #corporate .section.team .bio .part p {
-  padding-bottom:.5em;
+  padding-bottom: 8px;
+  margin-bottom: 0px;
 }
 #corporate .section.team .bio .part .quote {
   font-size: 18px;
