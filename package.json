@@ -5,6 +5,10 @@
   "main": "gulpfile.js",
   "author": "clbrown@godaddy.com",
   "license": "ISC",
+  "scripts": {
+    "scaffold": "node ./lib/scaffold.js",
+    "login": "node ./lib/login.js"
+  },
   "dependencies": {
     "chalk": "^0.4.0",
     "fullname": "^0.1.0",
@@ -26,5 +30,10 @@
     "request": "^2.34.0",
     "rimraf": "^2.2.6",
     "username": "^0.1.1"
+  },
+  "devDependencies": {
+    "jsdom": "^0.10.5",
+    "mkdirp": "^0.5.0",
+    "prompt": "^0.2.12"
   }
 }
