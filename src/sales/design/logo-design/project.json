@@ -1,0 +1,21 @@
+{
+  "source.html": {
+    "cdsDetails": {
+      "champion": {
+        "name": "Colyn Brown",
+        "email": "clbrown@godaddy.com"
+      },
+      "draft": {
+        "comments": "",
+        "url": "http://www.dev-godaddy.com/design/logo-design.aspx"
+      }
+    },
+    "metaTitle": "[@L[cds.sales/gd/design/logo-design:MetaTitle]@L]",
+    "metaDescription": "[@L[cds.sales/gd/design/logo-design:MetaDescription]@L]",
+    "metaKeywords": "[@L[cds.sales/gd/design/logo-design:MetaKeywords]@L]",
+    "metaCanonicalPath": "/design/logo-design.aspx",
+    "metaOgTitle": "[@L[cds.sales/gd/design/logo-design:MetaTitle]@L]",
+    "metaOgImage": "fos/icn/logo_design.jpg",
+    "metaOgDescription": "[@L[cds.sales/gd/design/logo-design:MetaDescription]@L]"
+  }
+}
