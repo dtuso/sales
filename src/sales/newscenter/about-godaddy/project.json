@@ -7,10 +7,11 @@
       },
       "cdsLocation": "sales/newscenter/about-godaddy.aspx",
       "draft": {
-        "comments": "Changing news release",
+        "comments": "Update css version #",
         "url": "http://www.dev-godaddy.com/newscenter/about-godaddy.aspx"
       }
     },
+    "cssVersionOverride": "3a",
     "metaTitle": "[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-11-AboutGoDaddyMoreAboutTheWorldS1Domain]@L]",
     "metaDescription": "[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-9-GoDaddyWhoWeAreAndWhatWeDo]@L]",
     "metaKeywords": "[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-5-GoDaddyGodaddyNewsReleasesGoDaddy]@L]",

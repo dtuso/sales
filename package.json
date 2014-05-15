@@ -29,7 +29,8 @@
     "moment": "^2.6.0",
     "request": "^2.34.0",
     "rimraf": "^2.2.6",
-    "username": "^0.1.1"
+    "username": "^0.1.1",
+    "gulp-debug": "~0.3.0"
   },
   "devDependencies": {
     "jsdom": "^0.10.5",
