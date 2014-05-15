@@ -12,6 +12,7 @@ try {
   var rename    = require('gulp-rename');
   var swig      = require('gulp-swig');
   var uglify    = require('gulp-uglify');
+  var debug     = require('gulp-debug');
 
   // utilities
   var path      = require('path');
@@ -28,8 +29,12 @@ try {
 
 }
 
-var theme = 'scotty';
-var rootAssetPath = (process.platform === 'win32') ? '\\\\g1dwimages001\\images\\fos\\sales\\themes\\' + theme + '\\' : '/Volumes/images/fos/sales/themes/' + theme + '/';
+var theme = 'scotty'; 
+var rootAssetPath = (process.platform === 'win32') 
+  ? '\\\\g1dwimages001\\images\\fos\\sales\\themes\\' + theme + '\\' 
+  : '/Volumes/images/fos/sales/themes/' + theme + '/';
+
+
 
 var assetSrcPaths = require('./paths.json');
 var assetSrcPath = assetSrcPaths[argv.src||'all'];
@@ -128,7 +133,10 @@ gulp.task('images', function() {
 });
 
 gulp.task('assets-deploy', ['build'], function() {
+  console.log(paths.build,rootAssetPath,paths.assets);
+
   return gulp.src(['./**/*.*'], {cwd: paths.build})
+    /*.pipe(debug({verbose: false}))*/
     .pipe(gulp.dest(paths.assets));
 });
 
