@@ -1,0 +1,21 @@
+{
+  "source.html": {
+    "cdsDetails": {
+      "champion": {
+        "name": "Colyn Brown",
+        "email": "clbrown@godaddy.com"
+      },
+      "draft": {
+        "comments": "Prep for Github",
+        "url": "http://www.dev-godaddy.com/design/web-design.aspx"
+      }
+    },
+    "metaTitle": "[@L[cds.sales/gd/design/web-design:MetaTitle]@L]",
+    "metaDescription": "[@L[cds.sales/gd/design/web-design:MetaDescription]@L]",
+    "metaKeywords": "[@L[cds.sales/gd/design/web-design:MetaKeywords]@L]",
+    "metaCanonicalPath": "/design/web-design.aspx",
+    "metaOgTitle": "[@L[cds.sales/gd/design/web-design:SalesHeader22SocialData4Title]@L]",
+    "metaOgImage": "fos/icn/dream_design.jpg",
+    "metaOgDescription": "[@L[cds.sales/gd/design/web-design:SalesHeader22SocialData1Description]@L]"
+  }
+}
