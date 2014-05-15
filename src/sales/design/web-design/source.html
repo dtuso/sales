@@ -1,0 +1,516 @@
+---
+location: sales/design/web-design.aspx
+id: 537405b6f778fc384801ba61
+name: prep for github
+---
+{% extends 'base.html' %}
+
+{% block metahead %}
+	{% parent %}
+{% endblock metahead %}
+
+{% block footer %}
+<script type="text/javascript">
+    var ytPlayerList = {}; // Maps youtube player with its appropiate iframe based on the iframe id
+
+    function onYouTubeIframeAPIReady() {
+        $('.embedVideo').gdVideos();
+    }
+
+    function onPlayerReady (event) {
+        ytPlayerList[$(event.target.getIframe()).attr('id')] = event.target;
+    }
+
+    function openPopUpWithParams (url, windowName, windowParams) {
+            window.open(url, windowName, windowParams);
+    }
+
+    $(function () {
+        if (!$('html').hasClass('lt-ie8')) {
+            if ($('.embedVideo').length > 0) {
+                var tag             = document.createElement('script'),
+                    firstScriptTag  = document.getElementsByTagName('script')[0];
+
+                tag.src = "https://www.youtube.com/iframe_api";
+                firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+            }
+        } else {
+            $('.embedVideoIE7').gdVideos();
+        }
+    });
+    $('.js-open-overview').on('click', function (e) {
+        e.preventDefault();
+        window.location.hash = '';
+        $('a[href="#plan-pricing"]').tab('show');
+        window.location.hash = '#plan-pricing';
+    });
+
+    $(function () {
+        $('.equal-height').setColumnsEqualHeight();
+         $('.select-box').setSelectBox();
+         $('.isToolTip').tooltip({ placement: 'bottom'});
+    });
+
+    $('.js-addtocart-btn').on('click', function (e){
+        var id = $(this).attr('id');
+        $('input.selectedPlan').val(id);
+    });
+
+    $(".view-our-designs-link").click(function(){
+        openPopUpWithParams("http://www.ourdesignexamples.com", "customweb_popup", "left=50,top=50,resizable=yes,scrollbars=yes,width=1000,height=950");
+    });
+
+    $('[data-ci]').click(function(e){
+    $this = $(this);
+    FastballEvent_MouseClick(e,$this.attr('data-ci'),$(this)[0],'a');
+    fbiLibCheckQueue();
+    });
+
+
+</script>
+<!--[if IE]>
+<script type="text/javascript">
+$(function () {
+    $('[placeholder]').focus(function() {
+        var input = $(this);
+
+        if (input.val() == input.attr('placeholder')) {
+            input.val('');
+            input.removeClass('placeholder');
+        }
+    }).blur(function() {
+        var input = $(this);
+
+        if (input.val() == '' || input.val() == input.attr('placeholder')) {
+            input.addClass('placeholder');
+            input.val(input.attr('placeholder'));
+        }
+    }).blur().parents('form').submit(function() {
+        $(this).find('[placeholder]').each(function() {
+            var input = $(this);
+
+            if (input.val() == input.attr('placeholder')) {
+                input.val('');
+            }
+        });
+    });
+});
+</script>
+<![endif]-->
+<!-- endbuild -->
+{% endblock footer %}
+
+{% block body %}
+
+        <!-- Start main-banner -->
+        <section class="main-banner main-banner-wds">
+          <div class="l-main-container container main-banner-content main-banner-content-web-design">
+            <h1 class="main-banner-title">[@L[cds.sales/gd/design/web-design:SalesHeaderMainHeading]@L]</h1>
+            <p class="main-banner-subtitle">[@L[cds.sales/gd/design/web-design:SalesHeaderSubHeadingText]@L]</p>
+          </div>
+           ##if(activeLanguageAny([en-us]))
+            <a href="#" class="btn btn-primary cta-small view-our-designs-link" data-ci="87599">[@L[cds.sales/gd/design/web-design:ViewDesignsLink]@L]</a>
+           ##endif
+        </section>
+        <!-- End main-banner -->
+
+        <!-- Start main-tabs -->
+        <section class="main-tabs">
+          <div class="container">
+            <ul class="nav nav-tabs">
+              <li class="nav-tabs-item active"><a class="nav-tabs-link" href="#plan-pricing" data-ci='87594' data-toggle="tab">[@L[cds.sales/gd/design/web-design:TabPlanPricingLabel]@L]</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
+              <li class="nav-tabs-item"><a class="nav-tabs-link" href="#how-it-works" data-ci='87595' data-toggle="tab">[@L[cds.sales/gd/design/web-design:TabHowItWorksLabel]@L]</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
+              <li class="nav-tabs-item"><a class="nav-tabs-link" href="#faq" data-ci='87596' data-toggle="tab">[@L[cds.sales/gd/design/web-design:TabFAQLabel]@L]</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
+            </ul>
+          </div>
+        </section>
+        <!-- End main-tabs -->
+
+        <!-- Start main-tabs panes -->
+        <div class="tab-content no-margin-top">
+           <!-- Start Plans & Pricing -->
+           <div class="tab-pane tab-content-plans-pricing-bg-wds active" id="plan-pricing">
+              <!-- Start content -->
+              <section class="l-main-container container">
+                  <!-- Start misc-banner -->
+                  <section class="misc-banner">
+                    <div class="l-main-container container misc-banner-content">
+                       <h2>[@L[cds.sales/gd/design/web-design:TabContentPlanPricingTabHeaderText]@L]</h2>
+                       <p>[@L[cds.sales/gd/design/web-design:TabContentPlanPricingTabSubHeaderText]@L]</p>
+                       <p>[@L[cds.sales/gd/design/web-design:TabContentPlanPricingTabSubHeaderText2]@L]</p>
+                        ##if(activeLanguageAny([en-us]))
+                          <a href="#" data-ci='87598' class="misc-banner-link view-our-designs-link"><i class="ico ico-gt-alternate"></i>[@L[cds.sales/gd/design/web-design:LinkViewOurDesignsText]@L]</a>
+                        ##endif
+                    </div>
+                  </section>
+                  <!-- End misc-banner -->
+                  <div class="row equal-height">
+                    <div class="col-xs-4" id="standard-column">
+                      <form action="[@T[link:<relative path="~/CDS/Widgets/WidgetsPostHandlers/WebDesignPostHandler.ashx" />]@T]" name="frmWebDesign" id="addtocart-form" method="post">
+                         <input type="hidden" name="selectedPlan" id="selectedPlan" class="selectedPlan" />
+                         <input type="hidden" name="formSubmitButton" id="formSubmitButton" value="Add-to-Cart" />
+                         <input type="hidden" name="itc" value="slp_webdesign2" />
+                         <input type="hidden" name="nocos" value="False" />
+                         <input type="hidden" name="config" value="customsite" />
+                         <input type="hidden" name="sdc" value="True" />
+                         <input type="hidden" name="newxs" value="False" />
+                         <input type="hidden" name="cicode" value="56910" />
+                         <input type="hidden" name="prog_id" value="GoDaddy" />
+                         <div class="grid-column no-padding-bottom relative">
+                           <h2>[@L[cds.sales/gd/design/web-design:PlanBoxStandardAbovePlanDetailsCustomContent]@L]</h2>
+                           <p class="starting-at"><span class="starting-at-above">[@L[cds.sales/gd/design/web-design:PlanBoxStartingAt]@L]</span><span class="starting-at-price">[@T[productprice:<current productid="6520" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses"  />]@T]</span><span class="starting-at-small">/[@L[cds.sales/gd/design/web-design:PlanBoxMonth]@L]</span></p>
+                           ##if(countrySiteAny(uk))
+                            <div class="vat-price" style="font-size: smaller">[@L[cds.sales/gd/design/web-design:vat-price]@L]</div>
+                           ##endif
+                           <div class="select-box" >
+                              <div class="select-box-head">
+                                  <div class="select-box-current">
+                                      <span>[@L[cds.sales/gd/design/web-design:12-months]@L]</span>
+                                      <span class="price">[@T[productprice:<current productid="6520" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses"  />]@T]</span>
+                                      <span class="secondary-color">[@L[cds.sales/gd/design/web-design:month]@L]</span>
+                                      <span></span>
+                                  </div>
+                                  <div class="select-box-cta"><i class="ico ico-download"></i></div>
+                              </div><!-- select-box-head -->
+                              <div class="select-box-body" >
+                                  <ul class="select-box-options">
+                                      <li class="selected">
+                                          <label>
+                                            <input type="radio" name="product"  checked="checked" value="6520|1|1" />
+                                              <span>[@L[cds.sales/gd/design/web-design:12-months]@L]</span>
+                                              <span class="price">[@T[productprice:<current productid="6520" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses"  />]@T]</span>
+                                              <span class="secondary-color">[@L[cds.sales/gd/design/web-design:month]@L]</span>
+                                              <span></span>
+                                          </label>
+                                      </li>
+                                      <li>
+                                          <div>
+                                            <label>
+                                              <input type="radio" name="product" value="6521|1|1" />
+                                                <span>[@L[cds.sales/gd/design/web-design:24-months]@L]</span>
+                                                <span class="price">[@T[productprice:<current productid="6521" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses"/>]@T]</span>
+                                                <span class="secondary-color">[@L[cds.sales/gd/design/web-design:month]@L]</span>
+                                                <span></span>
+                                            </label>
+                                          </div>
+                                      </li>
+                                  </ul>
+                              </div><!-- select-box-body -->
+                           </div><!-- select-box -->
+                           <p class="no-margin-bottom"><button type="submit" id="frmWebDesign_0"  data-ci='87600' data-form="addtocart-form" class="btn btn-warning btn-block js-addtocart-btn btn--push-down btn-lg">[@L[cds.sales/gd/design/web-design:planbox-cart-btn]@L]</button></p>
+                           <ul class="plan-pricing-list plan-pricing-list-alternate">
+                              <li class="two-lines">[@L[cds.sales/gd/design/web-design:PlanBox40PlanDetails59790Text]@L]</li>
+                              <li class="two-lines">[@L[cds.sales/gd/design/web-design:PlanBox40PlanDetails59791Text]@L]</li>
+                              <li class="two-lines">[@L[cds.sales/gd/design/web-design:PlanBox40PlanDetails59795Text]@L]</li>
+                              <li class="two-lines">[@L[cds.sales/gd/design/web-design:PlanBox40PlanDetails59792Text]@L]</li>
+                              <li class="two-lines"><i class="ico ico-empty"></i></li>
+                              <li class="two-lines"><i class="ico ico-empty"></i></li>
+                              <li class="two-lines"><i class="ico ico-empty"></i></li>
+                           </ul>
+                         </div>
+                      </form>
+                   </div>
+                    <div class="col-xs-4" id="premium-column">
+                      <form action="[@T[link:<relative path="~/CDS/Widgets/WidgetsPostHandlers/WebDesignPostHandler.ashx" />]@T]" name="frmWebDesign" id="addtocart-form" method="post">
+                        <input type="hidden" name="selectedPlan" id="selectedPlan" class="selectedPlan" />
+                        <input type="hidden" name="formSubmitButton" id="formSubmitButton" value="Add-to-Cart" />
+                        <input type="hidden" name="itc" value="slp_webdesign2" />
+                        <input type="hidden" name="nocos" value="False" />
+                        <input type="hidden" name="config" value="customsite" />
+                        <input type="hidden" name="sdc" value="True" />
+                        <input type="hidden" name="newxs" value="False" />
+                        <input type="hidden" name="cicode" value="56910" />
+                        <input type="hidden" name="prog_id" value="GoDaddy" />
+                        <div class="grid-column no-padding-bottom relative">
+                            <h2>[@L[cds.sales/gd/design/web-design:PlanBoxPremiumAbovePlanDetailsCustomContent]@L]</h2>
+                            <p class="starting-at"><span class="starting-at-above">[@L[cds.sales/gd/design/web-design:PlanBoxStartingAt]@L]</span><span class="starting-at-price">[@T[productprice:<current productid="6540" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses"/>]@T]</span><span class="starting-at-small">/[@L[cds.sales/gd/design/web-design:PlanBoxMonth2]@L]</span></p>
+                            ##if(countrySiteAny(uk))
+                              <div class="vat-price" style="font-size: smaller">[@L[cds.sales/gd/design/web-design:vat-price]@L]</div>
+                            ##endif
+                            <div class="select-box">
+                                <div class="select-box-head">
+                                    <div class="select-box-current">
+                                        <span>[@L[cds.sales/gd/design/web-design:12-months]@L]</span>
+                                        <span class="price">[@T[productprice:<current productid="6540" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses"/>]@T]</span>
+                                        <span class="secondary-color">[@L[cds.sales/gd/design/web-design:month]@L]</span>
+                                        <span></span>
+                                    </div>
+                                    <div class="select-box-cta"><i class="ico ico-download"></i></div>
+                                </div><!-- select-box-head -->
+                                <div class="select-box-body" >
+                                    <ul class="select-box-options">
+                                        <li class="selected">
+                                            <div>
+                                               <label>
+                                                 <input type="radio" name="product" checked="checked" value="6540|1|1" />
+                                                  <span>[@L[cds.sales/gd/design/web-design:12-months]@L]</span>
+                                                  <span class="price">[@T[productprice:<current productid="6540" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses"/>]@T]</span>
+                                                  <span class="secondary-color">[@L[cds.sales/gd/design/web-design:month]@L]</span>
+                                                  <span></span>
+                                              </label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div>
+                                              <label>
+                                                <input type="radio" name="product" value="6541|1|1" />
+                                                  <span>[@L[cds.sales/gd/design/web-design:24-months]@L]</span>
+                                                  <span class="price">[@T[productprice:<current productid="6541" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses"/>]@T]</span>
+                                                  <span class="secondary-color">[@L[cds.sales/gd/design/web-design:month]@L]</span>
+                                                  <span></span>
+                                              </label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div><!-- select-box-body -->
+                             </div><!-- select-box -->
+                            <p class="no-margin-bottom"><button data-ci='87602' type="submit" id="frmWebDesign_1" data-form="addtocart-form" class="btn btn-warning btn-block js-addtocart-btn btn--push-down btn-lg">[@L[cds.sales/gd/design/web-design:planbox-cart-btn]@L]</button></p>
+                            <ul class="plan-pricing-list plan-pricing-list-alternate">
+                                <li class="two-lines">[@L[cds.sales/gd/design/web-design:PlanBox40PlanDetails69790Text]@L]</li>
+                                <li class="two-lines">[@L[cds.sales/gd/design/web-design:PlanBox40PlanDetails69791Text]@L]</li>
+                                <li class="two-lines">[@L[cds.sales/gd/design/web-design:PlanBox40PlanDetails69795Text]@L]</li>
+                                <li class="two-lines">[@L[cds.sales/gd/design/web-design:PlanBox40PlanDetails69793Text]@L]</li>
+                                <li class="two-lines">[@L[cds.sales/gd/design/web-design:PlanBox40PlanDetails69792Text]@L]</li>
+                                <li class="two-lines">[@L[cds.sales/gd/design/web-design:PlanBox40PlanDetails69796Text]@L]</li>
+                                <li class="two-lines">[@L[cds.sales/gd/design/web-design:PlanBox40PlanDetails69797Text]@L]</li>
+                            </ul>
+                         </div>
+                      </form>
+                    </div>
+                    <div class="col-xs-4">
+                      <div class="grid-column has-badge grid-column-right">
+                    <span class="badge badge-important badge-upper-right">[@L[cds.sales/gd/design/web-design:LearnMoreBadgeText]@L]<a href="tel:4803363344"> <strong>[@T[supportphone:<designteam/>]@T]</strong></a></span>
+                    <ul class="tab-content-list">
+                        <li>[@L[cds.sales/gd/design/web-design:FeaturesListItem1]@L]</li>
+                        <li>[@L[cds.sales/gd/design/web-design:FeaturesListItem2]@L]</li>
+                        <li>[@L[cds.sales/gd/design/web-design:FeaturesListItem3]@L]</li>
+                        <li>[@L[cds.sales/gd/design/web-design:FeaturesListItem4]@L]</li>
+                        <li>[@L[cds.sales/gd/design/web-design:FeaturesListItem5]@L]</li>
+                    </ul>
+                </div>
+                  </div>
+              </div>
+              </section>
+              <!-- End content -->
+
+              <!-- Start plan-summary -->
+              <section class="plan-summary l-main-content">
+                  <div class="container l-main-container">
+                     <div class="row">
+                        <div class="col-xs-12">
+                           <div class="plan-summary-container">
+                               <!-- Start Plan-summary nav tabs -->
+                               <ul class="nav nav-tabs plan-summary-tabs">
+                                  <li class="nav-tabs-item plan-summary-tabs-item active">
+                                      <a href="#ps-plan-includes" data-ci='87604' class="nav-tabs-link plan-summary-nav-tabs-link" data-toggle="tab">[@L[cds.sales/gd/design/web-design:List01566TabText]@L]</a>
+                                  </li>
+                                  <li class="nav-tabs-item plan-summary-tabs-item">
+                                      <a href="#ps-support" data-ci='87605' class="nav-tabs-link plan-summary-nav-tabs-link" data-toggle="tab">[@L[cds.sales/gd/design/web-design:Support11622TabText]@L] </a>
+                                  </li>
+                               </ul>
+                               <!-- End Plan-summary nav tabs -->
+
+                               <!-- Start Plan-summary Tab panes -->
+                               <div class="tab-content no-margin-bottom">
+                                  <div class="tab-pane active " id="ps-plan-includes">
+                                      <ul class="plan-summary-tab-pane-list relative">
+                                          <li>[@L[cds.sales/gd/design/web-design:List0Items154090Text]@L]</li>
+                                          <li>[@L[cds.sales/gd/design/web-design:List0Items154091Text]@L]</li>
+                                          <li>[@L[cds.sales/gd/design/web-design:List0Items154092Text]@L]</li>
+                                          <li>[@L[cds.sales/gd/design/web-design:List0Items154093Text]@L]</li>
+                                          <li>[@L[cds.sales/gd/design/web-design:List0Items154094Text]@L]</li>
+                                          <li>[@L[cds.sales/gd/design/web-design:List0Items154095Text]@L]</li>
+                                          <li>[@L[cds.sales/gd/design/web-design:List0Items154096Text]@L]</li>
+                                      </ul>
+                                      <ul class="plan-summary-tab-pane-list relative">
+                                          <li>[@L[cds.sales/gd/design/web-design:List0Items154097Text]@L]</li>
+                                          <li>[@L[cds.sales/gd/design/web-design:List0Items154098Text]@L]</li>
+                                          <li>[@L[cds.sales/gd/design/web-design:List0Items154099Text]@L]</li>
+                                        ##if(activeLanguageAny([en-us]) || activeLanguageAny([es-us]))
+                                          <li>[@L[cds.sales/gd/design/web-design:List0Items154100Text]@L]</li>
+                                          <li>[@L[cds.sales/gd/design/web-design:List0Items154101Text]@L]</li>
+                                          <li>[@L[cds.sales/gd/design/web-design:List0Items154102Text]@L]</li>
+                                        ##endif
+                                      </ul>
+                                  </div>
+                                  <div class="tab-pane" id="ps-support">
+                                      <p>[@L[cds.sales/gd/design/web-design:SupportSubTitle1]@L]</p>
+                                      <ul class="plan-summary-tab-pane-list plan-summary-tab-pane-list-columns no-margin-left">
+                                          <li>[@L[cds.sales/gd/design/web-design:SupportSubText1]@L]</li>
+                                          <li>[@L[cds.sales/gd/design/web-design:SupportSubText2]@L]</li>
+                                      </ul>
+                                      <ul class="plan-summary-tab-pane-list plan-summary-tab-pane-list-columns">
+                                          <li>[@L[cds.sales/gd/design/web-design:SupportSubText3]@L]</li>
+                                          <li>[@L[cds.sales/gd/design/web-design:SupportSubText4]@L]</li>
+                                      </ul>
+                                      <ul class="plan-summary-tab-pane-list plan-summary-tab-pane-list-columns">
+                                          <li>[@L[cds.sales/gd/design/web-design:SupportSubText5]@L]</li>
+                                          <li>[@L[cds.sales/gd/design/web-design:SupportSubText6]@L]</li>
+                                      </ul>
+                                      <p>[@L[cds.sales/gd/design/web-design:SupportSubTitle2]@L]</p>
+                                      <ul class="plan-summary-tab-pane-list no-margin-left no-margin-bottom">
+                                          <li>[@L[cds.sales/gd/design/web-design:SupportSubText7]@L]</li>
+                                          <li>[@L[cds.sales/gd/design/web-design:SupportSubText8]@L]</li>
+                                      </ul>
+                                  </div>
+                               </div>
+                           </div>
+                           <!-- End Plan-summary Tab panes -->
+                        </div>
+                      </div>
+                  </div>
+              </section>
+              <!-- End plan-summary -->
+
+           </div><!-- End Plans & Pricing -->
+
+           <!-- Start How It Works Tab -->
+           <div class="tab-pane" id="how-it-works">
+             <!--  Start content -->
+             <section class="l-main-container container">
+                <!-- Start misc-banner -->
+                <section class="misc-banner">
+                  <div class="tab-header tab-header-wds-howitworks">
+                      <h2 class="tab-header-title">[@L[cds.sales/gd/design/web-design:TabContent22892TabHeaderText]@L]</h2>
+                      <p class="no-margin-bottom">[@L[cds.sales/gd/design/web-design:TabContent22893TabSubHeaderText]@L]</p>
+                  </div>
+                </section>
+                <!-- End misc-banner -->
+                <div class="row tab-content">
+                  <div class="col-xs-12">
+                      <div class="grid-column tab-content-column tab-content-right tab-content-wds-share-your-vision">
+                        <h2 class="tab-content-title">[@L[cds.sales/gd/design/web-design:MainPageContentTabContent0title0]@L]</h2>
+                        <ul class="tab-content-list no-margin-bottom">
+                            <li>[@L[cds.sales/gd/design/web-design:MainPageContentTabContent0text0]@L]</li>
+                            <li>[@L[cds.sales/gd/design/web-design:MainPageContentTabContent0text1]@L]</li>
+                            <li>[@L[cds.sales/gd/design/web-design:MainPageContentTabContent0text2]@L]</li>
+                            <li>[@L[cds.sales/gd/design/web-design:MainPageContentTabContent0text3]@L]</li>
+                            <li>[@L[cds.sales/gd/design/web-design:MainPageContentTabContent0text4]@L]</li>
+                            <li>[@L[cds.sales/gd/design/web-design:MainPageContentTabContent0text5]@L]</li>
+                        </ul>
+                      </div>
+                  </div>
+                </div>
+                <div class="row tab-content">
+                  <div class="col-xs-12">
+                    <div class="grid-column tab-content-column tab-content-left tab-content-wds-we-go-to-work">
+                        <h2 class="tab-content-title">[@L[cds.sales/gd/design/web-design:MainPageContentTabContent0title1]@L]</h2>
+                        <ul class="tab-content-list no-margin-bottom">
+                            <li>[@L[cds.sales/gd/design/web-design:MainPageContentTabContent0text6]@L]</li>
+                            <li>[@L[cds.sales/gd/design/web-design:MainPageContentTabContent0text7]@L]</li>
+                            <li>[@L[cds.sales/gd/design/web-design:MainPageContentTabContent0text8]@L]</li>
+                            <li>[@L[cds.sales/gd/design/web-design:MainPageContentTabContent0text9]@L]</li>
+                        </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="row tab-content">
+                  <div class="col-xs-12">
+                    <div class="grid-column tab-content-column tab-content-right tab-content-wds-enhance-expand">
+                        <h2 class="tab-content-title">[@L[cds.sales/gd/design/web-design:MainPageContentTabContent0title2]@L]</h2>
+                        <ul class="tab-content-list no-margin-bottom">
+                            <li>[@L[cds.sales/gd/design/web-design:MainPageContentTabContent0text11]@L]</li>
+                            <li>[@L[cds.sales/gd/design/web-design:MainPageContentTabContent0text12]@L]</li>
+                        </ul>
+                    </div>
+                  </div>
+                </div>
+                <a data-ci='87608'class="btn btn-primary btn-lg btn-block js-open-overview" href="#"><i class="ico ico-gt"></i>[@L[cds.sales/gd/design/web-design:Features0CurrentFeatures909114CTA]@L]</a>
+              </section>
+             <!-- End content -->
+           </div> <!-- End How It Works Tab -->
+
+           <!-- Start faq Tab -->
+           <div class="tab-pane" id="faq">
+              <section class="tab-content-top-spacing">
+                <div class="container l-main-container">
+                <div class="row tab-content">
+                    <div class="col-xs-12">
+                      <div class="grid-column tab-content-column-alternate">
+                        <h2 class="h2-alternate">[@L[cds.sales/gd/design/web-design:FAQ0FAQItems1368110Title]@L]</h2>
+                        <p>[@L[cds.sales/gd/design/web-design:FAQ0FAQListItems60136890Text]@L]</p>
+                        <p>[@L[cds.sales/gd/design/web-design:FAQ0FAQListItems60136891Text]@L]</p>
+                        <p>[@L[cds.sales/gd/design/web-design:FAQ0FAQListItems60136892Text]@L]</p>
+                        <p>[@L[cds.sales/gd/design/web-design:FAQ0FAQListItems60136893Text]@L]</p>
+
+                        <hr/>
+
+                        <h2 class="h2-alternate">[@L[cds.sales/gd/design/web-design:FAQ0FAQItems1368112Title]@L]</h2>
+                        <p>[@L[cds.sales/gd/design/web-design:FAQ0FAQListItems62136890Text]@L]</p>
+                        <p>[@L[cds.sales/gd/design/web-design:FAQ0FAQListItems62136891Text]@L]</p>
+                        <p>[@L[cds.sales/gd/design/web-design:FAQ0FAQListItems62136892Text]@L]</p>
+                        <p>[@L[cds.sales/gd/design/web-design:FAQ0FAQListItems62136893Text]@L]</p>
+
+                        <hr/>
+
+                        <h2 class="h2-alternate">[@L[cds.sales/gd/design/web-design:FAQ0FAQItems1368111Title]@L]</h2>
+                        <p>[@L[cds.sales/gd/design/web-design:FAQ0FAQListItems61136890Text]@L]</p>
+                        <p>[@L[cds.sales/gd/design/web-design:FAQ0FAQListItems61136891Text]@L]</p>
+
+                        <hr/>
+
+                        <h2 class="h2-alternate">[@L[cds.sales/gd/design/web-design:FAQ0FAQItems1368113Title]@L]</h2>
+                        <p>[@L[cds.sales/gd/design/web-design:FAQ0FAQListItems63136890Text]@L]</p>
+                        <p>[@L[cds.sales/gd/design/web-design:FAQ0FAQListItems63136891Text]@L]</p>
+                        <p>[@L[cds.sales/gd/design/web-design:FAQ0FAQListItems63136892Text]@L]</p>
+                        <p>[@L[cds.sales/gd/design/web-design:FAQ0FAQListItems63136893Text]@L]</p>
+
+                        <hr/>
+
+                        <h2 class="h2-alternate">[@L[cds.sales/gd/design/web-design:FAQ0FAQItems1368114Title]@L]</h2>
+                        <p>[@L[cds.sales/gd/design/web-design:FAQ0FAQListItems64136890Text]@L]</p>
+                        <p>[@L[cds.sales/gd/design/web-design:FAQ0FAQListItems64136891Text]@L]</p>
+                        <p>[@L[cds.sales/gd/design/web-design:FAQ0FAQListItems64136892Text]@L]</p>
+                        <p>[@L[cds.sales/gd/design/web-design:FAQ0FAQListItems64136893Text]@L]</p>
+                        <p>[@L[cds.sales/gd/design/web-design:FAQ0FAQListItems64136894Text]@L]</p>
+
+
+                        <hr/>
+
+                        <h2 class="h2-alternate">[@L[cds.sales/gd/design/web-design:FAQ0FAQItems1368115Title]@L]</h2>
+                        <p>[@L[cds.sales/gd/design/web-design:FAQ0FAQListItems65136890Text]@L]</p>
+                        <p>[@L[cds.sales/gd/design/web-design:FAQ0FAQListItems65136891Text]@L]</p>
+                        <p>[@L[cds.sales/gd/design/web-design:FAQ0FAQListItems65136892Text]@L]</p>
+                        <p>[@L[cds.sales/gd/design/web-design:FAQ0FAQListItems65136893Text]@L]</p>
+                        <p class="no-margin-bottom">[@L[cds.sales/gd/design/web-design:FAQ0FAQListItems65136894Text]@L]</p>
+
+                      </div>
+                    </div>
+                </div>
+                <a href="#" data-ci='87616' class="btn btn-primary btn-lg btn-block js-open-overview"><i class="ico ico-gt"></i>[@L[cds.sales/gd/design/web-design:Features0CurrentFeatures909114CTA]@L]</a>
+              </div>
+              </section>
+           </div> <!-- End Faq Tab -->
+        </div>
+        <!-- End main-tabs panes -->
+
+        <!-- [@P[cdsDocument:<data app="sales" location="_global/content-disclaimer" /> ]@P] -->
+        <section class="container l-main-container content-disclaimer">
+          <p class="no-margin-bottom"><small class="small-print">[@L[cds.sales/gd/design/web-design:ContentDisclaimerSymbols]@L] <a data-ci='87607' class="simple-link pointer-cursor" data-toggle="modal" data-target="#myModal">[@L[cds.sales/gd/design/web-design:ContentDisclaimerLink]@L]</a></small></p>
+          <p><small class="small-print">[@L[cds.sales/gd/design/web-design:ContentDicalimerText]@L]</small></p>
+       </section>
+
+
+        <div class="modal fade" id="myModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              <h4 class="modal-title"><strong>[@L[cds.sales/gd/design/web-design:DisclaimerModalHeader]@L]</strong></h4>
+            </div>
+            <div class="modal-body">
+                <p>[@L[cds.sales/gd/design/web-design:DisclaimerModalItem01]@L]</p>
+                <p>[@L[cds.sales/gd/design/web-design:DisclaimerModalItem02]@L]</p>
+                <p>[@L[cds.sales/gd/design/web-design:DisclaimerModalItem03]@L]</p>
+                <p>[@L[cds.sales/gd/design/web-design:DisclaimerModalItem04]@L]</p>
+                <p>[@L[cds.sales/gd/design/web-design:DisclaimerModalItem05]@L]</p>
+                <p>[@L[cds.sales/gd/design/web-design:DisclaimerModalItem06]@L]</p>
+                <p>[@L[cds.sales/gd/design/web-design:DisclaimerModalItem07]@L]</p>
+                <p>[@L[cds.sales/gd/design/web-design:DisclaimerModalItem08]@L]</p>
+                <p>[@L[cds.sales/gd/design/web-design:DisclaimerModalItem09]@L]</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+{% endblock body %}

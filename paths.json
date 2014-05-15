@@ -4,6 +4,7 @@
   "wsb": "./hosting/website-builder/",
   "o365": "./business/office-365/",
   "logo-design": "./design/logo-design/",
+  "web-design": "./design/web-design/",
   "accounting": "./accounting/accounting-software/",
   "web-hosting": "./hosting/web-hosting/",
   "wp": "./hosting/wordpress-hosting/",
