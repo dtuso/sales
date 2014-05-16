@@ -29,9 +29,9 @@ try {
 
 }
 
-var theme = 'scotty'; 
-var rootAssetPath = (process.platform === 'win32') 
-  ? '\\\\g1dwimages001\\images\\fos\\sales\\themes\\' + theme + '\\' 
+var theme = 'scotty';
+var rootAssetPath = (process.platform === 'win32')
+  ? '\\\\g1dwimages001\\images\\fos\\sales\\themes\\' + theme + '\\'
   : '/Volumes/images/fos/sales/themes/' + theme + '/';
 
 
