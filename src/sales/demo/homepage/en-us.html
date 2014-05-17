@@ -1,0 +1,26 @@
+---
+location: sales/demo/homepage/locales/en-us.html
+id: 53751f88f778fc1728f345bc
+locale: en-us
+---
+
+{% set include_pod =  "pods/_" + locale + ".html" %}
+{% set styles =  "css/" + locale + ".less" %}
+
+{% extends 'homepage.html' %}
+
+{% block customcss %}
+
+  {% less %}
+
+    {% include "css/en-us.less" %}
+
+  {% endless %}
+
+{% endblock %}
+
+{% block body %}
+
+  {% include include_pod %}
+
+{% endblock %}

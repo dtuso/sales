@@ -29,42 +29,11 @@
 {% endblock metaog %}
 
 {% block csshead %}
-  <link href="[@T[link:<cssroot />]@T]fos/201401/global/css/global-1.8.3.min.css" rel="stylesheet" type="text/css">
-  ##if(activeLanguageAny([en-ca]))
-  <link href="[@T[link:<cssroot />]@T]fos/hp/rebrand/css/en-ca_homepage_20140509.css" rel="stylesheet" type="text/css" />
-  ##elseif(activeLanguageAny([en-gb]))
-  <link href="[@T[link:<cssroot />]@T]fos/hp/rebrand/css/en-uk_homepage_20140505.css" rel="stylesheet" type="text/css" />
-  ##elseif(activeLanguageAny([en-ie]))
-  <link href="[@T[link:<cssroot />]@T]fos/hp/rebrand/css/en-ie_homepage_20140505.css" rel="stylesheet" type="text/css" />
-  ##elseif(activeLanguageAny([en-au]))
-  <link href="[@T[link:<cssroot />]@T]fos/hp/rebrand/css/en-au_homepage_20140509.css" rel="stylesheet" type="text/css" />
-  ##elseif(activeLanguageAny([en-my]))
-  <link href="[@T[link:<cssroot />]@T]fos/hp/rebrand/css/en-my_homepage_20140506.css" rel="stylesheet" type="text/css" />
-  ##elseif(activeLanguageAny([en-nz]))
-  <link href="[@T[link:<cssroot />]@T]fos/hp/rebrand/css/en-nz_homepage_20140506.css" rel="stylesheet" type="text/css" />
-  ##elseif(activeLanguageAny([en-ph]))
-  <link href="[@T[link:<cssroot />]@T]fos/hp/rebrand/css/en-ph_homepage_20140506.css" rel="stylesheet" type="text/css" />
-  ##elseif(activeLanguageAny([en-sg]))
-  <link href="[@T[link:<cssroot />]@T]fos/hp/rebrand/css/en-sg_homepage_20140506.css" rel="stylesheet" type="text/css" />
-  ##elseif(activeLanguageAny([en-za]))
-  <link href="[@T[link:<cssroot />]@T]fos/hp/rebrand/css/en-za_homepage_20140506.css" rel="stylesheet" type="text/css" />
-  ##elseif(activeLanguageAny([en-pk]))
-  <link href="[@T[link:<cssroot />]@T]fos/hp/rebrand/css/en-pk_homepage_20140506.css?v=1" rel="stylesheet" type="text/css" />
-  ##else
-  <link href="[@T[link:<cssroot />]@T]fos/hp/rebrand/css/homepage_20140401_en.css" rel="stylesheet" type="text/css" />
-  ##endif
-  ##if(activeLanguageAny([en-gb],[en-ie]))
-  <style>
-  .uk-cookie-banner{background: #8a8a8a; color: #fff; font-size: 14px; padding: 10px;position:fixed;bottom:0;width: 100%;z-index:999}
-  .uk-cookie-banner a{color:#fff;text-decoration: underline}
-  .uk-cookie-banner span {display:block}
-  .uk-cookie-banner i {background-image: url([@T[link:<imageroot />]@T]fos/base/1/alerts.png)}
-  .uk-cookie-ico{background-position: 0 0;height:20px;display: block;float: left;margin: 10px;width: 20px}
-  .uk-cookie-wrap{margin: 0 auto;width: 1000px}
-  .uk-cookie-close{background-position: 4px -228px;cursor:pointer;height: 20px;display: block;position: absolute;top:10px;right:25px;margin: 10px;width: 20px}
-  </style>
-  ##endif
+  <link href="[@T[link:<css path='fos/201401/global/css/{{ cssVersion }}/combined-{{ cssVersion }}.css' />]@T]" rel="stylesheet" type="text/css">
+  <link href="[@T[link:<css path='fos/hp/rebrand/css/{{ locale }}_homepage_20140509.css' />]@T]{% if cssVersionOverride %}?v={{cssVersionOverride}}{% endif %}" rel="stylesheet" type="text/css">
 {% endblock csshead %}
+
+<style type="text/css">{% block customcss %}{% endblock customcss %}</style>
 
 [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags" />]@P]
 
