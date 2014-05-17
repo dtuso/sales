@@ -3,7 +3,7 @@ location: localization/sales/gd/ssl/dedicated-ip/en
 id: 537641fff778fc1728f34604
 name: FOS-20029c
 ---
-{% include '../modules/doc-block.html' %}
+{% include 'modules/doc-block.html' %}
 <phrase key="MetaTitle" />
 Static IP Hosting | Tackle Your Advanced Hosting Needs - GoDaddy
 <phrase key="MetaDescription" />

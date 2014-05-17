@@ -16,6 +16,7 @@
     "gulp-cdsm": "git+ssh://git@github.secureserver.net:WebOps/gulp-cdsm.git",
     "gulp-changed": "^0.3.0",
     "gulp-concat": "^2.2.0",
+    "gulp-debug": "~0.3.0",
     "gulp-front-matter": "^1.0.0",
     "gulp-if": "^1.1.0",
     "gulp-less": "^1.2.3",
@@ -29,8 +30,7 @@
     "moment": "^2.6.0",
     "request": "^2.34.0",
     "rimraf": "^2.2.6",
-    "username": "^0.1.1",
-    "gulp-debug": "~0.3.0"
+    "username": "^0.1.1"
   },
   "devDependencies": {
     "jsdom": "^0.10.5",

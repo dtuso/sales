@@ -3,14 +3,14 @@ location: sales/tlds/gtldwatch.aspx
 id: 536bc8a7f778fc3434d3cb8f
 name: testing
 ---
-{% extends 'base.html' %}
+{% extends 'layouts/base.html' %}
 
 {% block pageTitle %}<title>[@L[cds.tldleaf/[@D[gtld]@D]:watch.page.title]@L]</title>{% endblock %}
 {% block pageDescription %}<meta name="description" content="[@L[cds.tldleaf/[@D[gtld]@D]:watch.meta.description]@L]" />{% endblock %}
 {% block pageKeywords %}<meta name="keywords" content="[@L[cds.tldleaf/[@D[gtld]@D]:watch.meta.keywords]@L]" />{% endblock %}
 
 {% block metahead %}
- 
+
 {% parent %}
 
     <!-- Old Global CSS -->
@@ -32,8 +32,8 @@ name: testing
     <div id="main-wrap">
       <div class="clearfix" style="margin-top:15px">
         <h1>[@L[cds.tldleaf/[@D[gtld]@D]:all.page.h1]@L]</h1>
-        <div id="sm-wrap">              
-          <div class="fosshare" id="shareme" 
+        <div id="sm-wrap">
+          <div class="fosshare" id="shareme"
             data-twshareurl="[@T[link:<relative path='/tlds/[@D[gtld]@D]'><param name='ISC' value='smtwfos' /></relative>]@T]"
             data-twtext="[@L[cds.tldleaf/[@D[gtld]@D]:watch.twitter.text]@L]"
             data-twrelated="GoDaddy"
@@ -58,7 +58,7 @@ name: testing
       </div> <!-- head wrap -->
       <div id="body-wrap" class="watch-search-filler-above">
           <div class="content">
-            <div class="fl-left medium-col">                  
+            <div class="fl-left medium-col">
                 [@L[cds.tldleaf/[@D[gtld]@D]:all.marketing.content.1]@L]
                 [@L[cds.tldleaf/_common:watch.marketing.content]@L]
             </div>
@@ -71,7 +71,7 @@ name: testing
             <div style="clear:both;"></div>
           </div>
       </div><!-- body-wrap -->
-      <div id="limitations-wrap" class="product-limitations">              
+      <div id="limitations-wrap" class="product-limitations">
         <div id="limitations">
           <p>[@L[cds.tldleaf/[@D[gtld]@D]:all.limitations.symbols]@L] <a id="limitations-link" href="javascript:void(0);">[@L[cds.tldleaf/[@D[gtld]@D]:all.limitations.link]@L]</a></p>
           <div id="g-modal" class="g-modal" style="display:none;">
@@ -84,7 +84,7 @@ name: testing
             </div>
           </div>
           <div id="g-modal-overlay" class="g-modal-overlay" style="display:none;"></div>
-        </div> <!-- limitations -->            
+        </div> <!-- limitations -->
       </div> <!-- product-limitations -->
   </div> <!--main wrap -->
 
@@ -96,18 +96,18 @@ name: testing
     <script src="[@T[link:<javascriptroot />]@T]shared/js/jquery.plugins.min.20111019.js" type="text/javascript" ></script>
     <script src="[@T[link:<javascriptroot />]@T]starfield/fos.share/v1.3/fos.share-20140205.min.js" id="fosShareScript" ></script>
     <script src="[@T[link:<cssroot />]@T]fos/201401/tlds/tld-leaf/js/tld-leaf-page.min.js"></script>
-      
+
     <!--[if lte IE 8]>
     <script src="[@T[link:<javascriptroot />]@T]fos/script/JSON2.min.js"></script>
     <![endif]-->
 
     <script type="text/javascript">
-      
-      $(document).ready(function() { 
+
+      $(document).ready(function() {
         gbl.ns.register('domains.controls');
         if (!domains.controls.gtldTemplatesClient) {
           // probably means the cds_gtld_templates_xxxx.js file didn't load correctly
-          
+
         } else {
           domains.controls.gtldTemplatesClient.Initialize({
             tldLogoImageExists: $.trim("[@L[cds.tldleaf/[@D[gtld]@D]:all.gtld.logo]@L]").length > 0,
@@ -120,15 +120,15 @@ name: testing
             gtld: "[@D[gtld]@D]",
             watchButtonFollow: "[@L[cds.tldleaf/[@D[gtld]@D]:watch.header.button.follow]@L]",
             watchButtonFollowing: "[@L[cds.tldleaf/[@D[gtld]@D]:watch.header.button.following]@L]",
-            watchButtonUnfollow: "[@L[cds.tldleaf/[@D[gtld]@D]:watch.header.button.unfollow]@L]", 
+            watchButtonUnfollow: "[@L[cds.tldleaf/[@D[gtld]@D]:watch.header.button.unfollow]@L]",
             tldH1TagExists: $.trim('[@L[cds.tldleaf/[@D[gtld]@D]:all.page.h1]@L]').length > 0,
             redirectUrl: '[@T[link:<relative path="~/tlds/gtld.aspx"></relative>]@T]',
-            gTldPreRegPhaseDataJson: []          
-     
-          }); 
-        
+            gTldPreRegPhaseDataJson: []
+
+          });
+
           domains.controls.gtldTemplatesClient.SetupWatch();
         }
-      });    
+      });
     </script>
 {% endblock %}

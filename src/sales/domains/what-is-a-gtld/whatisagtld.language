@@ -3,7 +3,7 @@ location: localization/sales/domains/what-is-a-gtld/en
 id: false
 name: FOS-16128
 ---
-{% include '../modules/doc-block.html' %}
+{% include 'modules/doc-block.html' %}
 <phrase key="WhatIsAGTld-25-GenericTopLevelDomainsOrGTLDSAre" />
 Generic Top-Level Domains or gTLD's are here! Learn more about how a gTLD might be right for your business or personal website.
 <phrase key="WhatIsAGTld-11-WhatIsAGTLDLearnMoreAboutNew" />

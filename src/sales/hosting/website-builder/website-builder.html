@@ -3,7 +3,7 @@ location: sales/hosting/website-builder.aspx
 id: 536bf9a8f778fc3434b3a973
 name: FOS-14231 - Updated CSS version
 ---
-{% extends 'base.html' %}
+{% extends 'layouts/base.html' %}
 {% block pageTitle %}
   ##if(activeLanguageAny(es))
   <title>[@L[cds.sales/gd/hosting/website-builder:page-title-es]@L]</title>
@@ -122,7 +122,7 @@ name: FOS-14231 - Updated CSS version
 
 {% block body %}
 
-  <!-- Start main-banner -->  
+  <!-- Start main-banner -->
   ##if(activeLanguageAny(en))
   <section class="main-banner main-banner-website-builder">
       <div class="l-main-container container main-banner-content main-banner-content-website-builder">
@@ -138,9 +138,9 @@ name: FOS-14231 - Updated CSS version
             <i class="marquee-flag [@T[localization:<language full="true" />]@T] [@T[localization:<language />]@T] marquee-flag-free-domain-included"></i>
           </span>
           <span class="marquee-text-1 marquee-font-light">[@L[cds.sales/gd/hosting/website-builder:your-website]@L]</span>
-          <span class="marquee-text-2 marquee-font-light">[@L[cds.sales/gd/hosting/website-builder:here-too]@L]</span>  
+          <span class="marquee-text-2 marquee-font-light">[@L[cds.sales/gd/hosting/website-builder:here-too]@L]</span>
           <div class="main-banner-text text-padding">
-  ##endif 
+  ##endif
           <h1 class="main-banner-title condensed right-padding"><strong>[@L[cds.sales/gd/hosting/website-builder:main-banner-subtitle]@L]</strong></h1>
           <h2 class="main-banner-subtitle main-banner-subtitle-alternate">[@L[cds.sales/gd/hosting/website-builder:main-banner-title]@L]</h2>
           <ul class="main-banner-list no-wrap">
@@ -162,7 +162,7 @@ name: FOS-14231 - Updated CSS version
      ##if(!activeLanguageAny(en))
      </div>
      ##endif
-  </section>  
+  </section>
   <!-- End main-banner -->
 
   <!-- Start main-tabs -->

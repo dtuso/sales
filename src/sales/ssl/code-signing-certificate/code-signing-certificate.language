@@ -2,7 +2,7 @@
 location: localization/sales/gd/ssl/code-signing-certificate2/en
 id: false
 ---
-{% include '../modules/doc-block.html' %}
+{% include 'modules/doc-block.html' %}
 <phrase key="MetaTitle" />
 Signing Certificate | Protect Your Digital Work - GoDaddy
 <phrase key="MetaDescription" />

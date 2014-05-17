@@ -3,7 +3,7 @@ location: localization/sales/gd/domains/domain-name-search/en
 id: false
 name: FOS-16128
 ---
-{% include '../modules/doc-block.html' %}
+{% include 'modules/doc-block.html' %}
 <phrase key="MetaTitle" />
 Domain Search | Advanced Domain Name Search Tool - [@T[companyname:name]@T]
 <phrase key="MetaDescription" />

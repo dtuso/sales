@@ -3,9 +3,9 @@ location: sales/hosting/wordpress-hosting.aspx
 id: 537687c8f778fc0db47de532
 name: FOS-20310 update
 ---
-{% extends 'base.html' %}
+{% extends 'layouts/base.html' %}
 
-{% block metahead %}    
+{% block metahead %}
 
     {% parent %}
 
@@ -21,7 +21,7 @@ name: FOS-20310 update
           background-image: url("[@T[link:<imageroot />]@T]fos/201401/wp-hosting/img/bg-misc-banner-wp-hosting-in.jpg");
         }
       ##endif
-      ##if(activeLanguageAny(en))     
+      ##if(activeLanguageAny(en))
       ##else
         .featured-product .website-builder {
           background-image: url("[@T[link:<imageroot />]@T]fos/201401/wp-hosting/img/GLOBAL_bg-products-wsb.jpg");
@@ -30,7 +30,7 @@ name: FOS-20310 update
     </style>
 {% endblock %}
 
-{% block body %}   
+{% block body %}
 
 
   <!-- Start main-banner -->
@@ -85,7 +85,7 @@ name: FOS-20310 update
               <div class="grid-column no-padding-bottom plan">
                 <div data-gd-sidebysidealign-row="1">
                   <h2>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-1-Starter]@L]</h2>
-                  <p class="font-16">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-8-PerfectForBasicSitesBlogsAndStartUps]@L]</p>   
+                  <p class="font-16">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-8-PerfectForBasicSitesBlogsAndStartUps]@L]</p>
                 </div>
                 <div data-gd-sidebysidealign-row="2">
                   <p class="starting-at starting-at-alternate-top-spacing"><span class="starting-at-above">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-2-StartingAt]@L]</span>
@@ -122,7 +122,7 @@ name: FOS-20310 update
                               <span class="months">3 [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-months]@L]</span>
                               <span class="price">[@T[productprice:<current productid="32761" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-month]@L]</span>
                               ##if(productHasSavingsMoreThan(32761, 32761, 0))
-                              <span class="save sale-right">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-onsale]@L]</span>                          
+                              <span class="save sale-right">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-onsale]@L]</span>
                               ##else
                               <span class="save"></span>
                               ##endif
@@ -135,8 +135,8 @@ name: FOS-20310 update
                               <span class="months">12 [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-months]@L]</span>
                               <span class="price">[@T[productprice:<current productid="32759" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-month]@L]</span>
                               ##if(productHasSavingsMoreThan(32759, 32759, 0))
-                              <span class="save">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-onsale]@L]</span>                          
-                              ##elseif(productHasSavingsMoreThan(32759, 32761, 0))                         
+                              <span class="save">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-onsale]@L]</span>
+                              ##elseif(productHasSavingsMoreThan(32759, 32761, 0))
                               <span class="save sale-right">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-onsale]@L]</span>
                               <div>
                               <span class="price-left">&nbsp;</span>
@@ -153,14 +153,14 @@ name: FOS-20310 update
                               <span class="months">24 [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-months]@L]</span>
                               <span class="price">[@T[productprice:<current productid="32768" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-month]@L]</span>
                               ##if(productHasSavingsMoreThan(32768, 32768, 0))
-                              <span class="save">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-onsale]@L]</span>                          
+                              <span class="save">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-onsale]@L]</span>
                               ##elseif(productHasSavingsMoreThan(32768, 32761, 0))
                               <span class="save sale-right">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-onsale]@L]</span>
                               <div>
                               <span class="price-left">&nbsp;</span>
                               <span>[@T[productprice:<template productid="32761" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike><nostrike><![CDATA[<strike>{0}</strike>]]></nostrike></template>]@T]/[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-month]@L]</span>
                               <span class="save price-right">[@T[productcompare:<percent primaryproductid="32768" secondaryproductid="32761" hidebelow="1"><html><![CDATA[[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-save]@L] {0}%]]></html></percent>]@T]</span>
-                              </div>                          
+                              </div>
                               ##endif
                             </label>
                           </div>
@@ -171,14 +171,14 @@ name: FOS-20310 update
                               <span class="months">36 [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-months]@L]</span>
                               <span class="price">[@T[productprice:<current productid="32771" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-month]@L]</span>
                               ##if(productHasSavingsMoreThan(32771, 32771, 0))
-                              <span class="save">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-onsale]@L]</span>                          
-                              ##elseif(productHasSavingsMoreThan(32771, 32761, 0))                          
+                              <span class="save">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-onsale]@L]</span>
+                              ##elseif(productHasSavingsMoreThan(32771, 32761, 0))
                               <span class="save sale-right">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-onsale]@L]</span>
                               <div>
                               <span class="price-left">&nbsp;</span>
                               <span>[@T[productprice:<template productid="32761" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike><nostrike><![CDATA[<strike>{0}</strike>]]></nostrike></template>]@T]/[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-month]@L]</span>
                               <span class="save price-right">[@T[productcompare:<percent primaryproductid="32771" secondaryproductid="32761" hidebelow="1"><html><![CDATA[[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-save]@L] {0}%]]></html></percent>]@T]</span>
-                              </div>    
+                              </div>
                               ##endif
                             </label>
                           </div>
@@ -189,21 +189,21 @@ name: FOS-20310 update
                               <span class="months">60 [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-months]@L]</span>
                               <span class="price">[@T[productprice:<current productid="32777" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-month]@L]</span>
                               ##if(productHasSavingsMoreThan(32777, 32777, 0))
-                              <span class="save">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-onsale]@L]</span>                          
+                              <span class="save">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-onsale]@L]</span>
                               ##elseif(productHasSavingsMoreThan(32777, 32761, 0))
                               <span class="save sale-right">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-onsale]@L]</span>
                               <div>
                               <span class="price-left">&nbsp;</span>
                               <span>[@T[productprice:<template productid="32761" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike><nostrike><![CDATA[<strike>{0}</strike>]]></nostrike></template>]@T]/[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-month]@L]</span>
                               <span class="save price-right">[@T[productcompare:<percent primaryproductid="32777" secondaryproductid="32761" hidebelow="1"><html><![CDATA[[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-save]@L] {0}%]]></html></percent>]@T]</span>
-                              </div>  
+                              </div>
                               ##endif
                             </label>
                           </div>
                         </li>
                       </ul>
                     </div><!-- select-box-body -->
-                  </div><!-- select-box -->  
+                  </div><!-- select-box -->
                 </div>
                 <div data-gd-sidebysidealign-row="4">
                   <p class="no-margin-bottom"><button type="button" data-plan="wordpres_Basic1Yr_us" data-isqualified="1" data-ci="86783" class="btn btn-warning btn-block js-addtocart-btn btn--push-down btn-lg add-to-cart-btn">[@L[cds.sales/accounting/accounting-software:AddToCart]@L]</button></p>
@@ -280,7 +280,7 @@ name: FOS-20310 update
                               <span class="price-left">&nbsp;</span>
                               <span>[@T[productprice:<template productid="32758" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike><nostrike><![CDATA[<strike>{0}</strike>]]></nostrike></template>]@T]/[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-month]@L]</span>
                               <span class="save price-right">[@T[productcompare:<percent primaryproductid="32767" secondaryproductid="32758" hidebelow="1"><html><![CDATA[[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-save]@L] {0}%]]></html></percent>]@T]</span>
-                              </div>  
+                              </div>
                               ##endif
                             </label>
                           </div>
@@ -298,7 +298,7 @@ name: FOS-20310 update
                               <span class="price-left">&nbsp;</span>
                               <span>[@T[productprice:<template productid="32758" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike><nostrike><![CDATA[<strike>{0}</strike>]]></nostrike></template>]@T]/[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-month]@L]</span>
                               <span class="save price-right">[@T[productcompare:<percent primaryproductid="32770" secondaryproductid="32758" hidebelow="1"><html><![CDATA[[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-save]@L] {0}%]]></html></percent>]@T]</span>
-                              </div>  
+                              </div>
                               ##endif
                             </label>
                           </div>
@@ -316,7 +316,7 @@ name: FOS-20310 update
                               <span class="price-left">&nbsp;</span>
                               <span>[@T[productprice:<template productid="32758" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike><nostrike><![CDATA[<strike>{0}</strike>]]></nostrike></template>]@T]/[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-month]@L]</span>
                               <span class="save price-right">[@T[productcompare:<percent primaryproductid="32773" secondaryproductid="32758" hidebelow="1"><html><![CDATA[[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-save]@L] {0}%]]></html></percent>]@T]</span>
-                              </div>  
+                              </div>
                               ##endif
                             </label>
                           </div>
@@ -345,7 +345,7 @@ name: FOS-20310 update
                 </div>
                 <div data-gd-sidebysidealign-row="4">
                   <p class="no-margin-bottom"><button type="button" data-plan="wordpres_dlx1Yr_us" data-isqualified="1" data-ci="86784" class="btn btn-warning btn-block js-addtocart-btn btn--push-down btn-lg add-to-cart-btn">[@L[cds.sales/accounting/accounting-software:AddToCart]@L]</button></p>
-                </div>    
+                </div>
                 <ul class="plan-pricing-list plan-pricing-list-alternate">
                   <li class="two-lines padding-bottom-15" data-gd-sidebysidealign-row="5">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-9-25000MonthlyVisitorsOnUpTo5]@L]</li>
                   <li class="two-lines padding-bottom-15" data-gd-sidebysidealign-row="6">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-13-500GBStorageStoreApproximately110000Images]@L]</li>
@@ -418,7 +418,7 @@ name: FOS-20310 update
                             <span class="price-left">&nbsp;</span>
                             <span>[@T[productprice:<template productid="32784" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike><nostrike><![CDATA[<strike>{0}</strike>]]></nostrike></template>]@T]/[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-month]@L]</span>
                             <span class="save price-right">[@T[productcompare:<percent primaryproductid="32790" secondaryproductid="32784" hidebelow="1"><html><![CDATA[[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-save]@L] {0}%]]></html></percent>]@T]</span>
-                            </div>  
+                            </div>
                             ##endif
                             </label>
                           </div>
@@ -436,7 +436,7 @@ name: FOS-20310 update
                               <span class="price-left">&nbsp;</span>
                               <span>[@T[productprice:<template productid="32784" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike><nostrike><![CDATA[<strike>{0}</strike>]]></nostrike></template>]@T]/[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-month]@L]</span>
                               <span class="save price-right">[@T[productcompare:<percent primaryproductid="32792" secondaryproductid="32784" hidebelow="1"><html><![CDATA[[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-save]@L] {0}%]]></html></percent>]@T]</span>
-                              </div>  
+                              </div>
                               ##endif
                             </label>
                           </div>
@@ -454,7 +454,7 @@ name: FOS-20310 update
                               <span class="price-left">&nbsp;</span>
                               <span>[@T[productprice:<template productid="32784" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike><nostrike><![CDATA[<strike>{0}</strike>]]></nostrike></template>]@T]/[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-month]@L]</span>
                               <span class="save price-right">[@T[productcompare:<percent primaryproductid="32794" secondaryproductid="32784" hidebelow="1"><html><![CDATA[[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-save]@L] {0}%]]></html></percent>]@T]</span>
-                              </div>  
+                              </div>
                               ##endif
                             </label>
                           </div>
@@ -472,7 +472,7 @@ name: FOS-20310 update
                                 <span class="price-left">&nbsp;</span>
                                 <span>[@T[productprice:<template productid="32784" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike><nostrike><![CDATA[<strike>{0}</strike>]]></nostrike></template>]@T]/[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-month]@L]</span>
                                 <span class="save price-right">[@T[productcompare:<percent primaryproductid="32798" secondaryproductid="32784" hidebelow="1"><html><![CDATA[[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-save]@L] {0}%]]></html></percent>]@T]</span>
-                              </div>  
+                              </div>
                               ##endif
                             </label>
                           </div>
@@ -494,7 +494,7 @@ name: FOS-20310 update
 
           </div>
         </div>
-      </section> 
+      </section>
 
       <!-- Start plan-summary -->
       <section class="plan-summary l-main-content">
@@ -547,7 +547,7 @@ name: FOS-20310 update
               </div>
               <!-- End Plan-summary Tab panes -->
             </div>
-          </div>    
+          </div>
         </div>
       </section>
 
@@ -587,7 +587,7 @@ name: FOS-20310 update
         </div>
       </section>
 
-      <!-- End plan-summary -->    
+      <!-- End plan-summary -->
 
       <section class="featured-product">
         <div class="fetaured-product-wrap">
@@ -601,7 +601,7 @@ name: FOS-20310 update
                   <li>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-9-FeaturesCPanelLinuxOrParallelsPleskPanelWindows]@L]</li>
                   <li>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-11-OneClickInstall100sOfTopAppsLike]@L]</li>
                   <li>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-10-Includes999UptimeLightningFastLoadTimes]@L]</li>
-                </ul>  
+                </ul>
                 <a href="[@T[link:<relative path='/hosting/web-hosting.aspx' />]@T]" class="product-learn-more" data-ci="86786"><i class="ico ico-gt-alternate"></i> [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-learnMore]@L]</a>
               </div>
             </div>
@@ -613,9 +613,9 @@ name: FOS-20310 update
                   <li>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-8-GetOnlineFastWith100sOfCustomizableDesigns]@L]</li>
                   <li>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-8-NoTechnicalSkillsRequiredJustDragAndDrop]@L]</li>
                   <li>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-7-IncludesAFreeDomainHostingAndMore]@L]</li>
-                </ul>  
-                <a href="[@T[link:<relative path='/hosting/website-builder.aspx'><param name='ci' value='86787' /></relative>]@T]" class="product-learn-more"><i class="ico ico-gt-alternate"></i> [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-learnMore]@L]</a>      
-              </div> 
+                </ul>
+                <a href="[@T[link:<relative path='/hosting/website-builder.aspx'><param name='ci' value='86787' /></relative>]@T]" class="product-learn-more"><i class="ico ico-gt-alternate"></i> [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-learnMore]@L]</a>
+              </div>
             </div>
           </div>
         </div>
@@ -712,7 +712,7 @@ name: FOS-20310 update
 
                 <h2 class="h2-alternate">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-9-HowCanIAccessMyWordPressControlPanel]@L]</h2>
                 <p>
-                  [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-14-ThereAreSeveralWayToLogInTo]@L] 
+                  [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-14-ThereAreSeveralWayToLogInTo]@L]
                   <ul class="indented">
                     <li>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-20-GoToGoDaddyComLogInToMy]@L]</li>
                     <li>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-16-GoToYourBlogOrWebsiteAndClick]@L]</li>
@@ -733,7 +733,7 @@ name: FOS-20310 update
     <p class="no-margin-bottom"><small class="small-print"><a class="simple-link" href="#" data-toggle="modal" data-target="#myModal" data-ci="86795">[@L[cds.sales/accounting/accounting-software:DisclaimerContentLinkText]@L]</a></small></p>
     <p><small class="small-print">[@L[cds.sales/accounting/accounting-software:DisclaimerContentDisclaimer]@L]</small></p>
   <section/>
-        
+
   <div class="modal fade" id="product-disclaimer-modal">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -744,7 +744,7 @@ name: FOS-20310 update
         <div class="modal-body">
           <p>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-11-FreeThemesAndPluginsCanBeFoundAt]@L]</p>
           <p>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-8-AnnualDiscountsAvailableOnNEWPurchasesOnly]@L]</p>
-          <p>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-20-ProductsWillAutomaticallyRenewUntilCancelledYouMay]@L]</p>  
+          <p>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-20-ProductsWillAutomaticallyRenewUntilCancelledYouMay]@L]</p>
         </div>
       </div>
     </div>
@@ -786,7 +786,7 @@ $('.add-to-cart-btn').on('click', function() {
 
     $.getJSON(url, function (data) {
         if (data.Success == true) {
-            if (domain == 1) {                                                   
+            if (domain == 1) {
                 window.location = '[@T[link:<relative path="/hosting/wordpress-hosting-config.aspx" />]@T]';
             }  else {
                 ##if(isManager())
@@ -822,7 +822,7 @@ $('#product-disclaimer .simple-link').on('click', function(){
     $('#product-disclaimer-modal').modal();
 });
 
-// gdSideBySideAlign plugin    
+// gdSideBySideAlign plugin
 (function ( $, window, document, undefined ) {
 
     var pluginName = 'gdSideBySideAlign',
@@ -830,7 +830,7 @@ $('#product-disclaimer .simple-link').on('click', function(){
         bailIfRowCountsMismatch : true
     };
 
-    function GDSideBySideAlign( element, options ) {    
+    function GDSideBySideAlign( element, options ) {
         this.element = element;
         this.options = $.extend( {}, defaults, options);
         this._defaults = defaults;
@@ -840,7 +840,7 @@ $('#product-disclaimer .simple-link').on('click', function(){
 
     GDSideBySideAlign.prototype.init = function () {
 
-        // Find the columns        
+        // Find the columns
         var $columns = $(this.element).find('[data-gd-sidebysidealign-col]');
 
         if($columns.length == 0) {
@@ -863,13 +863,13 @@ $('#product-disclaimer .simple-link').on('click', function(){
         }
 
         // loop thru each row and grab the largest cell height and apply to each cell in that row
-        for(var i=1; i<=numRows; i++) {                    
+        for(var i=1; i<=numRows; i++) {
             var $cells = $columns.find('[data-gd-sidebysidealign-row="' + i + '"]' );
             var maxHeight = 0;
             $.each($cells,function(idx, cell){
                 maxHeight = Math.max(maxHeight, $(cell).height());
-            });  
-            $cells.height(maxHeight);                    
+            });
+            $cells.height(maxHeight);
         }
 
     }; /* end GDSideBySideAlign.prototype.init */
@@ -884,7 +884,7 @@ $('#product-disclaimer .simple-link').on('click', function(){
     };
 
     // load the plugin
-    $(document).ready(function(){      
+    $(document).ready(function(){
         $('[data-gd-sidebysidealign]').gdSideBySideAlign();
     });
 
