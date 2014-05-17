@@ -133,6 +133,8 @@ gulp.task('images', function() {
 });
 
 gulp.task('assets-deploy', ['build'], function() {
+  console.log(paths.build,rootAssetPath,paths.assets);
+
   return gulp.src(['./**/*.*'], {cwd: paths.build})
     /*.pipe(debug({verbose: false}))*/
     .pipe(gulp.dest(paths.assets));
