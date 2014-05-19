@@ -13,6 +13,7 @@ try {
   var swig      = require('gulp-swig');
   var uglify    = require('gulp-uglify');
   var debug     = require('gulp-debug');
+  var elevate   = require('./lib/gulp-css-elevate');
 
   // utilities
   var path      = require('path');
@@ -97,6 +98,7 @@ gulp.task('html', function() {
     .pipe(changed(paths.build))
     .pipe(fm({remove:true}))
     .pipe(swig(swigTplOpts))
+    .pipe(elevate())
     .pipe(gulpif(!ignoreCDS, cdsm()))
     .pipe(gulp.dest(paths.build));
 });
@@ -135,8 +137,6 @@ gulp.task('images', function() {
 });
 
 gulp.task('assets-deploy', ['build'], function() {
-  console.log(paths.build,rootAssetPath,paths.assets);
-
   return gulp.src(['./**/*.*'], {cwd: paths.build})
     /*.pipe(debug({verbose: false}))*/
     .pipe(gulp.dest(paths.assets));
