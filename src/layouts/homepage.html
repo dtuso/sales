@@ -27,20 +27,52 @@
   <meta property="fb:admins" content="633356800" />
   <meta property="og:description" content="[@L[cds.sales/homepage:og-content]@L]" />
 {% endblock metaog %}
-
 {% block csshead %}
-  <link href="[@T[link:<css path='fos/201401/global/css/{{ cssVersion }}/combined-{{ cssVersion }}.css' />]@T]" rel="stylesheet" type="text/css">
-  <link href="[@T[link:<css path='fos/hp/rebrand/css/{{ locale }}_homepage_20140509.css' />]@T]{% if cssVersionOverride %}?v={{cssVersionOverride}}{% endif %}" rel="stylesheet" type="text/css">
+  <link href="[@T[link:<cssroot />]@T]fos/201401/global/css/global-1.8.3.min.css" rel="stylesheet" type="text/css">
 {% endblock csshead %}
-
-<style type="text/css">{% block customcss %}{% endblock customcss %}</style>
-
+<!-- css-elevate-target -->
+  <!-- start-css-elevate -->
+  <style>
+  {% less %}
+    body{font-family:"Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;font-weight:300;background-color:#fff;min-width:1200px}
+    h1,h2,h3,h4{font-weight:300}
+    a{color:#3282e6;text-decoration:none;outline:0}
+    a:active{outline:0}
+    a:focus{outline:0}
+    .b{font-weight:700}
+    .supsymbol{font-size:.7em;line-height:20px}
+    #debug{font-size:11px;margin:0 auto;width:1000px}
+    .clear{clear:both}
+    .clear:after{clear:both;content:"";display:table}
+    .condensed{font-family:HelveticaNeue-CondensedBold,'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:700}
+    .white{color:#fff}
+    strong{font-weight:600}
+    .gdhp-wrapper{margin:0 auto;position:relative;width:1000px}
+    .gdhp-wrapper:after{clear:both;content:"";display:table}
+    body > div.gdhp-search-section{display:block !important}
+    div#pch5-products{margin-bottom:20px}
+    button, input, select[multiple], textarea {line-height:normal}
+    .marquee-flag{position:absolute;top:0px;left:0px}
+  {% endless %}
+  </style>
+  <!-- end-css-elevate -->
 [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags" />]@P]
-
+<script src="[@T[link:<javascriptroot />]@T]shared/js/1.8.0/global.20120918.min.js" type="text/javascript" ></script>
 </head>
 <body>
 [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header" />]@P]
 <!-- Domain Search Section -->
+<!-- start-css-elevate -->
+<style>
+{% less %}
+.gdhp-main-top{margin:0 auto;padding:0px 0px 20px;position:relative;width:1000px;z-index:2;*margin-top:-3px}
+.gdhp-search-box{background-color:#fff;border:2px solid #dbdbdb;height:53px;position:relative;min-width:1000px}
+.gdhp-search-box .domainSearchBox{float:left;height:40px;margin:0;padding:0;position:relative;width:800px;z-index:1}
+.gdhp-search-box input,.gdhp-search-box .searchInput{background:transparent;border:0;color:#7DB701!important;float:left;font-size:20px;height:26px;line-height:25px;margin:12px 0 0!important;outline:0;padding:1px 0 1px 10px!important;max-width:780px}
+.gdhp-search-box .hp-search{float:right;font-size:20px;line-height:20px;padding:15px 30px 15px;background-color:#7db701}
+{% endless %}
+</style>
+<!-- end-css-elevate -->
   <div class="gdhp-search-section">
     <div class="gdhp-main-top">
       <form method="post" data-url="[@T[link:<relative path="~/api/dpp/search/single"/>]@T]" action="[@T[link:<relative path="/domains/searchresults-new.aspx"/>]@T]" class="search-form search-form-alternate search-form-certified">
@@ -52,9 +84,281 @@
       </form>
     </div>
   </div>
-
-
   {% block body %}{% endblock %}
+  {% block whygd %}
+  <!-- start-css-elevate -->
+  <style>
+  {% less %}
+    .why-us-wrap{width:100%;height:415px;}
+    .why-us-headline-wrap{width:1000px;margin:57px auto 0px;text-align:center}
+    .why-us-headline{font-size:24px}
+    .why-us-circles{margin:30px auto 0px;width:1000px;}
+    .why-us-circles>ul>li{float:left;list-style-type:none;margin-left:64px}
+    .why-us-circles>ul>li>div>span{display:block;}
+    .circle1{background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gdhp_sprite_20140418.png) scroll 0px -353px no-repeat;width:170px;height:170px;}
+    .circle2{background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gdhp_sprite_20140418.png) scroll -174px -353px no-repeat;width:170px;height:170px;}
+    .circle3{background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gdhp_sprite_20140418.png) scroll -348px -353px no-repeat;width:170px;height:170px;}
+    .circle4{background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gdhp_sprite_20140418.png) scroll -522px -353px no-repeat;width:170px;height:170px;margin-right:64px;}
+    .circle-text{font-size:20px;font-weight:200;color:#7db701;width:170px;text-align:center;line-height:20px;margin-top:20px;}
+  {% endless %}
+  </style>
+  <!-- end-css-elevate -->
+    <div class="why-us-wrap">
+      <div class="why-us-content">
+        <div class="why-us-headline-wrap">
+          <span class="why-us-headline b condensed">[@L[cds.sales/homepage/segments/default:whyus-text-area]@L]</span>
+        </div>
+        <div class="why-us-circles">
+          <ul>
+            <li>
+              <div class="circle1"></div><div class="circle-text">[@L[cds.sales/homepage:whyus-img-text-1]@L]</div>
+            </li>
+            <li>
+              <div class="circle2"></div><div class="circle-text">[@L[cds.sales/homepage:whyus-img-text-2]@L]</div>
+            </li>
+            <li>
+              <div class="circle3"></div><div class="circle-text">[@L[cds.sales/homepage:whyus-img-text-3]@L]</div>
+            </li>
+            <li>
+              <div class="circle4"></div><div class="circle-text">[@L[cds.sales/homepage:whyus-img-text-4]@L]</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  {% endblock %}
+  {% block faqslider %}
+  <!-- FAQ Slider -->
+  <!-- start-css-elevate -->
+  <style>
+  {% less %}
+    #faqSlider{margin:20px 0}
+    #faqSlider h1{font-size:14px;display:inline;font-weight:600;margin-right:5px;color:#000; font-family:'Helvetica Neue',Helvetica,Arial,sans-serif}
+    #faqSlider .gd-swipe{box-sizing:border-box;border:1px solid #fff;background-color:#fff;color:#595959;margin:0 auto;position:relative;width:1000px}
+    #faqSlider .gd-swipe-wrap .gd-swipe-item{box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;padding:40px 70px 50px;line-height:1.5;*width:860px!important}
+    #faqSlider .gd-swipe-head,#faqSlider .gd-swipe-head h1,#faqSlider .gd-swipe-head h2{color:#222;font-size:20px}
+    #faqSlider .gd-swipe-body>div{font-size:14px;margin:15px 0}
+    #faqSlider .gd-swipe-body p{margin-bottom:15px;font-size:14px;line-height:24px}
+    #faqSlider .gd-swipe-body p span{font-weight:600}
+    .arrow-left:hover,.arrow-right:hover{background-color:#dedede;-webkit-transition:all .3s ease-in-out;-moz-transition:all .3s ease-in-out;-ms-transition:all .3s ease-in-out;-o-transition:all .3s ease-in-out;transition:all .3s ease-in-out}
+    #faqSlider a.arrow-left,#faqSlider a.arrow-right{top:30%}
+    div#faqSlider .gd-swipe-bottom-nav li a{background:#dadada;color:#dadada}
+    div#faqSlider .gd-swipe-bottom-nav li.active a{background:#70ac00;color:#70ac00}
+      {% endless %}
+  </style>
+  <!-- end-css-elevate -->
+  <div id="faqSlider">
+    <div class="gd-nav-container">
+      <div class="gd-swipe" data-gd-swipe='{"auto":0}'>
+        <div class="gd-swipe-wrap">
+          <div class="gd-swipe-item">
+            <div class="gd-swipe-head"><h2>[@L[cds.sales/homepage:faq-slide-1-title]@L]</h2></div>
+            <div class="gd-swipe-body">
+              [@L[cds.sales/homepage:faq-slide-1-content]@L]
+            </div>
+          </div>
+          <div class="gd-swipe-item">
+            <div class="gd-swipe-head"></div>
+            <div class="gd-swipe-body">
+              [@L[cds.sales/homepage:faq-slide-2-content]@L]
+            </div>
+          </div>
+          <div class="gd-swipe-item">
+            <div class="gd-swipe-head"><h2>[@L[cds.sales/homepage:faq-slide-3-title]@L]</h2></div>
+            <div class="gd-swipe-body">
+              [@L[cds.sales/homepage:faq-slide-3-content]@L]
+            </div>
+          </div>
+          <div class="gd-swipe-item">
+            <div class="gd-swipe-head"></div>
+            <div class="gd-swipe-body">
+              [@L[cds.sales/homepage:faq-slide-4-content]@L]
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="#" data-slide="prev" class="arrow-left" data-ci="84408"><i class="ico ico-carousel-arrow-left"></i></a>
+      <a href="#" data-slide="next" class="arrow-right" data-ci="84409"><i class="ico ico-carousel-arrow-right"></i></a>
+      <div class="gd-swipe-bottom-nav"></div>
+    </div>
+  </div>
+  {% endblock %}
+  {% block disclaimers %}
+  <!-- Page Disclaimer -->
+  <!-- start-css-elevate -->
+  <style>
+  {% less %}
+    #disclaimers{font-size:14px;margin:0 auto;line-height:14px;width:1000px}
+    #simplemodal-container{position:absolute!important}
+    .g-modal-content{overflow:auto;position:relative}
+    .g-modal-content p{margin:15px 0}
+    .g-modal-buttonpane{margin-top:8px;text-align:center;font-size:12px;position:relative}
+    .g-toolTip{cursor:pointer;position:relative;display:inline;border-bottom:1px dashed}
+    .g-toolTip span{display:none}
+    .g-toolTip:hover span{display:block}
+    .g-toolTip span{background:#262626;color:#fff;font-size:14px;line-height:16px;left:105px;top:11px;position:absolute;padding:8px;text-align:left;width:430px;z-index:3}
+    .g-toolTip span:after{border-top:0 solid transparent;border-bottom:7px solid transparent;border-right:12px solid #262626;content:"";top:0;left:-10px;position:absolute;width:0;height:0;z-index:3}
+    .g-toolTip span.left{left:-225px}
+    .g-toolTip span.left:after{border-right:0;border-left:12px solid #262626;left:220px}
+    .gd-nav-container{position:relative;margin:0 auto;width:1000px}
+    .gd-swipe-wrap{overflow:hidden;position:relative;min-width:3000px}
+    .gd-swipe-wrap>div{float:left;width:100%;position:relative;top:0}
+    .gd-swipe{max-width:100%;margin:0 auto;overflow:hidden;position:relative}
+    .gd-swipe-bottom-nav{text-align:center;position:relative}
+    .gd-swipe-bottom-nav a[data-slide="prev"],.gd-swipe-bottom-nav a[data-slide="next"]{top:-2px;position:relative}
+    .gd-swipe-bottom-nav ul{list-style:none outside none;margin:0;padding:0}
+    .gd-swipe-bottom-nav li{display:inline-block;overflow:hidden;position:relative;padding:15px;zoom:1;*display:inline}
+    .gd-swipe-bottom-nav li a{background:#fff;color:#fff;display:block;height:7px;text-decoration:none;text-indent:-9999em;width:25px}
+    .gd-swipe-bottom-nav li.active a{background:#70ac00;color:#70ac00}
+    a.arrow-right{background:url([@T[link:<imageroot />]@T]fos/hosting/rebrand/img/lp_sprite.png) no-repeat scroll 22px -28px transparent;display:block;height:60px;outline:0 none;position:absolute;right:-60px;text-decoration:none;text-indent:-9999em;top:270px;width:60px;z-index:1;-moz-outline-style:none}
+    a.arrow-left{left:-60px;background:url([@T[link:<imageroot />]@T]fos/hosting/rebrand/img/lp_sprite.png) no-repeat scroll -30px -28px transparent;display:block;height:60px;outline:0 none;position:absolute;text-decoration:none;text-indent:-9999em;top:270px;width:60px;z-index:1}
+  {% endless %}
+  </style>
+  <!-- end-css-elevate -->
+  <div id="disclaimers">
+    <section class="container l-main-container content-disclaimer">
+        <p class="no-margin-bottom"><a class="simple-link" href="#" data-toggle="modal" data-target="#myModal" data-ci="86765">[@L[cds.sales/homepage:disclaimer-text]@L]</a></p>
+    <section/>
+      <div class="modal fade" id="myModal">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                      <p class="modal-title"><strong>[@L[cds.sales/homepage:disclaimer-modal-title]@L]</strong></p>
+                  </div>
+                  <div class="modal-body">
+                   <div class="g-modal-content">
+                     <p>[@L[cds.sales/homepage:disclaimer-modal-first-content]@L]<p>
+                     <p>[@L[cds.sales/homepage:disclaimer-modal-third-content]@L]</p>
+                     <p>[@L[cds.sales/homepage:disclaimer-modal-fourth-content]@L]</p>
+                     ##if(countrySiteAny(au))
+                     <p>[@L[cds.sales/homepage:disclaimer-modal-second-content]@L]<p>
+                       ##endif
+                   </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  {% endblock %}          
+  [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer" />]@P]
+  [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Script" />]@P]
+  [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Bottom" />]@P]
+<script src="[@T[link:<javascriptroot />]@T]fos/script/sales17.min.js" type="text/javascript"></script>
+<script src="[@T[link:<javascriptroot />]@T]fos/hp/rebrand/js/homepage_script_20140410.min.js" type="text/javascript"></script>
+<script src="[@T[link:<javascriptroot />]@T]fos/script/atlantis_jquery14.min.js" type="text/javascript"></script>
+<script src="[@T[link:<javascriptroot />]@T]shared/js/jquery.plugins.min.20111019.js" type="text/javascript" ></script>
+<script src="[@T[link:<javascriptroot />]@T]fos/lib/gd-swipe/js/swipe-v2.2.min.js" type="text/javascript"></script>
+<script src="[@T[link:<javascriptroot />]@T]fos/lib/gd-swipe/js/gd-swipe-v2.min.js" type="text/javascript"></script>
+<script src="[@T[link:<javascriptroot />]@T]starfield/fos.share/v1.3/fos.share-20140505.min.js" id="fosShareScript" ></script>
+<script src="[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2" type="text/javascript"></script>
+<script src="[@T[link:<javascriptroot />]@T]fos/201401/global/vendor/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&'),
+qs = [],
+date = new Date();
+for(var i = 0; i < hashes.length; i++) {
+var hash = hashes[i].split('=');
+qs.push(hash[0]);
+qs[hash[0]] = hash[1];
+}
+var hpLoadVideo = 0;
+var autoplay = '\&autoplay=1';
+$("div.gdhp-bottom-banner").mouseenter(function() {
+  if(hpLoadVideo != 1)
+    {
+      hpLoadVideo = 1;
+      var src ='//www.youtube.com/embed/WycoJMKzXZ4?html5=1&rel=0';
+      $('#myVideoModal iframe').attr('src',src);
+      $('#myVideoModal').on('hidden.bs.modal', function () {          
+        $('#myVideoModal iframe').removeAttr('src');
+        $('#myVideoModal iframe').attr('src',src);
+      })
+      $('#myVideoModal').on('show.bs.modal', function () {          
+        $('#myVideoModal iframe').attr('src', src + autoplay);
+      })
+    }
+  });
+$('#shareme').fosShare({});
+if($("#searchDomainName").val().length) {
+$("#searchDomainName").val("");
+}
+$(".gdhp-search-box2").gdhpDomainSearch({
+'domainInputId': '#searchDomainName2',
+'tldInputId': '#searchTldName2',
+'tldToggleId': '#searchTldToggle',
+'tldListId': '#searchTldList',
+'searchButton': '#domainSearchAction2',
+'searchUrl': '[@T[link:<relative path='/domains/search.aspx'><param name='ci' value='54814' /></relative>]@T]',
+'idnUrl': '[@T[link:<relative path='/domains/search.aspx'><param name='ci' value='82474' /></relative>]@T]',
+'domainInputLabelText': '[@L[cds.sales/homepage/segments/default:domain-banner-search-text]@L]',
+'focusOnLoad' : false
+});
+$(".gdhp-search-box").gdhpDomainSearch({
+'domainInputId': '#searchDomainName',
+'tldInputId': '#searchTldName',
+'tldToggleId': '#searchTldToggle',
+'tldListId': '#searchTldList',
+'searchButton': '#domainSearchAction',
+'searchUrl': '[@T[link:<relative path='/domains/search.aspx'><param name='ci' value='54814' /></relative>]@T]',
+'idnUrl': '[@T[link:<relative path='/domains/search.aspx'><param name='ci' value='82474' /></relative>]@T]',
+'domainInputLabelText': '[@L[cds.sales/homepage/segments/default:domain-banner-search-text]@L]'
+});
+  $('.search-form').on('submit', function (e){
+        e.preventDefault();
 
+        $('button[name="searchButton"]', this).addClass('disabled');
+
+        var params = {
+            query:$(this).serialize(),
+            searchUrl:$(this).attr('data-url')
+        };
+        DomainSearch(params,function(err,NextStepUrl){
+            if(typeof NextStepUrl === 'undefined')
+            {
+              NextStepUrl = '[@T[link:<relative path="/domains/search-new.aspx"></relative>]@T]';
+            }
+            if(err == null )
+            {
+                window.location = NextStepUrl;
+            }
+            else{
+                if(console != "undefined")
+                console.log(err);
+            }
+        });
+    });
+
+    function DomainSearch(params, cb) {
+          $.ajax({
+            url: params.searchUrl,
+            type: 'POST',
+            data: params.query,
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+              var data = { Error: errorThrown, Success: false };
+              cb(errorThrown,null);
+            },
+            success: function (data) {
+              cb(null,data.NextStepUrl);
+            }
+          });
+    }
+  $("#disclaimers > p > a").click(function () {
+        $("#g-modal").modal({
+          overlayId: "g-modal-overlay",
+          close: "false", // disables default close button
+          autoPosition: "true"
+        });
+      });
+      $(".g-modal-close").click(function () {
+        // Closes the last modal
+        $.modal.close();
+      });
+});  
+if(navigator.userAgent.match(/iPad|iPhone|iPod/i)) {
+$('head').append('<meta name="viewport" content="width=1150px">');
+}
+</script>
 </body>
 </html>
