@@ -1,6 +1,7 @@
 {
   "all": "./",
   "home": "./homepage/",
+  "demo-home": "./demo/homepage/",
   "wsb": "./hosting/website-builder/",
   "o365": "./business/office-365/",
   "malware-scanner": "./security/malware-scanner/",

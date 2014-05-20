@@ -1,8 +1,8 @@
-{% extends 'base.html' %}
+{% extends 'layouts/base.html' %}
 
 {% block metahead %}
   {% parent %}
-      
+
 {% endblock %}
 
 {% block body %}
@@ -12,7 +12,7 @@
         <div class="main-banner-text">
           <h4 class="main-banner-title condensed">[@L[cds.sales/contact-us:main-banner-title]@L]</h4>
           <h2 id="countryName" class="main-banner-subtitle main-banner-subtitle-alternate"></h2>
-        
+
           <ul class="main-banner-list display-table">
           </ul>
           ##if(countrySiteAny(ch))
@@ -30,7 +30,7 @@
       <div class="l-main-container container">
         <h1 class="main-content-title">[@L[cds.sales/contact-us:content-title]@L]</h1>
         <div class="row tab-content">
-          <div class="col-xs-6"> 
+          <div class="col-xs-6">
              <ul class="marketList">
               <li class="marketSupportInfo">
                 <a rel="nofollow" class="supportCountry" data-ci="89946" href="http://ar.godaddy.com">Argentina</a>
@@ -177,7 +177,7 @@
                 <ul>
                   <li><span class="supportLocation">Guadalajara</span><span class="supportPhone"><a rel="nofollow" data-ci="89983" href="tel:+52 33 4624 1997">+52 33 4624 1997</a></span></li>
                   <li><span class="supportHours">24/7 Asistencia técnica</span></li>
-                </ul>                
+                </ul>
               </li>
               <li class="marketSupportInfo">
                 <div class="supportCountry"></div>
@@ -199,7 +199,7 @@
                   <li><span class="supportPhone"><a rel="nofollow" data-ci="89987" href="tel:+31 85 888 3143">+31 85 888 3143</a></span></li>
                   <li><span class="supportHours">12:00 - 18:00 uur, ma-vr</span></li>
                 </ul>
-              </li>            
+              </li>
               <li class="marketSupportInfo">
                 <a rel="nofollow" class="supportCountry" data-ci="89988" href="http://nz.godaddy.com">New Zealand</a>
                 <ul>
@@ -235,8 +235,8 @@
                   <li><span class="supportHours">24/7 Asistencia técnica</span></li>
                 </ul>
               </li>
-            </ul>  
-          </div> 
+            </ul>
+          </div>
           <div class="col-xs-6">
             <ul class="marketList">
               <li class="marketSupportInfo">
@@ -434,9 +434,9 @@
                   <li><span class="supportPhone"><a rel="nofollow" data-ci="90042" href="tel:+44 20 3014 1446">+44 20 3014 1446</a></span></li>
                   <li><span class="supportHours">13:00 - 19:00 год, Пн-Пт</span></li>
                 </ul>
-              </li>  
+              </li>
             </ul>
-        </div>    
+        </div>
       </div>
     </section>
   <!-- End main-banner -->
@@ -484,7 +484,7 @@
                     alert(thrownError);
     }
     });
-  }  
+  }
 
   function supportNumberCallback(data){
     processSupportdata(data);
@@ -501,7 +501,7 @@
 
     $.each(marketData,function(i,n){
       if(n !== ''){
-        if(marketData.length >  1){ 
+        if(marketData.length >  1){
           newNumbers='';
           if(n.cityLocations.length > 0){//multiple languages and cities
                 loadMarketSupportData(data[0].countryName);
@@ -511,7 +511,7 @@
             newNumbers += '<ul class="main-banner-list-location-details text-light"><li><span class="font-size-54 text-bold phone-number">'+n.marketsupportphone+'</span></li>';
             newNumbers += '<li><span class="font-size-20 text-light">'+ n.marketsupporthours+'</span></li></ul></li>';
           }
-        }else{ 
+        }else{
           if(n.cityLocations.length >1){ //multiple cities
             $.each(n.cityLocations,function(l,k){
             if(k !== ''){
@@ -525,7 +525,7 @@
             newNumbers += '<ul class="main-banner-list-location-details text-light"><li><span class="font-size-54 text-bold phone-number">'+n.marketsupportphone+'</span></li>';
             newNumbers += '<li><span class="font-size-20 text-light">'+ n.marketsupporthours +'</span></li></ul></li>';
           }
-          
+
         }
       }
       alternateSupport.append(newNumbers);
@@ -533,5 +533,5 @@
   }
 
  });
- </script>  
+ </script>
 {% endblock %}

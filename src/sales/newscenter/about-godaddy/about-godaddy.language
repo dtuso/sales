@@ -4,7 +4,7 @@ id: 537a9ac6f778fc17186148e5
 name: FOS-20814
 comments: Added and changed keys relating to board members bios
 ---
-{% include '../modules/doc-block.html' %}
+{% include 'modules/doc-block.html' %}
 <phrase key="NewsCenterAbout-AFinePortraitsVideo" />
 <div class="video" data-video="JQwTqt8gkjM"> 
 <img src="[@T[link:<imageroot />]@T]fos/newscenter/about_godaddy/img/customers/fine-portraits-preview.jpg" width="333" height="177" />

@@ -13,6 +13,7 @@ try {
   var swig      = require('gulp-swig');
   var uglify    = require('gulp-uglify');
   var debug     = require('gulp-debug');
+  var elevate   = require('./lib/gulp-css-elevate');
 
   // utilities
   var path      = require('path');
@@ -20,6 +21,7 @@ try {
   var argv      = require('minimist')(process.argv.slice(2));
   var notifier  = require('./lib/updater.js');
   var getData   = require('./lib/project-data.js');
+  var extras    = require('./lib/swig-extras');
 
 } catch (e) {
 
@@ -61,9 +63,10 @@ var paths = {
 };
 
 var swigSetup = function(swig) {
+  extras.useTag(swig, 'less');
   swig.setDefaults({
     cache: false,
-    loader: swig.loaders.fs('./src/layouts'),
+    loader: require('./lib/template-loader')(),
     locals: require('./_globals.json')
   });
 };
@@ -91,10 +94,11 @@ var swigConfigOpts = {
 };
 
 gulp.task('html', function() {
-  return gulp.src('./**/*.html', {cwd: path.join('./src/sales/', assetSrcPath)})
+  return gulp.src(['./**/*.html', '!./**/_*.html'], {cwd: path.join('./src/sales/', assetSrcPath)})
     .pipe(changed(paths.build))
     .pipe(fm({remove:true}))
     .pipe(swig(swigTplOpts))
+    .pipe(elevate())
     .pipe(gulpif(!ignoreCDS, cdsm()))
     .pipe(gulp.dest(paths.build));
 });

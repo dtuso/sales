@@ -3,7 +3,7 @@ location: localization/sales/accounting/accounting-software/en
 id: 5362f3e9f778fc27b88b10a5
 name: FOS-20111
 ---
-{% include '../modules/doc-block.html' %}
+{% include 'modules/doc-block.html' %}
 <phrase key="MetaTitle" />
 Accounting Software | Professional Bookkeeping Software - [@T[companyname:dotcom]@T]
 <phrase key="MetaDescription" />

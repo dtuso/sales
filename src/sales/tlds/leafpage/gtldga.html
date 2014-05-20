@@ -3,7 +3,7 @@ location: sales/tlds/gtldga.aspx
 id: 536bb5d6f778fc3434d3cb6a
 name: testing
 ---
-{% extends 'base.html' %}
+{% extends 'layouts/base.html' %}
 
 {% block pageTitle %}<title>[@L[cds.tldleaf/[@D[gtld]@D]:ga.page.title]@L]</title>{% endblock %}
 {% block pageDescription %}<meta name="description" content="[@L[cds.tldleaf/[@D[gtld]@D]:ga.meta.description]@L]" />{% endblock %}
@@ -11,14 +11,14 @@ name: testing
 
 {% block metahead %}
 
- 
+
 {% parent %}
     <!-- Old Global CSS -->
 
     <link href="[@T[link:<cssroot />]@T]fos/global/build/0.2.0/gd-fos-global.min.css" rel="stylesheet" type="text/css" />
 
     <style>
-      #pcf {clear:both;}      
+      #pcf {clear:both;}
       #main-wrap .header{background:url('[@T[link:<imageroot />]@T]tldleafpages/[@D[gtld]@D]/fos/[@L[cds.tldleaf/[@D[gtld]@D]:all.gtld.banner]@L]');}
       .share-title {top:-5px !important;}
       .fosfbbox {overflow: visible !important;}
@@ -32,8 +32,8 @@ name: testing
       <div id="main-wrap" class="tld-[@D[gtld]@D]">
         <div class="clearfix" style="margin-top:15px">
           <h1>[@L[cds.tldleaf/[@D[gtld]@D]:all.page.h1]@L]</h1>
-          <div id="sm-wrap">              
-            <div class="fosshare" id="shareme" 
+          <div id="sm-wrap">
+            <div class="fosshare" id="shareme"
               data-twshareurl="[@T[link:<relative path='/tlds/[@D[gtld]@D]'><param name='ISC' value='smtwfos' /></relative>]@T]"
               data-twtext="[@L[cds.tldleaf/[@D[gtld]@D]:ga.twitter.text]@L]"
               data-twrelated="[@T[companyname:name]]"
@@ -90,9 +90,9 @@ name: testing
                 </div>
               </div>
               <div id="g-modal-overlay" class="g-modal-overlay" style="display:none;"></div>
-            </div> <!-- limitations -->            
+            </div> <!-- limitations -->
           </div> <!-- product-limitations -->
-      </div>    
+      </div>
 
 
 {% endblock %}
@@ -105,14 +105,14 @@ name: testing
     <!--[if lte IE 8]>
     <script src="[@T[link:<javascriptroot />]@T]fos/script/JSON2.min.js"></script>
     <![endif]-->
-      
+
     <script type="text/javascript">
-            
+
       $(document).ready(function(){
         gbl.ns.register('domains.controls');
         if (!domains.controls.gtldTemplatesClient) {
           // probably means the cds_gtld_templates_xxxx.js file didn't load correctly
-          
+
         } else {
           domains.controls.gtldTemplatesClient.Initialize({
             tldLogoImageExists: $.trim('[@L[cds.tldleaf/[@D[gtld]@D]:all.gtld.logo]@L]').length > 0,
@@ -121,12 +121,12 @@ name: testing
             gTldPreRegPhaseDataJson: [@P[webControl:<Data assembly="App_Code" type="Domains.Controls.GTldPhaseDataJson"></Data>]@P],
             redirectUrl: '[@T[link:<relative path="~/tlds/gtld.aspx"></relative>]@T]',
             tldH1TagExists: $.trim('[@L[cds.tldleaf/[@D[gtld]@D]:all.page.h1]@L]').length > 0
-          }); 
-        
-          domains.controls.gtldTemplatesClient.SetupGeneralAvailability(); 
+          });
+
+          domains.controls.gtldTemplatesClient.SetupGeneralAvailability();
         }
 
-      
+
       });
     </script>
 

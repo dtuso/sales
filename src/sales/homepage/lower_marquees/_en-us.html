@@ -1,0 +1,31 @@
+<!-- start-css-elevate -->
+<style>
+{% less %}
+.gdhp-bottom-banner{width:100%;min-width: 1000px;height:576px;background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/domains.jpg) no-repeat top center;background-size:cover;color:#fff;}
+.bottom-banner-headline-2{font-size:56px;font-weight:100;padding-top:145px;}
+span.bottom-banner-subtext-2{font-size:16px;width:800px;margin:0px auto;font-weight:300;}
+.bottom-banner-content>span{text-align:center;}
+.bottom-banner-search{width:1000px;margin:40px auto 0px;}
+.gdhp-search-box2{background-color:#fff;height:64px;position:relative;width:800px;margin:0px auto}
+.gdhp-search-box2 .domainSearchBox{float:left;height:64px;margin:0;padding:0;position:relative;width:600px;z-index:1}
+.gdhp-search-box2 input,#searchDomainName2-label{background:transparent;border:0;color:#7DB701!important;float:left;font-size:22px;height:38px;line-height:38px;margin:12px 0 0!important;outline:0;padding:1px 0 1px 10px!important;width:575px;cursor:text;max-width:65%}
+#searchDomainName2-label{left:9px !important}
+.gdhp-search-box2 .hp-search{float:right;font-size:16px;line-height:16px;padding:22px 30px 23px;background-color:#7db701}
+{% endless %}
+</style>
+<!-- end-css-elevate -->
+<div class="gdhp-bottom-banner">
+      <div class="bottom-banner-content">
+        <span class="bottom-banner-headline-2">[@L[cds.sales/homepage/segments/default:bottom-banner-headline-INTL]@L]</span>
+        <span class="bottom-banner-subtext-2 b">[@L[cds.sales/homepage/segments/default:bottom-banner-subtext-INTL]@L]</span>
+      </div>
+      <div class="bottom-banner-search">
+        <form method="post" data-url="[@T[link:<relative path="~/api/dpp/search/single"/>]@T]" action="[@T[link:<relative path="/domains/searchresults-new.aspx"/>]@T]" class="search-form search-form-certified">
+        <div class="gdhp-search-box2">
+        <input type="text" id="searchDomainName2" name="domainToCheck" class="search-form-input searchInput helveticafont" autocomplete="off" maxlength="63" title="[@L[cds.sales/homepage:sb-search-title]@L]"/>
+        <button type="submit" name="searchButton" data-ci="87137" class="btn btn-primary btn-lg hp-search">[@L[cds.sales/homepage/segments/default:domain-banner-search-btn]@L]</button>
+        </div>
+        <div class="clearfix"></div>
+      </form>
+      </div>
+    </div>

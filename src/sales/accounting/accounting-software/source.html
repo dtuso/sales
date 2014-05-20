@@ -3,7 +3,7 @@ location: sales/accounting/accounting-software.aspx
 id: "53694d83f778fc1100fa3948"
 name: FOS-20111
 ---
-{% extends 'base.html' %}
+{% extends 'layouts/base.html' %}
 
 {% block metahead %}
   {% parent %}
@@ -22,40 +22,40 @@ name: FOS-20111
     <script type="text/javascript">
 
     $( document ).ready(function() {
-      
-      
+
+
         // Fastball click capturing
         $('[data-ci]').click(function (e) {
             $this = $(this);
             FastballEvent_MouseClick(e, $this.attr('data-ci'), $this[0], 'a');
             fbiLibCheckQueue();
         });
-      
+
         var autoplay = '\&autoplay=1';
         var src = $('#myVideoModal iframe').attr('src');
-        $('#myVideoModal').on('hidden.bs.modal', function () {          
+        $('#myVideoModal').on('hidden.bs.modal', function () {
             $('#myVideoModal iframe').removeAttr('src');
             $('#myVideoModal iframe').attr('src',src);
         })
-        
-        $('#myVideoModal').on('show.bs.modal', function () {          
+
+        $('#myVideoModal').on('show.bs.modal', function () {
             $('#myVideoModal iframe').attr('src',src + autoplay);
         })
-    }); 
+    });
 
 
         $(function () {
             $('.select-box').setSelectBox();
             $('.isToolTip').tooltip();
-        });    
+        });
     $('.js-open-overview').on('click', function(e){
         e.preventDefault();
         $('a[href="#overview"]').tab('show');
         window.location.hash = '#overview';
     });
-  
-  
-    
+
+
+
     $('.addtocart-form').on('submit', function(e){
         e.preventDefault();
         var $form = $( this );
@@ -67,7 +67,7 @@ name: FOS-20111
   if (urlsplit[1]) {
           url += '?' + urlsplit[1];
         }
-      
+
       $.get( url, function( data ) {
       ##if(isManager())
         var carturl = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]';
@@ -77,9 +77,9 @@ name: FOS-20111
    window.location = carturl;
       });
     });
-    
-  
-  <!-- /fos/office365/js/office365-lp.20140310.js -->  
+
+
+  <!-- /fos/office365/js/office365-lp.20140310.js -->
   $("[data-seperate-currency-symbol]").each(function(){
     var $this = $(this);
     var thisData = $this.data('seperate-currency-symbol');
@@ -87,7 +87,7 @@ name: FOS-20111
     var newTagName = thisData['newTagName'];
     var val = $this.text();
     var newVal = wrapSymbol(val,newClass,newTagName);
-    
+
     if(val!=newVal){
       $this.html(newVal);
       $this.wrapInner('<div class="split-symbol-price-wrap"></div>');
@@ -110,7 +110,7 @@ name: FOS-20111
       var RTL = ['Ø§','Ø¨','Ù¾','Øª','Ø³','Ø¬','Ú†','Ø­','Ø®','Ø¯','Ø°','Ø±','Ø²','Ú˜','Ø³','Ø´','Øµ','Ø¶','Ø·','Ø¸','Ø¹','Øº','Ù','Ù‚','Ú©','Ú¯','Ù„','Ù…','Ù†','Ùˆ','Ù‡','ÛŒ'];
       var arr = character.split('');
       for(var i = 0; i < arr.length ; i++){
-        
+
         if(jQuery.inArray( arr[i], RTL ) > -1){
           return true;
         }
@@ -119,8 +119,8 @@ name: FOS-20111
     }
 
   });
-      
-  
+
+
 </script>
 
 {% endblock %}
@@ -135,7 +135,7 @@ name: FOS-20111
       <span class="masthead-tagline">[@L[cds.sales/accounting/accounting-software:HeaderContentMainHeading2]@L]</span>
       <a class="btn btn-primary btn-lg" data-ci="86772" href="http://bookkeeping.godaddy.com/prospect_tour?cc=GDOBDEF" target="_blank" style="min-width: 208px;">[@L[cds.sales/accounting/accounting-software:HeaderCtaButton]@L]</a>
     </div>
-  
+
     <div class="column2">
       <div class="list-box">
         <span class="list-title">[@L[cds.sales/accounting/accounting-software:HeaderListTitle]@L]</span>
@@ -148,7 +148,7 @@ name: FOS-20111
       <div class="list-box-shadow"></div>
     </div>
   </div>
-  
+
   <div class="modal fade videoModal" id="myVideoModal">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -243,7 +243,7 @@ name: FOS-20111
                   <span class="starting-at-price">[@T[productprice:<current productid="2699" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="starting-at-small">[@L[cds.sales/accounting/accounting-software:PerMonth]@L]</span></p>
                 ##if(countrySiteAny(uk))
                      <div class="vat-tax-message">[@L[cds.sales/accounting/accounting-software:vat-price]@L]</div>
-                ##endif               
+                ##endif
               <form class="addtocart-form" action="[@T[link:<external linktype="carturl" path="/basket.aspx" secure="true"/>]@T]" method="post" data-addtocart="[@T[link:<relative path="~/api/package/add" />]@T]">
                 <input type="hidden" name="itc" value="slp_outright_plus" />
                 <input type="hidden" name="ci" value="78055" />
@@ -293,8 +293,8 @@ name: FOS-20111
                     <li class="two-lines padding-bottom-15">[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent0PlanBox0PlanDetail4]@L]</li>
                 </ul>
             </div>
-              
-         
+
+
         </div>
         <div class="col-xs-8">
             <div class="grid-column accounting-grid-column">
@@ -322,7 +322,7 @@ name: FOS-20111
                 <div class="row-icon-left accounting-bullet-list">
                     <i class="ico ico-time-tracking"></i>
                     <h2 class="h2-alternate">[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent0FeaturesListTitle4]@L]</h2>
-                    <ul>                        
+                    <ul>
                         <li>[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent0FeaturesListText4]@L]</li>
                     </ul>
                 </div>
@@ -362,7 +362,7 @@ name: FOS-20111
                 <span class="badge-track-and-simplify-your-taxes"><strong>[@L[cds.sales/accounting/accounting-software:OnlyFromGoDaddy]@L]</strong></span>
                 <h2 class="tab-content-title">[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent0title2]@L]</h2>
                 <p><strong>[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent0titleSub2]@L]</strong></p>
-                <p>[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent0text2]@L]</p> 
+                <p>[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent0text2]@L]</p>
                 <p class="no-margin-bottom">[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent0text2Sub]@L]</p>
             </div>
         </div>
@@ -410,13 +410,13 @@ name: FOS-20111
       <ol class="carousel-indicators carousel-indicators-list">
         <li class="carousel-indicators-obj active"><a href="#" data-slide-to="0" data-target="#carousel-init"></a></li>
         <li class="carousel-indicators-obj"><a href="#" data-slide-to="1" data-target="#carousel-init"></a></li>
-      </ol>      
+      </ol>
     </div>
   </div>
 </section>
 
-    
-    
+
+
 </section>
 <!-- End content -->
 <!-- Start plan-summary -->
@@ -458,7 +458,7 @@ name: FOS-20111
                 </div>
                 <!-- End Plan-summary Tab panes -->
             </div>
-        </div>    
+        </div>
     </div>
 </section>
 <!-- End plan-summary -->
@@ -468,25 +468,25 @@ name: FOS-20111
     <section class="l-main-content">
     <div class="container l-main-container">
         <div class="tab-header tab-header-SYIAB-howitworks tab-header-zone">
-          <div class="tab-header-left-zone">  
+          <div class="tab-header-left-zone">
             <h2 class="tab-header-title">[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent0Features2Title]@L]</h2>
             <p class="no-margin-bottom">[@L[cds.sales/accounting/accounting-software:HeaderContentSubHeadingList5]@L]</p>
-          </div>   
+          </div>
           <form class="addtocart-form" action="[@T[link:<external linktype="carturl" path="/basket.aspx" secure="true"/>]@T]" method="post" data-addtocart="[@T[link:<relative path="~/api/package/add" />]@T]">
             <input type="hidden" name="itc" value="slp_outright_plus" />
             <input type="hidden" name="ci" value="89204" />
             <input type="hidden" name="qty" value="1" />
             <input type="hidden" name="package" value="gdob_1year" />
-            <div class="add-to-cart-wrapper">                
+            <div class="add-to-cart-wrapper">
               <div class="add-to-cart-left-zone">
                 <div class="add-to-cart-header-wrapper">
                   <h3 class="add-to-cart-header">[@L[cds.sales/accounting/accounting-software:HeaderforAddToCart]@L]</h3>
                 </div>
-                <div class="add-to-cart-price-wrapper">            
+                <div class="add-to-cart-price-wrapper">
                   <div class="add-to-cart-startingat" style="float: inherit;">
                     [@L[cds.sales/accounting/accounting-software:StartingAt]@L]
                   </div>
-                  <div class="add-to-cart-price" data-seperate-currency-symbol='{"newClass":"sup-symbol-price","newTagName":"span"}'> 
+                  <div class="add-to-cart-price" data-seperate-currency-symbol='{"newClass":"sup-symbol-price","newTagName":"span"}'>
                     [@T[productprice:<current productid="2699" dropdecimal="false" period="monthly" negative="parentheses" />]@T]
                   </div>
                   <div class="add-to-cart-month">
@@ -496,7 +496,7 @@ name: FOS-20111
               </div>
               <div class="js-plan-column add-to-cart-button-wrapper">
                 <button type="submit" class="btn btn-warning btn-block btn-lg">[@L[cds.sales/accounting/accounting-software:AddToCart]@L]</button>
-              </div>           
+              </div>
             </div>
           </form>
         </div>
@@ -526,7 +526,7 @@ name: FOS-20111
                     <span class="badge-track-and-simplify-your-taxes"><strong>[@L[cds.sales/accounting/accounting-software:OnlyFromGoDaddy]@L]</strong></span>
                     <h2 class="tab-content-title">[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent0title2]@L]</h2>
                     <p><strong>[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent0titleSub2]@L]</strong></p>
-                    <p>[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent0text2]@L]</p> 
+                    <p>[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent0text2]@L]</p>
                     <p class="no-margin-bottom">[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent0text2Sub]@L]</p>
                 </div>
             </div>
@@ -802,7 +802,7 @@ name: FOS-20111
 
                     <h2 class="h2-alternate">[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent5FAQTitle9]@L]</h2>
                     <p class="no-margin-bottom">[@L[cds.sales/accounting/accounting-software:MainPageContentTabContent5FAQList9]@L]</p>
-        
+
                 </div>
               </div>
             </div>
@@ -816,7 +816,7 @@ name: FOS-20111
         </form>
     </div>
 </section>
-   
+
   </div>
 </div>
 <!-- End main-tabs panes -->

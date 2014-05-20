@@ -3,7 +3,7 @@ location: sales/domains/what-is-a-gtld.aspx
 id: false
 name: FOS-20469
 ---
-{% extends 'base.html' %}
+{% extends 'layouts/base.html' %}
 {% block metahead %}
 {% parent %}
     <style>
@@ -15,38 +15,38 @@ name: FOS-20469
         font-size: 12px;
       }
       html[lang*=ua] #infographic h4 {
-        font-size: 42px;        
+        font-size: 42px;
       }
       html[lang*=tr] #story-extra-3 {
         font-size: 28px;
         top: 400px;
         width: 100px;
       }
-      html[lang*=fi] #story-extra-4 {     
+      html[lang*=fi] #story-extra-4 {
         font-size: 30px;
         left: 580px;
         top: 930px;
         width: 130px;
       }
-      html[lang*=gr] #story-extra-4 {     
+      html[lang*=gr] #story-extra-4 {
         font-size: 25px;
         left: 585px;
         top: 930px;
         width: 130px;
       }
-      html[lang*=nl] #story-extra-4 {     
+      html[lang*=nl] #story-extra-4 {
         font-size: 25px;
         left: 590px;
         top: 945px;
         width: 130px;
       }
-      html[lang*=pt] #story-extra-4 {     
+      html[lang*=pt] #story-extra-4 {
         font-size: 30px;
         left: 580px;
         top: 935x;
         width: 150px;
       }
-      html[lang*=tr] #story-extra-4 {     
+      html[lang*=tr] #story-extra-4 {
         font-size: 30px;
         left: 575px;
         top: 930px;
@@ -70,26 +70,26 @@ name: FOS-20469
     <h1 class="masthead-title">[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-5-WhatIsAGTLD]@L]</h1>
     <div class="masthead-content">
         <div class="masthead-copy">
-            <h3>[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-6-100sOfNewdomainsAreComing]@L]</h3>  
+            <h3>[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-6-100sOfNewdomainsAreComing]@L]</h3>
             <h4>[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-8-HereSWhatYouNeedToKnow]@L]</h4>
             <a class="flt-btn flt-btn-grn" href="[@T[link:<relative path='tlds/gtld.aspx'><param name='ci' value='85444' /></relative>]@T]">[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-4-BrowseNewDomainsNow]@L]</a>
         </div>
         <div class="masthead-media">
           <iframe width="533" height="315" src="//www.youtube.com/embed/25XTscbsqWg?rel=0&wmode=transparent" frameborder="0" allowfullscreen></iframe>
-        </div>  
+        </div>
     </div>
 </div>
 <div id="infographic">
-    <div class="wrap">    
+    <div class="wrap">
         <div class="info-content" id="story-hdr">
             <h3>[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-8-FindTheDomainNameThatFitsYourBusiness]@L]</h3>
         </div>
-        
+
         <div class="info-content" id="story-1">
             <h4>[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-3-MeetCate]@L]</h4>
             [@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-17-CateNeedsAWebsiteToAttractMoreCustomers]@L]
         </div>
-        
+
         <div class="info-content" id="story-2">
             <h4>[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-6-WhatSADomainName]@L]</h4>
             [@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-17-WithTheRightDomainNameAndWebsiteCate]@L]
@@ -99,7 +99,7 @@ name: FOS-20469
                 <div class="domain-container-tip tld" style="bottom:-20px; right:15px;">[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-2-DomainExtension]@L]</div>
             </div>
         </div>
-        
+
         <div class="info-content" id="story-3">
             <h4>[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-3-ComingSoon]@L]</h4>
             [@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-21-CateWillSoonHaveHundredsOfDomainName]@L]
@@ -107,19 +107,19 @@ name: FOS-20469
                 [@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-8-CatesCakesMENUCatesCakesFOODCatesCakesEATCatesCakesNYC]@L]
             </div>
         </div>
-        
+
         <div class="info-content" id="story-extra-1">[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-2-CateSCart]@L]</div>
         <div class="info-content" id="story-extra-2">[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-4-CateSFirstBusiness]@L]</div>
         <div class="info-content" id="story-extra-3">[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-1-Cate]@L]</div>
         <div class="info-content" id="story-extra-4">[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-5-CateSBusinessNow]@L]</div>
         <div class="info-content" id="story-extra-5">[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-9-CateSNewCustomersTheyFoundHerOnline]@L]</div>
         <div class="info-content" id="story-extra-6">[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-2-CatesCakesNYC]@L]</div>
-        
+
     </div>
 </div>
 <div class="info-section" id="follow">
   <h2>[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-5-FollowPreRegisterGO]@L]</h2>
-  <div class="caret-link"> 
+  <div class="caret-link">
     <a href="[@T[link:<relative path='tlds/gtld.aspx'><param name='ci' value='85445' /></relative>]@T]"><span class="circle-caret"></span>[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-5-SeeAllOurNewDomains]@L]</a></div>
 </div>
 <div class="info-section" id="domain-names" style="padding-bottom: 10px;">
@@ -151,14 +151,14 @@ name: FOS-20469
 </div>
 ##if(activeLanguageAny(en))
 <div class="info-section" id="view-infographic">
-  <div class="wrap" style="padding-bottom:0px"> 
+  <div class="wrap" style="padding-bottom:0px">
     <div class="caret-link">
       <a  class="infographic" style="cursor:pointer" ><span class="circle-caret"></span>[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-10-ViewOurInfographicForMoreInformationOnThe]@L]</a>
       <img class="infographic" style="cursor:pointer; vertical-align:middle; margin: 0 0 0 -7px" src="[@T[link:<imageroot />]@T]fos/tlds/learn_more/images/BCA-637_gTLDs_Industry_Stats_Infographics_V8_tall_thmbnl.png"/>
     </div>
   </div>
-</div> 
- ##endif  
+</div>
+ ##endif
 
 <div class="info-section" id="features-benefits">
   <div class="wrap">
@@ -170,19 +170,19 @@ name: FOS-20469
         <div class="row">
             <div class="col">
                 <h5>[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-16-AttractNewCustomersWithADomainSpecificTo]@L]</h5>
-                
+
                <p>[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-47-HundredsOfTargetedDomainsMENUREALTORNYCAre]@L]</p>
                <h5>[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-7-GetTheNameYouReallyWant]@L]</h5>
-               
+
                <p>[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-32-TheseDomainsAreAllBrandNewSoYour]@L]</p>
             </div>
             <div class="col">
                 <h5>[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-4-MakeItMemorable]@L]</h5>
-                
+
                <p>[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-35-NowThatPartOfYourWebsiteDescriptionAppears]@L]</p>
-               
+
                <h5>[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-5-ExpandYourFootprintOnline]@L]</h5>
-               
+
                <p>[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-63-GoDaddyDomainsWorkWithAnyWebsiteNoMatter]@L]</p>
             </div>
         </div>
@@ -324,7 +324,7 @@ name: FOS-20469
   <div id="g-modal-overlay" class="g-modal-overlay" style="display:none;"></div>
 </div>
 <div id="infographics">
-  <div id="infographic-modal" class="g-modal" style="display:none;"> 
+  <div id="infographic-modal" class="g-modal" style="display:none;">
     <a href="javascript:void(0);" class="g-modal-close"><span>[@L[cds.sales/domains/what-is-a-gtld:WhatIsAGTld-1-Close]@L]</span></a>
     <div class="g-modal-header"> <span class="g-modal-titlebar">100s of New Domains Are Coming</span> </div>
     <div class="g-modal-content" style="width: auto;height:840px;overflow-x:hidden"><img src="[@T[link:<imageroot />]@T]fos/tlds/learn_more/images/BCA-637_gTLDs_Industry_Stats_Infographics_V8_tall.png"/></div>

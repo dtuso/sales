@@ -19,11 +19,14 @@
       Created By:     {{ cdsDetails.draft.user.username|safe }}
       JIRA Ticket:    {{ cdsDetails.draft.name }}
       Comments:       {{ cdsDetails.draft.comments }}
+{% if cdsDetails.draft.id %}
+    CDS URL:
+      http://siteadmin.dev.intranet.gdg/cds/ide#{{cdsDetails.draft.id}}
+{% endif %}
 {% if cdsDetails.draft.url %}
     PREVIEW URL:
       {{ cdsDetails.draft.url }}{% if cdsDetails.draft.id %}?version={{ cdsDetails.draft.location }}|{{cdsDetails.draft.id}}{% endif %}
 {% endif %}
-
 
 
 

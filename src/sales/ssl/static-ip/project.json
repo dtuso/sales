@@ -28,7 +28,7 @@
       },
       "cdsLocation": "localization/sales/gd/ssl/dedicated-ip/en",
       "draft": {
-        "comments": "update phone token to match prod"
+        "comments": "Change 'acces' to 'access'"
       }
     }
   }
