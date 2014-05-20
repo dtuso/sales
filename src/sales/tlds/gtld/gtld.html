@@ -16,21 +16,21 @@ name: FOS-16997
     }
     </style>
 ##endif
-
+        
 ##if(!countrySiteAny(www,ca))
     <!-- International Background Images -->
     <style type="text/css">
-      .bg-images > .bg-slide1 {
+      .bg-images > .bg-slide3 {
       background-image: url("[@T[link:<cssroot />]@T]/fos/201401/tlds/gtld/img/GLOBAL_bg-main-banner-club.jpg") !important;
       }
     </style>
 ##endif
-
-##if(!activeLanguageAny(es))
+        
+##if(!countrySiteAny(uk))
     <!-- International Background Images -->
     <style type="text/css">
       .bg-images > .bg-slide4 {
-      background-image: url("[@T[link:<cssroot />]@T]/fos/201401/tlds/gtld/img/bg-main-banner-email.jpg") !important;
+      background-image: url("[@T[link:<cssroot />]@T]/fos/201401/tlds/gtld/img/bg-main-banner-wiki.jpg") !important;
       }
     </style>
 ##endif
@@ -46,7 +46,6 @@ name: FOS-16997
         <style type="text/css">
           .bg-images{height:100%;}
           .bg-images > .bg-slide {height:100%;}
-          .idp-modal-wrap{top: 25% !important;}
         </style>
 
 
@@ -57,7 +56,7 @@ name: FOS-16997
 
     <div class="border-box" role="main">
 
-
+      
 <!-- Start main-banner -->
 <section class="main-banner main-banner-gtld">
 <div class="bg-images">
@@ -90,40 +89,40 @@ name: FOS-16997
                   <div class="carousel-inner carousel-inner-container">
                     <div class="item carousel-inner-item carousel-inner-item-gtld carousel-inner-item-gtld-1 active">
                       <div class="carousel-inner-text-container carousel-inner-text-cointainer-gtld">
-                        <p class="domain no-margin-bottom"><strong>.club</strong></p>
-                        <p class="no-margin-bottom">[@L[cds.sales/gd/tlds/gtld:MainBannerCarouselSlide2Text2]@L]</p>
-                        <p class="no-margin-bottom"><a class="underlined" data-ci="89140" href="[@T[link:<relative path="~/tlds/club"/>]@T]">[@L[cds.sales/gd/tlds/gtld:MarketingSlideLinkText]@L]</a></p>
+                        <p class="domain no-margin-bottom"><strong>.ninja</strong></p>
+                        <p class="no-margin-bottom">[@L[cds.sales/gd/tlds/gtld:MainBannerCarouselSlide2TextNinja]@L]</p>
+                        <p class="no-margin-bottom"><a class="underlined" data-ci="89639" href="[@T[link:<relative path="~/tlds/ninja"/>]@T]">[@L[cds.sales/gd/tlds/gtld:MarketingSlideLinkText]@L]</a></p>
                       </div>
                     </div>
-                    <div class="item carousel-inner-item carousel-inner-item-gtld carousel-inner-item-gtld-2 ">
-                      <div class="carousel-inner-text-container carousel-inner-text-cointainer-gtld">
-                        <p class="domain no-margin-bottom"><strong>.london</strong></p>
-                        <p class="no-margin-bottom">[@L[cds.sales/gd/tlds/gtld:MarketingTagLineLondon]@L]</p>
-                        <p class="no-margin-bottom"><a class="underlined" data-ci="90057" href="[@T[link:<relative path="~/tlds/london"/>]@T]">[@L[cds.sales/gd/tlds/gtld:MainPreRegister]@L]</a></p>
-                      </div>
-                    </div>
-
-                    <div class="item carousel-inner-item carousel-inner-item-gtld carousel-inner-item-gtld-3">
+                     <div class="item carousel-inner-item carousel-inner-item-gtld carousel-inner-item-gtld-2">
                       <div class="carousel-inner-text-container carousel-inner-text-cointainer-gtld">
                         <p class="domain no-margin-bottom"><strong>.guru</strong></p>
                         <p class="no-margin-bottom">[@L[cds.sales/gd/tlds/gtld:MainBannerCarouselSlide4Text2]@L]</p>
                         <p class="no-margin-bottom"><a class="underlined" data-ci="89138" href="[@T[link:<relative path="~/tlds/guru"/>]@T]">[@L[cds.sales/gd/tlds/gtld:MarketingSlideLinkText]@L]</a></p>
                       </div>
+                    </div> 
+                      <div class="item carousel-inner-item carousel-inner-item-gtld carousel-inner-item-gtld-3">
+                      <div class="carousel-inner-text-container carousel-inner-text-cointainer-gtld">
+                        <p class="domain no-margin-bottom"><strong>.club</strong></p>
+                        <p class="no-margin-bottom">[@L[cds.sales/gd/tlds/gtld:MainBannerCarouselSlide2Text2]@L]</p>
+                        <p class="no-margin-bottom"><a class="underlined" data-ci="89140" href="[@T[link:<relative path="~/tlds/club"/>]@T]">[@L[cds.sales/gd/tlds/gtld:MarketingSlideLinkText]@L]</a></p>
+                      </div>
                     </div>
-                    ##if(!activeLanguageAny(es))
+                      
+                     ##if(!countrySiteAny(uk))
                     <div class="item carousel-inner-item carousel-inner-item-gtld carousel-inner-item-gtld-4">
                       <div class="carousel-inner-text-container carousel-inner-text-cointainer-gtld">
-                        <p class="domain no-margin-bottom"><strong>.email</strong></p>
-                        <p>[@L[cds.sales/gd/tlds/gtld:MainBannerCarouselSlide3TextEmail]@L]</p>
-                        <p class="no-margin-bottom"><a class="underlined" data-ci="89641" href="[@T[link:<relative path="~/tlds/email"/>]@T]">[@L[cds.sales/gd/tlds/gtld:MarketingSlideLinkText]@L]</a></p>
+                        <p class="domain no-margin-bottom"><strong>.wiki</strong></p>
+                        <p>[@L[cds.sales/gd/tlds/gtld:MarketingTagLineWiki]@L]</p>
+                        <p class="no-margin-bottom"><a class="underlined" data-ci="89641" href="[@T[link:<relative path="~/tlds/wiki"/>]@T]">[@L[cds.sales/gd/tlds/gtld:MarketingSlideLinkText]@L]</a></p>
                       </div>
                     </div>
                     ##else
-                    <div class="item carousel-inner-item carousel-inner-item-gtld carousel-inner-item-gtld-4">
+                  <div class="item carousel-inner-item carousel-inner-item-gtld carousel-inner-item-gtld-4 ">
                       <div class="carousel-inner-text-container carousel-inner-text-cointainer-gtld">
-                        <p class="domain no-margin-bottom"><strong>.uno</strong></p>
-                        <p>[@L[cds.sales/gd/tlds/gtld:MainBannerCarouselSlideTextUno]@L]</p>
-                        <p class="no-margin-bottom"><a class="underlined" data-ci="90305" href="[@T[link:<relative path="~/tlds/uno"/>]@T]">[@L[cds.sales/gd/tlds/gtld:MarketingSlideLinkTextUno]@L]</a></p>
+                        <p class="domain no-margin-bottom"><strong>.london</strong></p>
+                        <p class="no-margin-bottom">[@L[cds.sales/gd/tlds/gtld:MarketingTagLineLondon]@L]</p>
+                        <p class="no-margin-bottom"><a class="underlined" data-ci="90057" href="[@T[link:<relative path="~/tlds/london"/>]@T]">[@L[cds.sales/gd/tlds/gtld:MainPreRegister]@L]</a></p>
                       </div>
                     </div>
                     ##endif
@@ -280,57 +279,56 @@ name: FOS-16997
 
                         <h2 class="h2-alternate">[@L[cds.sales/gd/tlds/gtld:FaqList7Title]@L]</h2>
                         <p class="no-margin-bottom">[@L[cds.sales/gd/tlds/gtld:FaqList7Item1]@L]</p>
-
+                      
                       <hr/>
 
                         <h2 class="h2-alternate">[@L[cds.sales/gd/tlds/gtld:FaqList8Title]@L]</h2>
                         <p class="no-margin-bottom">[@L[cds.sales/gd/tlds/gtld:FaqList8Item1]@L]</p>
-
+                      
                       <hr/>
 
                         <h2 class="h2-alternate">[@L[cds.sales/gd/tlds/gtld:FaqList9Title]@L]</h2>
                         <p class="no-margin-bottom">[@L[cds.sales/gd/tlds/gtld:FaqList9Item1]@L]</p>
-
+                      
                       <hr/>
 
                         <h2 class="h2-alternate">[@L[cds.sales/gd/tlds/gtld:FaqList10Title]@L]</h2>
                         <p class="no-margin-bottom">[@L[cds.sales/gd/tlds/gtld:FaqList10Item1]@L]</p>
-
+                      
                       <hr/>
 
                         <h2 class="h2-alternate">[@L[cds.sales/gd/tlds/gtld:FaqList11Title]@L]</h2>
                         <p class="no-margin-bottom">[@L[cds.sales/gd/tlds/gtld:FaqList11Item1]@L]</p>
-
+                      
                       <hr/>
 
                         <h2 class="h2-alternate">[@L[cds.sales/gd/tlds/gtld:FaqList12Title]@L]</h2>
                         <p class="no-margin-bottom">[@L[cds.sales/gd/tlds/gtld:FaqList12Item1]@L]</p>
-
+                      
                       <hr/>
 
                         <h2 class="h2-alternate">[@L[cds.sales/gd/tlds/gtld:FaqList13Title]@L]</h2>
                         <p class="no-margin-bottom">[@L[cds.sales/gd/tlds/gtld:FaqList13Item1]@L]</p>
-
+                      
                       <hr/>
 
                         <h2 class="h2-alternate">[@L[cds.sales/gd/tlds/gtld:FaqList14Title]@L]</h2>
                         <p class="no-margin-bottom">[@L[cds.sales/gd/tlds/gtld:FaqList14Item1]@L]</p>
-
+                      
                        <hr/>
 
                         <h2 class="h2-alternate">[@L[cds.sales/gd/tlds/gtld:FaqList15Title]@L]</h2>
                         <p class="no-margin-bottom">[@L[cds.sales/gd/tlds/gtld:FaqList15Item1]@L]</p>
-
+                      
                        <hr/>
 
                         <h2 class="h2-alternate">[@L[cds.sales/gd/tlds/gtld:FaqList16Title]@L]</h2>
                         <p class="no-margin-bottom">[@L[cds.sales/gd/tlds/gtld:FaqList16Item1]@L]</p>
-
+                      
                        <hr/>
 
                         <h2 class="h2-alternate">[@L[cds.sales/gd/tlds/gtld:FaqList17Title]@L]</h2>
                         <p class="no-margin-bottom">[@L[cds.sales/gd/tlds/gtld:FaqList17Item1]@L]</p>
-
                     </div>
                 </div>
             </div>
@@ -353,7 +351,7 @@ name: FOS-16997
     <script src="[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2" type="text/javascript"></script>
     <script src="[@T[link:<javascriptroot />]@T]fos/201401/global/vendor/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
     <script src="[@T[link:<javascriptroot />]@T]fos/201401/global/js/2.1.0/global-2.1.0.min.js" type="text/javascript" ></script>
-
+    
 <script>
   $(function () {
     var bgpos       = 0,
@@ -460,5 +458,6 @@ name: FOS-16997
     });
   });
 </script>
+
 
 {% endblock %}
