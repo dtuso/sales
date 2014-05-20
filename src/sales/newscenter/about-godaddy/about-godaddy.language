@@ -1,7 +1,8 @@
 ---
 location: localization/sales/newscenter/about-godaddy/en
-id: 536a8334f778fc0228251d7c
-name: FOS-20455
+id: 537a9ac6f778fc17186148e5
+name: FOS-20814
+comments: Added and changed keys relating to board members bios
 ---
 {% include '../modules/doc-block.html' %}
 <phrase key="NewsCenterAbout-AFinePortraitsVideo" />
@@ -112,7 +113,7 @@ Executive Chairman<br />&amp; Founder GoDaddy
 <phrase key="NewsCenterAbout-2-ChiefExecutiveOfficer" />
 Chief Executive<br />Officer
 <phrase key="NewsCenterAbout-2-GregoryMondre" />
-Gregory Mondre
+Greg Mondre
 <phrase key="NewsCenterAbout-6-ManagingPartnerManagingDirectorSilverLake" />
 Managing Partner &amp; Managing Director, Silver Lake
 <phrase key="NewsCenterAbout-3-AntonyYLing" />
@@ -120,13 +121,13 @@ Antony Y. Ling
 <phrase key="NewsCenterAbout-4-ManagingDirectorSilverLake" />
 Managing Director, Silver Lake
 <phrase key="NewsCenterAbout-3-HeraldYunChen" />
-Herald Yun Chen
+Herald Chen
 <phrase key="NewsCenterAbout-3-MemberPrivateEquityKKR" />
-Member, Private<br />Equity KKR
+Member, Private<br />Equity & Co-Head of Technology, KKR
 <phrase key="NewsCenterAbout-3-AdamHerbertClammer" />
 Adam Herbert Clammer
 <phrase key="NewsCenterAbout-7-FmrHeadOfGlobalTechnologyGroupKKR" />
-Fmr Head of Global Technology Group, KKR
+Senior Advisor and<br/>Fmr Head of Global Technology Group, KKR
 <phrase key="NewsCenterAbout-3-RichardHerrickKimball" />
 Richard Herrick Kimball
 <phrase key="NewsCenterAbout-4-FoundingGeneralPartnerTCV" />
@@ -137,10 +138,14 @@ Charles Robel
 Private Investor
 <phrase key="NewsCenterAbout-2-JeffreySaper" />
 Jeffrey Saper
+<phrase key="NewsCenterAbout-2-Lee-Wittlinger" />
+Lee Wittlinger
 <phrase key="NewsCenterAbout-2-BetsyRafael" />
 Betsy Rafael
 <phrase key="NewsCenterAbout-2-BoardCounsel" />
 Board Counsel
+<phrase key="NewsCenterAbout-2-Director-SlvLake" />
+Director, Silver Lake
 <phrase key="NewsCenterAbout-4-ChiefExecutiveOfficerGoDaddyLLC" />
 Chief Executive Officer<br/>GoDaddy LLC
 <phrase key="NewsCenterAbout-26-WeWillRadicallyShiftTheGlobalEconomyToward" />
@@ -180,7 +185,7 @@ Elissa is a woman with a passion for problem solving. She brings expertise in gl
 <phrase key="NewsCenterAbout-60-AsHeadOfGoDaddySPeopleOperationsGroupAuguste" />
 As head of GoDaddy's People Operations group, Auguste leads the charge to hire and develop the greatest team of talented individuals on the planet. Having previously led technology teams as GoDaddy's CIO (including Product Development, IT Operations, Information Security and R&amp;D) Auguste brings a perspective and skillset to human resources that is unique in the industry.
 <phrase key="NewsCenterAbout-47-PriorTo2010AugusteServedAsTheCEOOf" />
-Prior to 2010, Auguste served as the CEO of Integralis Managed Security Services in Stockholm, Sweden and CTO of Linde AG, the world’s largest natural gas company based in Munich, Germany. Auguste earned a B.A. from Dartmouth College. He speaks Swedish and basic Russian.
+Prior to 2010, Auguste served as Managing Director of Integralis Security Services in Stockholm, Sweden and CTO of Linde AG, the world’s largest natural gas company based in Munich, Germany. Auguste attended Dartmouth College and speaks Swedish and basic Russian.
 <phrase key="NewsCenterAbout-51-AsHeadOfHostingJeffOverseesTheDevelopmentAnd" />
 As head of hosting, Jeff oversees the development and operations of the largest platform for small business in the world.  Jeff comes to GoDaddy after 10 years with eBay, where he served as Head of Platform Strategy for commerce and held senior product management roles in Search, Trust and Safety.
 <phrase key="NewsCenterAbout-33-PriorToEBayJeffSpentSixYearsAtSun" />
@@ -194,13 +199,13 @@ Before coming to GoDaddy in 2013, James was a Senior Vice President at Yahoo!, w
 <phrase key="NewsCenterAbout-30-PriorToYahooJamesSpent13YearsAsGeneral" />
 Prior to Yahoo!, James spent 13 years as General Manager at Microsoft. While there, he managed the MSN international team and later, the Windows and Windows Live international teams.
 <phrase key="NewsCenterAbout-37-NimaIsGeneralCounselForGoDaddyResponsibleForCorporate" />
-Nima is General Counsel for GoDaddy, responsible for corporate and patent litigation, customer-facing and third-party transactional agreements. She also oversees operations and technical development for Domains By Proxy, the company's private registration affiliate.
+Nima is General Counsel for GoDaddy, responsible for mergers & acquisitions, governance, corporate and patent litigation, and intellectual property matters, as well as customer-facing and third-party transactional agreements. 
 <phrase key="NewsCenterAbout-36-SinceJoiningGoDaddyIn2002NimaHasServedAs" />
-Since joining GoDaddy in 2002, Nima has served as Vice President of Wild West Domains (the company's reseller affiliate), Public Relations and Administration. She also grew the company’s philanthropic efforts with GoDaddy Cares.
+Since joining GoDaddy in 2002, Nima has served as project manager, Vice President of Wild West Domains (the company's reseller affiliate), Public Relations and Corporate Administration, and Deputy General Counsel. She also grew the company’s philanthropic efforts with GoDaddy Cares and developed the company's legendary holiday parties. 
 <phrase key="NewsCenterAbout-26-BeforeComingToGoDaddyNimaWorkedForBusinessEdge" />
-Before coming to GoDaddy, Nima worked for Business Edge Solutions and Beechwood Data Solutions. She also practiced labor and employment law in New York City.
+In her life before GoDaddy, Nima worked for Business Edge Solutions and Beechwood Data Solutions. She also practiced labor and employment law in New York City.
 <phrase key="NewsCenterAbout-36-NimaEarnedHerJDFromTheUniversityOf" />
-Nima earned her J.D. from the University of Pennsylvania Law School and a B.A. from Gettysburg College.  She loves opera, the Yankees and will "<span class="quote">drop everything to go to The Met in NYC.</span>"
+Nima earned her J.D. from the University of Pennsylvania Law School and a B.A., summa cum laude, from Gettysburg College where she was elected to Phi Beta Kappa. She loves music, the Yankees and will "<span class="quote">drop everything to go to The Met in NYC.</span>"
 <phrase key="NewsCenterAbout-6-SeniorVicePresidentDesignUserExperience" />
 Senior Vice President, Design &amp; User Experience
 <phrase key="NewsCenterAbout-61-AsSeniorVPForDesignAndUserExperienceRick" />
@@ -276,7 +281,7 @@ Since joining Silver Lake in 1999, Greg has worked extensively in private equity
 <phrase key="NewsCenterAbout-45-GregGraduatedFromTheWhartonSchoolOfTheUniversity" />
 Greg graduated from The Wharton School of the University of Pennsylvania with a B.S. in economics. He currently serves as a director of Avaya, Inc.; IPC Systems, Inc.; Sabre Holdings, Vantage Data Centers, and is on the Operating Committee of SunGard Capital Corp.
 <phrase key="NewsCenterAbout-3-CharlesJRobel" />
-Charles J. Robel
+Charles Robel
 <phrase key="NewsCenterAbout-50-CharlesRobelIsARetiredSiliconValleyExecutiveAnd" />
 Charles Robel is a retired Silicon Valley executive and private investor. He spent 26 years at PricewaterhouseCoopers and served as the partner running its Silicon Valley Software Services Group from 1985 until the mid 1990s. He subsequently managed the Technology Mergers and Acquisitions Group until his retirement in 2000.
 <phrase key="NewsCenterAbout-38-From2000Through2005CharlesWasAGeneralPartner" />
@@ -305,6 +310,10 @@ Prior to joining KKR, he worked in the Mergers &amp; Acquisitions department of 
 Adam holds a B.S. from the University of California and an M.B.A. with high distinction from Harvard Business School. He is currently on the boards of Aricent, Avago, GoDaddy, and TASC and is a member of the Operating Committee of SunGard. He is also a trustee of the San Francisco MoMA
 <phrase key="NewsCenterAbout-2-BoardDirector" />
 Board Director
+<phrase key="NewsCenterAbout-28-LeeWittlingerJoinedSilverLakeAndIsDirector" />
+Lee Wittlinger joined Silver Lake in 2007 and is a Director. Previously, Mr. Wittlinger worked as an investment banker in the Technology, Media, and Telecom Group at Goldman, Sachs &amp; Co., where he focused on mergers and acquisitions, and financing transactions in the technology industry.
+<phrase key="NewsCenterAbout-28-LeeWittlingerCurrentlyDirectorGdAndVantageFinanceAccnting" />
+He currently serves as a director on the boards of GoDaddy and Vantage Data Centers. Mr. Wittlinger graduated summa cum laude from The Wharton School of the University of Pennsylvania, where he received a Bachelor of Science in Economics, with dual concentrations in Finance and Accounting.
 <phrase key="NewsCenterAbout-28-JeffreySaperIsViceChairmanOfWilsonSonsiniGoodrich" />
 Jeffrey Saper is vice chairman of Wilson Sonsini Goodrich &amp; Rosati, the largest law firm in Silicon Valley specializing in the representation of technology and emerging growth companies.
 <phrase key="NewsCenterAbout-142-JeffSpecializesInPublicAndPrivateFinancingsOfTechnology" />
