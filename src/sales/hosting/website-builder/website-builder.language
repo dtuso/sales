@@ -98,9 +98,9 @@ Create a simple website
 <phrase key="economy-bandwidth" />
 <strong>150 GB</strong> Bandwidth
 <phrase key="plan-domain" />
-<strong>Free Domain</strong>
+<strong>Free Domain with annual plan</strong>
 <phrase key="plan-domain-in" />
-<strong>Free Domain</strong> <p class="g-toolTip">Restrictions apply <span>One FREE .COM, .CO, .IN, .NET or .ORG with purchase of a new 12-, 24- or 36-month plan. Plus ICANN fee of [@T[currencyprice:<price usdamount="18" dropdecimal="false" />]@T] per domain name per year. You must add the domain name into your cart before purchase, and you must select a domain term length equal to or less than the term length of your plan to qualify for the free domain offer. If you purchase a domain name for a term longer than the term of the plan, you will be charged for the additional registration term at the then-current rate. Cannot be used in conjunction with any other offer, sale, discount or promotion. Free domain offer applies only to the initial purchase term. After the initial purchase term, domains purchased through this offer will renew at the then-current renewal price.</span></p>
+<strong>Free Domain with annual plan</strong> <p class="g-toolTip">Restrictions apply <span>One FREE .COM, .CO, .IN, .NET or .ORG with purchase of a new 12-, 24- or 36-month plan. Plus ICANN fee of [@T[currencyprice:<price usdamount="18" dropdecimal="false" />]@T] per domain name per year. You must add the domain name into your cart before purchase, and you must select a domain term length equal to or less than the term length of your plan to qualify for the free domain offer. If you purchase a domain name for a term longer than the term of the plan, you will be charged for the additional registration term at the then-current rate. Cannot be used in conjunction with any other offer, sale, discount or promotion. Free domain offer applies only to the initial purchase term. After the initial purchase term, domains purchased through this offer will renew at the then-current renewal price.</span></p>
 <phrase key="personal-themes" />
 <strong>50</strong> Personal Themes
 <phrase key="economy-themes" />
@@ -147,10 +147,16 @@ For your growing business needs
 <a class="simple-link websitebuilder-tooltip isToolTip" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Get ranked higher on search engines with our integrated SEO feature. In 3 simple steps, we’ll help you choose effective keywords, headlines and body text based on your business and target customers. No technical skills required."><strong>Search Engine Optimization</strong></a><span class="item-note font-12">(SEO)</span>
 <phrase key="unlimited-social" />
 <a class="simple-link websitebuilder-tooltip isToolTip" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Give your business a strong presence on Twitter. Create your site with Website Builder and we'll automatically import the information and main image from your website to create a Twitter business page."><strong>Twitter</strong><sup>&reg;</sup> Profile Management</a>
+<phrase key="unlimited-oneclick" />
+<a class="simple-link websitebuilder-tooltip isToolTip" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Give your Facebook and Twitter profile the same look as your website with just one click. And anytime you change your website design, your social media pages will automatically update so they always watch your site."><strong>One-Click</strong> Social Media Manager</a>
 <phrase key="unlimited-ssl" />
 <strong>SSL Certificate</strong><span class="item-note "><a class="simple-link websitebuilder-tooltip isToolTip" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Protect customer data and transactions with an SSL Certificate. Take advantage of 256-bit encryption and 99.9% browser recognition. It’s all free for the initial plan term purchased, a [@T[productprice:<current productid="3604" dropdecimal="flase" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]/yr value">Restrictions apply to SSL Certificate</a></span>
+<phrase key="oneclick-header" />
+Get more than just a website
 <phrase key="seofs-header" />
 Get on Google in 3 easy steps with our built-in SEO tool
+<phrase key="oneclick-body-text" />
+With our One-Click Social Media Manager, we’ll instantly match your Facebook<sup>&reg;</sup> and Twitter<sup>&reg;</sup> pages to your website so they' re always in sync. Don't have a Twitter page? Create one with just a click!
 <phrase key="seofs-body-text" />
 See how the built-in Search Engine Optimization (SEO) tool in our Business Plus plan will help you show up on Google<sup>&reg;</sup>, Yahoo!<sup>&reg;</sup> and more.
 <phrase key="seofs-google-yahoo-bing-alt" />
@@ -789,7 +795,7 @@ FAQ
 <phrase key="label-get-started" />
 Get Started
 <phrase key="plan-domain-new-restricitons" />
-Restrictions apply
+Restrictions apply 
 <phrase key="plan-domain-new-tooltip" />
 One FREE .COM, .CO, .NET or .ORG with purchase of a new 12-, 24- or 36-month plan. Plus ICANN fee of [@T[currencyprice:<price usdamount="18" dropdecimal="false" />]@T] per domain name per year. You must add the domain name into your cart before purchase, and you must select a domain term length equal to or less than the term length of your plan to qualify for the free domain offer. If you purchase a domain name for a term longer than the term of the plan, you will be charged for the additional registration term at the then-current rate. Cannot be used in conjunction with any other offer, sale, discount or promotion. Free domain offer applies only to the initial purchase term. After the initial purchase term, domains purchased through this offer will renew at the then-current renewal price.
 <phrase key="plan-domain-new" />
@@ -914,3 +920,15 @@ QUICK SHOPPING CART
 Everything you need to open your own online store - no technical skills required.
 <phrase key="qsc-perfect" />
 Perfect for:</span><span>&nbsp;eCommerce businesses, and those looking to add online sales to their site
+<phrase key="recommended" />
+Recommended
+<phrase key="your-website" />
+Your Website here.
+<phrase key="here-too" />
+Here<br/>too!
+<phrase key="business-plus-plan-cta" />
+<strong class="secondary-color">Business Plus Plans</strong> starting at
+<phrase key="social-modal-header" />
+Stand out on social media with just one click
+<phrase key="social-modal-text" />
+Keep your Facebook and Twitter pages looking fresh. With just a click, we’ll automatically update them to match your site’s design. And anytime you change your website design, your social media pages will automatically update so they always match your site.
