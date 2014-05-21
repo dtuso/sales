@@ -54,7 +54,7 @@ git fetch upstream master
 git rebase upstream/master
 ```
 
-Do this daily to make sure you're never too far off.
+Do this daily to make sure you're never too far off. More info on syncing up forks: https://help.github.com/articles/syncing-a-fork
 
 ### Step 2: Install Dependencies
 
