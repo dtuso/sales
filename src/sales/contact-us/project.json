@@ -7,14 +7,14 @@
       },
       "cdsLocation": "sales/contact-us.aspx",
       "draft": {
-        "id": "53559f71f778fc07dc24f464",
-        "createdDate": "2014-04-20",
+        "id": " 537d17f4f778fc2460fbadb6",
+        "createdDate": "2014-05-21",
         "createdBy": {
-          "fullName": "Sergio Lopez",
-          "username": "sylopez"
+          "fullName": "Avinash Peesari",
+          "username": "apeesari"
         },
-        "jiraTicket": "FOS-17211",
-        "comments": "Initial page build",
+        "jiraTicket": "FOS-20852",
+        "comments": "Updated the hours text for some countries/cities",
         "url": "http://www.dev-godaddy.com/contact-us.aspx"
       }
     },
