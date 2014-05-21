@@ -2,16 +2,11 @@
 <!DOCTYPE html>
 <html lang="[@T[localization:<language full="true" />]@T]">
 <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" /><meta http-equiv="content-language" content="[@T[localization:<language full="true" />]@T]" /><meta name="google-site-verification" content="odAW2IckEFXrJjMrVxmnpjRPGNxEJp_xnCb7iBydgBY" /><meta name="msvalidate.01" content="9D246CEFA0D8894D78306DF6FBA618D9" /><link href="https://plus.google.com/108306343581548568740" rel="publisher" /><meta name="verify-v1" content="dV1r/ZJJdDEI++fKJ6iDEl6o+TMNtSu0kv18ONeqM0I=" /><meta name="y_key" content="1e39c508e0d87750" />
 {% block metatitle %}<title>[@L[cds.sales/homepage:page-title]@L]</title>{% endblock metatitle %}
 {% block metadescription %}<meta name="description" content="[@L[cds.sales/homepage:meta-description]@L]" />{% endblock metadescription %}
 {% block metakeywords %}<meta name="keywords" content="[@L[cds.sales/homepage:meta-keywords]@L]" />{% endblock metakeywords %}
 {% block metahead %}
-  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  <meta http-equiv="content-language" content="[@T[localization:<language full="true" />]@T]" />
-  <meta name="google-site-verification" content="odAW2IckEFXrJjMrVxmnpjRPGNxEJp_xnCb7iBydgBY" />
-  <meta name="msvalidate.01" content="9D246CEFA0D8894D78306DF6FBA618D9" />
-  <meta name="verify-v1" content="dV1r/ZJJdDEI++fKJ6iDEl6o+TMNtSu0kv18ONeqM0I=" />
-  <meta name="y_key" content="1e39c508e0d87750" />
   <meta name="format-detection" content="telephone=no" />
   <link rel="canonical" href="[@T[link:<external linktype='siteurl' path='' secure='false' parammode='explicit'/>]@T]"/>
   <link href="https://plus.google.com/108306343581548568740" rel="publisher" />
@@ -240,7 +235,8 @@
           </div>
       </div>
   </div>
-  {% endblock %}          
+  {% endblock %}
+  {% block ukcookie %}{% endblock %}          
   [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer" />]@P]
   [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Script" />]@P]
   [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Bottom" />]@P]
@@ -263,23 +259,8 @@ var hash = hashes[i].split('=');
 qs.push(hash[0]);
 qs[hash[0]] = hash[1];
 }
-var hpLoadVideo = 0;
-var autoplay = '\&autoplay=1';
-$("div.gdhp-bottom-banner").mouseenter(function() {
-  if(hpLoadVideo != 1)
-    {
-      hpLoadVideo = 1;
-      var src ='//www.youtube.com/embed/WycoJMKzXZ4?html5=1&rel=0';
-      $('#myVideoModal iframe').attr('src',src);
-      $('#myVideoModal').on('hidden.bs.modal', function () {          
-        $('#myVideoModal iframe').removeAttr('src');
-        $('#myVideoModal iframe').attr('src',src);
-      })
-      $('#myVideoModal').on('show.bs.modal', function () {          
-        $('#myVideoModal iframe').attr('src', src + autoplay);
-      })
-    }
-  });
+{% block customjs %}
+{% endblock %} 
 $('#shareme').fosShare({});
 if($("#searchDomainName").val().length) {
 $("#searchDomainName").val("");
