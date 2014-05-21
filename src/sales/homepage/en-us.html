@@ -23,3 +23,24 @@ locale: en-us
   {% include include_lowermarq %}
 
 {% endblock %}
+{% block customjs %}
+{% jsminify %}
+var hpLoadVideo = 0;
+var autoplay = '\&autoplay=1';
+$("div.gdhp-bottom-banner").mouseenter(function() {
+  if(hpLoadVideo != 1)
+    {
+      hpLoadVideo = 1;
+      var src ='//www.youtube.com/embed/WycoJMKzXZ4?html5=1&rel=0';
+      $('#myVideoModal iframe').attr('src',src);
+      $('#myVideoModal').on('hidden.bs.modal', function () {          
+        $('#myVideoModal iframe').removeAttr('src');
+        $('#myVideoModal iframe').attr('src',src);
+      })
+      $('#myVideoModal').on('show.bs.modal', function () {          
+        $('#myVideoModal iframe').attr('src', src + autoplay);
+      })
+    }
+  });
+{% endjsminify %}
+{% endblock %} 
