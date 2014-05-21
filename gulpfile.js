@@ -64,6 +64,7 @@ var paths = {
 
 var swigSetup = function(swig) {
   extras.useTag(swig, 'less');
+  extras.useTag(swig, 'uglify');
   swig.setDefaults({
     cache: false,
     loader: require('./lib/template-loader')(),

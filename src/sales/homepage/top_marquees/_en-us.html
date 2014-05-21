@@ -49,10 +49,12 @@ div.top-banner-content>div.atn-btn-wrap{width:160px;margin:10px 0px 0px}
     </div>
   </div>
   <script type="text/javascript">
+  {% uglify %}
   $('.gdhp-top-banner').bind('click',function(event){
     var $clickedElement = $(event.target);
     if(!$clickedElement.hasClass('top-banner-more')){
       window.location.href='[@T[link:<relative path="/tlds/club"><param name="ci" value="90331" /></relative>]@T]';
     }
   });
+  {% enduglify %}
   </script>
