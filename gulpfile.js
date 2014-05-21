@@ -64,7 +64,7 @@ var paths = {
 
 var swigSetup = function(swig) {
   extras.useTag(swig, 'less');
-  extras.useTag(swig, 'uglify');
+  extras.useTag(swig, 'jsminify');
   swig.setDefaults({
     cache: false,
     loader: require('./lib/template-loader')(),
@@ -106,7 +106,7 @@ gulp.task('html', function() {
 
 gulp.task('language', function() {
   return gulp.src('./**/*.language', {cwd: path.join('./src/sales/', assetSrcPath)})
-    .pipe(changed(paths.build))
+    //.pipe(changed(paths.build))
     .pipe(fm({remove:true}))
     .pipe(swig(swigLangOpts))
     .pipe(gulpif(!ignoreCDS, cdsm()))
