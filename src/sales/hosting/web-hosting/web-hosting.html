@@ -1,6 +1,6 @@
 ---
 location: sales/hosting/web-hosting.aspx
-id: 537b8403f778fc0e70721135
+id: 537d720ff778fc2460fbadcb
 name: FOS-20536
 ---
 {% extends 'layouts/base.html' %}
@@ -86,9 +86,9 @@ name: FOS-20536
                         <div id="economy" class="col-xs-4 relative" data-gd-sidebysidealign-col="1">
                             <form action="[@T[link:<relative path="/hosting/web-hosting-config-new.aspx" parammode="common" />]@T]" name="frmAddToCart" class="frmAddToCart" method="get">
                             <div class="grid-column no-padding-bottom relative">
-                              <div data-gd-sidebysidealign-row="2">
+                              <div data-gd-sidebysidealign-row="1">
                                 <h2>[@L[cds.sales/gd/hosting/web-hosting:economy-title]@L]</h2>
-                                <p data-gd-sidebysidealign-row="1">[@L[cds.sales/gd/hosting/web-hosting:economy-plan-website-11166]@L]</p>
+                                <p>[@L[cds.sales/gd/hosting/web-hosting:economy-plan-website-11166]@L]</p>
                               <p class="starting-at starting-at-alternate-top-spacing"><span class="starting-at-above">[@L[cds.sales/gd/hosting/web-hosting:as-low-as]@L]</span><span class="starting-price">[@T[productprice:<current productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]<span>[@L[cds.sales/gd/hosting/web-hosting:month]@L]</span></span></p>
                                 ##if(productHasSavingsMoreThan(32051, 32051, 0))
                                 <p class="margin-bottom-12">[@T[productprice:<template productid="32051" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]<span class="secondary-color uppercase"><strong> [@L[cds.sales/gd/hosting/web-hosting:save]@L] [@T[productcompare:<percent primaryproductid="32051" secondaryproductid="32051" hidebelow="5"><html><![CDATA[{0}%]]></html></percent>]@T]</strong></span></p>
@@ -97,7 +97,7 @@ name: FOS-20536
                                 <span class="vat-price">[@L[cds.sales/gd/hosting/web-hosting:vat-price]@L]</span>
                                 ##endif
                               </div>
-                                <div class="select-box">
+                                <div class="select-box" data-gd-sidebysidealign-row="2">
                                     <div class="select-box-head">
                                         <div class="select-box-current">
                                             <span>[@L[cds.sales/gd/hosting/web-hosting:12-months]@L]</span>
@@ -189,9 +189,9 @@ name: FOS-20536
                                         </ul>
                                     </div><!-- select-box-body -->
                                 </div><!-- select-box -->
-                                <p class="no-margin-bottom"><button type="submit" data-ci="89269" data-form="addtocart-form" class="btn btn-warning btn-block js-addtocart-btn btn--push-down btn-lg">[@L[cds.sales/gd/hosting/web-hosting:planbox-cart-btn]@L]</button></p>
+                                <p class="no-margin-bottom" data-gd-sidebysidealign-row="3"><button type="submit" data-ci="89269" data-form="addtocart-form" class="btn btn-warning btn-block js-addtocart-btn btn--push-down btn-lg">[@L[cds.sales/gd/hosting/web-hosting:planbox-cart-btn]@L]</button></p>
                                 <ul class="plan-pricing-list plan-pricing-list-alternate">
-                                    <li class="three-lines one-line-three-lines-fix">[@L[cds.sales/gd/hosting/web-hosting:economy-plan-storage-11166]@L]</li>
+                                    <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="4">[@L[cds.sales/gd/hosting/web-hosting:economy-plan-storage-11166]@L]</li>
                                 </ul>
                             </div>
                             </form>
@@ -199,9 +199,9 @@ name: FOS-20536
                         <div id="deluxe" class="col-xs-4 relative" data-gd-sidebysidealign-col="2">
                             <form action="[@T[link:<relative path="/hosting/web-hosting-config-new.aspx" parammode="common" />]@T]" name="frmAddToCart" class="frmAddToCart" method="get">
                             <div class="grid-column no-padding-bottom relative">
-                              <div data-gd-sidebysidealign-row="2">
+                              <div data-gd-sidebysidealign-row="1">
                                 <h2>[@L[cds.sales/gd/hosting/web-hosting:deluxe-title]@L]</h2>
-                                <p data-gd-sidebysidealign-row="1">[@L[cds.sales/gd/hosting/web-hosting:deluxe-plan-websites-11166]@L]</p>
+                                <p>[@L[cds.sales/gd/hosting/web-hosting:deluxe-plan-websites-11166]@L]</p>
                                 <span class="badge badge-small badge-important badge-upper-right">[@L[cds.sales/gd/hosting/web-hosting:popular-tag]@L]</span>
                               <p class="starting-at starting-at-alternate-top-spacing"><span class="starting-at-above">[@L[cds.sales/gd/hosting/web-hosting:as-low-as]@L]</span><span class="starting-price">[@T[productprice:<current productid="32059" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]<span>[@L[cds.sales/gd/hosting/web-hosting:month]@L]</span></span></p>
                                 ##if(productHasSavingsMoreThan(32059, 32059, 0))
@@ -211,7 +211,7 @@ name: FOS-20536
                                 <span class="vat-price">[@L[cds.sales/gd/hosting/web-hosting:vat-price]@L]</span>
                                 ##endif
                               </div>
-                                <div class="select-box">
+                                <div class="select-box" data-gd-sidebysidealign-row="2">
                                     <div class="select-box-head">
                                         <div class="select-box-current">
                                             <span>[@L[cds.sales/gd/hosting/web-hosting:12-months]@L]</span>
@@ -303,9 +303,9 @@ name: FOS-20536
                                         </ul>
                                     </div><!-- select-box-body -->
                                 </div><!-- select-box -->
-                                <p class="no-margin-bottom"><button type="submit" data-ci="89270" data-form="addtocart-form" class="btn btn-warning btn-block js-addtocart-btn btn--push-down btn-lg">[@L[cds.sales/gd/hosting/web-hosting:planbox-cart-btn]@L]</button></p>
+                                <p class="no-margin-bottom" data-gd-sidebysidealign-row="3"><button type="submit" data-ci="89270" data-form="addtocart-form" class="btn btn-warning btn-block js-addtocart-btn btn--push-down btn-lg">[@L[cds.sales/gd/hosting/web-hosting:planbox-cart-btn]@L]</button></p>
                                 <ul class="plan-pricing-list plan-pricing-list-alternate">
-                                    <li class="three-lines one-line-three-lines-fix">[@L[cds.sales/gd/hosting/web-hosting:deluxe-plan-storage-11166]@L]</li>
+                                    <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="4">[@L[cds.sales/gd/hosting/web-hosting:deluxe-plan-storage-11166]@L]</li>
                                 </ul>
                             </div>
                           </form>
@@ -314,9 +314,9 @@ name: FOS-20536
                         <div id="ultimate" class="col-xs-4 relative" data-gd-sidebysidealign-col="3">
                             <form action="[@T[link:<relative path="/hosting/web-hosting-config-new.aspx" parammode="common" />]@T]" name="frmAddToCart" class="frmAddToCart" method="get">
                                     <div class="grid-column no-padding-bottom relative">
-                              <div data-gd-sidebysidealign-row="2">
+                              <div data-gd-sidebysidealign-row="1">
                                         <h2>[@L[cds.sales/gd/hosting/web-hosting:unlimited-title]@L]</h2>
-                                        <p data-gd-sidebysidealign-row="1">[@L[cds.sales/gd/hosting/web-hosting:ultimate-plan-websites-11166]@L]</p>
+                                        <p>[@L[cds.sales/gd/hosting/web-hosting:ultimate-plan-websites-11166]@L]</p>
                                       <p class="starting-at starting-at-alternate-top-spacing"><span class="starting-at-above">[@L[cds.sales/gd/hosting/web-hosting:as-low-as]@L]</span><span class="starting-price">[@T[productprice:<current productid="32082" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]<span>[@L[cds.sales/gd/hosting/web-hosting:month]@L]</span></span></p>
                                         ##if(productHasSavingsMoreThan(32082, 32082, 0))
                                         <p class="margin-bottom-12">[@T[productprice:<template productid="32082" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]<span class="secondary-color uppercase"><strong> [@L[cds.sales/gd/hosting/web-hosting:save]@L] [@T[productcompare:<percent primaryproductid="32082" secondaryproductid="32082" hidebelow="5"><html><![CDATA[{0}%]]></html></percent>]@T]</strong></span></p>
@@ -325,7 +325,7 @@ name: FOS-20536
                                         <span class="vat-price">[@L[cds.sales/gd/hosting/web-hosting:vat-price]@L]</span>
                                         ##endif
                                 </div>
-                                <div class="select-box">
+                                <div class="select-box" data-gd-sidebysidealign-row="2">
                                     <div class="select-box-head">
                                         <div class="select-box-current">
                                             <span>[@L[cds.sales/gd/hosting/web-hosting:12-months]@L]</span>
@@ -417,9 +417,9 @@ name: FOS-20536
                                         </ul>
                                     </div><!-- select-box-body -->
                                 </div><!-- select-box -->
-                                    <p class="no-margin-bottom"><button data-ci="89271" type="submit" data-form="addtocart-form" class="btn btn-warning btn-block js-addtocart-btn btn--push-down btn-lg">[@L[cds.sales/gd/hosting/web-hosting:planbox-cart-btn]@L]</button></p>
+                                    <p class="no-margin-bottom" data-gd-sidebysidealign-row="3"><button data-ci="89271" type="submit" data-form="addtocart-form" class="btn btn-warning btn-block js-addtocart-btn btn--push-down btn-lg">[@L[cds.sales/gd/hosting/web-hosting:planbox-cart-btn]@L]</button></p>
                                     <ul class="plan-pricing-list plan-pricing-list-alternate">
-                                        <li class="three-lines">[@L[cds.sales/gd/hosting/web-hosting:ultimate-plan-all-benefits-of-11166]@L]</li>
+                                        <li class="three-lines" data-gd-sidebysidealign-row="4">[@L[cds.sales/gd/hosting/web-hosting:ultimate-plan-all-benefits-of-11166]@L]</li>
                                     </ul>
                                 </div>
                             </form>
@@ -431,25 +431,25 @@ name: FOS-20536
                 <!-- Special View for India Hosting that includes new Starter Plan -->    
                 ##else
                 <div id="pricing">
-                    <div  class="row tab-content equal-height" data-gd-sidebysidealign="{}">
+                  <div data-gd-sidebysidealign="{}">
+                    <div  class="row tab-content equal-height" >
 
                         <div id="starter" class="col-xs-4 relative" data-gd-sidebysidealign-col="1">
                             <form action="[@T[link:<relative path="/hosting/web-hosting-config-new.aspx" parammode="common" />]@T]" name="frmAddToCart" class="frmAddToCart" method="get">
                                     <div class="grid-column no-padding-bottom relative">
-                              <div data-gd-sidebysidealign-row="2">                                      
+                              <div data-gd-sidebysidealign-row="1">                                      
                                         <h2>[@L[cds.sales/gd/hosting/web-hosting:starter-title]@L]</h2>
-                                        <p data-gd-sidebysidealign-row="1">[@L[cds.sales/gd/hosting/web-hosting:starter-plan-website]@L]</p>
+                                        <p>[@L[cds.sales/gd/hosting/web-hosting:starter-plan-website]@L]</p>
                                       <p class="starting-at starting-at-alternate-top-spacing"><span class="starting-at-above">[@L[cds.sales/gd/hosting/web-hosting:as-low-as]@L]</span><span class="starting-price">[@T[productprice:<current productid="294057" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]<span>[@L[cds.sales/gd/hosting/web-hosting:month]@L]</span></span></p>
                                         ##if(productHasSavingsMoreThan(294057, 294057, 0))
                                         <p class="margin-bottom-12">[@T[productprice:<template productid="294057" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]<span class="secondary-color uppercase"><strong> [@L[cds.sales/gd/hosting/web-hosting:save]@L] [@T[productcompare:<percent primaryproductid="294057" secondaryproductid="294057" hidebelow="5"><html><![CDATA[{0}%]]></html></percent>]@T]</strong></span></p>
                                         ##endif
                                 </div>  
-                                <div class="select-box">
+                                <div class="select-box" data-gd-sidebysidealign-row="2">
                                     <div class="select-box-head">
                                         <div class="select-box-current">
                                             <span>[@L[cds.sales/gd/hosting/web-hosting:12-months]@L]</span>
                                             <span class="price">[@T[productprice:<current productid="294057" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T][@L[cds.sales/gd/hosting/web-hosting:month]@L]</span>
-                                            <span class="save lastChild">[@L[cds.sales/gd/hosting/web-hosting:onSale]@L]</span>
                                         </div>
                                         <div class="select-box-cta"><i class="ico ico-download"></i></div>
                                     </div><!-- select-box-head -->
@@ -536,10 +536,10 @@ name: FOS-20536
                                         </ul>
                                     </div><!-- select-box-body -->
                                 </div><!-- select-box -->
-                                    <p class="no-margin-bottom"><button data-ci="89271" type="submit" data-form="addtocart-form" class="btn btn-warning btn-block js-addtocart-btn btn--push-down btn-lg">[@L[cds.sales/gd/hosting/web-hosting:planbox-cart-btn]@L]</button></p>
+                                    <p class="no-margin-bottom" data-gd-sidebysidealign-row="3"><button data-ci="90621" type="submit" data-form="addtocart-form" class="btn btn-warning btn-block js-addtocart-btn btn--push-down btn-lg">[@L[cds.sales/gd/hosting/web-hosting:planbox-cart-btn]@L]</button></p>
                                     <ul class="plan-pricing-list plan-pricing-list-alternate">
-                                        <li class="three-lines one-line-three-lines-fix">[@L[cds.sales/gd/hosting/web-hosting:starter-plan-storage]@L]</li>
-                                        <li class="three-lines one-line-three-lines-fix">-</li>
+                                        <li data-gd-sidebysidealign-row="4">[@L[cds.sales/gd/hosting/web-hosting:starter-plan-storage]@L]</li>
+                                        <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="5">-</li>
                                     </ul>
                                 </div>
                             </form>
@@ -548,15 +548,15 @@ name: FOS-20536
                         <div id="economy" class="col-xs-4 relative" data-gd-sidebysidealign-col="2">
                             <form action="[@T[link:<relative path="/hosting/web-hosting-config-new.aspx" parammode="common" />]@T]" name="frmAddToCart" class="frmAddToCart" method="get">
                             <div class="grid-column no-padding-bottom relative">
-                              <div data-gd-sidebysidealign-row="2">
+                              <div data-gd-sidebysidealign-row="1">
                                 <h2>[@L[cds.sales/gd/hosting/web-hosting:economy-title]@L]</h2>
-                                <p data-gd-sidebysidealign-row="1">[@L[cds.sales/gd/hosting/web-hosting:economy-plan-website-11166]@L]</p>
+                                <p>[@L[cds.sales/gd/hosting/web-hosting:economy-plan-website-11166]@L]</p>
                               <p class="starting-at starting-at-alternate-top-spacing"><span class="starting-at-above">[@L[cds.sales/gd/hosting/web-hosting:as-low-as]@L]</span><span class="starting-price">[@T[productprice:<current productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]<span>[@L[cds.sales/gd/hosting/web-hosting:month]@L]</span></span></p>
                                 ##if(productHasSavingsMoreThan(32051, 32051, 0))
                                 <p class="margin-bottom-12">[@T[productprice:<template productid="32051" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]<span class="secondary-color uppercase"><strong> [@L[cds.sales/gd/hosting/web-hosting:save]@L] [@T[productcompare:<percent primaryproductid="32051" secondaryproductid="32051" hidebelow="5"><html><![CDATA[{0}%]]></html></percent>]@T]</strong></span></p>
                                 ##endif
                               </div>
-                                <div class="select-box">
+                                <div class="select-box" data-gd-sidebysidealign-row="2">
                                     <div class="select-box-head">
                                         <div class="select-box-current">
                                             <span>[@L[cds.sales/gd/hosting/web-hosting:12-months]@L]</span>
@@ -648,10 +648,10 @@ name: FOS-20536
                                         </ul>
                                     </div><!-- select-box-body -->
                                 </div><!-- select-box -->
-                                <p class="no-margin-bottom"><button type="submit" data-ci="89269" data-form="addtocart-form" class="btn btn-warning btn-block js-addtocart-btn btn--push-down btn-lg">[@L[cds.sales/gd/hosting/web-hosting:planbox-cart-btn]@L]</button></p>
+                                <p class="no-margin-bottom" data-gd-sidebysidealign-row="3"><button type="submit" data-ci="89269" data-form="addtocart-form" class="btn btn-warning btn-block js-addtocart-btn btn--push-down btn-lg">[@L[cds.sales/gd/hosting/web-hosting:planbox-cart-btn]@L]</button></p>
                                 <ul class="plan-pricing-list plan-pricing-list-alternate">
-                                    <li class="three-lines one-line-three-lines-fix">[@L[cds.sales/gd/hosting/web-hosting:economy-plan-storage-11166]@L]</li>
-                                    <li class="three-lines one-line-three-lines-fix">[@L[cds.sales/gd/hosting/web-hosting:all-plan-features-free-domain-11166]@L]</li>
+                                    <li data-gd-sidebysidealign-row="4">[@L[cds.sales/gd/hosting/web-hosting:economy-plan-storage-11166]@L]</li>
+                                    <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="5">[@L[cds.sales/gd/hosting/web-hosting:all-plan-features-free-domain-11166]@L]</li>
                                 </ul>
                             </div>
                             </form>
@@ -680,14 +680,14 @@ name: FOS-20536
                         </div><!-- col-xs-4 -->
                     </div>
 
-                    <div class="row tab-content equal-height" data-gd-sidebysidealign="{}">
+                    <div class="row tab-content equal-height">
 
-                        <div id="deluxe" class="col-xs-4 relative" data-gd-sidebysidealign-col="1">
+                        <div id="deluxe" class="col-xs-4 relative" data-gd-sidebysidealign-col="3">
                             <form action="[@T[link:<relative path="/hosting/web-hosting-config-new.aspx" parammode="common" />]@T]" name="frmAddToCart" class="frmAddToCart" method="get">
                             <div class="grid-column no-padding-bottom relative">
-                              <div data-gd-sidebysidealign-row="2">                              
+                              <div data-gd-sidebysidealign-row="1">                              
                                 <h2>[@L[cds.sales/gd/hosting/web-hosting:deluxe-title]@L]</h2>
-                                <p data-gd-sidebysidealign-row="1">[@L[cds.sales/gd/hosting/web-hosting:deluxe-plan-websites-11166]@L]</p>
+                                <p>[@L[cds.sales/gd/hosting/web-hosting:deluxe-plan-websites-11166]@L]</p>
                                 <span class="badge badge-small badge-important badge-upper-right">[@L[cds.sales/gd/hosting/web-hosting:popular-tag]@L]</span>
                               <p class="starting-at starting-at-alternate-top-spacing"><span class="starting-at-above">[@L[cds.sales/gd/hosting/web-hosting:as-low-as]@L]</span><span class="starting-price">[@T[productprice:<current productid="32059" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]<span>[@L[cds.sales/gd/hosting/web-hosting:month]@L]</span></span></p>
                                 ##if(productHasSavingsMoreThan(32059, 32059, 0))
@@ -697,7 +697,7 @@ name: FOS-20536
                                 <span class="vat-price">[@L[cds.sales/gd/hosting/web-hosting:vat-price]@L]</span>
                                 ##endif
                               </div>
-                                <div class="select-box">
+                                <div class="select-box" data-gd-sidebysidealign-row="2">
                                     <div class="select-box-head">
                                         <div class="select-box-current">
                                             <span>[@L[cds.sales/gd/hosting/web-hosting:12-months]@L]</span>
@@ -789,27 +789,27 @@ name: FOS-20536
                                         </ul>
                                     </div><!-- select-box-body -->
                                 </div><!-- select-box -->
-                                <p class="no-margin-bottom"><button type="submit" data-ci="89270" data-form="addtocart-form" class="btn btn-warning btn-block js-addtocart-btn btn--push-down btn-lg">[@L[cds.sales/gd/hosting/web-hosting:planbox-cart-btn]@L]</button></p>
+                                <p class="no-margin-bottom" data-gd-sidebysidealign-row="3"><button type="submit" data-ci="89270" data-form="addtocart-form" class="btn btn-warning btn-block js-addtocart-btn btn--push-down btn-lg">[@L[cds.sales/gd/hosting/web-hosting:planbox-cart-btn]@L]</button></p>
                                 <ul class="plan-pricing-list plan-pricing-list-alternate">
-                                    <li class="three-lines one-line-three-lines-fix">[@L[cds.sales/gd/hosting/web-hosting:deluxe-plan-storage-11166]@L]</li>
-                                    <li class="three-lines one-line-three-lines-fix">[@L[cds.sales/gd/hosting/web-hosting:all-plan-features-free-domain-11166]@L]</li>
+                                    <li data-gd-sidebysidealign-row="4">[@L[cds.sales/gd/hosting/web-hosting:deluxe-plan-storage-11166]@L]</li>
+                                    <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="5">[@L[cds.sales/gd/hosting/web-hosting:all-plan-features-free-domain-11166]@L]</li>
                                 </ul>
                             </div>
                           </form>
                         </div><!-- col-xs-4 -->
 
-                        <div id="ultimate" class="col-xs-4 relative" data-gd-sidebysidealign-col="2">
+                        <div id="ultimate" class="col-xs-4 relative" data-gd-sidebysidealign-col="4">
                             <form action="[@T[link:<relative path="/hosting/web-hosting-config-new.aspx" parammode="common" />]@T]" name="frmAddToCart" class="frmAddToCart" method="get">
                                     <div class="grid-column no-padding-bottom relative">
-                              <div data-gd-sidebysidealign-row="2">                                      
+                              <div data-gd-sidebysidealign-row="1">                                      
                                         <h2>[@L[cds.sales/gd/hosting/web-hosting:unlimited-title]@L]</h2>
-                                        <p data-gd-sidebysidealign-row="1">[@L[cds.sales/gd/hosting/web-hosting:ultimate-plan-websites-11166]@L]</p>
+                                        <p>[@L[cds.sales/gd/hosting/web-hosting:ultimate-plan-websites-11166]@L]</p>
                                       <p class="starting-at starting-at-alternate-top-spacing"><span class="starting-at-above">[@L[cds.sales/gd/hosting/web-hosting:as-low-as]@L]</span><span class="starting-price">[@T[productprice:<current productid="32082" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]<span>[@L[cds.sales/gd/hosting/web-hosting:month]@L]</span></span></p>
                                         ##if(productHasSavingsMoreThan(32082, 32082, 0))
                                         <p class="margin-bottom-12">[@T[productprice:<template productid="32082" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]<span class="secondary-color uppercase"><strong> [@L[cds.sales/gd/hosting/web-hosting:save]@L] [@T[productcompare:<percent primaryproductid="32082" secondaryproductid="32082" hidebelow="5"><html><![CDATA[{0}%]]></html></percent>]@T]</strong></span></p>
                                         ##endif
                                 </div>  
-                                <div class="select-box">
+                                <div class="select-box" data-gd-sidebysidealign-row="2">
                                     <div class="select-box-head">
                                         <div class="select-box-current">
                                             <span>[@L[cds.sales/gd/hosting/web-hosting:12-months]@L]</span>
@@ -901,10 +901,10 @@ name: FOS-20536
                                         </ul>
                                     </div><!-- select-box-body -->
                                 </div><!-- select-box -->
-                                    <p class="no-margin-bottom"><button data-ci="89271" type="submit" data-form="addtocart-form" class="btn btn-warning btn-block js-addtocart-btn btn--push-down btn-lg">[@L[cds.sales/gd/hosting/web-hosting:planbox-cart-btn]@L]</button></p>
+                                    <p class="no-margin-bottom" data-gd-sidebysidealign-row="3"><button data-ci="89271" type="submit" data-form="addtocart-form" class="btn btn-warning btn-block js-addtocart-btn btn--push-down btn-lg">[@L[cds.sales/gd/hosting/web-hosting:planbox-cart-btn]@L]</button></p>
                                     <ul class="plan-pricing-list plan-pricing-list-alternate">
-                                        <li class="three-lines">[@L[cds.sales/gd/hosting/web-hosting:ultimate-plan-all-benefits-of-11166]@L]</li>
-                                        <li class="three-lines one-line-three-lines-fix">[@L[cds.sales/gd/hosting/web-hosting:all-plan-features-free-domain-11166]@L]</li>
+                                        <li class="three-lines" data-gd-sidebysidealign-row="4">[@L[cds.sales/gd/hosting/web-hosting:ultimate-plan-all-benefits-of-11166]@L]</li>
+                                        <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="5">[@L[cds.sales/gd/hosting/web-hosting:all-plan-features-free-domain-11166]@L]</li>
                                     </ul>
                                 </div>
                             </form>
@@ -951,6 +951,7 @@ name: FOS-20536
                       </div><!-- col-xs-4 -->
                         
                     </div>
+                  </div>
                 </div>
                 ##endif
                 </section>
@@ -1001,6 +1002,89 @@ name: FOS-20536
                 </section>
                ##endif
               <!-- End MT Split -->
+
+              ##if(!activeLanguageAny([en-in]))
+              <section class="all-plans-include-section section-top-spacing">
+                 <div class="container l-main-container">
+                    <div class="row">
+                            <div class="col-xs-12">
+                                <div class="grid-column grid-column-fix">
+                                   ##if(splitTestingSideIsActive(1192, D))
+                                     <h3 class="tab-content-title">[@L[cds.sales/gd/hosting/web-hosting:all-plans-include-mt-11166]@L]</h3>
+                                   ##else
+                                     <h3 class="tab-content-title">[@L[cds.sales/gd/hosting/web-hosting:all-plans-include-11166]@L]</h3>
+                                   ##endif
+                                    <ul class="list-column first">
+                                      <li>[@L[cds.sales/gd/hosting/web-hosting:all-plan-features-free-domain-11166]@L]</li>
+                                      <li>[@L[cds.sales/gd/hosting/web-hosting:all-plan-features-free-email-11166]@L]</li>
+                                      <li>[@L[cds.sales/gd/hosting/web-hosting:all-plan-features-one-click-install-11166]@L]</li>
+                                      <li>[@L[cds.sales/gd/hosting/web-hosting:all-plan-features-unlimited-bandwidth-11166]@L]</li>
+                                      <li>[@L[cds.sales/gd/hosting/web-hosting:all-plan-features-databases-11166]@L]</li>
+                                      <li>[@L[cds.sales/gd/hosting/web-hosting:all-plans-features-control-panel-11166]@L]</li>
+                                      <li>[@L[cds.sales/gd/hosting/web-hosting:all-plans-features-ddos-protection-11166]@L]</li>
+                                    </ul>
+                                    <ul class="list-column">
+                                      <li>[@L[cds.sales/gd/hosting/web-hosting:all-plans-features-technical-support-11166]@L]</li>
+                                      <li><a target="_BLANK" data-ci="89272" href="[@T[link:<relative path='~/agreements/showdoc.aspx' secure='false'><param name='pageid' value='hosting_sa' /></relative>]@T]">[@L[cds.sales/gd/hosting/web-hosting:all-plans-features-uptime-guarantee-11166]@L]</a></li>
+                                      <li><a target="_BLANK" data-ci="89273" href="[@T[link:<relative path='~/agreements/showdoc.aspx' secure='false'><param name='pageid' value='hosting_sa' /></relative>]@T]">[@L[cds.sales/gd/hosting/web-hosting:all-plans-features-money-back-guarantee-11166]@L]</a></li>
+                                     
+                                   ##if(activeLanguageAny([en-us]) || activeLanguageAny([es-us]))
+                                      <li>[@L[cds.sales/gd/hosting/web-hosting:all-plan-features-adword-credit-11166]@L] <span class="g-toolTip restrictions-link">[@L[cds.sales/gd/hosting/web-hosting:restrictions-apply-11166]@L]<span>[@L[cds.sales/gd/hosting/web-hosting:all-plan-features-adword-credit-hover-text-11166]@L]</span></span></li>
+                                      <li>[@L[cds.sales/gd/hosting/web-hosting:all-plan-features-bing-credit-11166]@L] <span class="g-toolTip restrictions-link">[@L[cds.sales/gd/hosting/web-hosting:restrictions-apply-11166]@L]<span>[@L[cds.sales/gd/hosting/web-hosting:all-plan-features-bing-credit-hover-text-11166]@L]</span></span></li>
+                                      <li>[@L[cds.sales/gd/hosting/web-hosting:all-plan-features-facebook-credit-11166]@L] <span class="g-toolTip restrictions-link">[@L[cds.sales/gd/hosting/web-hosting:restrictions-apply-11166]@L]<span>[@L[cds.sales/gd/hosting/web-hosting:all-plan-features-facebook-credit-hover-text-11166]@L]</span></span></li>
+                                      <li>[@L[cds.sales/gd/hosting/web-hosting:all-plan-features-fotolia-credit-11166]@L] <span class="g-toolTip restrictions-link">[@L[cds.sales/gd/hosting/web-hosting:restrictions-apply-11166]@L]<span>[@L[cds.sales/gd/hosting/web-hosting:all-plan-features-fotolia-credit-hover-text-11166]@L]</span></span></li>
+                                     
+                                    ##endif
+                                    </ul>
+                                  ##if(!activeLanguageAny([en-us]) && !activeLanguageAny([es-us]))
+                                  <p class="container-bottom-right-sub-ul" style="padding-top:90px;">
+                                  ##else
+                                    <p class="container-bottom-right-sub-ul">
+                                  ##endif
+                                  [@L[cds.sales/gd/hosting/web-hosting:all-plan-features-what-we-mean-credit-11166]@L]</p>
+                                </div>
+                            </div>
+                        </div>
+                  </div>
+                </section>
+              <section class="section-top-spacing">
+                 <div class="container l-main-container">
+                       <div class="col-xs-12">
+                                <div class="tab-content-column tab-content-right customer-testimonial solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot />]@T]fos/201401/hosting/web-hosting/img/digital_coconut.jpg">
+                                  ##if(activeLanguageAny([en]) && !isManager())
+                                  <a class="dc-play-button-wrapper" data-ci="89274" href="#" data-target="#digitalCoconutTestimonial" data-toggle="modal">
+                                    <span class="dc-play-button"></span><br>
+                                    [@L[cds.sales/gd/hosting/web-hosting:customer-testimonial-watch-video-11166]@L]
+                                  </a>
+                                  ##endif
+                                  <p>[@L[cds.sales/gd/hosting/web-hosting:customer-testimonial-11166]@L]</p>
+                                  <p><b>- [@L[cds.sales/gd/hosting/web-hosting:customer-testimonial-name-11166]@L]</b></p>
+                                  ##if(false)
+                                    <p class="bottom-reviews-link" ><a class="tab-link" data-ci="89275" href="#reviews">[@L[cds.sales/gd/hosting/web-hosting:customer-testimonial-read-more-reviews-11166]@L]</a></p>
+                                  ##endif
+                                 </div>
+                       </div>
+                 </div>
+                ##if(!isManager())
+                <div class="modal fade videoModal myVideoModal" id="digitalCoconutTestimonial">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="modal-header-close close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="embedVideo" id="ytplayer1" data-id="H7lZyzSbNWk"></div>
+                        <!--[if lt IE 8]>
+                        <iframe class="embedVideoIE7" width="853" height="480" src="//www.youtube.com/embed/H7lZyzSbNWk?html5=1&rel=0" autoplay scrolling="no" frameborder="0" allowfullscreen>
+                        </iframe>
+                        <![endif]-->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                ##endif
+             </section>
+             ##endif
 
              <section class="section-top-spacing not-finding-section">
               <div class="grid-column">
@@ -1570,13 +1654,6 @@ name: FOS-20536
                                 <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-monthly-bandwidth-unlimited-11166]@L]</td>
                                 <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-monthly-bandwidth-unlimited-11166]@L]</td>
                                 <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-monthly-bandwidth-unlimited-11166]@L]</td>
-                              </tr>
-                              <tr class="standard-row">
-                                <td class="wide-column sp" colspan="3">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-core-features-file-transfer-11166]@L]</td>
-                                <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-unlimited-11166]@L]</td>
-                                <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-unlimited-11166]@L]</td>
-                                <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-unlimited-11166]@L]</td>
-                                <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-unlimited-11166]@L]</td>
                               </tr>
                               <tr class="standard-row">
                                 <td class="wide-column sp" colspan="3">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-core-features-ftp-users-11166]@L]</td>
@@ -2671,20 +2748,17 @@ name: FOS-20536
           $.each($cells,function(idx, cell){
             tallest = Math.max(tallest, $(cell).outerHeight());
           });
-          $cells.css({'min-height':tallest+'px'});
+          $cells.css({'height':tallest+'px'});
         }
 
         //for india, make sure the informational boxes on the right are also the same height as the plan boxes
-          var col = $columns;
-          if((col[0].id == 'starter') && (col[1].id == 'economy'))
+         var col = $columns;
+          if((col[0].id == 'starter'))
           {
             $('#all-plans-include').css({'height':col.outerHeight()+'px'});
-          }
-
-          if((col[0].id == 'deluxe') && (col[1].id == 'ultimate'))
-          {
             $('#digital-coconut').css({'height':col.outerHeight()+'px'});
           }
+
     }; /* end GDSideBySideAlign.prototype.init */
 
     // register the function to be used
