@@ -1,9 +1,22 @@
 ---
 location: sales/demo/lazy-loader/bv-reviews.html
 id: 53443788f778fc1c24d29041
-bv: { product: 'website_builder', target: '[@T[link:<external linktype="siteurl" path="/demo/lazy-loader/bv-reviews.html" secure="false" parammode="explicit" />]@T]#reviews' }
+bv: { product: 'ssl-certificates', loginReturn: '[@T[link:<external linktype="siteurl" path="/demo/lazy-loader/bv-reviews.html" secure="false" parammode="explicit" />]@T]#reviews' }
 ---
 {% extends 'layouts/base.html' %}
+
+{% block metahead %}
+  {% parent %}
+  <style type="text/css">
+  body {
+    background-color: #fff;
+  }
+  .container {
+    width: 1000px;
+    margin: 0 auto;
+  }
+  </style>
+{% endblock %}
 
 {% block body %}
 
@@ -13,10 +26,12 @@ bv: { product: 'website_builder', target: '[@T[link:<external linktype="siteurl"
         <li><a href="#reviews" data-toggle="tab">Reviews</a></li>
       </ul>
       <div class="tab-content">
-        <div class="tab-pane active" id="home">Hello</div>
+        <div class="tab-pane active" id="home">
+          <div class="row tab-content">Home</div>
+        </div>
         <div class="tab-pane" id="reviews">
-          <div class="container">
-            [@P[userControl:<Data location="~/Shared/Tabs/controls/BVReviewsNoJS.ascx"><Parameters><Parameter key="ProductId" value="website_builder" /><Parameter key="ReviewNumber" value="4" /></Parameters></Data>]@P]
+          <div class="row tab-content">
+            {% include 'modules/_bv-reviews-container.html' with bv only %}
           </div>
         </div>
       </div>
