@@ -1,0 +1,472 @@
+<!-- DOC BLOCK (DO NOT REMOVE)
+
+
+
+
+
+
+    IMPORTANT:
+      If version control is enabled for this page all changes to this page must also go through version control.
+
+    VERSION CONTROL:
+      https://github.secureserver.net/FOS-CDS-Pages/Sales
+
+    WEB PAGE CHAMPION:
+      Colyn Brown <clbrown@godaddy.com>
+
+    DRAFT DETAILS:
+      Name:         2014-04-29 - sylopez - FOS-1310
+      Created Date: 2014-04-29
+      Created By:   Sergio Lopez <sylopez>
+      JIRA Ticket:  FOS-1310
+      Comments:     Landing Page Reskin
+
+
+
+
+
+
+
+END DOC BLOCK -->
+<phrase key="page-title" />
+VPS Hosting | Affordable &amp; Configurable VPS plans - GoDaddy
+<phrase key="meta-description" />
+VPS Hosting gives you more power than traditional hosting. Our VPS hosting solutions are affordable and easier to manage than a dedicated server.
+<phrase key="meta-keywords" />
+vps hosting,vps,virtual server,windows vps, linux vps, vps server,virtual private server,virtual servers,virtual private servers,windows virtual server,linux virtual server,virtual private server hosting,vps servers,virtual dedicated server
+<phrase key="configTitle" />
+Windows Virtual Private Server - Value
+<phrase key="configTitleText" />
+Customize your server to meet your specific needs by selecting any of the features below.
+<phrase key="configTitleLink" />
+Change plan
+<phrase key="configTitleContinueToCart" />
+Continue to cart
+<phrase key="orderSummaryTitle" />
+Order summary
+<phrase key="orderSummaryEmail" />
+Email Essentials
+<phrase key="orderSummaryBusiness" />
+Business Essentials
+<phrase key="orderSummaryProductivity" />
+Productivity Plus
+<phrase key="orderSummarySubtotal" />
+Subtotal
+<phrase key="orderSummarySubtotalDisc" />
+Subtotal does not include applicable taxes.
+<phrase key="orderSummaryScroll" />
+Scroll down to continue to cart
+<phrase key="batch0" />
+Backup
+<phrase key="batch1" />
+Bandwidth
+<phrase key="batch2" />
+Assisted Service
+<phrase key="batch3" />
+Control Panel
+<phrase key="mo" />
+/mo
+<phrase key="title0" />
+Protect your data
+<phrase key="subtitle0" />
+Protect your data against accidental loss. Back your data up on your own or let us do it for you with one of our managed backup plans.
+<phrase key="list0title0" />
+FTP Solution <span class="product-desc">- Manual backup option visible only from your Virtual Private Server.</span>
+<phrase key="list0NoFTP" />
+No FTP backup
+<phrase key="list0GBFTP" />
+GB FTP backup:
+<phrase key="list1title0" />
+Managed Backup Services <span class="product-desc">- GoDaddy will backup your server content for you.</span>
+<phrase key="list1NoManaged" />
+No Managed Backup
+<phrase key="list1DailyManaged" />
+Daily Managed, 
+<phrase key="list1DayRetention" />
+-day retention:
+<phrase key="list1WeeklyManaged" />
+Weekly Managed, 
+<phrase key="list1weekRetention" />
+-week retention:
+<phrase key="title1" />
+Expecting a lot of traffic?
+<phrase key="subtitle1" />
+<span class="orange">Hosting video or other large data files?</span>
+<phrase key="list2title0" />
+Add additional bandwidth <span class="product-desc">to your plan to avoid potential overage fees when your traffic spikes.</span>
+<phrase key="list2NoAdditionalBand" />
+No additional bandwidth
+<phrase key="list2Add" />
+Add
+<phrase key="list2GBmo" />
+GB/mo:
+<phrase key="title2" />
+Need assistance?
+<phrase key="subtitle2" />
+<span class="orange">Our Assisted Service Plan includes initial server setup, patching, anti-virus, security scanning, monitoring and access to flat-rate admin services.</span> <a data-target="#learnModal" href="#" data-toggle="modal" data-ci="90211">Learn more.</a>
+<phrase key="list3title0" />
+Include the Assisted Service Plan <span class="product-desc">with your initial purchase and</span> SAVE 25%. <span class="product-desc">Assisted Service Plans added later will be billed at full price.</span>
+<phrase key="list3title1" />
+<span class="product-desc">Note: Administrative Access is unavailable with the Assisted Service Plan.</span>
+<phrase key="list3item0" />
+No Assisted Service Plan
+<phrase key="list3item1" />
+Assisted Service Plan: <strike>$169.99/mo</strike> $129.99/mo (3 mo minimum) <br> <a onclick="vdedserver_cust_js.showCpForAsp();" class="blue u crsr_pointer">A Parallels Plesk Panel is required.</a>
+<phrase key="title4" />
+Want more control?
+<phrase key="subtitle4" />
+<span class="orange">Different control panels offer their own unique interface, features and workflow.</span>
+<phrase key="list4title0" />
+We offer Parallels Plesk Panel and cPanel <span class="product-desc">- choose the one that&#039;s right for you.</span> <br > <a href="#" data-target="#myModalCompare" data-toggle="modal" data-ci="90215">Compare features.</a>
+<phrase key="list4item0" />
+No control panel
+<phrase key="list4item1" />
+Parallels Plesk Panel for up to 30 Domains: 
+<phrase key="list4item2" />
+Parallels Plesk Panel for up to 100 Domains: 
+<phrase key="list4item3" />
+Parallels Plesk Panel for Unlimited Domains: 
+<phrase key="list4item4" />
+cPanel & WHM Unlimited: 
+<phrase key="list4subItem0" />
+No additional features
+<phrase key="list4subItem1" />
+Parallels Plesk Panel with <span data-original-title="Add mobility, security, remote management and more to your panel and websites." data-html="true" class="isToolTip">Power Pack</span>: $6.99/mo
+<phrase key="CompareModalTitle" />
+Compare Control Panel Features
+<phrase key="CompareModalTableTitle1" />
+Parallels Plesk Panel Unlimited
+<phrase key="CompareModalTableTitle2" />
+cPanel & WHM
+<phrase key="CompareModalTableSec1Title" />
+Price
+<phrase key="CompareModalTableSec1Text1" />
+Virtual Private Servers — Unlimited Domains Built specifically to integrate with GoDaddy® products
+<phrase key="CompareModalTableSec2Title" />
+Operating System
+<phrase key="CompareModalTableSec2Text1" />
+Fedora
+<phrase key="CompareModalTableSec2Text2" />
+CentOS
+<phrase key="CompareModalTableSec2Text3" />
+Windows 2008
+<phrase key="CompareModalTableSec3Title" />
+DNS
+<phrase key="CompareModalTableSec3Text1" />
+Addition/Deletion
+<phrase key="CompareModalTableSec3Text2" />
+Automated setup with new site
+<phrase key="CompareModalTableSec3Text3" />
+Virtual DNS support
+<phrase key="CompareModalTableSec4Title" />
+Subdomains
+<phrase key="CompareModalTableSec4Text1" />
+Addition/Deletion
+<phrase key="CompareModalTableSec4Text2" />
+Redirects
+<phrase key="CompareModalTableSec4Text3" />
+Software firewall
+<phrase key="CompareModalTableSec5Title" />
+Web Server Scripting
+<phrase key="CompareModalTableSec5Text1" />
+ASP
+<phrase key="CompareModalTableSec5Text2" />
+Perl
+<phrase key="CompareModalTableSec5Text3" />
+Python
+<phrase key="CompareModalTableSec5Text4" />
+SSI
+<phrase key="CompareModalTableSec5Text5" />
+CGI
+<phrase key="CompareModalTableSec5Text6" />
+Java
+<phrase key="CompareModalTableSec6Title" />
+Database
+<phrase key="CompareModalTableSec6Text1" />
+MySQL
+<phrase key="CompareModalTableSec6Text2" />
+PHPMyAdmin
+<phrase key="CompareModalTableSec6Text3" />
+MSSQL (MSDE - Windows only)
+<phrase key="CompareModalTableSec7Title" />
+Mail
+<phrase key="CompareModalTableSec7Text1" />
+Manage email accounts
+<phrase key="CompareModalTableSec7Text2" />
+Supports Webmail
+<phrase key="CompareModalTableSec7Text3" />
+Forwarding
+<phrase key="CompareModalTableSec7Text4" />
+Auto-response
+<phrase key="CompareModalTableSec7Text5" />
+Mailing lists
+<phrase key="CompareModalTableSec7Text6" />
+Spam filters
+<phrase key="CompareModalTableSec7Text7" />
+Antivirus
+<phrase key="CompareModalTableSec8Title" />
+SSL
+<phrase key="CompareModalTableSec8Text1" />
+Manage SSL certificates
+<phrase key="CompareModalTableSec9Title" />
+FTP
+<phrase key="CompareModalTableSec9Text1" />
+Manage accounts
+<phrase key="CompareModalTableSec9Text2" />
+Anonymous FTP
+<phrase key="CompareModalTableSec9Text3" />
+Upload directory
+<phrase key="CompareModalTableSec10Title" />
+Statistics
+<phrase key="CompareModalTableSec10Text1" />
+Bandwidth reports
+<phrase key="CompareModalTableSec10Text2" />
+User reports
+<phrase key="CompareModalTableSec10Text3" />
+View error Log
+<phrase key="CompareModalTableSec10Text4" />
+Webalizer Stats
+<phrase key="CombineModalNote" />
+*Parallels Plesk Panel 30 domains and 100 domains also available. Plesk Power Pack is also available as an option with Parallels Plesk Panel.
+<phrase key="CombineModalCloseBtn" />
+Close
+<phrase key="learnModalDisclaimerModalTitle" />
+Assisted Service Plan
+<phrase key="learnModalDisclaimerModalText0" />
+Save the time and energy it takes to setup, monitor and maintain your dedicated server by letting our expert staff do it for you! With GoDaddy<sup>&reg;</sup> Assisted Service Plan, our team of server professionals will personally set up your dedicated server to deliver maximum performance. Plus, they will also handle select monitoring and maintenance issues that would otherwise drain your time and resources.
+<phrase key="learnModalDisclaimerModalSubTitle" />
+Each Assisted Service Plan Includes*:
+<phrase key="learnModalDisclaimerModalList0Title" />
+Initial Server Setup:
+<phrase key="learnModalDisclaimerModalList0subTitle" />
+Including installation of operating system and Parallels Plesk Panel and the following services:
+<phrase key="learnModalDisclaimerModalList0Item0" />
+Domain Name & DNS
+<phrase key="learnModalDisclaimerModalList0Item1" />
+Hosting Account
+<phrase key="learnModalDisclaimerModalList0Item2" />
+SSL Certificate (1yr. Free Turbo SSL included with server purchase)
+<phrase key="learnModalDisclaimerModalList0Item3" />
+Resource Allocation
+<phrase key="learnModalDisclaimerModalList1Title" />
+Security Services (AntiVirus, Scanning):
+<phrase key="learnModalDisclaimerModalList1Item0" />
+Monthly scans, as well as realtime onaccess virus scanning of files (Windows servers only).
+<phrase key="learnModalDisclaimerModalList1Item1" />
+GoDaddy scans your server once a month, to provide you with any recommended remediation actions.
+<phrase key="learnModalDisclaimerModalList2Title" />
+Emergency Services:
+<phrase key="learnModalDisclaimerModalList2subTitle" />
+Direct access to advanced support for emergencies including:
+<phrase key="learnModalDisclaimerModalList2Item0" />
+Service restart or reboot
+<phrase key="learnModalDisclaimerModalList2Item1" />
+Server or service down
+<phrase key="learnModalDisclaimerModalList2Item2" />
+Tier3 Support troubleshooting
+<phrase key="learnModalDisclaimerModalList3Title" />
+Patching Services:
+<phrase key="learnModalDisclaimerModalList3subTitle" />
+Patching services** for the base operating system, such as Fedora or Windows, which includes:
+<phrase key="learnModalDisclaimerModalList3Item0" />
+Official updates released by the Fedora or Fedora Legacy Project.
+<phrase key="learnModalDisclaimerModalList3Item1" />
+Official updates, bug fixes and security patches released by Microsoft.
+<phrase key="learnModalDisclaimerModalList4Title" />
+Monitoring Services:
+<phrase key="learnModalDisclaimerModalList4Item0" />
+Per server monitoring of basic services such as Ping and HTTP.
+<phrase key="learnModalDisclaimerModalList5Title" />
+Custom Support Access:
+<phrase key="learnModalDisclaimerModalList5Item0" />
+Access to our flatrate custom support services
+<phrase key="learnModalDisclaimerModalText1" />
+<sup>*</sup> Note: Administrative Access is unavailable with the Assisted Service Plan
+<phrase key="learnModalDisclaimerModalText2" />
+<sup>**</sup> In most cases, patching will be performed weekly, though some patches may be applied sooner if the severity and likelihood of exploit is high. If a patch is found to break a customer&#039;s application, the customer will be able to contact the managed services support center and request that the patch be rolled back, free of charge. 
+<phrase key="changePlan" />
+Unavailable: <a onclick="changePlan();">Change to a CentOS Plan</a>
+<phrase key="AddonTitle" />
+Add-ons
+<phrase key="bandwidthDisclaimer" />
+*Additional <span data-original-title="The Order Summary displays the total monthly cost of the selected server configuration. However, the additional bandwidth will be a recurring monthly charge for the selected term length and only the first month's charge will be displayed in your cart upon initial purchase." data-html='true' class='isToolTip'>bandwidth costs</span> are billed monthly.
+<phrase key="15FTPAddon" />
+FTP Backup: 15 GB FTP backup
+<phrase key="30FTPAddon" />
+FTP Backup: 30 GB FTP backup
+<phrase key="60FTPAddon" />
+FTP Backup: 60 GB FTP backup
+<phrase key="120FTPAddon" />
+FTP Backup: 120 GB FTP backup
+<phrase key="DailyManged7Addon" />
+Managed Backup: Daily, 7-Day
+<phrase key="DailyManged30Addon" />
+Managed Backup: Daily, 30-Day
+<phrase key="WeeklyManged4Addon" />
+Managed Backup: Weekly, 4-week
+<phrase key="WeeklyManged12Addon" />
+Managed Backup: Weekly, 12-week
+<phrase key="1TBBandwidthAddon" />
+Bandwidth*: 1 TB
+<phrase key="3TBBandwidthAddon" />
+Bandwidth*: 3 TB
+<phrase key="5TBBandwidthAddon" />
+Bandwidth*: 15 TB
+<phrase key="10TBBandwidthAddon" />
+Bandwidth*: 10 TB
+<phrase key="500BandwidthAddon" />
+Bandwidth*: 500 GB
+<phrase key="1000BandwidthAddon" />
+Bandwidth*: 1000 GB
+<phrase key="1500BandwidthAddon" />
+Bandwidth*: 1500 GB
+<phrase key="2000BandwithAddon" />
+Bandwidth*: 2000 GB
+<phrase key="ServicePlanAddon" />
+Service Plan: Assisted Service Plan
+<phrase key="Plesk30Addon" />
+Control Panel: Parallels Plesk Panel 30 Domains
+<phrase key="Plesk100Addon" />
+Control Panel: Parallels Plesk Panel 100 Domains
+<phrase key="PleskUnlimtedAddon" />
+Control Panel: Parallels Plesk Panel Unlimted Domains
+<phrase key="cPanelAddon" />
+Control Panel: cPanel & WHM Unlimited
+<phrase key="PowerPackAddon" />
+Software: Parallels Plesk Panel Power Pack
+<phrase key="NoFTPLabel" />
+No FTP backup
+<phrase key="15FTPLabel" />
+15 GB FTP backup:
+<phrase key="30FTPLabel" />
+30 GB FTP backup:
+<phrase key="60FTPLabel" />
+60 GB FTP backup:
+<phrase key="120FTPLabel" />
+120 GB FTP backup:
+<phrase key="NoManagedBackup" />
+No Managed Backup
+<phrase key="7DayManaged" />
+Daily Managed, 7-day retention:
+<phrase key="30DayManaged" />
+Daily Managed, 30-day retention:
+<phrase key="4WeekManaged" />
+Weekly Managed, 4-week retention:
+<phrase key="12WeekManaged" />
+Weekly Managed, 12-week retention:
+<phrase key="NoBandwidth" />
+No additional bandwidth
+<phrase key="1TBBandwidth" />
+Add 1 TB/mo:
+<phrase key="3TBBandwidth" />
+Add 3 TB/mo:
+<phrase key="5TBBandwidth" />
+Add 5 TB/mo:
+<phrase key="10TBBandwidth" />
+Add 10 TB/mo:
+<phrase key="500GBBandwidth" />
+Add 500 GB/mo:
+<phrase key="1000GBBandwidth" />
+Add 1000 GB/mo:
+<phrase key="1500GBBandwidth" />
+Add 1500 GB/mo:
+<phrase key="2000GBBandwidth" />
+Add 2000 GB/mo:
+<phrase key="NoAssistedPlan" />
+No Assisted Service Plan
+<phrase key="AssistedServicePlan" />
+Assisted Service Plan: <strike>[@T[productprice:<current productid="1260" dropdecimal="false"  htmlsymbol="false" negative="parentheses" />]@T]</strike>
+<phrase key="AssistedServicePlanDetails1" />
+(3 month minimum) 
+<phrase key="AssistedServicePlanDetails2" />
+<a class="blue u crsr_pointer disclaimer move" data-scroll=".box4">A Parallels Plesk Panel is required.</a>
+<phrase key="NoControlPanel" />
+No control panel
+<phrase key="Plesk30Domains" />
+Parallels Plesk Panel for up to 30 Domains:
+<phrase key="NoAdditionalFeatures" />
+ No additional features
+<phrase key="PowerPackText" />
+ Parallels Plesk Panel with <span data-original-title='Add mobility, security, remote management and more to your panel and websites.' data-html='true' class='isToolTip'>Power Pack</span>:
+<phrase key="Plesk100Domains" />
+Parallels Plesk Panel for up to 100 Domains:
+<phrase key="PleskUnlimitedDomains" />
+Parallels Plesk Panel for Unlimited Domains:
+<phrase key="cPanelText" />
+cPanel & WHM Unlimited:
+<phrase key="512MB" />
+512 MB
+<phrase key="20GB" />
+20 GB
+<phrase key="1GB" />
+1 GB
+<phrase key="40GB" />
+40 GB
+<phrase key="1000GB" />
+1,000 GB
+<phrase key="2GB" />
+2 GB
+<phrase key="30GB" />
+30 GB
+<phrase key="60GB" />
+60 GB
+<phrase key="2000GB" />
+2,000 GB
+<phrase key="3GB" />
+3 GB
+<phrase key="45GB" />
+45 GB
+<phrase key="90GB" />
+90 GB
+<phrase key="3000GB" />
+3,000 GB
+<phrase key="4GB" />
+4 GB
+<phrase key="120GB" />
+120 GB
+<phrase key="4000GB" />
+4,000 GB
+<phrase key="8GB" />
+8 GB
+<phrase key="240GB" />
+240 GB
+<phrase key="8000GB" />
+8,000 GB
+<phrase key="BasicCentos" />
+Basic: Linux CentOS
+<phrase key="ecoCentos" />
+Economy: Linux CentOS
+<phrase key="valCentos" />
+Value: Linux CentOS
+<phrase key="deluxeCentos" />
+Deluxe: Linux CentOS
+<phrase key="premiumCentos" />
+Premium: Linux CentOS
+<phrase key="ultimateCentos" />
+Ultimate: Linux CentOS
+<phrase key="ecoFedora" />
+Economy: Linux Fedora
+<phrase key="valFedora" />
+Value: Linux Fedora
+<phrase key="deluxeFedora" />
+Deluxe: Linux Fedora
+<phrase key="premiumFedora" />
+Premium: Linux Fedora
+<phrase key="ultimateFedora" />
+Ultimate: Linux Fedora
+<phrase key="valWindows" />
+Value: Windows 2008 Standard
+<phrase key="deluxeWindows" />
+Deluxe: Windows 2008 Standard
+<phrase key="premiumWindows" />
+Premium: Windows 2008 Standard
+<phrase key="ultimateWindows" />
+Ultimate: Windows 2008 Standard
+<phrase key="RamSummary" />
+RAM:
+<phrase key="StorageSummary" />
+Storage:
+<phrase key="BandwidthSummary" />
+Bandwidth:
+<phrase key="PerMonth" />
+per month
