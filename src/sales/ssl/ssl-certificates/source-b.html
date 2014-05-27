@@ -1,10 +1,9 @@
 ---
 location: sales/ssl/ssl-certificates-b
-id: 5375388cf778fc1728f345c3
-name: FOS-20836
+id: 5384d88af778fc2a74c3bc37
+name: FOS-14691
 ---
 {% extends 'layouts/base.html' %}
-
 
 {% block metahead %}
   {% parent %}
@@ -17,12 +16,27 @@ name: FOS-20836
     .plan-summary-tab-pane-list:first-child {
       margin-right: 5.3em;
     }
+    .bv-loading {
+      font-size: 23px;
+      padding: 20px;
+      font-weight: bold;
+      color: #666;
+      text-align: center;
+    }
   </style>
 {% endblock %}
 
 {% block footer %}
   <script>
     $(function () {
+
+      var hash = window.location.hash;
+      hash && $('a[href="' + hash + '"]').tab('show');
+      window.addEventListener('hashchange', function() {
+        var changedHash = window.location.hash;
+        changedHash && $('a[href="' + changedHash + '"]').tab('show');
+      }, false);
+
       $('.equal-height').setColumnsEqualHeight();
       $('.select-box').setSelectBox();
       $('.tab-link').tabLinks();
@@ -41,9 +55,12 @@ name: FOS-20836
       });
 
     });
-    $('.rating-stars-init').ratingStars();
-    $('.tab-link').tabLinks();
   </script>
+
+  ##if(activeLanguageAny(en))
+  {% include '_load-reviews-js.html' %}
+  ##endif
+
 {% endblock %}
 
 {% block body %}
@@ -423,6 +440,19 @@ name: FOS-20836
 
       </div>
 
+      ##if(activeLanguageAny(en))
+      <div class="tab-pane" id="reviews">
+        <section class="tab-content-top-spacing">
+          <div class="container l-main-container">
+            <div class="row tab-content">
+            <div id="BVRRContainer"><p class="bv-loading">Loading...</p></div>
+            [@P[userControl:<Data location="~/Shared/Tabs/controls/BVReviewsNoJS.ascx"><Parameters><Parameter key="ProductId" value="ssl-certificates" /><Parameter key="ReviewNumber" value="4" /></Parameters></Data>]@P]
+            </div>
+          </div>
+        </section>
+      </div>
+      ##endif
+
     </div>
     <!-- End main-tabs panes -->
     <section class="container l-main-container content-disclaimer">
@@ -444,5 +474,9 @@ name: FOS-20836
         </div>
       </div>
     </div>
+
+    ##if(activeLanguageAny(en))
+    {% include '_login-modal.html' %}
+    ##endif
 
 {% endblock %}
