@@ -28,12 +28,12 @@
 
 
 END DOC BLOCK -->
-<phrase key="meta-title" />
-Static IP Hosting | Tackle Your Advanced Hosting Needs - GoDaddy
+<phrase key="page-title" />
+VPS Hosting | Affordable &amp; Configurable VPS plans - GoDaddy
 <phrase key="meta-description" />
-Get a dedicated IP address for your hosting account today. We have the control you need for all of your domains.
+VPS Hosting gives you more power than traditional hosting. Our VPS hosting solutions are affordable and easier to manage than a dedicated server.
 <phrase key="meta-keywords" />
-static ip, dedicated IP, unique address, unique url, hosting IP
+vps hosting,vps,virtual server,windows vps, linux vps, vps server,virtual private server,virtual servers,virtual private servers,windows virtual server,linux virtual server,virtual private server hosting,vps servers,virtual dedicated server
 <phrase key="configTitle" />
 Windows Virtual Private Server - Value
 <phrase key="configTitleText" />
@@ -284,3 +284,189 @@ Access to our flatrate custom support services
 <sup>*</sup> Note: Administrative Access is unavailable with the Assisted Service Plan
 <phrase key="learnModalDisclaimerModalText2" />
 <sup>**</sup> In most cases, patching will be performed weekly, though some patches may be applied sooner if the severity and likelihood of exploit is high. If a patch is found to break a customer&#039;s application, the customer will be able to contact the managed services support center and request that the patch be rolled back, free of charge. 
+<phrase key="changePlan" />
+Unavailable: <a onclick="changePlan();">Change to a CentOS Plan</a>
+<phrase key="AddonTitle" />
+Add-ons
+<phrase key="bandwidthDisclaimer" />
+*Additional <span data-original-title="The Order Summary displays the total monthly cost of the selected server configuration. However, the additional bandwidth will be a recurring monthly charge for the selected term length and only the first month's charge will be displayed in your cart upon initial purchase." data-html='true' class='isToolTip'>bandwidth costs</span> are billed monthly.
+<phrase key="15FTPAddon" />
+FTP Backup: 15 GB FTP backup
+<phrase key="30FTPAddon" />
+FTP Backup: 30 GB FTP backup
+<phrase key="60FTPAddon" />
+FTP Backup: 60 GB FTP backup
+<phrase key="120FTPAddon" />
+FTP Backup: 120 GB FTP backup
+<phrase key="DailyManged7Addon" />
+Managed Backup: Daily, 7-Day
+<phrase key="DailyManged30Addon" />
+Managed Backup: Daily, 30-Day
+<phrase key="WeeklyManged4Addon" />
+Managed Backup: Weekly, 4-week
+<phrase key="WeeklyManged12Addon" />
+Managed Backup: Weekly, 12-week
+<phrase key="1TBBandwidthAddon" />
+Bandwidth*: 1 TB
+<phrase key="3TBBandwidthAddon" />
+Bandwidth*: 3 TB
+<phrase key="5TBBandwidthAddon" />
+Bandwidth*: 15 TB
+<phrase key="10TBBandwidthAddon" />
+Bandwidth*: 10 TB
+<phrase key="500BandwidthAddon" />
+Bandwidth*: 500 GB
+<phrase key="1000BandwidthAddon" />
+Bandwidth*: 1000 GB
+<phrase key="1500BandwidthAddon" />
+Bandwidth*: 1500 GB
+<phrase key="2000BandwithAddon" />
+Bandwidth*: 2000 GB
+<phrase key="ServicePlanAddon" />
+Service Plan: Assisted Service Plan
+<phrase key="Plesk30Addon" />
+Control Panel: Parallels Plesk Panel 30 Domains
+<phrase key="Plesk100Addon" />
+Control Panel: Parallels Plesk Panel 100 Domains
+<phrase key="PleskUnlimtedAddon" />
+Control Panel: Parallels Plesk Panel Unlimted Domains
+<phrase key="cPanelAddon" />
+Control Panel: cPanel & WHM Unlimited
+<phrase key="PowerPackAddon" />
+Software: Parallels Plesk Panel Power Pack
+<phrase key="NoFTPLabel" />
+No FTP backup
+<phrase key="15FTPLabel" />
+15 GB FTP backup:
+<phrase key="30FTPLabel" />
+30 GB FTP backup:
+<phrase key="60FTPLabel" />
+60 GB FTP backup:
+<phrase key="120FTPLabel" />
+120 GB FTP backup:
+<phrase key="NoManagedBackup" />
+No Managed Backup
+<phrase key="7DayManaged" />
+Daily Managed, 7-day retention:
+<phrase key="30DayManaged" />
+Daily Managed, 30-day retention:
+<phrase key="4WeekManaged" />
+Weekly Managed, 4-week retention:
+<phrase key="12WeekManaged" />
+Weekly Managed, 12-week retention:
+<phrase key="NoBandwidth" />
+No additional bandwidth
+<phrase key="1TBBandwidth" />
+Add 1 TB/mo:
+<phrase key="3TBBandwidth" />
+Add 3 TB/mo:
+<phrase key="5TBBandwidth" />
+Add 5 TB/mo:
+<phrase key="10TBBandwidth" />
+Add 10 TB/mo:
+<phrase key="500GBBandwidth" />
+Add 500 GB/mo:
+<phrase key="1000GBBandwidth" />
+Add 1000 GB/mo:
+<phrase key="1500GBBandwidth" />
+Add 1500 GB/mo:
+<phrase key="2000GBBandwidth" />
+Add 2000 GB/mo:
+<phrase key="NoAssistedPlan" />
+No Assisted Service Plan
+<phrase key="AssistedServicePlan" />
+Assisted Service Plan: <strike>[@T[productprice:<current productid="1260" dropdecimal="false"  htmlsymbol="false" negative="parentheses" />]@T]</strike>
+<phrase key="AssistedServicePlanDetails1" />
+(3 month minimum) 
+<phrase key="AssistedServicePlanDetails2" />
+<a class="blue u crsr_pointer disclaimer move" data-scroll=".box4">A Parallels Plesk Panel is required.</a>
+<phrase key="NoControlPanel" />
+No control panel
+<phrase key="Plesk30Domains" />
+Parallels Plesk Panel for up to 30 Domains:
+<phrase key="NoAdditionalFeatures" />
+ No additional features
+<phrase key="PowerPackText" />
+ Parallels Plesk Panel with <span data-original-title='Add mobility, security, remote management and more to your panel and websites.' data-html='true' class='isToolTip'>Power Pack</span>:
+<phrase key="Plesk100Domains" />
+Parallels Plesk Panel for up to 100 Domains:
+<phrase key="PleskUnlimitedDomains" />
+Parallels Plesk Panel for Unlimited Domains:
+<phrase key="cPanelText" />
+cPanel & WHM Unlimited:
+<phrase key="512MB" />
+512 MB
+<phrase key="20GB" />
+20 GB
+<phrase key="1GB" />
+1 GB
+<phrase key="40GB" />
+40 GB
+<phrase key="1000GB" />
+1,000 GB
+<phrase key="2GB" />
+2 GB
+<phrase key="30GB" />
+30 GB
+<phrase key="60GB" />
+60 GB
+<phrase key="2000GB" />
+2,000 GB
+<phrase key="3GB" />
+3 GB
+<phrase key="45GB" />
+45 GB
+<phrase key="90GB" />
+90 GB
+<phrase key="3000GB" />
+3,000 GB
+<phrase key="4GB" />
+4 GB
+<phrase key="120GB" />
+120 GB
+<phrase key="4000GB" />
+4,000 GB
+<phrase key="8GB" />
+8 GB
+<phrase key="240GB" />
+240 GB
+<phrase key="8000GB" />
+8,000 GB
+<phrase key="BasicCentos" />
+Basic: Linux CentOS
+<phrase key="ecoCentos" />
+Economy: Linux CentOS
+<phrase key="valCentos" />
+Value: Linux CentOS
+<phrase key="deluxeCentos" />
+Deluxe: Linux CentOS
+<phrase key="premiumCentos" />
+Premium: Linux CentOS
+<phrase key="ultimateCentos" />
+Ultimate: Linux CentOS
+<phrase key="ecoFedora" />
+Economy: Linux Fedora
+<phrase key="valFedora" />
+Value: Linux Fedora
+<phrase key="deluxeFedora" />
+Deluxe: Linux Fedora
+<phrase key="premiumFedora" />
+Premium: Linux Fedora
+<phrase key="ultimateFedora" />
+Ultimate: Linux Fedora
+<phrase key="valWindows" />
+Value: Windows 2008 Standard
+<phrase key="deluxeWindows" />
+Deluxe: Windows 2008 Standard
+<phrase key="premiumWindows" />
+Premium: Windows 2008 Standard
+<phrase key="ultimateWindows" />
+Ultimate: Windows 2008 Standard
+<phrase key="RamSummary" />
+RAM:
+<phrase key="StorageSummary" />
+Storage:
+<phrase key="BandwidthSummary" />
+Bandwidth:
+<phrase key="PerMonth" />
+per month

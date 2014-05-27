@@ -8,10 +8,10 @@
                     <div class="col-xs-12">
                         <div class="config-continue-to-cart-wrapper-top config-title-container">
                             <div class="config-title">
-                                <h1>{{ configTitle }}</h1><a href="#" onclick="changePlan();" data-ci="90193">{{ configTitleLink }}</a>
+                                <h1></h1><a href="#" onclick="changePlan();" data-ci="90193">{{ configTitleLink }}</a>
                                 <p>[@L[cds.sales/gd/hosting/vps-hosting-config:configTitleText]@L]</p>
                             </div>
-                            <p class="config-continue-to-cart"><span class="icon-arrow-right"></span><a class="js-addtocart" data-ci="90194" href="javascript:void(0)">{{ configTitleContinueToCart }}</a></p>
+                            <p class="config-continue-to-cart"><span class="icon-arrow-right"></span><a class="js-addtocart" data-ci="90194">{{ configTitleContinueToCart }}</a></p>
                         </div>
                     </div>
                     <div class="config-steps-wrapper">
@@ -20,39 +20,26 @@
                     </div>
                     <!-- / End Left Column -->
                     <div class="config-cart-wrapper">
-                        <div class="order-summary-wrapper" data-itemDetails='{"1usr":"user","moreUsrs":"users","moTerm":"month term","yrTerm":"year term"}'>
+                        <div class="order-summary-wrapper">
                             <h3>[@L[cds.sales/gd/hosting/vps-hosting-config:orderSummaryTitle]@L]</h3>
-                            <div class="order-item" data-planLevel="Economy" style="display: none;">
-                                <p class="order-item-title">[@L[cds.sales/gd/hosting/vps-hosting-config:orderSummaryEmail]@L]</p>
-                                <div class="order-item-details-wrapper">
-                                    <span class="order-item-details"></span>
-                                    <span class="order-item-total orange-text"><span class="currency-symbol"></span><span class="currency-amount"></span></span>
-                                </div>
-                            </div>
-                            <div class="order-item" data-planLevel="Business" style="display: none;">
-                                <p class="order-item-title">[@L[cds.sales/gd/hosting/vps-hosting-config:orderSummaryEmail]@L]</p>
-                                <div class="order-item-details-wrapper">
-                                    <span class="order-item-details"></span>
-                                    <span class="order-item-total orange-text"><span class="currency-symbol"></span><span class="currency-amount"></span></span>
-                                </div>
-                            </div>
-                            <div class="order-item" data-planLevel="Premium" style="display: none;">
-                                <p class="order-item-title">[@L[cds.sales/gd/hosting/vps-hosting-config:orderSummaryBusiness]@L]</p>
-                                <div class="order-item-details-wrapper">
-                                    <span class="order-item-details"></span>
-                                    <span class="order-item-total orange-text"><span class="currency-symbol"></span><span class="currency-amount"></span></span>
-                                </div>
-                            </div>
                             <div class="order-total-wrapper">
-                                <p class="order-item-title">[@L[cds.sales/gd/hosting/vps-hosting-config:orderSummaryProductivity]@L]</p>
                                 <div class="order-item-details-wrapper">
-                                    <span class="order-item-details order-user-quantity"></span>
-                                    <span class="order-total"><span class="currency-amount" data-call-us="Call Us">$0.00</span></span>
+                                    <p class="order-item-title package" id="summaryOS"></p>
+                                    <p class="order-item-title" id="summaryRAM"></p>
+                                    <p class="order-item-title" id="summaryStorage"></p>
+                                    <p class="order-item-title" id="summaryBandwidth"></p>
+                                </div>
+                                <div class="order-item-addons-wrapper">
+                                    <p class="order-item-title package" >[@L[cds.sales/gd/hosting/vps-hosting-config:AddonTitle]@L]</p>
+                                    <ul class="addon-summary" id="addonSummary">
+                                    </ul> 
+                                    <span class="order-total"><span class="currency-amount"></span><span class="per-month"> [@L[cds.sales/gd/hosting/vps-hosting-config:permonth]@L]</span></span>
                                 </div>
                             </div>
                         </div>
                         <div class="subtotal-disclaimer">
                             <p>[@L[cds.sales/gd/hosting/vps-hosting-config:orderSummarySubtotal]@L]</p>
+                            <span class="addon-desc">[@L[cds.sales/gd/hosting/vps-hosting-config:bandwidthDisclaimer]@L]</span>
                         </div>
                         <div data-ci="90195" class="scroll-down-wrapper move" data-scroll=".box5">
                             <p class="green-text">[@L[cds.sales/gd/hosting/vps-hosting-config:orderSummarySubtotalDisc]@L]</p>

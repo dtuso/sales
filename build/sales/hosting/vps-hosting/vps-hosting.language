@@ -35,35 +35,33 @@ VPS Hosting gives you more power than traditional hosting. Our VPS hosting solut
 <phrase key="meta-keywords" />
 vps hosting,vps,virtual server,windows vps, linux vps, vps server,virtual private server,virtual servers,virtual private servers,windows virtual server,linux virtual server,virtual private server hosting,vps servers,virtual dedicated server
 <phrase key="HeaderHeadline" />
-GoDaddy Virtual Private Servers
+Virtual Private Servers
 <phrase key="HeaderSubHeadline" />
 Now everyone can afford the reliability, security and scalability of the Cloud.
-<phrase key="UptimeGuarantee" />
-99.9% UPTIME GUARANTEE on network
+<phrase key="HeaderUptimeGuarantee" />
+99.9% Uptime Guarantee*
 <phrase key="JsChatLive" />
 Need Advice? Chat Live!
 <phrase key="TabLink1" />
 Plans &amp; Pricing
-<phrase key="TabLink2" />
-Assisted Service Plan
 <phrase key="TabLink3" />
-Expert Hands
+Support
 <phrase key="TabLink4" />
 FAQ
 <phrase key="Tab1Header" />
 Our VPS Hosting is made to grow as your needs grow.
 <phrase key="Tab1HeaderText" />
-Get all the power and control of your own Virtual Server for less! With a GoDaddy VPS, your RAM and storage are guaranteed - we never overload. Plus, you can add more capacity anytime with just a few clicks*. Just choose the plan that&#039;s right for you, customize your bandwidth, control panel (Parallels<sup>&reg;</sup> Plesk Panel or cPanel<sup>&reg;</sup>) and backup options and leave the rest to us. Call <strong> [@T[support:<serverSupportPhone/>]@T]</strong> to get started now.
-<phrase key="NeedHelpBagde" />
-Need Help? Call
-<phrase key="NeedHelpBadgePhone" />
-[@T[support:<serverSupportPhone/>]@T]
+Get all the power and control of your own Virtual Server for less! With a GoDaddy VPS, your RAM and storage are guaranteed - we never overload. Plus, you can add more capacity anytime with just a few clicks*. Just choose the plan that&#039;s right for you, customize your bandwidth, control panel (Parallels<sup>&reg;</sup> Plesk Panel or cPanel<sup>&reg;</sup>) and backup options and leave the rest to us.
+<phrase key="NeedHelpBadgePhone1" />
+Need Help? For 24/7 sales: <a>[@T[support:<serverSupportPhone/>]@T]</a>
+<phrase key="NeedHelpBadgePhone2" />
+For 24/7 advanced support: <a>[@T[support:<advancedSupportPhone/>]@T]</a>
 <phrase key="SelectOS" />
 Select an operating system:
 <phrase key="OSCentOS" />
 CentOS
 <phrase key="CentOsVersion" />
-<strong>IPv6 Ready! CentOS Version 6.4</strong> is the operating system of choice for those looking for a highly stable version of Linux that offers enterprise-level reliability.
+<strong>IPv6 Ready! CentOS Version 6.5</strong> is the operating system of choice for those looking for a highly stable version of Linux that offers enterprise-level reliability.
 <phrase key="OSFedora" />
 Fedora
 <phrase key="FedoraOsVersion" />
@@ -71,7 +69,9 @@ Fedora
 <phrase key="OSWindows" />
 Windows
 <phrase key="WindowsOsVersion" />
-<strong>Our Windows Version 2012 Standard 64-Bit</strong> servers combine the familiar interface of the world&#039;s most popular operating system with a set of powerful features.
+<strong>Our Windows Version 2008 Standard 64-Bit</strong> servers combine the familiar interface of the world&#039;s most popular operating system with a set of powerful features.
+<phrase key="CategoryBasicTitle" />
+Basic
 <phrase key="CategoryEconomyTitle" />
 Economy
 <phrase key="StartingAt" />
@@ -108,14 +108,20 @@ OS:
 Linux CentOS
 <phrase key="RAMLabel" />
 RAM:
+<phrase key="CategoryBasicRam" />
+512 MB
 <phrase key="CategoryEconomyRam" />
 1 GB
 <phrase key="StorageLabel" />
 Storage:
+<phrase key="CategoryBasicStorage" />
+20 GB
 <phrase key="CategoryEconomyStorage" />
 40 GB
 <phrase key="BandwidthLabel" />
 Bandwidth:
+<phrase key="CategoryBasicBandwidth" />
+1,000 GB
 <phrase key="CategoryEconomyBandwidth" />
 1,000 GB
 <phrase key="MostPopularBadge" />
@@ -124,6 +130,8 @@ Most popular
 Value
 <phrase key="CategoryValueRam" />
 2 GB
+<phrase key="WindowsCategoryValueStorage" />
+30 GB
 <phrase key="CategoryValueStorage" />
 60 GB
 <phrase key="CategoryValueBandwidth" />
@@ -132,6 +140,8 @@ Value
 Deluxe
 <phrase key="CategoryDeluxeRam" />
 3 GB
+<phrase key="WindowsCategoryDeluxeStorage" />
+45 GB
 <phrase key="CategoryDeluxeStorage" />
 90 GB
 <phrase key="CategoryDeluxeBandwidth" />
@@ -140,6 +150,8 @@ Deluxe
 Premium
 <phrase key="CategoryPremiumRam" />
 4 GB
+<phrase key="WindowsCategoryPremiumStorage" />
+60 GB
 <phrase key="CategoryPremiumStorage" />
 120 GB
 <phrase key="CategoryPremiumBandwidth" />
@@ -148,6 +160,8 @@ Premium
 Ultimate
 <phrase key="CategoryUltimateRam" />
 8 GB
+<phrase key="WindowsCategoryUltimateStorage" />
+120 GB
 <phrase key="CategoryUltimateStorage" />
 240 GB
 <phrase key="CategoryUltimateBandwidth" />
@@ -158,24 +172,30 @@ Linux Fedora
 Windows Server 2008 Standard 64-bit
 <phrase key="PlansIncludeTabText" />
 All Plans Include
-<phrase key="SupportSubTitle1" />
-Each VPS Plan includes:
 <phrase key="SupportSubText1" />
 Free rapid setup
 <phrase key="SupportSubText2" />
-<strong class="secondary-color">FREE!</strong> <a class="isToolTip" data-html="true" title="<strong>Show customers they can do business with you safely.</strong><br />A [@T[productprice:<current productid="3604" dropdecimal="flase" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]/yr value, your GoDaddy SSL certificate keeps transactions with your Website secure. Take advantage of up to 256-bit encryption and 99% browser recognition - it&#039;s all free<sup>&#134;&#134;</sup> for the initial plan term purchased!" data-ci="88972">SSL Certificate</a><sup>&#134;&#134;&#134;</sup>
+<strong class="secondary-color">FREE!</strong> <a class="isToolTip" data-html="true" title="<strong>Show customers they can do business with you safely.</strong><br />A [@T[productprice:<current productid="3604" dropdecimal="flase" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]/yr value, your GoDaddy SSL certificate keeps transactions with your Website secure. Take advantage of up to 256-bit encryption and 99% browser recognition - it&#039;s all free<sup>&#134;&#134;</sup> for the initial plan term purchased!" data-ci="88972">SSL Certificate</a>
 <phrase key="SupportSubText3" />
 3 dedicated IPs
 <phrase key="SupportSubText4" />
 FTP access
+<phrase key="MoneyBackGuarantee" />
+Money-back guarantee<sup>*</sup>
+<phrase key="UptimeGuarantee" />
+99.9% uptime guarantee<sup>*</sup>
+<phrase key="SupportGoogleCredits" />
+<strong class="secondary-color">FREE!</strong> Up to [@T[currencyprice:<price usdamount="10000" dropdecimal="true" />]@T] Google<sup>&reg;</sup> Adwords<sup>&reg;</sup> Credit
+<phrase key="SupportBingCredits" />
+<strong class="secondary-color">FREE!</strong> Up to [@T[currencyprice:<price usdamount="10000" dropdecimal="true" />]@T] Bing Ad Credit
+<phrase key="SupportFacebookCredits" />
+<strong class="secondary-color">FREE!</strong> [@T[currencyprice:<price usdamount="5000" dropdecimal="true" />]@T] Facebook<sup>&reg;</sup> Advertising Credit
 <phrase key="SupportSubText5" />
-<strong class="secondary-color">FREE!</strong> <a class="isToolTip" data-html="true" href="javascript:atl_PopUp(&#039;[@T[link:<relative path='/popups/fotolia.aspx'><param name='app_hdr' value='99' /></relative>]@T]&#039;,&#039;foto_popup&#039;,&#039;left=50,top=50,scrollbars=yes,resizable=yes,width=600,height=550&#039;);" title="<strong>What can you do with 10 FREE credits from Fotolia.com?</strong><br />Fotolia&reg; has over 8,000,000 royalty-free photos, illustrations and videos available for your use. Quickly search and find images that will capture attention and add visual punch to your website. Use your free credits toward any photo, illustration or video; additional images start at just [@T[currencyprice:<price usdamount="75" dropdecimal="false" />]@T] each." data-ci="88973">10 Fotolia<sup>&reg;</sup> Credits;</a><sup>&#094;</sup>
-<phrase key="SupportSubText6" />
-<a href="javascript:atl_PopUp(&#039;[@T[link:<external linktype="communityurl" path="help/article/1419/" secure="false"/>]@T]&#039;,&#039;display2&#039;,&#039;left=20,top=20,scrollbars=yes,resizable=yes,width=800,height=700&#039;);" data-ci="88974">Bandwidth Overage Protection</a>
+<strong class="secondary-color">FREE!</strong> <a class="isToolTip" data-html="true" href="javascript:atl_PopUp(&#039;[@T[link:<relative path='/popups/fotolia.aspx'><param name='app_hdr' value='99' /></relative>]@T]&#039;,&#039;foto_popup&#039;,&#039;left=50,top=50,scrollbars=yes,resizable=yes,width=600,height=550&#039;);" title="<strong>What can you do with 10 FREE credits from Fotolia.com?</strong><br />Fotolia&reg; has over 8,000,000 royalty-free photos, illustrations and videos available for your use. Quickly search and find images that will capture attention and add visual punch to your website. Use your free credits toward any photo, illustration or video; additional images start at just [@T[currencyprice:<price usdamount="75" dropdecimal="false" />]@T] each." data-ci="88973">10 Fotolia<sup>&reg;</sup> Credits</a>
 <phrase key="SupportSubText7" />
 Best-of-breed routers and servers
 <phrase key="SupportSubText8" />
-<a href="javascript:atl_PopUp('[@T[link:<relative path='/popups/tipping-point.aspx'><param name='app_hdr' value='99' /></relative>]@T]','tpips_popup','left=50,top=50,scrollbars=yes,resizable=yes,width=600,height=150');" data-ci="88975">TippingPoint<sup>®</sup> Intrusion Prevention Systems</a>
+<a href="javascript:atl_PopUp('[@T[link:<relative path='/popups/tipping-point.aspx'><param name='app_hdr' value='99' /><param name='ci' value='88975' /></relative>]@T]','tpips_popup','left=50,top=50,scrollbars=yes,resizable=yes,width=600,height=150');" >TippingPoint<sup>®</sup> Intrusion Prevention Systems</a>
 <phrase key="SupportSubText9" />
 24/7 telephone, email and Web-based tech support
 <phrase key="SupportSubText10" />
@@ -204,18 +224,12 @@ Note: Each month is paid for in advance and begins upon the purchase of your acc
 Disclaimer
 <phrase key="DisclaimerModalItem01" />
 * Only CentOS and Fedora plans can be upgraded without reprovisioning. To upgrade a Windows server, you must purchase a new plan, backup your data, and cancel your existing server.
-<phrase key="DisclaimerModalItem02" />
-&#8224;&#8224;&#8224; SSL certificate is free only for the initial hosting plan term purchased, after which it will automatically renew at the then-current rate.
-<phrase key="DisclaimerModalItem03" />
-&#94; One promotional credit per customer, good for ten free download credits at Fotolia®. Products purchased using a Gift Card or Alipay do not provide eligibility for photography credits. Other restrictions apply. <a href="javascript:atl_PopUp(&#039;[@T[link:<relative path='/popups/fotolia.aspx'><param name='app_hdr' value='99' /></relative>]@T]&#039;,&#039;foto_popup&#039;,&#039;left=50,top=50,scrollbars=yes,resizable=yes,width=600,height=550&#039;);" target="_blank" data-ci="88979">View details.</a>
 <phrase key="DisclaimerModalItem04" />
 ** Additional bandwidth and Assisted Service Plan fees do not participate in the yearly discount. Bandwidth included in the base package is prepaid, whereas any additional bandwidth selected will be billed monthly.
 <phrase key="DisclaimerModalItem05" />
 *** Windows only
 <phrase key="DisclaimerModalItem06" />
 &#8225; Annual discounts available on NEW purchases only.
-<phrase key="DisclaimerModalItem07" />
-&#8225;&#8225; Disk space includes operating system files, which can be close to 1 GB in a CentOS/Fedora server or 16 GB on a Windows server. Please take that into consideration when choosing a server size that best fits your needs.
 <phrase key="DisclaimerModalItem08" />
 Products will automatically renew until cancelled. You may turn off the auto-renewal feature by visiting your GoDaddy account.
 <phrase key="HostingTechModalTitle1" />
@@ -304,58 +318,6 @@ Vigorous patch management**
 In-depth 24/7 monitoring helps ensure that our systems are secure**
 <phrase key="HostingTechModalText37" />
 **Web hosting plans only
-<phrase key="AssitedServiceHeader" />
-Assisted Service Plan
-<phrase key="AssitedServiceDescription" />
-Save the time and energy it takes to setup, monitor and maintain your dedicated server by letting our expert staff do it for you! With GoDaddy<sup>&reg;</sup> Assisted Service Plan, our team of server professionals will personally set up your dedicated server to deliver maximum performance. Plus, they will also handle select monitoring and maintenance issues that would otherwise drain your time and resources.
-<phrase key="AssitedServiceIncludesTitle" />
-Each Assisted Service Plan Includes - <a type="button" class="isToolTip as-tooltip" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Only CentOS and Fedora plans can be upgraded without reprovisioning. To upgrade a Windows server, you must purchase a new plan, backup your data, and cancel your existing server." data-ci="88980">restrictions apply</a>:
-<phrase key="AssitedServiceIncludesList1Title" />
-Initial Server Setup:
-<phrase key="AssitedServiceIncludesList1Text1" />
-Including installation of operating system and Parallels Plesk Panel.
-<phrase key="AssitedServiceIncludesList1Text2" />
-Setup for the following services:
-<phrase key="AssitedServiceIncludesList1Text2Sub1" />
-Domain Name & DNS
-<phrase key="AssitedServiceIncludesList1Text2Sub2" />
-Hosting Account
-<phrase key="AssitedServiceIncludesList1Text2Sub3" />
-SSL Certificate (1yr. Free Turbo SSL included with server purchase)
-<phrase key="AssitedServiceIncludesList1Text2Sub4" />
-Resource Allocation
-<phrase key="AssitedServiceIncludesList2Title" />
-Security Services (Anti-Virus, Scanning):
-<phrase key="AssitedServiceIncludesList2Text1" />
-Monthly scans, as well as real-time on-access virus scanning of files (Windows servers only).
-<phrase key="AssitedServiceIncludesList2Text2" />
-We scan your server once a month, to provide you with any recommended remediation actions.
-<phrase key="AssitedServiceIncludesList3Title" />
-Emergency Services:
-<phrase key="AssitedServiceIncludesList3Text1" />
-Direct access to advanced support for emergencies including:
-<phrase key="AssitedServiceIncludesList3Text2Sub1" />
-Service restart or reboot
-<phrase key="AssitedServiceIncludesList3Text2Sub2" />
-Server or service down
-<phrase key="AssitedServiceIncludesList3Text2Sub3" />
-Tier-3 Support troubleshooting
-<phrase key="AssitedServiceIncludesList4Title" />
-Patching Services:
-<phrase key="AssitedServiceIncludesList4Text1" />
-Patching services -<a type="button" class="isToolTip as-tooltip" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Additional bandwidth and Assisted Service Plan fees do not participate in the yearly discount. Bandwidth included in the base package is prepaid, whereas any additional bandwidth selected will be billed monthly." data-ci="88981">restrictions apply</a> for the base operating system, such as Fedora or Windows, which includes:
-<phrase key="AssitedServiceIncludesList4Text2Sub1" />
-Official updates released by the Fedora or Fedora Legacy Project.
-<phrase key="AssitedServiceIncludesList4Text2Sub2" />
-Official updates, bug fixes and security patches released by Microsoft.
-<phrase key="AssitedServiceIncludesList5Title" />
-Monitoring Services:
-<phrase key="AssitedServiceIncludesList5Text1" />
-Per server monitoring of basic services such as Ping and HTTP.
-<phrase key="AssitedServiceIncludesList6Title" />
-Custom Support Access:
-<phrase key="AssitedServiceIncludesList6Text1" />
-Access to our flat-rate <a href="#expert-hands" class="tab-link" data-ci="88982">custom support</a> services
 <phrase key="PacakgeBtn" />
 Choose your Package
 <phrase key="ExpertHandsIncludedSupport" />
@@ -376,48 +338,48 @@ A root user password change request failed to resolve successfully.
 If you need custom work, such as Advanced scripting, programming or troubleshooting, you need our
 <phrase key="ExpertHandsIncludedSupportText1Link" />
 Assisted Service Plan.
-<phrase key="ExpertHandsTitle" />
-Expert Hands<sup>&reg;</sup>
-<phrase key="ExpertHandsDescription" />
-Need help administering your server? Make the most of your Private Server by letting our expert staff help you with your specific needs. Call [@T[support:<serverSupportPhone/>]@T] for pricing and assistance.
-<phrase key="ExpertHandsList1Title" />
-Expert Hands services include:
-<phrase key="ExpertHandsList1Text1" />
-Intrusion Prevention
-<phrase key="ExpertHandsList1Text2" />
-Firewall Rules
-<phrase key="ExpertHandsList1Text3" />
-Server Setup (add 1 domain, configure DNS, add 1 email address, provide settings for customer to upload website content)
-<phrase key="ExpertHandsList1Text4" />
-Advanced Performance analysis
-<phrase key="ExpertHandsList1Text5" />
-Apache Tuning
-<phrase key="ExpertHandsList1Text6" />
-MySQL Optimization
-<phrase key="ExpertHandsList1Text7" />
-Application Support (Install/update/configure)
-<phrase key="ExpertHandsList1Text8" />
-Patching Control Panel
-<phrase key="ExpertHandsList1Text9" />
-Patching Apps
-<phrase key="ExpertHandsList1Text10" />
-Database assistance, such as data import/export
-<phrase key="ExpertHandsList1Text11" />
-Port changes such as ssh, rdc and remote database access
-<phrase key="ExpertHandsList1Text12" />
+<phrase key="AdvancedSupportTitle" />
+Advanced Support
+<phrase key="AdvancedSupportDescription" />
+Need help administering your server? Make the most of your Virtual Private Server by letting our expert staff help you with your specific needs. Call [@T[support:<serverSupportPhone/>]@T] for a quote and get the advanced support you need today.
+<phrase key="AdvancedSupportList1Title" />
+Services include:
+<phrase key="AdvancedSupportList1Text1" />
 Security Scans and Audits
-<phrase key="ExpertHandsList2Title" />
-Expert Hands services will not perform the following tasks:
-<phrase key="ExpertHandsList2Text1" />
-Script troubleshooting
-<phrase key="ExpertHandsList2Text2" />
-Kernel modifications
-<phrase key="ExpertHandsList2Text3" />
-Advanced scripting/web programming
-<phrase key="ExpertHandsList2Text4" />
-OS Hardening
-<phrase key="ExpertHandsList2Text5" />
-Updates to IP tables and firewalls
+<phrase key="AdvancedSupportList1Text2" />
+Intrusion Prevention
+<phrase key="AdvancedSupportList1Text3" />
+Firewall Rules
+<phrase key="AdvancedSupportList1Text4" />
+Server Setup includes:
+<phrase key="AdvancedSupportList1Text5" />
+Software Installation
+<phrase key="AdvancedSupportList1Text6" />
+DNS Setup
+<phrase key="AdvancedSupportList1Text7" />
+Domain Name Setup
+<phrase key="AdvancedSupportList1Text8" />
+Advanced Performance Analysis
+<phrase key="AdvancedSupportList1Text9" />
+Apache Optimization
+<phrase key="AdvancedSupportList1Text10" />
+MySQL Optimization
+<phrase key="AdvancedSupportList1Text11" />
+Application Support includes:
+<phrase key="AdvancedSupportList1Text12" />
+Install and update approved Web applications
+<phrase key="AdvancedSupportList1Text13" />
+Configure any apps installed during setup
+<phrase key="AdvancedSupportList1Text14" />
+Database Management including data import and export
+<phrase key="AdvancedSupportList1Text15" />
+Port changes such as SSH, RDC and remote database access
+<phrase key="AdvancedSupportList1Text16" />
+Software Installation
+<phrase key="AdvancedSupportList1Text17" />
+DNS Setup
+<phrase key="AdvancedSupportList1Text18" />
+Domain Name Setup
 <phrase key="FaqTitle" />
 Frequently Asked Questions
 <phrase key="FaqQuestion1" />
@@ -436,3 +398,25 @@ Are there any restrictions on the content I can keep on my virtual private serve
 How do I install software on my Windows virtual private server?
 <phrase key="FaqQuestion8" />
 What name servers do I use with my virtual private server?
+<phrase key="RegionLabel" />
+Region:
+<phrase key="US" />
+US
+<phrase key="EU" />
+EU
+<phrase key="AP" />
+AP
+<phrase key="RestrictionsApply" />
+Restrictions Apply
+<phrase key="GBRestrictions" />
+Disk space includes operating system files, which can be close to 1 GB in a CentOS/Fedora server or 16 GB on a Windows server. Please take that into consideration when choosing a server size that best fits your needs.
+<phrase key="SSLRestrictions" />
+SSL certificate is free only for the initial hosting plan term purchased, after which it will automatically renew at the then-current rate.
+<phrase key="GoogleRestrictions" />
+One promotional credit per customer for a new Google AdWords account. Products purchased using a Gift Card or Alipay do not provide eligibility for advertising credits. Minimum spend [@T[currencyprice:<price usdamount="2500" dropdecimal="false" />]@T]. Offer valid to US & Canada residents only, excluding government controlled entities and parties. Other restrictions apply. <a href=&quot;javascript:void(window.open('[@T[link:<relative path='/popups/google-adwords.aspx'><param name='ci' value='90612' /><param name='app_hdr' value='99' /></relative>]@T]','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=550,height=675'))&quot;>View Details</a>
+<phrase key="BingRestrictions" />
+One promotional credit per customer for a new Microsoft<sup class='supsymbol'>&reg;</sup> Advertiser account. Products purchased using a Gift Card or Alipay do not provide eligibility for advertising credits. Offer valid to US residents only, other restrictions apply.<br/><a href=&quot;javascript:void(window.open('[@T[appSetting:<setting name='BING_AD_CREDIT_LINK' />]@T]','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=1060,height=675'))&quot;>View Details</a>
+<phrase key="FacebookRestrictions" />
+One promotional credit per customer for a new Facebook<sup class='supsymbol'>&reg;</sup> Advertiser account. Products purchased using a Gift Card or Alipay do not provide eligibility for advertising credits. Offer valid only for purchase of advertising in the US, Canada, UK, and Australia. Other restrictions apply. <a href=&quot;javascript:void(window.open('[@T[link:<relative path='/popups/facebook-ads.aspx'><param name='ci' value='90611' /><param name='app_hdr' value='99' /></relative>]@T]','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=550,height=675'))&quot;>View Details</a>
+<phrase key="FotoliaRestrictions" />
+One free promotional credit per customer, good for ten free download credits at Fotolia. Products purchased using a Gift Card or Alipay do not provide eligibility for photography credits. Other restrictions apply. <a href=&quot;javascript:void(window.open('[@T[link:<relative path='/popups/fotolia.aspx'><param name='app_hdr' value='99' /><param name='ci' value='88993' /></relative>]@T]','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=550,height=675'))&quot;>View Details</a>

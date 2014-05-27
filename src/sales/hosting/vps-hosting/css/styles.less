@@ -2,6 +2,7 @@
   background-image: url("../img/bg-main-banner-image.jpg");
   background-position: center top;
   background-repeat: no-repeat;
+  position: relative;
 }
 .main-banner-content {
   padding-bottom: 4.071428571em;
@@ -140,6 +141,27 @@
   margin-top: 0.928571429em;
   vertical-align: top;
 }
+.region-content{
+  background-color: #cee6c2;
+  font-weight:bold;
+  display: inline-block;
+  padding-left: .5em;
+  padding-right:.5em;
+}
+.region-label{
+  font-size: 1em;
+  margin-bottom: 0.678571429em;
+  margin-right: 0.678571429em;
+  display: inline-block;
+}
+.region-radios{
+list-style: none;
+display: inline-block;
+margin-bottom: 0;
+}
+.region-radios > li{
+display: inline-block;
+}
 .operating-systems-label {
   font-family: 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;
   font-size: 1.714285714em;
@@ -155,6 +177,7 @@
 .operating-systems-label {
   font-size: 2em;
   margin-bottom: 0.678571429em;
+
 }
 #hostingTechModal > .modal-dialog {
   width: 700px;
@@ -215,6 +238,14 @@
 .expert-hands-list > li {
   margin-bottom: 0.571428571em;
 }
+.expert-hands-list-two > li {
+  margin-bottom: 0.571428571em;
+}
+.expert-hands-list-two {
+  list-style-type: circle;
+  padding-left: 2em;
+  margin-bottom: .5em;
+}
 .font-16 > .as-tooltip {
   font-size: 0.6875em;
 }
@@ -224,4 +255,34 @@
 .faq-content-column > ul {
   list-style: none;
 }
+a:focus{
+  outline: none;
+}
+.compare-top-badge-wrapper {
+position: relative;
+top: -5px;
+}
+.compare-top-badge {
+position: absolute;
+bottom: 0;
+right: 0;
+background-color: #F6333F;
+color: #FFF;
+padding: 10px;
+}
+.compare-top-badge > a {
+color: #ffffff;
+font-weight: bold;
+}
+.disclaimer-note {
+font-size: 0.714285714em;
+line-height: 1.3em;
+}
+.tooltip-delay{
+  border-bottom: 1px dashed #333;
+  color: #333;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 /*# sourceMappingURL=/global/css/main.css.map */

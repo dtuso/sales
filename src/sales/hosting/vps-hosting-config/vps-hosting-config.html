@@ -1,76 +1,40 @@
 ---
 location: sales/hosting/vps-hosting-config.aspx
-id: 53615dcbf778fc1808589235
+id: 537d4339f778fc2460fbadc8
 name: FOS-1310
 ---
 {% extends 'config-base.html' %}
 
 {% block steps %}
-                        <form action="" >
-                            <div class="config-step medium-margin-top-step">
+                      ##if(isManager())
+                          <form action="[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" parammode="explicit" />]@T]" method="get" id="configForm" >
+                      ##else
+                          <form action="[@T[link:<external linktype="carturl" path="/basket.aspx" parammode="explicit" />]@T]" method="get" id="configForm"  >
+                      ##endif
+                            <div class="config-step medium-margin-top-step backup">
                                 <span class="step-ribbon blue-step-ribbon step-number-text">[@L[cds.sales/gd/hosting/vps-hosting-config:batch0]@L]</span>
                                 <h2>[@L[cds.sales/gd/hosting/vps-hosting-config:title0]@L]</h2>
                                 <p class="config-lead orange-text">[@L[cds.sales/gd/hosting/vps-hosting-config:subtitle0]@L]</p>
-                                <div class="config-product-wrapper config-product-vps" data-planLevel="Economy">
+                                <div class="config-product-wrapper config-product-vps" id="ftpsolution">
                                     <div>
                                         <h3 class="product-name">[@L[cds.sales/gd/hosting/vps-hosting-config:list0title0]@L]</h3>
-                                        <ul class="product-options">
-                                            <li>
-                                                <input type="radio" class="defselindx" id="nobackup" name="backup" checked="checked" value="" onclick="vdedserver_cust_js.bkClick(this);" data-ci="90196">
-                                                <label for="nobackup">[@L[cds.sales/gd/hosting/vps-hosting-config:list0NoFTP]@L]</label>
-                                            </li>
-                                            <li>
-                                                <input type="radio" class="bkitem priceitem" id="15gbbackup" name="backup" value="399|3070|1" onclick="vdedserver_cust_js.bkClick(this);" data-ci="90197">
-                                                <label for="15gbbackup">15 [@L[cds.sales/gd/hosting/vps-hosting-config:list0GBFTP]@L] $3.99[@L[cds.sales/gd/hosting/vps-hosting-config:mo]@L]</label>
-                                            </li>
-                                            <li>
-                                                <input type="radio" class="bkitem priceitem" id="30gbbackup" name="backup" value="799|133|1" onclick="vdedserver_cust_js.bkClick(this);" data-ci="90198">
-                                                <label for="30gbbackup">30 [@L[cds.sales/gd/hosting/vps-hosting-config:list0GBFTP]@L] $7.99[@L[cds.sales/gd/hosting/vps-hosting-config:mo]@L]</label>
-                                            </li>
-                                            <li>
-                                                <input type="radio" class="bkitem priceitem" id="60gbbackup" name="backup" value="1299|3071|1" onclick="vdedserver_cust_js.bkClick(this);" data-ci="90199">
-                                                <label for="60gbbackup">60 [@L[cds.sales/gd/hosting/vps-hosting-config:list0GBFTP]@L] $12.99[@L[cds.sales/gd/hosting/vps-hosting-config:mo]@L]</label>
-                                            </li>
-                                            <li>
-                                                <input type="radio" class="bkitem priceitem" id="120gbbackup" name="backup" value="1999|3072|1" onclick="vdedserver_cust_js.bkClick(this);" data-ci="90200">
-                                                <label for="120gbbackup">120 [@L[cds.sales/gd/hosting/vps-hosting-config:list0GBFTP]@L] $19.99[@L[cds.sales/gd/hosting/vps-hosting-config:mo]@L]</label>
-                                            </li>
+                                        <ul class="product-options" id="ftpOptions">
+ 
                                         </ul> 
                                     </div>
                                 </div>
                                 <!-- /End Product -->
-                                <div class="config-product-wrapper config-product-last config-product-vps" data-planLevel="Premium">
+                                <div class="config-product-wrapper config-product-last config-product-vps" id="managedbackup">
                                     <div>
                                         <h3 class="product-name">[@L[cds.sales/gd/hosting/vps-hosting-config:list1title0]@L]</h3>
-                                        <ul class="product-options">
-                                            <li>
-                                                <input type="radio" class="defselindx" id="nomngbackup" name="mngbackup" checked="checked" value="" onclick="vdedserver_cust_js.mbkClick(this);" data-ci="90201">
-                                                <label for="nomngbackup">[@L[cds.sales/gd/hosting/vps-hosting-config:list1NoManaged]@L]</label>
-                                            </li>
-                                            <li>
-                                                <input type="radio" class="mkitem priceitem" id="7daybackup" name="mngbackup" value="1998|1368|1" onclick="vdedserver_cust_js.mbkClick(this);" data-ci="90202">
-                                                <label for="7daybackup">[@L[cds.sales/gd/hosting/vps-hosting-config:list1DailyManaged]@L] 7[@L[cds.sales/gd/hosting/vps-hosting-config:list1DayRetention]@L] $19.98[@L[cds.sales/gd/hosting/vps-hosting-config:mo]@L]</label>
-                                            </li>
-                                            <li>
-                                                <input type="radio" class="mkitem priceitem" id="30daybackup" name="mngbackup" value="3999|1362|1" onclick="vdedserver_cust_js.mbkClick(this);" data-ci="90203">
-                                                <label for="30daybackup">[@L[cds.sales/gd/hosting/vps-hosting-config:list1DailyManaged]@L] 30[@L[cds.sales/gd/hosting/vps-hosting-config:list1DayRetention]@L] $39.99[@L[cds.sales/gd/hosting/vps-hosting-config:mo]@L]</label>
-                                            </li>
-                                            <li>
-                                                <input type="radio" class="mkitem priceitem" id="4weekbackup" name="mngbackup" value="2999|1363|1" onclick="vdedserver_cust_js.mbkClick(this);" data-ci="90204">
-                                                <label for="4weekbackup">[@L[cds.sales/gd/hosting/vps-hosting-config:list1WeeklyManaged]@L] 4[@L[cds.sales/gd/hosting/vps-hosting-config:list1weekRetention]@L] $29.99[@L[cds.sales/gd/hosting/vps-hosting-config:mo]@L]</label>
-                                            </li>
-                                            <li>
-                                                <input type="radio" class="mkitem priceitem" id="12weekbackup" name="mngbackup" value="4999|1364|1" onclick="vdedserver_cust_js.mbkClick(this);" data-ci="90205">
-                                                <label for="12weekbackup">[@L[cds.sales/gd/hosting/vps-hosting-config:list1WeeklyManaged]@L] 12[@L[cds.sales/gd/hosting/vps-hosting-config:list1weekRetention]@L] $49.99[@L[cds.sales/gd/hosting/vps-hosting-config:mo]@L]</label>
-                                            </li>
+                                        <ul class="product-options" id="managedbackupOptions">
                                         </ul> 
                                     </div>
                                 </div>
                                 <!-- /End Product -->
                             </div>
-                            <div class="config-step-box-shadow"></div>
-                            <!-- / End Step 1 -->
-                            <div data-ci="90224" class="config-step-break move" data-scroll=".box2">
+                            <div class="config-step-box-shadow backup"></div>
+                            <div data-ci="90224" class="config-step-break move backup" data-scroll=".box2">
                                 <span class="icon-down"></span>
                             </div>
 
@@ -78,44 +42,22 @@ name: FOS-1310
                                 <span class="step-ribbon orange-step-ribbon js-step2 step-number-text">[@L[cds.sales/gd/hosting/vps-hosting-config:batch1]@L]</span>
                                 <h2>[@L[cds.sales/gd/hosting/vps-hosting-config:title1]@L]</h2>
                                 <p class="config-lead orange-text">[@L[cds.sales/gd/hosting/vps-hosting-config:subtitle1]@L]</p>
-                                <div class="config-product-wrapper config-product-vps" data-planLevel="Economy">
+                                <div class="config-product-wrapper config-product-vps" id="bandwidth">
                                     <div>
                                         <h3 class="product-name">[@L[cds.sales/gd/hosting/vps-hosting-config:list2title0]@L]</h3>
-                                        <ul class="product-options">
-                                            <li>
-                                                <input type="radio" class="defselindx" id="nobndwdth" name="bandwidth" checked="checked" value="" onclick="vdedserver_cust_js.bwClick(this);" data-ci="90206">
-                                                <label for="nobndwdth">[@L[cds.sales/gd/hosting/vps-hosting-config:list2NoAdditionalBand]@L]</label>
-                                            </li>
-                                            <li>
-                                                <input type="radio" class="bwitem priceitem" id="5bndwdth" name="bandwidth" value="1499|1225|1" onclick="vdedserver_cust_js.bwClick(this);" data-ci="90207">
-                                                <label for="5bndwdth">[@L[cds.sales/gd/hosting/vps-hosting-config:list2Add]@L] 500 [@L[cds.sales/gd/hosting/vps-hosting-config:list2GBmo]@L] $14.99[@L[cds.sales/gd/hosting/vps-hosting-config:mo]@L]</label>
-                                            </li>
-                                            <li>
-                                                <input type="radio" class="bwitem priceitem" id="10bndwdth" name="bandwidth" value="2998|1225|2" onclick="vdedserver_cust_js.bwClick(this);" data-ci="90208">
-                                                <label for="10bndwdth">[@L[cds.sales/gd/hosting/vps-hosting-config:list2Add]@L] 1,000 [@L[cds.sales/gd/hosting/vps-hosting-config:list2GBmo]@L] $29.98[@L[cds.sales/gd/hosting/vps-hosting-config:mo]@L]</label>
-                                            </li>
-                                            <li>
-                                                <input type="radio" class="bwitem priceitem" id="15bndwdth" name="bandwidth" value="4497|1225|3" onclick="vdedserver_cust_js.bwClick(this);" data-ci="90209">
-                                                <label for="15bndwdth">[@L[cds.sales/gd/hosting/vps-hosting-config:list2Add]@L] 1,500 [@L[cds.sales/gd/hosting/vps-hosting-config:list2GBmo]@L] $44.97[@L[cds.sales/gd/hosting/vps-hosting-config:mo]@L]</label>
-                                            </li>
-                                            <li>
-                                                <input type="radio" class="bwitem priceitem" id="20bndwdth" name="bandwidth" value="5996|1225|4" onclick="vdedserver_cust_js.bwClick(this);" data-ci="90210">
-                                                <label for="20bndwdth">[@L[cds.sales/gd/hosting/vps-hosting-config:list2Add]@L] 2,000 [@L[cds.sales/gd/hosting/vps-hosting-config:list2GBmo]@L] $59.96[@L[cds.sales/gd/hosting/vps-hosting-config:mo]@L]</label>
-                                            </li>
+                                        <ul class="product-options" id="bandwidthOptions">
                                         </ul> 
                                     </div>
                                 </div>
                                 <!-- /End Product -->
                             </div>
                             <div class="config-step-box-shadow"></div>
-                            <!-- / End Step 1 -->
                             <div data-ci="90224" class="config-step-break move" data-scroll=".box3">
                                 <span class="icon-down"></span>
                             </div>
 
 
-
-                            <div class="config-step large-margin-top-step box3">
+                            <div class="config-step large-margin-top-step box3 assistedservice" >
                                 <span class="step-ribbon blue-step-ribbon step-number-text">[@L[cds.sales/gd/hosting/vps-hosting-config:batch2]@L]</span>
                                 <h2>[@L[cds.sales/gd/hosting/vps-hosting-config:title2]@L]</h2>
                                 <p class="config-lead orange-text">[@L[cds.sales/gd/hosting/vps-hosting-config:subtitle2]@L]</p>
@@ -123,131 +65,399 @@ name: FOS-1310
                                     <div>
                                         <h3 class="product-name">[@L[cds.sales/gd/hosting/vps-hosting-config:list3title0]@L]</h3>
                                         <p class="note">[@L[cds.sales/gd/hosting/vps-hosting-config:list3title1]@L]</p>
-                                        <ul class="product-options product-options-vps">
-                                            <li>
-                                                <input type="radio" value="" onclick="vdedserver_cust_js.aspClick(this);" checked="checked" name="assitsvc" id="noassitsvc" class="defselindx" data-ci="90212">
-                                                <label for="noassitsvc">[@L[cds.sales/gd/hosting/vps-hosting-config:list3item0]@L]</label>
-                                            </li>
-                                            <li>
-                                                <input type="radio" value="12999|1264|3" onclick="vdedserver_cust_js.aspClick(this);" name="assitsvc" id="yesassitsvc" class="spitem priceitem" data-ci="90213">
-                                                <label for="yesassitsvc">[@L[cds.sales/gd/hosting/vps-hosting-config:list3item1]@L]</label>
-                                            </li>
-                                        </ul> 
+                                        <ul class="product-options product-options-vps" id="assistedserviceOptions">
+                                        </ul>
+                                        <p class="disclaimer"><span class="product-desc">[@L[cds.sales/gd/hosting/vps-hosting-config:AssistedServicePlanDetails1]@L]</span></p>
+                                        [@L[cds.sales/gd/hosting/vps-hosting-config:AssistedServicePlanDetails2]@L] 
                                     </div>
                                 </div>
                                 <!-- /End Product -->
                             </div>
-                            <div class="config-step-box-shadow"></div>
-                            <!-- / End Step 1 -->
-                            <div data-ci="90224" class="config-step-break move" data-scroll=".box4">
+                            <div class="config-step-box-shadow assistedservice"></div>
+                            <div data-ci="90224" class="config-step-break move assistedservice" data-scroll=".box4">
                                 <span class="icon-down"></span>
                             </div>
 
 
                             <div class="config-step large-margin-top-step box4">
-                                <span class="step-ribbon red-step-ribbon step-number-text">[@L[cds.sales/gd/hosting/vps-hosting-config:batch3]@L]</span>
-                                <h2>[@L[cds.sales/gd/hosting/vps-hosting-config:title4]@L]</h2>
-                                <p class="config-lead orange-text">[@L[cds.sales/gd/hosting/vps-hosting-config:subtitle4]@L]</p>
-                                <div class="config-product-wrapper config-product-vps" data-planLevel="Economy">
+                              <span class="step-ribbon red-step-ribbon step-number-text">[@L[cds.sales/gd/hosting/vps-hosting-config:batch3]@L]</span>
+                                <h3 class="product-name nocontrolpanel">[@L[cds.sales/gd/hosting/vps-hosting-config:changePlan]@L]</h3>
+                                <div class="controlpanel">
+                                  <h2>[@L[cds.sales/gd/hosting/vps-hosting-config:title4]@L]</h2>
+                                  <p class="config-lead orange-text windows">[@L[cds.sales/gd/hosting/vps-hosting-config:subtitle4]@L]</p>
+                                </div>
+                                <div class="config-product-wrapper config-product-vps controlpanel">
                                     <div>
-                                        <h3 class="product-name">[@L[cds.sales/gd/hosting/vps-hosting-config:list4title0]@L]</h3>
-                                        <ul class="product-options product-options-vps">
-                                            <li class="disableable" data-ci="90216">
-                                                <input type="radio" onclick="vdedserver_cust_js.cpClick(this);" checked="checked" name="controlpanel" id="nocpanel">
-                                                <label for="nocpanel" id="fornocpanel">[@L[cds.sales/gd/hosting/vps-hosting-config:list4item0]@L]</label>
-                                            </li>
-                                            <li data-ci="90217">
-                                                <input type="radio" value="499|1222|1" onclick="vdedserver_cust_js.plk30Click(this);" name="controlpanel" id="plx30cpanel" class="cpitem priceitem children-show" data-child=".child1" >
-                                                <label for="plx30cpanel">[@L[cds.sales/gd/hosting/vps-hosting-config:list4item1]@L]</label>
-
-                                                <div id="plx30Sftwr" class="defhide children-hide child1 sub-radio-option">
-                                                    <input type="radio" value="" onclick="vdedserver_cust_js.plk30Click(this);" checked="checked" name="plesk30" id="plx30noaddl" class="defselindx">
-                                                    <label for="plx30noaddl">[@L[cds.sales/gd/hosting/vps-hosting-config:list4subItem0]@L]</label>
-                                                    <br>
-                                                    <input type="radio" value="699|2751|1" onclick="vdedserver_cust_js.plk30Click(this);" name="plesk30" id="plx30pro" class="switem priceitem">
-                                                    <label for="plx30pro">[@L[cds.sales/gd/hosting/vps-hosting-config:list4subItem1]@L]</label>
-                                                </div>
-
-                                            </li>
-                                            <li data-ci="90219">
-                                                <input type="radio" value="699|1223|1" onclick="vdedserver_cust_js.plk100Click(this);" name="controlpanel" id="plx100cpanel" class="cpitem priceitem children-show" data-child=".child2">
-                                                <label for="plx100cpanel">[@L[cds.sales/gd/hosting/vps-hosting-config:list4item2]@L]</label>
-
-                                                <div id="plx100Sftwr" class="defhide children-hide child2 sub-radio-option">
-                                                    <input type="radio" value="" onclick="vdedserver_cust_js.plk100Click(this);" checked="checked" name="plesk100" id="plx100noaddl" class="defselindx">
-                                                    <label for="plx100noaddl">[@L[cds.sales/gd/hosting/vps-hosting-config:list4subItem0]@L]</label>
-                                                    <br>
-                                                    <input type="radio" value="699|2751|1" onclick="vdedserver_cust_js.plk100Click(this);" name="plesk100" id="plx100pro" class="switem priceitem">
-                                                    <label for="plx100pro">[@L[cds.sales/gd/hosting/vps-hosting-config:list4subItem1]@L]</label>
-                                                </div>
-
-                                            </li>
-                                            <li data-ci="90221">
-                                                <input type="radio" value="999|1224|1" onclick="vdedserver_cust_js.plkunlClick(this);" name="controlpanel" id="plxunlcpanel" class="cpitem priceitem children-show" data-child=".child3">
-                                                <label for="plxunlcpanel">[@L[cds.sales/gd/hosting/vps-hosting-config:list4item3]@L]</label>
-                                        
-                                                <div id="plxunlSftwr" class="defhide children-hide child3 sub-radio-option">
-                                                    <input type="radio" value="" onclick="vdedserver_cust_js.plkunlClick(this);" checked="checked" name="pleskunl" id="plxunlnoaddl" class="defselindx">
-                                                    <label for="plxunlnoaddl">[@L[cds.sales/gd/hosting/vps-hosting-config:list4subItem0]@L]</label>
-                                                    <br>
-                                                    <input type="radio" value="699|2751|1" onclick="vdedserver_cust_js.plkunlClick(this);" name="pleskunl" id="plxunlpro" class="switem priceitem">
-                                                    <label for="plxunlpro">[@L[cds.sales/gd/hosting/vps-hosting-config:list4subItem1]@L]</label>
-                                                </div>
-
-                                            </li>
-                                            <li class="disableable">
-                                                <input id="cpanelunl" class="cpitem priceitem" type="radio" value="999|1240|1" onclick="vdedserver_cust_js.cpClick(this);" name="controlpanel" data-ci="90222">
-                                                <label id="forcpanelunl" for="cpanelunl" >[@L[cds.sales/gd/hosting/vps-hosting-config:list4item4]@L]</label>
-                                            </li>
-                                            
+                                        <h3 class="product-name windows">[@L[cds.sales/gd/hosting/vps-hosting-config:list4title0]@L]</h3>
+                                        <ul class="product-options product-options-vps" id="controlpanelOptions">
                                         </ul> 
                                     </div>
                                 </div>
                                 <!-- /End Product -->
                             </div>
                             <div class="config-step-box-shadow"></div>
-                            <!-- / End Step 1 -->
 
                             <div class="config-continue-to-cart-wrapper">
                                 <a data-ci="90223" class="btn btn-warning btn-lg js-addtocart box5"><span class="icon-shopping-cart"></span> [@L[cds.sales/gd/hosting/vps-hosting-config:configTitleContinueToCart]@L]</a>
-                                <form action="http://cart.godaddy.com/basket.aspx" method="get" data-addtocart="http://www.godaddy.com/api/package"></form>
                             </div> 
                         </form> 
 {% endblock %} 
 
 {% block footer %}
+  <script src="[@T[link:<javascriptroot />]@T]fos/office365/js/currency-calc.v1.0.2.min.js" type="text/javascript"></script>
+  <script>
+    if(typeof currencyCalc != "undefined"){
+      currencyCalc.base = '[@T[currencyprice:<price usdamount="1000000000" dropdecimal="false" dropsymbol="false" htmlsymbol="false" negative="parenthesis" />]@T]';
+    }
+  </script>
     <script>
-        $(function () {
-            $('.isToolTip').tooltip();
-            $('.move').scrollToSection();
-            var $disableableControl = $('input:radio[name="assitsvc"]'),
-            $disableableInput = $('.disableable > input'),
-            $disableableLabel = $('.disableable > label'),
-            $yesassitsvc = $('#yesassitsvc'),
-            $noassitsvc = $('#noassitsvc');
+      $(document).ready(function() {
+        var planBasePrice;
+        var plan = Config.getParameterByName('plan');
 
-            $disableableControl.on('click', function() {
+        Config.loadData();
 
-                if ($disableableControl.filter($yesassitsvc).is(':checked')) {
-                    $disableableInput.prop('disabled', true);
-                    $disableableInput.prop('checked', false);
-                    $('#plx30cpanel').prop('checked', true);
-                    $disableableLabel.addClass('product-desc');
-                }
-                else if ($disableableControl.filter($noassitsvc).is(':checked')) {
-                    $disableableInput.removeAttr('disabled');
-                    $disableableLabel.removeClass('product-desc');  
-                }
-            });
+        if (typeof FastballEvent_MouseClick === 'function' && typeof fbiLibCheckQueue === 'function') {
+                $('[data-ci]').click(function(e){
+                    $this = $(this);
+                    FastballEvent_MouseClick(e,$this.attr('data-ci'),$(this)[0],'a');
+                    fbiLibCheckQueue();
+                });
+            }
 
-            $('[name="controlpanel"]').on('click', function() {
-                $('.children-hide').css('display','none');
-                $($(this).attr('data-child')).css('display','block');
-            });
+        $('.move').scrollToSection();
+        $(window).scroll(function() {
+          updateOrderSummaryPosition();
+        });
+        $(window).resize(function() {
+          updateOrderSummaryPosition();
+        });
+        updateOrderSummaryPosition();
+
+        $('.js-addtocart').on('click',function (e){
+          e.preventDefault();
+          $(this).unbind('click');
+          var $this = $(this);
+          var ci = $this.attr('data-ci');
+          $form = $('#configForm');
+          var itccode = 'slp_vps';
+          var qty = plan.split('_')[4];
+          var packageId = plan.replace(/_([^_]*)$/,'');
+          var addons = Config.generateAddonsURL();
+          ##if(isManager())
+          var managerId= Config.getParameterByName('mgrshopper');
+          ##endif
+
+          var url = '[@T[link:<relative path="api/package/add" secure="false" parammode="explicit"/>]@T]';
+          url += "/"+itccode;
+          url += "/"+ci;
+          if(plan.split('_')[5]==1){
+            url+='/1';
+          }else{
+            url += '/'+qty;//quantity
+          }
+          url += "/"+packageId;
+          url += addons;
+          ##if(isManager())
+          if(addons===''){
+            url += '?'
+          }else{
+            url += '&'
+          }
+            url +='mgrshopper='+ managerId;
+          ##endif
+          $.ajax({
+                type: 'POST',
+                url: url,
+                complete: function (data) {
+                    var response = $.parseJSON(data.responseText);
+                    if (response.Success) {
+                      ##if(isManager())
+                      window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]';
+                      ##else
+                      window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]';
+                      ##endif
+                    }
+                    else
+                    {
+                      ##if(isManager())
+                      window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]';
+                      ##else
+                      window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]';
+                      ##endif
+                    } 
+                },
+                dataType: 'json'
+          });
+      });
+    
+
+        function updateOrderSummaryPosition() {
+
+          var paddingTop = 20/* for prettiness when scrolling */,
+            $configCartWrapper = $('.config-cart-wrapper'),
+            scrollTop = $(window).scrollTop(),
+            scrollLeft = $(window).scrollLeft(),
+            topStep1 = $("div.config-step:visible:first").offset().top,
+            topOfWindowAboveTopOfStep1 = (scrollTop <= (topStep1 - paddingTop)),
+            $footer = $('.scroll-down-wrapper');
+
+            $footer.css('visibility','visible');
+            $configCartWrapper.css({'top':'0px','position':'static'});
+
+          if(!topOfWindowAboveTopOfStep1) {
+            // keep the top of the summary at 0
+            
+          //} else {
+            //check for if summary can fit without going below the bottom of the last step
+            
+            var proposedNewTop = scrollTop - (topStep1 - paddingTop),
+
+              proposedNewBottom = proposedNewTop + $configCartWrapper.height(),
+              $lastStep = $("div.config-step").eq(3),
+              bottomOfLastStep = $lastStep.offset().top + $lastStep.height() - topStep1,
+              canFit = (proposedNewBottom <= bottomOfLastStep);
+
+            if(scrollTop>=(topStep1-paddingTop) && ((scrollTop+$configCartWrapper.height())<=$lastStep.offset().top + $lastStep.height() + paddingTop) ){
+              try{
+                var configCartWrapperLeft = $configCartWrapper.offset().left;
+                $configCartWrapper.css({'top':'20px','position':'fixed','width':$configCartWrapper.innerWidth(),'left':(configCartWrapperLeft - scrollLeft) +'px'});
+              }catch(err){
+                //if errors don't float the $confiCartWrapper
+                $configCartWrapper.css({'top':'0px','position':'static'});
+              }
+              if((scrollTop+paddingTop)>=$lastStep.offset().top){
+                $footer.css('visibility','hidden');
+              }else{
+                $footer.css('visibility','visible');
+              }
+            } else {
+              try{
+                var configCartWrapperLeft = $configCartWrapper.offset().left;
+                $configCartWrapper.css({'position':'fixed','width':$configCartWrapper.innerWidth(),'left':(configCartWrapperLeft - scrollLeft) +'px'});
+              }catch(err){
+                //if errors don't float the $confiCartWrapper
+                $configCartWrapper.css({'top':'0px','position':'static'});
+
+              }
+              // affix the summary so the bottom lines up with the bottom of the last step
+              $footer.css('visibility','hidden');
+              var topForBottomAligned = ($lastStep.offset().top + $lastStep.height() +$footer.height()) - (scrollTop + $configCartWrapper.height() );
+              //topForBottomAligned = bottomOfLastStep - $configCartWrapper.height() + paddingTop;
+              $configCartWrapper
+                .css({'top': topForBottomAligned + 'px'});
+            }
+          }
+          
+        }
+
+      });
+
+      var Config = {
+        loadData: function(){
+          var url = '[@T[link:<relative path="~/api/package/config/vpsconfig"/>]@T]';
+          $.getJSON(url).success(function (data){
+              processConfigData(data);
+              Config.buildProductOrder(data);
+          });
+        },
+        getParameterByName: function(name){
+          name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+          var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+              results = regex.exec(location.search);
+          return results === null ? changePlan() : decodeURIComponent(results[1].replace(/\+/g, " "));
+        },
+        refreshCart: function(){
+          var totalAddons = '0';
+          var addonPrice;
+          var newTotal; 
+          $('input:radio').filter(':checked').each(function (i,j){
+            addonPrice= $(j).data('price');
+            totalAddons= currencyCalc.evaluate([totalAddons,"+",addonPrice]);
+          });
+          generateAddonSummary('#addonSummary');
+
+          newTotal =currencyCalc.evaluate([totalAddons,"+",planBasePrice]);
+
+          $('.currency-amount').html(newTotal);
+        },
+        buildProductOrder: function(data){
+
+          var planDetails = Config.getParameterByName('plan').split('_');
+
+          var planOS = data.details[planDetails[2]].plans[planDetails[3]].os;
+          var planHeader= planOS.split(':');
+          var planRAM = data.details[planDetails[2]].plans[planDetails[3]].ram;
+          var planStorage = data.details[planDetails[2]].plans[planDetails[3]].storage;
+          var planBandwidth = data.details[planDetails[2]].plans[planDetails[3]].bandwidth;
+          planBasePrice = data.details[planDetails[2]].prices[planDetails[3]][planDetails[1]][planDetails[4]];
+
+          $('.config-title h1').html(planHeader[1]+' - '+planHeader[0]);
+          $('#summaryOS').html(planOS);
+          $('#summaryRAM').html('[@L[cds.sales/gd/hosting/vps-hosting-config:RamSummary]@L] '+planRAM);
+          $('#summaryStorage').html('[@L[cds.sales/gd/hosting/vps-hosting-config:StorageSummary]@L] '+planStorage);
+          $('#summaryBandwidth').html('[@L[cds.sales/gd/hosting/vps-hosting-config:BandwidthSummary]@L] '+planBandwidth);
+          $('.currency-amount').html(planBasePrice);
+        },
+        init: function (){
+          var planDetails = Config.getParameterByName('plan').split('_');
+          var $disableControl = $('input:radio[name="assistedserviceoptions"]'),
+                    $firstli = $('#controlpanelOptions li:first-child');
+                    $lastli = $('#controlpanelOptions li:last-child');
+                    $yesassitsvc = $disableControl[1],
+                    $noassitsvc = $disableControl[0],
+                    $secondli=$([]),
+                    $disableControl.on('click', function() {
+                        if ($disableControl.filter($yesassitsvc).is(':checked')) { 
+                          $firstli.find('input').prop('disabled',true);
+                          $firstli.find('input').prop('checked',false);
+                          $firstli.find('span').addClass('product-desc');
+                          if(planDetails[2]!='windows'){
+                            $lastli.find('input').prop('disabled',true);
+                            $lastli.find('span').addClass('product-desc');
+                          }
+                          $secondli=$('input:radio[name=controlpaneloptions]').not(':disabled').filter('input:first');
+                          $secondli.prop('checked',true);
+                          Config.refreshCart();
+                        }
+                        else if ($disableControl.filter($noassitsvc).is(':checked')) {
+                          $secondli.prop('checked',false);
+                          $firstli.find('input').prop('disabled',false);
+                          $firstli.find('input').prop('checked',true);
+                          $firstli.find('span').removeClass('product-desc');
+                          if(planDetails[2]!='windows'){
+                            $lastli.find('input').prop('disabled',false);
+                            $lastli.find('span').removeClass('product-desc');
+                          }
+                          Config.refreshCart();
+                        }
+                    });        
+          $('input:radio').change(function(){
+            Config.refreshCart();
+          }); 
+
+          $('input:radio[name="controlpaneloptions"]').on('click', function() {
+            $('.children-hide').css('display','none');
+            $('.children-hide').each(function(){$(this).find('input:first').prop('checked',true);});
+            $($(this).data('child')).css('display','block');
+            Config.refreshCart();
+
+          });
+          $('.isToolTip').tooltip();
+        },
+        generateAddonsURL: function(){
+          var addonURL='';
+          $('input:radio').filter(':checked').each(function (i,k){
+            if(k.value!==""){
+              if(addonURL===''){
+                addonURL+= '?addons='+k.value;
+              }else{
+                addonURL+='|'+k.value;
+              }
+            }
+          });
+          return addonURL;
+        }
+      };
+
+      function processConfigData(data){
+        var planDetails = Config.getParameterByName('plan').split('_');
+
+        
+        $(data.addons[planDetails[2]].bandwidth[planDetails[1]]).each(function (i,n){
+           generateOptions(i,n, '#bandwidthOptions','bandwidthoptions');
         });
 
-        function changePlan(){
-            window.location.href = '[@T[link:<relative path="~/hosting/vps-hosting.aspx" />]@T]';
-        }    
+        if(planDetails[1] == 'us'){
+          if(planDetails[2]!='centos'){
+            $('.backup').show();
+            $(data.addons[planDetails[2]].managedbackup[planDetails[1]]).each(function (i,n){
+              generateOptions(i,n, '#managedbackupOptions','managedbackupoptions');
+            });
+            $(data.addons[planDetails[2]].ftpsolution[planDetails[1]]).each(function (i,n){
+              generateOptions(i,n, '#ftpOptions','ftpoptions');
+            });
+          }
+        }else{
+          $('#managedbackup').hide();
+        }
+
+        if(planDetails[2]== 'fedora'){
+          $('.controlpanel').hide();
+          $('.nocontrolpanel').show();
+        }else{
+          if(planDetails[2]!='centos' && planDetails[1] == 'us'){
+            $('.assistedservice').show();
+            $(data.addons[planDetails[2]].assistedservice[planDetails[1]]).each(function (i,n){
+             generateOptions(i,n, '#assistedserviceOptions','assistedserviceoptions');
+            });
+          }
+          $(data.addons[planDetails[2]].controlpanel[planDetails[1]]).each(function (i,n){
+             generateCPOptions(i,n, '#controlpanelOptions','controlpaneloptions');
+            });
+        }
+        if(planDetails[2]== 'windows'){
+          $('.windows').show()
+        }
+
+        Config.init();
+      }
+      function generateAddonSummary(parentid){
+        var content='';
+        $('input:radio').filter(':checked').each(function (i,n){
+         
+          if(content===''){
+              $(parentid).empty();
+              if($(n).data('addon')!==''){
+                content += '<li><span class="order-item-title"> '+$(n).data('addon')+'</span></li>';
+              }
+          }else{
+            if($(n).data('addon')!==''){
+              content += '<li><span class="order-item-title"> '+$(n).data('addon')+'</span></li>';
+            }
+          }
+
+       });
+        $(parentid).append(content);
+
+      }
+
+      function generateOptions(i , n , parentid, optionname){
+        var content='';
+        if(i===0){
+            $(parentid).empty();
+            content += '<li><input type="radio" name="'+optionname+'" checked="checked" data-addon="" data-price="0" value=""><span> '+n.addonvalue+'</span><span></span></li>';
+        }else{
+          content += '<li><input type="radio" name="'+optionname+'" value="'+n.id+'" data-addon="'+n.addondata+'" data-price="'+n.addonprice+'"><span> '+n.addonvalue+'</span><span class="price"> '+n.addonprice+'</span>[@L[cds.sales/gd/hosting/vps-hosting-config:mo]@L]</li>';
+        }
+        
+        $(parentid).append(content);
+
+      }
+      function generateCPOptions(i , n , parentid, optionname){
+        var content='';
+        if(i===0){
+            $(parentid).empty();
+            content += '<li><input type="radio" name="'+optionname+'" checked="checked" data-price="0" data-addon="" data-child="" value=""><span> '+n.addonvalue+'</span><span></span></li>';
+        }else{
+          content += '<li><input type="radio" name="'+optionname+'" data-addon="'+n.addondata+'" data-price="'+n.addonprice+'" data-child=".'+n.id+'"  value="'+n.id+'"><span> '+n.addonvalue+'</span><span class="price"> '+n.addonprice+'[@L[cds.sales/gd/hosting/vps-hosting-config:mo]@L]</span>';
+          $(n.addonupgrade).each(function (j,k){
+            if(j===0){
+              content += '<div class="children-hide sub-radio-option '+n.id+' "><input type="radio" name="'+k.id+i+'" checked="checked" data-addon="" data-price="0" value=""><span>'+k.addonvalue+"</span><span></span><br>";
+            }
+            else{
+             content += '<input type="radio" name="'+k.id+i+'" value="'+k.id+'"data-addon="'+k.addondata+'" data-price="'+k.addonprice+'" ><span> '+k.addonvalue+'</span><span class="price"> '+k.addonprice+'</span>';
+            }
+
+          });
+           content +='</div></li>';
+        }
+        
+        $(parentid).append(content);
+
+      }
+      function changePlan(){
+          window.location.href = '[@T[link:<relative path="~/hosting/vps-hosting.aspx" />]@T]';
+      }    
     </script>
 {% endblock %}
