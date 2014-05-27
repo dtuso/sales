@@ -1,0 +1,14 @@
+{
+  "shared": {
+    "cdsDetails": {
+      "champion": {
+        "name": "Stephan Foster",
+        "email": "sxfoster@godaddy.com"
+      },
+      "draft": {
+        "comments": "Github Prep",
+        "url": "http://www.dev-godaddy.com/"
+      }
+    }
+  }
+}

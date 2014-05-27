@@ -1,0 +1,134 @@
+---
+location: sales/tlds/gtldwatch.aspx
+id: 536bc8a7f778fc3434d3cb8f
+name: testing
+---
+{% extends 'layouts/base.html' %}
+
+{% block pageTitle %}<title>[@L[cds.tldleaf/[@D[gtld]@D]:watch.page.title]@L]</title>{% endblock %}
+{% block pageDescription %}<meta name="description" content="[@L[cds.tldleaf/[@D[gtld]@D]:watch.meta.description]@L]" />{% endblock %}
+{% block pageKeywords %}<meta name="keywords" content="[@L[cds.tldleaf/[@D[gtld]@D]:watch.meta.keywords]@L]" />{% endblock %}
+
+{% block metahead %}
+
+{% parent %}
+
+    <!-- Old Global CSS -->
+
+    <link href="[@T[link:<cssroot />]@T]fos/global/build/0.2.0/gd-fos-global.min.css" rel="stylesheet" type="text/css" />
+
+    <style>
+      #pcf {clear:both;}
+      #main-wrap .header{background:url('[@T[link:<imageroot />]@T]tldleafpages/[@D[gtld]@D]/fos/[@L[cds.tldleaf/[@D[gtld]@D]:all.gtld.banner]@L]');}
+      .share-title {top:-5px !important;}
+      .fosfbbox {overflow: visible !important;}
+      .fostwbox {width:auto !important;}
+      .fb_iframe_widget {top:-3px !important;}
+    </style>
+{% endblock %}
+
+{% block body %}
+
+    <div id="main-wrap">
+      <div class="clearfix" style="margin-top:15px">
+        <h1>[@L[cds.tldleaf/[@D[gtld]@D]:all.page.h1]@L]</h1>
+        <div id="sm-wrap">
+          <div class="fosshare" id="shareme"
+            data-twshareurl="[@T[link:<relative path='/tlds/[@D[gtld]@D]'><param name='ISC' value='smtwfos' /></relative>]@T]"
+            data-twtext="[@L[cds.tldleaf/[@D[gtld]@D]:watch.twitter.text]@L]"
+            data-twrelated="GoDaddy"
+            data-twreply="35782000644194304"
+            data-fbshareurl="[@T[link:<relative path='/tlds/[@D[gtld]@D]'><param name='ISC' value='smtwfos' /></relative>]@T]"
+            data-gpshareurl="[@T[link:<relative path='/tlds/[@D[gtld]@D]'><param name='ISC' value='smtwfos' /></relative>]@T]"
+            data-shareurl="[@T[link:<relative path='/tlds/[@D[gtld]@D]'><param name='ISC' value='smtwfos' /></relative>]@T]"
+            data-buttons="google,facebook,twitter"
+            data-float="left">
+          </div>
+        </div>
+      </div>
+      <div id="head-wrap">
+        <div class="header">
+          <div class="header-text">
+            [@L[cds.tldleaf/[@D[gtld]@D]:watch.header.content]@L]
+            <div id="watch">
+              <a id="watch-button" class="flt-btn flt-btn-grn" href="javascript:void(0);" style="display:none;">[@L[cds.tldleaf/[@D[gtld]@D]:watch.header.button.text]@L]</a>
+            </div>
+          </div>
+        </div>
+      </div> <!-- head wrap -->
+      <div id="body-wrap" class="watch-search-filler-above">
+          <div class="content">
+            <div class="fl-left medium-col">
+                [@L[cds.tldleaf/[@D[gtld]@D]:all.marketing.content.1]@L]
+                [@L[cds.tldleaf/_common:watch.marketing.content]@L]
+            </div>
+            <div class="fl-left reg-available">
+                [@L[cds.tldleaf/[@D[gtld]@D]:watch.available.text]@L]
+            </div>
+            <div id="gtld-logo" class="fl-right">
+              <img alt=".[@D[gtld]@D] Logo" />
+            </div>
+            <div style="clear:both;"></div>
+          </div>
+      </div><!-- body-wrap -->
+      <div id="limitations-wrap" class="product-limitations">
+        <div id="limitations">
+          <p>[@L[cds.tldleaf/[@D[gtld]@D]:all.limitations.symbols]@L] <a id="limitations-link" href="javascript:void(0);">[@L[cds.tldleaf/[@D[gtld]@D]:all.limitations.link]@L]</a></p>
+          <div id="g-modal" class="g-modal" style="display:none;">
+            <a href="#" class="g-modal-close"><span>close</span></a>
+            <div class="g-modal-header">
+              <span class="g-modal-titlebar">[@L[cds.tldleaf/[@D[gtld]@D]:all.limitations.modal.header]@L]</span>
+            </div>
+            <div class="g-modal-content">
+              <p>[@L[cds.tldleaf/[@D[gtld]@D]:all.limitations.modal.content]@L]</p>
+            </div>
+          </div>
+          <div id="g-modal-overlay" class="g-modal-overlay" style="display:none;"></div>
+        </div> <!-- limitations -->
+      </div> <!-- product-limitations -->
+  </div> <!--main wrap -->
+
+
+{% endblock %}
+
+{% block footer %}
+
+    <script src="[@T[link:<javascriptroot />]@T]shared/js/jquery.plugins.min.20111019.js" type="text/javascript" ></script>
+    <script src="[@T[link:<javascriptroot />]@T]starfield/fos.share/v1.3/fos.share-20140205.min.js" id="fosShareScript" ></script>
+    <script src="[@T[link:<cssroot />]@T]fos/201401/tlds/tld-leaf/js/tld-leaf-page.min.js"></script>
+
+    <!--[if lte IE 8]>
+    <script src="[@T[link:<javascriptroot />]@T]fos/script/JSON2.min.js"></script>
+    <![endif]-->
+
+    <script type="text/javascript">
+
+      $(document).ready(function() {
+        gbl.ns.register('domains.controls');
+        if (!domains.controls.gtldTemplatesClient) {
+          // probably means the cds_gtld_templates_xxxx.js file didn't load correctly
+
+        } else {
+          domains.controls.gtldTemplatesClient.Initialize({
+            tldLogoImageExists: $.trim("[@L[cds.tldleaf/[@D[gtld]@D]:all.gtld.logo]@L]").length > 0,
+            tldLogoImageFileName: '[@T[link:<imageroot />]@T]tldleafpages/[@D[gtld]@D]/fos/[@L[cds.tldleaf/[@D[gtld]@D]:all.gtld.logo]@L]',
+            hasProductLimitations: $.trim('[@L[cds.tldleaf/[@D[gtld]@D]:all.limitations.symbols]@L]').length > 0,
+            relativePcDataSetUrl: "[@T[link:<relative path="~/external/json/pcsetdata.aspx"></relative>]@T]",
+            watchDataUrl: "[@T[link:<relative path="~/tlds/eoi/EoiDataRequestHandler.ashx"></relative>]@T]",
+            watchAuthUrl: "[@T[link:<external linktype="SSOURL" path="authentication" secure="true" parammode="explicit" />]@T]",
+            ssoSpkey: "[@T[sso:spkey]@T]",
+            gtld: "[@D[gtld]@D]",
+            watchButtonFollow: "[@L[cds.tldleaf/[@D[gtld]@D]:watch.header.button.follow]@L]",
+            watchButtonFollowing: "[@L[cds.tldleaf/[@D[gtld]@D]:watch.header.button.following]@L]",
+            watchButtonUnfollow: "[@L[cds.tldleaf/[@D[gtld]@D]:watch.header.button.unfollow]@L]",
+            tldH1TagExists: $.trim('[@L[cds.tldleaf/[@D[gtld]@D]:all.page.h1]@L]').length > 0,
+            redirectUrl: '[@T[link:<relative path="~/tlds/gtld.aspx"></relative>]@T]',
+            gTldPreRegPhaseDataJson: []
+
+          });
+
+          domains.controls.gtldTemplatesClient.SetupWatch();
+        }
+      });
+    </script>
+{% endblock %}

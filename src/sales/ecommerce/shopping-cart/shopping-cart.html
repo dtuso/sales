@@ -3,7 +3,7 @@ location: sales/ecommerce/shopping-cart.aspx
 id: 52e7ed48f778fc64d02f0c85
 name: FOS-19218
 ---
-{% extends 'base.html' %}
+{% extends 'layouts/base.html' %}
 {% block body %}
         <!-- Start main-banner -->
         <section class="main-banner main-banner-online-store">
@@ -734,6 +734,6 @@ name: FOS-19218
             window.location.hash = '';
             $('a[href="#plans-pricing"]').tab('show');
             window.location.hash = '#pricing';
-        });        
+        });
     </script>
 {% endblock %}

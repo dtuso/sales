@@ -3,7 +3,7 @@ location: sales/hosting/web-hosting.aspx
 id: 535ae4cff778fc132872f3d6
 name: FOS-20028
 ---
-{% extends 'base.html' %}
+{% extends 'layouts/base.html' %}
 
 {% block metahead %}
   {% parent %}
@@ -193,7 +193,7 @@ name: FOS-20028
                         <div id="deluxe" class="col-xs-4 relative" data-gd-sidebysidealign-col="2">
                             <form action="[@T[link:<relative path="/hosting/web-hosting-config-new.aspx" parammode="common" />]@T]" name="frmAddToCart" class="frmAddToCart" method="get">
                             <div class="grid-column no-padding-bottom relative">
-                              <div data-gd-sidebysidealign-row="2">                              
+                              <div data-gd-sidebysidealign-row="2">
                                 <h2>[@L[cds.sales/gd/hosting/web-hosting:deluxe-title]@L]</h2>
                                 <p data-gd-sidebysidealign-row="1">[@L[cds.sales/gd/hosting/web-hosting:deluxe-plan-websites-11166]@L]</p>
                                 <span class="badge badge-small badge-important badge-upper-right">[@L[cds.sales/gd/hosting/web-hosting:popular-tag]@L]</span>
@@ -308,7 +308,7 @@ name: FOS-20028
                         <div id="ultimate" class="col-xs-4 relative" data-gd-sidebysidealign-col="3">
                                 <form action="[@T[link:<relative path="/hosting/web-hosting-config-new.aspx" parammode="common" />]@T]" name="frmAddToCart" class="frmAddToCart" method="get">
                                     <div class="grid-column no-padding-bottom relative">
-                              <div data-gd-sidebysidealign-row="2">                                      
+                              <div data-gd-sidebysidealign-row="2">
                                         <h2>[@L[cds.sales/gd/hosting/web-hosting:unlimited-title]@L]</h2>
                                         <p data-gd-sidebysidealign-row="1">[@L[cds.sales/gd/hosting/web-hosting:ultimate-plan-websites-11166]@L]</p>
                                       <p class="starting-at starting-at-alternate-top-spacing"><span class="starting-at-above">[@L[cds.sales/gd/hosting/web-hosting:as-low-as]@L]</span><span class="starting-price">[@T[productprice:<current productid="32082" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]<span>[@L[cds.sales/gd/hosting/web-hosting:month]@L]</span></span></p>
@@ -318,7 +318,7 @@ name: FOS-20028
                                         ##if(countrySiteAny(uk))
                                         <span class="vat-price">[@L[cds.sales/gd/hosting/web-hosting:vat-price]@L]</span>
                                         ##endif
-                                </div>  
+                                </div>
                                 <div class="select-box">
                                     <div class="select-box-head">
                                         <div class="select-box-current">
@@ -1759,35 +1759,35 @@ name: FOS-20028
         $("#"+id).show();
        }
       }
-      
-  // gdSideBySideAlign plugin    
+
+  // gdSideBySideAlign plugin
   (function ( $, window, document, undefined ) {
-    
+
     var pluginName = 'gdSideBySideAlign',
         defaults = {
           bailIfRowCountsMismatch : true
     };
-    
-    function GDSideBySideAlign( element, options ) {    
+
+    function GDSideBySideAlign( element, options ) {
       this.element = element;
       this.options = $.extend( {}, defaults, options);
       this._defaults = defaults;
       this._name = pluginName;
       this.init();
     }
-    
+
     GDSideBySideAlign.prototype.init = function () {
-            
-        // Find the columns        
+
+        // Find the columns
         var $columns = $(this.element).find('[data-gd-sidebysidealign-col]');
-    
+
         if($columns.length == 0) {
           return; // bail if no columns found
         }
-        
+
         // Make sure columns have an equal number of rows
         var numRows = 0, equalLength = true;
-        $.each($columns, function(idx,item){      
+        $.each($columns, function(idx,item){
           var $rows = $(item).find('[data-gd-sidebysidealign-row]');
           if(numRows == 0) {
             numRows = $rows.length;
@@ -1799,19 +1799,19 @@ name: FOS-20028
         if(numRows==0 || !equalLength && this.options.bailIfRowCountsMismatch) {
           return; // bail if no rows, or rows are not equal length
         }
-            
+
         // loop thru each row and grab the largest cell height and apply to each cell in that row
-        for(var i=1; i<=numRows; i++) {                    
+        for(var i=1; i<=numRows; i++) {
           var $cells = $columns.find('[data-gd-sidebysidealign-row="' + i + '"]' );
           var tallest = 0;
           $.each($cells,function(idx, cell){
             tallest = Math.max(tallest, $(cell).outerHeight());
-          });  
-          $cells.css({'min-height':tallest+'px'});                    
+          });
+          $cells.css({'min-height':tallest+'px'});
         }
-    
+
     }; /* end GDSideBySideAlign.prototype.init */
-    
+
     // register the function to be used
     $.fn[pluginName] = function ( options ) {
       return this.each(function () {
@@ -1820,12 +1820,12 @@ name: FOS-20028
         }
       });
     };
-    
+
     // load the plugin
-    $(document).ready(function(){      
+    $(document).ready(function(){
       $('[data-gd-sidebysidealign]').gdSideBySideAlign();
     });
-    
-  })( jQuery, window, document ); 
+
+  })( jQuery, window, document );
     </script>
 {% endblock %}

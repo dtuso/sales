@@ -14,7 +14,7 @@
           "username": "blunt"
         },
         "jiraTicket": "FOS-14231",
-        "comments": "adding some internationalized images and syncing with github",
+        "comments": "corrected issues found by QA",
         "url": "http://www.dev-godaddy.com/hosting/website-builder.aspx"
       }
     },
@@ -26,7 +26,36 @@
     "metaOgTitle": "[@L[cds.sales/gd/hosting/website-builder:og-title]@L]",
     "metaOgImage": "fos/201401/hosting/website-builder/img/og.png",
     "metaOgDescription": "[@L[cds.sales/gd/hosting/website-builder:og-description]@L]",
-    "cssVersionOverride" : "0"
+    "cssVersionOverride" : "1"
+  },
+  "split-b.html": {
+    "cdsDetails": {
+      "champion": {
+        "name": "David Utley",
+        "email": "dutley@godaddy.com"
+      },
+      "cdsLocation": "sales/hosting/website-builder-splits/split-b",
+      "draft": {
+        "id": "537baeacf778fc0e70721158",
+        "createdDate": "2014-05-20",
+        "createdBy": {
+          "fullName": "Scott Williams",
+          "username": "stwilliams"
+        },
+        "jiraTicket": "FOS-14261",
+        "comments": "WSB LP -- Add facebook feature/benefit",
+        "url": "http://gui.dev-godaddy.com/splittest/splittestredirect.aspx?dest=http%3a%2f%2fwww.dev-godaddy.com%2fhosting%2fwebsite-builder.aspx&test=1214.B"
+      }
+    },
+    "assetPath": "fos/201401/sales/hosting/website-builder/",
+    "metaTitle": "[@L[cds.sales/gd/hosting/website-builder:page-title]@L]",
+    "metaDescription": "[@L[cds.sales/gd/hosting/website-builder:meta-description]@L]",
+    "metaKeywords": "[@L[cds.sales/gd/hosting/website-builder:meta-keywords]@L]",
+    "metaCanonicalPath": "/hosting/website-builder.aspx",
+    "metaOgTitle": "[@L[cds.sales/gd/hosting/website-builder:og-title]@L]",
+    "metaOgImage": "fos/201401/hosting/website-builder/img/og.png",
+    "metaOgDescription": "[@L[cds.sales/gd/hosting/website-builder:og-description]@L]",
+    "cssVersionOverride" : "1"
   },
   "website-builder.language": {
     "cdsDetails": {

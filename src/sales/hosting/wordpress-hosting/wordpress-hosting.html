@@ -1,0 +1,895 @@
+---
+location: sales/hosting/wordpress-hosting.aspx
+id: 537687c8f778fc0db47de532
+name: FOS-20310 update
+---
+{% extends 'layouts/base.html' %}
+
+{% block metahead %}
+
+    {% parent %}
+
+    <style>
+      .sale-right { float:right; }
+      .vat-tax-message { line-height:16px;width:302px;margin-bottom:5px;margin-top:-3px; }
+      ##if(activeLanguageAny([en-my],[en-ph],[en-sg]))
+        .tab-content-overview-bg-wp {
+          background-image: url("[@T[link:<imageroot />]@T]fos/201401/wp-hosting/img/bg-misc-banner-wp-hosting-ap.jpg");
+        }
+      ##elseif(activeLanguageAny([en-in]))
+        .tab-content-overview-bg-wp {
+          background-image: url("[@T[link:<imageroot />]@T]fos/201401/wp-hosting/img/bg-misc-banner-wp-hosting-in.jpg");
+        }
+      ##endif
+      ##if(activeLanguageAny(en))
+      ##else
+        .featured-product .website-builder {
+          background-image: url("[@T[link:<imageroot />]@T]fos/201401/wp-hosting/img/GLOBAL_bg-products-wsb.jpg");
+        }
+      ##endif
+    </style>
+{% endblock %}
+
+{% block body %}
+
+
+  <!-- Start main-banner -->
+  <section class="main-banner main-banner-wp"  style="background-size:cover;">
+    <div class="l-main-container container main-banner-content">
+      <span class="ribbon ribbon-right">
+        <i class="marquee-flag [@T[localization:<language />]@T] [@T[localization:<language full='true' />]@T] money-back-guarantee"></i>
+      </span>
+      <h1 class="main-banner-title">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-3-MANAGEDWORDPRESS]@L]</h1>
+      <p class="main-banner-subtitle">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-8-BlazingFast]@L]</p>
+      <p class="main-banner-subtitle">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-8-IncrediblySecureTotallyHassleFree]@L]</p>
+      <span class="main-banner-subtext">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-22-YouCreateYourOwnWordPressSiteAndWe]@L]</span><span class="main-banner-subtext">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-4-999UptimeGuarantee]@L]*</span>
+      <p class="as-low-as">
+        <span class="as-low-as-above">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-AsLowAs]@L]</span>[@T[productprice:<current productid="32759" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-mo]@L]
+      </p>
+    </div>
+  </section>
+  <!-- End main-banner -->
+
+  <!-- Start main-tabs -->
+  <section class="main-tabs">
+    <div class="container">
+      <ul class="nav nav-tabs">
+        <li class="nav-tabs-item active"><a class="nav-tabs-link" href="#overview" data-toggle="tab" data-ci="86780">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-2-PlansPricing]@L]</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
+        <li class="nav-tabs-item"><a class="nav-tabs-link" href="#howitworks" data-toggle="tab" data-ci="86781">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-1-Features]@L]</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
+        <li class="nav-tabs-item"><a class="nav-tabs-link" href="#faq" data-toggle="tab" data-ci="86782">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-1-FAQ]@L]</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
+      </ul>
+    </div>
+  </section>
+  <!-- End main-tabs -->
+
+  <!-- Start main-tabs panes -->
+  <div class="tab-content no-margin-top">
+    <div class="tab-pane tab-content-overview-bg-wp active" id="overview">
+      <!-- Start content -->
+      <section class="misc-banner misc-banner-wp" style="background-size:cover;">
+        <div class="l-main-container container misc-banner-content misc-banner-content-wp-overview">
+          <i class="ico ico-wordpress"></i>
+          <span class="ico-text">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-1-WordPress]@L]</span>
+          <h2>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-11-YouHaveBetterThingsToDoThanManage]@L]</h2>
+          <p>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-50-MaintainingAWebsiteShouldnTMeanSpendingHours]@L]</p>
+        </div>
+      </section>
+      <!-- End misc-banner -->
+
+      <!-- Start content -->
+      <section class="l-container-over-banner">
+        <div class="l-main-container container">
+          <div class="row" data-gd-sidebysidealign="{}">
+
+            <div class="col-xs-4 column-1" data-gd-sidebysidealign-col="1">
+              <div class="grid-column no-padding-bottom plan">
+                <div data-gd-sidebysidealign-row="1">
+                  <h2>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-1-Starter]@L]</h2>
+                  <p class="font-16">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-8-PerfectForBasicSitesBlogsAndStartUps]@L]</p>
+                </div>
+                <div data-gd-sidebysidealign-row="2">
+                  <p class="starting-at starting-at-alternate-top-spacing"><span class="starting-at-above">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-2-StartingAt]@L]</span>
+                  <span class="starting-at-price">[@T[productprice:<current productid="32759" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="starting-at-small">/[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-month]@L]</span></p>
+                  ##if(productHasSavingsMoreThan(32759, 32761, 0))
+                  <p class="margin-bottom-12">
+                  <span class="tertiary-color line-through">[@T[productprice:<template productid="32761" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike><nostrike><![CDATA[<strike>{0}</strike>]]></nostrike></template>]@T]</span>
+                  <span class="secondary-color"><strong>[@T[productcompare:<percent primaryproductid="32759" secondaryproductid="32761" hidebelow="1"><html><![CDATA[[@L[cds.sales/gd/hosting/website-builder:save]@L] {0}%]]></html></percent>]@T]</strong></span>
+                  </p>
+                  ##endif
+                  ##if(countrySiteAny(uk))
+                  <div class="vat-tax-message">[@L[cds.sales/hosting/wordpress-hosting:vat-price]@L]</div>
+                  ##endif
+                </div>
+                <div data-gd-sidebysidealign-row="3">
+                  <div class="select-box">
+                    <div class="select-box-head">
+                      <div class="select-box-current">
+                        <span>12 [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-months]@L]</span>
+                        <span class="price">[@T[productprice:<current productid="32759" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-month]@L]</span>
+                        ##if(productHasSavingsMoreThan(32759, 32759, 0))
+                        <span class="save">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-onsale]@L]</span>
+                        ##elseif(productHasSavingsMoreThan(32759, 32761, 0))
+                        <span class="save sale-right">[@L[cds.sales/gd/hosting/website-builder:onSale]@L]</span>
+                        ##endif
+                      </div>
+                      <div class="select-box-cta"><i class="ico ico-download"></i></div>
+                    </div><!-- select-box-head -->
+                    <div class="select-box-body">
+                      <ul class="select-box-options">
+                        <li data-plan="wordpres_BasicMo_us" data-isqualified="0">
+                          <div>
+                            <label>
+                              <span class="months">3 [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-months]@L]</span>
+                              <span class="price">[@T[productprice:<current productid="32761" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-month]@L]</span>
+                              ##if(productHasSavingsMoreThan(32761, 32761, 0))
+                              <span class="save sale-right">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-onsale]@L]</span>
+                              ##else
+                              <span class="save"></span>
+                              ##endif
+                            </label>
+                          </div>
+                        </li>
+                        <li class="selected" data-plan="wordpres_Basic1Yr_us" data-isqualified="1">
+                          <div>
+                            <label>
+                              <span class="months">12 [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-months]@L]</span>
+                              <span class="price">[@T[productprice:<current productid="32759" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-month]@L]</span>
+                              ##if(productHasSavingsMoreThan(32759, 32759, 0))
+                              <span class="save">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-onsale]@L]</span>
+                              ##elseif(productHasSavingsMoreThan(32759, 32761, 0))
+                              <span class="save sale-right">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-onsale]@L]</span>
+                              <div>
+                              <span class="price-left">&nbsp;</span>
+                              <span>[@T[productprice:<template productid="32761" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike><nostrike><![CDATA[<strike>{0}</strike>]]></nostrike></template>]@T]/[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-month]@L]</span>
+                              <span class="save">[@T[productcompare:<percent primaryproductid="32759" secondaryproductid="32761" hidebelow="1"><html><![CDATA[[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-save]@L] {0}%]]></html></percent>]@T]</span>
+                              </div>
+                              ##endif
+                            </label>
+                          </div>
+                        </li>
+                        <li data-plan="wordpres_Basic2Yr_us" data-isqualified="1">
+                          <div>
+                            <label>
+                              <span class="months">24 [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-months]@L]</span>
+                              <span class="price">[@T[productprice:<current productid="32768" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-month]@L]</span>
+                              ##if(productHasSavingsMoreThan(32768, 32768, 0))
+                              <span class="save">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-onsale]@L]</span>
+                              ##elseif(productHasSavingsMoreThan(32768, 32761, 0))
+                              <span class="save sale-right">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-onsale]@L]</span>
+                              <div>
+                              <span class="price-left">&nbsp;</span>
+                              <span>[@T[productprice:<template productid="32761" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike><nostrike><![CDATA[<strike>{0}</strike>]]></nostrike></template>]@T]/[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-month]@L]</span>
+                              <span class="save price-right">[@T[productcompare:<percent primaryproductid="32768" secondaryproductid="32761" hidebelow="1"><html><![CDATA[[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-save]@L] {0}%]]></html></percent>]@T]</span>
+                              </div>
+                              ##endif
+                            </label>
+                          </div>
+                        </li>
+                        <li data-plan="wordpres_Basic3Yr_us" data-isqualified="1">
+                          <div>
+                            <label>
+                              <span class="months">36 [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-months]@L]</span>
+                              <span class="price">[@T[productprice:<current productid="32771" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-month]@L]</span>
+                              ##if(productHasSavingsMoreThan(32771, 32771, 0))
+                              <span class="save">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-onsale]@L]</span>
+                              ##elseif(productHasSavingsMoreThan(32771, 32761, 0))
+                              <span class="save sale-right">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-onsale]@L]</span>
+                              <div>
+                              <span class="price-left">&nbsp;</span>
+                              <span>[@T[productprice:<template productid="32761" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike><nostrike><![CDATA[<strike>{0}</strike>]]></nostrike></template>]@T]/[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-month]@L]</span>
+                              <span class="save price-right">[@T[productcompare:<percent primaryproductid="32771" secondaryproductid="32761" hidebelow="1"><html><![CDATA[[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-save]@L] {0}%]]></html></percent>]@T]</span>
+                              </div>
+                              ##endif
+                            </label>
+                          </div>
+                        </li>
+                        <li data-plan="wordpres_Basic5Yr_us" data-isqualified="1">
+                          <div>
+                            <label>
+                              <span class="months">60 [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-months]@L]</span>
+                              <span class="price">[@T[productprice:<current productid="32777" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-month]@L]</span>
+                              ##if(productHasSavingsMoreThan(32777, 32777, 0))
+                              <span class="save">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-onsale]@L]</span>
+                              ##elseif(productHasSavingsMoreThan(32777, 32761, 0))
+                              <span class="save sale-right">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-onsale]@L]</span>
+                              <div>
+                              <span class="price-left">&nbsp;</span>
+                              <span>[@T[productprice:<template productid="32761" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike><nostrike><![CDATA[<strike>{0}</strike>]]></nostrike></template>]@T]/[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-month]@L]</span>
+                              <span class="save price-right">[@T[productcompare:<percent primaryproductid="32777" secondaryproductid="32761" hidebelow="1"><html><![CDATA[[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-save]@L] {0}%]]></html></percent>]@T]</span>
+                              </div>
+                              ##endif
+                            </label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div><!-- select-box-body -->
+                  </div><!-- select-box -->
+                </div>
+                <div data-gd-sidebysidealign-row="4">
+                  <p class="no-margin-bottom"><button type="button" data-plan="wordpres_Basic1Yr_us" data-isqualified="1" data-ci="86783" class="btn btn-warning btn-block js-addtocart-btn btn--push-down btn-lg add-to-cart-btn">[@L[cds.sales/accounting/accounting-software:AddToCart]@L]</button></p>
+                </div>
+
+                <ul class="plan-pricing-list plan-pricing-list-alternate">
+                  <li class="two-lines padding-bottom-15" data-gd-sidebysidealign-row="5">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-7-25000MonthlyVisitorsOn1Website]@L]</li>
+                  <li class="two-lines padding-bottom-15" data-gd-sidebysidealign-row="6">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-12-100GBStorageStoreApproximately22000Images]@L]</li>
+                  <li class="two-lines padding-bottom-15" data-gd-sidebysidealign-row="7">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-5-AllCoreFeaturesListedBelow]@L]</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-xs-4 column-2" data-gd-sidebysidealign-col="2">
+              <div class="grid-column no-padding-bottom plan">
+                <span class="highlighted-text-block">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-bestValue]@L]</span>
+
+                <div data-gd-sidebysidealign-row="1">
+                  <h2>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-1-Business]@L]</h2>
+                  <p class="font-16">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-9-IdealForSmallBusinessesFreelanceDesignersAndActive]@L]</p>
+                </div>
+                <div data-gd-sidebysidealign-row="2">
+                  <p class="starting-at starting-at-alternate-top-spacing"><span class="starting-at-above">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-2-StartingAt]@L]</span>
+                  <span class="starting-at-price">[@T[productprice:<current productid="32767" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="starting-at-small">/[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-month]@L]</span></p>
+                  ##if(productHasSavingsMoreThan(32767, 32758, 0))
+                  <p class="margin-bottom-12">
+                  <span class="tertiary-color line-through">[@T[productprice:<template productid="32758" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike><nostrike><![CDATA[<strike>{0}</strike>]]></nostrike></template>]@T]</span>
+                  <span class="secondary-color"><strong>[@T[productcompare:<percent primaryproductid="32767" secondaryproductid="32758" hidebelow="1"><html><![CDATA[[@L[cds.sales/gd/hosting/website-builder:save]@L] {0}%]]></html></percent>]@T]</strong></span>
+                  </p>
+                  ##endif
+                  ##if(countrySiteAny(uk))
+                  <div class="vat-tax-message">[@L[cds.sales/hosting/wordpress-hosting:vat-price]@L]</div>
+                  ##endif
+                </div>
+                <div data-gd-sidebysidealign-row="3">
+                  <div class="select-box">
+                    <div class="select-box-head">
+                      <div class="select-box-current">
+                        <span>12 [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-months]@L]</span>
+                        <span class="price">[@T[productprice:<current productid="32767" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-month]@L]</span>
+                        ##if(productHasSavingsMoreThan(32767, 32767, 0))
+                        <span class="save">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-onsale]@L]</span>
+                        ##elseif(productHasSavingsMoreThan(32767, 32758, 0))
+                        <span class="save sale-right">[@L[cds.sales/gd/hosting/website-builder:onSale]@L]</span>
+                        ##endif
+                      </div>
+                      <div class="select-box-cta"><i class="ico ico-download"></i></div>
+                    </div><!-- select-box-head -->
+                    <div class="select-box-body">
+                      <ul class="select-box-options">
+                        <li data-plan="wordpres_dlxMo_us" data-isqualified="0">
+                          <div>
+                            <label>
+                              <span class="months">1 [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-month]@L]</span>
+                              <span class="price">[@T[productprice:<current productid="32758" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-month]@L]</span>
+                              ##if(productHasSavingsMoreThan(32758, 32758, 0))
+                              <span class="save">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-onsale]@L]</span>
+                              ##else
+                              <span class="save"></span>
+                              ##endif
+                            </label>
+                          </div>
+                        </li>
+                        <li class="selected" data-plan="wordpres_dlx1Yr_us" data-isqualified="1">
+                          <div>
+                            <label>
+                              <span class="months">12 [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-months]@L]</span>
+                              <span class="price">[@T[productprice:<current productid="32767" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-month]@L]</span>
+                              ##if(productHasSavingsMoreThan(32767, 32767, 0))
+                              <span class="save">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-onsale]@L]</span>
+                              ##elseif(productHasSavingsMoreThan(32767, 32758, 0))
+                              <span class="save sale-right">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-onsale]@L]</span>
+                              <div>
+                              <span class="price-left">&nbsp;</span>
+                              <span>[@T[productprice:<template productid="32758" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike><nostrike><![CDATA[<strike>{0}</strike>]]></nostrike></template>]@T]/[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-month]@L]</span>
+                              <span class="save price-right">[@T[productcompare:<percent primaryproductid="32767" secondaryproductid="32758" hidebelow="1"><html><![CDATA[[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-save]@L] {0}%]]></html></percent>]@T]</span>
+                              </div>
+                              ##endif
+                            </label>
+                          </div>
+                        </li>
+                        <li data-plan="wordpres_dlx2Yr_us" data-isqualified="1">
+                          <div>
+                            <label>
+                              <span class="months">24 [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-months]@L]</span>
+                              <span class="price">[@T[productprice:<current productid="32770" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-month]@L]</span>
+                              ##if(productHasSavingsMoreThan(32770, 32770, 0))
+                              <span class="save sale-right">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-onsale]@L]</span>
+                              ##elseif(productHasSavingsMoreThan(32770, 32758, 0))
+                              <span class="save sale-right">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-onsale]@L]</span>
+                              <div>
+                              <span class="price-left">&nbsp;</span>
+                              <span>[@T[productprice:<template productid="32758" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike><nostrike><![CDATA[<strike>{0}</strike>]]></nostrike></template>]@T]/[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-month]@L]</span>
+                              <span class="save price-right">[@T[productcompare:<percent primaryproductid="32770" secondaryproductid="32758" hidebelow="1"><html><![CDATA[[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-save]@L] {0}%]]></html></percent>]@T]</span>
+                              </div>
+                              ##endif
+                            </label>
+                          </div>
+                        </li>
+                        <li data-plan="wordpres_dlx3Yr_us" data-isqualified="1">
+                          <div>
+                            <label>
+                              <span class="months">36 [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-months]@L]</span>
+                              <span class="price">[@T[productprice:<current productid="32773" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-month]@L]</span>
+                              ##if(productHasSavingsMoreThan(32773, 32773, 0))
+                              <span class="save">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-onsale]@L]</span>
+                              ##elseif(productHasSavingsMoreThan(32773, 32758, 0))
+                              <span class="save sale-right">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-onsale]@L]</span>
+                              <div>
+                              <span class="price-left">&nbsp;</span>
+                              <span>[@T[productprice:<template productid="32758" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike><nostrike><![CDATA[<strike>{0}</strike>]]></nostrike></template>]@T]/[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-month]@L]</span>
+                              <span class="save price-right">[@T[productcompare:<percent primaryproductid="32773" secondaryproductid="32758" hidebelow="1"><html><![CDATA[[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-save]@L] {0}%]]></html></percent>]@T]</span>
+                              </div>
+                              ##endif
+                            </label>
+                          </div>
+                        </li>
+                        <li data-plan="wordpres_dlx5Yr_us" data-isqualified="1">
+                          <div>
+                            <label>
+                              <span class="months">60 [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-months]@L]</span>
+                              <span class="price">[@T[productprice:<current productid="32779" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-month]@L]</span>
+                              ##if(productHasSavingsMoreThan(32779, 32779, 0))
+                              <span class="save">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-onsale]@L]</span>
+                              ##elseif(productHasSavingsMoreThan(32779, 32758, 0))
+                              <span class="save sale-right">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-onsale]@L]</span>
+                              <div>
+                              <span class="price-left">&nbsp;</span>
+                              <span>[@T[productprice:<template productid="32758" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike><nostrike><![CDATA[<strike>{0}</strike>]]></nostrike></template>]@T]/[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-month]@L]</span>
+                              <span class="save price-right">[@T[productcompare:<percent primaryproductid="32779" secondaryproductid="32758" hidebelow="1"><html><![CDATA[[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-save]@L] {0}%]]></html></percent>]@T]</span>
+                              </div>
+                              ##endif
+                            </label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div><!-- select-box-body -->
+                  </div><!-- select-box -->
+                </div>
+                <div data-gd-sidebysidealign-row="4">
+                  <p class="no-margin-bottom"><button type="button" data-plan="wordpres_dlx1Yr_us" data-isqualified="1" data-ci="86784" class="btn btn-warning btn-block js-addtocart-btn btn--push-down btn-lg add-to-cart-btn">[@L[cds.sales/accounting/accounting-software:AddToCart]@L]</button></p>
+                </div>
+                <ul class="plan-pricing-list plan-pricing-list-alternate">
+                  <li class="two-lines padding-bottom-15" data-gd-sidebysidealign-row="5">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-9-25000MonthlyVisitorsOnUpTo5]@L]</li>
+                  <li class="two-lines padding-bottom-15" data-gd-sidebysidealign-row="6">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-13-500GBStorageStoreApproximately110000Images]@L]</li>
+                  <li class="two-lines padding-bottom-15" data-gd-sidebysidealign-row="7">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-5-AllCoreFeaturesListedBelow-2]@L]</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-xs-4 column-3" data-gd-sidebysidealign-col="3">
+              <div class="grid-column no-padding-bottom plan">
+                <div data-gd-sidebysidealign-row="1">
+
+                  <h2>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-1-Pro]@L]</h2>
+                  <p class="font-16">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-7-RecommendedForWebDevelopersAndCreativeAgencies]@L]</p>
+                </div>
+                <div data-gd-sidebysidealign-row="2">
+
+                  <p class="starting-at starting-at-alternate-top-spacing"><span class="starting-at-above">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-2-StartingAt]@L]</span>
+                  <span class="starting-at-price">[@T[productprice:<current productid="32790" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="starting-at-small">/[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-month]@L]</span></p>
+                  ##if(productHasSavingsMoreThan(32790, 32784, 0))
+                  <p class="margin-bottom-12">
+                  <span class="tertiary-color line-through">[@T[productprice:<template productid="32784" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike><nostrike><![CDATA[<strike>{0}</strike>]]></nostrike></template>]@T]</span>
+                  <span class="secondary-color"><strong>[@T[productcompare:<percent primaryproductid="32790" secondaryproductid="32784" hidebelow="1"><html><![CDATA[[@L[cds.sales/gd/hosting/website-builder:save]@L] {0}%]]></html></percent>]@T]</strong></span>
+                  </p>
+                  ##endif
+                  ##if(countrySiteAny(uk))
+                  <div class="vat-tax-message">[@L[cds.sales/hosting/wordpress-hosting:vat-price]@L]</div>
+                  ##endif
+                </div>
+                <div data-gd-sidebysidealign-row="3">
+
+                  <div class="select-box">
+                    <div class="select-box-head">
+                      <div class="select-box-current">
+                        <span>12 [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-months]@L]</span>
+                        <span class="price">[@T[productprice:<current productid="32790" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-month]@L]</span>
+                        ##if(productHasSavingsMoreThan(32790, 32790, 0))
+                        <span class="save">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-onsale]@L]</span>
+                        ##elseif(productHasSavingsMoreThan(32790, 32784, 0))
+                        <span class="save sale-right">[@L[cds.sales/gd/hosting/website-builder:onSale]@L]</span>
+                        ##endif
+                      </div>
+                      <div class="select-box-cta"><i class="ico ico-download"></i></div>
+                    </div><!-- select-box-head -->
+                    <div class="select-box-body">
+                      <ul class="select-box-options">
+                        <li data-plan="wordpres_PremMo_us" data-isqualified="0">
+                          <div>
+                            <label>
+                              <span class="months">1 [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-month]@L]</span>
+                              <span class="price">[@T[productprice:<current productid="32784" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-month]@L]</span>
+                              ##if(productHasSavingsMoreThan(32784, 32784, 0))
+                              <span class="save">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-onsale]@L]</span>
+                              ##else
+                              <span class="save"></span>
+                              ##endif
+                            </label>
+                          </div>
+                        </li>
+                        <li class="selected" data-plan="wordpres_Prem1Yr_us" data-isqualified="1">
+                          <div>
+                            <label>
+                            <span class="months">12 [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-months]@L]</span>
+                            <span class="price">[@T[productprice:<current productid="32790" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-month]@L]</span>
+                            ##if(productHasSavingsMoreThan(32790, 32790, 0))
+                            <span class="save">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-onsale]@L]</span>
+                            ##elseif(productHasSavingsMoreThan(32790, 32784, 0))
+                            <span class="save sale-right">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-onsale]@L]</span>
+                            <div>
+                            <span class="price-left">&nbsp;</span>
+                            <span>[@T[productprice:<template productid="32784" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike><nostrike><![CDATA[<strike>{0}</strike>]]></nostrike></template>]@T]/[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-month]@L]</span>
+                            <span class="save price-right">[@T[productcompare:<percent primaryproductid="32790" secondaryproductid="32784" hidebelow="1"><html><![CDATA[[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-save]@L] {0}%]]></html></percent>]@T]</span>
+                            </div>
+                            ##endif
+                            </label>
+                          </div>
+                        </li>
+                        <li data-plan="wordpres_Prem2Yr_us" data-isqualified="1">
+                          <div>
+                            <label>
+                              <span class="months">24 [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-months]@L]</span>
+                              <span class="price">[@T[productprice:<current productid="32792" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-month]@L]</span>
+                              ##if(productHasSavingsMoreThan(32792, 32792, 0))
+                              <span class="save">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-onsale]@L]</span>
+                              ##elseif(productHasSavingsMoreThan(32792, 32784, 0))
+                              <span class="save sale-right">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-onsale]@L]</span>
+                              <div>
+                              <span class="price-left">&nbsp;</span>
+                              <span>[@T[productprice:<template productid="32784" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike><nostrike><![CDATA[<strike>{0}</strike>]]></nostrike></template>]@T]/[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-month]@L]</span>
+                              <span class="save price-right">[@T[productcompare:<percent primaryproductid="32792" secondaryproductid="32784" hidebelow="1"><html><![CDATA[[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-save]@L] {0}%]]></html></percent>]@T]</span>
+                              </div>
+                              ##endif
+                            </label>
+                          </div>
+                        </li>
+                        <li data-plan="wordpres_Prem3Yr_us" data-isqualified="1">
+                          <div>
+                            <label>
+                              <span class="months">36 [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-months]@L]</span>
+                              <span class="price">[@T[productprice:<current productid="32794" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-month]@L]</span>
+                              ##if(productHasSavingsMoreThan(32794, 32794, 0))
+                              <span class="save">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-onsale]@L]</span>
+                              ##elseif(productHasSavingsMoreThan(32794, 32784, 0))
+                              <span class="save sale-right">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-onsale]@L]</span>
+                              <div>
+                              <span class="price-left">&nbsp;</span>
+                              <span>[@T[productprice:<template productid="32784" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike><nostrike><![CDATA[<strike>{0}</strike>]]></nostrike></template>]@T]/[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-month]@L]</span>
+                              <span class="save price-right">[@T[productcompare:<percent primaryproductid="32794" secondaryproductid="32784" hidebelow="1"><html><![CDATA[[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-save]@L] {0}%]]></html></percent>]@T]</span>
+                              </div>
+                              ##endif
+                            </label>
+                          </div>
+                        </li>
+                        <li data-plan="wordpres_Prem5Yr_us" data-isqualified="1">
+                          <div>
+                            <label>
+                              <span class="months">60 [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-months]@L]</span>
+                              <span class="price">[@T[productprice:<current productid="32798" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-month]@L]</span>
+                              ##if(productHasSavingsMoreThan(32798, 32798, 0))
+                              <span class="save">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-onsale]@L]</span>
+                              ##elseif(productHasSavingsMoreThan(32798, 32784, 0))
+                              <span class="save sale-right">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-onsale]@L]</span>
+                              <div>
+                                <span class="price-left">&nbsp;</span>
+                                <span>[@T[productprice:<template productid="32784" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike><nostrike><![CDATA[<strike>{0}</strike>]]></nostrike></template>]@T]/[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-month]@L]</span>
+                                <span class="save price-right">[@T[productcompare:<percent primaryproductid="32798" secondaryproductid="32784" hidebelow="1"><html><![CDATA[[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-save]@L] {0}%]]></html></percent>]@T]</span>
+                              </div>
+                              ##endif
+                            </label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div><!-- select-box-body -->
+                  </div><!-- select-box -->
+                </div>
+                <div data-gd-sidebysidealign-row="4">
+                  <p class="no-margin-bottom"><button type="button" data-plan="wordpres_Prem1Yr_us" data-isqualified="1" data-ci="86785" class="btn btn-warning btn-block js-addtocart-btn btn--push-down btn-lg add-to-cart-btn">[@L[cds.sales/accounting/accounting-software:AddToCart]@L]</button></p>
+                </div>
+                <ul class="plan-pricing-list plan-pricing-list-alternate">
+                  <li class="two-lines padding-bottom-15" data-gd-sidebysidealign-row="5">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-9-MillionsOfMonthlyVisitorsOnUpTo25]@L]</li>
+                  <li class="two-lines padding-bottom-15" data-gd-sidebysidealign-row="6">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-7-UnlimitedStorageStoreUnlimitedImagesAndVideos]@L]</li>
+                  <li class="two-lines padding-bottom-15" data-gd-sidebysidealign-row="7">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-5-AllCoreFeaturesListedBelow-3]@L]</li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Start plan-summary -->
+      <section class="plan-summary l-main-content">
+        <div class="container l-main-container">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="plan-summary-container">
+                <!-- Start Plan-summary nav tabs -->
+                <ul class="nav nav-tabs plan-summary-tabs">
+                  <li class="nav-tabs-item plan-summary-tabs-item active">
+                  <a href="#ps-plan-includes" class="nav-tabs-link plan-summary-nav-tabs-link" data-toggle="tab">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-3-AllPlansInclude]@L]</a>
+                  </li>
+                </ul>
+                <!-- End Plan-summary nav tabs -->
+
+                <!-- Start Plan-summary Tab panes -->
+                <div class="tab-content no-margin-bottom">
+                  <div class="tab-pane active clearfix" id="ps-plan-includes">
+                    <ul class="plan-summary-tab-pane-list">
+                      <li>
+                        ##if(countrySiteAny(in))
+                        [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-145-FreeDomainWithAnnualPlanRestrictionsApplyOneFREEIN]@L]
+                        ##else
+                        [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-145-FreeDomainWithAnnualPlanRestrictionsApplyOneFREE]@L]
+                        ##endif
+                      </li>
+                      <li>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-5-1000sOfThemesAndPlugins]@L]</li>
+                      <li>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-4-OneClickMigrationTool]@L]</li>
+                      <li>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-23-SFTPAccessProtectFilesAsTheirTransferredToOr]@L]</li>
+                      <li>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-2-NightlyBackups]@L]</li>
+                      <li>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-7-RedundantFirewallsMalwareScanningAndDDoSProtection]@L]</li>
+                      <li>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-4-AutomaticWordPressCoreUpdates]@L]</li>
+                      <li>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-3-TemporaryWebsiteAddress]@L]</li>
+                      <li>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-7-MultiLanguageDashboardEnglishSpanishOrPortuguese]@L]</li>
+                    </ul>
+                    <ul class="plan-summary-tab-pane-list">
+                      <li>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-18-PremiumWordPressHostingPlatformBuiltSpecificallyForWordPressTo]@L]</li>
+                      <li>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-5-AwardWinning247Support]@L]</li>
+                      <li><a href="[@T[link:<relative path='/agreements/showdoc.aspx'><param name='pageid' value='hosting_sa' /><param name='ci' value='86792' /></relative>]@T]" target="_blank">*[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-4-999UptimeGuarantee]@L]</a></li>
+                      <li><a href="[@T[link:<relative path='/agreements/showdoc.aspx'><param name='pageid' value='hosting_sa' /><param name='ci' value='86793' /></relative>]@T]" target="_blank">*[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-3-MoneyBackGuarantee-2]@L]</a></li>
+                      ##if(activeLanguageAny([en-us]) || activeLanguageAny([es-us]))
+                      <li>USD $100 [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-4-GoogleAdWordsCredit]@L] <span class="g-toolTip restrictions-link">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-2-RestrictionsApply]@L]<span>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-48-OnePromotionalCreditPerCustomerForANew]@L] <a href="javascript:void(window.open('[@T[link:<relative path='/popups/google-adwords.aspx'><param name='ci' value='86790' /><param name='app_hdr' value='99' /></relative>]@T]','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=550,height=675'))">[@L[cds.sales/hosting/web-hosting-new:view-details]@L]</a></span></span></li>
+                      <li>USD $100 [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-4-BingAdsCredit]@L] <span class="g-toolTip restrictions-link">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-2-RestrictionsApply]@L]<span>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-36-OnePromotionalCreditPerCustomerForANew]@L] <a href="javascript:void(window.open('https://advertise.bingads.microsoft.com/en-us/godaddy/learn','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=1060,height=675'))" data-ci="86788">[@L[cds.sales/hosting/web-hosting-new:view-details]@L]</a></span></span></li>
+                      <li>USD $50 [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-4-FacebookAdCredit]@L]<span class="g-toolTip restrictions-link">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-2-RestrictionsApply]@L]<span>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-44-OnePromotionalCreditPerCustomerForANew]@L] <a href="javascript:void(window.open('[@T[link:<relative path='/popups/facebook-ads.aspx'><param name='ci' value='86789' /><param name='app_hdr' value='99' /></relative>]@T]','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=550,height=675'))">[@L[cds.sales/hosting/web-hosting-new:view-details]@L]</a></span></span></li>
+                      <li>10 [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-4-FotoliaPhotoCredits]@L] <span class="g-toolTip restrictions-link">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-2-RestrictionsApply]@L]<span>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-33-OneFreePromotionalCreditPerCustomerGoodFor]@L] <a href="javascript:void(window.open('[@T[link:<relative path='/popups/fotolia.aspx'><param name='ci' value='86791' /><param name='app_hdr' value='99' /></relative>]@T]','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=550,height=675'))">[@L[cds.sales/hosting/web-hosting-new:view-details]@L]</a></span></span></li>
+                      ##endif
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- End Plan-summary Tab panes -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="l-main-content">
+        <div class="container l-main-container">
+          ##if(splitTestingSideIsActive(1186, A))
+            <div class="row tab-content">
+              <div class="col-xs-12">
+                <div class="grid-column tab-content-column tab-content-left tab-content-wordpress">
+                  <h2 class="tab-content-title">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-4-WeMadeItSimple]@L]</h2>
+                  <p>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-93-FromTheMomentYouLogInYouLl]@L]</p>
+                </div>
+              </div>
+            </div>
+            <div class="row tab-content">
+              <div class="col-xs-12">
+                <div class="grid-column tab-content-column tab-content-left tab-content-performance" style="background-size:cover;">
+                  <h2 class="tab-content-title white">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-5-BuiltForSpeedAndReliability]@L]</h2>
+                  <p class="white" style="background-size:cover;">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-85-OurManagedWordPressWasBuiltFromTheGround]@L]</p>
+                </div>
+              </div>
+            </div>
+            <div class="row tab-content">
+              <div class="col-xs-12">
+                <div class="grid-column tab-content-column tab-content-right tab-content-safe">
+                  <h2 class="tab-content-title">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-7-AwardWinningSecurityKeepsYourSiteSafe]@L]</h2>
+                  <p>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-62-KeepingAWebsiteSecureIsAFullTime]@L]</p>
+                </div>
+              </div>
+            </div>
+          ##else
+            <div class="row tab-content">
+              <div class="col-xs-12">
+              </div>
+            </div>
+          ##endif
+        </div>
+      </section>
+
+      <!-- End plan-summary -->
+
+      <section class="featured-product">
+        <div class="fetaured-product-wrap">
+          <span class="featured-product-title">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-9-NotFindingWhatYouNeedYouMightWant]@L]</span>
+          <div  data-gd-sidebysidealign="{}" class="clearfix">
+            <div class="featured-product-container web-hosting" data-gd-sidebysidealign-col="1">
+              <div class="featured-product-content" data-gd-sidebysidealign-row="1">
+                <h3 class="condensed">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-2-WebHosting]@L]</h3>
+                <p>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-13-GetFullControlOfYourHostingWithAn]@L]</p>
+                <ul>
+                  <li>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-9-FeaturesCPanelLinuxOrParallelsPleskPanelWindows]@L]</li>
+                  <li>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-11-OneClickInstall100sOfTopAppsLike]@L]</li>
+                  <li>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-10-Includes999UptimeLightningFastLoadTimes]@L]</li>
+                </ul>
+                <a href="[@T[link:<relative path='/hosting/web-hosting.aspx' />]@T]" class="product-learn-more" data-ci="86786"><i class="ico ico-gt-alternate"></i> [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-learnMore]@L]</a>
+              </div>
+            </div>
+            <div class="featured-product-container website-builder"  data-gd-sidebysidealign-col="2">
+              <div class="featured-product-content" data-gd-sidebysidealign-row="1">
+                <h3 class="condensed">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-2-WebsiteBuilder]@L]</h3>
+                <p>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-16-UseOurDoItYourselfSiteDesignerTo]@L]</p>
+                <ul>
+                  <li>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-8-GetOnlineFastWith100sOfCustomizableDesigns]@L]</li>
+                  <li>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-8-NoTechnicalSkillsRequiredJustDragAndDrop]@L]</li>
+                  <li>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-7-IncludesAFreeDomainHostingAndMore]@L]</li>
+                </ul>
+                <a href="[@T[link:<relative path='/hosting/website-builder.aspx'><param name='ci' value='86787' /></relative>]@T]" class="product-learn-more"><i class="ico ico-gt-alternate"></i> [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-learnMore]@L]</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Featured Product Section -->
+      <!-- End content -->
+
+    </div>
+    <div class="tab-pane" id="howitworks">
+      <!--  Start content -->
+      <section class="l-main-content">
+        <div class="container l-main-container">
+          <div class="tab-header">
+            <h2 class="tab-header-title">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-7-BuiltToBeSeamlessAndSimple]@L]</h2>
+            <p>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-100-FromTheMomentYouLogInYouLl]@L]</p>
+          </div>
+          <div class="row tab-content">
+            <div class="col-xs-12">
+              <div class="grid-column tab-content-column tab-content-left tab-content-performance" style="background-size:cover">
+                <h2 class="tab-content-title white">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-5-BuiltForSpeedAndReliability-2]@L]</h2>
+                <p class="white">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-85-OurManagedWordPressWasBuiltFromTheGround-2]@L]</p>
+              </div>
+            </div>
+          </div>
+          <div class="row tab-content">
+            <div class="col-xs-12">
+              <div class="grid-column tab-content-column tab-content-right tab-content-safe">
+                <h2 class="tab-content-title">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-7-AwardWinningSecurityKeepsYourSiteSafe-2]@L]</h2>
+                <p>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-65-KeepingAWebsiteSecureIsAFullTime]@L]</p>
+              </div>
+            </div>
+          </div>
+          <div class="row tab-content">
+            <div class="col-xs-12">
+              <div class="grid-column tab-content-column tab-content-left tab-content-wordpress">
+                <h2 class="tab-content-title">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-4-ThePowerOfWordPress]@L]</h2>
+                <p>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-92-AsTheWorldSMostPopularWebsiteCreation]@L]</p>
+              </div>
+            </div>
+          </div>
+          <div class="row tab-content">
+            <div class="col-xs-12">
+              <div class="grid-column tab-content-column tab-content-right tab-content-grow">
+                <h2 class="tab-content-title">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-5-HostingThatGrowsWithYou]@L]</h2>
+                <p>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-65-WeKnowYouVeGotBigPlansFor]@L]</p>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="btn btn-primary btn-lg btn-block  js-open-overview" data-ci="86793"><i class="ico ico-gt"></i>&nbsp;[@L[cds.sales/gd/search-engine/seo-services:Features0CurrentFeatures909114CTA]@L]</a>
+        </div>
+      </section>
+      <!-- End content -->
+    </div>
+    <div class="tab-pane" id="faq">
+      <section class="tab-content-top-spacing">
+        <div class="container l-main-container">
+          <div class="row tab-content">
+            <div class="col-xs-12">
+              <div class="grid-column tab-content-column-alternate">
+                <h2 class="h2-alternate">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-4-WhatIsWordPress]@L]</h2>
+                <p>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-81-WordPressIsABlogAndWebPublishingPlatform]@L]</p>
+
+                <hr/>
+
+                <h2 class="h2-alternate">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-6-WhatIsManagedWordPressHosting]@L]</h2>
+                <p>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-38-BuiltOnOurStateOfTheArtWeb]@L]</p>
+                <p>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-57-MoreThanJustASimpleInstallWordPressIs]@L]</p>
+                <p>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-29-BestOfAllWeManageYourCoreWordPress]@L]</p>
+                <p>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-38-AndOfCourseOurAwardWinningSupportIs]@L]</p>
+                <hr/>
+
+                <h2 class="h2-alternate">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-11-HowDoesYourVersionOfWordPressDifferFrom]@L]</h2>
+                <p>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-55-ItDoesnTWeStartYouOutWith]@L]</p>
+                <p>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-28-InFactWeDoTheSameWithYour]@L]</p>
+
+                <hr/>
+
+                <h2 class="h2-alternate">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-9-DoINeedToSetUpMyDatabase]@L]</h2>
+                <p>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-36-NoWithManagedWordPressHostingWeTakeCare]@L]</p>
+
+                <hr/>
+
+                <h2 class="h2-alternate">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-17-IfIHaveAWordPressSiteHostedSomewhere]@L]</h2>
+                <p>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-42-YesYouCanMigrateYourSiteOverThe]@L]</p>
+
+                <hr/>
+
+                <h2 class="h2-alternate">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-12-AfterIPurchaseWordPressManagedHostingHowDo]@L]</h2>
+                <p>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-19-NotSureHowToCreateABlogOr]@L]</p>
+                <p>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-50-YourHostingPlanIsSeamlesslyConnectedToThe]@L]</p>
+                <p>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-36-AndIfYouEverHaveQuestionsDonT]@L]</p>
+
+                <hr/>
+
+                <h2 class="h2-alternate">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-9-HowCanIAccessMyWordPressControlPanel]@L]</h2>
+                <p>
+                  [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-14-ThereAreSeveralWayToLogInTo]@L]
+                  <ul class="indented">
+                    <li>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-20-GoToGoDaddyComLogInToMy]@L]</li>
+                    <li>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-16-GoToYourBlogOrWebsiteAndClick]@L]</li>
+                    <li>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-25-TypeHttpCoolexampleComWpAdminWhereCoolexample]@L]</li>
+                  </ul>
+                </p>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="btn btn-primary btn-lg btn-block  js-open-overview" data-ci="86794"><i class="ico ico-gt"></i>&nbsp;[@L[cds.sales/gd/search-engine/seo-services:Features0CurrentFeatures909114CTA]@L]</a>
+        </div>
+      </section>
+    </div>
+  </div>
+  <!-- End main-tabs panes -->
+
+  <section id="product-disclaimer" class="container l-main-container content-disclaimer">
+    <p class="no-margin-bottom"><small class="small-print"><a class="simple-link" href="#" data-toggle="modal" data-target="#myModal" data-ci="86795">[@L[cds.sales/accounting/accounting-software:DisclaimerContentLinkText]@L]</a></small></p>
+    <p><small class="small-print">[@L[cds.sales/accounting/accounting-software:DisclaimerContentDisclaimer]@L]</small></p>
+  <section/>
+
+  <div class="modal fade" id="product-disclaimer-modal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h5 class="modal-title"><strong>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-1-Disclaimers]@L]</strong></h5>
+        </div>
+        <div class="modal-body">
+          <p>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-11-FreeThemesAndPluginsCanBeFoundAt]@L]</p>
+          <p>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-8-AnnualDiscountsAvailableOnNEWPurchasesOnly]@L]</p>
+          <p>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-20-ProductsWillAutomaticallyRenewUntilCancelledYouMay]@L]</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+{% endblock %}
+
+
+{% block footer %}
+
+<script src="[@T[link:<javascriptroot />]@T]fos/201401/global/vendor/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="[@T[link:<javascriptroot />]@T]fos/201401/wp-hosting/js/wp-hosting.1.0.0.min.js" type="text/javascript" ></script>
+
+<script>
+$('.equal-height').setColumnsEqualHeight();
+$('.select-box').setSelectBox();
+
+$('.add-to-cart-btn').on('click', function() {
+    var url = '[@T[link:<relative path="/api/package" parammode="explicit"/>]@T]';
+    var planselected = $(this).attr('data-plan');
+    var domain = $(this).attr('data-isqualified');
+    var cicode = $(this).attr('data-ci');
+    var mgrNumber = getParameterByName('mgrshopper');
+
+    url += '/add'; //action
+    ##if(isManager())
+    url += '/mgr_slp_wordpress'; //mgr itc code
+    ##else
+    url += '/slp_wordpress'; //itc code
+    ##endif
+    url += '/' + cicode; //ci code
+    url += '/1';
+    url += '/' + planselected; //Plan Name
+
+    ##if(isManager())
+    url += '/?mgrshopper=' +  mgrNumber;
+    ##endif
+
+    $.getJSON(url, function (data) {
+        if (data.Success == true) {
+            if (domain == 1) {
+                window.location = '[@T[link:<relative path="/hosting/wordpress-hosting-config.aspx" />]@T]';
+            }  else {
+                ##if(isManager())
+                window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]';
+                ##else
+                window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]';
+                ##endif
+            }
+        }
+    });
+});
+
+$('.select-box-options > li').click(function () {
+    var li = $(this);
+    li.parents('.plan').find('button.add-to-cart-btn').attr('data-plan', li.attr('data-plan')).attr('data-isqualified', li.attr('data-isqualified'));
+});
+
+function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+    results = regex.exec(location.search);
+    return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+
+$('.js-open-overview').on('click', function(e){
+    e.preventDefault();
+    window.location.hash = '';
+    $('a[href="#overview"]').tab('show');
+    window.location.hash = '#overview';
+});
+
+$('#product-disclaimer .simple-link').on('click', function(){
+    $('#product-disclaimer-modal').modal();
+});
+
+// gdSideBySideAlign plugin
+(function ( $, window, document, undefined ) {
+
+    var pluginName = 'gdSideBySideAlign',
+    defaults = {
+        bailIfRowCountsMismatch : true
+    };
+
+    function GDSideBySideAlign( element, options ) {
+        this.element = element;
+        this.options = $.extend( {}, defaults, options);
+        this._defaults = defaults;
+        this._name = pluginName;
+        this.init();
+    }
+
+    GDSideBySideAlign.prototype.init = function () {
+
+        // Find the columns
+        var $columns = $(this.element).find('[data-gd-sidebysidealign-col]');
+
+        if($columns.length == 0) {
+            return; // bail if no columns found
+        }
+
+        // Make sure columns have an equal number of rows
+        var numRows = 0, equalLength = true;
+        $.each($columns, function(idx,item){
+            var $rows = $(item).find('[data-gd-sidebysidealign-row]');
+            if(numRows == 0) {
+                numRows = $rows.length;
+            }
+            if(equalLength) {
+                if(numRows != $rows.length) equalLength = false;
+            }
+        });
+        if(numRows==0 || !equalLength && this.options.bailIfRowCountsMismatch) {
+            return; // bail if no rows, or rows are not equal length
+        }
+
+        // loop thru each row and grab the largest cell height and apply to each cell in that row
+        for(var i=1; i<=numRows; i++) {
+            var $cells = $columns.find('[data-gd-sidebysidealign-row="' + i + '"]' );
+            var maxHeight = 0;
+            $.each($cells,function(idx, cell){
+                maxHeight = Math.max(maxHeight, $(cell).height());
+            });
+            $cells.height(maxHeight);
+        }
+
+    }; /* end GDSideBySideAlign.prototype.init */
+
+    // register the function to be used
+    $.fn[pluginName] = function ( options ) {
+        return this.each(function () {
+            if (!$.data(this, 'plugin_' + pluginName)) {
+                $.data(this, 'plugin_' + pluginName, new GDSideBySideAlign( this, $(this).data('gd-sidebysidealign') || options ));
+            }
+        });
+    };
+
+    // load the plugin
+    $(document).ready(function(){
+        $('[data-gd-sidebysidealign]').gdSideBySideAlign();
+    });
+
+})( jQuery, window, document );
+
+</script>
+
+{% endblock %}

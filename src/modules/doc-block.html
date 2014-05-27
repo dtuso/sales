@@ -15,16 +15,18 @@
       {{ cdsDetails.champion.name }} <{{ cdsDetails.champion.email }}>
 
     DRAFT DETAILS:
-      Name:         {{ cdsDetails.draft.createdDate }} - {{ cdsDetails.draft.createdBy.username }} - {{ cdsDetails.draft.jiraTicket }}
-      Created Date: {{ cdsDetails.draft.createdDate }}
-      Created By:   {{ cdsDetails.draft.createdBy.fullName }} <{{ cdsDetails.draft.createdBy.username }}>
-      JIRA Ticket:  {{ cdsDetails.draft.jiraTicket }}
-      Comments:     {{ cdsDetails.draft.comments }}
+      Modified Date:  {{ cdsDetails.draft.modifiedDate }}
+      Created By:     {{ cdsDetails.draft.user.username|safe }}
+      JIRA Ticket:    {{ name || cdsDetails.draft.name }}
+      Comments:       {{ comments || cdsDetails.draft.comments }}
+{% if cdsDetails.draft.id %}
+    CDS URL:
+      http://siteadmin.dev.intranet.gdg/cds/ide#{{cdsDetails.draft.id}}
+{% endif %}
 {% if cdsDetails.draft.url %}
     PREVIEW URL:
-      {{ cdsDetails.draft.url }}{% if cdsDetails.draft.id %}?version={{ cdsDetails.cdsLocation }}|{{cdsDetails.draft.id}}{% endif %}
+      {{ cdsDetails.draft.url }}{% if cdsDetails.draft.id %}?version={{ cdsDetails.draft.location }}|{{cdsDetails.draft.id}}{% endif %}
 {% endif %}
-
 
 
 

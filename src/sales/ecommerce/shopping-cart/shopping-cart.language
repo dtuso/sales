@@ -3,7 +3,7 @@ location: localization/sales/gd/ecommerce/shopping-cart/en
 id: 5339f099f778fc1594f33dcc
 name: FOS-19218
 ---
-{% include '../modules/doc-block.html' %}
+{% include 'modules/doc-block.html' %}
 
 <phrase key="MetaTitle" />
 Shopping Cart | Build Your eCommerce Website - Go Daddy

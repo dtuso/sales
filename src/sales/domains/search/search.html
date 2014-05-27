@@ -1,22 +1,18 @@
 ---
 location: sales/domains/domain-name-search.aspx
-id: 5362d392f778fc27b88b10a2
-name: testing
+id: 53681842f778fc26c405caa8
+name: FOS-20289
 ---
-{% extends 'base.html' %}
+{% extends 'layouts/base.html' %}
 {% block metahead %}
 {% parent %}
     <style type="text/css">
-      .btn-new-width{
-        min-width: 104px;
-      }
-     .londonimg {background-image: url("[@T[link:<imageroot />]@T]fos/201401/domains/search/img/london.png");}
+      .btn-new-width{min-width: 104px;}
+      .londonimg {background-image: url("[@T[link:<imageroot />]@T]fos/201401/domains/search/img/london.png");}
+      .left {float:left}
+      .right {float:right}
     </style>
-    
-    <!--[if lt IE 9]>
-        <link href="[@T[link:<cssroot />]@T]fos/201401/global/css/bootstrap-ie7fix.min.css" rel="stylesheet" type="text/css" />
-        <script src="[@T[link:<javascriptroot />]@T]fos/201401/global/js/html5shiv.js"></script>
-    <![endif]-->
+
 ##if(countrySiteAny(es,pt))
     <!-- International Background Images -->
     <style type="text/css">
@@ -44,19 +40,17 @@ name: testing
         .tab-content-your-identity {background-image: url("[@T[link:<cssroot />]@T]fos/201401/domains/search/img/APAC_bg-your-identity-domain-search.jpg");}
     </style>
 ##endif
+
 {% endblock %}
 
 {% block body %}
 
-
-    <!-- Start page main -->
-    <div class="border-box" role="main">
         <!-- Start main-panel -->
         <section class="white-bg main-panel">
             <h1 class="main-panel-subtitle">[@L[cds.sales/gd/domains/domain-name-search:SalesHeaderSubHeading]@L]</h1>
             <h2 class="main-panel-title">[@L[cds.sales/gd/domains/domain-name-search:SalesHeaderMainHeading]@L]</h2>
             <form method="post" data-url="[@T[link:<relative path="~/api/dpp/search/single"/>]@T]" action="[@T[link:<relative path="/domains/searchresults-new.aspx"/>]@T]" class="search-form" id="domain_search_form" style="margin: 0 auto 20px;">
-                <div class="searchBoxForm">  
+                <div class="searchBoxForm">
                 <input type="text" name="domainToCheck" placeholder="[@L[cds.sales/gd/domains/domain-name-search:SalesHeaderPlaceholder]@L]" class="search-form-input" id="domain_search_input" autocomplete="off"  style="width:auto; border:none;outline:0;min-width: 500px;" />
                 <button type="submit" name="searchButton" data-ci="88002" class="btn btn-primary btn-search-form submitbtn">[@L[cds.sales/gd/domains/domain-name-search:SalesHeaderBtnText]@L]</button>
                 <div class="clearfix"></div>
@@ -80,26 +74,43 @@ name: testing
                         <div data-ride="carousel" class="carousel slide " id="carousel-init">
                           <!-- Wrapper for slides -->
                           <div id="slideContainer" class="carousel-content-container">
-                           <div class="carousel-inner carousel-inner-container" id="Sliders">                           
-                            
+                           <div class="carousel-inner carousel-inner-container" id="Sliders">
+
                               <div class="item carousel-inner-item carousel-inner-item-ds carousel-inner-item-ds-1 active" align="right">
-                                <div class="carousel-inner-text-container">     
-                                   <span>                            
-                               <img src="[@T[link:<imageroot />]@T]fos/201401/domains/search/img/london.png"  style="padding-bottom: 8px;"></img>
+                                <div class="carousel-inner-text-container">
+                                   <span>
+                               <img src="[@T[link:<imageroot />]@T]fos/201401/domains/search/img/club.png"  style="padding-bottom: 8px;"></img>
                              </span>
-                                  <p class="no-margin-bottom">[@L[cds.sales/gd/domains/domain-name-search:MainBannerCarouselSlide1TextAllLine1]@L]</p>
-                                  <p class="no-margin-bottom"><a data-ci="90057" href="[@T[link:<relative path="tlds/london"></relative>]@T]">[@L[cds.sales/gd/domains/domain-name-search:MainBannerCarouselSlide1TextAllLine2]@L]</a></p>
+                                  <p class="no-margin-bottom">[@L[cds.sales/gd/domains/domain-name-search:PricesDotClubRegisterText]@L]</p>
+                                  <p class="no-margin-bottom"><a data-ci="88763" href="[@T[link:<relative path="tlds/club"></relative>]@T]">[@L[cds.sales/gd/domains/domain-name-search:GetYoursNowText]@L]</a></p>
                                 </div>
                               </div>
-                           
+
                               <div class="item carousel-inner-item carousel-inner-item-ds carousel-inner-item-ds-2">
                                 <div class="carousel-inner-text-container">
-                               <p class="no-margin-bottom">[@L[cds.sales/gd/domains/domain-name-search:MainBannerCarouselSlide1Text1]@L]</p>
+                                  ##if(ActiveLanguageAny([en-us], [en-au], [pt-br], [en-ca], [fr-ca], [en-in], [en-my], [en-nz], [en-pk], [en-ph], [pl-pl], [en-sg], [en-za], [ru-ru], [uk-ua]))
+                                     <p class="no-margin-bottom">[@L[cds.sales/gd/domains/domain-name-search:MainBannerCarouselSlide2Text]@L]</p>
+                                  ##elseif(ActiveLanguageAny([nl-be], [fr-be], [da-dk], [de-de], [fr-fr], [en-ie], [it-it], [nl-nl], [nb-no], [de-at], [pt-pt], [de-ch], [fr-ch], [fi-fi], [sv-se], [it-ch], [tr-tr], [en-gb], [el-gr]))
+                                     <span>
+                                       <img src="[@T[link:<imageroot />]@T]fos/201401/domains/search/img/london.png"  style="padding-bottom: 8px;"></img>
+                                     </span>
+                                    <p class="no-margin-bottom">[@L[cds.sales/gd/domains/domain-name-search:MainBannerCarouselSlide1TextAllLine1]@L]</p>
+                                    <p class="no-margin-bottom"><a data-ci="90057" href="[@T[link:<relative path="tlds/london"></relative>]@T]">[@L[cds.sales/gd/domains/domain-name-search:MainBannerCarouselSlide1TextAllLine2]@L]</a></p>
+                                  ##elseif(ActiveLanguageAny([es-ar], [es-cl], [es-co], [es-es], [es-us], [es-mx], [es-pe], [es-ve]))
+                                     <p class="no-margin-bottom">[@L[cds.sales/gd/domains/domain-name-search:MainBannerCarouselSlide2Text11]@L]<span>[@T[productprice:<template productid="40995" period="yearly"><strike><![CDATA[{0}]]></strike></template>]@T]</span> [@L[cds.sales/gd/domains/domain-name-search:MainBannerCarouselSlide2Text12]@L]</p>
+                                     <p class="no-margin-bottom"><a data-ci="89586" href="[@T[link:<relative path="tlds/uno"></relative>]@T]">[@L[cds.sales/gd/domains/domain-name-search:GetYoursNowText]@L]</a></p>
+                                  ##else
+                                   <p class="no-margin-bottom">[@L[cds.sales/gd/domains/domain-name-search:MainBannerCarouselSlide1Text1]@L]</p>
+                                  ##endif
                                 </div>
                               </div>
                               <div class="item carousel-inner-item carousel-inner-item-ds carousel-inner-item-ds-3">
                                 <div class="carousel-inner-text-container">
-                                  <p class="no-margin-bottom">[@L[cds.sales/gd/domains/domain-name-search:MainBannerCarouselSlide3Text3]@L]</p>
+                                   ##if(!ActiveLanguageAny([en-au]))
+                                  <p class="no-margin-bottom">[@L[cds.sales/gd/domains/domain-name-search:MainBannerCarouselSlide3TextNonAU]@L]</p>
+                                  ##else
+                                    <p class="no-margin-bottom">[@L[cds.sales/gd/domains/domain-name-search:MainBannerCarouselSlide3TextAU]@L]</p>
+                                  ##endif
                                   </div>
                               </div>
                             </div>
@@ -112,7 +123,7 @@ name: testing
                             <li class="carousel-indicators-obj active"><a href="#" data-slide-to="0" data-target="#carousel-init"></a></li>
                             <li class="carousel-indicators-obj"><a href="#" data-slide-to="1" data-target="#carousel-init"></a></li>
                             <li class="carousel-indicators-obj"><a href="#" data-slide-to="2" data-target="#carousel-init"></a></li>
-                          </ol> 
+                          </ol>
                         </div>
                     </div>
                 </section>
@@ -124,7 +135,7 @@ name: testing
             </div>
             <div class="l-main-container container main-banner-content domain-search-prices" id="Pods4">
                 <div class="row tab-content equal-height" id="PodRow">
-                 
+
                 </div>
             </div>
         </section>
@@ -170,7 +181,7 @@ name: testing
                     </section>
                     <!-- End misc-banner -->
                     <div id="btmPodContainer" class="row tab-content equal-height">
-                     
+
                     </div>
                 </section>
             </div>
@@ -184,19 +195,19 @@ name: testing
                         <div class="col-xs-6" id="leftlist">
                             <ul>
                                 <li class="list-item"><span class="font-18">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle0]@L]</span></li>
-                                <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListText0-0]@L]</span> <a data-ci="89639" href="[@T[link:<relative path="/tlds/guru"></relative>]@T]" class="btn btn-primary list-item-button btn-new-width">[@L[cds.sales/gd/domains/domain-name-search:Register]@L]</a></li>
-                                <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListText0-1]@L]</span> <a data-ci="90063" href="[@T[link:<relative path="/tlds/club"></relative>]@T]" class="btn btn-primary list-item-button btn-new-width">[@L[cds.sales/gd/domains/domain-name-search:PreRegister]@L]</a></li>
-                                <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListText0-2]@L]</span> <a data-ci="90064" href="[@T[link:<relative path="/tlds/email"></relative>]@T]" class="btn btn-primary list-item-button btn-new-width">[@L[cds.sales/gd/domains/domain-name-search:Register]@L]</a></li>
-                                <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListText0-3]@L]</span> <a data-ci="90065" href="[@T[link:<relative path="/tlds/house"></relative>]@T]" class="btn btn-primary list-item-button btn-new-width">[@L[cds.sales/gd/domains/domain-name-search:Register]@L]</a></li>
+                                <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListText0-0]@L]</span> <a data-ci="90063" href="[@T[link:<relative path="/tlds/club"></relative>]@T]" class="btn btn-primary list-item-button btn-new-width">[@L[cds.sales/gd/domains/domain-name-search:Register]@L]</a></li>
+                                <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListText0-1]@L]</span> <a data-ci="90057" href="[@T[link:<relative path="/tlds/london"></relative>]@T]" class="btn btn-primary list-item-button btn-new-width">[@L[cds.sales/gd/domains/domain-name-search:PreRegister]@L]</a></li>
+                                <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListText0-2]@L]</span> <a data-ci="89388" href="[@T[link:<relative path="/tlds/tips"></relative>]@T]" class="btn btn-primary list-item-button btn-new-width">[@L[cds.sales/gd/domains/domain-name-search:Register]@L]</a></li>
+                                <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListText0-3]@L]</span> <a data-ci="88759" href="[@T[link:<relative path="/tlds/today"></relative>]@T]" class="btn btn-primary list-item-button btn-new-width">[@L[cds.sales/gd/domains/domain-name-search:Register]@L]</a></li>
                             </ul>
                         </div>
                         <div class="col-xs-6" id="rightlist">
                             <ul>
                                 <li class="list-item"><span class="font-18">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle1]@L]</span></li>
-                                <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListText1-0]@L]</span> <a data-ci="90062" href="[@T[link:<relative path="/tlds/gtld.aspx"></relative>]@T]" class="btn btn-primary list-item-button">[@L[cds.sales/gd/domains/domain-name-search:LearnMore]@L]</a></li>
-                                <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListText1-1]@L]</span> <a data-ci="90060" href="[@T[link:<relative path="/tlds/gtld.aspx"></relative>]@T]" class="btn btn-primary list-item-button">[@L[cds.sales/gd/domains/domain-name-search:LearnMore]@L]</a></li>
-                                <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListText1-2]@L]</span> <a data-ci="90059" href="[@T[link:<relative path="/tlds/gtld.aspx"></relative>]@T]" class="btn btn-primary list-item-button">[@L[cds.sales/gd/domains/domain-name-search:LearnMore]@L]</a></li>
-                                <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListText1-3]@L]</span> <a data-ci="90061" href="[@T[link:<relative path="/tlds/gtld.aspx"></relative>]@T]" class="btn btn-primary list-item-button">[@L[cds.sales/gd/domains/domain-name-search:LearnMore]@L]</a></li>
+                                <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListText1-0]@L]</span> <a data-ci="90060" href="[@T[link:<relative path="/tlds/gtld.aspx"></relative>]@T]" class="btn btn-primary list-item-button">[@L[cds.sales/gd/domains/domain-name-search:LearnMore]@L]</a></li>
+                                <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListText1-1]@L]</span> <a data-ci="88028" href="[@T[link:<relative path="/tlds/gtld.aspx"></relative>]@T]" class="btn btn-primary list-item-button">[@L[cds.sales/gd/domains/domain-name-search:LearnMore]@L]</a></li>
+                                <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListText1-2]@L]</span> <a data-ci="90061" href="[@T[link:<relative path="/tlds/gtld.aspx"></relative>]@T]" class="btn btn-primary list-item-button">[@L[cds.sales/gd/domains/domain-name-search:LearnMore]@L]</a></li>
+                                <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListText1-3]@L]</span> <a data-ci="90328" href="[@T[link:<relative path="/tlds/gtld.aspx"></relative>]@T]" class="btn btn-primary list-item-button">[@L[cds.sales/gd/domains/domain-name-search:LearnMore]@L]</a></li>
                             </ul>
                         </div>
                     </div>
@@ -406,13 +417,12 @@ name: testing
               </div>
         </div>
 
-    </div> <!-- /main -->
 {% endblock %}
 
 {% block footer %}
-    <script type="text/javascript">
-       
-      $(document).ready(function () { 
+   <script type="text/javascript">
+
+      $(document).ready(function () {
       var url;
        ##if(activeLanguageAny([en-in]))
         url='[@T[link:<relative path="~/api/package/config/domainlp_in"/>]@T]';
@@ -442,7 +452,7 @@ name: testing
         url='[@T[link:<relative path="~/api/package/config/domainlp_se"/>]@T]';
       ##elseif(activeLanguageAny([de-de]))
         url='[@T[link:<relative path="~/api/package/config/domainlp_de"/>]@T]';
-      ##elseif(activeLanguageAny([de-ch]))
+      ##elseif(activeLanguageAny([de-ch],[it-ch],[fr-ch]))
         url='[@T[link:<relative path="~/api/package/config/domainlp_ch"/>]@T]';
       ##elseif(activeLanguageAny([fi-fi]))
         url='[@T[link:<relative path="~/api/package/config/domainlp_fi"/>]@T]';
@@ -463,53 +473,63 @@ name: testing
       ##elseif(activeLanguageAny([es-cl]))
         url='[@T[link:<relative path="~/api/package/config/domainlp_cl"/>]@T]';
       ##elseif(activeLanguageAny([en-gb]))
-        url='[@T[link:<relative path="~/api/package/config/domainlp_uk"/>]@T]';      
+        url='[@T[link:<relative path="~/api/package/config/domainlp_uk"/>]@T]';
        ##elseif(activeLanguageAny([en-sg]))
-        url='[@T[link:<relative path="~/api/package/config/domainlp_sg"/>]@T]';     
+        url='[@T[link:<relative path="~/api/package/config/domainlp_sg"/>]@T]';
        ##elseif(activeLanguageAny([en-ie]))
-        url='[@T[link:<relative path="~/api/package/config/domainlp_ie"/>]@T]';      
+        url='[@T[link:<relative path="~/api/package/config/domainlp_ie"/>]@T]';
        ##elseif(activeLanguageAny([nb-no]))
         url='[@T[link:<relative path="~/api/package/config/domainlp_no"/>]@T]';
+       ##elseif(activeLanguageAny([es-ar]))
+        url='[@T[link:<relative path="~/api/package/config/domainlp_ar"/>]@T]';
+       ##elseif(activeLanguageAny([es-co]))
+        url='[@T[link:<relative path="~/api/package/config/domainlp_co"/>]@T]';
+       ##elseif(activeLanguageAny([es-mx]))
+        url='[@T[link:<relative path="~/api/package/config/domainlp_mx"/>]@T]';
+      ##elseif(activeLanguageAny([es-pe]))
+        url='[@T[link:<relative path="~/api/package/config/domainlp_pe"/>]@T]';
+      ##elseif(activeLanguageAny([es-us]))
+        url='[@T[link:<relative path="~/api/package/config/domainlp_es-us"/>]@T]';
       ##else
         url='[@T[link:<relative path="~/api/package/config/domainlp_us"/>]@T]';
       ##endif
-   $.ajax({     
+   $.ajax({
          url:url,
-         dataType: "text",      
-         success:"success" 
+         dataType: "text",
+         success:"success"
       }).then(function(response)
-      {    
-        var data= $.parseJSON(response); 
-      
-        $(data.Pods).each(function(index, pod) {  
-          
+      {
+        var data= $.parseJSON(response);
+
+        $(data.Pods).each(function(index, pod) {
+
           $('#PodRow').append("<div class=\"col-xs-3\" id=\"PodCount_" + pod.PodId + "\" style=\"height: 290px;\" >");
           $('#PodCount_' + pod.PodId).append("<div class=\"grid-column\" id=\"grid_" + pod.PodId + "\">");
-          $('#grid_' + pod.PodId).append("<div class=\"ico-wrapper\" id=\"icons_" + pod.PodId + "\"><i id=\"podIcon\" class=\"tldlogo "+pod.logoclass+"\"></i></div>"); 
-      
+          $('#grid_' + pod.PodId).append("<div class=\"ico-wrapper\" id=\"icons_" + pod.PodId + "\"><i id=\"podIcon\" class=\"tldlogo "+pod.logoclass+"\"></i></div>");
+
           var tldItem = pod.ProductPrice.split('-')
           if(tldItem[2]>0){
             $('#grid_' + pod.PodId).append('<p class=\"font-16\"><strong class="line-through">'+tldItem[3]+'</strong><em> '+tldItem[0]+'*</em></p>');
           } else{
             $('#grid_' + pod.PodId).append('<p class=\"font-16\"><em>'+tldItem[0]+'*</em></p>');
-          } 
+          }
           $('#grid_' + pod.PodId).append("<p><a class=\"btn btn-primary btn-block btn-lg btn--push-down\" style=\"white-space: pre-wrap;\" href='" + pod.ButtonURL + "'>"+pod.ButtonText+"</a></p>");
           $('#grid_' + pod.PodId).append("<p> "+ pod.PodText +" </p>");
-       $('</div>');      
-        });  
-      
-        $(data.BottomPods).each(function(index, bpod) { 
+       $('</div>');
+        });
+
+        $(data.BottomPods).each(function(index, bpod) {
           $('#btmPodContainer').append("<div id=\"btmPods_" + bpod.PodID + "\" class=\"col-xs-4\" style=\"height: 226px;\">");
             $('#btmPods_' + bpod.PodID).append("<div id=\"btmgrid_" + bpod.PodID + "\" class=\"grid-column has-badge pod-border\">");
              $('#btmgrid_' + bpod.PodID).append("<span class=\"badge badge-important badge-upper-right\">"+bpod.PodNewTag+"</span>");
-             $('#btmgrid_' + bpod.PodID).append("<h2><strong>"+bpod.PodTLD+"</strong></h2>");  
-             $('#btmgrid_' + bpod.PodID).append("<p> "+ bpod.PodText +" </p>"); 
-             $('#btmgrid_' + bpod.PodID).append("<p><a class=\"btn btn-bottom btn-primary btn-block btn-lg btn--push-down\" href='"+bpod.ButtonURL+"'>"+bpod.ButtonText+"</a></p>");                 
+             $('#btmgrid_' + bpod.PodID).append("<h2><strong>"+bpod.PodTLD+"</strong></h2>");
+             $('#btmgrid_' + bpod.PodID).append("<p> "+ bpod.PodText +" </p>");
+             $('#btmgrid_' + bpod.PodID).append("<p><a class=\"btn btn-bottom btn-primary btn-block btn-lg btn--push-down\" href='"+bpod.ButtonURL+"'>"+bpod.ButtonText+"</a></p>");
              $('#btmPods_' + bpod.PodID).append("<div class=\"pod-shadow\"></div>");
-      });                    
+      });
     });
    });
-      
+
     $('.search-form').on('submit', function (e){
         e.preventDefault();
 
@@ -644,4 +664,4 @@ name: testing
     </script>
     <![endif]-->
     <!-- endbuild -->
-    {% endblock %}
+{% endblock %}

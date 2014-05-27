@@ -7,18 +7,11 @@
       },
       "cdsLocation": "sales/newscenter/about-godaddy.aspx",
       "draft": {
-        "id": "5362d0cdf778fc27b88b10a1",
-        "createdDate": "2014-05-01",
-        "createdBy": {
-          "fullName": "Dominic Tuso",
-          "username": "dtuso"
-        },
-        "jiraTicket": "FOS-18668",
-        "comments": "Fixing Images",
+        "comments": "Changed bios on board of directors, added Lee Wittlinger",
         "url": "http://www.dev-godaddy.com/newscenter/about-godaddy.aspx"
       }
     },
-
+    "cssVersionOverride": "3a",
     "metaTitle": "[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-11-AboutGoDaddyMoreAboutTheWorldS1Domain]@L]",
     "metaDescription": "[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-9-GoDaddyWhoWeAreAndWhatWeDo]@L]",
     "metaKeywords": "[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-5-GoDaddyGodaddyNewsReleasesGoDaddy]@L]",
@@ -27,9 +20,8 @@
     "metaOgTitle": "[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-9-GoDaddyWhoWeAreAndWhatWeDo]@L]",
     "metaOgImage": "fos/hp/rebrand/img/gd_rebrand_og.png",
     "metaOgDescription": "[@L[cds.sales/gd/hosting/web-hosting:og-description]@L]"
-  },  
-  
-  "web-hosting.language": {
+  },
+  "about-godaddy.language": {
     "cdsDetails": {
       "champion": {
         "name": "None currently",
@@ -37,14 +29,7 @@
       },
       "cdsLocation": "localization/sales/newscenter/about-godaddy/en",
       "draft": {
-        "id": false,
-        "createdDate": "2014-05-01",
-        "createdBy": {
-          "fullName": "Dominic Tuso",
-          "username": "dtuso"
-        },
-        "jiraTicket": "FOS-18668",
-        "comments": "Prep for new build process"
+        "comments": "Added and changed keys relating to board members bios"
       }
     }
   }

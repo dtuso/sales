@@ -1,9 +1,9 @@
 ---
 location: sales/ssl/ssl-certificates.aspx
-id: 53644aaff778fc2fb83dadfe
-name: FOS-11169
+id: 5375388cf778fc1728f345c4
+name: FOS-20836
 ---
-{% extends 'base.html' %}
+{% extends 'layouts/base.html' %}
 
 {% block metahead %}
   {% parent %}
@@ -34,6 +34,7 @@ name: FOS-11169
 
 {% block body %}
 
+
  <!-- Start main-banner -->
     <section class="main-banner main-banner-ssl-certificate">
       <div class="l-main-container container main-banner-content main-banner-content-ssl-certificate">
@@ -52,17 +53,8 @@ name: FOS-11169
     </section>
     <!-- End main-banner -->
 
-    <!-- Start main-tabs -->
-    <section class="main-tabs">
-      <div class="container">
-        <ul class="nav nav-tabs">
-          <li class="nav-tabs-item active"><a class="nav-tabs-link" href="#plan-pricing" data-toggle="tab" data-ci="89597">[@L[cds.sales/gd/ssl/ssl-certificates:ContentTabLabe1]@L]</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
-          <li class="nav-tabs-item" ><a class="nav-tabs-link tab-link move" href="#plan-pricing" data-toggle="tab" data-scroll=".tab-content-why-gd-ssl" data-ci="89598">[@L[cds.sales/gd/ssl/ssl-certificates:ContentTabLabe2]@L]</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
-          <li class="nav-tabs-item"><a class="nav-tabs-link" href="#faq" data-toggle="tab" data-ci="89599">[@L[cds.sales/gd/ssl/ssl-certificates:ContentTabLabe3]@L]</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
-        </ul>
-      </div>
-    </section>
-    <!-- End main-tabs -->
+    {% include '_main-tabs.html' %}
+
 
     <!-- Start main-tabs panes -->
     <div class="tab-content no-margin-top">
@@ -78,9 +70,14 @@ name: FOS-11169
           </section>
           <!-- End misc-banner -->
 
+##if(isManager())
+  <div class="alert alert-danger">
+    [@L[cds.sales/ssl/ssl-certificate:ssl-manager]@L]
+  </div>
+##endif
+
           <div class="row tab-content equal-height no-margin-bottom">
             <div class="col-xs-4">
-              <form action="[@T[link:<relative path="/ssl/ssl-certificates-config.aspx" parammode="common" />]@T]" name="frmAddToCart" class="frmAddToCart" id="frmAddToCart" method="get" >
                 <div class="grid-column no-padding-bottom">
                   <h2 class="first-plan">[@L[cds.sales/gd/ssl/ssl-certificates:plansPricingOne]@L]</h2>
                   <p class="starting-at starting-at-alternate-top-spacing">
@@ -88,57 +85,15 @@ name: FOS-11169
                     <span class="starting-at-price">[@T[productprice:<current productid="3608" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]</span>
                     <span class="starting-at-small">/[@L[cds.sales/gd/ssl/ssl-certificates:year]@L]</span>
                   </p>
-                  <div class="select-box" data-ci="89602">
-                    <div class="select-box-head">
-                      <div class="select-box-current">
-                        <span>[@L[cds.sales/gd/ssl/ssl-certificates:1year]@L]</span>
-                        <span class="price">[@T[productprice:<current productid="3608" period="yearly" />]@T]</span>
-                        <span class="secondary-color">/[@L[cds.sales/gd/ssl/ssl-certificates:year]@L]</span>
-                      </div>
-                      <div class="select-box-cta"><i class="ico ico-download"></i></div>
-                    </div><!-- select-box-head -->
-                    <div class="select-box-body">
-                      <ul class="select-box-options">
-                        <li class="selected">
-                          <label>
-                            <input type="radio" value="ssl_dlx_1" name="plan" />
-                            <span class="duration">[@L[cds.sales/gd/ssl/ssl-certificates:1year]@L]</span>
-                            <span class="price">[@T[productprice:<current productid="3608" period="yearly" />]@T]</span><span class="secondary-color">/[@L[cds.sales/gd/ssl/ssl-certificates:year]@L]</span>
-                            <span></span>
-                          </label>
-                        </li>
-                        <li>
-                          <label>
-                            <input type="radio" value="ssl_dlx_2" name="plan" />
-                            <span class="duration">[@L[cds.sales/gd/ssl/ssl-certificates:2years]@L]</span>
-                            <span class="price">[@T[productprice:<current productid="3608" period="yearly" />]@T]</span><span class="secondary-color">/[@L[cds.sales/gd/ssl/ssl-certificates:year]@L]</span>
-                            <span>[@L[cds.sales/gd/ssl/ssl-certificates:save]@L] 10% [@L[cds.sales/gd/ssl/ssl-certificates:DiscalimerSymbol]@L]</span>
-                          </label>
-                        </li>
-                        <li>
-                          <label>
-                            <input type="radio" value="ssl_dlx_3" name="plan" />
-                            <span class="duration">[@L[cds.sales/gd/ssl/ssl-certificates:3years]@L]</span>
-                            <span class="price">[@T[productprice:<current productid="3608" period="yearly" />]@T]</span>
-                            <span class="secondary-color">/[@L[cds.sales/gd/ssl/ssl-certificates:year]@L]</span>
-                            <span>[@L[cds.sales/gd/ssl/ssl-certificates:save]@L] 10% [@L[cds.sales/gd/ssl/ssl-certificates:DiscalimerSymbol]@L]</span>
-
-                          </label>
-                        </li>
-                      </ul>
-                    </div><!-- select-box-body -->
-                  </div><!-- select-box -->
-                  <p class="no-margin-bottom"><button type="submit" data-form="addtocart-form" class="btn btn-warning btn-block btn-lg" data-ci="89603">[@L[cds.sales/gd/ssl/ssl-certificates:cartButton]@L]</button></p>
+                  <p class="no-margin-bottom"><a href="[@T[link:<relative path="/ssl/ssl-certificates-config.aspx"><param name="origin" value="pod" /><param name="plan" value="ssl_dlx_3" /></relative>]@T]" class="btn btn-warning btn-block btn-lg" data-ci="89603">[@L[cds.sales/gd/ssl/ssl-certificates:cartButton]@L]</a></p>
                   <ul class="plan-pricing-list">
                     <li>[@L[cds.sales/gd/ssl/ssl-certificates:plansPricingExampleLabel]@L]</li>
                     <li>[@L[cds.sales/gd/ssl/ssl-certificates:plansPricingExampleItem1]@L]</li>
                   </ul>
                 </div>
-              </form>
             </div><!-- col-xs-4 -->
 
             <div class="col-xs-4">
-              <form action="[@T[link:<relative path="/ssl/ssl-certificates-config.aspx" parammode="common" />]@T]" name="frmAddToCart" class="frmAddToCart" id="frmAddToCart" method="get">
                 <div class="grid-column no-padding-bottom">
                   <h2>[@L[cds.sales/gd/ssl/ssl-certificates:plansPricingMultiple]@L]</h2>
                   <p class="pp-desc">[@L[cds.sales/gd/ssl/ssl-certificates:plansPricingMultipleDesc]@L]</p>
@@ -147,56 +102,16 @@ name: FOS-11169
                     <span class="starting-at-price">[@T[productprice:<current productid="5742" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]</span>
                     <span class="starting-at-small">/[@L[cds.sales/gd/ssl/ssl-certificates:year]@L]</span>
                   </p>
-                  <div class="select-box" data-ci="89604">
-                    <div class="select-box-head">
-                      <div class="select-box-current">
-                        <span>[@L[cds.sales/gd/ssl/ssl-certificates:1year]@L]</span>
-                        <span class="price">[@T[productprice:<current productid="5742" period="yearly" />]@T]</span>
-                        <span class="secondary-color">/[@L[cds.sales/gd/ssl/ssl-certificates:year]@L]</span>
-                      </div>
-                      <div class="select-box-cta"><i class="ico ico-download"></i></div>
-                    </div><!-- select-box-head -->
-                    <div class="select-box-body">
-                      <ul class="select-box-options">
-                        <li class="selected">
-                          <label>
-                            <input type="radio" value="ssl_dlx_1_5" name="plan" />
-                            <span class="duration">[@L[cds.sales/gd/ssl/ssl-certificates:1year]@L]</span>
-                            <span class="price">[@T[productprice:<current productid="5742" period="yearly" />]@T]</span><span class="secondary-color">/[@L[cds.sales/gd/ssl/ssl-certificates:year]@L]</span>
-                            <span></span>
-                          </label>
-                        </li>
-                        <li>
-                          <label>
-                            <input type="radio" value="ssl_dlx_2_5" name="plan" />
-                            <span class="duration">[@L[cds.sales/gd/ssl/ssl-certificates:2years]@L]</span>
-                            <span class="price">[@T[productprice:<current productid="5742" period="yearly" />]@T]</span><span class="secondary-color">/[@L[cds.sales/gd/ssl/ssl-certificates:year]@L]</span>
-                            <span>[@L[cds.sales/gd/ssl/ssl-certificates:save]@L] 10% [@L[cds.sales/gd/ssl/ssl-certificates:DiscalimerSymbol]@L]</span>
-                          </label>
-                        </li>
-                        <li>
-                          <label>
-                            <input type="radio" value="ssl_dlx_3_5" name="plan" />
-                            <span class="duration">[@L[cds.sales/gd/ssl/ssl-certificates:3years]@L]</span>
-                            <span class="price">[@T[productprice:<current productid="5742" period="yearly" />]@T]</span><span class="secondary-color">/[@L[cds.sales/gd/ssl/ssl-certificates:year]@L]</span>
-                            <span>[@L[cds.sales/gd/ssl/ssl-certificates:save]@L] 10% [@L[cds.sales/gd/ssl/ssl-certificates:DiscalimerSymbol]@L]</span>
-                          </label>
-                        </li>
-                      </ul>
-                    </div><!-- select-box-body -->
-                  </div><!-- select-box -->
-                  <p class="no-margin-bottom"><button type="submit" data-form="addtocart-form" class="btn btn-warning btn-block btn-lg" data-ci="89605">[@L[cds.sales/gd/ssl/ssl-certificates:cartButton]@L]</button></p>
+                  <p class="no-margin-bottom"><a href="[@T[link:<relative path="/ssl/ssl-certificates-config.aspx"><param name="origin" value="pod" /><param name="plan" value="ssl_dlx_3_5" /></relative>]@T]" class="btn btn-warning btn-block btn-lg" data-ci="89603">[@L[cds.sales/gd/ssl/ssl-certificates:cartButton]@L]</a></p>
                   <ul class="plan-pricing-list plan-pricing-list-alternate">
                     <li>[@L[cds.sales/gd/ssl/ssl-certificates:plansPricingExampleLabel]@L]</li>
                     <li>[@L[cds.sales/gd/ssl/ssl-certificates:plansPricingExampleItem1]@L]</li>
                     <li>[@L[cds.sales/gd/ssl/ssl-certificates:plansPricingExampleItem2]@L]</li>
                   </ul>
                 </div>
-              </form>
             </div><!-- col-xs-4 -->
 
             <div class="col-xs-4 content-wrap">
-              <form action="[@T[link:<relative path="/ssl/ssl-certificates-config.aspx" parammode="common" />]@T]" name="frmAddToCart" class="frmAddToCart" id="frmAddToCart" method="get">
                 <div class="grid-column no-padding-bottom has-badge">
                   <h2>[@L[cds.sales/gd/ssl/ssl-certificates:plansPricingAll]@L]</h2>
                   <p class="pp-desc">[@L[cds.sales/gd/ssl/ssl-certificates:plansPricingAllDesc]@L]</p>
@@ -205,53 +120,14 @@ name: FOS-11169
                     <span class="starting-at-price">[@T[productprice:<current productid="3621" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]</span>
                     <span class="starting-at-small">/[@L[cds.sales/gd/ssl/ssl-certificates:year]@L]</span>
                   </p>
-                  <div class="select-box" data-ci="89606">
-                    <div class="select-box-head">
-                      <div class="select-box-current">
-                        <span class="duration">[@L[cds.sales/gd/ssl/ssl-certificates:1year]@L]</span>
-                        <span class="price">[@T[productprice:<current productid="3621" period="yearly" />]@T]</span>
-                        <span class="secondary-color">/[@L[cds.sales/gd/ssl/ssl-certificates:year]@L]</span>
-                      </div>
-                      <div class="select-box-cta"><i class="ico ico-download"></i></div>
-                    </div><!-- select-box-head -->
-                    <div class="select-box-body">
-                      <ul class="select-box-options">
-                        <li class="selected">
-                          <label>
-                            <input type="radio" value="ssl_dlx_1_wc" name="plan" />
-                            <span class="duration">[@L[cds.sales/gd/ssl/ssl-certificates:1year]@L]</span>
-                            <span class="price">[@T[productprice:<current productid="3621" period="yearly" />]@T]</span><span class="secondary-color">/[@L[cds.sales/gd/ssl/ssl-certificates:year]@L] </span>
-                            <span></span>
-                          </label>
-                        </li>
-                        <li>
-                          <label>
-                            <input type="radio" value="ssl_dlx_2_wc" name="plan" />
-                            <span class="duration">[@L[cds.sales/gd/ssl/ssl-certificates:2years]@L]</span>
-                            <span class="price">[@T[productprice:<current productid="3621" period="yearly" />]@T]</span><span class="secondary-color">/[@L[cds.sales/gd/ssl/ssl-certificates:year]@L]</span>
-                            <span>[@L[cds.sales/gd/ssl/ssl-certificates:save]@L] 10% [@L[cds.sales/gd/ssl/ssl-certificates:DiscalimerSymbol]@L]</span>
-                          </label>
-                        </li>
-                        <li>
-                          <label>
-                            <input type="radio" value="ssl_dlx_3_wc" name="plan" />
-                            <span class="duration">[@L[cds.sales/gd/ssl/ssl-certificates:3years]@L]</span>
-                            <span class="price">[@T[productprice:<current productid="3621" period="yearly" />]@T]</span><span class="secondary-color">/[@L[cds.sales/gd/ssl/ssl-certificates:year]@L]</span>
-                            <span>[@L[cds.sales/gd/ssl/ssl-certificates:save]@L] 10% [@L[cds.sales/gd/ssl/ssl-certificates:DiscalimerSymbol]@L]</span>
-                          </label>
-                        </li>
-                      </ul>
-                    </div><!-- select-box-body -->
-                  </div><!-- select-box -->
-                  <p class="no-margin-bottom"><button type="submit" data-form="addtocart-form" class="btn btn-warning btn-block btn-lg" data-ci="89607">[@L[cds.sales/gd/ssl/ssl-certificates:cartButton]@L]</button></p>
+                  <p class="no-margin-bottom"><a href="[@T[link:<relative path="/ssl/ssl-certificates-config.aspx"><param name="origin" value="pod" /><param name="plan" value="ssl_dlx_3_wc" /></relative>]@T]" class="btn btn-warning btn-block btn-lg" data-ci="89603">[@L[cds.sales/gd/ssl/ssl-certificates:cartButton]@L]</a></p>
                   <ul class="plan-pricing-list">
                     <li>[@L[cds.sales/gd/ssl/ssl-certificates:plansPricingExampleLabel]@L]</li>
-                    <li>[@L[cds.sales/gd/ssl/ssl-certificates:plansPricingExampleItem1]@L]</li>
-                    <li>[@L[cds.sales/gd/ssl/ssl-certificates:plansPricingExampleItem2]@L]</li>
-                    <li>[@L[cds.sales/gd/ssl/ssl-certificates:plansPricingExampleItem3]@L]</li>
+                    <li>ProtectMyVisitors.com</li>
+                    <li>Cart.ProtectMyVisitors.com</li>
+                    <li>Mobile.ProtectMyVisitors.com</li>
                   </ul>
                 </div>
-              </form>
             </div><!-- col-xs-4 -->
           </div>
           <!-- Start plan-summary -->
@@ -349,15 +225,13 @@ name: FOS-11169
             <div class="row tab-content">
               <div class="col-xs-12">
                 <div class="grid-column tab-content-column-alternate">
-                  <h2 class="h2-alternate">[@L[cds.sales/gd/ssl/ssl-certificates:MainPageContentTabContent5FAQTitle1]@L]</h2>
-                  <p>[@L[cds.sales/gd/ssl/ssl-certificates:MainPageContentTabContent5FAQList1A]@L]</p>
-                  <p>[@L[cds.sales/gd/ssl/ssl-certificates:MainPageContentTabContent5FAQList1B]@L]</p>
-                  <p>[@L[cds.sales/gd/ssl/ssl-certificates:MainPageContentTabContent5FAQList1C]@L]</p>
+                  <h2 class="h2-alternate">[@L[cds.sales/ssl/ssl-certificate:faq-first-slide-title]@L]</h2>
+                  [@L[cds.sales/ssl/ssl-certificate:faq-first-slide-content]@L]
+
                   <hr/>
 
-                  <h2 class="h2-alternate">[@L[cds.sales/gd/ssl/ssl-certificates:MainPageContentTabContent5FAQTitle2]@L]</h2>
-                  <p>[@L[cds.sales/gd/ssl/ssl-certificates:MainPageContentTabContent5FAQList2A]@L]</p>
-                  <p>[@L[cds.sales/gd/ssl/ssl-certificates:MainPageContentTabContent5FAQList2B]@L]</p>
+                  <h2 class="h2-alternate">[@L[cds.sales/ssl/ssl-certificate:faq-second-slide-title]@L]</h2>
+                  [@L[cds.sales/ssl/ssl-certificate:faq-second-slide-content]@L]
 
                   <hr/>
 
@@ -401,7 +275,7 @@ name: FOS-11169
                 </div>
               </div>
             </div>
-            <a href="#plan-pricing" data-toggle="tab" class="btn btn-primary btn-lg btn-block" data-ci="89617"><i class="ico ico-gt"></i>[@L[cds.sales/gd/ssl/ssl-certificates:ChooseYourPackage]@L]</a>
+            <a href="#plan-pricing" data-toggle="tab" data-scroll=".tab-content-plans-pricing-bg-ssl-certificates" class="btn btn-primary btn-lg btn-block nav-tabs-link tab-link move" data-ci="89617"><i class="ico ico-gt"></i>[@L[cds.sales/gd/ssl/ssl-certificates:ChooseYourPackage]@L]</a>
           </div>
         </section>
 

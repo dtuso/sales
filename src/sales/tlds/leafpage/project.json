@@ -1,0 +1,72 @@
+{
+  "gtldga.html": {
+    "cdsDetails": {
+      "champion": {
+        "name": "Adam Smith",
+        "email": "absmith@godaddy.com"
+      },
+      "cdsLocation": "sales/tlds/gtld.aspx",
+      "draft": {
+        "createdDate": "2014-04-29",
+        "comments": "adding to github",
+        "url": "http://www.dev-godaddy.com/tlds/gtldga.aspx"
+      }
+    },
+    "metaCanonicalPath": "/tlds/[@D[gtld]@D]",
+    "metaOgTitle": "[@L[cds.tldleaf/[@D[gtld]@D]:ga.og.title]@L]",
+    "metaOgDescription": "[@L[cds.tldleaf/[@D[gtld]@D]:ga.og.description]@L]",
+    "metaOgAppID": "115696031791232",
+    "metaOgAdmins": "633356800"
+  },
+  "gtldpr.html": {
+    "cdsDetails": {
+      "champion": {
+        "name": "Adam Smith",
+        "email": "absmith@godaddy.com"
+      },
+      "cdsLocation": "sales/tlds/gtldprereg.aspx",
+      "draft": {
+        "createdDate": "2014-04-29",
+        "comments": "adding to github",
+        "url": "http://www.dev-godaddy.com/tlds/gtldprereg.aspx"
+      }
+    },
+    "metaCanonicalPath": "/tlds/[@D[gtld]@D]",
+    "metaOgTitle": "[@L[cds.tldleaf/[@D[gtld]@D]:prereg.og.title]@L]",
+    "metaOgDescription": "[@L[cds.tldleaf/[@D[gtld]@D]:prereg.og.description]@L]",
+    "metaOgAppID": "115696031791232",
+    "metaOgAdmins": "633356800"
+  },
+  "gtldwa.html": {
+    "cdsDetails": {
+      "champion": {
+        "name": "Adam Smith",
+        "email": "absmith@godaddy.com"
+      },
+      "cdsLocation": "sales/tlds/gtldwatch.aspx",
+      "draft": {
+        "createdDate": "2014-04-29",
+        "comments": "adding to github",
+        "url": "http://www.dev-godaddy.com/tlds/gtldwatch.aspx"
+      }
+    },
+    "metaCanonicalPath": "/tlds/[@D[gtld]@D]",
+    "metaOgTitle": "[@L[cds.tldleaf/[@D[gtld]@D]:watch.og.title]@L]",
+    "metaOgDescription": "[@L[cds.tldleaf/[@D[gtld]@D]:watch.og.description]@L]",
+    "metaOgAppID": "115696031791232",
+    "metaOgAdmins": "633356800"
+  },
+  "gtld.language": {
+    "cdsDetails": {
+      "champion": {
+        "name": "Joel Conrad",
+        "email": "jconrad@godaddy.com"
+      },
+      "cdsLocation": "localization/sales/gd/tlds/gtld/en",
+      "draft": {
+        "createdDate": "2014-04-29",
+        "comments": "gTLD LP update for .LONDON launch"
+      }
+    }
+  }
+}

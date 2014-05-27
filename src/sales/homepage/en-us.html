@@ -1,0 +1,46 @@
+---
+location: sales/homepage/locales/en-us.html
+id: 537aa859f778fc17186148eb
+locale: en-us
+---
+
+{% set include_topmarq =  "top_marquees/_" + locale + ".html" %}
+{% set include_domainbugs =  "domain_bugs/_" + locale + ".html" %}
+{% set include_pod =  "pods/_" + locale + ".html" %}
+{% set include_lowermarq =  "lower_marquees/_" + locale + ".html" %}
+{% set styles =  "css/" + locale + ".less" %}
+
+{% extends 'layouts/homepage.html' %}
+
+{% block customcss %}
+
+{% endblock %}
+
+{% block body %}
+  {% include include_topmarq %}
+  {% include include_domainbugs %}
+  {% include include_pod %}
+  {% include include_lowermarq %}
+
+{% endblock %}
+{% block customjs %}
+{% jsminify %}
+var hpLoadVideo = 0;
+var autoplay = '\&autoplay=1';
+$("div.gdhp-bottom-banner").mouseenter(function() {
+  if(hpLoadVideo != 1)
+    {
+      hpLoadVideo = 1;
+      var src ='//www.youtube.com/embed/WycoJMKzXZ4?html5=1&rel=0';
+      $('#myVideoModal iframe').attr('src',src);
+      $('#myVideoModal').on('hidden.bs.modal', function () {          
+        $('#myVideoModal iframe').removeAttr('src');
+        $('#myVideoModal iframe').attr('src',src);
+      })
+      $('#myVideoModal').on('show.bs.modal', function () {          
+        $('#myVideoModal iframe').attr('src', src + autoplay);
+      })
+    }
+  });
+{% endjsminify %}
+{% endblock %} 

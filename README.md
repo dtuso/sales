@@ -1,3 +1,7 @@
+**Full documenation (under construction) can/will be found here:**
+
+https://github.secureserver.net/FOS-CDS-Pages/Sales/wiki/_pages
+
 About
 =====
 
@@ -46,34 +50,15 @@ git remote add upstream https://github.secureserver.net/FOS-CDS-Pages/Sales.git
 Now that you have connection back to the originating repository, make sure you have the latest content:
 
 ```
-git pull upstream master
+git fetch upstream master
+git rebase upstream/master
 ```
 
-Do this daily to make sure you're never too far off.
+Do this daily to make sure you're never too far off. More info on syncing up forks: https://help.github.com/articles/syncing-a-fork
 
 ### Step 2: Install Dependencies
 
 **Install global dependencies**
-
-#### CDS Command Line Interface (cds-cli)
-
-You must install the cds global command line interface. This is used for managing authentication with the CDSM related tasks.
-
-```
-$ npm install -g git+ssh://git@github.secureserver.net:WebOps/cds-cli.git
-```
-
-This installs a new command ```cds``` for running several different requests against the CDS API. For this repository, you just need to use it for authenticating:
-
-```
-$ cds login
-```
-
-
-**NOTE FOR WINDOWS USERS: ** the newly created ```cds``` command is installed using NPM but for some reason for windows it doesn't install it correctly.
-Until this issue can be resolved [Fix-CDS-CLI](https://github.secureserver.net/FOS-CDS-Pages/Sales/wiki/Fix-CDS-CLI)
-
-For more detail see [WebOps/cds-cli](https://github.secureserver.net/WebOps/cds-cli)
 
 #### NodeJS
 
@@ -107,6 +92,8 @@ Tasks
 Tasks are now executed with [GulpJS](http://www.gulpjs.com) instead of Grunt. It would be helpful to get more
 acquainted with Gulp before continuing.
 
+More detail on tasks can be found here https://github.secureserver.net/FOS-CDS-Pages/Sales/wiki/Tasks
+
 #### HTML
 This task will render your templates, preparing them for CDS importing. The task uses a gulp plugin called
 [gulp-swig](https://www.npmjs.org/package/gulp-swig) which renders your templates using the Swig JS template engine. This
@@ -115,6 +102,8 @@ lets you use layouts, variables, and includes within your pages to help keep thi
 ```
 gulp html
 ```
+
+Running this task requires you to be logged in if you want your content uploaded to CDS. At the command prompt just type: ```node ./lib/login.js``` and type in your username and password.
 
 #### LANGUAGE
 
@@ -130,6 +119,15 @@ to the ```build``` folder.
 
 ```
 gulp styles
+```
+
+#### SCRIPTS
+
+This tasks will minify any JavaScript files you have in your JS folder. The a copy of the original as well as the minified JavaScript
+gets copied to the ```build``` folder.
+
+```
+gulp scripts
 ```
 
 #### IMAGES
@@ -155,7 +153,7 @@ These tasks are aliases that combine one or more tasks into one:
 
 #### BUILD
 
-This task combines the 'html', 'language', 'styles', and 'images' tasks.
+This task combines the 'html', 'language', 'styles', 'scripts', and 'images' tasks.
 
 ```
 gulp build

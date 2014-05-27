@@ -1,5 +1,5 @@
-{% block cdsm %}{% endblock %}##if(false)
-{% include '../modules/doc-block.html' %}
+##if(false)
+{% include 'modules/doc-block.html' %}
 ##endif
 <!DOCTYPE html>
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="[@T[localization:<language full="true" />]@T]"> <![endif]-->
@@ -8,14 +8,14 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="[@T[localization:<language full="true" />]@T]"> <!--<![endif]-->
 
   <head>
-    
+
 
       <meta charset="utf-8" />
       {% block pageTitle %}<title>{{ metaTitle }}</title>{% endblock %}
       {% block pageDescription %}<meta name="description" content="{{ metaDescription }}" />{% endblock %}
       {% block pageKeywords %}<meta name="keywords" content="{{ metaKeywords }}" />{% endblock %}
       {% block metahead %}
-      
+
       <!-- Facebook Open Graph Meta Data -->
       <meta property="og:title" content="{{ metaOgTitle }}" />
       <meta property="og:type" content="product" />
@@ -35,7 +35,6 @@
 
       <link href="[@T[link:<css path='fos/201401/global/css/{{ cssVersion }}/combined-{{ cssVersion }}.css' />]@T]" rel="stylesheet" type="text/css">
       {% if assetPath %}
-      <!-- {{cssVersionOverride}} -->
       <link href="[@T[link:<css path='{{ assetPath }}css/styles.css' />]@T]{% if cssVersionOverride %}?v={{cssVersionOverride}}{% endif %}" rel="stylesheet" type="text/css">
       {% endif %}
       <!-- IE SUPPORT FOR HTML5 and Bootstrap 3 -->
@@ -43,9 +42,6 @@
         <link href="[@T[link:<cssroot />]@T]fos/201401/global/css/bootstrap-ie7fix.min.css" rel="stylesheet" type="text/css" />
         <script src="[@T[link:<javascriptroot />]@T]fos/201401/global/js/html5shiv.js"></script>
       <![endif]-->
-      <!--[if lt IE 8]>
-        <link href="[@T[link:<cssroot />]@T]fos/201401/global/css/bootstrap-ie7fix.min.css" rel="stylesheet" type="text/css" />
-      <![endif]-->    
 
       <script src="[@T[link:<javascriptroot />]@T]fos/201401/global/vendor/jquery/1.8.3/jquery.min.js"></script>
       [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags" />]@P]

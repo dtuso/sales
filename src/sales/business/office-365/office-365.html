@@ -1,0 +1,924 @@
+---
+location: sales/business/office-365.aspx
+id: 5373e8abf778fc384801ba5b
+name: Github prep
+---
+{% extends 'layouts/base.html' %}
+
+{% block metahead %}
+
+  {% parent %}
+  <style type="text/css">
+    .sup-symbol-price {
+      font-size: 0.5em;
+      padding: 2px 2px 0;
+    }
+
+      .business-card{
+      position:relative;
+      background-color:none;
+      }
+      .center-paragraph{
+      position:absolute;
+      left:68px;
+      top:48%;
+      }
+      .long-lang-text{
+      font-size: small;
+      }
+
+
+ ##if(countrySiteAny(tr))
+      .misc-banner-content {color:#666;}
+      .office-365-logo-medium-white {background-position: 0 -36px!important;} /* use the darker o365 img and font color */
+      #plans-pricing {
+        background: url([@T[link:<imageroot />]@T]fos/office365/img/bg-MED-banner-office.jpg) no-repeat center top;
+      }
+ ##elseif(countrySiteAny(dk,fi,no,se,at,pl,hu,ru,ua,gr))
+      #plans-pricing {
+        background: url([@T[link:<imageroot />]@T]fos/office365/img/bg-NOR-banner-office.jpg) no-repeat center top;
+      }
+ ##elseif(activeLanguageAny([es]))
+      .misc-banner-content {color:#666;}
+      .office-365-logo-medium-white {background-position: 0 -36px!important;} /* use the darker o365 img and font color */
+      #plans-pricing {
+        background: url([@T[link:<imageroot />]@T]fos/office365/img/bg-LATAM-banner-office-v2.jpg) no-repeat center top;
+      }
+ ##elseif(activeLanguageAny([pt-br]))
+      .misc-banner-content {color:#666;}
+      .office-365-logo-medium-white {background-position: 0 -36px!important;} /* use the darker o365 img and font color */
+      #plans-pricing {
+        background: url([@T[link:<imageroot />]@T]fos/office365/img/bg-LATAM-banner-office-v2.jpg) no-repeat center top;
+      }
+      .font-size-xxl-large{
+        font-size:xx-large;
+      }
+ ##elseif(activeLanguageAny([en]))
+      .width-seventy-five{
+        max-width:75%;
+      }
+ ##endif
+  </style>
+  ##if(isManager())
+     <script src="[@T[link:<javascriptroot />]@T]fos/lib/select-style/jquery.selectstyle.1.1.0.min.js"></script>
+     <script>
+       selectstyle.addTemplate({
+         name: 'plan options',
+         mainUi: '<div class="selectstyleui"><div class="ss-value clearfix"><span class="ss-var-duration"></span><span class="ss-var-price"></span><span class="ss-var-message"></span><span class="ss-after"></span></div><ul class="ss-options"></ul></div>',
+         optionUi: '<li class="ss-option"><div class="top-row clearfix"><span class="ss-var-duration"></span><span class="ss-var-price"></span><span class="ss-var-message"></span></div><div class="bottom-row clearfix"><span class="ss-var-blank"></span><span class="ss-var-strike"></span><span class="ss-var-message2"></span></div></li>'
+       });
+   </script>
+   ##else
+     <script>
+       $(document).ready(function () {
+         selectstyle.addTemplate({
+           name: 'plan options',
+           mainUi: '<div class="selectstyleui"><div class="ss-value clearfix"><span class="ss-var-duration"></span><span class="ss-var-price"></span><span class="ss-var-message"></span><span class="ss-after"></span></div><ul class="ss-options"></ul></div>',
+           optionUi: '<li class="ss-option"><div class="top-row clearfix"><span class="ss-var-duration"></span><span class="ss-var-price"></span><span class="ss-var-message"></span></div><div class="bottom-row clearfix"><span class="ss-var-blank"></span><span class="ss-var-strike"></span><span class="ss-var-message2"></span></div></li>'
+         });
+       });
+   </script>
+   ##endif
+
+{% endblock metahead %}
+
+{% block footer %}
+    <script src="[@T[link:<javascriptroot />]@T]fos/office365/js/plugins.js"></script>
+    <script src="[@T[link:<javascriptroot />]@T]fos/office365/js/main.js"></script>
+    <script src="[@T[link:<javascriptroot />]@T]fos/hosting/rebrand/js/web_hosting_20130821.min.js" type="text/javascript"></script>
+    <script src="[@T[link:<javascriptroot />]@T]fos/office365/js/office365-lp.20140417.js" type="text/javascript"></script>
+<script>
+        $(document).ready(function () {
+
+          $("#disclaimers > p > a").click(function (event) {
+            var $disclaimerModal = $("#disclaimerModal");
+            $disclaimerModal.show();
+            $disclaimerModal.universalModal({ "width": 800 });
+            // IE will not show the modal at first, triggering the window resize fixes this
+            $(window).trigger("resize");
+            $(".modal-user-limit-ok").bind("click", function () {
+              $(".universal-modal-close").trigger("click.universalModal")
+            })
+          });
+
+##if(activeLanguageAny([en]))
+          var autoplay = '\&autoplay=1';
+          var src = $('#myVideoModal iframe').attr('src');
+          $('#myVideoModal').on('hidden.bs.modal', function () {
+            $('#myVideoModal iframe').removeAttr('src');
+            $('#myVideoModal iframe').attr('src', src);
+          });
+
+          $('#myVideoModal').on('show.bs.modal', function () {
+            $('#myVideoModal iframe').attr('src', src + autoplay);
+          });
+##endif
+
+        });
+
+
+        // gdSideBySideAlign plugin
+  (function ( $, window, document, undefined ) {
+
+    var pluginName = 'gdSideBySideAlign',
+        defaults = {
+          bailIfRowCountsMismatch : true
+    };
+
+    function GDSideBySideAlign( element, options ) {
+      this.element = element;
+      this.options = $.extend( {}, defaults, options);
+      this._defaults = defaults;
+      this._name = pluginName;
+      this.init();
+    }
+
+    GDSideBySideAlign.prototype.init = function () {
+
+        // Find the columns
+        var $columns = $(this.element).find('[data-gd-sidebysidealign-col]');
+
+        if($columns.length == 0) {
+          return; // bail if no columns found
+        }
+
+        // Make sure columns have an equal number of rows
+        var numRows = 0, equalLength = true;
+        $.each($columns, function(idx,item){
+          var $rows = $(item).find('[data-gd-sidebysidealign-row]');
+          if(numRows == 0) {
+            numRows = $rows.length;
+          }
+          if(equalLength) {
+            if(numRows != $rows.length) equalLength = false;
+          }
+        });
+        if(numRows==0 || !equalLength && this.options.bailIfRowCountsMismatch) {
+          return; // bail if no rows, or rows are not equal length
+        }
+
+        // loop thru each row and grab the largest cell height and apply to each cell in that row
+        for(var i=1; i<=numRows; i++) {
+          var $cells = $columns.find('[data-gd-sidebysidealign-row="' + i + '"]' );
+          var tallest = 0;
+          $.each($cells,function(idx, cell){
+            tallest = Math.max(tallest, $(cell).height());
+          });
+          $cells.css({'min-height':tallest+'px'});
+        }
+
+    }; /* end GDSideBySideAlign.prototype.init */
+
+    // register the function to be used
+    $.fn[pluginName] = function ( options ) {
+      return this.each(function () {
+        if (!$.data(this, 'plugin_' + pluginName)) {
+          $.data(this, 'plugin_' + pluginName, new GDSideBySideAlign( this, $(this).data('gd-sidebysidealign') || options ));
+        }
+      });
+    };
+
+    // load the plugin
+    $(document).ready(function(){
+      $('[data-gd-sidebysidealign]').gdSideBySideAlign();
+    });
+
+  })( jQuery, window, document );
+
+    </script>
+
+{% endblock footer %}
+
+{% block body %}
+    <!-- Start main-banner -->
+    <section class="main-banner main-banner-dedicated-servers">
+      <h1 class="main-banner-subtitle">[@L[cds.sales/business/office-365:lp-5-MicrosoftOffice365FromGoDaddy]@L]</h1>
+      <h2 class="main-banner-title">[@L[cds.sales/business/office-365:lp-10-AllInOneSolutionsToGetMoredoneAnd]@L]</h2>
+##if(activeLanguageAny([en]))
+<a class="office-365-banner-video-link" data-toggle="modal" data-target="#myVideoModal" data-ci="86688">
+            <i class="ico ico-gt-circle"></i>
+            <span class="br"></span>
+            <span><strong>[@L[cds.sales/business/office-365:lp-2-WatchVideo]@L]</strong></span>
+        </a>
+        <div class="modal fade videoModal" id="myVideoModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="modal-header-close close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              </div>
+              <div class="modal-body">
+                <iframe width="854" height="480" src="//www.youtube.com/embed/xvK76H9olXM?html5=1&rel=0&iv_load_policy=3&modestbranding=1" autoplay scrolling="no" frameborder="0" allowfullscreen>
+                </iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+##endif
+    </section>
+    <!-- End main-banner -->
+
+    <!-- Start main-tabs -->
+    <section class="main-tabs">
+      <div class="container">
+        <ul class="nav nav-tabs">
+          <li class="nav-tabs-item active"><a data-ci="86689" class="nav-tabs-link nav-tabs-link0" href="#plans-pricing" data-toggle="tab">[@L[cds.sales/business/office-365:lp-2-PlansPricing]@L]</a><i class="ico ico-shape ico-shape-arrow-down"></i>
+          </li>
+          <li class="nav-tabs-item"><a data-ci="86690" class="nav-tabs-link nav-tabs-link1" href="#email" data-toggle="tab">[@L[cds.sales/business/office-365:lp-2-AboutEmail]@L]</a><i class="ico ico-shape ico-shape-arrow-down"></i>
+          </li>
+          <li class="nav-tabs-item"><a data-ci="86691" class="nav-tabs-link nav-tabs-link2" href="#office-365" data-toggle="tab">[@L[cds.sales/business/office-365:lp-3-AboutOffice365]@L]</a><i class="ico ico-shape ico-shape-arrow-down"></i>
+          </li>
+          <li class="nav-tabs-item"><a data-ci="86692" class="nav-tabs-link nav-tabs-link3" href="#faq" data-toggle="tab">[@L[cds.sales/business/office-365:lp-1-FAQs]@L]</a><i class="ico ico-shape ico-shape-arrow-down"></i>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- End main-tabs -->
+
+    <!-- Start main-tabs panes -->
+    <div class="tab-content no-margin-top">
+      <div class="tab-pane active" id="plans-pricing">
+        <!-- Start misc-banner -->
+        <section class="misc-banner">
+          <div class="l-main-container container misc-banner-content">
+            <h2><span class="office-365-logo-medium"></span>[@L[cds.sales/business/office-365:lp-10-ProfessionalEmailAnywhereBusinessSolutionsGoDaddyByYour]@L]</h2>
+            <p>[@L[cds.sales/business/office-365:lp-33-GetEverythingYouNeedToRunYourBusiness]@L]</p>
+          </div>
+        </section>
+        <!-- End misc-banner -->
+
+        <!-- Start content -->
+        <section class="l-container-over-banner">
+          <div class="l-main-container container">
+            <div class="row" data-gd-sidebysidealign="{}">
+              <!--  1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111  -->
+              <div class="col-xs-4 js-plan-column0 js-plan-column" data-gd-sidebysidealign-col="1">
+                <div class="grid-column compare-top">
+                  <div class="compare-top-description-text clearfix" data-gd-sidebysidealign-row="1">
+                    <h3 class="product-title">[@L[cds.sales/business/office-365:lp-2-EmailEssentials]@L]</h3>
+                    <p class="font-16">[@L[cds.sales/business/office-365:lp-5-LookProfessionalWithEveryEmail]@L]</p>
+                  </div>
+                  <div data-gd-sidebysidealign-row="2" class="clearfix">
+                    <p class="starting-at" style="margin-bottom:10px;"><span class="starting-at-above">[@L[cds.sales/business/office-365:lp-2-StartingAt]@L]</span>  <span class="starting-at-price">[@T[productprice:<current productid="31805" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="starting-at-small"> [@L[cds.sales/business/office-365:lp-3-PerUserMonth]@L]</span>
+                    </p>
+                    ##if(countrySiteAny(uk))
+                    <div class="vat-tax-message">[@L[cds.sales/business/office-365:vat-price]@L]</div>
+                    ##endif
+                  </div>
+
+                  <div data-gd-sidebysidealign-row="3">
+                    <select class="selectstyle js-plan-options" data-selectstyle='{"template":"plan options"}'>
+                      ##if(productHasSavingsMoreThan(31796, 31796, 0))
+                      <option data-ci="86424" value="OfficeEmailMsftMo" data-ss-vars='{"duration":"[@L[cds.sales/business/office-365:lp-2-1Month]@L]","price":"[@T[productprice:<current productid="31796" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/business/office-365:lp-1-Mo]@L]","message":"[@L[cds.sales/business/office-365:lp-2-OnSale]@L]","blank":"&nbsp;","strike":"[@T[productprice:<template productid="31796" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]/[@L[cds.sales/business/office-365:lp-1-Mo]@L]","message2":"[@T[productcompare:<percent primaryproductid="31796" secondaryproductid="31796" hidebelow="5"><html><![CDATA[Save {0}%]]></html></percent>]@T]"}'></option>
+                      ##else
+                      <option data-ci="86424" value="OfficeEmailMsftMo" data-ss-vars='{"duration":"[@L[cds.sales/business/office-365:lp-2-1Month-2]@L]","price":"[@T[productprice:<current productid="31796" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/business/office-365:lp-1-Mo]@L]"}'></option>
+                      ##endif
+                      ##if(productHasSavingsMoreThan(31805, 31805, 0))
+                      <option data-ci="86425" value="OfficeEmailMsft1yr" data-ss-vars='{"duration":"[@L[cds.sales/business/office-365:lp-2-1Year]@L]","price":"[@T[productprice:<current productid="31805" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/business/office-365:lp-1-Mo]@L]","message":"[@L[cds.sales/business/office-365:lp-2-OnSale-2]@L]","blank":"&nbsp;","strike":"[@T[productprice:<template productid="31805" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]/[@L[cds.sales/business/office-365:lp-1-Mo]@L]","message2":"[@T[productcompare:<percent primaryproductid="31805" secondaryproductid="31805" hidebelow="5"><html><![CDATA[Save {0}%]]></html></percent>]@T]"}' selected></option>
+                      ##elseif(productHasSavingsMoreThan(31805, 31796, 0))
+                      <option data-ci="86425" value="OfficeEmailMsft1yr" data-ss-vars='{"duration":"[@L[cds.sales/business/office-365:lp-2-1Year]@L]","price":"[@T[productprice:<current productid="31805" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/business/office-365:lp-1-Mo]@L]","message":"[@T[productcompare:<percent primaryproductid="31805" secondaryproductid="31796" hidebelow="5"><html><![CDATA[{0}%]]></html></percent>]@T] [@L[cds.sales/business/office-365:lp-1-OFF]@L]"}' selected></option>
+                      ##else
+                      <option data-ci="86425" value="OfficeEmailMsft1yr" data-ss-vars='{"duration":"[@L[cds.sales/business/office-365:lp-2-1Year]@L]","price":"[@T[productprice:<current productid="31805" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/business/office-365:lp-1-Mo]@L]"}' selected></option>
+                      ##endif
+                      ##if(productHasSavingsMoreThan(31808, 31808, 0))
+                      <option data-ci="86426" value="OfficeEmailMsft2yr" data-ss-vars='{"duration":"[@L[cds.sales/business/office-365:lp-2-2Years]@L]","price":"[@T[productprice:<current productid="31808" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/business/office-365:lp-1-Mo]@L]","message":"[@L[cds.sales/business/office-365:lp-2-OnSale-2]@L]","blank":"&nbsp;","strike":"[@T[productprice:<template productid="31808" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]/[@L[cds.sales/business/office-365:lp-1-Mo]@L]","message2":"[@T[productcompare:<percent primaryproductid="31808" secondaryproductid="31808" hidebelow="5"><html><![CDATA[Save {0}%]]></html></percent>]@T]"}'></option>
+                      ##elseif(productHasSavingsMoreThan(31808, 31796, 0))
+                      <option data-ci="86426" value="OfficeEmailMsft2yr" data-ss-vars='{"duration":"[@L[cds.sales/business/office-365:lp-2-2Years]@L]","price":"[@T[productprice:<current productid="31808" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/business/office-365:lp-1-Mo]@L]","message":"[@T[productcompare:<percent primaryproductid="31808" secondaryproductid="31796" hidebelow="5"><html><![CDATA[{0}%]]></html></percent>]@T] [@L[cds.sales/business/office-365:lp-1-OFF]@L]"}'></option>
+                      ##else
+                      <option data-ci="86426" value="OfficeEmailMsft2yr" data-ss-vars='{"duration":"[@L[cds.sales/business/office-365:lp-2-2Years]@L]","price":"[@T[productprice:<current productid="31808" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/business/office-365:lp-1-Mo]@L]"}'></option>
+                      ##endif
+                    </select>
+                  </div>
+
+                  <div data-gd-sidebysidealign-row="4">
+                    <button type="button" class="btn btn-warning btn-block btn-lg js-add-to-cart">[@L[cds.sales/business/office-365:lp-3-AddToCart]@L]</button>
+                  </div>
+
+                </div>
+                <ul class="compare-chart">
+                  <li class="compare-chart-cell" data-gd-sidebysidealign-row="5">
+                    <p class="compare-cell-text">[@L[cds.sales/business/office-365:lp-4-5GBEmailStorage]@L]</p>
+                  </li>
+                  <li class="compare-chart-cell" data-gd-sidebysidealign-row="6">
+                    <p class="compare-cell-text">
+                      <span class="compare-cell-bold">
+                        <span class="tooltip-underline">[@L[cds.sales/business/office-365:lp-5-SyncEmailCalendarAndContacts]@L]
+                          <span class="tooltip-caption-right">
+                            <span class="tooltip-caption-header">[@L[cds.sales/business/office-365:lp-5-SyncEmailCalendarAndContacts-2]@L]</span>
+                           [@L[cds.sales/business/office-365:lp-76-UsersCanConnectTheFollowingVersionsOfOutlook]@L]
+                          </span>
+                        </span>
+                      </span>
+                      [@L[cds.sales/business/office-365:lp-3-AcrossAllDevices]@L]
+                    </p>
+                  </li>
+                  <li class="compare-chart-cell" data-gd-sidebysidealign-row="7">
+                    <p class="compare-cell-text">
+                      [@L[cds.sales/business/office-365:lp-8-2GBSecureCloudStorageViaMicrosoftSkyDrive]@L]
+                    </p>
+                  </li>
+                  <li class="compare-chart-cell" data-gd-sidebysidealign-row="8">
+                    <p class="compare-cell-text compare-cell-text-2-lines">&mdash;</p>
+                  </li>
+                  <li class="compare-chart-cell" data-gd-sidebysidealign-row="9">
+                    <p class="compare-cell-text compare-cell-text-2-lines">&mdash;</p>
+                  </li>
+                  <li class="compare-chart-cell" data-gd-sidebysidealign-row="10">
+                    <p class="compare-cell-text compare-cell-text-2-lines">&mdash;</p>
+                  </li>
+                  <li class="compare-chart-cell" data-gd-sidebysidealign-row="11">
+                    <p class="compare-cell-text compare-cell-text-2-lines">&mdash;</p>
+                  </li>
+                  <li class="compare-chart-cell" data-gd-sidebysidealign-row="12">
+                    <p class="compare-cell-text">&mdash;</p>
+                  </li>
+                </ul>
+              </div>
+              <!-- 2222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222 -->
+              <div class="col-xs-4 js-plan-column1 js-plan-column" data-gd-sidebysidealign-col="2">
+                <div class="grid-column compare-top">
+                  <div class="ms-office-365-poweredby"></div>
+                  <div class="compare-top-description-text clearfix" data-gd-sidebysidealign-row="1">
+                    <h3 class="product-title">[@L[cds.sales/business/office-365:lp-2-BusinessEssentials]@L]</h3>
+                    <p class="font-16">[@L[cds.sales/business/office-365:lp-6-StayConnectedToYourBusinessAnywhere]@L]</p>
+                  </div>
+                  <div data-gd-sidebysidealign-row="2" class="clearfix">
+                    <p class="starting-at" style="margin-bottom:10px;">
+                      <span class="starting-at-above">[@L[cds.sales/business/office-365:lp-2-StartingAt]@L]</span>
+                      <span class="starting-at-price">[@T[productprice:<current productid="31825" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span>
+                      <span class="starting-at-small"> [@L[cds.sales/business/office-365:lp-3-PerUserMonth]@L]</span>
+                    </p>
+                    ##if(countrySiteAny(uk))
+                    <div class="vat-tax-message">[@L[cds.sales/business/office-365:vat-price]@L]</div>
+                    ##endif
+                  </div>
+                  <div data-gd-sidebysidealign-row="3">
+                    <select class="selectstyle js-plan-options" data-selectstyle='{"template":"plan options"}'>
+                      ##if(productHasSavingsMoreThan(31819, 31819, 0))
+                      <option data-ci="86427" value="OfficeBusMsftMo" data-ss-vars='{"duration":"[@L[cds.sales/business/office-365:lp-2-1Month-2]@L]","price":"[@T[productprice:<current productid="31819" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/business/office-365:lp-1-Mo]@L]","message":"[@L[cds.sales/business/office-365:lp-2-OnSale-2]@L]","blank":"&nbsp;","strike":"[@T[productprice:<template productid="31819" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]/[@L[cds.sales/business/office-365:lp-1-Mo]@L]","message2":"[@T[productcompare:<percent primaryproductid="31819" secondaryproductid="31819" hidebelow="5"><html><![CDATA[Save {0}%]]></html></percent>]@T]"}'></option>
+                      ##else
+                      <option data-ci="86427" value="OfficeBusMsftMo" data-ss-vars='{"duration":"[@L[cds.sales/business/office-365:lp-2-1Month-2]@L]","price":"[@T[productprice:<current productid="31819" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/business/office-365:lp-1-Mo]@L]"}'></option>
+                      ##endif
+                      ##if(productHasSavingsMoreThan(31825, 31825, 0))
+                      <option data-ci="86428" value="OfficeBusMsft1yr" data-ss-vars='{"duration":"[@L[cds.sales/business/office-365:lp-2-1Year]@L]","price":"[@T[productprice:<current productid="31825" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/business/office-365:lp-1-Mo]@L]","message":"[@L[cds.sales/business/office-365:lp-2-OnSale-2]@L]","blank":"&nbsp;","strike":"[@T[productprice:<template productid="31825" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]/[@L[cds.sales/business/office-365:lp-1-Mo]@L]","message2":"[@T[productcompare:<percent primaryproductid="31825" secondaryproductid="31825" hidebelow="5"><html><![CDATA[Save {0}%]]></html></percent>]@T]"}' selected></option>
+                      ##elseif(productHasSavingsMoreThan(31825, 31819, 0))
+                      <option data-ci="86428" value="OfficeBusMsft1yr" data-ss-vars='{"duration":"[@L[cds.sales/business/office-365:lp-2-1Year]@L]","price":"[@T[productprice:<current productid="31825" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/business/office-365:lp-1-Mo]@L]","message":"[@T[productcompare:<percent primaryproductid="31825" secondaryproductid="31819" hidebelow="5"><html><![CDATA[{0}%]]></html></percent>]@T] [@L[cds.sales/business/office-365:lp-1-OFF]@L]"}' selected></option>
+                      ##else
+                      <option data-ci="86428" value="OfficeBusMsft1yr" data-ss-vars='{"duration":"[@L[cds.sales/business/office-365:lp-2-1Year]@L]","price":"[@T[productprice:<current productid="31825" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/business/office-365:lp-1-Mo]@L]"}' selected></option>
+                      ##endif
+                      ##if(productHasSavingsMoreThan(31827, 31827, 0))
+                      <option data-ci="86429" value="OfficeBusMsft2yr" data-ss-vars='{"duration":"[@L[cds.sales/business/office-365:lp-2-2Years]@L]","price":"[@T[productprice:<current productid="31827" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/business/office-365:lp-1-Mo]@L]","message":"[@L[cds.sales/business/office-365:lp-2-OnSale-2]@L]","blank":"&nbsp;","strike":"[@T[productprice:<template productid="31827" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]/[@L[cds.sales/business/office-365:lp-1-Mo]@L]","message2":"[@T[productcompare:<percent primaryproductid="31827" secondaryproductid="31827" hidebelow="5"><html><![CDATA[Save {0}%]]></html></percent>]@T]"}'></option>
+                      ##elseif(productHasSavingsMoreThan(31827, 31819, 0))
+                      <option data-ci="86429" value="OfficeBusMsft2yr" data-ss-vars='{"duration":"[@L[cds.sales/business/office-365:lp-2-2Years]@L]","price":"[@T[productprice:<current productid="31827" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/business/office-365:lp-1-Mo]@L]","message":"[@T[productcompare:<percent primaryproductid="31827" secondaryproductid="31819" hidebelow="5"><html><![CDATA[{0}%]]></html></percent>]@T] [@L[cds.sales/business/office-365:lp-1-OFF]@L]"}'></option>
+                      ##else
+                      <option data-ci="86429" value="OfficeBusMsft2yr" data-ss-vars='{"duration":"[@L[cds.sales/business/office-365:lp-2-2Years]@L]","price":"[@T[productprice:<current productid="31827" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/business/office-365:lp-1-Mo]@L]"}'></option>
+                      ##endif
+                    </select>
+                  </div>
+
+                  <div data-gd-sidebysidealign-row="4">
+                    <button type="button" class="btn btn-warning btn-block btn-lg js-add-to-cart">[@L[cds.sales/business/office-365:lp-3-AddToCart]@L]</button>
+                  </div>
+                </div>
+                <ul class="compare-chart">
+                  <li class="compare-chart-cell" data-gd-sidebysidealign-row="5">
+                    <p class="compare-cell-text">[@L[cds.sales/business/office-365:lp-4-50GBEmailStorage]@L]
+                  </li>
+                  <li class="compare-chart-cell" data-gd-sidebysidealign-row="6">
+                    <p class="compare-cell-text"><span class="compare-cell-bold">
+<span class="tooltip-underline">[@L[cds.sales/business/office-365:lp-5-SyncEmailCalendarAndContacts-3]@L]<span class="tooltip-caption-right" ><span class="tooltip-caption-header">[@L[cds.sales/business/office-365:lp-5-SyncEmailCalendarAndContacts-4]@L]</span> [@L[cds.sales/business/office-365:lp-76-UsersCanConnectTheFollowingVersionsOfOutlook-2]@L]</span>
+                      </span>
+
+                      </span>[@L[cds.sales/business/office-365:lp-3-AcrossAllDevices-2]@L]</p>
+                  </li>
+                  <li class="compare-chart-cell" data-gd-sidebysidealign-row="7">
+                    <p class="compare-cell-text">[@L[cds.sales/business/office-365:lp-31-25GBSecureCloudStorageViaMicrosoftSkyDrive]@L]
+                    </p>
+                  </li>
+                  <li class="compare-chart-cell" data-gd-sidebysidealign-row="8">
+                    <p class="compare-cell-text">[@L[cds.sales/business/office-365:lp-7-SimpleFileSharingAndOnlineFileCollaboration]@L]</p>
+                  </li>
+                  <li class="compare-chart-cell" data-gd-sidebysidealign-row="9">
+                    <p class="compare-cell-text">[@L[cds.sales/business/office-365:lp-7-UnlimitedOnlineMeetingsAndHDVideoConferencing]@L]</p>
+                  </li>
+                  <li class="compare-chart-cell" data-gd-sidebysidealign-row="10">
+                    <p class="compare-cell-text"><span class="compare-cell-bold"><span class="tooltip-underline">[@L[cds.sales/business/office-365:lp-3-OfficeWebApps]@L] <span class="tooltip-caption-right" ><span class="tooltip-caption-header">[@L[cds.sales/business/office-365:lp-2-WebApps]@L]</span> [@L[cds.sales/business/office-365:lp-17-CreateEditAndShareWordExcelPowerPointAnd]@L]</span>
+                      </span>
+                      </span>[@L[cds.sales/business/office-365:lp-7-OnlineVersionsOfWordExcelAndMore]@L]</p>
+                  </li>
+                  <li class="compare-chart-cell" data-gd-sidebysidealign-row="11">
+                    <p class="compare-cell-text compare-cell-text-2-lines">&mdash;</p>
+                  </li>
+                  <li class="compare-chart-cell" data-gd-sidebysidealign-row="12">
+                    <p class="compare-cell-text">&mdash;</p>
+                  </li>
+                </ul>
+              </div>
+              <!-- 3333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333 -->
+              <div class="col-xs-4 js-plan-column2 js-plan-column" data-gd-sidebysidealign-col="3">
+                <div class="grid-column compare-top">
+                  <div class="compare-top-badge-wrapper">
+                    <span class="compare-top-badge">[@L[cds.sales/business/office-365:lp-6-IncludesTheLatestDesktopOffice]@L]</span>
+                  </div>
+                  <div class="ms-office-365-poweredby"></div>
+                  <div class="compare-top-description-text clearfix" data-gd-sidebysidealign-row="1">
+                    <h3 class="product-title">[@L[cds.sales/business/office-365:lp-2-ProductivityPlus]@L]</h3>
+                    <p class="font-16">[@L[cds.sales/business/office-365:lp-6-GetMoreDoneOnlineAndOff]@L]</p>
+                  </div>
+                  <div data-gd-sidebysidealign-row="2" class="clearfix">
+                    <p class="starting-at" style="margin-bottom:10px;"><span class="starting-at-above">[@L[cds.sales/business/office-365:lp-2-StartingAt]@L]</span>  <span class="starting-at-price">[@T[productprice:<current productid="31841" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="starting-at-small"> [@L[cds.sales/business/office-365:lp-3-PerUserMonth]@L]</span>
+                    </p>
+                    ##if(countrySiteAny(uk))
+                    <div class="vat-tax-message">[@L[cds.sales/business/office-365:vat-price]@L]</div>
+                    ##endif
+                  </div>
+                  <div data-gd-sidebysidealign-row="3">
+                    <select class="selectstyle js-plan-options" data-selectstyle='{"template":"plan options"}'>
+                      ##if(productHasSavingsMoreThan(31835, 31835, 0))
+                      <option data-ci="86430" value="OfficeBusPremMsftMo" data-ss-vars='{"duration":"[@L[cds.sales/business/office-365:lp-2-1Month-2]@L]","price":"[@T[productprice:<current productid="31835" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/business/office-365:lp-1-Mo]@L]","message":"[@L[cds.sales/business/office-365:lp-2-OnSale-2]@L]","blank":"&nbsp;","strike":"[@T[productprice:<template productid="31835" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]/[@L[cds.sales/business/office-365:lp-1-Mo]@L]","message2":"[@T[productcompare:<percent primaryproductid="31835" secondaryproductid="31835" hidebelow="5"><html><![CDATA[Save {0}%]]></html></percent>]@T]"}'></option>
+                      ##else
+                      <option data-ci="86430" value="OfficeBusPremMsftMo" data-ss-vars='{"duration":"[@L[cds.sales/business/office-365:lp-2-1Month-2]@L]","price":"[@T[productprice:<current productid="31835" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/business/office-365:lp-1-Mo]@L]"}'></option>
+                      ##endif
+                      ##if(productHasSavingsMoreThan(31841, 31841, 0))
+                      <option data-ci="86431" value="OfficeBusPremMsft1yr" data-ss-vars='{"duration":"[@L[cds.sales/business/office-365:lp-2-1Year]@L]","price":"[@T[productprice:<current productid="31841" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/business/office-365:lp-1-Mo]@L]","message":"[@L[cds.sales/business/office-365:lp-2-OnSale-2]@L]","blank":"&nbsp;","strike":"[@T[productprice:<template productid="31841" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]/[@L[cds.sales/business/office-365:lp-1-Mo]@L]","message2":"[@T[productcompare:<percent primaryproductid="31841" secondaryproductid="31841" hidebelow="5"><html><![CDATA[Save {0}%]]></html></percent>]@T]"}' selected></option>
+                      ##elseif(productHasSavingsMoreThan(31841, 31835, 0))
+                      <option data-ci="86431" value="OfficeBusPremMsft1yr" data-ss-vars='{"duration":"[@L[cds.sales/business/office-365:lp-2-1Year]@L]","price":"[@T[productprice:<current productid="31841" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/business/office-365:lp-1-Mo]@L]","message":"[@T[productcompare:<percent primaryproductid="31841" secondaryproductid="31835" hidebelow="5"><html><![CDATA[{0}%]]></html></percent>]@T] [@L[cds.sales/business/office-365:lp-1-OFF]@L]"}' selected></option>
+                      ##else
+                      <option data-ci="86431" value="OfficeBusPremMsft1yr" data-ss-vars='{"duration":"[@L[cds.sales/business/office-365:lp-2-1Year]@L]","price":"[@T[productprice:<current productid="31841" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/business/office-365:lp-1-Mo]@L]"}' selected></option>
+                      ##endif
+                      ##if(productHasSavingsMoreThan(31843, 31843, 0))
+                      <option data-ci="86432" value="OfficeBusPremMsft2yr" data-ss-vars='{"duration":"[@L[cds.sales/business/office-365:lp-2-2Years]@L]","price":"[@T[productprice:<current productid="31843" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/business/office-365:lp-1-Mo]@L]","message":"[@L[cds.sales/business/office-365:lp-2-OnSale-2]@L]","blank":"&nbsp;","strike":"[@T[productprice:<template productid="31843" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]/[@L[cds.sales/business/office-365:lp-1-Mo]@L]","message2":"[@T[productcompare:<percent primaryproductid="31843" secondaryproductid="31843" hidebelow="5"><html><![CDATA[Save {0}%]]></html></percent>]@T]"}'></option>
+                      ##elseif(productHasSavingsMoreThan(31843, 31835, 0))
+                      <option data-ci="86432" value="OfficeBusPremMsft2yr" data-ss-vars='{"duration":"[@L[cds.sales/business/office-365:lp-2-2Years]@L]","price":"[@T[productprice:<current productid="31843" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/business/office-365:lp-1-Mo]@L]","message":"[@T[productcompare:<percent primaryproductid="31843" secondaryproductid="31835" hidebelow="5"><html><![CDATA[{0}%]]></html></percent>]@T] [@L[cds.sales/business/office-365:lp-1-OFF]@L]"}'></option>
+                      ##else
+                      <option data-ci="86432" value="OfficeBusPremMsft2yr" data-ss-vars='{"duration":"[@L[cds.sales/business/office-365:lp-2-2Years]@L]","price":"[@T[productprice:<current productid="31843" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/business/office-365:lp-1-Mo]@L]"}'></option>
+                      ##endif
+                    </select>
+                  </div>
+                  <div data-gd-sidebysidealign-row="4">
+                    <button type="button" class="btn btn-warning btn-block btn-lg js-add-to-cart">[@L[cds.sales/business/office-365:lp-3-AddToCart]@L]</button>
+                  </div>
+                </div>
+                <ul class="compare-chart">
+                  <li class="compare-chart-cell" data-gd-sidebysidealign-row="5">
+                    <p class="compare-cell-text">[@L[cds.sales/business/office-365:lp-4-50GBEmailStorage-2]@L]</p>
+                  </li>
+                  <li class="compare-chart-cell" data-gd-sidebysidealign-row="6">
+                    <p class="compare-cell-text"><span class="compare-cell-bold">
+
+                    <span class="tooltip-underline">[@L[cds.sales/business/office-365:lp-5-SyncEmailCalendarAndContacts-5]@L]<span class="tooltip-caption-left" ><span class="tooltip-caption-header">[@L[cds.sales/business/office-365:lp-5-SyncEmailCalendarAndContacts-6]@L]</span> [@L[cds.sales/business/office-365:lp-76-UsersCanConnectTheFollowingVersionsOfOutlook-3]@L]</span>
+                      </span>
+
+                      </span>[@L[cds.sales/business/office-365:lp-3-AcrossAllDevices-3]@L]</p>
+                  </li>
+                  <li class="compare-chart-cell" data-gd-sidebysidealign-row="7">
+                    <p class="compare-cell-text">[@L[cds.sales/business/office-365:lp-31-25GBSecureCloudStorageViaMicrosoftSkyDrive-2]@L]
+                    </p>
+                  </li>
+                  <li class="compare-chart-cell" data-gd-sidebysidealign-row="8">
+                    <p class="compare-cell-text">[@L[cds.sales/business/office-365:lp-7-SimpleFileSharingAndOnlineFileCollaboration-2]@L]</p>
+                  </li>
+                  <li class="compare-chart-cell" data-gd-sidebysidealign-row="9">
+                    <p class="compare-cell-text">[@L[cds.sales/business/office-365:lp-7-UnlimitedOnlineMeetingsAndHDVideoConferencing-2]@L]</p>
+                  </li>
+                  <li class="compare-chart-cell" data-gd-sidebysidealign-row="10">
+                    <p class="compare-cell-text"><span class="compare-cell-bold"><span class="tooltip-underline">[@L[cds.sales/business/office-365:lp-3-OfficeWebApps-2]@L] <span class="tooltip-caption-left" ><span class="tooltip-caption-header">[@L[cds.sales/business/office-365:lp-2-WebApps-2]@L]</span> [@L[cds.sales/business/office-365:lp-17-CreateEditAndShareWordExcelPowerPointAnd-2]@L]</span>
+                      </span>
+                      </span>[@L[cds.sales/business/office-365:lp-7-OnlineVersionsOfWordExcelAndMore-2]@L]</p>
+                  </li>
+                  <li class="compare-chart-cell" data-gd-sidebysidealign-row="11">
+                    <p class="compare-cell-text"><span class="compare-cell-bold"><span class="tooltip-underline">[@L[cds.sales/business/office-365:lp-2-OfficeMobile]@L]<span class="tooltip-caption-left" ><span class="tooltip-caption-header">[@L[cds.sales/business/office-365:lp-2-OfficeMobile-2]@L]</span> [@L[cds.sales/business/office-365:lp-23-CreateEditAndShareWordExcelPowerPointAnd]@L]</span>
+                      </span>
+                      </span> [@L[cds.sales/business/office-365:lp-7-AppsForIPhoneAndroidAndWindowsPhone]@L]</p>
+                  </li>
+                  <li class="compare-chart-cell" data-gd-sidebysidealign-row="12">
+                    <p class="compare-cell-text">[@L[cds.sales/business/office-365:lp-91-LatestMicrosoftOfficeDesktopOfficeDesktopIncludesOffice365ProPlus]@L]</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Start plan-summary -->
+          <section class="plan-summary l-main-content">
+            <div class="container l-main-container">
+              <div class="row">
+                <div class="col-xs-12">
+                  <div class="plan-summary-container">
+                    <!-- Start Plan-summary nav tabs -->
+                    <ul class="nav nav-tabs plan-summary-tabs">
+                      <li class="nav-tabs-item plan-summary-tabs-item active">
+                        <a href="#ps-plan-includes" class="nav-tabs-link plan-summary-nav-tabs-link" data-toggle="tab">[@L[cds.sales/business/office-365:lp-3-AllPlansInclude]@L]</a>
+                      </li>
+                    </ul>
+                    <!-- End Plan-summary nav tabs -->
+
+                    <!-- Start Plan-summary Tab panes -->
+                    <div class="tab-content">
+                      <div class="tab-pane active " id="ps-plan-includes">
+                        <ul class="plan-summary-tab-pane-list">
+                          <li>[@L[cds.sales/business/office-365:lp-28-UnlimitedAddressesUnlimitedAddressesCreateUnlimitedEmailAddressesFromYourname]@L]
+                          </li>
+                          <li>[@L[cds.sales/business/office-365:lp-4-Expert247Support]@L]</li>
+                          <li>[@L[cds.sales/business/office-365:lp-32-999GuaranteedUptimeAndReliability999Guaranteed]@L]
+                          </li>
+                          <li>[@L[cds.sales/business/office-365:lp-15-OutlookWebApplicationOutlookWebAppAccessYourEmail]@L]
+                          </li>
+                          <li>[@L[cds.sales/business/office-365:lp-34-SharedOnlineCalendarsSharedOnlineCalendarsMakeItEasy]@L]
+                          </li>
+                          <li>[@L[cds.sales/business/office-365:lp-7-WorldClassDataSecurityAndSpamFiltering]@L]</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Plan-summary Tab panes -->
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- End plan-summary -->
+          ##if(splitTestingSideIsActive(1170, A))
+          <form action="[@T[link:<relative path="~/business/office-365-config.aspx" />]@T]" method="get" data-addtocart='[@T[link:<relative path="~/api/package" />]@T]'>
+            <input type="hidden" id="selected-package-id" name="plan" />
+          </form>
+          ##else
+            ##if(isManager())
+            <form action="[@T[link:<relative path="~/business/office-365-config.aspx" />]@T]" method="get" data-addtocart='[@T[link:<relative path="~/api/package" />]@T]'>
+              <input type="hidden" id="selected-package-id" name="plan" />
+            </form>
+            ##else
+            <form action="[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]" method="get" data-addtocart='[@T[link:<relative path="~/api/package" />]@T]'>
+              <input type="hidden" id="selected-package-id" name="plan" />
+            </form>
+            ##endif
+          ##endif
+        </section>
+        <section>
+          <div class="container l-main-container">
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="feature-blocks">
+                  ##if(activeLanguageAny([pt-br]))
+                  <div class="feature-block-narrow float-left solazy business-card" data-sl-src="[@T[link:<imageroot />]@T]fos/office365/img/bcard_blank-v2.jpg" data-sl-alt="[@L[cds.sales/business/office-365:lp-2-BusinessCard]@L]" data-sl-condition="#plans-pricing|display:block" >
+                    <p class="center-paragraph float-left long-lang-text" >seunome @ <b>seu-nome-de-empresa.com</b></p>
+                  </div>
+                  ##elseif(activeLanguageAny([es]))
+                  <div class="feature-block-narrow float-left solazy business-card" data-sl-src="[@T[link:<imageroot />]@T]fos/office365/img/bcard_blank-v2.jpg" data-sl-alt="[@L[cds.sales/business/office-365:lp-2-BusinessCard]@L]" data-sl-condition="#plans-pricing|display:block" >
+                    <p class="center-paragraph float-left long-lang-text" >tunombre @ <b>nombre-desu-empresa.com </b></p>
+                  </div>
+                  ##else
+                  <div class="feature-block-narrow float-left solazy business-card" data-sl-src="[@T[link:<imageroot />]@T]fos/office365/img/bcard_blank-v2.jpg" data-sl-alt="[@L[cds.sales/business/office-365:lp-2-BusinessCard]@L]" data-sl-condition="#plans-pricing|display:block" >
+                    <p class="center-paragraph float-left">yourname @ <b>your-business-name.com</b></p>
+                  </div>
+                  ##endif
+                  <div class="feature-block-wide float-right">
+                    <h3>[@L[cds.sales/business/office-365:lp-6-LookLikeTheProYouAre]@L]</h3>
+                    <p>[@L[cds.sales/business/office-365:lp-36-ShowCustomersYouMeanBusinessWithMemorableEmail]@L]</p>
+                  </div>
+                </div>
+                <div class="feature-blocks">
+                  <div class="feature-block-wide float-left">
+                    <h3>[@L[cds.sales/business/office-365:lp-6-WorkWithYourFilesAnytimeAnywhere]@L]</h3>
+                    <p>[@L[cds.sales/business/office-365:lp-66-MakeSureYourImportantFilesAreAlwaysWithin]@L]</p>
+                  </div>
+                  <div class="feature-block-narrow float-right solazy" data-sl-src="[@T[link:<imageroot />]@T]fos/office365/img/laptop-v2.jpg"  data-sl-alt="[@L[cds.sales/business/office-365:lp-1-Laptop]@L]" data-sl-condition="#plans-pricing|display:block"></div>
+                </div>
+                <div class="feature-blocks">
+                  ##if(countrySiteAny(tr))
+                  <div class="feature-block-narrow float-left solazy" data-sl-src="[@T[link:<imageroot />]@T]fos/office365/img/MED_smiling-women-support.jpg"  data-sl-alt="[@L[cds.sales/business/office-365:lp-2-SupportPerson]@L]" data-sl-condition="#plans-pricing|display:block"></div>
+                  ##elseif(countrySiteAny(dk,fi,no,se,at,pl,hu,ru,ua,gr))
+                  <div class="feature-block-narrow float-left solazy" data-sl-src="[@T[link:<imageroot />]@T]fos/office365/img/NOR_smiling-women-support.jpg"  data-sl-alt="[@L[cds.sales/business/office-365:lp-2-SupportPerson]@L]" data-sl-condition="#plans-pricing|display:block"></div>
+                  ##elseif(activeLanguageAny([pt-br]))
+                  <div class="feature-block-narrow float-left solazy" data-sl-src="[@T[link:<imageroot />]@T]fos/office365/img/LATAM_support-v2.jpg"  data-sl-alt="[@L[cds.sales/business/office-365:lp-2-SupportPerson]@L]" data-sl-condition="#plans-pricing|display:block"></div>
+                  ##elseif(activeLanguageAny([es]))
+                  <div class="feature-block-narrow float-left solazy" data-sl-src="[@T[link:<imageroot />]@T]fos/office365/img/LATAM_support-v2.jpg"  data-sl-alt="[@L[cds.sales/business/office-365:lp-2-SupportPerson]@L]" data-sl-condition="#plans-pricing|display:block"></div>
+                  ##else
+                  <div class="feature-block-narrow float-left solazy" data-sl-src="[@T[link:<imageroot />]@T]fos/office365/img/smiling-women-support-v2.jpg"  data-sl-alt="[@L[cds.sales/business/office-365:lp-2-SupportPerson]@L]" data-sl-condition="#plans-pricing|display:block"></div>
+                  ##endif
+                  <div class="feature-block-wide float-right">
+                    <h3>[@L[cds.sales/business/office-365:lp-6-Office365IsEasierWithGoDaddy]@L]</h3>
+                    <p>[@L[cds.sales/business/office-365:lp-54-UnlikeOtherProvidersWeMakeMicrosoftOffice365]@L]</p>
+                  </div>
+                </div>
+                <div class="feature-blocks">
+                  <div class="feature-block-wide float-left">
+                    <h3>[@L[cds.sales/business/office-365:lp-8-AlwaysHaveTheLatestVersionOfMicrosoftOffice1]@L]</h3>
+                    <p>[@L[cds.sales/business/office-365:lp-66-NeverPayForAnotherUpgradeInstallTheFull]@L]</p>
+                    <p>
+                      <span class="feature-block-bold">[@L[cds.sales/business/office-365:lp-7-AvailableOnlyWithProductivityPlusPlan]@L]</span>
+                    </p>
+                  </div>
+                  <div class="feature-block-narrow float-right feature-block-white-background">
+                    <span class="highlighted-text-block">[@L[cds.sales/business/office-365:lp-3-ProductivityPlusExclusive]@L]</span>
+                    <span class="ms-office-365"></span>
+                    <div class="ms-product-suite">
+                      <span class="ms-product-word-wrapper ms-product-wrapper"></span>
+                      <span class="ms-product-excel-wrapper ms-product-wrapper"></span>
+                      <span class="ms-product-powerpoint-wrapper ms-product-wrapper"></span>
+                      <span class="ms-product-outlook-wrapper ms-product-wrapper"></span>
+                    </div>
+                  </div>
+                  <div class="feature-block-add-to-cart-wrapper" style="clear:both; min-width:450px; float:left; ">
+                    <div style="float: left;padding-right: 10px;">
+                      <div style="max-width: 350px;"><h3 class="feature-block-add-to-cart-header">[@L[cds.sales/business/office-365:lp-2-ProductivityPlus-2]@L]</h3></div>
+                      <div class="feature-block-add-to-cart-text-wrapper orange-text">
+                        <div class="feature-block-add-to-cart-text0 feature-block-add-to-cart-text">[@L[cds.sales/business/office-365:lp-2-PlansstartingAt]@L]</div>
+                        <div class="feature-block-add-to-cart-text2 feature-block-add-to-cart-text" data-seperate-currency-symbol='{"newClass":"sup-symbol-price","newTagName":"span"}'>[@T[productprice:<current productid="31841" dropdecimal="false" period="monthly" negative="parentheses" />]@T]</div>
+                        <div class="feature-block-add-to-cart-text3 feature-block-add-to-cart-text">[@L[cds.sales/business/office-365:lp-3-UserMo]@L]</div>
+                      </div>
+                    </div>
+                    <div class="js-plan-column" style="float: right;position: relative;vertical-align: middle;padding-top: 12px;">
+                      <button type="button" class="btn btn-warning btn-block btn-lg js-add-to-cart feature-block-button-right" style="position: inherit; right: inherit; bottom: inherit; max-width: inherit;">[@L[cds.sales/business/office-365:lp-3-AddToCart]@L]</button>
+                      <select style="display:none;" class="js-plan-options">
+                        <option data-ci="86433" value="OfficeBusPremMsft1yr" selected></option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="cta cta-choose cta-large width-fix cta-no-hover cta-multiline">
+                <div class="cta-bold">[@L[cds.sales/business/office-365:lp-6-ALREADYUSINGGODADDYWORKSPACEEMAIL]@L]</div>
+                ##if(activeLanguageAny([en-us]))
+                [@L[cds.sales/business/office-365:lp-14-PleaseCallGoDaddyCustomerCareAtTSupportphoneUSA]@L]
+                ##else
+                [@L[cds.sales/business/office-365:lp-14-PleaseCallGoDaddyCustomerCareAtTSupportphone]@L]
+                ##endif
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- End content -->
+        </div>
+        <div class="tab-pane" id="email">
+          <section class="">
+            <div class="l-main-container container misc-banner-content no-set-height">
+              <h2 class="width-seventy-five">[@L[cds.sales/business/office-365:lp-10-StayConnectedWithReliableEmailThatSaysYou]@L]</h2>
+              <p>[@L[cds.sales/business/office-365:lp-44-EmailIsACriticalPartOfYourBusiness]@L]</p>
+            </div>
+          </section>
+          <section class="">
+            <div class="container l-main-container">
+              <div class="row">
+                <div class="col-xs-12">
+                  <div class="feature-blocks">
+                    <div class="feature-block-wide float-right">
+                      <h3>[@L[cds.sales/business/office-365:lp-6-LookLikeTheProYouAre-2]@L]</h3>
+                      <p>[@L[cds.sales/business/office-365:lp-36-ShowCustomersYouMeanBusinessWithMemorableEmail-2]@L]</p>
+                    </div>
+                    ##if(activeLanguageAny([pt-br]))
+                  <div class="feature-block-narrow float-left solazy business-card" data-sl-src="[@T[link:<imageroot />]@T]fos/office365/img/bcard_blank-v2.jpg" data-sl-alt="[@L[cds.sales/business/office-365:lp-2-BusinessCard]@L]" data-sl-condition="#plans-pricing|display:block" >
+                    <p class="center-paragraph float-left long-lang-text" >seunome @ <b>seu-nome-de-empresa.com</b></p>
+                  </div>
+                  ##elseif(activeLanguageAny([es]))
+                  <div class="feature-block-narrow float-left solazy business-card" data-sl-src="[@T[link:<imageroot />]@T]fos/office365/img/bcard_blank-v2.jpg" data-sl-alt="[@L[cds.sales/business/office-365:lp-2-BusinessCard]@L]" data-sl-condition="#plans-pricing|display:block" >
+                    <p class="center-paragraph float-left long-lang-text" >tunombre @ <b>nombre-desu-empresa.com </b></p>
+                  </div>
+                  ##else
+                  <div class="feature-block-narrow float-left solazy business-card" data-sl-src="[@T[link:<imageroot />]@T]fos/office365/img/bcard_blank-v2.jpg" data-sl-alt="[@L[cds.sales/business/office-365:lp-2-BusinessCard]@L]" data-sl-condition="#plans-pricing|display:block" >
+                    <p class="center-paragraph float-left">yourname @ <b>your-business-name.com</b></p>
+                  </div>
+                  ##endif
+                  </div>
+                  <div class="feature-blocks">
+                    <div class="feature-block-narrow float-right solazy" data-sl-src="[@T[link:<imageroot />]@T]fos/office365/img/devices-v2.jpg"  data-sl-alt="[@L[cds.sales/business/office-365:lp-3-SyncAllDevices]@L]" data-sl-condition="#email|display:block"></div>
+                    <div class="feature-block-wide float-left">
+                      <h3>[@L[cds.sales/business/office-365:lp-6-AllYourDevicesAllInSync]@L]</h3>
+                      <p>[@L[cds.sales/business/office-365:lp-44-YourBusinessMovesFastMakeSureYouAlways]@L]</p>
+                    </div>
+                  </div>
+                  <div class="feature-blocks">
+
+                    <div class="feature-block-full float-left solazy feature-block-absolute" data-sl-src="[@T[link:<imageroot />]@T]fos/office365/img/womans-hands-holding-cell-phone-v2.jpg"  data-sl-alt="[@L[cds.sales/business/office-365:lp-3-HoldingCellPhone]@L]" data-sl-condition="#email|display:block"></div>
+
+                    <div class="feature-block-wide float-right feature-block-relative">
+                      <h3 class="feature-block-white">[@L[cds.sales/business/office-365:lp-6-StayInControlWhereverYouAre]@L]</h3>
+                      <p class="feature-block-white">[@L[cds.sales/business/office-365:lp-35-NeverMissACustomerAccessYourEmailCalendar]@L]</p>
+                    </div>
+
+                  </div>
+                  <div class="feature-blocks">
+                  ##if(countrySiteAny(tr))
+                  <div class="feature-block-narrow float-left solazy" data-sl-src="[@T[link:<imageroot />]@T]fos/office365/img/MED_email-support-rv3.jpg"  data-sl-alt="[@L[cds.sales/business/office-365:lp-2-SupportPerson-2]@L]" data-sl-condition="#email|display:block"></div>
+                  ##elseif(countrySiteAny(dk,fi,no,se,at,pl,hu,ru,ua,gr))
+                  <div class="feature-block-narrow float-left solazy" data-sl-src="[@T[link:<imageroot />]@T]fos/office365/img/NOR_email-support-rv3.jpg"  data-sl-alt="[@L[cds.sales/business/office-365:lp-2-SupportPerson-2]@L]" data-sl-condition="#email|display:block"></div>
+                  ##elseif(activeLanguageAny([pt-br]))
+                  <div class="feature-block-narrow float-left solazy" data-sl-src="[@T[link:<imageroot />]@T]fos/office365/img/LATAM_support-v2.jpg"  data-sl-alt="[@L[cds.sales/business/office-365:lp-2-SupportPerson]@L]" data-sl-condition="#plans-pricing|display:block"></div>
+                  ##elseif(activeLanguageAny([es]))
+                  <div class="feature-block-narrow float-left solazy" data-sl-src="[@T[link:<imageroot />]@T]fos/office365/img/LATAM_support-v2.jpg"  data-sl-alt="[@L[cds.sales/business/office-365:lp-2-SupportPerson]@L]" data-sl-condition="#plans-pricing|display:block"></div>
+                  ##else
+                  <div class="feature-block-narrow float-right solazy" data-sl-src="[@T[link:<imageroot />]@T]fos/office365/img/email-support-rv3.jpg"  data-sl-alt="[@L[cds.sales/business/office-365:lp-2-SupportPerson-2]@L]" data-sl-condition="#email|display:block"></div>
+                  ##endif
+                    <div class="feature-block-wide float-left">
+                      <h3>[@L[cds.sales/business/office-365:lp-9-NeedHelpTalkToARealPerson24]@L]</h3>
+                      <p>[@L[cds.sales/business/office-365:lp-51-WhenYouReRunningASmallBusinessYou]@L]</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a data-ci="86693" href="#" data-scroll-event='{"obj":".js-plan-column0","yoffset":"-70","triggerobj":".nav-tabs-link0","trigger":"click"}' class="cta cta-choose cta-large width-fix"><i class="white-gt-arrow-icon"></i>[@L[cds.sales/business/office-365:lp-5-ChooseYourOffice365Package]@L]</a>
+            </div>
+          </section>
+        </div>
+        <div class="tab-pane" id="office-365">
+          <section class="">
+            <div class="l-main-container container misc-banner-content no-set-height">
+              <h2>[@L[cds.sales/business/office-365:lp-8-FitYourEntireOfficeInYourPocket]@L]</h2>
+              <p>[@L[cds.sales/business/office-365:lp-43-MicrosoftOffice365FromGoDaddyCombinesThePrograms]@L]</p>
+            </div>
+          </section>
+          <section class="">
+            <div class="container l-main-container">
+              <div class="row">
+                <div class="col-xs-12">
+                  <div class="feature-blocks">
+                    <div class="feature-block-wide float-left">
+                      <h3>[@L[cds.sales/business/office-365:lp-8-AlwaysHaveTheLatestVersionOfMicrosoftOffice1-2]@L]</h3>
+                      <p>[@L[cds.sales/business/office-365:lp-66-NeverPayForAnotherUpgradeInstallTheFull-2]@L]</p>
+                      <p>
+                      <span class="feature-block-bold">[@L[cds.sales/business/office-365:lp-7-AvailableOnlyWithProductivityPlusPlan-2]@L]</span>
+                    </p>
+                    </div>
+                    <div class="feature-block-narrow float-right feature-block-white-background">
+                      <span class="highlighted-text-block">[@L[cds.sales/business/office-365:lp-3-ProductivityPlusExclusive]@L]</span>
+                      <span class="ms-office-365"></span>
+                      <div class="ms-product-suite">
+                        <span class="ms-product-word-wrapper ms-product-wrapper"></span>
+                        <span class="ms-product-excel-wrapper ms-product-wrapper"></span>
+                        <span class="ms-product-powerpoint-wrapper ms-product-wrapper"> </span>
+                        <span class="ms-product-outlook-wrapper ms-product-wrapper"></span>
+                      </div>
+                    </div>
+                    <div class="feature-block-add-to-cart-wrapper" style="clear:both; min-width:450px; float:left; ">
+                        <div style="float: left;padding-right: 10px;">
+                          <div style="max-width: 350px;"><h3 class="feature-block-add-to-cart-header">[@L[cds.sales/business/office-365:lp-2-ProductivityPlus-3]@L]</h3></div>
+                          <div class="feature-block-add-to-cart-text-wrapper orange-text">
+                            <div class="feature-block-add-to-cart-text0 feature-block-add-to-cart-text">[@L[cds.sales/business/office-365:lp-2-PlansstartingAt-2]@L]</div>
+                            <div class="feature-block-add-to-cart-text2 feature-block-add-to-cart-text" data-seperate-currency-symbol='{"newClass":"sup-symbol-price","newTagName":"span"}'>[@T[productprice:<current productid="31841" dropdecimal="false" period="monthly" negative="parentheses" />]@T]</div>
+                            <div class="feature-block-add-to-cart-text3 feature-block-add-to-cart-text">[@L[cds.sales/business/office-365:lp-3-UserMo]@L]</div>
+                          </div>
+                        </div>
+                        <div class="js-plan-column" style="float: right;position: relative;vertical-align: middle;padding-top: 12px;">
+                          <button type="button" class="btn btn-warning btn-block btn-lg js-add-to-cart feature-block-button-right" style="position: inherit; right: inherit; bottom: inherit; max-width: inherit;">[@L[cds.sales/business/office-365:lp-3-AddToCart]@L]</button>
+                          <select style="display:none;" class="js-plan-options">
+                            <option data-ci="86434" value="OfficeBusPremMsft1yr" selected></option>
+                          </select>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="feature-blocks">
+                    <div class="feature-block-narrow float-left solazy" data-sl-src="[@T[link:<imageroot />]@T]fos/office365/img/mans-hands-holding-cell-phone-v2.jpg"  data-sl-alt="[@L[cds.sales/business/office-365:lp-4-HandsHoldingCellPhone]@L]" data-sl-condition="#office-365|display:block"></div><div class="feature-block-wide float-left">
+                      <h3>[@L[cds.sales/business/office-365:lp-9-PutYourPhoneToWorkWithOfficeMobile]@L]</h3>
+                      <p>[@L[cds.sales/business/office-365:lp-41-BuiltSpecificallyForYourIPhoneAndroidOrWindows]@L]</p>
+                    </div>
+
+                  </div>
+                  <div class="feature-blocks">
+                    <div class="feature-block-narrow float-right solazy" data-sl-src="[@T[link:<imageroot />]@T]fos/office365/img/laptop-v2.jpg"  data-sl-alt="[@L[cds.sales/business/office-365:lp-1-Laptop]@L]" data-sl-condition="#office-365|display:block"></div>
+                    <div class="feature-block-wide float-right">
+                      <h3>[@L[cds.sales/business/office-365:lp-6-WorkWithYourFilesAnytimeAnywhere-2]@L]</h3>
+                      <p>[@L[cds.sales/business/office-365:lp-66-MakeSureYourImportantFilesAreAlwaysWithin]@L]</p>
+                    </div>
+                  </div>
+                  <div class="feature-blocks">
+                    <div class="feature-block-wide float-right">
+                      <h3>[@L[cds.sales/business/office-365:lp-7-MeetFaceToFaceWhereverYouAre]@L]</h3>
+                      <p>[@L[cds.sales/business/office-365:lp-42-VideoConferencingIsnTJustForCorporationsWith]@L]</p>
+                    </div>
+                    <div class="feature-block-narrow float-left solazy" data-sl-src="[@T[link:<imageroot />]@T]fos/office365/img/video-chat-cell-phone-v2.jpg"  data-sl-alt="[@L[cds.sales/business/office-365:lp-5-VideoChatOnCellPhone]@L]" data-sl-condition="#office-365|display:block"></div>
+                  </div>
+                  <div class="feature-blocks">
+                    <div class="feature-block-narrow float-right solazy" data-sl-src="[@T[link:<imageroot />]@T]fos/office365/img/green-file-cloud-v2.jpg"  data-sl-alt="[@L[cds.sales/business/office-365:lp-3-GreenFileCloud]@L]" data-sl-condition="#office-365|display:block"></div><div class="feature-block-wide float-left">
+                      <h3>[@L[cds.sales/business/office-365:lp-7-KeepYourFilesSafeInTheCloud]@L]</h3>
+                      <p>[@L[cds.sales/business/office-365:lp-29-HardDriveCrashEmailVirusCoffeeSpilledOn]@L]
+                      </p>
+                    </div>
+                  </div>
+                  <div class="feature-blocks">
+                    <div class="feature-block-wide float-right">
+                      <h3>[@L[cds.sales/business/office-365:lp-6-Office365IsEasierWithGoDaddy-2]@L]</h3>
+                      <p>[@L[cds.sales/business/office-365:lp-54-UnlikeOtherProvidersWeMakeMicrosoftOffice365-2]@L]</p>
+                    </div>
+                     ##if(activeLanguageAny([pt-br]))
+                  <div class="feature-block-narrow float-left solazy" data-sl-src="[@T[link:<imageroot />]@T]fos/office365/img/LATAM_support-v2.jpg"  data-sl-alt="[@L[cds.sales/business/office-365:lp-2-SupportPerson]@L]" data-sl-condition="#plans-pricing|display:block"></div>
+                  ##elseif(activeLanguageAny([es]))
+                  <div class="feature-block-narrow float-left solazy" data-sl-src="[@T[link:<imageroot />]@T]fos/office365/img/LATAM_support-v2.jpg"  data-sl-alt="[@L[cds.sales/business/office-365:lp-2-SupportPerson]@L]" data-sl-condition="#plans-pricing|display:block"></div>
+                  ##else
+                  <div class="feature-block-narrow float-left solazy" data-sl-src="[@T[link:<imageroot />]@T]fos/office365/img/smiling-women-support-v2.jpg"  data-sl-alt="[@L[cds.sales/business/office-365:lp-2-SupportPerson]@L]" data-sl-condition="#plans-pricing|display:block"></div>
+                  ##endif
+                  </div>
+                </div>
+              </div>
+              <a data-ci="86694" href="#" data-scroll-event='{"obj":".js-plan-column0","yoffset":"-70","triggerobj":".nav-tabs-link0","trigger":"click"}' class="cta cta-choose cta-large width-fix"><i class="white-gt-arrow-icon"></i>[@L[cds.sales/business/office-365:lp-5-ChooseYourOffice365Package]@L]</a>
+            </div>
+          </section>
+        </div>
+        <div class="tab-pane" id="faq">
+          <section class="tab-content-top-spacing">
+            <div class="container l-main-container">
+              <div class="row">
+                <div class="col-xs-12">
+                  <div class="grid-column tab-content-column-alternate">
+                    <h2 class="h2-alternate">[@L[cds.sales/business/office-365:faq-11-WhatAreTheBenefitsOfHavingDomainBased]@L]</h2>
+                    <p>[@L[cds.sales/business/office-365:faq-53-ADomainBasedEmailAddressLikeInfoCoolexample]@L]</p>
+                    <p>[@L[cds.sales/business/office-365:faq-42-AndWithEachPlanYouCanCreateFree]@L]</p>
+                    <hr/>
+
+                    <h2 class="h2-alternate">[@L[cds.sales/business/office-365:faq-6-WhatAreOfficeWebApps]@L]</h2>
+                    <p>[@L[cds.sales/business/office-365:faq-48-OfficeWebAppsAreEasyToUseVersions]@L]</p>
+                    <hr/>
+
+                    <h2 class="h2-alternate">[@L[cds.sales/business/office-365:faq-17-WhyShouldIBuyOffice365FromGoDaddy]@L]</h2>
+                    <p>[@L[cds.sales/business/office-365:faq-76-InAdditionToIncludingEmailAddressesTiedTo]@L]</p>
+                    <p>[@L[cds.sales/business/office-365:faq-34-PlusIfYouPurchaseOurProductivityPlusPlan]@L]</p>
+                    <hr/>
+
+                    <h2 class="h2-alternate">[@L[cds.sales/business/office-365:faq-10-WhichDesktopApplicationsComeWithTheProductivityPlus]@L]</h2>
+                    <p>[@L[cds.sales/business/office-365:faq-55-ThisDependsOnWhetherYouAreUsingA]@L]</p>
+                    <hr/>
+
+                    <h2 class="h2-alternate">[@L[cds.sales/business/office-365:faq-12-WillTheLatestVersionOfMicrosoftOfficeWork]@L]</h2>
+                    <p>[@L[cds.sales/business/office-365:faq-24-ToUseThe5DesktopDownloadsYouGet]@L]</p>
+                    <ul class="ul-indent">
+                      <li>[@L[cds.sales/business/office-365:faq-4-WindowsServer2008R2]@L]</li>
+                      <li>[@L[cds.sales/business/office-365:faq-2-Windows7]@L]</li>
+                      <li>[@L[cds.sales/business/office-365:faq-3-WindowsServer2012]@L]</li>
+                      <li>[@L[cds.sales/business/office-365:faq-2-Windows8]@L]</li>
+                      <li>[@L[cds.sales/business/office-365:faq-9-MacOSXVersion106OrLater]@L]</li>
+                    </ul>
+                    <p>[@L[cds.sales/business/office-365:faq-45-IfYouAreRunningADifferentOperatingSystem]@L]</p>
+                    <hr/>
+
+                    <h2 class="h2-alternate">[@L[cds.sales/business/office-365:faq-6-WhatIsOnlineDocumentCollaboration]@L]</h2>
+                    <p>[@L[cds.sales/business/office-365:faq-81-WithOurBusinessEssentialsAndProductivityPlusPlans]@L]</p>
+                    <hr/>
+
+                    <h2 class="h2-alternate">[@L[cds.sales/business/office-365:faq-19-IPurchasedTheProductivityPlusPlanCanI]@L]</h2>
+                    <p>[@L[cds.sales/business/office-365:faq-59-TheDesktopOfficeLicensesThatComeWithThe]@L]</p>
+                    <p>[@L[cds.sales/business/office-365:faq-31-ToGetTheMostOutOfOffice365]@L]</p>
+                    <hr/>
+
+                    <h2 class="h2-alternate">[@L[cds.sales/business/office-365:faq-24-WillTheExcelPowerPointAndWordProgramsI]@L]</h2>
+                    <p>[@L[cds.sales/business/office-365:faq-27-SkyDriveProCloudStorageAndOfficeWebApps]@L]</p>
+                    <p>[@L[cds.sales/business/office-365:faq-57-WithTheseVersionsOfOfficeYouCanSelect]@L]</p>
+                    <hr/>
+
+                    <h2 class="h2-alternate">[@L[cds.sales/business/office-365:faq-12-WhatIfIAlreadyHaveAWorkspaceEmail]@L]</h2>
+                    <p>[@L[cds.sales/business/office-365:faq-27-IfYouWouldLikeToStartUsingOffice]@L]</p>
+                    <p>[@L[cds.sales/business/office-365:faq-51-WePlanToOfferAServiceLaterIn]@L]</p>
+                    <hr/>
+
+                    <h2 class="h2-alternate">[@L[cds.sales/business/office-365:faq-19-IHaveAMacCanIStillUse]@L]</h2>
+                    <p>[@L[cds.sales/business/office-365:faq-22-YesTheOffice365WebAppsAreCompatible]@L]</p>
+                    <p>[@L[cds.sales/business/office-365:faq-32-AndIfYouChooseTheProductivityPlusPlan]@L]</p>
+                    <hr/>
+
+                    <h2 class="h2-alternate">[@L[cds.sales/business/office-365:faq-16-IAmPartOfALargerOrganizationCan]@L]</h2>
+                    <p>[@L[cds.sales/business/office-365:faq-70-ThePlansOnOurWebsiteAreIdealFor]@L]</p>
+                    <hr/>
+
+                    <h2 class="h2-alternate">[@L[cds.sales/business/office-365:faq-5-WhatIsLyncOnline]@L]</h2>
+                    <p>[@L[cds.sales/business/office-365:faq-61-LyncOnlineIncludedInTheBusinessEssentialsAnd]@L]</p>
+                    <hr/>
+
+                    <h2 class="h2-alternate">[@L[cds.sales/business/office-365:faq-5-WhatIsTheCloud]@L]</h2>
+                    <p>[@L[cds.sales/business/office-365:faq-40-WorkingOrStoringFilesInTheCloudMeans]@L]</p>
+                    <p class="no-margin-bottom">[@L[cds.sales/business/office-365:faq-55-YouDonTNeedToBuyAdditionalSoftware]@L]</p>
+
+                  </div>
+                </div>
+              </div>
+              <a data-ci="86695" href="#" data-scroll-event='{"obj":".js-plan-column0","yoffset":"-70","triggerobj":".nav-tabs-link0","trigger":"click"}' class="cta cta-choose cta-large"><i class="white-gt-arrow-icon"></i>[@L[cds.sales/business/office-365:lp-5-ChooseYourOffice365Package-2]@L]</a>
+            </div>
+          </section>
+        </div>
+
+      </div>
+      <!-- End main-tabs panes -->
+
+      <!-- Page Disclaimer -->
+      <div id="disclaimers">
+        <p>
+          <a data-ci="86699" href="javascript:void(0);">[@L[cds.sales/business/office-365:lp-12-123ClickHereForProductDisclaimers]@L]</a>
+        </p>
+      </div>
+
+
+  <div id="disclaimerModal" style="display:none;">
+    <div class="modal-content-wrapper">
+      <span class="modal-user-limit-header">[@L[cds.sales/business/office-365:lp-1-Disclaimers]@L]</span>
+
+      <div class="modal-user-limit-message">
+        <p>[@L[cds.sales/business/office-365:lp-81-1IncludesOffice365ProPlusForPCS]@L]</p>
+        <p>[@L[cds.sales/business/office-365:lp-77-2UsersCanConnectTheFollowingVersionsOf]@L]</p>
+        <p>[@L[cds.sales/business/office-365:lp-22-3TheSkyDriveProSyncClientIsAvailable]@L]</p>
+        <p>[@L[cds.sales/business/office-365:lp-9-AnnualDiscountsAvailableOnNEWPurchasesOnly]@L]</p>
+        <p>[@L[cds.sales/business/office-365:lp-20-ProductsWillAutomaticallyRenewUntilCancelledYouMay]@L]</p>
+        <p>[@L[cds.sales/business/office-365:lp-19-ForMoreInformationSeeTheFullMicrosoftService]@L]</p>
+      </div>
+    </div>
+    <div class="buttons-wrap">
+      <div class="modal-user-limit-ok flt-btn-grn">[@L[cds.sales/business/office-365:lp-1-OK]@L]</div>
+    </div>
+  </div>
+    </div>
+
+
+{% endblock body %}

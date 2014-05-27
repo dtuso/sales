@@ -3,7 +3,7 @@ location: localization/sales/gd/domainaddon/domain-backorders2/en
 id: 5367d19df778fc26c405ca96
 name: FOS-12354
 ---
-{% include '../modules/doc-block.html' %}
+{% include 'modules/doc-block.html' %}
 <phrase key="MetaTitle" />
 Domain Backorders | Secure Your Dream Domain - GoDaddy
 <phrase key="MetaDescription" />

@@ -1,9 +1,10 @@
 ---
 location: localization/sales/gd/tlds/gtld/en
-id: false
-name: FOS-19459
+id: 537bd7fdf778fc0e7072116a
+name: FOS-16997
+comments: Update header slider for 5/28
 ---
-{% include '../modules/doc-block.html' %}
+{% include 'modules/doc-block.html' %}
 <phrase key="MetaDescription" />
 gTLDs or Generic Top Level Domains are the latest way for you to secure the perfect domain name. With a gTLD you'll be able to bypass back orders and avoid auctions. And with [@T[companyname:name]@T] you get the best price and our award winning tech support!
 <phrase key="MetaKeywords" />
@@ -54,6 +55,8 @@ Court 8 million shoppers with .LONDON
 .COMPANY says you’re in business
 <phrase key="MarketingSlideLinkText"/>
 Register now
+<phrase key="MarketingSlideLinkTextUno"  comments="DO NOT TRANSLATE"/>
+¡Disponible ahora!
 <phrase key="MarketingSlidePreLinkText"/>
 Coming Soon
 <phrase key="MerchandizerBlueRibbon"/>
@@ -121,37 +124,37 @@ What are TLDs and new TLDs?
 <phrase key="SlideOneContent" comment="The line breaks and indentation are required to work on the SEO Slider, please keep during translation. Reach out to WebOps with questions." />
 
                                     TLD stands for top-level domain. A domain is what you type into the address bar of your Web browser to get to a website, like www.GoDaddy.com. New TLDs refer to new domain extensions that are about to become available.
-                                
+
 <phrase key="SlideTwoHeader" />
 Why are there new TLDs?
 <phrase key="SlideTwoContent" comment="The line breaks and indentation are required to work on the SEO Slider, please keep during translation. Reach out to WebOps with questions." />
 
                                     New domain extensions have been created because finding a relevant, available domain name can be difficult. ICANN is releasing hundreds of new domain extensions to increase availability and change how people find information online.
-                                
+
 <phrase key="SlideThreeHeader" />
 Why do new TLDs matter to me?
 <phrase key="SlideThreeContent" comment="The line breaks and indentation are required to work on the SEO Slider, please keep during translation. Reach out to WebOps with questions." />
 
                                     New domain extensions let you create a relevant name that defines your website, brand, business, group or organization. Registering a new TLD that represents your market can increase customer trust and set you apart from competitors.
-                                
+
 <phrase key="SlideFourHeader" />
 When will new TLDs be available?
 <phrase key="SlideFourContent" comment="The line breaks and indentation are required to work on the SEO Slider, please keep during translation. Reach out to WebOps with questions." />
 
                                     We expect the first groups of new TLDs to launch in November 2013. Check back for more information on release dates, registration requirements, pre-registration and other important details.
-                                
+
 <phrase key="SlideFiveHeader" />
 How is ICANN involved?
 <phrase key="SlideFiveContent" comment="The line breaks and indentation are required to work on the SEO Slider, please keep during translation. Reach out to WebOps with questions." />
 
                                     ICANN is the Internet Corporation for Assigned Names and Numbers, a non-profit group responsible for the coordination and oversight of the global Internet system. You can find out more about them at www.icann.org.
-                                
+
 <phrase key="SlideSixHeader" />
 What are the new TLD registration phases: Trademarks Owners, Priority Pre-registration, Pre-registration and General Availability?
 <phrase key="SlideSixContent" comment="The line breaks and indentation are required to work on the SEO Slider, please keep during translation. Reach out to WebOps with questions." />
 
-                                    Each registration phase has a defined date for acceptance and processing. The first registration period is always reserved for Trademark Owners. The second phase is Priority Pre-registration – for a premium, you can increase your chances of getting a non-trademarked domain. Pre-registration comes next and allows you to get a jump on General Availability, which is open to the public. During the final phase, names are awarded on a first come, first served basis. 
-                                
+                                    Each registration phase has a defined date for acceptance and processing. The first registration period is always reserved for Trademark Owners. The second phase is Priority Pre-registration – for a premium, you can increase your chances of getting a non-trademarked domain. Pre-registration comes next and allows you to get a jump on General Availability, which is open to the public. During the final phase, names are awarded on a first come, first served basis.
+
 <phrase key="Previous" />
 Previous
 <phrase key="Next" />
@@ -335,29 +338,73 @@ Support
 <phrase key="WhyChooseSubTitle3Text" />
 Our award-winning domain experts are here 24/7 to help you any way they can. Call them anytime at [@T[supportphone:<technical />]@T].
 <phrase key="FaqList1Title" />
-What are TLDs and new TLDs?
+What is a gTLD and why does it matter to me?
 <phrase key="FaqList1Item1" />
-TLD stands for top-level domain. A domain is what you type into the address bar of your Web browser to get to a website, like www.GoDaddy.com. New TLDs refer to new domain extensions that are about to become available.
+<p>The many new domains now becoming available on the web are called <strong>gTLDs</strong> or <i>generic</i> Top-Level Domains (TLDs). Like the original TLDs – .COM, .ORG, .NET – the new gTLDs are part of what people type into the address bar of their web browsers to get to your website.</p><p>Thanks to these new domains, your website address can now describe who you are or what you do. For example, .PHOTOGRAPHY, .BUILD and .ATTORNEY all tell visitors something about what you offer. With a gTLD, you get a web address that’s specific to you and easy to remember so you can find more customers online.</p>
 <phrase key="FaqList2Title" />
 Why are there new TLDs?
 <phrase key="FaqList2Item1" />
-New domain extensions have been created because finding a relevant, available domain name can be difficult. ICANN is releasing hundreds of new domain extensions to increase availability and change how people find information online.
+<p>The short answer is, to increase your web naming options.</p><p>With .COM nearing its 30th birthday, many of the best and most valuable domain names have already been registered. This has long been a frustration for business owners, forcing them to make up names for their businesses just to find an available domain name.</p><p>With the introduction of new <strong>gTLDs</strong>, you have a fresh chance to get the domain name you really want. Because many of the new domain extensions are specific to particular industries, interests, or locations your web address can now tell people exactly what you do (or where you do it). This makes the new domains easy to remember and you easier to find online.</p>
 <phrase key="FaqList3Title" />
-Why do new TLDs matter to me?
+Will there be domains in languages other than English?
 <phrase key="FaqList3Item1" />
-New domain extensions let you create a relevant name that defines your website, brand, business, group or organization. Registering a new TLD that represents your market can increase customer trust and set you apart from competitors.
+<p><i>Oui</i>. Thanks to the new <strong>gTLDs</strong>, speakers of nearly three dozen languages – including Arabic, Chinese, and languages based on the Cyrillic alphabet – will have their own domain extensions.</p><p>This will be a huge boon for companies that promote their products in countries where these languages are spoken.</p>
 <phrase key="FaqList4Title" />
-When will new TLDs be available?
+How much will the new domains cost?
 <phrase key="FaqList4Item1" />
-We expect the first groups of new TLDs to launch in November 2013. Check back for more information on release dates, registration requirements, pre-registration and other important details.
+Prices will vary for the new <strong>gTLDs</strong> and we’ll publish pricing information for the new domains on <a target="_blank" href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="85488" /></relative>]@T]">www.godaddy.com/newdomains </a>as soon as it’s available. For many of the new domains, pricing hasn’t been set.
 <phrase key="FaqList5Title" />
-How is ICANN involved?
+Will all the new domains be available to me?
 <phrase key="FaqList5Item1" />
-ICANN is the Internet Corporation for Assigned Names and Numbers, a non-profit group responsible for the coordination and oversight of the global Internet system. You can find out more about them at <a href="http://www.icann.org/" target="_blank">www.icann.org.</a>
+No. While there will be over 700 new domains that will be available to you, there will be another 600 or so that are trademarked names – .FORD, .GUCCI, .DUPONT – and, although the owners could open them to the general public, they’ll most likely reserve them for internal use.
 <phrase key="FaqList6Title" />
-What are the new TLD registration phases: Trademarks Owners, Priority Pre-registration, Pre-registration and General Availability?
+Any advice on finding a great domain name?
 <phrase key="FaqList6Item1" />
-Each registration phase has a defined date for acceptance and processing. The first registration period is always reserved for Trademark Owners. The second phase is Priority Pre-registration – for a premium, you can increase your chances of getting a non-trademarked domain. Pre-registration comes next and allows you to get a jump on General Availability, which is open to the public. During the final phase, names are awarded on a first come, first served basis.
+Picking the right domain is huge. Look for a name that's memorable, easy to spell and that’s specific to you or your business. Using real words in your domain name, instead of made up names, will also help you get found online.
+<phrase key="FaqList7Title" />
+Will the new domains change how the Internet works?
+<phrase key="FaqList7Item1" />
+No. They may change the way people find information on the web though. And they may also impact how businesses build their online presence.
+<phrase key="FaqList8Title" />
+How is ICANN involved?
+<phrase key="FaqList8Item1" />
+The Internet Corporation for Assigned Names and Numbers is a non-profit group responsible for the coordination and oversight of the global Internet system. It was ICANN that approved the new domain extensions now available. Find out more at <a target="_blank"><param name="ci" value="90407" />www.icann.org.</a>
+<phrase key="FaqList9Title" />
+What’s the difference between the various registration phases?
+<phrase key="FaqList9Item1" />
+All domain extensions follow the same release sequence. The first registration period is always reserved for Trademark Owners. During the second phase – Priority Pre-registration – anyone may increase their chances of getting a non-trademarked domain for a fee. Pre-registration comes next and allows you to get a jump on those who will try to register names during General Availability, which is open to the public. During this final phase, names are awarded on a first come, first served basis.
+<phrase key="FaqList10Title" />
+What are the benefits of pre-registering a domain name?
+<phrase key="FaqList10Item1" />
+<p>Competition for some of the new <strong>gTLDs</strong> is likely to be fierce. Pre-registering a domain name may give you an advantage over the others wishing to register the exact same domain name. Much like standing in line for tickets, the earlier you get there the more likely you are to get one you want.</p><p>If more than one person pre-registers the same domain at GoDaddy, all applicants will be invited to a private auction to decide who gets it.</p>
+<phrase key="FaqList11Title" />
+Does pre-registering a domain guarantee I’ll get it?
+<phrase key="FaqList11Item1" />
+<p>No. Pre-registering a <strong>gTLD</strong> reserves your place in our queue for that domain. The instant the registration phase opens, we’ll submit your registration electronically using our industry-leading technology to give you an edge.</p><p>If we can’t get the name for you, we’ll refund your registration cost. Application fees collected during the Priority Pre-Registration or Trademark phases are non-refundable. </p><p>If GoDaddy secures the name and more than one person or company has pre-registered it, all parties will be invited to a private auction to decide who gets it.</p>
+<phrase key="FaqList12Title" />
+If I pre-register a gTLD do I <i>have</i> to buy it?
+<phrase key="FaqList12Item1" />
+No. You can cancel your pre-registration request and we’ll happily refund your domain fee. Application fees are non-refundable.
+<phrase key="FaqList13Title" />
+What’s the difference between Pre-registration and Priority Pre-registration?
+<phrase key="FaqList13Item1" />
+A Priority Pre-registration is submitted before a regular Pre-registration, which means the priority option improves your chances of getting the domain name you want when it becomes available. Pricing and renewal fees may be higher for Priority Pre-registration and there may also be non-refundable application fees.
+<phrase key="FaqList14Title" />
+If I apply for a Priority Pre-registration should I also apply during regular Pre-registration?
+<phrase key="FaqList14Item1" />
+No. Priority Pre-registration gives you the best possible chance of getting the domain, as all Priority pre-registrations are submitted before regular Pre-registrations. If there are multiple applications for the same domain name, the registry will hold a private auction, with the name awarded to the highest bidder.
+<phrase key="FaqList15Title" />
+What if multiple applicants from multiple registrars want the same exact domain name?
+<phrase key="FaqList15Item1" />
+For multiple applications submitted during Priority Pre-Registration, the company that owns and regulates the<strong> gTLD</strong> will hold a private auction to determine the owner. If GoDaddy secures a domain with multiple applicants during regular Pre-registration, we’ll hold a private auction to determine ownership.
+<phrase key="FaqList16Title" />
+Is there any reason to register more than one domain name?
+<phrase key="FaqList16Item1" />
+Yes. Businesses often register different domains to expand their digital footprint. So for example, if you own CatesCake.COM you might also want to register CatesCakes.MENU and CatesCakes.NYC. You can forward the new domain names to your existing website or use them to create new ones. This increases the odds that new customers will find you online.
+<phrase key="FaqList17Title" />
+How do I register a domain with my trademark in it?
+<phrase key="FaqList17Item1" />
+<p>ICANN protects trademark owners by letting them reserve their trademarked names first before anyone else is allowed to submit registrations for a particular <strong>gTLD</strong>.</p><p>To be sure you don’t miss this registration period, <strong>Follow</strong> any domains you’re considering. We’ll let you know when they’re open to trademark holders. <a target="_blank" href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="85488" /></relative>]@T]">Browse names now</a></p>
 <phrase key="PageTitle" />
 Page
 <phrase key="TipsHeader" />
@@ -386,3 +433,5 @@ Enter a <b>Domain Name</b>
 Show off your .NINJA skills
 <phrase key="MainBannerCarouselSlide3TextEmail" />
 .EMAIL delivers
+<phrase key="MainBannerCarouselSlideTextUno"  comments="DO NOT TRANSLATE" />
+El Internet en Español.

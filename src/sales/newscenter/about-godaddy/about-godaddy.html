@@ -1,16 +1,19 @@
 ---
 location: sales/newscenter/about-godaddy.aspx
-id: 5362d0cdf778fc27b88b10a1
-name: FOS-18668
+id: 537b8fa9f778fc0e7072113b
+name: FOS-20814
+comments: Added missed key to bob parsons bio
 ---
-{% extends 'base.html' %}
+
+{% extends 'layouts/base.html' %}
 
 {% block metahead %}
   {% parent %}
 {% endblock %}
 
+
 {% block body %}
-           
+
     <div id="corporate" class="corporate-wrapper">
     <div class="corporate">
         <div id="section-about-us" class="section  about-us">
@@ -34,12 +37,12 @@ name: FOS-18668
                 </div>
             </div>
         </div>
-      
-        ##if(countrySiteAny(in) && activeLanguageAny(en))      
+
+        ##if(countrySiteAny(in) && activeLanguageAny(en))
         <div id="section-news-releases" class="section news news-releases">
             <div class="inner">
                 <h2>News Releases</h2>
-                <div class="yui3-g"> 
+                <div class="yui3-g">
                     <div class="yui3-u-1-4">
                         <div class="yui3-c release" data-link="/news/article/customer-growth-spikes-86-as-godaddy-hits-1-year-mark-in-india.aspx?ci=88480">
                             <div class="summary">
@@ -55,7 +58,7 @@ name: FOS-18668
                                 <div class="date">August 8, 2013</div>
                             </div>
                         </div>
-                    </div>  
+                    </div>
                     <div class="yui3-u-1-4">
                         <div class="yui3-c release" data-link="/news/article/go-daddy-targets-india-as-a-priority-market-for-its-global-expansion.aspx?ci=88478">
                             <div class="summary">
@@ -63,7 +66,7 @@ name: FOS-18668
                                 <div class="date">June 20, 2013</div>
                             </div>
                         </div>
-                    </div>                 
+                    </div>
                     <div class="yui3-u-1-4">
                         <div class="yui3-c release" data-link="/news/article/godaddy-announces-cup-of-coffee-campaign-for-smbs-in-india.aspx?ci=88477">
                             <div class="summary">
@@ -76,40 +79,40 @@ name: FOS-18668
             </div>
         </div>
         ##endif
-      
+
         ##if(activeLanguageAny([es-ar], [es-cl], [es-co], [es-mx], [es-pe], [es-ve], [pt-br]))
         <div id="section-news-releases" class="section news news-releases latam-news-releases">
             <div class="inner">
-                
+
               ##if(activeLanguageAny(es))
               <h2>Comunicados de Prensa</h2>
               <div class="news-release-article-wrapper" data-link="/news/article/godaddy-crea-oportunidades-para-la-pequea-empresa-en-latinoamrica.aspx?ci=88476">
                 <h3>GoDaddy Crea Oportunidades Para La Pequena Empresa En LatinoAmerica</h3>
-                  <p>GoDaddy, la principal plataforma de la Web para empresas pequeñas, amplía su presencia en Latinoamérica mediante la oferta de soporte a clientes de habla hispana y portugesa y con el lanzamiento de un conjunto de productos que ayudarán a los empresarios y dueños de negocios pequeños a prosperar en línea.</p>  
+                  <p>GoDaddy, la principal plataforma de la Web para empresas pequeñas, amplía su presencia en Latinoamérica mediante la oferta de soporte a clientes de habla hispana y portugesa y con el lanzamiento de un conjunto de productos que ayudarán a los empresarios y dueños de negocios pequeños a prosperar en línea.</p>
                   <p>
                   <a>
                     <span></span> leer más</a>
                   </p>
                 </div>
-              
+
               ##endif
               ##if(activeLanguageAny(pt))
               <h2>Comunicados de Imprensa</h2>
                 <div class="news-release-article-wrapper" data-link="/news/article/godaddy-cria-oportunidades-para-pequenas-empresas-na-amrica-latina.aspx?ci=88476">
                   <h3>GoDaddy Cria Oportunidades Para Pequenas Empresas Na America Latina</h3>
-                  <p>A GoDaddy, melhor plataforma web para pequenas empresas, aumenta sua presença na América Latina com a oferta de suporte na língua nativa dos clientes e com o lançamento de uma gama completa de produtos para ajudar os donos de pequenas empresas e empreendedores a se desenvolverem no ambiente online.</p>  
+                  <p>A GoDaddy, melhor plataforma web para pequenas empresas, aumenta sua presença na América Latina com a oferta de suporte na língua nativa dos clientes e com o lançamento de uma gama completa de produtos para ajudar os donos de pequenas empresas e empreendedores a se desenvolverem no ambiente online.</p>
                   <p>
                   <a>
                     <span></span> leia mais</a>
                   </p>
                 </div>
-                  
+
               ##endif
-                
+
             </div>
         </div>
-        ##endif     
-      
+        ##endif
+
         <div id="section-godaddy-is" class="section  godaddy-is">
             <div class="inner">
                 <h2>[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-3-GoDaddyIs]@L]</h2>
@@ -143,7 +146,7 @@ name: FOS-18668
                             <div class="solazy img" data-sl-src="[@T[link:<imageroot />]@T]fos/newscenter/about_godaddy/img/godaddy-is/facilities_blank.png"></div>
                             <div style="position: relative;">
                               <div style="color: white;font-size: 41PX; font-weight: bold; position: absolute; top: -174px; text-align: center; left: 107px; width: 103px; font-family: Helvetica Neue;">14</div>
-                            </div> 
+                            </div>
                             <div><p>[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-13-9FacilitiesIncludingArizonaIowaCaliforniaColoradoWashingtonD]@L]</p></div>
                         </div>
                     </div>
@@ -152,7 +155,7 @@ name: FOS-18668
                             <div class="solazy img" data-sl-src="[@T[link:<imageroot />]@T]fos/newscenter/about_godaddy/img/godaddy-is/4000-employees_FOS-11252.png"></div>
                             <div style="position: relative;">
                               <div style="color: white;font-size: 41PX; font-weight: bold; position: absolute; top: -99px; text-align: center; left: 108px; width: 103px; font-family: Helvetica Neue;">[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-Employees]@L]</div>
-                            </div> 
+                            </div>
                             <div><p>[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-5-MoreThan4000Employees]@L]</p></div>
                         </div>
                     </div>
@@ -160,19 +163,19 @@ name: FOS-18668
                         <div class="yui3-c">
                           ##if(countrySiteAny(www))
                           <div class="solazy img" data-sl-src="[@T[link:<imageroot />]@T]fos/newscenter/about_godaddy/img/godaddy-is/24-7-365_FOS-11252.png"></div>
-                            <div style="position: relative;">  
+                            <div style="position: relative;">
                               <div style="position: absolute; top: -142px; left: 56px;">
                                 <div class="customer-support">
                                   [@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-CustomerCare]@L]
                                 </div>
-                              </div> 
-                            </div> 
+                              </div>
+                            </div>
                           ##else
                           <div class="solazy img" data-sl-src="[@T[link:<imageroot />]@T]fos/newscenter/about_godaddy/img/godaddy-is/GLOBAL_gdhp_sprite_20140418_1.png"></div>
-                            <div style="position: relative;">  
-                              <div style="position: absolute; top: -142px; left: 56px;">                                
-                              </div> 
-                            </div> 
+                            <div style="position: relative;">
+                              <div style="position: absolute; top: -142px; left: 56px;">
+                              </div>
+                            </div>
                           ##endif
                             <div><p>[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-9-247365RoundTheClockCustomerCareOperations]@L]</p></div>
                         </div>
@@ -180,7 +183,7 @@ name: FOS-18668
                 </div>
             </div>
         </div>
-           
+
         <div id="section-office" class="section  office">
             <div class="inner">
                 <div class="text">
@@ -196,7 +199,7 @@ name: FOS-18668
                     <span class="tab active" data-category="leadership">[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-1-Leadership]@L]</span>
                     <span class="tab" data-category="directors">[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-3-BoardOfDirectors]@L]</span>
                 </div>
-              
+
                 <ul class="persons leadership">
                     <li class="person blake-irving" data-bio="blake-irving">
                       <div class="solazy img face" data-sl-src="[@T[link:<imageroot />]@T]fos/newscenter/about_godaddy/img/team/thumbnail-blake-irving.jpg"></div>
@@ -263,7 +266,7 @@ name: FOS-18668
                             </div>
                         </div>
                         <div class="mask"></div>
-                    </li>  
+                    </li>
                   <li class="person first skip0 james-carroll" data-bio="james-carroll">
                         <div class="solazy img face" data-sl-src="[@T[link:<imageroot />]@T]fos/newscenter/about_godaddy/img/team/thumbnail-james-carroll.jpg"></div>
                         <div class="info">
@@ -320,7 +323,7 @@ name: FOS-18668
                         <div class="mask"></div>
                     </li>
                 </ul>
-              
+
               <ul class="persons directors">
                     <li class="person first skip1 bob-parsons" data-bio="bob-parsons">
                       <div class="solazy img face" data-sl-condition=".persons.directors|display:block" data-sl-src="[@T[link:<imageroot />]@T]fos/newscenter/about_godaddy/img/team/thumbnail-bob-parsons.jpg"></div>
@@ -399,13 +402,13 @@ name: FOS-18668
                         </div>
                         <div class="mask"></div>
                     </li>
-                    <li class="person jeffrey-saper" data-bio="jeffrey-saper">
-                      <div class="solazy img face" data-sl-condition=".persons.directors|display:block" data-sl-src="[@T[link:<imageroot />]@T]fos/newscenter/about_godaddy/img/team/thumbnail-jeffrey-saper.jpg"></div>
+                    <li class="person lee-wittlinger" data-bio="lee-wittlinger">
+                      <div class="solazy img face" data-sl-condition=".persons.directors|display:block" data-sl-src="[@T[link:<imageroot />]@T]fos/newscenter/about_godaddy/img/team/small-lee-wittlinger.jpg"></div>
                         <div class="info">
                             <div class="bg"></div>
                             <div class="text">
-                                <div class="name">[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-2-JeffreySaper]@L]</div>
-                                <div class="position">[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-2-BoardCounsel]@L]</div>
+                                <div class="name">[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-2-Lee-Wittlinger]@L]</div>
+                                <div class="position">[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-2-Director-SlvLake]@L]</div>
                             </div>
                         </div>
                         <div class="mask"></div>
@@ -658,7 +661,7 @@ name: FOS-18668
                             </div>
                         </div>
                     </div>
-                  
+
                     <div class="bio bob-parsons right">
                         <div class="photo">
                           <div class="solazy img" data-sl-condition=".bio.bob-parsons|display:block" data-sl-src="[@T[link:<imageroot />]@T]fos/newscenter/about_godaddy/img/team/full-bob-parsons.jpg"><br />&nbsp;</div>
@@ -669,8 +672,8 @@ name: FOS-18668
                           <div class="position">[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-3-ExecutiveChairmanFounderGoDaddy]@L]</div>
                             <div class="part about">
                                 <p>[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-40-BobParsonsIsASerialEntrepreneurWhoSoldHis]@L]</p>
-                                <p>[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-32-TodayGoDaddyIsTheWorldSLargestProviderOf]@L]</p>
                                 <p>[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-80-BobHoldsABSInAccountingFromThe]@L]</p>
+                                <p>[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-80-BobReneeParsonsFoundation]@L]</p>
                                 <p>[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-12-BobIsActiveWithSocialMediaAndUsesDrBobParsons]@L]</p>
                             </div>
                         </div>
@@ -756,7 +759,7 @@ name: FOS-18668
                     </div>
                     <div class="bio adam-clammer right">
                         <div class="photo">
-                          <div class="solazy img" data-sl-condition=".bio.adam-clammer|display:block" data-sl-src="[@T[link:<imageroot />]@T]fos/newscenter/about_godaddy/img/team/full-adam-clammer.jpg"></div>
+                          <div class="solazy img" data-sl-condition=".bio.adam-clammer|display:block" data-sl-src="[@T[link:<imageroot />]@T]fos/newscenter/about_godaddy/img/team/full-adam-clammer_v2.jpg"></div>
                         </div>
                         <div class="inner">
                             <div class="close-button"></div>
@@ -770,19 +773,18 @@ name: FOS-18668
                             </div>
                         </div>
                     </div>
-                    <div class="bio jeffrey-saper right">
+                    <div class="bio lee-wittlinger right">
                         <div class="photo">
-                          <div class="solazy img" data-sl-condition=".bio.jeffrey-saper|display:block" data-sl-src="[@T[link:<imageroot />]@T]fos/newscenter/about_godaddy/img/team/full-jeffrey-saper.jpg"></div>
+                          <div class="solazy img" data-sl-condition=".bio.lee-wittlinger|display:block" data-sl-src="[@T[link:<imageroot />]@T]fos/newscenter/about_godaddy/img/team/full-lee-wittlinger.jpg"></div>
                         </div>
                         <div class="inner">
                             <div class="close-button"></div>
-                            <h3 class="name">[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-2-JeffreySaper]@L]</h3>
-                            <div class="position">[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-2-BoardDirector]@L]</div>
+                            <h3 class="name">[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-2-Lee-Wittlinger]@L]</h3>
+                            <div class="position">[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-2-Director-SlvLake]@L]</div>
                             <div class="part about">
-                                <p>[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-28-JeffreySaperIsViceChairmanOfWilsonSonsiniGoodrich]@L]</p>
-                                <p>[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-142-JeffSpecializesInPublicAndPrivateFinancingsOfTechnology]@L]</p>
-                                <p>[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-29-JeffHasSpokenOnAVarietyOfCorporateSecurities]@L]</p>
-                            </div>
+                                <p>[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-28-LeeWittlingerJoinedSilverLakeAndIsDirector]@L]</p>
+                                <p>[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-28-LeeWittlingerCurrentlyDirectorGdAndVantageFinanceAccnting]@L]</p>
+                                </div>
                         </div>
                     </div>
                     <div class="bio betsy-rafael right">
@@ -810,7 +812,7 @@ name: FOS-18668
                         <ul class="slider">
                             <li class="item wider">
                                 <div class="bg" data-anchor-target="#section-customers">
-                                  <div class="solazy img" data-sl-src="[@T[link:<imageroot />]@T]fos/newscenter/about_godaddy/img/customers/fine-portraits-bg.jpg"></div>  
+                                  <div class="solazy img" data-sl-src="[@T[link:<imageroot />]@T]fos/newscenter/about_godaddy/img/customers/fine-portraits-bg.jpg"></div>
                               </div>
                                 <div class="inner">
                                     <h2>[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-2-OurCustomers]@L]</h2>
@@ -826,7 +828,7 @@ name: FOS-18668
                                             <a class="link" href="http://www.afineportraits.com/" target="_blank">www.afineportraits.com</a>
                                         </p>
                                         ##if(activeLanguageAny(en))
-                                        [@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-AFinePortraitsVideo]@L] 
+                                        [@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-AFinePortraitsVideo]@L]
                                         ##endif
                                     </div>
                                 </div>
@@ -900,11 +902,11 @@ name: FOS-18668
                                 <div class="date">January 27, 2014</div>
                             </div>
                         </div>
-                    </div>  
+                    </div>
                     <div class="yui3-u-1-4">
                         <div class="yui3-c release" data-link="/news/article/godaddy-india-unveils-its-new-integrated-campaign-featuring-superstar-mithun-chakraborty.aspx?ci=89500">
                             <div class="summary" style="width: 244px;">
-                                <h3 style="font-size:23px;">GoDaddy India Unveils Its New Integrated Campaign Featuring Superstar Mithun Chakraborty</h3>
+                                <h3 style="font-size:20px;">GoDaddy India Unveils Its New Integrated Campaign Featuring Superstar Mithun Chakraborty</h3>
                                 <p class="text">Campaign Strategy to Increase the Adoption of Websites among Small Businesses in India </p>
                                 <div class="date">March 20, 2014</div>
                             </div>
@@ -931,11 +933,11 @@ name: FOS-18668
                         </div>
                     </div>
                     <div class="yui3-u-1-2 news-release-white">
-                        <div class="yui3-c news-type-1" data-link="/news/article/godaddy-becomes-openstack-sponsor.aspx?ci=89502">                          
+                        <div class="yui3-c news-type-1" data-link="/news/article/godaddy-continues-global-expansion-with-launch-into-21-new-markets-and-14-new-languages.aspx?ci=90377">
                             <div class="summary">
-                                <h3>GoDaddy Becomes OpenStack Sponsor</h3>
-                                <p class="text">Continued Open Source Investment is a Key Strategy in Developing the GoDaddy Cloud Platform</p>
-                                <div class="date">March 5, 2014</div>
+                                <h3>GoDaddy Continues Global Expansion With Launch Into 21 New Markets And 14 New Languages</h3>
+                                <p class="text">Now Supports Localized Product & Support in 37 Countries, 44 Currencies & 17 Languages</p>
+                                <div class="date">April 28, 2014</div>
                             </div>
                         </div>
                     </div>
@@ -959,7 +961,7 @@ name: FOS-18668
                     <span class="tab active" data-category="media">[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-2-MediaInquires]@L]</span>
                     <span class="tab" data-category="marketing">[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-2-MarketingOpportunities]@L]</span>
                 </div>
-              <div class="forms-wrap">  
+              <div class="forms-wrap">
               <div class="tab-content media">
                     <h3>[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-3-ContactPublicRelations]@L]</h3>
                     <p>[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-71-EnoughAboutUsWhatBurningQuestionsAreOnYour]@L]
@@ -1169,7 +1171,7 @@ name: FOS-18668
                             <option>[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-2-AffiliateProgram]@L]</option>
                             <option>[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-3-BusinessDevelopmentPartnership]@L]</option>
                             <option>[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-5-Charity501C3Support]@L]</option>
-                            <option>[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-4-CorporateDevelopment]@L]</option>                          
+                            <option>[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-4-CorporateDevelopment]@L]</option>
                             <option>[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-2-CustomerAdvocacy]@L]</option>
                             <option>[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-5-EventsSponsorshipSportsMotorsportsSignage]@L]</option>
                             <option>[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-4-EventsSponsorshipExposTradeshows]@L]</option>

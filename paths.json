@@ -1,7 +1,15 @@
 {
-  "website-builder": "./hosting/website-builder/",
+  "all": "./",
+  "home": "./homepage/",
+  "demo-home": "./demo/homepage/",
+  "wsb": "./hosting/website-builder/",
+  "o365": "./business/office-365/",
+  "malware-scanner": "./security/malware-scanner/",
+  "logo-design": "./design/logo-design/",
+  "web-design": "./design/web-design/",
   "accounting": "./accounting/accounting-software/",
   "web-hosting": "./hosting/web-hosting/",
+  "wp": "./hosting/wordpress-hosting/",
   "domain-backorders": "./domainaddon/domain-backorders/",
   "demo-bv-reviews": "./demo/lazy-loader/",
   "search": "./domains/search/",
@@ -10,10 +18,10 @@
   "static-ip": "./ssl/static-ip/",
   "gtld": "./tlds/gtld/",
   "qsc": "./ecommerce/shopping-cart/",
-  "home": "./homepage/",
   "contact-us": "./contact-us/",
   "vps": "./hosting/vps-hosting/",
   "vps-config": "./hosting/vps-hosting-config/",
-  "about-godaddy": "./newscenter/about-godaddy"
-
+  "about-godaddy": "./newscenter/about-godaddy",
+  "leaf-pages": "./tlds/leafpage",
+  "what-is-a-gtld": "./domains/what-is-a-gtld"
 }

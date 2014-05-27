@@ -1,4 +1,4 @@
-{% include '../modules/doc-block.html' %}
+{% include 'modules/doc-block.html' %}
 <phrase key="page-title" />
 GoDaddy Global Support | Contact Us – GoDaddy
 <phrase key="meta-description" />

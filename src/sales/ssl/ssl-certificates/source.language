@@ -3,7 +3,7 @@ location: localization/sales/gd/ssl/ssl-certificates/en
 id: false
 name: FOS-20408
 ---
-{% include '../modules/doc-block.html' %}
+{% include 'modules/doc-block.html' %}
 <phrase key="MetaTitle" />
 SSL Certificates | Secure Your Data & Transactions - GoDaddy
 <phrase key="MetaDescription" />

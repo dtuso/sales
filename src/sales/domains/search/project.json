@@ -5,16 +5,8 @@
         "name": "Adam Smith",
         "email": "absmith@godaddy.com"
       },
-      "cdsLocation": "sales/domains/domain-name-search.aspx",
       "draft": {
-        "id": "5362d392f778fc27b88b10a2",
-        "createdDate": "2014-05-01",
-        "createdBy": {
-          "fullName": "Adam Smith",
-          "username": "absmith"
-        },
-        "jiraTicket": "",
-        "comments": "Adding to Sales Repository",
+        "comments": "Updating Privacy ToolTip",
         "url": "http://www.dev-godaddy.com/domains/domain-name-search.aspx"
       }
     },
@@ -32,16 +24,8 @@
         "name": "Adam Smith",
         "email": "absmith@godaddy.com"
       },
-      "cdsLocation": "localization/sales/gd/domains/domain-name-search/en",
       "draft": {
-        "id": "534752a5f778fc16dc8891ca",
-        "createdDate": "2014-04-09",
-        "createdBy": {
-          "fullName": "Pooja Singhvi",
-          "username": "psinghvi"
-        },
-        "jiraTicket": "FOS-18880",
-        "comments": "Country Site Control for Pod updates"
+        "comments": "Updating Privacy ToolTip"
       }
     }
   }

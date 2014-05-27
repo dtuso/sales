@@ -1,0 +1,471 @@
+---
+location: sales/design/logo-design.aspx
+id: 5373f864f778fc384801ba5f
+---
+{% extends 'layouts/base.html' %}
+
+{% block metahead %}
+	{% parent %}
+{% endblock metahead %}
+
+{% block footer %}
+<script src="[@T[link:<javascriptroot />]@T]fos/lib/solazy/jquery.solazy.1.2.0.min.js" type="text/javascript" ></script>
+<script>
+    $(function () {
+        $('.equal-height').setColumnsEqualHeight();
+        $('.select-box').setSelectBox();
+        $('.tab-link').tabLinks();
+        $('.js-open-overview').on('click', function(e){
+            e.preventDefault();
+            window.location.hash = '';
+            $('a[href="#overview"]').tab('show');
+            window.location.hash = '#prices';
+        });
+        if (typeof FastballEvent_MouseClick === 'function' && typeof fbiLibCheckQueue === 'function') {
+            $('[data-ci]').click(function(e){
+              $this = $(this);
+              FastballEvent_MouseClick(e,$this.attr('data-ci'),$(this)[0],'a');
+              fbiLibCheckQueue();
+            });
+        }
+
+        $('#carousel-init').on('slide.bs.carousel', function () {
+        $(this).find('.carousel-inner-container').addClass('carousel-mask').end().find('.badge-important').hide('500');
+        }).on('slid.bs.carousel', function () {
+        $(this).find('.carousel-inner-container').removeClass('carousel-mask').end().find('.badge-important').show('fast');
+        });
+
+        $('.js-add-to-cart').bind('click',function(event){
+            event.preventDefault();
+            var $this = $(this);
+            var ci = $this.attr('data-ci');
+            var $form = $this.parents('form');
+            var $input =$('input[name=product]',$form);
+            var itccode = $input.data('itc');
+            var packageId = $input.val();
+
+
+            FastballEvent_MouseClick(event, ci, $this[0], 'a');
+            fbiLibCheckQueue();
+
+
+            var url = '[@T[link:<relative path="api/package/add" secure="false" parammode="explicit"/>]@T]';
+            url += "/"+itccode;
+            url += "/"+ci;
+            url += "/1";//quantity
+            url += "/"+packageId;
+            url += window.location.search;
+
+            $.ajax({
+                    type: 'POST',
+                    url: url,
+                    complete: function (data) {
+                        var response = $.parseJSON(data.responseText);
+                        if (response.Success) {
+                            var action = $form.attr("action");
+                            var windowParams = window.location.search.replace("?","");
+                            var actionArray = action.split("?");
+                            $form.attr("action",actionArray[0]);
+
+                            var params = windowParams.split("&");
+                            for(var i = 0; i < params.length;i++){
+                              var inputName = params[i].split("=")[0];
+                              var inputValue = params[i].split("=")[1];
+
+                              $form.append('<input type="hidden" name="'+ inputName +'" value="'+inputValue+'" />');
+                            }
+                            $form.trigger("submit");
+                        }
+                    },
+                    dataType: 'json'
+            });
+        });
+
+    });
+
+</script>
+
+{% endblock footer %}
+
+{% block body %}
+
+            <!-- Start main-banner -->
+            <section class="main-banner main-banner-ld">
+                <div class="l-main-container container main-banner-content">
+                    <h1 class="main-banner-title">[@L[cds.sales/gd/design/logo-design:MainTitle]@L]</h1>
+                    <h2 class="main-banner-subtitle">[@L[cds.sales/gd/design/logo-design:MainSubTitle]@L]</h2>
+                </div>
+            </section>
+            <!-- End main-banner -->
+
+            <!-- Start main-tabs -->
+            <section class="main-tabs">
+                <div class="container">
+                    <ul class="nav nav-tabs">
+                        <li class="nav-tabs-item active"><a class="nav-tabs-link" href="#overview" data-toggle="tab" data-ci="88655">[@L[cds.sales/gd/design/logo-design:TabOverviewLabel]@L]</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
+                        <li class="nav-tabs-item"><a class="nav-tabs-link" href="#galleries" data-toggle="tab" data-ci="88656">[@L[cds.sales/gd/design/logo-design:TabGalleriesLabel]@L]</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
+                        <li class="nav-tabs-item"><a class="nav-tabs-link" href="#how-it-works" data-toggle="tab" data-ci="88657">[@L[cds.sales/gd/design/logo-design:TabHowItWorksLabel]@L]</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
+                    </ul>
+                </div>
+            </section>
+            <!-- End main-tabs -->
+
+            <!-- Start main-tabs panes -->
+            <div class="tab-content no-margin-top">
+                <div class="tab-pane active" id="overview">
+                    <!-- Start content -->
+                    <div class="tab-content-overview-bg-ld" data-solazy="{&quot;src&quot;:&quot;[@T[link:<imageroot />]@T]fos/201401/design/logo-design/img/bg-tab-content-overview-ld.jpg&quot;,&quot;method&quot;:&quot;background&quot;,&quot;condition&quot;:{&quot;css&quot;:&quot;display:block&quot;,&quot;selector&quot;:&quot;#overview&quot;}}">
+                        <section class="l-main-container container">
+                            <!-- Start misc-banner -->
+                            <section id="prices" class="misc-banner">
+                                <div class="l-main-container container misc-banner-content">
+                                    <h2>[@L[cds.sales/gd/design/logo-design:TabContentOverviewTabHeaderText]@L]</h2>
+                                    <p>[@L[cds.sales/gd/design/logo-design:TabContentOverviewTabSubHeaderText]@L]</p>
+                                    <a href="#galleries" class="misc-banner-link tab-link" data-ci="88658"><i class="ico ico-gt-alternate"></i>[@L[cds.sales/gd/design/logo-design:LinkViewSamplesText]@L]</a>
+                                </div>
+                            </section>
+                            <!-- End misc-banner -->
+                            <div class="row equal-height">
+                                <div class="col-xs-4" id="standard">
+                                    <div class="grid-column no-padding-bottom">
+                                        <h2>[@L[cds.sales/gd/design/logo-design:PlanBoxStandardAbovePlanDetailsCustomContent]@L]</h2>
+                                        <p class="starting-at"><span class="starting-at-above">[@L[cds.sales/gd/design/logo-design:PlanBoxStartingAt]@L]</span><span class="starting-at-price">[@T[productprice:<current productid="652" />]@T]</span>*</p>
+                                        ##if(isManager())
+                                        <form action="[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" parammode="explicit" />]@T]" method="get" class='frmAddtoCart'>
+                                        ##else
+                                        <form action="[@T[link:<external linktype="carturl" path="/basket.aspx" parammode="explicit" />]@T]" method="get" class='frmAddtoCart'>
+                                        ##endif
+                                            <input type="hidden" name="product" value="logodesign_standard" data-itc="slp_logo">
+                                            <p class="no-margin-bottom"><button type="submit" class="btn btn-warning btn-block btn-lg js-add-to-cart" data-ci="88659">[@L[cds.sales/gd/design/logo-design:PlanboxCartBtn]@L]</button></p>
+                                        </form>
+                                        <ul class="plan-pricing-list plan-pricing-list-alternate">
+                                            <li class="two-lines">[@L[cds.sales/gd/design/logo-design:PlanBoxStandardPlanDetails01Text]@L]</li>
+                                            <li class="two-lines">[@L[cds.sales/gd/design/logo-design:PlanBoxStandardPlanDetails02Text]@L]</li>
+                                            <li class="two-lines">[@L[cds.sales/gd/design/logo-design:PlanBoxStandardPlanDetails03Text]@L]</li>
+                                            <li class="two-lines"><i class="ico ico-empty"></i></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4" id="deluxe">
+                                    <div class="grid-column no-padding-bottom">
+                                        <h2>[@L[cds.sales/gd/design/logo-design:PlanBoxDeluxeAbovePlanDetailsCustomContent]@L]</h2>
+                                        <p class="starting-at"><span class="starting-at-above">[@L[cds.sales/gd/design/logo-design:PlanBoxStartingAt]@L]</span><span class="starting-at-price">[@T[productprice:<current productid="925" />]@T]</span>**</p>
+                                        ##if(isManager())
+                                        <form action="[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" parammode="explicit" />]@T]" method="get" class='frmAddtoCart'>
+                                        ##else
+                                        <form action="[@T[link:<external linktype="carturl" path="/basket.aspx" parammode="explicit" />]@T]" method="get" class='frmAddtoCart'>
+                                        ##endif
+                                            <input type="hidden" name="product" value="logodesign_deluxe" data-itc="slp_logo">
+                                            <p class="no-margin-bottom"><button type="submit" class="btn btn-warning btn-block btn-lg js-add-to-cart" data-ci="88660">[@L[cds.sales/gd/design/logo-design:PlanboxCartBtn]@L]</button></p>
+                                        </form>
+                                        <ul class="plan-pricing-list plan-pricing-list-alternate">
+                                            <li class="two-lines">[@L[cds.sales/gd/design/logo-design:PlanBoxDeluxePlanDetails01Text]@L]</li>
+                                            <li class="two-lines">[@L[cds.sales/gd/design/logo-design:PlanBoxDeluxePlanDetails02Text]@L]</li>
+                                            <li class="two-lines">[@L[cds.sales/gd/design/logo-design:PlanBoxDeluxePlanDetails03Text]@L]</li>
+                                            <li class="two-lines">[@L[cds.sales/gd/design/logo-design:PlanBoxDeluxePlanDetails04Text]@L]</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4">
+                                    <div class="grid-column grid-column-right">
+                                        <p>[@L[cds.sales/gd/design/logo-design:FeaturesList1Title]@L]</p>
+                                        <ul class="tab-content-list tab-content-list-inner">
+                                            <li>[@L[cds.sales/gd/design/logo-design:FeaturesList1Item1]@L]</li>
+                                            <li>[@L[cds.sales/gd/design/logo-design:FeaturesList1Item2]@L]</li>
+                                            <li>[@L[cds.sales/gd/design/logo-design:FeaturesList1Item3]@L]</li>
+                                        </ul>
+                                        <p><strong>[@L[cds.sales/gd/design/logo-design:FeaturesList2Title]@L]</strong></p>
+                                        <ul class="tab-content-list">
+                                            <li>[@L[cds.sales/gd/design/logo-design:FeaturesList2Item1]@L]</li>
+                                            <li>[@L[cds.sales/gd/design/logo-design:FeaturesList2Item2]@L]</li>
+                                            <li>[@L[cds.sales/gd/design/logo-design:FeaturesList2Item3]@L]</li>
+                                        </ul>
+                                        <p class="no-margin-bottom">[@L[cds.sales/gd/design/logo-design:FeaturesText1]@L]</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <section class="container l-main-container content-disclaimer no-margin-bottom">
+                        <p class="no-margin-bottom"><small class="small-print">[@L[cds.sales/gd/design/logo-design:ContentDicalimerText]@L]</small></p>
+                    </section>
+                    <div class="white-bg">
+                        <section class="l-main-container container">
+                            <div class="get-more">
+                                <h2 class="get-more-title"><strong>[@L[cds.sales/gd/design/logo-design:GetMoreTitleText1]@L]</strong> [@L[cds.sales/gd/design/logo-design:GetMoreTitleText2]@L]</h2>
+                                <div class="get-more-content" data-solazy="{&quot;src&quot;:&quot;[@T[link:<imageroot />]@T]fos/201401/design/logo-design/img/bg-tab-content-logos-get-more.jpg&quot;,&quot;method&quot;:&quot;background&quot;,&quot;condition&quot;:{&quot;css&quot;:&quot;display:block&quot;,&quot;selector&quot;:&quot;#overview&quot;}}">
+                                    <h3>[@L[cds.sales/gd/design/logo-design:GetMoreSubTitle]@L]</h3>
+                                    <p>[@L[cds.sales/gd/design/logo-design:GetMoreText1]@L]</p>
+                                    <ul>
+                                        <li>[@L[cds.sales/gd/design/logo-design:GetMoreListText1]@L]</li>
+                                    </ul>
+                                    <form action="[@T[link:<relative path="~/CDS/Widgets/WidgetsPostHandlers/WebDesignPostHandler.ashx" />]@T]" name="frmWebDesign" class="frmWebDesign" id="addtocart-form" method="post">
+                                        <input type="hidden" name="selectedPlan" id="selectedPlan" class="selectedPlan">
+                                        <input type="hidden" name="formSubmitButton" id="formSubmitButton" value="Add-to-Cart">
+                                        <input type="hidden" name="itc" value="slp_webdesign2">
+                                        <input type="hidden" name="nocos" value="False">
+                                        <input type="hidden" name="config" value="customsite">
+                                        <input type="hidden" name="sdc" value="True">
+                                        <input type="hidden" name="newxs" value="False">
+                                        <input type="hidden" name="cicode" value="56910">
+                                        <input type="hidden" name="prog_id" value="GoDaddy">
+                                        <label>
+                                            <input type="radio" name="product" checked="checked" value="6520|1|1">
+                                        </label>
+                                    <button type="submit" id="frmWebDesign_0" class="btn btn-warning cta-small" data-ci="88661">[@L[cds.sales/gd/design/logo-design:PlanboxCartBtn]@L]</button>
+                                </form></div>
+                            </div>
+                        </section>
+                    </div>
+                    <!-- End content -->
+                </div>
+                <div class="tab-pane" id="galleries">
+                    <section class="tab-content-top-spacing">
+                        <div class="container l-main-container">
+                            <div class="row tab-content no-margin-top">
+                                <div class="col-xs-12">
+                                    <div class="grid-column tab-content-column-alternate tab-content-galleries">
+                                        <h2 class="h2-alternate">[@L[cds.sales/gd/design/logo-design:GalleriesHeader]@L]</h2>
+                                        <section class="carousel-container overview-carousel-container-ld">
+                                            <div class="container overview-container-ld">
+                                                <div data-ride="carousel" class="carousel slide " id="carousel-init">
+                                                    <!-- Wrapper for slides -->
+                                                    <div class="carousel-content-container">
+                                                        <div class="carousel-inner carousel-inner-container overview-carousel-inner-container-ld">
+                                                            <div class="item carousel-inner-item overview-carousel-inner-item-ld active has-badge">
+                                                                <span class="badge badge-small badge-important badge-standard badge-upper-right">[@L[cds.sales/gd/design/logo-design:GalleriesCarouselStandardBadge]@L]</span>
+                                                                <div class="solazy sl-image sl-logo" data-solazy="{&quot;src&quot;:&quot;[@T[link:<imageroot />]@T]fos/201401/design/logo-design/img/logos/logo_gallery01.jpg&quot;,&quot;method&quot;:&quot;background&quot;,&quot;condition&quot;:{&quot;css&quot;:&quot;display:block&quot;,&quot;selector&quot;:&quot;#galleries&quot;}}"></div>
+                                                            </div>
+                                                            <div class="item carousel-inner-item overview-carousel-inner-item-ld has-badge">
+                                                                <span class="badge badge-small badge-important badge-upper-right">[@L[cds.sales/gd/design/logo-design:GalleriesCarouselDeluxeBadge]@L]</span>
+                                                                <div class="solazy sl-image sl-logo" data-solazy="{&quot;src&quot;:&quot;[@T[link:<imageroot />]@T]fos/201401/design/logo-design/img/logos/logo_gallery02.jpg&quot;,&quot;method&quot;:&quot;background&quot;,&quot;condition&quot;:{&quot;css&quot;:&quot;display:block&quot;,&quot;selector&quot;:&quot;#galleries&quot;}}"></div>
+                                                            </div>
+                                                            <div class="item carousel-inner-item overview-carousel-inner-item-ld has-badge">
+                                                                <span class="badge badge-small badge-important badge-standard badge-upper-right">[@L[cds.sales/gd/design/logo-design:GalleriesCarouselStandardBadge]@L]</span>
+                                                                <div class="solazy sl-image sl-logo" data-solazy="{&quot;src&quot;:&quot;[@T[link:<imageroot />]@T]fos/201401/design/logo-design/img/logos/logo_gallery03.jpg&quot;,&quot;method&quot;:&quot;background&quot;,&quot;condition&quot;:{&quot;css&quot;:&quot;display:block&quot;,&quot;selector&quot;:&quot;#galleries&quot;}}"></div>
+                                                            </div>
+                                                            <div class="item carousel-inner-item overview-carousel-inner-item-ld has-badge">
+                                                                <span class="badge badge-small badge-important badge-upper-right">[@L[cds.sales/gd/design/logo-design:GalleriesCarouselDeluxeBadge]@L]</span>
+                                                                <div class="solazy sl-image sl-logo" data-solazy="{&quot;src&quot;:&quot;[@T[link:<imageroot />]@T]fos/201401/design/logo-design/img/logos/logo_gallery04.jpg&quot;,&quot;method&quot;:&quot;background&quot;,&quot;condition&quot;:{&quot;css&quot;:&quot;display:block&quot;,&quot;selector&quot;:&quot;#galleries&quot;}}"></div>
+                                                            </div>
+                                                            <div class="item carousel-inner-item overview-carousel-inner-item-ld has-badge">
+                                                                <span class="badge badge-small badge-important badge-standard badge-upper-right">[@L[cds.sales/gd/design/logo-design:GalleriesCarouselStandardBadge]@L]</span>
+                                                                <div class="solazy sl-image sl-logo" data-solazy="{&quot;src&quot;:&quot;[@T[link:<imageroot />]@T]fos/201401/design/logo-design/img/logos/logo_gallery05.jpg&quot;,&quot;method&quot;:&quot;background&quot;,&quot;condition&quot;:{&quot;css&quot;:&quot;display:block&quot;,&quot;selector&quot;:&quot;#galleries&quot;}}"></div>
+                                                            </div>
+                                                            <div class="item carousel-inner-item overview-carousel-inner-item-ld has-badge">
+                                                                <span class="badge badge-small badge-important badge-upper-right">[@L[cds.sales/gd/design/logo-design:GalleriesCarouselDeluxeBadge]@L]</span>
+                                                                <div class="solazy sl-image sl-logo" data-solazy="{&quot;src&quot;:&quot;[@T[link:<imageroot />]@T]fos/201401/design/logo-design/img/logos/logo_gallery06.jpg&quot;,&quot;method&quot;:&quot;background&quot;,&quot;condition&quot;:{&quot;css&quot;:&quot;display:block&quot;,&quot;selector&quot;:&quot;#galleries&quot;}}"></div>
+                                                            </div>
+                                                            <div class="item carousel-inner-item overview-carousel-inner-item-ld has-badge">
+                                                                <span class="badge badge-small badge-important badge-standard badge-upper-right">[@L[cds.sales/gd/design/logo-design:GalleriesCarouselStandardBadge]@L]</span>
+                                                                <div class="solazy sl-image sl-logo" data-solazy="{&quot;src&quot;:&quot;[@T[link:<imageroot />]@T]fos/201401/design/logo-design/img/logos/logo_gallery07.jpg&quot;,&quot;method&quot;:&quot;background&quot;,&quot;condition&quot;:{&quot;css&quot;:&quot;display:block&quot;,&quot;selector&quot;:&quot;#galleries&quot;}}"></div>
+                                                            </div>
+                                                            <div class="item carousel-inner-item overview-carousel-inner-item-ld has-badge">
+                                                                <span class="badge badge-small badge-important badge-upper-right">[@L[cds.sales/gd/design/logo-design:GalleriesCarouselDeluxeBadge]@L]</span>
+                                                                <div class="solazy sl-image sl-logo" data-solazy="{&quot;src&quot;:&quot;[@T[link:<imageroot />]@T]fos/201401/design/logo-design/img/logos/logo_gallery08.jpg&quot;,&quot;method&quot;:&quot;background&quot;,&quot;condition&quot;:{&quot;css&quot;:&quot;display:block&quot;,&quot;selector&quot;:&quot;#galleries&quot;}}"></div>
+                                                            </div>
+                                                            <div class="item carousel-inner-item overview-carousel-inner-item-ld has-badge">
+                                                                <span class="badge badge-small badge-important badge-standard badge-upper-right">[@L[cds.sales/gd/design/logo-design:GalleriesCarouselStandardBadge]@L]</span>
+                                                                <div class="solazy sl-image sl-logo" data-solazy="{&quot;src&quot;:&quot;[@T[link:<imageroot />]@T]fos/201401/design/logo-design/img/logos/logo_gallery09.jpg&quot;,&quot;method&quot;:&quot;background&quot;,&quot;condition&quot;:{&quot;css&quot;:&quot;display:block&quot;,&quot;selector&quot;:&quot;#galleries&quot;}}"></div>
+                                                            </div>
+                                                            <div class="item carousel-inner-item overview-carousel-inner-item-ld has-badge">
+                                                                <span class="badge badge-small badge-important badge-upper-right">[@L[cds.sales/gd/design/logo-design:GalleriesCarouselDeluxeBadge]@L]</span>
+                                                                <div class="solazy sl-image sl-logo" data-solazy="{&quot;src&quot;:&quot;[@T[link:<imageroot />]@T]fos/201401/design/logo-design/img/logos/logo_gallery10.jpg&quot;,&quot;method&quot;:&quot;background&quot;,&quot;condition&quot;:{&quot;css&quot;:&quot;display:block&quot;,&quot;selector&quot;:&quot;#galleries&quot;}}"></div>
+                                                            </div>
+                                                            <div class="item carousel-inner-item overview-carousel-inner-item-ld has-badge">
+                                                                <span class="badge badge-small badge-important badge-standard badge-upper-right">[@L[cds.sales/gd/design/logo-design:GalleriesCarouselStandardBadge]@L]</span>
+                                                                <div class="solazy sl-image sl-logo" data-solazy="{&quot;src&quot;:&quot;[@T[link:<imageroot />]@T]fos/201401/design/logo-design/img/logos/logo_gallery11.jpg&quot;,&quot;method&quot;:&quot;background&quot;,&quot;condition&quot;:{&quot;css&quot;:&quot;display:block&quot;,&quot;selector&quot;:&quot;#galleries&quot;}}"></div>
+                                                            </div>
+                                                            <div class="item carousel-inner-item overview-carousel-inner-item-ld has-badge">
+                                                                <span class="badge badge-small badge-important badge-upper-right">[@L[cds.sales/gd/design/logo-design:GalleriesCarouselDeluxeBadge]@L]</span>
+                                                                <div class="solazy sl-image sl-logo" data-solazy="{&quot;src&quot;:&quot;[@T[link:<imageroot />]@T]fos/201401/design/logo-design/img/logos/logo_gallery12.jpg&quot;,&quot;method&quot;:&quot;background&quot;,&quot;condition&quot;:{&quot;css&quot;:&quot;display:block&quot;,&quot;selector&quot;:&quot;#galleries&quot;}}"></div>
+                                                            </div>
+                                                            <div class="item carousel-inner-item overview-carousel-inner-item-ld has-badge">
+                                                                <span class="badge badge-small badge-important badge-standard badge-upper-right">[@L[cds.sales/gd/design/logo-design:GalleriesCarouselStandardBadge]@L]</span>
+                                                                <div class="solazy sl-image sl-logo" data-solazy="{&quot;src&quot;:&quot;[@T[link:<imageroot />]@T]fos/201401/design/logo-design/img/logos/logo_gallery13.jpg&quot;,&quot;method&quot;:&quot;background&quot;,&quot;condition&quot;:{&quot;css&quot;:&quot;display:block&quot;,&quot;selector&quot;:&quot;#galleries&quot;}}"></div>
+                                                            </div>
+                                                            <div class="item carousel-inner-item overview-carousel-inner-item-ld has-badge">
+                                                                <span class="badge badge-small badge-important badge-upper-right">[@L[cds.sales/gd/design/logo-design:GalleriesCarouselDeluxeBadge]@L]</span>
+                                                                <div class="solazy sl-image sl-logo" data-solazy="{&quot;src&quot;:&quot;[@T[link:<imageroot />]@T]fos/201401/design/logo-design/img/logos/logo_gallery14.jpg&quot;,&quot;method&quot;:&quot;background&quot;,&quot;condition&quot;:{&quot;css&quot;:&quot;display:block&quot;,&quot;selector&quot;:&quot;#galleries&quot;}}"></div>
+                                                            </div>
+                                                            <div class="item carousel-inner-item overview-carousel-inner-item-ld has-badge">
+                                                                <span class="badge badge-small badge-important badge-standard badge-upper-right">[@L[cds.sales/gd/design/logo-design:GalleriesCarouselStandardBadge]@L]</span>
+                                                                <div class="solazy sl-image sl-logo" data-solazy="{&quot;src&quot;:&quot;[@T[link:<imageroot />]@T]fos/201401/design/logo-design/img/logos/logo_gallery15.jpg&quot;,&quot;method&quot;:&quot;background&quot;,&quot;condition&quot;:{&quot;css&quot;:&quot;display:block&quot;,&quot;selector&quot;:&quot;#galleries&quot;}}"></div>
+                                                            </div>
+                                                            <div class="item carousel-inner-item overview-carousel-inner-item-ld has-badge">
+                                                                <span class="badge badge-small badge-important badge-upper-right">[@L[cds.sales/gd/design/logo-design:GalleriesCarouselDeluxeBadge]@L]</span>
+                                                                <div class="solazy sl-image sl-logo" data-solazy="{&quot;src&quot;:&quot;[@T[link:<imageroot />]@T]fos/201401/design/logo-design/img/logos/logo_gallery16.jpg&quot;,&quot;method&quot;:&quot;background&quot;,&quot;condition&quot;:{&quot;css&quot;:&quot;display:block&quot;,&quot;selector&quot;:&quot;#galleries&quot;}}"></div>
+                                                            </div>
+                                                            <div class="item carousel-inner-item overview-carousel-inner-item-ld has-badge">
+                                                                <span class="badge badge-small badge-important badge-standard badge-upper-right">[@L[cds.sales/gd/design/logo-design:GalleriesCarouselStandardBadge]@L]</span>
+                                                                <div class="solazy sl-image sl-logo" data-solazy="{&quot;src&quot;:&quot;[@T[link:<imageroot />]@T]fos/201401/design/logo-design/img/logos/logo_gallery17.jpg&quot;,&quot;method&quot;:&quot;background&quot;,&quot;condition&quot;:{&quot;css&quot;:&quot;display:block&quot;,&quot;selector&quot;:&quot;#galleries&quot;}}"></div>
+                                                            </div>
+                                                            <div class="item carousel-inner-item overview-carousel-inner-item-ld has-badge">
+                                                                <span class="badge badge-small badge-important badge-upper-right">[@L[cds.sales/gd/design/logo-design:GalleriesCarouselDeluxeBadge]@L]</span>
+                                                                <div class="solazy sl-image sl-logo" data-solazy="{&quot;src&quot;:&quot;[@T[link:<imageroot />]@T]fos/201401/design/logo-design/img/logos/logo_gallery18.jpg&quot;,&quot;method&quot;:&quot;background&quot;,&quot;condition&quot;:{&quot;css&quot;:&quot;display:block&quot;,&quot;selector&quot;:&quot;#galleries&quot;}}"></div>
+                                                            </div>
+                                                            <div class="item carousel-inner-item overview-carousel-inner-item-ld has-badge">
+                                                                <span class="badge badge-small badge-important badge-standard badge-upper-right">[@L[cds.sales/gd/design/logo-design:GalleriesCarouselStandardBadge]@L]</span>
+                                                                <div class="solazy sl-image sl-logo" data-solazy="{&quot;src&quot;:&quot;[@T[link:<imageroot />]@T]fos/201401/design/logo-design/img/logos/logo_gallery19.jpg&quot;,&quot;method&quot;:&quot;background&quot;,&quot;condition&quot;:{&quot;css&quot;:&quot;display:block&quot;,&quot;selector&quot;:&quot;#galleries&quot;}}"></div>
+                                                            </div>
+                                                            <div class="item carousel-inner-item overview-carousel-inner-item-ld has-badge">
+                                                                <span class="badge badge-small badge-important badge-upper-right">[@L[cds.sales/gd/design/logo-design:GalleriesCarouselDeluxeBadge]@L]</span>
+                                                                <div class="solazy sl-image sl-logo" data-solazy="{&quot;src&quot;:&quot;[@T[link:<imageroot />]@T]fos/201401/design/logo-design/img/logos/logo_gallery20.jpg&quot;,&quot;method&quot;:&quot;background&quot;,&quot;condition&quot;:{&quot;css&quot;:&quot;display:block&quot;,&quot;selector&quot;:&quot;#galleries&quot;}}"></div>
+                                                            </div>
+                                                            <div class="item carousel-inner-item overview-carousel-inner-item-ld has-badge">
+                                                                <span class="badge badge-small badge-important badge-standard badge-upper-right">[@L[cds.sales/gd/design/logo-design:GalleriesCarouselStandardBadge]@L]</span>
+                                                                <div class="solazy sl-image sl-logo" data-solazy="{&quot;src&quot;:&quot;[@T[link:<imageroot />]@T]fos/201401/design/logo-design/img/logos/logo_gallery21.jpg&quot;,&quot;method&quot;:&quot;background&quot;,&quot;condition&quot;:{&quot;css&quot;:&quot;display:block&quot;,&quot;selector&quot;:&quot;#galleries&quot;}}"></div>
+                                                            </div>
+                                                            <div class="item carousel-inner-item overview-carousel-inner-item-ld has-badge">
+                                                                <span class="badge badge-small badge-important badge-upper-right">[@L[cds.sales/gd/design/logo-design:GalleriesCarouselDeluxeBadge]@L]</span>
+                                                                <div class="solazy sl-image sl-logo" data-solazy="{&quot;src&quot;:&quot;[@T[link:<imageroot />]@T]fos/201401/design/logo-design/img/logos/logo_gallery22.jpg&quot;,&quot;method&quot;:&quot;background&quot;,&quot;condition&quot;:{&quot;css&quot;:&quot;display:block&quot;,&quot;selector&quot;:&quot;#galleries&quot;}}"></div>
+                                                            </div>
+                                                            <div class="item carousel-inner-item overview-carousel-inner-item-ld has-badge">
+                                                                <span class="badge badge-small badge-important badge-standard badge-upper-right">[@L[cds.sales/gd/design/logo-design:GalleriesCarouselStandardBadge]@L]</span>
+                                                                <div class="solazy sl-image sl-logo" data-solazy="{&quot;src&quot;:&quot;[@T[link:<imageroot />]@T]fos/201401/design/logo-design/img/logos/logo_gallery23.jpg&quot;,&quot;method&quot;:&quot;background&quot;,&quot;condition&quot;:{&quot;css&quot;:&quot;display:block&quot;,&quot;selector&quot;:&quot;#galleries&quot;}}"></div>
+                                                            </div>
+                                                            <div class="item carousel-inner-item overview-carousel-inner-item-ld has-badge">
+                                                                <span class="badge badge-small badge-important badge-upper-right">[@L[cds.sales/gd/design/logo-design:GalleriesCarouselDeluxeBadge]@L]</span>
+                                                                <div class="solazy sl-image sl-logo" data-solazy="{&quot;src&quot;:&quot;[@T[link:<imageroot />]@T]fos/201401/design/logo-design/img/logos/logo_gallery24.jpg&quot;,&quot;method&quot;:&quot;background&quot;,&quot;condition&quot;:{&quot;css&quot;:&quot;display:block&quot;,&quot;selector&quot;:&quot;#galleries&quot;}}"></div>
+                                                            </div>
+                                                            <div class="item carousel-inner-item overview-carousel-inner-item-ld has-badge">
+                                                                <span class="badge badge-small badge-important badge-standard badge-upper-right">[@L[cds.sales/gd/design/logo-design:GalleriesCarouselStandardBadge]@L]</span>
+                                                                <div class="solazy sl-image sl-logo" data-solazy="{&quot;src&quot;:&quot;[@T[link:<imageroot />]@T]fos/201401/design/logo-design/img/logos/logo_gallery25.jpg&quot;,&quot;method&quot;:&quot;background&quot;,&quot;condition&quot;:{&quot;css&quot;:&quot;display:block&quot;,&quot;selector&quot;:&quot;#galleries&quot;}}"></div>
+                                                            </div>
+                                                            <div class="item carousel-inner-item overview-carousel-inner-item-ld has-badge">
+                                                                <span class="badge badge-small badge-important badge-upper-right">[@L[cds.sales/gd/design/logo-design:GalleriesCarouselDeluxeBadge]@L]</span>
+                                                                <div class="solazy sl-image sl-logo" data-solazy="{&quot;src&quot;:&quot;[@T[link:<imageroot />]@T]fos/201401/design/logo-design/img/logos/logo_gallery26.jpg&quot;,&quot;method&quot;:&quot;background&quot;,&quot;condition&quot;:{&quot;css&quot;:&quot;display:block&quot;,&quot;selector&quot;:&quot;#galleries&quot;}}"></div>
+                                                            </div>
+                                                            <div class="item carousel-inner-item overview-carousel-inner-item-ld has-badge">
+                                                                <span class="badge badge-small badge-important badge-standard badge-upper-right">[@L[cds.sales/gd/design/logo-design:GalleriesCarouselStandardBadge]@L]</span>
+                                                                <div class="solazy sl-image sl-logo" data-solazy="{&quot;src&quot;:&quot;[@T[link:<imageroot />]@T]fos/201401/design/logo-design/img/logos/logo_gallery27.jpg&quot;,&quot;method&quot;:&quot;background&quot;,&quot;condition&quot;:{&quot;css&quot;:&quot;display:block&quot;,&quot;selector&quot;:&quot;#galleries&quot;}}"></div>
+                                                            </div>
+                                                            <div class="item carousel-inner-item overview-carousel-inner-item-ld has-badge">
+                                                                <span class="badge badge-small badge-important badge-upper-right">[@L[cds.sales/gd/design/logo-design:GalleriesCarouselDeluxeBadge]@L]</span>
+                                                                <div class="solazy sl-image sl-logo" data-solazy="{&quot;src&quot;:&quot;[@T[link:<imageroot />]@T]fos/201401/design/logo-design/img/logos/logo_gallery28.jpg&quot;,&quot;method&quot;:&quot;background&quot;,&quot;condition&quot;:{&quot;css&quot;:&quot;display:block&quot;,&quot;selector&quot;:&quot;#galleries&quot;}}"></div>
+                                                            </div>
+                                                            <div class="item carousel-inner-item overview-carousel-inner-item-ld has-badge">
+                                                                <span class="badge badge-small badge-important badge-standard badge-upper-right">[@L[cds.sales/gd/design/logo-design:GalleriesCarouselStandardBadge]@L]</span>
+                                                                <div class="solazy sl-image sl-logo" data-solazy="{&quot;src&quot;:&quot;[@T[link:<imageroot />]@T]fos/201401/design/logo-design/img/logos/logo_gallery29.jpg&quot;,&quot;method&quot;:&quot;background&quot;,&quot;condition&quot;:{&quot;css&quot;:&quot;display:block&quot;,&quot;selector&quot;:&quot;#galleries&quot;}}"></div>
+                                                            </div>
+                                                            <div class="item carousel-inner-item overview-carousel-inner-item-ld has-badge">
+                                                                <span class="badge badge-small badge-important badge-upper-right">[@L[cds.sales/gd/design/logo-design:GalleriesCarouselDeluxeBadge]@L]</span>
+                                                                <div class="solazy sl-image sl-logo" data-solazy="{&quot;src&quot;:&quot;[@T[link:<imageroot />]@T]fos/201401/design/logo-design/img/logos/logo_gallery30.jpg&quot;,&quot;method&quot;:&quot;background&quot;,&quot;condition&quot;:{&quot;css&quot;:&quot;display:block&quot;,&quot;selector&quot;:&quot;#galleries&quot;}}"></div>
+                                                            </div>
+                                                            <div class="item carousel-inner-item overview-carousel-inner-item-ld has-badge">
+                                                                <span class="badge badge-small badge-important badge-standard badge-upper-right">[@L[cds.sales/gd/design/logo-design:GalleriesCarouselStandardBadge]@L]</span>
+                                                                <div class="solazy sl-image sl-logo" data-solazy="{&quot;src&quot;:&quot;[@T[link:<imageroot />]@T]fos/201401/design/logo-design/img/logos/logo_gallery31.jpg&quot;,&quot;method&quot;:&quot;background&quot;,&quot;condition&quot;:{&quot;css&quot;:&quot;display:block&quot;,&quot;selector&quot;:&quot;#galleries&quot;}}"></div>
+                                                            </div>
+                                                            <div class="item carousel-inner-item overview-carousel-inner-item-ld has-badge">
+                                                                <span class="badge badge-small badge-important badge-upper-right">[@L[cds.sales/gd/design/logo-design:GalleriesCarouselDeluxeBadge]@L]</span>
+                                                                <div class="solazy sl-image sl-logo" data-solazy="{&quot;src&quot;:&quot;[@T[link:<imageroot />]@T]fos/201401/design/logo-design/img/logos/logo_gallery32.jpg&quot;,&quot;method&quot;:&quot;background&quot;,&quot;condition&quot;:{&quot;css&quot;:&quot;display:block&quot;,&quot;selector&quot;:&quot;#galleries&quot;}}"></div>
+                                                            </div>
+                                                            <div class="item carousel-inner-item overview-carousel-inner-item-ld has-badge">
+                                                                <span class="badge badge-small badge-important badge-standard badge-upper-right">[@L[cds.sales/gd/design/logo-design:GalleriesCarouselStandardBadge]@L]</span>
+                                                                <div class="solazy sl-image sl-logo" data-solazy="{&quot;src&quot;:&quot;[@T[link:<imageroot />]@T]fos/201401/design/logo-design/img/logos/logo_gallery33.jpg&quot;,&quot;method&quot;:&quot;background&quot;,&quot;condition&quot;:{&quot;css&quot;:&quot;display:block&quot;,&quot;selector&quot;:&quot;#galleries&quot;}}"></div>
+                                                            </div>
+                                                            <div class="item carousel-inner-item overview-carousel-inner-item-ld has-badge">
+                                                                <span class="badge badge-small badge-important badge-upper-right">[@L[cds.sales/gd/design/logo-design:GalleriesCarouselDeluxeBadge]@L]</span>
+                                                                <div class="solazy sl-image sl-logo" data-solazy="{&quot;src&quot;:&quot;[@T[link:<imageroot />]@T]fos/201401/design/logo-design/img/logos/logo_gallery34.jpg&quot;,&quot;method&quot;:&quot;background&quot;,&quot;condition&quot;:{&quot;css&quot;:&quot;display:block&quot;,&quot;selector&quot;:&quot;#galleries&quot;}}"></div>
+                                                            </div>
+                                                            <div class="item carousel-inner-item overview-carousel-inner-item-ld has-badge">
+                                                                <span class="badge badge-small badge-important badge-standard badge-upper-right">[@L[cds.sales/gd/design/logo-design:GalleriesCarouselStandardBadge]@L]</span>
+                                                                <div class="solazy sl-image sl-logo" data-solazy="{&quot;src&quot;:&quot;[@T[link:<imageroot />]@T]fos/201401/design/logo-design/img/logos/logo_gallery35.jpg&quot;,&quot;method&quot;:&quot;background&quot;,&quot;condition&quot;:{&quot;css&quot;:&quot;display:block&quot;,&quot;selector&quot;:&quot;#galleries&quot;}}"></div>
+                                                            </div>
+                                                            <div class="item carousel-inner-item overview-carousel-inner-item-ld has-badge">
+                                                                <span class="badge badge-small badge-important badge-upper-right">[@L[cds.sales/gd/design/logo-design:GalleriesCarouselDeluxeBadge]@L]</span>
+                                                                <div class="solazy sl-image sl-logo" data-solazy="{&quot;src&quot;:&quot;[@T[link:<imageroot />]@T]fos/201401/design/logo-design/img/logos/logo_gallery36.jpg&quot;,&quot;method&quot;:&quot;background&quot;,&quot;condition&quot;:{&quot;css&quot;:&quot;display:block&quot;,&quot;selector&quot;:&quot;#galleries&quot;}}"></div>
+                                                            </div>
+                                                            <div class="item carousel-inner-item overview-carousel-inner-item-ld has-badge">
+                                                                <span class="badge badge-small badge-important badge-standard badge-upper-right">[@L[cds.sales/gd/design/logo-design:GalleriesCarouselStandardBadge]@L]</span>
+                                                                <div class="solazy sl-image sl-logo" data-solazy="{&quot;src&quot;:&quot;[@T[link:<imageroot />]@T]fos/201401/design/logo-design/img/logos/logo_gallery37.jpg&quot;,&quot;method&quot;:&quot;background&quot;,&quot;condition&quot;:{&quot;css&quot;:&quot;display:block&quot;,&quot;selector&quot;:&quot;#galleries&quot;}}"></div>
+                                                            </div>
+                                                            <div class="item carousel-inner-item overview-carousel-inner-item-ld has-badge">
+                                                                <span class="badge badge-small badge-important badge-upper-right">[@L[cds.sales/gd/design/logo-design:GalleriesCarouselDeluxeBadge]@L]</span>
+                                                                <div class="solazy sl-image sl-logo" data-solazy="{&quot;src&quot;:&quot;[@T[link:<imageroot />]@T]fos/201401/design/logo-design/img/logos/logo_gallery38.jpg&quot;,&quot;method&quot;:&quot;background&quot;,&quot;condition&quot;:{&quot;css&quot;:&quot;display:block&quot;,&quot;selector&quot;:&quot;#galleries&quot;}}"></div>
+                                                            </div>
+                                                            <div class="item carousel-inner-item overview-carousel-inner-item-ld has-badge">
+                                                                <span class="badge badge-small badge-important badge-standard badge-upper-right">[@L[cds.sales/gd/design/logo-design:GalleriesCarouselStandardBadge]@L]</span>
+                                                                <div class="solazy sl-image sl-logo" data-solazy="{&quot;src&quot;:&quot;[@T[link:<imageroot />]@T]fos/201401/design/logo-design/img/logos/logo_gallery39.jpg&quot;,&quot;method&quot;:&quot;background&quot;,&quot;condition&quot;:{&quot;css&quot;:&quot;display:block&quot;,&quot;selector&quot;:&quot;#galleries&quot;}}"></div>
+                                                            </div>
+                                                            <div class="item carousel-inner-item overview-carousel-inner-item-ld has-badge">
+                                                                <span class="badge badge-small badge-important badge-upper-right">[@L[cds.sales/gd/design/logo-design:GalleriesCarouselDeluxeBadge]@L]</span>
+                                                                <div class="solazy sl-image sl-logo" data-solazy="{&quot;src&quot;:&quot;[@T[link:<imageroot />]@T]fos/201401/design/logo-design/img/logos/logo_gallery40.jpg&quot;,&quot;method&quot;:&quot;background&quot;,&quot;condition&quot;:{&quot;css&quot;:&quot;display:block&quot;,&quot;selector&quot;:&quot;#galleries&quot;}}"></div>
+                                                            </div>
+                                                            <div class="item carousel-inner-item overview-carousel-inner-item-ld has-badge">
+                                                                <span class="badge badge-small badge-important badge-standard badge-upper-right">[@L[cds.sales/gd/design/logo-design:GalleriesCarouselStandardBadge]@L]</span>
+                                                                <div class="solazy sl-image sl-logo" data-solazy="{&quot;src&quot;:&quot;[@T[link:<imageroot />]@T]fos/201401/design/logo-design/img/logos/logo_gallery41.jpg&quot;,&quot;method&quot;:&quot;background&quot;,&quot;condition&quot;:{&quot;css&quot;:&quot;display:block&quot;,&quot;selector&quot;:&quot;#galleries&quot;}}"></div>
+                                                            </div>
+                                                            <div class="item carousel-inner-item overview-carousel-inner-item-ld has-badge">
+                                                                <span class="badge badge-small badge-important badge-upper-right">[@L[cds.sales/gd/design/logo-design:GalleriesCarouselDeluxeBadge]@L]</span>
+                                                                <div class="solazy sl-image sl-logo" data-solazy="{&quot;src&quot;:&quot;[@T[link:<imageroot />]@T]fos/201401/design/logo-design/img/logos/logo_gallery42.jpg&quot;,&quot;method&quot;:&quot;background&quot;,&quot;condition&quot;:{&quot;css&quot;:&quot;display:block&quot;,&quot;selector&quot;:&quot;#galleries&quot;}}"></div>
+                                                            </div>
+                                                            <div class="item carousel-inner-item overview-carousel-inner-item-ld has-badge">
+                                                                <span class="badge badge-small badge-important badge-standard badge-upper-right">[@L[cds.sales/gd/design/logo-design:GalleriesCarouselStandardBadge]@L]</span>
+                                                                <div class="solazy sl-image sl-logo" data-solazy="{&quot;src&quot;:&quot;[@T[link:<imageroot />]@T]fos/201401/design/logo-design/img/logos/logo_gallery43.jpg&quot;,&quot;method&quot;:&quot;background&quot;,&quot;condition&quot;:{&quot;css&quot;:&quot;display:block&quot;,&quot;selector&quot;:&quot;#galleries&quot;}}"></div>
+                                                            </div>
+                                                            <div class="item carousel-inner-item overview-carousel-inner-item-ld has-badge">
+                                                                <span class="badge badge-small badge-important badge-upper-right">[@L[cds.sales/gd/design/logo-design:GalleriesCarouselDeluxeBadge]@L]</span>
+                                                                <div class="solazy sl-image sl-logo" data-solazy="{&quot;src&quot;:&quot;[@T[link:<imageroot />]@T]fos/201401/design/logo-design/img/logos/logo_gallery44.jpg&quot;,&quot;method&quot;:&quot;background&quot;,&quot;condition&quot;:{&quot;css&quot;:&quot;display:block&quot;,&quot;selector&quot;:&quot;#galleries&quot;}}"></div>
+                                                            </div>
+                                                            <div class="item carousel-inner-item overview-carousel-inner-item-ld has-badge">
+                                                                <span class="badge badge-small badge-important badge-standard badge-upper-right">[@L[cds.sales/gd/design/logo-design:GalleriesCarouselStandardBadge]@L]</span>
+                                                                <div class="solazy sl-image sl-logo" data-solazy="{&quot;src&quot;:&quot;[@T[link:<imageroot />]@T]fos/201401/design/logo-design/img/logos/logo_gallery45.jpg&quot;,&quot;method&quot;:&quot;background&quot;,&quot;condition&quot;:{&quot;css&quot;:&quot;display:block&quot;,&quot;selector&quot;:&quot;#galleries&quot;}}"></div>
+                                                            </div>
+                                                            <div class="item carousel-inner-item overview-carousel-inner-item-ld has-badge">
+                                                                <span class="badge badge-small badge-important badge-upper-right">[@L[cds.sales/gd/design/logo-design:GalleriesCarouselDeluxeBadge]@L]</span>
+                                                                <div class="solazy sl-image sl-logo" data-solazy="{&quot;src&quot;:&quot;[@T[link:<imageroot />]@T]fos/201401/design/logo-design/img/logos/logo_gallery46.jpg&quot;,&quot;method&quot;:&quot;background&quot;,&quot;condition&quot;:{&quot;css&quot;:&quot;display:block&quot;,&quot;selector&quot;:&quot;#galleries&quot;}}"></div>
+                                                            </div>
+                                                            <div class="item carousel-inner-item overview-carousel-inner-item-ld has-badge">
+                                                                <span class="badge badge-small badge-important badge-standard badge-upper-right">[@L[cds.sales/gd/design/logo-design:GalleriesCarouselStandardBadge]@L]</span>
+                                                                <div class="solazy sl-image sl-logo" data-solazy="{&quot;src&quot;:&quot;[@T[link:<imageroot />]@T]fos/201401/design/logo-design/img/logos/logo_gallery47.jpg&quot;,&quot;method&quot;:&quot;background&quot;,&quot;condition&quot;:{&quot;css&quot;:&quot;display:block&quot;,&quot;selector&quot;:&quot;#galleries&quot;}}"></div>
+                                                            </div>
+                                                            <div class="item carousel-inner-item overview-carousel-inner-item-ld has-badge">
+                                                                <span class="badge badge-small badge-important badge-upper-right">[@L[cds.sales/gd/design/logo-design:GalleriesCarouselDeluxeBadge]@L]</span>
+                                                                <div class="solazy sl-image sl-logo" data-solazy="{&quot;src&quot;:&quot;[@T[link:<imageroot />]@T]fos/201401/design/logo-design/img/logos/logo_gallery48.jpg&quot;,&quot;method&quot;:&quot;background&quot;,&quot;condition&quot;:{&quot;css&quot;:&quot;display:block&quot;,&quot;selector&quot;:&quot;#galleries&quot;}}"></div>
+                                                            </div>
+                                                         </div>
+                                                        <!-- Controls -->
+                                                        <a data-slide="prev" href="#carousel-init" class="left carousel-control-btn ico ico-carousel-arrow-left overview-carousel-control-ld" data-ci="88662"></a>
+                                                        <a data-slide="next" href="#carousel-init" class="right carousel-control-btn ico ico-carousel-arrow-right overview-carousel-control-ld" data-ci="88662"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                        <a data-ci="88663" href="#" onclick="javascript:window.open('[@T[link:<external linktype='STARFIELDURL' path='/products/custom/logo/yourlogoandyou.html' secure='false'/>]@T]','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=800,height=850'); return false;" class="simple-link font-16"><i class="ico ico-gt-circle-small-alternate"></i>[@L[cds.sales/gd/design/logo-design:GalleriesHelpLink]@L]</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-primary btn-lg btn-block tab-link js-open-overview" data-ci="88664"><i class="ico ico-gt"></i>[@L[cds.sales/gd/design/logo-design:PackageBtn]@L]</a>
+                        </div>
+                    </section>
+                    <section class="container l-main-container content-disclaimer no-margin-bottom">
+                        <p class="no-margin-bottom"><small class="small-print">[@L[cds.sales/gd/design/logo-design:ContentDicalimerText]@L]</small></p>
+                    </section>
+                </div>
+                <div class="tab-pane" id="how-it-works">
+                    <!--  Start content -->
+                    <section class="l-main-container container tab-content-top-spacing">
+                        <div class="row tab-content no-margin-top">
+                            <div class="col-xs-12">
+                                <div class="grid-column tab-content-column tab-content-column-how-works-ld">
+                                    <ul class="tab-content-list no-margin-bottom">
+                                        <li>[@L[cds.sales/gd/design/logo-design:TabHowWorksListItems1]@L]</li>
+                                        <li>[@L[cds.sales/gd/design/logo-design:TabHowWorksListItems2]@L]</li>
+                                        <li>[@L[cds.sales/gd/design/logo-design:TabHowWorksListItems3]@L]</li>
+                                        <li>[@L[cds.sales/gd/design/logo-design:TabHowWorksListItems4]@L]</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="btn btn-primary btn-lg btn-block tab-link js-open-overview" href="#" data-ci="88665"><i class="ico ico-gt"></i>[@L[cds.sales/gd/design/logo-design:PackageBtn]@L]</a>
+                    </section>
+                    <!-- End content -->
+                    <section class="container l-main-container content-disclaimer no-margin-bottom">
+                        <p class="no-margin-bottom"><small class="small-print">[@L[cds.sales/gd/design/logo-design:ContentDicalimerTexfyit]@L]</small></p>
+                    </section>
+                </div>
+            </div>
+            <!-- End main-tabs panes -->
+
+{% endblock body %}

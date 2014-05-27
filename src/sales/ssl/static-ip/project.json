@@ -7,13 +7,6 @@
       },
       "cdsLocation": "sales/ssl/static-ip.aspx",
       "draft": {
-        "id": "5355b94ef778fc118080424b",
-        "createdDate": "2014-04-22",
-        "createdBy": {
-          "fullName": "Tom DeMichele",
-          "username": "tdemichele"
-        },
-        "jiraTicket": "FOS-19223",
         "comments": "making deal image vary by culture",
         "url": "http://www.dev-godaddy.com/ssl/static-ip.aspx"
       }
@@ -35,14 +28,7 @@
       },
       "cdsLocation": "localization/sales/gd/ssl/dedicated-ip/en",
       "draft": {
-        "id": "53690d42f778fc1100fa3932",
-        "createdDate": "2014-05-05",
-        "createdBy": {
-          "fullName": "Dominic Tuso",
-          "username": "dtuso"
-        },
-        "jiraTicket": "FOS-20029",
-        "comments": "Spelling error fix"
+        "comments": "Change 'acces' to 'access'"
       }
     }
   }
