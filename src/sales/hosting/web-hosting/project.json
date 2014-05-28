@@ -7,14 +7,14 @@
       },
       "cdsLocation": "sales/hosting/web-hosting.aspx",
       "draft": {
-        "id": "537d720ff778fc2460fbadcb",
-        "createdDate": "2014-05-16",
+        "id": "538524b4f778fc2a74c3bc5e",
+        "createdDate": "2014-05-27",
         "createdBy": {
-          "fullName": "Byron Lunt",
-          "username": "blunt"
+          "fullName": "Anupama Ramu",
+          "username": "aramu"
         },
         "jiraTicket": "FOS-20536",
-        "comments": "Implementing new Starter plan for India",
+        "comments": "Adding check using ad credit condition handler",
         "url": "http://www.dev-godaddy.com/hosting/web-hosting.aspx"
       }
     },

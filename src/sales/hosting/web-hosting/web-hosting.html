@@ -1,7 +1,8 @@
 ---
 location: sales/hosting/web-hosting.aspx
-id: 537d720ff778fc2460fbadcb
-name: FOS-20536
+id:   538524b4f778fc2a74c3bc5e
+name: FOS-20629
+comments: Adding check using ad credit condition handler
 ---
 {% extends 'layouts/base.html' %}
 
@@ -1028,13 +1029,17 @@ name: FOS-20536
                                       <li><a target="_BLANK" data-ci="89272" href="[@T[link:<relative path='~/agreements/showdoc.aspx' secure='false'><param name='pageid' value='hosting_sa' /></relative>]@T]">[@L[cds.sales/gd/hosting/web-hosting:all-plans-features-uptime-guarantee-11166]@L]</a></li>
                                       <li><a target="_BLANK" data-ci="89273" href="[@T[link:<relative path='~/agreements/showdoc.aspx' secure='false'><param name='pageid' value='hosting_sa' /></relative>]@T]">[@L[cds.sales/gd/hosting/web-hosting:all-plans-features-money-back-guarantee-11166]@L]</a></li>
                                      
-                                   ##if(activeLanguageAny([en-us]) || activeLanguageAny([es-us]))
+                                   ##if(areAdCreditsEnabled(google))
                                       <li>[@L[cds.sales/gd/hosting/web-hosting:all-plan-features-adword-credit-11166]@L] <span class="g-toolTip restrictions-link">[@L[cds.sales/gd/hosting/web-hosting:restrictions-apply-11166]@L]<span>[@L[cds.sales/gd/hosting/web-hosting:all-plan-features-adword-credit-hover-text-11166]@L]</span></span></li>
+                                  ##endif
+                                  ##if(areAdCreditsEnabled(bing))
                                       <li>[@L[cds.sales/gd/hosting/web-hosting:all-plan-features-bing-credit-11166]@L] <span class="g-toolTip restrictions-link">[@L[cds.sales/gd/hosting/web-hosting:restrictions-apply-11166]@L]<span>[@L[cds.sales/gd/hosting/web-hosting:all-plan-features-bing-credit-hover-text-11166]@L]</span></span></li>
+                                  ##endif
+                                  ##if(areAdCreditsEnabled(facebook))
                                       <li>[@L[cds.sales/gd/hosting/web-hosting:all-plan-features-facebook-credit-11166]@L] <span class="g-toolTip restrictions-link">[@L[cds.sales/gd/hosting/web-hosting:restrictions-apply-11166]@L]<span>[@L[cds.sales/gd/hosting/web-hosting:all-plan-features-facebook-credit-hover-text-11166]@L]</span></span></li>
+                                 ##endif
                                       <li>[@L[cds.sales/gd/hosting/web-hosting:all-plan-features-fotolia-credit-11166]@L] <span class="g-toolTip restrictions-link">[@L[cds.sales/gd/hosting/web-hosting:restrictions-apply-11166]@L]<span>[@L[cds.sales/gd/hosting/web-hosting:all-plan-features-fotolia-credit-hover-text-11166]@L]</span></span></li>
                                      
-                                    ##endif
                                     </ul>
                                   ##if(!activeLanguageAny([en-us]) && !activeLanguageAny([es-us]))
                                   <p class="container-bottom-right-sub-ul" style="padding-top:90px;">
