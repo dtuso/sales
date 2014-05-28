@@ -1,7 +1,9 @@
 ---
-location: sales/homepage/locales/en-us.html
-id: 537aa859f778fc17186148eb
+location: sales/homepage/default.en.us
+id: 5384e2c9f778fc2a74c3bc3b
 locale: en-us
+comments: Rotating HP Marquee
+name: FOS-20864
 ---
 
 {% set include_topmarq =  "top_marquees/_" + locale + ".html" %}
@@ -25,6 +27,12 @@ locale: en-us
 {% endblock %}
 {% block customjs %}
 {% jsminify %}
+  $('.gdhp-top-banner').bind('click',function(event){
+    var $clickedElement = $(event.target);
+    if(!$clickedElement.hasClass('gtld')){
+      window.location.href='[@T[link:<relative path="/domains/search-new.aspx"><param name="ci" value="90042" /></relative>]@T]';
+    }
+  });
 var hpLoadVideo = 0;
 var autoplay = '\&autoplay=1';
 $("div.gdhp-bottom-banner").mouseenter(function() {
