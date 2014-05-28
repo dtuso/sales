@@ -558,7 +558,6 @@ var PlanBox6UI = {
         });
 });
 
-
 /*PAGE FUNCTIONALITY
 -- LEAVE AT BOTTOM --
 */
@@ -567,6 +566,7 @@ var wsbv7 = {};
     $(document).ready(function(){
         init();
         initApps();
+        initBusinessPlusPlanEx();
     });     
     function init(){        
         // CI CODES
@@ -630,10 +630,31 @@ var wsbv7 = {};
         $('#'+$obj.attr('class')+'-image').animate({opacity:0.0},transitionSpeed);
     }
 
+    // show and hide apps
+    var $seoIcons,
+    activeClass = 'active-seo-icon';
+    
+    function initBusinessPlusPlanEx(){
+        $seoIcons = $('#seo-interactive .seo-icon');
+        
+        $seoIcons.hover(function(){
+            var $this = $(this);
+            $("."+activeClass).not($this).removeClass(activeClass);
+            $this.addClass(activeClass);
+        },function(){});
+                
+        $seoIcons.each(function(i){
+            var $this = $(this);
+            if(i == 0){
+                $this.addClass(activeClass);
+            }
+        }); 
+        
+    }   
+
     // functions that need to be called from outside the scope of the main function
     // slidethis.functionName();
     $.extend(wsbv7,{
         
     });
 }(wsbv7.$));
-    
