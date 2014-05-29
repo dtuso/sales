@@ -54,7 +54,7 @@ git fetch upstream master
 git rebase upstream/master
 ```
 
-Do this daily to make sure you're never too far off.
+Do this daily to make sure you're never too far off. More info on syncing up forks: https://help.github.com/articles/syncing-a-fork
 
 ### Step 2: Install Dependencies
 
@@ -103,7 +103,7 @@ lets you use layouts, variables, and includes within your pages to help keep thi
 gulp html
 ```
 
-Running this task requires you to be logged in if you want your content uploaded to CDS. At the command prompt just type: ```node login``` and type in your username and password.
+Running this task requires you to be logged in if you want your content uploaded to CDS. At the command prompt just type: ```node ./lib/login.js``` and type in your username and password.
 
 #### LANGUAGE
 

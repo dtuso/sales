@@ -1,58 +1,48 @@
 ---
 location: sales/demo/lazy-loader/bv-reviews.html
 id: 53443788f778fc1c24d29041
+bv: { product: 'ssl-certificates', loginReturn: '[@T[link:<external linktype="siteurl" path="/demo/lazy-loader/bv-reviews.html" secure="false" parammode="explicit" />]@T]#reviews' }
 ---
 {% extends 'layouts/base.html' %}
+
+{% block metahead %}
+  {% parent %}
+  <style type="text/css">
+  body {
+    background-color: #fff;
+  }
+  .container {
+    width: 1000px;
+    margin: 0 auto;
+  }
+  </style>
+{% endblock %}
 
 {% block body %}
 
     <div class="container">
-      <button class="btn" id="loadReviews">Load Reviews</button>
+      <ul class="nav nav-tabs">
+        <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
+        <li><a href="#reviews" data-toggle="tab">Reviews</a></li>
+      </ul>
+      <div class="tab-content">
+        <div class="tab-pane active" id="home">
+          <div class="row tab-content">Home</div>
+        </div>
+        <div class="tab-pane" id="reviews">
+          <div class="row tab-content">
+            {% include 'modules/_bv-reviews-container.html' with bv only %}
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="container">
-      [@P[userControl:<Data location="~/Shared/Tabs/controls/BVReviewsNoJS.ascx"><Parameters><Parameter key="ProductId" value="website_builder" /><Parameter key="ReviewNumber" value="4" /></Parameters></Data>]@P]
-    </div>
-
 
 {% endblock %}
 
 {% block footer %}
 
-    <script type="text/javascript">
-      var loadReviews = function(){
-        if (typeof $BV != "undefined") {
-          $BV.configure("global", {
-            allowSamePageSubmission: true,
-            userToken: "[@P[userControl:<Data location="~/Shared/BazaarVoice/SessionUserToken.ascx"></Data>]@P]",
-            doLogin: function(successCallback, successUrl) {
-              $('#g-modal-loginAcct').modal({
-                overlayId: "g-modal-overlay",
-                close: "false",
-                autoPosition: "true"
-              });
-            },
-            doScrollSubmission: function () {
-              return false;
-            }
-          });
-          $BV.ui("rr", "show_reviews", {
-            productId: "website_builder",
-            num: 4,
-            doShowContent: function() {}
-          });
-        }
-      };
-      $('#loadReviews').on('click', function(e){
-        e.preventDefault();
-        (function() {
-          var bv = document.createElement('script'); bv.type = 'text/javascript';
-          bv.async = true;
-          bv.src = '[@P[userControl:<Data location="~/Scripts/BVScriptUrlOnly.ascx"></Data>]@P]';
-          bv.onload = loadReviews;
-          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(bv);
-        })();
-      });
-    </script>
+    {% include 'modules/_bv-load-reviews-js.html' with bv only %}
 
+    {% include 'modules/_bv-login-modal.html' with bv only %}
 
 {% endblock %}

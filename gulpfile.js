@@ -13,6 +13,7 @@ try {
   var swig      = require('gulp-swig');
   var uglify    = require('gulp-uglify');
   var debug     = require('gulp-debug');
+  var elevate   = require('./lib/gulp-css-elevate');
 
   // utilities
   var path      = require('path');
@@ -63,6 +64,7 @@ var paths = {
 
 var swigSetup = function(swig) {
   extras.useTag(swig, 'less');
+  extras.useTag(swig, 'jsminify');
   swig.setDefaults({
     cache: false,
     loader: require('./lib/template-loader')(),
@@ -97,13 +99,14 @@ gulp.task('html', function() {
     .pipe(changed(paths.build))
     .pipe(fm({remove:true}))
     .pipe(swig(swigTplOpts))
+    .pipe(elevate())
     .pipe(gulpif(!ignoreCDS, cdsm()))
     .pipe(gulp.dest(paths.build));
 });
 
 gulp.task('language', function() {
   return gulp.src('./**/*.language', {cwd: path.join('./src/sales/', assetSrcPath)})
-    .pipe(changed(paths.build))
+    //.pipe(changed(paths.build))
     .pipe(fm({remove:true}))
     .pipe(swig(swigLangOpts))
     .pipe(gulpif(!ignoreCDS, cdsm()))
@@ -135,8 +138,6 @@ gulp.task('images', function() {
 });
 
 gulp.task('assets-deploy', ['build'], function() {
-  console.log(paths.build,rootAssetPath,paths.assets);
-
   return gulp.src(['./**/*.*'], {cwd: paths.build})
     /*.pipe(debug({verbose: false}))*/
     .pipe(gulp.dest(paths.assets));

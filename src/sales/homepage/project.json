@@ -1,12 +1,12 @@
 {
-  "en.html": {
+  "shared": {
     "cdsDetails": {
       "champion": {
         "name": "Stephan Foster",
         "email": "sxfoster@godaddy.com"
       },
       "draft": {
-        "comments": "Prep for github",
+        "comments": "Github Prep",
         "url": "http://www.dev-godaddy.com/"
       }
     }

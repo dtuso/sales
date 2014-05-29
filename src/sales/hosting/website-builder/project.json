@@ -18,7 +18,36 @@
         "url": "http://www.dev-godaddy.com/hosting/website-builder.aspx"
       }
     },
-    "assetPath": "fos/201401/sales/hosting/website-builder/",
+    "assetPath": "fos/sales/themes/scotty/hosting/website-builder/",
+    "metaTitle": "[@L[cds.sales/gd/hosting/website-builder:page-title]@L]",
+    "metaDescription": "[@L[cds.sales/gd/hosting/website-builder:meta-description]@L]",
+    "metaKeywords": "[@L[cds.sales/gd/hosting/website-builder:meta-keywords]@L]",
+    "metaCanonicalPath": "/hosting/website-builder.aspx",
+    "metaOgTitle": "[@L[cds.sales/gd/hosting/website-builder:og-title]@L]",
+    "metaOgImage": "fos/201401/hosting/website-builder/img/og.png",
+    "metaOgDescription": "[@L[cds.sales/gd/hosting/website-builder:og-description]@L]",
+    "cssVersionOverride" : "1"
+  },
+  "split-b.html": {
+    "cdsDetails": {
+      "champion": {
+        "name": "David Utley",
+        "email": "dutley@godaddy.com"
+      },
+      "cdsLocation": "sales/hosting/website-builder-splits/split-b",
+      "draft": {
+        "id": "53849cb0f778fc2f4c3a75a4",
+        "createdDate": "2014-05-20",
+        "createdBy": {
+          "fullName": "Scott Williams",
+          "username": "stwilliams"
+        },
+        "jiraTicket": "FOS-14261",
+        "comments": "WSB LP -- Add facebook feature/benefit",
+        "url": "http://gui.dev-godaddy.com/splittest/splittestredirect.aspx?dest=http%3a%2f%2fwww.dev-godaddy.com%2fhosting%2fwebsite-builder.aspx&test=1214.B"
+      }
+    },
+    "assetPath": "fos/sales/themes/scotty/hosting/website-builder/",
     "metaTitle": "[@L[cds.sales/gd/hosting/website-builder:page-title]@L]",
     "metaDescription": "[@L[cds.sales/gd/hosting/website-builder:meta-description]@L]",
     "metaKeywords": "[@L[cds.sales/gd/hosting/website-builder:meta-keywords]@L]",
@@ -36,7 +65,7 @@
       },
       "cdsLocation": "localization/sales/hosting/website-builder/en",
       "draft": {
-        "id": "5345d1b0f778fc0e805a921f",
+        "id": "53849ad9f778fc16542f7c41",
         "createdDate": "2014-04-02",
         "createdBy": {
           "fullName": "Colyn Brown",

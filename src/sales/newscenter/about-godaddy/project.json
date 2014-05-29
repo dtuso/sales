@@ -7,7 +7,7 @@
       },
       "cdsLocation": "sales/newscenter/about-godaddy.aspx",
       "draft": {
-        "comments": "Update css version #",
+        "comments": "Changed bios on board of directors, added Lee Wittlinger",
         "url": "http://www.dev-godaddy.com/newscenter/about-godaddy.aspx"
       }
     },
@@ -29,7 +29,7 @@
       },
       "cdsLocation": "localization/sales/newscenter/about-godaddy/en",
       "draft": {
-        "comments": "Change James Carroll's title!!"
+        "comments": "Added and changed keys relating to board members bios"
       }
     }
   }

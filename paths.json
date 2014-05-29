@@ -19,6 +19,8 @@
   "gtld": "./tlds/gtld/",
   "qsc": "./ecommerce/shopping-cart/",
   "contact-us": "./contact-us/",
+  "vps": "./hosting/vps-hosting/",
+  "vps-config": "./hosting/vps-hosting-config/",
   "about-godaddy": "./newscenter/about-godaddy",
   "leaf-pages": "./tlds/leafpage",
   "what-is-a-gtld": "./domains/what-is-a-gtld"

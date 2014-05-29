@@ -1,0 +1,463 @@
+---
+location: sales/hosting/vps-hosting-config.aspx
+id: 537d4339f778fc2460fbadc8
+name: FOS-1310
+---
+{% extends 'config-base.html' %}
+
+{% block steps %}
+                      ##if(isManager())
+                          <form action="[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" parammode="explicit" />]@T]" method="get" id="configForm" >
+                      ##else
+                          <form action="[@T[link:<external linktype="carturl" path="/basket.aspx" parammode="explicit" />]@T]" method="get" id="configForm"  >
+                      ##endif
+                            <div class="config-step medium-margin-top-step backup">
+                                <span class="step-ribbon blue-step-ribbon step-number-text">[@L[cds.sales/gd/hosting/vps-hosting-config:batch0]@L]</span>
+                                <h2>[@L[cds.sales/gd/hosting/vps-hosting-config:title0]@L]</h2>
+                                <p class="config-lead orange-text">[@L[cds.sales/gd/hosting/vps-hosting-config:subtitle0]@L]</p>
+                                <div class="config-product-wrapper config-product-vps" id="ftpsolution">
+                                    <div>
+                                        <h3 class="product-name">[@L[cds.sales/gd/hosting/vps-hosting-config:list0title0]@L]</h3>
+                                        <ul class="product-options" id="ftpOptions">
+ 
+                                        </ul> 
+                                    </div>
+                                </div>
+                                <!-- /End Product -->
+                                <div class="config-product-wrapper config-product-last config-product-vps" id="managedbackup">
+                                    <div>
+                                        <h3 class="product-name">[@L[cds.sales/gd/hosting/vps-hosting-config:list1title0]@L]</h3>
+                                        <ul class="product-options" id="managedbackupOptions">
+                                        </ul> 
+                                    </div>
+                                </div>
+                                <!-- /End Product -->
+                            </div>
+                            <div class="config-step-box-shadow backup"></div>
+                            <div data-ci="90224" class="config-step-break move backup" data-scroll=".box2">
+                                <span class="icon-down"></span>
+                            </div>
+
+                            <div class="config-step medium-margin-top-step box2">
+                                <span class="step-ribbon orange-step-ribbon js-step2 step-number-text">[@L[cds.sales/gd/hosting/vps-hosting-config:batch1]@L]</span>
+                                <h2>[@L[cds.sales/gd/hosting/vps-hosting-config:title1]@L]</h2>
+                                <p class="config-lead orange-text">[@L[cds.sales/gd/hosting/vps-hosting-config:subtitle1]@L]</p>
+                                <div class="config-product-wrapper config-product-vps" id="bandwidth">
+                                    <div>
+                                        <h3 class="product-name">[@L[cds.sales/gd/hosting/vps-hosting-config:list2title0]@L]</h3>
+                                        <ul class="product-options" id="bandwidthOptions">
+                                        </ul> 
+                                    </div>
+                                </div>
+                                <!-- /End Product -->
+                            </div>
+                            <div class="config-step-box-shadow"></div>
+                            <div data-ci="90224" class="config-step-break move" data-scroll=".box3">
+                                <span class="icon-down"></span>
+                            </div>
+
+
+                            <div class="config-step large-margin-top-step box3 assistedservice" >
+                                <span class="step-ribbon blue-step-ribbon step-number-text">[@L[cds.sales/gd/hosting/vps-hosting-config:batch2]@L]</span>
+                                <h2>[@L[cds.sales/gd/hosting/vps-hosting-config:title2]@L]</h2>
+                                <p class="config-lead orange-text">[@L[cds.sales/gd/hosting/vps-hosting-config:subtitle2]@L]</p>
+                                <div class="config-product-wrapper config-product-vps" data-planLevel="Economy">
+                                    <div>
+                                        <h3 class="product-name">[@L[cds.sales/gd/hosting/vps-hosting-config:list3title0]@L]</h3>
+                                        <p class="note">[@L[cds.sales/gd/hosting/vps-hosting-config:list3title1]@L]</p>
+                                        <ul class="product-options product-options-vps" id="assistedserviceOptions">
+                                        </ul>
+                                        <p class="disclaimer"><span class="product-desc">[@L[cds.sales/gd/hosting/vps-hosting-config:AssistedServicePlanDetails1]@L]</span></p>
+                                        [@L[cds.sales/gd/hosting/vps-hosting-config:AssistedServicePlanDetails2]@L] 
+                                    </div>
+                                </div>
+                                <!-- /End Product -->
+                            </div>
+                            <div class="config-step-box-shadow assistedservice"></div>
+                            <div data-ci="90224" class="config-step-break move assistedservice" data-scroll=".box4">
+                                <span class="icon-down"></span>
+                            </div>
+
+
+                            <div class="config-step large-margin-top-step box4">
+                              <span class="step-ribbon red-step-ribbon step-number-text">[@L[cds.sales/gd/hosting/vps-hosting-config:batch3]@L]</span>
+                                <h3 class="product-name nocontrolpanel">[@L[cds.sales/gd/hosting/vps-hosting-config:changePlan]@L]</h3>
+                                <div class="controlpanel">
+                                  <h2>[@L[cds.sales/gd/hosting/vps-hosting-config:title4]@L]</h2>
+                                  <p class="config-lead orange-text windows">[@L[cds.sales/gd/hosting/vps-hosting-config:subtitle4]@L]</p>
+                                </div>
+                                <div class="config-product-wrapper config-product-vps controlpanel">
+                                    <div>
+                                        <h3 class="product-name windows">[@L[cds.sales/gd/hosting/vps-hosting-config:list4title0]@L]</h3>
+                                        <ul class="product-options product-options-vps" id="controlpanelOptions">
+                                        </ul> 
+                                    </div>
+                                </div>
+                                <!-- /End Product -->
+                            </div>
+                            <div class="config-step-box-shadow"></div>
+
+                            <div class="config-continue-to-cart-wrapper">
+                                <a data-ci="90223" class="btn btn-warning btn-lg js-addtocart box5"><span class="icon-shopping-cart"></span> [@L[cds.sales/gd/hosting/vps-hosting-config:configTitleContinueToCart]@L]</a>
+                            </div> 
+                        </form> 
+{% endblock %} 
+
+{% block footer %}
+  <script src="[@T[link:<javascriptroot />]@T]fos/office365/js/currency-calc.v1.0.2.min.js" type="text/javascript"></script>
+  <script>
+    if(typeof currencyCalc != "undefined"){
+      currencyCalc.base = '[@T[currencyprice:<price usdamount="1000000000" dropdecimal="false" dropsymbol="false" htmlsymbol="false" negative="parenthesis" />]@T]';
+    }
+  </script>
+    <script>
+      $(document).ready(function() {
+        var planBasePrice;
+        var plan = Config.getParameterByName('plan');
+
+        Config.loadData();
+
+        if (typeof FastballEvent_MouseClick === 'function' && typeof fbiLibCheckQueue === 'function') {
+                $('[data-ci]').click(function(e){
+                    $this = $(this);
+                    FastballEvent_MouseClick(e,$this.attr('data-ci'),$(this)[0],'a');
+                    fbiLibCheckQueue();
+                });
+            }
+
+        $('.move').scrollToSection();
+        $(window).scroll(function() {
+          updateOrderSummaryPosition();
+        });
+        $(window).resize(function() {
+          updateOrderSummaryPosition();
+        });
+        updateOrderSummaryPosition();
+
+        $('.js-addtocart').on('click',function (e){
+          e.preventDefault();
+          $(this).unbind('click');
+          var $this = $(this);
+          var ci = $this.attr('data-ci');
+          $form = $('#configForm');
+          var itccode = 'slp_vps';
+          var qty = plan.split('_')[4];
+          var packageId = plan.replace(/_([^_]*)$/,'');
+          var addons = Config.generateAddonsURL();
+          ##if(isManager())
+          var managerId= Config.getParameterByName('mgrshopper');
+          ##endif
+
+          var url = '[@T[link:<relative path="api/package/add" secure="false" parammode="explicit"/>]@T]';
+          url += "/"+itccode;
+          url += "/"+ci;
+          if(plan.split('_')[5]==1){
+            url+='/1';
+          }else{
+            url += '/'+qty;//quantity
+          }
+          url += "/"+packageId;
+          url += addons;
+          ##if(isManager())
+          if(addons===''){
+            url += '?'
+          }else{
+            url += '&'
+          }
+            url +='mgrshopper='+ managerId;
+          ##endif
+          $.ajax({
+                type: 'POST',
+                url: url,
+                complete: function (data) {
+                    var response = $.parseJSON(data.responseText);
+                    if (response.Success) {
+                      ##if(isManager())
+                      window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]';
+                      ##else
+                      window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]';
+                      ##endif
+                    }
+                    else
+                    {
+                      ##if(isManager())
+                      window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]';
+                      ##else
+                      window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]';
+                      ##endif
+                    } 
+                },
+                dataType: 'json'
+          });
+      });
+    
+
+        function updateOrderSummaryPosition() {
+
+          var paddingTop = 20/* for prettiness when scrolling */,
+            $configCartWrapper = $('.config-cart-wrapper'),
+            scrollTop = $(window).scrollTop(),
+            scrollLeft = $(window).scrollLeft(),
+            topStep1 = $("div.config-step:visible:first").offset().top,
+            topOfWindowAboveTopOfStep1 = (scrollTop <= (topStep1 - paddingTop)),
+            $footer = $('.scroll-down-wrapper');
+
+            $footer.css('visibility','visible');
+            $configCartWrapper.css({'top':'0px','position':'static'});
+
+          if(!topOfWindowAboveTopOfStep1) {
+            // keep the top of the summary at 0
+            
+          //} else {
+            //check for if summary can fit without going below the bottom of the last step
+            
+            var proposedNewTop = scrollTop - (topStep1 - paddingTop),
+
+              proposedNewBottom = proposedNewTop + $configCartWrapper.height(),
+              $lastStep = $("div.config-step").eq(3),
+              bottomOfLastStep = $lastStep.offset().top + $lastStep.height() - topStep1,
+              canFit = (proposedNewBottom <= bottomOfLastStep);
+
+            if(scrollTop>=(topStep1-paddingTop) && ((scrollTop+$configCartWrapper.height())<=$lastStep.offset().top + $lastStep.height() + paddingTop) ){
+              try{
+                var configCartWrapperLeft = $configCartWrapper.offset().left;
+                $configCartWrapper.css({'top':'20px','position':'fixed','width':$configCartWrapper.innerWidth(),'left':(configCartWrapperLeft - scrollLeft) +'px'});
+              }catch(err){
+                //if errors don't float the $confiCartWrapper
+                $configCartWrapper.css({'top':'0px','position':'static'});
+              }
+              if((scrollTop+paddingTop)>=$lastStep.offset().top){
+                $footer.css('visibility','hidden');
+              }else{
+                $footer.css('visibility','visible');
+              }
+            } else {
+              try{
+                var configCartWrapperLeft = $configCartWrapper.offset().left;
+                $configCartWrapper.css({'position':'fixed','width':$configCartWrapper.innerWidth(),'left':(configCartWrapperLeft - scrollLeft) +'px'});
+              }catch(err){
+                //if errors don't float the $confiCartWrapper
+                $configCartWrapper.css({'top':'0px','position':'static'});
+
+              }
+              // affix the summary so the bottom lines up with the bottom of the last step
+              $footer.css('visibility','hidden');
+              var topForBottomAligned = ($lastStep.offset().top + $lastStep.height() +$footer.height()) - (scrollTop + $configCartWrapper.height() );
+              //topForBottomAligned = bottomOfLastStep - $configCartWrapper.height() + paddingTop;
+              $configCartWrapper
+                .css({'top': topForBottomAligned + 'px'});
+            }
+          }
+          
+        }
+
+      });
+
+      var Config = {
+        loadData: function(){
+          var url = '[@T[link:<relative path="~/api/package/config/vpsconfig"/>]@T]';
+          $.getJSON(url).success(function (data){
+              processConfigData(data);
+              Config.buildProductOrder(data);
+          });
+        },
+        getParameterByName: function(name){
+          name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+          var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+              results = regex.exec(location.search);
+          return results === null ? changePlan() : decodeURIComponent(results[1].replace(/\+/g, " "));
+        },
+        refreshCart: function(){
+          var totalAddons = '0';
+          var addonPrice;
+          var newTotal; 
+          $('input:radio').filter(':checked').each(function (i,j){
+            addonPrice= $(j).data('price');
+            totalAddons= currencyCalc.evaluate([totalAddons,"+",addonPrice]);
+          });
+          generateAddonSummary('#addonSummary');
+
+          newTotal =currencyCalc.evaluate([totalAddons,"+",planBasePrice]);
+
+          $('.currency-amount').html(newTotal);
+        },
+        buildProductOrder: function(data){
+
+          var planDetails = Config.getParameterByName('plan').split('_');
+
+          var planOS = data.details[planDetails[2]].plans[planDetails[3]].os;
+          var planHeader= planOS.split(':');
+          var planRAM = data.details[planDetails[2]].plans[planDetails[3]].ram;
+          var planStorage = data.details[planDetails[2]].plans[planDetails[3]].storage;
+          var planBandwidth = data.details[planDetails[2]].plans[planDetails[3]].bandwidth;
+          planBasePrice = data.details[planDetails[2]].prices[planDetails[3]][planDetails[1]][planDetails[4]];
+
+          $('.config-title h1').html(planHeader[1]+' - '+planHeader[0]);
+          $('#summaryOS').html(planOS);
+          $('#summaryRAM').html('[@L[cds.sales/gd/hosting/vps-hosting-config:RamSummary]@L] '+planRAM);
+          $('#summaryStorage').html('[@L[cds.sales/gd/hosting/vps-hosting-config:StorageSummary]@L] '+planStorage);
+          $('#summaryBandwidth').html('[@L[cds.sales/gd/hosting/vps-hosting-config:BandwidthSummary]@L] '+planBandwidth);
+          $('.currency-amount').html(planBasePrice);
+        },
+        init: function (){
+          var planDetails = Config.getParameterByName('plan').split('_');
+          var $disableControl = $('input:radio[name="assistedserviceoptions"]'),
+                    $firstli = $('#controlpanelOptions li:first-child');
+                    $lastli = $('#controlpanelOptions li:last-child');
+                    $yesassitsvc = $disableControl[1],
+                    $noassitsvc = $disableControl[0],
+                    $secondli=$([]),
+                    $disableControl.on('click', function() {
+                        if ($disableControl.filter($yesassitsvc).is(':checked')) { 
+                          $firstli.find('input').prop('disabled',true);
+                          $firstli.find('input').prop('checked',false);
+                          $firstli.find('span').addClass('product-desc');
+                          if(planDetails[2]!='windows'){
+                            $lastli.find('input').prop('disabled',true);
+                            $lastli.find('span').addClass('product-desc');
+                          }
+                          $secondli=$('input:radio[name=controlpaneloptions]').not(':disabled').filter('input:first');
+                          $secondli.prop('checked',true);
+                          Config.refreshCart();
+                        }
+                        else if ($disableControl.filter($noassitsvc).is(':checked')) {
+                          $secondli.prop('checked',false);
+                          $firstli.find('input').prop('disabled',false);
+                          $firstli.find('input').prop('checked',true);
+                          $firstli.find('span').removeClass('product-desc');
+                          if(planDetails[2]!='windows'){
+                            $lastli.find('input').prop('disabled',false);
+                            $lastli.find('span').removeClass('product-desc');
+                          }
+                          Config.refreshCart();
+                        }
+                    });        
+          $('input:radio').change(function(){
+            Config.refreshCart();
+          }); 
+
+          $('input:radio[name="controlpaneloptions"]').on('click', function() {
+            $('.children-hide').css('display','none');
+            $('.children-hide').each(function(){$(this).find('input:first').prop('checked',true);});
+            $($(this).data('child')).css('display','block');
+            Config.refreshCart();
+
+          });
+          $('.isToolTip').tooltip();
+        },
+        generateAddonsURL: function(){
+          var addonURL='';
+          $('input:radio').filter(':checked').each(function (i,k){
+            if(k.value!==""){
+              if(addonURL===''){
+                addonURL+= '?addons='+k.value;
+              }else{
+                addonURL+='|'+k.value;
+              }
+            }
+          });
+          return addonURL;
+        }
+      };
+
+      function processConfigData(data){
+        var planDetails = Config.getParameterByName('plan').split('_');
+
+        
+        $(data.addons[planDetails[2]].bandwidth[planDetails[1]]).each(function (i,n){
+           generateOptions(i,n, '#bandwidthOptions','bandwidthoptions');
+        });
+
+        if(planDetails[1] == 'us'){
+          if(planDetails[2]!='centos'){
+            $('.backup').show();
+            $(data.addons[planDetails[2]].managedbackup[planDetails[1]]).each(function (i,n){
+              generateOptions(i,n, '#managedbackupOptions','managedbackupoptions');
+            });
+            $(data.addons[planDetails[2]].ftpsolution[planDetails[1]]).each(function (i,n){
+              generateOptions(i,n, '#ftpOptions','ftpoptions');
+            });
+          }
+        }else{
+          $('#managedbackup').hide();
+        }
+
+        if(planDetails[2]== 'fedora'){
+          $('.controlpanel').hide();
+          $('.nocontrolpanel').show();
+        }else{
+          if(planDetails[2]!='centos' && planDetails[1] == 'us'){
+            $('.assistedservice').show();
+            $(data.addons[planDetails[2]].assistedservice[planDetails[1]]).each(function (i,n){
+             generateOptions(i,n, '#assistedserviceOptions','assistedserviceoptions');
+            });
+          }
+          $(data.addons[planDetails[2]].controlpanel[planDetails[1]]).each(function (i,n){
+             generateCPOptions(i,n, '#controlpanelOptions','controlpaneloptions');
+            });
+        }
+        if(planDetails[2]== 'windows'){
+          $('.windows').show()
+        }
+
+        Config.init();
+      }
+      function generateAddonSummary(parentid){
+        var content='';
+        $('input:radio').filter(':checked').each(function (i,n){
+         
+          if(content===''){
+              $(parentid).empty();
+              if($(n).data('addon')!==''){
+                content += '<li><span class="order-item-title"> '+$(n).data('addon')+'</span></li>';
+              }
+          }else{
+            if($(n).data('addon')!==''){
+              content += '<li><span class="order-item-title"> '+$(n).data('addon')+'</span></li>';
+            }
+          }
+
+       });
+        $(parentid).append(content);
+
+      }
+
+      function generateOptions(i , n , parentid, optionname){
+        var content='';
+        if(i===0){
+            $(parentid).empty();
+            content += '<li><input type="radio" name="'+optionname+'" checked="checked" data-addon="" data-price="0" value=""><span> '+n.addonvalue+'</span><span></span></li>';
+        }else{
+          content += '<li><input type="radio" name="'+optionname+'" value="'+n.id+'" data-addon="'+n.addondata+'" data-price="'+n.addonprice+'"><span> '+n.addonvalue+'</span><span class="price"> '+n.addonprice+'</span>[@L[cds.sales/gd/hosting/vps-hosting-config:mo]@L]</li>';
+        }
+        
+        $(parentid).append(content);
+
+      }
+      function generateCPOptions(i , n , parentid, optionname){
+        var content='';
+        if(i===0){
+            $(parentid).empty();
+            content += '<li><input type="radio" name="'+optionname+'" checked="checked" data-price="0" data-addon="" data-child="" value=""><span> '+n.addonvalue+'</span><span></span></li>';
+        }else{
+          content += '<li><input type="radio" name="'+optionname+'" data-addon="'+n.addondata+'" data-price="'+n.addonprice+'" data-child=".'+n.id+'"  value="'+n.id+'"><span> '+n.addonvalue+'</span><span class="price"> '+n.addonprice+'[@L[cds.sales/gd/hosting/vps-hosting-config:mo]@L]</span>';
+          $(n.addonupgrade).each(function (j,k){
+            if(j===0){
+              content += '<div class="children-hide sub-radio-option '+n.id+' "><input type="radio" name="'+k.id+i+'" checked="checked" data-addon="" data-price="0" value=""><span>'+k.addonvalue+"</span><span></span><br>";
+            }
+            else{
+             content += '<input type="radio" name="'+k.id+i+'" value="'+k.id+'"data-addon="'+k.addondata+'" data-price="'+k.addonprice+'" ><span> '+k.addonvalue+'</span><span class="price"> '+k.addonprice+'</span>';
+            }
+
+          });
+           content +='</div></li>';
+        }
+        
+        $(parentid).append(content);
+
+      }
+      function changePlan(){
+          window.location.href = '[@T[link:<relative path="~/hosting/vps-hosting.aspx" />]@T]';
+      }    
+    </script>
+{% endblock %}

@@ -7,14 +7,14 @@
       },
       "cdsLocation": "sales/hosting/web-hosting.aspx",
       "draft": {
-        "id": "535ae4cff778fc132872f3d6",
-        "createdDate": "2014-04-25",
+        "id": "538524b4f778fc2a74c3bc5e",
+        "createdDate": "2014-05-27",
         "createdBy": {
-          "fullName": "Leon Kim",
-          "username": "lkim"
+          "fullName": "Anupama Ramu",
+          "username": "aramu"
         },
-        "jiraTicket": "FOS-20028",
-        "comments": "Fixing Images",
+        "jiraTicket": "FOS-20536",
+        "comments": "Adding check using ad credit condition handler",
         "url": "http://www.dev-godaddy.com/hosting/web-hosting.aspx"
       }
     },
@@ -25,7 +25,8 @@
     "metaCanonicalPath": "/hosting/web-hosting.aspx",
     "metaOgTitle": "[@L[cds.sales/gd/hosting/web-hosting:og-title]@L]",
     "metaOgImage": "fos/hp/rebrand/img/gd_rebrand_og.png",
-    "metaOgDescription": "[@L[cds.sales/gd/hosting/web-hosting:og-description]@L]"
+    "metaOgDescription": "[@L[cds.sales/gd/hosting/web-hosting:og-description]@L]",
+    "cssVersionOverride" : "0"
   },
   "web-hosting.language": {
     "cdsDetails": {
@@ -35,14 +36,14 @@
       },
       "cdsLocation": "localization/sales/hosting/web-hosting/en",
       "draft": {
-        "id": "5345d1b0f778fc0e805a921f",
-        "createdDate": "2014-04-02",
+        "id": "53765729f778fc1728f34658",
+        "createdDate": "2014-05-16",
         "createdBy": {
-          "fullName": "Colyn Brown",
-          "username": "clbrown"
+          "fullName": "Byron Lunt",
+          "username": "blunt"
         },
-        "jiraTicket": "None",
-        "comments": "Prep for new build process"
+        "jiraTicket": "FOS-20536",
+        "comments": "Implementing new Starter plan for India"
       }
     }
   }

@@ -1,11 +1,12 @@
 ---
 location: localization/sales/newscenter/about-godaddy/en
-id: 536a8334f778fc0228251d7c
-name: FOS-20455
+id: 537b9139f778fc0e70721140
+name: FOS-20814
+comments: Added, updated missed key to bob parsons bio
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="NewsCenterAbout-AFinePortraitsVideo" />
-<div class="video" data-video="JQwTqt8gkjM"> 
+<div class="video" data-video="JQwTqt8gkjM">
 <img src="[@T[link:<imageroot />]@T]fos/newscenter/about_godaddy/img/customers/fine-portraits-preview.jpg" width="333" height="177" />
 <span class="play"></span>
 </div>
@@ -112,7 +113,7 @@ Executive Chairman<br />&amp; Founder GoDaddy
 <phrase key="NewsCenterAbout-2-ChiefExecutiveOfficer" />
 Chief Executive<br />Officer
 <phrase key="NewsCenterAbout-2-GregoryMondre" />
-Gregory Mondre
+Greg Mondre
 <phrase key="NewsCenterAbout-6-ManagingPartnerManagingDirectorSilverLake" />
 Managing Partner &amp; Managing Director, Silver Lake
 <phrase key="NewsCenterAbout-3-AntonyYLing" />
@@ -120,13 +121,13 @@ Antony Y. Ling
 <phrase key="NewsCenterAbout-4-ManagingDirectorSilverLake" />
 Managing Director, Silver Lake
 <phrase key="NewsCenterAbout-3-HeraldYunChen" />
-Herald Yun Chen
+Herald Chen
 <phrase key="NewsCenterAbout-3-MemberPrivateEquityKKR" />
-Member, Private<br />Equity KKR
+Member, Private<br />Equity &amp; Co-Head of Technology, KKR
 <phrase key="NewsCenterAbout-3-AdamHerbertClammer" />
 Adam Herbert Clammer
 <phrase key="NewsCenterAbout-7-FmrHeadOfGlobalTechnologyGroupKKR" />
-Fmr Head of Global Technology Group, KKR
+Senior Advisor and<br/>Fmr Head of Global Technology Group, KKR
 <phrase key="NewsCenterAbout-3-RichardHerrickKimball" />
 Richard Herrick Kimball
 <phrase key="NewsCenterAbout-4-FoundingGeneralPartnerTCV" />
@@ -137,10 +138,14 @@ Charles Robel
 Private Investor
 <phrase key="NewsCenterAbout-2-JeffreySaper" />
 Jeffrey Saper
+<phrase key="NewsCenterAbout-2-Lee-Wittlinger" />
+Lee Wittlinger
 <phrase key="NewsCenterAbout-2-BetsyRafael" />
 Betsy Rafael
 <phrase key="NewsCenterAbout-2-BoardCounsel" />
 Board Counsel
+<phrase key="NewsCenterAbout-2-Director-SlvLake" />
+Director, Silver Lake
 <phrase key="NewsCenterAbout-4-ChiefExecutiveOfficerGoDaddyLLC" />
 Chief Executive Officer<br/>GoDaddy LLC
 <phrase key="NewsCenterAbout-26-WeWillRadicallyShiftTheGlobalEconomyToward" />
@@ -180,7 +185,7 @@ Elissa is a woman with a passion for problem solving. She brings expertise in gl
 <phrase key="NewsCenterAbout-60-AsHeadOfGoDaddySPeopleOperationsGroupAuguste" />
 As head of GoDaddy's People Operations group, Auguste leads the charge to hire and develop the greatest team of talented individuals on the planet. Having previously led technology teams as GoDaddy's CIO (including Product Development, IT Operations, Information Security and R&amp;D) Auguste brings a perspective and skillset to human resources that is unique in the industry.
 <phrase key="NewsCenterAbout-47-PriorTo2010AugusteServedAsTheCEOOf" />
-Prior to 2010, Auguste served as the CEO of Integralis Managed Security Services in Stockholm, Sweden and CTO of Linde AG, the world’s largest natural gas company based in Munich, Germany. Auguste earned a B.A. from Dartmouth College. He speaks Swedish and basic Russian.
+Prior to 2010, Auguste served as Managing Director of Integralis Security Services in Stockholm, Sweden and CTO of Linde AG, the world’s largest natural gas company based in Munich, Germany. Auguste attended Dartmouth College and speaks Swedish and basic Russian.
 <phrase key="NewsCenterAbout-51-AsHeadOfHostingJeffOverseesTheDevelopmentAnd" />
 As head of hosting, Jeff oversees the development and operations of the largest platform for small business in the world.  Jeff comes to GoDaddy after 10 years with eBay, where he served as Head of Platform Strategy for commerce and held senior product management roles in Search, Trust and Safety.
 <phrase key="NewsCenterAbout-33-PriorToEBayJeffSpentSixYearsAtSun" />
@@ -190,17 +195,17 @@ The father of two enjoys adventure-travel with his family, “basically any wate
 <phrase key="NewsCenterAbout-29-AsHeadOfInternationalBusinessAndDevelopmentJamesIs" />
 As head of International Business and Development, James is currently launching an aggressive international effort for GoDaddy, expanding the company's international focus from four countries to 60.
 <phrase key="NewsCenterAbout-55-BeforeComingToGoDaddyIn2013JamesWasA" />
-Before coming to GoDaddy in 2013, James was a Senior Vice President at Yahoo!, where he directed the company's global R&D centers in China, India and the Middle East. He also oversaw Yahoo’s content, social and membership platforms as well as the international delivery of all Yahoo! products and services worldwide.
+Before coming to GoDaddy in 2013, James was a Senior Vice President at Yahoo!, where he directed the company's global R&amp;D centers in China, India and the Middle East. He also oversaw Yahoo’s content, social and membership platforms as well as the international delivery of all Yahoo! products and services worldwide.
 <phrase key="NewsCenterAbout-30-PriorToYahooJamesSpent13YearsAsGeneral" />
 Prior to Yahoo!, James spent 13 years as General Manager at Microsoft. While there, he managed the MSN international team and later, the Windows and Windows Live international teams.
 <phrase key="NewsCenterAbout-37-NimaIsGeneralCounselForGoDaddyResponsibleForCorporate" />
-Nima is General Counsel for GoDaddy, responsible for corporate and patent litigation, customer-facing and third-party transactional agreements. She also oversees operations and technical development for Domains By Proxy, the company's private registration affiliate.
+Nima is General Counsel for GoDaddy, responsible for mergers &amp; acquisitions, governance, corporate and patent litigation, and intellectual property matters, as well as customer-facing and third-party transactional agreements.
 <phrase key="NewsCenterAbout-36-SinceJoiningGoDaddyIn2002NimaHasServedAs" />
-Since joining GoDaddy in 2002, Nima has served as Vice President of Wild West Domains (the company's reseller affiliate), Public Relations and Administration. She also grew the company’s philanthropic efforts with GoDaddy Cares.
+Since joining GoDaddy in 2002, Nima has served as project manager, Vice President of Wild West Domains (the company's reseller affiliate), Public Relations and Corporate Administration, and Deputy General Counsel. She also grew the company’s philanthropic efforts with GoDaddy Cares and developed the company's legendary holiday parties.
 <phrase key="NewsCenterAbout-26-BeforeComingToGoDaddyNimaWorkedForBusinessEdge" />
-Before coming to GoDaddy, Nima worked for Business Edge Solutions and Beechwood Data Solutions. She also practiced labor and employment law in New York City.
+In her life before GoDaddy, Nima worked for Business Edge Solutions and Beechwood Data Solutions. She also practiced labor and employment law in New York City.
 <phrase key="NewsCenterAbout-36-NimaEarnedHerJDFromTheUniversityOf" />
-Nima earned her J.D. from the University of Pennsylvania Law School and a B.A. from Gettysburg College.  She loves opera, the Yankees and will "<span class="quote">drop everything to go to The Met in NYC.</span>"
+Nima earned her J.D. from the University of Pennsylvania Law School and a B.A., summa cum laude, from Gettysburg College where she was elected to Phi Beta Kappa. She loves music, the Yankees and will "<span class="quote">drop everything to go to The Met in NYC.</span>"
 <phrase key="NewsCenterAbout-6-SeniorVicePresidentDesignUserExperience" />
 Senior Vice President, Design &amp; User Experience
 <phrase key="NewsCenterAbout-61-AsSeniorVPForDesignAndUserExperienceRick" />
@@ -208,7 +213,7 @@ As Senior VP for Design and User experience, Rick is responsible for all of GoDa
 <phrase key="NewsCenterAbout-33-RickIsPassionateAboutUXAndBelievesInThe" />
 Rick is passionate about UX and believes in the power of a good UX team working in concert with developers to create experiences that delight users. Rick attended San Jose State University.
 <phrase key="NewsCenterAbout-79-AsHeadOfDigitalCommercePhilBringsALaser" />
-As head of Digital Commerce, Phil brings a laser focus to all of GoDaddy's front-of-site experiences. Prior to joining GoDaddy in 2013, he worked at several big brands, successfully leading user experience and customer engagement. Phil led the online marketplace at AT&T as Senior VP of Consumer Digital Experience and was head of Customer Experience at CitiGroup. He spent his early career at Volvo and Ford Motor Company driving brand and consumer product strategies.
+As head of Digital Commerce, Phil brings a laser focus to all of GoDaddy's front-of-site experiences. Prior to joining GoDaddy in 2013, he worked at several big brands, successfully leading user experience and customer engagement. Phil led the online marketplace at AT&amp;T as Senior VP of Consumer Digital Experience and was head of Customer Experience at CitiGroup. He spent his early career at Volvo and Ford Motor Company driving brand and consumer product strategies.
 <phrase key="NewsCenterAbout-34-PhilReceivedHisMBAFromTheUniversity" />
 Phil received his M.B.A. from the University of Texas at Austin and his B.A. from Georgetown University. He also spent a year teaching English at Changchun University in northeast China.
 <phrase key="NewsCenterAbout-5-SeniorVicePresidentCorporateDevelopment" />
@@ -231,11 +236,13 @@ After hours, Steven serves as President of the Board of the Bay Area Glass Insti
 <phrase key="NewsCenterAbout-3-ExecutiveChairmanFounderGoDaddy" />
 Executive Chairman &amp; Founder<br />GoDaddy
 <phrase key="NewsCenterAbout-40-BobParsonsIsASerialEntrepreneurWhoSoldHis" />
-Bob Parsons is a serial entrepreneur who sold his first company to Intuit, Inc. in 1994. Three years later Parsons started Jomax Technologies, renaming the company GoDaddy in 1999. In 2000, GoDaddy became an ICANN-accredited domain name registrar.
+Bob Parsons is a serial entrepreneur. He sold his first company to Intuit, Inc. in 1994. Three years later Parsons started Jomax Technologies, renaming the company GoDaddy in 1999. In 2000, GoDaddy became an ICANN-accredited domain name registrar.
 <phrase key="NewsCenterAbout-32-TodayGoDaddyIsTheWorldSLargestProviderOf" />
 Today, GoDaddy is the world's largest provider of domain names, Web hosting and new SSL Certificates. The company also provides dozens of cloud-based services, all geared to small business.
 <phrase key="NewsCenterAbout-80-BobHoldsABSInAccountingFromThe" />
-Bob holds a B.S. in accounting from the University of Baltimore, which presented him with an honorary doctorate in 2008 and named him Distinguished Entrepreneur in 2010. He was also awarded Arizona Business Leader of the Year in 2007 and the Celebrity Fight Night Muhammad Ali Entrepreneur Award in 2011. In 2013, he was presented with the Visionary Award for his charitable and entrepreneurial achievements, which have provided invaluable direction, leadership and voice to the Greater Phoenix Area.
+Bob is a decorated military veteran who served in the U.S. Marine Corps in Vietnam. He holds a B.S. in accounting from the University of Baltimore, which presented him with an honorary doctorate in 2008 and named him Distinguished Entrepreneur in 2010. He was also awarded Arizona Business Leader of the Year in 2007 and the Celebrity Fight Night Muhammad Ali Entrepreneur Award in 2011. In 2013, Bob was presented with the Visionary Award for his charitable and entrepreneurial achievements, which have provided invaluable direction, leadership and voice to the Greater Phoenix Area.
+<phrase key="NewsCenterAbout-80-BobReneeParsonsFoundation" />
+In 2012 Bob and his wife Renee created The Bob & Renee Parsons Foundation to provide critical funding to non-profit organizations. The Parsons reinforced their commitment to philanthropy in December of 2013 by publically accepting an invitation to join The Giving Pledge, an initiative started by Bill and Melinda Gates and Warren Buffett. They pledged to give away at least half their wealth – and likely much more – to philanthropic causes. During 2012 and 2013, Bob and Renee gave more than [@T[currencyprice:<price usdamount="3400" dropdecimal="true" dropsymbol="false" htmlsymbol="false" negative="parentheses" /> ]@T] million to various charities.
 <phrase key="NewsCenterAbout-12-BobIsActiveWithSocialMediaAndUsesDrBobParsons" />
 Bob is active with social media and uses <a href="https://twitter.com/DrBobParsons" target="_blank">@DrBobParsons</a> on Twitter.
 <phrase key="NewsCenterAbout-30-AsGoDaddySCEOBlakeOverseesTheCompanyS" />
@@ -257,7 +264,7 @@ During his 26 years as a venture capitalist and technology investor, Rick has be
 <phrase key="NewsCenterAbout-34-PriorToTCVRickWasAManagingDirectorAt" />
 Prior to TCV, Rick was a Managing Director at Montgomery Securities, where he spent over 10 years focusing on telecommunications and data communications as both a venture capitalist and senior equity research analyst.
 <phrase key="NewsCenterAbout-56-RickHoldsAnABInHistoryFromDartmouth" />
-Rick holds an A.B. in history from Dartmouth College and an M.B.A. from the University of Chicago. 
+Rick holds an A.B. in history from Dartmouth College and an M.B.A. from the University of Chicago.
 He is currently on the Board of Directors of KGB.com, Liquidnet, Techwell, and Trading Screen. He also serves on Dartmouth's President's Leadership Council, Trustees' Investment Committee and the Dartmouth College Fund Committee.
 <phrase key="NewsCenterAbout-23-HeraldYunChenIsAMemberOfTheTechnology" />
 Herald Yun Chen is a member of the Technology Industry Team within the Private Equity group at KKR, a major GoDaddy investor.
@@ -276,7 +283,7 @@ Since joining Silver Lake in 1999, Greg has worked extensively in private equity
 <phrase key="NewsCenterAbout-45-GregGraduatedFromTheWhartonSchoolOfTheUniversity" />
 Greg graduated from The Wharton School of the University of Pennsylvania with a B.S. in economics. He currently serves as a director of Avaya, Inc.; IPC Systems, Inc.; Sabre Holdings, Vantage Data Centers, and is on the Operating Committee of SunGard Capital Corp.
 <phrase key="NewsCenterAbout-3-CharlesJRobel" />
-Charles J. Robel
+Charles Robel
 <phrase key="NewsCenterAbout-50-CharlesRobelIsARetiredSiliconValleyExecutiveAnd" />
 Charles Robel is a retired Silicon Valley executive and private investor. He spent 26 years at PricewaterhouseCoopers and served as the partner running its Silicon Valley Software Services Group from 1985 until the mid 1990s. He subsequently managed the Technology Mergers and Acquisitions Group until his retirement in 2000.
 <phrase key="NewsCenterAbout-38-From2000Through2005CharlesWasAGeneralPartner" />
@@ -305,6 +312,10 @@ Prior to joining KKR, he worked in the Mergers &amp; Acquisitions department of 
 Adam holds a B.S. from the University of California and an M.B.A. with high distinction from Harvard Business School. He is currently on the boards of Aricent, Avago, GoDaddy, and TASC and is a member of the Operating Committee of SunGard. He is also a trustee of the San Francisco MoMA
 <phrase key="NewsCenterAbout-2-BoardDirector" />
 Board Director
+<phrase key="NewsCenterAbout-28-LeeWittlingerJoinedSilverLakeAndIsDirector" />
+Lee Wittlinger joined Silver Lake in 2007 and is a Director. Previously, Mr. Wittlinger worked as an investment banker in the Technology, Media, and Telecom Group at Goldman, Sachs &amp; Co., where he focused on mergers and acquisitions, and financing transactions in the technology industry.
+<phrase key="NewsCenterAbout-28-LeeWittlingerCurrentlyDirectorGdAndVantageFinanceAccnting" />
+He currently serves as a director on the boards of GoDaddy and Vantage Data Centers. Mr. Wittlinger graduated summa cum laude from The Wharton School of the University of Pennsylvania, where he received a Bachelor of Science in Economics, with dual concentrations in Finance and Accounting.
 <phrase key="NewsCenterAbout-28-JeffreySaperIsViceChairmanOfWilsonSonsiniGoodrich" />
 Jeffrey Saper is vice chairman of Wilson Sonsini Goodrich &amp; Rosati, the largest law firm in Silicon Valley specializing in the representation of technology and emerging growth companies.
 <phrase key="NewsCenterAbout-142-JeffSpecializesInPublicAndPrivateFinancingsOfTechnology" />

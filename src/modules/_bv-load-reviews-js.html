@@ -1,0 +1,36 @@
+<script type="text/javascript">
+    var loadReviews = function(){
+      if (typeof $BV != "undefined") {
+        $BV.configure("global", {
+          allowSamePageSubmission: true,
+          userToken: "[@P[userControl:<Data location="~/Shared/BazaarVoice/SessionUserToken.ascx"></Data>]@P]",
+          doLogin: function(successCallback, successUrl) {
+            $('#bv-login-modal').modal();
+          },
+          doScrollSubmission: function () {
+            return false;
+          }
+        });
+        $BV.ui("rr", "show_reviews", {
+          productId: '{{ product }}',
+          num: 4,
+          doShowContent: function() {
+          }
+        });
+      }
+    };
+    $('a[href="#reviews"]').on('shown.bs.tab', function (e) {
+      e.preventDefault();
+      (function() {
+        if (!document.getElementById('bvapi')) {
+          var bv = document.createElement('script');
+          bv.type = 'text/javascript';
+          bv.id = 'bvapi';
+          bv.async = true;
+          bv.src = '[@P[userControl:<Data location="~/Scripts/BVScriptUrlOnly.ascx"></Data>]@P]';
+          bv.onload = loadReviews;
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(bv);
+        }
+      })();
+    });
+</script>
