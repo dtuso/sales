@@ -35,8 +35,8 @@ div.top-banner-content>div.atn-btn-wrap{width:160px;margin:10px 0px 0px}
 {% endless %}
 </style>
 <!-- end-css-elevate -->
-  <div class="gdhp-top-banner">
-    <div class="top-banner-content" >
+  <div class="gdhp-top-banner gd-swipe-item">
+    <div class="top-banner-content">
       <div class="top-banner-left-content">
         <span class="top-banner-headline">[@L[cds.sales/homepage/locales/en:top-banner-headline-club]@L]</span>
         <span class="top-banner-maintext">[@L[cds.sales/homepage/locales/en:top-banner-maintext-club]@L]</span>
@@ -48,13 +48,3 @@ div.top-banner-content>div.atn-btn-wrap{width:160px;margin:10px 0px 0px}
       </div>
     </div>
   </div>
-  <script type="text/javascript">
-  {% jsminify %}
-  $('.gdhp-top-banner').bind('click',function(event){
-    var $clickedElement = $(event.target);
-    if(!$clickedElement.hasClass('top-banner-more')){
-      window.location.href='[@T[link:<relative path="/tlds/club"><param name="ci" value="90331" /></relative>]@T]';
-    }
-  });
-  {% endjsminify %}
-  </script>
