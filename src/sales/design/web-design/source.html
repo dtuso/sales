@@ -1,12 +1,12 @@
 ---
 location: sales/design/web-design.aspx
-id: 537405b6f778fc384801ba61
-name: prep for github
+id: 53852697f778fc2a74c3bc5f
+name: Added in check for ad credits
 ---
 {% extends 'layouts/base.html' %}
 
 {% block metahead %}
-	{% parent %}
+  {% parent %}
 {% endblock metahead %}
 
 {% block footer %}
@@ -326,11 +326,13 @@ $(function () {
                                           <li>[@L[cds.sales/gd/design/web-design:List0Items154097Text]@L]</li>
                                           <li>[@L[cds.sales/gd/design/web-design:List0Items154098Text]@L]</li>
                                           <li>[@L[cds.sales/gd/design/web-design:List0Items154099Text]@L]</li>
-                                        ##if(activeLanguageAny([en-us]) || activeLanguageAny([es-us]))
+                                        ##if(areAdCreditsEnabled(bing))
                                           <li>[@L[cds.sales/gd/design/web-design:List0Items154100Text]@L]</li>
-                                          <li>[@L[cds.sales/gd/design/web-design:List0Items154101Text]@L]</li>
-                                          <li>[@L[cds.sales/gd/design/web-design:List0Items154102Text]@L]</li>
                                         ##endif
+                                        ##if(areAdCreditsEnabled(facebook))
+                                          <li>[@L[cds.sales/gd/design/web-design:List0Items154101Text]@L]</li>
+                                        ##endif
+                                          <li>[@L[cds.sales/gd/design/web-design:List0Items154102Text]@L]</li>
                                       </ul>
                                   </div>
                                   <div class="tab-pane" id="ps-support">
