@@ -7,14 +7,14 @@
       },
       "cdsLocation": "sales/tlds/gtld.aspx",
       "draft": {
-        "id": "5369380af778fc265c57f9aa",
-        "createdDate": "2014-05-06",
+        "id": "false",
+        "createdDate": "2014-06-02",
         "createdBy": {
-          "fullName": "Joel",
-          "username": "jconrad"
+          "fullName": "Mohseen Jamal",
+          "username": "mjamal@godaddy.com"
         },
-        "jiraTicket": "FOS-20541",
-        "comments": "Fix for login modal issue",
+        "jiraTicket": "FOS-21237",
+        "comments": "gTLD LP: update header sliders for 6/10",
         "url": "http://www.dev-godaddy.com/tlds/gtld.aspx"
       }
     },
@@ -34,13 +34,13 @@
       "cdsLocation": "localization/sales/gd/tlds/gtld/en",
       "draft": {
         "id": "false",
-        "createdDate": "2014-05-06",
+        "createdDate": "2014-06-02",
         "createdBy": {
-          "fullName": "Joel Conrad",
-          "username": "jconrad"
+          "fullName": "Mohseen Jamal",
+          "username": "mjamal@godaddy.com"
         },
-        "jiraTicket": "FOS-20541",
-        "comments": "Fix for login modal issue"
+        "jiraTicket": "FOS-21237",
+        "comments": "gTLD LP: update header sliders for 6/10"
       }
     }
   }
