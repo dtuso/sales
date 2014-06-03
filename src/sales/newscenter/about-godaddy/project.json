@@ -4,11 +4,6 @@
       "champion": {
         "name": "None currently",
         "email": "everyone@"
-      },
-      "cdsLocation": "sales/newscenter/about-godaddy.aspx",
-      "draft": {
-        "comments": "Changed bios on board of directors, added Lee Wittlinger",
-        "url": "http://www.dev-godaddy.com/newscenter/about-godaddy.aspx"
       }
     },
     "cssVersionOverride": "3a",
@@ -26,10 +21,6 @@
       "champion": {
         "name": "None currently",
         "email": "everyone@"
-      },
-      "cdsLocation": "localization/sales/newscenter/about-godaddy/en",
-      "draft": {
-        "comments": "Added and changed keys relating to board members bios"
       }
     }
   }

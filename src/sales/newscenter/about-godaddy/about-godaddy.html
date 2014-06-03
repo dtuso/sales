@@ -1,12 +1,9 @@
 ---
 location: sales/newscenter/about-godaddy.aspx
-<<<<<<< HEAD
-id: 537f7659f778fc147c393ded
-=======
-id: 537d8ffbf778fc10aceb3da5
->>>>>>> FETCH_HEAD
-name: FOS-20870
-comments: Fixing iPad issues on About Us
+id: 538d1d22f778fc0f9c23df14
+name: FOS-21306,20857
+comments: Changing media inquiries link and News release updates.
+url: http://www.dev-godaddy.com/newscenter/about-godaddy.aspx
 ---
 
 {% extends 'layouts/base.html' %}
@@ -15,10 +12,9 @@ comments: Fixing iPad issues on About Us
   {% parent %}
 {% endblock %}
 
-
 {% block body %}
 
-    <div id="corporate" class="corporate-wrapper">
+    <div id="corporate" class="corporate-wrapper"> 
     <div class="corporate">
         <div id="section-about-us" class="section  about-us">
             <div class="inner">
@@ -968,83 +964,96 @@ comments: Fixing iPad issues on About Us
               <div class="forms-wrap">
               <div class="tab-content media">
                     <h3>[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-3-ContactPublicRelations]@L]</h3>
-                    <p>[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-71-EnoughAboutUsWhatBurningQuestionsAreOnYour]@L]
+                    <p>[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-71-EnoughAboutUsWhatBurningQuestionsAreOnYour]@L]</p>
+
+                    <h4 class="media-subtitle">[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-21306-Corporate]@L]</h4>
+
+                    <!-- group 1-->
+                    <p class="media-department-title">
+                      [@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-21306-edriscoll-Department]@L]
                     </p>
+                    <p class="media-contact-name">
+                      [@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-21306-edriscoll]@L]
                     </p>
-              <form action="[@T[link:<relative path='~/NewsCenter/actions/MediaInquiresHandler.ashx' />]@T]" name="frmMediaContact" id="frmMediaContact" method="post" data-submit-messages='{"successMessage":"[@L[cds.sales/newscenter/about-godaddy:SuccessMessage]@L]","errorMessage":"[@L[cds.sales/newscenter/about-godaddy:ErrorMessage]@L]"}'>
-                        <div class="yui3-g">
-                            <div class="yui3-u-1-2">
-                                <div class="content form-split">
-                                    <label>[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-1-Name]@L]:
-                                        <span class="required">*</span>
-                                    </label>
-                                    <span class="input-text ">
-                                        <span class="inner">
-                                            <input name="name" class="input" type="text" value="" data-error="[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-6-PleaseEnterAValidName]@L]" required/>
-                                        </span>
-                                    </span>
-                                    <label>[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-2-EmailAddress]@L]:
-                                        <span class="required">*</span>
-                                    </label>
-                                    <span class="input-text ">
-                                        <span class="inner">
-                                            <input name="email" class="input email" type="text" value="" data-error="[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-7-PleaseEnterAValidEmailAddress]@L]" required/>
-                                        </span>
-                                    </span>
-                                    <label>[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-2-PhoneNumber]@L]:
-                                        <span class="required">*</span>
-                                    </label>
-                                    <span class="input-text ">
-                                        <span class="inner">
-                                            <input name="phone" class="input" type="text" value="" data-error="[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-7-PleaseEnterAValidPhoneNumber]@L]" required/>
-                                        </span>
-                                    </span>
-                                    <label>[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-2-MediaOutlet]@L]:
-                                        <span class="required">*</span>
-                                    </label>
-                                    <span class="input-text ">
-                                        <span class="inner">
-                                            <input name="media" class="input" type="text" value="" data-error="[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-7-PleaseEnterAValidMediaOutlet]@L]" required/>
-                                        </span>
-                                    </span>
-                                    <label>[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-5-WhatIsYourDeadline]@L]:
-                                        <span class="required">*</span>
-                                    </label>
-                                    <span class="input-text ">
-                                        <span class="inner">
-                                            <input name="deadline" class="input" type="date" value="" data-error="[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-6-PleaseEnterAValidDate]@L]" required/>
-                                        </span>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="yui3-u-1-2">
-                                <div class="content form-split">
-                                    <label>[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-1-Subject]@L]:
-                                        <span class="required">*</span>
-                                    </label>
-                                    <span class="input-text ">
-                                        <span class="inner">
-                                            <input name="subject" class="input" type="text" value="" data-error="[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-6-PleaseEnterAValidSubject]@L]" required/>
-                                        </span>
-                                    </span>
-                                    <label>[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-1-Message]@L]:
-                                        <span class="required">*</span>
-                                    </label>
-                                    <span class="input-textarea ">
-                                        <span class="inner">
-                                            <textarea name="message" class="input" cols="20" rows="3" data-error="[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-6-PleaseEnterAValidMessage]@L]" required></textarea>
-                                        </span>
-                                    </span>
-                                    <label>[@L[cds.sales/newscenter/about-godaddy:captcha-message]@L]:
-                                        <span class="required">*</span>
-                                    </label>
-                                    <div id="mi-captcha" class="captcha-wrapper" data-url="[@T[link:<relative path='~/NewsCenter/actions/GetCaptcha.aspx'> <param name='id' value='mi' /><param name='targetdivid' value='mi-captcha' /></relative>]@T]">
-                                    </div>
-                                    <span class="button-submit proceed"  onclick="validform.validate(this,{ajax:true});">[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-1-Submit]@L]</span>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
+                    <p class="media-contact-email">
+                      <a href="mailto:edriscoll@GoDaddy.com">edriscoll@GoDaddy.com</a>
+                    </p>
+                    <p class="media-contact-phone">
+                      <a rel="nofollow" href="tel:[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-21306-edriscoll-Phone]@L]">[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-21306-edriscoll-Phone]@L]</a>
+                    </p>
+                    <!-- group 2-->
+                    <p class="media-department-title">
+                      [@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-21306-kamarosso-Department]@L]
+                    </p>
+                    <p class="media-contact-name">
+                      [@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-21306-kamarosso]@L]
+                    </p>
+                    <p class="media-contact-email">
+                      <a href="mailto:kamarosso@GoDaddy.com">kamarosso@GoDaddy.com</a>
+                    </p>
+                    <p class="media-contact-phone">
+                      <a rel="nofollow" href="tel:[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-21306-kamarosso-Phone]@L]">[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-21306-kamarosso-Phone]@L]</a>
+                    </p>
+                    <!-- group 3-->
+                    <p class="media-department-title">
+                      [@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-21306-kpfeffer-Department]@L]
+                    </p>
+                    <p class="media-contact-name">
+                      [@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-21306-kpfeffer]@L]
+                    </p>
+                    <p class="media-contact-email">
+                      <a href="mailto:kpfeffer@GoDaddy.com">kpfeffer@GoDaddy.com</a>
+                    </p>
+                    <p class="media-contact-phone">
+                      <a rel="nofollow" href="tel:[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-21306-kpfeffer-Phone]@L]">[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-21306-kpfeffer-Phone]@L]</a>
+                    </p>
+
+                    <h4 class="media-subtitle">[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-21306-Product]@L]</h4>
+                    
+                    <!-- group 4-->
+                    <p class="media-department-title">
+                      [@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-21306-spenner-Department]@L]
+                    </p>
+                    <p class="media-contact-name">
+                      [@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-21306-spenner]@L]
+                    </p>
+                    <p class="media-contact-email">
+                      <a href="mailto:spenner@GoDaddy.com">spenner@GoDaddy.com</a>
+                    </p>
+                    <p class="media-contact-phone">
+                      <a rel="nofollow" href="tel:[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-21306-spenner-Phone]@L]">[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-21306-spenner-Phone]@L]</a>
+                    </p>
+                    <!-- group 5-->
+                    <p class="media-department-title">
+                      [@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-21306-nfuller-Department]@L]
+                    </p>
+                    <p class="media-contact-name">
+                      [@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-21306-nfuller]@L]
+                    </p>
+                    <p class="media-contact-email">
+                      <a href="mailto:nfuller@GoDaddy.com">nfuller@GoDaddy.com</a>
+                    </p>
+                    <p class="media-contact-phone">
+                      <a rel="nofollow" href="tel:[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-21306-nfuller-Phone]@L]">[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-21306-nfuller-Phone]@L]</a>
+                    </p>
+
+                    <h4 class="media-subtitle">[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-21306-International]@L]</h4>
+
+                    <!-- group 6-->
+                    <p class="media-department-title">
+                      [@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-21306-spenner-Department]@L]
+                    </p>
+                    <p class="media-contact-name">
+                      [@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-21306-spenner]@L]
+                    </p>
+                    <p class="media-contact-email">
+                      <a href="mailto:spenner@GoDaddy.com">spenner@GoDaddy.com</a>
+                    </p>
+                    <p class="media-contact-phone">
+                      <a rel="nofollow" href="tel:[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-21306-spenner-Phone]@L]">[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-21306-spenner-Phone]@L]</a>
+                    </p>
+
+
                 </div>
                 <div class="tab-content marketing">
                     <h3>[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-2-MarketingOpportunities]@L]</h3>

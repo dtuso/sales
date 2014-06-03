@@ -1,8 +1,8 @@
 ---
 location: localization/sales/newscenter/about-godaddy/en
-id: 537b9139f778fc0e70721140
-name: FOS-20814
-comments: Added, updated missed key to bob parsons bio
+id: 538d31bef778fc0f9c23df18
+name: FOS-21306, 20857
+comments: Changing media inquiries link and News release updates.
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="NewsCenterAbout-AFinePortraitsVideo" />
@@ -267,7 +267,7 @@ Prior to TCV, Rick was a Managing Director at Montgomery Securities, where he sp
 Rick holds an A.B. in history from Dartmouth College and an M.B.A. from the University of Chicago.
 He is currently on the Board of Directors of KGB.com, Liquidnet, Techwell, and Trading Screen. He also serves on Dartmouth's President's Leadership Council, Trustees' Investment Committee and the Dartmouth College Fund Committee.
 <phrase key="NewsCenterAbout-23-HeraldYunChenIsAMemberOfTheTechnology" />
-Herald Yun Chen is a member of the Technology Industry Team within the Private Equity group at KKR, a major GoDaddy investor.
+Herald Chen is a member of the Technology Industry Team within the Private Equity group at KKR, a major GoDaddy investor.
 <phrase key="NewsCenterAbout-33-HeraldInitiallyWorkedForKKRFrom1995To1997" />
 Herald initially worked for KKR from 1995 to 1997, rejoining the firm in 2007. He’s been directly involved with KKR's investments in Visma, Kodak, Sun Microsystems and Kindercare Learning Centers.
 <phrase key="NewsCenterAbout-37-PriorToJoiningKKRHeraldWasAManagingDirector" />
@@ -369,8 +369,7 @@ Marketing Opportunities
 <phrase key="NewsCenterAbout-3-ContactPublicRelations" />
 Contact Public Relations
 <phrase key="NewsCenterAbout-71-EnoughAboutUsWhatBurningQuestionsAreOnYour" />
-Enough about us. What burning questions are on your mind? If you're a member of the media who wants to talk shop, just fill out the form below or email us at
-<a href="mailto:PR@godaddy.com">PR@GoDaddy.com</a>. We're busy, but we're never too busy for you. If this is a support or billing question, please click
+If you're a member of the media email or call the appropriate PR team member below. If this is a support or billing question, please click
 <a href="http://support.godaddy.com/support">here</a> for our Customer Care Department.
 <strong>Thank you for your interest in GoDaddy.</strong>
 <phrase key="NewsCenterAbout-1-Name" />
@@ -535,3 +534,39 @@ Invalid Code Entered
 24/7/365
 <phrase key="NewsCenterCancelLink" />
 Cancel
+<phrase key="cds.sales/newscenter/about-godaddy:NewsCenterAbout-21306-Corporate" />
+Corporate
+<phrase key="cds.sales/newscenter/about-godaddy:NewsCenterAbout-21306-edriscoll-Department" />
+Corporate
+<phrase key="cds.sales/newscenter/about-godaddy:NewsCenterAbout-21306-edriscoll" />
+El Driscoll
+<phrase key="cds.sales/newscenter/about-godaddy:NewsCenterAbout-21306-edriscoll-Phone" />
++1.480.505.8878
+<phrase key="cds.sales/newscenter/about-godaddy:NewsCenterAbout-21306-kamarosso-Department" />
+Awards, Social Responsibility & Sponsorships
+<phrase key="cds.sales/newscenter/about-godaddy:NewsCenterAbout-21306-kamarosso" />
+Kari Amarosso
+<phrase key="cds.sales/newscenter/about-godaddy:NewsCenterAbout-21306-kamarosso-Phone" />
++1.602.204.4633
+<phrase key="cds.sales/newscenter/about-godaddy:NewsCenterAbout-21306-kpfeffer-Department" />
+Sponsorships & NASCAR
+<phrase key="cds.sales/newscenter/about-godaddy:NewsCenterAbout-21306-kpfeffer" />
+Kelsey Pfeffer
+<phrase key="cds.sales/newscenter/about-godaddy:NewsCenterAbout-21306-kpfeffer-Phone" />
++1.480.505.8800 ext. 7766
+<phrase key="cds.sales/newscenter/about-godaddy:NewsCenterAbout-21306-Product" />
+Product
+<phrase key="cds.sales/newscenter/about-godaddy:NewsCenterAbout-21306-spenner-Department" />
+Website Builder, Online Store, GoMobile, Get Found, Office 365, Online Bookkeeping & Get Paid
+<phrase key="cds.sales/newscenter/about-godaddy:NewsCenterAbout-21306-spenner" />
+Susie Penner
+<phrase key="cds.sales/newscenter/about-godaddy:NewsCenterAbout-21306-spenner-Phone" />
++1.480.366.3335
+<phrase key="cds.sales/newscenter/about-godaddy:NewsCenterAbout-21306-nfuller-Department" />
+Hosting & Security, Domains & After Market
+<phrase key="cds.sales/newscenter/about-godaddy:NewsCenterAbout-21306-nfuller-Department" />
+Nick Fuller
+<phrase key="cds.sales/newscenter/about-godaddy:NewsCenterAbout-21306-nfuller-Phone" />
++1.602.420.4435
+<phrase key="cds.sales/newscenter/about-godaddy:NewsCenterAbout-21306-International" />
+International 
