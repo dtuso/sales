@@ -2774,7 +2774,6 @@ else window.iScroll = iScroll;
 })(window, document);
 
 
-
 /* main.js */
 // polyfill for IE7, since scrollr relies on this functionality
 document.querySelector = document.querySelector || function(selector) {
@@ -2804,8 +2803,8 @@ $(document).ready(function(){
 		$(options).appendTo($countrySelect);
 	});
 	
-    // get the captcha data
-	validform.loadCaptcha('mi');
+  // get the captcha data on first load...this setups up the captcha
+	validform.loadCaptcha('mo');
 
 
 	// listen for changes to country
@@ -3115,17 +3114,13 @@ jQuery(document).ready(function($) {
 		},
 
 		initializeContactUsToggle: function() {
-		    var elSection = $('.section.contact-us');
+		  var elSection = $('.section.contact-us');
 			// switch category
 			elSection.find('.tabs').delegate('.tab', 'click', function() {
 				// remove all qtip messages
 				$('.qtip').qtip("destroy");
 				// swap forms
 				$(this).addClass('active').siblings().removeClass('active');
-				var code = $(this).data('category');
-				var myid = '';
-				if (code == 'media') myid = 'mi';
-				if (code == 'marketing') myid = 'mo';
 				$formsWrap = elSection.find('.forms-wrap');
 				$currentHeight = $formsWrap.height();
 				$activeForm = elSection.find('.tab-content').css('position','absolute').fadeOut().filter('.' + $(this).data('category')).css('position','absolute').fadeIn();
@@ -3135,7 +3130,7 @@ jQuery(document).ready(function($) {
 				    selectstyle.rebuildSelectUi($(this));
 				});
 			    // add captcha to select form, clear out from other form
-				validform.loadCaptcha(myid);
+				validform.loadCaptcha('mo');
 			});
 		}
 	}
@@ -3235,11 +3230,8 @@ if(typeof validform == 'undefined'){
 							success: function (data) {
 							    if (data == 'ERR_CAPTCHA')
 							    {
-							        var code = '';
-							        if ($form.attr('id') == 'frmMediaContact') { code = 'mi'; }
-							        else { code = 'mo'; }
 							        var captchabox = "captchaTextBox";
-							        var captchadiv = code + "-captcha";
+							        var captchadiv = "mo-captcha";
 							        $failedElements = $failedElements.add($('#' + captchabox));
 							        $failedElements.each(function () {
 							            var $this = $(this);
@@ -3352,15 +3344,10 @@ if(typeof validform == 'undefined'){
 		
 		function loadCapt(frmid) {
 		    var myfrm, currdiv, otherdiv;
-		    if (frmid == 'mi') {
-		        myfrm = $('#frmMediaContact');
-		        currdiv = $('mi-captcha');
-		        otherdiv = $('mo-captcha');
-		    } else {
-		        myfrm = $('#frmMarketingOpp');
-		        currdiv = $('mo-captcha');
-		        otherdiv = $('mi-captcha');
-            }
+
+        myfrm = $('#frmMarketingOpp');
+        currdiv = $('#' + frmid + '-captcha');
+        currdiv.empty();
 
 		    $.ajax({
 		        url: $('#' + frmid + '-captcha').attr('data-url'),
@@ -3370,7 +3357,6 @@ if(typeof validform == 'undefined'){
 		        validform.styleCaptcha();
 		        validform.captchaInt();
 		    });
-		    otherdiv.empty();
 		}
 
 		function styleCapt() {
@@ -3416,4 +3402,51 @@ if(typeof validform == 'undefined'){
 		});
 		
 	}(validform.$));
+}
+
+
+function LBD_LoadSound(soundPlaceholderId, soundLink) {
+  if (document.getElementById) {
+    var i = soundLink.indexOf('&d=');
+    if (-1 != i) {
+      soundLink = soundLink.substring(0, i);
+    }
+    soundLink = soundLink + '&d=' + LBD_GetTimestamp();
+    if ((-1 == soundLink.indexOf('&e=')) &&
+     (document.location.protocol == "https:")) {
+      soundLink = soundLink + '&e=1';
+  }
+  cid = LBD_GetCookie("LanapBotDetectID");
+  if (cid) {
+    soundLink = soundLink + '&s=' + cid;
+  }
+  var placeholder = document.getElementById(soundPlaceholderId);
+  var objectSrc = "<object id='captchaSound' classid='clsid:22D6F312-B0F6-11D0-94AB-0080C74C7E95' height='0' width='0' style='width:0; height:0;'><param  name='AutoStart' value='1' /><param name='Volume' value='0' />";
+  objectSrc += "<param name='PlayCount' value='1' /><param name='FileName' value='" + soundLink + "' /><embed id='captchaSoundEmbed' src='" + soundLink + "' autoplay='true' hidden='true' volume='100' type='" + LBD_GetMimeType() + "' style='display:inline;' /></object>";
+  placeholder.innerHTML = "";
+  placeholder.innerHTML = objectSrc;
+}
+}
+function LBD_GetMimeType() {
+var mimeType = "audio/x-wav";
+return mimeType;
+}
+function LBD_GetCookie(name) {
+var nameEQ = name + "=";
+var ca = document.cookie.split(';');
+for (var i = 0; i < ca.length; i++) {
+  var c = ca[i];
+  while (c.charAt(0) == ' ') {
+    c = c.substring(1, c.length);
+  }
+  if (c.indexOf(nameEQ) == 0) {
+    return c.substring(nameEQ.length, c.length);
+  }
+}
+return null;
+}
+function LBD_GetTimestamp() {
+var d = new Date();
+var t = d.getTime() + (d.getTimezoneOffset() * 60000);
+return t;
 }

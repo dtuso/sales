@@ -54,7 +54,6 @@ if (!argv.src || argv.src == 'all') {
 
 var paths = {
   templates : ['./src/sales/**/*.html'],
-  project   : ['./src/sales/**/project.json'],
   language  : ['./src/sales/**/*.language'],
   less      : ['./src/sales/**/css/**/*.less'],
   images    : ['./src/sales/**/img/**/*.jpg', './src/sales/**/img/**/*.png'],
@@ -154,7 +153,6 @@ gulp.task('config', function() {
 
 gulp.task('watch', function() {
   gulp.watch(paths.templates, ['html']);
-  gulp.watch(paths.project, ['html','language']);
   gulp.watch(paths.language, ['language']);
   gulp.watch(paths.less, ['styles', 'assets-deploy']);
   gulp.watch(paths.images, ['images', 'assets-deploy']);
