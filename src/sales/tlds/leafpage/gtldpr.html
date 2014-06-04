@@ -1,6 +1,6 @@
 ---
 location: sales/tlds/gtldprereg.aspx
-id: 538e42b7f778fc0f9c23df46
+id: 538f6700f778fc33d486f537
 name: FOS-21498 
 ---
 {% extends 'layouts/base.html' %}
@@ -120,7 +120,7 @@ name: FOS-21498
                 <p>[@L[cds.tldleaf/[@D[gtld]@D]:prereg.lr.priority.content]@L]</p>
 
               </div>
-              <div id="div-london-Priority">
+              <div id="div-london-Priority"  style="display:none;">
                 <h3>[@L[cds.tldleaf/[@D[gtld]@D]:prereg.heading.priorityprereg]@L]</h3>
                  <div id="div-London-Award">
                  [@L[cds.tldleaf/[@D[gtld]@D]:prereg.Names.priorityprereg]@L]
@@ -198,14 +198,12 @@ name: FOS-21498
           domains.controls.gtldTemplatesClient.SetupPreReg();
         }
         
-      function isLondon()
+       function isLondon()
       {
       var currentTLD = "[@D[gtld]@D]";
         if(currentTLD!=null)
         if(currentTLD=="LONDON"||currentTLD=="london")    
-        document.getElementById('div-london-Priority').style.visibility="visible";
-        else
-        document.getElementById('div-london-Priority').style.visibility = "hidden";
+         $("#div-london-Priority").show();          
       }
       });
     </script>
