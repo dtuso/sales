@@ -1,8 +1,8 @@
 ---
 location: localization/sales/gd/tlds/gtld/en
-id: 537bd7fdf778fc0e7072116a
-name: FOS-16997
-comments: Update header slider for 5/28
+id: 538cf621f778fc0f9c23df07
+name: FOS-21237
+comments: Update header slider for 6/10
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="MetaDescription" />
@@ -51,6 +51,10 @@ Offer guidance with <strong>.guru</strong>
 Show diners what's cookin' with .MENU
 <phrase key="MarketingTagLineLondon"/>
 Court 8 million shoppers with <strong>.london</strong>
+<phrase key="MarketingTagLineReviews"/>
+Be the go-to source with <strong>.reviews</strong>
+<phrase key="MarketingTagLineXyz"/>
+Finally! A domain for the <strong>.xyz</strong> generation
 <phrase key="MarketingTagLineCompany"/>
 .COMPANY says you’re in business
 <phrase key="MarketingTagLineWiki"/>
@@ -349,10 +353,7 @@ Why are there new TLDs?
 <p>The short answer is, to increase your web naming options.</p><p>With .COM nearing its 30th birthday, many of the best and most valuable domain names have already been registered. This has long been a frustration for business owners, forcing them to make up names for their businesses just to find an available domain name.</p><p>With the introduction of new <strong>gTLDs</strong>, you have a fresh chance to get the domain name you really want. Because many of the new domain extensions are specific to particular industries, interests, or locations your web address can now tell people exactly what you do (or where you do it). This makes the new domains easy to remember and you easier to find online.</p>
 <phrase key="FaqList3Title" />
 Will there be domains in languages other than English?
-<phrase key="FaqList3Item1" />
-<p><i>Oui</i>. Thanks to the new <strong>gTLDs</strong>, speakers of nearly three dozen languages – including Arabic, Chinese, and languages based on the Cyrillic alphabet – will have their own domain extensions.</p><p>This will be a huge boon for companies that promote their products in countries where these languages are spoken.</p>
-<phrase key="FaqList4Title" />
-How much will the new domains cost?
+
 <phrase key="FaqList4Item1" />
 Prices will vary for the new <strong>gTLDs</strong> and we’ll publish pricing information for the new domains on <a target="_blank" href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="85488" /></relative>]@T]">www.godaddy.com/newdomains </a>as soon as it’s available. For many of the new domains, pricing hasn’t been set.
 <phrase key="FaqList5Title" />
@@ -390,7 +391,7 @@ No. You can cancel your pre-registration request and we’ll happily refund your
 <phrase key="FaqList13Title" />
 What’s the difference between Pre-registration and Priority Pre-registration?
 <phrase key="FaqList13Item1" />
-A Priority Pre-registration is submitted before a regular Pre-registration, which means the priority option improves your chances of getting the domain name you want when it becomes available. Pricing and renewal fees may be higher for Priority Pre-registration and there may also be non-refundable application fees.
+A Priority Pre-registration is submitted before a regular Pre-registration, which means the priority option improves your chances of getting the domain name you want when it becomes available. Pricing and renewal fees may be higher for Priority Pre-registration and there may also be non-refundable application fees.
 <phrase key="FaqList14Title" />
 If I apply for a Priority Pre-registration should I also apply during regular Pre-registration?
 <phrase key="FaqList14Item1" />
@@ -438,4 +439,4 @@ Show off your <strong>.ninja</strong> skills
 <phrase key="MainBannerCarouselSlide3TextEmail" />
 .EMAIL delivers
 <phrase key="MainBannerCarouselSlideTextUno"  comments="DO NOT TRANSLATE" />
-El Internet en Español.
+<strong>.uno</strong> El Internet en Español.
