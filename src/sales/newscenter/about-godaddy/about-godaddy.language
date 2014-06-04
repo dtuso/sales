@@ -1,6 +1,6 @@
 ---
 location: localization/sales/newscenter/about-godaddy/en
-id: 538d31bef778fc0f9c23df18
+id: 538f649cf778fc0ffc8f80fe
 name: FOS-21306, 20857
 comments: Changing media inquiries link and News release updates.
 ---
@@ -534,39 +534,39 @@ Invalid Code Entered
 24/7/365
 <phrase key="NewsCenterCancelLink" />
 Cancel
-<phrase key="cds.sales/newscenter/about-godaddy:NewsCenterAbout-21306-Corporate" />
+<phrase key="NewsCenterAbout-21306-Corporate" />
 Corporate
-<phrase key="cds.sales/newscenter/about-godaddy:NewsCenterAbout-21306-edriscoll-Department" />
+<phrase key="NewsCenterAbout-21306-edriscoll-Department" />
 Corporate
-<phrase key="cds.sales/newscenter/about-godaddy:NewsCenterAbout-21306-edriscoll" />
+<phrase key="NewsCenterAbout-21306-edriscoll" />
 El Driscoll
-<phrase key="cds.sales/newscenter/about-godaddy:NewsCenterAbout-21306-edriscoll-Phone" />
+<phrase key="NewsCenterAbout-21306-edriscoll-Phone" />
 +1.480.505.8878
-<phrase key="cds.sales/newscenter/about-godaddy:NewsCenterAbout-21306-kamarosso-Department" />
+<phrase key="NewsCenterAbout-21306-kamarosso-Department" />
 Awards, Social Responsibility & Sponsorships
-<phrase key="cds.sales/newscenter/about-godaddy:NewsCenterAbout-21306-kamarosso" />
+<phrase key="NewsCenterAbout-21306-kamarosso" />
 Kari Amarosso
-<phrase key="cds.sales/newscenter/about-godaddy:NewsCenterAbout-21306-kamarosso-Phone" />
+<phrase key="NewsCenterAbout-21306-kamarosso-Phone" />
 +1.602.204.4633
-<phrase key="cds.sales/newscenter/about-godaddy:NewsCenterAbout-21306-kpfeffer-Department" />
+<phrase key="NewsCenterAbout-21306-kpfeffer-Department" />
 Sponsorships & NASCAR
-<phrase key="cds.sales/newscenter/about-godaddy:NewsCenterAbout-21306-kpfeffer" />
+<phrase key="NewsCenterAbout-21306-kpfeffer" />
 Kelsey Pfeffer
-<phrase key="cds.sales/newscenter/about-godaddy:NewsCenterAbout-21306-kpfeffer-Phone" />
+<phrase key="NewsCenterAbout-21306-kpfeffer-Phone" />
 +1.480.505.8800 ext. 7766
-<phrase key="cds.sales/newscenter/about-godaddy:NewsCenterAbout-21306-Product" />
+<phrase key="NewsCenterAbout-21306-Product" />
 Product
-<phrase key="cds.sales/newscenter/about-godaddy:NewsCenterAbout-21306-spenner-Department" />
+<phrase key="NewsCenterAbout-21306-spenner-Department" />
 Website Builder, Online Store, GoMobile, Get Found, Office 365, Online Bookkeeping & Get Paid
-<phrase key="cds.sales/newscenter/about-godaddy:NewsCenterAbout-21306-spenner" />
+<phrase key="NewsCenterAbout-21306-spenner" />
 Susie Penner
-<phrase key="cds.sales/newscenter/about-godaddy:NewsCenterAbout-21306-spenner-Phone" />
+<phrase key="NewsCenterAbout-21306-spenner-Phone" />
 +1.480.366.3335
-<phrase key="cds.sales/newscenter/about-godaddy:NewsCenterAbout-21306-nfuller-Department" />
+<phrase key="NewsCenterAbout-21306-nfuller-Department" />
 Hosting & Security, Domains & After Market
-<phrase key="cds.sales/newscenter/about-godaddy:NewsCenterAbout-21306-nfuller-Department" />
+<phrase key="NewsCenterAbout-21306-nfuller" />
 Nick Fuller
-<phrase key="cds.sales/newscenter/about-godaddy:NewsCenterAbout-21306-nfuller-Phone" />
+<phrase key="NewsCenterAbout-21306-nfuller-Phone" />
 +1.602.420.4435
-<phrase key="cds.sales/newscenter/about-godaddy:NewsCenterAbout-21306-International" />
+<phrase key="NewsCenterAbout-21306-International" />
 International 
