@@ -14,6 +14,7 @@ try {
   var uglify    = require('gulp-uglify');
   var debug     = require('gulp-debug');
   var elevate   = require('./lib/gulp-css-elevate');
+  var charFix   = require('./lib/gulp-character-fix');
 
   // utilities
   var path      = require('path');
@@ -106,6 +107,7 @@ gulp.task('html', function() {
 gulp.task('language', function() {
   return gulp.src('./**/*.language', {cwd: path.join('./src/sales/', assetSrcPath)})
     //.pipe(changed(paths.build))
+    .pipe(charFix())
     .pipe(fm({remove:true}))
     .pipe(swig(swigLangOpts))
     .pipe(gulpif(!ignoreCDS, cdsm()))
