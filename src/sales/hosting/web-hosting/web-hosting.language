@@ -1,3 +1,8 @@
+---
+location: localization/sales/gd/hosting/web-hosting/en
+id: 5390ed8af778fc21dc6e3f44
+name: FOS-20706
+---
 {% include 'modules/doc-block.html' %}
 <phrase key="page-title" />
 Web Hosting | Lightning Fast Hosting & One Click Setup  - [@T[companyname:name]@T]
@@ -94,11 +99,11 @@ Bing Ad Credits
 <phrase key="ultimate-bing-adwords" />
 Bing Ad Credits
 <phrase key="bing-adwords-restrictions" />
-Restrictions apply to Bing Ads credit
+Restrictions apply to Bing Ad credits
 <phrase key="bing-adwords-desc" />
 One promotional credit per customer for a new Microsoft<sup class='supsymbol'>&reg;</sup> Advertiser account. Products purchased using a Gift Card or Alipay do not provide eligibility for advertising credits. Offer valid to US residents only, other restrictions apply.<br/><a href=&quot;javascript:void(window.open('[@T[appSetting:<setting name='BING_AD_CREDIT_LINK' />]@T]','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=1060,height=675'))&quot;>View Details</a>
 <phrase key="bing-adwords-desc-left" />
-Restrictions apply to Bing Ads credit<span class="left">One promotional credit per customer for a new Microsoft<sup class="supsymbol">&reg;</sup> Advertiser account. Products purchased using a Gift Card or Alipay do not provide eligibility for advertising credits. Offer valid to US residents only, other restrictions apply.
+Restrictions apply to Bing Ad credits<span class="left">One promotional credit per customer for a new Microsoft<sup class="supsymbol">&reg;</sup> Advertiser account. Products purchased using a Gift Card or Alipay do not provide eligibility for advertising credits. Offer valid to US residents only, other restrictions apply.
 <phrase key="facebook-adwords-tm" />
 Facebook<sup class="supsymbol">&reg;</sup> Ad Credit
 <phrase key="facebook-adwords" />
@@ -272,7 +277,7 @@ USD $100 Google AdWords Credit -
 <phrase key="all-plan-features-adword-credit-hover-text-11166" />
 One promotional credit per customer for a new Google AdWords account. Products purchased using a Gift Card or Alipay do not provide eligibility for advertising credits. Minimum spend [@T[currencyprice:<price usdamount="2500" dropdecimal="false" />]@T]. Offer valid to US &amp; Canada residents only, excluding government controlled entities and parties. Other restrictions apply. <a href="javascript:void(window.open('http://www.godaddy.com/popups/google-adwords.aspx?ci=81141&app_hdr=99','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=550,height=675'))">View Details</a>
 <phrase key="all-plan-features-bing-credit-11166" />
-USD $100 Bing Ads Credit - 
+USD $100 Bing Ad Credits - 
 <phrase key="all-plan-features-bing-credit-hover-text-11166" />
 One promotional credit per customer for a new Microsoft<sup>&reg;</sup> Advertiser account. Products purchased using a Gift Card or Alipay do not provide eligibility for advertising credits. Offer valid to US residents only, other restrictions apply. <a data-ci="89593" href="javascript:void(window.open('https://advertise.bingads.microsoft.com/en-us/godaddy/learn','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=1060,height=675'))">View Details</a>
 <phrase key="all-plan-features-facebook-credit-11166" />
