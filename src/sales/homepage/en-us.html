@@ -33,6 +33,8 @@ name: FOS-20864
       event.stopPropagation();
       switch($clickedUrl)
       {
+        case "none":
+        break;
         case "video":
            $('div#myVideoModal').modal('show');
         break;
@@ -43,5 +45,24 @@ name: FOS-20864
           window.location.href=$clickedUrl;
       }
     });
+    var hpLoadVideo = 0;
+    var autoplay = '\&autoplay=1';
+    var vidLocation = "div.gdhp-top-banner-3";
+    $(vidLocation).mouseenter(function() {
+      if(hpLoadVideo != 1)
+        {
+          hpLoadVideo = 1;
+          var src ='//www.youtube.com/embed/vo2lVSrA_88?html5=1&rel=0';
+          $('#myVideoModal iframe').attr('src',src);
+          $('#myVideoModal').on('hidden.bs.modal', function () {          
+            $('#myVideoModal iframe').removeAttr('src');
+            $('#myVideoModal iframe').attr('src',src);
+          })
+          $('#myVideoModal').on('show.bs.modal', function () {          
+            $('#myVideoModal iframe').attr('src', src + autoplay);
+          })
+        }
+    });
+
 {% endjsminify %}
 {% endblock %} 
