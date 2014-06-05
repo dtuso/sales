@@ -36,14 +36,14 @@
       },
       "cdsLocation": "localization/sales/hosting/web-hosting/en",
       "draft": {
-        "id": "53765729f778fc1728f34658",
-        "createdDate": "2014-05-16",
+        "id": "5390ed8af778fc21dc6e3f44",
+        "createdDate": "2014-06-05",
         "createdBy": {
-          "fullName": "Byron Lunt",
-          "username": "blunt"
+          "fullName": "Avinash Peesari",
+          "username": "apeesari"
         },
-        "jiraTicket": "FOS-20536",
-        "comments": "Implementing new Starter plan for India"
+        "jiraTicket": "FOS-20706",
+        "comments": "Updated miss spelled bing ad credit"
       }
     }
   }
