@@ -120,13 +120,15 @@ name: testing
             tldLogoImageFileName: '[@T[link:<imageroot />]@T]tldleafpages/[@D[gtld]@D]/fos/[@L[cds.tldleaf/[@D[gtld]@D]:all.gtld.logo]@L]',
             gTldPreRegPhaseDataJson: [@P[webControl:<Data assembly="App_Code" type="Domains.Controls.GTldPhaseDataJson"></Data>]@P],
             redirectUrl: '[@T[link:<relative path="~/tlds/gtld.aspx"></relative>]@T]',
-            tldH1TagExists: $.trim('[@L[cds.tldleaf/[@D[gtld]@D]:all.page.h1]@L]').length > 0
+            tldH1TagExists: $.trim('[@L[cds.tldleaf/[@D[gtld]@D]:all.page.h1]@L]').length > 0,
+            icannLink:removeIcannLink()
           });
 
           domains.controls.gtldTemplatesClient.SetupGeneralAvailability();
         }
-
-
+        function removeIcannLink(){
+          $(".g-modal-content p a").replaceWith(function() { return $(this).contents(); });
+        }
       });
     </script>
 
