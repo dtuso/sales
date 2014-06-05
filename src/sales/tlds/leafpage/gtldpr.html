@@ -1,7 +1,7 @@
 ---
 location: sales/tlds/gtldprereg.aspx
-id: 536bc8a7f778fc3434d3cb8e
-name: testing
+id: 538f938bf778fc33d486f57d
+name: FOS-21498 
 ---
 {% extends 'layouts/base.html' %}
 
@@ -120,11 +120,23 @@ name: testing
                 <p>[@L[cds.tldleaf/[@D[gtld]@D]:prereg.lr.priority.content]@L]</p>
 
               </div>
-
+              <div id="div-london-Priority"  style="display:none;">
+                <h3>[@L[cds.tldleaf/[@D[gtld]@D]:prereg.heading.priorityprereg]@L]</h3>
+                 <div id="div-London-Award">
+                 [@L[cds.tldleaf/[@D[gtld]@D]:prereg.Names.priorityprereg]@L]
+                </div>
+                <div id="div-Priority-Ranking">
+                  <ul class="RankingList" style="display:none;">
+                    <li>[@L[cds.tldleaf/[@D[gtld]@D]:prereg.point1.priorityprereg]@L]</li>
+                    <li>[@L[cds.tldleaf/[@D[gtld]@D]:prereg.point2.priorityprereg]@L]</li>
+                    <li>[@L[cds.tldleaf/[@D[gtld]@D]:prereg.point3.priorityprereg]@L]</li>
+                    <li>[@L[cds.tldleaf/[@D[gtld]@D]:prereg.point4.priorityprereg]@L]</li>
+                  </ul>
+                </div>                
+              </div>               
             </div>
-
           </div>
-        </div>
+        
         <div class="seccontent clearfix">
           <div class="fl-left wide-col">
             [@L[cds.tldleaf/[@D[gtld]@D]:all.marketing.content.1]@L]
@@ -180,11 +192,21 @@ name: testing
             earlyAccessPricingTemplate: '[@L[cds.tldleaf/[@D[gtld]@D]:prereg.phase.AsLowAs]@L]',
             earlyAccessDateTemplate: '[@L[cds.tldleaf/_common:prereg.phase.dates]@L]',
             redirectUrl: '[@T[link:<relative path="~/tlds/gtld.aspx"></relative>]@T]',
-            tldH1TagExists: $.trim('[@L[cds.tldleaf/[@D[gtld]@D]:all.page.h1]@L]').length > 0
+            tldH1TagExists: $.trim('[@L[cds.tldleaf/[@D[gtld]@D]:all.page.h1]@L]').length > 0,
+            tldIsLondon:isLondon()
           });
           domains.controls.gtldTemplatesClient.SetupPreReg();
         }
-
+        
+       function isLondon(){
+         var currentTLD = "[@D[gtld]@D]";
+         if(currentTLD!=null){
+           if(currentTLD=="LONDON"||currentTLD=="london"){
+             $("#div-london-Priority").show();   
+             $("ul.RankingList").show();      
+           }
+         }
+       }
       });
     </script>
 
