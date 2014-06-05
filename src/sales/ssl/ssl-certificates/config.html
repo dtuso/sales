@@ -1,7 +1,8 @@
 ---
 location: sales/ssl/ssl-certificates-config.aspx
-id: 53704dd2f778fc1704861575
-name: FOS-11169-b
+id:  5390cf95f778fc21dc6e3f3d
+name: FOS-20247
+comments: added redirect to landing page if config accessed directly
 ---
 ##if(false)
 {% include 'modules/doc-block.html' %}
@@ -143,6 +144,11 @@ var premiumCountries = [
 
 var premiumIsAvailable = (premiumCountries.indexOf(country) !== -1);
 $(document).ready(function () {
+
+   if(document.referrer.toLowerCase().indexOf("/ssl/ssl-certificates")<=0)
+  {
+  window.location.assign('[@T[link:<relative linktype="SITEURL" path="~/ssl/ssl-certificates.aspx" secure="false"><param name="ci" value="9039" /></relative>]@T]');
+  } 
 
   var productQuery = getParameterByName('plan') || 'ssl_dlx_1';
   var managerQuery = getParameterByName('mgrshopper');
@@ -415,10 +421,9 @@ function PopulateProtectionTypeDropDown(data){
       planList.push((this.split('-'))[1]);
     }
   });
-  var oneSiteHtml = "<li data-main=\"" + planList[0] + "\" data-ci=\"86941\" class=\"{0}\"><div data-main=\"true\"><span>[@L[cds.sales/ssl/fosconfigssl:protection-type-one-site]@L]</span><span></span></div><div data-main=\"true\"><span>[@L[cds.sales/ssl/ssl-certificate:example]@L]<br /><ul><li>[@L[cds.sales/ssl/ssl-certificate:sample-site]@L]</li></ul></span><span></span></div></li>";
-  var uccHtml = "<li data-main=\"" + planList[1] + "\" data-ci=\"86943\" class=\"{0}\"><div data-main=\"true\"><span>[@L[cds.sales/ssl/fosconfigssl:protection-type-ucc]@L]</span><span></span></div><div data-main=\"true\"><span>[@L[cds.sales/ssl/ssl-certificate:example]@L]<br /><ul><li>[@L[cds.sales/ssl/ssl-certificate:sample-site]@L]</li><li>[@L[cds.sales/ssl/ssl-certificate:second-sample-site]@L]</li></ul></span><span></span></div></li>";
-  var wcHtml = "<li data-main=\"" + planList[9] + "\" data-ci=\"86945\" class=\"{0}\"><div data-main=\"true\"><span>[@L[cds.sales/ssl/fosconfigssl:protection-type-wc]@L]</span><span></span></div><div data-main=\"true\"><span>[@L[cds.sales/ssl/ssl-certificate:example]@L]<br /><ul><li>[@L[cds.sales/ssl/ssl-certificate:sample-site]@L]</li><li>[@L[cds.sales/ssl/ssl-certificate:sample-cart-site]@L]</li><li>[@L[cds.sales/ssl/ssl-certificate:sample-mobile-site]@L]</li></ul></span><span></span></div></li>";
-
+  var oneSiteHtml = "<li data-main=\"" + planList[0] + "\" data-ci=\"86941\" class=\"{0}\"><div data-main=\"true\"><span>[@L[cds.sales/ssl/fosconfigssl:protection-type-one-site]@L]</span><span></span></div><div data-main=\"true\"><span>[@L[cds.sales/ssl/ssl-certificate:example]@L]<br /><ul><li>[@L[cds.sales/ssl/ssl-certificate:SiteProtection]@L]</li></ul></span><span></span></div></li>";
+  var uccHtml = "<li data-main=\"" + planList[1] + "\" data-ci=\"86943\" class=\"{0}\"><div data-main=\"true\"><span>[@L[cds.sales/ssl/fosconfigssl:protection-type-ucc]@L]</span><span></span></div><div data-main=\"true\"><span>[@L[cds.sales/ssl/ssl-certificate:example]@L]<br /><ul><li>[@L[cds.sales/ssl/ssl-certificate:SiteProtection]@L]</li><li>[@L[cds.sales/ssl/ssl-certificate:second-sample-site]@L]</li></ul></span><span></span></div></li>";
+  var wcHtml = "<li data-main=\"" + planList[9] + "\" data-ci=\"86945\" class=\"{0}\"><div data-main=\"true\"><span>[@L[cds.sales/ssl/fosconfigssl:protection-type-wc]@L]</span><span></span></div><div data-main=\"true\"><span>[@L[cds.sales/ssl/ssl-certificate:example]@L]<br /><ul><li>[@L[cds.sales/ssl/ssl-certificate:SiteProtection]@L]</li><li>[@L[cds.sales/ssl/ssl-certificate:CartSiteProtection]@L]</li><li>[@L[cds.sales/ssl/ssl-certificate:MobileSiteProtection]@L]</li></ul></span><span></span></div></li>";
   if (data.Domains.length > 1){
     if(data.currentPlanName.indexOf('UCC')!=-1){
       oneSiteHtml = oneSiteHtml.replace('{0}', '');
