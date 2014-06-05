@@ -1,8 +1,8 @@
 ---
 location: localization/sales/newscenter/about-godaddy/en
-id: 538f649cf778fc0ffc8f80fe
-name: FOS-21306, 20857
-comments: Changing media inquiries link and News release updates.
+id: 5390ef5cf778fc21dc6e3f46
+name: FOS-21831
+comments: About Us customer profiles - replaceNews release updates.
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="NewsCenterAbout-AFinePortraitsVideo" />
@@ -65,7 +65,7 @@ Chief Executive
 <phrase key="NewsCenterAbout-2-ScottWagner" />
 Scott Wagner
 <phrase key="NewsCenterAbout-7-ChiefOperatingOfficerChiefFinancialOfficer" />
-Chief Operating<br />Officer &amp; Chief<br />Financial Officer
+Chief Financial Officer &amp; Chief Operating Officer
 <phrase key="NewsCenterAbout-2-BarbRechterman" />
 Barb Rechterman
 <phrase key="NewsCenterAbout-2-ChiefMarketingOfficer" />
@@ -73,7 +73,7 @@ Chief Marketing<br />Officer
 <phrase key="NewsCenterAbout-2-ElissaMurphy" />
 Elissa Murphy
 <phrase key="NewsCenterAbout-5-ChiefTechnologyOfficerExecutiveVicePresident" />
-Chief Technology Officer &amp; Executive<br />Vice President
+Chief Technology Officer &amp; Executive Vice President, Cloud
 <phrase key="NewsCenterAbout-2-AugusteGoldman" />
 Auguste Goldman
 <phrase key="NewsCenterAbout-3-ChiefPeopleOfficer" />
@@ -89,7 +89,7 @@ Executive Vice President, International
 <phrase key="NewsCenterAbout-2-NimaKelly" />
 Nima Kelly
 <phrase key="NewsCenterAbout-2-GeneralCounsel" />
-General Counsel
+Executive Vice President &amp; General Counsel
 <phrase key="NewsCenterAbout-2-RickEames" />
 Rick Eames
 <phrase key="NewsCenterAbout-4-SVPDesignUserExperience" />
@@ -157,7 +157,7 @@ Prior to Yahoo!, Blake spent 15 years at Microsoft creating world-changing consu
 <phrase key="NewsCenterAbout-48-BlakeBeganHisCareerAtXeroxAndCompaqAnd" />
 Blake began his career at Xerox and Compaq and has been a professor at Pepperdine’s School of Business. Blake earned an M.B.A. from Pepperdine University and a B.A. from San Diego State University.  Keep up-to-date with Blake at <a href="http://www.BlakesBlog.com" target="_blank">www.BlakesBlog.com</a>.
 <phrase key="NewsCenterAbout-6-ChiefOperatingOfficerChiefFinancialOfficer" />
-Chief Operating Officer &amp; Chief Financial Officer
+Chief Financial Officer &amp; Chief Operating Officer
 <phrase key="NewsCenterAbout-22-AsGoDaddySCOOCFOScottManagesTheCompany" />
 As GoDaddy's COO/CFO, Scott manages the company's business operations as well as all financial reporting, budgeting and forecasting.
 <phrase key="NewsCenterAbout-34-PriorToBlakeIrvingSAppointmentAsCEOIn" />
@@ -175,7 +175,7 @@ She has teamed with GoDaddy founder Bob Parsons for more than two decades, havin
 <phrase key="NewsCenterAbout-42-BarbEarnedABAInAccountingFromThe" />
 Barb earned a B.A. in Accounting from the University of Dubuque and is a Certified Public Accountant.   When not making edgy and viral Super Bowl spots, she enjoys riding Harleys with her husband and training her four horses in dressage.
 <phrase key="NewsCenterAbout-6-ChiefTechnologyOfficerExecutiveVicePresident" />
-Chief Technology Officer &amp; Executive Vice President
+Chief Technology Officer &amp; Executive Vice President, Cloud
 <phrase key="NewsCenterAbout-60-AsCTOElissaIsLeadingGoDaddySEvolutionToward" />
 As CTO, Elissa is leading GoDaddy's evolution toward a powerful and unified platform for small business.  Elissa came to GoDaddy in 2013 from Yahoo!, where as Vice President of Engineering she oversaw the world’s largest private Hadoop cluster, a technology essential to massive-scale computing that is literally the basis of the definition of big data today.
 <phrase key="NewsCenterAbout-60-PriorToHerTimeAtYahooElissaSpent13" />
@@ -570,3 +570,23 @@ Nick Fuller
 +1.602.420.4435
 <phrase key="NewsCenterAbout-21306-International" />
 International 
+<phrase key="NewsCenterAbout-cust-KathyName" />
+Kathy Fang
+<phrase key="NewsCenterAbout-cust-KathyBusiness" />
+Fang Restaurant
+<phrase key="NewsCenterAbout-cust-KathyBold" />
+"I love creating new dishes and just being able to pick up ingredients and make something on the fly."
+<phrase key="NewsCenterAbout-cust-KathyP1" />
+Kathy Fang doesn’t follow a recipe. She’s got her own style and her own definition of success. When it comes to her business, what drives Kathy is a smile from a customer and that “mmmmmm” after they taste her latest dish.
+<phrase key="NewsCenterAbout-cust-KathyP2" />
+If customers can’t find Fang Restaurant online, that means fewer smiles and fewer “mmmmmm’s.” That’s why Kathy uses GoDaddy for her domains, web hosting, and email. With award-winning support and simple-to-use products, GoDaddy keeps Kathy’s digital presence looking almost as good as her Nanking Sesame Chicken. Almost.
+<phrase key="NewsCenterAbout-cust-MarcName" />
+Marc Rosenblum
+<phrase key="NewsCenterAbout-cust-MarcBusiness" />
+Santa Cruz Ale Works
+<phrase key="NewsCenterAbout-cust-MarcBold" />
+"You don’t need computers to make beer. But these days you need the Internet and a good website to sell it."
+<phrase key="NewsCenterAbout-cust-MarcP1" />
+Enjoying a beer with friends is one thing, but having a passion for it is another. While you were downing a cold one, Marc’s love of beer-making drove him to start his own brewery – Santa Cruz Ale Works.
+<phrase key="NewsCenterAbout-cust-MarcP2" />
+With GoDaddy Website Builder, Marc created a website perfectly suited to his business. Plus, the reliability of GoDaddy hosting and domain services keeps Marc’s business open online 24/7/365.
