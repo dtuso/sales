@@ -29,7 +29,7 @@ name: testing
 
 {% block body %}
 
-    <div id="main-wrap">
+    <div id="main-wrap" class="tld-[@D[gtld]@D]">
       <div class="clearfix" style="margin-top:15px">
         <h1>[@L[cds.tldleaf/[@D[gtld]@D]:all.page.h1]@L]</h1>
         <div id="sm-wrap">
@@ -123,11 +123,14 @@ name: testing
             watchButtonUnfollow: "[@L[cds.tldleaf/[@D[gtld]@D]:watch.header.button.unfollow]@L]",
             tldH1TagExists: $.trim('[@L[cds.tldleaf/[@D[gtld]@D]:all.page.h1]@L]').length > 0,
             redirectUrl: '[@T[link:<relative path="~/tlds/gtld.aspx"></relative>]@T]',
-            gTldPreRegPhaseDataJson: []
-
+            gTldPreRegPhaseDataJson: [],
+            icannLink:removeIcannLink()
           });
 
           domains.controls.gtldTemplatesClient.SetupWatch();
+        }
+        function removeIcannLink(){
+          $(".g-modal-content p a").replaceWith(function() { return $(this).contents(); });
         }
       });
     </script>
