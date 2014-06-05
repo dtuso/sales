@@ -37,7 +37,14 @@
       },
       "cdsLocation": "localization/sales/hosting/wordpress-hosting/en",
       "draft": {
-        "comments": "Prep for new build process"
+        "id": "5390f7a3f778fc21dc6e3f48",
+        "createdDate": "2014-06-05",
+        "createdBy": {
+          "fullName": "Avinash Peesari",
+          "username": "apeesari"
+        },
+        "jiraTicket": "FOS-20706",
+        "comments": "Updated miss spelled bing ad credit"
       }
     }
   }
