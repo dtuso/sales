@@ -1,0 +1,76 @@
+---
+location: sales/cce
+id: 5390fc80f778fc20e48dc06c
+name: FOS-21813
+comments: Created cce page
+---
+{% extends 'layouts/base.html' %} 
+{% block metahead %} 
+{% parent %} 
+  
+{% endblock %} 
+{% block body %}
+ <form method="post" data-url="[@T[link:<relative path="~/api/dpp/search/single"/>]@T]" action="[@T[link:<relative path="/domains/searchresults-new.aspx"/>]@T]" class="search-form" id="domain_search_form" style="margin: 0 auto 20px;">
+                <div class="searchBoxForm">  
+                <input type="text" name="domainToCheck" placeholder="[@L[cds.sales/gd/domains/domain-name-search:SalesHeaderPlaceholder]@L]" class="search-form-input" id="domain_search_input" autocomplete="off"  style="width:auto; border:none;outline:0;min-width: 530px;" />
+                <button type="submit" name="searchButton" data-ci="88002" class="btn btn-primary btn-search-form submitbtn">[@L[cds.sales/gd/domains/domain-name-search:SalesHeaderBtnText]@L]</button>
+                <div class="clearfix"></div>
+             </div>
+            </form>
+    <section class="main-banner">
+     <div class="main-banner-content l-main-container container">
+       <h2 class="main-banner-subtitle">[@L[fos.domain_offer:fos.domain_offer.ComingSoon]@L]</h2>
+       <div class ="coming-soon-box">
+            <div class="gd-left-image"></div>
+            <span class="plus-sign">+</span>
+            <div class="cce-right-image"></div>
+       </div>
+      </div>
+    </section>
+
+{% endblock %} 
+
+{% block footer %}
+<script>
+    $(function(){
+        $('.search-form').on('submit', function (e){
+            e.preventDefault();
+            $('button[name="searchButton"]', this).addClass('disabled');
+            var params = {
+                query:$(this).serialize(),
+                searchUrl:$(this).attr('data-url')
+            };
+            DomainSearch(params,function(err,NextStepUrl)
+            {
+                if(err == null )
+                {
+                    if(typeof NextStepUrl === 'undefined')
+                    {
+                        NextStepUrl = '[@T[link:<relative path="~/lenovo" />]@T]';
+                    }
+                window.location = NextStepUrl;
+                }
+                else{
+                    if(console != "undefined")
+                    console.log(err);
+                }
+            });
+        });
+    });
+    function DomainSearch(params, cb) {
+          $.ajax({
+            url: params.searchUrl,
+            type: 'POST',
+            data: params.query,
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+              var data = { Error: errorThrown, Success: false };
+              cb(errorThrown,null);
+            },
+            success: function (data) {
+              cb(null,data.NextStepUrl);
+            }
+          });
+    }
+
+</script>
+{% endblock %}

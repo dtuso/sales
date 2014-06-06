@@ -23,5 +23,7 @@
   "vps-config": "./hosting/vps-hosting-config/",
   "about-godaddy": "./newscenter/about-godaddy",
   "leaf-pages": "./tlds/leafpage",
-  "what-is-a-gtld": "./domains/what-is-a-gtld"
+  "what-is-a-gtld": "./domains/what-is-a-gtld",
+  "lenovo":"./lenovo/",
+  "cce":"./cce/"
 }
