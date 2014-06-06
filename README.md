@@ -47,6 +47,13 @@ do this in the terminal or shell:
 git remote add upstream https://github.secureserver.net/FOS-CDS-Pages/Sales.git
 ```
 
+```
+Tip: By default, when you clone a repository, Git will automatically create a remote called "origin" which
+points back to your forked version. You can change that to be whatever you want. For instance, some are changing it
+to be the same as their user name, which makes it easier to remember when pushing commits:
+git push clbrown master (instead of git push origin master)
+```
+
 Now that you have connection back to the originating repository, make sure you have the latest content:
 
 ```
