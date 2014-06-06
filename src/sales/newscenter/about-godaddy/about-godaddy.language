@@ -1,8 +1,8 @@
 ---
 location: localization/sales/newscenter/about-godaddy/en
-id: 5390ef5cf778fc21dc6e3f46
-name: FOS-21831
-comments: About Us customer profiles - replaceNews release updates.
+id: 53922e70f778fc0ee47e4a98
+name: FOS-21306 bug fixes round 1
+comments: News release updates.
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="NewsCenterAbout-AFinePortraitsVideo" />
@@ -369,9 +369,7 @@ Marketing Opportunities
 <phrase key="NewsCenterAbout-3-ContactPublicRelations" />
 Contact Public Relations
 <phrase key="NewsCenterAbout-71-EnoughAboutUsWhatBurningQuestionsAreOnYour" />
-If you're a member of the media email or call the appropriate PR team member below. If this is a support or billing question, please click
-<a href="http://support.godaddy.com/support">here</a> for our Customer Care Department.
-<strong>Thank you for your interest in GoDaddy.</strong>
+If you're a member of the media email or call the appropriate PR team member below. If this is a support or billing question, please click <a href="http://support.godaddy.com/">here</a> for our Customer Care Department. <strong>Thank you for your interest in GoDaddy.</strong>
 <phrase key="NewsCenterAbout-1-Name" />
 Name
 <phrase key="NewsCenterAbout-6-PleaseEnterAValidName" />
