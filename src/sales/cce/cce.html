@@ -1,8 +1,9 @@
 ---
 location: sales/cce
-id: 5390fc80f778fc20e48dc06c
-name: FOS-21813
+id:  5391f967f778fc0ee47e4a90
+name: FOS-21813 and fixed ie 7 issues
 comments: Created cce page
+cssVersionOverride: 2
 ---
 {% extends 'layouts/base.html' %} 
 {% block metahead %} 
@@ -19,10 +20,10 @@ comments: Created cce page
             </form>
     <section class="main-banner">
      <div class="main-banner-content l-main-container container">
-       <h2 class="main-banner-subtitle">[@L[fos.domain_offer:fos.domain_offer.ComingSoon]@L]</h2>
-       <div class ="coming-soon-box">
+       <h2 class="main-banner-subtitle">[@L[cds.sales/gd/cce:ComingSoon]@L]</h2>
+       <div class ="coming-soon-box" style="overflow: hidden;">
             <div class="gd-left-image"></div>
-            <span class="plus-sign">+</span>
+            <div class="plus-sign" style="float: left; width: 175px;"><span>+</span></div>
             <div class="cce-right-image"></div>
        </div>
       </div>
@@ -46,7 +47,7 @@ comments: Created cce page
                 {
                     if(typeof NextStepUrl === 'undefined')
                     {
-                        NextStepUrl = '[@T[link:<relative path="~/lenovo" />]@T]';
+                        NextStepUrl = '[@T[link:<relative path="~/cce" />]@T]';
                     }
                 window.location = NextStepUrl;
                 }

@@ -1,8 +1,9 @@
 ---
 location: sales/lenovo
-id: 5390f364f778fc20e48dc068
-name: FOS-21813
+id:  53920864f778fc0ee47e4a91
+name: FOS-21813 and fixed ie issues
 comments: Created lenovo page
+cssVersionOverride: 2
 ---
 {% extends 'layouts/base.html' %} 
 {% block metahead %} 
@@ -19,10 +20,10 @@ comments: Created lenovo page
             </form>
     <section class="main-banner">
      <div class="main-banner-content l-main-container container">
-       <h2 class="main-banner-subtitle secondary-color">[@L[fos.domain_offer:fos.domain_offer.ComingSoon]@L]</h2>
-       <div class ="coming-soon-box">        
+       <h2 class="main-banner-subtitle secondary-color">[@L[cds.sales/gd/lenovo:ComingSoon]@L]</h2>
+       <div class ="coming-soon-box" style="overflow: hidden;">        
             <div class="gd-left-image"></div>        
-            <span class="secondary-color plus-sign">+</span>
+            <div class="plus-sign" style="float: left; width: 140px;"><span class="secondary-color">+</span></div>
             <div class="lenovo-right-image"></div>       
        </div>
       </div>
