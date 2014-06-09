@@ -1,16 +1,16 @@
 ---
-location: sales/homepage/default.en.us
-id: 5384e2c9f778fc2a74c3bc3b
-locale: en-us
+location: sales/homepage/default.es.us
+id: 53908c22f778fc21dc6e3f31
+locale: es-us
 comments: Rotating HP Marquee
 name: FOS-20864
+url: http://dev-godaddy.com
 ---
 
 {% set include_topmarq =  "top_marquees/_" + locale + ".html" %}
 {% set include_domainbugs =  "domain_bugs/_" + locale + ".html" %}
 {% set include_pod =  "pods/_" + locale + ".html" %}
 {% set include_lowermarq =  "lower_marquees/_" + locale + ".html" %}
-{% set styles =  "css/" + locale + ".less" %}
 
 {% extends 'layouts/homepage.html' %}
 
