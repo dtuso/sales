@@ -1,8 +1,8 @@
 ---
 location: sales/ssl/ssl-certificates-config.aspx
-id:  5390cf95f778fc21dc6e3f3d
-name: FOS-20247
-comments: added redirect to landing page if config accessed directly
+id: 539626baf778fc1f708af221
+name: FOS-20847
+comments: added sitelock to config and fixed ie index of issue
 ---
 ##if(false)
 {% include 'modules/doc-block.html' %}
@@ -24,6 +24,40 @@ comments: added redirect to landing page if config accessed directly
     #hostingConfig .buttons{float:none;left:550px;top:-64px;}
     #disclaimers {margin:0px;}
     #hostingConfig .column-left {float:none;}
+    .column-left .site-lock-add{margin:10px 8px auto; display: block;width: 70%;}
+.column-left .site-lock-add>div{position:relative;padding:5px 43px;line-height:16px}
+.column-left .site-lock-add>div>span.sitelock-checkbox{background:url("[@T[link:<imageroot />]@T]/fos/lp/rebrand_config_sprite2.png") no-repeat -53px -159px;cursor:pointer;height:28px;position:absolute;width:34px;top:0;left:0}
+    .column-left .site-lock-add>div>span.active{background:url("[@T[link:<imageroot />]@T]/fos/lp/rebrand_config_sprite2.png") no-repeat 1px -160px}
+ #hostingConfig .tt-override{
+    background: none;
+    width: initial;
+    margin: auto;
+    position: relative;
+    border-bottom: 1px dotted #333;
+    float:left;
+    min-width: 194px;
+    margin-right: 5px;
+    }
+    span.ssl-tip-wide{
+    top: 16px;
+    left: 115px;
+    width:460px;
+    }
+     span.stlk-tip-wide{
+    top: 16px;
+    left: 75px;
+    width:460px;    
+    }
+    span.sitelk-add-snt{
+    float: left;
+    padding-right: 5px;
+    }    
+   .sitelock-sent-container{
+    min-width: 350px;
+    }
+    #colFiveDiv{
+    width: 415px;
+}
   </style>
   </head>
 <body>
@@ -109,13 +143,22 @@ comments: added redirect to landing page if config accessed directly
         <ul><li data-main=""></li></ul>
       </div>
     </div>
+     <div id="colFiveDiv" class="plan-type column-5"><span class="section-header">[@L[cds.sales/security/website-security-new:protect-from-hackers]@L]</span><br />
+      <div class="site-lock-add">
+        <div class="sitelock-sent-container">
+          <span class="sitelock-checkbox" id="siteLockCheckbox"></span>
+          <span class="sitelk-add-snt">[@L[cds.sales/security/website-security-new:add-site-lock]@L]</span>
+          <div class="g-toolTip tt-override">[@L[cds.sales/security/website-security-new:stlk-web-security]@L] 
+            <span class="ssl-tip-wide">                        
+                          [@L[fos.quickhelp:fos.quickhelp.SiteLock]@L]                        
+              </span>
 </div>
-<div class="buttons">
-  <a id="planConfigContinue" class="flt-btn-orng" href="">[@L[cds.sales/ssl/fosconfigssl:continue]@L]</a>
-  <div id="planConfigLoading" class="loading" style="display: none"></div>
-  <input type="hidden" name="planSelected" id="planSelected" value=""/>
-  <input type="hidden" name="mgrNumber" id="mgrNumber" value=""/>
-  <input type="hidden" name="clickOrigin" id="clickOrigin" value=""/>
+          <div>[@L[cds.sales/security/website-security-new:for-base-price-per-year]@L]</div> 
+        </div>
+          
+       
+       
+      </div>
 </div>
 <!-- Page Disclaimer -->
 <div id="disclaimers">
@@ -133,6 +176,14 @@ comments: added redirect to landing page if config accessed directly
     <div id="g-modal-overlay" class="g-modal-overlay" style="display:none;"></div>
 </div>
 </div>
+<div class="buttons">
+  <a id="planConfigContinue" class="flt-btn-orng" href="">[@L[cds.sales/ssl/fosconfigssl:continue]@L]</a>
+  <div id="planConfigLoading" class="loading" style="display: none"></div>
+  <input type="hidden" name="planSelected" id="planSelected" value=""/>
+  <input type="hidden" name="mgrNumber" id="mgrNumber" value=""/>
+  <input type="hidden" name="clickOrigin" id="clickOrigin" value=""/>
+</div>
+</div>
 <script type="text/javascript">
 var locale = '[@T[localization:<language full="true" />]@T]';
 var country = locale.split('-')[1] || 'US';
@@ -141,15 +192,25 @@ var premiumCountries = [
   "IT", "MY", "MX", "NL", "NZ", "PK", "PE", "PH", "PT", "SG",
   "ZA", "ES", "SE", "CH", "GB", "US"
 ];
-
+if (!Array.prototype.indexOf) {
+    Array.prototype.indexOf = function(obj, start) {
+         for (var i = (start || 0), j = this.length; i < j; i++) {
+             if (this[i] === obj) { return i; }
+         }
+         return -1;
+    }
+}
 var premiumIsAvailable = (premiumCountries.indexOf(country) !== -1);
 $(document).ready(function () {
 
    if(document.referrer.toLowerCase().indexOf("/ssl/ssl-certificates")<=0)
   {
-  window.location.assign('[@T[link:<relative linktype="SITEURL" path="~/ssl/ssl-certificates.aspx" secure="false"><param name="ci" value="9039" /></relative>]@T]');
+  window.location.assign('[@T[link:<relative linktype="SITEURL" path="~/ssl/ssl-certificates.aspx" secure="false"><param name="ci" value="87234" /></relative>]@T]');
   } 
 
+  $('.site-lock-add').click(function (e) {
+$(this).find('.sitelock-checkbox').toggleClass('active');
+});  
   var productQuery = getParameterByName('plan') || 'ssl_dlx_1';
   var managerQuery = getParameterByName('mgrshopper');
   var clickOrigin = getParameterByName('origin');
@@ -199,8 +260,12 @@ $(document).ready(function () {
 
   $('#planConfigContinue').click(function (e) {
     e.preventDefault();
+  if($("#siteLockCheckbox").hasClass("active"))
+  {
+  PlanConfig.addSiteLocktoCart();
+  }
     PlanConfig.addHostingtoCart();
-    window.scrollTo($('#freeDomain').scrollTop());
+   $('#freeDomain').animate({scrollTop:0}, 1);
   });
 
   $('.tld-input').click(function () {
@@ -281,6 +346,14 @@ var PlanConfig = {
         }
         processRemainingSSLData(data);
       }
+    });
+  },
+  addSiteLocktoCart: function () {
+    var url = '[@T[link:<relative path="/api/package/add/slp_protectmelp/83620/1/sitelock_Basic1Yr" parammode="explicit"/>]@T]';
+    ##if(isManager())
+    url += '?mgrshopper=' +  mgrNumber;
+    ##endif
+    $.getJSON(url, function (data) {
     });
   },
   addHostingtoCart: function () {
