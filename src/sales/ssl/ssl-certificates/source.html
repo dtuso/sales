@@ -1,13 +1,15 @@
 ---
 location: sales/ssl/ssl-certificates.aspx
-id: 53710c35f778fc170486157a
-name: FOS-20836
+id: 53960c81f778fc1f708af220
+name: FOS-21288
+assetPath: false
 ---
 {% extends 'layouts/base.html' %}
-
 {% block metahead %}
   {% parent %}
   <style type="text/css">
+  {% less %}
+  {% include 'css/styles.less' %}
   .select-box-body label span.duration {
       text-align: left;
       width: 4em;
@@ -23,6 +25,7 @@ name: FOS-20836
       color: #666;
       text-align: center;
     }
+    {% endless %}
   </style>
 {% endblock %}
 
@@ -189,7 +192,9 @@ name: FOS-20836
           <div class="row tab-content" name="features">
             <div class="col-xs-12">
               <div class="grid-column tab-content-column tab-content-right tab-content-why-gd-ssl">
+                ##if(activeLanguageAny(en))
                 <i class="ico-sslc ico-sslc-ota-logo"></i>
+                ##endif
                 <h2 class="tab-content-title">[@L[cds.sales/gd/ssl/ssl-certificates:MainPageContentTabContent1title]@L]</h2>
                 <p>[@L[cds.sales/gd/ssl/ssl-certificates:MainPageContentTabContent1text1]@L]</p>
                 <p>[@L[cds.sales/gd/ssl/ssl-certificates:MainPageContentTabContent1text2]@L]</p>
