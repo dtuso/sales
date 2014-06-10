@@ -1,8 +1,8 @@
 ---
 location: sales/newscenter/about-godaddy.aspx
-id: 53922e90f778fc0ee47e4a99
-name: FOS-21306 bug fixes round 1
-comments: News release updates.
+id: 53976e4ef778fc2bd88ef4ce
+name: FOS-20951
+comments: Updates to News Releases on India LP
 url: http://www.dev-godaddy.com/newscenter/about-godaddy.aspx
 cssVersionOverride: 4a
 pageJsVersionOverride: 2
@@ -12,6 +12,13 @@ pageJsVersionOverride: 2
 
 {% block metahead %}
   {% parent %}
+  <style>
+  html[lang="en-IN"] #section-news-releases.section .summary h3.integratedCompaign {color:white;position: relative;top: -97px;width: 289px;font-weight: bolder;font-size: 23px; }
+  html[lang="en-IN"] #section-news-releases.section .summary h3.gujaratBased {color:black;position: relative;top: -126px;width: 335px;font-weight: bolder;font-size: 23px; }
+  html[lang="en-IN"] #section-news-releases.section .summary h3.customerGrowth {color:black;position: relative;top: -75px;font-weight: bolder;font-size: 23px; }
+  html[lang="en-IN"] #section-news-releases.section .summary h3.paymentAndRemittance {color:white;position: relative;top: -99px;width: 316px;font-weight: bolder;font-size: 23px; }
+  
+  </style>
 {% endblock %}
 
 
@@ -34,54 +41,65 @@ pageJsVersionOverride: 2
       <div class="inner">
         <h2>[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-2-OurStory]@L]</h2>
         <div class="team">
-          <h2>[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-2-OurTeam]@L]</h2>
+          <h2 style="color:white;">[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-2-OurTeam]@L]</h2>
           <p>
             [@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-73-WhoWeAreAndWhatWeDoNearlyAsOld]@L]</p>
           </div>
         </div>
       </div>
 
-      ##if(countrySiteAny(in) && activeLanguageAny(en))
-      <div id="section-news-releases" class="section news news-releases">
-        <div class="inner">
-          <h2>News Releases</h2>
-          <div class="yui3-g">
-            <div class="yui3-u-1-4">
-              <div class="yui3-c release" data-link="/news/article/customer-growth-spikes-86-as-godaddy-hits-1-year-mark-in-india.aspx?ci=88480">
-                <div class="summary">
-                  <h3>Customer Growth Spikes 86% as GoDaddy Hits 1-Year Mark in India</h3>
-                  <div class="date">August 29, 2013</div>
-                </div>
-              </div>
+       ##if(countrySiteAny(in) && activeLanguageAny(en))
+        <div id="section-news-releases" class="section news news-releases">
+            <div class="inner">
+                <h2>News Releases</h2>
+                <div class="yui3-g">
+                   <div class="yui3-u-1-2 news-release-white">
+                        <div class="yui3-c" data-link="/news/article/godaddy-india-unveils-its-new-integrated-campaign-featuring-superstar-mithun-chakraborty.aspx?ci=90987">
+                          <div class="solazy img preview" data-sl-src="[@T[link:<imageroot />]@T]fos/newscenter/about_godaddy/img/news-releases/thumbnail-mithun.jpg"></div>
+                            <div class="summary">
+                                <h3 class="integratedCompaign">GoDaddy India Unveils Its New Integrated Campaign Featuring Superstar Mithun Chakraborty</h3>                                
+                                <div class="date">MARCH 20, 2014</div>
+                            </div>
+                        </div>
+                    </div>
+                  <div class="yui3-u-1-2 news-release-white">
+                        <div class="yui3-c" data-link="http://in.godaddy.com/news/article/godaddy-enables-gujarat-based-manufacturer-to-reach-customers-globally.aspx?ci=90988">
+                          <div class="solazy img preview" data-sl-src="[@T[link:<imageroot />]@T]fos/newscenter/about_godaddy/img/news-releases/thumbnail-gujarat-based.jpg"></div>
+                            <div class="summary">
+                                <h3 class="gujaratBased">GoDaddy Enables Gujarat-Based Manufacturer To Reach Customers Globally</h3>                                
+                                <div class="date" style="color:black;">APRIL 2, 2014</div>
+                            </div>
+                        </div>
+                    </div>
+                  <div class="yui3-u-1-2 news-release-white" style="background-color: white;width:25%;">
+                        <div class="yui3-c" data-link="http://in.godaddy.com/news/article/customer-growth-spikes-86-as-godaddy-hits-1-year-mark-in-india.aspx?ci=90990">                          
+                            <div class="summary">
+                                <h3 class="customerGrowth">Customer Growth Spikes 86% as GoDaddy Hits 1-Year Mark in India</h3>                                
+                                <div class="date" style="color:black;">AUG 29, 2014</div>
+                            </div>
+                        </div>
+                    </div>
+                  <div class="yui3-u-1-2 news-release-white">
+                        <div class="yui3-c" data-link="/news/article/godaddy-enables-payment-remittance-company-suvidhaa-to-establish-global-reach.aspx?ci=90989">
+                          <div class="solazy img preview" data-sl-src="[@T[link:<imageroot />]@T]fos/newscenter/about_godaddy/img/news-releases/thumbnail-company-suvidhaa.jpg"></div>
+                            <div class="summary">
+                                <h3 class="paymentAndRemittance">GoDaddy Enables Payment & Remittance Company Suvidhaa To Establish Global Reach</h3>                                
+                                <div class="date">MAY 19, 2014</div>
+                            </div>
+                        </div>
+                    </div>
+                  <div class="yui3-u-1-4">
+                        <div class="yui3-c view-more" data-link="releases.aspx?ci=90991">
+                            <div class="summary">
+                                <span class="title">View More</span>
+                                <div>View a list of past
+                                    <br />news releases</div>
+                            </div>
+                        </div>
+                    </div>
             </div>
-            <div class="yui3-u-1-4">
-              <div class="yui3-c release" data-link="/news/article/go-daddy-india-growth-beats-expectations.aspx?ci=88479">
-                <div class="summary">
-                  <h3>Go Daddy India Growth Beats Expectations</h3>
-                  <div class="date">August 8, 2013</div>
-                </div>
-              </div>
-            </div>
-            <div class="yui3-u-1-4">
-              <div class="yui3-c release" data-link="/news/article/go-daddy-targets-india-as-a-priority-market-for-its-global-expansion.aspx?ci=88478">
-                <div class="summary">
-                  <h3>Go Daddy Targets India as a Priority Market for Its Global Expansion</h3>
-                  <div class="date">June 20, 2013</div>
-                </div>
-              </div>
-            </div>
-            <div class="yui3-u-1-4">
-              <div class="yui3-c release" data-link="/news/article/godaddy-announces-cup-of-coffee-campaign-for-smbs-in-india.aspx?ci=88477">
-                <div class="summary">
-                  <h3>GoDaddy Announces 'Cup of Coffee' Campaign for SMBs in India</h3>
-                  <div class="date">March 22, 2013</div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-      ##endif
+        ##endif
 
       ##if(activeLanguageAny([es-ar], [es-cl], [es-co], [es-mx], [es-pe], [es-ve], [pt-br]))
       <div id="section-news-releases" class="section news news-releases latam-news-releases">
@@ -118,7 +136,7 @@ pageJsVersionOverride: 2
 
           <div id="section-godaddy-is" class="section  godaddy-is">
             <div class="inner">
-              <h2>[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-3-GoDaddyIs]@L]</h2>
+              <h2 style="color:black">[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-3-GoDaddyIs]@L]</h2>
               <div class="yui3-g">
                 <div class="yui3-u-1-3 fact">
                   <div class="yui3-c">
