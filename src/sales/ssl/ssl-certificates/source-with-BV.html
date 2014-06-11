@@ -1,6 +1,6 @@
 ---
 location: sales/ssl/ssl-certificates.aspx
-id: 53989368f778fc37a0822211
+id: 539752bff778fc2bd88ef4cd
 name: FOS-21288
 assetPath: false
 ---
@@ -47,6 +47,11 @@ assetPath: false
     });
 
   </script>
+
+  ##if(activeLanguageAny(en))
+  {% include '_load-reviews-js.html' %}
+  ##endif
+
 {% endblock %}
 
 {% block body %}
@@ -70,7 +75,7 @@ assetPath: false
     </section>
     <!-- End main-banner -->
 
-    {% include '_main-tabs-no-BV.html' %}
+    {% include '_main-tabs.html' %}
 
 
     <!-- Start main-tabs panes -->
@@ -300,6 +305,21 @@ assetPath: false
 
       </div>
 
+      ##if(activeLanguageAny(en))
+      <div class="tab-pane" id="reviews">
+        <section class="tab-content-top-spacing">
+          <div class="container l-main-container">
+            <div class="row tab-content">
+            <div id="BVRRContainer"><p class="bv-loading">Loading...</p></div>
+            [@P[userControl:<Data location="~/Shared/Tabs/controls/BVReviewsNoJS.ascx"><Parameters><Parameter key="ProductId" value="ssl-certificates" /><Parameter key="ReviewNumber" value="4" /></Parameters></Data>]@P]
+            </div>
+          </div>
+        </section>
+      </div>
+      ##endif
+
+
+
     </div>
     <!-- End main-tabs panes -->
     <section class="container l-main-container content-disclaimer">
@@ -321,5 +341,9 @@ assetPath: false
         </div>
       </div>
     </div>
+
+    ##if(activeLanguageAny(en))
+    {% include '_login-modal.html' %}
+    ##endif
 
 {% endblock %}
