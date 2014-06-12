@@ -1,3 +1,9 @@
+### ***UPDATE: PLEASE READ!***
+
+All package dependencies (from package.json) are now included (committed) with the repository. Please DO NOT run any command that re-installs/downloads these dependencies, such as ```npm install``` or ```node update```. This will cause your node_modules folder to be out of sync with the repo and will fool you into needing to commit that folder. DO NOT commit any changes to the node_modules folder, just ignore it.
+
+---
+
 **Full documenation (under construction) can/will be found here:**
 
 https://github.secureserver.net/FOS-CDS-Pages/Sales/wiki/_pages
