@@ -1,7 +1,7 @@
 ---
 location: localization/sales/newscenter/about-godaddy/en
-id: 53922e70f778fc0ee47e4a98
-name: FOS-21306 bug fixes round 1
+id: 5399ecedf778fc1190e08c1a
+name: Phone Number change for Kari Amarosso
 comments: News release updates.
 ---
 {% include 'modules/doc-block.html' %}
@@ -109,7 +109,7 @@ Senior Vice President of Applications
 <phrase key="NewsCenterAbout-2-BobParsons" />
 Bob Parsons
 <phrase key="NewsCenterAbout-4-ExecutiveChairmanFounderGoDaddy" />
-Executive Chairman<br />&amp; Founder GoDaddy
+Founder GoDaddy
 <phrase key="NewsCenterAbout-2-ChiefExecutiveOfficer" />
 Chief Executive<br />Officer
 <phrase key="NewsCenterAbout-2-GregoryMondre" />
@@ -234,7 +234,7 @@ Steven earned an M.B.A. from Stanford and a B.A. in physics from University of N
 <phrase key="NewsCenterAbout-39-AfterHoursStevenServesAsPresidentOfTheBoard" />
 After hours, Steven serves as President of the Board of the Bay Area Glass Institute, a non-profit glass studio, and enjoys spending time with his wife Allison and their son, Jackson, at many sports and arts events.
 <phrase key="NewsCenterAbout-3-ExecutiveChairmanFounderGoDaddy" />
-Executive Chairman &amp; Founder<br />GoDaddy
+Founder<br />GoDaddy
 <phrase key="NewsCenterAbout-40-BobParsonsIsASerialEntrepreneurWhoSoldHis" />
 Bob Parsons is a serial entrepreneur. He sold his first company to Intuit, Inc. in 1994. Three years later Parsons started Jomax Technologies, renaming the company GoDaddy in 1999. In 2000, GoDaddy became an ICANN-accredited domain name registrar.
 <phrase key="NewsCenterAbout-32-TodayGoDaddyIsTheWorldSLargestProviderOf" />
@@ -545,7 +545,7 @@ Awards, Social Responsibility & Sponsorships
 <phrase key="NewsCenterAbout-21306-kamarosso" />
 Kari Amarosso
 <phrase key="NewsCenterAbout-21306-kamarosso-Phone" />
-+1.602.204.4633
++1.602.420.4633
 <phrase key="NewsCenterAbout-21306-kpfeffer-Department" />
 Sponsorships & NASCAR
 <phrase key="NewsCenterAbout-21306-kpfeffer" />
