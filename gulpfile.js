@@ -20,7 +20,6 @@ try {
   var path      = require('path');
   var fs        = require('fs');
   var argv      = require('minimist')(process.argv.slice(2));
-  var notifier  = require('./lib/updater.js');
   var getData   = require('./lib/project-data.js');
   var extras    = require('./lib/swig-extras');
 
@@ -164,5 +163,3 @@ gulp.task('watch', function() {
 gulp.task('build', ['html', 'language', 'styles', 'scripts', 'images']);
 gulp.task('css-build-deploy', ['styles', 'assets-deploy']);
 gulp.task('default', ['watch']);
-
-notifier();
