@@ -81,17 +81,7 @@ sudo npm install -g gulp
 
 #### Package Dependencies
 
-Before you do anything, it is important that you install any local dependencies associated to this repository via the ```package.json``` file.
-Dependencies are installed via the node package manager, ```npm``` so you have to make sure you have node installed.
-See [Node Website](http://www.nodejs.org/) for more information.
-
-Once you've ensured node is installed, open your project folder in terminal or the git shell. Then type this command:
-
-```
-npm install
-```
-
-This will find and install any dependencies you have listed in the ```package.json``` file.
+Package dependencies are now included with the repository. Do NOT run ```npm install``` or ```node update```
 
 Tasks
 =====
