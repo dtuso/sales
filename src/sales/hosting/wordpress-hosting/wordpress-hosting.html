@@ -1,7 +1,9 @@
 ---
 location: sales/hosting/wordpress-hosting.aspx
-id: 53925401f778fc0ee47e4ac4
-name: FOS-21905
+id:   5399dd87f778fc1190e08c17
+name: FOS-20797
+comments: added styles to fix dropdown for de and ru
+cssVersionOverride: 2
 ---
 {% extends 'layouts/base.html' %}
 
@@ -10,17 +12,7 @@ name: FOS-21905
     {% parent %}
 
     <style>
-      .sale-right { float:right; }
-      .vat-tax-message { line-height:16px;width:302px;margin-bottom:5px;margin-top:-3px; }
-      ##if(activeLanguageAny([en-my],[en-ph],[en-sg]))
-        .tab-content-overview-bg-wp {
-          background-image: url("[@T[link:<imageroot />]@T]fos/201401/wp-hosting/img/bg-misc-banner-wp-hosting-ap.jpg");
-        }
-      ##elseif(activeLanguageAny([en-in]))
-        .tab-content-overview-bg-wp {
-          background-image: url("[@T[link:<imageroot />]@T]fos/201401/wp-hosting/img/bg-misc-banner-wp-hosting-in.jpg");
-        }
-      ##endif
+
       ##if(activeLanguageAny(en))
       ##else
         .featured-product .website-builder {

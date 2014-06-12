@@ -25,5 +25,6 @@
   "leaf-pages": "./tlds/leafpage",
   "what-is-a-gtld": "./domains/what-is-a-gtld",
   "lenovo":"./lenovo/",
-  "cce":"./cce/"
+  "cce":"./cce/",
+  "wordpress-hosting": "./hosting/wordpress-hosting/"
 }
