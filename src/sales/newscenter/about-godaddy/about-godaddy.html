@@ -1,24 +1,17 @@
 ---
 location: sales/newscenter/about-godaddy.aspx
-id: 53978d04f778fc2bd88ef4d1
-name: FOS-22028
-comments: Updates to News Releases on India LP(Added missing div tag)
+id: 539a2243f778fc1190e08c29
+name: FOS-20951
+comments: Moving css style block to css File
 url: http://www.dev-godaddy.com/newscenter/about-godaddy.aspx
-cssVersionOverride: 4a
+cssVersionOverride: 5
 pageJsVersionOverride: 2
 ---
 
 {% extends 'layouts/base.html' %}
 
 {% block metahead %}
-  {% parent %}
-  <style>
-  html[lang="en-IN"] #section-news-releases.section .summary h3.integratedCompaign {color:white;position: relative;top: -97px;width: 289px;font-weight: bolder;font-size: 23px; }
-  html[lang="en-IN"] #section-news-releases.section .summary h3.gujaratBased {color:black;position: relative;top: -126px;width: 335px;font-weight: bolder;font-size: 23px; }
-  html[lang="en-IN"] #section-news-releases.section .summary h3.customerGrowth {color:black;position: relative;top: -75px;font-weight: bolder;font-size: 23px; }
-  html[lang="en-IN"] #section-news-releases.section .summary h3.paymentAndRemittance {color:white;position: relative;top: -99px;width: 316px;font-weight: bolder;font-size: 23px; }
-  
-  </style>
+  {% parent %}  
 {% endblock %}
 
 
@@ -206,7 +199,7 @@ pageJsVersionOverride: 2
           </div>
         </div>
 
-        <div id="section-office" class="section  office">
+        <div id="section-office" class="section  office" style="background-position: top;">
           <div class="inner">
             <div class="text">
               [@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-40-LikeAStanfordDormRoomOnSteroidsOurSunnyvale]@L]</div>
@@ -838,7 +831,7 @@ pageJsVersionOverride: 2
                       </div>
                       <div class="inner">
                                   <h2 style="color:#333;">[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-2-OurCustomers]@L]</h2>
-                                  <div class="summary" style="width:375px">
+                                  <div class="summary kathyF" style="width:375px;">
                                         <div class="name">[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-cust-KathyName]@L]</div>
                                         <div class="company">[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-cust-KathyBusiness]@L]</div>
                           <p>
@@ -880,7 +873,7 @@ pageJsVersionOverride: 2
                       </div>
                       <div class="inner">
                         <h2>[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-2-OurCustomers]@L]</h2>
-                        <div class="summary">
+                        <div class="summary leahW">
                           <div class="name">[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-2-LeahWilliams]@L]</div>
                           <div class="company">[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-3-RubyMaeJewelry]@L]</div>
                           <div class="summary-resize">
@@ -1228,7 +1221,7 @@ pageJsVersionOverride: 2
                         <ul class="mediaList">
                           <li class="mediaInfo">
                             <div class="media-subtitle">[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-21306-Product]@L]</div>
-                            <ul>
+                            <ul style="min-width:0;">
                               <li>
                                 <h5 class="media-department-title">
                                   [@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-21306-spenner-Department]@L]
