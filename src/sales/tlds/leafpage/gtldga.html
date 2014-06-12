@@ -1,7 +1,7 @@
 ---
 location: sales/tlds/gtldga.aspx
-id: 536bb5d6f778fc3434d3cb6a
-name: testing
+id: 5399f387f778fc0a602c0a10
+name: FOS-22017
 ---
 {% extends 'layouts/base.html' %}
 
@@ -121,6 +121,7 @@ name: testing
             gTldPreRegPhaseDataJson: [@P[webControl:<Data assembly="App_Code" type="Domains.Controls.GTldPhaseDataJson"></Data>]@P],
             redirectUrl: '[@T[link:<relative path="~/tlds/gtld.aspx"></relative>]@T]',
             tldH1TagExists: $.trim('[@L[cds.tldleaf/[@D[gtld]@D]:all.page.h1]@L]').length > 0,
+            tldUKLogo:'[@T[link:<imageroot />]@T]tldleafpages/uk/fos/[@L[cds.tldleaf/uk:all.gtld.logo]@L]'
             icannLink:removeIcannLink()
           });
 
