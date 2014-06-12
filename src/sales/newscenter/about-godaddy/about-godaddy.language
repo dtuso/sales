@@ -1,7 +1,7 @@
 ---
 location: localization/sales/newscenter/about-godaddy/en
-id: 5399e359f778fc1190e08c18
-name: Text change 
+id: 5399ecedf778fc1190e08c1a
+name: Phone Number change for Kari Amarosso
 comments: News release updates.
 ---
 {% include 'modules/doc-block.html' %}
@@ -545,7 +545,7 @@ Awards, Social Responsibility & Sponsorships
 <phrase key="NewsCenterAbout-21306-kamarosso" />
 Kari Amarosso
 <phrase key="NewsCenterAbout-21306-kamarosso-Phone" />
-+1.602.204.4633
++1.602.420.4633
 <phrase key="NewsCenterAbout-21306-kpfeffer-Department" />
 Sponsorships & NASCAR
 <phrase key="NewsCenterAbout-21306-kpfeffer" />
