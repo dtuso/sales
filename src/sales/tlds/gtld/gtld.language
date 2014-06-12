@@ -1,6 +1,6 @@
 ---
 location: localization/sales/gd/tlds/gtld/en
-id: 538cf621f778fc0f9c23df07
+id: 523094378326f117447feb26
 name: FOS-21237
 comments: Update header slider for 6/10
 ---
@@ -353,7 +353,10 @@ Why are there new TLDs?
 <p>The short answer is, to increase your web naming options.</p><p>With .COM nearing its 30th birthday, many of the best and most valuable domain names have already been registered. This has long been a frustration for business owners, forcing them to make up names for their businesses just to find an available domain name.</p><p>With the introduction of new <strong>gTLDs</strong>, you have a fresh chance to get the domain name you really want. Because many of the new domain extensions are specific to particular industries, interests, or locations your web address can now tell people exactly what you do (or where you do it). This makes the new domains easy to remember and you easier to find online.</p>
 <phrase key="FaqList3Title" />
 Will there be domains in languages other than English?
-
+<phrase key="FaqList3Item1" />
+<p><i>Oui</i>. Thanks to the new <strong>gTLDs</strong>, speakers of nearly three dozen languages – including Arabic, Chinese, and languages based on the Cyrillic alphabet – will have their own domain extensions.</p><p>This will be a huge boon for companies that promote their products in countries where these languages are spoken.</p>
+<phrase key="FaqList4Title" />
+How much will the new domains cost?
 <phrase key="FaqList4Item1" />
 Prices will vary for the new <strong>gTLDs</strong> and we’ll publish pricing information for the new domains on <a target="_blank" href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="85488" /></relative>]@T]">www.godaddy.com/newdomains </a>as soon as it’s available. For many of the new domains, pricing hasn’t been set.
 <phrase key="FaqList5Title" />
