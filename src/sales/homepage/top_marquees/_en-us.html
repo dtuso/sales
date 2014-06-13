@@ -1,35 +1,5 @@
-<!-- start-css-elevate -->
-<style>
-{% less %}
-div.gdhp-marquee-slider{width:100%;}
-div.gdhp-marquee-slider>div.gd-swipe-bottom-nav{height:0px;position:relative;top:-35px}
-div.gdhp-marquee-slider>div.gd-swipe-bottom-nav li.active a{background:#70ac00;color:#70ac00}
-div.gdhp-marquee-slider>div.gd-swipe-bottom-nav li a{background:#dadada;color:#dadada}
-{% endless %}
-</style>
-<!-- end-css-elevate -->
-<div class="gd-nav-container gdhp-marquee-slider">
-  <div class="gd-swipe" data-gd-swipe='{"auto":6000,"pauseOnHover":true}'>
-    <div class="gd-swipe-wrap">
-      {% include "marquee_builds/en/_en-us_aleworks.html" %}
-      {% include "marquee_builds/en/_en-us_orangeIpad.html" %}
-      {% include "marquee_builds/en/_en-us_yourtalent.html" %}
-    </div>
-  </div>
-  <a href="#" data-slide="prev" class="arrow-left" id="headerPrev" data-ci="84382" style="display:none"></a>
-  <a href="#" data-slide="next" class="arrow-right" id="headerNext" data-ci="84383" style="display:none"></a>
-  <div class="gd-swipe-bottom-nav"></div>
-</div>
-      <div class="modal fade videoModal js-gdhpclick" data-url="video-close" id="myVideoModal">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="modal-header-close close" data-dismiss="modal" aria-hidden="true">&times;</button>
-          </div>
-          <div class="modal-body">
-            <iframe width="854" height="480" src="" autoplay scrolling="no" frameborder="0" allowfullscreen>
-            </iframe>
-          </div>
-        </div>
-      </div>
-    </div>
+##if(targetMessageTagAny(sales_hp,sales_hp_marquee_2014jun_dbp))
+  [@P[tmsdocument:<data interactionpoint="sales_hp"><MessageTags><MessageTag>sales_hp_marquee_2014jun_dbp</MessageTag></MessageTags></data>]@P]
+##else
+{% include "marquee_builds/en/_en-us_dollarWSB-ManagedWP.html" %}
+##endif
