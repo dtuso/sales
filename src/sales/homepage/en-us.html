@@ -27,6 +27,16 @@ name: FOS-20864
 {% endblock %}
 {% block customjs %}
 {% jsminify %}
+  $('.gdhp-top-banner-3').bind('click',function(event){
+    var clientX = event.clientX;
+    var center = document.getElementById("middle-bar");
+    rect = center.getBoundingClientRect();
+    if(clientX < rect.left){
+      window.location.href='[@T[link:<relative path="/hosting/website-builder.aspx"><param name="ci" value="91095" /></relative>]@T]';
+    } else {
+      window.location.href='[@T[link:<relative path="/hosting/wordpress-hosting.aspx"><param name="ci" value="91094" /></relative>]@T]';
+    }
+  });
   $('body').on('click','.js-gdhpclick',function(event){
       var $clickedElement = $(event.currentTarget);
       var $clickedUrl = $clickedElement.attr('data-url'); 
@@ -45,24 +55,5 @@ name: FOS-20864
           window.location.href=$clickedUrl;
       }
     });
-    var hpLoadVideo = 0;
-    var autoplay = '\&autoplay=1';
-    var vidLocation = "div.gdhp-top-banner-3";
-    $(vidLocation).mouseenter(function() {
-      if(hpLoadVideo != 1)
-        {
-          hpLoadVideo = 1;
-          var src ='//www.youtube.com/embed/vo2lVSrA_88?html5=1&rel=0';
-          $('#myVideoModal iframe').attr('src',src);
-          $('#myVideoModal').on('hidden.bs.modal', function () {          
-            $('#myVideoModal iframe').removeAttr('src');
-            $('#myVideoModal iframe').attr('src',src);
-          })
-          $('#myVideoModal').on('show.bs.modal', function () {          
-            $('#myVideoModal iframe').attr('src', src + autoplay);
-          })
-        }
-    });
-
 {% endjsminify %}
 {% endblock %} 
