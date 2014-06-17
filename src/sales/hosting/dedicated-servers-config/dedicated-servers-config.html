@@ -1,0 +1,750 @@
+---
+location: sales/hosting/dedicated-servers-config.aspx
+id:  539b7b9cf778fc15606dbb87
+name: FOS-1310
+---
+{% extends 'layouts/config-base.html' %}
+
+{% block steps %}
+                        <form action="" method="get" id="configForm">
+                            <div class="config-step medium-margin-top-step backup">
+                                <span class="step-ribbon blue-step-ribbon step-number-text">[@L[cds.sales/gd/hosting/dedicated-servers-config:backupPlanTitle]@L]</span>
+                                <h2>[@L[cds.sales/gd/hosting/dedicated-servers-config:title0]@L]</h2>
+                                <p class="config-lead orange-text">[@L[cds.sales/gd/hosting/dedicated-servers-config:subtitle0]@L]</p>
+                                <div class="config-product-wrapper config-product-ds" id="ftpsolution">
+                                    <div>
+                                        <h3 class="product-name">[@L[cds.sales/gd/hosting/dedicated-servers-config:list0title0]@L]</h3>
+                                        <ul class="product-options" id="ftpOptions">
+                                        </ul> 
+                                    </div>
+                                </div>
+                                <!-- /End Product -->
+                                <div class="config-product-wrapper config-product-last config-product-ds" id="managedbackup">
+                                    <div>
+                                        <h3 class="product-name">[@L[cds.sales/gd/hosting/dedicated-servers-config:list1title0]@L]</h3>
+                                        <ul class="product-options" id="managedbackupOptions">
+                                        </ul> 
+                                    </div>
+                                </div>
+                                <!-- /End Product -->
+                            </div>
+                            <div class="config-step-box-shadow backup"></div>
+                            <div data-ci="90996" class="config-step-break move backup" data-scroll=".box2">
+                                <span class="icon-down"></span>
+                            </div>
+
+                            <div class="config-step medium-margin-top-step box2">
+                                <span class="step-ribbon orange-step-ribbon js-step2 step-number-text">[@L[cds.sales/gd/hosting/dedicated-servers-config:bandwidthTitle]@L]</span>
+                                <h2>[@L[cds.sales/gd/hosting/dedicated-servers-config:title1]@L]</h2>
+                                <p class="config-lead orange-text">[@L[cds.sales/gd/hosting/dedicated-servers-config:subtitle1]@L]</p>
+                                <div class="config-product-wrapper config-product-ds" id="bandwidth">
+                                    <div>
+                                        <h3 class="product-name">[@L[cds.sales/gd/hosting/dedicated-servers-config:list2title0]@L]</h3>
+                                        <ul class="product-options" id="bandwidthOptions">
+                                        </ul> 
+                                    </div>
+                                </div>
+                                <!-- /End Product -->
+                            </div>
+                            <div class="config-step-box-shadow"></div>
+                            <div data-ci="90997" class="config-step-break move" data-scroll=".box3">
+                                <span class="icon-down"></span>
+                            </div>
+
+
+                            <div class="config-step large-margin-top-step box3" >
+                                <span class="step-ribbon blue-step-ribbon step-number-text">[@L[cds.sales/gd/hosting/dedicated-servers-config:controlPanelTitle]@L]</span>
+                                <h3 class="product-name nocontrolpanel">[@L[cds.sales/gd/hosting/dedicated-servers-config:changePlan]@L]</h3>
+                                <div class="controlpanel">
+                                  <h2>[@L[cds.sales/gd/hosting/dedicated-servers-config:title4]@L]</h2>
+                                  <p class="config-lead orange-text">[@L[cds.sales/gd/hosting/dedicated-servers-config:subtitle4]@L]</p>
+                                </div>
+                                <div class="config-product-wrapper config-product-ds controlpanel" >
+                                  <div class="config-product-wrapper config-product-ds ">
+                                    <div>
+                                        <h3 class="product-name windows">[@L[cds.sales/gd/hosting/dedicated-servers-config:list4title0]@L]</h3>
+                                        <ul class="product-options product-options-ds" id="controlpanelOptions">
+                                        </ul> 
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- /End Product -->
+                            </div>
+                            <div class="config-step-box-shadow assistedservice"></div>
+                            <div data-ci="90998" class="config-step-break move " data-scroll=".box4">
+                                <span class="icon-down"></span>
+                            </div>
+
+
+                            <div class="config-step large-margin-top-step box4">
+                              <span class="step-ribbon red-step-ribbon step-number-text">[@L[cds.sales/gd/hosting/dedicated-servers-config:msSqlPlanTitle]@L]</span>
+                                <h3 class="product-name nosql">[@L[cds.sales/gd/hosting/dedicated-servers-config:changeWindowsPlan]@L]</h3>
+                                <div class="sql">
+                                  <h2>[@L[cds.sales/gd/hosting/dedicated-servers-config:msSQLTitle]@L]</h2>
+                                  <p class="config-lead orange-text windows">[@L[cds.sales/gd/hosting/dedicated-servers-config:msSQLSubTitle]@L]</p>
+                                </div>
+                                <div class="config-product-wrapper config-product-ds sql">
+                                    <div>
+                                        <ul class="product-options product-options-ds" id="sqlOptions">
+                                        </ul>
+                                        <ul class="product-no-options product-options-ds" id="sqlOptions">
+                                            <li>
+                                                <input type="radio" data-addon="" data-price="0" value="" disabled="true">
+                                                <span class="product-desc"> [@L[cds.sales/gd/hosting/dedicated-servers-config:sqlEnterpriseCall]@L] </span>
+                                                <span></span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- /End Product -->
+                            </div>
+                            <div class="config-step-box-shadow "></div>
+                            <div data-ci="91000" class="config-step-break move " data-scroll=".box5">
+                                <span class="icon-down"></span>
+                            </div>
+
+                            <div class="config-step large-margin-top-step box5 " >
+                                <span class="step-ribbon orange-step-ribbon step-number-text">[@L[cds.sales/gd/hosting/dedicated-servers-config:firewallPlanTitle]@L]</span>
+                                <h2>[@L[cds.sales/gd/hosting/dedicated-servers-config:firewallTitle]@L]</h2>
+                                <p class="config-lead orange-text">[@L[cds.sales/gd/hosting/dedicated-servers-config:firewallSubTitle]@L]</p>
+                                <div class="config-product-wrapper config-product-ds">
+                                    <div>
+                                        <ul class="product-options product-options-ds" id="firewallOptions">
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- /End Product -->
+                            </div>
+                            <div class="config-step-box-shadow "></div>
+                            <div data-ci="91001" class="config-step-break move " data-scroll=".box6">
+                                <span class="icon-down"></span>
+                            </div>
+
+                            <div class="config-step large-margin-top-step box6">
+                              <span class="step-ribbon red-step-ribbon step-number-text">[@L[cds.sales/gd/hosting/dedicated-servers-config:raidPlanTitle]@L]</span>
+                                <div class="">
+                                  <h2>[@L[cds.sales/gd/hosting/dedicated-servers-config:raidTitle]@L]</h2>
+                                  <p class="config-lead orange-text windows">[@L[cds.sales/gd/hosting/dedicated-servers-config:raidSubTitle]@L]</p>
+                                </div>
+                                <div class="config-product-wrapper config-product-ds ">
+                                    <div>
+                                        <ul class="product-options product-options-ds" id="raidOptions">
+                                        </ul> 
+                                    </div>
+                                </div>
+                                <!-- /End Product -->
+                            </div>
+                            <div class="config-step-box-shadow "></div>
+
+
+
+                            <div class="config-continue-to-cart-wrapper">
+                                <a data-ci="91002" class="btn btn-warning btn-lg js-addtocart box5"><span class="icon-shopping-cart"></span> [@L[cds.sales/gd/hosting/dedicated-servers-config:configTitleContinueToCart]@L]</a>
+                            </div> 
+                        </form> 
+{% endblock %}
+
+{% block modals %}
+                <!-- modal compare -->
+
+                <div class="modal fade" id="myModalCompare">
+                    <div class="modal-dialog modal-dialog-config"> 
+                        <div class="modal-content modal-content-config">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <p class="modal-title">[@L[cds.sales/gd/hosting/dedicated-servers-config:CompareModalTitle]@L]</p>
+                            </div>
+                            <div class="modal-body">
+                                <table>
+                                    <thead>
+                                        <tr class="thead-row thead-row-4c config-thead-row">
+                                            <th></th>
+                                            <th class="th-alternate">[@L[cds.sales/gd/hosting/dedicated-servers-config:CompareModalTableTitle1]@L]</th>
+                                            <th>[@L[cds.sales/gd/hosting/dedicated-servers-config:CompareModalTableTitle2]@L]</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="thead-row thead-row-4c thead-content">
+                                            <th colspan="3">[@L[cds.sales/gd/hosting/dedicated-servers-config:CompareModalTableSec1Title]@L]</th>
+                                        </tr>
+                                        <tr class="tbody-row configm-tbody-row tbody-row-4c first-tbody-row">
+                                            <th>[@L[cds.sales/gd/hosting/dedicated-servers-config:CompareModalTableSec1Text1]@L]</th>
+                                            <td>[@T[productprice:<current productid="1224" dropdecimal="false"  htmlsymbol="false" negative="parentheses" />]@T]*</td>
+                                            <td>[@T[productprice:<current productid="1240" dropdecimal="false"  htmlsymbol="false" negative="parentheses" />]@T]*</td>
+                                        </tr>
+                                        <tr class="tbody-row configm-tbody-row tbody-row-4c first-tbody-row">
+                                            <th>[@L[cds.sales/gd/hosting/dedicated-servers-config:CompareModalTableSec1Text2]@L]</th>
+                                            <td>[@T[productprice:<current productid="1221" dropdecimal="false"  htmlsymbol="false" negative="parentheses" />]@T]*</td>
+                                            <td>[@T[productprice:<current productid="1232" dropdecimal="false"  htmlsymbol="false" negative="parentheses" />]@T]*</td>
+                                        </tr>
+                                        <tr class="tbody-row configm-tbody-row tbody-row-4c first-tbody-row">
+                                            <th>[@L[cds.sales/gd/hosting/dedicated-servers-config:CompareModalTableSec1Text3]@L]</th>
+                                            <td><i class="ico ico-empty"></i></td>
+                                            <td><i class="ico ico-empty"></i></td>
+                                        </tr>
+                                        <tr class="thead-row thead-row-4c thead-content">
+                                            <th colspan="3">[@L[cds.sales/gd/hosting/dedicated-servers-config:CompareModalTableSec2Title]@L]</th>
+                                        </tr>
+                                        <tr class="tbody-row configm-tbody-row tbody-row-4c first-tbody-row">
+                                            <th>[@L[cds.sales/gd/hosting/dedicated-servers-config:CompareModalTableSec2Text1]@L]</th>
+                                            <td><i class="ico ico-empty"></i></td>
+                                            <td><i class="ico ico-empty"></i></td>
+                                        </tr>
+                                        <tr class="tbody-row configm-tbody-row tbody-row-4c first-tbody-row">
+                                            <th>[@L[cds.sales/gd/hosting/dedicated-servers-config:CompareModalTableSec2Text4]@L]</th>
+                                            <td><i class="ico ico-check-orange"></i></td>
+                                            <td><i class="ico ico-empty"></i></td>
+                                        </tr>
+                                        <tr class="tbody-row configm-tbody-row tbody-row-4c">
+                                            <th>[@L[cds.sales/gd/hosting/dedicated-servers-config:CompareModalTableSec2Text2]@L]</th>
+                                            <td><i class="ico ico-check-orange"></i></td>
+                                            <td><i class="ico ico-check-green"></i></td>
+                                        </tr>
+                                        <tr class="tbody-row configm-tbody-row tbody-row-4c">
+                                            <th>[@L[cds.sales/gd/hosting/dedicated-servers-config:CompareModalTableSec2Text3]@L]</th>
+                                            <td><i class="ico ico-check-orange"></i></td>
+                                            <td><i class="ico ico-empty"></i></td>
+                                        </tr>
+                                        <tr class="thead-row thead-row-4c thead-content">
+                                            <th colspan="3">[@L[cds.sales/gd/hosting/dedicated-servers-config:CompareModalTableSec3Title]@L]</th>
+                                        </tr>
+                                        <tr class="tbody-row configm-tbody-row tbody-row-4c first-tbody-row">
+                                            <th>[@L[cds.sales/gd/hosting/dedicated-servers-config:CompareModalTableSec3Text1]@L]</th>
+                                            <td><i class="ico ico-check-orange"></i></td>
+                                            <td><i class="ico ico-check-green"></i></td>
+                                        </tr>
+                                        <tr class="tbody-row configm-tbody-row tbody-row-4c">
+                                            <th>[@L[cds.sales/gd/hosting/dedicated-servers-config:CompareModalTableSec3Text2]@L]</th>
+                                            <td><i class="ico ico-check-orange"></i></td>
+                                            <td><i class="ico ico-check-green"></i></td>
+                                        </tr>
+                                        <tr class="tbody-row configm-tbody-row tbody-row-4c">
+                                            <th>[@L[cds.sales/gd/hosting/dedicated-servers-config:CompareModalTableSec3Text3]@L]</th>
+                                            <td><i class="ico ico-check-orange"></i></td>
+                                            <td><i class="ico ico-check-green"></i></td>
+                                        </tr>
+                                        <tr class="thead-row thead-row-4c thead-content">
+                                            <th colspan="3">[@L[cds.sales/gd/hosting/dedicated-servers-config:CompareModalTableSec4Title]@L]</th>
+                                        </tr>
+                                        <tr class="tbody-row configm-tbody-row tbody-row-4c first-tbody-row">
+                                            <th>[@L[cds.sales/gd/hosting/dedicated-servers-config:CompareModalTableSec4Text1]@L]</th>
+                                            <td><i class="ico ico-check-orange"></i></td>
+                                            <td><i class="ico ico-check-green"></i></td>
+                                        </tr>
+                                        <tr class="tbody-row configm-tbody-row tbody-row-4c">
+                                            <th>[@L[cds.sales/gd/hosting/dedicated-servers-config:CompareModalTableSec4Text2]@L]</th>
+                                            <td><i class="ico ico-check-orange"></i></td>
+                                            <td><i class="ico ico-check-green"></i></td>
+                                        </tr>
+                                        <tr class="tbody-row configm-tbody-row tbody-row-4c">
+                                            <th>[@L[cds.sales/gd/hosting/dedicated-servers-config:CompareModalTableSec4Text3]@L]</th>
+                                            <td><i class="ico ico-check-orange"></i></td>
+                                            <td><i class="ico ico-empty"></i></td>
+                                        </tr>
+                                        <tr class="thead-row thead-row-4c thead-content">
+                                            <th colspan="3">[@L[cds.sales/gd/hosting/dedicated-servers-config:CompareModalTableSec5Title]@L]</th>
+                                        </tr>
+                                        <tr class="tbody-row configm-tbody-row tbody-row-4c first-tbody-row">
+                                            <th>[@L[cds.sales/gd/hosting/dedicated-servers-config:CompareModalTableSec5Text1]@L]</th>
+                                            <td><i class="ico ico-check-orange"></i></td>
+                                            <td><i class="ico ico-check-green"></i></td>
+                                        </tr>
+                                        <tr class="tbody-row configm-tbody-row tbody-row-4c">
+                                            <th>[@L[cds.sales/gd/hosting/dedicated-servers-config:CompareModalTableSec5Text2]@L]</th>
+                                            <td><i class="ico ico-check-orange"></i></td>
+                                            <td><i class="ico ico-check-green"></i></td>
+                                        </tr>
+                                        <tr class="tbody-row configm-tbody-row tbody-row-4c">
+                                            <th>[@L[cds.sales/gd/hosting/dedicated-servers-config:CompareModalTableSec5Text3]@L]</th>
+                                            <td><i class="ico ico-check-orange"></i></td>
+                                            <td><i class="ico ico-check-green"></i></td>
+                                        </tr>
+                                        <tr class="tbody-row configm-tbody-row tbody-row-4c">
+                                            <th>[@L[cds.sales/gd/hosting/dedicated-servers-config:CompareModalTableSec5Text4]@L]</th>
+                                            <td><i class="ico ico-check-orange"></i></td>
+                                            <td><i class="ico ico-check-green"></i></td>
+                                        </tr>
+                                        <tr class="tbody-row configm-tbody-row tbody-row-4c">
+                                            <th>[@L[cds.sales/gd/hosting/dedicated-servers-config:CompareModalTableSec5Text5]@L]</th>
+                                            <td><i class="ico ico-check-orange"></i></td>
+                                            <td><i class="ico ico-check-green"></i></td>
+                                        </tr>
+                                        <tr class="tbody-row configm-tbody-row tbody-row-4c">
+                                            <th>[@L[cds.sales/gd/hosting/dedicated-servers-config:CompareModalTableSec5Text6]@L]</th>
+                                            <td><i class="ico ico-check-orange"></i></td>
+                                            <td><i class="ico ico-check-green"></i></td>
+                                        </tr>
+                                        <tr class="thead-row thead-row-4c thead-content">
+                                            <th colspan="3">[@L[cds.sales/gd/hosting/dedicated-servers-config:CompareModalTableSec6Title]@L]</th>
+                                        </tr>
+                                        <tr class="tbody-row configm-tbody-row tbody-row-4c first-tbody-row">
+                                            <th>[@L[cds.sales/gd/hosting/dedicated-servers-config:CompareModalTableSec6Text1]@L]</th>
+                                            <td><i class="ico ico-check-orange"></i></td>
+                                            <td><i class="ico ico-check-green"></i></td>
+                                        </tr>
+                                        <tr class="tbody-row configm-tbody-row tbody-row-4c">
+                                            <th>[@L[cds.sales/gd/hosting/dedicated-servers-config:CompareModalTableSec6Text2]@L]</th>
+                                            <td><i class="ico ico-check-orange"></i></td>
+                                            <td><i class="ico ico-check-green"></i></td>
+                                        </tr>
+                                        <tr class="tbody-row configm-tbody-row tbody-row-4c">
+                                            <th>[@L[cds.sales/gd/hosting/dedicated-servers-config:CompareModalTableSec6Text3]@L]</th>
+                                            <td><i class="ico ico-check-orange"></i></td>
+                                            <td><i class="ico ico-empty"></i></td>
+                                        </tr>
+                                        <tr class="thead-row thead-row-4c thead-content">
+                                            <th colspan="3">[@L[cds.sales/gd/hosting/dedicated-servers-config:CompareModalTableSec7Title]@L]</th>
+                                        </tr>
+                                        <tr class="tbody-row configm-tbody-row tbody-row-4c first-tbody-row">
+                                            <th>[@L[cds.sales/gd/hosting/dedicated-servers-config:CompareModalTableSec7Text1]@L]</th>
+                                            <td><i class="ico ico-check-orange"></i></td>
+                                            <td><i class="ico ico-check-green"></i></td>
+                                        </tr>
+                                        <tr class="tbody-row configm-tbody-row tbody-row-4c">
+                                            <th>[@L[cds.sales/gd/hosting/dedicated-servers-config:CompareModalTableSec7Text2]@L]</th>
+                                            <td><i class="ico ico-check-orange"></i></td>
+                                            <td><i class="ico ico-check-green"></i></td>
+                                        </tr>
+                                        <tr class="tbody-row configm-tbody-row tbody-row-4c">
+                                            <th>[@L[cds.sales/gd/hosting/dedicated-servers-config:CompareModalTableSec7Text3]@L]</th>
+                                            <td><i class="ico ico-check-orange"></i></td>
+                                            <td><i class="ico ico-check-green"></i></td>
+                                        </tr>
+                                        <tr class="tbody-row configm-tbody-row tbody-row-4c">
+                                            <th>[@L[cds.sales/gd/hosting/dedicated-servers-config:CompareModalTableSec7Text4]@L]</th>
+                                            <td><i class="ico ico-check-orange"></i></td>
+                                            <td><i class="ico ico-check-green"></i></td>
+                                        </tr>
+                                        <tr class="tbody-row configm-tbody-row tbody-row-4c">
+                                            <th>[@L[cds.sales/gd/hosting/dedicated-servers-config:CompareModalTableSec7Text5]@L]</th>
+                                            <td><i class="ico ico-check-orange"></i></td>
+                                            <td><i class="ico ico-check-green"></i></td>
+                                        </tr>
+                                        <tr class="tbody-row configm-tbody-row tbody-row-4c">
+                                            <th>[@L[cds.sales/gd/hosting/dedicated-servers-config:CompareModalTableSec7Text6]@L]</th>
+                                            <td><i class="ico ico-check-orange"></i></td>
+                                            <td><i class="ico ico-check-green"></i></td>
+                                        </tr>
+                                        <tr class="tbody-row configm-tbody-row tbody-row-4c">
+                                            <th>[@L[cds.sales/gd/hosting/dedicated-servers-config:CompareModalTableSec7Text7]@L]</th>
+                                            <td><i class="ico ico-check-orange"></i></td>
+                                            <td><i class="ico ico-check-green"></i></td>
+                                        </tr>
+                                        <tr class="thead-row thead-row-4c thead-content">
+                                            <th colspan="3">[@L[cds.sales/gd/hosting/dedicated-servers-config:CompareModalTableSec8Title]@L]</th>
+                                        </tr>
+                                        <tr class="tbody-row configm-tbody-row tbody-row-4c first-tbody-row">
+                                            <th>[@L[cds.sales/gd/hosting/dedicated-servers-config:CompareModalTableSec8Text1]@L]</th>
+                                            <td><i class="ico ico-check-orange"></i></td>
+                                            <td><i class="ico ico-check-green"></i></td>
+                                        </tr>
+                                        <tr class="thead-row thead-row-4c thead-content">
+                                            <th colspan="3">[@L[cds.sales/gd/hosting/dedicated-servers-config:CompareModalTableSec9Title]@L]</th>
+                                        </tr>
+                                        <tr class="tbody-row configm-tbody-row tbody-row-4c first-tbody-row">
+                                            <th>[@L[cds.sales/gd/hosting/dedicated-servers-config:CompareModalTableSec9Text1]@L]</th>
+                                            <td><i class="ico ico-check-orange"></i></td>
+                                            <td><i class="ico ico-check-green"></i></td>
+                                        </tr>
+                                        <tr class="tbody-row configm-tbody-row tbody-row-4c">
+                                            <th>[@L[cds.sales/gd/hosting/dedicated-servers-config:CompareModalTableSec9Text2]@L]</th>
+                                            <td><i class="ico ico-check-orange"></i></td>
+                                            <td><i class="ico ico-check-green"></i></td>
+                                        </tr><tr class="tbody-row configm-tbody-row tbody-row-4c">
+                                            <th>[@L[cds.sales/gd/hosting/dedicated-servers-config:CompareModalTableSec9Text3]@L]</th>
+                                            <td><i class="ico ico-check-orange"></i></td>
+                                            <td><i class="ico ico-check-green"></i></td>
+                                        </tr>
+                                        <tr class="thead-row thead-row-4c thead-content">
+                                            <th colspan="3">[@L[cds.sales/gd/hosting/dedicated-servers-config:CompareModalTableSec10Title]@L]</th>
+                                        </tr>
+                                        <tr class="tbody-row configm-tbody-row tbody-row-4c first-tbody-row">
+                                            <th>[@L[cds.sales/gd/hosting/dedicated-servers-config:CompareModalTableSec10Text1]@L]</th>
+                                            <td><i class="ico ico-check-orange"></i></td>
+                                            <td><i class="ico ico-check-green"></i></td>
+                                        </tr>
+                                        <tr class="tbody-row configm-tbody-row tbody-row-4c">
+                                            <th>[@L[cds.sales/gd/hosting/dedicated-servers-config:CompareModalTableSec10Text2]@L]</th>
+                                            <td><i class="ico ico-check-orange"></i></td>
+                                            <td><i class="ico ico-check-green"></i></td>
+                                        </tr>
+                                        <tr class="tbody-row configm-tbody-row tbody-row-4c">
+                                            <th>[@L[cds.sales/gd/hosting/dedicated-servers-config:CompareModalTableSec10Text3]@L]</th>
+                                            <td><i class="ico ico-check-orange"></i></td>
+                                            <td><i class="ico ico-check-green"></i></td>
+                                        </tr>
+                                        <tr class="tbody-row configm-tbody-row tbody-row-4c">
+                                            <th>[@L[cds.sales/gd/hosting/dedicated-servers-config:CompareModalTableSec10Text4]@L]</th>
+                                            <td><i class="ico ico-check-orange"></i></td>
+                                            <td><i class="ico ico-check-green"></i></td>
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table>
+                                <p class="combine-modal-note">[@L[cds.sales/gd/hosting/dedicated-servers-config:CombineModalNote]@L]</p>
+                            </div>
+                            <div class="modal-footer">
+                                <a href="#" class="btn btn-close cta-small" data-dismiss="modal" aria-hidden="true">[@L[cds.sales/gd/hosting/dedicated-servers-config:CombineModalCloseBtn]@L]</a> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+{% endblock %} 
+
+{% block footer %}
+  <script src="[@T[link:<javascriptroot />]@T]fos/office365/js/currency-calc.v1.0.2.min.js" type="text/javascript"></script>
+  <script>
+    if(typeof currencyCalc != "undefined"){
+      currencyCalc.base = '[@T[currencyprice:<price usdamount="1000000000" dropdecimal="false" dropsymbol="false" htmlsymbol="false" negative="parenthesis" />]@T]';
+    }
+  </script>
+    <script>
+      $(document).ready(function() {
+        if(document.referrer.toLowerCase().indexOf("/hosting/dedicated-servers")<=0)
+        {
+            window.location.assign('[@T[link:<relative path="~/hosting/dedicated-servers.aspx"><param name="ci" value="90994"/></relative>]@T]');
+        }
+        var planBasePrice;
+        var plan = Config.getParameterByName('plan');
+
+        Config.loadData();
+
+        if (typeof FastballEvent_MouseClick === 'function' && typeof fbiLibCheckQueue === 'function') {
+                $('[data-ci]').click(function(e){
+                    $this = $(this);
+                    FastballEvent_MouseClick(e,$this.attr('data-ci'),$(this)[0],'a');
+                    fbiLibCheckQueue();
+                });
+            }
+
+        $('.move').scrollToSection();
+        $(window).scroll(function() {
+          updateOrderSummaryPosition();
+        });
+        $(window).resize(function() {
+          updateOrderSummaryPosition();
+        });
+        updateOrderSummaryPosition();
+
+        $('.js-addtocart').on('click',function (e){
+          e.preventDefault();
+          $(this).unbind('click');
+          var $this = $(this);
+          var ci = $this.attr('data-ci');
+          $form = $('#configForm');
+          var itccode = 'slp_dedservers_pkg';
+          var qty = plan.split('_')[3];
+          var packageId = plan;
+          var addons = Config.generateAddonsURL();
+          ##if(isManager())
+          var managerId= Config.getParameterByName('mgrshopper');
+          ##endif
+
+          var url = '[@T[link:<relative path="api/package/add" secure="false" parammode="explicit"/>]@T]';
+          url += "/"+itccode;
+          url += "/"+ci;
+          url += '/'+qty;//quantity
+          url += "/"+packageId;
+          url += addons;
+          ##if(isManager())
+          if(addons===''){
+            url += '?'
+          }else{
+            url += '&'
+          }
+            url +='mgrshopper='+ managerId;
+          ##endif
+          $.ajax({
+                type: 'POST',
+                url: url,
+                complete: function (data) {
+                    var response = $.parseJSON(data.responseText);
+                    if (response.Success) {
+                      ##if(isManager())
+                      window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]';
+                      ##else
+                      window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]';
+                      ##endif
+                    }
+                    else
+                    {
+                      ##if(isManager())
+                      window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]';
+                      ##else
+                      window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]';
+                      ##endif
+                    } 
+                },
+                dataType: 'json'
+          });
+      });
+    
+
+        function updateOrderSummaryPosition() {
+
+          var paddingTop = 20/* for prettiness when scrolling */,
+            $configCartWrapper = $('.config-cart-wrapper'),
+            scrollTop = $(window).scrollTop(),
+            scrollLeft = $(window).scrollLeft(),
+            topStep1 = $("div.config-step:visible:first").offset().top,
+            topOfWindowAboveTopOfStep1 = (scrollTop <= (topStep1 - paddingTop)),
+            $footer = $('.scroll-down-wrapper');
+
+            $footer.css('visibility','visible');
+            $configCartWrapper.css({'top':'0px','position':'static'});
+
+          if(!topOfWindowAboveTopOfStep1) {
+            // keep the top of the summary at 0
+            
+          //} else {
+            //check for if summary can fit without going below the bottom of the last step
+            
+            var proposedNewTop = scrollTop - (topStep1 - paddingTop),
+
+              proposedNewBottom = proposedNewTop + $configCartWrapper.height(),
+              $lastStep = $("div.config-step:last"),
+              bottomOfLastStep = $lastStep.offset().top + $lastStep.height() - topStep1,
+              canFit = (proposedNewBottom <= bottomOfLastStep);
+
+            if(scrollTop>=(topStep1-paddingTop) && ((scrollTop+$configCartWrapper.height())<=$lastStep.offset().top + $lastStep.height() + paddingTop) ){
+              try{
+                var configCartWrapperLeft = $configCartWrapper.offset().left;
+                $configCartWrapper.css({'top':'20px','position':'fixed','width':$configCartWrapper.innerWidth(),'left':(configCartWrapperLeft - scrollLeft) +'px'});
+              }catch(err){
+                //if errors don't float the $confiCartWrapper
+                $configCartWrapper.css({'top':'0px','position':'static'});
+              }
+              if((scrollTop+paddingTop)>=$lastStep.offset().top){
+                $footer.css('visibility','hidden');
+              }else{
+                $footer.css('visibility','visible');
+              }
+            } else {
+              try{
+                var configCartWrapperLeft = $configCartWrapper.offset().left;
+                $configCartWrapper.css({'position':'fixed','width':$configCartWrapper.innerWidth(),'left':(configCartWrapperLeft - scrollLeft) +'px'});
+              }catch(err){
+                //if errors don't float the $confiCartWrapper
+                $configCartWrapper.css({'top':'0px','position':'static'});
+
+              }
+              // affix the summary so the bottom lines up with the bottom of the last step
+              $footer.css('visibility','hidden');
+              var topForBottomAligned = ($lastStep.offset().top + $lastStep.height() +$footer.height()) - (scrollTop + $configCartWrapper.height() );
+              //topForBottomAligned = bottomOfLastStep - $configCartWrapper.height() + paddingTop;
+              $configCartWrapper
+                .css({'top': topForBottomAligned + 'px'});
+            }
+          }
+          
+        }
+
+      });
+
+      var Config = {
+        loadData: function(){
+          var url = '[@T[link:<relative path="~/api/package/config/dsconfig"/>]@T]';
+
+          $.getJSON(url).success(function (data){
+              processConfigData(data);
+              Config.buildProductOrder(data);
+          });
+        },
+        getParameterByName: function(name){
+          name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+          var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+              results = regex.exec(location.search);
+          return results === null ? changePlan() : decodeURIComponent(results[1].replace(/\+/g, " "));
+        },
+        refreshCart: function(){
+          var totalAddons = '0';
+          var addonPrice;
+          var newTotal; 
+          $('input:radio').filter(':checked').each(function (i,j){
+            addonPrice= $(j).data('price');
+            totalAddons= currencyCalc.evaluate([totalAddons,"+",addonPrice]);
+          });
+          generateAddonSummary('#addonSummary');
+
+          newTotal =currencyCalc.evaluate([totalAddons,"+",planBasePrice]);
+
+          $('.currency-amount').html(newTotal);
+        },
+        buildProductOrder: function(data){
+
+          var planDetails = Config.getParameterByName('plan').split('_');
+
+          var planOS = data.details[planDetails[1]].plans[planDetails[2]].os;
+          var planHeader= planOS.split(':');
+          var planCPU = data.details[planDetails[1]].plans[planDetails[2]].cpu;
+          var planRAM = data.details[planDetails[1]].plans[planDetails[2]].ram;
+          var planStorage = data.details[planDetails[1]].plans[planDetails[2]].storage;
+          var planBandwidth = data.details[planDetails[1]].plans[planDetails[2]].bandwidth;
+          planBasePrice = data.details[planDetails[1]].prices[planDetails[2]][planDetails[3]];
+
+          $('.config-title h1').html(planHeader[1]+' - '+planHeader[0]);
+          $('#summaryOS').html(planOS);
+          $('.order-item-title:first').after('<p class="order-item-title">[@L[cds.sales/gd/hosting/dedicated-servers-config:CPUSummary]@L] '+planCPU+'</p>');
+          $('#summaryRAM').html('[@L[cds.sales/gd/hosting/dedicated-servers-config:RamSummary]@L] '+planRAM);
+          $('#summaryStorage').html('[@L[cds.sales/gd/hosting/dedicated-servers-config:StorageSummary]@L] '+planStorage);
+          $('#summaryBandwidth').html('[@L[cds.sales/gd/hosting/dedicated-servers-config:BandwidthSummary]@L] '+planBandwidth);
+          $('.currency-amount').html(planBasePrice);
+        },
+        init: function (){
+          var planDetails = Config.getParameterByName('plan').split('_');
+          var $disableControl = $('input:radio[name="assistedserviceoptions"]'),
+                    $firstli = $('#controlpanelOptions li:first-child');
+                    $lastli = $('#controlpanelOptions li:last-child');
+                    $yesassitsvc = $disableControl[1],
+                    $noassitsvc = $disableControl[0],
+                    $secondli=$([]),
+                    $disableControl.on('click', function() {
+                        if ($disableControl.filter($yesassitsvc).is(':checked')) { 
+                          $firstli.find('input').prop('disabled',true);
+                          $firstli.find('input').prop('checked',false);
+                          $firstli.find('span').addClass('product-desc');
+                          if(planDetails[2]!='windows'){
+                            $lastli.find('input').prop('disabled',true);
+                            $lastli.find('span').addClass('product-desc');
+                          }
+                          $secondli=$('input:radio[name=controlpaneloptions]').not(':disabled').filter('input:first');
+                          $secondli.prop('checked',true);
+                          Config.refreshCart();
+                        }
+                        else if ($disableControl.filter($noassitsvc).is(':checked')) {
+                          $secondli.prop('checked',false);
+                          $firstli.find('input').prop('disabled',false);
+                          $firstli.find('input').prop('checked',true);
+                          $firstli.find('span').removeClass('product-desc');
+                          if(planDetails[2]!='windows'){
+                            $lastli.find('input').prop('disabled',false);
+                            $lastli.find('span').removeClass('product-desc');
+                          }
+                          Config.refreshCart();
+                        }
+                    });        
+          $('input:radio').change(function(){
+            Config.refreshCart();
+          }); 
+
+          $('input:radio[name="controlpaneloptions"]').on('click', function() {
+            $('.children-hide').css('display','none');
+            $('.children-hide').each(function(){$(this).find('input:first').prop('checked',true);});
+            $($(this).data('child')).css('display','block');
+            Config.refreshCart();
+
+          });
+          $('.isToolTip').tooltip();
+        },
+        generateAddonsURL: function(){
+          var addonURL='';
+          $('input:radio').filter(':checked').each(function (i,k){
+            if(k.value!==""){
+              if(addonURL===''){
+                addonURL+= '?addons='+k.value;
+              }else{
+                addonURL+='|'+k.value;
+              }
+            }
+          });
+          return addonURL;
+        }
+      };
+
+      function processConfigData(data){
+        var planDetails = Config.getParameterByName('plan').split('_');
+        
+        $(data.addons[planDetails[1]].bandwidth).each(function (i,n){
+           generateOptions(i,n, '#bandwidthOptions','bandwidthoptions');
+        });
+        $(data.addons[planDetails[1]].managedbackup).each(function (i,n){
+          generateOptions(i,n, '#managedbackupOptions','managedbackupoptions');
+        });
+        $(data.addons[planDetails[1]].ftpsolution).each(function (i,n){
+          generateOptions(i,n, '#ftpOptions','ftpoptions');
+        });
+        if(planDetails[1]== 'fedora'){
+          $('.nocontrolpanel').show();
+        }else{
+          $('.controlpanel').show();
+          $(data.addons[planDetails[1]].controlpanel).each(function (i,n){
+             generateCPOptions(i,n, '#controlpanelOptions','controlpaneloptions');
+            });
+        }
+        
+        $(data.addons[planDetails[1]].externalfirewall).each(function (i,n){
+          generateOptions(i,n, '#firewallOptions','firewallOptions');
+        });
+        $(data.addons[planDetails[1]].diskmirroring).each(function (i,n){
+          generateOptions(i,n, '#raidOptions','raidOptions');
+        });
+
+        if(planDetails[1]== 'windows'){
+          $('.nosql').hide();
+          $('.sql').show();
+          $(data.addons[planDetails[1]].sql).each(function (i,n){
+          generateOptions(i,n, '#sqlOptions','sqlOptions');
+          });
+        }
+
+        Config.init();
+      }
+      function generateAddonSummary(parentid){
+        var content='';
+        $('input:radio').filter(':checked').each(function (i,n){
+         
+          if(content===''){
+              $(parentid).empty();
+              if($(n).data('addon')!==''){
+                content += '<li><span class="order-item-title"> '+$(n).data('addon')+'</span></li>';
+              }
+          }else{
+            if($(n).data('addon')!==''){
+              content += '<li><span class="order-item-title"> '+$(n).data('addon')+'</span></li>';
+            }
+          }
+
+       });
+        $(parentid).append(content);
+
+      }
+
+      function generateOptions(i , n , parentid, optionname){
+        var content='';
+        if(i===0){
+            $(parentid).empty();
+            content += '<li><input type="radio" name="'+optionname+'" checked="checked" data-addon="" data-price="0" value=""><span> '+n.addonvalue+'</span><span></span></li>';
+        }else{
+          content += '<li><input type="radio" name="'+optionname+'" value="'+n.id+'" data-addon="'+n.addondata+'" data-price="'+n.addonprice+'"><span> '+n.addonvalue+'</span><span class="price"> '+n.addonprice+'</span>[@L[cds.sales/gd/hosting/dedicated-servers-config:mo]@L]</li>';
+        }
+        
+        $(parentid).append(content);
+
+      }
+      function generateCPOptions(i , n , parentid, optionname){
+        var content='';
+        if(i===0){
+            $(parentid).empty();
+            content += '<li><input type="radio" name="'+optionname+'" checked="checked" data-price="0" data-addon="" data-child="" value=""><span> '+n.addonvalue+'</span><span></span></li>';
+        }else{
+          content += '<li><input type="radio" name="'+optionname+'" data-addon="'+n.addondata+'" data-price="'+n.addonprice+'" data-child=".'+n.id+'"  value="'+n.id+'"><span> '+n.addonvalue+'</span><span class="price"> '+n.addonprice+'[@L[cds.sales/gd/hosting/dedicated-servers-config:mo]@L]</span>';
+          $(n.addonupgrade).each(function (j,k){
+            if(j===0){
+              content += '<div class="children-hide sub-radio-option '+n.id+' "><input type="radio" name="'+k.id+i+'" checked="checked" data-addon="" data-price="0" value=""><span>'+k.addonvalue+"</span><span></span><br>";
+            }
+            else{
+             content += '<input type="radio" name="'+k.id+i+'" value="'+k.id+'"data-addon="'+k.addondata+'" data-price="'+k.addonprice+'" ><span> '+k.addonvalue+'</span><span class="price"> '+k.addonprice+'</span>';
+            }
+
+          });
+           content +='</div></li>';
+        }
+        
+        $(parentid).append(content);
+
+      }
+      function changePlan(){
+          window.location.href = '[@T[link:<relative path="~/hosting/dedicated-servers.aspx"><param name="ci" value="90993"/></relative>]@T]';
+      }    
+    </script>
+{% endblock %}
