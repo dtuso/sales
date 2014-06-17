@@ -97,6 +97,7 @@ var swigConfigOpts = {
 gulp.task('html', function() {
   return gulp.src(['./**/*.html', '!./**/_*.html'], {cwd: path.join('./src/sales/', assetSrcPath)})
     .pipe(changed(paths.build))
+    /*.pipe(debug({verbose: false}));*/
     .pipe(fm({remove:true}))
     .pipe(swig(swigTplOpts))
     .pipe(elevate())
