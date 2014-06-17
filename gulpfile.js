@@ -14,12 +14,12 @@ try {
   var uglify    = require('gulp-uglify');
   var debug     = require('gulp-debug');
   var elevate   = require('./lib/gulp-css-elevate');
+  var charFix   = require('./lib/gulp-character-fix');
 
   // utilities
   var path      = require('path');
   var fs        = require('fs');
   var argv      = require('minimist')(process.argv.slice(2));
-  var notifier  = require('./lib/updater.js');
   var getData   = require('./lib/project-data.js');
   var extras    = require('./lib/swig-extras');
 
@@ -54,7 +54,6 @@ if (!argv.src || argv.src == 'all') {
 
 var paths = {
   templates : ['./src/sales/**/*.html'],
-  project   : ['./src/sales/**/project.json'],
   language  : ['./src/sales/**/*.language'],
   less      : ['./src/sales/**/css/**/*.less'],
   images    : ['./src/sales/**/img/**/*.jpg', './src/sales/**/img/**/*.png'],
@@ -107,6 +106,7 @@ gulp.task('html', function() {
 gulp.task('language', function() {
   return gulp.src('./**/*.language', {cwd: path.join('./src/sales/', assetSrcPath)})
     //.pipe(changed(paths.build))
+    .pipe(charFix())
     .pipe(fm({remove:true}))
     .pipe(swig(swigLangOpts))
     .pipe(gulpif(!ignoreCDS, cdsm()))
@@ -154,7 +154,6 @@ gulp.task('config', function() {
 
 gulp.task('watch', function() {
   gulp.watch(paths.templates, ['html']);
-  gulp.watch(paths.project, ['html','language']);
   gulp.watch(paths.language, ['language']);
   gulp.watch(paths.less, ['styles', 'assets-deploy']);
   gulp.watch(paths.images, ['images', 'assets-deploy']);
@@ -163,5 +162,3 @@ gulp.task('watch', function() {
 gulp.task('build', ['html', 'language', 'styles', 'scripts', 'images']);
 gulp.task('css-build-deploy', ['styles', 'assets-deploy']);
 gulp.task('default', ['watch']);
-
-notifier();

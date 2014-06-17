@@ -1,3 +1,9 @@
+### ***UPDATE: PLEASE READ!***
+
+All package dependencies (from package.json) are now included (committed) with the repository. Please DO NOT run any command that re-installs/downloads these dependencies, such as ```npm install``` or ```node update```. This will cause your node_modules folder to be out of sync with the repo and will fool you into needing to commit that folder. DO NOT commit any changes to the node_modules folder, just ignore it.
+
+---
+
 **Full documenation (under construction) can/will be found here:**
 
 https://github.secureserver.net/FOS-CDS-Pages/Sales/wiki/_pages
@@ -47,6 +53,13 @@ do this in the terminal or shell:
 git remote add upstream https://github.secureserver.net/FOS-CDS-Pages/Sales.git
 ```
 
+```
+Tip: By default, when you clone a repository, Git will automatically create a remote called "origin" which
+points back to your forked version. You can change that to be whatever you want. For instance, some are changing it
+to be the same as their user name, which makes it easier to remember when pushing commits:
+git push clbrown master (instead of git push origin master)
+```
+
 Now that you have connection back to the originating repository, make sure you have the latest content:
 
 ```
@@ -74,17 +87,7 @@ sudo npm install -g gulp
 
 #### Package Dependencies
 
-Before you do anything, it is important that you install any local dependencies associated to this repository via the ```package.json``` file.
-Dependencies are installed via the node package manager, ```npm``` so you have to make sure you have node installed.
-See [Node Website](http://www.nodejs.org/) for more information.
-
-Once you've ensured node is installed, open your project folder in terminal or the git shell. Then type this command:
-
-```
-npm install
-```
-
-This will find and install any dependencies you have listed in the ```package.json``` file.
+Package dependencies are now included with the repository. Do NOT run ```npm install``` or ```node update```
 
 Tasks
 =====

@@ -1,1 +1,5 @@
-{% include "marquee_builds/en/_en-us_clubmarq.html" %}
+##if(targetMessageTagAny(sales_hp,sales_hp_marquee_2014jun_dbp))
+  [@P[tmsdocument:<data interactionpoint="sales_hp"><MessageTags><MessageTag>sales_hp_marquee_2014jun_dbp</MessageTag></MessageTags></data>]@P]
+##else
+{% include "marquee_builds/en/_en-us_dollarWSB-ManagedWP.html" %}
+##endif
