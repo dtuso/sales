@@ -26,6 +26,7 @@ try {
 } catch (e) {
 
   console.log(e.toString());
+  console.log('Please run `npm install`\n');
   process.exit(1);
 
 }
