@@ -1,0 +1,131 @@
+ <script src="[@T[link:<javascriptroot />]@T]fos/lib/solazy/jquery.solazy.1.2.1.min.js" type="text/javascript" ></script> 
+  <script>
+   (function ($) {
+      'use strict';
+      function config($videoContainer) {
+          var width = $videoContainer.outerWidth(),
+              height = $videoContainer.outerHeight(),
+              videoId = $videoContainer.children('.slv').data('slv-video-id'),
+              params = $videoContainer.children('.slv').data('slv-params') || '';
+
+          $videoContainer.on('click', function (e) {
+              e.preventDefault();
+              $videoContainer.html('<iframe width="' + width + '" height="' + height + '" src="//www.youtube.com/embed/' + videoId + '?autoplay=1&' + params + '" scrolling="no" frameborder="0" allowfullscreen></iframe>').removeClass('slv-hidden').addClass('slv-shown');
+          });
+
+      }
+
+      $.fn.solazyVideo = function () {
+          return this.each(function () {
+                var $videoContainer = $(this);
+                config($videoContainer);
+          });
+      };
+  }(jQuery));
+
+  (function ($) {
+  'use strict';
+    $.fn.vertAlign = function () {
+        var h = [];
+        this.each(function(){
+          h.push($(this).outerHeight());
+        });
+        var height = Math.max.apply(Math, h);
+        this.each(function(){
+          $(this).css('height', height);
+        });
+    };
+  }(jQuery)); 
+    
+    
+  $(document).ready(function(){
+    $('.open-button').click(function(e){
+      e.preventDefault();
+      var $this = $(this);
+      var ci = $this.data('ci');
+      if(ci == null || ci == "" || ci == "undefined"){
+        ci = 000000;
+      }
+      FastballEvent_MouseClick(e, ci, $this[0], "a")
+      fbiLibCheckQueue();
+      if($(this).hasClass('minus')){
+        $(this).removeClass('minus');
+        $(this).addClass('plus');
+        $(this).parent().siblings('.answer').slideUp(300);
+      }else{
+        $(this).removeClass('plus');
+        $(this).addClass('minus');
+        $(this).parent().siblings('.answer').slideDown(300);
+      }
+    });
+    
+    $('.compare-plans').click(function(event){
+      var $this = $(this);
+      var ci = $this.data('ci');
+      if(ci == null || ci == "" || ci == "undefined"){
+        ci = 000000;
+      }
+      FastballEvent_MouseClick(event, ci, $this[0], "a")
+      fbiLibCheckQueue(); 
+      if($('#js-show-hide-compare').is(':hidden')){
+        $(this).children('.plus-span').removeClass('plus-span');
+        $(this).children('span').addClass('minus-span');    
+        $('#js-show-hide-compare').slideDown(300);
+      }else{
+        $(this).children('.minus-span').removeClass('minus-span');
+        $(this).children('span').addClass('plus-span');
+        $('#js-show-hide-compare').slideUp(300);
+      }
+    });
+
+    $('.office-video-click-wrapper').solazyVideo();
+    $('.plan-description').vertAlign();
+    
+   }); 
+   
+  $(document).ready(function(){
+      var office365config={};
+
+      // input object inside form to add to cart 
+      var $selectedPackageId = $("#selected-package-id");
+
+      $(".js-add-to-cart").bind("click",function(event){
+        var $this = $(this);
+        
+        event.preventDefault();
+        var packageId = $this.data('value');
+        var ci = $this.data('ci');
+        if(ci == null || ci == "" || ci == "undefined"){
+          ci = 000000;
+        }
+        FastballEvent_MouseClick(event, ci, $this[0], "a")
+        fbiLibCheckQueue(); 
+       
+        var $form = $selectedPackageId.parents("form");
+        var itccode = "SLP_365";
+        
+        var url = window.location.protocol+'//'+ window.location.host+'/api/package/add';
+        url += "/"+itccode;
+        url += "/"+ci;
+        url += "/1";//quantity
+        url += "/"+packageId;
+        url += window.location.search;
+     
+        $selectedPackageId.val(packageId);
+
+        $.ajax({
+                type: 'POST',
+                url: url,
+                complete: function (data) {
+                    var response = $.parseJSON(data.responseText);
+                    if (response.Success) {
+                        window.location = '[@T[link:<relative path="~/business/office-365-config.aspx" parammode="explicit" />]@T]?plan=' + packageId ;
+                    } 
+                },
+                dataType: 'json'
+              });
+      }); 
+  });   
+
+
+  </script>
