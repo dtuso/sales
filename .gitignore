@@ -9,3 +9,4 @@ lib/.salesupdate
 node_modules/*
 .gitignore
 *.log
+node_modules
