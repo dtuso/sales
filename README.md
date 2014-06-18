@@ -1,3 +1,9 @@
+## UPDATE (June 18, 2014)
+
+Dependencies were being included with the repo and so didn't need to be installed separately. This was becoming more trouble than it was worth. We are back to installing dependencies via ```npm install```.
+
+---
+
 **Full documenation (under construction) can/will be found here:**
 
 https://github.secureserver.net/FOS-CDS-Pages/Sales/wiki/_pages
@@ -81,7 +87,7 @@ sudo npm install -g gulp
 
 #### Package Dependencies
 
-Package dependencies are now included with the repository. Do NOT run ```npm install``` or ```node update```
+Dependencies were being included with the repo and so didn't need to be installed separately. This was becoming more trouble than it was worth. We are back to installing dependencies via ```npm install```.
 
 Tasks
 =====
