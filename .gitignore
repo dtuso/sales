@@ -9,4 +9,8 @@ lib/.salesupdate
 node_modules/*
 .gitignore
 *.log
+<<<<<<< HEAD
 
+=======
+node_modules
+>>>>>>> upstream/master
