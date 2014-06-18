@@ -1,7 +1,9 @@
 ---
 location: sales/hosting/wordpress-hosting.aspx
-id: 537687c8f778fc0db47de532
-name: FOS-20310 update
+id:   false
+name: FOS-20797
+comments: added styles to fix dropdown for de and ru
+cssVersionOverride: 2
 ---
 {% extends 'layouts/base.html' %}
 
@@ -10,17 +12,7 @@ name: FOS-20310 update
     {% parent %}
 
     <style>
-      .sale-right { float:right; }
-      .vat-tax-message { line-height:16px;width:302px;margin-bottom:5px;margin-top:-3px; }
-      ##if(activeLanguageAny([en-my],[en-ph],[en-sg]))
-        .tab-content-overview-bg-wp {
-          background-image: url("[@T[link:<imageroot />]@T]fos/201401/wp-hosting/img/bg-misc-banner-wp-hosting-ap.jpg");
-        }
-      ##elseif(activeLanguageAny([en-in]))
-        .tab-content-overview-bg-wp {
-          background-image: url("[@T[link:<imageroot />]@T]fos/201401/wp-hosting/img/bg-misc-banner-wp-hosting-in.jpg");
-        }
-      ##endif
+
       ##if(activeLanguageAny(en))
       ##else
         .featured-product .website-builder {
@@ -535,12 +527,17 @@ name: FOS-20310 update
                       <li>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-5-AwardWinning247Support]@L]</li>
                       <li><a href="[@T[link:<relative path='/agreements/showdoc.aspx'><param name='pageid' value='hosting_sa' /><param name='ci' value='86792' /></relative>]@T]" target="_blank">*[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-4-999UptimeGuarantee]@L]</a></li>
                       <li><a href="[@T[link:<relative path='/agreements/showdoc.aspx'><param name='pageid' value='hosting_sa' /><param name='ci' value='86793' /></relative>]@T]" target="_blank">*[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-3-MoneyBackGuarantee-2]@L]</a></li>
-                      ##if(activeLanguageAny([en-us]) || activeLanguageAny([es-us]))
+                      ##if(areAdCreditsEnabled(google))
                       <li>USD $100 [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-4-GoogleAdWordsCredit]@L] <span class="g-toolTip restrictions-link">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-2-RestrictionsApply]@L]<span>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-48-OnePromotionalCreditPerCustomerForANew]@L] <a href="javascript:void(window.open('[@T[link:<relative path='/popups/google-adwords.aspx'><param name='ci' value='86790' /><param name='app_hdr' value='99' /></relative>]@T]','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=550,height=675'))">[@L[cds.sales/hosting/web-hosting-new:view-details]@L]</a></span></span></li>
-                      <li>USD $100 [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-4-BingAdsCredit]@L] <span class="g-toolTip restrictions-link">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-2-RestrictionsApply]@L]<span>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-36-OnePromotionalCreditPerCustomerForANew]@L] <a href="javascript:void(window.open('https://advertise.bingads.microsoft.com/en-us/godaddy/learn','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=1060,height=675'))" data-ci="86788">[@L[cds.sales/hosting/web-hosting-new:view-details]@L]</a></span></span></li>
-                      <li>USD $50 [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-4-FacebookAdCredit]@L]<span class="g-toolTip restrictions-link">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-2-RestrictionsApply]@L]<span>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-44-OnePromotionalCreditPerCustomerForANew]@L] <a href="javascript:void(window.open('[@T[link:<relative path='/popups/facebook-ads.aspx'><param name='ci' value='86789' /><param name='app_hdr' value='99' /></relative>]@T]','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=550,height=675'))">[@L[cds.sales/hosting/web-hosting-new:view-details]@L]</a></span></span></li>
-                      <li>10 [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-4-FotoliaPhotoCredits]@L] <span class="g-toolTip restrictions-link">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-2-RestrictionsApply]@L]<span>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-33-OneFreePromotionalCreditPerCustomerGoodFor]@L] <a href="javascript:void(window.open('[@T[link:<relative path='/popups/fotolia.aspx'><param name='ci' value='86791' /><param name='app_hdr' value='99' /></relative>]@T]','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=550,height=675'))">[@L[cds.sales/hosting/web-hosting-new:view-details]@L]</a></span></span></li>
                       ##endif
+                      ##if(areAdCreditsEnabled(bing))
+                      <li>USD $100 [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-4-BingAdsCredit]@L] <span class="g-toolTip restrictions-link">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-2-RestrictionsApply]@L]<span>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-36-OnePromotionalCreditPerCustomerForANew]@L] <a href="javascript:void(window.open('https://advertise.bingads.microsoft.com/en-us/godaddy/learn','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=1060,height=675'))" data-ci="86788">[@L[cds.sales/hosting/web-hosting-new:view-details]@L]</a></span></span></li>
+                      ##endif
+                      ##if(areAdCreditsEnabled(facebook))
+                      <li>USD $50 [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-4-FacebookAdCredit]@L]<span class="g-toolTip restrictions-link">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-2-RestrictionsApply]@L]<span>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-44-OnePromotionalCreditPerCustomerForANew]@L] <a href="javascript:void(window.open('[@T[link:<relative path='/popups/facebook-ads.aspx'><param name='ci' value='86789' /><param name='app_hdr' value='99' /></relative>]@T]','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=550,height=675'))">[@L[cds.sales/hosting/web-hosting-new:view-details]@L]</a></span></span></li>
+                      ##endif
+                      <li>10 [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-4-FotoliaPhotoCredits]@L] <span class="g-toolTip restrictions-link">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-2-RestrictionsApply]@L]<span>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-33-OneFreePromotionalCreditPerCustomerGoodFor]@L] <a href="javascript:void(window.open('[@T[link:<relative path='/popups/fotolia.aspx'><param name='ci' value='86791' /><param name='app_hdr' value='99' /></relative>]@T]','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=550,height=675'))">[@L[cds.sales/hosting/web-hosting-new:view-details]@L]</a></span></span></li>
+                
                     </ul>
                   </div>
                 </div>

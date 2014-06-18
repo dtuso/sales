@@ -7,14 +7,14 @@
       },
       "cdsLocation": "sales/hosting/wordpress-hosting.aspx",
       "draft": {
-        "id": "53696225f778fc1100fa3993",
-        "createdDate": "2014-05-05",
+        "id": "53925401f778fc0ee47e4ac4",
+        "createdDate": "2014-06-06",
         "createdBy": {
-          "fullName": "Dominic Tuso",
-          "username": "dtuso"
+          "fullName": "Avinash Peesari",
+          "username": "apeesari"
         },
-        "jiraTicket": "FOS-20310 github",
-        "comments": "Fixing Russian flag",
+        "jiraTicket": "FOS-21905",
+        "comments": "Added adCredits condition",
         "url": "http://www.dev-godaddy.com/hosting/wordpress-hosting.aspx"
       }
     },
@@ -37,7 +37,14 @@
       },
       "cdsLocation": "localization/sales/hosting/wordpress-hosting/en",
       "draft": {
-        "comments": "Prep for new build process"
+        "id": "5390f7a3f778fc21dc6e3f48",
+        "createdDate": "2014-06-05",
+        "createdBy": {
+          "fullName": "Avinash Peesari",
+          "username": "apeesari"
+        },
+        "jiraTicket": "FOS-20706",
+        "comments": "Updated miss spelled bing ad credit"
       }
     }
   }

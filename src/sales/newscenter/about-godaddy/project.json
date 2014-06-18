@@ -7,11 +7,17 @@
       },
       "cdsLocation": "sales/newscenter/about-godaddy.aspx",
       "draft": {
-        "comments": "Changed bios on board of directors, added Lee Wittlinger",
+        "id": false,
+        "createdDate": "2014-06-10",
+        "createdBy": {
+          "fullName": "Avinash Peesari",
+          "username": "apeesari"
+        },
+        "jiraTicket": "FOS-20951",
+        "comments": "Updates to News Releases on India LP",
         "url": "http://www.dev-godaddy.com/newscenter/about-godaddy.aspx"
       }
     },
-    "cssVersionOverride": "3a",
     "metaTitle": "[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-11-AboutGoDaddyMoreAboutTheWorldS1Domain]@L]",
     "metaDescription": "[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-9-GoDaddyWhoWeAreAndWhatWeDo]@L]",
     "metaKeywords": "[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-5-GoDaddyGodaddyNewsReleasesGoDaddy]@L]",
@@ -26,10 +32,6 @@
       "champion": {
         "name": "None currently",
         "email": "everyone@"
-      },
-      "cdsLocation": "localization/sales/newscenter/about-godaddy/en",
-      "draft": {
-        "comments": "Added and changed keys relating to board members bios"
       }
     }
   }

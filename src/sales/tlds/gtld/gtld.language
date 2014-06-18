@@ -1,8 +1,8 @@
 ---
 location: localization/sales/gd/tlds/gtld/en
-id: 537bd7fdf778fc0e7072116a
-name: FOS-16997
-comments: Update header slider for 5/28
+id: 523094378326f117447feb26
+name: FOS-21237
+comments: Update header slider for 6/10
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="MetaDescription" />
@@ -46,13 +46,19 @@ Plan ahead with .ESTATE
 <phrase key="MarketingTagLine2"/>
 Launch your next project with .VENTURES
 <phrase key="MarketingTagLine3"/>
-Offer guidance with .GURU
+Offer guidance with <strong>.guru</strong>
 <phrase key="MarketingTagLine4"/>
 Show diners what's cookin' with .MENU
 <phrase key="MarketingTagLineLondon"/>
-Court 8 million shoppers with .LONDON
+Court 8 million shoppers with <strong>.london</strong>
+<phrase key="MarketingTagLineReviews"/>
+Be the go-to source with <strong>.reviews</strong>
+<phrase key="MarketingTagLineXyz"/>
+Finally! A domain for the <strong>.xyz</strong> generation
 <phrase key="MarketingTagLineCompany"/>
 .COMPANY says you’re in business
+<phrase key="MarketingTagLineWiki"/>
+Share, collaborate and learn with <strong>.wiki</strong>
 <phrase key="MarketingSlideLinkText"/>
 Register now
 <phrase key="MarketingSlideLinkTextUno"  comments="DO NOT TRANSLATE"/>
@@ -124,37 +130,37 @@ What are TLDs and new TLDs?
 <phrase key="SlideOneContent" comment="The line breaks and indentation are required to work on the SEO Slider, please keep during translation. Reach out to WebOps with questions." />
 
                                     TLD stands for top-level domain. A domain is what you type into the address bar of your Web browser to get to a website, like www.GoDaddy.com. New TLDs refer to new domain extensions that are about to become available.
-
+                                
 <phrase key="SlideTwoHeader" />
 Why are there new TLDs?
 <phrase key="SlideTwoContent" comment="The line breaks and indentation are required to work on the SEO Slider, please keep during translation. Reach out to WebOps with questions." />
 
                                     New domain extensions have been created because finding a relevant, available domain name can be difficult. ICANN is releasing hundreds of new domain extensions to increase availability and change how people find information online.
-
+                                
 <phrase key="SlideThreeHeader" />
 Why do new TLDs matter to me?
 <phrase key="SlideThreeContent" comment="The line breaks and indentation are required to work on the SEO Slider, please keep during translation. Reach out to WebOps with questions." />
 
                                     New domain extensions let you create a relevant name that defines your website, brand, business, group or organization. Registering a new TLD that represents your market can increase customer trust and set you apart from competitors.
-
+                                
 <phrase key="SlideFourHeader" />
 When will new TLDs be available?
 <phrase key="SlideFourContent" comment="The line breaks and indentation are required to work on the SEO Slider, please keep during translation. Reach out to WebOps with questions." />
 
                                     We expect the first groups of new TLDs to launch in November 2013. Check back for more information on release dates, registration requirements, pre-registration and other important details.
-
+                                
 <phrase key="SlideFiveHeader" />
 How is ICANN involved?
 <phrase key="SlideFiveContent" comment="The line breaks and indentation are required to work on the SEO Slider, please keep during translation. Reach out to WebOps with questions." />
 
                                     ICANN is the Internet Corporation for Assigned Names and Numbers, a non-profit group responsible for the coordination and oversight of the global Internet system. You can find out more about them at www.icann.org.
-
+                                
 <phrase key="SlideSixHeader" />
 What are the new TLD registration phases: Trademarks Owners, Priority Pre-registration, Pre-registration and General Availability?
 <phrase key="SlideSixContent" comment="The line breaks and indentation are required to work on the SEO Slider, please keep during translation. Reach out to WebOps with questions." />
 
-                                    Each registration phase has a defined date for acceptance and processing. The first registration period is always reserved for Trademark Owners. The second phase is Priority Pre-registration – for a premium, you can increase your chances of getting a non-trademarked domain. Pre-registration comes next and allows you to get a jump on General Availability, which is open to the public. During the final phase, names are awarded on a first come, first served basis.
-
+                                    Each registration phase has a defined date for acceptance and processing. The first registration period is always reserved for Trademark Owners. The second phase is Priority Pre-registration – for a premium, you can increase your chances of getting a non-trademarked domain. Pre-registration comes next and allows you to get a jump on General Availability, which is open to the public. During the final phase, names are awarded on a first come, first served basis. 
+                                
 <phrase key="Previous" />
 Previous
 <phrase key="Next" />
@@ -236,7 +242,7 @@ Pre-register now
 <phrase key="MainBannerCarouselSlide2Text1" />
 .CLUB
 <phrase key="MainBannerCarouselSlide2Text2" />
-Get organized with .CLUB
+Get organized with <strong>.club</strong>
 <phrase key="MainBannerCarouselSlide3Text1" />
 .MENU
 <phrase key="MainBannerCarouselSlide3Text2" />
@@ -244,7 +250,7 @@ Show diners what&rsquo;s cookin&rsquo; with .MENU
 <phrase key="MainBannerCarouselSlide4Text1" />
 .GURU
 <phrase key="MainBannerCarouselSlide4Text2" />
-Offer guidance with .GURU
+Offer guidance with <strong>.guru</strong>
 <phrase key="LabelDiscoverNewDomains" />
 Discover New Domains
 <phrase key="LabelHowItWorks" />
@@ -368,7 +374,7 @@ No. They may change the way people find information on the web though. And they 
 <phrase key="FaqList8Title" />
 How is ICANN involved?
 <phrase key="FaqList8Item1" />
-The Internet Corporation for Assigned Names and Numbers is a non-profit group responsible for the coordination and oversight of the global Internet system. It was ICANN that approved the new domain extensions now available. Find out more at <a target="_blank"><param name="ci" value="90407" />www.icann.org.</a>
+The Internet Corporation for Assigned Names and Numbers is a non-profit group responsible for the coordination and oversight of the global Internet system. It was ICANN that approved the new domain extensions now available. Find out more at <a href="http://www.icann.org" target="_blank"><param name="ci" value="90407" />www.icann.org.</a>
 <phrase key="FaqList9Title" />
 What’s the difference between the various registration phases?
 <phrase key="FaqList9Item1" />
@@ -429,9 +435,11 @@ Enter a <b>Domain Name</b>
 .email
 <phrase key="ClubHeader" />
 .club
+<phrase key="WikiHeader" />
+.wiki 
 <phrase key="MainBannerCarouselSlide2TextNinja" />
-Show off your .NINJA skills
+Show off your <strong>.ninja</strong> skills
 <phrase key="MainBannerCarouselSlide3TextEmail" />
 .EMAIL delivers
 <phrase key="MainBannerCarouselSlideTextUno"  comments="DO NOT TRANSLATE" />
-El Internet en Español.
+<strong>.uno</strong> El Internet en Español.

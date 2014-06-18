@@ -1,0 +1,68 @@
+---
+location: sales/homepage/default.es.us
+id: 53908c22f778fc21dc6e3f31
+locale: es-us
+comments: Rotating HP Marquee
+name: FOS-20864
+url: http://dev-godaddy.com
+---
+
+{% set include_topmarq =  "top_marquees/_" + locale + ".html" %}
+{% set include_domainbugs =  "domain_bugs/_" + locale + ".html" %}
+{% set include_pod =  "pods/_" + locale + ".html" %}
+{% set include_lowermarq =  "lower_marquees/_" + locale + ".html" %}
+
+{% extends 'layouts/homepage.html' %}
+
+{% block customcss %}
+
+{% endblock %}
+
+{% block body %}
+  {% include include_topmarq %}
+  {% include include_domainbugs %}
+  {% include include_pod %}
+  {% include include_lowermarq %}
+
+{% endblock %}
+{% block customjs %}
+{% jsminify %}
+  $('body').on('click','.js-gdhpclick',function(event){
+      var $clickedElement = $(event.currentTarget);
+      var $clickedUrl = $clickedElement.attr('data-url'); 
+      event.stopPropagation();
+      switch($clickedUrl)
+      {
+        case "none":
+        break;
+        case "video":
+           $('div#myVideoModal').modal('show');
+        break;
+        case "video-close":
+          $('div#myVideoModal').modal('hide');
+        break;
+        default:
+          window.location.href=$clickedUrl;
+      }
+    });
+    var hpLoadVideo = 0;
+    var autoplay = '\&autoplay=1';
+    var vidLocation = "div.gdhp-top-banner-3";
+    $(vidLocation).mouseenter(function() {
+      if(hpLoadVideo != 1)
+        {
+          hpLoadVideo = 1;
+          var src ='//www.youtube.com/embed/vo2lVSrA_88?html5=1&rel=0';
+          $('#myVideoModal iframe').attr('src',src);
+          $('#myVideoModal').on('hidden.bs.modal', function () {          
+            $('#myVideoModal iframe').removeAttr('src');
+            $('#myVideoModal iframe').attr('src',src);
+          })
+          $('#myVideoModal').on('show.bs.modal', function () {          
+            $('#myVideoModal iframe').attr('src', src + autoplay);
+          })
+        }
+    });
+
+{% endjsminify %}
+{% endblock %} 
