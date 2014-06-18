@@ -1,9 +1,13 @@
 ---
 location: sales/hosting/vps-hosting.aspx
-id: 537d161ff778fc2460fbadb4
-name: FOS-1310
+id: 53a0bfcaf778fc16ec1881b1
+name: FOS-21338
+comments: Remove FAQ from vps-hosting
+url: http://www.dev-godaddy.com/hosting/vps-hosting.aspx
 ---
-{% extends 'base.html' %} 
+
+
+{% extends 'layouts/base.html' %}
 {% block metahead %} 
 {% parent %} 
   ##if(countrySiteAny(es,pt,mx,br,ar,pe,ve))
@@ -22,7 +26,10 @@ name: FOS-1310
       .tab-content-plans-pricing-vps {
         background-image: url("[@T[link:<cssroot />]@T]fos/sales/themes/scotty/hosting/vps-hosting/img/IN_bg-tab-content-plan.jpg");
       }
-
+        .misc-banner-content>.misc-banner-link{color:#ffffff}
+        .misc-banner-content>h2{color:#ffffff}
+        .misc-banner-content>p{color:#ffffff}
+        .misc-banner-link>.ico-gt-alternate{background-position:-39px -3px;}
       </style>
   ##endif
 
@@ -1091,32 +1098,43 @@ name: FOS-1310
     <div class="tab-pane" id="faq">
         <section class="tab-content-top-spacing">
             <div class="container l-main-container">
-                <div class="row tab-content">
-                    <div class="col-xs-12">
-                        <div class="grid-column tab-content-column-alternate faq-content-column">
-                            <h2 class="h2-alternate">[@L[cds.sales/gd/hosting/vps-hosting:FaqTitle]@L]</h2>
-                            <ul class="no-margin-bottom">
-                                <li><a href="javascript:atl_PopUp('[@T[link:<external linktype="communityurl" path="help/article/154/" secure="false "><param name='isc' value='gtnila43' /><param name='ci' value='88986' /></external>]@T]','display2','left=20,top=20,scrollbars=yes,resizable=yes,width=800,height=700');" >[@L[cds.sales/gd/hosting/vps-hosting:FaqQuestion1]@L]</a>
-                                </li>
-                                <li><a href="javascript:atl_PopUp('[@T[link:<external linktype="communityurl" path="help/article/818/" secure="false "><param name='isc' value='gtnila43' /><param name='ci' value='88987' /></external>]@T]','display2','left=20,top=20,scrollbars=yes,resizable=yes,width=800,height=700');" >[@L[cds.sales/gd/hosting/vps-hosting:FaqQuestion2]@L]</a>
-                                </li>
-                                <li><a href="javascript:atl_PopUp('[@T[link:<external linktype="communityurl" path="help/article/152/" secure="false "><param name='isc' value='gtnila43' /><param name='ci' value='88988' /></external>]@T]','display2','left=20,top=20,scrollbars=yes,resizable=yes,width=800,height=700');" >[@L[cds.sales/gd/hosting/vps-hosting:FaqQuestion3]@L]</a>
-                                </li>
-                                <li><a href="javascript:atl_PopUp('[@T[link:<external linktype="communityurl" path="help/article/172/" secure="false "><param name='isc' value='gtnila43' /><param name='ci' value='88989' /></external>]@T]','display2','left=20,top=20,scrollbars=yes,resizable=yes,width=800,height=700');" >[@L[cds.sales/gd/hosting/vps-hosting:FaqQuestion4]@L]</a>
-                                </li>
-                                <li><a href="javascript:atl_PopUp('[@T[link:<external linktype="communityurl" path="help/article/149/" secure="false "><param name='isc' value='gtnila43' /><param name='ci' value='88990' /></external>]@T]','display2','left=20,top=20,scrollbars=yes,resizable=yes,width=800,height=700');" >[@L[cds.sales/gd/hosting/vps-hosting:FaqQuestion5]@L]</a>
-                                </li>
-                                <li><a href="javascript:atl_PopUp('[@T[link:<external linktype="communityurl" path="help/article/147/" secure="false "><param name='isc' value='gtnila43' /><param name='ci' value='88991' /></external>]@T]','display2','left=20,top=20,scrollbars=yes,resizable=yes,width=800,height=700');" >[@L[cds.sales/gd/hosting/vps-hosting:FaqQuestion6]@L]</a>
-                                </li>
-                                <li><a href="javascript:atl_PopUp('[@T[link:<external linktype="communityurl" path="help/article/646/" secure="false "><param name='isc' value='gtnila43' /><param name='ci' value='88992' /></external>]@T]','display2','left=20,top=20,scrollbars=yes,resizable=yes,width=800,height=700');" >[@L[cds.sales/gd/hosting/vps-hosting:FaqQuestion7]@L]</a>
-                                </li>
-                                <li><a href="javascript:atl_PopUp('[@T[link:<external linktype="communityurl" path="help/article/198/" secure="false "><param name='isc' value='gtnila43' /><param name='ci' value='88993' /></external>]@T]','display2','left=20,top=20,scrollbars=yes,resizable=yes,width=800,height=700');" >[@L[cds.sales/gd/hosting/vps-hosting:FaqQuestion8]@L]</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+              <div class="row">
+                <div class="col-xs-12">
+                  <div class="grid-column tab-content-column-alternate">
+                    <h2 class="h2-alternate">[@L[cds.sales/gd/hosting/vps-hosting:FaqQuestion11]@L]</h2>
+                    <p>[@L[cds.sales/gd/hosting/vps-hosting:FaqQuestion11Text]@L]</p>
+                    <hr/>
+
+                    <h2 class="h2-alternate">[@L[cds.sales/gd/hosting/vps-hosting:FaqQuestion12]@L]</h2>
+                    <p>[@L[cds.sales/gd/hosting/vps-hosting:FaqQuestion12Text]@L]</p>
+                    <hr/>
+
+                    <h2 class="h2-alternate">[@L[cds.sales/gd/hosting/vps-hosting:FaqQuestion13]@L]</h2>
+                    <p>[@L[cds.sales/gd/hosting/vps-hosting:FaqQuestion13Text]@L]</p>
+                    <hr/>
+
+                    <h2 class="h2-alternate">[@L[cds.sales/gd/hosting/vps-hosting:FaqQuestion14]@L]</h2>
+                    <p>[@L[cds.sales/gd/hosting/vps-hosting:FaqQuestion14Text]@L]</p>
+                    <hr/>
+
+                    <h2 class="h2-alternate">[@L[cds.sales/gd/hosting/vps-hosting:FaqQuestion15]@L]</h2>
+                    <p>[@L[cds.sales/gd/hosting/vps-hosting:FaqQuestion15Text]@L]</p>
+                    <hr/>
+
+                    <h2 class="h2-alternate">[@L[cds.sales/gd/hosting/vps-hosting:FaqQuestion16]@L]</h2>
+                    <p>[@L[cds.sales/gd/hosting/vps-hosting:FaqQuestion16Text]@L]</p>
+                    <hr/>
+
+                    <h2 class="h2-alternate">[@L[cds.sales/gd/hosting/vps-hosting:FaqQuestion17]@L]</h2>
+                    <p>[@L[cds.sales/gd/hosting/vps-hosting:FaqQuestion17Text]@L]</p>
+                    <hr/>
+
+                    <h2 class="h2-alternate">[@L[cds.sales/gd/hosting/vps-hosting:FaqQuestion18]@L]</h2>
+                    <p class="no-margin-bottom">[@L[cds.sales/gd/hosting/vps-hosting:FaqQuestion18Text]@L]</p>
+                  </div>
                 </div>
-                <a href="#plan-pricing" class="btn btn-primary btn-lg btn-block tab-link" data-ci="88994"><i class="ico ico-gt"></i>[@L[cds.sales/gd/hosting/vps-hosting:PacakgeBtn]@L]</a>
+              </div>
+              <a href="#plan-pricing" class="btn btn-primary btn-lg btn-block tab-link" data-ci="88994"><i class="ico ico-gt"></i>[@L[cds.sales/gd/hosting/vps-hosting:PacakgeBtn]@L]</a>
             </div>
         </section>
     </div>
@@ -1276,56 +1294,56 @@ function getData(dc) {
 function processVPSData(data, dc) {
 
     $(data.centos.plans.basic[dc]).each(function(i, n) {
-        generateDropDowns(i, n, '#centosBasic', 1);
+        generateDropDowns(i, n, '#centosBasic');
     });
     $(data.centos.plans.economy[dc]).each(function(i, n) {
-        generateDropDowns(i, n, '#centosEco', 1);
+        generateDropDowns(i, n, '#centosEco');
     });
     $(data.centos.plans.value[dc]).each(function(i, n) {
-        generateDropDowns(i, n, '#centosValue', 1);
+        generateDropDowns(i, n, '#centosValue');
     });
     $(data.centos.plans.deluxe[dc]).each(function(i, n) {
-        generateDropDowns(i, n, '#centosDeluxe', 1);
+        generateDropDowns(i, n, '#centosDeluxe');
     });
     $(data.centos.plans.premium[dc]).each(function(i, n) {
-        generateDropDowns(i, n, '#centosPremium', 1);
+        generateDropDowns(i, n, '#centosPremium');
     });
     $(data.centos.plans.ultimate[dc]).each(function(i, n) {
-        generateDropDowns(i, n, '#centosUltimate', 1);
+        generateDropDowns(i, n, '#centosUltimate');
     });
     $(data.fedora.plans.economy[dc]).each(function(i, n) {
-        generateDropDowns(i, n, '#fedEco', 0);
+        generateDropDowns(i, n, '#fedEco');
     });
     $(data.fedora.plans.value[dc]).each(function(i, n) {
-        generateDropDowns(i, n, '#fedValue', 0);
+        generateDropDowns(i, n, '#fedValue');
     });
     $(data.fedora.plans.deluxe[dc]).each(function(i, n) {
-        generateDropDowns(i, n, '#fedDeluxe', 0);
+        generateDropDowns(i, n, '#fedDeluxe');
     });
     $(data.fedora.plans.premium[dc]).each(function(i, n) {
-        generateDropDowns(i, n, '#fedPremium', 0);
+        generateDropDowns(i, n, '#fedPremium');
     });
     $(data.fedora.plans.ultimate[dc]).each(function(i, n) {
-        generateDropDowns(i, n, '#fedUltimate', 0);
+        generateDropDowns(i, n, '#fedUltimate');
     });
     $(data.windows.plans.value[dc]).each(function(i, n) {
-        generateDropDowns(i, n, '#windowsValue', 0);
+        generateDropDowns(i, n, '#windowsValue');
     });
     $(data.windows.plans.deluxe[dc]).each(function(i, n) {
-        generateDropDowns(i, n, '#windowsDeluxe', 0);
+        generateDropDowns(i, n, '#windowsDeluxe');
     });
     $(data.windows.plans.premium[dc]).each(function(i, n) {
-        generateDropDowns(i, n, '#windowsPremium', 0);
+        generateDropDowns(i, n, '#windowsPremium');
     });
     $(data.windows.plans.ultimate[dc]).each(function(i, n) {
-        generateDropDowns(i, n, '#windowsUltimate', 0);
+        generateDropDowns(i, n, '#windowsUltimate');
     });
 
     $('.select-box').setSelectBox();
 
 }
 
-function generateDropDowns(i, n, c, noPercent) {
+function generateDropDowns(i, n, c) {
 
     var monthString = (n.planduration > 1) ? '[@L[cds.sales/gd/hosting/vps-hosting:months]@L]' : '[@L[cds.sales/gd/hosting/vps-hosting:month]@L]';
     var newItem = '';
@@ -1344,10 +1362,8 @@ function generateDropDowns(i, n, c, noPercent) {
     }
     newItem += '<div><span>' + n.planduration + ' ' + monthString + '</span>';
     newItem += '<span class="price">' + n.productprice + '/[@L[cds.sales/gd/hosting/vps-hosting:month]@L]</span>';
-    if (n.planduration == '12' && noPercent != 1 ) {
-        newItem += '<span class="secondary-color">[@L[cds.sales/gd/hosting/vps-hosting:Save10Text]@L]<sup>[@L[cds.sales/gd/hosting/vps-hosting:DiscalimerSymbol]@L]</sup></span>';
-    } else if (n.planduration == '24' && noPercent != 1) {
-        newItem += '<span class="secondary-color">[@L[cds.sales/gd/hosting/vps-hosting:Save20Text]@L]<sup>[@L[cds.sales/gd/hosting/vps-hosting:DiscalimerSymbol]@L]</sup></span>';
+    if (n.plandurationdiscount != '0') {
+        newItem += '<span class="secondary-color">[@L[cds.sales/gd/hosting/vps-hosting:SaveText]@L] ' + n.plandurationdiscount + '% <sup>[@L[cds.sales/gd/hosting/vps-hosting:DiscalimerSymbol]@L]</sup></span>';
     } else {
         newItem += '<span class="save"></span>';
     }

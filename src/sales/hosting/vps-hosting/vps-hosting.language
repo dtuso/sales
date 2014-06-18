@@ -1,15 +1,20 @@
 ---
 location: localization/sales/gd/hosting/vps-hosting/en
-id: false
-name: FOS-1310
+id: 53a0c7e3f778fc16ec1881b4
+name: FOS-21339
+comments: Remove FAQ from vps-hosting
 ---
-{% include '../modules/doc-block.html' %}
+{% include 'modules/doc-block.html' %}
 <phrase key="page-title" />
-VPS Hosting | Affordable &amp; Configurable VPS plans - GoDaddy
+VPS Hosting | Affordable &amp; Configurable VPS plans - [@T[companyname:name]@T]
 <phrase key="meta-description" />
 VPS Hosting gives you more power than traditional hosting. Our VPS hosting solutions are affordable and easier to manage than a dedicated server.
 <phrase key="meta-keywords" />
-vps hosting,vps,virtual server,windows vps, linux vps, vps server,virtual private server,virtual servers,virtual private servers,windows virtual server,linux virtual server,virtual private server hosting,vps servers,virtual dedicated server
+vps server, virtual private server, vps hosting, vps, virtual server, Virtual Private Servers, Virtual Servers, virtual dedicated servers, vps, windows virtual server
+<phrase key="og-title" />
+[@T[companyname:name]@T] Virtual Private Servers
+<phrase key="og-description" />
+Need a hosting plan that grows with your business but doesn't break the bank? Get all the power and control of a dedicated server for less with a Virtual Private Server from [@T[companyname:name]@T]!
 <phrase key="HeaderHeadline" />
 Virtual Private Servers
 <phrase key="HeaderSubHeadline" />
@@ -27,7 +32,7 @@ FAQ
 <phrase key="Tab1Header" />
 Our VPS Hosting is made to grow as your needs grow.
 <phrase key="Tab1HeaderText" />
-Get all the power and control of your own Virtual Server for less! With a GoDaddy VPS, your RAM and storage are guaranteed - we never overload. Plus, you can add more capacity anytime with just a few clicks*. Just choose the plan that&#039;s right for you, customize your bandwidth, control panel (Parallels<sup>&reg;</sup> Plesk Panel or cPanel<sup>&reg;</sup>) and backup options and leave the rest to us.
+Get all the power and control of your own Virtual Server for less! With a [@T[companyname:name]@T] VPS, your RAM and storage are guaranteed - we never overload. Plus, you can add more capacity anytime with just a few clicks*. Just choose the plan that&#039;s right for you, customize your bandwidth, control panel (Parallels<sup>&reg;</sup> Plesk Panel or cPanel<sup>&reg;</sup>) and backup options and leave the rest to us.
 <phrase key="NeedHelpBadgePhone1" />
 Need Help? For 24/7 sales: <a>[@T[support:<serverSupportPhone/>]@T]</a>
 <phrase key="NeedHelpBadgePhone2" />
@@ -151,7 +156,7 @@ All Plans Include
 <phrase key="SupportSubText1" />
 Free rapid setup
 <phrase key="SupportSubText2" />
-<strong class="secondary-color">FREE!</strong> <a class="isToolTip" data-html="true" title="<strong>Show customers they can do business with you safely.</strong><br />A [@T[productprice:<current productid="3604" dropdecimal="flase" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]/yr value, your GoDaddy SSL certificate keeps transactions with your Website secure. Take advantage of up to 256-bit encryption and 99% browser recognition - it&#039;s all free<sup>&#134;&#134;</sup> for the initial plan term purchased!" data-ci="88972">SSL Certificate</a>
+<strong class="secondary-color">FREE!</strong> <a class="isToolTip" data-html="true" title="<strong>Show customers they can do business with you safely.</strong><br />A [@T[productprice:<current productid="3604" dropdecimal="flase" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]/yr value, your [@T[companyname:name]@T] SSL certificate keeps transactions with your Website secure. Take advantage of up to 256-bit encryption and 99% browser recognition - it&#039;s all free<sup>&#134;&#134;</sup> for the initial plan term purchased!" data-ci="88972">SSL Certificate</a>
 <phrase key="SupportSubText3" />
 3 dedicated IPs
 <phrase key="SupportSubText4" />
@@ -183,7 +188,7 @@ State-of-the-art Security
 <phrase key="SupportSubText13" />
 <a class="isToolTip" data-html="true" data-toggle="modal" data-target="#hostingTechModal" href="#" title="We&#039;re proud to offer state-of-the-art data centers in the United States, Europe and Asia Pacific. Our facilities feature best-in-class hardware, full network redundancy, integrated monitoring systems, 24/7 security staff and much more. And unlike many of our competitors, we actually own, operate and support our data centers. You don&#039;t ever have to deal with a third party or an outsourced support staff. For specific technical details, click now." data-ci="88977">Our World-Class Data Center</a>
 <phrase key="SupportSubTitle2" />
-Why GoDaddy Servers:
+Why [@T[companyname:name]@T] Servers:
 <phrase key="SupportSubText14" />
 <strong>Admin access:</strong> Install and run virtually anything on the server.
 <phrase key="SupportSubText15" />
@@ -207,11 +212,11 @@ Disclaimer
 <phrase key="DisclaimerModalItem06" />
 &#8225; Annual discounts available on NEW purchases only.
 <phrase key="DisclaimerModalItem08" />
-Products will automatically renew until cancelled. You may turn off the auto-renewal feature by visiting your GoDaddy account.
+Products will automatically renew until cancelled. You may turn off the auto-renewal feature by visiting your [@T[companyname:name]@T] account.
 <phrase key="HostingTechModalTitle1" />
 A Global Hosting Leader
 <phrase key="HostingTechModalText1" />
-GoDaddy is proud to offer state-of-the-art data centers, providing fast, secure, reliable Webservice to millions of users worldwide.
+[@T[companyname:name]@T] is proud to offer state-of-the-art data centers, providing fast, secure, reliable Webservice to millions of users worldwide.
 <phrase key="HostingTechModalText2" />
 United States, European and Asia-Pacific data centers
 <phrase key="HostingTechModalText3" />
@@ -374,6 +379,50 @@ Are there any restrictions on the content I can keep on my virtual private serve
 How do I install software on my Windows virtual private server?
 <phrase key="FaqQuestion8" />
 What name servers do I use with my virtual private server?
+<phrase key="FaqQuestion11" />
+What are Virtual Private Servers?
+<phrase key="FaqQuestion11Text" />
+A <strong>virtual private server</strong>, also known as VPS or a virtual dedicated server, is an affordable way to get advanced hosting performance and control when a traditional shared hosting plan is not powerful enough to handle your traffic. Unlike a shared hosting account, a virtual private server lets you install custom programs and provides you a guaranteed port connection of 10 megabits per second. 
+<strong>VPS hosting</strong> takes the hassle out of using a dedicated server without losing configurability. We make it easy for you to get started with six different pre-configured plans to choose from. 
+For more information, see our <a href="javascript:atl_PopUp('[@T[link:<external linktype='communityurl' path='help/category/60/' secure='false'><param name='isc' value='gtnila43' /><param name='ci' value='90964' /></external>]@T]','display2','left=20,top=20,scrollbars=yes,resizable=yes,width=800,height=700');" >Virtual Dedicated Linux</a> and <a href="javascript:atl_PopUp('[@T[link:<external linktype='communityurl' path='help/category/202/' secure='false'><param name='isc' value='gtnila43' /><param name='ci' value='90966' /></external>]@T]','display2','left=20,top=20,scrollbars=yes,resizable=yes,width=800,height=700');" >Virtual Dedicated Windows</a> product support pages.
+<phrase key="FaqQuestion12" />
+How does a Virtual Private Server differ from a Dedicated Server?
+<phrase key="FaqQuestion12Text" />
+While a dedicated server is exactly as it sounds — an entire server dedicated specifically to your site — a virtual private server is partitioned in a way that it isolates your site from others on the same virtual server. This lets you have administrator (root) access, greater resources, a dedicated IP address and other features that would normally only be available with a dedicated server.
+We segment these servers in a way that each <strong>VPS</strong> operates almost independently from the other segmented accounts on the box. This way, you can count on a consistent, high performing experience even when usage spikes on the primary server.
+<phrase key="FaqQuestion13" />
+Who should use a Virtual Private Server?
+<phrase key="FaqQuestion13Text" />
+Virtual dedicated hosting can be used for a wide variety of purposes. With VPS, you have admin access to install and run virtually anything you want on the server.
+Virtual private servers are useful to businesses and individuals that run websites that generate a lot of traffic. Sites running complex applications requiring large amounts of bandwidth would benefit from VPS hosting. Our <strong>virtual servers</strong> feature high performance with large amounts of disk space and bandwidth.
+<phrase key="FaqQuestion14" />
+Are [@T[companyname:name]@T] Virtual Private Servers configurable?
+<phrase key="FaqQuestion14Text" />
+You bet! Having this feature allows you to change as your site grows. In fact, most upgrades can be done through your account under the My Products section.
+For more information, see <a href="javascript:atl_PopUp('[@T[link:<external linktype='communityurl' path='help/article/4642/' secure='false'><param name='isc' value='gtnila43' /><param name='ci' value='90965' /></external>]@T]', 'display2', 'left=20,top=20,scrollbars=yes,resizable=yes,width=800,height=700');" >How do I upgrade or downgrade options on my server?</a>
+<phrase key="FaqQuestion15" />
+What if I don’t know how to set up VPS hosting?
+<phrase key="FaqQuestion15Text" />
+That’s not a problem with <a href="javascript:atl_PopUp('[@T[link:<external linktype='communityurl' path='help/article/4938/' secure='false'><param name='isc' value='gtnila43' /><param name='ci' value='90963' /></external>]@T]','display2','left=20,top=20,scrollbars=yes,resizable=yes,width=800,height=700');" >[@T[companyname:name]@T] Support</a>. We have several resources to get you started. [@T[companyname:name]@T] Support is loaded with help documentation, support forums, and educational blog posts to point you in the right direction.
+Looking for that human touch? During your first 30 days using these services, our Server Concierge is available to help you get your <strong>VPS server</strong> set up and running fast. And once you’re up and running, our expert support staff is always available 24/7 to answer any questions you might have.
+<phrase key="FaqQuestion16" />
+How do I manage my Virtual Private Server?
+<phrase key="FaqQuestion16Text" />
+You can access your VPS using the Hosting Control Center. Simply log in to your [@T[companyname:name]@T] account, and then click on Servers. From this menu, you can click Launch next to the VPS server you want to use. 
+Using the Virtual Dedicated Hosting Manager, you can perform basic server management including account setup, monitoring bandwidth usage, and scheduling server reboots. You can also submit Trouble Tickets for any problems related to your VPS.
+You can also install a control panel on your VPS to manage the more advanced features of your server. 
+For more information, see <a href="javascript:atl_PopUp('[@T[link:<external linktype='communityurl' path='help/article/6225/' secure='false'><param name='isc' value='gtnila43' /><param name='ci' value='90962' /></external>]@T]','display2','left=20,top=20,scrollbars=yes,resizable=yes,width=800,height=700');" >Comparing Dedicated Hosting Control Panels</a>.
+<phrase key="FaqQuestion17" />
+What is Bandwidth Overage Protection?
+<phrase key="FaqQuestion17Text" />
+Bandwidth Overage Protection guards you from overage charges by automatically suspending your account when you exceed the allowed bandwidth for your plan. To reinstate your server, simply purchase additional bandwidth, or wait until the start of the next billing cycle.
+Bandwidth Overage Protection cannot be added to an account when it is already over its allotted bandwidth.
+If you don’t already have Bandwidth Overage Protection, and an overage occurs, you can suspend your account manually or purchase additional bandwidth to get you through until the next billing cycle.
+For more information, see <a href="javascript:atl_PopUp('[@T[link:<external linktype='communityurl' path='help/article/1418/' secure='false'><param name='isc' value='gtnila43' /><param name='ci' value='90961' /></external>]@T]','display2','left=20,top=20,scrollbars=yes,resizable=yes,width=800,height=700');" >How Do I Add Bandwidth Overage Protection to My Account?</a>
+<phrase key="FaqQuestion18" />
+How do I get assistance with my virtual server?
+<phrase key="FaqQuestion18Text" />
+If you need help with your <strong>virtual private server</strong>, we’re here to assist you 24/7. You can describe the nature of the problem in a Trouble Ticket or launch a live chat session through the Virtual Dedicated Hosting Manager. Or, you can contact our expert hosting support to assist you in the management and maintenance of your virtual Linux or Windows server.<phrase key="RegionLabel" />
 <phrase key="RegionLabel" />
 Region:
 <phrase key="US" />

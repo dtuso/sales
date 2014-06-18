@@ -4,18 +4,6 @@
       "champion": {
         "name": "Colyn Brown",
         "email": "clbrown@godaddy.com"
-      },
-      "cdsLocation": "sales/hosting/vps-hosting.aspx",
-      "draft": {
-        "id": false,
-        "createdDate": "2014-04-29",
-        "createdBy": {
-          "fullName": "Sergio Lopez",
-          "username": "sylopez"
-        },
-        "jiraTicket": "FOS-1310",
-        "comments": "Landing Page Reskin",
-        "url": "http://www.dev-godaddy.com/hosting/vps-hosting.aspx"
       }
     },
     "assetPath": "fos/201401/sales/hosting/vps-hosting/",
@@ -32,17 +20,6 @@
       "champion": {
         "name": "Colyn Brown",
         "email": "clbrown@godaddy.com"
-      },
-      "cdsLocation": "localization/sales/hosting/vps-hosting/en",
-      "draft": {
-        "id": false,
-        "createdDate": "2014-04-29",
-        "createdBy": {
-          "fullName": "Sergio Lopez",
-          "username": "sylopez"
-        },
-        "jiraTicket": "FOS-1310",
-        "comments": "Landing Page Reskin"
       }
     }
   }
