@@ -1,7 +1,8 @@
 ---
 location: sales/hosting/website-builder-splits/split-b
-id: 53b41f76f778fc1bcc061c2b
-name: FOS-23020
+id: 53a225ebf778fc16ec1881c9
+name: FOS-5720
+comments: Integrate BazaarVoice on WSB LP
 ---
 {% extends 'layouts/base.html' %}
 {% block pageTitle %}
@@ -182,6 +183,12 @@ name: FOS-23020
           <div class="main-banner-text text-padding">
   ##endif
           <h1 class="main-banner-title condensed right-padding"><strong>[@L[cds.sales/gd/hosting/website-builder:main-banner-subtitle]@L]</strong></h1>
+          ##if(activeLanguageAny(en))
+          <section class="rating-stars-container main-banner-rating-stars-container websitebuilder-rating-stars">
+              <div class="rating-stars-init" data-rating="5"></div>
+          </section>
+          <a class="main-banner-read-reviews main-banner-read-reviews-alternate tab-link" href="#reviews">[@L[cds.sales/gd/hosting/website-builder:stars-read-reviews]@L]</a>
+          ##endif
           <h2 class="main-banner-subtitle main-banner-subtitle-alternate">[@L[cds.sales/gd/hosting/website-builder:main-banner-title]@L]</h2>
           <ul class="main-banner-list no-wrap">
               <li><span class="wsb-black-check"></span><span class="wsb-li-content">[@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-1]@L]</span></li>
@@ -210,6 +217,9 @@ name: FOS-23020
     <div class="container">
       <ul class="nav nav-tabs">
         <li class="nav-tabs-item active"><a class="nav-tabs-link" href="#plans-pricing" data-toggle="tab" data-ci="87758">[@L[cds.sales/gd/hosting/website-builder:label-plans-pricing]@L]</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
+        ##if(activeLanguageAny(en))
+        <li class="nav-tabs-item"><a class="nav-tabs-link" href="#reviews" data-toggle="tab" data-ci="87151">[@L[cds.sales/gd/hosting/website-builder:label-reviews]@L]</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
+        ##endif
         <li class="nav-tabs-item"><a class="nav-tabs-link" href="#faq" data-toggle="tab" data-ci="87759">[@L[cds.sales/gd/hosting/website-builder:label-faq]@L]</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
       </ul>
     </div>
@@ -874,34 +884,188 @@ name: FOS-23020
 </div>
 
   </div>
-  <div class="tab-pane" id="faq">
-    <section class="tab-content-top-spacing">
-    <div class="container l-main-container">
-        <div class="row tab-content">
-            <div class="col-xs-12">
-                <div class="grid-column tab-content-column-alternate">
 
-                    <h2 class="h2-alternate">[@L[cds.sales/gd/hosting/website-builder:faq-first-slide-title]@L]</h2>
-                    [@L[cds.sales/gd/hosting/website-builder:faq-first-slide-content]@L]
-                    <hr/>
+  	<div class="tab-pane" id="reviews">
+      	<section class="tab-content-top-spacing">
+	      <div class="container l-main-container">
+	          <div class="row tab-content">
+	              <div class="col-xs-12">
+	                  <section class="carousel-container">
+	                    <div class="container testimonial-carousel-container">
+	                      <div data-ride="carousel" class="carousel slide" data-interval="10000" id="carousel-init">
+	                        <!-- Wrapper for slides -->
+	                        <div class="carousel-content-container">
+	                          <div class="carousel-inner carousel-inner-container testimonial-carousel-inner-container">
+	                            <div class="item carousel-inner-item active">
+	                              <div class="carousel-inner-text-container">
+	                                <div class="testimonial-afine-postraits testimonial-content-text">
+	                                  <p class="font-18 testimonial-title"><strong>[@L[cds.sales/gd/hosting/website-builder:CustomerTestimonialMainTitle]@L]</strong></p>
+	                                  <p class="carousel-inner-text">[@L[cds.sales/gd/hosting/website-builder:CustomerTestimonialText2]@L]</p>
+	                                  <div class="testimonial-carousel-footer">
+	                                    <hr/>
+	                                    <span class="font-18 testimonials-name"><strong>[@L[cds.sales/gd/hosting/website-builder:CustomerTestimonialClientName2]@L]</strong></span>
+	                                    <span class="testimonials-company"><em>[@L[cds.sales/gd/hosting/website-builder:CustomerTestimonialCompany2]@L]</em></span>
+	                                  </div>
+	                                </div>
+	                                <div class="testimonial-afine-postraits-video testimonial-video">
+	                                    ##if(activeLanguageAny(en))
+	                                    <a href="#" class="video-link" data-toggle="modal" data-target="#myVideoModal4">
+	                                      <i class="ico ico-gt-circle-alternate"></i><span class="br"></span>
+	                                      <span class="video-link-text-alternate font-18"><strong>[@L[cds.sales/gd/hosting/website-builder:video-link-text]@L]</strong></span>
+	                                    </a>
+	                                    ##endif
+	                                    <div class="modal fade videoModal myVideoModal" id="myVideoModal4">
+	                                    <div class="modal-dialog">
+	                                      <div class="modal-content">
+	                                        <div class="modal-header">
+	                                          <button type="button" class="modal-header-close close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	                                        </div>
+	                                        <div class="modal-body">
+	                                          <div class="embedVideo" id="ytplayer4" data-id="jl6ru4BSy10"></div>
+	                                          <!--[if lt IE 8]>
+	                                          <iframe class="embedVideoIE7" width="854" height="480" src="//www.youtube.com/embed/jl6ru4BSy10?html5=1&rel=0" autoplay scrolling="no" frameborder="0" allowfullscreen>
+	                                          </iframe>
+	                                          <![endif]-->
+	                                        </div>
+	                                      </div>
+	                                    </div>
+	                                  </div>
+	                                </div>
+	                              </div>
+	                            </div>
+	                            <div class="item carousel-inner-item">
+	                              <div class="carousel-inner-text-container">
+	                                <div class="testimonial-simply-sweets testimonial-content-text">
+	                                  <p class="font-18 testimonial-title"><strong>[@L[cds.sales/gd/hosting/website-builder:CustomerTestimonialMainTitle]@L]</strong></p>
+	                                  <p class="carousel-inner-text">[@L[cds.sales/gd/hosting/website-builder:CustomerTestimonialText3]@L]</p>
+	                                  <div class="testimonial-carousel-footer">
+	                                    <hr/>
+	                                    <span class="font-18 testimonials-name"><strong>[@L[cds.sales/gd/hosting/website-builder:CustomerTestimonialClientName3]@L]</strong></span>
+	                                    <span class="testimonials-company"><em>[@L[cds.sales/gd/hosting/website-builder:CustomerTestimonialCompany3]@L]</em></span>
+	                                  </div>
+	                                </div>
+	                                <div class="testimonial-simply-sweets-video testimonial-video">
+	                                    ##if(activeLanguageAny(en))
+	                                    <a href="#" class="video-link" data-toggle="modal" data-target="#myVideoModal5">
+	                                      <i class="ico ico-gt-circle-alternate"></i><span class="br"></span>
+	                                      <span class="video-link-text-alternate font-18"><strong>[@L[cds.sales/gd/hosting/website-builder:video-link-text]@L]</strong></span>
+	                                    </a>
+	                                    ##endif
+	                                    <div class="modal fade videoModal myVideoModal" id="myVideoModal5">
+	                                    <div class="modal-dialog">
+	                                      <div class="modal-content">
+	                                        <div class="modal-header">
+	                                          <button type="button" class="modal-header-close close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	                                        </div>
+	                                        <div class="modal-body">
+	                                          <div class="embedVideo" id="ytplayer5" data-id="jl6ru4BSy10"></div>
+	                                          <!--[if lt IE 8]>
+	                                          <iframe class="embedVideoIE7" width="854" height="480" src="//www.youtube.com/embed/jl6ru4BSy10?html5=1&rel=0" autoplay scrolling="no" frameborder="0" allowfullscreen>
+	                                          </iframe>
+	                                          <![endif]-->
+	                                        </div>
+	                                      </div>
+	                                    </div>
+	                                  </div>
+	                                </div>
+	                              </div>
+	                            </div>                                                  
+	                            <div class="item carousel-inner-item">
+	                              <div class="carousel-inner-text-container">
+	                                <div class="testimonial-business-owners testimonial-content-text">
+	                                  <p class="font-18 testimonial-title"><strong>[@L[cds.sales/gd/hosting/website-builder:CustomerTestimonialMainTitle]@L]</strong></p>
+	                                  <p class="carousel-inner-text">[@L[cds.sales/gd/hosting/website-builder:CustomerTestimonialText4]@L]</p>
+	                                    <div class="testimonial-carousel-footer">
+	                                    <hr/>
+	                                    <span class="font-18 testimonials-name"><strong>[@L[cds.sales/gd/hosting/website-builder:CustomerTestimonialClientName4]@L]</strong></span>
+	                                    <span class="testimonials-company"><em>[@L[cds.sales/gd/hosting/website-builder:CustomerTestimonialCompany4]@L]</em></span>
+	                                  </div>
+	                                </div>
+	                                <div class="testimonial-business-owners-video testimonial-video">
+	                                  ##if(activeLanguageAny(en))
+	                                  <a href="#" class="video-link" data-toggle="modal" data-target="#myVideoModal3">
+	                                    <i class="ico ico-gt-circle-alternate"></i><span class="br"></span>
+	                                    <span class="video-link-text-alternate font-18"><strong>[@L[cds.sales/gd/hosting/website-builder:video-link-text]@L]</strong></span>
+	                                  </a>
+	                                  ##endif
+	                                  <div class="modal fade videoModal myVideoModal" id="myVideoModal3">
+	                                    <div class="modal-dialog">
+	                                      <div class="modal-content">
+	                                        <div class="modal-header">
+	                                          <button type="button" class="modal-header-close close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	                                        </div>
+	                                        <div class="modal-body">
+	                                          <div class="embedVideo" id="ytplayer3" data-id="jl6ru4BSy10"></div>
+	                                          <!--[if lt IE 8]>
+	                                          <iframe class="embedVideoIE7" width="854" height="480" src="//www.youtube.com/embed/jl6ru4BSy10?html5=1&rel=0" autoplay scrolling="no" frameborder="0" allowfullscreen>
+	                                          </iframe>
+	                                          <![endif]-->
+	                                        </div>
+	                                      </div>
+	                                    </div>
+	                                  </div>
+	                                </div>
+	                              </div>
+	                            </div>
+	                          </div>
+	                          <!-- Controls -->
+	                          <a data-slide="prev" href="#carousel-init" class="left carousel-control-btn ico ico-carousel-arrow-left testimonial-carousel-control"></a>
+	                          <a data-slide="next" href="#carousel-init" class="right carousel-control-btn ico ico-carousel-arrow-right testimonial-carousel-control"></a>
+	                        </div>
+	                        <!-- Indicators -->
+	                        <ol class="carousel-indicators carousel-indicators-list">
+	                          <li class="carousel-indicators-obj active"><a href="#" data-slide-to="0" data-target="#carousel-init"></a></li>
+	                          <li class="carousel-indicators-obj"><a href="#" data-slide-to="1" data-target="#carousel-init"></a></li>
+	                          <li class="carousel-indicators-obj"><a href="#" data-slide-to="2" data-target="#carousel-init"></a></li>
+	                        </ol>      
+	                      </div>
+	                    </div>
+	                  </section>
 
-                    <h2 class="h2-alternate">[@L[cds.sales/gd/hosting/website-builder:faq-third-slide-title]@L]</h2>
-                    [@L[cds.sales/gd/hosting/website-builder:faq-third-slide-content]@L]
-                    <hr/>
-
-                    <h2 class="h2-alternate">[@L[cds.sales/gd/hosting/website-builder:faq-second-slide-title]@L]</h2>
-                    [@L[cds.sales/gd/hosting/website-builder:faq-second-slide-content]@L]
-                    <hr/>
-
-                    <h2 class="h2-alternate">[@L[cds.sales/gd/hosting/website-builder:faq-fourth-slide-title]@L]</h2>
-                    [@L[cds.sales/gd/hosting/website-builder:faq-fourth-slide-content]@L]
-                </div>
-            </div>
-        </div>
-        <a href="#" class="btn btn-primary btn-lg btn-block js-open-overview"><i class="ico ico-gt"></i>[@L[cds.sales/gd/hosting/website-builder:cta-package]@L]</a>
+	              </div>
+	          </div>
+	          <div class="row tab-content">
+	              <div class="col-xs-12">
+	                  <div class="grid-column tab-content-column-alternate">
+	                    <div id="BVRRContainer"><p class="bv-loading">Loading...</p></div>
+            				[@P[userControl:<Data location="~/Shared/Tabs/controls/BVReviewsNoJS.ascx"><Parameters><Parameter key="ProductId" value="website_builder" /><Parameter key="ReviewNumber" value="4" /></Parameters></Data>]@P]
+	                  </div>
+	              </div>
+	          </div>
+	          <a href="#" class="btn btn-primary btn-lg btn-block js-open-overview"><i class="ico ico-gt"></i>[@L[cds.sales/gd/hosting/website-builder:choose-your-package]@L]</a>
+	      </div>
+  		</section>
     </div>
-</section>
-  </div>
+
+  	<div class="tab-pane" id="faq">
+	    <section class="tab-content-top-spacing">
+		    <div class="container l-main-container">
+		        <div class="row tab-content">
+		            <div class="col-xs-12">
+		                <div class="grid-column tab-content-column-alternate">
+
+		                    <h2 class="h2-alternate">[@L[cds.sales/gd/hosting/website-builder:faq-first-slide-title]@L]</h2>
+		                    [@L[cds.sales/gd/hosting/website-builder:faq-first-slide-content]@L]
+		                    <hr/>
+
+		                    <h2 class="h2-alternate">[@L[cds.sales/gd/hosting/website-builder:faq-third-slide-title]@L]</h2>
+		                    [@L[cds.sales/gd/hosting/website-builder:faq-third-slide-content]@L]
+		                    <hr/>
+
+		                    <h2 class="h2-alternate">[@L[cds.sales/gd/hosting/website-builder:faq-second-slide-title]@L]</h2>
+		                    [@L[cds.sales/gd/hosting/website-builder:faq-second-slide-content]@L]
+		                    <hr/>
+
+		                    <h2 class="h2-alternate">[@L[cds.sales/gd/hosting/website-builder:faq-fourth-slide-title]@L]</h2>
+		                    [@L[cds.sales/gd/hosting/website-builder:faq-fourth-slide-content]@L]
+		                </div>
+		            </div>
+		        </div>
+		        <a href="#" class="btn btn-primary btn-lg btn-block js-open-overview"><i class="ico ico-gt"></i>[@L[cds.sales/gd/hosting/website-builder:cta-package]@L]</a>
+		    </div>
+		</section>
+  	</div>
+
 </div>
 
 
@@ -916,6 +1080,8 @@ name: FOS-23020
       </p>
   </section>
 
+
+  
   <div class="modal appModal fade" id="socialModal">
       <div class="app-dialog">
           <div class="seo-content">
@@ -974,6 +1140,10 @@ name: FOS-23020
           </div>
       </div>
   </div>
+
+  ##if(activeLanguageAny(en))
+    {% include '_login-modal.html' %}
+    ##endif
 
 {% endblock %}
 
@@ -1088,4 +1258,8 @@ name: FOS-23020
 
   })( jQuery, window, document );
 </script>
+
+##if(activeLanguageAny(en))
+  {% include '_load-reviews-js.html' %}
+ ##endif
 {% endblock %}

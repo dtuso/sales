@@ -1,7 +1,8 @@
 ---
 location: localization/sales/gd/hosting/website-builder/en
-id: 53b30ba9f778fc27b0673bc2
-name: FOS-23020
+id: 53a22ca8f778fc16ec1881ca
+name: FOS-5720
+comments: Integrate BazaarVoice on WSB LP
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="page-title" />
