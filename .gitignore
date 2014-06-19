@@ -9,8 +9,4 @@ lib/.salesupdate
 node_modules/*
 .gitignore
 *.log
-<<<<<<< HEAD
 .vagrant
-=======
-node_modules
->>>>>>> bv for wsb
