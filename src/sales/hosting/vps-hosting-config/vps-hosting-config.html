@@ -103,6 +103,314 @@ name: FOS-1310
                         </form> 
 {% endblock %} 
 
+{% block modals %}
+<!-- modal -->
+
+                <div class="modal fade" id="learnModal">
+                    <div class="modal-dialog modal-dialog-config">
+                        <div class="modal-content modal-content-config">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <p class="modal-title"><strong>[@L[cds.sales/gd/hosting/vps-hosting-config:learnModalDisclaimerModalTitle]@L]</strong></p>
+                            </div>
+                            <div class="modal-body">
+                                <p>[@L[cds.sales/gd/hosting/vps-hosting-config:learnModalDisclaimerModalText0]@L]</p>
+                                <p class="orange-text subtitle">[@L[cds.sales/gd/hosting/vps-hosting-config:learnModalDisclaimerModalSubTitle]@L]</p>
+                                
+                                <div class="inner-list">
+                                    <p class="no-margin-bottom"><strong>[@L[cds.sales/gd/hosting/vps-hosting-config:learnModalDisclaimerModalList0Title]@L]</strong></p>
+                                    <p class="no-margin-bottom">[@L[cds.sales/gd/hosting/vps-hosting-config:learnModalDisclaimerModalList0subTitle]@L]</p>
+                                    <ul class="vps-hosting-config-modal-list no-margin-bottom">
+                                        <li>[@L[cds.sales/gd/hosting/vps-hosting-config:learnModalDisclaimerModalList0Item0]@L]</li>
+                                        <li>[@L[cds.sales/gd/hosting/vps-hosting-config:learnModalDisclaimerModalList0Item1]@L]</li>
+                                        <li>[@L[cds.sales/gd/hosting/vps-hosting-config:learnModalDisclaimerModalList0Item2]@L]</li>
+                                        <li>[@L[cds.sales/gd/hosting/vps-hosting-config:learnModalDisclaimerModalList0Item3]@L]</li>
+                                    </ul>
+
+                                    <hr />
+
+                                    <p class="no-margin-bottom"><strong>[@L[cds.sales/gd/hosting/vps-hosting-config:learnModalDisclaimerModalList1Title]@L]</strong></p>
+                                    <ul class="vps-hosting-config-modal-list no-margin-bottom">
+                                        <li>[@L[cds.sales/gd/hosting/vps-hosting-config:learnModalDisclaimerModalList1Item0]@L]</li>
+                                        <li>[@L[cds.sales/gd/hosting/vps-hosting-config:learnModalDisclaimerModalList1Item1]@L]</li>
+                                    </ul>
+
+                                    <hr />
+
+                                    <p class="no-margin-bottom"><strong>[@L[cds.sales/gd/hosting/vps-hosting-config:learnModalDisclaimerModalList2Title]@L]</strong></p>
+                                    <p class="no-margin-bottom">[@L[cds.sales/gd/hosting/vps-hosting-config:learnModalDisclaimerModalList2subTitle]@L]</p>
+                                    <ul class="vps-hosting-config-modal-list no-margin-bottom">
+                                        <li>[@L[cds.sales/gd/hosting/vps-hosting-config:learnModalDisclaimerModalList2Item0]@L]</li>
+                                        <li>[@L[cds.sales/gd/hosting/vps-hosting-config:learnModalDisclaimerModalList2Item1]@L]</li>
+                                        <li>[@L[cds.sales/gd/hosting/vps-hosting-config:learnModalDisclaimerModalList2Item2]@L]</li>
+                                    </ul>
+
+                                    <hr />
+
+                                    <p class="no-margin-bottom"><strong>[@L[cds.sales/gd/hosting/vps-hosting-config:learnModalDisclaimerModalList3Title]@L]</strong></p>
+                                    <p class="no-margin-bottom">[@L[cds.sales/gd/hosting/vps-hosting-config:learnModalDisclaimerModalList3subTitle]@L]</p>
+                                    <ul class="vps-hosting-config-modal-list no-margin-bottom">
+                                        <li>[@L[cds.sales/gd/hosting/vps-hosting-config:learnModalDisclaimerModalList3Item0]@L]</li>
+                                        <li>[@L[cds.sales/gd/hosting/vps-hosting-config:learnModalDisclaimerModalList3Item1]@L]</li>
+                                    </ul>
+
+                                    <hr />
+
+                                    <p class="no-margin-bottom"><strong>[@L[cds.sales/gd/hosting/vps-hosting-config:learnModalDisclaimerModalList4Title]@L]</strong></p>
+                                    <ul class="vps-hosting-config-modal-list no-margin-bottom">
+                                        <li>[@L[cds.sales/gd/hosting/vps-hosting-config:learnModalDisclaimerModalList4Item0]@L]</li>
+                                    </ul>
+
+                                    <hr />
+
+                                    <p class="no-margin-bottom"><strong>[@L[cds.sales/gd/hosting/vps-hosting-config:learnModalDisclaimerModalList5Title]@L]</strong></p>
+                                    <ul class="vps-hosting-config-modal-list no-margin-bottom">
+                                        <li>[@L[cds.sales/gd/hosting/vps-hosting-config:learnModalDisclaimerModalList5Item0]@L]</li>
+                                    </ul>
+
+                                </div>
+                                <p class="product-desc no-margin-bottom">[@L[cds.sales/gd/hosting/vps-hosting-config:learnModalDisclaimerModalText1]@L]</p>
+                                <p class="product-desc no-margin-bottom">[@L[cds.sales/gd/hosting/vps-hosting-config:learnModalDisclaimerModalText2]@L]</p>
+                            </div>
+                            <div class="modal-footer">
+                                <a href="#" class="btn btn-close cta-small" data-dismiss="modal" aria-hidden="true">[@L[cds.sales/gd/hosting/vps-hosting-config:CombineModalCloseBtn]@L]</a> 
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- modal compare -->
+
+                <div class="modal fade" id="myModalCompare">
+                    <div class="modal-dialog modal-dialog-config"> 
+                        <div class="modal-content modal-content-config">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <p class="modal-title">[@L[cds.sales/gd/hosting/vps-hosting-config:CompareModalTitle]@L]</p>
+                            </div>
+                            <div class="modal-body">
+                                <table>
+                                    <thead>
+                                        <tr class="thead-row thead-row-4c config-thead-row">
+                                            <th></th>
+                                            <th class="th-alternate">[@L[cds.sales/gd/hosting/vps-hosting-config:CompareModalTableTitle1]@L]</th>
+                                            <th>[@L[cds.sales/gd/hosting/vps-hosting-config:CompareModalTableTitle2]@L]</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="thead-row thead-row-4c thead-content">
+                                            <th colspan="3">[@L[cds.sales/gd/hosting/vps-hosting-config:CompareModalTableSec1Title]@L]</th>
+                                        </tr>
+                                        <tr class="tbody-row configm-tbody-row tbody-row-4c first-tbody-row">
+                                            <th>[@L[cds.sales/gd/hosting/vps-hosting-config:CompareModalTableSec1Text1]@L]</th>
+                                            <td>$6.49*</td>
+                                            <td>$6.49*</td>
+                                        </tr>
+                                        <tr class="thead-row thead-row-4c thead-content">
+                                            <th colspan="3">[@L[cds.sales/gd/hosting/vps-hosting-config:CompareModalTableSec2Title]@L]</th>
+                                        </tr>
+                                        <tr class="tbody-row configm-tbody-row tbody-row-4c first-tbody-row">
+                                            <th>[@L[cds.sales/gd/hosting/vps-hosting-config:CompareModalTableSec2Text1]@L]</th>
+                                            <td><i class="ico ico-empty"></i></td>
+                                            <td><i class="ico ico-empty"></i></td>
+                                        </tr>
+                                        <tr class="tbody-row configm-tbody-row tbody-row-4c">
+                                            <th>[@L[cds.sales/gd/hosting/vps-hosting-config:CompareModalTableSec2Text2]@L]</th>
+                                            <td><i class="ico ico-check-orange"></i></td>
+                                            <td><i class="ico ico-check-green"></i></td>
+                                        </tr>
+                                        <tr class="tbody-row configm-tbody-row tbody-row-4c">
+                                            <th>[@L[cds.sales/gd/hosting/vps-hosting-config:CompareModalTableSec2Text3]@L]</th>
+                                            <td><i class="ico ico-check-orange"></i></td>
+                                            <td><i class="ico ico-empty"></i></td>
+                                        </tr>
+                                        <tr class="thead-row thead-row-4c thead-content">
+                                            <th colspan="3">[@L[cds.sales/gd/hosting/vps-hosting-config:CompareModalTableSec3Title]@L]</th>
+                                        </tr>
+                                        <tr class="tbody-row configm-tbody-row tbody-row-4c first-tbody-row">
+                                            <th>[@L[cds.sales/gd/hosting/vps-hosting-config:CompareModalTableSec3Text1]@L]</th>
+                                            <td><i class="ico ico-check-orange"></i></td>
+                                            <td><i class="ico ico-check-green"></i></td>
+                                        </tr>
+                                        <tr class="tbody-row configm-tbody-row tbody-row-4c">
+                                            <th>[@L[cds.sales/gd/hosting/vps-hosting-config:CompareModalTableSec3Text2]@L]</th>
+                                            <td><i class="ico ico-check-orange"></i></td>
+                                            <td><i class="ico ico-check-green"></i></td>
+                                        </tr>
+                                        <tr class="tbody-row configm-tbody-row tbody-row-4c">
+                                            <th>[@L[cds.sales/gd/hosting/vps-hosting-config:CompareModalTableSec3Text3]@L]</th>
+                                            <td><i class="ico ico-check-orange"></i></td>
+                                            <td><i class="ico ico-check-green"></i></td>
+                                        </tr>
+                                        <tr class="thead-row thead-row-4c thead-content">
+                                            <th colspan="3">[@L[cds.sales/gd/hosting/vps-hosting-config:CompareModalTableSec4Title]@L]</th>
+                                        </tr>
+                                        <tr class="tbody-row configm-tbody-row tbody-row-4c first-tbody-row">
+                                            <th>[@L[cds.sales/gd/hosting/vps-hosting-config:CompareModalTableSec4Text1]@L]</th>
+                                            <td><i class="ico ico-check-orange"></i></td>
+                                            <td><i class="ico ico-check-green"></i></td>
+                                        </tr>
+                                        <tr class="tbody-row configm-tbody-row tbody-row-4c">
+                                            <th>[@L[cds.sales/gd/hosting/vps-hosting-config:CompareModalTableSec4Text2]@L]</th>
+                                            <td><i class="ico ico-check-orange"></i></td>
+                                            <td><i class="ico ico-check-green"></i></td>
+                                        </tr>
+                                        <tr class="tbody-row configm-tbody-row tbody-row-4c">
+                                            <th>[@L[cds.sales/gd/hosting/vps-hosting-config:CompareModalTableSec4Text3]@L]</th>
+                                            <td><i class="ico ico-check-orange"></i></td>
+                                            <td><i class="ico ico-empty"></i></td>
+                                        </tr>
+                                        <tr class="thead-row thead-row-4c thead-content">
+                                            <th colspan="3">[@L[cds.sales/gd/hosting/vps-hosting-config:CompareModalTableSec5Title]@L]</th>
+                                        </tr>
+                                        <tr class="tbody-row configm-tbody-row tbody-row-4c first-tbody-row">
+                                            <th>[@L[cds.sales/gd/hosting/vps-hosting-config:CompareModalTableSec5Text1]@L]</th>
+                                            <td><i class="ico ico-check-orange"></i></td>
+                                            <td><i class="ico ico-check-green"></i></td>
+                                        </tr>
+                                        <tr class="tbody-row configm-tbody-row tbody-row-4c">
+                                            <th>[@L[cds.sales/gd/hosting/vps-hosting-config:CompareModalTableSec5Text2]@L]</th>
+                                            <td><i class="ico ico-check-orange"></i></td>
+                                            <td><i class="ico ico-check-green"></i></td>
+                                        </tr>
+                                        <tr class="tbody-row configm-tbody-row tbody-row-4c">
+                                            <th>[@L[cds.sales/gd/hosting/vps-hosting-config:CompareModalTableSec5Text3]@L]</th>
+                                            <td><i class="ico ico-check-orange"></i></td>
+                                            <td><i class="ico ico-check-green"></i></td>
+                                        </tr>
+                                        <tr class="tbody-row configm-tbody-row tbody-row-4c">
+                                            <th>[@L[cds.sales/gd/hosting/vps-hosting-config:CompareModalTableSec5Text4]@L]</th>
+                                            <td><i class="ico ico-check-orange"></i></td>
+                                            <td><i class="ico ico-check-green"></i></td>
+                                        </tr>
+                                        <tr class="tbody-row configm-tbody-row tbody-row-4c">
+                                            <th>[@L[cds.sales/gd/hosting/vps-hosting-config:CompareModalTableSec5Text5]@L]</th>
+                                            <td><i class="ico ico-check-orange"></i></td>
+                                            <td><i class="ico ico-check-green"></i></td>
+                                        </tr>
+                                        <tr class="tbody-row configm-tbody-row tbody-row-4c">
+                                            <th>[@L[cds.sales/gd/hosting/vps-hosting-config:CompareModalTableSec5Text6]@L]</th>
+                                            <td><i class="ico ico-check-orange"></i></td>
+                                            <td><i class="ico ico-check-green"></i></td>
+                                        </tr>
+                                        <tr class="thead-row thead-row-4c thead-content">
+                                            <th colspan="3">[@L[cds.sales/gd/hosting/vps-hosting-config:CompareModalTableSec6Title]@L]</th>
+                                        </tr>
+                                        <tr class="tbody-row configm-tbody-row tbody-row-4c first-tbody-row">
+                                            <th>[@L[cds.sales/gd/hosting/vps-hosting-config:CompareModalTableSec6Text1]@L]</th>
+                                            <td><i class="ico ico-check-orange"></i></td>
+                                            <td><i class="ico ico-check-green"></i></td>
+                                        </tr>
+                                        <tr class="tbody-row configm-tbody-row tbody-row-4c">
+                                            <th>[@L[cds.sales/gd/hosting/vps-hosting-config:CompareModalTableSec6Text2]@L]</th>
+                                            <td><i class="ico ico-check-orange"></i></td>
+                                            <td><i class="ico ico-check-green"></i></td>
+                                        </tr>
+                                        <tr class="tbody-row configm-tbody-row tbody-row-4c">
+                                            <th>[@L[cds.sales/gd/hosting/vps-hosting-config:CompareModalTableSec6Text3]@L]</th>
+                                            <td><i class="ico ico-check-orange"></i></td>
+                                            <td><i class="ico ico-empty"></i></td>
+                                        </tr>
+                                        <tr class="thead-row thead-row-4c thead-content">
+                                            <th colspan="3">[@L[cds.sales/gd/hosting/vps-hosting-config:CompareModalTableSec7Title]@L]</th>
+                                        </tr>
+                                        <tr class="tbody-row configm-tbody-row tbody-row-4c first-tbody-row">
+                                            <th>[@L[cds.sales/gd/hosting/vps-hosting-config:CompareModalTableSec7Text1]@L]</th>
+                                            <td><i class="ico ico-check-orange"></i></td>
+                                            <td><i class="ico ico-check-green"></i></td>
+                                        </tr>
+                                        <tr class="tbody-row configm-tbody-row tbody-row-4c">
+                                            <th>[@L[cds.sales/gd/hosting/vps-hosting-config:CompareModalTableSec7Text2]@L]</th>
+                                            <td><i class="ico ico-check-orange"></i></td>
+                                            <td><i class="ico ico-check-green"></i></td>
+                                        </tr>
+                                        <tr class="tbody-row configm-tbody-row tbody-row-4c">
+                                            <th>[@L[cds.sales/gd/hosting/vps-hosting-config:CompareModalTableSec7Text3]@L]</th>
+                                            <td><i class="ico ico-check-orange"></i></td>
+                                            <td><i class="ico ico-check-green"></i></td>
+                                        </tr>
+                                        <tr class="tbody-row configm-tbody-row tbody-row-4c">
+                                            <th>[@L[cds.sales/gd/hosting/vps-hosting-config:CompareModalTableSec7Text4]@L]</th>
+                                            <td><i class="ico ico-check-orange"></i></td>
+                                            <td><i class="ico ico-check-green"></i></td>
+                                        </tr>
+                                        <tr class="tbody-row configm-tbody-row tbody-row-4c">
+                                            <th>[@L[cds.sales/gd/hosting/vps-hosting-config:CompareModalTableSec7Text5]@L]</th>
+                                            <td><i class="ico ico-check-orange"></i></td>
+                                            <td><i class="ico ico-check-green"></i></td>
+                                        </tr>
+                                        <tr class="tbody-row configm-tbody-row tbody-row-4c">
+                                            <th>[@L[cds.sales/gd/hosting/vps-hosting-config:CompareModalTableSec7Text6]@L]</th>
+                                            <td><i class="ico ico-check-orange"></i></td>
+                                            <td><i class="ico ico-check-green"></i></td>
+                                        </tr>
+                                        <tr class="tbody-row configm-tbody-row tbody-row-4c">
+                                            <th>[@L[cds.sales/gd/hosting/vps-hosting-config:CompareModalTableSec7Text7]@L]</th>
+                                            <td><i class="ico ico-check-orange"></i></td>
+                                            <td><i class="ico ico-check-green"></i></td>
+                                        </tr>
+                                        <tr class="thead-row thead-row-4c thead-content">
+                                            <th colspan="3">[@L[cds.sales/gd/hosting/vps-hosting-config:CompareModalTableSec8Title]@L]</th>
+                                        </tr>
+                                        <tr class="tbody-row configm-tbody-row tbody-row-4c first-tbody-row">
+                                            <th>[@L[cds.sales/gd/hosting/vps-hosting-config:CompareModalTableSec8Text1]@L]</th>
+                                            <td><i class="ico ico-check-orange"></i></td>
+                                            <td><i class="ico ico-check-green"></i></td>
+                                        </tr>
+                                        <tr class="thead-row thead-row-4c thead-content">
+                                            <th colspan="3">[@L[cds.sales/gd/hosting/vps-hosting-config:CompareModalTableSec9Title]@L]</th>
+                                        </tr>
+                                        <tr class="tbody-row configm-tbody-row tbody-row-4c first-tbody-row">
+                                            <th>[@L[cds.sales/gd/hosting/vps-hosting-config:CompareModalTableSec9Text1]@L]</th>
+                                            <td><i class="ico ico-check-orange"></i></td>
+                                            <td><i class="ico ico-check-green"></i></td>
+                                        </tr>
+                                        <tr class="tbody-row configm-tbody-row tbody-row-4c">
+                                            <th>[@L[cds.sales/gd/hosting/vps-hosting-config:CompareModalTableSec9Text2]@L]</th>
+                                            <td><i class="ico ico-check-orange"></i></td>
+                                            <td><i class="ico ico-check-green"></i></td>
+                                        </tr><tr class="tbody-row configm-tbody-row tbody-row-4c">
+                                            <th>[@L[cds.sales/gd/hosting/vps-hosting-config:CompareModalTableSec9Text3]@L]</th>
+                                            <td><i class="ico ico-check-orange"></i></td>
+                                            <td><i class="ico ico-check-green"></i></td>
+                                        </tr>
+                                        <tr class="thead-row thead-row-4c thead-content">
+                                            <th colspan="3">[@L[cds.sales/gd/hosting/vps-hosting-config:CompareModalTableSec10Title]@L]</th>
+                                        </tr>
+                                        <tr class="tbody-row configm-tbody-row tbody-row-4c first-tbody-row">
+                                            <th>[@L[cds.sales/gd/hosting/vps-hosting-config:CompareModalTableSec10Text1]@L]</th>
+                                            <td><i class="ico ico-check-orange"></i></td>
+                                            <td><i class="ico ico-check-green"></i></td>
+                                        </tr>
+                                        <tr class="tbody-row configm-tbody-row tbody-row-4c">
+                                            <th>[@L[cds.sales/gd/hosting/vps-hosting-config:CompareModalTableSec10Text2]@L]</th>
+                                            <td><i class="ico ico-check-orange"></i></td>
+                                            <td><i class="ico ico-check-green"></i></td>
+                                        </tr>
+                                        <tr class="tbody-row configm-tbody-row tbody-row-4c">
+                                            <th>[@L[cds.sales/gd/hosting/vps-hosting-config:CompareModalTableSec10Text3]@L]</th>
+                                            <td><i class="ico ico-check-orange"></i></td>
+                                            <td><i class="ico ico-check-green"></i></td>
+                                        </tr>
+                                        <tr class="tbody-row configm-tbody-row tbody-row-4c">
+                                            <th>[@L[cds.sales/gd/hosting/vps-hosting-config:CompareModalTableSec10Text4]@L]</th>
+                                            <td><i class="ico ico-check-orange"></i></td>
+                                            <td><i class="ico ico-check-green"></i></td>
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table>
+                                <p class="combine-modal-note">[@L[cds.sales/gd/hosting/vps-hosting-config:CombineModalNote]@L]</p>
+                            </div>
+                            <div class="modal-footer">
+                                <a href="#" class="btn btn-close cta-small" data-dismiss="modal" aria-hidden="true">[@L[cds.sales/gd/hosting/vps-hosting-config:CombineModalCloseBtn]@L]</a> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+{% endblock %}
+
 {% block footer %}
   <script src="[@T[link:<javascriptroot />]@T]fos/office365/js/currency-calc.v1.0.2.min.js" type="text/javascript"></script>
   <script>
