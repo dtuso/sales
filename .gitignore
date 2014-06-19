@@ -9,8 +9,4 @@ lib/.salesupdate
 node_modules/*
 .gitignore
 *.log
-<<<<<<< HEAD
 
-=======
-node_modules
->>>>>>> 341ff3975edf546e839244dd724878d381e2257c
