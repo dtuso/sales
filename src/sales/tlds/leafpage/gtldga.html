@@ -121,14 +121,11 @@ name: FOS-22017
             gTldPreRegPhaseDataJson: [@P[webControl:<Data assembly="App_Code" type="Domains.Controls.GTldPhaseDataJson"></Data>]@P],
             redirectUrl: '[@T[link:<relative path="~/tlds/gtld.aspx"></relative>]@T]',
             tldH1TagExists: $.trim('[@L[cds.tldleaf/[@D[gtld]@D]:all.page.h1]@L]').length > 0,
-            tldUKLogo:'[@T[link:<imageroot />]@T]tldleafpages/uk/fos/[@L[cds.tldleaf/uk:all.gtld.logo]@L]'
+            tldUKLogo:'[@T[link:<imageroot />]@T]tldleafpages/uk/fos/[@L[cds.tldleaf/uk:all.gtld.logo]@L]',
             icannLink:removeIcannLink()
           });
 
           domains.controls.gtldTemplatesClient.SetupGeneralAvailability();
-        }
-        function removeIcannLink(){
-          $(".g-modal-content p a").replaceWith(function() { return $(this).contents(); });
         }
         function removeIcannLink(){
           $(".g-modal-content p a").replaceWith(function() { return $(this).contents(); });
