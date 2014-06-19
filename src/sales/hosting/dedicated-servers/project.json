@@ -25,7 +25,8 @@
     "metaCanonicalPath": "/hosting/dedicated-servers.aspx",
     "metaOgTitle": "[@L[cds.sales/gd/hosting/dedicated-servers:og-title]@L]",
     "metaOgImage": "fos/icn/servers.jpg",
-    "metaOgDescription": "[@L[cds.sales/gd/hosting/dedicated-servers:og-description]@L]"
+    "metaOgDescription": "[@L[cds.sales/gd/hosting/dedicated-servers:og-description]@L]",
+    "cssVersionOverride" : "1"
   },
   "dedicated-servers.language": {
     "cdsDetails": {
