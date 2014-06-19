@@ -24,6 +24,8 @@
   "about": "./newscenter/about-godaddy",
   "leaf-pages": "./tlds/leafpage",
   "what-is-a-gtld": "./domains/what-is-a-gtld",
+  "ds":"./hosting/dedicated-servers/",
+  "dsc":"./hosting/dedicated-servers-config/",
   "lenovo":"./lenovo/",
   "cce":"./cce/",
   "wordpress-hosting": "./hosting/wordpress-hosting/"

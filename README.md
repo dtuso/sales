@@ -1,6 +1,12 @@
+<<<<<<< HEAD
+### ***UPDATE: PLEASE READ!***
+
+All package dependencies (from package.json) are now included (committed) with the repository. Please DO NOT run any command that re-installs/downloads these dependencies, such as ```npm install``` or ```node update```. This will cause your node_modules folder to be out of sync with the repo and will fool you into needing to commit that folder. DO NOT commit any changes to the node_modules folder, just ignore it.
+=======
 ## UPDATE (June 18, 2014)
 
 Dependencies were being included with the repo and so didn't need to be installed separately. This was becoming more trouble than it was worth. We are back to installing dependencies via ```npm install```.
+>>>>>>> 341ff3975edf546e839244dd724878d381e2257c
 
 ---
 
@@ -87,7 +93,11 @@ sudo npm install -g gulp
 
 #### Package Dependencies
 
+<<<<<<< HEAD
+Package dependencies are now included with the repository. Do NOT run ```npm install``` or ```node update```
+=======
 Dependencies were being included with the repo and so didn't need to be installed separately. This was becoming more trouble than it was worth. We are back to installing dependencies via ```npm install```.
+>>>>>>> 341ff3975edf546e839244dd724878d381e2257c
 
 Tasks
 =====
