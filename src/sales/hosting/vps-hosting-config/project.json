@@ -27,7 +27,15 @@
     "metaOgImage": "fos/hp/rebrand/img/gd_rebrand_og.png",
     "metaOgDescription": "[@L[cds.sales/gd/hosting/vps-hosting-config:og-description]@L]",
     "configTitleLink":"[@L[cds.sales/gd/hosting/vps-hosting-config:configTitleLink]@L]",
-    "configTitleContinueToCart":"[@L[cds.sales/gd/hosting/vps-hosting-config:configTitleContinueToCart]@L]"
+    "configTitleContinueToCart":"[@L[cds.sales/gd/hosting/vps-hosting-config:configTitleContinueToCart]@L]",
+    "configTitleText":"[@L[cds.sales/gd/hosting/vps-hosting-config:configTitleText]@L]",
+    "configSummaryTitle":"[@L[cds.sales/gd/hosting/vps-hosting-config:orderSummaryTitle]@L]",
+    "configAddonTitle":"[@L[cds.sales/gd/hosting/vps-hosting-config:AddonTitle]@L]",
+    "configPermonth":"[@L[cds.sales/gd/hosting/vps-hosting-config:permonth]@L]",
+    "configSummarySubtotal":"[@L[cds.sales/gd/hosting/vps-hosting-config:orderSummarySubtotal]@L]",
+    "configBandwidthDisclaimer":"[@L[cds.sales/gd/hosting/vps-hosting-config:bandwidthDisclaimer]@L]",
+    "configSummarySubtotalDisc":"[@L[cds.sales/gd/hosting/vps-hosting-config:orderSummarySubtotalDisc]@L]",
+    "configLastBox": ".box5"
 
   },
   "vps-hosting-config.language": {
