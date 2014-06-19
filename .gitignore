@@ -5,6 +5,8 @@ build
 ./lib/.salesupdate
 /lib/.salesupdate
 lib/.salesupdate
+/node_modules
+node_modules/*
 .gitignore
 *.log
 .vagrant
