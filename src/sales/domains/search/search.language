@@ -1,7 +1,7 @@
 ---
 location: localization/sales/gd/domains/domain-name-search/en
-id: 53867987f778fc2fd01e79fd
-name: FOS-20824
+id: 535ab020f778fc0238854843
+name: FOS-21977
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="MetaTitle" />
@@ -146,6 +146,12 @@ New
 .mx
 <phrase key="WhyGoDaddyBoxesListTitleLondon" />
 .london
+<phrase key="WhyGoDaddyBoxesListTitleWebcam" />
+.webcam
+<phrase key="WhyGoDaddyBoxesListTitleBid" />
+.bid
+<phrase key="WhyGoDaddyBoxesListTitleTrade" />
+.trade
 <phrase key="WhyGoDaddyBoxesListTitleWiki" />
 .wiki
 <phrase key="WhyGoDaddyBoxesListTextWiki" />
@@ -191,21 +197,23 @@ New domains <strong>available</strong>:
 <phrase key="WhyGoDaddyListTitle1" />
 New domains <strong>coming soon</strong>:
 <phrase key="WhyGoDaddyListText0-0" />
-<strong>.wtf</strong>
+<strong>.ninja</strong>
 <phrase key="WhyGoDaddyListText0-1" />
-<strong>.tips</strong>
+<strong>.reviews</strong>
 <phrase key="WhyGoDaddyListText0-2" />
-<strong>.xyz</strong>
+<strong>.wiki</strong>
 <phrase key="WhyGoDaddyListText0-3" />
+<strong>.rentals</strong>
+<phrase key="WhyGoDaddyListText0-3UK" />
 <strong>.london</strong>
 <phrase key="WhyGoDaddyListText1-0" />
-<strong>.website</strong>
-<phrase key="WhyGoDaddyListText1-1" />
 <strong>.nyc</strong>
-<phrase key="WhyGoDaddyListText1-2" />
+<phrase key="WhyGoDaddyListText1-1" />
 <strong>.vegas</strong>
+<phrase key="WhyGoDaddyListText1-2" />
+<strong>.website</strong>
 <phrase key="WhyGoDaddyListText1-3" />
-<strong>.fitness</strong>
+<strong>.app</strong>
 <phrase key="WhyGoDaddyCTAText0" />
 Hundreds of new domains specific to you.
 <phrase key="WhyGoDaddyCTAText1" />
@@ -429,9 +437,9 @@ It's Go Time! Get online today. It all starts with a domain name - Save 50% and 
 <phrase key="MainBannerCarouselSlide3TextNonAU" />
 It's Go Time! Get online now with your own domain name. Save 50% and more on <a data-ci="88402" href="[@T[link:<relative path="/tlds/com"></relative>]@T]"><strong>.com</strong></a>, <a data-ci="88582" href="[@T[link:<relative path="/tlds/co-domain"></relative>]@T]"><strong>.co</strong></a>, <a data-ci="88404" href="[@T[link:<relative path="/tlds/org.aspx"></relative>]@T]"><strong>.org</strong></a> and <a data-ci="90058" href="[@T[link:<relative path="/tlds/us.aspx"></relative>]@T]"><strong>.us</strong></a>.
 <phrase key="MainBannerCarouselSlide3TextAU" />
-It's Go Time! Get online now with your own domain name. Save 50% and more on <a data-ci="88402" href="[@T[link:<relative path="/tlds/com"></relative>]@T]"><strong>.com</strong></a>, <a data-ci="88582" href="[@T[link:<relative path="/tlds/co-domain"></relative>]@T]"><strong>.co</strong></a>, <a data-ci="88404" href="[@T[link:<relative path="/tlds/org.aspx"></relative>]@T]"><strong>.us</strong></a> and <a data-ci="90888" href="[@T[link:<relative path="/tlds/me"></relative>]@T]"><strong>.me</strong></a>.
+It's Go Time! Get online now with your own domain name. Save 50% and more on <a data-ci="88402" href="[@T[link:<relative path="/tlds/com"></relative>]@T]"><strong>.com</strong></a>, <a data-ci="88582" href="[@T[link:<relative path="/tlds/co-domain"></relative>]@T]"><strong>.co</strong></a>, <a data-ci="88404" href="[@T[link:<relative path="/tlds/org.aspx"></relative>]@T]"><strong>.org</strong></a> and <a data-ci="90888" href="[@T[link:<relative path="/tlds/me"></relative>]@T]"><strong>.me</strong></a>.
 <phrase key="MainBannerCarouselSlide1" />
-SAVE 30% on new domains today - <strong>.guru</strong>, <strong>.company</strong>, <strong>.today</strong> and <strong>.directory</strong>!<span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Get yours now!</a>
+SAVE 30% on new domains today - <strong>.webcam</strong>, <strong>.trade</strong>, <strong>.bid</strong> and <strong>.guru</strong>!<span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Get yours now!</a>
 <phrase key="MainBannerCarouselSlide2" />
 Get a domain that tells the world what you do. <strong>.club</strong>, <strong>.company</strong>, <strong>.email</strong>, <strong>.house</strong> and hundreds more are available now.<span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Get yours today!</a>
 <phrase key="MainBannerCarouselSlide2DE" />
@@ -440,8 +448,24 @@ Get a domain that tells the world what you do. <strong>.club</strong>, <strong>.
 Get a domain that tells the world what you do. <strong>.club</strong>, <strong>.company</strong>, <strong>.email</strong>, <strong>.london</strong> and hundreds more are available now.<span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Get yours today!</a>
 <phrase key="MainBannerCarouselSlide2UKNew" />
 NEW - Now available <strong>.uk</strong> domains!<span class="br"><a href="[@T[link:<relative path="/tlds/uk"><param name="ci" value="90900" /></relative>]@T]">Get yours now!</a>
-<phrase key="MainBannerCarouselSlide2DE" />
+<phrase key="MainBannerCarouselSlide1DE" />
 NEW - Now available <strong>.haus</strong> and <strong>.reisen</strong> domains!<span class="br"><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Get yours now!</a>
+<phrase key="MainBannerCarouselSlide1ES" />
+New domains now available: <strong>.uno</strong>, <strong>.futbol</strong>, <strong>.villas</strong> and <strong>.tienda</strong><span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Get yours now!</a> 
+<phrase key="MainBannerCarouselSlide1DE1" />
+New domains now available: <strong>.schule</strong>, <strong>.haus</strong> and <strong>.reisen</strong><span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Get yours now!</a> 
+<phrase key="MainBannerCarouselSlide1UK" />
+It’s been a long time coming, but <a href="[@T[link:<relative path="/tlds/london"><param name="ci" value="90057" /></relative>]@T]">.london</a> and <a href="[@T[link:<relative path="/tlds/uk"><param name="ci" value="90900" /></relative>]@T]">.uk </a>are now available! Save 23% on <a href="[@T[link:<relative path="/tlds/uk"><param name="ci" value="90900" /></relative>]@T]">.uk</a> — just 
+<phrase key="MainBannerCarouselSlide2NonGB" />
+Get a web address that tells the world what you do. <strong>.club</strong>, <strong>.email</strong>, <strong>.expert</strong>, <strong>.properties</strong> and hundreds more are available now. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours</a> today!
+<phrase key="MainBannerCarouselSlide2GB" />
+Get a web address that tells the world what you do. <strong>.club</strong>, <strong>.email</strong>, <strong>.expert</strong>, <strong>.london</strong> and hundreds more are available now. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours</a> today!
+<phrase key="MainBannerCarouselSlide2AT" />
+Get a web address that tells the world what you do. <strong>.club</strong>, <strong>.email</strong>, <strong>.expert</strong>, <strong>.haus</strong> and hundreds more are available now. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours</a> today!
+<phrase key="MainBannerCarouselSlide2FR" />
+Get a web address that tells the world what you do. <strong>.club</strong>, <strong>.expert</strong>, <strong>.maison</strong>, <strong>.solutions</strong> and hundreds more are available now. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours</a> today!
+<phrase key="MainBannerCarouselSlide2All" />
+Don't rob the world of your talents! Share them online now. Save 50% and more on <a data-ci="88402" href="[@T[link:<relative path="/tlds/com.aspx"></relative>]@T]">.com</a>, <a data-ci="88582" href="[@T[link:<relative path="/tlds/co-domain.aspx"></relative>]@T]">.co</a>, <a data-ci="90058" href="[@T[link:<relative path="/tlds/biz.aspx"></relative>]@T]">.biz</a> and <a data-ci="88404" href="[@T[link:<relative path="/tlds/org.aspx"></relative>]@T]">.org</a>
 <phrase key="GetYoursToday" />
 Get yours today!
 <phrase key="InBizDetail" />
@@ -512,7 +536,17 @@ Sharpen your image with .PHOTOS.
 .SG means Singapore.
 <phrase key="PricesDotEmailText"/>
 <strong>.email</strong> delivers.
+<phrase key="PricesDotUKText"/>
+Get straight to the point with <strong>.uk</strong>
 <phrase key="PricesDotLondonText"/>
 Court 8 million shoppers with <strong>.london</strong>
 <phrase key="PricesDotFutbolText"/>
 Score big with <strong>.futbol</strong>
+<phrase key="PricesDotXYZText"/>
+Finally! A domain for the <strong>.xyz</strong> generation.
+<phrase key="PricesDotWebcamText"/>
+<strong>.webcam</strong> brings people together.
+<phrase key="PricesDotBidText"/>
+Going once, going twice, <strong>.bid!</strong>
+<phrase key="PricesDotTradeText"/>
+Build partnerships with <strong>.trade</strong>

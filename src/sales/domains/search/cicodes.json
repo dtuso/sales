@@ -98,6 +98,12 @@
           { "Description" : "Top Pod - .CO Link" }
         ]
       },
+      { "Top TLD Pods - .xyz link" : [
+          { "ITC ID" : "90062" },
+          { "ITC Code" : "dpp_absol1" },
+          { "Description" : "Top Pod - .XYZ Link" }
+        ]
+      },
       { "Top TLD Pods - .org link" : [
           { "ITC ID" : "88011" },
           { "ITC Code" : "dpp_absol1" },
@@ -214,6 +220,24 @@
           { "Description" : "Buttom TLD Pods - .TODAY" }
         ]
       },
+      { "Buttom TLD Pods - .WEBCAM" : [
+          { "ITC ID" : "91155" },
+          { "ITC Code" : "" },
+          { "Description" : "Buttom TLD Pods - .WEBCAM" }
+        ]
+      },
+      { "Buttom TLD Pods - .BID" : [
+          { "ITC ID" : "91153" },
+          { "ITC Code" : "" },
+          { "Description" : "Buttom TLD Pods - .BID" }
+        ]
+      },
+      { "Buttom TLD Pods - .TRADE" : [
+          { "ITC ID" : "91154" },
+          { "ITC Code" : "" },
+          { "Description" : "Buttom TLD Pods - .TRADE" }
+        ]
+      },
       { "Buttom TLD Pods - .DIRECTORY" : [
           { "ITC ID" : "89734" },
           { "ITC Code" : "" },
@@ -286,6 +310,24 @@
           { "ITC ID" : "89639" },
           { "ITC Code" : "" },
           { "Description" : "New Available TLD's Column - .GURU" }
+        ]
+      },
+      { "New Domains Available TLD's Column - .NINJA" : [
+          { "ITC ID" : "89639" },
+          { "ITC Code" : "" },
+          { "Description" : "New Available TLD's Column - .NINJA" }
+        ]
+      },
+      { "New Domains Available TLD's Column - .WIKI" : [
+          { "ITC ID" : "90061" },
+          { "ITC Code" : "" },
+          { "Description" : "New Available TLD's Column - .WIKI" }
+        ]
+      },
+      { "New Domains Available TLD's Column - .RENTALS" : [
+          { "ITC ID" : "91152" },
+          { "ITC Code" : "" },
+          { "Description" : "New Available TLD's Column - .RENTALS" }
         ]
       },
       { "New Domains Available TLD's Column - .TODAY" : [
