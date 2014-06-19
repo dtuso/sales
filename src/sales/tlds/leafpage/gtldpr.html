@@ -193,7 +193,8 @@ name: FOS-21498
             earlyAccessDateTemplate: '[@L[cds.tldleaf/_common:prereg.phase.dates]@L]',
             redirectUrl: '[@T[link:<relative path="~/tlds/gtld.aspx"></relative>]@T]',
             tldH1TagExists: $.trim('[@L[cds.tldleaf/[@D[gtld]@D]:all.page.h1]@L]').length > 0,
-            tldIsLondon:isLondon()
+            tldIsLondon:isLondon(),
+            icannLink:removeIcannLink()
           });
           domains.controls.gtldTemplatesClient.SetupPreReg();
         }
