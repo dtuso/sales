@@ -1,0 +1,656 @@
+---
+location: localization/sales/gd/hosting/dedicated-servers/en
+id: 5390d779f778fc21dc6e3f41
+name: FOS-9215
+---
+{% include '../../../modules/doc-block.html' %}
+<phrase key="page-title" />
+Dedicated Servers | Fully Configurable Multi-core Servers
+<phrase key="meta-description" />
+Need a Dedicated Server? [@T[companyname:name]@T] makes it easy to run your own Dedicated Web Server.
+<phrase key="meta-keywords" />
+dedicated server, dedicated servers, dedicated server hosting, dedicated server web hosting
+<phrase key="og-title" />
+[@T[companyname:name]@T] Dedicated Servers provide you with the ultimate in hosting performance, control &amp; convenience.
+<phrase key="og-description" />
+Get the most out of your website! [@T[companyname:name]@T] Dedicated Servers provide you with the ultimate in hosting performance, control &amp; convenience.
+<phrase key="onSaleNow" />
+On Sale Now
+<phrase key="uptimeGuarantee" />
+99.9% Uptime Guarantee*
+<phrase key="headerHeadline" />
+Dedicated Servers
+<phrase key="headerSubHeadline" />
+High performance hardware, generous bandwidth &amp; total control.
+<phrase key="tabHeader" />
+Dedicated servers &#45; all to yourself and under your command.
+<phrase key="tabHeaderText" />
+Our dedicated server plans feature lightning-fast processors, up to 16 GB of RAM, 20 TB of bandwidth, and Intel Core i3/i5/i7 processors, all backed by the best service and support in the industry, available LIVE 24/7. Choose the plan that&#039;s right for you, then customize it to meet your unique needs with even more bandwidth, control panel options, backup plans, firewall protection and more.
+<phrase key="selectOS" />
+Select an operating system:
+<phrase key="osCentOS" />
+CentOS
+<phrase key="osUbuntu" />
+Ubuntu
+<phrase key="osFedora" />
+Fedora
+<phrase key="osWindows" />
+Windows
+<phrase key="allPlansInclude" />
+All Plans Include
+<phrase key="frequentlyAskedQuestions" />
+FAQ
+<phrase key="standardSupport" />
+Standard Support
+<phrase key="assistedServicePlan" />
+Assisted Service Plan
+<phrase key="SupportTab" />
+Support
+<phrase key="eachPlanIncludes" />
+Each Dedicated Server Plan includes:
+<phrase key="js_eachPlanIncludes" />
+Each Dedicated Server Plan includes:
+<phrase key="js_frequentlyAskedQuestions" />
+Frequently Asked Questions
+<phrase key="js_includedSupport" />
+Included Support
+<phrase key="js_assistedServicePlan" />
+Assisted Service Plan
+<phrase key="js_chatLive" />
+Need Advice? Live Chat
+<phrase key="centOsVersion" />
+<strong>CentOS Version 6.4</strong> is the operating system of choice for those looking for a highly stable version of Linux that offers enterprise-level reliability.
+<phrase key="fedoraOsVersion" />
+<strong>Fedora Version 19</strong> - Recommended for advanced Linux administrators.
+<phrase key="ubuntuOsVersion" />
+<strong>Ubuntu Version 10.04 LTS</strong> is considered the most user-friendly Linux distribution, offering strong community-based support and a consistent release cycle.
+<phrase key="windowsOsVersion" />
+Our <strong>Windows Version 2012 Standard 64-Bit</strong> servers combine the familiar interface of the world&#039;s most popular operating system with an extensive set of high-powered features.
+<phrase key="pageKeywords" />
+dedicated server, dedicated servers, dedicated server hosting, dedicated server web hosting
+<phrase key="pageDescription" />
+Need a Dedicated Server? [@T[companyname:name]@T] makes it easy to run your own Dedicated Web Server.
+<phrase key="chatLive" />
+Need Advice? Chat Live!
+<phrase key="cpuLabel" />
+CPU:
+<phrase key="ramLabel" />
+RAM:
+<phrase key="storageLabel" />
+Storage:
+<phrase key="bandwidthLabel" />
+Bandwidth:
+<phrase key="osLabel" />
+OS:
+<phrase key="controlPanelLabel" />
+Control Panel:
+<phrase key="softwareLabel" />
+Software:
+<phrase key="databaseLabel" />
+Database:
+<phrase key="ftpBackupLabel" />
+FTP Backup:
+<phrase key="managedBackupLabel" />
+Managed Backup:
+<phrase key="firewallLabel" />
+Firewall:
+<phrase key="raidLabel" />
+RAID 1:
+<phrase key="servicePlanLabel" />
+Service Plan:
+<phrase key="addOnsLabel" />
+Add-ons
+<phrase key="chooseTermLabel" />
+Choose Your Term:
+<phrase key="buttonAddConfigure" />
+Add &amp; Configure
+<phrase key="monthLabel" />
+mo
+<phrase key="monthPluralLabel" />
+mos
+<phrase key="vatUK" />
+Prices exclude 20% VAT where applicable
+<phrase key="saveText" />
+SAVE
+<phrase key="Save10Text" />
+SAVE 10%
+<phrase key="Save20Text" />
+SAVE 20%
+<phrase key="hardDrives" />
+hard drives
+<phrase key="perMonth" />
+/mo
+<phrase key="categoryEconomyTitle" />
+Economy
+<phrase key="categoryEconomyHelp" />
+An affordable way to have your own server.
+<phrase key="categoryEconomyCpu" />
+<strong>Intel <sup>&reg;</sup> Core<sup>&trade;</sup> i3</strong> - 2 cores
+<phrase key="categoryEconomyRam" />
+2 GB
+<phrase key="categoryEconomyStorage" />
+2 x 160 GB
+<phrase key="categoryEconomyBandwidth" />
+5 TB
+<phrase key="categoryDeluxeTitle" />
+Deluxe
+<phrase key="categoryDeluxeHelp" />
+Powerful hardware for big requirements on a small budget.
+<phrase key="categoryDeluxeCpu" />
+<strong>Intel<sup>&reg;</sup> Core<sup>&trade;</sup> i5</strong> - 4 cores
+<phrase key="categoryDeluxeRam" />
+8 GB
+<phrase key="categoryDeluxeStorage" />
+2 x 1 TB
+<phrase key="categoryDeluxeBandwidth" />
+10 TB
+<phrase key="categoryPremiumTitle" />
+Premium
+<phrase key="categoryPremiumHelp" />
+Top-of-the-line performance, storage and bandwidth.
+<phrase key="categoryPremiumCpu" />
+<strong>Intel<sup>&reg;</sup> Core<sup>&trade;</sup> i7</strong> - 4 cores
+<phrase key="categoryPremiumRam" />
+16 GB
+<phrase key="categoryPremiumStorage" />
+2 x 2 TB
+<phrase key="categoryPremiumBandwidth" />
+20 TB
+<phrase key="categoryValueTitle" />
+Value Deal
+<phrase key="categoryValueHelp" />
+Move up from entry-level for just a little extra and get more bang for your buck!
+<phrase key="categoryValueCpu" />
+<strong>Intel<sup>&reg;</sup> Core<sup>&trade;</sup> i5</strong> - 4 cores
+<phrase key="categoryValueRam" />
+4 GB
+<phrase key="categoryValueStorage" />
+2 x 300 GB
+<phrase key="categoryValueBandwidth" />
+10 TB
+<phrase key="categoryPowerTitle" />
+Power Player
+<phrase key="categoryPowerHelp" />
+Handle the most demanding applications with our fastest processor and 8 GB of memory.
+<phrase key="categoryPowerCpu" />
+<strong>Intel<sup>&reg;</sup> Core<sup>&trade;</sup> i7</strong> - 4 cores
+<phrase key="categoryPowerRam" />
+8 GB
+<phrase key="categoryPowerStorage" />
+2 x 1 TB
+<phrase key="categoryPowerBandwidth" />
+15 TB
+<phrase key="categoryMemoryHogTitle" />
+MemoryHog
+<phrase key="categoryMemoryHogHelp" />
+Ensure your server performance is always up to expectations.
+<phrase key="categoryMemoryHogCpu" />
+<strong>Intel<sup>&reg;</sup> Core<sup>&trade;</sup> i5</strong> - 4 cores
+<phrase key="categoryMemoryHogRam" />
+32 GB
+<phrase key="categoryMemoryHogStorage" />
+2 x 1 TB
+<phrase key="categoryMemoryHogBandwidth" />
+15 TB
+<phrase key="categoryWindows2003Title" />
+Premium Win '03
+<phrase key="categoryWindows2003Help" />
+Ensure your server performance is always up to expectations.
+<phrase key="categoryWindows2003Cpu" />
+Intel&reg; Core&trade; 2 Quad - 2.50 GHz
+<phrase key="categoryWindows2003Ram" />
+4 GB
+<phrase key="categoryWindows2003Storage" />
+2 x 1,000 GB
+<phrase key="categoryWindows2003Bandwidth" />
+1,500 GB
+<phrase key="centos_operatingSystem" />
+Linux CentOS 64-Bit
+<phrase key="ubuntu_operatingSystem" />
+Linux Ubuntu 32-Bit
+<phrase key="fedora_operatingSystem" />
+Fedora 64-Bit
+<phrase key="windows2008_operatingSystem" />
+Windows 2008 R2 64-Bit
+<phrase key="windows2012_operatingSystem" />
+Windows 2012 Std 64-Bit
+<phrase key="windows2003_operatingSystem" />
+Windows 2003 Standard Edition
+<phrase key="disclaimer_viewDetails" />
+View details
+<phrase key="disclaimer_paidInAdvance" />
+Note: Each month is paid for in advance and begins upon the purchase of your account. Cancellation of your account will discontinue all future billings. Fees are non-refundable.
+<phrase key="disclaimer_goDaddyGiftCard" />
+a Gift Card or
+<phrase key="disclaimer_sslText" />
+SSL certificate is free only for the initial hosting plan term purchased, after which it will automatically renew at the then-current rate.
+<phrase key="discalimer_additionalBandwidthText" />
+Additional bandwidth and Assisted Service Plan fees do not participate in the yearly discount. Bandwidth included in the base package is prepaid, whereas any additional bandwidth selected will be billed monthly.
+<phrase key="disclaimer_windowsOnly" />
+Windows only
+<phrase key="disclaimer_allRightsReservedText" />
+Third-party logos and marks are registered trademarks of their respective owners. All rights reserved.
+<phrase key="disclaimer_annualDiscountsText" />
+Annual discounts available on NEW purchases only.
+<phrase key="dedicatedServer" />
+Dedicated Server
+<phrase key="changePlan" />
+(Change plan)
+<phrase key="customizePlanText" />
+Customize your server to meet your specific needs by selecting any of the features below.
+<phrase key="dnsAddDelete" />
+Addition/Deletion
+<phrase key="dnsAutoSetup" />
+Automated setup with new site
+<phrase key="dnsVirtualSupport" />
+Virtual DNS support
+<phrase key="sdns" />
+Subdomains
+<phrase key="sdnsAddDelete" />
+Addition/Deletion
+<phrase key="sdnsRedirect" />
+Redirects
+<phrase key="sdnsSoftwareFirewall" />
+Software firewall
+<phrase key="scripting" />
+Web Server Scripting
+<phrase key="scriptASP" />
+ASP
+<phrase key="scriptPerl" />
+Perl
+<phrase key="scriptPython" />
+Python
+<phrase key="scriptSSI" />
+SSI
+<phrase key="scriptCGI" />
+CGI
+<phrase key="scriptJava" />
+Java
+<phrase key="database" />
+Database
+<phrase key="dbMySQL" />
+MySQL
+<phrase key="dbPHPMyAdmin" />
+PHPMyAdmin
+<phrase key="dbMSSQL" />
+MSSQL (MSDE - Windows only)
+<phrase key="mail" />
+Mail
+<phrase key="mailManageAccts" />
+Manage email accounts
+<phrase key="mailWeb" />
+Supports Webmail
+<phrase key="mailForwarding" />
+Forwarding
+<phrase key="mailAutoResponse" />
+Auto-response
+<phrase key="mailLists" />
+Mailing lists
+<phrase key="mailSpam" />
+Spam filters
+<phrase key="mailAntivirus" />
+Antivirus
+<phrase key="ssl" />
+SSL
+<phrase key="sslCertificates" />
+Manage SSL certificates
+<phrase key="ftp" />
+FTP
+<phrase key="ftpAccounts" />
+Manage accounts
+<phrase key="ftpAnonymous" />
+Anonymous FTP
+<phrase key="ftpUpload" />
+Upload directory
+<phrase key="stats" />
+Statistics
+<phrase key="statsBandwidth" />
+Bandwidth reports
+<phrase key="statsUser" />
+User reports
+<phrase key="statsErrorLog" />
+View error Log
+<phrase key="statsWebalizer" />
+Webalizer Stats
+<phrase key="internationalization" />
+Internationalization
+<phrase key="internationalMultiple" />
+Multiple language support
+<phrase key="allplansinclude_freeRapidSetup" />
+Free rapid setup
+<phrase key="allplansinclude_free" />
+FREE!
+<phrase key="allplansinclude_googleAdwordCreditLink" />
+Google&reg; Adwords&reg; Credit
+<phrase key="allplansinclude_googleAdwordCredit" />
+Up to {0} {1}
+<phrase key="allplansinclude_bingAdCredit" />
+Bing Ads credit
+<phrase key="allplansinclude_facebookAdCredit" />
+Facebook&reg; Advertising Credit
+<phrase key="allplansinclude_sslCertificate" />
+SSL Certificate
+<phrase key="allplansinclude_fotoliaCredit" />
+Fotolia&reg; Credits&#94;
+<phrase key="allplansinclude_bandwidthOverageProtection" />
+Bandwidth Overage Protection
+<phrase key="allplansinclude_dedicatedIps" />
+3 dedicated IPs
+<phrase key="allplansinclude_bestOfBreedRouters" />
+Best-of-breed routers and servers
+<phrase key="allplansinclude_tippingPoint" />
+TippingPoint&reg; Intrusion Prevention Systems
+<phrase key="allplansinclude_telephone24x7" />
+24/7 telephone
+<phrase key="allplansinclude_telephone" />
+Telephone
+<phrase key="allplansinclude_emailAndWebSupport" />
+email and Web-based tech support
+<phrase key="allplansinclude_physical24x7" />
+24/7 physical security
+<phrase key="allplansinclude_monitoring24x7" />
+24/7 network monitoring
+<phrase key="allplansinclude_ftpAccess" />
+FTP access
+<phrase key="allplansinclude_whyCompanyServers" />
+Why [@T[companyname:name]@T] Servers:
+<phrase key="allplansinclude_adminAccess" />
+<b>Admin access:</b> Install and run virtually anything on the server.
+<phrase key="allplansinclude_manageMultiple" />
+<b>Manage multiple Web sites:</b> Host multiple Web sites on one server account.
+<phrase key="allplansinclude_versatility" />
+<b>Versatility:</b> A dedicated server/virtual Dedicated server can be used for a wide variety of purposes, including gaming, virtual (i.e., shared) hosting, and hosting of traffic-intensive Web sites.
+<phrase key="allplansinclude_dcText" />
+Our World-Class Data Center
+<phrase key="faqs_question01" />
+What is a dedicated server?
+<phrase key="faqs_question02" />
+What is assisted service plan for my Dedicated Server?
+<phrase key="faqs_question03" />
+Setting up Your Server
+<phrase key="faqs_question04" />
+What software is installed on my Linux dedicated server?
+<phrase key="faqs_question05" />
+Installing an SSL Certificate on Your Dedicated Server
+<phrase key="faqs_question11" />
+What can I install on my dedicated server?
+<phrase key="faqs_question12" />
+Do you restrict what content I can keep on my server?
+<phrase key="faqs_question13" />
+How do I install software on my Windows dedicated server?
+<phrase key="faqs_question14" />
+What name servers do I use with my dedicated server?
+<phrase key="stdsupport_noCharges" />
+If the source of the technical problem you are experiencing lies within systems or technology under our exclusive management, no charge will apply.
+<phrase key="stdsupport_technicalProblems" />
+Examples of supported technical problems:
+<phrase key="stdsupport_networkFailure" />
+Your server becomes unreachable due to a network failure within our facility.
+<phrase key="stdsupport_hardwareFailure" />
+Your server becomes unreachable due to a hardware failure within our facility.
+<phrase key="stdsupport_setupProcessFailure" />
+The hosting service setup process failed to complete successfully.
+<phrase key="stdsupport_passwordChangeFailure" />
+A root user password change request failed to resolve successfully.
+<phrase key="stdsupport_customWork" />
+If you need custom work, such as Advanced scripting, programming or troubleshooting, you need our
+<phrase key="stdsupport_assistedServicePlan" />
+Assisted Service Plan.
+<phrase key="stdsupport_managedServer" />
+Managed Hosting Dedicated Servers.
+<phrase key="assistedserviceplan_saveTime" />
+<b>Save the time and energy it takes to setup, monitor and maintain your dedicated server by letting our expert staff do it for you!</b> With [@T[companyname:name]@T]&reg; Assisted Service Plan, our team of server professionals will personally set up your dedicated server to deliver maximum performance. Plus, they will also handle select monitoring and maintenance issues that would otherwise drain your time and resources.
+<phrase key="assistedserviceplan_planIncludes" />
+Each Assisted Service Plan Includes*:
+<phrase key="assistedserviceplan_initialServerSetup" />
+Initial Server Setup:
+<phrase key="assistedserviceplan_includingOsAndPleskPanel" />
+Including installation of operating system and Parallels Plesk Panel.
+<phrase key="assistedserviceplan_setupForFollowing" />
+Setup for the following services:
+<phrase key="assistedserviceplan_domainName" />
+Domain Name &amp; DNS
+<phrase key="assistedserviceplan_hostingAccount" />
+Hosting Account
+<phrase key="assistedserviceplan_sslCertificate" />
+SSL Certificate (1yr. Free Turbo SSL included with server purchase)
+<phrase key="assistedserviceplan_resourceAllocation" />
+Resource Allocation
+<phrase key="assistedserviceplan_securityServices" />
+Security Services (Anti-Virus, Scanning):
+<phrase key="assistedserviceplan_monthlyScansWindows" />
+Monthly scans, as well as real-time on-access virus scanning of files (Windows servers only).
+<phrase key="assistedserviceplan_monthlyScans" />
+We scan your server once a month, to provide you with any recommended remediation actions.
+<phrase key="assistedserviceplan_emergencyServices" />
+Emergency Services:
+<phrase key="assistedserviceplan_directAccessIncluding" />
+Direct access to advanced support for emergencies including:
+<phrase key="assistedserviceplan_serviceRestart" />
+Service restart or reboot
+<phrase key="assistedserviceplan_serverDown" />
+Server or service down
+<phrase key="assistedserviceplan_threeTier" />
+Tier-3 Support troubleshooting
+<phrase key="assistedserviceplan_patchingServices" />
+Patching Services:
+<phrase key="assistedserviceplan_patchingServicesIncluding" />
+Patching services** for the base operating system, such as Fedora or Windows, which includes:
+<phrase key="assistedserviceplan_updatesFedora" />
+Official updates released by the Fedora or Fedora Legacy Project.
+<phrase key="assistedserviceplan_updatesMicrosoft" />
+Official updates, bug fixes and security patches released by Microsoft.
+<phrase key="assistedserviceplan_monitoringServices" />
+Monitoring Services:
+<phrase key="assistedserviceplan_perServerMonitoring" />
+Per server monitoring of basic services such as Ping and HTTP.
+<phrase key="assistedserviceplan_customSupportAccess" />
+Custom Support Access:
+<phrase key="assistedserviceplan_customSupportLink" />
+custom support
+<phrase key="assistedserviceplan_flatRateCustomSupport" />
+Access to our flat-rate {0} services
+<phrase key="assistedserviceplan_administrativeAccessFootnote" />
+Administrative Access is unavailable with the Assisted Service Plan
+<phrase key="assistedserviceplan_weeklyPatchingFootnote" />
+In most cases, patching will be performed weekly, though some patches may be applied sooner if the severity and likelihood of exploit is high. If a patch is found to break a customer's application, the customer will be able to contact the managed services support center and request that the patch be rolled back, free of charge.
+<phrase key="assistedserviceplan_assistedServicePlanFootnote" />
+Note: Assisted Service Plan is not available for plans using the Fedora or Ubuntu operating system.
+<phrase key="assistedServicePlanLabel" />
+Assisted Service Plan:
+<phrase key="totalMonthlyCostLabel" />
+Total Monthly Cost
+<phrase key="quoteDisclaimer1" />
+*This price quote displays the total monthly cost of the selected server configuration. However, the additional bandwidth will be a recurring monthly charge for the selected term length and only the first month’s charge will be displayed in your cart upon initial purchase.
+<phrase key="quoteCreatedOnDate" />
+Your price quote was created {0} at {1}. Pricing subject to change.
+<phrase key="quoteCopyright" />
+Copyright &copy; 1999-{0} {1} All rights reserved.
+<phrase key="planLabel" />
+Plan:
+<phrase key="includedLabel" />
+Included
+<phrase key="noneLabel" />
+None
+<phrase key="NeedAdvice" />
+Need Advice?
+<phrase key="StartingAt" />
+Starting at
+<phrase key="TabLink1" />
+Plans &amp; Pricing
+<phrase key="NeedHelpBagde" />
+Need Help? Call 24/7. 
+<phrase key="NeedHelpBadgePhone" />
+480-463-8856
+<phrase key="PerMonthFull" />
+/month
+<phrase key="1Month" />
+1 month
+<phrase key="3Month" />
+3 months
+<phrase key="12Month" />
+12 months
+<phrase key="24Month" />
+24 months
+<phrase key="CartButton" />
+Add to Cart
+<phrase key="faqsAnswer1content01" />
+Unlike normal hosting plans, which put many customers&apos; accounts on a single server, a Dedicated Server is reserved exclusively for the account and usage of a single customer. This means that the Dedicated Server customer has exclusive rights to their server&apos;s bandwidth, memory, and storage space, and performance is not affected by traffic and the usage patterns of other customers.
+<phrase key="faqsAnswer1content02" />
+When you purchase a Dedicated Server, you are actually leasing a server box that is configured and set up according to your preferences, but remains at our data center. A Dedicated Server account provides you with a dedicated IP address and full control of server usage and software installation, with admin (root) access to the server.
+<phrase key="faqsAnswer1content03" />
+You can use a Dedicated Server for a wide variety of purposes, including gaming servers, database management, and traffic-intensive websites. Dedicated Servers are particularly useful for companies and individuals who run very-high-traffic websites or applications and who need the bandwidth, versatility, and consistent performance of a dedicated box.
+<phrase key="faqsAnswer2content01" />
+Assisted Service Plan is a Dedicated Server option that shifts the responsibility of set up, monitoring, maintenance, security, and patching of your server to our server support team. With Assisted Service Plan, custom support services are also available for an hourly rate. Assisted Service Plan servers remove your root/system-level access but allow control over all other aspects of your server.
+<phrase key="faqsAnswer2content02" />
+Assisted Service Plan servers use Parallels Plesk Panel. Windows servers run the Windows Server 2012 R2 operating system. Linux servers run on the CentOS operating system. Assisted Service Plan can be purchased with or added to a server.
+<phrase key="faqsAnswer2content03" />
+For more information, see <a href="[@T[link:<external linktype="communityurl" path="help/article/1461/" secure="false "><param name='ci' value='89061' /></external>]@T]" target="_blank">What does the Assisted Service Plan include</a>?
+<phrase key="faqsAnswer2content04" />
+We also offer a dedicated server product with Assisted Service Plan called Managed Hosting. For more information, see <a href="[@T[link:<external linktype="communityurl" path="help/article/6665/" secure="false "><param name='ci' value='89062' /></external>]@T]" target="_blank">What is Managed Hosting</a>?
+<phrase key="faqsAnswer3content01" />
+Once we provision your server, which can take up to 72 hours, you can set it up.
+<phrase key="faqsAnswer3content02" />
+To Set up Your Dedicated Server Account
+<phrase key="faqsAnswer3content03List1" />
+Log in to your Account Manager.
+<phrase key="faqsAnswer3content03List2" />
+Click Servers.
+<phrase key="faqsAnswer3content03List3" />
+Next to the server account you want to set up, click Launch.
+<phrase key="faqsAnswer3content03List4" />
+Accept the legal agreements.
+<phrase key="faqsAnswer3content03List5" />
+Complete the on-screen fields, and then click Continue.
+<phrase key="faqsAnswer3content03List6" />
+Confirm your settings and click Submit.
+<phrase key="faqsAnswer3content04" />
+NOTE: This process can take up to 12 hours to complete.
+<phrase key="faqsAnswer4content01" />
+The contents of your dedicated Linux server depends on what kind of Linux distribution you are using. Below is an overview of the packages deployed with your server, prior to optional control panel installation.
+<phrase key="faqsAnswer4content02" />
+Dedicated servers with Parallels Plesk Panel installed will have different configurations. For more information, see the SWSOFT Plesk datasheet at <a data-ci="89063" href="http://www.parallels.com/r/pdfs/Datasheets/plesk.pdf" target="_blank">http://www.parallels.com/r/pdfs/Datasheets/plesk.pdf</a>
+<phrase key="faqsAnswer4content03" />
+Dedicated servers with cPanel installed will have different configurations. For more information, see the cPanel datasheet at <a data-ci="89064" href="http://www.cpanel.net/products/cpwhm/cpanel11/cpanel11-ds.pdf" target="_blank">http://www.cpanel.net/products/cpwhm/cpanel11/cpanel11-ds.pdf</a>
+<phrase key="faqsAnswer5content01" />
+To obtain an SSL certificate for a website hosted on your dedicated server, you must first generate and submit a certificate signing request (CSR) to your Certification Authority (CA).
+<phrase key="faqsAnswer5content02" />
+Once the CA has received the CSR, it will process the cert`ificate request and, if the authentication process is successful, issue a signed certificate for your website. The CA will provide you with CSR-generation and certificate-installation instructions.
+<phrase key="faqsAnswer5content03" />
+Related Material<br/>For CSR-generation instructions for Apache 2, IIS and other Web servers, please visit: <a href="[@T[link:<external linktype="communityurl" path="help/article/5343/" secure="false "><param name='ci' value='89065' /></external>]@T]" target="_blank">CSR Generation Instructions</a> in our Help Center.
+<phrase key="faqsAnswer6content01" />
+You may install anything you want on your dedicated server, as long as the installed material does not violate the restrictions listed in the license agreement.
+<phrase key="faqsAnswer7content01" />
+As long as the material or content does not violate the regulations listed in the license agreement for your account, you can upload any type of content that you want on your server.
+<phrase key="faqsAnswer8content01" />
+To install software on your server, you can log in to your Windows dedicated server using Remote Desktop and download installation package to your server (typically an EXE file), or you can connect to your server using FTP and copy the installation package from your computer to your server. Once the files are on your server you will need to run the files and follow the prompts to complete the installation. <br/> (Each installation with differ depending on the developer of the software.)
+<phrase key="faqsAnswer8content02" />
+For information about connecting to your server using Remote Desktop Connection, see <a href="[@T[link:<external linktype="communityurl" path="help/article/134/" secure="false "><param name='ci' value='89066' /></external>]@T]" target="_blank">Accessing Your Windows Server Using Remote Desktop Connection.</a>
+<phrase key="PacakgeBtn" />
+Choose your Package
+<phrase key="MostPopularBtn" />
+Most popular
+<phrase key="DiscalimerSymbol" />
+&#8225;
+<phrase key="DisclaimerContentLinkText" />
+Note: Each month is paid for in advance and begins upon the purchase of your account. Cancellation of your account will discontinue all future billings. Fees are non-refundable.
+<phrase key="DisclaimerContentWinnerText" />
+SC Magazine Awards 2011 Winner
+<phrase key="PlansIncludeTabText" />
+All Plans Include
+<phrase key="SupportSubTitle1" />
+Each Dedicated Server Plan includes:
+<phrase key="SupportSubText1" />
+<strong class="secondary-color">FREE </strong>rapid setup
+<phrase key="SupportSubText2" />
+<strong class="secondary-color">FREE </strong>Up to [@T[currencyprice:<price usdamount="10000" dropdecimal="true" />]@T] Google<sup>&reg;</sup> Adwords<sup>&reg;</sup> Credit 
+<phrase key="SupportSubText3" />
+<strong class="secondary-color">FREE </strong>[@T[currencyprice:<price usdamount="10000" dropdecimal="true" />]@T] Bing<sup>&reg;</sup> Ads Credits
+<phrase key="SupportSubText4" />
+<strong class="secondary-color">FREE </strong>[@T[currencyprice:<price usdamount="5000" dropdecimal="true" />]@T] Facebook<sup>&reg;</sup> Advertising Credit 
+<phrase key="SupportSubText5" />
+<strong class="secondary-color">FREE </strong>SSL Certificate 
+<phrase key="SupportSubText6" />
+<strong class="secondary-color">FREE!</strong> <a class="isToolTip" data-html="true" href="javascript:atl_PopUp(&#039;[@T[link:<relative path='/popups/fotolia.aspx'><param name='app_hdr' value='99' /><param name='ci' value='89055' /></relative>]@T]&#039;,&#039;foto_popup&#039;,&#039;left=50,top=50,scrollbars=yes,resizable=yes,width=600,height=550&#039;);" title="<strong>What can you do with 10 FREE credits from Fotolia.com?</strong><br />Fotolia&reg; has over 8,000,000 royalty-free photos, illustrations and videos available for your use. Quickly search and find images that will capture attention and add visual punch to your website. Use your free credits toward any photo, illustration or video; additional images start at just [@T[currencyprice:<price usdamount="75" dropdecimal="false" />]@T] each.">10 Fotolia<sup>&reg;</sup> Credits</a>
+<phrase key="SupportSubText7" />
+<a href="javascript:atl_PopUp(&#039;[@T[link:<external linktype="communityurl" path="help/article/1419/" secure="false"/>]@T]&#039;,&#039;display2&#039;,&#039;left=20,top=20,scrollbars=yes,resizable=yes,width=800,height=700&#039;);" data-ci="89057">Bandwidth Overage Protection</a>
+<phrase key="SupportSubText8" />
+3 dedicated IPs
+<phrase key="SupportSubText9" />
+Best-of-breed routers and servers
+<phrase key="SupportSubText10" />
+<a href="javascript:atl_PopUp('[@T[link:<relative path='/popups/tipping-point.aspx'><param name='app_hdr' value='99' /><param name='ci' value='89058' /></relative>]@T]','tpips_popup','left=50,top=50,scrollbars=yes,resizable=yes,width=600,height=150');" >TippingPoint<sup>®</sup> Intrusion Prevention Systems</a>
+<phrase key="SupportSubText11" />
+24/7 telephone, email and Web-based tech support
+<phrase key="SupportSubText12" />
+24/7 physical security
+<phrase key="SupportSubText13" />
+24/7 network monitoring
+<phrase key="SupportSubText14" />
+FTP access
+<phrase key="SupportSubText15" />
+<strong>Admin access:</strong> Install and run virtually anything on the server.
+<phrase key="SupportSubTitle2" />
+Why [@T[companyname:name]@T] Servers:
+<phrase key="SupportSubText16" />
+<strong>Manage multiple Web sites:</strong> Host multiple Web sites on one server account.
+<phrase key="SupportSubText17" />
+<strong>Versatility:</strong> A dedicated server/virtual Dedicated server can be used for a wide variety of purposes, including gaming, virtual (i.e., shared) hosting, and hosting of traffic-intensive Web sites.
+<phrase key="NeedHelpBadgePhone1" />
+Need Help? For 24/7 sales: <a>[@T[support:<serverSupportPhone/>]@T]</a>
+<phrase key="NeedHelpBadgePhone2" />
+For 24/7 advanced support: <a>[@T[support:<advancedSupportPhone/>]@T]</a>
+<phrase key="AdvancedSupportTitle" />
+Advanced Support
+<phrase key="AdvancedSupportDescription" />
+Need help administering your server? Make the most of your Virtual Dedicated Server by letting our expert staff help you with your specific needs. Call [@T[support:<serverSupportPhone/>]@T] for a quote and get the advanced support you need today.
+<phrase key="AdvancedSupportList1Title" />
+Services include:
+<phrase key="AdvancedSupportList1Text1" />
+Security Scans and Audits
+<phrase key="AdvancedSupportList1Text2" />
+Intrusion Prevention
+<phrase key="AdvancedSupportList1Text3" />
+Firewall Rules
+<phrase key="AdvancedSupportList1Text4" />
+Server Setup includes:
+<phrase key="AdvancedSupportList1Text5" />
+Software Installation
+<phrase key="AdvancedSupportList1Text6" />
+DNS Setup
+<phrase key="AdvancedSupportList1Text7" />
+Domain Name Setup
+<phrase key="AdvancedSupportList1Text8" />
+Advanced Performance Analysis
+<phrase key="AdvancedSupportList1Text9" />
+Apache Optimization
+<phrase key="AdvancedSupportList1Text10" />
+MySQL Optimization
+<phrase key="AdvancedSupportList1Text11" />
+Application Support includes:
+<phrase key="AdvancedSupportList1Text12" />
+Install and update approved Web applications
+<phrase key="AdvancedSupportList1Text13" />
+Configure any apps installed during setup
+<phrase key="AdvancedSupportList1Text14" />
+Database Management including data import and export
+<phrase key="AdvancedSupportList1Text15" />
+Port changes such as SSH, RDC and remote database access
+<phrase key="AdvancedSupportList1Text16" />
+Software Installation
+<phrase key="AdvancedSupportList1Text17" />
+DNS Setup
+<phrase key="AdvancedSupportList1Text18" />
+Domain Name Setup
+<phrase key="RestrictionsApply" />
+Restrictions Apply
+<phrase key="SSLRestrictions" />
+SSL certificate is free only for the initial hosting plan term purchased, after which it will automatically renew at the then-current rate.
+<phrase key="GoogleRestrictions" />
+One promotional credit per customer for a new Google AdWords account. Products purchased using a Gift Card or Alipay do not provide eligibility for advertising credits. Minimum spend [@T[currencyprice:<price usdamount="2500" dropdecimal="false" />]@T]. Offer valid to US & Canada residents only, excluding government controlled entities and parties. Other restrictions apply. <a href=&quot;javascript:void(window.open('[@T[link:<relative path='/popups/google-adwords.aspx'><param name='ci' value='89052' /><param name='app_hdr' value='99' /></relative>]@T]','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=550,height=675'))&quot;>View Details</a>
+<phrase key="BingRestrictions" />
+One promotional credit per customer for a new Microsoft<sup class='supsymbol'>&reg;</sup> Advertiser account. Products purchased using a Gift Card or Alipay do not provide eligibility for advertising credits. Offer valid to US residents only, other restrictions apply.<br/><a href=&quot;javascript:void(window.open('[@T[appSetting:<setting name='BING_AD_CREDIT_LINK' />]@T]','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=1060,height=675'))&quot;>View Details</a>
+<phrase key="FacebookRestrictions" />
+One promotional credit per customer for a new Facebook<sup class='supsymbol'>&reg;</sup> Advertiser account. Products purchased using a Gift Card or Alipay do not provide eligibility for advertising credits. Offer valid only for purchase of advertising in the US, Canada, UK, and Australia. Other restrictions apply. <a href=&quot;javascript:void(window.open('[@T[link:<relative path='/popups/facebook-ads.aspx'><param name='ci' value='89053' /><param name='app_hdr' value='99' /></relative>]@T]','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=550,height=675'))&quot;>View Details</a>
+<phrase key="FotoliaRestrictions" />
+One free promotional credit per customer, good for ten free download credits at Fotolia. Products purchased using a Gift Card or Alipay do not provide eligibility for photography credits. Other restrictions apply. <a href=&quot;javascript:void(window.open('[@T[link:<relative path='/popups/fotolia.aspx'><param name='app_hdr' value='99' /><param name='ci' value='89056' /></relative>]@T]','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=550,height=675'))&quot;>View Details</a>

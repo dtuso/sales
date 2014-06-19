@@ -1,0 +1,402 @@
+---
+location: localization/sales/gd/hosting/dedicated-servers-config/en
+id: 538fc37ef778fc0ffc8f8111
+name: FOS-1310
+---
+{% include '../../../modules/doc-block.html' %}
+<phrase key="page-title" />
+Dedicated Servers | Fully Configurable Multi-core Servers
+<phrase key="meta-description" />
+Need a Dedicated Server? GoDaddy makes it easy to run your own Dedicated Web Server.
+<phrase key="meta-keywords" />
+dedicated server, dedicated servers, dedicated server hosting, dedicated server web hosting
+<phrase key="og-title" />
+GoDaddy Dedicated Servers provide you with the ultimate in hosting performance, control &amp; convenience.
+<phrase key="og-description" />
+Get the most out of your website! GoDaddy Dedicated Servers provide you with the ultimate in hosting performance, control &amp; convenience.
+<phrase key="configTitleLink" />
+Change plan
+<phrase key="configTitleText" />
+Customize your server to meet your specific needs by selecting any of the features below.
+<phrase key="configTitleContinueToCart" />
+Continue to cart
+<phrase key="orderSummaryTitle" />
+Order summary
+<phrase key="AddonTitle" />
+Add-ons
+<phrase key="PerMonth" />
+per month
+<phrase key="orderSummarySubtotal" />
+Subtotal
+<phrase key="orderSummarySubtotalDisc" />
+Subtotal does not include applicable taxes.
+<phrase key="bandwidthDisclaimer" />
+*Additional <span data-original-title="The Order Summary displays the total monthly cost of the selected server configuration. However, the additional bandwidth will be a recurring monthly charge for the selected term length and only the first month's charge will be displayed in your cart upon initial purchase." data-html='true' class='isToolTip'>bandwidth costs</span> are billed monthly.
+<phrase key="backupPlanTitle" />
+Backup
+<phrase key="title0" />
+Protect your data
+<phrase key="subtitle0" />
+Protect your data against accidental loss. Back your data up on your own or let us do it for you with one of our managed backup plans.
+<phrase key="list0title0" />
+FTP Solution <span class="product-desc">- Manual backup option visible only from your Virtual Private Server.</span>
+<phrase key="list1title0" />
+Managed Backup Services <span class="product-desc">- GoDaddy will backup your server content for you.</span>
+<phrase key="bandwidthTitle" />
+Bandwidth
+<phrase key="title1" />
+Expecting a lot of traffic?
+<phrase key="subtitle1" />
+<span class="orange">Hosting video or other large data files?</span>
+<phrase key="list2title0" />
+Add additional bandwidth <span class="product-desc">to your plan to avoid potential overage fees when your traffic spikes.</span>
+<phrase key="controlPanelTitle" />
+Control Panel
+<phrase key="changePlan" />
+Unavailable: <a onclick="changePlan();">Change to Another Operating System Plan</a>
+<phrase key="title4" />
+Want more control?
+<phrase key="subtitle4" />
+<span class="orange">Different control panels offer their own unique interface, features and workflow.</span>
+<phrase key="list4title0" />
+We offer Parallels Plesk Panel and cPanel <span class="product-desc">- choose the one that&#039;s right for you.</span> <br > <a href="#" data-target="#myModalCompare" data-toggle="modal" data-ci="91003">Compare features.</a>
+<phrase key="msSqlPlanTitle" />
+MS SQL Database
+<phrase key="changeWindowsPlan" />
+Unavailable: <a onclick="changePlan();">Change to a Windows 2008 Plan</a>
+<phrase key="msSQLTitle" />
+Need a database?
+<phrase key="msSQLSubTitle" />
+Choose the MS SQL Server Database that will best suit your needs.
+<phrase key="firewallPlanTitle" />
+External Firewall
+<phrase key="firewallTitle" />
+Need extra protection?
+<phrase key="firewallSubTitle" />
+Keep hackers, worms and other cyber-threats from gaining access to your server. Our External Hardware Firewalls establish end-to-end encrypted VPN tunnels to securely connect server users and provide a greater level of security and increased performance than using only a software firewall (software firewalls are included in many control panels – such as our Parallels Plesk Panel)
+<phrase key="firewallPlanText" />
+Our External Hardware Firewalls establish end-to-end encrypted VPN tunnels to securely connect server users and provide a greater level of security and increased performance than using only a software firewall (software firewalls are included in many control panels -- such as our Parallels Plesk Panel).
+<phrase key="raidPlanTitle" />
+RAID 1 (Disk Mirroring)
+<phrase key="raidTitle" />
+Want better performance?
+<phrase key="raidSubTitle" />
+Maximize disk performance and redundancy. We also monitor your RAID configuration 24/7 and alert you if any problems aris
+<phrase key="raidText" />
+We also monitor your RAID configuration 24/7 and alert you if any problems arise.
+<phrase key="CompareModalTitle" />
+Compare Control Panel Features
+<phrase key="CompareModalTableTitle1" />
+Parallels Plesk Panel Unlimited
+<phrase key="CompareModalTableTitle2" />
+cPanel & WHM
+<phrase key="CompareModalTableSec1Title" />
+Price
+<phrase key="CompareModalTableSec1Text1" />
+Virtual Private Servers — Unlimited Domains
+<phrase key="CompareModalTableSec1Text2" />
+Dedicated Servers — Unlimited Domains
+<phrase key="CompareModalTableSec1Text3" />
+Built specifically to integrate with GoDaddy&reg; products
+<phrase key="CompareModalTableSec2Title" />
+Operating System
+<phrase key="CompareModalTableSec2Text1" />
+Fedora
+<phrase key="CompareModalTableSec2Text2" />
+CentOS
+<phrase key="CompareModalTableSec2Text3" />
+Windows 2008
+<phrase key="CompareModalTableSec2Text4" />
+Ubuntu
+<phrase key="CompareModalTableSec3Title" />
+DNS
+<phrase key="CompareModalTableSec3Text1" />
+Addition/Deletion
+<phrase key="CompareModalTableSec3Text2" />
+Automated setup with new site
+<phrase key="CompareModalTableSec3Text3" />
+Virtual DNS support
+<phrase key="CompareModalTableSec4Title" />
+Subdomains
+<phrase key="CompareModalTableSec4Text1" />
+Addition/Deletion
+<phrase key="CompareModalTableSec4Text2" />
+Redirects
+<phrase key="CompareModalTableSec4Text3" />
+Software firewall
+<phrase key="CompareModalTableSec5Title" />
+Web Server Scripting
+<phrase key="CompareModalTableSec5Text1" />
+ASP
+<phrase key="CompareModalTableSec5Text2" />
+Perl
+<phrase key="CompareModalTableSec5Text3" />
+Python
+<phrase key="CompareModalTableSec5Text4" />
+SSI
+<phrase key="CompareModalTableSec5Text5" />
+CGI
+<phrase key="CompareModalTableSec5Text6" />
+Java
+<phrase key="CompareModalTableSec6Title" />
+Database
+<phrase key="CompareModalTableSec6Text1" />
+MySQL
+<phrase key="CompareModalTableSec6Text2" />
+PHPMyAdmin
+<phrase key="CompareModalTableSec6Text3" />
+MSSQL (MSDE - Windows only)
+<phrase key="CompareModalTableSec7Title" />
+Mail
+<phrase key="CompareModalTableSec7Text1" />
+Manage email accounts
+<phrase key="CompareModalTableSec7Text2" />
+Supports Webmail
+<phrase key="CompareModalTableSec7Text3" />
+Forwarding
+<phrase key="CompareModalTableSec7Text4" />
+Auto-response
+<phrase key="CompareModalTableSec7Text5" />
+Mailing lists
+<phrase key="CompareModalTableSec7Text6" />
+Spam filters
+<phrase key="CompareModalTableSec7Text7" />
+Antivirus
+<phrase key="CompareModalTableSec8Title" />
+SSL
+<phrase key="CompareModalTableSec8Text1" />
+Manage SSL certificates
+<phrase key="CompareModalTableSec9Title" />
+FTP
+<phrase key="CompareModalTableSec9Text1" />
+Manage accounts
+<phrase key="CompareModalTableSec9Text2" />
+Anonymous FTP
+<phrase key="CompareModalTableSec9Text3" />
+Upload directory
+<phrase key="CompareModalTableSec10Title" />
+Statistics
+<phrase key="CompareModalTableSec10Text1" />
+Bandwidth reports
+<phrase key="CompareModalTableSec10Text2" />
+User reports
+<phrase key="CompareModalTableSec10Text3" />
+View error Log
+<phrase key="CompareModalTableSec10Text4" />
+Webalizer Stats
+<phrase key="CombineModalNote" />
+*Parallels Plesk Panel 30 domains and 100 domains also available. Plesk Power Pack is also available as an option with Parallels Plesk Panel.
+<phrase key="CombineModalCloseBtn" />
+Close
+<phrase key="20FTPAddon" />
+FTP Backup: 20 GB FTP backup
+<phrase key="100FTPAddon" />
+FTP Backup: 100 GB FTP backup
+<phrase key="300FTPAddon" />
+FTP Backup: 300 GB FTP backup
+<phrase key="600FTPAddon" />
+FTP Backup: 600 GB FTP backup
+<phrase key="DailyManged7Addon" />
+Managed Backup: Daily, 7-Day
+<phrase key="DailyManged30Addon" />
+Managed Backup: Daily, 30-Day
+<phrase key="WeeklyManged4Addon" />
+Managed Backup: Weekly, 4-week
+<phrase key="WeeklyManged12Addon" />
+Managed Backup: Weekly, 12-week
+<phrase key="1TBBandwidthAddon" />
+Bandwidth*: 1 TB
+<phrase key="3TBBandwidthAddon" />
+Bandwidth*: 3 TB
+<phrase key="5TBBandwidthAddon" />
+Bandwidth*: 15 TB
+<phrase key="10TBBandwidthAddon" />
+Bandwidth*: 10 TB
+<phrase key="500BandwidthAddon" />
+Bandwidth*: 500 GB
+<phrase key="1000BandwidthAddon" />
+Bandwidth*: 1000 GB
+<phrase key="1500BandwidthAddon" />
+Bandwidth*: 1500 GB
+<phrase key="2000BandwithAddon" />
+Bandwidth*: 2000 GB
+<phrase key="ServicePlanAddon" />
+Service Plan: Assisted Service Plan
+<phrase key="Plesk30Addon" />
+Control Panel: Parallels Plesk Panel 30 Domains
+<phrase key="Plesk100Addon" />
+Control Panel: Parallels Plesk Panel 100 Domains
+<phrase key="PleskUnlimtedAddon" />
+Control Panel: Parallels Plesk Panel Unlimted Domains
+<phrase key="cPanelAddon" />
+Control Panel: cPanel & WHM Unlimited
+<phrase key="PowerPackAddon" />
+Software: Parallels Plesk Panel Power Pack
+<phrase key="NoFTPLabel" />
+No FTP backup
+<phrase key="20FTPLabel" />
+20 GB FTP backup:
+<phrase key="100FTPLabel" />
+100 GB FTP backup:
+<phrase key="300FTPLabel" />
+300 GB FTP backup:
+<phrase key="600FTPLabel" />
+600 GB FTP backup:
+<phrase key="NoManagedBackup" />
+No Managed Backup
+<phrase key="7DayManaged" />
+Daily Managed, 7-day retention:
+<phrase key="30DayManaged" />
+Daily Managed, 30-day retention:
+<phrase key="4WeekManaged" />
+Weekly Managed, 4-week retention:
+<phrase key="12WeekManaged" />
+Weekly Managed, 12-week retention:
+<phrase key="NoBandwidth" />
+No additional bandwidth
+<phrase key="1TBBandwidth" />
+Add 1 TB/mo:
+<phrase key="3TBBandwidth" />
+Add 3 TB/mo:
+<phrase key="5TBBandwidth" />
+Add 5 TB/mo:
+<phrase key="10TBBandwidth" />
+Add 10 TB/mo:
+<phrase key="500GBBandwidth" />
+Add 500 GB/mo:
+<phrase key="1000GBBandwidth" />
+Add 1000 GB/mo:
+<phrase key="1500GBBandwidth" />
+Add 1500 GB/mo:
+<phrase key="2000GBBandwidth" />
+Add 2000 GB/mo:
+<phrase key="NoControlPanel" />
+No control panel
+<phrase key="Plesk30Domains" />
+Parallels Plesk Panel for up to 30 Domains:
+<phrase key="NoAdditionalFeatures" />
+ No additional features
+<phrase key="PowerPackText" />
+ Parallels Plesk Panel with <span data-original-title='Add mobility, security, remote management and more to your panel and websites.' data-html='true' class='isToolTip'>Power Pack</span>:
+<phrase key="Plesk100Domains" />
+Parallels Plesk Panel for up to 100 Domains:
+<phrase key="PleskUnlimitedDomains" />
+Parallels Plesk Panel for Unlimited Domains:
+<phrase key="cPanelText" />
+cPanel & WHM Unlimited:
+<phrase key="2GB" />
+2 GB
+<phrase key="4GB" />
+4 GB
+<phrase key="8GB" />
+8 GB
+<phrase key="16GB" />
+16 GB
+<phrase key="32GB" />
+32 GB
+<phrase key="5TB" />
+5 TB
+<phrase key="10TB" />
+10 TB
+<phrase key="20TB" />
+20 TB
+<phrase key="15TB" />
+15 TB
+<phrase key="2X160GB" />
+2 x 160 GB
+<phrase key="2X1TB" />
+2 x 1 TB 
+<phrase key="2X2TB" />
+2 x 2 TB
+<phrase key="2X300GB" />
+2 x 300 GB
+<phrase key="economyCentos" />
+Economy: Linux CentOS 64-Bit
+<phrase key="deluxeCentos" />
+Deluxe: Linux CentOS 64-Bit
+<phrase key="premiumCentos" />
+Premium: Linux CentOS 64-Bit
+<phrase key="valuedealCentos" />
+Value Deal: Linux CentOS 64-Bit
+<phrase key="powerplayerCentos" />
+Power Player: Linux CentOS 64-Bit
+<phrase key="memoryhogCentos" />
+MemoryHog: Linux CentOS 64-Bit
+<phrase key="economyUbuntu" />
+Economy: Linux Ubuntu 32-Bit
+<phrase key="deluxeUbuntu" />
+Deluxe: Linux Ubuntu 32-Bit
+<phrase key="premiumUbuntu" />
+Premium: Linux Ubuntu 32-Bit
+<phrase key="valuedealUbuntu" />
+Value Deal: Linux Ubuntu 32-Bit
+<phrase key="powerplayerUbuntu" />
+Power Player: Linux Ubuntu 32-Bit
+<phrase key="memoryhogUbuntu" />
+MemoryHog: Linux Ubuntu 32-Bit
+<phrase key="economyFedora" />
+Economy: Fedora 64-Bit
+<phrase key="deluxeFedora" />
+Deluxe: Fedora 64-Bit
+<phrase key="premiumFedora" />
+Premium: Fedora 64-Bit
+<phrase key="valuedealFedora" />
+Value Deal: Fedora 64-Bit
+<phrase key="powerplayerFedora" />
+Power Player: Fedora 64-Bit
+<phrase key="memoryhogFedora" />
+MemoryHog: Fedora 64-Bit
+<phrase key="economyWindows" />
+Economy: Windows 2012 Std 64-Bit
+<phrase key="deluxeWindows" />
+Deluxe: Windows 2012 Std 64-Bit
+<phrase key="premiumWindows" />
+Premium: Windows 2012 Std 64-Bit
+<phrase key="valuedealWindows" />
+Value Deal: Windows 2012 Std 64-Bit
+<phrase key="powerplayerWindows" />
+Power Player: Windows 2012 Std 64-Bit
+<phrase key="memoryhogWindows" />
+MemoryHog: Windows 2012 Std 64-Bit
+<phrase key="CPUSummary" />
+CPU:
+<phrase key="RamSummary" />
+RAM:
+<phrase key="StorageSummary" />
+Storage:
+<phrase key="BandwidthSummary" />
+Bandwidth:
+<phrase key="PerMonth" />
+per month
+<phrase key="mo" />
+/mo
+<phrase key="NoFirewall" />
+No firewall
+<phrase key="CiscoASA" />
+<span data-original-title='The Cisco ASA 5505 firewall offers the latest security technology from Cisco, providing intelligent threat defense and highly secure communications services - includes unlimited active host licenses.' data-html='true' class='isToolTip'>Cisco ASA 5505</span> Firewall:
+<phrase key="CiscoASAAddon" />
+Firewall: Cisco ASA 5505 Firewall
+<phrase key="NoRaid" />
+No RAID 1
+<phrase key="Raid" />
+RAID 1:
+<phrase key="RaidAddon" />
+RAID 1: RAID 1
+<phrase key="NoDatabase" />
+No database
+<phrase key="sqlWorkspace" />
+MS SQL 2008 R2 Workgroup Edition: 
+<phrase key="sqlWorkspaceAddon" />
+MS SQL 2008 R2 Workgroup
+<phrase key="sqlStandard" />
+MS SQL 2008 R2 Standard Edition: 
+<phrase key="sqlStandardAddon" />
+MS SQL 2008 R2 Standard
+<phrase key="sqlEnterpriseCall" />
+2008 Enterprise Edition R2 - Call for Pricing!
+<phrase key="i32" />
+Intel&reg; Core&#8482; i3 - 2 cores
+<phrase key="i54" />
+Intel&reg; Core&#8482; i5 - 4 cores
+<phrase key="i74" />
+Intel&reg; Core&#8482; i7 - 4 cores

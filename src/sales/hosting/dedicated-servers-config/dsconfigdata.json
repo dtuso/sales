@@ -1,0 +1,996 @@
+{
+    "dsconfig": {
+        "addons": {
+            "centos":{
+                "ftpsolution": [
+                        {
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:NoFTPLabel]@L]"
+                            
+                        },
+                        {
+                            "id": "addon_ftp_20-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:20FTPLabel]@L]",
+                             "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:20FTPAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"6500\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "addon_ftp_100-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:100FTPLabel]@L]",
+                             "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:100FTPAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"6501\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "addon_ftp_300-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:300FTPLabel]@L]",
+                             "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:300FTPAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"6502\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "addon_ftp_600-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:600FTPLabel]@L]",
+                             "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:600FTPAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1273\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        }
+                    ],
+                "managedbackup": [
+                        {
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:NoManagedBackup]@L]"
+                        },
+                        {
+                            "id": "addon_managedbackup_7d-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:7DayManaged]@L]",
+                             "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:DailyManged7Addon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1361\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "addon_managedbackup_30d-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:30DayManaged]@L]",
+                             "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:DailyManged30Addon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1356\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "addon_managedbackup_4w-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:4WeekManaged]@L]",
+                             "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:WeeklyManged4Addon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1363\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "addon_managedbackup_12w-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:12WeekManaged]@L]",
+                             "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:WeeklyManged12Addon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1357\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        }
+                    ],
+                "bandwidth": [
+                        {
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:NoBandwidth]@L]"
+                        },
+                        {
+                            "id": "addon_bandwidth-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:1TBBandwidth]@L]",
+                             "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:1TBBandwidthAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1122\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "addon_bandwidth-3",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:3TBBandwidth]@L]",
+                             "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:3TBBandwidthAddon]@L]",
+                            "addonprice": "[@T[productcompare:<multiplication primaryproductid=\"1122\" secondaryprice=\"3\" secondaryperiod=\"monthly\" />]@T]"
+                        },
+                        {
+                            "id": "addon_bandwidth-5",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:5TBBandwidth]@L]",
+                             "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:5TBBandwidthAddon]@L]",
+                            "addonprice": "[@T[productcompare:<multiplication primaryproductid=\"1122\" secondaryprice=\"5\" secondaryperiod=\"monthly\" />]@T]"
+                        },
+                        {
+                            "id": "addon_bandwidth-10",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:10TBBandwidth]@L]",
+                             "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:10TBBandwidthAddon]@L]",
+                            "addonprice": "[@T[productcompare:<multiplication primaryproductid=\"1122\" secondaryprice=\"10\" secondaryperiod=\"monthly\" />]@T]"
+                        }
+                    ],
+                "controlpanel": [
+                        {
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:NoControlPanel]@L]"
+
+                        },
+                        {
+                            "id": "addon_controlpanel_30-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:Plesk30Domains]@L]",
+                             "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:Plesk30Addon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1219\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                            "addonupgrade": [
+                                {
+                                    "id": "addon_controlpanel_powerpack-1",
+                                    "addonvalue": " [@L[cds.sales/gd/hosting/dedicated-servers-config:NoAdditionalFeatures]@L]"
+                                },
+                                {
+                                    "id": "addon_controlpanel_powerpack-1",
+                                    "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:PowerPackText]@L]",
+                                    "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:PowerPackAddon]@L]",
+                                    "addonprice": "[@T[productprice:<current productid=\"2754\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "addon_controlpanel_100-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:Plesk100Domains]@L]",
+                             "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:Plesk100Addon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1220\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                            "addonupgrade": [
+                                {
+                                    "id": "addon_controlpanel_powerpack-1",
+                                    "addonvalue": " [@L[cds.sales/gd/hosting/dedicated-servers-config:NoAdditionalFeatures]@L]"
+                                },
+                                {
+                                    "id": "addon_controlpanel_powerpack-1",
+                                    "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:PowerPackText]@L]",
+                                    "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:PowerPackAddon]@L]",
+                                    "addonprice": "[@T[productprice:<current productid=\"2754\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "addon_controlpanel_unlimited-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:PleskUnlimitedDomains]@L]",
+                             "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:PleskUnlimtedAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1221\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                            "addonupgrade": [
+                                {
+                                    "id": "addon_controlpanel_powerpack-1",
+                                    "addonvalue": " [@L[cds.sales/gd/hosting/dedicated-servers-config:NoAdditionalFeatures]@L]"
+                                },
+                                {
+                                    "id": "addon_controlpanel_powerpack-1",
+                                    "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:PowerPackText]@L]",
+                                    "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:PowerPackAddon]@L]",
+                                    "addonprice": "[@T[productprice:<current productid=\"2754\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "addon_controlpanel_cpanel-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:cPanelText]@L]",
+                             "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:cPanelAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1232\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+
+                        }
+                    ],
+                "externalfirewall": [
+                        {
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:NoFirewall]@L]"
+                        },
+                        {
+                            "id": "addon_firewall-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:CiscoASA]@L]",
+                             "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:CiscoASAAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1259\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        }
+                    ],
+                "diskmirroring": [
+                        {
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:NoRaid]@L]"
+                        },
+                        {
+                            "id": "addon_raid-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:Raid]@L]",
+                             "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:RaidAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1230\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        }
+                    ]
+            },
+            "ubuntu":{
+                "ftpsolution": [
+                        {
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:NoFTPLabel]@L]"
+                            
+                        },
+                        {
+                            "id": "addon_ftp_20-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:20FTPLabel]@L]",
+                             "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:20FTPAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"6500\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "addon_ftp_100-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:100FTPLabel]@L]",
+                             "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:100FTPAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"6501\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "addon_ftp_300-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:300FTPLabel]@L]",
+                             "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:300FTPAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"6502\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "addon_ftp_600-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:600FTPLabel]@L]",
+                             "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:600FTPAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1273\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        }
+                    ],
+                "managedbackup": [
+                        {
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:NoManagedBackup]@L]"
+                        },
+                        {
+                            "id": "addon_managedbackup_7d-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:7DayManaged]@L]",
+                             "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:DailyManged7Addon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1361\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "addon_managedbackup_30d-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:30DayManaged]@L]",
+                             "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:DailyManged30Addon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1356\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "addon_managedbackup_4w-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:4WeekManaged]@L]",
+                             "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:WeeklyManged4Addon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1363\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "addon_managedbackup_12w-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:12WeekManaged]@L]",
+                             "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:WeeklyManged12Addon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1357\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        }
+                    ],
+                "bandwidth": [
+                        {
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:NoBandwidth]@L]"
+                        },
+                        {
+                            "id": "addon_bandwidth-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:1TBBandwidth]@L]",
+                             "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:1TBBandwidthAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1122\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "addon_bandwidth-3",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:3TBBandwidth]@L]",
+                             "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:3TBBandwidthAddon]@L]",
+                            "addonprice": "[@T[productcompare:<multiplication primaryproductid=\"1122\" secondaryprice=\"3\" secondaryperiod=\"monthly\" />]@T]"
+                        },
+                        {
+                            "id": "addon_bandwidth-5",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:5TBBandwidth]@L]",
+                             "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:5TBBandwidthAddon]@L]",
+                            "addonprice": "[@T[productcompare:<multiplication primaryproductid=\"1122\" secondaryprice=\"5\" secondaryperiod=\"monthly\" />]@T]"
+                        },
+                        {
+                            "id": "addon_bandwidth-10",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:10TBBandwidth]@L]",
+                             "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:10TBBandwidthAddon]@L]",
+                            "addonprice": "[@T[productcompare:<multiplication primaryproductid=\"1122\" secondaryprice=\"10\" secondaryperiod=\"monthly\" />]@T]"
+                        }
+                    ],
+                "controlpanel": [
+                        {
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:NoControlPanel]@L]"
+
+                        },
+                        {
+                            "id": "addon_controlpanel_30-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:Plesk30Domains]@L]",
+                             "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:Plesk30Addon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1219\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                            "addonupgrade": [
+                                {
+                                    "id": "addon_controlpanel_powerpack-1",
+                                    "addonvalue": " [@L[cds.sales/gd/hosting/dedicated-servers-config:NoAdditionalFeatures]@L]"
+                                },
+                                {
+                                    "id": "addon_controlpanel_powerpack-1",
+                                    "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:PowerPackText]@L]",
+                                    "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:PowerPackAddon]@L]",
+                                    "addonprice": "[@T[productprice:<current productid=\"2754\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "addon_controlpanel_100-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:Plesk100Domains]@L]",
+                             "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:Plesk100Addon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1220\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                            "addonupgrade": [
+                                {
+                                    "id": "addon_controlpanel_powerpack-1",
+                                    "addonvalue": " [@L[cds.sales/gd/hosting/dedicated-servers-config:NoAdditionalFeatures]@L]"
+                                },
+                                {
+                                    "id": "addon_controlpanel_powerpack-1",
+                                    "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:PowerPackText]@L]",
+                                    "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:PowerPackAddon]@L]",
+                                    "addonprice": "[@T[productprice:<current productid=\"2754\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "addon_controlpanel_unlimited-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:PleskUnlimitedDomains]@L]",
+                             "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:PleskUnlimtedAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1221\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                            "addonupgrade": [
+                                {
+                                    "id": "addon_controlpanel_powerpack-1",
+                                    "addonvalue": " [@L[cds.sales/gd/hosting/dedicated-servers-config:NoAdditionalFeatures]@L]"
+                                },
+                                {
+                                    "id": "addon_controlpanel_powerpack-1",
+                                    "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:PowerPackText]@L]",
+                                    "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:PowerPackAddon]@L]",
+                                    "addonprice": "[@T[productprice:<current productid=\"2754\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                                }
+                            ]
+                        }
+                    ],
+                "externalfirewall": [
+                        {
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:NoFirewall]@L]"
+                        },
+                        {
+                            "id": "addon_firewall-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:CiscoASA]@L]",
+                             "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:CiscoASAAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1259\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        }
+                    ],
+                "diskmirroring": [
+                        {
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:NoRaid]@L]"
+                        },
+                        {
+                            "id": "addon_raid-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:Raid]@L]",
+                             "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:RaidAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1230\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        }
+                    ]
+            },
+            "fedora":{
+                "ftpsolution": [
+                        {
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:NoFTPLabel]@L]"
+                            
+                        },
+                        {
+                            "id": "addon_ftp_20-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:20FTPLabel]@L]",
+                             "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:20FTPAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"6500\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "addon_ftp_100-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:100FTPLabel]@L]",
+                             "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:100FTPAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"6501\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "addon_ftp_300-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:300FTPLabel]@L]",
+                             "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:300FTPAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"6502\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "addon_ftp_600-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:600FTPLabel]@L]",
+                             "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:600FTPAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1273\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        }
+                    ],
+                "managedbackup": [
+                        {
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:NoManagedBackup]@L]"
+                        },
+                        {
+                            "id": "addon_managedbackup_7d-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:7DayManaged]@L]",
+                             "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:DailyManged7Addon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1361\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "addon_managedbackup_30d-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:30DayManaged]@L]",
+                             "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:DailyManged30Addon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1356\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "addon_managedbackup_4w-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:4WeekManaged]@L]",
+                             "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:WeeklyManged4Addon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1363\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "addon_managedbackup_12w-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:12WeekManaged]@L]",
+                             "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:WeeklyManged12Addon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1357\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        }
+                    ],
+                "bandwidth": [
+                        {
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:NoBandwidth]@L]"
+                        },
+                        {
+                            "id": "addon_bandwidth-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:1TBBandwidth]@L]",
+                             "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:1TBBandwidthAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1122\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "addon_bandwidth-3",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:3TBBandwidth]@L]",
+                             "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:3TBBandwidthAddon]@L]",
+                            "addonprice": "[@T[productcompare:<multiplication primaryproductid=\"1122\" secondaryprice=\"3\" secondaryperiod=\"monthly\" />]@T]"
+                        },
+                        {
+                            "id": "addon_bandwidth-5",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:5TBBandwidth]@L]",
+                             "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:5TBBandwidthAddon]@L]",
+                            "addonprice": "[@T[productcompare:<multiplication primaryproductid=\"1122\" secondaryprice=\"5\" secondaryperiod=\"monthly\" />]@T]"
+                        },
+                        {
+                            "id": "addon_bandwidth-10",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:10TBBandwidth]@L]",
+                             "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:10TBBandwidthAddon]@L]",
+                            "addonprice": "[@T[productcompare:<multiplication primaryproductid=\"1122\" secondaryprice=\"10\" secondaryperiod=\"monthly\" />]@T]"
+                        }
+                    ],
+                "externalfirewall": [
+                        {
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:NoFirewall]@L]"
+                        },
+                        {
+                            "id": "addon_firewall-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:CiscoASA]@L]",
+                             "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:CiscoASAAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1259\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        }
+                    ],
+                "diskmirroring": [
+                        {
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:NoRaid]@L]"
+                        },
+                        {
+                            "id": "addon_raid-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:Raid]@L]",
+                             "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:RaidAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1230\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        }
+                    ]
+            },
+            "windows":{
+                "ftpsolution": [
+                        {
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:NoFTPLabel]@L]"
+                            
+                        },
+                        {
+                            "id": "addon_ftp_20-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:20FTPLabel]@L]",
+                             "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:20FTPAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"6500\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "addon_ftp_100-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:100FTPLabel]@L]",
+                             "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:100FTPAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"6501\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "addon_ftp_300-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:300FTPLabel]@L]",
+                             "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:300FTPAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"6502\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "addon_ftp_600-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:600FTPLabel]@L]",
+                             "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:600FTPAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1273\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        }
+                    ],
+                "managedbackup": [
+                        {
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:NoManagedBackup]@L]"
+                        },
+                        {
+                            "id": "addon_managedbackup_7d-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:7DayManaged]@L]",
+                             "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:DailyManged7Addon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1361\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "addon_managedbackup_30d-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:30DayManaged]@L]",
+                             "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:DailyManged30Addon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1356\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "addon_managedbackup_4w-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:4WeekManaged]@L]",
+                             "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:WeeklyManged4Addon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1363\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "addon_managedbackup_12w-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:12WeekManaged]@L]",
+                             "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:WeeklyManged12Addon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1357\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        }
+                    ],
+                "bandwidth": [
+                        {
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:NoBandwidth]@L]"
+                        },
+                        {
+                            "id": "addon_bandwidth-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:1TBBandwidth]@L]",
+                             "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:1TBBandwidthAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1122\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "addon_bandwidth-3",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:3TBBandwidth]@L]",
+                             "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:3TBBandwidthAddon]@L]",
+                            "addonprice": "[@T[productcompare:<multiplication primaryproductid=\"1122\" secondaryprice=\"3\" secondaryperiod=\"monthly\" />]@T]"
+                        },
+                        {
+                            "id": "addon_bandwidth-5",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:5TBBandwidth]@L]",
+                             "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:5TBBandwidthAddon]@L]",
+                            "addonprice": "[@T[productcompare:<multiplication primaryproductid=\"1122\" secondaryprice=\"5\" secondaryperiod=\"monthly\" />]@T]"
+                        },
+                        {
+                            "id": "addon_bandwidth-10",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:10TBBandwidth]@L]",
+                             "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:10TBBandwidthAddon]@L]",
+                            "addonprice": "[@T[productcompare:<multiplication primaryproductid=\"1122\" secondaryprice=\"10\" secondaryperiod=\"monthly\" />]@T]"
+                        }
+                    ],
+                "controlpanel": [
+                        {
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:NoControlPanel]@L]"
+
+                        },
+                        {
+                            "id": "addon_controlpanel_30-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:Plesk30Domains]@L]",
+                             "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:Plesk30Addon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1219\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                            "addonupgrade": [
+                                {
+                                    "id": "addon_controlpanel_powerpack-1",
+                                    "addonvalue": " [@L[cds.sales/gd/hosting/dedicated-servers-config:NoAdditionalFeatures]@L]"
+                                },
+                                {
+                                    "id": "addon_controlpanel_powerpack-1",
+                                    "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:PowerPackText]@L]",
+                                    "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:PowerPackAddon]@L]",
+                                    "addonprice": "[@T[productprice:<current productid=\"2754\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "addon_controlpanel_100-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:Plesk100Domains]@L]",
+                             "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:Plesk100Addon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1220\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                            "addonupgrade": [
+                                {
+                                    "id": "addon_controlpanel_powerpack-1",
+                                    "addonvalue": " [@L[cds.sales/gd/hosting/dedicated-servers-config:NoAdditionalFeatures]@L]"
+                                },
+                                {
+                                    "id": "addon_controlpanel_powerpack-1",
+                                    "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:PowerPackText]@L]",
+                                    "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:PowerPackAddon]@L]",
+                                    "addonprice": "[@T[productprice:<current productid=\"2754\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "addon_controlpanel_unlimited-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:PleskUnlimitedDomains]@L]",
+                             "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:PleskUnlimtedAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1221\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                            "addonupgrade": [
+                                {
+                                    "id": "addon_controlpanel_powerpack-1",
+                                    "addonvalue": " [@L[cds.sales/gd/hosting/dedicated-servers-config:NoAdditionalFeatures]@L]"
+                                },
+                                {
+                                    "id": "addon_controlpanel_powerpack-1",
+                                    "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:PowerPackText]@L]",
+                                    "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:PowerPackAddon]@L]",
+                                    "addonprice": "[@T[productprice:<current productid=\"2754\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                                }
+                            ]
+                        }
+                    ],
+                "sql": [
+                        {
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:NoDatabase]@L]"
+                        },
+                        {
+                            "id": "addon_sql_workgroup-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:sqlWorkspace]@L]",
+                             "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:sqlWorkspaceAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1371\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "addon_sql_standard-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:sqlStandard]@L]",
+                             "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:sqlStandardAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1372\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        }
+                    ],
+                "externalfirewall": [
+                        {
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:NoFirewall]@L]"
+                        },
+                        {
+                            "id": "addon_firewall-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:CiscoASA]@L]",
+                             "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:CiscoASAAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1259\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        }
+                    ],
+                "diskmirroring": [
+                        {
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:NoRaid]@L]"
+                        },
+                        {
+                            "id": "addon_raid-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/dedicated-servers-config:Raid]@L]",
+                             "addondata":"[@L[cds.sales/gd/hosting/dedicated-servers-config:RaidAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1230\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        }
+                    ]
+            }                        
+        },
+        "details": {
+            "centos": {
+                "plans": {
+                    "economy": {
+                        "os": "[@L[cds.sales/gd/hosting/dedicated-servers-config:economyCentos]@L]",
+                        "cpu": "[@L[cds.sales/gd/hosting/dedicated-servers-config:i32]@L]",
+                        "ram": "[@L[cds.sales/gd/hosting/dedicated-servers-config:2GB]@L]",
+                        "storage": "[@L[cds.sales/gd/hosting/dedicated-servers-config:2x160GB]@L]",
+                        "bandwidth": "[@L[cds.sales/gd/hosting/dedicated-servers-config:5TB]@L]"
+                    },
+                    "deluxe": {
+                        "os": "[@L[cds.sales/gd/hosting/dedicated-servers-config:deluxeCentos]@L]",
+                        "cpu": "[@L[cds.sales/gd/hosting/dedicated-servers-config:i54]@L]",
+                        "ram": "[@L[cds.sales/gd/hosting/dedicated-servers-config:8GB]@L]",
+                        "storage": "[@L[cds.sales/gd/hosting/dedicated-servers-config:2x1TB]@L]",
+                        "bandwidth": "[@L[cds.sales/gd/hosting/dedicated-servers-config:10TB]@L]"
+                    },
+                    "premium": {
+                        "os": "[@L[cds.sales/gd/hosting/dedicated-servers-config:premiumCentos]@L]",
+                        "cpu": "[@L[cds.sales/gd/hosting/dedicated-servers-config:i74]@L]",
+                        "ram": "[@L[cds.sales/gd/hosting/dedicated-servers-config:16GB]@L]",
+                        "storage": "[@L[cds.sales/gd/hosting/dedicated-servers-config:2x2TB]@L]",
+                        "bandwidth": "[@L[cds.sales/gd/hosting/dedicated-servers-config:20TB]@L]"
+                    },
+                    "valuedeal": {
+                        "os": "[@L[cds.sales/gd/hosting/dedicated-servers-config:valuedealCentos]@L]",
+                        "cpu": "[@L[cds.sales/gd/hosting/dedicated-servers-config:i54]@L]",
+                        "ram": "[@L[cds.sales/gd/hosting/dedicated-servers-config:4GB]@L]",
+                        "storage": "[@L[cds.sales/gd/hosting/dedicated-servers-config:2X300GB]@L]",
+                        "bandwidth": "[@L[cds.sales/gd/hosting/dedicated-servers-config:10TB]@L]"
+                    },
+                    "powerplayer": {
+                        "os": "[@L[cds.sales/gd/hosting/dedicated-servers-config:powerplayerCentos]@L]",
+                        "cpu": "[@L[cds.sales/gd/hosting/dedicated-servers-config:i74]@L]",
+                        "ram": "[@L[cds.sales/gd/hosting/dedicated-servers-config:8GB]@L]",
+                        "storage": "[@L[cds.sales/gd/hosting/dedicated-servers-config:2x1TB]@L]",
+                        "bandwidth": "[@L[cds.sales/gd/hosting/dedicated-servers-config:15TB]@L]"
+                    },
+                    "memoryhog": {
+                        "os": "[@L[cds.sales/gd/hosting/dedicated-servers-config:memoryhogCentos]@L]",
+                        "cpu": "[@L[cds.sales/gd/hosting/dedicated-servers-config:i54]@L]",
+                        "ram": "[@L[cds.sales/gd/hosting/dedicated-servers-config:32GB]@L]",
+                        "storage": "[@L[cds.sales/gd/hosting/dedicated-servers-config:2x1TB]@L]",
+                        "bandwidth": "[@L[cds.sales/gd/hosting/dedicated-servers-config:15TB]@L]"
+                    }
+                },
+                "prices": {
+                    "economy": {
+                        "1":"[@T[productprice:<current productid=\"474\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "3":"[@T[productprice:<current productid=\"474\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "12":"[@T[productprice:<current productid=\"474\" dropdecimal=\"false\" percentoff=\"10\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "24":"[@T[productprice:<current productid=\"474\" dropdecimal=\"false\" percentoff=\"20\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                    },
+                    "deluxe": {
+                        "1":"[@T[productprice:<current productid=\"803\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "3":"[@T[productprice:<current productid=\"803\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "12":"[@T[productprice:<current productid=\"803\" dropdecimal=\"false\" percentoff=\"10\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "24":"[@T[productprice:<current productid=\"803\" dropdecimal=\"false\" percentoff=\"20\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                    },
+                    "premium": {
+                        "1":"[@T[productprice:<current productid=\"889\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "3":"[@T[productprice:<current productid=\"889\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "12":"[@T[productprice:<current productid=\"889\" dropdecimal=\"false\" percentoff=\"10\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "24":"[@T[productprice:<current productid=\"889\" dropdecimal=\"false\" percentoff=\"20\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                    },
+                    "valuedeal": {
+                        "1":"[@T[productprice:<current productid=\"929\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "3":"[@T[productprice:<current productid=\"929\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "12":"[@T[productprice:<current productid=\"929\" dropdecimal=\"false\" percentoff=\"10\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "24":"[@T[productprice:<current productid=\"929\" dropdecimal=\"false\" percentoff=\"20\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                    },
+                    "powerplayer": {
+                        "1":"[@T[productprice:<current productid=\"1072\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "3":"[@T[productprice:<current productid=\"1072\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "12":"[@T[productprice:<current productid=\"1072\" dropdecimal=\"false\" percentoff=\"10\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "24":"[@T[productprice:<current productid=\"1072\" dropdecimal=\"false\" percentoff=\"20\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                    },
+                    "memoryhog": {
+                        "1":"[@T[productprice:<current productid=\"2804\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "3":"[@T[productprice:<current productid=\"2804\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "12":"[@T[productprice:<current productid=\"2804\" dropdecimal=\"false\" percentoff=\"10\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "24":"[@T[productprice:<current productid=\"2804\" dropdecimal=\"false\" percentoff=\"20\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                    }
+                }
+            },
+            "ubuntu":{
+               "plans": {
+                    "economy": {
+                        "os": "[@L[cds.sales/gd/hosting/dedicated-servers-config:economyUbuntu]@L]",
+                        "cpu": "[@L[cds.sales/gd/hosting/dedicated-servers-config:i32]@L]",
+                        "ram": "[@L[cds.sales/gd/hosting/dedicated-servers-config:2GB]@L]",
+                        "storage": "[@L[cds.sales/gd/hosting/dedicated-servers-config:2x160GB]@L]",
+                        "bandwidth": "[@L[cds.sales/gd/hosting/dedicated-servers-config:5TB]@L]"
+                    },
+                    "deluxe": {
+                        "os": "[@L[cds.sales/gd/hosting/dedicated-servers-config:deluxeUbuntu]@L]",
+                        "cpu": "[@L[cds.sales/gd/hosting/dedicated-servers-config:i54]@L]",
+                        "ram": "[@L[cds.sales/gd/hosting/dedicated-servers-config:8GB]@L]",
+                        "storage": "[@L[cds.sales/gd/hosting/dedicated-servers-config:2x1TB]@L]",
+                        "bandwidth": "[@L[cds.sales/gd/hosting/dedicated-servers-config:10TB]@L]"
+                    },
+                    "premium": {
+                        "os": "[@L[cds.sales/gd/hosting/dedicated-servers-config:premiumUbuntu]@L]",
+                        "cpu": "[@L[cds.sales/gd/hosting/dedicated-servers-config:i74]@L]",
+                        "ram": "[@L[cds.sales/gd/hosting/dedicated-servers-config:16GB]@L]",
+                        "storage": "[@L[cds.sales/gd/hosting/dedicated-servers-config:2x2TB]@L]",
+                        "bandwidth": "[@L[cds.sales/gd/hosting/dedicated-servers-config:20TB]@L]"
+                    },
+                    "valuedeal": {
+                        "os": "[@L[cds.sales/gd/hosting/dedicated-servers-config:valuedealUbuntu]@L]",
+                        "cpu": "[@L[cds.sales/gd/hosting/dedicated-servers-config:i54]@L]",
+                        "ram": "[@L[cds.sales/gd/hosting/dedicated-servers-config:4GB]@L]",
+                        "storage": "[@L[cds.sales/gd/hosting/dedicated-servers-config:2X300GB]@L]",
+                        "bandwidth": "[@L[cds.sales/gd/hosting/dedicated-servers-config:10TB]@L]"
+                    },
+                    "powerplayer": {
+                        "os": "[@L[cds.sales/gd/hosting/dedicated-servers-config:powerplayerUbuntu]@L]",
+                        "cpu": "[@L[cds.sales/gd/hosting/dedicated-servers-config:i74]@L]",
+                        "ram": "[@L[cds.sales/gd/hosting/dedicated-servers-config:8GB]@L]",
+                        "storage": "[@L[cds.sales/gd/hosting/dedicated-servers-config:2x1TB]@L]",
+                        "bandwidth": "[@L[cds.sales/gd/hosting/dedicated-servers-config:15TB]@L]"
+                    },
+                    "memoryhog": {
+                        "os": "[@L[cds.sales/gd/hosting/dedicated-servers-config:memoryhogUbuntu]@L]",
+                        "cpu": "[@L[cds.sales/gd/hosting/dedicated-servers-config:i54]@L]",
+                        "ram": "[@L[cds.sales/gd/hosting/dedicated-servers-config:32GB]@L]",
+                        "storage": "[@L[cds.sales/gd/hosting/dedicated-servers-config:2x1TB]@L]",
+                        "bandwidth": "[@L[cds.sales/gd/hosting/dedicated-servers-config:15TB]@L]"
+                    }
+                },
+                "prices": {
+                    "economy": {
+                        "1":"[@T[productprice:<current productid=\"659\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "3":"[@T[productprice:<current productid=\"659\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "12":"[@T[productprice:<current productid=\"659\" dropdecimal=\"false\" percentoff=\"10\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "24":"[@T[productprice:<current productid=\"659\" dropdecimal=\"false\" percentoff=\"20\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                    },
+                    "deluxe": {
+                        "1":"[@T[productprice:<current productid=\"821\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "3":"[@T[productprice:<current productid=\"821\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "12":"[@T[productprice:<current productid=\"821\" dropdecimal=\"false\" percentoff=\"10\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "24":"[@T[productprice:<current productid=\"821\" dropdecimal=\"false\" percentoff=\"20\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                    },
+                    "premium": {
+                        "1":"[@T[productprice:<current productid=\"899\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "3":"[@T[productprice:<current productid=\"899\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "12":"[@T[productprice:<current productid=\"899\" dropdecimal=\"false\" percentoff=\"10\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "24":"[@T[productprice:<current productid=\"899\" dropdecimal=\"false\" percentoff=\"20\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                    },
+                    "valuedeal": {
+                        "1":"[@T[productprice:<current productid=\"938\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "3":"[@T[productprice:<current productid=\"938\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "12":"[@T[productprice:<current productid=\"938\" dropdecimal=\"false\" percentoff=\"10\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "24":"[@T[productprice:<current productid=\"938\" dropdecimal=\"false\" percentoff=\"20\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                    },
+                    "powerplayer": {
+                        "1":"[@T[productprice:<current productid=\"1074\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "3":"[@T[productprice:<current productid=\"1074\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "12":"[@T[productprice:<current productid=\"1074\" dropdecimal=\"false\" percentoff=\"10\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "24":"[@T[productprice:<current productid=\"1074\" dropdecimal=\"false\" percentoff=\"20\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                    },
+                    "memoryhog": {
+                        "1":"[@T[productprice:<current productid=\"2800\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "3":"[@T[productprice:<current productid=\"2800\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "12":"[@T[productprice:<current productid=\"2800\" dropdecimal=\"false\" percentoff=\"10\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "24":"[@T[productprice:<current productid=\"2800\" dropdecimal=\"false\" percentoff=\"20\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                    }
+                }  
+            },
+            "fedora": {
+                "plans": {
+                    "economy": {
+                        "os": "[@L[cds.sales/gd/hosting/dedicated-servers-config:economyFedora]@L]",
+                        "cpu": "[@L[cds.sales/gd/hosting/dedicated-servers-config:i32]@L]",
+                        "ram": "[@L[cds.sales/gd/hosting/dedicated-servers-config:2GB]@L]",
+                        "storage": "[@L[cds.sales/gd/hosting/dedicated-servers-config:2x160GB]@L]",
+                        "bandwidth": "[@L[cds.sales/gd/hosting/dedicated-servers-config:5TB]@L]"
+                    },
+                    "deluxe": {
+                        "os": "[@L[cds.sales/gd/hosting/dedicated-servers-config:deluxeFedora]@L]",
+                        "cpu": "[@L[cds.sales/gd/hosting/dedicated-servers-config:i54]@L]",
+                        "ram": "[@L[cds.sales/gd/hosting/dedicated-servers-config:8GB]@L]",
+                        "storage": "[@L[cds.sales/gd/hosting/dedicated-servers-config:2x1TB]@L]",
+                        "bandwidth": "[@L[cds.sales/gd/hosting/dedicated-servers-config:10TB]@L]"
+                    },
+                    "premium": {
+                        "os": "[@L[cds.sales/gd/hosting/dedicated-servers-config:premiumFedora]@L]",
+                        "cpu": "[@L[cds.sales/gd/hosting/dedicated-servers-config:i74]@L]",
+                        "ram": "[@L[cds.sales/gd/hosting/dedicated-servers-config:16GB]@L]",
+                        "storage": "[@L[cds.sales/gd/hosting/dedicated-servers-config:2x2TB]@L]",
+                        "bandwidth": "[@L[cds.sales/gd/hosting/dedicated-servers-config:20TB]@L]"
+                    },
+                    "valuedeal": {
+                        "os": "[@L[cds.sales/gd/hosting/dedicated-servers-config:valuedealFedora]@L]",
+                        "cpu": "[@L[cds.sales/gd/hosting/dedicated-servers-config:i54]@L]",
+                        "ram": "[@L[cds.sales/gd/hosting/dedicated-servers-config:4GB]@L]",
+                        "storage": "[@L[cds.sales/gd/hosting/dedicated-servers-config:2X300GB]@L]",
+                        "bandwidth": "[@L[cds.sales/gd/hosting/dedicated-servers-config:10TB]@L]"
+                    },
+                    "powerplayer": {
+                        "os": "[@L[cds.sales/gd/hosting/dedicated-servers-config:powerplayerFedora]@L]",
+                        "cpu": "[@L[cds.sales/gd/hosting/dedicated-servers-config:i74]@L]",
+                        "ram": "[@L[cds.sales/gd/hosting/dedicated-servers-config:8GB]@L]",
+                        "storage": "[@L[cds.sales/gd/hosting/dedicated-servers-config:2x1TB]@L]",
+                        "bandwidth": "[@L[cds.sales/gd/hosting/dedicated-servers-config:15TB]@L]"
+                    },
+                    "memoryhog": {
+                        "os": "[@L[cds.sales/gd/hosting/dedicated-servers-config:memoryhogFedora]@L]",
+                        "cpu": "[@L[cds.sales/gd/hosting/dedicated-servers-config:i54]@L]",
+                        "ram": "[@L[cds.sales/gd/hosting/dedicated-servers-config:32GB]@L]",
+                        "storage": "[@L[cds.sales/gd/hosting/dedicated-servers-config:2x1TB]@L]",
+                        "bandwidth": "[@L[cds.sales/gd/hosting/dedicated-servers-config:15TB]@L]"
+                    }
+                },
+                "prices": {
+                    "economy": {
+                        "1":"[@T[productprice:<current productid=\"665\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "3":"[@T[productprice:<current productid=\"665\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "12":"[@T[productprice:<current productid=\"665\" dropdecimal=\"false\" percentoff=\"10\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "24":"[@T[productprice:<current productid=\"665\" dropdecimal=\"false\" percentoff=\"20\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                    },
+                    "deluxe": {
+                        "1":"[@T[productprice:<current productid=\"857\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "3":"[@T[productprice:<current productid=\"857\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "12":"[@T[productprice:<current productid=\"857\" dropdecimal=\"false\" percentoff=\"10\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "24":"[@T[productprice:<current productid=\"857\" dropdecimal=\"false\" percentoff=\"20\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                    },
+                    "premium": {
+                        "1":"[@T[productprice:<current productid=\"914\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "3":"[@T[productprice:<current productid=\"914\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "12":"[@T[productprice:<current productid=\"914\" dropdecimal=\"false\" percentoff=\"10\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "24":"[@T[productprice:<current productid=\"914\" dropdecimal=\"false\" percentoff=\"20\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                    },
+                    "valuedeal": {
+                        "1":"[@T[productprice:<current productid=\"943\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "3":"[@T[productprice:<current productid=\"943\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "12":"[@T[productprice:<current productid=\"943\" dropdecimal=\"false\" percentoff=\"10\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "24":"[@T[productprice:<current productid=\"943\" dropdecimal=\"false\" percentoff=\"20\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                    },
+                    "powerplayer": {
+                        "1":"[@T[productprice:<current productid=\"1095\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "3":"[@T[productprice:<current productid=\"1095\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "12":"[@T[productprice:<current productid=\"1095\" dropdecimal=\"false\" percentoff=\"10\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "24":"[@T[productprice:<current productid=\"1095\" dropdecimal=\"false\" percentoff=\"20\"htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                    },
+                    "memoryhog": {
+                        "1":"[@T[productprice:<current productid=\"2802\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "3":"[@T[productprice:<current productid=\"2802\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "12":"[@T[productprice:<current productid=\"2802\" dropdecimal=\"false\" percentoff=\"10\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "24":"[@T[productprice:<current productid=\"2802\" dropdecimal=\"false\" percentoff=\"20\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                    }
+                } 
+            },
+            "windows": {
+                "plans": {
+                    "economy": {
+                        "os": "[@L[cds.sales/gd/hosting/dedicated-servers-config:economyWindows]@L]",
+                        "cpu": "[@L[cds.sales/gd/hosting/dedicated-servers-config:i32]@L]",
+                        "ram": "[@L[cds.sales/gd/hosting/dedicated-servers-config:2GB]@L]",
+                        "storage": "[@L[cds.sales/gd/hosting/dedicated-servers-config:2x160GB]@L]",
+                        "bandwidth": "[@L[cds.sales/gd/hosting/dedicated-servers-config:5TB]@L]"
+                    },
+                    "deluxe": {
+                        "os": "[@L[cds.sales/gd/hosting/dedicated-servers-config:deluxeWindows]@L]",
+                        "cpu": "[@L[cds.sales/gd/hosting/dedicated-servers-config:i54]@L]",
+                        "ram": "[@L[cds.sales/gd/hosting/dedicated-servers-config:8GB]@L]",
+                        "storage": "[@L[cds.sales/gd/hosting/dedicated-servers-config:2x1TB]@L]",
+                        "bandwidth": "[@L[cds.sales/gd/hosting/dedicated-servers-config:10TB]@L]"
+                    },
+                    "premium": {
+                        "os": "[@L[cds.sales/gd/hosting/dedicated-servers-config:premiumWindows]@L]",
+                        "cpu": "[@L[cds.sales/gd/hosting/dedicated-servers-config:i74]@L]",
+                        "ram": "[@L[cds.sales/gd/hosting/dedicated-servers-config:16GB]@L]",
+                        "storage": "[@L[cds.sales/gd/hosting/dedicated-servers-config:2x2TB]@L]",
+                        "bandwidth": "[@L[cds.sales/gd/hosting/dedicated-servers-config:20TB]@L]"
+                    },
+                    "valuedeal": {
+                        "os": "[@L[cds.sales/gd/hosting/dedicated-servers-config:valuedealWindows]@L]",
+                        "cpu": "[@L[cds.sales/gd/hosting/dedicated-servers-config:i54]@L]",
+                        "ram": "[@L[cds.sales/gd/hosting/dedicated-servers-config:4GB]@L]",
+                        "storage": "[@L[cds.sales/gd/hosting/dedicated-servers-config:2X300GB]@L]",
+                        "bandwidth": "[@L[cds.sales/gd/hosting/dedicated-servers-config:10TB]@L]"
+                    },
+                    "powerplayer": {
+                        "os": "[@L[cds.sales/gd/hosting/dedicated-servers-config:powerplayerWindows]@L]",
+                        "cpu": "[@L[cds.sales/gd/hosting/dedicated-servers-config:i74]@L]",
+                        "ram": "[@L[cds.sales/gd/hosting/dedicated-servers-config:8GB]@L]",
+                        "storage": "[@L[cds.sales/gd/hosting/dedicated-servers-config:2x1TB]@L]",
+                        "bandwidth": "[@L[cds.sales/gd/hosting/dedicated-servers-config:15TB]@L]"
+                    },
+                    "memoryhog": {
+                        "os": "[@L[cds.sales/gd/hosting/dedicated-servers-config:memoryhogWindows]@L]",
+                        "cpu": "[@L[cds.sales/gd/hosting/dedicated-servers-config:i54]@L]",
+                        "ram": "[@L[cds.sales/gd/hosting/dedicated-servers-config:32GB]@L]",
+                        "storage": "[@L[cds.sales/gd/hosting/dedicated-servers-config:2x1TB]@L]",
+                        "bandwidth": "[@L[cds.sales/gd/hosting/dedicated-servers-config:15TB]@L]"
+                    }
+                },
+                "prices": {
+                    "economy": {
+                        "1":"[@T[productprice:<current productid=\"668\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "3":"[@T[productprice:<current productid=\"668\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "12":"[@T[productprice:<current productid=\"668\" dropdecimal=\"false\" percentoff=\"10\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "24":"[@T[productprice:<current productid=\"668\" dropdecimal=\"false\" percentoff=\"20\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                    },
+                    "deluxe": {
+                        "1":"[@T[productprice:<current productid=\"859\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "3":"[@T[productprice:<current productid=\"859\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "12":"[@T[productprice:<current productid=\"859\" dropdecimal=\"false\" percentoff=\"10\"htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "24":"[@T[productprice:<current productid=\"859\" dropdecimal=\"false\" percentoff=\"20\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                    },
+                    "premium": {
+                        "1":"[@T[productprice:<current productid=\"945\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "3":"[@T[productprice:<current productid=\"945\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "12":"[@T[productprice:<current productid=\"945\" dropdecimal=\"false\" percentoff=\"10\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "24":"[@T[productprice:<current productid=\"945\" dropdecimal=\"false\" percentoff=\"20\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                    },
+                    "valuedeal": {
+                        "1":"[@T[productprice:<current productid=\"1097\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "3":"[@T[productprice:<current productid=\"1097\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "12":"[@T[productprice:<current productid=\"1097\" dropdecimal=\"false\" percentoff=\"10\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "24":"[@T[productprice:<current productid=\"1097\" dropdecimal=\"false\" percentoff=\"20\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                    },
+                    "powerplayer": {
+                        "1":"[@T[productprice:<current productid=\"2806\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "3":"[@T[productprice:<current productid=\"2806\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "12":"[@T[productprice:<current productid=\"2806\" dropdecimal=\"false\" percentoff=\"10\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "24":"[@T[productprice:<current productid=\"2806\" dropdecimal=\"false\" percentoff=\"20\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                    },
+                    "memoryhog": {
+                        "1":"[@T[productprice:<current productid=\"2806\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "3":"[@T[productprice:<current productid=\"2806\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "12":"[@T[productprice:<current productid=\"2806\" dropdecimal=\"false\" percentoff=\"10\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "24":"[@T[productprice:<current productid=\"2806\" dropdecimal=\"false\" percentoff=\"20\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                    }
+                }
+            }
+        }
+    }
+}

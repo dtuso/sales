@@ -1,0 +1,50 @@
+{
+  "dedicated-servers.html": {
+    "cdsDetails": {
+      "champion": {
+        "name": "Sergio Lopez",
+        "email": "sylopez "
+      },
+      "cdsLocation": "sales/hosting/dedicated-servers.aspx",
+      "draft": {
+        "id": false,
+        "createdDate": "2014-04-29",
+        "createdBy": {
+          "fullName": "Sergio Lopez",
+          "username": "sylopez"
+        },
+        "jiraTicket": "FOS-9215",
+        "comments": "Landing Page Reskin",
+        "url": "http://www.dev-godaddy.com/hosting/dedicated-servers.aspx"
+      }
+    },
+    
+    "metaTitle": "[@L[cds.sales/gd/hosting/dedicated-servers:page-title]@L]",
+    "metaDescription": "[@L[cds.sales/gd/hosting/dedicated-servers:meta-description]@L]",
+    "metaKeywords": "[@L[cds.sales/gd/hosting/dedicated-servers:meta-keywords]@L]",
+    "metaCanonicalPath": "/hosting/dedicated-servers.aspx",
+    "metaOgTitle": "[@L[cds.sales/gd/hosting/dedicated-servers:og-title]@L]",
+    "metaOgImage": "fos/icn/servers.jpg",
+    "metaOgDescription": "[@L[cds.sales/gd/hosting/dedicated-servers:og-description]@L]",
+    "cssVersionOverride" : "1"
+  },
+  "dedicated-servers.language": {
+    "cdsDetails": {
+      "champion": {
+        "name": "Colyn Brown",
+        "email": "clbrown@godaddy.com"
+      },
+      "cdsLocation": "localization/sales/hosting/dedicated-servers/en",
+      "draft": {
+        "id": false,
+        "createdDate": "2014-04-29",
+        "createdBy": {
+          "fullName": "Sergio Lopez",
+          "username": "sylopez"
+        },
+        "jiraTicket": "FOS-1310",
+        "comments": "Landing Page Reskin"
+      }
+    }
+  }
+}
