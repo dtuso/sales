@@ -1,6 +1,10 @@
 ---
 location: localization/sales/gd/hosting/website-builder/en
+<<<<<<< HEAD
 id: 53a9b5ecf778fc13248233f2
+=======
+id: 53a22ca8f778fc16ec1881ca
+>>>>>>> bv for wsb
 name: FOS-5720
 comments: Integrate BazaarVoice on WSB LP
 ---

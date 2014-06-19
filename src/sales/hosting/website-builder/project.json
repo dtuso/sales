@@ -55,7 +55,11 @@
     "metaOgTitle": "[@L[cds.sales/gd/hosting/website-builder:og-title]@L]",
     "metaOgImage": "fos/201401/hosting/website-builder/img/og.png",
     "metaOgDescription": "[@L[cds.sales/gd/hosting/website-builder:og-description]@L]",
+<<<<<<< HEAD
     "cssVersionOverride" : "3"
+=======
+    "cssVersionOverride" : "2"
+>>>>>>> bv for wsb
   },
   "website-builder.language": {
     "cdsDetails": {
