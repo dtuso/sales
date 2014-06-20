@@ -1,0 +1,33 @@
+<!-- start-css-elevate -->
+<style>  
+{% less %}
+  .main-disclaimers {
+  }
+{% endless %}
+</style>
+<!-- end-css-elevate -->
+<!-- start-js-elevate -->
+<script>
+  {% jsminify %}
+  $(document).ready(function () {
+    $("#disclaimers > p > a").click(function (event) {
+      var $disclaimerModal = $("#disclaimerModal");
+
+      $disclaimerModal.show();
+      $disclaimerModal.universalModal({ "width": 800 });
+
+      // IE will not show the modal but triggering the window resize will show it
+      $(window).trigger("resize");
+
+      $(".modal-user-limit-ok").bind("click", function () {
+        $(".universal-modal-close").trigger("click.universalModal")
+      });
+    });
+  });
+  {% endjsminify %}
+</script>
+<!-- end-js-elevate -->
+
+<section class="container main-disclaimers">
+  
+</section>

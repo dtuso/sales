@@ -1,0 +1,24 @@
+{
+  "onlinestore.html": {
+    "cdsDetails": {
+      "champion": {
+        "name": "David Utley",
+        "email": "dutley@godaddy.com"
+      }
+    },
+    "metaTitle": "[@L[cds.sales/gd/ecommerce/onlinestore:MetaTitle]@L]",
+    "metaDescription": "[@L[cds.sales/gd/ecommerce/onlinestore:MetaDescription]@L]",
+    "metaKeywords": "[@L[cds.sales/gd/ecommerce/onlinestore:MetaKeywords]@L]",
+    "metaCanonicalPath": "/ecommerce/onlinestore.aspx",
+    "metaOgTitle": "[@L[cds.sales/gd/ecommerce/onlinestore:MetaTitle]@L]",
+    "metaOgDescription": "[@L[cds.sales/gd/ecommerce/onlinestore:og-description]@L]"
+  },
+  "onlinestore.language": {
+    "cdsDetails": {
+      "champion": {
+        "name": "David Utley",
+        "email": "dutley@godaddy.com"
+      }
+    }
+  }
+}

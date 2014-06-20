@@ -1,0 +1,130 @@
+<!-- start-css-elevate -->
+<style>  
+  {% less %}
+  .ico {
+      background-repeat: no-repeat;
+      display: inline-block;
+      vertical-align: middle;
+  }
+  .video-link, 
+  .video-link:hover {
+      color: #333333;
+      cursor: pointer;
+      display: inline-block;
+  }
+  .video-link .ico-gt-circle {
+      margin-bottom: 5px;
+  }
+  .main-features-onlinestore h2 {
+    text-align: center;
+    margin: 20px 0; 
+  }
+  h3.features-calltoaction {
+
+  }
+  h3.features-calltoaction a {
+    float: right;
+    font-size: 14px;
+  }
+  .main-features-onlinestore h2 {
+      margin: 20px 0;
+      text-align: center;
+  }
+  {% endless %}
+</style>
+<!-- end-css-elevate -->
+
+<section class="container main-features main-features-onlinestore">
+  <div class="row l-main-container alt-bgcolor">
+    <div class="col-xs-12">
+      <h2>Features and Details</h2>
+    </div>
+  </div>
+  <div class="row l-main-container alt-bgcolor">
+    <div class="col-xs-6">
+      <h3>Build for business owners, not designers.</h3>
+      <p>You don't need to be a computer expert to build your store with us. Just pick your favorite design (we have hundreds to choose from), add your products and payment details and click Publish. Congrats! Your online store is open for business.</p>
+    </div>
+    <div class="col-xs-6">
+      ##if(activeLanguageAny([en]))
+        <a class="video-link" data-toggle="modal" data-target="#myVideoModal" data-ci="86688">
+          <i class="ico ico-gt-circle"></i>
+          <span class="br"></span>
+          <span><strong>[@L[cds.sales/gd/ecommerce/onlinestore:WatchVideo]@L]</strong></span>
+        </a>
+        <div class="modal fade videoModal" id="myVideoModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="modal-header-close close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              </div>
+              <div class="modal-body">
+                <iframe width="854" height="480" src="//www.youtube.com/embed/xvK76H9olXM?html5=1&rel=0&iv_load_policy=3&modestbranding=1" autoplay scrolling="no" frameborder="0" allowfullscreen>
+                </iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      ##endif
+    </div>
+  </div>
+  <div class="row l-main-container alt-bgcolor">
+    <div class="col-xs-6">
+      Powered by stripe!
+    </div>
+    <div class="col-xs-6">
+      <h3>Getting paid got easy.</h3>
+      <p>Give your customers payment flexibility. Credit card processing through Stripe is included, and lets you accept credit and debit cards - all with no monthly fees, no refund costs and no charges for failed transactions, so you keep more of what you earn.</p>
+    </div>
+  </div>
+  <div class="row l-main-container light-section-bgcolor">
+    <div class="col-xs-12">
+      <h3 class="features-calltoaction">
+        So easy to set up, you can make your first sales today. Just $$$
+        <a data-ci="111" class="btn btn-primary cta-small" href="/ecommerce/onlinestore.aspx">[@L[cds.sales/gd/ecommerce/onlinestore:btn-GetStarted]@L]</a>
+      </h3>
+    </div>
+  </div>
+  <div class="row l-main-container alt-bgcolor">
+    <div class="col-xs-6">
+      <h3>Build your business with the right tools.</h3>
+      <ul>
+        <li><strong>Sell on Facebook&reg;.</strong> Create a store on Facebook in less than a minute and keep it synced to your main store automatically.</li>
+        <li><strong>Coupon codes.</strong> Everyone love a deal. Use coupons to attract shoppers and turn them into loyal customers</li>
+        <li><strong>Search Engine Optimization.</strong> Rank higher on Google&reg;, Yahoo!&reg;, Bing&reg; and other search engines shopper use most</li>
+        <li><strong>Ratings and reviews.</strong> Give shoppers the unbiased information they need by allowing customers to rate and review your products.</li>
+      </ul>
+    </div>
+    <div class="col-xs-6">
+      <h3>IMAGE!</h3>
+    </div>
+  </div>
+</section>
+
+<!-- start-js-elevate -->
+##if(activeLanguageAny([en]))
+  <script>
+    {% jsminify %}
+    $(document).ready(function () {
+      var src = $('#myVideoModal iframe').attr('src');
+        $('#myVideoModal').on('hidden.bs.modal', function () {
+        $('#myVideoModal iframe').removeAttr('src');
+        $('#myVideoModal iframe').attr('src', src);
+      });
+
+      $('#myVideoModal').on('show.bs.modal', function () {
+        $('#myVideoModal iframe').attr('src', src + '\&autoplay=1');
+      });
+    });
+    {% endjsminify %}
+  </script>
+##endif
+<!-- end-js-elevate -->
+
+<!-- start-js-elevate -->
+<script>  
+  {% jsminify %}
+  var features = 1;
+  {% endjsminify %}
+</script>
+<!-- end-js-elevate -->
