@@ -212,17 +212,14 @@ body{
 }
 
 #banner-section #email-icon{
-    /*background-image: url('[@T[link:<imageroot />]@T]/fos/office365/office-052014/img/mail-icon.png');*/
   background: url('[@T[link:<imageroot />]@T]fos/office365/office-052014/img/o365-sprite.png') no-repeat -4px -5px;
 }
 
 #banner-section #support-icon{
-  /*background-image: url('[@T[link:<imageroot />]@T]/fos/office365/office-052014/img/support-icon.png');*/
   background: url('[@T[link:<imageroot />]@T]fos/office365/office-052014/img/o365-sprite.png') no-repeat -72px -5px;
 }
 
 #banner-section #file-icon{
-  /*background-image: url('[@T[link:<imageroot />]@T]/fos/office365/office-052014/img/file-icon.png');*/
   background: url('[@T[link:<imageroot />]@T]fos/201401/global/img/ico-s92c4580b2f.png')  no-repeat 0px -617px;
 }
      
@@ -248,6 +245,7 @@ body{
 .col-xs-4.plan-box{
   width: 333px;
   padding: 0px;
+  position: relative;
 }
 
 .col-xs-4.plan-box .plan-contents{
@@ -662,12 +660,83 @@ max-width: 353px;
 } 
    
 .yellow-ribbon{
-  background-image: url('[@T[link:<imageroot />]@T]fos/office365/office-052014/img/yellow-ribbon.jpg');
-  width: 86px;
-  height: 86px;
+  background-image: url('[@T[link:<imageroot />]@T]fos/office365/office-052014/img/yellow-flag-sprite.png');
+  display: block;
+  width: 88px;
+  height: 88px;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: -4px;
+  right: -4px;
 }    
-            
 
+.yellow-ribbon.en{
+ background-position: -12px -10px;
+}   
+
+.yellow-ribbon.dk{
+ background-position: -110px -10px;
+}
+
+.yellow-ribbon.de{
+ background-position: -208px -10px;
+}   
+
+.yellow-ribbon.gr{
+ background-position: -306px -10px;
+}      
+
+.yellow-ribbon.es{
+  background-position: -404px -10px;
+}      
+
+.yellow-ribbon.fi{
+  background-position: -12px -108px;
+}
+
+.yellow-ribbon.fr{
+  background-position: -110px -108px;
+}
+
+.yellow-ribbon.it{
+  background-position: -208px -108px;
+}
+
+.yellow-ribbon.no{
+  background-position: -306px -108px;
+}
+
+.yellow-ribbon.nl{
+  background-position: -404px -108px;
+}
+
+.yellow-ribbon.pl{
+  background-position: -12px -206px;
+}
+
+.yellow-ribbon.pt-BR{
+  background-position: -110px -206px;
+}
+
+.yellow-ribbon.pt-PT{
+  background-position: -208px -206px;
+}
+
+.yellow-ribbon.ru{
+  background-position: -306px -206px;
+}
+
+.yellow-ribbon.sv{
+  background-position: -404px -206px;
+}
+
+.yellow-ribbon.tr{
+  background-position: -10px -303px;
+}
+
+.yellow-ribbon.uk-UA{
+  background-position: -108px -303px;
+}
 
 /*FAQ*/
 #faq-section{
@@ -720,13 +789,11 @@ max-width: 353px;
 }
 
 #faq-section .question-section .show-hide-question-section a.open-button.plus{
-  /*background-image: url('[@T[link:<imageroot />]@T]/fos/office365/office-052014/img/plus-minus-circle-PLUS.png');*/
   background: url('[@T[link:<imageroot />]@T]fos/office365/office-052014/img/o365-sprite.png') no-repeat -140px -25px;
 
 }
 
 #faq-section .question-section .show-hide-question-section a.open-button.minus{
-  /*background-image: url('[@T[link:<imageroot />]@T]/fos/office365/office-052014/img/plus-minus-circle.png');*/
   background: url('[@T[link:<imageroot />]@T]fos/office365/office-052014/img/o365-sprite.png') no-repeat -185px -25px;
 
 }
