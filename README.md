@@ -87,12 +87,9 @@ sudo npm install -g gulp
 ```
 
 #### Package Dependencies
-
-<<<<<<< HEAD
-Package dependencies are now included with the repository. Do NOT run ```npm install``` or ```node update```
 =======
 Dependencies were being included with the repo and so didn't need to be installed separately. This was becoming more trouble than it was worth. We are back to installing dependencies via ```npm install```.
->>>>>>> 341ff3975edf546e839244dd724878d381e2257c
+
 
 Tasks
 =====
