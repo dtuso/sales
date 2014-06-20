@@ -1,0 +1,32 @@
+{
+  "search.html": {
+    "cdsDetails": {
+      "champion": {
+        "name": "Adam Smith",
+        "email": "absmith@godaddy.com"
+      },
+      "draft": {
+        "comments": "Updating Privacy ToolTip",
+        "url": "http://www.dev-godaddy.com/domains/domain-name-search.aspx"
+      }
+    },
+    "cssVersionOverride" : "14",
+    "metaTitle": "[@L[cds.sales/gd/domains/domain-name-search:MetaTitle]@L]",
+    "metaDescription": "[@L[cds.sales/gd/domains/domain-name-search:MetaDescription]@L]",
+    "metaKeywords": "[@L[cds.sales/gd/domains/domain-name-search:MetaKeywords]@L]",
+    "metaCanonicalPath": "/domains/domain-name-search.aspx",
+    "metaOgTitle": "[@L[cds.sales/gd/domains/domain-name-search:MetaTitle]@L]",
+    "metaOgDescription": "[@L[cds.sales/gd/domains/domain-name-search:MetaDescription]@L]"
+  },
+  "search.language": {
+    "cdsDetails": {
+      "champion": {
+        "name": "Adam Smith",
+        "email": "absmith@godaddy.com"
+      },
+      "draft": {
+        "comments": "Updating Privacy ToolTip"
+      }
+    }
+  }
+}

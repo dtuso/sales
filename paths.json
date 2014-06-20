@@ -28,5 +28,6 @@
   "dsc":"./hosting/dedicated-servers-config/",
   "lenovo":"./lenovo/",
   "cce":"./cce/",
-  "wordpress-hosting": "./hosting/wordpress-hosting/"
+  "wordpress-hosting": "./hosting/wordpress-hosting/",
+  "searchresults": ".domains/searchresults"
 }
