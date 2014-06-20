@@ -1,27 +1,28 @@
 try {
 
   // Gulp plugins
-  var gulp      = require('gulp');
-  var cdsm      = require('gulp-cdsm');
-  var changed   = require('gulp-changed');
-  var concat    = require('gulp-concat');
-  var cssmin    = require('gulp-minify-css');
-  var fm        = require('gulp-front-matter');
-  var gulpif    = require('gulp-if');
-  var less      = require('gulp-less');
-  var rename    = require('gulp-rename');
-  var swig      = require('gulp-swig');
-  var uglify    = require('gulp-uglify');
-  var debug     = require('gulp-debug');
-  var elevate   = require('./lib/gulp-css-elevate');
-  var charFix   = require('./lib/gulp-character-fix');
+  var gulp       = require('gulp');
+  var cdsm       = require('gulp-cdsm');
+  var changed    = require('gulp-changed');
+  var concat     = require('gulp-concat');
+  var cssmin     = require('gulp-minify-css');
+  var fm         = require('gulp-front-matter');
+  var gulpif     = require('gulp-if');
+  var less       = require('gulp-less');
+  var rename     = require('gulp-rename');
+  var swig       = require('gulp-swig');
+  var uglify     = require('gulp-uglify');
+  var debug      = require('gulp-debug');
+  var elevateCss = require('./lib/gulp-css-elevate');
+  var elevateJs  = require('./lib/gulp-js-elevate');
+  var charFix    = require('./lib/gulp-character-fix');
 
   // utilities
-  var path      = require('path');
-  var fs        = require('fs');
-  var argv      = require('minimist')(process.argv.slice(2));
-  var getData   = require('./lib/project-data.js');
-  var extras    = require('./lib/swig-extras');
+  var path       = require('path');
+  var fs         = require('fs');
+  var argv       = require('minimist')(process.argv.slice(2));
+  var getData    = require('./lib/project-data.js');
+  var extras     = require('./lib/swig-extras');
 
 } catch (e) {
 
@@ -99,7 +100,8 @@ gulp.task('html', function() {
     /*.pipe(debug({verbose: false}));*/
     .pipe(fm({remove:true}))
     .pipe(swig(swigTplOpts))
-    .pipe(elevate())
+    .pipe(elevateCss())
+    .pipe(elevateJs())
     .pipe(gulpif(!ignoreCDS, cdsm()))
     .pipe(gulp.dest(paths.build));
 });

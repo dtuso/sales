@@ -1,0 +1,56 @@
+---
+location: sales/ecommerce/onlinestore.aspx
+id: 53a09b70f778fc1f147d43a7
+name: FOS-20286
+comments: Initial page creation
+url: http://www.dev-godaddy.com/ecommerce/onlinestore.aspx
+assetPath: false
+---
+
+{% extends 'layouts/base.html' %}
+
+{% block metahead %}  
+  {% parent %}
+  <!-- css-elevate-target -->
+{% endblock %}
+
+
+{% block body %}
+
+  <!-- start-css-elevate -->
+  <style>  
+  {% less %}
+  {% include 'css/styles.less' %}
+  .alt-bgcolor {background-color: rgb(251,247,245);}
+  .light-section-bgcolor {background-color: white;}
+  .l-main-container {width: 1020px;margin: 0 auto;padding:0px 70px;}
+  .f-main-container {width: 1020px;margin: 0 auto;}
+  {% endless %}
+  </style>
+  <!-- end-css-elevate -->
+
+  {% include '_onlinestore-banner.html' %}
+  {% include '_onlinestore-carousel.html' %}
+  {% include '_onlinestore-features.html' %}
+  {% include '_onlinestore-included.html' %}
+  {% include '_onlinestore-disclaimers.html' %}
+
+{% endblock %}
+
+{% block footer %}
+
+    <script src="[@T[link:<javascriptroot />]@T]fos/lib/gd-swipe/js/swipe-v2.1.js" type="text/javascript"></script>
+    <script src="[@T[link:<javascriptroot />]@T]fos/lib/gd-swipe/js/gd-swipe-v2.min.js" type="text/javascript"></script>
+
+  <!-- js-elevate-target -->
+
+  <!-- start-js-elevate -->
+
+  <script>
+  {% jsminify %}
+  {% endjsminify %}
+  </script>
+
+  <!-- end-js-elevate -->
+
+{% endblock %}

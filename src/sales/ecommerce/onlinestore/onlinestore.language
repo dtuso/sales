@@ -1,0 +1,38 @@
+---
+location: localization/sales/gd/ecommerce/onlinestore/en
+id: 53a3568df778fc1a88294839
+name: FOS-20286
+---
+{% include 'modules/doc-block.html' %}
+<phrase key="MetaTitle" />
+...
+<phrase key="MetaDescription" />
+...
+<phrase key="MetaKeywords" />
+...
+<phrase key="og-description" />
+...
+<phrase key="OnlineStore" />
+Online Store
+<phrase key="WatchVideo" />
+Watch Video
+<phrase key="btn-StartNow" />
+Start Now
+<phrase key="btn-GetStarted" />
+Get Started
+<phrase key="ReadReviews" />
+Read Reviews
+<phrase key="subtitle" />
+Sell more with your own <strong>one-of-a-kind</strong> web store
+<phrase key="JustPrice" comment="{0} will be replaced with the monetary amount" />
+Just {0}
+<phrase key="SavePercentage" comment="{0} will be replaced with the percentage off"/>
+Save {0}
+<phrase key="mo" comment="Will be rendered similar to '$000.00 per mo' (aka month)" />
+/mo
+<phrase key="month" comment="Will be rendered similar to '$000.00 per month'" />
+/month
+<phrase key="next" comment="Action to change carousel to next slide" />
+next
+<phrase key="month" comment="Action to change carousel to previous slide" />
+previous
