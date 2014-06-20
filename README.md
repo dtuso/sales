@@ -87,7 +87,6 @@ sudo npm install -g gulp
 ```
 
 #### Package Dependencies
-=======
 Dependencies were being included with the repo and so didn't need to be installed separately. This was becoming more trouble than it was worth. We are back to installing dependencies via ```npm install```.
 
 
