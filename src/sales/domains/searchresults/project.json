@@ -2,27 +2,27 @@
   "search.html": {
     "cdsDetails": {
       "champion": {
-        "name": "Adam Smith",
-        "email": "absmith@godaddy.com"
+        "name": "Joel Conrad",
+        "email": "jconrad@godaddy.com"
       },
       "draft": {
         "comments": "Updating Privacy ToolTip",
-        "url": "http://www.dev-godaddy.com/domains/domain-name-search.aspx"
+        "url": "http://www.dev-godaddy.com/domains/searchresults.aspx"
       }
     },
     "cssVersionOverride" : "14",
-    "metaTitle": "[@L[cds.sales/gd/domains/domain-name-search:MetaTitle]@L]",
-    "metaDescription": "[@L[cds.sales/gd/domains/domain-name-search:MetaDescription]@L]",
-    "metaKeywords": "[@L[cds.sales/gd/domains/domain-name-search:MetaKeywords]@L]",
-    "metaCanonicalPath": "/domains/domain-name-search.aspx",
-    "metaOgTitle": "[@L[cds.sales/gd/domains/domain-name-search:MetaTitle]@L]",
-    "metaOgDescription": "[@L[cds.sales/gd/domains/domain-name-search:MetaDescription]@L]"
+    "metaTitle": "[@L[cds.sales/gd/domains/searchresults-new3:MetaTitle]@L]",
+    "metaDescription": "[@L[cds.sales/gd/domains/searchresults-new3:MetaDescription]@L]",
+    "metaKeywords": "[@L[cds.sales/gd/domains/searchresults-new3:MetaKeywords]@L]",
+    "metaCanonicalPath": "/domains/searchresults-new3.aspx",
+    "metaOgTitle": "[@L[cds.sales/gd/domains/searchresults-new3:MetaTitle]@L]",
+    "metaOgDescription": "[@L[cds.sales/gd/domains/searchresults-new3:MetaDescription]@L]"
   },
   "search.language": {
     "cdsDetails": {
       "champion": {
-        "name": "Adam Smith",
-        "email": "absmith@godaddy.com"
+        "name": "Joel Conrad",
+        "email": "jconrad@godaddy.com"
       },
       "draft": {
         "comments": "Updating Privacy ToolTip"

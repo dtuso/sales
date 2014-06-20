@@ -1,0 +1,358 @@
+---
+location: localization/sales/domains/searchresults-new3/en
+id: null
+name: FOS-20824
+---
+{% include 'modules/doc-block.html' %}
+<phrase key="Of" />
+of
+<phrase key="ForInfoCall" />
+For more information on this domain, call [@T[supportphone:<premiumdomains />]@T]
+<phrase key="SearchActionText" />
+Search Again
+<phrase key="xDomainAdded" />
+domain added
+<phrase key="xDomainsAdded" />
+domains added
+<phrase key="DomainAddedTitle" />
+Domain Added
+<phrase key="ItemAddedMsgText" />
+{0} domain has been added to your cart.
+<phrase key="ItemsAddedMsgText" />
+{0} domains have been added to your cart.
+<phrase key="xDomainAddedNew" />
+domain selected
+<phrase key="xDomainsAddedNew" />
+domains selected
+<phrase key="DomainAddedTitleNew" />
+Domain selected
+<phrase key="ItemAddedMsgTextNew" />
+Select options for 1 domain.
+<phrase key="ItemsAddedMsgTextNew" />
+Select options for {0} domains.
+<phrase key="DomainUpdatedTitle" />
+Domain Updated
+<phrase key="ItemUpdatedMsgText" />
+Domain Updated.
+<phrase key="DomainAvailable" />
+Good news, this domain is available
+<phrase key="PreRegistrationAvailable" />
+Domain available for pre-registration now
+<phrase key="ReadyToCheckOut" />
+Continue
+<phrase key="ReadyToCheckOut-new" />
+Continue to Cart
+<phrase key="Sorry" />
+Sorry,
+<phrase key="AlreadyTaken" />
+is already taken.
+<phrase key="WantIt" />
+Still want it?
+<phrase key="DomainBuyServiceName" />
+Learn more
+<phrase key="NotAvailable" />
+Sorry, that name is not available for registration. Please try again.
+<phrase key="NameAvailableRecommendation" />
+Protect your name. Buy similar domains and get peace of mind:
+<phrase key="NameUnAvailableRecommendation" />
+Here is a list of domains recommended for you:
+<phrase key="FiltersTitle" />
+Filter By
+<phrase key="FilterApplyActionText" />
+Apply
+<phrase key="FilterClearActionText" />
+Clear
+<phrase key="FilterSliderMaxText" />
+No Max
+<phrase key="PriceFilterTitle" />
+Price
+<phrase key="PriceFilterInstructions" />
+Enter a maximum price
+<phrase key="CharacterLengthFilterTitle" />
+Characters Length
+<phrase key="ExtensionsFilterTitle" />
+Extensions
+<phrase key="LocationTypeFilterTitle" />
+Country/Location
+<phrase key="PremiumTypeFilterTitle" />
+Premium
+<phrase key="MultiResultsText" comment="for the part of the page that shows 1-n of x results" />
+results
+<phrase key="SingleResultText" comment="for the part of the page that shows 1-n of x results" />
+result
+<phrase key="ShowAllActionText" />
+Show All
+<phrase key="ShowMoreActionText" />
+Show more results
+<phrase key="OnSale" />
+On Sale
+<phrase key="LearnMoreActionText" />
+Learn More
+<phrase key="TwoYearRegistrationRequired" />
+2 year registration required.
+<phrase key="cctldUpsellUS" />
+Let U.S. shoppers know that you are local. Add this:
+<phrase key="cctldUpsellCA" />
+Let Canadian shoppers know you are local. Add this:
+<phrase key="cctldUpsellUK" />
+Let U.K. shoppers know you are local. Add this:
+<phrase key="cctldUpsellMX" />
+Let Mexican shoppers know you are local. Add this:
+<phrase key="cctldUpsellAU" />
+Let Australian shoppers know you are local. Add this:
+<phrase key="cctldUpsellES" />
+Attract Spanish-speakers with the Spanish domain:
+<phrase key="cctldUpsellIN" />
+Let Indian shoppers know you are local. Add this:
+<phrase key="cctldUpsellIT" />
+Let Italian shoppers know you are local. Add this:
+<phrase key="cctldUpsellDE" />
+Let German shoppers know you are local. Add this:
+<phrase key="cctldUpsellCO" />
+Let Colombian shoppers know you are local. Add this:
+<phrase key="cctldUpsellFR" />
+Let French shoppers know you are local. Add this:
+<phrase key="cctldUpsellASIA" />
+Let shoppers in Asia know you are local. Add this:
+<phrase key="cctldUpsellNL" />
+Let Dutch shoppers know you are local. Add this:
+<phrase key="cctldUpsellBE" />
+Let Belgian shoppers know you are local. Add this:
+<phrase key="cctldUpsellSE" />
+Let Swedish shoppers know you are local. Add this:
+<phrase key="AuctionsCurrentBid" />
+Current bid
+<phrase key="WhatIsAuctionTitle" />
+What's an auction domain?
+<phrase key="WhatIsAuctionDescription1" />
+Dawg ipsum dolizzle pimpin' mammasay mammasa mamma oo sa, we gonna chung adipiscing elit.
+<phrase key="WhatIsAuctionDescription2" />
+Fo shizzle mah nizzle fo rizzle, mah home g-dizzle sapien velit, sh-- volutpizzle, shizzlin dizzle quis, hizzle vizzle, its fo rizzle.
+<phrase key="WhatIsAuctionDescription3" />
+For more information on this domain, call [@T[supportphone:<premiumdomains />]@T]
+<phrase key="WhatIsBackOrderTitle" />
+What's a backorder domain?
+<phrase key="WhatIsBackOrderDescription1" />
+If a name you want is already registered, you can still own it! All backordered domains go to auction, so you have a chance to win it. Others may have also backordered this name, so act now to secure your place in the auction once it expires.
+<phrase key="WhatIsPremiumTitle" />
+What's a premium domain?
+<phrase key="WhatIsPremiumDescription1" />
+Premium Domain Names are more valuable than other domains because they are based on common words or phrases people often use in their online searches.
+<phrase key="WhatIsPremiumDescription2" />
+While GoDaddy does not own these domains names, we are one of a select group of registrars that can introduce you to the sellers.
+<phrase key="WhatIsPremiumDescription2IsPremiumPrice" />
+Premium Domain Names are not eligible for order-level discounts.
+<phrase key="WhatIsPremiumDescription3" />
+For more information on this domain, call [@T[supportphone:<premiumdomains />]@T]
+<phrase key="FirstYearPriceDescription" />
+First year price
+<phrase key="RenewalPriceDescription" />
+Renewal price
+<phrase key="DomainTaken" />
+Taken
+<phrase key="AddActionText" />
++ Add
+<phrase key="AddActionTextNew" />
++ Select
+<phrase key="GetItemActionText" />
+Get It
+<phrase key="RemoveActionText" />
+Remove
+<phrase key="UpdateActionText" />
+Added
+<phrase key="UpdateActionTextNew" />
+Selected
+<phrase key="StartingPriceText" />
+As low as
+<phrase key="PreRegistrationTagLine" />
+Pre-register this domain to maximize your chance of getting it.
+<phrase key="PreRegOptionTitle" />
+Pre-Registration
+<phrase key="PreRegOptionToolTipTitle" />
+What is the Priority Pre-registration period?
+<phrase key="PreRegOptionToolTipText" />
+Priority Pre-registration is the period of time when you can request the registration of a domain name before General Availability—when registration is open to the general public. GoDaddy collects pre-registration requests and submits them to the registry. A pre-registration request doesn’t guarantee you’ll get the domain name, but it does give you the best chance of getting it. If you don’t get the domain you pre-registered, your registration fee is refunded, but your application fee is not.
+<phrase key="PreRegOptionTitleDescription" />
+Line up ahead of everyone waiting for general availability.
+<phrase key="PreRegOptionDescription" />
+Vastly improve your odds of landing this domain. GoDaddy submits your pre-registration when registration opens <strong>on</strong> <strong data-bind="html: EndDate">MM/YY</strong>.
+<phrase key="TrademarkOptionTitle" />
+Trademark Owners
+<phrase key="TrademarkOptionToolTipTitle" />
+What is the Trademark Owners period?
+<phrase key="TrademarkOptionToolTipText" />
+Trademark Owners period is for trademark holders only. If you’re a trademark holder and have an SMD file, you can pre-register [gtld] domains that you think fall under the protection of your trademark. After this period ends, all trademark pre-registrations are reviewed. If you don’t get the domain you pre-registered, your registration fee is refunded, but your application fee is not.
+<phrase key="TrademarkOptionDescription" />
+Claim this domain now to <strong>safeguard your trademark</strong>.
+<phrase key="PriorityPreRegOptionTitle" />
+Priority Pre-Registration
+<phrase key="PriorityPreRegOptionToolTipTitle" />
+What is the Priority Pre-registration period?
+<phrase key="PriorityPreRegOptionToolTipText" />
+Priority Pre-registration is the period of time when you can request the registration of a domain name before General Availability—when registration is open to the general public. GoDaddy collects pre-registration requests and submits them to the registry. A pre-registration request doesn’t guarantee you’ll get the domain name, but it does give you the best chance of getting it. If you don’t get the domain you pre-registered, your registration fee is refunded, but your application fee is not.
+<phrase key="PriorityPreRegOptionTitleDescription" />
+Take your place in front of standard pre-registrations.
+<phrase key="PriorityPreRegOptionDescription" />
+Give yourself the best chance for grabbing this domain. GoDaddy submits your pre-registration early, <strong>before</strong> <strong data-bind="html: EndDate">MM/YY</strong>.
+<phrase key="PreRegPricingDetailToolTipText" />
+Anyone may pre-register a <span data-bind="html: '.' + $parent.TLD()">&nbsp;</span> domain during this phase. Multiple applications for the same domain will go to auction. If you are not awarded the domain, you will receive a full refund.
+<phrase key="PriorityPreRegPricingDetailToolTipText" />
+This period gives you early access to sought after domains. Anyone may purchase a domain during this phase which will include an Early Access fee that is fully refundable if you are not awarded the domain name. Multiple applications for the same domain registered during each priority pre-registration phase will go to auction.
+<phrase key="TrademarkPricingDetailToolTipText" />
+This phase is for trademark holders ONLY and you must prove you own the rights to the domain name you wish to register. All applications will be reviewed and domain names are awarded after the phase closes. Multiple applications for the same qualified TM will result in an auction by the registry. If you are not awarded the domain name, a refund is given minus the <span data-bind="html: Prices().ApplicationFee">$XXX.XX</span> non-refundable application fee.
+<phrase key="TrademarkPricingDetailToolTipTextFullRefund" />
+This phase is for trademark holders ONLY and you must prove you own the rights to the domain name you wish to register. All applications will be reviewed and domain names are awarded after the phase closes. Multiple applications for the same qualified TM will result in an auction by the registry. If you are not awarded the domain name, full refund is given if you don’t get this domain.
+<phrase key="PricingDetail" />
+This price includes a <span data-bind="html: Prices().ApplicationFee">$XXX.XX</span> non-refundable application fee. If we can’t get you this domain, the application fee won’t be refunded.
+<phrase key="PricingDetailRenewal" />
+Your renewal fee for this domain is equal to the registration fee of <span data-bind="html: Prices().DomainRenewList">$XXX.XX</span>.
+<phrase key="PricingDetailRenewal1" />
+Your renewal price for this domain is <span data-bind="html: Prices().DomainRenewList">$XXX.XX</span>.
+<phrase key="PricingDetailRenewal2" />
+Your registration fee for this domain is <span data-bind="html: Prices().DomainRegList">$XXX.XX</span>. After the initial registration, this domain will renew at <span data-bind="html: Prices().DomainRenewList">$XXX.XX</span>/yr.
+<phrase key="AppFeeLabel" />
+Includes:
+<phrase key="AppFeeText" />
+<span data-bind="html: Prices().ApplicationFee"></span> Application Fee (non-refundable)
+<phrase key="AppFeeRefundText" />
+<span data-bind="html: Prices().ApplicationFee"></span> Application Fee
+<phrase key="gToolTip-FullRefundText" />
+A full refund is given if you don’t get this domain.
+<phrase key="gToolTip-PartialRefundText" />
+A refund is given (amount paid minus <span data-bind="html: Prices().ApplicationFee">$XXX.XX</span> non-refundable application fee) if you don’t get this domain.
+<phrase key="PricingDetailsActionText" />
+Pricing details
+<phrase key="TrademarkOwnerActionTitle" />
+Are you a&nbsp;
+<phrase key="TrademarkOwnerActionText" />
+Trademark owner?
+<phrase key="SubPhasesLabel" />
+Select your pre-registration phase:
+<phrase key="SubPhasesDefaultText" />
+Select your phase
+<phrase key="AboutAuctions" />
+is at auction through [@T[companyname:name]@T] Auctions
+<phrase key="AboutAuctions1" />
+[@T[companyname:name]@T] Auctions<span class="supSymbol">&reg;</span> is the premier aftermarket for currently registered domain names. Members enjoy access to several million domains with convenient ways to buy and sell, including fixed price, public auction and offer/counter offer. Members also receive unlimited FREE basic listings, low commission fees, escrow services and more.
+<phrase key="AboutAuctions2" />
+If you have questions or would like to know more, just call (480) 505-8892 or email <a href="mailto:Auctions@GoDaddy.com" subject="Questions about [@T[companyname:name]@T] Auctions">Auctions@GoDaddy.com.</a>
+<phrase key="AboutBackorder" />
+If a name you want is already registered, you can still own it! All backordered domains go to auction, so you have a chance to win it. Others may have also backordered this name, so act now to secure your place in the auction once it expires.
+<phrase key="LeadGenerationSubText" />
+can be purchased directly from the owner.
+<phrase key="AboutLeadGeneration1" />
+[@T[companyname:name]@T] does not own this domain name - you will be negotiating the potential sale directly with the domain owner. The price of the domain is set by the owner and any payment will be made to him or her.
+<phrase key="AboutLeadGeneration2" />
+It is the domain owner's responsibility to provide all customer support for the exchange.
+<phrase key="AboutLeadGeneration3" />
+To indicate your interest in buying this domain name, just click 'Get it' and complete the form.
+<phrase key="AboutLeadGeneration4" />
+You can contact [@T[companyname:name]@T] at (480) 366-3303 or email <a href="mailto:PremiumNameSupport@GoDaddy.com" subject="Questions about [@T[companyname:name]@T] Premium Domain Names">PremiumNameSupport@godaddy.com</a> with questions about premium domain names.
+<phrase key="AboutPremiumDomain1" />
+Premium Domain Names are more valuable than other domains because they are based on common words or phrases people often use in their online searches.
+<phrase key="AboutPremiumDomain2" />
+While [@T[companyname:name]@T] does not own these domains names, we are one of a select group of registrars that can introduce you to the sellers.
+<phrase key="AboutPremiumDomain2IsPremiumPrice" />
+Premium Domain Names are not eligible for order-level discounts.
+<phrase key="AboutPremiumDomain3" />
+For more information on this domain, call [@T[supportphone:<premiumdomains />]@T].
+<phrase key="StackTitle" />
+Popular Add-ons:
+<phrase key="GetStackText" />
+Get all three and
+<phrase key="StackSavingsTitle" />
+Save
+<phrase key="StackAddSuccessText" />
+All domains have been successfully added to your cart
+<phrase key="NoItemsTitle" />
+We did not find anything with these search terms.
+<phrase key="NoItemsTipsTitle" />
+Search Tips:
+<phrase key="NoItemsTip1" />
+Reduce the number of filters
+<phrase key="NoItemsTip2" />
+Try searching with keywords
+<phrase key="NoItemsTip3" />
+Double check your spelling
+<phrase key="DisclaimerActionText" />
+Click here for product limitations
+<phrase key="EAPriorityPreRegOptionTitle" />
+Buy now with Priority Registration
+<phrase key="EAPriorityPreRegPriceTitle" />
+Buy Now
+<phrase key="EAPriorityPreRegPricingDetailsToolTipText" />
+Priority Registration gives you early access to sought after domains and includes an Early Access fee.  Your renewal fee for this domain is equal to the registration fee of <span data-bind="html: Prices().DomainRenewList">MXN99.99</span>.
+<phrase key="EAPriorityPreRegPriceDescription" />
+Buy now and make it yours!
+<phrase key="EAPriorityPreRegPriceDescription1" />
+Don't wait in line, upgrade now!
+<phrase key="EAPriorityPreRegOptionTitleDescription" />
+Register and start using this domain today.
+<phrase key="EAPreRegOptionTitle" />
+Pre-Registration
+<phrase key="EAPreRegOptionTitleDescription" />
+Line up ahead of everyone waiting for general availability.
+<phrase key="EAPreRegOptionDescription" />
+Increase your chances for getting this domain if it’s still available. [@T[companyname:name]@T] submits your pre-registration the moment each phase opens.
+<phrase key="EAPreRegPricingDetailsToolTipText" />
+Anyone may purchase a domain during all of the pre-registration phases, and all fees are fully refundable if you are not awarded the domain name.  Priority pre-registration gives you early access to sought after domains, and the price drops with each subsequent phase. Multiple applications for the same domain registered during each of the pre-registration phases will go to auction.
+<phrase key="EAPreRegistrationTagLine" />
+Buy now, or pre-register before general availability.
+<phrase key="EAPreRegistrationAvailable" />
+Available to buy now or pre-register
+<phrase key="StartsOn" />
+Starts on <span data-bind="html: LiveStartDate" class="date">Mon DD, YYYY</span>
+<phrase key="NotAvailableMessage"/>
+is not available.
+<phrase key="NotCurrentlyAvailableMessage"/>
+isn’t available at this time.
+<phrase key="GetStackTextNew" />
+Get all two and
+<phrase key="domainFlagAftermarket" />
+Auction
+<phrase key="domainFlagAvailable" />
+Available
+<phrase key="domainFlagBackorder" />
+Backorder
+<phrase key="domainFlagCloseout" />
+Aftermarket - Closeout
+<phrase key="domainFlagLocation" />
+Country/Location
+<phrase key="domainFlagPremium" />
+Premium
+<phrase key="domainFlagPremiumTier" />
+Premium
+<phrase key="domainFlagPre-registration" />
+Pre-registration      
+<phrase key="domainFlagPrivatesale" />
+privatesale - Lead Generation
+<phrase key="domainFlagRecent" />
+Recently Searched
+<phrase key="domainFlagRecommended" />
+Recommended
+<phrase key="domainFlagStack" />
+Stack
+<phrase key="domainFlagUnavailable" />
+Unavailable
+<phrase key="domainFlagUnknown" />
+Unknown
+<phrase key="domainFlagVariations" />
+Variation
+<phrase key="domainFlagBuyNowPreRegistration" />
+Pre-registration
+<phrase key="AvailCheckText" />
+Verifying availability...
+<phrase key="AvailCheckError" />
+This domain isn't available.
+<phrase key="StackAvailCheckError" />
+These domains are not available.
+<phrase key="tldCOM" />
+.COM
+<phrase key="1stYear" />
+1st year
+<phrase key="1stYearPrice" />
+1st year price
+<phrase key="additionYears" />
+Additional years
+<phrase key="2yearRegistration" />
+when you register for 2 years or more.

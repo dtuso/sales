@@ -1,7 +1,0 @@
-[
-  { 
-    'Type': 'Redirect', 
-    'Condition': 'siteContextAny(br, pl, wwd)', 
-    'Data': "{ 'Type' : '302', 'Loc': '[@T[link:<relative path=\"~/domains/search.aspx\" />]@T]' }" 
-  }
-]
