@@ -58,6 +58,11 @@
         $(this).parent().siblings('.answer').slideDown(300);
       }
     });
+
+    $('.more-text a').click(function(e){
+      $(this).hide();
+      $('#js-more-faq-wrapper').slideDown(300);
+    });
     
     $('.compare-plans').click(function(event){
       var $this = $(this);

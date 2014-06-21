@@ -1,6 +1,6 @@
 ---
 location: sales/business/split-test/office-365.aspx
-id: 53a371ecf778fc1a8829483d
+id: 53a4ca98f778fc2254bc9b77
 name: Page Reskin - post language updates
 assetPath: false
 ---
@@ -71,26 +71,70 @@ assetPath: false
                 </div>
                 <div class="plan-contents side-plan left-side">
                     <div class="office-box no-office"></div>
-                    <p class="plan-description">[@L[cds.sales/business/office-365:split-test-b-2-ProfessionalEmail]@L]</p>
-                    <p class="plan-box-price">
-                      [@T[productprice:<current productid="31805" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]
-                    </p>  
-                    <p class="per-user">[@L[cds.sales/business/office-365:split-test-b-3-PerUserMonth]@L]</p>
-            <button type="button" class="btn btn-warning btn-block btn-lg js-add-to-cart" data-value="OfficeEmailMsft1yr" data-ci="91160">[@L[cds.sales/business/office-365:split-test-b-3-AddToCart]@L]</button>
+                    <p class="plan-description">
+                        [@L[cds.sales/business/office-365:split-test-b-2-ProfessionalEmail]@L]
+                    </p>
+                    <div class="price-wrapper"> 
+                      <p class="as-low-as">[@L[cds.sales/business/office-365:split-test-b-3-as-low-as]@L]</p> 
+                      <p class="plan-box-price">
+                        [@T[productprice:<current productid="31805" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]
+                      </p> 
+                      <div class="per-user">
+                        <p>[@L[cds.sales/business/office-365:split-test-b-3-PerUser]@L]</p>
+                        <p>[@L[cds.sales/business/office-365:split-test-b-3-slash-month]@L]</p>
+                      </div>
+                    </div>  
+                    ##if(productHasSavingsMoreThan(31805, 31805, 0))
+                      <div class="strike-through-wrapper">
+                        <p class="strike-through-price">[@T[productprice:<template productid="31805" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]
+                          <span class="secondary-color uppercase">
+                            <strong> 
+                              [@L[cds.sales/business/office-365:split-test-b-1-save]@L] [@T[productcompare:<percent primaryproductid="31805" secondaryproductid="31805" hidebelow="5"><html><![CDATA[{0}%]]></html></percent>]@T]
+                            </strong>
+                          </span>
+                        </p>
+                        <p class="current-renewal-price"><sup>*</sup>[@L[cds.sales/business/office-365:split-test-b-3-current-renewal-price]@L]</p>
+                      </div>
+                    ##endif
+            <button type="button" class="btn btn-warning btn-block btn-lg js-add-to-cart plan-box-button" data-value="OfficeEmailMsft1yr" data-ci="91160">[@L[cds.sales/business/office-365:split-test-b-3-AddToCart]@L]</button>
           </div>  
         </div>
         <div class="col-xs-4 plan-box highlighted-plan">
           <div class="side-title-container">
-                    <h3 class="product-title">[@L[cds.sales/business/office-365:split-test-b-2-BusinessEssentials]@L]</h3>
-                  </div>
-                  <div class="plan-contents">
-                    <div class="office-box"></div>
-                    <p class="plan-description">[@L[cds.sales/business/office-365:split-test-b-8-ProfessionalEmail10xMoreStorageOffice365Online]@L]</p>
-                    <p class="plan-box-price">
-                      [@T[productprice:<current productid="31825" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]
-                    </p>
-                    <p class="per-user">[@L[cds.sales/business/office-365:split-test-b-3-PerUserMonth]@L]</p>
-            <button type="button" class="btn btn-warning btn-block btn-lg js-add-to-cart" data-value="OfficeBusMsft1yr" data-ci="91161">[@L[cds.sales/business/office-365:split-test-b-3-AddToCart]@L]</button>
+            <h3 class="product-title">[@L[cds.sales/business/office-365:split-test-b-2-BusinessEssentials]@L]</h3>
+          </div>
+          <div class="plan-contents">
+            <div class="office-box"></div>
+            <p class="plan-description">
+              [@L[cds.sales/business/office-365:split-test-b-8-ProfessionalEmail10xMoreStorageOffice365Online]@L]
+            </p>
+            <div class="price-wrapper"> 
+              <p class="as-low-as">[@L[cds.sales/business/office-365:split-test-b-3-as-low-as]@L]</p> 
+              <p class="plan-box-price">
+                [@T[productprice:<current productid="31825" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]
+              </p> 
+              <div class="per-user">
+                <p>[@L[cds.sales/business/office-365:split-test-b-3-PerUser]@L]</p>
+                <p>[@L[cds.sales/business/office-365:split-test-b-3-slash-month]@L]</p>
+              </div>
+            </div>  
+            ##if(productHasSavingsMoreThan(31825, 31825, 0))
+              <div class="strike-through-wrapper">
+                <p class="strike-through-price">[@T[productprice:<template productid="31825" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]
+                  <span class="secondary-color uppercase">
+                    <strong> 
+                      [@L[cds.sales/business/office-365:split-test-b-1-save]@L] [@T[productcompare:<percent primaryproductid="31825" secondaryproductid="31825" hidebelow="5"><html><![CDATA[{0}%]]></html></percent>]@T]
+                    </strong>
+                  </span>
+                </p>
+                <p class="current-renewal-price"><sup>*</sup>[@L[cds.sales/business/office-365:split-test-b-3-current-renewal-price]@L]</p>
+              </div>
+            ##endif
+            <!-- <p class="plan-box-price">
+              [@T[productprice:<current productid="31825" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]
+            </p>
+            <p class="per-user">[@L[cds.sales/business/office-365:split-test-b-3-PerUserMonth]@L]</p> -->
+            <button type="button" class="btn btn-warning btn-block btn-lg js-add-to-cart plan-box-button" data-value="OfficeBusMsft1yr" data-ci="91161">[@L[cds.sales/business/office-365:split-test-b-3-AddToCart]@L]</button>
           </div>
         </div>
         <div class="col-xs-4 plan-box mt5">
@@ -100,12 +144,36 @@ assetPath: false
           </div>
         <div class="plan-contents side-plan right-side">                  
             <div class="office-box"></div>
-            <p class="plan-description">[@L[cds.sales/business/office-365:split-test-b-10-ProfessionalEmail10xMoreStorageOffice365Online]@L]</p>
-            <p class="plan-box-price">
+            <p class="plan-description">
+              [@L[cds.sales/business/office-365:split-test-b-10-ProfessionalEmail10xMoreStorageOffice365Online]@L]
+            </p>
+            <div class="price-wrapper"> 
+              <p class="as-low-as">[@L[cds.sales/business/office-365:split-test-b-3-as-low-as]@L]</p> 
+              <p class="plan-box-price">
+                [@T[productprice:<current productid="31841" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]
+              </p> 
+              <div class="per-user">
+                <p>[@L[cds.sales/business/office-365:split-test-b-3-PerUser]@L]</p>
+                <p>[@L[cds.sales/business/office-365:split-test-b-3-slash-month]@L]</p>
+              </div>
+            </div>  
+            ##if(productHasSavingsMoreThan(31841, 31841, 0))
+              <div class="strike-through-wrapper">
+                <p class="strike-through-price">[@T[productprice:<template productid="31841" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]
+                  <span class="secondary-color uppercase">
+                    <strong> 
+                      [@L[cds.sales/business/office-365:split-test-b-1-save]@L] [@T[productcompare:<percent primaryproductid="31841" secondaryproductid="31841" hidebelow="5"><html><![CDATA[{0}%]]></html></percent>]@T]
+                    </strong>
+                  </span>
+                </p>
+                <p class="current-renewal-price"><sup>*</sup>[@L[cds.sales/business/office-365:split-test-b-3-current-renewal-price]@L]</p>
+              </div>
+            ##endif
+            <!-- <p class="plan-box-price">
               [@T[productprice:<current productid="31841" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]
             </p>
-            <p class="per-user">[@L[cds.sales/business/office-365:split-test-b-3-PerUserMonth]@L]</p>
-            <button type="button" class="btn btn-warning btn-block btn-lg js-add-to-cart" data-value="OfficeBusPremMsft1yr" data-ci="91162">[@L[cds.sales/business/office-365:split-test-b-3-AddToCart]@L]</button>
+            <p class="per-user">[@L[cds.sales/business/office-365:split-test-b-3-PerUserMonth]@L]</p> -->
+            <button type="button" class="btn btn-warning btn-block btn-lg js-add-to-cart plan-box-button" data-value="OfficeBusPremMsft1yr" data-ci="91162">[@L[cds.sales/business/office-365:split-test-b-3-AddToCart]@L]</button>
           </div>
         </div>
       </div>
@@ -271,12 +339,36 @@ assetPath: false
           </div>
           <div class="plan-contents side-plan">                 
             <div class="office-box"></div>
-            <p class="plan-description">[@L[cds.sales/business/office-365:split-test-b-10-ProfessionalEmail10xMoreStorageOffice365Online]@L]</p>
-            <p class="plan-box-price">
+            <p class="plan-description">
+              [@L[cds.sales/business/office-365:split-test-b-10-ProfessionalEmail10xMoreStorageOffice365Online]@L]
+            </p>
+            <div class="price-wrapper"> 
+              <p class="as-low-as">[@L[cds.sales/business/office-365:split-test-b-3-as-low-as]@L]</p> 
+              <p class="plan-box-price">
+                [@T[productprice:<current productid="31841" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]
+              </p> 
+              <div class="per-user">
+                <p>[@L[cds.sales/business/office-365:split-test-b-3-PerUser]@L]</p>
+                <p>[@L[cds.sales/business/office-365:split-test-b-3-slash-month]@L]</p>
+              </div>
+            </div>  
+            ##if(productHasSavingsMoreThan(31841, 31841, 0))
+              <div class="strike-through-wrapper">
+                <p class="strike-through-price">[@T[productprice:<template productid="31841" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]
+                  <span class="secondary-color uppercase">
+                    <strong> 
+                      [@L[cds.sales/business/office-365:split-test-b-1-save]@L] [@T[productcompare:<percent primaryproductid="31841" secondaryproductid="31841" hidebelow="5"><html><![CDATA[{0}%]]></html></percent>]@T]
+                    </strong>
+                  </span>
+                </p>
+                <p class="current-renewal-price"><sup>*</sup>[@L[cds.sales/business/office-365:split-test-b-3-current-renewal-price]@L]</p>
+              </div>
+            ##endif
+            <!-- <p class="plan-box-price">
               [@T[productprice:<current productid="31841" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]
             </p>  
-            <p class="per-user">[@L[cds.sales/business/office-365:split-test-b-3-PerUserMonth]@L]</p>
-            <button type="button" class="btn btn-warning btn-block btn-lg js-add-to-cart" data-value="OfficeBusPremMsft1yr" data-ci="91168">[@L[cds.sales/business/office-365:split-test-b-3-AddToCart]@L]</button>
+            <p class="per-user">[@L[cds.sales/business/office-365:split-test-b-3-PerUserMonth]@L]</p> -->
+            <button type="button" class="btn btn-warning btn-block btn-lg js-add-to-cart plan-box-button" data-value="OfficeBusPremMsft1yr" data-ci="91168">[@L[cds.sales/business/office-365:split-test-b-3-AddToCart]@L]</button>
           </div>
         </div>  
         </div>  
@@ -331,142 +423,145 @@ assetPath: false
       </p>
     </div>
     <!-- / question-section -->
-    <div class="question-section">
-      <div class="show-hide-question-section">
-        <a class="open-button plus" href="#" data-ci="91211"></a>
+    <p class="more-text"><a href="javascript:void(0);">[@L[cds.sales/business/office-365:split-test-b-1-more-faq]@L] <i class="chevron-down"></i></a></p>
+    <div id="js-more-faq-wrapper" style="display:none">
+        <div class="question-section">
+          <div class="show-hide-question-section">
+            <a class="open-button plus" href="#" data-ci="91211"></a>
+          </div>
+          <p class="question">[@L[cds.sales/business/office-365:split-test-b-10-WhichDesktopApplicationsComeWithTheProductivityPlus]@L]</p>
+          <p class="answer">[@L[cds.sales/business/office-365:split-test-b-55-ThisDependsOnWhetherYouAreUsingA]@L]</p>
+        </div>
+        <!-- / question-section -->
+        <div class="question-section">
+          <div class="show-hide-question-section">
+            <a class="open-button plus" href="#" data-ci="91212"></a>
+          </div>
+          <p class="question">[@L[cds.sales/business/office-365:split-test-b-12-WillTheLatestVersionOfMicrosoftOfficeWork]@L]</p>
+          <div class="answer">
+            <p>[@L[cds.sales/business/office-365:split-test-b-24-ToUseThe5DesktopDownloadsYouGet]@L]</p>
+            <ul>
+              <li>[@L[cds.sales/business/office-365:split-test-b-4-WindowsServer2008R2]@L]</li>
+              <li>[@L[cds.sales/business/office-365:split-test-b-2-Windows7]@L]</li>
+              <li>[@L[cds.sales/business/office-365:split-test-b-3-WindowsServer2012]@L]</li>
+              <li>[@L[cds.sales/business/office-365:split-test-b-2-Windows8]@L]</li>
+              <li>[@L[cds.sales/business/office-365:split-test-b-9-MacOSXVersion106OrLater]@L]</li>
+            </ul>
+          <p>[@L[cds.sales/business/office-365:split-test-b-43-IfYouAreRunningADifferentOperatingSystem]@L]</p>
+          </div>
+        </div>
+        <!-- / question-section -->
+        <div class="question-section">
+          <div class="show-hide-question-section">
+            <a class="open-button plus" href="#" data-ci="91213"></a>
+          </div>
+          <p class="question">[@L[cds.sales/business/office-365:split-test-b-6-WhatIsOnlineDocumentCollaboration]@L]</p>
+          <p class="answer">[@L[cds.sales/business/office-365:split-test-b-82-WithOurBusinessEssentialsAndProductivityPlusPlans]@L]
+          </p>
+        </div>
+        <!-- / question-section -->
+        <div class="question-section">
+          <div class="show-hide-question-section">
+            <a class="open-button plus" href="#" data-ci="91214"></a>
+          </div>
+          <p class="question">[@L[cds.sales/business/office-365:split-test-b-19-IPurchasedTheProductivityPlusPlanCanI]@L]</p>
+          <p class="answer">
+            [@L[cds.sales/business/office-365:split-test-b-59-TheDesktopOfficeLicensesThatComeWithThe]@L]
+          </br>
+          </br>
+            [@L[cds.sales/business/office-365:split-test-b-31-ToGetTheMostOutOfOffice365]@L]
+          </p>
+        </div>
+        <!-- / question-section -->
+        <div class="question-section">
+          <div class="show-hide-question-section">
+            <a class="open-button plus" href="#" data-ci="91215"></a>
+          </div>
+          <p class="question">[@L[cds.sales/business/office-365:split-test-b-23-WillTheExcelPowerPointAndWordProgramsI]@L]</p>
+          <p class="answer">[@L[cds.sales/business/office-365:split-test-b-27-OneDriveForBusinessCloudStorageAndOfficeOnline]@L]
+          </br>
+          </br>
+          [@L[cds.sales/business/office-365:split-test-b-55-WithTheseVersionsOfOfficeYouCanSelect]@L]
+          </p>
+        </div>
+        <!-- / question-section -->
+        <div class="question-section">
+          <div class="show-hide-question-section">
+            <a class="open-button plus" href="#" data-ci="91216"></a>
+          </div>
+          <p class="question">[@L[cds.sales/business/office-365:split-test-b-12-WhatIfIAlreadyHaveAWorkspaceEmail]@L]</p>
+          <p class="answer">
+            [@L[cds.sales/business/office-365:split-test-b-27-IfYouWouldLikeToStartUsingOffice]@L]
+          </br>
+          </br>
+            [@L[cds.sales/business/office-365:split-test-b-50-WePlanToOfferAServiceLaterIn]@L]
+          </p>
+        </div>
+        <!-- / question-section -->
+        <div class="question-section">
+          <div class="show-hide-question-section">
+            <a class="open-button plus" href="#" data-ci="91217"></a>
+          </div>
+          <p class="question">[@L[cds.sales/business/office-365:split-test-b-19-IHaveAMacCanIStillUse]@L]</p>
+          <p class="answer">
+            [@L[cds.sales/business/office-365:split-test-b-19-YesOfficeOnlineIsCompatibleWithMacOS]@L]
+          </br>
+          </br>
+            [@L[cds.sales/business/office-365:split-test-b-32-AndIfYouChooseTheProductivityPlusPlan]@L]
+          </p>
+        </div>
+        <!-- / question-section -->
+        <div class="question-section">
+          <div class="show-hide-question-section">
+            <a class="open-button plus" href="#" data-ci="91218"></a>
+          </div>
+          <p class="question">[@L[cds.sales/business/office-365:split-test-b-16-IAmPartOfALargerOrganizationCan]@L]</p>
+          <p class="answer">[@L[cds.sales/business/office-365:split-test-b-69-ThePlansOnOurWebsiteAreIdealFor]@L]</p>
+        </div>
+        <!-- / question-section -->
+        <div class="question-section">
+          <div class="show-hide-question-section">
+            <a class="open-button plus" href="#" data-ci="91219"></a>
+          </div>
+          <p class="question">[@L[cds.sales/business/office-365:split-test-b-5-WhatIsLyncOnline]@L]</p>
+          <p class="answer">[@L[cds.sales/business/office-365:split-test-b-61-LyncOnlineIncludedInTheBusinessEssentialsAnd]@L]</p>
+        </div>
+        <!-- / question-section -->
+        <div class="question-section">
+          <div class="show-hide-question-section">
+            <a class="open-button plus" href="#" data-ci="91220"></a>
+          </div>
+          <p class="question">[@L[cds.sales/business/office-365:split-test-b-5-WhatIsTheCloud]@L]</p>
+          <p class="answer">
+            [@L[cds.sales/business/office-365:split-test-b-40-WorkingOrStoringFilesInTheCloudMeans]@L]
+          </br>
+          </br>
+            [@L[cds.sales/business/office-365:split-test-b-55-YouDonTNeedToBuyAdditionalSoftware]@L]
+          </p>
+        </div>
+        <!-- / question-section -->
+        <div class="question-section">
+          <div class="show-hide-question-section">
+            <a class="open-button plus" href="#" data-ci="91221"></a>
+          </div>
+          <p class="question">[@L[cds.sales/business/office-365:split-test-b-55-ipad-only-question]@L]</p>
+          <p class="answer">
+            [@L[cds.sales/business/office-365:split-test-b-55-ipad-only-answer-1]@L]
+          </br>
+          </br>  
+            [@L[cds.sales/business/office-365:split-test-b-55-ipad-only-answer-2]@L]      
+          </p>
+        </div>
+        <!-- / question-section -->
+        <div class="question-section">
+          <div class="show-hide-question-section">
+            <a class="open-button plus" href="#" data-ci="91222"></a>
+          </div>
+          <p class="question">[@L[cds.sales/business/office-365:split-test-b-23-IfIAddSomethingToMyCalendarOr]@L]</p>
+          <p class="answer">[@L[cds.sales/business/office-365:split-test-b-72-YesUsersCanConnectTheFollowingVersionsOf]@L]</p>
+        </div>
+        <!-- / question-section -->
       </div>
-      <p class="question">[@L[cds.sales/business/office-365:split-test-b-10-WhichDesktopApplicationsComeWithTheProductivityPlus]@L]</p>
-      <p class="answer">[@L[cds.sales/business/office-365:split-test-b-55-ThisDependsOnWhetherYouAreUsingA]@L]</p>
-    </div>
-    <!-- / question-section -->
-    <div class="question-section">
-      <div class="show-hide-question-section">
-        <a class="open-button plus" href="#" data-ci="91212"></a>
-      </div>
-      <p class="question">[@L[cds.sales/business/office-365:split-test-b-12-WillTheLatestVersionOfMicrosoftOfficeWork]@L]</p>
-      <div class="answer">
-        <p>[@L[cds.sales/business/office-365:split-test-b-24-ToUseThe5DesktopDownloadsYouGet]@L]</p>
-        <ul>
-          <li>[@L[cds.sales/business/office-365:split-test-b-4-WindowsServer2008R2]@L]</li>
-          <li>[@L[cds.sales/business/office-365:split-test-b-2-Windows7]@L]</li>
-          <li>[@L[cds.sales/business/office-365:split-test-b-3-WindowsServer2012]@L]</li>
-          <li>[@L[cds.sales/business/office-365:split-test-b-2-Windows8]@L]</li>
-          <li>[@L[cds.sales/business/office-365:split-test-b-9-MacOSXVersion106OrLater]@L]</li>
-        </ul>
-      <p>[@L[cds.sales/business/office-365:split-test-b-43-IfYouAreRunningADifferentOperatingSystem]@L]</p>
-      </div>
-    </div>
-    <!-- / question-section -->
-    <div class="question-section">
-      <div class="show-hide-question-section">
-        <a class="open-button plus" href="#" data-ci="91213"></a>
-      </div>
-      <p class="question">[@L[cds.sales/business/office-365:split-test-b-6-WhatIsOnlineDocumentCollaboration]@L]</p>
-      <p class="answer">[@L[cds.sales/business/office-365:split-test-b-82-WithOurBusinessEssentialsAndProductivityPlusPlans]@L]
-      </p>
-    </div>
-    <!-- / question-section -->
-    <div class="question-section">
-      <div class="show-hide-question-section">
-        <a class="open-button plus" href="#" data-ci="91214"></a>
-      </div>
-      <p class="question">[@L[cds.sales/business/office-365:split-test-b-19-IPurchasedTheProductivityPlusPlanCanI]@L]</p>
-      <p class="answer">
-        [@L[cds.sales/business/office-365:split-test-b-59-TheDesktopOfficeLicensesThatComeWithThe]@L]
-      </br>
-      </br>
-        [@L[cds.sales/business/office-365:split-test-b-31-ToGetTheMostOutOfOffice365]@L]
-      </p>
-    </div>
-    <!-- / question-section -->
-    <div class="question-section">
-      <div class="show-hide-question-section">
-        <a class="open-button plus" href="#" data-ci="91215"></a>
-      </div>
-      <p class="question">[@L[cds.sales/business/office-365:split-test-b-23-WillTheExcelPowerPointAndWordProgramsI]@L]</p>
-      <p class="answer">[@L[cds.sales/business/office-365:split-test-b-27-OneDriveForBusinessCloudStorageAndOfficeOnline]@L]
-      </br>
-      </br>
-      [@L[cds.sales/business/office-365:split-test-b-55-WithTheseVersionsOfOfficeYouCanSelect]@L]
-      </p>
-    </div>
-    <!-- / question-section -->
-    <div class="question-section">
-      <div class="show-hide-question-section">
-        <a class="open-button plus" href="#" data-ci="91216"></a>
-      </div>
-      <p class="question">[@L[cds.sales/business/office-365:split-test-b-12-WhatIfIAlreadyHaveAWorkspaceEmail]@L]</p>
-      <p class="answer">
-        [@L[cds.sales/business/office-365:split-test-b-27-IfYouWouldLikeToStartUsingOffice]@L]
-      </br>
-      </br>
-        [@L[cds.sales/business/office-365:split-test-b-50-WePlanToOfferAServiceLaterIn]@L]
-      </p>
-    </div>
-    <!-- / question-section -->
-    <div class="question-section">
-      <div class="show-hide-question-section">
-        <a class="open-button plus" href="#" data-ci="91217"></a>
-      </div>
-      <p class="question">[@L[cds.sales/business/office-365:split-test-b-19-IHaveAMacCanIStillUse]@L]</p>
-      <p class="answer">
-        [@L[cds.sales/business/office-365:split-test-b-19-YesOfficeOnlineIsCompatibleWithMacOS]@L]
-      </br>
-      </br>
-        [@L[cds.sales/business/office-365:split-test-b-32-AndIfYouChooseTheProductivityPlusPlan]@L]
-      </p>
-    </div>
-    <!-- / question-section -->
-    <div class="question-section">
-      <div class="show-hide-question-section">
-        <a class="open-button plus" href="#" data-ci="91218"></a>
-      </div>
-      <p class="question">[@L[cds.sales/business/office-365:split-test-b-16-IAmPartOfALargerOrganizationCan]@L]</p>
-      <p class="answer">[@L[cds.sales/business/office-365:split-test-b-69-ThePlansOnOurWebsiteAreIdealFor]@L]</p>
-    </div>
-    <!-- / question-section -->
-    <div class="question-section">
-      <div class="show-hide-question-section">
-        <a class="open-button plus" href="#" data-ci="91219"></a>
-      </div>
-      <p class="question">[@L[cds.sales/business/office-365:split-test-b-5-WhatIsLyncOnline]@L]</p>
-      <p class="answer">[@L[cds.sales/business/office-365:split-test-b-61-LyncOnlineIncludedInTheBusinessEssentialsAnd]@L]</p>
-    </div>
-    <!-- / question-section -->
-    <div class="question-section">
-      <div class="show-hide-question-section">
-        <a class="open-button plus" href="#" data-ci="91220"></a>
-      </div>
-      <p class="question">[@L[cds.sales/business/office-365:split-test-b-5-WhatIsTheCloud]@L]</p>
-      <p class="answer">
-        [@L[cds.sales/business/office-365:split-test-b-40-WorkingOrStoringFilesInTheCloudMeans]@L]
-      </br>
-      </br>
-        [@L[cds.sales/business/office-365:split-test-b-55-YouDonTNeedToBuyAdditionalSoftware]@L]
-      </p>
-    </div>
-    <!-- / question-section -->
-    <div class="question-section">
-      <div class="show-hide-question-section">
-        <a class="open-button plus" href="#" data-ci="91221"></a>
-      </div>
-      <p class="question">[@L[cds.sales/business/office-365:split-test-b-55-ipad-only-question]@L]</p>
-      <p class="answer">
-        [@L[cds.sales/business/office-365:split-test-b-55-ipad-only-answer-1]@L]
-      </br>
-      </br>  
-        [@L[cds.sales/business/office-365:split-test-b-55-ipad-only-answer-2]@L]      
-      </p>
-    </div>
-    <!-- / question-section -->
-    <div class="question-section">
-      <div class="show-hide-question-section">
-        <a class="open-button plus" href="#" data-ci="91222"></a>
-      </div>
-      <p class="question">[@L[cds.sales/business/office-365:split-test-b-23-IfIAddSomethingToMyCalendarOr]@L]</p>
-      <p class="answer">[@L[cds.sales/business/office-365:split-test-b-72-YesUsersCanConnectTheFollowingVersionsOf]@L]</p>
-    </div>
-    <!-- / question-section -->
     </div>
   </section> 
   <section id="disclaimer-section">
