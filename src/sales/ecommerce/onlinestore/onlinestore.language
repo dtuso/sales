@@ -1,6 +1,6 @@
 ---
 location: localization/sales/gd/ecommerce/onlinestore/en
-id: 53a3568df778fc1a88294839
+id: 53a8c318f778fc13248233e5
 name: FOS-20286
 ---
 {% include 'modules/doc-block.html' %}
@@ -12,27 +12,23 @@ name: FOS-20286
 ...
 <phrase key="og-description" />
 ...
-<phrase key="OnlineStore" />
+<phrase key="onlineStore" />
 Online Store
-<phrase key="WatchVideo" />
+<phrase key="watchVideo" />
 Watch Video
 <phrase key="btn-StartNow" />
 Start Now
 <phrase key="btn-GetStarted" />
 Get Started
-<phrase key="ReadReviews" />
+<phrase key="readReviews" />
 Read Reviews
 <phrase key="subtitle" />
 Sell more with your own <strong>one-of-a-kind</strong> web store
-<phrase key="JustPrice" comment="{0} will be replaced with the monetary amount" />
-Just {0}
-<phrase key="SavePercentage" comment="{0} will be replaced with the percentage off"/>
-Save {0}
-<phrase key="mo" comment="Will be rendered similar to '$000.00 per mo' (aka month)" />
-/mo
-<phrase key="month" comment="Will be rendered similar to '$000.00 per month'" />
-/month
+<phrase key="justPricePerMonth" comment="{0} will be replaced with the monetary amount" />
+Just {0}/mo
+<phrase key="savePercentage" comment="{0} will be replaced with the percentage off"/>
+Save {1}%
 <phrase key="next" comment="Action to change carousel to next slide" />
 next
-<phrase key="month" comment="Action to change carousel to previous slide" />
+<phrase key="previous" comment="Action to change carousel to previous slide" />
 previous

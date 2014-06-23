@@ -1,13 +1,20 @@
 ---
 location: sales/ssl/ssl-certificates-b
-id: 5384d88af778fc2a74c3bc37
-name: FOS-14691
+url: http://www.dev-godaddy.com/ssl/ssl-certificates.aspx
+id: 53a8a7f9f778fc13248233d8
+name: FOS-21978
+assetPath: false
+comments: Replace bad domain name
+splitSide: 1212.B
 ---
+
 {% extends 'layouts/base.html' %}
 
 {% block metahead %}
   {% parent %}
   <style type="text/css">
+  {% less %}
+  {% include 'css/styles.less' %} 
   .select-box-body label span.duration {
       text-align: left;
       width: 4em;
@@ -16,27 +23,23 @@ name: FOS-14691
     .plan-summary-tab-pane-list:first-child {
       margin-right: 5.3em;
     }
-    .bv-loading {
-      font-size: 23px;
-      padding: 20px;
-      font-weight: bold;
-      color: #666;
-      text-align: center;
+    ul.plan-pricing-list > li {
+      padding-top: 5px;
     }
+    {% endless %}
   </style>
 {% endblock %}
 
 {% block footer %}
+  <script src="[@T[link:<javascriptroot />]@T]fos/lib/solazy/jquery.solazy.1.2.1.min.js" type="text/javascript" ></script>
   <script>
     $(function () {
-
       var hash = window.location.hash;
       hash && $('a[href="' + hash + '"]').tab('show');
       window.addEventListener('hashchange', function() {
         var changedHash = window.location.hash;
         changedHash && $('a[href="' + changedHash + '"]').tab('show');
       }, false);
-
       $('.equal-height').setColumnsEqualHeight();
       $('.select-box').setSelectBox();
       $('.tab-link').tabLinks();
@@ -55,11 +58,10 @@ name: FOS-14691
       });
 
     });
+    $('.rating-stars-init').ratingStars();
+    $('.tab-link').tabLinks();
   </script>
 
-  ##if(activeLanguageAny(en))
-  {% include '_load-reviews-js.html' %}
-  ##endif
 
 {% endblock %}
 
@@ -85,15 +87,14 @@ name: FOS-14691
     </section>
     <!-- End main-banner -->
 
-    {% include '_main-tabs.html' %}
+    {% include '_main-tabs-no-BV.html' %}
 
     <!-- Start main-tabs panes -->
     <div class="tab-content no-margin-top">
-
-
-
     <a name="plan-pricing"></a>
-      <div class="tab-pane in active tab-content-plans-pricing-bg-ssl-certificates" id="plan-pricing">
+      <div class="tab-pane active tab-content-plans-pricing-bg-ssl-certificates solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/ssl/ssl-certificates/img/bg-tab-content-plans-ssl-certificate.jpg" id="plan-pricing">
+
+
         <!-- Start content -->
         <section class="l-main-container container">
           <!-- Start misc-banner -->
@@ -164,7 +165,7 @@ name: FOS-14691
                   <p class="no-margin-bottom"><button type="submit" data-form="addtocart-form" class="btn btn-warning btn-block btn-lg" data-ci="89603">[@L[cds.sales/gd/ssl/ssl-certificates:cartButton]@L]</button></p>
                   <ul class="plan-pricing-list">
                     <li>[@L[cds.sales/gd/ssl/ssl-certificates:plansPricingExampleLabel]@L]</li>
-                    <li>[@L[cds.sales/gd/ssl/ssl-certificates:plansPricingExampleItem1]@L]</li>
+                    <li>SiteProtection.com</li>
                   </ul>
                 </div>
               </form>
@@ -222,8 +223,8 @@ name: FOS-14691
                   <p class="no-margin-bottom"><button type="submit" data-form="addtocart-form" class="btn btn-warning btn-block btn-lg" data-ci="89605">[@L[cds.sales/gd/ssl/ssl-certificates:cartButton]@L]</button></p>
                   <ul class="plan-pricing-list plan-pricing-list-alternate">
                     <li>[@L[cds.sales/gd/ssl/ssl-certificates:plansPricingExampleLabel]@L]</li>
-                    <li>[@L[cds.sales/gd/ssl/ssl-certificates:plansPricingExampleItem1]@L]</li>
-                    <li>[@L[cds.sales/gd/ssl/ssl-certificates:plansPricingExampleItem2]@L]</li>
+                    <li>SiteProtection.com</li>
+                    <li>Cart.SiteProtection.com</li>
                   </ul>
                 </div>
               </form>
@@ -281,9 +282,9 @@ name: FOS-14691
                   <p class="no-margin-bottom"><button type="submit" data-form="addtocart-form" class="btn btn-warning btn-block btn-lg" data-ci="89607">[@L[cds.sales/gd/ssl/ssl-certificates:cartButton]@L]</button></p>
                   <ul class="plan-pricing-list">
                     <li>[@L[cds.sales/gd/ssl/ssl-certificates:plansPricingExampleLabel]@L]</li>
-                    <li>ProtectMyVisitors.com</li>
-                    <li>Cart.ProtectMyVisitors.com</li>
-                    <li>Mobile.ProtectMyVisitors.com</li>
+                    <li>SiteProtection.com</li>
+                    <li>Cart.SiteProtection.com</li>
+                    <li>Mobile.SiteProtection.com</li>
                   </ul>
                 </div>
               </form>
@@ -329,8 +330,10 @@ name: FOS-14691
           <!-- End plan-summary -->
           <div class="row tab-content" name="features">
             <div class="col-xs-12">
-              <div class="grid-column tab-content-column tab-content-right tab-content-why-gd-ssl">
+              <div class="grid-column tab-content-column tab-content-right tab-content-why-gd-ssl solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/ssl/ssl-certificates/img/bg-tab-content-why-godaddy.jpg">
+                ##if(activeLanguageAny(en))
                 <i class="ico-sslc ico-sslc-ota-logo"></i>
+                ##endif
                 <h2 class="tab-content-title">[@L[cds.sales/gd/ssl/ssl-certificates:MainPageContentTabContent1title]@L]</h2>
                 <p>[@L[cds.sales/gd/ssl/ssl-certificates:MainPageContentTabContent1text1]@L]</p>
                 <p>[@L[cds.sales/gd/ssl/ssl-certificates:MainPageContentTabContent1text2]@L]</p>
@@ -357,7 +360,7 @@ name: FOS-14691
           </div>
           <div class="row tab-content">
             <div class="col-xs-12">
-              <div class="grid-column tab-content-column tab-content-left tab-content-secure-your-site-ssl">
+              <div class="grid-column tab-content-column tab-content-left tab-content-secure-your-site-ssl solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/ssl/ssl-certificates/img/bg-tab-content-secure-site.jpg">
                 <h2 class="tab-content-title">[@L[cds.sales/gd/ssl/ssl-certificates:MainPageContentTabContent3title1]@L]</h2>
                 <ul>
                   <li>[@L[cds.sales/gd/ssl/ssl-certificates:MainPageContentTabContent3List1]@L]</li>
@@ -440,18 +443,6 @@ name: FOS-14691
 
       </div>
 
-      ##if(activeLanguageAny(en))
-      <div class="tab-pane" id="reviews">
-        <section class="tab-content-top-spacing">
-          <div class="container l-main-container">
-            <div class="row tab-content">
-            <div id="BVRRContainer"><p class="bv-loading">Loading...</p></div>
-            [@P[userControl:<Data location="~/Shared/Tabs/controls/BVReviewsNoJS.ascx"><Parameters><Parameter key="ProductId" value="ssl-certificates" /><Parameter key="ReviewNumber" value="4" /></Parameters></Data>]@P]
-            </div>
-          </div>
-        </section>
-      </div>
-      ##endif
 
     </div>
     <!-- End main-tabs panes -->
@@ -475,8 +466,6 @@ name: FOS-14691
       </div>
     </div>
 
-    ##if(activeLanguageAny(en))
-    {% include '_login-modal.html' %}
-    ##endif
+
 
 {% endblock %}

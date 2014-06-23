@@ -1,8 +1,18 @@
 <!-- start-css-elevate -->
 <style>  
   {% less %}
-  .main-banner-onlinestore {
-    
+  .main-banner-onlinestore p {
+    margin: 0px;
+    padding: 0px;
+  }
+  .main-banner-onlinestore h1 {
+    color:#333;
+    margin: 50px 0 40px;
+    text-transform: uppercase;
+  }
+  .main-banner-onlinestore h2 {
+    color:#333;
+    margin-bottom: 40px;
   }
 
   .main-banner-onlinestore {
@@ -11,55 +21,37 @@
     background-repeat: no-repeat;
     padding-bottom: 3.9em;
   }
-
+  div.pricing p.just-per-mo {
+    display: none;
+  }
+  div.pricing p.save-percentage {
+    display: none;
+  }
+  div.pricing p.save-percentage strike {
+    font-size: 30px;
+  }
   {% endless %}
+}
 </style>
 <!-- end-css-elevate -->
 
 
 <section class="main-banner main-banner-onlinestore">
-  <div class="l-main-container row">
-    <h1 class="main-banner-title">[@L[cds.sales/gd/ecommerce/onlinestore:OnlineStore]@L]</h1>
+  <div class="row wider-container">
+    <h1 class="main-banner-title">[@L[cds.sales/gd/ecommerce/onlinestore:onlineStore]@L]</h1>
     <h2 class="main-banner-subtitle">[@L[cds.sales/gd/ecommerce/onlinestore:subtitle]@L]</h2>
-    <a data-ci="111" class="btn btn-primary cta-small" href="/ecommerce/onlinestore.aspx">[@L[cds.sales/gd/ecommerce/onlinestore:btn-GetStarted]@L]</a>
+    <a data-ci="111" class="btn btn-primary cta-medium" href="/ecommerce/onlinestore.aspx">[@L[cds.sales/gd/ecommerce/onlinestore:btn-GetStarted]@L]</a>
     <div class="pricing">
-      <p class="just-per-mo-with-savings">
-        [@T[productprice:<template productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses">
-        <nostrike><![CDATA[<span class="just-per-mo-original">
-        [@L[cds.sales/gd/ecommerce/onlinestore:JustPrice]@L]
-        </span>]]></nostrike>
-        <strike>[@T[productcompare:<percent primaryproductid="7514" secondaryproductid="7514" hidebelow="1"><html><![CDATA[
-        [@L[cds.sales/gd/ecommerce/onlinestore:SavePercentage]@L]
-        ]]></html></percent>]@T]</strike>
-        </template>]@T]
-      </p>
-      <p class="just-per-mo-with-savings">
-        <span class="price-left">&nbsp;</span>
-        <span>[@T[productprice:<template productid="7514" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T][@L[cds.sales/security/website-security-new:term-year]@L]</span>
-        <span class="save price-right">[@T[productcompare:<percent primaryproductid="7514" secondaryproductid="7514" hidebelow="1"><html><![CDATA[[@L[cds.sales/gd/hosting/website-builder:save]@L] {0}%]]></html></percent>]@T]</span>
-      </p>
-
-      <p class="just-per-mo-with-savings">
-        <span class="price-left">&nbsp;</span>
-        <span>[@T[productprice:<template productid="181769" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T][@L[cds.sales/security/website-security-new:term-year]@L]</span>
-        <span class="save price-right">[@T[productcompare:<percent primaryproductid="181769" secondaryproductid="181769" hidebelow="1"><html><![CDATA[[@L[cds.sales/gd/hosting/website-builder:save]@L] {0}%]]></html></percent>]@T]</span>
-      </p>
-      ##if(productHasSavingsMoreThan(7514, 7514, 0))
-      <div class="pod-onsale">
-        <span class="pod-onsale-text">[@L[cds.sales/homepage:saveup]@L]</span>
-        <span class="pod-onsale-text-big">[@T[productcompare:<percent primaryproductid="7514" secondaryproductid="7514"><html><![CDATA[ [@L[cds.sales/gd/ecommerce/onlinestore:subtSavePitle]@L] {0}%]]></html></percent>]@T]</span>
-      </div>
-      ##endif
+      <p class="just-per-mo">[@L[cds.sales/gd/ecommerce/onlinestore:justPricePerMonth]@L]</p>
+      <p class="save-percentage"><strike>{0}</strike> [@L[cds.sales/gd/ecommerce/onlinestore:savePercentage]@L]</p>
     </div>
   </div>  
 </section>
 
 <!-- start-js-elevate -->
 <script>  
-  {% jsminify %}
 
-  var banner = 1;
 
-  {% endjsminify %}
+
 </script>
 <!-- end-js-elevate -->
