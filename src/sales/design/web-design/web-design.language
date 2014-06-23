@@ -1,0 +1,274 @@
+---
+location: localization/sales/gd/design/web-design/en
+id: 
+name: FOS-22092
+---
+{% include 'modules/doc-block.html' %}
+<phrase key="MetaTitle" />
+Web Design | Professionally Designed Websites - [@T[companyname:name]@T]
+<phrase key="MetaDescription" />
+Leave your next Web Design project to [@T[companyname:name]@T]'s team of professional developers! We will create a website that drives traffic & improves your brand.
+<phrase key="MetaKeywords" />
+web design, website development, website design, web designer, web design services, web design company, web design software, web designers web page design, web site design
+<phrase key="SalesHeaderMainHeading" />
+Website Design Service
+<phrase key="SalesHeaderSubHeadingText" />
+Let our experts create, host and update your dream website
+<phrase key="TabPlanPricingLabel" />
+Plans &amp; Pricing
+<phrase key="TabHowItWorksLabel" />
+How it Works
+<phrase key="TabFAQLabel" />
+FAQ
+<phrase key="TabContentPlanPricingTabHeaderText" />
+Get more than a website. Includes hosting, marketing tools &amp; more!
+<phrase key="TabContentPlanPricingTabSubHeaderText" />
+Want a website that not only looks terrific but works? Leave it to the web experts at [@T[companyname:name]@T]. Our Professional Web Services Team<sup>&reg;</sup> knows just what it takes to build an eye-catching, effective website. Includes free tools to get your site noticed.
+<phrase key="TabContentPlanPricingTabSubHeaderText2" />
+Selling products? We also build  <a data-ci='87597' href="[@T[link:<relative path="/design/web-store-design.aspx"></relative>]@T]" target="_blank">eCommerce websites</a>!
+<phrase key="LinkViewOurDesignsText" />
+View Our Designs
+<phrase key="LinkSeeItInActionText" />
+See it in action
+<phrase key="PlanBoxStandardAbovePlanDetailsCustomContent" />
+Standard
+<phrase key="PlanBoxStartingAt" />
+Starting at
+<phrase key="PlanBoxMonth" />
+month<sup>+</sup>
+<phrase key="PlanBoxAddFacebookPageDesignText" />
+Add Facebook<sup>&reg;</sup> Page Design <br />Just <span class="secondary-color">[@T[productprice:<current productid="855" dropdecimal="false" period="monthly" currencytype="USD" />]@T]/mo</span> <a class="g-a" data-ci='87617' data-toggle="modal" data-target="#actionModal" data-slide-to="4">More Info</a>
+<phrase key="PlanBox40PlanDetails59790Text" />
+<strong>5-page</strong> Website
+<phrase key="PlanBox40PlanDetails59791Text" />
+Template-based site – choose from <strong>300</strong> beautiful designs
+<phrase key="PlanBox40PlanDetails59795Text" />
+<strong>Fast!</strong> Ready in as little as <a class="isToolTip" data-toggle="tooltip" title="Your site will be ready for you to review 2 weeks after we verify receipt of all your content and requested files.">2 weeks</a>
+<phrase key="PlanBox40PlanDetails59792Text" />
+<strong>30 minutes</strong> of updates per month
+<phrase key="PlanBoxPremiumAbovePlanDetailsCustomContent" />
+Premium
+<phrase key="PlanBoxMonth2" />
+month<sup>++</sup>
+<phrase key="PlanBox40PlanDetails69790Text" />
+<strong>20-page</strong> Website
+<phrase key="PlanBox40PlanDetails69791Text" />
+<strong>Custom designed</strong> to work with your existing logo and images
+<phrase key="PlanBox40PlanDetails69795Text" />
+<strong>Fast!</strong> Launch in just <a class="isToolTip" data-toggle="tooltip" title="Your site will be ready for you to review 4 weeks after we verify receipt of all your content and requested files.">4 weeks</a>
+<phrase key="PlanBox40PlanDetails69792Text" />
+<strong>1-on-1 consultation</strong> with your graphic designer
+<phrase key="PlanBox40PlanDetails69793Text" />
+<strong>30 minutes</strong> of updates per month
+<phrase key="PlanBox40PlanDetails69796Text" />
+<strong>Receive a website mockup</strong> for your approval before we proceed
+<phrase key="PlanBox40PlanDetails69797Text" />
+<strong>Up to 2x more</strong> images, videos, form fields, and links than the Standard plan
+<phrase key="List01566TabText" />
+All Plans Include
+<phrase key="Support11622TabText" />
+Support
+<phrase key="List0Items154090Text" />
+<strong class="secondary-color">FREE</strong> <a class="isToolTip" data-toggle="tooltip" title="Our experts will work to improve your search rankings and increase traffic to your site by adding relevant keywords and tags to your pages.">SEO tools</a> to get listed by search engines
+<phrase key="List0Items154091Text" />
+<strong class="secondary-color">FREE</strong> Hosting: 50 GB disk space &amp; 1,000 GB bandwidth
+<phrase key="List0Items154092Text" />
+<strong class="secondary-color">FREE</strong> 1,000 email accounts
+<phrase key="List0Items154093Text" />
+<strong class="secondary-color">FREE</strong> 24/7 Support
+<phrase key="List0Items154094Text" />
+<strong class="secondary-color">FREE</strong> Website Editor – easily make updates yourself
+<phrase key="List0Items154095Text" />
+Fast turnaround
+<phrase key="List0Items154096Text" />
+30 minutes of updates per month
+<phrase key="List0Items154097Text" />
+<strong class="secondary-color">FREE</strong> <a class="isToolTip" data-toggle="tooltip"  title="Increase traffic and sales to your website by improving your rank in the world's top search engines. Search Engine Visibility lets you easily analyze, optimize and submit your site to Google, Yahoo!, Bing and more - no technical expertise necessary.">Search Engine Visibility</a><sup>&#94;</sup>
+<phrase key="List0Items154098Text" />
+<strong class="secondary-color">FREE</strong> <a class="isToolTip" data-toggle="tooltip" title="Protect your data and transactions and increase customer confidence with a GoDaddy SSL - free for 1 year. Features up to 256-bit encryption, 99.9% browser recognition and 24/7 phone support.">1 year SSL Certificate</a>
+<phrase key="List0Items154099Text" />
+<a class="isToolTip" data-toggle="tooltip" title="Our experts will work to improve your search rankings and increase traffic to your site by adding relevant keywords and tags to your pages.">On-page SEO service</a>
+<phrase key="List0Items154100Text" />
+<strong class="secondary-color">FREE</strong> USD $100 Bing<sup>&reg;</sup>/Yahoo!<sup>&reg;</sup> Search Credit<sup>**</sup>
+<phrase key="List0Items154101Text" />
+<strong class="secondary-color">FREE</strong> USD $50 Facebook<sup>&reg;</sup> Credit<sup>***</sup>
+<phrase key="List0Items154102Text" />
+<strong class="secondary-color">FREE</strong> 10 Fotolia<sup>&reg;</sup> Credits<sup>****</sup>
+<phrase key="TabContent22892TabHeaderText" />
+Our design team is invested in your success.
+<phrase key="TabContent22893TabSubHeaderText" />
+With our Website Design Service, we don't just hand you a generic website and send you on your way. We listen to you to make sure your site reflects your style. We help you gain new customers by optimizing your site for maximum exposure. We even keep your site up-to-date – just call us and we'll change your text or update your images.
+<phrase key="MainPageContentTabContent0title0" />
+Share your vision
+<phrase key="MainPageContentTabContent0text0" />
+Give our staff the basics on your business or group via an online interview.
+<phrase key="MainPageContentTabContent0text1" />
+Provide examples of websites you like or don't like.
+<phrase key="MainPageContentTabContent0text2" />
+Choose your site layout from 300+ beautiful template-based designs. (Standard Plan)
+<phrase key="MainPageContentTabContent0text3" />
+Speak directly with your designer to discuss the layout of your site, header design and other graphics. (Premium plan)
+<phrase key="MainPageContentTabContent0text4" />
+Use our online Design Manager tool to provide our design team with the images and words you want to use on your site.
+<phrase key="MainPageContentTabContent0text5" />
+Questions along the way? Just pick up the phone or send us an email.
+<phrase key="MainPageContentTabContent0title1" />
+We go to work
+<phrase key="MainPageContentTabContent0text6" />
+After reviewing your information and samples, our expert design staff creates a site based on your instructions.
+<phrase key="MainPageContentTabContent0text7" />
+We add your text and images, as well as SEO (Search Engine Optimization) tags on every page to improve your site's visibility on popular search engines.
+<phrase key="MainPageContentTabContent0text8" />
+Your site will be ready for you to review in as little as two weeks after we've received your content for the Standard plan (four weeks for the Premium plan.)
+<phrase key="MainPageContentTabContent0text9" />
+Once you've approved your site, we send it through our quality control process and it goes live for the world to see!
+<phrase key="MainPageContentTabContent0title2" />
+Enhance and expand
+<phrase key="MainPageContentTabContent0text11" />
+Once your site has launched, contact us and we'll set up your FREE Search Engine Visibility ([@T[productprice:<current productid="1401" dropdecimal="false" period="yearly" currencytype="USD" />]@T]/yr value), which submits your site to the world's top search engines, including Google<sup>&reg;</sup>, Yahoo!<sup>&reg;</sup> and more.
+<phrase key="MainPageContentTabContent0text12" />
+If you need to update the text or change an image on your site, just contact us. Each plan includes 30 minutes of updates per month to keep your site fresh and current.
+<phrase key="Features0CurrentFeatures909114CTA" />
+Choose your Package
+<phrase key="FAQ0FAQItems1368110Title" />
+Web designing made easy.
+<phrase key="FAQ0FAQListItems60136890Text" />
+Want the website of your dreams, but struggle with <strong>web page design</strong>? Why not let the Professional Web Services Team<sup>&reg;</sup> create your website? They build your custom website, with <strong>Web design</strong> and Web hosting included at an incredible value.
+<phrase key="FAQ0FAQListItems60136891Text" />
+With [@T[companyname:name]@T] website design services you get a professional website at an affordable price.
+<phrase key="FAQ0FAQListItems60136892Text" />
+Our Web design service is the easy way to get a professional website, complete with world-class hosting, powerful marketing tools and more. Our team of expert <strong>website designers</strong> can help you get the site you've always wanted in as little as two weeks.
+<phrase key="FAQ0FAQListItems60136893Text" />
+For more information, see <a target="_faq" data-ci='87609' href="[@T[link:<external linktype="communityurl" path="help/article/3949" secure="false"/>]@T]">What is included with Website Design Services?</a>
+<phrase key="FAQ0FAQItems1368112Title" />
+How does [@T[companyname:name]@T]&apos;s Web designing service work?
+<phrase key="FAQ0FAQListItems62136890Text" />
+Once you&apos;ve selected the plan that&apos;s right for you, you&apos;ll give your personal Web designer the basic information about your site. You can even provide sites that you like for reference, if you choose.
+<phrase key="FAQ0FAQListItems62136891Text" />
+With a custom website or Web store from the Professional Web Services Team<sup>&reg;</sup>, a team of Design Specialists handle all stages of <strong>website development</strong>. You simply provide the site content and images, and then the Dream Design Team handles everything else for your <strong>custom website</strong>.
+<phrase key="FAQ0FAQListItems62136892Text" />
+From there, we build a website that fits your style, as well as your needs.
+<phrase key="FAQ0FAQListItems62136893Text" />
+For more information, see <a target="_faq" data-ci='87610' href="[@T[link:<external linktype="communityurl" path="help/article/4920" secure="false"/>]@T]">About the Interactive Online Interview.</a>
+<phrase key="FAQ0FAQItems1368111Title" />
+Can I give feedback on the web design as it's being built?
+<phrase key="FAQ0FAQListItems61136890Text" />
+You bet! You can log in to our 24/7 Design Manager at any point and review the <strong>Web site design</strong> as it stands currently. You can even leave feedback for your <strong>Web designer</strong> to help them build a website that you'll be proud to share with the world.
+<phrase key="FAQ0FAQListItems61136891Text" />
+For more information, see <a target="_faq" data-ci='87611' href="[@T[link:<external linktype="communityurl" path="help/article/4173" secure="false"/>]@T]">Getting Started with the Design Manager.</a>
+<phrase key="FAQ0FAQItems1368113Title" />
+What about updating my website?
+<phrase key="FAQ0FAQListItems63136890Text" />
+Every month, you get 30 minutes of updates to help keep your site fresh. Our Web designers can change text, swap out images, whatever you need them to do.
+<phrase key="FAQ0FAQListItems63136891Text" />
+Don't worry about trying to track down a difficult-to-reach webmaster. You can request site updates anytime using the Design Manager. Simply send your design specialist a description of the update, and we'll notify you when it's ready for your review.
+<phrase key="FAQ0FAQListItems63136892Text" />
+Once your site is published, we make it easy for you to update your site on your own. You can log in to your account and make minor website updates on the fly, while reserving your monthly update minutes for the big changes to your site.
+<phrase key="FAQ0FAQListItems63136893Text" />
+For more information, see <a target="_faq" data-ci='87612' href="[@T[link:<external linktype="communityurl" path="help/article/4606" secure="false"/>]@T]">Requesting an Update to Your Website or Web Store.</a>
+<phrase key="FAQ0FAQItems1368114Title" />
+Why should I choose [@T[companyname:name]@T] Website Design?
+<phrase key="FAQ0FAQListItems64136890Text" />
+We give you more than Web page design. Each plan includes more than [@T[currencyprice:<price usdamount="39100" dropdecimal="true" currencytype="USD" />]@T] in free extras: hosting, email, SEO tools, an SSL certificate and more.
+<phrase key="FAQ0FAQListItems64136891Text" />
+With [@T[companyname:name]@T] web design services not only do we offer you 30 free minutes to update your website each month, additional half hours are also only [@T[currencyprice:<price usdamount="4000" dropdecimal="true" currencytype="USD" />]@T], compared to possibly [@T[currencyprice:<price usdamount="10000" dropdecimal="true" currencytype="USD" />]@T] or more an hour at another Web design company.
+<phrase key="FAQ0FAQListItems64136892Text" />
+And don't forget about our 24/7/365 support &ndash; Most Web design services are closed after 5 and on weekends. But like every [@T[companyname:name]@T] product, our website design services our backed by our world-class customer service.
+<phrase key="FAQ0FAQListItems64136893Text" />
+Website creation from the Professional Web Services Team<sup>&reg;</sup> lets you rest easy knowing a dream website is just around the corner.
+<phrase key="FAQ0FAQListItems64136894Text" />
+For more information, see <a target="_faq" data-ci='87613' href="[@T[link:<external linktype="communityurl" path="help/article/3570" secure="false"/>]@T]">What kinds of websites can the Dream Design Team build?</a>
+<phrase key="FAQ0FAQItems1368115Title" />
+How do I get started after I purchase [@T[companyname:name]@T] Web Design Services?
+<phrase key="FAQ0FAQListItems65136890Text" />
+Congratulations! Your [@T[companyname:name]@T] Dream Design website is right around the corner. Our designers are excited to create the website you want.
+<phrase key="FAQ0FAQListItems65136891Text" />
+Simply log in to the <a target="_faq" data-ci='87614' href="[@T[link:<external linktype="communityurl" path="help/article/4173" secure="false"/>]@T]">Design Manager</a> and provide the details we need to get started on your site.
+<phrase key="FAQ0FAQListItems65136892Text" />
+You can also use the Design Manager to upload files for your website, send messages quickly to your expert website designer, and view the progress of your custom website while we are building it.
+<phrase key="FAQ0FAQListItems65136893Text" />
+Our streamlined process makes your [@T[companyname:dotcom]@T] Web design experience easy.
+<phrase key="FAQ0FAQListItems65136894Text" />
+For more information, see <a target="_faq" data-ci='87615' href="[@T[link:<external linktype="communityurl" path="help/article/2704" secure="false"/>]@T]">Getting Started with [@T[companyname:name]@T] Website Design Services.</a>
+<phrase key="SupportSubTitle1" />
+<strong>Receive support and exchange ideas. Join the Design Services Group on [@T[companyname:name]@T] Support to:</strong>
+<phrase key="SupportSubText1" />
+Get direct access to info and news that interests you
+<phrase key="SupportSubText2" />
+Interact with other members
+<phrase key="SupportSubText3" />
+Gain access to new features
+<phrase key="SupportSubText4" />
+Check out beta releases
+<phrase key="SupportSubText5" />
+Find discount codes
+<phrase key="SupportSubText6" />
+Participate in polls and much more
+<phrase key="SupportSubTitle2" />
+<strong>Receive support and exchange ideas. Join the Design Services Group on [@T[companyname:name]@T] Support to:</strong>
+<phrase key="SupportSubText7" />
+Technical support and sales: [@T[supportphone:<designteam/>]@T] FASTEST! Expected Wait Time: 7 minutes
+<phrase key="SupportSubText8" />
+Email support: <a data-ci='87606' href="[@T[link:<external linktype="communityurl" path="support" secure="false"/>]@T]">Access Email Support System</a> Expected Wait Time: 5 hours
+<phrase key="month" />
+/month
+<phrase key="12-months" />
+12 months
+<phrase key="24-months" />
+24 months
+<phrase key="36-months" />
+36 months
+<phrase key="save" />
+save
+<phrase key="planbox-cart-btn" />
+Add to Cart
+<phrase key="LearnMoreBadgeText" />
+Call to Learn More!
+<phrase key="LearnMoreBadgeTel" />
+[@T[supportphone:<designteam/>]@T]
+<phrase key="FeaturesListItem1" />
+<strong>It all starts with your dream.</strong> Tell us what you envision for your new site via our online interview.
+<phrase key="FeaturesListItem2" />
+<strong>Monitor your site along the way</strong> with 24/7 access to your Design Manager. View designs, send files and leave feedback.
+<phrase key="FeaturesListItem3" />
+<strong>Keep your site fresh</strong> without having to make changes yourself. Our staff will make 30 minutes of updates every month, at your request.
+<phrase key="FeaturesListItem4" />
+<strong>Over [@T[currencyprice:<price usdamount="25000" dropdecimal="true" currencytype="USD" />]@T] in FREE extras!</strong>&#134; Every plan includes our world-class web hosting, Search Engine Visibility and more.
+<phrase key="FeaturesListItem5" />
+<strong>No setup fees.</strong> Your Website Design Service subscription covers everything you need to keep your site online and thriving.
+<phrase key="ContentDisclaimerSymbols" />
+<sup>++</sup>, <sup>&deg;&deg;</sup>, &#134;, +, ++, &#8225;, <sup>**</sup>, <sup>***</sup>, <sup>****</sup>, <sup>&#94;</sup>
+<phrase key="ContentDisclaimerLink" />
+Click here for product disclaimers and legal policies.
+<phrase key="ContentDicalimerText" />
+Third-party logos and marks are registered trademarks of their respective owners. All rights reserved.
+<phrase key="DisclaimerModalHeader" />
+Disclaimers
+<phrase key="DisclaimerModalItem01" />
+&#134; [@T[currencyprice:<price usdamount="29100" dropdecimal="true" currencytype="USD" />]@T] value based on Microsoft® Advertising Credit, Facebook® Advertising Credit, Fotolia® Credit, website analytics, Search Engine Visibility, and SSL Certificate. Comparison prices are accurate as of 9/20/12 and are subject to change.
+<phrase key="DisclaimerModalItem02" />
++ An early termination fee of [@T[currencyprice:<price usdamount="15000" dropdecimal="true" currencytype="USD" />]@T] will be applied to Standard plans cancelled within six months of signup.
+<phrase key="DisclaimerModalItem03" />
+++ An early termination fee of [@T[currencyprice:<price usdamount="50000" dropdecimal="true" currencytype="USD" />]@T] will be applied to Premium plans cancelled within six months of signup.
+<phrase key="DisclaimerModalItem04" />
+&#8225; Annual discounts available on NEW purchases only.
+<phrase key="DisclaimerModalItem05" />
+<sup>**</sup> One promotional credit per customer for a new Microsoft® Advertiser account. Products purchased using a Gift Card or Alipay do not provide eligibility for advertising credits. Offer valid to US residents only, other restrictions apply. <a href="javascript: void(0)" onclick="window.open('[@T[appSetting:<setting name="BING_AD_CREDIT_LINK" />]@T]', 'display', 'left=20,top=20,scrollbars=yes,resizable=yes,width=1060,height=600')">View Details</a>.
+<phrase key="DisclaimerModalItem06" />
+<sup>***</sup> One promotional credit per customer for a new Facebook® Advertiser account. Products purchased using a Gift Card or Alipay do not provide eligibility for advertising credits. Offer valid only for purchase of advertising in the US, Canada, UK, and Australia. Other restrictions apply. <a href="javascript: void(0)" onclick="window.open('[@T[link:<relative path="/popups/facebook-ads.aspx"><param name="ci" value="46433" /><param name="app_hdr" value="99" /></relative>]@T]', 'display', 'left=20,top=20,scrollbars=yes,resizable=yes,width=620,height=560')">View Details</a>.
+<phrase key="DisclaimerModalItem07" />
+<sup>****</sup> One promotional credit per customer, good for ten free download credits at Fotolia®. Products purchased using a Gift Card or Alipay do not provide eligibility for photography credits. Other restrictions apply. <a href="javascript: void(0)" onclick="window.open('[@T[link:<relative path="/popups/fotolia.aspx"><param name="ci" value="21221" /><param name="app_hdr" value="99" /></relative>]@T]', 'display', 'left=20,top=20,scrollbars=yes,resizable=yes,width=640,height=550')">View Details</a>.
+<phrase key="DisclaimerModalItem08" />
+<sup>&#94;</sup> Initial setup of Free Search Engine Visibility and website analytics accounts count towards your allotted 30 minutes of monthly site updates.
+<phrase key="DisclaimerModalItem09" />
+Products will automatically renew until cancelled. You may turn off the auto-renewal feature by visiting your [@T[companyname:name]@T] account.
+<phrase key="DisclaimerModalItem10" />
+SSL Certificate is free for 1 year with purchase. After the initial free year, SSL will automatically renew at the then-current price until cancelled. You may cancel automatic renewal at any time in your [@T[companyname:name]@T] account.
+<phrase key="SalesHeader22SocialData1Description" />
+Let the [@T[companyname:dotcom]@T] Professional Web Design team; create an eye-catching, one-of-a-kind website &ndash; or Facebook&reg; page &ndash; just for you! Simply share your vision, and our design pros will work with you to make it a reality &ndash; it's that easy!
+<phrase key="SalesHeader22SocialData4Title" />
+[@T[companyname:dotcom]@T] Website Design Service
+<phrase key="ViewDesignsLink" />
+View Designs
+<phrase key="vat-price" />
+Price does not include taxes, where applicable
