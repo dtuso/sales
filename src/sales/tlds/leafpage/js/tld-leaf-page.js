@@ -22,7 +22,8 @@ if (!domains.controls.cds_gtld_templates) {
         $lrEarlyAccessDiv: $('#lr-earlyaccess'),
         $lrNotEarlyAccessDiv: $('#lr-not-earlyaccess'),
         tldH1TagExists: true,
-        tldMarketingContentTagExists: true
+        tldMarketingContentTagExists: true,
+        tldUKLogo:''
       },
       isUserWatchingGtld = false,
       modalObject = null,
@@ -260,7 +261,7 @@ if (!domains.controls.cds_gtld_templates) {
       return (items.length == 0) ? null : items[0];
     }
 
-    function getCurrentPrice(phaseData) {
+    function getCurrentPrice(phaseData) {       
       if(typeof phaseData === 'undefined' || phaseData === null) {
         return 'nill';
       }
@@ -268,13 +269,46 @@ if (!domains.controls.cds_gtld_templates) {
         return 'null';
       }
       if(typeof phaseData.Prices.TotalCurrent !== 'undefined') {
-        return phaseData.Prices.TotalCurrent
+
+        if(phaseData.HasIcannFee)
+        {
+          if(phaseData.Code == 'GA' || phaseData.Code == 'ga') {
+            $('#tld-pricetagline').append('<span> <strong style="text-decoration:line-through">'+phaseData.Prices.TotalList+'</em>*</strong>');
+          }
+          return phaseData.Prices.TotalCurrent+'*'
+        }
+        else
+        {
+          if(phaseData.Code == 'GA' || phaseData.Code == 'ga') {
+            $('#tld-pricetagline').append('<span> <strong style="text-decoration:line-through">'+phaseData.Prices.TotalList+'</em></strong>');
+          }
+          $('#limitations-wrap').remove();
+        // if(phaseData.HasIcannFee)
+        // {
+        //   $('#tld-pricetagline').append('<span> <strong style="text-decoration:line-through">'+phaseData.Prices.TotalList+'</em>*</strong>');
+           
+        //   return phaseData.Prices.TotalCurrent  +'*'      
+        // }
+        // else
+        // {
+        //   $('#tld-pricetagline').append('<span> <strong style="text-decoration:line-through">'+phaseData.Prices.TotalList+'</em></strong>');
+        //   $('#limitations-wrap').remove();
+           
+          return phaseData.Prices.TotalCurrent;          
+        }
       }
       if(typeof phaseData.Prices.TotalList !== 'undefined') {
-        return phaseData.Prices.TotalList
+        if(phaseData.HasIcannFee)
+          return phaseData.Prices.TotalList +'*'
+        else
+        {
+          $('#limitations-wrap').remove();
+          return phaseData.Prices.TotalList;
+        }
       }
       return 'missing';
     }
+    $('#tld-priceline span:nth-child(2)').remove();
     
     function showHideLogoImage() {
       // hide the logo div if image doesn't exist
@@ -285,12 +319,12 @@ if (!domains.controls.cds_gtld_templates) {
       }
     }
 
-    function hideProductLimtations() {
-      // hide the product limitations div if they don't exist
-      if(settings.hasProductLimitations === false) {
-        $('#limitations-wrap').remove();
-      }
-    }
+    // function hideProductLimtations() {
+    //   // hide the product limitations div if they don't exist
+    //   if(settings.hasProductLimitations === false) {
+    //     $('#limitations-wrap').remove();
+    //   }
+    // }
 
     function consoleLog(str) {    
       window.console && window.console.log && window.console.log(str); 
@@ -318,7 +352,7 @@ if (!domains.controls.cds_gtld_templates) {
       showHideLogoImage();
       setupSocialSharing();
       setupLimitationsModal();
-      hideProductLimtations();
+      //hideProductLimtations();
 /*
       settings.gTldPreRegPhaseDataJson = [
       {"Code":"SRA","StartDate":"Wednesday, September 18, 2013","StartTime":"4:00 PM UTC","EndDate":"Thursday, September 19, 2013","EndTime":"4:00 PM UTC","Status":3,"HasIcannFee":false,"IsSelected":false,"Prices":{"DomainRegList":"$39.99","DomainRenewList":"$39.99","ApplicationFee":"$159.99","TotalList":"$199.98"}},
@@ -415,7 +449,7 @@ if (!domains.controls.cds_gtld_templates) {
         $('#sr-price').html(getCurrentPrice(srPhaseData));
         $('#div-sr-trademark').show(); //show after pricing has been tokenized to prevent FOUC
       }
-
+      $("#ga-price-dur, #sr-price-dur , #lr-price-dur").remove();
 
 
     };
