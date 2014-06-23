@@ -1,7 +1,7 @@
 ---
 location: localization/sales/gd/hosting/web-hosting/en
-id: 5390ed8af778fc21dc6e3f44
-name: FOS-20706
+id: 
+name: FOS-22092
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="page-title" />
@@ -239,7 +239,7 @@ Host unlimited Websites
 <phrase key="ultimate-plan-starting-at-11166" />
 As low as [@T[productprice:<current productid="32082" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/month
 <phrase key="ultimate-plan-all-benefits-of-11166" />
-All the benefits of <b>Deluxe</b> plus <b><a class="isToolTip" data-toggle="tooltip" title="" data-original-title="A [@T[productprice:<current productid='70852' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' />]@T]/yr value, our Premium DNS makes it easy to resolve common issues that prevent people from accessing your site, improving your overall performance, availability, and security.">Premium DNS</a></b> and <b>SSL Certificate</b><br> <a class='isToolTip smallHoverText' data-toggle='tooltip' title='' data-original-title='A [@T[productprice:<current productid="3608" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]/yr value, your GoDaddy SSL certificate keeps transactions with your website secure. Take advantage of 256-bit encryption and 99.9% browser recognition. Free for initial purchase term, after which SSL certificate will automatically renew at the then-current rate.'>Restrictions apply to SSL Certificate</a>
+All the benefits of <b>Deluxe</b> plus <b><a class="isToolTip" data-toggle="tooltip" title="" data-original-title="A [@T[productprice:<current productid='70852' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' />]@T]/yr value, our Premium DNS makes it easy to resolve common issues that prevent people from accessing your site, improving your overall performance, availability, and security.">Premium DNS</a></b> and <b>1 year SSL Certificate</b><br> <a class='isToolTip smallHoverText' data-toggle='tooltip' title='' data-original-title='A [@T[productprice:<current productid="3608" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]/yr value, your GoDaddy SSL certificate keeps transactions with your website secure. Take advantage of 256-bit encryption and 99.9% browser recognition. Free for initial purchase term, after which SSL certificate will automatically renew at the then-current rate.'>Restrictions apply to SSL Certificate</a>
 <phrase key="all-plans-include-mt-11166" />
 Economy/Deluxe/Ultimate Plans Include
 <phrase key="all-plans-include-11166" />
@@ -985,7 +985,7 @@ Products will automatically renew until cancelled. You may turn off the auto-ren
 <phrase key="modal-disclaimer-11166" />
   <p><sup>&Dagger;&Dagger;</sup> Applicable to accounts set up with Windows IIS7 only. Accounts set up with Windows IIS6 will have 1 FTP User Account.</p>
   <p><sup>&ordm;&ordm;</sup> While Deluxe and Unlimited Web Hosting Plans support and host unlimited Web Sites, owners of single plans with more than 400 Web Sites may experience periodic decreases in performance.</p>
-  <p><sup>&dagger;&dagger;</sup>SSL certificate is free only for the initial hosting plan term purchased, after which it will automatically renew at the then-current rate.</p>
+  <p><sup>&dagger;&dagger;</sup>SSL Certificate is free for 1 year with purchase. After the initial free year, SSL will automatically renew at the then-current price until cancelled. You may cancel automatic renewal at any time in your [@T[companyname:name]@T] account.</p>
 
 <phrase key="labelNew" />
 New
