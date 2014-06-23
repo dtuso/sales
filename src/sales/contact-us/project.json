@@ -7,14 +7,14 @@
       },
       "cdsLocation": "sales/contact-us.aspx",
       "draft": {
-        "id": " 537d366bf778fc2460fbadc5",
-        "createdDate": "2014-05-21",
+        "id": "53a89a76f778fc13248233d5",
+        "createdDate": "2014-06-23",
         "createdBy": {
           "fullName": "Avinash Peesari",
           "username": "apeesari"
         },
-        "jiraTicket": "FOS-20852",
-        "comments": "Updated the hours text for some countries/cities",
+        "jiraTicket": "FOS-21990",
+        "comments": "Added new phone number for Ireland to contact us page for all locales",
         "url": "http://www.dev-godaddy.com/contact-us.aspx"
       }
     },
