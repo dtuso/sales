@@ -28,7 +28,7 @@
       },
       "cdsLocation": "localization/sales/gd/ssl/dedicated-ip/en",
       "draft": {
-        "comments": "Change 'acces' to 'access'"
+        "comments": "Removed hard coded wait times"
       }
     }
   }

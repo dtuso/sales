@@ -17,5 +17,17 @@
     "metaOgTitle": "[@L[cds.sales/gd/design/web-design:SalesHeader22SocialData4Title]@L]",
     "metaOgImage": "fos/icn/dream_design.jpg",
     "metaOgDescription": "[@L[cds.sales/gd/design/web-design:SalesHeader22SocialData1Description]@L]"
+    },
+    "source.language": {
+    "cdsDetails": {
+      "champion": {
+        "name": "",
+        "email": ""
+      },
+      "cdsLocation": "localization/sales/gd/design/web-design/en",
+      "draft": {
+        "comments": "Removed hard coded wait times"
+      }
+    }
   }
 }
