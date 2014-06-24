@@ -20,11 +20,10 @@ assetPath: false
   <!-- start-css-elevate -->
   <style>  
   {% less %}
-  {% include 'css/styles.less' %}
-  .alt-bgcolor {background-color: rgb(251,247,245);}
-  .light-section-bgcolor {background-color: white;}
-  .l-main-container {width: 1020px;margin: 0 auto;padding:0px 70px;}
-  .f-main-container {width: 1020px;margin: 0 auto;}
+    .alt-bgcolor {background-color: rgb(251,247,245);}
+    .light-section-bgcolor {background-color: white;}
+    .wider-container {width: 1020px;margin: 0 auto;padding:0px 70px;}
+    .thou-container {width: 1000px;margin: 0 auto;}
   {% endless %}
   </style>
   <!-- end-css-elevate -->
@@ -48,6 +47,32 @@ assetPath: false
 
   <script>
   {% jsminify %}
+
+  $(document).ready(function(){
+    var tokenize = function($obj, strArr) {
+      var tokenized = $obj.html();
+      for(var idx = 0; idx< strArr.length; idx++) {
+        tokenized = tokenized.replace('{' + idx + '}', strArr[idx]);
+      }
+      $obj.html(tokenized);
+    }
+    var currentPrice = '[@T[productprice:<template productid="7514" period="monthly"><nostrike><![CDATA[{0}]]></nostrike><strike><![CDATA[{0}]]></strike></template>]@T]';
+    var oldPrice = '[@T[productprice:<template productid="7514" period="monthly"><nostrike><![CDATA[{1}]]></nostrike><strike><![CDATA[{1}]]></strike></template>]@T]';
+    var onSale = currentPrice !== oldPrice;
+    var savePercentage = '[@T[productcompare:<percent primaryproductid="7514" secondaryproductid="7514" hidebelow="1"><html><![CDATA[{0}]]></html></percent>]@T]';
+    
+    var $permo = $('.main-banner-onlinestore div.pricing p.just-per-mo');
+    var $save =  $('.main-banner-onlinestore div.pricing p.save-percentage');
+    if(onSale) {
+      tokenize($save, [oldPrice, savePercentage]);
+      $save.show();
+    }
+    tokenize($permo, [currentPrice]);
+    $permo.show();
+
+
+  });
+
   {% endjsminify %}
   </script>
 

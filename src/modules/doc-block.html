@@ -23,13 +23,13 @@
     CDS URL:
       http://siteadmin.dev.intranet.gdg/cds/ide#{{cdsDetails.draft.id}}
 {% endif %}
-{% if cdsDetails.draft.url %}
+
+{% if cdsDetails.draft.splitSide %}
+    SPLIT PREVIEW URL:
+      http://gui.dev-godaddy.com/splittest/splittestredirect.aspx?test={{ cdsDetails.draft.splitSide }}&dest={{ cdsDetails.draft.url }}{% if cdsDetails.draft.id %}?version={{ cdsDetails.draft.location }}|{{cdsDetails.draft.id}}{% endif %}
+{% elseif cdsDetails.draft.url %}
     PREVIEW URL:
       {{ cdsDetails.draft.url }}{% if cdsDetails.draft.id %}?version={{ cdsDetails.draft.location }}|{{cdsDetails.draft.id}}{% endif %}
 {% endif %}
-
-
-
-
 
 END DOC BLOCK -->

@@ -16,7 +16,6 @@
       margin-bottom: 5px;
   }
   .main-features-onlinestore h2 {
-    text-align: center;
     margin: 20px 0; 
   }
   h3.features-calltoaction {
@@ -28,29 +27,59 @@
   }
   .main-features-onlinestore h2 {
       margin: 20px 0;
-      text-align: center;
+  }
+  .feature-item img {
+    display: block;
+  }
+  .feature-item {
+    font-size: 16px;
+  }
+  .feature-item p {
+    margin: 0px;
   }
   {% endless %}
 </style>
 <!-- end-css-elevate -->
 
 <section class="container main-features main-features-onlinestore">
-  <div class="row l-main-container alt-bgcolor">
-    <div class="col-xs-12">
-      <h2>Features and Details</h2>
+  <div class="row wider-container alt-bgcolor">
+    <div class="col-xs-12 text-center">
+      <h2 class="">It's all included.</h2>
+      <h3>You'll get everything you need to start selling and making money.</h3>
     </div>
   </div>
-  <div class="row l-main-container alt-bgcolor">
-    <div class="col-xs-6">
+  <div class="row wider-container alt-bgcolor text-center">
+    <div class="col-xs-3 feature-item">
+      <img src="" alt="">
+      <p>Incredibly easy to set up</p>
+    </div>
+    <div class="col-xs-3 feature-item">
+      <img src="" alt="">
+      <p>Get paid with no hassle</p>
+    </div>
+    <div class="col-xs-3 feature-item">
+      <img src="" alt="">
+      <p>Tracks inventory and invoices</p>
+    </div>    
+    <div class="col-xs-3 feature-item">
+      <img src="" alt="">
+      <p>Set up shipping your way</p>
+    </div>
+  </div>
+
+  <div class="row wider-container alt-bgcolor">
+    <div class="col-xs-12 text-center">
       <h3>Build for business owners, not designers.</h3>
       <p>You don't need to be a computer expert to build your store with us. Just pick your favorite design (we have hundreds to choose from), add your products and payment details and click Publish. Congrats! Your online store is open for business.</p>
+      <h3>Getting paid got easy.</h3>
+      <p>Give your customers payment flexibility. Credit card processing through Stripe is included, and lets you accept credit and debit cards - all with no monthly fees, no refund costs and no charges for failed transactions, so you keep more of what you earn.</p>
     </div>
     <div class="col-xs-6">
       ##if(activeLanguageAny([en]))
         <a class="video-link" data-toggle="modal" data-target="#myVideoModal" data-ci="86688">
           <i class="ico ico-gt-circle"></i>
           <span class="br"></span>
-          <span><strong>[@L[cds.sales/gd/ecommerce/onlinestore:WatchVideo]@L]</strong></span>
+          <span><strong>[@L[cds.sales/gd/ecommerce/onlinestore:watchVideo]@L]</strong></span>
         </a>
         <div class="modal fade videoModal" id="myVideoModal">
           <div class="modal-dialog">
@@ -68,7 +97,7 @@
       ##endif
     </div>
   </div>
-  <div class="row l-main-container alt-bgcolor">
+  <div class="row wider-container alt-bgcolor">
     <div class="col-xs-6">
       Powered by stripe!
     </div>
@@ -77,7 +106,7 @@
       <p>Give your customers payment flexibility. Credit card processing through Stripe is included, and lets you accept credit and debit cards - all with no monthly fees, no refund costs and no charges for failed transactions, so you keep more of what you earn.</p>
     </div>
   </div>
-  <div class="row l-main-container light-section-bgcolor">
+  <div class="row wider-container light-section-bgcolor">
     <div class="col-xs-12">
       <h3 class="features-calltoaction">
         So easy to set up, you can make your first sales today. Just $$$
@@ -85,7 +114,7 @@
       </h3>
     </div>
   </div>
-  <div class="row l-main-container alt-bgcolor">
+  <div class="row wider-container alt-bgcolor">
     <div class="col-xs-6">
       <h3>Build your business with the right tools.</h3>
       <ul>
