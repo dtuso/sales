@@ -527,6 +527,7 @@ a .show-span.plus-span{
 }
 
 .compare-table-wrapper table td.last{
+  vertical-align: bottom;
   border: none;
 }
 
@@ -553,10 +554,28 @@ a .show-span.plus-span{
 }
 
 .compare-table-wrapper table td.last p{
+  width: 90%;
+  margin-left: 5%;
   margin: 0;
   margin-top: 8px;
   margin-right: 8px;
   font-size: .9em;
+}
+
+.compare-table-wrapper table td.last .as-low-as{
+  margin: 0;
+  width: 90%;
+  margin-left: 5%;
+  text-align: left;
+  font-size: .8em;
+  color: #FF910F;
+}
+
+.compare-table-wrapper table td.last strike{
+  margin-right: 8px;
+  font-size: .6em;
+  font-weight: 400;
+  color: #333333;
 }
 
 .compare-table-wrapper table td.last p.td-header{
@@ -567,6 +586,8 @@ a .show-span.plus-span{
 }
 
 .compare-table-wrapper table .table-plan-box-price{
+  width: 90%;
+  margin-left: 5%;
   font-size: 2em;
   line-height: 1;
   font-weight: 600;
@@ -576,13 +597,41 @@ a .show-span.plus-span{
   display: block;
 }
 
+.compare-table-wrapper table .table-plan-box-price.discounted{
+  margin: 0;
+  width: 90%;
+  margin-left: 5%;
+  font-size: 1.8em;
+  line-height: 1;
+  font-weight: 400;
+  text-align: left;
+  color: #FF910F;
+  margin-bottom: 0px;
+  display: block;
+}
+
+.compare-table-wrapper table .table-plan-box-price.discounted span, .compare-table-wrapper table .table-plan-box-price.discounted strike{
+  display: inline-block;
+}
+
 .compare-table-wrapper table .table-per-user{
   font-size: .9em;
   text-align: center;
   margin-top: 3px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   font-weight: 200;
   display: inline-block;
+}
+
+.compare-table-wrapper table .table-per-user.discounted{
+  width: 90%;
+  margin-left: 5%;
+  font-size: .9em;
+  text-align: left;
+  margin-top: 3px;
+  margin-bottom: 15px;
+  font-weight: 200;
+  display: block;
 }
 
 .compare-table-wrapper table td.last button{

@@ -1,6 +1,6 @@
 ---
 location: sales/business/split-test/office-365.aspx
-id: 53a4ca98f778fc2254bc9b77
+id: false
 name: Page Reskin - post language updates
 assetPath: false
 ---
@@ -86,14 +86,14 @@ assetPath: false
                     </div>  
                     ##if(productHasSavingsMoreThan(31805, 31805, 0))
                       <div class="strike-through-wrapper">
-                        <p class="strike-through-price">[@T[productprice:<template productid="31805" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]
+                        <p class="strike-through-price">[@T[productprice:<template productid="31805" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]<sup>*</sup>
                           <span class="secondary-color uppercase">
                             <strong> 
-                              [@L[cds.sales/business/office-365:split-test-b-1-save]@L] [@T[productcompare:<percent primaryproductid="31805" secondaryproductid="31805" hidebelow="5"><html><![CDATA[{0}%]]></html></percent>]@T]
+                              [@L[cds.sales/business/office-365:split-test-b-1-save]@L]<sup>*</sup> [@T[productcompare:<percent primaryproductid="31805" secondaryproductid="31805" hidebelow="5"><html><![CDATA[{0}%]]></html></percent>]@T]
                             </strong>
                           </span>
                         </p>
-                        <p class="current-renewal-price"><sup>*</sup>[@L[cds.sales/business/office-365:split-test-b-3-current-renewal-price]@L]</p>
+                        <p class="current-renewal-price">[@L[cds.sales/business/office-365:split-test-b-3-current-renewal-price]@L]</p>
                       </div>
                     ##endif
             <button type="button" class="btn btn-warning btn-block btn-lg js-add-to-cart plan-box-button" data-value="OfficeEmailMsft1yr" data-ci="91160">[@L[cds.sales/business/office-365:split-test-b-3-AddToCart]@L]</button>
@@ -120,20 +120,16 @@ assetPath: false
             </div>  
             ##if(productHasSavingsMoreThan(31825, 31825, 0))
               <div class="strike-through-wrapper">
-                <p class="strike-through-price">[@T[productprice:<template productid="31825" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]
+                <p class="strike-through-price">[@T[productprice:<template productid="31825" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]<sup>*</sup>
                   <span class="secondary-color uppercase">
                     <strong> 
                       [@L[cds.sales/business/office-365:split-test-b-1-save]@L] [@T[productcompare:<percent primaryproductid="31825" secondaryproductid="31825" hidebelow="5"><html><![CDATA[{0}%]]></html></percent>]@T]
                     </strong>
                   </span>
                 </p>
-                <p class="current-renewal-price"><sup>*</sup>[@L[cds.sales/business/office-365:split-test-b-3-current-renewal-price]@L]</p>
+                <p class="current-renewal-price">[@L[cds.sales/business/office-365:split-test-b-3-current-renewal-price]@L]</p>
               </div>
             ##endif
-            <!-- <p class="plan-box-price">
-              [@T[productprice:<current productid="31825" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]
-            </p>
-            <p class="per-user">[@L[cds.sales/business/office-365:split-test-b-3-PerUserMonth]@L]</p> -->
             <button type="button" class="btn btn-warning btn-block btn-lg js-add-to-cart plan-box-button" data-value="OfficeBusMsft1yr" data-ci="91161">[@L[cds.sales/business/office-365:split-test-b-3-AddToCart]@L]</button>
           </div>
         </div>
@@ -159,7 +155,7 @@ assetPath: false
             </div>  
             ##if(productHasSavingsMoreThan(31841, 31841, 0))
               <div class="strike-through-wrapper">
-                <p class="strike-through-price">[@T[productprice:<template productid="31841" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]
+                <p class="strike-through-price">[@T[productprice:<template productid="31841" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]<sup>*</sup>
                   <span class="secondary-color uppercase">
                     <strong> 
                       [@L[cds.sales/business/office-365:split-test-b-1-save]@L] [@T[productcompare:<percent primaryproductid="31841" secondaryproductid="31841" hidebelow="5"><html><![CDATA[{0}%]]></html></percent>]@T]
@@ -169,10 +165,6 @@ assetPath: false
                 <p class="current-renewal-price"><sup>*</sup>[@L[cds.sales/business/office-365:split-test-b-3-current-renewal-price]@L]</p>
               </div>
             ##endif
-            <!-- <p class="plan-box-price">
-              [@T[productprice:<current productid="31841" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]
-            </p>
-            <p class="per-user">[@L[cds.sales/business/office-365:split-test-b-3-PerUserMonth]@L]</p> -->
             <button type="button" class="btn btn-warning btn-block btn-lg js-add-to-cart plan-box-button" data-value="OfficeBusPremMsft1yr" data-ci="91162">[@L[cds.sales/business/office-365:split-test-b-3-AddToCart]@L]</button>
           </div>
         </div>
@@ -354,7 +346,7 @@ assetPath: false
             </div>  
             ##if(productHasSavingsMoreThan(31841, 31841, 0))
               <div class="strike-through-wrapper">
-                <p class="strike-through-price">[@T[productprice:<template productid="31841" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]
+                <p class="strike-through-price">[@T[productprice:<template productid="31841" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]<sup>*</sup>
                   <span class="secondary-color uppercase">
                     <strong> 
                       [@L[cds.sales/business/office-365:split-test-b-1-save]@L] [@T[productcompare:<percent primaryproductid="31841" secondaryproductid="31841" hidebelow="5"><html><![CDATA[{0}%]]></html></percent>]@T]
@@ -364,10 +356,6 @@ assetPath: false
                 <p class="current-renewal-price"><sup>*</sup>[@L[cds.sales/business/office-365:split-test-b-3-current-renewal-price]@L]</p>
               </div>
             ##endif
-            <!-- <p class="plan-box-price">
-              [@T[productprice:<current productid="31841" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]
-            </p>  
-            <p class="per-user">[@L[cds.sales/business/office-365:split-test-b-3-PerUserMonth]@L]</p> -->
             <button type="button" class="btn btn-warning btn-block btn-lg js-add-to-cart plan-box-button" data-value="OfficeBusPremMsft1yr" data-ci="91168">[@L[cds.sales/business/office-365:split-test-b-3-AddToCart]@L]</button>
           </div>
         </div>  

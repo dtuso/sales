@@ -89,24 +89,60 @@
               <p>[@L[cds.sales/business/office-365:split-test-b-7-WorldClassDataSecurityAndSpamFiltering]@L]</p>                          
             </td>
             <td class="last">
-              <span class="table-plan-box-price">
-                [@T[productprice:<current productid="31805" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]
-              </span>
-              <span class="table-per-user">[@L[cds.sales/business/office-365:split-test-b-3-PerUserMonth]@L]</span>
+              ##if(productHasSavingsMoreThan(31805, 31805, 0))
+                <p class="as-low-as">[@L[cds.sales/business/office-365:split-test-b-3-as-low-as]@L]</p>               
+                <p class="table-plan-box-price discounted">
+                  [@T[productprice:<template productid="31805" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]
+                  <span class="price">[@T[productprice:<current productid="31805" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span>
+                </p>
+                <span class="table-per-user discounted">[@L[cds.sales/business/office-365:split-test-b-3-PerUserMonth]@L]</span>
+              ##else
+                <span class="as-low-as">[@L[cds.sales/business/office-365:split-test-b-3-as-low-as]@L]</span>               
+                <span class="table-plan-box-price">
+                  [@T[productprice:<current productid="31805" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]
+                </span>
+                <span class="table-per-user">[@L[cds.sales/business/office-365:split-test-b-3-PerUserMonth]@L]</span>
+                <!-- <p class="as-low-as">[@L[cds.sales/business/office-365:split-test-b-3-as-low-as]@L]</p>               
+                <p class="table-plan-box-price discounted">
+                  <strike>￦12 743</strike>
+                  <span class="price">￦ 10 199</span> 
+                </p>
+                <span class="table-per-user discounted">[@L[cds.sales/business/office-365:split-test-b-3-PerUserMonth]@L]</span> -->
+              ##endif
               <button type="button" class="btn btn-warning btn-block table-btn btn-lg js-add-to-cart" data-value="OfficeEmailMsft1yr" data-ci="91164">[@L[cds.sales/business/office-365:split-test-b-3-AddToCart]@L]</button>
             </td>
             <td class="last">
-              <span class="table-plan-box-price">
-                [@T[productprice:<current productid="31825" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]
-              </span>
-              <span class="table-per-user">[@L[cds.sales/business/office-365:split-test-b-3-PerUserMonth]@L]</span>
+              ##if(productHasSavingsMoreThan(31825, 31825, 0))
+                <p class="as-low-as">[@L[cds.sales/business/office-365:split-test-b-3-as-low-as]@L]</p>               
+                <p class="table-plan-box-price discounted">
+                  [@T[productprice:<template productid="31825" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]
+                  <span class="price">[@T[productprice:<current productid="31825" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span>
+                </p>
+                <span class="table-per-user discounted">[@L[cds.sales/business/office-365:split-test-b-3-PerUserMonth]@L]</span>
+              ##else
+                <span class="as-low-as">[@L[cds.sales/business/office-365:split-test-b-3-as-low-as]@L]</span>               
+                <span class="table-plan-box-price">
+                  [@T[productprice:<current productid="31825" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]
+                </span>
+                <span class="table-per-user">[@L[cds.sales/business/office-365:split-test-b-3-PerUserMonth]@L]</span>
+              ##endif
               <button type="button" class="btn btn-warning btn-block btn-lg table-btn js-add-to-cart" data-value="OfficeBusMsft1yr" data-ci="91165">[@L[cds.sales/business/office-365:split-test-b-3-AddToCart]@L]</button>
             </td>
             <td class="last">
-              <span class="table-plan-box-price">
-                [@T[productprice:<current productid="31841" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]
-              </span>
-              <span class="table-per-user">[@L[cds.sales/business/office-365:split-test-b-3-PerUserMonth]@L]</span>
+              ##if(productHasSavingsMoreThan(31841, 31841, 0)) 
+                <p class="as-low-as">[@L[cds.sales/business/office-365:split-test-b-3-as-low-as]@L]</p>               
+                <span class="table-plan-box-price discounted">
+                  [@T[productprice:<template productid="31841" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]
+                  <span class="price">[@T[productprice:<current productid="31841" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span>
+                </span>
+                <span class="table-per-user discounted">[@L[cds.sales/business/office-365:split-test-b-3-PerUserMonth]@L]</span>
+              ##else
+                <span class="as-low-as">[@L[cds.sales/business/office-365:split-test-b-3-as-low-as]@L]</span>               
+                <span class="table-plan-box-price">
+                  [@T[productprice:<current productid="31841" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]
+                </span>
+                <span class="table-per-user ">[@L[cds.sales/business/office-365:split-test-b-3-PerUserMonth]@L]</span>
+              ##endif
               <button type="button" class="btn btn-warning btn-block btn-lg table-btn js-add-to-cart" data-value="OfficeBusPremMsft1yr" data-ci="91166">[@L[cds.sales/business/office-365:split-test-b-3-AddToCart]@L]</button>
             </td>
           </tr>
