@@ -414,7 +414,7 @@ if (!domains.controls.cds_gtld_templates) {
               var price = getCurrentPrice(phase);
               var starts = phase.LiveStartDate + ' ' + phase.LiveStartTime;
 
-              html += settings.earlyAccessPricingTemplate.replace('{0}',n).replace('{1}',price);
+              html += settings.earlyAccessPricingTemplate.replace('{0}',n).replace('{1}*',price);
               html += settings.earlyAccessDateTemplate.replace('{0}',starts);
               hasOpenPhase = true;
             }      
