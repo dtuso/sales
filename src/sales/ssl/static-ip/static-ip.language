@@ -1,7 +1,7 @@
 ---
 location: localization/sales/gd/ssl/dedicated-ip/en
 id: 537641fff778fc1728f34604
-name: FOS-20029c
+name: FOS-22259
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="MetaTitle" />
@@ -69,9 +69,9 @@ Find discount codes
 <phrase key="PlanSummaryText6" />
 Participate in polls and much more
 <phrase key="PlanSummaryText7" />
-Technical support and sales: [@T[support:<technicalSupportPhone />]@T] Fastest! Expected Wait time: 6 minutes
+Technical support and sales: [@T[support:<technicalSupportPhone />]@T] Fastest!
 <phrase key="PlanSummaryText8" />
-Email support: <a href="[@T[link:<external linktype="HELPURL" path="/" secure="false"/>]@T]" data-ci="88307">Access Email Support System</a> Expected Wait Time: 4 hours
+Email support: <a href="[@T[link:<external linktype="HELPURL" path="/" secure="false"/>]@T]" data-ci="88307">Access Email Support System</a>
 <phrase key="DisclaimerText" />
 Third-party logos and marks are registered trademarks of their respective owners. All rights reserved.
 <phrase key="Faq1Title" />

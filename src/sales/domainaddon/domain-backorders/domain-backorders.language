@@ -1,7 +1,7 @@
 ---
 location: localization/sales/gd/domainaddon/domain-backorders2/en
 id: 5367d19df778fc26c405ca96
-name: FOS-12354
+name: FOS-22259
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="MetaTitle" />
@@ -155,7 +155,7 @@ Technical support and sales:
 <phrase key="PlanSummaryText8" />
 FASTEST! Expected Wait Time: 11 minutes
 <phrase key="PlanSummaryText9" />
-Email support: <a href="[@T[link:<external linktype='communityurl' path='/' secure='false' />]@T]" target="_blank">Access Email Support System</a> Expected Wait Time: 6 hours
+Email support: <a href="[@T[link:<external linktype='communityurl' path='/' secure='false' />]@T]" target="_blank">Access Email Support System</a>
 <phrase key="PlanSummaryTechSupportPhone" />
 [@T[supportphone:<domains />]@T]
 <phrase key="DisclaimerContentSymbols" />
