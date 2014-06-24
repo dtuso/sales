@@ -28,13 +28,9 @@ name: FOS-21927
 {% block customjs %}
 {% jsminify %}
   $('.gdhp-top-banner-3').bind('click',function(event){
-    var clientX = event.clientX;
-    var center = document.getElementById("middle-bar");
-    rect = center.getBoundingClientRect();
-    if(clientX < rect.left){
-      window.location.href='[@T[link:<relative path="/hosting/website-builder.aspx"><param name="ci" value="91095" /></relative>]@T]';
-    } else {
-      window.location.href='[@T[link:<relative path="/hosting/wordpress-hosting.aspx"><param name="ci" value="91094" /></relative>]@T]';
+    var $clickedElement = $(event.target);
+    if(!$clickedElement.hasClass('gtld-pods')){
+      window.location.href='[@T[link:<relative path="/domains/search-new.aspx"><param name="ci" value="91184" /></relative>]@T]';
     }
   });
     $('.gdhp-top-banner-4').bind('click',function(event){
