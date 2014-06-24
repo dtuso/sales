@@ -39,8 +39,8 @@
           "fullName": "Colyn Brown",
           "username": "clbrown"
         },
-        "jiraTicket": "FOS-12354",
-        "comments": "Preparing for Cart API"
+        "jiraTicket": "FOS-22259",
+        "comments": "Removed hard coded wait times"
       }
     },
     "metaTitle": "[@L[cds.sales/gd/domainaddon/domain-backorders2:MetaTitle]@L]",
