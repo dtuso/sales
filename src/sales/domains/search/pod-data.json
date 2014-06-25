@@ -17,50 +17,50 @@
                 "ProductPrice": "[@T[productprice:<current productid=\"9850\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"9850\" secondaryproductid=\"9850\" />]@T]-[@T[productprice:<list productid=\"9850\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
             },{
                 "PodId": "2",
-                "logoclass": "tldlogo-dot-ninja",                
+                "logoclass": "tldlogo-dot-club",               
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListText0]@L]",
-                "ButtonURL":"[@T[link:<relative path=\"/tlds/ninja\"><param name=\"ci\" value=\"89639\" /></relative>]@T]",
-                "ProductPrice": "[@T[productprice:<current productid=\"220091\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"220091\" secondaryproductid=\"220091\" />]@T]-[@T[productprice:<list productid=\"220091\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotClubText]@L]",
+                "ButtonURL": "[@T[link:<relative path=\"/tlds/club\"><param name=\"ci\" value=\"88763\" /></relative>]@T]",
+                "ProductPrice": "[@T[productprice:<current productid=\"172337\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"172337\" secondaryproductid=\"172337\" />]@T]-[@T[productprice:<list productid=\"172337\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
             },{
-               "PodId": "3",
-                "logoclass": "tldlogo-dot-wiki",               
+                "PodId": "3",
+                "logoclass": "tldlogo-dot-xyz",                
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTextWiki]@L]",
-                 "ButtonURL": "[@T[link:<relative path=\"/tlds/wiki\"><param name=\"ci\" value=\"88586\" /></relative>]@T]",
-                "ProductPrice": "[@T[productprice:<current productid=\"334305\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"334305\" secondaryproductid=\"334305\" />]@T]-[@T[productprice:<list productid=\"334305\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotXYZText]@L]",
+                "ButtonURL": "[@T[link:<relative path=\"/tlds/xyz\"><param name=\"ci\" value=\"90062\" /></relative>]@T]",
+                "ProductPrice": "[@T[productprice:<current productid=\"334499\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"334499\" secondaryproductid=\"334499\" />]@T]-[@T[productprice:<list productid=\"334499\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
              }],
  "BottomPods":[
                 {
                    "PodID": "0",
                    "PodNewTag": "[@L[cds.sales/gd/domains/domain-name-search:New]@L]",
-                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitle01]@L]",
-                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListText01]@L]",
+                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleWebcam]@L]",
+                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotWebcamText]@L]",
                    "ButtonText":"[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                   "ButtonURL":"[@T[link:<relative path=\"/tlds/net\"><param name=\"ci\" value=\"88021\" /></relative>]@T]"
+                   "ButtonURL":"[@T[link:<relative path=\"/tlds/webcam\"><param name=\"ci\" value=\"91155\" /></relative>]@T]"
                 },                
                 {
                    "PodID": "1",
                    "PodNewTag": "[@L[cds.sales/gd/domains/domain-name-search:New]@L]",
-                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitle11]@L]",
-                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListText11]@L]",
+                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleBid]@L]",
+                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotBidText]@L]",
                    "ButtonText":"[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                   "ButtonURL":"[@T[link:<relative path=\"/tlds/menu\"><param name=\"ci\" value=\"88019\" /></relative>]@T]"
+                   "ButtonURL":"[@T[link:<relative path=\"/tlds/bid\"><param name=\"ci\" value=\"91153\" /></relative>]@T]"
                 },         
                 {
                    "PodID": "2",
                    "PodNewTag": "[@L[cds.sales/gd/domains/domain-name-search:New]@L]",
-                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitle21]@L]",
-                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListText21]@L]",
+                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleTrade]@L]",
+                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotTradeText]@L]",
                    "ButtonText":"[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                   "ButtonURL":"[@T[link:<relative path=\"/tlds/in.aspx\"><param name=\"tld\" value=\"co.in\" /><param name=\"ci\" value=\"88022\" /></relative>]@T]"
+                   "ButtonURL":"[@T[link:<relative path=\"/tlds/trade\"><param name=\"ci\" value=\"91154\" /></relative>]@T]"
                 }
             ]
      },
 "domainlp_at": {
         "Pods": [
             {
-                "PodId":"0",
+               "PodId":"0",
                 "logoclass":"tldlogo-dot-com",                
                 "ButtonText":"[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
                 "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotComText]@L]",
@@ -72,21 +72,21 @@
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
                 "PodText": "[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTextAt]@L]",
                 "ButtonURL": "[@T[link:<relative path=\"/tlds/at\"><param name=\"ci\" value=\"90594\" /></relative>]@T]",
-                "ProductPrice": "[@T[productprice:<current productid=\"12201\" dropdecimal=\"12201\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"12201\" secondaryproductid=\"172337\" />]@T]-[@T[productprice:<list productid=\"12201\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                "ProductPrice": "[@T[productprice:<current productid=\"12201\" dropdecimal=\"12201\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"12201\" secondaryproductid=\"12201\" />]@T]-[@T[productprice:<list productid=\"12201\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
             },{
                 "PodId": "2",
-                "logoclass": "tldlogo-dot-ninja",                
+                "logoclass": "tldlogo-dot-club",               
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListText0]@L]",
-                "ButtonURL":"[@T[link:<relative path=\"/tlds/ninja\"><param name=\"ci\" value=\"89639\" /></relative>]@T]",
-                "ProductPrice": "[@T[productprice:<current productid=\"220091\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"220091\" secondaryproductid=\"220091\" />]@T]-[@T[productprice:<list productid=\"220091\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotClubText]@L]",
+                "ButtonURL": "[@T[link:<relative path=\"/tlds/club\"><param name=\"ci\" value=\"88763\" /></relative>]@T]",
+                "ProductPrice": "[@T[productprice:<current productid=\"172337\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"172337\" secondaryproductid=\"172337\" />]@T]-[@T[productprice:<list productid=\"172337\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
             },{
                 "PodId": "3",
-                "logoclass": "tldlogo-dot-wiki",               
+                "logoclass": "tldlogo-dot-xyz",                
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTextWiki]@L]",
-                 "ButtonURL": "[@T[link:<relative path=\"/tlds/wiki\"><param name=\"ci\" value=\"88586\" /></relative>]@T]",
-                "ProductPrice": "[@T[productprice:<current productid=\"334305\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"334305\" secondaryproductid=\"334305\" />]@T]-[@T[productprice:<list productid=\"334305\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotXYZText]@L]",
+                "ButtonURL": "[@T[link:<relative path=\"/tlds/xyz\"><param name=\"ci\" value=\"90062\" /></relative>]@T]",
+                "ProductPrice": "[@T[productprice:<current productid=\"334499\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"334499\" secondaryproductid=\"334499\" />]@T]-[@T[productprice:<list productid=\"334499\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
              }],
  "BottomPods":[
                 {
@@ -118,7 +118,7 @@
 "domainlp_us": {
         "Pods": [
             {
-                "PodId":"0",
+               "PodId":"0",
                 "logoclass":"tldlogo-dot-com",                
                 "ButtonText":"[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
                 "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotComText]@L]",
@@ -126,50 +126,50 @@
                 "ProductPrice": "[@T[productprice:<current productid=\"101\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"101\" secondaryproductid=\"101\" />]@T]-[@T[productprice:<list productid=\"101\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
             },{
                 "PodId": "1",
+                "logoclass": "tldlogo-dot-co",               
+                "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
+                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotCoDomainText]@L]",
+                 "ButtonURL": "[@T[link:<relative path=\"/tlds/co-domain.aspx\"><param name=\"ci\" value=\"88586\" /></relative>]@T]",
+                "ProductPrice": "[@T[productprice:<current productid=\"56401\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"56401\" secondaryproductid=\"56401\" />]@T]-[@T[productprice:<list productid=\"56401\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+            },{
+                "PodId": "2",
                 "logoclass": "tldlogo-dot-club",               
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
                 "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotClubText]@L]",
                 "ButtonURL": "[@T[link:<relative path=\"/tlds/club\"><param name=\"ci\" value=\"88763\" /></relative>]@T]",
                 "ProductPrice": "[@T[productprice:<current productid=\"172337\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"172337\" secondaryproductid=\"172337\" />]@T]-[@T[productprice:<list productid=\"172337\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
-            },{
-                "PodId": "2",
-                "logoclass": "tldlogo-dot-ninja",                
-                "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListText0]@L]",
-                "ButtonURL":"[@T[link:<relative path=\"/tlds/ninja\"><param name=\"ci\" value=\"89639\" /></relative>]@T]",
-                "ProductPrice": "[@T[productprice:<current productid=\"220091\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"220091\" secondaryproductid=\"220091\" />]@T]-[@T[productprice:<list productid=\"220091\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
              },{
                 "PodId": "3",
-                "logoclass": "tldlogo-dot-wiki",               
+                "logoclass": "tldlogo-dot-xyz",                
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTextWiki]@L]",
-                 "ButtonURL": "[@T[link:<relative path=\"/tlds/wiki\"><param name=\"ci\" value=\"88586\" /></relative>]@T]",
-                "ProductPrice": "[@T[productprice:<current productid=\"334305\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"334305\" secondaryproductid=\"334305\" />]@T]-[@T[productprice:<list productid=\"334305\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotXYZText]@L]",
+                "ButtonURL": "[@T[link:<relative path=\"/tlds/xyz\"><param name=\"ci\" value=\"90062\" /></relative>]@T]",
+                "ProductPrice": "[@T[productprice:<current productid=\"334499\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"334499\" secondaryproductid=\"334499\" />]@T]-[@T[productprice:<list productid=\"334499\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
             }],
  "BottomPods":[
                 {
                    "PodID": "0",
                    "PodNewTag": "[@L[cds.sales/gd/domains/domain-name-search:New]@L]",
-                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleGuru]@L]",
-                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotGuruText]@L]",
+                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleWebcam]@L]",
+                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotWebcamText]@L]",
                    "ButtonText":"[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                   "ButtonURL":"[@T[link:<relative path=\"/tlds/guru\"><param name=\"ci\" value=\"88012\" /></relative>]@T]"
+                   "ButtonURL":"[@T[link:<relative path=\"/tlds/webcam\"><param name=\"ci\" value=\"91155\" /></relative>]@T]"
                 },                
                 {
                    "PodID": "1",
                    "PodNewTag": "[@L[cds.sales/gd/domains/domain-name-search:New]@L]",
-                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleReviews]@L]",
-                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListText2]@L]",
-                   "ButtonText":"[@L[cds.sales/gd/domains/domain-name-search:PreRegister]@L]",
-                   "ButtonURL":"[@T[link:<relative path=\"/tlds/reviews\"><param name=\"ci\" value=\"90610\" /></relative>]@T]"
+                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleBid]@L]",
+                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotBidText]@L]",
+                   "ButtonText":"[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
+                   "ButtonURL":"[@T[link:<relative path=\"/tlds/bid\"><param name=\"ci\" value=\"91153\" /></relative>]@T]"
                 },         
                 {
                    "PodID": "2",
                    "PodNewTag": "[@L[cds.sales/gd/domains/domain-name-search:New]@L]",
-                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleExpert]@L]",
-                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTextExpert]@L]",
+                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleTrade]@L]",
+                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotTradeText]@L]",
                    "ButtonText":"[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                   "ButtonURL":"[@T[link:<relative path=\"/tlds/expert\"><param name=\"ci\" value=\"90336\" /></relative>]@T]"
+                   "ButtonURL":"[@T[link:<relative path=\"/tlds/trade\"><param name=\"ci\" value=\"91154\" /></relative>]@T]"
                 }
             ]
      },
@@ -191,43 +191,43 @@
                 "ProductPrice": "[@T[productprice:<current productid=\"1790\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"1790\" secondaryproductid=\"1790\" />]@T]-[@T[productprice:<list productid=\"1790\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
             },{
                 "PodId": "2",
-                "logoclass": "tldlogo-dot-ninja",                
+                "logoclass": "tldlogo-dot-club",               
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListText0]@L]",
-                "ButtonURL":"[@T[link:<relative path=\"/tlds/ninja\"><param name=\"ci\" value=\"89639\" /></relative>]@T]",
-                "ProductPrice": "[@T[productprice:<current productid=\"220091\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"220091\" secondaryproductid=\"220091\" />]@T]-[@T[productprice:<list productid=\"220091\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotClubText]@L]",
+                "ButtonURL": "[@T[link:<relative path=\"/tlds/club\"><param name=\"ci\" value=\"88763\" /></relative>]@T]",
+                "ProductPrice": "[@T[productprice:<current productid=\"172337\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"172337\" secondaryproductid=\"172337\" />]@T]-[@T[productprice:<list productid=\"172337\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
             },{
                 "PodId": "3",
-                "logoclass": "tldlogo-dot-wiki",               
+                "logoclass": "tldlogo-dot-xyz",                
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTextWiki]@L]",
-                 "ButtonURL": "[@T[link:<relative path=\"/tlds/wiki\"><param name=\"ci\" value=\"88586\" /></relative>]@T]",
-                "ProductPrice": "[@T[productprice:<current productid=\"334305\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"334305\" secondaryproductid=\"334305\" />]@T]-[@T[productprice:<list productid=\"334305\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotXYZText]@L]",
+                "ButtonURL": "[@T[link:<relative path=\"/tlds/xyz\"><param name=\"ci\" value=\"90062\" /></relative>]@T]",
+                "ProductPrice": "[@T[productprice:<current productid=\"334499\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"334499\" secondaryproductid=\"334499\" />]@T]-[@T[productprice:<list productid=\"334499\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
              }],
  "BottomPods":[
                 {
                    "PodID": "0",
                    "PodNewTag": "[@L[cds.sales/gd/domains/domain-name-search:New]@L]",
-                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleAU0]@L]",
-                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:OrgTextPod]@L]",
+                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleWebcam]@L]",
+                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotWebcamText]@L]",
                    "ButtonText":"[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                   "ButtonURL":"[@T[link:<relative path=\"/tlds/org\"><param name=\"ci\" value=\"88588\" /></relative>]@T]"
+                   "ButtonURL":"[@T[link:<relative path=\"/tlds/webcam\"><param name=\"ci\" value=\"91155\" /></relative>]@T]"
                 },                
                 {
                    "PodID": "1",
                    "PodNewTag": "[@L[cds.sales/gd/domains/domain-name-search:New]@L]",
-                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitle11]@L]",
-                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListText11]@L]",
+                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleBid]@L]",
+                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotBidText]@L]",
                    "ButtonText":"[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                   "ButtonURL":"[@T[link:<relative path=\"/tlds/menu\"><param name=\"ci\" value=\"88584\" /></relative>]@T]"
+                   "ButtonURL":"[@T[link:<relative path=\"/tlds/bid\"><param name=\"ci\" value=\"91153\" /></relative>]@T]"
                 },         
                 {
                    "PodID": "2",
                    "PodNewTag": "[@L[cds.sales/gd/domains/domain-name-search:New]@L]",
-                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleAU1]@L]",
-                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:ComTextPod1]@L]",
+                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleTrade]@L]",
+                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotTradeText]@L]",
                    "ButtonText":"[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                   "ButtonURL":"[@T[link:<relative path=\"/tlds/reviews\"><param name=\"ci\" value=\"88587\" /></relative>]@T]"
+                   "ButtonURL":"[@T[link:<relative path=\"/tlds/trade\"><param name=\"ci\" value=\"91154\" /></relative>]@T]"
                 }
             ]
      },
@@ -249,43 +249,43 @@
                "ProductPrice": "[@T[productprice:<current productid=\"67890\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"67890\" secondaryproductid=\"67890\" />]@T]-[@T[productprice:<list productid=\"67890\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
             },{
                 "PodId": "2",
-                "logoclass": "tldlogo-dot-ninja",                
+                "logoclass": "tldlogo-dot-club",               
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListText0]@L]",
-                "ButtonURL":"[@T[link:<relative path=\"/tlds/ninja\"><param name=\"ci\" value=\"89639\" /></relative>]@T]",
-                "ProductPrice": "[@T[productprice:<current productid=\"220091\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"220091\" secondaryproductid=\"220091\" />]@T]-[@T[productprice:<list productid=\"220091\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotClubText]@L]",
+                "ButtonURL": "[@T[link:<relative path=\"/tlds/club\"><param name=\"ci\" value=\"88763\" /></relative>]@T]",
+                "ProductPrice": "[@T[productprice:<current productid=\"172337\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"172337\" secondaryproductid=\"172337\" />]@T]-[@T[productprice:<list productid=\"172337\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
             },{
                "PodId": "3",
-                "logoclass": "tldlogo-dot-wiki",               
+                "logoclass": "tldlogo-dot-xyz",                
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTextWiki]@L]",
-                 "ButtonURL": "[@T[link:<relative path=\"/tlds/wiki\"><param name=\"ci\" value=\"88586\" /></relative>]@T]",
-                "ProductPrice": "[@T[productprice:<current productid=\"334305\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"334305\" secondaryproductid=\"334305\" />]@T]-[@T[productprice:<list productid=\"334305\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotXYZText]@L]",
+                "ButtonURL": "[@T[link:<relative path=\"/tlds/xyz\"><param name=\"ci\" value=\"90062\" /></relative>]@T]",
+                "ProductPrice": "[@T[productprice:<current productid=\"334499\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"334499\" secondaryproductid=\"334499\" />]@T]-[@T[productprice:<list productid=\"334499\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
              }],
   "BottomPods":[
                {
                    "PodID": "0",
                    "PodNewTag": "[@L[cds.sales/gd/domains/domain-name-search:New]@L]",
-                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleBuzz]@L]",
-                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTextBuzz]@L]",
+                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleWebcam]@L]",
+                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotWebcamText]@L]",
                    "ButtonText":"[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                   "ButtonURL":"[@T[link:<relative path=\"/tlds/buzz\"><param name=\"ci\" value=\"89733\" /></relative>]@T]"
+                   "ButtonURL":"[@T[link:<relative path=\"/tlds/webcam\"><param name=\"ci\" value=\"91155\" /></relative>]@T]"
                 },                
                 {
                    "PodID": "1",
                    "PodNewTag": "[@L[cds.sales/gd/domains/domain-name-search:New]@L]",
-                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleDirectory]@L]",
-                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTextDirectory]@L]",
+                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleBid]@L]",
+                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotBidText]@L]",
                    "ButtonText":"[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                   "ButtonURL":"[@T[link:<relative path=\"/tlds/directory\"><param name=\"ci\" value=\"89734\" /></relative>]@T]"
+                   "ButtonURL":"[@T[link:<relative path=\"/tlds/bid\"><param name=\"ci\" value=\"91153\" /></relative>]@T]"
                 },         
                 {
                    "PodID": "2",
                    "PodNewTag": "[@L[cds.sales/gd/domains/domain-name-search:New]@L]",
-                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleTips]@L]",
-                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotTipsText]@L]",
+                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleTrade]@L]",
+                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotTradeText]@L]",
                    "ButtonText":"[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                   "ButtonURL":"[@T[link:<relative path=\"/tlds/tips\"><param name=\"ci\" value=\"89391\" /></relative>]@T]"
+                   "ButtonURL":"[@T[link:<relative path=\"/tlds/trade\"><param name=\"ci\" value=\"91154\" /></relative>]@T]"
                 }
             ]
      },
@@ -307,43 +307,43 @@
                 "ProductPrice": "[@T[productprice:<current productid=\"54001\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"54001\" secondaryproductid=\"54001\" />]@T]-[@T[productprice:<list productid=\"54001\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
             },{
                 "PodId": "2",
-                "logoclass": "tldlogo-dot-ninja",                
+                "logoclass": "tldlogo-dot-club",               
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListText0]@L]",
-                "ButtonURL":"[@T[link:<relative path=\"/tlds/ninja\"><param name=\"ci\" value=\"89639\" /></relative>]@T]",
-                "ProductPrice": "[@T[productprice:<current productid=\"220091\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"220091\" secondaryproductid=\"220091\" />]@T]-[@T[productprice:<list productid=\"220091\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotClubText]@L]",
+                "ButtonURL": "[@T[link:<relative path=\"/tlds/club\"><param name=\"ci\" value=\"88763\" /></relative>]@T]",
+                "ProductPrice": "[@T[productprice:<current productid=\"172337\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"172337\" secondaryproductid=\"172337\" />]@T]-[@T[productprice:<list productid=\"172337\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
             },{
                 "PodId": "3",
-                "logoclass": "tldlogo-dot-wiki",               
+                "logoclass": "tldlogo-dot-xyz",                
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTextWiki]@L]",
-                 "ButtonURL": "[@T[link:<relative path=\"/tlds/wiki\"><param name=\"ci\" value=\"88586\" /></relative>]@T]",
-                "ProductPrice": "[@T[productprice:<current productid=\"334305\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"334305\" secondaryproductid=\"334305\" />]@T]-[@T[productprice:<list productid=\"334305\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotXYZText]@L]",
+                "ButtonURL": "[@T[link:<relative path=\"/tlds/xyz\"><param name=\"ci\" value=\"90062\" /></relative>]@T]",
+                "ProductPrice": "[@T[productprice:<current productid=\"334499\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"334499\" secondaryproductid=\"334499\" />]@T]-[@T[productprice:<list productid=\"334499\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
              }],
  "BottomPods":[
-                {
+             {
                    "PodID": "0",
                    "PodNewTag": "[@L[cds.sales/gd/domains/domain-name-search:New]@L]",
-                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleAU0]@L]",
-                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:OrgTextPod]@L]",
+                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleWebcam]@L]",
+                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotWebcamText]@L]",
                    "ButtonText":"[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                   "ButtonURL":"[@T[link:<relative path=\"/tlds/org\"><param name=\"ci\" value=\"88588\" /></relative>]@T]"
+                   "ButtonURL":"[@T[link:<relative path=\"/tlds/webcam\"><param name=\"ci\" value=\"91155\" /></relative>]@T]"
                 },                
                 {
                    "PodID": "1",
                    "PodNewTag": "[@L[cds.sales/gd/domains/domain-name-search:New]@L]",
-                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleUno]@L]",
-                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTextUno]@L]",
+                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleBid]@L]",
+                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotBidText]@L]",
                    "ButtonText":"[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                   "ButtonURL":"[@T[link:<relative path=\"/tlds/uno\"><param name=\"ci\" value=\"89586\" /></relative>]@T]"
+                   "ButtonURL":"[@T[link:<relative path=\"/tlds/bid\"><param name=\"ci\" value=\"91153\" /></relative>]@T]"
                 },         
                 {
                    "PodID": "2",
                    "PodNewTag": "[@L[cds.sales/gd/domains/domain-name-search:New]@L]",
-                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleAU1]@L]",
-                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:ComTextPod1]@L]",
+                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleTrade]@L]",
+                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotTradeText]@L]",
                    "ButtonText":"[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                   "ButtonURL":"[@T[link:<relative path=\"/tlds/com.aspx\"><param name=\"ci\" value=\"88587\" /></relative>]@T]"
+                   "ButtonURL":"[@T[link:<relative path=\"/tlds/trade\"><param name=\"ci\" value=\"91154\" /></relative>]@T]"
                 }
             ]
      },
@@ -365,43 +365,43 @@
                "ProductPrice": "[@T[productprice:<current productid=\"57201\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"57201\" secondaryproductid=\"57201\" />]@T]-[@T[productprice:<list productid=\"57201\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
             },{
                 "PodId": "2",
-                "logoclass": "tldlogo-dot-ninja",                
+                "logoclass": "tldlogo-dot-club",               
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListText0]@L]",
-                "ButtonURL":"[@T[link:<relative path=\"/tlds/ninja\"><param name=\"ci\" value=\"89639\" /></relative>]@T]",
-                "ProductPrice": "[@T[productprice:<current productid=\"220091\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"220091\" secondaryproductid=\"220091\" />]@T]-[@T[productprice:<list productid=\"220091\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotClubText]@L]",
+                "ButtonURL": "[@T[link:<relative path=\"/tlds/club\"><param name=\"ci\" value=\"88763\" /></relative>]@T]",
+                "ProductPrice": "[@T[productprice:<current productid=\"172337\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"172337\" secondaryproductid=\"172337\" />]@T]-[@T[productprice:<list productid=\"172337\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
             },{
                 "PodId": "3",
-                "logoclass": "tldlogo-dot-wiki",               
+                "logoclass": "tldlogo-dot-xyz",                
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTextWiki]@L]",
-                 "ButtonURL": "[@T[link:<relative path=\"/tlds/wiki\"><param name=\"ci\" value=\"88586\" /></relative>]@T]",
-                "ProductPrice": "[@T[productprice:<current productid=\"334305\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"334305\" secondaryproductid=\"334305\" />]@T]-[@T[productprice:<list productid=\"334305\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotXYZText]@L]",
+                "ButtonURL": "[@T[link:<relative path=\"/tlds/xyz\"><param name=\"ci\" value=\"90062\" /></relative>]@T]",
+                "ProductPrice": "[@T[productprice:<current productid=\"334499\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"334499\" secondaryproductid=\"334499\" />]@T]-[@T[productprice:<list productid=\"334499\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
              }],
  "BottomPods":[
                 {
                    "PodID": "0",
                    "PodNewTag": "[@L[cds.sales/gd/domains/domain-name-search:New]@L]",
-                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleBuzz]@L]",
-                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTextBuzz]@L]",
+                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleWebcam]@L]",
+                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotWebcamText]@L]",
                    "ButtonText":"[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                   "ButtonURL":"[@T[link:<relative path=\"/tlds/buzz\"><param name=\"ci\" value=\"89733\" /></relative>]@T]"
+                   "ButtonURL":"[@T[link:<relative path=\"/tlds/webcam\"><param name=\"ci\" value=\"91155\" /></relative>]@T]"
                 },                
                 {
                    "PodID": "1",
                    "PodNewTag": "[@L[cds.sales/gd/domains/domain-name-search:New]@L]",
-                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleDirectory]@L]",
-                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTextDirectory]@L]",
+                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleBid]@L]",
+                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotBidText]@L]",
                    "ButtonText":"[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                   "ButtonURL":"[@T[link:<relative path=\"/tlds/directory\"><param name=\"ci\" value=\"89734\" /></relative>]@T]"
+                   "ButtonURL":"[@T[link:<relative path=\"/tlds/bid\"><param name=\"ci\" value=\"91153\" /></relative>]@T]"
                 },         
                 {
                    "PodID": "2",
                    "PodNewTag": "[@L[cds.sales/gd/domains/domain-name-search:New]@L]",
-                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleTips]@L]",
-                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotTipsText]@L]",
+                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleTrade]@L]",
+                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotTradeText]@L]",
                    "ButtonText":"[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                   "ButtonURL":"[@T[link:<relative path=\"/tlds/tips\"><param name=\"ci\" value=\"89391\" /></relative>]@T]"
+                   "ButtonURL":"[@T[link:<relative path=\"/tlds/trade\"><param name=\"ci\" value=\"91154\" /></relative>]@T]"
                 }
             ]
      },
@@ -423,18 +423,18 @@
                 "ProductPrice": "[@T[productprice:<current productid=\"12501\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"12501\" secondaryproductid=\"12501\" />]@T]-[@T[productprice:<list productid=\"12501\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
             },{
                 "PodId": "2",
-                "logoclass": "tldlogo-dot-ninja",                
+                "logoclass": "tldlogo-dot-club",               
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListText0]@L]",
-                "ButtonURL":"[@T[link:<relative path=\"/tlds/ninja\"><param name=\"ci\" value=\"89639\" /></relative>]@T]",
-                "ProductPrice": "[@T[productprice:<current productid=\"220091\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"220091\" secondaryproductid=\"220091\" />]@T]-[@T[productprice:<list productid=\"220091\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotClubText]@L]",
+                "ButtonURL": "[@T[link:<relative path=\"/tlds/club\"><param name=\"ci\" value=\"88763\" /></relative>]@T]",
+                "ProductPrice": "[@T[productprice:<current productid=\"172337\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"172337\" secondaryproductid=\"172337\" />]@T]-[@T[productprice:<list productid=\"172337\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
             },{
                 "PodId": "3",
-                "logoclass": "tldlogo-dot-wiki",               
+                "logoclass": "tldlogo-dot-xyz",                
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTextWiki]@L]",
-                 "ButtonURL": "[@T[link:<relative path=\"/tlds/wiki\"><param name=\"ci\" value=\"88586\" /></relative>]@T]",
-                "ProductPrice": "[@T[productprice:<current productid=\"334305\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"334305\" secondaryproductid=\"334305\" />]@T]-[@T[productprice:<list productid=\"334305\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotXYZText]@L]",
+                "ButtonURL": "[@T[link:<relative path=\"/tlds/xyz\"><param name=\"ci\" value=\"90062\" /></relative>]@T]",
+                "ProductPrice": "[@T[productprice:<current productid=\"334499\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"334499\" secondaryproductid=\"334499\" />]@T]-[@T[productprice:<list productid=\"334499\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
              }],
  "BottomPods":[
                 {
@@ -481,18 +481,19 @@
                 "ProductPrice": "[@T[productprice:<current productid=\"142908\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"142908\" secondaryproductid=\"142908\" />]@T]-[@T[productprice:<list productid=\"142908\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
             },{
                 "PodId": "2",
-                "logoclass": "tldlogo-dot-ninja",                
+                "logoclass": "tldlogo-dot-club",               
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListText0]@L]",
-                "ButtonURL":"[@T[link:<relative path=\"/tlds/ninja\"><param name=\"ci\" value=\"89639\" /></relative>]@T]",
-                "ProductPrice": "[@T[productprice:<current productid=\"220091\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"220091\" secondaryproductid=\"220091\" />]@T]-[@T[productprice:<list productid=\"220091\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotClubText]@L]",
+                "ButtonURL": "[@T[link:<relative path=\"/tlds/club\"><param name=\"ci\" value=\"88763\" /></relative>]@T]",
+                "ProductPrice": "[@T[productprice:<current productid=\"172337\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"172337\" secondaryproductid=\"172337\" />]@T]-[@T[productprice:<list productid=\"172337\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
             },{
                 "PodId": "3",
-                "logoclass": "tldlogo-dot-wiki",               
+                "logoclass": "tldlogo-dot-xyz",                
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTextWiki]@L]",
-                 "ButtonURL": "[@T[link:<relative path=\"/tlds/wiki\"><param name=\"ci\" value=\"88586\" /></relative>]@T]",
-                "ProductPrice": "[@T[productprice:<current productid=\"334305\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"334305\" secondaryproductid=\"334305\" />]@T]-[@T[productprice:<list productid=\"334305\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"             }],
+                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotXYZText]@L]",
+                "ButtonURL": "[@T[link:<relative path=\"/tlds/xyz\"><param name=\"ci\" value=\"90062\" /></relative>]@T]",
+                "ProductPrice": "[@T[productprice:<current productid=\"334499\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"334499\" secondaryproductid=\"334499\" />]@T]-[@T[productprice:<list productid=\"334499\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+            }],
  "BottomPods":[
                 {
                    "PodID": "0",
@@ -531,50 +532,50 @@
                 "ProductPrice": "[@T[productprice:<current productid=\"101\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"101\" secondaryproductid=\"101\" />]@T]-[@T[productprice:<list productid=\"101\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
             },{
                 "PodId": "1",
-                "logoclass": "tldlogo-dot-co-uk",                
+                "logoclass": "tldlogo-dot-co",               
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotMyText]@L]",
-                "ButtonURL":"[@T[link:<relative path=\"/tlds/co-uk.aspx\"><param name=\"ci\" value=\"89623\" /></relative>]@T]",
-                "ProductPrice": "[@T[productprice:<current productid=\"57465\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"57465\" secondaryproductid=\"57465\" />]@T]-[@T[productprice:<list productid=\"57465\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotCoDomainText]@L]",
+                 "ButtonURL": "[@T[link:<relative path=\"/tlds/co-domain.aspx\"><param name=\"ci\" value=\"88586\" /></relative>]@T]",
+                "ProductPrice": "[@T[productprice:<current productid=\"56401\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"56401\" secondaryproductid=\"56401\" />]@T]-[@T[productprice:<list productid=\"56401\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
             },{
                 "PodId": "2",
-                "logoclass": "tldlogo-dot-ninja",                
+                "logoclass": "tldlogo-dot-club",               
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListText0]@L]",
-                "ButtonURL":"[@T[link:<relative path=\"/tlds/ninja\"><param name=\"ci\" value=\"89639\" /></relative>]@T]",
-                "ProductPrice": "[@T[productprice:<current productid=\"220091\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"220091\" secondaryproductid=\"220091\" />]@T]-[@T[productprice:<list productid=\"220091\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotClubText]@L]",
+                "ButtonURL": "[@T[link:<relative path=\"/tlds/club\"><param name=\"ci\" value=\"88763\" /></relative>]@T]",
+                "ProductPrice": "[@T[productprice:<current productid=\"172337\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"172337\" secondaryproductid=\"172337\" />]@T]-[@T[productprice:<list productid=\"172337\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
             },{
                 "PodId": "3",
-                "logoclass": "tldlogo-dot-wiki",               
+                "logoclass": "tldlogo-dot-xyz",                
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTextWiki]@L]",
-                 "ButtonURL": "[@T[link:<relative path=\"/tlds/wiki\"><param name=\"ci\" value=\"88586\" /></relative>]@T]",
-                "ProductPrice": "[@T[productprice:<current productid=\"334305\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"334305\" secondaryproductid=\"334305\" />]@T]-[@T[productprice:<list productid=\"334305\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotXYZText]@L]",
+                "ButtonURL": "[@T[link:<relative path=\"/tlds/xyz\"><param name=\"ci\" value=\"90062\" /></relative>]@T]",
+                "ProductPrice": "[@T[productprice:<current productid=\"334499\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"334499\" secondaryproductid=\"334499\" />]@T]-[@T[productprice:<list productid=\"334499\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
              }],
  "BottomPods":[
                 {
                    "PodID": "0",
                    "PodNewTag": "[@L[cds.sales/gd/domains/domain-name-search:New]@L]",
-                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleAU0]@L]",
-                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:OrgTextPod]@L]",
+                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleWebcam]@L]",
+                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotWebcamText]@L]",
                    "ButtonText":"[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                   "ButtonURL":"[@T[link:<relative path=\"/tlds/org.aspx\"><param name=\"ci\" value=\"88588\" /></relative>]@T]"
+                   "ButtonURL":"[@T[link:<relative path=\"/tlds/webcam\"><param name=\"ci\" value=\"91155\" /></relative>]@T]"
                 },                
                 {
                    "PodID": "1",
                    "PodNewTag": "[@L[cds.sales/gd/domains/domain-name-search:New]@L]",
-                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitle11]@L]",
-                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListText11]@L]",
+                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleBid]@L]",
+                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotBidText]@L]",
                    "ButtonText":"[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                   "ButtonURL":"[@T[link:<relative path=\"/tlds/menu\"><param name=\"ci\" value=\"88584\" /></relative>]@T]"
+                   "ButtonURL":"[@T[link:<relative path=\"/tlds/bid\"><param name=\"ci\" value=\"91153\" /></relative>]@T]"
                 },         
                 {
                    "PodID": "2",
                    "PodNewTag": "[@L[cds.sales/gd/domains/domain-name-search:New]@L]",
-                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleAU1]@L]",
-                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:ComTextPod1]@L]",
+                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleTrade]@L]",
+                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotTradeText]@L]",
                    "ButtonText":"[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                   "ButtonURL":"[@T[link:<relative path=\"/tlds/com.aspx\"><param name=\"ci\" value=\"88587\" /></relative>]@T]"
+                   "ButtonURL":"[@T[link:<relative path=\"/tlds/trade\"><param name=\"ci\" value=\"91154\" /></relative>]@T]"
                 }
             ]
      },
@@ -596,18 +597,18 @@
                 "ProductPrice": "[@T[productprice:<current productid=\"43001\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"43001\" secondaryproductid=\"43001\" />]@T]-[@T[productprice:<list productid=\"43001\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
             },{
                "PodId": "2",
-                "logoclass": "tldlogo-dot-ninja",                
+                "logoclass": "tldlogo-dot-club",               
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListText0]@L]",
-                "ButtonURL":"[@T[link:<relative path=\"/tlds/ninja\"><param name=\"ci\" value=\"89639\" /></relative>]@T]",
-                "ProductPrice": "[@T[productprice:<current productid=\"220091\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"220091\" secondaryproductid=\"220091\" />]@T]-[@T[productprice:<list productid=\"220091\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotClubText]@L]",
+                "ButtonURL": "[@T[link:<relative path=\"/tlds/club\"><param name=\"ci\" value=\"88763\" /></relative>]@T]",
+                "ProductPrice": "[@T[productprice:<current productid=\"172337\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"172337\" secondaryproductid=\"172337\" />]@T]-[@T[productprice:<list productid=\"172337\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
              },{
                 "PodId": "3",
-                "logoclass": "tldlogo-dot-wiki",               
+                "logoclass": "tldlogo-dot-xyz",                
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTextWiki]@L]",
-                 "ButtonURL": "[@T[link:<relative path=\"/tlds/wiki\"><param name=\"ci\" value=\"88586\" /></relative>]@T]",
-                "ProductPrice": "[@T[productprice:<current productid=\"334305\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"334305\" secondaryproductid=\"334305\" />]@T]-[@T[productprice:<list productid=\"334305\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotXYZText]@L]",
+                "ButtonURL": "[@T[link:<relative path=\"/tlds/xyz\"><param name=\"ci\" value=\"90062\" /></relative>]@T]",
+                "ProductPrice": "[@T[productprice:<current productid=\"334499\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"334499\" secondaryproductid=\"334499\" />]@T]-[@T[productprice:<list productid=\"334499\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
             }],
  "BottomPods":[
                 {
@@ -647,25 +648,25 @@
                 "ProductPrice": "[@T[productprice:<current productid=\"101\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"101\" secondaryproductid=\"101\" />]@T]-[@T[productprice:<list productid=\"101\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
             },{
                 "PodId": "1",
+                "logoclass": "tldlogo-dot-co",               
+                "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
+                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotCoDomainText]@L]",
+                 "ButtonURL": "[@T[link:<relative path=\"/tlds/co-domain.aspx\"><param name=\"ci\" value=\"88586\" /></relative>]@T]",
+                "ProductPrice": "[@T[productprice:<current productid=\"56401\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"56401\" secondaryproductid=\"56401\" />]@T]-[@T[productprice:<list productid=\"56401\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+            },{
+                "PodId": "2",
                 "logoclass": "tldlogo-dot-club",               
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
                 "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotClubText]@L]",
                 "ButtonURL": "[@T[link:<relative path=\"/tlds/club\"><param name=\"ci\" value=\"88763\" /></relative>]@T]",
                 "ProductPrice": "[@T[productprice:<current productid=\"172337\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"172337\" secondaryproductid=\"172337\" />]@T]-[@T[productprice:<list productid=\"172337\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
-            },{
-                "PodId": "2",
-                "logoclass": "tldlogo-dot-ninja",                
-                "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListText0]@L]",
-                "ButtonURL":"[@T[link:<relative path=\"/tlds/ninja\"><param name=\"ci\" value=\"89639\" /></relative>]@T]",
-                "ProductPrice": "[@T[productprice:<current productid=\"220091\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"220091\" secondaryproductid=\"220091\" />]@T]-[@T[productprice:<list productid=\"220091\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"            
             },{    
                 "PodId": "3",
-                "logoclass": "tldlogo-dot-wiki",               
+                "logoclass": "tldlogo-dot-xyz",                
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTextWiki]@L]",
-                 "ButtonURL": "[@T[link:<relative path=\"/tlds/wiki\"><param name=\"ci\" value=\"88586\" /></relative>]@T]",
-                "ProductPrice": "[@T[productprice:<current productid=\"334305\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"334305\" secondaryproductid=\"334305\" />]@T]-[@T[productprice:<list productid=\"334305\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotXYZText]@L]",
+                "ButtonURL": "[@T[link:<relative path=\"/tlds/xyz\"><param name=\"ci\" value=\"90062\" /></relative>]@T]",
+                "ProductPrice": "[@T[productprice:<current productid=\"334499\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"334499\" secondaryproductid=\"334499\" />]@T]-[@T[productprice:<list productid=\"334499\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
             }],
  "BottomPods":[
                 {
@@ -712,18 +713,18 @@
                 "ProductPrice": "[@T[productprice:<current productid=\"168381\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"168381\" secondaryproductid=\"168381\" />]@T]-[@T[productprice:<list productid=\"168381\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
             },{
                 "PodId": "2",
-                "logoclass": "tldlogo-dot-ninja",                
+                "logoclass": "tldlogo-dot-club",               
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListText0]@L]",
-                "ButtonURL":"[@T[link:<relative path=\"/tlds/ninja\"><param name=\"ci\" value=\"89639\" /></relative>]@T]",
-                "ProductPrice": "[@T[productprice:<current productid=\"220091\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"220091\" secondaryproductid=\"220091\" />]@T]-[@T[productprice:<list productid=\"220091\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotClubText]@L]",
+                "ButtonURL": "[@T[link:<relative path=\"/tlds/club\"><param name=\"ci\" value=\"88763\" /></relative>]@T]",
+                "ProductPrice": "[@T[productprice:<current productid=\"172337\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"172337\" secondaryproductid=\"172337\" />]@T]-[@T[productprice:<list productid=\"172337\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
              },{
                 "PodId": "3",
-                "logoclass": "tldlogo-dot-wiki",               
+                "logoclass": "tldlogo-dot-xyz",                
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTextWiki]@L]",
-                 "ButtonURL": "[@T[link:<relative path=\"/tlds/wiki\"><param name=\"ci\" value=\"88586\" /></relative>]@T]",
-                "ProductPrice": "[@T[productprice:<current productid=\"334305\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"334305\" secondaryproductid=\"334305\" />]@T]-[@T[productprice:<list productid=\"334305\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotXYZText]@L]",
+                "ButtonURL": "[@T[link:<relative path=\"/tlds/xyz\"><param name=\"ci\" value=\"90062\" /></relative>]@T]",
+                "ProductPrice": "[@T[productprice:<current productid=\"334499\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"334499\" secondaryproductid=\"334499\" />]@T]-[@T[productprice:<list productid=\"334499\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
             }],
  "BottomPods":[
                 {
@@ -766,47 +767,47 @@
                 "logoclass": "tldlogo-dot-se",                
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
                 "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotSeText]@L]",
-                "ButtonURL": "[@T[link:<relative path=\"/tlds/se-domain.aspx\"><param name=\"ci\" value=\"89738\" /></relative>]@T]",
+                "ButtonURL": "[@T[link:<relative path=\"/tlds/se\"><param name=\"ci\" value=\"89738\" /></relative>]@T]",
                 "ProductPrice": "[@T[productprice:<current productid=\"57701\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"57701\" secondaryproductid=\"57701\" />]@T]-[@T[productprice:<list productid=\"57701\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
             },{
                "PodId": "2",
-                "logoclass": "tldlogo-dot-ninja",                
+                "logoclass": "tldlogo-dot-club",               
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListText0]@L]",
-                "ButtonURL":"[@T[link:<relative path=\"/tlds/ninja\"><param name=\"ci\" value=\"89639\" /></relative>]@T]",
-                "ProductPrice": "[@T[productprice:<current productid=\"220091\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"220091\" secondaryproductid=\"220091\" />]@T]-[@T[productprice:<list productid=\"220091\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotClubText]@L]",
+                "ButtonURL": "[@T[link:<relative path=\"/tlds/club\"><param name=\"ci\" value=\"88763\" /></relative>]@T]",
+                "ProductPrice": "[@T[productprice:<current productid=\"172337\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"172337\" secondaryproductid=\"172337\" />]@T]-[@T[productprice:<list productid=\"172337\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
              },{
                 "PodId": "3",
-                "logoclass": "tldlogo-dot-wiki",               
+                "logoclass": "tldlogo-dot-xyz",                
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTextWiki]@L]",
-                 "ButtonURL": "[@T[link:<relative path=\"/tlds/wiki\"><param name=\"ci\" value=\"88586\" /></relative>]@T]",
-                "ProductPrice": "[@T[productprice:<current productid=\"334305\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"334305\" secondaryproductid=\"334305\" />]@T]-[@T[productprice:<list productid=\"334305\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotXYZText]@L]",
+                "ButtonURL": "[@T[link:<relative path=\"/tlds/xyz\"><param name=\"ci\" value=\"90062\" /></relative>]@T]",
+                "ProductPrice": "[@T[productprice:<current productid=\"334499\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"334499\" secondaryproductid=\"334499\" />]@T]-[@T[productprice:<list productid=\"334499\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
             }],
  "BottomPods":[
                 {
                    "PodID": "0",
                    "PodNewTag": "[@L[cds.sales/gd/domains/domain-name-search:New]@L]",
-                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleAU0]@L]",
-                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:OrgTextPod]@L]",
+                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleWebcam]@L]",
+                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotWebcamText]@L]",
                    "ButtonText":"[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                   "ButtonURL":"[@T[link:<relative path=\"/tlds/org.aspx\"><param name=\"ci\" value=\"88588\" /></relative>]@T]"
+                   "ButtonURL":"[@T[link:<relative path=\"/tlds/webcam\"><param name=\"ci\" value=\"91155\" /></relative>]@T]"
                 },                
                 {
                    "PodID": "1",
                    "PodNewTag": "[@L[cds.sales/gd/domains/domain-name-search:New]@L]",
-                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleCo]@L]",
-                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotCoText]@L]",
+                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleBid]@L]",
+                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotBidText]@L]",
                    "ButtonText":"[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                   "ButtonURL":"[@T[link:<relative path=\"/tlds/co-domain.aspx\"><param name=\"ci\" value=\"89736\" /></relative>]@T]"
+                   "ButtonURL":"[@T[link:<relative path=\"/tlds/bid\"><param name=\"ci\" value=\"91153\" /></relative>]@T]"
                 },         
                 {
                    "PodID": "2",
                    "PodNewTag": "[@L[cds.sales/gd/domains/domain-name-search:New]@L]",
-                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleCoUk]@L]",
-                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotMyText]@L]",
+                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleTrade]@L]",
+                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotTradeText]@L]",
                    "ButtonText":"[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                   "ButtonURL":"[@T[link:<relative path=\"/tlds/co-uk.aspx\"><param name=\"ci\" value=\"89623\" /></relative>]@T]"
+                   "ButtonURL":"[@T[link:<relative path=\"/tlds/trade\"><param name=\"ci\" value=\"91154\" /></relative>]@T]"
                 }
             ]
      },
@@ -824,22 +825,22 @@
                 "logoclass": "tldlogo-dot-de",                
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
                 "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotDeText]@L]",
-                "ButtonURL": "[@T[link:<relative path=\"/tlds/de-domain.aspx\"><param name=\"ci\" value=\"89594\" /></relative>]@T]",
+                "ButtonURL": "[@T[link:<relative path=\"/tlds/de\"><param name=\"ci\" value=\"89594\" /></relative>]@T]",
                 "ProductPrice": "[@T[productprice:<current productid=\"12601\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"12601\" secondaryproductid=\"12601\" />]@T]-[@T[productprice:<list productid=\"12601\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
             },{
                "PodId": "2",
-                "logoclass": "tldlogo-dot-ninja",                
+                "logoclass": "tldlogo-dot-club",               
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListText0]@L]",
-                "ButtonURL":"[@T[link:<relative path=\"/tlds/ninja\"><param name=\"ci\" value=\"89639\" /></relative>]@T]",
-                "ProductPrice": "[@T[productprice:<current productid=\"220091\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"220091\" secondaryproductid=\"220091\" />]@T]-[@T[productprice:<list productid=\"220091\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotClubText]@L]",
+                "ButtonURL": "[@T[link:<relative path=\"/tlds/club\"><param name=\"ci\" value=\"88763\" /></relative>]@T]",
+                "ProductPrice": "[@T[productprice:<current productid=\"172337\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"172337\" secondaryproductid=\"172337\" />]@T]-[@T[productprice:<list productid=\"172337\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
              },{
                 "PodId": "3",
-                "logoclass": "tldlogo-dot-wiki",               
+                "logoclass": "tldlogo-dot-xyz",                
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTextWiki]@L]",
-                 "ButtonURL": "[@T[link:<relative path=\"/tlds/wiki\"><param name=\"ci\" value=\"88586\" /></relative>]@T]",
-                "ProductPrice": "[@T[productprice:<current productid=\"334305\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"334305\" secondaryproductid=\"334305\" />]@T]-[@T[productprice:<list productid=\"334305\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotXYZText]@L]",
+                "ButtonURL": "[@T[link:<relative path=\"/tlds/xyz\"><param name=\"ci\" value=\"90062\" /></relative>]@T]",
+                "ProductPrice": "[@T[productprice:<current productid=\"334499\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"334499\" secondaryproductid=\"334499\" />]@T]-[@T[productprice:<list productid=\"334499\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
             }],
  "BottomPods":[
                 {
@@ -882,22 +883,22 @@
                 "logoclass": "tldlogo-dot-ch",                
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
                 "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotChText]@L]",
-                "ButtonURL": "[@T[link:<relative path=\"/tlds/ch-domain.aspx\"><param name=\"ci\" value=\"89739\" /></relative>]@T]",
+                "ButtonURL": "[@T[link:<relative path=\"/tlds/ch\"><param name=\"ci\" value=\"89739\" /></relative>]@T]",
                  "ProductPrice": "[@T[productprice:<current productid=\"143090\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"143090\" secondaryproductid=\"143090\" />]@T]-[@T[productprice:<list productid=\"143090\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
             },{
                 "PodId": "2",
-                "logoclass": "tldlogo-dot-ninja",                
+                "logoclass": "tldlogo-dot-club",               
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListText0]@L]",
-                "ButtonURL":"[@T[link:<relative path=\"/tlds/ninja\"><param name=\"ci\" value=\"89639\" /></relative>]@T]",
-                "ProductPrice": "[@T[productprice:<current productid=\"220091\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"220091\" secondaryproductid=\"220091\" />]@T]-[@T[productprice:<list productid=\"220091\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotClubText]@L]",
+                "ButtonURL": "[@T[link:<relative path=\"/tlds/club\"><param name=\"ci\" value=\"88763\" /></relative>]@T]",
+                "ProductPrice": "[@T[productprice:<current productid=\"172337\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"172337\" secondaryproductid=\"172337\" />]@T]-[@T[productprice:<list productid=\"172337\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
              },{
                 "PodId": "3",
-                "logoclass": "tldlogo-dot-wiki",               
+                "logoclass": "tldlogo-dot-xyz",                
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTextWiki]@L]",
-                 "ButtonURL": "[@T[link:<relative path=\"/tlds/wiki\"><param name=\"ci\" value=\"88586\" /></relative>]@T]",
-                "ProductPrice": "[@T[productprice:<current productid=\"334305\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"334305\" secondaryproductid=\"334305\" />]@T]-[@T[productprice:<list productid=\"334305\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotXYZText]@L]",
+                "ButtonURL": "[@T[link:<relative path=\"/tlds/xyz\"><param name=\"ci\" value=\"90062\" /></relative>]@T]",
+                "ProductPrice": "[@T[productprice:<current productid=\"334499\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"334499\" secondaryproductid=\"334499\" />]@T]-[@T[productprice:<list productid=\"334499\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
             }],
  "BottomPods":[
                 {
@@ -937,26 +938,25 @@
                 "ProductPrice": "[@T[productprice:<current productid=\"101\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"101\" secondaryproductid=\"101\" />]@T]-[@T[productprice:<list productid=\"101\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
             },{
                 "PodId": "1",
+                "logoclass": "tldlogo-dot-co",               
+                "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
+                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotCoDomainText]@L]",
+                 "ButtonURL": "[@T[link:<relative path=\"/tlds/co-domain.aspx\"><param name=\"ci\" value=\"88586\" /></relative>]@T]",
+                "ProductPrice": "[@T[productprice:<current productid=\"56401\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"56401\" secondaryproductid=\"56401\" />]@T]-[@T[productprice:<list productid=\"56401\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+            },{
+                "PodId": "2",
                 "logoclass": "tldlogo-dot-club",               
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
                 "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotClubText]@L]",
                 "ButtonURL": "[@T[link:<relative path=\"/tlds/club\"><param name=\"ci\" value=\"88763\" /></relative>]@T]",
                 "ProductPrice": "[@T[productprice:<current productid=\"172337\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"172337\" secondaryproductid=\"172337\" />]@T]-[@T[productprice:<list productid=\"172337\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
-
-            },{
-                "PodId": "2",
-                "logoclass": "tldlogo-dot-ninja",                
-                "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListText0]@L]",
-                "ButtonURL":"[@T[link:<relative path=\"/tlds/ninja\"><param name=\"ci\" value=\"89639\" /></relative>]@T]",
-                "ProductPrice": "[@T[productprice:<current productid=\"220091\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"220091\" secondaryproductid=\"220091\" />]@T]-[@T[productprice:<list productid=\"220091\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
              },{
                 "PodId": "3",
-                "logoclass": "tldlogo-dot-wiki",               
+                "logoclass": "tldlogo-dot-xyz",                
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTextWiki]@L]",
-                 "ButtonURL": "[@T[link:<relative path=\"/tlds/wiki\"><param name=\"ci\" value=\"88586\" /></relative>]@T]",
-                "ProductPrice": "[@T[productprice:<current productid=\"334305\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"334305\" secondaryproductid=\"334305\" />]@T]-[@T[productprice:<list productid=\"334305\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotXYZText]@L]",
+                "ButtonURL": "[@T[link:<relative path=\"/tlds/xyz\"><param name=\"ci\" value=\"90062\" /></relative>]@T]",
+                "ProductPrice": "[@T[productprice:<current productid=\"334499\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"334499\" secondaryproductid=\"334499\" />]@T]-[@T[productprice:<list productid=\"334499\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
             }],
  "BottomPods":[
                 {
@@ -996,25 +996,25 @@
                 "ProductPrice": "[@T[productprice:<current productid=\"101\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"101\" secondaryproductid=\"101\" />]@T]-[@T[productprice:<list productid=\"101\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
             },{
                 "PodId": "1",
+                "logoclass": "tldlogo-dot-co",               
+                "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
+                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotCoDomainText]@L]",
+                 "ButtonURL": "[@T[link:<relative path=\"/tlds/co-domain.aspx\"><param name=\"ci\" value=\"88586\" /></relative>]@T]",
+                "ProductPrice": "[@T[productprice:<current productid=\"56401\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"56401\" secondaryproductid=\"56401\" />]@T]-[@T[productprice:<list productid=\"56401\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+            },{
+                "PodId": "2",
                 "logoclass": "tldlogo-dot-club",               
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
                 "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotClubText]@L]",
                 "ButtonURL": "[@T[link:<relative path=\"/tlds/club\"><param name=\"ci\" value=\"88763\" /></relative>]@T]",
                 "ProductPrice": "[@T[productprice:<current productid=\"172337\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"172337\" secondaryproductid=\"172337\" />]@T]-[@T[productprice:<list productid=\"172337\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
-            },{
-                "PodId": "2",
-                "logoclass": "tldlogo-dot-ninja",                
-                "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListText0]@L]",
-                "ButtonURL":"[@T[link:<relative path=\"/tlds/ninja\"><param name=\"ci\" value=\"89639\" /></relative>]@T]",
-                "ProductPrice": "[@T[productprice:<current productid=\"220091\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"220091\" secondaryproductid=\"220091\" />]@T]-[@T[productprice:<list productid=\"220091\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
              },{
                 "PodId": "3",
-                "logoclass": "tldlogo-dot-wiki",               
+                "logoclass": "tldlogo-dot-xyz",                
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTextWiki]@L]",
-                 "ButtonURL": "[@T[link:<relative path=\"/tlds/wiki\"><param name=\"ci\" value=\"88586\" /></relative>]@T]",
-                "ProductPrice": "[@T[productprice:<current productid=\"334305\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"334305\" secondaryproductid=\"334305\" />]@T]-[@T[productprice:<list productid=\"334305\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotXYZText]@L]",
+                "ButtonURL": "[@T[link:<relative path=\"/tlds/xyz\"><param name=\"ci\" value=\"90062\" /></relative>]@T]",
+                "ProductPrice": "[@T[productprice:<current productid=\"334499\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"334499\" secondaryproductid=\"334499\" />]@T]-[@T[productprice:<list productid=\"334499\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
             }],
  "BottomPods":[
                 {
@@ -1061,18 +1061,18 @@
                  "ProductPrice": "[@T[productprice:<current productid=\"56101\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"56101\" secondaryproductid=\"56101\" />]@T]-[@T[productprice:<list productid=\"56101\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
             },{
                 "PodId": "2",
-                "logoclass": "tldlogo-dot-ninja",                
+                "logoclass": "tldlogo-dot-club",               
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListText0]@L]",
-                "ButtonURL":"[@T[link:<relative path=\"/tlds/ninja\"><param name=\"ci\" value=\"89639\" /></relative>]@T]",
-                "ProductPrice": "[@T[productprice:<current productid=\"220091\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"220091\" secondaryproductid=\"220091\" />]@T]-[@T[productprice:<list productid=\"220091\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotClubText]@L]",
+                "ButtonURL": "[@T[link:<relative path=\"/tlds/club\"><param name=\"ci\" value=\"88763\" /></relative>]@T]",
+                "ProductPrice": "[@T[productprice:<current productid=\"172337\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"172337\" secondaryproductid=\"172337\" />]@T]-[@T[productprice:<list productid=\"172337\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
              },{
                 "PodId": "3",
-                "logoclass": "tldlogo-dot-wiki",               
+                "logoclass": "tldlogo-dot-xyz",                
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTextWiki]@L]",
-                 "ButtonURL": "[@T[link:<relative path=\"/tlds/wiki\"><param name=\"ci\" value=\"88586\" /></relative>]@T]",
-                "ProductPrice": "[@T[productprice:<current productid=\"334305\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"334305\" secondaryproductid=\"334305\" />]@T]-[@T[productprice:<list productid=\"334305\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotXYZText]@L]",
+                "ButtonURL": "[@T[link:<relative path=\"/tlds/xyz\"><param name=\"ci\" value=\"90062\" /></relative>]@T]",
+                "ProductPrice": "[@T[productprice:<current productid=\"334499\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"334499\" secondaryproductid=\"334499\" />]@T]-[@T[productprice:<list productid=\"334499\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
             }],
  "BottomPods":[
                 {
@@ -1119,44 +1119,44 @@
                 "ProductPrice": "[@T[productprice:<current productid=\"56301\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"56301\" secondaryproductid=\"56301\" />]@T]-[@T[productprice:<list productid=\"56301\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
             },{
                 "PodId": "2",
-                "logoclass": "tldlogo-dot-ninja",                
+                "logoclass": "tldlogo-dot-club",               
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListText0]@L]",
-                "ButtonURL":"[@T[link:<relative path=\"/tlds/ninja\"><param name=\"ci\" value=\"89639\" /></relative>]@T]",
-                "ProductPrice": "[@T[productprice:<current productid=\"220091\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"220091\" secondaryproductid=\"220091\" />]@T]-[@T[productprice:<list productid=\"220091\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotClubText]@L]",
+                "ButtonURL": "[@T[link:<relative path=\"/tlds/club\"><param name=\"ci\" value=\"88763\" /></relative>]@T]",
+                "ProductPrice": "[@T[productprice:<current productid=\"172337\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"172337\" secondaryproductid=\"172337\" />]@T]-[@T[productprice:<list productid=\"172337\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
              },{
                 "PodId": "3",
-                "logoclass": "tldlogo-dot-wiki",               
+                "logoclass": "tldlogo-dot-xyz",                
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTextWiki]@L]",
-                 "ButtonURL": "[@T[link:<relative path=\"/tlds/wiki\"><param name=\"ci\" value=\"88586\" /></relative>]@T]",
-                "ProductPrice": "[@T[productprice:<current productid=\"334305\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"334305\" secondaryproductid=\"334305\" />]@T]-[@T[productprice:<list productid=\"334305\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotXYZText]@L]",
+                "ButtonURL": "[@T[link:<relative path=\"/tlds/xyz\"><param name=\"ci\" value=\"90062\" /></relative>]@T]",
+                "ProductPrice": "[@T[productprice:<current productid=\"334499\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"334499\" secondaryproductid=\"334499\" />]@T]-[@T[productprice:<list productid=\"334499\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
             }],
  "BottomPods":[
                 {
                    "PodID": "0",
                    "PodNewTag": "[@L[cds.sales/gd/domains/domain-name-search:New]@L]",
-                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleTips]@L]",
-                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotTipsText]@L]",
+                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleNinja]@L]",
+                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListText0]@L]",
                    "ButtonText":"[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                   "ButtonURL":"[@T[link:<relative path=\"/tlds/tips\"><param name=\"ci\" value=\"89622\" /></relative>]@T]"
+                   "ButtonURL":"[@T[link:<relative path=\"/tlds/ninja\"><param name=\"ci\" value=\"90923\" /></relative>]@T]"
                 },                
                 {
                    "PodID": "1",
                    "PodNewTag": "[@L[cds.sales/gd/domains/domain-name-search:New]@L]",
-                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleEu]@L]",
-                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTextEu]@L]",
+                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleGuru]@L]",
+                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotGuruText]@L]",
                    "ButtonText":"[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                   "ButtonURL":"[@T[link:<relative path=\"/tlds/international-domain-names.aspx\"><param name=\"ci\" value=\"89741\" /><param name=\"tld\" value=\"eu\" /></relative>]@T]"
+                   "ButtonURL":"[@T[link:<relative path=\"/tlds/guru\"><param name=\"ci\" value=\"88012\" /></relative>]@T]"
                 },         
                 {
                    "PodID": "2",
                    "PodNewTag": "[@L[cds.sales/gd/domains/domain-name-search:New]@L]",
-                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleCoUk]@L]",
-                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotMyText]@L]",
+                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleEmail]@L]",
+                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotEmailText]@L]",
                    "ButtonText":"[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                   "ButtonURL":"[@T[link:<relative path=\"/tlds/co-uk.aspx\"><param name=\"ci\" value=\"89735\" /></relative>]@T]"
-                }
+                   "ButtonURL":"[@T[link:<relative path=\"/tlds/email\"><param name=\"ci\" value=\"90064\" /></relative>]@T]"
+                }                
             ]
      },
 "domainlp_ru": {
@@ -1177,43 +1177,43 @@
                 "ProductPrice": "[@T[productprice:<current productid=\"171428\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"171428\" secondaryproductid=\"171428\" />]@T]-[@T[productprice:<list productid=\"171428\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
             },{
                "PodId": "2",
-                "logoclass": "tldlogo-dot-ninja",                
+                "logoclass": "tldlogo-dot-club",               
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListText0]@L]",
-                "ButtonURL":"[@T[link:<relative path=\"/tlds/ninja\"><param name=\"ci\" value=\"89639\" /></relative>]@T]",
-                "ProductPrice": "[@T[productprice:<current productid=\"220091\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"220091\" secondaryproductid=\"220091\" />]@T]-[@T[productprice:<list productid=\"220091\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotClubText]@L]",
+                "ButtonURL": "[@T[link:<relative path=\"/tlds/club\"><param name=\"ci\" value=\"88763\" /></relative>]@T]",
+                "ProductPrice": "[@T[productprice:<current productid=\"172337\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"172337\" secondaryproductid=\"172337\" />]@T]-[@T[productprice:<list productid=\"172337\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
              },{
                 "PodId": "3",
-                "logoclass": "tldlogo-dot-wiki",               
+                "logoclass": "tldlogo-dot-xyz",                
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTextWiki]@L]",
-                 "ButtonURL": "[@T[link:<relative path=\"/tlds/wiki\"><param name=\"ci\" value=\"88586\" /></relative>]@T]",
-                "ProductPrice": "[@T[productprice:<current productid=\"334305\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"334305\" secondaryproductid=\"334305\" />]@T]-[@T[productprice:<list productid=\"334305\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
-            }],
+                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotXYZText]@L]",
+                "ButtonURL": "[@T[link:<relative path=\"/tlds/xyz\"><param name=\"ci\" value=\"90062\" /></relative>]@T]",
+                "ProductPrice": "[@T[productprice:<current productid=\"334499\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"334499\" secondaryproductid=\"334499\" />]@T]-[@T[productprice:<list productid=\"334499\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"            }],
  "BottomPods":[
                 {
                    "PodID": "0",
                    "PodNewTag": "[@L[cds.sales/gd/domains/domain-name-search:New]@L]",
-                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleMe]@L]",
-                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTextMe]@L]",
+                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleWebcam]@L]",
+                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotWebcamText]@L]",
                    "ButtonText":"[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                   "ButtonURL":"[@T[link:<relative path=\"/tlds/me\"><param name=\"ci\" value=\"89750\" /></relative>]@T]"
+                   "ButtonURL":"[@T[link:<relative path=\"/tlds/webcam\"><param name=\"ci\" value=\"91155\" /></relative>]@T]"
                 },                
                 {
                    "PodID": "1",
                    "PodNewTag": "[@L[cds.sales/gd/domains/domain-name-search:New]@L]",
-                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleIt]@L]",
-                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTextIt]@L]",
+                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleBid]@L]",
+                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotBidText]@L]",
                    "ButtonText":"[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                   "ButtonURL":"[@T[link:<relative path=\"/tlds/it\"><param name=\"ci\" value=\"89749\" /></relative>]@T]"
+                   "ButtonURL":"[@T[link:<relative path=\"/tlds/bid\"><param name=\"ci\" value=\"91153\" /></relative>]@T]"
                 },         
                 {
                    "PodID": "2",
                    "PodNewTag": "[@L[cds.sales/gd/domains/domain-name-search:New]@L]",
-                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleMobi]@L]",
-                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotFlText]@L]",
+                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleTrade]@L]",
+                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotTradeText]@L]",
                    "ButtonText":"[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                   "ButtonURL":"[@T[link:<relative path=\"/tlds/mobi.aspx\"><param name=\"ci\" value=\"89741\" /></relative>]@T]"                }
+                   "ButtonURL":"[@T[link:<relative path=\"/tlds/trade\"><param name=\"ci\" value=\"91154\" /></relative>]@T]"
+                }
             ]
      },
 "domainlp_ua": {
@@ -1226,51 +1226,52 @@
                 "ButtonURL":"[@T[link:<relative path=\"/tlds/com.aspx\"><param name=\"ci\" value=\"88009\" /></relative>]@T]",
                 "ProductPrice": "[@T[productprice:<current productid=\"101\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"101\" secondaryproductid=\"101\" />]@T]-[@T[productprice:<list productid=\"101\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
             },{
-                 "PodId": "1",
+                "PodId": "1",
+                "logoclass": "tldlogo-dot-co",               
+                "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
+                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotCoDomainText]@L]",
+                 "ButtonURL": "[@T[link:<relative path=\"/tlds/co-domain.aspx\"><param name=\"ci\" value=\"88586\" /></relative>]@T]",
+                "ProductPrice": "[@T[productprice:<current productid=\"56401\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"56401\" secondaryproductid=\"56401\" />]@T]-[@T[productprice:<list productid=\"56401\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+            },{
+                "PodId": "2",
                 "logoclass": "tldlogo-dot-club",               
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
                 "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotClubText]@L]",
                 "ButtonURL": "[@T[link:<relative path=\"/tlds/club\"><param name=\"ci\" value=\"88763\" /></relative>]@T]",
                 "ProductPrice": "[@T[productprice:<current productid=\"172337\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"172337\" secondaryproductid=\"172337\" />]@T]-[@T[productprice:<list productid=\"172337\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
-            },{
-              "PodId": "2",
-                "logoclass": "tldlogo-dot-ninja",                
-                "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListText0]@L]",
-                "ButtonURL":"[@T[link:<relative path=\"/tlds/ninja\"><param name=\"ci\" value=\"89639\" /></relative>]@T]",
-                "ProductPrice": "[@T[productprice:<current productid=\"220091\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"220091\" secondaryproductid=\"220091\" />]@T]-[@T[productprice:<list productid=\"220091\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
              },{
                "PodId": "3",
-                "logoclass": "tldlogo-dot-wiki",               
+                "logoclass": "tldlogo-dot-xyz",                
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTextWiki]@L]",
-                 "ButtonURL": "[@T[link:<relative path=\"/tlds/wiki\"><param name=\"ci\" value=\"88586\" /></relative>]@T]",
-                "ProductPrice": "[@T[productprice:<current productid=\"334305\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"334305\" secondaryproductid=\"334305\" />]@T]-[@T[productprice:<list productid=\"334305\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotXYZText]@L]",
+                "ButtonURL": "[@T[link:<relative path=\"/tlds/xyz\"><param name=\"ci\" value=\"90062\" /></relative>]@T]",
+                "ProductPrice": "[@T[productprice:<current productid=\"334499\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"334499\" secondaryproductid=\"334499\" />]@T]-[@T[productprice:<list productid=\"334499\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
             }],
  "BottomPods":[
                 {
                    "PodID": "0",
                    "PodNewTag": "[@L[cds.sales/gd/domains/domain-name-search:New]@L]",
-                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleMe]@L]",
-                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTextMe]@L]",
+                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleWebcam]@L]",
+                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotWebcamText]@L]",
                    "ButtonText":"[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                   "ButtonURL":"[@T[link:<relative path=\"/tlds/me\"><param name=\"ci\" value=\"89750\" /></relative>]@T]"
+                   "ButtonURL":"[@T[link:<relative path=\"/tlds/webcam\"><param name=\"ci\" value=\"91155\" /></relative>]@T]"
                 },                
                 {
                    "PodID": "1",
                    "PodNewTag": "[@L[cds.sales/gd/domains/domain-name-search:New]@L]",
-                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleIt]@L]",
-                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTextIt]@L]",
+                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleBid]@L]",
+                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotBidText]@L]",
                    "ButtonText":"[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                   "ButtonURL":"[@T[link:<relative path=\"/tlds/it\"><param name=\"ci\" value=\"89749\" /></relative>]@T]"
+                   "ButtonURL":"[@T[link:<relative path=\"/tlds/bid\"><param name=\"ci\" value=\"91153\" /></relative>]@T]"
                 },         
                 {
                    "PodID": "2",
                    "PodNewTag": "[@L[cds.sales/gd/domains/domain-name-search:New]@L]",
-                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleMobi]@L]",
-                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotFlText]@L]",
+                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleTrade]@L]",
+                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotTradeText]@L]",
                    "ButtonText":"[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                   "ButtonURL":"[@T[link:<relative path=\"/tlds/mobi.aspx\"><param name=\"ci\" value=\"89741\" /></relative>]@T]"                }
+                   "ButtonURL":"[@T[link:<relative path=\"/tlds/trade\"><param name=\"ci\" value=\"91154\" /></relative>]@T]"
+                }
             ]
      },
 "domainlp_tr": {
@@ -1284,25 +1285,25 @@
                 "ProductPrice": "[@T[productprice:<current productid=\"101\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"101\" secondaryproductid=\"101\" />]@T]-[@T[productprice:<list productid=\"101\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
             },{
                "PodId": "1",
+                "logoclass": "tldlogo-dot-co",               
+                "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
+                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotCoDomainText]@L]",
+                 "ButtonURL": "[@T[link:<relative path=\"/tlds/co-domain.aspx\"><param name=\"ci\" value=\"88586\" /></relative>]@T]",
+                "ProductPrice": "[@T[productprice:<current productid=\"56401\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"56401\" secondaryproductid=\"56401\" />]@T]-[@T[productprice:<list productid=\"56401\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+             },{
+                "PodId": "2",
                 "logoclass": "tldlogo-dot-club",               
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
                 "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotClubText]@L]",
                 "ButtonURL": "[@T[link:<relative path=\"/tlds/club\"><param name=\"ci\" value=\"88763\" /></relative>]@T]",
                 "ProductPrice": "[@T[productprice:<current productid=\"172337\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"172337\" secondaryproductid=\"172337\" />]@T]-[@T[productprice:<list productid=\"172337\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
-             },{
-                "PodId": "2",
-                "logoclass": "tldlogo-dot-ninja",                
-                "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListText0]@L]",
-                "ButtonURL":"[@T[link:<relative path=\"/tlds/ninja\"><param name=\"ci\" value=\"89639\" /></relative>]@T]",
-                "ProductPrice": "[@T[productprice:<current productid=\"220091\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"220091\" secondaryproductid=\"220091\" />]@T]-[@T[productprice:<list productid=\"220091\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
             },{
                 "PodId": "3",
-                "logoclass": "tldlogo-dot-wiki",               
+                "logoclass": "tldlogo-dot-xyz",                
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTextWiki]@L]",
-                 "ButtonURL": "[@T[link:<relative path=\"/tlds/wiki\"><param name=\"ci\" value=\"88586\" /></relative>]@T]",
-                "ProductPrice": "[@T[productprice:<current productid=\"334305\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"334305\" secondaryproductid=\"334305\" />]@T]-[@T[productprice:<list productid=\"334305\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotXYZText]@L]",
+                "ButtonURL": "[@T[link:<relative path=\"/tlds/xyz\"><param name=\"ci\" value=\"90062\" /></relative>]@T]",
+                "ProductPrice": "[@T[productprice:<current productid=\"334499\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"334499\" secondaryproductid=\"334499\" />]@T]-[@T[productprice:<list productid=\"334499\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
             }],
  "BottomPods":[
                 {
@@ -1341,51 +1342,51 @@
                 "ButtonURL":"[@T[link:<relative path=\"/tlds/com.aspx\"><param name=\"ci\" value=\"88009\" /></relative>]@T]",
                 "ProductPrice": "[@T[productprice:<current productid=\"101\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"101\" secondaryproductid=\"101\" />]@T]-[@T[productprice:<list productid=\"101\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
             },{
-               "PodId": "1",
+                "PodId": "1",
+                "logoclass": "tldlogo-dot-co",               
+                "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
+                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotCoDomainText]@L]",
+                 "ButtonURL": "[@T[link:<relative path=\"/tlds/co-domain.aspx\"><param name=\"ci\" value=\"88586\" /></relative>]@T]",
+                "ProductPrice": "[@T[productprice:<current productid=\"56401\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"56401\" secondaryproductid=\"56401\" />]@T]-[@T[productprice:<list productid=\"56401\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+             },{
+                "PodId": "2",
                 "logoclass": "tldlogo-dot-club",               
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
                 "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotClubText]@L]",
                 "ButtonURL": "[@T[link:<relative path=\"/tlds/club\"><param name=\"ci\" value=\"88763\" /></relative>]@T]",
                 "ProductPrice": "[@T[productprice:<current productid=\"172337\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"172337\" secondaryproductid=\"172337\" />]@T]-[@T[productprice:<list productid=\"172337\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
-             },{
-                "PodId": "2",
-                "logoclass": "tldlogo-dot-ninja",                
-                "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListText0]@L]",
-                "ButtonURL":"[@T[link:<relative path=\"/tlds/ninja\"><param name=\"ci\" value=\"89639\" /></relative>]@T]",
-                "ProductPrice": "[@T[productprice:<current productid=\"220091\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"220091\" secondaryproductid=\"220091\" />]@T]-[@T[productprice:<list productid=\"220091\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"           
              },{   
                 "PodId": "3",
-                "logoclass": "tldlogo-dot-wiki",               
+                "logoclass": "tldlogo-dot-xyz",                
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTextWiki]@L]",
-                 "ButtonURL": "[@T[link:<relative path=\"/tlds/wiki\"><param name=\"ci\" value=\"88586\" /></relative>]@T]",
-                "ProductPrice": "[@T[productprice:<current productid=\"334305\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"334305\" secondaryproductid=\"334305\" />]@T]-[@T[productprice:<list productid=\"334305\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotXYZText]@L]",
+                "ButtonURL": "[@T[link:<relative path=\"/tlds/xyz\"><param name=\"ci\" value=\"90062\" /></relative>]@T]",
+                "ProductPrice": "[@T[productprice:<current productid=\"334499\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"334499\" secondaryproductid=\"334499\" />]@T]-[@T[productprice:<list productid=\"334499\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
             }],
  "BottomPods":[
                 {
                    "PodID": "0",
                    "PodNewTag": "[@L[cds.sales/gd/domains/domain-name-search:New]@L]",
-                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleToday]@L]",
-                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTextToday]@L]",
+                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleWebcam]@L]",
+                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotWebcamText]@L]",
                    "ButtonText":"[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                   "ButtonURL":"[@T[link:<relative path=\"/tlds/today\"><param name=\"ci\" value=\"89752\" /></relative>]@T]"
+                   "ButtonURL":"[@T[link:<relative path=\"/tlds/webcam\"><param name=\"ci\" value=\"91155\" /></relative>]@T]"
                 },                
                 {
                    "PodID": "1",
                    "PodNewTag": "[@L[cds.sales/gd/domains/domain-name-search:New]@L]",
-                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleCo]@L]",
-                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotCoText]@L]",
+                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleBid]@L]",
+                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotBidText]@L]",
                    "ButtonText":"[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                   "ButtonURL":"[@T[link:<relative path=\"/tlds/co-domain.aspx\"><param name=\"ci\" value=\"89736\" /></relative>]@T]"
+                   "ButtonURL":"[@T[link:<relative path=\"/tlds/bid\"><param name=\"ci\" value=\"91153\" /></relative>]@T]"
                 },         
                 {
                    "PodID": "2",
                    "PodNewTag": "[@L[cds.sales/gd/domains/domain-name-search:New]@L]",
-                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleTips]@L]",
-                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotTipsText]@L]",
+                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleTrade]@L]",
+                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotTradeText]@L]",
                    "ButtonText":"[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                   "ButtonURL":"[@T[link:<relative path=\"/tlds/tips\"><param name=\"ci\" value=\"89391\" /></relative>]@T]"    
+                   "ButtonURL":"[@T[link:<relative path=\"/tlds/trade\"><param name=\"ci\" value=\"91154\" /></relative>]@T]"
                 }
             ]
      },
@@ -1403,47 +1404,47 @@
                 "logoclass": "tldlogo-dot-cl",               
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
                 "PodText": "[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTextCl]@L]",
-                 "ButtonURL": "[@T[link:<relative path=\"/tlds/cl-domain.aspx\"><param name=\"ci\" value=\"89753\" /></relative>]@T]",
+                 "ButtonURL": "[@T[link:<relative path=\"/tlds/cl\"><param name=\"ci\" value=\"89753\" /></relative>]@T]",
                 "ProductPrice": "[@T[productprice:<current productid=\"45243\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"45243\" secondaryproductid=\"45243\" />]@T]-[@T[productprice:<list productid=\"45243\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
              },{
                 "PodId": "2",
-                "logoclass": "tldlogo-dot-ninja",                
+                "logoclass": "tldlogo-dot-club",               
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListText0]@L]",
-                "ButtonURL":"[@T[link:<relative path=\"/tlds/ninja\"><param name=\"ci\" value=\"89639\" /></relative>]@T]",
-                "ProductPrice": "[@T[productprice:<current productid=\"220091\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"220091\" secondaryproductid=\"220091\" />]@T]-[@T[productprice:<list productid=\"220091\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotClubText]@L]",
+                "ButtonURL": "[@T[link:<relative path=\"/tlds/club\"><param name=\"ci\" value=\"88763\" /></relative>]@T]",
+                "ProductPrice": "[@T[productprice:<current productid=\"172337\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"172337\" secondaryproductid=\"172337\" />]@T]-[@T[productprice:<list productid=\"172337\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
             },{
                 "PodId": "3",
-                "logoclass": "tldlogo-dot-wiki",               
+                "logoclass": "tldlogo-dot-xyz",                
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTextWiki]@L]",
-                 "ButtonURL": "[@T[link:<relative path=\"/tlds/wiki\"><param name=\"ci\" value=\"88586\" /></relative>]@T]",
-                "ProductPrice": "[@T[productprice:<current productid=\"334305\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"334305\" secondaryproductid=\"334305\" />]@T]-[@T[productprice:<list productid=\"334305\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotXYZText]@L]",
+                "ButtonURL": "[@T[link:<relative path=\"/tlds/xyz\"><param name=\"ci\" value=\"90062\" /></relative>]@T]",
+                "ProductPrice": "[@T[productprice:<current productid=\"334499\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"334499\" secondaryproductid=\"334499\" />]@T]-[@T[productprice:<list productid=\"334499\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
             }],
  "BottomPods":[
-                {
+             {
                    "PodID": "0",
                    "PodNewTag": "[@L[cds.sales/gd/domains/domain-name-search:New]@L]",
-                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleBuzz]@L]",
-                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTextBuzz]@L]",
+                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleWebcam]@L]",
+                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotWebcamText]@L]",
                    "ButtonText":"[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                   "ButtonURL":"[@T[link:<relative path=\"/tlds/buzz\"><param name=\"ci\" value=\"89733\" /></relative>]@T]"
+                   "ButtonURL":"[@T[link:<relative path=\"/tlds/webcam\"><param name=\"ci\" value=\"91155\" /></relative>]@T]"
                 },                
                 {
                    "PodID": "1",
                    "PodNewTag": "[@L[cds.sales/gd/domains/domain-name-search:New]@L]",
-                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleDirectory]@L]",
-                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTextDirectory]@L]",
+                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleBid]@L]",
+                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotBidText]@L]",
                    "ButtonText":"[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                   "ButtonURL":"[@T[link:<relative path=\"/tlds/directory\"><param name=\"ci\" value=\"89734\" /></relative>]@T]"
+                   "ButtonURL":"[@T[link:<relative path=\"/tlds/bid\"><param name=\"ci\" value=\"91153\" /></relative>]@T]"
                 },         
                 {
                    "PodID": "2",
                    "PodNewTag": "[@L[cds.sales/gd/domains/domain-name-search:New]@L]",
-                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleTips]@L]",
-                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotTipsText]@L]",
+                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleTrade]@L]",
+                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotTradeText]@L]",
                    "ButtonText":"[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                   "ButtonURL":"[@T[link:<relative path=\"/tlds/tips\"><param name=\"ci\" value=\"89391\" /></relative>]@T]"
+                   "ButtonURL":"[@T[link:<relative path=\"/tlds/trade\"><param name=\"ci\" value=\"91154\" /></relative>]@T]"
                 }
             ]
      },
@@ -1458,50 +1459,50 @@
                 "ProductPrice": "[@T[productprice:<current productid=\"101\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"101\" secondaryproductid=\"101\" />]@T]-[@T[productprice:<list productid=\"101\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
             },{
                 "PodId": "1",
-                "logoclass": "tldlogo-dot-co-uk",                
+                "logoclass": "tldlogo-dot-uk",                
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotMyText]@L]",
-                "ButtonURL":"[@T[link:<relative path=\"/tlds/co-uk.aspx\"><param name=\"ci\" value=\"89623\" /></relative>]@T]",
-                "ProductPrice": "[@T[productprice:<current productid=\"57465\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"57465\" secondaryproductid=\"57465\" />]@T]-[@T[productprice:<list productid=\"57465\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotUKText]@L]",
+                "ButtonURL":"[@T[link:<relative path=\"/tlds/uk\"><param name=\"ci\" value=\"89623\" /></relative>]@T]",
+                "ProductPrice": "[@T[productprice:<current productid=\"410930\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"410930\" secondaryproductid=\"410930\" />]@T]-[@T[productprice:<list productid=\"410930\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"          
             },{
                 "PodId": "2",
                 "logoclass": "tldlogo-dot-london",                
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:PreRegister]@L]",
                 "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotLondonText]@L]",
-                "ButtonURL":"[@T[link:<relative path=\"/tlds/london\"><param name=\"ci\" value=\"90608\" /></relative>]@T]",
+                "ButtonURL":"[@T[link:<relative path=\"/tlds/london\"><param name=\"ci\" value=\"90900\" /></relative>]@T]",
                 "ProductPrice": "[@T[productprice:<current productid=\"342460\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"342460\" secondaryproductid=\"342460\" />]@T]-[@T[productprice:<list productid=\"342460\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
              },{
                 "PodId": "3",
-                "logoclass": "tldlogo-dot-wiki",               
+                "logoclass": "tldlogo-dot-xyz",                
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTextWiki]@L]",
-                 "ButtonURL": "[@T[link:<relative path=\"/tlds/wiki\"><param name=\"ci\" value=\"88586\" /></relative>]@T]",
-                "ProductPrice": "[@T[productprice:<current productid=\"334305\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"334305\" secondaryproductid=\"334305\" />]@T]-[@T[productprice:<list productid=\"334305\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotXYZText]@L]",
+                "ButtonURL": "[@T[link:<relative path=\"/tlds/xyz\"><param name=\"ci\" value=\"90062\" /></relative>]@T]",
+                "ProductPrice": "[@T[productprice:<current productid=\"334499\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"334499\" secondaryproductid=\"334499\" />]@T]-[@T[productprice:<list productid=\"334499\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
             }],
  "BottomPods":[
                 {
                    "PodID": "0",
                    "PodNewTag": "[@L[cds.sales/gd/domains/domain-name-search:New]@L]",
-                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleBuzz]@L]",
-                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTextBuzz]@L]",
+                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleWebcam]@L]",
+                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotWebcamText]@L]",
                    "ButtonText":"[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                   "ButtonURL":"[@T[link:<relative path=\"/tlds/buzz\"><param name=\"ci\" value=\"89733\" /></relative>]@T]"
+                   "ButtonURL":"[@T[link:<relative path=\"/tlds/webcam\"><param name=\"ci\" value=\"91155\" /></relative>]@T]"
                 },                
                 {
                    "PodID": "1",
                    "PodNewTag": "[@L[cds.sales/gd/domains/domain-name-search:New]@L]",
-                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleDirectory]@L]",
-                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTextDirectory]@L]",
+                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleBid]@L]",
+                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotBidText]@L]",
                    "ButtonText":"[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                   "ButtonURL":"[@T[link:<relative path=\"/tlds/directory\"><param name=\"ci\" value=\"89734\" /></relative>]@T]"
+                   "ButtonURL":"[@T[link:<relative path=\"/tlds/bid\"><param name=\"ci\" value=\"91153\" /></relative>]@T]"
                 },         
                 {
                    "PodID": "2",
                    "PodNewTag": "[@L[cds.sales/gd/domains/domain-name-search:New]@L]",
-                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleTips]@L]",
-                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotTipsText]@L]",
+                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleTrade]@L]",
+                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotTradeText]@L]",
                    "ButtonText":"[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                   "ButtonURL":"[@T[link:<relative path=\"/tlds/tips\"><param name=\"ci\" value=\"89391\" /></relative>]@T]"
+                   "ButtonURL":"[@T[link:<relative path=\"/tlds/trade\"><param name=\"ci\" value=\"91154\" /></relative>]@T]"
                 }
             ]
      },
@@ -1523,18 +1524,18 @@
                 "ProductPrice": "[@T[productprice:<current productid=\"46309\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"46309\" secondaryproductid=\"46309\" />]@T]-[@T[productprice:<list productid=\"46309\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
             },{
                "PodId": "2",
-                "logoclass": "tldlogo-dot-ninja",                
+                "logoclass": "tldlogo-dot-club",               
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListText0]@L]",
-                "ButtonURL":"[@T[link:<relative path=\"/tlds/ninja\"><param name=\"ci\" value=\"89639\" /></relative>]@T]",
-                "ProductPrice": "[@T[productprice:<current productid=\"220091\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"220091\" secondaryproductid=\"220091\" />]@T]-[@T[productprice:<list productid=\"220091\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotClubText]@L]",
+                "ButtonURL": "[@T[link:<relative path=\"/tlds/club\"><param name=\"ci\" value=\"88763\" /></relative>]@T]",
+                "ProductPrice": "[@T[productprice:<current productid=\"172337\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"172337\" secondaryproductid=\"172337\" />]@T]-[@T[productprice:<list productid=\"172337\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
              },{
                 "PodId": "3",
-                "logoclass": "tldlogo-dot-wiki",               
+                "logoclass": "tldlogo-dot-xyz",                
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTextWiki]@L]",
-                 "ButtonURL": "[@T[link:<relative path=\"/tlds/wiki\"><param name=\"ci\" value=\"88586\" /></relative>]@T]",
-                "ProductPrice": "[@T[productprice:<current productid=\"334305\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"334305\" secondaryproductid=\"334305\" />]@T]-[@T[productprice:<list productid=\"334305\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotXYZText]@L]",
+                "ButtonURL": "[@T[link:<relative path=\"/tlds/xyz\"><param name=\"ci\" value=\"90062\" /></relative>]@T]",
+                "ProductPrice": "[@T[productprice:<current productid=\"334499\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"334499\" secondaryproductid=\"334499\" />]@T]-[@T[productprice:<list productid=\"334499\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
             }],
  "BottomPods":[
                 {
@@ -1573,51 +1574,51 @@
                 "ButtonURL":"[@T[link:<relative path=\"/tlds/com.aspx\"><param name=\"ci\" value=\"88009\" /></relative>]@T]",
                 "ProductPrice": "[@T[productprice:<current productid=\"101\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"101\" secondaryproductid=\"101\" />]@T]-[@T[productprice:<list productid=\"101\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
             },{
-               "PodId": "1",
+                "PodId": "1",
+                "logoclass": "tldlogo-dot-co",               
+                "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
+                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotCoDomainText]@L]",
+                 "ButtonURL": "[@T[link:<relative path=\"/tlds/co-domain.aspx\"><param name=\"ci\" value=\"88586\" /></relative>]@T]",
+                "ProductPrice": "[@T[productprice:<current productid=\"56401\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"56401\" secondaryproductid=\"56401\" />]@T]-[@T[productprice:<list productid=\"56401\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+            },{
+                "PodId": "2",
                 "logoclass": "tldlogo-dot-club",               
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
                 "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotClubText]@L]",
                 "ButtonURL": "[@T[link:<relative path=\"/tlds/club\"><param name=\"ci\" value=\"88763\" /></relative>]@T]",
                 "ProductPrice": "[@T[productprice:<current productid=\"172337\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"172337\" secondaryproductid=\"172337\" />]@T]-[@T[productprice:<list productid=\"172337\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
-            },{
-                "PodId": "2",
-                "logoclass": "tldlogo-dot-ninja",                
-                "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListText0]@L]",
-                "ButtonURL":"[@T[link:<relative path=\"/tlds/ninja\"><param name=\"ci\" value=\"89639\" /></relative>]@T]",
-                "ProductPrice": "[@T[productprice:<current productid=\"220091\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"220091\" secondaryproductid=\"220091\" />]@T]-[@T[productprice:<list productid=\"220091\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
              },{
                 "PodId": "3",
-                "logoclass": "tldlogo-dot-wiki",               
+                "logoclass": "tldlogo-dot-xyz",                
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTextWiki]@L]",
-                 "ButtonURL": "[@T[link:<relative path=\"/tlds/wiki\"><param name=\"ci\" value=\"88586\" /></relative>]@T]",
-                "ProductPrice": "[@T[productprice:<current productid=\"334305\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"334305\" secondaryproductid=\"334305\" />]@T]-[@T[productprice:<list productid=\"334305\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotXYZText]@L]",
+                "ButtonURL": "[@T[link:<relative path=\"/tlds/xyz\"><param name=\"ci\" value=\"90062\" /></relative>]@T]",
+                "ProductPrice": "[@T[productprice:<current productid=\"334499\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"334499\" secondaryproductid=\"334499\" />]@T]-[@T[productprice:<list productid=\"334499\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
             }],
  "BottomPods":[
                 {
                    "PodID": "0",
                    "PodNewTag": "[@L[cds.sales/gd/domains/domain-name-search:New]@L]",
-                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleTips]@L]",
-                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotTipsText]@L]",
+                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleWebcam]@L]",
+                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotWebcamText]@L]",
                    "ButtonText":"[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                   "ButtonURL":"[@T[link:<relative path=\"/tlds/tips\"><param name=\"ci\" value=\"89622\" /></relative>]@T]"
+                   "ButtonURL":"[@T[link:<relative path=\"/tlds/webcam\"><param name=\"ci\" value=\"91155\" /></relative>]@T]"
                 },                
                 {
                    "PodID": "1",
                    "PodNewTag": "[@L[cds.sales/gd/domains/domain-name-search:New]@L]",
-                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleToday]@L]",
-                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTextToday]@L]",
+                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleBid]@L]",
+                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotBidText]@L]",
                    "ButtonText":"[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                   "ButtonURL":"[@T[link:<relative path=\"/tlds/today\"><param name=\"ci\" value=\"89752\" /></relative>]@T]"
+                   "ButtonURL":"[@T[link:<relative path=\"/tlds/bid\"><param name=\"ci\" value=\"91153\" /></relative>]@T]"
                 },         
                 {
                    "PodID": "2",
                    "PodNewTag": "[@L[cds.sales/gd/domains/domain-name-search:New]@L]",
-                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleDirectory]@L]",
-                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTextDirectory]@L]",
+                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleTrade]@L]",
+                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotTradeText]@L]",
                    "ButtonText":"[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                   "ButtonURL":"[@T[link:<relative path=\"/tlds/directory\"><param name=\"ci\" value=\"89734\" /></relative>]@T]"
+                   "ButtonURL":"[@T[link:<relative path=\"/tlds/trade\"><param name=\"ci\" value=\"91154\" /></relative>]@T]"
                 }
             ]
      },
@@ -1632,50 +1633,50 @@
                 "ProductPrice": "[@T[productprice:<current productid=\"101\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"101\" secondaryproductid=\"101\" />]@T]-[@T[productprice:<list productid=\"101\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
             },{
                 "PodId": "1",
+                "logoclass": "tldlogo-dot-co",               
+                "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
+                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotCoDomainText]@L]",
+                 "ButtonURL": "[@T[link:<relative path=\"/tlds/co-domain.aspx\"><param name=\"ci\" value=\"88586\" /></relative>]@T]",
+                "ProductPrice": "[@T[productprice:<current productid=\"56401\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"56401\" secondaryproductid=\"56401\" />]@T]-[@T[productprice:<list productid=\"56401\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+            },{
+                "PodId": "2",
                 "logoclass": "tldlogo-dot-club",               
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
                 "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotClubText]@L]",
                 "ButtonURL": "[@T[link:<relative path=\"/tlds/club\"><param name=\"ci\" value=\"88763\" /></relative>]@T]",
                 "ProductPrice": "[@T[productprice:<current productid=\"172337\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"172337\" secondaryproductid=\"172337\" />]@T]-[@T[productprice:<list productid=\"172337\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
-            },{
-                "PodId": "2",
-                "logoclass": "tldlogo-dot-ninja",                
-                "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListText0]@L]",
-                "ButtonURL":"[@T[link:<relative path=\"/tlds/ninja\"><param name=\"ci\" value=\"89639\" /></relative>]@T]",
-                "ProductPrice": "[@T[productprice:<current productid=\"220091\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"220091\" secondaryproductid=\"220091\" />]@T]-[@T[productprice:<list productid=\"220091\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
              },{
                "PodId": "3",
-                "logoclass": "tldlogo-dot-wiki",               
+                "logoclass": "tldlogo-dot-xyz",                
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTextWiki]@L]",
-                 "ButtonURL": "[@T[link:<relative path=\"/tlds/wiki\"><param name=\"ci\" value=\"88586\" /></relative>]@T]",
-                "ProductPrice": "[@T[productprice:<current productid=\"334305\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"334305\" secondaryproductid=\"334305\" />]@T]-[@T[productprice:<list productid=\"334305\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotXYZText]@L]",
+                "ButtonURL": "[@T[link:<relative path=\"/tlds/xyz\"><param name=\"ci\" value=\"90062\" /></relative>]@T]",
+                "ProductPrice": "[@T[productprice:<current productid=\"334499\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"334499\" secondaryproductid=\"334499\" />]@T]-[@T[productprice:<list productid=\"334499\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
             }],
  "BottomPods":[
                 {
                    "PodID": "0",
                    "PodNewTag": "[@L[cds.sales/gd/domains/domain-name-search:New]@L]",
-                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleEmail]@L]",
-                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotEmailText]@L]",
+                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleWebcam]@L]",
+                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotWebcamText]@L]",
                    "ButtonText":"[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                   "ButtonURL":"[@T[link:<relative path=\"/tlds/email\"><param name=\"ci\" value=\"90064\" /></relative>]@T]"
+                   "ButtonURL":"[@T[link:<relative path=\"/tlds/webcam\"><param name=\"ci\" value=\"91155\" /></relative>]@T]"
                 },                
                 {
                    "PodID": "1",
                    "PodNewTag": "[@L[cds.sales/gd/domains/domain-name-search:New]@L]",
-                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleGuru]@L]",
-                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotGuruText]@L]",
+                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleBid]@L]",
+                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotBidText]@L]",
                    "ButtonText":"[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                   "ButtonURL":"[@T[link:<relative path=\"/tlds/guru\"><param name=\"ci\" value=\"88012\" /></relative>]@T]"
+                   "ButtonURL":"[@T[link:<relative path=\"/tlds/bid\"><param name=\"ci\" value=\"91153\" /></relative>]@T]"
                 },         
                 {
                    "PodID": "2",
                    "PodNewTag": "[@L[cds.sales/gd/domains/domain-name-search:New]@L]",
-                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleExpert]@L]",
-                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTextExpert]@L]",
+                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleTrade]@L]",
+                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotTradeText]@L]",
                    "ButtonText":"[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                   "ButtonURL":"[@T[link:<relative path=\"/tlds/expert\"><param name=\"ci\" value=\"90336\" /></relative>]@T]"
+                   "ButtonURL":"[@T[link:<relative path=\"/tlds/trade\"><param name=\"ci\" value=\"91154\" /></relative>]@T]"
                 }
             ]
          },
@@ -1690,50 +1691,50 @@
                 "ProductPrice": "[@T[productprice:<current productid=\"101\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"101\" secondaryproductid=\"101\" />]@T]-[@T[productprice:<list productid=\"101\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
             },{
                 "PodId": "1",
-                "logoclass": "tldlogo-dot-club",               
-                "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotClubText]@L]",
-                "ButtonURL": "[@T[link:<relative path=\"/tlds/club\"><param name=\"ci\" value=\"88763\" /></relative>]@T]",
-                "ProductPrice": "[@T[productprice:<current productid=\"172337\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"172337\" secondaryproductid=\"172337\" />]@T]-[@T[productprice:<list productid=\"172337\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
-            },{
-               "PodId": "2",
-                "logoclass": "tldlogo-dot-ninja",                
-                "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListText0]@L]",
-                "ButtonURL":"[@T[link:<relative path=\"/tlds/ninja\"><param name=\"ci\" value=\"89639\" /></relative>]@T]",
-                "ProductPrice": "[@T[productprice:<current productid=\"220091\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"220091\" secondaryproductid=\"220091\" />]@T]-[@T[productprice:<list productid=\"220091\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
-             },{
-                "PodId": "3",
                 "logoclass": "tldlogo-dot-co",               
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
                 "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotCoDomainText]@L]",
                  "ButtonURL": "[@T[link:<relative path=\"/tlds/co-domain.aspx\"><param name=\"ci\" value=\"88586\" /></relative>]@T]",
                 "ProductPrice": "[@T[productprice:<current productid=\"56401\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"56401\" secondaryproductid=\"56401\" />]@T]-[@T[productprice:<list productid=\"56401\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+            },{
+               "PodId": "2",
+                "logoclass": "tldlogo-dot-club",               
+                "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
+                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotClubText]@L]",
+                "ButtonURL": "[@T[link:<relative path=\"/tlds/club\"><param name=\"ci\" value=\"88763\" /></relative>]@T]",
+                "ProductPrice": "[@T[productprice:<current productid=\"172337\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"172337\" secondaryproductid=\"172337\" />]@T]-[@T[productprice:<list productid=\"172337\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+             },{
+                "PodId": "3",
+                "logoclass": "tldlogo-dot-xyz",                
+                "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
+                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotXYZText]@L]",
+                "ButtonURL": "[@T[link:<relative path=\"/tlds/xyz\"><param name=\"ci\" value=\"90062\" /></relative>]@T]",
+                "ProductPrice": "[@T[productprice:<current productid=\"334499\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"334499\" secondaryproductid=\"334499\" />]@T]-[@T[productprice:<list productid=\"334499\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
             }],
  "BottomPods":[
                 {
                    "PodID": "0",
                    "PodNewTag": "[@L[cds.sales/gd/domains/domain-name-search:New]@L]",
-                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleEmail]@L]",
-                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotEmailText]@L]",
+                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleWebcam]@L]",
+                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotWebcamText]@L]",
                    "ButtonText":"[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                   "ButtonURL":"[@T[link:<relative path=\"/tlds/email\"><param name=\"ci\" value=\"90064\" /></relative>]@T]"
+                   "ButtonURL":"[@T[link:<relative path=\"/tlds/webcam\"><param name=\"ci\" value=\"91155\" /></relative>]@T]"
                 },                
                 {
                    "PodID": "1",
                    "PodNewTag": "[@L[cds.sales/gd/domains/domain-name-search:New]@L]",
-                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleGuru]@L]",
-                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotGuruText]@L]",
+                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleBid]@L]",
+                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotBidText]@L]",
                    "ButtonText":"[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                   "ButtonURL":"[@T[link:<relative path=\"/tlds/guru\"><param name=\"ci\" value=\"88012\" /></relative>]@T]"
+                   "ButtonURL":"[@T[link:<relative path=\"/tlds/bid\"><param name=\"ci\" value=\"91153\" /></relative>]@T]"
                 },         
                 {
                    "PodID": "2",
                    "PodNewTag": "[@L[cds.sales/gd/domains/domain-name-search:New]@L]",
-                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleExpert]@L]",
-                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTextExpert]@L]",
+                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleTrade]@L]",
+                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotTradeText]@L]",
                    "ButtonText":"[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                   "ButtonURL":"[@T[link:<relative path=\"/tlds/expert\"><param name=\"ci\" value=\"90336\" /></relative>]@T]"
+                   "ButtonURL":"[@T[link:<relative path=\"/tlds/trade\"><param name=\"ci\" value=\"91154\" /></relative>]@T]"
                 }
             ]
          },
@@ -1751,53 +1752,53 @@
                 "logoclass": "tldlogo-dot-mx",               
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
                 "PodText": "[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTextMx]@L]",
-                "ButtonURL": "[@T[link:<relative path=\"/tlds/club\"><param name=\"ci\" value=\"90595\" /></relative>]@T]",
+                "ButtonURL": "[@T[link:<relative path=\"/tlds/mx\"><param name=\"ci\" value=\"90595\" /></relative>]@T]",
                 "ProductPrice": "[@T[productprice:<current productid=\"41901\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"41901\" secondaryproductid=\"41901\" />]@T]-[@T[productprice:<list productid=\"41901\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
             },{
                 "PodId": "2",
-                "logoclass": "tldlogo-dot-ninja",                
+                "logoclass": "tldlogo-dot-club",               
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListText0]@L]",
-                "ButtonURL":"[@T[link:<relative path=\"/tlds/ninja\"><param name=\"ci\" value=\"89639\" /></relative>]@T]",
-                "ProductPrice": "[@T[productprice:<current productid=\"220091\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"220091\" secondaryproductid=\"220091\" />]@T]-[@T[productprice:<list productid=\"220091\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotClubText]@L]",
+                "ButtonURL": "[@T[link:<relative path=\"/tlds/club\"><param name=\"ci\" value=\"88763\" /></relative>]@T]",
+                "ProductPrice": "[@T[productprice:<current productid=\"172337\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"172337\" secondaryproductid=\"172337\" />]@T]-[@T[productprice:<list productid=\"172337\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
              },{
                 "PodId": "3",
-                "logoclass": "tldlogo-dot-wiki",               
+                "logoclass": "tldlogo-dot-xyz",                
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTextWiki]@L]",
-                 "ButtonURL": "[@T[link:<relative path=\"/tlds/wiki\"><param name=\"ci\" value=\"88586\" /></relative>]@T]",
-                "ProductPrice": "[@T[productprice:<current productid=\"334305\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"334305\" secondaryproductid=\"334305\" />]@T]-[@T[productprice:<list productid=\"334305\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotXYZText]@L]",
+                "ButtonURL": "[@T[link:<relative path=\"/tlds/xyz\"><param name=\"ci\" value=\"90062\" /></relative>]@T]",
+                "ProductPrice": "[@T[productprice:<current productid=\"334499\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"334499\" secondaryproductid=\"334499\" />]@T]-[@T[productprice:<list productid=\"334499\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
             }],
  "BottomPods":[
                 {
                    "PodID": "0",
                    "PodNewTag": "[@L[cds.sales/gd/domains/domain-name-search:New]@L]",
-                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleEmail]@L]",
-                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotEmailText]@L]",
+                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleWebcam]@L]",
+                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotWebcamText]@L]",
                    "ButtonText":"[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                   "ButtonURL":"[@T[link:<relative path=\"/tlds/email\"><param name=\"ci\" value=\"90064\" /></relative>]@T]"
+                   "ButtonURL":"[@T[link:<relative path=\"/tlds/webcam\"><param name=\"ci\" value=\"91155\" /></relative>]@T]"
                 },                
                 {
                    "PodID": "1",
                    "PodNewTag": "[@L[cds.sales/gd/domains/domain-name-search:New]@L]",
-                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleGuru]@L]",
-                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotGuruText]@L]",
+                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleBid]@L]",
+                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotBidText]@L]",
                    "ButtonText":"[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                   "ButtonURL":"[@T[link:<relative path=\"/tlds/guru\"><param name=\"ci\" value=\"88012\" /></relative>]@T]"
+                   "ButtonURL":"[@T[link:<relative path=\"/tlds/bid\"><param name=\"ci\" value=\"91153\" /></relative>]@T]"
                 },         
                 {
                    "PodID": "2",
                    "PodNewTag": "[@L[cds.sales/gd/domains/domain-name-search:New]@L]",
-                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleExpert]@L]",
-                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTextExpert]@L]",
+                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleTrade]@L]",
+                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotTradeText]@L]",
                    "ButtonText":"[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                   "ButtonURL":"[@T[link:<relative path=\"/tlds/expert\"><param name=\"ci\" value=\"90336\" /></relative>]@T]"
+                   "ButtonURL":"[@T[link:<relative path=\"/tlds/trade\"><param name=\"ci\" value=\"91154\" /></relative>]@T]"
                 }
             ]
          },
 "domainlp_pe": {
         "Pods": [
-            {
+               {
                 "PodId":"0",
                 "logoclass":"tldlogo-dot-com",                
                 "ButtonText":"[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
@@ -1806,50 +1807,50 @@
                 "ProductPrice": "[@T[productprice:<current productid=\"101\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"101\" secondaryproductid=\"101\" />]@T]-[@T[productprice:<list productid=\"101\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
             },{
                 "PodId": "1",
+                "logoclass": "tldlogo-dot-co",               
+                "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
+                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotCoDomainText]@L]",
+                 "ButtonURL": "[@T[link:<relative path=\"/tlds/co-domain.aspx\"><param name=\"ci\" value=\"88586\" /></relative>]@T]",
+                "ProductPrice": "[@T[productprice:<current productid=\"56401\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"56401\" secondaryproductid=\"56401\" />]@T]-[@T[productprice:<list productid=\"56401\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+            },{
+               "PodId": "2",
                 "logoclass": "tldlogo-dot-club",               
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
                 "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotClubText]@L]",
                 "ButtonURL": "[@T[link:<relative path=\"/tlds/club\"><param name=\"ci\" value=\"88763\" /></relative>]@T]",
                 "ProductPrice": "[@T[productprice:<current productid=\"172337\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"172337\" secondaryproductid=\"172337\" />]@T]-[@T[productprice:<list productid=\"172337\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
-            },{
-               "PodId": "2",
-                "logoclass": "tldlogo-dot-ninja",                
-                "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListText0]@L]",
-                "ButtonURL":"[@T[link:<relative path=\"/tlds/ninja\"><param name=\"ci\" value=\"89639\" /></relative>]@T]",
-                "ProductPrice": "[@T[productprice:<current productid=\"220091\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"220091\" secondaryproductid=\"220091\" />]@T]-[@T[productprice:<list productid=\"220091\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
              },{
                 "PodId": "3",
-                "logoclass": "tldlogo-dot-wiki",               
+                "logoclass": "tldlogo-dot-xyz",                
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTextWiki]@L]",
-                 "ButtonURL": "[@T[link:<relative path=\"/tlds/wiki\"><param name=\"ci\" value=\"88586\" /></relative>]@T]",
-                "ProductPrice": "[@T[productprice:<current productid=\"334305\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"334305\" secondaryproductid=\"334305\" />]@T]-[@T[productprice:<list productid=\"334305\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotXYZText]@L]",
+                "ButtonURL": "[@T[link:<relative path=\"/tlds/xyz\"><param name=\"ci\" value=\"90062\" /></relative>]@T]",
+                "ProductPrice": "[@T[productprice:<current productid=\"334499\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"334499\" secondaryproductid=\"334499\" />]@T]-[@T[productprice:<list productid=\"334499\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
             }],
  "BottomPods":[
                 {
                    "PodID": "0",
                    "PodNewTag": "[@L[cds.sales/gd/domains/domain-name-search:New]@L]",
-                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleEmail]@L]",
-                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotEmailText]@L]",
+                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleWebcam]@L]",
+                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotWebcamText]@L]",
                    "ButtonText":"[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                   "ButtonURL":"[@T[link:<relative path=\"/tlds/email\"><param name=\"ci\" value=\"90064\" /></relative>]@T]"
+                   "ButtonURL":"[@T[link:<relative path=\"/tlds/webcam\"><param name=\"ci\" value=\"91155\" /></relative>]@T]"
                 },                
                 {
                    "PodID": "1",
                    "PodNewTag": "[@L[cds.sales/gd/domains/domain-name-search:New]@L]",
-                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleGuru]@L]",
-                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotGuruText]@L]",
+                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleBid]@L]",
+                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotBidText]@L]",
                    "ButtonText":"[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                   "ButtonURL":"[@T[link:<relative path=\"/tlds/guru\"><param name=\"ci\" value=\"88012\" /></relative>]@T]"
+                   "ButtonURL":"[@T[link:<relative path=\"/tlds/bid\"><param name=\"ci\" value=\"91153\" /></relative>]@T]"
                 },         
                 {
                    "PodID": "2",
                    "PodNewTag": "[@L[cds.sales/gd/domains/domain-name-search:New]@L]",
-                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleExpert]@L]",
-                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTextExpert]@L]",
+                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleTrade]@L]",
+                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotTradeText]@L]",
                    "ButtonText":"[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                   "ButtonURL":"[@T[link:<relative path=\"/tlds/expert\"><param name=\"ci\" value=\"90336\" /></relative>]@T]"
+                   "ButtonURL":"[@T[link:<relative path=\"/tlds/trade\"><param name=\"ci\" value=\"91154\" /></relative>]@T]"
                 }
             ]
          },
@@ -1864,50 +1865,50 @@
                 "ProductPrice": "[@T[productprice:<current productid=\"101\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"101\" secondaryproductid=\"101\" />]@T]-[@T[productprice:<list productid=\"101\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
             },{
                 "PodId": "1",
+                "logoclass": "tldlogo-dot-co",               
+                "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
+                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotCoDomainText]@L]",
+                 "ButtonURL": "[@T[link:<relative path=\"/tlds/co-domain.aspx\"><param name=\"ci\" value=\"88586\" /></relative>]@T]",
+                "ProductPrice": "[@T[productprice:<current productid=\"56401\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"56401\" secondaryproductid=\"56401\" />]@T]-[@T[productprice:<list productid=\"56401\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+            },{
+                "PodId": "2",
                 "logoclass": "tldlogo-dot-club",               
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
                 "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotClubText]@L]",
                 "ButtonURL": "[@T[link:<relative path=\"/tlds/club\"><param name=\"ci\" value=\"88763\" /></relative>]@T]",
                 "ProductPrice": "[@T[productprice:<current productid=\"172337\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"172337\" secondaryproductid=\"172337\" />]@T]-[@T[productprice:<list productid=\"172337\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
-            },{
-                "PodId": "2",
-                "logoclass": "tldlogo-dot-ninja",                
-                "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListText0]@L]",
-                "ButtonURL":"[@T[link:<relative path=\"/tlds/ninja\"><param name=\"ci\" value=\"89639\" /></relative>]@T]",
-                "ProductPrice": "[@T[productprice:<current productid=\"220091\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"220091\" secondaryproductid=\"220091\" />]@T]-[@T[productprice:<list productid=\"220091\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
              },{
                 "PodId": "3",
-                "logoclass": "tldlogo-dot-wiki",               
+                "logoclass": "tldlogo-dot-xyz",                
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTextWiki]@L]",
-                 "ButtonURL": "[@T[link:<relative path=\"/tlds/wiki\"><param name=\"ci\" value=\"88586\" /></relative>]@T]",
-                "ProductPrice": "[@T[productprice:<current productid=\"334305\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"334305\" secondaryproductid=\"334305\" />]@T]-[@T[productprice:<list productid=\"334305\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotXYZText]@L]",
+                "ButtonURL": "[@T[link:<relative path=\"/tlds/xyz\"><param name=\"ci\" value=\"90062\" /></relative>]@T]",
+                "ProductPrice": "[@T[productprice:<current productid=\"334499\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"334499\" secondaryproductid=\"334499\" />]@T]-[@T[productprice:<list productid=\"334499\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
             }],
  "BottomPods":[
                 {
                    "PodID": "0",
                    "PodNewTag": "[@L[cds.sales/gd/domains/domain-name-search:New]@L]",
-                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleGuru]@L]",
-                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotGuruText]@L]",
+                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleWebcam]@L]",
+                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotWebcamText]@L]",
                    "ButtonText":"[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                   "ButtonURL":"[@T[link:<relative path=\"/tlds/guru\"><param name=\"ci\" value=\"88012\" /></relative>]@T]"
+                   "ButtonURL":"[@T[link:<relative path=\"/tlds/webcam\"><param name=\"ci\" value=\"91155\" /></relative>]@T]"
                 },                
                 {
                    "PodID": "1",
                    "PodNewTag": "[@L[cds.sales/gd/domains/domain-name-search:New]@L]",
-                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleReviews]@L]",
-                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListText2]@L]",
-                   "ButtonText":"[@L[cds.sales/gd/domains/domain-name-search:PreRegister]@L]",
-                   "ButtonURL":"[@T[link:<relative path=\"/tlds/reviews\"><param name=\"ci\" value=\"90610\" /></relative>]@T]"
+                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleBid]@L]",
+                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotBidText]@L]",
+                   "ButtonText":"[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
+                   "ButtonURL":"[@T[link:<relative path=\"/tlds/bid\"><param name=\"ci\" value=\"91153\" /></relative>]@T]"
                 },         
                 {
                    "PodID": "2",
                    "PodNewTag": "[@L[cds.sales/gd/domains/domain-name-search:New]@L]",
-                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleExpert]@L]",
-                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTextExpert]@L]",
+                   "PodTLD":"[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyBoxesListTitleTrade]@L]",
+                   "PodText":"[@L[cds.sales/gd/domains/domain-name-search:PricesDotTradeText]@L]",
                    "ButtonText":"[@L[cds.sales/gd/domains/domain-name-search:Register]@L]",
-                   "ButtonURL":"[@T[link:<relative path=\"/tlds/expert\"><param name=\"ci\" value=\"90336\" /></relative>]@T]"
+                   "ButtonURL":"[@T[link:<relative path=\"/tlds/trade\"><param name=\"ci\" value=\"91154\" /></relative>]@T]"
                 }
             ]
      }
