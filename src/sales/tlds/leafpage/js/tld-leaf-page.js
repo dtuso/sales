@@ -292,7 +292,7 @@ if (!domains.controls.cds_gtld_templates) {
         // else
         // {
         //   $('#tld-pricetagline').append('<span> <strong style="text-decoration:line-through">'+phaseData.Prices.TotalList+'</em></strong>');
-        //   $('#limitations-wrap').remove();
+        //   $('#limitations-wrap').remove();          
           return phaseData.Prices.TotalCurrent;          
         }
       }
