@@ -20,7 +20,6 @@ There are trade-offs of course. While it will now be easier to manage all reposi
 
 ---
 
-UPDATE: The build folder is no longer being included into the repository because of the exponential growth.
 
 Install
 =====
