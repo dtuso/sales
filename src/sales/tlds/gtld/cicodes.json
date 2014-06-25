@@ -18,6 +18,18 @@
           { "Description" : ".GURU Slide Link" }
         ]
       },
+       { ".UNO Slide Link" : [
+          { "ITC ID" : "90305" },
+          { "ITC Code" : "" },
+          { "Description" : ".UNO Slide Link" }
+        ]
+      },
+       { ".VEGAS Slide Link" : [
+          { "ITC ID" : "91329" },
+          { "ITC Code" : "" },
+          { "Description" : ".VEGAS Slide Link" }
+        ]
+      },
       { ".COMPANY Slide Link" : [
           { "ITC ID" : "90067" },
           { "ITC Code" : "" },
