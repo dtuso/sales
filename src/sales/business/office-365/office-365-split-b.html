@@ -1,7 +1,7 @@
 ---
 location: sales/business/split-test/office-365.aspx
 id: false
-name: Page Reskin - post language updates
+name: Page Reskin - International Fixes
 assetPath: false
 ---
 {% extends 'layouts/base-no-border-box.html' %}
@@ -177,7 +177,8 @@ assetPath: false
   <section class="compare-plans-section" id="js-show-hide-compare" style="display: none">
     <p class="section-sub-header">[@L[cds.sales/business/office-365:split-test-b-9-ChooseTheOneThatSRightForYou]@L]</p>
     <div class="container l-main-container">
-      {% include "_split-compare-table.html" %}
+      {% set table1CI = {'ci1': '91164', 'ci2': '91165', 'ci3':'91166'}%}
+      {% include "_split-compare-table.html" with table1CI %}
     </div>
   </section>
 ##if(activeLanguageAny(en))
@@ -371,7 +372,8 @@ assetPath: false
     <h2 class="section-header">[@L[cds.sales/business/office-365:split-test-b-4-CompareOurPlans]@L]</h2>
     <p class="section-sub-header">[@L[cds.sales/business/office-365:split-test-b-9-ChooseTheOneThatSRightForYou]@L]</p>
     <div class="container l-main-container">
-      {% include "_split-compare-table.html" %}
+      {% set table2CI = {'ci1': '91307', 'ci2': '91308', 'ci3':'91309'} %}
+      {% include "_split-compare-table.html" with table2CI %}
     </div>
   </section>
 
@@ -411,7 +413,7 @@ assetPath: false
       </p>
     </div>
     <!-- / question-section -->
-    <p class="more-text"><a href="javascript:void(0);">[@L[cds.sales/business/office-365:split-test-b-1-more-faq]@L] <i class="chevron-down"></i></a></p>
+    <p class="more-text"><a href="javascript:void(0);" data-ci="91304">[@L[cds.sales/business/office-365:split-test-b-1-more-faq]@L] <i class="chevron-down"></i></a></p>
     <div id="js-more-faq-wrapper" style="display:none">
         <div class="question-section">
           <div class="show-hide-question-section">
@@ -556,7 +558,7 @@ assetPath: false
     <div class="container l-main-container content-disclaimer">
       <p>
         <small class="small-print">
-          <a class="simple-link" href="#" data-toggle="modal" data-target="#disclaimerModal" data-ci="">[@L[cds.sales/business/office-365:split-test-b-ClickHereForProductDisclaimers]@L]</a>
+          <a class="simple-link" href="#" data-toggle="modal" data-target="#disclaimerModal" data-ci="91305">[@L[cds.sales/business/office-365:split-test-b-ClickHereForProductDisclaimers]@L]</a>
         </small>
       </p>
       <div class="modal fade" id="disclaimerModal">
