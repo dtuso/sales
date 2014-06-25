@@ -292,12 +292,7 @@ if (!domains.controls.cds_gtld_templates) {
         // else
         // {
         //   $('#tld-pricetagline').append('<span> <strong style="text-decoration:line-through">'+phaseData.Prices.TotalList+'</em></strong>');
-<<<<<<< HEAD
-        //   $('#limitations-wrap').remove();          
-=======
         //   $('#limitations-wrap').remove();
-           
->>>>>>> FOS-22526
           return phaseData.Prices.TotalCurrent;          
         }
       }
