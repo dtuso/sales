@@ -1,8 +1,8 @@
 ---
 location: localization/sales/newscenter/about-godaddy/en
-id: 5399ecedf778fc1190e08c1a
-name: Phone Number change for Kari Amarosso
-comments: News release updates.
+id: 53aa2e56f778fc132482340a
+name: FOS-22872
+comments: Legal changes to about godaddy stats
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="NewsCenterAbout-AFinePortraitsVideo" />
@@ -32,11 +32,11 @@ Our Team
 <phrase key="NewsCenterAbout-3-GoDaddyIs" />
 GoDaddy is&hellip;
 <phrase key="NewsCenterAbout-11-TheWorldSLargestDomainNameRegistrarAndWeb" />
-The <strong>world’s largest</strong> domain name registrar and Web hosting provider
+The <strong>world's largest</strong><br /> domain name registrar
 <phrase key="NewsCenterAbout-7-MoreThan55MillionDomainsUnderManagement" />
-More than <strong>57 million domains</strong> under management
+<strong>57 million domains</strong><br /> under management
 <phrase key="NewsCenterAbout-4-MoreThan12Millioncustomers" />
-More than <strong>12 million<br />customers</strong>
+<strong>12 million<br />customers</strong>
 <phrase key="NewsCenterAbout-13-9FacilitiesIncludingArizonaIowaCaliforniaColoradoWashingtonD" />
 <strong>14 facilities</strong>, including: Ariz., Calif., Iowa, Wash., Asia, Europe, India … & more
 <phrase key="NewsCenterAbout-5-MoreThan4000Employees" />
@@ -238,11 +238,11 @@ Founder<br />GoDaddy
 <phrase key="NewsCenterAbout-40-BobParsonsIsASerialEntrepreneurWhoSoldHis" />
 Bob Parsons is a serial entrepreneur. He sold his first company to Intuit, Inc. in 1994. Three years later Parsons started Jomax Technologies, renaming the company GoDaddy in 1999. In 2000, GoDaddy became an ICANN-accredited domain name registrar.
 <phrase key="NewsCenterAbout-32-TodayGoDaddyIsTheWorldSLargestProviderOf" />
-Today, GoDaddy is the world's largest provider of domain names, Web hosting and new SSL Certificates. The company also provides dozens of cloud-based services, all geared to small business.
+Today, GoDaddy is the world's largest provider of domain names. The company also provides dozens of cloud-based services, all geared to small business.
 <phrase key="NewsCenterAbout-80-BobHoldsABSInAccountingFromThe" />
 Bob is a decorated military veteran who served in the U.S. Marine Corps in Vietnam. He holds a B.S. in accounting from the University of Baltimore, which presented him with an honorary doctorate in 2008 and named him Distinguished Entrepreneur in 2010. He was also awarded Arizona Business Leader of the Year in 2007 and the Celebrity Fight Night Muhammad Ali Entrepreneur Award in 2011. In 2013, Bob was presented with the Visionary Award for his charitable and entrepreneurial achievements, which have provided invaluable direction, leadership and voice to the Greater Phoenix Area.
 <phrase key="NewsCenterAbout-80-BobReneeParsonsFoundation" />
-In 2012 Bob and his wife Renee created The Bob & Renee Parsons Foundation to provide critical funding to non-profit organizations. The Parsons reinforced their commitment to philanthropy in December of 2013 by publically accepting an invitation to join The Giving Pledge, an initiative started by Bill and Melinda Gates and Warren Buffett. They pledged to give away at least half their wealth – and likely much more – to philanthropic causes. During 2012 and 2013, Bob and Renee gave more than [@T[currencyprice:<price usdamount="3400" dropdecimal="true" dropsymbol="false" htmlsymbol="false" negative="parentheses" /> ]@T] million to various charities.
+In 2012 Bob and his wife Renee created The Bob &amp; Renee Parsons Foundation to provide critical funding to non-profit organizations. The Parsons reinforced their commitment to philanthropy in December of 2013 by publically accepting an invitation to join The Giving Pledge, an initiative started by Bill and Melinda Gates and Warren Buffett. They pledged to give away at least half their wealth – and likely much more – to philanthropic causes. During 2012 and 2013, Bob and Renee gave more than [@T[currencyprice:<price usdamount="3400" dropdecimal="true" dropsymbol="false" htmlsymbol="false" negative="parentheses" /> ]@T] million to various charities.
 <phrase key="NewsCenterAbout-12-BobIsActiveWithSocialMediaAndUsesDrBobParsons" />
 Bob is active with social media and uses <a href="https://twitter.com/DrBobParsons" target="_blank">@DrBobParsons</a> on Twitter.
 <phrase key="NewsCenterAbout-30-AsGoDaddySCEOBlakeOverseesTheCompanyS" />
@@ -528,6 +528,8 @@ Invalid Code Entered
 12
 <phrase key="NewsCenterAbout-Employees" />
 4,000
+<phrase key="NewsCenterAbout-Facilities" />
+14
 <phrase key="NewsCenterAbout-CustomerCare" />
 24/7/365
 <phrase key="NewsCenterCancelLink" />
