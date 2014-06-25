@@ -1,12 +1,12 @@
 {
-  "search.html": {
+  "searchresults.html": {
     "cdsDetails": {
       "champion": {
         "name": "Joel Conrad",
         "email": "jconrad@godaddy.com"
       },
       "draft": {
-        "comments": "Updating Privacy ToolTip",
+        "comments": "Adding deals2 split 1208",
         "url": "http://www.dev-godaddy.com/domains/searchresults.aspx"
       }
     },
@@ -18,7 +18,7 @@
     "metaOgTitle": "[@L[cds.sales/gd/domains/searchresults-new3:MetaTitle]@L]",
     "metaOgDescription": "[@L[cds.sales/gd/domains/searchresults-new3:MetaDescription]@L]"
   },
-  "search.language": {
+  "searchresults.language": {
     "cdsDetails": {
       "champion": {
         "name": "Joel Conrad",
