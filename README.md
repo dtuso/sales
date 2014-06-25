@@ -20,19 +20,7 @@ There are trade-offs of course. While it will now be easier to manage all reposi
 
 ---
 
-UPDATE: The build folder is no longer being included into the repository because of the exponential growth. If you need to review and search the compiled output in lieu of it being gone, note that the contents of the folder has been moved to:
-
-Via Windows
-
-```
-I:\Delta\Developer\FOS-CDS-Sales-Backup
-```
-
-Via OS X
-
-```
-smb://jomax.paholdings.com/data/Delta/Developer/FOS-CDS-Sales-Backup
-```
+UPDATE: The build folder is no longer being included into the repository because of the exponential growth.
 
 Install
 =====
