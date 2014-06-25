@@ -27,7 +27,7 @@ name: FOS-21927
 {% endblock %}
 {% block customjs %}
 {% jsminify %}
-  $('.gdhp-top-banner-3').bind('click',function(event){
+  $('.gdhp-top-banner').bind('click',function(event){
     var $clickedElement = $(event.target);
     if(!$clickedElement.hasClass('gtld-pods')){
       window.location.href='[@T[link:<relative path="/domains/search-new.aspx"><param name="ci" value="91184" /></relative>]@T]';
