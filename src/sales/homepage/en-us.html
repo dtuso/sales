@@ -37,6 +37,16 @@ name: FOS-21927
       window.location.href='[@T[link:<relative path="/hosting/wordpress-hosting.aspx"><param name="ci" value="91094" /></relative>]@T]';
     }
   });
+    $('.gdhp-top-banner-4').bind('click',function(event){
+    var clientX = event.clientX;
+    var center = document.getElementById("middle-bar");
+    rect = center.getBoundingClientRect();
+    if(clientX < rect.left){
+      window.location.href='[@T[link:<relative path="/hosting/website-builder.aspx"><param name="ci" value="91317" /></relative>]@T]';
+    } else {
+      window.location.href='[@T[link:<relative path="/hosting/wordpress-hosting.aspx"><param name="ci" value="91318" /></relative>]@T]';
+    }
+  });
   $('body').on('click','.js-gdhpclick',function(event){
       var $clickedElement = $(event.currentTarget);
       var $clickedUrl = $clickedElement.attr('data-url'); 
