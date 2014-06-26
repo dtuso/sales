@@ -10,12 +10,18 @@
         "id": false,
         "createdDate": "2014-04-29",
         "createdBy": {
-          "fullName": "Sergio Lopez",
-          "username": "sylopez"
+          "fullName": "Avinash Peesari",
+          "username": "apeesari"
         },
+<<<<<<< HEAD:src/sales/cce/project.json
         "jiraTicket": "FOS-1310",
         "comments": "Landing Page Reskin",
         "url": "http://www.dev-godaddy.com/hosting/lenovo.aspx"
+=======
+        "jiraTicket": "FOS-21342",
+        "comments": "AdCredits items should be invisible on non us markets on page",
+        "url": "http://www.dev-godaddy.com/hosting/vps-hosting.aspx"
+>>>>>>> AdCredits items should be invisible on non us markets on page:src/sales/hosting/vps-hosting/project.json
       }
     },
     "metaTitle": "[@L[cds.sales/gd/hosting/lenovo:page-title]@L]",
