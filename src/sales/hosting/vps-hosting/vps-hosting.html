@@ -1,13 +1,10 @@
 ---
 location: sales/hosting/vps-hosting.aspx
-id: 53a0bfcaf778fc16ec1881b1
-name: FOS-21338
-comments: Remove FAQ from vps-hosting
+id:  53ab68a0f778fc2adcbb8f12
+name: FOS-21342
 url: http://www.dev-godaddy.com/hosting/vps-hosting.aspx
 ---
-
-
-{% extends 'layouts/base.html' %}
+{% extends 'layouts/base.html' %} 
 {% block metahead %} 
 {% parent %} 
   ##if(countrySiteAny(es,pt,mx,br,ar,pe,ve))
@@ -973,9 +970,16 @@ url: http://www.dev-godaddy.com/hosting/vps-hosting.aspx
                                             <li>[@L[cds.sales/gd/hosting/vps-hosting:SupportSubText2]@L]- <span class="disclaimer-note"><a class="tooltip-delay"  data-html="true" data-toggle="tooltip"data-original-title="[@L[cds.sales/gd/hosting/vps-hosting:SSLRestrictions]@L]">[@L[cds.sales/gd/hosting/vps-hosting:RestrictionsApply]@L]</a></span></li>
                                             <li>[@L[cds.sales/gd/hosting/vps-hosting:SupportSubText3]@L]</li>
                                             <li>[@L[cds.sales/gd/hosting/vps-hosting:SupportSubText4]@L]</li>
+                                            ##if(areAdCreditsEnabled(google))
                                             <li>[@L[cds.sales/gd/hosting/vps-hosting:SupportGoogleCredits]@L]- <span class="disclaimer-note"><a class="tooltip-delay"  data-html="true" data-toggle="tooltip"data-original-title="[@L[cds.sales/gd/hosting/vps-hosting:GoogleRestrictions]@L]">[@L[cds.sales/gd/hosting/vps-hosting:RestrictionsApply]@L]</a></span></li>
+                                          ##endif
+                                           ##if(areAdCreditsEnabled(bing))
                                             <li>[@L[cds.sales/gd/hosting/vps-hosting:SupportBingCredits]@L]- <span class="disclaimer-note"><a class="tooltip-delay"  data-html="true" data-toggle="tooltip"data-original-title="[@L[cds.sales/gd/hosting/vps-hosting:BingRestrictions]@L]">[@L[cds.sales/gd/hosting/vps-hosting:RestrictionsApply]@L]</a></span></li>
+                                          ##endif
+                                           ##if(areAdCreditsEnabled(facebook))
                                             <li>[@L[cds.sales/gd/hosting/vps-hosting:SupportFacebookCredits]@L]- <span class="disclaimer-note"><a class="tooltip-delay"  data-html="true" data-toggle="tooltip"data-original-title="[@L[cds.sales/gd/hosting/vps-hosting:FacebookRestrictions]@L]">[@L[cds.sales/gd/hosting/vps-hosting:RestrictionsApply]@L]</a></span></li>
+                                          ##endif
+
                                             <li>[@L[cds.sales/gd/hosting/vps-hosting:SupportSubText5]@L]- <span class="disclaimer-note"><a class="tooltip-delay"  data-html="true" data-toggle="tooltip"data-original-title="[@L[cds.sales/gd/hosting/vps-hosting:FotoliaRestrictions]@L]">[@L[cds.sales/gd/hosting/vps-hosting:RestrictionsApply]@L]</a></span></li>
                                             <li><a target="_BLANK" href="[@T[link:<relative path='~/agreements/showdoc.aspx' secure='false'><param name='pageid' value='hosting_sa' /><param name='ci' value='90591' /></relative>]@T]">[@L[cds.sales/gd/hosting/vps-hosting:MoneyBackGuarantee]@L]</a></li>
                                         </ul>
@@ -1212,6 +1216,7 @@ url: http://www.dev-godaddy.com/hosting/vps-hosting.aspx
 </div>
 
 
+
 {% endblock %} 
 
 {% block footer %}
@@ -1439,4 +1444,5 @@ $(function() {
 });
 
 </script>
+
 {% endblock %}
