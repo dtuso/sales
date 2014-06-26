@@ -1,7 +1,7 @@
 ---
 location: localization/sales/domains/searchresults-new3/en
-id: null
-name: FOS-20824
+id: 53ac6d7ff778fc3128002ce0
+name: FOS-22962
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="Of" />
@@ -139,7 +139,7 @@ What's a premium domain?
 <phrase key="WhatIsPremiumDescription1" />
 Premium Domain Names are more valuable than other domains because they are based on common words or phrases people often use in their online searches.
 <phrase key="WhatIsPremiumDescription2" />
-While GoDaddy does not own these domains names, we are one of a select group of registrars that can introduce you to the sellers.
+While [@T[companyname:name]@T] does not own these domains names, we are one of a select group of registrars that can introduce you to the sellers.
 <phrase key="WhatIsPremiumDescription2IsPremiumPrice" />
 Premium Domain Names are not eligible for order-level discounts.
 <phrase key="WhatIsPremiumDescription3" />
@@ -171,11 +171,11 @@ Pre-Registration
 <phrase key="PreRegOptionToolTipTitle" />
 What is the Priority Pre-registration period?
 <phrase key="PreRegOptionToolTipText" />
-Priority Pre-registration is the period of time when you can request the registration of a domain name before General Availability—when registration is open to the general public. GoDaddy collects pre-registration requests and submits them to the registry. A pre-registration request doesn’t guarantee you’ll get the domain name, but it does give you the best chance of getting it. If you don’t get the domain you pre-registered, your registration fee is refunded, but your application fee is not.
+Priority Pre-registration is the period of time when you can request the registration of a domain name before General Availability—when registration is open to the general public. [@T[companyname:name]@T] collects pre-registration requests and submits them to the registry. A pre-registration request doesn’t guarantee you’ll get the domain name, but it does give you the best chance of getting it. If you don’t get the domain you pre-registered, your registration fee is refunded, but your application fee is not.
 <phrase key="PreRegOptionTitleDescription" />
 Line up ahead of everyone waiting for general availability.
 <phrase key="PreRegOptionDescription" />
-Vastly improve your odds of landing this domain. GoDaddy submits your pre-registration when registration opens <strong>on</strong> <strong data-bind="html: EndDate">MM/YY</strong>.
+Vastly improve your odds of landing this domain. [@T[companyname:name]@T] submits your pre-registration when registration opens <strong>on</strong> <strong data-bind="html: EndDate">MM/YY</strong>.
 <phrase key="TrademarkOptionTitle" />
 Trademark Owners
 <phrase key="TrademarkOptionToolTipTitle" />
@@ -189,11 +189,11 @@ Priority Pre-Registration
 <phrase key="PriorityPreRegOptionToolTipTitle" />
 What is the Priority Pre-registration period?
 <phrase key="PriorityPreRegOptionToolTipText" />
-Priority Pre-registration is the period of time when you can request the registration of a domain name before General Availability—when registration is open to the general public. GoDaddy collects pre-registration requests and submits them to the registry. A pre-registration request doesn’t guarantee you’ll get the domain name, but it does give you the best chance of getting it. If you don’t get the domain you pre-registered, your registration fee is refunded, but your application fee is not.
+Priority Pre-registration is the period of time when you can request the registration of a domain name before General Availability—when registration is open to the general public. [@T[companyname:name]@T] collects pre-registration requests and submits them to the registry. A pre-registration request doesn’t guarantee you’ll get the domain name, but it does give you the best chance of getting it. If you don’t get the domain you pre-registered, your registration fee is refunded, but your application fee is not.
 <phrase key="PriorityPreRegOptionTitleDescription" />
 Take your place in front of standard pre-registrations.
 <phrase key="PriorityPreRegOptionDescription" />
-Give yourself the best chance for grabbing this domain. GoDaddy submits your pre-registration early, <strong>before</strong> <strong data-bind="html: EndDate">MM/YY</strong>.
+Give yourself the best chance for grabbing this domain. [@T[companyname:name]@T] submits your pre-registration early, <strong>before</strong> <strong data-bind="html: EndDate">MM/YY</strong>.
 <phrase key="PreRegPricingDetailToolTipText" />
 Anyone may pre-register a <span data-bind="html: '.' + $parent.TLD()">&nbsp;</span> domain during this phase. Multiple applications for the same domain will go to auction. If you are not awarded the domain, you will receive a full refund.
 <phrase key="PriorityPreRegPricingDetailToolTipText" />
