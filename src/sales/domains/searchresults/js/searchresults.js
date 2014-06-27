@@ -446,7 +446,7 @@ var sr_js = {
         self.stackFullAvailCheck = ko.observable(false);
         self.stackFullAvailCheckError = ko.observable(false);
         self.IsPremiumPrice = ko.observable(false);
-
+        self.HasDiscount = ko.observable(false);
 
 
         //#region Methods
@@ -599,6 +599,9 @@ var sr_js = {
 
                 if (data.IsPremiumPrice) {
                     self.IsPremiumPrice(true);
+                }
+                if (data.HasDiscount) {
+                    self.HasDiscount(true);
                 }
 
                 if (data.DomainStatus) {
@@ -1079,6 +1082,7 @@ var sr_js = {
             owner: self
         }, self);
         self.CurrentVisible = ko.observable(10);
+        self.CurrencyDecimalSeparator = ko.observable('.');
         self.ExactMatch = ko.observable(null);
         self.Filters = ko.observableArray([]);
         self.AllItems = ko.computed({
@@ -1167,6 +1171,7 @@ var sr_js = {
             self.IsBlocked(false);
             if (data && data.Success) {
 
+                self.CurrencyDecimalSeparator(data.CurrencyDecimalSeparator || '.');
                 self.IsBlocked(data.InvalidType === 'blocked');
                 self.NotValid(data.HeaderResult === undefined && data.Tld !== "");
                 self.IsValid(data.Valid).SelectedDomains(data.CurrentlyPending);
@@ -1203,7 +1208,18 @@ var sr_js = {
                     });
                     filters.push(extFilter);
 
-                    filters.push(new FilterViewModel(0, 'Price', FilterTypes.And, function (item, val) { return isNaN(parseInt(val, 10)) || val >= parseFloat((item.Prices().CurrentPrice || item.Prices().ListPrice || '0').replace(/&#{0,1}[a-z0-9]+;/ig, "").replace(/[^\d\.\,\-\ ]/g, '')); }).AllowClear(true).IsExpanded(true).ShowTitle(true).Instruction('Enter a maximum price'));
+                    filters.push(new FilterViewModel(0, 'Price', FilterTypes.And,
+                         function (item, val) {
+                             var regExCleanPrice = new RegExp('[^\\d\\' + self.CurrencyDecimalSeparator() + ']', 'g');
+                             var regExToDecimal = new RegExp('[\\' + self.CurrencyDecimalSeparator() + ']', 'g');
+                             var regExUnicode = new RegExp('&#.*;', 'g');
+                             if (val !== undefined) { val = val.replace(regExCleanPrice, '').replace(regExToDecimal, '.'); }
+                             return isNaN(parseFloat(val, 10)) || parseFloat(val) >= parseFloat((item.Prices().CurrentPrice || item.Prices().ListPrice || '0').replace(regExUnicode, '').replace(regExCleanPrice, '').replace(regExToDecimal, '.'));
+                         }).AllowClear(true)
+                           .IsExpanded(true)
+                           .ShowTitle(true)
+                           .Instruction('Enter a maximum price')
+                       );
                     filters.push(new FilterViewModel(1, 'Characters Length', FilterTypes.And, function (item, val) { return isNaN(parseInt(val, 10)) || 0 === val || val >= item.SLD().length; }, maxLength).InputType(DomainSearchResults.InputTypes.Slider).IsExpanded(true));
                     filters.push(new FilterViewModel(3, 'Country/Location', FilterTypes.And, function (item, val) { return item.Type.eq(val); }, DomainSearchResults.ItemTypes.Location, DomainSearchResults.InputTypes.Checkbox).ShowTitle(false).IsExpanded(true).IsExpandable(false));
                     filters.push(new FilterViewModel(4, 'Premium', FilterTypes.And, function (item, val) { return item.Type.eq(val); }, DomainSearchResults.ItemTypes.Premium, DomainSearchResults.InputTypes.Checkbox).ShowTitle(false).IsExpanded(true).IsExpandable(false));
@@ -1245,6 +1261,10 @@ var sr_js = {
                 self.ExactMatch().AddToCart(self.ExactMatch());
             }
             var dataUrl = AddApiAction(DomainSearchResults.Options.PostUrl, CartActions.GetNextStep);
+      if(pathIsDeals2())
+      {
+        dataUrl = addQueryParam(dataUrl,'path', 'deals2');
+      }
             $.post(dataUrl, function (data) {
                 if (data.Success) {
                     if ('function' === typeof (LogFastballEvent)) {
@@ -1548,6 +1568,7 @@ var sr_js = {
         DomainSearchResults.Options = $.extend({}, DomainSearchResults.Options, options || {});
         $.ajaxSetup({ cache: false });
         var dataUrl = DomainSearchResults.AppendQueryString(DomainSearchResults.Options.GetUrl, 'area=all');
+        dataUrl = DomainSearchResults.AppendQueryString(dataUrl, window.location.href.slice(window.location.href.indexOf('?') + 1));
         $.post(
           dataUrl,
           function (data) {
@@ -1644,3 +1665,23 @@ var sr_js = {
     }
     //#endregion
 }(window.DomainSearchResults = window.DomainSearchResults || {}, jQuery));
+function pathIsDeals2(){
+  if (getQueryParams()['path'] !== undefined)
+    return getQueryParams()['path'] === 'deals2';
+  else
+    return false;
+}
+function getQueryParams(){
+  var url = window.location.href;
+  var params = {};
+  var queryParams = (url.substr(url.indexOf('?')+1,url.length)).split('&');
+  for(var i = 0; i < queryParams.length; i++)
+  {
+    var param = queryParams[i].split('=');
+    params[param[0]] = param[1].replace('#','');
+  }
+  return params;
+}
+function addQueryParam(url,name,value){
+  return url + (url.indexOf('?') !== -1 ? '&' : '?') + name + '=' + value;
+}
