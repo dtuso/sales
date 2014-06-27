@@ -46,8 +46,7 @@
       if(ci == null || ci == "" || ci == "undefined"){
         ci = 000000;
       }
-      FastballEvent_MouseClick(e, ci, $this[0], "a")
-      fbiLibCheckQueue();
+
       if($(this).hasClass('minus')){
         $(this).removeClass('minus');
         $(this).addClass('plus');
@@ -70,8 +69,6 @@
       if(ci == null || ci == "" || ci == "undefined"){
         ci = 000000;
       }
-      FastballEvent_MouseClick(event, ci, $this[0], "a")
-      fbiLibCheckQueue(); 
       if($('#js-show-hide-compare').is(':hidden')){
         $(this).children('.plus-span').removeClass('plus-span');
         $(this).children('span').addClass('minus-span');    
@@ -81,6 +78,12 @@
         $(this).children('span').addClass('plus-span');
         $('#js-show-hide-compare').slideUp(300);
       }
+    });
+
+    $('[data-ci]').click(function(e){
+      $this = $(this);
+      FastballEvent_MouseClick(e,$this.attr('data-ci'),$(this)[0],'a');
+      fbiLibCheckQueue();    
     });
 
     $('.office-video-click-wrapper').solazyVideo();
@@ -104,8 +107,6 @@
         if(ci == null || ci == "" || ci == "undefined"){
           ci = 000000;
         }
-        FastballEvent_MouseClick(event, ci, $this[0], "a")
-        fbiLibCheckQueue(); 
        
         var $form = $selectedPackageId.parents("form");
         var itccode = "SLP_365";

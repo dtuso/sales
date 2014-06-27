@@ -1,7 +1,7 @@
 ---
 location: sales/business/split-test/office-365.aspx
 id: false
-name: Page Reskin - International Fixes
+name: Page Reskin - Ci Code Fixes
 assetPath: false
 ---
 {% extends 'layouts/base-no-border-box.html' %}
@@ -89,13 +89,16 @@ assetPath: false
                         <p class="strike-through-price">[@T[productprice:<template productid="31805" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]<sup>*</sup>
                           <span class="secondary-color uppercase">
                             <strong> 
-                              [@L[cds.sales/business/office-365:split-test-b-1-save]@L]<sup>*</sup> [@T[productcompare:<percent primaryproductid="31805" secondaryproductid="31805" hidebelow="5"><html><![CDATA[{0}%]]></html></percent>]@T]
+                              [@L[cds.sales/business/office-365:split-test-b-1-save]@L] [@T[productcompare:<percent primaryproductid="31805" secondaryproductid="31805" hidebelow="5"><html><![CDATA[{0}%]]></html></percent>]@T]
                             </strong>
                           </span>
                         </p>
-                        <p class="current-renewal-price">[@L[cds.sales/business/office-365:split-test-b-3-current-renewal-price]@L]</p>
+                        <p class="current-renewal-price"><sup>*</sup>[@L[cds.sales/business/office-365:split-test-b-3-current-renewal-price]@L]</p>
                       </div>
                     ##endif
+              ##if(countrySiteAny(uk))
+                <div class="vat-tax-message">[@L[cds.sales/business/office-365:vat-price]@L]</div>
+              ##endif      
             <button type="button" class="btn btn-warning btn-block btn-lg js-add-to-cart plan-box-button" data-value="OfficeEmailMsft1yr" data-ci="91160">[@L[cds.sales/business/office-365:split-test-b-3-AddToCart]@L]</button>
           </div>  
         </div>
@@ -127,9 +130,12 @@ assetPath: false
                     </strong>
                   </span>
                 </p>
-                <p class="current-renewal-price">[@L[cds.sales/business/office-365:split-test-b-3-current-renewal-price]@L]</p>
+                <p class="current-renewal-price"><sup>*</sup>[@L[cds.sales/business/office-365:split-test-b-3-current-renewal-price]@L]</p>
               </div>
             ##endif
+            ##if(countrySiteAny(uk))
+              <div class="vat-tax-message">[@L[cds.sales/business/office-365:vat-price]@L]</div>
+            ##endif  
             <button type="button" class="btn btn-warning btn-block btn-lg js-add-to-cart plan-box-button" data-value="OfficeBusMsft1yr" data-ci="91161">[@L[cds.sales/business/office-365:split-test-b-3-AddToCart]@L]</button>
           </div>
         </div>
@@ -165,6 +171,9 @@ assetPath: false
                 <p class="current-renewal-price"><sup>*</sup>[@L[cds.sales/business/office-365:split-test-b-3-current-renewal-price]@L]</p>
               </div>
             ##endif
+            ##if(countrySiteAny(uk))
+              <div class="vat-tax-message">[@L[cds.sales/business/office-365:vat-price]@L]</div>
+            ##endif             
             <button type="button" class="btn btn-warning btn-block btn-lg js-add-to-cart plan-box-button" data-value="OfficeBusPremMsft1yr" data-ci="91162">[@L[cds.sales/business/office-365:split-test-b-3-AddToCart]@L]</button>
           </div>
         </div>
