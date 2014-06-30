@@ -1,6 +1,6 @@
 ---
 location: sales/domains/searchresults.aspx
-id: 53ade781f778fc29f0c64738
+id: 
 name: test
 ---
 ##if(false)
@@ -801,6 +801,10 @@ name: test
             tldType.hide();
           }
         }
+        if($('#results .headerResult .result .comPromoPricing').length > 0){
+          var selectButtonWidth = $('#results .headerResult .result > .priceAndAction > a').width() + 100;
+          $('#results .headerResult .result .comPromoPricing').css("margin-right", selectButtonWidth + "px"); 
+        }
       });
       searchClient.Initialize({
         btnInactiveClass: "flt-btn-inactive",
@@ -881,6 +885,9 @@ name: test
         var input = self.siblings('input[type="checkbox"]');
         input.attr('checked', !input.is(':checked'))
       });
+
+      var selectWidth = $('#results .headerResult .result > .priceAndAction > a').width() + 100;
+      $('#results .headerResult .result .comPromoPricing').css("margin-right", selectWidth);
     });
     var split1199;
     ##if(splitTestingSideIsActive(1199, A))
