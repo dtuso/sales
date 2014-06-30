@@ -1,7 +1,7 @@
 ---
 location: sales/domains/domain-name-search.aspx
-id: 535a894ef778fc023885482d
-name: FFOS-21977, FOS-22305
+id: 53b1ac4ef778fc30c89f0c16
+name: FOS-22747
 ---
 {% extends 'layouts/base.html' %}
 {% block metahead %}
@@ -83,28 +83,32 @@ name: FFOS-21977, FOS-22305
                                   ##elseif(ActiveLanguageAny([de-at],[de-de],[de-ch]))
                                   <p class="no-margin-bottom">[@L[cds.sales/gd/domains/domain-name-search:MainBannerCarouselSlide1DE1]@L]</p>  
                                    ##elseif(ActiveLanguageAny([en-gb]))
-                                  <p class="no-margin-bottom">[@L[cds.sales/gd/domains/domain-name-search:MainBannerCarouselSlide1UK]@L]<span class="font-16">[@T[productprice:<template productid="410930" period="yearly"><nostrike><![CDATA[<em>{0}</em>]]></nostrike><strike><![CDATA[<strong class="line-through">{1}</strong> <em>{0}</em>]]></strike></template>]@T]</span></p>  
+                                  <p class="no-margin-bottom">[@L[cds.sales/gd/domains/domain-name-search:MainBannerCarouselSlide1UK]@L]<span class="font-16">[@T[productprice:<template productid="410930" period="yearly"><nostrike><![CDATA[<em>{0}</em>]]></nostrike><strike><![CDATA[<span class="line-through">{1}</span> <strong><em>{0}</em></strong>]]></strike></template>]@T]</span></p>  
                                   ##else
-                                    <p class="no-margin-bottom">[@L[cds.sales/gd/domains/domain-name-search:MainBannerCarouselSlide1]@L]</p>  
+                                    <p class="no-margin-bottom">[@L[cds.sales/gd/domains/domain-name-search:MainBannerCarouselSlide1Guru]@L]</p>  
                                   ##endif
                                 </div>
                               </div>                           
                               <div class="item carousel-inner-item carousel-inner-item-ds carousel-inner-item-ds-2">
                                 <div class="carousel-inner-text-container">
                                   ##if(ActiveLanguageAny([en-gb]))
-                                     <p class="no-margin-bottom">[@L[cds.sales/gd/domains/domain-name-search:MainBannerCarouselSlide2GB]@L]</p>                                     
+                                     <p class="no-margin-bottom">[@L[cds.sales/gd/domains/domain-name-search:MainBannerCarouselSlide2GB1]@L]</p>                                     
                                   ##elseif(ActiveLanguageAny([de-at],[de-de],[de-ch]))
                                   <p class="no-margin-bottom">[@L[cds.sales/gd/domains/domain-name-search:MainBannerCarouselSlide2AT]@L]</p>
                                   ##elseif(ActiveLanguageAny([fr-fr],[fr-be],[fr-ca],[fr-ch]))
                                   <p class="no-margin-bottom">[@L[cds.sales/gd/domains/domain-name-search:MainBannerCarouselSlide2FR]@L]</p>
                                   ##else
-                                   <p class="no-margin-bottom">[@L[cds.sales/gd/domains/domain-name-search:MainBannerCarouselSlide2NonGB]@L]</p>
+                                   <p class="no-margin-bottom">[@L[cds.sales/gd/domains/domain-name-search:MainBannerCarouselSlide2All2]@L]</p>
                                   ##endif
                                 </div>
                               </div>
                               <div class="item carousel-inner-item carousel-inner-item-ds carousel-inner-item-ds-3">
-                                <div class="carousel-inner-text-container">                                   
-                                    <p class="no-margin-bottom">[@L[cds.sales/gd/domains/domain-name-search:MainBannerCarouselSlide2All]@L]</p>
+                                <div class="carousel-inner-text-container">     
+                                  ##if(ActiveLanguageAny([en-us],[es-us]))                              
+                                    <p class="no-margin-bottom">[@L[cds.sales/gd/domains/domain-name-search:MainBannerCarouselSlide3WWW]@L]</p>
+                                  ##else
+                                    <p class="no-margin-bottom">[@L[cds.sales/gd/domains/domain-name-search:MainBannerCarouselSlide3All]@L]</p> 
+                                  ##endif  
                                 </div>
                               </div>
                             </div>
@@ -187,17 +191,29 @@ name: FFOS-21977, FOS-22305
 
                     <div class="row tab-content tab-content-alternate equal-height">
                         <div class="col-xs-6" id="leftlist">
-                            <ul>
+                            <ul>                             
                                 <li class="list-item"><span class="font-18">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle0]@L]</span></li>
-                                <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListText0-0]@L]</span> <a data-ci="89639" href="[@T[link:<relative path="/tlds/ninja"></relative>]@T]" class="btn btn-primary list-item-button btn-new-width">[@L[cds.sales/gd/domains/domain-name-search:Register]@L]</a></li>
-                                <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListText0-1]@L]</span> <a data-ci="89391" href="[@T[link:<relative path="/tlds/reviews"></relative>]@T]" class="btn btn-primary list-item-button btn-new-width">[@L[cds.sales/gd/domains/domain-name-search:Register]@L]</a></li>
-                                <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListText0-2]@L]</span> <a data-ci="90061" href="[@T[link:<relative path="/tlds/wiki"></relative>]@T]" class="btn btn-primary list-item-button btn-new-width">[@L[cds.sales/gd/domains/domain-name-search:Register]@L]</a></li>
-                              ##if(ActiveLanguageAny([en-gb]))  
-                                <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListText0-3UK]@L]</span> <a data-ci="90057" href="[@T[link:<relative path="/tlds/london"></relative>]@T]" class="btn btn-primary list-item-button btn-new-width">[@L[cds.sales/gd/domains/domain-name-search:PreRegister]@L]</a></li>
-                             ##else
-                              <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListText0-3]@L]</span> <a data-ci="91152" href="[@T[link:<relative path="/tlds/rentals"></relative>]@T]" class="btn btn-primary list-item-button btn-new-width">[@L[cds.sales/gd/domains/domain-name-search:Register]@L]</a></li>
-                              ##endif  
-                              </ul>
+                               ##if(ActiveLanguageAny([fr-fr], [fr-be], [fr-ca], [fr-ch])) 
+                                <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListText0-0FR]@L]</span> <a data-ci="90064" href="[@T[link:<relative path="/tlds/email"></relative>]@T]" class="btn btn-primary list-item-button btn-new-width">[@L[cds.sales/gd/domains/domain-name-search:Register]@L]</a></li>
+                                ##else
+                                 <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListText0-0]@L]</span> <a data-ci="89639" href="[@T[link:<relative path="/tlds/guru"></relative>]@T]" class="btn btn-primary list-item-button btn-new-width">[@L[cds.sales/gd/domains/domain-name-search:Register]@L]</a></li>
+                                ##endif
+
+                                ##if(ActiveLanguageAny([es-us], [es-ar], [es-cl], [es-co], [es-es], [es-mx], [es-pe], [es-ve]))
+                                <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListText0-1ES]@L]</span> <a data-ci="88020" href="[@T[link:<relative path="/tlds/uno"></relative>]@T]" class="btn btn-primary list-item-button btn-new-width">[@L[cds.sales/gd/domains/domain-name-search:Register]@L]</a></li>
+                                ##else
+                                <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListText0-1]@L]</span> <a data-ci="91152" href="[@T[link:<relative path="/tlds/rentals"></relative>]@T]" class="btn btn-primary list-item-button btn-new-width">[@L[cds.sales/gd/domains/domain-name-search:Register]@L]</a></li>
+                                ##endif
+
+                                ##if(ActiveLanguageAny([fr-fr], [fr-be], [fr-ca], [fr-ch])) 
+                                <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListText0-2FR]@L]</span> <a data-ci="91414" href="[@T[link:<relative path="/tlds/solutions"></relative>]@T]" class="btn btn-primary list-item-button btn-new-width">[@L[cds.sales/gd/domains/domain-name-search:Register]@L]</a></li>
+                                ##elseif(ActiveLanguageAny([es-ar], [es-cl], [es-co], [es-es], [es-mx], [es-pe], [es-ve]))
+                                <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListText0-2ES]@L]</span> <a data-ci="90064" href="[@T[link:<relative path="/tlds/email"></relative>]@T]" class="btn btn-primary list-item-button btn-new-width">[@L[cds.sales/gd/domains/domain-name-search:Register]@L]</a></li>
+                                ##else
+                                <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListText0-2]@L]</span> <a data-ci="90060" href="[@T[link:<relative path="/tlds/vegas"></relative>]@T]" class="btn btn-primary list-item-button btn-new-width">[@L[cds.sales/gd/domains/domain-name-search:Register]@L]</a></li>
+                                ##endif                             
+                                <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListText0-3]@L]</span> <a data-ci="90063" href="[@T[link:<relative path="/tlds/club"></relative>]@T]" class="btn btn-primary list-item-button btn-new-width">[@L[cds.sales/gd/domains/domain-name-search:Register]@L]</a></li>
+                                </ul>
                         </div>
                         <div class="col-xs-6" id="rightlist">
                             <ul>
