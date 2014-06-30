@@ -1568,7 +1568,6 @@ var sr_js = {
         DomainSearchResults.Options = $.extend({}, DomainSearchResults.Options, options || {});
         $.ajaxSetup({ cache: false });
         var dataUrl = DomainSearchResults.AppendQueryString(DomainSearchResults.Options.GetUrl, 'area=all');
-        dataUrl = DomainSearchResults.AppendQueryString(dataUrl, window.location.href.slice(window.location.href.indexOf('?') + 1));
         $.post(
           dataUrl,
           function (data) {
