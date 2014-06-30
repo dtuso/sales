@@ -1,7 +1,7 @@
 ---
 location: sales/domains/searchresults.aspx
-id: 53ab0d58f778fc2adcbb8ef7
-name: FOS-16988
+id: 53ade781f778fc29f0c64738
+name: test
 ---
 ##if(false)
 {% include 'modules/doc-block.html' %}
@@ -21,9 +21,9 @@ name: FOS-16988
   <link type="text/css" rel="stylesheet" href="[@T[link:<cssroot />]@T]fos/global/build/0.2.0/gd-fos-global.min.css" />
   ##if(siteContextAny(gd))  
   <link rel="shortcut icon" href="[@T[link:<imageroot />]@T]assets/godaddy.ico" />
-  <link type="text/css" rel="stylesheet" href="[@T[link:<cssroot />]@T]fos/domains/search-new/css/cds_searchresults_20140618.css" />
+  <link type="text/css" rel="stylesheet" href="[@T[link:<cssroot />]@T]fos/sales/themes/scotty/domains/searchresults/css/styles.css" />
   ##else  
-  <link type="text/css" rel="stylesheet" href="[@T[link:<cssroot />]@T]fos/domains/search-new/css/cds_searchresults_20140610_PL.css" />
+  <link type="text/css" rel="stylesheet" href="[@T[link:<cssroot />]@T]fos/sales/themes/scotty/domains/searchresults/css/styles_PL.css" />
   ##endif    
   <script type="text/javascript"  src="[@T[link:<javascriptroot />]@T]shared/js/1.5.1/global.20120918.min.js"></script>
   ##if(!activeLanguageAny(en, es))
@@ -242,13 +242,13 @@ name: FOS-16988
       <!-- ko template: { name: ActionTemplate } --><!-- /ko -->
       <span class="pricing" data-bind="visible: !IsSelected() && !fullAvailCheck() && !fullAvailCheckError()">
         <!-- ko template: { name: 'CurrentPriceListPriceTemplate' } --><!-- /ko -->
-        <span class="comPromoPricingSmall" data-bind="visible: !IsSelected() && HasDiscount()">
-        <span class="left">
-         <span>[@L[cds.sales/domains/searchresults-new3:1stYear]@L] <span data-bind="html: Prices().CurrentPrice">$2.99*</span></span>
-         <span>[@L[cds.sales/domains/searchresults-new3:additionYears]@L] <span data-bind="html: Prices().ListPrice">$14.99*</span></span>
-        </span>  
-        <span class="register">[@L[cds.sales/domains/searchresults-new3:2yearRegistration]@L]</span> 
+        <span class="register" data-bind="visible: !IsSelected() && HasDiscount()">[@L[cds.sales/domains/searchresults-new3:2yearRegistration]@L]</span>
       </span>
+      <span class="comPromoPricingSmall" data-bind="visible: !IsSelected() && HasDiscount()">
+        <span class="left">
+          <span>[@L[cds.sales/domains/searchresults-new3:1stYear]@L] <span data-bind="html: Prices().CurrentPrice">$2.99*</span></span>
+          <span>[@L[cds.sales/domains/searchresults-new3:additionYears]@L] <span data-bind="html: Prices().ListPrice">$14.99*</span></span>
+        </span>   
       </span>
       <!-- ko with: RegistrationInfo -->
       <span class="pricing" data-bind="visible: !$parent.IsSelected() && 'header' !== context">
@@ -258,7 +258,7 @@ name: FOS-16988
     </div>
     
     <!-- 2.99 promo price -->
-    <div class="comPromoPricing" data-bind="visible: !IsSelected() && HasDiscount()">[@L[cds.sales/domains/searchresults-new3:2yearRegistration]@L]
+    <div class="comPromoPricing" data-bind="visible: !IsSelected() && HasDiscount()">
       <span style="display: block;">[@L[cds.sales/domains/searchresults-new3:1stYearPrice]@L] <span data-bind="html: Prices().CurrentPrice">2.99*</span> [@L[cds.sales/domains/searchresults-new3:additionYears]@L] <span data-bind="html: Prices().ListPrice">14.99*</span></span>
     </div>
   
@@ -777,8 +777,8 @@ name: FOS-16988
   <script type="text/javascript">$sf = { skin: "fos" };</script>
   <script type="text/javascript" src="[@T[link:<javascriptroot />]@T]starfield/curl/v1.1.2/curl.js"></script>
   <script type="text/javascript" src="[@T[link:<javascriptroot />]@T]fos/domains/search-new/js/filter.slider.min.js"></script>
-  <script type="text/javascript" src="[@T[link:<js path='fos/domains/search-new/js/cds_searchresults_v1.js' />]@T]"></script>
-  <script type="text/javascript" src="[@T[link:<javascriptroot />]@T]fos/domains/search-new/js/cds_search_v1.js"></script>
+  <script type="text/javascript" src="[@T[link:<js path='fos/sales/themes/scotty/domains/searchresults/js/searchresults.js' />]@T]"></script>
+  <script type="text/javascript" src="[@T[link:<javascriptroot />]@T]fos/sales/themes/scotty/domains/searchresults/js/searchbox.js"></script>
 
   <!--[if lte IE 8]>
   <script src="[@T[link:<javascriptroot />]@T]fos/script/JSON2.min.js"></script>
