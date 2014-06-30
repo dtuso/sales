@@ -30,6 +30,12 @@
           { "Description" : "Slide .COM Link" }
         ]
       },
+      { "Slide .GURU Link" : [
+          { "ITC ID" : "90584" },
+          { "ITC Code" : "" },
+          { "Description" : "Slide .GURU Link" }
+        ]
+      },
        { "Slide .NET.AU Link" : [
           { "ITC ID" : "90322" },
           { "ITC Code" : "" },
@@ -122,6 +128,36 @@
           { "Description" : "Top Pod - .IN Link" }
         ]
       },
+      { "Top TLD Pods - .es link" : [
+          { "ITC ID" : "91416" },
+          { "ITC Code" : "dpp_absol1" },
+          { "Description" : "Top Pod - .es Link" }
+        ]
+      },
+      { "Top TLD Pods - .tax link" : [
+          { "ITC ID" : "91417" },
+          { "ITC Code" : "dpp_absol1" },
+          { "Description" : "Top Pod - .tax Link" }
+        ]
+      },
+      { "Top TLD Pods - .co.nz link" : [
+          { "ITC ID" : "91418" },
+          { "ITC Code" : "dpp_absol1" },
+          { "Description" : "Top Pod - .co.nz Link" }
+        ]
+      },
+      { "Top TLD Pods - .co.za link" : [
+          { "ITC ID" : "91420" },
+          { "ITC Code" : "dpp_absol1" },
+          { "Description" : "Top Pod - .co.za Link" }
+        ]
+      },
+      { "Top TLD Pods - .ph link" : [
+          { "ITC ID" : "91419" },
+          { "ITC Code" : "dpp_absol1" },
+          { "Description" : "Top Pod - .ph Link" }
+        ]
+      },
       { "Top TLD Pods - .biz link" : [
           { "ITC ID" : "88014" },
           { "ITC Code" : "dpp_absol1" },
@@ -156,6 +192,13 @@
           { "ITC ID" : "88400" },
           { "ITC Code" : "dpp_absol1" },
           { "Description" : "Top Pod - .MENU Link" }
+        ]
+      },  
+      ,    
+      { "Top TLD Pods - .vegas link" : [
+          { "ITC ID" : "90060" },
+          { "ITC Code" : "dpp_absol1" },
+          { "Description" : "Top Pod - .vegas Link" }
         ]
       },  
        { "Top TLD Pods - .au-domain link" : [
@@ -348,6 +391,18 @@
           { "Description" : "New Available TLD's Column - .CLUB" }
         ]
       },
+      { "New Domains Available TLD's Column - .VEGAS" : [
+          { "ITC ID" : "90060" },
+          { "ITC Code" : "" },
+          { "Description" : "New Available TLD's Column - .VEGAS" }
+        ]
+      },
+      { "New Domains Available TLD's Column - .SOLUTIONS" : [
+          { "ITC ID" : "91414" },
+          { "ITC Code" : "" },
+          { "Description" : "New Available TLD's Column - .SOLUTIONS" }
+        ]
+      },
       { "New Domains Available TLD's Column - .TIPS" : [
           { "ITC ID" : "89388" },
           { "ITC Code" : "" },
@@ -402,6 +457,12 @@
           { "ITC ID" : "90062" },
           { "ITC Code" : "" },
           { "Description" : "Coming Soon TLD's Column - .XYZ" }
+        ]
+      },
+      { "Coming Soon TLD's Column - .WEB" : [
+          { "ITC ID" : "91415" },
+          { "ITC Code" : "" },
+          { "Description" : "Coming Soon TLD's Column - .WEB" }
         ]
       },
       { "Coming Soon TLD's Column - .WIKI" : [
