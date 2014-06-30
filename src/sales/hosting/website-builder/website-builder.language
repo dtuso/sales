@@ -1,6 +1,6 @@
 ---
 location: localization/sales/gd/hosting/website-builder/en
-id: 53a22ca8f778fc16ec1881ca
+id: 53a9b5ecf778fc13248233f2
 name: FOS-5720
 comments: Integrate BazaarVoice on WSB LP
 ---
@@ -951,13 +951,9 @@ Business Plus Plan Exclusives
 <phrase key="please-login" />
 Please login to access your account
 <phrase key="cancel" />
-<<<<<<< HEAD
 Cancel
 <phrase key="TestimonnialBlock" />
 See how these business owners took their passion for success online with GoDaddy Website Builder.
 <phrase key="CheckoutCustomers" />
 Check out what our customers are saying.
 
-=======
-Cancel
->>>>>>> bv for wsb
