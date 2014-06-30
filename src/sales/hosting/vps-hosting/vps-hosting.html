@@ -1,43 +1,63 @@
 ---
 location: sales/hosting/vps-hosting.aspx
-id:  53ab68a0f778fc2adcbb8f12
-name: FOS-21342
+id:  53b1e3fef778fc30c89f0c95
+name: FOS-21356/21496
+comments: Style fix for list items and Dropdown fix
 url: http://www.dev-godaddy.com/hosting/vps-hosting.aspx
+assetPath: false
 ---
 {% extends 'layouts/base.html' %} 
 {% block metahead %} 
 {% parent %} 
-  ##if(countrySiteAny(es,pt,mx,br,ar,pe,ve))
-      <!-- International Background Images -->
-      <style type="text/css">
-      .tab-content-plans-pricing-vps {
-        background-image: url("[@T[link:<cssroot />]@T]fos/sales/themes/scotty/hosting/vps-hosting/img/LATAM_bg-tab-content-plan.jpg");
-      }
 
-      </style>
-  ##endif
+<style type="text/css">
+{% less %}
+{% include 'css/styles.less' %} 
+.dropdown-item-duration {float:left; max-width:80px;word-wrap:break-word;}
+.dropdown-item-price {margin: 0 9px; max-width:80px;word-wrap:break-word;}
+.dropdown-item-save {float:right; max-width:80px;word-wrap:break-word;}
+{% endless %}
+</style>
 
-  ##if(countrySiteAny(in,pk))
-      <!-- International Background Images -->
-      <style type="text/css">
-      .tab-content-plans-pricing-vps {
-        background-image: url("[@T[link:<cssroot />]@T]fos/sales/themes/scotty/hosting/vps-hosting/img/IN_bg-tab-content-plan.jpg");
-      }
+
+##if(countrySiteAny(es,pt,mx,br,ar,pe,ve))
+    <!-- International Background Images -->
+    <style type="text/css">
+    {% less %}
+        .tab-content-plans-pricing-vps {
+            background-image: url("[@T[link:<cssroot />]@T]fos/sales/themes/scotty/hosting/vps-hosting/img/LATAM_bg-tab-content-plan.jpg");
+        }
+    {% endless %}
+
+    </style>
+##endif
+
+##if(countrySiteAny(in,pk))
+    <!-- International Background Images -->
+    <style type="text/css">
+    {% less %}
+        .tab-content-plans-pricing-vps {
+            background-image: url("[@T[link:<cssroot />]@T]fos/sales/themes/scotty/hosting/vps-hosting/img/IN_bg-tab-content-plan.jpg");
+        }
         .misc-banner-content>.misc-banner-link{color:#ffffff}
         .misc-banner-content>h2{color:#ffffff}
         .misc-banner-content>p{color:#ffffff}
         .misc-banner-link>.ico-gt-alternate{background-position:-39px -3px;}
-      </style>
-  ##endif
+    {% endless %}
+    </style>
+##endif
 
-  ##if(countrySiteAny(my, ph, sg))
-      <!-- International Background Images -->
-      <style type="text/css">
-      .tab-content-plans-pricing-vps {
-        background-image: url("[@T[link:<cssroot />]@T]fos/sales/themes/scotty/hosting/vps-hosting/img/APAC_bg-tab-content-plan.jpg");
-      }
-      </style>
-  ##endif
+##if(countrySiteAny(my, ph, sg))
+    <!-- International Background Images -->
+    <style type="text/css">
+    {% less %}
+        .tab-content-plans-pricing-vps {
+            background-image: url("[@T[link:<cssroot />]@T]fos/sales/themes/scotty/hosting/vps-hosting/img/APAC_bg-tab-content-plan.jpg");
+        }
+    {% endless %}
+    </style>
+##endif
+
 {% endblock %} 
 {% block body %}
 <!-- Start main-banner -->
@@ -967,20 +987,20 @@ url: http://www.dev-godaddy.com/hosting/vps-hosting.aspx
                                         <p class="font-16"></p>
                                         <ul class="plan-summary-tab-pane-list first-tab-pane">
                                             <li>[@L[cds.sales/gd/hosting/vps-hosting:SupportSubText1]@L]</li>
-                                            <li>[@L[cds.sales/gd/hosting/vps-hosting:SupportSubText2]@L]- <span class="disclaimer-note"><a class="tooltip-delay"  data-html="true" data-toggle="tooltip"data-original-title="[@L[cds.sales/gd/hosting/vps-hosting:SSLRestrictions]@L]">[@L[cds.sales/gd/hosting/vps-hosting:RestrictionsApply]@L]</a></span></li>
+                                            <li>[@L[cds.sales/gd/hosting/vps-hosting:SupportSubText2]@L]- <span class="disclaimer-note"><a class="tooltip-delay"  data-html="true" data-toggle="tooltip" data-original-title="[@L[cds.sales/gd/hosting/vps-hosting:SSLRestrictions]@L]">[@L[cds.sales/gd/hosting/vps-hosting:RestrictionsApply]@L]</a></span></li>
                                             <li>[@L[cds.sales/gd/hosting/vps-hosting:SupportSubText3]@L]</li>
                                             <li>[@L[cds.sales/gd/hosting/vps-hosting:SupportSubText4]@L]</li>
-                                            ##if(areAdCreditsEnabled(google))
-                                            <li>[@L[cds.sales/gd/hosting/vps-hosting:SupportGoogleCredits]@L]- <span class="disclaimer-note"><a class="tooltip-delay"  data-html="true" data-toggle="tooltip"data-original-title="[@L[cds.sales/gd/hosting/vps-hosting:GoogleRestrictions]@L]">[@L[cds.sales/gd/hosting/vps-hosting:RestrictionsApply]@L]</a></span></li>
-                                          ##endif
-                                           ##if(areAdCreditsEnabled(bing))
-                                            <li>[@L[cds.sales/gd/hosting/vps-hosting:SupportBingCredits]@L]- <span class="disclaimer-note"><a class="tooltip-delay"  data-html="true" data-toggle="tooltip"data-original-title="[@L[cds.sales/gd/hosting/vps-hosting:BingRestrictions]@L]">[@L[cds.sales/gd/hosting/vps-hosting:RestrictionsApply]@L]</a></span></li>
-                                          ##endif
-                                           ##if(areAdCreditsEnabled(facebook))
-                                            <li>[@L[cds.sales/gd/hosting/vps-hosting:SupportFacebookCredits]@L]- <span class="disclaimer-note"><a class="tooltip-delay"  data-html="true" data-toggle="tooltip"data-original-title="[@L[cds.sales/gd/hosting/vps-hosting:FacebookRestrictions]@L]">[@L[cds.sales/gd/hosting/vps-hosting:RestrictionsApply]@L]</a></span></li>
-                                          ##endif
+                                        ##if(areAdCreditsEnabled(google))
+                                            <li>[@L[cds.sales/gd/hosting/vps-hosting:SupportGoogleCredits]@L]- <span class="disclaimer-note"><a class="tooltip-delay"  data-html="true" data-toggle="tooltip" data-original-title="[@L[cds.sales/gd/hosting/vps-hosting:GoogleRestrictions]@L]">[@L[cds.sales/gd/hosting/vps-hosting:RestrictionsApply]@L]</a></span></li>
+                                        ##endif
+                                        ##if(areAdCreditsEnabled(bing))
+                                            <li>[@L[cds.sales/gd/hosting/vps-hosting:SupportBingCredits]@L]- <span class="disclaimer-note"><a class="tooltip-delay"  data-html="true" data-toggle="tooltip" data-original-title="[@L[cds.sales/gd/hosting/vps-hosting:BingRestrictions]@L]">[@L[cds.sales/gd/hosting/vps-hosting:RestrictionsApply]@L]</a></span></li>
+                                        ##endif
+                                        ##if(areAdCreditsEnabled(facebook))
+                                            <li>[@L[cds.sales/gd/hosting/vps-hosting:SupportFacebookCredits]@L]- <span class="disclaimer-note"><a class="tooltip-delay"  data-html="true" data-toggle="tooltip" data-original-title="[@L[cds.sales/gd/hosting/vps-hosting:FacebookRestrictions]@L]">[@L[cds.sales/gd/hosting/vps-hosting:RestrictionsApply]@L]</a></span></li>
+                                        ##endif
 
-                                            <li>[@L[cds.sales/gd/hosting/vps-hosting:SupportSubText5]@L]- <span class="disclaimer-note"><a class="tooltip-delay"  data-html="true" data-toggle="tooltip"data-original-title="[@L[cds.sales/gd/hosting/vps-hosting:FotoliaRestrictions]@L]">[@L[cds.sales/gd/hosting/vps-hosting:RestrictionsApply]@L]</a></span></li>
+                                            <li>[@L[cds.sales/gd/hosting/vps-hosting:SupportSubText5]@L]- <span class="disclaimer-note"><a class="tooltip-delay"  data-html="true" data-toggle="tooltip" data-original-title="[@L[cds.sales/gd/hosting/vps-hosting:FotoliaRestrictions]@L]">[@L[cds.sales/gd/hosting/vps-hosting:RestrictionsApply]@L]</a></span></li>
                                             <li><a target="_BLANK" href="[@T[link:<relative path='~/agreements/showdoc.aspx' secure='false'><param name='pageid' value='hosting_sa' /><param name='ci' value='90591' /></relative>]@T]">[@L[cds.sales/gd/hosting/vps-hosting:MoneyBackGuarantee]@L]</a></li>
                                         </ul>
                                         <ul class="plan-summary-tab-pane-list">
@@ -1276,15 +1296,13 @@ function getManagerDC() {
 }
 
 function getShopperDC() {
-    var dc;
     ##if(dataCenterAny(eu))
-        dc = 'eu';
+        return'eu';
     ##elseif(dataCenterAny(ap))
-    dc = 'ap';
+        return'ap';
     ##else
-    dc = 'us';
+        return 'us';
     ##endif
-    return dc;
 }
 
 function getData(dc) {
@@ -1356,7 +1374,10 @@ function generateDropDowns(i, n, c) {
     if (i == 0) {
         $(c).find('.select-box-current').empty();
         $(c).find('.select-box-options').empty();
-        var currentContent = '<span>' + n.planduration + ' ' + monthString + '</span><span class="price">' + n.productprice + '/[@L[cds.sales/gd/hosting/vps-hosting:month]@L]</span><span class="secondary-color lastChild"></span>';
+        var currentContent = 
+            '<span>' + n.planduration + ' ' + monthString + '</span>' + 
+            '<span class="price">' + n.productprice + '/[@L[cds.sales/gd/hosting/vps-hosting:month]@L]</span>' + 
+            '<span class="secondary-color lastChild"></span>';
         $(c).find('.starting-at-price').html(n.productprice);
         $currentPlan = $(c).find('.select-box-current').html(currentContent);
         newItem += '<li class="selected"><label>';
@@ -1365,14 +1386,16 @@ function generateDropDowns(i, n, c) {
         newItem += '<li><label>';
         newItem += '<input type="radio" name="plan" value="' + n.id + '">';
     }
-    newItem += '<div><span>' + n.planduration + ' ' + monthString + '</span>';
-    newItem += '<span class="price">' + n.productprice + '/[@L[cds.sales/gd/hosting/vps-hosting:month]@L]</span>';
+    newItem += '<div class="clearfix">';
+    newItem += '<span class="dropdown-item-duration">' + n.planduration + ' ' + monthString + '</span>';
+    newItem += '<span class="price dropdown-item-price">' + n.productprice + '/[@L[cds.sales/gd/hosting/vps-hosting:month]@L]</span>';
     if (n.plandurationdiscount != '0') {
-        newItem += '<span class="secondary-color">[@L[cds.sales/gd/hosting/vps-hosting:SaveText]@L] ' + n.plandurationdiscount + '% <sup>[@L[cds.sales/gd/hosting/vps-hosting:DiscalimerSymbol]@L]</sup></span>';
+        newItem += '<span class="dropdown-item-save secondary-color">[@L[cds.sales/gd/hosting/vps-hosting:SaveText]@L] ' + n.plandurationdiscount + '% <sup>[@L[cds.sales/gd/hosting/vps-hosting:DiscalimerSymbol]@L]</sup></span>';
     } else {
-        newItem += '<span class="save"></span>';
+        newItem += '<span class="dropdown-item-save"></span>';
     }
-    newItem += '</div></label></li>';
+    newItem += '</div>' + 
+               '</label></li>';
 
     $(c).find('.select-box-options').append(newItem);
 };

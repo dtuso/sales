@@ -1,0 +1,26 @@
+{
+  "vps-hosting.html": {
+    "cdsDetails": {
+      "champion": {
+        "name": "Colyn Brown",
+        "email": "clbrown@godaddy.com"
+      }
+    },
+    "assetPath": "fos/201401/sales/hosting/vps-hosting/",
+    "metaTitle": "[@L[cds.sales/gd/hosting/vps-hosting:page-title]@L]",
+    "metaDescription": "[@L[cds.sales/gd/hosting/vps-hosting:meta-description]@L]",
+    "metaKeywords": "[@L[cds.sales/gd/hosting/vps-hosting:meta-keywords]@L]",
+    "metaCanonicalPath": "/hosting/vps-hosting.aspx",
+    "metaOgTitle": "[@L[cds.sales/gd/hosting/vps-hosting:og-title]@L]",
+    "metaOgImage": "fos/hp/rebrand/img/gd_rebrand_og.png",
+    "metaOgDescription": "[@L[cds.sales/gd/hosting/vps-hosting:og-description]@L]"
+  },
+  "vps-hosting.language": {
+    "cdsDetails": {
+      "champion": {
+        "name": "Colyn Brown",
+        "email": "clbrown@godaddy.com"
+      }
+    }
+  }
+}
