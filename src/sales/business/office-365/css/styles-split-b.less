@@ -1,0 +1,955 @@
+/*Local Globals*/
+body{
+  background-color: #F8F8F8;
+  font-size: 10px;
+}
+
+.white-bg{
+  background-color: #FFFFFF;
+}
+
+.gray-text{
+  color: #333333;
+}
+
+.col-xs-4:first-child{
+  max-width: 333px;
+  width: 333px;
+} 
+    
+.section-header{
+  text-align: center;
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-size: 5.714285714em;
+  font-weight: 100;
+  letter-spacing: -1px;
+  line-height: 1.1em;
+}
+
+.section-sub-header{
+  text-align: center;
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-size: 1.8em;
+  font-weight: 500;
+  line-height: 1.1em;
+}
+
+.mt5{
+  margin-top: 5px;
+}
+    
+.common-sub-section-header{
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-size: 2.8em;
+  font-weight: 300;
+  line-height: 1.1em;
+}
+
+#pcf .pc-support-wrapper{
+  margin-top: 0px;
+}
+
+.g-toolTip {
+    cursor: pointer;
+    position: relative;
+    border-bottom: 1px dashed #333;
+    display: inline
+}
+
+.g-toolTip.b{
+  font-weight: bold;
+}
+
+.g-toolTip.b span{
+  font-weight: normal;
+}
+
+.g-toolTip:hover span {
+    display: block
+}
+
+.g-toolTip span.left {
+    left: -225px
+}
+
+.g-toolTip span.left:after {
+    border-right: 0;
+    border-left: 12px solid #262626;
+    left: 220px;
+    z-index: 3
+}
+
+.g-toolTip span {
+    background: #262626;
+    color: #fff;
+    display: none;
+    font-size: 14px;
+    line-height: 22px;
+    right: -225px;
+    top: 11px;
+    position: absolute;
+    padding: 8px;
+    text-align: left;
+    width: 220px;
+    z-index: 3
+}
+
+.g-toolTip span:after {
+    border-bottom: 7px solid rgba(0, 0, 0, 0);
+    border-right: 12px solid #262626;
+    border-top: 0 solid rgba(0, 0, 0, 0);
+    content: "";
+    height: 0;
+    left: -10px;
+    position: absolute;
+    top: 0;
+    width: 0;
+    z-index: 3
+}    
+
+.ml-auto{
+  margin-left: auto;
+  margin-right: auto;
+}    
+    
+/* Check Text */
+.check-section{
+  width: 100%;
+  margin: 0;
+  clear: both;
+}
+
+.check-block{
+  width: 3%;
+  min-width: 30px;
+  float: left;
+  position: relative;
+}
+
+.pre-text-green-check{
+  display: block;
+  background: url('[@T[link:<imageroot />]@T]fos/office365/office-052014/img/o365-sprite.png') no-repeat -197px -5px;
+  width: 18px;
+  height: 15px;
+  float: left;
+  margin-top: 2px;
+}
+
+.check-text-wrapper{
+  width: 92%;
+  float: left;
+}
+
+.check-text-wrapper h4{
+  font-size: 1.5em;
+  margin-bottom: 5px;
+  color: #7DB701;
+  font-weight: bold;
+}
+
+.check-text-wrapper p{
+  font-size: 1.5em;
+  margin: 0px;
+}
+
+/*End Local Globals*/
+#banner-section{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  position: relative;
+}
+
+#banner-section h1{
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2.2em;
+  margin-bottom: 10px;
+}
+
+#banner-section h2{
+  text-align: center;
+  width: 60%;
+  margin-bottom: 25px;
+}
+
+    
+#banner-section .col-xs-4:first-child{
+  max-width: 333px;
+  width: 333px;
+} 
+
+#banner-section .col-xs-4{
+  max-width: 333px;
+  width: 333px;
+} 
+    
+#banner-section .banner-icon-container{
+  float: left;
+  width: 200px;
+} 
+
+#banner-section .banner-icon-container.first{
+  margin-left: 200px;
+}     
+    
+#banner-section .banner-icon-container p{
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+}
+   
+    
+#banner-section .icon-container{
+  display: block;
+  text-align: center;
+  width: 60px;
+  height: 60px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
+  margin-top: 5px;
+}
+
+#banner-section #email-icon{
+  background: url('[@T[link:<imageroot />]@T]fos/office365/office-052014/img/o365-sprite.png') no-repeat -4px -5px;
+}
+
+#banner-section #support-icon{
+  background: url('[@T[link:<imageroot />]@T]fos/office365/office-052014/img/o365-sprite.png') no-repeat -72px -5px;
+}
+
+#banner-section #file-icon{
+  background: url('[@T[link:<imageroot />]@T]fos/201401/global/img/ico-s92c4580b2f.png')  no-repeat 0px -617px;
+}
+     
+/* Plan Boxes */
+    
+#plan-boxes-section{
+  padding-bottom: 30px;
+}
+    
+.side-plan{
+  border: 2px solid #DDDDDD;
+  border-top: none;
+}
+
+.side-plan.left-side{
+  border-right: none;
+}
+
+.side-plan.right-side{
+  border-left: none;
+}
+
+.col-xs-4.plan-box{
+  width: 333px;
+  padding: 0px;
+  position: relative;
+}
+
+.col-xs-4.plan-box .plan-contents{
+  padding: 20px;
+  padding-bottom: 15px;
+}
+
+.col-xs-4.highlighted-plan{
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+   -moz-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+        box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+}
+
+.col-xs-4.highlighted-plan .plan-contents{
+  padding-bottom: 25px;
+}
+
+.col-xs-4.highlighted-plan .product-title{
+  background-color: #333333;
+  padding-top: 20px;
+}
+
+.col-xs-4 .product-title{
+  font-size: 2.4em;
+  margin-bottom: 0px;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-transform: capitalize;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #7db701;
+}
+
+.office-box{
+  background: url('[@T[link:<imageroot />]@T]fos/office365/office-052014/img/o365-sprite.png') no-repeat -4px -101px;
+  width: 157px;
+  height: 35px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+
+.office-box.no-office{
+  background-image: none;
+}
+
+.plan-description{
+  font-size: 1.5em;
+  text-align: center;
+  font-weight: 600;
+  font-style: italic;
+  min-height: 40px;
+  margin-bottom: 10px;
+}
+
+.plan-box-price{
+  font-size: 4.2em;
+  line-height: 1;
+  font-weight: 500;
+  text-align: center;
+  color: #FF910F;
+  margin-bottom: 0px;
+}
+
+.per-user{
+  font-size: 1.9em;
+  text-align: center;
+  margin-bottom: 5px;
+  font-weight: 300;
+}
+
+.price-wrapper{
+  width: 80%;
+  position: relative;
+  margin-left: 10%;
+}
+
+.price-wrapper .as-low-as{
+  color: #FF910F;
+  margin: 0;
+  line-height: 1;
+  font-size: 1.2em;
+}
+
+.price-wrapper .plan-box-price{
+  text-align: left;
+  display: inline-block;
+}
+
+.price-wrapper .per-user{
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.price-wrapper .per-user p{
+  text-align: left;
+  font-size: .7em;
+  margin: 0;
+  margin-bottom: 0px;
+  line-height: 1;
+  color: #FF910F;
+}
+
+.strike-through-wrapper{
+  width: 80%;
+  margin-left: 10%;
+}
+
+.strike-through-wrapper p{
+  margin: 0px;
+}
+
+.strike-through-wrapper .strike-through-price{
+  font-size: 1.8em;
+}
+
+.strike-through-wrapper .strike-through-price{
+  font-size: 1.8em;
+}
+
+.strike-through-wrapper .current-renewal-price{
+  font-size: 1.2em;
+}
+
+.vat-tax-message{
+  margin-top: 5px;
+  margin-bottom: 0px;
+  width: 80%;
+  margin-left: 10%;
+  color: #555555;
+}
+
+.plan-box-button{
+  margin-top: 10px;
+}
+   
+a.compare-plans{
+  font-size: 2.2em;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+a .show-span{
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  margin-bottom: -15px;
+  margin-right: 5px;
+} 
+
+a .show-span.minus-span{    
+  background: url('[@T[link:<imageroot />]@T]fos/office365/office-052014/img/o365-sprite.png') no-repeat -185px -25px;
+}
+
+a .show-span.plus-span{    
+  background: url('[@T[link:<imageroot />]@T]fos/office365/office-052014/img/o365-sprite.png') no-repeat -140px -25px;
+}  
+
+
+/*Video Section*/
+     
+#video-section{
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+#video-section .office-video{
+  background-repeat: no-repeat;
+  width: 944px;
+  height: 502px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+}
+
+#video-section .office-video-click-wrapper{
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+
+}
+
+#video-section .play-button{
+  width: 60px;
+  height: 60px;
+  display: block;
+  top: 190px;
+  left: 50%;
+  margin-left: -30px;
+  position: relative;
+  background: url('[@T[link:<imageroot />]@T]fos/201401/global/img/ico-s92c4580b2f.png')  no-repeat 0px -737px;
+
+}
+
+#video-section .office-video p{
+  color: #FFFFFF;
+  position: relative;
+  font-size: 2.3em;
+  font-weight: 500;
+  text-align: center;
+  top: 200px;
+}
+
+#video-section .slv-hidden{
+  display: none;
+}
+
+#video-section .slv-show{
+  display: inline-block;
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+
+/* Compare Plans */
+
+.compare-plans-section{
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.compare-plans-section .section-sub-header{
+  margin-bottom: 30px;
+}
+
+.compare-table-wrapper {
+  background-color: #FFFFFF;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.compare-table-wrapper table{
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.compare-table-wrapper table td, .compare-table-wrapper table th {
+  width: 180px;
+  text-align: center;
+}
+.compare-table-wrapper table th{
+  height: 60px;
+  font-weight: normal;
+  font-size: 1.4em;
+}
+
+.compare-table-wrapper table td.gray{
+  background-color: #EBEBEB;
+  font-weight: bold;
+}
+
+.compare-table-wrapper table .table-office-logos{
+  background: url('[@T[link:<imageroot />]@T]fos/office365/office-052014/img/o365-sprite.png') no-repeat -4px -73px;
+  width: 103px;
+  height: 23px;
+  display: inline-block;
+}
+
+.email-essentials-header, .productivity-plus-header{
+  background-color: #7db701;
+  color: #FFFFFF;
+}
+
+.business-essentials-header{
+  background-color: #333333;
+  color: #FFFFFF;
+}
+
+.compare-table-wrapper table td{
+  height: 40px;
+  vertical-align: middle;
+  font-size: 1.4em;
+  border-bottom: 1px solid #DFDFDF;
+}
+
+.compare-table-wrapper table td.b{
+  font-weight: bold;
+}
+
+.compare-table-wrapper table td.last{
+  vertical-align: bottom;
+  border: none;
+}
+
+.compare-table-wrapper table td.tdd, .compare-table-wrapper table th.tdd{
+  width: 360px;
+  text-align: left;
+}  
+
+.compare-table-wrapper table td.tdd{
+  padding-left: 20px;
+}
+
+.compare-table-wrapper .office-table-logo{
+  background-image: url('[@T[link:<imageroot />]@T]fos/office365/office-052014/img/o365-sprite.png');
+  display: inline-block;
+}
+
+.compare-table-wrapper .table-check{
+  background: url('[@T[link:<imageroot />]@T]fos/office365/office-052014/img/o365-sprite.png') no-repeat -153px -6px;
+  width: 16px;
+  height: 12px;
+  display: inline-block;
+  text-align: center;
+}
+
+.compare-table-wrapper table td.last p{
+  width: 90%;
+  margin-left: 5%;
+  margin: 0;
+  margin-top: 8px;
+  margin-right: 8px;
+  font-size: .9em;
+}
+
+.compare-table-wrapper table td.last .as-low-as{
+  margin: 0;
+  width: 90%;
+  margin-left: 5%;
+  text-align: left;
+  font-size: .8em;
+  color: #FF910F;
+}
+
+.compare-table-wrapper table td.last strike{
+  margin-right: 8px;
+  font-size: .6em;
+  font-weight: 400;
+  color: #333333;
+}
+
+.compare-table-wrapper table td.last p.td-header{
+  font-size: 1em;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.compare-table-wrapper table .table-plan-box-price{
+  width: 90%;
+  margin-left: 5%;
+  font-size: 2em;
+  line-height: 1;
+  font-weight: 600;
+  text-align: center;
+  color: #FF910F;
+  margin-bottom: 0px;
+  display: block;
+}
+
+.compare-table-wrapper table .table-plan-box-price.discounted{
+  margin: 0;
+  width: 90%;
+  margin-left: 5%;
+  font-size: 1.8em;
+  line-height: 1;
+  font-weight: 400;
+  text-align: left;
+  color: #FF910F;
+  margin-bottom: 0px;
+  display: block;
+}
+
+.compare-table-wrapper table .table-plan-box-price.discounted span, .compare-table-wrapper table .table-plan-box-price.discounted strike{
+  display: inline-block;
+}
+
+.compare-table-wrapper table .table-per-user{
+  font-size: .9em;
+  text-align: center;
+  margin-top: 3px;
+  margin-bottom: 15px;
+  font-weight: 200;
+  display: inline-block;
+}
+
+.compare-table-wrapper table .table-per-user.discounted{
+  width: 90%;
+  margin-left: 5%;
+  font-size: .9em;
+  text-align: left;
+  margin-top: 3px;
+  margin-bottom: 15px;
+  font-weight: 200;
+  display: block;
+}
+
+.compare-table-wrapper table td.last button{
+  width: 90%;
+  margin-left: 5%;
+  overflow: hidden;
+  font-size: 1em;
+  display: block;
+  white-space: normal;
+}
+
+/* Email Section */
+    
+#email-section{
+  padding-top: 55px;
+  padding-bottom: 55px;
+}
+
+#email-section .O365-background-image{
+      width: 100%;
+      min-height: 600px;
+      background-position: center;
+    }
+    
+#email-section .email-details-wrapper{
+   max-width: 500px;
+      float: right;
+      margin-top: 97px;
+    }
+#email-section .check-section-list{
+    overflow:hidden;
+}
+
+#email-section .check-section-list .check-section{
+    margin-bottom: 20px;
+    overflow: hidden;
+}    
+    
+.email-section-header{
+  font-size: 3.2em;
+  width: 90%;
+}      
+    
+.email-section-text1{
+  max-width: 437px;
+}
+
+.email-section-text2{
+  max-width: 450px;
+}
+
+.email-section-text3{
+  max-width: 422px;
+}
+        
+/* Productivity Section */
+
+#productivity-section .productivity-sub-section{
+  border-bottom: 1px solid #E5E5E5;
+  clear: both;
+  overflow: hidden;
+}
+
+#productivity-section .productivity-sub-section.first{
+  border-top: 1px solid #E5E5E5;
+}
+
+#productivity-section .sub-section-column h3{
+  font-size: 3em;
+}
+
+#productivity-section .sub-section-column {
+  float: left;
+}
+
+#productivity-section .text-side{
+  width: 480px;
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 30px;
+  min-height: 335px;
+}
+    
+#productivity-section .text-side.left{
+  padding-left: 50px;
+  width: 460px;
+} 
+    
+#productivity-section .text-side h3{
+  margin-top: 100px;
+}
+    
+#productivity-section .img-side{
+  width: 490px;
+  display: table-cell;
+  vertical-align: middle;
+  height: 375px;
+}    
+    
+    
+
+/* Latest Version Section */
+
+#latest-version-section .office-365-icons{
+  background-repeat: no-repeat;
+  width: 356px;
+  height: 102px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+    
+#latest-version-section{
+  padding-top: 55px;
+  padding-bottom: 55px;
+}
+        
+.latest-version-row{
+  padding-top: 40px;
+  max-width: 925px;
+  padding-right: 105px;
+  padding-left: 75px;    
+}
+
+.latest-version-sub-header{
+  max-width: 380px;
+  padding-top: 30px;
+}
+   
+.latest-version-body{
+max-width: 353px;
+} 
+   
+.yellow-ribbon{
+  background-image: url('[@T[link:<imageroot />]@T]fos/office365/office-052014/img/yellow-flag-sprite.png');
+   background-position: -12px -10px;
+  display: block;
+  width: 88px;
+  height: 88px;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: -4px;
+  right: -4px;
+}    
+
+.yellow-ribbon.en{
+ background-position: -12px -10px;
+}   
+
+.yellow-ribbon.da-DK{
+ background-position: -110px -10px;
+}
+
+.yellow-ribbon.de{
+ background-position: -208px -10px;
+}   
+
+.yellow-ribbon.gr{
+ background-position: -306px -10px;
+}      
+
+.yellow-ribbon.es{
+  background-position: -404px -10px;
+}      
+
+.yellow-ribbon.fi{
+  background-position: -12px -108px;
+}
+
+.yellow-ribbon.fr{
+  background-position: -110px -108px;
+}
+
+.yellow-ribbon.it{
+  background-position: -208px -108px;
+}
+
+.yellow-ribbon.nb-NO{
+  background-position: -306px -108px;
+}
+
+.yellow-ribbon.nl{
+  background-position: -404px -108px;
+}
+
+.yellow-ribbon.pl{
+  background-position: -12px -206px;
+}
+
+.yellow-ribbon.pt-BR{
+  background-position: -110px -206px;
+}
+
+.yellow-ribbon.pt-PT{
+  background-position: -208px -206px;
+}
+
+.yellow-ribbon.ru{
+  background-position: -306px -206px;
+}
+
+.yellow-ribbon.sv{
+  background-position: -404px -206px;
+}
+
+.yellow-ribbon.tr{
+  background-position: -10px -303px;
+}
+
+.yellow-ribbon.uk-UA{
+  background-position: -108px -303px;
+}
+
+/*FAQ*/
+#faq-section{
+  padding-top: 50px;
+  padding-bottom: 90px;
+}
+
+#faq-section .section-header{
+  margin-bottom: 30px;
+}
+
+#faq-section .question{
+  font-size: 2.2em;
+  font-weight: 300;
+  color: #333333;
+  width: 900px;
+  float: right;
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+#faq-section .answer{
+  font-size: 1.8em;
+  font-weight: 300;
+  color: #333333;
+  width: 900px;
+  float: right;
+  margin-top: 10px;
+}
+
+#faq-section .question-section{
+  clear: both;
+  margin-bottom: 25px;
+  overflow: hidden;
+}
+
+#faq-section .question-section .show-hide-question-section{
+  width: 100px;
+  height: 40px;
+  margin-top: 3px;
+  float: left;
+}
+
+
+#faq-section .question-section .show-hide-question-section a.open-button{
+  width: 40px;
+  height: 40px;
+  display: block;
+  float: left;
+}
+
+#faq-section .question-section .show-hide-question-section a.open-button.plus{
+  background: url('[@T[link:<imageroot />]@T]fos/office365/office-052014/img/o365-sprite.png') no-repeat -140px -25px;
+
+}
+
+#faq-section .question-section .show-hide-question-section a.open-button.minus{
+  background: url('[@T[link:<imageroot />]@T]fos/office365/office-052014/img/o365-sprite.png') no-repeat -185px -25px;
+
+}
+
+#faq-section .question-section .answer{
+  display: none;
+}
+
+.more-text{
+  font-size: 2em;
+  text-align: center;
+  font-weight: 200;
+}
+
+.more-text a{
+  color: #555555;
+}
+
+.chevron-down{
+  background: url('[@T[link:<imageroot />]@T]fos/201401/global/img/ico-s92c4580b2f.png') no-repeat -12px -35px;
+  width: 14px;
+  height: 8px;
+  display: inline-block;
+}
+
+/*  Disclaimer Section    */
+
+#disclaimer-section{
+  background-color: #FFFFFF;
+}
+
+#disclaimer-section small{
+  font-size: 1.1em;
+}
+
+.modal-content{
+  border-radius: 2px;
+}
+
+.modal-content p{
+  font-size: 1.3em;
+}
+

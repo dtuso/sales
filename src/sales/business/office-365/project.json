@@ -17,5 +17,25 @@
     "metaOgTitle": "[@L[cds.sales/business/office-365:lp-9-OgTitle]@L]",
     "metaOgImage": "fos/office365/img/open-graph_20140115-v2.png",
     "metaOgDescription": "[@L[cds.sales/business/office-365:lp-48-OgDescription]@L]"
+  },
+  "office-365-split-b.html": {
+    "cdsDetails": {
+      "champion": {
+        "name": "Ryan Hurst",
+        "email": "rhurst@godaddy.com"
+      },
+      "draft": {
+        "comments": "Reskin",
+        "url": "http://gui.dev-godaddy.com/splittest/splittestredirect.aspx?test=1216.B&dest=http%3a%2f%2fwww.dev-godaddy.com%2fbusiness%2foffice-365.aspx"
+
+      }
+    },
+    "metaTitle": "[@L[cds.sales/business/office-365:lp-8-MicrosoftOffice365BoostProductivityVirtuallyAnywhereGoDaddy]@L]",
+    "metaDescription": "[@L[cds.sales/business/office-365:lp-36-MSOffice365IsEasyToSetUp]@L]",
+    "metaKeywords": "[@L[cds.sales/business/office-365:lp-18-Office365MicrosoftOffice365Office365Pricing]@L]",
+    "metaCanonicalPath": "/business/office-365.aspx",
+    "metaOgTitle": "[@L[cds.sales/business/office-365:lp-9-OgTitle]@L]",
+    "metaOgImage": "fos/office365/img/open-graph_20140115-v2.png",
+    "metaOgDescription": "[@L[cds.sales/business/office-365:lp-48-OgDescription]@L]"
   }
 }
