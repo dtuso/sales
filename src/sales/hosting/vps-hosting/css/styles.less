@@ -1,6 +1,6 @@
-
+@imgPath : '[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/hosting/vps-hosting/';
 .main-banner-vps {
-  background-image: url("../img/bg-main-banner-image.jpg");
+  background-image: ~"url(@{imgPath}img/bg-main-banner-image.jpg)";
   background-position: center top;
   background-repeat: no-repeat;
   position: relative;
@@ -39,18 +39,18 @@
   max-width: 300px;
 }
 .tab-content-plans-pricing-vps {
-  background-image: url("../img/bg-tab-content-plan-pricing.jpg");
+  background-image: ~"url(@{imgPath}img/bg-tab-content-plan-pricing.jpg)";
   background-position: center top;
   background-repeat: no-repeat;
 }
 .tab-content-plans-pricing-vps.APAC {
-  background-image: url("../img/APAC_bg-tab-content-plan.jpg");
+  background-image: ~"url(@{imgPath}img/APAC_bg-tab-content-plan.jpg)";
 }
 .tab-content-plans-pricing-vps.IN {
-  background-image: url("../img/IN_bg-tab-content-plan.jpg");
+  background-image: ~"url(@{imgPath}img/IN_bg-tab-content-plan.jpg)";
 }
 .tab-content-plans-pricing-vps.LATAM {
-  background-image: url("../img/LATAM_bg-tab-content-plan.jpg");
+  background-image: ~"url(@{imgPath}img/LATAM_bg-tab-content-plan.jpg)";
 }
 @media all and (min-width: 1920px) {
   .tab-content-plans-pricing-vps {
