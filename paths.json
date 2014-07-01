@@ -30,5 +30,6 @@
   "cce":"./cce/",
   "wordpress-hosting": "./hosting/wordpress-hosting/",
   "searchresults": "./domains/searchresults/",
-  "os": "./ecommerce/onlinestore/"
+  "os": "./ecommerce/onlinestore/",
+  "domain-config" : "./domains/search/search.config"
 }
