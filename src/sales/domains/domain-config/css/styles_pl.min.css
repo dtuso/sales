@@ -1,0 +1,220 @@
+.weight-bold{font-weight:600;font-family:"Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif}
+.weight-medium{font-weight:500;font-family:"Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif}
+.weight-regular{font-weight:400;font-family:"Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif}
+.weight-light{font-weight:300;font-family:"Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif}
+.weight-ultra{font-weight:100;font-family:"Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif}
+.supsymbol{font-size:.7em}
+a:link,a:visited,a:hover,a:active,a:focus{color:#FFF;text-decoration:none}
+#head-wrap{clear:both;margin:0 auto;width:1000px}
+#body-wrap{clear:both;margin:0 auto;width:1000px}
+#foot-wrap{clear:both;margin:0 auto;width:1000px}
+#main-wrap{margin:0 auto;width:1000px}
+#main-wrap>div{position:relative}
+p{color:#333}
+#msgError{margin:10px 0}
+#serp-header{float:left;position:relative;width:700px;padding:40px 0 33px}
+#serp-header>h1{color:#3182e6;font-size:26px;line-height:26px;position:relative;float:left}
+span.checkmark{background:url("../img/dpp_sprite_pl.png") no-repeat 0 -7px;display:inline-block;height:34px;margin-right:5px;width:33px}
+span.checkmark.small{background:url("../img/dpp_sprite_pl.png") no-repeat -33px -25px;display:inline-block;height:16px;margin-right:5px;width:20px}
+#serp-header>a{font-size:14px;font-weight:normal;position:relative;margin-top:18px;float:right;cursor:pointer;color:inherit;text-decoration:none}
+#serp-header>a:hover{text-decoration:underline}
+#serp-header>a>span{left:-14px;position:absolute;top:4px}
+p.price span.list-price,span.plan-droplist-price span.list-price{color:#333;font-size:16px;text-decoration:line-through;padding:0 3px 0 0}
+div.plan-droplist-selected span.price span.list-price{display:none}
+div.plan-droplist-selected span.price{font-size:14px!important}
+div.plan-option span.plan-droplist-price{font-size:16px}
+div.step-wrapper{display:none}
+div.step{background:#fcfcfc;background-image:-moz-linear-gradient(right,#eae9e9 0,#fcfcfc 50%,#eae9e9 100%);background-image:-ms-linear-gradient(right,#eae9e9 0,#fcfcfc 50%,#eae9e9 100%);background-image:-o-linear-gradient(right,#eae9e9 0,#fcfcfc 50%,#eae9e9 100%);background-image:-webkit-gradient(linear,left bottom,right bottom,color-stop(0,#eae9e9),color-stop(0.5,#fcfcfc),color-stop(1,#eae9e9));background-image:-webkit-linear-gradient(right,#eae9e9 0,#fcfcfc 50%,#eae9e9 100%);background-image:linear-gradient(to right,#eae9e9 0,#fcfcfc 50%,#eae9e9 100%);border:1px solid #ccc;float:left;min-height:460px;position:relative;width:700px}
+div.step::after{background:url("../img/dpp_sprite_pl.png") no-repeat 0 -31px;background-size:cover;bottom:-10px;content:"";height:10px;left:0;position:absolute;width:700px}
+div.step-separator{float:left;height:10px;margin:20px 0;position:relative;width:700px}
+div.step-separator>span{background:url("../img/dpp_sprite_pl.png") no-repeat -296px -32px;bottom:0;height:10px;left:0;margin:auto;position:absolute;right:0;top:0;width:17px}
+div.step div.section{float:left;height:100%;margin:0;min-height:460px;padding:0;width:100%}
+div.step div.left.section{border-right-color:#ccc;border-right-style:solid;border-right-width:2px;width:350px}
+div.step div.right.section{border-left-color:#ccc;border-left-style:solid;border-left-width:2px;margin-left:-2px;width:348px}
+div.step>div.right.section::after{border-left-color:#ccc;border-bottom-color:#ccc;border-style:solid;border-width:2px;border-right:0;border-top:0;content:"";position:absolute;left:334px;top:215px;width:32px;height:32px;transform:rotate(45deg);-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);background-color:transparent;background:#fcfcfc;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#EAE9E9',endColorstr='#EAE9E9',GradientType=0)}
+div.step>div.section.full>h3{font-size:50px;line-height:50px;padding:108px 0 0 50px;color:#333}
+div.step>div.section.full>p{font-size:20px;line-height:24px;padding:15px 50px 0}
+div.step h2.flag{color:white;font-size:19px;height:28px;line-height:30px;left:0;padding:2px 16px 4px;position:absolute;top:10px}
+div.step h2.flag::after{border-style:solid;border-width:17px;content:"";left:100%;position:absolute;top:0}
+div.step h2.blue.flag{background:#0da8e5}
+div.step h2.blue.flag::after{border-color:#0da8e5 transparent #0da8e5 #0da8e5}
+div.step h2.orange.flag{background:#ffa132}
+div.step h2.orange.flag::after{border-color:#ffa132 transparent #ffa132 #ffa132}
+div.step h2.ltblue.flag{background:#2fc1d2}
+div.step h2.ltblue.flag::after{border-color:#2fc1d2 transparent #2fc1d2 #2fc1d2}
+div.step h2.ltred.flag{background:#f26c4f}
+div.step h2.ltred.flag::after{border-color:#f26c4f transparent #f26c4f #f26c4f}
+div.step h2.flag>span{display:inline-block;line-height:20px;margin:0 2px;padding:0 4px 0 0}
+div.step h2.flag>span.step_text{border-left-color:#fff;border-left-style:solid;border-left-width:1px;font-size:17px;padding:0 4px 0 7px}
+div.step div.section.left>h3{color:#333;font-size:50px;line-height:50px;padding:130px 21px 0 50px;word-wrap:break-word}
+div.step div.section.left>p{font-size:16px;line-height:24px;padding:15px 50px 0 50px}
+div.step div.section.left>p.last{font-size:13px;line-height:24px;margin-bottom:30px;padding:75px 50px 0 50px}
+div.step div.section.left p.last>span.g-toolTip>span{width:500px}
+div.step div.section.left>p.last>span.g-toolTip span.left{width:240px;padding-right:10px}
+div.step div.section.left>p.last>span.g-toolTip span.right{width:250px;padding-right:0}
+div.step div.section.left>div,div.step div.section.right>div{border-bottom:1px solid #ccc;color:#333;margin:0 20px;padding:25px 0;width:310px}
+div.step div.section.right>div>h3,div.step div.radio-select>div>h3{color:#333;font-size:28px;line-height:28px;padding:0}
+div.step.options div.section.split.left>div>h3>p,div.step div.section.right>div>h3>p,div.step div.radio-select>div>h3>p{display:inline-block;max-width:249px;vertical-align:middle;margin-left:10px}
+div.step span.radio{background:url("../img/dpp_sprite_pl.png") no-repeat -157px -7px;display:inline-block;height:35px;margin:0 0 0 10px;vertical-align:middle;width:35px;cursor:pointer}
+div.step span.radio.checked{background:url("../img/dpp_sprite_pl.png") no-repeat -121px -7px}
+div.step div.section.right>div>p,div.step div.radio-select>div>p{font-size:13px;line-height:24px;margin:10px 0 0 10px;padding:0}
+div.step div.section.right>div>p>span.g-toolTip>span{width:215px}
+div.step-wrapper div.step div.section div.last{border-bottom:0}
+#privacyandbusinessprotection,#businessprotection{border-bottom:0}
+#businessprotection{display:none}
+#privacyandbusinessprotection>h3>p.radio{float:left;margin-top:12px}
+#year_plan{margin-top:25px}
+#main-wrap div.split-b div.section.full>h3{font-size:45px}
+#main-wrap div.split-b div.section.full>p.fg-orange+p{padding-top:0}
+#main-wrap div.split-b div.section.full>p.last{font-size:14px;margin-top:90px;margin-bottom:30px}
+#main-wrap div.split-b div.section.full>p.last>span.g-toolTip>span{width:500px}
+#main-wrap div.split-c div.section.full>h3,#main-wrap div.split-d div.section.full>h3{padding-top:77px;font-size:45px}
+#main-wrap div.split-c div.section.full>p.last,#main-wrap div.split-d div.section.full>p.last{padding-top:15px;margin-bottom:20px}
+#main-wrap div.split-d div.section.full>p.last{font-size:16px}
+#main-wrap div.split-c div.section.full>p.last>span.g-toolTip>span,#main-wrap div.split-d div.section.full>p.last>span.g-toolTip>span{width:500px}
+#main-wrap div.split-c div.section.full>p.last>span.g-toolTip{margin-top:4px}
+#main-wrap div.split-d div.section.full>p.last>span.g-toolTip,#main-wrap div.split-d div.radio-select span.g-toolTip{margin-top:2px}
+#main-wrap div.split-c div.section.full>div.radio-select,#main-wrap div.split-d div.section.full>div.radio-select{padding-left:38px;padding-bottom:40px}
+#main-wrap div.split-c div.section.full>div.radio-select>div,#main-wrap div.split-d div.section.full>div.radio-select>div{margin-bottom:18px}
+#main-wrap div.split-c div.section.full>div.radio-select>div>h3>p,#main-wrap div.split-d div.section.full>div.radio-select>div>h3>p{max-width:none}
+#main-wrap div.split-c div.section.full>div.radio-select>div>p,#main-wrap div.split-d div.section.full>div.radio-select>div>p{margin:0 0 0 57px}
+#main-wrap div.split-c .price{font-size:20px}
+#main-wrap div.split-d .price{font-size:22px!important}
+#main-wrap div.split-d div.radio-select span.pricing-per{font-weight:400}
+#main-wrap div.split-d #privacyprotection-apply,#main-wrap div.split-d #locuprivacyprotection-apply{margin-left:12px}
+#main-wrap div.split-e #privacyprotection-apply,#main-wrap div.split-e #locuprivacyprotection-apply{position:absolute;left:485px;top:0}
+#main-wrap div.split-b div.plan-option span.plan-droplist-price,#main-wrap div.split-e div.plan-option span.plan-droplist-price{margin-bottom:10px}
+#main-wrap div.split-b div.plan-option span.message,#main-wrap div.split-b div.plan-option span.message+span,#main-wrap div.split-e div.plan-option span.message,#main-wrap div.split-e div.plan-option span.message+span{font-size:12px}
+#main-wrap div.split-b .btn-apply,#main-wrap div.split-e .btn-apply{padding:7px 35px 5px}
+#main-wrap div.split-b .btn-apply.action-added,#main-wrap div.split-e .btn-apply.action-added{padding:0;display:block;width:100px;line-height:16px}
+#main-wrap div.split-b .btn.action-added span.remove,#main-wrap div.split-e .btn.action-added span.remove{width:92px}
+#main-wrap div.split-e p.last{margin-top:30px;font-size:14px}
+#main-wrap div.split-e p.last span.g-toolTip{margin-top:2px}
+#main-wrap div.split-e p.last span.g-toolTip>span{width:460px}
+div.step.options div.section.split>h3{color:#333;font-size:50px;line-height:50px;opacity:.8;padding:110px 21px 0 120px}
+div.step.options div.section.left.split-b>div,div.step.options div.section.right.split-b>div{padding:0;position:absolute;bottom:28px}
+div.step.options div.section.split.split-b>p.checkbox{font-size:28px;padding-top:94px;padding-bottom:20px}
+div.step.options div.section.split.split-b>p{line-height:24px;padding:0 0 45px 45px;font-size:16px;margin-right:35px}
+div.step.options div.section.split.split-b>p.price{padding-bottom:80px;font-size:16px!important}
+div.step.options div.section.split.right.split-b>p.checkbox{padding:94px 0 40px 45px}
+div.step.options div.section.split.right.split-b>p{line-height:24px;padding:0 0 20px 45px;font-size:16px;margin-right:35px}
+div.step.options div.section.split.right.split-b>p.price{padding-bottom:29px;font-size:16px!important}
+#buildmywebsite.split-b,#step-websitebuilder div.section.split.left.split-b{background:0}
+#hostmywebsite.split-b,#step-hosting div.section.split.left.split-b{background:0}
+div.step.options .plan-droplist{width:312px}div.step.options .plan-droplist li{margin-left:10px}
+div.step.options div.section.split>p{font-size:12px;line-height:17px;padding:2px 26px 0 125px}
+div.step.options div.section.split>p.last{font-size:18px;margin-bottom:20px;padding:5px 26px 0 125px}
+div.step.options div.section.split>p.last>span.g-toolTip>span{width:342px}
+div.step.options div.section.split>p.last>span.g-toolTip span.right{width:165px}
+div.step.options div.section.split.right>h3{padding:110px 120px 0 31px}
+div.step.options div.section.split.right>p{padding:2px 122px 0 37px}
+div.step.options div.section.split.right>p.last{padding:5px 104px 0 36px}
+div.step.options div.section.split.right>p.last>span.g-toolTip>span{width:342px}
+div.step.options div.section.split.right>p.last>span.g-toolTip span.right{width:165px}
+#buildmywebsite,#step-websitebuilder div.section.split.left{background:url("../img/04_macbook_03.png") no-repeat -11px 53px transparent}
+#hostmywebsite,#step-hosting div.section.split.left{background:url("../img/04_server_03.png") no-repeat 153px 53px transparent}
+#step-hosting div.section.split.left{background-position:-96px 53px}
+#hostmywebsite.open ~ h2.flag{display:none}
+#hostmywebsite.open::after{border-left:0;border-bottom:0;border-right:2px solid #ccc;border-top:2px solid #ccc}
+div.step.options{min-height:494px;position:relative}
+div.step.options>div.section{min-height:494px}
+div.step.options div.section.split>p.checkbox>span.icon.checked{width:44px}
+div.step.options div.section.split>p.checkbox>span.icon.checked>span{background:url("../img/dpp_sprite_pl.png") no-repeat -647px -9px;display:block;float:left;height:35px;width:43px;margin-right:0}
+div.step.options div.section.split>#businessPlus{border-bottom:0}
+div.step.options div.section.split>div>h3{color:#333;font-size:28px;line-height:28px;margin-bottom:10px;padding:0}
+div.step.options div.section.split.left>div>h3>p,div.step.options div.section.split>div>h3>p{display:inline-block;vertical-align:middle}
+div.step.options div.section.split>div>p{font-size:13px;line-height:13px;margin:15px 0 0 10px;padding:0}
+div.step.options div.section.split>div>p>span.g-toolTip>span{width:215px}
+div.step.options div.section.split>div>li{font-size:13px;margin-left:30px}
+#buildmywebsite-options,#hostmywebsite-options{display:none}
+.droplist-steptype-h3{color:#333;font-size:50px;line-height:50px;padding:113px 50px 30px}
+.droplist-steptype-p{font-size:16px;line-height:24px;padding:0 50px}
+.droplist-steptype-low-price{font-size:20px;line-height:24px;margin-bottom:5px}
+.pricing-per{font-size:14px;line-height:14px}
+.price{font-size:20px!important}
+.price-line-radio{font-size:22px;line-height:24px;margin:10px 0 0 10px;padding:0}
+.price-line-dropdown{font-size:14px;line-height:20px;margin:0;padding:0}
+.plan-droplist{background-color:#fff;display:none;font-size:14px;left:-1px;position:absolute;width:472px;z-index:2}
+.plan-droplist-select{height:auto;width:470px;background-color:#fff;border:1px solid #b3b3b3;cursor:pointer;font-size:14px;margin-left:50px;margin-top:38px;position:relative;z-index:98}
+.plan-droplist-selected{padding:5px 30px 5px 10px}
+.plan-option.plan-option-selected{background-color:#3182e6;color:#FFF}
+.plan-droplist-selected span{padding:0 5px 0 0}
+.plan-option-selected .plan-droplist-price{color:#FFF}
+.plan-droplist-price{padding-left:5px}
+.plan-droplist-price>span{padding-left:0}
+.plan-droplist-selectbtn{background-color:transparent;cursor:pointer;height:31px;line-height:0;position:absolute;right:1px;top:1px;width:26px}
+.plan-option.plan-option-selected:hover{background-color:#3182e6}
+.plan-option span{display:block;padding:0 10px}
+.plan-option span>span{display:inline-block;padding-left:3px}
+.plan-option span>span.pricing-per{padding-left:0}
+.plan-option{background:white;border-bottom:1px solid #b3b3b3;border-left:1px solid #b3b3b3;border-right:1px solid #b3b3b3;cursor:pointer;padding:6px 0}
+.plan-option:hover{background-color:#f5f5f5}
+.plan-option:first-child{border-top:1px solid #b3b3b3}
+.plan-droplist-selectbtn span{background:url("../../search-new/img/lp_sprite2.png") no-repeat -49px -2px transparent;display:block;height:9px;left:6px;position:absolute;top:13px;width:12px}
+.plan-option-hidden{display:none}
+.select-disable{-webkit-user-select:none;-ms-user-select:none;-moz-user-select:-moz-none;-khtml-user-select:none;user-select:none}
+.plan-feature-list{padding:0 0 0 15px}
+.plan-feature-list li{list-style:disc}
+#serp-footer{float:left;width:700px;margin:30px 0 40px}
+#limitations-wrap p{color:#3182e6}
+#limitations-wrap{margin:25px 0 10px}
+.ordersummary-wrap{position:relative}
+#order-summary{position:absolute;right:0;top:0;width:280px;background:transparent;z-index:98;color:#333;font-size:13px}
+#order-summary .header-title,#order-summary-items,#order-summary .subtotal-title,#order-summary .total,#order-summary .legal{margin-left:4px}
+#order-summary .header-title{background:#ebebeb;font-size:16px;padding:15px;margin:0}
+#order-summary .subtotal-title{margin-top:20px;display:none}
+#order-summary>p.total{color:#679b09;font-size:30px;text-align:right;margin-top:0;display:none}
+#order-summary>p.legal{color:#777;text-align:left;margin-top:20px;display:none}
+.summary-footer{color:#679b09;font-size:13px;margin:200px 0 15px;position:relative;text-align:center}
+.summary-footer>span{background:url("../img/dpp_sprite_pl.png") no-repeat -268px -33px;height:10px;left:50%;margin:4px 0 0 -5px;position:absolute;top:100%;width:15px}
+#order-summary-items .number-domains,#order-summary-items .term{margin-top:3px}
+#order-summary-items p{margin-top:5px}
+#order-summary-items p.line-total,#order-summary>p.total{border-top:1px solid #ccc;padding-top:3px;display:none}
+#order-summary-items p.line-total,#order-summary>p.total{border-top:1px solid #ccc;padding-top:3px}
+#order-summary .order-summary-item{padding:15px 0;border-bottom:1px solid #cfcfcf}
+.left{float:left;display:block;width:50%}.right{float:right;display:block;width:50%}
+.fg-orange{color:#f00000}.sticky{position:fixed!important;top:20px!important}
+.sticky.absolute{!important;position:absolute}
+.diamond-wrap{height:45px;left:50%;margin-left:-20.5px;position:absolute;top:210px;width:45px}
+.diamond-wrap>div{height:54px;position:relative;width:54px}
+#or span{color:#FFF;display:block;font-size:13px;height:45px;left:-1px;line-height:45px;position:absolute;text-align:center;top:-1px;vertical-align:middle;width:45px;z-index:2}
+.diamond{background-color:#CCC;bottom:0;height:32px;left:-5px;margin:auto;position:absolute;right:0;top:-5px;transform:rotate(45deg);-ms-transform:rotate(45deg);-webkit-transform:rotate(45deg);-moz-transform:rotate(45deg);-o-transform:rotate(45deg);width:32px}
+span.grey-arrow-right{background:url("../img/dpp_sprite_pl.png") no-repeat -285px -26px;height:10px;width:10px}
+span.g-toolTip{background:url("../../../tlds/img/tooltip.png") no-repeat 7px 2px #000;background-color:transparent;content:"";height:5px;margin:-1px 0 0;padding:9px;position:absolute;width:15px}
+.g-toolTip{cursor:pointer;position:relative}
+.g-toolTip>span::after{border-bottom-color:#000;border-bottom-color:transparent;border-bottom-style:solid;border-bottom-width:7px;border-right-color:#262626;border-right-style:solid;border-right-width:12px;border-top-color:#000;border-top-color:transparent;border-top-style:solid;border-top-width:0;content:"";height:0;left:-10px;position:absolute;top:0;width:0;z-index:999}
+.g-toolTip>span{background:0 0 #262626;color:#fff;font-size:14px;font-weight:normal;left:35px;line-height:18px;padding:8px;position:absolute;text-align:left;top:11px;white-space:normal;width:285px;z-index:999}
+.g-toolTip.g-toolTip-displayDown>span{right:-132px;top:26px;left:auto}
+.g-toolTip.g-toolTip-displayDown>span:after{border-bottom-color:#000;border-bottom-style:solid;border-bottom-width:7px;border-right-color:transparent;border-right-style:solid;border-right-width:6px;border-top-color:#000;border-top-color:transparent;border-top-style:solid;border-top-width:0;border-left-color:transparent;border-left-style:solid;border-left-width:6px;right:144px;top:-7px;left:auto}
+.g-toolTip>span{display:none}
+.g-toolTip:hover>span{display:block}
+.flt-btn-inactive-orng{background:0 0 #ffe3ba!important;border-bottom-color:#ffe3ba!important;cursor:default}
+.flt-btn-inactive-grey{background:0 0 #e3e3e3!important;border-bottom-color:#e3e3e3!important;cursor:default}
+#domains-added-1,#domains-added-x{display:none}
+.number-template{font-weight:bold}
+#hostmywebsite p.checkbox>span.icon+span{padding-top:7px}
+div.step.options p.checkbox>span.icon+span{display:block;word-wrap:break-word;font-size:18px;padding-left:40px}
+div.step.options div.split-b p.checkbox>span.icon+span{font-size:28px;line-height:100%}
+div.step.options div.section.split>p.checkbox>span.icon{display:inline;height:38px;width:38px;overflow:hidden}
+div.step.options div.section.split>p.checkbox>span.icon>span{background:url("../img/dpp_sprite_pl.png") no-repeat -612px -9px;display:block;float:left;height:35px;width:34px;margin-right:9px}
+.universal-modal-wrap a.universal-modal-close{right:2px;top:5px}
+#error-modal{display:none;min-width:200px}
+.error-modal-footer{display:none}
+.universal-modal-wrap:after{height:0!important}
+.config-continue-to-cart-wrapper .btn{padding:17px 20px 12px}
+.config-continue-to-cart-wrapper a{float:right;color:#FFF}
+.btn-lg{border-radius:0;font-size:18px;line-height:1.35;min-width:140px;padding:15px 15px 12px}
+.btn{border-width:0 0 3px;cursor:pointer;text-align:center;border-style:solid;color:#FFF;-moz-border-bottom-colors:none;-moz-border-left-colors:none;-moz-border-right-colors:none;-moz-border-top-colors:none;-moz-user-select:none;-webkit-user-select:none;user-select:none}
+.btn-apply{display:inline-block}
+.btn-sec,.btn-sec:hover{color:#679b09;text-decoration:none;font-size:20px;border:0;padding:0 12px;margin-top:-2px;margin-bottom:2px}
+.btn.action-added span.remove{display:block;width:83px;font-size:11px;color:#8b8b8b;text-align:right}
+.btn-warning{background-color:#3182e6;border-color:#1d6ccd}
+.btn-warning:hover{background-color:#5a9beb;border-color:#327cd7;color:#fff}
+.btn-warning.disabled,.btn-warning[disabled],fieldset[disabled] .btn-warning,.btn-warning.disabled:hover,.btn-warning[disabled]:hover,fieldset[disabled] .btn-warning:hover,.btn-warning.disabled:focus,.btn-warning[disabled]:focus,fieldset[disabled] .btn-warning:focus,.btn-warning.disabled:active,.btn-warning[disabled]:active,fieldset[disabled] .btn-warning:active,.btn-warning.disabled.active,.btn-warning.active[disabled],fieldset[disabled] .btn-warning.active{background-color:#ff8a00;border-color:#ff8a00}
+.btn-warning:focus,.btn-warning:active,.btn-warning.active,.open .dropdown-toggle.btn-warning{background-color:#e67c00;border-color:#e67c00;color:#FFF}
+.btn-warning:active,.btn-warning.active,.open .dropdown-toggle.btn-warning{background-image:none}
+span.icon-shopping-cart{background:url("../img/dpp_sprite_pl.png") no-repeat scroll -705px -13px rgba(0,0,0,0);display:inline-block;height:24px;margin-bottom:-6px;margin-right:7px;width:24px}
+html.busy,html.busy *{cursor:wait!important}
+.error-modal-message{margin:20px 0}
+span.perfect{font-weight:700}
+#limitations-wrap a{color:#3282e6}

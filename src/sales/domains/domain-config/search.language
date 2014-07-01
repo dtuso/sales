@@ -1,0 +1,315 @@
+---
+location: localization/sales/domains/domain-configuration/en
+id: 
+name: test
+---
+##if(false)
+<!-- DOC BLOCK (DO NOT REMOVE)
+
+        DEV LEAD:
+          Joel Conrad - jconrad@godaddy.com
+
+        DRAFT DETAILS:
+          Created Date:   2014-06-16
+          Created By:     Joel Conrad - jconrad@godaddy.com
+          JIRA Ticket:    FOS-22212
+          Comments:       Add .UK to free domain disclaimer 
+                          
+
+         PREVIEW URL:
+         http://www.godaddy.com/domains/domain-configuration.aspx?version=localization/sales/domains/domain-configuration/en|53a0774e64ad1315ec7f533f#
+
+END DOC BLOCK -->
+##endif 
+<phrase key="page.title" comment=""/>
+Domain Purchase Path | Configure your domains - [@T[companyname:name]@T]
+<phrase key="protect.my.personal" comment=""/>
+Protect My Personal Information
+<phrase key="prevent.your.personal.info" comment=""/>
+Prevent your personal information from falling into the wrong hands.
+<phrase key="what.does.my.domain" comment=""/>
+What does my domain look like without Privacy Protection
+<phrase key="tooltip.without.privacy.your.info" comment=""/>
+Without Privacy, your info appears in the public WHOIS database.
+<phrase key="tooltip.your.info.without.privacy" comment=""/>
+Your info without Privacy
+<phrase key="tooltip.your.info.with.privacy" comment=""/>
+Your info with Privacy
+<phrase key="privacy.tooltip.content.left" comment="Please Localize the Name, Number and Address to match Culture of market"/>
+John Smith<br/>john@YourDomain.com<br/>1234 Elm Street<br/>Hometown, AZ 85000<br/>(480) 555-5555<br/>
+<phrase key="privacy.tooltip.content.right" comment="Whois Privacy Info, unsure if this will have Localized content"/>
+DomainsByProxy.com<br/>ProxiedDomain@Domains-ByProxy.com<br/>14747 N Northsight Blvd<br/>Suite 111, PMB 309<br/>Scottsdale, AZ 85260<br/>(480) 642-2599<br/>
+<phrase key="business.registration" comment=""/>
+Business Registration
+<phrase key="no.thanks" comment=""/>
+No Thanks
+<phrase key="product.name.dpp_privacy_bundle" comment=""/>
+Privacy Protection
+<phrase key="privacy.protection" comment=""/>
+Privacy Protection
+<phrase key="product.name.dpp_business_only_bundle" comment=""/>
+Business Protection
+<phrase key="business.protection" comment=""/>
+Business Protection
+<phrase key="product.name.dpp_business_bundle" comment=""/>
+Privacy &amp; Business Protection
+<phrase key="privacy.and.business.protection" comment=""/>
+Privacy &amp; Business Protection
+<phrase key="product.name.dpp_business_only_bundle" comment=""/>
+Business Registration &amp; Certified Domain
+<phrase key="business.registration.certified.domain" comment=""/>
+Business Registration &amp; Certified Domain
+<phrase key="hide.your.personal.information" comment=""/>
+Hide your personal information from WHOIS searches and protect your identity.
+<phrase key="tooltip.protect.yourself.with" comment=""/>
+Protect yourself with Private Registration!
+<phrase key="tooltip.hides.your.personal.information.name" comment=""/>
+Hides your personal information - name, email, address and phone number - in the public WHOIS directory
+<phrase key="tooltip.prevents.domain.related.spam" comment=""/>
+Prevents domain-related spam
+<phrase key="tooltip.helps.stop.domain" comment=""/>
+Helps stop domain hijacking
+<phrase key="tooltip.helps.protect.against" comment=""/>
+Helps protect against stalkers and harassers
+<phrase key="privacy.business.protection.message" comment=""/>
+Protect my information AND ensure my domain name is shielded from misuse. 
+<phrase key="privacy.business.protection.tooltip" comment=""/>
+- Privacy hides your personal information from public view in the WHOIS directory.<br />- Protected Registration prevents accidental domain expiration or malicious transfer.<br />- Certified Domain Seal proves to visitors that your site's ownership is valid.<br />- Business Registration creates an online business card in the WHOIS directory.
+<phrase key="privacy.business.protection.locu.tooltip" comment=""/>
+- Privacy hides your personal information from public view in the WHOIS directory.<br />- Protected Registration prevents accidental domain expiration or malicious transfer.<br />- Certified Domain Seal proves to visitors that your site's ownership is valid.<br />- Get Found creates an online business card in the WHOIS directory.
+<phrase key="get.more.hits.visits" comment=""/>
+Get more hits, visits, and sales on your website.
+<phrase key="business.registration.tooltip" comment=""/>
+<strong>Business Registration</strong> creates an online business card in the WHOIS directory.
+<phrase key="you.can.only.add.business" comment=""/>
+You can only add Business Registration to domain names registered in your account with us. However, you can associate a Business Profile with any valid domain name, regardless of where it is registered.
+<phrase key="get.an.online.business.card" comment=""/>
+Get an online business card.
+<phrase key="get.an.online.business.card.seal" comment=""/>
+Get an online business card plus a certified domain seal.
+<phrase key="get.more.hits.visits.and.sales" comment=""/>
+Get more hits, visits, and sales on your website and inspire trust.
+<phrase key="certified.domain" comment=""/>
+Certified Domain Seal
+<phrase key="proves.to.visitors.that.your" comment=""/>
+proves to visitors that your site&rsquo; ownership is valid.
+<phrase key="creates.an.online.business.card" comment=""/>
+creates an online business card in the WHOIS directory.
+<phrase key="term.headline" comment=""/>
+Keep what's mine
+<phrase key="term.subline" comment=""/>
+Protect your domain - and most importantly, your brand - by securing your ownership for years to come.
+<phrase key="one.year" comment=""/>
+1 Year
+<phrase key="two.or.more.years" comment="two or more years {0} is replaced with a number"/>
+{0} Years
+<phrase key="one.domain" comment=""/>
+1 domain has been added to your cart
+<phrase key="two.or.more.domains" comment="{0} is replaced with a number of domains if more than one"/>
+{0} domains have been added to your cart
+<phrase key="build.my.website" comment=""/>
+Build my Website
+<phrase key="the.godaddy.website.builder.makes" comment=""/>
+[@T[companyname:name]@T] Website Builder makes designing your own awesome website easier than ever.
+<phrase key="website.builder" comment=""/>
+Website Builder
+<phrase key="hosting" comment=""/>
+Hosting
+<phrase key="product.name.dpp_xs_wst_economy" comment=""/>
+Personal
+<phrase key="personal" comment=""/>
+Personal
+<phrase key="product.name.dpp_xs_wst_deluxe" comment=""/>
+Business
+<phrase key="business" comment=""/>
+Business
+<phrase key="product.name.dpp_xs_wst_premium" comment=""/>
+Business Plus
+<phrase key="business.plus" comment=""/>
+Business Plus
+<phrase key="product.name.hosting_diablo_economy_linux" comment=""/>
+Economy
+<phrase key="economy" comment=""/>
+Economy
+<phrase key="product.name.dpp_xs_hosting_diablo_deluxe_linux" comment=""/>
+Deluxe
+<phrase key="deluxe" comment=""/>
+Deluxe
+<phrase key="product.name.dpp_xs_hosting_diablo_ultimate_linux" comment=""/>
+Ultimate
+<phrase key="ultimate" comment=""/>
+Ultimate
+<phrase key="personal.themes" comment=""/>
+50 Personal Themes
+<phrase key="business.personal.themes" comment=""/>
+300 Business/Personal Themes
+<phrase key="business.plus.email.adressess" comment=""/>
+10 Business Email Addresses<sup class="supsymbol">2</sup>
+<phrase key="business.email.adressess" comment=""/>
+5 Business Email Addresses<sup class="supsymbol">2</sup>
+<phrase key="mobile.site" comment=""/>
+Mobile Site
+<phrase key="ssl.certificates" comment=""/>
+FREE SSL Certificate<sup class="supsymbol">&dagger;&dagger;</sup>
+<phrase key="webhosting.econ.li.1" comment=""/>
+1 Website
+<phrase key="webhosting.econ.li.2" comment=""/>
+100 GB Disk Space
+<phrase key="webhosting.econ.li.3" comment=""/>
+Unlimited Bandwidth
+<phrase key="webhosting.econ.li.4" comment=""/>
+100 Email Addresses<sup class="supsymbol">^^</sup>
+<phrase key="webhosting.econ.li.5" comment=""/>
+10 MySQL Databases (1 GB ea.)
+<phrase key="webhosting.del.li.1" comment=""/>
+Unlimited Websites
+<phrase key="webhosting.del.li.2" comment=""/>
+Unlimited Disk Space<sup class="supsymbol">&dagger;</sup>
+<phrase key="webhosting.del.li.3" comment=""/>
+Unlimited Bandwidth
+<phrase key="webhosting.del.li.4" comment=""/>
+500 Email Addresses<sup class="supsymbol">^^</sup>
+<phrase key="webhosting.del.li.5" comment=""/>
+25 MySQL Databases (1 GB ea.)
+<phrase key="webhosting.ult.li.1" comment=""/>
+Unlimited Websites
+<phrase key="webhosting.ult.li.2" comment=""/>
+Unlimited Disk Space<sup class="supsymbol">&dagger;</sup>
+<phrase key="webhosting.ult.li.3" comment=""/>
+Unlimited Bandwidth
+<phrase key="webhosting.ult.li.4" comment=""/>
+Unlimited MySQL Databases (1 GB ea.)
+<phrase key="webhosting.ult.li.5" comment=""/>
+1000 Email Addresses<sup class="supsymbol">^^</sup>
+<phrase key="webhosting.ult.li.6" comment=""/>
+FREE Premium DNS
+<phrase key="webhosting.ult.li.7" comment=""/>
+FREE SSL Certificate<sup class="supsymbol">&dagger;&dagger;</sup>
+<phrase key="host.my.website" comment=""/>
+Host my Website
+<phrase key="godaddy.hosting.provides.an.easy" comment=""/>
+[@T[companyname:name]@T] Hosting provides an easy, super reliable and lightning-fast host for your website.
+<phrase key="options" comment=""/>
+Options
+<phrase key="or" comment=""/>
+or
+<phrase key="add.email.to.your.domain" comment=""/>
+Add email to your domain
+<phrase key="get.reliable.mobile.ready.email" comment=""/>
+Get reliable, mobile-ready email with addresses that highlight your business or website. It&rsquo;s you@yourdomainname.com.
+<phrase key="business.email" comment=""/>
+Business Email
+<phrase key="five.addresses" comment=""/>
+5 Addresses
+<phrase key="two.gb.storage" comment=""/>
+2GB Storage
+<phrase key="group.calendar" comment=""/>
+Group Calendar<sup class="supsymbol">&dagger;&dagger;&dagger;</sup>
+<phrase key="cloud.storage" comment=""/>
+Cloud Storage (1GB)<sup class="supsymbol">&dagger;&dagger;&dagger;</sup>
+<phrase key="unlimited.business.email" comment=""/>
+Unlimited Business Email
+<phrase key="ten.addresses" comment=""/>
+10 Addresses
+<phrase key="unlimited.storage" comment=""/>
+Unlimited Storage
+<phrase key="unlimited.email" comment=""/>
+Complete Email
+<phrase key="includes.everything.you.need.to.say" comment=""/>
+Includes everything you need to stay organized and in touch. PLUS unlimited calendar usage and tons of cloud storage!
+<phrase key="legal.disclaimers" comment=""/>
+Legal Disclaimers
+<phrase key="continue.to.cart" comment=""/>
+Continue to Cart
+<phrase key="summary.title" comment=""/>
+Order Summary
+<phrase key="summary.subtotal" comment=""/>
+Subtotal
+<phrase key="summary.legal" comment=""/>
+Subtotal does not include applicable taxes and fees.
+<phrase key="scroll.down.to.continue" comment=""/>
+Scroll down to continue to cart
+<phrase key="step.number" comment="{0} will be a number representing an ordered step"/>
+Step {0}
+<phrase key="step.title.privacy" comment=""/>
+Privacy
+<phrase key="step.title.term" comment=""/>
+Term
+<phrase key="step.title.hosting" comment=""/>
+Options
+<phrase key="step.title.business" comment=""/>
+Business Registration
+<phrase key="step.title.email" comment=""/>
+Email
+<phrase key="price.per.domain" comment="{0} will be a price"/>
+{0}<span class="pricing-per weight-regular">/domain</span>
+<phrase key="price.per.month" comment="This will become price per month with the {0} being the price"/>
+{0}<span class="pricing-per">/mo</span>
+<phrase key="as.low.as.per.month" comment="{0} will be a price"/>
+As low as {0}/mo
+<phrase key="as.low.as.per.month.free.domain" comment="{0} will be a price"/>
+As low as {0}/mo, including a free domain**.
+<phrase key="summary.year.term" comment="{0} will be a number"/>
+{0} year term
+<phrase key="summary.year.term.fee" comment="{0} will be a number"/>
+{0} year term + fees
+<phrase key="limitations.symbols" />
+*, **, 1, 2, 3, ^^, &dagger;, &dagger;&dagger;, &dagger;&dagger;&dagger; 
+<phrase key="limitations.link" />
+Click here for product limitations.
+<phrase key="limitations.modal.header" />
+Product Limitations
+<phrase key="limitations.modal.content" />
+<p>* Plus ICANN fee of [@T[currencyprice:<price usdamount="18" dropdecimal="false" />]@T]/yr.</p><p>** One FREE .COM, .CO, .NET, .UK, .CO.UK or .ORG with purchase of a new 12-, 24- or 36-month plan. Plus ICANN fee of [@T[currencyprice:<price usdamount="18" dropdecimal="false" />]@T] per domain name per year. You must add the domain name into your cart before purchase, and you must select a domain term length equal to or less than the term length of your plan to qualify for the free domain offer. If you purchase a domain name for a term longer than the term of the plan, you will be charged for the additional registration term at the then-current rate. Cannot be used in conjunction with any other offer, sale, discount or promotion. Free domain offer applies only to the initial purchase term. After the initial purchase term, domains purchased through this offer will renew at the then-current renewal price.</p><p>1 Number of Web pages is limited to 999. Performance may begin to slow at varying numbers of pages depending on potential physical and practical constraints, including (but not limited to): system architecture, system capacity, system load, end-user Internet connectivity and end-user computer configurations.</p><p>2 Website Builder email account storage is limited to the following: Business Plan comes with up to 5 Email Addresses with up to 500 MB of total storage; Business Plus Plan comes with up to 10 Email Addresses with up to 1 GB of total storage.</p><p>3 Includes Office 365 ProPlus for PC's (which includes desktop versions of Outlook, Word, Excel, PowerPoint, Access, OneNote, Publisher and Lync) or Office 2011 for Mac (which includes desktop versions of Outlook, Word, Excel and PowerPoint). Access, Publisher and OneNote Desktop are Windows PC client programs and/or features only. Cannot be used across devices.</p><p>^^ Web Hosting email account storage is limited to the following: Economy Plan includes up to 100 addresses and up to 100 MB of total storage, the Deluxe plan includes up to 500 addresses and up to 500 MB of total storage and the Ultimate plan includes up to 1000 addresses and up to 1GB of total storage.</p><p>&dagger; Plan provides unlimited disk space subject to availability of space on a single server. All hosting plans, including plans that offer unlimited disk space, are subject to a limit of no more than 250,000 inodes per account (for Linux &copy; hosting accounts) or 500,000 files and folders per account (for Windows ® hosting accounts). Please see the Hosting Agreement for further details.</p><p>&dagger;&dagger; SSL certificate is free only for the initial hosting plan term purchased, after which it will automatically renew at the then-current rate.</p><p>&dagger;&dagger;&dagger; FREE Calendar and FREE [@T[companyname:name]@T] Online Storage are free only for the initial Email plan term purchased. At the end of the initial term, these products will automatically renew at the then-current rate.</p>
+<phrase key="os.normalized.name.1" />
+Economy Hosting
+<phrase key="os.normalized.name.2" />
+Deluxe Hosting
+<phrase key="os.normalized.name.3" />
+Ultimate Hosting
+<phrase key="summary.n.domains" comment="{1} will be a number" />
+{1} Domains
+<phrase key="summary.domain.bundle.offer" comment="" />
+Domain Bundle Offer
+<phrase key="step.o365.text" comment="" />
+Get reliable, mobile-ready email with addresses that highlight your business or website. It’s you@your-business-name.com. Plus, get the latest Microsoft Office 365 online and desktop tools.
+<phrase key="step.o365.plan1.title" comment="" />
+Email Essentials
+<phrase key="step.o365.plan1.li1" comment="" />
+5GB email storage
+<phrase key="step.o365.plan1.li2" comment="" />
+2GB secure file storage
+<phrase key="step.o365.plan1.li3" comment="" />
+Email, calendar &amp; contacts in sync across all devices
+<phrase key="step.o365.plan2.title" comment="" />
+Business Essentials
+<phrase key="step.o365.plan2.list.title" comment="" />
+All features from Email Essentials And…
+<phrase key="step.o365.plan2.li1" comment="" />
+50GB email storage
+<phrase key="step.o365.plan2.li2" comment="" />
+25GB secure file storage
+<phrase key="step.o365.plan2.li3" comment="" />
+Simple file sharing &amp; online collaboration
+<phrase key="step.o365.plan2.li4" comment="" />
+Unlimited HD video conferencing
+<phrase key="step.o365.plan2.li5" comment="" />
+Office 365 online versions of Word, Excel and PowerPoint accessible anywhere
+<phrase key="step.o365.plan3.title" comment="" />
+Productivity Plus
+<phrase key="step.o365.plan3.list.title" comment="" />
+All features from Business Essentials PLUS…
+<phrase key="step.o365.plan3.li1" comment="" />
+Latest Microsoft Office desktop suite for 5 computers<sup class="supsymbol">3</sup>
+<phrase key="step.o365.plan3.li2" comment="" />
+Office Mobile Apps for smartphone access and editing
+<phrase key="step.wsbAndHosing.wsb.desc" comment="" />
+Do-it-yourself, easy-to-use site designer. No technical skills needed.
+<phrase key="step.wsbAndHosing.hosting.desc" comment="" />
+Web hosting with cPanel to build and manage websites. Some technical skills needed.
+<phrase key="step.wsbAndHosing.wsb.perfect" comment="" />
+<span class="perfect">Perfect for:</span> Basic, personal and small business websites
+<phrase key="step.wsbAndHosing.hosting.perfect" comment="" />
+<span class="perfect">Perfect for:</span> Web designers, web developers and businesses that use a designer
+<phrase key="as.low.as.per.month.free.domain.splitB" comment="{0} will be a price"/>
+As low as {0}/mo + a free domain**

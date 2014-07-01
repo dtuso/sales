@@ -31,5 +31,6 @@
   "wordpress-hosting": "./hosting/wordpress-hosting/",
   "searchresults": "./domains/searchresults/",
   "os": "./ecommerce/onlinestore/",
-  "domain-config" : "./domains/search/search.config"
+  "search-config" : "./domains/search/search.config",
+  "domain-config" : "./domains/domain-config/"
 }
