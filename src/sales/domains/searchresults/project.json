@@ -6,7 +6,7 @@
         "email": "jconrad@godaddy.com"
       },
       "draft": {
-        "comments": "Adding deals2 split 1208",
+        "comments": "Fixing Non-Dynamic Text for 2.99 sale",
         "url": "http://www.dev-godaddy.com/domains/searchresults.aspx"
       }
     },
@@ -25,7 +25,7 @@
         "email": "jconrad@godaddy.com"
       },
       "draft": {        
-        "comments": "GoDaddy branding leaking into Reseller Store Front."
+        "comments": ""
       }
     }
   }
