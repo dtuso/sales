@@ -17,19 +17,19 @@
                             "id": "addon_centos_bandwidth-3",
                             "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:3TBBandwidth]@L]",
                             "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:3TBBandwidthAddon]@L]",
-                            "addonprice": "[@T[productcompare:<multiplication primaryproductid=\"172117\" secondaryprice=\"3\" secondaryperiod=\"monthly\" />]@T]"
+                            "addonprice": "[@T[productprice:<current productid=\"172117\" quantity=\"3\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
                         },
                         {
                             "id": "addon_centos_bandwidth-5",
                             "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:5TBBandwidth]@L]",
                             "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:5TBBandwidthAddon]@L]",
-                            "addonprice": "[@T[productcompare:<multiplication primaryproductid=\"172117\" secondaryprice=\"5\" secondaryperiod=\"monthly\" />]@T]"
+                            "addonprice": "[@T[productprice:<current productid=\"172117\" quantity=\"5\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
                         },
                         {
                             "id": "addon_centos_bandwidth-10",
                             "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:10TBBandwidth]@L]",
                             "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:10TBBandwidthAddon]@L]",
-                            "addonprice": "[@T[productcompare:<multiplication primaryproductid=\"172117\" secondaryprice=\"10\" secondaryperiod=\"monthly\" />]@T]"
+                            "addonprice": "[@T[productprice:<current productid=\"172117\" quantity=\"10\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
                         }
                     ],
                     "eu": [
@@ -46,19 +46,19 @@
                             "id": "addon_centos_bandwidth-3",
                             "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:3TBBandwidth]@L]",
                             "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:3TBBandwidthAddon]@L]",
-                            "addonprice": "[@T[productcompare:<multiplication primaryproductid=\"172117\" secondaryprice=\"3\" secondaryperiod=\"monthly\" />]@T]"
+                            "addonprice": "[@T[productprice:<current productid=\"172117\" quantity=\"3\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
                         },
                         {
                             "id": "addon_centos_bandwidth-5",
                             "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:5TBBandwidth]@L]",
                             "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:5TBBandwidthAddon]@L]",
-                            "addonprice": "[@T[productcompare:<multiplication primaryproductid=\"172117\" secondaryprice=\"5\" secondaryperiod=\"monthly\" />]@T]"
+                            "addonprice": "[@T[productprice:<current productid=\"172117\" quantity=\"5\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
                         },
                         {
                             "id": "addon_centos_bandwidth-10",
                             "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:10TBBandwidth]@L]",
                             "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:10TBBandwidthAddon]@L]",
-                            "addonprice": "[@T[productcompare:<multiplication primaryproductid=\"172117\" secondaryprice=\"10\" secondaryperiod=\"monthly\" />]@T]"
+                            "addonprice": "[@T[productprice:<current productid=\"172117\" quantity=\"10\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
                         }
                     ],
                     "ap": [
@@ -75,19 +75,19 @@
                             "id": "addon_centos_bandwidth-3",
                             "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:3TBBandwidth]@L]",
                             "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:3TBBandwidthAddon]@L]",
-                            "addonprice": "[@T[productcompare:<multiplication primaryproductid=\"172117\" secondaryprice=\"3\" secondaryperiod=\"monthly\" />]@T]"
+                            "addonprice": "[@T[productprice:<current productid=\"172117\" quantity=\"3\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
                         },
                         {
                             "id": "addon_centos_bandwidth-5",
                             "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:5TBBandwidth]@L]",
                             "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:5TBBandwidthAddon]@L]",
-                            "addonprice": "[@T[productcompare:<multiplication primaryproductid=\"172117\" secondaryprice=\"5\" secondaryperiod=\"monthly\" />]@T]"
+                            "addonprice": "[@T[productprice:<current productid=\"172117\" quantity=\"5\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
                         },
                         {
                             "id": "addon_centos_bandwidth-10",
                             "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:10TBBandwidth]@L]",
                             "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:10TBBandwidthAddon]@L]",
-                            "addonprice": "[@T[productcompare:<multiplication primaryproductid=\"172117\" secondaryprice=\"10\" secondaryperiod=\"monthly\" />]@T]"
+                            "addonprice": "[@T[productprice:<current productid=\"172117\" quantity=\"10\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
                         }
                     ]
                 },
@@ -209,19 +209,19 @@
                             "id": "us_addon_bandwidth_500-2",
                             "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:1000GBBandwidth]@L]",
                             "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:1000BandwidthAddon]@L]",
-                            "addonprice": "[@T[productcompare:<multiplication primaryproductid=\"1225\" secondaryprice=\"2\" secondaryperiod=\"monthly\" />]@T]"
+                            "addonprice": "[@T[productprice:<current productid=\"1225\" quantity=\"2\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
                         },
                         {
                             "id": "us_addon_bandwidth_500-3",
                             "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:1500GBBandwidth]@L]",
                             "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:1500BandwidthAddon]@L]",
-                            "addonprice": "[@T[productcompare:<multiplication primaryproductid=\"1225\" secondaryprice=\"3\" secondaryperiod=\"monthly\" />]@T]"
+                            "addonprice": "[@T[productprice:<current productid=\"1225\" quantity=\"3\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
                         },
                         {
                             "id": "us_addon_bandwidth_500-4",
                             "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:2000GBBandwidth]@L]",
                             "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:2000BandwithAddon]@L]",
-                            "addonprice": "[@T[productcompare:<multiplication primaryproductid=\"1225\" secondaryprice=\"4\" secondaryperiod=\"monthly\" />]@T]"
+                            "addonprice": "[@T[productprice:<current productid=\"1225\" quantity=\"4\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
                         }
                     ],
                     "eu": [
@@ -238,19 +238,19 @@
                             "id": "eu_addon_bandwidth_500-2",
                             "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:1000GBBandwidth]@L]",
                             "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:1000BandwidthAddon]@L]",
-                            "addonprice": "[@T[productcompare:<multiplication primaryproductid=\"1668\" secondaryprice=\"2\" secondaryperiod=\"monthly\" />]@T]"
+                            "addonprice": "[@T[productprice:<current productid=\"1668\" quantity=\"2\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
                         },
                         {
                             "id": "eu_addon_bandwidth_500-3",
                             "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:1500GBBandwidth]@L]",
                             "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:1500BandwidthAddon]@L]",
-                            "addonprice": "[@T[productcompare:<multiplication primaryproductid=\"1668\" secondaryprice=\"3\" secondaryperiod=\"monthly\" />]@T]"
+                            "addonprice": "[@T[productprice:<current productid=\"1668\" quantity=\"3\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
                         },
                         {
                             "id": "eu_addon_bandwidth_500-4",
                             "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:2000GBBandwidth]@L]",
                             "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:2000BandwithAddon]@L]",
-                            "addonprice": "[@T[productcompare:<multiplication primaryproductid=\"1668\" secondaryprice=\"4\" secondaryperiod=\"monthly\" />]@T]"
+                            "addonprice": "[@T[productprice:<current productid=\"1668\" quantity=\"4\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
                         }
                     ],
                     "ap": [
@@ -267,19 +267,19 @@
                             "id": "ap_addon_bandwidth_500-2",
                             "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:1000GBBandwidth]@L]",
                             "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:1000BandwidthAddon]@L]",
-                            "addonprice": "[@T[productcompare:<multiplication primaryproductid=\"3253\" secondaryprice=\"2\" secondaryperiod=\"monthly\" />]@T]"
+                            "addonprice": "[@T[productprice:<current productid=\"3253\" quantity=\"2\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
                         },
                         {
                             "id": "ap_addon_bandwidth_500-3",
                             "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:1500GBBandwidth]@L]",
                             "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:1500BandwidthAddon]@L]",
-                            "addonprice": "[@T[productcompare:<multiplication primaryproductid=\"3253\" secondaryprice=\"3\" secondaryperiod=\"monthly\" />]@T]"
+                            "addonprice": "[@T[productprice:<current productid=\"3253\" quantity=\"3\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
                         },
                         {
                             "id": "ap_addon_bandwidth_500-4",
                             "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:2000GBBandwidth]@L]",
                             "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:2000BandwithAddon]@L]",
-                            "addonprice": "[@T[productcompare:<multiplication primaryproductid=\"3253\" secondaryprice=\"4\" secondaryperiod=\"monthly\" />]@T]"
+                            "addonprice": "[@T[productprice:<current productid=\"3253\" quantity=\"4\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
                         }
                     ]
                 }
@@ -363,19 +363,19 @@
                             "id": "us_addon_bandwidth_500-2",
                             "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:1000GBBandwidth]@L]",
                             "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:1000BandwidthAddon]@L]",
-                            "addonprice": "[@T[productcompare:<multiplication primaryproductid=\"1225\" secondaryprice=\"2\" secondaryperiod=\"monthly\" />]@T]"
+                            "addonprice": "[@T[productprice:<current productid=\"1225\" quantity=\"2\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
                         },
                         {
                             "id": "us_addon_bandwidth_500-3",
                             "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:1500GBBandwidth]@L]",
                             "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:1500BandwidthAddon]@L]",
-                            "addonprice": "[@T[productcompare:<multiplication primaryproductid=\"1225\" secondaryprice=\"3\" secondaryperiod=\"monthly\" />]@T]"
+                            "addonprice": "[@T[productprice:<current productid=\"1225\" quantity=\"3\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
                         },
                         {
                             "id": "us_addon_bandwidth_500-4",
                             "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:2000GBBandwidth]@L]",
                             "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:2000BandwithAddon]@L]",
-                            "addonprice": "[@T[productcompare:<multiplication primaryproductid=\"1225\" secondaryprice=\"4\" secondaryperiod=\"monthly\" />]@T]"
+                            "addonprice": "[@T[productprice:<current productid=\"1225\" quantity=\"4\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
                         }
                     ],
                     "eu": [
@@ -392,19 +392,19 @@
                             "id": "eu_addon_bandwidth_500-2",
                             "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:1000GBBandwidth]@L]",
                             "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:1000BandwidthAddon]@L]",
-                            "addonprice": "[@T[productcompare:<multiplication primaryproductid=\"1668\" secondaryprice=\"2\" secondaryperiod=\"monthly\" />]@T]"
+                            "addonprice": "[@T[productprice:<current productid=\"1668\" quantity=\"2\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
                         },
                         {
                             "id": "eu_addon_bandwidth_500-3",
                             "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:1500GBBandwidth]@L]",
                             "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:1500BandwidthAddon]@L]",
-                            "addonprice": "[@T[productcompare:<multiplication primaryproductid=\"1668\" secondaryprice=\"3\" secondaryperiod=\"monthly\" />]@T]"
+                            "addonprice": "[@T[productprice:<current productid=\"1668\" quantity=\"3\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
                         },
                         {
                             "id": "eu_addon_bandwidth_500-4",
                             "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:2000GBBandwidth]@L]",
                             "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:2000BandwithAddon]@L]",
-                            "addonprice": "[@T[productcompare:<multiplication primaryproductid=\"1668\" secondaryprice=\"4\" secondaryperiod=\"monthly\" />]@T]"
+                            "addonprice": "[@T[productprice:<current productid=\"1668\" quantity=\"4\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
                         }
                     ],
                     "ap": [
@@ -421,19 +421,19 @@
                             "id": "ap_addon_bandwidth_500-2",
                             "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:1000GBBandwidth]@L]",
                             "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:1000BandwidthAddon]@L]",
-                            "addonprice": "[@T[productcompare:<multiplication primaryproductid=\"3253\" secondaryprice=\"2\" secondaryperiod=\"monthly\" />]@T]"
+                            "addonprice": "[@T[productprice:<current productid=\"3253\" quantity=\"2\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
                         },
                         {
                             "id": "ap_addon_bandwidth_500-3",
                             "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:1500GBBandwidth]@L]",
                             "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:1500BandwidthAddon]@L]",
-                            "addonprice": "[@T[productcompare:<multiplication primaryproductid=\"3253\" secondaryprice=\"3\" secondaryperiod=\"monthly\" />]@T]"
+                            "addonprice": "[@T[productprice:<current productid=\"3253\" quantity=\"3\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
                         },
                         {
                             "id": "ap_addon_bandwidth_500-4",
                             "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:2000GBBandwidth]@L]",
                             "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:2000BandwithAddon]@L]",
-                            "addonprice": "[@T[productcompare:<multiplication primaryproductid=\"3253\" secondaryprice=\"4\" secondaryperiod=\"monthly\" />]@T]"
+                            "addonprice": "[@T[productprice:<current productid=\"3253\" quantity=\"4\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
                         }
                     ]
                 },
