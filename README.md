@@ -63,7 +63,7 @@ Do this daily to make sure you're never too far off. More info on syncing up for
 
 #### NodeJS
 
-Make sure you have NodeJS installed. It's available for both Windows and OS X at [NodeJS](http://www.nodejs.org)
+Make sure you have NodeJS installed. It's available for both Windows and OS X at [NodeJS](http://www.nodejs.org) (Recommend version 0.10.25 for Windows)
 
 #### Gulp
 
