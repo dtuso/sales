@@ -1,7 +1,7 @@
 ---
 location: localization/sales/gd/hosting/web-hosting/en
-id: 
-name: FOS-22092
+id: false
+name: FOS-21845 - Fix Magento typo (Magneto -> Magento)
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="page-title" />
@@ -369,7 +369,7 @@ Our one-click install process has all your Web hosting app needs covered, making
 <phrase key="features-tab-apps-bullet1-11166" />
 Need a content management system (CMS) for your Website? Joomla and Drupal are just a click away
 <phrase key="features-tab-apps-bullet2-11166" />
-Maybe you want to sell products on your website. Try Magneto with one-click.
+Maybe you want to sell products on your website. Try Magento with one-click.
 <phrase key="features-tab-easy-title-11166" />
 Powerful hosting made easy
 <phrase key="features-tab-first-easy-text-11166" />
