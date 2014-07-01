@@ -1,8 +1,8 @@
 ---
 location: sales/hosting/vps-hosting.aspx
-id:  53b1e3fef778fc30c89f0c95
-name: FOS-21356/21496
-comments: Style fix for list items and Dropdown fix
+id:  53b330eaf778fc27b0673bc8
+name: FOS-21356/21496/21341
+comments: Style fix for list items, Dropdown style fix, en only content update
 url: http://www.dev-godaddy.com/hosting/vps-hosting.aspx
 assetPath: false
 ---
@@ -70,7 +70,11 @@ assetPath: false
         <p href="#" class="font-18 main-banner-content-text-vps">
             <strong>[@L[cds.sales/gd/hosting/vps-hosting:HeaderUptimeGuarantee]@L]</strong>
         </p>
+
+        ##if(activeLanguageAny(en))
         <a href="#" class="main-banner-content-link-vps chat-button-click chat-button-click-hide" data-ci="88933">[@L[cds.sales/gd/hosting/vps-hosting:JsChatLive]@L]</a>
+        ##endif
+
     </div>
 </section>
 <!-- End main-banner -->
@@ -101,7 +105,11 @@ assetPath: false
                 <div class="l-main-container container misc-banner-content misc-banner-content-vps">
                     <h2>[@L[cds.sales/gd/hosting/vps-hosting:Tab1Header]@L]</h2>
                     <p>[@L[cds.sales/gd/hosting/vps-hosting:Tab1HeaderText]@L]</p>
+
+                    ##if(activeLanguageAny(en))
                     <a href="#" target="_blank" class="misc-banner-link chat-button-click chat-button-click-hide" data-ci="88938"><i class="ico ico-gt-alternate"></i>[@L[cds.sales/gd/hosting/vps-hosting:JsChatLive]@L]</a>
+                    ##endif
+
                 </div>
             </section>
             <!-- End misc-banner -->
@@ -1425,6 +1433,7 @@ function atl_PopUp(c, b, a) {
     var d = window.open(c, b, a);
 }
 
+##if(activeLanguageAny(en))
 function OpenChatWindow() {
     window.open('[@T[link:<relative path='/chat/onlinechat.aspx' parammode="explicit" ><param name='diCode' value='2'/></relative>]@T]', 'chat_client', 'width=800,height=500,scrollbars=0');
 }
@@ -1447,6 +1456,7 @@ $.ajax({
         };
     }
 });
+##endif
 
 $(function() {
     $('.isToolTip').tooltip({ placement: 'bottom'}).on('show.bs.tooltip',function(){
