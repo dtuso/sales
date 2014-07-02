@@ -1,6 +1,6 @@
 ---
 location: sales/hosting/website-builder.aspx
-id: 53b30568f778fc27b0673bbf
+id: 53b41c7ff778fc1bcc061c29
 name: FOS-23020
 ---
 {% extends 'layouts/base.html' %}
@@ -240,7 +240,13 @@ name: FOS-23020
                             </form>
                       </div>
                         <ul class="plan-pricing-list">
-                            <li data-gd-sidebysidealign-row="4">[@L[cds.sales/gd/hosting/website-builder:plan-domain]@L]<span class="br"></span><a class="simple-link websitebuilder-tooltip isToolTip item-note" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltip]@L]">[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-restricitons]@L]</a></li>
+                            <li data-gd-sidebysidealign-row="4">
+                                     ##if(countrySiteAny(uk))
+                                     [@L[cds.sales/gd/hosting/website-builder:plan-domain]@L]<span class="br"></span><a class="simple-link websitebuilder-tooltip isToolTip item-note" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltipUK]@L]">[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-restricitons]@L]</a>
+                                     ##else
+                                     [@L[cds.sales/gd/hosting/website-builder:plan-domain]@L]<span class="br"></span><a class="simple-link websitebuilder-tooltip isToolTip item-note" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltip]@L]">[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-restricitons]@L]</a>                                     
+                                     ##endif
+                            </li>
                             <li data-gd-sidebysidealign-row="5">
                                 ##if(countrySiteAny(uk))
                                 [@L[cds.sales/gd/hosting/website-builder:economy-themes]@L]
@@ -368,7 +374,13 @@ name: FOS-23020
                             </form>
                       </div>
                         <ul class="plan-pricing-list">
-                            <li data-gd-sidebysidealign-row="4">[@L[cds.sales/gd/hosting/website-builder:plan-domain]@L]<span class="br"></span><a class="simple-link websitebuilder-tooltip isToolTip item-note" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltip]@L]">[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-restricitons]@L]</a></li>
+                            <li data-gd-sidebysidealign-row="4">
+                                ##if(countrySiteAny(uk))
+                                  [@L[cds.sales/gd/hosting/website-builder:plan-domain]@L]<span class="br"></span><a class="simple-link websitebuilder-tooltip isToolTip item-note" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltipUK]@L]">[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-restricitons]@L]</a>
+                                ##else
+                                  [@L[cds.sales/gd/hosting/website-builder:plan-domain]@L]<span class="br"></span><a class="simple-link websitebuilder-tooltip isToolTip item-note" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltip]@L]">[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-restricitons]@L]</a>
+                                ##endif
+                            </li>
                             <li data-gd-sidebysidealign-row="5">
                                 ##if(countrySiteAny(uk))
                                 [@L[cds.sales/gd/hosting/website-builder:business-themes-uk]@L]
@@ -497,7 +509,13 @@ name: FOS-23020
                             </form>
                       </div>
                         <ul class="plan-pricing-list">
-                            <li data-gd-sidebysidealign-row="4">[@L[cds.sales/gd/hosting/website-builder:plan-domain]@L]<span class="br"></span><a class="simple-link websitebuilder-tooltip isToolTip item-note" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltip]@L]">[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-restricitons]@L]</a></li>
+                            <li data-gd-sidebysidealign-row="4">
+                                 ##if(countrySiteAny(uk))
+                                 [@L[cds.sales/gd/hosting/website-builder:plan-domain]@L]<span class="br"></span><a class="simple-link websitebuilder-tooltip isToolTip item-note" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltipUK]@L]">[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-restricitons]@L]</a>
+                                 ##else
+                                [@L[cds.sales/gd/hosting/website-builder:plan-domain]@L]<span class="br"></span><a class="simple-link websitebuilder-tooltip isToolTip item-note" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltip]@L]">[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-restricitons]@L]</a>
+                                 ##endif  
+                            </li>
                             <li data-gd-sidebysidealign-row="5">
                                  ##if(countrySiteAny(uk))
                                 [@L[cds.sales/gd/hosting/website-builder:unlimited-themes-uk]@L]

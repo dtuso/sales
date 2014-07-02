@@ -7,8 +7,8 @@
       },
       "cdsLocation": "sales/hosting/website-builder.aspx",
       "draft": {
-        "id": "53b30568f778fc27b0673bbf",
-        "createdDate": "2014-07-01",
+        "id": "53b41c7ff778fc1bcc061c29",
+        "createdDate": "2014-07-02",
         "createdBy": {
           "fullName": "Samana Upadhyaya",
           "username": "supadhyaya"
@@ -36,14 +36,14 @@
       },
       "cdsLocation": "sales/hosting/website-builder-splits/split-b",
       "draft": {
-        "id": "53849cb0f778fc2f4c3a75a4",
-        "createdDate": "2014-05-20",
+        "id": "53b41f76f778fc1bcc061c2b",
+        "createdDate": "2014-07-02",
         "createdBy": {
-          "fullName": "Scott Williams",
-          "username": "stwilliams"
+          "fullName": "Samana Upadhyaya",
+          "username": "supadhyaya"
         },
-        "jiraTicket": "FOS-14261",
-        "comments": "WSB LP -- Add facebook feature/benefit",
+        "jiraTicket": "FOS-23020",
+        "comments": "Update WSB T & C's for .CO.UK and .UK",
         "url": "http://gui.dev-godaddy.com/splittest/splittestredirect.aspx?dest=http%3a%2f%2fwww.dev-godaddy.com%2fhosting%2fwebsite-builder.aspx&test=1214.B"
       }
     },
@@ -65,8 +65,8 @@
       },
       "cdsLocation": "localization/sales/gd/hosting/website-builder/en",
       "draft": {
-        "id": "53b30ba9f778fc27b0673bc2",
-        "createdDate": "2014-07-01",
+        "id": false,
+        "createdDate": "2014-07-02",
         "createdBy": {
           "fullName": "Samana Upadhyaya",
           "username": "supadhayya"
