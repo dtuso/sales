@@ -7,14 +7,14 @@
       },
       "cdsLocation": "sales/hosting/website-builder.aspx",
       "draft": {
-        "id": "5368215bf778fc1100fa392b",
-        "createdDate": "2014-05-05",
+        "id": "53b30568f778fc27b0673bbf",
+        "createdDate": "2014-07-01",
         "createdBy": {
-          "fullName": "Byron Lunt",
-          "username": "blunt"
+          "fullName": "Samana Upadhyaya",
+          "username": "supadhyaya"
         },
-        "jiraTicket": "FOS-14231",
-        "comments": "corrected issues found by QA",
+        "jiraTicket": "FOS-23020",
+        "comments": "Update WSB T & C's for .CO.UK and .UK",
         "url": "http://www.dev-godaddy.com/hosting/website-builder.aspx"
       }
     },
@@ -63,16 +63,16 @@
         "name": "David Utley",
         "email": "dutley@godaddy.com"
       },
-      "cdsLocation": "localization/sales/hosting/website-builder/en",
+      "cdsLocation": "localization/sales/gd/hosting/website-builder/en",
       "draft": {
-        "id": "53849ad9f778fc16542f7c41",
-        "createdDate": "2014-04-02",
+        "id": "53b30ba9f778fc27b0673bc2",
+        "createdDate": "2014-07-01",
         "createdBy": {
-          "fullName": "Colyn Brown",
-          "username": "clbrown"
+          "fullName": "Samana Upadhyaya",
+          "username": "supadhayya"
         },
-        "jiraTicket": "None",
-        "comments": "Prep for new build process"
+        "jiraTicket": "FOS-23020",
+        "comments": "Update WSB T & C's for .CO.UK and .UK"
       }
     }
   }
