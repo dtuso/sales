@@ -9,57 +9,7 @@ comments: separate currency symbol from price with token instead of javascript
 {% block metahead %}
 
   {% parent %}
-  <style type="text/css">
-    .sup-symbol-price {
-      font-size: 0.5em;
-      padding: 2px 2px 0;
-    }
-
-      .business-card{
-      position:relative;
-      background-color:none;
-      }
-      .center-paragraph{
-      position:absolute;
-      left:68px;
-      top:48%;
-      }
-      .long-lang-text{
-      font-size: small;
-      }
-
-
- ##if(countrySiteAny(tr))
-      .misc-banner-content {color:#666;}
-      .office-365-logo-medium-white {background-position: 0 -36px!important;} /* use the darker o365 img and font color */
-      #plans-pricing {
-        background: url([@T[link:<imageroot />]@T]fos/office365/img/bg-MED-banner-office.jpg) no-repeat center top;
-      }
- ##elseif(countrySiteAny(dk,fi,no,se,at,pl,hu,ru,ua,gr))
-      #plans-pricing {
-        background: url([@T[link:<imageroot />]@T]fos/office365/img/bg-NOR-banner-office.jpg) no-repeat center top;
-      }
- ##elseif(activeLanguageAny([es]))
-      .misc-banner-content {color:#666;}
-      .office-365-logo-medium-white {background-position: 0 -36px!important;} /* use the darker o365 img and font color */
-      #plans-pricing {
-        background: url([@T[link:<imageroot />]@T]fos/office365/img/bg-LATAM-banner-office-v2.jpg) no-repeat center top;
-      }
- ##elseif(activeLanguageAny([pt-br]))
-      .misc-banner-content {color:#666;}
-      .office-365-logo-medium-white {background-position: 0 -36px!important;} /* use the darker o365 img and font color */
-      #plans-pricing {
-        background: url([@T[link:<imageroot />]@T]fos/office365/img/bg-LATAM-banner-office-v2.jpg) no-repeat center top;
-      }
-      .font-size-xxl-large{
-        font-size:xx-large;
-      }
- ##elseif(activeLanguageAny([en]))
-      .width-seventy-five{
-        max-width:75%;
-      }
- ##endif
-  </style>
+  
   ##if(isManager())
      <script src="[@T[link:<javascriptroot />]@T]fos/lib/select-style/jquery.selectstyle.1.1.0.min.js"></script>
      <script>
@@ -86,6 +36,12 @@ comments: separate currency symbol from price with token instead of javascript
 {% block footer %}
     <script src="[@T[link:<javascriptroot />]@T]fos/office365/js/plugins.js"></script>
     <script src="[@T[link:<javascriptroot />]@T]fos/office365/js/main.js"></script>
+    
+    <script src="[@T[link:<javascriptroot />]@T]shared/js/jquery.plugins.min.20111019.js" type="text/javascript"></script>
+    <script src="[@T[link:<javascriptroot />]@T]fos/lib/gd-swipe/js/20131008-swipe-v2.2.min.js" type="text/javascript"></script>
+    <script src="[@T[link:<javascriptroot />]@T]fos/lib/gd-swipe/js/gd-swipe-v2.min.js" type="text/javascript"></script>
+    
+    <script src="[@T[link:<javascriptroot />]@T]starfield/fos.share/v1.3/fos.share-v2.min.js" id="fosShareScript"></script>
     <script src="[@T[link:<javascriptroot />]@T]fos/hosting/rebrand/js/web_hosting_20130821.min.js" type="text/javascript"></script>
     <script src="[@T[link:<javascriptroot />]@T]fos/office365/js/office365-lp.20140417.js" type="text/javascript"></script>
 <script>
@@ -187,6 +143,58 @@ comments: separate currency symbol from price with token instead of javascript
   })( jQuery, window, document );
 
     </script>
+
+    <style type="text/css">
+    .sup-symbol-price {
+      font-size: 0.5em;
+      padding: 2px 2px 0;
+    }
+
+      .business-card{
+      position:relative;
+      background-color:none;
+      }
+      .center-paragraph{
+      position:absolute;
+      left:68px;
+      top:48%;
+      }
+      .long-lang-text{
+      font-size: small;
+      }
+
+
+ ##if(countrySiteAny(tr))
+      .misc-banner-content {color:#666;}
+      .office-365-logo-medium-white {background-position: 0 -36px!important;} /* use the darker o365 img and font color */
+      #plans-pricing {
+        background: url([@T[link:<imageroot />]@T]fos/office365/img/bg-MED-banner-office.jpg) no-repeat center top;
+      }
+ ##elseif(countrySiteAny(dk,fi,no,se,at,pl,hu,ru,ua,gr))
+      #plans-pricing {
+        background: url([@T[link:<imageroot />]@T]fos/office365/img/bg-NOR-banner-office.jpg) no-repeat center top;
+      }
+ ##elseif(activeLanguageAny([es]))
+      .misc-banner-content {color:#666;}
+      .office-365-logo-medium-white {background-position: 0 -36px!important;} /* use the darker o365 img and font color */
+      #plans-pricing {
+        background: url([@T[link:<imageroot />]@T]fos/office365/img/bg-LATAM-banner-office-v2.jpg) no-repeat center top;
+      }
+ ##elseif(activeLanguageAny([pt-br]))
+      .misc-banner-content {color:#666;}
+      .office-365-logo-medium-white {background-position: 0 -36px!important;} /* use the darker o365 img and font color */
+      #plans-pricing {
+        background: url([@T[link:<imageroot />]@T]fos/office365/img/bg-LATAM-banner-office-v2.jpg) no-repeat center top;
+      }
+      .font-size-xxl-large{
+        font-size:xx-large;
+      }
+ ##elseif(activeLanguageAny([en]))
+      .width-seventy-five{
+        max-width:75%;
+      }
+ ##endif
+  </style>
 
 {% endblock footer %}
 
