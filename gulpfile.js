@@ -1,28 +1,29 @@
 try {
 
   // Gulp plugins
-  var gulp       = require('gulp');
-  var cdsm       = require('gulp-cdsm');
-  var changed    = require('gulp-changed');
-  var concat     = require('gulp-concat');
-  var cssmin     = require('gulp-minify-css');
-  var fm         = require('gulp-front-matter');
-  var gulpif     = require('gulp-if');
-  var less       = require('gulp-less');
-  var rename     = require('gulp-rename');
-  var swig       = require('gulp-swig');
-  var uglify     = require('gulp-uglify');
-  var debug      = require('gulp-debug');
-  var elevateCss = require('./lib/gulp-css-elevate');
-  var elevateJs  = require('./lib/gulp-js-elevate');
-  var charFix    = require('./lib/gulp-character-fix');
+  var gulp        = require('gulp');
+  var cdsm        = require('gulp-cdsm');
+  var changed     = require('gulp-changed');
+  var concat      = require('gulp-concat');
+  var cssmin      = require('gulp-minify-css');
+  var fm          = require('gulp-front-matter');
+  var gulpif      = require('gulp-if');
+  var less        = require('gulp-less');
+  var rename      = require('gulp-rename');
+  var swig        = require('gulp-swig');
+  var uglify      = require('gulp-uglify');
+  var debug       = require('gulp-debug');
+  var elevateCss  = require('./lib/gulp-css-elevate');
+  var elevateJs   = require('./lib/gulp-js-elevate');
+  var charFix     = require('./lib/gulp-character-fix');
+  var chalk       = require('chalk');
 
   // utilities
-  var path       = require('path');
-  var fs         = require('fs');
-  var argv       = require('minimist')(process.argv.slice(2));
-  var getData    = require('./lib/project-data.js');
-  var extras     = require('./lib/swig-extras');
+  var path        = require('path');
+  var fs          = require('fs');
+  var argv        = require('minimist')(process.argv.slice(2));
+  var getData     = require('./lib/project-data.js');
+  var extras      = require('./lib/swig-extras');
 
 } catch (e) {
 
@@ -42,8 +43,19 @@ var rootAssetPath = (process.platform === 'win32')
 var assetSrcPaths = require('./paths.json');
 var assetSrcPath = assetSrcPaths[argv.src||'all'];
 
+// path source information
 if (!assetSrcPath) {
-  console.log('Please provide a proper source path.');
+  console.log(chalk.yellow('Please provide a proper source path.'));
+  var srcMap = '';
+  var i = 0;
+  for(var key in assetSrcPaths){
+    var tabs = '';
+    for(var k = 0;k < (25 - key.length);k++){ tabs += ' ' }
+    if(i % 3 == 0)  { srcMap += '\n\t' }
+                      srcMap += key;
+    if(i++ % 3 != 2){ srcMap += tabs }
+  }
+  console.log(chalk.grey(srcMap) + '\n');
   process.exit(1);
 }
 
