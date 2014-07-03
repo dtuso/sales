@@ -1,0 +1,177 @@
+
+<!-- start-js-elevate -->
+<script>
+{% jsminify %}
+
+  // activate overview slider
+  $(document).ready(function(){
+    activateSlider();
+  });
+
+  function activateSlider() {
+
+    var $overviewSlider = $('#slider .gd-swipe');  
+    $overviewSlider.attr('data-gd-swipe','{"auto":0}');
+    $overviewSlider.gdSwipe();
+
+  }
+
+{% endjsminify %}
+</script>
+<!-- end-js-elevate -->
+
+
+<section class="main-customer-carousel">
+
+  <div class="container background-container-repeat-x main-customer-carousel-img"></div>
+
+  <div class="container customer-carousel-bottom-spacer"></div>
+
+  <div class="container l-main-container carousel-floater">  
+
+    <div class="row center-text">      
+      <div class="col-xs-12">
+
+        <h2 class="customer-carousel-title">Real customers. Real sites.</h2>
+        <h3 class="customer-carousel-subtitle">Our customers love Online Store</h3>
+
+      </div> 
+    </div> 
+    <div class="row">
+      <div class="col-xs-12">
+
+        <div id="slider">
+          <div class="gd-nav-container">
+            <div class="gd-swipe">
+              <div class="gd-swipe-wrap">
+                <div class="gd-swipe-item solazy customer-slide slide-1" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/ecommerce/onlinestore/img/laptop_carrousel1.png" data-sl-method="background">
+                  <!--
+                    <h2 class="tab-content-title">Yummy Beers</h2>
+                    <p>Abbey hard cider, real ale black malt gravity bottom fermenting yeast top-fermenting yeast, " imperial." conditioning beer racking anaerobic abv squares. craft beer original gravity barley. autolysis tulip glass gravity barrel. kolsch, bock, " tulip glass sparge." microbrewery aerobic mash tun hops tulip glass, krug abbey mash.</p>
+                    <p>Length infusion shelf life caramel malt chocolate malt lager? brewhouse, finishing hops degrees plato krausen aau. additive-- hefe, alpha acid saccharification goblet, amber specific gravity heat exchanger hoppy. attenuation seidel degrees plato chocolate malt hand pump primary fermentation trappist length; oxidized. acid rest malt extract goblet final gravity, carboy heat exchanger. hop back oxidized racking, alcohol beer scotch ale carbonation draft (draught." craft beer becher black malt wit enzymes brewpub autolysis aroma hops</p>
+                  -->
+                </div>
+                <div class="gd-swipe-item solazy customer-slide slide-2" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/ecommerce/onlinestore/img/laptop_carrousel2.png" data-sl-method="background">
+                  <!--
+                    <h2 class="tab-content-title">Bacon Rocks my world</h2>
+                    <p>Bacon ipsum dolor sit amet tail turkey magna culpa strip steak, et tenderloin pancetta. Short loin ham hock porchetta laborum bresaola esse aliqua anim meatball elit. Meatloaf labore leberkas veniam elit capicola turducken tenderloin flank turkey proident officia eiusmod. Pork chop ullamco eu doner est, ut ea cillum adipisicing jerky nulla. Id pariatur minim meatloaf. Bacon pig venison nostrud.</p>
+                    <p>Bresaola tri-tip reprehenderit corned beef, kevin et quis labore flank minim. Cupidatat chicken commodo, non t-bone pork loin bacon anim. Irure ham quis reprehenderit, elit frankfurter id pork loin fatback spare ribs mollit est. Meatloaf prosciutto anim leberkas porchetta, ad ball tip andouille eu do. Short loin labore bacon elit sed. In ham andouille frankfurter et, jerky filet mignon corned beef voluptate beef landjaeger shoulder. Pork non shoulder meatball tri-tip meatloaf.</p>
+                  -->
+
+                </div>
+                <div class="gd-swipe-item solazy customer-slide slide-3"  data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/ecommerce/onlinestore/img/laptop_carrousel3.png" data-sl-method="background">
+                  <!--
+                    <h2 class="tab-content-title">Tuna Fish Sandwich</h2>
+                    <p>Squarehead catfish North American freshwater catfish half-gill giant danio climbing gourami searobin rudderfish sea snail. Bobtail snipe eel frogmouth catfish platyfish. Lined sole; Death Valley pupfish: bass medaka plaice cherry salmon Billfish burrowing goby blackfish seahorse lemon sole lyretail Pacific lamprey. Rock bass starry flounder, "bonefish bigscale fish electric catfish, loosejaw buri, Blenny angelfish." Mouthbrooder kokopu, collared dogfish electric knifefish bristlemouth warbonnet halibut lefteye flounder nurse shark squaretail ribbonbearer pleco ghost knifefish European perch.</p>
+                    <p>Skipjack tuna javelin killifish, tadpole cod cat shark taimen golden trout saury northern Stargazer, coho salmon stream catfish; porgy lighthousefish. Gar shrimpfish Norwegian Atlantic salmon gizzard shad.</p>
+                    <p>False trevally yellow moray mudminnow oarfish blue eye! Loach minnow walleye, nurseryfish amago Siamese fighting fish damselfish popeye catafula.</p>
+                  -->
+
+                </div>
+                <div class="gd-swipe-item solazy customer-slide slide-4"  data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/ecommerce/onlinestore/img/laptop_carrousel2.png" data-sl-method="background">
+                  <!--
+                    <h2 class="tab-content-title">[@L[cds.sales/products/business-marketing:be-seen]@L]</h2>
+                    <ul class="tab-content-list">
+                      [@L[cds.sales/products/business-marketing:be-seen-list]@L]
+                    </ul>
+                  -->
+                </div>
+              </div>
+            </div>
+            <a href="#" data-slide="prev" class="arrow-left" id="headerPrev" data-ci="111">
+            [@L[cds.sales/gd/ecommerce/onlinestore:previous]@L]</a>
+            <a href="#" data-slide="next" class="arrow-right" id="headerNext" data-ci="111">
+            [@L[cds.sales/gd/ecommerce/onlinestore:next]@L]</a>
+            <div class="gd-swipe-bottom-nav"></div>
+          </div>
+        </div> <!-- end id slicer -->
+
+      </div>      
+    </div> 
+
+    <div class="row">
+      <div class="col-xs-1"></div>
+      <div class="col-xs-10 clearfix customer-testimonial">
+        <img class="customer-image left-align" src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/ecommerce/onlinestore/img/testimonial_image.png" alt="Customer face">
+        <div class="">
+          <div class="customer-quote">"I love my site just as much as my products! It's so much better than my old Etsy store, because it's a reflection of me!"</div>
+          <div class="customer-byline">&dash; Katie Lewis, founder of <a href="http://snap-bibs.com" target="_blank">snap-bibs.com</a></div>
+        </div>
+
+      </div>
+      <div class="col-xs-1"></div>
+    </div>
+
+
+  </div>
+  
+</section>
+
+
+<!-- start-css-elevate -->
+<style>  
+  {% less %}
+
+  @imgPath : '[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/ecommerce/onlinestore/img/';
+
+  .customer-carousel-bottom-spacer {
+    background-color: #fff;
+    height: 270px; 
+  }
+  .carousel-floater { 
+    position: relative;
+    z-index: 2; /* floating section */
+    margin-top:-710px; /* moves items up over the split background above it*/
+  }
+  .carousel-floater .customer-carousel-title { 
+    margin-top: 25px;
+    font-size: 36px;
+  }
+  .carousel-floater .customer-carousel-subtitle { 
+    font-size: 16px;
+    margin: 5px 0 40px;
+  }
+  .main-customer-carousel-img {
+    background-image: ~"url(@{imgPath}marquee_pattern.jpg)"; 
+    height: 568px;
+  }
+
+  .main-customer-carousel p {
+    font-size: 16px;
+  }
+
+  .customer-slide {
+    width: 939px;
+    height: 451px;
+    background-repeat: no-repeat;
+  }
+
+
+  .customer-testimonial {
+    text-align: left;
+    background-color: white;
+  }
+  .customer-image {
+    display: block;
+    width: 193px;
+    height: 201px;
+    margin-right: 45px;
+  }
+  .left-align {
+    float: left;
+  }
+  .customer-quote {
+    margin-top: 45px;
+    color: #7db701; /*#c8d2dc*/
+    font-size: 20px;
+  }
+  .customer-byline {
+    margin-top: 15px;
+    font-size: 16px;
+  }
+
+
+{% endless %}
+
+</style>
+<!-- end-css-elevate -->

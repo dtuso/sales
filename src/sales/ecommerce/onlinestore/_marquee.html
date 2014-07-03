@@ -1,0 +1,181 @@
+<!-- start-js-elevate -->
+<script>
+{% jsminify %}
+  $(document).ready(function(){
+
+    setPricing();
+
+  });
+
+  var tokenizeThis = function($obj, strArr) {
+    var tokenized = $obj.html();
+    for(var idx = 0; idx< strArr.length; idx++) {
+      tokenized = tokenized.replace('{' + idx + '}', strArr[idx]);
+    }
+    $obj.html(tokenized);
+  }
+
+  function setPricing() {
+    var currentPrice = '[@T[productprice:<template productid="40941" period="monthly"><nostrike><![CDATA[{0}]]></nostrike><strike><![CDATA[{0}]]></strike></template>]@T]';
+    var oldPrice = '[@T[productprice:<template productid="40941" period="monthly"><nostrike><![CDATA[{1}]]></nostrike><strike><![CDATA[{1}]]></strike></template>]@T]';
+    var savePercentage = '[@T[productcompare:<percent primaryproductid="40941" secondaryproductid="40941" hidebelow="1"><html><![CDATA[{0}]]></html></percent>]@T]';
+    
+    savePercentage = "85";
+    onSale = true;
+    oldPrice = "$97.98";
+
+    var $pricing = $('.main-banner-onlinestore p.pricing');
+    tokenizeThis($pricing, [currentPrice, oldPrice, savePercentage]);
+    $pricing.show();
+
+    var onSale = currentPrice !== oldPrice;
+    if(onSale) {
+      $('.main-banner-onlinestore p.pricing span.save-percentage').show();
+      $('.main-banner-onlinestore p.pricing span.old-price').show();
+    }
+  }
+
+  
+{% endjsminify %}
+</script>
+<!-- end-js-elevate -->
+<section class="container background-container main-banner-onlinestore">
+
+  <span class="left-corner-ribbon money-back-guarantee-light [@T[localization:<language full="true" />]@T] [@T[localization:<language />]@T]"></span>
+
+  <div class="container l-main-container center-text">
+    <div class="row">
+      <h1 class="main-banner-title">Online Store</h1>
+      <h3 class="main-banner-subtitle">Build your store today.</h3>
+      <p class="main-banner-subtitle">Start selling tonight.</p>
+      <p class="pricing">
+        As low as <span class="old-price"><strike>{1}/mo</strike>* </span><span class="normal-price">{0}</span> <span class="save-percentage">Save {2}%</span>        
+      </p>
+      
+      <a data-ci="111" class="btn btn-primary call-to-action cta-small" href="/ecommerce/onlinestore-config.aspx">Get Started</a>
+
+      <p class="inline-disclaimer">*Current renewal price</p>
+      
+      <div style="height:105px"></div>
+
+    </div>
+
+  </div>
+
+</section>
+ 
+<div class="container marquee-bottom-spacer">
+  <!-- floating white feature bullets -->
+  <div class="container l-main-container floating-features rounded-small">
+    <div class="row">
+      <div class="col-xs-3 feature-item">
+        <div class="feature-item-img feature-item-img-setup"></div>
+        <div class="feature-item-text">Incredibly easy setup and design</div>
+      </div>
+      <div class="col-xs-3 feature-item">
+        <div class="feature-item-img feature-item-img-paid"></div>
+        <div class="feature-item-text">Get paid without the hassle</div>
+      </div>
+      <div class="col-xs-3 feature-item">
+        <div class="feature-item-img feature-item-img-track"></div>
+        <div class="feature-item-text">Track your inventory</div>
+      </div>
+      <div class="col-xs-3 feature-item">
+        <div class="feature-item-img feature-item-img-shipping"></div>
+        <div class="feature-item-text">Set up shipping your way</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- start-css-elevate -->
+<style>  
+{% less %}
+
+  @imgPath : '[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/ecommerce/onlinestore/img/';
+
+  .main-banner-onlinestore {
+    position: relative; /* for the corner ribbon to show */
+    padding-top: 50px;
+    background-image: ~"url(@{imgPath}header_nemo.jpg)";
+  }
+  .main-banner-onlinestore a.call-to-action {
+    padding: 6px 100px 3px;
+  }
+
+  .main-banner-title {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-family: 'HelveticaNeue-CondensedBold','Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size: 24px;
+  }
+  .main-banner-subtitle {
+    color: #fff;
+    margin: 0px;
+    font-weight: 100;
+    font-size: 54px;
+  }
+  p.main-banner-subtitle {
+    color: #fff;
+    font-weight: 600;
+    font-size: 54px;
+  }
+  p.inline-disclaimer {
+    font-size: 15px;
+    font-weight: 300;
+    color: #fff;    
+  } 
+  .main-banner-onlinestore p.pricing {
+    margin: 0px;
+    color: #ffcc22;
+    font-weight: 600px;
+    font-size: 24px;
+    margin-top:5px;
+  }
+  .main-banner-onlinestore span.save-percentage,
+  .main-banner-onlinestore span.old-price {
+    display: none;
+    color: #fff;
+  }
+  .marquee-bottom-spacer {
+    background-color: #f3f0EB;
+    height: 1px;
+  }
+  .floating-features {
+    background-color: white; 
+    position: relative;
+    z-index: 2; /* floating section */
+    margin-top:-100px;  /* moves items up over the split backgrounds above ita */
+    min-height:200px;
+    padding: 30px 0;
+  }
+  .feature-item-img {
+    height: 60px;
+    width: 60px;
+    margin: 0 auto;
+    background: transparent ~"url(@{imgPath}icons_sprite.png)" no-repeat ;
+  }
+  .feature-item-img-setup {
+    background-position: -2px -2px;
+  }
+  .feature-item-img-paid {
+    background-position: -64px -2px;
+  }
+  .feature-item-img-track {
+    background-position: -2px -63px;
+  }
+  .feature-item-img-shipping {
+    background-position: -64px -63px;
+  }
+  .feature-item-text {
+    color: #333;
+    font-size: 18px;
+    text-align: center;
+    width: 140px;
+    margin: 10px auto 0;
+  }
+
+{% endless %}
+</style>
+<!-- end-css-elevate -->
+

@@ -1,0 +1,96 @@
+<!-- start-js-elevate -->
+<script>
+{% jsminify %}
+  $(document).ready(function(){
+
+    setBarPricing();
+
+  });
+
+  var tokenizeThis = function($obj, strArr) {
+    var tokenized = $obj.html();
+    for(var idx = 0; idx< strArr.length; idx++) {
+      tokenized = tokenized.replace('{' + idx + '}', strArr[idx]);
+    }
+    $obj.html(tokenized);
+  }
+
+  function setBarPricing() {
+
+    var currentPrice = '[@T[productprice:<template productid="40941" period="monthly"><nostrike><![CDATA[{0}]]></nostrike><strike><![CDATA[{0}]]></strike></template>]@T]';
+    var oldPrice = '[@T[productprice:<template productid="40941" period="monthly"><nostrike><![CDATA[{1}]]></nostrike><strike><![CDATA[{1}]]></strike></template>]@T]';
+    var onSale = currentPrice !== oldPrice;
+    var savePercentage = '[@T[productcompare:<percent primaryproductid="40941" secondaryproductid="40941" hidebelow="1"><html><![CDATA[{0}]]></html></percent>]@T]';
+
+    savePercentage = "85";
+    onSale = true;
+    oldPrice = "$97.98";
+
+    var $pricing = $('.main-call-to-action-bar p.pricing');
+    tokenizeThis($pricing, [currentPrice, oldPrice, savePercentage]);
+    $pricing.show();
+
+    var onSale = currentPrice !== oldPrice;
+    if(onSale) {
+      $('.main-call-to-action-bar p.pricing span.save-percentage').show();
+      $('.main-call-to-action-bar p.pricing span.old-price').show();
+    }
+  }
+
+  
+{% endjsminify %}
+</script>
+<!-- end-js-elevate -->
+<section class="main-call-to-action-bar">
+
+  <div class="container l-main-container center-text">
+
+    <p class="pricing">
+      <span class="so-easy">So easy to set up, <strong>you can make money today.</strong></span> As low as <span class="old-price"><strike>{1}/mo</strike>* </span><span class="normal-price">{0}</span> <span class="save-percentage">Save {2}%</span>
+    </p>
+
+    <a data-ci="111" class="btn btn-warning call-to-action cta-small" href="onlinestore-config.aspx">Start Now</a>
+
+  </div>
+
+</section>
+
+
+<!-- start-css-elevate -->
+<style>  
+{% less %}
+
+
+  .main-call-to-action-bar {
+    background-color: #7db701;
+  }
+
+  .main-call-to-action-bar > div {
+    padding: 20px 0;
+  }
+
+  .main-call-to-action-bar a.call-to-action {
+    padding: 6px 25px 3px;
+    margin-top: 5px;
+  }
+
+  .main-call-to-action-bar p.pricing {
+    margin: 0px !important;
+    color: #fff;
+    font-weight: 600px;
+    font-size: 24px;
+    margin-top:5px;
+  }
+
+  .main-call-to-action-bar p.pricing span.so-easy {
+    color: #333 !important;
+  }
+
+  .main-call-to-action-bar span.save-percentage,
+  .main-call-to-action-bar span.old-price {
+    display: none;
+  }
+
+{% endless %}
+</style>
+<!-- end-css-elevate -->

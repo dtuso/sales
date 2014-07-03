@@ -11,60 +11,218 @@ assetPath: false
 
 {% block metahead %}  
   {% parent %}
+
+
+
+
   <!-- css-elevate-target -->
+
+<!-- start-css-elevate -->
+<style>  
+{% less %}
+
+  @imgPath : '[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/ecommerce/onlinestore/img/';
+  /* background-image: ~"url(@{imgPath}designs_customers_love.png)"; */
+  /* background-image: ~"url(@{imgPath}icons_sprite.png)"; */
+  /* background-image: ~"url(@{imgPath}img_blank_laptop_carrousel.png)"; */
+  /* background-image: ~"url(@{imgPath}laptop_carrousel1.png)"; */
+  /* background-image: ~"url(@{imgPath}laptop_carrousel2.png)"; */
+  /* background-image: ~"url(@{imgPath}laptop_carrousel3.png)"; */
+  /* background-image: ~"url(@{imgPath}marquee_pattern.jpg)"; */
+  /* background-image: ~"url(@{imgPath}payment_options.png)"; */
+  /* background-image: ~"url(@{imgPath}sell_facebook.png)"; */
+  /* background-image: ~"url(@{imgPath}testimonial_image.png)"; 
+
+<!--div data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/ecommerce/onlinestore/img/plan_background_en.jpg" data-sl-method="background"-->
+
+  */
+
+  div[role="main"] {
+    background-color: #fff;
+  }
+  .alt-bgcolor {background-color: rgb(251,247,245);}
+  .light-section-bgcolor {background-color: white;}
+
+  .background-container {
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 1000px;
+  } 
+
+  .background-container-repeat-x {
+    background-position: center top;
+    background-repeat: repeat-x;
+    min-width: 1000px;
+  } 
+
+
+  .gd-nav-container {
+    margin: 0 auto;
+    position: relative;
+    width: 1000px;
+  }
+  .gd-swipe-wrap {
+    overflow: hidden;
+    position: relative;
+  }
+  .gd-swipe-wrap > div {
+    float: left;
+    position: relative;
+    top: 0;
+    width: 100%;
+  }
+  .gd-swipe {
+    margin: 0 auto;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .gd-swipe-item {
+    padding: 20px;
+  }
+
+  .gd-swipe-bottom-nav {
+    position: relative;
+    text-align: center;
+  }
+  .gd-swipe-bottom-nav a[data-slide="prev"], .gd-swipe-bottom-nav a[data-slide="next"] {
+    position: relative;
+    top: -2px;
+  }
+  .gd-swipe-bottom-nav ul {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+  }
+  .gd-swipe-bottom-nav li {
+    display: inline-block;
+    overflow: hidden;
+    padding: 15px;
+    position: relative;
+  }
+  .gd-swipe-bottom-nav li a {
+    background: none repeat scroll 0 0 #dadada;
+    color: #dadada;
+    display: block;
+    height: 7px;
+    text-decoration: none;
+    text-indent: -9999em;
+    width: 25px;
+  }
+  .gd-swipe-bottom-nav li.active a {
+    background: none repeat scroll 0 0 #70ac00;
+    color: #70ac00;
+  }
+  a.arrow-right {
+    background: url("http://img2.wsimg.com/fos/businessmarketing/static/images/lp_sprite_2.png") no-repeat scroll 22px -28px transparent;
+    display: block;
+    height: 60px;
+    outline: 0 none;
+    position: absolute;
+    right: -60px;
+    text-decoration: none;
+    text-indent: -9999em;
+    top: 140px;
+    width: 60px;
+    z-index: 1;
+  }
+  a.arrow-left {
+    background: url("http://img2.wsimg.com/fos/businessmarketing/static/images/lp_sprite_2.png") no-repeat scroll -30px -28px transparent;
+    display: block;
+    height: 60px;
+    left: -60px;
+    outline: 0 none;
+    position: absolute;
+    text-decoration: none;
+    text-indent: -9999em;
+    top: 140px;
+    width: 60px;
+    z-index: 1;
+  }
+  .arrow-left:hover, .arrow-right:hover {
+    background-color: #ededed;
+    transition: all 0.3s ease-in-out 0s;
+  }
+
+  .rounded-small {
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px; /* future proofing */
+    -khtml-border-radius: 4px; /* for old Konqueror browsers */
+  }
+  .rounded-medium {
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px; /* future proofing */
+    -khtml-border-radius: 7px; /* for old Konqueror browsers */
+  }
+  .rounded-large {
+    -moz-border-radius: 11px;
+    -webkit-border-radius: 11px;
+    border-radius: 11px; /* future proofing */
+    -khtml-border-radius: 11px; /* for old Konqueror browsers */
+  }
+  .center-text {
+    text-align: center;
+  }
+  .left-text {
+    text-align: left;
+  }
+  .right-text {
+    text-align: right;
+  }
+  .center-vert-wrapper {
+    display: table;
+    height: 100%;
+  }
+  .center-vert-cell {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  a.call-to-action {
+    margin-top: 22px;
+    margin-bottom: 5px;
+    padding: 6px 100px 3px;
+    font-size: 18px;
+    font-weight: 600px;
+  }
+
+{% endless %}
+</style>
+<!-- end-css-elevate -->
+
 {% endblock %}
 
 
 {% block body %}
 
-  <!-- start-css-elevate -->
-  <style>  
-  {% less %}
-    .alt-bgcolor {background-color: rgb(251,247,245);}
-    .light-section-bgcolor {background-color: white;}
-    .wider-container {width: 1020px;margin: 0 auto;padding:0px 70px;}
-    .thou-container {width: 1000px;margin: 0 auto;}
-  {% endless %}
-  </style>
-  <!-- end-css-elevate -->
 
 
   <!-- MARQUEE -->
-
-  <section class="main-banner-onlinestore">
-    <div class="row wider-container">
-      <h1 class="main-banner-title">[@L[cds.sales/gd/ecommerce/onlinestore:onlineStore]@L]</h1>
-      <h2 class="main-banner-subtitle">[@L[cds.sales/gd/ecommerce/onlinestore:subtitle]@L]</h2>
-      <a data-ci="111" class="btn btn-primary cta-medium" href="/ecommerce/onlinestore.aspx">[@L[cds.sales/gd/ecommerce/onlinestore:btn-GetStarted]@L]</a>
-      <div class="pricing">
-        <p class="just-per-mo">[@L[cds.sales/gd/ecommerce/onlinestore:justPricePerMonth]@L]</p>
-        <p class="save-percentage"><strike>{0}</strike> [@L[cds.sales/gd/ecommerce/onlinestore:savePercentage]@L]</p>
-      </div>
-    </div>  
-  </section>
+  {% include '_marquee.html' %}
 
   <!-- CUSTOMER CAROUSEL 2014Q3 -->
-
-
-  <!-- FEATURE BULLETS -->
-
+  {% include '_customer-carousel-2014q3.html' %}
 
   <!-- PRODUCT VIDEO -->
+  {% include '_product-video.html' %}
 
-
-  <!-- FEATURE CONTENT 1 -->
-
+  <!-- FEATURE CONTENT PAYMENT TYPES -->
+  {% include '_feature-content-payment-types.html' %}
 
   <!-- CALL TO ACTION BAR -->
-
+  {% include '_call-to-action-bar.html' %}
 
   <!-- CAROUSEL -->
+  {% include '_tools-carousel.html' %}
 
+  <!-- FEATURE CONTENT TOOLS MARQUEE -->
 
-  <!-- FEATURE CONTENT 2 -->
-
-
-  <!-- FEATURE CONTENT 3 -->
+  <!-- FEATURE CONTENT DESIGNS -->
+  {% include '_feature-content-designs.html' %}
 
 
   <!-- PLAN TIER (What's Included) -->
@@ -74,48 +232,20 @@ assetPath: false
 
 
 
+
 {% endblock %}
 
 {% block footer %}
 
-    <script src="[@T[link:<javascriptroot />]@T]fos/lib/gd-swipe/js/swipe-v2.1.js" type="text/javascript"></script>
-    <script src="[@T[link:<javascriptroot />]@T]fos/lib/gd-swipe/js/gd-swipe-v2.min.js" type="text/javascript"></script>
+  <script src="[@T[link:<javascriptroot />]@T]fos/lib/gd-swipe/js/swipe-v2.1.js" type="text/javascript"></script>
+  <script src="[@T[link:<javascriptroot />]@T]fos/lib/gd-swipe/js/gd-swipe-v2.min.js" type="text/javascript"></script>
+  <script src="[@T[link:<javascriptroot />]@T]fos/lib/solazy/jquery.solazy.1.2.1.min.js" type="text/javascript" ></script> 
 
   <!-- js-elevate-target -->
 
-  <!-- start-js-elevate -->
 
-  <script>
-  {% jsminify %}
-
-  $(document).ready(function(){
-    var tokenize = function($obj, strArr) {
-      var tokenized = $obj.html();
-      for(var idx = 0; idx< strArr.length; idx++) {
-        tokenized = tokenized.replace('{' + idx + '}', strArr[idx]);
-      }
-      $obj.html(tokenized);
-    }
-    var currentPrice = '[@T[productprice:<template productid="7514" period="monthly"><nostrike><![CDATA[{0}]]></nostrike><strike><![CDATA[{0}]]></strike></template>]@T]';
-    var oldPrice = '[@T[productprice:<template productid="7514" period="monthly"><nostrike><![CDATA[{1}]]></nostrike><strike><![CDATA[{1}]]></strike></template>]@T]';
-    var onSale = currentPrice !== oldPrice;
-    var savePercentage = '[@T[productcompare:<percent primaryproductid="7514" secondaryproductid="7514" hidebelow="1"><html><![CDATA[{0}]]></html></percent>]@T]';
-    
-    var $permo = $('.main-banner-onlinestore div.pricing p.just-per-mo');
-    var $save =  $('.main-banner-onlinestore div.pricing p.save-percentage');
-    if(onSale) {
-      tokenize($save, [oldPrice, savePercentage]);
-      $save.show();
-    }
-    tokenize($permo, [currentPrice]);
-    $permo.show();
-
-
-  });
-
-  {% endjsminify %}
-  </script>
-
-  <!-- end-js-elevate -->
 
 {% endblock %}
+
+
+

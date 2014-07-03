@@ -6,8 +6,8 @@
         "email": "dutley@godaddy.com"
       }
     },
-    "metaTitle": "[@L[cds.sales/gd/ecommerce/onlinestore:MetaTitle]@L]",
-    "metaDescription": "[@L[cds.sales/gd/ecommerce/onlinestore:MetaDescription]@L]",
+    "metaTitle": "Online Store title '[@L[cds.sales/gd/ecommerce/onlinestore:MetaTitle]@L]'",
+    "metaDescription": "Online Store Desc '[@L[cds.sales/gd/ecommerce/onlinestore:MetaDescription]@L]'",
     "metaKeywords": "[@L[cds.sales/gd/ecommerce/onlinestore:MetaKeywords]@L]",
     "metaCanonicalPath": "/ecommerce/onlinestore.aspx",
     "metaOgTitle": "[@L[cds.sales/gd/ecommerce/onlinestore:MetaTitle]@L]",
