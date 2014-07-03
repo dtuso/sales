@@ -1,7 +1,8 @@
 ---
 location: sales/business/office-365.aspx
-id: 5373e8abf778fc384801ba5b
-name: Github prep
+id: 53b5971ff778fc11983444cf
+name: FOS-17318
+comments: separate currency symbol from price with token instead of javascript
 ---
 {% extends 'layouts/base.html' %}
 
@@ -621,7 +622,9 @@ name: Github prep
                       <div style="max-width: 350px;"><h3 class="feature-block-add-to-cart-header">[@L[cds.sales/business/office-365:lp-2-ProductivityPlus-2]@L]</h3></div>
                       <div class="feature-block-add-to-cart-text-wrapper orange-text">
                         <div class="feature-block-add-to-cart-text0 feature-block-add-to-cart-text">[@L[cds.sales/business/office-365:lp-2-PlansstartingAt]@L]</div>
-                        <div class="feature-block-add-to-cart-text2 feature-block-add-to-cart-text" data-seperate-currency-symbol='{"newClass":"sup-symbol-price","newTagName":"span"}'>[@T[productprice:<current productid="31841" dropdecimal="false" period="monthly" negative="parentheses" />]@T]</div>
+                        <div class="feature-block-add-to-cart-text2 feature-block-add-to-cart-text">
+                          <div class="split-symbol-price-wrap">[@T[productprice:<current productid="31841" dropdecimal="false" period="monthly" negative="parentheses" symboltagname="span" symbolcssclass="sup-symbol-price" />]@T]</div>
+                        </div>
                         <div class="feature-block-add-to-cart-text3 feature-block-add-to-cart-text">[@L[cds.sales/business/office-365:lp-3-UserMo]@L]</div>
                       </div>
                     </div>
@@ -751,7 +754,9 @@ name: Github prep
                           <div style="max-width: 350px;"><h3 class="feature-block-add-to-cart-header">[@L[cds.sales/business/office-365:lp-2-ProductivityPlus-3]@L]</h3></div>
                           <div class="feature-block-add-to-cart-text-wrapper orange-text">
                             <div class="feature-block-add-to-cart-text0 feature-block-add-to-cart-text">[@L[cds.sales/business/office-365:lp-2-PlansstartingAt-2]@L]</div>
-                            <div class="feature-block-add-to-cart-text2 feature-block-add-to-cart-text" data-seperate-currency-symbol='{"newClass":"sup-symbol-price","newTagName":"span"}'>[@T[productprice:<current productid="31841" dropdecimal="false" period="monthly" negative="parentheses" />]@T]</div>
+                            <div class="feature-block-add-to-cart-text2 feature-block-add-to-cart-text">
+                              <div class="split-symbol-price-wrap">[@T[productprice:<current productid="31841" dropdecimal="false" period="monthly" negative="parentheses" symboltagname="span" symbolcssclass="sup-symbol-price" />]@T]</div>
+                            </div>
                             <div class="feature-block-add-to-cart-text3 feature-block-add-to-cart-text">[@L[cds.sales/business/office-365:lp-3-UserMo]@L]</div>
                           </div>
                         </div>
