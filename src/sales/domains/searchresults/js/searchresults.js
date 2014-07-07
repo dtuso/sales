@@ -355,6 +355,7 @@ var sr_js = {
 
     var DomainViewModel = function (data) {
         var self = this;
+        var _isOnSale =ko.observable(false);
         var _id = ko.observable('');
         var _initialAvailability = ko.computed({
             read: function () { return self.Type().InitialAvailability || AvailabilityTypes.Available; },
@@ -395,7 +396,10 @@ var sr_js = {
         //}, self);
         self.IsOnSale = ko.computed({
             read: function () {
-                return self.Prices().CurrentPrice && self.Prices().ListPrice;
+                return _isOnSale() || (self.Prices().CurrentPrice && self.Prices().ListPrice );
+            },
+            write: function (val) { 
+                _isOnSale(val);
             },
             deferEvaluation: true,
             owner: self
