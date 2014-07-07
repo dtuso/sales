@@ -1,9 +1,9 @@
 ---
 location: sales/cce
-id:  5391f967f778fc0ee47e4a90
-name: FOS-21813 and fixed ie 7 issues
-comments: Created cce page
-cssVersionOverride: 2
+id: 53bae15df778fc1e74b16945 
+name: FOS-23107
+comments: CCE Landing Page
+cssVersionOverride: 3
 ---
 {% extends 'layouts/base.html' %} 
 {% block metahead %} 
@@ -27,12 +27,19 @@ cssVersionOverride: 2
             <div class="cce-right-image"></div>
        </div>
       </div>
+      <form class="main-banner-form" id="addtocart-form" method="POST" action="[@T[link:<relative path="~/hosting/website-builder-config.aspx" />]@T]?version=sales/hosting/website-builder-config.aspx|53b32953f778fc27b0673bc7">
+            <input type="hidden" name="product" value="7509|1|1" />
+      </form>
     </section>
 
 {% endblock %} 
 
 {% block footer %}
 <script>
+    $('.gd-left-image').on('click', function (e) {
+        e.preventDefault();
+        $("#addtocart-form").submit();
+    });
     $(function(){
         $('.search-form').on('submit', function (e){
             e.preventDefault();
