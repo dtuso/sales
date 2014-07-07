@@ -1,6 +1,6 @@
 ---
 location: localization/sales/gd/hosting/web-hosting/en
-id: false
+id: 53b47495f778fc070c26b6db
 name: FOS-21845 - Fix Magento typo (Magneto -> Magento)
 ---
 {% include 'modules/doc-block.html' %}
