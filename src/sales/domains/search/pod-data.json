@@ -1478,7 +1478,7 @@
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:PreRegister]@L]",
                 "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotLondonText]@L]",
                 "ButtonURL":"[@T[link:<relative path=\"/tlds/london\"><param name=\"ci\" value=\"90900\" /></relative>]@T]",
-                "ProductPrice": "[@T[productprice:<current productid=\"342460\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"342460\" secondaryproductid=\"342460\" />]@T]-[@T[productprice:<list productid=\"342460\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                "ProductPrice": "[@T[productprice:<current productid=\"343736\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"343736\" secondaryproductid=\"343736\" />]@T]-[@T[productprice:<list productid=\"343736\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
             }],
  "BottomPods":[
                 {
