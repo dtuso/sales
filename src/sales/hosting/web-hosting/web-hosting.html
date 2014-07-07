@@ -1,6 +1,6 @@
 ---
 location: sales/hosting/web-hosting.aspx
-id: 53bc3aecf778fc18643f9261
+id: 53b4757cf778fc070c26b6dc
 name: FOS-21748
 comments: Improve hosting/web-hosting.aspx page performance by lazy loading
 ---
@@ -1218,6 +1218,7 @@ comments: Improve hosting/web-hosting.aspx page performance by lazy loading
             var tab = href.replace('#','');
             $(href).html('<div class="container l-main-container"><div class="row tab-content"><div class="col-xs-12"><div class="grid-column tab-content-column-alternate"><img class="spinner" src="[@T[link:<cssroot />]@T]fos/201401/global/vendor/bazaarvoice/ico-indicator-001.gif" /></div></div></div></div>');
             $.get( '[@T[link:<relative path="~/hosting/web-hosting/tabs/" parammode="explicit" secure="true"></relative>]@T]'+ tab +'' , function( data ) {
+
               $(href).html(data);
             }).done(function(){
                 $('.isToolTip').tooltip({ placement: 'bottom', html: true});
