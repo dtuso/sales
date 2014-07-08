@@ -1,7 +1,7 @@
 ---
 location: localization/sales/gd/hosting/website-builder/en
-id: 
-name: FOS-22092
+id: 53b30ba9f778fc27b0673bc2
+name: FOS-23020
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="page-title" />
@@ -803,6 +803,8 @@ FAQ
 Get Started
 <phrase key="plan-domain-new-restricitons" />
 Restrictions apply 
+<phrase key="plan-domain-new-tooltipUK" />
+One FREE .COM, .CO, .NET, .UK, .CO.UK or .ORG with purchase of a new 12-, 24- or 36-month plan. Plus ICANN fee of [@T[currencyprice:<price usdamount="18" dropdecimal="false" />]@T] per domain name per year. You must add the domain name into your cart before purchase, and you must select a domain term length equal to or less than the term length of your plan to qualify for the free domain offer. If you purchase a domain name for a term longer than the term of the plan, you will be charged for the additional registration term at the then-current rate. Cannot be used in conjunction with any other offer, sale, discount or promotion. Free domain offer applies only to the initial purchase term. After the initial purchase term, domains purchased through this offer will renew at the then-current renewal price.
 <phrase key="plan-domain-new-tooltip" />
 One FREE .COM, .CO, .NET or .ORG with purchase of a new 12-, 24- or 36-month plan. Plus ICANN fee of [@T[currencyprice:<price usdamount="18" dropdecimal="false" />]@T] per domain name per year. You must add the domain name into your cart before purchase, and you must select a domain term length equal to or less than the term length of your plan to qualify for the free domain offer. If you purchase a domain name for a term longer than the term of the plan, you will be charged for the additional registration term at the then-current rate. Cannot be used in conjunction with any other offer, sale, discount or promotion. Free domain offer applies only to the initial purchase term. After the initial purchase term, domains purchased through this offer will renew at the then-current renewal price.
 <phrase key="plan-domain-new" />
@@ -880,9 +882,11 @@ See how these business owners took their passion for success online with GoDaddy
 <phrase key="CustomerTestimonialText4" />
 "I used GoDaddy Website Builder to build my business and help promote my business."
 <phrase key="CustomerTestimonialClientName4" />
-Ryan
+Ryan Wescott
+<phrase key="CustomerTestimonialClient4" />
+Business Owner & [@T[companyname:name]@T] Customer
 <phrase key="CustomerTestimonialCompany4" />
-WestcottBBQGrills.com
+westcottbbqgrills.com
 <phrase key="CustomerTestimonialText2" />
 “Building my website seemed intimidating, but GoDaddy offered an easy solution with Website Builder.”
 <phrase key="CustomerTestimonialClientName2" />
@@ -947,3 +951,7 @@ Business Plus Plan Exclusives
 Please login to access your account
 <phrase key="cancel" />
 Cancel
+<phrase key="TestimonnialBlock" />
+See how these business owners took their passion for success online with GoDaddy Website Builder.
+<phrase key="CheckoutCustomers" />
+Check out what our customers are saying.
