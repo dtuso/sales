@@ -1,6 +1,8 @@
 ---
-location: localization/sales/gd/hosting/vps-hosting/en
-id: false
-name: FOS-21813
+location: localization/sales/gd/cce/en
+id: 53bb2869f778fc1e74b1696e
+name: FOS-23107
 ---
 {% include '../../modules/doc-block.html' %}
+<phrase key="ComingSoon" />
+Coming Soon
