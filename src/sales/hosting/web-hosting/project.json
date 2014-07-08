@@ -27,7 +27,6 @@
         "metaOgImage": "fos/hp/rebrand/img/gd_rebrand_og.png",
         "metaOgDescription": "[@L[cds.sales/gd/hosting/web-hosting:og-description]@L]",
         "cssVersionOverride": "2"
-
     },
     "web-hosting.language": {
         "cdsDetails": {
