@@ -37,14 +37,14 @@
       },
       "cdsLocation": "localization/sales/hosting/wordpress-hosting/en",
       "draft": {
-        "id": "5390f7a3f778fc21dc6e3f48",
-        "createdDate": "2014-06-05",
+        "id": "53bc160ef778fc1e74b16987",
+        "createdDate": "2014-07-08",
         "createdBy": {
-          "fullName": "Avinash Peesari",
-          "username": "apeesari"
+          "fullName": "Samana Upadhyaya",
+          "username": "supadhyaya"
         },
-        "jiraTicket": "FOS-20706",
-        "comments": "Updated miss spelled bing ad credit"
+        "jiraTicket": "FOS-22246",
+        "comments": "Update WordPress LP with Free ccTLD Offer"
       }
     }
   }
