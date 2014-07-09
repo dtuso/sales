@@ -1,6 +1,6 @@
 ---
 location: sales/hosting/website-builder-splits/split-b
-id: 53ac8ecff778fc3128002cea
+id: 53bc7967f778fc18643f9273
 name: FOS-5720
 comments: Integrate BazaarVoice on WSB LP
 ---
@@ -216,11 +216,11 @@ comments: Integrate BazaarVoice on WSB LP
   <section class="main-tabs">
     <div class="container">
       <ul class="nav nav-tabs">
-        <li class="nav-tabs-item active"><a class="nav-tabs-link" href="#plans-pricing" data-toggle="tab" data-ci="87758">[@L[cds.sales/gd/hosting/website-builder:label-plans-pricing]@L]</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
+        <li class="nav-tabs-item active"><a class="nav-tabs-link" href="#plans-pricing" data-gd-sidebyside-target="#plans-pricing" data-toggle="tab" data-ci="87758">[@L[cds.sales/gd/hosting/website-builder:label-plans-pricing]@L]</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
         ##if(activeLanguageAny(en) && !isManager() && splitTestingSideIsActive(1214, A))
-        <li class="nav-tabs-item"><a class="nav-tabs-link" href="#reviews" data-toggle="tab" data-ci="87151">[@L[cds.sales/gd/hosting/website-builder:label-reviews]@L]</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
+        <li class="nav-tabs-item"><a class="nav-tabs-link" href="#reviews" data-gd-sidebyside-target="#reviews" data-toggle="tab" data-ci="87151">[@L[cds.sales/gd/hosting/website-builder:label-reviews]@L]</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
         ##endif
-        <li class="nav-tabs-item"><a class="nav-tabs-link" href="#faq" data-toggle="tab" data-ci="87759">[@L[cds.sales/gd/hosting/website-builder:label-faq]@L]</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
+        <li class="nav-tabs-item"><a class="nav-tabs-link" href="#faq" data-gd-sidebyside-target="#faq"  data-toggle="tab" data-ci="87759">[@L[cds.sales/gd/hosting/website-builder:label-faq]@L]</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
       </ul>
     </div>
   </section>
@@ -1034,8 +1034,12 @@ comments: Integrate BazaarVoice on WSB LP
                       <strong>[@L[cds.sales/gd/hosting/website-builder:disclaimer-modal-header]@L]</strong>
                   </p>
               </div>
-              <div class="modal-body">
+                <div class="modal-body">
+                  ##if(countrySiteAny(uk))
+                  <p>[@L[cds.sales/gd/hosting/website-builder:modal-disclaimer-2uk]@L]</p>
+                  ##else
                   <p>[@L[cds.sales/gd/hosting/website-builder:modal-disclaimer-2]@L]</p>
+                  ##endif
                   <p>[@L[cds.sales/gd/hosting/website-builder:modal-disclaimer-5]@L]</p>
               </div>
           </div>
@@ -1051,8 +1055,19 @@ comments: Integrate BazaarVoice on WSB LP
 {% block footer %}
   <script src="[@T[link:<js path='{{assetPath}}js/website-builder.js' />]@T]?v=2" type="text/javascript"></script>
   <script src="[@T[link:<js path='fos/201401/global/js/plugins.js' />]@T]" type="text/javascript"></script>
-
+##if(activeLanguageAny(en))
+  {% include '_load-reviews-js.html' %}
+ ##endif
   <script type="text/javascript">
+  var url = document.location.toString();
+  if (url.match('#')) {
+      $('.nav-tabs a[href=#'+url.split('#')[1]+']').tab('show') ;
+  } 
+
+  // Change hash for page-reload
+  $('.nav-tabs a').on('shown.bs.tab', function (e) {
+      window.location.hash = e.target.hash;
+  });
 
   var ytPlayerList = {}; // Maps youtube player with its appropiate iframe based on the iframe id
 
@@ -1154,13 +1169,21 @@ comments: Integrate BazaarVoice on WSB LP
 
     // load the plugin
     $(document).ready(function(){
-      $('[data-gd-sidebysidealign]').gdSideBySideAlign();
+    var url = document.location.toString();
+      if(!(url.match('#reviews')||url.match('#faq'))){
+        $('[data-gd-sidebysidealign]').gdSideBySideAlign();
+      }
+      $('a[data-toggle="tab"]').on('shown.bs.tab',function(e){
+        var target = $(e.target).data('gd-sidebyside-target');
+        if(target ==='#plans-pricing'){
+        console.log(target);
+          $(target + ' [data-gd-sidebysidealign]').gdSideBySideAlign();
+        };
+      });
     });
 
   })( jQuery, window, document );
 </script>
 
-##if(activeLanguageAny(en))
-  {% include '_load-reviews-js.html' %}
- ##endif
+
 {% endblock %}
