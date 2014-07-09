@@ -1,8 +1,8 @@
 ---
 location: sales/hosting/vps-hosting.aspx
-id:  53b330eaf778fc27b0673bc8
-name: FOS-21356/21496/21341
-comments: Style fix for list items, Dropdown style fix, en only content update
+id:  53bc2826f778fc18643f9255
+name: FOS-23403
+comments: update managed and ded chat live from engage to live person
 url: http://www.dev-godaddy.com/hosting/vps-hosting.aspx
 assetPath: false
 ---
@@ -16,6 +16,7 @@ assetPath: false
 .dropdown-item-duration {float:left; max-width:80px;word-wrap:break-word;}
 .dropdown-item-price {margin: 0 9px; max-width:80px;word-wrap:break-word;}
 .dropdown-item-save {float:right; max-width:80px;word-wrap:break-word;}
+.lp-offline{cursor:default; }
 {% endless %}
 </style>
 
@@ -72,7 +73,7 @@ assetPath: false
         </p>
 
         ##if(activeLanguageAny(en))
-        <a href="#" class="main-banner-content-link-vps chat-button-click chat-button-click-hide" data-ci="88933">[@L[cds.sales/gd/hosting/vps-hosting:JsChatLive]@L]</a>
+        <a href="javascript:void(0);" class="main-banner-content-link-vps" data-ci="88933"><span id="lpLivePersonVpsHosting">[@L[cds.sales/gd/hosting/vps-hosting:JsChatLive]@L]</span></a>
         ##endif
 
     </div>
@@ -106,8 +107,8 @@ assetPath: false
                     <h2>[@L[cds.sales/gd/hosting/vps-hosting:Tab1Header]@L]</h2>
                     <p>[@L[cds.sales/gd/hosting/vps-hosting:Tab1HeaderText]@L]</p>
 
-                    ##if(activeLanguageAny(en))
-                    <a href="#" target="_blank" class="misc-banner-link chat-button-click chat-button-click-hide" data-ci="88938"><i class="ico ico-gt-alternate"></i>[@L[cds.sales/gd/hosting/vps-hosting:JsChatLive]@L]</a>
+                    ##if(activeLanguageAny(en))                    
+                    <a href="javascript:void(0)" class="misc-banner-link chat-button-click" data-ci="88938"><i class="ico ico-gt-alternate"></i><span id="lpLivePersonVpsHosting2"></span></a>
                     ##endif
 
                 </div>
@@ -1433,31 +1434,6 @@ function atl_PopUp(c, b, a) {
     var d = window.open(c, b, a);
 }
 
-##if(activeLanguageAny(en))
-function OpenChatWindow() {
-    window.open('[@T[link:<relative path='/chat/onlinechat.aspx' parammode="explicit" ><param name='diCode' value='2'/></relative>]@T]', 'chat_client', 'width=800,height=500,scrollbars=0');
-}
-
-$.ajax({
-    url: '[@T[link:<external linktype="chaturl" path="chat/arerepresentativesonline" secure="true"/>]@T]',
-    data: {
-        teamId: 2
-    },
-    dataType: 'jsonp',
-    success: function(data) {
-        if (data.result) {
-            $('.chat-button-click').removeClass('chat-button-click-hide').on("click", function(event) {
-                event.preventDefault();
-
-                OpenChatWindow();
-            });
-        } else {
-            $('.chat-button-click').addClass('chat-button-click-hide');
-        };
-    }
-});
-##endif
-
 $(function() {
     $('.isToolTip').tooltip({ placement: 'bottom'}).on('show.bs.tooltip',function(){
       $('.tooltip-delay').tooltip('hide');
@@ -1475,7 +1451,50 @@ $(function() {
         });
     }
 });
+##if(activeLanguageAny(en))
 
+          $(window).load(function() {
+    window.lpTagLandingPageSettings = {}; // Leave Blank
+    window.lpTagLandingPageSettings.arrLPvars = [{
+            scope: 'page',
+            name: 'unit',
+            value: 'Hosting-VPS'
+        }, //variable must match skill
+        {
+            scope: 'session',
+            name: 'language',
+            value: 'EN'
+        }
+    ];
+     window.lpTagLandingPageSettings.button = {
+        name: 'Hosting-VPS-EN',
+        pid: 'lpLivePersonVpsHosting'
+    };
+    var resource = document.createElement('script');
+    resource.src = "[@T[link:<javascriptroot />]@T]fos/liveperson/js/liveperson_lp_20140708.js";
+    var script = document.getElementsByTagName('script')[0];
+    script.parentNode.insertBefore(resource, script);
+  
+    (function(){
+      var $lp1 = $("#lpLivePersonVpsHosting");
+      var $lp2 = $("#lpLivePersonVpsHosting2");
+      var i = 0;
+      
+      function lpButtonSync(){
+        // tries to predict likelyhood of refresh based on 30 seconds
+        var wait = (i >=2 && i <= 22)? 5 : 1;
+        if($lp1.html() != $lp2.html()){
+          i = 0;
+          $lp2.html( $lp1.html() );
+        } else {
+          i = (i + wait > 30) ? 0 : i + wait;
+        }
+        setTimeout(function(){lpButtonSync()},wait*1000);  
+      }
+      setTimeout(function(){lpButtonSync()},1000);      
+    })();
+});
+##endif
 </script>
 
 {% endblock %}
