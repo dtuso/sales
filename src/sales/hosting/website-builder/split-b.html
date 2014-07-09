@@ -1,6 +1,6 @@
 ---
 location: sales/hosting/website-builder-splits/split-b
-id: 53bc7967f778fc18643f9273
+id: 53bdc329f778fc2fd06bef99
 name: FOS-5720
 comments: Integrate BazaarVoice on WSB LP
 ---
@@ -1063,11 +1063,6 @@ comments: Integrate BazaarVoice on WSB LP
   if (url.match('#')) {
       $('.nav-tabs a[href=#'+url.split('#')[1]+']').tab('show') ;
   } 
-
-  // Change hash for page-reload
-  $('.nav-tabs a').on('shown.bs.tab', function (e) {
-      window.location.hash = e.target.hash;
-  });
 
   var ytPlayerList = {}; // Maps youtube player with its appropiate iframe based on the iframe id
 
