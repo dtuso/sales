@@ -334,7 +334,7 @@ if (!domains.controls.cds_domain_configuration) {
           plan = (defaultPlan.length === 0) ? planPricesArr[0].Id : defaultPlan[0].Id;
           toggleApplyButton($(button), false);
         } else {
-          console.log(button);
+          //console.log(button); Commented for FOS-23468
           plan = selectedPlan[0].Id;
           toggleApplyButton($(button), true);
         }
@@ -360,7 +360,7 @@ if (!domains.controls.cds_domain_configuration) {
           plan = selectedPlan[0].Id;
           toggleApplyButton($(button), true);
         }
-        console.log('#' + idPrefix + '-' + plan + ' .plan-option');
+        //console.log('#' + idPrefix + '-' + plan + ' .plan-option'); Commented for FOS-23468 
         selectDropdownOption($('#' + idPrefix + '-' + plan + '.plan-option'));
       }
 
@@ -469,7 +469,7 @@ if (!domains.controls.cds_domain_configuration) {
         if(settings.splitTest1167 == 'B')
         {
           $.each(data.ItemPricing.PlanPrices, function(idx, planPrice) {
-            console.log(planPrice);
+           // console.log(planPrice); Commented for FOS-23468 
             tokenize($('#websitebuilderandhosting-' + planPrice.Id + ' span.plan-droplist-price'), planPrice.Price);
             if ( planPrice.ListPrice !== undefined ) {
               $('#websitebuilderandhosting-' + planPrice.Id + ' span.list-price').html(planPrice.ListPrice);
