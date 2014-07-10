@@ -343,26 +343,6 @@ assetPath: false
   <!------------------------------------>
   <!--     CUSTOMER CAROUSEL 2014Q3   -->
   <!------------------------------------>
-  <!-- start-js-elevate -->
-  <script>
-  {% jsminify %}
-
-    // activate overview slider
-    $(document).ready(function(){
-      activateSlider();
-    });
-
-    function activateSlider() {
-
-      var $overviewSlider = $('#slider .gd-swipe');  
-      $overviewSlider.attr('data-gd-swipe','{"auto":0}');
-      $overviewSlider.gdSwipe();
-
-    }
-
-  {% endjsminify %}
-  </script>
-  <!-- end-js-elevate -->
   <!-- start-css-elevate -->
   <style>  
     {% less %}
@@ -449,7 +429,7 @@ assetPath: false
       <div class="row">
         <div class="col-xs-12">
 
-          <div id="slider">
+          <div id="customer-slider">
             <div class="gd-nav-container">
               <div class="gd-swipe">
                 <div class="gd-swipe-wrap">
@@ -1010,6 +990,7 @@ assetPath: false
       setPricing('.main-plan-tiers'); // plan tiers
 
       activateSlides('#tools-slider');
+      activateSlides('#customer-slider');
 
 
     });
