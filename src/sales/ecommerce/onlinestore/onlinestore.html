@@ -56,7 +56,6 @@ assetPath: false
     min-width: 1000px;
   } 
 
-
   .gd-nav-container {
     margin: 0 auto;
     position: relative;
@@ -77,10 +76,6 @@ assetPath: false
     max-width: 100%;
     overflow: hidden;
     position: relative;
-  }
-
-  .gd-swipe-item {
-    padding: 20px;
   }
 
   .gd-swipe-bottom-nav {
@@ -190,6 +185,12 @@ assetPath: false
     font-weight: 600px;
   }
 
+  p.inline-disclaimer {
+    font-size: 15px;
+    font-weight: 300;
+    color: #fff;    
+  } 
+
 {% endless %}
 </style>
 <!-- end-css-elevate -->
@@ -199,13 +200,11 @@ assetPath: false
 
 {% block body %}
 
-
-
   <!-- MARQUEE -->
   {% include '_marquee.html' %}
 
   <!-- CUSTOMER CAROUSEL 2014Q3 -->
-  {% include '_customer-carousel-2014q3.html' %}
+  {% include '_carousel-customer.html' %}
 
   <!-- PRODUCT VIDEO -->
   {% include '_product-video.html' %}
@@ -217,35 +216,22 @@ assetPath: false
   {% include '_call-to-action-bar.html' %}
 
   <!-- CAROUSEL -->
-  {% include '_tools-carousel.html' %}
-
-  <!-- FEATURE CONTENT TOOLS MARQUEE -->
+  {% include '_carousel-tools.html' %}
 
   <!-- FEATURE CONTENT DESIGNS -->
   {% include '_feature-content-designs.html' %}
 
+  <!-- FEATURE CONTENT SHIPPING -->
+  {% include '_feature-content-shipping.html' %}
 
   <!-- PLAN TIER (What's Included) -->
-
-
-  <!-- CAROUSEL 2014Q3 -->
-
-
+  {% include '_plan-tiers.html' %}
 
 
 {% endblock %}
-
 {% block footer %}
-
   <script src="[@T[link:<javascriptroot />]@T]fos/lib/gd-swipe/js/swipe-v2.1.js" type="text/javascript"></script>
   <script src="[@T[link:<javascriptroot />]@T]fos/lib/gd-swipe/js/gd-swipe-v2.min.js" type="text/javascript"></script>
   <script src="[@T[link:<javascriptroot />]@T]fos/lib/solazy/jquery.solazy.1.2.1.min.js" type="text/javascript" ></script> 
-
   <!-- js-elevate-target -->
-
-
-
 {% endblock %}
-
-
-
