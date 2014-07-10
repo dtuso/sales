@@ -215,15 +215,119 @@ assetPath: false
   <!------------------------------------>
   <!--  FEATURE CONTENT PAYMENT TYPES -->
   <!------------------------------------>
-  {% include '_feature-content-payment-types.html' %}
+  <!-- start-css-elevate -->
+  <style>  
+  {% less %}
+
+    .main-payment-types {
+      background-color: #f3f0eb;       
+      padding-top: 50px; 
+    }
+
+    .main-payment-types h2 {
+      margin-top: 95px;
+    }
+
+    .transaction-fee {
+      color: #7db701;
+    }
+    .payment-options {
+      height: 425px;
+      overflow: hidden;
+    }
+
+  {% endless %}
+  </style>
+  <!-- end-css-elevate -->
+  <section class="container main-payment-types">
+
+    <div class="container l-main-container">
+      <div class="row">
+
+        <div class="col-xs-6">
+
+          <div class="payment-options">
+            <img src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/ecommerce/onlinestore/img/payment_options.png" alt="Logos of payment types">
+          </div>
+
+        </div>
+
+        <div class="col-xs-6">
+          
+          <h2>Boost sales with more payment options.</h2>
+
+          <p>Built-in credit card processing from Stripe lets customers pay the way they want. Easily accept credit and debit cards, PayPal, recurring payments, even international cards – all with no monthly fees, no refund costs and no charges for failed transactions, so you keep more of what you earn.</p>
+
+          <p><strong class="transaction-fee">2.9% + 30c per transaction</strong> or less by volumn</p>
+
+        </div>
+
+      </div>
+    </div>
+
+  </section>
 
   <!------------------------------------>
   <!--       CALL TO ACTION BAR       -->
   <!------------------------------------>
-  {% include '_call-to-action-bar.html' %}
+  <!-- start-css-elevate -->
+  <style>  
+  {% less %}
+    .main-call-to-action-bar {
+      background-color: #7db701;
+    }
+
+    .main-call-to-action-bar > div {
+      padding: 20px 0;
+    }
+
+    .main-call-to-action-bar a.call-to-action {
+      padding: 6px 25px 3px;
+      margin-top: 5px;
+    }
+
+    .main-call-to-action-bar p.pricing {
+      margin: 0px !important;
+      color: #fff;
+      font-weight: 600px;
+      font-size: 24px;
+      margin-top:5px;
+    }
+
+    .main-call-to-action-bar p.pricing span.so-easy {
+      color: #333 !important;
+    }
+
+    .main-call-to-action-bar span.save-percentage,
+    .main-call-to-action-bar span.old-price {
+      display: none;
+    }
+
+    .main-call-to-action-bar p.inline-disclaimer {
+      font-size: 14px;
+      margin: 0px;
+    } 
+  {% endless %}
+  </style>
+  <!-- end-css-elevate -->
+  <section class="main-call-to-action-bar">
+
+    <div class="container l-main-container center-text">
+
+      <p class="pricing">
+        <span class="so-easy">So easy to set up, <strong>you can make money today.</strong></span> As low as <span class="old-price"><strike>{1}/mo</strike>* </span><span class="normal-price">{0}</span> <span class="save-percentage">Save {2}%</span>
+      </p>
+
+      <a data-ci="111" class="btn btn-warning call-to-action cta-small" href="onlinestore-config.aspx">Start Now</a>
+
+      <p class="inline-disclaimer">*Current renewal price</p>
+
+    </div>
+
+  </section>
 
   <!------------------------------------>
-  <!--            CAROUSEL            -->
+  <!--        TOOLS CAROUSEL          -->
   <!------------------------------------>
 
   <!-- start-css-elevate -->
@@ -255,6 +359,7 @@ assetPath: false
       height:343px;
     }
     .designs-customers-love-div {
+      padding-top:90px;
       padding-bottom:30px;
     }
   {% endless %}
