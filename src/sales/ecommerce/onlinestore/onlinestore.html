@@ -558,8 +558,122 @@ assetPath: false
   <!------------------------------------>
   <!--   PLAN TIER (What's Included)  -->
   <!------------------------------------>
-  {% include '_plan-tiers.html' %}
+  <!-- start-css-elevate -->
+  <style>  
+  {% less %}
+    @imgPath : '[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/ecommerce/onlinestore/img/';
 
+
+    .main-plan-tiers a.call-to-action {
+      padding: 6px 25px 3px;
+      margin-top: 5px;
+    }
+
+    .main-plan-tiers p.pricing {
+      margin: 120px 0 10px 0 !important;
+      color: #fff;
+      font-weight: 600px;
+      font-size: 18px;
+      padding-right: 30px;
+
+    }
+
+    .main-plan-tiers p.inline-disclaimer {
+      font-size: 14px;
+    } 
+
+    .main-plan-tiers span.save-percentage,
+    .main-plan-tiers span.old-price {
+      display: none;
+    }
+
+    .main-plan-tiers {
+      background-color: #f3f0eb;
+      padding: 60px 0 70px;
+    }
+
+    .main-plan-tiers h2 {
+      margin:55px 0 10px;
+    }
+
+    .main-plan-tiers h3 {
+      text-transform: uppercase;
+      color: #ff8234;
+      margin-bottom: 35px;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .main-plan-tiers ul.checkmark-bullets { 
+      margin: 0 50px 50px;
+    }
+
+    .included-calltoaction {
+      text-align: center;
+    }
+    .included-calltoaction a {
+      font-size: 14px;
+    }
+    .included-light-bg {
+      background-color: #fff;
+    }
+    .included-highlighted-bg {
+      height: 100%;
+      background-color: #7db701;
+    }
+  {% endless %}
+  </style>
+  <!-- end-css-elevate -->
+  <section class="container main-plan-tiers">
+    
+    <div class="container l-main-container center-text included-highlighted-bg">
+
+      <div class="col-xs-9 included-light-bg">
+        <h2>What's Included?</h2>
+        <h3 class="included-subtitle">Packed with goodies to make your online store a success.</h3>
+
+        <div class="row left-text">
+          <div class="col-xs-6">
+            <ul class="checkmark-bullets">
+              <li>Unlimited products and bandwidth</li>
+              <li>10 images per product</li>
+              <li>Stripe credit card processing -- accept all major credit cards, PayPal and more</li>
+              <li>Mobile-optimized web store</li>
+              <li>Google Analytics</li>
+              <li>Expert 24/7 phone support</li>
+            </ul> 
+          </div>
+          <div class="col-xs-6">
+            <ul class="checkmark-bullets">
+              <li>## Web pages</li>
+              <li>Coupon code generator</li>
+              <li>Advanced CSS/JavaScript</li>
+              <li>Customer ratings and review functionality</li>
+              <li>Facebook store</li>
+              <li>$250 in advertising credits with Google, Facebook and Bing</li>
+            </ul>
+          </div>        
+        </div>
+
+      </div>
+      <div class="col-xs-3">
+
+        <p class="pricing">
+          As low as <span class="old-price"><strike>{1}/mo</strike>* </span>
+          <span class="normal-price">{0} </span> 
+          <span class="save-percentage">Save {2}%</span>
+        </p>
+
+        <a data-ci="111" class="btn btn-warning call-to-action cta-small" href="onlinestore-config.aspx">Start Now</a>
+
+        <p class="inline-disclaimer">*Current renewal price</p>
+
+      </div>
+
+    </div> 
+
+
+  </section>
 
 {% endblock %}
 {% block footer %}
