@@ -1,8 +1,8 @@
 ---
 location: sales/ecommerce/onlinestore.aspx
 id: 53a09b70f778fc1f147d43a7
-name: FOS-20286
-comments: Initial page creation
+name: FOS-23085
+comments: next phase of iterative development work
 url: http://www.dev-godaddy.com/ecommerce/onlinestore.aspx
 assetPath: false
 ---
@@ -11,9 +11,6 @@ assetPath: false
 
 {% block metahead %}  
   {% parent %}
-
-
-
 
   <!-- css-elevate-target -->
 
@@ -200,31 +197,120 @@ assetPath: false
 
 {% block body %}
 
-  <!-- MARQUEE -->
+  <!------------------------------------>
+  <!--           MARQUEE              -->
+  <!------------------------------------>
   {% include '_marquee.html' %}
 
-  <!-- CUSTOMER CAROUSEL 2014Q3 -->
+  <!------------------------------------>
+  <!--     CUSTOMER CAROUSEL 2014Q3   -->
+  <!------------------------------------>
   {% include '_carousel-customer.html' %}
 
-  <!-- PRODUCT VIDEO -->
+  <!------------------------------------>
+  <!--        PRODUCT VIDEO           -->
+  <!------------------------------------>
   {% include '_product-video.html' %}
 
-  <!-- FEATURE CONTENT PAYMENT TYPES -->
+  <!------------------------------------>
+  <!--  FEATURE CONTENT PAYMENT TYPES -->
+  <!------------------------------------>
   {% include '_feature-content-payment-types.html' %}
 
-  <!-- CALL TO ACTION BAR -->
+  <!------------------------------------>
+  <!--       CALL TO ACTION BAR       -->
+  <!------------------------------------>
   {% include '_call-to-action-bar.html' %}
 
-  <!-- CAROUSEL -->
-  {% include '_carousel-tools.html' %}
+  <!------------------------------------>
+  <!--            CAROUSEL            -->
+  <!------------------------------------>
 
-  <!-- FEATURE CONTENT DESIGNS -->
+  <!-- start-css-elevate -->
+  <style>  
+    {% less %}
+    .main-tools-carousel {
+      background-color: #f3f0eb;
+      padding-top: 95px;
+    }
+    .main-tools-carousel h2.tools-carousel-title { 
+      margin: 0 0 35px;
+    }
+    .tools-slide {
+      width: 970px;
+      height: 608px;
+      background-color: #fff;
+      padding: 70px 230px;
+    }
+    .tools-slide p {
+      font-size: 16px;
+      margin-bottom: 55px;
+    }
+    .tools-slide h3 {
+      font-size: 24px;
+      color: #ff8234;
+    }
+    .tools-slide img {
+      width:500px;
+      height:343px;
+    }
+    .designs-customers-love-div {
+      padding-bottom:30px;
+    }
+  {% endless %}
+  </style>
+  <!-- end-css-elevate -->
+  <section class="main-tools-carousel">
+
+    <div class="container l-main-container center-text">  
+     
+      <h2 class="tools-carousel-title">Build your business with the right tools.</h2>
+
+      <div id="tools-slider">
+        <div class="gd-nav-container">
+          <div class="gd-swipe">
+            <div class="gd-swipe-wrap">
+              <div class="gd-swipe-item solazy tools-slide slide-1">
+                <h3 class="">Sell on Facebook<sup>&reg;</sup>.</h3>
+                <p>Create a store on Facebook in less than a minute and keep it synced to your main store automatically.</p>
+                <img src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/ecommerce/onlinestore/img/sell_facebook.png" />
+              </div>
+              <div class="gd-swipe-item solazy tools-slide slide-2">
+                <h3 class="">Sell on Google<sup>&reg;</sup>.</h3>
+                <p>Create a store on Google in less than a minute and keep it synced to your main store automatically.</p>
+                <img src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/ecommerce/onlinestore/img/sell_facebook.png" />
+              </div>
+            </div>
+          </div>
+          <a href="#" data-slide="prev" class="arrow-left" id="headerPrev" data-ci="111">
+          [@L[cds.sales/gd/ecommerce/onlinestore:previous]@L]</a>
+          <a href="#" data-slide="next" class="arrow-right" id="headerNext" data-ci="111">
+          [@L[cds.sales/gd/ecommerce/onlinestore:next]@L]</a>
+          <div class="gd-swipe-bottom-nav"></div>
+        </div>
+      </div> <!-- end id tools-slider -->
+
+      <div class="designs-customers-love-div">
+        <img src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/ecommerce/onlinestore/img/designs_customers_love.png" />
+      </div>
+    
+    </div>
+    
+  </section>
+
+  <!------------------------------------>
+  <!--     FEATURE CONTENT DESIGNS    -->
+  <!------------------------------------>
   {% include '_feature-content-designs.html' %}
 
-  <!-- FEATURE CONTENT SHIPPING -->
+  <!------------------------------------>
+  <!--    FEATURE CONTENT SHIPPING    -->
+  <!------------------------------------>
   {% include '_feature-content-shipping.html' %}
 
-  <!-- PLAN TIER (What's Included) -->
+  <!------------------------------------>
+  <!--   PLAN TIER (What's Included)  -->
+  <!------------------------------------>
   {% include '_plan-tiers.html' %}
 
 
@@ -234,4 +320,62 @@ assetPath: false
   <script src="[@T[link:<javascriptroot />]@T]fos/lib/gd-swipe/js/gd-swipe-v2.min.js" type="text/javascript"></script>
   <script src="[@T[link:<javascriptroot />]@T]fos/lib/solazy/jquery.solazy.1.2.1.min.js" type="text/javascript" ></script> 
   <!-- js-elevate-target -->
+
+  <!-- start-js-elevate -->
+  <script>
+  {% jsminify %}
+    $(document).ready(function(){
+
+      setPricing('.main-banner-onlinestore'); // marquee
+      setPricing('.main-call-to-action-bar'); // CTA bar
+      setPricing('.main-plan-tiers'); // plan tiers
+
+      activateSlides('#tools-slider');
+
+
+    });
+
+    var tokenizeThis = function($obj, strArr) {
+      var tokenized = $obj.html();
+      for(var idx = 0; idx< strArr.length; idx++) {
+        tokenized = tokenized.replace('{' + idx + '}', strArr[idx]);
+      }
+      $obj.html(tokenized);
+    }
+
+    function setPricing(selector) {
+
+      var currentPrice = '[@T[productprice:<template productid="40941" period="monthly"><nostrike><![CDATA[{0}]]></nostrike><strike><![CDATA[{0}]]></strike></template>]@T]';
+      var oldPrice = '[@T[productprice:<template productid="40941" period="monthly"><nostrike><![CDATA[{1}]]></nostrike><strike><![CDATA[{1}]]></strike></template>]@T]';
+      var onSale = currentPrice !== oldPrice;
+      var savePercentage = '[@T[productcompare:<percent primaryproductid="40941" secondaryproductid="40941" hidebelow="1"><html><![CDATA[{0}]]></html></percent>]@T]';
+
+      savePercentage = "85";
+      onSale = true;
+      oldPrice = "$97.98";
+
+      var $pricing = $(selector + ' p.pricing');
+      tokenizeThis($pricing, [currentPrice, oldPrice, savePercentage]);
+      $pricing.show();
+
+      var onSale = currentPrice !== oldPrice;
+      if(onSale) {
+        $(selector + ' p.pricing span.save-percentage').show();
+        $(selector + ' p.pricing span.old-price').show();
+      }
+    }
+
+    function activateSlides(selector) {
+
+      var $slider = $(selector + ' .gd-swipe');  
+      $slider.attr('data-gd-swipe','{"auto":0}');
+      $slider.gdSwipe();
+
+    }
+
+    
+  {% endjsminify %}
+  </script>
+  <!-- end-js-elevate -->
+
 {% endblock %}

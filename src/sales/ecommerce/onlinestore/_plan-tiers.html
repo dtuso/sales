@@ -1,48 +1,4 @@
-<!-- start-js-elevate -->
-<script>
-{% jsminify %}
-  $(document).ready(function(){
-
-    setIncludedPricing();
-
-  });
-
-  var tokenizeThis = function($obj, strArr) {
-    var tokenized = $obj.html();
-    for(var idx = 0; idx< strArr.length; idx++) {
-      tokenized = tokenized.replace('{' + idx + '}', strArr[idx]);
-    }
-    $obj.html(tokenized);
-  }
-
-  function setIncludedPricing() {
-
-    var currentPrice = '[@T[productprice:<template productid="40941" period="monthly"><nostrike><![CDATA[{0}]]></nostrike><strike><![CDATA[{0}]]></strike></template>]@T]';
-    var oldPrice = '[@T[productprice:<template productid="40941" period="monthly"><nostrike><![CDATA[{1}]]></nostrike><strike><![CDATA[{1}]]></strike></template>]@T]';
-    var onSale = currentPrice !== oldPrice;
-    var savePercentage = '[@T[productcompare:<percent primaryproductid="40941" secondaryproductid="40941" hidebelow="1"><html><![CDATA[{0}]]></html></percent>]@T]';
-
-    savePercentage = "85";
-    onSale = true;
-    oldPrice = "$97.98";
-
-    var $pricing = $('.main-included p.pricing');
-    tokenizeThis($pricing, [currentPrice, oldPrice, savePercentage]);
-    $pricing.show();
-
-    var onSale = currentPrice !== oldPrice;
-    if(onSale) {
-      $('.main-included p.pricing span.save-percentage').show();
-      $('.main-included p.pricing span.old-price').show();
-    }
-  }
-
-  
-{% endjsminify %}
-</script>
-<!-- end-js-elevate -->
-
-<section class="container main-included">
+<section class="container main-plan-tiers">
   
   <div class="container l-main-container center-text included-highlighted-bg">
 
@@ -99,12 +55,12 @@
   @imgPath : '[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/ecommerce/onlinestore/img/';
 
 
-  .main-included a.call-to-action {
+  .main-plan-tiers a.call-to-action {
     padding: 6px 25px 3px;
     margin-top: 5px;
   }
 
-  .main-included p.pricing {
+  .main-plan-tiers p.pricing {
     margin: 120px 0 10px 0 !important;
     color: #fff;
     font-weight: 600px;
@@ -113,25 +69,25 @@
 
   }
 
-  .main-included p.inline-disclaimer {
+  .main-plan-tiers p.inline-disclaimer {
     font-size: 14px;
   } 
 
-  .main-included span.save-percentage,
-  .main-included span.old-price {
+  .main-plan-tiers span.save-percentage,
+  .main-plan-tiers span.old-price {
     display: none;
   }
 
-  .main-included {
+  .main-plan-tiers {
     background-color: #f3f0eb;
     padding: 60px 0 70px;
   }
 
-  .main-included h2 {
+  .main-plan-tiers h2 {
     margin:55px 0 10px;
   }
 
-  .main-included h3 {
+  .main-plan-tiers h3 {
     text-transform: uppercase;
     color: #ff8234;
     margin-bottom: 35px;
@@ -139,7 +95,7 @@
     font-weight: 600;
   }
 
-  .main-included ul.checkmark-bullets { 
+  .main-plan-tiers ul.checkmark-bullets { 
     margin: 0 50px 50px;
   }
 
