@@ -36,10 +36,6 @@
       "champion": {
         "name": "Dominic Tuso",
         "email": "dtuso@godaddy.com"
-      },
-      "draft": {
-        "comments": "Reskin",
-        "url": "http://www.dev-godaddy.com/ssl/ssl-certificates-config.aspx"
       }
     },
     "metaTitle": "[@L[cds.sales/gd/ssl/ssl-certificates:MetaTitle]@L]",
@@ -56,10 +52,6 @@
       "champion": {
         "name": "Dominic Tuso",
         "email": "dtuso@godaddy.com"
-      },
-      "cdsLocation": "localization/sales/gd/ssl/ssl-certificates/en",
-      "draft": {
-        "comments": "fix extra words where apostrophes should be"
       }
     }
   }
