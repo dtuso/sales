@@ -16,15 +16,17 @@ name: test
     <title>[@L[cds.sales/domains/searchresults-new:MetaTitle]@L]</title>
 
     <link rel="canonical" href="[@T[link:<external linktype='siteurl' secure='false' path='/domains/domain-configuration.aspx' />]@T]"/>    
-    <link href="[@T[link:<cssroot />]@T]fos/global/build/0.2.0/gd-fos-global.min.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="[@T[link:<cssroot />]@T]shared/css/1/styles_20130904.min.css">
+    <link href="[@T[link:<css path='fos/global/build/0.2.0/gd-fos-global.css' />]@T]" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="[@T[link:<css path='shared/css/1/styles_20130904.css' />]@T]">
     ##if(siteContextAny(gd))  
-    <link href="[@T[link:<cssroot />]@T]fos/sales/themes/scotty/domains/domain-config/css/styles.min.css" rel="stylesheet" type="text/css"  />
+    <link href="[@T[link:<css path='fos/sales/themes/scotty/domains/domain-config/css/styles.css' />]@T]" rel="stylesheet" type="text/css"  />
     <link rel="shortcut icon" href="[@T[link:<imageroot />]@T]assets/godaddy.ico"/>  
     ##else  
-    <link href="[@T[link:<cssroot />]@T]fos/sales/themes/scotty/domains/domain-config/css/styles_pl.min.css" rel="stylesheet" type="text/css"  />
+    <link href="[@T[link:<css path='fos/sales/themes/scotty/domains/domain-config/css/styles_pl.css' />]@T]" rel="stylesheet" type="text/css"  />
+    <style>
+      .disclaimer-free-domain{display:none}
+    </style>
     ##endif  
-
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags" />]@P]
     <script src="[@T[link:<javascriptroot />]@T]shared/js/1.5.1/global.20120918.min.js" type="text/javascript" ></script>
   </head>
@@ -890,7 +892,9 @@ name: test
               </p>
               <p class="weight-light">[@L[cds.sales/domains/domain-configuration:step.wsbAndHosing.wsb.desc]@L]</p>
               <p class="weight-light">[@L[cds.sales/domains/domain-configuration:step.wsbAndHosing.wsb.perfect]@L]</p>
+              ##if(siteContextAny(gd))
               <p class="price weight-light fg-orange">[@L[cds.sales/domains/domain-configuration:as.low.as.per.month.free.domain.splitB]@L]</p>
+              ##endif
               <div id="websitebuilder-plan" class="plan-droplist-select select-disable">
                 <div class="plan-droplist-selected">
                   <span>[@L[cds.sales/domains/domain-configuration:deluxe]@L]</span><span class= "list-price"></span><span class="price fg-orange" >[@L[cds.sales/domains/domain-configuration:price.per.month]@L]</span>
@@ -934,7 +938,9 @@ name: test
               </p>
               <p class="weight-light">[@L[cds.sales/domains/domain-configuration:step.wsbAndHosing.hosting.desc]@L]</p>
               <p class="weight-light">[@L[cds.sales/domains/domain-configuration:step.wsbAndHosing.hosting.perfect]@L]</p>
+              ##if(siteContextAny(gd))
               <p class="price weight-light fg-orange">[@L[cds.sales/domains/domain-configuration:as.low.as.per.month.free.domain.splitB]@L]</p>
+              ##endif
               <div id="hosting-plan" class="plan-droplist-select select-disable">
                 <div class="plan-droplist-selected">
                   <span>[@L[cds.sales/domains/domain-configuration:economy]@L]</span><span class= "list-price"></span><span class="price fg-orange" >[@L[cds.sales/domains/domain-configuration:price.per.month]@L]</span>
@@ -1291,7 +1297,7 @@ name: test
     <!-- JS YOU WILL PROBABLY NEED -->
     <script src="[@T[link:<javascriptroot />]@T]shared/js/jquery.plugins.min.20111019.js" type="text/javascript" ></script>
     <script src="[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2" type="text/javascript"></script>
-    <script src="[@T[link:<javascriptroot />]@T]fos/sales/themes/scotty/domains/domain-config/js/domain-config.js"></script>
+    <script src="[@T[link:<js path='fos/sales/themes/scotty/domains/domain-config/js/domain-config.js' />]@T]" type="text/javascript"></script>
 
     <!--[if lte IE 8]>
     <script src="[@T[link:<javascriptroot />]@T]fos/script/JSON2.min.js"></script>
