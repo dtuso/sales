@@ -200,12 +200,297 @@ assetPath: false
   <!------------------------------------>
   <!--           MARQUEE              -->
   <!------------------------------------>
-  {% include '_marquee.html' %}
+    <!-- start-css-elevate -->
+  <style>  
+  {% less %}
+
+    @imgPath : '[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/ecommerce/onlinestore/img/';
+
+    .main-banner-onlinestore {
+      position: relative; /* for the corner ribbon to show */
+      padding-top: 50px;
+      background-image: ~"url(@{imgPath}header_nemo.jpg)";
+    }
+    .main-banner-onlinestore a.call-to-action {
+      padding: 6px 100px 3px;
+    }
+
+    .main-banner-title {
+      text-transform: uppercase;
+      font-weight: 300;
+      font-family: 'HelveticaNeue-CondensedBold','Helvetica Neue',Helvetica,Arial,sans-serif;
+      font-size: 24px;
+    }
+    .main-banner-subtitle {
+      color: #fff;
+      margin: 0px;
+      font-weight: 100;
+      font-size: 54px;
+    }
+    p.main-banner-subtitle {
+      color: #fff;
+      font-weight: 600;
+      font-size: 54px;
+    }
+    p.inline-disclaimer {
+      font-size: 15px;
+      font-weight: 300;
+      color: #fff;    
+    } 
+    .main-banner-onlinestore p.pricing {
+      margin: 0px;
+      color: #ffcc22;
+      font-weight: 600px;
+      font-size: 24px;
+      margin-top:5px;
+    }
+    .main-banner-onlinestore span.save-percentage,
+    .main-banner-onlinestore span.old-price {
+      display: none;
+      color: #fff;
+    }
+    .marquee-bottom-spacer {
+      background-color: #f3f0EB;
+      height: 1px;
+    }
+    .floating-features {
+      background-color: white; 
+      position: relative;
+      z-index: 2; /* floating section */
+      margin-top:-100px;  /* moves items up over the split backgrounds above ita */
+      min-height:200px;
+      padding: 30px 0;
+    }
+    .feature-item-img {
+      height: 60px;
+      width: 60px;
+      margin: 0 auto;
+      background: transparent ~"url(@{imgPath}icons_sprite.png)" no-repeat ;
+    }
+    .feature-item-img-setup {
+      background-position: -2px -2px;
+    }
+    .feature-item-img-paid {
+      background-position: -64px -2px;
+    }
+    .feature-item-img-track {
+      background-position: -2px -63px;
+    }
+    .feature-item-img-shipping {
+      background-position: -64px -63px;
+    }
+    .feature-item-text {
+      color: #333;
+      font-size: 18px;
+      text-align: center;
+      width: 140px;
+      margin: 10px auto 0;
+    }
+
+  {% endless %}
+  </style>
+  <!-- end-css-elevate -->
+  <section class="container background-container main-banner-onlinestore">
+
+    <span class="left-corner-ribbon money-back-guarantee-light [@T[localization:<language full="true" />]@T] [@T[localization:<language />]@T]"></span>
+
+    <div class="container l-main-container center-text">
+      <div class="row">
+        <h1 class="main-banner-title">Online Store</h1>
+        <h3 class="main-banner-subtitle">Build your store today.</h3>
+        <p class="main-banner-subtitle">Start selling tonight.</p>
+        <p class="pricing">
+          As low as <span class="old-price"><strike>{1}/mo</strike>* </span><span class="normal-price">{0}</span> <span class="save-percentage">Save {2}%</span>        
+        </p>
+        
+        <a data-ci="111" class="btn btn-primary call-to-action cta-small" href="/ecommerce/onlinestore-config.aspx">Get Started</a>
+
+        <p class="inline-disclaimer">*Current renewal price</p>
+        
+        <div style="height:105px"></div>
+
+      </div>
+
+    </div>
+
+  </section>
+   
+  <div class="container marquee-bottom-spacer">
+    <!-- floating white feature bullets -->
+    <div class="container l-main-container floating-features rounded-small">
+      <div class="row">
+        <div class="col-xs-3 feature-item">
+          <div class="feature-item-img feature-item-img-setup"></div>
+          <div class="feature-item-text">Incredibly easy setup and design</div>
+        </div>
+        <div class="col-xs-3 feature-item">
+          <div class="feature-item-img feature-item-img-paid"></div>
+          <div class="feature-item-text">Get paid without the hassle</div>
+        </div>
+        <div class="col-xs-3 feature-item">
+          <div class="feature-item-img feature-item-img-track"></div>
+          <div class="feature-item-text">Track your inventory</div>
+        </div>
+        <div class="col-xs-3 feature-item">
+          <div class="feature-item-img feature-item-img-shipping"></div>
+          <div class="feature-item-text">Set up shipping your way</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
   <!------------------------------------>
   <!--     CUSTOMER CAROUSEL 2014Q3   -->
   <!------------------------------------>
-  {% include '_carousel-customer.html' %}
+  <!-- start-js-elevate -->
+  <script>
+  {% jsminify %}
+
+    // activate overview slider
+    $(document).ready(function(){
+      activateSlider();
+    });
+
+    function activateSlider() {
+
+      var $overviewSlider = $('#slider .gd-swipe');  
+      $overviewSlider.attr('data-gd-swipe','{"auto":0}');
+      $overviewSlider.gdSwipe();
+
+    }
+
+  {% endjsminify %}
+  </script>
+  <!-- end-js-elevate -->
+  <!-- start-css-elevate -->
+  <style>  
+    {% less %}
+
+    @imgPath : '[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/ecommerce/onlinestore/img/';
+
+    .customer-carousel-bottom-spacer {
+      background-color: #fff;
+      height: 270px; 
+    }
+    .carousel-floater { 
+      position: relative;
+      z-index: 2; /* floating section */
+      margin-top:-710px; /* moves items up over the split background above it*/
+    }
+    .carousel-floater .customer-carousel-title { 
+      margin-top: 25px;
+      font-size: 36px;
+    }
+    .carousel-floater .customer-carousel-subtitle { 
+      font-size: 16px;
+      margin: 5px 0 40px;
+    }
+    .main-customer-carousel-img {
+      background-image: ~"url(@{imgPath}marquee_pattern.jpg)"; 
+      height: 568px;
+    }
+
+    .main-customer-carousel p {
+      font-size: 16px;
+    }
+
+    .customer-slide {
+      width: 939px;
+      height: 451px;
+      background-repeat: no-repeat;
+    }
+
+
+    .customer-testimonial {
+      text-align: left;
+      background-color: white;
+    }
+    .customer-image {
+      display: block;
+      width: 193px;
+      height: 201px;
+      margin-right: 45px;
+    }
+    .left-align {
+      float: left;
+    }
+    .customer-quote {
+      margin-top: 45px;
+      color: #7db701; /*#c8d2dc*/
+      font-size: 20px;
+    }
+    .customer-byline {
+      margin-top: 15px;
+      font-size: 16px;
+    }
+
+
+  {% endless %}
+
+  </style>
+  <!-- end-css-elevate -->
+  <section class="main-customer-carousel">
+
+    <div class="container background-container-repeat-x main-customer-carousel-img"></div>
+
+    <div class="container customer-carousel-bottom-spacer"></div>
+
+    <div class="container l-main-container carousel-floater">  
+
+      <div class="row center-text">      
+        <div class="col-xs-12">
+
+          <h2 class="customer-carousel-title">Real customers. Real sites.</h2>
+          <h3 class="customer-carousel-subtitle">Our customers love Online Store</h3>
+
+        </div> 
+      </div> 
+      <div class="row">
+        <div class="col-xs-12">
+
+          <div id="slider">
+            <div class="gd-nav-container">
+              <div class="gd-swipe">
+                <div class="gd-swipe-wrap">
+                  <div class="gd-swipe-item solazy customer-slide slide-1" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/ecommerce/onlinestore/img/laptop_carrousel1.png" data-sl-method="background">
+                  </div>
+                  <div class="gd-swipe-item solazy customer-slide slide-2" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/ecommerce/onlinestore/img/laptop_carrousel2.png" data-sl-method="background">
+                  </div>
+                  <div class="gd-swipe-item solazy customer-slide slide-3"  data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/ecommerce/onlinestore/img/laptop_carrousel3.png" data-sl-method="background">
+                  </div>
+                  <div class="gd-swipe-item solazy customer-slide slide-4"  data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/ecommerce/onlinestore/img/laptop_carrousel2.png" data-sl-method="background">
+                  </div>
+                </div>
+              </div>
+              <a href="#" data-slide="prev" class="arrow-left" id="headerPrev" data-ci="111">
+              [@L[cds.sales/gd/ecommerce/onlinestore:previous]@L]</a>
+              <a href="#" data-slide="next" class="arrow-right" id="headerNext" data-ci="111">
+              [@L[cds.sales/gd/ecommerce/onlinestore:next]@L]</a>
+              <div class="gd-swipe-bottom-nav"></div>
+            </div>
+          </div> <!-- end id slicer -->
+
+        </div>      
+      </div> 
+
+      <div class="row">
+        <div class="col-xs-1"></div>
+        <div class="col-xs-10 clearfix customer-testimonial">
+          <img class="customer-image left-align" src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/ecommerce/onlinestore/img/testimonial_image.png" alt="Customer face">
+          <div class="">
+            <div class="customer-quote">"I love my site just as much as my products! It's so much better than my old Etsy store, because it's a reflection of me!"</div>
+            <div class="customer-byline">&dash; Katie Lewis, founder of <a href="http://snap-bibs.com" target="_blank">snap-bibs.com</a></div>
+          </div>
+
+        </div>
+        <div class="col-xs-1"></div>
+      </div>
+
+
+    </div>
+    
+  </section>
 
   <!------------------------------------>
   <!--        PRODUCT VIDEO           -->
@@ -353,7 +638,7 @@ assetPath: false
     </div>
 
   </section>
-  
+
   <!------------------------------------>
   <!--  FEATURE CONTENT PAYMENT TYPES -->
   <!------------------------------------>
@@ -548,7 +833,40 @@ assetPath: false
   <!------------------------------------>
   <!--     FEATURE CONTENT DESIGNS    -->
   <!------------------------------------>
-  {% include '_feature-content-designs.html' %}
+  <!-- start-css-elevate -->
+  <style>  
+  {% less %}
+    .main-content-designs {
+      /*position: relative; /* for the corner ribbon to show */
+    }
+    .main-content-designs .l-main-container {
+      padding-top: 75px;
+      background-color: #f3f0eb;    
+    }
+  {% endless %}
+  </style>
+  <!-- end-css-elevate -->
+  <section class="main-contant-designs">
+
+    <div class="container l-main-container center-text">
+      <div class="row">
+
+        <div class="col-xs-6">
+          <div class="payment-options">
+            <img src="http://img1.wsimg.com/fos/sales/themes/scotty/ssl/ssl-certificates/img/bg-tab-content-secure-site.jpg" height="470" width="420"/>
+          </div>
+        </div>
+
+        <div class="col-xs-6">
+          <h2>Boost sales with more payment options.</h2>
+          <p>wort chiller, dry stout berliner weisse final gravity wit, conditioning. cask heat exchanger carboy squares goblet priming carbonation aau units of bitterness heat exchanger! cask squares ipa primary fermentation barleywine cask.</p>
+          <p><strong>Congrats! Your online store is open for business.</strong></p>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
 
   <!------------------------------------>
   <!--    FEATURE CONTENT SHIPPING    -->
