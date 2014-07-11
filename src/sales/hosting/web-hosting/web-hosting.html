@@ -1,8 +1,8 @@
 ---
 location: sales/hosting/web-hosting.aspx
-id: 53bc3aecf778fc18643f9261
-name: FOS-21748
-comments: Improve hosting/web-hosting.aspx page performance by lazy loading
+id: 53bef49ff778fc0968b4f083
+name: FOS-23618
+comments: Re-roll Web hosting lazy loading
 ---
 
 
@@ -1145,42 +1145,2208 @@ comments: Improve hosting/web-hosting.aspx page performance by lazy loading
 
 
             </div>
-            ##if(userAgentIsBot())
-            <div class="tab-pane" id="features">
-                <!--  include "tabs/features.html"  -->
-                [@P[cdsDocument:<data app="sales" location="hosting/web-hosting/tabs/features" /> ]@P]
-                <!-- end feature tab pane -->
-            </div>
-            <div class="tab-pane" id="compare-plans">
-                <!--  include "tabs/compare-plans.html"  -->
-                [@P[cdsDocument:<data app="sales" location="hosting/web-hosting/tabs/compare-plans" /> ]@P]
-            </div>
-                ##if(false)
-                    <div class="tab-pane" id="reviews">
-                        <!-- include "tabs/reviews.html" -->
-                        [@P[cdsDocument:<data app="sales" location="hosting/web-hosting/tabs/reviews" /> ]@P]
-                    </div>
-                ##endif
-            <div class="tab-pane" id="platforms">
-                <!--  include "tabs/platforms.html" -->
-                [@P[cdsDocument:<data app="sales" location="hosting/web-hosting/tabs/platforms" /> ]@P]
-            </div>
-            <div class="tab-pane" id="faq">
-                <!--  include "tabs/faq.html" -->
-                [@P[cdsDocument:<data app="sales" location="hosting/web-hosting/tabs/faq" /> ]@P]
-            </div>
-            ##else
+
             <div class="tab-pane " id="features">
+                <section class="tab-content-top-spacing">
+                <div class="container l-main-container">
+
+                    <div class="row tab-content">
+                        <div class="col-xs-12">
+                            ##if(activeLanguageAny([en-uk], [en-ie], [en-my], [en-ph], [en-ph], [en-sg]))
+                            <div class="grid-column tab-content-column tab-content-left tab-content-fast-site-web-hosting solazy" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/hosting/web-hosting/img/load_times_eu.jpg" data-sl-method="background" data-sl-condition="#features|display:block">
+                                ##elseif(activeLanguageAny(es))
+                                <div class="grid-column tab-content-column tab-content-left tab-content-fast-site-web-hosting solazy" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/hosting/web-hosting/img/load_times_es.jpg" data-sl-method="background" data-sl-condition="#features|display:block">
+                                    ##elseif(activeLanguageAny(pt))
+                                    <div class="grid-column tab-content-column tab-content-left tab-content-fast-site-web-hosting solazy" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/hosting/web-hosting/img/load_times_pr.jpg" data-sl-method="background" data-sl-condition="#features|display:block">
+                                        ##else
+                                        <div class="grid-column tab-content-column tab-content-left tab-content-fast-site-web-hosting solazy" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/hosting/web-hosting/img/load_times_en.jpg" data-sl-method="background" data-sl-condition="#features|display:block">
+                                            ##endif
+                                            <div class="badge badge-small badge-important">[@L[cds.sales/gd/hosting/web-hosting:features-tab-fastest-load-times-11166]@L]</div>
+                                            <h3 class="tab-content-title">[@L[cds.sales/gd/hosting/web-hosting:features-tab-load-time-title-11166]@L]</h3>
+                                            <p>[@L[cds.sales/gd/hosting/web-hosting:features-tab-first-load-time-text-11166]@L]</p>
+                                            <ul>
+                                                <li>[@L[cds.sales/gd/hosting/web-hosting:features-tab-load-time-bullet1-11166]@L]</li>
+                                                <li>[@L[cds.sales/gd/hosting/web-hosting:features-tab-load-time-bullet2-11166]@L]</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row tab-content">
+                                    <div class="col-xs-12">
+                                        <div class="grid-column tab-content-column tab-content-right tab-content-all-the-tools-web-hosting solazy" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/hosting/web-hosting/img/app_logos.jpg" data-sl-method="background" data-sl-condition="#features|display:block">
+                                            <h3 class="tab-content-title">[@L[cds.sales/gd/hosting/web-hosting:features-tab-apps-title-11166]@L]</h3>
+                                            <p>[@L[cds.sales/gd/hosting/web-hosting:features-tab-first-apps-text-11166]@L]</p>
+                                            <ul>
+                                                <li>[@L[cds.sales/gd/hosting/web-hosting:features-tab-apps-bullet1-11166]@L]</li>
+                                                <li>[@L[cds.sales/gd/hosting/web-hosting:features-tab-apps-bullet2-11166]@L]</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row tab-content">
+                                    <div class="col-xs-12">
+                                        <div class="grid-column tab-content-column tab-content-left tab-content-easy-web-hosting solazy" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/hosting/web-hosting/img/dashboard.jpg" data-sl-method="background" data-sl-condition="#features|display:block">
+                                            <h3 class="tab-content-title">[@L[cds.sales/gd/hosting/web-hosting:features-tab-easy-title-11166]@L]</h3>
+                                            <p>[@L[cds.sales/gd/hosting/web-hosting:features-tab-first-easy-text-11166]@L]</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row tab-content">
+                                    <div class="col-xs-12">
+                                        <div class="grid-column tab-content-column tab-content-right tab-content-security-web-hosting solazy" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/hosting/web-hosting/img/security.jpg" data-sl-method="background" data-sl-condition="#features|display:block">
+                                            <h3 class="tab-content-title">[@L[cds.sales/gd/hosting/web-hosting:features-tab-security-title-11166]@L]</h3>
+                                            <p>[@L[cds.sales/gd/hosting/web-hosting:features-tab-first-security-text-11166]@L]</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row tab-content">
+                                    <div class="col-xs-12">
+                                        <div class="grid-column tab-content-left tab-content-what-is-web-hosting solazy" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/hosting/web-hosting/img/server_background.jpg" data-sl-method="background" data-sl-condition="#features|display:block">
+                                            <h3 class="tab-content-title">[@L[cds.sales/gd/hosting/web-hosting:features-tab-what-is-title-11166]@L]</h3>
+                                            [@L[cds.sales/gd/hosting/web-hosting:features-tab-first-what-is-text-11166]@L]
+                                            <ul>
+                                                <li>[@L[cds.sales/gd/hosting/web-hosting:features-tab-what-is-bullet1-11166]@L]</li>
+                                                <li>[@L[cds.sales/gd/hosting/web-hosting:features-tab-what-is-bullet2-11166]@L]</li>
+                                                <li>[@L[cds.sales/gd/hosting/web-hosting:features-tab-what-is-bullet3-11166]@L]</li>
+                                                <li>[@L[cds.sales/gd/hosting/web-hosting:features-tab-what-is-bullet4-11166]@L]</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                </section>
+                <section class="section-top-spacing not-finding-section">
+                <div class="grid-column">
+                    <div class="container l-main-container">
+                        <div class="col-xs-12">
+                            <div class="row tab-content equal-height">
+                                <h4 class="not-finding-h4">[@L[cds.sales/gd/hosting/web-hosting:not-finding-title-11166]@L]</h4>
+                                <div class="col-4 first">
+                                    <h5>[@L[cds.sales/gd/hosting/web-hosting:not-finding-website-builder-11166]@L]</h5>
+                                    <div class="website-builder-image icon-image solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/hosting/web-hosting/img/Hosting-Sprite-11166.png"></div>
+                                    <p class="lead">[@L[cds.sales/gd/hosting/web-hosting:not-finding-website-builder-desc-11166]@L]</p>
+                                    <p class="perfect-for">[@L[cds.sales/gd/hosting/web-hosting:not-finding-website-builder-perfect-for-11166]@L]</p>
+                                    <p class="starting-at">[@L[cds.sales/gd/hosting/web-hosting:not-finding-website-builder-as-low-as-11166]@L]</p>
+                                    <a data-ci="89282" href="[@T[link:<relative path='~/hosting/website-builder.aspx' secure='false'><param name='ci' value='89282' /></relative>]@T]" class="learn-more-link">
+                                        <span class="learn-more-arrow"></span>[@L[cds.sales/gd/hosting/web-hosting:not-finding-learn-more-11166]@L]</a>
+                                </div>
+                                <div class="col-4">
+                                    <h5>[@L[cds.sales/gd/hosting/web-hosting:not-finding-managed-wordpress-11166]@L]</h5>
+                                    <div class="wordpress-image icon-image solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/hosting/web-hosting/img/Hosting-Sprite-11166.png"></div>
+                                    <p class="lead">[@L[cds.sales/gd/hosting/web-hosting:not-finding-managed-wordpress-desc-11166]@L]</p>
+                                    <p class="perfect-for">[@L[cds.sales/gd/hosting/web-hosting:not-finding-managed-wordpress-perfect-for-11166]@L]</p>
+                                    <p class="starting-at">[@L[cds.sales/gd/hosting/web-hosting:not-finding-managed-wordpress-as-low-as-11166]@L]</p>
+                                    <a data-ci="89283" href="[@T[link:<relative path='~/hosting/wordpress-hosting.aspx' secure='false'><param name='ci' value='89283' /></relative>]@T]" class="learn-more-link">
+                                        <span class="learn-more-arrow"></span>[@L[cds.sales/gd/hosting/web-hosting:not-finding-learn-more-11166]@L]</a>
+                                </div>
+                                <div class="col-4 last">
+                                    <h5>[@L[cds.sales/gd/hosting/web-hosting:not-finding-vps-11166]@L]</h5>
+                                    <div class="vps-image icon-image solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/hosting/web-hosting/img/Hosting-Sprite-11166.png"></div>
+                                    <p class="lead">[@L[cds.sales/gd/hosting/web-hosting:not-finding-vps-desc-11166]@L]</p>
+                                    <p class="perfect-for">[@L[cds.sales/gd/hosting/web-hosting:not-finding-vps-perfect-for-11166]@L]</p>
+                                    <p class="starting-at">[@L[cds.sales/gd/hosting/web-hosting:not-finding-vps-as-low-as-11166]@L]</p>
+                                    <a data-ci="89284" href="[@T[link:<relative path='~/hosting/vps-hosting.aspx' secure='false'><param name='ci' value='89284' /></relative>]@T]" class="learn-more-link">
+                                        <span class="learn-more-arrow"></span>[@L[cds.sales/gd/hosting/web-hosting:not-finding-learn-more-11166]@L]</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </section>
+                <section>
+                <div class="container l-main-container">
+                    <div class="row tab-content">
+                        <div class="col-xs-12">
+                            <a href="#plans-pricing" data-toggle="tab" data-ci="89285" class="btn btn-primary btn-lg btn-block js-open-overview"><i class="ico ico-gt"></i>[@L[cds.sales/gd/hosting/web-hosting:choose-your-package]@L]</a>
+                        </div>
+                    </div>
+                </div>
+                </section>
             </div>
             <div class="tab-pane " id="compare-plans">
+                <section class="tab-content-top-spacing">
+                <div class="container l-main-container">
+                    <div class="row tab-content">
+                        <div class="col-xs-12">
+                            <div class="grid-column tab-content-column-alternate">
+                                <!-- Start Parallels Tab -->
+                                <div id="parallels-tab" style="display:none">
+                                    <table class="compare-plans-table">
+                                        <tr class="main-header">
+                                            <td class="logo-th wide-column" colspan="2">
+                                                <div class="parallels-logo  solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/hosting/web-hosting/img/Hosting-Sprite-11166.png"></div><a data-ci="89286" href="javascript:comparePlans('cpanel-tab')">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-11166]@L]</a>
+                                            </td>
+                                            <td class="orange edu white-border-right">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-economy-11166]@L]</td>
+                                            <td class="green edu white-border-right">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-deluxe-11166]@L]</td>
+                                            <td class="black edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-ultimate-11166]@L]</td>
+                                        </tr>
+                                        <tr class="gray-header">
+                                            <td class="category-text sp" colspan="5">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-11166]@L]</td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-free-domain-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-economy-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-disk-space-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-disk-space-economy-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-disk-space-unlimited-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-disk-space-unlimited-11166]@L]</td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-monthly-bandwidth-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-monthly-bandwidth-unlimited-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-monthly-bandwidth-unlimited-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-monthly-bandwidth-unlimited-11166]@L]</td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-ftp-users-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-ftp-users-50-unlimited-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-ftp-users-50-unlimited-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-ftp-users-50-unlimited-11166]@L]</td>
+                                        </tr>
+                                        <tr class="gray-header">
+                                            <td class="category-text sp" colspan="5">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-databases-11166]@L]</td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-databases-sql2012-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-databases-mssql-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-databases-mssql-economy-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-databases-mssql-deluxe-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-databases-mssql-ultimate-11166]@L]</td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-databases-mysql-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-databases-mysql-economy-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-databases-mysql-deluxe-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-databases-mysql-ultimate-11166]@L]</td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-databases-database-backup-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-databases-direct-database-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-databases-microsoft-access-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="gray-header">
+                                            <td class="category-text sp" colspan="5">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-11166]@L]</td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-dns-management-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-dns-management-unlimited-11166]@L]</td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-access-www-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-external-domains-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-external-domains-economy-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-alias-unlimited-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-alias-unlimited-11166]@L]</td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-subdomain-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-subdomain-economy-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-subdomain-400-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-subdomain-400-11166]@L]</td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-multiple-web-sites-11166]@L]</td>
+                                            <td class="edu">-</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-external-domains-unlimited-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-external-domains-unlimited-11166]@L]</td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-alias-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-alias-unlimited-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-alias-unlimited-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-alias-unlimited-11166]@L]</td>
+                                        </tr>
+                                        <tr class="gray-header">
+                                            <td class="category-text sp" colspan="5">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-general-features-11166]@L]</td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-general-features-windows-server-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-general-features-plesk-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-general-features-ftp-over-ssl-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-general-features-raw-access-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-general-features-site-statistics-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-general-features-premium-dns-11166]@L]</td>
+                                            <td class="edu">-</td>
+                                            <td class="edu">-</td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-general-features-ssl-certificates-11166]@L]</td>
+                                            <td class="edu">-</td>
+                                            <td class="edu">-</td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-general-features-support-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-general-features-scheduled-tasks-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-general-features-file-manager-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-general-features-web-deploy-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-general-features-webmatrix-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-general-features-free-applications-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sep" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-general-features-drupal-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sep" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-general-features-wordpress-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sep" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-general-features-joomla-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sep" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-general-features-phpbb-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="gray-header">
+                                            <td class="category-text sp" colspan="5">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-language-support-11166]@L]</td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-language-support-server-side-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-language-support-asp-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-language-support-asp-net-4-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-language-support-asp-net-2-3-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-language-support-asp-net-ajax-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-language-support-php5-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-language-support-cgi-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-language-support-asp-mv3-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-language-support-iis8-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-language-support-silverlight-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-language-support-perl-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="gray-header">
+                                            <td class="category-text sp" colspan="5">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-11166]@L]</td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-addresses-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-addresses-economy-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-addresses-deluxe-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-addresses-ultimate-11166]@L]</td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-storage-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-storage-economy-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-storage-deluxe-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-storage-ultimate-11166]@L]</td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-webmail-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-forwarding-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-auto-responders-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-catch-all-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-fraud-virus-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-sender-id-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-email-privacy-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <!-- /End Parallels Tab -->
+                                <!-- Start cPanel Tab -->
+                                ##if(activeLanguageAny([en-in]))
+                                <div id="cpanel-tab">
+                                    <table class="compare-plans-table">
+                                        <tr class="main-header">
+                                            <td class="logo-th wide-column" colspan="3">
+                                                <div class="cPanel-logo solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/hosting/web-hosting/img/Hosting-Sprite-11166.png"></div><a data-ci="89287" href="javascript:comparePlans('parallels-tab')">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-parallels-plesk-11166]@L]</a>
+                                            </td>
+                                            <td class="gray edu white-border-right" style="background-color:#a6a6a6; color:#FFFFFF;">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-starter-11166]@L]</td>
+                                            <td class="orange edu white-border-right">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-economy-11166]@L]</td>
+                                            <td class="green edu white-border-right">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-deluxe-11166]@L]</td>
+                                            <td class="black edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-ultimate-11166]@L]</td>
+                                        </tr>
+                                        <tr class="gray-header">
+                                            <td class="category-text sp" colspan="7">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-11166]@L]</td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="3">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-free-domain-11166]@L]</td>
+                                            <td class="edu">
+                                                <span>-</span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="3">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-starter-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-economy-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="3">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-storage-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-storage-starter-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-disk-space-economy-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-core-features-disk-space-unlimited-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-core-features-disk-space-unlimited-11166]@L]</td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="3">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-monthly-bandwidth-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-monthly-bandwidth-unlimited-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-monthly-bandwidth-unlimited-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-monthly-bandwidth-unlimited-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-monthly-bandwidth-unlimited-11166]@L]</td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="3">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-core-features-ftp-users-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-core-features-ftp-users-starter-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-core-features-ftp-users-economy-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-unlimited-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-unlimited-11166]@L]</td>
+                                        </tr>
+                                        <tr class="gray-header">
+                                            <td class="category-text sp" colspan="7">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-databases-11166]@L]</td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="3">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-databases-mysql-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-databases-mysql-starter-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-databases-mysql-economy-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-databases-mysql-deluxe-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-databases-mysql-ultimate-11166]@L]</td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sep" colspan="3">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-databases-database-backup-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="gray-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sep" colspan="3">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-databases-direct-database-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="gray-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="gray-header">
+                                            <td class="category-text sp" colspan="7">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-11166]@L]</td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="3">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-dns-management-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="gray-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-domains-dns-management-unlimited-11166]@L]</td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="3">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-access-www-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="gray-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="3">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-external-domains-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-unlimited-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-external-domains-economy-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-unlimited-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-unlimited-11166]@L]</td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="3">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-subdomain-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-subdomain-starter-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-subdomain-economy-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-unlimited-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-unlimited-11166]@L]</td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="3">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-multiple-web-sites-11166]@L]</td>
+                                            <td class="edu">-</td>
+                                            <td class="edu">-</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-domains-multiple-web-sites-unlimited-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-domains-multiple-web-sites-unlimited-11166]@L]</td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="3">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-alias-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-alias-unlimited-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-alias-unlimited-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-alias-unlimited-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-alias-unlimited-11166]@L]</td>
+                                        </tr>
+                                        <tr class="gray-header">
+                                            <td class="category-text sp" colspan="7">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-general-features-11166]@L]</td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="3">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-cpanel-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-cpanel-plans-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-cpanel-plans-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-cpanel-plans-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-cpanel-plans-11166]@L]</td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="3">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-easy-application-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="gray-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="3">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-phpmyadmin-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="gray-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="3">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-cloud-linux-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="gray-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="3">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-cageFS-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="gray-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="3">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-password-protect-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="gray-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="3">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-account-exec-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="gray-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="3">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-ssh-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="gray-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="3">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-ftp-over-ssl-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="gray-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="3">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-raw-access-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="gray-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="3">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-site-statistics-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="gray-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="3">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-premium-dns-11166]@L]</td>
+                                            <td class="edu">-</td>
+                                            <td class="edu">-</td>
+                                            <td class="edu">-</td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="3">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-ssl-cert-11166]@L]</td>
+                                            <td class="edu">-</td>
+                                            <td class="edu">-</td>
+                                            <td class="edu">-</td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="3">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-general-features-support-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="gray-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="3">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-cron-jobs-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="gray-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="3">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-general-features-file-manager-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="gray-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="3">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-file-image-magick-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="gray-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="3">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-150-free-apps-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="gray-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sep" colspan="3">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-general-features-drupal-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="gray-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sep" colspan="3">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-general-features-wordpress-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="gray-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sep" colspan="3">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-magento-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="gray-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sep" colspan="3">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-general-features-phpbb-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="gray-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="gray-header">
+                                            <td class="category-text sp" colspan="7">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-language-support-11166]@L]</td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="3">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-language-support-php-54-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="gray-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="3">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-language-support-php-ini-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="gray-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="3">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-language-support-perl-india-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="gray-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="3">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-language-support-python-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="gray-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="gray-header">
+                                            <td class="category-text sp" colspan="7">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-11166]@L]</td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="3">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-addresses-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-addresses-starter-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-addresses-economy-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-addresses-deluxe-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-addresses-ultimate-11166]@L]</td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="3">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-storage-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-storage-starter-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-storage-economy-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-storage-deluxe-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-storage-ultimate-11166]@L]</td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="3">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-webmail-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="gray-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="3">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-email-features-pop-3-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="gray-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="3">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-email-features-smtp-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="gray-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="3">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-email-features-imap-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="gray-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="3">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-forwarding-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="gray-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="3">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-auto-responders-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="gray-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="3">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-catch-all-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="gray-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="3">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-fraud-virus-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="gray-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="3">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-sender-id-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="gray-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="3">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-email-privacy-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="gray-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                ##else
+                                <div id="cpanel-tab">
+                                    <table class="compare-plans-table">
+                                        <tr class="main-header">
+                                            <td class="logo-th wide-column" colspan="2">
+                                                <div class="cPanel-logo solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/hosting/web-hosting/img/Hosting-Sprite-11166.png"></div><a data-ci="89287" href="javascript:comparePlans('parallels-tab')">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-parallels-plesk-11166]@L]</a>
+                                            </td>
+                                            <td class="orange edu white-border-right">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-economy-11166]@L]</td>
+                                            <td class="green edu white-border-right">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-deluxe-11166]@L]</td>
+                                            <td class="black edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-ultimate-11166]@L]</td>
+                                        </tr>
+                                        <tr class="gray-header">
+                                            <td class="category-text sp" colspan="5">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-11166]@L]</td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-core-features-free-domain-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-economy-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-disk-space-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-disk-space-economy-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-core-features-disk-space-unlimited-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-core-features-disk-space-unlimited-11166]@L]</td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-monthly-bandwidth-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-monthly-bandwidth-unlimited-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-monthly-bandwidth-unlimited-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-monthly-bandwidth-unlimited-11166]@L]</td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-core-features-ftp-users-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-core-features-ftp-users-economy-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-unlimited-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-unlimited-11166]@L]</td>
+                                        </tr>
+                                        <tr class="gray-header">
+                                            <td class="category-text sp" colspan="5">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-databases-11166]@L]</td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-databases-mysql-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-databases-mysql-economy-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-databases-mysql-deluxe-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-databases-mysql-ultimate-11166]@L]</td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sep" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-databases-database-backup-11166]@L]</td>
+                                            <td class="edu"></td>
+                                            <td class="edu"></td>
+                                            <td class="edu"></td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sep" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-databases-direct-database-11166]@L]</td>
+                                            <td class="edu"></td>
+                                            <td class="edu"></td>
+                                            <td class="edu"></td>
+                                        </tr>
+                                        <tr class="gray-header">
+                                            <td class="category-text sp" colspan="5">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-11166]@L]</td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-dns-management-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-domains-dns-management-unlimited-11166]@L]</td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-access-www-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-external-domains-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-external-domains-economy-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-unlimited-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-unlimited-11166]@L]</td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-subdomain-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-subdomain-economy-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-unlimited-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-unlimited-11166]@L]</td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-multiple-web-sites-11166]@L]</td>
+                                            <td class="edu">-</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-domains-multiple-web-sites-unlimited-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-domains-multiple-web-sites-unlimited-11166]@L]</td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-alias-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-alias-unlimited-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-alias-unlimited-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-alias-unlimited-11166]@L]</td>
+                                        </tr>
+                                        <tr class="gray-header">
+                                            <td class="category-text sp" colspan="5">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-general-features-11166]@L]</td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-cpanel-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-cpanel-plans-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-cpanel-plans-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-cpanel-plans-11166]@L]</td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-easy-application-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-phpmyadmin-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-cloud-linux-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-cageFS-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-password-protect-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-account-exec-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-ssh-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-ftp-over-ssl-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-raw-access-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-site-statistics-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-premium-dns-11166]@L]</td>
+                                            <td class="edu">-</td>
+                                            <td class="edu">-</td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-ssl-cert-11166]@L]</td>
+                                            <td class="edu">-</td>
+                                            <td class="edu">-</td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-general-features-support-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-cron-jobs-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-general-features-file-manager-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-file-image-magick-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-150-free-apps-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sep" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-general-features-drupal-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sep" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-general-features-wordpress-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sep" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-magento-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sep" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-general-features-phpbb-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="gray-header">
+                                            <td class="category-text sp" colspan="5">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-language-support-11166]@L]</td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-language-support-php-54-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-language-support-php-ini-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-language-support-perl-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-language-support-python-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="gray-header">
+                                            <td class="category-text sp" colspan="5">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-11166]@L]</td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-addresses-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-addresses-economy-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-addresses-deluxe-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-addresses-ultimate-11166]@L]</td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-storage-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-storage-economy-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-storage-deluxe-11166]@L]</td>
+                                            <td class="edu">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-storage-ultimate-11166]@L]</td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-webmail-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-email-features-pop-3-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-email-features-smtp-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-email-features-imap-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-forwarding-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-auto-responders-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-catch-all-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-fraud-virus-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-sender-id-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+                                        <tr class="standard-row">
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-email-privacy-11166]@L]</td>
+                                            <td class="edu">
+                                                <span class="orange-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="green-check"></span>
+                                            </td>
+                                            <td class="edu">
+                                                <span class="black-check"></span>
+                                            </td>
+                                        </tr>
+
+                                    </table>
+                                </div>
+                                ##endif
+                                <!-- /End cPanel Tab -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </section>
+                <section class="section-top-spacing not-finding-section">
+                <div class="grid-column">
+                    <div class="container l-main-container">
+                        <div class="col-xs-12">
+                            <div class="row tab-content equal-height">
+                                <h4 class="not-finding-h4">[@L[cds.sales/gd/hosting/web-hosting:not-finding-title-11166]@L]</h4>
+                                <div class="col-4 first">
+                                    <h5>[@L[cds.sales/gd/hosting/web-hosting:not-finding-website-builder-11166]@L]</h5>
+                                    <div class="website-builder-image icon-image solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/hosting/web-hosting/img/Hosting-Sprite-11166.png"></div>
+                                    <p class="lead">[@L[cds.sales/gd/hosting/web-hosting:not-finding-website-builder-desc-11166]@L]</p>
+                                    <p class="perfect-for">[@L[cds.sales/gd/hosting/web-hosting:not-finding-website-builder-perfect-for-11166]@L]</p>
+                                    <p class="starting-at">[@L[cds.sales/gd/hosting/web-hosting:not-finding-website-builder-as-low-as-11166]@L]</p>
+                                    <a data-ci="89280" href="[@T[link:<relative path='~/hosting/website-builder.aspx' secure='false'><param name='ci' value='89280' /></relative>]@T]" class="learn-more-link">
+                                        <span class="learn-more-arrow"></span>[@L[cds.sales/gd/hosting/web-hosting:not-finding-learn-more-11166]@L]</a>
+                                </div>
+                                <div class="col-4">
+                                    <h5>[@L[cds.sales/gd/hosting/web-hosting:not-finding-managed-wordpress-11166]@L]</h5>
+                                    <div class="wordpress-image icon-image solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/hosting/web-hosting/img/Hosting-Sprite-11166.png"></div>
+                                    <p class="lead">[@L[cds.sales/gd/hosting/web-hosting:not-finding-managed-wordpress-desc-11166]@L]</p>
+                                    <p class="perfect-for">[@L[cds.sales/gd/hosting/web-hosting:not-finding-managed-wordpress-perfect-for-11166]@L]</p>
+                                    <p class="starting-at">[@L[cds.sales/gd/hosting/web-hosting:not-finding-managed-wordpress-as-low-as-11166]@L]</p>
+                                    <a data-ci="89295" href="[@T[link:<relative path='~/hosting/wordpress-hosting.aspx' secure='false'><param name='ci' value='89295' /></relative>]@T]" class="learn-more-link">
+                                        <span class="learn-more-arrow"></span>[@L[cds.sales/gd/hosting/web-hosting:not-finding-learn-more-11166]@L]</a>
+                                </div>
+                                <div class="col-4 last">
+                                    <h5>[@L[cds.sales/gd/hosting/web-hosting:not-finding-vps-11166]@L]</h5>
+                                    <div class="vps-image icon-image solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/hosting/web-hosting/img/Hosting-Sprite-11166.png"></div>
+                                    <p class="lead">[@L[cds.sales/gd/hosting/web-hosting:not-finding-vps-desc-11166]@L]</p>
+                                    <p class="perfect-for">[@L[cds.sales/gd/hosting/web-hosting:not-finding-vps-perfect-for-11166]@L]</p>
+                                    <p class="starting-at">[@L[cds.sales/gd/hosting/web-hosting:not-finding-vps-as-low-as-11166]@L]</p>
+                                    <a data-ci="89296" href="[@T[link:<relative path='~/hosting/vps-hosting.aspx' secure='false'><param name='ci' value='89296' /></relative>]@T]" class="learn-more-link">
+                                        <span class="learn-more-arrow"></span>[@L[cds.sales/gd/hosting/web-hosting:not-finding-learn-more-11166]@L]</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </section>
+                <section>
+                <div class="container l-main-container">
+                    <div class="row tab-content">
+                        <div class="col-xs-12">
+                            <a href="#" data-ci="88605" class="btn btn-primary btn-lg btn-block js-open-overview"><i class="ico ico-gt"></i>[@L[cds.sales/gd/hosting/web-hosting:choose-your-package]@L]</a>
+                        </div>
+                    </div>
+                </div>
+                </section>
             </div>
             <!-- <div class="tab-pane lazy-tab" id="reviews">
             </div> -->
             <div class="tab-pane " id="platforms">
+                <section class="misc-banner">
+                    <div class="l-main-container container misc-banner-content misc-banner-content-web-hosting">
+                        <h2 class="half-width">[@L[cds.sales/gd/hosting/web-hosting:platforms-tab-main-header-11166]@L]</h2>
+                        <p class="half-width">
+                            [@L[cds.sales/gd/hosting/web-hosting:platforms-tab-main-text-11166]@L]
+                        </p>
+                    </div>
+                </section>
+                <!-- cPanel Tab -->
+                <section>
+                    <div class="container l-main-container">
+                        <div class="row tab-content">
+                            <div class="col-xs-12">
+                                ##if(activeLanguageAny(pt))
+                                <div class="grid-column tab-content-left tab-content-column-alternate platforms-cpanel-linux solazy" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/hosting/web-hosting/img/cPanel_PR_03.jpg" data-sl-method="background" data-sl-condition="#platforms|display:block">
+                                ##elseif(activeLanguageAny(es))
+                                    <div class="grid-column tab-content-left tab-content-column-alternate platforms-cpanel-linux solazy" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/hosting/web-hosting/img/cPanel_ES_03.jpg" data-sl-method="background" data-sl-condition="#platforms|display:block">
+                                ##else
+                                        <div class="grid-column tab-content-left tab-content-column-alternate platforms-cpanel-linux solazy" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/hosting/web-hosting/img/cPanel_EN_03.jpg" data-sl-method="background" data-sl-condition="#platforms|display:block">
+                                ##endif
+                                            <h3 class="view-tour-h3">[@L[cds.sales/gd/hosting/web-hosting:platforms-tab-cpanel-module-title-11166]@L] 
+                                            ##if(activeLanguageAny(en))
+                                                <a target="_BLANK" data-ci="89289" href="https://p3plcpnl004.prod.phx3.secureserver.net:2083/login/?user=godaddyc&pass=demo123" class="learn-more-link">
+                                                    <span class="learn-more-arrow"></span>[@L[cds.sales/gd/hosting/web-hosting:platforms-tab-cpanel-module-tour-link-11166]@L]</a>
+                                             ##endif
+                                            </h3>
+                                            <p><b>[@L[cds.sales/gd/hosting/web-hosting:platforms-tab-cpanel-module-panel-bullet-title-11166]@L]</b>
+                                            </p>
+                                            <ul>
+                                                <li>[@L[cds.sales/gd/hosting/web-hosting:platforms-tab-cpanel-module-panel-bullet1-11166]@L]</li>
+                                                <li>[@L[cds.sales/gd/hosting/web-hosting:platforms-tab-cpanel-module-panel-bullet2-11166]@L]</li>
+                                                <li>[@L[cds.sales/gd/hosting/web-hosting:platforms-tab-cpanel-module-panel-bullet3-11166]@L]</li>
+                                                <li>[@L[cds.sales/gd/hosting/web-hosting:platforms-tab-cpanel-module-panel-bullet4-11166]@L]</li>
+                                            </ul>
+                                            <p>[@L[cds.sales/gd/hosting/web-hosting:platforms-tab-cpanel-module-panel-bottom-text-11166]@L]</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                </section>
+                <!-- /cPanel Tab -->
+                <!-- Parallels Tab -->
+                <section class="">
+                    <div class="container l-main-container">
+                        <div class="row tab-content">
+                            <div class="col-xs-12">
+                                <div class="grid-column tab-content-left tab-content-column-alternate platforms-parallels-windows solazy" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/hosting/web-hosting/img/[@T[localization:<language />]@T]_plesk_tab.jpg" data-sl-method="background" data-sl-condition="#platforms|display:block">
+                                    <h3 class="view-tour-h3">[@L[cds.sales/gd/hosting/web-hosting:platforms-tab-plesk-module-title-11166]@L]</h3>
+                                    <p><b>[@L[cds.sales/gd/hosting/web-hosting:platforms-tab-plesk-windows-module-panel-bullet-title-11166]@L]</b>
+                                    </p>
+                                    <ul>
+                                        <li>[@L[cds.sales/gd/hosting/web-hosting:platforms-tab-plesk-windows-module-panel-bullet1-11166]@L]</li>
+                                        <li>[@L[cds.sales/gd/hosting/web-hosting:platforms-tab-plesk-windows-module-panel-bullet2-11166]@L]</li>
+                                        <li>[@L[cds.sales/gd/hosting/web-hosting:platforms-tab-plesk-windows-module-panel-bullet3-11166]@L]</li>
+                                    </ul>
+                                    <p>[@L[cds.sales/gd/hosting/web-hosting:platforms-tab-plesk-windows-module-panel-bottom-text-11166]@L]</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- / Parallels Tab -->
+
+                <section class="section-top-spacing not-finding-section">
+                    <div class="grid-column">
+                        <div class="container l-main-container">
+                            <div class="col-xs-12">
+                                <div class="row tab-content equal-height">
+                                    <h4 class="not-finding-h4">[@L[cds.sales/gd/hosting/web-hosting:not-finding-title-11166]@L]</h4>
+                                    <div class="col-4 first">
+                                        <h5>[@L[cds.sales/gd/hosting/web-hosting:not-finding-website-builder-11166]@L]</h5>
+                                        <div class="website-builder-image icon-image solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/hosting/web-hosting/img/Hosting-Sprite-11166.png"></div>
+                                        <p class="lead">[@L[cds.sales/gd/hosting/web-hosting:not-finding-website-builder-desc-11166]@L]</p>
+                                        <p class="perfect-for">[@L[cds.sales/gd/hosting/web-hosting:not-finding-website-builder-perfect-for-11166]@L]</p>
+                                        <p class="starting-at">[@L[cds.sales/gd/hosting/web-hosting:not-finding-website-builder-as-low-as-11166]@L]</p>
+                                        <a data-ci="89290" href="[@T[link:<relative path='~/hosting/website-builder.aspx' secure='false'><param name='ci' value='89291' /></relative>]@T]" class="learn-more-link">
+                                            <span class="learn-more-arrow"></span>[@L[cds.sales/gd/hosting/web-hosting:not-finding-learn-more-11166]@L]</a>
+                                    </div>
+                                    <div class="col-4">
+                                        <h5>[@L[cds.sales/gd/hosting/web-hosting:not-finding-managed-wordpress-11166]@L]</h5>
+                                        <div class="wordpress-image icon-image solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/hosting/web-hosting/img/Hosting-Sprite-11166.png"></div>
+                                        <p class="lead">[@L[cds.sales/gd/hosting/web-hosting:not-finding-managed-wordpress-desc-11166]@L]</p>
+                                        <p class="perfect-for">[@L[cds.sales/gd/hosting/web-hosting:not-finding-managed-wordpress-perfect-for-11166]@L]</p>
+                                        <p class="starting-at">[@L[cds.sales/gd/hosting/web-hosting:not-finding-managed-wordpress-as-low-as-11166]@L]</p>
+                                        <a data-ci="89291" href="[@T[link:<relative path='~/hosting/wordpress-hosting.aspx' secure='false'><param name='ci' value='89292' /></relative>]@T]" class="learn-more-link">
+                                            <span class="learn-more-arrow"></span>[@L[cds.sales/gd/hosting/web-hosting:not-finding-learn-more-11166]@L]</a>
+                                    </div>
+                                    <div class="col-4 last">
+                                        <h5>[@L[cds.sales/gd/hosting/web-hosting:not-finding-vps-11166]@L]</h5>
+                                        <div class="vps-image icon-image solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/hosting/web-hosting/img/Hosting-Sprite-11166.png"></div>
+                                        <p class="lead">[@L[cds.sales/gd/hosting/web-hosting:not-finding-vps-desc-11166]@L]</p>
+                                        <p class="perfect-for">[@L[cds.sales/gd/hosting/web-hosting:not-finding-vps-perfect-for-11166]@L]</p>
+                                        <p class="starting-at">[@L[cds.sales/gd/hosting/web-hosting:not-finding-vps-as-low-as-11166]@L]</p>
+                                        <a data-ci="89292" href="[@T[link:<relative path='~/hosting/vps-hosting.aspx' secure='false'><param name='ci' value='89293' /></relative>]@T]" class="learn-more-link">
+                                            <span class="learn-more-arrow"></span>[@L[cds.sales/gd/hosting/web-hosting:not-finding-learn-more-11166]@L]</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="container l-main-container">
+                        <div class="row tab-content">
+                            <div class="col-xs-12">
+                                <a data-ci="89294" href="#plans-pricing" data-toggle="tab" data-ci="" class="btn btn-primary btn-lg btn-block js-open-overview"><i class="ico ico-gt"></i>[@L[cds.sales/gd/hosting/web-hosting:choose-your-package]@L]</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
             <div class="tab-pane " id="faq">
+                <section class="tab-content-top-spacing">
+                    <div class="container l-main-container">
+                        <div class="row tab-content">
+                            <div class="col-xs-12">
+                                <div class="grid-column tab-content-column-alternate">
+                                    <h2 class="h2-alternate">[@L[cds.sales/gd/hosting/web-hosting:faq-first-slide-title-cp]@L]</h2>
+                                    <p>[@L[cds.sales/gd/hosting/web-hosting:faq-first-slide-content-cp]@L]</p>
+
+                                    <hr/>
+
+                                    <h2 class="h2-alternate">[@L[cds.sales/gd/hosting/web-hosting:faq-second-slide-title-cp]@L]</h2>
+                                    <p>[@L[cds.sales/gd/hosting/web-hosting:faq-second-slide-content-cp]@L]</p>
+
+                                    <hr/>
+
+                                    <h2 class="h2-alternate">[@L[cds.sales/gd/hosting/web-hosting:faq-third-slide-title]@L]</h2>
+                                    <p>[@L[cds.sales/gd/hosting/web-hosting:faq-third-slide-content-cp]@L]</p>
+
+                                    <hr/>
+
+                                    <h2 class="h2-alternate">[@L[cds.sales/gd/hosting/web-hosting:faq-fourth-slide-title]@L]</h2>
+                                    <p>[@L[cds.sales/gd/hosting/web-hosting:faq-fourth-slide-content-cp]@L]</p>
+
+                                    <hr/>
+
+                                    <h2 class="h2-alternate">[@L[cds.sales/gd/hosting/web-hosting:faq-fifth-slide-title]@L]</h2>
+                                    <p>[@L[cds.sales/gd/hosting/web-hosting:faq-fifth-slide-content-cp]@L]</p>
+
+                                    <hr/>
+
+                                    <h2 class="h2-alternate">[@L[cds.sales/gd/hosting/web-hosting:faq-seventh-slide-title]@L]</h2>
+                                    <p>[@L[cds.sales/gd/hosting/web-hosting:faq-seventh-slide-content-cp]@L]</p>
+
+                                    <hr/>
+
+                                    <h2 class="h2-alternate">[@L[cds.sales/gd/hosting/web-hosting:faq-eighth-slide-title]@L]</h2>
+                                    <p>[@L[cds.sales/gd/hosting/web-hosting:faq-eighth-slide-content-cp]@L]</p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#overview" data-ci="89295" data-toggle="tab" class="btn btn-primary btn-lg btn-block js-open-overview"><i class="ico ico-gt"></i>[@L[cds.sales/gd/hosting/web-hosting:choose-your-package]@L]</a>
+                    </div>
+                </section>
             </div>
-            ##endif
         </div>
 
         <!-- End main-tabs panes -->
@@ -1212,21 +3378,9 @@ comments: Improve hosting/web-hosting.aspx page performance by lazy loading
 
     <script src="[@T[link:<javascriptroot />]@T]fos/lib/solazy/jquery.solazy.1.2.1.min.js" type="text/javascript" ></script>
     <script type="text/javascript">
-    ##if(!userAgentIsBot())
-        $('.lazy-tab').on('click', function (e) {
-            var href = $(this).attr('href');
-            var tab = href.replace('#','');
-            $(href).html('<div class="container l-main-container"><div class="row tab-content"><div class="col-xs-12"><div class="grid-column tab-content-column-alternate"><img class="spinner" src="[@T[link:<cssroot />]@T]fos/201401/global/vendor/bazaarvoice/ico-indicator-001.gif" /></div></div></div></div>');
-            $.get( '[@T[link:<relative path="~/hosting/web-hosting/tabs/" parammode="explicit" secure="true"></relative>]@T]'+ tab +'' , function( data ) {
-              $(href).html(data);
-            }).done(function(){
-                $('.isToolTip').tooltip({ placement: 'bottom', html: true});
-                solazy.addLazyOjects($(href));    
-            });
-            $(this).off('click');
-        });
-    ##endif
-
+    $('.nav-tabs-link').on('click',function(e){
+        setTimeout(function(){solazy.check();},20);
+    });
         $('a[href="#reviews"]').on('shown.bs.tab', function (e) {
           if (typeof $BV === 'undefined') {
             $('#BVRRContainer').html('<div class="spinner"><img src="[@T[link:<cssroot />]@T]fos/201401/global/vendor/bazaarvoice/ico-indicator-001.gif" /></div>');
