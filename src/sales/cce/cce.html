@@ -3,7 +3,7 @@ location: sales/cce
 id: 53bae15df778fc1e74b16945 
 name: FOS-23107
 comments: CCE Landing Page
-cssVersionOverride: 4
+cssVersionOverride: 5
 ---
 {% extends 'layouts/base.html' %} 
 {% block metahead %} 
@@ -11,26 +11,112 @@ cssVersionOverride: 4
   
 {% endblock %} 
 {% block body %}
- <form method="post" data-url="[@T[link:<relative path="~/api/dpp/search/single"/>]@T]" action="[@T[link:<relative path="/domains/searchresults-new.aspx"/>]@T]" class="search-form" id="domain_search_form" style="margin: 0 auto 20px;">
-                <div class="searchBoxForm">  
-                <input type="text" name="domainToCheck" placeholder="[@L[cds.sales/gd/domains/domain-name-search:SalesHeaderPlaceholder]@L]" class="search-form-input" id="domain_search_input" autocomplete="off"  style="width:auto; border:none;outline:0;min-width: 530px;" />
-                <button type="submit" name="searchButton" data-ci="88002" class="btn btn-primary btn-search-form submitbtn">[@L[cds.sales/gd/domains/domain-name-search:SalesHeaderBtnText]@L]</button>
-                <div class="clearfix"></div>
-             </div>
-            </form>
-    <section class="main-banner">
+  <section class="main-banner landing-page-marquee">
      <div class="main-banner-content l-main-container container">
-       <h2 class="main-banner-subtitle">[@L[cds.sales/gd/cce:ComingSoon]@L]</h2>
-       <div class ="coming-soon-box" style="overflow: hidden;">
-            <div class="gd-left-image"></div>
-            <div class="plus-sign" style="float: left; width: 175px;"><span>+</span></div>
-            <div class="cce-right-image"></div>
+       <div class="main-banner-content-width">
+       <h3> Welcome to GoDaddy,</h3>
+       <h2><span>YOUR BEST FRIEND</span><span> FOR BUSINESS.</span></h2>
        </div>
+       <div class="sub-banner-content-width">
+         <span>Exclusive offer from cce</span><span class="secondary-color"><br> 50% OFF </br></span><span>WEBSITE BUILDER</span><span><br>Includes FREE domain*</br></span>         
+       </div>
+      
       </div>
+      
+    </section>
+
+    </div>
+    
+    <!-- Start Divider -->
+  <section class="main-tab">
+    <div class="container-details green-divider">
+
+    </div>
+  </section>
+    
+    
+    <div class = "row"> </div>
+    
+    <section id="First-section" class="margin-from-top">
+    <div class="container l-main-container background-container">
+      <div class="col-xs-12">
+      <div class="row">
+      <div class="lenovo-blade1-image"> </div>
+       <div class = "cce-right-image image-position"> </div>
+       <div class = "first-section-header">
+       <h3>Building your own website is easier than you think...</h3>
+       </div>
+        <div class = "first-section-body">
+        <p> With Website Builder, you don't need technical skills. Our experts have already done the hard work for you, creating hundreds of stunning, customizable designs. Just choose your favorite, add your own personal touch with our simple drag-&-drop tools and click publish. It's that easy.  </p>
+          <span class="green-underline get-started-button">Get Started</span>
+        </div>
+      </div>
+      <!-- / ROW -->
+      </div>
+      </div>
+      <!-- / Container -->
+      
       <form class="main-banner-form" id="addtocart-form" method="POST" action="[@T[link:<relative path="~/hosting/website-builder-config.aspx" />]@T]?version=sales/hosting/website-builder-config.aspx|53b32953f778fc27b0673bc7">
             <input type="hidden" name="product" value="7509|1|1" />
       </form>
-    </section>
+      </section>
+    
+    <section id="Second-section" class="gray-bg padding">
+    <div class="container l-main-container background-container">
+    <div class="col-xs-12">
+      <div class="row second-row">
+      <div class="lenovo-blade2-image"> </div>
+       <div class = "second-section-header">
+        <h3>Why do I need a domain?</h3>
+      </div>
+        <div class = "second-section-body">
+        <p>A domain name is your own unique piece of the web, like YourBusiness.com.br. It gives your customers an easy way to find and remember your website. And now you can get yours for free with Website Builder. </p>
+        <span class="green-underline"> Learn More </span>
+        </div>
+      </div>
+      <!-- / ROW -->
+      </div>
+      </div>
+      <!-- / Container -->
+      </section>
+    
+     <section id="Third-section" class="gray-bg padding">
+    <div class="container l-main-container background-container">
+    <div class="col-xs-12">
+      <div class="row third-row">
+      <div class="lenovo-blade3-image"> </div>
+       <div class = "third-section-header">
+        <h3>What else does GoDaddy offer?</h3>
+      </div>
+        <div class = "third-section-body">
+          <p>Whether you are just getting online or you already have a thriving web store, we have the tools to build your business. From <span class="green-underline">hosting</span> to <span class="green-underline">email</span> to <span class="green-underline">SSL Certificates</span>, you'll find everything you need to succeed online. </p>
+        </div>
+      </div>
+      <!-- / ROW -->
+      </div>
+      </div>
+      <!-- / Container -->
+      </section>
+    
+    
+    <section id="Fourth-section" class="gray-bg padding fourth-section-padding">
+    <div class="container l-main-container background-container">
+      <div class="col-xs-12">
+      <div class="row fourth-row">
+      <div class="lenovo-blade4-image"> </div>
+       <div class = "fourth-section-header">
+        <h3>What if I have questions?</h3>
+      </div>
+        <div class = "fourth-section-body">
+          <p>We understand that getting your business online can be intimidating. That's why our award winning-support staff is here to help, 24/7/365. Anytime you have a question, our experts are just a phone call or email away. </p>
+        </div>
+      </div>
+      <!-- / ROW -->
+      </div>
+      </div>
+     <!-- / Container -->
+      </section>
+
 
 {% endblock %} 
 
