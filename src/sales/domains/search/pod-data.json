@@ -130,7 +130,7 @@
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:PreRegister]@L]",
                 "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotVegasText]@L]",
                  "ButtonURL": "[@T[link:<relative path=\"/tlds/vegas\"><param name=\"ci\" value=\"90060\" /></relative>]@T]",
-                "ProductPrice": "[@T[productprice:<current productid=\"445256\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"445256\" secondaryproductid=\"445256\" />]@T]-[@T[productprice:<list productid=\"445256\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                "ProductPrice": "[@T[productprice:<current productid=\"445458\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"445458\" secondaryproductid=\"445458\" />]@T]-[@T[productprice:<list productid=\"445458\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
             },{
                 "PodId": "2",
                 "logoclass": "tldlogo-dot-xyz",                
@@ -1870,7 +1870,7 @@
                 "ButtonText": "[@L[cds.sales/gd/domains/domain-name-search:PreRegister]@L]",
                 "PodText": "[@L[cds.sales/gd/domains/domain-name-search:PricesDotVegasText]@L]",
                  "ButtonURL": "[@T[link:<relative path=\"/tlds/vegas\"><param name=\"ci\" value=\"90060\" /></relative>]@T]",
-                "ProductPrice": "[@T[productprice:<current productid=\"445256\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"445256\" secondaryproductid=\"445256\" />]@T]-[@T[productprice:<list productid=\"445256\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                "ProductPrice": "[@T[productprice:<current productid=\"445458\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-0-[@T[productcompare:<percent primaryproductid=\"445458\" secondaryproductid=\"445458\" />]@T]-[@T[productprice:<list productid=\"445458\" dropdecimal=\"false\" period=\"yearly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
             },{
                 "PodId": "2",
                 "logoclass": "tldlogo-dot-xyz",                
