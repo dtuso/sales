@@ -1,11 +1,11 @@
 ---
 location: sales/ssl/ssl-certificates.aspx
 url: http://www.dev-godaddy.com/ssl/ssl-certificates.aspx
-id: 53bdb366f778fc18643f928d
+id: 53bf0a8ff778fc0968b4f08c
 name: FOS-21698
 assetPath: false
 comments: updated countries offering sitelock and language tokens
-splitSide: 1212.A
+splitSide: false
 ---
 
 {% extends 'layouts/base.html' %}
@@ -13,7 +13,7 @@ splitSide: 1212.A
   {% parent %}
   <style type="text/css">
   {% less %}
-  {% include 'css/styles.less' %}  
+  {% include 'css/styles.less' %}
   .select-box-body label span.duration {
       text-align: left;
       width: 4em;
@@ -23,12 +23,12 @@ splitSide: 1212.A
       margin-right: 5.3em;
     }
     .bv-loading {
-      font-size: 23px; 
+      font-size: 23px;
       padding: 20px;
       font-weight: bold;
       color: #666;
       text-align: center;
-    }    
+    }
     ul.plan-pricing-list > li {
       padding-top: 5px;
     }
@@ -50,9 +50,15 @@ splitSide: 1212.A
       $('.select-box').setSelectBox();
       $('.tab-link').tabLinks();
       $('.move').scrollToSection();
+      $('.rating-stars-init').ratingStars();
     });
 
   </script>
+
+  ##if(activeLanguageAny(en))
+  {% include '_load-reviews-js.html' %}
+  ##endif
+
 {% endblock %}
 
 {% block body %}
@@ -82,7 +88,7 @@ splitSide: 1212.A
     </section>
     <!-- End main-banner -->
 
-    {% include '_main-tabs-no-BV.html' %}
+    {% include '_main-tabs.html' %}
 
 
     <!-- Start main-tabs panes -->
@@ -135,7 +141,7 @@ splitSide: 1212.A
                   <ul class="plan-pricing-list plan-pricing-list-alternate">
                     <li>[@L[cds.sales/gd/ssl/ssl-certificates:plansPricingExampleLabel]@L]</li>
                     <li>SiteProtection.com</li>
-                    <li>SecureMyWebsites.net</li>
+                    <li>Cart.SiteProtection.com</li>
                   </ul>
                 </div>
             </div><!-- col-xs-4 -->
@@ -353,92 +359,7 @@ splitSide: 1212.A
     </div>
 
     ##if(activeLanguageAny(en))
-    
-
-<div class="modal fade" id="login-modal">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <form method="POST" id="g-modal-loginAcct-form" action="[@T[link:<external parammode="explicit" linktype="SSOURL" secure="true" />]@T]/login.aspx?spkey=[@T[sso:spkey]@T]&target=[@T[link:<external linktype='siteurl' path='/ssl/ssl-certificates.aspx' secure='false' parammode='explicit'/>]@T]#reviews">
-            <input type="hidden" value="LOGIN" name="LOGIN" />
-            <input type="hidden" value="1" name="verifyShopper" />
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title">Please login to access your account</h4>
-                </div>
-                <div class="modal-body">
-                    <input type="text" id="loginName" name="loginName" autocomplete="off" placeholder="[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Headers.UtilityBar.Username]@L]" />
-                    <input type="password" id="password" name="password" autocomplete="off" placeholder="[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Headers.UtilityBar.Password]@L]" />
-                    <a href="[@T[link:<external linktype="SSOURL" path="/account/accountRetrieval.aspx" secure="true"/>]@T]" class="forgot-pass">[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Headers.UtilityBar.ForgotPassword]@L]</a>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                    <input class="btn btn-primary" type="submit" value="[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Headers.UtilityBar.SignIn]@L]"/>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
+    {% include '_login-modal.html' %}
     ##endif
-
-{% endblock %}
-
-{% block footer %}
-  <script src="[@T[link:<javascriptroot />]@T]fos/lib/solazy/jquery.solazy.1.2.1.min.js" type="text/javascript" ></script>
-  <script>
-    $(function () {
-      var hash = window.location.hash;
-      hash && $('a[href="' + hash + '"]').tab('show');
-      window.addEventListener('hashchange', function() {
-        var changedHash = window.location.hash;
-        changedHash && $('a[href="' + changedHash + '"]').tab('show');
-      }, false);
-      $('.equal-height').setColumnsEqualHeight();
-      $('.select-box').setSelectBox();
-      $('.tab-link').tabLinks();
-      $('.move').scrollToSection();
-      $('.rating-stars-init').ratingStars();
-    });
-
-  </script>
-
-  ##if(activeLanguageAny(en))
-  <script type="text/javascript">
-    var loadReviews = function(){
-      if (typeof $BV != "undefined") {
-        $BV.configure("global", {
-          allowSamePageSubmission: true,
-          userToken: "[@P[userControl:<Data location="~/Shared/BazaarVoice/SessionUserToken.ascx"></Data>]@P]",
-          doLogin: function(successCallback, successUrl) {
-            $('#login-modal').modal();
-          },
-          doScrollSubmission: function () {
-            return false;
-          }
-        });
-        $BV.ui("rr", "show_reviews", {
-          productId: "ssl-certificates",
-          num: 4,
-          doShowContent: function() {
-            $('.bv-loading').hide();
-          }
-        });
-      }
-    };
-    $('a[href="#reviews"]').on('shown.bs.tab', function (e) {
-      e.preventDefault();
-      (function() {
-        if (!document.getElementById('bvapi')) {
-          var bv = document.createElement('script');
-          bv.type = 'text/javascript';
-          bv.id = 'bvapi';
-          bv.async = true;
-          bv.src = '[@P[userControl:<Data location="~/Scripts/BVScriptUrlOnly.ascx"></Data>]@P]';
-          bv.onload = loadReviews;
-          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(bv);
-        }
-      })();
-    });
-</script>
-  ##endif
 
 {% endblock %}
