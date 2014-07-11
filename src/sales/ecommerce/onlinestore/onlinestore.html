@@ -1,8 +1,8 @@
 ---
 location: sales/ecommerce/onlinestore.aspx
-id: 53a09b70f778fc1f147d43a7
-name: FOS-20286
-comments: Initial page creation
+id: null
+name: FOS-23085
+comments: next phase of iterative development work
 url: http://www.dev-godaddy.com/ecommerce/onlinestore.aspx
 assetPath: false
 ---
@@ -11,111 +11,1116 @@ assetPath: false
 
 {% block metahead %}  
   {% parent %}
+
   <!-- css-elevate-target -->
+
+<!-- start-css-elevate -->
+<style>  
+{% less %}
+
+  @imgPath : '[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/ecommerce/onlinestore/img/';
+
+  div[role="main"] {
+    background-color: #fff;
+  }
+  .alt-bgcolor {background-color: rgb(251,247,245);}
+  .light-section-bgcolor {background-color: white;}
+
+  .background-container {
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 1000px;
+  } 
+
+  .background-container-repeat-x {
+    background-position: center top;
+    background-repeat: repeat-x;
+    min-width: 1000px;
+  } 
+
+  .gd-nav-container {
+    margin: 0 auto;
+    position: relative;
+    width: 1000px;
+  }
+  .gd-swipe-wrap {
+    overflow: hidden;
+    position: relative;
+  }
+  .gd-swipe-wrap > div {
+    float: left;
+    position: relative;
+    top: 0;
+    width: 100%;
+  }
+  .gd-swipe {
+    margin: 0 auto;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .gd-swipe-bottom-nav {
+    position: relative;
+    text-align: center;
+  }
+  .gd-swipe-bottom-nav a[data-slide="prev"], .gd-swipe-bottom-nav a[data-slide="next"] {
+    position: relative;
+    top: -2px;
+  }
+  .gd-swipe-bottom-nav ul {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+  }
+  .gd-swipe-bottom-nav li {
+    display: inline-block;
+    overflow: hidden;
+    padding: 15px;
+    position: relative;
+  }
+  .gd-swipe-bottom-nav li a {
+
+    background: transparent ~"url(@{imgPath}icons_sprite.png)" no-repeat -24px -126px;
+    color: #dadada;
+    display: block;
+    height: 12px;
+    width: 13px;
+    text-decoration: none;
+    text-indent: -9999em;
+  }
+  .gd-swipe-bottom-nav li.active a {
+    background: transparent ~"url(@{imgPath}icons_sprite.png)" no-repeat -3px -126px;
+    color: #70ac00;
+  }
+  a.arrow-right {
+    background: url("http://img2.wsimg.com/fos/businessmarketing/static/images/lp_sprite_2.png") no-repeat scroll 22px -28px transparent;
+    display: block;
+    height: 60px;
+    outline: 0 none;
+    position: absolute;
+    right: -60px;
+    text-decoration: none;
+    text-indent: -9999em;
+    top: 140px;
+    width: 60px;
+    z-index: 1;
+  }
+  a.arrow-left {
+    background: url("http://img2.wsimg.com/fos/businessmarketing/static/images/lp_sprite_2.png") no-repeat scroll -30px -28px transparent;
+    display: block;
+    height: 60px;
+    left: -60px;
+    outline: 0 none;
+    position: absolute;
+    text-decoration: none;
+    text-indent: -9999em;
+    top: 140px;
+    width: 60px;
+    z-index: 1;
+  }
+  .arrow-left:hover, .arrow-right:hover {
+    background-color: #ededed;
+    transition: all 0.3s ease-in-out 0s;
+  }
+
+  .rounded-small {
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px; /* future proofing */
+    -khtml-border-radius: 4px; /* for old Konqueror browsers */
+  }
+  .rounded-medium {
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px; /* future proofing */
+    -khtml-border-radius: 7px; /* for old Konqueror browsers */
+  }
+  .rounded-large {
+    -moz-border-radius: 11px;
+    -webkit-border-radius: 11px;
+    border-radius: 11px; /* future proofing */
+    -khtml-border-radius: 11px; /* for old Konqueror browsers */
+  }
+  .center-text {
+    text-align: center;
+  }
+  .left-text {
+    text-align: left;
+  }
+  .right-text {
+    text-align: right;
+  }
+  .center-vert-wrapper {
+    display: table;
+    height: 100%;
+  }
+  .center-vert-cell {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  a.call-to-action {
+    margin-top: 22px;
+    margin-bottom: 5px;
+    padding: 6px 100px 3px;
+    font-size: 18px;
+    font-weight: 600px;
+  }
+
+  p.inline-disclaimer {
+    font-size: 15px;
+    font-weight: 300;
+    color: #fff;    
+  } 
+
+{% endless %}
+</style>
+<!-- end-css-elevate -->
+
 {% endblock %}
 
 
 {% block body %}
 
-  <!-- start-css-elevate -->
+  <!------------------------------------>
+  <!--           MARQUEE              -->
+  <!------------------------------------>
+    <!-- start-css-elevate -->
   <style>  
   {% less %}
-    .alt-bgcolor {background-color: rgb(251,247,245);}
-    .light-section-bgcolor {background-color: white;}
-    .wider-container {width: 1020px;margin: 0 auto;padding:0px 70px;}
-    .thou-container {width: 1000px;margin: 0 auto;}
+
+    @imgPath : '[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/ecommerce/onlinestore/img/';
+
+    .main-banner-onlinestore {
+      position: relative; /* for the corner ribbon to show */
+      padding-top: 50px;
+      background-image: ~"url(@{imgPath}header_nemo.jpg)";
+    }
+    .main-banner-onlinestore a.call-to-action {
+      padding: 6px 100px 3px;
+    }
+
+    .main-banner-title {
+      text-transform: uppercase;
+      font-weight: 300;
+      font-family: 'HelveticaNeue-CondensedBold','Helvetica Neue',Helvetica,Arial,sans-serif;
+      font-size: 24px;
+    }
+    .main-banner-subtitle {
+      color: #fff;
+      margin: 0px;
+      font-weight: 100;
+      font-size: 54px;
+    }
+    p.main-banner-subtitle {
+      color: #fff;
+      font-weight: 600;
+      font-size: 54px;
+    }
+    p.inline-disclaimer {
+      font-size: 15px;
+      font-weight: 300;
+      color: #fff;    
+    } 
+    .main-banner-onlinestore p.pricing {
+      margin: 0px;
+      color: #ffcc22;
+      font-weight: 600px;
+      font-size: 24px;
+      margin-top:5px;
+    }
+    .main-banner-onlinestore span.save-percentage,
+    .main-banner-onlinestore span.old-price {
+      display: none;
+      color: #fff;
+    }
+    .marquee-bottom-spacer {
+      background-color: #f3f0EB;
+      height: 1px;
+    }
+    .floating-features {
+      background-color: white; 
+      position: relative;
+      z-index: 2; /* floating section */
+      margin-top:-100px;  /* moves items up over the split backgrounds above ita */
+      min-height:200px;
+      padding: 30px 0;
+    }
+    .feature-item-img {
+      height: 60px;
+      width: 60px;
+      margin: 0 auto;
+      background: transparent ~"url(@{imgPath}icons_sprite.png)" no-repeat ;
+    }
+    .feature-item-img-setup {
+      background-position: -2px -2px;
+    }
+    .feature-item-img-paid {
+      background-position: -64px -2px;
+    }
+    .feature-item-img-track {
+      background-position: -2px -63px;
+    }
+    .feature-item-img-shipping {
+      background-position: -64px -63px;
+    }
+    .feature-item-text {
+      color: #333;
+      font-size: 18px;
+      text-align: center;
+      width: 140px;
+      margin: 10px auto 0;
+    }
+
   {% endless %}
   </style>
   <!-- end-css-elevate -->
+  <section class="container background-container main-banner-onlinestore">
 
+    <span class="left-corner-ribbon money-back-guarantee-light [@T[localization:<language full="true" />]@T] [@T[localization:<language />]@T]"></span>
 
-  <!-- MARQUEE -->
+    <div class="container l-main-container center-text">
+      <div class="row">
+        <h1 class="main-banner-title">Online Store</h1>
+        <h3 class="main-banner-subtitle">Build your store today.</h3>
+        <p class="main-banner-subtitle">Start selling tonight.</p>
+        <p class="pricing">
+          As low as <span class="old-price"><strike>{1}/mo</strike>* </span><span class="normal-price">{0}/mo</span> <span class="save-percentage">Save {2}%</span>        
+        </p>
+        
+        <a data-ci="111" class="btn btn-primary call-to-action cta-small" href="/ecommerce/onlinestore-config.aspx">Get Started</a>
 
-  <section class="main-banner-onlinestore">
-    <div class="row wider-container">
-      <h1 class="main-banner-title">[@L[cds.sales/gd/ecommerce/onlinestore:onlineStore]@L]</h1>
-      <h2 class="main-banner-subtitle">[@L[cds.sales/gd/ecommerce/onlinestore:subtitle]@L]</h2>
-      <a data-ci="111" class="btn btn-primary cta-medium" href="/ecommerce/onlinestore.aspx">[@L[cds.sales/gd/ecommerce/onlinestore:btn-GetStarted]@L]</a>
-      <div class="pricing">
-        <p class="just-per-mo">[@L[cds.sales/gd/ecommerce/onlinestore:justPricePerMonth]@L]</p>
-        <p class="save-percentage"><strike>{0}</strike> [@L[cds.sales/gd/ecommerce/onlinestore:savePercentage]@L]</p>
+        <p class="inline-disclaimer">*Current renewal price</p>
+        
+        <div style="height:105px"></div>
+
       </div>
-    </div>  
+
+    </div>
+
+  </section>
+   
+  <div class="container marquee-bottom-spacer">
+    <!-- floating white feature bullets -->
+    <div class="container l-main-container floating-features rounded-small">
+      <div class="row">
+        <div class="col-xs-3 feature-item">
+          <div class="feature-item-img feature-item-img-setup"></div>
+          <div class="feature-item-text">Incredibly easy setup and design</div>
+        </div>
+        <div class="col-xs-3 feature-item">
+          <div class="feature-item-img feature-item-img-paid"></div>
+          <div class="feature-item-text">Get paid without the hassle</div>
+        </div>
+        <div class="col-xs-3 feature-item">
+          <div class="feature-item-img feature-item-img-track"></div>
+          <div class="feature-item-text">Track your inventory</div>
+        </div>
+        <div class="col-xs-3 feature-item">
+          <div class="feature-item-img feature-item-img-shipping"></div>
+          <div class="feature-item-text">Set up shipping your way</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!------------------------------------>
+  <!--     CUSTOMER CAROUSEL 2014Q3   -->
+  <!------------------------------------>
+  <!-- start-css-elevate -->
+  <style>  
+    {% less %}
+
+    @imgPath : '[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/ecommerce/onlinestore/img/';
+
+    .customer-carousel-bottom-spacer {
+      background-color: #fff;
+      height: 270px; 
+    }
+    .carousel-floater { 
+      position: relative;
+      z-index: 2; /* floating section */
+      margin-top:-710px; /* moves items up over the split background above it*/
+    }
+    .carousel-floater .customer-carousel-title { 
+      margin-top: 25px;
+      font-size: 36px;
+    }
+    .carousel-floater .customer-carousel-subtitle { 
+      font-size: 16px;
+      margin: 5px 0 40px;
+    }
+    .main-customer-carousel-img {
+      background-image: ~"url(@{imgPath}marquee_pattern.jpg)"; 
+      height: 568px;
+    }
+
+    .main-customer-carousel p {
+      font-size: 16px;
+    }
+
+    .customer-slide {
+      width: 939px;
+      height: 451px;
+      background-repeat: no-repeat;
+    }
+
+
+    .customer-testimonial {
+      text-align: left;
+      background-color: white;
+    }
+    .customer-image {
+      display: block;
+      width: 193px;
+      height: 201px;
+      margin-right: 45px;
+    }
+    .left-align {
+      float: left;
+    }
+    .customer-quote {
+      margin-top: 45px;
+      color: #7db701; /*#c8d2dc*/
+      font-size: 20px;
+    }
+    .customer-byline {
+      margin-top: 15px;
+      font-size: 16px;
+    }
+
+
+  {% endless %}
+
+  </style>
+  <!-- end-css-elevate -->
+  <section class="main-customer-carousel">
+
+    <div class="container background-container-repeat-x main-customer-carousel-img"></div>
+
+    <div class="container customer-carousel-bottom-spacer"></div>
+
+    <div class="container l-main-container carousel-floater">  
+
+      <div class="row center-text">      
+        <div class="col-xs-12">
+
+          <h2 class="customer-carousel-title">Real customers. Real sites.</h2>
+          <h3 class="customer-carousel-subtitle">Our customers love Online Store</h3>
+
+        </div> 
+      </div> 
+      <div class="row">
+        <div class="col-xs-12">
+
+          <div id="customer-slider">
+            <div class="gd-nav-container">
+              <div class="gd-swipe">
+                <div class="gd-swipe-wrap">
+                  <div class="gd-swipe-item solazy customer-slide slide-1" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/ecommerce/onlinestore/img/laptop_carrousel1.png" data-sl-method="background">
+                  </div>
+                  <div class="gd-swipe-item solazy customer-slide slide-2" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/ecommerce/onlinestore/img/laptop_carrousel2.png" data-sl-method="background">
+                  </div>
+                  <div class="gd-swipe-item solazy customer-slide slide-3"  data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/ecommerce/onlinestore/img/laptop_carrousel3.png" data-sl-method="background">
+                  </div>
+                  <div class="gd-swipe-item solazy customer-slide slide-4"  data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/ecommerce/onlinestore/img/laptop_carrousel2.png" data-sl-method="background">
+                  </div>
+                </div>
+              </div>
+              <a href="#" data-slide="prev" class="arrow-left" id="customer-headerPrev" data-ci="111">
+              [@L[cds.sales/gd/ecommerce/onlinestore:previous]@L]</a>
+              <a href="#" data-slide="next" class="arrow-right" id="customer-headerNext" data-ci="111">
+              [@L[cds.sales/gd/ecommerce/onlinestore:next]@L]</a>
+              <div class="gd-swipe-bottom-nav"></div>
+            </div>
+          </div> <!-- end id slicer -->
+
+        </div>      
+      </div> 
+
+      <div class="row">
+        <div class="col-xs-1"></div>
+        <div class="col-xs-10 clearfix customer-testimonial">
+          <img class="customer-image left-align" src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/ecommerce/onlinestore/img/testimonial_image.png" alt="Customer face">
+          <div class="">
+            <div class="customer-quote">"I love my site just as much as my products! It's so much better than my old Etsy store, because it's a reflection of me!"</div>
+            <div class="customer-byline">&dash; Katie Lewis, founder of <a href="http://snap-bibs.com" target="_blank">snap-bibs.com</a></div>
+          </div>
+
+        </div>
+        <div class="col-xs-1"></div>
+      </div>
+
+
+    </div>
+    
   </section>
 
-  <!-- CUSTOMER CAROUSEL 2014Q3 -->
+  <!------------------------------------>
+  <!--        PRODUCT VIDEO           -->
+  <!------------------------------------>
+  <!-- start-css-elevate -->
+  <style>  
+  {% less %}
+
+    .main-product-video {
+      /*position: relative; /* for the corner ribbon to show */
+      margin-top: 60px;
+      background-color: #f3f0eb;  
+    }
+    .main-product-video .l-main-container {
+      padding-top: 75px;  
+    }
+    
+    .main-product-video h2 {
+      font-weight: 600;
+      font-size: 36px;
+    }
+    
+    .main-product-video p {
+      font-size: 16px;
+    }
 
 
-  <!-- FEATURE BULLETS -->
+    .main-product-video .office-video{
+      background-repeat: no-repeat;
+      width: 944px;
+      height: 502px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 20px;
+    }
+
+    .main-product-video .office-video-click-wrapper{
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+
+    }
+
+    .main-product-video .play-button{
+      width: 60px;
+      height: 60px;
+      display: block;
+      top: 190px;
+      left: 50%;
+      margin-left: -30px;
+      position: relative;
+      background: url('http://img1.wsimg.com/fos/201401/global/img/ico-s92c4580b2f.png')  no-repeat 0px -737px;
+
+    }
+
+    .main-product-video .office-video p{
+      color: #FFFFFF;
+      position: relative;
+      font-size: 2.3em;
+      font-weight: 500;
+      text-align: center;
+      top: 200px;
+    }
+
+    .main-product-video .slv-hidden{
+      display: none;
+    }
+
+    .main-product-video .slv-show{
+      display: inline-block;
+      position: relative;
+      top: 0px;
+      left: 0px;
+    }
 
 
-  <!-- PRODUCT VIDEO -->
+  {% endless %}
+  </style>
+  <!-- end-css-elevate -->
+  <section class="main-product-video">
+
+    <div class="container l-main-container center-text">
+      <div class="row">
+        <div class="col-xs-2"></div>
+        <div class="col-xs-8">
+          <h2>Built for business owners, not designers</h2>
+          <p>You don’t need to be a computer expert to build your store with us. Just pick your favorite design (we have hundreds to choose from), add your products and payment details and click Publish.</p>
+          <p><strong>Congrats! Your online store is open for business.</strong></p>
+        </div>
+        <div class="col-xs-2"></div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+
+          <div class="office-video solazy" data-sl-method="background" data-sl-src="http://img1.wsimg.com/fos/office365/office-052014/img/video-player.png">
+            <div class="office-video-click-wrapper" data-ci="91167">
+              <div class="embedVideo slv slv-hidden" data-slv-video-id="xvK76H9olXM"></div>
+              <span class="play-button"></span>
+              <p>Watch Video</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!------------------------------------>
+  <!--  FEATURE CONTENT PAYMENT TYPES -->
+  <!------------------------------------>
+  <!-- start-css-elevate -->
+  <style>  
+  {% less %}
+
+    .main-payment-types {
+      background-color: #f3f0eb;       
+      padding-top: 50px; 
+    }
+
+    .main-payment-types h2 {
+      margin-top: 95px;
+    }
+
+    .transaction-fee {
+      color: #7db701;
+    }
+    .payment-options-image-div {
+      height: 425px;
+      overflow: hidden;
+    }
+
+  {% endless %}
+  </style>
+  <!-- end-css-elevate -->
+  <section class="container main-payment-types">
+
+    <div class="container l-main-container">
+
+      <div class="col-xs-6">
+
+        <div class="payment-options-image-div">
+          <img src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/ecommerce/onlinestore/img/payment_options.png" alt="Logos of payment types">
+        </div>
+
+      </div>
+
+      <div class="col-xs-6">
+        
+        <h2>Boost sales with more payment options.</h2>
+
+        <p>Built-in credit card processing from Stripe lets customers pay the way they want. Easily accept credit and debit cards, PayPal, recurring payments, even international cards – all with no monthly fees, no refund costs and no charges for failed transactions, so you keep more of what you earn.</p>
+
+        <p><strong class="transaction-fee">2.9% + 30c per transaction</strong> or less by volumn</p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!------------------------------------>
+  <!--       CALL TO ACTION BAR       -->
+  <!------------------------------------>
+  <!-- start-css-elevate -->
+  <style>  
+  {% less %}
+    .main-call-to-action-bar {
+      background-color: #7db701;
+    }
+
+    .main-call-to-action-bar > div {
+      padding: 20px 0;
+    }
+
+    .main-call-to-action-bar a.call-to-action {
+      padding: 6px 25px 3px;
+      margin-top: 5px;
+    }
+
+    .main-call-to-action-bar p.pricing {
+      margin: 0px !important;
+      color: #fff;
+      font-weight: 600px;
+      font-size: 24px;
+      margin-top:5px;
+    }
+
+    .main-call-to-action-bar p.pricing span.so-easy {
+      color: #333 !important;
+    }
+
+    .main-call-to-action-bar span.save-percentage,
+    .main-call-to-action-bar span.old-price {
+      display: none;
+    }
+
+    .main-call-to-action-bar p.inline-disclaimer {
+      font-size: 14px;
+      margin: 0px;
+    } 
+  {% endless %}
+  </style>
+  <!-- end-css-elevate -->
+  <section class="main-call-to-action-bar">
+
+    <div class="container l-main-container center-text">
+
+      <p class="pricing">
+        <span class="so-easy">So easy to set up, <strong>you can make money today.</strong></span> As low as <span class="old-price"><strike>{1}/mo</strike>* </span><span class="normal-price">{0}/mo</span> <span class="save-percentage">Save {2}%</span>
+      </p>
+
+      <a data-ci="111" class="btn btn-warning call-to-action cta-small" href="onlinestore-config.aspx">Start Now</a>
+
+      <p class="inline-disclaimer">*Current renewal price</p>
+
+    </div>
+
+  </section>
+
+  <!------------------------------------>
+  <!--        TOOLS CAROUSEL          -->
+  <!------------------------------------>
+
+  <!-- start-css-elevate -->
+  <style>  
+    {% less %}
+    .main-tools-carousel {
+      background-color: #f3f0eb;
+      padding-top: 95px;
+    }
+    .main-tools-carousel h2.tools-carousel-title { 
+      margin: 0 0 35px;
+    }
+    .tools-slide {
+      width: 970px;
+      height: 608px;
+      padding: 70px 230px;
+    }
+    .tools-slide p {
+      font-size: 16px;
+      margin-bottom: 55px;
+    }
+    .tools-slide h3 {
+      font-size: 24px;
+      color: #ff8234;
+    }
+    .tools-slide img {
+      width:500px;
+      height:343px;
+    }
+    .main-tools-carousel .gd-nav-container {
+      background-color: #fff;
+    }
+
+    .main-tools-carousel .gd-nav-container a.arrow-left,
+    .main-tools-carousel .gd-nav-container a.arrow-right {
+      top:275px;
+    }
+  {% endless %}
+  </style>
+  <!-- end-css-elevate -->
+  <section class="main-tools-carousel">
+
+    <div class="container l-main-container center-text">  
+     
+      <h2 class="tools-carousel-title">Build your business with the right tools.</h2>
+
+      <div id="tools-slider">
+        <div class="gd-nav-container">
+          <div class="gd-swipe">
+            <div class="gd-swipe-wrap">
+              <div class="gd-swipe-item solazy tools-slide slide-1">
+                <h3 class="">Sell on Facebook<sup>&reg;</sup>.</h3>
+                <p>Create a store on Facebook in less than a minute and keep it synced to your main store automatically.</p>
+                <img src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/ecommerce/onlinestore/img/sell_facebook.png" />
+              </div>
+              <div class="gd-swipe-item solazy tools-slide slide-2">
+                <h3 class="">Sell on Google<sup>&reg;</sup>.</h3>
+                <p>Create a store on Google in less than a minute and keep it synced to your main store automatically.</p>
+                <img src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/ecommerce/onlinestore/img/sell_facebook.png" />
+              </div>
+            </div>
+          </div>
+          <a href="#" data-slide="prev" class="arrow-left" id="tools-headerPrev" data-ci="111">
+          [@L[cds.sales/gd/ecommerce/onlinestore:previous]@L]</a>
+          <a href="#" data-slide="next" class="arrow-right" id="tools-headerNext" data-ci="111">
+          [@L[cds.sales/gd/ecommerce/onlinestore:next]@L]</a>
+          <div class="gd-swipe-bottom-nav"></div>
+        </div>
+      </div> <!-- end id tools-slider -->
+
+    
+    </div>
+    
+  </section>
+
+  <!------------------------------------>
+  <!--     FEATURE CONTENT DESIGNS    -->
+  <!------------------------------------>
+  <!-- start-css-elevate -->
+  <style>  
+  {% less %}
+    .main-content-designs-top {
+      padding: 90px 0 30px;
+      background-color: #f3f0eb;    
+    }
+    .main-content-designs-bottom {
+      padding: 90px 0 115px;
+      background-color: #fff;    
+    }
+    .main-content-designs-bottom h2 {
+      margin-bottom: 12px;
+    }
+    .main-content-designs-bottom p {
+      margin: 0px;
+    }
+
+  {% endless %}
+  </style>
+  <!-- end-css-elevate -->
+  <section class="main-content-designs-top">
+
+    <div class="container l-main-container">  
+      <img src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/ecommerce/onlinestore/img/designs_customers_love.png" />
+    </div>
+
+  </section>  
+  <section class="main-content-designs-bottom">
+
+    <div class="container l-main-container center-text"> 
 
 
-  <!-- FEATURE CONTENT 1 -->
+      <div class="col-xs-2"></div>
+
+      <div class="col-xs-8">
+        <h2>Designs your customers will love.</h2>
+        <p>Our professional designers have created hundreds of stunning, ready-to-go web stores to choose from, then add your own personal touch. Best of all, every design is mobile friendly, so your store looks great on smartphones as well as big monitors.</p>
+      </div>
+
+      <div class="col-xs-2"></div>
+  
+    </div>
+
+  </section>
+
+  <!------------------------------------>
+  <!--    FEATURE CONTENT SHIPPING    -->
+  <!------------------------------------>
+  <!-- start-css-elevate -->
+  <style>  
+  {% less %}
+    @imgPath : '[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/ecommerce/onlinestore/img/';
+    .main-content-shipping {
+      background-color: #f3f0eb;
+      padding: 90px 0 0;
+    }
+    .main-content-shipping h2 {
+      margin: 0 0 15px;
+    }
+    .main-content-shipping p {
+      font-weight: 16px;
+      margin-bottom: 0px;
+    }
+
+    .shipping-icon {
+      width: 82px;
+      height: 81px;
+      margin: 0 auto;
+      background: transparent ~"url(@{imgPath}icons_sprite.png)" no-repeat ;
+    }
+    .shipping-barcode {
+      background-position: -127px -170px;
+
+    }
+    .shipping-arrow {
+      width: 42px;
+      height: 29px;
+      margin: 26px 0 0 20px;
+      background-position:-3px -141px; 
+    }
+    .shipping-truck {
+      background-position: -127px -85px;
+
+    }
+    .shipping-dropoff {
+      background-position: -127px -2px;
+    }
+    .shipping-icons {
+      margin-top:40px;
+    }
+  {% endless %}
+  </style>
+  <!-- end-css-elevate -->
+  <section class="main-content-shipping">
+
+    <div class="container l-main-container">
+      <div class="row">
+
+        <div class="col-xs-5">
+          <h2>Shipping that fits your customers.</h2>
+          <p>Packages come in all shapes and sizes – and your shipping options should reflect that. Online Store lets you choose the type of shipping that fits your products and customers: fixed rate, by weight, percentage of sale, even free shipping.</p>
+        </div>
+        <div class="col-xs-7">
+          <div class="row shipping-icons">
+            <div class="col-xs-2"></div>
+            <div class="col-xs-2">
+              <div class="shipping-icon shipping-barcode"></div>
+            </div>
+            <div class="col-xs-2">
+              <div class="shipping-icon shipping-arrow"></div>
+            </div>
+            <div class="col-xs-2">
+              <div class="shipping-icon shipping-truck"></div>
+            </div>
+            <div class="col-xs-2">
+              <div class="shipping-icon shipping-arrow"></div>
+            </div>
+            <div class="col-xs-2">
+              <div class="shipping-icon shipping-dropoff"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!------------------------------------>
+  <!--   PLAN TIER (What's Included)  -->
+  <!------------------------------------>
+  <!-- start-css-elevate -->
+  <style>  
+  {% less %}
+    @imgPath : '[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/ecommerce/onlinestore/img/';
+
+    .main-plan-tiers {
+      background-color: #f3f0eb;
+      padding: 95px 0 70px;
+    }
+
+    .main-plan-tiers h2 {
+      margin:55px 0 10px;
+    }
+
+    .main-plan-tiers h3 {
+      text-transform: uppercase;
+      color: #ff8234;
+      margin-bottom: 35px;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .main-plan-tiers div.no-padding {
+      padding: 0px;
+    }
+    .main-plan-tiers p.pricing {
+      margin: 180px 0 10px 0 !important;
+      color: #fff;
+      font-weight: 600px;
+      font-size: 18px;
+    }
+    .main-plan-tiers p.inline-disclaimer {
+      font-size: 14px;
+    } 
+
+    .main-plan-tiers span.save-percentage,
+    .main-plan-tiers span.old-price {
+      display: none;
+    }
+    .main-plan-tiers span.old-price {
+      font-weight: 300px;
+    }
+    .main-plan-tiers a.call-to-action {
+      padding: 6px 25px 3px;
+      margin-top: 5px;
+    }
+
+    .main-plan-tiers ul.checkmark-bullets { 
+      margin: 0 50px 50px;
+      font-size: 14px;
+    }
+    .main-plan-tiers ul.checkmark-bullets li { 
+      list-style: none outside none;
+      margin-bottom: 20px;
+    }
+
+    .included-calltoaction {
+      text-align: center;
+    }
+    .included-calltoaction a {
+      font-size: 14px;
+    }
+    .included-light-bg {
+      background-color: #fff;
+    }
+    .included-highlighted-bg {
+      height: 100%;
+      background-color: #7db701;
+    }
+    .main-plan-tiers div.checkmark-icon {
+      width: 29px;
+      height: 29px;
+      margin: 0 auto;
+      background: transparent ~"url(@{imgPath}icons_sprite.png)" no-repeat -47px -126px;
+    }
+  {% endless %}
+  </style>
+  <!-- end-css-elevate -->
+  <section class="container main-plan-tiers">
+    
+    <div class="container l-main-container center-text included-highlighted-bg">
+
+      <div class="col-xs-9 included-light-bg">
+
+        <h2>What's Included?</h2>
+        <h3 class="included-subtitle">Packed with goodies to make your online store a success.</h3>
+          
+        <div class="row left-text">
+          <div class="col-xs-6">
+            <ul class="checkmark-bullets">
+              <li><table cellspacing="0" cellpadding="0" border="0"><tr><td valign="top" width="50px"><div class="checkmark-icon"></div></td>
+                <td valign="top">Unlimited products and bandwidth</td></tr></table></li>
+              <li><table cellspacing="0" cellpadding="0" border="0"><tr><td valign="top" width="50px"><div class="checkmark-icon"></div></td>
+                <td valign="top">10 images per product</td></tr></table></li>              
+              <li><table cellspacing="0" cellpadding="0" border="0"><tr><td valign="top" width="50px"><div class="checkmark-icon"></div></td>
+                <td valign="top">Stripe credit card processing -- accept all major credit cards, PayPal and more</td></tr></table></li>              
+              <li><table cellspacing="0" cellpadding="0" border="0"><tr><td valign="top" width="50px"><div class="checkmark-icon"></div></td>
+                <td valign="top">Mobile-optimized web store</td></tr></table></li>
+              <li><table cellspacing="0" cellpadding="0" border="0"><tr><td valign="top" width="50px"><div class="checkmark-icon"></div></td>
+                <td valign="top">Google Analytics</td></tr></table></li>
+              <li><table cellspacing="0" cellpadding="0" border="0"><tr><td valign="top" width="50px"><div class="checkmark-icon"></div></td>
+                <td valign="top">Expert 24/7 phone support</td></tr></table></li>
+            </ul> 
+          </div>
+          <div class="col-xs-6">
+            <ul class="checkmark-bullets">
+              <li><table cellspacing="0" cellpadding="0" border="0"><tr><td valign="top" width="50px"><div class="checkmark-icon"></div></td>
+                <td valign="top">## Web pages</td></tr></table></li>
+              <li><table cellspacing="0" cellpadding="0" border="0"><tr><td valign="top" width="50px"><div class="checkmark-icon"></div></td>
+                <td valign="top">Coupon code generator</td></tr></table></li>
+              <li><table cellspacing="0" cellpadding="0" border="0"><tr><td valign="top" width="50px"><div class="checkmark-icon"></div></td>
+                <td valign="top">Advanced CSS/JavaScript</td></tr></table></li>
+              <li><table cellspacing="0" cellpadding="0" border="0"><tr><td valign="top" width="50px"><div class="checkmark-icon"></div></td>
+                <td valign="top">Customer ratings and review functionality</td></tr></table></li>
+              <li><table cellspacing="0" cellpadding="0" border="0"><tr><td valign="top" width="50px"><div class="checkmark-icon"></div></td>
+                <td valign="top">Facebook store</td></tr></table></li>
+              <li><table cellspacing="0" cellpadding="0" border="0"><tr><td valign="top" width="50px"><div class="checkmark-icon"></div></td>
+                <td valign="top">$250 in advertising credits with Google, Facebook and Bing</td></tr></table></li>
+            </ul>
+          </div>        
+        </div>
+
+      </div>
+      <div class="col-xs-3 no-padding">
+
+        <p class="pricing">
+          As low as <span class="old-price"><strike>{1}/mo</strike>* </span>
+          <span class="normal-price"><br />{0}/mo </span> 
+          <span class="save-percentage">Save {2}%</span>
+        </p>
+
+        <a data-ci="111" class="btn btn-warning call-to-action cta-small" href="onlinestore-config.aspx">Start Now</a>
+
+        <p class="inline-disclaimer">*Current renewal price</p>
+
+      </div>
+
+    </div> 
 
 
-  <!-- CALL TO ACTION BAR -->
-
-
-  <!-- CAROUSEL -->
-
-
-  <!-- FEATURE CONTENT 2 -->
-
-
-  <!-- FEATURE CONTENT 3 -->
-
-
-  <!-- PLAN TIER (What's Included) -->
-
-
-  <!-- CAROUSEL 2014Q3 -->
-
-
+  </section>
 
 {% endblock %}
-
 {% block footer %}
-
-    <script src="[@T[link:<javascriptroot />]@T]fos/lib/gd-swipe/js/swipe-v2.1.js" type="text/javascript"></script>
-    <script src="[@T[link:<javascriptroot />]@T]fos/lib/gd-swipe/js/gd-swipe-v2.min.js" type="text/javascript"></script>
-
+  <script src="[@T[link:<javascriptroot />]@T]fos/lib/gd-swipe/js/swipe-v2.1.js" type="text/javascript"></script>
+  <script src="[@T[link:<javascriptroot />]@T]fos/lib/gd-swipe/js/gd-swipe-v2.min.js" type="text/javascript"></script>
+  <script src="[@T[link:<javascriptroot />]@T]fos/lib/solazy/jquery.solazy.1.2.1.min.js" type="text/javascript" ></script> 
   <!-- js-elevate-target -->
 
   <!-- start-js-elevate -->
-
   <script>
   {% jsminify %}
+    $(document).ready(function(){
 
-  $(document).ready(function(){
-    var tokenize = function($obj, strArr) {
+      setPricing('.main-banner-onlinestore'); // marquee
+      setPricing('.main-call-to-action-bar'); // CTA bar
+      setPricing('.main-plan-tiers'); // plan tiers
+
+      activateSlides('#tools-slider');
+      activateSlides('#customer-slider');
+
+      setVideo('.office-video-click-wrapper');
+
+    });
+
+    var tokenizeThis = function($obj, strArr) {
       var tokenized = $obj.html();
       for(var idx = 0; idx< strArr.length; idx++) {
         tokenized = tokenized.replace('{' + idx + '}', strArr[idx]);
       }
       $obj.html(tokenized);
     }
-    var currentPrice = '[@T[productprice:<template productid="7514" period="monthly"><nostrike><![CDATA[{0}]]></nostrike><strike><![CDATA[{0}]]></strike></template>]@T]';
-    var oldPrice = '[@T[productprice:<template productid="7514" period="monthly"><nostrike><![CDATA[{1}]]></nostrike><strike><![CDATA[{1}]]></strike></template>]@T]';
-    var onSale = currentPrice !== oldPrice;
-    var savePercentage = '[@T[productcompare:<percent primaryproductid="7514" secondaryproductid="7514" hidebelow="1"><html><![CDATA[{0}]]></html></percent>]@T]';
-    
-    var $permo = $('.main-banner-onlinestore div.pricing p.just-per-mo');
-    var $save =  $('.main-banner-onlinestore div.pricing p.save-percentage');
-    if(onSale) {
-      tokenize($save, [oldPrice, savePercentage]);
-      $save.show();
+
+    function setPricing(selector) {
+
+      var currentPrice = '[@T[productprice:<template productid="40941" period="monthly"><nostrike><![CDATA[{0}]]></nostrike><strike><![CDATA[{0}]]></strike></template>]@T]';
+      var oldPrice = '[@T[productprice:<template productid="40941" period="monthly"><nostrike><![CDATA[{1}]]></nostrike><strike><![CDATA[{1}]]></strike></template>]@T]';
+      var onSale = currentPrice !== oldPrice;
+      var savePercentage = '[@T[productcompare:<percent primaryproductid="40941" secondaryproductid="40941" hidebelow="1"><html><![CDATA[{0}]]></html></percent>]@T]';
+
+      savePercentage = "85";
+      onSale = true;
+      oldPrice = "$97.98";
+
+      var $pricing = $(selector + ' p.pricing');
+      tokenizeThis($pricing, [currentPrice, oldPrice, savePercentage]);
+      $pricing.show();
+
+      var onSale = currentPrice !== oldPrice;
+      if(onSale) {
+        //$(selector + ' p.pricing span.save-percentage').show();
+        $(selector + ' p.pricing span.old-price').show();
+      }
     }
-    tokenize($permo, [currentPrice]);
-    $permo.show();
 
+    function activateSlides(selector) {
 
-  });
+      var $slider = $(selector + ' .gd-swipe');  
+      $slider.attr('data-gd-swipe','{"auto":0}');
+      $slider.gdSwipe();
 
+    }
+
+    function setVideo(wrapperSelector) {
+      function config($videoContainer) {
+        var width = $videoContainer.outerWidth(),
+          height = $videoContainer.outerHeight(),
+          videoId = $videoContainer.children('.slv').data('slv-video-id'),
+          params = $videoContainer.children('.slv').data('slv-params') || '';
+
+        $videoContainer.on('click', function (e) {
+          e.preventDefault();
+          $videoContainer.html('<iframe width="' + width + '" height="' + height + '" src="//www.youtube.com/embed/' + videoId + '?autoplay=1&' + params + '" scrolling="no" frameborder="0" allowfullscreen></iframe>').removeClass('slv-hidden').addClass('slv-shown');
+        });
+
+      }
+
+      $.fn.solazyVideo = function () {
+        return this.each(function () {
+            var $videoContainer = $(this);
+            config($videoContainer);
+        });
+      };
+
+      $(wrapperSelector).solazyVideo();
+
+    }
+    
   {% endjsminify %}
   </script>
-
   <!-- end-js-elevate -->
 
 {% endblock %}
