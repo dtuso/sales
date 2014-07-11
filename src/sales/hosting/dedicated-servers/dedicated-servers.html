@@ -1,7 +1,8 @@
 ---
 location: sales/hosting/dedicated-servers.aspx
-id: 53a23557f778fc16ec1881d4
-name: FOS-9215
+id:   53bdc91ff778fc2fd06bef9e
+name: FOS-23522
+comments: removed engage chat and added liveperson chat
 ---
 {% extends 'layouts/base.html' %} 
 {% block metahead %} 
@@ -19,8 +20,8 @@ name: FOS-9215
             <strong>[@L[cds.sales/gd/hosting/dedicated-servers:uptimeGuarantee]@L]</strong>
         </p>
         <p class="main-banner-content-text-ds">
-            ##if(activeLanguageAny(en))
-                <a href="#" data-ci="88996" class="main-banner-content-link-ds chat-button-click chat-button-click-hide">[@L[cds.sales/gd/hosting/dedicated-servers:js_chatLive]@L]</a>
+            ##if(activeLanguageAny(en))                
+                 <a href="javascript:void(0);" class="main-banner-content-link-ds" data-ci="88996"><span id="lpLivePersonDedServer">[@L[cds.sales/gd/hosting/dedicated-servers:js_chatLive]@L]</span></a>
             ##endif
         </p>
         <p class="starting-at starting-at-banner starting-at-banner-ds">
@@ -2721,29 +2722,6 @@ function atl_PopUp(c, b, a) {
     var d = window.open(c, b, a);
 }
 
-function OpenChatWindow() {
-    window.open('[@T[link:<relative path="/chat/onlinechat.aspx" parammode="explicit" ><param name="diCode" value="2"/></relative>]@T]', 'chat_client', 'width=800,height=500,scrollbars=0');
-}
-
-$.ajax({
-    url: '[@T[link:<external linktype="chaturl" path="chat/arerepresentativesonline" secure="true"/>]@T]',
-    data: {
-        teamId: 2
-    },
-    dataType: 'jsonp',
-    success: function(data) {
-        if (data.result) {
-            $('.chat-button-click').removeClass('chat-button-click-hide').on("click", function(event) {
-                event.preventDefault();
-
-                OpenChatWindow();
-            });
-        } else {
-            $('.chat-button-click').addClass('chat-button-click-hide');
-        }
-    }
-});
-
 $(function () {
     if (!$('html').hasClass('lt-ie8')) {
         if ($('.embedVideo').length > 0) {
@@ -2873,5 +2851,32 @@ $(function () {
         });
     })(jQuery, window, document);
     
+
+    ##if(activeLanguageAny(en))
+
+          $(window).load(function() {
+    window.lpTagLandingPageSettings = {}; // Leave Blank
+    window.lpTagLandingPageSettings.arrLPvars = [{
+            scope: 'page',
+            name: 'unit',
+            value: 'Hosting-Dedservers'
+        }, //variable must match skill
+        {
+            scope: 'session',
+            name: 'language',
+            value: 'EN'
+        }
+    ];
+     window.lpTagLandingPageSettings.button = {
+        name: 'Hosting-Dedservers-EN',
+        pid: 'lpLivePersonDedServer'
+    };
+    var resource = document.createElement('script');
+    resource.src = "[@T[link:<javascriptroot />]@T]fos/liveperson/js/liveperson_lp_20140708.js";
+    var script = document.getElementsByTagName('script')[0];
+    script.parentNode.insertBefore(resource, script);  
+    
+});
+##endif
 </script>
 {% endblock %}
