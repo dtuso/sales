@@ -1,8 +1,8 @@
 ---
 location: sales/ssl/ssl-certificates-b
 url: http://www.dev-godaddy.com/ssl/ssl-certificates.aspx
-id: 53bdb366f778fc18643f928e
-name: FOS-21698
+id: 53c013bff778fc0968b4f0a4
+name: KAT Test
 assetPath: false
 comments: updated countries offering sitelock and language tokens
 splitSide: 1212.B
@@ -72,12 +72,6 @@ splitSide: 1212.B
     <section class="main-banner main-banner-ssl-certificate">
       <div class="l-main-container container main-banner-content main-banner-content-ssl-certificate">
         <h1 class="main-banner-title main-banner-title-alternate">[@L[cds.sales/gd/ssl/ssl-certificates:MastHeadTitle]@L]</h1>
-        ##if(activeLanguageAny(en) && !isManager())
-          <section class="rating-stars-container main-banner-rating-stars-container">
-              <div class="rating-stars-init" data-rating="5"></div>
-          </section>
-          <a class="main-banner-read-reviews main-banner-read-reviews-alternate tab-link" href="#reviews">[@L[cds.sales/gd/ssl/ssl-certificates:LabelReadReviews]@L]</a>
-        ##endif
 
         <h2 class="main-banner-subtitle main-banner-subtitle-alternate">[@L[cds.sales/gd/ssl/ssl-certificates:MastHeadSubTitle]@L]</h2>
         <ul class="main-page-main-list">
@@ -85,14 +79,14 @@ splitSide: 1212.B
           <li><strong>[@L[cds.sales/gd/ssl/ssl-certificates:MastHeadListItem2]@L]</strong></li>
         </ul>
         <span class="br"></span>
-        <a href="[@T[link:<relative path="/ssl/ssl-certificates-config.aspx"><param name="plan" value="ssl_dlx_1" /></relative>]@T]" class="btn btn-primary cta-small" data-ci="89596">[@L[cds.sales/gd/ssl/ssl-certificates:add-and-configure]@L]</a>
+        <a href="/ssl/ssl-certificates-config.aspx?plan=ssl_dlx_1" class="btn btn-primary cta-small" data-ci="89596">[@L[cds.sales/gd/ssl/ssl-certificates:add-and-configure]@L]</a>
         <p class="starting-at starting-at-banner"><span class="starting-at-above">[@L[cds.sales/gd/ssl/ssl-certificates:deluxe]@L]</span><span class="starting-at-price">[@T[productprice:<current productid="3608" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]</span>[@L[cds.sales/gd/ssl/ssl-certificates:mo]@L]</p>
 
       </div>
     </section>
     <!-- End main-banner -->
 
-    {% include '_main-tabs-no-BV.html' %}
+    {% include '_main-tabs.html' %}
 
     <!-- Start main-tabs panes -->
     <div class="tab-content no-margin-top">
@@ -113,7 +107,7 @@ splitSide: 1212.B
 
 ##if(isManager())
   <div class="alert alert-danger">
-    [@L[cds.sales/gd/ssl/ssl-certificates:SslManager]@L]
+    [@L[cds.sales/ssl/ssl-certificate:ssl-manager]@L]
   </div>
 ##endif
 
@@ -392,16 +386,13 @@ splitSide: 1212.B
             <div class="row tab-content">
               <div class="col-xs-12">
                 <div class="grid-column tab-content-column-alternate">
-                  <h2 class="h2-alternate">[@L[cds.sales/gd/ssl/ssl-certificates:MainPageContentTabContent5FAQTitle1]@L]</h2>
-                  <p>[@L[cds.sales/gd/ssl/ssl-certificates:MainPageContentTabContent5FAQList1A]@L]</p>
-                  <p>[@L[cds.sales/gd/ssl/ssl-certificates:MainPageContentTabContent5FAQList1B]@L]</p>
-                  <p>[@L[cds.sales/gd/ssl/ssl-certificates:MainPageContentTabContent5FAQList1C]@L]</p>
+                  <h2 class="h2-alternate">[@L[cds.sales/ssl/ssl-certificate:faq-first-slide-title]@L]</h2>
+                  [@L[cds.sales/ssl/ssl-certificate:faq-first-slide-content]@L]
 
                   <hr/>
 
-                  <h2 class="h2-alternate">[@L[cds.sales/gd/ssl/ssl-certificates:MainPageContentTabContent5FAQTitle2]@L]</h2>
-                  <p>[@L[cds.sales/gd/ssl/ssl-certificates:MainPageContentTabContent5FAQList2A]@L]</p>
-                  <p>[@L[cds.sales/gd/ssl/ssl-certificates:MainPageContentTabContent5FAQList2B]@L]</p>
+                  <h2 class="h2-alternate">[@L[cds.sales/ssl/ssl-certificate:faq-second-slide-title]@L]</h2>
+                  [@L[cds.sales/ssl/ssl-certificate:faq-second-slide-content]@L]
 
                   <hr/>
 
@@ -451,21 +442,6 @@ splitSide: 1212.B
 
       </div>
 
-      ##if(activeLanguageAny(en))
-      <div class="tab-pane" id="reviews">
-        <section class="tab-content-top-spacing">
-          <div class="container l-main-container">
-            <div class="row tab-content">
-            <div id="BVRRContainer"><p class="bv-loading">Loading...</p></div>
-            [@P[userControl:<Data location="~/Shared/Tabs/controls/BVReviewsNoJS.ascx"><Parameters><Parameter key="ProductId" value="ssl-certificates" /><Parameter key="ReviewNumber" value="4" /></Parameters></Data>]@P]
-            </div>
-          </div>
-        </section>
-      </div>
-      ##endif
-
-
-
     </div>
     <!-- End main-tabs panes -->
     <section class="container l-main-container content-disclaimer">
@@ -488,33 +464,6 @@ splitSide: 1212.B
       </div>
     </div>
 
-    ##if(activeLanguageAny(en))
-    
-
-<div class="modal fade" id="login-modal">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <form method="POST" id="g-modal-loginAcct-form" action="[@T[link:<external parammode="explicit" linktype="SSOURL" secure="true" />]@T]/login.aspx?spkey=[@T[sso:spkey]@T]&target=[@T[link:<external linktype='siteurl' path='/ssl/ssl-certificates.aspx' secure='false' parammode='explicit'/>]@T]#reviews">
-            <input type="hidden" value="LOGIN" name="LOGIN" />
-            <input type="hidden" value="1" name="verifyShopper" />
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title">Please login to access your account</h4>
-                </div>
-                <div class="modal-body">
-                    <input type="text" id="loginName" name="loginName" autocomplete="off" placeholder="[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Headers.UtilityBar.Username]@L]" />
-                    <input type="password" id="password" name="password" autocomplete="off" placeholder="[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Headers.UtilityBar.Password]@L]" />
-                    <a href="[@T[link:<external linktype="SSOURL" path="/account/accountRetrieval.aspx" secure="true"/>]@T]" class="forgot-pass">[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Headers.UtilityBar.ForgotPassword]@L]</a>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                    <input class="btn btn-primary" type="submit" value="[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Headers.UtilityBar.SignIn]@L]"/>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
-    ##endif
 
 {% endblock %}
 
@@ -532,49 +481,23 @@ splitSide: 1212.B
       $('.select-box').setSelectBox();
       $('.tab-link').tabLinks();
       $('.move').scrollToSection();
-      $('.rating-stars-init').ratingStars();
-    });
 
+      var $cartForm = $('.frmAddToCart'); // 3 forms
+      $cartForm.on('submit', function(e){
+
+        e.preventDefault();
+
+        var params = $(this).serialize();
+        var url = $(this).attr('action'); // includes dynamic manager params
+        url += (params) ? ((url.indexOf('?') !== -1) ? '&' : '?') + params : '';
+        window.location = url; // submit cart
+
+      });
+
+    });
+    $('.rating-stars-init').ratingStars();
+    $('.tab-link').tabLinks();
   </script>
 
-  ##if(activeLanguageAny(en))
-  <script type="text/javascript">
-    var loadReviews = function(){
-      if (typeof $BV != "undefined") {
-        $BV.configure("global", {
-          allowSamePageSubmission: true,
-          userToken: "[@P[userControl:<Data location="~/Shared/BazaarVoice/SessionUserToken.ascx"></Data>]@P]",
-          doLogin: function(successCallback, successUrl) {
-            $('#login-modal').modal();
-          },
-          doScrollSubmission: function () {
-            return false;
-          }
-        });
-        $BV.ui("rr", "show_reviews", {
-          productId: "ssl-certificates",
-          num: 4,
-          doShowContent: function() {
-            $('.bv-loading').hide();
-          }
-        });
-      }
-    };
-    $('a[href="#reviews"]').on('shown.bs.tab', function (e) {
-      e.preventDefault();
-      (function() {
-        if (!document.getElementById('bvapi')) {
-          var bv = document.createElement('script');
-          bv.type = 'text/javascript';
-          bv.id = 'bvapi';
-          bv.async = true;
-          bv.src = '[@P[userControl:<Data location="~/Scripts/BVScriptUrlOnly.ascx"></Data>]@P]';
-          bv.onload = loadReviews;
-          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(bv);
-        }
-      })();
-    });
-</script>
-  ##endif
 
 {% endblock %}
