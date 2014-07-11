@@ -665,7 +665,7 @@ var sr_js = {
                                     var oldPrimaryFirst = self.Phases.shift();
                                     eaPhase.SubPhases.push(oldPrimaryFirst);
                                 }
-                                eaPhase.Name(DomainSearchResults.Options.PhasePreRegName).Template(PhaseOptionViewModel.TemplateInfos.EarlyAccess);
+                                eaPhase.Name(DomainGetUrl.Options.PhasePreRegName).Template(PhaseOptionViewModel.TemplateInfos.EarlyAccess);
                                 var newPrimaryFirst = eaPhase.SubPhases.shift();
                                 newPrimaryFirst.Name(PhaseOptionViewModel.TemplateInfos.EarlyAccessPriority.Title).Template(PhaseOptionViewModel.TemplateInfos.EarlyAccessPriority);
                                 self.Phases.unshift(newPrimaryFirst);
@@ -1569,9 +1569,30 @@ var sr_js = {
     DomainSearchResults.ViewModel = new SearchResultsViewModel();
 
     DomainSearchResults.Init = function (options) {
+        var urlParams;
+
+        function buildQueryObject() 
+        {
+            var match,
+                pl     = /\+/g,  // Regex for replacing addition symbol with a space
+                search = /([^&=]+)=?([^&]*)/g,
+                decode = function (s) { return decodeURIComponent(s.replace(pl, " ")); },
+                query  = window.location.search.substring(1);
+
+            urlParams = {};
+            while (match = search.exec(query))
+                urlParams[decode(match[1])] = decode(match[2]);
+        }
+
         DomainSearchResults.Options = $.extend({}, DomainSearchResults.Options, options || {});
         $.ajaxSetup({ cache: false });
         var dataUrl = DomainSearchResults.AppendQueryString(DomainSearchResults.Options.GetUrl, 'area=all');
+        buildQueryObject();
+        if(urlParams['path'] != undefined || urlParams['path'] != null) {
+            if(urlParams['path'].toString() == "deals2") {
+                dataUrl += "&path=deals2";
+            }
+        }
         $.post(
           dataUrl,
           function (data) {
