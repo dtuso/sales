@@ -1,11 +1,11 @@
 ---
 location: sales/ssl/ssl-certificates.aspx
 url: http://www.dev-godaddy.com/ssl/ssl-certificates.aspx
-id: 53a9b995f778fc13248233fa
-name: FOS-21978
+id: 53bf0a8ff778fc0968b4f08c
+name: FOS-21698
 assetPath: false
-comments: Replace bad domain name
-splitSide: 1212.A
+comments: updated countries offering sitelock and language tokens
+splitSide: false
 ---
 
 {% extends 'layouts/base.html' %}
@@ -13,7 +13,7 @@ splitSide: 1212.A
   {% parent %}
   <style type="text/css">
   {% less %}
-  {% include 'css/styles.less' %}  
+  {% include 'css/styles.less' %}
   .select-box-body label span.duration {
       text-align: left;
       width: 4em;
@@ -23,12 +23,12 @@ splitSide: 1212.A
       margin-right: 5.3em;
     }
     .bv-loading {
-      font-size: 23px; 
+      font-size: 23px;
       padding: 20px;
       font-weight: bold;
       color: #666;
       text-align: center;
-    }    
+    }
     ul.plan-pricing-list > li {
       padding-top: 5px;
     }
@@ -50,9 +50,15 @@ splitSide: 1212.A
       $('.select-box').setSelectBox();
       $('.tab-link').tabLinks();
       $('.move').scrollToSection();
+      $('.rating-stars-init').ratingStars();
     });
 
   </script>
+
+  ##if(activeLanguageAny(en))
+  {% include '_load-reviews-js.html' %}
+  ##endif
+
 {% endblock %}
 
 {% block body %}
@@ -62,6 +68,12 @@ splitSide: 1212.A
     <section class="main-banner main-banner-ssl-certificate">
       <div class="l-main-container container main-banner-content main-banner-content-ssl-certificate">
         <h1 class="main-banner-title main-banner-title-alternate">[@L[cds.sales/gd/ssl/ssl-certificates:MastHeadTitle]@L]</h1>
+        ##if(activeLanguageAny(en) && !isManager())
+          <section class="rating-stars-container main-banner-rating-stars-container">
+              <div class="rating-stars-init" data-rating="5"></div>
+          </section>
+          <a class="main-banner-read-reviews main-banner-read-reviews-alternate tab-link" href="#reviews">[@L[cds.sales/gd/ssl/ssl-certificates:LabelReadReviews]@L]</a>
+        ##endif
 
         <h2 class="main-banner-subtitle main-banner-subtitle-alternate">[@L[cds.sales/gd/ssl/ssl-certificates:MastHeadSubTitle]@L]</h2>
         <ul class="main-page-main-list">
@@ -69,14 +81,14 @@ splitSide: 1212.A
           <li><strong>[@L[cds.sales/gd/ssl/ssl-certificates:MastHeadListItem2]@L]</strong></li>
         </ul>
         <span class="br"></span>
-        <a href="/ssl/ssl-certificates-config.aspx?plan=ssl_dlx_1" class="btn btn-primary cta-small" data-ci="89596">[@L[cds.sales/gd/ssl/ssl-certificates:add-and-configure]@L]</a>
+        <a href="[@T[link:<relative path="/ssl/ssl-certificates-config.aspx"><param name="plan" value="ssl_dlx_1" /></relative>]@T]" class="btn btn-primary cta-small" data-ci="89596">[@L[cds.sales/gd/ssl/ssl-certificates:add-and-configure]@L]</a>
         <p class="starting-at starting-at-banner"><span class="starting-at-above">[@L[cds.sales/gd/ssl/ssl-certificates:deluxe]@L]</span><span class="starting-at-price">[@T[productprice:<current productid="3608" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]</span>[@L[cds.sales/gd/ssl/ssl-certificates:mo]@L]</p>
 
       </div>
     </section>
     <!-- End main-banner -->
 
-    {% include '_main-tabs-no-BV.html' %}
+    {% include '_main-tabs.html' %}
 
 
     <!-- Start main-tabs panes -->
@@ -95,7 +107,7 @@ splitSide: 1212.A
 
 ##if(isManager())
   <div class="alert alert-danger">
-    [@L[cds.sales/ssl/ssl-certificate:ssl-manager]@L]
+    [@L[cds.sales/gd/ssl/ssl-certificates:SslManager]@L]
   </div>
 ##endif
 
@@ -129,7 +141,7 @@ splitSide: 1212.A
                   <ul class="plan-pricing-list plan-pricing-list-alternate">
                     <li>[@L[cds.sales/gd/ssl/ssl-certificates:plansPricingExampleLabel]@L]</li>
                     <li>SiteProtection.com</li>
-                    <li>SecureMyWebsites.net</li>
+                    <li>Cart.SiteProtection.com</li>
                   </ul>
                 </div>
             </div><!-- col-xs-4 -->
@@ -250,13 +262,16 @@ splitSide: 1212.A
             <div class="row tab-content">
               <div class="col-xs-12">
                 <div class="grid-column tab-content-column-alternate">
-                  <h2 class="h2-alternate">[@L[cds.sales/ssl/ssl-certificate:faq-first-slide-title]@L]</h2>
-                  [@L[cds.sales/ssl/ssl-certificate:faq-first-slide-content]@L]
+                  <h2 class="h2-alternate">[@L[cds.sales/gd/ssl/ssl-certificates:MainPageContentTabContent5FAQTitle1]@L]</h2>
+                  <p>[@L[cds.sales/gd/ssl/ssl-certificates:MainPageContentTabContent5FAQList1A]@L]</p>
+                  <p>[@L[cds.sales/gd/ssl/ssl-certificates:MainPageContentTabContent5FAQList1B]@L]</p>
+                  <p>[@L[cds.sales/gd/ssl/ssl-certificates:MainPageContentTabContent5FAQList1C]@L]</p>
 
                   <hr/>
 
-                  <h2 class="h2-alternate">[@L[cds.sales/ssl/ssl-certificate:faq-second-slide-title]@L]</h2>
-                  [@L[cds.sales/ssl/ssl-certificate:faq-second-slide-content]@L]
+                  <h2 class="h2-alternate">[@L[cds.sales/gd/ssl/ssl-certificates:MainPageContentTabContent5FAQTitle2]@L]</h2>
+                  <p>[@L[cds.sales/gd/ssl/ssl-certificates:MainPageContentTabContent5FAQList2A]@L]</p>
+                  <p>[@L[cds.sales/gd/ssl/ssl-certificates:MainPageContentTabContent5FAQList2B]@L]</p>
 
                   <hr/>
 
@@ -306,6 +321,21 @@ splitSide: 1212.A
 
       </div>
 
+      ##if(activeLanguageAny(en))
+      <div class="tab-pane" id="reviews">
+        <section class="tab-content-top-spacing">
+          <div class="container l-main-container">
+            <div class="row tab-content">
+            <div id="BVRRContainer"><p class="bv-loading">Loading...</p></div>
+            [@P[userControl:<Data location="~/Shared/Tabs/controls/BVReviewsNoJS.ascx"><Parameters><Parameter key="ProductId" value="ssl-certificates" /><Parameter key="ReviewNumber" value="4" /></Parameters></Data>]@P]
+            </div>
+          </div>
+        </section>
+      </div>
+      ##endif
+
+
+
     </div>
     <!-- End main-tabs panes -->
     <section class="container l-main-container content-disclaimer">
@@ -327,5 +357,9 @@ splitSide: 1212.A
         </div>
       </div>
     </div>
+
+    ##if(activeLanguageAny(en))
+    {% include '_login-modal.html' %}
+    ##endif
 
 {% endblock %}

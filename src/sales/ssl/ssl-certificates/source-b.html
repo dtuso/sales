@@ -1,10 +1,10 @@
 ---
 location: sales/ssl/ssl-certificates-b
 url: http://www.dev-godaddy.com/ssl/ssl-certificates.aspx
-id: 53a9b980f778fc13248233f9
-name: FOS-21978
+id: 53c013bff778fc0968b4f0a4
+name: KAT Test
 assetPath: false
-comments: Replace bad domain name
+comments: updated countries offering sitelock and language tokens
 splitSide: 1212.B
 ---
 
@@ -14,7 +14,7 @@ splitSide: 1212.B
   {% parent %}
   <style type="text/css">
   {% less %}
-  {% include 'css/styles.less' %} 
+  {% include 'css/styles.less' %}
   .select-box-body label span.duration {
       text-align: left;
       width: 4em;
@@ -68,7 +68,6 @@ splitSide: 1212.B
 {% block body %}
 
 
-
  <!-- Start main-banner -->
     <section class="main-banner main-banner-ssl-certificate">
       <div class="l-main-container container main-banner-content main-banner-content-ssl-certificate">
@@ -87,7 +86,7 @@ splitSide: 1212.B
     </section>
     <!-- End main-banner -->
 
-    {% include '_main-tabs-no-BV.html' %}
+    {% include '_main-tabs.html' %}
 
     <!-- Start main-tabs panes -->
     <div class="tab-content no-margin-top">
@@ -443,7 +442,6 @@ splitSide: 1212.B
 
       </div>
 
-
     </div>
     <!-- End main-tabs panes -->
     <section class="container l-main-container content-disclaimer">
@@ -466,6 +464,40 @@ splitSide: 1212.B
       </div>
     </div>
 
+
+{% endblock %}
+
+{% block footer %}
+  <script src="[@T[link:<javascriptroot />]@T]fos/lib/solazy/jquery.solazy.1.2.1.min.js" type="text/javascript" ></script>
+  <script>
+    $(function () {
+      var hash = window.location.hash;
+      hash && $('a[href="' + hash + '"]').tab('show');
+      window.addEventListener('hashchange', function() {
+        var changedHash = window.location.hash;
+        changedHash && $('a[href="' + changedHash + '"]').tab('show');
+      }, false);
+      $('.equal-height').setColumnsEqualHeight();
+      $('.select-box').setSelectBox();
+      $('.tab-link').tabLinks();
+      $('.move').scrollToSection();
+
+      var $cartForm = $('.frmAddToCart'); // 3 forms
+      $cartForm.on('submit', function(e){
+
+        e.preventDefault();
+
+        var params = $(this).serialize();
+        var url = $(this).attr('action'); // includes dynamic manager params
+        url += (params) ? ((url.indexOf('?') !== -1) ? '&' : '?') + params : '';
+        window.location = url; // submit cart
+
+      });
+
+    });
+    $('.rating-stars-init').ratingStars();
+    $('.tab-link').tabLinks();
+  </script>
 
 
 {% endblock %}

@@ -1,8 +1,8 @@
 ---
 location: sales/ssl/ssl-certificates-config.aspx
-id: 539f5090f778fc0e080f2d95
-name: FOS-20847
-comments: added sitelock to config and fixed ie index of issue, updated to exclude countries don't offer sitelock, changed ssl post to use packages
+id: 53bdb366f778fc18643f928c
+name: FOS-21698
+comments: updated countries offering sitelock
 ---
 ##if(false)
 {% include 'modules/doc-block.html' %}
@@ -189,7 +189,7 @@ var country = locale.split('-')[1] || 'US';
 var premiumCountries = [
   "AR", "AU", "BR", "CA", "CL", "CO", "FR", "DE", "IN", "IE",
   "IT", "MY", "MX", "NL", "NZ", "PK", "PE", "PH", "PT", "SG",
-  "ZA", "ES", "SE", "CH", "GB", "US"
+  "ZA", "ES", "SE", "CH", "GB", "US", "RU", "DK", "FI", "NO"
 ];
 if (!Array.prototype.indexOf) {
     Array.prototype.indexOf = function(obj, start) {
@@ -204,7 +204,7 @@ $(document).ready(function () {
 
    if(document.referrer.toLowerCase().indexOf("/ssl/ssl-certificates")<=0)
   {
-  window.location.assign('[@T[link:<relative linktype="SITEURL" path="~/ssl/ssl-certificates.aspx" secure="false"><param name="ci" value="9039" /></relative>]@T]');
+  window.location.assign('[@T[link:<relative linktype="SITEURL" path="~/ssl/ssl-certificates.aspx" secure="false"><param name="ci" value="87234" /></relative>]@T]');
   } 
 
   $('.site-lock-add').click(function (e) {

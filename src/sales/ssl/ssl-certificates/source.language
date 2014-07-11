@@ -1,7 +1,8 @@
 ---
 location: localization/sales/gd/ssl/ssl-certificates/en
-id: 537d24a5f778fc2460fbadc0
-name: FOS-20408
+id: 53bec391f778fc0968b4f073
+name: FOS-21698
+comments: updated countries offering sitelock and language tokens
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="MetaTitle" />
@@ -95,7 +96,7 @@ Why choose a GoDaddy SSL Certificate?
 <phrase key="MainPageContentTabContent1text1" />
 Choosing GoDaddy means you will benefit from the highest levels of security the industry offers, all backed by our friendly and dedicated security team.
 <phrase key="MainPageContentTabContent1text2" />
-GoDaddy's award-winning SSL Certificates work with all major browsers and devices, and they protect an unlimited number of servers. Get peace of mind with up to $1,000,000 in liability protection included with each certificate. We’re here to help you, 24/7/365.
+GoDaddy's award-winning SSL Certificates work with all major browsers and devices, and they protect an unlimited number of servers. Get peace of mind with up to [@T[currencyprice:<price usdamount="100000000" dropdecimal="true" dropsymbol="false" htmlsymbol="false" />]@T] in liability protection included with each certificate. We’re here to help you, 24/7/365.
 <phrase key="MainPageContentTabContent1text3" />
 Call our dedicated security team at <strong>[@T[supportphone:<ssl/>]@T]</strong>
 <phrase key="MainPageContentTabContent2title" />
@@ -190,3 +191,5 @@ Disclaimers
 <sup>&#8225;</sup>Annual discounts available on NEW purchases only.
 <phrase key="DisclaimerModalListItem2" />
 Products will automatically renew until cancelled. You may turn off the auto-renewal feature by visiting your GoDaddy account.
+<phrase key="SslManager" />
+Premium SSL available only for USA, Argentina, Australia, Austria, Brazil, Canada, Chile, Colombia, Denmark, Finland, France, Germany, India, Ireland, Italy, Malaysia, Mexico, Netherlands, New Zealand, Norway, Pakistan, Peru, Philippines, Portugal, Russia, Singapore, South Africa, Spain, Sweden, Switzerland, and UK.<br />To change product offering, select the correct plan for the customer on the SSL configuration page.<br />
