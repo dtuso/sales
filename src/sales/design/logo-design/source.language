@@ -1,0 +1,112 @@
+---
+location: localization/sales/gd/design/web-design/en
+id: 
+name: FOS-22259
+---
+{% include 'modules/doc-block.html' %}
+<phrase key="MetaTitle" />
+Logo Design | Let GoDaddy Create Your Custom Logo - GoDaddy
+<phrase key="MetaDescription" />
+Looking for that unique logo to set your company apart from the rest? Let GoDaddy create a fully customized logo for your company today!
+<phrase key="MetaKeywords" />
+logo design, customized logo, logo designs, business logos, company logo
+<phrase key="MainTitle" />
+Custom Logo Design
+<phrase key="MainSubTitle" />
+Your business is one-of-a-kind, your logo should be too.
+<phrase key="TabOverviewLabel" />
+Overview
+<phrase key="TabGalleriesLabel" />
+Galleries
+<phrase key="TabHowItWorksLabel" />
+How It Works
+<phrase key="TabContentOverviewTabHeaderText" />
+Your logo is your business face to the world.
+<phrase key="TabContentOverviewTabSubHeaderText" />
+Make a lasting impression with a custom logo designed by our experts. We&#39;ve created hundreds of custom logos that match the essence of each organization with its public presence. Our experts combine your vision with clever design, guiding you through the entire process.
+<phrase key="LinkViewSamplesText" />
+View Sample Logos
+<phrase key="PlanBoxStandardAbovePlanDetailsCustomContent" />
+Standard
+<phrase key="PlanBoxDeluxeAbovePlanDetailsCustomContent" />
+Deluxe
+<phrase key="PlanBoxStartingAt" />
+Starting at
+<phrase key="PlanboxCartBtn" />
+Add to Cart
+<phrase key="PlanBoxStandardPlanDetails01Text" />
+Simple, clean, and recognizable — like the most powerful brand marks seen every day
+<phrase key="PlanBoxStandardPlanDetails02Text" />
+Created using unique fonts and/or icons
+<phrase key="PlanBoxStandardPlanDetails03Text" />
+You get 3 logos to choose from
+<phrase key="PlanBoxDeluxePlanDetails01Text" />
+Bring out the emotion of your business with a hand-illustrated logo
+<phrase key="PlanBoxDeluxePlanDetails02Text" />
+Original artwork, designed just for you
+<phrase key="PlanBoxDeluxePlanDetails03Text" />
+More intricate than our standard logos
+<phrase key="PlanBoxDeluxePlanDetails04Text" />
+You get 3 illustrations to choose from
+<phrase key="FeaturesList1Title" />
+Your logo will be:
+<phrase key="FeaturesList1Item1" />
+<strong>Original:</strong> A one-of-a-kind visual identity that expresses your business&#39; unique value or style.
+<phrase key="FeaturesList1Item2" />
+<strong>Identifiable:</strong> Instantly recognizable and memorable to new and future customers.
+<phrase key="FeaturesList1Item3" />
+<strong>Engaging:</strong> Simple, yet powerful design elements, colors, and fonts combine to create your brand.
+<phrase key="FeaturesList2Title" />
+YOU GET:
+<phrase key="FeaturesList2Item1" />
+Your choice of 3 designs
+<phrase key="FeaturesList2Item2" />
+Up to 2 revisions
+<phrase key="FeaturesList2Item3" />
+Finished designs delivered as .eps and .jpg files
+<phrase key="FeaturesText1" />
+Plus, every logo is created by our team of expert designers.
+<phrase key="GetMoreTitleText1" />
+NEED MORE?
+<phrase key="GetMoreTitleText2" />
+We also offer...
+<phrase key="GetMoreSubTitle" />
+WEBSITE DESIGN SERVICE
+<phrase key="GetMoreText1" />
+You dream it, we build it.
+<phrase key="GetMoreListText1" />
+1yr: <span class="secondary-color">[@T[productprice:<current productid="6520" period="monthly"/>]@T]/mo</span>
+<phrase key="GetMoreText12" />
+6 months:
+<phrase key="GetMoreText13" />
+12 months :
+<phrase key="GetMoreText14" />
+12mo:
+<phrase key="GetMoreText15" />
+/mo
+<phrase key="GetMoreText16" />
+/month
+<phrase key="TabHowWorksListItems1" />
+<strong>Tell us what you're after</strong>, either through an online interview, which you can complete in your own schedule, or via a personal one-on-one phone consultation with a designer.
+<phrase key="TabHowWorksListItems2" />
+<strong>Send us examples</strong> of the look and feel you want for your design.
+<phrase key="TabHowWorksListItems3" />
+<strong>We'll complete three unique designs</strong> for you to choose from. Pick the one you like the best and we'll make up to two rounds of revisions based on your feedback.
+<phrase key="TabHowWorksListItems4" />
+<strong>Get your one-of-a-kind logo in just 7 days.</strong> We'll deliver you a complete package of .jpg and .eps files for you to post to your Web site or take to your local printer.
+<phrase key="GalleriesHeader" />
+View samples of real work performed by our expert designers.
+<phrase key="GalleriesHelpLink" />
+Help me choose
+<phrase key="GalleriesCarouselDeluxeBadge" />
+Deluxe Logo
+<phrase key="GalleriesCarouselStandardBadge" />
+Standard Logo
+<phrase key="PackageBtn" />
+Choose your Package
+<phrase key="ContentDisclaimerSymbols" />
+**, &deg;&deg;, &#8225;, +, ++, 1, 2, 3, 4, 5, 6
+<phrase key="ContentDisclaimerLink" />
+Click here for product disclaimers and legal policies.
+<phrase key="ContentDicalimerText" />
+Customers who cancel their Logo Design Service order before work is complete will be assessed a concellation fee. *Price does not include illustration, hand-drawing, or hand-coloring logo design. 
