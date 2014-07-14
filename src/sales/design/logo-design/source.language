@@ -1,6 +1,6 @@
 ---
-location: localization/sales/gd/design/web-design/en
-id: 
+location: localization/sales/gd/design/logo-design/en
+id: false
 name: FOS-22259
 ---
 {% include 'modules/doc-block.html' %}
