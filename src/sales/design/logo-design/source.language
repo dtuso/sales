@@ -1,7 +1,7 @@
 ---
 location: localization/sales/gd/design/logo-design/en
 id: false
-name: FOS-22259
+name: FOS-19962
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="MetaTitle" />
