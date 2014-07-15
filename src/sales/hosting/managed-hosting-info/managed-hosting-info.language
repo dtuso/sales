@@ -1,0 +1,31 @@
+---
+location: localization/sales/gd/hosting/managed-hosting-info/en
+id: 53c55b8cf778fc212079d219
+name: FOS-23644
+comments: Reskin of Managed Hosting LP
+---
+{% include 'modules/doc-block.html' %}
+<phrase key="MetaTitle" />
+Managed Hosting | High Performance Dedicated Servers - GoDaddy
+<phrase key="MetaDescription" />
+Explore the benefits of having a Dedicated Server as your platform. GoDaddy has flexible plans &amp; pricing, get your website up and running in no time!
+<phrase key="MetaKeywords" />
+managed hosting, managed web hosting, managed hosting provider, managed hosting services, managed hosting solution, managed hosting providers
+<phrase key="og-description" />
+Get the superior performance of your own dedicated server, expert staff included. With Managed Hosting from GoDaddy, we do it all for you: setup, backups, security...we even manage your apps!
+<phrase key="watchVideo" />
+Watch Video
+<phrase key="btn-StartNow" />
+Start Now
+<phrase key="btn-GetStarted" />
+Get Started
+<phrase key="justPricePerMonth" comment="{0} will be replaced with the monetary amount" />
+{0}/mo
+<phrase key="oldPricePerMonth" comment="{0} will be replaced with the monetary amount" />
+{1}/mo
+<phrase key="savePercentage" comment="{0} will be replaced with the percentage off"/>
+Save {2}%
+<phrase key="next" comment="Action to change carousel to next slide" />
+next
+<phrase key="previous" comment="Action to change carousel to previous slide" />
+previous
