@@ -1569,31 +1569,13 @@ var sr_js = {
     DomainSearchResults.ViewModel = new SearchResultsViewModel();
 
     DomainSearchResults.Init = function (options) {
-        var urlParams;
-
-        function buildQueryObject() 
-        {
-            var match,
-                pl     = /\+/g,  // Regex for replacing addition symbol with a space
-                search = /([^&=]+)=?([^&]*)/g,
-                decode = function (s) { return decodeURIComponent(s.replace(pl, " ")); },
-                query  = window.location.search.substring(1);
-
-            urlParams = {};
-            while (match = search.exec(query))
-                urlParams[decode(match[1])] = decode(match[2]);
-        }
-
+        
         DomainSearchResults.Options = $.extend({}, DomainSearchResults.Options, options || {});
         $.ajaxSetup({ cache: false });
         var dataUrl = DomainSearchResults.AppendQueryString(DomainSearchResults.Options.GetUrl, 'area=all');
-        buildQueryObject();
-        if(urlParams['path'] != undefined || urlParams['path'] != null) {
-            if(urlParams['path'].toString() == "deals2") {
-                dataUrl += "&path=deals2";
-            }
-        }
-        else if(document.referrer.toString().indexOf("deals2") > -1) {
+        //If the user comes from the Deals2 page, they should not be shown promo deals
+        //dataUrl with deals2 appended will suppress promos for .com domains
+        if(document.referrer.toString().indexOf("deals2") > -1) {
             dataUrl += "&path=deals2";
         }
         $.post(
