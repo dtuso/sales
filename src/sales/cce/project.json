@@ -7,15 +7,15 @@
       },
       "cdsLocation": "sales/hosting/lenovo.aspx",
       "draft": {
-        "id": false,
-        "createdDate": "2014-04-29",
+        "id": "53bae15df778fc1e74b16945",
+        "createdDate": "2014-07-07",
         "createdBy": {
-          "fullName": "Avinash Peesari",
-          "username": "apeesari"
+          "fullName": "Samana Upadhyaya",
+          "username": "supadhyaya"
         },
-        "jiraTicket": "FOS-21342",
-        "comments": "AdCredits items should be invisible on non us markets on page",
-        "url": "http://www.dev-godaddy.com/hosting/vps-hosting.aspx"
+        "jiraTicket": "FOS-23107",
+        "comments": "CCE Landing Page",
+        "url": "http://www.dev-godaddy.com/cce"
       }
     },
     "metaTitle": "[@L[cds.sales/gd/hosting/lenovo:page-title]@L]",
@@ -32,16 +32,16 @@
         "name": "Colyn Brown",
         "email": "clbrown@godaddy.com"
       },
-      "cdsLocation": "localization/sales/hosting/lenovo/en",
+      "cdsLocation": "localization/sales/gd/cce/en",
       "draft": {
-        "id": false,
-        "createdDate": "2014-04-29",
+        "id": "53bb2869f778fc1e74b1696e",
+        "createdDate": "2014-07-07",
         "createdBy": {
-          "fullName": "Sergio Lopez",
-          "username": "sylopez"
+          "fullName": "Samana Upadhyaya",
+          "username": "supadhyaya"
         },
-        "jiraTicket": "FOS-1310",
-        "comments": "Landing Page Reskin"
+        "jiraTicket": "FOS-23107",
+        "comments": "CCE Landing Page"
       }
     }
   }
