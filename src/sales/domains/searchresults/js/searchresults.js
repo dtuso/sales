@@ -1593,6 +1593,9 @@ var sr_js = {
                 dataUrl += "&path=deals2";
             }
         }
+        else if(document.referrer.toString().indexOf("deals2") > -1) {
+            dataUrl += "&path=deals2";
+        }
         $.post(
           dataUrl,
           function (data) {
