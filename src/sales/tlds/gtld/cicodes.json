@@ -36,6 +36,18 @@
           { "Description" : ".COMPANY Slide Link" }
         ]
       }
+      { ".NINJA Slide Link" : [
+          { "ITC ID" : "89639" },
+          { "ITC Code" : "" },
+          { "Description" : ".NINJA Slide Link" }
+        ]
+      }
+      { ".PHOTOGRAPHY Slide Link" : [
+          { "ITC ID" : "89731" },
+          { "ITC Code" : "" },
+          { "Description" : ".PHOTOGRAPHY Slide Link" }
+        ]
+      }
     ],
   "Everything Else" : [
     { "Discover New Domains Link" : [
