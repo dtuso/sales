@@ -1,0 +1,35 @@
+---
+location: localization/sales/gd/hosting/managed-hosting-info/en
+id: null
+name: FOS-23644
+comments: Reskin of Managed Hosting LP
+---
+{% include 'modules/doc-block.html' %}
+<phrase key="MetaTitle" />
+...
+<phrase key="MetaDescription" />
+...
+<phrase key="MetaKeywords" />
+...
+<phrase key="og-description" />
+...
+<phrase key="onlineStore" />
+Online Store
+<phrase key="watchVideo" />
+Watch Video
+<phrase key="btn-StartNow" />
+Start Now
+<phrase key="btn-GetStarted" />
+Get Started
+<phrase key="readReviews" />
+Read Reviews
+<phrase key="subtitle" />
+Sell more with your own <strong>one-of-a-kind</strong> web store
+<phrase key="justPricePerMonth" comment="{0} will be replaced with the monetary amount" />
+Just {0}/mo
+<phrase key="savePercentage" comment="{0} will be replaced with the percentage off"/>
+Save {1}%
+<phrase key="next" comment="Action to change carousel to next slide" />
+next
+<phrase key="previous" comment="Action to change carousel to previous slide" />
+previous

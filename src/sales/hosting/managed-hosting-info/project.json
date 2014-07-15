@@ -1,0 +1,24 @@
+{
+  "managed-hosting-info.html": {
+    "cdsDetails": {
+      "champion": {
+        "name": "none",
+        "email": "n/a"
+      }
+    },
+    "metaTitle": "Online Store title '[@L[cds.sales/gd/hosting/managed-hosting-info:MetaTitle]@L]'",
+    "metaDescription": "Online Store Desc '[@L[cds.sales/gd/hosting/managed-hosting-info:MetaDescription]@L]'",
+    "metaKeywords": "[@L[cds.sales/gd/hosting/managed-hosting-info:MetaKeywords]@L]",
+    "metaCanonicalPath": "/hosting/managed-hosting-info.aspx",
+    "metaOgTitle": "[@L[cds.sales/gd/hosting/managed-hosting-info:MetaTitle]@L]",
+    "metaOgDescription": "[@L[cds.sales/gd/hosting/managed-hosting-info:og-description]@L]"
+  },
+  "managed-hosting-info.language": {
+    "cdsDetails": {
+      "champion": {
+        "name": "none",
+        "email": "n/a"
+      }
+    }
+  }
+}
