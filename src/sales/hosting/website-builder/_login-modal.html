@@ -1,0 +1,25 @@
+{% set spkeyToken = "[@T[sso:spkey]@T]" %}
+{% set target = "[@T[link:<external linktype='siteurl' path='/hosting/website-builder.aspx' secure='false' parammode='explicit'/>]@T]#reviews" %}
+<div class="modal fade" id="login-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form method="POST" id="g-modal-loginAcct-form" action="[@T[link:<external parammode="explicit" linktype="SSOURL" secure="true" />]@T]/login.aspx?spkey={{spkeyToken}}&target={{target|raw}}">
+            <input type="hidden" value="LOGIN" name="LOGIN" />
+            <input type="hidden" value="1" name="verifyShopper" />
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">[@L[cds.sales/gd/hosting/website-builder:please-login]@L]</h4>
+                </div>
+                <div class="modal-body">
+                    <input type="text" id="loginName" name="loginName" autocomplete="off" placeholder="[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Headers.UtilityBar.Username]@L]" />
+                    <input type="password" id="password" name="password" autocomplete="off" placeholder="[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Headers.UtilityBar.Password]@L]" />
+                    <a href="[@T[link:<external linktype="SSOURL" path="/account/accountRetrieval.aspx" secure="true"/>]@T]" class="forgot-pass">[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Headers.UtilityBar.ForgotPassword]@L]</a>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">[@L[cds.sales/gd/hosting/website-builder:cancel]@L]</button>
+                    <input class="btn btn-primary" type="submit" value="[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Headers.UtilityBar.SignIn]@L]"/>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

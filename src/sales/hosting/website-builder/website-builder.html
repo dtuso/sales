@@ -1,7 +1,8 @@
 ---
 location: sales/hosting/website-builder.aspx
-id: 53b41c7ff778fc1bcc061c29
-name: FOS-23020
+id: 53bdc268f778fc2fd06bef98
+name: FOS-5720
+comments: Integrate BazaarVoice on WSB LP
 ---
 {% extends 'layouts/base.html' %}
 {% block pageTitle %}
@@ -36,7 +37,9 @@ name: FOS-23020
 {% endblock %}
 {% block metahead %}
   {% parent %}
+{% endblock %}
 
+{% block body %}
 ##if(activeLanguageAny(en))
   <section class="main-banner main-banner-website-builder">
       <div class="l-main-container container main-banner-content main-banner-content-website-builder">
@@ -89,11 +92,11 @@ name: FOS-23020
   <section class="main-tabs">
     <div class="container">
       <ul class="nav nav-tabs">
-        <li class="nav-tabs-item active"><a class="nav-tabs-link" href="#plans-pricing" data-toggle="tab" data-ci="87758">[@L[cds.sales/gd/hosting/website-builder:label-plans-pricing]@L]</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
+        <li class="nav-tabs-item active"><a class="nav-tabs-link" href="#plans-pricing" data-gd-sidebyside-target="#plans-pricing" data-toggle="tab" data-ci="87758">[@L[cds.sales/gd/hosting/website-builder:label-plans-pricing]@L]</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
         ##if(activeLanguageAny(en))
-        <li class="nav-tabs-item"><a class="nav-tabs-link" href="#reviews" data-toggle="tab" data-ci="87151">[@L[cds.sales/gd/hosting/website-builder:label-reviews]@L]</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
+        <li class="nav-tabs-item"><a class="nav-tabs-link" href="#reviews" data-gd-sidebyside-target="#reviews" data-toggle="tab" data-ci="87151">[@L[cds.sales/gd/hosting/website-builder:label-reviews]@L]</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
         ##endif
-        <li class="nav-tabs-item"><a class="nav-tabs-link" href="#faq" data-toggle="tab" data-ci="87759">[@L[cds.sales/gd/hosting/website-builder:label-faq]@L]</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
+        <li class="nav-tabs-item"><a class="nav-tabs-link" href="#faq" data-gd-sidebyside-target="#faq" data-toggle="tab" data-ci="87759">[@L[cds.sales/gd/hosting/website-builder:label-faq]@L]</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
       </ul>
     </div>
   </section>
@@ -737,43 +740,6 @@ name: FOS-23020
                                   </div>
                                 </div>
                               </div>
-                              <div class="item carousel-inner-item ">
-                                <div class="carousel-inner-text-container">
-                                  <div class="testimonial-afine-postraits testimonial-content-text">
-                                    <p class="font-18 testimonial-title"><strong>[@L[cds.sales/gd/hosting/website-builder:CustomerTestimonialMainTitle]@L]</strong></p>
-                                    <p class="carousel-inner-text">[@L[cds.sales/gd/hosting/website-builder:CustomerTestimonialText2]@L]</p>
-                                    <div class="testimonial-carousel-footer">
-                                      <hr/>
-                                      <span class="font-18 testimonials-name"><strong>[@L[cds.sales/gd/hosting/website-builder:CustomerTestimonialClientName2]@L]</strong></span>
-                                      <span class="testimonials-company"><em>[@L[cds.sales/gd/hosting/website-builder:CustomerTestimonialCompany2]@L]</em></span>
-                                    </div>
-                                  </div>
-                                  <div class="testimonial-afine-postraits-video testimonial-video">
-                                      ##if(activeLanguageAny(en))
-                                      <a href="#" class="video-link" data-toggle="modal" data-target="#myVideoModal4">
-                                        <i class="ico ico-gt-circle-alternate"></i><span class="br"></span>
-                                        <span class="video-link-text-alternate font-18"><strong>[@L[cds.sales/gd/hosting/website-builder:video-link-text]@L]</strong></span>
-                                      </a>
-                                      ##endif
-                                      <div class="modal fade videoModal myVideoModal" id="myVideoModal4">
-                                      <div class="modal-dialog">
-                                        <div class="modal-content">
-                                          <div class="modal-header">
-                                            <button type="button" class="modal-header-close close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                          </div>
-                                          <div class="modal-body">
-                                            <div class="embedVideo" id="ytplayer4" data-id="jl6ru4BSy10"></div>
-                                            <!--[if lt IE 8]>
-                                            <iframe class="embedVideoIE7" width="854" height="480" src="//www.youtube.com/embed/jl6ru4BSy10?html5=1&rel=0" autoplay scrolling="no" frameborder="0" allowfullscreen>
-                                            </iframe>
-                                            <![endif]-->
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
                               <div class="item carousel-inner-item">
                                 <div class="carousel-inner-text-container">
                                   <div class="testimonial-simply-sweets testimonial-content-text">
@@ -871,6 +837,7 @@ name: FOS-23020
       </div>
     </section>
    </div>
+
 </div>
 
 
@@ -1004,32 +971,9 @@ name: FOS-23020
       </div>
   </div>
 
-  ##if(activeLanguageAny(en))
-    
 
-<div class="modal fade" id="login-modal">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <form method="POST" id="g-modal-loginAcct-form" action="[@T[link:<external parammode="explicit" linktype="SSOURL" secure="true" />]@T]/login.aspx?spkey=[@T[sso:spkey]@T]&target=[@T[link:<external linktype='siteurl' path='/hosting/website-builder.aspx' secure='false' parammode='explicit'/>]@T]#reviews">
-            <input type="hidden" value="LOGIN" name="LOGIN" />
-            <input type="hidden" value="1" name="verifyShopper" />
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title">[@L[cds.sales/gd/hosting/website-builder:please-login]@L]</h4>
-                </div>
-                <div class="modal-body">
-                    <input type="text" id="loginName" name="loginName" autocomplete="off" placeholder="[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Headers.UtilityBar.Username]@L]" />
-                    <input type="password" id="password" name="password" autocomplete="off" placeholder="[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Headers.UtilityBar.Password]@L]" />
-                    <a href="[@T[link:<external linktype="SSOURL" path="/account/accountRetrieval.aspx" secure="true"/>]@T]" class="forgot-pass">[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Headers.UtilityBar.ForgotPassword]@L]</a>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">[@L[cds.sales/gd/hosting/website-builder:cancel]@L]</button>
-                    <input class="btn btn-primary" type="submit" value="[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Headers.UtilityBar.SignIn]@L]"/>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
+  ##if(activeLanguageAny(en))
+    {% include '_login-modal.html' %}
     ##endif
 
 {% endblock %}
@@ -1147,41 +1091,6 @@ name: FOS-23020
 </script>
 
   ##if(activeLanguageAny(en))
-  <script type="text/javascript">
-    var loadReviews = function(){
-      if (typeof $BV != "undefined") {
-        $BV.configure("global", {
-          allowSamePageSubmission: true,
-          userToken: "[@P[userControl:<Data location="~/Shared/BazaarVoice/SessionUserToken.ascx"></Data>]@P]",
-          doLogin: function(successCallback, successUrl) {
-            $('#login-modal').modal();
-          },
-          doScrollSubmission: function () {
-            return false;
-          }
-        });
-        $BV.ui("rr", "show_reviews", {
-          productId: "website_builder",
-          num: 4,
-          doShowContent: function() {
-            $('.bv-loading').hide();
-          }
-        });
-      }
-    };
-    $('a[href="#reviews"]').on('shown.bs.tab', function (e) {
-      e.preventDefault();
-      (function() {
-        if (!document.getElementById('bvapi')) {
-          var bv = document.createElement('script');
-          bv.type = 'text/javascript';
-          bv.id = 'bvapi';
-          bv.async = true;
-          bv.src = '[@P[userControl:<Data location="~/Scripts/BVScriptUrlOnly.ascx"></Data>]@P]';
-          bv.onload = loadReviews;
-          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(bv);
-        }
-      })();
-    });
-</script>
+  {% include '_load-reviews-js.html' %}
+  ##endif
 {% endblock %}

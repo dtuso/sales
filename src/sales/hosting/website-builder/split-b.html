@@ -1,7 +1,8 @@
 ---
 location: sales/hosting/website-builder-splits/split-b
-id: 53b41f76f778fc1bcc061c2b
-name: FOS-23020
+id: 53c083f7f778fc18c81e87fa
+name: FOS-5720
+comments: Integrate BazaarVoice on WSB LP
 ---
 {% extends 'layouts/base.html' %}
 {% block pageTitle %}
@@ -182,6 +183,12 @@ name: FOS-23020
           <div class="main-banner-text text-padding">
   ##endif
           <h1 class="main-banner-title condensed right-padding"><strong>[@L[cds.sales/gd/hosting/website-builder:main-banner-subtitle]@L]</strong></h1>
+          ##if(activeLanguageAny(en) && !isManager() && splitTestingSideIsActive(1214, A))
+          <section class="rating-stars-container main-banner-rating-stars-container websitebuilder-rating-stars">
+              <div class="rating-stars-init" data-rating="5"></div>
+          </section>
+          <a class="main-banner-read-reviews main-banner-read-reviews-alternate tab-link" data-ci="91392" href="#reviews">[@L[cds.sales/gd/hosting/website-builder:stars-read-reviews]@L]</a>
+          ##endif
           <h2 class="main-banner-subtitle main-banner-subtitle-alternate">[@L[cds.sales/gd/hosting/website-builder:main-banner-title]@L]</h2>
           <ul class="main-banner-list no-wrap">
               <li><span class="wsb-black-check"></span><span class="wsb-li-content">[@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-1]@L]</span></li>
@@ -209,8 +216,11 @@ name: FOS-23020
   <section class="main-tabs">
     <div class="container">
       <ul class="nav nav-tabs">
-        <li class="nav-tabs-item active"><a class="nav-tabs-link" href="#plans-pricing" data-toggle="tab" data-ci="87758">[@L[cds.sales/gd/hosting/website-builder:label-plans-pricing]@L]</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
-        <li class="nav-tabs-item"><a class="nav-tabs-link" href="#faq" data-toggle="tab" data-ci="87759">[@L[cds.sales/gd/hosting/website-builder:label-faq]@L]</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
+        <li class="nav-tabs-item active"><a class="nav-tabs-link" href="#plans-pricing" data-gd-sidebyside-target="#plans-pricing" data-toggle="tab" data-ci="87758">[@L[cds.sales/gd/hosting/website-builder:label-plans-pricing]@L]</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
+        ##if(activeLanguageAny(en) && !isManager() && splitTestingSideIsActive(1214, A))
+        <li class="nav-tabs-item"><a class="nav-tabs-link" href="#reviews" data-gd-sidebyside-target="#reviews" data-toggle="tab" data-ci="87151">[@L[cds.sales/gd/hosting/website-builder:label-reviews]@L]</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
+        ##endif
+        <li class="nav-tabs-item"><a class="nav-tabs-link" href="#faq" data-gd-sidebyside-target="#faq"  data-toggle="tab" data-ci="87759">[@L[cds.sales/gd/hosting/website-builder:label-faq]@L]</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
       </ul>
     </div>
   </section>
@@ -874,34 +884,92 @@ name: FOS-23020
 </div>
 
   </div>
-  <div class="tab-pane" id="faq">
-    <section class="tab-content-top-spacing">
-    <div class="container l-main-container">
-        <div class="row tab-content">
-            <div class="col-xs-12">
-                <div class="grid-column tab-content-column-alternate">
+  ##if(activeLanguageAny(en) && !isManager() && splitTestingSideIsActive(1214, A))
+  	<div class="tab-pane" id="reviews">
+      	<section class="tab-content-top-spacing">
+	      <div class="container l-main-container">
+	          <div class="row tab-content">
+	              <div class="col-xs-12">
+                  <div class="tab-content-reviews-bg-website-builder">
+                    <h2>[@L[cds.sales/gd/hosting/website-builder:CheckoutCustomers]@L]</h2>
+                  </div>
+	                  <section class="carousel-container">
+	                    <div class="container testimonial-carousel-container">
+	                      <div data-ride="carousel" class="carousel slide" data-interval="10000" id="carousel-init">
+	                        <!-- Wrapper for slides -->
+	                        <div class="carousel-content-container">
+	                          <div class="carousel-inner carousel-inner-container testimonial-carousel-inner-container">
+	                            <div class="item carousel-inner-item active">
+	                              <div class="carousel-inner-text-container">
+	                                <div class="testimonial-simply-sweets testimonial-content-text">
+	                                  <p class="font-18 testimonial-title"><strong>[@L[cds.sales/gd/hosting/website-builder:CustomerTestimonialMainTitle]@L]</strong></p>
+	                                  <p class="carousel-inner-text">[@L[cds.sales/gd/hosting/website-builder:CustomerTestimonialText3]@L]</p>
+	                                  <div class="testimonial-carousel-footer">
+	                                    <hr/>
+	                                    <span class="font-18 testimonials-name"><strong>[@L[cds.sales/gd/hosting/website-builder:CustomerTestimonialClientName3]@L]</strong></span>
+	                                    <span class="testimonials-company"><em>[@L[cds.sales/gd/hosting/website-builder:CustomerTestimonialCompany3]@L]</em></span>
+	                                  </div>
+	                                </div>
+	                                <div class="testimonial-simply-sweets-video testimonial-picture">
+	                                </div>
+	                              </div>
+	                            </div>                                                  
+	                            
+	                          </div>
+	                          <!-- Controls -->
+	                          
+	                        </div>
+	                        <!-- Indicators -->
+	                        <ol class="carousel-indicators carousel-indicators-list">
+	                        </ol>      
+	                      </div>
+	                    </div>
+	                  </section>
 
-                    <h2 class="h2-alternate">[@L[cds.sales/gd/hosting/website-builder:faq-first-slide-title]@L]</h2>
-                    [@L[cds.sales/gd/hosting/website-builder:faq-first-slide-content]@L]
-                    <hr/>
-
-                    <h2 class="h2-alternate">[@L[cds.sales/gd/hosting/website-builder:faq-third-slide-title]@L]</h2>
-                    [@L[cds.sales/gd/hosting/website-builder:faq-third-slide-content]@L]
-                    <hr/>
-
-                    <h2 class="h2-alternate">[@L[cds.sales/gd/hosting/website-builder:faq-second-slide-title]@L]</h2>
-                    [@L[cds.sales/gd/hosting/website-builder:faq-second-slide-content]@L]
-                    <hr/>
-
-                    <h2 class="h2-alternate">[@L[cds.sales/gd/hosting/website-builder:faq-fourth-slide-title]@L]</h2>
-                    [@L[cds.sales/gd/hosting/website-builder:faq-fourth-slide-content]@L]
-                </div>
-            </div>
-        </div>
-        <a href="#" class="btn btn-primary btn-lg btn-block js-open-overview"><i class="ico ico-gt"></i>[@L[cds.sales/gd/hosting/website-builder:cta-package]@L]</a>
+	              </div>
+	          </div>
+	          <div class="row tab-content">
+	              <div class="col-xs-12">
+	                  <div class="grid-column tab-content-column-alternate">
+	                    <div id="BVRRContainer"><p class="bv-loading">Loading...</p></div>
+            				[@P[userControl:<Data location="~/Shared/Tabs/controls/BVReviewsNoJS.ascx"><Parameters><Parameter key="ProductId" value="website_builder" /><Parameter key="ReviewNumber" value="4" /></Parameters></Data>]@P]
+	                  </div>
+	              </div>
+	          </div>
+	          <a href="#" class="btn btn-primary btn-lg btn-block js-open-overview"><i class="ico ico-gt"></i>[@L[cds.sales/gd/hosting/website-builder:choose-your-package]@L]</a>
+	      </div>
+  		</section>
     </div>
-</section>
-  </div>
+  ##endif
+  	<div class="tab-pane" id="faq">
+	    <section class="tab-content-top-spacing">
+		    <div class="container l-main-container">
+		        <div class="row tab-content">
+		            <div class="col-xs-12">
+		                <div class="grid-column tab-content-column-alternate">
+
+		                    <h2 class="h2-alternate">[@L[cds.sales/gd/hosting/website-builder:faq-first-slide-title]@L]</h2>
+		                    [@L[cds.sales/gd/hosting/website-builder:faq-first-slide-content]@L]
+		                    <hr/>
+
+		                    <h2 class="h2-alternate">[@L[cds.sales/gd/hosting/website-builder:faq-third-slide-title]@L]</h2>
+		                    [@L[cds.sales/gd/hosting/website-builder:faq-third-slide-content]@L]
+		                    <hr/>
+
+		                    <h2 class="h2-alternate">[@L[cds.sales/gd/hosting/website-builder:faq-second-slide-title]@L]</h2>
+		                    [@L[cds.sales/gd/hosting/website-builder:faq-second-slide-content]@L]
+		                    <hr/>
+
+		                    <h2 class="h2-alternate">[@L[cds.sales/gd/hosting/website-builder:faq-fourth-slide-title]@L]</h2>
+		                    [@L[cds.sales/gd/hosting/website-builder:faq-fourth-slide-content]@L]
+		                </div>
+		            </div>
+		        </div>
+		        <a href="#" class="btn btn-primary btn-lg btn-block js-open-overview"><i class="ico ico-gt"></i>[@L[cds.sales/gd/hosting/website-builder:cta-package]@L]</a>
+		    </div>
+		</section>
+  	</div>
+
 </div>
 
 
@@ -915,7 +983,6 @@ name: FOS-23020
           </small>
       </p>
   </section>
-
   <div class="modal appModal fade" id="socialModal">
       <div class="app-dialog">
           <div class="seo-content">
@@ -967,21 +1034,35 @@ name: FOS-23020
                       <strong>[@L[cds.sales/gd/hosting/website-builder:disclaimer-modal-header]@L]</strong>
                   </p>
               </div>
-              <div class="modal-body">
+                <div class="modal-body">
+                  ##if(countrySiteAny(uk))
+                  <p>[@L[cds.sales/gd/hosting/website-builder:modal-disclaimer-2uk]@L]</p>
+                  ##else
                   <p>[@L[cds.sales/gd/hosting/website-builder:modal-disclaimer-2]@L]</p>
+                  ##endif
                   <p>[@L[cds.sales/gd/hosting/website-builder:modal-disclaimer-5]@L]</p>
               </div>
           </div>
       </div>
   </div>
 
+  ##if(activeLanguageAny(en))
+    {% include '_login-modal.html' %}
+    ##endif
+
 {% endblock %}
 
 {% block footer %}
   <script src="[@T[link:<js path='{{assetPath}}js/website-builder.js' />]@T]?v=2" type="text/javascript"></script>
   <script src="[@T[link:<js path='fos/201401/global/js/plugins.js' />]@T]" type="text/javascript"></script>
-
+##if(activeLanguageAny(en))
+  {% include '_load-reviews-js.html' %}
+ ##endif
   <script type="text/javascript">
+  var url = document.location.toString();
+  if (url.match('#')) {
+      $('.nav-tabs a[href=#'+url.split('#')[1]+']').tab('show') ;
+  } 
 
   var ytPlayerList = {}; // Maps youtube player with its appropiate iframe based on the iframe id
 
@@ -1083,9 +1164,21 @@ name: FOS-23020
 
     // load the plugin
     $(document).ready(function(){
-      $('[data-gd-sidebysidealign]').gdSideBySideAlign();
+    var url = document.location.toString();
+      if(!(url.match('#reviews')||url.match('#faq'))){
+        $('[data-gd-sidebysidealign]').gdSideBySideAlign();
+      }
+      $('a[data-toggle="tab"]').on('shown.bs.tab',function(e){
+        var target = $(e.target).data('gd-sidebyside-target');
+        if(target ==='#plans-pricing'){
+        console.log(target);
+          $(target + ' [data-gd-sidebysidealign]').gdSideBySideAlign();
+        };
+      });
     });
 
   })( jQuery, window, document );
 </script>
+
+
 {% endblock %}

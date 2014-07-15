@@ -1,7 +1,8 @@
 ---
 location: localization/sales/gd/hosting/website-builder/en
-id: 53b30ba9f778fc27b0673bc2
-name: FOS-23020
+id: 53a9b5ecf778fc13248233f2
+name: FOS-5720
+comments: Integrate BazaarVoice on WSB LP
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="page-title" />
@@ -955,3 +956,4 @@ Cancel
 See how these business owners took their passion for success online with GoDaddy Website Builder.
 <phrase key="CheckoutCustomers" />
 Check out what our customers are saying.
+
