@@ -1,6 +1,6 @@
 ---
 location: sales/design/logo-design.aspx
-id: 5373f864f778fc384801ba5f
+id: false
 ---
 {% extends 'layouts/base.html' %}
 
@@ -149,7 +149,7 @@ id: 5373f864f778fc384801ba5f
                                 <div class="col-xs-4" id="deluxe">
                                     <div class="grid-column no-padding-bottom">
                                         <h2>[@L[cds.sales/gd/design/logo-design:PlanBoxDeluxeAbovePlanDetailsCustomContent]@L]</h2>
-                                        <p class="starting-at"><span class="starting-at-above">[@L[cds.sales/gd/design/logo-design:PlanBoxStartingAt]@L]</span><span class="starting-at-price">[@T[productprice:<current productid="925" />]@T]</span>**</p>
+                                        <p class="starting-at"><span class="starting-at-above">[@L[cds.sales/gd/design/logo-design:PlanBoxStartingAt]@L]</span><span class="starting-at-price">[@T[productprice:<current productid="925" />]@T]</span></p>
                                         ##if(isManager())
                                         <form action="[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" parammode="explicit" />]@T]" method="get" class='frmAddtoCart'>
                                         ##else

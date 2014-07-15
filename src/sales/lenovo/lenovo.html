@@ -1,38 +1,177 @@
 ---
 location: sales/lenovo
-id:  53920864f778fc0ee47e4a91
-name: FOS-21813 and fixed ie issues
-comments: Created lenovo page
+id:  53b32332f778fc27b0673bc4
+name: FOS-23101
+comments: Lenovo LP
 cssVersionOverride: 2
 ---
 {% extends 'layouts/base.html' %} 
 {% block metahead %} 
 {% parent %} 
+<style type="text/css">
+html[lang='pt-BR'] .gd-left-image, html[lang='pt-PT'] .gd-left-image{
+  width: 224px;
+  height: 97px;
+display: inline-block;
+float: left;
+margin-left: 65px;
+}
+
+.main-banner-lenovo {
+background-position: center top;
+background-repeat: no-repeat;
+position: relative;
+padding-bottom: 9.6em;
+}
+
+.main-banner-text>.main-banner-title {
+color: #333;
+margin-bottom: .611111111em;
+text-transform: uppercase;
+font-size: 24px;
+}
+
+.main-tab{
+    background:#689A1D;
+}
+
+.green-divider{
+    height: 60px;
+}
+.top-tab-content{
+    margin-top: -2.428em;
+}
+.tab-content-blade {
+background-repeat: no-repeat;
+background-position: right top;
+}
+.tab-content-blade-alternate {
+background-repeat: no-repeat;
+background-position: left top;
+}
+
+.tab-content-easier-than-you-think {
+background-repeat: no-repeat;
+background-position: left top;
+height: 500px;
+}
+.lenovo-logo {
+background-repeat: no-repeat;
+background-position: right top;
+height: 100px;
+margin-bottom: 60px;
+}
+
+.main-banner-text {
+width: 595px;
+float: left;
+}
+.main-banner-form label input {
+position: absolute;
+left: -9999px;
+}
+</style>
   
 {% endblock %} 
 {% block body %}
- <form method="post" data-url="[@T[link:<relative path="~/api/dpp/search/single"/>]@T]" action="[@T[link:<relative path="/domains/searchresults-new.aspx"/>]@T]" class="search-form" id="domain_search_form" style="margin: 0 auto 20px;">
-                <div class="searchBoxForm">  
-                <input type="text" name="domainToCheck" placeholder="[@L[cds.sales/gd/domains/domain-name-search:SalesHeaderPlaceholder]@L]" class="search-form-input" id="domain_search_input" autocomplete="off"  style="width:auto; border:none;outline:0;min-width: 530px;" />
-                <button type="submit" name="searchButton" data-ci="88002" class="btn btn-primary btn-search-form submitbtn">[@L[cds.sales/gd/domains/domain-name-search:SalesHeaderBtnText]@L]</button>
-                <div class="clearfix"></div>
-             </div>
-            </form>
-    <section class="main-banner">
-     <div class="main-banner-content l-main-container container">
-       <h2 class="main-banner-subtitle secondary-color">[@L[cds.sales/gd/lenovo:ComingSoon]@L]</h2>
-       <div class ="coming-soon-box" style="overflow: hidden;">        
-            <div class="gd-left-image"></div>        
-            <div class="plus-sign" style="float: left; width: 140px;"><span class="secondary-color">+</span></div>
-            <div class="lenovo-right-image"></div>       
-       </div>
+        <!-- Start main-banner -->
+  <section class="main-banner main-banner-lenovo">
+      <div class="l-main-container container main-banner-content main-banner-content-website-builder">
+        <div class="main-banner-text">
+          <h3 class="right-padding main-banner-subtitle-alternate"><strong>Welcome to GoDaddy</strong></h3>
+          <h2 class="main-banner-subtitle-alternate">YOUR BEST FRIEND FOR BUSINESS</h2>
+          <h3 class="main-banner-subtitle-alternate">FOR BUSINESS</h2>
+          <div class="sub-banner-content-width">
+            <span>Exclusive offer from Lenovo</span>
+            <span>
+                <br>50% OFF
+                <br>
+            </span>
+            <span>WEBSITE BUILDER</span>
+            <span>
+                <br>Includes FREE domain*
+                <br>
+            </span>
+         </div>
+          <form class="main-banner-form" id="addtocart-form" method="POST" action="[@T[link:<relative path="~/hosting/website-builder-config.aspx" />]@T]">
+              <label>
+                  <input type="radio" checked="checked" name="product" value="7524|1|1" />
+              </label>
+            <button type="submit" data-form="addtocart-form" class="btn btn-primary cta-medium" data-ci="">[@L[cds.sales/gd/hosting/website-builder:get-started-btn-general]@L]</button>
+          </form>
+        </div>
       </div>
+  </section>
+        <!-- End main-banner -->
+
+  <!-- Start main-tabs -->
+  <section class="main-tab">
+    <div class="container green-divider">
+
+    </div>
+  </section>
+
+    <section class="l-main-container container">
+        <div class="row tab-content top-tab-content">
+            <div class="col-xs-12">
+                <div class="grid-column tab-content-column tab-content-right tab-content-easier-than-you-think solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/lenovo/img/lenovo-landing-page-blade-1.png">
+                    <div class="lenovo-logo solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/lenovo/img/lenovo-logo.png"></div>
+
+                    <i class="ico-sslc ico-sslc-ota-logo"></i>
+                    <h2 class="tab-content-title">Building your own website is easier than you think...</h2>
+                    <p> With Website Builder, you don't need technical skills. Our experts have already done the hard work for you, creating hundreds of stunning, customizable designs. Just choose your favorite, add your own personal touch with our simple drag-&-drop tools and click publish. It's that easy. </p>
+                    <p class="no-margin-bottom"></p>
+                </div>
+            </div>
+        </div>
+        <div class="row tab-content">
+            <div class="col-xs-12">
+                <div class="grid-column tab-content-column tab-content-left tab-content-blade solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/lenovo/img/lenovo-landing-page-blade-2.png">
+                    <h2 class="tab-content-title">Why do I need a domain?</h2>
+                    <p>A domain name is your own unique piece of the web, like YourBusiness.com.br. It gives your customers an easy way to find and remember your website. And now you can get yours for free with Website Builder. </p>
+                    <p><a herf="[@T[link:<relative path='~/domains/domain-name-search.aspx' secure='true'><param name='ci' value='' /></relative>]@T]">Learn More</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row tab-content">
+            <div class="col-xs-12">
+                <div class="grid-column tab-content-column tab-content-right tab-content-blade-alternate solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/lenovo/img/lenovo-landing-page-blade-3.png">
+                    <h2 class="tab-content-title">What else does GoDaddy offer?</h2>
+                    <p>Whether you are just getting online or you already have a thriving web store, we have the tools to build your business. From <a href="[@T[link:<relative path='~/hosting/web-hosting.aspx' secure='true'><param name='ci' value='' /></relative>]@T]">hosting</a> to <a href="[@T[link:<relative path='~/business/office-365.aspx' secure='true'><param name='ci' value='' /></relative>]@T]">email</a> to <a href="[@T[link:<relative path='~/ssl/ssl-certificates.aspx' secure='true'><param name='ci' value='' /></relative>]@T]">SSL Certificates</a>, you'll find everything you need to succeed online. </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row tab-content">
+            <div class="col-xs-12">
+                <div class="grid-column tab-content-column tab-content-left tab-content-blade solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/lenovo/img/lenovo-landing-page-blade-4.png">
+                    <h2 class="tab-content-title">What if I have questions?</h2>
+                    <p>We understand that getting your business online can be intimidating. That's why our award winning-support staff is here to help, 24/7/365. Anytime you have a question, our experts are just a phone call or email away. </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="main-banner">
+
+    <form class="main-banner-form" id="addtocart-form" method="POST" action="[@T[link:<relative path="~/hosting/website-builder-config.aspx" />]@T]?version=sales/hosting/website-builder-config.aspx|53b32953f778fc27b0673bc7">
+        <input type="hidden" name="product" value="7509|1|1" />
+        <input type="hidden" name="promo" value="lenovo">   
+    </form>
     </section>
 
 {% endblock %} 
 
 {% block footer %}
+<script src="[@T[link:<javascriptroot />]@T]fos/lib/solazy/jquery.solazy.1.2.1.min.js" type="text/javascript" ></script>
 <script>
+
+    $('.gd-left-image').on('click', function (e) {
+        e.preventDefault();
+        $("#addtocart-form").submit();
+    });
+
     $(function(){
         $('.search-form').on('submit', function (e){
             e.preventDefault();
