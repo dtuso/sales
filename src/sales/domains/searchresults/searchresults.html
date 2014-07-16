@@ -1,7 +1,7 @@
 ---
 location: sales/domains/searchresults.aspx
-id: 53b2ba7af778fc27b0673b7c
-name: FOS-22971
+id: 53c6bf09f778fc238ce80705
+name: FOS-22779
 ---
 ##if(false)
 {% include 'modules/doc-block.html' %}
@@ -886,6 +886,7 @@ name: FOS-22971
         var input = self.siblings('input[type="checkbox"]');
         input.attr('checked', !input.is(':checked'))
       });
+      $("#search").click(function(){$("#domain_search_input").focus()});
     });
     var split1199;
     ##if(splitTestingSideIsActive(1199, A))
