@@ -1,7 +1,7 @@
 ---
 location: sales/domains/domain-name-search.aspx
-id: 53b1ac4ef778fc30c89f0c16
-name: FOS-22747
+id: 53c56972f778fc212079d21f
+name: FOS-23580
 ---
 {% extends 'layouts/base.html' %}
 {% block metahead %}
@@ -97,6 +97,8 @@ name: FOS-22747
                                   <p class="no-margin-bottom">[@L[cds.sales/gd/domains/domain-name-search:MainBannerCarouselSlide2AT]@L]</p>
                                   ##elseif(ActiveLanguageAny([fr-fr],[fr-be],[fr-ca],[fr-ch]))
                                   <p class="no-margin-bottom">[@L[cds.sales/gd/domains/domain-name-search:MainBannerCarouselSlide2FR]@L]</p>
+                                  ##elseif(ActiveLanguageAny([en-IN]))
+                                  <p class="no-margin-bottom" style="text-align:left">"[@L[cds.sales/gd/domains/domain-name-search:MainBannerCarouselSlide2IN]@L]"</p><p style="margin:15px 0 0;text-align:left"><strong>- Sanjay Tilala, Jay Khoodiya Machine Tools</strong></p>
                                   ##else
                                    <p class="no-margin-bottom">[@L[cds.sales/gd/domains/domain-name-search:MainBannerCarouselSlide2All2]@L]</p>
                                   ##endif
@@ -202,7 +204,7 @@ name: FOS-22747
                                 ##if(ActiveLanguageAny([es-us], [es-ar], [es-cl], [es-co], [es-es], [es-mx], [es-pe], [es-ve]))
                                 <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListText0-1ES]@L]</span> <a data-ci="88020" href="[@T[link:<relative path="/tlds/uno"></relative>]@T]" class="btn btn-primary list-item-button btn-new-width">[@L[cds.sales/gd/domains/domain-name-search:Register]@L]</a></li>
                                 ##else
-                                <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListText0-1]@L]</span> <a data-ci="91152" href="[@T[link:<relative path="/tlds/rentals"></relative>]@T]" class="btn btn-primary list-item-button btn-new-width">[@L[cds.sales/gd/domains/domain-name-search:Register]@L]</a></li>
+                                <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListText0-1]@L]</span> <a data-ci="91798" href="[@T[link:<relative path="/tlds/expert"></relative>]@T]" class="btn btn-primary list-item-button btn-new-width">[@L[cds.sales/gd/domains/domain-name-search:Register]@L]</a></li>
                                 ##endif
 
                                 ##if(ActiveLanguageAny([fr-fr], [fr-be], [fr-ca], [fr-ch])) 
@@ -344,8 +346,11 @@ name: FOS-22747
                                     <hr/>
 
                                     <h2 class="h2-alternate">[@L[cds.sales/gd/domains/domain-name-search:FaqLine3Title]@L]</h2>
+                                    ##if(ActiveLanguageAny([en-IN]))
+                                    <p>[@L[cds.sales/gd/domains/domain-name-search:FaqLine3Text1IN]@L]</p>
+                                    ##else
                                     <p>[@L[cds.sales/gd/domains/domain-name-search:FaqLine3Text1]@L]</p>
-
+                                    ##endif
                                     <hr/>
 
                                     <h2 class="h2-alternate">[@L[cds.sales/gd/domains/domain-name-search:FaqLine4Title]@L]</h2>
