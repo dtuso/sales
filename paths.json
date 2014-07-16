@@ -26,6 +26,7 @@
   "searchresults":      "./domains/searchresults/",
   "ssl":                "./ssl/ssl-certificates/",
   "static-ip":          "./ssl/static-ip/",
+  "tui":                "./domains/tui/",  
   "vps":                "./hosting/vps-hosting/",
   "vps-config":         "./hosting/vps-hosting-config/",
   "web-design":         "./design/web-design/",

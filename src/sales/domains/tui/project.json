@@ -1,0 +1,32 @@
+{
+  "tui.html": {
+    "cdsDetails": {
+      "champion": {
+        "name": "Shaun Stair",
+        "email": "sstair@godaddy.com"
+      },
+      "draft": {
+        "comments": "Updating Focus for Domain Search input field",
+        "url": "http://www.dev-godaddy.com/domains/gtld-registration.aspx"
+      }
+    },
+    "cssVersionOverride" : "",
+    "metaTitle": "[@L[cds.sales/gd/domains/gtld-registration.aspx:MetaTitle]@L]",
+    "metaDescription": "[@L[cds.sales/gd/domains/gtld-registration.aspx:MetaDescription]@L]",
+    "metaKeywords": "[@L[cds.sales/gd/domains/gtld-registration.aspx:MetaKeywords]@L]",
+    "metaCanonicalPath": "/domains/gtld-registration.aspx.aspx",
+    "metaOgTitle": "[@L[cds.sales/gd/domains/gtld-registration.aspx:MetaTitle]@L]",
+    "metaOgDescription": "[@L[cds.sales/gd/domains/gtld-registration.aspx:MetaDescription]@L]"
+  },
+  "tui.language": {
+    "cdsDetails": {
+      "champion": {
+        "name": "Shaun Stair",
+        "email": "sstair@godaddy.com"
+      },
+      "draft": {        
+        "comments": ""
+      }
+    }
+  }
+}
