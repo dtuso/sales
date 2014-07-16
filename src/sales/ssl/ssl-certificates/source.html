@@ -1,11 +1,11 @@
 ---
 location: sales/ssl/ssl-certificates.aspx
 url: http://www.dev-godaddy.com/ssl/ssl-certificates.aspx
-id: 53bf0a8ff778fc0968b4f08c
-name: FOS-21698
+id: 53c6e71df778fc238ce80711
+name: FOS-23654
 assetPath: false
-comments: updated countries offering sitelock and language tokens
-splitSide: false
+comments: VAT tax fix for invalid pfids
+splitSide: 1212.A
 ---
 
 {% extends 'layouts/base.html' %}
@@ -82,7 +82,7 @@ splitSide: false
         </ul>
         <span class="br"></span>
         <a href="[@T[link:<relative path="/ssl/ssl-certificates-config.aspx"><param name="plan" value="ssl_dlx_1" /></relative>]@T]" class="btn btn-primary cta-small" data-ci="89596">[@L[cds.sales/gd/ssl/ssl-certificates:add-and-configure]@L]</a>
-        <p class="starting-at starting-at-banner"><span class="starting-at-above">[@L[cds.sales/gd/ssl/ssl-certificates:deluxe]@L]</span><span class="starting-at-price">[@T[productprice:<current productid="3608" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]</span>[@L[cds.sales/gd/ssl/ssl-certificates:mo]@L]</p>
+        <p class="starting-at starting-at-banner"><span class="starting-at-above">[@L[cds.sales/gd/ssl/ssl-certificates:deluxe]@L]</span><span class="starting-at-price">[@T[productprice:<current productid="3606" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]</span>[@L[cds.sales/gd/ssl/ssl-certificates:mo]@L]</p>
 
       </div>
     </section>
@@ -117,7 +117,7 @@ splitSide: false
                   <h2 class="first-plan">[@L[cds.sales/gd/ssl/ssl-certificates:plansPricingOne]@L]</h2>
                   <p class="starting-at starting-at-alternate-top-spacing">
                     <span class="starting-at-above">[@L[cds.sales/gd/ssl/ssl-certificates:startingAt]@L]</span>
-                    <span class="starting-at-price">[@T[productprice:<current productid="3608" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]</span>
+                    <span class="starting-at-price">[@T[productprice:<current productid="3606" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]</span>
                     <span class="starting-at-small">/[@L[cds.sales/gd/ssl/ssl-certificates:year]@L]</span>
                   </p>
                   <p class="no-margin-bottom"><a href="[@T[link:<relative path="/ssl/ssl-certificates-config.aspx"><param name="origin" value="pod" /><param name="plan" value="ssl_dlx_3" /></relative>]@T]" class="btn btn-warning btn-block btn-lg" data-ci="89603">[@L[cds.sales/gd/ssl/ssl-certificates:cartButton]@L]</a></p>
@@ -134,7 +134,7 @@ splitSide: false
                   <p class="pp-desc">[@L[cds.sales/gd/ssl/ssl-certificates:plansPricingMultipleDesc]@L]</p>
                   <p class="starting-at starting-at-alternate-top-spacing">
                     <span class="starting-at-above">[@L[cds.sales/gd/ssl/ssl-certificates:startingAt]@L]</span>
-                    <span class="starting-at-price">[@T[productprice:<current productid="5742" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]</span>
+                    <span class="starting-at-price">[@T[productprice:<current productid="5726" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]</span>
                     <span class="starting-at-small">/[@L[cds.sales/gd/ssl/ssl-certificates:year]@L]</span>
                   </p>
                   <p class="no-margin-bottom"><a href="[@T[link:<relative path="/ssl/ssl-certificates-config.aspx"><param name="origin" value="pod" /><param name="plan" value="ssl_dlx_3_5" /></relative>]@T]" class="btn btn-warning btn-block btn-lg" data-ci="89603">[@L[cds.sales/gd/ssl/ssl-certificates:cartButton]@L]</a></p>

@@ -1,15 +1,14 @@
 ---
 location: sales/ssl/ssl-certificates-b
 url: http://www.dev-godaddy.com/ssl/ssl-certificates.aspx
-id: 53c013bff778fc0968b4f0a4
-name: KAT Test
+id: 53c6e7a4f778fc238ce80713
+name: FOS-23654
 assetPath: false
-comments: updated countries offering sitelock and language tokens
+comments: VAT tax fix for invalid pfids
 splitSide: 1212.B
 ---
 
 {% extends 'layouts/base.html' %}
-
 {% block metahead %}
   {% parent %}
   <style type="text/css">
@@ -80,7 +79,7 @@ splitSide: 1212.B
         </ul>
         <span class="br"></span>
         <a href="/ssl/ssl-certificates-config.aspx?plan=ssl_dlx_1" class="btn btn-primary cta-small" data-ci="89596">[@L[cds.sales/gd/ssl/ssl-certificates:add-and-configure]@L]</a>
-        <p class="starting-at starting-at-banner"><span class="starting-at-above">[@L[cds.sales/gd/ssl/ssl-certificates:deluxe]@L]</span><span class="starting-at-price">[@T[productprice:<current productid="3608" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]</span>[@L[cds.sales/gd/ssl/ssl-certificates:mo]@L]</p>
+        <p class="starting-at starting-at-banner"><span class="starting-at-above">[@L[cds.sales/gd/ssl/ssl-certificates:deluxe]@L]</span><span class="starting-at-price">[@T[productprice:<current productid="3606" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]</span>[@L[cds.sales/gd/ssl/ssl-certificates:mo]@L]</p>
 
       </div>
     </section>
