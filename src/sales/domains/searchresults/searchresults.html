@@ -563,8 +563,8 @@ name: FOS-24013
           <a class="g-toolTip g-toolTipText">
             [@L[cds.sales/domains/searchresults-new3:PricingDetailsActionText]@L]
             <div class="g-toolTipContents">
-              <p>[@L[cds.sales/domains/searchresults-new3:EAPreRegPricingDetailsToolTipText]@L]</p>
-              <p>[@L[cds.sales/domains/searchresults-new3:PricingDetailRenewal2]@L]</p>
+              <p data-bind="visible: !$root.IsTldNyc()">[@L[cds.sales/domains/searchresults-new3:EAPreRegPricingDetailsToolTipText]@L]</p>
+               <p data-bind="css: { 'nomargin': $root.IsTldNyc()}">[@L[cds.sales/domains/searchresults-new3:PricingDetailRenewal2]@L]</p>
             </div>
           </a>
         </span>
@@ -592,7 +592,7 @@ name: FOS-24013
             [@L[cds.sales/domains/searchresults-new3:PricingDetailsActionText]@L]
             <div class="g-toolTipContents">
               <p>[@L[cds.sales/domains/searchresults-new3:EAPriorityPreRegPricingDetailsToolTipText]@L]</p>
-            </div>
+           </div>
           </a>
         </span>
         <!-- ko template: IsAppFeeRefundable() ? 'AppFeeRefund' : 'AppFeeNonRefund' --><!-- /ko -->
