@@ -1188,7 +1188,7 @@ var sr_js = {
                 if (data.Tld) {
                     self.TypedTLD(data.Tld);
                 }
-                if(data.Tld=="accountants")
+                if(data.Tld=="nyc")
                 {
                     self.IsTldNyc(true);
                 }
