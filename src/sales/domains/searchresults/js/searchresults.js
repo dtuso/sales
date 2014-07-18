@@ -665,7 +665,7 @@ var sr_js = {
                                     var oldPrimaryFirst = self.Phases.shift();
                                     eaPhase.SubPhases.push(oldPrimaryFirst);
                                 }
-                                eaPhase.Name(DomainGetUrl.Options.PhasePreRegName).Template(PhaseOptionViewModel.TemplateInfos.EarlyAccess);
+                                eaPhase.Name(DomainSearchResults.Options.PhasePreRegName).Template(PhaseOptionViewModel.TemplateInfos.EarlyAccess);
                                 var newPrimaryFirst = eaPhase.SubPhases.shift();
                                 newPrimaryFirst.Name(PhaseOptionViewModel.TemplateInfos.EarlyAccessPriority.Title).Template(PhaseOptionViewModel.TemplateInfos.EarlyAccessPriority);
                                 self.Phases.unshift(newPrimaryFirst);
