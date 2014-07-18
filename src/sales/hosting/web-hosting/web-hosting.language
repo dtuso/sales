@@ -1,7 +1,8 @@
 ---
 location: localization/sales/gd/hosting/web-hosting/en
-id: 53b47495f778fc070c26b6db
-name: FOS-21845 - Fix Magento typo (Magneto -> Magento)
+id: 53c6eb38f778fc238ce80714
+name: FOS-23654
+comments: VAT tax fix for invalid pfids
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="page-title" />
@@ -239,7 +240,7 @@ Host unlimited Websites
 <phrase key="ultimate-plan-starting-at-11166" />
 As low as [@T[productprice:<current productid="32082" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/month
 <phrase key="ultimate-plan-all-benefits-of-11166" />
-All the benefits of <b>Deluxe</b> plus <b><a class="isToolTip" data-toggle="tooltip" title="" data-original-title="A [@T[productprice:<current productid='70852' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' />]@T]/yr value, our Premium DNS makes it easy to resolve common issues that prevent people from accessing your site, improving your overall performance, availability, and security.">Premium DNS</a></b> and <b>1 year SSL Certificate</b><br> <a class='isToolTip smallHoverText' data-toggle='tooltip' title='' data-original-title='A [@T[productprice:<current productid="3608" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]/yr value, your GoDaddy SSL certificate keeps transactions with your website secure. Take advantage of 256-bit encryption and 99.9% browser recognition. Free for initial purchase term, after which SSL certificate will automatically renew at the then-current rate.'>Restrictions apply to SSL Certificate</a>
+All the benefits of <b>Deluxe</b> plus <b><a class="isToolTip" data-toggle="tooltip" title="" data-original-title="A [@T[productprice:<current productid='70852' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' />]@T]/yr value, our Premium DNS makes it easy to resolve common issues that prevent people from accessing your site, improving your overall performance, availability, and security.">Premium DNS</a></b> and <b>1 year SSL Certificate</b><br> <a class='isToolTip smallHoverText' data-toggle='tooltip' title='' data-original-title='A [@T[productprice:<current productid="3606" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]/yr value, your GoDaddy SSL certificate keeps transactions with your website secure. Take advantage of 256-bit encryption and 99.9% browser recognition. Free for initial purchase term, after which SSL certificate will automatically renew at the then-current rate.'>Restrictions apply to SSL Certificate</a>
 <phrase key="all-plans-include-mt-11166" />
 Economy/Deluxe/Ultimate Plans Include
 <phrase key="all-plans-include-11166" />
