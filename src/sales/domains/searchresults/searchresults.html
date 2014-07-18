@@ -1,7 +1,7 @@
 ---
 location: sales/domains/searchresults.aspx
-id: 53c6bf09f778fc238ce80705
-name: FOS-22779
+id: 53c99ab9f778fc1b68867a5b
+name: FOS-24013
 ---
 ##if(false)
 {% include 'modules/doc-block.html' %}
@@ -29,8 +29,11 @@ name: FOS-22779
   ##if(!activeLanguageAny(en, es))
   <style>
      #results .slider,#results .filter-slider{margin-bottom: 32px;width:232px;}
-  </style>
+  </style> 
   ##endif
+   <style>
+       #results .g-toolTip > * > p.nomargin{margin-top:0em !important; }
+    </style>
 </head>
 <body>
   [@P[webControl:<data assembly="App_Code" type="WebControls.PresentationCentral.Header" />]@P]
@@ -560,8 +563,8 @@ name: FOS-22779
           <a class="g-toolTip g-toolTipText">
             [@L[cds.sales/domains/searchresults-new3:PricingDetailsActionText]@L]
             <div class="g-toolTipContents">
-              <p>[@L[cds.sales/domains/searchresults-new3:EAPreRegPricingDetailsToolTipText]@L]</p>
-              <p>[@L[cds.sales/domains/searchresults-new3:PricingDetailRenewal2]@L]</p>
+              <p data-bind="visible: !$root.IsTldNyc()">[@L[cds.sales/domains/searchresults-new3:EAPreRegPricingDetailsToolTipText]@L]</p>
+               <p data-bind="css: { 'nomargin': $root.IsTldNyc()}">[@L[cds.sales/domains/searchresults-new3:PricingDetailRenewal2]@L]</p>
             </div>
           </a>
         </span>
@@ -589,7 +592,7 @@ name: FOS-22779
             [@L[cds.sales/domains/searchresults-new3:PricingDetailsActionText]@L]
             <div class="g-toolTipContents">
               <p>[@L[cds.sales/domains/searchresults-new3:EAPriorityPreRegPricingDetailsToolTipText]@L]</p>
-            </div>
+           </div>
           </a>
         </span>
         <!-- ko template: IsAppFeeRefundable() ? 'AppFeeRefund' : 'AppFeeNonRefund' --><!-- /ko -->
@@ -612,9 +615,9 @@ name: FOS-22779
         <span>
           <a class="g-toolTip g-toolTipText">
             [@L[cds.sales/domains/searchresults-new3:PricingDetailsActionText]@L]
-            <div class="g-toolTipContents">
-              <p>[@L[cds.sales/domains/searchresults-new3:PreRegPricingDetailToolTipText]@L]</p>
-              <p>[@L[cds.sales/domains/searchresults-new3:PricingDetailRenewal2]@L]</p>
+            <div class="g-toolTipContents">               
+             <p data-bind="visible: !$root.IsTldNyc()">[@L[cds.sales/domains/searchresults-new3:PreRegPricingDetailToolTipText]@L]</p>               
+              <p data-bind="css: { 'nomargin': $root.IsTldNyc()}">[@L[cds.sales/domains/searchresults-new3:PricingDetailRenewal2]@L]</p>
             </div>
           </a>
         </span>
@@ -642,9 +645,11 @@ name: FOS-22779
           <a class="g-toolTip g-toolTipText">
             [@L[cds.sales/domains/searchresults-new3:PricingDetailsActionText]@L]
             <div class="g-toolTipContents">
-              <!-- ko if: HasSubPhases -->
-              <p>[@L[cds.sales/domains/searchresults-new3:PriorityPreRegPricingDetailToolTipText]@L]</p>
-              <p>[@L[cds.sales/domains/searchresults-new3:PricingDetailRenewal2]@L]</p>
+              <!-- ko if: HasSubPhases -->  
+              
+              <p data-bind="visible: !$root.IsTldNyc()">[@L[cds.sales/domains/searchresults-new3:PriorityPreRegPricingDetailToolTipText]@L]</p>
+              
+               <p data-bind="css: { 'nomargin': $root.IsTldNyc()}">[@L[cds.sales/domains/searchresults-new3:PricingDetailRenewal2]@L]</p>
               <!-- /ko -->
               <!-- ko if: !HasSubPhases() -->
               <p>[@L[cds.sales/domains/searchresults-new3:PricingDetailRenewal2]@L]</p>
@@ -777,7 +782,7 @@ name: FOS-22779
   <script type="text/javascript">$sf = { skin: "fos" };</script>
   <script type="text/javascript" src="[@T[link:<javascriptroot />]@T]starfield/curl/v1.1.2/curl.js"></script>
   <script type="text/javascript" src="[@T[link:<javascriptroot />]@T]fos/domains/search-new/js/filter.slider.min.js"></script>
-  <script type="text/javascript" src="[@T[link:<js path='fos/sales/themes/scotty/domains/searchresults/js/searchresults.js' />]@T]"></script>
+  <script type="text/javascript" src="[@T[link:<js path='fos/sales/themes/scotty/domains/searchresults/js/searchresults_20140718.js' />]@T]"></script>
   <script type="text/javascript" src="[@T[link:<javascriptroot />]@T]fos/sales/themes/scotty/domains/searchresults/js/searchbox.js"></script>
 
   <!--[if lte IE 8]>

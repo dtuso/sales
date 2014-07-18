@@ -1145,6 +1145,7 @@ var sr_js = {
         self.TotalItems = ko.observable(_items.length);
         self.TypedValue = ko.observable('');
         self.TypedTLD = ko.observable('');
+        self.IsTldNyc=ko.observable(false);
 
         self.ApplyFilter = function (filter, event) {
             /*jshint unused:false, eqnull:true */
@@ -1187,7 +1188,10 @@ var sr_js = {
                 if (data.Tld) {
                     self.TypedTLD(data.Tld);
                 }
-
+                if(data.Tld=="accountants")
+                {
+                    self.IsTldNyc(true);
+                }
                 if (data.StripMallResult) {
                     var tlds = [];
                     var maxLength = 4;
