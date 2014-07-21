@@ -65,14 +65,14 @@
       },
       "cdsLocation": "localization/sales/gd/hosting/website-builder/en",
       "draft": {
-        "id": false,
-        "createdDate": "2014-07-02",
+        "id": "53cd8826f778fc20bce78cf9",
+        "createdDate": "2014-07-21",
         "createdBy": {
-          "fullName": "Samana Upadhyaya",
-          "username": "supadhayya"
+          "fullName": "Avinash Peesari",
+          "username": "apeesari"
         },
-        "jiraTicket": "FOS-23020",
-        "comments": "Update WSB T & C's for .CO.UK and .UK"
+        "jiraTicket": "FOS-23994",
+        "comments": "Corrected Spelling mistake on the hoover text for social media manager"
       }
     }
   }
