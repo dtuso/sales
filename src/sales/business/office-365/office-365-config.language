@@ -3,6 +3,7 @@ location: localization/sales/business/office-365-config/en
 id: 53d6d496f778fc27484de545
 name: FOS-24033
 comments: Update devices used on
+max: "{{max}}"
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="cp-8-MicrosoftOffice365BoostProductivityVirtuallyAnywhereGoDaddy" />
