@@ -1,9 +1,10 @@
 ---
 location: localization/sales/business/office-365/en
-id: null
+id: 53d6d431f778fc27484de544
 name: FOS-24033
 comments: Update devices used on
 ---
+{% include 'modules/doc-block.html' %}
 <phrase key="lp-8-MicrosoftOffice365BoostProductivityVirtuallyAnywhereGoDaddy" />
 Microsoft Office 365 | Boost Productivity Virtually Anywhere – GoDaddy
 <phrase key="lp-36-MSOffice365IsEasyToSetUp" />

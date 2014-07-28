@@ -38,14 +38,15 @@
     "metaOgImage": "fos/office365/img/open-graph_20140115-v2.png",
     "metaOgDescription": "[@L[cds.sales/business/office-365:lp-48-OgDescription]@L]"
   },
-  "office-365.langauge": {
+  "office-365.language": {
     "cdsDetails": {
       "champion": {
         "name": "Ryan Hurst",
         "email": "rhurst@godaddy.com"
       }
-    },
-  "office-365-config.langauge": {
+    }
+  },
+  "office-365-config.language": {
     "cdsDetails": {
       "champion": {
         "name": "Ryan Hurst",
