@@ -16,13 +16,13 @@ vps server, virtual private server, vps hosting, vps, virtual server, Virtual Pr
 <phrase key="og-description" />
 Need a hosting plan that grows with your business but doesn't break the bank? Get all the power and control of a dedicated server for less with a Virtual Private Server from [@T[companyname:name]@T]!
 <phrase key="HeaderHeadline" />
-Virtual Private Servers
+Managed Virtual Private Servers
 <phrase key="HeaderSubHeadline" />
-Now everyone can afford the reliability, security and scalability of the Cloud.
+Control. Reliability. Security. 
 <phrase key="HeaderUptimeGuarantee" />
 99.9% Uptime Guarantee*
 <phrase key="JsChatLive" />
-Need Advice? Chat Live!
+Chat Now
 <phrase key="TabLink1" />
 Plans &amp; Pricing
 <phrase key="TabLink3" />
@@ -30,27 +30,37 @@ Support
 <phrase key="TabLink4" />
 FAQ
 <phrase key="Tab1Header" />
-Our VPS Hosting is made to grow as your needs grow.
+Launch your own VPS<br>with just a few clicks.
 <phrase key="Tab1HeaderText" />
-Get all the power and control of your own Virtual Server for less! With a [@T[companyname:name]@T] VPS, your RAM and storage are guaranteed - we never overload. Plus, you can add more capacity anytime with just a few clicks*. Just choose the plan that&#039;s right for you, customize your bandwidth, control panel (Parallels<sup>&reg;</sup> Plesk Panel or cPanel<sup>&reg;</sup>) and backup options and leave the rest to us.
+Our simple setup process will have you up and running in minutes -<br>no lengthy spin up times or waiting on resources. And with<br><strong>patching, monitoring, security, backups</strong> and <strong>support</strong> all included,<br>you can stay focused on running your business.
+<phrase key="Tab1HeaderText2" />
+Best of all, when you choose our Managed VPS, your RAM, storage<br>and bandwidth aren't just under your control, they're guaranteed.
 <phrase key="NeedHelpBadgePhone1" />
 Need Help? For 24/7 sales: <a>[@T[support:<serverSupportPhone/>]@T]</a>
 <phrase key="NeedHelpBadgePhone2" />
-For 24/7 advanced support: <a>[@T[support:<advancedSupportPhone/>]@T]</a>
+Call our hosting professionals: [@T[support:<advancedSupportPhone/>]@T]
+<phrase key="CallBanner" />
+or call [@T[support:<advancedSupportPhone/>]@T]
+<phrase key="CallBanner2" />
+Call [@T[support:<technicalSupportPhone/>]@T]
 <phrase key="SelectOS" />
 Select an operating system:
+<phrase key="OSLinux" />
+Linux
 <phrase key="OSCentOS" />
 CentOS
+<phrase key="LinuxOSVersion" />
+Choose from three options: <strong>CentOS with cPanel</strong> (includes patching), <br> <strong>CentOS without cPanel</strong> (semi-managed) or <strong>Fedora</strong> (semi-managed).
 <phrase key="CentOsVersion" />
 <strong>CentOS Version 6.5</strong> is the operating system of choice for those looking for a highly stable version of Linux that offers enterprise-level reliability.
 <phrase key="OSFedora" />
 Fedora
 <phrase key="FedoraOsVersion" />
-<strong>Fedora Version 14</strong> - Recommended for advanced Linux administrators.
+<strong>Fedora Version 20</strong> - Recommended for advanced Linux administrators.
 <phrase key="OSWindows" />
 Windows
 <phrase key="WindowsOsVersion" />
-<strong>Our Windows Version 2008 Standard 64-Bit</strong> servers combine the familiar interface of the world&#039;s most popular operating system with a set of powerful features.
+Includes patching on Windows for Managed VPS.
 <phrase key="CategoryBasicTitle" />
 Basic
 <phrase key="CategoryEconomyTitle" />
@@ -61,6 +71,8 @@ Starting at
 mo
 <phrase key="PerMonthFull" />
 month
+<phrase key="PerYearFull" />
+year
 <phrase key="month" />
 month
 <phrase key="months" />
@@ -85,6 +97,8 @@ SAVE 20%
 Add to Cart
 <phrase key="OSLabel" />
 OS:
+<phrase key ="LinuxOperatingSystem" />
+Linux
 <phrase key="CentosOperatingSystem" />
 Linux CentOS
 <phrase key="RAMLabel" />
@@ -104,7 +118,7 @@ Bandwidth:
 <phrase key="CategoryBasicBandwidth" />
 1,000 GB
 <phrase key="CategoryEconomyBandwidth" />
-1,000 GB
+1 TB
 <phrase key="MostPopularBadge" />
 Most popular
 <phrase key="CategoryValueTitle" />
@@ -116,7 +130,7 @@ Value
 <phrase key="CategoryValueStorage" />
 60 GB
 <phrase key="CategoryValueBandwidth" />
-2,000 GB
+2 TB
 <phrase key="CategoryDeluxeTitle" />
 Deluxe
 <phrase key="CategoryDeluxeRam" />
@@ -126,7 +140,7 @@ Deluxe
 <phrase key="CategoryDeluxeStorage" />
 90 GB
 <phrase key="CategoryDeluxeBandwidth" />
-3,000 GB
+3 TB
 <phrase key="CategoryPremiumTitle" />
 Premium
 <phrase key="CategoryPremiumRam" />
@@ -136,7 +150,7 @@ Premium
 <phrase key="CategoryPremiumStorage" />
 120 GB
 <phrase key="CategoryPremiumBandwidth" />
-4,000 GB
+4 TB
 <phrase key="CategoryUltimateTitle" />
 Ultimate
 <phrase key="CategoryUltimateRam" />
@@ -146,7 +160,7 @@ Ultimate
 <phrase key="CategoryUltimateStorage" />
 240 GB
 <phrase key="CategoryUltimateBandwidth" />
-8,000 GB
+8 TB
 <phrase key="FedoraOperatingSystem" />
 Linux Fedora
 <phrase key="WindowsOperatingSystem" />
@@ -445,3 +459,4 @@ One promotional credit per customer for a new Microsoft<sup class='supsymbol'>&r
 One promotional credit per customer for a new Facebook<sup class='supsymbol'>&reg;</sup> Advertiser account. Products purchased using a Gift Card or Alipay do not provide eligibility for advertising credits. Offer valid only for purchase of advertising in the US, Canada, UK, and Australia. Other restrictions apply. <a href=&quot;javascript:void(window.open('[@T[link:<relative path='/popups/facebook-ads.aspx'><param name='ci' value='90611' /><param name='app_hdr' value='99' /></relative>]@T]','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=550,height=675'))&quot;>View Details</a>
 <phrase key="FotoliaRestrictions" />
 One free promotional credit per customer, good for ten free download credits at Fotolia. Products purchased using a Gift Card or Alipay do not provide eligibility for photography credits. Other restrictions apply. <a href=&quot;javascript:void(window.open('[@T[link:<relative path='/popups/fotolia.aspx'><param name='app_hdr' value='99' /><param name='ci' value='88993' /></relative>]@T]','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=550,height=675'))&quot;>View Details</a>
+

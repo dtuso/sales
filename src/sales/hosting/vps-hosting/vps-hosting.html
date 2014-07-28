@@ -1,8 +1,8 @@
 ---
 location: sales/hosting/vps-hosting.aspx
-id:  53bc2826f778fc18643f9255
-name: FOS-23403
-comments: update managed and ded chat live from engage to live person
+id:  53d690b2f778fc27484de4df
+name: FOS-24657 VPS Hosting LP Default plans to 3 months
+comments: Getting the page into version control
 url: http://www.dev-godaddy.com/hosting/vps-hosting.aspx
 assetPath: false
 ---
@@ -68,14 +68,20 @@ assetPath: false
         <!-- <span class="ribbon ribbon-right" data-ci="88932"><i class="marquee-flag money-back-guarantee [@T[localization:<language full=" true " />]@T] [@T[localization:<language />]@T]"></i> </span> -->
         <h1 class="main-banner-title">[@L[cds.sales/gd/hosting/vps-hosting:HeaderHeadline]@L]</h1>
         <h2 class="main-banner-subtitle">[@L[cds.sales/gd/hosting/vps-hosting:HeaderSubHeadline]@L]</h2>
-        <p href="#" class="font-18 main-banner-content-text-vps">
+        <p href="#" class="font-18 main-banner-content-text-vpsx">
             <strong>[@L[cds.sales/gd/hosting/vps-hosting:HeaderUptimeGuarantee]@L]</strong>
         </p>
 
         ##if(activeLanguageAny(en))
-        <a href="javascript:void(0);" class="main-banner-content-link-vps" data-ci="88933"><span id="lpLivePersonVpsHosting">[@L[cds.sales/gd/hosting/vps-hosting:JsChatLive]@L]</span></a>
+        <a href="javascript:void(0);" class="btn btn-primary" data-ci="88933"><span id="lpLivePersonVpsHosting">[@L[cds.sales/gd/hosting/vps-hosting:JsChatLive]@L]</span></a>
+        <p class ="font-18 main-banner-content-text-vpsx">
+           [@L[cds.sales/gd/hosting/vps-hosting:CallBanner]@L]
+        </p>
+        ##else
+        <p class ="font-18 main-banner-content-text-vpsx">
+           [@L[cds.sales/gd/hosting/vps-hosting:CallBanner2]@L]
+        </p>
         ##endif
-
     </div>
 </section>
 <!-- End main-banner -->
@@ -106,11 +112,7 @@ assetPath: false
                 <div class="l-main-container container misc-banner-content misc-banner-content-vps">
                     <h2>[@L[cds.sales/gd/hosting/vps-hosting:Tab1Header]@L]</h2>
                     <p>[@L[cds.sales/gd/hosting/vps-hosting:Tab1HeaderText]@L]</p>
-
-                    ##if(activeLanguageAny(en))                    
-                    <a href="javascript:void(0)" class="misc-banner-link chat-button-click" data-ci="88938"><i class="ico ico-gt-alternate"></i><span id="lpLivePersonVpsHosting2"></span></a>
-                    ##endif
-
+                    <p>[@L[cds.sales/gd/hosting/vps-hosting:Tab1HeaderText2]@L]</p>
                 </div>
             </section>
             <!-- End misc-banner -->
@@ -119,7 +121,7 @@ assetPath: false
                     <div class="grid-column tab-content-operating-system has-badge no-padding-bottom">
                       ##if(activeLanguageAny(en))
                         <div class="compare-top-badge-wrapper">
-                            <span class="compare-top-badge">[@L[cds.sales/gd/hosting/vps-hosting:NeedHelpBadgePhone1]@L]<br/>[@L[cds.sales/gd/hosting/vps-hosting:NeedHelpBadgePhone2]@L]</span>
+                            <span class="compare-top-badge">[@L[cds.sales/gd/hosting/vps-hosting:NeedHelpBadgePhone2]@L]</span>
                         </div>
                       ##endif
                         ##if(isManager())
@@ -144,27 +146,17 @@ assetPath: false
                         <p class="operating-systems-label">[@L[cds.sales/gd/hosting/vps-hosting:SelectOS]@L]</p>
                         <ul class="operating-systems-radios nav nav-tabs no-margin-bottom">
                             <li class="operating-systems-radios-item active">
-                                <a class="nav-tabs-link operating-systems-radios-link" href="#centos" data-toggle="tab" data-ci="88939">
+                                <a class="nav-tabs-link operating-systems-radios-link" href="#linux" data-toggle="tab" data-ci="88939">
                                     <i class="ico ico-os-button os-button"></i>
                                     <i class="ico ico-os-button-active os-button"></i>
-                                    <i class="ico ico-centos"></i>
-                                    <span class="ico-text">[@L[cds.sales/gd/hosting/vps-hosting:OSCentOS]@L]</span>
+                                    <span class ="ico-textx">[@L[cds.sales/gd/hosting/vps-hosting:OSLinux]@L]</span>
                                 </a>
-                            </li>
-                            <li class="operating-systems-radios-item">
-                                <a class="nav-tabs-link operating-systems-radios-link" href="#fedora" data-toggle="tab" data-ci="88940">
-                                    <i class="ico ico-os-button os-button"></i>
-                                    <i class="ico ico-os-button-active os-button"></i>
-                                    <i class="ico ico-fedora"></i>
-                                    <span class="ico-text">[@L[cds.sales/gd/hosting/vps-hosting:OSFedora]@L]</span>
-                                </a>
-                            </li>
+                            </li>      
                             <li class="operating-systems-radios-item no-padding-right">
                                 <a class="nav-tabs-link operating-systems-radios-link" href="#windows" data-toggle="tab" data-ci="88941">
                                     <i class="ico ico-os-button os-button"></i>
                                     <i class="ico ico-os-button-active os-button"></i>
-                                    <i class="ico ico-windows"></i>
-                                    <span class="ico-text">[@L[cds.sales/gd/hosting/vps-hosting:OSWindows]@L]</span>
+                                    <span class ="ico-textx">[@L[cds.sales/gd/hosting/vps-hosting:OSWindows]@L]</span>
                                 </a>
                             </li>
                         </ul>
@@ -172,592 +164,7 @@ assetPath: false
                 </div>
             </div>
             <div class="tab-content no-margin-top">
-                <div class="tab-pane active" id="centos">
-                    <div class="row tab-content no-margin-top no-margin-bottom">
-                        <div class="col-xs-12">
-                            <div class="grid-column operating-systems-info">
-                                <p class="no-margin-bottom">[@L[cds.sales/gd/hosting/vps-hosting:CentOsVersion]@L]</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row tab-content" data-gd-sidebysidealign="{}">
-                    <div class="col-xs-4" id="centos-basic-column" data-gd-sidebysidealign-col="1">
-                            <div class="grid-column no-padding-bottom has-badge">
-                                <div data-gd-sidebysidealign-row="1">
-                                    <h2>[@L[cds.sales/gd/hosting/vps-hosting:CategoryBasicTitle]@L]</h2>
-                                </div>
-                                <form action="[@T[link:<relative path="/hosting/vps-hosting-config.aspx " parammode="common " />]@T]" name="frmAddToCart" class="frmAddToCart" id="centosBasic" method="get">
-                                    <div data-gd-sidebysidealign-row="2">
-                                        <p class="starting-at starting-at-alternate-top-spacing">
-                                          <span class="starting-at-above">[@L[cds.sales/gd/hosting/vps-hosting:StartingAt]@L]</span>
-                                          <span class="starting-at-price"></span>
-                                          <span class="starting-at-small">/[@L[cds.sales/gd/hosting/vps-hosting:PerMonthFull]@L]</span>
-                                        </p>
-                                    </div>
-                                    <div data-gd-sidebysidealign-row="3">
-                                        <div class="select-box" data-ci="88942">
-                                            <div class="select-box-head">
-                                                <div class="select-box-current">
-                                                </div>
-                                                <div class="select-box-cta"><i class="ico ico-download"></i>
-                                                </div>
-                                            </div>
-                                            <!-- select-box-head -->
-                                            <div class="select-box-body">
-                                                <ul class="select-box-options">
-                                                </ul>
-                                            </div>
-                                            <!-- select-box-body -->
-                                        </div>
-                                        <!-- select-box -->
-                                        <p class="no-margin-bottom">
-                                            <button type="submit" data-form="addtocart-form" class="btn btn-warning btn-block btn-lg js-addtocart" data-ci="88943">[@L[cds.sales/gd/hosting/vps-hosting:CartButton]@L]</button>
-                                        </p>
-                                    </div>
-                                </form>
-
-                                <ul class="plan-pricing-list plan-pricing-list-alternate">
-                                    <li data-gd-sidebysidealign-row="4">[@L[cds.sales/gd/hosting/vps-hosting:OSLabel]@L]
-                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:CentosOperatingSystem]@L]</strong>
-                                    </li>
-                                    <li data-gd-sidebysidealign-row="5">[@L[cds.sales/gd/hosting/vps-hosting:RAMLabel]@L]
-                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:CategoryBasicRam]@L]</strong>
-                                    </li>
-                                    <li class="two-lines" data-gd-sidebysidealign-row="6 ">[@L[cds.sales/gd/hosting/vps-hosting:StorageLabel]@L]
-                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:CategoryBasicStorage]@L]</strong><span class="item-note"><a class="isToolTip"  data-html="true" data-toggle="tooltip"data-original-title="[@L[cds.sales/gd/hosting/vps-hosting:GBRestrictions]@L]">[@L[cds.sales/gd/hosting/vps-hosting:RestrictionsApply]@L]</a></span>
-                                    </li>
-                                    <li data-gd-sidebysidealign-row="7">[@L[cds.sales/gd/hosting/vps-hosting:BandwidthLabel]@L]
-                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:CategoryBasicBandwidth]@L]</strong>/[@L[cds.sales/gd/hosting/vps-hosting:PerMonth]@L]</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- col-xs-4 -->
-                        <div class="col-xs-4" id="centos-eco-column" data-gd-sidebysidealign-col="2">
-                            <div class="grid-column no-padding-bottom has-badge">
-                                <div data-gd-sidebysidealign-row="1">
-                                    <h2>[@L[cds.sales/gd/hosting/vps-hosting:CategoryEconomyTitle]@L]</h2>
-                                </div>
-                                <form action="[@T[link:<relative path="/hosting/vps-hosting-config.aspx " parammode="common " />]@T]" name="frmAddToCart" class="frmAddToCart" id="centosEco" method="get">
-                                    <div data-gd-sidebysidealign-row="2">
-                                        <p class="starting-at starting-at-alternate-top-spacing">
-                                          <span class="starting-at-above">[@L[cds.sales/gd/hosting/vps-hosting:StartingAt]@L]</span>
-                                          <span class="starting-at-price"></span>
-                                          <span class="starting-at-small">/[@L[cds.sales/gd/hosting/vps-hosting:PerMonthFull]@L]</span>
-                                        </p>
-                                    </div>
-                                    <div data-gd-sidebysidealign-row="3">
-                                        <div class="select-box" data-ci="88942">
-                                            <div class="select-box-head">
-                                                <div class="select-box-current">
-                                                </div>
-                                                <div class="select-box-cta"><i class="ico ico-download"></i>
-                                                </div>
-                                            </div>
-                                            <!-- select-box-head -->
-                                            <div class="select-box-body">
-                                                <ul class="select-box-options">
-                                                </ul>
-                                            </div>
-                                            <!-- select-box-body -->
-                                        </div>
-                                        <!-- select-box -->
-                                        <p class="no-margin-bottom">
-                                            <button type="submit" data-form="addtocart-form" class="btn btn-warning btn-block btn-lg js-addtocart" data-ci="88943">[@L[cds.sales/gd/hosting/vps-hosting:CartButton]@L]</button>
-                                        </p>
-                                    </div>
-                                </form>
-
-                                <ul class="plan-pricing-list plan-pricing-list-alternate">
-                                    <li data-gd-sidebysidealign-row="4">[@L[cds.sales/gd/hosting/vps-hosting:OSLabel]@L]
-                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:CentosOperatingSystem]@L]</strong>
-                                    </li>
-                                    <li data-gd-sidebysidealign-row="5">[@L[cds.sales/gd/hosting/vps-hosting:RAMLabel]@L]
-                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:CategoryEconomyRam]@L]</strong>
-                                    </li>
-                                    <li class="two-lines" data-gd-sidebysidealign-row="6 ">[@L[cds.sales/gd/hosting/vps-hosting:StorageLabel]@L]
-                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:CategoryEconomyStorage]@L]</strong><span class="item-note"><a class="isToolTip"  data-html="true" data-toggle="tooltip"data-original-title="[@L[cds.sales/gd/hosting/vps-hosting:GBRestrictions]@L]">[@L[cds.sales/gd/hosting/vps-hosting:RestrictionsApply]@L]</a></span>
-                                    </li>
-                                    <li data-gd-sidebysidealign-row="7">[@L[cds.sales/gd/hosting/vps-hosting:BandwidthLabel]@L]
-                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:CategoryEconomyBandwidth]@L]</strong>/[@L[cds.sales/gd/hosting/vps-hosting:PerMonth]@L]</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- col-xs-4 -->
-                        <div class="col-xs-4" id="centos-value-column" data-gd-sidebysidealign-col="3">
-                            <div class="grid-column no-padding-bottom has-badge">
-                                <div data-gd-sidebysidealign-row="1">
-                                    <span class="badge badge-important badge-upper-right">[@L[cds.sales/gd/hosting/vps-hosting:MostPopularBadge]@L]</span>
-                                    <h2>[@L[cds.sales/gd/hosting/vps-hosting:CategoryValueTitle]@L]</h2>
-                                </div>
-                                <form action="[@T[link:<relative path="/hosting/vps-hosting-config.aspx" parammode="common " />]@T]" name="centosValueForm" class="frmAddToCart" id="centosValue" method="get">
-                                    <div data-gd-sidebysidealign-row="2">
-                                        <p class="starting-at starting-at-alternate-top-spacing">
-                                          <span class="starting-at-above">[@L[cds.sales/gd/hosting/vps-hosting:StartingAt]@L]</span>
-                                          <span class="starting-at-price"></span>
-                                          <span class="starting-at-small">/[@L[cds.sales/gd/hosting/vps-hosting:PerMonthFull]@L]</span>
-                                        </p>
-                                    </div>
-                                    <div data-gd-sidebysidealign-row="3">
-                                        <div class="select-box" data-ci="88944">
-                                            <div class="select-box-head">
-                                                <div class="select-box-current">
-                                                </div>
-                                                <div class="select-box-cta"><i class="ico ico-download"></i>
-                                                </div>
-                                            </div>
-                                            <!-- select-box-head -->
-                                            <div class="select-box-body">
-                                                <ul class="select-box-options">
-                                                </ul>
-                                            </div>
-                                            <!-- select-box-body -->
-                                        </div>
-                                        <!-- select-box -->
-                                        <p class="no-margin-bottom">
-                                            <button type="submit" data-form="addtocart-form" class="btn btn-warning btn-block btn-lg js-addtocart" data-ci="88945">[@L[cds.sales/gd/hosting/vps-hosting:CartButton]@L]</button>
-                                        </p>
-                                    </div>
-                                </form> 
-                                <ul class="plan-pricing-list plan-pricing-list-alternate">
-                                    <li data-gd-sidebysidealign-row="4">[@L[cds.sales/gd/hosting/vps-hosting:OSLabel]@L]
-                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:CentosOperatingSystem]@L]</strong>
-                                    </li>
-                                    <li data-gd-sidebysidealign-row="5">[@L[cds.sales/gd/hosting/vps-hosting:RAMLabel]@L]
-                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:CategoryValueRam]@L]</strong>
-                                    </li>
-                                    <li class="two-lines" data-gd-sidebysidealign-row="6">[@L[cds.sales/gd/hosting/vps-hosting:StorageLabel]@L]
-                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:CategoryValueStorage]@L]</strong><span class="item-note"><a class="isToolTip"  data-html="true" data-toggle="tooltip"data-original-title="[@L[cds.sales/gd/hosting/vps-hosting:GBRestrictions]@L]">[@L[cds.sales/gd/hosting/vps-hosting:RestrictionsApply]@L]</a></span>
-                                    </li>
-                                    <li data-gd-sidebysidealign-row="7">[@L[cds.sales/gd/hosting/vps-hosting:BandwidthLabel]@L]
-                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:CategoryValueBandwidth]@L]</strong>/[@L[cds.sales/gd/hosting/vps-hosting:PerMonth]@L]</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- col-xs-4 -->
-
-                    </div>
-                    <div class="row tab-content no-margin-bottom" data-gd-sidebysidealign="{}">
-                        <div class="col-xs-4" id="centos-deluxe-column" data-gd-sidebysidealign-col="1">
-                            <div class="grid-column no-padding-bottom">
-                                <div data-gd-sidebysidealign-row="1">
-                                    <h2>[@L[cds.sales/gd/hosting/vps-hosting:CategoryDeluxeTitle]@L]</h2>
-                                </div>
-                                <form action="[@T[link:<relative path="/hosting/vps-hosting-config.aspx" parammode="common " />]@T]" name="centosDeluxeForm" class="frmAddToCart" id="centosDeluxe" method="get">
-                                    <div data-gd-sidebysidealign-row="2">
-                                        <p class="starting-at starting-at-alternate-top-spacing">
-                                          <span class="starting-at-above">[@L[cds.sales/gd/hosting/vps-hosting:StartingAt]@L]</span>
-                                          <span class="starting-at-price"></span>
-                                          <span class="starting-at-small">/[@L[cds.sales/gd/hosting/vps-hosting:PerMonthFull]@L]</span>
-                                        </p>
-                                    </div>
-                                    <div data-gd-sidebysidealign-row="3">
-                                        <div class="select-box" data-ci="88946">
-                                            <div class="select-box-head">
-                                                <div class="select-box-current">
-                                                </div>
-                                                <div class="select-box-cta"><i class="ico ico-download"></i>
-                                                </div>
-                                            </div>
-                                            <!-- select-box-head -->
-                                            <div class="select-box-body">
-                                                <ul class="select-box-options">
-                                                </ul>
-                                            </div>
-                                            <!-- select-box-body -->
-                                        </div>
-                                        <!-- select-box -->
-                                        <p class="no-margin-bottom">
-                                            <button type="submit" data-form="addtocart-form" class="btn btn-warning btn-block btn-lg js-addtocart" data-ci="88947">[@L[cds.sales/gd/hosting/vps-hosting:CartButton]@L]</button>
-                                        </p>
-                                    </div>
-                                </form>     
-                                <ul class="plan-pricing-list plan-pricing-list-alternate">
-                                    <li data-gd-sidebysidealign-row="4">[@L[cds.sales/gd/hosting/vps-hosting:OSLabel]@L]
-                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:CentosOperatingSystem]@L]</strong>
-                                    </li>
-                                    <li data-gd-sidebysidealign-row="5">[@L[cds.sales/gd/hosting/vps-hosting:RAMLabel]@L]
-                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:CategoryDeluxeRam]@L]</strong>
-                                    </li>
-                                    <li class="two-lines" data-gd-sidebysidealign-row="6">[@L[cds.sales/gd/hosting/vps-hosting:StorageLabel]@L]
-                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:CategoryDeluxeStorage]@L]</strong><span class="item-note"><a class="isToolTip"  data-html="true" data-toggle="tooltip"data-original-title="[@L[cds.sales/gd/hosting/vps-hosting:GBRestrictions]@L]">[@L[cds.sales/gd/hosting/vps-hosting:RestrictionsApply]@L]</a></span>
-                                    </li>
-                                    <li data-gd-sidebysidealign-row="7">[@L[cds.sales/gd/hosting/vps-hosting:BandwidthLabel]@L]
-                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:CategoryDeluxeBandwidth]@L]</strong>/[@L[cds.sales/gd/hosting/vps-hosting:PerMonth]@L]</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- col-xs-4 -->
-                        <div class="col-xs-4" id="centos-premium-column" data-gd-sidebysidealign-col="2">
-                            <div class="grid-column no-padding-bottom">
-                                <div data-gd-sidebysidealign-row="1">
-                                    <h2>[@L[cds.sales/gd/hosting/vps-hosting:CategoryPremiumTitle]@L]</h2>
-                                </div>
-                                <form action="[@T[link:<relative path="/hosting/vps-hosting-config.aspx" parammode="common " />]@T]" name="centosPremiumForm" class="frmAddToCart" id="centosPremium" method="get">
-                                    <div data-gd-sidebysidealign-row="2">
-                                        <p class="starting-at starting-at-alternate-top-spacing">
-                                          <span class="starting-at-above">[@L[cds.sales/gd/hosting/vps-hosting:StartingAt]@L]</span>
-                                          <span class="starting-at-price"></span>
-                                          <span class="starting-at-small">/[@L[cds.sales/gd/hosting/vps-hosting:PerMonthFull]@L]</span>
-                                        </p>
-                                    </div>
-                                    <div data-gd-sidebysidealign-row="3">
-                                        <div class="select-box" data-ci="88948">
-                                            <div class="select-box-head">
-                                                <div class="select-box-current">
-                                                </div>
-                                                <div class="select-box-cta"><i class="ico ico-download"></i>
-                                                </div>
-                                            </div>
-                                            <!-- select-box-head -->
-                                            <div class="select-box-body">
-                                                <ul class="select-box-options">
-                                                </ul>
-                                            </div>
-                                            <!-- select-box-body -->
-                                        </div>
-                                        <!-- select-box -->
-                                        <p class="no-margin-bottom">
-                                            <button type="submit" data-form="addtocart-form" class="btn btn-warning btn-block btn-lg js-addtocart" data-ci="88949">[@L[cds.sales/gd/hosting/vps-hosting:CartButton]@L]</button>
-                                        </p>
-                                    </div>
-                                </form>
-                                <ul class="plan-pricing-list plan-pricing-list-alternate">
-                                    <li data-gd-sidebysidealign-row="4">[@L[cds.sales/gd/hosting/vps-hosting:OSLabel]@L]
-                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:CentosOperatingSystem]@L]</strong>
-                                    </li>
-                                    <li data-gd-sidebysidealign-row="5">[@L[cds.sales/gd/hosting/vps-hosting:RAMLabel]@L]
-                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:CategoryPremiumRam]@L]</strong>
-                                    </li>
-                                    <li class="two-lines" data-gd-sidebysidealign-row="6">[@L[cds.sales/gd/hosting/vps-hosting:StorageLabel]@L]
-                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:CategoryPremiumStorage]@L]</strong><span class="item-note"><a class="isToolTip"  data-html="true" data-toggle="tooltip"data-original-title="[@L[cds.sales/gd/hosting/vps-hosting:GBRestrictions]@L]">[@L[cds.sales/gd/hosting/vps-hosting:RestrictionsApply]@L]</a></span>
-                                    </li>
-                                    <li data-gd-sidebysidealign-row="7">[@L[cds.sales/gd/hosting/vps-hosting:BandwidthLabel]@L]
-                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:CategoryPremiumBandwidth]@L]</strong>/[@L[cds.sales/gd/hosting/vps-hosting:PerMonth]@L]</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- col-xs-4 -->
-
-                        <div class="col-xs-4" id="centos-ultimate-column" data-gd-sidebysidealign-col="3">
-                            <div class="grid-column no-padding-bottom">
-                                <div data-gd-sidebysidealign-row="1">
-                                    <h2>[@L[cds.sales/gd/hosting/vps-hosting:CategoryUltimateTitle]@L]</h2>
-                                </div>
-                                <form action="[@T[link:<relative path="/hosting/vps-hosting-config.aspx" parammode="common " />]@T]" name="centosUltimateForm" class="frmAddToCart" id="centosUltimate" method="get">
-                                    <div data-gd-sidebysidealign-row="2">
-                                        <p class="starting-at starting-at-alternate-top-spacing">
-                                          <span class="starting-at-above">[@L[cds.sales/gd/hosting/vps-hosting:StartingAt]@L]</span>
-                                          <span class="starting-at-price"></span>
-                                          <span class="starting-at-small">/[@L[cds.sales/gd/hosting/vps-hosting:PerMonthFull]@L]</span>
-                                        </p>
-                                    </div>
-                                    <div data-gd-sidebysidealign-row="3">
-                                        <div class="select-box" data-ci="88950">
-                                            <div class="select-box-head">
-                                                <div class="select-box-current">
-                                                </div>
-                                                <div class="select-box-cta"><i class="ico ico-download"></i>
-                                                </div>
-                                            </div>
-                                            <!-- select-box-head -->
-                                            <div class="select-box-body">
-                                                <ul class="select-box-options">
-                                                </ul>
-                                            </div>
-                                            <!-- select-box-body -->
-                                        </div>
-                                        <!-- select-box -->
-                                        <p class="no-margin-bottom">
-                                            <button type="submit" data-form="addtocart-form" class="btn btn-warning btn-block btn-lg js-addtocart" data-ci="88951">[@L[cds.sales/gd/hosting/vps-hosting:CartButton]@L]</button>
-                                        </p>
-                                    </div>
-                                </form>
-                                <ul class="plan-pricing-list plan-pricing-list-alternate">
-                                    <li data-gd-sidebysidealign-row="4">[@L[cds.sales/gd/hosting/vps-hosting:OSLabel]@L]
-                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:CentosOperatingSystem]@L]</strong>
-                                    </li>
-                                    <li data-gd-sidebysidealign-row="5">[@L[cds.sales/gd/hosting/vps-hosting:RAMLabel]@L]
-                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:CategoryUltimateRam]@L]</strong>
-                                    </li>
-                                    <li class="two-lines" data-gd-sidebysidealign-row="6">[@L[cds.sales/gd/hosting/vps-hosting:StorageLabel]@L]
-                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:CategoryUltimateStorage]@L]</strong><span class="item-note"><a class="isToolTip"  data-html="true" data-toggle="tooltip"data-original-title="[@L[cds.sales/gd/hosting/vps-hosting:GBRestrictions]@L]">[@L[cds.sales/gd/hosting/vps-hosting:RestrictionsApply]@L]</a></span>
-                                    </li>
-                                    <li data-gd-sidebysidealign-row="7">[@L[cds.sales/gd/hosting/vps-hosting:BandwidthLabel]@L]
-                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:CategoryUltimateBandwidth]@L]</strong>/[@L[cds.sales/gd/hosting/vps-hosting:PerMonth]@L]</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- col-xs-4 -->
-                    </div>
-                </div>
-                <div class="tab-pane" id="fedora">
-                    <div class="row tab-content no-margin-top no-margin-bottom">
-                        <div class="col-xs-12">
-                            <div class="grid-column operating-systems-info">
-                                <p class="no-margin-bottom">[@L[cds.sales/gd/hosting/vps-hosting:FedoraOsVersion]@L]</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row tab-content" data-gd-sidebysidealign="{}">
-                        <div class="col-xs-4" id="fedora-eco-column" data-gd-sidebysidealign-col="1">
-                            <div class="grid-column no-padding-bottom has-badge">
-                                <div data-gd-sidebysidealign-row="1">
-                                    <h2>[@L[cds.sales/gd/hosting/vps-hosting:CategoryEconomyTitle]@L]</h2>
-                                </div>
-                                <form action="[@T[link:<relative path="/hosting/vps-hosting-config.aspx" parammode="common " />]@T]" name="fedoraEcoForm" class="frmAddToCart" id="fedEco" method="get">
-                                    <div data-gd-sidebysidealign-row="2">
-                                        <p class="starting-at starting-at-alternate-top-spacing">
-                                          <span class="starting-at-above">[@L[cds.sales/gd/hosting/vps-hosting:StartingAt]@L]</span>
-                                          <span class="starting-at-price"></span>
-                                          <span class="starting-at-small">/[@L[cds.sales/gd/hosting/vps-hosting:PerMonthFull]@L]</span>
-                                        </p>
-                                    </div>
-                                    <div data-gd-sidebysidealign-row="3">
-                                        <div class="select-box" data-ci="88952">
-                                            <div class="select-box-head">
-                                                <div class="select-box-current">
-                                                </div>
-                                                <div class="select-box-cta"><i class="ico ico-download"></i>
-                                                </div>
-                                            </div>
-                                            <!-- select-box-head -->
-                                            <div class="select-box-body">
-                                                <ul class="select-box-options">
-                                                </ul>
-                                            </div>
-                                            <!-- select-box-body -->
-                                        </div>
-                                        <!-- select-box -->
-                                        <p class="no-margin-bottom">
-                                            <button type="submit" data-form="addtocart-form" class="btn btn-warning btn-block btn-lg js-addtocart" data-ci="88953">[@L[cds.sales/gd/hosting/vps-hosting:CartButton]@L]</button>
-                                        </p>
-                                    </div>
-                                </form>
-                                <ul class="plan-pricing-list plan-pricing-list-alternate">
-                                    <li data-gd-sidebysidealign-row="4">[@L[cds.sales/gd/hosting/vps-hosting:OSLabel]@L]
-                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:FedoraOperatingSystem]@L]</strong>
-                                    </li>
-                                    <li data-gd-sidebysidealign-row="5">[@L[cds.sales/gd/hosting/vps-hosting:RAMLabel]@L]
-                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:CategoryEconomyRam]@L]</strong>
-                                    </li>
-                                    <li class="two-lines" data-gd-sidebysidealign-row="6">[@L[cds.sales/gd/hosting/vps-hosting:StorageLabel]@L]
-                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:CategoryEconomyStorage]@L]</strong><span class="item-note"><a class="isToolTip"  data-html="true" data-toggle="tooltip"data-original-title="[@L[cds.sales/gd/hosting/vps-hosting:GBRestrictions]@L]">[@L[cds.sales/gd/hosting/vps-hosting:RestrictionsApply]@L]</a></span>
-                                    </li>
-                                    <li data-gd-sidebysidealign-row="7">[@L[cds.sales/gd/hosting/vps-hosting:BandwidthLabel]@L]
-                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:CategoryEconomyBandwidth]@L]</strong>/[@L[cds.sales/gd/hosting/vps-hosting:PerMonth]@L]</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- col-xs-4 -->
-
-                        <div class="col-xs-4" id="fedora-value-column" data-gd-sidebysidealign-col="2">
-                            <div class="grid-column no-padding-bottom has-badge">
-                                <div data-gd-sidebysidealign-row="1">
-                                    <span class="badge badge-important badge-upper-right">[@L[cds.sales/gd/hosting/vps-hosting:MostPopularBadge]@L]</span>
-                                    <h2>[@L[cds.sales/gd/hosting/vps-hosting:CategoryValueTitle]@L]</h2>
-                                </div>
-                                <form action="[@T[link:<relative path="/hosting/vps-hosting-config.aspx" parammode="common " />]@T]" name="fedoraValueForm" class="frmAddToCart" id="fedValue" method="get">
-                                    <div data-gd-sidebysidealign-row="2">
-                                        <p class="starting-at starting-at-alternate-top-spacing">
-                                          <span class="starting-at-above">[@L[cds.sales/gd/hosting/vps-hosting:StartingAt]@L]</span>
-                                          <span class="starting-at-price"></span>
-                                          <span class="starting-at-small">/[@L[cds.sales/gd/hosting/vps-hosting:PerMonthFull]@L]</span>
-                                        </p>
-                                    </div>
-                                    <div data-gd-sidebysidealign-row="3">
-                                        <div class="select-box" data-ci="88954">
-                                            <div class="select-box-head">
-                                                <div class="select-box-current">
-                                                </div>
-                                                <div class="select-box-cta"><i class="ico ico-download"></i>
-                                                </div>
-                                            </div>
-                                            <!-- select-box-head -->
-                                            <div class="select-box-body">
-                                                <ul class="select-box-options">
-                                                </ul>
-                                            </div>
-                                            <!-- select-box-body -->
-                                        </div>
-                                        <!-- select-box -->
-                                        <p class="no-margin-bottom">
-                                            <button type="submit" data-form="addtocart-form" class="btn btn-warning btn-block btn-lg js-addtocart" data-ci="88955">[@L[cds.sales/gd/hosting/vps-hosting:CartButton]@L]</button>
-                                        </p>
-                                    </div>
-                                </form>
-                                <ul class="plan-pricing-list plan-pricing-list-alternate">
-                                    <li data-gd-sidebysidealign-row="4">[@L[cds.sales/gd/hosting/vps-hosting:OSLabel]@L]
-                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:FedoraOperatingSystem]@L]</strong>
-                                    </li>
-                                    <li data-gd-sidebysidealign-row="5">[@L[cds.sales/gd/hosting/vps-hosting:RAMLabel]@L]
-                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:CategoryValueRam]@L]</strong>
-                                    </li>
-                                    <li class="two-lines" data-gd-sidebysidealign-row="6">[@L[cds.sales/gd/hosting/vps-hosting:StorageLabel]@L]
-                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:CategoryValueStorage]@L]</strong><span class="item-note"><a class="isToolTip"  data-html="true" data-toggle="tooltip"data-original-title="[@L[cds.sales/gd/hosting/vps-hosting:GBRestrictions]@L]">[@L[cds.sales/gd/hosting/vps-hosting:RestrictionsApply]@L]</a></span>
-                                    </li>
-                                    <li data-gd-sidebysidealign-row="7">[@L[cds.sales/gd/hosting/vps-hosting:BandwidthLabel]@L]
-                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:CategoryValueBandwidth]@L]</strong>/[@L[cds.sales/gd/hosting/vps-hosting:PerMonth]@L]</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- col-xs-4 -->
-
-                        <div class="col-xs-4" id="fedora-deluxe-column" data-gd-sidebysidealign-col="3">
-                            <div class="grid-column no-padding-bottom">
-                                <div data-gd-sidebysidealign-row="1">
-                                    <h2>[@L[cds.sales/gd/hosting/vps-hosting:CategoryDeluxeTitle]@L]</h2>
-                                </div>
-                                <form action="[@T[link:<relative path="/hosting/vps-hosting-config.aspx" parammode="common " />]@T]" name="fedoraDeluxeForm" class="frmAddToCart" id="fedDeluxe" method="get">
-                                    <div data-gd-sidebysidealign-row="2">
-                                        <p class="starting-at starting-at-alternate-top-spacing">
-                                          <span class="starting-at-above">[@L[cds.sales/gd/hosting/vps-hosting:StartingAt]@L]</span>
-                                          <span class="starting-at-price"></span>
-                                          <span class="starting-at-small">/[@L[cds.sales/gd/hosting/vps-hosting:PerMonthFull]@L]</span>
-                                        </p>
-                                    </div>
-                                    <div data-gd-sidebysidealign-row="3">
-                                        <div class="select-box" data-ci="88956">
-                                            <div class="select-box-head">
-                                                <div class="select-box-current">
-                                                </div>
-                                                <div class="select-box-cta"><i class="ico ico-download"></i>
-                                                </div>
-                                            </div>
-                                            <!-- select-box-head -->
-                                            <div class="select-box-body">
-                                                <ul class="select-box-options">
-                                                </ul>
-                                            </div>
-                                            <!-- select-box-body -->
-                                        </div>
-                                        <!-- select-box -->
-                                        <p class="no-margin-bottom">
-                                            <button type="submit" data-form="addtocart-form" class="btn btn-warning btn-block btn-lg js-addtocart" data-ci="88957">[@L[cds.sales/gd/hosting/vps-hosting:CartButton]@L]</button>
-                                        </p>
-                                    </div>
-                                </form>
-                                <ul class="plan-pricing-list plan-pricing-list-alternate">
-                                    <li data-gd-sidebysidealign-row="4">[@L[cds.sales/gd/hosting/vps-hosting:OSLabel]@L]
-                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:FedoraOperatingSystem]@L]</strong>
-                                    </li>
-                                    <li data-gd-sidebysidealign-row="5">[@L[cds.sales/gd/hosting/vps-hosting:RAMLabel]@L]
-                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:CategoryDeluxeRam]@L]</strong>
-                                    </li>
-                                    <li class="two-lines" data-gd-sidebysidealign-row="6">[@L[cds.sales/gd/hosting/vps-hosting:StorageLabel]@L]
-                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:CategoryDeluxeStorage]@L]</strong><span class="item-note"><a class="isToolTip"  data-html="true" data-toggle="tooltip"data-original-title="[@L[cds.sales/gd/hosting/vps-hosting:GBRestrictions]@L]">[@L[cds.sales/gd/hosting/vps-hosting:RestrictionsApply]@L]</a></span>
-                                    </li>
-                                    <li data-gd-sidebysidealign-row="7">[@L[cds.sales/gd/hosting/vps-hosting:BandwidthLabel]@L]
-                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:CategoryDeluxeBandwidth]@L]</strong>/[@L[cds.sales/gd/hosting/vps-hosting:PerMonth]@L]</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- col-xs-4 -->
-                    </div>
-                    <div class="row tab-content no-margin-bottom" data-gd-sidebysidealign="{}">
-                        <div class="col-xs-4" id="fedora-premium-column" data-gd-sidebysidealign-col="1">
-                            <div class="grid-column no-padding-bottom">
-                                <div data-gd-sidebysidealign-row="1">
-                                    <h2>[@L[cds.sales/gd/hosting/vps-hosting:CategoryPremiumTitle]@L]</h2>
-                                </div>
-                                <form action="[@T[link:<relative path="/hosting/vps-hosting-config.aspx" parammode="common " />]@T]" name="fedoraPremiumForm" class="frmAddToCart" id="fedPremium" method="get">
-                                    <div data-gd-sidebysidealign-row="2">
-                                        <p class="starting-at starting-at-alternate-top-spacing">
-                                          <span class="starting-at-above">[@L[cds.sales/gd/hosting/vps-hosting:StartingAt]@L]</span>
-                                          <span class="starting-at-price"></span>
-                                          <span class="starting-at-small">/[@L[cds.sales/gd/hosting/vps-hosting:PerMonthFull]@L]</span>
-                                        </p>
-                                    </div>
-                                    <div data-gd-sidebysidealign-row="3">
-                                        <div class="select-box" data-ci="88958">
-                                            <div class="select-box-head">
-                                                <div class="select-box-current">
-                                                </div>
-                                                <div class="select-box-cta"><i class="ico ico-download"></i>
-                                                </div>
-                                            </div>
-                                            <!-- select-box-head -->
-                                            <div class="select-box-body">
-                                                <ul class="select-box-options">
-                                                </ul>
-                                            </div>
-                                            <!-- select-box-body -->
-                                        </div>
-                                        <!-- select-box -->
-                                        <p class="no-margin-bottom">
-                                            <button type="submit" data-form="addtocart-form" class="btn btn-warning btn-block btn-lg js-addtocart" data-ci="88959">[@L[cds.sales/gd/hosting/vps-hosting:CartButton]@L]</button>
-                                        </p>
-                                    </div>
-                                </form>
-                                <ul class="plan-pricing-list plan-pricing-list-alternate">
-                                    <li data-gd-sidebysidealign-row="4">[@L[cds.sales/gd/hosting/vps-hosting:OSLabel]@L]
-                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:FedoraOperatingSystem]@L]</strong>
-                                    </li>
-                                    <li data-gd-sidebysidealign-row="5">[@L[cds.sales/gd/hosting/vps-hosting:RAMLabel]@L]
-                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:CategoryPremiumRam]@L]</strong>
-                                    </li>
-                                    <li class="two-lines" data-gd-sidebysidealign-row="6">[@L[cds.sales/gd/hosting/vps-hosting:StorageLabel]@L]
-                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:CategoryPremiumStorage]@L]</strong><span class="item-note"><a class="isToolTip"  data-html="true" data-toggle="tooltip"data-original-title="[@L[cds.sales/gd/hosting/vps-hosting:GBRestrictions]@L]">[@L[cds.sales/gd/hosting/vps-hosting:RestrictionsApply]@L]</a></span>
-                                    </li>
-                                    <li data-gd-sidebysidealign-row="7">[@L[cds.sales/gd/hosting/vps-hosting:BandwidthLabel]@L]
-                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:CategoryPremiumBandwidth]@L]</strong>/[@L[cds.sales/gd/hosting/vps-hosting:PerMonth]@L]</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- col-xs-4 -->
-
-                        <div class="col-xs-4" id="fedora-ultimate-column" data-gd-sidebysidealign-col="2">
-                            <div class="grid-column no-padding-bottom">
-                                <div data-gd-sidebysidealign-row="1">
-                                    <h2>[@L[cds.sales/gd/hosting/vps-hosting:CategoryUltimateTitle]@L]</h2>
-                                </div>
-                                <form action="[@T[link:<relative path="/hosting/vps-hosting-config.aspx" parammode="common " />]@T]" name="fedoraUltimateForm" class="frmAddToCart" id="fedUltimate" method="get">
-                                    <div data-gd-sidebysidealign-row="2">
-                                        <p class="starting-at starting-at-alternate-top-spacing">
-                                          <span class="starting-at-above">[@L[cds.sales/gd/hosting/vps-hosting:StartingAt]@L]</span>
-                                          <span class="starting-at-price"></span>
-                                          <span class="starting-at-small">/[@L[cds.sales/gd/hosting/vps-hosting:PerMonthFull]@L]</span>
-                                        </p>
-                                    </div>
-                                    <div data-gd-sidebysidealign-row="3">
-                                        <div class="select-box" data-ci="88960">
-                                            <div class="select-box-head">
-                                                <div class="select-box-current">
-                                                </div>
-                                                <div class="select-box-cta"><i class="ico ico-download"></i>
-                                                </div>
-                                            </div>
-                                            <!-- select-box-head -->
-                                            <div class="select-box-body">
-                                                <ul class="select-box-options">
-                                                </ul>
-                                            </div>
-                                            <!-- select-box-body -->
-                                        </div>
-                                        <!-- select-box -->
-                                        <p class="no-margin-bottom">
-                                            <button type="submit" data-form="addtocart-form" class="btn btn-warning btn-block btn-lg js-addtocart" data-ci="88961">[@L[cds.sales/gd/hosting/vps-hosting:CartButton]@L]</button>
-                                        </p>
-                                    </div>
-                                </form>
-                                <ul class="plan-pricing-list plan-pricing-list-alternate">
-                                    <li data-gd-sidebysidealign-row="4">[@L[cds.sales/gd/hosting/vps-hosting:OSLabel]@L]
-                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:FedoraOperatingSystem]@L]</strong>
-                                    </li>
-                                    <li data-gd-sidebysidealign-row="5">[@L[cds.sales/gd/hosting/vps-hosting:RAMLabel]@L]
-                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:CategoryUltimateRam]@L]</strong>
-                                    </li>
-                                    <li class="two-lines" data-gd-sidebysidealign-row="6">[@L[cds.sales/gd/hosting/vps-hosting:StorageLabel]@L]
-                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:CategoryUltimateStorage]@L]</strong><span class="item-note"><a class="isToolTip"  data-html="true" data-toggle="tooltip"data-original-title="[@L[cds.sales/gd/hosting/vps-hosting:GBRestrictions]@L]">[@L[cds.sales/gd/hosting/vps-hosting:RestrictionsApply]@L]</a></span>
-                                    </li>
-                                    <li data-gd-sidebysidealign-row="7">[@L[cds.sales/gd/hosting/vps-hosting:BandwidthLabel]@L]
-                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:CategoryUltimateBandwidth]@L]</strong>/[@L[cds.sales/gd/hosting/vps-hosting:PerMonth]@L]</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- col-xs-4 -->
-                    </div>
-                </div>
+                
                 <div class="tab-pane" id="windows">
                     <div class="row tab-content no-margin-top no-margin-bottom">
                         <div class="col-xs-12">
@@ -768,7 +175,57 @@ assetPath: false
                     </div>
 
                     <div class="row tab-content" data-gd-sidebysidealign="{}">
-                        <div class="col-xs-4" id="windows-value-column" data-gd-sidebysidealign-col="1">
+                        <div class="col-xs-4" id="windows-eco-column" data-gd-sidebysidealign-col="1">
+                            <div class="grid-column no-padding-bottom">
+                                <div data-gd-sidebysidealign-row="1">
+                                    <h2>[@L[cds.sales/gd/hosting/vps-hosting:CategoryEconomyTitle]@L]</h2>
+                                </div>
+                                <form action="[@T[link:<relative path="/hosting/vps-hosting-config.aspx" parammode="common " />]@T]" name="windowsEconomyForm" class="frmAddToCart" id="windowsEconomy" method="get">
+                                    <div data-gd-sidebysidealign-row="2">
+                                        <p class="starting-at starting-at-alternate-top-spacing">
+                                          <span class="starting-at-above">[@L[cds.sales/gd/hosting/vps-hosting:StartingAt]@L]</span>
+                                          <span class="starting-at-price"></span>
+                                          <span class="starting-at-small">/[@L[cds.sales/gd/hosting/vps-hosting:PerMonthFull]@L]</span>
+                                        </p>
+                                    </div>
+                                    <div data-gd-sidebysidealign-row="3">
+                                        <div class="select-box" data-ci="88964">
+                                            <div class="select-box-head">
+                                                <div class="select-box-current">
+                                                </div>
+                                                <div class="select-box-cta"><i class="ico ico-download"></i>
+                                                </div>
+                                            </div>
+                                            <!-- select-box-head -->
+                                            <div class="select-box-body">
+                                                <ul class="select-box-options">
+                                                </ul>
+                                            </div>
+                                            <!-- select-box-body -->
+                                        </div>
+                                        <!-- select-box -->
+                                        <p class="no-margin-bottom">
+                                            <button type="submit" data-form="addtocart-form" class="btn btn-warning btn-block btn-lg js-addtocart" data-ci="88965">[@L[cds.sales/gd/hosting/vps-hosting:CartButton]@L]</button>
+                                        </p>
+                                    </div>
+                                </form>
+                                <ul class="plan-pricing-list plan-pricing-list-alternate">
+                                    <li data-gd-sidebysidealign-row="4">[@L[cds.sales/gd/hosting/vps-hosting:OSLabel]@L]
+                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:WindowsOperatingSystem]@L]</strong>
+                                    </li>
+                                    <li data-gd-sidebysidealign-row="5">[@L[cds.sales/gd/hosting/vps-hosting:RAMLabel]@L]
+                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:CategoryValueRam]@L]</strong>
+                                    </li>
+                                    <li class="two-lines" data-gd-sidebysidealign-row="6">[@L[cds.sales/gd/hosting/vps-hosting:StorageLabel]@L]
+                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:CategoryEconomyStorage]@L]</strong><span class="item-note"><a class="isToolTip"  data-html="true" data-toggle="tooltip"data-original-title="[@L[cds.sales/gd/hosting/vps-hosting:GBRestrictions]@L]">[@L[cds.sales/gd/hosting/vps-hosting:RestrictionsApply]@L]</a></span>
+                                    </li>
+                                    <li data-gd-sidebysidealign-row="7">[@L[cds.sales/gd/hosting/vps-hosting:BandwidthLabel]@L]
+                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:CategoryEconomyBandwidth]@L]</strong>/[@L[cds.sales/gd/hosting/vps-hosting:PerMonth]@L]</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- col-xs-4 -->
+                        <div class="col-xs-4" id="windows-value-column" data-gd-sidebysidealign-col="2">
                             <div class="grid-column no-padding-bottom has-badge">
                                 <div data-gd-sidebysidealign-row="1">
                                     <span class="badge badge-important badge-upper-right">[@L[cds.sales/gd/hosting/vps-hosting:MostPopularBadge]@L]</span>
@@ -811,7 +268,7 @@ assetPath: false
                                         <strong>[@L[cds.sales/gd/hosting/vps-hosting:CategoryValueRam]@L]</strong>
                                     </li>
                                     <li class="two-lines" data-gd-sidebysidealign-row="6">[@L[cds.sales/gd/hosting/vps-hosting:StorageLabel]@L]
-                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:WindowsCategoryValueStorage]@L]</strong><span class="item-note"><a class="isToolTip"  data-html="true" data-toggle="tooltip"data-original-title="[@L[cds.sales/gd/hosting/vps-hosting:GBRestrictions]@L]">[@L[cds.sales/gd/hosting/vps-hosting:RestrictionsApply]@L]</a></span>
+                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:CategoryValueStorage]@L]</strong><span class="item-note"><a class="isToolTip"  data-html="true" data-toggle="tooltip"data-original-title="[@L[cds.sales/gd/hosting/vps-hosting:GBRestrictions]@L]">[@L[cds.sales/gd/hosting/vps-hosting:RestrictionsApply]@L]</a></span>
                                     </li>
                                     <li data-gd-sidebysidealign-row="7">[@L[cds.sales/gd/hosting/vps-hosting:BandwidthLabel]@L]
                                         <strong>[@L[cds.sales/gd/hosting/vps-hosting:CategoryValueBandwidth]@L]</strong>/[@L[cds.sales/gd/hosting/vps-hosting:PerMonth]@L]</li>
@@ -820,7 +277,7 @@ assetPath: false
                         </div>
                         <!-- col-xs-4 -->
 
-                        <div class="col-xs-4" id="windows-deluxe-column" data-gd-sidebysidealign-col="2">
+                        <div class="col-xs-4" id="windows-deluxe-column" data-gd-sidebysidealign-col="3">
                             <div class="grid-column no-padding-bottom">
                                 <div data-gd-sidebysidealign-row="1">
                                     <h2>[@L[cds.sales/gd/hosting/vps-hosting:CategoryDeluxeTitle]@L]</h2>
@@ -862,7 +319,7 @@ assetPath: false
                                         <strong>[@L[cds.sales/gd/hosting/vps-hosting:CategoryDeluxeRam]@L]</strong>
                                     </li>
                                     <li class="two-lines" data-gd-sidebysidealign-row="6">[@L[cds.sales/gd/hosting/vps-hosting:StorageLabel]@L]
-                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:WindowsCategoryDeluxeStorage]@L]</strong><span class="item-note"><a class="isToolTip"  data-html="true" data-toggle="tooltip"data-original-title="[@L[cds.sales/gd/hosting/vps-hosting:GBRestrictions]@L]">[@L[cds.sales/gd/hosting/vps-hosting:RestrictionsApply]@L]</a></span>
+                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:CategoryDeluxeStorage]@L]</strong><span class="item-note"><a class="isToolTip"  data-html="true" data-toggle="tooltip"data-original-title="[@L[cds.sales/gd/hosting/vps-hosting:GBRestrictions]@L]">[@L[cds.sales/gd/hosting/vps-hosting:RestrictionsApply]@L]</a></span>
                                     </li>
                                     <li data-gd-sidebysidealign-row="7">[@L[cds.sales/gd/hosting/vps-hosting:BandwidthLabel]@L]
                                         <strong>[@L[cds.sales/gd/hosting/vps-hosting:CategoryDeluxeBandwidth]@L]</strong>/[@L[cds.sales/gd/hosting/vps-hosting:PerMonth]@L]</li>
@@ -871,7 +328,11 @@ assetPath: false
                         </div>
                         <!-- col-xs-4 -->
 
-                        <div class="col-xs-4" id="windows-premium-column" data-gd-sidebysidealign-col="3">
+                        
+                        <!-- col-xs-4 -->
+                    </div>
+                    <div class="row tab-content no-margin-bottom" data-gd-sidebysidealign="{}">
+                       <div class="col-xs-4 col-sm-offset-2" id="windows-premium-column" data-gd-sidebysidealign-col="1">
                             <div class="grid-column no-padding-bottom">
                                 <div data-gd-sidebysidealign-row="1">
                                     <h2>[@L[cds.sales/gd/hosting/vps-hosting:CategoryPremiumTitle]@L]</h2>
@@ -913,22 +374,21 @@ assetPath: false
                                         <strong>[@L[cds.sales/gd/hosting/vps-hosting:CategoryPremiumRam]@L]</strong>
                                     </li>
                                     <li class="two-lines" data-gd-sidebysidealign-row="6">[@L[cds.sales/gd/hosting/vps-hosting:StorageLabel]@L]
-                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:WindowsCategoryPremiumStorage]@L]</strong><span class="item-note"><a class="isToolTip"  data-html="true" data-toggle="tooltip"data-original-title="[@L[cds.sales/gd/hosting/vps-hosting:GBRestrictions]@L]">[@L[cds.sales/gd/hosting/vps-hosting:RestrictionsApply]@L]</a></span>
+                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:CategoryPremiumStorage]@L]</strong><span class="item-note"><a class="isToolTip"  data-html="true" data-toggle="tooltip"data-original-title="[@L[cds.sales/gd/hosting/vps-hosting:GBRestrictions]@L]">[@L[cds.sales/gd/hosting/vps-hosting:RestrictionsApply]@L]</a></span>
                                     </li>
                                     <li data-gd-sidebysidealign-row="7">[@L[cds.sales/gd/hosting/vps-hosting:BandwidthLabel]@L]
                                         <strong>[@L[cds.sales/gd/hosting/vps-hosting:CategoryPremiumBandwidth]@L]</strong>/[@L[cds.sales/gd/hosting/vps-hosting:PerMonth]@L]</li>
                                 </ul>
                             </div>
+                            
                         </div>
-                        <!-- col-xs-4 -->
-                    </div>
-                    <div class="row tab-content no-margin-bottom" data-gd-sidebysidealign="{}">
-                        <div class="col-xs-4" id="windows-ultimate-column" data-gd-sidebysidealign-col="1">
+                        <!-- col-xs-4 col-sm-offset-2-->
+                        <div class="col-xs-4" id="windows-ultimate-column" data-gd-sidebysidealign-col="2">
                             <div class="grid-column no-padding-bottom">
                                 <div data-gd-sidebysidealign-row="1">
                                     <h2>[@L[cds.sales/gd/hosting/vps-hosting:CategoryUltimateTitle]@L]</h2>
                                 </div>
-                                <form action="[@T[link:<relative path="/hosting/vps-hosting-config.aspx" parammode="common " />]@T]" name="windowsUltimateForm" class="frmAddToCart" id="windowsUltimate" method="get">
+                              <form action="[@T[link:<relative path="/hosting/vps-hosting-config.aspx" parammode="common " />]@T]" name="windowsUltimateForm" class="frmAddToCart" id="windowsUltimate" method="get">
                                     <div data-gd-sidebysidealign-row="2">
                                         <p class="starting-at starting-at-alternate-top-spacing">
                                           <span class="starting-at-above">[@L[cds.sales/gd/hosting/vps-hosting:StartingAt]@L]</span>
@@ -965,7 +425,7 @@ assetPath: false
                                         <strong>[@L[cds.sales/gd/hosting/vps-hosting:CategoryUltimateRam]@L]</strong>
                                     </li>
                                     <li class="two-lines" data-gd-sidebysidealign-row="6">[@L[cds.sales/gd/hosting/vps-hosting:StorageLabel]@L]
-                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:WindowsCategoryUltimateStorage]@L]</strong><span class="item-note"><a class="isToolTip"  data-html="true" data-toggle="tooltip"data-original-title="[@L[cds.sales/gd/hosting/vps-hosting:GBRestrictions]@L]">[@L[cds.sales/gd/hosting/vps-hosting:RestrictionsApply]@L]</a></span>
+                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:CategoryUltimateStorage]@L]</strong><span class="item-note"><a class="isToolTip"  data-html="true" data-toggle="tooltip"data-original-title="[@L[cds.sales/gd/hosting/vps-hosting:GBRestrictions]@L]">[@L[cds.sales/gd/hosting/vps-hosting:RestrictionsApply]@L]</a></span>
                                     </li>
                                     <li data-gd-sidebysidealign-row="7">[@L[cds.sales/gd/hosting/vps-hosting:BandwidthLabel]@L]
                                         <strong>[@L[cds.sales/gd/hosting/vps-hosting:CategoryUltimateBandwidth]@L]</strong>/[@L[cds.sales/gd/hosting/vps-hosting:PerMonth]@L]</li>
@@ -973,6 +433,276 @@ assetPath: false
                             </div>
                         </div>
                         <!-- col-xs-4 -->
+                    </div>
+                </div>
+                <div class="tab-pane active" id="linux">
+                    <div class="row tab-content no-margin-top no-margin-bottom">
+                        <div class="col-xs-12">
+                            <div class="grid-column operating-systems-info">
+                                <p class="no-margin-bottom">[@L[cds.sales/gd/hosting/vps-hosting:LinuxOsVersion]@L]</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row tab-content" data-gd-sidebysidealign="{}">
+                      <div class="col-xs-4" id="linux-eco-column" data-gd-sidebysidealign-col="1">
+                            <div class="grid-column no-padding-bottom has-badge">
+                              <div data-gd-sidebysidealign-row="1">
+                                    <h2>[@L[cds.sales/gd/hosting/vps-hosting:CategoryEconomyTitle]@L]</h2>
+                                </div>
+                                <form action="[@T[link:<relative path="/hosting/vps-hosting-config.aspx " parammode="common " />]@T]" name="linuxEcoForm" class="frmAddToCart" id="linuxEco" method="get">
+                                    <div data-gd-sidebysidealign-row="2">
+                                      <p class="starting-at starting-at-alternate-top-spacing">
+                                          <span class="starting-at-above">[@L[cds.sales/gd/hosting/vps-hosting:StartingAt]@L]</span>
+                                        <span class="starting-at-price"></span>
+                                          <span class="starting-at-small">/[@L[cds.sales/gd/hosting/vps-hosting:PerMonthFull]@L]</span>
+                                        </p>
+                                    </div>
+                                    <div data-gd-sidebysidealign-row="3">
+                                        <!-- select-box begin -->
+                                       
+                                        <div class="select-box" data-ci="88942">
+                                            <div class="select-box-head">
+                                                <div class="select-box-current">
+                                                </div>
+                                                <div class="select-box-cta"><i class="ico ico-download"></i>
+                                                </div>
+                                            </div>
+                                            <div class="select-box-body">
+                                                <ul class="select-box-options">
+                                                </ul>
+                                            </div>
+                                            <!-- select-box body-->
+                                        </div>
+                                        <!-- select-box end -->
+                                        <p class="no-margin-bottom">
+                                            <button type="submit" data-form="addtocart-form" class="btn btn-warning btn-block btn-lg js-addtocart" data-ci="88943">[@L[cds.sales/gd/hosting/vps-hosting:CartButton]@L]</button>
+                                        </p>
+                                    </div>
+                                </form>
+                                <ul class="plan-pricing-list plan-pricing-list-alternate">
+                                    <li data-gd-sidebysidealign-row="4">[@L[cds.sales/gd/hosting/vps-hosting:OSLabel]@L]
+                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:LinuxOperatingSystem]@L]</strong>
+                                    </li>
+                                    <li data-gd-sidebysidealign-row="5">[@L[cds.sales/gd/hosting/vps-hosting:RAMLabel]@L]
+                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:CategoryEconomyRam]@L]</strong>
+                                    </li>
+                                    <li class="two-lines" data-gd-sidebysidealign-row="6 ">[@L[cds.sales/gd/hosting/vps-hosting:StorageLabel]@L]
+                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:CategoryEconomyStorage]@L]</strong><span class="item-note"><a class="isToolTip"  data-html="true" data-toggle="tooltip"data-original-title="[@L[cds.sales/gd/hosting/vps-hosting:GBRestrictions]@L]">[@L[cds.sales/gd/hosting/vps-hosting:RestrictionsApply]@L]</a></span>
+                                    </li>
+                                    <li data-gd-sidebysidealign-row="7">[@L[cds.sales/gd/hosting/vps-hosting:BandwidthLabel]@L]
+                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:CategoryEconomyBandwidth]@L]</strong>/[@L[cds.sales/gd/hosting/vps-hosting:PerMonth]@L]</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- col-xs-4 --> 
+                        <div class="col-xs-4" id="linux-value-column" data-gd-sidebysidealign-col="2">
+                            <div class="grid-column no-padding-bottom has-badge">
+                                <div data-gd-sidebysidealign-row="1">
+                                    <span class="badge badge-important badge-upper-right">[@L[cds.sales/gd/hosting/vps-hosting:MostPopularBadge]@L]</span>
+                                  <h2>[@L[cds.sales/gd/hosting/vps-hosting:CategoryValueTitle]@L]</h2>
+                                </div>
+                                <form action="[@T[link:<relative path="/hosting/vps-hosting-config.aspx" parammode="common" />]@T]" name="linuxValueForm" class="frmAddToCart" id="linuxValue" method="get">
+                                    <div data-gd-sidebysidealign-row="2">
+                                        <p class="starting-at starting-at-alternate-top-spacing">
+                                          <span class="starting-at-above">[@L[cds.sales/gd/hosting/vps-hosting:StartingAt]@L]</span>
+                                          <span class="starting-at-price"></span>
+                                          <span class="starting-at-small">/[@L[cds.sales/gd/hosting/vps-hosting:PerMonthFull]@L]</span>
+                                        </p>
+                                    </div>
+                                    <div data-gd-sidebysidealign-row="3">
+             
+                                        <div class="select-box" data-ci="88944">
+                                            <div class="select-box-head">
+                                                <div class="select-box-current">
+                                                </div>
+                                                <div class="select-box-cta"><i class="ico ico-download"></i>
+                                                </div>
+                                            </div>
+                                            <!-- select-box-head -->
+                                            <div class="select-box-body">
+                                                <ul class="select-box-options">
+                                                </ul>
+                                            </div>
+                                            <!-- select-box-body -->
+                                         </div>
+                                           
+                                        <!-- select-box -->
+                                        <p class="no-margin-bottom">
+                                            <button type="submit" data-form="addtocart-form" class="btn btn-warning btn-block btn-lg js-addtocart" data-ci="88945">[@L[cds.sales/gd/hosting/vps-hosting:CartButton]@L]</button>
+                                        </p>
+                                    </div>
+                                </form> 
+                                <ul class="plan-pricing-list plan-pricing-list-alternate">
+                                    <li data-gd-sidebysidealign-row="4">[@L[cds.sales/gd/hosting/vps-hosting:OSLabel]@L]
+                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:LinuxOperatingSystem]@L]</strong>
+                                    </li>
+                                    <li data-gd-sidebysidealign-row="5">[@L[cds.sales/gd/hosting/vps-hosting:RAMLabel]@L]
+                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:CategoryValueRam]@L]</strong>
+                                    </li>
+                                    <li class="two-lines" data-gd-sidebysidealign-row="6">[@L[cds.sales/gd/hosting/vps-hosting:StorageLabel]@L]
+                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:CategoryValueStorage]@L]</strong><span class="item-note"><a class="isToolTip"  data-html="true" data-toggle="tooltip"data-original-title="[@L[cds.sales/gd/hosting/vps-hosting:GBRestrictions]@L]">[@L[cds.sales/gd/hosting/vps-hosting:RestrictionsApply]@L]</a></span>
+                                    </li>
+                                    <li data-gd-sidebysidealign-row="7">[@L[cds.sales/gd/hosting/vps-hosting:BandwidthLabel]@L]
+                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:CategoryValueBandwidth]@L]</strong>/[@L[cds.sales/gd/hosting/vps-hosting:PerMonth]@L]</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- col-xs-4 -->
+                        <div class="col-xs-4" id="linux-deluxe-column" data-gd-sidebysidealign-col="3">
+                            <div class="grid-column no-padding-bottom">
+                                <div data-gd-sidebysidealign-row="1">
+                                    <h2>[@L[cds.sales/gd/hosting/vps-hosting:CategoryDeluxeTitle]@L]</h2>
+                                </div>
+                                <form action="[@T[link:<relative path="/hosting/vps-hosting-config.aspx" parammode="common " />]@T]" name="linuxDeluxeForm" class="frmAddToCart" id="linuxDeluxe" method="get">
+                                    <div data-gd-sidebysidealign-row="2">
+                                        <p class="starting-at starting-at-alternate-top-spacing">
+                                          <span class="starting-at-above">[@L[cds.sales/gd/hosting/vps-hosting:StartingAt]@L]</span>
+                                          <span class="starting-at-price"></span>
+                                          <span class="starting-at-small">/[@L[cds.sales/gd/hosting/vps-hosting:PerMonthFull]@L]</span>
+                                        </p>
+                                    </div>
+                                    <div data-gd-sidebysidealign-row="3">
+                                     
+                                        <div class="select-box" data-ci="88946">
+                                            <div class="select-box-head">
+                                                <div class="select-box-current">
+                                                </div>
+                                                <div class="select-box-cta"><i class="ico ico-download"></i>
+                                                </div>
+                                            </div>
+                                            <div class="select-box-body">
+                                                <ul class="select-box-options">
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- select-box -->
+                                        <p class="no-margin-bottom">
+                                            <button type="submit" data-form="addtocart-form" class="btn btn-warning btn-block btn-lg js-addtocart" data-ci="88947">[@L[cds.sales/gd/hosting/vps-hosting:CartButton]@L]</button>
+                                        </p>
+                                    </div>
+                                </form>     
+                                <ul class="plan-pricing-list plan-pricing-list-alternate">
+                                    <li data-gd-sidebysidealign-row="4">[@L[cds.sales/gd/hosting/vps-hosting:OSLabel]@L]
+                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:LinuxOperatingSystem]@L]</strong>
+                                    </li>
+                                    <li data-gd-sidebysidealign-row="5">[@L[cds.sales/gd/hosting/vps-hosting:RAMLabel]@L]
+                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:CategoryDeluxeRam]@L]</strong>
+                                    </li>
+                                    <li class="two-lines" data-gd-sidebysidealign-row="6">[@L[cds.sales/gd/hosting/vps-hosting:StorageLabel]@L]
+                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:CategoryDeluxeStorage]@L]</strong><span class="item-note"><a class="isToolTip"  data-html="true" data-toggle="tooltip"data-original-title="[@L[cds.sales/gd/hosting/vps-hosting:GBRestrictions]@L]">[@L[cds.sales/gd/hosting/vps-hosting:RestrictionsApply]@L]</a></span>
+                                    </li>
+                                    <li data-gd-sidebysidealign-row="7">[@L[cds.sales/gd/hosting/vps-hosting:BandwidthLabel]@L]
+                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:CategoryDeluxeBandwidth]@L]</strong>/[@L[cds.sales/gd/hosting/vps-hosting:PerMonth]@L]</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="row tab-content no-margin-bottom" data-gd-sidebysidealign="{}">
+                      <!--col-xs-4 col-sm-offset-2-->
+                        <div class="col-xs-4 col-sm-offset-2" id="linux-premium-column" data-gd-sidebysidealign-col="1">
+                            <div class="grid-column no-padding-bottom">
+                                <div data-gd-sidebysidealign-row="1">
+                                    <h2>[@L[cds.sales/gd/hosting/vps-hosting:CategoryPremiumTitle]@L]</h2>
+                                </div>
+                                <form action="[@T[link:<relative path="/hosting/vps-hosting-config.aspx" parammode="common " />]@T]" name="linuxPremiumForm" class="frmAddToCart" id="linuxPremium" method="get">
+                                    <div data-gd-sidebysidealign-row="2">
+                                        <p class="starting-at starting-at-alternate-top-spacing">
+                                          <span class="starting-at-above">[@L[cds.sales/gd/hosting/vps-hosting:StartingAt]@L]</span>
+                                          <span class="starting-at-price"></span>
+                                          <span class="starting-at-small">/[@L[cds.sales/gd/hosting/vps-hosting:PerMonthFull]@L]</span>
+                                        </p>
+                                    </div>
+                                    <div data-gd-sidebysidealign-row="3">
+                                      
+                                        <div class="select-box" data-ci="88948">
+                                            <div class="select-box-head">
+                                                <div class="select-box-current">
+                                                </div>
+                                                <div class="select-box-cta"><i class="ico ico-download"></i>
+                                                </div>
+                                            </div>
+                                            <!-- select-box-head -->
+                                         
+                                            <div class="select-box-body">
+                                                <ul class="select-box-options">
+                                                </ul>
+                                            </div>
+                                            <!-- select-box-body -->
+                                        </div>
+                                        
+                                        <!-- select-box -->
+                                        <p class="no-margin-bottom">
+                                            <button type="submit" data-form="addtocart-form" class="btn btn-warning btn-block btn-lg js-addtocart" data-ci="88949">[@L[cds.sales/gd/hosting/vps-hosting:CartButton]@L]</button>
+                                        </p>
+                                    </div>
+                                </form>
+                                <ul class="plan-pricing-list plan-pricing-list-alternate">
+                                    <li data-gd-sidebysidealign-row="4">[@L[cds.sales/gd/hosting/vps-hosting:OSLabel]@L]
+                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:LinuxOperatingSystem]@L]</strong>
+                                    </li>
+                                    <li data-gd-sidebysidealign-row="5">[@L[cds.sales/gd/hosting/vps-hosting:RAMLabel]@L]
+                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:CategoryPremiumRam]@L]</strong>
+                                    </li>
+                                    <li class="two-lines" data-gd-sidebysidealign-row="6">[@L[cds.sales/gd/hosting/vps-hosting:StorageLabel]@L]
+                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:CategoryPremiumStorage]@L]</strong><span class="item-note"><a class="isToolTip"  data-html="true" data-toggle="tooltip"data-original-title="[@L[cds.sales/gd/hosting/vps-hosting:GBRestrictions]@L]">[@L[cds.sales/gd/hosting/vps-hosting:RestrictionsApply]@L]</a></span>
+                                    </li>
+                                    <li data-gd-sidebysidealign-row="7">[@L[cds.sales/gd/hosting/vps-hosting:BandwidthLabel]@L]
+                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:CategoryPremiumBandwidth]@L]</strong>/[@L[cds.sales/gd/hosting/vps-hosting:PerMonth]@L]</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- col-xs-4 -->
+                        <div class="col-xs-4" id="linux-ultimate-column" data-gd-sidebysidealign-col="2">
+                            <div class="grid-column no-padding-bottom">
+                                <div data-gd-sidebysidealign-row="1">
+                                    <h2>[@L[cds.sales/gd/hosting/vps-hosting:CategoryUltimateTitle]@L]</h2>
+                                </div>
+                                <form action="[@T[link:<relative path="/hosting/vps-hosting-config.aspx" parammode="common " />]@T]" name="linuxUltimateForm" class="frmAddToCart" id="linuxUltimate" method="get">
+                                    <div data-gd-sidebysidealign-row="2">
+                                        <p class="starting-at starting-at-alternate-top-spacing">
+                                          <span class="starting-at-above">[@L[cds.sales/gd/hosting/vps-hosting:StartingAt]@L]</span>
+                                          <span class="starting-at-price"></span>
+                                          <span class="starting-at-small">/[@L[cds.sales/gd/hosting/vps-hosting:PerMonthFull]@L]</span>
+                                        </p>
+                                    </div>
+                                    <div data-gd-sidebysidealign-row="3">
+                                       
+                                        <div class="select-box" data-ci="88950">
+                                            <div class="select-box-head">
+                                                <div class="select-box-current">
+                                                </div>
+                                                <div class="select-box-cta"><i class="ico ico-download"></i>
+                                                </div>
+                                            </div>
+                                            <div class="select-box-body">
+                                                <ul class="select-box-options">
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- select-box -->
+                                        <p class="no-margin-bottom">
+                                            <button type="submit" data-form="addtocart-form" class="btn btn-warning btn-block btn-lg js-addtocart" data-ci="88951">[@L[cds.sales/gd/hosting/vps-hosting:CartButton]@L]</button>
+                                        </p>
+                                    </div>
+                                </form>
+                                <ul class="plan-pricing-list plan-pricing-list-alternate">
+                                    <li data-gd-sidebysidealign-row="4">[@L[cds.sales/gd/hosting/vps-hosting:OSLabel]@L]
+                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:LinuxOperatingSystem]@L]</strong>
+                                    </li>
+                                    <li data-gd-sidebysidealign-row="5">[@L[cds.sales/gd/hosting/vps-hosting:RAMLabel]@L]
+                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:CategoryUltimateRam]@L]</strong>
+                                    </li>
+                                    <li class="two-lines" data-gd-sidebysidealign-row="6">[@L[cds.sales/gd/hosting/vps-hosting:StorageLabel]@L]
+                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:CategoryUltimateStorage]@L]</strong><span class="item-note"><a class="isToolTip"  data-html="true" data-toggle="tooltip"data-original-title="[@L[cds.sales/gd/hosting/vps-hosting:GBRestrictions]@L]">[@L[cds.sales/gd/hosting/vps-hosting:RestrictionsApply]@L]</a></span>
+                                    </li>
+                                    <li data-gd-sidebysidealign-row="7">[@L[cds.sales/gd/hosting/vps-hosting:BandwidthLabel]@L]
+                                        <strong>[@L[cds.sales/gd/hosting/vps-hosting:CategoryUltimateBandwidth]@L]</strong>/[@L[cds.sales/gd/hosting/vps-hosting:PerMonth]@L]</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1246,6 +976,12 @@ assetPath: false
 
 
 
+
+
+    </div>
+
+
+
 {% endblock %} 
 
 {% block footer %}
@@ -1324,7 +1060,6 @@ function getData(dc) {
 }
 
 function processVPSData(data, dc) {
-
     $(data.centos.plans.basic[dc]).each(function(i, n) {
         generateDropDowns(i, n, '#centosBasic');
     });
@@ -1358,6 +1093,9 @@ function processVPSData(data, dc) {
     $(data.fedora.plans.ultimate[dc]).each(function(i, n) {
         generateDropDowns(i, n, '#fedUltimate');
     });
+    $(data.windows.plans.economy[dc]).each(function(i, n) {
+        generateDropDowns(i, n, '#windowsEconomy');
+    });
     $(data.windows.plans.value[dc]).each(function(i, n) {
         generateDropDowns(i, n, '#windowsValue');
     });
@@ -1370,6 +1108,23 @@ function processVPSData(data, dc) {
     $(data.windows.plans.ultimate[dc]).each(function(i, n) {
         generateDropDowns(i, n, '#windowsUltimate');
     });
+    
+    $(data.linux.plans.economy[dc]).each(function(i, n) {
+        generateDropDowns(i, n, '#linuxEco');
+    });
+    $(data.linux.plans.value[dc]).each(function(i, n) {
+        generateDropDowns(i, n, '#linuxValue');
+    });
+    $(data.linux.plans.deluxe[dc]).each(function(i, n) {
+        generateDropDowns(i, n, '#linuxDeluxe');
+    });
+    $(data.linux.plans.premium[dc]).each(function(i, n) {
+        generateDropDowns(i, n, '#linuxPremium');
+    });
+    $(data.linux.plans.ultimate[dc]).each(function(i, n) {
+        generateDropDowns(i, n, '#linuxUltimate');
+    });
+  
 
     $('.select-box').setSelectBox();
 
@@ -1496,5 +1251,4 @@ $(function() {
 });
 ##endif
 </script>
-
 {% endblock %}
