@@ -1131,18 +1131,21 @@ function processVPSData(data, dc) {
 }
 
 function generateDropDowns(i, n, c) {
-
     var monthString = (n.planduration > 1) ? '[@L[cds.sales/gd/hosting/vps-hosting:months]@L]' : '[@L[cds.sales/gd/hosting/vps-hosting:month]@L]';
     var newItem = '';
 
-    if (i == 0) {
-        $(c).find('.select-box-current').empty();
+    if(i == 0){
         $(c).find('.select-box-options').empty();
+        $(c).find('.starting-at-price').html(n.productprice);
+        newItem += '<li><label>';
+        newItem += '<input type="radio" name="plan" value="' + n.id + '">';
+    } else if(n.planduration == 3) {
+        $(c).find('.select-box-current').empty();
         var currentContent = 
             '<span>' + n.planduration + ' ' + monthString + '</span>' + 
             '<span class="price">' + n.productprice + '/[@L[cds.sales/gd/hosting/vps-hosting:month]@L]</span>' + 
             '<span class="secondary-color lastChild"></span>';
-        $(c).find('.starting-at-price').html(n.productprice);
+        // $(c).find('.starting-at-price').html(n.productprice);
         $currentPlan = $(c).find('.select-box-current').html(currentContent);
         newItem += '<li class="selected"><label>';
         newItem += '<input type="radio" name="plan" value="' + n.id + '" checked="true">';
@@ -1208,9 +1211,9 @@ $(function() {
 });
 ##if(activeLanguageAny(en))
 
-          $(window).load(function() {
-    window.lpTagLandingPageSettings = {}; // Leave Blank
-    window.lpTagLandingPageSettings.arrLPvars = [{
+        $(window).load(function() {
+            window.lpTagLandingPageSettings = {}; // Leave Blank
+            window.lpTagLandingPageSettings.arrLPvars = [{
             scope: 'page',
             name: 'unit',
             value: 'Hosting-VPS'
