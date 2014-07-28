@@ -1,37 +1,45 @@
 ---
 location: sales/hosting/dedicated-servers.aspx
-id:   53bdc91ff778fc2fd06bef9e
-name: FOS-23522
-comments: removed engage chat and added liveperson chat
+id:   53d6bea0f778fc27484de52d
+name: Merge changes from FOS-23374
+comments: Dedicated Server Relaunch
+url: http://www.dev-godaddy.com/hosting/dedicated-servers.aspx
+assetPath: false
 ---
-{% extends 'layouts/base.html' %} 
+{% extends 'layouts/base-no-border-box.html' %} 
 {% block metahead %} 
 {% parent %}
 
+<style type="text/css">
+{% less %}
+    {% include 'css/styles.less' %} 
+{% endless %}
+</style>
+
 {% endblock %} 
 {% block body %}
+    <div class="border-box" role="main">
+
+      
 <!-- Start main-banner -->
 <section class="main-banner main-banner-ds no-padding-top">
   <span class="left-corner-ribbon money-back-guarantee-light [@T[localization:<language full="true" />]@T] [@T[localization:<language />]@T]"></span>
     <div class="l-main-container container main-banner-content main-banner-content-ds">
         <h1 class="main-banner-title">[@L[cds.sales/gd/hosting/dedicated-servers:headerHeadline]@L]</h1>
         <h2 class="main-banner-subtitle">[@L[cds.sales/gd/hosting/dedicated-servers:headerSubHeadline]@L]</h2>
-        <p class="font-18 main-banner-content-link-ds">
+        <p class="font-18 main-banner-content-text-vpsx">
             <strong>[@L[cds.sales/gd/hosting/dedicated-servers:uptimeGuarantee]@L]</strong>
         </p>
-        <p class="main-banner-content-text-ds">
-            ##if(activeLanguageAny(en))                
-                 <a href="javascript:void(0);" class="main-banner-content-link-ds" data-ci="88996"><span id="lpLivePersonDedServer">[@L[cds.sales/gd/hosting/dedicated-servers:js_chatLive]@L]</span></a>
-            ##endif
+      ##if(activeLanguageAny(en))                                    
+        <a href="javascript:void(0);" class="btn btn-primary" data-ci="88996"><span id="lpLivePersonDedServer">[@L[cds.sales/gd/hosting/dedicated-servers:js_chatLive]@L]</span></a>        
+        <p class="font-18 main-banner-content-text-vpsx">
+         [@L[cds.sales/gd/hosting/dedicated-servers:BannerCallNumber]@L]        
         </p>
-        <p class="starting-at starting-at-banner starting-at-banner-ds">
-            <span class="starting-at-above-ds">
-                <strong>[@L[cds.sales/gd/hosting/dedicated-servers:StartingAt]@L]</strong>
-            </span>
-            <span class="starting-at-price">
-                <strong>[@T[productprice:<current productid="474" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T][@L[cds.sales/gd/hosting/dedicated-servers:perMonth]@L]</strong>
-            </span>
-        </p>
+     ##else
+         <p class="font-18 main-banner-content-text-vpsx">
+          [@L[cds.sales/gd/hosting/dedicated-servers:BannerCallNumber1]@L]
+         </p>
+     ##endif                
     </div>
 </section>
 <!-- End main-banner -->
@@ -69,9 +77,9 @@ comments: removed engage chat and added liveperson chat
             <div class="row tab-content no-margin-bottom">
                 <div class="col-xs-12">
                     <div class="grid-column tab-content-operating-system has-badge no-padding-bottom">
-                        ##if(activeLanguageAny(en))
+                      ##if(activeLanguageAny(en))
                         <div class="compare-top-badge-wrapper">
-                            <span class="compare-top-badge">[@L[cds.sales/gd/hosting/dedicated-servers:NeedHelpBadgePhone1]@L]<br/>[@L[cds.sales/gd/hosting/dedicated-servers:NeedHelpBadgePhone2]@L]</span>
+                            <span class="compare-top-badge">[@L[cds.sales/gd/hosting/dedicated-servers:NeedHelpBadgePhone1]@L]</span>
                         </div>
                       ##endif
                         <p class="operating-systems-label">[@L[cds.sales/gd/hosting/dedicated-servers:selectOS]@L]</p>
@@ -2678,6 +2686,9 @@ comments: removed engage chat and added liveperson chat
 </div>
 <!-- End main-tabs panes -->
 
+
+
+    </div>
 {% endblock %} 
 
 {% block footer %}
@@ -2872,7 +2883,7 @@ $(function () {
         pid: 'lpLivePersonDedServer'
     };
     var resource = document.createElement('script');
-    resource.src = "[@T[link:<javascriptroot />]@T]fos/liveperson/js/liveperson_lp_20140708.js";
+    resource.src = "[@T[link:<javascriptroot />]@T]fos/liveperson/js/liveperson_lp_20140708.min.js";
     var script = document.getElementsByTagName('script')[0];
     script.parentNode.insertBefore(resource, script);  
     
