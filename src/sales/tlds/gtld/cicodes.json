@@ -35,17 +35,29 @@
           { "ITC Code" : "" },
           { "Description" : ".COMPANY Slide Link" }
         ]
-      }
+      },
       { ".NINJA Slide Link" : [
           { "ITC ID" : "89639" },
           { "ITC Code" : "" },
           { "Description" : ".NINJA Slide Link" }
         ]
-      }
+      },
       { ".PHOTOGRAPHY Slide Link" : [
           { "ITC ID" : "89731" },
           { "ITC Code" : "" },
           { "Description" : ".PHOTOGRAPHY Slide Link" }
+        ]
+      },
+      { ".NYC Slide Link" : [
+          { "ITC ID" : "92204" },
+          { "ITC Code" : "GtldEoiNycLink" },
+          { "Description" : ".NYC Slide Link" }
+        ]
+      },
+      { ".SERVICES Slide Link" : [
+          { "ITC ID" : "92205" },
+          { "ITC Code" : "GtldEoiServicesLink" },
+          { "Description" : ".SERVICES Slide Link" }
         ]
       }
     ],

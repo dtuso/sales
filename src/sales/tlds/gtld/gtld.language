@@ -1,8 +1,8 @@
 ---
 location: localization/sales/gd/tlds/gtld/en
-id: 53aafe6df778fc2adcbb8eed
-name: FOS-22745
-comments: Update header slider for 7/8
+id: 
+name: FOS-24306
+comments: Update header slider for 8/4
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="MetaDescription" />
@@ -56,7 +56,7 @@ Be the go-to source with <strong>.reviews</strong>
 <phrase key="MarketingTagLineXyz"/>
 Finally! A domain for the <strong>.xyz</strong> generation
 <phrase key="MarketingTagLineCompany"/>
-.COMPANY says you’re in business
+<strong>.company</strong> says you’re in business
 <phrase key="MarketingTagLineWiki"/>
 Share, collaborate and learn with <strong>.wiki</strong>
 <phrase key="MarketingSlideLinkText"/>
@@ -241,7 +241,7 @@ New
 Pre-register now
 <phrase key="MainBannerCarouselSlide2Text1" />
 .CLUB
-<phrase key="MainBannerCarouselSlide2Text2" />
+<phrase key="MainBannerCarouselSlideTextClub" />
 Get organized with <strong>.club</strong>
 <phrase key="MainBannerCarouselSlide3Text1" />
 .MENU
@@ -451,3 +451,7 @@ El Internet en Español.
 <strong>.photography</strong> increases your exposure.
 <phrase key="MainBannerCarouselSlideTextVegas"/>
 Reach tourists 24/7 with <strong>.vegas</strong>
+<phrase key="MainBannerCarouselSlideTextNyc"/>
+Start spreading the news! <strong>.nyc</strong> is here.
+<phrase key="MainBannerCarouselSlideTextServices"/>
+Promote your <strong>.services</strong> on the web
