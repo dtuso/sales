@@ -1,8 +1,11 @@
 ---
+url: http://www.dev-godaddy.com/business/office-365.aspx
 location: sales/business/split-test/office-365.aspx
-id: 53b1e89ef778fc30c89f0c99
-name: Page Reskin - Ci Code Fixes
+id: 53d7ebc3f778fc27484de56e
+name: FOS-23040
+comments: Enable Portuguese and Spanish O365 Videos
 assetPath: false
+splitSide: 1216.B
 ---
 {% extends 'layouts/base-no-border-box.html' %}
 
@@ -190,13 +193,22 @@ assetPath: false
       {% include "_split-compare-table.html" with table1CI %}
     </div>
   </section>
-##if(activeLanguageAny(en))
+
+##if(activeLanguageAny([en],[pt-br],[es]))
   <section id="video-section" class="white-bg">
     <h2 class="section-header">[@L[cds.sales/business/office-365:split-test-b-7-SeeWhyOffice365BetterWithGoDaddy]@L]</h2>
     <p class="section-sub-header">[@L[cds.sales/business/office-365:split-test-b-11-OurAwardWinning247SupportIsJust]@L]</p>
     <div class="office-video solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot />]@T]fos/office365/office-052014/img/video-player.png">
         <div class="office-video-click-wrapper" data-ci="91167">
-          <div class="embedVideo slv slv-hidden" data-slv-video-id="xvK76H9olXM"></div>
+          <div class="embedVideo slv slv-hidden"
+            ##if(activeLanguageAny([en]))
+              data-slv-video-id="xvK76H9olXM"
+            ##elseif(activeLanguageAny([pt-br]))
+              data-slv-video-id="xvK76H9olXM"
+            ##elseif(activeLanguageAny([es]))
+              data-slv-video-id="xvK76H9olXM"
+            ##endif
+          ></div>
           <span class="play-button"></span>
           <p>[@L[cds.sales/business/office-365:split-test-b-2-WatchVideo]@L]</p>
         </div>
