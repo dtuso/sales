@@ -1,8 +1,8 @@
 ---
 location: localization/sales/newscenter/about-godaddy/en
-id: 53aa2e56f778fc132482340a
-name: FOS-22872
-comments: Legal changes to about godaddy stats
+id: 53d7e660f778fc27484de569
+name: FOS-24750
+comments: About US Update the rollover for Betsy Rafael
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="NewsCenterAbout-AFinePortraitsVideo" />
@@ -590,3 +590,5 @@ Santa Cruz Ale Works
 Enjoying a beer with friends is one thing, but having a passion for it is another. While you were downing a cold one, Marc’s love of beer-making drove him to start his own brewery – Santa Cruz Ale Works.
 <phrase key="NewsCenterAbout-cust-MarcP2" />
 With GoDaddy Website Builder, Marc created a website perfectly suited to his business. Plus, the reliability of GoDaddy hosting and domain services keeps Marc’s business open online 24/7/365.
+<phrase key="NewscenterAbout-BetsyRafaelTitle" />
+Former Chief Accounting Officer at Apple
