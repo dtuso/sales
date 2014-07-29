@@ -5,19 +5,23 @@
     .top-lower-content{margin:0 auto;position:relative;width:1000px;padding-top:13px}
     .gdhp-share{position:relative;float:right;}
     .search-links>a{font-size:14px;text-decoration:none;color:#333}
-    .search-links>a>span{position:relative;top:3px;}
+    .search-links>a>span{position:relative;}
     .search-links>a:hover{text-decoration:underline}
-    #co-icon{height:19px;width:19px;padding:0px 0px 1px 20px;margin-right:8px;background: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gdhp_sprite_20140612.png) no-repeat -74px 0;}
-    #club-icon{position:absolute;width:40px;height:11px;margin-top:18px;margin-left:10px;background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gdhp_sprite_20140612.png) scroll -236px -5px no-repeat;}
+    .bug-icon{display:inline-block;}
+    #mobi-icon{position:absolute;height:34px;width:19px;margin:-5px 8px 0 0;background: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gdhp_sprite_20140726.png) no-repeat -765px -600px;}
+    #mobi-price{padding-left:25px;}
+    #co-icon{position:absolute;height:19px;width:19px;margin:0px 8px 0 8px;background: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gdhp_sprite_20140726.png) no-repeat -74px 0;}
+    #co-price{padding-left:35px;}
+    #club-icon{position:absolute;width:40px;height:11px;margin:5px 0 0 8px;background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gdhp_sprite_20140726.png) scroll -236px -5px no-repeat;}
     #club-price{padding-left:55px;}
-    #com-icon{position:absolute;width:44px;height:11px;margin-top:18px;margin-left:10px;background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gdhp_sprite_20140612.png) scroll -280px -5px no-repeat;}
+    #com-icon{position:absolute;width:44px;height:11px;margin:5px 0 0 8px;background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gdhp_sprite_20140726.png) scroll -280px -5px no-repeat;}
     #com-price{padding-left:60px;}
-    #org-icon{position:absolute;width:38px;height:14px;margin-top:18px;margin-left:10px;background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gdhp_sprite_20140612.png) scroll -329px -5px no-repeat;}
+    #org-icon{position:absolute;width:38px;height:14px;margin:4px 0 0 5px;background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gdhp_sprite_20140726.png) scroll -329px -5px no-repeat;}
     #org-price{padding-left:55px;}
-    #xyz-icon{position:absolute;width:31px;height:17px;margin-top:16px;margin-left:10px;background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gdhp_sprite_20140612.png) scroll -112px -572px no-repeat;}
+    #xyz-icon{position:absolute;width:31px;height:17px;margin:4px 0 0 8px;background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gdhp_sprite_20140726.png) scroll -112px -572px no-repeat;}
     #xyz-price{padding-left:47px;}
     .drtv-section{position:absolute;color:#333333;cursor:pointer;}
-    .drtv-logo{background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gdhp_sprite_20140612.png) no-repeat -112px -600px;width:76px;height:55px;position:absolute;margin:-13px 0px 0px 20px;cursor:pointer;}
+    .drtv-logo{background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gdhp_sprite_20140726.png) no-repeat -112px -600px;width:76px;height:55px;position:absolute;margin:-13px 0px 0px 20px;cursor:pointer;}
     .drtv-text{padding-left:100px;font-size:14px;}
     .drtv-link{font-size:14px;color:#ef1727;text-decoration:underline;}
   {% endless %}
@@ -26,11 +30,11 @@
   <div class="top-banner-lower-content">
     <div class="top-lower-content">   
         <span class="search-links">
-          <a href="[@T[link:<relative path='/tlds/co-domain.aspx'><param name='ci' value='83052' /><param name='tld' value='CO' /></relative>]@T]"><span id="co-icon"></span><span>[@T[productprice:<current productid="56401" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]</span></a>
-          <a href="[@T[link:<relative path='/tlds/com.aspx'><param name='ci' value='89151' /><param name='tld' value='COM' /></relative>]@T]"><span id="com-icon"></span><span id="com-price">[@T[productprice:<current productid="101" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]*</span></a>
-          <a href="[@T[link:<relative path='/tlds/org.aspx'><param name='ci' value='89152' /><param name='tld' value='ORG' /></relative>]@T]"><span id="org-icon"></span><span id="org-price">[@T[productprice:<current productid="12101" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]*</span></a>
-          <a href="[@T[link:<relative path='/tlds/club'><param name='ci' value='89153' /><param name='tld' value='CLUB' /></relative>]@T]"><span id="club-icon"></span><span id="club-price">[@T[productprice:<current productid="172137" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]*</span></a>
-          <a href="[@T[link:<relative path='/tlds/xyz'><param name='ci' value='91018' /></relative>]@T]"><span id="xyz-icon"></span><span id="xyz-price">[@T[productprice:<current productid="334499" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]*</span></a>
+          <a href="[@T[link:<relative path='/tlds/mobi.aspx'><param name='ci' value='92168' /></relative>]@T]"><span class="bug-icon" id="mobi-icon"></span><span id="mobi-price">[@T[productprice:<current productid="40801" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]</span></a>
+          <a href="[@T[link:<relative path='/tlds/co-domain.aspx'><param name='ci' value='83052' /><param name='tld' value='CO' /></relative>]@T]"><span class="bug-icon" id="co-icon"></span><span id="co-price">[@T[productprice:<current productid="56401" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]</span></a>
+          <a href="[@T[link:<relative path='/tlds/org.aspx'><param name='ci' value='89152' /><param name='tld' value='ORG' /></relative>]@T]"><span class="bug-icon" id="org-icon"></span><span id="org-price">[@T[productprice:<current productid="12101" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]*</span></a>
+          <a href="[@T[link:<relative path='/tlds/club'><param name='ci' value='89153' /><param name='tld' value='CLUB' /></relative>]@T]"><span class="bug-icon" id="club-icon"></span><span id="club-price">[@T[productprice:<current productid="172137" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]*</span></a>
+          <a href="[@T[link:<relative path='/tlds/xyz'><param name='ci' value='91018' /></relative>]@T]"><span class="bug-icon" id="xyz-icon"></span><span id="xyz-price">[@T[productprice:<current productid="334499" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]*</span></a>
         </span>
         <span class="drtv-section" onclick="window.open('[@T[link:<relative path='/1dollarwebsite'><param name='ci' value='91701' /></relative>]@T]')">
           <span class="drtv-logo"></span>
