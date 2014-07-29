@@ -20,7 +20,7 @@ Managed Virtual Private Servers
 <phrase key="HeaderSubHeadline" />
 Control. Reliability. Security. 
 <phrase key="HeaderUptimeGuarantee" />
-99.9% Uptime Guarantee*
+99.9% Uptime Guarantee
 <phrase key="JsChatLive" />
 Chat Now
 <phrase key="TabLink1" />
@@ -176,9 +176,9 @@ Free rapid setup
 <phrase key="SupportSubText4" />
 FTP access
 <phrase key="MoneyBackGuarantee" />
-Money-back guarantee<sup>*</sup>
+Money-back guarantee
 <phrase key="UptimeGuarantee" />
-99.9% uptime guarantee<sup>*</sup>
+99.9% uptime guarantee
 <phrase key="SupportGoogleCredits" />
 <strong class="secondary-color">FREE!</strong> Up to [@T[currencyprice:<price usdamount="10000" dropdecimal="true" />]@T] Google<sup>&reg;</sup> Adwords<sup>&reg;</sup> Credit
 <phrase key="SupportBingCredits" />
@@ -448,7 +448,7 @@ AP
 <phrase key="RestrictionsApply" />
 Restrictions Apply
 <phrase key="GBRestrictions" />
-Disk space includes operating system files, which can be close to 1 GB in a CentOS/Fedora server or 16 GB on a Windows server. Please take that into consideration when choosing a server size that best fits your needs.
+Disk space includes operating system files, which can be close to 1 GB in a CentOS/Fedora server or 24 GB on a Windows server. Please take that into consideration when choosing a server size that best fits your needs.
 <phrase key="SSLRestrictions" />
 SSL Certificate is free for 1 year with purchase. After the initial free year, SSL will automatically renew at the then-current price until cancelled. You may cancel automatic renewal at any time in your [@T[companyname:name]@T] account.
 <phrase key="GoogleRestrictions" />
