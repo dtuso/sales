@@ -124,25 +124,7 @@ assetPath: false
                             <span class="compare-top-badge">[@L[cds.sales/gd/hosting/vps-hosting:NeedHelpBadgePhone2]@L]</span>
                         </div>
                       ##endif
-                        ##if(isManager())
-                        <div class="region-content">
-                          <p class="region-label">[@L[cds.sales/gd/hosting/vps-hosting:RegionLabel]@L]</p>
-                          <ul class="region-radios">
-                            <li>
-                              <input type="radio" name="region" value="us" checked="true">
-                              <span>[@L[cds.sales/gd/hosting/vps-hosting:US]@L]</span>
-                            </li>
-                            <li>
-                              <input type="radio" name="region" value="eu">
-                              <span>[@L[cds.sales/gd/hosting/vps-hosting:EU]@L]</span>
-                            </li>
-                            <li>
-                              <input type="radio" name="region" value="ap">
-                              <span>[@L[cds.sales/gd/hosting/vps-hosting:AP]@L]</span>
-                            </li>
-                          </ul>
-                        </div>
-                        ##endif
+                        
                         <p class="operating-systems-label">[@L[cds.sales/gd/hosting/vps-hosting:SelectOS]@L]</p>
                         <ul class="operating-systems-radios nav nav-tabs no-margin-bottom">
                             <li class="operating-systems-radios-item active">
@@ -1018,12 +1000,7 @@ $('input[name="region"]').change(function(){
 });
 
 function getDataCenter() {
-
-    ##if(isManager())
-        return getManagerDC();
-    ##else
         return getShopperDC();
-    ##endif
 }
 
 function getManagerDC() {
