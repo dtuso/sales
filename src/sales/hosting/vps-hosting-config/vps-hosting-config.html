@@ -1,12 +1,13 @@
 ---
 location: sales/hosting/vps-hosting-config.aspx
-id: 53bc43b5f778fc18643f9264
-name: FOS-21357
+id: 53d80533f778fc27484de574
+name: FOS-21349
+comment: I18N - Sales -- uk-UA - de-DE - VPS Hosting Config page Updates
 ---
 {% extends 'layouts/config-base.html' %}
 
 {% block steps %}
-                      ##if(isManager())
+                                            ##if(isManager())
                           <form action="[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" parammode="explicit" />]@T]" method="get" id="configForm" >
                       ##else
                           <form action="[@T[link:<external linktype="carturl" path="/basket.aspx" parammode="explicit" />]@T]" method="get" id="configForm"  >
@@ -102,12 +103,12 @@ name: FOS-21357
                                 <a data-ci="90223" class="btn btn-warning btn-lg js-addtocart box5"><span class="icon-shopping-cart"></span> [@L[cds.sales/gd/hosting/vps-hosting-config:configTitleContinueToCart]@L]</a>
                             </div> 
                         </form> 
-{% endblock %} 
+ {% endblock %} 
 
 {% block modals %}
 <!-- modal -->
 
-                <div class="modal fade" id="learnModal">
+                 <div class="modal fade" id="learnModal">
                     <div class="modal-dialog modal-dialog-config">
                         <div class="modal-content modal-content-config">
                             <div class="modal-header">
@@ -185,11 +186,11 @@ name: FOS-21357
 
 {% block footer %}
   <script src="[@T[link:<javascriptroot />]@T]fos/office365/js/currency-calc.v1.0.2.min.js" type="text/javascript"></script>
-  <script>
-    if(typeof currencyCalc != "undefined"){
-      currencyCalc.base = '[@T[currencyprice:<price usdamount="1000000000" dropdecimal="false" dropsymbol="false" htmlsymbol="false" negative="parenthesis" />]@T]';
-    }
-  </script>
+    <script>
+      if(typeof currencyCalc != "undefined"){
+        currencyCalc.base = '[@T[currencyprice:<price usdamount="1000000000" dropdecimal="false" dropsymbol="false" htmlsymbol="false" negative="parenthesis" />]@T]';
+      }
+    </script>
     <script>
       $(document).ready(function() {
         var planBasePrice;
@@ -281,8 +282,12 @@ name: FOS-21357
             topStep1 = $("div.config-step:visible:first").offset().top,
             topOfWindowAboveTopOfStep1 = (scrollTop <= (topStep1 - paddingTop)),
             $footer = $('.scroll-down-wrapper');
+            $subtitleDisclaimer = $(".subtotal-disclaimer");
+            $addonDesc = $(".addon-desc");
 
             $footer.css('visibility','visible');
+            $addonDesc.css('visibility','visible');
+            $subtitleDisclaimer.css('visibility','visible');
             $configCartWrapper.css({'top':'0px','position':'static'});
 
           if(!topOfWindowAboveTopOfStep1) {
@@ -307,9 +312,11 @@ name: FOS-21357
                 $configCartWrapper.css({'top':'0px','position':'static'});
               }
               if((scrollTop+paddingTop)>=$lastStep.offset().top){
-                $footer.css('visibility','hidden');
+                // $footer.css('visibility','hidden');
+                // $subtitleDisclaimer.css('visibility','hidden');
+                $addonDesc.css('visibility','hidden');
               }else{
-                $footer.css('visibility','visible');
+                $addonDesc.css('visibility','visible');
               }
             } else {
               try{
@@ -322,6 +329,13 @@ name: FOS-21357
               }
               // affix the summary so the bottom lines up with the bottom of the last step
               $footer.css('visibility','hidden');
+              if((scrollTop+paddingTop)>=$lastStep.offset().top){
+                $addonDesc.css('visibility','hidden');
+              }else{
+                $addonDesc.css('visibility','visible');                
+              }
+              // $subtitleDisclaimer.css('visibility','hidden');
+              // $addonDesc.css('visibility','hidden');
               var topForBottomAligned = ($lastStep.offset().top + $lastStep.height() +$footer.height()) - (scrollTop + $configCartWrapper.height() );
               //topForBottomAligned = bottomOfLastStep - $configCartWrapper.height() + paddingTop;
               $configCartWrapper
@@ -449,7 +463,7 @@ name: FOS-21357
         });
 
         if(planDetails[1] == 'us'){
-          if(planDetails[2]!='centos'){
+          if(planDetails[2]!='centos' && planDetails[2]!= 'linux' && planDetails[2]!= 'windows'){
             $('.backup').show();
             $(data.addons[planDetails[2]].managedbackup[planDetails[1]]).each(function (i,n){
               generateOptions(i,n, '#managedbackupOptions','managedbackupoptions');
@@ -462,11 +476,13 @@ name: FOS-21357
           $('#managedbackup').hide();
         }
 
-        if(planDetails[2]== 'fedora'){
+        if(planDetails[2]== 'fedora' || planDetails[2]== 'windows'){
           $('.controlpanel').hide();
-          $('.nocontrolpanel').show();
+          $('.box4').hide();
+          $('.config-step-box-shadow').hide();
+          $('.icon-down').hide();
         }else{
-          if(planDetails[2]!='centos' && planDetails[1] == 'us'){
+          if(planDetails[2]!='centos' && planDetails[2]!= 'linux' && planDetails[1] == 'us'){
             $('.assistedservice').show();
             $(data.addons[planDetails[2]].assistedservice[planDetails[1]]).each(function (i,n){
              generateOptions(i,n, '#assistedserviceOptions','assistedserviceoptions');
@@ -479,7 +495,7 @@ name: FOS-21357
         if(planDetails[2]== 'windows'){
           $('.windowsPanel').show();
           $('.centosPanel').hide();
-        }else if(planDetails[2] == 'centos'){
+        }else if(planDetails[2] == 'centos' || planDetails[2]== 'linux'){
           $('.centosPanel').show();
           $('.windowsPanel').hide();
         }
@@ -522,21 +538,20 @@ name: FOS-21357
         var content='';
         if(i===0){
             $(parentid).empty();
-            content += '<li><input type="radio" name="'+optionname+'" checked="checked" data-price="0" data-addon="" data-child="" value=""><span> '+n.addonvalue+'</span><span></span></li>';
+            content += '<li><input type="radio" name="'+optionname+'" checked="checked" data-price="0" data-addon="" data-child="" value="" /><span> '+n.addonvalue+'</span><span></span></li>';
         }else{
-          content += '<li><input type="radio" name="'+optionname+'" data-addon="'+n.addondata+'" data-price="'+n.addonprice+'" data-child=".'+n.id+'"  value="'+n.id+'"><span> '+n.addonvalue+'</span><span class="price"> '+n.addonprice+'[@L[cds.sales/gd/hosting/vps-hosting-config:mo]@L]</span>';
+          content += '<li><input type="radio" name="'+optionname+'" data-addon="'+n.addondata+'" data-price="'+n.addonprice+'" data-child=".'+n.id+'"  value="'+n.id+'" /><span> '+n.addonvalue+'</span><span class="price"> '+n.addonprice+'[@L[cds.sales/gd/hosting/vps-hosting-config:mo]@L]</span>';
           $(n.addonupgrade).each(function (j,k){
             if(j===0){
-              content += '<div class="children-hide sub-radio-option '+n.id+' "><input type="radio" name="'+k.id+i+'" checked="checked" data-addon="" data-price="0" value=""><span>'+k.addonvalue+"</span><span></span><br>";
+              content += '<div class="children-hide sub-radio-option '+n.id+' "><input type="radio" name="'+k.id+i+'" checked="checked" data-addon="" data-price="0" value="" /><span>'+k.addonvalue+"</span><span></span><br>";
             }
             else{
-             content += '<input type="radio" name="'+k.id+i+'" value="'+k.id+'"data-addon="'+k.addondata+'" data-price="'+k.addonprice+'" ><span> '+k.addonvalue+'</span><span class="price"> '+k.addonprice+'</span>';
+             content += '<input type="radio" name="'+k.id+i+'" value="'+k.id+'"data-addon="'+k.addondata+'" data-price="'+k.addonprice+'" /><span> '+k.addonvalue+'</span><span class="price"> '+k.addonprice+'</span>';
             }
 
           });
-           content +='</div></li>';
+           content +='</li>';
         }
-        
         $(parentid).append(content);
 
       }
