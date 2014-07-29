@@ -9,7 +9,7 @@
   "Germany": "DE",
   "India": "IN",
   "Ireland": "IE",
-  "Italy": "IL",
+  "Italy": "IT",
   "Malaysia": "MY",
   "Mexico": "MX",
   "Netherlands": "NL",
@@ -24,5 +24,10 @@
   "Sweden": "SE",
   "Switzerland": "CH",
   "United Kingdom": "GB",
-  "United States": "US"
+  "United States": "US",
+  "Russia": "RU",
+  "Denmark": "DK",
+  "Finland": "FI",
+  "Norway": "NO",
+  "Belgium": "BE"
 }
