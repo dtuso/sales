@@ -1,8 +1,10 @@
 ---
+url: http://www.dev-godaddy.com/business/office-365.aspx
 location: sales/business/office-365.aspx
-id: 53b5971ff778fc11983444cf
-name: FOS-17318
-comments: separate currency symbol from price with token instead of javascript
+id: 53d7ce6cf778fc27484de55d
+name: FOS-23040
+comments: Enable Portuguese and Spanish O365 Videos
+splitSide: 1216.A
 ---
 {% extends 'layouts/base.html' %}
 
@@ -34,166 +36,163 @@ comments: separate currency symbol from price with token instead of javascript
 {% endblock metahead %}
 
 {% block footer %}
-    <script src="[@T[link:<javascriptroot />]@T]fos/office365/js/plugins.js"></script>
-    <script src="[@T[link:<javascriptroot />]@T]fos/office365/js/main.js"></script>
-    
-    <script src="[@T[link:<javascriptroot />]@T]shared/js/jquery.plugins.min.20111019.js" type="text/javascript"></script>
-    <script src="[@T[link:<javascriptroot />]@T]fos/lib/gd-swipe/js/20131008-swipe-v2.2.min.js" type="text/javascript"></script>
-    <script src="[@T[link:<javascriptroot />]@T]fos/lib/gd-swipe/js/gd-swipe-v2.min.js" type="text/javascript"></script>
-    
-    <script src="[@T[link:<javascriptroot />]@T]starfield/fos.share/v1.3/fos.share-v2.min.js" id="fosShareScript"></script>
-    <script src="[@T[link:<javascriptroot />]@T]fos/hosting/rebrand/js/web_hosting_20130821.min.js" type="text/javascript"></script>
-    <script src="[@T[link:<javascriptroot />]@T]fos/office365/js/office365-lp.20140417.js" type="text/javascript"></script>
-<script>
-        $(document).ready(function () {
+  <script src="[@T[link:<javascriptroot />]@T]fos/office365/js/plugins.js"></script>
+  <script src="[@T[link:<javascriptroot />]@T]fos/office365/js/main.js"></script>
+  
+  <script src="[@T[link:<javascriptroot />]@T]fos/lib/gd-swipe/js/20131008-swipe-v2.2.min.js" type="text/javascript"></script>
+  <script src="[@T[link:<javascriptroot />]@T]fos/lib/gd-swipe/js/gd-swipe-v2.min.js" type="text/javascript"></script>
+  
+  <script src="[@T[link:<javascriptroot />]@T]starfield/fos.share/v1.3/fos.share-v2.min.js" id="fosShareScript"></script>
+  <script src="[@T[link:<javascriptroot />]@T]fos/hosting/rebrand/js/web_hosting_20130821.min.js" type="text/javascript"></script>
+  <script src="[@T[link:<javascriptroot />]@T]fos/office365/js/office365-lp.20140417.js" type="text/javascript"></script>
+  <script>
+    $(document).ready(function () {
 
-          $("#disclaimers > p > a").click(function (event) {
-            var $disclaimerModal = $("#disclaimerModal");
-            $disclaimerModal.show();
-            $disclaimerModal.universalModal({ "width": 800 });
-            // IE will not show the modal at first, triggering the window resize fixes this
-            $(window).trigger("resize");
-            $(".modal-user-limit-ok").bind("click", function () {
-              $(".universal-modal-close").trigger("click.universalModal")
-            })
-          });
-
-##if(activeLanguageAny([en]))
-          var autoplay = '\&autoplay=1';
-          var src = $('#myVideoModal iframe').attr('src');
-          $('#myVideoModal').on('hidden.bs.modal', function () {
-            $('#myVideoModal iframe').removeAttr('src');
-            $('#myVideoModal iframe').attr('src', src);
-          });
-
-          $('#myVideoModal').on('show.bs.modal', function () {
-            $('#myVideoModal iframe').attr('src', src + autoplay);
-          });
-##endif
-
-        });
-
-
-        // gdSideBySideAlign plugin
-  (function ( $, window, document, undefined ) {
-
-    var pluginName = 'gdSideBySideAlign',
-        defaults = {
-          bailIfRowCountsMismatch : true
-    };
-
-    function GDSideBySideAlign( element, options ) {
-      this.element = element;
-      this.options = $.extend( {}, defaults, options);
-      this._defaults = defaults;
-      this._name = pluginName;
-      this.init();
-    }
-
-    GDSideBySideAlign.prototype.init = function () {
-
-        // Find the columns
-        var $columns = $(this.element).find('[data-gd-sidebysidealign-col]');
-
-        if($columns.length == 0) {
-          return; // bail if no columns found
-        }
-
-        // Make sure columns have an equal number of rows
-        var numRows = 0, equalLength = true;
-        $.each($columns, function(idx,item){
-          var $rows = $(item).find('[data-gd-sidebysidealign-row]');
-          if(numRows == 0) {
-            numRows = $rows.length;
-          }
-          if(equalLength) {
-            if(numRows != $rows.length) equalLength = false;
-          }
-        });
-        if(numRows==0 || !equalLength && this.options.bailIfRowCountsMismatch) {
-          return; // bail if no rows, or rows are not equal length
-        }
-
-        // loop thru each row and grab the largest cell height and apply to each cell in that row
-        for(var i=1; i<=numRows; i++) {
-          var $cells = $columns.find('[data-gd-sidebysidealign-row="' + i + '"]' );
-          var tallest = 0;
-          $.each($cells,function(idx, cell){
-            tallest = Math.max(tallest, $(cell).height());
-          });
-          $cells.css({'min-height':tallest+'px'});
-        }
-
-    }; /* end GDSideBySideAlign.prototype.init */
-
-    // register the function to be used
-    $.fn[pluginName] = function ( options ) {
-      return this.each(function () {
-        if (!$.data(this, 'plugin_' + pluginName)) {
-          $.data(this, 'plugin_' + pluginName, new GDSideBySideAlign( this, $(this).data('gd-sidebysidealign') || options ));
-        }
+      $("#disclaimers > p > a").click(function (event) {
+        var $disclaimerModal = $("#disclaimerModal");
+        $disclaimerModal.show();
+        $disclaimerModal.universalModal({ "width": 800 });
+        // IE will not show the modal at first, triggering the window resize fixes this
+        $(window).trigger("resize");
+        $(".modal-user-limit-ok").bind("click", function () {
+          $(".universal-modal-close").trigger("click.universalModal")
+        })
       });
-    };
 
-    // load the plugin
-    $(document).ready(function(){
-      $('[data-gd-sidebysidealign]').gdSideBySideAlign();
+    ##if(activeLanguageAny([en],[pt-br],[es]))
+      var autoplay = '\&autoplay=1';
+      var src = $('#myVideoModal iframe').attr('src');
+      $('#myVideoModal').on('hidden.bs.modal', function () {
+        $('#myVideoModal iframe').removeAttr('src');
+        $('#myVideoModal iframe').attr('src', src);
+      });
+
+      $('#myVideoModal').on('show.bs.modal', function () {
+        $('#myVideoModal iframe').attr('src', src + autoplay);
+      });
+    ##endif
+
     });
 
-  })( jQuery, window, document );
+    // gdSideBySideAlign plugin
+    (function ( $, window, document, undefined ) {
 
-    </script>
+      var pluginName = 'gdSideBySideAlign',
+          defaults = {
+            bailIfRowCountsMismatch : true
+      };
 
-    <style type="text/css">
+      function GDSideBySideAlign( element, options ) {
+        this.element = element;
+        this.options = $.extend( {}, defaults, options);
+        this._defaults = defaults;
+        this._name = pluginName;
+        this.init();
+      }
+
+      GDSideBySideAlign.prototype.init = function () {
+
+          // Find the columns
+          var $columns = $(this.element).find('[data-gd-sidebysidealign-col]');
+
+          if($columns.length == 0) {
+            return; // bail if no columns found
+          }
+
+          // Make sure columns have an equal number of rows
+          var numRows = 0, equalLength = true;
+          $.each($columns, function(idx,item){
+            var $rows = $(item).find('[data-gd-sidebysidealign-row]');
+            if(numRows == 0) {
+              numRows = $rows.length;
+            }
+            if(equalLength) {
+              if(numRows != $rows.length) equalLength = false;
+            }
+          });
+          if(numRows==0 || !equalLength && this.options.bailIfRowCountsMismatch) {
+            return; // bail if no rows, or rows are not equal length
+          }
+
+          // loop thru each row and grab the largest cell height and apply to each cell in that row
+          for(var i=1; i<=numRows; i++) {
+            var $cells = $columns.find('[data-gd-sidebysidealign-row="' + i + '"]' );
+            var tallest = 0;
+            $.each($cells,function(idx, cell){
+              tallest = Math.max(tallest, $(cell).height());
+            });
+            $cells.css({'min-height':tallest+'px'});
+          }
+
+      }; /* end GDSideBySideAlign.prototype.init */
+
+      // register the function to be used
+      $.fn[pluginName] = function ( options ) {
+        return this.each(function () {
+          if (!$.data(this, 'plugin_' + pluginName)) {
+            $.data(this, 'plugin_' + pluginName, new GDSideBySideAlign( this, $(this).data('gd-sidebysidealign') || options ));
+          }
+        });
+      };
+
+      // load the plugin
+      $(document).ready(function(){
+        $('[data-gd-sidebysidealign]').gdSideBySideAlign();
+      });
+
+    })( jQuery, window, document );
+
+  </script>
+
+  <style type="text/css">
     .sup-symbol-price {
       font-size: 0.5em;
       padding: 2px 2px 0;
     }
 
-      .business-card{
+    .business-card{
       position:relative;
       background-color:none;
-      }
-      .center-paragraph{
+    }
+    .center-paragraph{
       position:absolute;
       left:68px;
       top:48%;
-      }
-      .long-lang-text{
+    }
+    .long-lang-text{
       font-size: small;
-      }
+    }
 
-
- ##if(countrySiteAny(tr))
-      .misc-banner-content {color:#666;}
-      .office-365-logo-medium-white {background-position: 0 -36px!important;} /* use the darker o365 img and font color */
-      #plans-pricing {
-        background: url([@T[link:<imageroot />]@T]fos/office365/img/bg-MED-banner-office.jpg) no-repeat center top;
-      }
- ##elseif(countrySiteAny(dk,fi,no,se,at,pl,hu,ru,ua,gr))
-      #plans-pricing {
-        background: url([@T[link:<imageroot />]@T]fos/office365/img/bg-NOR-banner-office.jpg) no-repeat center top;
-      }
- ##elseif(activeLanguageAny([es]))
-      .misc-banner-content {color:#666;}
-      .office-365-logo-medium-white {background-position: 0 -36px!important;} /* use the darker o365 img and font color */
-      #plans-pricing {
-        background: url([@T[link:<imageroot />]@T]fos/office365/img/bg-LATAM-banner-office-v2.jpg) no-repeat center top;
-      }
- ##elseif(activeLanguageAny([pt-br]))
-      .misc-banner-content {color:#666;}
-      .office-365-logo-medium-white {background-position: 0 -36px!important;} /* use the darker o365 img and font color */
-      #plans-pricing {
-        background: url([@T[link:<imageroot />]@T]fos/office365/img/bg-LATAM-banner-office-v2.jpg) no-repeat center top;
-      }
-      .font-size-xxl-large{
-        font-size:xx-large;
-      }
- ##elseif(activeLanguageAny([en]))
-      .width-seventy-five{
-        max-width:75%;
-      }
- ##endif
+##if(countrySiteAny(tr))
+    .misc-banner-content {color:#666;}
+    .office-365-logo-medium-white {background-position: 0 -36px!important;} /* use the darker o365 img and font color */
+    #plans-pricing {
+      background: url([@T[link:<imageroot />]@T]fos/office365/img/bg-MED-banner-office.jpg) no-repeat center top;
+    }
+##elseif(countrySiteAny(dk,fi,no,se,at,pl,hu,ru,ua,gr))
+    #plans-pricing {
+      background: url([@T[link:<imageroot />]@T]fos/office365/img/bg-NOR-banner-office.jpg) no-repeat center top;
+    }
+##elseif(activeLanguageAny([es]))
+    .misc-banner-content {color:#666;}
+    .office-365-logo-medium-white {background-position: 0 -36px!important;} /* use the darker o365 img and font color */
+    #plans-pricing {
+      background: url([@T[link:<imageroot />]@T]fos/office365/img/bg-LATAM-banner-office-v2.jpg) no-repeat center top;
+    }
+##elseif(activeLanguageAny([pt-br]))
+    .misc-banner-content {color:#666;}
+    .office-365-logo-medium-white {background-position: 0 -36px!important;} /* use the darker o365 img and font color */
+    #plans-pricing {
+      background: url([@T[link:<imageroot />]@T]fos/office365/img/bg-LATAM-banner-office-v2.jpg) no-repeat center top;
+    }
+    .font-size-xxl-large{
+      font-size:xx-large;
+    }
+##elseif(activeLanguageAny([en]))
+    .width-seventy-five{
+      max-width:75%;
+    }
+##endif
   </style>
 
 {% endblock footer %}
@@ -203,26 +202,36 @@ comments: separate currency symbol from price with token instead of javascript
     <section class="main-banner main-banner-dedicated-servers">
       <h1 class="main-banner-subtitle">[@L[cds.sales/business/office-365:lp-5-MicrosoftOffice365FromGoDaddy]@L]</h1>
       <h2 class="main-banner-title">[@L[cds.sales/business/office-365:lp-10-AllInOneSolutionsToGetMoredoneAnd]@L]</h2>
-##if(activeLanguageAny([en]))
-<a class="office-365-banner-video-link" data-toggle="modal" data-target="#myVideoModal" data-ci="86688">
-            <i class="ico ico-gt-circle"></i>
-            <span class="br"></span>
-            <span><strong>[@L[cds.sales/business/office-365:lp-2-WatchVideo]@L]</strong></span>
-        </a>
-        <div class="modal fade videoModal" id="myVideoModal">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="modal-header-close close" data-dismiss="modal" aria-hidden="true">&times;</button>
-              </div>
-              <div class="modal-body">
-                <iframe width="854" height="480" src="//www.youtube.com/embed/xvK76H9olXM?html5=1&rel=0&iv_load_policy=3&modestbranding=1" autoplay scrolling="no" frameborder="0" allowfullscreen>
-                </iframe>
-              </div>
+
+##if(activeLanguageAny([en],[pt-br],[es]))
+      <a class="office-365-banner-video-link" data-toggle="modal" data-target="#myVideoModal" data-ci="86688">
+        <i class="ico ico-gt-circle"></i>
+        <span class="br"></span>
+        <span><strong>[@L[cds.sales/business/office-365:lp-2-WatchVideo]@L]</strong></span>
+      </a>
+      <div class="modal fade videoModal" id="myVideoModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="modal-header-close close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            </div>
+            <div class="modal-body">
+              <iframe width="854" height="480" 
+                ##if(activeLanguageAny([en]))
+                  src="//www.youtube.com/embed/xvK76H9olXM?html5=1&rel=0&iv_load_policy=3&modestbranding=1" 
+                ##elseif(activeLanguageAny([pt-br]))
+                  src="//www.youtube.com/embed/MzKxD1pT8Ys?html5=1&rel=0&iv_load_policy=3&modestbranding=1" 
+                ##elseif(activeLanguageAny([es]))
+                  src="//www.youtube.com/embed/0VY7OhkMX2w?html5=1&rel=0&iv_load_policy=3&modestbranding=1" 
+                ##endif
+              autoplay scrolling="no" frameborder="0" allowfullscreen>
+              </iframe>
             </div>
           </div>
         </div>
+      </div>
 ##endif
+
     </section>
     <!-- End main-banner -->
 

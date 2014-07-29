@@ -120,6 +120,7 @@ gulp.task('html', function() {
 
 gulp.task('language', function() {
   return gulp.src('./**/*.language', {cwd: path.join('./src/sales/', assetSrcPath)})
+    .pipe(changed(paths.build))
     //.pipe(changed(paths.build))
     .pipe(charFix())
     .pipe(fm({remove:true}))
