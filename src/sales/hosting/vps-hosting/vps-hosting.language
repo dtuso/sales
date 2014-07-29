@@ -1,8 +1,8 @@
 ---
 location: localization/sales/gd/hosting/vps-hosting/en
-id: 53b1c5a9f778fc30c89f0c89
-name: FOS-22092
-comments: changing free ssl text to clarify 1 year
+id: 53d7f2d7f778fc27484de56f
+name: FOS-24858
+comments: Removed hard line breaks
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="page-title" />
@@ -30,11 +30,11 @@ Support
 <phrase key="TabLink4" />
 FAQ
 <phrase key="Tab1Header" />
-Launch your own VPS<br>with just a few clicks.
+Launch your own VPS with just a few clicks.
 <phrase key="Tab1HeaderText" />
-Our simple setup process will have you up and running in minutes -<br>no lengthy spin up times or waiting on resources. And with<br><strong>patching, monitoring, security, backups</strong> and <strong>support</strong> all included,<br>you can stay focused on running your business.
+Our simple setup process will have you up and running in minutes - no lengthy spin up times or waiting on resources. And with <strong>patching, monitoring, security, backups</strong> and <strong>support</strong> all included, you can stay focused on running your business.
 <phrase key="Tab1HeaderText2" />
-Best of all, when you choose our Managed VPS, your RAM, storage<br>and bandwidth aren't just under your control, they're guaranteed.
+Best of all, when you choose our Managed VPS, your RAM, storage and bandwidth aren't just under your control, they're guaranteed.
 <phrase key="NeedHelpBadgePhone1" />
 Need Help? For 24/7 sales: <a>[@T[support:<serverSupportPhone/>]@T]</a>
 <phrase key="NeedHelpBadgePhone2" />
