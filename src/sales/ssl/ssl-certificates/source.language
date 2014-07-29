@@ -1,8 +1,8 @@
 ---
 location: localization/sales/gd/ssl/ssl-certificates/en
-id: 53bec391f778fc0968b4f073
-name: FOS-21698
-comments: updated countries offering sitelock and language tokens
+id: 53d6c1d9f778fc27484de532
+name: FOS-23826
+comments: Added BE to countries offering sitelock
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="MetaTitle" />
@@ -192,4 +192,4 @@ Disclaimers
 <phrase key="DisclaimerModalListItem2" />
 Products will automatically renew until cancelled. You may turn off the auto-renewal feature by visiting your GoDaddy account.
 <phrase key="SslManager" />
-Premium SSL available only for USA, Argentina, Australia, Austria, Brazil, Canada, Chile, Colombia, Denmark, Finland, France, Germany, India, Ireland, Italy, Malaysia, Mexico, Netherlands, New Zealand, Norway, Pakistan, Peru, Philippines, Portugal, Russia, Singapore, South Africa, Spain, Sweden, Switzerland, and UK.<br />To change product offering, select the correct plan for the customer on the SSL configuration page.<br />
+Premium SSL available only for USA, Argentina, Australia, Austria, Belgium, Brazil, Canada, Chile, Colombia, Denmark, Finland, France, Germany, India, Ireland, Italy, Malaysia, Mexico, Netherlands, New Zealand, Norway, Pakistan, Peru, Philippines, Portugal, Russia, Singapore, South Africa, Spain, Sweden, Switzerland, and UK.<br />To change product offering, select the correct plan for the customer on the SSL configuration page.<br />
