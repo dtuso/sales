@@ -1,7 +1,7 @@
 ---
 location: localization/sales/domains/domain-configuration/en
-id: 53d01bdaf778fc194887c8bb
-name: FOS-24445
+id: 53d809a7f778fc27484de577
+name: FOS-24789/ FOS-23778
 ---
 ##if(false)
 <!-- DOC BLOCK (DO NOT REMOVE)
@@ -12,12 +12,12 @@ name: FOS-24445
         DRAFT DETAILS:
           Created Date:   2014-07-23
           Created By:     Pooja Singhvi - psinghvi@godaddy.com
-          JIRA Ticket:    FOS-24445
-          Comments:       Remove .com.au from free disclaimer
+          JIRA Ticket:    FOS-24789/ FOS-23778 
+          Comments:       Update O365 in DPP Config Page
                           
 
          PREVIEW URL:
-         http://www.dev-godaddy.com/domains/domain-configuration.aspx?version=localization/sales/domains/domain-configuration/en|53d01bdaf778fc194887c8bb#
+         http://www.dev-godaddy.com/domains/domain-configuration.aspx?version=localization/sales/domains/domain-configuration/en|53d809a7f778fc27484de577#
 
 END DOC BLOCK -->
 ##endif 
@@ -288,7 +288,7 @@ All features from Email Essentials And…
 <phrase key="step.o365.plan2.li1" comment="" />
 50GB email storage
 <phrase key="step.o365.plan2.li2" comment="" />
-25GB secure file storage
+1TB secure file storage
 <phrase key="step.o365.plan2.li3" comment="" />
 Simple file sharing &amp; online collaboration
 <phrase key="step.o365.plan2.li4" comment="" />
@@ -300,7 +300,7 @@ Productivity Plus
 <phrase key="step.o365.plan3.list.title" comment="" />
 All features from Business Essentials PLUS…
 <phrase key="step.o365.plan3.li1" comment="" />
-Latest Microsoft Office desktop suite for 5 computers<sup class="supsymbol">3</sup>
+Full Microsoft Office on 5 PCs or Macs and 5 iPads or Windows tablets per user<sup class="supsymbol">3</sup>
 <phrase key="step.o365.plan3.li2" comment="" />
 Office Mobile Apps for smartphone access and editing
 <phrase key="step.wsbAndHosing.wsb.desc" comment="" />
