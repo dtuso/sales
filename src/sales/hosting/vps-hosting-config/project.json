@@ -14,7 +14,7 @@
           "username": "sylopez"
         },
         "jiraTicket": "FOS-1310",
-        "comments": "Landing Page Reskin",
+        "comments": "Select cPanel by default and remove price from cpanel option",
         "url": "http://www.dev-godaddy.com/hosting/vps-hosting-config.aspx"
       }
     },

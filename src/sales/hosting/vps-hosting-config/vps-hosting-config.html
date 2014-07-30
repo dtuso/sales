@@ -1,8 +1,8 @@
 ---
 location: sales/hosting/vps-hosting-config.aspx
-id: 53d80533f778fc27484de574
-name: FOS-21349
-comment: I18N - Sales -- uk-UA - de-DE - VPS Hosting Config page Updates
+id: 53d95eb4f778fc162c8d5dca
+name: FOS-24915
+comment: Select cPanel by default and remove price from cpanel option
 ---
 {% extends 'layouts/config-base.html' %}
 
@@ -540,7 +540,12 @@ comment: I18N - Sales -- uk-UA - de-DE - VPS Hosting Config page Updates
             $(parentid).empty();
             content += '<li><input type="radio" name="'+optionname+'" checked="checked" data-price="0" data-addon="" data-child="" value="" /><span> '+n.addonvalue+'</span><span></span></li>';
         }else{
-          content += '<li><input type="radio" name="'+optionname+'" data-addon="'+n.addondata+'" data-price="'+n.addonprice+'" data-child=".'+n.id+'"  value="'+n.id+'" /><span> '+n.addonvalue+'</span><span class="price"> '+n.addonprice+'[@L[cds.sales/gd/hosting/vps-hosting-config:mo]@L]</span>';
+          if(n.addondata == 'Control Panel: cPanel & WHM Unlimited'){
+            content += '<li><input type="radio" name="'+optionname+'" checked="checked" data-addon="'+n.addondata+'" data-price="'+n.addonprice+'" data-child=".'+n.id+'"  value="'+n.id+'" /><span> '+n.addonvalue+'</span>';
+          }
+          else{
+            content += '<li><input type="radio" name="'+optionname+'" data-addon="'+n.addondata+'" data-price="'+n.addonprice+'" data-child=".'+n.id+'"  value="'+n.id+'" /><span> '+n.addonvalue+'</span><span class="price"> '+n.addonprice+'[@L[cds.sales/gd/hosting/vps-hosting-config:mo]@L]</span>';
+          }
           $(n.addonupgrade).each(function (j,k){
             if(j===0){
               content += '<div class="children-hide sub-radio-option '+n.id+' "><input type="radio" name="'+k.id+i+'" checked="checked" data-addon="" data-price="0" value="" /><span>'+k.addonvalue+"</span><span></span><br>";
