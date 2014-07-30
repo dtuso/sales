@@ -1,9 +1,10 @@
 ---
 location: localization/sales/gd/hosting/vps-hosting-config/en
-id: 537add28f778fc17186148f1
-name: FOS-1310
+id: 53d94e97f778fc162c8d5dbd
+name: FOS-24915
 ---
-{% include '../modules/doc-block.html' %}
+
+{% include 'modules/doc-block.html' %}
 <phrase key="page-title" />
 VPS Hosting | Affordable &amp; Configurable VPS plans - GoDaddy
 <phrase key="meta-description" />
@@ -89,11 +90,15 @@ No Assisted Service Plan
 <phrase key="list3item1" />
 Assisted Service Plan: <strike>$169.99/mo</strike> $129.99/mo (3 mo minimum) <br> <a onclick="vdedserver_cust_js.showCpForAsp();" class="blue u crsr_pointer">A Parallels Plesk Panel is required.</a>
 <phrase key="title4" />
-Want more control?
+Need more control?
 <phrase key="subtitle4" />
-<span class="orange">Different control panels offer their own unique interface, features and workflow.</span>
-<phrase key="list4title0" />
+<span class="orange">Want to easily manage aspects of your account, including files and applications hosted on your server?</span>
+<phrase key="list4title0" comment="to be deleted" />
 We offer Parallels Plesk Panel and cPanel <span class="product-desc">- choose the one that&#039;s right for you.</span> <br > <a href="#" data-target="#myModalCompare" data-toggle="modal" data-ci="90215">Compare features.</a>
+<phrase key="list4title0Centos" />
+Upgrade to the powerful cPanel control panel.
+<phrase key="list4title0Windows" />
+Upgrade to the Parallels Plesk Panel control panel.
 <phrase key="list4item0" />
 No control panel
 <phrase key="list4item1" />
@@ -108,99 +113,99 @@ cPanel & WHM Unlimited:
 No additional features
 <phrase key="list4subItem1" />
 Parallels Plesk Panel with <span data-original-title="Add mobility, security, remote management and more to your panel and websites." data-html="true" class="isToolTip">Power Pack</span>: $6.99/mo
-<phrase key="CompareModalTitle" />
+<phrase key="CompareModalTitle" comment="to be deleted" />
 Compare Control Panel Features
-<phrase key="CompareModalTableTitle1" />
+<phrase key="CompareModalTableTitle1" comment="to be deleted" />
 Parallels Plesk Panel Unlimited
-<phrase key="CompareModalTableTitle2" />
+<phrase key="CompareModalTableTitle2" comment="to be deleted" />
 cPanel & WHM
-<phrase key="CompareModalTableSec1Title" />
+<phrase key="CompareModalTableSec1Title" comment="to be deleted" />
 Price
-<phrase key="CompareModalTableSec1Text1" />
+<phrase key="CompareModalTableSec1Text1" comment="to be deleted" />
 Virtual Private Servers — Unlimited Domains Built specifically to integrate with GoDaddy® products
-<phrase key="CompareModalTableSec2Title" />
+<phrase key="CompareModalTableSec2Title" comment="to be deleted" />
 Operating System
-<phrase key="CompareModalTableSec2Text1" />
+<phrase key="CompareModalTableSec2Text1" comment="to be deleted" />
 Fedora
-<phrase key="CompareModalTableSec2Text2" />
+<phrase key="CompareModalTableSec2Text2" comment="to be deleted" />
 CentOS
-<phrase key="CompareModalTableSec2Text3" />
+<phrase key="CompareModalTableSec2Text3" comment="to be deleted" />
 Windows 2008
-<phrase key="CompareModalTableSec3Title" />
+<phrase key="CompareModalTableSec3Title" comment="to be deleted" />
 DNS
-<phrase key="CompareModalTableSec3Text1" />
+<phrase key="CompareModalTableSec3Text1" comment="to be deleted" />
 Addition/Deletion
-<phrase key="CompareModalTableSec3Text2" />
+<phrase key="CompareModalTableSec3Text2" comment="to be deleted" />
 Automated setup with new site
-<phrase key="CompareModalTableSec3Text3" />
+<phrase key="CompareModalTableSec3Text3" comment="to be deleted" />
 Virtual DNS support
-<phrase key="CompareModalTableSec4Title" />
+<phrase key="CompareModalTableSec4Title" comment="to be deleted" />
 Subdomains
-<phrase key="CompareModalTableSec4Text1" />
+<phrase key="CompareModalTableSec4Text1" comment="to be deleted" />
 Addition/Deletion
-<phrase key="CompareModalTableSec4Text2" />
+<phrase key="CompareModalTableSec4Text2" comment="to be deleted" />
 Redirects
-<phrase key="CompareModalTableSec4Text3" />
+<phrase key="CompareModalTableSec4Text3" comment="to be deleted" />
 Software firewall
-<phrase key="CompareModalTableSec5Title" />
+<phrase key="CompareModalTableSec5Title" comment="to be deleted" />
 Web Server Scripting
-<phrase key="CompareModalTableSec5Text1" />
+<phrase key="CompareModalTableSec5Text1" comment="to be deleted" />
 ASP
-<phrase key="CompareModalTableSec5Text2" />
+<phrase key="CompareModalTableSec5Text2" comment="to be deleted" />
 Perl
-<phrase key="CompareModalTableSec5Text3" />
+<phrase key="CompareModalTableSec5Text3" comment="to be deleted" />
 Python
-<phrase key="CompareModalTableSec5Text4" />
+<phrase key="CompareModalTableSec5Text4" comment="to be deleted" />
 SSI
-<phrase key="CompareModalTableSec5Text5" />
+<phrase key="CompareModalTableSec5Text5" comment="to be deleted" />
 CGI
-<phrase key="CompareModalTableSec5Text6" />
+<phrase key="CompareModalTableSec5Text6" comment="to be deleted" />
 Java
-<phrase key="CompareModalTableSec6Title" />
+<phrase key="CompareModalTableSec6Title" comment="to be deleted" />
 Database
-<phrase key="CompareModalTableSec6Text1" />
+<phrase key="CompareModalTableSec6Text1" comment="to be deleted" />
 MySQL
-<phrase key="CompareModalTableSec6Text2" />
+<phrase key="CompareModalTableSec6Text2" comment="to be deleted" />
 PHPMyAdmin
-<phrase key="CompareModalTableSec6Text3" />
+<phrase key="CompareModalTableSec6Text3" comment="to be deleted" />
 MSSQL (MSDE - Windows only)
-<phrase key="CompareModalTableSec7Title" />
+<phrase key="CompareModalTableSec7Title" comment="to be deleted" />
 Mail
-<phrase key="CompareModalTableSec7Text1" />
+<phrase key="CompareModalTableSec7Text1" comment="to be deleted" />
 Manage email accounts
-<phrase key="CompareModalTableSec7Text2" />
+<phrase key="CompareModalTableSec7Text2" comment="to be deleted" />
 Supports Webmail
-<phrase key="CompareModalTableSec7Text3" />
+<phrase key="CompareModalTableSec7Text3" comment="to be deleted" />
 Forwarding
-<phrase key="CompareModalTableSec7Text4" />
+<phrase key="CompareModalTableSec7Text4" comment="to be deleted" />
 Auto-response
-<phrase key="CompareModalTableSec7Text5" />
+<phrase key="CompareModalTableSec7Text5" comment="to be deleted" />
 Mailing lists
-<phrase key="CompareModalTableSec7Text6" />
+<phrase key="CompareModalTableSec7Text6" comment="to be deleted" />
 Spam filters
-<phrase key="CompareModalTableSec7Text7" />
+<phrase key="CompareModalTableSec7Text7" comment="to be deleted" />
 Antivirus
-<phrase key="CompareModalTableSec8Title" />
+<phrase key="CompareModalTableSec8Title" comment="to be deleted" />
 SSL
-<phrase key="CompareModalTableSec8Text1" />
+<phrase key="CompareModalTableSec8Text1" comment="to be deleted" />
 Manage SSL certificates
-<phrase key="CompareModalTableSec9Title" />
+<phrase key="CompareModalTableSec9Title" comment="to be deleted" />
 FTP
-<phrase key="CompareModalTableSec9Text1" />
+<phrase key="CompareModalTableSec9Text1" comment="to be deleted" />
 Manage accounts
-<phrase key="CompareModalTableSec9Text2" />
+<phrase key="CompareModalTableSec9Text2" comment="to be deleted" />
 Anonymous FTP
-<phrase key="CompareModalTableSec9Text3" />
+<phrase key="CompareModalTableSec9Text3" comment="to be deleted" />
 Upload directory
-<phrase key="CompareModalTableSec10Title" />
+<phrase key="CompareModalTableSec10Title" comment="to be deleted" />
 Statistics
-<phrase key="CompareModalTableSec10Text1" />
+<phrase key="CompareModalTableSec10Text1" comment="to be deleted" />
 Bandwidth reports
-<phrase key="CompareModalTableSec10Text2" />
+<phrase key="CompareModalTableSec10Text2" comment="to be deleted" />
 User reports
-<phrase key="CompareModalTableSec10Text3" />
+<phrase key="CompareModalTableSec10Text3" comment="to be deleted" />
 View error Log
-<phrase key="CompareModalTableSec10Text4" />
+<phrase key="CompareModalTableSec10Text4" comment="to be deleted" />
 Webalizer Stats
 <phrase key="CombineModalNote" />
 *Parallels Plesk Panel 30 domains and 100 domains also available. Plesk Power Pack is also available as an option with Parallels Plesk Panel.
@@ -287,7 +292,7 @@ Bandwidth*: 1 TB
 <phrase key="3TBBandwidthAddon" />
 Bandwidth*: 3 TB
 <phrase key="5TBBandwidthAddon" />
-Bandwidth*: 15 TB
+Bandwidth*: 5 TB
 <phrase key="10TBBandwidthAddon" />
 Bandwidth*: 10 TB
 <phrase key="500BandwidthAddon" />
@@ -357,7 +362,7 @@ Assisted Service Plan: <strike>[@T[productprice:<current productid="1260" dropde
 <phrase key="AssistedServicePlanDetails2" />
 <a class="blue u crsr_pointer disclaimer move" data-scroll=".box4">A Parallels Plesk Panel is required.</a>
 <phrase key="NoControlPanel" />
-No control panel
+No control panel (Semi-managed)
 <phrase key="Plesk30Domains" />
 Parallels Plesk Panel for up to 30 Domains:
 <phrase key="NoAdditionalFeatures" />
@@ -369,7 +374,17 @@ Parallels Plesk Panel for up to 100 Domains:
 <phrase key="PleskUnlimitedDomains" />
 Parallels Plesk Panel for Unlimited Domains:
 <phrase key="cPanelText" />
-cPanel & WHM Unlimited:
+cPanel & WHM Unlimited
+<phrase key="1TB" />
+1 TB
+<phrase key="2TB" />
+2 TB
+<phrase key="3TB" />
+3 TB
+<phrase key="4TB" />
+4 TB
+<phrase key="8TB"/>
+8 TB
 <phrase key="512MB" />
 512 MB
 <phrase key="20GB" />
@@ -408,6 +423,16 @@ cPanel & WHM Unlimited:
 240 GB
 <phrase key="8000GB" />
 8,000 GB
+<phrase key="ecoLinux" />
+Economy: Linux
+<phrase key="valLinux" />
+Value: Linux
+<phrase key="deluxeLinux" />
+Deluxe: Linux
+<phrase key="premiumLinux" />
+Premium: Linux
+<phrase key="ultimateLinux" />
+Ultimate: Linux
 <phrase key="BasicCentos" />
 Basic: Linux CentOS
 <phrase key="ecoCentos" />
@@ -430,6 +455,8 @@ Deluxe: Linux Fedora
 Premium: Linux Fedora
 <phrase key="ultimateFedora" />
 Ultimate: Linux Fedora
+<phrase key="ecoWindows" />
+Economy: Windows 2008 Standard
 <phrase key="valWindows" />
 Value: Windows 2008 Standard
 <phrase key="deluxeWindows" />
