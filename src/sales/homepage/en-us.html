@@ -33,6 +33,24 @@ name: FOS-21927
       window.location.href='[@T[link:<relative path="/domains/search-new.aspx"><param name="ci" value="91184" /></relative>]@T]';
     }
   });
+  var hpLoadVideo = 0;
+  var autoplay = '\&autoplay=1';
+  $("div.danica-tony-marquee").mouseenter(function() {
+    if(hpLoadVideo != 1)
+    {
+      hpLoadVideo = 1;
+      var src ='//www.youtube.com/embed/d1uumUrq5y0?html5=1&rel=0';
+      $('#myVideoModal iframe').attr('src',src);
+      $('#myVideoModal').on('hidden.bs.modal', function () {          
+        $('#myVideoModal iframe').removeAttr('src');
+        $('#myVideoModal iframe').attr('src',src);
+      })
+      $('#myVideoModal').on('show.bs.modal', function () {          
+        $('#myVideoModal iframe').attr('src', src + autoplay);
+      })
+    }
+  });
+
   $('body').on('click','.js-gdhpclick',function(event){
       var $clickedElement = $(event.currentTarget);
       var $clickedUrl = $clickedElement.attr('data-url'); 

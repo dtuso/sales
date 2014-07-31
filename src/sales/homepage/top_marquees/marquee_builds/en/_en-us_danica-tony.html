@@ -1,0 +1,46 @@
+<!-- start-css-elevate -->
+  <style>
+  {% less %}
+    .danica-tony-marquee{background-color:#ff8914;width:100%;min-width:1000px;height:460px;cursor:pointer;}
+    .danica-tony-marquee-content{width:1000px;margin:0 auto;}
+    .danica-tony-marquee-left-content{float:left;background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/FOS-24797_danica-tony.png) no-repeat;height:460px;width:651px;display:block;margin-left:-145px;}
+    .danica-tony-marquee-right-content{float:right;width:470px;padding:75px 0 0 0;}
+    .danica-tony-marquee-headline{color:#ffffff;font-weight:100;font-size:54px;line-height:63px;}
+    .danica-tony-marquee-maintext{color:#ffffff;font-size:54px;line-height:63px;}
+    .danica-tony-yellow{color:#ffcd00;font-weight:300;}
+    .danica-tony-playmovie{background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gdhp_sprite_20140418.png) scroll -574px -39px no-repeat;width:30px;height:30px;margin-top:10px;cursor:pointer;display:inline-block;}
+    .danica-tony-playtext{padding:15px 0px 0px 10px;color:#ffffff;display:inline-block;font-size:14px;position:absolute;}
+    .danica-tony-playtext:hover{text-decoration:underline;}
+    .danica-tony-marquee-right-content>.atn-btn-wrap{padding-top:30px;}
+    .btn-top-img{padding:14px 26px 11px;background-color:#7db701;font-size:18px;float:left;margin-right:10px}
+  {% endless %}
+  </style>  
+<!-- end-css-elevate -->
+<div class="danica-tony-marquee js-gdhpclick" data-url='[@T[link:<relative path="/hosting/website-builder.aspx"><param name="ci" value="92295" /></relative>]@T]'>
+  <div class="danica-tony-marquee-content" >
+    <div class="danica-tony-marquee-left-content">
+    </div>
+    <div class="danica-tony-marquee-right-content">
+      <span class="danica-tony-marquee-headline">[@L[cds.sales/homepage/locales/en:danica-tony-headline]@L]</span>
+      <span class="danica-tony-marquee-maintext">[@L[cds.sales/homepage/locales/en:danica-tony-maintext]@L] <span class="danica-tony-yellow">[@T[productprice:<current productid="7521" period="monthly"/>]@T][@L[cds.sales/homepage/locales/en:rotate1-topmarq-maintext]@L]</span></span>
+      <div class="atn-btn-wrap">
+        <a class="btn btn-primary btn-top-img" href="javascript:void(0)" data-ci="92295">[@L[cds.sales/homepage/locales/en:slider-action-btn]@L]</a>
+        <span class="danica-tony-playmovie js-gdhpclick" data-url="video" data-toggle="modal" data-target="#myVideoModal" data-ci="92294"></span>
+        <span class="danica-tony-playtext js-gdhpclick" data-url="video">[@L[cds.sales/homepage/locales/en:danica-tony-commercial]@L]</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade videoModal js-gdhpclick" data-url="video-close" id="myVideoModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="modal-header-close close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      </div>
+      <div class="modal-body">
+        <iframe width="854" height="480" src="" autoplay scrolling="no" frameborder="0" allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </div>
+</div>
