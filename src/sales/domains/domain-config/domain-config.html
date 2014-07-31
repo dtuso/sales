@@ -1,7 +1,7 @@
 ---
 location: sales/domains/domain-configuration.aspx
-id: 
-name: test
+id: 53dac6cdf778fc0e041e0dc6
+name: FOS-24575 
 ---
 ##if(false)
 {% include 'modules/doc-block.html' %}
@@ -16,17 +16,18 @@ name: test
     <title>[@L[cds.sales/domains/searchresults-new:MetaTitle]@L]</title>
 
     <link rel="canonical" href="[@T[link:<external linktype='siteurl' secure='false' path='/domains/domain-configuration.aspx' />]@T]"/>    
-    <link href="[@T[link:<css path='fos/global/build/0.2.0/gd-fos-global.css' />]@T]" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="[@T[link:<css path='shared/css/1/styles_20130904.css' />]@T]">
+    <link href="[@T[link:<cssroot />]@T]fos/global/build/0.2.0/gd-fos-global.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="[@T[link:<cssroot />]@T]shared/css/1/styles_20130904.min.css">
     ##if(siteContextAny(gd))  
-    <link href="[@T[link:<css path='fos/sales/themes/scotty/domains/domain-config/css/styles.css' />]@T]" rel="stylesheet" type="text/css"  />
+    <link href="[@T[link:<cssroot />]@T]fos/domains/domain-configuration/css/cds_domain_configuration_20140415.min.css" rel="stylesheet" type="text/css"  />
     <link rel="shortcut icon" href="[@T[link:<imageroot />]@T]assets/godaddy.ico"/>  
     ##else  
-    <link href="[@T[link:<css path='fos/sales/themes/scotty/domains/domain-config/css/styles_pl.css' />]@T]" rel="stylesheet" type="text/css"  />
-    <style>
+    <link href="[@T[link:<cssroot />]@T]fos/domains/domain-configuration/css/cds_domain_configuration_20140407_pl.css" rel="stylesheet" type="text/css"  />
+      <style>
       .disclaimer-free-domain{display:none}
-    </style>
+    </style> 
     ##endif  
+
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags" />]@P]
     <script src="[@T[link:<javascriptroot />]@T]shared/js/1.5.1/global.20120918.min.js" type="text/javascript" ></script>
   </head>
@@ -1122,6 +1123,7 @@ name: test
                       </ul>
                     </span>
                   </div>
+                  ##if(!siteContextAny(pl))
                   <div data-id="dpp_xs_email_suite" data-ci="86247" id="email-dpp_xs_email_suite" class="plan-option">
                     <span class="title">[@L[cds.sales/domains/domain-configuration:unlimited.email]@L]</span>
                     <span class="plan-droplist-price fg-orange">[@L[cds.sales/domains/domain-configuration:price.per.month]@L]</span>
@@ -1131,6 +1133,7 @@ name: test
                       </ul>
                     </span>
                   </div>
+                  ##endif
                 </div>
               </div>
             </div>
@@ -1297,7 +1300,7 @@ name: test
     <!-- JS YOU WILL PROBABLY NEED -->
     <script src="[@T[link:<javascriptroot />]@T]shared/js/jquery.plugins.min.20111019.js" type="text/javascript" ></script>
     <script src="[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2" type="text/javascript"></script>
-    <script src="[@T[link:<js path='fos/sales/themes/scotty/domains/domain-config/js/domain-config.js' />]@T]" type="text/javascript"></script>
+    <script src="[@T[link:<javascriptroot />]@T]fos/sales/themes/scotty/domains/domain-config/js/domain-config.js"></script>
 
     <!--[if lte IE 8]>
     <script src="[@T[link:<javascriptroot />]@T]fos/script/JSON2.min.js"></script>
