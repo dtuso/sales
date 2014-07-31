@@ -34,5 +34,6 @@
   "what-is-a-gtld":     "./domains/what-is-a-gtld",
   "wordpress-hosting":  "./hosting/wordpress-hosting/",
   "wp":                 "./hosting/wordpress-hosting/",
-  "wsb":                "./hosting/website-builder/"
+  "wsb":                "./hosting/website-builder/",
+  "hostingclp":          "./hosting/category-landing-page/"
 }

@@ -1,0 +1,98 @@
+---
+location: localization/sales/gd/hosting/categorylp/en
+id: 53ce8eb2f778fc20bce78d2f
+name: FOS-23517
+---
+{% include '../../../modules/doc-block.html' %}
+<phrase key="page-title" />
+Hosting, Website Hosting | Take Control of Your Online Presence - [@T[companyname:name]@T]
+<phrase key="meta-description" />
+The success of your website depends on reliable Website Hosting. [@T[companyname:name]@T] offers a suite of Hosting options that have a 99.9% uptime.
+<phrase key="meta-keywords" />
+Hosting, website hosting, best web hosting
+<phrase key="header-title" />
+Website Hosting Services
+<phrase key="subheader-title" />
+The success of your website depends on reliable Website Hosting. [@T[companyname:name]@T] offers a suite of Hosting options that have 99.9% uptime.
+<phrase key="tag-line" />
+Learn how we can keep your site secure, reliable and blazing fast.
+<phrase key="secure" />
+Secure
+<phrase key="secure-description" />
+Every one of our hosting plans and platforms feature 24/7 DDoS protection, as well as physical, on-site security that monitors our data centers inside and out. Rest assured that, with [@T[companyname:name]@T], your site is as safe as can be.
+<phrase key="reliable" />
+Reliable
+<phrase key="reliable-description" />
+We’re proud to guarantee 99.9% network uptime, but we’re even more proud of our award-winning 24/7 service and support. Our hosting experts are always just a phone call away, because reliability is about more than hardware. 
+<phrase key="blazingfast" />
+Blazing Fast
+<phrase key="blazingfast-description" />
+Every hosting provider claims they’re fast, but how many of them have actually put their platforms to the test? With our shared hosting plans boasting the fastest page load times on the web, you can imagine how fast our servers must be.
+<phrase key="shared-web-hosting" />
+Shared Web Hosting
+<phrase key="perfect-small" />
+Perfect for most individuals and small businesses
+<phrase key="swh-easy" />
+Easy to use, yet incredibly powerful
+<phrase key="swh-includes" />
+Includes guaranteed 99.9% uptime
+<phrase key="swh-award" />
+Award-winning, 24/7 phone support
+<phrase key="swh-free" />
+Free domain with any annual plan
+<phrase key="swh-paragraph" />
+We also offer a plan specially designed for WordPress, the world’s most popular website and blog design platform. If you want high-performance <b>website hosting</b> that’s scalable, secure and affordable, start here.
+<phrase key="learnmore" />
+Learn More
+<phrase key="servers" />
+Servers
+<phrase key="perfect-servers" />
+Perfect for bigger or fast-growing businesses, gaming or video websites, businesses with IT staff.
+<phrase key="servers-paragraph" />
+If you have a high-traffic, resource-intensive website, a shared hosting plan may not give you the performance you want. That’s when you need to consider one of our server plans. 
+<phrase key="servers-powered" />
+Powered by state-of-the-art data centers located across the globe
+<phrase key="servers-offer" />
+Offer the ultimate in performance , scalability and control
+<phrase key="servers-backed" />t
+Backed by free 24/7 support from experienced server experts
+<phrase key="breakout" />
+Our award-winning support staff is here 24/7/365, because there’s no such thing as ‘business hours’ when it comes to web hosting.
+<phrase key="ssl" />
+SSL & Site Protection
+<phrase key="ssl-perfect" />
+Perfect for anyone who wants a safe, secure online presence.
+<phrase key="ssl-secure" />
+If your site’s not secure, it doesn’t matter what you’re selling or how brilliantly it’s designed – no one will dare to visit for risk of getting a virus or having their personal information stolen. 
+<phrase key="ssl-wide" />
+Our wide range of security products do more than protect your site; they give visitors peace of mind so they’re comfortable browsing your site and giving you their sensitive data. Whether you’re a local plumber or an international retailer, we have the tools you need to shut the bad guys out and keep your customers coming back for more.
+<phrase key="media-temple" />
+Premium Hosting from Media Temple
+<phrase key="media-temple-perfect" />
+Perfect for designers or developers who crave a higher level of hardware and support
+<phrase key="media-temple-best" />
+We’re dedicated to delivering the <b>best web hosting</b> with all of our products, but if you’re a self-proclaimed tech geek who’s willing to pay a little more for high-end hardware and features, check out our Premium Hosting form Media Temple. 
+<phrase key="media-temple-ssd" />
+With small but noticeable upgrades like SSD database storage in shared hosting plans, Media Temple offers many of the same hosting solutions as [@T[companyname:name]@T] – Shared, WordPress and Managed Hosting, as well as VPS and Dedicated Servers – but with an attention to detail that’s second to none.
+<phrase key="glance" />
+[@T[companyname:name]@T] Hosting At-A-Glance
+<phrase key="glance-dc" />
+With world-class data centers in the U.S., Europe and Asia, our hosting plans server your site with some of the best load times in the industry, whether your site visitors are in Sydney or San Francisco. 
+<phrase key="glance-chart" />
+So how much faster is [@T[companyname:name]@T] hosting? Check out the chart to the left to see how we stack up against the competition.
+<phrase key="glance-best" />
+Superior technology:
+<phrase key="glance-best-desc" />
+Our data centers, located all around the world, feature nothing less than best-in-breed servers, routers, firewalls and more.
+<phrase key="glance-average" />
+Average Uptime:
+<phrase key="glance-average-desc" />
+Each of our hosting plans boast a 99.9% uptime guarantee, with our server experts always striving to add a few more nines to the end of that number.
+<phrase key="next" />
+next
+<phrase key="previous" />
+previous
+<phrase key="websites" />
+Websites
+<phrase key="get-found" />
+Get Found
