@@ -1,0 +1,25 @@
+{
+  "web-host.html": {
+    "cdsDetails": {
+      "champion": {
+        "name": "Colyn Brown",
+        "email": "clbrown@godaddy.com"
+      }
+    },
+    "metaTitle": "[@L[cds.sales/gd/hosting/product-listing/hosting:page-title]@L]",
+    "metaDescription": "[@L[cds.sales/gd/hosting/product-listing/hosting:meta-description]@L]",
+    "metaKeywords": "[@L[cds.sales/gd/hosting/product-listing/hosting:meta-keywords]@L]",
+    "metaCanonicalPath": "/web-host.aspx",
+    "metaOgTitle": "[@L[cds.sales/gd/hosting/product-listing/hosting:og-title]@L]",
+    "metaOgImage": "fos/hp/rebrand/img/gd_rebrand_og.png",
+    "metaOgDescription": "[@L[cds.sales/gd/hosting/product-listing/hosting:og-description]@L]"
+  },
+  "web-host.language": {
+    "cdsDetails": {
+      "champion": {
+        "name": "Colyn Brown",
+        "email": "clbrown@godaddy.com"
+      }
+    }
+  }
+}

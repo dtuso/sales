@@ -1,0 +1,6 @@
+---
+location: localization/sales/gd/hosting/vps-hosting/en
+id: 5391099af778fc21dc6e3f5b
+name: FOS-21813
+---
+{% include '../../modules/doc-block.html' %}
