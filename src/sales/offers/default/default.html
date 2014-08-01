@@ -1,0 +1,190 @@
+---
+location: sales/offers/default.aspx
+id: 53d9ccdcf778fc0944671b32
+name: FOS-23937
+comments: setup page 
+---
+{% extends 'sales/offers/default/layouts/base.html' %} 
+{% block metahead %} 
+{% parent %} 
+  <style>
+    
+    /* Page Global CSS -- changes will effect all campaigns */
+    html body#offers{background:#fff;line-height:1;font-size:14px;font-family:HelveticaNeue-Light,"Helvetica Neue Light","Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;font-weight:300}
+    .condensed{font-family:HelveticaNeue-CondensedBold,'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:700}
+    .loading{background:url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/default/img/ajax-loader_lg.gif) no-repeat;content:"";height:35px;margin:2px 12px;width:35px}
+    .disabled{pointer-events:none;cursor:not-allowed;opacity:.25;filter:alpha(opacity=25);-webkit-box-shadow:none;box-shadow:none}
+    .offers-sprite{background:url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/default/img/offers_sprite.png) scroll no-repeat}
+    .icon-delete{background-position:-693px -21px}
+    .icon-check{background-position:-693px 0}
+    .icons{display:block;width:20px;height:20px;float:left;position:relative;right:5px;top:1px}
+
+    .tms-hide{display:none;}
+
+    a:link,a:visited{text-decoration:underline;color:#03c}
+    .clear{zoom:1}
+    .clear:after{content:"";display:table;clear:both}
+    .flt-btn-grn{background:#70ac00;border:0;border-bottom:3px solid #5a8c00;color:#fff;cursor:pointer;display:inline-block;font-size:14px;line-height:14px;padding:11px 23px 8px;text-align:center}
+    .flt-btn-grn:hover{background:#97c534;border-color:#78aa17}
+    .flt-btn-grn:active{background:#5a8c00;border-color:#5a8c00}
+    a.flt-btn-grn{color:#fff;text-decoration:none}
+    .flt-btn-orng{background:#ff8400;border:0;border-bottom:3px solid #f06d00;color:#fff;cursor:pointer;display:inline-block;font-size:14px;line-height:14px;padding:13px 18px 9px;text-align:center}
+    .flt-btn-orng:hover{background:#ffa133;border-color:#ff7e12}
+    .flt-btn-orng:active{background:#f06d00;border-color:#f06d00}
+    a.flt-btn-orng{color:#fff;text-decoration:none}
+    
+  </style>
+
+{% endblock %} 
+{% block body %}
+  
+
+
+##if(false)
+<!--
+
+TMS is still relatively new, please update if better solution found
+
+Different tags are available based on the TMS message Tag chosen,
+It seems you can test an interaction point to see if any of
+the message tags have a qualifying rule. Using 1 PlaceHolder all the tags can be inside and teh appropriate message is returned
+
+-->
+
+{% set domwsb = ["offers_1domwsb_headline_1","offers_1domwsb_headline_2","offers_1domwsb_headline_3","offers_1domwsb_headline_4","offers_1domwsb_headline_5","offers_1domwsb_headline_6","offers_1domwsb_headline_7","offers_1domwsb_headline_8","offers_1domwsb_headline_9","offers_1domwsb_headline_10","offers_1domwsb_headline_11"] %}
+
+##elseif(targetMessageTagAny(sales_advlp,{{ domwsb }}))
+      <section class="main-banner main-banner-offers" id="domainRow">
+        <div class="l-main-container container main-banner-content" data-tms-msgid="[@D[TMSMessageId]@D]" data-tms-tagname="[@D[TMSMessageTag]@D]" data-tms-messagename="[@D[TMSMessageName]@D]" data-tms-trackingid="[@D[TMSMessageTrackingId]@D]">
+          [@P[tmsdocument:<data interactionpoint="sales_advlp">
+            <MessageTags>
+            {% for key in domwsb -%}
+            {{'  '}}<MessageTag>{{key}}</MessageTag>
+            {%- endfor -%}
+            </MessageTags>
+          </data>]@P]
+          [@P[cdsDocument:<data app="sales" location="offers/segments/free-domain-search" /> ]@P]
+        </div>
+      </section>
+      [@P[cdsDocument:<data app="sales" location="offers/segments/wsb-banner" /> ]@P]
+      [@P[cdsDocument:<data app="sales" location="offers/segments/why-us" /> ]@P]
+      [@P[cdsDocument:<data app="sales" location="offers/segments/disclaimers" /> ]@P]
+      [@P[cdsDocument:<data app="sales" location="offers/campaign/1domwsb" /> ]@P]
+
+##else
+      <atlantis:webstash type="js">
+        <script>
+          window.location="[@T[link:<relative path=''></relative>]@T]";
+        </script>
+      </atlantis:webstash>
+##endif
+
+
+{% endblock %} 
+
+{% block footer %}
+  {#<script src="[@T[link:<javascriptroot />]@T]fos/lib/solazy/jquery.solazy.1.2.1.min.js" type="text/javascript" ></script> #}
+  <script>
+
+    $(document).ready(function () {
+
+      $('[data-ci]').click(function (E) {
+          var $this = $(this);
+          var ci = $this.attr('data-ci');
+          // example, checks to see if data-ci="domain-search-click"
+          // has a value in offersCodes.ci
+          // offersCodes Data is in campaign document
+          ci = offersCodes.ci[ci] || ci;
+          
+          FastballEvent_MouseClick(e, ci, $(this)[0], 'a');
+          fbiLibCheckQueue();
+      });
+
+      (function(){
+        var pathname = window.location.pathname;
+        // make country switch go to home page
+        $(".countrySelectionPopup").find("a[data-pc-qry]").bind('click.gohome',function(){
+          var $this = $(this);
+          var pcQry = $this.data('pc-qry');
+          var pcHref = $this.data('pc-href');
+          var thisHref = $this.attr('href');
+
+          $this.attr('href',thisHref.replace(pathname,''));
+          $this.attr('data-pc-href',pcHref.replace(pathname,''));
+          $this.attr('data-pc-qry',updateUrlParams(pcQry,{'isc':''}));
+
+        });
+
+      })();
+    });
+
+    // Page Global script -- changes will effect all campaigns 
+    // get url parameter by parameter name
+    function getParameterByName(name) {
+        name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+            results = regex.exec(location.search);
+        return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+
+    // pass in url string, json to update, add, remove urls params
+    // url = domain.com?aaa=111&bbb=222&ccc=333
+    // data = {'aaa':444,'zzz':'555','bbb':''}
+    // result = domain.com?aaa=444&ccc=333&zzz=555
+    function updateUrlParams(url,data){
+      data = data || {};
+      var urlSplit = url.split('?');
+      var urlOriginPathName = urlSplit[0];
+      var urlSearch = urlSplit[1];
+      var params = urlSearch.split('&') || [];
+
+      var newParams = [];
+      var paramKeys = {}
+      for(var i = 0; i < params.length;i++){
+        var keyValue = params[i].split('=');
+        if(typeof data[keyValue[0]] == "undefined"){
+          paramKeys[keyValue[0]] = keyValue[1];
+        }
+      }
+      for(key in data){
+        if(data[key] != ""){
+          paramKeys[key] = data[key];
+        }        
+      }
+
+      for(key in paramKeys){
+        newParams.push(key+"="+paramKeys[key]);
+      }
+      return ([urlOriginPathName,newParams.join("&")].join('?'));
+    }
+
+    // pass in str and array or string of 'end strings'
+    // if str ends with an 'end string' from array
+    // if end string found, return will be array [precedingText,matchedEndString]
+    // if end string not found, return will be array [sameAsInput,''] and an empty string
+    function matchEnding(str,matchEnd){
+      if(typeof matchEnd != "object"){
+        matchEnd = [matchEnd];
+      }
+      var foundEnd = '';
+      var foundStart = str;
+
+      for(var i = 0; i < matchEnd.length;i++){
+
+        var pattern = '(.+)('+matchEnd[i].replace(/\./g,'\\.')+')+?$';
+        var reg =  new RegExp(pattern,'i');
+
+        var start = str.replace(reg,'$1');
+        var end = str.replace(reg,'$2');
+
+        if(start!=end){
+          if(end.indexOf(foundEnd)>-1){
+            foundStart = start;
+            foundEnd =  end;
+          }
+        }
+      }
+      return [foundStart,foundEnd];      
+    }
+  </script>
+{% endblock %}

@@ -1,0 +1,50 @@
+---
+location: sales/offers/segments/disclaimers
+id: 53daaf23f778fc0944671b77
+name: FOS-23412
+---
+<atlantis:webstash type="css">
+  <style>
+    .modal-title{font-size:24px}
+    .modal-dialog{width: 600px}
+    #disclaimers{font-size:14px;margin:0 auto;line-height:14px;width:1000px}
+    #disclaimers a,#disclaimers a:link,#disclaimers a:visited{color:#333;text-decoration:underline}
+    #disclaimers a:active,#disclaimers a:hover{color:#7db701}
+  </style>
+</atlantis:webstash>
+
+<section class="misc-banner-generic">
+  <div class="l-main-container container main-banner-content">
+  <!-- Page Disclaimer -->
+    <div id="disclaimers">
+      <p>
+        <a class="simple-link" href="#" data-toggle="modal" data-target="#myModal" data-ci="simpleLink">[@L[cds.sales/offers/default:disclaimer-text]@L]</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<div class="modal fade" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">
+        <strong>[@L[cds.sales/offers/default:disclaimer-modal-title]@L]</strong>
+        </h4>
+      </div>
+      {#
+      <div class="modal-body">
+        ##if(countrySiteAny(uk) || isManager())
+        <p class="tms-hide tms-disclaimer-year">[@L[cds.sales/offers/default:disclaimer-2-year-uk]@L]</p>
+        <p class="tms-hide tms-disclaimer-month">[@L[cds.sales/offers/default:disclaimer-4-month-uk]@L]</p>
+        ##else
+        <p class="tms-hide tms-disclaimer-month">[@L[cds.sales/offers/default:disclaimer-3-month]@L]</p>
+        <p class="tms-hide tms-disclaimer-year">[@L[cds.sales/offers/default:disclaimer-1-year]@L]</p>
+        ##endif
+      </div>
+      #}
+    </div>
+  </div>
+</div>
+</div>
