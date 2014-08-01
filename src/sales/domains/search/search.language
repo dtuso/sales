@@ -158,6 +158,10 @@ New
 .consulting
 <phrase key="WhyGoDaddyBoxesListTitleReviews" />
 .reviews
+<phrase key="WhyGoDaddyBoxesListTitleFail" />
+.fail
+<phrase key="WhyGoDaddyBoxesListTitleWtf" />
+.wtf
 <phrase key="WhyGoDaddyBoxesListTextWiki" />
 Share, collaborate and learn with <strong>.wiki</strong>
 <phrase key="WhyGoDaddyBoxesListTextMx" />
@@ -229,11 +233,11 @@ New domains <strong>coming soon</strong>:
 <phrase key="WhyGoDaddyListText1-0" />
 <strong>.shop</strong>
 <phrase key="WhyGoDaddyListText1-1" />
-<strong>.web</strong>
+<strong>.website</strong>
 <phrase key="WhyGoDaddyListText1-2" />
-<strong>.app</strong>
+<strong>.lawyer</strong>
 <phrase key="WhyGoDaddyListText1-3" />
-<strong>.nyc</strong>
+<strong>.app</strong>
 <phrase key="WhyGoDaddyCTAText0" />
 Hundreds of new domains specific to you.
 <phrase key="WhyGoDaddyCTAText1" />
@@ -473,9 +477,9 @@ NEW - Now available <strong>.uk</strong> domains!<span class="br"><a href="[@T[l
 <phrase key="MainBannerCarouselSlide1DE" />
 NEW - Now available <strong>.haus</strong> and <strong>.reisen</strong> domains!<span class="br"><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Get yours now!</a>
 <phrase key="MainBannerCarouselSlide1ES" />
-Get a web address that tells the world what you do or where you are. New domains available now: <strong>.immobilien</strong>, <strong>.reisen</strong>, <strong>.today</strong> and <strong>.guru</strong>. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a>
+Get a web address that tells the world what you do or where you are. New domains available now: <strong>.uno</strong>, <strong>.club</strong>, <strong>.guru</strong> and <strong>.email</strong>. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a>
 <phrase key="MainBannerCarouselSlide1DE1" />
-Get a web address that tells the world what you do or where you are. New domains available now: <strong>.immobilien</strong>, <strong>.reisen</strong>, <strong>.today</strong> and <strong>.guru</strong>. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a> 
+Get a web address that tells the world what you do or where you are. New domains available now: <strong>.immobilien</strong>, <strong>.reisen</strong>, <strong>.club</strong>, <strong>.today</strong> and <strong>.guru</strong>. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a> 
 <phrase key="MainBannerCarouselSlide1UK" />
 Get a web address that tells the world what you do or where you are. New domains available now: <strong>.london</strong>, <strong>.uk</strong>, <strong>.guru</strong> and <strong>.club</strong>. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a>
 <phrase key="MainBannerCarouselSlide2NonGB" />
