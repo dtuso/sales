@@ -1,0 +1,20 @@
+{
+  "default.html": {
+    "cdsDetails": {
+      "champion": {
+        "name": "Scott Williams",
+        "email": "stwilliams@godaddy.com"
+      },
+      "draft": {
+        "url": "http://www.dev-godaddy.com/offers/default.aspx"
+      }
+    },
+    "metaTitle": "[@L[cds.sales/offers/default:page-title]@L]",
+    "metaDescription": "",
+    "metaKeywords": "",
+    "metaCanonicalPath": "/offers/default.aspx",
+    "metaOgTitle": "",
+    "metaOgImage": "",
+    "metaOgDescription": ""
+  }
+}

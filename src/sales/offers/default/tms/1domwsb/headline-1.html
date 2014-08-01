@@ -1,0 +1,18 @@
+---
+location: tms/offers_1domwsb_headline_1/default_template
+id: 53d2de97f778fc28c4847b31
+name: FOS-23937
+comments: setup page 
+num: 1
+---
+<atlantis:webstash type="css">
+  <style>
+    #domainRow h1.alt-title-{{num}}{font-size: 45px;font-weight:700;line-height: 1.6em;}
+    #domainRow h1.alt-title-{{num}} strong{color:#ff8a00;}
+    #domainRow h1.alt-title-{{num}} strong em{}
+    
+    html body .tms-hide.tms-disclaimer-year{display:block;}
+  </style>
+</atlantis:webstash>
+
+<h1 class="main-banner-subtitle alt-title-{{num}}">[@L[cds.sales/offers/default:headline-offer-{{num}}]@L]</h1>
