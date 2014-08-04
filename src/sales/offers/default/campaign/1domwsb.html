@@ -1,9 +1,11 @@
 ---
 location: sales/offers/campaign/1domwsb
-id: 53da227ff778fc0944671b39
-name: FOS-24602
+id: 53dfbab8f778fc33bc708f46
+name: FOS-25042
 ---
 <script>
+// name = does not need to match anything and may not be needed
+// plan =  package name for api
   var offersCodes = {
     'name': '1domwsb',
     'plan': 'wsb_domain_deal_1yr',
@@ -14,12 +16,13 @@ name: FOS-24602
       'addDomainBtn': '92207',
       'apiAddCi': '92210',
       'apiDomainAddToCart': '92296',
-      'simpleLink': '92208'
+      'apiRemoveDomain': '92415',
+      'disclaimerLink': '92208'
     }
   }
 
 ##if(isManager())
-  offersCodes.itc = 'mgr_dlp_wsb';
+  offersCodes.itc = 'mgr_' + offersCodes.itc;
 ##endif 
 
 </script>

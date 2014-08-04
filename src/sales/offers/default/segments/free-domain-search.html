@@ -1,7 +1,7 @@
 ---
 location: sales/offers/segments/free-domain-search
-id: 
-name: FOS-23412
+id: 53dfbab8f778fc33bc708f44
+name: FOS-25042
 ---
 <atlantis:webstash type="css">
   <style>
@@ -68,8 +68,8 @@ name: FOS-23412
     <div class="highlight-tooltip condensed">[@L[cds.sales/offers/default:start-here]@L]</div>
                 
     <div class="text-left search-input-wrapper">
-        <label for="txtsld" class="search-input-label">[@L[cds.sales/offers/default:domain-search-placeholder]@L]</label>
-        <input id="txtsld" type="text" class="search-input" name="sld" value="" onfocus="this.style.backgroundColor='#fff'" onblur="if(this.value==''){this.style.backgroundColor='transparent'}" >
+        <label for="txtsld" id="txtsldlabel" class="search-input-label">[@L[cds.sales/offers/default:domain-search-placeholder]@L]</label>
+        <input id="txtsld" type="text" class="search-input" name="sld" value="" />
     </div>        
         <div class="text-left tld-input">
           <div class="tld-input-selected">
@@ -256,7 +256,18 @@ name: FOS-23412
         var $buttonsDiv = $('.domain-check-buttons');
         $buttonsDiv.appendTo('#freeDomain'); 
         // clear form
-        $("#txtsld").val('');
+        $("#txtsld").val('')
+        .bind('focus',function(){
+          if(this.value==''){
+            $('#txtsldlabel').css({'opacity':0});
+          }
+/*onfocus="this.style.backgroundColor='#fff'" onblur="if(this.value==''){this.style.backgroundColor='transparent'}"*/
+        }).bind('blur',function(){
+          if(this.value==''){
+            $('#txtsldlabel').css({'opacity':1});
+          }
+        });
+
         $('#planSelected').val(offersCodes.plan)
         
 
@@ -321,6 +332,15 @@ name: FOS-23412
           PlanBox6UI.recordClick(e, offersCodes.ci.domainSearchSubmit, $(this)[0]);
           var domaintoremove = $('#domaintoadd').val();
           var domaintoadd = $('#domaintoadd').val();
+          
+          if (domaintoadd.length > 0) {
+            var removeurl = '[@T[link:<relative path="cds/widgets/widgetsposthandlers/domainposthandler.ashx"></relative>]@T]'; 
+            removeurl += (removeurl.indexOf('?') >= 0) ? "&" : "?";
+            removeurl += '&ci=' + offersCodes.ci.apiremovedomain;
+            removeurl += '&itc=' + offersCodes.itc;
+            removeurl += '&domaintoremove=' + domaintoadd;
+            $.getJSON(removeurl);
+          }
 
           var tld = $('#txtTld');
           var $searchField = $('#txtsld');
@@ -452,7 +472,6 @@ name: FOS-23412
 
                         $('#domain-search-click').removeClass('disabled');
                         $('#add-domain-loading').hide();
-                        console.log(jsonData)
                         nextStepUrl = jsonData.Properties.nextStepUrl;
                     }, 'json');
                      
