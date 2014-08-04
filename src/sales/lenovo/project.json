@@ -2,46 +2,23 @@
   "lenovo.html": {
     "cdsDetails": {
       "champion": {
-        "name": "Colyn Brown",
-        "email": "clbrown@godaddy.com"
-      },
-      "cdsLocation": "sales/hosting/lenovo.aspx",
-      "draft": {
-        "id": false,
-        "createdDate": "2014-04-29",
-        "createdBy": {
-          "fullName": "Sergio Lopez",
-          "username": "sylopez"
-        },
-        "jiraTicket": "FOS-23101",
-        "comments": "Lenovo LP",
-        "url": "http://www.dev-godaddy.com/hosting/lenovo.aspx"
+        "name": "Sergio Lopez",
+        "email": "sylopez@godaddy.com"
       }
     },
-    "metaTitle": "[@L[cds.sales/gd/hosting/lenovo:page-title]@L]",
-    "metaDescription": "[@L[cds.sales/gd/hosting/lenovo:meta-description]@L]",
-    "metaKeywords": "[@L[cds.sales/gd/hosting/lenovo:meta-keywords]@L]",
-    "metaCanonicalPath": "/hosting/lenovo.aspx",
-    "metaOgTitle": "[@L[cds.sales/gd/hosting/lenovo:og-title]@L]",
+    "metaTitle": "[@L[cds.sales/gd/lenovo:page-title]@L]",
+    "metaDescription": "[@L[cds.sales/gd/lenovo:meta-description]@L]",
+    "metaKeywords": "[@L[cds.sales/gd/lenovo:meta-keywords]@L]",
+    "metaCanonicalPath": "/lenovo",
+    "metaOgTitle": "[@L[cds.sales/gd/lenovo:og-title]@L]",
     "metaOgImage": "fos/hp/rebrand/img/gd_rebrand_og.png",
-    "metaOgDescription": "[@L[cds.sales/gd/hosting/lenovo:og-description]@L]"
+    "metaOgDescription": "[@L[cds.sales/gd/lenovo:og-description]@L]"
   },
   "lenovo.language": {
     "cdsDetails": {
       "champion": {
         "name": "Colyn Brown",
         "email": "clbrown@godaddy.com"
-      },
-      "cdsLocation": "localization/sales/hosting/lenovo/en",
-      "draft": {
-        "id": false,
-        "createdDate": "2014-04-29",
-        "createdBy": {
-          "fullName": "Sergio Lopez",
-          "username": "sylopez"
-        },
-        "jiraTicket": "FOS-1310",
-        "comments": "Landing Page Reskin"
       }
     }
   }

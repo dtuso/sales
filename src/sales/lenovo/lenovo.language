@@ -1,6 +1,60 @@
 ---
-location: localization/sales/gd/hosting/vps-hosting/en
-id: 5391099af778fc21dc6e3f5b
+location: localization/sales/gd/lenovo/en
+id: 53d7d0c2f778fc27484de55f
 name: FOS-21813
 ---
 {% include '../../modules/doc-block.html' %}
+<phrase key="page-title" />
+Exclusive website builder discounts from [@T[companyname:name]@T] and Lenovo – [@T[companyname:name]@T]
+<phrase key="meta-description" />
+[@T[companyname:name]@T] and Lenovo have partnered to get your Brazilian business online with an exclusive website builder discount! 
+<phrase key="meta-keywords" />
+[@T[companyname:name]@T], Lenovo, Brazil, Brazilian website builder, Website builder discount, exclusive website builder discount, website builder brazil
+<phrase key="welcome" />
+Welcome to [@T[companyname:name]@T]
+<phrase key="bestfriend" />
+your best friend</br> for business
+<phrase key="bigidea"/>
+Put your business or big idea online with this exclusive offer from [@T[companyname:name]@T] and Lenovo
+<phrase key="50percent" />
+50% off
+<phrase key="wsb" />
+Website Builder
+<phrase key="includes" />
+Includes 
+<phrase key="disclaimer" />
+One FREE .COM, .COM.BR, .CO, .NET or .ORG with purchase of a new 12-, 24- or 36-month plan. Plus ICANN fee of $0.18 per domain name per year. You must add the domain name into your cart before purchase, and you must select a domain term length equal to or less than the term length of your plan to qualify for the free domain offer. If you purchase a domain name for a term longer than the term of the plan, you will be charged for the additional registration term at the then-current rate. Cannot be used in conjunction with any other offer, sale, discount or promotion. Free domain offer applies only to the initial purchase term. After the initial purchase term, domains purchased through this offer will renew at the then-current renewal price.
+<phrase key="freedomain" />
+FREE .COM.BR
+<phrase key="otherdomain" />
+or other domain*
+<phrase key="whywsb" />
+Why Website Builder?
+<phrase key="easytouse" />
+<b>EASY</b> to use
+<phrase key="hundredsofdesigns" />
+<b>HUNDREDS</b> of customizable designs
+<phrase key="freedomainandhosting" />
+<b>FREE</b> domain and hosting
+<phrase key="peryear" />
+/yr
+<phrase key="nowonly" />
+Now only
+<phrase key="getstarted" />
+Get Started
+<phrase key="whyus" />
+Why Us? It's Simple.
+<phrase key="awardsupport" />
+Award-winning </br> 24/7 support.
+<phrase key="millioncustomers" />
+More than 12 million customers.
+<phrase key="domainnameregistrar" />
+World’s #1 domain name registrar.
+<phrase key="legaldisclaimer" />
+Third-party logos and marks are registered trademarks of their respective owners. All rights reserved.
+<phrase key="DisclaimerContentSymbols" />
+*
+<phrase key="DisclaimerContentLinkText" />
+Click here for product disclaimers and legal policies
+<phrase key="disclaimer-modal-header" />
+Disclaimers
