@@ -1,0 +1,70 @@
+---
+location: sales/offers/campaign/1domwsb
+id: 53dfbab8f778fc33bc708f46
+name: FOS-25042
+---
+<script>
+// name = does not need to match anything and may not be needed
+// plan =  package name for api
+  var offersCodes = {
+    'name': '1domwsb',
+    'plan': 'wsb_domain_deal_1yr',
+    'itc': 'dlp_wsb',
+    'ci': {
+      'domainSearchClick': '92206',
+      'domainSearchSubmit': '92209',
+      'addDomainBtn': '92207',
+      'apiAddCi': '92210',
+      'apiDomainAddToCart': '92296',
+      'apiRemoveDomain': '92415',
+      'disclaimerLink': '92208'
+    }
+  }
+
+##if(isManager())
+  offersCodes.itc = 'mgr_' + offersCodes.itc;
+##endif 
+
+</script>
+
+
+<div style="display:none;">
+  <div id="tms-modal-body" class="modal-body">
+    ##if(countrySiteAny(uk) || isManager())
+    <p class="tms-hide tms-disclaimer-year">[@L[cds.sales/offers/default:disclaimer-2-year-uk]@L]</p>
+    <p class="tms-hide tms-disclaimer-month">[@L[cds.sales/offers/default:disclaimer-4-month-uk]@L]</p>
+    ##else
+    <p class="tms-hide tms-disclaimer-month">[@L[cds.sales/offers/default:disclaimer-3-month]@L]</p>
+    <p class="tms-hide tms-disclaimer-year">[@L[cds.sales/offers/default:disclaimer-1-year]@L]</p>
+    ##endif
+  </div>
+</div>
+
+
+<atlantis:webstash type="js">
+  <script>
+    $(document).ready(function(){
+      // move dislcaimes to the modal content
+      $(".modal-content").append($("#tms-modal-body"));
+
+      // for USD drop the .00 ".price" starts as hidden so .00 does not flash
+      $(".price").each(function(){
+        var $this = $(this);
+        var val = '[@T[currencyprice:<price usdamount="100" htmlsymbol="false" />]@T]';
+
+        $this.html(val.replace(/(.+)(.00)+?$/,'$1<span class="decim">$2</span>'));
+
+        $this.addClass("price-show");
+      });
+    })
+  </script>
+</atlantis:webstash>
+
+
+<atlantis:webstash type="css">
+  <style>
+    .price{display:none}
+    .price.price-show{display:inline}
+    html[lang*=en] .price.price-show .decim{display:none}
+  </style>
+</atlantis:webstash>

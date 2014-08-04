@@ -1,0 +1,42 @@
+---
+location: sales/offers/segments/wsb-banner
+id: 53da222ef778fc0944671b38
+name: FOS-23412
+---
+<atlantis:webstash type="css">
+  <style>
+    #wsbRow{background-image:url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/default/img/soaps.jpg)}
+    #wsbRow.alt-img-1{background-image:url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/default/img/food.jpg)}
+    #wsbRow{background-position:top center;background-repeat:repeat-x;min-height:460px}
+    #wsbRow .row{margin-top:140px}
+    #wsbRow .l-main-container{width:960px;padding:auto 20px}
+    #wsbRow .website-builder-headline-wrap{margin:auto auto 30px}
+    #wsbRow .website-builder-headline{text-transform:uppercase;color:#fff;font-size:30px}
+    #wsbRow h3{color:#fff;text-transform:uppercase;font-weight:600}
+    #wsbRow ul{color:#fff;font-weight:400;margin-left:25px}
+    #wsbRow ul li{font-size:20px;padding-bottom:15px}
+  </style>
+</atlantis:webstash>
+
+##if(countrySiteAny(in))
+<section class="wsb-banner alt-img-1" id="wsbRow">
+##else
+<section class="wsb-banner" id="wsbRow">
+##endif
+<div class="l-main-container container main-banner-content">
+  <div class="row">
+    <div class="col-xs-6">
+      <div>
+        <div class="website-builder-headline-wrap">
+          <span class="website-builder-headline b condensed">[@L[cds.sales/offers/default:banner-title]@L]</span>
+        </div>
+        <ul>
+          <li>[@L[cds.sales/offers/default:banner-item-1]@L]</li>
+          <li>[@L[cds.sales/offers/default:banner-item-2]@L]</li>
+          <li>[@L[cds.sales/offers/default:banner-item-3]@L]</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
