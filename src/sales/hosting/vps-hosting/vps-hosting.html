@@ -1,8 +1,8 @@
 ---
 location: sales/hosting/vps-hosting.aspx
 id:  53d812ecf778fc27484de584
-name: FOS-24858
-comments: Removed hard line breaks, updated styles to accomodate.
+name:
+comments: Force US Data Centers only regardless of IP
 url: http://www.dev-godaddy.com/hosting/vps-hosting.aspx
 assetPath: false
 ---
@@ -1000,22 +1000,7 @@ $('input[name="region"]').change(function(){
 });
 
 function getDataCenter() {
-        return getShopperDC();
-}
-
-function getManagerDC() {
-    var dc =$("input[type='radio'][name='region']:checked").val();
-    return dc;
-}
-
-function getShopperDC() {
-    ##if(dataCenterAny(eu))
-        return'eu';
-    ##elseif(dataCenterAny(ap))
-        return'ap';
-    ##else
-        return 'us';
-    ##endif
+    return 'us';
 }
 
 function getData(dc) {
