@@ -1,0 +1,108 @@
+---
+location: localization/sales/gd/hosting/product-listing/hosting/en
+id: false
+name: FOS-24584
+---
+{% include '../../modules/doc-block.html' %}
+
+<phrase key="page-title" />
+Web Host | Your Website, Always Up Always On – [@T[companyname:name]@T]
+<phrase key="meta-description" />
+The success of your website depends on reliable Website Hosting. [@T[companyname:name]@T] offers a suite of Hosting options that have a 99.9% uptime.
+<phrase key="meta-keywords" />
+Hosting, website hosting, best web hosting
+<phrase key="header-title" />
+Web Host
+<phrase key="subheader-title" />
+Your website. Always up. Always on.
+<phrase key="tag-line" />
+Looking for a secure, reliable home for your website?
+<phrase key="tag-line-two" />
+We have scalable plans to fit your needs. Learn about the different Domain Hosting options [@T[companyname:name]@T] offers, from lightning-fast shared Hosting to Virtual Private Servers, all backed by 24/7 support.
+<phrase key="choose-right" />
+Choosing the right hosting plan.
+<phrase key="choose-right-description" />
+There’s a lot to consider when deciding on a hosting plan, but if you’re looking for a quick answer, here’s what we suggest:
+<phrase key="choose-right-managedwp" />
+If you have built, or want to build, your site with WordPress, our Managed WordPress Hosting is absolutely the way to go. 
+<phrase key="choose-right-standard" />
+If you’re not using WordPress, our standard web hosting will give you the performance, security and reliability you need. 
+<phrase key="choose-right-advanced" />
+If you have a large, high-traffic site or are a web pro who’s looking for more power and control, check out our Advanced Hosting options.
+<phrase key="watchvideo" />
+Watch Video
+<phrase key="LetUs" />
+LET US HELP YOU CHOOSE
+<phrase key="swh-title" />
+Shared Web Hosting
+<phrase key="swh-perfect" />
+Perfect for most individuals and small businesses
+<phrase key="swh-subheader" />
+Think of shared web hosting as an apartment complex. 
+<phrase key="swh-together" />
+Several sites live together on a single server, each one with it’s own private space. Since most sites only require a tiny fraction of a server’s resources at any given moment, dozens – sometimes hundreds – of sites can successfully share the ‘utilities’ on a single server.
+<phrase key="swh-gd" />
+At [@T[companyname:name]@T], we treat our shared hosting a little differently. 
+<phrase key="swh-scale" />
+Our servers not only provide the fastest page load times in the industry, they also offer advanced scalability. 
+<phrase key="swh-speed" />
+Our hosting plans automatically adjust to traffic spikes so your site stays up and running at top speed. 
+<phrase key="swh-uptime" />
+We back our web hosting services with free 24/7 support, 99.9% uptime and money-back guarantee and much more. 
+<phrase key="starting-at" />
+Starting at 
+<phrase key="mo" />
+/mo
+<phrase key="getswh" />
+Get Shared Hosting 
+<phrase key="reviews" />
+Read Reviews
+<phrase key="breakout" />
+There are thousands of talented programmers who share their code to make WordPress more powerful and flexible every day. 
+<phrase key="wph-title" />
+WordPress Hosting
+<phrase key="wph-perfect" />
+Perfect for bloggers, designers, developers and companies who work with agencies.
+<phrase key="wph-numberone" />
+WordPress is the world’s #1 blog and site building platform
+<phrase key="wph-percent" />
+More than 17% of sites on the web are built with WordPress
+<phrase key="wph-improve-performance" />
+<phrase key="wph-desc" />
+We felt that a platform that powerful deserved it’s own unique <b>web hosting service</b>, so we created Managed WordPress. Built from the ground up to maximize the performance of WordPress sites and blogs, this hosting plan automates many of the time-consuming tasks so you have more time to design your site and keep it fresh. Our exclusive setup up process let’s you spin up a site in under 30 seconds, while automatic core updates make sure you’re always running the latest version of WordPress. 
+<phrase key="wph-fast" />
+Best of all, it’s blazing fast, with load times that leave our competitors in the virtual dust.
+<phrase key="wph-get" />
+GET SOME MANAGED WORDPRESS
+<phrase key="mt-breakout" />
+Media Temple gives attention to detail that’s second to none.
+<phrase key="mt-title" />
+Premium Hosting with Media Temple
+<phrase key="mt-perfect" />
+Perfect for designers or developers who crave a higher level of hardware and support
+<phrase key="mt-best" />
+We’re dedicated to delivering the <b>best web hosting</b> with all of our products, but if you’re a self-proclaimed tech geek who’s willing to pay a little more for high-end hardware and features, check out our Premium Hosting form Media Temple. 
+<phrase key="mt-ssd" />
+With small but noticeable upgrades like SSD database storage in shared hosting plans, Media Temple offers many of the same hosting solutions as [@T[companyname:name]@T] – Shared, WordPress and Managed Hosting, as well as VPS and Dedicated Servers – but with an attention to detail that’s second to none.
+<phrase key="mt-ssd-1" />
+With small but noticeable upgrades:
+<phrase key="mt-ssd-2" />
+SSD database storage in shared hosting plans.
+<phrase key="mt-ssd-3" />
+Media Temple offers many of the same hosting solutions as [@T[companyname:name]@T] – Shared, WordPress and Managed Hosting, as well as VPS and Dedicated Servers – but with an attention to detail that’s second to none.
+<phrase key="mt-discover" />
+DISCOVER MEDIA TEMPLE
+<phrase key="hosting-title" />
+What is hosting?
+<phrase key="hosting-desc" />
+Hosting can be hard to understand, especially if you’re not a web pro and just want the fastest, easiest way to get your business online. Put simply, hosting is space you rent on a server that’s connected to the web. It’s what makes your site available around the world. Without a hosting plan, no one can see your site because it’s just sitting on your computer like all your other files. 
+<phrase key="hosting-desc-two" />
+The next question is generally “What type of hosting do I need?” This depends a lot on your website – how many visitors you have (or want to have), what type of content you’re hosting, even how your site was built. With several state-of-the-art data centers located around the world, we have the technology to keep any type of site running flawlessly, but domain hosting is definitely not a one-size-fits-all product. That’s why we offer several different options. We’re going to ignore the advanced options on this page and focus on the type of plans that the vast majority of people need.
+<phrase key="next" />
+next
+<phrase key="previous" />
+previous
+<phrase key="Domains" />
+Domains
+<phrase key="ssl-security" />
+SSL & Security
