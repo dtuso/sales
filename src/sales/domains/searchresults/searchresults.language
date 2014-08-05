@@ -1,7 +1,7 @@
 ---
 location: localization/sales/domains/searchresults-new3/en
-id: 53ac6d7ff778fc3128002ce0
-name: FOS-22962
+id: 
+name: FOS-24164
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="Of" />
@@ -209,7 +209,7 @@ Your renewal fee for this domain is equal to the registration fee of <span data-
 <phrase key="PricingDetailRenewal1" />
 Your renewal price for this domain is <span data-bind="html: Prices().DomainRenewList">$XXX.XX</span>.
 <phrase key="PricingDetailRenewal2" />
-Your registration fee for this domain is <span data-bind="html: Prices().DomainRegList">$XXX.XX</span>. After the initial registration, this domain will renew at <span data-bind="html: Prices().DomainRenewList">$XXX.XX</span>/yr.
+Your registration fee for this domain is <span data-bind="html: Prices().DomainRegCurrent ? Prices().DomainRegCurrent : Prices().DomainRegList">$XXX.XX</span>. After the initial registration, this domain will renew at <span data-bind="html: Prices().DomainRenewList">$XXX.XX</span>/yr.
 <phrase key="AppFeeLabel" />
 Includes:
 <phrase key="AppFeeText" />
