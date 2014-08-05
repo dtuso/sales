@@ -1,10 +1,10 @@
 ---
 location: sales/ssl/ssl-certificates-b
 url: http://www.dev-godaddy.com/ssl/ssl-certificates.aspx
-id: 53c6fb66f778fc238ce80733
-name: FOS-23654
+id: 53e135b4f778fc1778041306
+name: FOS-23826
 assetPath: false
-comments: VAT tax fix for invalid pfids
+comments: Update Manager message for SSL EV purchase.
 splitSide: 1212.B
 ---
 
@@ -116,7 +116,7 @@ splitSide: 1212.B
 
 ##if(isManager())
   <div class="alert alert-danger">
-    [@L[cds.sales/ssl/ssl-certificate:ssl-manager]@L]
+    [@L[cds.sales/gd/ssl/ssl-certificates:SslManager]@L]
   </div>
 ##endif
 
