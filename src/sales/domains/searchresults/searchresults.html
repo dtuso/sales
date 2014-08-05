@@ -1,7 +1,7 @@
 ---
 location: sales/domains/searchresults.aspx
-id: 53c99ab9f778fc1b68867a5b
-name: FOS-24013
+id: 
+name: FOS-24164
 ---
 ##if(false)
 {% include 'modules/doc-block.html' %}
@@ -21,9 +21,9 @@ name: FOS-24013
   <link type="text/css" rel="stylesheet" href="[@T[link:<cssroot />]@T]fos/global/build/0.2.0/gd-fos-global.min.css" />
   ##if(siteContextAny(gd))  
   <link rel="shortcut icon" href="[@T[link:<imageroot />]@T]assets/godaddy.ico" />
-  <link type="text/css" rel="stylesheet" href="[@T[link:<cssroot />]@T]fos/sales/themes/scotty/domains/searchresults/css/styles.css" />
+  <link type="text/css" rel="stylesheet" href="[@T[link:<cssroot />]@T]fos/sales/themes/scotty/domains/searchresults/css/styles.css?v=24164" />
   ##else  
-  <link type="text/css" rel="stylesheet" href="[@T[link:<cssroot />]@T]fos/sales/themes/scotty/domains/searchresults/css/styles_PL.css" />
+  <link type="text/css" rel="stylesheet" href="[@T[link:<cssroot />]@T]fos/sales/themes/scotty/domains/searchresults/css/styles_PL.css?v=24164" />
   ##endif    
   <script type="text/javascript"  src="[@T[link:<javascriptroot />]@T]shared/js/1.5.1/global.20120918.min.js"></script>
   ##if(!activeLanguageAny(en, es))
@@ -377,6 +377,7 @@ name: FOS-24013
       <!-- ko template: { name: ActionTemplate } --><!-- /ko -->
       <!-- ko with: SelectedPhase -->
       <span class="pricing" data-bind="visible: !$parent.IsSelected()">
+        <span class="price price-strike" data-bind="html: (SelectedSubPhase() || $data).Prices().TotalCurrent ? (SelectedSubPhase() || $data).Prices().TotalList : ''">$MXN.XX</span>
         <span class="price" data-bind="html: (SelectedSubPhase() || $data).Prices().TotalCurrent ? (SelectedSubPhase() || $data).Prices().TotalCurrent : (SelectedSubPhase() || $data).Prices().TotalList">$MXNXXX.XX</span>
         <span class="price" data-bind="visible: HasIcannFee">*</span>
         <span class="selectedName" data-bind="html: Name">&nbsp;</span>
@@ -518,6 +519,7 @@ name: FOS-24013
   <script id="PhasePrice" type="text/html">    
     <span class="pricing">
       <span class="priceDescription" data-bind="visible: HasSubPhases">[@L[cds.sales/domains/searchresults-new3:StartingPriceText]@L]</span>
+      <span class="price price-strike" data-bind="html: Prices().TotalCurrent ? Prices().TotalList : ''">$MXNXXX.XX</span>
       <span class="price"data-bind="html: Prices().TotalCurrent ? Prices().TotalCurrent : Prices().TotalList">$MXNXXX.XX</span>
       <span class="price"data-bind="visible: HasIcannFee">*</span>
     </span>
