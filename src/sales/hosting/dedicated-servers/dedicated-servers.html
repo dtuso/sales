@@ -1,6 +1,6 @@
 ---
 location: sales/hosting/dedicated-servers.aspx
-id:   53d6bea0f778fc27484de52d
+id:   53e13a45f778fc177804130b
 name: Merge changes from FOS-23374
 comments: Dedicated Server Relaunch
 url: http://www.dev-godaddy.com/hosting/dedicated-servers.aspx
@@ -30,16 +30,11 @@ assetPath: false
         <p class="font-18 main-banner-content-text-vpsx">
             <strong>[@L[cds.sales/gd/hosting/dedicated-servers:uptimeGuarantee]@L]</strong>
         </p>
-      ##if(activeLanguageAny(en))                                    
-        <a href="javascript:void(0);" class="btn btn-primary" data-ci="88996"><span id="lpLivePersonDedServer">[@L[cds.sales/gd/hosting/dedicated-servers:js_chatLive]@L]</span></a>        
-        <p class="font-18 main-banner-content-text-vpsx">
-         [@L[cds.sales/gd/hosting/dedicated-servers:BannerCallNumber]@L]        
-        </p>
-     ##else
-         <p class="font-18 main-banner-content-text-vpsx">
-          [@L[cds.sales/gd/hosting/dedicated-servers:BannerCallNumber1]@L]
-         </p>
-     ##endif                
+                                   
+        <a href="javascript:void(0);" class="btn btn-primary scroller" data-scrolling=".operating-systems-label"  data-ci="88996"><span id="lpLivePersonDedServer">[@L[cds.sales/gd/hosting/dedicated-servers:js_chatLive]@L]</span></a>     
+        <p class="font-18 main-banner-content-text-vpsx header-phone-callout">
+          [@L[cds.sales/gd/hosting/dedicated-servers:BannerCallNumber]@L]
+         </p>                       
     </div>
 </section>
 <!-- End main-banner -->
@@ -2718,6 +2713,16 @@ $(document).ready(function() {
         $form.trigger("submit");
       });
 
+    $('.scroller').on('click', function(event) {
+        var target = $(this).data('scrolling');
+        if( target.length ) {
+            event.preventDefault();
+            $('html, body').animate({
+                scrollTop: $(target).offset().top
+            }, 1000);
+        }
+    });
+
 });
 
 var ytPlayerList = {}; // Maps youtube player with its appropiate iframe based on the iframe id
@@ -2880,7 +2885,7 @@ $(function () {
     ];
      window.lpTagLandingPageSettings.button = {
         name: 'Hosting-Dedservers-EN',
-        pid: 'lpLivePersonDedServer'
+        // pid: 'lpLivePersonDedServer'
     };
     var resource = document.createElement('script');
     resource.src = "[@T[link:<javascriptroot />]@T]fos/liveperson/js/liveperson_lp_20140708.min.js";
