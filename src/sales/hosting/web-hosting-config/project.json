@@ -1,0 +1,60 @@
+{
+  "web-hosting-config.html": {
+    "cdsDetails": {
+      "champion": {
+        "name": "Colyn Brown",
+        "email": "clbrown@godaddy.com"
+      },
+      "cdsLocation": "sales/hosting/web-hosting-config-new.aspx",
+      "draft": {
+        "id": "53dfd5c8f778fc33bc708f4d",
+        "createdDate": "2014-08-04",
+        "createdBy": {
+          "fullName": "Ryan Hurst",
+          "username": "rhurst"
+        },
+        "jiraTicket": "FOS-1310",
+        "comments": "Select cPanel by default and remove price from cpanel option",
+        "url": "http://www.dev-godaddy.com/hosting/web-hosting-config-new.aspx"
+      }
+    },
+    "assetPath": "fos/201401/sales/hosting/web-hosting-config/",
+    "metaTitle": "[@L[cds.sales/gd/hosting/vps-hosting-config:page-title]@L]",
+    "metaDescription": "[@L[cds.sales/gd/hosting/vps-hosting-config:meta-description]@L]",
+    "metaKeywords": "[@L[cds.sales/gd/hosting/vps-hosting-config:meta-keywords]@L]",
+    "metaCanonicalPath": "/hosting/web-hosting-config-new.aspx",
+    "metaOgTitle": "[@L[cds.sales/gd/hosting/vps-hosting:og-title]@L]",
+    "metaOgImage": "fos/hp/rebrand/img/gd_rebrand_og.png",
+    "metaOgDescription": "[@L[cds.sales/gd/hosting/vps-hosting:og-description]@L]",
+    "configTitleLink":"[@L[cds.sales/gd/hosting/vps-hosting-config:configTitleLink]@L]",
+    "configTitleContinueToCart":"[@L[cds.sales/gd/hosting/vps-hosting-config:configTitleContinueToCart]@L]",
+    "configTitleText":"[@L[cds.sales/gd/hosting/vps-hosting-config:configTitleText]@L]",
+    "configSummaryTitle":"[@L[cds.sales/gd/hosting/vps-hosting-config:orderSummaryTitle]@L]",
+    "configAddonTitle":"[@L[cds.sales/gd/hosting/vps-hosting-config:AddonTitle]@L]",
+    "configPermonth":"[@L[cds.sales/gd/hosting/vps-hosting-config:permonth]@L]",
+    "configSummarySubtotal":"[@L[cds.sales/gd/hosting/vps-hosting-config:orderSummarySubtotal]@L]",
+    "configBandwidthDisclaimer":"[@L[cds.sales/gd/hosting/vps-hosting-config:bandwidthDisclaimer]@L]",
+    "configSummarySubtotalDisc":"[@L[cds.sales/gd/hosting/vps-hosting-config:orderSummarySubtotalDisc]@L]",
+    "configLastBox": ".box5"
+
+  },
+  "web-hosting-config.language": {
+    "cdsDetails": {
+      "champion": {
+        "name": "Colyn Brown",
+        "email": "clbrown@godaddy.com"
+      },
+      "cdsLocation": "localization/sales/hosting/web-hosting-config/en",
+      "draft": {
+        "id": false,
+        "createdDate": "2014-04-29",
+        "createdBy": {
+          "fullName": "Sergio Lopez",
+          "username": "sylopez"
+        },
+        "jiraTicket": "FOS-1310",
+        "comments": "Landing Page Reskin"
+      }
+    }
+  }
+}

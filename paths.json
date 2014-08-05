@@ -32,6 +32,7 @@
   "vps-config":         "./hosting/vps-hosting-config/",
   "web-design":         "./design/web-design/",
   "web-hosting":        "./hosting/web-hosting/",
+  "web-hosting-config": "./hosting/web-hosting-config/",
   "what-is-a-gtld":     "./domains/what-is-a-gtld",
   "wordpress-hosting":  "./hosting/wordpress-hosting/",
   "wp":                 "./hosting/wordpress-hosting/",

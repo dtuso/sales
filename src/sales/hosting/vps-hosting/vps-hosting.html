@@ -1,8 +1,8 @@
 ---
 location: sales/hosting/vps-hosting.aspx
-id:  53d812ecf778fc27484de584
-name:
-comments: Force US Data Centers only regardless of IP
+id:  53e13915f778fc1778041309
+name: FOS-25218
+comments: Remove chat button
 url: http://www.dev-godaddy.com/hosting/vps-hosting.aspx
 assetPath: false
 ---
@@ -72,16 +72,10 @@ assetPath: false
             <strong>[@L[cds.sales/gd/hosting/vps-hosting:HeaderUptimeGuarantee]@L]</strong>
         </p>
 
-        ##if(activeLanguageAny(en))
-        <a href="javascript:void(0);" class="btn btn-primary" data-ci="88933"><span id="lpLivePersonVpsHosting">[@L[cds.sales/gd/hosting/vps-hosting:JsChatLive]@L]</span></a>
+        <a href="javascript:void(0);" class="btn btn-primary scroller" data-scrolling=".tab-content-operating-system" data-ci="88933">[@L[cds.sales/gd/hosting/vps-hosting:JsChatLive]@L]</a>
         <p class ="font-18 main-banner-content-text-vps">
            [@L[cds.sales/gd/hosting/vps-hosting:CallBanner]@L]
         </p>
-        ##else
-        <p class ="font-18 main-banner-content-text-vps">
-           [@L[cds.sales/gd/hosting/vps-hosting:CallBanner2]@L]
-        </p>
-        ##endif
     </div>
 </section>
 <!-- End main-banner -->
@@ -988,6 +982,16 @@ $(document).ready(function() {
 
         $form.trigger("submit");
       });
+
+     $('.scroller').on('click', function(event) {
+        var target = $(this).data('scrolling');
+        if( target.length ) {
+            event.preventDefault();
+            $('html, body').animate({
+                scrollTop: $(target).offset().top
+            }, 1000);
+        }
+    });
 
 });
 
