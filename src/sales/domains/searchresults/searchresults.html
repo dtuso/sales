@@ -379,7 +379,6 @@ name: FOS-24164
       <span class="pricing" data-bind="visible: !$parent.IsSelected()">
         <span class="price price-strike" data-bind="html: (SelectedSubPhase() || $data).Prices().TotalCurrent ? (SelectedSubPhase() || $data).Prices().TotalList : ''">$MXN.XX</span>
         <span class="price" data-bind="html: (SelectedSubPhase() || $data).Prices().TotalCurrent ? (SelectedSubPhase() || $data).Prices().TotalCurrent : (SelectedSubPhase() || $data).Prices().TotalList">$MXNXXX.XX</span>
-        <span class="price" data-bind="visible: HasIcannFee">*</span>
         <span class="selectedName" data-bind="html: Name">&nbsp;</span>
       </span>
       <!-- /ko -->
