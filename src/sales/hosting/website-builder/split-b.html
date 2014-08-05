@@ -1,8 +1,8 @@
 ---
 location: sales/hosting/website-builder-splits/split-b
-id: 53c083f7f778fc18c81e87fa
-name: FOS-5720
-comments: Integrate BazaarVoice on WSB LP
+id: 53dfd970f778fc33bc708f52
+name: FOS-23907
+comments: Intergrate new wsb config
 ---
 {% extends 'layouts/base.html' %}
 {% block pageTitle %}
@@ -195,9 +195,9 @@ comments: Integrate BazaarVoice on WSB LP
               <li><span class="wsb-black-check"></span><span class="wsb-li-content">[@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-2]@L]</span></li>
               <li><span class="wsb-black-check"></span><span class="wsb-li-content">[@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-3]@L]</span></li>
           </ul>
-          <form class="main-banner-form" id="addtocart-form" method="POST" action="[@T[link:<relative path="~/hosting/website-builder-config.aspx" />]@T]">
+          <form class="main-banner-form addtocart-form" id="addtocart-form" method="POST" action="[@T[link:<relative path="~/hosting/website-builder-config.aspx" />]@T]">
               <label>
-                  <input type="radio" checked="checked" name="product" value="7524|1|1" />
+                  <input type="radio" checked="checked" name="plan" value="wsb_personal_12month" />
               </label>
             <button type="submit" data-form="addtocart-form" class="btn btn-primary cta-medium" data-ci="87757">[@L[cds.sales/gd/hosting/website-builder:get-started-btn-general]@L]</button>
             <span class="price-callout">
@@ -278,7 +278,7 @@ comments: Integrate BazaarVoice on WSB LP
                   </div>
                   </div>
                   <div data-gd-sidebysidealign-row="3">
-                        <form id="addtocart-form" method="POST" action="[@T[link:<relative path="~/hosting/website-builder-config.aspx" />]@T]">
+                        <form id="addtocart-form" method="POST" class="addtocart-form"  action="[@T[link:<relative path="~/hosting/website-builder-config.aspx" />]@T]">
                         <div class="select-box">
                             <div class="select-box-head">
                                 <div class="select-box-current">
@@ -292,10 +292,10 @@ comments: Integrate BazaarVoice on WSB LP
                             </div><!-- select-box-head -->
                             <div class="select-box-body">
                                 <ul class="select-box-options">
-                                    <li>
+                                    <li data-plan="wsb_personal_1month">
                                         <div>
-                                            <label>
-                                                <input type="radio" name="product" value="7521|1|1" />
+                                            <label >
+                                                <input type="radio" name="plan" value="wsb_personal_1month" />
                                                 <span class="price-left">[@L[cds.sales/gd/hosting/website-builder:1-month]@L]</span>
                                                 <span class="price">[@T[productprice:<current productid="7521" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses"  />]@T][@L[cds.sales/gd/hosting/website-builder:month]@L]</span>
                                                 ##if(productHasSavingsMoreThan(7521, 7521, 0))
@@ -309,10 +309,10 @@ comments: Integrate BazaarVoice on WSB LP
                                             </label>
                                         </div>
                                     </li>
-                                    <li class="selected">
+                                    <li class="selected" data-plan="wsb_personal_12month">
                                         <div>
                                             <label>
-                                                <input type="radio" name="product" checked="checked" value="7524|1|1" />
+                                                <input type="radio" name="plan" checked="checked" value="wsb_personal_12month" />
                                                 <span class="price-left">[@L[cds.sales/gd/hosting/website-builder:12-months]@L]</span>
                                                 <span class="price">[@T[productprice:<current productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T][@L[cds.sales/gd/hosting/website-builder:month]@L]</span>
                                                 ##if(productHasSavingsMoreThan(7524, 7524, 0))
@@ -326,10 +326,10 @@ comments: Integrate BazaarVoice on WSB LP
                                             </label>
                                         </div>
                                     </li>
-                                    <li>
+                                    <li data-plan="wsb_personal_24month">
                                         <div>
                                             <label>
-                                                <input type="radio" name="product" value="7525|1|1" />
+                                                <input type="radio" name="plan" value="wsb_personal_24month" />
                                                 <span class="price-left">[@L[cds.sales/gd/hosting/website-builder:24-months]@L]</span>
                                                 <span class="price">[@T[productprice:<current productid="7525" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses"  />]@T][@L[cds.sales/gd/hosting/website-builder:month]@L]</span>
                                                 ##if(productHasSavingsMoreThan(7525, 7525, 0))
@@ -343,10 +343,10 @@ comments: Integrate BazaarVoice on WSB LP
                                             </label>
                                         </div>
                                     </li>
-                                    <li>
+                                    <li data-plan="wsb_personal_36month">
                                         <div>
                                             <label>
-                                                <input type="radio" name="product" value="7526|1|1" />
+                                                <input type="radio" name="plan" value="wsb_personal_36month" />
                                                 <span class="price-left">[@L[cds.sales/gd/hosting/website-builder:36-months]@L]</span>
                                                 <span class="price">[@T[productprice:<current productid="7526" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses"  />]@T][@L[cds.sales/gd/hosting/website-builder:month]@L]</span>
                                                 ##if(productHasSavingsMoreThan(7526, 7526, 0))
@@ -370,6 +370,17 @@ comments: Integrate BazaarVoice on WSB LP
                        <li data-gd-sidebysidealign-row="4">
                                      ##if(countrySiteAny(uk))
                                      [@L[cds.sales/gd/hosting/website-builder:plan-domain]@L]<span class="br"></span><a class="simple-link websitebuilder-tooltip isToolTip item-note" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltipUK]@L]">[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-restricitons]@L]</a>
+                                     ##elseif(countrySiteAny(br))
+                                     [@L[cds.sales/gd/hosting/website-builder:plan-domain]@L]<span class="br"></span><a class="simple-link websitebuilder-tooltip isToolTip item-note" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltipBR]@L]">[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-restricitons]@L]</a>
+                                     ##elseif(countrySiteAny(mx))
+                                     [@L[cds.sales/gd/hosting/website-builder:plan-domain]@L]<span class="br"></span><a class="simple-link websitebuilder-tooltip isToolTip item-note" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltipMX]@L]">[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-restricitons]@L]</a>
+                                     ##elseif(countrySiteAny(ca))
+                                     [@L[cds.sales/gd/hosting/website-builder:plan-domain]@L]<span class="br"></span><a class="simple-link websitebuilder-tooltip isToolTip item-note" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltipCA]@L]">[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-restricitons]@L]</a>
+                                     ##elseif(countrySiteAny(in))
+                                     [@L[cds.sales/gd/hosting/website-builder:plan-domain]@L]<span class="br"></span><a class="simple-link websitebuilder-tooltip isToolTip item-note" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltipIN]@L]">[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-restricitons]@L]</a>
+                                     ##elseif(isManager())
+                                     [@L[cds.sales/gd/hosting/website-builder:plan-domain]@L]<span class="br"></span><a class="simple-link websitebuilder-tooltip isToolTip item-note" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltipManager]@L]">[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-restricitons]@L]</a>
+
                                      ##else
                                      [@L[cds.sales/gd/hosting/website-builder:plan-domain]@L]<span class="br"></span><a class="simple-link websitebuilder-tooltip isToolTip item-note" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltip]@L]">[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-restricitons]@L]</a>                                     
                                      ##endif
@@ -412,7 +423,7 @@ comments: Integrate BazaarVoice on WSB LP
                         ##endif
                   </div>
                   <div data-gd-sidebysidealign-row="3">
-                        <form id="addtocart-form2" method="POST" action="[@T[link:<relative path="~/hosting/website-builder-config.aspx" />]@T]">
+                        <form id="addtocart-form2" method="POST" class="addtocart-form" action="[@T[link:<relative path="~/hosting/website-builder-config.aspx" />]@T]">
                         <div class="select-box">
                             <div class="select-box-head">
                                 <div class="select-box-current">
@@ -426,10 +437,10 @@ comments: Integrate BazaarVoice on WSB LP
                             </div><!-- select-box-head -->
                             <div class="select-box-body">
                                 <ul class="select-box-options">
-                                    <li>
+                                    <li data-plan="wsb_business_1month">
                                         <div>
                                             <label>
-                                                <input type="radio" name="product" value="7502|1|1" />
+                                                <input type="radio" name="plan" value="wsb_business_1month" />
                                                 <span class="price-left">[@L[cds.sales/gd/hosting/website-builder:1-month]@L]</span>
                                                 <span class="price">[@T[productprice:<current productid="7502" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses"  />]@T][@L[cds.sales/gd/hosting/website-builder:month]@L]</span>
                                                 ##if(productHasSavingsMoreThan(7502, 7502, 0))
@@ -443,10 +454,10 @@ comments: Integrate BazaarVoice on WSB LP
                                             </label>
                                         </div>
                                     </li>
-                                    <li class="selected">
+                                    <li class="selected" data-plan="wsb_business_12month">
                                         <div>
                                             <label>
-                                                <input type="radio" name="product" checked="checked" value="7509|1|1" />
+                                                <input type="radio" name="plan" checked="checked" value="wsb_business_12month" />
                                                 <span class="price-left">[@L[cds.sales/gd/hosting/website-builder:12-months]@L]</span>
                                                 <span class="price">[@T[productprice:<current productid="7509" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses"  />]@T][@L[cds.sales/gd/hosting/website-builder:month]@L]</span>
                                                 ##if(productHasSavingsMoreThan(7509, 7509, 0))
@@ -460,10 +471,10 @@ comments: Integrate BazaarVoice on WSB LP
                                             </label>
                                         </div>
                                     </li>
-                                    <li>
+                                    <li data-plan="wsb_business_24month">
                                         <div>
                                             <label>
-                                                <input type="radio" name="product" value="7510|1|1" />
+                                                <input type="radio" name="plan" value="wsb_business_24month" />
                                                 <span class="price-left">[@L[cds.sales/gd/hosting/website-builder:24-months]@L]</span>
                                                 <span class="price">[@T[productprice:<current productid="7510" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses"  />]@T][@L[cds.sales/gd/hosting/website-builder:month]@L]</span>
                                                 ##if(productHasSavingsMoreThan(7510, 7510, 0))
@@ -477,10 +488,10 @@ comments: Integrate BazaarVoice on WSB LP
                                             </label>
                                         </div>
                                     </li>
-                                    <li>
+                                    <li data-plan="wsb_business_36month">
                                         <div>
                                             <label>
-                                                <input type="radio" name="product" value="7511|1|1" />
+                                                <input type="radio" name="plan" value="wsb_business_36month" />
                                                 <span class="price-left">[@L[cds.sales/gd/hosting/website-builder:36-months]@L]</span>
                                                 <span class="price">[@T[productprice:<current productid="7511" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses"  />]@T][@L[cds.sales/gd/hosting/website-builder:month]@L]</span>
                                                 ##if(productHasSavingsMoreThan(7511, 7511, 0))
@@ -503,7 +514,17 @@ comments: Integrate BazaarVoice on WSB LP
                     <ul class="plan-pricing-list">
                         <li data-gd-sidebysidealign-row="4">
                                 ##if(countrySiteAny(uk))
-                                  [@L[cds.sales/gd/hosting/website-builder:plan-domain]@L]<span class="br"></span><a class="simple-link websitebuilder-tooltip isToolTip item-note" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltipUK]@L]">[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-restricitons]@L]</a>
+                                   [@L[cds.sales/gd/hosting/website-builder:plan-domain]@L]<span class="br"></span><a class="simple-link websitebuilder-tooltip isToolTip item-note" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltipUK]@L]">[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-restricitons]@L]</a>
+                                  ##elseif(countrySiteAny(br))
+                                     [@L[cds.sales/gd/hosting/website-builder:plan-domain]@L]<span class="br"></span><a class="simple-link websitebuilder-tooltip isToolTip item-note" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltipBR]@L]">[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-restricitons]@L]</a>
+                                  ##elseif(countrySiteAny(mx))
+                                     [@L[cds.sales/gd/hosting/website-builder:plan-domain]@L]<span class="br"></span><a class="simple-link websitebuilder-tooltip isToolTip item-note" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltipMX]@L]">[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-restricitons]@L]</a>
+                                  ##elseif(countrySiteAny(ca))
+                                     [@L[cds.sales/gd/hosting/website-builder:plan-domain]@L]<span class="br"></span><a class="simple-link websitebuilder-tooltip isToolTip item-note" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltipCA]@L]">[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-restricitons]@L]</a>
+                                  ##elseif(countrySiteAny(in))
+                                     [@L[cds.sales/gd/hosting/website-builder:plan-domain]@L]<span class="br"></span><a class="simple-link websitebuilder-tooltip isToolTip item-note" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltipIN]@L]">[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-restricitons]@L]</a>
+                                  ##elseif(isManager())
+                                     [@L[cds.sales/gd/hosting/website-builder:plan-domain]@L]<span class="br"></span><a class="simple-link websitebuilder-tooltip isToolTip item-note" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltipManager]@L]">[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-restricitons]@L]</a>
                                 ##else
                                   [@L[cds.sales/gd/hosting/website-builder:plan-domain]@L]<span class="br"></span><a class="simple-link websitebuilder-tooltip isToolTip item-note" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltip]@L]">[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-restricitons]@L]</a>
                                 ##endif
@@ -547,7 +568,7 @@ comments: Integrate BazaarVoice on WSB LP
                         ##endif
                   </div>
                   <div data-gd-sidebysidealign-row="3">
-                        <form id="addtocart-form3" method="POST" action="[@T[link:<relative path="~/hosting/website-builder-config.aspx" />]@T]">
+                        <form id="addtocart-form3" method="POST" class="addtocart-form" action="[@T[link:<relative path="~/hosting/website-builder-config.aspx" />]@T]">
                         <div class="select-box">
                             <div class="select-box-head">
                                 <div class="select-box-current">
@@ -561,10 +582,10 @@ comments: Integrate BazaarVoice on WSB LP
                             </div><!-- select-box-head -->
                             <div class="select-box-body">
                                 <ul class="select-box-options">
-                                    <li>
+                                    <li data-plan="wsb_businessplus_1month">
                                         <div>
                                             <label>
-                                                <input type="radio" name="product" value="7503|1|1" />
+                                                <input type="radio" name="plan" value="wsb_businessplus_1month" />
                                                 <span class="price-left">[@L[cds.sales/gd/hosting/website-builder:1-month]@L]</span>
                                                 <span class="price">[@T[productprice:<current productid="7503" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses"  />]@T][@L[cds.sales/gd/hosting/website-builder:month]@L]</span>
                                                 ##if(productHasSavingsMoreThan(7503, 7503, 0))
@@ -578,10 +599,10 @@ comments: Integrate BazaarVoice on WSB LP
                                             </label>
                                         </div>
                                     </li>
-                                    <li class="selected">
+                                    <li class="selected" data-plan="wsb_businessplus_12month">
                                         <div>
                                             <label>
-                                                <input type="radio" name="product" checked="checked" value="7514|1|1" />
+                                                 <input type="radio" name="plan" checked="checked" value="wsb_businessplus_12month" />
                                                 <span class="price-left">[@L[cds.sales/gd/hosting/website-builder:12-months]@L]</span>
                                                 <span class="price">[@T[productprice:<current productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses"  />]@T][@L[cds.sales/gd/hosting/website-builder:month]@L]</span>
                                                 ##if(productHasSavingsMoreThan(7514, 7514, 0))
@@ -595,10 +616,10 @@ comments: Integrate BazaarVoice on WSB LP
                                             </label>
                                         </div>
                                     </li>
-                                    <li>
+                                   <li data-plan="wsb_businessplus_24month">
                                         <div>
                                             <label>
-                                                <input type="radio" name="product" value="7515|1|1" />
+                                                <input type="radio" name="plan" checked="checked" value="wsb_businessplus_24month" />
                                                 <span class="price-left">[@L[cds.sales/gd/hosting/website-builder:24-months]@L]</span>
                                                 <span class="price">[@T[productprice:<current productid="7515" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses"  />]@T][@L[cds.sales/gd/hosting/website-builder:month]@L]</span>
                                                 ##if(productHasSavingsMoreThan(7515, 7515, 0))
@@ -612,10 +633,10 @@ comments: Integrate BazaarVoice on WSB LP
                                             </label>
                                         </div>
                                     </li>
-                                    <li>
+                                    <li data-plan="wsb_businessplus_36month">
                                         <div>
                                             <label>
-                                                <input type="radio" name="product" value="7516|1|1" />
+                                                <input type="radio" name="plan" checked="checked" value="wsb_businessplus_36month" />
                                                 <span class="price-left">[@L[cds.sales/gd/hosting/website-builder:36-months]@L]</span>
                                                 <span class="price">[@T[productprice:<current productid="7516" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses"  />]@T][@L[cds.sales/gd/hosting/website-builder:month]@L]</span>
                                                 ##if(productHasSavingsMoreThan(7516, 7516, 0))
@@ -638,7 +659,17 @@ comments: Integrate BazaarVoice on WSB LP
                     <ul class="plan-pricing-list">
                         <li data-gd-sidebysidealign-row="4">
                                  ##if(countrySiteAny(uk))
-                                 [@L[cds.sales/gd/hosting/website-builder:plan-domain]@L]<span class="br"></span><a class="simple-link websitebuilder-tooltip isToolTip item-note" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltipUK]@L]">[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-restricitons]@L]</a>
+                                  [@L[cds.sales/gd/hosting/website-builder:plan-domain]@L]<span class="br"></span><a class="simple-link websitebuilder-tooltip isToolTip item-note" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltipUK]@L]">[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-restricitons]@L]</a>
+                                 ##elseif(countrySiteAny(br))
+                                     [@L[cds.sales/gd/hosting/website-builder:plan-domain]@L]<span class="br"></span><a class="simple-link websitebuilder-tooltip isToolTip item-note" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltipBR]@L]">[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-restricitons]@L]</a>
+                                  ##elseif(countrySiteAny(mx))
+                                     [@L[cds.sales/gd/hosting/website-builder:plan-domain]@L]<span class="br"></span><a class="simple-link websitebuilder-tooltip isToolTip item-note" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltipMX]@L]">[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-restricitons]@L]</a>
+                                  ##elseif(countrySiteAny(ca))
+                                     [@L[cds.sales/gd/hosting/website-builder:plan-domain]@L]<span class="br"></span><a class="simple-link websitebuilder-tooltip isToolTip item-note" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltipCA]@L]">[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-restricitons]@L]</a>
+                                  ##elseif(countrySiteAny(in))
+                                     [@L[cds.sales/gd/hosting/website-builder:plan-domain]@L]<span class="br"></span><a class="simple-link websitebuilder-tooltip isToolTip item-note" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltipIN]@L]">[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-restricitons]@L]</a>
+                                  ##elseif(isManager())
+                                     [@L[cds.sales/gd/hosting/website-builder:plan-domain]@L]<span class="br"></span><a class="simple-link websitebuilder-tooltip isToolTip item-note" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltipManager]@L]">[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-restricitons]@L]</a>
                                  ##else
                                 [@L[cds.sales/gd/hosting/website-builder:plan-domain]@L]<span class="br"></span><a class="simple-link websitebuilder-tooltip isToolTip item-note" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltip]@L]">[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-restricitons]@L]</a>
                                  ##endif  
@@ -824,8 +855,8 @@ comments: Integrate BazaarVoice on WSB LP
               </div>
               <div class="row row-three">
                 <p class="no-margin-bottom col-xs-10">[@L[cds.sales/gd/hosting/website-builder:business-plus-plan-cta]@L] <strong class="secondary-color">[@T[productprice:<current productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses"  />]@T]</strong>[@L[cds.sales/gd/hosting/website-builder:mo]@L]</p>
-                <form class="seo-business-plus-form col-xs-2" id="addtocart-form" method="POST" action="[@T[link:<relative path="~/hosting/website-builder-config.aspx" />]@T]">
-                  <label><input type="radio" checked="checked" name="product" value="7514|1|1" /></label>
+                <form class="seo-business-plus-form col-xs-2 addtocart-form" id="addtocart-form" method="POST" action="[@T[link:<relative path="~/hosting/website-builder-config.aspx" />]@T]">
+                  <label><input type="radio" checked="checked" name="plan" value="wsb_businessplus_12month" /></label>
                   <button type="submit" data-form="addtocart-form" class="btn btn-warning js-addtocart-btn cta-small wsb-cta-width">[@L[cds.sales/gd/hosting/website-builder:planbox-cart-btn]@L]</button>
                 </form>
               </div>
@@ -1036,9 +1067,19 @@ comments: Integrate BazaarVoice on WSB LP
               </div>
                 <div class="modal-body">
                   ##if(countrySiteAny(uk))
-                  <p>[@L[cds.sales/gd/hosting/website-builder:modal-disclaimer-2uk]@L]</p>
+                  <p>&lowast;[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltipUK]@L]</p>
+                  ##elseif(countrySiteAny(br))
+                  <p>&lowast;[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltipBR]@L]</p>
+                  ##elseif(countrySiteAny(mx))
+                  <p>&lowast;[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltipMX]@L]</p>
+                  ##elseif(countrySiteAny(ca))
+                  <p>&lowast;[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltipCA]@L]</p>
+                  ##elseif(countrySiteAny(in))
+                  <p>&lowast;[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltipIN]@L]</p>
+                  ##elseif(isManager())
+                  <p>&lowast;[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltipManager]@L]</p>
                   ##else
-                  <p>[@L[cds.sales/gd/hosting/website-builder:modal-disclaimer-2]@L]</p>
+                  <p>&lowast;[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltip]@L]</p>
                   ##endif
                   <p>[@L[cds.sales/gd/hosting/website-builder:modal-disclaimer-5]@L]</p>
               </div>
@@ -1091,6 +1132,12 @@ comments: Integrate BazaarVoice on WSB LP
     $('.select-box').setSelectBox();
     $('.tab-link').tabLinks();
 
+     $('.addtocart-form').on('submit',function(e){
+        e.preventDefault();
+        var $form = $(this);
+        var data= $form.serializeObject();
+        window.location.href = (($form.attr('action').indexOf('?') != -1) ? $form.attr('action') + '&plan=' : $form.attr('action') + '?plan=') + data.plan;
+    });
   });
 
 
