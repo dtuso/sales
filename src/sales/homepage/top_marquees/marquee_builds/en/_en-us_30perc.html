@@ -1,0 +1,65 @@
+<!-- start-css-elevate -->
+  <style>
+  {% less %}
+  .thirty-percent-top-banner{background-color:#7db701;width:100%;min-width:1000px;height:460px;}
+  .thirty-percent-banner-content{width:1000px;margin:0 auto;padding-top:30px;}
+  .thirty-percent-logo{background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gdhp_sprite_20140731.png) -599px -649px;height:115px;width:123px;display:block;margin:0 auto;}
+  .thirty-percent-30-text{font-size:66px;line-height:66px;padding-top:5px;color:#704019;display:inline-block;}
+  .thirty-percent-wrapper{display:inline-block;}
+  .thirty-percent-perc-text{font-size:36px;color:#704019;display:block;line-height:26px;}
+  .thirty-percent-off-text{font-size:22px;color:#704019;display:block;}
+  .thirty-percent-new-products{font-size:18px;color:#704019;display:block;line-height:18px;font-weight:100;text-align:center;margin-top:-5px;}
+  .thirty-percent-headline{font-size:48px;line-height:48px;color:#ffffff;font-weight:100;display:block;text-align:center;}
+  .thirty-percent-maintext{font-size:24px;line-height:24px;color:#ffffff;display:block;padding-top:15px;text-align:center;}
+  .thirty-percent-content-wrapper{display:block;width:900px;margin:0 auto;}
+  .thirty-percent-content{width:299px;float:left;padding-top:40px;cursor:pointer;}
+  .thirty-percent-content>span{display:block;margin:0 auto;}
+  .thirty-percent-domain-logo{background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gdhp_sprite_20140731.png) -324px -692px;height:90px;width:90px;}
+  .thirty-percent-wsb-logo{background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gdhp_sprite_20140731.png) -416px -692px;height:90px;width:90px;}
+  .thirty-percent-hosting-logo{background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gdhp_sprite_20140731.png) -508px -692px;height:90px;width:90px;}
+  .thirty-percent-product-wrapper{width:189px;padding-top:20px;}
+  .thirty-percent-btn{background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gdhp_sprite_20140731.png) -434px -647px;height:24px;width:23px;display:inline-block;}
+  .thirty-percent-prod-text{font-size:24px;color:#ffffff;display:inline-block;position:absolute;margin-top:-5px;padding-left:10px;}
+  .thirty-percent-prod-text:hover{text-decoration:underline;}
+  .thirty-percent-limitation{font-size:9px;color:#ffffff;line-height:50px;text-align:center;display:block;clear:both;}
+  {% endless %}
+  </style>  
+<!-- end-css-elevate -->
+  <div class="thirty-percent-top-banner">
+    <div class="thirty-percent-banner-content">
+      <span class="thirty-percent-logo">
+        <span class="thirty-percent-30-text condensed b">[@L[cds.sales/homepage/locales/en:30-percent-marquee-percent_num]@L]</span>
+        <span class="thirty-percent-wrapper">
+          <span class="thirty-percent-perc-text">[@L[cds.sales/homepage/locales/en:30-percent-marquee-percent]@L]</span>
+          <span class="thirty-percent-off-text condensed b">[@L[cds.sales/homepage/locales/en:30-percent-marquee-percent-off]@L]</span>
+        </span>
+        <span class="thirty-percent-new-products">[@L[cds.sales/homepage/locales/en:30-percent-marquee-percent-subtext]@L]</span>
+      </span>
+      <span class="thirty-percent-headline">[@L[cds.sales/homepage/locales/en:30-percent-marquee-headline]@L]</span>
+      <span class="thirty-percent-maintext">[@L[cds.sales/homepage/locales/en:30-percent-marquee-maintext]@L]</span>
+      <div class="thirty-percent-content-wrapper">
+        <div class="thirty-percent-content js-gdhpclick" data-url='[@T[link:<relative path="/domains/domain-name-search.aspx"><param name="ci" value="92412" /></relative>]@T]' data-ci="92412">
+          <span class="thirty-percent-domain-logo"></span>
+          <span class="thirty-percent-product-wrapper">
+            <span class="thirty-percent-btn"></span>
+            <span class="thirty-percent-prod-text condensed b">[@L[cds.sales/homepage/locales/en:30-percent-marquee-domain-cta]@L]</span>
+          </span>
+        </div>
+        <div class="thirty-percent-content js-gdhpclick" data-url='[@T[link:<relative path="/hosting/website-builder.aspx"><param name="ci" value="92414" /></relative>]@T]' data-ci="92414">
+          <span class="thirty-percent-wsb-logo"></span>
+          <span class="thirty-percent-product-wrapper">
+            <span class="thirty-percent-btn"></span>
+            <span class="thirty-percent-prod-text condensed b">[@L[cds.sales/homepage/locales/en:30-percent-marquee-wsb-cta]@L]</span>
+          </span>
+        </div>
+        <div class="thirty-percent-content js-gdhpclick" data-url='[@T[link:<relative path="/hosting/web-hosting.aspx"><param name="ci" value="92413" /></relative>]@T]' data-ci="92413">
+          <span class="thirty-percent-hosting-logo"></span>
+          <span class="thirty-percent-product-wrapper">
+            <span class="thirty-percent-btn"></span>
+            <span class="thirty-percent-prod-text condensed b">[@L[cds.sales/homepage/locales/en:30-percent-marquee-hosting-cta]@L]</span>
+          </span>
+        </div>
+      </div>
+      <span class="thirty-percent-limitation">[@L[cds.sales/homepage/locales/en:30-percent-marquee-limitation-cta]@L]</span>
+    </div>
+  </div>
