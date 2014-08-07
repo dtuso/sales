@@ -131,7 +131,7 @@ border-color:#727272;
 .g-toolTip {
 cursor:pointer;
 position:relative;
-z-index:165;
+z-index:180;
 }
 
 .g-toolTip span {
@@ -155,6 +155,7 @@ width:505px;
 
 .lg-tooltip p {
 margin-bottom:10px;
+color: #FFFFFF;
 }
 
 .lg-tooltip span:last-child {
@@ -233,6 +234,8 @@ margin:0 12px -3px;
 #hostingConfig .g-toolTip ul {
 list-style:disc;
 margin-left:18px;
+color: #FFFFFF;
+margin-top: 10px;
 }
 
 #hostingConfig .column-right .flt-btn-orng {
@@ -310,7 +313,7 @@ border-width:5px 5px 0;
 #sslAddonWrapper {
 display:none;
 width:500px;
-z-index:165;
+z-index:1;
 }
 
 .column-left .ssl-cert {
@@ -331,6 +334,26 @@ position:absolute;
 width:34px;
 top:0;
 left:0;
+}
+
+.column-left .sitelock-wrapper {
+margin:10px 8px auto;
+}
+
+.column-left .sitelock-wrapper>div {
+position:relative;
+line-height:16px;
+padding:5px 43px;
+}
+
+.column-left .sitelock-wrapper>div>span.sitelock-checkbox{
+	background:url("[@T[link:<imageroot />]@T]fos/lp/rebrand_config_sprite2.png") no-repeat -53px -159px;
+	cursor:pointer;
+	height:28px;
+	position:absolute;
+	width:34px;
+	top:0;
+	left:0;
 }
 
 .column-left .ssl-cert>div>span.active {
@@ -580,15 +603,15 @@ margin-right:10px;
 }
 
 .column-1 {
-z-index:3;
+z-index:4;
 }
 
 .column-2 {
-z-index:2;
+z-index:3;
 }
 
 .column-3 {
-z-index:1;
+z-index:2;
 
 }
 
