@@ -18,9 +18,9 @@
   ##elseif(targetMessageTagAny(sales_hp,fos21247_63offwddc_1_x))
     [@P[tmsdocument:<data interactionpoint="sales_hp"><MessageTags><MessageTag>fos21247_63offwddc_1_x</MessageTag></MessageTags></data>]@P]
   ##endif
-  ##if(targetMessageTagAny(sales_hp_default_en_us,hpnewcustomertest_1) && splitTestingSideIsActive(1278, A))
+  ##if(!targetMessageTagAny(sales_hp_default,hp_existing_customer) && splitTestingSideIsActive(1278, A))
     {% include "marquee_builds/en/_en_us_299com.html" %}
-  ##elseif(targetMessageTagAny(sales_hp_default_en_us,hpnewcustomertest_1))
+  ##elseif(!targetMessageTagAny(sales_hp_default,hp_existing_customer))
     {% include "marquee_builds/en/_en-us_danica-tony.html" %}
   ##elseif(splitTestingSideIsActive(1279, A))
     {% include "marquee_builds/en/_en-us_orangeIpad.html" %}
