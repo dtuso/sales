@@ -1,9 +1,9 @@
 ---
 location: sales/hosting/web-hosting.aspx
 url: http://www.dev-godaddy.com/hosting/web-hosting.aspx
-id: 53c03453f778fc0968b4f0b8
-name: FOS-20789
-comments: Update cPanel plan information.
+id: 53dbf624f778fc32dc9e302f
+name: FOS-24754
+comments: Remove Fotolia Credits from Sales Pages
 splitSide: false
 ---
 
@@ -656,7 +656,7 @@ splitSide: false
                                 <p class="no-margin-bottom" data-gd-sidebysidealign-row="3"><button type="submit" data-ci="89269" data-form="addtocart-form" class="btn btn-warning btn-block js-addtocart-btn btn--push-down btn-lg">[@L[cds.sales/gd/hosting/web-hosting:planbox-cart-btn]@L]</button></p>
                                 <ul class="plan-pricing-list plan-pricing-list-alternate">
                                     <li data-gd-sidebysidealign-row="4">[@L[cds.sales/gd/hosting/web-hosting:economy-plan-storage-11166]@L]</li>
-                                    <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="5">[@L[cds.sales/gd/hosting/web-hosting:all-plan-features-free-domain-11166]@L]</li>
+                                    <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="5">[@L[cds.sales/gd/hosting/web-hosting:all-plan-features-free-domainIN-11166]@L]</li>
                                 </ul>
                             </div>
                             </form>
@@ -797,7 +797,7 @@ splitSide: false
                                 <p class="no-margin-bottom" data-gd-sidebysidealign-row="3"><button type="submit" data-ci="89270" data-form="addtocart-form" class="btn btn-warning btn-block js-addtocart-btn btn--push-down btn-lg">[@L[cds.sales/gd/hosting/web-hosting:planbox-cart-btn]@L]</button></p>
                                 <ul class="plan-pricing-list plan-pricing-list-alternate">
                                     <li data-gd-sidebysidealign-row="4">[@L[cds.sales/gd/hosting/web-hosting:deluxe-plan-storage-11166]@L]</li>
-                                    <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="5">[@L[cds.sales/gd/hosting/web-hosting:all-plan-features-free-domain-11166]@L]</li>
+                                    <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="5">[@L[cds.sales/gd/hosting/web-hosting:all-plan-features-free-domainIN-11166]@L]</li>
                                 </ul>
                             </div>
                           </form>
@@ -909,7 +909,7 @@ splitSide: false
                                     <p class="no-margin-bottom" data-gd-sidebysidealign-row="3"><button data-ci="89271" type="submit" data-form="addtocart-form" class="btn btn-warning btn-block js-addtocart-btn btn--push-down btn-lg">[@L[cds.sales/gd/hosting/web-hosting:planbox-cart-btn]@L]</button></p>
                                     <ul class="plan-pricing-list plan-pricing-list-alternate">
                                         <li class="three-lines" data-gd-sidebysidealign-row="4">[@L[cds.sales/gd/hosting/web-hosting:ultimate-plan-all-benefits-of-11166]@L]</li>
-                                        <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="5">[@L[cds.sales/gd/hosting/web-hosting:all-plan-features-free-domain-11166]@L]</li>
+                                        <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="5">[@L[cds.sales/gd/hosting/web-hosting:all-plan-features-free-domainIN-11166]@L]</li>
                                     </ul>
                                 </div>
                             </form>
@@ -1020,7 +1020,23 @@ splitSide: false
                                      <h3 class="tab-content-title">[@L[cds.sales/gd/hosting/web-hosting:all-plans-include-11166]@L]</h3>
                                    ##endif
                                     <ul class="list-column first">
-                                      <li>[@L[cds.sales/gd/hosting/web-hosting:all-plan-features-free-domain-11166]@L]</li>
+                                      <li>
+                                      ##if(countrySiteAny(in))
+                                     [@L[cds.sales/gd/hosting/web-hosting:all-plan-features-free-domainIN-11166]@L]
+                                     ##elseif(countrySiteAny(uk))
+                                     [@L[cds.sales/gd/hosting/web-hosting:all-plan-features-free-domainUK-11166]@L]
+                                     ##elseif(countrySiteAny(ca))
+                                     [@L[cds.sales/gd/hosting/web-hosting:all-plan-features-free-domainCA-11166]@L]
+                                     ##elseif(countrySiteAny(br))
+                                     [@L[cds.sales/gd/hosting/web-hosting:all-plan-features-free-domainBR-11166]@L]
+                                     ##elseif(countrySiteAny(mx))
+                                     [@L[cds.sales/gd/hosting/web-hosting:all-plan-features-free-domainMX-11166]@L]
+                                     ##elseif(isManager())
+                                     [@L[cds.sales/gd/hosting/web-hosting:all-plan-features-free-domainMANAGER-11166]@L]
+                                    ##else       
+                                    [@L[cds.sales/gd/hosting/web-hosting:all-plan-features-free-domain-11166]@L]
+                                    ##endif
+                                      </li>
                                       <li>[@L[cds.sales/gd/hosting/web-hosting:all-plan-features-free-email-11166]@L]</li>
                                       <li>[@L[cds.sales/gd/hosting/web-hosting:all-plan-features-one-click-install-11166]@L]</li>
                                       <li>[@L[cds.sales/gd/hosting/web-hosting:all-plan-features-unlimited-bandwidth-11166]@L]</li>
@@ -1042,8 +1058,6 @@ splitSide: false
                                   ##if(areAdCreditsEnabled(facebook))
                                       <li>[@L[cds.sales/gd/hosting/web-hosting:all-plan-features-facebook-credit-11166]@L] <span class="g-toolTip restrictions-link">[@L[cds.sales/gd/hosting/web-hosting:restrictions-apply-11166]@L]<span>[@L[cds.sales/gd/hosting/web-hosting:all-plan-features-facebook-credit-hover-text-11166]@L]</span></span></li>
                                  ##endif
-                                      <li>[@L[cds.sales/gd/hosting/web-hosting:all-plan-features-fotolia-credit-11166]@L] <span class="g-toolTip restrictions-link">[@L[cds.sales/gd/hosting/web-hosting:restrictions-apply-11166]@L]<span>[@L[cds.sales/gd/hosting/web-hosting:all-plan-features-fotolia-credit-hover-text-11166]@L]</span></span></li>
-                                     
                                     </ul>
                                   ##if(!activeLanguageAny([en-us]) && !activeLanguageAny([es-us]))
                                   <p class="container-bottom-right-sub-ul" style="padding-top:90px;">
@@ -3366,7 +3380,21 @@ splitSide: false
                     </div>
                     <div class="modal-body">
                         <p>[@L[cds.sales/gd/hosting/web-hosting:modal-disclaimer-1]@L]</p>
-                        <p>[@L[cds.sales/gd/hosting/web-hosting:modal-disclaimer-2]@L]</p>
+                        ##if(countrySiteAny(uk))
+                        <p>&lowast; [@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltipUK]@L]</p>
+                        ##elseif(countrySiteAny(br))
+                        <p>&lowast; [@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltipBR]@L]</p>
+                        ##elseif(countrySiteAny(mx))
+                        <p>&lowast; [@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltipMX]@L]</p>
+                        ##elseif(countrySiteAny(ca))
+                        <p>&lowast; [@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltipCA]@L]</p>
+                        ##elseif(countrySiteAny(in))
+                        <p>&lowast; [@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltipIN]@L]</p>
+                        ##elseif(isManager())
+                        <p>&lowast; [@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltipManager]@L]</p>
+                        ##else
+                        <p>&lowast; [@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltip]@L]</p>
+                        ##endif
                         <p>[@L[cds.sales/gd/hosting/web-hosting:modal-disclaimer-4]@L]</p>
                        [@L[cds.sales/gd/hosting/web-hosting:modal-disclaimer-11166]@L]
                     </div>

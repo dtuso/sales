@@ -1,8 +1,14 @@
 ---
 location: localization/sales/gd/hosting/web-hosting/en
+<<<<<<< HEAD
 id: 53d68ac1f778fc27484de4de
 name: FOS-24432
 comments: Update SSL Cert disclaimer
+=======
+id: 53dc1b0df778fc32dc9e303c
+name: FOS-24754
+comments: VAT tax fix for invalid pfids
+>>>>>>> other work
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="page-title" />
@@ -115,16 +121,6 @@ Restrictions apply to Facebook Ad credit
 One promotional credit per customer for a new Facebook<sup class='supsymbol'>&reg;</sup> Advertiser account. Products purchased using a Gift Card or Alipay do not provide eligibility for advertising credits. Offer valid only for purchase of advertising in the US, Canada, UK, and Australia. Other restrictions apply. <a href=&quot;javascript:void(window.open('[@T[link:<relative path='/popups/facebook-ads.aspx'><param name='ci' value='46426' /><param name='app_hdr' value='99' /></relative>]@T]','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=550,height=675'))&quot;>View Details</a>
 <phrase key="facebook-adwords-desc-left" />
 Restrictions apply to Facebook Ad credit <span class="left">One promotional credit per customer for a new Facebook<sup class="supsymbol">&reg;</sup> Advertiser account. Products purchased using a Gift Card or Alipay do not provide eligibility for advertising credits. Offer valid only for purchase of advertising in the US, Canada, UK, and Australia. Other restrictions apply.
-<phrase key="10-fotolia" />
-<strong>10</strong>
-<phrase key="fotolia-adwords-tm" />
-Fotolia<sup class="supsymbol">&reg;</sup>
-<phrase key="fotolia-adwords" />
-Fotolia Photo Credits
-<phrase key="fotolia-adwords-restrictions" />
-Restrictions apply to Fotolia credits 
-<phrase key="fotolia-adwords-desc" />
-One free promotional credit per customer, good for ten free download credits at Fotolia. Products purchased using a Gift Card or Alipay do not provide eligibility for photography credits. Other restrictions apply. <a href=&quot;javascript:void(window.open('[@T[link:<relative path='/popups/fotolia.aspx'><param name='app_hdr' value='99' /></relative>]@T]','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=550,height=675'))&quot;>View Details</a>
 <phrase key="deluxe-title" />
 Deluxe
 <phrase key="deluxe-domain" />
@@ -299,10 +295,6 @@ One promotional credit per customer for a new Microsoft<sup>&reg;</sup> Advertis
 USD $50 Facebook Ad Credit - 
 <phrase key="all-plan-features-facebook-credit-hover-text-11166" />
 One promotional credit per customer for a new Facebook<sup>&reg;</sup> Advertiser account. Products purchased using a Gift Card or Alipay do not provide eligibility for advertising credits. Offer valid only for purchase of advertising in the US, Canada, UK, and Australia. Other restrictions apply. <a href="javascript:void(window.open('http://www.godaddy.com/popups/facebook-ads.aspx?ci=46426&app_hdr=99','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=550,height=675'))">View Details</a>
-<phrase key="all-plan-features-fotolia-credit-11166" />
-10 Fotolia Photo Credits - 
-<phrase key="all-plan-features-fotolia-credit-hover-text-11166" />
-One free promotional credit per customer, good for ten free download credits at Fotolia. Products purchased using a Gift Card or Alipay do not provide eligibility for photography credits. Other restrictions apply. <a data-ci="89592" href="javascript:void(window.open('http://www.godaddy.com/popups/fotolia.aspx?app_hdr=99','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=550,height=675'))">View Details</a>
 <phrase key="all-plan-features-what-we-mean-credit-11166" />
 What we mean by <a class="isToolTip" data-toggle="tooltip" title="" data-original-title="Our Web Hosting plans are designed to host most personal, small business and organization websites. We don't limit the amount of storage and bandwidth your site can use as long as it complies with our Hosting Agreement. Should your website bandwidth or storage usage present a risk to the stability, performance or uptime of our servers, we will notify you via email and you may be required to upgrade to a Virtual Private Server or Dedicated (Private) Server, or we may restrict the resources your website is using. It’s very rare that a website violates our Hosting Agreement and is typically only seen in sites that use hosting for file sharing or storage.">Unlimited Storage and Bandwidth</a>
 <phrase key="media-temple-title-11166" />

@@ -1,8 +1,8 @@
 ---
 location: sales/hosting/wordpress-hosting.aspx
-id:   5399e43bf778fc1190e08c19
-name: FOS-20797
-comments: added styles to fix dropdown for de and ru
+id:   53dbfea4f778fc32dc9e3032
+name: FOS-24754
+comments: Remove Fotolia Credits from Sales Pages
 cssVersionOverride: 2
 ---
 {% extends 'layouts/base.html' %}
@@ -509,6 +509,16 @@ cssVersionOverride: 2
                       <li>
                         ##if(countrySiteAny(in))
                         [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-145-FreeDomainWithAnnualPlanRestrictionsApplyOneFREEIN]@L]
+                        ##elseif(countrySiteAny(uk))
+                        [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-145-FreeDomainWithAnnualPlanRestrictionsApplyOneFREEUK]@L]
+                        ##elseif(countrySiteAny(ca))
+                        [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-145-FreeDomainWithAnnualPlanRestrictionsApplyOneFREECA]@L]
+                        ##elseif(countrySiteAny(br))
+                        [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-145-FreeDomainWithAnnualPlanRestrictionsApplyOneFREEBR]@L]
+                        ##elseif(countrySiteAny(mx))
+                        [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-145-FreeDomainWithAnnualPlanRestrictionsApplyOneFREEMX]@L]
+                        ##elseif(isManager())
+                        [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-145-FreeDomainWithAnnualPlanRestrictionsApplyOneFREEMANAGER]@L]
                         ##else
                         [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-145-FreeDomainWithAnnualPlanRestrictionsApplyOneFREE]@L]
                         ##endif
@@ -536,8 +546,6 @@ cssVersionOverride: 2
                       ##if(areAdCreditsEnabled(facebook))
                       <li>USD $50 [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-4-FacebookAdCredit]@L]<span class="g-toolTip restrictions-link">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-2-RestrictionsApply]@L]<span>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-44-OnePromotionalCreditPerCustomerForANew]@L] <a href="javascript:void(window.open('[@T[link:<relative path='/popups/facebook-ads.aspx'><param name='ci' value='86789' /><param name='app_hdr' value='99' /></relative>]@T]','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=550,height=675'))">[@L[cds.sales/hosting/web-hosting-new:view-details]@L]</a></span></span></li>
                       ##endif
-                      <li>10 [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-4-FotoliaPhotoCredits]@L] <span class="g-toolTip restrictions-link">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-2-RestrictionsApply]@L]<span>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-33-OneFreePromotionalCreditPerCustomerGoodFor]@L] <a href="javascript:void(window.open('[@T[link:<relative path='/popups/fotolia.aspx'><param name='ci' value='86791' /><param name='app_hdr' value='99' /></relative>]@T]','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=550,height=675'))">[@L[cds.sales/hosting/web-hosting-new:view-details]@L]</a></span></span></li>
-                
                     </ul>
                   </div>
                 </div>

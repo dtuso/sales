@@ -1,7 +1,7 @@
 ---
 location: localization/sales/hosting/wordpress-hosting/en
-id: 53bc160ef778fc1e74b16987
-name: FOS-22246
+id: 53dc15c9f778fc32dc9e3039
+name: FOS-24754
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="subheadertext.Part1" comment="company name between part 1 and 2"/>
@@ -104,6 +104,8 @@ Free domain with annual plan - <span class="g-toolTip restrictions-link">Restric
 Free domain with annual plan - <span class="g-toolTip restrictions-link">Restrictions apply<span class="gtip-wide">One FREE .COM, .COM.MX, .CO, .NET or .ORG with purchase of a new 12-, 24-, 36- or 60-month plan. Plus ICANN fee of $0.18 per domain name per year. You must add the domain name into your cart before purchase, and you must select a domain term length equal to or less than the term length of your plan to qualify for the free domain offer. If you purchase a domain name for a term longer than the term of the plan, you will be charged for the additional registration term at the then-current rate. Cannot be used in conjunction with any other offer, sale, discount or promotion. Free domain offer applies only to the initial purchase term. After the initial purchase term, domains purchased through this offer will renew at the then-current renewal price.</span></span>
 <phrase key="wordpress-hosting-145-FreeDomainWithAnnualPlanRestrictionsApplyOneFREEAU" />
 Free domain with annual plan - <span class="g-toolTip restrictions-link">Restrictions apply<span class="gtip-wide">One FREE .COM, .COM.AU, .CO, .NET or .ORG with purchase of a new 12-, 24-, 36- or 60-month plan. Plus ICANN fee of $0.18 per domain name per year. You must add the domain name into your cart before purchase, and you must select a domain term length equal to or less than the term length of your plan to qualify for the free domain offer. If you purchase a domain name for a term longer than the term of the plan, you will be charged for the additional registration term at the then-current rate. Cannot be used in conjunction with any other offer, sale, discount or promotion. Free domain offer applies only to the initial purchase term. After the initial purchase term, domains purchased through this offer will renew at the then-current renewal price.</span></span>
+<phrase key="wordpress-hosting-145-FreeDomainWithAnnualPlanRestrictionsApplyOneFREEMANAGER" />
+Free domain with annual plan - <span class="g-toolTip restrictions-link">Restrictions apply<span class="gtip-wide">One FREE .COM, .COM.MX, .COM.BR, .CA, .UK., .CO.UK, .CO, .NET, or .ORG with purchase of a new 12-, 24-, 36- or 60-month plan. Plus ICANN fee of $0.18 per domain name per year. You must add the domain name into your cart before purchase, and you must select a domain term length equal to or less than the term length of your plan to qualify for the free domain offer. If you purchase a domain name for a term longer than the term of the plan, you will be charged for the additional registration term at the then-current rate. Cannot be used in conjunction with any other offer, sale, discount or promotion. Free domain offer applies only to the initial purchase term. After the initial purchase term, domains purchased through this offer will renew at the then-current renewal price.</span></span>
 <phrase key="wordpress-hosting-5-1000sOfThemesAndPlugins" />
 1000s of themes and plugins
 <phrase key="wordpress-hosting-4-OneClickMigrationTool" />
@@ -142,10 +144,6 @@ One promotional credit per customer for a new Facebook<sup class="supsymbol">&re
 Google AdWords Credit -
 <phrase key="wordpress-hosting-48-OnePromotionalCreditPerCustomerForANew" />
 One promotional credit per customer for a new Google AdWords account. Products purchased using a Gift Card or Alipay do not provide eligibility for advertising credits. Minimum spend USD $25. Offer valid to US & Canada residents only, excluding government controlled entities and parties. Other restrictions apply.
-<phrase key="wordpress-hosting-4-FotoliaPhotoCredits" />
-Fotolia Photo Credits -
-<phrase key="wordpress-hosting-33-OneFreePromotionalCreditPerCustomerGoodFor" />
-One free promotional credit per customer, good for ten free download credits at Fotolia. Products purchased using a Gift Card or Alipay do not provide eligibility for photography credits. Other restrictions apply.
 <phrase key="wordpress-hosting-4-WeMadeItSimple" />
 We made it simple
 <phrase key="wordpress-hosting-93-FromTheMomentYouLogInYouLl" />
