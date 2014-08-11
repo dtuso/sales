@@ -1,0 +1,95 @@
+---
+location: localization/sales/gd/ssl/categorylp/en
+id: 53d938cff778fc162c8d5db6
+name: FOS-24719
+comments: SSL & Website Protection Category Landing Page
+---
+{% include '../../modules/doc-block.html' %}
+<phrase key="page-title" />
+SSL | Internet Security Protect Your Website - [@T[companyname:name]@T]
+<phrase key="meta-description" />
+[@T[companyname:name]@T] can protect your online business with a suite of SSL tools designed to keep the bad guys out.
+<phrase key="meta-keywords" />
+SSL, what is ssl, internet security, what is internet security
+<phrase key="header-title" />
+ssl & website security
+<phrase key="header-subtitle-1" />
+[@T[companyname:name]@T] can protect your online business
+<phrase key="header-subtitle-2" />
+with SSL certificates and other Internet security tools designed to keep the bad guys out.
+<phrase key="watch-video" />
+Watch Video
+<phrase key="let-us" />
+Let us help you choose
+<phrase key="choosing-title" />
+Choosing the right security tools
+<phrase key="choosing-tag-line" />
+Unlike other products, most businesses can benefit from multiple security products or services. Here’s a quick overview of what we offer and how we protect you and your customers
+<phrase key="choosing-list-1" />
+An SSL Certificate protects the data that’s transferred to and from your site by encrypting it so hackers can’t read it.
+<phrase key="choosing-list-2" />
+A Code Signing Certificate is for developers. It keeps the software you write from being tampered  with or flat-out stolen.
+<phrase key="choosing-list-3" />
+SiteLock Website Security automatically scans your site to find and remove malware that can hurt your customers and your business.
+<phrase key="choosing-list-4" />
+Premium DNS not only protects your site, it improves its performance and reliability by giving you more control over your site’s DNS (Domain Name Servers).
+<phrase key="learn-more-ssl" />
+Learn more about our ssl tools
+<phrase key="ssl-title" />
+SSL Certificate
+<phrase key="ssl-perfect" />
+Perfect for web stores and sites that collect personal information
+<phrase key="read-reviews" />
+Read reviews
+<phrase key="ssl-description" />
+<b>As mentioned above, an SSL Certificate encrypts sensitive data that users submit to your site</b> - such as credit card numbers, password and more – so hackers or other online criminals can’t read it. Our certificates are issued in minutes and can be installed to your GoDaddy hosting account with just a few clicks. But where they really shine is with our powerful SHA-2 and 2048-bit encryption, as well as the ability to cover unlimited servers.
+<phrase key="learn-more" />
+Learn More
+<phrase key="write-own" />
+Write your own software?
+<phrase key="protect" />
+Protect your hard work with a GoDaddy Code Signing Certificate. It keeps hackers from altering your code and tells legitimate users you’re worthy of their trust.
+<phrase key="code-sign-title" />
+Code Signing Certificate
+<phrase key="code-sign-perfect" />
+Perfect for software developers who want to protect their work
+<phrase key="code-sign-description" />
+If you’re an independent software developer, this certificate is invaluable. Our Code Signing Certificate places a unique digital signature on your software that proves who wrote it, lets users know if anyone has tampered with your code and even gets rid of the “Unidentified Publisher” warning that’s a red flag to your customers. We also offer a Driver Signing Certificate, which gives your hardware drivers the same level of protection and is required by Microsoft® for operating systems Vista and later.
+<phrase key="starting-at" />
+Starting at
+<phrase key="yr" />
+/yr
+<phrase key="mo" />
+/mo
+<phrase key="website-secure" />
+Keep your website secure and your customers safe. SiteLock Website Security automatically scans for malware every day and shows visitors your site is clean.
+<phrase key="professional-plans" />
+Our Professional and Premium plans even take out the trash for you.
+<phrase key="sitelock-title" />
+SiteLock Website Security
+<phrase key="sitelock-perfect" />
+Perfect for: All websites
+<phrase key="sitelock-keeping" />
+Keeping your website safe and secure is a hugely important task. It can also be one of the most challenging and time-consuming. SiteLock Website Security eases the burden by automatically scanning your site for malware every day. And with its vulnerability scan, which looks for openings hackers could use to break into your site, you have a powerful defense at work 24/7.
+<phrase key="sitelock-description" />
+It can also be one of the most challenging and time-consuming. SiteLock Website Security eases the burden by automatically scanning your site for malware every day. And with its vulnerability scan, which looks for openings hackers could use to break into your site, you have a powerful defense at work 24/7.
+<phrase key="sitelock-best" />
+Best of all, if SiteLock does find trouble on your site, it notifies you with detailed instructions on how to fix it.
+<phrase key="sitelock-get" />
+Get sitelock website security
+<phrase key="stop-hackers" />
+Stop hackers from hijacking your traffic with Premium DNS. Our Anycast DNS Network also helps eliminate “Site Not Found” errors and improves your site’s speed and reliability.
+<phrase key="premium-dns-title" />
+Premium DNS
+<phrase key="premium-dns-perfect" />
+Perfect for: All websites
+<phrase key="premium-dns-description" />
+You don’t have to be a technical expert to improve your site’s reliability and security through your DNS (Domain Name Servers). While hackers often target a site’s DNS as a way to re-route visitors to their own malicious site, Premium DNS prevents this by placing your site’s DNS on our global network. This not only secures the process for your visitors, but also improves your site’s performance and reliability.
+<phrase key="next" />
+Next
+<phrase key="previous" />
+Previous
+<phrase key="servers" />
+Servers
+<phrase key="get-found" />
+Get found marketing tools
