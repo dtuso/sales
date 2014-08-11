@@ -32,7 +32,7 @@ a.upper {
 
 li.web-host:before
  {
-    background:url('../img/hosting-listings-sprite.png') no-repeat -695px -129px;
+    background: url('../img/hosting-listings-sprite.png') no-repeat -695px -129px;
 	width: 16px;
 	height: 12px;
     display:block;
@@ -53,7 +53,7 @@ li.web-host:before
 
 li.web-host-green:before
  {
-    background:url('../img/hosting-listings-sprite.png') no-repeat -695px -113px;
+    background: url('../img/hosting-listings-sprite.png') no-repeat -695px -113px;
 	width: 16px;
 	height: 12px;
     display:block;
@@ -72,20 +72,6 @@ li.web-host-green:before
    font-size: 16px;
 }
 
-#navlist {
-	margin-left: 0;
-	padding-left: 0;
-	list-style: none;
-}
-
-#navlist li {
-	padding-left: 10px;
-	background-image: url('../img/hosting-listings-sprite.png') no-repeat -695px -129px;
-	width: 16px;
-	height: 12px;
-	background-position: 0 .5em;
-}
-
 .white-bg {
 	background: #ffffff;
 }
@@ -98,14 +84,51 @@ li.web-host-green:before
 	background: #d4d4d4;
 }
 
+
+
+
+
+
+.section-padding {
+	padding-bottom: 80px;
+}
+
+.title {
+	margin-bottom: 20px;
+}
+
+.content-left {
+	padding-right: 110px;
+	padding-top: 75px;
+}
+
+.content-right {
+	padding-left: 80px;
+	padding-top: 75px;
+}
+
+.content-title-left {
+	padding-top: 60px;
+}
+
+.content-title-right {
+	padding-top: 60px;
+}
+
+.content-perfect {
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-bottom: 35px;
+}
+
+
+
+
+
+
 .container-padding {
+	padding-bottom: 80px;
 	padding-top: 40px;
-	padding-bottom: 40px;
-	position: relative;
-	margin-left: 0;
-	padding-left: 10em;
-	margin-right: 0;
-	padding-right: 10em;
 }
 
 .main-title {
@@ -143,26 +166,23 @@ li.web-host-green:before
 	background-image: url(../img/bkgd_hosting-listing_choose.jpg);
 	background-position: center top;
 	background-repeat: no-repeat;
+	background-size: cover;
 	position: relative;
-	margin-left: 0;
-	padding-left: 10em;
-	padding-bottom: 0;
-	margin-right: 0;
-	margin-bottom: 0;
-	padding-right: 10em;
-	min-height: 480px;
-	max-height: 540px;
+	padding-bottom: 3em;
+	padding-top: 90px;
 }
 
 .choosing-banner-content {
-	padding-top: 50px;
-	padding-left: 20px;
-	padding-right: 20px;
-	max-width: 1100px;
+	position: relative;
 }
 
 .choosing-title {
 	margin-bottom: 35px;
+}
+
+.main-banner-text {
+	padding-left: 50px;
+	padding-right: 50px;
 }
 
 .choosing-text {
@@ -173,6 +193,10 @@ li.web-host-green:before
 	margin-bottom: 20px;
 }
 
+.choosing-3 {
+	padding-right: 100px;
+}
+
 .choosing-arrow {	
 	margin-top: 55px;
 	margin-left: auto;
@@ -181,7 +205,6 @@ li.web-host-green:before
 }
 
 .shw-title {
-	min-width: 435px;
 	word-wrap:break-word;
 }
 
@@ -196,25 +219,20 @@ li.web-host-green:before
 }
 
 .swh-right {
-	min-width: 420px;
-	padding-left: 84px;
+	padding-left: 60px;
 	padding-right: 10px;
 }
 
 .swh-perfect {
-	padding-left: 15px;
 	min-width: 395px;
 }
 
 .swh-button {
-	min-width: 205px;
-	max-width: 350px;
+	padding-top: 20px;
 }
 
 .swh-starting-at {
-	padding-left: 30px;
-	min-width: 180px;
-	max-width: 240px;
+	padding-top: 25px;
 }
 
 .shw-pricing {
@@ -230,6 +248,7 @@ li.web-host-green:before
 .wp-right {
 	padding-left: 40px;
 	padding-right: 40px;
+	padding-top: 18px;
 }
 
 .wp-list-padding {
@@ -247,8 +266,7 @@ li.web-host-green:before
 }
 
 .wp-starting-at {
-	padding-left: 9px;
-	max-width: 200px;
+	padding-top: 20px;
 }
 
 .wp-pricing {
@@ -311,11 +329,14 @@ li.web-host-green:before
 	background-image: url(../img/bkgd_hosting-listing_what-is-hosting.jpg);
 	background-position: center top;
 	background-repeat: no-repeat;
+	background-size: cover;
 	position: relative;
 	margin-left: 0;
-	padding-left: 10em;
 	margin-right: 0;
-	padding-right: 10em;
+}
+
+.move {
+	cursor: pointer;
 }
 
 .what-content {
@@ -327,8 +348,22 @@ li.web-host-green:before
 	margin-bottom: 0;
 }
 
+.pricing {
+	padding-top: 0;
+}
+
+.learn-more-button-div {
+	padding-top: 10px;
+}
+
+.learn-more-button {
+	max-width: 210px;
+	word-wrap: break-word;
+	white-space: normal;
+}
+
 .button-section {
-	width: 1100px;
+	width: 900px;
 	padding-bottom: 1.9em;
 	padding-top: 2.9em;
 	padding-left: 0;
@@ -337,7 +372,22 @@ li.web-host-green:before
 	margin-left: auto;
 	box-sizing: border-box;
 	display: block;
+}
 
+.button-container {
+	width: 900px;
+}
+
+.button-container {
+
+}
+
+.left-button-div {
+	padding-right: 40px;
+}
+
+.right-button-div {
+	padding-left: 40px;
 }
 
 .left-button {
@@ -348,6 +398,8 @@ li.web-host-green:before
 .left-button-text {
 	text-align: left;
 	margin-bottom: 0;
+	width: 375px;
+	padding-left: 25px;
 }
 
 .right-button {
@@ -355,6 +407,8 @@ li.web-host-green:before
 	display: inline-block;
 	margin-top: 5px;
 	padding-right: 4px;
+	padding-left: 40px;
+	width: 417px;
 }
 
 .right-button-text {
@@ -370,92 +424,102 @@ li.web-host-green:before
 	padding-left: 0;
 	padding-right: 0;
 	margin-right: 0;
-	min-width: 417px;
+	width: 315px;
 }
 
 .hnb-14-reg-white {
-	font-family: "Helvetica Neue Regular", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-family: "Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;
 	font-size: 14px;
 	color: #ffffff;
 }
 
 .hnb-16-reg {
-	font-family: "Helvetica Neue Regular", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-family: "Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;
 	font-size: 16px;
 	color: #333333;
 }
 
+.hnb-16-bold {
+	font-family: "Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	color: #333333;
+}
+
 .hnb-16-reg-white {
-	font-family: "Helvetica Neue Regular", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-family: "Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;
 	font-size: 16px;
 	color: #ffffff;
 }
 
 .hnb-18-reg {
-	font-family: "Helvetica Neue Regular", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-family: "Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;
 	font-size: 18px;
 	color: #333333;
 }
 
 .hnb-18-bold {
-	font-family: "Helvetica Neue Bold", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-family: "Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;
 	font-size: 18px;
 	font-weight: bold;
 	color: #333333;
 }
 
 .hnb-24-cond-bold {
-	font-family: "Helvetica Neue Medium", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-family: HelveticaNeue-CondensedBold,"Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;
+	font-weight: bold; 
 	font-size: 24px;
-	font-weight: bold;
 	color: #333333;
 }
 
 .hnb-24-cond-med {
-	font-family: "Helvetica Neue Medium", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-family: "Helvetica Neue Medium", "Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;
 	font-weight: normal;
 	color: #333333;
 	font-size: 24px;
 }
 
 .hnb-24-cond-bold-white {
-	font-family: "Helvetica Neue CondensedBold", Helvetica, Arial, "Lucida Grande", sans-serif;
-	font-size: 24px;
+	font-family: HelveticaNeue-CondensedBold,"Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;
 	font-weight: bold;
+	font-size: 24px;
 	color: #ffffff;
 }
 
 .hnb-34-bold-orange {
-	font-family: "Helvetica Neue CondensedBold", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-family: "Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;
 	font-size: 34px;
-	font-weight: bold;
+	font-weight: 700;
+	line-height: 30px;
+	display: inline-block;
 	color: #ff8914;
-	max-width: 100px;
 	margin: 0;
+	padding-top: 10px;
 }
 
 .title-text {
-	font-family: "Helvetica Neue Thin", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', "Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;
 	color: #333333;
 	font-size: 48px;
 }
 
 .hnb-48-thin {
-	font-family: "Helvetica Neue Thin", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
 	font-size: 48px;
 	color: #333333;
-	font-weight: lighter;
+	font-weight: 100;
+	line-height: 1.2;
 }
 
 .hnb-48-thin-white {
-	font-family: "Helvetica Neue Thin", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
 	font-size: 48px;
 	color: #ffffff;
-	font-weight: lighter;
+	font-weight: 100;
 }
 
 .swh-sprite {
-	background: url("../img/hosting-listings-sprite.png") no-repeat -9px -24px;
+	background: no-repeat -9px -24px;
 	width: 189px;
 	height: 169px;
 	margin-left: auto;
@@ -463,7 +527,7 @@ li.web-host-green:before
 }
 
 .wph-sprite {
-	background: url('../img/hosting-listings-sprite.png') no-repeat -203px -38px;
+	background: no-repeat -203px -38px;
 	width: 210px;
 	height: 119px;
 	margin-top: 40px;
@@ -472,7 +536,7 @@ li.web-host-green:before
 }
 
 .mt-brief-sprite {
-	background: url('../img/hosting-listings-sprite.png') no-repeat -419px -38px;
+	background: no-repeat -419px -38px;
 	width: 175px;
 	height: 163px;
 	margin-top: 40px;
@@ -481,7 +545,7 @@ li.web-host-green:before
 }
 
 .mt-logo-sprite {
-	background: url('../img/hosting-listings-sprite.png') no-repeat -723px -64px;
+	background: no-repeat -723px -64px;
 	width: 148px;
 	height: 58px;
 	margin-top: 20px;
@@ -489,59 +553,57 @@ li.web-host-green:before
 }
 
 .down-green-sprite {
-	background: url('../img/hosting-listings-sprite.png') no-repeat -615px -154px;
+	background: no-repeat -615px -154px;
 	width: 54px;
 	height: 22px;
 }
 
 .down-white-sprite {
-	background: url('../img/hosting-listings-sprite.png') no-repeat -616px -193px;
+	background: no-repeat -616px -193px;
 	width: 54px;
 	height: 22px;
 }
 
 .left-white-sprite {
-	background: url('../img/hosting-listings-sprite.png') no-repeat -678px -153px;
+	background: no-repeat -678px -153px;
 	width: 18px;
 	height: 34px;
-	margin-top: 8px;
 	margin-left: 10px;
 }
 
 .right-white-sprite {
-	background: url('../img/hosting-listings-sprite.png') no-repeat -701px -153px;
+	background: no-repeat -701px -153px;
 	width: 18px;
 	height: 34px;
-	margin-top: 8px;
 }
 
 .check-orange-sprite {
-	background: url('../img/hosting-listings-sprite.png') no-repeat -695px -129px;
+	background: no-repeat -695px -129px;
 	width: 16px;
 	height: 12px;
 	margin-right: 0;
 }
 
 .check-green-sprite {
-	background: url('../img/hosting-listings-sprite.png') no-repeat -696px -125px;
+	background: no-repeat -696px -125px;
 	width: 16px;
 	height: 12px;
 }
 
 .check-white-sprite {
-	background: url('../img/hosting-listings-sprite.png') no-repeat -696px -109px;
+	background: no-repeat -696px -109px;
 	width: 16px;
 	height: 12px;
 }
 
 .star-sprite {
-	background: url('../img/hosting-listings-sprite.png') no-repeat -690px -77px;
+	background: no-repeat -690px -77px;
 	width: 29px;
 	height: 27px;
 }
 
 .play-sprite {
-	background: url('../img/hosting-listings-sprite.png') no-repeat -599px -64px;
+	background: no-repeat -599px -64px;
 	width: 85px;
 	height: 85px;
 }
