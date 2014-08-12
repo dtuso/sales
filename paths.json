@@ -25,6 +25,7 @@
   "search":             "./domains/search/",
   "search-config":      "./domains/search/search.config",
   "searchresults":      "./domains/searchresults/",
+  "servers":             "./hosting/servers/",
   "ssl":                "./ssl/ssl-certificates/",
   "static-ip":          "./ssl/static-ip/",
   "tui":                "./domains/tui/",  
@@ -38,4 +39,5 @@
   "wp":                 "./hosting/wordpress-hosting/",
   "wsb":                "./hosting/website-builder/",
   "hostingclp":          "./hosting/category-landing-page/"
+
 }

@@ -1,0 +1,106 @@
+---
+location: localization/sales/gd/product-listing/servers/en
+id: false
+name: FOS-23517
+---
+{% include '../../../modules/doc-block.html' %}
+<phrase key="page-title" />
+Servers | Available Web Server Options - [@T[companyname:name]@T]
+<phrase key="meta-description" />
+Need help figuring out what type of Server configuration is right for your Website? [@T[companyname:name]@T] has a multitude of different low-cost options to get your website up in no time.
+<phrase key="meta-keywords" />
+Servers, web server, what is a server, web servers, how to host a website
+<phrase key="header-title" />
+Servers
+<phrase key="header-subtitle-1" />
+Need help figuring out what type of web server is right for you?
+<phrase key="header-subtitle-2" />
+[@T[companyname:name]@T] has a wide variety of different low-cost options to get your website up in no time.
+<phrase key="let-us" />
+LET US HELP YOU CHOOSE
+<phrase key="watch-video" />
+Watch Video
+<phrase key="choosing-title" />
+What is a server? 
+<phrase key="choosing-tag-line" />
+Basically, it’s a large, powerful computer that’s connected to a network so it can ‘serve’ files, such as web pages, to multiple users at once. When selecting a server, there are a lot of options to choose from, even within a single plan. Here’s a quick snapshot of our products to help you get up to speed.
+<phrase key="choosing-list-1" />
+Dedicated Server: Our ultimate server option. Your own dedicated server, with all the performance, control and flexibility you need.
+<phrase key="choosing-list-2" />
+Managed VPS (Virtual Private Server): A great option for budget-minded businesses. Similar to a Dedicated Server in power and flexibility, but with a little less control and a lower price tag.
+<phrase key="choosing-list-3" />
+Managed Hosting: Designed for businesses that need the resources of a Dedicated Server, but don’t have the time or technical expertise to manage it.
+<phrase key="choosing-list-4" />
+Reseller Hosting: Built for web designers, developers or anyone else who wants to use one of our web servers to power their own hosting business.
+<phrase key="choosing-list-5" />
+Dedicated IP: More of an add-on for smaller hosting plans, a Dedicated IP is exactly as it sounds: An IP address that’s exclusive to you.
+<phrase key="learn-more-servers" />
+LEARN MORE ABOUT OUR SERVERS
+<phrase key="servers-title" />
+Dedicated Servers
+<phrase key="servers-perfect" />
+Perfect for high-traffic or resource-intensive sites that need complete control.
+<phrase key="servers-description" />
+Just as its name implies, our Dedicated Servers give you an entire server to yourself to set up and manage however you see fit. 
+<phrase key="servers-description-24" />
+Powered by your choice of multi-core processors, up to 32GB RAM and several different hard drive configurations, our customizable Dedicated Server plans deliver the ultimate in performance and control. As with all of our products, we’re here to help with free, award-winning support, available 24/7 by phone or email.
+<phrase key="servers-description-not-24" />
+Powered by your choice of multi-core processors, up to 32GB RAM and several different hard drive configurations, our customizable Dedicated Server plans deliver the ultimate in performance and control. As with all of our products, we’re here to help with free, award-winning support, available by phone or email.  
+<phrase key="learn-more" />
+Learn More
+<phrase key="yr" />
+/yr
+<phrase key="mo" />
+/mo
+<phrase key="managed-vps-title" />
+Managed VPS
+<phrase key="managed-vps-perfect" />
+Perfect for high-traffic sites, developers and creative agencies
+<phrase key="no-it" />
+No IT staff? No problem. With Managed VPS, our experts do the heavy lifting, you get the power of your own private server.
+<phrase key="managed-vps-description" />
+If your site demands the power of a dedicated server, but your budget isn’t cooperating, our Managed VPS (Virtual Private Server) is for you. With five customizable plans to choose from, each available in CentOS®, Fedora® and Windows®, you can design a unique hosting solution that fits you perfectly. Choose CentOS with cPanel® or Fedora, select your bandwidth and backup options, even add more capacity anytime with just a few clicks. 
+<phrase key="starting-at" />
+Starting at
+<phrase key="managed-hosting-title" />
+Managed Hosting
+<phrase key="managed-hosting-perfect" />
+Perfect for websites that need help managing their advanced hosting.
+<phrase key="power-dedicated" />
+If you need the power of a dedicated server, but don’t have the time or tech skills to run it, Managed Hosting is a great solution. 
+<phrase key="managed-hosting-description" />
+It’s your own dedicated server that also includes your own dedicated experts to manage and monitor it for you. Our in-house pros will:
+<phrase key="managed-hosting-list-1" />
+Set up your server
+<phrase key="managed-hosting-list-2" />
+Install the apps you want
+<phrase key="managed-hosting-list-3" />
+Manage security (including virus scanning) and more
+<phrase key="managed-hosting-best" />
+You get all the benefits of a dedicated server without the work of running it yourself. 
+<phrase key="sell-hosting" />
+Want to sell hosting? Be your own hosting company with [@T[companyname:name]@T] Reseller Hosting. You sell, bill and host sites right from your own server. No stress, no limits.
+<phrase key="resller-hosting-description" />
+Starting your own hosting company from the ground up is a massive investment in technology and time. That’s why we offer Reseller Hosting; to give small businesses, like independent designers and developers, a way to provide hosting to their customers. You get to customize your own virtual private server and decide how to divide it out into plans for your customers. It’s a perfect solution for anyone who knows their way around a server and has customers or clients who ask how to host a website.
+<phrase key="reseller-hosting-title" />
+Reseller Hosting
+<phrase key="reseller-hosting-perfect" />
+Perfect for web designers or developers who want to be a one-stop shop for their clients.
+<phrase key="dedicated-ip-title" />
+Dedicated IP
+<phrase key="dedicated-ip-perfect" />
+Perfect for anyone who needs access to their site, even during DNS propagation periods.
+<phrase key="need-anytime" />
+Need anytime access?If you just can’t wait to access your website, get a Dedicated IP address.Upload files, preview changes and more whenever you like, 24/7/365.
+<phrase key="dedicated-ip-description" />
+Like a dedicated server, the name says it all. While most sites share their server’s IP address, a Dedicated IP is 100% yours and yours alone. If you need to access your domain name when it might not otherwise be available, like during domain propagation periods, a Dedicated IP is the simplest, most affordable solution.
+<phrase key="read-reviews" />
+Read Reviews
+<phrase key="previous" />
+Previous
+<phrase key="next" />
+Next
+<phrase key="hosting" />
+Hosting
+<phrase key="ssl" />
+SSL & Site Protection
