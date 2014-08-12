@@ -1,0 +1,25 @@
+{
+  "servers.html": {
+    "cdsDetails": {
+      "champion": {
+        "name": "Sergio Lopez",
+        "email": "sylopez@godaddy.com"
+      }
+    },
+    "metaTitle": "[@L[cds.sales/gd/product-listing/servers:page-title]@L]",
+    "metaDescription": "[@L[cds.sales/gd/product-listing/servers:meta-description]@L]",
+    "metaKeywords": "[@L[cds.sales/gd/product-listing/servers:meta-keywords]@L]",
+    "metaCanonicalPath": ".aspx",
+    "metaOgTitle": "[@L[cds.sales/gd/product-listing/servers:og-title]@L]",
+    "metaOgImage": "fos/hp/rebrand/img/gd_rebrand_og.png",
+    "metaOgDescription": "[@L[cds.sales/gd/product-listing/servers:og-description]@L]"
+  },
+  "servers.language": {
+    "cdsDetails": {
+      "champion": {
+        "name": "Sergio Lopez",
+        "email": "sylopez@godaddy.com"
+      }
+    }
+  }
+}
