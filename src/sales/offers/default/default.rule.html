@@ -1,0 +1,18 @@
+---
+location: sales/offers/default.aspx.rule
+id: 53ea8617f778fc101cb59ade
+name: FOS-23937
+comments: setup page 
+---
+[
+{ 
+    'Type': 'Redirect', 
+    'Condition': '(!siteContextAny(gd) || !hasISC()) && !isManager()', 
+    'Data': "{ 'Type' : '302', 'Loc': '[@T[link:<relative path=\"\"></relative>]@T]' }"
+  },
+  { 
+    'Type': 'Redirect',
+    'Condition': 'splitTestingSideIsActive(1323, B)',
+    'Data': "{ 'Type' : '302', 'Loc': '[@T[link:<relative path=\"~/hosting/website-builder.aspx\" />]@T]' }"
+  }
+]
