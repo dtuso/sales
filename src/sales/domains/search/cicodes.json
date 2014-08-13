@@ -223,7 +223,19 @@
           { "ITC Code" : "" },
           { "Description" : "Top Pod - .EMAIL Link" }
         ]
+      },  
+      { "Top TLD Pods - .NYC link" : [
+          { "ITC ID" : "92361" },
+          { "ITC Code" : "" },
+          { "Description" : "Top Pod - .NYC Link" }
+        ]
       },
+      { "Top TLD Pods - .WEBSITE link" : [
+          { "ITC ID" : "90328" },
+          { "ITC Code" : "" },
+          { "Description" : "Top Pod - .WEBSITE Link" }
+        ]
+      },    
       { "Top TLD Pods - .PE link" : [
           { "ITC ID" : "91800" },
           { "ITC Code" : "TopPodPELink" },
@@ -290,6 +302,12 @@
           { "ITC ID" : "89734" },
           { "ITC Code" : "" },
           { "Description" : "Buttom TLD Pods - .DIRECTORY" }
+        ]
+      },
+      { "Buttom TLD Pods - .CLUB" : [
+          { "ITC ID" : "90324" },
+          { "ITC Code" : "" },
+          { "Description" : "Buttom TLD Pods - .CLUB" }
         ]
       },
       { "Buttom TLD Pods - .CONSULTING" : [
@@ -426,6 +444,12 @@
           { "Description" : "New Available TLD's Column - .HOUSE" }
         ]
       },
+       { "New Domains Available TLD's Column - .PHOTOS" : [
+          { "ITC ID" : "92517" },
+          { "ITC Code" : "" },
+          { "Description" : "New Available TLD's Column - .PHOTOS" }
+        ]
+      },
       { "New Domains Available TLD's Column - .EXPERT" : [
           { "ITC ID" : "91798" },
           { "ITC Code" : "NewAvailExpert" },
@@ -481,7 +505,7 @@
           { "ITC Code" : "" },
           { "Description" : "Coming Soon TLD's Column - .WEB" }
         ]
-      },
+      },     
       { "Coming Soon TLD's Column - .WIKI" : [
           { "ITC ID" : "90061" },
           { "ITC Code" : "" },
