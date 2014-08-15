@@ -1,7 +1,17 @@
-##if(targetMessageTagAny(sales_hp,fos22046_nyc_1) && splitTestingSideIsActive(1287, B))
+##if(targetMessageTagAny(sales_hp,fos22046_nyc_1))
+  ##if(splitTestingSideIsActive(1327, B))
     [@P[tmsdocument:<data interactionpoint="sales_hp"><MessageTags><MessageTag>fos22046_nyc_1</MessageTag></MessageTags></data>]@P]
-##elseif(targetMessageTagAny(sales_hp_default,fos24652_30off) && splitTestingSideIsActive(1281, B))
-  [@P[tmsdocument:<data interactionpoint="sales_hp_default"><MessageTags><MessageTag>fos24652_30off</MessageTag></MessageTags></data>]@P]  
+  ##else
+    {% include "marquee_builds/en/_en-us_orangeIpad.html" %}
+  ##endif
+##elseif(targetMessageTagAny(sales_hp,fos25096_multiemail))
+  [@P[tmsdocument:<data interactionpoint="sales_hp"><MessageTags><MessageTag>fos25096_multiemail</MessageTag></MessageTags></data>]@P]
+##elseif(targetMessageTagAny(sales_hp_default,fos23002_abndcart))
+  ##if(splitTestingSideIsActive(1325, B))
+    [@P[tmsdocument:<data interactionpoint="sales_hp_default"><MessageTags><MessageTag>fos23002_abndcart</MessageTag></MessageTags></data>]@P]
+  ##else
+    {% include "marquee_builds/en/_en-us_orangeIpad.html" %}
+  ##endif  
 ##elseif(targetMessageTagAny(sales_hp,sales_hp_marquee_2014jun_dbp))
   [@P[tmsdocument:<data interactionpoint="sales_hp"><MessageTags><MessageTag>sales_hp_marquee_2014jun_dbp</MessageTag></MessageTags></data>]@P]
 ##elseif(targetMessageTagAny(sales_hp_default,fos21197_office365_1))
