@@ -1,8 +1,8 @@
 ---
 location: localization/sales/gd/tlds/gtld/en
-id: 
-name: FOS-24306
-comments: Update header slider for 8/4
+id: 53eb9ec8f778fc2e447b92b0
+name: FOS-25357
+comments: Updating slider content.
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="MetaDescription" />
@@ -10,7 +10,7 @@ gTLDs or Generic Top Level Domains are the latest way for you to secure the perf
 <phrase key="MetaKeywords" />
 gTLD, gTLDs, Generic Top Level Domain, Generic TLD, gTLD names
 <phrase key="MetaTitle" />
-gTLD Extensions | Discover Your Next Domain - [@T[companyname:name]@T]
+gTLD Extensions | Discover Your Next Domain - [@T[companyname:nameseotitle]@T]
 <phrase key="HPOpenGraphDescription" />
 100s of new domains are coming – .SHOP, .CLUB, .NYC and more. Increase your chances of getting the domain you want – Follow it now at [@T[companyname:name]@T]. http://www.godaddy.com/tlds/gtld.aspx
 <phrase key="HPOpenGraphTitle" />
@@ -442,7 +442,7 @@ Enter a <b>Domain Name</b>
 <phrase key="MainBannerCarouselSlide2TextNinja" />
 Show off your <strong>.ninja</strong> skills
 <phrase key="MainBannerCarouselSlide3TextEmail" />
-.EMAIL delivers
+<strong>.email</strong> delivers
 <phrase key="MainBannerCarouselSlideTextUno"  comments="DO NOT TRANSLATE" />
 <strong>.uno</strong> El Internet en Español.
 <phrase key="MainBannerCarouselSlideTextUnoWithNoTld"/>

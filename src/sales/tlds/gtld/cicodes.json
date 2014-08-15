@@ -12,6 +12,18 @@
           { "Description" : ".CLUB Slide Link" }
         ]
       },
+      { ".EMAIL Slide Link" : [
+          { "ITC ID" : "92569" },
+          { "ITC Code" : "" },
+          { "Description" : ".EMAIL Slide Link" }
+        ]
+      },
+      { ".XYZ Slide Link" : [
+          { "ITC ID" : "92570" },
+          { "ITC Code" : "" },
+          { "Description" : ".XYZ Slide Link" }
+        ]
+      },
       { ".GURU Slide Link" : [
           { "ITC ID" : "89138" },
           { "ITC Code" : "" },
