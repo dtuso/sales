@@ -155,9 +155,13 @@ if (!domains.controls.cds_search) {
 var searchClient = new domains.controls.cds_search();
 
 function pathIsDeals2(){
-  if(getQueryParams()['path'] !== undefined)
+  if(document.referrer.toString().indexOf("deals2") > -1) {
+    return true;
+  }
+  else if(getQueryParams()['path'] !== undefined){
     return getQueryParams()['path'] === 'deals2';
-  else
+  }
+
     return false;
 }
 
