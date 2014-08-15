@@ -1,8 +1,8 @@
 ---
 location: sales/offers/default.aspx
-id: 53d9ccdcf778fc0944671b32
-name: FOS-23937
-comments: setup page 
+id: 53e92f60f778fc334cbc6d54
+name: FOS-25428
+comments: Add new headline
 ---
 {% extends 'sales/offers/default/layouts/base.html' %} 
 {% block metahead %} 
@@ -53,14 +53,23 @@ the message tags have a qualifying rule. Using 1 PlaceHolder all the tags can be
 
 {% set domwsb = ["offers_1domwsb_headline_1","offers_1domwsb_headline_2","offers_1domwsb_headline_3","offers_1domwsb_headline_4","offers_1domwsb_headline_5","offers_1domwsb_headline_6","offers_1domwsb_headline_7","offers_1domwsb_headline_8","offers_1domwsb_headline_9","offers_1domwsb_headline_10","offers_1domwsb_headline_11"] %}
 
-##elseif(targetMessageTagAny(sales_advlp,{{ domwsb }}))
+##elseif(targetMessageTagAny(sales_advlp,offers_1domwsb_headline_1,offers_1domwsb_headline_2,offers_1domwsb_headline_3,offers_1domwsb_headline_4,offers_1domwsb_headline_5,offers_1domwsb_headline_6,offers_1domwsb_headline_7,offers_1domwsb_headline_8,offers_1domwsb_headline_9,offers_1domwsb_headline_10,offers_1domwsb_headline_11,offers_1domwsb_headline_12))
       <section class="main-banner main-banner-offers" id="domainRow">
         <div class="l-main-container container main-banner-content" data-tms-msgid="[@D[TMSMessageId]@D]" data-tms-tagname="[@D[TMSMessageTag]@D]" data-tms-messagename="[@D[TMSMessageName]@D]" data-tms-trackingid="[@D[TMSMessageTrackingId]@D]">
           [@P[tmsdocument:<data interactionpoint="sales_advlp">
             <MessageTags>
-            {% for key in domwsb -%}
-            {{'  '}}<MessageTag>{{key}}</MessageTag>
-            {%- endfor -%}
+              <MessageTag>offers_1domwsb_headline_1</MessageTag>
+              <MessageTag>offers_1domwsb_headline_2</MessageTag>
+              <MessageTag>offers_1domwsb_headline_3</MessageTag>
+              <MessageTag>offers_1domwsb_headline_4</MessageTag>
+              <MessageTag>offers_1domwsb_headline_5</MessageTag>
+              <MessageTag>offers_1domwsb_headline_6</MessageTag>
+              <MessageTag>offers_1domwsb_headline_7</MessageTag>
+              <MessageTag>offers_1domwsb_headline_8</MessageTag>
+              <MessageTag>offers_1domwsb_headline_9</MessageTag>
+              <MessageTag>offers_1domwsb_headline_10</MessageTag>
+              <MessageTag>offers_1domwsb_headline_11</MessageTag>
+              <MessageTag>offers_1domwsb_headline_12</MessageTag>
             </MessageTags>
           </data>]@P]
           [@P[cdsDocument:<data app="sales" location="offers/segments/free-domain-search" /> ]@P]
@@ -88,7 +97,7 @@ the message tags have a qualifying rule. Using 1 PlaceHolder all the tags can be
 
     $(document).ready(function () {
 
-      $('[data-ci]').click(function (E) {
+      $('[data-ci]').click(function (e) {
           var $this = $(this);
           var ci = $this.attr('data-ci');
           // example, checks to see if data-ci="domain-search-click"
