@@ -1,0 +1,25 @@
+{
+  "ssl.html": {
+    "cdsDetails": {
+      "champion": {
+        "name": "Colyn Brown",
+        "email": "clbrown@godaddy.com"
+      }
+    },
+    "metaTitle": "[@L[cds.sales/gd/ssl/categorylp:page-title]@L]",
+    "metaDescription": "[@L[cds.sales/gd/ssl/categorylp:meta-description]@L]",
+    "metaKeywords": "[@L[cds.sales/gd/ssl/categorylp:meta-keywords]@L]",
+    "metaCanonicalPath": "/ssl.aspx",
+    "metaOgTitle": "[@L[cds.sales/gd/ssl/categorylp:og-title]@L]",
+    "metaOgImage": "fos/hp/rebrand/img/gd_rebrand_og.png",
+    "metaOgDescription": "[@L[cds.sales/gd/ssl/categorylp:og-description]@L]"
+  },
+  "ssl.language": {
+    "cdsDetails": {
+      "champion": {
+        "name": "Colyn Brown",
+        "email": "clbrown@godaddy.com"
+      }
+    }
+  }
+}
