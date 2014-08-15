@@ -1,7 +1,7 @@
 ---
 location: localization/sales/gd/hosting/product-listing/hosting/en
-id: false
-name: FOS-24584
+id: 53e00a34f778fc33bc708f70
+name: FOS-25192
 ---
 {% include '../../modules/doc-block.html' %}
 
@@ -18,7 +18,7 @@ Your website. Always up. Always on.
 <phrase key="tag-line" />
 Looking for a secure, reliable home for your website?
 <phrase key="tag-line-two" />
-We have scalable plans to fit your needs. Learn about the different Domain Hosting options [@T[companyname:name]@T] offers, from lightning-fast shared Hosting to Virtual Private Servers, all backed by 24/7 support.
+We have scalable plans to fit your needs. Learn about the different Domain Hosting options [@T[companyname:name]@T] offers, from lightning-fast shared Hosting to Virtual Private Servers, all backed by free support.
 <phrase key="choose-right" />
 Choosing the right hosting plan.
 <phrase key="choose-right-description" />
@@ -48,13 +48,15 @@ Our servers not only provide the fastest page load times in the industry, they a
 <phrase key="swh-speed" />
 Our hosting plans automatically adjust to traffic spikes so your site stays up and running at top speed. 
 <phrase key="swh-uptime" />
-We back our web hosting services with free 24/7 support, 99.9% uptime and money-back guarantee and much more. 
+We back our web hosting services with free support, 99.9% uptime and money-back guarantee and much more. 
 <phrase key="starting-at" />
 Starting at 
 <phrase key="mo" />
 /mo
 <phrase key="getswh" />
 Get Shared Hosting 
+<phrase key="learn-more" />
+Learn More
 <phrase key="reviews" />
 Read Reviews
 <phrase key="breakout" />
