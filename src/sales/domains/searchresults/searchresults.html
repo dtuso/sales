@@ -379,6 +379,7 @@ name: FOS-24164
       <span class="pricing" data-bind="visible: !$parent.IsSelected()">
         <span class="price price-strike" data-bind="html: (SelectedSubPhase() || $data).Prices().TotalCurrent ? (SelectedSubPhase() || $data).Prices().TotalList : ''">$MXN.XX</span>
         <span class="price" data-bind="html: (SelectedSubPhase() || $data).Prices().TotalCurrent ? (SelectedSubPhase() || $data).Prices().TotalCurrent : (SelectedSubPhase() || $data).Prices().TotalList">$MXNXXX.XX</span>
+        <span class="price" data-bind="visible: HasIcannFee">*</span>
         <span class="selectedName" data-bind="html: Name">&nbsp;</span>
       </span>
       <!-- /ko -->
@@ -478,7 +479,7 @@ name: FOS-24164
         <div class="registrationInfo">[@L[cds.sales/domains/searchresults-new3:TwoYearRegistrationRequired]@L]</div>
         <!-- /ko -->
       </div>
-      <div class="ccTldSelect selectbox checkbox" data-bind="uniqueId: Id, css: { selected: IsSelected }, click: UpdateCart, clickBubble: false, visible: !fullAvailCheckError()">&nbsp;
+      <div class="ccTldSelect selectbox checkbox" data-bind="uniqueId: Id, css: { selected: IsSelected }, click: function(data, event) { UpdateCart(data, event, true) }, clickBubble: false, visible: !fullAvailCheckError()">&nbsp;
       </div>
     </div>
   </script>
@@ -520,6 +521,7 @@ name: FOS-24164
       <span class="priceDescription" data-bind="visible: HasSubPhases">[@L[cds.sales/domains/searchresults-new3:StartingPriceText]@L]</span>
       <span class="price price-strike" data-bind="html: Prices().TotalCurrent ? Prices().TotalList : ''">$MXNXXX.XX</span>
       <span class="price"data-bind="html: Prices().TotalCurrent ? Prices().TotalCurrent : Prices().TotalList">$MXNXXX.XX</span>
+      <span class="price"data-bind="visible: HasIcannFee">*</span>
     </span>
   </script>
   
@@ -782,7 +784,7 @@ name: FOS-24164
   <script type="text/javascript">$sf = { skin: "fos" };</script>
   <script type="text/javascript" src="[@T[link:<javascriptroot />]@T]starfield/curl/v1.1.2/curl.js"></script>
   <script type="text/javascript" src="[@T[link:<javascriptroot />]@T]fos/domains/search-new/js/filter.slider.min.js"></script>
-  <script type="text/javascript" src="[@T[link:<js path='fos/sales/themes/scotty/domains/searchresults/js/searchresults_20140815.js' />]@T]"></script>
+  <script type="text/javascript" src="[@T[link:<js path='fos/sales/themes/scotty/domains/searchresults/js/searchresults_20140817.js' />]@T]"></script>
   <script type="text/javascript" src="[@T[link:<javascriptroot />]@T]fos/sales/themes/scotty/domains/searchresults/js/searchbox_20140815.js"></script>
 
   <!--[if lte IE 8]>
