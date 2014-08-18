@@ -15,234 +15,243 @@ name: FOS-24164
   <meta name="description" content="[@L[cds.sales/domains/searchresults-new:MetaDescription]@L]" />
   <meta name="keywords" content="[@L[cds.sales/domains/searchresults-new:MetaKeywords]@L]" />
   <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
-  <link rel="canonical" href="[@T[link:<external linktype='siteurl' secure='false' path='/domains/searchresults-new.aspx' />]@T]"/> 
+  <link rel="canonical" href="[@T[link:<external linktype='siteurl' secure='false' path='/domains/searchresults-new.aspx' />]@T]"/>
   [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags" />]@P]
   <link rel="stylesheet" type="text/css" href="[@T[link:<cssroot />]@T]shared/css/1/styles_20130904.min.css">
   <link type="text/css" rel="stylesheet" href="[@T[link:<cssroot />]@T]fos/global/build/0.2.0/gd-fos-global.min.css" />
-  ##if(siteContextAny(gd))  
+  ##if(siteContextAny(gd))
   <link rel="shortcut icon" href="[@T[link:<imageroot />]@T]assets/godaddy.ico" />
-  <link type="text/css" rel="stylesheet" href="[@T[link:<cssroot />]@T]fos/sales/themes/scotty/domains/searchresults/css/styles.css?v=24164" />
-  ##else  
-  <link type="text/css" rel="stylesheet" href="[@T[link:<cssroot />]@T]fos/sales/themes/scotty/domains/searchresults/css/styles_PL.css?v=24164" />
-  ##endif    
+  <link type="text/css" rel="stylesheet" href="[@T[link:<cssroot />]@T]fos/sales/themes/scotty/domains/searchresults/css/styles.css" />
+  ##else
+  <link type="text/css" rel="stylesheet" href="[@T[link:<cssroot />]@T]fos/sales/themes/scotty/domains/searchresults/css/styles_PL.css" />
+  ##endif
   <script type="text/javascript"  src="[@T[link:<javascriptroot />]@T]shared/js/1.5.1/global.20120918.min.js"></script>
   ##if(!activeLanguageAny(en, es))
   <style>
-     #results .slider,#results .filter-slider{margin-bottom: 32px;width:232px;}
-  </style> 
+    #results .slider,#results .filter-slider{margin-bottom: 32px;width:232px;}
+  </style>
   ##endif
-   <style>
-       #results .g-toolTip > * > p.nomargin{margin-top:0em !important; }
-    </style>
+  <style>
+    #results .g-toolTip > * > p.nomargin{margin-top:0em !important; }
+  </style>
 </head>
 <body>
-  [@P[webControl:<data assembly="App_Code" type="WebControls.PresentationCentral.Header" />]@P]
-  <div id="main-wrap">
-    <div id="results">
-      <div id="search">
-        <form id="domain_search_form" method="post">
-          <input type="hidden" id="domainToCheck" name="domainToCheck" />
-          <input type="text" autocomplete="off" id="domain_search_input" data-bind="value: DomainSearchResults.ViewModel.TypedValue() + (0 < DomainSearchResults.ViewModel.TypedTLD().length ? '.' + DomainSearchResults.ViewModel.TypedTLD() : '')" />
-          <div id="search_form_btn" class="searchbox-search searchbox-btn btn">[@L[cds.sales/domains/searchresults-new3:SearchActionText]@L]</div>
-        </form>
+[@P[webControl:<data assembly="App_Code" type="WebControls.PresentationCentral.Header" />]@P]
+<div id="main-wrap">
+  <div id="results">
+    <div id="search">
+      <form id="domain_search_form" method="post">
+        <input type="hidden" id="domainToCheck" name="domainToCheck" />
+        <input type="text" autocomplete="off" id="domain_search_input" data-bind="value: DomainSearchResults.ViewModel.TypedValue() + (0 < DomainSearchResults.ViewModel.TypedTLD().length ? '.' + DomainSearchResults.ViewModel.TypedTLD() : '')" />
+        <div id="search_form_btn" class="searchbox-search searchbox-btn btn">[@L[cds.sales/domains/searchresults-new3:SearchActionText]@L]</div>
+      </form>
+      ##if(splitTestingSideIsActive(1191, B))
+      <div class="currentSelected" data-bind="visible: 1 == SelectedDomains()" style="display:none"><span data-bind="text: SelectedDomains">0</span>&nbsp;[@L[cds.sales/domains/searchresults-new3:xDomainAddedNew]@L]</div>
+      <div class="currentSelected" data-bind="visible: 1 < SelectedDomains()" style="display:none"><span data-bind="text: SelectedDomains">0</span>&nbsp;[@L[cds.sales/domains/searchresults-new3:xDomainsAddedNew]@L]</div>
+      ##else
+      <div class="currentSelected" data-bind="visible: 1 == SelectedDomains()" style="display:none"><span data-bind="text: SelectedDomains">0</span>&nbsp;[@L[cds.sales/domains/searchresults-new3:xDomainAdded]@L]</div>
+      <div class="currentSelected" data-bind="visible: 1 < SelectedDomains()" style="display:none"><span data-bind="text: SelectedDomains">0</span>&nbsp;[@L[cds.sales/domains/searchresults-new3:xDomainsAdded]@L]</div>
+      ##endif
+    </div>
+
+    <div class="spinner_div" data-bind="visible: !IsLoaded()"></div>
+    <div data-bind="visible: IsLoaded" style="display:none;">
+      <!-- #region Header/Headline -->
+
+      <!-- ko with: ExactMatch -->
+      <div class="headerResult" data-bind="visible: $parent.ShowExactMatch, withProperties: { context: 'header' }">
+        <div>
+          <h3 data-bind="visible: !Type.eq(DomainSearchResults.ItemTypes.PreRegistration)">[@L[cds.sales/domains/searchresults-new3:DomainAvailable]@L]</h3>
+          <h3 data-bind="visible: Type.eq(DomainSearchResults.ItemTypes.PreRegistration) && !Type().IsEarlyAccess">[@L[cds.sales/domains/searchresults-new3:PreRegistrationAvailable]@L]</h3>
+          <h3 data-bind="visible: Type().IsEarlyAccess">[@L[cds.sales/domains/searchresults-new3:EAPreRegistrationAvailable]@L]</h3>
+        </div>
         ##if(splitTestingSideIsActive(1191, B))
-        <div class="currentSelected" data-bind="visible: 1 == SelectedDomains()" style="display:none"><span data-bind="text: SelectedDomains">0</span>&nbsp;[@L[cds.sales/domains/searchresults-new3:xDomainAddedNew]@L]</div>
-        <div class="currentSelected" data-bind="visible: 1 < SelectedDomains()" style="display:none"><span data-bind="text: SelectedDomains">0</span>&nbsp;[@L[cds.sales/domains/searchresults-new3:xDomainsAddedNew]@L]</div>
+        <a href="javascript:void(0)" class="flt-btn flt-btn-grn nextStep" data-bind="css: { 'flt-btn-inactive' : !$root.CanGoToNextStep() }, click: $root.GoToNextStep">[@L[cds.sales/domains/searchresults-new3:ReadyToCheckOut-new]@L]</a>
         ##else
-        <div class="currentSelected" data-bind="visible: 1 == SelectedDomains()" style="display:none"><span data-bind="text: SelectedDomains">0</span>&nbsp;[@L[cds.sales/domains/searchresults-new3:xDomainAdded]@L]</div>
-        <div class="currentSelected" data-bind="visible: 1 < SelectedDomains()" style="display:none"><span data-bind="text: SelectedDomains">0</span>&nbsp;[@L[cds.sales/domains/searchresults-new3:xDomainsAdded]@L]</div>
+        <a href="javascript:void(0)" class="flt-btn flt-btn-grn nextStep" data-bind="css: { 'flt-btn-inactive' : !$root.CanGoToNextStep() }, click: $root.GoToNextStep">[@L[cds.sales/domains/searchresults-new3:ReadyToCheckOut]@L]</a>
+        ##endif
+        <div class="result" data-bind="attr: { 'data-id': Id }, css: Type().Value, template: { name: 'DomainTemplate' }"></div>
+      </div>
+
+      <p class="unavailableCopy" data-bind="visible: $parent.IsValid() && !$parent.ShowExactMatch() && !$parent.IsBlocked()">
+        [@L[cds.sales/domains/searchresults-new3:Sorry]@L] <span class="domainName"><span data-bind="html: DomainSearchResults.BreakString(SLD(), 48)">Typed Domain</span><span data-bind="visible: 0 < TLD().length, html: '.' + TLD()">TLD</span></span> [@L[cds.sales/domains/searchresults-new3:NotAvailableMessage]@L]
+        <span data-bind="visible: $parent.Unavailable()" class="wantIt"> [@L[cds.sales/domains/searchresults-new3:WantIt]@L] [@L[cds.sales/domains/searchresults-new3:TryOur]@L] <a href="#" data-bind="click: ShowDbs">[@L[cds.sales/domains/searchresults-new3:DomainBuyServiceName]@L]</a>.</span>
+      </p>
+
+      <p class="unavailableCopy" data-bind="visible: $parent.IsValid() && !$parent.ShowExactMatch() && $parent.IsBlocked()">
+        [@L[cds.sales/domains/searchresults-new3:Sorry]@L] <span class="domainName"><span data-bind="html: DomainSearchResults.BreakString(SLD(), 48)">Typed Domain</span><span data-bind="visible: 0 < TLD().length, html: '.' + TLD()">TLD</span></span> [@L[cds.sales/domains/searchresults-new3:NotCurrentlyAvailableMessage]@L]
+      </p>
+
+
+      <!-- /ko -->
+
+      <p class="unavailableCopy" data-bind="visible: NotValid()">[@L[cds.sales/domains/searchresults-new3:NotAvailable]@L]</p>
+
+      <!-- #endregion -->
+
+      <!-- ko if: IsValid -->
+      <div class="stripMall-tagLine">
+        <!-- ko if: 0 < Items().length -->
+        <span data-bind="visible: ShowExactMatch">[@L[cds.sales/domains/searchresults-new3:NameAvailableRecommendation]@L]</span>
+        <span data-bind="visible: IsValid() && !ShowExactMatch()">[@L[cds.sales/domains/searchresults-new3:NameUnAvailableRecommendation]@L]</span>
+        <!--/ko -->
+        ##if(splitTestingSideIsActive(1191, B))
+        <a href="javascript:void(0)" class="flt-btn flt-btn-grn nextStep" data-bind="css: { 'flt-btn-inactive' : !$root.CanGoToNextStep() }, click: $root.GoToNextStep">[@L[cds.sales/domains/searchresults-new3:ReadyToCheckOut-new]@L]</a>
+        ##else
+        <a href="javascript:void(0)" class="flt-btn flt-btn-grn nextStep" data-bind="css: { 'flt-btn-inactive' : !$root.CanGoToNextStep() }, click: $root.GoToNextStep">[@L[cds.sales/domains/searchresults-new3:ReadyToCheckOut]@L]</a>
         ##endif
       </div>
+      <div class="filters">
+        <h3>[@L[cds.sales/domains/searchresults-new3:FiltersTitle]@L]</h3>
+        <ul data-bind="foreach: Filters">
+          <li data-bind="template: { name: 'FilterTemplate' }, css: { expanded: IsExpanded }"></li>
+        </ul>
+      </div>
 
-      <div class="spinner_div" data-bind="visible: !IsLoaded()"></div>
-      <div data-bind="visible: IsLoaded" style="display:none;">
-        <!-- #region Header/Headline -->
-  
-        <!-- ko with: ExactMatch -->
-        <div class="headerResult" data-bind="visible: $parent.ShowExactMatch, withProperties: { context: 'header' }">
-          <div>
-            <h3 data-bind="visible: !Type.eq(DomainSearchResults.ItemTypes.PreRegistration)">[@L[cds.sales/domains/searchresults-new3:DomainAvailable]@L]</h3>
-            <h3 data-bind="visible: Type.eq(DomainSearchResults.ItemTypes.PreRegistration) && !Type().IsEarlyAccess">[@L[cds.sales/domains/searchresults-new3:PreRegistrationAvailable]@L]</h3>
-            <h3 data-bind="visible: Type().IsEarlyAccess">[@L[cds.sales/domains/searchresults-new3:EAPreRegistrationAvailable]@L]</h3>
-          </div>
-          ##if(splitTestingSideIsActive(1191, B))
-          <a href="javascript:void(0)" class="flt-btn flt-btn-grn nextStep" data-bind="css: { 'flt-btn-inactive' : !$root.CanGoToNextStep() }, click: $root.GoToNextStep">[@L[cds.sales/domains/searchresults-new3:ReadyToCheckOut-new]@L]</a>
-          ##else
-          <a href="javascript:void(0)" class="flt-btn flt-btn-grn nextStep" data-bind="css: { 'flt-btn-inactive' : !$root.CanGoToNextStep() }, click: $root.GoToNextStep">[@L[cds.sales/domains/searchresults-new3:ReadyToCheckOut]@L]</a>
-          ##endif
-          <div class="result" data-bind="attr: { 'data-id': Id }, css: Type().Value, template: { name: 'DomainTemplate' }"></div>
-        </div>
-
-        <p class="unavailableCopy" data-bind="visible: $parent.IsValid() && !$parent.ShowExactMatch() && !$parent.IsBlocked()">
-          [@L[cds.sales/domains/searchresults-new3:Sorry]@L] <span class="domainName"><span data-bind="html: DomainSearchResults.BreakString(SLD(), 48)">Typed Domain</span><span data-bind="visible: 0 < TLD().length, html: '.' + TLD()">TLD</span></span> [@L[cds.sales/domains/searchresults-new3:NotAvailableMessage]@L]
-          <span data-bind="visible: $parent.Unavailable()" class="wantIt"> [@L[cds.sales/domains/searchresults-new3:WantIt]@L] [@L[cds.sales/domains/searchresults-new3:TryOur]@L] <a href="#" data-bind="click: ShowDbs">[@L[cds.sales/domains/searchresults-new3:DomainBuyServiceName]@L]</a>.</span>
-        </p>
-        
-        <p class="unavailableCopy" data-bind="visible: $parent.IsValid() && !$parent.ShowExactMatch() && $parent.IsBlocked()">
-          [@L[cds.sales/domains/searchresults-new3:Sorry]@L] <span class="domainName"><span data-bind="html: DomainSearchResults.BreakString(SLD(), 48)">Typed Domain</span><span data-bind="visible: 0 < TLD().length, html: '.' + TLD()">TLD</span></span> [@L[cds.sales/domains/searchresults-new3:NotCurrentlyAvailableMessage]@L]
-        </p>
-        
-        
-        <!-- /ko -->
-        
-        <p class="unavailableCopy" data-bind="visible: NotValid()">[@L[cds.sales/domains/searchresults-new3:NotAvailable]@L]</p>
-
-        <!-- #endregion -->
-
-        <!-- ko if: IsValid -->
-        <div class="stripMall-tagLine">
-          <!-- ko if: 0 < Items().length -->
-          <span data-bind="visible: ShowExactMatch">[@L[cds.sales/domains/searchresults-new3:NameAvailableRecommendation]@L]</span>
-          <span data-bind="visible: IsValid() && !ShowExactMatch()">[@L[cds.sales/domains/searchresults-new3:NameUnAvailableRecommendation]@L]</span>
-          <!--/ko -->
-          ##if(splitTestingSideIsActive(1191, B))
-          <a href="javascript:void(0)" class="flt-btn flt-btn-grn nextStep" data-bind="css: { 'flt-btn-inactive' : !$root.CanGoToNextStep() }, click: $root.GoToNextStep">[@L[cds.sales/domains/searchresults-new3:ReadyToCheckOut-new]@L]</a>
-          ##else
-          <a href="javascript:void(0)" class="flt-btn flt-btn-grn nextStep" data-bind="css: { 'flt-btn-inactive' : !$root.CanGoToNextStep() }, click: $root.GoToNextStep">[@L[cds.sales/domains/searchresults-new3:ReadyToCheckOut]@L]</a>
-          ##endif
-        </div>
-        <div class="filters">
-          <h3>[@L[cds.sales/domains/searchresults-new3:FiltersTitle]@L]</h3>
-          <ul data-bind="foreach: Filters">
-            <li data-bind="template: { name: 'FilterTemplate' }, css: { expanded: IsExpanded }"></li>
+      <div id="stripMall" data-bind="withProperties: { context: 'stripMall' }">
+        <!-- ko if: 0 >= Items().length && 0 < AppliedFilters().length -->
+        <div class="noItems">
+          <h3>[@L[cds.sales/domains/searchresults-new3:NoItemsTitle]@L]</h3>
+          <p>[@L[cds.sales/domains/searchresults-new3:NoItemsTipsTitle]@L]</p>
+          <ul>
+            <li>[@L[cds.sales/domains/searchresults-new3:NoItemsTip1]@L]</li>
+            <li>[@L[cds.sales/domains/searchresults-new3:NoItemsTip2]@L]</li>
+            <li>[@L[cds.sales/domains/searchresults-new3:NoItemsTip3]@L]</li>
           </ul>
         </div>
-
-        <div id="stripMall" data-bind="withProperties: { context: 'stripMall' }">
-          <!-- ko if: 0 >= Items().length && 0 < AppliedFilters().length -->
-          <div class="noItems">
-            <h3>[@L[cds.sales/domains/searchresults-new3:NoItemsTitle]@L]</h3>
-            <p>[@L[cds.sales/domains/searchresults-new3:NoItemsTipsTitle]@L]</p>
-            <ul>
-              <li>[@L[cds.sales/domains/searchresults-new3:NoItemsTip1]@L]</li>
-              <li>[@L[cds.sales/domains/searchresults-new3:NoItemsTip2]@L]</li>
-              <li>[@L[cds.sales/domains/searchresults-new3:NoItemsTip3]@L]</li>
-            </ul>
-          </div>
-          <!--/ko -->
-          <!-- ko if: 0 < Items().length -->
-          <div class="stripMall-header">
+        <!--/ko -->
+        <!-- ko if: 0 < Items().length -->
+        <div class="stripMall-header">
             <span>
               <span>
                 <span>1 - <span data-bind="html: Items().length">999</span></span>&nbsp;[@L[cds.sales/domains/searchresults-new3:Of]@L] <span data-bind="html: TotalItems">999</span>&nbsp;[@L[cds.sales/domains/searchresults-new3:MultiResultsText]@L]
               </span>
               <a href="javascript:void(0)" data-bind="visible: AreMoreAvailable, click: ShowAll, clickBubble: false">[@L[cds.sales/domains/searchresults-new3:ShowAllActionText]@L]</a>
             </span>
-          </div>
-          <!-- ko foreach: Items -->
-          <div class="result" data-bind="attr: { 'data-id': Id }, css: Type().Value, template: { name: 'DomainTemplate' }"></div>
-          <!-- /ko -->
-          <div class="stripMall-footer">
-            <span>
-              <span>
-                <span>1 - <span data-bind="html: Items().length">999</span></span>&nbsp;[@L[cds.sales/domains/searchresults-new3:Of]@L] <span data-bind="html: TotalItems">999</span>&nbsp;[@L[cds.sales/domains/searchresults-new3:MultiResultsText]@L]
-              </span>
-              <a href="javascript:void(0)" data-bind="visible: AreMoreAvailable, click: ShowAll, clickBubble: false">[@L[cds.sales/domains/searchresults-new3:ShowAllActionText]@L]</a>
-            </span>
-            ##if(splitTestingSideIsActive(1191, B))
-            <a href="javascript:void(0)" class="flt-btn flt-btn-grn nextStep" data-bind="css: { 'flt-btn-inactive' : !$root.CanGoToNextStep() }, click: $root.GoToNextStep">[@L[cds.sales/domains/searchresults-new3:ReadyToCheckOut-new]@L]</a>
-            ##else
-            <a href="javascript:void(0)" class="flt-btn flt-btn-grn nextStep" data-bind="css: { 'flt-btn-inactive' : !$root.CanGoToNextStep() }, click: $root.GoToNextStep">[@L[cds.sales/domains/searchresults-new3:ReadyToCheckOut]@L]</a>
-            ##endif
-          </div>
-          <a href="javascript:void(0)" class="showMore" data-bind="visible: AreMoreAvailable, click: ShowMore, clickBubble: false"><span>[@L[cds.sales/domains/searchresults-new3:ShowMoreActionText]@L]</span></a>
-          <!--/ko -->
         </div>
-
-        [@P[userControl:<data location="~/Domains/Controls/searchresultspopin.ascx"></data>]@P]
-        [@P[userControl:<data location="~/Domains/Controls/DPPShortPathModal.ascx"><parameters><parameter key="CICode" value="75786" /></parameters></data>]@P]
-        <div id="ccTldsRegLenDiv" class="g-modal" style="display:none;"></div>
+        <!-- ko foreach: Items -->
+        <div class="result" data-bind="attr: { 'data-id': Id }, css: Type().Value, template: { name: 'DomainTemplate' }"></div>
         <!-- /ko -->
+        <div class="stripMall-footer">
+            <span>
+              <span>
+                <span>1 - <span data-bind="html: Items().length">999</span></span>&nbsp;[@L[cds.sales/domains/searchresults-new3:Of]@L] <span data-bind="html: TotalItems">999</span>&nbsp;[@L[cds.sales/domains/searchresults-new3:MultiResultsText]@L]
+              </span>
+              <a href="javascript:void(0)" data-bind="visible: AreMoreAvailable, click: ShowAll, clickBubble: false">[@L[cds.sales/domains/searchresults-new3:ShowAllActionText]@L]</a>
+            </span>
+          ##if(splitTestingSideIsActive(1191, B))
+          <a href="javascript:void(0)" class="flt-btn flt-btn-grn nextStep" data-bind="css: { 'flt-btn-inactive' : !$root.CanGoToNextStep() }, click: $root.GoToNextStep">[@L[cds.sales/domains/searchresults-new3:ReadyToCheckOut-new]@L]</a>
+          ##else
+          <a href="javascript:void(0)" class="flt-btn flt-btn-grn nextStep" data-bind="css: { 'flt-btn-inactive' : !$root.CanGoToNextStep() }, click: $root.GoToNextStep">[@L[cds.sales/domains/searchresults-new3:ReadyToCheckOut]@L]</a>
+          ##endif
+        </div>
+        <a href="javascript:void(0)" class="showMore" data-bind="visible: AreMoreAvailable, click: ShowMore, clickBubble: false"><span>[@L[cds.sales/domains/searchresults-new3:ShowMoreActionText]@L]</span></a>
+        <!--/ko -->
       </div>
-      [@P[webControl:<data assembly="App_Code" type="Domains.Controls.TimeoutWarning"><parameters><parameter key="Ci" value="53970" /><parameter key="OnTimeoutRedirectToUrl" value="~/domains/search.aspx" /><parameter key="ShowModalAdditionalClientScript" value="closeDPPShortPath();" /></parameters></data>]@P]
+
+      [@P[userControl:<data location="~/Domains/Controls/searchresultspopin.ascx"></data>]@P]
+      [@P[userControl:<data location="~/Domains/Controls/DPPShortPathModal.ascx"><parameters><parameter key="CICode" value="75786" /></parameters></data>]@P]
+      <div id="ccTldsRegLenDiv" class="g-modal" style="display:none;"></div>
+      <!-- /ko -->
     </div>
-    <a class="disclaimerAction" href="javascript:void(0)" data-bind="click: ShowProductLimitations, clickBubble: false">[@L[cds.sales/domains/searchresults-new3:DisclaimerActionText]@L]</a>
-    <div id="g-modal" class="g-modal" style="display:none;">
-      <a href="javascript:void(0)" class="g-modal-close" data-bind="click: CloseProductLimitations, clickBubble: false"><span>close</span></a>
-      <div class="g-modal-header">
-        <span class="g-modal-titlebar">[@L[cds.sales/domains/searchresults-new-limitations:limitations-modal-header]@L]</span>
-      </div>
-      <div class="g-modal-content">
-        <p>[@L[cds.sales/domains/searchresults-new-limitations:icann-fee]@L]</p>
-        <p>[@L[cds.sales/domains/searchresults-new-limitations:bulk-pricing]@L]</p>
-        <p>[@L[cds.sales/domains/searchresults-new-limitations:free-ip-hosting]@L]</p>
-        <p>[@L[cds.sales/domains/searchresults-new-limitations:ca-domain]@L]</p>
-        <p>[@L[cds.sales/domains/searchresults-new-limitations:savings]@L]</p>
-        <p>[@L[cds.sales/domains/searchresults-new-limitations:tlds-excluded]@L]</p>
-        <p>[@L[cds.sales/domains/searchresults-new-limitations:discount-base]@L]</p>
-        <p>[@L[cds.sales/domains/searchresults-new-limitations:free-info]@L]</p>
-        <p>[@L[cds.sales/domains/searchresults-new-limitations:au-domains]@L]</p>
-      </div>
-    </div>
-    <div id="g-modal-overlay" class="g-modal-overlay" style="display:none;"></div>
+    [@P[webControl:<data assembly="App_Code" type="Domains.Controls.TimeoutWarning"><parameters><parameter key="Ci" value="53970" /><parameter key="OnTimeoutRedirectToUrl" value="~/domains/search.aspx" /><parameter key="ShowModalAdditionalClientScript" value="closeDPPShortPath();" /></parameters></data>]@P]
   </div>
+  <a class="disclaimerAction" href="javascript:void(0)" data-bind="click: ShowProductLimitations, clickBubble: false">[@L[cds.sales/domains/searchresults-new3:DisclaimerActionText]@L]</a>
+  <div id="g-modal" class="g-modal" style="display:none;">
+    <a href="javascript:void(0)" class="g-modal-close" data-bind="click: CloseProductLimitations, clickBubble: false"><span>close</span></a>
+    <div class="g-modal-header">
+      <span class="g-modal-titlebar">[@L[cds.sales/domains/searchresults-new-limitations:limitations-modal-header]@L]</span>
+    </div>
+    <div class="g-modal-content">
+      <p>[@L[cds.sales/domains/searchresults-new-limitations:icann-fee]@L]</p>
+      <p>[@L[cds.sales/domains/searchresults-new-limitations:bulk-pricing]@L]</p>
+      <p>[@L[cds.sales/domains/searchresults-new-limitations:free-ip-hosting]@L]</p>
+      <p>[@L[cds.sales/domains/searchresults-new-limitations:ca-domain]@L]</p>
+      <p>[@L[cds.sales/domains/searchresults-new-limitations:savings]@L]</p>
+      <p>[@L[cds.sales/domains/searchresults-new-limitations:tlds-excluded]@L]</p>
+      <p>[@L[cds.sales/domains/searchresults-new-limitations:discount-base]@L]</p>
+      <p>[@L[cds.sales/domains/searchresults-new-limitations:free-info]@L]</p>
+      <p>[@L[cds.sales/domains/searchresults-new-limitations:au-domains]@L]</p>
+    </div>
+  </div>
+  <div id="g-modal-overlay" class="g-modal-overlay" style="display:none;"></div>
+</div>
 
-  <script type="text/html" id="CurrentPriceTemplate">
-    <span class="price" data-bind="html: Prices().CurrentPrice ? Prices().CurrentPrice : Prices().ListPrice, css: {'unavailable' : fullAvailCheckError()}">$MXN.XX</span>
-  </script>
+<script type="text/html" id="CurrentPriceTemplate">
+  <span class="price" data-bind="html: Prices().CurrentPrice ? Prices().CurrentPrice : Prices().ListPrice, css: {'unavailable' : fullAvailCheckError()}">$MXN.XX</span>
+</script>
 
-  <script type="text/html" id="CurrentPriceListPriceTemplate">
-    <span class="price price-strike" data-bind="html: Prices().CurrentPrice ? Prices().ListPrice : ''">$MXN.XX</span>
-    <!-- ko template :{ name: 'CurrentPriceTemplate' }--><!-- /ko -->
-  </script>
+<script type="text/html" id="CurrentPriceListPriceTemplate">
+  <span class="price price-strike" data-bind="html: Prices().CurrentPrice ? Prices().ListPrice : ''">$MXN.XX</span>
+  <!-- ko template :{ name: 'CurrentPriceTemplate' }--><!-- /ko -->
+</script>
 
-  <!-- #region Domain Templates -->
 
-  <script id="DomainNameTemplate" type="text/html">
-    <div class="onsale" data-bind="visible: IsOnSale() && !fullAvailCheckError()">[@L[cds.sales/domains/searchresults-new3:OnSale]@L]</div>
-    
-    <div class="domainName" data-bind="css: { 'added': IsSelected, 'unavailable' : fullAvailCheckError }">
-      <span data-bind="html: context == 'header' ? DomainSearchResults.BreakString(SLD(), 30) : DomainSearchResults.BreakString(SLD(), 45)"></span>.<span data-bind="text: TLD">TLD</span>
+<script type="text/html" id="PreRegCurrentPriceTemplate">
+  <span class="price" data-bind="html: (SelectedSubPhase() || $data).Prices().CurrentPrice ? (SelectedSubPhase() || $data).Prices().CurrentPrice : (SelectedSubPhase() || $data).Prices().ListPrice, css: {'unavailable' : fullAvailCheckError()}">$MXN.XX</span>
+</script>
+<script type="text/html" id="PreRegCurrentPriceListPriceTemplate">
+  <span class="price price-strike" data-bind="html: (SelectedSubPhase() || $data).Prices().CurrentPrice ? (SelectedSubPhase() || $data).Prices().ListPrice : ''">$MXN.XX</span>
+  <!-- ko template :{ name: 'PreRegCurrentPriceTemplate' }--><!-- /ko -->
+</script>
+
+<!-- #region Domain Templates -->
+
+<script id="DomainNameTemplate" type="text/html">
+  <div class="onsale" data-bind="visible: IsOnSale() && !fullAvailCheckError()">[@L[cds.sales/domains/searchresults-new3:OnSale]@L]</div>
+
+  <div class="domainName" data-bind="css: { 'added': IsSelected, 'unavailable' : fullAvailCheckError }">
+    <span data-bind="html: context == 'header' ? DomainSearchResults.BreakString(SLD(), 30) : DomainSearchResults.BreakString(SLD(), 45)"></span>.<span data-bind="text: TLD">TLD</span>
+    <!-- ko with: Type -->
+    <span class="domainType" data-bind="html: DisplayText"></span>
+    <!-- /ko -->
+    <!-- ko with: RegistrationInfo -->
+    <div class="registrationInfo">
+      [@L[cds.sales/domains/searchresults-new3:TwoYearRegistrationRequired]@L]
+      <a href="javascript:void(0);" data-bind="click: ShowModal">[@L[cds.sales/domains/searchresults-new3:LearnMoreActionText]@L]</a>
+    </div>
+    <!-- /ko -->
+  </div>
+  <!-- ko template: TemplateName --><!-- /ko -->
+</script>
+
+<script type="text/html" id="DomainTemplate">
+  <!-- Generic : 0 -->
+  <div class="onsale" data-bind="visible: IsOnSale() && !fullAvailCheckError() && 'header' !== context || IsOnSale() && !fullAvailCheckError() && !HasDiscount">[@L[cds.sales/domains/searchresults-new3:OnSale]@L]</div>
+  <!--<div class="onsale" data-bind="visible: IsOnSale() && !fullAvailCheckError() && !HasDiscount">[@L[cds.sales/domains/searchresults-new3:OnSale]@L]</div>-->
+  <div class="onsale2" data-bind="visible: HasDiscount()">[@L[cds.sales/domains/searchresults-new3:OnSale]@L] <span data-bind="html: Prices().CurrentPrice">$2.99*</span> [@L[cds.sales/domains/searchresults-new3:tldCOM]@L] </div>
+
+  <div class="domainName" data-bind="css: { 'added': IsSelected, 'unavailable' : fullAvailCheckError }">
+    <span data-bind="html: context == 'header' ? DomainSearchResults.BreakString(SLD(), 30) : DomainSearchResults.BreakString(SLD(), 45)"></span>
+    <div id="tldHeader">
+      <span class="tldType" data-bind="html: '.' + TLD()">TLD</span>
       <!-- ko with: Type -->
       <span class="domainType" data-bind="html: DisplayText"></span>
       <!-- /ko -->
-      <!-- ko with: RegistrationInfo -->
-      <div class="registrationInfo">
-        [@L[cds.sales/domains/searchresults-new3:TwoYearRegistrationRequired]@L]
-        <a href="javascript:void(0);" data-bind="click: ShowModal">[@L[cds.sales/domains/searchresults-new3:LearnMoreActionText]@L]</a>
-      </div>
+      <!-- ko with: IsPremiumPrice -->
+      <span class="domainType isPremiumPrice" style="">[@L[cds.sales/domains/searchresults-new3:domainFlagPremium]@L]</span>
       <!-- /ko -->
     </div>
-    <!-- ko template: TemplateName --><!-- /ko -->
-  </script>
+  </div>
+  <!-- ko with: RegistrationInfo -->
+  <div class="registrationInfo" data-bind="visible: 'header' === context">[@L[cds.sales/domains/searchresults-new3:TwoYearRegistrationRequired]@L]</div>
+  <!-- /ko -->
+  <!-- ko template: TemplateName() --><!-- /ko -->
+  <!-- ko if: !Type.eq(DomainSearchResults.ItemTypes.PreRegistration) && 'header' === context  -->
+  <!-- ko with: CCTLDResult -->
+  <div class="ccTldUpsell" data-bind="template: { name: 'CcTldTemplate' }, css: { 'unavailable' : fullAvailCheckError }, visible: !$parent.fullAvailCheckError() || fullAvailCheckError() && !$parent.fullAvailCheckError()"></div>
+  <!-- /ko -->
+  <!-- /ko -->
+  <!-- ko with: Stack() -->
+  <!-- ko template: { name: 'StackTemplate' } --><!-- /ko -->
+  <!-- /ko -->
+  <!-- /ko -->
+</script>
 
-  <script type="text/html" id="DomainTemplate">
-    <!-- Generic : 0 -->
-    <div class="onsale" data-bind="visible: IsOnSale() && !fullAvailCheckError() && 'header' !== context || IsOnSale() && !fullAvailCheckError() && !HasDiscount">[@L[cds.sales/domains/searchresults-new3:OnSale]@L]</div>
-    <!--<div class="onsale" data-bind="visible: IsOnSale() && !fullAvailCheckError() && !HasDiscount">[@L[cds.sales/domains/searchresults-new3:OnSale]@L]</div>-->
-    <div class="onsale2" data-bind="visible: HasDiscount()">[@L[cds.sales/domains/searchresults-new3:OnSale]@L] <span data-bind="html: Prices().CurrentPrice">$2.99*</span> [@L[cds.sales/domains/searchresults-new3:tldCOM]@L] </div>
-
-    <div class="domainName" data-bind="css: { 'added': IsSelected, 'unavailable' : fullAvailCheckError }">
-      <span data-bind="html: context == 'header' ? DomainSearchResults.BreakString(SLD(), 30) : DomainSearchResults.BreakString(SLD(), 45)"></span>
-      <div id="tldHeader">
-        <span class="tldType" data-bind="html: '.' + TLD()">TLD</span>
-        <!-- ko with: Type -->
-        <span class="domainType" data-bind="html: DisplayText"></span>
-        <!-- /ko -->
-        <!-- ko with: IsPremiumPrice -->
-        <span class="domainType isPremiumPrice" style="">[@L[cds.sales/domains/searchresults-new3:domainFlagPremium]@L]</span>
-        <!-- /ko -->
-      </div>
-    </div>
-    <!-- ko with: RegistrationInfo -->
-    <div class="registrationInfo" data-bind="visible: 'header' === context">[@L[cds.sales/domains/searchresults-new3:TwoYearRegistrationRequired]@L]</div>
-    <!-- /ko -->
-    <!-- ko template: TemplateName() --><!-- /ko -->
-    <!-- ko if: !Type.eq(DomainSearchResults.ItemTypes.PreRegistration) && 'header' === context  -->
-    <!-- ko with: CCTLDResult -->
-    <div class="ccTldUpsell" data-bind="template: { name: 'CcTldTemplate' }, css: { 'unavailable' : fullAvailCheckError }, visible: !$parent.fullAvailCheckError() || fullAvailCheckError() && !$parent.fullAvailCheckError()"></div>
-    <!-- /ko -->
-    <!-- /ko -->
-    <!-- ko with: Stack() -->
-    <!-- ko template: { name: 'StackTemplate' } --><!-- /ko -->
-    <!-- /ko -->
-    <!-- /ko -->
-  </script>
-
-  <script type="text/html" id="DomainTemplateavailable">
-    <!-- Available : 0 -->
-    <div class="priceAndAction" data-bind="visible: !IsPremiumPrice()">
-      <!-- ko template: { name: ActionTemplate } --><!-- /ko -->
+<script type="text/html" id="DomainTemplateavailable">
+  <!-- Available : 0 -->
+  <div class="priceAndAction" data-bind="visible: !IsPremiumPrice()">
+    <!-- ko template: { name: ActionTemplate } --><!-- /ko -->
       <span class="pricing" data-bind="visible: !IsSelected() && !fullAvailCheck() && !fullAvailCheckError()">
         <!-- ko template: { name: 'CurrentPriceListPriceTemplate' } --><!-- /ko -->
         <span class="register" data-bind="visible: !IsSelected() && HasDiscount()">[@L[cds.sales/domains/searchresults-new3:2yearRegistration]@L]</span>
@@ -251,25 +260,25 @@ name: FOS-24164
         <span class="left">
           <span>[@L[cds.sales/domains/searchresults-new3:1stYear]@L] <span data-bind="html: Prices().CurrentPrice">$2.99*</span></span>
           <span>[@L[cds.sales/domains/searchresults-new3:additionYears]@L] <span data-bind="html: Prices().ListPrice">$14.99*</span></span>
-        </span>   
+        </span>
       </span>
-      <!-- ko with: RegistrationInfo -->
+    <!-- ko with: RegistrationInfo -->
       <span class="pricing" data-bind="visible: !$parent.IsSelected() && 'header' !== context">
         <span class="registrationInfo priceDesc">[@L[cds.sales/domains/searchresults-new3:TwoYearRegistrationRequired]@L]</span>
       </span>
-      <!-- /ko -->
-    </div>
-    
-    <!-- 2.99 promo price -->
-    <div class="comPromoPricing" data-bind="visible: !IsSelected() && HasDiscount()">
-      <span style="display: block;">[@L[cds.sales/domains/searchresults-new3:1stYearPrice]@L] <span data-bind="html: Prices().CurrentPrice">2.99*</span> [@L[cds.sales/domains/searchresults-new3:additionYears]@L] <span data-bind="html: Prices().ListPrice">14.99*</span></span>
-    </div>
-  
-    
-    
-    <a class="learnMore" href="#" data-bind="visible: IsPremiumPrice(), click: Expand, clickBubble: false">[@L[cds.sales/domains/searchresults-new3:LearnMoreActionText]@L]</a>
-    <div class="priceAndAction" data-bind="visible: IsPremiumPrice()">
-      <!-- ko template: { name: ActionTemplate } --><!-- /ko -->
+    <!-- /ko -->
+  </div>
+
+  <!-- 2.99 promo price -->
+  <div class="comPromoPricing" data-bind="visible: !IsSelected() && HasDiscount()">
+    <span style="display: block;">[@L[cds.sales/domains/searchresults-new3:1stYearPrice]@L] <span data-bind="html: Prices().CurrentPrice">2.99*</span> [@L[cds.sales/domains/searchresults-new3:additionYears]@L] <span data-bind="html: Prices().ListPrice">14.99*</span></span>
+  </div>
+
+
+
+  <a class="learnMore" href="#" data-bind="visible: IsPremiumPrice(), click: Expand, clickBubble: false">[@L[cds.sales/domains/searchresults-new3:LearnMoreActionText]@L]</a>
+  <div class="priceAndAction" data-bind="visible: IsPremiumPrice()">
+    <!-- ko template: { name: ActionTemplate } --><!-- /ko -->
       <span class="pricing" data-bind="visible: !IsSelected() && !fullAvailCheck() && !fullAvailCheckError()">
         <span class="priceDesc">[@L[cds.sales/domains/searchresults-new3:FirstYearPriceDescription]@L]</span>
         <!-- ko template :{ name: 'CurrentPriceListPriceTemplate' }--><!-- /ko -->
@@ -285,40 +294,40 @@ name: FOS-24164
           </div>
         </div>
       </span>
-    </div>
-    <div class="slideOut" data-bind="visible: IsExpanded">
-      <div class="slideOutClose" data-bind="click: Collapse, clickBubble: false">X</div>
-      <h6>[@L[cds.sales/domains/searchresults-new3:WhatIsPremiumTitle]@L]</h6>
-      <p>[@L[cds.sales/domains/searchresults-new3:WhatIsPremiumDescription1]@L]</p>
-      <p>[@L[cds.sales/domains/searchresults-new3:WhatIsPremiumDescription2IsPremiumPrice]@L]</p>
-      <p>[@L[cds.sales/domains/searchresults-new3:WhatIsPremiumDescription3]@L]</p>
-    </div>
-  </script>
+  </div>
+  <div class="slideOut" data-bind="visible: IsExpanded">
+    <div class="slideOutClose" data-bind="click: Collapse, clickBubble: false">X</div>
+    <h6>[@L[cds.sales/domains/searchresults-new3:WhatIsPremiumTitle]@L]</h6>
+    <p>[@L[cds.sales/domains/searchresults-new3:WhatIsPremiumDescription1]@L]</p>
+    <p>[@L[cds.sales/domains/searchresults-new3:WhatIsPremiumDescription2IsPremiumPrice]@L]</p>
+    <p>[@L[cds.sales/domains/searchresults-new3:WhatIsPremiumDescription3]@L]</p>
+  </div>
+</script>
 
-  <script type="text/html" id="DomainTemplateaftermarket">
-    <!-- AfterMarket : 3 (assume auction)-->
-    <a class="learnMore" href="#" data-bind="click: Expand, clickBubble: false">[@L[cds.sales/domains/searchresults-new3:LearnMoreActionText]@L]</a>
-    <div class="priceAndAction">
-      <!-- ko template: { name: ActionTemplate } --><!-- /ko -->
+<script type="text/html" id="DomainTemplateaftermarket">
+  <!-- AfterMarket : 3 (assume auction)-->
+  <a class="learnMore" href="#" data-bind="click: Expand, clickBubble: false">[@L[cds.sales/domains/searchresults-new3:LearnMoreActionText]@L]</a>
+  <div class="priceAndAction">
+    <!-- ko template: { name: ActionTemplate } --><!-- /ko -->
       <span class="pricing" data-bind="style: { 'border-right': IsSelected() ? 'none' : '1px solid #d9d9d9' }">
         <span class="priceDesc">[@L[cds.sales/domains/searchresults-new3:AuctionsCurrentBid]@L]</span>
         <!-- ko template :{ name: 'CurrentPriceTemplate' }--><!-- /ko -->
       </span>
-    </div>
-    <div class="slideOut" data-bind="visible: IsExpanded">
-      <div class="slideOutClose" data-bind="click: Collapse, clickBubble: false">X</div>
-      <h6>[@L[cds.sales/domains/searchresults-new3:WhatIsAuctionTitle]@L]</h6>
-      <p>[@L[cds.sales/domains/searchresults-new3:AboutAuctions1]@L]</p>
-      <p>[@L[cds.sales/domains/searchresults-new3:AboutAuctions2]@L]</p>
-      <p>[@L[cds.sales/domains/searchresults-new3:AboutAuctions3]@L]</p>
-    </div>
-  </script>
+  </div>
+  <div class="slideOut" data-bind="visible: IsExpanded">
+    <div class="slideOutClose" data-bind="click: Collapse, clickBubble: false">X</div>
+    <h6>[@L[cds.sales/domains/searchresults-new3:WhatIsAuctionTitle]@L]</h6>
+    <p>[@L[cds.sales/domains/searchresults-new3:AboutAuctions1]@L]</p>
+    <p>[@L[cds.sales/domains/searchresults-new3:AboutAuctions2]@L]</p>
+    <p>[@L[cds.sales/domains/searchresults-new3:AboutAuctions3]@L]</p>
+  </div>
+</script>
 
-  <script type="text/html" id="DomainTemplatebackorder">
-    <!-- Backorder -->
-    <a class="learnMore" href="#" data-bind="click: Expand, clickBubble: false">[@L[cds.sales/domains/searchresults-new3:LearnMoreActionText]@L]</a>
-    <div class="priceAndAction">
-      <!-- ko template: { name: ActionTemplate } --><!-- /ko -->
+<script type="text/html" id="DomainTemplatebackorder">
+  <!-- Backorder -->
+  <a class="learnMore" href="#" data-bind="click: Expand, clickBubble: false">[@L[cds.sales/domains/searchresults-new3:LearnMoreActionText]@L]</a>
+  <div class="priceAndAction">
+    <!-- ko template: { name: ActionTemplate } --><!-- /ko -->
       <span class="pricing" data-bind="visible: !IsSelected()">
         <span class="priceDesc">[@L[cds.sales/domains/searchresults-new3:FirstYearPriceDescription]@L]</span>
         <!-- ko template :{ name: 'CurrentPriceListPriceTemplate' }--><!-- /ko -->
@@ -328,23 +337,23 @@ name: FOS-24164
         <span class="price price-small" data-bind="html: Prices()['RenewalListPrice']">$MXN.XX</span>
         <span class="g-toolTip"><span>[@L[cds.sales/domains/searchresults-new3:PremiumDomainToolTip]@L]</span></span>
       </span>
-    </div>
-    <div class="slideOut" data-bind="visible: IsExpanded">
-      <div class="slideOutClose" data-bind="click: Collapse, clickBubble: false">X</div>
-      <h6>[@L[cds.sales/domains/searchresults-new3:WhatIsBackOrderTitle]@L]</h6>
-      <p>[@L[cds.sales/domains/searchresults-new3:WhatIsBackOrderDescription1]@L]</p>
-    </div>
-  </script>
+  </div>
+  <div class="slideOut" data-bind="visible: IsExpanded">
+    <div class="slideOutClose" data-bind="click: Collapse, clickBubble: false">X</div>
+    <h6>[@L[cds.sales/domains/searchresults-new3:WhatIsBackOrderTitle]@L]</h6>
+    <p>[@L[cds.sales/domains/searchresults-new3:WhatIsBackOrderDescription1]@L]</p>
+  </div>
+</script>
 
-  <script type="text/html" id="DomainTemplatedbs">
-    <!-- ko template :{ name: 'DomainTemplatebackorder' }--><!-- /ko -->
-  </script>
+<script type="text/html" id="DomainTemplatedbs">
+  <!-- ko template :{ name: 'DomainTemplatebackorder' }--><!-- /ko -->
+</script>
 
-  <script type="text/html" id="DomainTemplatepremium">
-    <!-- Premium : 0 -->
-    <a class="learnMore" href="#" data-bind="click: Expand, clickBubble: false">[@L[cds.sales/domains/searchresults-new3:LearnMoreActionText]@L]</a>
-    <div class="priceAndAction">
-      <!-- ko template: { name: ActionTemplate } --><!-- /ko -->
+<script type="text/html" id="DomainTemplatepremium">
+  <!-- Premium : 0 -->
+  <a class="learnMore" href="#" data-bind="click: Expand, clickBubble: false">[@L[cds.sales/domains/searchresults-new3:LearnMoreActionText]@L]</a>
+  <div class="priceAndAction">
+    <!-- ko template: { name: ActionTemplate } --><!-- /ko -->
       <span class="pricing" data-bind="visible: !IsSelected() && !fullAvailCheck() && !fullAvailCheckError()">
         <span class="priceDesc">[@L[cds.sales/domains/searchresults-new3:FirstYearPriceDescription]@L]</span>
         <!-- ko template :{ name: 'CurrentPriceListPriceTemplate' }--><!-- /ko -->
@@ -360,296 +369,296 @@ name: FOS-24164
           </div>
         </div>
       </span>
-    </div>
-    <div class="slideOut" data-bind="visible: IsExpanded">
-      <div class="slideOutClose" data-bind="click: Collapse, clickBubble: false">X</div>
-      <h6>[@L[cds.sales/domains/searchresults-new3:WhatIsPremiumTitle]@L]</h6>
-      <p>[@L[cds.sales/domains/searchresults-new3:WhatIsPremiumDescription1]@L]</p>
-      <p>[@L[cds.sales/domains/searchresults-new3:WhatIsPremiumDescription2]@L]</p>
-      <p>[@L[cds.sales/domains/searchresults-new3:WhatIsPremiumDescription3]@L]</p>
-    </div>
-  </script>
+  </div>
+  <div class="slideOut" data-bind="visible: IsExpanded">
+    <div class="slideOutClose" data-bind="click: Collapse, clickBubble: false">X</div>
+    <h6>[@L[cds.sales/domains/searchresults-new3:WhatIsPremiumTitle]@L]</h6>
+    <p>[@L[cds.sales/domains/searchresults-new3:WhatIsPremiumDescription1]@L]</p>
+    <p>[@L[cds.sales/domains/searchresults-new3:WhatIsPremiumDescription2]@L]</p>
+    <p>[@L[cds.sales/domains/searchresults-new3:WhatIsPremiumDescription3]@L]</p>
+  </div>
+</script>
 
-  <script id="DomainTemplatepreregistration" type="text/html">
-    <!-- PreRegistration -->
-    <!-- ko if: 'header' === context  -->
-    <div class="priceAndAction">
-      <!-- ko template: { name: ActionTemplate } --><!-- /ko -->
-      <!-- ko with: SelectedPhase -->
+<script id="DomainTemplatepreregistration" type="text/html">
+  <!-- PreRegistration -->
+  <!-- ko if: 'header' === context  -->
+  <div class="priceAndAction">
+    <!-- ko template: { name: ActionTemplate } --><!-- /ko -->
+    <!-- ko with: SelectedPhase -->
       <span class="pricing" data-bind="visible: !$parent.IsSelected()">
         <span class="price price-strike" data-bind="html: (SelectedSubPhase() || $data).Prices().TotalCurrent ? (SelectedSubPhase() || $data).Prices().TotalList : ''">$MXN.XX</span>
         <span class="price" data-bind="html: (SelectedSubPhase() || $data).Prices().TotalCurrent ? (SelectedSubPhase() || $data).Prices().TotalCurrent : (SelectedSubPhase() || $data).Prices().TotalList">$MXNXXX.XX</span>
         <span class="selectedName" data-bind="html: Name">&nbsp;</span>
       </span>
-      <!-- /ko -->
-    </div>
-    <div class="phaseOptions">
-      <p data-bind="visible: !Type().IsEarlyAccess">[@L[cds.sales/domains/searchresults-new3:PreRegistrationTagLine]@L]</p>
-      <p data-bind="visible: Type().IsEarlyAccess">[@L[cds.sales/domains/searchresults-new3:EAPreRegistrationTagLine]@L]</p>
-      <ul class="phaseOptions" data-bind="foreach: Phases">
-        <li data-bind="attr: { id: Code, 'class': 'phase' + Template().Name + (IsExpanded() ? ' expanded' : '') }, template: { name: Template().Name }"></li>
-      </ul>
-    </div>
     <!-- /ko -->
-  </script>
+  </div>
+  <div class="phaseOptions">
+    <p data-bind="visible: !Type().IsEarlyAccess">[@L[cds.sales/domains/searchresults-new3:PreRegistrationTagLine]@L]</p>
+    <p data-bind="visible: Type().IsEarlyAccess">[@L[cds.sales/domains/searchresults-new3:EAPreRegistrationTagLine]@L]</p>
+    <ul class="phaseOptions" data-bind="foreach: Phases">
+      <li data-bind="attr: { id: Code, 'class': 'phase' + Template().Name + (IsExpanded() ? ' expanded' : '') }, template: { name: Template().Name }"></li>
+    </ul>
+  </div>
+  <!-- /ko -->
+</script>
 
-  <script type="text/html" id="DomainTemplateprivatesale">
-    <!-- Private Sale -->
-    <p class="subText">[@L[cds.sales/domains/searchresults-new3:LeadGenerationSubText]@L]</p>
-    <a class="learnMore" href="#" data-bind="click: Expand, clickBubble: false">[@L[cds.sales/domains/searchresults-new3:LearnMoreActionText]@L]</a>
-    <div class="priceAndAction">
-      <a href="#" class="btn btn-prg flt-btn flt-btn-grn arrow-after" data-bind="css: {'btn-sm': 'header' != context, 'btn-lg': context == 'header' }, click: ShowPrivateSale, clickBubble: false">[@L[cds.sales/domains/searchresults-new3:GetItemActionText]@L]</a>
-    </div>
-    <div class="slideOut" data-bind="visible: IsExpanded">
-      <div class="slideOutClose" data-bind="click: Collapse, clickBubble: false">X</div>
-      <h6>[@L[cds.sales/domains/searchresults-new3:AboutLeadGenerationTitle]@L]</h6>
-      <p>[@L[cds.sales/domains/searchresults-new3:AboutLeadGeneration1]@L]</p>
-      <p>[@L[cds.sales/domains/searchresults-new3:AboutLeadGeneration2]@L]</p>
-      <p>[@L[cds.sales/domains/searchresults-new3:AboutLeadGeneration3]@L]</p>
-      <p>[@L[cds.sales/domains/searchresults-new3:AboutLeadGeneration4]@L]</p>
-    </div>
-  </script>
-  
-  <script type="text/html" id="DomainTemplateunavailable">
-    <!-- Unavailable -->
-    <div class="priceAndAction">
-      [@L[cds.sales/domains/searchresults-new3:DomainTaken]@L]
-      <span class="pricing" data-bind="visible: !IsSelected()"><!-- ko template :{ name: 'CurrentPriceListPriceTemplate' }--><!-- /ko --></span>
-    </div>
-  </script>
+<script type="text/html" id="DomainTemplateprivatesale">
+  <!-- Private Sale -->
+  <p class="subText">[@L[cds.sales/domains/searchresults-new3:LeadGenerationSubText]@L]</p>
+  <a class="learnMore" href="#" data-bind="click: Expand, clickBubble: false">[@L[cds.sales/domains/searchresults-new3:LearnMoreActionText]@L]</a>
+  <div class="priceAndAction">
+    <a href="#" class="btn btn-prg flt-btn flt-btn-grn arrow-after" data-bind="css: {'btn-sm': 'header' != context, 'btn-lg': context == 'header' }, click: ShowPrivateSale, clickBubble: false">[@L[cds.sales/domains/searchresults-new3:GetItemActionText]@L]</a>
+  </div>
+  <div class="slideOut" data-bind="visible: IsExpanded">
+    <div class="slideOutClose" data-bind="click: Collapse, clickBubble: false">X</div>
+    <h6>[@L[cds.sales/domains/searchresults-new3:AboutLeadGenerationTitle]@L]</h6>
+    <p>[@L[cds.sales/domains/searchresults-new3:AboutLeadGeneration1]@L]</p>
+    <p>[@L[cds.sales/domains/searchresults-new3:AboutLeadGeneration2]@L]</p>
+    <p>[@L[cds.sales/domains/searchresults-new3:AboutLeadGeneration3]@L]</p>
+    <p>[@L[cds.sales/domains/searchresults-new3:AboutLeadGeneration4]@L]</p>
+  </div>
+</script>
 
-  <!-- #endregion -->
+<script type="text/html" id="DomainTemplateunavailable">
+  <!-- Unavailable -->
+  <div class="priceAndAction">
+    [@L[cds.sales/domains/searchresults-new3:DomainTaken]@L]
+    <span class="pricing" data-bind="visible: !IsSelected()"><!-- ko template :{ name: 'CurrentPriceListPriceTemplate' }--><!-- /ko --></span>
+  </div>
+</script>
 
-  <script type="text/html" id="CcTldTemplate">
-    <p>
-      <!-- ko if: 'ca' == Other()['OfferCountryCode'] -->
-      [@L[cds.sales/domains/searchresults-new3:cctldUpsellCA]@L]
+<!-- #endregion -->
+
+<script type="text/html" id="CcTldTemplate">
+  <p>
+    <!-- ko if: 'ca' == Other()['OfferCountryCode'] -->
+    [@L[cds.sales/domains/searchresults-new3:cctldUpsellCA]@L]
+    <!-- /ko -->
+    <!-- ko if: 'uk' == Other()['OfferCountryCode'] -->
+    [@L[cds.sales/domains/searchresults-new3:cctldUpsellUK]@L]
+    <!-- /ko -->
+    <!-- ko if: 'mx' == Other()['OfferCountryCode'] -->
+    [@L[cds.sales/domains/searchresults-new3:cctldUpsellMX]@L]
+    <!-- /ko -->
+    <!-- ko if: 'au' == Other()['OfferCountryCode'] -->
+    [@L[cds.sales/domains/searchresults-new3:cctldUpsellAU]@L]
+    <!-- /ko -->
+    <!-- ko if: 'es' == Other()['OfferCountryCode'] -->
+    [@L[cds.sales/domains/searchresults-new3:cctldUpsellES]@L]
+    <!-- /ko -->
+    <!-- ko if: 'in' == Other()['OfferCountryCode'] -->
+    [@L[cds.sales/domains/searchresults-new3:cctldUpsellIN]@L]
+    <!-- /ko -->
+    <!-- ko if: 'us' == Other()['OfferCountryCode'] -->
+    [@L[cds.sales/domains/searchresults-new3:cctldUpsellUS]@L]
+    <!-- /ko -->
+    <!-- ko if: 'it' == Other()['OfferCountryCode'] -->
+    [@L[cds.sales/domains/searchresults-new3:cctldUpsellIT]@L]
+    <!-- /ko -->
+    <!-- ko if: 'de' == Other()['OfferCountryCode'] -->
+    [@L[cds.sales/domains/searchresults-new3:cctldUpsellDE]@L]
+    <!-- /ko -->
+    <!-- ko if: 'co' == Other()['OfferCountryCode'] -->
+    [@L[cds.sales/domains/searchresults-new3:cctldUpsellCO]@L]
+    <!-- /ko -->
+    <!-- ko if: 'fr' == Other()['OfferCountryCode'] -->
+    [@L[cds.sales/domains/searchresults-new3:cctldUpsellFR]@L]
+    <!-- /ko -->
+    <!-- ko if: 'asia' == Other()['OfferCountryCode'] -->
+    [@L[cds.sales/domains/searchresults-new3:cctldUpsellASIA]@L]
+    <!-- /ko -->
+    <!-- ko if: 'nl' == Other()['OfferCountryCode'] -->
+    [@L[cds.sales/domains/searchresults-new3:cctldUpsellNL]@L]
+    <!-- /ko -->
+    <!-- ko if: 'be' == Other()['OfferCountryCode'] -->
+    [@L[cds.sales/domains/searchresults-new3:cctldUpsellBE]@L]
+    <!-- /ko -->
+    <!-- ko if: 'se' == Other()['OfferCountryCode'] -->
+    [@L[cds.sales/domains/searchresults-new3:cctldUpsellSE]@L]
+    <!-- /ko -->
+  </p>
+  <div class="priceAndAction">
+    <div data-bind="click: UpdateCart, clickBubble: false, css: {'noclick' : fullAvailCheckError()}">
+      <span class="cctldflag" data-bind="css: 'cctld' + Other()['OfferCountryCode']"></span> <span data-bind="html: DomainSearchResults.BreakString(SLD(), 45)">[SLD]</span><span data-bind="html: '.' + TLD()">[TLD]</span> - <!-- ko template :{ name: 'CurrentPriceTemplate' }--><!-- /ko -->
+      <span data-bind="visible: fullAvailCheckError() || fullAvailCheck()">&nbsp;&dash;&nbsp;</span>
+      <span class="fullAvailCheck" data-bind="visible: !Type.eq(DomainSearchResults.ItemTypes.CloseoutAuction) && fullAvailCheck() && !fullAvailCheckError()">[@L[cds.sales/domains/searchresults-new3:AvailCheckText]@L]</span>
+      <span class="fullAvailCheckError" data-bind="visible: fullAvailCheckError()">[@L[cds.sales/domains/searchresults-new3:AvailCheckError]@L]</span>
+      <!-- ko with: RegistrationInfo -->
+      <div class="registrationInfo">[@L[cds.sales/domains/searchresults-new3:TwoYearRegistrationRequired]@L]</div>
       <!-- /ko -->
-      <!-- ko if: 'uk' == Other()['OfferCountryCode'] -->
-      [@L[cds.sales/domains/searchresults-new3:cctldUpsellUK]@L]
-      <!-- /ko -->
-      <!-- ko if: 'mx' == Other()['OfferCountryCode'] -->
-      [@L[cds.sales/domains/searchresults-new3:cctldUpsellMX]@L]
-      <!-- /ko -->
-      <!-- ko if: 'au' == Other()['OfferCountryCode'] -->
-      [@L[cds.sales/domains/searchresults-new3:cctldUpsellAU]@L]
-      <!-- /ko -->
-      <!-- ko if: 'es' == Other()['OfferCountryCode'] -->
-      [@L[cds.sales/domains/searchresults-new3:cctldUpsellES]@L]
-      <!-- /ko -->
-      <!-- ko if: 'in' == Other()['OfferCountryCode'] -->
-      [@L[cds.sales/domains/searchresults-new3:cctldUpsellIN]@L]
-      <!-- /ko -->
-      <!-- ko if: 'us' == Other()['OfferCountryCode'] -->
-      [@L[cds.sales/domains/searchresults-new3:cctldUpsellUS]@L]
-      <!-- /ko -->
-      <!-- ko if: 'it' == Other()['OfferCountryCode'] -->
-      [@L[cds.sales/domains/searchresults-new3:cctldUpsellIT]@L]
-      <!-- /ko -->
-      <!-- ko if: 'de' == Other()['OfferCountryCode'] -->
-      [@L[cds.sales/domains/searchresults-new3:cctldUpsellDE]@L]
-      <!-- /ko -->
-      <!-- ko if: 'co' == Other()['OfferCountryCode'] -->
-      [@L[cds.sales/domains/searchresults-new3:cctldUpsellCO]@L]
-      <!-- /ko -->
-      <!-- ko if: 'fr' == Other()['OfferCountryCode'] -->
-      [@L[cds.sales/domains/searchresults-new3:cctldUpsellFR]@L]
-      <!-- /ko -->
-      <!-- ko if: 'asia' == Other()['OfferCountryCode'] -->
-      [@L[cds.sales/domains/searchresults-new3:cctldUpsellASIA]@L]
-      <!-- /ko -->
-      <!-- ko if: 'nl' == Other()['OfferCountryCode'] -->
-      [@L[cds.sales/domains/searchresults-new3:cctldUpsellNL]@L]
-      <!-- /ko -->
-      <!-- ko if: 'be' == Other()['OfferCountryCode'] -->
-      [@L[cds.sales/domains/searchresults-new3:cctldUpsellBE]@L]
-      <!-- /ko -->
-      <!-- ko if: 'se' == Other()['OfferCountryCode'] -->
-      [@L[cds.sales/domains/searchresults-new3:cctldUpsellSE]@L]
-      <!-- /ko -->
-    </p>
-    <div class="priceAndAction">
-      <div data-bind="click: UpdateCart, clickBubble: false, css: {'noclick' : fullAvailCheckError()}">
-        <span class="cctldflag" data-bind="css: 'cctld' + Other()['OfferCountryCode']"></span> <span data-bind="html: DomainSearchResults.BreakString(SLD(), 45)">[SLD]</span><span data-bind="html: '.' + TLD()">[TLD]</span> - <!-- ko template :{ name: 'CurrentPriceTemplate' }--><!-- /ko -->
-        <span data-bind="visible: fullAvailCheckError() || fullAvailCheck()">&nbsp;&dash;&nbsp;</span>
-        <span class="fullAvailCheck" data-bind="visible: !Type.eq(DomainSearchResults.ItemTypes.CloseoutAuction) && fullAvailCheck() && !fullAvailCheckError()">[@L[cds.sales/domains/searchresults-new3:AvailCheckText]@L]</span>        
-        <span class="fullAvailCheckError" data-bind="visible: fullAvailCheckError()">[@L[cds.sales/domains/searchresults-new3:AvailCheckError]@L]</span>
-        <!-- ko with: RegistrationInfo -->
-        <div class="registrationInfo">[@L[cds.sales/domains/searchresults-new3:TwoYearRegistrationRequired]@L]</div>
-        <!-- /ko -->
-      </div>
-      <div class="ccTldSelect selectbox checkbox" data-bind="uniqueId: Id, css: { selected: IsSelected }, click: UpdateCart, clickBubble: false, visible: !fullAvailCheckError()">&nbsp;
-      </div>
     </div>
-  </script>
+    <div class="ccTldSelect selectbox checkbox" data-bind="uniqueId: Id, css: { selected: IsSelected }, click: function(data, event) { UpdateCart(data, event, true) }, clickBubble: false, visible: !fullAvailCheckError()">&nbsp;
+    </div>
+  </div>
+</script>
 
-  <script id="FilterTemplate" type="text/html">
-    <p class="title" data-bind="visible: ShowTitle, html: Title, css: { expandable: IsExpandable }, click: ToggleExpansion, clickBubble: false">Filter Title</p>
-    <div data-bind="visible: IsExpanded, withProperties: { initValue: Value() }">
-      <label data-bind="visible: !InputType.eq(DomainSearchResults.InputTypes.None) && !InputType.eq(DomainSearchResults.InputTypes.Slider), html: Instruction, uniqueFor: Value, css: { title: !ShowTitle(), expandable: !ShowTitle() && IsExpandable() }, click: InputType.eq(DomainSearchResults.InputTypes.Checkbox) ? ToggleApply : false, clickBubble: false">Filter label</label>
-      <div class="domainBtnWrap">
+<script id="FilterTemplate" type="text/html">
+  <p class="title" data-bind="visible: ShowTitle, html: Title, css: { expandable: IsExpandable }, click: ToggleExpansion, clickBubble: false">Filter Title</p>
+  <div data-bind="visible: IsExpanded, withProperties: { initValue: Value() }">
+    <label data-bind="visible: !InputType.eq(DomainSearchResults.InputTypes.None) && !InputType.eq(DomainSearchResults.InputTypes.Slider), html: Instruction, uniqueFor: Value, css: { title: !ShowTitle(), expandable: !ShowTitle() && IsExpandable() }, click: InputType.eq(DomainSearchResults.InputTypes.Checkbox) ? ToggleApply : false, clickBubble: false">Filter label</label>
+    <div class="domainBtnWrap">
       <!-- ko if: InputType.eq(DomainSearchResults.InputTypes.Textbox) -->
       <input type="button" class="filterApplyAction flt-btn flt-btn-grn" value="[@L[cds.sales/domains/searchresults-new3:FilterApplyActionText]@L]" data-bind="visible: InputType.eq(DomainSearchResults.InputTypes.Textbox), click: Apply, clickBubble: false" />
       <!-- /ko -->
-      </div>
-      <!-- ko if: InputType.eq(DomainSearchResults.InputTypes.Checkbox) -->
-      <!--<input class="filterValueInput" type="checkbox" data-bind="uniqueId: Value, attr: { type: InputType }, checked: IsApplied" />-->
-      <div class="filterValueInput selectbox checkbox" data-bind="uniqueId: Value, css: { selected: IsApplied }, click: ToggleApply, clickBubble: false">&nbsp;</div>
-      <!-- /ko -->
-      <div class="domainInputTextWrap">
+    </div>
+    <!-- ko if: InputType.eq(DomainSearchResults.InputTypes.Checkbox) -->
+    <!--<input class="filterValueInput" type="checkbox" data-bind="uniqueId: Value, attr: { type: InputType }, checked: IsApplied" />-->
+    <div class="filterValueInput selectbox checkbox" data-bind="uniqueId: Value, css: { selected: IsApplied }, click: ToggleApply, clickBubble: false">&nbsp;</div>
+    <!-- /ko -->
+    <div class="domainInputTextWrap">
       <!-- ko if: InputType.eq(DomainSearchResults.InputTypes.Textbox) -->
       <input class="filterValueInput" type="text" data-bind="uniqueId: Value, attr: { type: InputType }, value: Value, executeOnEnter: Apply" />
       <!-- /ko -->
-      </div>  
-      <!-- ko if: InputType.eq(DomainSearchResults.InputTypes.Slider) -->
-      <div class="slider" data-bind="uniqueId: Value, cdsSlider: { max: InitialValue || Value(), maxText: '[@L[cds.sales/domains/searchresults-new3:FilterSliderMaxText]@L]', min: 1, value: Value(), stop: function (args) { $data.Temp = this.options.max; Value(args.value); this.options.max > args.value ? Apply($data) : Halt($data); return true; } }"></div>      
-      <!-- /ko -->
-      <!-- ko if: 0 < SubFilters().length -->
-      <ul data-bind="foreach: SubFilters">
-        <li data-bind="template: { name: 'FilterTemplate' }"></li>
-      </ul>
-      <!-- /ko -->
-      <a href="javascript:void(0)" class="clearAction" data-bind="visible: AllowClear, click: Clear, clickBubble: false">[@L[cds.sales/domains/searchresults-new3:FilterClearActionText]@L]</a>
     </div>
-  </script>
+    <!-- ko if: InputType.eq(DomainSearchResults.InputTypes.Slider) -->
+    <div class="slider" data-bind="uniqueId: Value, cdsSlider: { max: InitialValue || Value(), maxText: '[@L[cds.sales/domains/searchresults-new3:FilterSliderMaxText]@L]', min: 1, value: Value(), stop: function (args) { $data.Temp = this.options.max; Value(args.value); this.options.max > args.value ? Apply($data) : Halt($data); return true; } }"></div>
+    <!-- /ko -->
+    <!-- ko if: 0 < SubFilters().length -->
+    <ul data-bind="foreach: SubFilters">
+      <li data-bind="template: { name: 'FilterTemplate' }"></li>
+    </ul>
+    <!-- /ko -->
+    <a href="javascript:void(0)" class="clearAction" data-bind="visible: AllowClear, click: Clear, clickBubble: false">[@L[cds.sales/domains/searchresults-new3:FilterClearActionText]@L]</a>
+  </div>
+</script>
 
-  <!-- #region Phase Templates -->
+<!-- #region Phase Templates -->
 
-  <script id="PhasePrice" type="text/html">    
-    <span class="pricing">
+<script id="PhasePrice" type="text/html">
+  <span class="pricing">
       <span class="priceDescription" data-bind="visible: HasSubPhases">[@L[cds.sales/domains/searchresults-new3:StartingPriceText]@L]</span>
       <span class="price price-strike" data-bind="html: Prices().TotalCurrent ? Prices().TotalList : ''">$MXNXXX.XX</span>
       <span class="price"data-bind="html: Prices().TotalCurrent ? Prices().TotalCurrent : Prices().TotalList">$MXNXXX.XX</span>
     </span>
-  </script>
-  
-  <script id="AppFeeRefund" type="text/html">
-    <p class="appFee" data-bind="visible: Prices()['ApplicationFee']">[@L[cds.sales/domains/searchresults-new3:AppFeeLabel]@L] [@L[cds.sales/domains/searchresults-new3:AppFeeRefundText]@L]</p>
-  </script>
-  
-  <script id="AppFeeNonRefund" type="text/html">
-    <p class="appFee" data-bind="visible: Prices()['ApplicationFee']">[@L[cds.sales/domains/searchresults-new3:AppFeeLabel]@L] [@L[cds.sales/domains/searchresults-new3:AppFeeText]@L]</p>
-  </script>
-  
-  <script id="AppFeeNonRefundToolTip" type="text/html">
-    <p>[@L[cds.sales/domains/searchresults-new3:gToolTip-PartialRefundText]@L]</p>
-  </script>
-  
-  <script id="AppFeeRefundToolTip" type="text/html">
-    <p>[@L[cds.sales/domains/searchresults-new3:gToolTip-FullRefundText]@L]</p>
-  </script>
+</script>
 
-  <script id="TrademarkNonRefund" type="text/html">
-    <p>[@L[cds.sales/domains/searchresults-new3:TrademarkPricingDetailToolTipText]@L]</p>
-  </script>
+<script id="AppFeeRefund" type="text/html">
+  <p class="appFee" data-bind="visible: Prices()['ApplicationFee']">[@L[cds.sales/domains/searchresults-new3:AppFeeLabel]@L] [@L[cds.sales/domains/searchresults-new3:AppFeeRefundText]@L]</p>
+</script>
 
-  <script id="TrademarkFullRefund" type="text/html">
-    <p>[@L[cds.sales/domains/searchresults-new3:TrademarkPricingDetailToolTipTextFullRefund]@L]</p>
-  </script>
-  
-  <script id="EarlyAccessPhaseTemplate" type="text/html">
-    <!-- Phase: Early Access -->
-    <span class="selectbox radio-lg" data-bind="click: function(data, event) { $parent.SelectPhase(data, event); $parent.Update($parent, event) }, clickBubble: false, css: { selected: IsSelected }"></span>
-    <div data-bind="click: function(data, event) { $parent.SelectPhase(data, event); $parent.Update($parent, event) }, clickBubble: false">
-      <label>[@L[cds.sales/domains/searchresults-new3:EAPreRegOptionTitle]@L]</label>
-      <p class="titleDesc">[@L[cds.sales/domains/searchresults-new3:EAPreRegOptionTitleDescription]@L]</p>
-      <p class="description">[@L[cds.sales/domains/searchresults-new3:EAPreRegOptionDescription]@L]</p>
-      <!-- ko if: HasSubPhases -->
-      <div class="subPhasesContainer" data-bind="template: { name: 'SubPhasesTemplate' }, click: ToggleSubPhases, clickBubble: false">&nbsp;</div>
-      <!-- /ko -->
-      <div class="priceAndAction" data-bind="visible: !$parent.IsSelected()">
-        <!-- ko template: {name: 'PhasePrice' }--><!-- /ko -->
+<script id="AppFeeNonRefund" type="text/html">
+  <p class="appFee" data-bind="visible: Prices()['ApplicationFee']">[@L[cds.sales/domains/searchresults-new3:AppFeeLabel]@L] [@L[cds.sales/domains/searchresults-new3:AppFeeText]@L]</p>
+</script>
+
+<script id="AppFeeNonRefundToolTip" type="text/html">
+  <p>[@L[cds.sales/domains/searchresults-new3:gToolTip-PartialRefundText]@L]</p>
+</script>
+
+<script id="AppFeeRefundToolTip" type="text/html">
+  <p>[@L[cds.sales/domains/searchresults-new3:gToolTip-FullRefundText]@L]</p>
+</script>
+
+<script id="TrademarkNonRefund" type="text/html">
+  <p>[@L[cds.sales/domains/searchresults-new3:TrademarkPricingDetailToolTipText]@L]</p>
+</script>
+
+<script id="TrademarkFullRefund" type="text/html">
+  <p>[@L[cds.sales/domains/searchresults-new3:TrademarkPricingDetailToolTipTextFullRefund]@L]</p>
+</script>
+
+<script id="EarlyAccessPhaseTemplate" type="text/html">
+  <!-- Phase: Early Access -->
+  <span class="selectbox radio-lg" data-bind="click: function(data, event) { $parent.SelectPhase(data, event); $parent.Update($parent, event) }, clickBubble: false, css: { selected: IsSelected }"></span>
+  <div data-bind="click: function(data, event) { $parent.SelectPhase(data, event); $parent.Update($parent, event) }, clickBubble: false">
+    <label>[@L[cds.sales/domains/searchresults-new3:EAPreRegOptionTitle]@L]</label>
+    <p class="titleDesc">[@L[cds.sales/domains/searchresults-new3:EAPreRegOptionTitleDescription]@L]</p>
+    <p class="description">[@L[cds.sales/domains/searchresults-new3:EAPreRegOptionDescription]@L]</p>
+    <!-- ko if: HasSubPhases -->
+    <div class="subPhasesContainer" data-bind="template: { name: 'SubPhasesTemplate' }, click: ToggleSubPhases, clickBubble: false">&nbsp;</div>
+    <!-- /ko -->
+    <div class="priceAndAction" data-bind="visible: !$parent.IsSelected()">
+      <!-- ko template: {name: 'PhasePrice' }--><!-- /ko -->
         <span>
           <a class="g-toolTip g-toolTipText">
             [@L[cds.sales/domains/searchresults-new3:PricingDetailsActionText]@L]
             <div class="g-toolTipContents">
               <p data-bind="visible: !$root.IsTldNyc()">[@L[cds.sales/domains/searchresults-new3:EAPreRegPricingDetailsToolTipText]@L]</p>
-               <p data-bind="css: { 'nomargin': $root.IsTldNyc()}">[@L[cds.sales/domains/searchresults-new3:PricingDetailRenewal2]@L]</p>
+              <p data-bind="css: { 'nomargin': $root.IsTldNyc()}">[@L[cds.sales/domains/searchresults-new3:PricingDetailRenewal2]@L]</p>
             </div>
           </a>
         </span>
-        <!-- ko template: IsAppFeeRefundable() ? 'AppFeeRefund' : 'AppFeeNonRefund' --><!-- /ko -->
-      </div>
+      <!-- ko template: IsAppFeeRefundable() ? 'AppFeeRefund' : 'AppFeeNonRefund' --><!-- /ko -->
     </div>
-  </script>  
+  </div>
+</script>
 
-  <script id="EarlyAccessPriorityPhaseTemplate" type="text/html">
-    <!-- Phase: Early Access Priority-->
-    <span class="selectbox radio-lg" data-bind="click: function(data, event) { $parent.SelectPhase(data, event); $parent.Update($parent, event) }, clickBubble: false, css: { selected: IsSelected }"></span>
-    <div data-bind="click: function(data, event) { $parent.SelectPhase(data, event); $parent.Update($parent, event) }, clickBubble: false">
-      <label>[@L[cds.sales/domains/searchresults-new3:EAPriorityPreRegOptionTitle]@L]</label>
-      <p class="titleDesc">[@L[cds.sales/domains/searchresults-new3:EAPriorityPreRegOptionTitleDescription]@L]</p>
-      <p class="description"></p>
-      <!-- ko if: HasSubPhases -->
-      <div class="subPhasesContainer" data-bind="template: { name: 'SubPhasesTemplate' }, click: ToggleSubPhases, clickBubble: false">&nbsp;</div>
-      <!-- /ko -->
-      <div class="priceAndAction" data-bind="visible: ($parent.IsSelected() && !IsSelected()) || !$parent.IsSelected()">
-        <span class="priceDesc" data-bind="visible: !$parent.IsSelected()">[@L[cds.sales/domains/searchresults-new3:EAPriorityPreRegPriceDescription]@L]</span>
-        <span class="priceDesc added" data-bind="visible: !IsSelected() && $parent.IsSelected()">[@L[cds.sales/domains/searchresults-new3:EAPriorityPreRegPriceDescription1]@L]</span>
-        <!-- ko template: {name: 'PhasePrice' }--><!-- /ko -->
+<script id="EarlyAccessPriorityPhaseTemplate" type="text/html">
+  <!-- Phase: Early Access Priority-->
+  <span class="selectbox radio-lg" data-bind="click: function(data, event) { $parent.SelectPhase(data, event); $parent.Update($parent, event) }, clickBubble: false, css: { selected: IsSelected }"></span>
+  <div data-bind="click: function(data, event) { $parent.SelectPhase(data, event); $parent.Update($parent, event) }, clickBubble: false">
+    <label>[@L[cds.sales/domains/searchresults-new3:EAPriorityPreRegOptionTitle]@L]</label>
+    <p class="titleDesc">[@L[cds.sales/domains/searchresults-new3:EAPriorityPreRegOptionTitleDescription]@L]</p>
+    <p class="description"></p>
+    <!-- ko if: HasSubPhases -->
+    <div class="subPhasesContainer" data-bind="template: { name: 'SubPhasesTemplate' }, click: ToggleSubPhases, clickBubble: false">&nbsp;</div>
+    <!-- /ko -->
+    <div class="priceAndAction" data-bind="visible: ($parent.IsSelected() && !IsSelected()) || !$parent.IsSelected()">
+      <span class="priceDesc" data-bind="visible: !$parent.IsSelected()">[@L[cds.sales/domains/searchresults-new3:EAPriorityPreRegPriceDescription]@L]</span>
+      <span class="priceDesc added" data-bind="visible: !IsSelected() && $parent.IsSelected()">[@L[cds.sales/domains/searchresults-new3:EAPriorityPreRegPriceDescription1]@L]</span>
+      <!-- ko template: {name: 'PhasePrice' }--><!-- /ko -->
         <span>
           <a class="g-toolTip g-toolTipText">
             [@L[cds.sales/domains/searchresults-new3:PricingDetailsActionText]@L]
             <div class="g-toolTipContents">
               <p>[@L[cds.sales/domains/searchresults-new3:EAPriorityPreRegPricingDetailsToolTipText]@L]</p>
-           </div>
-          </a>
-        </span>
-        <!-- ko template: IsAppFeeRefundable() ? 'AppFeeRefund' : 'AppFeeNonRefund' --><!-- /ko -->
-      </div>
-    </div>
-  </script>
-
-  <script id="PreRegPhaseTemplate" type="text/html">
-    <!-- Phase: PreReg -->
-    <span class="selectbox radio-lg" data-bind="click: function(data, event) { $parent.SelectPhase(data, event); $parent.Update($parent, event) }, clickBubble: false, css: { selected: IsSelected }"></span>
-    <div data-bind="click: function(data, event) { $parent.SelectPhase(data, event); $parent.Update($parent, event) }, clickBubble: false">
-      <label>[@L[cds.sales/domains/searchresults-new3:PreRegOptionTitle]@L]</label>
-      <p class="titleDesc">[@L[cds.sales/domains/searchresults-new3:PreRegoptionTitleDescription]@L]</p>
-      <p class="description">[@L[cds.sales/domains/searchresults-new3:PreRegoptionDescription]@L]</p>
-      <!-- ko if: HasSubPhases -->
-      <div class="subPhasesContainer" data-bind="template: { name: 'SubPhasesTemplate' }, click: ToggleSubPhases, clickBubble: false">&nbsp;</div>
-      <!-- /ko -->
-      <div class="priceAndAction" data-bind="visible: !$parent.IsSelected()">
-        <!-- ko template: {name: 'PhasePrice' }--><!-- /ko -->
-        <span>
-          <a class="g-toolTip g-toolTipText">
-            [@L[cds.sales/domains/searchresults-new3:PricingDetailsActionText]@L]
-            <div class="g-toolTipContents">               
-             <p data-bind="visible: !$root.IsTldNyc()">[@L[cds.sales/domains/searchresults-new3:PreRegPricingDetailToolTipText]@L]</p>               
-              <p data-bind="css: { 'nomargin': $root.IsTldNyc()}">[@L[cds.sales/domains/searchresults-new3:PricingDetailRenewal2]@L]</p>
             </div>
           </a>
         </span>
-        <!-- ko template: IsAppFeeRefundable() ? 'AppFeeRefund' : 'AppFeeNonRefund' --><!-- /ko -->
-      </div>
+      <!-- ko template: IsAppFeeRefundable() ? 'AppFeeRefund' : 'AppFeeNonRefund' --><!-- /ko -->
     </div>
-  </script>
+  </div>
+</script>
 
-  <script id="PriorityPhaseTemplate" type="text/html">
-    <span class="selectbox radio-lg" data-bind="click: function(data, event) { $parent.SelectPhase(data, event); $parent.Update($parent, event) }, clickBubble: false, css: { selected: IsSelected }"></span>
-    <div data-bind="click: function(data, event) { $parent.SelectPhase(data, event); $parent.Update($parent, event) }, clickBubble: false">
-      <label>[@L[cds.sales/domains/searchresults-new3:PriorityPreRegOptionTitle]@L]</label>
-      <!-- ko if: !HasSubPhases() -->
-      <p class="titleDesc">[@L[cds.sales/domains/searchresults-new3:PriorityPreRegOptionTitleDescription]@L]</p>
-      <p class="description">[@L[cds.sales/domains/searchresults-new3:PriorityPreRegOptionDescription]@L]</p>
-      <!-- /ko -->
-      <!-- ko if: HasSubPhases -->
-      <p class="titleDesc">[@L[cds.sales/domains/searchresults-new3:EAPreRegOptionTitleDescription]@L]</p>
-      <p class="description" data-bind="visible: HasSubPhases">[@L[cds.sales/domains/searchresults-new3:EAPreRegOptionDescription]@L]</p>
-      <div class="subPhasesContainer" data-bind="template: { name: 'SubPhasesTemplate' }, click: ToggleSubPhases, clickBubble: false">&nbsp;</div>
-      <!-- /ko -->
-      <div class="priceAndAction" data-bind="visible: !$parent.IsSelected()">
-        <!-- ko template: {name: 'PhasePrice' }--><!-- /ko -->
+<script id="PreRegPhaseTemplate" type="text/html">
+  <!-- Phase: PreReg -->
+  <span class="selectbox radio-lg" data-bind="click: function(data, event) { $parent.SelectPhase(data, event); $parent.Update($parent, event) }, clickBubble: false, css: { selected: IsSelected }"></span>
+  <div data-bind="click: function(data, event) { $parent.SelectPhase(data, event); $parent.Update($parent, event) }, clickBubble: false">
+    <label>[@L[cds.sales/domains/searchresults-new3:PreRegOptionTitle]@L]</label>
+    <p class="titleDesc">[@L[cds.sales/domains/searchresults-new3:PreRegoptionTitleDescription]@L]</p>
+    <p class="description">[@L[cds.sales/domains/searchresults-new3:PreRegoptionDescription]@L]</p>
+    <!-- ko if: HasSubPhases -->
+    <div class="subPhasesContainer" data-bind="template: { name: 'SubPhasesTemplate' }, click: ToggleSubPhases, clickBubble: false">&nbsp;</div>
+    <!-- /ko -->
+    <div class="priceAndAction" data-bind="visible: !$parent.IsSelected()">
+      <!-- ko template: {name: 'PhasePrice' }--><!-- /ko -->
         <span>
           <a class="g-toolTip g-toolTipText">
             [@L[cds.sales/domains/searchresults-new3:PricingDetailsActionText]@L]
             <div class="g-toolTipContents">
-              <!-- ko if: HasSubPhases -->  
-              
+              <p data-bind="visible: !$root.IsTldNyc()">[@L[cds.sales/domains/searchresults-new3:PreRegPricingDetailToolTipText]@L]</p>
+              <p data-bind="css: { 'nomargin': $root.IsTldNyc()}">[@L[cds.sales/domains/searchresults-new3:PricingDetailRenewal2]@L]</p>
+            </div>
+          </a>
+        </span>
+      <!-- ko template: IsAppFeeRefundable() ? 'AppFeeRefund' : 'AppFeeNonRefund' --><!-- /ko -->
+    </div>
+  </div>
+</script>
+
+<script id="PriorityPhaseTemplate" type="text/html">
+  <span class="selectbox radio-lg" data-bind="click: function(data, event) { $parent.SelectPhase(data, event); $parent.Update($parent, event) }, clickBubble: false, css: { selected: IsSelected }"></span>
+  <div data-bind="click: function(data, event) { $parent.SelectPhase(data, event); $parent.Update($parent, event) }, clickBubble: false">
+    <label>[@L[cds.sales/domains/searchresults-new3:PriorityPreRegOptionTitle]@L]</label>
+    <!-- ko if: !HasSubPhases() -->
+    <p class="titleDesc">[@L[cds.sales/domains/searchresults-new3:PriorityPreRegOptionTitleDescription]@L]</p>
+    <p class="description">[@L[cds.sales/domains/searchresults-new3:PriorityPreRegOptionDescription]@L]</p>
+    <!-- /ko -->
+    <!-- ko if: HasSubPhases -->
+    <p class="titleDesc">[@L[cds.sales/domains/searchresults-new3:EAPreRegOptionTitleDescription]@L]</p>
+    <p class="description" data-bind="visible: HasSubPhases">[@L[cds.sales/domains/searchresults-new3:EAPreRegOptionDescription]@L]</p>
+    <div class="subPhasesContainer" data-bind="template: { name: 'SubPhasesTemplate' }, click: ToggleSubPhases, clickBubble: false">&nbsp;</div>
+    <!-- /ko -->
+    <div class="priceAndAction" data-bind="visible: !$parent.IsSelected()">
+      <!-- ko template: {name: 'PhasePrice' }--><!-- /ko -->
+        <span>
+          <a class="g-toolTip g-toolTipText">
+            [@L[cds.sales/domains/searchresults-new3:PricingDetailsActionText]@L]
+            <div class="g-toolTipContents">
+              <!-- ko if: HasSubPhases -->
+
               <p data-bind="visible: !$root.IsTldNyc()">[@L[cds.sales/domains/searchresults-new3:PriorityPreRegPricingDetailToolTipText]@L]</p>
-              
-               <p data-bind="css: { 'nomargin': $root.IsTldNyc()}">[@L[cds.sales/domains/searchresults-new3:PricingDetailRenewal2]@L]</p>
+
+              <p data-bind="css: { 'nomargin': $root.IsTldNyc()}">[@L[cds.sales/domains/searchresults-new3:PricingDetailRenewal2]@L]</p>
               <!-- /ko -->
               <!-- ko if: !HasSubPhases() -->
               <p>[@L[cds.sales/domains/searchresults-new3:PricingDetailRenewal2]@L]</p>
@@ -657,25 +666,25 @@ name: FOS-24164
               <!-- /ko -->
             </div>
           </a>
-        </span>       
-        <!-- ko template: IsAppFeeRefundable() ? 'AppFeeRefund' : 'AppFeeNonRefund' --><!-- /ko -->
-      </div>
+        </span>
+      <!-- ko template: IsAppFeeRefundable() ? 'AppFeeRefund' : 'AppFeeNonRefund' --><!-- /ko -->
     </div>
-  </script>
+  </div>
+</script>
 
-  <script id="TrademarkPhaseTemplate" type="text/html">
-    <p data-bind="visible: !IsExpanded(), click: ToggleExpansion, clickBubble: false">[@L[cds.sales/domains/searchresults-new3:TrademarkOwnerActionTitle]@L]<a href="javascript: void(0)">[@L[cds.sales/domains/searchresults-new3:TrademarkOwnerActionText]@L]</a></p>
-    <!-- ko if: IsExpanded -->
-    <span class="selectbox radio-lg" data-bind="click: function(data, event) { $parent.SelectPhase(data, event); $parent.Update($parent, event) }, clickBubble: false, css: { selected: IsSelected }"></span>
-    <div data-bind="click: function(data, event) { $parent.SelectPhase(data, event); $parent.Update($parent, event) }, clickBubble: false">
-      <label>[@L[cds.sales/domains/searchresults-new3:TrademarkOptionTitle]@L]</label>
-      <p class="titleDesc">[@L[cds.sales/domains/searchresults-new3:TrademarkOptionDescription]@L]</p>
-      <p class="description"></p>
-      <!-- ko if: HasSubPhases -->
-      <div class="subPhasesContainer" data-bind="template: { name: 'SubPhasesTemplate' }, click: ToggleSubPhases, clickBubble: false">&nbsp;</div>
-      <!-- /ko -->
-      <div class="priceAndAction" data-bind="visible: ShowPricing && !$parent.IsSelected()">
-        <!-- ko template: {name: 'PhasePrice' }--><!-- /ko -->
+<script id="TrademarkPhaseTemplate" type="text/html">
+  <p data-bind="visible: !IsExpanded(), click: ToggleExpansion, clickBubble: false">[@L[cds.sales/domains/searchresults-new3:TrademarkOwnerActionTitle]@L]<a href="javascript: void(0)">[@L[cds.sales/domains/searchresults-new3:TrademarkOwnerActionText]@L]</a></p>
+  <!-- ko if: IsExpanded -->
+  <span class="selectbox radio-lg" data-bind="click: function(data, event) { $parent.SelectPhase(data, event); $parent.Update($parent, event) }, clickBubble: false, css: { selected: IsSelected }"></span>
+  <div data-bind="click: function(data, event) { $parent.SelectPhase(data, event); $parent.Update($parent, event) }, clickBubble: false">
+    <label>[@L[cds.sales/domains/searchresults-new3:TrademarkOptionTitle]@L]</label>
+    <p class="titleDesc">[@L[cds.sales/domains/searchresults-new3:TrademarkOptionDescription]@L]</p>
+    <p class="description"></p>
+    <!-- ko if: HasSubPhases -->
+    <div class="subPhasesContainer" data-bind="template: { name: 'SubPhasesTemplate' }, click: ToggleSubPhases, clickBubble: false">&nbsp;</div>
+    <!-- /ko -->
+    <div class="priceAndAction" data-bind="visible: ShowPricing && !$parent.IsSelected()">
+      <!-- ko template: {name: 'PhasePrice' }--><!-- /ko -->
         <span>
           <a class="g-toolTip g-toolTipText">
             [@L[cds.sales/domains/searchresults-new3:PricingDetailsActionText]@L]
@@ -685,224 +694,231 @@ name: FOS-24164
             </div>
           </a>
         </span>
-        <!-- ko template: IsAppFeeRefundable() ? 'AppFeeRefund' : 'AppFeeNonRefund' --><!-- /ko -->
-      </div>
+      <!-- ko template: IsAppFeeRefundable() ? 'AppFeeRefund' : 'AppFeeNonRefund' --><!-- /ko -->
     </div>
+  </div>
+  <!-- /ko -->
+</script>
+
+<script type="text/html" id="SubPhasesTemplate">
+  <label class="subPhases">[@L[cds.sales/domains/searchresults-new3:SubPhasesLabel]@L]</label>
+  <div class="subPhases" data-bind="css: { expanded : AreSubPhasesExpanded }">
+    <div class="selection" data-bind="visible: !SelectedSubPhase()">[@L[cds.sales/domains/searchresults-new3:SubPhasesDefaultText]@L]</div>
+    <!-- ko with: SelectedSubPhase -->
+    <div class="selection"><span data-bind="html: Name"></span> - <span class="price" data-bind="html: Prices().TotalCurrent ? Prices().TotalCurrent : Prices().TotalList">$MXNXXX.XX</span></div>
     <!-- /ko -->
-  </script>
+    <div class="selectbtn" data-bind="css: { expanded: AreSubPhasesExpanded }"><span class="selectbox"></span></div>
+    <ul data-bind="foreach: SubPhases">
+      <li data-bind="attr: { id: Code }, css: { selected: IsSelected }, click: $parent.SelectSubPhase, clickBubble: false">
+        <span data-bind="html: Name"></span> - <span class="price" data-bind="html: Prices().TotalCurrent ? Prices().TotalCurrent : Prices().TotalList">$MXNXXX.XX</span>
+        <!-- ko if: Template().IsSubPhase -->
+        <div data-bind="html: Template().Title">Title</div>
+        <div>[@L[cds.sales/domains/searchresults-new3:StartsOn]@L]</div>
+        <!-- /ko -->
+      </li>
+    </ul>
+  </div>
+</script>
 
-  <script type="text/html" id="SubPhasesTemplate">
-    <label class="subPhases">[@L[cds.sales/domains/searchresults-new3:SubPhasesLabel]@L]</label>
-    <div class="subPhases" data-bind="css: { expanded : AreSubPhasesExpanded }">
-      <div class="selection" data-bind="visible: !SelectedSubPhase()">[@L[cds.sales/domains/searchresults-new3:SubPhasesDefaultText]@L]</div>
-      <!-- ko with: SelectedSubPhase -->
-      <div class="selection"><span data-bind="html: Name"></span> - <span class="price" data-bind="html: Prices().TotalCurrent ? Prices().TotalCurrent : Prices().TotalList">$MXNXXX.XX</span></div>
-      <!-- /ko -->
-      <div class="selectbtn" data-bind="css: { expanded: AreSubPhasesExpanded }"><span class="selectbox"></span></div>
-      <ul data-bind="foreach: SubPhases">
-        <li data-bind="attr: { id: Code }, css: { selected: IsSelected }, click: $parent.SelectSubPhase, clickBubble: false">
-          <span data-bind="html: Name"></span> - <span class="price" data-bind="html: Prices().TotalCurrent ? Prices().TotalCurrent : Prices().TotalList">$MXNXXX.XX</span>
-          <!-- ko if: Template().IsSubPhase -->
-          <div data-bind="html: Template().Title">Title</div>
-          <div>[@L[cds.sales/domains/searchresults-new3:StartsOn]@L]</div>
-          <!-- /ko -->
-        </li>
-      </ul>
-    </div>
-  </script>
+<!-- #endregion -->
 
-  <!-- #endregion -->
-
-  <script id="StackTemplate" type="text/html">
-    <div id="stack" data-bind="visible: $parent.ShowStack() && !$parent.fullAvailCheckError() ">
-      <p class="copy" data-bind="visible: !stackFullAvailCheckError(), css: { 'added': IsSelected()}">
+<script id="StackTemplate" type="text/html">
+  <div id="stack" data-bind="visible: $parent.ShowStack() && !$parent.fullAvailCheckError() ">
+    <p class="copy" data-bind="visible: !stackFullAvailCheckError(), css: { 'added': IsSelected()}">
         <span data-bind="visible: !IsSelected()">
           <span data-bind="text: GetDomainsCount()"></span>
-            <span class="pricing">[@L[cds.sales/domains/searchresults-new3:StackSavingsTitle]@L] 
+            <span class="pricing">[@L[cds.sales/domains/searchresults-new3:StackSavingsTitle]@L]
             <span data-bind="html: SavingsText"></span>
             </span>
         </span>
-        <span class="added" data-bind="visible: IsSelected()">[@L[cds.sales/domains/searchresults-new3:StackAddSuccessText]@L]</span>
-      </p>
-      <div class="priceAndAction">
-        <!-- ko template: { name: ActionTemplate } --><!-- /ko -->
-        <span class="pricing" data-bind="visible: !IsSelected() && !stackFullAvailCheck() && !stackFullAvailCheckError(), template: { name: 'CurrentPriceListPriceTemplate' }">&nbsp;</span>
-        <span class="stackFullAvailCheck" data-bind="visible: !Type.eq(DomainSearchResults.ItemTypes.CloseoutAuction) && stackFullAvailCheck() && !stackFullAvailCheckError()">[@L[cds.sales/domains/searchresults-new3:AvailCheckText]@L]</span>
-        <span class="stackFullAvailCheckError" data-bind="visible: stackFullAvailCheckError()">[@L[cds.sales/domains/searchresults-new3:StackAvailCheckError]@L]</span>
-      </div>
-      <!--<p>[@L[cds.sales/domains/searchresults-new3:StackTitle]@L]</p>-->
-      <ul data-bind="foreach: Domains, css: { 'unavailable' : stackFullAvailCheckError() }">
-        <li class="result" data-bind="attr: { 'data-id': 'stack' + Id() }">
-          <span data-bind="html: DomainSearchResults.BreakString(SLD(), 45)">SLD</span><span data-bind="html: '.' + TLD()">TLD</span>
-        </li>
-      </ul>
+      <span class="added" data-bind="visible: IsSelected()">[@L[cds.sales/domains/searchresults-new3:StackAddSuccessText]@L]</span>
+    </p>
+    <div class="priceAndAction">
+      <!-- ko template: { name: ActionTemplate } --><!-- /ko -->
+      <span class="pricing" data-bind="visible: !IsSelected() && !stackFullAvailCheck() && !stackFullAvailCheckError(), template: { name: 'CurrentPriceListPriceTemplate' }">&nbsp;</span>
+      <span class="stackFullAvailCheck" data-bind="visible: !Type.eq(DomainSearchResults.ItemTypes.CloseoutAuction) && stackFullAvailCheck() && !stackFullAvailCheckError()">[@L[cds.sales/domains/searchresults-new3:AvailCheckText]@L]</span>
+      <span class="stackFullAvailCheckError" data-bind="visible: stackFullAvailCheckError()">[@L[cds.sales/domains/searchresults-new3:StackAvailCheckError]@L]</span>
     </div>
-  </script>
+    <!--<p>[@L[cds.sales/domains/searchresults-new3:StackTitle]@L]</p>-->
+    <ul data-bind="foreach: Domains, css: { 'unavailable' : stackFullAvailCheckError() }">
+      <li class="result" data-bind="attr: { 'data-id': 'stack' + Id() }">
+        <span data-bind="html: DomainSearchResults.BreakString(SLD(), 45)">SLD</span><span data-bind="html: '.' + TLD()">TLD</span>
+      </li>
+    </ul>
+  </div>
+</script>
 
-  <!-- #region Action Templates -->
+<!-- #region Action Templates -->
 
-  <script type="text/html" id="ActionTemplate1">
-    ##if(splitTestingSideIsActive(1191, B))
-    <a href="#" class="btn flt-btn flt-btn-grn" data-bind="visible: !fullAvailCheck() && !fullAvailCheckError(), css: {'btn-sm': 'header' != context, 'btn-lg': context == 'header' }, click: UpdateCart, clickBubble: false">[@L[cds.sales/domains/searchresults-new3:AddActionTextNew]@L]</a>
-    <span class="fullAvailCheck" data-bind="visible: !Type.eq(DomainSearchResults.ItemTypes.CloseoutAuction) && fullAvailCheck() && !fullAvailCheckError()">[@L[cds.sales/domains/searchresults-new3:AvailCheckText]@L]</span>
-    <span class="fullAvailCheckError" data-bind="visible: fullAvailCheckError()">[@L[cds.sales/domains/searchresults-new3:AvailCheckError]@L]</span>
-    ##else
-    <a href="#" class="btn flt-btn flt-btn-grn" data-bind="css: {'btn-sm': 'header' != context, 'btn-lg': context == 'header' }, click: UpdateCart, clickBubble: false">[@L[cds.sales/domains/searchresults-new3:AddActionText]@L]</a>
-    ##endif
-  </script>
-  <script type="text/html" id="ActionTemplate2">
-    <a href="#" class="btn flt-btn flt-btn-grn" data-bind="css: {'btn-sm': 'header' != context, 'btn-lg': context == 'header' }, click: UpdateCart, clickBubble: false">Backorder</a>
-  </script>
-  <script type="text/html" id="ActionTemplate0">
-    <a href="javascript: void(0);" class="btn btn-sec" data-bind="css: {'btn-sm': 'header' != context, 'btn-lg': context == 'header' }">[@L[cds.sales/domains/searchresults-new3:DomainUnavailable]@L]</a>
-  </script>
-  <script type="text/html" id="ActionTemplate3">
-    ##if(splitTestingSideIsActive(1191, B))
-    <a href="#" class="btn btn-sec action-added" data-bind="visible: !Type.eq(DomainSearchResults.ItemTypes.CloseoutAuction) && IsSelected() && !fullAvailCheck(), css: {'btn-sm': 'header' != context, 'btn-lg': context == 'header' }, click: UpdateCart, clickBubble: false">[@L[cds.sales/domains/searchresults-new3:UpdateActionTextNew]@L]</a>
-    <span class="fullAvailCheck" data-bind="visible: !Type.eq(DomainSearchResults.ItemTypes.CloseoutAuction) && fullAvailCheck()">[@L[cds.sales/domains/searchresults-new3:AvailCheckText]@L]</span>
-    ##else
-    <a href="#" class="btn btn-sec action-added" data-bind="visible: !Type.eq(DomainSearchResults.ItemTypes.CloseoutAuction) && IsSelected(), css: {'btn-sm': 'header' != context, 'btn-lg': context == 'header' }, click: UpdateCart, clickBubble: false">[@L[cds.sales/domains/searchresults-new3:UpdateActionText]@L]</a>
-    ##endif
-    <a href="#" class="btn btn-act action-remove" data-bind="visible: !Type.eq(DomainSearchResults.ItemTypes.CloseoutAuction), css: {'btn-sm': 'header' != context, 'btn-lg': context == 'header' }, click: UpdateCart, clickBubble: false">[@L[cds.sales/domains/searchresults-new3:RemoveActionText]@L]</a>
-  </script>
-  <script type="text/html" id="ActionTemplate4">
-    <!-- Auction -->
-    <a class="btn btn-prg flt-btn flt-btn-grn arrow-after" data-bind="css: {'btn-sm': 'header' != context, 'btn-lg': context == 'header' }, attr: { href : DomainSearchResults.AppendQueryString('[@T[link:<external linktype="TDNAMURL" path="trpItemListing.aspx"></external>]@T]', 'miid=' + $data.Other['AuctionId']) }">[@L[cds.sales/domains/searchresults-new3:GetItemActionText]@L]</a>
-  </script>
+<script type="text/html" id="ActionTemplate1">
+  ##if(splitTestingSideIsActive(1191, B))
+  <a href="#" class="btn flt-btn flt-btn-grn" data-bind="visible: !fullAvailCheck() && !fullAvailCheckError(), css: {'btn-sm': 'header' != context, 'btn-lg': context == 'header' }, click: UpdateCart, clickBubble: false">[@L[cds.sales/domains/searchresults-new3:AddActionTextNew]@L]</a>
+  <span class="fullAvailCheck" data-bind="visible: !Type.eq(DomainSearchResults.ItemTypes.CloseoutAuction) && fullAvailCheck() && !fullAvailCheckError()">[@L[cds.sales/domains/searchresults-new3:AvailCheckText]@L]</span>
+  <span class="fullAvailCheckError" data-bind="visible: fullAvailCheckError()">[@L[cds.sales/domains/searchresults-new3:AvailCheckError]@L]</span>
+  ##else
+  <a href="#" class="btn flt-btn flt-btn-grn" data-bind="css: {'btn-sm': 'header' != context, 'btn-lg': context == 'header' }, click: UpdateCart, clickBubble: false">[@L[cds.sales/domains/searchresults-new3:AddActionText]@L]</a>
+  ##endif
+</script>
+<script type="text/html" id="ActionTemplate2">
+  <a href="#" class="btn flt-btn flt-btn-grn" data-bind="css: {'btn-sm': 'header' != context, 'btn-lg': context == 'header' }, click: UpdateCart, clickBubble: false">Backorder</a>
+</script>
+<script type="text/html" id="ActionTemplate0">
+  <a href="javascript: void(0);" class="btn btn-sec" data-bind="css: {'btn-sm': 'header' != context, 'btn-lg': context == 'header' }">[@L[cds.sales/domains/searchresults-new3:DomainUnavailable]@L]</a>
+</script>
+<script type="text/html" id="ActionTemplate3">
+  ##if(splitTestingSideIsActive(1191, B))
+  <a href="#" class="btn btn-sec action-added" data-bind="visible: !Type.eq(DomainSearchResults.ItemTypes.CloseoutAuction) && IsSelected() && !fullAvailCheck(), css: {'btn-sm': 'header' != context, 'btn-lg': context == 'header' }, click: UpdateCart, clickBubble: false">[@L[cds.sales/domains/searchresults-new3:UpdateActionTextNew]@L]</a>
+  <span class="fullAvailCheck" data-bind="visible: !Type.eq(DomainSearchResults.ItemTypes.CloseoutAuction) && fullAvailCheck()">[@L[cds.sales/domains/searchresults-new3:AvailCheckText]@L]</span>
+  ##else
+  <a href="#" class="btn btn-sec action-added" data-bind="visible: !Type.eq(DomainSearchResults.ItemTypes.CloseoutAuction) && IsSelected(), css: {'btn-sm': 'header' != context, 'btn-lg': context == 'header' }, click: UpdateCart, clickBubble: false">[@L[cds.sales/domains/searchresults-new3:UpdateActionText]@L]</a>
+  ##endif
+  <a href="#" class="btn btn-act action-remove" data-bind="visible: !Type.eq(DomainSearchResults.ItemTypes.CloseoutAuction), css: {'btn-sm': 'header' != context, 'btn-lg': context == 'header' }, click: UpdateCart, clickBubble: false">[@L[cds.sales/domains/searchresults-new3:RemoveActionText]@L]</a>
+</script>
+<script type="text/html" id="ActionTemplate4">
+  <!-- Auction -->
+  <a class="btn btn-prg flt-btn flt-btn-grn arrow-after" data-bind="css: {'btn-sm': 'header' != context, 'btn-lg': context == 'header' }, attr: { href : DomainSearchResults.AppendQueryString('[@T[link:<external linktype="TDNAMURL" path="trpItemListing.aspx"></external>]@T]', 'miid=' + $data.Other['AuctionId']) }">[@L[cds.sales/domains/searchresults-new3:GetItemActionText]@L]</a>
+</script>
 
-  <!-- #endregion -->
+<!-- #endregion -->
 
-  <script type="text/javascript" src="[@T[link:<javascriptroot />]@T]fos/script/atlantis_jquery14.min.js"></script>
-  <script type="text/javascript" src="[@T[link:<javascriptroot />]@T]fos/script/sales19.min.js"></script>
-  <script type="text/javascript" src="[@T[link:<javascriptroot />]@T]shared/js/jquery.plugins.min.20111019.js"></script>
-  <script type="text/javascript" src="[@T[link:<javascriptroot />]@T]fos/script/cds_sales_script_20121011.js"></script>
-  <script type="text/javascript" src="[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2"></script>
-  <script type="text/javascript" src="[@T[link:<javascriptroot />]@T]fos/script/knockout-2.2.1.js"></script>
-  <script type="text/javascript" src="[@T[link:<javascriptroot />]@T]fos/script/waypoints.min.js"></script>
-  <script type="text/javascript">$sf = { skin: "fos" };</script>
-  <script type="text/javascript" src="[@T[link:<javascriptroot />]@T]starfield/curl/v1.1.2/curl.js"></script>
-  <script type="text/javascript" src="[@T[link:<javascriptroot />]@T]fos/domains/search-new/js/filter.slider.min.js"></script>
-  <script type="text/javascript" src="[@T[link:<js path='fos/sales/themes/scotty/domains/searchresults/js/searchresults_20140815.js' />]@T]"></script>
-  <script type="text/javascript" src="[@T[link:<javascriptroot />]@T]fos/sales/themes/scotty/domains/searchresults/js/searchbox_20140815.js"></script>
+<script type="text/javascript" src="[@T[link:<javascriptroot />]@T]fos/script/atlantis_jquery14.min.js"></script>
+<script type="text/javascript" src="[@T[link:<javascriptroot />]@T]fos/script/sales19.min.js"></script>
+<script type="text/javascript" src="[@T[link:<javascriptroot />]@T]shared/js/jquery.plugins.min.20111019.js"></script>
+<script type="text/javascript" src="[@T[link:<javascriptroot />]@T]fos/script/cds_sales_script_20121011.js"></script>
+<script type="text/javascript" src="[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2"></script>
+<script type="text/javascript" src="[@T[link:<javascriptroot />]@T]fos/script/knockout-2.2.1.js"></script>
+<script type="text/javascript" src="[@T[link:<javascriptroot />]@T]fos/script/waypoints.min.js"></script>
+<script type="text/javascript">$sf = { skin: "fos" };</script>
+<script type="text/javascript" src="[@T[link:<javascriptroot />]@T]starfield/curl/v1.1.2/curl.js"></script>
+<script type="text/javascript" src="[@T[link:<javascriptroot />]@T]fos/domains/search-new/js/filter.slider.min.js"></script>
+<script type="text/javascript" src="[@T[link:<js path='fos/sales/themes/scotty/domains/searchresults/js/searchresultsfastball.js' />]@T]"></script>
+<script type="text/javascript" src="[@T[link:<javascriptroot />]@T]fos/sales/themes/scotty/domains/searchresults/js/searchbox.js"></script>
 
-  <!--[if lte IE 8]>
-  <script src="[@T[link:<javascriptroot />]@T]fos/script/JSON2.min.js"></script>
-  <![endif]-->
-  
-  <script type="text/javascript">
+<!--[if lte IE 8]>
+<script src="[@T[link:<javascriptroot />]@T]fos/script/JSON2.min.js"></script>
+<![endif]-->
 
-    $(document).ready(function () {
-      $("html").bind("ajaxStop", function() {
-        if($('#tldHeader').length > 0){
-          var tldHeader = $('#tldHeader');
-          var tld = tldHeader.find('.tldType');
-          var tldType = tldHeader.find('.domainType');
-          while((tld.width() + tldType.width() + 38 > 547)&& (tld .css('font-size').replace('px', '') > 45)){
-            tld .css('font-size',((tld.css('font-size').replace('px','')-5)+'px'));
-            tldHeader .css('line-height',((tldHeader.css('line-height').replace('px','')-5)+'px'));
-            tldHeader .css('margin-bottom',((tldHeader.css('margin-bottom').replace('px','')-1)+'px'));
-          };
-          if(tld.width() + tldType.width() + 38 > 547){
-            tldType.hide();
-          }
+<script type="text/javascript">
+
+  $(document).ready(function () {
+    $("html").bind("ajaxStop", function() {
+      if($('#tldHeader').length > 0){
+        var tldHeader = $('#tldHeader');
+        var tld = tldHeader.find('.tldType');
+        var tldType = tldHeader.find('.domainType');
+        while((tld.width() + tldType.width() + 38 > 547)&& (tld .css('font-size').replace('px', '') > 45)){
+          tld .css('font-size',((tld.css('font-size').replace('px','')-5)+'px'));
+          tldHeader .css('line-height',((tldHeader.css('line-height').replace('px','')-5)+'px'));
+          tldHeader .css('margin-bottom',((tldHeader.css('margin-bottom').replace('px','')-1)+'px'));
+        };
+        if(tld.width() + tldType.width() + 38 > 547){
+          tldType.hide();
         }
-        if($('#results .headerResult .result .comPromoPricing').length > 0){
-          var selectButtonWidth = $('#results .headerResult .result > .priceAndAction > a').width() + 100;
-          $('#results .headerResult .result .comPromoPricing').css("margin-right", selectButtonWidth + "px"); 
-        }
-        
-      });
-      searchClient.Initialize({
-        btnInactiveClass: "flt-btn-inactive",
-        fastballFn: function () { if ("function" === typeof (LogFastballEvent)) LogFastballEvent('53966', 'sr3hdr', 'search'); },
-        $searchboxBtn: $('.searchbox-search.searchbox-btn'),
-        $doc: $(document),
-        $domainSearchInput: $('#domain_search_input'),
-        $domainToCheckHdn: $('#domainToCheck'),
-        $domainSearchForm: $('#domain_search_form'),
-        searchUrl: '[@T[link:<relative path="/api/dpp/search/single"></relative>]@T]',
-        isSearchResultsPage: true
-      });
-    
-      DomainSearchResults.ItemTypes.AfterMarket.DisplayText = '[@L[cds.sales/domains/searchresults-new3:domainFlagAftermarket]@L]';
-      DomainSearchResults.ItemTypes.Available.DisplayText = '[@L[cds.sales/domains/searchresults-new3:domainFlagAvailable]@L]';
-      DomainSearchResults.ItemTypes.Backorder.DisplayText = '[@L[cds.sales/domains/searchresults-new3:domainFlagBackorder]@L]';
-      DomainSearchResults.ItemTypes.CloseoutAuction.DisplayText = '[@L[cds.sales/domains/searchresults-new3:domainFlagCloseout]@L]';
-      DomainSearchResults.ItemTypes.Location.DisplayText = '[@L[cds.sales/domains/searchresults-new3:domainFlagLocation]@L]';
-      DomainSearchResults.ItemTypes.Premium.DisplayText = '[@L[cds.sales/domains/searchresults-new3:domainFlagPremium]@L]';
-      DomainSearchResults.ItemTypes.PreRegistration.DisplayText = '[@L[cds.sales/domains/searchresults-new3:domainFlagPre-registration]@L]';
-      DomainSearchResults.ItemTypes.PrivateSale.DisplayText = '[@L[cds.sales/domains/searchresults-new3:domainFlagPrivatesale]@L]';
-      DomainSearchResults.ItemTypes.Recent.DisplayText = '[@L[cds.sales/domains/searchresults-new3:domainFlagRecent]@L]';
-      DomainSearchResults.ItemTypes.Recommended.DisplayText = '[@L[cds.sales/domains/searchresults-new3:domainFlagRecommended]@L]';
-      DomainSearchResults.ItemTypes.Stack.DisplayText = '[@L[cds.sales/domains/searchresults-new3:domainFlagStack]@L]';
-      DomainSearchResults.ItemTypes.Unavailable.DisplayText = '[@L[cds.sales/domains/searchresults-new3:domainFlagUnavailable]@L]';
-      DomainSearchResults.ItemTypes.Unknown.DisplayText = '[@L[cds.sales/domains/searchresults-new3:domainFlagUnknown]@L]';
-      DomainSearchResults.ItemTypes.Variations.DisplayText = '[@L[cds.sales/domains/searchresults-new3:domainFlagVariations]@L]';
-      DomainSearchResults.ItemTypes.BuyNowPreRegistration.DisplayText = '[@L[cds.sales/domains/searchresults-new3:domainFlagBuyNowPreRegistration]@L]';
+        //if($('.headerResult #tldHeader > span.tldType').text() == ".accountants"){
+        //        $('.phaseOptions .g-toolTipContents > p:nth-child(1)').remove();
+        //     }
+      }
+      if($('#results .headerResult .result .comPromoPricing').length > 0){
+        var selectButtonWidth = $('#results .headerResult .result > .priceAndAction > a').width() + 100;
+        $('#results .headerResult .result .comPromoPricing').css("margin-right", selectButtonWidth + "px");
+      }
 
-      DomainSearchResults.Init({
-        GetUrl: '[@T[link:<relative path="~/api/dpp/searchresults/All"></relative>]@T]',
-        PostUrl: '[@T[link:<relative path="~/api/dpp/searchresultscart/"><param name="applyBP" value="1" /></relative>]@T]',
-        CartUrl: '[@T[link:<external linktype="CARTURL" path="cart/basket.aspx" secure="true"><param name="ci" value="84362" /><param name="dpp2" value="1" /></external>]@T]',
-        RegistrationUrl: '[@T[link:<relative path="~/domains/popups/ccregistrationlengths.aspx"><param name="ci" value="75657" /></relative>]@T]',
-        ContactInfoScriptUrl: '[@T[link:<external linktype="TDNAMURL" parammode="explicit" path="ExternalControls/contactInformation/contactInformation.html.js"></external>]@T]',
-        PCDataUrl: '[@T[link:<relative path="~/external/json/pcsetdata.aspx"></relative>]@T]',
-        ItemAddedMsgTitle: '[@L[cds.sales/domains/searchresults-new3:DomainAddedTitle]@L]',
-        ItemAddedMsgText: '[@L[cds.sales/domains/searchresults-new3:ItemAddedMsgText]@L]',
-        ItemsAddedMsgText: '[@L[cds.sales/domains/searchresults-new3:ItemsAddedMsgText]@L]',
-        ItemUpdatedMsgTitle: '[@L[cds.sales/domains/searchresults-new3:DomainUpdatedTitle]@L]',
-        ItemUpdatedMsgText: '[@L[cds.sales/domains/searchresults-new3:ItemUpdatedMsgText]@L]',
-        AuctionAddedMsgTitle: '[@L[cds.sales/domains/searchresults-new3:AuctionDomainAddedText]@L]',
-        PhasePreRegName: '[@L[cds.sales/domains/searchresults-new3:PreRegOptionTitle]@L]',
-        PhasePriorityPreRegName: '[@L[cds.sales/domains/searchresults-new3:PriorityPreRegOptionTitle]@L]',
-        PhaseEarlyAccessPriorityPreRegName: '[@L[cds.sales/domains/searchresults-new3:EAPriorityPreRegPriceTitle]@L]',
-        PhaseTrademarkName: '[@L[cds.sales/domains/searchresults-new3:TrademarkOptionTitle]@L]',
-        threeName: '[@L[cds.sales/domains/searchresults-new3:GetStackText]@L]',
-        twoName: '[@L[cds.sales/domains/searchresults-new3:GetStackTextNew]@L]',
-        Filters: [
-          {
-            Title: '[@L[cds.sales/domains/searchresults-new3:PriceFilterTitle]@L]',
-            Instruction: '[@L[cds.sales/domains/searchresults-new3:PriceFilterInstructions]@L]',
-            CiCodes: { Apply: 87009, Clear: 87010, Collapse: 87011, Expand: 87012, Halt: 87013 }
-          },
-          {
-            Title: '[@L[cds.sales/domains/searchresults-new3:CharacterLengthFilterTitle]@L]',
-            CiCodes: { Apply: 87001, Clear: 0, Collapse: 87002, Expand: 87003, Halt: 87004 }
-          },
-          {
-            Title: '[@L[cds.sales/domains/searchresults-new3:ExtensionsFilterTitle]@L]',
-            CiCodes: { Apply: 86996, Clear: 86997, Collapse: 86998, Expand: 86999, Halt: 87000 }
-          },
-          {
-            Title: '[@L[cds.sales/domains/searchresults-new3:LocationTypeFilterTitle]@L]',
-            CiCodes: { Apply: 87005, Clear: 0, Collapse: 0, Expand: 0, Halt: 87006 }
-          },
-          {
-            Title: '[@L[cds.sales/domains/searchresults-new3:PremiumTypeFilterTitle]@L]',
-            CiCodes: { Apply: 87007, Clear: 0, Collapse: 0, Expand: 0, Halt: 87008 }
-          }
-        ]
-      });    
-
-      $('#dppUnavailModal').delegate('.dbs-img, .dbo-img', 'click', function(e) { 
-        $('#dppUnavailModal').find('.dbs-img, .dbo-img').removeClass('radio-lg selected').siblings('input[type="checkbox"]').attr('checked', false);      
-        var self = $(this);
-        self.toggleClass('radio-lg selected');
-        var input = self.siblings('input[type="checkbox"]');
-        input.attr('checked', !input.is(':checked'))
-      });
-      $("#search").click(function(){$("#domain_search_input").focus()});
     });
-    var split1199;
-    ##if(splitTestingSideIsActive(1199, A))
-      split1199 = 'A';
-    ##elseif(splitTestingSideIsActive(1199, B))
-      split199 = 'B';
-    ##endif
-  </script>
-  
-  [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer" />]@P]
-  [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Script" />]@P]    
-  [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Bottom" />]@P]
+    searchClient.Initialize({
+
+
+
+
+      btnInactiveClass: "flt-btn-inactive",
+      fastballFn: function () { if ("function" === typeof (LogFastballEvent)) LogFastballEvent('53966', 'sr3hdr', 'search'); },
+      $searchboxBtn: $('.searchbox-search.searchbox-btn'),
+      $doc: $(document),
+      $domainSearchInput: $('#domain_search_input'),
+      $domainToCheckHdn: $('#domainToCheck'),
+      $domainSearchForm: $('#domain_search_form'),
+      searchUrl: '[@T[link:<relative path="/api/dpp/search/single"></relative>]@T]',
+      isSearchResultsPage: true
+    });
+
+    DomainSearchResults.ItemTypes.AfterMarket.DisplayText = '[@L[cds.sales/domains/searchresults-new3:domainFlagAftermarket]@L]';
+    DomainSearchResults.ItemTypes.Available.DisplayText = '[@L[cds.sales/domains/searchresults-new3:domainFlagAvailable]@L]';
+    DomainSearchResults.ItemTypes.Backorder.DisplayText = '[@L[cds.sales/domains/searchresults-new3:domainFlagBackorder]@L]';
+    DomainSearchResults.ItemTypes.CloseoutAuction.DisplayText = '[@L[cds.sales/domains/searchresults-new3:domainFlagCloseout]@L]';
+    DomainSearchResults.ItemTypes.Location.DisplayText = '[@L[cds.sales/domains/searchresults-new3:domainFlagLocation]@L]';
+    DomainSearchResults.ItemTypes.Premium.DisplayText = '[@L[cds.sales/domains/searchresults-new3:domainFlagPremium]@L]';
+    DomainSearchResults.ItemTypes.PreRegistration.DisplayText = '[@L[cds.sales/domains/searchresults-new3:domainFlagPre-registration]@L]';
+    DomainSearchResults.ItemTypes.PrivateSale.DisplayText = '[@L[cds.sales/domains/searchresults-new3:domainFlagPrivatesale]@L]';
+    DomainSearchResults.ItemTypes.Recent.DisplayText = '[@L[cds.sales/domains/searchresults-new3:domainFlagRecent]@L]';
+    DomainSearchResults.ItemTypes.Recommended.DisplayText = '[@L[cds.sales/domains/searchresults-new3:domainFlagRecommended]@L]';
+    DomainSearchResults.ItemTypes.Stack.DisplayText = '[@L[cds.sales/domains/searchresults-new3:domainFlagStack]@L]';
+    DomainSearchResults.ItemTypes.Unavailable.DisplayText = '[@L[cds.sales/domains/searchresults-new3:domainFlagUnavailable]@L]';
+    DomainSearchResults.ItemTypes.Unknown.DisplayText = '[@L[cds.sales/domains/searchresults-new3:domainFlagUnknown]@L]';
+    DomainSearchResults.ItemTypes.Variations.DisplayText = '[@L[cds.sales/domains/searchresults-new3:domainFlagVariations]@L]';
+    DomainSearchResults.ItemTypes.BuyNowPreRegistration.DisplayText = '[@L[cds.sales/domains/searchresults-new3:domainFlagBuyNowPreRegistration]@L]';
+
+    DomainSearchResults.Init({
+      GetUrl: '[@T[link:<relative path="~/api/dpp/searchresults/All"></relative>]@T]',
+      PostUrl: '[@T[link:<relative path="~/api/dpp/searchresultscart/"><param name="applyBP" value="1" /></relative>]@T]',
+      CartUrl: '[@T[link:<external linktype="CARTURL" path="cart/basket.aspx" secure="true"><param name="ci" value="84362" /><param name="dpp2" value="1" /></external>]@T]',
+      RegistrationUrl: '[@T[link:<relative path="~/domains/popups/ccregistrationlengths.aspx"><param name="ci" value="75657" /></relative>]@T]',
+      ContactInfoScriptUrl: '[@T[link:<external linktype="TDNAMURL" parammode="explicit" path="ExternalControls/contactInformation/contactInformation.html.js"></external>]@T]',
+      PCDataUrl: '[@T[link:<relative path="~/external/json/pcsetdata.aspx"></relative>]@T]',
+      ItemAddedMsgTitle: '[@L[cds.sales/domains/searchresults-new3:DomainAddedTitle]@L]',
+      ItemAddedMsgText: '[@L[cds.sales/domains/searchresults-new3:ItemAddedMsgText]@L]',
+      ItemsAddedMsgText: '[@L[cds.sales/domains/searchresults-new3:ItemsAddedMsgText]@L]',
+      ItemUpdatedMsgTitle: '[@L[cds.sales/domains/searchresults-new3:DomainUpdatedTitle]@L]',
+      ItemUpdatedMsgText: '[@L[cds.sales/domains/searchresults-new3:ItemUpdatedMsgText]@L]',
+      AuctionAddedMsgTitle: '[@L[cds.sales/domains/searchresults-new3:AuctionDomainAddedText]@L]',
+      PhasePreRegName: '[@L[cds.sales/domains/searchresults-new3:PreRegOptionTitle]@L]',
+      PhasePriorityPreRegName: '[@L[cds.sales/domains/searchresults-new3:PriorityPreRegOptionTitle]@L]',
+      PhaseEarlyAccessPriorityPreRegName: '[@L[cds.sales/domains/searchresults-new3:EAPriorityPreRegPriceTitle]@L]',
+      PhaseTrademarkName: '[@L[cds.sales/domains/searchresults-new3:TrademarkOptionTitle]@L]',
+      threeName: '[@L[cds.sales/domains/searchresults-new3:GetStackText]@L]',
+      twoName: '[@L[cds.sales/domains/searchresults-new3:GetStackTextNew]@L]',
+      Filters: [
+        {
+          Title: '[@L[cds.sales/domains/searchresults-new3:PriceFilterTitle]@L]',
+          Instruction: '[@L[cds.sales/domains/searchresults-new3:PriceFilterInstructions]@L]',
+          CiCodes: { Apply: 87009, Clear: 87010, Collapse: 87011, Expand: 87012, Halt: 87013 }
+        },
+        {
+          Title: '[@L[cds.sales/domains/searchresults-new3:CharacterLengthFilterTitle]@L]',
+          CiCodes: { Apply: 87001, Clear: 0, Collapse: 87002, Expand: 87003, Halt: 87004 }
+        },
+        {
+          Title: '[@L[cds.sales/domains/searchresults-new3:ExtensionsFilterTitle]@L]',
+          CiCodes: { Apply: 86996, Clear: 86997, Collapse: 86998, Expand: 86999, Halt: 87000 }
+        },
+        {
+          Title: '[@L[cds.sales/domains/searchresults-new3:LocationTypeFilterTitle]@L]',
+          CiCodes: { Apply: 87005, Clear: 0, Collapse: 0, Expand: 0, Halt: 87006 }
+        },
+        {
+          Title: '[@L[cds.sales/domains/searchresults-new3:PremiumTypeFilterTitle]@L]',
+          CiCodes: { Apply: 87007, Clear: 0, Collapse: 0, Expand: 0, Halt: 87008 }
+        }
+      ]
+    });
+
+    $('#dppUnavailModal').delegate('.dbs-img, .dbo-img', 'click', function(e) {
+      $('#dppUnavailModal').find('.dbs-img, .dbo-img').removeClass('radio-lg selected').siblings('input[type="checkbox"]').attr('checked', false);
+      var self = $(this);
+      self.toggleClass('radio-lg selected');
+      var input = self.siblings('input[type="checkbox"]');
+      input.attr('checked', !input.is(':checked'))
+    });
+    $("#search").click(function(){$("#domain_search_input").focus()});
+  });
+  var split1199;
+  ##if(splitTestingSideIsActive(1199, A))
+    split1199 = 'A';
+  ##elseif(splitTestingSideIsActive(1199, B))
+  split199 = 'B';
+  ##endif
+</script>
+
+[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer" />]@P]
+[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Script" />]@P]
+[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Bottom" />]@P]
 </body>
 </html>
