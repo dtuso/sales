@@ -1,8 +1,9 @@
 ---
 location: localization/sales/gd/hosting/web-hosting/en
-id: 53d68ac1f778fc27484de4de
-name: FOS-24432
-comments: Update SSL Cert disclaimer
+id: 53e8eeaff778fc334cbc6d28
+name: FOS-21879
+comments: Web Hosting LP Enhancements (split test results)
+Web Hosting Enhancements GCE-25532
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="page-title" />
@@ -115,16 +116,6 @@ Restrictions apply to Facebook Ad credit
 One promotional credit per customer for a new Facebook<sup class='supsymbol'>&reg;</sup> Advertiser account. Products purchased using a Gift Card or Alipay do not provide eligibility for advertising credits. Offer valid only for purchase of advertising in the US, Canada, UK, and Australia. Other restrictions apply. <a href=&quot;javascript:void(window.open('[@T[link:<relative path='/popups/facebook-ads.aspx'><param name='ci' value='46426' /><param name='app_hdr' value='99' /></relative>]@T]','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=550,height=675'))&quot;>View Details</a>
 <phrase key="facebook-adwords-desc-left" />
 Restrictions apply to Facebook Ad credit <span class="left">One promotional credit per customer for a new Facebook<sup class="supsymbol">&reg;</sup> Advertiser account. Products purchased using a Gift Card or Alipay do not provide eligibility for advertising credits. Offer valid only for purchase of advertising in the US, Canada, UK, and Australia. Other restrictions apply.
-<phrase key="10-fotolia" />
-<strong>10</strong>
-<phrase key="fotolia-adwords-tm" />
-Fotolia<sup class="supsymbol">&reg;</sup>
-<phrase key="fotolia-adwords" />
-Fotolia Photo Credits
-<phrase key="fotolia-adwords-restrictions" />
-Restrictions apply to Fotolia credits 
-<phrase key="fotolia-adwords-desc" />
-One free promotional credit per customer, good for ten free download credits at Fotolia. Products purchased using a Gift Card or Alipay do not provide eligibility for photography credits. Other restrictions apply. <a href=&quot;javascript:void(window.open('[@T[link:<relative path='/popups/fotolia.aspx'><param name='app_hdr' value='99' /></relative>]@T]','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=550,height=675'))&quot;>View Details</a>
 <phrase key="deluxe-title" />
 Deluxe
 <phrase key="deluxe-domain" />
@@ -173,10 +164,14 @@ Email Addresses
 A [@T[productprice:<current productid="70852" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]/yr value, our Premium DNS makes it easy to resolve common issues that prevent people from accessing your site, improving your overall performance, availability, and security.
 <phrase key="unlimited-ssl" />
 <strong>SSL Certificate</strong>
+<phrase key="unlimited-1year-ssl" />
+<strong>1 year SSL Certificate</strong> - Secures customer data & increases search rankings
 <phrase key="unlimited-ssl-restrictions" />
 Restrictions apply to SSL Certificate
 <phrase key="unlimited-ssl-desc" />
 A [@T[productprice:<current productid="3604" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]/yr value, your [@T[companyname:name]@T] SSL certificate keeps transactions with your website secure. Take advantage of 256-bit encryption and 99.9% browser recognition. It’s all free for the initial plan term purchased. Not available with Website Accelerator.
+<phrase key="unlimited-ssl-google" />
+A [@T[productprice:<current productid="3604" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T] value, your [@T[companyname:name]@T] SSL certificate keeps payments and customer data secure, and helps increase your search rankings on Google. Take advantage of 256-bit encryption and 99.9% browser recognition. The SSL Certificate is free for 1 year with purchase. After the initial free year, SSL will automatically renew at the then-current price until cancelled. You may cancel automatic renewal at any time in your GoDaddy account. 
 <phrase key="unlimited-malware" />
 <strong>Malware Scanner</strong> <span class="g-toolTip"><span class="left">FREE one-page Malware Scanner monitors your site to ensure hackers haven't infected it with malicious links. Hackers target legitimate business sites to spread worms, Trojans, viruses and spyware. Malware Scanner will notify you if malicious links exist and provide instruction on how to remove them.</span></span>
 <phrase key="plan-domain" />
@@ -185,6 +180,8 @@ A [@T[productprice:<current productid="3604" dropdecimal="false" period="yearly"
 <strong>Free Domain</strong> <p class="g-toolTip">Restrictions apply <span>One FREE .COM, .CO, .IN, .NET or .ORG with purchase of a new 12-, 24- or 36-month plan. Plus ICANN fee of [@T[currencyprice:<price usdamount="18" dropdecimal="false" />]@T] per domain name per year. You must add the domain name into your cart before purchase, and you must select a domain term length equal to or less than the term length of your plan to qualify for the free domain offer. If you purchase a domain name for a term longer than the term of the plan, you will be charged for the additional registration term at the then-current rate. Cannot be used in conjunction with any other offer, sale, discount or promotion. Free domain offer applies only to the initial purchase term. After the initial purchase term, domains purchased through this offer will renew at the then-current renewal price.</span></p>
 <phrase key="popular-tag" />
 Best Value
+<phrase key="secure-tag" />
+Added Security
 <phrase key="onSale" />
 On Sale
 <phrase key="save" />
@@ -203,6 +200,10 @@ Save
 24 months
 <phrase key="36-months" />
 36 months
+<phrase key="48-months" />
+48 months
+<phrase key="60-months" />
+60 months
 <phrase key="reg-price" />
 Regular price
 <phrase key="planbox-cart-btn" />
@@ -299,10 +300,6 @@ One promotional credit per customer for a new Microsoft<sup>&reg;</sup> Advertis
 USD $50 Facebook Ad Credit - 
 <phrase key="all-plan-features-facebook-credit-hover-text-11166" />
 One promotional credit per customer for a new Facebook<sup>&reg;</sup> Advertiser account. Products purchased using a Gift Card or Alipay do not provide eligibility for advertising credits. Offer valid only for purchase of advertising in the US, Canada, UK, and Australia. Other restrictions apply. <a href="javascript:void(window.open('http://www.godaddy.com/popups/facebook-ads.aspx?ci=46426&app_hdr=99','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=550,height=675'))">View Details</a>
-<phrase key="all-plan-features-fotolia-credit-11166" />
-10 Fotolia Photo Credits - 
-<phrase key="all-plan-features-fotolia-credit-hover-text-11166" />
-One free promotional credit per customer, good for ten free download credits at Fotolia. Products purchased using a Gift Card or Alipay do not provide eligibility for photography credits. Other restrictions apply. <a data-ci="89592" href="javascript:void(window.open('http://www.godaddy.com/popups/fotolia.aspx?app_hdr=99','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=550,height=675'))">View Details</a>
 <phrase key="all-plan-features-what-we-mean-credit-11166" />
 What we mean by <a class="isToolTip" data-toggle="tooltip" title="" data-original-title="Our Web Hosting plans are designed to host most personal, small business and organization websites. We don't limit the amount of storage and bandwidth your site can use as long as it complies with our Hosting Agreement. Should your website bandwidth or storage usage present a risk to the stability, performance or uptime of our servers, we will notify you via email and you may be required to upgrade to a Virtual Private Server or Dedicated (Private) Server, or we may restrict the resources your website is using. It’s very rare that a website violates our Hosting Agreement and is typically only seen in sites that use hosting for file sharing or storage.">Unlimited Storage and Bandwidth</a>
 <phrase key="media-temple-title-11166" />
@@ -468,6 +465,8 @@ Disk Space
 Monthly Bandwidth
 <phrase key="compare-plans-core-features-monthly-bandwidth-unlimited-11166" />
 <a class="isToolTip" data-toggle="tooltip" title="" data-original-title="Our Web Hosting plans are designed to host most personal, small business and organization websites. We don't limit the amount of storage and bandwidth your site can use as long as it complies with our Hosting Agreement. Should your website bandwidth or storage usage present a risk to the stability, performance or uptime of our servers, we will notify you via email and you may be required to upgrade to a Virtual Private Server or Dedicated (Private) Server, or we may restrict the resources your website is using. It’s very rare that a website violates our Hosting Agreement and is typically only seen in sites that use hosting for file sharing or storage.">Unlimited</a>
+<phrase key="compare-plans-unlimited-monthly-bandwidth" />
+<a class="isToolTip" data-toggle="tooltip" title="" data-original-title="Our Web Hosting plans are designed to host most personal, small business and organization websites. We don't limit the amount of storage and bandwidth your site can use as long as it complies with our Hosting Agreement. Should your website bandwidth or storage usage present a risk to the stability, performance or uptime of our servers, we will notify you via email and you may be required to upgrade to a Virtual Private Server or Dedicated (Private) Server, or we may restrict the resources your website is using. It’s very rare that a website violates our Hosting Agreement and is typically only seen in sites that use hosting for file sharing or storage."><strong>Unlimited</strong></a> Monthly Bandwidth
 <phrase key="compare-plans-core-features-file-transfer-unlimited-11166" />
 Unlimited
 <phrase key="compare-plans-core-features-ftp-users-11166" />
@@ -679,7 +678,7 @@ PERL
 <phrase key="compare-plans-language-support-perl-india-11166" />
 Perl
 <phrase key="compare-plans-cpanel-language-support-php-54-11166" />
-PHP 5.4<sup>*</sup> (Also Support PHP 5.2-5.5)
+PHP 5.4<sup>*</sup> (Also Support PHP 5.3-5.5)
 <phrase key="compare-plans-cpanel-language-support-php-ini-11166" />
 Custom PHP.ini
 <phrase key="compare-plans-cpanel-language-support-python-11166" />
@@ -1007,7 +1006,7 @@ New
 <phrase key="mastheadTitle" />
 Web Hosting
 <phrase key="mastheadTitle-11166-sideB" />
-Fast, Secure, reliable<br> hosting trusted by millions.  
+Fast, secure, reliable<br> hosting trusted by millions.  
 <phrase key="mastheadSubTitle" />
 Easy, reliable &amp; always lightning-fast
 <phrase key="mastheadSubTitle-11166-sideB" />
@@ -1042,3 +1041,17 @@ FAQ
 99.9% uptime guarantee*
 <phrase key="restristions-apply-tooltip" />
 One FREE .COM, .CO, .NET or .ORG with purchase of a new 12-, 24- or 36-month plan. Plus ICANN fee of [@T[currencyprice:<price usdamount="18" dropdecimal="false" />]@T] per domain name per year. You must add the domain name into your cart before purchase, and you must select a domain term length equal to or less than the term length of your plan to qualify for the free domain offer. If you purchase a domain name for a term longer than the term of the plan, you will be charged for the additional registration term at the then-current rate. Cannot be used in conjunction with any other offer, sale, discount or promotion. Free domain offer applies only to the initial purchase term. After the initial purchase term, domains purchased through this offer will renew at the then-current renewal price.
+<phrase key="Economy-subheader" />
+Perfect to get started with a basic site
+<phrase key="Deluxe-subheader" />
+Ideal for building and managing multiple sites
+<phrase key="Ultimate-subheader" />
+Great for sites that want additional security
+<phrase key="one-website" />
+1 Website
+<phrase key="unlimited-websites" />
+Unlimited Websites
+<phrase key="compare-plans-unlimited-bandwidth" />
+<a class="isToolTip" data-toggle="tooltip" title="" data-original-title="Our Web Hosting plans are designed to host most personal, small business and organization websites. We don't limit the amount of storage and bandwidth your site can use as long as it complies with our Hosting Agreement. Should your website bandwidth or storage usage present a risk to the stability, performance or uptime of our servers, we will notify you via email and you may be required to upgrade to a Virtual Private Server or Dedicated (Private) Server, or we may restrict the resources your website is using. It’s very rare that a website violates our Hosting Agreement and is typically only seen in sites that use hosting for file sharing or storage."><strong>Unlimited</strong></a> Bandwidth
+<phrase key="premium-dns-management-tool" />
+<a class="isToolTip" data-toggle="tooltip" title="A [@T[productprice:<current productid="70852" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]/yr value, our Premium DNS makes it easy to resolve common issues that prevent people from accessing your site, improving your overall performance, availability, and security."><strong>Premium DNS</strong></a> Management Tool
