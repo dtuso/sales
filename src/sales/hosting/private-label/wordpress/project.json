@@ -1,0 +1,51 @@
+{
+  "wordpress.html": {
+    "cdsDetails": {
+      "champion": {
+        "name": "None currently",
+        "email": "everyone@"
+      },
+      "cdsLocation": "sales/hosting/private-label/wordpress.aspx",
+      "draft": {
+        "id": "53925401f778fc0ee47e4ac4",
+        "createdDate": "2014-06-06",
+        "createdBy": {
+          "fullName": "Ryan Hurst",
+          "username": "rhurst"
+        },
+        "jiraTicket": "FOS-21905",
+        "comments": "Added adCredits condition",
+        "url": "http://www.dev.securepaynet-net.ide/hosting/wordpress.aspx?prog_id=hunter"
+      }
+    },
+
+    "metaTitle": "[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-title]@L]",
+    "metaDescription": "[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-description]@L]",
+    "metaKeywords": "[@L[cds.sales/gd/hosting/wordpress-hosting:Meta0Keywords]@L]",
+    "metaCanonicalPath": "/hosting/wordpress-hosting.aspx",
+    "metaOgAdmins": "633356800",
+    "metaOgTitle": "[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-og-title]@L]",
+    "metaOgImage": "fos/icn/88489_Facebook_image.jpg",
+    "metaOgDescription": "[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-og-title]@L]"
+  },  
+  
+  "wordpress.language": {
+    "cdsDetails": {
+      "champion": {
+        "name": "None currently",
+        "email": "everyone@"
+      },
+      "cdsLocation": "localization/sales/hosting/wordpress-hosting/en",
+      "draft": {
+        "id": "53bc160ef778fc1e74b16987",
+        "createdDate": "2014-07-08",
+        "createdBy": {
+          "fullName": "Samana Upadhyaya",
+          "username": "supadhyaya"
+        },
+        "jiraTicket": "FOS-22246",
+        "comments": "Update WordPress LP with Free ccTLD Offer"
+      }
+    }
+  }
+}
