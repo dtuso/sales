@@ -1,0 +1,703 @@
+---
+location: sales/hosting/private-label/wordpress.aspx
+id:   53f3c877f778fc07b4296fc9
+name: GCE-25517
+comments: added styles to fix dropdown for de and ru
+assetPath: false
+---
+{% extends 'layouts/pl-base.html' %}
+
+{% block metahead %}
+
+    {% parent %}
+
+    <style type="text/css">
+    {% less %}
+    {% endless %}
+    </style>
+        <link href="[@T[link:<cssroot />]@T]fos/201401/global/css/global-1.8.3.min.css" rel="stylesheet" type="text/css">
+
+        <link href="[@T[link:<cssroot />]@T]fos/201401/security/css/website-security.1.0.0.css" rel="stylesheet" type="text/css" />
+
+        <link href="[@T[link:<cssroot />]@T]fos/201401/security/css/sitelock_pl_03202014.min.css" rel="stylesheet" type="text/css">   
+
+{% endblock %}
+
+{% block body %}
+
+
+    <!-- Start page main -->
+    <div class="border-box" role="main">
+      <!-- Start main-banner -->
+      <section class="main-banner main-banner-wp" style="background-size:cover;">
+        <div class="l-main-container container main-banner-content">
+          <div class="right-half-header">
+            <div class="wordpress-head-image"></div>
+          </div>
+          <div class="wordpress-logo-check">
+            <p class="main-banner-title brpl-title-main">Managed Wordpress</p>
+          </div>
+          <span class="main-banner-subtext">You create your own WordPress site. We do the work with fully-managed hosting, setup and security.</br>99.9% uptime guarantee*</span>
+        </div>
+      </section>
+      <!-- End main-banner -->
+      <!-- Start main-tabs panes -->
+      <div class="tab-content no-margin-top no-margin-bottom">
+        <section class="main-tabs">
+          <div class="l-main-container container  brpl-tabs">
+            <div class="no-padding-bottom">
+              <ul class="lp-tabs fos">
+                <li class="lp-tab-active">
+                  <a class="nav-tabs-link" href="#brPlOverview" data-toggle="tab" data-ci="88442">
+                    <span id="tab0">Plans &amp; Pricing</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="nav-tabs-link" href="#features" data-toggle="tab" data-ci="88444">
+                    <span id="tab2">Features</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="nav-tabs-link" href="#howitworks" data-toggle="tab" data-ci="88443">
+                    <span id="tab1">How it Works</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <div class="tab-pane tab-content-overview-bg-wp active" id="brPlOverview">
+          <!-- Start content -->
+          <!-- End misc-banner -->
+          <!-- Start content -->
+          <section class="l-container-over-banner">
+            <div id="mainPlanContainer" class="l-main-container container">
+              <div class="l-main-container container misc-banner-content-wp-overview">
+                <i class="ico-wordpress"></i>
+                <h2>You have better things to do than manage your hosting.</h2>
+                <p>Maintaining a website shouldn’t mean spending hours optimizing your server and battling security threats. With our Managed WordPress, we handle the technical stuff for you – server setup, security, backups, even performance optimization – so you can spend your time designing, managing content and doing what’s important to you.</p>
+              </div>
+              <div class="row brpl-row">
+                <div class="col-xs-4 column-1">
+                  <div id="starterColm" class="plan brpl-plan set-active-col">
+                    <div class="inner-grid-container">
+                      <div class="top-plan-info active-column">
+                        <h2>Starter</h2>
+                        <p class="brpl-price-yr"><span class="brpl-price">$17.88</span><span class="slash-year">/year</span></p>
+                      </div>
+                      <div class="bottom-plan-info">
+                        <p class="font-16-brpl">Perfect for basic sites, blogs and start-ups</p>
+                        <ul class="plan-pricing-list  brpl-ul">
+                          <li><strong>25,000</strong> monthly visitors on <strong>1</strong> website</li>
+                          <li><strong>100 GB</strong> storage. Store approximately 22,000 images or 500 standard videos</li>
+                          <li><strong>All Core Features</strong> listed below</li>
+                        </ul>
+                        <div class="sel-term"><strong>Select Term:</strong></div>
+                        <div class="select-box">
+                          <div class="select-box-head select-box-head-brpl">
+                            <div class="select-box-current">
+                              <span class="price-left">12 Months</span>
+                              <span>$1.00/month</span>
+                            </div>
+                            <div class="select-box-cta"><i class="ico-reg-ddl"></i></div>
+                          </div><!-- select-box-head -->
+                          <div class="select-box-body">
+                            <ul class="select-box-options">
+                              <li data-plan="wordpress_Starter3Mo">
+                                <div>
+                                  <span class="price-left">3 months</span>
+                                  <span class="price">$1.00/month</span>
+                                </div>
+                              </li>
+                              <li data-plan="wordpress_Starter12Mo">
+                                <div>
+                                  <span class="price-left">12 months</span>
+                                  <span class="price">$1.00/month</span>
+                                </div>
+                              </li>
+                              <li data-plan="wordpress_Starter24Mo">
+                                <div>
+                                  <span class="price-left">24 months</span>
+                                  <span class="price">$1.00/month</span>
+                                </div>
+                              </li>
+                              <li data-plan="wordpress_Starter36Mo">
+                                <div>
+                                  <span class="price-left">36 months</span>
+                                  <span class="price">$1.00/month</span>
+                                </div>
+                              </li>
+                              <li data-plan="wordpress_Starter60Mo">
+                                <div>
+                                  <span class="price-left">60 months</span>
+                                  <span class="price">$1.00/month</span>
+                                </div>
+                              </li>
+                            </ul>
+                          </div><!-- select-box-body -->
+                        </div><!-- select-box -->
+                        <p class="no-margin-bottom center-btn">
+                          <button type="button" data-plan="wordpress_Starter12Mo" data-isqualified="1" data-ci="88447" class="btn btn-wordpress js-addtocart-btn btn--push-down btn-default add-to-cart-btn">Add To Cart</button>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xs-4 column-2">
+                  <div id="businessColm" class="plan brpl-plan set-active-col">
+                    <div class="inner-grid-container">
+                      <div class="top-plan-info">
+                        <h2>Business</h2>
+                        <p class="brpl-price-yr"><span class="brpl-price">$9.99</span><span class="slash-year">/month</span></p>
+                      </div>
+                      <div class="bottom-plan-info">
+                        <p class="font-16-brpl">Ideal for small businesses, freelance designers and active bloggers</p>
+                        <ul class="plan-pricing-list  brpl-ul">
+                          <li><strong>25,000</strong> monthly visitors on <strong>5</strong> websites</li>
+                          <li><strong>500 GB</strong> storage. Store approximately 110,000 images or 2,500 standard videos</li>
+                          <li><strong>All Core Features</strong> listed below</li>
+                        </ul>
+                        <div class="sel-term"><strong>Select Term:</strong></div>
+                        <div class="select-box">
+                          <div class="select-box-head select-box-head-brpl">
+                            <div class="select-box-current">
+                              <span class="price-left">12 Months</span>
+                              <span>$9.99/month</span>
+                            </div>
+                            <div class="select-box-cta"><i class="ico-reg-ddl"></i></div>
+                          </div><!-- select-box-head -->
+                          <div class="select-box-body">
+                            <ul class="select-box-options">
+                              <li data-plan="wordpress_Business3Mo">
+                                <div>
+                                  <span class="price-left">3 months</span>
+                                  <span class="price">$9.99/month</span>
+                                </div>
+                              </li>
+                              <li data-plan="wordpress_Business12Mo">
+                                <div>
+                                  <span class="price-left">12 months</span>
+                                  <span class="price">$9.99/month</span>
+                                </div>
+                              </li>
+                              <li data-plan="wordpress_Business24Mo">
+                                <div>
+                                  <span class="price-left">24 months</span>
+                                  <span class="price">$9.99/month</span>
+                                </div>
+                              </li>
+                              <li data-plan="wordpress_Business36Mo">
+                                <div>
+                                  <span class="price-left">36 months</span>
+                                  <span class="price">$9.99/month</span>
+                                </div>
+                              </li>
+                              <li data-plan="wordpress_Business60Mo">
+                                <div>
+                                  <span class="price-left">60 months</span>
+                                  <span class="price">$9.99/month</span>
+                                </div>
+                              </li>
+                            </ul>
+                          </div><!-- select-box-body -->
+                        </div><!-- select-box -->
+                        <p class="no-margin-bottom center-btn">
+                          <button type="button" data-plan="wordpress_business12Mo" data-isqualified="1" data-ci="88448" class="btn btn-wordpress js-addtocart-btn btn--push-down btn-default add-to-cart-btn display-none">Add To Cart</button>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xs-4 column-3 ">
+                  <div id="proColumn" class="plan brpl-plan set-active-col">
+                    <div class="inner-grid-container">
+                      <div class="top-plan-info">
+                        <h2>Pro</h2>
+                        <p class="brpl-price-yr"><span class="brpl-price">$29.99</span><span class="slash-year">/month</span></p>
+                      </div>
+                      <div class="bottom-plan-info">
+                        <p class="font-16-brpl">Recommended for web developers and creative agencies</p>
+                        <ul class="plan-pricing-list  brpl-ul">
+                          <li><strong>Millions</strong> monthly visitors on up to <strong>25</strong> websites</li>
+                          <li><strong>Unlimited</strong> storage. Store unlimited images and videos</li>
+                          <li><strong>All Core Features</strong> listed below</li>
+                        </ul>
+                        <div class="sel-term"><strong>Select Term:</strong></div>
+                        <div class="select-box">
+                          <div class="select-box-head select-box-head-brpl">
+                            <div class="select-box-current">
+                              <span class="price-left">12 Months</span>
+                              <span>$29.99/month</span>
+                            </div>
+                            <div class="select-box-cta"><i class="ico-reg-ddl"></i></div>
+                          </div><!-- select-box-head -->
+                          <div class="select-box-body">
+                            <ul class="select-box-options">
+                              <li data-plan="wordpress_Pro3Mo">
+                                <div>
+                                  <span class="price-left">3 months</span>
+                                  <span class="price">$29.99/month</span>
+                                </div>
+                              </li>
+                              <li data-plan="wordpress_Pro12Mo">
+                                <div>
+                                  <span class="price-left">12 months</span>
+                                  <span class="price">$29.99/month</span>
+                                </div>
+                              </li>
+                              <li data-plan="wordpress_Pro24Mo">
+                                <div>
+                                  <span class="price-left">24 months</span>
+                                  <span class="price">$29.99/month</span>
+                                </div>
+                              </li>
+                              <li data-plan="wordpress_Pro36Mo">
+                                <div>
+                                  <span class="price-left">36 months</span>
+                                  <span class="price">$29.99/month</span>
+                                </div>
+                              </li>
+                              <li data-plan="wordpress_Pro60Mo">
+                                <div>
+                                  <span class="price-left">60 months</span>
+                                  <span class="price">$29.99/month</span>
+                                </div>
+                              </li>
+                            </ul>
+                          </div><!-- select-box-body -->
+                        </div><!-- select-box -->
+                        <p class="no-margin-bottom center-btn">
+                          <button type="button" data-plan="wordpress_Prem1Yr" data-isqualified="1" data-ci="88447" class="btn btn-wordpress js-addtocart-btn btn--push-down btn-default add-to-cart-btn display-none">Add To Cart</button>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- End content -->
+          </div>
+          <!--Pl Main Tab End-->
+          <div class="tab-pane" id="howitworks">
+            <!--  Start content -->
+            <section class="l-main-content how-it-works">
+              <div class="l-main-container container misc-banner-content misc-banner-content-no-set-height brpl-misc-banner-content">
+                <h2 class="tab-header-title">Meet Geoff and Kathleen.</h2>
+                <p>
+                  It's a typical day for Geoff and Kathleen, with shoppers coming to their business websites in spurts. Hidden among the legitimate visitors is a hacker, who looks for and finds a way to break in.
+                </p>
+              </div>
+              <div class="container l-main-container">
+                <div class="row">
+                  <div class="col-xs-6 column-1">
+                    <div class="grid-column how-it-works-wordpress">
+                      <h4>Without wordpress</h4>
+                      <span>The hacker plants malware on Geoff's site.</span>
+                      <div class="howitworks-sprt howitworks-with-hacker"></div>
+                      <span>Geoff's customers begin to see offensive messages and leave in disgust, swearing never to return.</span>
+                      <div class="howitworks-sprt howitworks-without-scan"></div>
+                      <span>Some visitors are taken to a fake site, where they submit their bank information without suspecting a thing.</span>
+                      <div class="howitworks-sprt howitworks-without-fends"></div>
+                      <span>By the time Geoff notices something's wrong, customers are rioting on Twitter. It'll take months to undo the damage.</span>
+                      <div class="howitworks-sprt howitworks-without-saved"></div>
+                    </div>
+                  </div>
+                  <div class="col-xs-6 column-2">
+                    <div class="grid-column how-it-works-wordpress">
+                      <h4>With wordpress</h4>
+                      <span>The hacker plants malware on Kathleen's site.</span>
+                      <div class="howitworks-sprt howitworks-with-hacker"></div>
+                      <span>wordpress's daily scan discovers the malware, notifying Kathleen of where it took place. With her wordpress Premium plan, the malware is removed automatically so Kathleen can stay focused on her business. </span>
+                      <div class="howitworks-sprt howitworks-with-scan"></div>
+                      <span>Kathleen’s customers continue to browse her site, safely and without interruption, as wordpress keeps scanning in the background.</span>
+                      <div class="howitworks-sprt howitworks-with-fends"></div>
+                      <span>Kathleen gets back to business without any downtime. Her customers stay safe and her reputation stays golden.</span>
+                      <div class="howitworks-sprt howitworks-with-saved"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- End content -->
+          </div>
+          <div class="tab-pane" id="features">
+            <!--  Start content -->
+            <section class="l-main-content features-sect">
+              <div class="l-main-container container misc-banner-content misc-banner-content-no-set-height brpl-first-cont">
+                <h2 class="tab-header-title">Find. Fix. Prevent.</h2>
+                <p>wordpress scans your website to find malicious software (malware) before it can harm you or your customers. Hackers insert malware onto legitimate websites in order to steal customer passwords and credit card numbers, deface or destroy the website or use your server to launch attacks on other websites.</p>
+              </div>
+              <div class="container l-main-container">
+                <div class="row tab-content">
+                  <div class="col-xs-12">
+                    <div class="grid-column tab-content-column tab-content-smart-tool features-brpl-tab-content brpl-left-tab-content dailyBuglIco"></div>
+                    <div class="grid-column tab-content-column tab-content-left tab-content-daily-scan features-brpl-tab-content brpl-right-tab-content">
+                      <h2 class="tab-content-title">Daily scans root out bugs.</h2>
+                      <p>We notify you as soon as we find any of the following problems:</p>
+                      <ul class="plan-summary-tab-pane-list">
+                        <li>Search engine/Browser blacklisting</li>
+                        <li>Spam blacklisting</li>
+                        <li>Application vulnerabilities, including SQLi &amp; XSS</li>
+                        <li>Website malware and viruses</li>
+                        <li>File changes and suspicious code</li>
+                        <li>Bot visits</li>
+                        <li>Suspicious or malicious traffic to your site</li>
+                        <li>Backdoors left by hackers</li>
+                      </ul>
+                    </div>
+                    <!--Right Pod Choose Plan section-->
+                    <div class="grid-column tab-content-column tab-content-left tab-content-daily-scan features-brpl-tab-content brpl-right-tab-chooseplan">
+                      <h2 class="tab-content-title">Choose your plan</h2>
+                      <div class="basic-rt-tab">
+                        <ul class="plan-pricing-list  brpl-ul">
+                          <li>Basic<span class="brpl-price">$17.88</span><span class="slash-year">/year</span></li>
+                          <li>Up to <strong>25 pages</strong> on one website</li>
+                          <li>Daily <strong>malware scan</strong></li>
+                          <li>
+                            <a class="nav-tabs-link js-open-brpl-overview" href="#" data-toggle="tab">
+                              <span>Learn More</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="pro-rt-tab">
+                        <ul class="plan-pricing-list  brpl-ul">
+                          <li>Professional<span class="brpl-price">$47.88</span><span class="slash-year">/year</span></li>
+                          <li>Up to <strong>100 pages</strong> on one website</li>
+                          <li>Daily <strong>malware scan</strong></li>
+                          <li>Automated <strong>malware removal</strong></li>
+                          <li>File change <strong>monitoring</strong></li>
+                          <li><a class="nav-tabs-link js-open-brpl-overview" href="#" data-toggle="tab">
+                            <span>Learn More</span></a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="prem-rt-tab">
+                        <ul class="plan-pricing-list  brpl-ul">
+                          <li>Premium<span class="brpl-price">$83.88</span><span class="slash-year">/year</span></li>
+                          <li>Up to <strong>500 pages</strong> on one website</li>
+                          <li>Daily <strong>malware scan</strong></li>
+                          <li>Automated <strong>malware removal</strong></li>
+                          <li><strong>Ongoing</strong> vulnerability scanning</li>
+                          <li><a class="nav-tabs-link js-open-brpl-overview" href="#" data-toggle="tab">
+                            <span>Learn More</span></a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="view-compplans-tab">
+                        <ul class="plan-pricing-list  brpl-ul">
+                          <li><a class="nav-tabs-link js-open-brpl-overview" href="#" data-toggle="tab">
+                            <span>View and compare all plans</span></a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div><!--End Right Pod Choose Plan section-->
+                  </div>
+                </div>
+                <div class="row tab-content smt-tool-div">
+                  <div class="col-xs-12">
+                    <div class="grid-column tab-content-column tab-content-smart-tool features-brpl-tab-content brpl-left-tab-content smrtToolIco"></div>
+                    <div class="grid-column tab-content-column tab-content-right tab-content-smart-tool features-brpl-tab-content brpl-right-tab-content">
+                      <h2 class="tab-content-title">Our SMART tool takes out the trash.</h2>
+                      <p>Automatically removes malware and back-end files to keep your site from being disabled or blacklisted by search engines. (Professional and Premium plans)</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="row tab-content deal-seal-div">
+                  <div class="col-xs-12">
+                    <div class="grid-column tab-content-column tab-content-smart-tool features-brpl-tab-content brpl-left-tab-content trustSealIco"></div>
+                    <div class="grid-column tab-content-column tab-content-left tab-content-trust-seal features-brpl-tab-content brpl-right-tab-content">
+                      <h2 class="tab-content-title">Close the deal with our Trust Seal</h2>
+                      <p>Seventy percent of web visitors look for proof a site is secure before submitting personal data. Our Trust Seal shows customers they're safe on your website.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="row tab-content what-get-div">
+                  <div class="col-xs-12">
+                    <div class="grid-column tab-content-column tab-content-smart-tool features-brpl-tab-content brpl-left-tab-content whatYouGetIco"></div>
+                    <div class="grid-column tab-content-column tab-content-right tab-content-features features-brpl-tab-content brpl-right-tab-content">
+                      <h2 class="tab-content-title">What you get with wordpress.</h2>
+                      <ul class="plan-summary-tab-pane-list">
+                        <li>Daily malware scan</li>
+                        <li>Database protection</li>
+                        <li>Automated attack blocking</li>
+                        <li>wordpress Trust Seal</li>
+                        <li>Search engine blacklist monitoring</li>
+                        <li>CAPTCHA security</li>
+                        <li>Eliminates comment spam</li>
+                        <li>Security alerts</li>
+                        <li>Unlimited expert support</li>
+                        <li>*Money-back guarantee</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- End content -->
+        </div>
+      </div>
+    </div>
+    <!-- End main-tabs panes -->
+    <!--FAQ Section-->
+    <section class="brpl-faq-section l-main-content">
+      <div class="container l-main-container">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="plan-summary-container brpl-all-plans-include brpl-view1">
+              <!-- Start Plan-summary nav tabs -->
+              <div class="footer-header-container">
+                <div class="brpl-plan-include-header float-left">
+                  All Plans Include
+                </div>
+                <div class="float-right">
+                  <span id="tabPlansIncludeBrPl" class="faq-tab-linkhd">
+                    All Plans Include
+                  </span>
+                  <span id="tabFaqBrPl" class="faq-tab-linkhd underline">
+                    FAQs
+                  </span>
+                </div>
+              </div>
+              <!-- End Plan-summary nav tabs -->
+              <!-- Start Plan-summary Tab panes -->
+              <div class="tab-content no-margin-bottom clear-both">
+                <div class="tab-pane active ">
+                  <ul class="plan-summary-tab-pane-list brpl-ul">
+                    <li>Security alerts</li>
+                    <li>wordpress Trust Seal</li>
+                    <li>Search engine blacklist monitoring</li>
+                  </ul>
+                  <ul class="plan-summary-tab-pane-list brpl-ul" style="vertical-align: top;">
+                    <li>Unlimited expert support</li>
+                    <li><a data-ci="90374" style="color:black" target="_blank" href="http://www.securepaynet.net/agreements/showdoc.aspx?pageid=8897&amp;prog_id=hunter&amp;pl_id=103429">*Money-back guarantee</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- End Plan-summary Tab pane view 1 -->
+            <!--FAQs view start-->
+            <div class="plan-summary-container brpl-all-plans-include brpl-view2" style="display: none;">
+              <!-- Start Plan-summary nav tabs -->
+              <div class="footer-header-container">
+                <div class="brpl-plan-include-header float-left">
+                  FAQs
+                </div>
+                <div class="float-right">
+                  <span id="tab1IncludeBrPl" class="faq-tab-linkhd underline">
+                    All Plans Include
+                  </span>
+                  <span id="tab2FaqBrPl" class="faq-tab-linkhd">
+                    FAQs
+                  </span>
+                </div>
+              </div>
+              <!-- End Plan-summary nav tabs -->
+              <!-- Start Plan-summary Tab panes -->
+              <div class="tab-content no-margin-bottom clear-both">
+                <div class="tab-pane active ">
+                  <ul class="plan-summary-tab-pane-list brpl-ul">
+                    <li class="active-underline"><a class="activate_modal" name="whatis-stlk-modal">What is wordpress?</a></li>
+                    <li class="active-underline"><a class="activate_modal" name="why-need-stlk-modal">Why do I need wordpress?</a></li>
+                    <li class="active-underline"><a class="activate_modal" name="how-work-stlk-modal">How does wordpress work?</a></li>
+                    <li class="active-underline"><a class="activate_modal" name="compar-sitlk-modal">How does wordpress compare to other web security services?</a></li>
+                  </ul>
+                  <ul class="plan-summary-tab-pane-list brpl-ul float-right">
+                    <li class="active-underline"><a class="activate_modal" name="ssl-cert-sitlk-modal">If I have an SSL Certificate, why do I need wordpress?</a></li>
+                    <li class="active-underline"><a class="activate_modal" name="anti-virus-sitlk-modal">I have anti-virus software. Do I need Website Protection wordpress?</a></li>
+                    <li class="active-underline"><a class="activate_modal" name="now-what-sitlk-modal">I just bought wordpress. Now what?</a></li>
+                  </ul>
+                </div>
+              </div>
+              <!-- End Plan-summary Tab panes -->
+            </div>
+            <!--FAQs view end-->
+          </div>
+        </div>
+      </div>
+      <div id="brplProductdisclaimer" class="container l-main-container content-disclaimer">
+        <p><small class="small-print">Third-party logos and marks are registered trademarks of their respective owners. All rights reserved.</small><br>
+          <small class="small-print">Advanced support available in English only.</small></p>
+      </div>
+    </section>
+    <!--End FAQ section-->
+    <h1 style="display:none">malware scanner</h1>
+
+
+{% endblock %}
+
+
+{% block footer %}
+
+<script src="[@T[link:<javascriptroot />]@T]fos/script/atlantis_jquery14.min.js" type="text/javascript"></script>
+<script src="[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2" type="text/javascript"></script>
+<script src="[@T[link:<javascriptroot />]@T]fos/201401/global/vendor/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="[@T[link:<javascriptroot />]@T]fos/201401/security/js/website-security.1.0.0.js" type="text/javascript" ></script>
+
+<script>
+  $('.equal-height').setColumnsEqualHeight();
+  $('.select-box').setSelectBox();
+  
+   $(function () {
+    $('.isToolTip').tooltip();    
+  });
+
+  $('.add-to-cart-btn').on('click', function() {
+    var url = '[@T[link:<relative path="/api/package" parammode="explicit"/>]@T]';
+    var planselected = $(this).attr('data-plan');
+    var mgrNumber = $('#mgrNumber').val();
+    var progId = getParameterByName('prog_id');
+    url += '/add'; //action
+    url += '/slp_protectmelp'; //itc code
+    url += '/83620'; //ci code
+    url += '/1';
+    url += '/' + planselected; //Plan Name
+    url += '?prog_id=' + progId;
+    ##if(isManager())
+    url += '&mgrshopper=' + getParameterByName('mgrshopper');
+    ##endif
+    $.getJSON(url, function (data) {
+      if (eval(data.Success)) {  
+        var newCartCt = pcCartCt + 1;
+        pcUpdateCart(newCartCt);
+        ##if(isManager())
+        var linkLocation = '[@T[link:<external linktype="GUIURL" path="/syncshopper/mgrcart/{0}" />]@T]'
+        ##else
+        var linkLocation = '[@T[link:<external linktype="GUIURL" path="/syncshopper/cart/{0}" />]@T]'
+        ##endif
+        linkLocation = linkLocation.replace("{0}", data.Shopper);
+        window.location = linkLocation;
+      }
+      else
+      {
+        ##if(isManager())
+        window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]';
+        ##else
+        window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]';
+        ##endif
+      }
+    });
+  });
+  
+  // get url parameter by parameter name
+    function getParameterByName(name) {
+        name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+            results = regex.exec(location.search);
+        return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+
+  $('.select-box-options > li').click(function () {
+    var li = $(this);
+    li.parents('.plan').find('button.add-to-cart-btn').attr('data-plan', li.attr('data-plan')).attr('data-isqualified', li.attr('data-isqualified'));
+  });
+  
+  $('.js-open-overview').on('click', function(e){
+    e.preventDefault();
+    window.location.hash = '';
+    $('a[href="#overview"]').tab('show');
+    window.location.hash = '#overview';
+  });
+  
+  $('#product-disclaimer .simple-link').on('click', function(){
+    $('#product-disclaimer-modal').modal();
+  });
+
+  $('.brpl-view2').hide();
+  $('.whatis-stlk-modal').hide();
+  $('.why-need-stlk-modal').hide();
+  $('.how-work-stlk-modal').hide();
+  $('.compar-sitlk-modal').hide();
+  $('.ssl-cert-sitlk-modal').hide();
+  $('.anti-virus-sitlk-modal').hide();
+  $('.now-what-sitlk-modal').hide();
+  $('.we-notify-section').hide();
+    
+  //Active Nav Tab click
+  $('.js-open-brpl-overview').on('click', function(e){
+    e.preventDefault();
+    window.location.hash = '';
+    
+    $('a[href="#brPlOverview"]').click();
+    window.location.hash = '#brPlOverview';
+  });
+          
+  $(".brpl-tabs > div > ul.lp-tabs > li ").click(function () {
+    $('.brpl-tabs > div > ul.lp-tabs > li').removeClass('lp-tab-active');
+    $(this).addClass('lp-tab-active');
+  });
+
+  //FAQ Modals Click events         
+  $('.modal_window').each(function(){
+    $('.modal_window').dialog({
+      autoOpen: false,
+      resizable: true,
+      modal: true,
+      bigframe: true,
+      height: "auto",
+      width: 800,
+      overflow: scroll,
+      resizable: true,
+      closeOnEscape:true,
+      dialogClass: "no-close"
+    })
+  });
+
+  $(".close-modal-btn").click(function () {
+    $('.modal_window').dialog('close');
+  });
+
+  function showModal(modal_id) {
+    $('.'+modal_id).dialog( "open" );
+  };
+  $('.activate_modal').click(function(){
+    var modal_id=$(this).attr('name');
+    showModal(modal_id);
+  });      
+
+  $('#tabFaqBrPl').on('click', (function (event) {
+    $('.brpl-view1').hide();
+    $('.brpl-view2').show();
+  }));
+
+  $('#tab1IncludeBrPl').on('click', (function (event) {
+    $('.brpl-view1').show();
+    $('.brpl-view2').hide();
+  }));
+
+  $('.activate_modal').click(function(){
+    var modal_id=$(this).attr('name');
+    showModal(modal_id);
+  });      
+
+  $('.set-active-col').click(function () {
+    var column_id=$(this).attr('id');
+      $('.set-active-col > div > div.top-plan-info').removeClass('active-column');
+      $('#'+column_id+'> div > div.top-plan-info').addClass('active-column');
+      $('.set-active-col > div > div.bottom-plan-info > p.no-margin-bottom > button').addClass('display-none');
+      $('#'+column_id+'> div > div.bottom-plan-info > p.no-margin-bottom > button').removeClass('display-none');
+    });
+</script>
+<style>
+        span.save.price-right{
+      padding-left: 12px;
+        float:none;
+        }
+        
+       div.select-box-current > span.price-left, div.select-box > div.select-box-body > ul > li > div > span.price-left{
+        width:50px;
+        }
+        .restrictions-tooltip{
+        border-bottom: 1px dashed #333;
+cursor: pointer;
+display: inline-block;
+text-decoration: none;
+        color: #333;
+        }
+        
+        .restrictions-tooltip:hover{text-decoration:none;color:inherit;}
+        
+</style>
+
+{% endblock %}
