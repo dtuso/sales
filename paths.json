@@ -36,8 +36,8 @@
   "web-hosting-config": "./hosting/web-hosting-config/",
   "what-is-a-gtld":     "./domains/what-is-a-gtld",
   "wordpress-hosting":  "./hosting/wordpress-hosting/",
+  "wordpress-pl":       "./hosting/private-label/wordpress/",
   "wp":                 "./hosting/wordpress-hosting/",
   "wsb":                "./hosting/website-builder/",
   "hostingclp":          "./hosting/category-landing-page/"
-
 }
