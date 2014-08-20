@@ -356,6 +356,7 @@ var sr_js = {
     var DomainViewModel = function (data) {
         var self = this;
         var _isOnSale =ko.observable(false);
+        var _name = ko.observable('');
         var _id = ko.observable('');
         var _initialAvailability = ko.computed({
             read: function () { return self.Type().InitialAvailability || AvailabilityTypes.Available; },
@@ -415,11 +416,7 @@ var sr_js = {
         }, self);
         self.IsVisible = ko.observable(true);
         self.Other = ko.observableArray([]);
-        self.Name = ko.computed({
-            read: function () { return self.SLD() + '.' + self.TLD(); },
-            deferEvaluation: true,
-            owner: self
-        }, self);
+        self.PfId = ko.observable(0);
         self.Phases = ko.observableArray([]);
         self.Prices = ko.observableArray([]);
         self.RegistrationInfo = ko.observable(null);
@@ -443,6 +440,19 @@ var sr_js = {
         }, self);
         self.Type = ko.observable(DomainSearchResults.ItemTypes.Unknown);
         self.TLD = ko.observable('');
+        self.Name = ko.computed({
+            read: function () { return self.SLD() + '.' + self.TLD(); },                    
+            deferEvaluation: true,
+            owner: self
+        }, self);
+        self.fullName = ko.computed({
+            read: function(){ return _name() || self.SLD() + '.' + self.TLD(); },
+            write: function (val) { 
+               _name(val);               
+            },
+            deferEvaluation: true,
+            owner: self
+        }, self);
         self.VendorId = ko.observable(11);
         self.ShowStack = ko.observable(false);
         self.fullAvailCheck = ko.observable(false);
@@ -451,8 +461,16 @@ var sr_js = {
         self.stackFullAvailCheckError = ko.observable(false);
         self.IsPremiumPrice = ko.observable(false);
         self.HasDiscount = ko.observable(false);
+        self.searchSource = ko.observable('');  // from search results json for fastball tracking
+        self.AvailableValue = ko.observable('');  // from search results json for fastball tracking
+        self.MatchSource = ko.observable('');  // from search results json for fastball tracking
+        self.originalPosition = ko.observable(0);  // for fastball tracking - HeaderResults, ccTLD Upsell and Stack = position 0, first domain in strip mall = 1 and increment
+        self.filterPosition = ko.observable(0);
 
-
+        var item = function(name,parent)
+        {
+            this.parent=SearchResultsViewModel
+        }
         //#region Methods
 
         function CreateCartHandlerPostUrl(domain, action) {
@@ -498,36 +516,36 @@ var sr_js = {
             return rtnVal;
         }
 
-        self.AddToCart = function (domain, event) {
+        self.AddToCart = function (domain, event, isCCTLD) {
             /*jshint unused:false, eqnull:true */
             if (domain) {
                 if ('function' === typeof (LogFastballEvent)) {
-                    LogFastballEvent(domain.CiCode(), 'searchresults', 'addtocart');
+                  LogFastballEvent(domain.CiCode(), 'searchresults', 'addtocart');
                 }
                 domain.fullAvailCheck(true);
                 var dataUrl = CreateCartHandlerPostUrl(domain, CartActions.Add);
                 if (dataUrl && 0 < dataUrl.length) {
                     $.post(dataUrl,
-                      function (data) {
-                          var bidSuccess = 'undefined' === typeof (data.bidIsValid) || data.bidIsValid;
-                          if (data.Success && bidSuccess) {
-                              domain.fullAvailCheck(false);
-                              domain.IsSelected(true);
-                              domain.IsOnSale(false);
+                        function (data) {
+                            var bidSuccess = 'undefined' === typeof (data.bidIsValid) || data.bidIsValid;
+                            if (data.Success && bidSuccess) {
+                                domain.fullAvailCheck(false);
+                                domain.IsSelected(true);
+                                domain.IsOnSale(false);
 
-                              DomainSearchResults.ViewModel.SelectedDomains(data.CurrentlyPending);
+                                DomainSearchResults.ViewModel.SelectedDomains(data.CurrentlyPending);
 
-                              if (DomainSearchResults.ViewModel.ShowStacks()) {
-                                  self.ShowStack(true);
-                              }
+                                if (DomainSearchResults.ViewModel.ShowStacks()) {
+                                    self.ShowStack(true);
+                                }
 
-                          } else {
-                              domain.fullAvailCheck(false);
-                              domain.fullAvailCheckError(true);
-                              domain.IsOnSale(false);
-                              // alert(data.bidMessage);
-                          }
-                      });
+                                LogDomainSelectionEvent(self, data, self.fullName(), DomainSearchResults.ViewModel.activeFilter(), DomainSearchResults.ViewModel.activeFilterValue(), (isCCTLD ? 0 : self.originalPosition()));
+                            } else {
+                                domain.fullAvailCheck(false);
+                                domain.fullAvailCheckError(true);
+                                domain.IsOnSale(false);
+                            }
+                        });
                 }
             }
         };
@@ -569,6 +587,13 @@ var sr_js = {
                         }
 
                         DomainSearchResults.ViewModel.SelectedDomains(data.CurrentlyPending);
+
+                        if ('function' === typeof (fbiRecordFastballEvent)) {
+                            var e = new fbiEventObject(event, "removeCart", 92500, '');
+                            e.AddUserInput("pf_id", self.PfId());
+                            e.AddUserInput("domain", self.fullName());
+                            fbiRecordFastballEvent(e);
+                        }
                     }
                 });
             }
@@ -590,6 +615,9 @@ var sr_js = {
 
                 self.SLD(data.DomainName || '').TLD(data.DomainTld || '');
                 _id(data.DomainIdentifier || self.SLD().toLowerCase() + self.TLD().toLowerCase());
+                if (data.source) {
+                    self.searchSource = data.source;
+                }
 
                 if (self.TLD()) {
                     var auTlds = ['com.au', 'net.au', 'org.au'];
@@ -599,6 +627,22 @@ var sr_js = {
                             return false;
                         }
                     });
+                }
+
+                if (data.PfId){
+                    self.PfId(data.PfId);
+                }
+
+                if (data.MatchSource) {
+                    self.MatchSource(data.MatchSource);
+                }
+
+                if(data.AvailableValue){
+                    self.AvailableValue(data.AvailableValue);
+                }
+
+                 if(data.Source){
+                    self.searchSource(data.Source);
                 }
 
                 if (data.IsPremiumPrice) {
@@ -693,6 +737,7 @@ var sr_js = {
                 }
                 self.Availability(self.Type().InitialAvailability);
                 self.IsSelected(data.IsSelected);
+                self.originalPosition(DomainSearchResults.ViewModel.originalPosition());
             }
         };
 
@@ -748,9 +793,9 @@ var sr_js = {
             }
         };
 
-        self.UpdateCart = function (domain, event) {
+        self.UpdateCart = function (domain, event, isCCTLD) {
             if (domain) {
-                domain.IsSelected() ? domain.RemoveFromCart(domain, event) : domain.AddToCart(domain, event);
+                domain.IsSelected() ? domain.RemoveFromCart(domain, event) : domain.AddToCart(domain, event, isCCTLD);
             }
         };
         //#endregion
@@ -799,6 +844,60 @@ var sr_js = {
             if (filter) {
                 if (filter.CiCodes) {
                     LogCiCode(filter.CiCodes.Apply, 'applyfilter');
+                    switch(typeof filter.InitialValue) {
+                        case "string" :
+                            if (DomainSearchResults.ViewModel.activeFilter.indexOf("tlds") == -1) {
+                                DomainSearchResults.ViewModel.activeFilter.push("tlds");
+                            }
+
+                            var tldActiveFilter = String.format("tlds:[{0}]", DomainSearchResults.ViewModel.tldFilter().join());
+                            if (DomainSearchResults.ViewModel.tldFilter.indexOf(filter.InitialValue) != -1){
+                                DomainSearchResults.ViewModel.tldFilter.remove(filter.InitialValue);
+                            }
+                            if (DomainSearchResults.ViewModel.activeFilterValue.indexOf(tldActiveFilter) != -1) {
+                               DomainSearchResults.ViewModel.activeFilterValue.remove(tldActiveFilter);
+                            }
+                            DomainSearchResults.ViewModel.tldFilter.push(filter.InitialValue);
+                            tldActiveFilter = String.format("tlds:[{0}]", DomainSearchResults.ViewModel.tldFilter().join());
+                            DomainSearchResults.ViewModel.activeFilterValue.push(tldActiveFilter);
+                            break;
+                        case "object" :
+                            if (filter.InitialValue.DisplayText === "Country/Location" && DomainSearchResults.ViewModel.activeFilter.indexOf("cctld") == -1) {
+                                DomainSearchResults.ViewModel.activeFilter.push("cctld");
+                                DomainSearchResults.ViewModel.activeFilterValue.push("cctld:on");
+                            }
+                            else if (filter.InitialValue.DisplayText === "Premium" && DomainSearchResults.ViewModel.activeFilter.indexOf("premium") == -1) {
+                                DomainSearchResults.ViewModel.activeFilter.push("premium");
+                                DomainSearchResults.ViewModel.activeFilterValue.push("premium:on");
+                            }
+                            break;
+                        case "undefined" :
+                            if (DomainSearchResults.ViewModel.activeFilter.indexOf("price") == -1) {
+                                DomainSearchResults.ViewModel.activeFilter.push("price");
+                            }
+                            var priceFilter = "price:" + DomainSearchResults.ViewModel.priceFilter();
+                            if (DomainSearchResults.ViewModel.activeFilterValue.indexOf(priceFilter) != -1) {
+                                DomainSearchResults.ViewModel.activeFilterValue.remove(priceFilter);
+                            }
+                            DomainSearchResults.ViewModel.priceFilter(filter.Value());
+                            priceFilter = "price:" + DomainSearchResults.ViewModel.priceFilter();
+                            DomainSearchResults.ViewModel.activeFilterValue.push(priceFilter);
+                            break;
+                        case "number" :
+                            if (DomainSearchResults.ViewModel.activeFilter.indexOf("length") == -1) {
+                                DomainSearchResults.ViewModel.activeFilter.push("length");
+                            }
+                            var lengthFilter = "length:" + DomainSearchResults.ViewModel.lengthFilter();
+                            if (DomainSearchResults.ViewModel.activeFilterValue.indexOf(lengthFilter) != -1) {
+                                DomainSearchResults.ViewModel.activeFilterValue.remove(lengthFilter);
+                            }
+                            DomainSearchResults.ViewModel.lengthFilter(filter.Value());
+                            lengthFilter = "length:" + DomainSearchResults.ViewModel.lengthFilter();
+                            DomainSearchResults.ViewModel.activeFilterValue.push(lengthFilter);
+                            break;
+                        default:
+                            break;
+                    }
                 }
                 filter.IsApplied(false).IsApplied(true);
             }
@@ -810,10 +909,19 @@ var sr_js = {
                     LogCiCode(filter.CiCodes.Clear, 'clearfilter');
                 }
                 if (filter.InputType.eq(DomainSearchResults.InputTypes.Textbox)) {
+                    if(DomainSearchResults.ViewModel.activeFilter.indexOf("price") != -1) {
+                        DomainSearchResults.ViewModel.activeFilter.remove("price");
+                        var priceFilter = "price:" + DomainSearchResults.ViewModel.priceFilter();
+                        if (DomainSearchResults.ViewModel.activeFilterValue.indexOf(priceFilter) != -1) {
+                            DomainSearchResults.ViewModel.activeFilterValue.remove(priceFilter);
+                            DomainSearchResults.ViewModel.priceFilter('');
+                        }
+                    }
                     filter.Value(_initialValue);
                 }
                 if (0 < filter.SubFilters().length) {
-                    ko.utils.arrayForEach(filter.SubFilters(), function (i) { i.Clear(i, event); });
+                    ko.utils.arrayForEach(filter.SubFilters(), function (i) {
+                    i.Clear(i, event); });
                 }
                 filter.IsApplied(false);
             }
@@ -822,8 +930,35 @@ var sr_js = {
         self.Halt = function (filter, event) {
             if (filter) {
                 if (filter.CiCodes) {
+                    if(DomainSearchResults.ViewModel.activeFilter.indexOf("length") != -1 && typeof filter.InitialValue === "number") {
+                        DomainSearchResults.ViewModel.activeFilter.remove("length");
+                        var lengthFilter = "length:" + DomainSearchResults.ViewModel.lengthFilter();
+                        if (DomainSearchResults.ViewModel.activeFilterValue.indexOf(lengthFilter) != -1) {
+                            DomainSearchResults.ViewModel.activeFilterValue.remove(lengthFilter);
+                            DomainSearchResults.ViewModel.lengthFilter(-1);
+                        }
+                    }
+
+                    if(DomainSearchResults.ViewModel.activeFilter.indexOf("tlds") != -1 && typeof filter.InitialValue == "string") {
+                        var tldActiveFilter =  String.format("tlds:[{0}]", DomainSearchResults.ViewModel.tldFilter().join());
+                        if (DomainSearchResults.ViewModel.tldFilter.indexOf(filter.InitialValue) != -1) {
+                            DomainSearchResults.ViewModel.tldFilter.remove(filter.InitialValue);
+                        }
+                        if (DomainSearchResults.ViewModel.activeFilterValue.indexOf(tldActiveFilter) != -1) {
+                            DomainSearchResults.ViewModel.activeFilterValue.remove(tldActiveFilter);
+                        }
+                        if (DomainSearchResults.ViewModel.tldFilter().length > 0) {
+                            tldActiveFilter = String.format("tlds:[{0}]", DomainSearchResults.ViewModel.tldFilter().join());
+                            DomainSearchResults.ViewModel.activeFilterValue.push(tldActiveFilter);
+                        }
+                        else {
+                            DomainSearchResults.ViewModel.activeFilter.remove("tlds");
+                        }
+                    }
+
                     LogCiCode(filter.CiCodes.Halt, 'haltfilter');
                 }
+
                 filter.IsApplied(false);
             }
         };
@@ -832,6 +967,14 @@ var sr_js = {
             /*jshint unused:false, eqnull:true */
             if (filter) {
                 if (filter.IsApplied()) {
+                    if (filter.InitialValue.DisplayText === "Country/Location" && DomainSearchResults.ViewModel.activeFilter.indexOf("cctld") > -1) {
+                        DomainSearchResults.ViewModel.activeFilter.remove("cctld");
+                        DomainSearchResults.ViewModel.activeFilterValue.remove("cctld:on");
+                    }
+                    else if (filter.InitialValue.DisplayText === "Premium" && DomainSearchResults.ViewModel.activeFilter.indexOf("premium") > -1) {
+                        DomainSearchResults.ViewModel.activeFilter.remove("premium");
+                        DomainSearchResults.ViewModel.activeFilterValue.remove("premium:on");
+                    }
                     filter.Halt(filter, event);
                 } else {
                     filter.Apply(filter, event);
@@ -859,6 +1002,7 @@ var sr_js = {
             var rtnVal = false;
 
             if (item) {
+                item.filterPosition(0);
                 rtnVal = self.Predicate().call(self, item, self.Value());
                 if ((!self.Value() || 0 === self.Value().length) || (rtnVal && self.FilterType.eq(FilterTypes.And)) || (!rtnVal && self.FilterType.eq(FilterTypes.Or))) {
                     var sortedSubs = _appliedSubFilters().sort(function (l, r) { return (l ? l.Index() : 0) - (r ? r.Index() : 0); });
@@ -1062,7 +1206,11 @@ var sr_js = {
     var SearchResultsViewModel = function (data) {
         var self = this;
         var _items = [];
-
+        self.activeFilter = ko.observableArray([]);
+        self.activeFilterValue = ko.observableArray([]);
+        self.tldFilter = ko.observableArray([]);
+        self.priceFilter = ko.observable('');
+        self.lengthFilter = ko.observable(-1);
         self.AppliedFilters = ko.computed({
             read: function () { return ko.utils.arrayFilter(self.Filters(), function (i) { return i.IsApplied(); }); },
             deferEvaluation: true,
@@ -1119,6 +1267,18 @@ var sr_js = {
             owner: self
         }, self);
 
+        self.Items.subscribe(function() {
+            var items = self.Items();
+            for (var i = items.length; i--;) {
+                if(self.Filters().length > 0) {
+                    items[i].filterPosition(i + 1);
+                }
+                else{
+                    items[i].filterPosition(0);
+                }
+            }
+        }, self);
+
         self.IsLoaded = ko.observable(false);
         self.IsValid = ko.observable(true);
         self.NotValid = ko.observable(false);
@@ -1146,6 +1306,8 @@ var sr_js = {
         self.TypedValue = ko.observable('');
         self.TypedTLD = ko.observable('');
         self.IsTldNyc=ko.observable(false);
+        self.originalPosition = ko.observable(1);
+        self.filterPosition = ko.observable(0);
 
         self.ApplyFilter = function (filter, event) {
             /*jshint unused:false, eqnull:true */
@@ -1171,11 +1333,11 @@ var sr_js = {
             self.IsLoaded(false).IsValid(false);
 
             self.Unavailable(false);
-
+           
             //Invalid Reason Code
             self.IsBlocked(false);
             if (data && data.Success) {
-
+                
                 self.CurrencyDecimalSeparator(data.CurrencyDecimalSeparator || '.');
                 self.IsBlocked(data.InvalidType === 'blocked');
                 self.NotValid(data.HeaderResult === undefined && data.Tld !== "");
@@ -1192,13 +1354,17 @@ var sr_js = {
                 {
                     self.IsTldNyc(true);
                 }
+
                 if (data.StripMallResult) {
                     var tlds = [];
                     var maxLength = 4;
+                    
                     ko.utils.arrayForEach(data.StripMallResult, function (i) {
                         var item = new DomainViewModel(i).CiCode(84304);
                         _items.push(item); tlds.push(item.TLD());
                         maxLength = item.Name().length > maxLength ? item.Name().length : maxLength;
+                        self.originalPosition(_items.length+1);
+                        self.filterPosition(0);
                     });
 
                     var filters = self.Filters();
@@ -1234,21 +1400,24 @@ var sr_js = {
                     filters = filters.sort(function (l, r) { return (l ? l.Index() : 0) - (r ? r.Index() : 0); });
                     $.each(filters, function (i) { filters[i].Title(DomainSearchResults.Options.Filters[i].Title).Instruction(DomainSearchResults.Options.Filters[i].Instruction || DomainSearchResults.Options.Filters[i].Title); filters[i].CiCodes = DomainSearchResults.Options.Filters[i].CiCodes; });
                     self.Filters(filters);
+
                 }
 
                 if (data.HeaderResult) {
+                    self.originalPosition(0);
                     self.Unavailable(data.HeaderResult.DisplayArea === 'dppsr_extnd_unavail');
                     self.ExactMatch(new DomainViewModel(data.HeaderResult).CiCode(84310));
-
+                    
+               
                     var ccTldResult = null;
 
                     if (data.HeaderCcTldResult && !self.ExactMatch().Type.eq(DomainSearchResults.ItemTypes.PreRegistration)) {
-                        ccTldResult = new DomainViewModel(data.HeaderCcTldResult);
+                        ccTldResult = new DomainViewModel(data.HeaderCcTldResult);                        
                         var match = ko.utils.arrayFirst(_items, function (item) { return item.Id.eq(ccTldResult.Id()); });
                         if (match) {
-                            match.Other(ccTldResult.Other);
+                            match.Other(ccTldResult.Other);                                            
                         }
-                        ccTldResult = match || ccTldResult;
+                        ccTldResult = match || ccTldResult;  
                     }
 
                     self.ExactMatch().CCTLDResult = ko.observable(ccTldResult);
@@ -1257,22 +1426,22 @@ var sr_js = {
                         self.ExactMatch().ShowStack(true);
                     }
                 }
-
                 self.IsLoaded(true);
             }
         };
 
         self.GoToNextStep = function () {
-            if (!self.CanGoToNextStep()) { return false; }
+            if (!self.CanGoToNextStep()) {
+                return false;
+            }
             if (0 >= self.SelectedDomains() && self.ExactMatch() && StatusTypes.AfterMarket !== self.ExactMatch().Status()) {
                 $.ajaxSetup({ async: false });
                 self.ExactMatch().AddToCart(self.ExactMatch());
             }
             var dataUrl = AddApiAction(DomainSearchResults.Options.PostUrl, CartActions.GetNextStep);
-      if(pathIsDeals2())
-      {
-        dataUrl = addQueryParam(dataUrl,'path', 'deals2');
-      }
+            if (pathIsDeals2()) {
+                dataUrl = addQueryParam(dataUrl, 'path', 'deals2');
+            }
             $.post(dataUrl, function (data) {
                 if (data.Success) {
                     if ('function' === typeof (LogFastballEvent)) {
@@ -1406,6 +1575,7 @@ var sr_js = {
                     DomainSearchResults.ViewModel.ExactMatch().IsSelected(true).IsExpanded(false);
                 } else if (val) {
                     self.Availability(AvailabilityTypes.Selected);
+                   
                 } else {
                     self.Availability(AvailabilityTypes.Available);
                 }
@@ -1418,6 +1588,11 @@ var sr_js = {
         self.Type = ko.observable(DomainSearchResults.ItemTypes.Stack);
         self.stackFullAvailCheck = ko.observable(false);
         self.stackFullAvailCheckError = ko.observable(false);
+        self.searchSource = ko.observable('');  // from search results json for fastball tracking
+        self.originalPosition = ko.observable(0);  // for fastball tracking - HeaderResults, ccTLD Upsell and Stack = position 0, first domain in strip mall = 1 and increment
+        self.AvailableValue = ko.observable('');  // from search results json for fastball tracking
+        self.MatchSource = ko.observable('');  // from search results json for fastball tracking
+        self.domainStackList = ko.observableArray([]);
 
         var _onSelectedItemsChanged = ko.computed(
           function () {
@@ -1435,8 +1610,8 @@ var sr_js = {
                 var toBeSelected = self.Domains().length - _selectedItems().length;
                 var rtnVal = AddApiAction(DomainSearchResults.Options.PostUrl, CartActions.AddStack);
                 var dataUrl = DomainSearchResults.AppendQueryString(rtnVal, 'domain=' + encodeURIComponent(stack.OfferName()));
-                $.post(dataUrl, function (data) {
-                    if (data.Success) {
+                $.post(dataUrl, function (data) {                    
+                    if (data.Success) {                         
                         stack.stackFullAvailCheck(false);
                         stack.IsSelected(true);
                         stack.Parent().IsSelected(true);
@@ -1460,6 +1635,8 @@ var sr_js = {
                         stack.stackFullAvailCheck(false);
                         stack.stackFullAvailCheckError(true);
                     }
+
+                    LogDomainSelectionEvent(self, data, self.domainStackList(), DomainSearchResults.ViewModel.activeFilter(), DomainSearchResults.ViewModel.activeFilterValue(), 0);
                 });
             }
         };
@@ -1471,13 +1648,28 @@ var sr_js = {
                 self.SavingsText(data.SavingsText);
                 var stackSLD = data.OfferSld;
                 var tlds = data.DotTypesText.split(',');
+              
                 ko.utils.arrayForEach(tlds, function (i) {
                     var stackItem = new DomainViewModel(data).SLD(stackSLD).TLD(i.toLowerCase());
                     stackItem = ko.utils.arrayFirst(DomainSearchResults.ViewModel.Items(), function (j) { return j.Id.eq(stackItem.Id()); }) || stackItem;
                     self.Domains.push(stackItem);
+                    self.domainStackList.push(stackSLD +"."+ i);
+                    self.originalPosition(DomainSearchResults.ViewModel.originalPosition());
                 });
             }
+          
             self.IsVisible(0 < self.Domains().length);
+
+            self.MatchSource(data.MatchSource);               
+
+            if(data.AvailableValue) {
+                self.AvailableValue(data.AvailableValue);
+            }
+
+            if(data.Source) {
+                self.searchSource(data.Source);
+            }
+
             //For message changes on search results page
             self.GetDomainsCount = ko.computed(function () {
                 if (0 < self.Domains().length && self.Domains().length == 3) {
@@ -1515,6 +1707,13 @@ var sr_js = {
                             }
                         });
                         DomainSearchResults.ViewModel.ShowStacks(true);
+
+                        if ('function' === typeof (fbiRecordFastballEvent)) {
+                            var e = new fbiEventObject(event, "removeCart", 92500, '');
+                            e.AddUserInput("pf_id", self.PfId());
+                            e.AddUserInput("domain", self.domainStackList());
+                            fbiRecordFastballEvent(e);
+                        }
                     }
                 });
             }
@@ -1644,6 +1843,28 @@ var sr_js = {
         }
     }
 
+    function LogDomainSelectionEvent(self, data, domain, activeFilter, activeFilterValue, position){
+        if ('function' === typeof (fbiRecordFastballEvent)) {
+            var availableValue = data.AvailableValue ? data.AvailableValue : "";
+            var matchSource = self.MatchSource() ? self.MatchSource() : "";
+            var e = new fbiEventObject(new Object(), "addtocart", 92499, '');
+            e.AddUserInput("pf_id", self.PfId());
+            e.AddUserInput("domain", domain);
+            e.AddUserInput("source", self.searchSource());
+            e.AddUserInput("matchSource", matchSource);
+            e.AddUserInput("position", position);
+            e.AddUserInput("fullCheckAvail", availableValue);
+            e.AddUserInput("responseAvail", self.AvailableValue());
+            e.AddUserInput("filters", String.format("[{0}]", activeFilter.join()));
+            e.AddUserInput('filterPosition', self.filterPosition());
+            e.AddUserInput('filtersValue',  String.format("[{0}]", activeFilterValue.join()));
+            fbiRecordFastballEvent(e);
+//            for(var i = e.inputArray.length; i--;) {
+//                console.log(e.inputArray[i].key + '^' + e.inputArray[i].value);
+//            }
+        }
+    }
+
     function LockSearchControls() {
         var sticky = $('#results #search');
         sticky.wrap('<div id=\'search-wrapper\' />');
@@ -1698,7 +1919,6 @@ var sr_js = {
                 }
             });
     }
-
     //#endregion
 }(window.DomainSearchResults = window.DomainSearchResults || {}, jQuery));
 function pathIsDeals2(){
