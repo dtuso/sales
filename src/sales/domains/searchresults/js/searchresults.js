@@ -1282,7 +1282,11 @@ var sr_js = {
                         alert('Select a Domain First');
                     }
                     else {
-                        window.location = data.NextStepUrl;
+                        url = data.NextStepUrl;
+                        if(pathIsDeals2())
+                            url = addQueryParam(url, 'path', 'deals2');
+
+                        window.location = url;
                     }
                 }
             });
@@ -1590,7 +1594,8 @@ var sr_js = {
                   ko.applyBindings(DomainSearchResults.ViewModel);
                   SetControlDefaults();
                   LockSearchControls();
-                  if(window.location.href.toString().indexOf("vrgdin01") > -1)
+                  if(window.location.href.toString().indexOf("vrgdin01") > -1 &&
+                        document.referrer.toString().indexOf("deals2") > -1)
                   {
                     SetTLDFilter(".com");
                     SetTLDFilter(".net");
