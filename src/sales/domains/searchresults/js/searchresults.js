@@ -1590,6 +1590,11 @@ var sr_js = {
                   ko.applyBindings(DomainSearchResults.ViewModel);
                   SetControlDefaults();
                   LockSearchControls();
+                  if(window.location.href.toString().indexOf("vrgdin01") > -1)
+                  {
+                    SetTLDFilter(".com");
+                    SetTLDFilter(".net");
+                  }
               } else {
                   if (data.Redirect) {
                       window.location = data.Redirect;
@@ -1676,6 +1681,24 @@ var sr_js = {
         var queryParams = url.substr(urlBaseEnd, url.length);
         return urlBase + action + queryParams;
     }
+
+    function SetTLDFilter(tld) //activate TLD filter for given TLD param
+    {        
+        ko.utils.arrayForEach(DomainSearchResults.ViewModel.Filters(),
+            function (parent)
+            {
+                if(parent.Title().toString().toLowerCase().indexOf("extensions") > -1)
+                {
+                    ko.utils.arrayForEach(parent.SubFilters(), 
+                        function(subEntry)
+                        {                            
+                            if(subEntry.Title().toString().indexOf(tld.toString()) > -1)
+                                parent.Apply(subEntry, null);
+                        });
+                }
+            });
+    }
+
     //#endregion
 }(window.DomainSearchResults = window.DomainSearchResults || {}, jQuery));
 function pathIsDeals2(){
