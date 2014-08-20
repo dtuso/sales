@@ -1702,10 +1702,7 @@ var sr_js = {
     //#endregion
 }(window.DomainSearchResults = window.DomainSearchResults || {}, jQuery));
 function pathIsDeals2(){
-  if(document.referrer.toString().indexOf("deals2") > -1) {
-    return true;
-  }
-  else if(getQueryParams()['path'] !== undefined){
+  if(getQueryParams()['path'] !== undefined){
     return getQueryParams()['path'] === 'deals2';
   }
 
