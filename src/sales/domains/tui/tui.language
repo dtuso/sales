@@ -6,3 +6,56 @@ name:
 ##if(false)
 {% include 'modules/doc-block.html' %}
 ##endif
+
+<phrase key="page.title" />
+New gTLD Registration | Protect Your Trademark with gTLDs - [@T[companyname:name]@T]
+<phrase key="gtldTui-H1" />
+Pre-register your trademark-protected domain.
+<phrase key="gtldTui-H1-claims" />
+Pre-Registration Information
+<phrase key="gtldTui-Why" />
+The Trademark Clearinghouse requires trademark holders to upload their Signed Marked Data (SMD) file to prove trademark ownership.
+<phrase key="gtldTui-WhatIsSMD" />
+What is an SMD file?
+<phrase key="gtldTui-SMDDesc" />
+A Signed Mark Data (SMD) file is a text file that shows your trademark has been verified by the Trademark Clearinghouse. When you register a domain as a trademark holder, you have to upload your SMD file as proof to the registry that you have claim to that domain name.
+<phrase key="gtldTui-HelpMe" />
+Help me find my SMD files.
+<phrase key="gtldTui-currentDomainText" />
+Domain:
+<phrase key="gtldTui-fileUploadText" />
+Upload your SMD file:
+<phrase key="gtldTui-fileUploadToolTip" />
+Lorem Ipsem
+<phrase key="gtldTui-cancelBtn" />
+Cancel
+<phrase key="gtldTui-continueBtn" />
+Continue
+<phrase key="gtldTui-removeDomainText" />
+Remove Domain
+<phrase key="gtldTui-acknowledgeText" />
+Acknowledge Claim
+<phrase key="gtldTui-spinnerText" />
+Loading...
+<phrase key="gtldTui-ajaxErrorText" />
+There appears to be an error with your submission.  Please <a href="[@T[link:<relative path='/domains/search.aspx' />]@T]">try again</a> or contact support at [@T[supportphone:<technical />]@T] for more information.
+<phrase key="gtldTui-genericErrorText" />
+There appears to be an error with your submission.  Please <a href="[@T[link:<relative path='/domains/search.aspx' />]@T]">try again</a> or contact support at [@T[supportphone:<technical />]@T] for more information.
+<phrase key="gtldTui-registration-information" />
+Registration Information
+<phrase key="gtldTui-form-validation-error" />
+There appears to be an error with your submission. Please fix the areas outlined in red.
+<phrase key="gtldTui-trustee-error" />
+This domain extension is not available for registration outside the country it’s associated with and has been removed from your cart.  For more information, please contact customer support at [@T[supportphone:<technical />]@T].
+<phrase key="gtldTui-claims-header" />
+<h2>Trademark Claims</h2><h3>Please review the following agreement and acknowledge the claims to proceed or remove the domain from your cart.</h3>
+<phrase key="gtldTui-uk-header" comment=".UK is not translated" />
+.UK Eligibility Information
+<phrase key="gtldTui-uk-alert" />
+One or more of the domains you selected is reserved. We have removed the affected domain(s).
+<phrase key="gtldTui-uk-disclaimer" comment=".uk, .co.uk, .org.uk, .me.uk, .net.uk, .ltd.uk, .plc.uk should not be translated" />
+The registry has reserved these <span style="font-weight:bold">.uk</span> domains for anyone who registered the matching .co.uk, .org.uk, .me.uk, .net.uk, .ltd.uk, .plc.uk domains before June 10, 2014. Those registrants have until June 10, 2019 to claim their <span style="font-weight:bold">.uk</span> domain.
+<phrase key="gtldTui-uk-namesRemoved" />
+Names removed:
+<phrase key="gtldTui-searchBtn" />
+Search Again
