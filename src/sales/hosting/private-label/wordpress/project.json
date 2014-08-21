@@ -19,14 +19,14 @@
       }
     },
 
-    "metaTitle": "[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-title]@L]",
-    "metaDescription": "[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-description]@L]",
-    "metaKeywords": "[@L[cds.sales/gd/hosting/wordpress-hosting:Meta0Keywords]@L]",
-    "metaCanonicalPath": "/hosting/wordpress-hosting.aspx",
-    "metaOgAdmins": "633356800",
-    "metaOgTitle": "[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-og-title]@L]",
-    "metaOgImage": "fos/icn/88489_Facebook_image.jpg",
-    "metaOgDescription": "[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-og-title]@L]"
+    "metaTitle": "WordPress Hosting | Hosting with Unlimited Bandwidth - [@T[companyname:name]@T]",
+    "metaDescription": "Need hosting for your WordPress Blog? [@T[companyname:name]@T] is your simple, affordable solution for all your WordPress needs including installation and hosting of your WordPress domain.",
+    "metaKeywords": "wordpress, word press, wordpress hosting, wordpress blog, how to start a blog, wordpress login, blogging, create a blog, how to create a blog, how to blog",
+    "metaCanonicalPath": "/hosting/wordpress.aspx",
+    "metaOgAdmins": "",
+    "metaOgTitle": "WordPress Hosting | Hosting with Unlimited Bandwidth - [@T[companyname:name]@T]",
+    "metaOgImage": "",
+    "metaOgDescription": "Need hosting for your WordPress Blog? [@T[companyname:name]@T] is your simple, affordable solution for all your WordPress needs including installation and hosting of your WordPress domain."
   },  
   
   "wordpress.language": {
