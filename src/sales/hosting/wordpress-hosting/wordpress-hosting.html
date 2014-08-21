@@ -1,8 +1,8 @@
 ---
 location: sales/hosting/wordpress-hosting.aspx
 id:   5399e43bf778fc1190e08c19
-name: FOS-20797
-comments: added styles to fix dropdown for de and ru
+name: GCE-22944
+comments: synced Jeffs Changes
 cssVersionOverride: 2
 ---
 {% extends 'layouts/base.html' %}
@@ -85,7 +85,7 @@ cssVersionOverride: 2
                   ##if(productHasSavingsMoreThan(32759, 32761, 0))
                   <p class="margin-bottom-12">
                   <span class="tertiary-color line-through">[@T[productprice:<template productid="32761" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike><nostrike><![CDATA[<strike>{0}</strike>]]></nostrike></template>]@T]</span>
-                  <span class="secondary-color"><strong>[@T[productcompare:<percent primaryproductid="32759" secondaryproductid="32761" hidebelow="1"><html><![CDATA[[@L[cds.sales/gd/hosting/website-builder:save]@L] {0}%]]></html></percent>]@T]</strong></span>
+                  <span class="secondary-color"><strong>[@T[productcompare:<percent primaryproductid="32759" secondaryproductid="32761" showsymbol="true" hidebelow="1"><html><![CDATA[[@L[cds.sales/gd/hosting/website-builder:save]@L] {0}]]></html></percent>]@T]</strong></span>
                   </p>
                   ##endif
                   ##if(countrySiteAny(uk))
@@ -133,7 +133,7 @@ cssVersionOverride: 2
                               <div>
                               <span class="price-left">&nbsp;</span>
                               <span>[@T[productprice:<template productid="32761" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike><nostrike><![CDATA[<strike>{0}</strike>]]></nostrike></template>]@T]/[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-month]@L]</span>
-                              <span class="save">[@T[productcompare:<percent primaryproductid="32759" secondaryproductid="32761" hidebelow="1"><html><![CDATA[[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-save]@L] {0}%]]></html></percent>]@T]</span>
+                              <span class="save">[@T[productcompare:<percent primaryproductid="32759" secondaryproductid="32761" showsymbol="true" hidebelow="1"><html><![CDATA[[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-save]@L] {0}]]></html></percent>]@T]</span>
                               </div>
                               ##endif
                             </label>
@@ -151,7 +151,7 @@ cssVersionOverride: 2
                               <div>
                               <span class="price-left">&nbsp;</span>
                               <span>[@T[productprice:<template productid="32761" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike><nostrike><![CDATA[<strike>{0}</strike>]]></nostrike></template>]@T]/[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-month]@L]</span>
-                              <span class="save price-right">[@T[productcompare:<percent primaryproductid="32768" secondaryproductid="32761" hidebelow="1"><html><![CDATA[[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-save]@L] {0}%]]></html></percent>]@T]</span>
+                              <span class="save price-right">[@T[productcompare:<percent primaryproductid="32768" secondaryproductid="32761" showsymbol="true" hidebelow="1"><html><![CDATA[[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-save]@L] {0}]]></html></percent>]@T]</span>
                               </div>
                               ##endif
                             </label>
@@ -169,7 +169,7 @@ cssVersionOverride: 2
                               <div>
                               <span class="price-left">&nbsp;</span>
                               <span>[@T[productprice:<template productid="32761" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike><nostrike><![CDATA[<strike>{0}</strike>]]></nostrike></template>]@T]/[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-month]@L]</span>
-                              <span class="save price-right">[@T[productcompare:<percent primaryproductid="32771" secondaryproductid="32761" hidebelow="1"><html><![CDATA[[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-save]@L] {0}%]]></html></percent>]@T]</span>
+                              <span class="save price-right">[@T[productcompare:<percent primaryproductid="32771" secondaryproductid="32761" showsymbol="true" hidebelow="1"><html><![CDATA[[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-save]@L] {0}]]></html></percent>]@T]</span>
                               </div>
                               ##endif
                             </label>
@@ -187,7 +187,7 @@ cssVersionOverride: 2
                               <div>
                               <span class="price-left">&nbsp;</span>
                               <span>[@T[productprice:<template productid="32761" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike><nostrike><![CDATA[<strike>{0}</strike>]]></nostrike></template>]@T]/[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-month]@L]</span>
-                              <span class="save price-right">[@T[productcompare:<percent primaryproductid="32777" secondaryproductid="32761" hidebelow="1"><html><![CDATA[[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-save]@L] {0}%]]></html></percent>]@T]</span>
+                              <span class="save price-right">[@T[productcompare:<percent primaryproductid="32777" secondaryproductid="32761" showsymbol="true" hidebelow="1"><html><![CDATA[[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-save]@L] {0}]]></html></percent>]@T]</span>
                               </div>
                               ##endif
                             </label>
@@ -223,7 +223,7 @@ cssVersionOverride: 2
                   ##if(productHasSavingsMoreThan(32767, 32758, 0))
                   <p class="margin-bottom-12">
                   <span class="tertiary-color line-through">[@T[productprice:<template productid="32758" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike><nostrike><![CDATA[<strike>{0}</strike>]]></nostrike></template>]@T]</span>
-                  <span class="secondary-color"><strong>[@T[productcompare:<percent primaryproductid="32767" secondaryproductid="32758" hidebelow="1"><html><![CDATA[[@L[cds.sales/gd/hosting/website-builder:save]@L] {0}%]]></html></percent>]@T]</strong></span>
+                  <span class="secondary-color"><strong>[@T[productcompare:<percent primaryproductid="32767" secondaryproductid="32758" showsymbol="true" hidebelow="1"><html><![CDATA[[@L[cds.sales/gd/hosting/website-builder:save]@L] {0}]]></html></percent>]@T]</strong></span>
                   </p>
                   ##endif
                   ##if(countrySiteAny(uk))
@@ -271,7 +271,7 @@ cssVersionOverride: 2
                               <div>
                               <span class="price-left">&nbsp;</span>
                               <span>[@T[productprice:<template productid="32758" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike><nostrike><![CDATA[<strike>{0}</strike>]]></nostrike></template>]@T]/[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-month]@L]</span>
-                              <span class="save price-right">[@T[productcompare:<percent primaryproductid="32767" secondaryproductid="32758" hidebelow="1"><html><![CDATA[[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-save]@L] {0}%]]></html></percent>]@T]</span>
+                              <span class="save price-right">[@T[productcompare:<percent primaryproductid="32767" secondaryproductid="32758" showsymbol="true" hidebelow="1"><html><![CDATA[[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-save]@L] {0}]]></html></percent>]@T]</span>
                               </div>
                               ##endif
                             </label>
@@ -289,7 +289,7 @@ cssVersionOverride: 2
                               <div>
                               <span class="price-left">&nbsp;</span>
                               <span>[@T[productprice:<template productid="32758" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike><nostrike><![CDATA[<strike>{0}</strike>]]></nostrike></template>]@T]/[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-month]@L]</span>
-                              <span class="save price-right">[@T[productcompare:<percent primaryproductid="32770" secondaryproductid="32758" hidebelow="1"><html><![CDATA[[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-save]@L] {0}%]]></html></percent>]@T]</span>
+                              <span class="save price-right">[@T[productcompare:<percent primaryproductid="32770" secondaryproductid="32758" showsymbol="true" hidebelow="1"><html><![CDATA[[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-save]@L] {0}]]></html></percent>]@T]</span>
                               </div>
                               ##endif
                             </label>
@@ -307,7 +307,7 @@ cssVersionOverride: 2
                               <div>
                               <span class="price-left">&nbsp;</span>
                               <span>[@T[productprice:<template productid="32758" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike><nostrike><![CDATA[<strike>{0}</strike>]]></nostrike></template>]@T]/[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-month]@L]</span>
-                              <span class="save price-right">[@T[productcompare:<percent primaryproductid="32773" secondaryproductid="32758" hidebelow="1"><html><![CDATA[[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-save]@L] {0}%]]></html></percent>]@T]</span>
+                              <span class="save price-right">[@T[productcompare:<percent primaryproductid="32773" secondaryproductid="32758" showsymbol="true" hidebelow="1"><html><![CDATA[[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-save]@L] {0}]]></html></percent>]@T]</span>
                               </div>
                               ##endif
                             </label>
@@ -325,7 +325,7 @@ cssVersionOverride: 2
                               <div>
                               <span class="price-left">&nbsp;</span>
                               <span>[@T[productprice:<template productid="32758" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike><nostrike><![CDATA[<strike>{0}</strike>]]></nostrike></template>]@T]/[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-month]@L]</span>
-                              <span class="save price-right">[@T[productcompare:<percent primaryproductid="32779" secondaryproductid="32758" hidebelow="1"><html><![CDATA[[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-save]@L] {0}%]]></html></percent>]@T]</span>
+                              <span class="save price-right">[@T[productcompare:<percent primaryproductid="32779" secondaryproductid="32758" showsymbol="true" hidebelow="1"><html><![CDATA[[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-save]@L] {0}]]></html></percent>]@T]</span>
                               </div>
                               ##endif
                             </label>
@@ -360,7 +360,7 @@ cssVersionOverride: 2
                   ##if(productHasSavingsMoreThan(32790, 32784, 0))
                   <p class="margin-bottom-12">
                   <span class="tertiary-color line-through">[@T[productprice:<template productid="32784" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike><nostrike><![CDATA[<strike>{0}</strike>]]></nostrike></template>]@T]</span>
-                  <span class="secondary-color"><strong>[@T[productcompare:<percent primaryproductid="32790" secondaryproductid="32784" hidebelow="1"><html><![CDATA[[@L[cds.sales/gd/hosting/website-builder:save]@L] {0}%]]></html></percent>]@T]</strong></span>
+                  <span class="secondary-color"><strong>[@T[productcompare:<percent primaryproductid="32790" secondaryproductid="32784" showsymbol="true" hidebelow="1"><html><![CDATA[[@L[cds.sales/gd/hosting/website-builder:save]@L] {0}]]></html></percent>]@T]</strong></span>
                   </p>
                   ##endif
                   ##if(countrySiteAny(uk))
@@ -409,7 +409,7 @@ cssVersionOverride: 2
                             <div>
                             <span class="price-left">&nbsp;</span>
                             <span>[@T[productprice:<template productid="32784" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike><nostrike><![CDATA[<strike>{0}</strike>]]></nostrike></template>]@T]/[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-month]@L]</span>
-                            <span class="save price-right">[@T[productcompare:<percent primaryproductid="32790" secondaryproductid="32784" hidebelow="1"><html><![CDATA[[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-save]@L] {0}%]]></html></percent>]@T]</span>
+                            <span class="save price-right">[@T[productcompare:<percent primaryproductid="32790" secondaryproductid="32784" showsymbol="true" hidebelow="1"><html><![CDATA[[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-save]@L] {0}]]></html></percent>]@T]</span>
                             </div>
                             ##endif
                             </label>
@@ -427,7 +427,7 @@ cssVersionOverride: 2
                               <div>
                               <span class="price-left">&nbsp;</span>
                               <span>[@T[productprice:<template productid="32784" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike><nostrike><![CDATA[<strike>{0}</strike>]]></nostrike></template>]@T]/[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-month]@L]</span>
-                              <span class="save price-right">[@T[productcompare:<percent primaryproductid="32792" secondaryproductid="32784" hidebelow="1"><html><![CDATA[[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-save]@L] {0}%]]></html></percent>]@T]</span>
+                              <span class="save price-right">[@T[productcompare:<percent primaryproductid="32792" secondaryproductid="32784" showsymbol="true" hidebelow="1"><html><![CDATA[[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-save]@L] {0}]]></html></percent>]@T]</span>
                               </div>
                               ##endif
                             </label>
@@ -445,7 +445,7 @@ cssVersionOverride: 2
                               <div>
                               <span class="price-left">&nbsp;</span>
                               <span>[@T[productprice:<template productid="32784" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike><nostrike><![CDATA[<strike>{0}</strike>]]></nostrike></template>]@T]/[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-month]@L]</span>
-                              <span class="save price-right">[@T[productcompare:<percent primaryproductid="32794" secondaryproductid="32784" hidebelow="1"><html><![CDATA[[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-save]@L] {0}%]]></html></percent>]@T]</span>
+                              <span class="save price-right">[@T[productcompare:<percent primaryproductid="32794" secondaryproductid="32784" showsymbol="true" hidebelow="1"><html><![CDATA[[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-save]@L] {0}]]></html></percent>]@T]</span>
                               </div>
                               ##endif
                             </label>
@@ -463,7 +463,7 @@ cssVersionOverride: 2
                               <div>
                                 <span class="price-left">&nbsp;</span>
                                 <span>[@T[productprice:<template productid="32784" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike><nostrike><![CDATA[<strike>{0}</strike>]]></nostrike></template>]@T]/[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-month]@L]</span>
-                                <span class="save price-right">[@T[productcompare:<percent primaryproductid="32798" secondaryproductid="32784" hidebelow="1"><html><![CDATA[[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-save]@L] {0}%]]></html></percent>]@T]</span>
+                                <span class="save price-right">[@T[productcompare:<percent primaryproductid="32798" secondaryproductid="32784" showsymbol="true" hidebelow="1"><html><![CDATA[[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-save]@L] {0}]]></html></percent>]@T]</span>
                               </div>
                               ##endif
                             </label>

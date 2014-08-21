@@ -26,35 +26,6 @@
     "metaOgTitle": "[@L[cds.sales/gd/hosting/website-builder:og-title]@L]",
     "metaOgImage": "fos/201401/hosting/website-builder/img/og.png",
     "metaOgDescription": "[@L[cds.sales/gd/hosting/website-builder:og-description]@L]",
-    "cssVersionOverride" : "1"
-  },
-  "split-b.html": {
-    "cdsDetails": {
-      "champion": {
-        "name": "David Utley",
-        "email": "dutley@godaddy.com"
-      },
-      "cdsLocation": "sales/hosting/website-builder-splits/split-b",
-      "draft": {
-        "id": "53b41f76f778fc1bcc061c2b",
-        "createdDate": "2014-07-02",
-        "createdBy": {
-          "fullName": "Samana Upadhyaya",
-          "username": "supadhyaya"
-        },
-        "jiraTicket": "FOS-23020",
-        "comments": "Update WSB T & C's for .CO.UK and .UK",
-        "url": "http://gui.dev-godaddy.com/splittest/splittestredirect.aspx?dest=http%3a%2f%2fwww.dev-godaddy.com%2fhosting%2fwebsite-builder.aspx&test=1214.B"
-      }
-    },
-    "assetPath": "fos/sales/themes/scotty/hosting/website-builder/",
-    "metaTitle": "[@L[cds.sales/gd/hosting/website-builder:page-title]@L]",
-    "metaDescription": "[@L[cds.sales/gd/hosting/website-builder:meta-description]@L]",
-    "metaKeywords": "[@L[cds.sales/gd/hosting/website-builder:meta-keywords]@L]",
-    "metaCanonicalPath": "/hosting/website-builder.aspx",
-    "metaOgTitle": "[@L[cds.sales/gd/hosting/website-builder:og-title]@L]",
-    "metaOgImage": "fos/201401/hosting/website-builder/img/og.png",
-    "metaOgDescription": "[@L[cds.sales/gd/hosting/website-builder:og-description]@L]",
     "cssVersionOverride" : "4"
   },
   "website-builder.language": {

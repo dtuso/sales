@@ -2,8 +2,8 @@
 location: sales/hosting/web-hosting.aspx
 url: http://www.dev-godaddy.com/hosting/web-hosting.aspx
 id: 53f3bbb2f778fc07b4296fc5
-name: FOS-21879
-comments: Web Hosting LP Enhancements
+name: GCE-22944
+comments: synced up Jeff's changes in Github
 splitSide: false
 ---
 
@@ -105,7 +105,7 @@ splitSide: false
                                 <p>[@L[cds.sales/gd/hosting/web-hosting:Economy-subheader]@L]</p>
                               <p class="starting-at starting-at-alternate-top-spacing"><span class="starting-at-above">[@L[cds.sales/gd/hosting/web-hosting:as-low-as]@L]</span><span class="starting-price">[@T[productprice:<current productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]<span>[@L[cds.sales/gd/hosting/web-hosting:month]@L]</span></span></p>
                                 ##if(productHasSavingsMoreThan(32051, 32051, 0))
-                                <p class="margin-bottom-12">[@T[productprice:<template productid="32051" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]<span class="secondary-color uppercase"><strong> [@L[cds.sales/gd/hosting/web-hosting:save]@L] [@T[productcompare:<percent primaryproductid="32051" secondaryproductid="32051" hidebelow="5"><html><![CDATA[{0}%]]></html></percent>]@T]</strong></span></p>
+                                <p class="margin-bottom-12">[@T[productprice:<template productid="32051" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]<span class="secondary-color uppercase"><strong> [@L[cds.sales/gd/hosting/web-hosting:save]@L] [@T[productcompare:<percent primaryproductid="32051" secondaryproductid="32051" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</strong></span></p>
                                 ##endif
                                 ##if(countrySiteAny(uk))
                                 <span class="vat-price">[@L[cds.sales/gd/hosting/web-hosting:vat-price]@L]</span>
@@ -134,7 +134,7 @@ splitSide: false
                                                     <div>
                                                         <span>&nbsp;</span>
                                                         <span>[@T[productprice:<template productid="32048" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T][@L[cds.sales/gd/hosting/web-hosting:month]@L]</span>
-                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32048" secondaryproductid="32048" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}%]]></html></percent>]@T]</span>
+                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32048" secondaryproductid="32048" showsymbol="true" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}]]></html></percent>]@T]</span>
                                                         ##else
                                                         <span>&nbsp;</span>
                                                         ##endif
@@ -153,7 +153,7 @@ splitSide: false
                                                     <div>
                                                         <span>&nbsp;</span>
                                                         <span>[@T[productprice:<template productid="32051" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T][@L[cds.sales/gd/hosting/web-hosting:month]@L]</span>
-                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32051" secondaryproductid="32051" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}%]]></html></percent>]@T]</span>
+                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32051" secondaryproductid="32051" showsymbol="true" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}]]></html></percent>]@T]</span>
                                                         ##else
                                                         <span>&nbsp;</span>
                                                         ##endif
@@ -172,7 +172,7 @@ splitSide: false
                                                     <div>
                                                         <span>&nbsp;</span>
                                                         <span>[@T[productprice:<template productid="32060" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T][@L[cds.sales/gd/hosting/web-hosting:month]@L]</span>
-                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32060" secondaryproductid="32060" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}%]]></html></percent>]@T]</span>
+                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32060" secondaryproductid="32060" showsymbol="true" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}]]></html></percent>]@T]</span>
                                                         ##else
                                                         <span>&nbsp;</span>
                                                         ##endif
@@ -192,7 +192,7 @@ splitSide: false
                                                     <div>
                                                         <span>&nbsp;</span>
                                                         <span>[@T[productprice:<template productid="32063" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T][@L[cds.sales/gd/hosting/web-hosting:month]@L]</span>
-                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32063" secondaryproductid="32063" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}%]]></html></percent>]@T]</span>
+                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32063" secondaryproductid="32063" showsymbol="true" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}]]></html></percent>]@T]</span>
                                                         ##else
                                                         <span>&nbsp;</span>
                                                         ##endif
@@ -213,7 +213,7 @@ splitSide: false
                                                     <div>
                                                         <span>&nbsp;</span>
                                                         <span>[@T[productprice:<template productid="32066" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T][@L[cds.sales/gd/hosting/web-hosting:month]@L]</span>
-                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32066" secondaryproductid="32066" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}%]]></html></percent>]@T]</span>
+                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32066" secondaryproductid="32066" showsymbol="true" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}]]></html></percent>]@T]</span>
                                                         ##else
                                                         <span>&nbsp;</span>
                                                         ##endif
@@ -234,7 +234,7 @@ splitSide: false
                                                     <div>
                                                         <span>&nbsp;</span>
                                                         <span>[@T[productprice:<template productid="32069" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T][@L[cds.sales/gd/hosting/web-hosting:month]@L]</span>
-                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32069" secondaryproductid="32069" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}%]]></html></percent>]@T]</span>
+                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32069" secondaryproductid="32069" showsymbol="true" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}]]></html></percent>]@T]</span>
                                                         ##else
                                                         <span>&nbsp;</span>
                                                         ##endif
@@ -267,7 +267,7 @@ splitSide: false
                                 ##endif
                               <p class="starting-at starting-at-alternate-top-spacing"><span class="starting-at-above">[@L[cds.sales/gd/hosting/web-hosting:as-low-as]@L]</span><span class="starting-price">[@T[productprice:<current productid="32059" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]<span>[@L[cds.sales/gd/hosting/web-hosting:month]@L]</span></span></p>
                                 ##if(productHasSavingsMoreThan(32059, 32059, 0))
-                                <p class="margin-bottom-12">[@T[productprice:<template productid="32059" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]<span class="secondary-color uppercase"><strong> [@L[cds.sales/gd/hosting/web-hosting:save]@L] [@T[productcompare:<percent primaryproductid="32059" secondaryproductid="32059" hidebelow="5"><html><![CDATA[{0}%]]></html></percent>]@T]</strong></span></p>
+                                <p class="margin-bottom-12">[@T[productprice:<template productid="32059" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]<span class="secondary-color uppercase"><strong> [@L[cds.sales/gd/hosting/web-hosting:save]@L] [@T[productcompare:<percent primaryproductid="32059" secondaryproductid="32059" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</strong></span></p>
                                 ##endif
                                 ##if(countrySiteAny(uk))
                                 <span class="vat-price">[@L[cds.sales/gd/hosting/web-hosting:vat-price]@L]</span>
@@ -296,7 +296,7 @@ splitSide: false
                                                     <div>
                                                         <span>&nbsp;</span>
                                                         <span>[@T[productprice:<template productid="32050" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T][@L[cds.sales/gd/hosting/web-hosting:month]@L]</span>
-                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32050" secondaryproductid="32050" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}%]]></html></percent>]@T]</span>
+                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32050" secondaryproductid="32050" showsymbol="true" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}]]></html></percent>]@T]</span>
                                                         ##else
                                                         <span>&nbsp;</span>
                                                         ##endif
@@ -315,7 +315,7 @@ splitSide: false
                                                     <div>
                                                         <span>&nbsp;</span>
                                                         <span>[@T[productprice:<template productid="32059" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T][@L[cds.sales/gd/hosting/web-hosting:month]@L]</span>
-                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32059" secondaryproductid="32059" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}%]]></html></percent>]@T]</span>
+                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32059" secondaryproductid="32059" showsymbol="true" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}]]></html></percent>]@T]</span>
                                                       ##else
                                                         <span>&nbsp;</span>
                                                       ##endif
@@ -334,7 +334,7 @@ splitSide: false
                                                     <div>
                                                         <span>&nbsp;</span>
                                                         <span>[@T[productprice:<template productid="32062" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T][@L[cds.sales/gd/hosting/web-hosting:month]@L]</span>
-                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32062" secondaryproductid="32062" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}%]]></html></percent>]@T]</span>
+                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32062" secondaryproductid="32062" showsymbol="true" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}]]></html></percent>]@T]</span>
                                                         ##else
                                                         <span>&nbsp;</span>
                                                         ##endif
@@ -354,7 +354,7 @@ splitSide: false
                                                     <div>
                                                         <span>&nbsp;</span>
                                                         <span>[@T[productprice:<template productid="32065" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T][@L[cds.sales/gd/hosting/web-hosting:month]@L]</span>
-                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32065" secondaryproductid="32065" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}%]]></html></percent>]@T]</span>
+                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32065" secondaryproductid="32065" showsymbol="true" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}]]></html></percent>]@T]</span>
                                                         ##else
                                                         <span>&nbsp;</span>
                                                         ##endif
@@ -375,7 +375,7 @@ splitSide: false
                                                     <div>
                                                         <span>&nbsp;</span>
                                                         <span>[@T[productprice:<template productid="32068" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T][@L[cds.sales/gd/hosting/web-hosting:month]@L]</span>
-                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32068" secondaryproductid="32068" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}%]]></html></percent>]@T]</span>
+                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32068" secondaryproductid="32068" showsymbol="true" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}]]></html></percent>]@T]</span>
                                                         ##else
                                                         <span>&nbsp;</span>
                                                         ##endif
@@ -396,7 +396,7 @@ splitSide: false
                                                     <div>
                                                         <span>&nbsp;</span>
                                                         <span>[@T[productprice:<template productid="32071" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T][@L[cds.sales/gd/hosting/web-hosting:month]@L]</span>
-                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32071" secondaryproductid="32071" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}%]]></html></percent>]@T]</span>
+                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32071" secondaryproductid="32071" showsymbol="true" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}]]></html></percent>]@T]</span>
                                                         ##else
                                                         <span>&nbsp;</span>
                                                         ##endif
@@ -428,7 +428,7 @@ splitSide: false
                                         <span class="badge badge-small badge-important badge-upper-right">[@L[cds.sales/gd/hosting/web-hosting:secure-tag]@L]</span>
                                       <p class="starting-at starting-at-alternate-top-spacing"><span class="starting-at-above">[@L[cds.sales/gd/hosting/web-hosting:as-low-as]@L]</span><span class="starting-price">[@T[productprice:<current productid="32082" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]<span>[@L[cds.sales/gd/hosting/web-hosting:month]@L]</span></span></p>
                                         ##if(productHasSavingsMoreThan(32082, 32082, 0))
-                                        <p class="margin-bottom-12">[@T[productprice:<template productid="32082" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]<span class="secondary-color uppercase"><strong> [@L[cds.sales/gd/hosting/web-hosting:save]@L] [@T[productcompare:<percent primaryproductid="32082" secondaryproductid="32082" hidebelow="5"><html><![CDATA[{0}%]]></html></percent>]@T]</strong></span></p>
+                                        <p class="margin-bottom-12">[@T[productprice:<template productid="32082" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]<span class="secondary-color uppercase"><strong> [@L[cds.sales/gd/hosting/web-hosting:save]@L] [@T[productcompare:<percent primaryproductid="32082" secondaryproductid="32082" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</strong></span></p>
                                         ##endif
                                         ##if(countrySiteAny(uk))
                                         <span class="vat-price">[@L[cds.sales/gd/hosting/web-hosting:vat-price]@L]</span>
@@ -457,7 +457,7 @@ splitSide: false
                                                     <div>
                                                         <span>&nbsp;</span>
                                                         <span>[@T[productprice:<template productid="32076" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T][@L[cds.sales/gd/hosting/web-hosting:month]@L]</span>
-                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32076" secondaryproductid="32076" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}%]]></html></percent>]@T]</span>
+                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32076" secondaryproductid="32076" showsymbol="true" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}]]></html></percent>]@T]</span>
                                                         ##else
                                                         <span>&nbsp;</span>
                                                         ##endif
@@ -476,7 +476,7 @@ splitSide: false
                                                     <div>
                                                         <span>&nbsp;</span>
                                                         <span>[@T[productprice:<template productid="32082" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T][@L[cds.sales/gd/hosting/web-hosting:month]@L]</span>
-                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32082" secondaryproductid="32082" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}%]]></html></percent>]@T]</span>
+                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32082" secondaryproductid="32082" showsymbol="true" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}]]></html></percent>]@T]</span>
                                                         ##else
                                                         <span>&nbsp;</span>
                                                         ##endif
@@ -495,7 +495,7 @@ splitSide: false
                                                     <div>
                                                         <span>&nbsp;</span>
                                                         <span>[@T[productprice:<template productid="32084" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T][@L[cds.sales/gd/hosting/web-hosting:month]@L]</span>
-                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32084" secondaryproductid="32084" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}%]]></html></percent>]@T]</span>
+                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32084" secondaryproductid="32084" showsymbol="true" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}]]></html></percent>]@T]</span>
                                                         ##else
                                                         <span>&nbsp;</span>
                                                         ##endif
@@ -515,7 +515,7 @@ splitSide: false
                                                     <div>
                                                         <span>&nbsp;</span>
                                                         <span>[@T[productprice:<template productid="32086" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T][@L[cds.sales/gd/hosting/web-hosting:month]@L]</span>
-                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32086" secondaryproductid="32086" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}%]]></html></percent>]@T]</span>
+                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32086" secondaryproductid="32086" showsymbol="true" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}]]></html></percent>]@T]</span>
                                                         ##else
                                                         <span>&nbsp;</span>
                                                         ##endif
@@ -536,7 +536,7 @@ splitSide: false
                                                     <div>
                                                         <span>&nbsp;</span>
                                                         <span>[@T[productprice:<template productid="32088" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T][@L[cds.sales/gd/hosting/web-hosting:month]@L]</span>
-                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32088" secondaryproductid="32088" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}%]]></html></percent>]@T]</span>
+                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32088" secondaryproductid="32088" showsymbol="true" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}]]></html></percent>]@T]</span>
                                                         ##else
                                                         <span>&nbsp;</span>
                                                         ##endif
@@ -557,7 +557,7 @@ splitSide: false
                                                     <div>
                                                         <span>&nbsp;</span>
                                                         <span>[@T[productprice:<template productid="32090" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T][@L[cds.sales/gd/hosting/web-hosting:month]@L]</span>
-                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32090" secondaryproductid="32090" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}%]]></html></percent>]@T]</span>
+                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32090" secondaryproductid="32090" showsymbol="true" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}]]></html></percent>]@T]</span>
                                                         ##else
                                                         <span>&nbsp;</span>
                                                         ##endif
@@ -597,7 +597,7 @@ splitSide: false
                                         <p>[@L[cds.sales/gd/hosting/web-hosting:starter-plan-website]@L]</p>
                                       <p class="starting-at starting-at-alternate-top-spacing"><span class="starting-at-above">[@L[cds.sales/gd/hosting/web-hosting:as-low-as]@L]</span><span class="starting-price">[@T[productprice:<current productid="294057" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]<span>[@L[cds.sales/gd/hosting/web-hosting:month]@L]</span></span></p>
                                         ##if(productHasSavingsMoreThan(294057, 294057, 0))
-                                        <p class="margin-bottom-12">[@T[productprice:<template productid="294057" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]<span class="secondary-color uppercase"><strong> [@L[cds.sales/gd/hosting/web-hosting:save]@L] [@T[productcompare:<percent primaryproductid="294057" secondaryproductid="294057" hidebelow="5"><html><![CDATA[{0}%]]></html></percent>]@T]</strong></span></p>
+                                        <p class="margin-bottom-12">[@T[productprice:<template productid="294057" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]<span class="secondary-color uppercase"><strong> [@L[cds.sales/gd/hosting/web-hosting:save]@L] [@T[productcompare:<percent primaryproductid="294057" secondaryproductid="294057" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</strong></span></p>
                                         ##endif
                                 </div>  
                                 <div class="select-box" data-gd-sidebysidealign-row="2">
@@ -622,7 +622,7 @@ splitSide: false
                                                     <div>
                                                         <span>&nbsp;</span>
                                                         <span>[@T[productprice:<template productid="294055" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T][@L[cds.sales/gd/hosting/web-hosting:month]@L]</span>
-                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="294055" secondaryproductid="294055" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}%]]></html></percent>]@T]</span>
+                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="294055" secondaryproductid="294055" showsymbol="true" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}]]></html></percent>]@T]</span>
                                                         ##else
                                                         <span>&nbsp;</span>
                                                         ##endif
@@ -641,7 +641,7 @@ splitSide: false
                                                     <div>
                                                         <span>&nbsp;</span>
                                                         <span>[@T[productprice:<template productid="294057" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T][@L[cds.sales/gd/hosting/web-hosting:month]@L]</span>
-                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="294057" secondaryproductid="294057" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}%]]></html></percent>]@T]</span>
+                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="294057" secondaryproductid="294057" showsymbol="true" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}]]></html></percent>]@T]</span>
                                                         ##else
                                                         <span>&nbsp;</span>
                                                         ##endif
@@ -660,7 +660,7 @@ splitSide: false
                                                     <div>
                                                         <span>&nbsp;</span>
                                                         <span>[@T[productprice:<template productid="294061" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T][@L[cds.sales/gd/hosting/web-hosting:month]@L]</span>
-                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="294061" secondaryproductid="294061" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}%]]></html></percent>]@T]</span>
+                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="294061" secondaryproductid="294061" showsymbol="true" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}]]></html></percent>]@T]</span>
                                                         ##else
                                                         <span>&nbsp;</span>
                                                         ##endif
@@ -680,7 +680,7 @@ splitSide: false
                                                     <div>
                                                         <span>&nbsp;</span>
                                                         <span>[@T[productprice:<template productid="294065" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T][@L[cds.sales/gd/hosting/web-hosting:month]@L]</span>
-                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="294065" secondaryproductid="294065" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}%]]></html></percent>]@T]</span>
+                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="294065" secondaryproductid="294065" showsymbol="true" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}]]></html></percent>]@T]</span>
                                                         ##else
                                                         <span>&nbsp;</span>
                                                         ##endif
@@ -701,7 +701,7 @@ splitSide: false
                                                     <div>
                                                         <span>&nbsp;</span>
                                                         <span>[@T[productprice:<template productid="294067" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T][@L[cds.sales/gd/hosting/web-hosting:month]@L]</span>
-                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="294067" secondaryproductid="294067" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}%]]></html></percent>]@T]</span>
+                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="294067" secondaryproductid="294067" showsymbol="true" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}]]></html></percent>]@T]</span>
                                                         ##else
                                                         <span>&nbsp;</span>
                                                         ##endif
@@ -722,7 +722,7 @@ splitSide: false
                                                     <div>
                                                         <span>&nbsp;</span>
                                                         <span>[@T[productprice:<template productid="294069" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T][@L[cds.sales/gd/hosting/web-hosting:month]@L]</span>
-                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="294069" secondaryproductid="294069" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}%]]></html></percent>]@T]</span>
+                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="294069" secondaryproductid="294069" showsymbol="true" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}]]></html></percent>]@T]</span>
                                                         ##else
                                                         <span>&nbsp;</span>
                                                         ##endif
@@ -750,7 +750,7 @@ splitSide: false
                                 <p>[@L[cds.sales/gd/hosting/web-hosting:economy-plan-website-11166]@L]</p>
                               <p class="starting-at starting-at-alternate-top-spacing"><span class="starting-at-above">[@L[cds.sales/gd/hosting/web-hosting:as-low-as]@L]</span><span class="starting-price">[@T[productprice:<current productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]<span>[@L[cds.sales/gd/hosting/web-hosting:month]@L]</span></span></p>
                                 ##if(productHasSavingsMoreThan(32051, 32051, 0))
-                                <p class="margin-bottom-12">[@T[productprice:<template productid="32051" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]<span class="secondary-color uppercase"><strong> [@L[cds.sales/gd/hosting/web-hosting:save]@L] [@T[productcompare:<percent primaryproductid="32051" secondaryproductid="32051" hidebelow="5"><html><![CDATA[{0}%]]></html></percent>]@T]</strong></span></p>
+                                <p class="margin-bottom-12">[@T[productprice:<template productid="32051" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]<span class="secondary-color uppercase"><strong> [@L[cds.sales/gd/hosting/web-hosting:save]@L] [@T[productcompare:<percent primaryproductid="32051" secondaryproductid="32051" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</strong></span></p>
                                 ##endif
                               </div>
                                 <div class="select-box" data-gd-sidebysidealign-row="2">
@@ -776,7 +776,7 @@ splitSide: false
                                                     <div>
                                                         <span>&nbsp;</span>
                                                         <span>[@T[productprice:<template productid="32048" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T][@L[cds.sales/gd/hosting/web-hosting:month]@L]</span>
-                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32048" secondaryproductid="32048" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}%]]></html></percent>]@T]</span>
+                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32048" secondaryproductid="32048" showsymbol="true" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}]]></html></percent>]@T]</span>
                                                         ##else
                                                         <span>&nbsp;</span>
                                                         ##endif
@@ -795,7 +795,7 @@ splitSide: false
                                                     <div>
                                                         <span>&nbsp;</span>
                                                         <span>[@T[productprice:<template productid="32051" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T][@L[cds.sales/gd/hosting/web-hosting:month]@L]</span>
-                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32051" secondaryproductid="32051" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}%]]></html></percent>]@T]</span>
+                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32051" secondaryproductid="32051" showsymbol="true" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}]]></html></percent>]@T]</span>
                                                         ##else
                                                         <span>&nbsp;</span>
                                                         ##endif
@@ -814,7 +814,7 @@ splitSide: false
                                                     <div>
                                                         <span>&nbsp;</span>
                                                         <span>[@T[productprice:<template productid="32060" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T][@L[cds.sales/gd/hosting/web-hosting:month]@L]</span>
-                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32060" secondaryproductid="32060" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}%]]></html></percent>]@T]</span>
+                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32060" secondaryproductid="32060" showsymbol="true" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}]]></html></percent>]@T]</span>
                                                         ##else
                                                         <span>&nbsp;</span>
                                                         ##endif
@@ -834,7 +834,7 @@ splitSide: false
                                                     <div>
                                                         <span>&nbsp;</span>
                                                         <span>[@T[productprice:<template productid="32063" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T][@L[cds.sales/gd/hosting/web-hosting:month]@L]</span>
-                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32063" secondaryproductid="32063" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}%]]></html></percent>]@T]</span>
+                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32063" secondaryproductid="32063" showsymbol="true" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}]]></html></percent>]@T]</span>
                                                         ##else
                                                         <span>&nbsp;</span>
                                                         ##endif
@@ -855,7 +855,7 @@ splitSide: false
                                                     <div>
                                                         <span>&nbsp;</span>
                                                         <span>[@T[productprice:<template productid="32066" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T][@L[cds.sales/gd/hosting/web-hosting:month]@L]</span>
-                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32066" secondaryproductid="32066" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}%]]></html></percent>]@T]</span>
+                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32066" secondaryproductid="32066" showsymbol="true" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}]]></html></percent>]@T]</span>
                                                         ##else
                                                         <span>&nbsp;</span>
                                                         ##endif
@@ -876,7 +876,7 @@ splitSide: false
                                                     <div>
                                                         <span>&nbsp;</span>
                                                         <span>[@T[productprice:<template productid="32069" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T][@L[cds.sales/gd/hosting/web-hosting:month]@L]</span>
-                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32069" secondaryproductid="32069" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}%]]></html></percent>]@T]</span>
+                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32069" secondaryproductid="32069" showsymbol="true" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}]]></html></percent>]@T]</span>
                                                         ##else
                                                         <span>&nbsp;</span>
                                                         ##endif
@@ -928,7 +928,7 @@ splitSide: false
                                 ##endif
                               <p class="starting-at starting-at-alternate-top-spacing"><span class="starting-at-above">[@L[cds.sales/gd/hosting/web-hosting:as-low-as]@L]</span><span class="starting-price">[@T[productprice:<current productid="32059" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]<span>[@L[cds.sales/gd/hosting/web-hosting:month]@L]</span></span></p>
                                 ##if(productHasSavingsMoreThan(32059, 32059, 0))
-                                <p class="margin-bottom-12">[@T[productprice:<template productid="32059" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]<span class="secondary-color uppercase"><strong> [@L[cds.sales/gd/hosting/web-hosting:save]@L] [@T[productcompare:<percent primaryproductid="32059" secondaryproductid="32059" hidebelow="5"><html><![CDATA[{0}%]]></html></percent>]@T]</strong></span></p>
+                                <p class="margin-bottom-12">[@T[productprice:<template productid="32059" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]<span class="secondary-color uppercase"><strong> [@L[cds.sales/gd/hosting/web-hosting:save]@L] [@T[productcompare:<percent primaryproductid="32059" secondaryproductid="32059" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</strong></span></p>
                                 ##endif
                                 ##if(countrySiteAny(uk))
                                 <span class="vat-price">[@L[cds.sales/gd/hosting/web-hosting:vat-price]@L]</span>
@@ -957,7 +957,7 @@ splitSide: false
                                                     <div>
                                                         <span>&nbsp;</span>
                                                         <span>[@T[productprice:<template productid="32050" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T][@L[cds.sales/gd/hosting/web-hosting:month]@L]</span>
-                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32050" secondaryproductid="32050" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}%]]></html></percent>]@T]</span>
+                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32050" secondaryproductid="32050" showsymbol="true" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}]]></html></percent>]@T]</span>
                                                         ##else
                                                         <span>&nbsp;</span>
                                                         ##endif
@@ -976,7 +976,7 @@ splitSide: false
                                                     <div>
                                                         <span>&nbsp;</span>
                                                         <span>[@T[productprice:<template productid="32059" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T][@L[cds.sales/gd/hosting/web-hosting:month]@L]</span>
-                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32059" secondaryproductid="32059" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}%]]></html></percent>]@T]</span>
+                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32059" secondaryproductid="32059" showsymbol="true" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}]]></html></percent>]@T]</span>
                                                       ##else
                                                         <span>&nbsp;</span>
                                                       ##endif
@@ -995,7 +995,7 @@ splitSide: false
                                                     <div>
                                                         <span>&nbsp;</span>
                                                         <span>[@T[productprice:<template productid="32062" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T][@L[cds.sales/gd/hosting/web-hosting:month]@L]</span>
-                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32062" secondaryproductid="32062" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}%]]></html></percent>]@T]</span>
+                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32062" secondaryproductid="32062" showsymbol="true" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}]]></html></percent>]@T]</span>
                                                         ##else
                                                         <span>&nbsp;</span>
                                                         ##endif
@@ -1015,7 +1015,7 @@ splitSide: false
                                                     <div>
                                                         <span>&nbsp;</span>
                                                         <span>[@T[productprice:<template productid="32065" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T][@L[cds.sales/gd/hosting/web-hosting:month]@L]</span>
-                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32065" secondaryproductid="32065" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}%]]></html></percent>]@T]</span>
+                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32065" secondaryproductid="32065" showsymbol="true" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}]]></html></percent>]@T]</span>
                                                         ##else
                                                         <span>&nbsp;</span>
                                                         ##endif
@@ -1036,7 +1036,7 @@ splitSide: false
                                                     <div>
                                                         <span>&nbsp;</span>
                                                         <span>[@T[productprice:<template productid="32068" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T][@L[cds.sales/gd/hosting/web-hosting:month]@L]</span>
-                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32068" secondaryproductid="32068" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}%]]></html></percent>]@T]</span>
+                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32068" secondaryproductid="32068" showsymbol="true" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}]]></html></percent>]@T]</span>
                                                         ##else
                                                         <span>&nbsp;</span>
                                                         ##endif
@@ -1057,7 +1057,7 @@ splitSide: false
                                                     <div>
                                                         <span>&nbsp;</span>
                                                         <span>[@T[productprice:<template productid="32071" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T][@L[cds.sales/gd/hosting/web-hosting:month]@L]</span>
-                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32071" secondaryproductid="32071" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}%]]></html></percent>]@T]</span>
+                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32071" secondaryproductid="32071" showsymbol="true" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}]]></html></percent>]@T]</span>
                                                         ##else
                                                         <span>&nbsp;</span>
                                                         ##endif
@@ -1086,7 +1086,7 @@ splitSide: false
                                         <span class="badge badge-small badge-important badge-upper-right">[@L[cds.sales/gd/hosting/web-hosting:secure-tag]@L]</span>
                                       <p class="starting-at starting-at-alternate-top-spacing"><span class="starting-at-above">[@L[cds.sales/gd/hosting/web-hosting:as-low-as]@L]</span><span class="starting-price">[@T[productprice:<current productid="32082" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]<span>[@L[cds.sales/gd/hosting/web-hosting:month]@L]</span></span></p>
                                         ##if(productHasSavingsMoreThan(32082, 32082, 0))
-                                        <p class="margin-bottom-12">[@T[productprice:<template productid="32082" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]<span class="secondary-color uppercase"><strong> [@L[cds.sales/gd/hosting/web-hosting:save]@L] [@T[productcompare:<percent primaryproductid="32082" secondaryproductid="32082" hidebelow="5"><html><![CDATA[{0}%]]></html></percent>]@T]</strong></span></p>
+                                        <p class="margin-bottom-12">[@T[productprice:<template productid="32082" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]<span class="secondary-color uppercase"><strong> [@L[cds.sales/gd/hosting/web-hosting:save]@L] [@T[productcompare:<percent primaryproductid="32082" secondaryproductid="32082" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</strong></span></p>
                                         ##endif
                                 </div>  
                                 <div class="select-box" data-gd-sidebysidealign-row="2">
@@ -1112,7 +1112,7 @@ splitSide: false
                                                     <div>
                                                         <span>&nbsp;</span>
                                                         <span>[@T[productprice:<template productid="32076" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T][@L[cds.sales/gd/hosting/web-hosting:month]@L]</span>
-                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32076" secondaryproductid="32076" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}%]]></html></percent>]@T]</span>
+                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32076" secondaryproductid="32076" showsymbol="true" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}]]></html></percent>]@T]</span>
                                                         ##else
                                                         <span>&nbsp;</span>
                                                         ##endif
@@ -1131,7 +1131,7 @@ splitSide: false
                                                     <div>
                                                         <span>&nbsp;</span>
                                                         <span>[@T[productprice:<template productid="32082" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T][@L[cds.sales/gd/hosting/web-hosting:month]@L]</span>
-                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32082" secondaryproductid="32082" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}%]]></html></percent>]@T]</span>
+                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32082" secondaryproductid="32082" showsymbol="true" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}]]></html></percent>]@T]</span>
                                                         ##else
                                                         <span>&nbsp;</span>
                                                         ##endif
@@ -1150,7 +1150,7 @@ splitSide: false
                                                     <div>
                                                         <span>&nbsp;</span>
                                                         <span>[@T[productprice:<template productid="32084" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T][@L[cds.sales/gd/hosting/web-hosting:month]@L]</span>
-                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32084" secondaryproductid="32084" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}%]]></html></percent>]@T]</span>
+                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32084" secondaryproductid="32084" showsymbol="true" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}]]></html></percent>]@T]</span>
                                                         ##else
                                                         <span>&nbsp;</span>
                                                         ##endif
@@ -1170,7 +1170,7 @@ splitSide: false
                                                     <div>
                                                         <span>&nbsp;</span>
                                                         <span>[@T[productprice:<template productid="32086" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T][@L[cds.sales/gd/hosting/web-hosting:month]@L]</span>
-                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32086" secondaryproductid="32086" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}%]]></html></percent>]@T]</span>
+                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32086" secondaryproductid="32086" showsymbol="true" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}]]></html></percent>]@T]</span>
                                                         ##else
                                                         <span>&nbsp;</span>
                                                         ##endif
@@ -1191,7 +1191,7 @@ splitSide: false
                                                     <div>
                                                         <span>&nbsp;</span>
                                                         <span>[@T[productprice:<template productid="32088" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T][@L[cds.sales/gd/hosting/web-hosting:month]@L]</span>
-                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32088" secondaryproductid="32088" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}%]]></html></percent>]@T]</span>
+                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32088" secondaryproductid="32088" showsymbol="true" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}]]></html></percent>]@T]</span>
                                                         ##else
                                                         <span>&nbsp;</span>
                                                         ##endif
@@ -1212,7 +1212,7 @@ splitSide: false
                                                     <div>
                                                         <span>&nbsp;</span>
                                                         <span>[@T[productprice:<template productid="32090" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T][@L[cds.sales/gd/hosting/web-hosting:month]@L]</span>
-                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32090" secondaryproductid="32090" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}%]]></html></percent>]@T]</span>
+                                                        <span class="save lastChild">[@T[productcompare:<percent primaryproductid="32090" secondaryproductid="32090" showsymbol="true" hidebelow="5"><html><![CDATA[[@L[cds.sales/gd/hosting/web-hosting:save]@L] {0}]]></html></percent>]@T]</span>
                                                         ##else
                                                         <span>&nbsp;</span>
                                                         ##endif
