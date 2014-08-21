@@ -1,14 +1,8 @@
 ---
 location: localization/sales/gd/hosting/web-hosting/en
-<<<<<<< HEAD
-id: 53d68ac1f778fc27484de4de
-name: FOS-24432
-comments: Update SSL Cert disclaimer
-=======
 id: 53dc1b0df778fc32dc9e303c
 name: FOS-24754
 comments: VAT tax fix for invalid pfids
->>>>>>> other work
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="page-title" />
