@@ -11,10 +11,14 @@ assetPath: false
 
     {% parent %}
 
-      <style type="text/css">
-    {% less %}
-    {% include "css/styles.less" %}
-    {% endless %}
+    <style type="text/css">
+      .container{
+        width: 1000px;
+      }
+      {% less %}
+      {% include "css/styles.less" %}
+      {% endless %}
+
     </style>
 
 {% endblock %}
@@ -25,12 +29,12 @@ assetPath: false
   <div class="container">
     <div class="banner-wrapper">
       <div class="banner">
-        <div class="col-lg-6 col-md-6 col-sm-6 banner-left">
+        <div class="col-xs-6 banner-left">
           <h1> Managed Wordpress</h1>
           <p class="lead">You create your own dynamic site.</p>
           <p class="lead">We manage your setup, backups and security.</p>          
         </div>
-        <div class="col-lg-6 col-md-6 col-sm-6 banner-right">
+        <div class="col-xs-6 banner-right">
           <div class="laptop-image"></div>
           <div class="header-list">
             <ul>
@@ -50,18 +54,29 @@ assetPath: false
 <section class="tabbed-section">
   <div class="container">  
     <ul class="nav nav-tabs">
-      <li class="active"><a href="#one" data-toggle="tab">One</a></li>
-      <li><a href="#two" data-toggle="tab">Two</a></li>
+      <li class="active"><a href="#plans-pricing" data-toggle="tab">Plans &amp; Pricing</a></li>
+      <li><a href="#faq" data-toggle="tab">FAQ</a></li>
       <li><a href="#twee" data-toggle="tab">Twee</a></li>
     </ul>
     <div class="tab-content">
-        <div class="tab-pane active" id="one">One</div>
-        <div class="tab-pane" id="two">Two</div>
+        <div class="tab-pane active" id="plans-pricing">
+          {% include "_plans_and_pricing_tab.html" %}
+        </div>
+        <div class="tab-pane" id="faq">
+          {% include "_faq_tab.html" %}
+        </div>
         <div class="tab-pane" id="twee">Twee</div>
        </div>
     </div>
   </div>
 </section>
+
+<section id="plans-pricing-sub-section">
+  <div class="container">
+    {% include "_plans_and_pricing_sub_section.html" %}
+  </div>
+</section>
+
 <section class="disclaimer-section">
 </section>
 
