@@ -5,7 +5,7 @@ body {
 #main-wrap *,
 #head-wrap *,
 #body-wrap *,
-#foot-wrap * { font-family: "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif!important; font-weight: 200; }
+#foot-wrap * { font-family: "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif!important }
 #head-wrap,
 #body-wrap,
 #foot-wrap {
@@ -17,6 +17,7 @@ body {
     font-size: 25px;
     color: #333;
     padding: 30px 0 0 0;
+    margin: 15px 0 0 0;
 }
 #main-wrap h2 {
     font-size: 28px;
@@ -42,6 +43,7 @@ body {
     color: #333;
 }
 #head-wrap h1.trademark { padding: 65px 0 30px }
+
 #smd-file-available,
 #trustee-error,
 #trustee-form,
@@ -59,7 +61,7 @@ body {
     font-size: 22px;
     margin: 0;
     padding: 0 0 20px 0;
-    color: #679B09;
+    color: #3182e6;
     border-bottom: #cfcfcf 1px solid;
     width: 1000px;
 }
@@ -69,6 +71,7 @@ div#smd-why {
     font-size: 18px;
     margin: 25px 0;
     line-height: 30px;
+    color: #3182e6;
 }
 div#smd-info {
     width: 656px;
@@ -87,7 +90,7 @@ div#smd-info>p {
 }
 #msgError { margin: 10px 0 }
 span.g-toolTip {
-    background: url(../../../../../../tlds/img/tooltip.png) no-repeat scroll 2px 2px rgba(0,0,0,0);
+    background: url(../../../../../../../tlds/img/tooltip.png) no-repeat scroll 2px 2px rgba(0,0,0,0);
     content: "";
     height: 5px;
     padding: 9px;
@@ -159,6 +162,30 @@ div#tui-container>span {
     color: #8b8b8b;
     padding: 0;
     margin-right: 16px;
+}
+#registration-continue-btn {
+    background:#3182E6 !important;
+    border-bottom:3px solid #1D6CCD !important;
+}
+#registration-continue-btn:hover {
+    background:#5A9BEB !important;
+    border-color:#327CD7 !important;
+}
+#registration-continue-btn:active {
+    background:#327CD7 !important;
+    border-color:#327CD7 !important;
+}
+#registration-search-btn {
+    background:#8B8B8B !important;
+    border-color:#727272 !important;
+}
+#registration-search-btn:hover {
+    background:#A2A2A2 !important;
+    border-color:#838383 !important;
+}
+#registration-search-btn:active {
+    background:#727272 !important;
+    border-color:#727272 !important;
 }
 #registration-cancel-btn:hover { text-decoration: underline }
 #eligibility-form .red { color: red }
@@ -268,7 +295,6 @@ form span.radio.checked {
     color: #262626;
     width: 300px;
     margin: 5px 0 0 0;
-    z-index: 5;
 }
 #main-wrap .selectstyleui>.ss-value {
     border: solid 1px #b3b3b3;
@@ -399,11 +425,9 @@ form span.radio.checked {
 #main-wrap #eligibility-form > form.nyc_eligibility .error {font-size: 10px; font-style: normal}
 b, strong {font-weight: bold !important}
 #eligibility-form > form.nyc_eligibility > h1 {font-size: 40px;border-bottom: 1px solid;border-color: #b3b3b3;padding-bottom: 10px}
-#eligibility-form .headingText {display:none}
-#eligibility-form > form.nyc_eligibility > .headingText, #eligibility-form > form.nyc_eligibility .headingText > p  {display: block; font-size: 18px; margin: 20px 0; padding: 0; color: #333}
+#eligibility-form > form.nyc_eligibility > .headingText, #eligibility-form .headingText > p  {font-size: 18px; margin: 20px 0; padding: 0; color: #333}
 #eligibility-form > form.nyc_eligibility > .headingText > ul {list-style: inherit; margin-top: 20px}
 #eligibility-form > form.nyc_eligibility > .headingText > ul > li {margin: 0 40px}
-#eligibility-form > form.nyc_eligibility > div.field {position: relative}
 #eligibility-form > form.nyc_eligibility > div.field > h2 {font-size: 14px;margin: 0;padding: 20px 0 0;}
 #eligibility-form > form.nyc_eligibility > div.field > h2:after {content:" *"; color: red; margin-top: -5px}
 #eligibility-form > form.nyc_eligibility > div.tui-address2 > h2:after, #eligibility-form > form > div.tui-fax > h2:after, #eligibility-form > form > div.tui-companyName > h2:after {display:none}
@@ -417,7 +441,7 @@ form.nyc_eligibility div.tui-lastName {margin-left: 30px}
 #main-wrap .selectstyleui>.ss-value>.ss-content{display:inline}
 form.nyc_eligibility div.tui-city {width:41%}
 form.nyc_eligibility div.tui-zipCode {width:22%}
-#main-wrap #eligibility-form > form.nyc_eligibility > div.tui-zipCode > .error, #main-wrap #eligibility-form > form.nyc_eligibility > div.tui-city > .error {left: 0; position: absolute; top: 75px;}
+#main-wrap #eligibility-form > form.nyc_eligibility > div.tui-zipCode > .error {position: absolute}
 form.nyc_eligibility div.tui-stateOrProvince {margin: 0 20px 0 33px}
 #main-wrap div.tui-country > .selectstyleui {width: 100%}
 #main-wrap > form.nyc_eligibility div.tui-stateOrProvince > .selectstyleui>.ss-options {z-index: 5}
