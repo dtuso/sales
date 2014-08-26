@@ -10,9 +10,9 @@
     "metaDescription": "[@L[cds.sales/gd/ssl/categorylp:meta-description]@L]",
     "metaKeywords": "[@L[cds.sales/gd/ssl/categorylp:meta-keywords]@L]",
     "metaCanonicalPath": "/ssl.aspx",
-    "metaOgTitle": "[@L[cds.sales/gd/ssl/categorylp:og-title]@L]",
+    "metaOgTitle": "[@L[cds.sales/gd/ssl/categorylp:page-title]@L]",
     "metaOgImage": "fos/hp/rebrand/img/gd_rebrand_og.png",
-    "metaOgDescription": "[@L[cds.sales/gd/ssl/categorylp:og-description]@L]"
+    "metaOgDescription": "[@L[cds.sales/gd/ssl/categorylp:meta-description]@L]"
   },
   "ssl.language": {
     "cdsDetails": {

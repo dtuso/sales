@@ -1,21 +1,25 @@
 ---
 location: localization/sales/gd/hosting/categorylp/en
-id: 53ce8eb2f778fc20bce78d2f
-name: FOS-23517
+id: 53ee352ff778fc19381bd871
+name: FOS-25549
 ---
 {% include '../../../modules/doc-block.html' %}
 <phrase key="page-title" />
-Hosting, Website Hosting | Take Control of Your Online Presence - [@T[companyname:name]@T]
+Hosting | Take Control of Your Online Presence - [@T[companyname:name]@T]
 <phrase key="meta-description" />
 The success of your website depends on reliable Website Hosting. [@T[companyname:name]@T] offers a suite of Hosting options that have a 99.9% uptime.
 <phrase key="meta-keywords" />
 Hosting, website hosting, best web hosting
 <phrase key="header-title" />
 Website Hosting Services
+<phrase key="header-title2" />
+Hosting Options
 <phrase key="subheader-title" />
 The success of your website depends on reliable Website Hosting. [@T[companyname:name]@T] offers a suite of Hosting options that have 99.9% uptime.
 <phrase key="tag-line" />
 Learn how we can keep your site secure, reliable and blazing fast.
+<phrase key ="success-tag-line" />
+The success of your website depends on reliable Website Hosting. GoDaddy offers a suite of Hosting options with guaranteed 99.9% uptime.
 <phrase key="secure" />
 Secure
 <phrase key="secure-description" />
@@ -27,7 +31,7 @@ We’re proud to guarantee 99.9% network uptime, but we’re even more proud of 
 <phrase key="blazingfast" />
 Blazing Fast
 <phrase key="blazingfast-description" />
-Every hosting provider claims they’re fast, but how many of them have actually put their platforms to the test? With our shared hosting plans boasting the fastest page load times on the web, you can imagine how fast our servers must be.
+Every hosting provider claims they have the best hosting, but how many of them have actually put their platforms to the test? With shared hosting plans that boast lightning-fast load times for cPanel for Linux, you can imagine how fast our VPS and Dedicated Servers must be.
 <phrase key="shared-web-hosting" />
 Shared Web Hosting
 <phrase key="perfect-small" />
@@ -40,6 +44,8 @@ Includes guaranteed 99.9% uptime
 Award-winning, 24/7 phone support
 <phrase key="swh-free" />
 Free domain with any annual plan
+<phrase key="restrictions" />
+Restrictions Apply
 <phrase key="swh-paragraph" />
 We also offer a plan specially designed for WordPress, the world’s most popular website and blog design platform. If you want high-performance <b>website hosting</b> that’s scalable, secure and affordable, start here.
 <phrase key="learnmore" />
@@ -54,7 +60,7 @@ If you have a high-traffic, resource-intensive website, a shared hosting plan ma
 Powered by state-of-the-art data centers located across the globe
 <phrase key="servers-offer" />
 Offer the ultimate in performance , scalability and control
-<phrase key="servers-backed" />t
+<phrase key="servers-backed" />
 Backed by free 24/7 support from experienced server experts
 <phrase key="breakout" />
 Our award-winning support staff is here 24/7/365, because there’s no such thing as ‘business hours’ when it comes to web hosting.
