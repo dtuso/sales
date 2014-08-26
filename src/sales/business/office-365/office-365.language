@@ -1,12 +1,12 @@
 ---
 location: localization/sales/business/office-365/en
-id: 53d6d431f778fc27484de544
-name: FOS-24033
-comments: Update devices used on
+id: 53eba351f778fc1b303a9c31
+name: FOS-24500
+comments: updated meta title to include new token
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="lp-8-MicrosoftOffice365BoostProductivityVirtuallyAnywhereGoDaddy" />
-Microsoft Office 365 | Boost Productivity Virtually Anywhere – GoDaddy
+Microsoft Office 365 | Boost Productivity Virtually Anywhere – [@T[companyname:nameseotitle]@T]
 <phrase key="lp-36-MSOffice365IsEasyToSetUp" />
 MS Office 365 is easy to set up and manage from virtually anywhere. GoDaddy's Office 365 Pricing makes it affordable for businesses of any size to access enterprise-class productivity at low everyday prices.
 <phrase key="lp-18-Office365MicrosoftOffice365Office365Pricing" />

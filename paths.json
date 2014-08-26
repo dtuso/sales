@@ -38,6 +38,8 @@
   "wordpress-hosting":  "./hosting/wordpress-hosting/",
   "wp":                 "./hosting/wordpress-hosting/",
   "wsb":                "./hosting/website-builder/",
-  "hostingclp":          "./hosting/category-landing-page/"
+  "hostingclp":          "./hosting/category-landing-page/",
+  "ssl-lp":              "./ssl/ssl-lp/",
+  "web-host":            "./hosting/web-host/"
 
 }
