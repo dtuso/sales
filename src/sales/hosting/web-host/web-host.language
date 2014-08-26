@@ -1,16 +1,18 @@
 ---
 location: localization/sales/gd/hosting/product-listing/hosting/en
-id: 53e00a34f778fc33bc708f70
-name: FOS-25192
+id: 53f27fecf778fc07b4296f76
+name: FOS-25549
 ---
 {% include '../../modules/doc-block.html' %}
 
 <phrase key="page-title" />
-Web Host | Your Website, Always Up Always On – [@T[companyname:name]@T]
+Web Host | Your Website, Always Up Always On - [@T[companyname:name]@T]
 <phrase key="meta-description" />
 The success of your website depends on reliable Website Hosting. [@T[companyname:name]@T] offers a suite of Hosting options that have a 99.9% uptime.
+<phrase key="og-description" />
+Learn about the different Domain Hosting options [@T[companyname:name]@T] has to offer. From lightning fast shared Hosting services to Virtual Private Servers all backed by our award winning tech support!
 <phrase key="meta-keywords" />
-Hosting, website hosting, best web hosting
+Web Host, domain hosting, web hosting services, web hosting service
 <phrase key="header-title" />
 Web Host
 <phrase key="subheader-title" />

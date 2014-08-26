@@ -3,7 +3,7 @@ location: sales/ssl.aspx
 id: 53f7cf42f778fc1008446c88
 name: GCE-26810
 comments: modified canonical url to be secure
-cssVersionOverride: 2
+cssVersionOverride: 3
 ---
 {% extends 'layouts/base.html' %} 
 {% block metahead %} 
@@ -54,9 +54,9 @@ cssVersionOverride: 2
             <div class="col-xs-5 content-title-left">
                 <div class="">
                     <p class="hnb-48-thin center title">[@L[cds.sales/gd/ssl/categorylp:ssl-title]@L]</p>
-                    <p class="hnb-18-reg center content-perfect">[@L[cds.sales/gd/ssl/categorylp:ssl-perfect]@L]</p>
                     <div class="ssl-cert-sprite ssl-sprite solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/ssl/ssl-lp/img/sprite_ssl_&_web_security.png"></div>
-                    ##if(activeLanguageAny(en))
+                    <p class="hnb-18-reg center content-perfect">[@L[cds.sales/gd/ssl/categorylp:ssl-perfect]@L]</p>
+                    ##if(activeLanguageAny([en-us]))
                     <div class="rating-and-reviews center">
                         <ul class="rating-stars">
                             <li class="star-sprite solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/ssl/ssl-lp/img/sprite_ssl_&_web_security.png"></li>
@@ -105,8 +105,8 @@ cssVersionOverride: 2
             <div class="col-xs-5 content-title-right">
                 <div class="">
                     <p class="hnb-48-thin center title">[@L[cds.sales/gd/ssl/categorylp:code-sign-title]@L]</p>
-                    <p class="hnb-18-reg center content-perfect">[@L[cds.sales/gd/ssl/categorylp:code-sign-perfect]@L]</p>
-                    <div class="code-sign-sprite code-sign-sprite-padding solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/ssl/ssl-lp/img/sprite_ssl_&_web_security.png"></div>                    
+                    <div class="code-sign-sprite code-sign-sprite-padding solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/ssl/ssl-lp/img/sprite_ssl_&_web_security.png"></div>
+                    <p class="hnb-18-reg center content-perfect">[@L[cds.sales/gd/ssl/categorylp:code-sign-perfect]@L]</p>                    
                 </div>
             </div>
         </div>
@@ -118,8 +118,8 @@ cssVersionOverride: 2
             <div class="col-xs-5 content-title-left">
                 <div class="">
                     <p class="hnb-48-thin center title">[@L[cds.sales/gd/ssl/categorylp:premium-dns-title]@L]</p>
-                    <p class="hnb-18-thin center content-perfect">[@L[cds.sales/gd/ssl/categorylp:premium-dns-perfect]@L]</p>
-                    <div class="premium-dns-sprite code-sign-sprite-padding solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/ssl/ssl-lp/img/sprite_ssl_&_web_security.png"></div>                    
+                    <div class="premium-dns-sprite code-sign-sprite-padding solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/ssl/ssl-lp/img/sprite_ssl_&_web_security.png"></div>
+                    <p class="hnb-18-thin center content-perfect">[@L[cds.sales/gd/ssl/categorylp:premium-dns-perfect]@L]</p>                    
                 </div>
             </div>
             <div class="col-xs-7 content-right">
@@ -158,8 +158,8 @@ cssVersionOverride: 2
             <div class="col-xs-5 content-title-right">
                 <div class="">
                     <p class="hnb-48-thin center title">[@L[cds.sales/gd/ssl/categorylp:sitelock-title]@L]</p>
-                    <p class="hnb-18-thin center content-perfect">[@L[cds.sales/gd/ssl/categorylp:sitelock-perfect]@L]</p>
-                    <div class="sitelock-sprite sitelock-sprite-padding solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/ssl/ssl-lp/img/sprite_ssl_&_web_security.png"></div>                    
+                    <div class="sitelock-sprite sitelock-sprite-padding solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/ssl/ssl-lp/img/sprite_ssl_&_web_security.png"></div>
+                    <p class="hnb-18-thin center content-perfect">[@L[cds.sales/gd/ssl/categorylp:sitelock-perfect]@L]</p>                    
                 </div>
             </div>
         </div>
