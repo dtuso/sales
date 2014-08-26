@@ -1,7 +1,8 @@
 ---
 location: sales/tlds/gtld.aspx
-id: 53eb8c55f778fc2e447b92ad
-name: FOS-25357
+id: 53fb7e0ff778fc1188ab20e4
+name: GCE-26709
+comments: Updating slider content.
 ---
 {% extends 'layouts/base.html' %}
 
@@ -11,7 +12,7 @@ name: FOS-25357
     <!-- International Background Images -->
     <style type="text/css">
     .why-godaddy-grid-column {
-      background-image: url("[@T[link:<cssroot />]@T]/fos/201401/tlds/gtld/img/bg-tab-content-why-godaddy_IN.jpg");
+      background-image: url("[@T[link:<cssroot />]@T]/fos/201401/tlds/gtld/img/bg-tab-content-why-godaddy_IN.jpg]");
     }
     </style>
 ##endif        
@@ -28,15 +29,6 @@ name: FOS-25357
     <style type="text/css">
       .bg-images > .bg-slide2 {
       background-image: url("[@T[link:<cssroot />]@T]/fos/201401/tlds/gtld/img/bg-main-banner-email.jpg") !important;
-      }
-    </style>
-##endif
-
-##if(countrySiteAny(www,ca))
-    <!-- International Background Images -->
-    <style type="text/css">
-      .bg-images > .bg-slide4 {
-      background-image: url("[@T[link:<cssroot />]@T]/fos/201401/tlds/gtld/img/bg-main-banner-club.jpg") !important;
       }
     </style>
 ##endif
@@ -91,25 +83,25 @@ name: FOS-25357
                   <div class="carousel-inner carousel-inner-container">
                     <div class="item carousel-inner-item carousel-inner-item-gtld carousel-inner-item-gtld-1 active">
                       <div class="carousel-inner-text-container carousel-inner-text-cointainer-gtld">
-                        <p class="domain no-margin-bottom"><strong>.guru</strong></p>
-                        <p>[@L[cds.sales/gd/tlds/gtld:MainBannerCarouselSlide4Text2]@L]</p>
-                        <p class="no-margin-bottom"><a class="underlined" data-ci="89138" href="[@T[link:<relative path="~/tlds/guru"/>]@T]">[@L[cds.sales/gd/tlds/gtld:MarketingSlideLinkText]@L]</a></p>
+                        <p class="domain no-margin-bottom"><strong>.tax</strong></p>
+                        <p>[@L[cds.sales/gd/tlds/gtld:MainBannerCarouselSlideTextTax]@L]</p>
+                        <p class="no-margin-bottom"><a class="underlined" data-ci="92811" href="[@T[link:<relative path="~/tlds/tax"/>]@T]">[@L[cds.sales/gd/tlds/gtld:RegisterNow]@L]</a></p>
                       </div>
                     </div>
                     ##if(activeLanguageAny([en-gb]))
                     <div class="item carousel-inner-item carousel-inner-item-gtld carousel-inner-item-gtld-2">
                     <div class="carousel-inner-text-container carousel-inner-text-cointainer-gtld">
                       <p class="domain no-margin-bottom"><strong>.london</strong></p>
-                      <p>[@L[cds.sales/gd/tlds/gtld:MarketingTagLineLondon]@L]</p>
-                      <p class="no-margin-bottom"><a class="underlined" data-ci="90057" href="[@T[link:<relative path="~/tlds/london"/>]@T]">[@L[cds.sales/gd/tlds/gtld:MainPreRegister]@L]</a></p>
+                      <p>[@L[cds.sales/gd/tlds/gtld:MainBannerCarouselSlideTextLondon]@L]</p>
+                      <p class="no-margin-bottom"><a class="underlined" data-ci="90057" href="[@T[link:<relative path="~/tlds/london"/>]@T]">[@L[cds.sales/gd/tlds/gtld:PreRegisterNow]@L]</a></p>
                     </div>
                     </div>
                     ##elseif(activeLanguageAny([es-ve], [es-pe], [es-mx], [es-es], [es-co], [es-cl], [es-ar]))
                      <div class="item carousel-inner-item carousel-inner-item-gtld carousel-inner-item-gtld-2">
                     <div class="carousel-inner-text-container carousel-inner-text-cointainer-gtld">
                       <p class="domain no-margin-bottom"><strong>.email</strong></p>
-                      <p>[@L[cds.sales/gd/tlds/gtld:MainBannerCarouselSlide3TextEmail]@L]</p>
-                      <p class="no-margin-bottom"><a class="underlined" data-ci="92569" href="[@T[link:<relative path="~/tlds/email"/>]@T]">[@L[cds.sales/gd/tlds/gtld:MarketingSlideLinkText]@L]</a></p>
+                      <p>[@L[cds.sales/gd/tlds/gtld:MainBannerCarouselSlideTextEmail]@L]</p>
+                      <p class="no-margin-bottom"><a class="underlined" data-ci="92569" href="[@T[link:<relative path="~/tlds/email"/>]@T]">[@L[cds.sales/gd/tlds/gtld:RegisterNow]@L]</a></p>
                     </div>
                     </div>
                     ##else
@@ -117,60 +109,24 @@ name: FOS-25357
                     <div class="carousel-inner-text-container carousel-inner-text-cointainer-gtld">
                       <p class="domain no-margin-bottom"><strong>.nyc</strong></p>
                       <p>[@L[cds.sales/gd/tlds/gtld:MainBannerCarouselSlideTextNyc]@L]</p>
-                      <p class="no-margin-bottom"><a class="underlined" data-ci="92204" href="[@T[link:<relative path="~/tlds/nyc"/>]@T]">[@L[cds.sales/gd/tlds/gtld:MainPreRegister]@L]</a></p>
+                      <p class="no-margin-bottom"><a class="underlined" data-ci="92204" href="[@T[link:<relative path="~/tlds/nyc"/>]@T]">[@L[cds.sales/gd/tlds/gtld:PreRegisterNow]@L]</a></p>
                     </div>
                     </div>
                     ##endif
                     <div class="item carousel-inner-item carousel-inner-item-gtld carousel-inner-item-gtld-3">
                       <div class="carousel-inner-text-container carousel-inner-text-cointainer-gtld">
-                        <p class="domain no-margin-bottom"><strong>.xyz</strong></p>
-                        <p class="no-margin-bottom">[@L[cds.sales/gd/tlds/gtld:MarketingTagLineXyz]@L]</p>
-                        <p class="no-margin-bottom"><a class="underlined" data-ci="92570" href="[@T[link:<relative path="~/tlds/xyz"/>]@T]">[@L[cds.sales/gd/tlds/gtld:MarketingSlideLinkText]@L]</a></p>
+                        <p class="domain no-margin-bottom"><strong>.photography</strong></p>
+                        <p class="no-margin-bottom">[@L[cds.sales/gd/tlds/gtld:MainBannerCarouselSlideTextPhotography]@L]</p>
+                        <p class="no-margin-bottom"><a class="underlined" data-ci="89731" href="[@T[link:<relative path="~/tlds/photography"/>]@T]">[@L[cds.sales/gd/tlds/gtld:RegisterNow]@L]</a></p>
                       </div>
                     </div>                     
                     <div class="item carousel-inner-item carousel-inner-item-gtld carousel-inner-item-gtld-4">
                       <div class="carousel-inner-text-container carousel-inner-text-cointainer-gtld">
-                        <p class="domain no-margin-bottom"><strong>.club</strong></p>
-                        <p class="no-margin-bottom">[@L[cds.sales/gd/tlds/gtld:MainBannerCarouselSlideTextClub]@L]</p>
-                        <p class="no-margin-bottom"><a class="underlined" data-ci="89140" href="[@T[link:<relative path="~/tlds/club"/>]@T]">[@L[cds.sales/gd/tlds/gtld:MarketingSlideLinkText]@L]</a></p>
+                        <p class="domain no-margin-bottom"><strong>.reviews</strong></p>
+                        <p class="no-margin-bottom">[@L[cds.sales/gd/tlds/gtld:MainBannerCarouselSlideTextReviews]@L]</p>
+                        <p class="no-margin-bottom"><a class="underlined" data-ci="92810" href="[@T[link:<relative path="~/tlds/reviews"/>]@T]">[@L[cds.sales/gd/tlds/gtld:RegisterNow]@L]</a></p>
                       </div>
                     </div>    
-<!--               COMMENTED OUT CODE IS REMOVED FROM CDS BUT KEPT IN GITHUB FOR EASY ACCESS TO ADD BACK IN      
-
-                   ##if(ActivelanguageAny([en-gb]))               
-                    <div class="item carousel-inner-item carousel-inner-item-gtld carousel-inner-item-gtld-4">
-                      <div class="carousel-inner-text-container carousel-inner-text-cointainer-gtld">
-                        <p class="domain no-margin-bottom"><strong>.london</strong></p>
-                        <p class="no-margin-bottom">[@L[cds.sales/gd/tlds/gtld:MarketingTagLineLondon]@L]</p>
-                        <p class="no-margin-bottom"><a class="underlined" data-ci="90057" href="[@T[link:<relative path="~/tlds/london"/>]@T]">[@L[cds.sales/gd/tlds/gtld:MainPreRegister]@L]</a></p>
-                      </div>
-                    </div> 
-                   ##elseif(ActivelanguageAny([es-ve], [es-pe], [es-mx], [es-us], [es-es], [es-co], [es-cl], [es-ar]))
-                   <div class="item carousel-inner-item carousel-inner-item-gtld carousel-inner-item-gtld-4">
-                      <div class="carousel-inner-text-container carousel-inner-text-cointainer-gtld">
-                        <p class="domain no-margin-bottom"><strong>.uno</strong></p>
-                        <p class="no-margin-bottom">[@L[cds.sales/gd/tlds/gtld:MainBannerCarouselSlideTextUno]@L]</p>
-                        <p class="no-margin-bottom"><a class="underlined" data-ci="90305" href="[@T[link:<relative path="~/tlds/uno"/>]@T]">[@L[cds.sales/gd/tlds/gtld:MarketingSlideLinkText]@L]</a></p>
-                      </div>
-                    </div>   
-                    ##else
-                      <div class="item carousel-inner-item carousel-inner-item-gtld carousel-inner-item-gtld-4">
-                      <div class="carousel-inner-text-container carousel-inner-text-cointainer-gtld">
-                        <p class="domain no-margin-bottom"><strong>.ninja</strong></p>
-                        <p class="no-margin-bottom">[@L[cds.sales/gd/tlds/gtld:MainBannerCarouselSlide2TextNinja]@L]</p>
-                        <p class="no-margin-bottom"><a class="underlined" data-ci="89639" href="[@T[link:<relative path="~/tlds/ninja"/>]@T]">[@L[cds.sales/gd/tlds/gtld:MarketingSlideLinkText]@L]</a></p>
-                      </div>
-                    </div>                    
-                   ##endif -->
-
-                    <div class="item carousel-inner-item carousel-inner-item-gtld carousel-inner-item-gtld-4">
-                      <div class="carousel-inner-text-container carousel-inner-text-cointainer-gtld">
-                        <p class="domain no-margin-bottom"><strong>.company</strong></p>
-                        <p class="no-margin-bottom">[@L[cds.sales/gd/tlds/gtld:MarketingTagLineCompany]@L]</p>
-                        <p class="no-margin-bottom"><a class="underlined" data-ci="90067" href="[@T[link:<relative path="~/tlds/company"/>]@T]">[@L[cds.sales/gd/tlds/gtld:MarketingSlideLinkText]@L]</a></p>
-                      </div>
-                    </div> 
-
                   </div>
                 <!-- Controls -->
                 <a data-slide="prev" data-ci="89137" href="#carousel-init" class="left carousel-control-btn ico ico-carousel-arrow-left"></a>

@@ -1,7 +1,7 @@
 ---
 location: localization/sales/gd/tlds/gtld/en
-id: 53eb9ec8f778fc2e447b92b0
-name: FOS-25357
+id: 53fb7e04f778fc1188ab20e3
+name: GCE-26709
 comments: Updating slider content.
 ---
 {% include 'modules/doc-block.html' %}
@@ -443,9 +443,16 @@ Enter a <b>Domain Name</b>
 Show off your <strong>.ninja</strong> skills
 <phrase key="MainBannerCarouselSlide3TextEmail" />
 <strong>.email</strong> delivers
+
+<phrase key="PreRegisterNow" />
+Pre-register now
+<phrase key="RegisterNow" />
+Register now
+
+
 <phrase key="MainBannerCarouselSlideTextUno"  comments="DO NOT TRANSLATE" />
 <strong>.uno</strong> El Internet en Español.
-<phrase key="MainBannerCarouselSlideTextUnoWithNoTld"/>
+<phrase key="MainBannerCarouselSlideTextUnoWithNoTld" comments="DO NOT TRANSLATE"/>
 El Internet en Español.
 <phrase key="MainBannerCarouselSlideTextPhotography"/>
 <strong>.photography</strong> increases your exposure.
@@ -455,3 +462,11 @@ Reach tourists 24/7 with <strong>.vegas</strong>
 Start spreading the news! <strong>.nyc</strong> is here.
 <phrase key="MainBannerCarouselSlideTextServices"/>
 Promote your <strong>.services</strong> on the web
+<phrase key="MainBannerCarouselSlideTextTax"/>
+Expand your <strong>.tax</strong> business
+<phrase key="MainBannerCarouselSlideTextLondon"/>
+Court 8 million shoppers with <strong>.london</strong>
+<phrase key="MainBannerCarouselSlideTextEmail"/>
+<strong>.email</strong> delivers
+<phrase key="MainBannerCarouselSlideTextReviews"/>
+Be the go-to source with <strong>.reviews</strong>
