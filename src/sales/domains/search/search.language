@@ -1,7 +1,7 @@
 ---
 location: localization/sales/gd/domains/domain-name-search/en
-id: 53e94193f778fc25205d1f53
-name: FOS-25369
+id: 53fb9b1ff778fc1188ab20f6
+name: GCE-26711
 ---
 {% include 'modules/doc-block.html' %}
 <!-- DOC BLOCK (DO NOT REMOVE)
@@ -21,10 +21,10 @@ name: FOS-25369
       Adam Smith <absmith@godaddy.com>
 
     DRAFT DETAILS:
-      Modified Date:  2014-07-29 03:24:05 pm
+      Modified Date:  2014-08-25 1:22:55 pm
       Created By:     Pooja Singhvi <psinghvi@godaddy.com>
-      JIRA Ticket:    FOS-25369
-      Comments:       merchandising updates for 8/19
+      JIRA Ticket:    GCE-26711
+      Comments:       merchandising updates for 7/23
 
 
 
@@ -323,7 +323,7 @@ The official domain for Poland.
 <phrase key="PodDotExpertText" />
 You have the answers. Share them with <strong>.expert</strong>
 <phrase key="PodDotTodayText" />
-<strong>.today</strong> delivers the latest news
+<strong>.today</strong> delivers the latest news.
 <phrase key="PodDotItText" />
 Romance Italians with <strong>.it</strong>.
 <phrase key="PodDotTvText" />
@@ -380,6 +380,8 @@ Get into Belgium with <strong>.be</strong>.
 They have questions, <strong>.tips</strong> has answers.
 <phrase key="PodDotCoUkText"/>
 Show your customers you do business in the UK.
+<phrase key="PodDotCoUkText1"/>
+The #1 domain for British business.
 <phrase key="PodDotSeText"/>
 <strong>.se</strong> is Sweden’s domain.
 <phrase key="PodDotChText"/>
@@ -422,6 +424,8 @@ Promote your <strong>.services</strong> on the web.
 <strong>.website</strong> is your home online.
 <phrase key="PodDotBizText" />
 Get a domain that's all business
+<phrase key="PodDotRocksText" />
+Tell the world what moves you with <strong>.rocks</strong>
 <phrase key="TldDotOrg" />
 <strong>.org</strong>
 <phrase key="TldDotCom" />
@@ -524,20 +528,28 @@ Get a domain that's all business
 <strong>.co</strong>
 <phrase key="TldDotPhoto" />
 <strong>.photo</strong>
+<phrase key="TldDotRocks" />
+<strong>.rocks</strong>
+<phrase key="TldDotTax" />
+<strong>.tax</strong>
+<phrase key="TldDotGlobal" />
+<strong>.global</strong>
+<phrase key="TldDotAttorney" />
+<strong>.attorney</strong>
 <phrase key="CarouselSlide1Default" />
-Get a web address that tells the world what you do or where you are. New domains available now: <strong>.nyc</strong>, <strong>.club</strong>, <strong>.guru</strong>, <strong>.services</strong> and <strong>.website</strong>. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a> 
+Get a web address that tells the world what you do. New domains available now: <strong>.club</strong>, <strong>.xyz</strong>, <strong>.today</strong>, <strong>.rocks</strong> and <strong>.guru</strong>. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a> 
 <phrase key="CarouselSlide1AU" />
 New domains are here! <strong>.TIPS</strong>, <strong>.GURU</strong>, <strong>.TODAY</strong> are now available. Plus, pre-register <strong>.CLUB</strong>, <strong>.REVIEWS</strong>, <strong>.NINJA</strong> and more. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Get yours now</a>
 <phrase key="CarouselSlide1DE" />
-Get a web address that tells the world what you do or where you are. New domains available now: <strong>.immobilien</strong>, <strong>.reisen</strong>, <strong>.club</strong>, <strong>.today</strong> and <strong>.guru</strong>. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a> 
+Get a web address that tells the world what you do or where you are. New domains available now: <strong>.immobilien</strong>, <strong>.reisen</strong>, <strong>.club</strong>, <strong>.today</strong> and <strong>.schule</strong>. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a> 
 <phrase key="CarouselSlide1ES" />
 Get a web address that tells the world what you do or where you are. New domains available now: <strong>.uno</strong>, <strong>.club</strong>, <strong>.guru</strong> and <strong>.email</strong>. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a>
 <phrase key="CarouselSlide1UK" />
-Get a web address that tells the world what you do or where you are. New domains available now: <strong>.london</strong>, <strong>.uk</strong>, <strong>.guru</strong> and <strong>.club</strong>. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a>
+Get a web address that tells the world what you do or where you are. New domains available now: <strong>.london</strong>, <strong>.uk</strong>, <strong>.guru</strong> and <strong>.solutions</strong>. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a>
 <phrase key="CarouselSlide2Default" />
-SAVE 30% on new domains today: <strong>.today</strong>, <strong>.email</strong>, <strong>.photography</strong> and <strong>.expert</strong><span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Search for your perfect domain name now!</a>
+SAVE 30% on new domains: <strong>.tax</strong>, <strong>.nyc</strong>, <strong>.company</strong>, <strong>.global</strong> and more.<span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Search for your perfect domain name now!</a>
 <phrase key="CarouselSlide2UK" />
-Set your business on its path to glory with your own <strong>.club</strong>, <strong>.email</strong>, <strong>.expert</strong> or <strong>.london</strong><span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a>
+Set your business on its path to glory with your own <strong>.company</strong>, <strong>.email</strong>, <strong>.expert</strong> or <strong>.london</strong><span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a>
 <phrase key="CarouselSlide2DE" />
 Get a domain that tells the world what you do. <strong>.club</strong>, <strong>.company</strong>, <strong>.email</strong>, <strong>.haus</strong> and hundreds more are available now.<span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Get yours today!</a>
 <phrase key="CarouselSlide2FR" />

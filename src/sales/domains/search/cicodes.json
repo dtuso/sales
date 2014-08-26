@@ -140,6 +140,12 @@
           { "Description" : "Top Pod - .tax Link" }
         ]
       },
+      { "Top TLD Pods - .rocks link" : [
+          { "ITC ID" : "92813" },
+          { "ITC Code" : "dpp_absol1" },
+          { "Description" : "Top Pod - .rocks Link" }
+        ]
+      },
       { "Top TLD Pods - .co.nz link" : [
           { "ITC ID" : "91418" },
           { "ITC Code" : "dpp_absol1" },
@@ -254,6 +260,18 @@
           { "ITC ID" : "88399" },
           { "ITC Code" : "" },
           { "Description" : "Buttom TLD Pods - .GURU" }
+        ]
+      },
+       { "Buttom TLD Pods - .vegas" : [
+          { "ITC ID" : "91329" },
+          { "ITC Code" : "" },
+          { "Description" : "Buttom TLD Pods - .vegas" }
+        ]
+      },
+      { "Buttom TLD Pods - .ninja" : [
+          { "ITC ID" : "89639" },
+          { "ITC Code" : "" },
+          { "Description" : "Buttom TLD Pods - .ninja" }
         ]
       },
       { "Buttom TLD Pods - .PHOTOGRAPHY" : [
@@ -450,6 +468,24 @@
           { "Description" : "New Available TLD's Column - .PHOTOS" }
         ]
       },
+      { "New Domains Available TLD's Column - .ROCKS" : [
+          { "ITC ID" : "92813" },
+          { "ITC Code" : "" },
+          { "Description" : "New Available TLD's Column - .ROCKS" }
+        ]
+      },
+      { "New Domains Available TLD's Column - .TAX" : [
+          { "ITC ID" : "91417" },
+          { "ITC Code" : "" },
+          { "Description" : "New Available TLD's Column - .TAX" }
+        ]
+      },
+      { "New Domains Available TLD's Column - .GLOBAL" : [
+          { "ITC ID" : "92814" },
+          { "ITC Code" : "" },
+          { "Description" : "New Available TLD's Column - .GLOBAL" }
+        ]
+      },
       { "New Domains Available TLD's Column - .EXPERT" : [
           { "ITC ID" : "91798" },
           { "ITC Code" : "NewAvailExpert" },
@@ -468,6 +504,12 @@
           { "ITC ID" : "88029" },
           { "ITC Code" : "dpp_absol1" },
           { "Description" : "Coming Soon TLD's Column - .REALESTATE" }
+        ]
+      },
+      { "Coming Soon TLD's Column - .ATTORNEY" : [
+          { "ITC ID" : "92815" },
+          { "ITC Code" : "dpp_absol1" },
+          { "Description" : "Coming Soon TLD's Column - .ATTORNEY" }
         ]
       },
       { "Coming Soon TLD's Column - .SHOP" : [
