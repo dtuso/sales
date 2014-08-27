@@ -1,0 +1,1046 @@
+---
+location: sales/products/business-marketing.aspx
+id: 53fbae64f778fc1188ab2103
+name: GCE-24906
+comments: Redesign of landing page
+url: http://www.dev-godaddy.com/products/business-marketing.aspx
+assetPath: false
+---
+
+{% extends 'layouts/base.html' %}
+
+{% block metahead %}  
+  {% parent %}
+
+  <!-- css-elevate-target -->
+
+  <!-- start-css-elevate -->
+  <style>  
+  {% less %}
+
+    @imgPath : '[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/products/business-marketing/img/';
+
+    div[role="main"] {
+      background-color: #fff;
+    }
+    .alt-bgcolor {background-color: rgb(251,247,245);}
+    .light-section-bgcolor {background-color: white;}
+
+    .background-container {
+      background-position: center top;
+      background-repeat: no-repeat;
+      background-size: cover;
+      min-width: 1000px;
+    } 
+
+    .background-container-repeat-x {
+      background-position: center top;
+      background-repeat: repeat-x;
+      min-width: 1000px;
+    } 
+    .font-condensed {
+      font-family: 'HelveticaNeue-CondensedBold','Helvetica Neue',Helvetica,'Arial Narrow',Arial,sans-serif;
+    }
+
+    .rounded-small {
+      -moz-border-radius: 4px;
+      -webkit-border-radius: 4px;
+      border-radius: 4px; /* future proofing */
+      -khtml-border-radius: 4px; /* for old Konqueror browsers */
+    }
+    .rounded-medium {
+      -moz-border-radius: 7px;
+      -webkit-border-radius: 7px;
+      border-radius: 7px; /* future proofing */
+      -khtml-border-radius: 7px; /* for old Konqueror browsers */
+    }
+    .rounded-large {
+      -moz-border-radius: 11px;
+      -webkit-border-radius: 11px;
+      border-radius: 11px; /* future proofing */
+      -khtml-border-radius: 11px; /* for old Konqueror browsers */
+    }
+    .center-text {
+      text-align: center;
+    }
+    .left-text {
+      text-align: left;
+    }
+    .right-text {
+      text-align: right;
+    }
+
+    a.get-started-btn {
+      padding: 3px 60px;
+      font-size: 22px;
+      font-weight: 600px;
+    }
+
+    p.inline-disclaimer {
+      font-size: 15px;
+      font-weight: 300;
+      color: #fff;    
+    } 
+
+    .ghost-button {
+      height: 53px;
+      color: #679b08;
+      border: 3px solid #679b08;
+      font-size: 18px;
+      font-weight: 600;
+      text-align: center;
+      padding-top: 10px;
+      cursor: pointer;
+      display: inline-block;
+      white-space: nowrap;
+    }
+    .ghost-button:hover {
+      text-decoration: none;
+      background-color: #679b08;
+      color: #fff;
+    }
+
+    .ghost-button-light {
+      color: #fff!important;
+      border-color: #fff!important;
+    }
+    .ghost-button-light:hover {
+      color: #679b08!important;
+      background-color: #fff!important;
+    }
+
+    p.pricing {
+      color: #ff8914;
+      font-weight: 600;
+      font-size: 24px;
+    }
+    span.save-percentage,
+    span.old-price {
+      display: none;
+      color: #fff;
+    }
+
+  {% endless %}
+  </style>
+<!-- end-css-elevate -->
+
+{% endblock %}
+
+
+{% block body %}
+
+  <!------------------------------------>
+  <!--           MARQUEE              -->
+  <!------------------------------------>
+  <!-- start-css-elevate -->
+  <style>  
+  {% less %}
+
+    @imgPath : '[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/products/business-marketing/img/';
+
+    .main-banner-business-marketing {
+      position: relative; /* for the corner ribbon to show */
+      padding-top: 50px;
+      background-image: ~"url(@{imgPath}TopMarquee_GetFound.jpg)";
+    }
+
+    .main-banner-title {
+      text-transform: uppercase;
+      font-weight: 300;
+      font-size: 24px;
+      margin-bottom: 3px;
+    }
+    .main-banner-subtitle {
+      color: #fff;
+      margin: 0px;
+      font-weight: 100;
+      font-size: 54px;
+    }
+    p.main-banner-text {
+      color: #fff;
+      font-size: 22px;
+      margin:9px 0 35px;
+    }
+
+    p.inline-disclaimer {
+      font-size: 15px;
+      font-weight: 300;
+      color: #fff;    
+    } 
+
+    .main-banner-business-marketing p.pricing {
+      color: #ff8914;
+      font-weight: 600;
+      font-size: 24px;
+      margin: 35px 0 82px;
+    }
+    .main-banner-business-marketing a.ghost-button {
+      height: 61px;
+      font-size: 22px;
+      padding-left :38px;
+      padding-right:38px;
+    }
+
+  {% endless %}
+  </style>
+  <!-- end-css-elevate -->
+  <section class="container background-container main-banner-business-marketing">
+    <div class="container l-main-container">
+      <div class="row center-text">
+        <h1 class="main-banner-title font-condensed">Get Found</h1>
+        <h3 class="main-banner-subtitle">Get your business listed everywhere.<br />All from one place.</h3>
+        <p class="main-banner-text">Showcase your business on top sites across the Web like Google, Yelp and Foursquare.</p>
+      </div>
+      <div class="row">
+        <div class="col-xs-6 right-text">
+          <a id="get-started-btn-1" data-ci="111" class="btn btn-primary get-started-btn cta-small" href="#">Get Started</a>
+        </div>
+        <div class="col-xs-6 left-text">
+          <a id="get-free-report-1" data-ci="111" class="ghost-button ghost-button-light" href="https://locu.godaddy.com/scanner">Get Free Report</a>
+        </div>
+      </div>
+      <div class="row center-text">
+        <p class="pricing">
+          As low as <span class="old-price"><strike>{1}/mo</strike>* </span><span class="normal-price">{0}/mo</span> <span class="save-percentage">Save {2}%</span>        
+        </p>
+      </div>
+    </div>
+  </section>
+   
+
+  <!------------------------------------>
+  <!--       TABS (Plans & FAQ)       -->
+  <!------------------------------------>
+
+  <!-- start-css-elevate -->
+  <style>  
+  {% less %}
+    @imgPath : '[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/products/business-marketing/img/';
+
+    .tab-content {
+      background-color:#ddd!important;
+    }
+
+    #plans h2 {
+      margin:65px auto 40px;
+      width:650px;
+    }
+
+    #plans div.no-padding {
+      padding: 0px;
+    }
+
+    #plans p.inline-disclaimer {
+      font-size: 14px;
+    } 
+
+    #plans ul.checkmark-bullets { 
+      margin: 0 50px 50px;
+      font-size: 14px;
+    }
+    #plans ul.checkmark-bullets li { 
+      list-style: none outside none;
+      margin-bottom: 20px;
+    }
+
+    .plan-item-side-A,
+    .plan-item-side-B {
+      width:315px;
+      background-color: #fff;
+      padding: 0 25px 20px;
+    }
+    .plan-item-side-B { 
+      display:none;
+    }
+    .plan-item-side-B ul {
+      list-style: none outside none;
+    }
+    .plan-item-side-B li i {
+      padding-right: 10px;
+      font-size: 8px;
+      font-weight: 600;
+    }
+    .plan-item-img {
+      background: transparent no-repeat 0 0;
+      width:315px;
+      height:223px;
+      margin-left:-25px;
+    }
+    .plan-item-img-brick {
+      background-position: -601px -0px;
+    }
+    .plan-item-img-service {
+      background-position: -601px -233px;
+    }
+    .plan-item-img-online {
+      background-position: -601px -466px;
+    }
+    .plan-item h3 {
+      color: #679b08;
+      font-size: 24px;
+      text-align: left;
+      font-weight: 600;
+    }
+
+    .plan-item-side-A h3 {
+      margin: 24px 0 10px;
+    }
+
+    .plan-item-side-B h3 {
+      margin: 65px 0 30px;
+      position:relative;
+    }
+    .plan-item-side-B button.close {
+      position:absolute;
+      right:0px;
+    }
+
+    .plan-item p {
+      color: #333;
+      font-size: 16px;
+    }
+    .plan-item a.ghost-button {
+      display:block;
+      margin: 40px 0px 20px;
+      padding-top:10px;
+    }
+    
+    #plans a.get-started-btn {
+      padding: 6px 65px 3px;
+      margin: 34px 0 10px;
+    }
+
+    #plans p.pricing {
+      margin-bottom: 44px;
+    }
+    #plans span.save-percentage,
+    #plans span.old-price {
+      color: #333;
+    }
+    .plan-item-side-B i.uxicon-x {
+      float:right;
+      margin-top: 20px;
+      cursor:pointer;
+    }
+    #faq h2.h2-alternate {
+      font-size: 24px;
+      color: #333;
+      margin: 20px 0;
+    }
+    #faq p {
+      font-size: 14px;
+      color: #333;
+      margin-bottom: 25px;
+    }
+    #faq .tab-content-column-alternate {
+      margin:60px 0;
+      padding:60px;
+    }
+  {% endless %}
+  </style>
+  <!-- end-css-elevate -->
+
+  <section class="main-tabs">
+    <div class="container l-main-container center-text">
+      <ul class="nav nav-tabs">
+        <li class="nav-tabs-item active"><a class="nav-tabs-link" href="#plans" data-toggle="tab" data-ci="86780">Plans</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
+        <li class="nav-tabs-item"><a class="nav-tabs-link" href="#faq" data-toggle="tab" data-ci="86781">FAQ</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
+      </ul>
+    </div>
+  </section>
+  <section class="tab-content no-margin-top">
+    <div class="container l-main-container tab-pane active" id="plans">
+      <h2 class="text-center">See where Get Found can get you listed by choosing your business type.</h2>
+      <div class="row" data-gd-sidebysidealign="{}">
+
+        <div class="col-xs-4" data-gd-sidebysidealign-col="1">
+          <div class="plan-item">
+            <div class="plan-item-side-A clearfix">
+              <div class="plan-item-img plan-item-img-brick solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/products/business-marketing/img/GetFound_LP_Sprite_20140826.png"></div>
+              <div data-gd-sidebysidealign-row="1">
+                <h3>Brick &amp; Mortar</h3>
+                <p>Your business has a physical location that customers can visit (ex. restaurants, salons, spas, etc.)</p>
+
+              </div>
+              <div data-gd-sidebysidealign-row="2">
+                <a class="ghost-button">View Sites</a>
+              </div>
+            </div>
+            <div class="plan-item-side-B clearfix" data-gd-sidebysidealign-row="3">
+              <i class="uxicon uxicon-x"></i>
+              <h3 class="clearfix">Brick &amp; Mortar</h3>
+              <p>Get listed on:</p>
+              <div class="row">
+                <div class="col-xs-6">
+                  <ul>
+                    <li><i class="uxicon uxicon-checkmark"></i>Google</li>
+                    <li><i class="uxicon uxicon-checkmark"></i>Bing</li>
+                    <li><i class="uxicon uxicon-checkmark"></i>YP</li>
+                    <li><i class="uxicon uxicon-checkmark"></i>eLocal</li>
+                    <li><i class="uxicon uxicon-checkmark"></i>Whois</li>
+                    <li><i class="uxicon uxicon-checkmark"></i>Locu Places</li>
+                    <li><i class="uxicon uxicon-checkmark"></i>Foursquare</li>
+                    <li><i class="uxicon uxicon-checkmark"></i>Yelp</li>
+                    <li><i class="uxicon uxicon-checkmark"></i>Merchant Circle</li>
+                  </ul>
+                </div>
+                <div class="col-xs-6">
+                  <ul>
+                    <li><i class="uxicon uxicon-checkmark"></i>Judy's Book</li>
+                    <li><i class="uxicon uxicon-checkmark"></i>Citysearch</li>
+                    <li><i class="uxicon uxicon-checkmark"></i>TripAdvisor</li>
+                    <li><i class="uxicon uxicon-checkmark"></i>MojoPages</li>
+                    <li><i class="uxicon uxicon-checkmark"></i>Cortana</li>
+                    <li><i class="uxicon uxicon-checkmark"></i>Swarm</li>
+                  </ul>                  
+                </div>
+              </div>
+            </div>          
+          </div>  
+        </div>
+
+        <div class="col-xs-4" data-gd-sidebysidealign-col="2">
+          <div class="plan-item">
+            <div class="plan-item-side-A clearfix">
+              <div class="plan-item-img plan-item-img-service solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/products/business-marketing/img/GetFound_LP_Sprite_20140826.png"></div>
+              <div data-gd-sidebysidealign-row="1">
+                <h3>Local Service Area</h3>
+                <p>Your local business serves a local area without a physical location that customers visit (ex. plumber, food truck, sailing tour provider, etc.)</p>
+              </div>
+              <div data-gd-sidebysidealign-row="2">
+                <a class="ghost-button">View Sites</a>
+              </div> 
+            </div>
+            <div class="plan-item-side-B clearfix" data-gd-sidebysidealign-row="3">
+              <i class="uxicon uxicon-x"></i>
+              <h3>Local Service Area</h3>
+              <p>Get listed on:</p>
+              <ul>
+                <li><i class="uxicon uxicon-checkmark"></i>Bing</li>
+                <li><i class="uxicon uxicon-checkmark"></i>Yelp</li>
+                <li><i class="uxicon uxicon-checkmark"></i>Foursquare</li>
+                <li><i class="uxicon uxicon-checkmark"></i>eLocal</li>
+                <li><i class="uxicon uxicon-checkmark"></i>Cortana</li>
+                <li><i class="uxicon uxicon-checkmark"></i>and more</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-4" data-gd-sidebysidealign-col="3">
+          <div class="plan-item">
+            <div class="plan-item-side-A clearfix" >
+              <div class="bannerific"></div>
+              <div class="plan-item-img plan-item-img-online solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/products/business-marketing/img/GetFound_LP_Sprite_20140826.png"></div>
+              <div data-gd-sidebysidealign-row="1">
+                <h3>Online-Only</h3>
+                <p>You operate online and do not have a physical address to share (ex. web designer, ecommerce store, consultant, etc.)</p>
+              </div>
+              <div data-gd-sidebysidealign-row="2">
+                <a class="ghost-button">View Sites</a>
+              </div>
+            </div>
+            <div class="plan-item-side-B clearfix" data-gd-sidebysidealign-row="3">
+              <i class="uxicon uxicon-x"></i>
+              <h3>Online-Only</h3>
+              <p>Get Found is not yet available for Online-Only businesses, but check back soon to see how we can help your business get listed online.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row text-center">
+        <a id="get-started-btn-2" data-ci="111" class="btn btn-primary get-started-btn cta-small" href="#">Get Started</a>
+      </div>
+
+      <div class="row center-text">
+        <p class="pricing">
+          As low as <span class="old-price"><strike>{1}/mo</strike>* </span><span class="normal-price">{0}/mo</span> <span class="save-percentage">Save {2}%</span>        
+        </p>
+      </div>
+
+    </div>
+    <div class="container l-main-container tab-pane" id="faq">
+
+      <div class="grid-column tab-content-column-alternate">
+
+        <h2 class="h2-alternate">What does it matter if my business information is listed incorrectly online?</h2>
+        <p>The cost of inaccurate information online is actually quite high. In fact, you could lose out on potential sales. We've found that 68% of people will take their business elsewhere if they see missing or inaccurate internet advertising &ndash; open hours, phone number, address, prices &ndash; online.</p>
+        <hr>
+
+        <h2 class="h2-alternate">How much time will I need to spend creating local business listings using Get Found?</h2>
+        <p>Getting started is easy and usually takes less than 5 minutes – just complete two simple steps to get your basic business listing published across the web. If you choose to provide details such as menus, price lists, or item photos, you may need to spend anywhere from 10 minutes to an hour. The good news is that you only need to do this in one place to get it published on many sites. And the results are potentially huge.</p>
+        <hr>
+
+        <h2 class="h2-alternate">What kind of information can Get Found publish about my business?</h2>
+        <p>Get Found can publish your business description, contact information (phone number, website address), hours of operation, menus and price lists, item photos and descriptions, payment and delivery options, amenities and more. This is exactly the type of internet advertising that customers want when looking for new local businesses. A detailed and consistent business listing online will help you stand out from the pack and attract customers to your business.</p>
+        <hr>
+
+        <h2 class="h2-alternate">Where will Get Found publish my local business listing?</h2>
+        <p>We've established partnerships with some of the top consumer destination sites online. Currently, we publish to Google, Bing, Yelp, TripAdvisor, YP, Foursquare, Citysearch, and many other smaller sites. We're continually expanding our list of business listing partners &ndash; you'll be the first to know once we find more places to publish your business information.</p>
+        <hr>
+
+        <h2 class="h2-alternate">What do you mean by “publish”?</h2>
+        <p>By “publish” your business information, we mean displaying it on all of our partner sites for you (and on your own website if you choose to use our widget to display your content there). To share or update your business listing with GoDaddy Get Found, all you do is click a single <strong>Publish</strong> button and your information appears on all our partner sites.</p>
+        <hr>
+
+        <h2 class="h2-alternate">What kind of business is this for?</h2>
+        <p>Do you have a physical location that customers visit (ex. restaurant, spa, salon)?  Or, do you serve a local area without a physical location that customers visit (ex. Plumber, food struck, boat charter)?  If so, Get Found is for you.  We are not yet able to serve businesses who operate online and do not have a physical address to share (ex. web designer, ecommerce store, consultant), but that is coming in the future.</p>
+        <hr>
+
+        <h2 class="h2-alternate">How long will it take for my business listing to get published?</h2>
+        <p>When you submit your business listing to Get Found, one of our dedicated data specialists reviews your data and makes sure everything is ready to go to our partner sites.  Your data is then shared with our partners.  Some of our partner sites will publish your local listing in as little as a few days; others will take up to eight weeks. </p>
+        <hr>
+
+        <h2 class="h2-alternate">Tell me more about how I can use your widget to display my menus or price lists on my own site.</h2>
+        <p>To share your menus or price lists on your own website, you need to install a short snippet of HTML to the webpage where you want your menus or lists to appear. We even provide you with several designer templates to choose from. If you want, you can edit the look and feel of the templates to match the existing style of your website. Oh, and they're mobile-compatible too, so you can be sure that your menus or price lists will look great on all devices.</p>
+        <hr>
+
+        <h2 class="h2-alternate">What if I don't have a website?</h2>
+        <p>That's totally fine. We'll still publish your information on all of our partner sites &ndash; it's actually the best way to get your business discovered online when you don't have a website. Want a great-looking website you build yourself? Check out <a href="<a href='[@T[link:<relative path="~/hosting/website-builder.aspx" secure="true"><param name="ci" value="86499" /></relative>]@T]">GoDaddy Website Builder.</a></p>
+        <hr>
+
+        <h2 class="h2-alternate">Are there any system requirements for using GoDaddy Get Found?</h2>
+        <p>GoDaddy Get Found works best in Google Chrome, but is also supported on Firefox, Safari, and Internet Explorer.</p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!------------------------------------>
+  <!--     CUSTOMER CAROUSEL 2014Q3   -->
+  <!------------------------------------>
+  <!-- start-css-elevate -->
+  <style>  
+  {% less %}
+
+    @imgPath : '[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/products/business-marketing/img/';
+
+    .gd-nav-container {
+      margin: 0 auto;
+      position: relative;
+      width: 1000px;
+    }
+    .gd-swipe-wrap {
+      overflow: hidden;
+      position: relative;
+    }
+    .gd-swipe-wrap > div {
+      float: left;
+      position: relative;
+      top: 0;
+      width: 100%;
+    }
+    .gd-swipe {
+      margin: 0 auto;
+      max-width: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .gd-swipe-bottom-nav {
+      position: relative;
+      text-align: center;
+    }
+    .gd-swipe-bottom-nav a[data-slide="prev"], .gd-swipe-bottom-nav a[data-slide="next"] {
+      position: relative;
+      top: -2px;
+    }
+    .gd-swipe-bottom-nav ul {
+      list-style: none outside none;
+      margin: 0;
+      padding: 0;
+    }
+    .gd-swipe-bottom-nav li {
+      display: inline-block;
+      overflow: hidden;
+      padding: 15px;
+      position: relative;
+    }
+    .gd-swipe-bottom-nav li a {
+
+      background: ~"url(@{imgPath}GetFound_LP_Sprite_20140826.png)" no-repeat -926px -1189px transparent;
+      color: #dadada;
+      display: block;
+      height: 8px;
+      width: 24px;
+      text-decoration: none;
+      text-indent: -9999em;
+    }
+    .gd-swipe-bottom-nav li.active a {
+      background: ~"url(@{imgPath}GetFound_LP_Sprite_20140826.png)" no-repeat -871px -1189px transparent;
+      color: #70ac00;
+    }
+    a.arrow-left, 
+    a.arrow-right {
+      background: ~"url(@{imgPath}GetFound_LP_Sprite_20140826.png)" no-repeat scroll 0 0 transparent;
+      display: block;
+      top: 150px;
+      height: 60px;
+      width: 30px;
+      outline: 0 none;
+      position: absolute;
+      text-decoration: none;
+      text-indent: -9999em;
+      z-index: 1;
+    }
+    a.arrow-right {
+      background-position: -811px -1163px;
+      right: 0px;
+    }
+    a.arrow-left {
+      background-position: -781px -1163px;
+      left:0px;
+    }
+    .arrow-left:hover, .arrow-right:hover {
+      background-color: #ededed;
+      transition: all 0.3s ease-in-out 0s;
+    }
+
+    .customer-carousel-title { 
+      margin: 28px 0 60px;
+      font-size: 36px;
+    }
+
+
+    .customer-testimonial {
+      text-align: left;
+      background-color: white;
+    }
+    .customer-image {
+      width: 192px;
+      height: 197px;
+      display: inline-block;
+      background-position: -589px -1164px;
+    }
+    .customer-quote {
+      color: #679b08;
+      font-size: 24px;
+      text-indent: -10px; /* allows initial quote mark to float left*/
+    }
+    .customer-byline {
+      margin-top: 15px;
+      font-size: 18px;
+    }
+    .customer-slide {
+      width: 600px;
+      height: 382px;
+      background: ~"url(@{imgPath}GetFound_LP_Sprite_20140826.png)"  no-repeat scroll 0 0 transparent;
+      margin: 0 auto 20px;
+    }
+    .customer-slide.slide-1 {
+      background-position: -0px -0px;
+    }
+    .customer-slide.slide-2 {
+      background-position: -0px -387px;
+    }
+    .customer-slide.slide-3 {
+      background-position: -0px -777px;
+    }
+  {% endless %}
+  </style>
+  <!-- end-css-elevate -->
+  <section class="main-customer-carousel">
+
+    <div class="container l-main-container">
+
+      <h2 class="customer-carousel-title">Be visibile where your customers are &ndash; including mobile</h2>
+
+      <div class="row">
+        <div class="col-xs-12">
+
+          <div id="customer-slider">
+            <div class="gd-nav-container">
+              <div class="gd-swipe">
+                <div class="gd-swipe-wrap">
+                  <div class="gd-swipe-item">
+                    <div class="customer-slide slide-1"></div>
+                  </div>
+                  <div class="gd-swipe-item">
+                    <div class="customer-slide slide-2"></div>
+                  </div>
+                  <div class="gd-swipe-item">
+                    <div class="customer-slide slide-3"></div>
+                  </div>
+                </div>
+              </div>
+              <a href="#" data-slide="prev" class="arrow-left" id="customer-headerPrev" data-ci="111">
+              previous</a>
+              <a href="#" data-slide="next" class="arrow-right" id="customer-headerNext" data-ci="111">
+              next</a>
+              <div class="gd-swipe-bottom-nav"></div>
+            </div>
+          </div> <!-- end id customer-slider -->
+
+        </div>      
+      </div> 
+
+      <div class="row">
+        <div class="col-xs-3 right-text">
+          <div class="customer-image solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/products/business-marketing/img/GetFound_LP_Sprite_20140826.png"></div>          
+        </div>
+        <div class="col-xs-9 customer-testimonial">
+          <div class="customer-quote">"People tell me all the time they found our restaurant on Yelp, TripAdvisor or OpenTable. If we didn't show up on these sites, we'd lose business to a restaurant down the street. Get Found helps put my business everywhere it needs to be on the Web."</div>
+          <div class="customer-byline">&ndash; Lauren, Manager/Owner at Ombra Cucina Rustica in Hilton Head, SC</div>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+  <!------------------------------------>
+  <!--         PRODUCT STEPS          -->
+  <!------------------------------------>
+  <!-- start-css-elevate -->
+  <style>  
+  {% less %}
+
+    @imgPath : '[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/products/business-marketing/img/';
+
+    .main-product-steps {
+      /*position: relative; /* for the corner ribbon to show */
+      margin-top: 20px;
+      background-color: #ddd;  
+    }
+    
+    .main-product-steps h2 {
+      margin: 43px 0 63px;
+      font-size: 36px;
+    }
+    
+    .main-product-steps h3 {
+      font-weight: 600;
+      font-size: 24px;
+      margin: 40px 0 11px;
+      font-weight: 600;
+    }
+    
+    .main-product-steps p {
+      font-size: 16px;
+      margin: 0 10px 75px;
+    }
+
+    .step-item-img {
+      background: transparent ~"url(@{imgPath}GetFound_LP_Sprite_20140826.png)" no-repeat -47px -126px;
+      width:192px;
+      height:192px;
+      margin: 0 auto;
+    }
+    .step-item-img-control {
+      background-position: -0px -1168px;
+    }
+    .step-item-img-visible {
+      background-position: -195px -1168px;
+    }
+    .step-item-img-time {
+      background-position: -391px -1168px;
+    }
+  {% endless %}
+  </style>
+  <!-- end-css-elevate -->
+  <section class="main-product-steps">
+
+    <div class="container l-main-container center-text">
+
+      <h2>Get listed in a few simple steps.</h2>
+
+      <div class="row">
+        <div class="col-xs-4">
+          <div class="step-item-img step-item-img-control "></div>
+          <h3>Stay in Control</h3>
+          <p>Inaccurate information sends customers to your competitors. We'll keep you updated so customers can find you.</p>
+        </div>
+        <div class="col-xs-4">
+          <div class="step-item-img step-item-img-visible "></div>
+          <h3>Be Visible</h3>
+          <p>Make sure your local business listing is on sites that our customers visit.</p>
+        </div>
+        <div class="col-xs-4">
+          <div class="step-item-img step-item-img-time "></div>
+          <h3>Save Time</h3>
+          <p>It takes hours to create local listings on every single local site. Let us do it for you.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!------------------------------------>
+  <!--     WHERE THE BUYERS ARE       -->
+  <!------------------------------------>
+  <!-- start-css-elevate -->
+  <style>  
+  {% less %}
+    @imgPath : '[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/products/business-marketing/img/';
+
+    .main-buyers-are h2 {
+      margin: 128px 0 12px;
+      font-size: 36px;
+    }
+
+    .buyers-are-image-div {
+      height: 289px;
+      width: 503px;
+      background: transparent ~"url(@{imgPath}GetFound_LP_Sprite_20140826.png)" no-repeat -600px -779px ;
+      margin:50px 0 75px;
+    }
+  {% endless %}
+  </style>
+  <!-- end-css-elevate -->
+  <section class="container main-buyers-are">
+
+    <div class="container l-main-container">
+
+      <div class="col-xs-6">
+        
+        <h2>Be everywhere your buyers are.</h2>
+
+        <p>Get Found publishes your business information to a variety of popular sites simultaneously &ndash; all from one screen. Update your local business listing once, and the changes appear across all the sites.</p>
+
+      </div>
+
+      <div class="col-xs-6">
+
+        <div class="buyers-are-image-div"></div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!------------------------------------>
+  <!--         SCAN THE WEB           -->
+  <!------------------------------------>
+  <!-- start-css-elevate -->
+  <style>  
+  {% less %}
+
+    @imgPath : '[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/products/business-marketing/img/';
+
+    .lower-banner-scan-the-web {
+      position: relative; /* for the corner ribbon to show */
+      background-image: ~"url(@{imgPath}BottomMarquee_Bicycle.jpg)";
+    }
+    .lower-banner-title {
+      color: #333;
+      font-weight: 300;
+      font-size: 36px;
+      margin: 150px 0 10px;
+    }
+    .lower-banner-subtitle {
+      color: #333;
+      font-weight: 300;
+      font-size: 20px;
+      margin: 0 0 40px;
+    }
+    #locu-iframe {
+      height: 200px;
+      width: 1000px;
+      border: 0 none;
+      margin-bottom: 120px;
+    }
+  {% endless %}
+  </style>
+  <!-- end-css-elevate -->
+  <section class="container background-container lower-banner-scan-the-web">
+    <div class="container l-main-container center-text">
+      <div class="row">
+        <h2 class="lower-banner-title">Incorrect information sends customers to your competition</h2>
+        <h3 class="lower-banner-subtitle">Check your business listings for errors with our free web scanner tool</h3>
+      </div>
+
+      <iframe id="locu-iframe" src="//locu.godaddy.com/scanner/autocomplete_iframe" allowtransparency="true"></iframe>
+
+    </div>
+  </section>
+
+{% endblock %}
+{% block footer %}
+<script src="[@T[link:<javascriptroot />]@T]fos/lib/gd-swipe/js/swipe-v2.1.js" type="text/javascript"></script>
+<script src="[@T[link:<javascriptroot />]@T]fos/lib/gd-swipe/js/gd-swipe-v2.min.js" type="text/javascript"></script>
+<script src="[@T[link:<javascriptroot />]@T]fos/lib/solazy/jquery.solazy.1.2.1.min.js" type="text/javascript" ></script> 
+<!-- js-elevate-target -->
+
+<!-- start-js-elevate -->
+<script>
+
+  $(document).ready(function(){
+
+    // PRICING
+    setPricing('.main-banner-business-marketing'); // CTA bar
+    setPricing('#plans'); // plan tiers
+
+    // ADD TO CART
+    activateGetStartedBtn('#get-started-btn-1');
+    activateGetStartedBtn('#get-started-btn-2');
+
+    // SETUP FLIPPING CARDS
+    $('[data-gd-sidebysidealign]').gdSideBySideAlign();
+    activateCardFlippers('.plan-item','a.ghost-button','.plan-item-side-B i.uxicon-x');
+
+    // SLIDER AREA
+    activateSlides('#customer-slider');
+
+  });
+
+  var activateGetStartedBtn = function(selector){
+    var $btn = $(selector);
+    $btn.on('click', addHostingtoCart);
+  };
+
+  var activateCardFlippers = function(selector, openSelector, closeSelector) {
+    var animationSpeedMs = 400;
+    $(selector).on('click',openSelector, function(){
+      var $this = $(this);
+      $this.closest('.plan-item-side-A').hide(animationSpeedMs,function(){
+        $this.closest('.plan-item').find('.plan-item-side-B').show(animationSpeedMs);
+      });
+    });
+    $(selector).on('click',closeSelector, function(){
+      var $this = $(this);
+      $this.closest('.plan-item-side-B').hide(animationSpeedMs,function(){
+        $this.closest('.plan-item').find('.plan-item-side-A').show(animationSpeedMs);
+      });
+    });
+  };
+
+  var tokenizeThis = function($obj, strArr) {
+    var tokenized = $obj.html();
+    for(var idx = 0; idx< strArr.length; idx++) {
+      tokenized = tokenized.replace('{' + idx + '}', strArr[idx]);
+    }
+    $obj.html(tokenized);
+  }
+
+  function setPricing(selector) {
+
+    var currentPrice = '[@T[productprice:<template productid="37987" period="monthly"><nostrike><![CDATA[{0}]]></nostrike><strike><![CDATA[{0}]]></strike></template>]@T]';
+    var oldPrice = '[@T[productprice:<template productid="37987" period="monthly"><nostrike><![CDATA[{1}]]></nostrike><strike><![CDATA[{1}]]></strike></template>]@T]';
+    var savePercentage = '[@T[productcompare:<percent primaryproductid="37987" secondaryproductid="37987" hidebelow="1"><html><![CDATA[{0}]]></html></percent>]@T]';
+
+    //oldPrice = "$11.99";savePercentage = "5"; /* override for dev testing */
+
+    var $pricing = $(selector + ' p.pricing');
+    tokenizeThis($pricing, [currentPrice, oldPrice, savePercentage]);
+    $pricing.show();
+
+    var onSale = currentPrice !== oldPrice;
+    if(onSale) {
+      $(selector + ' p.pricing span.save-percentage').show();
+      $(selector + ' p.pricing span.old-price').show();
+    }
+  }
+
+  function activateSlides(selector) {
+
+    var $slider = $(selector + ' .gd-swipe');  
+    $slider.attr('data-gd-swipe','{"auto":0}');
+    $slider.gdSwipe();
+
+  }
+
+  function addHostingtoCart(e) {
+      
+    var ciCode = '83620'; //TODO grab ci code from the button click
+    var url = '[@T[link:<relative path="/api/package" parammode="explicit"/>]@T]';
+    url += '/add'; //action
+    url += '/slp_get_found_lp'; //itc code
+    url += '/' + ciCode; //ci code
+    url += '/1';
+    url += '/locu_Essential1Yr' //Plan Name
+
+    ##if(isManager())
+    var mgrNumber = $('#mgrNumber').val();
+    url += '/?mgrshopper=' +  mgrNumber;
+    ##endif
+
+    var newCartCt = pcCartCt + 1;
+
+    $.getJSON(url, function (data) {
+      if (data != 'fail') {                                 
+        if(!data.Success) {
+          alert('Add to cart failure');
+          return;
+        }
+        pcUpdateCart(newCartCt);
+        ##if(isManager())
+          window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]';
+        ##else
+          window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]';
+        ##endif
+      } else {
+        alert('Add to cart failure');
+      }
+    });
+          
+  }
+
+
+  // gdSideBySideAlign plugin
+  (function ( $, window, document, undefined ) {
+
+    var pluginName = 'gdSideBySideAlign',
+        defaults = {
+          bailIfRowCountsMismatch : true
+    };
+
+    function GDSideBySideAlign( element, options ) {
+      this.element = element;
+      this.options = $.extend( {}, defaults, options);
+      this._defaults = defaults;
+      this._name = pluginName;
+      this.init();
+    }
+
+    GDSideBySideAlign.prototype.init = function () {
+        // Find the columns
+        var $columns = $(this.element).find('[data-gd-sidebysidealign-col]');
+
+        if($columns.length == 0) {
+          return; // bail if no columns found
+        }
+
+        // Make sure columns have an equal number of rows
+        var numRows = 0, equalLength = true;
+        $.each($columns, function(idx,item){
+          var $rows = $(item).find('[data-gd-sidebysidealign-row]');
+          if(numRows == 0) {
+            numRows = $rows.length;
+          }
+          if(equalLength) {
+            if(numRows != $rows.length) equalLength = false;
+          }
+        });
+        if(numRows==0 || !equalLength && this.options.bailIfRowCountsMismatch) {
+          return; // bail if no rows, or rows are not equal length
+        }
+
+        // loop thru each row and grab the largest cell height and apply to each cell in that row
+        for(var i=1; i<=numRows; i++) {
+          var $cells = $columns.find('[data-gd-sidebysidealign-row="' + i + '"]' );
+          var maxHeight = 0;
+          $.each($cells,function(idx, cell){
+            maxHeight = Math.max(maxHeight, $(cell).height());
+          });
+          $cells.height(maxHeight);
+        }
+
+    }; /* end GDSideBySideAlign.prototype.init */
+
+    // register the function to be used
+    $.fn[pluginName] = function ( options ) {
+      return this.each(function () {
+        if (!$.data(this, 'plugin_' + pluginName)) {
+          $.data(this, 'plugin_' + pluginName, new GDSideBySideAlign( this, $(this).data('gd-sidebysidealign') || options ));
+        }
+      });
+    };
+
+  })( jQuery, window, document );
+
+</script>
+<!-- end-js-elevate -->
+{% endblock %}

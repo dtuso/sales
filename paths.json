@@ -2,6 +2,7 @@
   "all":                "./",
   "about":              "./newscenter/about-godaddy",
   "accounting":         "./accounting/accounting-software/",
+  "bm":                 "./products/business-marketing/",
   "cce":                "./cce/",
   "contact-us":         "./contact-us/",
   "csc":                "./ssl/code-signing-certificate/",
