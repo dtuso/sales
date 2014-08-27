@@ -1791,7 +1791,7 @@ var sr_js = {
                   LockSearchControls();
                   if(window.location.href.toString().indexOf("vrgdin01") > -1 &&
                         document.referrer.toString().indexOf("deals2") > -1 &&
-                        !document.referrer.toString().indexOf("searchresults") > -1)
+                        !(document.referrer.toString().indexOf("searchresults") > -1))
                   {
                     SetTLDFilter(".com");
                     SetTLDFilter(".net");
