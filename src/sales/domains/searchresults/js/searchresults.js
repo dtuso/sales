@@ -1918,7 +1918,8 @@ var sr_js = {
                     ko.utils.arrayForEach(parent.SubFilters(), 
                         function(subEntry)
                         {                            
-                            if(subEntry.Title().toString().indexOf(tld.toString()) > -1)
+                            if(subEntry.Title().toString().indexOf(tld.toString()) > -1
+                                && subEntry.Title().toString().length == tld.toString().length)
                                 parent.Apply(subEntry, null);
                         });
                 }
