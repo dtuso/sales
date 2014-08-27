@@ -1,7 +1,7 @@
 ---
 location: sales/domains/domain-name-search.aspx
-id: 535a894ef778fc023885482d
-name: GCE-25369
+id: 53fb9587f778fc1188ab20f3
+name: GCE-25711
 ---
 {% extends 'layouts/base.html' %}
 {% block metahead %}
@@ -512,8 +512,13 @@ name: GCE-25369
         url='[@T[link:<relative path="~/api/package/config/domainlp_nz"/>]@T]';
       ##elseif(activeLanguageAny([es-us]))
         url='[@T[link:<relative path="~/api/package/config/domainlp_es-us"/>]@T]';
-      ##else
+      ##elseif(activeLanguageAny([en-ca],[fr-ca]))
+        url='[@T[link:<relative path="~/api/package/config/domainlp_ca"/>]@T]';
+     ##elseif(activeLanguageAny([en-pk]))
+        url='[@T[link:<relative path="~/api/package/config/domainlp_pk"/>]@T]';
+      ##else      
         url='[@T[link:<relative path="~/api/package/config/domainlp_us"/>]@T]';
+
       ##endif
    $.ajax({
          url:url,
