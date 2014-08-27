@@ -1,8 +1,8 @@
 ---
 location: sales/hosting/vps-hosting.aspx
-id:  53fb7ee2f778fc1188ab20e5
-name: GCE-26809
-comments: Update Canonical link to secure true
+id:  53e13915f778fc1778041309
+name: FOS-25218
+comments: Remove chat button
 url: http://www.dev-godaddy.com/hosting/vps-hosting.aspx
 assetPath: false
 ---
@@ -714,6 +714,8 @@ assetPath: false
                                         ##if(areAdCreditsEnabled(facebook))
                                             <li>[@L[cds.sales/gd/hosting/vps-hosting:SupportFacebookCredits]@L]- <span class="disclaimer-note"><a class="tooltip-delay"  data-html="true" data-toggle="tooltip" data-original-title="[@L[cds.sales/gd/hosting/vps-hosting:FacebookRestrictions]@L]">[@L[cds.sales/gd/hosting/vps-hosting:RestrictionsApply]@L]</a></span></li>
                                         ##endif
+
+                                            <li>[@L[cds.sales/gd/hosting/vps-hosting:SupportSubText5]@L]- <span class="disclaimer-note"><a class="tooltip-delay"  data-html="true" data-toggle="tooltip" data-original-title="[@L[cds.sales/gd/hosting/vps-hosting:FotoliaRestrictions]@L]">[@L[cds.sales/gd/hosting/vps-hosting:RestrictionsApply]@L]</a></span></li>
                                             <li><a target="_BLANK" href="[@T[link:<relative path='~/agreements/showdoc.aspx' secure='false'><param name='pageid' value='hosting_sa' /><param name='ci' value='90591' /></relative>]@T]">[@L[cds.sales/gd/hosting/vps-hosting:MoneyBackGuarantee]@L]</a></li>
                                         </ul>
                                         <ul class="plan-summary-tab-pane-list">
@@ -1015,6 +1017,39 @@ function getData(dc) {
 }
 
 function processVPSData(data, dc) {
+    $(data.centos.plans.basic[dc]).each(function(i, n) {
+        generateDropDowns(i, n, '#centosBasic');
+    });
+    $(data.centos.plans.economy[dc]).each(function(i, n) {
+        generateDropDowns(i, n, '#centosEco');
+    });
+    $(data.centos.plans.value[dc]).each(function(i, n) {
+        generateDropDowns(i, n, '#centosValue');
+    });
+    $(data.centos.plans.deluxe[dc]).each(function(i, n) {
+        generateDropDowns(i, n, '#centosDeluxe');
+    });
+    $(data.centos.plans.premium[dc]).each(function(i, n) {
+        generateDropDowns(i, n, '#centosPremium');
+    });
+    $(data.centos.plans.ultimate[dc]).each(function(i, n) {
+        generateDropDowns(i, n, '#centosUltimate');
+    });
+    $(data.fedora.plans.economy[dc]).each(function(i, n) {
+        generateDropDowns(i, n, '#fedEco');
+    });
+    $(data.fedora.plans.value[dc]).each(function(i, n) {
+        generateDropDowns(i, n, '#fedValue');
+    });
+    $(data.fedora.plans.deluxe[dc]).each(function(i, n) {
+        generateDropDowns(i, n, '#fedDeluxe');
+    });
+    $(data.fedora.plans.premium[dc]).each(function(i, n) {
+        generateDropDowns(i, n, '#fedPremium');
+    });
+    $(data.fedora.plans.ultimate[dc]).each(function(i, n) {
+        generateDropDowns(i, n, '#fedUltimate');
+    });
     $(data.windows.plans.economy[dc]).each(function(i, n) {
         generateDropDowns(i, n, '#windowsEconomy');
     });
