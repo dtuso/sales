@@ -10,9 +10,9 @@
     "metaDescription": "[@L[cds.sales/gd/hosting/categorylp:meta-description]@L]",
     "metaKeywords": "[@L[cds.sales/gd/hosting/categorylp:meta-keywords]@L]",
     "metaCanonicalPath": "/hosting.aspx",
-    "metaOgTitle": "[@L[cds.sales/gd/hosting/categorylp:og-title]@L]",
+    "metaOgTitle": "[@L[cds.sales/gd/hosting/categorylp:page-title]@L]",
     "metaOgImage": "fos/hp/rebrand/img/gd_rebrand_og.png",
-    "metaOgDescription": "[@L[cds.sales/gd/hosting/categorylp:og-description]@L]"
+    "metaOgDescription": "[@L[cds.sales/gd/hosting/categorylp:meta-description]@L]"
   },
   "categoryLP.language": {
     "cdsDetails": {
