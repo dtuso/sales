@@ -1,6 +1,6 @@
 ---
 location: sales/domains/domain-name-search.aspx
-id: 53fb9587f778fc1188ab20f3
+id: 53fe57bef778fc0c8c3a82cc
 name: GCE-25711
 ---
 {% extends 'layouts/base.html' %}
@@ -194,24 +194,26 @@ name: GCE-25711
                                 <li class="list-item"><span class="font-18">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle0]@L]</span></li>
                                ##if(ActiveLanguageAny([fr-fr], [fr-be], [fr-ca], [fr-ch])) 
                                 <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:TldDotPhotos]@L]</span> <a data-ci="90064" href="[@T[link:<relative path="/tlds/photos"></relative>]@T]" class="btn btn-primary list-item-button btn-new-width">[@L[cds.sales/gd/domains/domain-name-search:Register]@L]</a></li>
+                                ##elseif(ActiveLanguageAny([es-us], [es-ar], [es-cl], [es-co], [es-es], [es-mx], [es-pe], [es-ve], [pt-br], [pt-pt]))
+                                <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:TldDotGuru]@L]</span> <a data-ci="89639" href="[@T[link:<relative path="/tlds/guru"></relative>]@T]" class="btn btn-primary list-item-button btn-new-width">[@L[cds.sales/gd/domains/domain-name-search:Register]@L]</a></li>
                                 ##else
-                                 <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:TldDotGuru]@L]</span> <a data-ci="89639" href="[@T[link:<relative path="/tlds/guru"></relative>]@T]" class="btn btn-primary list-item-button btn-new-width">[@L[cds.sales/gd/domains/domain-name-search:Register]@L]</a></li>
+                                 <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:TldDotRocks]@L]</span> <a data-ci="92813" href="[@T[link:<relative path="/tlds/rocks"></relative>]@T]" class="btn btn-primary list-item-button btn-new-width">[@L[cds.sales/gd/domains/domain-name-search:Register]@L]</a></li>
                                 ##endif
 
                                 ##if(ActiveLanguageAny([es-us], [es-ar], [es-cl], [es-co], [es-es], [es-mx], [es-pe], [es-ve]))
                                 <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:TldDotUno]@L]</span> <a data-ci="88020" href="[@T[link:<relative path="/tlds/uno"></relative>]@T]" class="btn btn-primary list-item-button btn-new-width">[@L[cds.sales/gd/domains/domain-name-search:Register]@L]</a></li>
-                                ##else
+                                ##elseif(ActiveLanguageAny([fr-fr], [fr-be], [fr-ca], [fr-ch]))
                                 <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:TldDotExpert]@L]</span> <a data-ci="91798" href="[@T[link:<relative path="/tlds/expert"></relative>]@T]" class="btn btn-primary list-item-button btn-new-width">[@L[cds.sales/gd/domains/domain-name-search:Register]@L]</a></li>
+                                ##else
+                                <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:TldDotTax]@L]</span> <a data-ci="91417" href="[@T[link:<relative path="/tlds/tax"></relative>]@T]" class="btn btn-primary list-item-button btn-new-width">[@L[cds.sales/gd/domains/domain-name-search:Register]@L]</a></li>
                                 ##endif
 
-                                ##if(ActiveLanguageAny([fr-fr], [fr-be], [fr-ca], [fr-ch])) 
-                                <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:TldDotSolutions]@L]</span> <a data-ci="91414" href="[@T[link:<relative path="/tlds/solutions"></relative>]@T]" class="btn btn-primary list-item-button btn-new-width">[@L[cds.sales/gd/domains/domain-name-search:Register]@L]</a></li>
-                                ##elseif(ActiveLanguageAny([es-ar], [es-cl], [es-co], [es-es], [es-mx], [es-pe], [es-ve]))
+                                ##if(ActiveLanguageAny([es-ar], [es-cl], [es-co], [es-es], [es-mx], [es-pe], [es-ve]))
                                 <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:TldDotEmail]@L]</span> <a data-ci="90064" href="[@T[link:<relative path="/tlds/email"></relative>]@T]" class="btn btn-primary list-item-button btn-new-width">[@L[cds.sales/gd/domains/domain-name-search:Register]@L]</a></li>
                                 ##else
-                                <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:TldDotVegas]@L]</span> <a data-ci="90060" href="[@T[link:<relative path="/tlds/vegas"></relative>]@T]" class="btn btn-primary list-item-button btn-new-width">[@L[cds.sales/gd/domains/domain-name-search:PreRegister]@L]</a></li>
+                                <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:TldDotSolutions]@L]</span> <a data-ci="91414" href="[@T[link:<relative path="/tlds/solutions"></relative>]@T]" class="btn btn-primary list-item-button btn-new-width">[@L[cds.sales/gd/domains/domain-name-search:Register]@L]</a></li>
                                 ##endif                             
-                                <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:TldDotClub]@L]</span> <a data-ci="90063" href="[@T[link:<relative path="/tlds/club"></relative>]@T]" class="btn btn-primary list-item-button btn-new-width">[@L[cds.sales/gd/domains/domain-name-search:Register]@L]</a></li>
+                                <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:TldDotGlobal]@L]</span> <a data-ci="92814" href="[@T[link:<relative path="/tlds/global"></relative>]@T]" class="btn btn-primary list-item-button btn-new-width">[@L[cds.sales/gd/domains/domain-name-search:PreRegister]@L]</a></li>
                                 </ul>
                         </div>
                         <div class="col-xs-6" id="rightlist">
@@ -219,7 +221,7 @@ name: GCE-25711
                                   <li class="list-item"><span class="font-18">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle1]@L]</span></li>
                                 <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:TldDotShop]@L]</span> <a data-ci="88028" href="[@T[link:<relative path="/tlds/gtld.aspx"></relative>]@T]" class="btn btn-primary list-item-button">[@L[cds.sales/gd/domains/domain-name-search:LearnMore]@L]</a></li>
                                 <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:TldDotPhoto]@L]</span> <a data-ci="90328" href="[@T[link:<relative path="/tlds/gtld.aspx"></relative>]@T]" class="btn btn-primary list-item-button">[@L[cds.sales/gd/domains/domain-name-search:LearnMore]@L]</a></li>
-                                <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:TldDotLawyer]@L]</span> <a data-ci="89393" href="[@T[link:<relative path="/tlds/gtld.aspx"></relative>]@T]" class="btn btn-primary list-item-button">[@L[cds.sales/gd/domains/domain-name-search:LearnMore]@L]</a></li>
+                                <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:TldDotAttorney]@L]</span> <a data-ci="89393" href="[@T[link:<relative path="/tlds/gtld.aspx"></relative>]@T]" class="btn btn-primary list-item-button">[@L[cds.sales/gd/domains/domain-name-search:LearnMore]@L]</a></li>
                                 <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:TldDotApp]@L]</span> <a data-ci="90059" href="[@T[link:<relative path="/tlds/gtld.aspx"></relative>]@T]" class="btn btn-primary list-item-button">[@L[cds.sales/gd/domains/domain-name-search:LearnMore]@L]</a></li>
                             </ul>
                         </div>
