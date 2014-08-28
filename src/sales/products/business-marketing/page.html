@@ -343,7 +343,7 @@ assetPath: false
   <section class="main-tabs">
     <div class="container l-main-container center-text">
       <ul class="nav nav-tabs">
-        <li class="nav-tabs-item active"><a class="nav-tabs-link" href="#plans" data-toggle="tab" data-ci="86780">Plans</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
+        <li class="nav-tabs-item active"><a class="nav-tabs-link" href="#plans" data-toggle="tab" data-ci="86780">Plans &amp; Pricing</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
         <li class="nav-tabs-item"><a class="nav-tabs-link" href="#faq" data-toggle="tab" data-ci="86781">FAQ</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
       </ul>
     </div>
@@ -358,9 +358,8 @@ assetPath: false
             <div class="plan-item-side-A clearfix">
               <div class="plan-item-img plan-item-img-brick solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/products/business-marketing/img/GetFound_LP_Sprite_20140826.png"></div>
               <div data-gd-sidebysidealign-row="1">
-                <h3>Brick &amp; Mortar</h3>
+                <h3>Brick and Mortar</h3>
                 <p>Your business has a physical location that customers can visit (ex. restaurants, salons, spas, etc.)</p>
-
               </div>
               <div data-gd-sidebysidealign-row="2">
                 <a class="ghost-button">View Sites</a>
@@ -368,7 +367,7 @@ assetPath: false
             </div>
             <div class="plan-item-side-B clearfix" data-gd-sidebysidealign-row="3">
               <i class="uxicon uxicon-x"></i>
-              <h3 class="clearfix">Brick &amp; Mortar</h3>
+              <h3 class="clearfix">Brick and Mortar</h3>
               <p>Get listed on:</p>
               <div class="row">
                 <div class="col-xs-6">
@@ -682,7 +681,7 @@ assetPath: false
         </div>
         <div class="col-xs-9 customer-testimonial">
           <div class="customer-quote">"People tell me all the time they found our restaurant on Yelp, TripAdvisor or OpenTable. If we didn't show up on these sites, we'd lose business to a restaurant down the street. Get Found helps put my business everywhere it needs to be on the Web."</div>
-          <div class="customer-byline">&ndash; Lauren, Manager/Owner at Ombra Cucina Rustica in Hilton Head, SC</div>
+          <div class="customer-byline">&ndash; Lauren, Manager/Owner at <a href="http://www.ombrahhi.com/" target="_blank">Ombra Cucina Rustica</a> in Hilton Head, SC</div>
         </div>
       </div>
 
@@ -838,7 +837,7 @@ assetPath: false
     }
     #locu-iframe {
       height: 200px;
-      width: 1000px;
+      width: 886px;
       border: 0 none;
       margin-bottom: 120px;
     }
@@ -851,8 +850,9 @@ assetPath: false
         <h2 class="lower-banner-title">Incorrect information sends customers to your competition</h2>
         <h3 class="lower-banner-subtitle">Check your business listings for errors with our free web scanner tool</h3>
       </div>
-
+<!--
       <iframe id="locu-iframe" src="//locu.godaddy.com/scanner/autocomplete_iframe" allowtransparency="true"></iframe>
+-->
 
     </div>
   </section>
@@ -884,7 +884,13 @@ assetPath: false
     // SLIDER AREA
     activateSlides('#customer-slider');
 
+    // SETUP AUTOHEIGHT ON IFRAME
+    setupAutoHeightOnIFrame('#locu-iframe');
+
   });
+  function setupAutoHeightOnIFrame(selector){
+    // this is a stubbed out function in case locu needs to integrate into our page to auto-resize the iFrame
+  }
 
   var activateGetStartedBtn = function(selector){
     var $btn = $(selector);

@@ -71,6 +71,18 @@
           { "ITC Code" : "GtldEoiServicesLink" },
           { "Description" : ".SERVICES Slide Link" }
         ]
+      },
+      { ".TAX Slide Link" : [
+          { "ITC ID" : "" },
+          { "ITC Code" : "GtldEoiTaxLink" },
+          { "Description" : ".TAX Slide Link" }
+        ]
+      },
+      { ".REVIEWS Slide Link" : [
+          { "ITC ID" : "" },
+          { "ITC Code" : "GtldEoiReviewsLink" },
+          { "Description" : ".REVIEWS Slide Link" }
+        ]
       }
     ],
   "Everything Else" : [

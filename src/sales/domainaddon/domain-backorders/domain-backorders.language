@@ -1,11 +1,12 @@
 ---
 location: localization/sales/gd/domainaddon/domain-backorders2/en
-id: 5367d19df778fc26c405ca96
-name: FOS-22259
+id: 53ed337bf778fc0b38fed12a
+name: FOS-24500
+comments: updated meta title to include new token
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="MetaTitle" />
-Domain Backorders | Secure Your Dream Domain - GoDaddy
+Domain Backorders | Secure Your Dream Domain - [@T[companyname:nameseotitle]@T]
 <phrase key="MetaDescription" />
 Is your Domain Name already taken? Secure a chance to grab the Domain the INSTANT it becomes available with a Domain Backorder!
 <phrase key="MetaKeywords" />

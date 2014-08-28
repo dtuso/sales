@@ -1451,11 +1451,7 @@ var sr_js = {
                         alert('Select a Domain First');
                     }
                     else {
-                        url = data.NextStepUrl;
-                        if(pathIsDeals2())
-                            url = addQueryParam(url, 'path', 'deals2');
-
-                        window.location = url;
+                        window.location = data.NextStepUrl;
                     }
                 }
             });
@@ -1794,7 +1790,8 @@ var sr_js = {
                   SetControlDefaults();
                   LockSearchControls();
                   if(window.location.href.toString().indexOf("vrgdin01") > -1 &&
-                        document.referrer.toString().indexOf("deals2") > -1)
+                        document.referrer.toString().indexOf("deals2") > -1 &&
+                        !(document.referrer.toString().indexOf("searchresults") > -1))
                   {
                     SetTLDFilter(".com");
                     SetTLDFilter(".net");
@@ -1918,7 +1915,8 @@ var sr_js = {
                     ko.utils.arrayForEach(parent.SubFilters(), 
                         function(subEntry)
                         {                            
-                            if(subEntry.Title().toString().indexOf(tld.toString()) > -1)
+                            if(subEntry.Title().toString().indexOf(tld.toString()) > -1
+                                && subEntry.Title().toString().length == tld.toString().length)
                                 parent.Apply(subEntry, null);
                         });
                 }

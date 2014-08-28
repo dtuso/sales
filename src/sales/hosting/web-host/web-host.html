@@ -1,9 +1,9 @@
 ---
 location: sales/web-host
-id: false
-name: FOS-25192
-comments: Web-host spacing issue
-cssVersionOverride: 3
+id:  53f7d8a1f778fc1008446c8c
+name: GCE-26810
+comments: modified canonical url to be secure
+cssVersionOverride: 4
 ---
 {% extends 'layouts/base.html' %} 
 {% block metahead %} 
@@ -18,13 +18,13 @@ cssVersionOverride: 3
       <div class="l-main-container container main-banner-content">
         <div class="main-banner-text">
           <h1 class="hnb-24-cond-bold center upper main-title">[@L[cds.sales/gd/hosting/product-listing/hosting:header-title]@L]</h1>
-          <h1 class="hnb-48-thin title">[@L[cds.sales/gd/hosting/product-listing/hosting:subheader-title]@L]</h1>
+          <p class="hnb-48-thin title">[@L[cds.sales/gd/hosting/product-listing/hosting:subheader-title]@L]</p>
           <p class="hnb-24-cond-med">[@L[cds.sales/gd/hosting/product-listing/hosting:tag-line]@L]</p>
           ##if(false)
           <div class="play-sprite main-play"></div>
           <p class="hnb-24-cond-med">[@L[cds.sales/gd/hosting/product-listing/hosting:watchvideo]@L]</p>
           ##endif
-          <p class="content-text main-tag-line">[@L[cds.sales/gd/hosting/product-listing/hosting:tag-line-two]@L]</p>
+          <p class="hnb-18-reg main-tag-line">[@L[cds.sales/gd/hosting/product-listing/hosting:tag-line-two]@L]</p>
           <p class ="hnb-24-cond-bold main-let-us">[@L[cds.sales/gd/hosting/product-listing/hosting:LetUs]@L]</p>
         </div>
         <div class="down-green-sprite main-arrow move solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/hosting/web-host/img/hosting-listings-sprite.png" data-scroll=".choosing-banner"></div>
@@ -50,22 +50,22 @@ cssVersionOverride: 3
         <div class="l-main-container container">
             <div class="col-xs-5">
                 <div class="">
-                    <h1 class="tab-content-title hnb-48-thin center shw-title">[@L[cds.sales/gd/hosting/product-listing/hosting:swh-title]@L]</h1>
-                    <p class="hnb-18-reg swh-perfect center">[@L[cds.sales/gd/hosting/product-listing/hosting:swh-perfect]@L]</p>
+                    <p class="tab-content-title hnb-48-thin center shw-title">[@L[cds.sales/gd/hosting/product-listing/hosting:swh-title]@L]</p>
                     <div class="swh-sprite solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/hosting/web-host/img/hosting-listings-sprite.png"></div>
+                    <p class="hnb-18-reg swh-perfect center">[@L[cds.sales/gd/hosting/product-listing/hosting:swh-perfect]@L]</p>
                 </div>                
             </div>
             <div class="col-xs-7">
                 <div class="swh-right">
-                    <h1 class="tab-content-title h1-alternate hnb-18-bold">[@L[cds.sales/gd/hosting/product-listing/hosting:swh-subheader]@L]</h1>
+                    <p class="tab-content-title p-alternate hnb-18-bold">[@L[cds.sales/gd/hosting/product-listing/hosting:swh-subheader]@L]</p>
                     <p class="hnb-16-reg">[@L[cds.sales/gd/hosting/product-listing/hosting:swh-together]@L]</p>
                     <p></p>
                     <p class="hnb-16-reg">[@L[cds.sales/gd/hosting/product-listing/hosting:swh-gd]@L]</p>
                     <p></p>
-                    <ul class="web-host">
-                        <li class="content-text web-host">[@L[cds.sales/gd/hosting/product-listing/hosting:swh-scale]@L]</li>
-                        <li class="content-text web-host">[@L[cds.sales/gd/hosting/product-listing/hosting:swh-speed]@L]</li>
-                        <li class="content-text web-host">[@L[cds.sales/gd/hosting/product-listing/hosting:swh-uptime]@L]</li>
+                    <ul class="web-host-green">
+                        <li class="content-text web-host-green">[@L[cds.sales/gd/hosting/product-listing/hosting:swh-scale]@L]</li>
+                        <li class="content-text web-host-green">[@L[cds.sales/gd/hosting/product-listing/hosting:swh-speed]@L]</li>
+                        <li class="content-text web-host-green">[@L[cds.sales/gd/hosting/product-listing/hosting:swh-uptime]@L]</li>
                     </ul>
                     <div class="pricing">                        
                         <p class="starting-at">[@L[cds.sales/gd/hosting/product-listing/hosting:starting-at]@L]</p>
@@ -83,9 +83,9 @@ cssVersionOverride: 3
         <div class="l-main-container container">
             <div class="col-xs-6 wp-left">
                 <p class="hnb-18-bold">[@L[cds.sales/gd/hosting/product-listing/hosting:breakout]@L]</p>
-                <ul class="web-host">
-                    <li class="content-text wp-list-padding web-host">[@L[cds.sales/gd/hosting/product-listing/hosting:wph-numberone]@L]</li>
-                    <li class="content-text wp-list-padding web-host">[@L[cds.sales/gd/hosting/product-listing/hosting:wph-percent]@L]</li>
+                <ul class="web-host-green">
+                    <li class="content-text wp-list-padding web-host-green">[@L[cds.sales/gd/hosting/product-listing/hosting:wph-numberone]@L]</li>
+                    <li class="content-text wp-list-padding web-host-green">[@L[cds.sales/gd/hosting/product-listing/hosting:wph-percent]@L]</li>
                 </ul>
                 <p class="hnb-16-reg">[@L[cds.sales/gd/hosting/product-listing/hosting:wph-desc]@L]</p>
                 <p class="hnb-16-reg">[@L[cds.sales/gd/hosting/product-listing/hosting:wph-fast]@L]</p>
@@ -98,9 +98,9 @@ cssVersionOverride: 3
                 </div>
             </div>
             <div class="col-xs-6 wp-right center wp-title">
-                <h1 class="hnb-48-thin wp-title">[@L[cds.sales/gd/hosting/product-listing/hosting:wph-title]@L]</h1>
-                <p class="hnb-18-reg wp-title wp-perfect">[@L[cds.sales/gd/hosting/product-listing/hosting:wph-perfect]@L]</p>
-                <div class="wph-sprite solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/hosting/web-host/img/hosting-listings-sprite.png"></div>                
+                <p class="hnb-48-thin wp-title">[@L[cds.sales/gd/hosting/product-listing/hosting:wph-title]@L]</p>
+                <div class="wph-sprite solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/hosting/web-host/img/hosting-listings-sprite.png"></div>
+                <p class="hnb-18-reg wp-title wp-perfect">[@L[cds.sales/gd/hosting/product-listing/hosting:wph-perfect]@L]</p>          
             </div>
         </div>
     </section>
@@ -109,16 +109,16 @@ cssVersionOverride: 3
         <div class="l-main-container container">
             <div class="col-xs-5">
                 <p class="hnb-48-thin mt-title center">[@L[cds.sales/gd/hosting/product-listing/hosting:mt-title]@L]</p>
-                <p class="hnb-18-reg mt-perfect center">[@L[cds.sales/gd/hosting/product-listing/hosting:mt-perfect]@L]</p>
-                <div class="mt-brief-sprite solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/hosting/web-host/img/hosting-listings-sprite.png"></div>                
+                <div class="mt-brief-sprite solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/hosting/web-host/img/hosting-listings-sprite.png"></div>
+                <p class="hnb-18-reg mt-perfect center">[@L[cds.sales/gd/hosting/product-listing/hosting:mt-perfect]@L]</p>              
             </div>
             <div class="col-xs-7 mt-right">
                 <div class="mt-logo-sprite solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/hosting/web-host/img/hosting-listings-sprite.png"></div>
                 <p class="hnb-18-bold">[@L[cds.sales/gd/hosting/product-listing/hosting:mt-breakout]@L]</p>
                 <p class="hnb-16-reg">[@L[cds.sales/gd/hosting/product-listing/hosting:mt-best]@L]</p>
-                <ul class="web-host">
-                    <li class="content-text mt-list web-host">[@L[cds.sales/gd/hosting/product-listing/hosting:mt-ssd-2]@L]</li>
-                    <li class="content-text mt-list web-host">[@L[cds.sales/gd/hosting/product-listing/hosting:mt-ssd-3]@L]</li>
+                <ul class="web-host-green">
+                    <li class="content-text mt-list web-host-green">[@L[cds.sales/gd/hosting/product-listing/hosting:mt-ssd-2]@L]</li>
+                    <li class="content-text mt-list web-host-green">[@L[cds.sales/gd/hosting/product-listing/hosting:mt-ssd-3]@L]</li>
                </ul>
                <div class="pricing">
                     <p class="starting-at">[@L[cds.sales/gd/hosting/product-listing/hosting:starting-at]@L]</p>

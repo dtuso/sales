@@ -7,10 +7,10 @@
       }
     },
     "metaTitle": "[@L[cds.sales/gd/hosting/product-listing/hosting:page-title]@L]",
-    "metaDescription": "[@L[cds.sales/gd/hosting/product-listing/hosting:meta-description]@L]",
+    "metaDescription": "[@L[cds.sales/gd/hosting/product-listing/hosting:og-description]@L]",
     "metaKeywords": "[@L[cds.sales/gd/hosting/product-listing/hosting:meta-keywords]@L]",
-    "metaCanonicalPath": "/web-host.aspx",
-    "metaOgTitle": "[@L[cds.sales/gd/hosting/product-listing/hosting:og-title]@L]",
+    "metaCanonicalPath": "/web-host",
+    "metaOgTitle": "[@L[cds.sales/gd/hosting/product-listing/hosting:page-title]@L]",
     "metaOgImage": "fos/hp/rebrand/img/gd_rebrand_og.png",
     "metaOgDescription": "[@L[cds.sales/gd/hosting/product-listing/hosting:og-description]@L]"
   },
