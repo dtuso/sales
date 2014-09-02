@@ -168,6 +168,15 @@ gulp.task('config', function() {
     .pipe(gulp.dest(paths.build));
 });
 
+gulp.task('js-concat', function() {
+  return gulp.src(['./**/js/*.js'], {cwd: path.join('./src/sales/', assetSrcPath)})
+    .pipe(gulp.dest(paths.build))
+    .pipe(concat('js/all_scripts.js'))
+    .pipe(uglify())
+    .pipe(rename(({suffix: '.min'})))
+    .pipe(gulp.dest(paths.build));
+});
+
 gulp.task('watch', function() {
   gulp.watch(paths.templates, ['html']);
   gulp.watch(paths.language, ['language']);
