@@ -1,8 +1,8 @@
 ---
 location: sales/hosting/website-builder.aspx
-id: 53dfd970f778fc33bc708f52
-name: GCE-22944
-comments: Moved Split b into main html file, synced Jeffs Changes for him
+id: 5400e9b6f778fc29083f2d81
+name: GCE-24038
+comments: Reviews link needs to scroll to section
 ---
 {% extends 'layouts/base.html' %}
 {% block pageTitle %}
@@ -187,7 +187,7 @@ comments: Moved Split b into main html file, synced Jeffs Changes for him
           <section class="rating-stars-container main-banner-rating-stars-container websitebuilder-rating-stars">
               <div class="rating-stars-init" data-rating="5"></div>
           </section>
-          <a class="main-banner-read-reviews main-banner-read-reviews-alternate tab-link" data-ci="91392" href="#reviews">[@L[cds.sales/gd/hosting/website-builder:stars-read-reviews]@L]</a>
+          <a class="main-banner-read-reviews main-banner-read-reviews-alternate tab-link" data-scroll=".main-tabs" data-ci="91392" href="#reviews">[@L[cds.sales/gd/hosting/website-builder:stars-read-reviews]@L]</a>
           ##endif
           <h2 class="main-banner-subtitle main-banner-subtitle-alternate">[@L[cds.sales/gd/hosting/website-builder:main-banner-title]@L]</h2>
           <ul class="main-banner-list no-wrap">
@@ -1131,6 +1131,7 @@ comments: Moved Split b into main html file, synced Jeffs Changes for him
     $('.equal-height').setColumnsEqualHeight();
     $('.select-box').setSelectBox();
     $('.tab-link').tabLinks();
+    $('.tab-link').scrollToSection();
 
      $('.addtocart-form').on('submit',function(e){
         e.preventDefault();
