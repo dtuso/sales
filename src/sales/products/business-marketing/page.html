@@ -866,17 +866,14 @@ assetPath: false
     // SLIDER AREA
     activateSlides('#customer-slider');
 
-    // SETUP AUTOHEIGHT ON IFRAME
-    setupAutoHeightOnIFrame('#locu-iframe');
-
   });
-  function setupAutoHeightOnIFrame(selector){
-    // this is a stubbed out function in case locu needs to integrate into our page to auto-resize the iFrame
-  }
 
   var activateGetStartedBtn = function(selector){
-    var $btn = $(selector);
-    $btn.on('click', addHostingtoCart);
+    $(selector).on('click', function(e){
+      e.preventDefault();
+      addHostingtoCart(e);
+      return false;
+    });
   };
 
   var activateCardFlippers = function(selector, openSelector, closeSelector) {
@@ -922,18 +919,16 @@ assetPath: false
     }
   }
 
-  function activateSlides(selector) {
-
-    var $slider = $(selector + ' .gd-swipe');  
-    $slider.attr('data-gd-swipe','{"auto":0}');
-    $slider.gdSwipe();
-
+  function activateSlides(selector) { 
+    $(selector + ' .gd-swipe')
+      .attr('data-gd-swipe','{"auto":0}')
+      .gdSwipe();
   }
 
   function addHostingtoCart(e) {
       
-    var ciCode = '83620'; //TODO grab ci code from the button click
-    var url = '[@T[link:<relative path="/api/package" parammode="explicit"/>]@T]';
+    var ciCode = $(this).data('ci'); //grab ci code from the button clicked
+    var url = '[@T[link:<relative path="/api/package" parammode="explicit"/>]@T]';    
     url += '/add'; //action
     url += '/slp_get_found_lp'; //itc code
     url += '/' + ciCode; //ci code
@@ -948,20 +943,24 @@ assetPath: false
     var newCartCt = pcCartCt + 1;
 
     $.getJSON(url, function (data) {
-      if (data != 'fail') {                                 
-        if(!data.Success) {
-          alert('Add to cart failure');
-          return;
-        }
-        pcUpdateCart(newCartCt);
-        ##if(isManager())
-          window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]';
-        ##else
-          window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]';
-        ##endif
-      } else {
-        alert('Add to cart failure');
+      // 1. check for failures
+      if (data == 'fail') {
+        alert('Add to cart failure.');
+        return;        
       }
+      if(!data.Success) {
+        alert('Add to cart failure.');
+        return;
+      }
+      // 2. update the new cart count on the page.
+      pcUpdateCart(newCartCt);
+
+      // 3. redirect user to the cart where their product should be waiting for them.
+      ##if(isManager())
+        window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]';
+      ##else
+        window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]';
+      ##endif
     });
           
   }
