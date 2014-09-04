@@ -1033,7 +1033,6 @@ assetPath: false
       renewalPrice = '[@T[productprice:<current productid="37990" period="monthly"></current>]@T]',
       savePercentage = '[@T[productcompare:<percent primaryproductid="37987" secondaryproductid="37990" hidebelow="1" showsymbol="true"><html><![CDATA[{0}]]></html></percent>]@T]';
     
-
     //renewalPrice = "$19.00";savePercentage = "5%"; /* override for dev testing */
 
     var $pricing = $(selector + ' p.pricing');
@@ -1065,7 +1064,12 @@ assetPath: false
 
   var activateCardFlippers = function(selector, openSelector, closeSelector) {
 
-    if($.browser.msie && parseFloat($.browser.version) < 10) {
+    var transformsAvailable = !($.browser.msie && parseFloat($.browser.version) < 10); /* older IE (less than 10) cannot do transforms */
+    if(transformsAvailable) {
+      $(selector).on('click',openSelector + ',' + closeSelector, function(){
+        $(this).closest('.plan-item-container').toggleClass('flipped');
+      });
+    } else {
       $(selector).on('click',openSelector, function(){
         $(this).closest('.plan-item').find('.plan-item-side-A').hide();
         $(this).closest('.plan-item').find('.plan-item-side-B').show();
@@ -1074,15 +1078,9 @@ assetPath: false
         $(this).closest('.plan-item').find('.plan-item-side-B').hide();
         $(this).closest('.plan-item').find('.plan-item-side-A').show();
       });
-    } else {
-      $(selector).on('click',openSelector + ',' + closeSelector, function(){
-        $(this).closest('.plan-item-container').toggleClass('flipped');
-      });
     }
+    console.log("transformsAvailable",transformsAvailable)
 
-      $(selector).on('click',openSelector + ',' + closeSelector, function(){
-        $(this).closest('.plan-item-container').toggleClass('flipped');
-      });
   };
 
   var tokenizeThis = function($obj, strArr) {
