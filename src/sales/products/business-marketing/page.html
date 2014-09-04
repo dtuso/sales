@@ -84,6 +84,7 @@ assetPath: false
     p.inline-disclaimer {
       font-size: 15px;
       font-weight: 300;
+      /*visibility: hidden;*/
     } 
 
     .ghost-button {
@@ -204,9 +205,9 @@ assetPath: false
       </div>
       <div class="row center-text">
         <p class="pricing">
-          As low as <span class="renewal-price"><strike>{1}/mo</strike> </span><span class="normal-price">{0}/mo*</span> <span class="save-percentage">Save {2}</span>        
+          As low as <span class="renewal-price"><strike>{1}/mo</strike>* </span><span class="normal-price">{0}/mo</span> <span class="save-percentage">Save {2}</span>        
         </p>
-        <p class="inline-disclaimer">*Price valid for first year only.</p>
+        <p class="inline-disclaimer">*Current renewal price.</p>
       </div>
     </div>
   </section>
@@ -271,13 +272,8 @@ assetPath: false
 
         .plan-item-side-A,
         .plan-item-side-B {
-          width:315px;
           background-color: #fff;
           padding: 0 25px 20px;
-          position: relative;
-        }
-        .plan-item-side-B { 
-          display:none;
         }
         .plan-item-side-B ul {
           list-style: none outside none;
@@ -313,6 +309,13 @@ assetPath: false
           margin: 24px 0 10px;
         }
 
+        .plan-item-side-A p {
+          height:100px;
+          overflow-y: auto;
+          overflow-x: hidden;
+          margin-bottom:40px;
+        }
+
         .plan-item-side-B h3 {
           margin: 65px 0 30px;
           position:relative;
@@ -328,7 +331,7 @@ assetPath: false
         }
         .plan-item a.ghost-button {
           display:block;
-          margin: 40px 0px 20px;
+          margin: 0 0 20px;
           padding-top:10px;
         }
         
@@ -353,104 +356,197 @@ assetPath: false
           margin-top: 20px;
           cursor:pointer;
         }
+/* entire container, keeps perspective */
+.plan-item-container {
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -ms-perspective: 1000;
+  perspective: 1000;
+
+  -ms-transform: perspective(1000px);
+  -moz-transform: perspective(1000px);
+  -moz-transform-style: preserve-3d; 
+  -ms-transform-style: preserve-3d; 
+}
+
+/* START: Accommodating for IE */
+.plan-item-container.flipped .plan-item-side-B {
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -o-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+}
+
+.plan-item-container.flipped .plan-item-side-A {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+/* END: Accommodating for IE */
+
+.plan-item-container, 
+.plan-item,
+.plan-item-side-A, 
+.plan-item-side-B {
+  width:315px;
+  height:496px;
+}
+
+/* flip speed goes here */
+.plan-item {
+  -webkit-transition: 0.6s;
+  -webkit-transform-style: preserve-3d;
+  -ms-transition: 0.6s;
+  -moz-transition: 0.6s;
+  -moz-transform: perspective(1000px);
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+/* hide backside of pane during swap */
+.plan-item-side-A, 
+.plan-item-side-B {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+
+  -webkit-transition: 0.6s;
+  -webkit-transform-style: preserve-3d;
+
+  -moz-transition: 0.6s;
+  -moz-transform-style: preserve-3d;
+
+  -o-transition: 0.6s;
+  -o-transform-style: preserve-3d;
+
+  -ms-transition: 0.6s;
+  -ms-transform-style: preserve-3d;
+
+  transition: 0.6s;
+  transform-style: preserve-3d;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* frontside pane, placed above the backside*/
+.plan-item-side-A {
+  -webkit-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  z-index: 2;
+}
+
+/* backside, initially hidden pane */
+.plan-item-side-B {
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  -o-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+  z-index: 1;
+}
+
+
       {% endless %}
       </style>
       <!-- end-css-elevate -->
       <section class="main-plans">
         <div class="container l-main-container">
           <h2 class="text-center">See where Get Found can get you listed by choosing your business type.</h2>
-          <div class="row" data-gd-sidebysidealign="{}">
+          <div class="row">
 
-            <div class="col-xs-4" data-gd-sidebysidealign-col="1">
-              <div class="plan-item">
-                <div class="plan-item-side-A clearfix">
-                  <div class="plan-item-img plan-item-img-brick solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/products/business-marketing/img/GetFound_LP_Sprite_20140826.png"></div>
-                  <div data-gd-sidebysidealign-row="1">
+            <div class="col-xs-4">
+              <div class="plan-item-container" ontouchstart="this.classList.toggle('flipped');">
+                <div class="plan-item">
+                  <div class="plan-item-side-A">
+                    <div class="plan-item-img plan-item-img-brick solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/products/business-marketing/img/GetFound_LP_Sprite_20140903.png"></div>
                     <h3>Brick and Mortar</h3>
                     <p>Your business has a physical location that customers can visit (ex. restaurants, salons, spas, etc.)</p>
-                  </div>
-                  <div data-gd-sidebysidealign-row="2">
                     <a class="ghost-button" data-ci="92941">View Sites</a>
                   </div>
-                </div>
-                <div class="plan-item-side-B clearfix" data-gd-sidebysidealign-row="3">
-                  <i class="uxicon uxicon-x" data-ci="92938"></i>
-                  <h3 class="clearfix">Brick and Mortar</h3>
-                  <p>Get listed on:</p>
-                  <div class="row">
-                    <div class="col-xs-6">
-                      <ul>
-                        <li><i class="uxicon uxicon-checkmark"></i>Google</li>
-                        <li><i class="uxicon uxicon-checkmark"></i>Bing</li>
-                        <li><i class="uxicon uxicon-checkmark"></i>YP</li>
-                        <li><i class="uxicon uxicon-checkmark"></i>eLocal</li>
-                        <li><i class="uxicon uxicon-checkmark"></i>Whois</li>
-                        <li><i class="uxicon uxicon-checkmark"></i>Locu Places</li>
-                        <li><i class="uxicon uxicon-checkmark"></i>Foursquare</li>
-                        <li><i class="uxicon uxicon-checkmark"></i>Yelp</li>
-                        <li><i class="uxicon uxicon-checkmark"></i>Merchant Circle</li>
-                      </ul>
+                  <div class="plan-item-side-B">
+                    <i class="uxicon uxicon-x" data-ci="92938"></i>
+                    <h3 class="clearfix">Brick and Mortar</h3>
+                    <p>Get listed on:</p>
+                    <div class="row">
+                      <div class="col-xs-6">
+                        <ul>
+                          <li><i class="uxicon uxicon-checkmark"></i>Google</li>
+                          <li><i class="uxicon uxicon-checkmark"></i>Bing</li>
+                          <li><i class="uxicon uxicon-checkmark"></i>YP</li>
+                          <li><i class="uxicon uxicon-checkmark"></i>eLocal</li>
+                          <li><i class="uxicon uxicon-checkmark"></i>Whois</li>
+                          <li><i class="uxicon uxicon-checkmark"></i>Locu Places</li>
+                          <li><i class="uxicon uxicon-checkmark"></i>Foursquare</li>
+                          <li><i class="uxicon uxicon-checkmark"></i>Yelp</li>
+                          <li><i class="uxicon uxicon-checkmark"></i>Merchant Circle</li>
+                        </ul>
+                      </div>
+                      <div class="col-xs-6">
+                        <ul>
+                          <li><i class="uxicon uxicon-checkmark"></i>Judy's Book</li>
+                          <li><i class="uxicon uxicon-checkmark"></i>Citysearch</li>
+                          <li><i class="uxicon uxicon-checkmark"></i>TripAdvisor</li>
+                          <li><i class="uxicon uxicon-checkmark"></i>MojoPages</li>
+                          <li><i class="uxicon uxicon-checkmark"></i>Cortana</li>
+                          <li><i class="uxicon uxicon-checkmark"></i>Swarm</li>
+                        </ul>                  
+                      </div>
                     </div>
-                    <div class="col-xs-6">
-                      <ul>
-                        <li><i class="uxicon uxicon-checkmark"></i>Judy's Book</li>
-                        <li><i class="uxicon uxicon-checkmark"></i>Citysearch</li>
-                        <li><i class="uxicon uxicon-checkmark"></i>TripAdvisor</li>
-                        <li><i class="uxicon uxicon-checkmark"></i>MojoPages</li>
-                        <li><i class="uxicon uxicon-checkmark"></i>Cortana</li>
-                        <li><i class="uxicon uxicon-checkmark"></i>Swarm</li>
-                      </ul>                  
-                    </div>
-                  </div>
-                </div>          
-              </div>  
+                  </div>          
+                </div>  
+              </div>
             </div>
 
-            <div class="col-xs-4" data-gd-sidebysidealign-col="2">
-              <div class="plan-item">
-                <div class="plan-item-side-A clearfix">
-                  <div class="plan-item-img plan-item-img-service solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/products/business-marketing/img/GetFound_LP_Sprite_20140826.png"></div>
-                  <div data-gd-sidebysidealign-row="1">
+            <div class="col-xs-4">
+              <div class="plan-item-container" ontouchstart="this.classList.toggle('flipped');">
+                <div class="plan-item">
+                  <div class="plan-item-side-A clearfix">
+                    <div class="plan-item-img plan-item-img-service solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/products/business-marketing/img/GetFound_LP_Sprite_20140903.png"></div>
                     <h3>Local Service Area</h3>
                     <p>Your local business serves a local area without a physical location that customers visit (ex. plumber, food truck, sailing tour provider, etc.)</p>
-                  </div>
-                  <div data-gd-sidebysidealign-row="2">
                     <a class="ghost-button" data-ci="92942">View Sites</a>
-                  </div> 
-                </div>
-                <div class="plan-item-side-B clearfix" data-gd-sidebysidealign-row="3">
-                  <i class="uxicon uxicon-x" data-ci="92939"></i>
-                  <h3>Local Service Area</h3>
-                  <p>Get listed on:</p>
-                  <ul>
-                    <li><i class="uxicon uxicon-checkmark"></i>Bing</li>
-                    <li><i class="uxicon uxicon-checkmark"></i>Yelp</li>
-                    <li><i class="uxicon uxicon-checkmark"></i>Foursquare</li>
-                    <li><i class="uxicon uxicon-checkmark"></i>eLocal</li>
-                    <li><i class="uxicon uxicon-checkmark"></i>Cortana</li>
-                    <li><i class="uxicon uxicon-checkmark"></i>and more</li>
-                  </ul>
+                  </div>
+                  <div class="plan-item-side-B clearfix">
+                    <i class="uxicon uxicon-x" data-ci="92939"></i>
+                    <h3>Local Service Area</h3>
+                    <p>Get listed on:</p>
+                    <ul>
+                      <li><i class="uxicon uxicon-checkmark"></i>Bing</li>
+                      <li><i class="uxicon uxicon-checkmark"></i>Yelp</li>
+                      <li><i class="uxicon uxicon-checkmark"></i>Foursquare</li>
+                      <li><i class="uxicon uxicon-checkmark"></i>eLocal</li>
+                      <li><i class="uxicon uxicon-checkmark"></i>Cortana</li>
+                      <li><i class="uxicon uxicon-checkmark"></i>and more</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div class="col-xs-4" data-gd-sidebysidealign-col="3">
-              <div class="plan-item">
-                <div class="plan-item-side-A clearfix" >
-                  <span class="badge badge-small badge-important badge-upper-right">Coming Soon</span>
-                  <div class="plan-item-img plan-item-img-online solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/products/business-marketing/img/GetFound_LP_Sprite_20140826.png"></div>
-                  <div data-gd-sidebysidealign-row="1">
+            <div class="col-xs-4">
+              <div class="plan-item-container" ontouchstart="this.classList.toggle('flipped');">
+                <div class="plan-item">
+                  <div class="plan-item-side-A clearfix" >
+                    <span class="badge badge-small badge-important badge-upper-right">Coming Soon</span>
+                    <div class="plan-item-img plan-item-img-online solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/products/business-marketing/img/GetFound_LP_Sprite_20140903.png"></div>
                     <h3>Online-Only</h3>
                     <p>You operate online and do not have a physical address to share (ex. web designer, ecommerce store, consultant, etc.)</p>
-                  </div>
-                  <div data-gd-sidebysidealign-row="2">
                     <a class="ghost-button" data-ci="92943">View Sites</a>
                   </div>
-                </div>
-                <div class="plan-item-side-B clearfix" data-gd-sidebysidealign-row="3">
-                  <i class="uxicon uxicon-x" data-ci="92940"></i>
-                  <h3>Online-Only</h3>
-                  <p>Get Found is not yet available for Online-Only businesses, but check back soon to see how we can help your business get listed online.</p>
+                  <div class="plan-item-side-B clearfix">
+                    <i class="uxicon uxicon-x" data-ci="92940"></i>
+                    <h3>Online-Only</h3>
+                    <p>Get Found is not yet available for Online-Only businesses, but check back soon to see how we can help your business get listed online.</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -462,9 +558,9 @@ assetPath: false
 
           <div class="row center-text">
             <p class="pricing">
-              As low as <span class="renewal-price"><strike>{1}/mo</strike> </span><span class="normal-price">{0}/mo*</span> <span class="save-percentage">Save {2}%</span>        
+              As low as <span class="renewal-price"><strike>{1}/mo</strike>* </span><span class="normal-price">{0}/mo</span> <span class="save-percentage">Save {2}</span>        
             </p>
-            <p class="inline-disclaimer">*Price valid for first year only.</p>
+            <p class="inline-disclaimer">*Current renewal price.</p>
           </div>
         </div>
       </section>
@@ -521,7 +617,7 @@ assetPath: false
         }
         .gd-swipe-bottom-nav li a {
 
-          background: ~"url(@{imgPath}GetFound_LP_Sprite_20140826.png)" no-repeat -926px -1189px transparent;
+          background: ~"url(@{imgPath}GetFound_LP_Sprite_20140903.png)" no-repeat -926px -1189px transparent;
           color: #dadada;
           display: block;
           height: 8px;
@@ -530,12 +626,12 @@ assetPath: false
           text-indent: -9999em;
         }
         .gd-swipe-bottom-nav li.active a {
-          background: ~"url(@{imgPath}GetFound_LP_Sprite_20140826.png)" no-repeat -871px -1189px transparent;
+          background: ~"url(@{imgPath}GetFound_LP_Sprite_20140903.png)" no-repeat -871px -1189px transparent;
           color: #70ac00;
         }
         a.arrow-left, 
         a.arrow-right {
-          background: ~"url(@{imgPath}GetFound_LP_Sprite_20140826.png)" no-repeat scroll 0 0 transparent;
+          background: ~"url(@{imgPath}GetFound_LP_Sprite_20140903.png)" no-repeat scroll 0 0 transparent;
           display: block;
           top: 150px;
           height: 60px;
@@ -567,7 +663,7 @@ assetPath: false
         .customer-slide {
           width: 600px;
           height: 382px;
-          background: ~"url(@{imgPath}GetFound_LP_Sprite_20140826.png)"  no-repeat scroll 0 0 transparent;
+          background: ~"url(@{imgPath}GetFound_LP_Sprite_20140903.png)"  no-repeat scroll 0 0 transparent;
           margin: 0 auto 20px;
         }
         .customer-slide.slide-1 {
@@ -661,7 +757,7 @@ assetPath: false
         <div class="container l-main-container">
           <div class="row">
             <div class="col-xs-3 right-text">
-              <div class="customer-image solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/products/business-marketing/img/GetFound_LP_Sprite_20140826.png"></div>          
+              <div class="customer-image solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/products/business-marketing/img/GetFound_LP_Sprite_20140903.png"></div>          
             </div>
             <div class="col-xs-9 customer-testimonial">
               <div class="customer-quote">"People tell me all the time they found our restaurant on Yelp, TripAdvisor or OpenTable. If we didn't show up on these sites, we'd lose business to a restaurant down the street. Get Found helps put my business everywhere it needs to be on the Web."</div>
@@ -703,15 +799,15 @@ assetPath: false
         }
 
         .step-item-img {
-          background: transparent ~"url(@{imgPath}GetFound_LP_Sprite_20140826.png)" no-repeat -47px -126px;
+          background: transparent ~"url(@{imgPath}GetFound_LP_Sprite_20140903.png)" no-repeat -47px -126px;
           width:192px;
           height:192px;
           margin: 0 auto;
         }
-        .step-item-img-control {
+        .step-item-img-visible {
           background-position: -0px -1168px;
         }
-        .step-item-img-visible {
+        .step-item-img-control {
           background-position: -195px -1168px;
         }
         .step-item-img-time {
@@ -763,7 +859,7 @@ assetPath: false
         .buyers-are-image-div {
           height: 289px;
           width: 503px;
-          background: transparent ~"url(@{imgPath}GetFound_LP_Sprite_20140826.png)" no-repeat -600px -779px ;
+          background: transparent ~"url(@{imgPath}GetFound_LP_Sprite_20140903.png)" no-repeat -600px -779px ;
           margin:50px 0 75px;
         }
       {% endless %}
@@ -924,7 +1020,6 @@ assetPath: false
     activateGetStartedBtn('#get-started-btn-2');
 
     // SETUP FLIPPING CARDS
-    $('[data-gd-sidebysidealign]').gdSideBySideAlign();
     activateCardFlippers('.plan-item','a.ghost-button','.plan-item-side-B i.uxicon-x');
 
     // SLIDER AREA
@@ -947,7 +1042,7 @@ assetPath: false
     
     var onSale = currentPrice !== renewalPrice;
     if(onSale) {
-      $(selector + ' p.pricing span.save-percentage').show();
+      //$(selector + ' p.pricing span.save-percentage').show();
       $(selector + ' p.pricing span.renewal-price').show();
     }
 
@@ -969,19 +1064,25 @@ assetPath: false
   };
 
   var activateCardFlippers = function(selector, openSelector, closeSelector) {
-    var animationSpeedMs = 400;
-    $(selector).on('click',openSelector, function(){
-      var $this = $(this);
-      $this.closest('.plan-item-side-A').hide(animationSpeedMs,function(){
-        $this.closest('.plan-item').find('.plan-item-side-B').show(animationSpeedMs);
+
+    if($.browser.msie && parseFloat($.browser.version) < 10) {
+      $(selector).on('click',openSelector, function(){
+        $(this).closest('.plan-item').find('.plan-item-side-A').hide();
+        $(this).closest('.plan-item').find('.plan-item-side-B').show();
       });
-    });
-    $(selector).on('click',closeSelector, function(){
-      var $this = $(this);
-      $this.closest('.plan-item-side-B').hide(animationSpeedMs,function(){
-        $this.closest('.plan-item').find('.plan-item-side-A').show(animationSpeedMs);
+      $(selector).on('click',closeSelector, function(){
+        $(this).closest('.plan-item').find('.plan-item-side-B').hide();
+        $(this).closest('.plan-item').find('.plan-item-side-A').show();
       });
-    });
+    } else {
+      $(selector).on('click',openSelector + ',' + closeSelector, function(){
+        $(this).closest('.plan-item-container').toggleClass('flipped');
+      });
+    }
+
+      $(selector).on('click',openSelector + ',' + closeSelector, function(){
+        $(this).closest('.plan-item-container').toggleClass('flipped');
+      });
   };
 
   var tokenizeThis = function($obj, strArr) {
@@ -1038,7 +1139,7 @@ assetPath: false
     });
           
   }
-
+/*
 
   // gdSideBySideAlign plugin
   (function ( $, window, document, undefined ) {
@@ -1090,7 +1191,7 @@ assetPath: false
         }
 
     }; /* end GDSideBySideAlign.prototype.init */
-
+/*
     // register the function to be used
     $.fn[pluginName] = function ( options ) {
       return this.each(function () {
@@ -1101,7 +1202,7 @@ assetPath: false
     };
 
   })( jQuery, window, document );
-
+*/
 </script>
 <!-- end-js-elevate -->
 {% endblock %}
