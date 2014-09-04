@@ -1,7 +1,8 @@
 ---
 location: sales/domains/gtld-registration.aspx
-id: 
-name: 
+id: 5408e21df778fc27d0489200
+name: GCE-26819
+comments: GAC Support - Adding Toggle capabilities
 ---
 ##if(false)
 {% include 'modules/doc-block.html' %}
@@ -17,11 +18,11 @@ name:
     <title>[@L[cds.sales/domains/gtld-registration:page.title]@L]</title>
     <link rel="canonical" href="[@T[link:<external linktype='siteurl' path='/domains/gtld-registration.aspx' />]@T]"/> 
     <link rel="shortcut icon" href="[@T[link:<imageroot />]@T]assets/godaddy.ico"/>
-    <link href="[@T[link:<cssroot />]@T]fos/201401/global/css/3.6.0/combined-3.6.0.css" rel="stylesheet" type="text/css" />
+    <link href="[@T[link:<cssroot />]@T]fos/global/build/0.2.0/gd-fos-global.min.css" rel="stylesheet" type="text/css" />
 ##if(siteContextAny(gd))
-    <link href="[@T[link:<css path='fos/sales/themes/scotty/domains/tui/css/tui_2014_09_02.css' />]@T]" rel="stylesheet" type="text/css"  /> 
+    <link href="[@T[link:<css path='fos/sales/themes/scotty/domains/tui/css/styles.css' />]@T]" rel="stylesheet" type="text/css"  /> 
 ##else
-    <link href="[@T[link:<css path='fos/sales/themes/scotty/domains/tui/css/tui_pl_2014_09_02.css' />]@T]" rel="stylesheet" type="text/css"  />
+    <link href="[@T[link:<css path='fos/sales/themes/scotty/domains/tui/css/styles_pl.css' />]@T]" rel="stylesheet" type="text/css"  />
 ##endif 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags" />]@P]
     <script src="[@T[link:<javascriptroot />]@T]shared/js/1.5.1/global.20120918.min.js" type="text/javascript" ></script>
@@ -112,7 +113,7 @@ name:
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Bottom" />]@P]
     <!-- JS YOU WILL PROBABLY NEED -->
     <script src="[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2" type="text/javascript"></script>
-    <script src="[@T[link:<js path='fos/sales/themes/scotty/domains/tui/js/tui_2014_09_02.js' />]@T]"></script>
+    <script src="[@T[link:<js path='fos/sales/themes/scotty/domains/tui/js/tui.js' />]@T]"></script>
     
     <!--[if lte IE 8]>
     <script src="[@T[link:<javascriptroot />]@T]fos/script/JSON2.min.js"></script>

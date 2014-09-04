@@ -558,9 +558,10 @@ if (!domains.controls.cds_gtld_registration) {
               switch ((item.Type.toLowerCase().startsWith("input") ? "input" : item.Type.toLowerCase())) {
                 case "input":
                 text += '<h2 for="' + item.Name + '">' + item.LabelText;
-                if (item.DescriptionText && item.DescriptionText !== undefined && item.DescriptionText != null)
+                if (item.DescriptionText && item.DescriptionText !== undefined && item.DescriptionText != null) {
+                  text += '<span class="g-toolTip"><span>' + item.DescriptionText + '</span></span>';
+                }
                 var type = item.Type.toLowerCase().substr(5, item.Type.toLowerCase().length);
-                text += '<span class="g-toolTip"><span>' + item.DescriptionText + '</span></span>';
                 text += '</h2><input type="' + type + '" id="' + item.Name + '" name="' + item.Name + '"';
                 if (item.Required != undefined && item.Required != null && item.Required === "false") {
                   text += ' data-optional="true"';
@@ -614,7 +615,12 @@ if (!domains.controls.cds_gtld_registration) {
                 text += '<div class="radioBtnGroup">';
                 text += '<h2>' + item.LabelText + '</h2>';
                 $.each(item.ItemCollection, function(icIndex, option) {
-                  text += '<div><label><input type="radio" id="' + item.Name + '_' + option.ItemId + '" name="' + item.Name + '" value="' + option.ItemId + '" class="radio" /><span class = "radio"/><h3 for="' + item.Name + '_' + option.ItemId + '">' + option.ItemLabel + '</h3></label></div>';
+                  var checked = "";
+                  if (item.DefaultValue && item.DefaultValue == option.ItemId) {
+                    checked = "checked";
+                  }
+                  text += '<div><label><input type="radio" id="' + item.Name + '_' + option.ItemId + '" name="' + item.Name + '" value="' + option.ItemId + '" class="radio" />';
+                  text += '<span class = "radio ' + checked + '"/><h3 for="' + item.Name + '_' + option.ItemId + '">' + option.ItemLabel + '</h3></label></div>';
                 });
                 text += '</div>';
                 break;
@@ -622,7 +628,10 @@ if (!domains.controls.cds_gtld_registration) {
                 if(item.Name != 'tui-formtype') {
                 text += '<input type="hidden" name="' + item.Name + '" id="' + item.Name + '" id="' + item.Name + '" value="' + item.Value + '" />';
                 }                
-              break;
+                break;
+              case "label":
+                text += '<div class="sub-label">' + item.LabelText + '</div>';
+                break;
               default:
                 text += JSON.stringify(item);
                 break;
@@ -638,7 +647,10 @@ if (!domains.controls.cds_gtld_registration) {
         settings.$dppArea.html(html);
         doSelectBoxChange();
         settings.$dppArea.show();
-
+        if(parsedData.FormItems.formName.toLowerCase() === "lawyer_gac" || parsedData.FormItems.formName.toLowerCase() === "attorney_gac"){
+          settings.$dppArea.find(".field").hide();
+          settings.$dppArea.find(".tui-IsUsedForLegalServices").show();
+        }
 
         settings.$dppArea.find('form').submit(function(event) {
           event.stopPropagation();
@@ -664,12 +676,14 @@ if (!domains.controls.cds_gtld_registration) {
         });
 
         settings.$dppArea.find('form input, form select, form textarea').change(function() {
-          if (ValidateDPPForm($(this).parents('form'), false)) {
-            setupContinueClick(true, actionsEnum.validate); // Enable continue button
-          } else {
-            setupContinueClick(false); // Disable continue button
+          if (!($(this).parents(".lawyer_gac") || $(this).parents(".attorney_gac"))){
+            if (ValidateDPPForm($(this).parents('form'), false)) {
+              setupContinueClick(true, actionsEnum.validate); // Enable continue button
+            } else {
+              setupContinueClick(false); // Disable continue button
+            }
+            $(this).parents('div.field').find('.invalid').removeClass('invalid');
           }
-          $(this).parents('div.field').find('.invalid').removeClass('invalid');
         });
 
         settings.$dppArea.find('form input').keyup(function(event) {
@@ -759,7 +773,7 @@ if (!domains.controls.cds_gtld_registration) {
       $.each(form.find('input[type="radio"]'), function(i, field) {
         var $field = $(field);
 
-        if (form.find("input[name='" + field.name + "']:checked").length <= 0) {
+        if (form.find("input[name='" + field.name + "']:checked").length < 0) {
           valid = false;
           if (showInvalid) $field.next('span.radio').addClass('invalid');
         }
@@ -826,6 +840,33 @@ if (!domains.controls.cds_gtld_registration) {
       //radio button event handler
       $('#eligibility-form').delegate('div>label>input[type="radio"]', 'change', function(e) {
         if (!e) e = window.event;
+        if ($(this).parents(".lawyer_gac") || $(this).parents(".attorney_gac")) {
+
+          if ($(this).val() === "NO"){
+            settings.$dppArea.find(".field").hide();
+            settings.$dppArea.find(".tui-IsUsedForLegalServices").show();
+            $("#tui-IsUsedForLegalServices_YES").removeAttr("checked");
+            $("#tui-IsUsedForLegalServices_NO").attr("checked", true);
+            $("#tui-regulatoryBody, #tui-regulatoryEmail, #tui-regulatoryPhone").removeAttr("name");
+          };
+
+          if ($(this).val() === "YES"){
+            settings.$dppArea.find(".field").show();
+            $("#tui-IsUsedForLegalServices_NO").removeAttr("checked");
+            $("#tui-IsUsedForLegalServices_YES").attr("checked", true);
+            $("#tui-regulatoryBody").attr("name", "tui-regulatoryBody");
+            $("#tui-regulatoryEmail").attr("name", "tui-regulatoryEmail");
+            $("#tui-regulatoryPhone").attr("name", "tui-regulatoryPhone");
+          };
+
+          if (ValidateDPPForm($(this).parents('form'), false)) {
+            setupContinueClick(true, actionsEnum.validate); // Enable continue button
+          } else {
+            setupContinueClick(false); // Disable continue button
+          }
+          $(this).parents('div.field').find('.invalid').removeClass('invalid');
+        }
+
         $.each($(e.target).parent().parent().parent().find('input[type="radio"]'), function() {
           if ($(this).is(':checked'))
             $(this).parent().find('span.radio').addClass('checked');

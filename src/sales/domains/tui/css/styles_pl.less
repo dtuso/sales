@@ -90,7 +90,7 @@ div#smd-info>p {
 }
 #msgError { margin: 10px 0 }
 span.g-toolTip {
-    background: url(../../../../../../../tlds/img/tooltip.png) no-repeat scroll 2px 2px rgba(0,0,0,0);
+    background: url(../../../../../../tlds/img/tooltip.png) no-repeat scroll 2px 2px rgba(0,0,0,0);
     content: "";
     height: 5px;
     padding: 9px;
@@ -218,8 +218,15 @@ form input {
     margin: 5px 0 0 0;
     height: 26px;
 }
-form input[type="text"] { width: 300px }
-form div>label {
+#tui-IsUsedForLegalServices_YES,
+#tui-IsUsedForLegalServices_NO {
+  cursor: pointer;
+}
+
+form input[type="text"] {
+    width: 300px;
+}
+form div > label {
     font-weight: 700;
     font-size: 17px;
     display: block;
@@ -272,21 +279,21 @@ form input[type="radio"] {
     opacity: 0; 
 }
 form span.radio {
-    background: url(../../domain-configuration/img/DPP_sprite.png) no-repeat -157px -8px;
+    background: url(../../domain-config/img/dpp_sprite_pl.png) no-repeat -777px -21px;
     vertical-align: top;
     display: inline-block;
-    height: 35px;
-    margin: 0 20px 0 0;
-    width: 35px;
+    height: 21px;
+    margin: 6px 5px 0 0;
+    width: 21px;
     cursor: pointer;
 }
 form span.radio.checked {
-    background: url(../../domain-configuration/img/DPP_sprite.png) no-repeat -121px -7px;
+    background: url(../../domain-config/img/dpp_sprite_pl.png) no-repeat -733px -21px;
     vertical-align: top;
     display: inline-block;
-    height: 35px;
-    margin: 0 20px 0 0;
-    width: 35px;
+    height: 21px;
+    margin: 6px 5px 0 0;
+    width: 21px;
     cursor: pointer;
 }
 #main-wrap .selectstyleui {
@@ -422,17 +429,64 @@ form span.radio.checked {
   padding:0 0 27px 0;
 }
 /* NYC specific styles */
-#main-wrap #eligibility-form > form.nyc_eligibility .error {font-size: 10px; font-style: normal}
-b, strong {font-weight: bold !important}
-#eligibility-form > form.nyc_eligibility > h1 {font-size: 40px;border-bottom: 1px solid;border-color: #b3b3b3;padding-bottom: 10px}
-#eligibility-form > form.nyc_eligibility > .headingText, #eligibility-form .headingText > p  {font-size: 18px; margin: 20px 0; padding: 0; color: #333}
-#eligibility-form > form.nyc_eligibility > .headingText > ul {list-style: inherit; margin-top: 20px}
+#main-wrap #eligibility-form > form.nyc_eligibility .error {
+font-size: 10px; 
+font-style: normal
+}
+b, strong {font-weight: bold !important;}
+
+
+#eligibility-form > form.nyc_eligibility > h1, 
+#eligibility-form > form.lawyer_gac > h1,  
+#eligibility-form > form.attorney_gac > h1
+ {
+  font-size: 40px;
+  border-bottom: 1px solid;
+  border-color: #b3b3b3;
+  padding-bottom: 10px;
+}
+#eligibility-form > form.nyc_eligibility > .headingText, 
+#eligibility-form .headingText > p  {
+font-size: 18px; 
+margin: 20px 0; 
+padding: 0; 
+color: #333
+}
+#eligibility-form > form.lawyer_gac h2,
+#eligibility-form > form.attorney_gac h2 {
+  display: block;
+  font-size: 18px;
+  margin: 25px 0 0;
+  padding: 0;
+  color: #333333;
+}
+#eligibility-form > form.nyc_eligibility > .headingText > ul {
+list-style: inherit; 
+margin-top: 20px
+}
 #eligibility-form > form.nyc_eligibility > .headingText > ul > li {margin: 0 40px}
 #eligibility-form > form.nyc_eligibility > div.field > h2 {font-size: 14px;margin: 0;padding: 20px 0 0;}
+#eligibility-form > form.lawyer_gac > div.field > h2,
+#eligibility-form > form.attorney_gac > div.field > h2 {
+  font-size: 14px;
+  margin: 0;
+  padding: 15px 0 0;
+}
 #eligibility-form > form.nyc_eligibility > div.field > h2:after {content:" *"; color: red; margin-top: -5px}
 #eligibility-form > form.nyc_eligibility > div.tui-address2 > h2:after, #eligibility-form > form > div.tui-fax > h2:after, #eligibility-form > form > div.tui-companyName > h2:after {display:none}
-#eligibility-form > form.nyc_eligibility > div.field > h2 >.g-toolTip {display:none}
+#eligibility-form > form.nyc_eligibility > div.field > h2 >.g-toolTip,
+#eligibility-form > form.lawyer_gac > div.field > h2 > .g-toolTip,
+#eligibility-form > form.attorney_gac > div.field > h2 > .g-toolTip {display:none}
 #eligibility-form > form.nyc_eligibility input {font-size: 14px;border: 1px solid;border-color: #B3B3B3;padding: 4px 10px;width:98%}
+#eligibility-form > form.lawyer_gac input,
+#eligibility-form > form.attorney_gac input {
+  font-size: 14px;
+  border: 1px solid;
+  border-color: #B3B3B3;
+  padding: 4px 10px;
+  width: 64%;
+  margin: 2px 0 0 0;
+}
 #eligibility-form > form.nyc_eligibility #tui-firstName {margin-right:20px}
 form.nyc_eligibility div.tui-firstName, form.nyc_eligibility div.tui-lastName, form.nyc_eligibility div.tui-city, form.nyc_eligibility div.tui-stateOrProvince, form.nyc_eligibility div.tui-zipCode {display: inline-block}
 form.nyc_eligibility div.tui-firstName, form.nyc_eligibility div.tui-lastName {width: 48%}
@@ -446,3 +500,11 @@ form.nyc_eligibility div.tui-stateOrProvince {margin: 0 20px 0 33px}
 #main-wrap div.tui-country > .selectstyleui {width: 100%}
 #main-wrap > form.nyc_eligibility div.tui-stateOrProvince > .selectstyleui>.ss-options {z-index: 5}
 #eligibility-form > form.nyc_eligibility input.inputErrors{background-color: #FFD9D9; border-color:#F00000}
+#eligibility-form > form.lawyer_gac, 
+#eligibility-form > form.attorney_gac {
+  padding-bottom:10px;
+}
+#eligibility-form > form.lawyer_gac div .sub-label,
+#eligibility-form > form.attorney_gac div .sub-label {
+  margin:30px 0 0;
+}
