@@ -7,7 +7,7 @@
       },
       "cdsLocation": "sales/contact-us.aspx",
       "draft": {
-        "id": "53a89a76f778fc13248233d5",
+        "id": "5409ea7df778fc27d0489222",
         "createdDate": "2014-06-23",
         "createdBy": {
           "fullName": "Avinash Peesari",
@@ -22,7 +22,7 @@
     "metaTitle": "[@L[cds.sales/contact-us:page-title]@L]",
     "metaDescription": "[@L[cds.sales/contact-us:meta-description]@L]",
     "metaKeywords": "[@L[cds.sales/contact-us:meta-keywords]@L]",
-    "metaCanonicalPath": "/hosting/website-builder.aspx",
+    "metaCanonicalPath": "/contact-us.aspx",
     "metaOgTitle": "[@L[cds.sales/contact-us:og-title]@L]",
     "metaOgImage": "fos/201401/contact-us/img/og.png",
     "metaOgDescription": "[@L[cds.sales/contact-us:og-description]@L]"
