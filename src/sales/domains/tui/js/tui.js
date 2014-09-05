@@ -552,15 +552,25 @@ if (!domains.controls.cds_gtld_registration) {
           $.each(domain, function (igIndex, itemGroup) {
             
             $.each(itemGroup, function(iIndex, item) {
-              html += '<div class="field ' + item.Name + '">';
+
+              var dependsOn = "", dependsValue = "";
+              if (item.DependsCollection != null) {
+                $.each(item.DependsCollection, function (icIndex, option) {
+                  dependsOn = 'data-dependson="tui-' + option.FieldName + '"';
+                  dependsValue = 'data-dependsval="' + option.FieldValue + '"';
+                });
+              }
+
+              html += '<div class="field ' + item.Name + '" ' + dependsOn + ' ' + dependsValue + '>';
 
               var text = '';
               switch ((item.Type.toLowerCase().startsWith("input") ? "input" : item.Type.toLowerCase())) {
-                case "input":
+              case "input":
                 text += '<h2 for="' + item.Name + '">' + item.LabelText;
-                if (item.DescriptionText && item.DescriptionText !== undefined && item.DescriptionText != null)
+                if (item.DescriptionText && item.DescriptionText !== undefined && item.DescriptionText != null) {
+                  text += '<span class="g-toolTip"><span>' + item.DescriptionText + '</span></span>';
+                }
                 var type = item.Type.toLowerCase().substr(5, item.Type.toLowerCase().length);
-                text += '<span class="g-toolTip"><span>' + item.DescriptionText + '</span></span>';
                 text += '</h2><input type="' + type + '" id="' + item.Name + '" name="' + item.Name + '"';
                 if (item.Required != undefined && item.Required != null && item.Required === "false") {
                   text += ' data-optional="true"';
@@ -582,14 +592,15 @@ if (!domains.controls.cds_gtld_registration) {
                 }
 
                 text += '<h2 for="' + item.Name + '">' + item.LabelText;
-                if (item.DescriptionText && item.DescriptionText !== undefined && item.DescriptionText != null)
+                if (item.DescriptionText && item.DescriptionText !== undefined && item.DescriptionText != null) {
                   text += '<span class="g-toolTip"><span>' + item.DescriptionText + '</span></span>';
+                }
                 text += '</h2><select class="selectstyles" id="' + item.Name + '" name="' + item.Name + '"' + selections + '><option id="defaultOption" value="chooseOption">' + settings.chooseOptionText + '</option>';
-                $.each(item.ItemCollection, function (icIndex, option) {
+                $.each(item.ItemCollection, function(icIndex, option) {
                   var selected = "";
                   if (item.DefaultValue == option.ItemId) {
                     selected = "selected";
-                  } 
+                  }
                   text += '<option value="' + option.ItemId + '"' + selected + '>' + option.ItemLabel + '</option>';
                 });
                 text += '</select>';
@@ -606,23 +617,32 @@ if (!domains.controls.cds_gtld_registration) {
                 }
 
                 text += '<div class = "toggle"/><label for="' + item.Name + '">' + item.LabelText + '</label>';
-                if (item.DescriptionText && item.DescriptionText !== undefined && item.DescriptionText != null)
+                if (item.DescriptionText && item.DescriptionText !== undefined && item.DescriptionText != null) {
                   text += '<p>' + item.DescriptionText + '</p>';
+                }
                 text += '</label></div>';
                 break;
               case "radio":
                 text += '<div class="radioBtnGroup">';
                 text += '<h2>' + item.LabelText + '</h2>';
-                $.each(item.ItemCollection, function(icIndex, option) {
-                  text += '<div><label><input type="radio" id="' + item.Name + '_' + option.ItemId + '" name="' + item.Name + '" value="' + option.ItemId + '" class="radio" /><span class = "radio"/><h3 for="' + item.Name + '_' + option.ItemId + '">' + option.ItemLabel + '</h3></label></div>';
+                $.each(item.ItemCollection, function (icIndex, option) {
+                  var checked = "";
+                  if (item.DefaultValue && item.DefaultValue == option.ItemId) {
+                    checked = "checked";
+                  }
+                  text += '<div><label><input type="radio" id="' + item.Name + '_' + option.ItemId + '" name="' + item.Name + '" value="' + option.ItemId + '" class="radio" />';
+                  text += '<span class = "radio '+checked+'"/><h3 for="' + item.Name + '_' + option.ItemId + '">' + option.ItemLabel + '</h3></label></div>';
                 });
                 text += '</div>';
                 break;
               case "hidden":
-                if(item.Name != 'tui-formtype') {
-                text += '<input type="hidden" name="' + item.Name + '" id="' + item.Name + '" id="' + item.Name + '" value="' + item.Value + '" />';
-                }                
-              break;
+                if (item.Name != 'tui-formtype') {
+                  text += '<input type="hidden" name="' + item.Name + '" id="' + item.Name + '" id="' + item.Name + '" value="' + item.Value + '" />';
+                }
+                break;
+                case "label":
+                  text += '<div class="sub-label">' + item.LabelText + '</div>';
+                  break;
               default:
                 text += JSON.stringify(item);
                 break;
@@ -639,6 +659,7 @@ if (!domains.controls.cds_gtld_registration) {
         doSelectBoxChange();
         settings.$dppArea.show();
 
+        checkDependables();
 
         settings.$dppArea.find('form').submit(function(event) {
           event.stopPropagation();
@@ -663,7 +684,8 @@ if (!domains.controls.cds_gtld_registration) {
           $(this).parents('div.field').find('.invalid').removeClass('invalid');
         });
 
-        settings.$dppArea.find('form input, form select, form textarea').change(function() {
+        settings.$dppArea.find('form input, form select, form textarea').change(function () {
+          checkDependables();
           if (ValidateDPPForm($(this).parents('form'), false)) {
             setupContinueClick(true, actionsEnum.validate); // Enable continue button
           } else {
@@ -738,32 +760,40 @@ if (!domains.controls.cds_gtld_registration) {
     }
 
     function serializeCurrentDomain() {
+      verifyAndSubmitDependables();
       var serialization = $("#form" + currentDomainName).serialize();
+      verifyAndRenameDependables();
       return serialization;
     }
 
     function ValidateDPPForm(form, showInvalid) {
+      
       var valid = true;
 
       if (showInvalid) form.find('.invalid').removeClass('invalid');
 
-      $.each(form.find('input:not(:hidden), textarea'), function (i, field) {
+      $.each(form.find('input[type!="hidden"][type!="radio"], textarea'), function (i, field) {
         var $field = $(field);
+        var isVisible = $field.parent().is(":visible");
+        
         var isOptional = $field.attr("data-optional") != undefined && $field.attr("data-optional") === "true";
-        if (!isOptional && ($field.val() === undefined || $field.val() == null || $field.val() == "" || $field.val().length <= 0)) {
+        if (isVisible && !isOptional && ($field.val() === undefined || $field.val() == null || $field.val() == "" || $field.val().length <= 0)) {
           valid = false;
           if (showInvalid) $field.addClass('invalid');
         }
       });
 
+      
+
       $.each(form.find('input[type="radio"]'), function(i, field) {
         var $field = $(field);
-
-        if (form.find("input[name='" + field.name + "']:checked").length <= 0) {
+        if (form.find("input[name='" + field.name + "']:checked").length < 0) {
           valid = false;
           if (showInvalid) $field.next('span.radio').addClass('invalid');
         }
       });
+
+      
 
       $.each(form.find('input[type="checkbox"]'), function(i, field) {
         var $field = $(field);
@@ -774,6 +804,8 @@ if (!domains.controls.cds_gtld_registration) {
         }
       });
 
+      
+
       $.each(form.find('select'), function(i, field) {
         var $field = $(field);
 
@@ -783,12 +815,69 @@ if (!domains.controls.cds_gtld_registration) {
         }
       });
 
+      
       return valid;
     }
 
     function removeErrors() {
       settings.$errorArea.slideUp();
       $("h3.error").remove();
+    }
+
+    function checkDependables(changedElement, changedValue) {
+      
+      var dependables = $("[data-dependson]");
+      if (changedElement != null) {
+        dependables = $("[data-dependson='" + changedElement.name + "']");
+      }
+
+      dependables.each(function () {
+        var $depender = $(this);
+        var dependValue = $depender.attr("data-dependsval");
+
+        if (changedValue == null) {
+          var dependsOn = $depender.attr("data-dependson");
+          var $dependee = $("input[name='" + dependsOn + "']");
+          changedValue = $dependee.filter(":checked").val();
+        }
+
+        if (dependValue == changedValue) {
+          $depender.show();
+        }
+        else {
+          $depender.hide();
+          $depender.val("");
+        }
+      });
+    }
+
+    function verifyAndSubmitDependables() {
+
+      var dependables = $("[data-dependson]");
+
+      dependables.each(function(){
+        var $dependerDiv = $(this);
+        var dependerValue = $dependerDiv.attr("data-dependsval");
+        var $dependerInput = $dependerDiv.find("input");
+        var $dependee = $("input[name='" + $dependerDiv.attr("data-dependson") + "']");
+        var dependeeValue = $dependee.filter(":checked").val();
+
+        if (dependerValue != dependeeValue) {
+          $dependerInput.attr("data-oldname", $dependerInput.attr("name"));
+          $dependerInput.removeAttr("name");
+        }
+      });
+    }
+
+    function verifyAndRenameDependables(){
+      var dependables = $("[data-dependson]");
+
+      dependables.each(function(){
+        if ($(this).find("input").attr("data-oldname")){
+          $(this).find("input").attr("name", $(this).find("input").attr("data-oldname"));
+          $(this).find("input").removeAttr("data-oldname");
+        }
+      });
     }
 
     // PUBLIC functions
@@ -826,6 +915,7 @@ if (!domains.controls.cds_gtld_registration) {
       //radio button event handler
       $('#eligibility-form').delegate('div>label>input[type="radio"]', 'change', function(e) {
         if (!e) e = window.event;
+        checkDependables(this, $(this).val());
         $.each($(e.target).parent().parent().parent().find('input[type="radio"]'), function() {
           if ($(this).is(':checked'))
             $(this).parent().find('span.radio').addClass('checked');
