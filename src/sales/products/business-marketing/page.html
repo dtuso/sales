@@ -831,7 +831,7 @@ assetPath: false
             <div class="col-xs-4">
               <div class="step-item-img step-item-img-visible "></div>
               <h3>Be Visible</h3>
-              <p>Make sure your local business listing is on sites that our customers visit.</p>
+              <p>Make sure your local business listing is on sites that your customers visit.</p>
             </div>
             <div class="col-xs-4">
               <div class="step-item-img step-item-img-time "></div>
@@ -1005,6 +1005,17 @@ assetPath: false
 
 <!-- start-js-elevate -->
 <script>
+  var locuPage = {};
+  ##if(isManager())
+    locuPage.isManager = true;
+    locuPage.redirectUrl = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]';
+  ##else
+    locuPage.isManager = false;
+    locuPage.redirectUrl ='[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]';
+  ##endif
+
+
+  {% jsminify %}
 
   $(document).ready(function(){
 
@@ -1108,10 +1119,10 @@ assetPath: false
     url += '/1';
     url += '/locu_Essential1Yr' //Plan Name
 
-    ##if(isManager())
-    var mgrNumber = $('#mgrNumber').val();
-    url += '/?mgrshopper=' +  mgrNumber;
-    ##endif
+    if(locuPage.isManager) {
+      var mgrNumber = $('#mgrNumber').val();
+      url += '/?mgrshopper=' +  mgrNumber;
+    }
 
     var newCartCt = pcCartCt + 1;
 
@@ -1129,78 +1140,10 @@ assetPath: false
       pcUpdateCart(newCartCt);
 
       // 3. redirect user to the cart where their product should be waiting for them.
-      ##if(isManager())
-        window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]';
-      ##else
-        window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]';
-      ##endif
-    });
-          
+      window.location = locuPage.redirectUrl;
+    });          
   }
-/*
-
-  // gdSideBySideAlign plugin
-  (function ( $, window, document, undefined ) {
-
-    var pluginName = 'gdSideBySideAlign',
-        defaults = {
-          bailIfRowCountsMismatch : true
-    };
-
-    function GDSideBySideAlign( element, options ) {
-      this.element = element;
-      this.options = $.extend( {}, defaults, options);
-      this._defaults = defaults;
-      this._name = pluginName;
-      this.init();
-    }
-
-    GDSideBySideAlign.prototype.init = function () {
-        // Find the columns
-        var $columns = $(this.element).find('[data-gd-sidebysidealign-col]');
-
-        if($columns.length == 0) {
-          return; // bail if no columns found
-        }
-
-        // Make sure columns have an equal number of rows
-        var numRows = 0, equalLength = true;
-        $.each($columns, function(idx,item){
-          var $rows = $(item).find('[data-gd-sidebysidealign-row]');
-          if(numRows == 0) {
-            numRows = $rows.length;
-          }
-          if(equalLength) {
-            if(numRows != $rows.length) equalLength = false;
-          }
-        });
-        if(numRows==0 || !equalLength && this.options.bailIfRowCountsMismatch) {
-          return; // bail if no rows, or rows are not equal length
-        }
-
-        // loop thru each row and grab the largest cell height and apply to each cell in that row
-        for(var i=1; i<=numRows; i++) {
-          var $cells = $columns.find('[data-gd-sidebysidealign-row="' + i + '"]' );
-          var maxHeight = 0;
-          $.each($cells,function(idx, cell){
-            maxHeight = Math.max(maxHeight, $(cell).height());
-          });
-          $cells.height(maxHeight);
-        }
-
-    }; /* end GDSideBySideAlign.prototype.init */
-/*
-    // register the function to be used
-    $.fn[pluginName] = function ( options ) {
-      return this.each(function () {
-        if (!$.data(this, 'plugin_' + pluginName)) {
-          $.data(this, 'plugin_' + pluginName, new GDSideBySideAlign( this, $(this).data('gd-sidebysidealign') || options ));
-        }
-      });
-    };
-
-  })( jQuery, window, document );
-*/
+  {% endjsminify %}
 </script>
 <!-- end-js-elevate -->
 {% endblock %}
