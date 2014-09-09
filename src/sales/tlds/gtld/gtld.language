@@ -1,7 +1,7 @@
 ---
 location: localization/sales/gd/tlds/gtld/en
-id: 53fb7e04f778fc1188ab20e3
-name: GCE-26709
+id: 540e3fcdf778fc1720990021
+name: GCE-27605
 comments: Updating slider content.
 ---
 {% include 'modules/doc-block.html' %}
@@ -458,6 +458,8 @@ El Internet en Español.
 <strong>.photography</strong> increases your exposure.
 <phrase key="MainBannerCarouselSlideTextVegas"/>
 Reach tourists 24/7 with <strong>.vegas</strong>
+<phrase key="MainBannerCarouselSlideText1Vegas"/>
+What happens in <strong>.vegas</strong> can happen anywhere
 <phrase key="MainBannerCarouselSlideTextNyc"/>
 Start spreading the news! <strong>.nyc</strong> is here.
 <phrase key="MainBannerCarouselSlideTextServices"/>

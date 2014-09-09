@@ -78,6 +78,12 @@
           { "Description" : ".TAX Slide Link" }
         ]
       },
+       { ".SOLUTIONS Slide Link" : [
+          { "ITC ID" : "89732" },
+          { "ITC Code" : "GtldEoiSolutionsLink" },
+          { "Description" : ".SOLUTIONS Slide Link" }
+        ]
+      },
       { ".REVIEWS Slide Link" : [
           { "ITC ID" : "" },
           { "ITC Code" : "GtldEoiReviewsLink" },
