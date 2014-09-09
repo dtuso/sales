@@ -274,6 +274,12 @@
           { "Description" : "Buttom TLD Pods - .ninja" }
         ]
       },
+       { "Buttom TLD Pods - .ROCKS" : [
+          { "ITC ID" : "93154" },
+          { "ITC Code" : "" },
+          { "Description" : "Buttom TLD Pods - .ROCKS" }
+        ]
+      },
       { "Buttom TLD Pods - .PHOTOGRAPHY" : [
           { "ITC ID" : "88760" },
           { "ITC Code" : "" },
@@ -316,6 +322,12 @@
           { "Description" : "Buttom TLD Pods - .TRADE" }
         ]
       },
+      { "Buttom TLD Pods - .SOCIAL" : [
+          { "ITC ID" : "73050" },
+          { "ITC Code" : "" },
+          { "Description" : "Buttom TLD Pods - .SOCIAL" }
+        ]
+      },
       { "Buttom TLD Pods - .DIRECTORY" : [
           { "ITC ID" : "89734" },
           { "ITC Code" : "" },
@@ -326,6 +338,12 @@
           { "ITC ID" : "90324" },
           { "ITC Code" : "" },
           { "Description" : "Buttom TLD Pods - .CLUB" }
+        ]
+      },
+       { "Buttom TLD Pods - .GLOBAL" : [
+          { "ITC ID" : "92814" },
+          { "ITC Code" : "" },
+          { "Description" : "Buttom TLD Pods - .GLOBAL" }
         ]
       },
       { "Buttom TLD Pods - .CONSULTING" : [
@@ -468,6 +486,18 @@
           { "Description" : "New Available TLD's Column - .PHOTOS" }
         ]
       },
+      { "New Domains Available TLD's Column - .KAUFEN" : [
+          { "ITC ID" : "93142" },
+          { "ITC Code" : "" },
+          { "Description" : "New Available TLD's Column - .KAUFEN" }
+        ]
+      },
+      { "New Domains Available TLD's Column - .SOLUTIONS" : [
+          { "ITC ID" : "91414" },
+          { "ITC Code" : "" },
+          { "Description" : "New Available TLD's Column - .SOLUTIONS" }
+        ]
+      },
       { "New Domains Available TLD's Column - .ROCKS" : [
           { "ITC ID" : "92813" },
           { "ITC Code" : "" },
@@ -516,6 +546,18 @@
           { "ITC ID" : "88764" },
           { "ITC Code" : "" },
           { "Description" : "Coming Soon TLD's Column - .SHOP" }
+        ]
+      },
+      { "Coming Soon TLD's Column - .ARMY" : [
+          { "ITC ID" : "93141" },
+          { "ITC Code" : "" },
+          { "Description" : "Coming Soon TLD's Column - .ARMY" }
+        ]
+      },
+      { "Coming Soon TLD's Column - .MIAMI" : [
+          { "ITC ID" : "93143" },
+          { "ITC Code" : "" },
+          { "Description" : "Coming Soon TLD's Column - .MIAMI" }
         ]
       },
       { "Coming Soon TLD's Column - .VEGAS" : [
