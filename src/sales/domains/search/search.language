@@ -1,35 +1,10 @@
 ---
 location: localization/sales/gd/domains/domain-name-search/en
-id: 540de94af778fc172098ffa8
+id: 540f76a6f778fc15706586bf
 name: GCE-27612
+comments: Why GD Updates for Google
 ---
 {% include 'modules/doc-block.html' %}
-<!-- DOC BLOCK (DO NOT REMOVE)
-
-
-
-
-
-
-    IMPORTANT:
-      If version control is enabled for this page all changes to this page must also go through version control.
-
-    VERSION CONTROL:
-      https://github.secureserver.net/FOS-CDS-Pages/Sales
-
-    WEB PAGE CHAMPION:
-      Adam Smith <absmith@godaddy.com>
-
-    DRAFT DETAILS:
-      Modified Date:  2014-08-25 1:22:55 pm
-      Created By:     Pooja Singhvi <psinghvi@godaddy.com>
-      JIRA Ticket:    GCE-27612
-      Comments:       merchandising updates for 9/15
-
-
-
-
-END DOC BLOCK -->
 <phrase key="MetaTitle" />
 Domain Search | Advanced Domain Name Search Tool - [@T[companyname:nameseotitle]@T]
 <phrase key="MetaDescription" />
@@ -68,8 +43,10 @@ Domain Options
 FAQ
 <phrase key="WhyGoDaddyMiscBannerTitle" />
 Why choose [@T[companyname:name]@T]?
+<phrase key="WhyGoDaddyMiscBannerTitle2" />
+What's included in the price of your domain:
 <phrase key="WhyGoDaddyMiscBannerText" />
-The right domain name can set you up for future success. Don&apos;t leave it to chance. Go with the world leader.
+The right domain name can set you up for future success. With <strong>more than 58 million domains under management</strong>, we have more experience and expertise than anyone. Don't leave it to chance. Go with the world's largest registrar.
 <phrase key="WhyGoDaddyMiscBannerListTitle0" />
 Trust
 <phrase key="WhyGoDaddyMiscBannerListTitle1" />
@@ -82,6 +59,18 @@ More than 12 million customers count on us to help them find the right name and 
 We offer the widest selection of domains on the Web. There&apos;s no better place to find the name that&apos;s right for your business.
 <phrase key="WhyGoDaddyMiscBannerListText2" />
 Our award-winning domain experts are here 24/7 to help you any way they can. Call them anytime at [@T[supportphone:<technical />]@T].
+<phrase key="WhyGoDaddyMiscBannerliText1" />
+<strong>Simple domain set up</strong> – no technical skills required.
+<phrase key="WhyGoDaddyMiscBannerliText2" />
+<strong>Easy domain forwarding</strong> to any existing website.
+<phrase key="WhyGoDaddyMiscBannerliText3" />
+<strong>Up to 100 subdomains</strong> to customize your site.
+<phrase key="WhyGoDaddyMiscBannerliText4" />
+<strong>100 professional email aliases</strong> (e.g. sales@coolexample.com).
+<phrase key="WhyGoDaddyMiscBannerliText5" />
+<strong>Real time monitoring</strong> to keep you up and running.
+<phrase key="WhyGoDaddyMiscBannerText2" />
+[@T[companyname:name]@T] is <em>the</em> one-stop shop for all you need to build your online presence and grow your business, from website builders to hosting solutions and more. Join us and grow with the world leader.
 <phrase key="PreRegisterNow" />
 Pre-Register Now!
 <phrase key="PreRegister" />
