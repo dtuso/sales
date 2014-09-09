@@ -1,7 +1,8 @@
 ---
 location: sales/domains/domain-name-search.aspx
-id: 540df075f778fc172098ffaa
-name: GCE-27612
+id: 540f4809f778fc2718e3b687
+name: GCE-27547
+comments: Why GD Updates for Google
 ---
 {% extends 'layouts/base.html' %}
 {% block metahead %}
@@ -16,7 +17,7 @@ name: GCE-27612
 ##if(countrySiteAny(es,pt))
     <!-- International Background Images -->
     <style type="text/css">
-        .tab-content-whygoDaddy-bg-ds { background-image: url("[@T[link:<cssroot />]@T]fos/201401/domains/search/img/LATAM_bg-domain-search.jpg");}
+        /*.tab-content-whygoDaddy-bg-ds { background-image: url("[@T[link:<cssroot />]@T]fos/201401/domains/search/img/LATAM_bg-domain-search.jpg");}*/
         .plan-summary-container-do {background-image: url("[@T[link:<cssroot />]@T]fos/201401/domains/search/img/LATAM_bg-domain-options.jpg");}
         .tab-content-your-identity {background-image: url("[@T[link:<cssroot />]@T]fos/201401/domains/search/img/LATAM_bg-your-identity-domain-search.jpg");}
     </style>
@@ -26,7 +27,7 @@ name: GCE-27612
     <!-- International Background Images -->
     <style type="text/css">
         .misc-banner-content.misc-banner-content-syiab > * {color: #333333;}
-        .tab-content-whygoDaddy-bg-ds { background-image: url("[@T[link:<cssroot />]@T]fos/201401/domains/search/img/IN_bg-domain-search.jpg");}
+        /*.tab-content-whygoDaddy-bg-ds { background-image: url("[@T[link:<cssroot />]@T]fos/201401/domains/search/img/IN_bg-domain-search.jpg");}*/
         .plan-summary-container-do {background-image: url("[@T[link:<cssroot />]@T]fos/201401/domains/search/img/IN_bg-domain-options.jpg");}
         .tab-content-your-identity {background-image: url("[@T[link:<cssroot />]@T]fos/201401/domains/search/img/IN_bg-your-identity-domain-search.jpg");}
     </style>
@@ -35,7 +36,7 @@ name: GCE-27612
 ##if(countrySiteAny(my, ph, sg))
     <!-- International Background Images -->
     <style type="text/css">
-        .tab-content-whygoDaddy-bg-ds { background-image: url("[@T[link:<cssroot />]@T]fos/201401/domains/search/img/APAC_bg-domain-search.jpg");}
+        /*.tab-content-whygoDaddy-bg-ds { background-image: url("[@T[link:<cssroot />]@T]fos/201401/domains/search/img/APAC_bg-domain-search.jpg");}*/
         .plan-summary-container-do {background-image: url("[@T[link:<cssroot />]@T]fos/201401/domains/search/img/APAC_bg-domain-options.jpg");}
         .tab-content-your-identity {background-image: url("[@T[link:<cssroot />]@T]fos/201401/domains/search/img/APAC_bg-your-identity-domain-search.jpg");}
     </style>
@@ -159,21 +160,30 @@ name: GCE-27612
                     <!-- Start misc-banner -->
                     <section class="misc-banner">
                       <div class="l-main-container container misc-banner-content misc-banner-content-syiab">
-                        <h2>[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerTitle]@L]</h2>
-                        <p>[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerText]@L]</p>
+                        <div>
+                          <h2>[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerTitle]@L]</h2>
+                          <p>[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerText]@L]</p>
+                          
+                          <p><span><strong>[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListTitle0]@L]</strong></span>&nbsp;&nbsp;[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListText0]@L]</p>
 
+                          <p><span><strong>[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListTitle1]@L]</strong></span>&nbsp;&nbsp;[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListText1]@L]</p>
 
-                        <h4><strong>[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListTitle0]@L]</strong></h4>
-                        <p>[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListText0]@L]</p>
-
-
-                        <h4><strong>[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListTitle1]@L]</strong></h4>
-                        <p>[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListText1]@L]</p>
-
-
-                        <h4><strong>[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListTitle2]@L]</strong></h4>
-                        <p>[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListText2]@L]</p>
-
+                          <p><span><strong>[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListTitle2]@L]</strong></span>&nbsp;&nbsp;[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListText2]@L]</p>
+  
+                        </div>
+                        <div>
+                          
+                          <h3>[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerTitle2]@L]</h3>
+                          <ul>
+                            <li><i class="uxicon uxicon-checkmark"></i>&nbsp;[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerliText1]@L]</li>
+                            <li><i class="uxicon uxicon-checkmark"></i>&nbsp;[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerliText2]@L]</li>
+                            <li><i class="uxicon uxicon-checkmark"></i>&nbsp;[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerliText3]@L]</li>
+                            <li><i class="uxicon uxicon-checkmark"></i>&nbsp;[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerliText4]@L]</li>
+                            <li><i class="uxicon uxicon-checkmark"></i>&nbsp;[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerliText5]@L]</li>
+                          </ul>
+                          <p>[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerText2]@L]</p>
+                          
+                        </div>
                       </div>
                     </section>
                     <!-- End misc-banner -->

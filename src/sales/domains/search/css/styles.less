@@ -29,7 +29,8 @@ div.pod-shadow {
   float: left;
   height: 19px;
   width: 318px;
-  margin:auto;height:17px;
+  margin:auto;
+  height:17px;
 }
 
 .grid-columns {
@@ -203,17 +204,23 @@ div.pod-shadow {
   margin-bottom: 2.785714286em;
 }
 .tab-content-whygoDaddy-bg-ds {
-  background-image: url("../img/domains_background.jpg");
+  /*background-image: url("../img/domains_background.jpg");*/
   background-position: center top;
-  background-position: center top; background-repeat: no-repeat; background-size: cover; max-height: 614px; min-height: 549px; min-width: 1000px;
+  background-position: center top; 
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  max-height: 614px; 
+  min-height: 549px; 
+  min-width: 1000px;
+  background-color: #679b08;
 }
 html:lang(tr) .tab-content-whygoDaddy-bg-ds {
-  background-image: url("../img/MED_domains_background.jpg");
+  /*background-image: url("../img/MED_domains_background.jpg");*/
   background-position: center top;
   background-position: center top; background-repeat: no-repeat; background-size: cover; max-height: 614px; min-height: 549px; min-width: 1000px;
 }
 html:lang(pl) .tab-content-whygoDaddy-bg-ds, html:lang(da) .tab-content-whygoDaddy-bg-ds, html:lang(fi) .tab-content-whygoDaddy-bg-ds, html:lang(nb) .tab-content-whygoDaddy-bg-ds, html:lang(sv) .tab-content-whygoDaddy-bg-ds, html:lang(de) .tab-content-whygoDaddy-bg-ds, html:lang(hu) .tab-content-whygoDaddy-bg-ds, html:lang(ru) .tab-content-whygoDaddy-bg-ds, html:lang(uk) .tab-content-whygoDaddy-bg-ds, html:lang(el) .tab-content-whygoDaddy-bg-ds {
-  background-image: url("../img/NOR_domains_background.jpg");
+  /*background-image: url("../img/NOR_domains_background.jpg");*/
   background-position: center top;
   background-position: center top; background-repeat: no-repeat; background-size: cover; max-height: 614px; min-height: 549px; min-width: 1000px;
 }
@@ -221,22 +228,59 @@ html:lang(pl) .tab-content-whygoDaddy-bg-ds, html:lang(da) .tab-content-whygoDad
   padding-top: 4.285714286em;
   padding-bottom: 2.285714286em;
 }
-.misc-banner-content.misc-banner-content-syiab > * {
-  color: #ffffff;
+
+.misc-banner-content.misc-banner-content-syiab > div > * {
+    color: #ffffff;
 }
-.misc-banner-content.misc-banner-content-syiab > h2 {
-  margin-right: 9.444444444em;
+
+.misc-banner-content.misc-banner-content-syiab > div > h2 {
+    /*margin-right: 9.444444444em;*/
+    margin-bottom: 0.5em;
 }
-.misc-banner-content.misc-banner-content-syiab > h4 {
-  margin-right: 9.444444444em;
+
+.misc-banner-content.misc-banner-content-syiab > div > h4 {
+    /*margin-right: 9.444444444em;*/
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    font-family: 'HelveticaNeue-CondensedBold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.misc-banner-content.misc-banner-content-syiab > div {
+  max-width: 480px;
+  float:left;
+  padding-right: 40px;
+}
+.misc-banner-content.misc-banner-content-syiab > div:last-child {
+  padding:55px 0 0 40px;
+}
+
+.misc-banner-content.misc-banner-content-syiab > div > p {
+    /*margin-right: 38.71428571em;*/
+    margin-bottom: 15px;
+    font-size: 14px
+}
+
+.misc-banner-content.misc-banner-content-syiab > div > p > span {
+  font-size: 25px;
   text-transform: uppercase;
-  margin-bottom: 8px;
-  font-family: 'HelveticaNeue-CondensedBold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
-.misc-banner-content.misc-banner-content-syiab > p {
-  margin-right: 38.71428571em;
-  margin-bottom: 15px;
+
+.misc-banner-content.misc-banner-content-syiab > div > ul {
+  list-style: none;
 }
+
+.misc-banner-content.misc-banner-content-syiab > div > ul > li {
+  margin:10px 0;
+}
+
+li .uxicon-checkmark {
+  color: #fff;
+  font-weight: 600;
+  padding-right: 7px;
+  margin-top: -5px;
+  font-size: 16px;
+}
+
 .lt-ie9 .misc-banner-content.misc-banner-content-syiab {
   width: 960px;
 }
@@ -418,6 +462,7 @@ text-align: center;
 .searchBoxForm{
 border: #d4d4d4 solid 1px;
 }
+
 /* line 5, ../scss/tldlogos.scss */
 .tldlogo {
     background-image: url('../img/tldlogos-s7616761df6.png');
