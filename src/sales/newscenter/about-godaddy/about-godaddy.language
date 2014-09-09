@@ -1,8 +1,8 @@
 ---
 location: localization/sales/newscenter/about-godaddy/en
-id: 53d7e660f778fc27484de569
-name: FOS-24750
-comments: About US Update the rollover for Betsy Rafael
+id: 5409f19ff778fc27d0489228
+name: GCE-27714
+comments: About us Update to Jeff Kings Title (Add Senior)
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="NewsCenterAbout-AFinePortraitsVideo" />
@@ -11,7 +11,7 @@ comments: About US Update the rollover for Betsy Rafael
 <span class="play"></span>
 </div>
 <phrase key="NewsCenterAbout-11-AboutGoDaddyMoreAboutTheWorldS1Domain" />
-About GoDaddy | More About the World's #1 Domain Registrar - GoDaddy
+About GoDaddy | More About the World's #1 Domain Registrar - [@T[companyname:nameseotitle]@T]
 <phrase key="NewsCenterAbout-9-GoDaddyWhoWeAreAndWhatWeDo" />
 GoDaddy: Who we are and what we do.
 <phrase key="NewsCenterAbout-5-GoDaddyGodaddyNewsReleasesGoDaddy" />
@@ -81,7 +81,7 @@ Chief People Officer
 <phrase key="NewsCenterAbout-2-JeffKing" />
 Jeff King
 <phrase key="NewsCenterAbout-3-VicePresidentHosting" />
-Vice President,<br />Hosting
+Senior Vice President,<br />Hosting
 <phrase key="NewsCenterAbout-2-JamesCarroll" />
 James Carroll
 <phrase key="NewsCenterAbout-4-SeniorVicePresidentInternational" />
