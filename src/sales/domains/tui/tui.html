@@ -1,8 +1,8 @@
 ---
 location: sales/domains/gtld-registration.aspx
-id: 5408e21df778fc27d0489200
-name: GCE-26819
-comments: GAC Support - Adding Toggle capabilities
+id: 
+name: GCE-26818
+comments: GAC Support - Adding Apply to All capabilities
 ---
 ##if(false)
 {% include 'modules/doc-block.html' %}
@@ -64,7 +64,19 @@ comments: GAC Support - Adding Toggle capabilities
         </div>
         
 <!-- TUI ELIGIBILITY FORM!-->
-        <div id="eligibility-form"></div>
+        <div id="eligibility-form">
+          <div id="applyToAllContent">
+            <p>We need some more information for your <span>.lawyer</span> registration.</p>
+            <div>
+              <label class="toggle">
+                <input type="checkbox" class="toggle" id="AllDomainsCheckbox" name="AllDomainsCheckbox" value="unchecked" />
+                <div class="toggle"/>
+                <label for="">label text</label>
+                <p>Apply this to all <span>.lawyer</span> domain names in this order.</p>
+              </label>
+            </div>
+          </div>
+        </div>
         
 <!-- CLAIMS FORM-->
         <div id="claims-form">
