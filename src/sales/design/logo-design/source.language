@@ -1,7 +1,7 @@
 ---
 location: localization/sales/gd/design/logo-design/en
 id: false
-name: FOS-22259
+name: FOS-19962
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="MetaTitle" />
@@ -109,4 +109,4 @@ Choose your Package
 <phrase key="ContentDisclaimerLink" />
 Click here for product disclaimers and legal policies.
 <phrase key="ContentDicalimerText" />
-Customers who cancel their Logo Design Service order before work is complete will be assessed a concellation fee. *Price does not include illustration, hand-drawing, or hand-coloring logo design. 
+Customers who cancel their Logo Design Service order before work is complete will be assessed a cancellation fee. *Price does not include illustration, hand-drawing, or hand-coloring logo design. 
