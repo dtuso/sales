@@ -1,6 +1,6 @@
 ---
 location: sales/domains/gtld-registration.aspx
-id: 
+id: 540f3b08f778fc2718e3b65c
 name: GCE-26818
 comments: GAC Support - Adding Apply to All capabilities
 ---
@@ -64,19 +64,7 @@ comments: GAC Support - Adding Apply to All capabilities
         </div>
         
 <!-- TUI ELIGIBILITY FORM!-->
-        <div id="eligibility-form">
-          <div id="applyToAllContent">
-            <p>We need some more information for your <span>.lawyer</span> registration.</p>
-            <div>
-              <label class="toggle">
-                <input type="checkbox" class="toggle" id="AllDomainsCheckbox" name="AllDomainsCheckbox" value="unchecked" />
-                <div class="toggle"/>
-                <label for="">label text</label>
-                <p>Apply this to all <span>.lawyer</span> domain names in this order.</p>
-              </label>
-            </div>
-          </div>
-        </div>
+        <div id="eligibility-form"></div>
         
 <!-- CLAIMS FORM-->
         <div id="claims-form">
@@ -125,7 +113,7 @@ comments: GAC Support - Adding Apply to All capabilities
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Bottom" />]@P]
     <!-- JS YOU WILL PROBABLY NEED -->
     <script src="[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2" type="text/javascript"></script>
-    <script src="[@T[link:<js path='fos/sales/themes/scotty/domains/tui/js/tui.js' />]@T]"></script>
+    <script src="[@T[link:<js path='fos/sales/themes/scotty/domains/tui/js/tui_26818.js' />]@T]"></script>
     
     <!--[if lte IE 8]>
     <script src="[@T[link:<javascriptroot />]@T]fos/script/JSON2.min.js"></script>
@@ -148,7 +136,9 @@ comments: GAC Support - Adding Apply to All capabilities
           cancelBtnText: '[@L[cds.sales/domains/gtld-registration:gtldTui-cancelBtn]@L]',
           removeDomainText: '[@L[cds.sales/domains/gtld-registration:gtldTui-removeDomainText]@L]',
           acknowledgeText: '[@L[cds.sales/domains/gtld-registration:gtldTui-acknowledgeText]@L]',
-          chooseOptionText: '[@L[fosdomainregistration:fos.domain.domain-registration.au.choose]@L]'
+          chooseOptionText: '[@L[fosdomainregistration:fos.domain.domain-registration.au.choose]@L]',
+          needMoreInformationText: '[@L[cds.sales/domains/gtld-registration:gtldTui-applyToAllLabelText]@L]',
+          applyToAllLabelText: '[@L[cds.sales/domains/gtld-registration:gtldTui-needMoreInformationText]@L]'
         }); 
       
         gtldRegistrationClient.SetupPage(); 
