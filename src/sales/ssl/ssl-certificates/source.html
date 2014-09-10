@@ -1,9 +1,10 @@
 ---
 location: sales/ssl/ssl-certificates.aspx
 url: http://www.dev-godaddy.com/ssl/ssl-certificates.aspx
-id: 53f7cbcef778fc1008446c87
-name: GCE-26810
-comments: modified canonical url to be secure
+id: 54074c47f778fc2be8f75b40
+name: GCE-25816
+assetPath: false
+comments: Add Flag/Violator to SSL LP to Highlight Google Feature
 ---
 
 {% extends 'layouts/base.html' %}
@@ -30,6 +31,9 @@ comments: modified canonical url to be secure
     ul.plan-pricing-list > li {
       padding-top: 5px;
     }
+    .plan-summary {
+		padding-top: 2.428571em;
+	}
     {% endless %}
   </style>
 {% endblock %}
@@ -112,7 +116,8 @@ comments: modified canonical url to be secure
           <div class="row tab-content equal-height no-margin-bottom">
             <div class="col-xs-4">
                 <div class="grid-column no-padding-bottom">
-                  <h2 class="first-plan">[@L[cds.sales/gd/ssl/ssl-certificates:plansPricingOne]@L]</h2>
+                  <h2>[@L[cds.sales/gd/ssl/ssl-certificates:plansPricingOne]@L]</h2>
+                  <p class="pp-desc">[@L[cds.sales/gd/ssl/ssl-certificates:box1SubText]@L]</p>
                   <p class="starting-at starting-at-alternate-top-spacing">
                     <span class="starting-at-above">[@L[cds.sales/gd/ssl/ssl-certificates:startingAt]@L]</span>
                     <span class="starting-at-price">[@T[productprice:<current productid="3606" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]</span>
@@ -129,7 +134,7 @@ comments: modified canonical url to be secure
             <div class="col-xs-4">
                 <div class="grid-column no-padding-bottom">
                   <h2>[@L[cds.sales/gd/ssl/ssl-certificates:plansPricingMultiple]@L]</h2>
-                  <p class="pp-desc">[@L[cds.sales/gd/ssl/ssl-certificates:plansPricingMultipleDesc]@L]</p>
+                  <p class="pp-desc">[@L[cds.sales/gd/ssl/ssl-certificates:box2SubText]@L]</p>
                   <p class="starting-at starting-at-alternate-top-spacing">
                     <span class="starting-at-above">[@L[cds.sales/gd/ssl/ssl-certificates:startingAt]@L]</span>
                     <span class="starting-at-price">[@T[productprice:<current productid="5726" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]</span>
@@ -147,7 +152,7 @@ comments: modified canonical url to be secure
             <div class="col-xs-4 content-wrap">
                 <div class="grid-column no-padding-bottom has-badge">
                   <h2>[@L[cds.sales/gd/ssl/ssl-certificates:plansPricingAll]@L]</h2>
-                  <p class="pp-desc">[@L[cds.sales/gd/ssl/ssl-certificates:plansPricingAllDesc]@L]</p>
+                  <p class="pp-desc">[@L[cds.sales/gd/ssl/ssl-certificates:box3SubText]@L]</p>
                   <p class="starting-at starting-at-alternate-top-spacing">
                     <span class="starting-at-above">[@L[cds.sales/gd/ssl/ssl-certificates:startingAt]@L]</span>
                     <span class="starting-at-price">[@T[productprice:<current productid="3619" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]</span>
@@ -169,6 +174,9 @@ comments: modified canonical url to be secure
               <div class="row">
                 <div class="col-xs-12">
                   <div class="plan-summary-container">
+                  <div class="compare-top-badge-wrapper">
+                    <span class="compare-top-badge">[@L[cds.sales/gd/ssl/ssl-certificates:boostGoogle]@L]</b></span>
+                  </div>
                     <!-- Start Plan-summary nav tabs -->
                     <ul class="nav nav-tabs plan-summary-tabs">
                       <li class="nav-tabs-item plan-summary-tabs-item active">
@@ -191,6 +199,9 @@ comments: modified canonical url to be secure
                           <li>[@L[cds.sales/gd/ssl/ssl-certificates:PlansIcludeText6]@L]</li>
                           <li>[@L[cds.sales/gd/ssl/ssl-certificates:PlansIcludeText7]@L]</li>
                           <li>[@L[cds.sales/gd/ssl/ssl-certificates:PlansIcludeText8]@L]</li>
+                        </ul>
+                        <ul class="plan-summary-tab-pane-list">
+                          <li>[@L[cds.sales/gd/ssl/ssl-certificates:PlansIcludeText9]@L]</li>
                         </ul>
                       </div>
                     </div>
@@ -240,6 +251,7 @@ comments: modified canonical url to be secure
                   <li>[@L[cds.sales/gd/ssl/ssl-certificates:MainPageContentTabContent3List2]@L]</li>
                   <li>[@L[cds.sales/gd/ssl/ssl-certificates:MainPageContentTabContent3List3]@L]</li>
                   <li>[@L[cds.sales/gd/ssl/ssl-certificates:MainPageContentTabContent3List4]@L]</li>
+                  <li>[@L[cds.sales/gd/ssl/ssl-certificates:MainPageContentTabContent3List5]@L]</li>
                 </ul>
               </div>
             </div>

@@ -1,12 +1,12 @@
 ---
 location: localization/sales/gd/ssl/ssl-certificates/en
-id: 53d6c1d9f778fc27484de532
-name: FOS-23826
-comments: Added BE to countries offering sitelock
+id: 53fe6da5f778fc1f28c88e0d
+name: GCE-25816
+comments: Add Flag/Violator to SSL LP to Highlight Google Feature
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="MetaTitle" />
-SSL Certificates | Secure Your Data & Transactions - GoDaddy
+SSL Certificates | Secure Your Data & Transactions - [@T[companyname:nameseotitle]@T]
 <phrase key="MetaDescription" />
 Secure your web site with both industry-standard 128-bit encryption and high grade 256-bit encryption with an SSL certificate.
 <phrase key="MetaKeywords" />
@@ -38,7 +38,7 @@ Customer Reviews
 <phrase key="plansPricingTitle" />
 Secure transactions and customer data.
 <phrase key="plansPricingText" />
-GoDaddy SSL Certificates are a simple and cost-effective way to protect the private information – passwords, credit card numbers – submitted to your website. Customers will buy with confidence, knowing that the information they enter on any secured page is protected. It’s all backed by our dedicated security team.
+GoDaddy SSL Certificates are a simple and cost-effective way to protect private information – passwords, credit card numbers – submitted to your website. Customers will buy with confidence, knowing the information they enter on any secured page is protected. Plus, an SSL (HTTPS) will also help boost your search rankings on Google. It’s all backed by our dedicated security team.
 <phrase key="plansPricingOne" />
 Protect One Website
 <phrase key="plansPricingMultiple" />
@@ -49,6 +49,12 @@ Protect All Subdomains
 Starting at
 <phrase key="year" />
 year
+<phrase key="box1SubText" />
+Protects visitor data and boosts Google search ranking
+<phrase key="box2SubText" />
+Ideal for businesses and organizations
+<phrase key="box3SubText" />
+Essential for online business and boosting search ranking on Google
 <phrase key="plansPricingMultipleDesc" />
 "Multiple Domains UCC"
 <phrase key="plansPricingAllDesc" />
@@ -91,6 +97,8 @@ Compatible with all major browsers
 One certificate covers unlimited servers
 <phrase key="PlansIcludeText8" />
 One-click installation for GoDaddy hosted accounts
+<phrase key="PlansIcludeText9" />
+Increases search rankings. Google gives higher rankings to sites secured with SSL.
 <phrase key="MainPageContentTabContent1title" />
 Why choose a GoDaddy SSL Certificate?
 <phrase key="MainPageContentTabContent1text1" />
@@ -113,6 +121,8 @@ Standard SSL issued in minutes
 One certificate covers unlimited servers
 <phrase key="MainPageContentTabContent3List4" />
 Supports strong SHA-2 and 2048-bit encryption
+<phrase key="MainPageContentTabContent3List5" />
+Helps improve your search rankings on Google
 <phrase key="MainPageContentTabContentOfferText1" />
 Exclusive offer for Open Source projects
 <phrase key="MainPageContentTabContentOfferText2" />
@@ -193,3 +203,5 @@ Disclaimers
 Products will automatically renew until cancelled. You may turn off the auto-renewal feature by visiting your GoDaddy account.
 <phrase key="SslManager" />
 Premium SSL available only for USA, Argentina, Australia, Austria, Belgium, Brazil, Canada, Chile, Colombia, Denmark, Finland, France, Germany, India, Ireland, Italy, Malaysia, Mexico, Netherlands, New Zealand, Norway, Pakistan, Peru, Philippines, Portugal, Russia, Singapore, South Africa, Spain, Sweden, Switzerland, and UK.<br />To change product offering, select the correct plan for the customer on the SSL configuration page.<br />
+<phrase key="boostGoogle" />
+Boost Google Ranking
