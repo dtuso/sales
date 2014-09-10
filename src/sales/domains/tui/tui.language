@@ -1,12 +1,12 @@
 ---
-location: localization/sales/domains/gtld-registration.aspx
-id: 
-name: 
+location: localization/sales/domains/gtld-registration/en
+id: 54107532f778fc15706586f1
+name: GCE-26818
+comments: GAC Support - Adding Apply to All capabilities
 ---
 ##if(false)
 {% include 'modules/doc-block.html' %}
 ##endif
-
 <phrase key="page.title" />
 New gTLD Registration | Protect Your Trademark with gTLDs - [@T[companyname:name]@T]
 <phrase key="gtldTui-H1" />
@@ -59,3 +59,7 @@ The registry has reserved these <span style="font-weight:bold">.uk</span> domain
 Names removed:
 <phrase key="gtldTui-searchBtn" />
 Search Again
+<phrase key="gtldTui-applyToAllLabelText" comment="this text is used in a script, please html encode any single quotes" />
+We need some more information for your <span class="tld"></span> registration.
+<phrase key="gtldTui-needMoreInformationText" comment="this text is used in a script, please html encode any single quotes" />
+Apply this to all <span class="tld"></span> domain names in this order.
