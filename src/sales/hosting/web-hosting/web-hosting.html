@@ -1,9 +1,9 @@
 ---
 location: sales/hosting/web-hosting.aspx
 url: http://www.dev-godaddy.com/hosting/web-hosting.aspx
-id: 53f3bbb2f778fc07b4296fc5
-name: GCE-22944
-comments: synced up Jeff's changes in Github
+id: 540f8a3df778fc15706586d2
+name: GCE-27798 & GCE-26856
+comments: Hosting Page Fixes
 splitSide: false
 ---
 
@@ -59,7 +59,7 @@ splitSide: false
                     ##if(activeLanguageAny([en-in]))
                     <li class="nav-tabs-item" id="features-tab"><a class="nav-tabs-link lazy-tab" data-ci="89264" href="#features" data-toggle="tab">[@L[cds.sales/gd/hosting/web-hosting:TabContentLink2]@L]</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
                     ##else
-                    <li class="nav-tabs-item" id="features-tab"><a class="nav-tabs-link lazy-tab" data-ci="89264" href="#plans-pricing" data-toggle="tab" onclick="scrollTo($('#features'))">[@L[cds.sales/gd/hosting/web-hosting:TabContentLink2]@L]</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
+                    <li class="nav-tabs-item" id="features-tab"><a class="nav-tabs-link lazy-tab features-tab-link" data-ci="89264" href="#plans-pricing" data-toggle="tab" onclick="scrollTo($('#features'))">[@L[cds.sales/gd/hosting/web-hosting:TabContentLink2]@L]</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
                     ##endif
                     <li class="nav-tabs-item"><a class="nav-tabs-link lazy-tab" data-ci="89265" href="#compare-plans" data-toggle="tab">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-tab-title-11166]@L]</a><i class="ico ico-shape ico-shape-arrow-down lazy-tab"></i></li>
                     <li class="nav-tabs-item"><a class="nav-tabs-link lazy-tab" data-ci="89266" href="#platforms" data-toggle="tab">[@L[cds.sales/gd/hosting/web-hosting:platforms-tab-title-11166]@L]</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
@@ -1441,12 +1441,46 @@ splitSide: false
                                 </div>
                             </div>
                 </section>
-                
+                <section class="section-top-spacing not-finding-section">
+                  <div class="grid-column">
+                   <div class="container l-main-container">
+                    <div class="col-xs-12">
+                      <div class="row tab-content equal-height">
+                          <h4 class="not-finding-h4">[@L[cds.sales/gd/hosting/web-hosting:not-finding-title-11166]@L]</h4>
+                          <div class="col-4 first">
+                            <h5>[@L[cds.sales/gd/hosting/web-hosting:not-finding-website-builder-11166]@L]</h5>
+                            <div class="website-builder-image icon-image solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/hosting/web-hosting/img/Hosting-Sprite-11166.png"></div>
+                            <p class="lead">[@L[cds.sales/gd/hosting/web-hosting:not-finding-website-builder-desc-11166]@L]</p>
+                            <p class="perfect-for">[@L[cds.sales/gd/hosting/web-hosting:not-finding-website-builder-perfect-for-11166]@L]</p>
+                            <p class="starting-at">[@L[cds.sales/gd/hosting/web-hosting:not-finding-website-builder-as-low-as-11166]@L]</p>
+                            <a data-ci="89276" href="[@T[link:<relative path='~/hosting/website-builder.aspx' secure='false'><param name='ci' value='89276' /></relative>]@T]" class="learn-more-link"><span class="learn-more-arrow solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/hosting/web-hosting/img/Hosting-Sprite-11166.png"></span> [@L[cds.sales/gd/hosting/web-hosting:not-finding-learn-more-11166]@L]</a>
+                          </div>
+                          <div class="col-4">
+                            <h5>[@L[cds.sales/gd/hosting/web-hosting:not-finding-managed-wordpress-11166]@L]</h5>
+                            <div class="wordpress-image icon-image solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/hosting/web-hosting/img/Hosting-Sprite-11166.png"></div>
+                            <p class="lead">[@L[cds.sales/gd/hosting/web-hosting:not-finding-managed-wordpress-desc-11166]@L]</p>
+                            <p class="perfect-for">[@L[cds.sales/gd/hosting/web-hosting:not-finding-managed-wordpress-perfect-for-11166]@L]</p>
+                            <p class="starting-at">[@L[cds.sales/gd/hosting/web-hosting:not-finding-managed-wordpress-as-low-as-11166]@L]</p>
+                            <a data-ci="89277" href="[@T[link:<relative path='~/hosting/wordpress-hosting.aspx' secure='false'><param name='ci' value='89277' /></relative>]@T]" class="learn-more-link"><span class="learn-more-arrow solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/hosting/web-hosting/img/Hosting-Sprite-11166.png"></span> [@L[cds.sales/gd/hosting/web-hosting:not-finding-learn-more-11166]@L]</a>
+                          </div>
+                          <div class="col-4 last">
+                            <h5>[@L[cds.sales/gd/hosting/web-hosting:not-finding-vps-11166]@L]</h5>
+                            <div class="vps-image icon-image solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/hosting/web-hosting/img/Hosting-Sprite-11166.png"></div>
+                            <p class="lead">[@L[cds.sales/gd/hosting/web-hosting:not-finding-vps-desc-11166]@L]</p>
+                            <p class="perfect-for">[@L[cds.sales/gd/hosting/web-hosting:not-finding-vps-perfect-for-11166]@L]</p>
+                            <p class="starting-at">[@L[cds.sales/gd/hosting/web-hosting:not-finding-vps-as-low-as-11166]@L]</p>
+                            <a data-ci="89278" href="[@T[link:<relative path='~/hosting/vps-hosting.aspx' secure='false'><param name='ci' value='89278' /></relative>]@T]" class="learn-more-link"><span class="learn-more-arrow solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/hosting/web-hosting/img/Hosting-Sprite-11166.png"></span> [@L[cds.sales/gd/hosting/web-hosting:not-finding-learn-more-11166]@L]</a>
+                        </div>
+                      </div>
+                    </div>
+                   </div>
+                  </div>
+                </section>
                 <section>
                 <div class="container l-main-container">
                     <div class="row tab-content">
                         <div class="col-xs-12">
-                            <a href="#plans-pricing" data-toggle="tab" data-ci="89285" class="btn btn-primary btn-lg btn-block js-open-overview"><i class="ico ico-gt"></i>[@L[cds.sales/gd/hosting/web-hosting:choose-your-package]@L]</a>
+                            <a href="#plans-pricing" data-toggle="tab" data-ci="89285" class="btn btn-primary btn-lg btn-block" onclick="scrollTo($('#pricing'),-20)"><i class="ico ico-gt"></i>[@L[cds.sales/gd/hosting/web-hosting:choose-your-package]@L]</a>
                         </div>
                     </div>
                 </div>
@@ -1454,41 +1488,7 @@ splitSide: false
             </div>
              ##endif
 
-             <section class="section-top-spacing not-finding-section">
-              <div class="grid-column">
-               <div class="container l-main-container">
-                <div class="col-xs-12">
-                  <div class="row tab-content equal-height">
-                      <h4 class="not-finding-h4">[@L[cds.sales/gd/hosting/web-hosting:not-finding-title-11166]@L]</h4>
-                      <div class="col-4 first">
-                        <h5>[@L[cds.sales/gd/hosting/web-hosting:not-finding-website-builder-11166]@L]</h5>
-                        <div class="website-builder-image icon-image solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/hosting/web-hosting/img/Hosting-Sprite-11166.png"></div>
-                        <p class="lead">[@L[cds.sales/gd/hosting/web-hosting:not-finding-website-builder-desc-11166]@L]</p>
-                        <p class="perfect-for">[@L[cds.sales/gd/hosting/web-hosting:not-finding-website-builder-perfect-for-11166]@L]</p>
-                        <p class="starting-at">[@L[cds.sales/gd/hosting/web-hosting:not-finding-website-builder-as-low-as-11166]@L]</p>
-                        <a data-ci="89276" href="[@T[link:<relative path='~/hosting/website-builder.aspx' secure='false'><param name='ci' value='89276' /></relative>]@T]" class="learn-more-link"><span class="learn-more-arrow solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/hosting/web-hosting/img/Hosting-Sprite-11166.png"></span> [@L[cds.sales/gd/hosting/web-hosting:not-finding-learn-more-11166]@L]</a>
-                      </div>
-                      <div class="col-4">
-                        <h5>[@L[cds.sales/gd/hosting/web-hosting:not-finding-managed-wordpress-11166]@L]</h5>
-                        <div class="wordpress-image icon-image solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/hosting/web-hosting/img/Hosting-Sprite-11166.png"></div>
-                        <p class="lead">[@L[cds.sales/gd/hosting/web-hosting:not-finding-managed-wordpress-desc-11166]@L]</p>
-                        <p class="perfect-for">[@L[cds.sales/gd/hosting/web-hosting:not-finding-managed-wordpress-perfect-for-11166]@L]</p>
-                        <p class="starting-at">[@L[cds.sales/gd/hosting/web-hosting:not-finding-managed-wordpress-as-low-as-11166]@L]</p>
-                        <a data-ci="89277" href="[@T[link:<relative path='~/hosting/wordpress-hosting.aspx' secure='false'><param name='ci' value='89277' /></relative>]@T]" class="learn-more-link"><span class="learn-more-arrow solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/hosting/web-hosting/img/Hosting-Sprite-11166.png"></span> [@L[cds.sales/gd/hosting/web-hosting:not-finding-learn-more-11166]@L]</a>
-                      </div>
-                      <div class="col-4 last">
-                        <h5>[@L[cds.sales/gd/hosting/web-hosting:not-finding-vps-11166]@L]</h5>
-                        <div class="vps-image icon-image solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/hosting/web-hosting/img/Hosting-Sprite-11166.png"></div>
-                        <p class="lead">[@L[cds.sales/gd/hosting/web-hosting:not-finding-vps-desc-11166]@L]</p>
-                        <p class="perfect-for">[@L[cds.sales/gd/hosting/web-hosting:not-finding-vps-perfect-for-11166]@L]</p>
-                        <p class="starting-at">[@L[cds.sales/gd/hosting/web-hosting:not-finding-vps-as-low-as-11166]@L]</p>
-                        <a data-ci="89278" href="[@T[link:<relative path='~/hosting/vps-hosting.aspx' secure='false'><param name='ci' value='89278' /></relative>]@T]" class="learn-more-link"><span class="learn-more-arrow solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/hosting/web-hosting/img/Hosting-Sprite-11166.png"></span> [@L[cds.sales/gd/hosting/web-hosting:not-finding-learn-more-11166]@L]</a>
-                    </div>
-                  </div>
-                </div>
-               </div>
-              </div>
-             </section>
+             
 
               ##if(activeLanguageAny([en-in]))
               <section>
@@ -3543,7 +3543,7 @@ splitSide: false
                 <div class="container l-main-container">
                     <div class="row tab-content">
                         <div class="col-xs-12">
-                            <a href="#" data-ci="88605" class="btn btn-primary btn-lg btn-block js-open-overview"><i class="ico ico-gt"></i>[@L[cds.sales/gd/hosting/web-hosting:choose-your-package]@L]</a>
+                            <a href="#" data-ci="88605" class="btn btn-primary btn-lg btn-block js-open-overview-to-pricing"><i class="ico ico-gt"></i>[@L[cds.sales/gd/hosting/web-hosting:choose-your-package]@L]</a>
                         </div>
                     </div>
                 </div>
@@ -3562,7 +3562,7 @@ splitSide: false
                             </div>
                         </div>
                         ##endif
-                        <a href="#overview" data-ci="88606" data-toggle="tab" class="btn btn-primary btn-lg btn-block js-open-overview"><i class="ico ico-gt"></i>[@L[cds.sales/gd/hosting/web-hosting:choose-your-package]@L]</a>
+                        <a href="#overview" data-ci="88606" data-toggle="tab" class="btn btn-primary btn-lg btn-block js-open-overview-to-pricing"><i class="ico ico-gt"></i>[@L[cds.sales/gd/hosting/web-hosting:choose-your-package]@L]</a>
                     </div>
                 </section>
             </div> 
@@ -3672,7 +3672,7 @@ splitSide: false
                     <div class="container l-main-container">
                         <div class="row tab-content">
                             <div class="col-xs-12">
-                                <a data-ci="89294" href="#plans-pricing" data-toggle="tab" data-ci="" class="btn btn-primary btn-lg btn-block js-open-overview"><i class="ico ico-gt"></i>[@L[cds.sales/gd/hosting/web-hosting:choose-your-package]@L]</a>
+                                <a data-ci="89294" href="#plans-pricing" data-toggle="tab" data-ci="" class="btn btn-primary btn-lg btn-block js-open-overview-to-pricing"><i class="ico ico-gt"></i>[@L[cds.sales/gd/hosting/web-hosting:choose-your-package]@L]</a>
                             </div>
                         </div>
                     </div>
@@ -3720,7 +3720,7 @@ splitSide: false
                                 </div>
                             </div>
                         </div>
-                        <a href="#overview" data-ci="89295" data-toggle="tab" class="btn btn-primary btn-lg btn-block js-open-overview"><i class="ico ico-gt"></i>[@L[cds.sales/gd/hosting/web-hosting:choose-your-package]@L]</a>
+                        <a href="#overview" data-ci="89295" data-toggle="tab" class="btn btn-primary btn-lg btn-block js-open-overview-to-pricing"><i class="ico ico-gt"></i>[@L[cds.sales/gd/hosting/web-hosting:choose-your-package]@L]</a>
                     </div>
                 </section>
             </div>
@@ -3930,7 +3930,7 @@ splitSide: false
     $('.js-open-overview').on('click', function(e){
         e.preventDefault();
         window.location.hash = '';
-        $('a[href="#plans-pricing"]').tab('show');
+        $('a[href="#plans-pricing"]:not(.features-tab)').tab('show');
         window.location.hash = '#pricing';
     });
     $('.js-open-features').on('click', function(e){
@@ -3938,6 +3938,13 @@ splitSide: false
         window.location.hash = '';
         $('a[href="#features"]').tab('show');
         window.location.hash = '#features';
+    });
+    $('.js-open-overview-to-pricing').on('click', function(e){
+        e.preventDefault();
+        window.location.hash = '';
+        $('a[href="#plans-pricing"]:not(.features-tab-link)').tab('show');
+        scrollTo($('#pricing'),-20);
+        window.location.hash = '#pricing';
     });
 
     function comparePlans(id){
@@ -4027,9 +4034,16 @@ splitSide: false
     });
 
   })( jQuery, window, document );
-    function scrollTo(element){
+
+    function scrollTo(element, offset){
+        var destination = element.offset().top;
+        if(offset !== undefined)
+        {
+            destination += offset;
+        }
+
         $('html, body').animate({
-            scrollTop: element.offset().top + 'px',
+            scrollTop: destination + 'px',
             easing: 'easein'
         }, 600);
     }
@@ -4038,6 +4052,7 @@ splitSide: false
     scrollTo($('#features'));
     })
     ##endif
+
     </script>
     <script>
     $(function () {
