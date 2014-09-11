@@ -1,7 +1,8 @@
 ---
 location: localization/sales/hosting/wordpress-hosting/en
-id: 53bc160ef778fc1e74b16987
-name: FOS-22246
+id:   false
+name: FOS-24754
+comments: Remove Fotolia Credits
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="subheadertext.Part1" comment="company name between part 1 and 2"/>
@@ -142,10 +143,6 @@ One promotional credit per customer for a new Facebook<sup class="supsymbol">&re
 Google AdWords Credit -
 <phrase key="wordpress-hosting-48-OnePromotionalCreditPerCustomerForANew" />
 One promotional credit per customer for a new Google AdWords account. Products purchased using a Gift Card or Alipay do not provide eligibility for advertising credits. Minimum spend USD $25. Offer valid to US & Canada residents only, excluding government controlled entities and parties. Other restrictions apply.
-<phrase key="wordpress-hosting-4-FotoliaPhotoCredits" />
-Fotolia Photo Credits -
-<phrase key="wordpress-hosting-33-OneFreePromotionalCreditPerCustomerGoodFor" />
-One free promotional credit per customer, good for ten free download credits at Fotolia. Products purchased using a Gift Card or Alipay do not provide eligibility for photography credits. Other restrictions apply.
 <phrase key="wordpress-hosting-4-WeMadeItSimple" />
 We made it simple
 <phrase key="wordpress-hosting-93-FromTheMomentYouLogInYouLl" />
