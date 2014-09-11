@@ -1,11 +1,12 @@
 ---
 location: localization/sales/gd/hosting/dedicated-servers/en
-id: 53d6ccacf778fc27484de53e
-name: FOS-9215
+id:   541210f3f778fc0f24cc8f0a
+name: FOS-24754
+comments: Remove Fotolia Credits
 ---
 {% include '../../../modules/doc-block.html' %}
 <phrase key="page-title" />
-Dedicated Servers | Fully Configurable Multi-core Servers
+Dedicated Servers | Fully Configurable Multi-core Servers - [@T[companyname:nameseotitle]@T]
 <phrase key="meta-description" />
 Need a Dedicated Server? [@T[companyname:name]@T] makes it easy to run your own Dedicated Web Server.
 <phrase key="meta-keywords" />
@@ -19,7 +20,7 @@ On Sale Now
 <phrase key="uptimeGuarantee" />
 99.9% Uptime Guarantee*
 <phrase key="headerHeadline" />
-Managed Dedicated Servers
+Dedicated Servers
 <phrase key="headerSubHeadline" />
 Ownership. Power. Performance.
 <phrase key="tabHeader" />
@@ -57,7 +58,7 @@ Included Support
 <phrase key="js_assistedServicePlan" />
 Assisted Service Plan
 <phrase key="js_chatLive" />
-Chat Now
+See Plans
 <phrase key="centOsVersion" />
 <strong>CentOS Version 6.4</strong> is the operating system of choice for those looking for a highly stable version of Linux that offers enterprise-level reliability.
 <phrase key="fedoraOsVersion" />
@@ -75,7 +76,7 @@ or call [@T[support:<advancedSupportPhone />]@T]
 <phrase key="BannerCallNumber1"/>
 Call [@T[support:<technicalSupportPhone />]@T]
 <phrase key="chatLive" />
-Chat Now
+See Plans
 <phrase key="cpuLabel" />
 CPU:
 <phrase key="ramLabel" />
@@ -334,8 +335,6 @@ Bing Ad credits
 Facebook&reg; Advertising Credit
 <phrase key="allplansinclude_sslCertificate" />
 SSL Certificate
-<phrase key="allplansinclude_fotoliaCredit" />
-Fotolia&reg; Credits&#94;
 <phrase key="allplansinclude_bandwidthOverageProtection" />
 Bandwidth Overage Protection
 <phrase key="allplansinclude_dedicatedIps" />
@@ -574,8 +573,6 @@ Each Dedicated Server Plan includes:
 <strong class="secondary-color">FREE </strong>[@T[currencyprice:<price usdamount="5000" dropdecimal="true" />]@T] Facebook<sup>&reg;</sup> Advertising Credit 
 <phrase key="SupportSubText5" />
 <strong class="secondary-color">FREE </strong>1 year SSL Certificate 
-<phrase key="SupportSubText6" />
-<strong class="secondary-color">FREE!</strong> <a class="isToolTip" data-html="true" href="javascript:atl_PopUp(&#039;[@T[link:<relative path='/popups/fotolia.aspx'><param name='app_hdr' value='99' /><param name='ci' value='89055' /></relative>]@T]&#039;,&#039;foto_popup&#039;,&#039;left=50,top=50,scrollbars=yes,resizable=yes,width=600,height=550&#039;);" title="<strong>What can you do with 10 FREE credits from Fotolia.com?</strong><br />Fotolia&reg; has over 8,000,000 royalty-free photos, illustrations and videos available for your use. Quickly search and find images that will capture attention and add visual punch to your website. Use your free credits toward any photo, illustration or video; additional images start at just [@T[currencyprice:<price usdamount="75" dropdecimal="false" />]@T] each.">10 Fotolia<sup>&reg;</sup> Credits</a>
 <phrase key="SupportSubText7" />
 <a href="javascript:atl_PopUp(&#039;[@T[link:<external linktype="communityurl" path="help/article/1419/" secure="false"/>]@T]&#039;,&#039;display2&#039;,&#039;left=20,top=20,scrollbars=yes,resizable=yes,width=800,height=700&#039;);" data-ci="89057">Bandwidth Overage Protection</a>
 <phrase key="SupportSubText8" />
@@ -607,7 +604,7 @@ For 24/7 advanced support: <a>[@T[support:<advancedSupportPhone/>]@T]</a>
 <phrase key="AdvancedSupportTitle" />
 Advanced Support
 <phrase key="AdvancedSupportDescription" />
-Need help administering your server? Make the most of your Virtual Dedicated Server by letting our expert staff help you with your specific needs. Call [@T[support:<serverSupportPhone/>]@T] for a quote and get the advanced support you need today.
+Need help administering your server? Make the most of your Dedicated Server by letting our expert staff help you with your specific needs. Call [@T[support:<serverSupportPhone/>]@T] for a quote and get the advanced support you need today.
 <phrase key="AdvancedSupportList1Title" />
 Services include:
 <phrase key="AdvancedSupportList1Text1" />
@@ -656,5 +653,3 @@ One promotional credit per customer for a new Google AdWords account. Products p
 One promotional credit per customer for a new Microsoft<sup class='supsymbol'>&reg;</sup> Advertiser account. Products purchased using a Gift Card or Alipay do not provide eligibility for advertising credits. Offer valid to US residents only, other restrictions apply.<br/><a href=&quot;javascript:void(window.open('[@T[appSetting:<setting name='BING_AD_CREDIT_LINK' />]@T]','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=1060,height=675'))&quot;>View Details</a>
 <phrase key="FacebookRestrictions" />
 One promotional credit per customer for a new Facebook<sup class='supsymbol'>&reg;</sup> Advertiser account. Products purchased using a Gift Card or Alipay do not provide eligibility for advertising credits. Offer valid only for purchase of advertising in the US, Canada, UK, and Australia. Other restrictions apply. <a href=&quot;javascript:void(window.open('[@T[link:<relative path='/popups/facebook-ads.aspx'><param name='ci' value='89053' /><param name='app_hdr' value='99' /></relative>]@T]','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=550,height=675'))&quot;>View Details</a>
-<phrase key="FotoliaRestrictions" />
-One free promotional credit per customer, good for ten free download credits at Fotolia. Products purchased using a Gift Card or Alipay do not provide eligibility for photography credits. Other restrictions apply. <a href=&quot;javascript:void(window.open('[@T[link:<relative path='/popups/fotolia.aspx'><param name='app_hdr' value='99' /><param name='ci' value='89056' /></relative>]@T]','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=550,height=675'))&quot;>View Details</a>
