@@ -136,7 +136,7 @@ span.g-toolTip {
     width: inherit;
 }
 .action-buttons {
-    text-align: right;
+    text-align: center;
     padding: 20px 0;
 }
 .invalid { border: 1px solid red!important }
@@ -260,17 +260,21 @@ form input[type="checkbox"] {
     opacity: 0;  
 }
 form div.toggle {
-    background: url(//img1.wsimg.com/cart/icons/FOS-9911_payment_icons.png) no-repeat -62px -87px;
-    height: 24px;
-    width: 23px;
-    padding: 2px;
+    background: url(../../domain-config/img/dpp_sprite_pl_1.png) no-repeat -193px -26px;
+    width: 16px; 
+    height: 16px;
     cursor: pointer;
     display: inline-block;
     vertical-align: middle;
-    margin-right: 5px;
+    margin-right: 8px;
     margin-top: -2px;
 }
-form div.toggle.checked { background: url(//img1.wsimg.com/cart/icons/FOS-9911_payment_icons.png) no-repeat -107px -86px }
+form div.toggle.checked { 
+    background: url(../../domain-config/img/dpp_sprite_pl_1.png) no-repeat -211px -24px;
+    width: 21px; 
+    height: 18px;
+    margin-right: 3px;
+}
 form input[type="radio"] { 
     position: absolute;
     filter: alpha(opacity=0);
@@ -279,7 +283,7 @@ form input[type="radio"] {
     opacity: 0; 
 }
 form span.radio {
-    background: url(../../domain-config/img/dpp_sprite_pl.png) no-repeat -777px -21px;
+    background: url(../../domain-config/img/dpp_sprite_pl_1.png) no-repeat -777px -21px;
     vertical-align: top;
     display: inline-block;
     height: 21px;
@@ -288,7 +292,7 @@ form span.radio {
     cursor: pointer;
 }
 form span.radio.checked {
-    background: url(../../domain-config/img/dpp_sprite_pl.png) no-repeat -733px -21px;
+    background: url(../../domain-config/img/dpp_sprite_pl_1.png) no-repeat -733px -21px;
     vertical-align: top;
     display: inline-block;
     height: 21px;
@@ -366,9 +370,29 @@ form span.radio.checked {
 #main-wrap .selectstyleui>.ss-options>.selected { background-color: #eff6e3 }
 #defaultOption { display: none }
 #main-wrap .error {
-    color: red;
+    color: #f00000;
     font-style: italic;
     width: 100%;
+}
+#main-wrap #head-wrap > .error {
+    color: #fff;
+    font-style: normal;
+    width: 100%;
+    background-color: #f00000;
+    border-color: #f00000;
+}
+.sf-icn, .sf-icn:link {
+  display: none !important;
+}
+div.sf-alert-msg, 
+div.sf-alert-msg > a {
+  color: #fff;
+  font-size: 14px;
+}
+.sf-icn-alert.sf-icn-alert-error {
+    background: url('../../domain-config/img/dpp_sprite_pl_1.png') no-repeat -800px -23px;
+    width: 24px;
+    height: 20px;
 }
 #main-wrap .hidden { display: none }
 #uk-header{
@@ -455,10 +479,14 @@ color: #333
 #eligibility-form > form.lawyer_gac h2,
 #eligibility-form > form.attorney_gac h2 {
   display: block;
-  font-size: 18px;
-  margin: 25px 0 0;
+  font-size: 16px;
+  margin: 15px 0 0;
   padding: 0;
   color: #333333;
+}
+#eligibility-form > form.lawyer_gac .radioBtnGroup div,
+#eligibility-form > form.attorney_gac .radioBtnGroup div {
+ margin-top: 2px;
 }
 #eligibility-form > form.nyc_eligibility > .headingText > ul {
 list-style: inherit; 
@@ -468,7 +496,7 @@ margin-top: 20px
 #eligibility-form > form.nyc_eligibility > div.field > h2 {font-size: 14px;margin: 0;padding: 20px 0 0;}
 #eligibility-form > form.lawyer_gac > div.field > h2,
 #eligibility-form > form.attorney_gac > div.field > h2 {
-  font-size: 14px;
+  font-size: 16px;
   margin: 0;
   padding: 15px 0 0;
 }
@@ -506,5 +534,18 @@ form.nyc_eligibility div.tui-stateOrProvince {margin: 0 20px 0 33px}
 }
 #eligibility-form > form.lawyer_gac div .sub-label,
 #eligibility-form > form.attorney_gac div .sub-label {
-  margin:30px 0 0;
+  margin:25px 0 0;
+}
+#applyToAll {
+  margin: 25px 0 0;
+}
+#applyToAll p {
+  padding: 0;
+}
+#applyToAll label {
+  font-size: 16px;
+}
+#applyToAll p .tld,
+#applyToAll div .tld {
+  font-weight: bold;
 }
