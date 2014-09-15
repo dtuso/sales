@@ -22,6 +22,7 @@
   "o365":               "./business/office-365/",
   "offers":             "./offers/default/",
   "os":                 "./ecommerce/onlinestore/",
+  "promos-si":			"./offers/stick-it-to-high-prices/",
   "qsc":                "./ecommerce/shopping-cart/",
   "search":             "./domains/search/",
   "search-config":      "./domains/search/search.config",

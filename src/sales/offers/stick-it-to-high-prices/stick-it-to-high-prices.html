@@ -1,0 +1,419 @@
+---
+location: sales/offers/stick-it-to-high-prices.aspx
+id: 54170e90f778fc205c2b5be8
+name: GCE-27851
+comments: Final pre-release improvements
+url: http://www.dev-godaddy.com/offers/stick-it-to-high-prices.aspx
+assetPath: false
+---
+{% extends 'layouts/base.html' %}
+{% block metahead %}
+{% parent %}
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="[@L[cds.sales/offers/stick-it-to-high-prices:twitter-site]@L]" />
+<meta name="twitter:title" content="[@L[cds.sales/offers/stick-it-to-high-prices:twitter-title]@L]" />
+<meta name="twitter:description" content="[@L[cds.sales/offers/stick-it-to-high-prices:twitter-description]@L]" />
+<meta name="twitter:url" content="[@T[link:<external linktype='siteurl' path='/offers/stick-it-to-high-prices.aspx' parammode='explicit' />]@T]" />
+<meta name="twitter:image:src" content="[@T[link:><imageroot />]@T]fos/sales/themes/scotty/offers/stick-it-to-high-prices/img/og_stick-it.jpg" />
+
+<style type="text/css">
+{% less %}
+{% include 'css/styles.less' %}
+{% endless %}
+
+/* 
+ * restore bootstrap grid CSS (and other bootstrap overrides)
+ */
+.col-xs-1 {width: 8.333333333333332%;}
+.col-xs-2 {width: 16.666666666666664%;}
+.col-xs-3 {width: 25%;}
+.col-xs-4 {width: 33.33333333333333%;}
+.col-xs-5 {width: 41.66666666666667%;}
+.col-xs-6 {width: 50%;}
+.col-xs-7 {width: 58.333333333333336%;}
+.col-xs-8 {width: 66.66666666666666%;}
+.col-xs-9 {width: 75%;}
+.col-xs-10 {width: 83.33333333333334%;}
+.col-xs-11 {width: 91.66666666666666%;}
+.col-xs-12 {width: 100%;}
+.col-xs-4 {max-width: initial;}
+
+.btn-warning {
+font-size: 23px;
+padding-left: 30px;
+padding-right: 30px;
+font-family: Walsheim-Medium;
+text-transform: uppercase;
+}
+
+/* 
+ * Document-level overrides 
+ */
+body {font-family: Walsheim-Medium;}
+section {padding-top: 80px;padding-bottom: 80px;}
+section:first-child {padding-top: 0;}
+section:last-child {padding-bottom: 0;}
+[class*="col-"] {position: relative;}
+#pcf {margin-top:-42px;}
+
+/* 
+ * Marquee section
+ */
+#marquee {background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/stick-it-to-high-prices/img/marquee-stick-it.jpg);background-repeat: no-repeat;background-position: center top;height: 460px;color: white;}
+#marquee .container {position: relative;}
+#marquee .primary-offer-section {margin-top: 60px;}
+#marquee .primary-offer-section .icon-offer {margin:30px 0;height:90px;}
+#marquee .primary-offer-section .icon-offer .price {color: #000;position: relative;top: -82px;left: 310px;line-height:1;}
+#marquee .primary-offer-section .icon-offer .wsb-price {font-weight:700;font-family: Tungsten;font-size:64px;}
+#marquee .primary-offer-section .offer {padding-top: 20px;padding-bottom: 40px;font-family: Walsheim-Medium;}
+#marquee .primary-offer-section .offer span:first-child {font-size: 32px;line-height: 1;font-family: Walsheim-Black;}
+#marquee .primary-offer-section .offer span:last-child {font-size: 28px;line-height: 1;}
+#marquee .primary-offer-section .offer span:last-child strong {font-family: Walsheim-Black;}
+
+#marquee .primary-offer-section .btn-warning {font-size: 23px;padding-left: 30px;padding-right: 30px;}
+#marquee .uxicon-play {font-size: 64px;padding-top: 40px;color: #fff;}
+#marquee .stick-it-video-link {color: #fff;text-align: center;float: right;font-size: 18px;line-height: 1;position: absolute;bottom: 0;right: 0;}
+#marquee .stick-it-video-link:hover {text-decoration: none;cursor: pointer;}
+#marquee .stick-it-video-link strong {font-size: 36px;text-transform: uppercase;}
+
+/* 
+ * Other offers section
+ */
+#offers {background: radial-gradient(#615e5f 1px, transparent 1px),#d4d4d4;background-size: 5px 5px;}
+#offers .green-callout-1 {position: absolute;top: -10px;left: 20px;color: #fff;text-align: center;}
+#offers .green-callout-1 div {min-width: 188px;min-height: 61px;font-family: Tungsten;font-size: 25px;padding: 10px 0;text-transform: uppercase;}
+#offers .black-callout-1 {position: absolute;top: -10px;left: 40px;color: #fff;text-align: center;}
+#offers .black-callout-1 span {font-weight:700;display: block;min-width: 188px;min-height: 61px;font-family: Tungsten;font-size: 25px;padding: 10px 0;text-transform: uppercase;}
+#offers .secondary-offer-section, #offers .tertiary-offer-section {border-top: 10px solid #77c043;background: #fff;padding: 60px 30px;min-height: 532px;}
+#offers .secondary-offer-section .text-secure {margin-top: 10px;margin-bottom: 60px;}
+#offers .secondary-offer-section .btn-warning {margin-top: 20px;}
+#offers .secondary-offer-section .hosting-icon {float: left;margin-right: 40px;}
+#offers .secondary-offer-section .offer-details {font-size: 23px;margin-bottom: 20px;line-height: 1.1;}
+#offers .secondary-offer-section .offer-details strong {color: #77c043;font-size: 36px;}
+#offers .tertiary-offer-section .offer-details {display: block;font-size: 23px;margin-top: 20px;margin-bottom: 20px;}
+#offers .tertiary-offer-section .offer-details strong {color: #77c043;}
+
+/* 
+ * Domain search section
+ */
+#domain-search {background: #000;padding: 60px 0;}
+.btn-search-form {height: 64px;padding: 10px 30px 8px;margin-left: 20px;}
+input[type="text"] {border:1px solid #ccc;border-top:3px solid #939597;}
+#domain-search .headline {font-weight:700;font-size: 40px;font-family: Tungsten;text-transform: uppercase;color: #77c043;line-height: 1;margin: 0 auto;}
+#domain-search .summary {font-size: 50px;font-family: Walsheim-Black;text-transform:uppercase;color: #77c043;line-height: 1;margin: 0 auto;}
+
+/* 
+ * Why GoDaddy section
+ */
+#why-godaddy {background: #fff;padding-bottom:50px;}
+#why-godaddy .headline {font-size: 28px;font-weight: bold;line-height: 1.1;margin-bottom: 20px;}
+#why-godaddy .description {font-size: 18px;}
+#why-godaddy .sprite {margin: 0 auto 40px;}
+
+/* 
+ * Image sprite
+ */
+.sprite {background-repeat: no-repeat;background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/stick-it-to-high-prices/img/sprite.png);}
+.sprite.black-callout-1 {background-position: 0 0;width: 182px;height: 61px;}
+.sprite.black-callout-2 {background-position: 0 -60px;width: 187px;height: 53px;}
+.sprite.globe-icon {background-position: 0 -175px;width: 154px;height: 153px;}
+.sprite.hosting-icon {background-position: -487px 0;width: 153px;height: 196px;}
+.sprite.img-domains {background-position: -291px -229px;width: 144px;height: 146px;}
+.sprite.img_mrq_icon-group {background-position: -184px -141px;width: 276px;height: 83px;}
+.sprite.green-callout-1 {background-position: 0 -113px;width: 181px;height: 59px;}
+.sprite.img-support {background-position: -157px -230px;width: 129px;height: 146px;}
+.sprite.img-trust {background-position: -443px -231px;width: 144px;height: 146px;}
+.sprite.polygon-1-orange:hover {background-position: -328px 0;width: 140px;height: 140px;}
+.sprite.polygon-1-orange {background-position: -186px 0;width: 140px;height: 140px;}
+.sprite.tile_dot_3x3_4px-padding {background-position: -489px -81px;width: 3px;height: 3px;}
+   
+/* 
+ * Text sprite - intended to be temporarily used to provide on-brand alignment and dashes while a more robust solution is crafted
+ */         
+.text-sprite {	background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/stick-it-to-high-prices/img/text-sprite.png) no-repeat;}
+.text-sprite.text-easy{background-position: 0 0;width: 440px;height: 158px;}
+.text-sprite.text-buzzwords{background-position: 0 -159px ;width: 402px;height: 129px;}
+.text-sprite.text-domain{background-position: 0 -294px ;	width: 417px;height: 76px;}
+.text-sprite.text-service{background-position: 0 -377px ;width: 725px;height: 75px;}
+.text-sprite.text-find{background-position: 0 -457px ;	width: 660px;	height: 76px;}
+.text-sprite.text-email{background-position: 0 -537px ;width: 224px;height: 61px;}
+.text-sprite.img_mrq_icon-group{background-position: -227px -538px ;width: 276px;height: 83px;}
+
+</style>
+[@P[cdsDocument:<data app="sales" location="fonts/fonts" /> ]@P]
+{% endblock %}
+
+{% block body %}
+
+
+<section id="marquee">
+    <div class="container l-main-container">
+        <div class="primary-offer-section">
+            <div class="row text-sprite text-easy">
+            </div>
+
+            <!-- use the below for the icon marquee version -->
+            <div class="row icon-offer">
+                <div class="sprite img_mrq_icon-group"></div>
+                <div class="price">
+                    <span class="wsb-price">$1.00</span><br/>
+                    <span class="wsb-period" style="font-size:20px;">per month</span>
+                </div>
+            </div>
+
+            <!-- use the below for the text marquee version -->
+            <div class="row offer" style="display:none;">
+                <strong><span class="wsb-price">{0}</span><span>/mo</span></strong><br />
+                <span>Includes <strong>FREE</strong> domain</span>
+            </div>
+
+            <!-- use this anchor tag to immediately add and go to cart -->
+            <!--<a id="marquee-buy-now" class="btn btn-warning btn-buy-now" data-ci="93272" data-plan="wsb_personal_12month">Buy Now</a>-->
+
+            <!-- use this anchor tag to link to website builder config page -->
+            <a href="[@T[link:<relative path='hosting/website-builder-config.aspx'><param name='ci' value='93272' /><param name='isc' value='hl8' /><param name='plan' value='wsb_personal_12month' /></relative>]@T]" class="btn btn-warning">Buy Now</a>
+        
+        </div>
+        <a class="stick-it-video-link" data-toggle="modal" data-target="#myVideoModal" data-ci="93271">
+            <span class="uxicon uxicon-play sprite polygon-1-orange"></span>
+            <br />
+            <span>Doubters, back off.<br /><strong>Hit Play</strong></span>
+        </a>
+    </div>
+</section>
+
+<div class="modal fade videoModal" id="myVideoModal" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="modal-header-close close" data-dismiss="modal" aria-hidden="true">x</button>
+            </div>
+            <div class="modal-body">
+                <iframe width="854" height="480" autoplay scrolling="no" frameborder="0" allowfullscreen="" src="//www.youtube.com/embed/VIBfctISM9M?html5=1&amp;rel=0&amp;iv_load_policy=3&amp;modestbranding=1"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section id="offers">
+    <div class="container l-main-container">
+        <div class="row">
+            <div class="col-xs-6">
+                <div class="sprite green-callout-1">
+                    <div>Only <strong><span class="mw-price">{0}</span>/mo</strong></div>
+                </div>
+                <div class="secondary-offer-section">
+                    <div class="text-sprite text-buzzwords" style="margin-bottom:40px;">
+                    </div>
+                    <div class="sprite hosting-icon">
+                    </div>
+                    <div class="offer-details">Managed WordPress + Domain for only</div>
+                    <div class="offer-details"><strong><span class="mw-price">{0}</span>/mo</strong></div>
+                    
+                    <!-- use this anchor tag to immediately add and go to cart -->
+                    <a id="mw-buy-now" class="btn btn-warning btn-buy-now" data-ci="93270" data-plan="wordpres_Basic1Yr_us">Buy Now</a>
+
+                    <!-- use this anchor tag to link to managed wordpress config page -->
+                    <!--<a href="[@T[link:<relative path='hosting/wordpress-hosting.aspx'><param name='ci' value='93270' /><param name='isc' value='hl8' /></relative>]@T]" class="btn btn-warning">Buy Now</a>-->
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div class="sprite black-callout-1">
+                    <span>New Domains</span>
+                </div>
+                <div class="tertiary-offer-section">
+                    <div class="sprite globe-icon" style="margin:0 auto 20px;">
+                    </div>
+                    <div class="text-sprite text-domain">
+                    </div>
+                    <span class="offer-details"><strong>100s</strong> of new domains are here, making our selection and your options huge-er.</span>
+                    <a href="[@T[link:<relative path='domains/domain-name-search.aspx'><param name='ci' value='93267' /><param name='isc' value='hl8' /></relative>]@T]" class="btn btn-warning">Search Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="domain-search">
+    <div class="container l-main-container">
+        <div class="text-find" style="margin: 0 auto 40px;text-align:center;">
+            <div class="headline">Domain Search</div>
+            <div class="summary">Find your perfect name</div>
+        </div>
+        <form method="post" data-url="[@T[link:<relative path='/api/dpp/search/single' />]@T]" action="[@T[link:<relative path='/domains/searchresults-new.aspx' />]@T]" id="domain_search_form">
+            <div class="searchBoxForm">
+                <input type="text" name="domainToCheck" placeholder="Enter a domain name" class="search-form-input" id="domain_search_input" autocomplete="off" style="margin-left:120px;width:auto;min-width: 500px;" />
+                <button type="submit" name="searchButton" data-ci="93268" class="btn btn-warning btn-search-form submitbtn">Search Domain</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<section id="why-godaddy">
+    <div class="container l-main-container">
+        <div class="row">
+            <div class="text-sprite text-service" style="margin: 0 auto 40px;">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-4">
+                <div class="sprite img-domains">
+                </div>
+                <p class="headline">
+                    We're way more than just domains.
+                </p>
+                <p class="description">If you have the drive, we have all you need to build and manage an online business.  Get a domain, build a great site, create an online store, and list it so customers can actually find you.</p>
+            </div>
+            <div class="col-xs-4">
+                <div class="sprite img-support">
+                </div>
+                <p class="headline">
+                    You don't work 9 to 5. Neither do we.
+                </p>
+                <p class="description">We know it's tough to get started.  That's why our support team is here around the clock waiting to talk you through it.  Give 'em a call, they're ready to help.  Really.  Really, really.</p>
+            </div>
+            <div class="col-xs-4">
+                <div class="sprite img-trust">
+                </div>
+                <p class="headline">
+                    We've got your back &amp; all the tools you need.
+                </p>
+                <p class="description">Ready to get online and get noticed, but not sure where to start?  More than 12 million people trust us to cut through the noise and get them going.  Now it's your turn.  Let's go.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--<section id="email-opt-in">
+    <div class="container l-main-container">
+        <div class="text-sprite text-email" style="float: left;">
+        </div>
+        <div class="searchBoxForm">
+            <input id="pcf_email" type="text" onkeypress="pcj_key('pcj_signup()',event);" placeholder="Type your email address" class="search-form-input pcf-special-offers-form-email-input" style="margin-left:20px;width:auto;min-width: 500px;" />
+            <button title="Submit" data-ci="93269" onclick="pcj_signup();" class="btn btn-warning btn-search-form submitbtn pcf-special-offers-form-submit">Submit</button>
+        </div>
+    </div>
+</section>-->
+
+{% endblock %}
+
+{% block footer %}
+
+<script type="text/javascript">
+
+    $(".wsb-price").each(function () {
+        $(this)
+          .html('[@T[productprice:<current productid="7524" period="monthly" />]@T]')
+          .closest('.price-hide')
+          .removeClass("price-hide");
+    });
+
+    $(".mw-price").each(function () {
+        $(this)
+          .html('[@T[productprice:<current productid="32759" period="monthly" />]@T]')
+          .closest('.price-hide')
+          .removeClass("price-hide");
+    });
+
+    // echos text typed in either email collection input box
+    $('.pcf-special-offers-form-email-input').on('keyup', function (e) {
+        $('.pcf-special-offers-form-email-input').val($(e.target).val());
+    });
+
+    $('#mw-buy-now').on('click', function (e) {
+        e.preventDefault();
+
+        var target = $(e.target);
+        $(e.target).addClass('disabled');
+
+        var action = 'add';
+        var itc = 'slp_promos_stickit';
+        var ci = target.attr('data-ci');
+        var quantity = '1';
+        var plan = target.attr('data-plan');
+        
+        var url = '[@T[link:<relative path="/api/package/{0}/{1}/{2}/{3}/{4}"/>]@T]';
+        url = url.replace('{0}', action).replace('{1}', itc).replace('{2}', ci).replace('{3}', quantity).replace('{4}', plan);
+
+        $.getJSON(url, function (data) {
+            if (data.Success == true) {
+                var newCartCt = pcCartCt + 1;
+                pcUpdateCart(newCartCt);
+                //##if(isManager())
+                //    window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx"/>]@T]';
+                //##else
+                //    window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx"/>]@T]';
+                //##endif
+                window.location = '[@T[link:<relative path='/hosting/wordpress-hosting-config.aspx'><param name='ci' value='93270' /><param name='isc' value='hl8' /></relative>]@T]';
+            }
+        });
+    });
+
+    $(document).ready(function () {
+
+        if (typeof FastballEvent_MouseClick === 'function' && typeof fbiLibCheckQueue === 'function') {
+            $('[data-ci]').click(function (e) {
+                $this = $(this);
+                FastballEvent_MouseClick(e, $this.attr('data-ci'), $(this)[0], 'a');
+                fbiLibCheckQueue();
+            });
+        }
+
+        // ensures the YouTube link autoplays only when the bootstrap modal is opened (not on page load)
+        // and that it stops when the modal is hidden
+      ##if(activeLanguageAny([en],[pt-br],[es]))
+        var autoplay = '\&autoplay=1';
+        var src = $('#myVideoModal iframe').attr('src');
+        $('#myVideoModal').on('hidden.bs.modal', function () {
+            $('#myVideoModal iframe').removeAttr('src');
+            $('#myVideoModal iframe').attr('src', src);
+        });
+
+        $('#myVideoModal').on('show.bs.modal', function () {
+            $('#myVideoModal iframe').attr('src', src + autoplay);
+        });
+      ##endif
+
+    });
+
+    $('#domain_search_form').on('submit', function (e) {
+        e.preventDefault();
+
+        $('button[name="searchButton"]', this).addClass('disabled');
+
+        var params = {
+            query: $(this).serialize(),
+            searchUrl: $(this).attr('data-url')
+        };
+        DomainSearch(params, function (err, NextStepUrl) {
+            if (err == null) {
+                if (typeof NextStepUrl === 'undefined') {
+                    NextStepUrl = '[@T[link:<relative path="/domains/domain-name-search.aspx" />]@T]';
+                }
+                window.location = NextStepUrl;
+            }
+            else {
+                if (console != "undefined")
+                    console.log(err);
+            }
+        });
+    });
+
+    function DomainSearch(params, cb) {
+        $.ajax({
+            url: params.searchUrl,
+            type: 'POST',
+            data: params.query,
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                var data = { Error: errorThrown, Success: false };
+                cb(errorThrown, null);
+            },
+            success: function (data) {
+                cb(null, data.NextStepUrl);
+            }
+        });
+    }
+
+</script>
+{% endblock %}
