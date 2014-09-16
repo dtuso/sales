@@ -174,7 +174,7 @@ function getQueryParams(){
     }
     return params;
   }
-  return []];
+  return [];
 }
 
 function addQueryParam(url,name,value){
