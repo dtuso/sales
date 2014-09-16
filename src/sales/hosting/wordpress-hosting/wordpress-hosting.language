@@ -1,8 +1,7 @@
 ---
 location: localization/sales/hosting/wordpress-hosting/en
-id:   false
+id: 53dc15c9f778fc32dc9e3039
 name: FOS-24754
-comments: Remove Fotolia Credits
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="subheadertext.Part1" comment="company name between part 1 and 2"/>
