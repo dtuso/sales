@@ -122,7 +122,7 @@ if (!domains.controls.cds_gtld_registration) {
         url = appendQueryString(url, 'regapptoken=' + encodeURIComponent(TUI.AppToken));
       } else if (actionType == actionsEnum.validate) {
         url = settings.apiUrlValidate.replace('{0}', encodeURIComponent(currentDomain));
-        url = appendQueryString(url, serializeCurrentDomain());
+        url = appendQueryString(url, serializeCurrentDomain() + "&AllDomainsCheckbox=" + $("#AllDomainsCheckbox").val());
       }
 
       $.getJSON(url, handleTuiInfo)
@@ -210,7 +210,7 @@ if (!domains.controls.cds_gtld_registration) {
 
         if (data.FormJson && data.FormJson != null) {
           settings.$headerArea.find(':not(.error)').hide();
-          parseDPPJson(data.FormJson);
+          parseDPPJson(data.FormJson, data.AllDomainsCheckbox);
           return;
         }
       } else if (data.FormType == "trustee") {
@@ -498,7 +498,7 @@ if (!domains.controls.cds_gtld_registration) {
         }
       }
 
-    function parseDPPJson(data) {
+    function parseDPPJson(data, allDomainsCheckbox) {
       var parsedData = JSON.parse(data);
       var html = '';
       var currentFormTld = '';
@@ -513,6 +513,7 @@ if (!domains.controls.cds_gtld_registration) {
         }
 
         $.each(FormFieldsByDomain, function(dIndex, domain) {
+          var entireDomainName = dIndex;
           currentDomainName = "";
           currentDomainTLD = "";
 
@@ -530,22 +531,35 @@ if (!domains.controls.cds_gtld_registration) {
           html += '<form id="form' + currentDomainName + '">';
           }
 
-          if (parsedData.FormItems && parsedData.FormItems.FormLabel) {
-            html += "<h1>";
-            html += parsedData.FormItems.FormLabel;
-            html += "</h1>";
-          } else {
-            html += '<h1>';
-            html += "." + currentDomainTLD.toUpperCase() + " " + settings.registrationInformationText;
-            html += '</h1>';
+          html += "<h1>";
+          if (parsedData.FormItems && parsedData.FormItems.FormLabel && parsedData.FormItems.ValidationLevel == "domain") {
+            html += entireDomainName + " " + parsedData.FormItems.FormLabel;
           }
+          else if (parsedData.FormItems && parsedData.FormItems.FormLabel) {
+            html += parsedData.FormItems.FormLabel;
+          } else {
+            html += "." + currentDomainTLD.toUpperCase() + " " + settings.registrationInformationText;
+          }
+          html += '</h1>';
 
           if (parsedData.FormItems && parsedData.FormItems.ValidationLevel == "domain") {
-            html += '<div id="applyToAll"><p>';
-            html += settings.needMoreInformationText;
-            html += '</p><div><label class="toggle"><input type="checkbox" class="toggle" id="AllDomainsCheckbox" name="AllDomainsCheckbox" value="1" checked="checked" /><div class="toggle checked"></div><label for="AllDomainsCheckbox">';
-            html += settings.applyToAllLabelText;
-            html += '</label></label></div></div>';
+
+            var checked = '';
+            var checkedClass = '';
+            if (allDomainsCheckbox == "1") {
+              checked = 'checked="checked"';
+              checkedClass = "checked";
+            }
+
+            if (allDomainsCheckbox != "0") {
+              html += '<div id="applyToAll"><p>';
+              html += settings.needMoreInformationText;
+              html += '</p><div><label class="toggle">';
+              html += '<input type="checkbox" class="toggle" id="AllDomainsCheckbox" name="AllDomainsCheckbox" value="1" ' + checked + ' /><div class="toggle ' + checkedClass + '">';
+              html += '</div><label for="AllDomainsCheckbox">';
+              html += settings.applyToAllLabelText;
+              html += '</label></label></div></div>';
+            }
           }
 
           if (parsedData.FormItems && parsedData.FormItems.FormDescription) {
