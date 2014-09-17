@@ -164,13 +164,17 @@ function pathIsDeals2(){
 function getQueryParams(){
   var url = window.location.href;
   var params = {};
-  var queryParams = (url.substr(url.indexOf('?')+1,url.length)).split('&');
-  for(var i = 0; i < queryParams.length; i++)
+  if(url.indexOf('?') > -1)
   {
-    var param = queryParams[i].split('=');
-    params[param[0]] = param[1].replace('#','');
+    var queryParams = (url.substr(url.indexOf('?')+1,url.length)).split('&');
+    for(var i = 0; i < queryParams.length; i++)
+    {
+      var param = queryParams[i].split('=');
+      params[param[0]] = param[1].replace('#','');
+    }
+    return params;
   }
-  return params;
+  return [];
 }
 
 function addQueryParam(url,name,value){

@@ -1,7 +1,7 @@
 ---
 location: sales/domains/searchresults.aspx
 id: 
-name: FOS-24164
+name: GCE-19407
 ---
 ##if(false)
 {% include 'modules/doc-block.html' %}
@@ -15,7 +15,7 @@ name: FOS-24164
   <meta name="description" content="[@L[cds.sales/domains/searchresults-new:MetaDescription]@L]" />
   <meta name="keywords" content="[@L[cds.sales/domains/searchresults-new:MetaKeywords]@L]" />
   <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
-  <link rel="canonical" href="[@T[link:<external linktype='siteurl' secure='false' path='/domains/searchresults-new.aspx' />]@T]"/> 
+  <link rel="canonical" href="[@T[link:<external linktype='siteurl' path='/domains/searchresults-new.aspx' />]@T]"/> 
   [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags" />]@P]
   <link rel="stylesheet" type="text/css" href="[@T[link:<cssroot />]@T]shared/css/1/styles_20130904.min.css">
   <link type="text/css" rel="stylesheet" href="[@T[link:<cssroot />]@T]fos/global/build/0.2.0/gd-fos-global.min.css" />
@@ -23,7 +23,7 @@ name: FOS-24164
   <link rel="shortcut icon" href="[@T[link:<imageroot />]@T]assets/godaddy.ico" />
   <link type="text/css" rel="stylesheet" href="[@T[link:<cssroot />]@T]fos/sales/themes/scotty/domains/searchresults/css/styles.css?v=24164" />
   ##else  
-  <link type="text/css" rel="stylesheet" href="[@T[link:<css path='fos/sales/themes/scotty/domains/searchresults/css/styles_PL-08262014.css' />]@T]" />
+  <link type="text/css" rel="stylesheet" href="[@T[link:<cssroot />]@T]fos/sales/themes/scotty/domains/searchresults/css/styles_PL-08262014.css" />
   ##endif    
   <script type="text/javascript"  src="[@T[link:<javascriptroot />]@T]shared/js/1.5.1/global.20120918.min.js"></script>
   ##if(!activeLanguageAny(en, es))
@@ -217,10 +217,13 @@ name: FOS-24164
       <div id="tldHeader">
         <span class="tldType" data-bind="html: '.' + TLD()">TLD</span>
         <!-- ko with: Type -->
-        <span class="domainType" data-bind="html: DisplayText"></span>
+        <span class="domainType" data-bind="visible: !$parent.IsAd(), html: DisplayText"></span>
+        <!-- /ko -->
+        <!-- ko with: IsAd -->
+          <span class="domainType IsAd" style="">[@L[cds.sales/domains/searchresults-new3:domainFlagAd]@L]</span>
         <!-- /ko -->
         <!-- ko with: IsPremiumPrice -->
-        <span class="domainType isPremiumPrice" style="">[@L[cds.sales/domains/searchresults-new3:domainFlagPremium]@L]</span>
+          <span class="domainType isPremiumPrice" style="">[@L[cds.sales/domains/searchresults-new3:domainFlagPremium]@L]</span>
         <!-- /ko -->
       </div>
     </div>

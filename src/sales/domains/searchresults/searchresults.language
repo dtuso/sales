@@ -322,6 +322,8 @@ Country/Location
 Premium
 <phrase key="domainFlagPremiumTier" />
 Premium
+<phrase key="domainFlagAd" />
+Ad
 <phrase key="domainFlagPre-registration" />
 Pre-registration      
 <phrase key="domainFlagPrivatesale" />
