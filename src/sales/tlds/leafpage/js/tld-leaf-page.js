@@ -10,7 +10,7 @@ if (!domains.controls.cds_gtld_templates) {
         gtld: 'com',
         ssoSpkey: '',
         tldLogoImageExists: true,
-        tldLogoImageFileName: '',
+        tldLogoImageFilePath: '',
         hasProductLimitations: true,
         watchAuthUrl: 'http://example.com/endpointAuth.asmx',
         watchDataUrl: 'http://example.com/endpointData.asmx',
@@ -23,7 +23,9 @@ if (!domains.controls.cds_gtld_templates) {
         $lrNotEarlyAccessDiv: $('#lr-not-earlyaccess'),
         tldH1TagExists: true,
         tldMarketingContentTagExists: true,
-        tldUKLogo:''
+        // tldUKLogo:'',
+        isEnMarket: false,
+        tldLogoFileName: ''
       },
       isUserWatchingGtld = false,
       modalObject = null,
@@ -312,7 +314,12 @@ if (!domains.controls.cds_gtld_templates) {
     function showHideLogoImage() {
       // hide the logo div if image doesn't exist
       if(settings.tldLogoImageExists === true) {
-        $('#gtld-logo > img').attr('src',settings.tldLogoImageFileName);
+        var tldLogos = settings.tldLogoFileName.split("|")
+        if(tldLogos.length > 1 && settings.isEnMarket === false){
+          $('#gtld-logo > img').attr('src',settings.tldLogoImageFilePath+tldLogos[1]);
+        }else{
+          $('#gtld-logo > img').attr('src',settings.tldLogoImageFilePath+tldLogos[0]);
+        }
       } else {
         $('#gtld-logo').hide();
       }
