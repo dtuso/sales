@@ -897,7 +897,7 @@
                         "1":"[@T[productprice:<current productid=\"1095\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
                         "3":"[@T[productprice:<current productid=\"1095\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
                         "12":"[@T[productprice:<current productid=\"1095\" dropdecimal=\"false\" percentoff=\"10\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
-                        "24":"[@T[productprice:<current productid=\"1095\" dropdecimal=\"false\" percentoff=\"20\"htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        "24":"[@T[productprice:<current productid=\"1095\" dropdecimal=\"false\" percentoff=\"20\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
                     },
                     "memoryhog": {
                         "1":"[@T[productprice:<current productid=\"2802\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
@@ -962,7 +962,7 @@
                     "deluxe": {
                         "1":"[@T[productprice:<current productid=\"859\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
                         "3":"[@T[productprice:<current productid=\"859\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
-                        "12":"[@T[productprice:<current productid=\"859\" dropdecimal=\"false\" percentoff=\"10\"htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                        "12":"[@T[productprice:<current productid=\"859\" dropdecimal=\"false\" percentoff=\"10\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
                         "24":"[@T[productprice:<current productid=\"859\" dropdecimal=\"false\" percentoff=\"20\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
                     },
                     "premium": {
