@@ -1,8 +1,8 @@
 ---
 location: sales/ssl/static-ip.aspx
-id: 53f7d372f778fc1008446c8a
-name: GCE-26810
-comments: modified canonical url to be secure
+id: 5411de4bf778fc0f24cc8eeb
+name: GCE-28157
+comments: Updating og:url Meta Data Tag
 ---
 {% extends 'layouts/base.html' %}
 
@@ -61,15 +61,7 @@ comments: modified canonical url to be secure
     $(function () {
       $('.equal-height').setColumnsEqualHeight();
       $('.select-box').setSelectBox();
-      $('.tab-link').tabLinks();
-      // CI code click tracker
-      if (typeof FastballEvent_MouseClick === 'function' && typeof fbiLibCheckQueue === 'function') {
-        $('[data-ci]').click(function(e){
-          $this = $(this);
-          FastballEvent_MouseClick(e,$this.attr('data-ci'),$(this)[0],'a');
-          fbiLibCheckQueue();
-        });
-      }
+      $('.tab-link').tabLinks();      
     });
   </script>
 {% endblock %}
