@@ -22,12 +22,13 @@
   "o365":               "./business/office-365/",
   "offers":             "./offers/default/",
   "os":                 "./ecommerce/onlinestore/",
-  "promos-si":			"./offers/stick-it-to-high-prices/",
+  "promos-si":		    	"./offers/stick-it-to-high-prices/",
   "qsc":                "./ecommerce/shopping-cart/",
   "search":             "./domains/search/",
   "search-config":      "./domains/search/search.config",
   "searchresults":      "./domains/searchresults/",
-  "servers":             "./hosting/servers/",
+  "serp":               "./domains/searchresults/",
+  "servers":            "./hosting/servers/",
   "ssl":                "./ssl/ssl-certificates/",
   "static-ip":          "./ssl/static-ip/",
   "tui":                "./domains/tui/",  
@@ -40,8 +41,7 @@
   "wordpress-hosting":  "./hosting/wordpress-hosting/",
   "wp":                 "./hosting/wordpress-hosting/",
   "wsb":                "./hosting/website-builder/",
-  "hostingclp":          "./hosting/category-landing-page/",
-  "ssl-lp":              "./ssl/ssl-lp/",
-  "web-host":            "./hosting/web-host/"
-
+  "hostingclp":         "./hosting/category-landing-page/",
+  "ssl-lp":             "./ssl/ssl-lp/",
+  "web-host":           "./hosting/web-host/"
 }
