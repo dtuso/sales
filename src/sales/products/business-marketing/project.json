@@ -6,13 +6,13 @@
         "email": "rxnorton@godaddy.com"
       }
     },
-    "metaTitle": "Local Business Listings, Local SEO | Get Found - GoDaddy.com",
-    "metaDescription": "Get Found helps you grow by creating local business listings on top sites, like Google&reg;, Bing&reg; and Yelp&reg;. Launch your local SEO today.",
-    "metaKeywords": "local business listings, local SEO, Get Found, how to market your business, local business listings, get listed, local marketing, local internet marketing, how to promote your website, local online marketing, how to grow your business, local business marketing, online marketing tools, mobile marketing",
+    "metaTitle": "[@L[cds.sales/gd/products/business-marketing:meta-title]@L]",
+    "metaDescription": "[@L[cds.sales/gd/products/business-marketing:meta-description]@L]",
+    "metaKeywords": "[@L[cds.sales/gd/products/business-marketing:meta-keywords]@L]",
     "metaCanonicalPath": "/products/business-marketing.aspx",
-    "metaOgTitle": "Local Business Listings, Local SEO | Get Found - GoDaddy.com",
+    "metaOgTitle": "[@L[cds.sales/gd/products/business-marketing:og-title]@L]",
     "metaOgImage": "fos/hp/rebrand/img/gd_rebrand_og.png",
-    "metaOgDescription": "Get Found helps you grow by creating local business listings on top sites, like Google&reg;, Bing&reg; and Yelp&reg;. Launch your local SEO today."
+    "metaOgDescription": "[@L[cds.sales/gd/products/business-marketing:og-description]@L]"
   },
   "rules.config": {
     "cdsDetails": {

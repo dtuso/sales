@@ -1,8 +1,8 @@
 ---
 location: sales/products/business-marketing.aspx
-id: 540a1b10f778fc27d048922d
-name: GCE-24906
-comments: Redesign of landing page
+id: false
+name: GCE-27850
+comments: Redesign of landing page (take 2)
 url: http://www.dev-godaddy.com/products/business-marketing.aspx
 assetPath: false
 ---
@@ -121,8 +121,9 @@ assetPath: false
     }
     span.save-percentage,
     span.renewal-price {
-      display: none;
-      color: #fff;
+      color: #ff8914;
+      font-weight: 300;
+      font-size: 16px;
     }
 
   {% endless %}
@@ -191,23 +192,29 @@ assetPath: false
   <section class="container background-container main-banner-business-marketing">
     <div class="container l-main-container">
       <div class="row center-text">
-        <h1 class="main-banner-title font-condensed">Get Found</h1>
-        <h3 class="main-banner-subtitle">Get your business listed everywhere.<br />All from one place.</h3>
-        <p class="main-banner-text">Showcase your business on top sites across the Web like Google, Yelp and Foursquare.</p>
+        <h1 class="main-banner-title font-condensed">[@L[cds.sales/gd/products/business-marketing:main-banner-title]@L]</h1>
+        <h3 class="main-banner-subtitle">[@L[cds.sales/gd/products/business-marketing:main-banner-subtitle]@L]</h3>
+        <p class="main-banner-text">[@L[cds.sales/gd/products/business-marketing:main-banner-text]@L]</p>
       </div>
       <div class="row">
         <div class="col-xs-6 right-text">
-          <a id="get-started-btn-1" data-ci="92930" class="btn btn-primary get-started-btn cta-small" href="#">Get Started</a>
+          <a id="get-started-btn-1" data-ci="92930" class="btn btn-primary get-started-btn cta-small" href="#">[@L[cds.sales/gd/products/business-marketing:get-started]@L]</a>
         </div>
         <div class="col-xs-6 left-text">
-          <a id="get-free-report-1" data-ci="92929" class="ghost-button ghost-button-light" href="https://locu.godaddy.com/scanner">Get Free Report</a>
+          <a id="get-free-report-1" data-ci="92929" class="ghost-button ghost-button-light" href="[@T[link:<external linktype='LOCUURL' path='/scanner' secure='true'/>]@T]">[@L[cds.sales/gd/products/business-marketing:get-free-report]@L]</a>
         </div>
       </div>
       <div class="row center-text">
         <p class="pricing">
-          As low as <span class="renewal-price"><strike>{1}/mo</strike>* </span><span class="normal-price">{0}/mo</span> <span class="save-percentage">Save {2}</span>        
+          <span class="normal-price">[@L[cds.sales/gd/products/business-marketing:as-low-as]@L]</span>
+          <span class="normal-price">[@T[productprice:<current productid="37975" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T][@L[cds.sales/gd/products/business-marketing:per-mo]@L]</span> 
+        ##if(productHasSavingsMoreThan(37975, 37990, 0))
+          <span class="renewal-price"> <strike>[@T[productprice:<current productid="37990" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T][@L[cds.sales/gd/products/business-marketing:per-mo]@L]</strike>* </span>
         </p>
-        <p class="inline-disclaimer">*Current renewal price.</p>
+        <p class="inline-disclaimer renewal-price">*[@L[cds.sales/gd/products/business-marketing:current-renewal-price]@L]</p>
+        ##else
+        </p>
+        ##endif
       </div>
     </div>
   </section>
@@ -227,8 +234,8 @@ assetPath: false
   <section class="main-tabs">
     <div class="container l-main-container center-text">
       <ul class="nav nav-tabs">
-        <li class="nav-tabs-item active"><a class="nav-tabs-link" href="#plans" data-toggle="tab" data-ci="92935">Plans &amp; Pricing</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
-        <li class="nav-tabs-item"><a class="nav-tabs-link" href="#faq" data-toggle="tab" data-ci="92934">FAQ</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
+        <li class="nav-tabs-item active"><a class="nav-tabs-link" href="#plans" data-toggle="tab" data-ci="92935">[@L[cds.sales/gd/products/business-marketing:tab-plans-pricing]@L]</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
+        <li class="nav-tabs-item"><a class="nav-tabs-link" href="#faq" data-toggle="tab" data-ci="92934">[@L[cds.sales/gd/products/business-marketing:tab-faq]@L]</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
       </ul>
     </div>
   </section>
@@ -349,7 +356,7 @@ assetPath: false
         }
         .main-plans span.save-percentage,
         .main-plans span.renewal-price {
-          color: #333;
+          color: #ff8914;
         }
         .plan-item-side-B i.uxicon-x {
           float:right;
@@ -460,7 +467,7 @@ assetPath: false
       <!-- end-css-elevate -->
       <section class="main-plans">
         <div class="container l-main-container">
-          <h2 class="text-center">See where Get Found can get you listed by choosing your business type.</h2>
+          <h2 class="text-center">[@L[cds.sales/gd/products/business-marketing:plans-title]@L]</h2>
           <div class="row">
 
             <div class="col-xs-4">
@@ -468,14 +475,14 @@ assetPath: false
                 <div class="plan-item">
                   <div class="plan-item-side-A">
                     <div class="plan-item-img plan-item-img-brick solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/products/business-marketing/img/GetFound_LP_Sprite_20140903.png"></div>
-                    <h3>Brick and Mortar</h3>
-                    <p>Your business has a physical location that customers can visit (ex. restaurants, salons, spas, etc.)</p>
-                    <a class="ghost-button" data-ci="92941">View Sites</a>
+                    <h3>[@L[cds.sales/gd/products/business-marketing:title-brick-and-mortar]@L]</h3>
+                    <p>[@L[cds.sales/gd/products/business-marketing:description-brick-and-mortar]@L]</p>
+                    <a class="ghost-button" data-ci="92941">[@L[cds.sales/gd/products/business-marketing:view-sites]@L]</a>
                   </div>
                   <div class="plan-item-side-B">
                     <i class="uxicon uxicon-x" data-ci="92938"></i>
-                    <h3 class="clearfix">Brick and Mortar</h3>
-                    <p>Get listed on:</p>
+                    <h3 class="clearfix">[@L[cds.sales/gd/products/business-marketing:title-brick-and-mortar]@L]</h3>
+                    <p>[@L[cds.sales/gd/products/business-marketing:get-listed]@L]</p>
                     <div class="row">
                       <div class="col-xs-6">
                         <ul>
@@ -511,21 +518,24 @@ assetPath: false
                 <div class="plan-item">
                   <div class="plan-item-side-A clearfix">
                     <div class="plan-item-img plan-item-img-service solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/products/business-marketing/img/GetFound_LP_Sprite_20140903.png"></div>
-                    <h3>Local Service Area</h3>
-                    <p>Your local business serves a local area without a physical location that customers visit (ex. plumber, food truck, sailing tour provider, etc.)</p>
-                    <a class="ghost-button" data-ci="92942">View Sites</a>
+                    <h3>[@L[cds.sales/gd/products/business-marketing:title-local-service-area]@L]</h3>
+                    <p>[@L[cds.sales/gd/products/business-marketing:description-local-service-area]@L]</p>
+                    <a class="ghost-button" data-ci="92942">[@L[cds.sales/gd/products/business-marketing:view-sites]@L]</a>
                   </div>
                   <div class="plan-item-side-B clearfix">
                     <i class="uxicon uxicon-x" data-ci="92939"></i>
-                    <h3>Local Service Area</h3>
-                    <p>Get listed on:</p>
+                    <h3>[@L[cds.sales/gd/products/business-marketing:title-local-service-area]@L]</h3>
+                    <p>[@L[cds.sales/gd/products/business-marketing:get-listed]@L]</p>
                     <ul>
                       <li><i class="uxicon uxicon-checkmark"></i>Bing</li>
+                      <li><i class="uxicon uxicon-checkmark"></i>Google</li>
                       <li><i class="uxicon uxicon-checkmark"></i>Yelp</li>
                       <li><i class="uxicon uxicon-checkmark"></i>Foursquare</li>
                       <li><i class="uxicon uxicon-checkmark"></i>eLocal</li>
                       <li><i class="uxicon uxicon-checkmark"></i>Cortana</li>
-                      <li><i class="uxicon uxicon-checkmark"></i>and more</li>
+                      <li><i class="uxicon uxicon-checkmark"></i>MojoPages</li>
+                      <li><i class="uxicon uxicon-checkmark"></i>Whois</li>
+                      <li><i class="uxicon uxicon-checkmark"></i>Locu Places</li>
                     </ul>
                   </div>
                 </div>
@@ -536,16 +546,16 @@ assetPath: false
               <div class="plan-item-container" ontouchstart="this.classList.toggle('flipped');">
                 <div class="plan-item">
                   <div class="plan-item-side-A clearfix" >
-                    <span class="badge badge-small badge-important badge-upper-right">Coming Soon</span>
+                    <span class="badge badge-small badge-important badge-upper-right">[@L[cds.sales/gd/products/business-marketing:coming-soon]@L]</span>
                     <div class="plan-item-img plan-item-img-online solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/products/business-marketing/img/GetFound_LP_Sprite_20140903.png"></div>
-                    <h3>Online-Only</h3>
-                    <p>You operate online and do not have a physical address to share (ex. web designer, ecommerce store, consultant, etc.)</p>
-                    <a class="ghost-button" data-ci="92943">View Sites</a>
+                    <h3>[@L[cds.sales/gd/products/business-marketing:title-online-only]@L]</h3>
+                    <p>[@L[cds.sales/gd/products/business-marketing:description-online-only]@L]</p>
+                    <a class="ghost-button" data-ci="92943">[@L[cds.sales/gd/products/business-marketing:view-sites]@L]</a>
                   </div>
                   <div class="plan-item-side-B clearfix">
                     <i class="uxicon uxicon-x" data-ci="92940"></i>
-                    <h3>Online-Only</h3>
-                    <p>Get Found is not yet available for Online-Only businesses, but check back soon to see how we can help your business get listed online.</p>
+                    <h3>[@L[cds.sales/gd/products/business-marketing:title-online-only]@L]</h3>
+                    <p>[@L[cds.sales/gd/products/business-marketing:not-available-online]@L]</p>
                   </div>
                 </div>
               </div>
@@ -553,14 +563,20 @@ assetPath: false
           </div>
 
           <div class="row text-center">
-            <a id="get-started-btn-2" data-ci="92931" class="btn btn-primary get-started-btn cta-small" href="#">Get Started</a>
+            <a id="get-started-btn-2" data-ci="92931" class="btn btn-primary get-started-btn cta-small" href="#">[@L[cds.sales/gd/products/business-marketing:get-started]@L]</a>
           </div>
 
           <div class="row center-text">
             <p class="pricing">
-              As low as <span class="renewal-price"><strike>{1}/mo</strike>* </span><span class="normal-price">{0}/mo</span> <span class="save-percentage">Save {2}</span>        
+              <span class="normal-price">[@L[cds.sales/gd/products/business-marketing:as-low-as]@L]</span>
+              <span class="normal-price">[@T[productprice:<current productid="37975" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T][@L[cds.sales/gd/products/business-marketing:per-mo]@L]</span> 
+            ##if(productHasSavingsMoreThan(37975, 37990, 0))
+              <span class="renewal-price"> <strike>[@T[productprice:<current productid="37990" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T][@L[cds.sales/gd/products/business-marketing:per-mo]@L]</strike>* </span>
             </p>
-            <p class="inline-disclaimer">*Current renewal price.</p>
+            <p class="inline-disclaimer renewal-price">*[@L[cds.sales/gd/products/business-marketing:current-renewal-price]@L]</p>
+            ##else
+            </p>
+            ##endif
           </div>
         </div>
       </section>
@@ -682,7 +698,7 @@ assetPath: false
 
         <div class="container l-main-container">
 
-          <h2 class="customer-carousel-title center-text">Be visible where your customers are &mdash; including mobile.</h2>
+          <h2 class="customer-carousel-title center-text">[@L[cds.sales/gd/products/business-marketing:be-visible]@L]</h2>
 
           <div class="row">
             <div class="col-xs-12">
@@ -760,8 +776,8 @@ assetPath: false
               <div class="customer-image solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/products/business-marketing/img/GetFound_LP_Sprite_20140903.png"></div>          
             </div>
             <div class="col-xs-9 customer-testimonial">
-              <div class="customer-quote">"People tell me all the time they found our restaurant on Yelp, TripAdvisor or OpenTable. If we didn't show up on these sites, we'd lose business to a restaurant down the street. Get Found helps put my business everywhere it needs to be on the Web."</div>
-              <div class="customer-byline">&ndash; Lauren, Manager/Owner at Ombra Cucina Rustica in Hilton Head, SC</div>
+              <div class="customer-quote">"[@L[cds.sales/gd/products/business-marketing:testimonial-1]@L]"</div>
+              <div class="customer-byline">&ndash; [@L[cds.sales/gd/products/business-marketing:testimonial-1-byline]@L]</div>
             </div>
           </div>
         </div>
@@ -820,23 +836,23 @@ assetPath: false
 
         <div class="container l-main-container center-text">
 
-          <h2>Get listed in a few simple steps.</h2>
+          <h2>[@L[cds.sales/gd/products/business-marketing:get-listed-title]@L]</h2>
 
           <div class="row">
             <div class="col-xs-4">
               <div class="step-item-img step-item-img-control "></div>
-              <h3>Stay in Control</h3>
-              <p>Inaccurate information sends customers to your competitors. We'll keep you updated so customers can find you.</p>
+              <h3>[@L[cds.sales/gd/products/business-marketing:get-listed-step-1]@L]</h3>
+              <p>[@L[cds.sales/gd/products/business-marketing:get-listed-step-1-text]@L]</p>
             </div>
             <div class="col-xs-4">
               <div class="step-item-img step-item-img-visible "></div>
-              <h3>Be Visible</h3>
-              <p>Make sure your local business listing is on sites that your customers visit.</p>
+              <h3>[@L[cds.sales/gd/products/business-marketing:get-listed-step-2]@L]</h3>
+              <p>[@L[cds.sales/gd/products/business-marketing:get-listed-step-2-text]@L]</p>
             </div>
             <div class="col-xs-4">
               <div class="step-item-img step-item-img-time "></div>
-              <h3>Save Time</h3>
-              <p>It takes hours to create local listings on every single local site. Let us do it for you.</p>
+              <h3>[@L[cds.sales/gd/products/business-marketing:get-listed-step-3]@L]</h3>
+              <p>[@L[cds.sales/gd/products/business-marketing:get-listed-step-3-text]@L]</p>
             </div>
           </div>
 
@@ -871,9 +887,9 @@ assetPath: false
 
           <div class="col-xs-6">
             
-            <h2>Be everywhere your buyers are.</h2>
+            <h2>[@L[cds.sales/gd/products/business-marketing:be-everywhere]@L]</h2>
 
-            <p>Get Found publishes your business information to a variety of popular sites simultaneously &mdash; all from one screen. Update your local business listing once, and the changes appear across all the sites.</p>
+            <p>[@L[cds.sales/gd/products/business-marketing:be-everywhere-text]@L]</p>
 
           </div>
 
@@ -922,44 +938,44 @@ assetPath: false
 
       <div class="container l-main-container">
         <div class="tab-content-column-alternate">
-          <h2 class="h2-alternate">What does it matter if my business information is listed incorrectly online?</h2>
-          <p>The cost of inaccurate information online is actually quite high. In fact, you could lose out on potential sales. We've found that 68% of people will take their business elsewhere if they see missing or inaccurate internet advertising &mdash; open hours, phone number, address, prices &mdash; online.</p>
+          <h2 class="h2-alternate">[@L[cds.sales/gd/products/business-marketing:faq-question-1]@L]</h2>
+          <p>[@L[cds.sales/gd/products/business-marketing:faq-question-1-answer]@L]</p>
           <hr>
 
-          <h2 class="h2-alternate">How much time will I need to spend creating local business listings using Get Found?</h2>
-          <p>Getting started is easy and usually takes less than 5 minutes – just complete two simple steps to get your basic business listing published across the web. If you choose to provide details such as menus, price lists, or item photos, you may need to spend anywhere from 10 minutes to an hour. The good news is that you only need to do this in one place to get it published on many sites. And the results are potentially huge.</p>
+          <h2 class="h2-alternate">[@L[cds.sales/gd/products/business-marketing:faq-question-2]@L]</h2>
+          <p>[@L[cds.sales/gd/products/business-marketing:faq-question-2-answer]@L]</p>
           <hr>
 
-          <h2 class="h2-alternate">What kind of information can Get Found publish about my business?</h2>
-          <p>Get Found can publish your business description, contact information (phone number, website address), hours of operation, menus and price lists, item photos and descriptions, payment and delivery options, amenities and more. This is exactly the type of internet advertising that customers want when looking for new local businesses. A detailed and consistent business listing online will help you stand out from the pack and attract customers to your business.</p>
+          <h2 class="h2-alternate">[@L[cds.sales/gd/products/business-marketing:faq-question-3]@L]</h2>
+          <p>[@L[cds.sales/gd/products/business-marketing:faq-question-3-answer]@L]</p>
           <hr>
 
-          <h2 class="h2-alternate">Where will Get Found publish my local business listing?</h2>
-          <p>We've established partnerships with some of the top consumer destination sites online. Currently, we publish to Google, Bing, Yelp, TripAdvisor, YP, Foursquare, Citysearch, and many other smaller sites. We're continually expanding our list of business listing partners &mdash; you'll be the first to know once we find more places to publish your business information.</p>
+          <h2 class="h2-alternate">[@L[cds.sales/gd/products/business-marketing:faq-question-4]@L]</h2>
+          <p>[@L[cds.sales/gd/products/business-marketing:faq-question-4-answer]@L]</p>
           <hr>
 
-          <h2 class="h2-alternate">What do you mean by “publish”?</h2>
-          <p>By “publish” your business information, we mean displaying it on all of our partner sites for you (and on your own website if you choose to use our widget to display your content there). To share or update your business listing with GoDaddy Get Found, all you do is click a single <strong>Publish</strong> button and your information appears on all our partner sites.</p>
+          <h2 class="h2-alternate">[@L[cds.sales/gd/products/business-marketing:faq-question-5]@L]</h2>
+          <p>[@L[cds.sales/gd/products/business-marketing:faq-question-5-answer]@L]</p>
           <hr>
 
-          <h2 class="h2-alternate">What kind of business is this for?</h2>
-          <p>Do you have a physical location that customers visit (ex. restaurant, spa, salon)?  Or, do you serve a local area without a physical location that customers visit (ex. plumber, food struck, boat charter)?  If so, Get Found is for you.  We are not yet able to serve businesses who operate online and do not have a physical address to share (ex. web designer, ecommerce store, consultant), but that is coming in the future.</p>
+          <h2 class="h2-alternate">[@L[cds.sales/gd/products/business-marketing:faq-question-6]@L]</h2>
+          <p>[@L[cds.sales/gd/products/business-marketing:faq-question-6-answer]@L]</p>
           <hr>
 
-          <h2 class="h2-alternate">How long will it take for my business listing to get published?</h2>
-          <p>When you submit your business listing to Get Found, one of our dedicated data specialists reviews your data and makes sure everything is ready to go to our partner sites.  Your data is then shared with our partners.  Some of our partner sites will publish your local listing in as little as a few days; others will take up to eight weeks. </p>
+          <h2 class="h2-alternate">[@L[cds.sales/gd/products/business-marketing:faq-question-7]@L]</h2>
+          <p>[@L[cds.sales/gd/products/business-marketing:faq-question-7-answer]@L]</p>
           <hr>
 
-          <h2 class="h2-alternate">Tell me more about how I can use your widget to display my menus or price lists on my own site.</h2>
-          <p>To share your menus or price lists on your own website, you need to install a short snippet of HTML to the webpage where you want your menus or lists to appear. We even provide you with several designer templates to choose from. If you want, you can edit the look and feel of the templates to match the existing style of your website. Oh, and they're mobile-compatible too, so you can be sure that your menus or price lists will look great on all devices.</p>
+          <h2 class="h2-alternate">[@L[cds.sales/gd/products/business-marketing:faq-question-8]@L]</h2>
+          <p>[@L[cds.sales/gd/products/business-marketing:faq-question-8-answer]@L]</p>
           <hr>
 
-          <h2 class="h2-alternate">What if I don't have a website?</h2>
-          <p>That's totally fine. We'll still publish your information on all of our partner sites &mdash; it's actually the best way to get your business discovered online when you don't have a website. Want a great-looking website you build yourself? Check out <a href="<a href='[@T[link:<relative path="~/hosting/website-builder.aspx" secure="true"><param name="ci" value="92937" /></relative>]@T]">GoDaddy Website Builder.</a></p>
+          <h2 class="h2-alternate">[@L[cds.sales/gd/products/business-marketing:faq-question-9]@L]</h2>
+          <p>[@L[cds.sales/gd/products/business-marketing:faq-question-9-answer]@L]</p>
           <hr>
 
-          <h2 class="h2-alternate">Are there any system requirements for using GoDaddy Get Found?</h2>
-          <p>GoDaddy Get Found works best in Google Chrome, but is also supported on Firefox, Safari, and Internet Explorer.</p>
+          <h2 class="h2-alternate">[@L[cds.sales/gd/products/business-marketing:faq-question-10]@L]</h2>
+          <p>[@L[cds.sales/gd/products/business-marketing:faq-question-10-answer]@L]</p>
         </div>
       </div>
 
@@ -983,7 +999,7 @@ assetPath: false
     }
 
     #locu-iframe {
-      height: 500px;
+      height: 525px;
       width: 900px;
       border: 0 none;
     }
@@ -992,7 +1008,7 @@ assetPath: false
   <!-- end-css-elevate -->
   <section class="container background-container lower-banner-scan-the-web">
     <div class="container l-main-container center-text">
-      <iframe id="locu-iframe" src="//locu.godaddy.com/scanner/autocomplete_iframe" allowtransparency="true"></iframe>
+      <iframe id="locu-iframe" src="[@T[link:<external linktype='LOCUURL' path='/scanner/autocomplete_iframe' secure='true'/>]@T]" allowtransparency="true"></iframe>
     </div>
   </section>
 
@@ -1014,17 +1030,10 @@ assetPath: false
     locuPage.redirectUrl ='[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]';
   ##endif
 
-
-  {% jsminify %}
-
   $(document).ready(function(){
 
     // WIRE UP CI CODE TRACKING
     setupCiCodeTracking();
-
-    // PRICING
-    setPricing('.main-banner-business-marketing'); // CTA bar
-    setPricing('#plans'); // plan tiers
 
     // ADD TO CART
     activateGetStartedBtn('#get-started-btn-1');
@@ -1038,25 +1047,6 @@ assetPath: false
 
   });
 
-  function setPricing(selector) {
-
-    var currentPrice = '[@T[productprice:<current productid="37987" period="monthly"></current>]@T]',
-      renewalPrice = '[@T[productprice:<current productid="37990" period="monthly"></current>]@T]',
-      savePercentage = '[@T[productcompare:<percent primaryproductid="37987" secondaryproductid="37990" hidebelow="1" showsymbol="true"><html><![CDATA[{0}]]></html></percent>]@T]';
-    
-    //renewalPrice = "$19.00";savePercentage = "5%"; /* override for dev testing */
-
-    var $pricing = $(selector + ' p.pricing');
-    tokenizeThis($pricing, [currentPrice, renewalPrice, savePercentage]);
-    $pricing.show();
-    
-    var onSale = currentPrice !== renewalPrice;
-    if(onSale) {
-      //$(selector + ' p.pricing span.save-percentage').show();
-      $(selector + ' p.pricing span.renewal-price').show();
-    }
-
-  }
   var setupCiCodeTracking = function(){
     $('[data-ci]').on('click',function(e){
       var ci = $(this).attr('data-ci');
@@ -1068,7 +1058,7 @@ assetPath: false
   var activateGetStartedBtn = function(selector){
     $(selector).on('click', function(e){
       e.preventDefault();
-      addHostingtoCart(e);
+      addLocuToCart(e, selector);
       return false;
     });
   };
@@ -1109,21 +1099,14 @@ assetPath: false
       .gdSwipe();
   }
 
-  function addHostingtoCart(e) {
-      
-    var ciCode = $(this).data('ci'); //grab ci code from the button clicked
-    var url = '[@T[link:<relative path="/api/package" parammode="explicit"/>]@T]';    
-    url += '/add'; //action
-    url += '/slp_get_found_lp'; //itc code
-    url += '/' + ciCode; //ci code
-    url += '/1';
-    url += '/locu_Essential1Yr' //Plan Name
-
-    if(locuPage.isManager) {
-      var mgrNumber = $('#mgrNumber').val();
-      url += '/?mgrshopper=' +  mgrNumber;
-    }
-
+  function addLocuToCart(e, b) {
+    var ciCode = $(b).attr('data-ci'); //grab ci code from the button clicked
+    var action   = 'add';
+    var itc      = 'slp_get_found_lp';
+    var quantity = '1';
+    var plan     = 'locu_Essential1Yr';
+    var url      = '[@T[link:<relative path="/api/package/{0}/{1}/{2}/{3}/{4}"/>]@T]'.replace('{0}',action).replace('{1}',itc).replace('{2}',ciCode).replace('{3}',quantity).replace('{4}',plan);
+    
     var newCartCt = pcCartCt + 1;
 
     $.getJSON(url, function (data) {
@@ -1143,7 +1126,6 @@ assetPath: false
       window.location = locuPage.redirectUrl;
     });          
   }
-  {% endjsminify %}
 </script>
 <!-- end-js-elevate -->
 {% endblock %}
