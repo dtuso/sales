@@ -1,0 +1,108 @@
+---
+location: localization/sales/gd/product-listing/domain-auctions/en
+id: 53f39853f778fc07b4296fb8
+name: FOS-24608
+---
+{% include '../../../modules/doc-block.html' %}
+<phrase key="page-title" />
+Domain Auction | Buy &amp; Sell Your Domain Names - [@T[companyname:name]@T]
+<phrase key="meta-description" />
+Start buying and selling domains on one of the hottest domain name after markets in the world! [@T[companyname:name]@T] Auctions has the domains you are looking to buy.
+<phrase key="og-title" />
+[@T[companyname:name]@T] Auctions
+<phrase key="og-description" />
+Snap up valuable domain names here! At [@T[companyname:name]@T] Auctions you can bid on, buy and sell currently registered domain names. Low commission fees mean you keep more of your profits.
+<phrase key="meta-keywords" />
+Domain Auctions, sell a domain name, how to buy and sell domain names
+<phrase key="header-title" />
+Domain Auctions
+<phrase key="header-subtitle-1" />
+Millions of domains you won’t find anywhere else.
+<phrase key="header-subtitle-2" />
+Start buying and selling domains on one of the hottest domain name aftermarkets in the world!
+<phrase key="header-subtitle-3" />
+[@T[companyname:name]@T] Auctions has the domains you are looking to buy.
+<phrase key="let-us" />
+Let Us Help You Choose
+<phrase key="watch-video" />
+Watch Video
+<phrase key="secondary-section-title" />
+How to Buy and Sell Domain Names
+<phrase key="secondary-section-tag-line" />
+You don’t need to be a domain pro to take advantage of [@T[companyname:name]@T] Auctions. We’ve organized our site so you can find what you need quickly and easily. Here are our primary pages:
+<phrase key="secondary-section-list-1" />
+Browse auctions: If you really want to get a feel for the valuable domains in our portfolio, start by browsing our home page.
+<phrase key="secondary-section-list-2" />
+List a domain: Selling a domain with us is simple. And with industry low commission fees, you keep more of what you earn.
+<phrase key="secondary-section-list-3" />
+Tools: If you are a web pro, or are working to become one, these tools are just what you need to get an edge over other buyers.
+<phrase key="secondary-section-list-4" />
+Pricing: Domain auctions sound great, but what’s the bottom line? Find out here.
+<phrase key="secondary-section-list-5" />
+Domain Capital: If you need help investing in the perfect domain, we know someone who can help.
+<phrase key="section-1-title" />
+Browse Auctions
+<phrase key="section-1-tag-line" />
+Perfect for anyone who wants to see the type of domains we have available.
+<phrase key="section-1-description" />
+We think you’ll be so impressed with our collection of aftermarket domains, we’ve placed the browse feature right on our home page. And if there’s a specific domain or keyword you’re looking for, you can simply search for it.
+<phrase key="section-1-bullet-1" />
+See our top names instantly with our Featured Domains section.
+<phrase key="section-1-bullet-2" />
+Sort our active auctions alphabetically, by bids/offers, by price, even by traffic.
+<phrase key="section-2-title" />
+List a Domain
+<phrase key="section-2-tag-line" />
+Perfect for anyone who wants to turn their domain(s) into cash.
+<phrase key="section-2-description-1" />
+Our List A Domain page is pretty self-explanatory.
+<phrase key="section-2-description-2" />
+Once you’ve joined [@T[companyname:name]@T] Auctions, head here to sell a domain name in our marketplace. You can choose between our free Basic listing or our Premium listing, which will drive more views by putting the spotlight on your domain.
+<phrase key="section-2-bullet-1" />
+Get top dollar for your domain by listing it for auction.
+<phrase key="section-2-bullet-2" />
+Create a Basic listing or increase visibility with a Premium Listing.
+<phrase key="section-2-bullet-3" />
+Add a Buy It Now price to give enthusiastic buyers a chance to grab your domain immediately.
+<phrase key="section-3-title" />
+Tools
+<phrase key="section-3-tag-line" />
+Perfect for any business that wants to sell their products online.
+<phrase key="section-3-description-1" />
+As with most auctions, bidding on valuable domains can be very competitive.
+<phrase key="section-3-description-2" />
+Our team has developed several free tools you can use to make sure you don’t miss your shot at that once-in-a-lifetime domain.
+<phrase key="section-3-bullet-1" />
+Access auctions on your smartphone with our mobile app or website.
+<phrase key="section-3-bullet-2" />
+Download a complete list of every auction on our site, updated every night, with our Auctions FTP Site.
+<phrase key="section-3-bullet-3" />
+Use our Multi-Bid Tool to place your bid on up to 50 auctions at once.
+<phrase key="section-3-bullet-4" />
+And much more.
+<phrase key="section-4-title" />
+Pricing
+<phrase key="section-4-description-1" />
+If you want a closer look at what it costs to join, buy and sell with [@T[companyname:name]@T] Auctions, our Pricing page breaks down all the costs, from membership (psst, it’s only [@T[productprice:<current productid="761009" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]!) to seller fees to premium listing options.
+<phrase key="section-5-title" />
+Domain Capital
+<phrase key="section-5-description-1" />
+The right domain is an investment in your business, but traditional banks have been slow to appreciate the value of this virtual property. Domain Capital understands that domains are 21st century real estate and are dedicated to helping small businesses get the funds they need to build their business on a strong foundation.
+<phrase key="previous" />
+Previous
+<phrase key="next" />
+Next
+<phrase key="previous-label" />
+Find a Domain
+<phrase key="next-label" />
+Investor Tools
+<phrase key="starting-at" />
+Starting at
+<phrase key="learn-more" />
+Learn More
+<phrase key="yr" />
+/yr
+<phrase key="mo" />
+/mo
+<phrase key="read-reviews" />
+Read Reviews

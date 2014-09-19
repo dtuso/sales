@@ -1,0 +1,25 @@
+{
+  "build-my-own-website.html": {
+    "cdsDetails": {
+      "champion": {
+        "name": "Victor Songco",
+        "email": "vsongco@godaddy.com"
+      }
+    },
+    "metaTitle": "[@L[cds.sales/gd/product-listing/build-my-own-website:page-title]@L]",
+    "metaDescription": "[@L[cds.sales/gd/product-listing/build-my-own-website:meta-description]@L]",
+    "metaKeywords": "[@L[cds.sales/gd/product-listing/build-my-own-website:meta-keywords]@L]",
+    "metaCanonicalPath": "/build-my-own-website",
+    "metaOgTitle": "[@L[cds.sales/gd/product-listing/build-my-own-website:og-title]@L]",
+    "metaOgImage": "fos/hp/rebrand/img/gd_rebrand_og.png",
+    "metaOgDescription": "[@L[cds.sales/gd/product-listing/build-my-own-website:og-description]@L]"
+  },
+  "productLP.language": {
+    "cdsDetails": {
+      "champion": {
+        "name": "Victor Songco",
+        "email": "vsongco@godaddy.com"
+      }
+    }
+  }
+}
