@@ -1,0 +1,481 @@
+---
+location: sales/hosting.aspx
+id: 541c73e7f778fc14545dc85d
+name: GCE-27287
+comments: Hosting and SSL - Category Listing Page
+---
+{% extends 'layouts/base.html' %} 
+{% block metahead %} 
+{% parent %} 
+<style type="text/css">
+  #addon-one #addon-two #product-price{
+    display: none;
+  }
+</style>
+{% endblock %} 
+{% block body %}
+  <section class="main-banner solazy category-marquee" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/category-listing/hosting-ssl-clp/img/hosting_marquee.jpg">
+    <div class="l-main-container container main-banner-content">
+      <div>
+        <h1 class="category-title hnb-24-cond-bold-white text-uppercase">[@L[cds.sales/gd/category-listing/hosting-ssl:category-title]@L]</h1>
+        <p class="category-subtitle hnb-45-thin-white">[@L[cds.sales/gd/category-listing/hosting-ssl:category-subtitle-1]@L]</p>
+        <p class="category-subtitle-2 hnb-18-reg-white">[@L[cds.sales/gd/category-listing/hosting-ssl:category-subtitle-2]@L] <b>[@L[cds.sales/gd/category-listing/hosting-ssl:category-subtitle-3]@L]</b></p>
+      </div>
+    </div>
+  </section>
+  <!-- Category Menu //-->
+  <section class="menu">
+    <div class="category-menu">
+      <div class="l-main-container container menu-container">
+        <div class="solazy active-menu-image" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/category-listing/hosting-ssl-clp/img/Hosting-Category-Sprite.png"></div>
+        <div class="col-xs-1">&nbsp;</div>
+        <div class="col-xs-3 menu-item"><a id="hosting-anchor" class="hnb-16-bold-white category-menu-item">[@L[cds.sales/gd/category-listing/hosting-ssl:subcategory-1-title]@L]</a></div>
+        <div class="col-xs-4 menu-item"><a id="servers-anchor" class="hnb-16-bold-white category-menu-item">[@L[cds.sales/gd/category-listing/hosting-ssl:subcategory-2-title]@L]</a></div>
+        <div class="col-xs-3 menu-item"><a id="ssl-anchor" class="hnb-16-bold-white category-menu-item">[@L[cds.sales/gd/category-listing/hosting-ssl:subcategory-3-title]@L]</a></div>
+        <div class="col-xs-1">&nbsp;</div>
+      </div>
+    </div>    
+  </section>
+  <!-- Subcategory - Shared Web Hosting //-->
+  <section class="subcategory-section hosting-subcategory">
+    <div class="l-main-container container text-align-center">
+      <h2 class="subcategory-title hnb-32-bold-white">[@L[cds.sales/gd/category-listing/hosting-ssl:subcategory-1-title]@L]</h2>
+      <p class="subcategory-description hnb-16-med-white">[@L[cds.sales/gd/category-listing/hosting-ssl:subcategory-1-description-1]@L] [@L[cds.sales/gd/category-listing/hosting-ssl:subcategory-1-description-2]@L]</p>
+    </div>
+  </section>
+  <!-- Product - Shared Web Hosting //-->
+  <section class="web-hosting-product one-product product-section">
+    <div class="solazy product-carrot" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/category-listing/hosting-ssl-clp/img/Hosting-Category-Sprite.png"></div>
+    <div class="l-main-container container">
+      <div class="image-container col-xs-6">
+        <div class="solazy product-1-image" data-sl-method="background" 
+          ##if(!activeLanguageAny([en]))
+            data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/category-listing/hosting-ssl-clp/img/shared_web_hosting_localized.jpg"
+          ##else
+            data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/category-listing/hosting-ssl-clp/img/shared_web_hosting.jpg"
+          ##endif
+        ></div>
+      </div>
+      <div class="info-container col-xs-6">
+        <h2>[@L[cds.sales/gd/category-listing/hosting-ssl:subcategory-1-product-1-title]@L]</h2>
+        <h3>[@L[cds.sales/gd/category-listing/hosting-ssl:subcategory-1-product-1-description]@L]</h3>
+        <ul>
+          <li>[@L[cds.sales/gd/category-listing/hosting-ssl:subcategory-1-product-1-bullet-1]@L]</li>
+          <li>[@L[cds.sales/gd/category-listing/hosting-ssl:subcategory-1-product-1-bullet-2]@L]</li>
+          <li>[@L[cds.sales/gd/category-listing/hosting-ssl:subcategory-1-product-1-bullet-3]@L]</li>
+        </ul>
+        <div class="price-container">
+          <p>[@L[cds.sales/gd/category-listing/hosting-ssl:starting-at]@L]</p>
+          <p>[@T[productprice:<current productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]<span class="price-spacer"> </span>[@L[cds.sales/gd/category-listing/hosting-ssl:mo]@L]</p>
+        </div>
+        <a class="btn btn-primary" id="learn-more-product-one" href="[@T[link:<relative path='~/hosting/web-hosting.aspx' secure='true'><param name='ci' value='93312' /></relative>]@T]" data-ci="93312">[@L[cds.sales/gd/category-listing/hosting-ssl:view-details]@L]</a>
+        <div class="restrictions-apply">
+          [@L[cds.sales/gd/category-listing/hosting-ssl:restrictions-apply-symbol]@L]
+          <a class="isToolTip tool-tip" data-toggle="tooltip" title data-original-title="[@L[cds.sales/gd/category-listing/hosting-ssl:restrictions-apply-description]@L]">[@L[cds.sales/gd/category-listing/hosting-ssl:restrictions-apply-label]@L] </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Product - WordPress Hosting //-->
+  <section class="wordpress-hosting-product one-product product-section product-2-background centered-image">
+    <div class="l-main-container container">
+      <div class="info-container col-xs-6">
+        <h2>[@L[cds.sales/gd/category-listing/hosting-ssl:subcategory-1-product-2-title]@L]</h2>
+        <h3>[@L[cds.sales/gd/category-listing/hosting-ssl:subcategory-1-product-2-description]@L]</h3>
+        <ul>
+          <li>[@L[cds.sales/gd/category-listing/hosting-ssl:subcategory-1-product-2-bullet-1]@L]</li>
+          <li>[@L[cds.sales/gd/category-listing/hosting-ssl:subcategory-1-product-2-bullet-2]@L]</li>
+          <li>[@L[cds.sales/gd/category-listing/hosting-ssl:subcategory-1-product-2-bullet-3]@L]</li>
+        </ul>
+        <div class="price-container">
+          <p>[@L[cds.sales/gd/category-listing/hosting-ssl:starting-at]@L]</p>
+          <p>[@T[productprice:<current productid="32759" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]<span class="price-spacer"> </span>[@L[cds.sales/gd/category-listing/hosting-ssl:mo]@L]</p>
+        </div>
+        <a class="btn btn-primary" id="learn-more-product-two" href="[@T[link:<relative path='~/hosting/wordpress-hosting.aspx' secure='true'><param name='ci' value='93324' /></relative>]@T]" data-ci="93324" >[@L[cds.sales/gd/category-listing/hosting-ssl:view-details]@L]</a>
+      </div>
+      <div class="image-container col-xs-6">
+        <div class="solazy product-2-image" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/category-listing/hosting-ssl-clp/img/Hosting-Category-Sprite.png"></div>
+        <div class="restrictions-apply">
+          [@L[cds.sales/gd/category-listing/hosting-ssl:restrictions-apply-symbol]@L]
+          <a class="isToolTip tool-tip" data-toggle="tooltip" title data-original-title="[@L[cds.sales/gd/category-listing/hosting-ssl:restrictions-apply-description]@L] ">[@L[cds.sales/gd/category-listing/hosting-ssl:restrictions-apply-label]@L] </a>
+        </div>        
+      </div>      
+    </div>
+  </section>
+  <!-- Subcategory - Servers //-->
+  <section class="subcategory-section servers-subcategory">
+    <div class="l-main-container container text-align-center">
+      <h2 class="subcategory-title hnb-32-bold-white">[@L[cds.sales/gd/category-listing/hosting-ssl:subcategory-2-title]@L]</h2>
+      <p class="subcategory-description hnb-16-med-white">[@L[cds.sales/gd/category-listing/hosting-ssl:subcategory-2-description-1]@L] [@L[cds.sales/gd/category-listing/hosting-ssl:subcategory-2-description-2]@L]</p>
+    </div>
+  </section>
+  <!-- Product - Dedicated Servers and Managed VPS //-->
+  <section class="dedicated-servers-and-managed-vps-products two-products product-section">
+    <div class="solazy product-carrot" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/category-listing/hosting-ssl-clp/img/Hosting-Category-Sprite.png"></div>  
+    <div class="l-main-container container">
+      <!-- Product - Dedicated Servers //-->
+      <div class="image-container col-xs-3">
+        <div class="solazy product-3-image" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/category-listing/hosting-ssl-clp/img/Hosting-Category-Sprite.png"></div>
+      </div>
+      <div class="info-container col-xs-3">
+        <h2>[@L[cds.sales/gd/category-listing/hosting-ssl:subcategory-2-product-1-title]@L]</h2>
+        <h3>[@L[cds.sales/gd/category-listing/hosting-ssl:subcategory-2-product-1-description]@L]</h3>
+        <div class="price-container">
+          <p>[@L[cds.sales/gd/category-listing/hosting-ssl:starting-at]@L]</p>
+          <p>[@T[productprice:<current productid="474" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]<span class="price-spacer"> </span>[@L[cds.sales/gd/category-listing/hosting-ssl:mo]@L]</p>
+        </div>
+        <a class="btn btn-primary" id="learn-more-product-three" href="[@T[link:<relative path='~/hosting/dedicated-servers.aspx' secure='true'><param name='ci' value='93311' /></relative>]@T]" data-ci="93311">[@L[cds.sales/gd/category-listing/hosting-ssl:view-details]@L]</a>
+      </div>    
+      <!-- Product - Managed VPS //-->
+      <div class="image-container col-xs-3">
+        <div class="solazy product-4-image" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/category-listing/hosting-ssl-clp/img/Hosting-Category-Sprite.png"></div>
+      </div>
+      <div class="info-container col-xs-3">
+        <h2>[@L[cds.sales/gd/category-listing/hosting-ssl:subcategory-2-product-2-title]@L]</h2>
+        <h3>[@L[cds.sales/gd/category-listing/hosting-ssl:subcategory-2-product-2-description]@L]</h3>
+        <div class="price-container">
+          <p>[@L[cds.sales/gd/category-listing/hosting-ssl:starting-at]@L]</p>
+          <p>[@T[productprice:<current productid="171824" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]<span class="price-spacer"> </span>[@L[cds.sales/gd/category-listing/hosting-ssl:mo]@L]</p>
+        </div>
+        <a class="btn btn-primary" id="learn-more-product-four" href="[@T[link:<relative path='~/hosting/vps-hosting.aspx' secure='true'><param name='ci' value='93314' /></relative>]@T]" data-ci="93314">[@L[cds.sales/gd/category-listing/hosting-ssl:view-details]@L]</a>
+      </div>
+    </div>
+  </section>
+  <!-- Product - Managed Hosting //-->
+  <section class="managed-hosting-product one-product product-section">
+    <div class="l-main-container container">
+      <div class="image-container col-xs-6">
+        <div class="solazy product-5-image" data-sl-method="background" 
+          ##if(countrySiteAny(my,pk,ph))
+            data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/category-listing/hosting-ssl-clp/img/managed_hosting_asia.jpg"
+          ##else
+            data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/category-listing/hosting-ssl-clp/img/managed_hosting.jpg"
+          ##endif
+        ></div>
+      </div>
+      <div class="info-container col-xs-6">
+        <h2>[@L[cds.sales/gd/category-listing/hosting-ssl:subcategory-2-product-3-title]@L]</h2>
+        <h3>[@L[cds.sales/gd/category-listing/hosting-ssl:subcategory-2-product-3-description-1]@L]</h3>
+        <h4>[@L[cds.sales/gd/category-listing/hosting-ssl:subcategory-2-product-3-description-2]@L]</h4>
+        <div class="price-container">
+          <p>[@L[cds.sales/gd/category-listing/hosting-ssl:starting-at]@L]</p>
+          <p class="managed-hosting-price">
+            <span id="addon-one">[@T[productprice:<current productid="1219" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span>
+            <span id="addon-two">[@T[productprice:<current productid="2754" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span>
+            <span id="product-price">[@T[productprice:<current productid="697" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span>
+          </p>
+        </div>
+        <a class="btn btn-primary" id="learn-more-product-five" href="[@T[link:<relative path='~/hosting/managed-hosting.aspx' secure='true'><param name='ci' value='93313' /></relative>]@T]" data-ci="93313" >[@L[cds.sales/gd/category-listing/hosting-ssl:view-details]@L]</a>
+      </div>
+    </div>
+  </section>
+  <!-- Product - Reseller Hosting and Dedicated IP //-->
+  <section class="reseller-hosting-and-dedicated-ip-products two-products product-section">
+    <div class="l-main-container container">
+      <!-- Product - Reseller Hosting //-->
+      <div class="image-container col-xs-3">
+        <div class="solazy product-6-image" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/category-listing/hosting-ssl-clp/img/Hosting-Category-Sprite.png"></div>
+      </div>
+      <div class="info-container col-xs-3">
+        <h2>[@L[cds.sales/gd/category-listing/hosting-ssl:subcategory-2-product-4-title]@L]</h2>
+        <h3>[@L[cds.sales/gd/category-listing/hosting-ssl:subcategory-2-product-4-description]@L]</h3>
+        <div class="price-container">
+          <p>[@L[cds.sales/gd/category-listing/hosting-ssl:starting-at]@L]</p>
+          <p>[@T[productprice:<current productid="1763" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]<span class="price-spacer"> </span>[@L[cds.sales/gd/category-listing/hosting-ssl:mo]@L]</p>
+        </div>
+        <a class="btn btn-primary" id="learn-more-product-six" href="[@T[link:<relative path='~/hosting/reseller-hosting.aspx' secure='true'><param name='ci' value='93319' /></relative>]@T]" data-ci="93319">[@L[cds.sales/gd/category-listing/hosting-ssl:view-details]@L]</a>
+      </div>    
+      <!-- Product - Dedicated IP //-->
+      <div class="image-container col-xs-3">
+        <div class="solazy product-7-image" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/category-listing/hosting-ssl-clp/img/Hosting-Category-Sprite.png"></div>
+      </div>
+      <div class="info-container col-xs-3">
+        <h2>[@L[cds.sales/gd/category-listing/hosting-ssl:subcategory-2-product-5-title]@L]</h2>
+        <h3>[@L[cds.sales/gd/category-listing/hosting-ssl:subcategory-2-product-5-description]@L]</h3>
+        <div class="price-container">
+          <p>[@L[cds.sales/gd/category-listing/hosting-ssl:starting-at]@L]</p>
+          <p>[@T[productprice:<current productid="4601" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]<span class="price-spacer"> </span>[@L[cds.sales/gd/category-listing/hosting-ssl:mo]@L]</p>
+        </div>
+        <a class="btn btn-primary" id="learn-more-product-seven" href="[@T[link:<relative path='~/ssl/static-ip.aspx' secure='true'><param name='ci' value='93310' /></relative>]@T]" data-ci="93310">[@L[cds.sales/gd/category-listing/hosting-ssl:view-details]@L]</a>
+      </div>
+    </div>
+  </section>
+  <!-- Subcategory - SSL //-->
+  <section class="subcategory-section ssl-subcategory">
+    <div class="l-main-container container text-align-center">
+      <h2 class="subcategory-title hnb-32-bold-white">[@L[cds.sales/gd/category-listing/hosting-ssl:subcategory-3-title]@L]</h2>
+      <p class="subcategory-description hnb-16-med-white">[@L[cds.sales/gd/category-listing/hosting-ssl:subcategory-3-description-1]@L] [@L[cds.sales/gd/category-listing/hosting-ssl:subcategory-3-description-2]@L]</p>
+    </div>
+  </section>
+  <!-- Product - SSL Certificates //-->
+  <section class="ssl-certificates-product one-product product-section">
+    <div class="solazy product-carrot" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/category-listing/hosting-ssl-clp/img/Hosting-Category-Sprite.png"></div>
+    <div class="l-main-container container">
+      <div class="image-container col-xs-6">
+        <div class="solazy product-8-image" data-sl-method="background" 
+          ##if(activeLanguageAny([es]))
+            data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/category-listing/hosting-ssl-clp/img/ssl_certificates_es.jpg"
+          ##elseif(countrySiteAny(in))
+            data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/category-listing/hosting-ssl-clp/img/ssl_certificates_in.jpg"
+          ##elseif(countrySiteAny(my,pk,ph))
+            data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/category-listing/hosting-ssl-clp/img/ssl_certificates_asia.jpg"
+          ##else
+            data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/category-listing/hosting-ssl-clp/img/ssl_certificates.jpg"
+          ##endif
+        ></div>
+      </div>
+      <div class="info-container col-xs-6">
+        <h2>[@L[cds.sales/gd/category-listing/hosting-ssl:subcategory-3-product-1-title]@L]</h2>
+        ##if(activeLanguageAny([en-us]))
+        <div class="review-container">
+          <a id="ssl-cert-review" href="[@T[link:<relative path='~/ssl/ssl-certificates.aspx' secure='true'><param name='ci' value='93323' /></relative>]@T]#reviews" data-ci="93323">
+            <div class="solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/category-listing/hosting-ssl-clp/img/Hosting-Category-Sprite.png"></div>
+            [@L[cds.sales/gd/category-listing/hosting-ssl:read-reviews-link-text]@L]
+          </a>
+        </div>
+        ##endif
+        <h3>[@L[cds.sales/gd/category-listing/hosting-ssl:subcategory-3-product-1-description]@L]</h3>
+        <div class="price-container">
+          <p>[@L[cds.sales/gd/category-listing/hosting-ssl:starting-at]@L]</p>
+          <p>[@T[productprice:<current productid="3606" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]<span class="price-spacer"> </span>[@L[cds.sales/gd/category-listing/hosting-ssl:yr]@L]</p>
+        </div>
+        <a class="btn btn-primary" id="learn-more-product-eight" href="[@T[link:<relative path='~/ssl/ssl-certificates.aspx' secure='true'><param name='ci' value='93322' /></relative>]@T]" data-ci="93322">[@L[cds.sales/gd/category-listing/hosting-ssl:view-details]@L]</a>
+      </div>
+    </div>
+  </section>
+  <!-- Section - Customer Quote //-->
+  <section class="customer-quote-section">
+    <div class="l-main-container container text-align-center">
+      <div class="solazy customer-quote-image" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/category-listing/hosting-ssl-clp/img/Hosting-Category-Sprite.png"></div>
+      <h2>[@L[cds.sales/gd/category-listing/hosting-ssl:customer-quote-text]@L]</h2>
+      <p>[@L[cds.sales/gd/category-listing/hosting-ssl:customer-quote-info]@L]</p>
+    </div>
+  </section>
+  <!-- Product - Code Signing Certificate and Premium DNS //-->
+  <section class="code-signing-certificate-and-premium-dns-products two-products product-section">
+    <div class="l-main-container container">
+      <!-- Product - Code Signing Certficate //-->
+      <div class="image-container col-xs-3">
+        <div class="solazy product-9-image" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/category-listing/hosting-ssl-clp/img/Hosting-Category-Sprite.png"></div>
+      </div>
+      <div class="info-container col-xs-3">
+        <h2>[@L[cds.sales/gd/category-listing/hosting-ssl:subcategory-3-product-2-title]@L]</h2>
+        <h3>[@L[cds.sales/gd/category-listing/hosting-ssl:subcategory-3-product-2-description]@L]</h3>
+        <div class="price-container">
+          <p>[@L[cds.sales/gd/category-listing/hosting-ssl:starting-at]@L]</p>
+          <p>[@T[productprice:<current productid="3683" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]<span class="price-spacer"> </span>[@L[cds.sales/gd/category-listing/hosting-ssl:yr]@L]</p>
+        </div>
+        <a class="btn btn-primary" id="learn-more-product-nine" href="[@T[link:<relative path='~/ssl/code-signing-certificate.aspx' secure='true'><param name='ci' value='93309' /></relative>]@T]" data-ci="93309">[@L[cds.sales/gd/category-listing/hosting-ssl:view-details]@L]</a>
+      </div>    
+      <!-- Product - Premium DNS //-->
+      <div class="image-container col-xs-3">
+        <div class="solazy product-10-image" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/category-listing/hosting-ssl-clp/img/Hosting-Category-Sprite.png"></div>
+      </div>
+      <div class="info-container col-xs-3">
+        <h2>[@L[cds.sales/gd/category-listing/hosting-ssl:subcategory-3-product-3-title]@L]</h2>
+        <h3>[@L[cds.sales/gd/category-listing/hosting-ssl:subcategory-3-product-3-description]@L]</h3>
+        <div class="price-container">
+          <p>[@L[cds.sales/gd/category-listing/hosting-ssl:starting-at]@L]</p>
+          <p>[@T[productprice:<current productid="70886" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]<span class="price-spacer"> </span>[@L[cds.sales/gd/category-listing/hosting-ssl:mo]@L]</p>
+        </div>
+        <a class="btn btn-primary" id="learn-more-product-ten" href="[@T[link:<relative path='~/domains/dns-hosting.aspx' secure='true'><param name='ci' value='93318' /></relative>]@T]" data-ci="93318">[@L[cds.sales/gd/category-listing/hosting-ssl:view-details]@L]</a>
+      </div>
+    </div>
+  </section>
+  ##if(productIsOffered(107))
+  <!-- Product - SiteLock //-->
+  <section class="sitelock-product one-product product-section product-11-background centered-image">
+    <div class="l-main-container container">
+      <div class="info-container col-xs-6">
+        <h2>[@L[cds.sales/gd/category-listing/hosting-ssl:subcategory-3-product-4-title]@L]</h2>
+        ##if(false)
+        <div class="review-container">
+          <a id="sitelock-review" href="[@T[link:<relative path='~/security/malware-scanner.aspx' secure='true'><param name='ci' value='93321' /></relative>]@T]#reviews" data-ci="93321">
+            <div class="solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/category-listing/hosting-ssl-clp/img/Hosting-Category-Sprite.png"></div>
+            [@L[cds.sales/gd/category-listing/hosting-ssl:read-reviews-link-text]@L]
+          </a>
+        </div>    
+        ##endif    
+        <h3>[@L[cds.sales/gd/category-listing/hosting-ssl:subcategory-3-product-4-description]@L]</h3>
+        <div class="price-container">
+          <p>[@L[cds.sales/gd/category-listing/hosting-ssl:starting-at]@L]</p>
+          <p>[@T[productprice:<current productid="181769" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]<span class="price-spacer"> </span>[@L[cds.sales/gd/category-listing/hosting-ssl:yr]@L]</p>
+        </div>
+        <a class="btn btn-primary" id="learn-more-product-eleven" href="[@T[link:<relative path='~/security/malware-scanner.aspx' secure='true'><param name='ci' value='93320' /></relative>]@T]" data-ci="93320">[@L[cds.sales/gd/category-listing/hosting-ssl:view-details]@L]</a>
+      </div>
+      <div class="image-container col-xs-6">
+        <div class="solazy product-11-image" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/category-listing/hosting-ssl-clp/img/Hosting-Category-Sprite.png"></div>
+      </div>      
+    </div>
+  </section>
+  ##endif
+{% endblock %} 
+
+{% block footer %}
+  <script src="[@T[link:<javascriptroot />]@T]fos/lib/solazy/jquery.solazy.1.2.1.min.js" type="text/javascript" ></script>
+  <script src="[@T[link:<javascriptroot />]@T]fos/office365/js/currency-calc.v1.0.3.min.js" type="text/javascript"></script>
+  <script>
+    if(typeof currencyCalc != "undefined"){
+      currencyCalc.base = "[@T[currencyprice:<price usdamount="1000000000" dropdecimal="false" dropsymbol="false" htmlsymbol="false" negative="parenthesis" />]@T]";
+    }
+  </script>
+  <script>
+  var hostingCarrotLeft = 0;
+  var serversCarrotLeft = 0;
+  var sslCarrotLeft = 0;
+  var scrollTop = 0;
+  var menuTop = 0;
+  var hostingTop = 0;
+  var serversTop = 0;
+  var sslTop = 0;  
+  var menuCarrotDisplay = false;
+  var menuCarrotTop = false;
+  var outerHeightadj = 0;
+  var categoryMenuOuterHeight = 0;
+
+  $(function (){
+    if (typeof FastballEvent_MouseClick === 'function' && typeof fbiLibCheckQueue === 'function'){
+      $('[data-ci]').click(function(e){
+        $this = $(this);
+        FastballEvent_MouseClick(e,$this.attr('data-ci'),$(this)[0],'a');
+        fbiLibCheckQueue();
+      });
+    }
+
+    $('.cursor-pointer').scrollToSection();
+    $('.isToolTip').tooltip({ placement: 'top', html: true});
+
+    outerHeightadj = !(window.mozInnerScreenX == null) ? -1 : 0;
+    categoryMenuOuterHeight = Math.abs($('.category-menu').outerHeight() + outerHeightadj) * -1;
+    $('#hosting-anchor').click(function(e){
+      scrollTo($('.hosting-subcategory'), categoryMenuOuterHeight);
+    });
+    $('#servers-anchor').click(function(e){
+      scrollTo($('.servers-subcategory'), categoryMenuOuterHeight);
+    });
+    $('#ssl-anchor').click(function(e){
+      scrollTo($('.ssl-subcategory'), categoryMenuOuterHeight);
+    });
+
+    $('.managed-hosting-price').html(
+      currencyCalc.evaluate([$('#addon-one').html(),"+",$('#addon-two').html(),"+", $('#product-price').html()]) +
+      "[@L[cds.sales/gd/category-listing/hosting-ssl:mo]@L]"
+    );    
+  });
+
+  $(document).ready(function(){
+    var categoryMenu = $('.category-menu');
+    categoryMenu.affix({
+      offset: {
+        top: categoryMenu.offset().top,
+        bottom: categoryMenu.offset().bottom
+      }
+    });
+
+    $('.menu').append('<div class="category-menu-spacer"></div>');
+    $('.category-menu-spacer').css('height', categoryMenu.outerHeight());
+
+    setRestrictionsPosition($('.web-hosting-product .restrictions-apply'));
+    setRestrictionsPosition($('.wordpress-hosting-product .restrictions-apply'));
+
+    hostingTop = $('.hosting-subcategory').offset().top + categoryMenuOuterHeight + outerHeightadj;
+    serversTop = $('.servers-subcategory').offset().top + categoryMenuOuterHeight + outerHeightadj;
+    sslTop = $('.ssl-subcategory').offset().top + categoryMenuOuterHeight + outerHeightadj;
+
+    menuTop = $('.menu').offset().top + $('.menu').outerHeight();
+    if ($(window).scrollTop() > 0) {
+      menuTop = menuTop + $(window).scrollTop() - 420;
+    }
+
+    setCarrotsLeft();
+  });
+  
+  $(window).scroll(function(event){
+    scrollMenuCarrot();
+  });
+
+  $(window).resize(function(){
+    setCarrotsLeft();
+  });  
+
+  function setCarrotsLeft(){
+    var hostingAnchor = $('#hosting-anchor');
+    var serversAnchor = $('#servers-anchor');
+    var sslAnchor = $('#ssl-anchor');    
+    var activeMenuImage = $('.active-menu-image');
+    var activeMenuImageAdjustment = activeMenuImage.outerWidth()/2;
+
+    hostingCarrotLeft = hostingAnchor.offset().left + (hostingAnchor.outerWidth()/2 - activeMenuImageAdjustment);
+    serversCarrotLeft = $('.web-hosting-product .info-container').offset().left + ($('.product-carrot').outerWidth()/2 * -1);
+    sslCarrotLeft = sslAnchor.offset().left + (sslAnchor.outerWidth()/2 - activeMenuImageAdjustment);
+
+    $('.product-carrot').offset({left: serversCarrotLeft});
+  }
+
+  function scrollMenuCarrot(){
+    scrollTop = $(window).scrollTop();
+    $('#hosting-anchor').css('color','#ffffff');
+    $('#servers-anchor').css('color','#ffffff');
+    $('#ssl-anchor').css('color','#ffffff');
+
+    if (scrollTop < hostingTop){
+      setMenuCarrot(false);
+    } else if (scrollTop >= hostingTop && scrollTop < serversTop){
+      setMenuCarrot(true);
+      $('.active-menu-image').offset({left: hostingCarrotLeft});
+      $('#hosting-anchor').css('color','#7db701');
+    } else if (scrollTop >= serversTop && scrollTop < sslTop){
+      setMenuCarrot(true);
+      $('.active-menu-image').offset({left: serversCarrotLeft});
+      $('#servers-anchor').css('color','#7db701');
+    } else if (scrollTop >= sslTop){
+      setMenuCarrot(true);
+      $('.active-menu-image').offset({left: sslCarrotLeft});
+      $('#ssl-anchor').css('color','#7db701');
+    }
+  }
+
+  function scrollTo(element, offset){
+    var destination = element.offset().top;
+    if (offset !== undefined){
+        destination += offset;
+    }
+    $('html, body').animate({
+      scrollTop: destination + 'px',
+      easing: 'easein'
+      }
+      , 600);
+  }
+
+  function setRestrictionsPosition(restrictionsElement){
+    var restrictionsParent = restrictionsElement.parent();
+    var restrictionsGrandParent = restrictionsParent.parent();
+    var restrictionsHeightAdj = -8;
+
+    restrictionsElement.offset({
+      top: restrictionsGrandParent.offset().top + restrictionsGrandParent.outerHeight() - restrictionsElement.outerHeight() + restrictionsHeightAdj,
+      left: restrictionsGrandParent.offset().left + restrictionsGrandParent.outerWidth() - restrictionsElement.outerWidth()
+    });
+  }
+
+  function setMenuCarrot(displayCarrot){
+    if (displayCarrot){
+      if (!menuCarrotDisplay){
+        $('.active-menu-image').css('display','inline');
+        menuCarrotDisplay = true;
+      }
+      if (!menuCarrotTop){
+        $('.active-menu-image').offset({top: menuTop});
+        menuCarrotTop = true;
+      }
+    } else {
+      $('.active-menu-image').css('display','none');
+      menuCarrotDisplay = false;
+    }
+  }
+
+  if(navigator.userAgent.match(/iPad|iPhone|iPod/i)){
+    $('head').append('<meta name="viewport" content="width=1150px">');
+  }
+  </script>
+{% endblock %}

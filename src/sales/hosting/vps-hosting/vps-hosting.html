@@ -1,8 +1,8 @@
 ---
 location: sales/hosting/vps-hosting.aspx
-id:   54120ff0f778fc0f24cc8f07
-name: GCE-28157
-comments: Updated OG URL
+id: 541a0707f778fc221cad21ff
+name: GCE-27090
+comments: tr-TR--The "%" should be in the front of number
 url: http://www.dev-godaddy.com/hosting/vps-hosting.aspx
 assetPath: false
 ---
@@ -714,8 +714,6 @@ assetPath: false
                                         ##if(areAdCreditsEnabled(facebook))
                                             <li>[@L[cds.sales/gd/hosting/vps-hosting:SupportFacebookCredits]@L]- <span class="disclaimer-note"><a class="tooltip-delay"  data-html="true" data-toggle="tooltip" data-original-title="[@L[cds.sales/gd/hosting/vps-hosting:FacebookRestrictions]@L]">[@L[cds.sales/gd/hosting/vps-hosting:RestrictionsApply]@L]</a></span></li>
                                         ##endif
-
-                                            <li>[@L[cds.sales/gd/hosting/vps-hosting:SupportSubText5]@L]- <span class="disclaimer-note"><a class="tooltip-delay"  data-html="true" data-toggle="tooltip" data-original-title="[@L[cds.sales/gd/hosting/vps-hosting:FotoliaRestrictions]@L]">[@L[cds.sales/gd/hosting/vps-hosting:RestrictionsApply]@L]</a></span></li>
                                             <li><a target="_BLANK" href="[@T[link:<relative path='~/agreements/showdoc.aspx' secure='false'><param name='pageid' value='hosting_sa' /><param name='ci' value='90591' /></relative>]@T]">[@L[cds.sales/gd/hosting/vps-hosting:MoneyBackGuarantee]@L]</a></li>
                                         </ul>
                                         <ul class="plan-summary-tab-pane-list">
@@ -1017,39 +1015,6 @@ function getData(dc) {
 }
 
 function processVPSData(data, dc) {
-    $(data.centos.plans.basic[dc]).each(function(i, n) {
-        generateDropDowns(i, n, '#centosBasic');
-    });
-    $(data.centos.plans.economy[dc]).each(function(i, n) {
-        generateDropDowns(i, n, '#centosEco');
-    });
-    $(data.centos.plans.value[dc]).each(function(i, n) {
-        generateDropDowns(i, n, '#centosValue');
-    });
-    $(data.centos.plans.deluxe[dc]).each(function(i, n) {
-        generateDropDowns(i, n, '#centosDeluxe');
-    });
-    $(data.centos.plans.premium[dc]).each(function(i, n) {
-        generateDropDowns(i, n, '#centosPremium');
-    });
-    $(data.centos.plans.ultimate[dc]).each(function(i, n) {
-        generateDropDowns(i, n, '#centosUltimate');
-    });
-    $(data.fedora.plans.economy[dc]).each(function(i, n) {
-        generateDropDowns(i, n, '#fedEco');
-    });
-    $(data.fedora.plans.value[dc]).each(function(i, n) {
-        generateDropDowns(i, n, '#fedValue');
-    });
-    $(data.fedora.plans.deluxe[dc]).each(function(i, n) {
-        generateDropDowns(i, n, '#fedDeluxe');
-    });
-    $(data.fedora.plans.premium[dc]).each(function(i, n) {
-        generateDropDowns(i, n, '#fedPremium');
-    });
-    $(data.fedora.plans.ultimate[dc]).each(function(i, n) {
-        generateDropDowns(i, n, '#fedUltimate');
-    });
     $(data.windows.plans.economy[dc]).each(function(i, n) {
         generateDropDowns(i, n, '#windowsEconomy');
     });
@@ -1114,7 +1079,11 @@ function generateDropDowns(i, n, c) {
     newItem += '<span class="dropdown-item-duration">' + n.planduration + ' ' + monthString + '</span>';
     newItem += '<span class="price dropdown-item-price">' + n.productprice + '/[@L[cds.sales/gd/hosting/vps-hosting:month]@L]</span>';
     if (n.plandurationdiscount != '0') {
-        newItem += '<span class="dropdown-item-save secondary-color">[@L[cds.sales/gd/hosting/vps-hosting:SaveText]@L] ' + n.plandurationdiscount + '% <sup>[@L[cds.sales/gd/hosting/vps-hosting:DiscalimerSymbol]@L]</sup></span>';
+        ##if(activeLanguageAny([tr-tr]))
+            newItem += '<span class="dropdown-item-save secondary-color">[@L[cds.sales/gd/hosting/vps-hosting:SaveText]@L] %' + n.plandurationdiscount + ' <sup>[@L[cds.sales/gd/hosting/vps-hosting:DiscalimerSymbol]@L]</sup></span>';
+        ##else
+            newItem += '<span class="dropdown-item-save secondary-color">[@L[cds.sales/gd/hosting/vps-hosting:SaveText]@L] ' + n.plandurationdiscount + '% <sup>[@L[cds.sales/gd/hosting/vps-hosting:DiscalimerSymbol]@L]</sup></span>';
+        ##endif
     } else {
         newItem += '<span class="dropdown-item-save"></span>';
     }

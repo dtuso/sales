@@ -1,0 +1,92 @@
+---
+location: localization/sales/gd/product-listing/build-my-own-website/en
+id: 53e3f2a4f778fc1c54023788
+name: FOS-24603
+---
+{% include '../../../modules/doc-block.html' %}
+<phrase key="page-title" />
+Build My Own Website | Get Yourself Online Today - [@T[companyname:name]@T]
+<phrase key="meta-description" />
+The time is now. You can get yourself online, with a website in a matter of minutes. With our DIY Website Builder you’ll get all the tools you’ll need to succeed!
+<phrase key="meta-keywords" />
+Build My Own Website, diy website builder, diy website
+<phrase key="header-title" />
+Build My Own Website
+<phrase key="header-subtitle-1" />
+The time is now. You can get yourself online in a matter of minutes
+<phrase key="header-subtitle-2" />
+with our DIY Website Builder or Online Store - no technical skills required.
+<phrase key="let-us" />
+Let Us Help You Choose
+<phrase key="watch-video" />
+Watch Video
+<phrase key="secondary-section-title" />
+Website vs Web Store
+<phrase key="secondary-section-tag-line" />
+Deciding which site builder would be better for you comes down to a couple key questions: What's your skill level and do you want to sell products on your site?
+<phrase key="secondary-section-list-1" />
+Website Builder is designed to be incredibly easy to use - no technical skills required. It's perfect for businesses or individuals who want a professional online presence, but don't have products to sell.
+<phrase key="secondary-section-list-2" />
+WordPress is for more tech-savvy users. It takes a little more knowledge, but it offers a level of flexibility and customization that's hard to beat. And with our Managed WordPress plan, we handle the setup and hosting for you.
+<phrase key="secondary-section-list-3" />
+Online Store is similar to Website Builder in how easy it is to use, but it's for businesses that want to sell their products online, either with a stand-alone web store or as a companion to your brick-&-mortar shop or other online stores, like eBay and Etsy.
+<phrase key="section-1-title" />
+Website Builder
+<phrase key="section-1-tag-line" />
+Perfect for individuals and small businesses looking for a simple, affordable way to get online.
+<phrase key="section-1-description" />
+Designed to be easy enough that anyone can use it, Website Builder lets you go from an idea to a beautiful, finished website in just a few steps.
+<phrase key="section-1-bullet-1" />
+Choose your favorite layout - we have hundreds of options for all different types of businesses and industries.
+<phrase key="section-1-bullet-2" />
+Customize your layout by adding your own text (just click and type) and images (just drag and drop).
+<phrase key="section-1-bullet-3" />
+Click "Publish" and your DIY website is live for the world to see.
+<phrase key="section-2-title" />
+Managed WordPress
+<phrase key="section-2-tag-line" />
+Perfect for bloggers, designers, developers and companies who work with agencies.
+<phrase key="section-2-description-1" />
+WordPress is the design tool of choice for everyone from independent web developers and globally recognized brands.
+<phrase key="section-2-description-2" />
+Our Managed WordPress takes this already-powerful platform to a higher level. With cutting-edge servers customized specifically to run WordPress, you'll enjoy outstanding performance, security and reliability. And with automated tasks like setup and core WordPress updates, you'll have more time to spend on the things that are important to you - like running your business.
+<phrase key="section-2-bullet-1" />
+Build your site with one of the most popular platforms online.
+<phrase key="section-2-bullet-2" />
+Customize your site with hundreds of templates and plugins available across the web.
+<phrase key="section-2-bullet-3" />
+Spend more time on your business and less time managing your web hosting.
+<phrase key="section-3-title" />
+Online Store
+<phrase key="section-3-tag-line" />
+Perfect for any business that wants to sell their products online.
+<phrase key="section-3-description-1" />
+Quick Shopping Cart gives you an easy way to sell more AND keep more of what you earn.
+<phrase key="section-3-description-2" />
+It doesn't matter if you sell your products at the Farmers Market twice a month or you're one of the top sellers on Etsy or eBay.
+<phrase key="section-3-bullet-1" />
+Easily build your own web store - no programming required.
+<phrase key="section-3-bullet-2" />
+Accept all major credit and debit cards, as well as PayPal and more.
+<phrase key="section-3-bullet-3" />
+Choose from a variety of shipping options to fit your products.
+<phrase key="section-3-bullet-4" />
+Always have the help you need with free 24/7 support.
+<phrase key="previous" />
+Previous
+<phrase key="next" />
+Next
+<phrase key="ssl-and-website-security" />
+SSL &amp; Website Security
+<phrase key="professional-services" />
+Professional Services
+<phrase key="starting-at" />
+Starting at
+<phrase key="learn-more" />
+Learn More
+<phrase key="yr" />
+/yr
+<phrase key="mo" />
+/mo
+<phrase key="read-reviews" />
+Read Reviews
