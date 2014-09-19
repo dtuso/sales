@@ -113,19 +113,6 @@ input[type="text"] {border:1px solid #ccc;border-top:3px solid #939597;}
  * Image sprite
  */
 .sprite {background-repeat: no-repeat;background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/stick-it-to-high-prices/img/sprite1.png);}
-/*.sprite.black-callout-1 {background-position: 0 0;width: 182px;height: 61px;}
-.sprite.black-callout-2 {background-position: 0 -60px;width: 187px;height: 53px;}
-.sprite.globe-icon {background-position: 0 -175px;width: 154px;height: 153px;}
-.sprite.hosting-icon {background-position: -487px 0;width: 153px;height: 196px;}
-.sprite.img-domains {background-position: -291px -229px;width: 144px;height: 146px;}
-.sprite.img_mrq_icon-group {background-position: -184px -141px;width: 276px;height: 83px;}
-.sprite.green-callout-1 {background-position: 0 -113px;width: 181px;height: 59px;}
-.sprite.img-support {background-position: -157px -230px;width: 129px;height: 146px;}
-.sprite.img-trust {background-position: -443px -231px;width: 144px;height: 146px;}
-.sprite.polygon-1-orange:hover {background-position: -328px 0;width: 140px;height: 140px;}
-.sprite.polygon-1-orange {background-position: -186px 0;width: 140px;height: 140px;}
-.sprite.tile_dot_3x3_4px-padding {background-position: -489px -81px;width: 3px;height: 3px;}*/
-
 .sprite.hosting-icon{background-position: -462px 0;width: 153px;height: 196px;}
 .sprite.img-domains{background-position: -280px 0;width: 144px;height: 146px;}
 .sprite.img_mrq_icon-group{background-position: 0 -140px ;width: 276px;height: 83px;}
@@ -149,37 +136,6 @@ input[type="text"] {border:1px solid #ccc;border-top:3px solid #939597;}
 .text-sprite.text-email{background-position: 0 -537px ;width: 224px;height: 61px;}
 .text-sprite.img_mrq_icon-group{background-position: -227px -538px ;width: 276px;height: 83px;}
 
-
-#marquee .headline > div > span:nth-child(1) {text-transform: uppercase;font-family: Tungsten;font-size: 46px;font-weight:700;line-height:1;letter-spacing:1.5px;}
-#marquee .headline > span:nth-child(2) {text-transform: uppercase;font-size: 36px;display:table;letter-spacing:-0.4px;line-height:0.9;font-family:Walsheim-Bold;}
-#marquee .headline > span:nth-child(3) {text-transform: uppercase;font-family: Walsheim-Black;font-size: 100px;line-height:0.75;letter-spacing:-1px;}
-#marquee .headline > span:nth-child(3):before {content: "----- ";letter-spacing: -8px;font-size: 1.1em;margin-left:-2px;}
-
-#marquee .text {font-size:12px;width:420px;}
-#marquee .text .line1 {color:#fff;text-transform: uppercase;font-family:Tungsten, 'Tungsten A', 'Tungsten B';font-size: 4em;font-weight:700;margin-bottom:-1.8em;}
-#marquee .text .line2 {color:#fff;text-transform: uppercase;font-family:Walsheim-Bold;font-size:3em;letter-spacing: -0.03em;margin-bottom:-2.4em;}
-#marquee .text .line3 {color:#fff;text-transform: uppercase;font-family:Walsheim-Black;font-size: 8em;}
-#marquee .text .dash {color:#fff;text-transform: uppercase;font-family: Walsheim-Black;font-size: 1.4em;letter-spacing: -0.5em;margin-right: 12px;overflow: hidden;display: none;line-height: 0.6;}
-
-/* CSS Statements that only apply on mozilla-based browsers (Chrome, Safari, etc.) */  
-@-moz-document url-prefix() {
-    #marquee p .line3 span {color:#fff;letter-spacing: -8px;font-size: 1.1em;margin-right:7px;}
-}
-
-/* CSS Statements that only apply on webkit-based browsers (Chrome, Safari, etc.) */  
-/*@media screen and (-webkit-min-device-pixel-ratio:0) {  
-    #marquee p .line3 span {color:#fff;letter-spacing: -9px;font-size: 1.1em;margin-right:3px;}
-}*/
-
-.justify {
-    text-align: justify;
-}
-.justify:after {
-  content: "";
-  display: inline-block;
-  width: 100%;
-}
-
 </style>
 
 [@P[cdsDocument:<data app="sales" location="fonts/fonts" /> ]@P]
@@ -193,24 +149,6 @@ input[type="text"] {border:1px solid #ccc;border-top:3px solid #939597;}
         <div class="primary-offer-section">
             <div class="row text-sprite text-easy">
             </div>
-
-            <div class="text">
-                <p class="line1 justify">Running a business is hard</p>
-                <p class="line2 justify">Building your website</p>
-                <span class="line3"><span class="dash">&mdash;&mdash;&mdash;</span>Easy</span>
-            </div>
-
-            <div class="text">
-                <p class="line1 justify">Running a business is hard</p>
-                <p class="line2 justify">Building your website</p>
-                <p class="line3">Easy</p>
-            </div>
-
-            <h1 class="text" style="text-align:justify;text-align-last:justify;width:428px;">
-                <span class="line1">Running a business is hard</span>
-                <span class="line2">Building your website</span>
-                <span class="line3">Easy</span>
-            </h1>
 
             <!-- use the below for the icon marquee version -->
             <div class="row icon-offer">
@@ -410,10 +348,6 @@ input[type="text"] {border:1px solid #ccc;border-top:3px solid #939597;}
     });
 
     $(document).ready(function () {
-
-        // set dash widths
-        $('.line3 .dash').css("width", ($('.text').width() - $('.line3').width() - 15) + "px");
-        $('.line3 .dash').css("display", "inline-block");
 
         if (typeof FastballEvent_MouseClick === 'function' && typeof fbiLibCheckQueue === 'function') {
             $('[data-ci]').click(function (e) {
