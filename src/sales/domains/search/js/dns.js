@@ -75,14 +75,14 @@
                                 for (var y = 0; y < response.Pods.length; y++) {
                                     var priceList = getPriceForCurrentPod(response.Pods[y].Tld, priceresponse, response);
 
-                                    response.Pods[y].ProductPrice = getPriceForCurrentPod(response.Pods[y].Tld, priceresponse, response);
+                                    var ProductPrice = getPriceForCurrentPod(response.Pods[y].Tld, priceresponse, response);
 
-                                    if (response.Pods[y].ProductPrice instanceof Array) {
-                                        response.Pods[y].CurrentPrice = response.Pods[y].ProductPrice[1];
-                                        response.Pods[y].ListPrice = response.Pods[y].ProductPrice[0];
-                                        response.Pods[y].IcannForCurrent=response.Pods[y].ProductPrice[2];
-                                        response.Pods[y].IcannForList=response.Pods[y].ProductPrice[3];
-                                    }                                    
+                                     if (ProductPrice !=null || ProductPrice!='') {
+                                        response.Pods[y].CurrentPrice = ProductPrice.CurrentPrice;
+                                        response.Pods[y].ListPrice = ProductPrice.ListPrice;
+                                        response.Pods[y].IcannForCurrent=ProductPrice.IcannForCurrent;
+                                        response.Pods[y].IcannForList=ProductPrice.IcannForList;
+                                    }                               
                                      //hardcoded currently , would be updated to fetch correct value from API.
                                     response.Pods[y].LaunchPhase = 28;
 
@@ -94,8 +94,13 @@
 
         function buildPriceRequest(pods) {
             var priceRequest = {
-                PromoCode: '2943962',
-                ShopperType: '',
+                promo:{
+                  Code:"2943962",
+                  ShopperType:0,
+                  ForExstShopper:false,
+                  ForCatalog:false,
+                  ForReseller:false  
+                },                        
                 tlds: []
             };
 
@@ -146,7 +151,7 @@
                             domainConfigResponse.domainListIcann = '*';                          
                         }                  
                     }                  
-                    return [podPrices.ListPrice, podPrices.CurrentPrice,domainConfigResponse.domainCurrentIcann, domainConfigResponse.domainListIcann];
+                    return {ListPrice:podPrices.ListPrice, CurrentPrice:podPrices.CurrentPrice,IcannForCurrent:domainConfigResponse.domainCurrentIcann, IcannForList:domainConfigResponse.domainListIcann};
 
                 }
             }
