@@ -349,10 +349,6 @@ input[type="text"] {border:1px solid #ccc;border-top:3px solid #939597;}
 
     $(document).ready(function () {
 
-        // set dash widths
-        $('.line3 .dash').css("width", ($('.text').width() - $('.line3').width() - 15) + "px");
-        $('.line3 .dash').css("display", "inline-block");
-
         if (typeof FastballEvent_MouseClick === 'function' && typeof fbiLibCheckQueue === 'function') {
             $('[data-ci]').click(function (e) {
                 $this = $(this);
