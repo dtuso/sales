@@ -1,8 +1,8 @@
 ---
 location: sales/hosting/website-builder.aspx
-id:  541b0d39f778fc1620a8315e
-name: GCE-24539
-comments: BazaarVoice reviews not loading IE8
+id:  541c598bf778fc14545dc85a
+name: GCE-27512
+comments: Free Email with WSB three way split Test 
 ---
 {% extends 'layouts/base.html' %}
 {% block pageTitle %}
@@ -539,11 +539,25 @@ comments: BazaarVoice reviews not loading IE8
                         <li data-gd-sidebysidealign-row="6">[@L[cds.sales/gd/hosting/website-builder:unlimited-pages]@L]</li>
                         <li data-gd-sidebysidealign-row="7">[@L[cds.sales/gd/hosting/website-builder:business-diskspace]@L]</li>
                         <li data-gd-sidebysidealign-row="8">[@L[cds.sales/gd/hosting/website-builder:business-bandwidth]@L]</li>
+                        ##if(splitTestingSideIsActive(1338, B))
+                        <li data-gd-sidebysidealign-row="9">[@L[cds.sales/gd/hosting/website-builder:business-email2]@L]</li>
+                        <li data-gd-sidebysidealign-row="10">[@L[cds.sales/gd/hosting/website-builder:business-mobile]@L]</li>
+                        <li data-gd-sidebysidealign-row="11">-</li>
+                        <li data-gd-sidebysidealign-row="12">-</li>
+                        <li data-gd-sidebysidealign-row="13">-</li>
+                        ##elseif(splitTestingSideIsActive(1338, C))
+                        <li data-gd-sidebysidealign-row="9">[@L[cds.sales/gd/hosting/website-builder:business-mobile]@L]</li>
+                        <li data-gd-sidebysidealign-row="10">-</li>
+                        <li data-gd-sidebysidealign-row="11">-</li>
+                        <li data-gd-sidebysidealign-row="12">-</li>
+                        ##else
                         <li data-gd-sidebysidealign-row="9">[@L[cds.sales/gd/hosting/website-builder:business-email]@L]</li>
                         <li data-gd-sidebysidealign-row="10">[@L[cds.sales/gd/hosting/website-builder:business-mobile]@L]</li>
                         <li data-gd-sidebysidealign-row="11">-</li>
                         <li data-gd-sidebysidealign-row="12">-</li>
                         <li data-gd-sidebysidealign-row="13">-</li>
+                        ##endif
+                        
                     </ul>
                 </div>
             </div>
@@ -684,11 +698,25 @@ comments: BazaarVoice reviews not loading IE8
                         <li data-gd-sidebysidealign-row="6">[@L[cds.sales/gd/hosting/website-builder:unlimited-pages]@L]</li>
                         <li data-gd-sidebysidealign-row="7">[@L[cds.sales/gd/hosting/website-builder:unlimited-diskspace]@L]</li>
                         <li data-gd-sidebysidealign-row="8">[@L[cds.sales/gd/hosting/website-builder:unlimited-bandwidth]@L]</li>
+                        ##if(splitTestingSideIsActive(1338, B))
+                        <li data-gd-sidebysidealign-row="9">[@L[cds.sales/gd/hosting/website-builder:unlimited-email2]@L]</li>
+                        <li data-gd-sidebysidealign-row="10">[@L[cds.sales/gd/hosting/website-builder:unlimited-mobile]@L]</li>
+                        <li data-gd-sidebysidealign-row="11">[@L[cds.sales/gd/hosting/website-builder:unlimited-seo]@L]</li>
+                        <li data-gd-sidebysidealign-row="12">[@L[cds.sales/gd/hosting/website-builder:unlimited-oneclick]@L]</li>
+                        <li data-gd-sidebysidealign-row="13">[@L[cds.sales/gd/hosting/website-builder:unlimited-ssl]@L]</li>
+                        ##elseif(splitTestingSideIsActive(1338, C))
+                        <li data-gd-sidebysidealign-row="9">[@L[cds.sales/gd/hosting/website-builder:unlimited-mobile]@L]</li>
+                        <li data-gd-sidebysidealign-row="10">[@L[cds.sales/gd/hosting/website-builder:unlimited-seo]@L]</li>
+                        <li data-gd-sidebysidealign-row="11">[@L[cds.sales/gd/hosting/website-builder:unlimited-oneclick]@L]</li>
+                        <li data-gd-sidebysidealign-row="12">[@L[cds.sales/gd/hosting/website-builder:unlimited-ssl]@L]</li>
+                        ##else
                         <li data-gd-sidebysidealign-row="9">[@L[cds.sales/gd/hosting/website-builder:unlimited-email]@L]</li>
                         <li data-gd-sidebysidealign-row="10">[@L[cds.sales/gd/hosting/website-builder:unlimited-mobile]@L]</li>
                         <li data-gd-sidebysidealign-row="11">[@L[cds.sales/gd/hosting/website-builder:unlimited-seo]@L]</li>
                         <li data-gd-sidebysidealign-row="12">[@L[cds.sales/gd/hosting/website-builder:unlimited-oneclick]@L]</li>
                         <li data-gd-sidebysidealign-row="13">[@L[cds.sales/gd/hosting/website-builder:unlimited-ssl]@L]</li>
+                        ##endif
+                        
                     </ul>
                 </div>
             </div>
