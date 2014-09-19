@@ -1,6 +1,6 @@
 ---
 location: sales/offers/stick-it-to-high-prices.aspx
-id: 54174f7bf778fc205c2b5c15
+id: 541881e2f778fc205c2b5c6e
 name: GCE-27851
 comments: Final pre-release improvements
 url: http://www.dev-godaddy.com/offers/stick-it-to-high-prices.aspx
@@ -10,12 +10,13 @@ assetPath: false
 {% block metahead %}
 {% parent %}
 
+<meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="[@L[cds.sales/offers/stick-it-to-high-prices:twitter-site]@L]" />
 <meta name="twitter:title" content="[@L[cds.sales/offers/stick-it-to-high-prices:twitter-title]@L]" />
 <meta name="twitter:description" content="[@L[cds.sales/offers/stick-it-to-high-prices:twitter-description]@L]" />
 <meta name="twitter:url" content="[@T[link:<external linktype='siteurl' path='/offers/stick-it-to-high-prices.aspx' parammode='explicit' />]@T]" />
-<meta name="twitter:image:src" content="[@T[link:><imageroot />]@T]fos/sales/themes/scotty/offers/stick-it-to-high-prices/img/og_stick-it.jpg" />
+<meta name="twitter:image:src" content="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/stick-it-to-high-prices/img/og_stick-it1.jpg" />
 
 <style type="text/css">
 
@@ -69,10 +70,10 @@ section:last-child {padding-bottom: 0;}
 #marquee .primary-offer-section .offer span:last-child strong {font-family: Walsheim-Black;}
 
 #marquee .primary-offer-section .btn-warning {font-size: 23px;padding-left: 30px;padding-right: 30px;}
-#marquee .uxicon-play {font-size: 64px;padding-top: 40px;color: #fff;}
-#marquee .stick-it-video-link {color: #fff;text-align: center;float: right;font-size: 18px;line-height: 1;position: absolute;bottom: 0;right: 0;}
+#marquee .uxicon-play {font-size: 64px;padding-top: 30px;color: #fff;}
+#marquee .stick-it-video-link {color: #fff;text-align: center;float: right;font-size: 14px;line-height: 1;position: absolute;bottom: 0;right: 0;}
 #marquee .stick-it-video-link:hover {text-decoration: none;cursor: pointer;}
-#marquee .stick-it-video-link strong {font-size: 36px;text-transform: uppercase;}
+#marquee .stick-it-video-link strong {font-size: 42px;text-transform: uppercase;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;}
 
 /* 
  * Other offers section
@@ -111,24 +112,22 @@ input[type="text"] {border:1px solid #ccc;border-top:3px solid #939597;}
 /* 
  * Image sprite
  */
-.sprite {background-repeat: no-repeat;background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/stick-it-to-high-prices/img/sprite.png);}
-.sprite.black-callout-1 {background-position: 0 0;width: 182px;height: 61px;}
-.sprite.black-callout-2 {background-position: 0 -60px;width: 187px;height: 53px;}
-.sprite.globe-icon {background-position: 0 -175px;width: 154px;height: 153px;}
-.sprite.hosting-icon {background-position: -487px 0;width: 153px;height: 196px;}
-.sprite.img-domains {background-position: -291px -229px;width: 144px;height: 146px;}
-.sprite.img_mrq_icon-group {background-position: -184px -141px;width: 276px;height: 83px;}
-.sprite.green-callout-1 {background-position: 0 -113px;width: 181px;height: 59px;}
-.sprite.img-support {background-position: -157px -230px;width: 129px;height: 146px;}
-.sprite.img-trust {background-position: -443px -231px;width: 144px;height: 146px;}
-.sprite.polygon-1-orange:hover {background-position: -328px 0;width: 140px;height: 140px;}
-.sprite.polygon-1-orange {background-position: -186px 0;width: 140px;height: 140px;}
-.sprite.tile_dot_3x3_4px-padding {background-position: -489px -81px;width: 3px;height: 3px;}
-   
+.sprite {background-repeat: no-repeat;background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/stick-it-to-high-prices/img/sprite1.png);}
+.sprite.hosting-icon{background-position: -462px 0;width: 153px;height: 196px;}
+.sprite.img-domains{background-position: -280px 0;width: 144px;height: 146px;}
+.sprite.img_mrq_icon-group{background-position: 0 -140px ;width: 276px;height: 83px;}
+.sprite.img-support{background-position: -147px 0;width: 129px;height: 138px;}
+.sprite.img-trust{background-position: 0 0;width: 144px;height: 136px;}
+.sprite.globe-icon{background-position: -741px 0;width: 154px;height: 153px;}
+.sprite.black-callout-1{background-position: -278px -178px ;width: 186px;height: 58px;}
+.sprite.green-callout-1{background-position: -740px -157px ;width: 181px;height: 59px;}
+.sprite.polygon-1-orange:hover{background-position: -618px -120px ;width: 120px;height: 120px;}
+.sprite.polygon-1-orange{background-position: -619px 0;width: 120px;height: 120px;}
+
 /* 
  * Text sprite - intended to be temporarily used to provide on-brand alignment and dashes while a more robust solution is crafted
  */         
-.text-sprite {	background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/stick-it-to-high-prices/img/text-sprite.png) no-repeat;}
+.text-sprite {background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/stick-it-to-high-prices/img/text-sprite.png) no-repeat;}
 .text-sprite.text-easy{background-position: 0 0;width: 440px;height: 158px;}
 .text-sprite.text-buzzwords{background-position: 0 -159px ;width: 402px;height: 129px;}
 .text-sprite.text-domain{background-position: 0 -294px ;	width: 417px;height: 76px;}
@@ -138,6 +137,7 @@ input[type="text"] {border:1px solid #ccc;border-top:3px solid #939597;}
 .text-sprite.img_mrq_icon-group{background-position: -227px -538px ;width: 276px;height: 83px;}
 
 </style>
+
 [@P[cdsDocument:<data app="sales" location="fonts/fonts" /> ]@P]
 {% endblock %}
 
@@ -160,10 +160,10 @@ input[type="text"] {border:1px solid #ccc;border-top:3px solid #939597;}
             </div>
 
             <!-- use the below for the text marquee version -->
-            <div class="row offer" style="display:none;">
+            <!--<div class="row offer" style="display:none;">
                 <strong><span class="wsb-price">{0}</span><span>/mo</span></strong><br />
                 <span>Includes <strong>FREE</strong> domain</span>
-            </div>
+            </div>-->
 
             <!-- use this anchor tag to immediately add and go to cart -->
             <!--<a id="marquee-buy-now" class="btn btn-warning btn-buy-now" data-ci="93272" data-plan="wsb_personal_12month">Buy Now</a>-->
@@ -263,7 +263,7 @@ input[type="text"] {border:1px solid #ccc;border-top:3px solid #939597;}
                 <p class="description">If you have the drive, we have all you need to build and manage an online business.  Get a domain, build a great site, create an online store, and list it so customers can actually find you.</p>
             </div>
             <div class="col-xs-4">
-                <div class="sprite img-support">
+                <div class="sprite img-support" style="margin-bottom:48px;">
                 </div>
                 <p class="headline">
                     You don't work 9 to 5. Neither do we.
@@ -271,7 +271,7 @@ input[type="text"] {border:1px solid #ccc;border-top:3px solid #939597;}
                 <p class="description">We know it's tough to get started.  That's why our support team is here around the clock waiting to talk you through it.  Give 'em a call, they're ready to help.  Really.  Really, really.</p>
             </div>
             <div class="col-xs-4">
-                <div class="sprite img-trust">
+                <div class="sprite img-trust" style="margin-bottom:52px;">
                 </div>
                 <p class="headline">
                     We've got your back &amp; all the tools you need.
