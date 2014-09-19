@@ -1,0 +1,25 @@
+{
+  "domain-auctions.html": {
+    "cdsDetails": {
+      "champion": {
+        "name": "Victor Songco",
+        "email": "vsongco@godaddy.com"
+      }
+    },
+    "metaTitle": "[@L[cds.sales/gd/product-listing/domain-auctions:page-title]@L]",
+    "metaDescription": "[@L[cds.sales/gd/product-listing/domain-auctions:meta-description]@L]",
+    "metaKeywords": "[@L[cds.sales/gd/product-listing/domain-auctions:meta-keywords]@L]",
+    "metaCanonicalPath": "/domain-auctions",
+    "metaOgTitle": "[@L[cds.sales/gd/product-listing/domain-auctions:og-title]@L]",
+    "metaOgImage": "fos/hp/rebrand/img/gd_rebrand_og.png",
+    "metaOgDescription": "[@L[cds.sales/gd/product-listing/domain-auctions:og-description]@L]"
+  },
+  "productLP.language": {
+    "cdsDetails": {
+      "champion": {
+        "name": "Victor Songco",
+        "email": "vsongco@godaddy.com"
+      }
+    }
+  }
+}
