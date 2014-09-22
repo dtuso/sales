@@ -1,0 +1,25 @@
+{
+  "hosting-ssl-clp.html": {
+    "cdsDetails": {
+      "champion": {
+        "name": "Victor Songco",
+        "email": "vsongco@godaddy.com"
+      }
+    },
+    "metaTitle": "[@L[cds.sales/gd/category-listing/hosting-ssl:page-title]@L]",
+    "metaDescription": "[@L[cds.sales/gd/category-listing/hosting-ssl:meta-description]@L]",
+    "metaKeywords": "[@L[cds.sales/gd/category-listing/hosting-ssl:meta-keywords]@L]",
+    "metaCanonicalPath": "/hosting.aspx",
+    "metaOgTitle": "[@L[cds.sales/gd/category-listing/hosting-ssl:og-title]@L]",
+    "metaOgImage": "fos/hp/rebrand/img/gd_rebrand_og.png",
+    "metaOgDescription": "[@L[cds.sales/gd/category-listing/hosting-ssl:og-description]@L]"
+  },
+  "productLP.language": {
+    "cdsDetails": {
+      "champion": {
+        "name": "Victor Songco",
+        "email": "vsongco@godaddy.com"
+      }
+    }
+  }
+}

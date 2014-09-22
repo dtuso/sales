@@ -133,7 +133,7 @@ span.g-toolTip {
     width: inherit;
 }
 .action-buttons {
-    text-align: right;
+    text-align: center;
     padding: 20px 0;
 }
 .invalid { border: 1px solid red!important }
@@ -233,17 +233,21 @@ form input[type="checkbox"] {
     opacity: 0;  
 }
 form div.toggle {
-    background: url(//img1.wsimg.com/cart/icons/FOS-9911_payment_icons.png) no-repeat -62px -87px;
-    height: 24px;
-    width: 23px;
-    padding: 2px;
+    background: url(../../domain-config/img/DPP_sprite_1.png) no-repeat -193px -26px;
+    width: 16px; 
+    height: 16px;
     cursor: pointer;
     display: inline-block;
     vertical-align: middle;
-    margin-right: 5px;
+    margin-right: 8px;
     margin-top: -2px;
 }
-form div.toggle.checked { background: url(//img1.wsimg.com/cart/icons/FOS-9911_payment_icons.png) no-repeat -107px -86px }
+form div.toggle.checked { 
+    background: url(../../domain-config/img/DPP_sprite_1.png) no-repeat -211px -24px;
+    width: 21px; 
+    height: 18px;
+    margin-right: 3px;
+}
 form input[type="radio"] { 
     position: absolute;
     filter: alpha(opacity=0);
@@ -252,7 +256,7 @@ form input[type="radio"] {
     opacity: 0; 
 }
 form span.radio {
-  background: url(../../domain-config/img/DPP_sprite.png) no-repeat -777px -21px;
+  background: url(../../domain-config/img/DPP_sprite_1.png) no-repeat -777px -21px;
   vertical-align: top;
   display: inline-block;
   height: 21px;
@@ -261,7 +265,7 @@ form span.radio {
   cursor: pointer;
 }
 form span.radio.checked {
-  background: url(../../domain-config/img/DPP_sprite.png) no-repeat -733px -21px;
+  background: url(../../domain-config/img/DPP_sprite_1.png) no-repeat -733px -21px;
   vertical-align: top;
   display: inline-block;
   height: 21px;
@@ -340,9 +344,29 @@ form span.radio.checked {
 #main-wrap .selectstyleui>.ss-options>.selected { background-color: #eff6e3 }
 #defaultOption { display: none }
 #main-wrap .error {
-    color: red;
+    color: #f00000;
     font-style: italic;
     width: 100%;
+}
+#main-wrap #head-wrap > .error {
+    color: #fff;
+    font-style: normal;
+    width: 100%;
+    background-color: #f00000;
+    border-color: #f00000;
+}
+.sf-icn, .sf-icn:link {
+  display: none !important;
+}
+div.sf-alert-msg, 
+div.sf-alert-msg > a {
+  color: #fff;
+  font-size: 14px;
+}
+.sf-icn-alert.sf-icn-alert-error {
+    background: url('../../domain-config/img/DPP_sprite_1.png') no-repeat -800px -23px;
+    width: 24px;
+    height: 20px;
 }
 #main-wrap .hidden { display: none }
 #uk-header{
@@ -412,7 +436,8 @@ b, strong {font-weight: bold !important;}
 
 #eligibility-form > form.nyc_eligibility > h1, 
 #eligibility-form > form.lawyer_gac > h1,  
-#eligibility-form > form.attorney_gac > h1
+#eligibility-form > form.attorney_gac > h1,
+#eligibility-form > form.dentist_gac > h1
  {
   font-size: 40px;
   border-bottom: 1px solid;
@@ -431,12 +456,18 @@ b, strong {font-weight: bold !important;}
   color: #333333;
 }
 #eligibility-form > form.lawyer_gac h2,
-#eligibility-form > form.attorney_gac h2 {
+#eligibility-form > form.attorney_gac h2,
+#eligibility-form > form.dentist_gac h2 {
   display: block;
-  font-size: 18px;
-  margin: 25px 0 0;
+  font-size: 16px;
+  margin: 15px 0 0;
   padding: 0;
   color: #333333;
+}
+#eligibility-form > form.lawyer_gac .radioBtnGroup div,
+#eligibility-form > form.attorney_gac .radioBtnGroup div,
+#eligibility-form > form.dentist_gac .radioBtnGroup div {
+ margin-top: 2px;
 }
 #eligibility-form > form.nyc_eligibility > .headingText > ul {
   list-style: inherit;
@@ -454,12 +485,16 @@ b, strong {font-weight: bold !important;}
   padding: 20px 0 0;
 }
 #eligibility-form > form.lawyer_gac > div.field > h2,
-#eligibility-form > form.attorney_gac > div.field > h2 {
-  font-size: 14px;
+#eligibility-form > form.attorney_gac > div.field > h2,
+#eligibility-form > form.dentist_gac > div.field > h2 {
+  font-size: 16px;
   margin: 0;
   padding: 15px 0 0;
 }
-#eligibility-form > form.nyc_eligibility > div.field > h2:after {
+#eligibility-form > form.nyc_eligibility > div.field > h2:after,
+#eligibility-form > form.lawyer_gac > div.field > h2:after,
+#eligibility-form > form.attorney_gac > div.field > h2:after,
+#eligibility-form > form.dentist_gac > div.field > h2:after  {
   content: " *";
   color: red;
   margin-top: -5px;
@@ -469,10 +504,14 @@ b, strong {font-weight: bold !important;}
 #eligibility-form > form > div.tui-companyName > h2:after {
   display: none;
 }
-#eligibility-form > form.nyc_eligibility > div.field > h2 > .g-toolTip,
-#eligibility-form > form.lawyer_gac > div.field > h2 > .g-toolTip,
-#eligibility-form > form.attorney_gac > div.field > h2 > .g-toolTip {
+#eligibility-form > form.nyc_eligibility > div.field > h2 > .g-toolTip {
   display: none;
+}
+#eligibility-form > form.lawyer_gac > div.field > h2 > .g-toolTip,
+#eligibility-form > form.attorney_gac > div.field > h2 > .g-toolTip,
+#eligibility-form > form.dentist_gac > div.field > h2 > .g-toolTip {
+  display: none;
+  /*margin: 0 0 0 13px;*/
 }
 #eligibility-form > form.nyc_eligibility input {
   font-size: 14px;
@@ -482,7 +521,8 @@ b, strong {font-weight: bold !important;}
   width: 98%;
 }
 #eligibility-form > form.lawyer_gac input,
-#eligibility-form > form.attorney_gac input {
+#eligibility-form > form.attorney_gac input,
+#eligibility-form > form.dentist_gac input {
   font-size: 14px;
   border: 1px solid;
   border-color: #B3B3B3;
@@ -540,12 +580,14 @@ form.nyc_eligibility div.tui-stateOrProvince {
   border-color: #f00000;
 }
 #eligibility-form > form.lawyer_gac, 
-#eligibility-form > form.attorney_gac {
+#eligibility-form > form.attorney_gac,
+#eligibility-form > form.dentist_gac {
   padding-bottom:10px;
 }
 #eligibility-form > form.lawyer_gac div .sub-label,
-#eligibility-form > form.attorney_gac div .sub-label {
-  margin:30px 0 0;
+#eligibility-form > form.attorney_gac div .sub-label,
+#eligibility-form > form.dentist_gac div .sub-label {
+  margin:25px 0 0;
 }
 #applyToAll {
   margin: 25px 0 0;
@@ -555,4 +597,8 @@ form.nyc_eligibility div.tui-stateOrProvince {
 }
 #applyToAll label {
   font-size: 16px;
+}
+#applyToAll p .tld,
+#applyToAll div .tld {
+  font-weight: bold;
 }

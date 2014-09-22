@@ -24,6 +24,7 @@ name: FOS-22017
       .fosfbbox {overflow: visible !important;}
       .fostwbox {width:auto !important;}
       .fb_iframe_widget {top:-3px !important;}
+      html:lang(en) #main-wrap.tld-vegas .header {background: url('[@T[link:<cssroot />]@T]tldleafpages/vegas/fos/gtld-banner-new.jpg')}
     </style>
 {% endblock %}
 
@@ -116,14 +117,21 @@ name: FOS-22017
         } else {
           domains.controls.gtldTemplatesClient.Initialize({
             tldLogoImageExists: $.trim('[@L[cds.tldleaf/[@D[gtld]@D]:all.gtld.logo]@L]').length > 0,
+            tldLogoImageFilePath: '[@T[link:<imageroot />]@T]tldleafpages/[@D[gtld]@D]/fos/',
             hasProductLimitations: $.trim('[@L[cds.tldleaf/[@D[gtld]@D]:all.limitations.symbols]@L]').length > 0,
             tldLogoImageFileName: '[@T[link:<imageroot />]@T]tldleafpages/[@D[gtld]@D]/fos/[@L[cds.tldleaf/[@D[gtld]@D]:all.gtld.logo]@L]',
             gTldPreRegPhaseDataJson: [@P[webControl:<Data assembly="App_Code" type="Domains.Controls.GTldPhaseDataJson"></Data>]@P],
             redirectUrl: '[@T[link:<relative path="~/tlds/gtld.aspx"></relative>]@T]',
             tldH1TagExists: $.trim('[@L[cds.tldleaf/[@D[gtld]@D]:all.page.h1]@L]').length > 0,
             tldUKLogo:'[@T[link:<imageroot />]@T]tldleafpages/uk/fos/[@L[cds.tldleaf/uk:all.gtld.logo]@L]',
-            icannLink:removeIcannLink()
-          });
+            icannLink:removeIcannLink(), 
+            ##if(activeLanguageAny(en))
+              isEnMarket: true,
+            ##else
+              isEnMarket: false,
+            ##endif
+            tldLogoFileName: "[@L[cds.tldleaf/[@D[gtld]@D]:all.gtld.logo]@L]"
+          }); 
 
           domains.controls.gtldTemplatesClient.SetupGeneralAvailability();
         }

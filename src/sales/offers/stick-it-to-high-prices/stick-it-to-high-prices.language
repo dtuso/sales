@@ -1,0 +1,23 @@
+---
+location: localization/sales/offers/stick-it-to-high-prices/en
+id: 54178462f778fc205c2b5c44
+name: GCE-27851
+comments: Initial page creation
+---
+{% include 'modules/doc-block.html' %}
+<phrase key="page-title" />
+Stick it | To high prices and everyone who doubted you - [@T[companyname:name]@T]
+<phrase key="meta-description" />
+Friends don't think you can live your dream? Co-workers doubt you can build your own online business? Been waiting to tell them to STICK IT? Today's the day. Watch now, have a laugh, and get your own website and a FREE domain.
+<phrase key="meta-keywords" />
+Stick it, Website, templates, template, how to make a website, website templates, website builder, make your own website, create a website, creating a website, website template, website layout, site traffic, building your own website, advertise your business, money making website promote your business, promoting your website, do it yourself website builder, pre-built websites
+<phrase key="og-title" />
+Stick It | To high prices and everyone who doubted you.
+<phrase key="og-description" />
+Friends don't think you can live your dream? Co-workers doubt you can build your own online business? Been waiting to tell them to STICK IT? Today's the day. Watch now, have a laugh, and get your own website and a FREE domain.
+<phrase key="twitter-site" />
+@GoDaddy
+<phrase key="twitter-title" />
+LOL I just told everyone who doubted me to STICK IT. Your turn. Check it out.
+<phrase key="twitter-description" />
+Friends don't think you can live your dream? Co-workers doubt you can build your own online business? Been waiting to tell them to STICK IT? Today's the day. Watch now, have a laugh, and get your own website and a FREE domain.

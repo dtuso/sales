@@ -238,6 +238,7 @@ var sr_js = {
     };
 
     var AreaTypes = {
+        Ad: new AreaViewModel('Ad', 'Ad', 'dppsr_extnd_ad', 0),
         All: new AreaViewModel('All', null, 'dppsr_extnd_all', 84300).IsSelected(true),
         Available: new AreaViewModel('Available', 'Available', 'dppsr_extnd_avail', 0).IsVisible(false),
         Recommended: new AreaViewModel('Recommended', 'Recommended', 'dppsr_extnd_strpmall', 84307),
@@ -283,6 +284,7 @@ var sr_js = {
     };
 
     var StatusTypes = {
+        Ad: 'ad',
         AfterMarket: 'aftermarket',  // all auctions
         Available: 'available',      // chellisage1234
         Backorder: 'backorder',      // apple.com, chellisage
@@ -333,6 +335,7 @@ var sr_js = {
     };
 
     DomainSearchResults.ItemTypes = {
+        Ad: new ItemTypeViewModel(16, 'ad', 'Ad', AreaTypes.Ad, StatusTypes.Ad, 'ad').IsVisible(true),
         AfterMarket: new ItemTypeViewModel(1, 'aftermarket', 'Auction', null, StatusTypes.AfterMarket, 'aftermarket', AvailabilityTypes.Auction).IsVisible(true),       // all auctions
         Available: new ItemTypeViewModel(10, 'available', 'Available', AreaTypes.Available, StatusTypes.Available, 'available').IsVisible(true),
         // TODO: Check backorder and dbs for priority
@@ -460,6 +463,7 @@ var sr_js = {
         self.stackFullAvailCheck = ko.observable(false);
         self.stackFullAvailCheckError = ko.observable(false);
         self.IsPremiumPrice = ko.observable(false);
+        self.IsAd = ko.observable(false);
         self.HasDiscount = ko.observable(false);
         self.searchSource = ko.observable('');  // from search results json for fastball tracking
         self.AvailableValue = ko.observable('');  // from search results json for fastball tracking
@@ -648,12 +652,17 @@ var sr_js = {
                 if (data.IsPremiumPrice) {
                     self.IsPremiumPrice(true);
                 }
+
                 if (data.HasDiscount) {
                     self.HasDiscount(true);
                 }
 
                 if (data.DomainStatus) {
                     self.Status('unknown' === data.DomainStatus.toLowerCase() || 'transfer' === data.DomainStatus.toLowerCase() ? StatusTypes.Unavailable : data.DomainStatus.toLowerCase());
+                }
+
+                if (data.IsAd) {
+                    self.IsAd(true);
                 }
 
                 if (data.Stack && (data.Stack.Prices !== null)) {
@@ -1934,13 +1943,17 @@ function pathIsDeals2(){
 function getQueryParams(){
   var url = window.location.href;
   var params = {};
-  var queryParams = (url.substr(url.indexOf('?')+1,url.length)).split('&');
-  for(var i = 0; i < queryParams.length; i++)
+  if(url.indexOf('?') > -1)
   {
-    var param = queryParams[i].split('=');
-    params[param[0]] = param[1].replace('#','');
+      var queryParams = (url.substr(url.indexOf('?')+1,url.length)).split('&');
+      for(var i = 0; i < queryParams.length; i++)
+      {
+        var param = queryParams[i].split('=');
+        params[param[0]] = param[1].replace('#','');
+      }
+      return params;
   }
-  return params;
+  return [];
 }
 function addQueryParam(url,name,value){
   return url + (url.indexOf('?') !== -1 ? '&' : '?') + name + '=' + value;

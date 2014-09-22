@@ -1,5 +1,42 @@
+@import url("//cloud.typography.com/7914312/697366/css/fonts.css");
+@font-face {
+font-family: 'Walsheim-Light';
+src: url('//img1.wsimg.com/ux/fonts/1.0/eot/w3.eot');
+src: url('//img1.wsimg.com/ux/fonts/1.0/woff/w3.woff') format('woff'), url('//img1.wsimg.com/ux/fonts/1.0/ttf/w3.ttf') format('truetype'), url('//img1.wsimg.com/ux/fonts/1.0/svg/w3.svg') format('svg');
+font-weight: 400;
+font-style: normal;
+}
+@font-face {
+font-family: 'Walsheim-Regular';
+src: url('//img1.wsimg.com/ux/fonts/1.0/eot/w4.eot');
+src: url('//img1.wsimg.com/ux/fonts/1.0/woff/w4.woff') format('woff'), url('//img1.wsimg.com/ux/fonts/1.0/ttf/w4.ttf') format('truetype'), url('//img1.wsimg.com/ux/fonts/1.0/svg/w4.svg') format('svg');
+font-weight: 400;
+font-style: normal;
+}
+@font-face {
+font-family: 'Walsheim-Medium';
+src: url('//img1.wsimg.com/ux/fonts/1.0/eot/w5.eot');
+src: url('//img1.wsimg.com/ux/fonts/1.0/woff/w5.woff') format('woff'), url('//img1.wsimg.com/ux/fonts/1.0/ttf/w5.ttf') format('truetype'), url('//img1.wsimg.com/ux/fonts/1.0/svg/w5.svg') format('svg');
+font-weight: 400;
+font-style: normal;
+}
+@font-face {
+font-family: 'Walsheim-Bold';
+src: url('//img1.wsimg.com/ux/fonts/1.0/eot/w7.eot');
+src: url('//img1.wsimg.com/ux/fonts/1.0/woff/w7.woff') format('woff'), url('//img1.wsimg.com/ux/fonts/1.0/ttf/w7.ttf') format('truetype'), url('//img1.wsimg.com/ux/fonts/1.0/svg/w7.svg') format('svg');
+font-weight: 400;
+font-style: normal;
+}
+@font-face {
+font-family: 'Walsheim-Black';
+src: url('//img1.wsimg.com/ux/fonts/1.0/eot/w8.eot');
+src: url('//img1.wsimg.com/ux/fonts/1.0/woff/w8.woff') format('woff'), url('//img1.wsimg.com/ux/fonts/1.0/ttf/w8.ttf') format('truetype'), url('//img1.wsimg.com/ux/fonts/1.0/svg/w8.svg') format('svg');
+font-weight: 400;
+font-style: normal;
+}
 #main-wrap * {
-  font-family:"HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif!important;font-weight:300;
+  font-family:"HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif!important;
+  font-weight:300;
 }
 #price-bold {
   font-weight: 600;
@@ -23,6 +60,10 @@
 #tld-headline, #tld-subheadline, #tld-pricetagline, #tld-priceline {
   color:#fff;
   text-align:center;
+}
+#main-wrap .tungsten {
+	font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;
+	font-weight:700
 }
 #tld-headline {
   font-size:36px;
@@ -330,3 +371,46 @@ em.gtld {
   text-transform: uppercase;
   text-decoration: none;
 }
+/* Specific Styles */
+
+/* .vegas */
+html:lang(en) .tld-vegas #tld-priceline span, html:lang(en) .tld-vegas #tld-pricetagline {
+	color: #fff;
+}
+
+/* NYC */
+.tld-nyc #head-wrap {
+	height:100%;
+}
+.tld-nyc #head-wrap .header-text {
+	padding-top: 36px;
+}
+.tld-nyc #head-wrap .header {
+	height: 375px;
+}
+.tld-nyc #tld-priceline span, .tld-nyc #tld-pricetagline {
+	color: #fff;
+}
+.tld-nyc .nyc-headline {
+	font-family: 'Walsheim-Black';
+	font-size: 30px;
+	text-transform: uppercase;
+}
+.tld-nyc .nyc-subheading {
+	font-size: 53px;
+	display: block;
+	text-transform: uppercase;
+	margin-bottom: 18px;
+}
+.tld-nyc .rebrand-dash {
+	letter-spacing: -1px;
+}
+.tld-nyc #tld-pricetagline {
+	font-family: "Walsheim-Light";
+	font-size: 15px;
+}
+.tld-nyc #tld-priceline span {
+	font-family: 'Walsheim-Bold';
+	font-style: 32px;
+}
+

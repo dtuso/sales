@@ -1,8 +1,8 @@
 ---
 location: sales/domains/domain-name-search.aspx
-id: 540f4809f778fc2718e3b687
-name: GCE-27547
-comments: Why GD Updates for Google
+id: 54171a42f778fc205c2b5beb
+name: Implement Angualar Javascript to show 2.99 pricing.
+comments: GCE-25204
 ---
 {% extends 'layouts/base.html' %}
 {% block metahead %}
@@ -79,7 +79,7 @@ comments: Why GD Updates for Google
                             
                               <div class="item carousel-inner-item carousel-inner-item-ds carousel-inner-item-ds-1 active" align="right">
                                  <div class="carousel-inner-text-container"> 
-                                   ##if(ActiveLanguageAny([es-ve], [es-pe], [es-mx], [es-us], [es-es], [es-co], [es-cl], [es-ar]))
+                                   ##if(ActiveLanguageAny([es-ve], [es-pe], [es-mx], [es-es], [es-co], [es-cl], [es-ar]))
                                   <p class="no-margin-bottom">[@L[cds.sales/gd/domains/domain-name-search:CarouselSlide1ES]@L]</p>  
                                   ##elseif(ActiveLanguageAny([de-at],[de-de],[de-ch]))
                                   <p class="no-margin-bottom">[@L[cds.sales/gd/domains/domain-name-search:CarouselSlide1DE]@L]</p>  
@@ -130,11 +130,22 @@ comments: Why GD Updates for Google
                     <a data-ci="88008" href="[@T[link:<relative path="/domains/transfers.aspx"></relative>]@T]" class="underlined">[@L[cds.sales/gd/domains/domain-name-search:CarouselSideLink3]@L]</a>
                 </div>
             </div>
-            <div class="l-main-container container main-banner-content domain-search-prices" id="Pods4">
-                <div class="row tab-content equal-height" id="PodRow">
-                 
+           <div class="l-main-container container main-banner-content domain-search-prices ng-cloak" id="Pods4" ng-cloak >
+        <div class="row tab-content equal-height" id="PodRow">
+         
+            <div class="col-xs-3" style="height:290px;" id="{{pod.PodId}}" ng-repeat="pod in podsDataTop">
+                <div class="grid-column">
+                    <div class="ico-wrapper"><i id="podIcon" class="tldlogo {{pod.logoclass}}"></i>
+                    </div>
+                  <p class="font-16"><em><nostrike  ng-show="'{{pod.CurrentPrice}}'=='{{pod.ListPrice}}'">{{pod.ListPrice}}{{pod.IcannForList}}</nostrike></em><strike ng-hide="'{{pod.CurrentPrice}}'=='{{pod.ListPrice}}'"><strong class="line-through">{{pod.ListPrice}}</strong></strike> <em ng-hide=" '{{pod.CurrentPrice}}'=='{{pod.ListPrice}}'">{{pod.CurrentPrice}}{{pod.IcannForCurrent}}</em></p>                 
+                    <p id ="btnText"><a class="btn btn-primary btn-block btn-lg btn--push-down" style="white-space: pre-wrap;" href="{{pod.ButtonURL}}" ng-show="'{{pod.LaunchPhase}}'=='28'" >[@L[cds.sales/gd/domains/domain-name-search:Register]@L]</a>
+                    <p id ="btnText"><a class="btn btn-primary btn-block btn-lg btn--push-down" style="white-space: pre-wrap;" href="{{pod.ButtonURL}}" ng-hide="'{{pod.LaunchPhase}}'=='28'" >[@L[cds.sales/gd/domains/domain-name-search:PreRegister]@L]</a>
+                  </p>
+                    <p ng-bind-html="pod.PodText" ></p>
                 </div>
             </div>
+        </div>
+         </div>
         </section>
         <!-- End main-banner -->
 
@@ -187,8 +198,16 @@ comments: Why GD Updates for Google
                       </div>
                     </section>
                     <!-- End misc-banner -->
-                    <div id="btmPodContainer" class="row tab-content equal-height">
-
+                     <div id="btmPodContainer" class="tab-content equal-height">
+                      <div id="{{bpod.PodID}}" class="col-xs-4" style="height: 226px;" ng-repeat="bpod in podsDataBottom">
+                        <div class="grid-column has-badge pod-border">
+                          <span class="badge badge-important badge-upper-right">{{bpod.PodNewTag}}</span>
+                          <h2 id="tldData" ng-bind-html="bpod.PodTLD"><strong></strong></h2>                         
+                          <p ng-bind-html="bpod.PodText"></p>
+                          <p><a class="btn btn-bottom btn-primary btn-block btn-lg btn--push-down" href="{{bpod.ButtonURL}}">{{bpod.ButtonText}}</a></p>                         
+                        </div>
+                         <div class="pod-shadow"></div>
+                      </div>
                     </div>
                 </section>
             </div>
@@ -215,12 +234,18 @@ comments: Why GD Updates for Google
                                 <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:TldDotToday]@L]</span> <a data-ci="88759" href="[@T[link:<relative path="/tlds/today"></relative>]@T]" class="btn btn-primary list-item-button btn-new-width">[@L[cds.sales/gd/domains/domain-name-search:Register]@L]</a></li>
                                 ##endif
 
-                                ##if(ActiveLanguageAny([es-ar], [es-cl], [es-co], [es-es], [es-mx], [es-pe], [es-ve],[pt-pt],[pt-br]))
+                                ##if(ActiveLanguageAny([es-ar], [es-cl], [es-co], [es-es], [es-mx], [es-pe], [es-ve],[pt-pt],[pt-br],[es-us]))
                                 <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:TldDotTips]@L]</span> <a data-ci="89388" href="[@T[link:<relative path="/tlds/tips"></relative>]@T]" class="btn btn-primary list-item-button btn-new-width">[@L[cds.sales/gd/domains/domain-name-search:Register]@L]</a></li>
                                 ##else
                                 <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:TldDotSolutions]@L]</span> <a data-ci="91414" href="[@T[link:<relative path="/tlds/solutions"></relative>]@T]" class="btn btn-primary list-item-button btn-new-width">[@L[cds.sales/gd/domains/domain-name-search:Register]@L]</a></li>
                                 ##endif                             
-                                <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:TldDotGlobal]@L]</span> <a data-ci="92814" href="[@T[link:<relative path="/tlds/global"></relative>]@T]" class="btn btn-primary list-item-button btn-new-width">[@L[cds.sales/gd/domains/domain-name-search:Register]@L]</a></li>
+                                <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:TldDotGlobal]@L]</span> <a data-ci="92814" href="[@T[link:<relative path="/tlds/global"></relative>]@T]" class="btn btn-primary list-item-button btn-new-width">
+                                   ##if(tldPhaseActiveAny(Global,GA))
+                                [@L[cds.sales/gd/domains/domain-name-search:Register]@L]
+                                  ##else
+                                  [@L[cds.sales/gd/domains/domain-name-search:PreRegister]@L]
+                                 ##endif
+                                  </a></li>
                                 </ul>
                         </div>
                         <div class="col-xs-6" id="rightlist">
@@ -268,9 +293,9 @@ comments: Why GD Updates for Google
                 <div class="clearfix"></div>
                 </form>
                 <p>
-                    <a target="_blank" href="[@T[link:<external linktype='communityurl' path='help/article/420' secure='false'/>]@T]" class="color-base">[@L[cds.sales/gd/domains/domain-name-search:PrivateRegistrationLink1]@L]</a>
+                    <a target="_blank" href="[@T[link:<external linktype='communityurl' path='help/article/420'/>]@T]" class="color-base">[@L[cds.sales/gd/domains/domain-name-search:PrivateRegistrationLink1]@L]</a>
                     <span class="br"></span>
-                    <a href="[@T[link:<external linktype="DBPURL" path="popup/whoisexample.aspx" secure="false"><param name="ci" value="5165" /></external>]@T]" class="popup-url color-base">[@L[cds.sales/gd/domains/domain-name-search:PrivateRegistrationLink2]@L]</a>
+                    <a href="[@T[link:<external linktype="DBPURL" path="popup/whoisexample.aspx" ><param name="ci" value="5165" /></external>]@T]" class="popup-url color-base">[@L[cds.sales/gd/domains/domain-name-search:PrivateRegistrationLink2]@L]</a>
                 </p>
                                     </div>
                                     <div class="tab-pane tab-pane-do" id="protected-registration">
@@ -445,9 +470,7 @@ comments: Why GD Updates for Google
 {% endblock %}
 
 {% block footer %}
-   <script type="text/javascript">
-
-      $(document).ready(function () {
+   <script>
       var url;
        ##if(activeLanguageAny([en-in]))
         url='[@T[link:<relative path="~/api/package/config/domainlp_in"/>]@T]';
@@ -527,45 +550,17 @@ comments: Why GD Updates for Google
         url='[@T[link:<relative path="~/api/package/config/domainlp_pk"/>]@T]';
       ##else      
         url='[@T[link:<relative path="~/api/package/config/domainlp_us"/>]@T]';
-
       ##endif
-   $.ajax({
-         url:url,
-         dataType: "text",
-         success:"success"
-      }).then(function(response)
-      {
-        var data= $.parseJSON(response);
-
-        $(data.Pods).each(function(index, pod) {
-
-          $('#PodRow').append("<div class=\"col-xs-3\" id=\"PodCount_" + pod.PodId + "\" style=\"height: 290px;\" >");
-          $('#PodCount_' + pod.PodId).append("<div class=\"grid-column\" id=\"grid_" + pod.PodId + "\">");
-          $('#grid_' + pod.PodId).append("<div class=\"ico-wrapper\" id=\"icons_" + pod.PodId + "\"><i id=\"podIcon\" class=\"tldlogo "+pod.logoclass+"\"></i></div>");
-
-          var tldItem = pod.ProductPrice.split('-')
-          if(tldItem[2]>0){
-            $('#grid_' + pod.PodId).append('<p class=\"font-16\"><strong class="line-through">'+tldItem[3]+'</strong><em> '+tldItem[0]+'*</em></p>');
-          } else{
-            $('#grid_' + pod.PodId).append('<p class=\"font-16\"><em>'+tldItem[0]+'*</em></p>');
-          }
-          $('#grid_' + pod.PodId).append("<p><a class=\"btn btn-primary btn-block btn-lg btn--push-down\" style=\"white-space: pre-wrap;\" href='" + pod.ButtonURL + "'>"+pod.ButtonText+"</a></p>");
-          $('#grid_' + pod.PodId).append("<p> "+ pod.PodText +" </p>");
-       $('</div>');
-        });
-
-        $(data.BottomPods).each(function(index, bpod) {
-          $('#btmPodContainer').append("<div id=\"btmPods_" + bpod.PodID + "\" class=\"col-xs-4\" style=\"height: 226px;\">");
-            $('#btmPods_' + bpod.PodID).append("<div id=\"btmgrid_" + bpod.PodID + "\" class=\"grid-column has-badge pod-border\">");
-             $('#btmgrid_' + bpod.PodID).append("<span class=\"badge badge-important badge-upper-right\">"+bpod.PodNewTag+"</span>");
-             $('#btmgrid_' + bpod.PodID).append("<h2><strong>"+bpod.PodTLD+"</strong></h2>");
-             $('#btmgrid_' + bpod.PodID).append("<p> "+ bpod.PodText +" </p>");
-             $('#btmgrid_' + bpod.PodID).append("<p><a class=\"btn btn-bottom btn-primary btn-block btn-lg btn--push-down\" href='"+bpod.ButtonURL+"'>"+bpod.ButtonText+"</a></p>");
-             $('#btmPods_' + bpod.PodID).append("<div class=\"pod-shadow\"></div>");
-      });
-    });
-   });
-
+</script>
+    <script src="[@T[link:<javascriptroot />]@T]fos/angular/domains/angular.1.2.9.min.js" type="text/javascript"></script>
+    <script src="[@T[link:<javascriptroot />]@T]fos/sales/themes/scotty/domains/search/js/angular-sanitize.js" type="text/javascript"></script>
+    <script src="[@T[link:<javascriptroot />]@T]fos/sales/themes/scotty/domains/search/js/dns.js" type="text/javascript" ></script>  
+    <script src="[@T[link:<javascriptroot />]@T]fos/script/atlantis_jquery14.min.js" type="text/javascript"></script>
+    <script src="[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2" type="text/javascript"></script>
+    <script src="[@T[link:<javascriptroot />]@T]fos/201401/global/vendor/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="[@T[link:<javascriptroot />]@T]fos/201401/global/js/3.1.0/global-3.1.0.min.js" type="text/javascript" ></script>
+    <script src="[@T[link:<javascriptroot />]@T]fos/201401/global/js/3.1.0/global-3.1.0.min.js" type="text/javascript" ></script> 
+<script>
     $('.search-form').on('submit', function (e){
         e.preventDefault();
 

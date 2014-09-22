@@ -1,8 +1,8 @@
 ---
 location: localization/sales/gd/hosting/website-builder/en
-id:  53d68a57f778fc27484de4dd
-name: FOS-24432
-comments: Update SSL Cert disclaimer
+id:  541c57eaf778fc14545dc859
+name: FOS-27512
+comments: Free Email with WSB three way split Test
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="page-title" />
@@ -127,6 +127,8 @@ Ideal for small businesses
 <strong>300</strong> Business Themes
 <phrase key="business-email" />
 <strong>5</strong> <a class="simple-link websitebuilder-tooltip isToolTip" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Email account storage limited to the following: Business Plan comes with up to 5 Email Addresses and up to 500 MB of total storage; Business Plus Plan comes with up to 10 Email Addresses and up to 1 GB of total storage.">Business Email Addresses</a>
+<phrase key="business-email2" />
+<strong>2</strong> <a class="simple-link websitebuilder-tooltip isToolTip" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Email account storage limited to the following: Business Plan comes with up to 2 Email Addresses and up to 500 MB of total storage; Business Plus Plan comes with up to 5 Email Addresses and up to 1 GB of total storage.">Business Email Addresses</a>
 <phrase key="business-mobile" />
 <a class="simple-link websitebuilder-tooltip isToolTip" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Any site you create with Website Builder will automatically be converted to work beautifully on smartphones."><strong>Mobile</strong> Site</a>
 <phrase key="unlimited-title" />
@@ -147,6 +149,8 @@ For your growing business needs
 <strong>300</strong> Business Themes
 <phrase key="unlimited-email" />
 <strong>10</strong> <a class="simple-link websitebuilder-tooltip isToolTip" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Email account storage limited to the following: Business Plan comes with up to 5 Email Addresses and up to 500 MB of total storage; Business Plus Plan comes with up to 10 Email Addresses and up to 1 GB of total storage.">Business Email Addresses</a>
+<phrase key="unlimited-email2" />
+<strong>5</strong> <a class="simple-link websitebuilder-tooltip isToolTip" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Email account storage limited to the following: Business Plan comes with up to 2 Email Addresses and up to 500 MB of total storage; Business Plus Plan comes with up to 5 Email Addresses and up to 1 GB of total storage.">Business Email Addresses</a>
 <phrase key="unlimited-mobile" />
 <a class="simple-link websitebuilder-tooltip isToolTip" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Any site you create with Website Builder will automatically be converted to work beautifully on smartphones."><strong>Mobile</strong> Site</a>
 <phrase key="unlimited-seo" />

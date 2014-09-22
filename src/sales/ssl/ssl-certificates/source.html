@@ -1,10 +1,10 @@
 ---
 location: sales/ssl/ssl-certificates.aspx
 url: http://www.dev-godaddy.com/ssl/ssl-certificates.aspx
-id: 54074c47f778fc2be8f75b40
-name: GCE-25816
+id: 541b0934f778fc1620a8315d
+name: GCE-24539
 assetPath: false
-comments: Add Flag/Violator to SSL LP to Highlight Google Feature
+comments: BazaarVoice reviews not loading IE8
 ---
 
 {% extends 'layouts/base.html' %}
@@ -44,10 +44,15 @@ comments: Add Flag/Violator to SSL LP to Highlight Google Feature
     $(function () {
       var hash = window.location.hash;
       hash && $('a[href="' + hash + '"]').tab('show');
-      window.addEventListener('hashchange', function() {
+      if(window.addEventListener){
+        window.addEventListener('hashchange', function() {
         var changedHash = window.location.hash;
         changedHash && $('a[href="' + changedHash + '"]').tab('show');
-      }, false);
+      }, false);}
+    else{window.attachEvent('hashchange', function() {
+        var changedHash = window.location.hash;
+        changedHash && $('a[href="' + changedHash + '"]').tab('show');
+      }, false);}      
       $('.equal-height').setColumnsEqualHeight();
       $('.select-box').setSelectBox();
       $('.tab-link').tabLinks();

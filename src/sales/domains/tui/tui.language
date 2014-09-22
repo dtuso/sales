@@ -59,7 +59,7 @@ The registry has reserved these <span style="font-weight:bold">.uk</span> domain
 Names removed:
 <phrase key="gtldTui-searchBtn" />
 Search Again
-<phrase key="gtldTui-applyToAllLabelText" comment="this text is used in a script, please html encode any single quotes" />
+<phrase key="gtldTui-applyToAllLabelText" comment="this text is used in a script, please html encode any single quotes. The empty span will dynamically have the domain added and should be positioned accordingly in translation" />
 We need some more information for your <span class="tld"></span> registration.
-<phrase key="gtldTui-needMoreInformationText" comment="this text is used in a script, please html encode any single quotes" />
+<phrase key="gtldTui-needMoreInformationText" comment="this text is used in a script, please html encode any single quotes. The empty span will dynamically have the domain added and should be positioned accordingly in translation" />
 Apply this to all <span class="tld"></span> domain names in this order.

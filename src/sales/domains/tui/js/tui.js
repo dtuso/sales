@@ -122,7 +122,7 @@ if (!domains.controls.cds_gtld_registration) {
         url = appendQueryString(url, 'regapptoken=' + encodeURIComponent(TUI.AppToken));
       } else if (actionType == actionsEnum.validate) {
         url = settings.apiUrlValidate.replace('{0}', encodeURIComponent(currentDomain));
-        url = appendQueryString(url, serializeCurrentDomain());
+        url = appendQueryString(url, serializeCurrentDomain() + "&AllDomainsCheckbox=" + $("#AllDomainsCheckbox").val());
       }
 
       $.getJSON(url, handleTuiInfo)
@@ -147,7 +147,8 @@ if (!domains.controls.cds_gtld_registration) {
       data.DomainName = 't9standvalidate.PREMIUMCLAIMSGD';
       data.FormJson = testJson;
       data.FormHtml = testHtml;
-      data.FormType = "claims";*/
+      data.FormType = "claims";
+      data.AllDomainsCheckbox = '';*/
 
       // check for redirect
       if (data.NextStepUrl) {
@@ -209,7 +210,7 @@ if (!domains.controls.cds_gtld_registration) {
 
         if (data.FormJson && data.FormJson != null) {
           settings.$headerArea.find(':not(.error)').hide();
-          parseDPPJson(data.FormJson);
+          parseDPPJson(data.FormJson, data.AllDomainsCheckbox);
           return;
         }
       } else if (data.FormType == "trustee") {
@@ -497,9 +498,10 @@ if (!domains.controls.cds_gtld_registration) {
         }
       }
 
-    function parseDPPJson(data) {
+    function parseDPPJson(data, allDomainsCheckbox) {
       var parsedData = JSON.parse(data);
       var html = '';
+      var currentFormTld = '';
 
       if (parsedData && parsedData !== undefined && parsedData != null) {
         var newSelect = false;
@@ -511,41 +513,64 @@ if (!domains.controls.cds_gtld_registration) {
         }
 
         $.each(FormFieldsByDomain, function(dIndex, domain) {
+          var entireDomainName = dIndex;
           currentDomainName = "";
           currentDomainTLD = "";
 
           if (dIndex.indexOf('.') > -1) {
             currentDomainName = dIndex.substr(0, dIndex.indexOf('.'));
             currentDomainTLD = dIndex.substr((dIndex.indexOf('.') + 1), dIndex.length);
+            currentFormTld = currentDomainTLD;
           } else {
             currentDomainName = dIndex;
           }
 
           if (parsedData.FormFieldsByDomain) {
-          html += '<form id="form' + currentDomainName + '" class=' + parsedData.FormItems.formName.toLowerCase() + '>';
+          html += '<form id="form' + currentDomainName + '" class=' + parsedData.FormItems.FormName.toLowerCase() + '>';
           } else {
           html += '<form id="form' + currentDomainName + '">';
           }
 
-          if (parsedData.FormItems && parsedData.FormItems.formLabel) {
-            html += "<h1>";
-            html += parsedData.FormItems.formLabel;
-            html += "</h1>";
+          html += "<h1>";
+          if (parsedData.FormItems && parsedData.FormItems.FormLabel && parsedData.FormItems.ValidationLevel == "domain") {
+            html += entireDomainName + " " + parsedData.FormItems.FormLabel;
+          }
+          else if (parsedData.FormItems && parsedData.FormItems.FormLabel) {
+            html += parsedData.FormItems.FormLabel;
           } else {
-            html += '<h1>';
             html += "." + currentDomainTLD.toUpperCase() + " " + settings.registrationInformationText;
-            html += '</h1>';
+          }
+          html += '</h1>';
+
+          if (parsedData.FormItems && parsedData.FormItems.ValidationLevel == "domain") {
+
+            var checked = '';
+            var checkedClass = '';
+            if (allDomainsCheckbox == "1") {
+              checked = 'checked="checked"';
+              checkedClass = "checked";
+            }
+
+            if (allDomainsCheckbox != "0") {
+              html += '<div id="applyToAll"><p>';
+              html += settings.needMoreInformationText;
+              html += '</p><div><label class="toggle">';
+              html += '<input type="checkbox" class="toggle" id="AllDomainsCheckbox" name="AllDomainsCheckbox" value="1" ' + checked + ' /><div class="toggle ' + checkedClass + '">';
+              html += '</div><label for="AllDomainsCheckbox">';
+              html += settings.applyToAllLabelText;
+              html += '</label></label></div></div>';
+            }
           }
 
-          if (parsedData.FormItems && parsedData.FormItems.formDescription) {
+          if (parsedData.FormItems && parsedData.FormItems.FormDescription) {
             html += "<div class='headingText'>";
-            html += parsedData.FormItems.formDescription;
+            html += parsedData.FormItems.FormDescription;
             html += "</div>";
           }
 
-          if (parsedData.FormItems && parsedData.FormItems.fieldsLabel) {
+          if (parsedData.FormItems && parsedData.FormItems.FieldsLabel) {
             html += "<div class='headingText'>";
-            html += parsedData.FormItems.fieldsLabel;
+            html += parsedData.FormItems.FieldsLabel;
             html += "</div>";
           }   
           
@@ -599,7 +624,7 @@ if (!domains.controls.cds_gtld_registration) {
                 $.each(item.ItemCollection, function(icIndex, option) {
                   var selected = "";
                   if (item.DefaultValue == option.ItemId) {
-                    selected = "selected";
+                    selected = 'selected';
                   }
                   text += '<option value="' + option.ItemId + '"' + selected + '>' + option.ItemLabel + '</option>';
                 });
@@ -627,10 +652,12 @@ if (!domains.controls.cds_gtld_registration) {
                 text += '<h2>' + item.LabelText + '</h2>';
                 $.each(item.ItemCollection, function (icIndex, option) {
                   var checked = "";
+                  var doublecheck = "";
                   if (item.DefaultValue && item.DefaultValue == option.ItemId) {
                     checked = "checked";
+                    doublecheck = 'checked="checked"';
                   }
-                  text += '<div><label><input type="radio" id="' + item.Name + '_' + option.ItemId + '" name="' + item.Name + '" value="' + option.ItemId + '" class="radio" />';
+                  text += '<div><label><input type="radio" id="' + item.Name + '_' + option.ItemId + '" name="' + item.Name + '" value="' + option.ItemId + '" class="radio"' + doublecheck + '  />';
                   text += '<span class = "radio '+checked+'"/><h3 for="' + item.Name + '_' + option.ItemId + '">' + option.ItemLabel + '</h3></label></div>';
                 });
                 text += '</div>';
@@ -656,6 +683,7 @@ if (!domains.controls.cds_gtld_registration) {
         });
 
         settings.$dppArea.html(html);
+        $('.tld').text('.' + currentFormTld);
         doSelectBoxChange();
         settings.$dppArea.show();
 
@@ -797,10 +825,9 @@ if (!domains.controls.cds_gtld_registration) {
 
       $.each(form.find('input[type="checkbox"]'), function(i, field) {
         var $field = $(field);
-
-        if (!$field.is(':checked')) {
-          valid = false;
-          if (showInvalid) $field.next('div.toggle').addClass('invalid');
+        if (!$field.is(':checked') && $field.is(':required')) {
+            valid = false;
+            if (showInvalid) $field.next('div.toggle').addClass('invalid');
         }
       });
 
