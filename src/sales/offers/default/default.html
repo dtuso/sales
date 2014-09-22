@@ -9,7 +9,6 @@ comments: TMS version based on key not isc
 {% block metahead %} 
 {% parent %} 
   <style>
-    
     /* Page Global CSS -- changes will effect all campaigns */
     html body#offers{background:#fff;line-height:1;font-size:14px;font-family:HelveticaNeue-Light,"Helvetica Neue Light","Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;font-weight:300}
     .condensed{font-family:HelveticaNeue-CondensedBold,'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:700}
@@ -33,25 +32,28 @@ comments: TMS version based on key not isc
     .flt-btn-orng:hover{background:#ffa133;border-color:#ff7e12}
     .flt-btn-orng:active{background:#f06d00;border-color:#f06d00}
     a.flt-btn-orng{color:#fff;text-decoration:none}
-    
+    .goldBanner{display:none;}
   </style>
-
-
 {% endblock %} 
-{% block body %}
 
 
-[@P[tmscontent:<data appproduct="lp" interactionpoint="advertising"><default app="tms" location="lp/advertising/default/default_template"/></data>]@P]
 
 
-{% endblock %} 
+
+{% block body -%}
+  [@P[tmscontent:<data appproduct="lp" interactionpoint="advertising"><default app="tms" location="lp/advertising/default/default_template"/></data>]@P]
+{%- endblock %} 
+
+
+
+
+
+
 
 {% block footer %}
   {#<script src="[@T[link:<javascriptroot />]@T]fos/lib/solazy/jquery.solazy.1.2.1.min.js" type="text/javascript" ></script> #}
   <script>
-
     $(document).ready(function () {
- 
       // move dislcaimes to the modal content
       $(".modal-body").append($("#tms-modal-body"));
       
