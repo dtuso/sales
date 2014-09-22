@@ -1,11 +1,16 @@
----
-location: sales/offers/segments/free-domain-search
-id: 53dfbab8f778fc33bc708f44
-name: FOS-25042
----
+<!-- Domain Search Block Start
+Use:
+offersCodes.plan
+offersCodes.itc
+offersCodes.ci.apiAddCi
+offersCodes.ci.apiDomainAddToCart
+offersCodes.ci.apiremovedomain
+offersCodes.ci.domainSearchSubmit
+ -->
 <atlantis:webstash type="css">
   <style>
-    #domainRow{background-color:#fff;padding:60px 0 30px;min-height:360px}
+    /* Domain Search CSS Start  */
+    #domainRow {background-color:#fff;padding:60px 0 30px;min-height:360px}
     #domainRow h1{color:#333;font-size:60px;font-weight:100;line-height:1.3em}
     #domainRow h1 strong{font-size:70px;font-weight:700!important;display:block}
     #domainRow h1 strong em{color:#ff8a00;font-style:normal}
@@ -49,14 +54,31 @@ name: FOS-25042
     .domain-arrow{cursor:pointer;float:left;font-size:1px;height:30px;margin:2px 2px 2px 0;min-width:31px;padding:0;position:relative}
     .domain-search .g-btn-sec{border-radius:0}
     .domain-arrow span{border-color:#6B6B6B transparent transparent;border-style:solid;border-width:5px 5px 0;display:block;height:0;width:0;position:absolute;top:22px;left:7px}
-
+    /* Domain Search CSS End  */
   </style>
 </atlantis:webstash>
 
+
+
+
+
+
+<section class="main-banner main-banner-offers" id="domainRow">
+        <div class="l-main-container container main-banner-content">
+
+          <h1 class="main-banner-subtitle alt-title-[@D[TMSMessageTag]@D]">
+            [@L[cds.tms/lp/advertising/[@D[TMSMessageName]@D]:headline-[@D[TMSMessageTag]@D]]@L]
+          </h1>
+          
+          
+      
+
+
+
+
+
 <div id="freeDomain">
   <div class="columns">
-  
-
   <div class="column-right">
     <form name="domaincheck" method="get" action="[@T[link:<relative path='domains/actions/json/domainavailabilitycheck.aspx'></relative>]@T]" id="domainSearch" class="highlight search-form">
       <input type="hidden" name="targetdivid" value="x" />
@@ -179,11 +201,13 @@ name: FOS-25042
   </div>
 </div>
 </div>
-
+  </div>
+</section>
 
 
 <atlantis:webstash type="js">
   <script>
+  /* Domain Search JS Start  */
     $.ajaxSetup({cache:false});
     var nextStepUrl;
     
@@ -481,6 +505,8 @@ name: FOS-25042
             return false;
         });
     });
-
+/* Domain Search JS End  */
   </script>
 </atlantis:webstash>
+
+<!-- Domain Search Block End -->

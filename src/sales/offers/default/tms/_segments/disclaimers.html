@@ -1,15 +1,13 @@
----
-location: sales/offers/segments/disclaimers
-id: 53dfbab8f778fc33bc708f45
-name: FOS-25042
----
+<!-- Disclaimers Block Start -->
 <atlantis:webstash type="css">
   <style>
+    /* disclaimers css start */
     .modal-title{font-size:24px}
     .modal-dialog{width: 600px}
     #disclaimers{font-size:14px;margin:0 auto;line-height:14px;width:1000px}
     #disclaimers a,#disclaimers a:link,#disclaimers a:visited{color:#333;text-decoration:underline}
     #disclaimers a:active,#disclaimers a:hover{color:#7db701}
+    /* disclaimers end */
   </style>
 </atlantis:webstash>
 
@@ -33,8 +31,8 @@ name: FOS-25042
         <strong>[@L[cds.sales/offers/default:disclaimer-modal-title]@L]</strong>
         </h4>
       </div>
-      {#
       <div class="modal-body">
+      {#
         ##if(countrySiteAny(uk) || isManager())
         <p class="tms-hide tms-disclaimer-year">[@L[cds.sales/offers/default:disclaimer-2-year-uk]@L]</p>
         <p class="tms-hide tms-disclaimer-month">[@L[cds.sales/offers/default:disclaimer-4-month-uk]@L]</p>
@@ -42,9 +40,9 @@ name: FOS-25042
         <p class="tms-hide tms-disclaimer-month">[@L[cds.sales/offers/default:disclaimer-3-month]@L]</p>
         <p class="tms-hide tms-disclaimer-year">[@L[cds.sales/offers/default:disclaimer-1-year]@L]</p>
         ##endif
-      </div>
       #}
+      </div>
     </div>
   </div>
 </div>
-</div>
+<!-- Disclaimers Block End -->
