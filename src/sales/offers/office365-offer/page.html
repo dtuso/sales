@@ -1,0 +1,1259 @@
+---
+location: sales/offers/online-business.aspx
+id: 5421cf90f778fc2490ac4dd2
+name: GCE-27089
+comments: Refactor search widget and better css for lang formatting
+url: http://www.dev-godaddy.com/offers/online-business.aspx
+assetPath: false
+---
+
+{% extends 'sales/offers/default/layouts/base-follow-ok.html' %} 
+
+{% block metahead %}
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="[@L[cds.sales/offers/online-business:twitter-site]@L]" />
+  <meta name="twitter:title" content="[@L[cds.sales/offers/online-business:twitter-title]@L]" />
+  <meta name="twitter:description" content="[@L[cds.sales/offers/online-business:twitter-description]@L]" />
+  <meta name="twitter:image:src" content="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/online-business/img/og_got_1200x630.jpg" />
+  {% parent %}
+
+  <!-- css-elevate-target -->  
+  <style>
+    
+    /* Page Global CSS -- changes will effect all campaigns */
+    html body#offers{background:#fff;line-height:1.4em;font-size:14px;font-family:HelveticaNeue-Light,"Helvetica Neue Light","Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;font-weight:300}
+    .condensed{font-family:HelveticaNeue-CondensedBold,'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:700}
+    .loading{background:url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/online-business/img/ajax-loader_lg.gif) no-repeat;content:"";height:35px;margin:2px 12px;width:35px;display:none;}
+    .disabled{pointer-events:none;cursor:not-allowed;opacity:.25;filter:alpha(opacity=25);-webkit-box-shadow:none;box-shadow:none}
+    .offers-sprite{background:url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/online-business/img/offers_sprite.png) scroll no-repeat}
+    .icon-delete{background-position:-693px -21px}
+    .icon-check{background-position:-693px 0}
+    .icons{display:block;width:20px;height:20px;float:left;position:relative;right:5px;top:1px}
+
+    .tms-hide{display:none;}
+
+    a:link,a:visited{text-decoration:underline;color:#03c}
+    .clear{zoom:1}
+    .clear:after{content:"";display:table;clear:both}
+    .flt-btn-grn{background:#70ac00;border:0;border-bottom:3px solid #5a8c00;color:#fff;cursor:pointer;display:inline-block;font-size:14px;line-height:14px;padding:11px 23px 8px;text-align:center}
+    .flt-btn-grn:hover{background:#97c534;border-color:#78aa17}
+    .flt-btn-grn:active{background:#5a8c00;border-color:#5a8c00}
+    a.flt-btn-grn{color:#fff;text-decoration:none}
+    .flt-btn-orng{background:#ff8400;border:0;border-bottom:3px solid #f06d00;color:#fff;cursor:pointer;display:inline-block;font-size:14px;line-height:14px;padding:13px 18px 9px;text-align:center}
+    .flt-btn-orng:hover{background:#ffa133;border-color:#ff7e12}
+    .flt-btn-orng:active{background:#f06d00;border-color:#f06d00}
+    a.flt-btn-orng{color:#fff;text-decoration:none}
+  
+    .price-hide {visibility:hidden;}
+    
+    .price.price-show,
+    .original-price.price-show {display:inline;word-wrap:break-word;}
+    html[lang*=en] .price.price-show .decim{display:none}
+    
+    .modal-title{font-size:24px}
+    .modal-dialog{width: 600px}
+    #disclaimers{font-size:14px;margin:20px auto 0;line-height:14px;width:1000px}
+    #disclaimers a,#disclaimers a:link,#disclaimers a:visited{color:#333;text-decoration:underline}
+    #disclaimers a:active,#disclaimers a:hover{color:#7db701}
+    
+    .g-toolTip {
+      border-bottom: 1px dotted #333;
+      cursor: pointer;
+      display: inline;
+      position: relative;
+    }
+    .g-toolTip:hover span.g-toolTip-tip {
+      display: block;
+    }
+    .g-toolTip span.g-toolTip-tip {
+      background: none repeat scroll 0 0 #262626;
+      color: #fff;
+      display: none;
+      font-size: 14px;
+      line-height: 22px;
+      padding: 8px;
+      position: absolute;
+      right: -225px;
+      text-align: left;
+      top: 11px;
+      width: 200px;
+      z-index: 3;
+    }
+    .g-toolTip span.g-toolTip-tip:after {
+      border-bottom: 7px solid rgba(0, 0, 0, 0);
+      border-right: 12px solid #262626;
+      border-top: 0 solid rgba(0, 0, 0, 0);
+      content: "";
+      height: 0;
+      left: -10px;
+      position: absolute;
+      top: 0;
+      width: 0;
+      z-index: 3;
+    }
+    .g-toolTip span.g-toolTip-tip.left {
+      left: -215px;
+    }
+    .g-toolTip span.g-toolTip-tip.left:after {
+      border-left: 12px solid #262626;
+      border-right: 0 none;
+      left: 200px;
+    }    
+  </style>
+
+{% endblock %}
+{% block body %}
+<!-- start got-top-banner segment -->
+<atlantis:webstash type="css">
+  <style>
+    #domainRow {background-color: #eee;}
+    #domainRow .main-banner-content {text-align:left;}
+    #domainRow h1.main-banner-title { margin:16px 0;font-size:48px;color:#333;font-weight:300;}
+    #domainRow h1.main-banner-title span {background-color:gold; padding:8px;letter-spacing: -0.03em;}
+    #domainRow h3.main-banner-subtitle {text-align:left; font-size:60px;color:#333;}
+    #domainRow p.top-summary {margin:20px 0 0;text-align:left;font-size:28px;font-weight:600;}
+    
+    #domain-search-div .find-a-domain 
+    {font-size:48px;margin:30px 0 40px;line-height:1.35em;} 
+    #domain-search-div .search-result-is-available,
+    #domain-search-div .search-result-not-available,
+    #domain-search-div .search-result-invalid
+    {font-size:48px;margin:30px 0 30px;line-height:1.00em;word-wrap:break-word;}
+    
+    #domain-search-div .search-result-is-available {text-align:center;}
+    
+    #domain-search-div .add-domain-btn {font-size:24px;padding:18px 36px;font-weight:400}
+    
+
+    .got-slider-wrapper {overflow:hidden; width:1000px; padding-bottom:40px; position:relative;}
+    #domainRow .got-slider-wrapper,#domainRow .got-slide {height:400px;}
+    #get-started .got-slider-wrapper,#get-started .got-slide {height:505px;}
+    .got-slides {width:3000px;position:absolute;left:0px;}    
+    .got-slide {width:1000px;float:left;overflow-x:hidden;} 
+    html[lang*=en] #domainRow .got-slider-wrapper,html[lang*=en] #domainRow .got-slide {height:350px !important;}
+    
+    .top-banner-product-col.col-get-started {}
+    .top-package-price {text-decoration:strike;font-size:48px;font-weight:600;line-height:1.4em;}
+    .top-package-price em {color: #ff8a00;}
+    .top-without-package-price {text-decoration:line-through;margin-top:10px;font-size:26px;font-weight:300;line-height:1.4em;}
+    .top-renewal-disclaimer {margin-top:10px;font-size:14px;font-weight:300;}
+    .get-started-btn {padding:0 53px;margin:0 auto;display:inline-block;}
+
+    #offers div.got-slide-2 div.find-a-domain, 
+    #offers div.got-slide-2 div.start-here 
+    {display:block;}
+
+    #offers div.got-slide-2 div.add-domain-btn-div,
+    #offers div.got-slide-2 div.search-result-is-available,
+    #offers div.got-slide-2 div.search-result-not-available,
+    #offers div.got-slide-2 div.search-result-invalid,
+    #offers div.got-slide-2 div.search-again,
+    #offers div.got-slide-2 div.try-again
+    {display:none;}
+
+    #offers div.got-slide-3 div.got-available-div div.find-a-domain, 
+    #offers div.got-slide-3 div.got-unavailable-div div.find-a-domain 
+    {display:none;}
+ 
+    #offers div.got-slide-3 div.got-available-div div.add-domain-btn-div,
+    #offers div.got-slide-3 div.got-available-div div.search-result-is-available,
+    #offers div.got-slide-3 div.got-available-div div.search-again
+    {display:block;}
+
+    #offers div.got-slide-3 div.got-available-div div.search-result-not-available,
+    #offers div.got-slide-3 div.got-available-div div.search-result-invalid,
+    #offers div.got-slide-3 div.got-available-div div.search-area-wrapper
+    {display:none;}
+    
+    #offers div.got-slide-3 div.got-unavailable-div div.search-result-not-available,
+    #offers div.got-slide-3 div.got-unavailable-div div.try-again
+    {display:block;}
+
+    #offers div.got-slide-3 div.got-unavailable-div div.search-result-is-available,
+    #offers div.got-slide-3 div.got-unavailable-div div.search-result-invalid,
+    #offers div.got-slide-3 div.got-unavailable-div div.add-domain-btn-div,
+    #offers div.got-slide-3 div.got-unavailable-div div.search-again,
+    #offers div.got-slide-3 div.got-unavailable-div div.start-here
+    {display:none;}
+    
+    #offers div.got-slide-3 div.got-invalid-div div.search-result-invalid,
+    #offers div.got-slide-3 div.got-invalid-div div.try-again
+    {display:block;}
+
+    #offers div.got-slide-3 div.got-invalid-div div.search-result-not-available,
+    #offers div.got-slide-3 div.got-invalid-div div.search-result-is-available,
+    #offers div.got-slide-3 div.got-invalid-div div.add-domain-btn-div,
+    #offers div.got-slide-3 div.got-invalid-div div.search-again,
+    #offers div.got-slide-3 div.got-invalid-div div.start-here,
+    #offers div.got-slide-3 div.got-invalid-div div.find-a-domain
+    {display:none;}
+
+    #domain-search-div .search-again {
+      text-align: center;
+      color: #70ac00;
+      cursor:pointer;
+      margin-top:20px;
+    }
+    #domain-search-div .search-again:hover {
+      text-decoration: underline;      
+    }
+   .add-domain-btn-div {text-align: center;}
+    
+    .got-slide-3 .got-available-div .add-domain-loading{float:none;margin: 14px auto;}
+    
+    .top-banner-product-image {float:left;height:128px;background: url('[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/online-business/img/green-icons-large-sprite.png') no-repeat transparent;}
+    .top-banner-product-image.domain {background-position: 0px 0px;width:151px;}    
+    .top-banner-product-image.wsb  {background-position: -219px 0px;width:138px;}    
+    .top-banner-product-image.email {background-position: -437px 0px;width:141px;}
+    .top-banner-product-symbols {float:left;width:30px;height:30px;margin:50px 0 0 10px;background: url('[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/online-business/img/plus-minus-sprite.png') no-repeat transparent;}
+    .top-banner-product-symbols.addition {background-position: 0px 0px;}
+    .top-banner-product-symbols.equals {background-position: -47px 0px;}
+    #domainRow .product-name {width:151px;text-align:center;margin-top:25px;text-transform: uppercase;font-size:16px;}
+
+    .top-banner-product-col {float:left;}
+    .top-banner-product-col.col-domain {}
+    .top-banner-product-col.col-domain .addition {margin-left:10px;}
+    .top-banner-product-col.col-wsb {margin-left:32px;}
+    .top-banner-product-col.col-wsb .addition {margin-left:19px;}
+    .top-banner-product-col.col-email {margin-left:32px;}
+    .top-banner-product-col.col-email .equals {margin-left:17px;}
+    .top-banner-product-col.col-get-started {margin-left:40px;width:320px;}
+    .product-icon.email {font-size:13px;}
+    #domainRow .product-icon.email {margin-left:-24px; margin-top: 13px;width:199px;text-align:center;}
+    a.simple-link {color: #333;text-decoration:underline;}
+    a.simple-link:hover {color:#7db701;}
+
+    .search-area-wrapper{min-height:65px;}
+    .search-area-wrapper .tooltips-area {float:left;}
+    .search-area-wrapper .input-area,
+    .search-area-wrapper .dropdownlist-area,
+    .search-area-wrapper .search-button-area  
+    {min-height:65px;float:left;}
+    
+    .search-area-wrapper .tooltips-area { max-width:115px;font-size:16px;margin-right:27px;text-align:center;position:relative;word-wrap:break-word;}
+    html[lang*=en] .search-area-wrapper .tooltips-area {font-size:20px;}
+    .search-area-wrapper .tooltips-area:after {content:"";border-width:10px 0 10px 17px;border-style:solid;border-color:transparent transparent transparent #fc0;position:absolute;right:-17px;top:34%}
+    .search-area-wrapper .tooltips-area .highlight-tooltip {background-color:#fc0;color:#630;text-transform:uppercase;text-align:center;padding:13px 5px 12px;}
+    
+    .search-area-wrapper .input-area {background-color:#fc0;width:400px;font-size:24px;font-weight:300;padding: 8px 0 8px 8px;}            
+    .search-area-wrapper .input-area .search-background {background-color:#fff;position:relative;border:1px solid #a4a4a4;height:49px;}
+    .search-area-wrapper .input-area .search-input-label {color:#333;display:block;outline:medium none;overflow:hidden;width:385px;word-wrap: break-word;position:absolute;left:5px;top:13px;z-index:1;height:30px;}
+    .search-area-wrapper .input-area .search-input {width:385px;height:32px;line-height:32px;color:#333;background-color:transparent;border:0 none;padding:0;outline: medium none;position:absolute;left:5px;top:7px;z-index:2;}
+    
+    .search-area-wrapper .dropdownlist-area {background-color: #fc0;padding:8px 8px 8px 0;}
+    .search-area-wrapper .dropdownlist-area .tld-input {background-color: #fff;border-right:1px solid #a4a4a4;border-top:1px solid #a4a4a4;border-bottom:1px solid #a4a4a4;float:none;font-size:24px;height:49px;width:144px;outline:0 none;position:relative;z-index:2;}
+    .search-area-wrapper .dropdownlist-area .tld-input-selected {position:absolute;top:0px;left:0px;padding:13px 0 15px 9px;} 
+    .search-area-wrapper .dropdownlist-area .tld-input.droplist-open {overflow:visible}            
+    .search-area-wrapper .dropdownlist-area .tld-input > ul {padding:0;list-style:none;cursor:pointer;margin:-1px;border:1px solid #bcbcbc;background-color:#fff;font-size:14px;position:absolute;overflow:hidden;top:-9999em;width:112px;z-index:3}
+    .search-area-wrapper .dropdownlist-area .tld-input.droplist-open > ul {width:145px;top:48px;z-index:2;max-height:120px;overflow:auto;}
+    .search-area-wrapper .dropdownlist-area .tld-input.droplist-open > ul > li{padding:5px 10px}
+    .search-area-wrapper .dropdownlist-area .tld-input.droplist-open > ul > li:hover{background:#f5f5f5}
+    .search-area-wrapper .dropdownlist-area .tld-input.droplist-open > ul > li.selected,
+    .search-area-wrapper .dropdownlist-area .tld-input.droplist-open > ul > li.selected:hover {background:#e4efc7}
+    .search-area-wrapper .dropdownlist-area .ddl-drop-arrow {border-radius:0;outline:medium none;cursor:pointer;font-size:1px;height:30px;margin:2px 2px 2px 0;min-width:31px;padding:0;position:absolute;right:0px;}
+    .search-area-wrapper .dropdownlist-area .ddl-drop-arrow span {border-color:#6B6B6B transparent transparent;border-style:solid;border-width:5px 5px 0;display:block;height:0;width:0;position:absolute;top:22px;left:7px}  
+    
+    
+    .search-area-wrapper .search-button-area {}
+    .search-area-wrapper .search-button-area .domain-search-btn {max-width:180px;min-height:65px;word-wrap:break-word;font-size:24px;padding:24px 36px 0;font-weight:400;}
+
+    .search-domain-loading {margin:10px auto 0;}
+
+
+
+  </style>
+  <!--[if IE 7]> 
+  <style>
+    .search-area-wrapper {height:54px;}
+    .search-area-wrapper .search-button-area .domain-search-btn {height:39px;padding:24px 36px 4px}
+    .search-area-wrapper .dropdownlist-area .tld-input-selected {padding: 9px 0 15px 9px;} 
+    .search-area-wrapper .tooltips-area {float:left;}
+
+    .search-area-wrapper .input-area,
+    .search-area-wrapper .dropdownlist-area,
+    .search-area-wrapper .search-button-area {height:54px;float:left;min-height:0px;}
+  </style>   
+  <![endif]-->
+  
+</atlantis:webstash>
+  
+
+<section class="main-banner main-banner-offers" id="domainRow">
+  <div class="l-main-container container main-banner-content got-slider-wrapper" >
+    <div class="row got-slides">
+      <div class="got-slide got-slide-1">
+        <div class="row">
+          <h1 class="main-banner-title">[@L[cds.sales/offers/online-business:top-banner-headline]@L]</h1>
+        </div>
+        <div class="clearfix">
+          <div class="top-banner-product-col col-domain">
+            <div class="clearfix">
+              <div class="top-banner-product-image domain"></div>                  
+              <div class="top-banner-product-symbols addition"></div>
+            </div>
+            <div class="product-name condensed domain">[@L[cds.sales/offers/online-business:top-banner-image-domain]@L]</div>
+          </div>
+          <div class="top-banner-product-col col-wsb">
+            <div class="clearfix">
+              <div class="top-banner-product-image wsb"></div>
+              <div class="top-banner-product-symbols addition"></div>
+            </div>
+            <div class="product-name condensed wsb">[@L[cds.sales/offers/online-business:top-banner-image-wsb]@L]</div>                
+          </div>
+          <div class="top-banner-product-col col-email">
+            <div class="clearfix">
+              <div class="top-banner-product-image email"></div>
+              <div class="top-banner-product-symbols equals"></div>
+            </div>
+            <div class="product-name condensed email">[@L[cds.sales/offers/online-business:top-banner-image-email]@L]</div>
+            <div class="product-icon email">[@L[cds.sales/offers/online-business:powered-by]@L]</div>
+          </div>
+          <div class="top-banner-product-col col-get-started text-center"> 
+            <div class="top-package-price price-hide">[@L[cds.sales/offers/online-business:top-banner-monthly-price]@L]</div>
+            <div class="get-started-btn btn btn-warning cta-medium" data-ci="getStartedBtn">[@L[cds.sales/offers/online-business:get-started-banner-get-started]@L]</div>  
+            <div class="top-without-package-price price-hide">
+              <span class="g-toolTip">
+                [@L[cds.sales/offers/online-business:get-started-banner-up-to-price]@L]
+                <span class="g-toolTip-tip left">[@L[cds.sales/offers/online-business:bundle-renewal-com]@L]</span>              
+              </span>
+            </div> 
+            <div class="top-renewal-disclaimer">
+              [@L[cds.sales/offers/online-business:renewal-price-disclaimer]@L]
+              <a class="simple-link" href="#" data-toggle="modal" data-target="#myModal" data-ci="disclaimerLink">[@L[cds.sales/offers/online-business:see-offer-details]@L]</a>              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="got-slide got-slide-2">
+        <div id="domain-search-div">          
+          
+          <div class="find-a-domain">[@L[cds.sales/offers/online-business:search-title]@L]</div>
+          <div class="search-result-is-available">[@L[cds.sales/offers/online-business:search-is-available]@L]</div>
+          <div class="add-domain-btn-div">
+            <div class="add-domain-btn flt-btn-orng" data-ci="addDomainBtn">[@L[cds.sales/offers/online-business:checkout-now]@L]</div>
+          </div>
+          <div class="loading add-domain-loading"></div>
+          <div class="search-again">[@L[cds.sales/offers/online-business:search-again]@L]</div>
+          <div class="search-result-not-available">[@L[cds.sales/offers/online-business:search-not-available]@L]</div>
+          <div class="search-result-invalid">[@L[cds.sales/offers/online-business:domain-is-invalid]@L]</div>
+
+          <form name="domaincheck" method="get" action="[@T[link:<relative path='domains/actions/json/domainavailabilitycheck.aspx'></relative>]@T]" class="highlight search-form">
+            <input type="hidden" name="targetdivid" value="x" />
+            <input type="hidden" name="source" value="domaincheck" />
+            <input type="hidden" name="token"/>
+            <input type="hidden" name="domaintoadd"/>
+            <input type="hidden" name="formSubmitButton" value="Add-to-Cart"/>
+            <input type="hidden" name="tld" class="txtTld" value="com" />
+            <input type="hidden" name="addIfAvailable" value="true" />
+            <div class="search-area-wrapper clearfix">
+              <div class="tooltips-area clearfix">
+                  <div class="highlight-tooltip condensed start-here">[@L[cds.sales/offers/online-business:start-here]@L]</div>
+                  <div class="highlight-tooltip condensed try-again" data-cs="tryAgain">[@L[cds.sales/offers/online-business:try-again]@L]</div>
+              </div>
+              <div class="input-area clearfix">
+                <div class="search-background">
+                  <label for="txtsld" class="search-input-label">[@L[cds.sales/offers/online-business:domain-search-placeholder]@L]</label>
+                  <input id="txtsld" type="text" class="search-input" name="sld" value="" />
+                </div>
+              </div>
+              <div class="dropdownlist-area clearfix">
+                  <div class="text-left tld-input clearfix">
+                    <div class="tld-input-selected">
+                      <span>.com</span>
+                    </div>
+                    <a href="javascript:void(0)" class="ddl-drop-arrow g-btn-sm g-btn-sec"><span></span></a>
+                    <ul>
+                      <li data-main=".com" data-view="com" class="availabletld selected">
+                        <div data-main="true">
+                          <span>.com</span>
+                        </div>
+                      </li>
+                      ##if(countrySiteAny(br) || isManager())
+                      <li data-main=".com.br" data-view="com.br" class="availabletld">
+                        <div data-main="true">
+                          <span>.com.br</span>
+                        </div>
+                      </li>
+                      ##endif
+                      ##if(countrySiteAny(mx) || isManager())
+                      <li data-main=".com.mx" data-view="com.mx" class="availabletld">
+                        <div data-main="true">
+                          <span>.com.mx</span>
+                        </div>
+                      </li>
+                      ##endif
+                      ##if(countrySiteAny(au) || isManager())
+                      <li data-main=".com.au" data-view="com.au" class="availabletld">
+                        <div data-main="true">
+                          <span>.com.au</span>
+                        </div>
+                      </li>
+                      ##endif
+                      <li data-main=".co" data-view="co" class="availabletld">
+                        <div data-main="true">
+                          <span>.co</span>
+                        </div>
+                      </li>
+                      ##if(countrySiteAny(ca) || isManager())
+                      <li data-main=".ca" data-view="ca" class="availabletld">
+                        <div data-main="true">
+                          <span>.ca</span>
+                        </div>
+                      </li>
+                      ##endif
+                      ##if(countrySiteAny(in))
+                      <li data-main=".in" data-view="in" class="availabletld">
+                        <div data-main="true">
+                          <span>.in</span>
+                        </div>
+                      </li>
+                      ##endif
+                      <li data-main=".net" data-view="net" class="availabletld">
+                        <div data-main="true">
+                          <span>.net</span>
+                        </div>
+                      </li>
+                      <li data-main=".org" data-view="org" class="availabletld">
+                        <div data-main="true">
+                          <span>.org</span>
+                        </div>
+                      </li>
+                      ##if(countrySiteAny(uk) || isManager())
+                      <li data-main=".co.uk" data-view="co.uk" class="availabletld">
+                        <div data-main="true">
+                          <span>.co.uk</span>
+                        </div>
+                      </li>
+                      <li data-main=".uk" data-view="uk" class="availabletld">
+                        <div data-main="true">
+                          <span>.uk</span>
+                        </div>
+                      </li>
+                      ##endif
+                    </ul>
+                  </div>
+
+              </div>
+              <div class="search-button-area clearfix">
+                <div class="domain-search-btn flt-btn-grn" data-ci="domainSearchClick">[@L[cds.sales/offers/online-business:search]@L]</div>
+              </div>
+
+            </div>
+          </form>
+                      
+          <div class="loading search-domain-loading"></div>
+          
+        </div> <!-- end domain-search-div -->
+      </div> 
+      <div class="got-slide got-slide-3">
+        <div class="got-available-div"></div>
+        <div class="got-unavailable-div"></div>
+        <div class="got-invalid-div"></div>
+      </div> 
+    </div> <!--end row got-top-slides -->
+  </div>
+</section>
+
+
+<atlantis:webstash type="js">
+<script type="text/javascript">
+
+  (function(){ 
+    var slideAnimationMs = 800,
+      $dsd = $('#domain-search-div'),
+      nextStepUrl = '';
+
+    function slideToShowSearch($gotSlides){
+      $gotSlides.find('.got-slide-3').find('.got-available-div').hide();      
+      $gotSlides.find('.got-slide-3').find('.got-unavailable-div').hide();   
+      $gotSlides.find('.got-slide-3').find('.got-invalid-div').hide();
+      
+      // move the domain search box into the slide 2
+      $gotSlides.find('.got-slide-2').append($dsd);      
+      
+      $gotSlides.animate({left:'-1000px'},slideAnimationMs);
+    }
+    function slideToUnavailable($gotSlides){
+
+      // move searchbox to slide 3
+      $gotSlides.find('.got-slide-3').find('.got-unavailable-div').append($dsd).show();  
+      $gotSlides.find('.got-slide-3').find('.got-available-div').hide();    
+      $gotSlides.find('.got-slide-3').find('.got-invalid-div').hide();
+      
+      //animate slide
+      $gotSlides.animate({left:'-2000px'},slideAnimationMs);
+    }
+    function slideToAvailable($gotSlides){
+
+      // move searchbox to slide 3
+      $gotSlides.find('.got-slide-3').find('.got-available-div').append($dsd).show();  
+      $gotSlides.find('.got-slide-3').find('.got-unavailable-div').hide();   
+      $gotSlides.find('.got-slide-3').find('.got-invalid-div').hide();
+      
+      //animate slide
+      $gotSlides.animate({left:'-2000px'},slideAnimationMs);
+    }
+    function slideToInvalid($gotSlides){
+
+      // move searchbox to slide 3
+      $gotSlides.find('.got-slide-3').find('.got-invalid-div').append($dsd).show();
+      $gotSlides.find('.got-slide-3').find('.got-available-div').hide();  
+      $gotSlides.find('.got-slide-3').find('.got-unavailable-div').hide();   
+      
+      //animate slide
+      $gotSlides.animate({left:'-2000px'},slideAnimationMs);
+    }
+
+    function slideToSlide1($gotSlides){
+      //animate slide
+      $gotSlides.animate({left:'0px'},slideAnimationMs/4);
+    }
+
+    $(document).ready(function(){      
+      // Setup slider effects on button clicks on domainRow
+      var $gotSlidesDr = $('#domainRow .got-slides');
+      var $gotSlidesGs = $('#get-started .got-slides');
+
+      $('#domainRow').on('click', '.get-started-btn', function() {
+        slideToShowSearch( $gotSlidesDr );
+        slideToSlide1( $gotSlidesGs );
+      });
+
+      $dsd.on('click', '.search-again', function(){
+        slideToShowSearch( $(this).closest('.got-slides') );
+      });
+
+      // Setup slider effects on button clicks for get-started
+      $('#get-started').on('click', '.get-started-btn-2', function() {
+        slideToShowSearch( $gotSlidesGs );
+        slideToSlide1( $gotSlidesDr );
+      }); 
+
+    });
+
+
+    
+    $.ajaxSetup({cache:false});
+    
+    var PlanBox6UI = {
+      changeSelected: function (li, parent) {
+        var content = li.find('div[data-main=true]').html();
+        parent.find('div:first').html(content);
+        if (li.hasClass('availabletld')) {
+          $dsd.find('.txtTld').val(li.attr('data-view'));
+        }
+      },
+      recordClick: function (c, a, b) {
+        if (typeof (FastballEvent_MouseClick) !== "undefined") {
+          FastballEvent_MouseClick(c, a, b, "a");
+        }
+      }
+    };
+
+    var PlanConfig = {
+      changeSelected: function (li, parent) {
+        var content = li.find('div[data-main=true]').html();
+        parent.find('div:first').html(content);
+        if (li.hasClass('availabletld')) {
+          $dsd.find('.txtTld').val(li.attr('data-view'));
+        }
+      }, apiPlantoCart: function (data) {
+        if(typeof data != "object") return;
+
+        data = data || {};
+        
+        data.action = data.action || 'add';
+        data.itcCode = data.itcCode || false;
+        data.ciCode = data.ciCode || false;
+        data.quantity = data.quantity || '1';
+        data.planSelected = data.planSelected || false;
+        data.addOns = data.addOns || false;
+        data.domain = $dsd.find('[name="domaintoadd"]').val() || false;
+
+        for(key in data){
+          if(data[key]===false) return;
+        }
+        
+        var apiEndpoint = PlanConfig.getCartAPIUrl(data);
+
+        var success = true;
+        $.ajax({
+            url: apiEndpoint,
+            type: 'POST',
+            dataType: 'json',
+            cache: false,
+            success: function(){
+              ##if(isManager())
+                window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" secure="true" />]@T]';
+              ##else
+                window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" secure="true"/>]@T]';
+              ##endif
+            },
+            error: function(){
+                if(console != undefined) {
+                  console.log('package api post failure');
+                }
+                success = false;
+            }
+          })
+         
+      }, getCartAPIUrl:function(data) {
+            var url = '[@T[link:<relative path="/api/package/{0}/{1}/{2}/{3}/{4}"/>]@T]'.replace('{0}',data.action).replace('{1}',data.itcCode).replace('{2}',data.ciCode).replace('{3}',data.quantity).replace('{4}',data.planSelected);
+            if(url.indexOf('?') > -1){
+              url += '&';
+            }
+            else {
+              url += '?';
+            }
+            url += 'domain=' + data.domain + '&sourceCode=domaincheck';
+            if (data.addOns != 'noAddOns'){
+              url = url += '&addons=' + data.addOns + '-1';
+            }
+           
+            return url;
+        }
+    };
+
+    function domainSearchFormSubmit(e) {
+      // Domain Search
+      PlanBox6UI.recordClick(e, offersCodes.ci.domainSearchSubmit, $(this)[0]);
+      
+      var domaintoremove = $dsd.find('[name="domaintoadd"]').val(),
+        domaintoadd = $dsd.find('[name="domaintoadd"]').val(),
+        tld = $dsd.find('.txtTld'),
+        $searchField = $dsd.find('.search-input'),
+        domain = $searchField.val(),
+        domainSplit = domain.split('.'),
+        newtld = '',
+        data = [],
+        $avlTlds = $dsd.find(".availabletld"),
+        tld2 = $dsd.find(".availabletld.selected").data("view");
+
+      $dsd.removeClass("available not-available invalid");
+   
+      $avlTlds.each(function(){
+        data.push($(this).data("view"))
+      });
+
+      var splitSearch = matchEnding($.trim(domain),data);
+        
+      $searchField.val(splitSearch[0].split('.')[0].toLowerCase());
+
+      $avlTlds.each(function(){
+        var $this = $(this);
+        if($this.data('view')==splitSearch[1]){
+          $(".availabletld.selected").removeClass('selected');
+          $this.addClass('selected');
+          $('.tld-input-selected span').html("."+splitSearch[1]);
+          tld2 = splitSearch[1];
+        } else {
+          
+        }
+      });
+
+      domain = [$searchField.val() , tld2].join(".");
+
+      tld.val(tld2);
+
+      if ($searchField.val().length <= 0) return false;
+
+      var valid = false;
+    
+      $('.availabletld').each(function () {
+        if ($(this).attr('data-view') == tld.val()) {
+          valid = true;
+        }
+      });
+
+
+      if (!valid) return false;
+          
+      $dsd.find('.domain-search-btn').addClass('disabled');
+      $dsd.find('.search-domain-loading').fadeIn();
+      
+      $.ajaxSetup({cache:false});
+      $.get($(this).attr('action')+'&domaintoremove='+domaintoremove, $(this).serialize(), function (jsonData) {
+          $dsd.find(".searched-domain").html(domain);
+
+          var $gotSlides = $dsd.closest('.got-slides');
+          if (jsonData.Properties.anyAreAvailable === false && (jsonData.Properties.domainInfo.length==0 || jsonData.Properties.domainInfo[0].error === "Domain name is already taken")) {
+            $dsd.addClass("not-available");
+            slideToUnavailable($gotSlides);
+
+          } else if (jsonData.Properties.domainInfo[0].isPremium) {
+            $dsd.addClass("not-available");
+            slideToUnavailable($gotSlides);
+
+          } else if (jsonData.Properties.domainInfo[0].error === "Domain name is invalid") {
+            $dsd.addClass("invalid");
+            slideToInvalid($gotSlides);
+
+          } else if (jsonData.Properties.domainInfo[0].error != '') {
+            $dsd.addClass("not-available");
+            slideToUnavailable($gotSlides);
+
+          } else {
+            $dsd.addClass("available");
+            $dsd.find('[name="token"]').val(jsonData.Properties.domainInfo[0].name + '|available');
+            $dsd.find('[name="domaintoadd"]').val(jsonData.Properties.domainInfo[0].name);
+            slideToAvailable($gotSlides);
+          }
+
+          $dsd.find(".searched-domain").html(jsonData.Properties.domainInfo[0].shortName.toLowerCase());
+
+          $dsd.find('.domain-search-btn').removeClass('disabled');
+          $dsd.find('.search-domain-loading').hide();
+          nextStepUrl = jsonData.Properties.nextStepUrl;
+      }, 'json');
+                     
+      return false;
+    } /* end formSubmit */
+
+    function addDomainToCart(e){
+ 
+      $dsd.find('.search-again').hide();     
+      $dsd.find('.domain-search-btn').addClass('disabled');
+      $(this).addClass('disabled');
+      $dsd.find('.add-domain-loading').fadeIn();
+      
+      var data = {
+        ciCode: offersCodes.ci.apiAddCi,
+        itcCode: offersCodes.itc, 
+        planSelected: offersCodes.plan,
+        addOns: offersCodes.addOns
+      }
+  
+      PlanBox6UI.recordClick(e, offersCodes.ci.apiAddCi, $(this)[0]);
+      PlanBox6UI.recordClick(e, offersCodes.ci.apiDomainAddToCart, $(this)[0]);
+
+      PlanConfig.apiPlantoCart(data);
+
+    } /* end addDomainToCart */
+    
+    $(document).ready(function () {
+        // clear form
+        $dsd.find('.search-input').val('');
+        $dsd
+          .on('focus', '.search-input', function(){
+            if(this.value==''){
+              $dsd.find('.search-input-label').css({'opacity':0});
+            }
+          })
+          .on('blur', '.search-input', function(){
+            if(this.value==''){
+              $dsd.find('.search-input-label').css({'opacity':1});
+            }
+          })
+          .on('click', '.tld-input', function () {
+            var wrap = $(this);
+            if (wrap.hasClass('droplist-open')) {
+              wrap.removeClass('droplist-open');
+            } else {
+              wrap.addClass('droplist-open');
+            }
+          })
+          .on('mouseleave', '.tld-input', function () {
+            $(this).removeClass('droplist-open');
+          })
+          .on('click', '.tld-input > ul > li', function () {
+            var $li = $(this);
+            var parent = $li.parents('.tld-input');
+            $li.siblings('li').removeClass('selected');
+            $li.addClass('selected');
+            //PlanBox6UI.showTerm($li);
+            PlanBox6UI.changeSelected($li, parent);
+          })
+          .on('click', '.add-domain-btn', addDomainToCart)
+          .on('submit','form[name=domaincheck]',domainSearchFormSubmit)
+          .on('click', '.domain-search-btn', function () {
+            $dsd.find('.search-form').submit();
+          })
+          .find('form[name=domaincheck]').each(function(){
+            //update the form to have correct trackingCode
+            var $this = $(this);
+            var newAction = updateUrlParams($this.attr("action"),{'trackingCode':offersCodes.itc})
+            $this.attr("action",newAction);
+          });
+
+
+    });  /* end document ready */
+  
+  })(); /* end IIIF */
+
+</script>
+</atlantis:webstash>
+      <!-- end got-top-banner segment -->
+      
+      <!-- start included-products -->
+<atlantis:webstash type="css">
+  <style>
+    #included-productsRow .included-products-banner {background-size:cover;background-image:url('[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/online-business/img/gybo-background.png');background-repeat:no-repeat;}
+    #products-panel {padding-top:20px;}
+    .product-panel .icon {background-image:url('[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/online-business/img/product_sprite.png');width:90px;height:90px;margin: 0 auto 10px;}
+    .product-panel .title {margin-bottom:14px;}
+    .product-panel .title h3 {font-weight:700;font-size:28px;text-align:left;margin-bottom:10px;}
+    .product-panel .headline {margin-bottom:30px;}
+    .product-panel .headline p {font-weight:300;font-size:20px;text-align:left;line-height:32px;}
+    .product-panel .details {margin-bottom:20px;padding-left:24px;}
+    .product-panel .details {list-style-image:url('[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/online-business/img/check.png');padding-left:24px;}
+    .product-panel .details p {font-weight:300;font-size:20px;text-align:left;line-height:32px;padding-left:6px;}
+    #product-hosting .icon {background-position:0 -90px;}
+    #product-wsb .icon {background-position:0 -180px;}
+    #product-domain .icon {background-position:0 0;}
+    #product-security .icon {background-position:0 -540px;}
+    #product-businessmarketing .icon {background-position:0 -270px;}
+    #product-businessmanagement .icon {background-position:0 -450px;}
+    #product-workspace .icon {background-position:0 -360px;}
+    #product-resellers .icon {background-position:0 -630px;}
+    #product-storage .icon {background-position:0 -720px;}
+        
+    .grid-column {border:1px solid #CCC;}
+    .wraparound p {color:#fff;text-transform:uppercase;font-weight:200;font-size:24px;line-height:1.4em;margin:0;}
+    .wraparound {
+      position: relative;
+      top:-60px;
+      padding: 5px;
+      margin: 0 -6px;
+      border: 1px solid #e67c00;
+      background: #ff8a00;
+      color: #fff;
+      box-shadow: 0 4px 4px rgba(0,0,0,0.3);
+      text-align:center;
+    }
+    .wraparound:before {
+      border-left: 6px solid transparent;
+      left: -1px;
+    }
+    .wraparound:before, .wraparound:after {
+      content: " ";
+      border-top: 6px solid #954709;
+      position: absolute;
+      bottom: -7px;
+    }
+    .wraparound:after {
+      border-right: 6px solid transparent;
+      right: -1px;
+    }
+    #product-workspace .product-icon.email {padding:20px 0;text-align:center;height:85px;font-size:16px;}
+  </style>
+</atlantis:webstash>
+
+<section id="included-productsRow">
+  <div class="included-products-banner">
+    <div class="container l-main-container" id="products-panel">
+      <div class="row" data-gd-sidebysidealign="{}">
+        <div class="col-xs-4 product-panel" id="product-domain" data-gd-sidebysidealign-col="1">
+          <div class="grid-column relative">
+            <div class="title" data-gd-sidebysidealign-row="1">
+              <h3>[@L[cds.sales/offers/online-business:included-product-domain-title]@L]</h3>
+            </div>
+            <div class="headline" data-gd-sidebysidealign-row="2">
+              <p>[@L[cds.sales/offers/online-business:included-product-domain-headline]@L]</p>
+            </div>
+            <ul class="details" data-gd-sidebysidealign-row="3">
+              <li><p>[@L[cds.sales/offers/online-business:included-product-domain-details-bullet1]@L]</p></li>
+              <li><p>[@L[cds.sales/offers/online-business:included-product-domain-details-bullet2]@L]</p></li>
+            </ul>
+            <div data-gd-sidebysidealign-row="4">
+              <div class="icon"></div>
+            </div>
+            <div data-gd-sidebysidealign-row="5">
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-4 product-panel" id="product-wsb" data-gd-sidebysidealign-col="2">
+          <div class="grid-column relative">
+            <div class="title" data-gd-sidebysidealign-row="1">
+              <h3>[@L[cds.sales/offers/online-business:included-product-wsb-title]@L]</h3>
+            </div>
+            <div class="headline" data-gd-sidebysidealign-row="2">
+              <p>[@L[cds.sales/offers/online-business:included-product-wsb-headline]@L]</p>
+            </div>
+            <ul class="details" data-gd-sidebysidealign-row="3">
+              <li><p>[@L[cds.sales/offers/online-business:included-product-wsb-details-bullet1]@L]</p></li>
+              <li><p>[@L[cds.sales/offers/online-business:included-product-wsb-details-bullet2]@L]</p></li>
+              <li><p>[@L[cds.sales/offers/online-business:included-product-wsb-details-bullet3]@L]</p></li>
+            </ul>
+            <div data-gd-sidebysidealign-row="4">
+              <div class="icon"></div>
+            </div>
+            <div data-gd-sidebysidealign-row="5">
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-4 product-panel" id="product-workspace" data-gd-sidebysidealign-col="3">
+          <div class="grid-column relative">
+            <div class="title"data-gd-sidebysidealign-row="1">
+              <h3>[@L[cds.sales/offers/online-business:included-product-email-title]@L]</h3>
+            </div>
+            <div class="headline" data-gd-sidebysidealign-row="2">
+              <p>[@L[cds.sales/offers/online-business:included-product-email-headline]@L]</p>
+            </div>
+            <ul class="details" data-gd-sidebysidealign-row="3">
+              <li><p>[@L[cds.sales/offers/online-business:included-product-email-details-bullet1]@L]</p></li>
+              <li><p>[@L[cds.sales/offers/online-business:included-product-email-details-bullet2]@L]</p></li>
+            </ul>
+            <div data-gd-sidebysidealign-row="4">
+              <div class="icon"></div>
+            </div>
+            <div data-gd-sidebysidealign-row="5">              
+              <div class="product-icon email">[@L[cds.sales/offers/online-business:powered-by]@L]</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="wraparound">
+        <p>[@L[cds.sales/offers/online-business:included-product-wraparound-text]@L]</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<atlantis:webstash type="js">
+  <script type="text/javascript">
+
+  // gdSideBySideAlign plugin
+  (function ( $, window, document, undefined ) {
+
+    var pluginName = 'gdSideBySideAlign',
+        defaults = {
+          bailIfRowCountsMismatch : true
+    };
+
+    function GDSideBySideAlign( element, options ) {
+      this.element = element;
+      this.options = $.extend( {}, defaults, options);
+      this._defaults = defaults;
+      this._name = pluginName;
+      this.init();
+    }
+
+    GDSideBySideAlign.prototype.init = function () {
+
+        // Find the columns
+        var $columns = $(this.element).find('[data-gd-sidebysidealign-col]');
+
+        if($columns.length == 0) {
+          return; // bail if no columns found
+        }
+
+        // Make sure columns have an equal number of rows
+        var numRows = 0, equalLength = true;
+        $.each($columns, function(idx,item){
+          var $rows = $(item).find('[data-gd-sidebysidealign-row]');
+          if(numRows == 0) {
+            numRows = $rows.length;
+          }
+          if(equalLength) {
+            if(numRows != $rows.length) equalLength = false;
+          }
+        });
+        if(numRows==0 || !equalLength && this.options.bailIfRowCountsMismatch) {
+          return; // bail if no rows, or rows are not equal length
+        }
+
+        // loop thru each row and grab the largest cell height and apply to each cell in that row
+        for(var i=1; i<=numRows; i++) {
+          var $cells = $columns.find('[data-gd-sidebysidealign-row="' + i + '"]' );
+          var maxHeight = 0;
+          $.each($cells,function(idx, cell){
+            maxHeight = Math.max(maxHeight, $(cell).height());
+          });
+          $cells.height(maxHeight);
+        }
+
+    }; /* end GDSideBySideAlign.prototype.init */
+
+    // register the function to be used
+    $.fn[pluginName] = function ( options ) {
+      return this.each(function () {
+        if (!$.data(this, 'plugin_' + pluginName)) {
+          $.data(this, 'plugin_' + pluginName, new GDSideBySideAlign( this, $(this).data('gd-sidebysidealign') || options ));
+        }
+      });
+    };
+
+    // load the plugin
+    $(document).ready(function(){
+      $('[data-gd-sidebysidealign]').gdSideBySideAlign();
+    });
+
+  })( jQuery, window, document );
+</script>
+</atlantis:webstash>
+      <!-- end included-products -->
+      
+      <!-- start award-winning-support -->
+<atlantis:webstash type="css">
+  <style>
+    #award-winning-support {background-color:#7DB701; min-height: 340px;}
+    #award-winning-support .container {background-image:url('[@T[link:<imageroot />]@T]fos/hp/rebrand/img/c3_greenfill.jpg');background-position: -630px center;}
+    #award-winning-support span {color:#fff;font-weight:300;font-size:54px;text-align:left;line-height:54px;display:block;}
+    #award-winning-support span strong {font-weight:700;}
+    #award-winning-support .support-promo-text {padding:100px 0 100px 240px;}
+  </style>
+</atlantis:webstash>
+
+<section id="award-winning-support">
+  <div class="container l-main-container">
+    <div class="support-promo-text">
+      <span>[@L[cds.sales/offers/online-business:support-promo-text-normal]@L]</span>
+      <span><strong>[@L[cds.sales/offers/online-business:support-promo-text-emphasized]@L]</strong></span>
+    </div>
+  </div>
+</section>
+
+      <!-- end award-winning-support -->
+      
+      <!-- start team-up -->
+<atlantis:webstash type="css">
+  <style>
+    #team-up {background-color:#fff; min-height: 340px;}
+    #team-up .container {padding-top:80px;padding-bottom:80px;}
+    #team-up span {color:#333;font-weight:300;font-size:54px;text-align:left;line-height:54px;display:block;padding-bottom:20px;}
+    #team-up p {color:#333;font-weight:300;font-size:28px;text-align:left;line-height:42px;margin-bottom:0;}
+    #team-up .team-promo-text {padding:0 400px 0 0;}
+    #team-up .team-promo-img {float:right;margin-left:60px;}
+  </style>
+</atlantis:webstash>
+
+<section id="team-up">
+  <div class="container l-main-container">
+    <div class="team-promo-img">
+      <img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/online-business/img/godaddy-msft-logo_alt.png"/> 
+    </div>
+    <div class="team-promo-text">
+      <span>[@L[cds.sales/offers/online-business:team-promo-text-headline]@L]</span>
+      <p>[@L[cds.sales/offers/online-business:team-promo-text-content]@L]</p>
+    </div>
+  </div>
+</section>
+
+      <!-- end team-up -->
+      
+      <!-- start get-started -->
+<atlantis:webstash type="css">
+  <style>
+    #get-started { background-color: #f7f7f7; border-top:1px solid #ddd; text-align: center; }
+    .pi{background-image:url('[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/online-business/img/product_sprite.png');background-repeat:no-repeat;width:120px;height:90px;float:left; margin: 7px;}
+    
+    .pi_domains{background-position:center 0;}
+    .pi_websitebuilder{background-position:center -180px;}
+    .pi_workspace{background-position:center -360px;}
+    .orange {color: #ff8a00;}
+    .get-started-banner-content {line-height:1.4em;color: #000; padding-top: 60px; padding-bottom: 20px;}
+    .get-started-banner-headline {padding-bottom:20px;line-height:62px;font-size:62px;font-weight:100}
+    .get-started-banner-subtext {font-size: 22px;}
+    .get-started-medium {padding-bottom:40px;line-height:50px;font-size:62px;font-weight:700}
+    .get-started-small {text-decoration:line-through;line-height:28px;font-size:28px;font-weight:300;}
+    .cta-small {font-size: 28px;1em;padding:10px 80px;margin:20px;line-height:1em;}
+    .get-started-renewal-disclaimer {font-size:16px;font-weight:100}
+    #get-started .icon-row {margin:0 auto;font-size:28px;font-weight:300;line-height:28px;width:402px;}
+    
+  </style>
+</atlantis:webstash>
+
+<section class="misc-banner-generic" id="get-started">
+  <div class="container l-main-container get-started-banner-content got-slider-wrapper">
+
+    <div class="row got-slides">
+      <div class="got-slide got-slide-1">
+
+        <div class="row">
+      <div class="col-xs-12">
+        <div class="icon-row">
+          <span class="pi pi_domains">&nbsp;</span>
+          <span class="pi pi_websitebuilder">&nbsp;</span>
+          <span class="pi pi_workspace">&nbsp;</span>
+          </div>
+      </div>
+        </div>
+        <div class="get-started-banner-headline">[@L[cds.sales/offers/online-business:get-started-banner-headline]@L]</div>
+        <div class="get-started-medium price-hide">[@L[cds.sales/offers/online-business:get-started-banner-only-price]@L]</div>
+        <div class="get-started-small price-hide">
+              <span class="g-toolTip">
+                [@L[cds.sales/offers/online-business:get-started-banner-up-to-price]@L]
+                <span class="g-toolTip-tip left">[@L[cds.sales/offers/online-business:bundle-renewal-com]@L]</span>                
+              </span>
+        </div>
+        <div class="get-started-btn-2 btn btn-warning cta-small" style="cursor:pointer;" data-ci="getStartedBtn">[@L[cds.sales/offers/online-business:get-started-banner-get-started]@L]</div>
+        <div class="get-started-renewal-disclaimer">
+          [@L[cds.sales/offers/online-business:renewal-price-disclaimer]@L]        
+          <a class="simple-link" href="#" data-toggle="modal" data-target="#myModal" data-ci="disclaimerLink">[@L[cds.sales/offers/online-business:see-offer-details]@L]</a>  
+        </div>
+      </div> <!-- end slide 1 -->
+      <div class="got-slide got-slide-2">      
+      </div> <!-- end slide 2 -->
+      <div class="got-slide got-slide-3">
+        <div class="got-available-div"></div>
+        <div class="got-unavailable-div"></div>
+        <div class="got-invalid-div"></div>
+      </div> <!-- end slide 3 -->
+
+
+  </div>
+</section>
+<!-- end get-started -->
+
+<section class="misc-banner-generic">
+  <div class="l-main-container container main-banner-content">
+  <!-- Page Disclaimer -->
+    <div id="disclaimers">
+      <p>
+        <a class="simple-link" href="#" data-toggle="modal" data-target="#myModal" data-ci="disclaimerLink">[@L[cds.sales/offers/online-business:disclaimer-modal-link]@L]</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<div class="modal fade" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">
+        <strong>[@L[cds.sales/offers/online-business:disclaimer-modal-title]@L]</strong>
+        </h4>
+      </div>
+      <div class="modal-body">
+        <p>[@L[cds.sales/offers/online-business:disclaimer-modal-content]@L]</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+{% block footer %}
+    <script src="[@T[link:<js path='fos/201401/global/js/plugins.js' />]@T]" type="text/javascript"></script>
+    <script src="[@T[link:<javascriptroot />]@T]fos/lib/solazy/jquery.solazy.1.2.1.min.js" type="text/javascript" ></script>
+
+    <script>
+      // name = does not need to match anything and may not be needed
+      // plan =  package name for api
+      var offersCodes = {
+          'name': 'gybo_1yr',
+          'plan': 'gybo_1email_1yr',
+          'itc': 'slp_GYBO1',
+          'addOns': 'noAddOns',
+          'ci': {
+            'domainSearchClick': '92709',
+            'domainSearchSubmit': '92710',
+            'addDomainBtn': '92733',
+            'apiAddCi': '92707',
+            'apiDomainAddToCart': '84415',
+            'disclaimerLink': '92746',
+            'tryAgain': '92747'
+          }
+      }  
+          
+      ##if(isManager())
+        offersCodes.itc = 'mgr_' + offersCodes.itc;
+      ##endif 
+      
+      $(document).ready(function () {      
+        // move dislcaimes to the modal content
+        $(".modal-content").append($("#tms-modal-body"));
+       
+        $(".price").each(function(){
+          $(this)
+            .html('[@T[productprice:<current productid="464069" period="monthly" promocode="24681357" />]@T]')
+            .closest('.price-hide')
+            .removeClass("price-hide");
+        });
+
+        $(".original-price").each(function(){
+          $(this)
+            .html('[@T[currencyprice:<price usdamount="1199" htmlsymbol="false" />]@T]')
+            .closest('.price-hide')
+            .removeClass("price-hide");
+        });
+        
+        $('[data-ci]').click(function (e) {
+            var $this = $(this);
+            var ci = $this.attr('data-ci');
+            // example, checks to see if data-ci="domainSearchClick"
+            // has a value in offersCodes.ci
+            // offersCodes Data is in campaign document
+            ci = offersCodes.ci[ci] || ci;
+            
+            FastballEvent_MouseClick(e, ci, $(this)[0], 'a');
+            fbiLibCheckQueue();
+        });
+      });
+
+      // Page Global script -- changes will effect all campaigns 
+      // get url parameter by parameter name
+      function getParameterByName(name) {
+          name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+          var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+              results = regex.exec(location.search);
+          return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+      }
+
+      // pass in url string, json to update, add, remove urls params
+      // url = domain.com?aaa=111&bbb=222&ccc=333
+      // data = {'aaa':444,'zzz':'555','bbb':''}
+      // result = domain.com?aaa=444&ccc=333&zzz=555
+      function updateUrlParams(url,data){
+        data = data || {};
+        var urlSplit = url.split('?');
+        var urlOriginPathName = urlSplit[0];
+        var parms = [];
+        var newParams = [];
+        var paramKeys = {}
+
+        if(urlSplit.length > 1){
+          var urlSearch = urlSplit[1];
+          var params = urlSearch.split('&');
+
+          for(var i = 0; i < params.length;i++){
+            var keyValue = params[i].split('=');
+            if(typeof data[keyValue[0]] == "undefined"){
+              paramKeys[keyValue[0]] = keyValue[1];
+            }
+          }
+        }
+
+        for(key in data){
+          if(data[key] != ""){
+            paramKeys[key] = data[key];
+          }        
+        }
+
+        for(key in paramKeys){
+          newParams.push(key+"="+paramKeys[key]);
+        }
+        return ([urlOriginPathName,newParams.join("&")].join('?'));
+      }
+
+      // pass in str and array or string of 'end strings'
+      // if str ends with an 'end string' from array
+      // if end string found, return will be array [precedingText,matchedEndString]
+      // if end string not found, return will be array [sameAsInput,''] and an empty string
+      function matchEnding(str,matchEnd){
+        if(typeof matchEnd != "object"){
+          matchEnd = [matchEnd];
+        }
+        var foundEnd = '';
+        var foundStart = str;
+
+        for(var i = 0; i < matchEnd.length;i++){
+
+          var pattern = '(.+)('+matchEnd[i].replace(/\./g,'\\.')+')+?$';
+          var reg =  new RegExp(pattern,'i');
+
+          var start = str.replace(reg,'$1');
+          var end = str.replace(reg,'$2');
+
+          if(start!=end){
+            if(end.indexOf(foundEnd)>-1){
+              foundStart = start;
+              foundEnd =  end;
+            }
+          }
+        }
+        return [foundStart,foundEnd];      
+      }
+    </script>
+
+{% endblock %}
