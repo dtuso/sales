@@ -14,6 +14,14 @@
     "metaOgImage": "fos/sales/themes/scotty/offers/online-business/img/og_got_1200x630.jpg",
     "metaOgDescription": "[@L[cds.sales/offers/online-business:og-description]@L]"
   },
+  "page.language": {
+    "cdsDetails": {
+      "champion": {
+        "name": "",
+        "email": ""
+      }
+    }
+  },
   "rules.config": {
     "cdsDetails": {
       "champion": {
