@@ -1,0 +1,25 @@
+{
+  "page.html": {
+    "cdsDetails": {
+      "champion": {
+        "name": "",
+        "email": ""
+      }
+    },
+    "metaTitle": "[@L[cds.sales/offers/online-business:page-title]@L]",
+    "metaDescription": "[@L[cds.sales/offers/online-business:meta-description]@L]",
+    "metaKeywords": "[@L[cds.sales/offers/online-business:meta-keywords]@L]",
+    "metaCanonicalPath": "/offers/online-business.aspx",
+    "metaOgTitle": "[@L[cds.sales/offers/online-business:og-title]@L]",
+    "metaOgImage": "fos/sales/themes/scotty/offers/online-business/img/og_got_1200x630.jpg",
+    "metaOgDescription": "[@L[cds.sales/offers/online-business:og-description]@L]"
+  },
+  "rules.config": {
+    "cdsDetails": {
+      "champion": {
+        "name": "",
+        "email": ""
+      }
+    }
+  }
+}

@@ -17,12 +17,9 @@
       {% block metahead %}
 
       <!-- Facebook Open Graph Meta Data -->
-      <meta NAME="robots" CONTENT="NOINDEX, NOFOLLOW">
-      
-      {#
       <meta property="og:title" content="{{ metaOgTitle }}" />
       <meta property="og:type" content="product" />
-      <meta property="og:url" content="[@T[link:<external linktype='siteurl' path='{{ metaCanonicalPath }}' parammode='explicit'/>]@T]" />
+      <meta property="og:url" content="[@T[link:<external linktype='siteurl' path='{{ metaCanonicalPath }}'  parammode='explicit'/>]@T]" />      
       {% if metaOgImage %}
       <meta property="og:image" content="[@T[link:<imageroot />]@T]{{ metaOgImage }}" />
       {% endif %}
@@ -30,14 +27,16 @@
       <meta property="fb:app_id" content="{{ metaOgAppID }}" />
       <meta property="fb:admins" content="{{ metaOgAdmins }}" />
       <meta property="og:description" content="{{ metaOgDescription }}" />
-      <link rel="canonical" href="[@T[link:<external linktype='siteurl' path='{{ metaCanonicalPath }}' parammode='explicit'/>]@T]"/>
-      #}
+
       <link rel="shortcut icon" href="[@T[link:<imageroot />]@T]assets/godaddy.ico" />
+      <link rel="canonical" href="[@T[link:<external linktype='siteurl' path='{{ metaCanonicalPath }}' parammode='explicit'/>]@T]"/>
 
       <!-- Global CSS and Page CSS -->
 
       <link href="[@T[link:<css path='fos/201401/global/css/{{ cssVersion }}/combined-{{ cssVersion }}.css' />]@T]" rel="stylesheet" type="text/css">
-      
+      {% if assetPath %}
+      <link href="[@T[link:<css path='{{ assetPath }}css/styles.css' />]@T]{% if cssVersionOverride %}?v={{cssVersionOverride}}{% endif %}" rel="stylesheet" type="text/css">
+      {% endif %}
       <!-- IE SUPPORT FOR HTML5 and Bootstrap 3 -->
       <!--[if lt IE 9]>
         <link href="[@T[link:<cssroot />]@T]fos/201401/global/css/bootstrap-ie7fix.min.css" rel="stylesheet" type="text/css" />
@@ -59,7 +58,7 @@
 
       {% block body %}{% endblock %}
 
-    </div>
+    </div>  <!-- end role:main -->
 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer" />]@P]
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Script" />]@P]
