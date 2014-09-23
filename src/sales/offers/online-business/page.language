@@ -1,0 +1,113 @@
+---
+location: localization/sales/offers/online-business/en
+id: 5407c806f778fc2be8f75b6b
+name: GCE-27089
+comments: Refactor search widget and better css for lang formatting
+---
+{% include 'modules/doc-block.html' %}
+<phrase key="page-title" />
+Get Online | Business Email, Domain, and Web Builder Software
+<phrase key="meta-description" />
+Package Deal! Quickly setup your business online with a new domain, integrated email, and a powerful online web builder.
+<phrase key="meta-keywords" />
+get online, get online business, online business email, online business, business email, email domain, web builder, web builder software
+<phrase key="og-title" />
+Get Online | Business Email, Domain, and Web Builder Software
+<phrase key="og-description" />
+Package Deal! Quickly setup your business online with a new domain, integrated email, and a powerful online web builder.
+<phrase key="top-banner-headline" />
+A suite deal to get your business online.
+<phrase key="top-banner-image-domain" />
+Domain
+<phrase key="top-banner-image-wsb" />
+Website Builder
+<phrase key="top-banner-image-email" />
+Email
+<phrase key="top-banner-monthly-price" />
+<span class="orange"><span class="price">{0}</span>/mo*</span>
+<phrase key="support-promo-text-normal" />
+Need help? Call anytime.
+<phrase key="support-promo-text-emphasized" />
+Our free, award-winning support is here day and night.
+<phrase key="team-promo-text-headline" />
+Team up with the best.
+<phrase key="team-promo-text-content" />
+GoDaddy has over 57 million domains under management, more than anyone on the planet. Microsoft builds the tools that every successful company relies on. With us powering your business, there's no limit to what you can do.
+<phrase key="get-started-banner-headline" />
+Three products. One year.
+<phrase key="get-started-banner-only-price" />
+Only <span class="orange"><span class="price">{0}</span>/mo*</span>
+<phrase key="get-started-banner-up-to-price" />
+<span class="original-price">{0}</span>/mo
+<phrase key="get-started-banner-get-started" />
+Get Started
+<phrase key="disclaimer-modal-title" />
+Disclaimers
+<phrase key="disclaimer-modal-content" />
+Special offer pricing valid for first year only. Offer includes one .COM, .CO, .NET, or .ORG domain, plus Website Builder Personal Plan and Email Starter Package. Plus ICANN fee of [@T[currencyprice:<price usdamount="0018" /> ]@T]/year. Cannot be used in conjunction with any other offer, sale, discount or promotion. After initial one year purchase term, products purchased through this offer will automatically renew individually at the then-current rate. Bundle renewal price with .com after first year is <span class="original-price">{0}</span>/mo. You may cancel automatic renewal at any time in your GoDaddy account. Offer valid for U.S. residents only.
+<phrase key="disclaimer-modal-link" />
+Click here for product disclaimers and legal policies.
+<phrase key="renewal-price-disclaimer" />
+*Price valid for first year only. 
+<phrase key="see-offer-details" />
+See offer details.
+<phrase key="included-product-domain-title" />
+Your Domain
+<phrase key="included-product-domain-headline" />
+Give your business a unique, memorable address online.
+<phrase key="included-product-domain-details-bullet1" />
+Choose from classic domains like .com, .net and .org.
+<phrase key="included-product-domain-details-bullet2" />
+We manage over 57 million domains. We'll take care of yours, too.
+<phrase key="included-product-wsb-title" />
+Your Website
+<phrase key="included-product-wsb-headline" />
+Easily create your own professional website.
+<phrase key="included-product-wsb-details-bullet1" />
+Simple and intuitive - no technical skills required.
+<phrase key="included-product-wsb-details-bullet2" />
+Choose from a library of customizable designs.
+<phrase key="included-product-wsb-details-bullet3" />
+Includes free hosting.
+<phrase key="included-product-email-title" />
+Your Email
+<phrase key="included-product-email-headline" />
+Promote your business with every message you send.
+<phrase key="included-product-email-details-bullet1" />
+Get an address that's built on your domain.
+<phrase key="included-product-email-details-bullet2" />
+Keep your email, calendar and contacts in-sync across all your devices.
+<phrase key="included-product-wraparound-text" />
+Get all three for just <span class="price">{0}</span>/mo*!
+<phrase key="microsoft" />
+Microsoft
+<phrase key="search-title" />
+First, let's find a domain name for your site.
+<phrase key="search-is-available" />
+Oh ya! <strong class="searched-domain">{0}</strong> is available.
+<phrase key="search-not-available" />
+Sorry, <strong class="searched-domain">{0}</strong> is not available.
+<phrase key="search-again" />
+or search again
+<phrase key="checkout-now" />
+Checkout Now
+<phrase key="domain-search-placeholder" />
+Enter a domain name
+<phrase key="start-here" />
+Start here
+<phrase key="try-again" />
+Try again
+<phrase key="search" />
+Search
+<phrase key="domain-is-invalid" />
+Invalid character(s) error.
+<phrase key="twitter-site" />
+@GoDaddy
+<phrase key="twitter-title" />
+A 'Suite' Deal to Get Online
+<phrase key="twitter-description" />
+Business Email, Domain, and Web Builder Software
+<phrase key="powered-by" />
+Powered by Microsoft Office 365
+<phrase key="bundle-renewal-com" />
+Bundle renewal price with .com after first year
