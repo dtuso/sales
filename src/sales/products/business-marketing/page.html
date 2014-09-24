@@ -1030,6 +1030,8 @@ assetPath: false
     locuPage.redirectUrl ='[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]';
   ##endif
 
+  {% jsminify %}
+
   $(document).ready(function(){
 
     // WIRE UP CI CODE TRACKING
@@ -1126,6 +1128,7 @@ assetPath: false
       window.location = locuPage.redirectUrl;
     });          
   }
+  {% endjsminify %}
 </script>
 <!-- end-js-elevate -->
 {% endblock %}
