@@ -439,17 +439,16 @@ Enter a <b>Domain Name</b>
 .wiki 
 <phrase key="VegasHeader" />
 .vegas
+<phrase key="SolutionsHeader" />
+.solutions
 <phrase key="MainBannerCarouselSlide2TextNinja" />
 Show off your <strong>.ninja</strong> skills
 <phrase key="MainBannerCarouselSlide3TextEmail" />
 <strong>.email</strong> delivers
-
 <phrase key="PreRegisterNow" />
 Pre-register now
 <phrase key="RegisterNow" />
 Register now
-
-
 <phrase key="MainBannerCarouselSlideTextUno"  comments="DO NOT TRANSLATE" />
 <strong>.uno</strong> El Internet en Español.
 <phrase key="MainBannerCarouselSlideTextUnoWithNoTld" comments="DO NOT TRANSLATE"/>
@@ -461,7 +460,7 @@ Reach tourists 24/7 with <strong>.vegas</strong>
 <phrase key="MainBannerCarouselSlideText1Vegas"/>
 What happens in <strong>.vegas</strong> can happen anywhere
 <phrase key="MainBannerCarouselSlideTextNyc"/>
-Start spreading the news! <strong>.nyc</strong> is here.
+<strong>.nyc</strong> domains now available for New York City. 
 <phrase key="MainBannerCarouselSlideTextServices"/>
 Promote your <strong>.services</strong> on the web
 <phrase key="MainBannerCarouselSlideTextTax"/>
@@ -472,3 +471,7 @@ Court 8 million shoppers with <strong>.london</strong>
 <strong>.email</strong> delivers
 <phrase key="MainBannerCarouselSlideTextReviews"/>
 Be the go-to source with <strong>.reviews</strong>
+<phrase key="MainBannerCarouselSlideTextSolutions"/>
+They have problems. You have <strong>.solutions</strong>
+<phrase key="MainBannerCarouselSlideText1Website"/>
+<strong>.website</strong> is your home online.

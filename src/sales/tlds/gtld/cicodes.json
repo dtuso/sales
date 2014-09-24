@@ -84,10 +84,16 @@
           { "Description" : ".SOLUTIONS Slide Link" }
         ]
       },
-      { ".REVIEWS Slide Link" : [
-          { "ITC ID" : "" },
-          { "ITC Code" : "GtldEoiReviewsLink" },
-          { "Description" : ".REVIEWS Slide Link" }
+      { ".WEBSITE Slide Link" : [
+          { "ITC ID" : "93501" },
+          { "ITC Code" : "GtldEoiWebsiteLink" },
+          { "Description" : ".WEBSITE Slide Link" }
+        ]
+      },
+      { ".SOLUTIONS Slide Link" : [
+          { "ITC ID" : "89732" },
+          { "ITC Code" : "GtldEoiSolutionsLink" },
+          { "Description" : ".SOLUTIONS Slide Link" }
         ]
       }
     ],
