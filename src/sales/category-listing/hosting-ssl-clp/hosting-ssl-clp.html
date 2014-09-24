@@ -1,7 +1,7 @@
 ---
 location: sales/hosting.aspx
-id: 541c73e7f778fc14545dc85d
-name: GCE-27287
+id: 54204a5af778fc21449d243a
+name: GCE-29132
 comments: Hosting and SSL - Category Listing Page
 ---
 {% extends 'layouts/base.html' %} 
@@ -18,8 +18,8 @@ comments: Hosting and SSL - Category Listing Page
     <div class="l-main-container container main-banner-content">
       <div>
         <h1 class="category-title hnb-24-cond-bold-white text-uppercase">[@L[cds.sales/gd/category-listing/hosting-ssl:category-title]@L]</h1>
-        <p class="category-subtitle hnb-45-thin-white">[@L[cds.sales/gd/category-listing/hosting-ssl:category-subtitle-1]@L]</p>
-        <p class="category-subtitle-2 hnb-18-reg-white">[@L[cds.sales/gd/category-listing/hosting-ssl:category-subtitle-2]@L] <b>[@L[cds.sales/gd/category-listing/hosting-ssl:category-subtitle-3]@L]</b></p>
+        <p class="category-subtitle hnb-45-thin-white">[@L[cds.sales/gd/category-listing/hosting-ssl:category-subtitle]@L]</p>
+        <p class="category-subtitle-2 hnb-18-reg-white"></p>
       </div>
     </div>
   </section>
@@ -344,6 +344,9 @@ comments: Hosting and SSL - Category Listing Page
 
     $('.cursor-pointer').scrollToSection();
     $('.isToolTip').tooltip({ placement: 'top', html: true});
+
+    $('.category-subtitle-2').html($('.category-subtitle .category-subtitle-two').html());
+    $('.category-subtitle').html($('.category-subtitle .category-subtitle-one').text());    
 
     outerHeightadj = !(window.mozInnerScreenX == null) ? -1 : 0;
     categoryMenuOuterHeight = Math.abs($('.category-menu').outerHeight() + outerHeightadj) * -1;
