@@ -1,6 +1,6 @@
 ---
 location: sales/products/business-marketing.aspx
-id: false
+id: 542427def778fc26c89ef526
 name: GCE-27850
 comments: Redesign of landing page (take 2)
 url: http://www.dev-godaddy.com/products/business-marketing.aspx
@@ -121,6 +121,7 @@ assetPath: false
     }
     span.save-percentage,
     span.renewal-price {
+      display: none;
       color: #ff8914;
       font-weight: 300;
       font-size: 16px;
@@ -205,16 +206,8 @@ assetPath: false
         </div>
       </div>
       <div class="row center-text">
-        <p class="pricing">
-          <span class="normal-price">[@L[cds.sales/gd/products/business-marketing:as-low-as]@L]</span>
-          <span class="normal-price">[@T[productprice:<current productid="37975" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T][@L[cds.sales/gd/products/business-marketing:per-mo]@L]</span> 
-        ##if(productHasSavingsMoreThan(37975, 37990, 0))
-          <span class="renewal-price"> <strike>[@T[productprice:<current productid="37990" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T][@L[cds.sales/gd/products/business-marketing:per-mo]@L]</strike>* </span>
-        </p>
-        <p class="inline-disclaimer renewal-price">*[@L[cds.sales/gd/products/business-marketing:current-renewal-price]@L]</p>
-        ##else
-        </p>
-        ##endif
+        <p class="pricing">[@L[cds.sales/gd/products/business-marketing:pricing-text]@L]</p>
+        <p class="inline-disclaimer">*[@L[cds.sales/gd/products/business-marketing:current-renewal-price]@L]</p>
       </div>
     </div>
   </section>
@@ -1037,6 +1030,10 @@ assetPath: false
     // WIRE UP CI CODE TRACKING
     setupCiCodeTracking();
 
+    // PRICING
+    setPricing('.main-banner-business-marketing'); // CTA bar
+    setPricing('#plans'); // plan tiers
+
     // ADD TO CART
     activateGetStartedBtn('#get-started-btn-1');
     activateGetStartedBtn('#get-started-btn-2');
@@ -1048,6 +1045,23 @@ assetPath: false
     activateSlides('#customer-slider');
 
   });
+
+  function setPricing(selector) {
+
+    var currentPrice = '[@T[productprice:<current productid="37987" period="monthly"></current>]@T]',
+      renewalPrice = '[@T[productprice:<current productid="37990" period="monthly"></current>]@T]',
+      savePercentage = '[@T[productcompare:<percent primaryproductid="37987" secondaryproductid="37990" hidebelow="1" showsymbol="true"><html><![CDATA[{0}]]></html></percent>]@T]';
+
+    var $pricing = $(selector + ' p.pricing');
+    tokenizeThis($pricing, [currentPrice, renewalPrice, savePercentage]);
+    $pricing.show();
+    
+    var onSale = currentPrice !== renewalPrice;
+    if(onSale) {
+      $(selector + ' p.pricing span.renewal-price').show();
+    }
+
+  }
 
   var setupCiCodeTracking = function(){
     $('[data-ci]').on('click',function(e){
