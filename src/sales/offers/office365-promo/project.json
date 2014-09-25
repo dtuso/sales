@@ -1,0 +1,33 @@
+{
+  "page.html": {
+    "cdsDetails": {
+      "champion": {
+        "name": "",
+        "email": ""
+      }
+    },
+    "metaTitle": "[@L[cds.sales/offers/office365-offer:page-title]@L]",
+    "metaDescription": "[@L[cds.sales/offers/office365-offer:meta-description]@L]",
+    "metaKeywords": "[@L[cds.sales/offers/office365-offer:meta-keywords]@L]",
+    "metaCanonicalPath": "/offers/office365-offer.aspx",
+    "metaOgTitle": "[@L[cds.sales/offers/office365-offer:og-title]@L]",
+    "metaOgImage": "fos/sales/themes/scotty/offers/office365-offer/img/og_got_1200x630.jpg",
+    "metaOgDescription": "[@L[cds.sales/offers/office365-offer:og-description]@L]"
+  },
+  "page.language": {
+    "cdsDetails": {
+      "champion": {
+        "name": "",
+        "email": ""
+      }
+    }
+  },
+  "rules.config": {
+    "cdsDetails": {
+      "champion": {
+        "name": "",
+        "email": ""
+      }
+    }
+  }
+}
