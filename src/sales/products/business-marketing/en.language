@@ -1,6 +1,6 @@
 ---
 location: localization/sales/gd/products/business-marketing/en
-id: 54176fd6f778fc205c2b5c32
+id: 542427fbf778fc26c89ef527
 name: GCE-27850
 comments: Redesign of landing page (take 2)
 ---
@@ -25,6 +25,8 @@ Showcase your business on top sites across the Web like Google, Yelp and Foursqu
 Get Started
 <phrase key="get-free-report" />
 Get Free Report
+<phrase key="pricing-text" comment="replacement 0 and 1 are prices, 2 is percentage" />
+As low as <span class="normal-price">{0}/mo</span> <span class="renewal-price"><strike>{1}/mo</strike>*</span> <span class="save-percentage">Save {2}</span>
 <phrase key="as-low-as" />
 As low as
 <phrase key="per-mo" />
