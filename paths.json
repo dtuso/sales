@@ -46,5 +46,6 @@
   "wsb":                "./hosting/website-builder/",
   "hostingclp":         "./hosting/category-landing-page/",
   "ssl-lp":             "./ssl/ssl-lp/",
-  "web-host":           "./hosting/web-host/"
+  "web-host":           "./hosting/web-host/",
+  "shared":             "./shared/"
 }
