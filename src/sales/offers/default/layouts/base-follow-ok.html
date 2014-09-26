@@ -9,12 +9,12 @@
 
   <head>
 
-
-      <meta charset="utf-8" />
-      {% block pageTitle %}<title>{{ metaTitle }}</title>{% endblock %}
-      {% block pageDescription %}<meta name="description" content="{{ metaDescription }}" />{% endblock %}
-      {% block pageKeywords %}<meta name="keywords" content="{{ metaKeywords }}" />{% endblock %}
-      {% block metahead %}
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    {% block pageTitle %}<title>{{ metaTitle }}</title>{% endblock %}
+    {% block pageDescription %}<meta name="description" content="{{ metaDescription }}" />{% endblock %}
+    {% block pageKeywords %}<meta name="keywords" content="{{ metaKeywords }}" />{% endblock %}
+    {% block metahead %}
 
       <!-- Facebook Open Graph Meta Data -->
       <meta property="og:title" content="{{ metaOgTitle }}" />

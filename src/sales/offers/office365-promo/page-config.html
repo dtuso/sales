@@ -19,56 +19,191 @@ assetPath: false
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
-  <title>[@L[cds.sales/business/office-365-config:cp-8-MicrosoftOffice365BoostProductivityVirtuallyAnywhereGoDaddy]@L]</title>
-  <meta name="description" content="[@L[cds.sales/business/office-365-config:cp-36-MSOffice365IsEasyToSetUp]@L]" />
-  <meta name="keywords" content="[@L[cds.sales/business/office-365-config:cp-18-Office365MicrosoftOffice365Office365Pricing]@L]" />
+  <title>[@L[cds.sales/offers/office365-promo-config:page-title]@L]</title>
+  <meta name="description" content="[@L[cds.sales/offers/office365-promo-config:meta-description]@L]" />
+  <meta name="keywords" content="[@L[cds.sales/offers/office365-promo-config:meta-keywords" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta property="og:title" content="Get more done with Microsoft Office 365 from GoDaddy" />
+  <meta property="og:title" content="[@L[cds.sales/offers/office365-promo-config:og-title]@L]" />
   <meta property="og:type" content="product" />
   <meta property="og:url" content="[@T[link:<external linktype='siteurl' path='/business/office-365-config.aspx' parammode='explicit'/>]@T]" />
   <meta property="og:image" content="[@T[link:<imageroot />]@T]fos/office365/img/open-graph_20140115.png" />
-  <meta property="og:site_name" content="GoDaddy" />
-  <meta property="fb:app_id" content="123221524357549" />
-  <meta property="fb:admins" content="633356800" />
-  <meta property="og:description" content="Work anywhere with professional email and productivity tools that are always accessible and in sync. Manage your email, schedule, contacts, even your documents on any device. And if you ever have questions, you can call our award-winning support anytime, day or night, and talk to a real person." />
+  <meta property="og:site_name" content="[@T[companyname:name]@T]" />
+  <meta property="fb:app_id" content="{{ metaOgAppID }}" />
+  <meta property="fb:admins" content="{{ metaOgAdmins }}" />
+  <meta property="og:description" content="[@L[cds.sales/offers/office365-promo-config:og-description]@L]" />
   
-  <meta http-equiv="content-language" content="[@T[localization:<language full="true" />]@T]" />
-  <link href="[@T[link:<cssroot />]@T]fos/201401/global/css/global.min.css" rel="stylesheet" type="text/css">
-
   <link rel="shortcut icon" href="[@T[link:<imageroot />]@T]assets/godaddy.ico" />
-  <link href="[@T[link:<cssroot />]@T]fos/201401/global/css/global.min.css" rel="stylesheet" type="text/css">
+  <link rel="canonical" href="[@T[link:<external linktype='siteurl' path='{{ metaCanonicalPath }}' parammode='explicit'/>]@T]"/>
+
+  <!-- Global CSS and Page CSS -->
+
+  <link href="[@T[link:<css path='fos/201401/global/css/{{ cssVersion }}/combined-{{ cssVersion }}.css' />]@T]" rel="stylesheet" type="text/css">
+  {% if assetPath %}
+  <link href="[@T[link:<css path='{{ assetPath }}css/styles.css' />]@T]{% if cssVersionOverride %}?v={{cssVersionOverride}}{% endif %}" rel="stylesheet" type="text/css">
+  {% endif %}
+  <!-- IE SUPPORT FOR HTML5 and Bootstrap 3 -->
+  <!--[if lt IE 9]>
+    <link href="[@T[link:<cssroot />]@T]fos/201401/global/css/bootstrap-ie7fix.min.css" rel="stylesheet" type="text/css" />
+    <script src="[@T[link:<javascriptroot />]@T]fos/201401/global/js/html5shiv.js"></script>
+  <![endif]-->
+
   <script src="[@T[link:<javascriptroot />]@T]fos/201401/global/vendor/jquery/1.8.3/jquery.min.js"></script>
-  <!--[if lt IE 9]>
-  <script src="[@T[link:<javascriptroot />]@T]fos/201401/global/js/html5shiv.js"></script>
-  <![endif]--> 
-    
-  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-  <!-- build:css(app) /css/main.css -->
-  <link rel="stylesheet" href="[@T[link:<cssroot />]@T]fos/office365/_bower_components/bootstrap3-godaddy/index.css" />
-  <link rel="stylesheet" href="[@T[link:<css path='fos/office365/css/main.20140421.css' /> ]@T]" /> 
-  <link rel="canonical" href="[@T[link:<external linktype='siteurl' path='/business/office-365-config.aspx' parammode='explicit'/>]@T]"/> 
-  <!--[if lt IE 8]>
-        <link rel="stylesheet" href="/_bower_components/bootstrap-ie7fix/css/bootstrap-ie7fix.min.css" />
-    <![endif]-->
-  <!-- endbuild -->
+  <script>
+    if (typeof $.fn.universalModal == "undefined") {
 
-  <!-- build:js(app) /js/head-scripts.js -->
-  <!-- Replace with a custom modernizer build for production -->
-  <script src="[@T[link:<javascriptroot />]@T]fos/office365/_bower_components/modernizr/modernizr.js"></script>
-  <!--[if lt IE 9]>
-        <script src="/js/vendor/respond.js"></script>
-    <![endif]-->
-  <!--[if gte IE 9]>
-  <style type="text/css">
-    .gradient {
-       filter: none;
+      $.fn.universalModal = function (options) {
+        var _class_universal_modal_wrap = 'universal-modal-wrap';
+        var _class_universal_modal_overlay = 'universal-modal-overlay';
+        var _class_universal_modal_close = 'universal-modal-close';
+        var _class_universal_modal_close_icon = 'universal-close-icon';
+        //<a id="universallogin-modal-close" class=" +  + " href="#"><span>Close</span></a>
+
+        var _html_universal_modal_wrap = '<div class="' + _class_universal_modal_wrap + '" style="margin: auto;position: fixed !important;padding: 20px;border: 2px solid #D2D2D2;min-height: 50px;z-index: 9999;max-width: 1000px;background-color: white;margin-bottom: 66px;overflow: hidden;box-shadow: 5px 5px 0 rgba(0, 0, 0, .1);-webkit-box-shadow: 5px 5px 0 rgba(0, 0, 0, .1);-moz-box-shadow: 5px 5px 0 rgba(0, 0, 0, .1);"></div>';
+        var _html_universal_modal_close = '<a class="' + _class_universal_modal_close + ' ' + _class_universal_modal_close_icon + '"></a>';
+        var _html_universal_modal_overlay = '<div class="' + _class_universal_modal_overlay + '" style="filter: alpha(opacity=80);opacity: .8;background-color: #FFFFFF;top: 0;left: 0;width: 100%;height: 100%;position: fixed !important;z-index:9998;-webkit-filter: blur(15px);-moz-filter: blur(15px);-o-filter: blur(15px);-ms-filter: blur(15px);filter: blur(15px);"></div>';
+
+        var _event_modal_resize = 'resize.universalModal';
+        var _event_modal_scroll = 'scroll.universalModal';
+        var _event_modal_click = 'click.universalModal';
+        var _event_modal_keyup = 'keyup.universalModal';
+
+        var _options = $.extend({
+          header: '',
+          close: false,
+          onClose: null,
+          width: null,
+          resize: false,
+          bindClose: true
+        }, options || {});
+
+        var body = $('body');
+        var me = $(this);
+
+        var _closeModal = function () {
+          me.hide();
+          me.unwrap();
+          body.css('overflow', 'inherit');
+          $('.' + _class_universal_modal_overlay).remove();
+          $('.' + _class_universal_modal_close).remove();
+          $('.' + _class_universal_modal_close_icon).remove();
+          if (_options.onClose != null) {
+            _options.onClose();
+          }
+          $('.g-tt-close').click();
+        };
+
+        var _resizeModal = function () {
+          var windowHeight = $(window).height();
+          var windowWidth = $(window).width();
+
+          wrap.css('max-height', windowHeight - 15);
+          me.css({ 'max-height': windowHeight - 45, 'overflow': 'auto' });
+
+          if (me.find('.universal-modal-buttonpane').length > 0) {
+            me.css('margin-bottom', '66px');
+               
+          }
+
+          if (wrap.find('.modal-content-wrapper').length > 0) {
+             $(".modal-content-wrapper").css({'max-height':windowHeight-115,'margin-bottom':"70px","overflow":"auto"});
+               
+          }
+
+          wrap.offset({
+            top: $(document).scrollTop() + ((windowHeight / 2) - (wrap.outerHeight() / 2)),
+            left: $(document).scrollLeft() + ((windowWidth / 2) - (wrap.outerWidth() / 2))
+          });
+        };
+
+        var $window = $(window);
+        $window.unbind(_event_modal_resize);
+        $window.unbind(_event_modal_scroll);
+        body.unbind(_event_modal_keyup);
+        body.append(_html_universal_modal_overlay);
+
+        if (!_options.close) {
+          body.css('overflow', 'hidden');
+          me.wrap(_html_universal_modal_wrap);
+          me.show();
+
+          var wrap = $('.' + _class_universal_modal_wrap);
+          var overlay = $('.' + _class_universal_modal_overlay);
+          wrap.prepend(_html_universal_modal_close);
+          overlay.offset({ top: $(document).scrollTop(), left: $(document).scrollLeft() });
+          wrap.offset({ left: 0 });
+
+          if (_options.width != null) {
+            wrap.css('width', _options.width + 'px');
+
+
+          }
+
+          _resizeModal();
+
+          //window resize
+          $window.bind(_event_modal_resize, function () {
+            _resizeModal();
+          });
+
+          //close button
+          if (_options.bindClose) {
+            $('.' + _class_universal_modal_close).bind(_event_modal_click, function () {
+              _closeModal();
+            });
+          }
+
+          //window scroll
+          $window.bind(_event_modal_scroll, function () {
+            $('.' + _class_universal_modal_overlay).offset({ top: $(document).scrollTop() });
+          });
+
+          //esc key
+          body.bind(_event_modal_keyup, function (e) {
+            if (e.which === 27) {
+              _closeModal();
+            }
+          });
+
+          //IE HACK
+          var test = document.createElement('input');
+          var placeholderIsSupported = ('placeholder' in test);
+          if (!placeholderIsSupported) {
+            $window.resize();
+          }
+        } else if (_options.resize) {
+          $(window).resize();
+        } else {
+          _closeModal();
+        }
+      };
     }
-  </style>
-<![endif]-->
-  <!-- endbuild -->
-  <script src="[@T[link:<javascriptroot />]@T]fos/office365/js/modal-fix.js"></script>
+  </script>
+
   [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags" />]@P]
+
+
+  <link rel="stylesheet" href="[@T[link:<css path='fos/office365/css/main.20140421.css' /> ]@T]" /> 
+  <style>
+  {% less %}
+
+    @imgPath : '[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/offers/office365-promo-config/img/';
+    
+    #config .config-step {width:657px;}
+
+    .product-price-original-amount {
+      text-decoration: line-through;
+      color:#999;
+    }
+    #config .product-added-to-cart-text {
+      top:-4px;left:-10px;}
+    #config .config-step h2,
+    #config .config-step h3.product-name {
+      color: #505050;}
+    
+
+  {% endless %}
+  </style>
  
 </head>
 
@@ -85,124 +220,51 @@ assetPath: false
         <div class="row">
           <div class="col-xs-12">
             <div class="config-continue-to-cart-wrapper-top">
-              <p class="product-added-to-cart"><span class="green-check"></span><span class="product-added-to-cart-text">[@L[cds.sales/business/office-365-config:cp-8-MicrosoftOffice365IsInYourCart]@L]</span>
+              <p class="product-added-to-cart"><span class="green-check"></span><span class="product-added-to-cart-text">[@L[cds.sales/offers/office365-promo-config:PopIsInYourCart]@L]</span>
               </p>
-             <p class="config-continue-to-cart"><span class="icon-arrow-right"></span><a class="js-addtocart" data-ci="86436" href="javascript:void(0)">[@L[cds.sales/business/office-365-config:cp-3-ContinueToCart]@L]</a></p>
+             <p class="config-continue-to-cart"><span class="icon-arrow-right"></span><a class="js-addtocart" data-ci="111" href="javascript:void(0)">[@L[cds.sales/offers/office365-promo-config:cp-3-ContinueToCart]@L]</a></p>
             </div>
           </div>
           <div class="config-steps-wrapper">
-            <div style="display:none;" id="zeroUsersWarning" class="zero-user-warning"><span class="zero-user-warning-triangle-icon"></span><span class="zero-user-warning-close-icon"></span>[@L[cds.sales/business/office-365-config:cp-15-YouMustAddAtLeastOneOffice365]@L]</div>
+            <div style="display:none;" id="zeroUsersWarning" class="zero-user-warning"><span class="zero-user-warning-triangle-icon"></span><span class="zero-user-warning-close-icon"></span>[@L[cds.sales/offers/office365-promo-config:cp-15-YouMustAddAtLeastOneOffice365]@L]</div>
             <div class="config-step large-margin-top-step">
-              <span class="step-ribbon blue-step-ribbon"><span class="step-number-text">[@L[cds.sales/business/office-365-config:cp-2-Step1]@L]</span> | [@L[cds.sales/business/office-365-config:cp-4-AddOffice365Users]@L]</span>
-              <h2><span class="office-365-logo"></span>
-            <br/>[@L[cds.sales/business/office-365-config:cp-3-AddYourUsers]@L]</h2>
-              <p class="config-lead orange-text">[@L[cds.sales/business/office-365-config:cp-14-KeepYourBusinessRunningSmoothlyAddPlansFor]@L]</p>
-              <div class="config-product-wrapper" data-planLevel="Economy" style="display: none;">
+              <span class="step-ribbon blue-step-ribbon"><span class="step-number-text">[@L[cds.sales/offers/office365-promo-config:cp-2-Step1]@L]</span> | [@L[cds.sales/offers/office365-promo-config:cp-4-AddOffice365Users]@L]</span>
+              <h2>
+                <span class="office-365-logo"></span>
+                <br/>[@L[cds.sales/offers/office365-promo-config:cp-3-AddYourUsers]@L]
+              </h2>
+              <p class="config-lead orange-text">[@L[cds.sales/offers/office365-promo-config:cp-14-KeepYourBusinessRunningSmoothlyAddPlansFor]@L]</p>              
+              <div class="config-product-wrapper config-product-last" data-planLevel="Premium" >
                 <div class="config-product-wide">
-                  <h3 class="product-name">[@L[cds.sales/business/office-365-config:cp-6-EmailEssentialsPoweredByOffice365]@L]</h3>
-                  <div class="orange-text product-price"><span class="product-price-amount js-product-price-amount0"></span>  <span class="product-price-text">[@L[cds.sales/business/office-365-config:cp-3-PerUserMonth]@L]</span>
+                  <h3 class="product-name">[@L[cds.sales/offers/office365-promo-config:pop]@L]</h3>
+                  <div class="orange-text product-price">
+                    [@L[cds.sales/offers/office365-promo-config:price-per-user-per-year]@L]                    
                   </div>
                   <ul>
-                    <li>[@L[cds.sales/business/office-365-config:cp-4-5GBEmailStorage]@L]</li>
-                    <li>[@L[cds.sales/business/office-365-config:cp-5-2GBCloudFileStorage]@L]</li>
+                    <li>[@L[cds.sales/offers/office365-promo-config:cp-4-50GBEmailStorage]@L]</li>
+                    <li>[@L[cds.sales/offers/office365-promo-config:cp-5-25GBCloudFileStorage]@L]</li>
+                    <li>[@L[cds.sales/offers/office365-promo-config:cp-4-UnlimitedHDVideoConferencing]@L]</li>
+                    <li>[@L[cds.sales/offers/office365-promo-config:cp-5-MicrosoftOffice365WebApps]@L]</li>
+                    <li>[@L[cds.sales/offers/office365-promo-config:cp-5-MicrosoftOfficeInstallsOnUpTo5Devices]@L]</li>
+                    <li>[@L[cds.sales/offers/office365-promo-config:bullet-up-to-five]@L]</li>
                   </ul>
                 </div>
                 <div class="config-product-narrow">
-                  <input type="text" data-increment-input='{"min":0,"max":25,"limitText":"[@L[cds.sales/business/office-365-config:cp-4-UpToMax]@L]","extendedMax":99}' value="0" class="product-quantity" />
+                ##if(isManager())
+                  <input type="text" data-increment-input='{"min":1,"max":300,"limitText":"[@L[cds.sales/offers/office365-promo-config:cp-4-UpToMax]@L]"}' value="1" class="product-quantity" />
+                ##else
+                  <input type="text" data-increment-input='{"min":1,"max": 25,"limitText":"[@L[cds.sales/offers/office365-promo-config:cp-4-UpToMax]@L]"}' value="1" class="product-quantity" />
+                ##endif
 
                 </div>
               </div>
               <!-- /End Product -->
-              <div class="config-product-wrapper" data-planLevel="Business" style="display: none;">
-                <div class="config-product-wide">
-                  <h3 class="product-name">[@L[cds.sales/business/office-365-config:cp-6-BusinessEssentialsPoweredByOffice365]@L]</h3>
-                  <div class="orange-text product-price"><span class="product-price-amount js-product-price-amount1"></span>  <span class="product-price-text">[@L[cds.sales/business/office-365-config:cp-3-PerUserMonth]@L]</span>
-                  </div>
-                  <ul>
-                    <li>[@L[cds.sales/business/office-365-config:cp-4-50GBEmailStorage]@L]</li>
-                    <li>[@L[cds.sales/business/office-365-config:cp-5-25GBCloudFileStorage]@L]</li>
-                    <li>[@L[cds.sales/business/office-365-config:cp-4-UnlimitedHDVideoConferencing]@L]</li>
-                    <li>[@L[cds.sales/business/office-365-config:cp-5-MicrosoftOffice365WebApps]@L]</li>
-                  </ul>
-                </div>
-                <div class="config-product-narrow">
-                  <input type="text" data-increment-input='{"min":0,"max":25,"limitText":"[@L[cds.sales/business/office-365-config:cp-4-UpToMax]@L]","extendedMax":99}' value="0" class="product-quantity" />
-
-                </div>
-              </div>
-              <!-- /End Product -->
-              <div class="config-product-wrapper config-product-last" data-planLevel="Premium" style="display: none;">
-                <div class="config-product-wide">
-                  <h3 class="product-name">[@L[cds.sales/business/office-365-config:cp-6-ProductivityPlusPoweredByOffice365]@L]</h3>
-                  <div class="orange-text product-price"><span class="product-price-amount js-product-price-amount2"></span>  <span class="product-price-text">[@L[cds.sales/business/office-365-config:cp-3-PerUserMonth]@L]</span>
-                  </div>
-                  <ul>
-                    <li>[@L[cds.sales/business/office-365-config:cp-4-50GBEmailStorage]@L]</li>
-                    <li>[@L[cds.sales/business/office-365-config:cp-5-25GBCloudFileStorage]@L]</li>
-                    <li>[@L[cds.sales/business/office-365-config:cp-4-UnlimitedHDVideoConferencing]@L]</li>
-                    <li>[@L[cds.sales/business/office-365-config:cp-5-MicrosoftOffice365WebApps]@L]</li>
-                    <li>[@L[cds.sales/business/office-365-config:cp-5-MicrosoftOfficeInstallsOnUpTo5Devices]@L]</li>
-                  </ul>
-                </div>
-                <div class="config-product-narrow">
-                  <input type="text" data-increment-input='{"min":0,"max":25,"limitText":"[@L[cds.sales/business/office-365-config:cp-4-UpToMax]@L]","extendedMax":99}' value="0" class="product-quantity" />
-
-                </div>
-              </div>
-              <!-- /End Product -->
-              ##if(splitTestingSideIsActive(1174, A)) 
-              <div class="config-more-products-link">
-                <a data-ci="86696" href="#"><span class="icon-circle-plus"></span> [@L[cds.sales/business/office-365-config:cp-6-AddUsersToADifferentPlan]@L]</a>
-              </div>
-              ##endif
             </div>
             <div class="config-step-box-shadow"></div>
             <!-- / End Step 1 -->
-            ##if(splitTestingSideIsActive(1175, A)) 
-            <div data-ci="86698" class="config-step-break" data-scroll-event='{"obj":".js-step2","yoffset":"-30"}'>
-              <span class="icon-down"></span>
-            </div>
 
-            <div class="config-step medium-margin-top-step">
-              <span class="step-ribbon orange-step-ribbon js-step2"><span class="step-number-text">[@L[cds.sales/business/office-365-config:cp-2-Step2]@L]</span> | [@L[cds.sales/business/office-365-config:cp-4-ChooseYourPlanTerm]@L]</span>
-              <h2>[@L[cds.sales/business/office-365-config:cp-3-ExtendAndSave]@L]</h2>
-              <p class="lead">[@L[cds.sales/business/office-365-config:cp-14-LockInYourSavingsAndAvoidAnnualRenewals]@L]</p>
-              <div class="term-length-selector-wrapper">
-                <div class="term-length-selector">
-                  <select class="selectstyle js-duration" name="terms-selector">
-                    <option value="1">[@L[cds.sales/business/office-365-config:cp-2-1Month]@L]</option>
-                    <option value="12">[@L[cds.sales/business/office-365-config:cp-2-1Year]@L]</option>
-                    <option value="24">[@L[cds.sales/business/office-365-config:cp-2-2Years]@L]</option>
-                  </select>
-                </div>
-                <a class="btn btn-green js-update-duration">[@L[cds.sales/business/office-365-config:cp-1-Apply]@L]</a>
-              </div>
-            </div>
-            <div class="config-step-box-shadow"></div>
-            ##else
-            <div style="display: none" data-ci="86698" class="config-step-break" data-scroll-event='{"obj":".js-step2","yoffset":"-30"}'>
-              <span class="icon-down"></span>
-            </div>
-
-            <div style="display: none" class="config-step medium-margin-top-step">
-              <span class="step-ribbon orange-step-ribbon js-step2"><span class="step-number-text">[@L[cds.sales/business/office-365-config:cp-2-Step2]@L]</span> | [@L[cds.sales/business/office-365-config:cp-4-ChooseYourPlanTerm]@L]</span>
-              <h2>[@L[cds.sales/business/office-365-config:cp-3-ExtendAndSave]@L]</h2>
-              <p class="lead">[@L[cds.sales/business/office-365-config:cp-14-LockInYourSavingsAndAvoidAnnualRenewals]@L]</p>
-              <div class="term-length-selector-wrapper">
-                <div class="term-length-selector">
-                  <select class="selectstyle js-duration" name="terms-selector">
-                    <option value="1">[@L[cds.sales/business/office-365-config:cp-2-1Month]@L]</option>
-                    <option value="12">[@L[cds.sales/business/office-365-config:cp-2-1Year]@L]</option>
-                    <option value="24">[@L[cds.sales/business/office-365-config:cp-2-2Years]@L]</option>
-                  </select>
-                </div>
-                <a class="btn btn-green js-update-duration">[@L[cds.sales/business/office-365-config:cp-1-Apply]@L]</a>
-              </div>
-            </div>
-            <div class="config-step-box-shadow"></div>
-            ##endif
             <div class="config-continue-to-cart-wrapper">
-              <a data-ci="86437" class="btn btn-warning btn-lg js-addtocart"><span class="icon-shopping-cart"></span> [@L[cds.sales/business/office-365-config:cp-3-ContinueToCart-2]@L]</a>
+              <a data-ci="111" class="btn btn-warning btn-lg js-addtocart"><span class="icon-shopping-cart"></span> [@L[cds.sales/offers/office365-promo-config:cp-3-ContinueToCart-2]@L]</a>
             ##if(isManager())
               <form action="[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]" method="get" data-addtocart='[@T[link:<relative path="~/api/package" />]@T]'></form>
             ##else
@@ -211,119 +273,52 @@ assetPath: false
             </div>
           </div>
           <!-- / End Left Column -->
-          ##if(splitTestingSideIsActive(1176, A)) 
           <div class="config-cart-wrapper">
-            <div class="order-summary-wrapper" data-itemDetails='{"1usr":"[@L[cds.sales/business/office-365-config:cp-1-User]@L]","moreUsrs":"[@L[cds.sales/business/office-365-config:cp-1-Users]@L]","moTerm":"[@L[cds.sales/business/office-365-config:cp-2-MonthTerm]@L]","yrTerm":"[@L[cds.sales/business/office-365-config:cp-2-YearTerm]@L]"}'>
-              <h3>[@L[cds.sales/business/office-365-config:cp-2-OrderSummary]@L]</h3>
-              <div class="order-item" data-planLevel="Economy" style="display: none;">
-                <p class="order-item-title">[@L[cds.sales/business/office-365-config:cp-2-EmailEssentials]@L]</p>
-                <div class="order-item-details-wrapper">
-                  <span class="order-item-details"></span>
+            <div class="order-summary-wrapper" data-itemDetails='{"1usr":"[@L[cds.sales/offers/office365-promo-config:cp-1-User]@L]","moreUsrs":"[@L[cds.sales/offers/office365-promo-config:cp-1-Users]@L]","moTerm":"[@L[cds.sales/offers/office365-promo-config:cp-2-MonthTerm]@L]","yrTerm":"[@L[cds.sales/offers/office365-promo-config:cp-2-YearTerm]@L]"}'>
+              <h3>[@L[cds.sales/offers/office365-promo-config:cp-2-OrderSummary]@L]</h3>
+              <div class="order-item" data-planLevel="Premium" >
+                <p class="order-item-title">[@L[cds.sales/offers/office365-promo-config:cp-2-ProductivityPlus]@L]</p>
+                <div class="order-item-details-wrapper up-to-five">
+                  <span class="order-item-details">five</span>
                   <span class="order-item-total orange-text"><span class="currency-symbol"></span><span class="currency-amount"></span></span>
                 </div>
-              </div>
-              <div class="order-item" data-planLevel="Business" style="display: none;">
-                <p class="order-item-title">[@L[cds.sales/business/office-365-config:cp-2-BusinessEssentials]@L]</p>
-                <div class="order-item-details-wrapper">
-                  <span class="order-item-details"></span>
-                  <span class="order-item-total orange-text"><span class="currency-symbol"></span><span class="currency-amount"></span></span>
-                </div>
-              </div>
-              <div class="order-item" data-planLevel="Premium" style="display: none;">
-                <p class="order-item-title">[@L[cds.sales/business/office-365-config:cp-2-ProductivityPlus]@L]</p>
-                <div class="order-item-details-wrapper">
-                  <span class="order-item-details"></span>
+                <div class="order-item-details-wrapper six-and-up">
+                  <span class="order-item-details">six</span>
                   <span class="order-item-total orange-text"><span class="currency-symbol"></span><span class="currency-amount"></span></span>
                 </div>
               </div>
               <div class="order-total-wrapper">
-                <p class="order-item-title">[@L[cds.sales/business/office-365-config:cp-1-Subtotal]@L]</p>
+                <p class="order-item-title">[@L[cds.sales/offers/office365-promo-config:cp-1-Subtotal]@L]</p>
                 <div class="order-item-details-wrapper">
                   <span class="order-item-details order-user-quantity"></span>
-                  <span class="order-total"><span class="currency-amount" data-call-us="[@L[cds.sales/business/office-365-config:cp-2-CallUs]@L]">[@T[currencyprice:<price usdamount="0"  />]@T]</span></span>
+                  <span class="order-total"><span class="currency-amount" data-call-us="[@L[cds.sales/offers/office365-promo-config:cp-2-CallUs]@L]">[@T[currencyprice:<price usdamount="0"  />]@T]</span></span>
                 </div>
               </div>
             </div>
             <div class="subtotal-disclaimer">
-              <p>[@L[cds.sales/business/office-365-config:cp-6-SubtotalDoesNotIncludeApplicableTaxes]@L]</p>
+              <p>[@L[cds.sales/offers/office365-promo-config:cp-6-SubtotalDoesNotIncludeApplicableTaxes]@L]</p>
             </div>
-            <div data-ci="86697" class="scroll-down-wrapper" data-scroll-event='{"obj":".js-step2","yoffset":"-30"}'>
-              <p class="green-text">[@L[cds.sales/business/office-365-config:cp-6-ScrollDownToContinueToCart]@L]</p>
+            <div data-ci="111" class="scroll-down-wrapper" data-scroll-event='{"obj":"a.btn.js-addtocart","yoffset":"-120"}'>
+              <p class="green-text">[@L[cds.sales/offers/office365-promo-config:cp-6-ScrollDownToContinueToCart]@L]</p>
               <span class="icon-down green-down-arrow-icon"></span>
             </div>
           </div>
-        ##else
-          <div style="display: none" class="config-cart-wrapper">
-            <div class="order-summary-wrapper" data-itemDetails='{"1usr":"[@L[cds.sales/business/office-365-config:cp-1-User]@L]","moreUsrs":"[@L[cds.sales/business/office-365-config:cp-1-Users]@L]","moTerm":"[@L[cds.sales/business/office-365-config:cp-2-MonthTerm]@L]","yrTerm":"[@L[cds.sales/business/office-365-config:cp-2-YearTerm]@L]"}'>
-              <h3>[@L[cds.sales/business/office-365-config:cp-2-OrderSummary]@L]</h3>
-              <div class="order-item" data-planLevel="Economy" style="display: none;">
-                <p class="order-item-title">[@L[cds.sales/business/office-365-config:cp-2-EmailEssentials]@L]</p>
-                <div class="order-item-details-wrapper">
-                  <span class="order-item-details"></span>
-                  <span class="order-item-total orange-text"><span class="currency-symbol"></span><span class="currency-amount"></span></span>
-                </div>
-              </div>
-              <div class="order-item" data-planLevel="Business" style="display: none;">
-                <p class="order-item-title">[@L[cds.sales/business/office-365-config:cp-2-BusinessEssentials]@L]</p>
-                <div class="order-item-details-wrapper">
-                  <span class="order-item-details"></span>
-                  <span class="order-item-total orange-text"><span class="currency-symbol"></span><span class="currency-amount"></span></span>
-                </div>
-              </div>
-              <div class="order-item" data-planLevel="Premium" style="display: none;">
-                <p class="order-item-title">[@L[cds.sales/business/office-365-config:cp-2-ProductivityPlus]@L]</p>
-                <div class="order-item-details-wrapper">
-                  <span class="order-item-details"></span>
-                  <span class="order-item-total orange-text"><span class="currency-symbol"></span><span class="currency-amount"></span></span>
-                </div>
-              </div>
-              <div class="order-total-wrapper">
-                <p class="order-item-title">[@L[cds.sales/business/office-365-config:cp-1-Subtotal]@L]</p>
-                <div class="order-item-details-wrapper">
-                  <span class="order-item-details order-user-quantity"></span>
-                  <span class="order-total"><span class="currency-amount" data-call-us="[@L[cds.sales/business/office-365-config:cp-2-CallUs]@L]">[@T[currencyprice:<price usdamount="0"  />]@T]</span></span>
-                </div>
-              </div>
-            </div>
-            <div class="subtotal-disclaimer">
-              <p>[@L[cds.sales/business/office-365-config:cp-6-SubtotalDoesNotIncludeApplicableTaxes]@L]</p>
-            </div>
-            <div data-ci="86697" class="scroll-down-wrapper" data-scroll-event='{"obj":".js-step2","yoffset":"-30"}'>
-              <p class="green-text">[@L[cds.sales/business/office-365-config:cp-6-ScrollDownToContinueToCart]@L]</p>
-              <span class="icon-down green-down-arrow-icon"></span>
-            </div>
-          </div>
-        ##endif
-        </div>
+        </div><!-- row -->
+
         <!-- Page Disclaimer -->
-      <div id="disclaimers">
-        <p>
-          <a data-ci="86700" href="javascript:void(0);">[@L[cds.sales/business/office-365-config:cp-2-LegalDisclaimers]@L]</a>
-        </p>
-      </div>
+        <div id="disclaimers">
+          <p>
+            <a data-ci="111" href="javascript:void(0);">[@L[cds.sales/offers/office365-promo-config:cp-2-LegalDisclaimers]@L]</a>
+          </p>
+        </div>
         
-        
-      </div>
-      </div>
+      </div> <!-- config-container-fixer -->
       
     </section>
 
-    <!-- /End Config Content -->
-    
-     
-    
-    
-    <section class="customer-service-bar">
-      <div class="container config-container-fixer">
-        <div class="row">
-          <div class="col-xs-12">
-            <p class="customer-service-text"><span class="customer-service-need-help">[@L[cds.sales/business/office-365-config:cp-3-NeedHelp]@L]</span> [@L[cds.sales/business/office-365-config:cp-10-GoDaddy247AwardWinningSupportCall480]@L]
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+
   </div>
+
   <div id="exceedsMaxUsers" style="display:none;">
     <span class="modal-user-limit-header">[@L[cds.sales/business/office-365-config:cp-2-UserLimits]@L]</span>
     <p class="modal-user-limit-message">[@L[cds.sales/business/office-365-config:cp-30-ToSetUpMoreThan25UsersOn]@L]</p>
@@ -332,102 +327,636 @@ assetPath: false
     </div>
   </div>
 
-  <div id="zeroUsers" style="display:none;">
-    <span class="modal-user-limit-header">[@L[cds.sales/business/office-365-config:cp-2-UserLimits-2]@L]</span>
-    <p class="modal-user-limit-message">[@L[cds.sales/business/office-365-config:cp-15-YouMustAddAtLeastOneOffice365-2]@L]</p>
+  <div id="randomModal" style="display:none;">
+    <span class="modal-user-limit-header">[@L[cds.sales/offers/office365-promo-config:randomModal-title]@L]</span>
+    <p class="modal-user-limit-message">[@L[cds.sales/offers/office365-promo-config:randomModal-message]@L]</p>
     <div class="buttons-wrap">
-      <div class="modal-user-limit-ok flt-btn-grn">[@L[cds.sales/business/office-365-config:cp-1-OK-2]@L]</div>
+      <div class="modal-user-limit-ok flt-btn-grn">[@L[cds.sales/offers/office365-promo-config:randomModal-btn]@L]</div>
     </div>
   </div>
   
   <div id="disclaimerModal" style="display:none;">
     <div class="modal-content-wrapper">
-      <span class="modal-user-limit-header">[@L[cds.sales/business/office-365-config:cp-1-Disclaimers]@L]</span>
+      <span class="modal-user-limit-header">[@L[cds.sales/offers/office365-promo-config:cp-1-Disclaimers]@L]</span>
           
       <div class="modal-user-limit-message">
-        <p>[@L[cds.sales/business/office-365-config:cp-80-IncludesOffice365ProPlusForPCSWhich]@L]</p>
-        <p>[@L[cds.sales/business/office-365-config:cp-76-UsersCanConnectTheFollowingVersionsOfOutlook]@L]</p>
-        <p>[@L[cds.sales/business/office-365-config:cp-21-TheSkyDriveProSyncClientIsAvailableWith]@L]</p>
-        <p>[@L[cds.sales/business/office-365-config:cp-8-AnnualDiscountsAvailableOnNEWPurchasesOnly]@L]</p>
-        <p>[@L[cds.sales/business/office-365-config:cp-20-ProductsWillAutomaticallyRenewUntilCancelledYouMay]@L]</p>
-        <p>[@L[cds.sales/business/office-365-config:cp-19-ForMoreInformationSeeTheFullMicrosoftService]@L]</p>
+        <p>[@L[cds.sales/offers/office365-promo-config:cp-80-IncludesOffice365ProPlusForPCSWhich]@L]</p>
+        <p>[@L[cds.sales/offers/office365-promo-config:cp-76-UsersCanConnectTheFollowingVersionsOfOutlook]@L]</p>
+        <p>[@L[cds.sales/offers/office365-promo-config:cp-21-TheSkyDriveProSyncClientIsAvailableWith]@L]</p>
+        <p>[@L[cds.sales/offers/office365-promo-config:cp-8-AnnualDiscountsAvailableOnNEWPurchasesOnly]@L]</p>
+        <p>[@L[cds.sales/offers/office365-promo-config:cp-20-ProductsWillAutomaticallyRenewUntilCancelledYouMay]@L]</p>
+        <p>[@L[cds.sales/offers/office365-promo-config:cp-19-ForMoreInformationSeeTheFullMicrosoftService]@L]</p>
       </div>
     </div>
     <div class="buttons-wrap">
-      <div class="modal-user-limit-ok flt-btn-grn">[@L[cds.sales/business/office-365-config:cp-1-OK-3]@L]</div>
+      <div class="modal-user-limit-ok flt-btn-grn">[@L[cds.sales/offers/office365-promo-config:cp-1-OK-3]@L]</div>
     </div>
   </div>
-  
-  
- 
-
 
   [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer" />]@P] 
   [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Script" />]@P] 
   [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Bottom" />]@P]
   <!-- End page main -->
 
-  <!-- build:js(app) /js/script.js -->
-  <script src="[@T[link:<javascriptroot />]@T]fos/office365/js/plugins.js"></script>
-  <script src="[@T[link:<javascriptroot />]@T]fos/office365/js/main.js"></script>
   <script src="[@T[link:<javascriptroot />]@T]fos/lib/select-style/jquery.selectstyle.1.1.0.min.js"></script>
-  <!-- endbuild -->
-
-  <!-- build:js scripts/vendor/bootstrap.js -->
-  <!-- <script src="/_bower_components/bootstrap/js/affix.js"></script>
-<script src="/_bower_components/bootstrap/js/alert.js"></script>
-<script src="/_bower_components/bootstrap/js/dropdown.js"></script>
-<script src="/_bower_components/bootstrap/js/tooltip.js"></script>
-<script src="/_bower_components/bootstrap/js/modal.js"></script>
-<script src="/_bower_components/bootstrap/js/transition.js"></script>
-<script src="/_bower_components/bootstrap/js/button.js"></script>
-<script src="/_bower_components/bootstrap/js/popover.js"></script>
-<script src="/_bower_components/bootstrap/js/carousel.js"></script>
-<script src="/_bower_components/bootstrap/js/scrollspy.js"></script>
-<script src="/_bower_components/bootstrap/js/collapse.js"></script> -->
-  <script src="[@T[link:<javascriptroot />]@T]fos/office365/_bower_components/bootstrap/js/tab.js" type="text/javascript"></script>
-  <!-- endbuild -->
   <script src="[@T[link:<javascriptroot />]@T]fos/script/atlantis_jquery14.min.js" type="text/javascript"></script>
-  <script src="[@T[link:<javascriptroot />]@T]shared/js/jquery.plugins.min.20111019.js" type="text/javascript"></script>
-  <script src="[@T[link:<javascriptroot />]@T]fos/lib/gd-swipe/js/20131008-swipe-v2.2.min.js" type="text/javascript"></script>
-  <script src="[@T[link:<javascriptroot />]@T]fos/lib/gd-swipe/js/gd-swipe-v2.min.js" type="text/javascript"></script>
-  <script src="[@T[link:<javascriptroot />]@T]starfield/fos.share/v1.3/fos.share-v2.min.js" id="fosShareScript" type="text/javascript"></script>
   <script src="[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2" type="text/javascript"></script>
+  <script src="[@T[link:<javascriptroot />]@T]fos/201401/global/vendor/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 
-
-  <script>
-    if(typeof office365configcarturl == 'undefined'){
-      var office365configcarturl;
-      ##if(isManager())
-        office365configcarturl = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]';
-      ##else
-        office365configcarturl = '[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]';
-      ##endif
-    }
-  </script>
   <script src="[@T[link:<javascriptroot />]@T]fos/office365/js/currency-calc.v1.0.3.min.js" type="text/javascript"></script>
   <script>
     if(typeof currencyCalc != "undefined"){
       currencyCalc.base = "[@T[currencyprice:<price usdamount="1000000000" dropdecimal="false" dropsymbol="false" htmlsymbol="false" negative="parenthesis" />]@T]";
     }
   </script>
-  <script src="[@T[link:<javascriptroot />]@T]fos/office365/js/office365-config.20140310.min.js" type="text/javascript"></script>
+  <script  type="text/javascript">
 
-  <script>
-      $(document).ready(function () {
+  var got2Page = {
+    isManager: false,
+    redirectUrl: '[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]',
+    planName: "TODO-figure-out-with-Ken",
+    maxSeats: 25
+  };
+  ##if(isManager())
+    got2Page.isManager = true;
+    got2Page.redirectUrl = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]';
+    got2Page.maxSeats = 300;
+  ##endif
 
-        $("#disclaimers > p > a").click(function (event) {
-          var $disclaimerModal = $("#disclaimerModal");
-          $disclaimerModal.show();
-            $disclaimerModal.universalModal({"width":800});
-            // IE will not show the modal at first, triggering the window resize fixes this
-            $(window).trigger("resize");
-            $(".modal-user-limit-ok").bind("click",function(){
-              $(".universal-modal-close").trigger("click.universalModal")
+
+{% jsminify %}
+    // incrementing inputs plugin
+    if (typeof incrementInput == "undefined") {
+
+      var incrementInput = {
+        "eventMousePressArrows":null,
+        "init": function () {
+
+          $("[data-increment-input]").each(function () {
+            var $this = $(this);
+            var thisData = $this.data("increment-input");
+            var settings = {
+              "min":null,
+              "max":null,
+              "limitText":null,
+              "extendedMin":null,
+              "extendedMax":null
+            }
+            // set values that may not have been added by data attribute
+            $.extend(settings,thisData);
+            $this.data('increment-input',settings);
+
+            // building structure
+            $this.addClass("increment-input-value");
+            $this.wrap($("<div/>").addClass("config-increment-input-wrapper"));
+            var $outerWrapper = $this.parent();
+            var $inputWrapper = $("<div/>").addClass("config-increment-input");
+            
+            var $inputControls = $("<div/>").addClass("config-increment-controls");
+            var $inputControlsUp = $("<div/>").addClass("icon-increment-up");
+            var $inputControlsDown = $("<div/>").addClass("icon-increment-down");
+            var $limitText = $("<div/>").addClass("description-limit-text");
+
+            $outerWrapper.append($inputWrapper);
+            $inputWrapper.append($this);
+            
+            $outerWrapper.append($inputControls);
+            $inputControls.append($inputControlsUp);
+            $inputControls.append($inputControlsDown);
+
+            // set val to the data attribute add update the variable
+            $this.data("increment-input").val=$this.val();
+            thisData = $this.data("increment-input");
+
+            // limit text will be added
+
+            if(thisData.limitText != null){
+              $inputWrapper.append($limitText);
+              var limitTextString = thisData.limitText;
+              if(thisData.max!=null){
+                limitTextString = limitTextString.replace("[[max]]",thisData.max)
+              }
+              if(thisData.min!=null){
+                limitTextString = limitTextString.replace("[[min]]",thisData.min)
+              }
+              $limitText.html(limitTextString);
+            }
+          
+            // add click listeners
+            $inputControlsUp.mousedown(function(){
+              pressAndHoldArrows($this,1,500);
+            });
+
+            $inputControlsDown.mousedown(function(){
+              pressAndHoldArrows($this,-1,500);
+            });
+
+            $(document).mouseup(function(){
+              pressAndHoldArrowsLimitReached();
+            });
+            $(document).bind("keyup",function(){
+              pressAndHoldArrowsLimitReached();
+            });
+
+            // add keyup and keydown listener, also allow numbers
+            $this.bind("keydown",function(event){
+              
+              if((37<=event.keyCode && event.keyCode<=40) && incrementInput.eventMousePressArrows==null){
+                if(event.keyCode==38){
+                  event.preventDefault();
+                  pressAndHoldArrows($this,1,500);
+                  
+                }else if(event.keyCode == 40){
+                  event.preventDefault();
+                  pressAndHoldArrows($this,-1,500);
+                  
+                }
+              } else if((48<=event.keyCode && event.keyCode<=57) || (96<=event.keyCode && event.keyCode<=105) || event.keyCode == 9 || event.keyCode == 8){
+                // do nothing these key are allowed
+              } else {
+                event.preventDefault();
+              }
             })
-        });
+            
+
+            // add change listener
+            $this.change(function(){
+              inputValueChange($this,0);
+            });
+
+            $this.keyup(function(){
+              inputValueChange($this,0);
+            });
+
+            $this.trigger("keyup");
+          });
+        }
+      }
+
+      function inputValueChange($obj,valueChange){
+
+        var val = $obj.val();
+        if(val==""){
+          //set to zero if blank
+          val=0;
+          $obj.trigger("updateqty");
+        }
+        var newVal = parseInt(val)+parseInt(valueChange);
+
+
+
+        var objData = $obj.data("increment-input");
+        
+        var $parent = $obj.parents(".config-increment-input-wrapper");
+        var $down = $parent.find(".icon-increment-down");
+        var $up = $parent.find(".icon-increment-up");
+        var min,max;
+     
+        // figure out if min and max value are set as well as extended min and max values
+        // extended values will display as a warning that the value is outside the range
+        // extended values allow for a prompt with addition instruction
+        if(objData.min!=null && objData.extendedMin==null){
+          min = objData.min;
+        } else if(objData.extendedMin!=null){
+          min = objData.extendedMin;
+        } else {  
+          min = null;
+        }
+        
+        if(objData.max!=null && objData.extendedMax==null){
+          max = objData.max;
+        } else if(objData.extendedMax!=null){
+          max = objData.extendedMax;
+        } else {  
+          max = null;
+        }
+
+        // if already at range the stop the function
+        if((val == max && newVal > val) || (val == min && newVal < val)){return;}
+
+        // max limit reached
+        // add class to adjust limit text
+        if(objData.max!=null && newVal >= objData.max){
+          $parent.addClass("increment-input-at-max-range");
+        } else {
+          $parent.removeClass("increment-input-at-max-range");
+        }
+
+        // max limite outside range
+        //add class to adjust box border
+        if(objData.max!=null && newVal > objData.max){
+          $parent.addClass("increment-input-outside-max-range");
+        } else {
+          $parent.removeClass("increment-input-outside-max-range");
+        }
+
+        // min limit reached
+        //add class to adjust limit text
+        if(objData.min!=null && newVal <= objData.min){
+          $parent.addClass("increment-input-at-min-range");
+        } else {
+          $parent.removeClass("increment-input-at-min-range");
+        }
+
+        // min limite outside range
+        //add class to adjust box border
+        if(objData.min!=null && newVal < objData.min){
+          $parent.addClass("increment-input-outside-min-range");
+        } else {
+          $parent.removeClass("increment-input-outside-min-range");
+        }
+
+        // disable up and down buttons
+        if(newVal == objData.min){
+          $down.addClass("icon-increment-disabled");
+        } else {
+          $down.removeClass("icon-increment-disabled");
+        }
+        if(newVal == objData.max){
+          $up.addClass("icon-increment-disabled");
+        } else {
+          $up.removeClass("icon-increment-disabled");
+        }
+        
+        if(+(min,max,newVal)){
+         $obj.data("increment-input").val=newVal;
+          $obj.val(newVal);
+          $obj.trigger("updateqty");
+        } else {
+          $obj.val($obj.data("increment-input").val);
+          if(val != $obj.val()){
+            $obj.trigger("updateqty");
+          }
+
+         return false;
+        }
+      }
+
+      function valueInsideRange(min,max,val){
+        if(min!=null && val < min){
+          return false;
+        }
+        if(max!=null && val > max){
+          return false;
+        }
+        return true;
+      }
+
+      function pressAndHoldArrows($obj,valChange,timeInc){
+
+        incrementInput.eventMousePressArrows = setTimeout(function(){
+          timeInc = Math.max(timeInc*.5,40);
+          pressAndHoldArrows($obj,valChange,timeInc);
+          
+        },timeInc);
+        var objData = $obj.data("increment-input");
+        
+        if(objData.min != null){
+          if(objData.min == objData.val && valChange == -1){
+            return;
+          }
+        }
+
+        if(objData.max != null){
+          if(objData.max <= objData.val && valChange == 1){
+            return;
+          }
+
+          if(objData.max < objData.val && valChange == -1){
+            $obj.val(objData.max+1);
+          }
+        }
+        inputValueChange($obj,valChange);
+      }
+
+      function pressAndHoldArrowsLimitReached(){
+        clearTimeout(incrementInput.eventMousePressArrows);
+        incrementInput.eventMousePressArrows = null;
+      }
+    }
+
+    $("html").bind("ajaxStart", function(){
+       $(this).addClass('busy');
+    }).bind("ajaxStop", function(){
+       $(this).removeClass('busy');
+    });
+
+    $("[data-scroll-event]").each(function(){
+      $(this).bind("click",function(event){
+        event.preventDefault();
+
+        var setting = {
+          "yoffset":"0"
+        }
+        var objsetting = $(this).data("scroll-event");
+        $.extend(setting,objsetting);
+        if($(setting.triggerobj).length > 0 && setting.trigger.length > 0){
+          $(setting.triggerobj).trigger(setting.trigger);
+        }
+         debugger;
+        var scrollToPos = parseInt($(setting.obj).offset().top) + parseInt(setting.yoffset);
+         
+        $('html,body').animate({scrollTop: scrollToPos}, 500);
       });
-    </script>
+    });
+
+{% endjsminify %}
+      
+    var office365config = {};
+    (function($){
+   
+
+      // function to lookup data keys inside json objects
+      function getObjects(obj, key, val) {
+        var objects = [];
+        for (var i in obj) {
+           if (!obj.hasOwnProperty(i)) continue;
+           if (typeof obj[i] == 'object') {
+             objects = objects.concat(getObjects(obj[i], key, val));
+           } else if (i == key && obj[key] == val) {
+             objects.push(obj);
+           }
+        }
+        return objects;
+      }
+
+      function getParameterByName(name) {
+        name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+        return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+      } 
+         
+      office365config = {
+
+        "productOrder":{},
+        "$premiumPlacard": $('.config-product-wrapper[data-planLevel="Premium"]'),
+        "$premiumOrderItem": $('.order-item[data-planLevel="Premium"]'),
+
+        "init": function() {
+
+          var priceLineHtml = office365config["$premiumPlacard"].find('.product-price').html();
+          priceLineHtml = priceLineHtml.replace('{a0-begin}','<span class="product-price-original-amount">');
+          priceLineHtml = priceLineHtml.replace('{0}',office365config.configData.normalPrice);
+          priceLineHtml = priceLineHtml.replace('{a0-end}','</span>');
+          priceLineHtml = priceLineHtml.replace('{a1-begin}','<span class="product-price-amount">');
+          priceLineHtml = priceLineHtml.replace('{1}',office365config.configData.discountPrice);
+          priceLineHtml = priceLineHtml.replace('{a1-end}','</span>');
+          priceLineHtml = priceLineHtml.replace('{a2-begin}','<span class="product-price-text">');
+          priceLineHtml = priceLineHtml.replace('{a2-end}','</span>');
+          office365config["$premiumPlacard"].find('.product-price').html(priceLineHtml);
+
+          $(".js-addtocart").click(function(e){
+            office365config.continueToCart(e,this);
+          })
+                    
+          office365config["$premiumPlacard"].find(".product-quantity").bind("updateqty",function() {
+            office365config.buildProductOrder();
+          });
+
+          office365config["$premiumPlacard"].find(".product-quantity").keyup(function() {
+            $(this).trigger("updateqty");
+          });
+
+          office365config.buildProductOrder();
+
+          incrementInput.init();  
+        },
+
+        "refreshCart": function() { 
+          var stringData = $(".order-summary-wrapper").data('itemdetails'),
+            qtyUsers = parseInt(office365config.productOrder.productQty),
+            grandTotal = 0,
+            upToFiveQty = Math.min(qtyUsers,5),
+            upToFiveHtml = '',
+            upToFiveTotal = 0,
+            sixAndUpQty = Math.max(qtyUsers-5,0),
+            sixAndUpHtml = '',
+            sixAndUpTotal = 0,
+            $orderItem = office365config["$premiumOrderItem"];
+            
+          // discount pricing calculations
+          upToFiveHtml = upToFiveQty + " " + ((upToFiveQty == 1) ? stringData['1usr'] : stringData['moreUsrs']) + " x 1 " + stringData['yrTerm'];
+          upToFiveTotal = currencyCalc.evaluate([office365config.configData.planDuration,'*',office365config.configData.discountPrice,'*',upToFiveQty]);
+
+          // normal pricing calculations
+          if(sixAndUpQty > 0) {
+            sixAndUpHtml = sixAndUpQty + " " + ((sixAndUpQty == 1) ? stringData['1usr'] : stringData['moreUsrs']) + " x 1 " + stringData['yrTerm'];
+            sixAndUpTotal = currencyCalc.evaluate([office365config.configData.planDuration,'*',office365config.configData.normalPrice,'*',sixAndUpQty]);
+          }
+          grandTotal = currencyCalc.evaluate([upToFiveTotal,'+',sixAndUpTotal]);   
+
+          // display the data
+          $orderItem.find(".up-to-five .order-item-details").html(upToFiveHtml);
+          $orderItem.find(".six-and-up .order-item-details").html(sixAndUpHtml);
+          $orderItem.find(".up-to-five .order-item-total").html(upToFiveTotal);
+          $orderItem.find(".six-and-up .order-item-total").html(sixAndUpTotal);
+
+          $(".order-user-quantity").html(qtyUsers + " " + ((qtyUsers == 1) ? stringData['1usr'] : stringData['moreUsrs']));
+          $(".order-total").html(grandTotal);
+
+          if(qtyUsers > 0) {
+            $orderItem.slideDown();
+          } else {
+            $orderItem.slideUp()
+          }
+          if(sixAndUpQty > 0) { 
+            $('.order-item-details-wrapper.six-and-up').show();
+          } else {
+            $('.order-item-details-wrapper.six-and-up').hide();
+          }
+          return true;
+        },
+
+        "buildProductOrder": function() {
+          var qty = parseInt(office365config["$premiumPlacard"].find(".product-quantity").val());
+          if(qty < 1) {
+            var $zeroUsersWarning = $("#zeroUsersWarning");
+            if($zeroUsersWarning.is(":hidden") == true){
+              $zeroUsersWarning.show();
+              $zeroUsersWarning.find(".zero-user-warning-close-icon").click(function(){
+                $zeroUsersWarning.hide();
+              })
+              $('html,body').animate({scrollTop: $zeroUsersWarning.offset().top-10}, 500);
+            }
+            return false;
+          }
+          if(qty > office365config.configData.maxSeats) {
+            //Show a modal warning
+            var $exceedsMaxUsers = $("#exceedsMaxUsers");
+            if($exceedsMaxUsers.is(":hidden") == true){
+              $exceedsMaxUsers.show();
+              $("input:focus").blur()
+              $exceedsMaxUsers.universalModal({"width":400});
+              $(".modal-user-limit-ok").bind("click",function(){
+                $(".universal-modal-close").trigger("click.universalModal")
+              })
+              // IE will not show the modal at first, triggering the window resize fixes this
+              $(window).trigger("resize");
+            }
+            return false;
+          }
+        
+          office365config.productOrder = {
+            "productQty": qty,
+            "productId": office365config.configData.productId,
+            "packageId": office365config.configData.packageId,
+            "domain": getParameterByName("domain")
+          };
+          return office365config.refreshCart(); 
+        },
+
+        "continueToCart": function(e, thisClick) {
+          // ensure not already trying to add something to the cart
+          if($(".btn.js-addtocart").hasClass("btn-orange-disabled")) {
+            return;
+          }
+          // ensure the user selects are correct
+          if(office365config.buildProductOrder()==false) {
+            return;
+          }
+          $(".btn.js-addtocart").addClass("btn-orange-disabled square-pixel-spinner");
+
+          // add Got2 to the cart            
+          var urlFragment = '/add'; //action
+          urlFragment += '/' + office365config.configData.itcCode; //itc code
+          urlFragment += '/' + $(thisClick).data('ci'); //ci code
+          urlFragment += '/' + office365config.productOrder.productQty;  // quantity
+          urlFragment += '/' + office365config.configData.planName //Plan Name
+          var url = '[@T[link:<relative path="/api/package/{0}" parammode="explicit"/>]@T]'.replace('{0}', urlFragment);
+
+          url += ((url.indexOf('?') > -1) ? '&' : '?') + 'domain=' + office365config.productOrder.domain + '&sourceCode=domaincheck';
+          if (office365config.productOrder.addOns != 'noAddOns'){
+            url += '&addons=' + office365config.productOrder.addOns + '-1';
+          }
+
+          $.getJSON(url, function (data) {
+            // 1. check for failures
+            if (data == 'fail') {
+              alert('Add to cart failure.');
+              return;        
+            }
+            if(!data.Success) {
+              alert('Add to cart failure.');
+              return;
+            }
+
+            // 2. redirect user to the cart where their product(s) should be waiting for them.
+            window.location = locuPage.redirectUrl;
+          });
+            
+        } // end continueToCart
+      };
+
+      var configPackageId = "Office365ConfigData";
+      office365config.configData = {
+        "productId": '31841',
+        "packageId": 'OfficeBusPremMsft1yr',
+        "planDuration": 1,
+        "itcCode": 'slp_GOT2POB',
+        "planName": got2Page.planName,
+        "normalPrice":   '[@T[productprice:<current productid="31841" period="yearly" promocode=""></current>]@T]', 
+        "discountPrice": '[@T[productprice:<current productid="31841" period="yearly" promocode="PACKPLUS"></current>]@T]',
+        "maxSeats": got2Page.maxSeats
+      };
+
+      office365config.init(); 
+
+    
+    })( jQuery );
+
+
+    $(document).ready(function(){
+
+      $("#disclaimers > p > a").click(function (event) {
+        var $disclaimerModal = $("#disclaimerModal");
+        $disclaimerModal.show();
+          $disclaimerModal.universalModal({"width":800});
+          $(".modal-user-limit-ok").bind("click",function(){
+            $(".universal-modal-close").trigger("click.universalModal")
+          });
+          // IE will not show the modal at first, triggering the window resize fixes this
+          $(window).trigger("resize");
+      });
+
+      $('[data-ci]').click(function(e){
+        $this = $(this);
+        FastballEvent_MouseClick(e,$this.attr('data-ci'),$this[0],'a');
+        fbiLibCheckQueue();    
+      });
+
+
+      $(window).scroll(function() {
+        updateOrderSummaryPosition();
+      });
+      $(window).resize(function() {
+        updateOrderSummaryPosition();
+      });
+      updateOrderSummaryPosition();
+    
+
+      function updateOrderSummaryPosition() {
+
+        var paddingTop = 20/* for prettiness when scrolling */,
+          $configCartWrapper = $('.config-cart-wrapper'),
+          scrollTop = $(window).scrollTop(),
+          scrollLeft = $(window).scrollLeft(),
+          topStep1 = $("div.config-step:first").offset().top,
+          topOfWindowAboveTopOfStep1 = (scrollTop <= (topStep1 - paddingTop)),
+          $footer = $('.scroll-down-wrapper');
+
+          $footer.css('visibility','visible');
+          $configCartWrapper.css({'top':'0px','position':'static'});
+
+        if(!topOfWindowAboveTopOfStep1) {
+          // keep the top of the summary at 0
+          
+        //} else {
+          //check for if summary can fit without going below the bottom of the last step
+          
+          var proposedNewTop = scrollTop - (topStep1 - paddingTop),
+            proposedNewBottom = proposedNewTop + $configCartWrapper.height(),
+            $lastStep = $("div.config-step").last(),
+            bottomOfLastStep = $lastStep.offset().top + $lastStep.height() - topStep1,
+            canFit = (proposedNewBottom <= bottomOfLastStep);
+
+          if(scrollTop>=(topStep1-paddingTop) && ((scrollTop+$configCartWrapper.height())<=$lastStep.offset().top + $lastStep.height() + paddingTop) ){
+            try{
+              var configCartWrapperLeft = $configCartWrapper.offset().left;
+              $configCartWrapper.css({'top':'20px','position':'fixed','width':$configCartWrapper.innerWidth(),'left':(configCartWrapperLeft - scrollLeft) +'px'});
+            }catch(err){
+              //if errors don't float the $confiCartWrapper
+              $configCartWrapper.css({'top':'0px','position':'static'});
+            }
+            if((scrollTop+paddingTop)>=$lastStep.offset().top){
+              $footer.css('visibility','hidden');
+            }else{
+              $footer.css('visibility','visible');
+            }
+          } else {
+            try{
+              var configCartWrapperLeft = $configCartWrapper.offset().left;
+              $configCartWrapper.css({'position':'fixed','width':$configCartWrapper.innerWidth(),'left':(configCartWrapperLeft - scrollLeft) +'px'});
+            }catch(err){
+              //if errors don't float the $confiCartWrapper
+              $configCartWrapper.css({'top':'0px','position':'static'});
+
+            }
+            // affix the summary so the bottom lines up with the bottom of the last step
+            $footer.css('visibility','hidden');
+            var topForBottomAligned = ($lastStep.offset().top + $lastStep.height() +$footer.height()) - (scrollTop + $configCartWrapper.height() );
+            //topForBottomAligned = bottomOfLastStep - $configCartWrapper.height() + paddingTop;
+            $configCartWrapper
+              .css({'top': topForBottomAligned + 'px'});
+          }
+        }
+        
+      }
+    });
+        
+
+
+  </script>
 </body>
 
 </html>
