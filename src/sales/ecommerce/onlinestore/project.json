@@ -6,6 +6,7 @@
         "email": "dutley@godaddy.com"
       }
     },
+    "assetPath": "fos/sales/themes/scotty/ecommerce/onlinestore/",
     "metaTitle": "Online Store title '[@L[cds.sales/gd/ecommerce/onlinestore:MetaTitle]@L]'",
     "metaDescription": "Online Store Desc '[@L[cds.sales/gd/ecommerce/onlinestore:MetaDescription]@L]'",
     "metaKeywords": "[@L[cds.sales/gd/ecommerce/onlinestore:MetaKeywords]@L]",
