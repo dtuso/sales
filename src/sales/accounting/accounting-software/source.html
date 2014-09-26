@@ -1,9 +1,9 @@
 ---
 url: http://www.dev-godaddy.com/accounting/accounting-software.aspx
 location: sales/accounting/accounting-software.aspx
-id: 53d93860f778fc162c8d5db5
-name: FOS-21464
-comments: GDOB LP updates. Huge Text changes and image updates
+id: 5425a7cbf778fc1eec7ed1e8
+name: FOS-21973
+comments: Delete Reference code to old split test 1196
 assetPath: false
 ---
 {% extends 'layouts/base.html' %}
@@ -651,43 +651,6 @@ assetPath: false
 
 {% block body %}
 
- ##if(splitTestingSideIsActive(1196, B))
-<section class="main-banner main-banner-syib no-padding-top split-b">
-  <div class="group">
-    <div class="column1">
-      <span class="masthead-title">[@L[cds.sales/accounting/accounting-software:HeaderContentDescription]@L]</span>
-      <span class="masthead-tagline">[@L[cds.sales/accounting/accounting-software:HeaderContentMainHeading2]@L]</span>
-      <a class="btn btn-primary btn-lg" data-ci="86772" href="http://bookkeeping.godaddy.com/prospect_tour?cc=GDOBDEF" target="_blank" style="min-width: 208px;">[@L[cds.sales/accounting/accounting-software:HeaderCtaButton]@L]</a>
-    </div>
-
-    <div class="column2">
-      <div class="list-box">
-        <span class="list-title">[@L[cds.sales/accounting/accounting-software:HeaderListTitle]@L]</span>
-        <ul>
-          <li><div class="check-mark"></div>[@L[cds.sales/accounting/accounting-software:HeaderListItem1]@L]</li>
-          <li><div class="check-mark"></div>[@L[cds.sales/accounting/accounting-software:HeaderListItem2]@L]</li>
-          <li><div class="check-mark"></div>[@L[cds.sales/accounting/accounting-software:HeaderListItem3]@L] <span class="price">[@T[productprice:<current productid="2699" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T] /[@L[cds.sales/accounting/accounting-software:Month]@L]</span></li>
-        </ul>
-      </div>
-      <div class="list-box-shadow"></div>
-    </div>
-  </div>
-
-  <div class="modal fade videoModal" id="myVideoModal">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="modal-header-close close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        </div>
-        <div class="modal-body">
-          <iframe width="854" height="480" src="//www.youtube.com/embed/tc8CHcfnUUs?html5=1&rel=0" autoplay scrolling="no" frameborder="0" allowfullscreen>
-          </iframe>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-##else
 <section class="main-banner main-banner-syib no-padding-top ">
     <div class="l-main-container container main-banner-content main-banner-content-syib">
         <!-- Ribbon
@@ -714,7 +677,6 @@ assetPath: false
         </div>
     </div>
 </section>
-##endif
 <!-- End main-banner -->
 
 <!-- Start main-tabs -->
