@@ -1,8 +1,8 @@
 ---
 location: sales/hosting/wordpress-hosting.aspx
-id:    541206cff778fc0f24cc8f01
-name: GCE-28157
-comments: Updating og:url Meta Data Tag
+id:    5425a93ef778fc1eec7ed1ea
+name: GCE-21973
+comments: Delete Reference code to old split test 1186
 cssVersionOverride: 2
 ---
 {% extends 'layouts/base.html' %}
@@ -544,7 +544,7 @@ cssVersionOverride: 2
                       <li>USD $100 [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-4-BingAdsCredit]@L] <span class="g-toolTip restrictions-link">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-2-RestrictionsApply]@L]<span>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-36-OnePromotionalCreditPerCustomerForANew]@L] <a href="javascript:void(window.open('https://advertise.bingads.microsoft.com/en-us/godaddy/learn','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=1060,height=675'))" data-ci="86788">[@L[cds.sales/hosting/web-hosting-new:view-details]@L]</a></span></span></li>
                       ##endif
                       ##if(areAdCreditsEnabled(facebook))
-                      <li>USD $50 [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-4-FacebookAdCredit]@L]<span class="g-toolTip restrictions-link">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-2-RestrictionsApply]@L]<span>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-44-OnePromotionalCreditPerCustomerForANew]@L] <a href="javascript:void(window.open('[@T[link:<relative path='/popups/facebook-ads.aspx'><param name='ci' value='86789' /><param name='app_hdr' value='99' /></relative>]@T]','_more','left=20,top=20,<scrollbars=yes,resizable=yes,width=550,height=675'))">[@L[cds.sales/hosting/web-hosting-new:view-details]@L]</a></span></span></li>                    
+                      <li>USD $50 [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-4-FacebookAdCredit]@L]<span class="g-toolTip restrictions-link">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-2-RestrictionsApply]@L]<span>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-44-OnePromotionalCreditPerCustomerForANew]@L] <a href="javascript:void(window.open('[@T[link:<relative path='/popups/facebook-ads.aspx'><param name='ci' value='86789' /><param name='app_hdr' value='99' /></relative>]@T]','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=550,height=675'))">[@L[cds.sales/hosting/web-hosting-new:view-details]@L]</a></span></span></li>                    
                       ##endif                                           
                     </ul>
                   </div>
@@ -557,8 +557,7 @@ cssVersionOverride: 2
       </section>
 
       <section class="l-main-content">
-        <div class="container l-main-container">
-          ##if(splitTestingSideIsActive(1186, A))
+        <div class="container l-main-container">          
             <div class="row tab-content">
               <div class="col-xs-12">
                 <div class="grid-column tab-content-column tab-content-left tab-content-wordpress">
@@ -582,13 +581,7 @@ cssVersionOverride: 2
                   <p>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-62-KeepingAWebsiteSecureIsAFullTime]@L]</p>
                 </div>
               </div>
-            </div>
-          ##else
-            <div class="row tab-content">
-              <div class="col-xs-12">
-              </div>
-            </div>
-          ##endif
+            </div>          
         </div>
       </section>
 
