@@ -1317,7 +1317,8 @@ var sr_js = {
         self.IsTldNyc=ko.observable(false);
         self.originalPosition = ko.observable(1);
         self.filterPosition = ko.observable(0);
-
+         self.VatCountry = ko.observable(false);
+         
         self.ApplyFilter = function (filter, event) {
             /*jshint unused:false, eqnull:true */
             if (filter) {
@@ -1362,6 +1363,10 @@ var sr_js = {
                 if(data.Tld=="nyc")
                 {
                     self.IsTldNyc(true);
+                }
+
+                 if (data.VatCountry) {
+                    self.VatCountry(true);
                 }
 
                 if (data.StripMallResult) {
