@@ -106,6 +106,10 @@ var swigConfigOpts = {
   setup: swigSetup
 };
 
+var cdsmOpts = {
+  dest: argv.dest || 'dev'
+};
+
 gulp.task('html', function() {
   return gulp.src(['./**/*.html', '!./**/_*.html'], {cwd: path.join('./src/sales/', assetSrcPath)})
     .pipe(changed(paths.build))
@@ -114,7 +118,7 @@ gulp.task('html', function() {
     .pipe(swig(swigTplOpts))
     .pipe(elevateCss())
     .pipe(elevateJs())
-    .pipe(gulpif(!ignoreCDS, cdsm()))
+    .pipe(gulpif(!ignoreCDS, cdsm(cdsmOpts)))
     .pipe(gulp.dest(paths.build));
 });
 
@@ -125,7 +129,7 @@ gulp.task('language', function() {
     .pipe(charFix())
     .pipe(fm({remove:true}))
     .pipe(swig(swigLangOpts))
-    .pipe(gulpif(!ignoreCDS, cdsm()))
+    .pipe(gulpif(!ignoreCDS, cdsm(cdsmOpts)))
     .pipe(gulp.dest(paths.build));
 });
 
@@ -164,7 +168,7 @@ gulp.task('config', function() {
     .pipe(changed(paths.build))
     .pipe(fm({remove:true}))
     .pipe(swig(swigConfigOpts))
-    .pipe(gulpif(!ignoreCDS, cdsm()))
+    .pipe(gulpif(!ignoreCDS, cdsm(cdsmOpts)))
     .pipe(gulp.dest(paths.build));
 });
 
