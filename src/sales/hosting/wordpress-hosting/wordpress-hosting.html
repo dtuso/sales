@@ -1,8 +1,8 @@
 ---
 location: sales/hosting/wordpress-hosting.aspx
-id:    542b0953f778fc106c63447f
-name: GCE-28123
-comments: Direct all Hosting support calls to the Professional Hosting Support team
+id:    5426042ef778fc1eec7ed203
+name: GCE-25278
+comments: Rainier banner
 cssVersionOverride: 2
 ---
 {% extends 'layouts/base.html' %}
@@ -494,6 +494,27 @@ cssVersionOverride: 2
           </div>
         </div>
       </section>
+      <!-- Start Rainier Banner -->
+        <div class="row tab-content" id="rainier-section">
+          <div id="Rainier_Banner" class="col-xs-12 rainier_banner">
+            <div class="row" data-gd-sidebysidealign="{}">
+              <div class="rainier_logo_container rainier_background" data-gd-sidebysidealign-col="1">
+                <div class="godaddy_pro_logo" data-gd-sidebysidealign-row="1"></div>
+              </div>
+              <div class="rainier_text_container rainier_background" data-gd-sidebysidealign-col="2">
+                <p class="text-center rainier_banner_text" data-gd-sidebysidealign-row="1">[@L[cds.sales/gd/hosting/web-hosting:godaddy-pro-get-tech-specs]@L]</p>
+              </div>
+              <div class="rainier_button_container " id="Rainier_LearnMoreButton" data-gd-sidebysidealign-col="3">
+                <div >
+                  <a class="btn btn-warning btn-block btn-lg" data-gd-sidebysidealign-row="1" href="[@T[link:<relative path='/pro/managed-wordpress-hosting'></relative>]@T]">
+                    <div class="text">[@L[cds.sales/gd/hosting/web-hosting:godaddy-pro-learn-more]@L]</div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <!-- End Rainier Banner -->
 
       <!-- Start plan-summary -->
       <section class="plan-summary l-main-content">
@@ -870,11 +891,11 @@ $('#product-disclaimer .simple-link').on('click', function(){
         // loop thru each row and grab the largest cell height and apply to each cell in that row
         for(var i=1; i<=numRows; i++) {
             var $cells = $columns.find('[data-gd-sidebysidealign-row="' + i + '"]' );
-            var maxHeight = 0;
+            var tallest = 0;
             $.each($cells,function(idx, cell){
-                maxHeight = Math.max(maxHeight, $(cell).height());
+                tallest = Math.max(tallest, $(cell).outerHeight());
             });
-            $cells.height(maxHeight);
+            $cells.css({'height':tallest+'px'});
         }
 
     }; /* end GDSideBySideAlign.prototype.init */
