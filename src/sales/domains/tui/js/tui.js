@@ -210,7 +210,9 @@ if (!domains.controls.cds_gtld_registration) {
 
         if (data.FormJson && data.FormJson != null) {
           settings.$headerArea.find(':not(.error)').hide();
-          parseDPPJson(data.FormJson, data.AllDomainsCheckbox);
+
+          var phoneCtrl = { countries: data.PhoneCountries, dialCodes: data.DialCodes, defaultCountryCode: data.DefaultCountryCode };
+          parseDPPJson(data.FormJson, data.AllDomainsCheckbox, phoneCtrl);
           return;
         }
       } else if (data.FormType == "trustee") {
@@ -498,7 +500,7 @@ if (!domains.controls.cds_gtld_registration) {
         }
       }
 
-    function parseDPPJson(data, allDomainsCheckbox) {
+    function parseDPPJson(data, allDomainsCheckbox, phoneCtrl) {
       var parsedData = JSON.parse(data);
       var html = '';
       var currentFormTld = '';
@@ -595,8 +597,16 @@ if (!domains.controls.cds_gtld_registration) {
                 if (item.DescriptionText && item.DescriptionText !== undefined && item.DescriptionText != null) {
                   text += '<span class="g-toolTip"><span>' + item.DescriptionText + '</span></span>';
                 }
+                  text += '</h2>';
+
                 var type = item.Type.toLowerCase().substr(5, item.Type.toLowerCase().length);
-                text += '</h2><input type="' + type + '" id="' + item.Name + '" name="' + item.Name + '"';
+                  if (type === 'phone') {
+                    text += '<input type="tel" maxlength="19" class="form-control"';
+                  } else {
+                    text += '<input type="' + type + '"';
+                  }
+                  text += ' id="' + item.Name + '" name="' + item.Name + '"';
+
                 if (item.Required != undefined && item.Required != null && item.Required === "false") {
                   text += ' data-optional="true"';
                 }
@@ -731,6 +741,22 @@ if (!domains.controls.cds_gtld_registration) {
           if (event.keyCode != '13') $(this).parents('div.field').find('.invalid').removeClass('invalid');
         });
       }
+      try {
+        ux.telephoneInputData.countries = JSON.parse(phoneCtrl.countries);
+        ux.telephoneInputData.dialCodes = JSON.parse(phoneCtrl.dialCodes);
+        var telFields = $('input[type="tel"]');
+        if (telFields.length > 0) {
+          var countryCode = phoneCtrl.defaultCountryCode;
+          telFields.uxTelephoneInput({
+            initialDialCode: false,
+            preferredCountries: [countryCode],
+            defaultCountry: countryCode
+          });
+          if (countryCode.length > 0) {
+            telFields.uxTelephoneInput('selectCountry', countryCode);
+          }
+        }
+      } catch(ex) {}
     }
 
     function parseClaimsJson(data) {
