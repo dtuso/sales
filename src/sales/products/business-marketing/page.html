@@ -1,6 +1,6 @@
 ---
 location: sales/products/business-marketing.aspx
-id: 542427def778fc26c89ef526
+id: 54298d71f778fc1cd05bba0e
 name: GCE-27850
 comments: Redesign of landing page (take 2)
 url: http://www.dev-godaddy.com/products/business-marketing.aspx
@@ -207,7 +207,7 @@ assetPath: false
       </div>
       <div class="row center-text">
         <p class="pricing">[@L[cds.sales/gd/products/business-marketing:pricing-text]@L]</p>
-        <p class="inline-disclaimer">*[@L[cds.sales/gd/products/business-marketing:current-renewal-price]@L]</p>
+        <p class="inline-disclaimer renewal-price">*[@L[cds.sales/gd/products/business-marketing:current-renewal-price]@L]</p>
       </div>
     </div>
   </section>
@@ -560,16 +560,8 @@ assetPath: false
           </div>
 
           <div class="row center-text">
-            <p class="pricing">
-              <span class="normal-price">[@L[cds.sales/gd/products/business-marketing:as-low-as]@L]</span>
-              <span class="normal-price">[@T[productprice:<current productid="37975" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T][@L[cds.sales/gd/products/business-marketing:per-mo]@L]</span> 
-            ##if(productHasSavingsMoreThan(37975, 37990, 0))
-              <span class="renewal-price"> <strike>[@T[productprice:<current productid="37990" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T][@L[cds.sales/gd/products/business-marketing:per-mo]@L]</strike>* </span>
-            </p>
+            <p class="pricing">[@L[cds.sales/gd/products/business-marketing:pricing-text]@L]</p>
             <p class="inline-disclaimer renewal-price">*[@L[cds.sales/gd/products/business-marketing:current-renewal-price]@L]</p>
-            ##else
-            </p>
-            ##endif
           </div>
         </div>
       </section>
