@@ -602,3 +602,45 @@ form.nyc_eligibility div.tui-stateOrProvince {
 #applyToAll div .tld {
   font-weight: bold;
 }
+
+/* --   Eligibiliy-form Generic Styles  -- */
+
+#eligibility-form form h1 {
+  font-size: 36px;
+  color: #333;
+  border-bottom: 1px solid #cfcfcf;
+  padding: 0 0 10px 0;
+  font-family: "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;
+}
+
+#eligibility-form form h1 b {
+  font-family: "HelveticaNeue-Bold", "Helvetica Neue", "Segoe UI", Segoe, Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+#eligibility-form form h2 {
+  font-size: 16px;
+  color: #333;
+  padding: 20px 0 7px 0;
+  font-family: "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;
+}
+
+#eligibility-form form h2:first-child{
+  padding: 25px 0 0;
+}
+
+#eligibility-form form .selectstyleui,
+#eligibility-form form input {
+  width: 66%;
+  margin: -3px 0 0;
+}
+
+#eligibility-form form h2:after  {
+  content: " *";
+  color: red;
+  margin-top: -5px;
+}
+
+/* --  ES SPECIFIC FIX -- */
+#eligibility-form form .tui-X-ES-TIPO-IDENTIFICACION .selectstyleui{
+  z-index: 10;
+}
