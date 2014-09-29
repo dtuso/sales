@@ -29,6 +29,8 @@ Install
 First, fork the repository so that you create a copy of it into your own account, using the fork button at the upper right.
 Once forked, clone the new repository to your computer using the command below (replace [USERNAME] with your username):
 
+To clone, may need to use command: ssh-keygen -t rsa -C "bob@email.com"
+
 ```
 git clone git@github.secureserver.net:[USERNAME]/Sales.git && cd Sales
 ```
