@@ -1,0 +1,127 @@
+---
+location: localization/sales/gd/products/business-marketing/en
+id: 542427fbf778fc26c89ef527
+name: GCE-27850
+comments: Redesign of landing page (take 2)
+---
+{% include 'modules/doc-block.html' %}
+<phrase key="meta-title" />
+Local Business Listings, Local SEO | Get Found - [@T[companyname:nameseotitle]@T]
+<phrase key="meta-description" />
+Get Found helps you grow by creating local business listings on top sites, like Google&reg;, Bing&reg; and Yelp&reg;. Launch your local SEO today.
+<phrase key="meta-keywords" />
+local business listings, local SEO, Get Found, how to market your business, local business listings, get listed, local marketing, local internet marketing, how to promote your website, local online marketing, how to grow your business, local business marketing, online marketing tools, mobile marketing
+<phrase key="og-title" />
+Local Business Listings, Local SEO | Get Found - [@T[companyname:name]@T]
+<phrase key="og-description" />
+Get Found helps you grow by creating local business listings on top sites, like Google&reg;, Bing&reg; and Yelp&reg;. Launch your local SEO today.
+<phrase key="main-banner-title" />
+Get Found
+<phrase key="main-banner-subtitle" />
+Get your business listed everywhere.<br />All from one place.
+<phrase key="main-banner-text" />
+Showcase your business on top sites across the Web like Google, Yelp and Foursquare.
+<phrase key="get-started" />
+Get Started
+<phrase key="get-free-report" />
+Get Free Report
+<phrase key="pricing-text" comment="replacement 0 and 1 are prices, 2 is percentage" />
+As low as <span class="normal-price">{0}/mo</span> <span class="renewal-price"><strike>{1}/mo</strike>*</span> <span class="save-percentage">Save {2}</span>
+<phrase key="as-low-as" />
+As low as
+<phrase key="per-mo" />
+/mo
+<phrase key="save" />
+Save
+<phrase key="current-renewal-price" />
+Current renewal price.
+<phrase key="tab-plans-pricing" />
+Plan Details
+<phrase key="tab-faq" />
+FAQ
+<phrase key="plans-title" />
+See where Get Found can get you listed by choosing your business type.
+<phrase key="title-brick-and-mortar" />
+Brick and Mortar
+<phrase key="description-brick-and-mortar" />
+Your business has a physical location that customers can visit (ex. restaurants, salons, spas, etc.)
+<phrase key="view-sites" />
+View Sites
+<phrase key="get-listed" />
+Get listed on:
+<phrase key="title-local-service-area" />
+Local Service Area
+<phrase key="description-local-service-area" />
+Your local business serves a local area without a physical location that customers visit (ex. plumber, food truck, sailing tour provider, etc.)
+<phrase key="coming-soon" />
+Coming Soon
+<phrase key="title-online-only" />
+Online-Only
+<phrase key="description-online-only" />
+You operate online and do not have a physical address to share (ex. web designer, ecommerce store, consultant, etc.)
+<phrase key="not-available-online" />
+Get Found is not yet available for Online-Only businesses, but check back soon to see how we can help your business get listed online.
+<phrase key="be-visible" />
+Be visible where your customers are &mdash; including mobile.
+<phrase key="testimonial-1" />
+People tell me all the time they found our restaurant on Yelp, TripAdvisor or OpenTable. If we didn't show up on these sites, we'd lose business to a restaurant down the street. Get Found helps put my business everywhere it needs to be on the Web.
+<phrase key="testimonial-1-byline" />
+Lauren, Manager/Owner at Ombra Cucina Rustica in Hilton Head, SC
+<phrase key="get-listed-title" />
+Get listed in a few simple steps.
+<phrase key="get-listed-step-1" />
+Stay in Control
+<phrase key="get-listed-step-1-text" />
+Inaccurate information sends customers to your competitors. We'll keep you updated so customers can find you.
+<phrase key="get-listed-step-2" />
+Be Visible
+<phrase key="get-listed-step-2-text" />
+Make sure your local business listing is on sites that your customers visit.
+<phrase key="get-listed-step-3" />
+Save Time
+<phrase key="get-listed-step-3-text" />
+It takes hours to create local listings on every single local site. Let us do it for you.
+<phrase key="be-everywhere" />
+Be everywhere your buyers are.
+<phrase key="be-everywhere-text" />
+Get Found publishes your business information to a variety of popular sites simultaneously &mdash; all from one screen. Update your local business listing once, and the changes appear across all the sites.
+<phrase key="faq-question-1" />
+What does it matter if my business information is listed incorrectly online?
+<phrase key="faq-question-1-answer" />
+The cost of inaccurate information online is actually quite high. In fact, you could lose out on potential sales. We've found that 68% of people will take their business elsewhere if they see missing or inaccurate internet advertising &mdash; open hours, phone number, address, prices &mdash; online.
+<phrase key="faq-question-2" />
+How much time will I need to spend creating local business listings using Get Found?
+<phrase key="faq-question-2-answer" />
+Getting started is easy and usually takes less than 5 minutes – just complete two simple steps to get your basic business listing published across the web. If you choose to provide details such as menus, price lists, or item photos, you may need to spend anywhere from 10 minutes to an hour. The good news is that you only need to do this in one place to get it published on many sites. And the results are potentially huge.
+<phrase key="faq-question-3" />
+What kind of information can Get Found publish about my business?
+<phrase key="faq-question-3-answer" />
+Get Found can publish your business description, contact information (phone number, website address), hours of operation, menus and price lists, item photos and descriptions, payment and delivery options, amenities and more. This is exactly the type of internet advertising that customers want when looking for new local businesses. A detailed and consistent business listing online will help you stand out from the pack and attract customers to your business.
+<phrase key="faq-question-4" />
+Where will Get Found publish my local business listing?
+<phrase key="faq-question-4-answer" />
+We've established partnerships with some of the top consumer destination sites online. Currently, we publish to Google, Bing, Yelp, TripAdvisor, YP, Foursquare, Citysearch, and many other smaller sites. We're continually expanding our list of business listing partners &mdash; you'll be the first to know once we find more places to publish your business information.
+<phrase key="faq-question-5" />
+What do you mean by &quot;publish&quot;?
+<phrase key="faq-question-5-answer" />
+By &quot;publish&quot; your business information, we mean displaying it on all of our partner sites for you (and on your own website if you choose to use our widget to display your content there). To share or update your business listing with [@T[companyname:name]@T] Get Found, all you do is click a single <strong>Publish</strong> button and your information appears on all our partner sites.
+<phrase key="faq-question-6" />
+What kind of business is this for?
+<phrase key="faq-question-6-answer" />
+Do you have a physical location that customers visit (ex. restaurant, spa, salon)?  Or, do you serve a local area without a physical location that customers visit (ex. plumber, food struck, boat charter)?  If so, Get Found is for you.  We are not yet able to serve businesses who operate online and do not have a physical address to share (ex. web designer, ecommerce store, consultant), but that is coming in the future.
+<phrase key="faq-question-7" />
+How long will it take for my business listing to get published?
+<phrase key="faq-question-7-answer" />
+When you submit your business listing to Get Found, one of our dedicated data specialists reviews your data and makes sure everything is ready to go to our partner sites.  Your data is then shared with our partners.  Some of our partner sites will publish your local listing in as little as a few days; others will take up to eight weeks.
+<phrase key="faq-question-8" />
+Tell me more about how I can use your widget to display my menus or price lists on my own site.
+<phrase key="faq-question-8-answer" />
+To share your menus or price lists on your own website, you need to install a short snippet of HTML to the webpage where you want your menus or lists to appear. We even provide you with several designer templates to choose from. If you want, you can edit the look and feel of the templates to match the existing style of your website. Oh, and they're mobile-compatible too, so you can be sure that your menus or price lists will look great on all devices.
+<phrase key="faq-question-9" />
+What if I don't have a website?
+<phrase key="faq-question-9-answer" />
+That's totally fine. We'll still publish your information on all of our partner sites &mdash; it's actually the best way to get your business discovered online when you don't have a website. Want a great-looking website you build yourself? Check out <a href='[@T[link:<relative path="~/hosting/website-builder.aspx" secure="true"><param name="ci" value="92937" /></relative>]@T]'>[@T[companyname:name]@T] Website Builder.</a>
+<phrase key="faq-question-10" />
+Are there any system requirements for using [@T[companyname:name]@T] Get Found?
+<phrase key="faq-question-10-answer" />
+[@T[companyname:name]@T] Get Found works best in Google Chrome, but is also supported on Firefox, Safari, and Internet Explorer.

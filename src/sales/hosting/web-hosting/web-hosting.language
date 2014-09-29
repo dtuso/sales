@@ -1,12 +1,12 @@
 ---
 location: localization/sales/gd/hosting/web-hosting/en
-id: 53dc1b0df778fc32dc9e303c
-name: FOS-24754
-comments: VAT tax fix for invalid pfids
+id: 541c8ff9f778fc14545dc896
+name: GCE-22492
+comments: Clean up renewal pricing layout.
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="page-title" />
-Web Hosting | Lightning Fast Hosting & One Click Setup  - [@T[companyname:name]@T]
+Web Hosting | Lightning Fast Hosting & One Click Setup  - [@T[companyname:nameseotitle]@T]
 <phrase key="page-title-es" />
 Web Hosting | Spanish Friendly Web Hosting Provider - [@T[companyname:name]@T]
 <phrase key="page-title-au" />
@@ -43,6 +43,8 @@ Powerful hosting with cPanel<sup class="supsymbol">&reg;</sup> or Parallels<sup 
 Get Started
 <phrase key="first-slide-price" />
 As low as
+<phrase key="renewal-price-disclaimer" comments="Used in price renewal disclaimer phrase - $X.XX/month when you renew"/>
+when you renew<sup>4</sup>
 <phrase key="second-slide-title" />
 <span>NEW!</span> Windows Server 2012 Hosting with Parallels<sup class="supsymbol">&reg;</sup> Plesk Panel
 <phrase key="second-slide-content" />
@@ -993,12 +995,14 @@ Disclaimers
 &lowast; One FREE .COM, .CO, .NET or .ORG with purchase of a new 12-, 24- or 36-month plan. Plus ICANN fee of [@T[currencyprice:<price usdamount="18" dropdecimal="false" />]@T] per domain name per year. You must add the domain name into your cart before purchase, and you must select a domain term length equal to or less than the term length of your plan to qualify for the free domain offer. If you purchase a domain name for a term longer than the term of the plan, you will be charged for the additional registration term at the then-current rate. Cannot be used in conjunction with any other offer, sale, discount or promotion. Free domain offer applies only to the initial purchase term. After the initial purchase term, domains purchased through this offer will renew at the then-current renewal price.
 <phrase key="modal-disclaimer-3" />
 &lowast; One FREE .COM, .CO, .IN, .NET or .ORG with purchase of a new 12-, 24- or 36-month plan. Plus ICANN fee of [@T[currencyprice:<price usdamount="18" dropdecimal="false" />]@T] per domain name per year. You must add the domain name into your cart before purchase, and you must select a domain term length equal to or less than the term length of your plan to qualify for the free domain offer. If you purchase a domain name for a term longer than the term of the plan, you will be charged for the additional registration term at the then-current rate. Cannot be used in conjunction with any other offer, sale, discount or promotion. Free domain offer applies only to the initial purchase term. After the initial purchase term, domains purchased through this offer will renew at the then-current renewal price.
+<phrase key="modal-disclaimer-4-special" />
+<sup>4</sup> Special introductory pricing valid for the initial purchase term only. Product renewal pricing subject to change.
 <phrase key="modal-disclaimer-4" />
 Products will automatically renew until cancelled. You may turn off the auto-renewal feature by visiting your [@T[companyname:name]@T] account.
 <phrase key="modal-disclaimer-11166" />
   <p><sup>&Dagger;&Dagger;</sup> Applicable to accounts set up with Windows IIS7 only. Accounts set up with Windows IIS6 will have 1 FTP User Account.</p>
   <p><sup>&ordm;&ordm;</sup> While Deluxe and Unlimited Web Hosting Plans support and host unlimited Web Sites, owners of single plans with more than 400 Web Sites may experience periodic decreases in performance.</p>
-  <p><sup>&dagger;&dagger;</sup>SSL Certificate is free for 1 year with purchase. After the initial free year, SSL will automatically renew at the then-current price until cancelled. You may cancel automatic renewal at any time in your [@T[companyname:name]@T] account.</p>
+  <p><sup>&dagger;&dagger;</sup> SSL Certificate is free for 1 year with purchase. After the initial free year, SSL will automatically renew at the then-current price until cancelled. You may cancel automatic renewal at any time in your [@T[companyname:name]@T] account.</p>
 
 <phrase key="labelNew" />
 New
@@ -1019,7 +1023,7 @@ As low as
 <phrase key="DisclaimerContentSymbols" />
 &#8225;, * 
 <phrase key="DisclaimerContentSymbols-11166" />  
-&#8225;, *, &Dagger;&Dagger;, &ordm;&ordm;, &dagger;&dagger; &nbsp;
+&#8225;, *, &Dagger;&Dagger;, &ordm;&ordm;, &dagger;&dagger;, 4 &nbsp;
 <phrase key="DisclaimerContentDisclaimer" />
 Third-party logos and marks are registered trademarks of their respective owners. All rights reserved.
 <phrase key="DisclaimerContentLinkText" />
