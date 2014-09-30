@@ -1,8 +1,8 @@
 ---
 location: sales/hosting/web-hosting.aspx
-id: 542adb00f778fc106c634451
-name: GCE-28025
-comments: Remove renewal pricing.
+id: 542af3e3f778fc106c63446f
+name: GCE-28123
+comments: Direct all Hosting support calls to the Professional Hosting Support team
 splitSide: false
 ---
 
@@ -91,6 +91,13 @@ splitSide: false
                             <p class="half-width">
                                 [@L[cds.sales/gd/hosting/web-hosting:web-hosting-looking-for-description-11166]@L]
                             </p>
+                            <p class="support-container">
+                             ##if(countrySiteAny(www))
+                             <b>[@L[cds.sales/gd/hosting/web-hosting:professional-Hosting-Support]@L] [@T[support:<tes.CLOUDSERVERCONCIERGE_PHONE />]@T]</b>
+                             ##else
+                             <b>[@L[cds.sales/gd/hosting/web-hosting:professional-Hosting-Support]@L] [@T[support:<Supportphone />]@T] </b> 
+                             ##endif
+                           </p>
                         </div>
                     </section>
                     <!-- End misc-banner -->
