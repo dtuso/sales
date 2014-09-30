@@ -12,7 +12,7 @@
                 $http({
                     method: 'POST',
                     data: priceRequest,
-                    url: '/domainsapi/v1/tlds/pricing'
+                    url: api_url
                 })
                     .success(function(data) {
                         deferred.resolve(data);
