@@ -1,9 +1,9 @@
 ---
 url: http://www.dev-godaddy.com/accounting/accounting-software.aspx
 location: sales/accounting/accounting-software.aspx
-id: 5425a7cbf778fc1eec7ed1e8
-name: FOS-21973
-comments: Delete Reference code to old split test 1196
+id: 5425fd38f778fc1eec7ed201
+name: GCE-29128
+comments: Invalid support option. Iteration 1
 assetPath: false
 ---
 {% extends 'layouts/base.html' %}
@@ -547,7 +547,7 @@ assetPath: false
 
     $( document ).ready(function() {
 
-
+        $('.chatSupportLink').attr('data-ci','93502');
         // Fastball click capturing
         $('[data-ci]').click(function (e) {
             $this = $(this);
@@ -930,7 +930,11 @@ assetPath: false
                                 <li>[@L[cds.sales/accounting/accounting-software:PlanSummaryText7]@L] <strong>[@T[supportphone:<technical />]@T]</strong> [@L[cds.sales/accounting/accounting-software:PlanSummaryText8]@L]</li>
                             </ul>
                             <ul class="plan-summary-tab-pane-list plan-summary-tab-pane-list-columns no-margin-bottom plan-summary-tab-pane-list-two-columns">
+                              ##if(activeLanguageAny([en-us]))
+                                <li><span id="chat-now" class="inactive" >[@L[cds.sales/_common:ChatSupport]@L]</span> <span id="chat-eta" data-queue="General" style="display: none;">[@L[cds.sales/_common:ChatETA]@L]</span></li>
+                              ##elseif(activeLanguageAny(es) || countrySiteAny(br))
                                 <li>[@L[cds.sales/accounting/accounting-software:PlanSummaryText9]@L]</li>
+                              ##endif
                             </ul>
                         </div>
                     </div>
