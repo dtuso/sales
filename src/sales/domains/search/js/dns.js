@@ -109,7 +109,7 @@
 
                     Tld: pods.Pods[x].Tld,
                     Count: 1,
-                    RegistrationLength: ((pods.Pods[x].Tld=="com.au"||pods.Pods[x].Tld=="co.uk")?2:1),
+                    RegistrationLength: ((pods.Pods[x].Tld=="com.au")?2:1),
                     RegistrationType: 0,
                     TierId: -1,
                     LaunchPhase: 28
