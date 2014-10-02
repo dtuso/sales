@@ -1,8 +1,8 @@
 ---
 location: sales/hosting/wordpress-hosting.aspx
-id:    5425a93ef778fc1eec7ed1ea
-name: GCE-21973
-comments: Delete Reference code to old split test 1186
+id:    542b0953f778fc106c63447f
+name: GCE-28123
+comments: Direct all Hosting support calls to the Professional Hosting Support team
 cssVersionOverride: 2
 ---
 {% extends 'layouts/base.html' %}
@@ -64,6 +64,13 @@ cssVersionOverride: 2
           <span class="ico-text">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-1-WordPress]@L]</span>
           <h2>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-11-YouHaveBetterThingsToDoThanManage]@L]</h2>
           <p>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-50-MaintainingAWebsiteShouldnTMeanSpendingHours]@L]</p>
+          <p>
+             ##if(countrySiteAny(www))
+              <b>[@L[cds.sales/gd/hosting/wordpress-hosting:professional-Hosting-Support]@L] [@T[support:<tes.CLOUDSERVERCONCIERGE_PHONE />]@T] </b>
+             ##else
+              <b>[@L[cds.sales/gd/hosting/wordpress-hosting:professional-Hosting-Support]@L] [@T[support:<Supportphone />]@T] </b> 
+             ##endif
+          </p> 
         </div>
       </section>
       <!-- End misc-banner -->
