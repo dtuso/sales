@@ -1,0 +1,28 @@
+<script  type="text/javascript">
+
+  var got2Page = {
+    txt: {
+      ajaxFailureMsg: '[@L[cds.sales/offers/office365-promo:ajax-error-msg]@L]'
+    },
+    productId: '31841',
+    packageId: 'gybo_got2_pob',
+    itcCode: 'slp_GOT2POB',
+    promoCode: 'PACKPLUS',
+    normalPrice:   '[@T[productprice:<current productid="31841" period="yearly" promocode=""></current>]@T]', 
+    discountPrice: '[@T[productprice:<current productid="31841" period="yearly" promocode="PACKPLUS"></current>]@T]',
+    isManager: false,
+    redirectUrl: {
+      cart: '[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]',
+      config: '[@T[link:<relative path="offers/office365-promo-config.aspx"></relative>]@T]'
+    },
+    maxSeats: 25
+  };
+
+  ##if(isManager())
+    got2Page.isManager = true;
+    got2Page.redirectUrl.cart = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]';
+    got2Page.maxSeats = 300;
+    offersCodes.itcCode = 'mgr_' + offersCodes.itcCode;
+  ##endif
+
+</script>

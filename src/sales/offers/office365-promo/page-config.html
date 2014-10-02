@@ -1,6 +1,6 @@
 ---
 location: sales/offers/office365-promo-config.aspx
-id: 54230d0df778fc222cbd0a74
+id: 542c6ac7f778fc19402a6f54
 name: GCE-27637
 comments: New GOT POB Landing Page and Config Page
 url: http://www.dev-godaddy.com/offers/office365-promo-config.aspx
@@ -49,136 +49,7 @@ assetPath: false
 
   <script src="[@T[link:<javascriptroot />]@T]fos/201401/global/vendor/jquery/1.8.3/jquery.min.js"></script>
 
-  <script>
-    if (typeof $.fn.universalModal == "undefined") {
-
-      $.fn.universalModal = function (options) {
-        var _class_universal_modal_wrap = 'universal-modal-wrap';
-        var _class_universal_modal_overlay = 'universal-modal-overlay';
-        var _class_universal_modal_close = 'universal-modal-close';
-        var _class_universal_modal_close_icon = 'universal-close-icon';
-        //<a id="universallogin-modal-close" class=" +  + " href="#"><span>Close</span></a>
-
-        var _html_universal_modal_wrap = '<div class="' + _class_universal_modal_wrap + '" style="margin: auto;position: fixed !important;padding: 20px;border: 2px solid #D2D2D2;min-height: 50px;z-index: 9999;max-width: 1000px;background-color: white;margin-bottom: 66px;overflow: hidden;box-shadow: 5px 5px 0 rgba(0, 0, 0, .1);-webkit-box-shadow: 5px 5px 0 rgba(0, 0, 0, .1);-moz-box-shadow: 5px 5px 0 rgba(0, 0, 0, .1);"></div>';
-        var _html_universal_modal_close = '<a class="' + _class_universal_modal_close + ' ' + _class_universal_modal_close_icon + '"></a>';
-        var _html_universal_modal_overlay = '<div class="' + _class_universal_modal_overlay + '" style="filter: alpha(opacity=80);opacity: .8;background-color: #FFFFFF;top: 0;left: 0;width: 100%;height: 100%;position: fixed !important;z-index:9998;-webkit-filter: blur(15px);-moz-filter: blur(15px);-o-filter: blur(15px);-ms-filter: blur(15px);filter: blur(15px);"></div>';
-
-        var _event_modal_resize = 'resize.universalModal';
-        var _event_modal_scroll = 'scroll.universalModal';
-        var _event_modal_click = 'click.universalModal';
-        var _event_modal_keyup = 'keyup.universalModal';
-
-        var _options = $.extend({
-          header: '',
-          close: false,
-          onClose: null,
-          width: null,
-          resize: false,
-          bindClose: true
-        }, options || {});
-
-        var body = $('body');
-        var me = $(this);
-
-        var _closeModal = function () {
-          me.hide();
-          me.unwrap();
-          body.css('overflow', 'inherit');
-          $('.' + _class_universal_modal_overlay).remove();
-          $('.' + _class_universal_modal_close).remove();
-          $('.' + _class_universal_modal_close_icon).remove();
-          if (_options.onClose != null) {
-            _options.onClose();
-          }
-          $('.g-tt-close').click();
-        };
-
-        var _resizeModal = function () {
-          var windowHeight = $(window).height();
-          var windowWidth = $(window).width();
-
-          wrap.css('max-height', windowHeight - 15);
-          me.css({ 'max-height': windowHeight - 45, 'overflow': 'auto' });
-
-          if (me.find('.universal-modal-buttonpane').length > 0) {
-            me.css('margin-bottom', '66px');
-               
-          }
-
-          if (wrap.find('.modal-content-wrapper').length > 0) {
-             $(".modal-content-wrapper").css({'max-height':windowHeight-115,'margin-bottom':"70px","overflow":"auto"});
-               
-          }
-
-          wrap.offset({
-            top: $(document).scrollTop() + ((windowHeight / 2) - (wrap.outerHeight() / 2)),
-            left: $(document).scrollLeft() + ((windowWidth / 2) - (wrap.outerWidth() / 2))
-          });
-        };
-
-        var $window = $(window);
-        $window.unbind(_event_modal_resize);
-        $window.unbind(_event_modal_scroll);
-        body.unbind(_event_modal_keyup);
-        body.append(_html_universal_modal_overlay);
-
-        if (!_options.close) {
-          body.css('overflow', 'hidden');
-          me.wrap(_html_universal_modal_wrap);
-          me.show();
-
-          var wrap = $('.' + _class_universal_modal_wrap);
-          var overlay = $('.' + _class_universal_modal_overlay);
-          wrap.prepend(_html_universal_modal_close);
-          overlay.offset({ top: $(document).scrollTop(), left: $(document).scrollLeft() });
-          wrap.offset({ left: 0 });
-
-          if (_options.width != null) {
-            wrap.css('width', _options.width + 'px');
-
-
-          }
-
-          _resizeModal();
-
-          //window resize
-          $window.bind(_event_modal_resize, function () {
-            _resizeModal();
-          });
-
-          //close button
-          if (_options.bindClose) {
-            $('.' + _class_universal_modal_close).bind(_event_modal_click, function () {
-              _closeModal();
-            });
-          }
-
-          //window scroll
-          $window.bind(_event_modal_scroll, function () {
-            $('.' + _class_universal_modal_overlay).offset({ top: $(document).scrollTop() });
-          });
-
-          //esc key
-          body.bind(_event_modal_keyup, function (e) {
-            if (e.which === 27) {
-              _closeModal();
-            }
-          });
-
-          //IE HACK
-          var test = document.createElement('input');
-          var placeholderIsSupported = ('placeholder' in test);
-          if (!placeholderIsSupported) {
-            $window.resize();
-          }
-        } else if (_options.resize) {
-          $(window).resize();
-        } else {
-          _closeModal();
-        }
-      };
-    }
-  </script>
+{% include './_shared-setup.html' %}
 
   [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags" />]@P]
 
@@ -191,6 +62,8 @@ assetPath: false
     
     #config .config-step {width:657px;}
 
+    #config .product-price {display:none;}
+
     .product-price-original-amount {
       text-decoration: line-through;
       color:#999;
@@ -200,8 +73,7 @@ assetPath: false
     #config .config-step h2,
     #config .config-step h3.product-name {
       color: #505050;}
-    
-
+      
   {% endless %}
   </style>
  
@@ -222,7 +94,7 @@ assetPath: false
             <div class="config-continue-to-cart-wrapper-top">
               <p class="product-added-to-cart"><span class="green-check"></span><span class="product-added-to-cart-text">[@L[cds.sales/offers/office365-promo-config:PopIsInYourCart]@L]</span>
               </p>
-             <p class="config-continue-to-cart"><span class="icon-arrow-right"></span><a class="js-addtocart" data-ci="111" href="javascript:void(0)">[@L[cds.sales/offers/office365-promo-config:cp-3-ContinueToCart]@L]</a></p>
+             <p class="config-continue-to-cart"><span class="icon-arrow-right"></span><a class="js-addtocart" data-ci="93810" href="javascript:void(0)">[@L[cds.sales/offers/office365-promo-config:cp-3-ContinueToCart]@L]</a></p>
             </div>
           </div>
           <div class="config-steps-wrapper">
@@ -251,9 +123,9 @@ assetPath: false
                 </div>
                 <div class="config-product-narrow">
                 ##if(isManager())
-                  <input type="text" data-increment-input='{"min":1,"max":300,"limitText":"[@L[cds.sales/offers/office365-promo-config:cp-4-UpToMax]@L]"}' value="1" class="product-quantity" />
+                  <input type="text" data-increment-input='{"min":1,"max":300,"limitText":"[@L[cds.sales/offers/office365-promo-config:cp-4-UpToMax]@L]"}' value="1" class="product-quantity" data-ci="93816" />
                 ##else
-                  <input type="text" data-increment-input='{"min":1,"max": 25,"limitText":"[@L[cds.sales/offers/office365-promo-config:cp-4-UpToMax]@L]"}' value="1" class="product-quantity" />
+                  <input type="text" data-increment-input='{"min":1,"max": 25,"limitText":"[@L[cds.sales/offers/office365-promo-config:cp-4-UpToMax]@L]"}' value="1" class="product-quantity" data-ci="93816" />
                 ##endif
 
                 </div>
@@ -264,7 +136,7 @@ assetPath: false
             <!-- / End Step 1 -->
 
             <div class="config-continue-to-cart-wrapper">
-              <a data-ci="111" class="btn btn-warning btn-lg js-addtocart"><span class="icon-shopping-cart"></span> [@L[cds.sales/offers/office365-promo-config:cp-3-ContinueToCart-2]@L]</a>
+              <a data-ci="93809" class="btn btn-warning btn-lg js-addtocart"><span class="icon-shopping-cart"></span> [@L[cds.sales/offers/office365-promo-config:cp-3-ContinueToCart-2]@L]</a>
             ##if(isManager())
               <form action="[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]" method="get" data-addtocart='[@T[link:<relative path="~/api/package" />]@T]'></form>
             ##else
@@ -298,7 +170,7 @@ assetPath: false
             <div class="subtotal-disclaimer">
               <p>[@L[cds.sales/offers/office365-promo-config:cp-6-SubtotalDoesNotIncludeApplicableTaxes]@L]</p>
             </div>
-            <div data-ci="111" class="scroll-down-wrapper" data-scroll-event='{"obj":"a.btn.js-addtocart","yoffset":"-120"}'>
+            <div data-ci="93818" class="scroll-down-wrapper" data-scroll-event='{"obj":"a.btn.js-addtocart","yoffset":"-120"}'>
               <p class="green-text">[@L[cds.sales/offers/office365-promo-config:cp-6-ScrollDownToContinueToCart]@L]</p>
               <span class="icon-down green-down-arrow-icon"></span>
             </div>
@@ -308,7 +180,7 @@ assetPath: false
         <!-- Page Disclaimer -->
         <div id="disclaimers">
           <p>
-            <a data-ci="111" href="javascript:void(0);">[@L[cds.sales/offers/office365-promo-config:cp-2-LegalDisclaimers]@L]</a>
+            <a data-ci="93812" href="javascript:void(0);">[@L[cds.sales/offers/office365-promo-config:cp-2-LegalDisclaimers]@L]</a>
           </p>
         </div>
         
@@ -369,594 +241,562 @@ assetPath: false
       currencyCalc.base = "[@T[currencyprice:<price usdamount="1000000000" dropdecimal="false" dropsymbol="false" htmlsymbol="false" negative="parenthesis" />]@T]";
     }
   </script>
-  <script  type="text/javascript">
 
-  var got2Page = {
-    isManager: false,
-    redirectUrl: '[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]',
-    planName: "TODO-figure-out-with-Ken",
-    maxSeats: 25
-  };
-  ##if(isManager())
-    got2Page.isManager = true;
-    got2Page.redirectUrl = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]';
-    got2Page.maxSeats = 300;
-  ##endif
-
-
+<script  type="text/javascript">
 {% jsminify %}
-    // incrementing inputs plugin
-    if (typeof incrementInput == "undefined") {
+  // incrementing inputs plugin
+  if (typeof incrementInput == "undefined") {
 
-      var incrementInput = {
-        "eventMousePressArrows":null,
-        "init": function () {
+    var incrementInput = {
+      "eventMousePressArrows":null,
+      "init": function () {
 
-          $("[data-increment-input]").each(function () {
-            var $this = $(this);
-            var thisData = $this.data("increment-input");
-            var settings = {
-              "min":null,
-              "max":null,
-              "limitText":null,
-              "extendedMin":null,
-              "extendedMax":null
-            }
-            // set values that may not have been added by data attribute
-            $.extend(settings,thisData);
-            $this.data('increment-input',settings);
+        $("[data-increment-input]").each(function () {
+          var $this = $(this);
+          var thisData = $this.data("increment-input");
+          var settings = {
+            "min":null,
+            "max":null,
+            "limitText":null,
+            "extendedMin":null,
+            "extendedMax":null
+          }
+          // set values that may not have been added by data attribute
+          $.extend(settings,thisData);
+          $this.data('increment-input',settings);
 
-            // building structure
-            $this.addClass("increment-input-value");
-            $this.wrap($("<div/>").addClass("config-increment-input-wrapper"));
-            var $outerWrapper = $this.parent();
-            var $inputWrapper = $("<div/>").addClass("config-increment-input");
-            
-            var $inputControls = $("<div/>").addClass("config-increment-controls");
-            var $inputControlsUp = $("<div/>").addClass("icon-increment-up");
-            var $inputControlsDown = $("<div/>").addClass("icon-increment-down");
-            var $limitText = $("<div/>").addClass("description-limit-text");
-
-            $outerWrapper.append($inputWrapper);
-            $inputWrapper.append($this);
-            
-            $outerWrapper.append($inputControls);
-            $inputControls.append($inputControlsUp);
-            $inputControls.append($inputControlsDown);
-
-            // set val to the data attribute add update the variable
-            $this.data("increment-input").val=$this.val();
-            thisData = $this.data("increment-input");
-
-            // limit text will be added
-
-            if(thisData.limitText != null){
-              $inputWrapper.append($limitText);
-              var limitTextString = thisData.limitText;
-              if(thisData.max!=null){
-                limitTextString = limitTextString.replace("[[max]]",thisData.max)
-              }
-              if(thisData.min!=null){
-                limitTextString = limitTextString.replace("[[min]]",thisData.min)
-              }
-              $limitText.html(limitTextString);
-            }
+          // building structure
+          $this.addClass("increment-input-value");
+          $this.wrap($("<div/>").addClass("config-increment-input-wrapper"));
+          var $outerWrapper = $this.parent();
+          var $inputWrapper = $("<div/>").addClass("config-increment-input");
           
-            // add click listeners
-            $inputControlsUp.mousedown(function(){
-              pressAndHoldArrows($this,1,500);
-            });
+          var $inputControls = $("<div/>").addClass("config-increment-controls");
+          var $inputControlsUp = $("<div/>").addClass("icon-increment-up");
+          var $inputControlsDown = $("<div/>").addClass("icon-increment-down");
+          var $limitText = $("<div/>").addClass("description-limit-text");
 
-            $inputControlsDown.mousedown(function(){
-              pressAndHoldArrows($this,-1,500);
-            });
+          $outerWrapper.append($inputWrapper);
+          $inputWrapper.append($this);
+          
+          $outerWrapper.append($inputControls);
+          $inputControls.append($inputControlsUp);
+          $inputControls.append($inputControlsDown);
 
-            $(document).mouseup(function(){
-              pressAndHoldArrowsLimitReached();
-            });
-            $(document).bind("keyup",function(){
-              pressAndHoldArrowsLimitReached();
-            });
+          // set val to the data attribute add update the variable
+          $this.data("increment-input").val=$this.val();
+          thisData = $this.data("increment-input");
 
-            // add keyup and keydown listener, also allow numbers
-            $this.bind("keydown",function(event){
-              
-              if((37<=event.keyCode && event.keyCode<=40) && incrementInput.eventMousePressArrows==null){
-                if(event.keyCode==38){
-                  event.preventDefault();
-                  pressAndHoldArrows($this,1,500);
-                  
-                }else if(event.keyCode == 40){
-                  event.preventDefault();
-                  pressAndHoldArrows($this,-1,500);
-                  
-                }
-              } else if((48<=event.keyCode && event.keyCode<=57) || (96<=event.keyCode && event.keyCode<=105) || event.keyCode == 9 || event.keyCode == 8){
-                // do nothing these key are allowed
-              } else {
-                event.preventDefault();
-              }
-            })
-            
+          // limit text will be added
 
-            // add change listener
-            $this.change(function(){
-              inputValueChange($this,0);
-            });
-
-            $this.keyup(function(){
-              inputValueChange($this,0);
-            });
-
-            $this.trigger("keyup");
+          if(thisData.limitText != null){
+            $inputWrapper.append($limitText);
+            var limitTextString = thisData.limitText;
+            if(thisData.max!=null){
+              limitTextString = limitTextString.replace("[[max]]",thisData.max)
+            }
+            if(thisData.min!=null){
+              limitTextString = limitTextString.replace("[[min]]",thisData.min)
+            }
+            $limitText.html(limitTextString);
+          }
+        
+          // add click listeners
+          $inputControlsUp.mousedown(function(){
+            pressAndHoldArrows($this,1,500);
           });
-        }
-      }
 
-      function inputValueChange($obj,valueChange){
+          $inputControlsDown.mousedown(function(){
+            pressAndHoldArrows($this,-1,500);
+          });
 
-        var val = $obj.val();
-        if(val==""){
-          //set to zero if blank
-          val=0;
-          $obj.trigger("updateqty");
-        }
-        var newVal = parseInt(val)+parseInt(valueChange);
+          $(document).mouseup(function(){
+            pressAndHoldArrowsLimitReached();
+          });
+          $(document).bind("keyup",function(){
+            pressAndHoldArrowsLimitReached();
+          });
 
-
-
-        var objData = $obj.data("increment-input");
-        
-        var $parent = $obj.parents(".config-increment-input-wrapper");
-        var $down = $parent.find(".icon-increment-down");
-        var $up = $parent.find(".icon-increment-up");
-        var min,max;
-     
-        // figure out if min and max value are set as well as extended min and max values
-        // extended values will display as a warning that the value is outside the range
-        // extended values allow for a prompt with addition instruction
-        if(objData.min!=null && objData.extendedMin==null){
-          min = objData.min;
-        } else if(objData.extendedMin!=null){
-          min = objData.extendedMin;
-        } else {  
-          min = null;
-        }
-        
-        if(objData.max!=null && objData.extendedMax==null){
-          max = objData.max;
-        } else if(objData.extendedMax!=null){
-          max = objData.extendedMax;
-        } else {  
-          max = null;
-        }
-
-        // if already at range the stop the function
-        if((val == max && newVal > val) || (val == min && newVal < val)){return;}
-
-        // max limit reached
-        // add class to adjust limit text
-        if(objData.max!=null && newVal >= objData.max){
-          $parent.addClass("increment-input-at-max-range");
-        } else {
-          $parent.removeClass("increment-input-at-max-range");
-        }
-
-        // max limite outside range
-        //add class to adjust box border
-        if(objData.max!=null && newVal > objData.max){
-          $parent.addClass("increment-input-outside-max-range");
-        } else {
-          $parent.removeClass("increment-input-outside-max-range");
-        }
-
-        // min limit reached
-        //add class to adjust limit text
-        if(objData.min!=null && newVal <= objData.min){
-          $parent.addClass("increment-input-at-min-range");
-        } else {
-          $parent.removeClass("increment-input-at-min-range");
-        }
-
-        // min limite outside range
-        //add class to adjust box border
-        if(objData.min!=null && newVal < objData.min){
-          $parent.addClass("increment-input-outside-min-range");
-        } else {
-          $parent.removeClass("increment-input-outside-min-range");
-        }
-
-        // disable up and down buttons
-        if(newVal == objData.min){
-          $down.addClass("icon-increment-disabled");
-        } else {
-          $down.removeClass("icon-increment-disabled");
-        }
-        if(newVal == objData.max){
-          $up.addClass("icon-increment-disabled");
-        } else {
-          $up.removeClass("icon-increment-disabled");
-        }
-        
-        if(+(min,max,newVal)){
-         $obj.data("increment-input").val=newVal;
-          $obj.val(newVal);
-          $obj.trigger("updateqty");
-        } else {
-          $obj.val($obj.data("increment-input").val);
-          if(val != $obj.val()){
-            $obj.trigger("updateqty");
-          }
-
-         return false;
-        }
-      }
-
-      function valueInsideRange(min,max,val){
-        if(min!=null && val < min){
-          return false;
-        }
-        if(max!=null && val > max){
-          return false;
-        }
-        return true;
-      }
-
-      function pressAndHoldArrows($obj,valChange,timeInc){
-
-        incrementInput.eventMousePressArrows = setTimeout(function(){
-          timeInc = Math.max(timeInc*.5,40);
-          pressAndHoldArrows($obj,valChange,timeInc);
+          // add keyup and keydown listener, also allow numbers
+          $this.bind("keydown",function(event){
+            
+            if((37<=event.keyCode && event.keyCode<=40) && incrementInput.eventMousePressArrows==null){
+              if(event.keyCode==38){
+                event.preventDefault();
+                pressAndHoldArrows($this,1,500);
+                
+              }else if(event.keyCode == 40){
+                event.preventDefault();
+                pressAndHoldArrows($this,-1,500);
+                
+              }
+            } else if((48<=event.keyCode && event.keyCode<=57) || (96<=event.keyCode && event.keyCode<=105) || event.keyCode == 9 || event.keyCode == 8){
+              // do nothing these key are allowed
+            } else {
+              event.preventDefault();
+            }
+          })
           
-        },timeInc);
-        var objData = $obj.data("increment-input");
-        
-        if(objData.min != null){
-          if(objData.min == objData.val && valChange == -1){
-            return;
-          }
-        }
 
-        if(objData.max != null){
-          if(objData.max <= objData.val && valChange == 1){
-            return;
-          }
+          // add change listener
+          $this.change(function(){
+            inputValueChange($this,0);
+          });
 
-          if(objData.max < objData.val && valChange == -1){
-            $obj.val(objData.max+1);
-          }
-        }
-        inputValueChange($obj,valChange);
-      }
+          $this.keyup(function(){
+            inputValueChange($this,0);
+          });
 
-      function pressAndHoldArrowsLimitReached(){
-        clearTimeout(incrementInput.eventMousePressArrows);
-        incrementInput.eventMousePressArrows = null;
+          $this.trigger("keyup");
+        });
       }
     }
 
-    $("html").bind("ajaxStart", function(){
-       $(this).addClass('busy');
-    }).bind("ajaxStop", function(){
-       $(this).removeClass('busy');
-    });
+    function inputValueChange($obj,valueChange){
 
-    $("[data-scroll-event]").each(function(){
-      $(this).bind("click",function(event){
-        event.preventDefault();
+      var val = $obj.val();
+      if(val==""){
+        //set to zero if blank
+        val=0;
+        $obj.trigger("updateqty");
+      }
+      var newVal = parseInt(val)+parseInt(valueChange);
 
-        var setting = {
-          "yoffset":"0"
+      var objData = $obj.data("increment-input");      
+      var $parent = $obj.parents(".config-increment-input-wrapper");
+      var $down = $parent.find(".icon-increment-down");
+      var $up = $parent.find(".icon-increment-up");
+      var min,max;
+   
+      // figure out if min and max value are set as well as extended min and max values
+      // extended values will display as a warning that the value is outside the range
+      // extended values allow for a prompt with addition instruction
+      if(objData.min!=null && objData.extendedMin==null){
+        min = objData.min;
+      } else if(objData.extendedMin!=null){
+        min = objData.extendedMin;
+      } else {  
+        min = null;
+      }
+      
+      if(objData.max!=null && objData.extendedMax==null){
+        max = objData.max;
+      } else if(objData.extendedMax!=null){
+        max = objData.extendedMax;
+      } else {  
+        max = null;
+      }
+
+      // if already at range the stop the function
+      if((val == max && newVal > val) || (val == min && newVal < val)){return;}
+
+      // max limit reached
+      // add class to adjust limit text
+      if(objData.max!=null && newVal >= objData.max){
+        $parent.addClass("increment-input-at-max-range");
+      } else {
+        $parent.removeClass("increment-input-at-max-range");
+      }
+
+      // max limite outside range
+      //add class to adjust box border
+      if(objData.max!=null && newVal > objData.max){
+        $parent.addClass("increment-input-outside-max-range");
+      } else {
+        $parent.removeClass("increment-input-outside-max-range");
+      }
+
+      // min limit reached
+      //add class to adjust limit text
+      if(objData.min!=null && newVal <= objData.min){
+        $parent.addClass("increment-input-at-min-range");
+      } else {
+        $parent.removeClass("increment-input-at-min-range");
+      }
+
+      // min limite outside range
+      //add class to adjust box border
+      if(objData.min!=null && newVal < objData.min){
+        $parent.addClass("increment-input-outside-min-range");
+      } else {
+        $parent.removeClass("increment-input-outside-min-range");
+      }
+
+      // disable up and down buttons
+      if(newVal == objData.min){
+        $down.addClass("icon-increment-disabled");
+      } else {
+        $down.removeClass("icon-increment-disabled");
+      }
+      if(newVal == objData.max){
+        $up.addClass("icon-increment-disabled");
+      } else {
+        $up.removeClass("icon-increment-disabled");
+      }
+      
+      if(+(min,max,newVal)){
+       $obj.data("increment-input").val=newVal;
+        $obj.val(newVal);
+        $obj.trigger("updateqty");
+      } else {
+        $obj.val($obj.data("increment-input").val);
+        if(val != $obj.val()){
+          $obj.trigger("updateqty");
         }
-        var objsetting = $(this).data("scroll-event");
-        $.extend(setting,objsetting);
-        if($(setting.triggerobj).length > 0 && setting.trigger.length > 0){
-          $(setting.triggerobj).trigger(setting.trigger);
+
+       return false;
+      }
+    }
+
+    function valueInsideRange(min,max,val){
+      if(min!=null && val < min){
+        return false;
+      }
+      if(max!=null && val > max){
+        return false;
+      }
+      return true;
+    }
+
+    function pressAndHoldArrows($obj,valChange,timeInc){
+
+      incrementInput.eventMousePressArrows = setTimeout(function(){
+        timeInc = Math.max(timeInc*.5,40);
+        pressAndHoldArrows($obj,valChange,timeInc);
+        
+      },timeInc);
+      var objData = $obj.data("increment-input");
+      
+      if(objData.min != null){
+        if(objData.min == objData.val && valChange == -1){
+          return;
         }
-         debugger;
-        var scrollToPos = parseInt($(setting.obj).offset().top) + parseInt(setting.yoffset);
-         
-        $('html,body').animate({scrollTop: scrollToPos}, 500);
-      });
+      }
+
+      if(objData.max != null){
+        if(objData.max <= objData.val && valChange == 1){
+          return;
+        }
+
+        if(objData.max < objData.val && valChange == -1){
+          $obj.val(objData.max+1);
+        }
+      }
+      inputValueChange($obj,valChange);
+    }
+
+    function pressAndHoldArrowsLimitReached(){
+      clearTimeout(incrementInput.eventMousePressArrows);
+      incrementInput.eventMousePressArrows = null;
+    }
+  }
+
+  $("html").bind("ajaxStart", function(){
+     $(this).addClass('busy');
+  }).bind("ajaxStop", function(){
+     $(this).removeClass('busy');
+  });
+
+  $("[data-scroll-event]").each(function(){
+    $(this).bind("click",function(event){
+      event.preventDefault();
+
+      var setting = {
+        "yoffset":"0"
+      }
+      var objsetting = $(this).data("scroll-event");
+      $.extend(setting,objsetting);
+      if($(setting.triggerobj).length > 0 && setting.trigger.length > 0){
+        $(setting.triggerobj).trigger(setting.trigger);
+      }
+      var scrollToPos = parseInt($(setting.obj).offset().top) + parseInt(setting.yoffset);
+       
+      $('html,body').animate({scrollTop: scrollToPos}, 500);
     });
+  });
 
 {% endjsminify %}
-      
-    var office365config = {};
-    (function($){
-   
+    
+  var office365config = {};
+  (function($){
+ 
 
-      // function to lookup data keys inside json objects
-      function getObjects(obj, key, val) {
-        var objects = [];
-        for (var i in obj) {
-           if (!obj.hasOwnProperty(i)) continue;
-           if (typeof obj[i] == 'object') {
-             objects = objects.concat(getObjects(obj[i], key, val));
-           } else if (i == key && obj[key] == val) {
-             objects.push(obj);
-           }
-        }
-        return objects;
+    // function to lookup data keys inside json objects
+    function getObjects(obj, key, val) {
+      var objects = [];
+      for (var i in obj) {
+         if (!obj.hasOwnProperty(i)) continue;
+         if (typeof obj[i] == 'object') {
+           objects = objects.concat(getObjects(obj[i], key, val));
+         } else if (i == key && obj[key] == val) {
+           objects.push(obj);
+         }
       }
+      return objects;
+    }
 
-      function getParameterByName(name) {
-        name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
-        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-        results = regex.exec(location.search);
-        return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-      } 
-         
-      office365config = {
+    function getParameterByName(name) {
+      name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+      var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+      results = regex.exec(location.search);
+      return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    } 
+       
+    office365config = {
 
-        "productOrder":{},
-        "$premiumPlacard": $('.config-product-wrapper[data-planLevel="Premium"]'),
-        "$premiumOrderItem": $('.order-item[data-planLevel="Premium"]'),
+      "productOrder":{},
+      "$premiumPlacard": $('.config-product-wrapper[data-planLevel="Premium"]'),
+      "$premiumOrderItem": $('.order-item[data-planLevel="Premium"]'),
 
-        "init": function() {
+      "init": function() {
+        var $productPriceDiv = office365config["$premiumPlacard"].find('.product-price');
+        var priceLineHtml = $productPriceDiv.html();
+        priceLineHtml = priceLineHtml.replace('{a0-begin}','<span class="product-price-original-amount">');
+        priceLineHtml = priceLineHtml.replace('{0}',got2Page.normalPrice);
+        priceLineHtml = priceLineHtml.replace('{a0-end}','</span>');
+        priceLineHtml = priceLineHtml.replace('{a1-begin}','<span class="product-price-amount">');
+        priceLineHtml = priceLineHtml.replace('{1}',got2Page.discountPrice);
+        priceLineHtml = priceLineHtml.replace('{a1-end}','</span>');
+        priceLineHtml = priceLineHtml.replace('{a2-begin}','<span class="product-price-text">');
+        priceLineHtml = priceLineHtml.replace('{a2-end}','</span>');
+        $productPriceDiv.html(priceLineHtml).show();
 
-          var priceLineHtml = office365config["$premiumPlacard"].find('.product-price').html();
-          priceLineHtml = priceLineHtml.replace('{a0-begin}','<span class="product-price-original-amount">');
-          priceLineHtml = priceLineHtml.replace('{0}',office365config.configData.normalPrice);
-          priceLineHtml = priceLineHtml.replace('{a0-end}','</span>');
-          priceLineHtml = priceLineHtml.replace('{a1-begin}','<span class="product-price-amount">');
-          priceLineHtml = priceLineHtml.replace('{1}',office365config.configData.discountPrice);
-          priceLineHtml = priceLineHtml.replace('{a1-end}','</span>');
-          priceLineHtml = priceLineHtml.replace('{a2-begin}','<span class="product-price-text">');
-          priceLineHtml = priceLineHtml.replace('{a2-end}','</span>');
-          office365config["$premiumPlacard"].find('.product-price').html(priceLineHtml);
-
-          $(".js-addtocart").click(function(e){
-            office365config.continueToCart(e,this);
-          })
-                    
-          office365config["$premiumPlacard"].find(".product-quantity").bind("updateqty",function() {
-            office365config.buildProductOrder();
-          });
-
-          office365config["$premiumPlacard"].find(".product-quantity").keyup(function() {
-            $(this).trigger("updateqty");
-          });
-
+        $(".js-addtocart").click(function(e){
+          office365config.continueToCart(e,this);
+        })
+                  
+        office365config["$premiumPlacard"].find(".product-quantity").bind("updateqty",function() {
           office365config.buildProductOrder();
+        });
 
-          incrementInput.init();  
-        },
+        office365config["$premiumPlacard"].find(".product-quantity").keyup(function() {
+          $(this).trigger("updateqty");
+        });
 
-        "refreshCart": function() { 
-          var stringData = $(".order-summary-wrapper").data('itemdetails'),
-            qtyUsers = parseInt(office365config.productOrder.productQty),
-            grandTotal = 0,
-            upToFiveQty = Math.min(qtyUsers,5),
-            upToFiveHtml = '',
-            upToFiveTotal = 0,
-            sixAndUpQty = Math.max(qtyUsers-5,0),
-            sixAndUpHtml = '',
-            sixAndUpTotal = 0,
-            $orderItem = office365config["$premiumOrderItem"];
-            
-          // discount pricing calculations
-          upToFiveHtml = upToFiveQty + " " + ((upToFiveQty == 1) ? stringData['1usr'] : stringData['moreUsrs']) + " x 1 " + stringData['yrTerm'];
-          upToFiveTotal = currencyCalc.evaluate([office365config.configData.planDuration,'*',office365config.configData.discountPrice,'*',upToFiveQty]);
+        office365config.buildProductOrder();
 
-          // normal pricing calculations
-          if(sixAndUpQty > 0) {
-            sixAndUpHtml = sixAndUpQty + " " + ((sixAndUpQty == 1) ? stringData['1usr'] : stringData['moreUsrs']) + " x 1 " + stringData['yrTerm'];
-            sixAndUpTotal = currencyCalc.evaluate([office365config.configData.planDuration,'*',office365config.configData.normalPrice,'*',sixAndUpQty]);
-          }
-          grandTotal = currencyCalc.evaluate([upToFiveTotal,'+',sixAndUpTotal]);   
+        incrementInput.init();  
+      },
 
-          // display the data
-          $orderItem.find(".up-to-five .order-item-details").html(upToFiveHtml);
-          $orderItem.find(".six-and-up .order-item-details").html(sixAndUpHtml);
-          $orderItem.find(".up-to-five .order-item-total").html(upToFiveTotal);
-          $orderItem.find(".six-and-up .order-item-total").html(sixAndUpTotal);
-
-          $(".order-user-quantity").html(qtyUsers + " " + ((qtyUsers == 1) ? stringData['1usr'] : stringData['moreUsrs']));
-          $(".order-total").html(grandTotal);
-
-          if(qtyUsers > 0) {
-            $orderItem.slideDown();
-          } else {
-            $orderItem.slideUp()
-          }
-          if(sixAndUpQty > 0) { 
-            $('.order-item-details-wrapper.six-and-up').show();
-          } else {
-            $('.order-item-details-wrapper.six-and-up').hide();
-          }
-          return true;
-        },
-
-        "buildProductOrder": function() {
-          var qty = parseInt(office365config["$premiumPlacard"].find(".product-quantity").val());
-          if(qty < 1) {
-            var $zeroUsersWarning = $("#zeroUsersWarning");
-            if($zeroUsersWarning.is(":hidden") == true){
-              $zeroUsersWarning.show();
-              $zeroUsersWarning.find(".zero-user-warning-close-icon").click(function(){
-                $zeroUsersWarning.hide();
-              })
-              $('html,body').animate({scrollTop: $zeroUsersWarning.offset().top-10}, 500);
-            }
-            return false;
-          }
-          if(qty > office365config.configData.maxSeats) {
-            //Show a modal warning
-            var $exceedsMaxUsers = $("#exceedsMaxUsers");
-            if($exceedsMaxUsers.is(":hidden") == true){
-              $exceedsMaxUsers.show();
-              $("input:focus").blur()
-              $exceedsMaxUsers.universalModal({"width":400});
-              $(".modal-user-limit-ok").bind("click",function(){
-                $(".universal-modal-close").trigger("click.universalModal")
-              })
-              // IE will not show the modal at first, triggering the window resize fixes this
-              $(window).trigger("resize");
-            }
-            return false;
-          }
-        
-          office365config.productOrder = {
-            "productQty": qty,
-            "productId": office365config.configData.productId,
-            "packageId": office365config.configData.packageId,
-            "domain": getParameterByName("domain")
-          };
-          return office365config.refreshCart(); 
-        },
-
-        "continueToCart": function(e, thisClick) {
-          // ensure not already trying to add something to the cart
-          if($(".btn.js-addtocart").hasClass("btn-orange-disabled")) {
-            return;
-          }
-          // ensure the user selects are correct
-          if(office365config.buildProductOrder()==false) {
-            return;
-          }
-          $(".btn.js-addtocart").addClass("btn-orange-disabled square-pixel-spinner");
-
-          // add Got2 to the cart            
-          var urlFragment = '/add'; //action
-          urlFragment += '/' + office365config.configData.itcCode; //itc code
-          urlFragment += '/' + $(thisClick).data('ci'); //ci code
-          urlFragment += '/' + office365config.productOrder.productQty;  // quantity
-          urlFragment += '/' + office365config.configData.planName //Plan Name
-          var url = '[@T[link:<relative path="/api/package/{0}" parammode="explicit"/>]@T]'.replace('{0}', urlFragment);
-
-          url += ((url.indexOf('?') > -1) ? '&' : '?') + 'domain=' + office365config.productOrder.domain + '&sourceCode=domaincheck';
-          if (office365config.productOrder.addOns != 'noAddOns'){
-            url += '&addons=' + office365config.productOrder.addOns + '-1';
-          }
-
-          $.getJSON(url, function (data) {
-            // 1. check for failures
-            if (data == 'fail') {
-              alert('Add to cart failure.');
-              return;        
-            }
-            if(!data.Success) {
-              alert('Add to cart failure.');
-              return;
-            }
-
-            // 2. redirect user to the cart where their product(s) should be waiting for them.
-            window.location = locuPage.redirectUrl;
-          });
-            
-        } // end continueToCart
-      };
-
-      var configPackageId = "Office365ConfigData";
-      office365config.configData = {
-        "productId": '31841',
-        "packageId": 'OfficeBusPremMsft1yr',
-        "planDuration": 1,
-        "itcCode": 'slp_GOT2POB',
-        "planName": got2Page.planName,
-        "normalPrice":   '[@T[productprice:<current productid="31841" period="yearly" promocode=""></current>]@T]', 
-        "discountPrice": '[@T[productprice:<current productid="31841" period="yearly" promocode="PACKPLUS"></current>]@T]',
-        "maxSeats": got2Page.maxSeats
-      };
-
-      office365config.init(); 
-
-    
-    })( jQuery );
-
-
-    $(document).ready(function(){
-
-      $("#disclaimers > p > a").click(function (event) {
-        var $disclaimerModal = $("#disclaimerModal");
-        $disclaimerModal.show();
-          $disclaimerModal.universalModal({"width":800});
-          $(".modal-user-limit-ok").bind("click",function(){
-            $(".universal-modal-close").trigger("click.universalModal")
-          });
-          // IE will not show the modal at first, triggering the window resize fixes this
-          $(window).trigger("resize");
-      });
-
-      $('[data-ci]').click(function(e){
-        $this = $(this);
-        FastballEvent_MouseClick(e,$this.attr('data-ci'),$this[0],'a');
-        fbiLibCheckQueue();    
-      });
-
-
-      $(window).scroll(function() {
-        updateOrderSummaryPosition();
-      });
-      $(window).resize(function() {
-        updateOrderSummaryPosition();
-      });
-      updateOrderSummaryPosition();
-    
-
-      function updateOrderSummaryPosition() {
-
-        var paddingTop = 20/* for prettiness when scrolling */,
-          $configCartWrapper = $('.config-cart-wrapper'),
-          scrollTop = $(window).scrollTop(),
-          scrollLeft = $(window).scrollLeft(),
-          topStep1 = $("div.config-step:first").offset().top,
-          topOfWindowAboveTopOfStep1 = (scrollTop <= (topStep1 - paddingTop)),
-          $footer = $('.scroll-down-wrapper');
-
-          $footer.css('visibility','visible');
-          $configCartWrapper.css({'top':'0px','position':'static'});
-
-        if(!topOfWindowAboveTopOfStep1) {
-          // keep the top of the summary at 0
+      "refreshCart": function() { 
+        var stringData = $(".order-summary-wrapper").data('itemdetails'),
+          qtyUsers = parseInt(office365config.productOrder.productQty),
+          grandTotal = 0,
+          upToFiveQty = Math.min(qtyUsers,5),
+          upToFiveHtml = '',
+          upToFiveTotal = 0,
+          sixAndUpQty = Math.max(qtyUsers-5,0),
+          sixAndUpHtml = '',
+          sixAndUpTotal = 0,
+          $orderItem = office365config["$premiumOrderItem"];
           
-        //} else {
-          //check for if summary can fit without going below the bottom of the last step
-          
-          var proposedNewTop = scrollTop - (topStep1 - paddingTop),
-            proposedNewBottom = proposedNewTop + $configCartWrapper.height(),
-            $lastStep = $("div.config-step").last(),
-            bottomOfLastStep = $lastStep.offset().top + $lastStep.height() - topStep1,
-            canFit = (proposedNewBottom <= bottomOfLastStep);
+        // discount pricing calculations
+        upToFiveHtml = upToFiveQty + " " + ((upToFiveQty == 1) ? stringData['1usr'] : stringData['moreUsrs']) + " x 1 " + stringData['yrTerm'];
+        upToFiveTotal = currencyCalc.evaluate([got2Page.discountPrice,'*',upToFiveQty]);
 
-          if(scrollTop>=(topStep1-paddingTop) && ((scrollTop+$configCartWrapper.height())<=$lastStep.offset().top + $lastStep.height() + paddingTop) ){
-            try{
-              var configCartWrapperLeft = $configCartWrapper.offset().left;
-              $configCartWrapper.css({'top':'20px','position':'fixed','width':$configCartWrapper.innerWidth(),'left':(configCartWrapperLeft - scrollLeft) +'px'});
-            }catch(err){
-              //if errors don't float the $confiCartWrapper
-              $configCartWrapper.css({'top':'0px','position':'static'});
-            }
-            if((scrollTop+paddingTop)>=$lastStep.offset().top){
-              $footer.css('visibility','hidden');
-            }else{
-              $footer.css('visibility','visible');
-            }
-          } else {
-            try{
-              var configCartWrapperLeft = $configCartWrapper.offset().left;
-              $configCartWrapper.css({'position':'fixed','width':$configCartWrapper.innerWidth(),'left':(configCartWrapperLeft - scrollLeft) +'px'});
-            }catch(err){
-              //if errors don't float the $confiCartWrapper
-              $configCartWrapper.css({'top':'0px','position':'static'});
-
-            }
-            // affix the summary so the bottom lines up with the bottom of the last step
-            $footer.css('visibility','hidden');
-            var topForBottomAligned = ($lastStep.offset().top + $lastStep.height() +$footer.height()) - (scrollTop + $configCartWrapper.height() );
-            //topForBottomAligned = bottomOfLastStep - $configCartWrapper.height() + paddingTop;
-            $configCartWrapper
-              .css({'top': topForBottomAligned + 'px'});
-          }
+        // normal pricing calculations
+        if(sixAndUpQty > 0) {
+          sixAndUpHtml = sixAndUpQty + " " + ((sixAndUpQty == 1) ? stringData['1usr'] : stringData['moreUsrs']) + " x 1 " + stringData['yrTerm'];
+          sixAndUpTotal = currencyCalc.evaluate([got2Page.normalPrice,'*',sixAndUpQty]);
         }
-        
-      }
+        grandTotal = currencyCalc.evaluate([upToFiveTotal,'+',sixAndUpTotal]);   
+
+        // display the data
+        $orderItem.find(".up-to-five .order-item-details").html(upToFiveHtml);
+        $orderItem.find(".six-and-up .order-item-details").html(sixAndUpHtml);
+        $orderItem.find(".up-to-five .order-item-total").html(upToFiveTotal);
+        $orderItem.find(".six-and-up .order-item-total").html(sixAndUpTotal);
+
+        $(".order-user-quantity").html(qtyUsers + " " + ((qtyUsers == 1) ? stringData['1usr'] : stringData['moreUsrs']));
+        $(".order-total").html(grandTotal);
+
+        if(qtyUsers > 0) {
+          $orderItem.slideDown();
+        } else {
+          $orderItem.slideUp()
+        }
+        if(sixAndUpQty > 0) { 
+          $('.order-item-details-wrapper.six-and-up').show();
+        } else {
+          $('.order-item-details-wrapper.six-and-up').hide();
+        }
+        return true;
+      },
+
+      "buildProductOrder": function() {
+        var qty = parseInt(office365config["$premiumPlacard"].find(".product-quantity").val());
+        if(qty < 1) {
+          var $zeroUsersWarning = $("#zeroUsersWarning");
+          if($zeroUsersWarning.is(":hidden") == true){
+            $zeroUsersWarning.show();
+            $zeroUsersWarning.find(".zero-user-warning-close-icon").click(function(){
+              $zeroUsersWarning.hide();
+            })
+            $('html,body').animate({scrollTop: $zeroUsersWarning.offset().top-10}, 500);
+          }
+          return false;
+        }
+        if(qty > got2Page.maxSeats) {
+          //Show a modal warning
+          var $exceedsMaxUsers = $("#exceedsMaxUsers");
+          if($exceedsMaxUsers.is(":hidden") == true){
+            $exceedsMaxUsers.show();
+            $("input:focus").blur();
+            $exceedsMaxUsers.universalModal({"width":400});
+            $(".modal-user-limit-ok").bind("click",function(){
+              $(".universal-modal-close").trigger("click.universalModal")
+            })
+            // IE will not show the modal at first, triggering the window resize fixes this
+            $(window).trigger("resize");
+          }
+          return false;
+        }
+      
+        office365config.productOrder = {
+          "productQty": qty,
+          "domain": getParameterByName("domain"),
+          "addOns": 'noAddOns'
+        };
+        return office365config.refreshCart(); 
+      },
+
+      "continueToCart": function(e, thisClick) {
+        // ensure not already trying to add something to the cart
+        if($(".btn.js-addtocart").hasClass("btn-orange-disabled")) {
+          return;
+        }
+        // ensure the user selects are correct
+        if(office365config.buildProductOrder()==false) {
+          return;
+        }
+        $(".btn.js-addtocart").addClass("btn-orange-disabled square-pixel-spinner");
+
+        // add Got2 to the cart  
+        var urlFragment = '/update'; //action is update because bundle was added via the landing page
+        urlFragment += '/' + got2Page.itcCode; //itc code
+        urlFragment += '/' + $(thisClick).data('ci'); //ci code
+        urlFragment += '/' + office365config.productOrder.productQty;  // quantity
+        urlFragment += '/' + got2Page.planName //Plan Name
+        var url = '[@T[link:<relative path="/api/package/{0}" parammode="explicit"/>]@T]'.replace('{0}', urlFragment);
+
+        url += ((url.indexOf('?') > -1) ? '&' : '?') + 'domain=' + office365config.productOrder.domain + '&sourceCode=domaincheck';
+        if (office365config.productOrder.addOns != 'noAddOns'){
+          url += '&addons=' + office365config.productOrder.addOns + '-1';
+        }
+
+        $.getJSON(url, function (data) {
+          // 1. check for failures
+          if (data == 'fail') {
+            alert(got2Page.txt.ajaxFailureMsg);
+            return;        
+          }
+          if(!data.Success) {
+            alert(got2Page.txt.ajaxFailureMsg);
+            return;
+          }
+
+          // 2. redirect user to the cart where their product(s) should be waiting for them.
+          window.location = got2Page.redirectUrl.cart;
+        });
+          
+      } // end continueToCart
+    };
+
+    office365config.init(); 
+
+  
+  })( jQuery );
+
+
+  $(document).ready(function(){
+
+    $("#disclaimers > p > a").click(function (event) {
+      var $disclaimerModal = $("#disclaimerModal");
+      $disclaimerModal.show();
+        $disclaimerModal.universalModal({"width":800});
+        $(".modal-user-limit-ok").bind("click",function(){
+          $(".universal-modal-close").trigger("click.universalModal")
+        });
+        // IE will not show the modal at first, triggering the window resize fixes this
+        $(window).trigger("resize");
     });
+
+    $('[data-ci]').click(function(e){
+      $this = $(this);
+      FastballEvent_MouseClick(e, $this.data('ci'), $this[0], 'a');
+      fbiLibCheckQueue();    
+    });
+
+
+    $(window).scroll(function() {
+      updateOrderSummaryPosition();
+    });
+    $(window).resize(function() {
+      updateOrderSummaryPosition();
+    });
+    updateOrderSummaryPosition();
+  
+
+    function updateOrderSummaryPosition() {
+
+      var paddingTop = 20/* for prettiness when scrolling */,
+        $configCartWrapper = $('.config-cart-wrapper'),
+        scrollTop = $(window).scrollTop(),
+        scrollLeft = $(window).scrollLeft(),
+        topStep1 = $("div.config-step:first").offset().top,
+        topOfWindowAboveTopOfStep1 = (scrollTop <= (topStep1 - paddingTop)),
+        $footer = $('.scroll-down-wrapper');
+
+        $footer.css('visibility','visible');
+        $configCartWrapper.css({'top':'0px','position':'static'});
+
+      if(!topOfWindowAboveTopOfStep1) {
+        // keep the top of the summary at 0
         
+      //} else {
+        //check for if summary can fit without going below the bottom of the last step
+        
+        var proposedNewTop = scrollTop - (topStep1 - paddingTop),
+          proposedNewBottom = proposedNewTop + $configCartWrapper.height(),
+          $lastStep = $("div.config-step").last(),
+          bottomOfLastStep = $lastStep.offset().top + $lastStep.height() - topStep1,
+          canFit = (proposedNewBottom <= bottomOfLastStep);
 
+        if(scrollTop>=(topStep1-paddingTop) && ((scrollTop+$configCartWrapper.height())<=$lastStep.offset().top + $lastStep.height() + paddingTop) ){
+          try{
+            var configCartWrapperLeft = $configCartWrapper.offset().left;
+            $configCartWrapper.css({'top':'20px','position':'fixed','width':$configCartWrapper.innerWidth(),'left':(configCartWrapperLeft - scrollLeft) +'px'});
+          }catch(err){
+            //if errors don't float the $confiCartWrapper
+            $configCartWrapper.css({'top':'0px','position':'static'});
+          }
+          if((scrollTop+paddingTop)>=$lastStep.offset().top){
+            $footer.css('visibility','hidden');
+          }else{
+            $footer.css('visibility','visible');
+          }
+        } else {
+          try{
+            var configCartWrapperLeft = $configCartWrapper.offset().left;
+            $configCartWrapper.css({'position':'fixed','width':$configCartWrapper.innerWidth(),'left':(configCartWrapperLeft - scrollLeft) +'px'});
+          }catch(err){
+            //if errors don't float the $confiCartWrapper
+            $configCartWrapper.css({'top':'0px','position':'static'});
 
-  </script>
+          }
+          // affix the summary so the bottom lines up with the bottom of the last step
+          $footer.css('visibility','hidden');
+          var topForBottomAligned = ($lastStep.offset().top + $lastStep.height() +$footer.height()) - (scrollTop + $configCartWrapper.height() );
+          //topForBottomAligned = bottomOfLastStep - $configCartWrapper.height() + paddingTop;
+          $configCartWrapper
+            .css({'top': topForBottomAligned + 'px'});
+        }
+      }
+      
+    }
+  });
+
+</script>
 </body>
 
 </html>
