@@ -1,8 +1,8 @@
 ---
 location: sales/ssl/static-ip.aspx
-id: 5411de4bf778fc0f24cc8eeb
-name: GCE-28157
-comments: Updating og:url Meta Data Tag
+id: 5429d6cef778fc1cd05bba42
+name: GCE-26547
+comments: changing support types
 ---
 {% extends 'layouts/base.html' %}
 
@@ -58,10 +58,11 @@ comments: Updating og:url Meta Data Tag
 
 {% block footer %}
 <script>
+    $('.chatSupportLink').attr('data-ci','93507');
     $(function () {
       $('.equal-height').setColumnsEqualHeight();
       $('.select-box').setSelectBox();
-      $('.tab-link').tabLinks();      
+      $('.tab-link').tabLinks();
     });
   </script>
 {% endblock %}
@@ -236,7 +237,11 @@ comments: Updating og:url Meta Data Tag
                         <p><strong>[@L[cds.sales/gd/ssl/dedicated-ip:PlanSummaryTitle2]@L]</strong></p>
                         <ul class="plan-summary-tab-pane-list plan-summary-tab-pane-list-columns no-margin-left bullets-insde">
                           <li>[@L[cds.sales/gd/ssl/dedicated-ip:PlanSummaryText7]@L]</li>
+                          ##if(activeLanguageAny([en-us]))
+                          <li><span id="chat-now" class="inactive" >[@L[cds.sales/_common:ChatSupport]@L]</span> <span id="chat-eta" data-queue="General" style="display: none;">[@L[cds.sales/_common:ChatETA]@L]</span></li>
+                          ##elseif(activeLanguageAny(es) || countrySiteAny(br))
                           <li>[@L[cds.sales/gd/ssl/dedicated-ip:PlanSummaryText8]@L]</li>
+                          ##endif    
                         </ul>
                       </div>
                     </div>
