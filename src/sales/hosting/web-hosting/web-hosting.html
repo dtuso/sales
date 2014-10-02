@@ -1,8 +1,8 @@
 ---
 location: sales/hosting/web-hosting.aspx
-id: 54174f6ff778fc205c2b5c14
-name: GCE-22492
-comments: Clean up renewal pricing layout.
+id: 542adb00f778fc106c634451
+name: GCE-28025
+comments: Remove renewal pricing.
 splitSide: false
 ---
 
@@ -11,29 +11,6 @@ splitSide: false
 
 {% block metahead %}
   {% parent %}
-
-  <!-- css-elevate-target -->
-
-<!-- start-css-elevate -->
-<!------------------------------------>
-<!--     Pricing Display Updates    -->
-<!------------------------------------>
-
-<style type="text/css">
-{% less %}
-  .margin-bottom-0 { margin-bottom: 0px; }
-  .starting-at-color-black { color: #000; }
-  .starting-at-alternate-font { font-size: .5em; }
-  .starting-at-spacing { margin-bottom: 0.1em; margin-top: -0.22857143em; }
-  .starting-at-sale-save-spacing { margin-bottom: 0.1em; margin-top: -0.22857143em; }
-  .starting-at-renewal-spacing { padding-bottom: 0.2em; margin-top: -0.22857143em; }
-  .starting-at-renewal-font { font-size: 0.9em; }
-
-/* drop-down css changes */
-  .list-save-renewal {float: none; width: 100%; }
-{% endless %}
-</style>
-<!-- end-css-elevate -->
 
 {% endblock %}
 
@@ -126,30 +103,20 @@ splitSide: false
                               <div data-gd-sidebysidealign-row="1">
                                 <h2>[@L[cds.sales/gd/hosting/web-hosting:economy-title]@L]</h2>
                                 <p>[@L[cds.sales/gd/hosting/web-hosting:Economy-subheader]@L]</p>
-                                </div>
-                                <div data-gd-sidebysidealign-row="2">
-                                  <p class="starting-at starting-at-alternate-top-spacing">
-                                    <span class="starting-at-color-black starting-at-alternate-font starting-at-above starting-at-spacing">[@L[cds.sales/gd/hosting/web-hosting:starting-at]@L]</span>
-                                    <span class="starting-price">[@T[productprice:<current productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]<span>[@L[cds.sales/gd/hosting/web-hosting:month]@L]</span></span>
-                                  </p>
+                                  <p class="starting-at starting-at-alternate-top-spacing"><span class="starting-at-above">[@L[cds.sales/gd/hosting/web-hosting:as-low-as]@L]</span><span class="starting-price">[@T[productprice:<current productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]<span>[@L[cds.sales/gd/hosting/web-hosting:month]@L]</span></span></p>
                                   ##if(productHasSavingsMoreThan(32051, 32051, 0))
-                                  <p class="starting-at-sale-save-spacing"><span class="secondary-color uppercase"><strong>[@L[cds.sales/gd/hosting/web-hosting:onSale]@L] - [@L[cds.sales/gd/hosting/web-hosting:save]@L] [@T[productcompare:<percent primaryproductid="32051" secondaryproductid="32051" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</strong></span></p>
-                                  <p class="starting-at-renewal-spacing">
-                                    <span class="starting-at-color-black starting-at-renewal-font" >[@T[productprice:<list productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses"  />]@T][@L[cds.sales/gd/hosting/web-hosting:month]@L] [@L[cds.sales/gd/hosting/web-hosting:renewal-price-disclaimer]@L]</span>
-                                  </p>
+                                  <p class="margin-bottom-12">[@T[productprice:<template productid="32051" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]<span class="secondary-color uppercase"><strong> [@L[cds.sales/gd/hosting/web-hosting:save]@L] [@T[productcompare:<percent primaryproductid="32051" secondaryproductid="32051" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</strong></span></p>
                                   ##endif
                                   ##if(countrySiteAny(uk))
                                   <span class="vat-price">[@L[cds.sales/gd/hosting/web-hosting:vat-price]@L]</span>
                                   ##endif
                                 </div>
-                                <div class="select-box" data-gd-sidebysidealign-row="3">
+                                <div class="select-box" data-gd-sidebysidealign-row="2">
                                     <div class="select-box-head">
                                         <div class="select-box-current">
                                             <span>[@L[cds.sales/gd/hosting/web-hosting:12-months]@L]</span>
                                             <span class="price">[@T[productprice:<current productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T][@L[cds.sales/gd/hosting/web-hosting:month]@L]</span>
-                                            ##if(productHasSavingsMoreThan(32051, 32051, 0))
                                             <span class="save lastChild">[@L[cds.sales/gd/hosting/web-hosting:onSale]@L]</span>
-                                            ##endif
                                         </div>
                                         <div class="select-box-cta"><i class="ico ico-download"></i></div>
                                     </div><!-- select-box-head -->
@@ -278,13 +245,13 @@ splitSide: false
                                         </ul>
                                     </div><!-- select-box-body -->
                                 </div><!-- select-box -->
-                                <p class="no-margin-bottom" data-gd-sidebysidealign-row="4"><button type="submit" data-ci="89269" data-form="addtocart-form" class="btn btn-warning btn-block js-addtocart-btn btn--push-down btn-lg">[@L[cds.sales/gd/hosting/web-hosting:planbox-cart-btn]@L]</button></p>
+                                <p class="no-margin-bottom" data-gd-sidebysidealign-row="3"><button type="submit" data-ci="89269" data-form="addtocart-form" class="btn btn-warning btn-block js-addtocart-btn btn--push-down btn-lg">[@L[cds.sales/gd/hosting/web-hosting:planbox-cart-btn]@L]</button></p>
                                 <ul class="plan-pricing-list plan-pricing-list-alternate">
-                                    <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="5">[@L[cds.sales/gd/hosting/web-hosting:one-website]@L]</li>
-                                    <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="6">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-unlimited-bandwidth]@L]</li>
-                                    <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="7">[@L[cds.sales/gd/hosting/web-hosting:economy-plan-storage-11166]@L]</li>
+                                    <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="4">[@L[cds.sales/gd/hosting/web-hosting:one-website]@L]</li>
+                                    <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="5">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-unlimited-bandwidth]@L]</li>
+                                    <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="6">[@L[cds.sales/gd/hosting/web-hosting:economy-plan-storage-11166]@L]</li>
+                                    <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="7">-</li>
                                     <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="8">-</li>
-                                    <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="9">-</li>
                                 </ul>
                             </div>
                             </form>
@@ -298,30 +265,20 @@ splitSide: false
                                 ##if(false)
                                 <span class="badge badge-small badge-important badge-upper-right">[@L[cds.sales/gd/hosting/web-hosting:popular-tag]@L]</span>
                                 ##endif
-                                </div>
-                                <div data-gd-sidebysidealign-row="2">
-                                  <p class="starting-at starting-at-alternate-top-spacing">
-                                    <span class="starting-at-color-black starting-at-alternate-font starting-at-above starting-at-spacing">[@L[cds.sales/gd/hosting/web-hosting:starting-at]@L]</span>
-                                    <span class="starting-price">[@T[productprice:<current productid="32059" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]<span>[@L[cds.sales/gd/hosting/web-hosting:month]@L]</span></span>
-                                  </p>
-                                  ##if(productHasSavingsMoreThan(32059, 32059, 0))
-                                  <p class="starting-at-sale-save-spacing"><span class="secondary-color uppercase"><strong>[@L[cds.sales/gd/hosting/web-hosting:onSale]@L] - [@L[cds.sales/gd/hosting/web-hosting:save]@L] [@T[productcompare:<percent primaryproductid="32059" secondaryproductid="32059" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</strong></span></p>
-                                  <p class="starting-at-renewal-spacing">
-                                    <span class="starting-at-color-black starting-at-renewal-font" >[@T[productprice:<list productid="32059" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses"  />]@T][@L[cds.sales/gd/hosting/web-hosting:month]@L] [@L[cds.sales/gd/hosting/web-hosting:renewal-price-disclaimer]@L]</span>
-                                  </p>
-                                  ##endif
-                                  ##if(countrySiteAny(uk))
-                                  <span class="vat-price">[@L[cds.sales/gd/hosting/web-hosting:vat-price]@L]</span>
-                                  ##endif
-                                </div>
-                                <div class="select-box" data-gd-sidebysidealign-row="3">
+                              <p class="starting-at starting-at-alternate-top-spacing"><span class="starting-at-above">[@L[cds.sales/gd/hosting/web-hosting:as-low-as]@L]</span><span class="starting-price">[@T[productprice:<current productid="32059" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]<span>[@L[cds.sales/gd/hosting/web-hosting:month]@L]</span></span></p>
+                                ##if(productHasSavingsMoreThan(32059, 32059, 0))
+                                <p class="margin-bottom-12">[@T[productprice:<template productid="32059" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]<span class="secondary-color uppercase"><strong> [@L[cds.sales/gd/hosting/web-hosting:save]@L] [@T[productcompare:<percent primaryproductid="32059" secondaryproductid="32059" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</strong></span></p>
+                                ##endif
+                                ##if(countrySiteAny(uk))
+                                <span class="vat-price">[@L[cds.sales/gd/hosting/web-hosting:vat-price]@L]</span>
+                                ##endif
+                              </div>
+                                <div class="select-box" data-gd-sidebysidealign-row="2">
                                     <div class="select-box-head">
                                         <div class="select-box-current">
                                             <span>[@L[cds.sales/gd/hosting/web-hosting:12-months]@L]</span>
                                             <span class="price">[@T[productprice:<current productid="32059" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T][@L[cds.sales/gd/hosting/web-hosting:month]@L]</span>
-                                            ##if(productHasSavingsMoreThan(32059, 32059, 0))
                                             <span class="save lastChild">[@L[cds.sales/gd/hosting/web-hosting:onSale]@L]</span>
-                                            ##endif
                                         </div>
                                         <div class="select-box-cta"><i class="ico ico-download"></i></div>
                                     </div><!-- select-box-head -->
@@ -450,13 +407,13 @@ splitSide: false
                                         </ul>
                                     </div><!-- select-box-body -->
                                 </div><!-- select-box -->
-                                <p class="no-margin-bottom" data-gd-sidebysidealign-row="4"><button type="submit" data-ci="89270" data-form="addtocart-form" class="btn btn-warning btn-block js-addtocart-btn btn--push-down btn-lg">[@L[cds.sales/gd/hosting/web-hosting:planbox-cart-btn]@L]</button></p>
+                                <p class="no-margin-bottom" data-gd-sidebysidealign-row="3"><button type="submit" data-ci="89270" data-form="addtocart-form" class="btn btn-warning btn-block js-addtocart-btn btn--push-down btn-lg">[@L[cds.sales/gd/hosting/web-hosting:planbox-cart-btn]@L]</button></p>
                                 <ul class="plan-pricing-list plan-pricing-list-alternate">
-                                    <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="5">[@L[cds.sales/gd/hosting/web-hosting:unlimited-websites]@L]</li>
-                                    <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="6">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-unlimited-bandwidth]@L]</li>
-                                    <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="7">[@L[cds.sales/gd/hosting/web-hosting:deluxe-plan-storage-11166]@L]</li>
+                                    <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="4">[@L[cds.sales/gd/hosting/web-hosting:unlimited-websites]@L]</li>
+                                    <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="5">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-unlimited-bandwidth]@L]</li>
+                                    <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="6">[@L[cds.sales/gd/hosting/web-hosting:deluxe-plan-storage-11166]@L]</li>
+                                    <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="7">-</li>
                                     <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="8">-</li>
-                                    <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="9">-</li>
                                 </ul>
                             </div>
                           </form>
@@ -466,33 +423,23 @@ splitSide: false
                             <form action="[@T[link:<relative path="/hosting/web-hosting-config-new.aspx" parammode="common" />]@T]" name="frmAddToCart" class="frmAddToCart" method="get">
                                     <div class="grid-column no-padding-bottom relative">
                               <div data-gd-sidebysidealign-row="1">
-                                <h2>[@L[cds.sales/gd/hosting/web-hosting:unlimited-title]@L]</h2>
-                                <p>[@L[cds.sales/gd/hosting/web-hosting:Ultimate-subheader]@L]</p>
-                                <span class="badge badge-small badge-important badge-upper-right">[@L[cds.sales/gd/hosting/web-hosting:secure-tag]@L]</span>
+                                        <h2>[@L[cds.sales/gd/hosting/web-hosting:unlimited-title]@L]</h2>
+                                        <p>[@L[cds.sales/gd/hosting/web-hosting:Ultimate-subheader]@L]</p>
+                                        <span class="badge badge-small badge-important badge-upper-right">[@L[cds.sales/gd/hosting/web-hosting:secure-tag]@L]</span>
+                                      <p class="starting-at starting-at-alternate-top-spacing"><span class="starting-at-above">[@L[cds.sales/gd/hosting/web-hosting:as-low-as]@L]</span><span class="starting-price">[@T[productprice:<current productid="32082" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]<span>[@L[cds.sales/gd/hosting/web-hosting:month]@L]</span></span></p>
+                                        ##if(productHasSavingsMoreThan(32082, 32082, 0))
+                                        <p class="margin-bottom-12">[@T[productprice:<template productid="32082" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]<span class="secondary-color uppercase"><strong> [@L[cds.sales/gd/hosting/web-hosting:save]@L] [@T[productcompare:<percent primaryproductid="32082" secondaryproductid="32082" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</strong></span></p>
+                                        ##endif
+                                        ##if(countrySiteAny(uk))
+                                        <span class="vat-price">[@L[cds.sales/gd/hosting/web-hosting:vat-price]@L]</span>
+                                        ##endif
                                 </div>
-                                <div data-gd-sidebysidealign-row="2">
-                                  <p class="starting-at starting-at-alternate-top-spacing">
-                                    <span class="starting-at-color-black starting-at-alternate-font starting-at-above starting-at-spacing">[@L[cds.sales/gd/hosting/web-hosting:starting-at]@L]</span>
-                                    <span class="starting-price">[@T[productprice:<current productid="32082" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]<span>[@L[cds.sales/gd/hosting/web-hosting:month]@L]</span></span>
-                                  </p>
-                                  ##if(productHasSavingsMoreThan(32082, 32082, 0))
-                                  <p class="starting-at-sale-save-spacing"><span class="secondary-color uppercase"><strong>[@L[cds.sales/gd/hosting/web-hosting:onSale]@L] - [@L[cds.sales/gd/hosting/web-hosting:save]@L] [@T[productcompare:<percent primaryproductid="32082" secondaryproductid="32082" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</strong></span></p>
-                                  <p class="starting-at-renewal-spacing">
-                                    <span class="starting-at-color-black starting-at-renewal-font" >[@T[productprice:<list productid="32082" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses"  />]@T][@L[cds.sales/gd/hosting/web-hosting:month]@L] [@L[cds.sales/gd/hosting/web-hosting:renewal-price-disclaimer]@L]</span>
-                                  </p>
-                                  ##endif
-                                  ##if(countrySiteAny(uk))
-                                  <span class="vat-price">[@L[cds.sales/gd/hosting/web-hosting:vat-price]@L]</span>
-                                  ##endif
-                                </div>
-                                <div class="select-box" data-gd-sidebysidealign-row="3">
+                                <div class="select-box" data-gd-sidebysidealign-row="2">
                                     <div class="select-box-head">
                                         <div class="select-box-current">
                                             <span>[@L[cds.sales/gd/hosting/web-hosting:12-months]@L]</span>
                                             <span class="price">[@T[productprice:<current productid="32082" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T][@L[cds.sales/gd/hosting/web-hosting:month]@L]</span>
-                                            ##if(productHasSavingsMoreThan(32082, 32082, 0))
                                             <span class="save lastChild">[@L[cds.sales/gd/hosting/web-hosting:onSale]@L]</span>
-                                            ##endif
                                         </div>
                                         <div class="select-box-cta"><i class="ico ico-download"></i></div>
                                     </div><!-- select-box-head -->
@@ -621,13 +568,13 @@ splitSide: false
                                         </ul>
                                     </div><!-- select-box-body -->
                                 </div><!-- select-box -->
-                                    <p class="no-margin-bottom" data-gd-sidebysidealign-row="4"><button data-ci="89271" type="submit" data-form="addtocart-form" class="btn btn-warning btn-block js-addtocart-btn btn--push-down btn-lg">[@L[cds.sales/gd/hosting/web-hosting:planbox-cart-btn]@L]</button></p>
+                                    <p class="no-margin-bottom" data-gd-sidebysidealign-row="3"><button data-ci="89271" type="submit" data-form="addtocart-form" class="btn btn-warning btn-block js-addtocart-btn btn--push-down btn-lg">[@L[cds.sales/gd/hosting/web-hosting:planbox-cart-btn]@L]</button></p>
                                     <ul class="plan-pricing-list plan-pricing-list-alternate">
-                                        <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="5">[@L[cds.sales/gd/hosting/web-hosting:unlimited-websites]@L]</li>
-                                        <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="6">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-unlimited-bandwidth]@L]</li>
-                                        <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="7">[@L[cds.sales/gd/hosting/web-hosting:deluxe-plan-storage-11166]@L]</li>
-                                        <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="8">[@L[cds.sales/gd/hosting/web-hosting:premium-dns-management-tool]@L]</li>
-                                        <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="9">[@L[cds.sales/gd/hosting/web-hosting:unlimited-1year-ssl]@L]<br><a class="isToolTip smallHoverText" data-toggle="tooltip" title="[@L[cds.sales/gd/hosting/web-hosting:unlimited-ssl-google]@L]">[@L[cds.sales/gd/hosting/web-hosting:restrictions-apply]@L]</a></li>
+                                        <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="4">[@L[cds.sales/gd/hosting/web-hosting:unlimited-websites]@L]</li>
+                                        <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="5">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-unlimited-bandwidth]@L]</li>
+                                        <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="6">[@L[cds.sales/gd/hosting/web-hosting:deluxe-plan-storage-11166]@L]</li>
+                                        <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="7">[@L[cds.sales/gd/hosting/web-hosting:premium-dns-management-tool]@L]</li>
+                                        <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="8">[@L[cds.sales/gd/hosting/web-hosting:unlimited-1year-ssl]@L]<br><a class="isToolTip smallHoverText" data-toggle="tooltip" title="[@L[cds.sales/gd/hosting/web-hosting:unlimited-ssl-google]@L]">[@L[cds.sales/gd/hosting/web-hosting:restrictions-apply]@L]</a></li>
                                     </ul>
                                 </div>
                             </form>
@@ -644,18 +591,16 @@ splitSide: false
 
                         <div id="starter" class="col-xs-4 relative" data-gd-sidebysidealign-col="1">
                             <form action="[@T[link:<relative path="/hosting/web-hosting-config-new.aspx" parammode="common" />]@T]" name="frmAddToCart" class="frmAddToCart" method="get">
-                            <div class="grid-column no-padding-bottom relative">
+                                    <div class="grid-column no-padding-bottom relative">
                               <div data-gd-sidebysidealign-row="1">                                      
-                                <h2>[@L[cds.sales/gd/hosting/web-hosting:starter-title]@L]</h2>
-                                <p>[@L[cds.sales/gd/hosting/web-hosting:starter-plan-website]@L]</p>
-                              </div>
-                              <div data-gd-sidebysidealign-row="2">
-                                <p class="starting-at starting-at-alternate-top-spacing"><span class="starting-at-color-black starting-at-alternate-font starting-at-above">[@L[cds.sales/gd/hosting/web-hosting:starting-at]@L]</span><span class="starting-price">[@T[productprice:<current productid="294057" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]<span>[@L[cds.sales/gd/hosting/web-hosting:month]@L]</span></span></p>
-                                ##if(productHasSavingsMoreThan(294057, 294057, 0))
-                                <p class="margin-bottom-12">[@T[productprice:<template productid="294057" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]<span class="secondary-color uppercase"><strong> [@L[cds.sales/gd/hosting/web-hosting:save]@L] [@T[productcompare:<percent primaryproductid="294057" secondaryproductid="294057" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</strong></span></p>
-                                ##endif
-                               </div>  
-                               <div class="select-box" data-gd-sidebysidealign-row="3">
+                                        <h2>[@L[cds.sales/gd/hosting/web-hosting:starter-title]@L]</h2>
+                                        <p>[@L[cds.sales/gd/hosting/web-hosting:starter-plan-website]@L]</p>
+                                      <p class="starting-at starting-at-alternate-top-spacing"><span class="starting-at-above">[@L[cds.sales/gd/hosting/web-hosting:as-low-as]@L]</span><span class="starting-price">[@T[productprice:<current productid="294057" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]<span>[@L[cds.sales/gd/hosting/web-hosting:month]@L]</span></span></p>
+                                        ##if(productHasSavingsMoreThan(294057, 294057, 0))
+                                        <p class="margin-bottom-12">[@T[productprice:<template productid="294057" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]<span class="secondary-color uppercase"><strong> [@L[cds.sales/gd/hosting/web-hosting:save]@L] [@T[productcompare:<percent primaryproductid="294057" secondaryproductid="294057" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</strong></span></p>
+                                        ##endif
+                                </div>  
+                                <div class="select-box" data-gd-sidebysidealign-row="2">
                                     <div class="select-box-head">
                                         <div class="select-box-current">
                                             <span>[@L[cds.sales/gd/hosting/web-hosting:12-months]@L]</span>
@@ -788,10 +733,10 @@ splitSide: false
                                         </ul>
                                     </div><!-- select-box-body -->
                                 </div><!-- select-box -->
-                                    <p class="no-margin-bottom" data-gd-sidebysidealign-row="4"><button data-ci="90621" type="submit" data-form="addtocart-form" class="btn btn-warning btn-block js-addtocart-btn btn--push-down btn-lg">[@L[cds.sales/gd/hosting/web-hosting:planbox-cart-btn]@L]</button></p>
+                                    <p class="no-margin-bottom" data-gd-sidebysidealign-row="3"><button data-ci="90621" type="submit" data-form="addtocart-form" class="btn btn-warning btn-block js-addtocart-btn btn--push-down btn-lg">[@L[cds.sales/gd/hosting/web-hosting:planbox-cart-btn]@L]</button></p>
                                     <ul class="plan-pricing-list plan-pricing-list-alternate">
-                                        <li data-gd-sidebysidealign-row="5">[@L[cds.sales/gd/hosting/web-hosting:starter-plan-storage]@L]</li>
-                                        <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="6">-</li>
+                                        <li data-gd-sidebysidealign-row="4">[@L[cds.sales/gd/hosting/web-hosting:starter-plan-storage]@L]</li>
+                                        <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="5">-</li>
                                     </ul>
                                 </div>
                             </form>
@@ -803,21 +748,17 @@ splitSide: false
                               <div data-gd-sidebysidealign-row="1">
                                 <h2>[@L[cds.sales/gd/hosting/web-hosting:economy-title]@L]</h2>
                                 <p>[@L[cds.sales/gd/hosting/web-hosting:economy-plan-website-11166]@L]</p>
-                              </div>
-                              <div data-gd-sidebysidealign-row="2">
-                                <p class="starting-at starting-at-alternate-top-spacing"><span class="starting-at-color-black starting-at-alternate-font starting-at-above">[@L[cds.sales/gd/hosting/web-hosting:starting-at]@L]</span><span class="starting-price">[@T[productprice:<current productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]<span>[@L[cds.sales/gd/hosting/web-hosting:month]@L]</span></span></p>
+                              <p class="starting-at starting-at-alternate-top-spacing"><span class="starting-at-above">[@L[cds.sales/gd/hosting/web-hosting:as-low-as]@L]</span><span class="starting-price">[@T[productprice:<current productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]<span>[@L[cds.sales/gd/hosting/web-hosting:month]@L]</span></span></p>
                                 ##if(productHasSavingsMoreThan(32051, 32051, 0))
                                 <p class="margin-bottom-12">[@T[productprice:<template productid="32051" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]<span class="secondary-color uppercase"><strong> [@L[cds.sales/gd/hosting/web-hosting:save]@L] [@T[productcompare:<percent primaryproductid="32051" secondaryproductid="32051" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</strong></span></p>
                                 ##endif
                               </div>
-                                <div class="select-box" data-gd-sidebysidealign-row="3">
+                                <div class="select-box" data-gd-sidebysidealign-row="2">
                                     <div class="select-box-head">
                                         <div class="select-box-current">
                                             <span>[@L[cds.sales/gd/hosting/web-hosting:12-months]@L]</span>
                                             <span class="price">[@T[productprice:<current productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T][@L[cds.sales/gd/hosting/web-hosting:month]@L]</span>
-                                            ##if(productHasSavingsMoreThan(32051, 32051, 0))
                                             <span class="save lastChild">[@L[cds.sales/gd/hosting/web-hosting:onSale]@L]</span>
-                                            ##endif
                                         </div>
                                         <div class="select-box-cta"><i class="ico ico-download"></i></div>
                                     </div><!-- select-box-head -->
@@ -946,10 +887,10 @@ splitSide: false
                                         </ul>
                                     </div><!-- select-box-body -->
                                 </div><!-- select-box -->
-                                <p class="no-margin-bottom" data-gd-sidebysidealign-row="4"><button type="submit" data-ci="89269" data-form="addtocart-form" class="btn btn-warning btn-block js-addtocart-btn btn--push-down btn-lg">[@L[cds.sales/gd/hosting/web-hosting:planbox-cart-btn]@L]</button></p>
+                                <p class="no-margin-bottom" data-gd-sidebysidealign-row="3"><button type="submit" data-ci="89269" data-form="addtocart-form" class="btn btn-warning btn-block js-addtocart-btn btn--push-down btn-lg">[@L[cds.sales/gd/hosting/web-hosting:planbox-cart-btn]@L]</button></p>
                                 <ul class="plan-pricing-list plan-pricing-list-alternate">
-                                    <li data-gd-sidebysidealign-row="5">[@L[cds.sales/gd/hosting/web-hosting:economy-plan-storage-11166]@L]</li>
-                                    <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="6">[@L[cds.sales/gd/hosting/web-hosting:all-plan-features-free-domainIN-11166]@L]</li>
+                                    <li data-gd-sidebysidealign-row="4">[@L[cds.sales/gd/hosting/web-hosting:economy-plan-storage-11166]@L]</li>
+                                    <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="5">[@L[cds.sales/gd/hosting/web-hosting:all-plan-features-free-domainIN-11166]@L]</li>
                                 </ul>
                             </div>
                             </form>
@@ -985,9 +926,7 @@ splitSide: false
                                 ##if(false)
                                 <span class="badge badge-small badge-important badge-upper-right">[@L[cds.sales/gd/hosting/web-hosting:popular-tag]@L]</span>
                                 ##endif
-                              </div>
-                              <div data-gd-sidebysidealign-row="2">
-                                <p class="starting-at starting-at-alternate-top-spacing"><span class="starting-at-color-black starting-at-alternate-font starting-at-above">[@L[cds.sales/gd/hosting/web-hosting:starting-at]@L]</span><span class="starting-price">[@T[productprice:<current productid="32059" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]<span>[@L[cds.sales/gd/hosting/web-hosting:month]@L]</span></span></p>
+                              <p class="starting-at starting-at-alternate-top-spacing"><span class="starting-at-above">[@L[cds.sales/gd/hosting/web-hosting:as-low-as]@L]</span><span class="starting-price">[@T[productprice:<current productid="32059" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]<span>[@L[cds.sales/gd/hosting/web-hosting:month]@L]</span></span></p>
                                 ##if(productHasSavingsMoreThan(32059, 32059, 0))
                                 <p class="margin-bottom-12">[@T[productprice:<template productid="32059" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]<span class="secondary-color uppercase"><strong> [@L[cds.sales/gd/hosting/web-hosting:save]@L] [@T[productcompare:<percent primaryproductid="32059" secondaryproductid="32059" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</strong></span></p>
                                 ##endif
@@ -995,14 +934,12 @@ splitSide: false
                                 <span class="vat-price">[@L[cds.sales/gd/hosting/web-hosting:vat-price]@L]</span>
                                 ##endif
                               </div>
-                                <div class="select-box" data-gd-sidebysidealign-row="3">
+                                <div class="select-box" data-gd-sidebysidealign-row="2">
                                     <div class="select-box-head">
                                         <div class="select-box-current">
                                             <span>[@L[cds.sales/gd/hosting/web-hosting:12-months]@L]</span>
                                             <span class="price">[@T[productprice:<current productid="32059" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T][@L[cds.sales/gd/hosting/web-hosting:month]@L]</span>
-                                            ##if(productHasSavingsMoreThan(32059, 32059, 0))
                                             <span class="save lastChild">[@L[cds.sales/gd/hosting/web-hosting:onSale]@L]</span>
-                                            ##endif
                                         </div>
                                         <div class="select-box-cta"><i class="ico ico-download"></i></div>
                                     </div><!-- select-box-head -->
@@ -1131,10 +1068,10 @@ splitSide: false
                                         </ul>
                                     </div><!-- select-box-body -->
                                 </div><!-- select-box -->
-                                <p class="no-margin-bottom" data-gd-sidebysidealign-row="4"><button type="submit" data-ci="89270" data-form="addtocart-form" class="btn btn-warning btn-block js-addtocart-btn btn--push-down btn-lg">[@L[cds.sales/gd/hosting/web-hosting:planbox-cart-btn]@L]</button></p>
+                                <p class="no-margin-bottom" data-gd-sidebysidealign-row="3"><button type="submit" data-ci="89270" data-form="addtocart-form" class="btn btn-warning btn-block js-addtocart-btn btn--push-down btn-lg">[@L[cds.sales/gd/hosting/web-hosting:planbox-cart-btn]@L]</button></p>
                                 <ul class="plan-pricing-list plan-pricing-list-alternate">
-                                    <li data-gd-sidebysidealign-row="5">[@L[cds.sales/gd/hosting/web-hosting:deluxe-plan-storage-11166]@L]</li>
-                                    <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="6">[@L[cds.sales/gd/hosting/web-hosting:all-plan-features-free-domainIN-11166]@L]</li>
+                                    <li data-gd-sidebysidealign-row="4">[@L[cds.sales/gd/hosting/web-hosting:deluxe-plan-storage-11166]@L]</li>
+                                    <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="5">[@L[cds.sales/gd/hosting/web-hosting:all-plan-features-free-domainIN-11166]@L]</li>
                                 </ul>
                             </div>
                           </form>
@@ -1147,21 +1084,17 @@ splitSide: false
                                         <h2>[@L[cds.sales/gd/hosting/web-hosting:unlimited-title]@L]</h2>
                                         <p>[@L[cds.sales/gd/hosting/web-hosting:ultimate-plan-websites-11166]@L]</p>
                                         <span class="badge badge-small badge-important badge-upper-right">[@L[cds.sales/gd/hosting/web-hosting:secure-tag]@L]</span>
-                                    </div>
-                                    <div data-gd-sidebysidealign-row="2">
-                                      <p class="starting-at starting-at-alternate-top-spacing"><span class="starting-at-color-black starting-at-alternate-font starting-at-above">[@L[cds.sales/gd/hosting/web-hosting:starting-at]@L]</span><span class="starting-price">[@T[productprice:<current productid="32082" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]<span>[@L[cds.sales/gd/hosting/web-hosting:month]@L]</span></span></p>
-                                      ##if(productHasSavingsMoreThan(32082, 32082, 0))
-                                      <p class="margin-bottom-12">[@T[productprice:<template productid="32082" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]<span class="secondary-color uppercase"><strong> [@L[cds.sales/gd/hosting/web-hosting:save]@L] [@T[productcompare:<percent primaryproductid="32082" secondaryproductid="32082" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</strong></span></p>
-                                      ##endif
+                                      <p class="starting-at starting-at-alternate-top-spacing"><span class="starting-at-above">[@L[cds.sales/gd/hosting/web-hosting:as-low-as]@L]</span><span class="starting-price">[@T[productprice:<current productid="32082" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]<span>[@L[cds.sales/gd/hosting/web-hosting:month]@L]</span></span></p>
+                                        ##if(productHasSavingsMoreThan(32082, 32082, 0))
+                                        <p class="margin-bottom-12">[@T[productprice:<template productid="32082" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]<span class="secondary-color uppercase"><strong> [@L[cds.sales/gd/hosting/web-hosting:save]@L] [@T[productcompare:<percent primaryproductid="32082" secondaryproductid="32082" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</strong></span></p>
+                                        ##endif
                                 </div>  
-                                <div class="select-box" data-gd-sidebysidealign-row="3">
+                                <div class="select-box" data-gd-sidebysidealign-row="2">
                                     <div class="select-box-head">
                                         <div class="select-box-current">
                                             <span>[@L[cds.sales/gd/hosting/web-hosting:12-months]@L]</span>
                                             <span class="price">[@T[productprice:<current productid="32082" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T][@L[cds.sales/gd/hosting/web-hosting:month]@L]</span>
-                                            ##if(productHasSavingsMoreThan(32082, 32082, 0))
                                             <span class="save lastChild">[@L[cds.sales/gd/hosting/web-hosting:onSale]@L]</span>
-                                            ##endif
                                         </div>
                                         <div class="select-box-cta"><i class="ico ico-download"></i></div>
                                     </div><!-- select-box-head -->
@@ -1290,10 +1223,10 @@ splitSide: false
                                         </ul>
                                     </div><!-- select-box-body -->
                                 </div><!-- select-box -->
-                                    <p class="no-margin-bottom" data-gd-sidebysidealign-row="4"><button data-ci="89271" type="submit" data-form="addtocart-form" class="btn btn-warning btn-block js-addtocart-btn btn--push-down btn-lg">[@L[cds.sales/gd/hosting/web-hosting:planbox-cart-btn]@L]</button></p>
+                                    <p class="no-margin-bottom" data-gd-sidebysidealign-row="3"><button data-ci="89271" type="submit" data-form="addtocart-form" class="btn btn-warning btn-block js-addtocart-btn btn--push-down btn-lg">[@L[cds.sales/gd/hosting/web-hosting:planbox-cart-btn]@L]</button></p>
                                     <ul class="plan-pricing-list plan-pricing-list-alternate">
-                                        <li class="three-lines" data-gd-sidebysidealign-row="5">[@L[cds.sales/gd/hosting/web-hosting:ultimate-plan-all-benefits-of-11166]@L]</li>
-                                        <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="6">[@L[cds.sales/gd/hosting/web-hosting:all-plan-features-free-domainIN-11166]@L]</li>
+                                        <li class="three-lines" data-gd-sidebysidealign-row="4">[@L[cds.sales/gd/hosting/web-hosting:ultimate-plan-all-benefits-of-11166]@L]</li>
+                                        <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="5">[@L[cds.sales/gd/hosting/web-hosting:all-plan-features-free-domainIN-11166]@L]</li>
                                     </ul>
                                 </div>
                             </form>
@@ -3847,7 +3780,6 @@ splitSide: false
                         ##else
                         <p>&lowast; [@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltip]@L]</p>
                         ##endif
-                        <p>[@L[cds.sales/gd/hosting/web-hosting:modal-disclaimer-4-special]@L]</p>
                         <p>[@L[cds.sales/gd/hosting/web-hosting:modal-disclaimer-4]@L]</p>
                        [@L[cds.sales/gd/hosting/web-hosting:modal-disclaimer-11166]@L]
                     </div>
