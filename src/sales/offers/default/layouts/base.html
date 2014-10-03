@@ -7,6 +7,7 @@
 <!--[if IE 8]>    <html class="no-js lt-ie9" lang="[@T[localization:<language full="true" />]@T]"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="[@T[localization:<language full="true" />]@T]"> <!--<![endif]-->
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta charset="utf-8" />
       {% block pageTitle %}<title>{{ metaTitle }}</title>{% endblock %}
       {% block pageDescription %}<meta name="description" content="{{ metaDescription }}" />{% endblock %}
@@ -14,6 +15,7 @@
       {% block metahead %}
       <!-- Facebook Open Graph Meta Data -->
       <meta NAME="robots" CONTENT="NOINDEX, NOFOLLOW">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       {#
       <meta property="og:title" content="{{ metaOgTitle }}" />
       <meta property="og:type" content="product" />

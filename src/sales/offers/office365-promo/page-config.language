@@ -1,0 +1,135 @@
+---
+location: localization/sales/offers/office365-promo-config/en
+id: 542dc192f778fc0840c2316b
+name: GCE-27637
+comments: New GOT POB Landing Page and Config Page
+---
+{% include 'modules/doc-block.html' %}
+<phrase key="page-title" />
+Microsoft Office 365 Subscription | Cheap O365 Plans For Small Business
+<phrase key="meta-description" />
+Looking for the cheapest Office 365 packages? Buy O365 online, save big and boost your business productivity.
+<phrase key="meta-keywords" />
+microsoft office 365 subscription, office 365 subscription, cheap office 365, O365 plans, office 365 small business, microsoft office 365 small business
+<phrase key="og-title" />
+Microsoft Office 365 Subscription | Cheap O365 Plans For Small Business
+<phrase key="og-description" />
+Looking for the cheapest Office 365 packages? Buy O365 online, save big and boost your business productivity.
+<phrase key="cp-8-MicrosoftOffice365BoostProductivityVirtuallyAnywhereGoDaddy" />
+Microsoft Office 365 | Boost Productivity Virtually Anywhere – GoDaddy
+<phrase key="pop" />
+Premium Office Bundle
+<phrase key="price-per-user-per-year" comment="{0} and {1} will be tokenized with a price, {aX-begin} and {aX-end} do not translate, these tokens will be replaced with HTML" />
+{a0-begin}{0}{a0-end} {a1-begin}{1}{a1-end} {a2-begin}per user/year{a2-end}
+<phrase key="PopIsInYourCart" />
+Premium Office Bundle is in your cart!
+<phrase key="bullet-up-to-five" />
+Offer good for up to 5 users. Pay full price for each user over 5.
+<phrase key="cp-3-ContinueToCart" />
+Continue to cart
+<phrase key="cp-15-YouMustAddAtLeastOneOffice365" />
+You must add at least one Office 365 user before continuing to your cart.
+<phrase key="cp-2-Step1" />
+Step 1
+<phrase key="cp-4-AddOffice365Users" />
+Add Office 365 Users
+<phrase key="cp-3-AddYourUsers" />
+Add your users
+<phrase key="cp-14-KeepYourBusinessRunningSmoothlyAddPlansFor" />
+Keep your business running smoothly. Add plans for key players on your team.
+<phrase key="cp-6-EmailEssentialsPoweredByOffice365" />
+Email Essentials <span class="powered-by-office-365-text">powered by Office 365</span>
+<phrase key="cp-3-PerUserMonth" />
+per user/month
+<phrase key="cp-4-5GBEmailStorage" />
+5 GB Email Storage
+<phrase key="cp-5-2GBCloudFileStorage" />
+2 GB cloud file storage
+<phrase key="cp-4-UpToMax" comment="do not translate [[max]]" />
+Up to [[max]]
+<phrase key="cp-6-BusinessEssentialsPoweredByOffice365" />
+Business Essentials <span class="powered-by-office-365-text">powered by Office 365</span>
+<phrase key="cp-4-50GBEmailStorage" />
+50 GB Email Storage
+<phrase key="cp-5-25GBCloudFileStorage" />
+1 TB cloud file storage
+<phrase key="cp-4-UnlimitedHDVideoConferencing" />
+Unlimited HD video conferencing
+<phrase key="cp-5-MicrosoftOffice365WebApps" />
+Microsoft Office 365 Online
+<phrase key="cp-5-MicrosoftOfficeInstallsOnUpTo5Devices" />
+Microsoft Office installs on up to 5 devices -- PC, Mac or Office for iPad
+<phrase key="cp-6-ProductivityPlusPoweredByOffice365" />
+Productivity Plus <span class="powered-by-office-365-text">powered by Office 365</span>
+<phrase key="cp-8-FullMicrosoftOfficeDesktopInstallsOn5Computers" />
+Full Microsoft Office on 5 PCs or Macs and 5 iPads or Windows tablets per user
+<phrase key="cp-6-AddUsersToADifferentPlan" />
+Add users to a different plan
+<phrase key="cp-2-Step2" />
+Step 2
+<phrase key="cp-4-ChooseYourPlanTerm" />
+Choose your plan term
+<phrase key="cp-3-ExtendAndSave" />
+Extend and save
+<phrase key="cp-14-LockInYourSavingsAndAvoidAnnualRenewals" />
+Lock in your savings and avoid annual renewals with a multi-year term.
+<phrase key="cp-2-1Month" />
+1 month
+<phrase key="cp-2-1Year" />
+1 year
+<phrase key="cp-2-2Years" />
+2 years
+<phrase key="cp-1-Apply" />
+Apply
+<phrase key="cp-3-ContinueToCart-2" />
+Continue to cart
+<phrase key="cp-1-User" />
+user
+<phrase key="cp-1-Users" />
+users
+<phrase key="cp-2-MonthTerm" />
+month term
+<phrase key="cp-2-YearTerm" />
+year term
+<phrase key="cp-2-OrderSummary" />
+Order summary
+<phrase key="cp-2-EmailEssentials" />
+Email Essentials
+<phrase key="cp-2-BusinessEssentials" />
+Business Essentials
+<phrase key="cp-2-ProductivityPlus" />
+Productivity Plus
+<phrase key="cp-1-Subtotal" />
+Subtotal
+<phrase key="cp-6-SubtotalDoesNotIncludeApplicableTaxes" />
+Subtotal does not include applicable taxes.
+<phrase key="cp-2-CallUs" />
+Call Us
+<phrase key="cp-6-ScrollDownToContinueToCart" />
+Scroll down to continue to cart
+<phrase key="cp-2-LegalDisclaimers" />
+Legal Disclaimers
+<phrase key="cp-3-NeedHelp" />
+Need Help?
+<phrase key="cp-2-UserLimits" />
+User Limits
+<phrase key="cp-30-ToSetUpMoreThan25UsersOn" />
+To set up more than 25 users on one plan (or more than 75 users across multiple plans), please call our 24/7 customer support at [@T[supportphone:<technical/>]@T].
+<phrase key="cp-1-OK" />
+OK
+<phrase key="cp-1-Disclaimers" />
+Disclaimers
+<phrase key="cp-80-IncludesOffice365ProPlusForPCSWhich" />
+Includes Office 365 ProPlus for PC's (which includes desktop versions of Outlook, Word, Excel, PowerPoint, Access, OneNote, Publisher and Lync) or Office 2011 for Mac (which includes desktop versions of Outlook, Word, Excel and PowerPoint). Access, Publisher and One Note Desktop are Windows PC client programs and/or features only. Cannot be used across devices. Install on up to 5 PCs or Macs. Includes automatic updates and upgrades so you always have the newest versions of these tools.
+<phrase key="cp-76-UsersCanConnectTheFollowingVersionsOfOutlook" />
+Users can connect the following versions of Outlook to their business-class email, so they can use the rich client application they already know: the latest version of Outlook, Outlook 2010, Outlook 2007 (with slightly limited functionality), Outlook 2011 for Mac, and Outlook 2008 for Mac. Email can also be accessed through your non-Outlook desktop program of choice that is Exchange ActiveSync compatible (i.e., Apple Mail). Outlook web application available on all plans.
+<phrase key="cp-21-TheSkyDriveProSyncClientIsAvailableWith" />
+The OneDrive for Business sync client is available with Office 2013 or with Office 365 subscriptions that include Office 2013 applications.
+<phrase key="cp-8-AnnualDiscountsAvailableOnNEWPurchasesOnly" />
+Annual discounts available on NEW purchases only.
+<phrase key="cp-20-ProductsWillAutomaticallyRenewUntilCancelledYouMay" />
+Products will automatically renew until cancelled. You may turn off the auto-renewal feature by visiting your GoDaddy account.
+<phrase key="cp-19-ForMoreInformationSeeTheFullMicrosoftService" />
+For more information see the full Microsoft Service Agreement here: <a data-ci="86435" href="http://technet.microsoft.com/en-us/library/jj819284.aspx" target="_blank">http://technet.microsoft.com/en-us/library/jj819284.aspx</a>
+<phrase key="cp-1-OK-3" />
+OK
