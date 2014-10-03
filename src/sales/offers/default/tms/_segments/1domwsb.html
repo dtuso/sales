@@ -39,7 +39,7 @@
     $(document).ready(function(){
         $(".price").each(function(){
         var $this = $(this);
-        var val = '[@T[currencyprice:<price usdamount="100" htmlsymbol="false" />]@T]';
+        var val = '[@T[productprice:<current productid="7524" promocode="31254129" period="yearly" />]@T]';
 
         $this.html(val.replace(/(.+)(.00)+?$/,'$1<span class="decim">$2</span>'));
 
