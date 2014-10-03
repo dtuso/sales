@@ -7,9 +7,16 @@
     productId: '31841',
     packageId: 'gybo_got2_pob',
     itcCode: 'slp_GOT2POB',
-    promoCode: 'PACKPLUS',
-    normalPrice:   '[@T[productprice:<current productid="31841" period="yearly" promocode=""></current>]@T]', 
-    discountPrice: '[@T[productprice:<current productid="31841" period="yearly" promocode="PACKPLUS"></current>]@T]',
+    toolPrices: {
+      office:  '[@T[productprice:<current productid="31841" period="yearly" promocode=""></current>]@T]',
+      getPaid: '[@T[productprice:<current productid="326366" period="yearly" promocode=""></current>]@T]',
+      wsb:     '[@T[productprice:<current productid="7524" period="yearly" promocode=""></current>]@T]' 
+    },
+    o365: {
+      normalPrice:       '[@T[productprice:<current productid="31841" period="yearly" promocode=""></current>]@T]', 
+      discountPriceMo:   '[@T[productprice:<current productid="31841" period="yearly" promocode=""></current>]@T]', 
+      discountPrice:     '[@T[productprice:<current productid="31841" period="yearly"  promocode="33572469"></current>]@T]'
+    },
     isManager: false,
     redirectUrl: {
       cart: '[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]',

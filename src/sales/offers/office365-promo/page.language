@@ -1,6 +1,6 @@
 ---
 location: localization/sales/offers/office365-promo/en
-id: 542c6a8ef778fc19402a6f50
+id: 542dc275f778fc0840c2316d
 name: GCE-27637
 comments: New GOT POB Landing Page and Config Page
 ---
@@ -28,11 +28,11 @@ Save up to {0}
 <phrase key="top-banner-best-deal"/>
 Best deal online or in stores for Microsoft Office 365 Business Premium
 <phrase key="top-banner-per-user-discount-price" comment="{0} will get replaced with a price amount" />
-<span class="orange"><span class="price">{0}</span>/mo per user*</span>
+<span class="discount-price">{0}</span>/year per user*
 <phrase key="top-banner-original-price" comment="{0} will get replaced with a price amount" />
 <span class="original-price">{0}</span> full year price
 <phrase key="top-banner-renewal-price-disclaimer" />
-*Price valid for first year only. 
+*1st year only. Limited to 5 seats.
 <phrase key="top-banner-see-offer-details" />
 See offer details.
 <phrase key="top-banner-get-started" />
@@ -40,7 +40,7 @@ Get Started
 <phrase key="included-whats-included" />
 What's included?
 <phrase key="included-whats-included-details" comment="{0} will be replace with a price $xxx.xx"/>
-Get the web's best price on Microsoft Office &emdash; plus, <strong>{0} in online business</strong> exclusively from GoDaddy. Best of all, you'll have two of the biggest names on the planet backing your business.
+Get the web's best price on Microsoft Office &ndash; plus, <strong><span class="price-total-tools">{0}</span> in online business tools</strong> exclusively from GoDaddy. Best of all, you'll have two of the biggest names on the planet backing your business.
 <phrase key="included-get-started" />
 Get Started
 <phrase key="included-best-of-office" />

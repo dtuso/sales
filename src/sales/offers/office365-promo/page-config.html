@@ -1,6 +1,6 @@
 ---
 location: sales/offers/office365-promo-config.aspx
-id: 542c6ac7f778fc19402a6f54
+id: 542dc170f778fc0840c23169
 name: GCE-27637
 comments: New GOT POB Landing Page and Config Page
 url: http://www.dev-godaddy.com/offers/office365-promo-config.aspx
@@ -552,10 +552,10 @@ assetPath: false
         var $productPriceDiv = office365config["$premiumPlacard"].find('.product-price');
         var priceLineHtml = $productPriceDiv.html();
         priceLineHtml = priceLineHtml.replace('{a0-begin}','<span class="product-price-original-amount">');
-        priceLineHtml = priceLineHtml.replace('{0}',got2Page.normalPrice);
+        priceLineHtml = priceLineHtml.replace('{0}',got2Page.o365.normalPrice);
         priceLineHtml = priceLineHtml.replace('{a0-end}','</span>');
         priceLineHtml = priceLineHtml.replace('{a1-begin}','<span class="product-price-amount">');
-        priceLineHtml = priceLineHtml.replace('{1}',got2Page.discountPrice);
+        priceLineHtml = priceLineHtml.replace('{1}',got2Page.o365.discountPrice);
         priceLineHtml = priceLineHtml.replace('{a1-end}','</span>');
         priceLineHtml = priceLineHtml.replace('{a2-begin}','<span class="product-price-text">');
         priceLineHtml = priceLineHtml.replace('{a2-end}','</span>');
@@ -592,12 +592,12 @@ assetPath: false
           
         // discount pricing calculations
         upToFiveHtml = upToFiveQty + " " + ((upToFiveQty == 1) ? stringData['1usr'] : stringData['moreUsrs']) + " x 1 " + stringData['yrTerm'];
-        upToFiveTotal = currencyCalc.evaluate([got2Page.discountPrice,'*',upToFiveQty]);
+        upToFiveTotal = currencyCalc.evaluate([got2Page.o365.discountPrice,'*',upToFiveQty]);
 
         // normal pricing calculations
         if(sixAndUpQty > 0) {
           sixAndUpHtml = sixAndUpQty + " " + ((sixAndUpQty == 1) ? stringData['1usr'] : stringData['moreUsrs']) + " x 1 " + stringData['yrTerm'];
-          sixAndUpTotal = currencyCalc.evaluate([got2Page.normalPrice,'*',sixAndUpQty]);
+          sixAndUpTotal = currencyCalc.evaluate([got2Page.o365.normalPrice,'*',sixAndUpQty]);
         }
         grandTotal = currencyCalc.evaluate([upToFiveTotal,'+',sixAndUpTotal]);   
 
@@ -672,12 +672,11 @@ assetPath: false
         $(".btn.js-addtocart").addClass("btn-orange-disabled square-pixel-spinner");
 
         // add Got2 to the cart  
-        var urlFragment = '/update'; //action is update because bundle was added via the landing page
-        urlFragment += '/' + got2Page.itcCode; //itc code
+        var urlFragment = '/' + got2Page.itcCode; //itc code
         urlFragment += '/' + $(thisClick).data('ci'); //ci code
         urlFragment += '/' + office365config.productOrder.productQty;  // quantity
-        urlFragment += '/' + got2Page.planName //Plan Name
-        var url = '[@T[link:<relative path="/api/package/{0}" parammode="explicit"/>]@T]'.replace('{0}', urlFragment);
+        urlFragment    += '/' + got2Page.packageId  //Plan Name (aka Package Id)
+        var url = '[@T[link:<relative path="/api/package/update{0}" parammode="explicit"/>]@T]'.replace('{0}', urlFragment);
 
         url += ((url.indexOf('?') > -1) ? '&' : '?') + 'domain=' + office365config.productOrder.domain + '&sourceCode=domaincheck';
         if (office365config.productOrder.addOns != 'noAddOns'){
