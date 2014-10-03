@@ -47,7 +47,7 @@
       }
     }
   },
-  "rules.config": {
+  "page.rule": {
     "cdsDetails": {
       "champion": {
         "name": "",
