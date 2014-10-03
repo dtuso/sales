@@ -1,7 +1,7 @@
 ---
 location: sales/design/web-design.aspx
-id: 
-name: FOS-22092
+id: 54260192f778fc1eec7ed202
+name: GCE-26547
 ---
 {% extends 'layouts/base.html' %}
 
@@ -11,6 +11,7 @@ name: FOS-22092
 
 {% block footer %}
 <script type="text/javascript">
+    $('.chatSupportLink').attr('data-ci','93510');
     var ytPlayerList = {}; // Maps youtube player with its appropiate iframe based on the iframe id
 
     function onYouTubeIframeAPIReady() {
@@ -320,7 +321,6 @@ $(function () {
                                           <li>[@L[cds.sales/gd/design/web-design:List0Items154093Text]@L]</li>
                                           <li>[@L[cds.sales/gd/design/web-design:List0Items154094Text]@L]</li>
                                           <li>[@L[cds.sales/gd/design/web-design:List0Items154095Text]@L]</li>
-                                          <li>[@L[cds.sales/gd/design/web-design:List0Items154096Text]@L]</li>
                                       </ul>
                                       <ul class="plan-summary-tab-pane-list relative">
                                           <li>[@L[cds.sales/gd/design/web-design:List0Items154097Text]@L]</li>
@@ -332,7 +332,6 @@ $(function () {
                                         ##if(areAdCreditsEnabled(facebook))
                                           <li>[@L[cds.sales/gd/design/web-design:List0Items154101Text]@L]</li>
                                         ##endif
-                                          <li>[@L[cds.sales/gd/design/web-design:List0Items154102Text]@L]</li>
                                       </ul>
                                   </div>
                                   <div class="tab-pane" id="ps-support">
@@ -352,7 +351,11 @@ $(function () {
                                       <p>[@L[cds.sales/gd/design/web-design:SupportSubTitle2]@L]</p>
                                       <ul class="plan-summary-tab-pane-list no-margin-left no-margin-bottom">
                                           <li>[@L[cds.sales/gd/design/web-design:SupportSubText7]@L]</li>
+                                          ##if(activeLanguageAny([en-us]))
+                                          <li><span id="chat-now" class="inactive" >[@L[cds.sales/_common:ChatSupport]@L]</span> <span id="chat-eta" data-queue="General" style="display: none;">[@L[cds.sales/_common:ChatETA]@L]</span></li>
+                                          ##elseif(activeLanguageAny(es) || countrySiteAny(br))
                                           <li>[@L[cds.sales/gd/design/web-design:SupportSubText8]@L]</li>
+                                          ##endif
                                       </ul>
                                   </div>
                                </div>
@@ -507,7 +510,6 @@ $(function () {
                 <p>[@L[cds.sales/gd/design/web-design:DisclaimerModalItem04]@L]</p>
                 <p>[@L[cds.sales/gd/design/web-design:DisclaimerModalItem05]@L]</p>
                 <p>[@L[cds.sales/gd/design/web-design:DisclaimerModalItem06]@L]</p>
-                <p>[@L[cds.sales/gd/design/web-design:DisclaimerModalItem07]@L]</p>
                 <p>[@L[cds.sales/gd/design/web-design:DisclaimerModalItem08]@L]</p>
                 <p>[@L[cds.sales/gd/design/web-design:DisclaimerModalItem10]@L]</p>
                 <p>[@L[cds.sales/gd/design/web-design:DisclaimerModalItem09]@L]</p>
