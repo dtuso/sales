@@ -1,8 +1,9 @@
 ---
 location: sales/hosting.aspx
-id: 54204a5af778fc21449d243a
+id: 542f101ff778fc3210434d94
 name: GCE-29132
 comments: Hosting and SSL - Category Listing Page
+cssVersionOverride: 3
 ---
 {% extends 'layouts/base.html' %} 
 {% block metahead %} 
@@ -27,7 +28,7 @@ comments: Hosting and SSL - Category Listing Page
   <section class="menu">
     <div class="category-menu">
       <div class="l-main-container container menu-container">
-        <div class="solazy active-menu-image" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/category-listing/hosting-ssl-clp/img/Hosting-Category-Sprite.png"></div>
+        <div class="solazy active-menu-image" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/category-listing/hosting-ssl-clp/img/Hosting-Category-Sprite_v2.png"></div>
         <div class="col-xs-1">&nbsp;</div>
         <div class="col-xs-3 menu-item"><a id="hosting-anchor" class="hnb-16-bold-white category-menu-item">[@L[cds.sales/gd/category-listing/hosting-ssl:subcategory-1-title]@L]</a></div>
         <div class="col-xs-4 menu-item"><a id="servers-anchor" class="hnb-16-bold-white category-menu-item">[@L[cds.sales/gd/category-listing/hosting-ssl:subcategory-2-title]@L]</a></div>
@@ -45,7 +46,7 @@ comments: Hosting and SSL - Category Listing Page
   </section>
   <!-- Product - Shared Web Hosting //-->
   <section class="web-hosting-product one-product product-section">
-    <div class="solazy product-carrot" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/category-listing/hosting-ssl-clp/img/Hosting-Category-Sprite.png"></div>
+    <div class="solazy product-carrot" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/category-listing/hosting-ssl-clp/img/Hosting-Category-Sprite_v2.png"></div>
     <div class="l-main-container container">
       <div class="image-container col-xs-6">
         <div class="solazy product-1-image" data-sl-method="background" 
@@ -77,7 +78,7 @@ comments: Hosting and SSL - Category Listing Page
     </div>
   </section>
   <!-- Product - WordPress Hosting //-->
-  <section class="wordpress-hosting-product one-product product-section product-2-background centered-image">
+  <section class="wordpress-hosting-product one-product product-section product-2-background centered-image-no-text">
     <div class="l-main-container container">
       <div class="info-container col-xs-6">
         <h2>[@L[cds.sales/gd/category-listing/hosting-ssl:subcategory-1-product-2-title]@L]</h2>
@@ -94,7 +95,7 @@ comments: Hosting and SSL - Category Listing Page
         <a class="btn btn-primary" id="learn-more-product-two" href="[@T[link:<relative path='~/hosting/wordpress-hosting.aspx' secure='true'><param name='ci' value='93324' /></relative>]@T]" data-ci="93324" >[@L[cds.sales/gd/category-listing/hosting-ssl:view-details]@L]</a>
       </div>
       <div class="image-container col-xs-6">
-        <div class="solazy product-2-image" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/category-listing/hosting-ssl-clp/img/Hosting-Category-Sprite.png"></div>
+        <div class="solazy product-2-image" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/category-listing/hosting-ssl-clp/img/Hosting-Category-Sprite_v2.png"></div>
         <div class="restrictions-apply">
           [@L[cds.sales/gd/category-listing/hosting-ssl:restrictions-apply-symbol]@L]
           <a class="isToolTip tool-tip" data-toggle="tooltip" title data-original-title="[@L[cds.sales/gd/category-listing/hosting-ssl:restrictions-apply-description]@L] ">[@L[cds.sales/gd/category-listing/hosting-ssl:restrictions-apply-label]@L] </a>
@@ -111,11 +112,11 @@ comments: Hosting and SSL - Category Listing Page
   </section>
   <!-- Product - Dedicated Servers and Managed VPS //-->
   <section class="dedicated-servers-and-managed-vps-products two-products product-section">
-    <div class="solazy product-carrot" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/category-listing/hosting-ssl-clp/img/Hosting-Category-Sprite.png"></div>  
+    <div class="solazy product-carrot" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/category-listing/hosting-ssl-clp/img/Hosting-Category-Sprite_v2.png"></div>  
     <div class="l-main-container container">
       <!-- Product - Dedicated Servers //-->
       <div class="image-container col-xs-3">
-        <div class="solazy product-3-image" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/category-listing/hosting-ssl-clp/img/Hosting-Category-Sprite.png"></div>
+        <div class="solazy product-3-image" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/category-listing/hosting-ssl-clp/img/Hosting-Category-Sprite_v2.png"></div>
       </div>
       <div class="info-container col-xs-3">
         <h2>[@L[cds.sales/gd/category-listing/hosting-ssl:subcategory-2-product-1-title]@L]</h2>
@@ -128,7 +129,7 @@ comments: Hosting and SSL - Category Listing Page
       </div>    
       <!-- Product - Managed VPS //-->
       <div class="image-container col-xs-3">
-        <div class="solazy product-4-image" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/category-listing/hosting-ssl-clp/img/Hosting-Category-Sprite.png"></div>
+        <div class="solazy product-4-image" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/category-listing/hosting-ssl-clp/img/Hosting-Category-Sprite_v2.png"></div>
       </div>
       <div class="info-container col-xs-3">
         <h2>[@L[cds.sales/gd/category-listing/hosting-ssl:subcategory-2-product-2-title]@L]</h2>
@@ -174,7 +175,7 @@ comments: Hosting and SSL - Category Listing Page
     <div class="l-main-container container">
       <!-- Product - Reseller Hosting //-->
       <div class="image-container col-xs-3">
-        <div class="solazy product-6-image" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/category-listing/hosting-ssl-clp/img/Hosting-Category-Sprite.png"></div>
+        <div class="solazy product-6-image" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/category-listing/hosting-ssl-clp/img/Hosting-Category-Sprite_v2.png"></div>
       </div>
       <div class="info-container col-xs-3">
         <h2>[@L[cds.sales/gd/category-listing/hosting-ssl:subcategory-2-product-4-title]@L]</h2>
@@ -187,7 +188,7 @@ comments: Hosting and SSL - Category Listing Page
       </div>    
       <!-- Product - Dedicated IP //-->
       <div class="image-container col-xs-3">
-        <div class="solazy product-7-image" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/category-listing/hosting-ssl-clp/img/Hosting-Category-Sprite.png"></div>
+        <div class="solazy product-7-image" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/category-listing/hosting-ssl-clp/img/Hosting-Category-Sprite_v2.png"></div>
       </div>
       <div class="info-container col-xs-3">
         <h2>[@L[cds.sales/gd/category-listing/hosting-ssl:subcategory-2-product-5-title]@L]</h2>
@@ -209,7 +210,7 @@ comments: Hosting and SSL - Category Listing Page
   </section>
   <!-- Product - SSL Certificates //-->
   <section class="ssl-certificates-product one-product product-section">
-    <div class="solazy product-carrot" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/category-listing/hosting-ssl-clp/img/Hosting-Category-Sprite.png"></div>
+    <div class="solazy product-carrot" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/category-listing/hosting-ssl-clp/img/Hosting-Category-Sprite_v2.png"></div>
     <div class="l-main-container container">
       <div class="image-container col-xs-6">
         <div class="solazy product-8-image" data-sl-method="background" 
@@ -229,7 +230,7 @@ comments: Hosting and SSL - Category Listing Page
         ##if(activeLanguageAny([en-us]))
         <div class="review-container">
           <a id="ssl-cert-review" href="[@T[link:<relative path='~/ssl/ssl-certificates.aspx' secure='true'><param name='ci' value='93323' /></relative>]@T]#reviews" data-ci="93323">
-            <div class="solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/category-listing/hosting-ssl-clp/img/Hosting-Category-Sprite.png"></div>
+            <div class="solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/category-listing/hosting-ssl-clp/img/Hosting-Category-Sprite_v2.png"></div>
             [@L[cds.sales/gd/category-listing/hosting-ssl:read-reviews-link-text]@L]
           </a>
         </div>
@@ -246,7 +247,7 @@ comments: Hosting and SSL - Category Listing Page
   <!-- Section - Customer Quote //-->
   <section class="customer-quote-section">
     <div class="l-main-container container text-align-center">
-      <div class="solazy customer-quote-image" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/category-listing/hosting-ssl-clp/img/Hosting-Category-Sprite.png"></div>
+      <div class="solazy customer-quote-image" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/category-listing/hosting-ssl-clp/img/Hosting-Category-Sprite_v2.png"></div>
       <h2>[@L[cds.sales/gd/category-listing/hosting-ssl:customer-quote-text]@L]</h2>
       <p>[@L[cds.sales/gd/category-listing/hosting-ssl:customer-quote-info]@L]</p>
     </div>
@@ -256,7 +257,7 @@ comments: Hosting and SSL - Category Listing Page
     <div class="l-main-container container">
       <!-- Product - Code Signing Certficate //-->
       <div class="image-container col-xs-3">
-        <div class="solazy product-9-image" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/category-listing/hosting-ssl-clp/img/Hosting-Category-Sprite.png"></div>
+        <div class="solazy product-9-image" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/category-listing/hosting-ssl-clp/img/Hosting-Category-Sprite_v2.png"></div>
       </div>
       <div class="info-container col-xs-3">
         <h2>[@L[cds.sales/gd/category-listing/hosting-ssl:subcategory-3-product-2-title]@L]</h2>
@@ -269,7 +270,7 @@ comments: Hosting and SSL - Category Listing Page
       </div>    
       <!-- Product - Premium DNS //-->
       <div class="image-container col-xs-3">
-        <div class="solazy product-10-image" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/category-listing/hosting-ssl-clp/img/Hosting-Category-Sprite.png"></div>
+        <div class="solazy product-10-image" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/category-listing/hosting-ssl-clp/img/Hosting-Category-Sprite_v2.png"></div>
       </div>
       <div class="info-container col-xs-3">
         <h2>[@L[cds.sales/gd/category-listing/hosting-ssl:subcategory-3-product-3-title]@L]</h2>
@@ -284,14 +285,14 @@ comments: Hosting and SSL - Category Listing Page
   </section>
   ##if(productIsOffered(107))
   <!-- Product - SiteLock //-->
-  <section class="sitelock-product one-product product-section product-11-background centered-image">
+  <section class="sitelock-product one-product product-section product-11-background centered-image-with-text">
     <div class="l-main-container container">
       <div class="info-container col-xs-6">
         <h2>[@L[cds.sales/gd/category-listing/hosting-ssl:subcategory-3-product-4-title]@L]</h2>
         ##if(false)
         <div class="review-container">
           <a id="sitelock-review" href="[@T[link:<relative path='~/security/malware-scanner.aspx' secure='true'><param name='ci' value='93321' /></relative>]@T]#reviews" data-ci="93321">
-            <div class="solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/category-listing/hosting-ssl-clp/img/Hosting-Category-Sprite.png"></div>
+            <div class="solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/category-listing/hosting-ssl-clp/img/Hosting-Category-Sprite_v2.png"></div>
             [@L[cds.sales/gd/category-listing/hosting-ssl:read-reviews-link-text]@L]
           </a>
         </div>    
@@ -304,7 +305,10 @@ comments: Hosting and SSL - Category Listing Page
         <a class="btn btn-primary" id="learn-more-product-eleven" href="[@T[link:<relative path='~/security/malware-scanner.aspx' secure='true'><param name='ci' value='93320' /></relative>]@T]" data-ci="93320">[@L[cds.sales/gd/category-listing/hosting-ssl:view-details]@L]</a>
       </div>
       <div class="image-container col-xs-6">
-        <div class="solazy product-11-image" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/category-listing/hosting-ssl-clp/img/Hosting-Category-Sprite.png"></div>
+        <div>
+          <div class="solazy product-11-image" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/category-listing/hosting-ssl-clp/img/Hosting-Category-Sprite_v2.png"></div>
+          <p>[@L[cds.sales/gd/category-listing/hosting-ssl:subcategory-3-product-4-image-tagline]@L]</p>
+        </div>
       </div>      
     </div>
   </section>
@@ -364,6 +368,10 @@ comments: Hosting and SSL - Category Listing Page
       currencyCalc.evaluate([$('#addon-one').html(),"+",$('#addon-two').html(),"+", $('#product-price').html()]) +
       "[@L[cds.sales/gd/category-listing/hosting-ssl:mo]@L]"
     );    
+
+    $('.two-products .info-container h2, .two-products .info-container p, .two-products .info-container a').each(function(){
+      $(this).resizeTextWidth();
+    });
   });
 
   $(document).ready(function(){
@@ -400,6 +408,18 @@ comments: Hosting and SSL - Category Listing Page
   $(window).resize(function(){
     setCarrotsLeft();
   });  
+
+  $.fn.extend({
+    resizeTextWidth: function(){
+      var maxElementWidth = 225;
+      var fontSize = parseInt($(this).css('font-size'));
+
+      while ($(this).outerWidth() > maxElementWidth){
+        fontSize--;
+        $(this).css('font-size', fontSize + 'px');
+      }
+    }
+  });
 
   function setCarrotsLeft(){
     var hostingAnchor = $('#hosting-anchor');
