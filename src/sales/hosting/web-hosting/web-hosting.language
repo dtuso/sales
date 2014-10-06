@@ -1,8 +1,8 @@
 ---
 location: localization/sales/gd/hosting/web-hosting/en
-id: 541c8ff9f778fc14545dc896
-name: GCE-22492
-comments: Clean up renewal pricing layout.
+id: 5432b232f778fc25d4961ed9
+name: GCE-24862
+comments: Fixed typo on compare plans tab.
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="page-title" />
@@ -593,7 +593,7 @@ CloudLinux
 <phrase key="compare-plans-cpanel-general-features-cageFS-11166" />
 CageFS
 <phrase key="compare-plans-cpanel-general-features-password-protect-11166" />
-Password Protect Dictionaries
+Password Protected Directories
 <phrase key="compare-plans-cpanel-general-features-account-exec-11166" />
 <a class="isToolTip" data-toggle="tooltip" title="" data-original-title="The AccountExec service allows you to give trusted individuals access to your hosting account without having to give up your password. You assign multiple AccountExecs, each with their own specific roles and limited access.">Assign an AccountExec</a>
 <phrase key="compare-plans-cpanel-general-features-ssh-11166" />
