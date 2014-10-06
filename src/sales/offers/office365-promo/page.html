@@ -1,6 +1,6 @@
 ---
 location: sales/offers/office365-promo.aspx
-id: 542dc581f778fc0840c2316f
+id: 542f3477f778fc3210434da5
 name: GCE-27637
 comments: New GOT2 POB Landing Page and Config Page
 url: http://www.dev-godaddy.com/offers/office365-promo.aspx
@@ -827,30 +827,25 @@ assetPath: false
 </script>
 
 <script type="text/javascript">
-  
-  $(document).ready(function () {      
+  $(document).ready(function () { 
    
     $(".discount-price").each(function(){
       $(this)
-        .html(got2Page.o365.discountPrice)
+        .html(got2Page.pricing.mo.o365promo)
         .closest('.price-hide')
         .removeClass("price-hide");
     });
 
     $(".original-price").each(function(){
       $(this)
-        .html(got2Page.o365.normalPrice)
+        .html(got2Page.pricing.yr.o365)
         .closest('.price-hide')
         .removeClass("price-hide");
-    });
+    });     
     
     $('.price-total-tools').each(function(){
-    var grandTotal = currencyCalc.evaluate([got2Page.toolPrices.office,'+',got2Page.toolPrices.wsb]); 
-      ##if(!productIsOffered(98))
-        grandTotal = currencyCalc.evaluate([got2Page.toolPrices.getPaid,'+',grandTotal]); 
-      ##endif
       $(this)
-        .html(grandTotal)
+        .html(got2Page.pricing.yr.tools)
         .closest('.price-hide')
         .removeClass("price-hide");
     });

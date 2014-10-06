@@ -7,15 +7,16 @@
     productId: '31841',
     packageId: 'gybo_got2_pob',
     itcCode: 'slp_GOT2POB',
-    toolPrices: {
-      office:  '[@T[productprice:<current productid="31841" period="yearly" promocode=""></current>]@T]',
-      getPaid: '[@T[productprice:<current productid="326366" period="yearly" promocode=""></current>]@T]',
-      wsb:     '[@T[productprice:<current productid="7524" period="yearly" promocode=""></current>]@T]' 
-    },
-    o365: {
-      normalPrice:       '[@T[productprice:<current productid="31841" period="yearly" promocode=""></current>]@T]', 
-      discountPriceMo:   '[@T[productprice:<current productid="31841" period="yearly" promocode=""></current>]@T]', 
-      discountPrice:     '[@T[productprice:<current productid="31841" period="yearly"  promocode="33572469"></current>]@T]'
+    pricing:  {
+      mo: {
+        o365promo: '[@T[productprice:<current productid="31841" period="monthly" promocode="74125896"></current>]@T]',
+        renewal:   '[@T[productprice:<current productid="31841" period="monthly" promocode="45632102"></current>]@T]' 
+      },
+      yr: {
+        o365promo: '[@T[productprice:<current productid="31841" period="yearly" promocode="33572469"></current>]@T]',
+        o365:      '[@T[productprice:<current productid="31841" period="yearly" promocode=""></current>]@T]',
+        tools:     '[@T[productprice:<current productid="31841" period="yearly" promocode="25896314"></current>]@T]'
+      }
     },
     isManager: false,
     redirectUrl: {
