@@ -11,7 +11,7 @@ name: GCE-27637
   },
   { 
     'Type': 'Redirect',
-    'Condition': '!countrySiteAny(www)',
+    'Condition': '!isProductOffered(99)',
     'Data': "{ 'Type' : '302', 'Loc': '[@T[link:<relative path=\"~/\" />]@T]' }"
   }
 ]
