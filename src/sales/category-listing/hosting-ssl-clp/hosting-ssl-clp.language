@@ -1,7 +1,7 @@
 ---
 location: localization/sales/gd/category-listing/hosting-ssl/en
-id: 5408e5a3f778fc27d0489204
-name: GCE-27287
+id: 542484bdf778fc26c89ef544
+name: GCE-29132
 ---
 {% include '../../../modules/doc-block.html' %}
 <phrase key="page-title" />
@@ -16,12 +16,8 @@ The success of your website depends on reliable Website Hosting. [@T[companyname
 Hosting, website hosting, best web hosting
 <phrase key="category-title" />
 Web Host
-<phrase key="category-subtitle-1" />
-The success of your website depends on reliable website hosting
-<phrase key="category-subtitle-2" />
-[@T[companyname:name]@T] offers a suite of hosting options with
-<phrase key="category-subtitle-3" />
-guaranteed 99.9% uptime.
+<phrase key="category-subtitle" />
+<span class="category-subtitle-one">The success of your website depends on reliable website hosting</span> <span class="category-subtitle-two">[@T[companyname:name]@T] offers a suite of hosting options with <b>guaranteed 99.9% uptime.</b></span>
 <phrase key="subcategory-1-title" />
 Shared Web Hosting
 <phrase key="subcategory-1-description-1" />
@@ -104,6 +100,8 @@ Keep your site secure, online and running at top speed with an easy way to manag
 SiteLock Website Security
 <phrase key="subcategory-3-product-4-description" />
 Automatically scan your site every day for vulnerabilities that could be exploited by hackers.  We'll spot the problems and tell you how to fix them.
+<phrase key="subcategory-3-product-4-image-tagline" />
+Security for Online Business
 <phrase key="customer-quote-text" />
 "My website is just perfect.  [@T[companyname:name]@T] made it easy"
 <phrase key="customer-quote-info" />
