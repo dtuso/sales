@@ -130,3 +130,11 @@ Products will automatically renew until cancelled. You may turn off the auto-ren
 For more information see the full Microsoft Service Agreement here: <a data-ci="86435" href="http://technet.microsoft.com/en-us/library/jj819284.aspx" target="_blank">http://technet.microsoft.com/en-us/library/jj819284.aspx</a>
 <phrase key="cp-1-OK-3" />
 OK
+<phrase key="cp-6-OnlineEssentialsPoweredByOffice365" />
+Online Essentials <span class="powered-by-office-365-text">powered by Office 365</span>
+<phrase key="cp-2-OnlineEssentials" />
+Online Essentials
+<phrase key="cp-6-BusinessPremiumPoweredByOffice365" />
+Business Premium <span class="powered-by-office-365-text">powered by Office 365</span>
+<phrase key="cp-2-BusinessPremium" />
+Business Premium
