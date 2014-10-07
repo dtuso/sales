@@ -1,8 +1,8 @@
 ---
 location: sales/offers/online-business.aspx
 id: 5421cf90f778fc2490ac4dd2
-name: GCE-27089
-comments: Refactor search widget and better css for lang formatting
+name: GCE-29310
+comments: Roll Out GOT in International Markets - Sales LP
 url: http://www.dev-godaddy.com/offers/online-business.aspx
 assetPath: false
 ---
@@ -17,10 +17,14 @@ assetPath: false
   <meta name="twitter:image:src" content="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/online-business/img/og_got_1200x630.jpg" />
   {% parent %}
 
-  <!-- css-elevate-target -->  
+<!-- css-elevate-target -->
+
+<!-- start-css-elevate -->
   <style>
+{% less %}
     
     /* Page Global CSS -- changes will effect all campaigns */
+    div[role="main"] {font-size:14px;}
     html body#offers{background:#fff;line-height:1.4em;font-size:14px;font-family:HelveticaNeue-Light,"Helvetica Neue Light","Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;font-weight:300}
     .condensed{font-family:HelveticaNeue-CondensedBold,'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:700}
     .loading{background:url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/online-business/img/ajax-loader_lg.gif) no-repeat;content:"";height:35px;margin:2px 12px;width:35px;display:none;}
@@ -45,17 +49,7 @@ assetPath: false
     a.flt-btn-orng{color:#fff;text-decoration:none}
   
     .price-hide {visibility:hidden;}
-    
-    .price.price-show,
-    .original-price.price-show {display:inline;word-wrap:break-word;}
-    html[lang*=en] .price.price-show .decim{display:none}
-    
-    .modal-title{font-size:24px}
-    .modal-dialog{width: 600px}
-    #disclaimers{font-size:14px;margin:20px auto 0;line-height:14px;width:1000px}
-    #disclaimers a,#disclaimers a:link,#disclaimers a:visited{color:#333;text-decoration:underline}
-    #disclaimers a:active,#disclaimers a:hover{color:#7db701}
-    
+            
     .g-toolTip {
       border-bottom: 1px dotted #333;
       cursor: pointer;
@@ -99,183 +93,191 @@ assetPath: false
       border-right: 0 none;
       left: 200px;
     }    
+{% endless %}
   </style>
+<!-- end-css-elevate -->
+ 
 
 {% endblock %}
 {% block body %}
-<!-- start got-top-banner segment -->
-<atlantis:webstash type="css">
-  <style>
-    #domainRow {background-color: #eee;}
-    #domainRow .main-banner-content {text-align:left;}
-    #domainRow h1.main-banner-title { margin:16px 0;font-size:48px;color:#333;font-weight:300;}
-    #domainRow h1.main-banner-title span {background-color:gold; padding:8px;letter-spacing: -0.03em;}
-    #domainRow h3.main-banner-subtitle {text-align:left; font-size:60px;color:#333;}
-    #domainRow p.top-summary {margin:20px 0 0;text-align:left;font-size:28px;font-weight:600;}
-    
-    #domain-search-div .find-a-domain 
-    {font-size:48px;margin:30px 0 40px;line-height:1.35em;} 
-    #domain-search-div .search-result-is-available,
-    #domain-search-div .search-result-not-available,
-    #domain-search-div .search-result-invalid
-    {font-size:48px;margin:30px 0 30px;line-height:1.00em;word-wrap:break-word;}
-    
-    #domain-search-div .search-result-is-available {text-align:center;}
-    
-    #domain-search-div .add-domain-btn {font-size:24px;padding:18px 36px;font-weight:400}
-    
-
-    .got-slider-wrapper {overflow:hidden; width:1000px; padding-bottom:40px; position:relative;}
-    #domainRow .got-slider-wrapper,#domainRow .got-slide {height:400px;}
-    #get-started .got-slider-wrapper,#get-started .got-slide {height:505px;}
-    .got-slides {width:3000px;position:absolute;left:0px;}    
-    .got-slide {width:1000px;float:left;overflow-x:hidden;} 
-    html[lang*=en] #domainRow .got-slider-wrapper,html[lang*=en] #domainRow .got-slide {height:350px !important;}
-    
-    .top-banner-product-col.col-get-started {}
-    .top-package-price {text-decoration:strike;font-size:48px;font-weight:600;line-height:1.4em;}
-    .top-package-price em {color: #ff8a00;}
-    .top-without-package-price {text-decoration:line-through;margin-top:10px;font-size:26px;font-weight:300;line-height:1.4em;}
-    .top-renewal-disclaimer {margin-top:10px;font-size:14px;font-weight:300;}
-    .get-started-btn {padding:0 53px;margin:0 auto;display:inline-block;}
-
-    #offers div.got-slide-2 div.find-a-domain, 
-    #offers div.got-slide-2 div.start-here 
-    {display:block;}
-
-    #offers div.got-slide-2 div.add-domain-btn-div,
-    #offers div.got-slide-2 div.search-result-is-available,
-    #offers div.got-slide-2 div.search-result-not-available,
-    #offers div.got-slide-2 div.search-result-invalid,
-    #offers div.got-slide-2 div.search-again,
-    #offers div.got-slide-2 div.try-again
-    {display:none;}
-
-    #offers div.got-slide-3 div.got-available-div div.find-a-domain, 
-    #offers div.got-slide-3 div.got-unavailable-div div.find-a-domain 
-    {display:none;}
- 
-    #offers div.got-slide-3 div.got-available-div div.add-domain-btn-div,
-    #offers div.got-slide-3 div.got-available-div div.search-result-is-available,
-    #offers div.got-slide-3 div.got-available-div div.search-again
-    {display:block;}
-
-    #offers div.got-slide-3 div.got-available-div div.search-result-not-available,
-    #offers div.got-slide-3 div.got-available-div div.search-result-invalid,
-    #offers div.got-slide-3 div.got-available-div div.search-area-wrapper
-    {display:none;}
-    
-    #offers div.got-slide-3 div.got-unavailable-div div.search-result-not-available,
-    #offers div.got-slide-3 div.got-unavailable-div div.try-again
-    {display:block;}
-
-    #offers div.got-slide-3 div.got-unavailable-div div.search-result-is-available,
-    #offers div.got-slide-3 div.got-unavailable-div div.search-result-invalid,
-    #offers div.got-slide-3 div.got-unavailable-div div.add-domain-btn-div,
-    #offers div.got-slide-3 div.got-unavailable-div div.search-again,
-    #offers div.got-slide-3 div.got-unavailable-div div.start-here
-    {display:none;}
-    
-    #offers div.got-slide-3 div.got-invalid-div div.search-result-invalid,
-    #offers div.got-slide-3 div.got-invalid-div div.try-again
-    {display:block;}
-
-    #offers div.got-slide-3 div.got-invalid-div div.search-result-not-available,
-    #offers div.got-slide-3 div.got-invalid-div div.search-result-is-available,
-    #offers div.got-slide-3 div.got-invalid-div div.add-domain-btn-div,
-    #offers div.got-slide-3 div.got-invalid-div div.search-again,
-    #offers div.got-slide-3 div.got-invalid-div div.start-here,
-    #offers div.got-slide-3 div.got-invalid-div div.find-a-domain
-    {display:none;}
-
-    #domain-search-div .search-again {
-      text-align: center;
-      color: #70ac00;
-      cursor:pointer;
-      margin-top:20px;
-    }
-    #domain-search-div .search-again:hover {
-      text-decoration: underline;      
-    }
-   .add-domain-btn-div {text-align: center;}
-    
-    .got-slide-3 .got-available-div .add-domain-loading{float:none;margin: 14px auto;}
-    
-    .top-banner-product-image {float:left;height:128px;background: url('[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/online-business/img/green-icons-large-sprite.png') no-repeat transparent;}
-    .top-banner-product-image.domain {background-position: 0px 0px;width:151px;}    
-    .top-banner-product-image.wsb  {background-position: -219px 0px;width:138px;}    
-    .top-banner-product-image.email {background-position: -437px 0px;width:141px;}
-    .top-banner-product-symbols {float:left;width:30px;height:30px;margin:50px 0 0 10px;background: url('[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/online-business/img/plus-minus-sprite.png') no-repeat transparent;}
-    .top-banner-product-symbols.addition {background-position: 0px 0px;}
-    .top-banner-product-symbols.equals {background-position: -47px 0px;}
-    #domainRow .product-name {width:151px;text-align:center;margin-top:25px;text-transform: uppercase;font-size:16px;}
-
-    .top-banner-product-col {float:left;}
-    .top-banner-product-col.col-domain {}
-    .top-banner-product-col.col-domain .addition {margin-left:10px;}
-    .top-banner-product-col.col-wsb {margin-left:32px;}
-    .top-banner-product-col.col-wsb .addition {margin-left:19px;}
-    .top-banner-product-col.col-email {margin-left:32px;}
-    .top-banner-product-col.col-email .equals {margin-left:17px;}
-    .top-banner-product-col.col-get-started {margin-left:40px;width:320px;}
-    .product-icon.email {font-size:13px;}
-    #domainRow .product-icon.email {margin-left:-24px; margin-top: 13px;width:199px;text-align:center;}
-    a.simple-link {color: #333;text-decoration:underline;}
-    a.simple-link:hover {color:#7db701;}
-
-    .search-area-wrapper{min-height:65px;}
-    .search-area-wrapper .tooltips-area {float:left;}
-    .search-area-wrapper .input-area,
-    .search-area-wrapper .dropdownlist-area,
-    .search-area-wrapper .search-button-area  
-    {min-height:65px;float:left;}
-    
-    .search-area-wrapper .tooltips-area { max-width:115px;font-size:16px;margin-right:27px;text-align:center;position:relative;word-wrap:break-word;}
-    html[lang*=en] .search-area-wrapper .tooltips-area {font-size:20px;}
-    .search-area-wrapper .tooltips-area:after {content:"";border-width:10px 0 10px 17px;border-style:solid;border-color:transparent transparent transparent #fc0;position:absolute;right:-17px;top:34%}
-    .search-area-wrapper .tooltips-area .highlight-tooltip {background-color:#fc0;color:#630;text-transform:uppercase;text-align:center;padding:13px 5px 12px;}
-    
-    .search-area-wrapper .input-area {background-color:#fc0;width:400px;font-size:24px;font-weight:300;padding: 8px 0 8px 8px;}            
-    .search-area-wrapper .input-area .search-background {background-color:#fff;position:relative;border:1px solid #a4a4a4;height:49px;}
-    .search-area-wrapper .input-area .search-input-label {color:#333;display:block;outline:medium none;overflow:hidden;width:385px;word-wrap: break-word;position:absolute;left:5px;top:13px;z-index:1;height:30px;}
-    .search-area-wrapper .input-area .search-input {width:385px;height:32px;line-height:32px;color:#333;background-color:transparent;border:0 none;padding:0;outline: medium none;position:absolute;left:5px;top:7px;z-index:2;}
-    
-    .search-area-wrapper .dropdownlist-area {background-color: #fc0;padding:8px 8px 8px 0;}
-    .search-area-wrapper .dropdownlist-area .tld-input {background-color: #fff;border-right:1px solid #a4a4a4;border-top:1px solid #a4a4a4;border-bottom:1px solid #a4a4a4;float:none;font-size:24px;height:49px;width:144px;outline:0 none;position:relative;z-index:2;}
-    .search-area-wrapper .dropdownlist-area .tld-input-selected {position:absolute;top:0px;left:0px;padding:13px 0 15px 9px;} 
-    .search-area-wrapper .dropdownlist-area .tld-input.droplist-open {overflow:visible}            
-    .search-area-wrapper .dropdownlist-area .tld-input > ul {padding:0;list-style:none;cursor:pointer;margin:-1px;border:1px solid #bcbcbc;background-color:#fff;font-size:14px;position:absolute;overflow:hidden;top:-9999em;width:112px;z-index:3}
-    .search-area-wrapper .dropdownlist-area .tld-input.droplist-open > ul {width:145px;top:48px;z-index:2;max-height:120px;overflow:auto;}
-    .search-area-wrapper .dropdownlist-area .tld-input.droplist-open > ul > li{padding:5px 10px}
-    .search-area-wrapper .dropdownlist-area .tld-input.droplist-open > ul > li:hover{background:#f5f5f5}
-    .search-area-wrapper .dropdownlist-area .tld-input.droplist-open > ul > li.selected,
-    .search-area-wrapper .dropdownlist-area .tld-input.droplist-open > ul > li.selected:hover {background:#e4efc7}
-    .search-area-wrapper .dropdownlist-area .ddl-drop-arrow {border-radius:0;outline:medium none;cursor:pointer;font-size:1px;height:30px;margin:2px 2px 2px 0;min-width:31px;padding:0;position:absolute;right:0px;}
-    .search-area-wrapper .dropdownlist-area .ddl-drop-arrow span {border-color:#6B6B6B transparent transparent;border-style:solid;border-width:5px 5px 0;display:block;height:0;width:0;position:absolute;top:22px;left:7px}  
-    
-    
-    .search-area-wrapper .search-button-area {}
-    .search-area-wrapper .search-button-area .domain-search-btn {max-width:180px;min-height:65px;word-wrap:break-word;font-size:24px;padding:24px 36px 0;font-weight:400;}
-
-    .search-domain-loading {margin:10px auto 0;}
 
 
+<!------------------------------------>
+<!--         GOT TOP BANNER         -->
+<!------------------------------------>
 
-  </style>
-  <!--[if IE 7]> 
-  <style>
-    .search-area-wrapper {height:54px;}
-    .search-area-wrapper .search-button-area .domain-search-btn {height:39px;padding:24px 36px 4px}
-    .search-area-wrapper .dropdownlist-area .tld-input-selected {padding: 9px 0 15px 9px;} 
-    .search-area-wrapper .tooltips-area {float:left;}
-
-    .search-area-wrapper .input-area,
-    .search-area-wrapper .dropdownlist-area,
-    .search-area-wrapper .search-button-area {height:54px;float:left;min-height:0px;}
-  </style>   
-  <![endif]-->
+<!-- start-css-elevate -->
+<style>
+{% less %}
+  #domainRow {background-color: #eee;}
+  #domainRow .main-banner-content {text-align:left;}
+  #domainRow h1.main-banner-title { margin:16px 0;font-size:48px;color:#333;font-weight:300;}
+  #domainRow h1.main-banner-title span {background-color:gold; padding:8px;letter-spacing: -0.03em;}
+  #domainRow h3.main-banner-subtitle {text-align:left; font-size:60px;color:#333;}
+  #domainRow p.top-summary {margin:20px 0 0;text-align:left;font-size:28px;font-weight:600;}
   
-</atlantis:webstash>
+  #domain-search-div .find-a-domain 
+  {font-size:48px;margin:30px 0 40px;line-height:1.35em;} 
+  #domain-search-div .search-result-is-available,
+  #domain-search-div .search-result-not-available,
+  #domain-search-div .search-result-invalid
+  {font-size:48px;margin:30px 0 30px;line-height:1.00em;word-wrap:break-word;}
+  
+  #domain-search-div .search-result-is-available {text-align:center;}
+  
+  #domain-search-div .add-domain-btn {font-size:24px;padding:18px 36px;font-weight:400}
+
+  .got-slider-wrapper {overflow:hidden; width:1000px; padding-bottom:40px; position:relative;}
+  #domainRow .got-slider-wrapper,#domainRow .got-slide {height:400px;}
+  #get-started .got-slider-wrapper,#get-started .got-slide {height:505px;}
+  .got-slides {width:3000px;position:absolute;left:0px;}    
+  .got-slide {width:1000px;float:left;overflow-x:hidden;} 
+  html[lang*=en] #domainRow .got-slider-wrapper,html[lang*=en] #domainRow .got-slide {height:350px !important;}
+  
+  .top-banner-product-col.col-get-started {}
+  .top-package-price {text-decoration:strike;font-size:48px;font-weight:600;line-height:1.4em;}
+  .top-package-price em {color: #ff8a00;}
+  .top-without-package-price {text-decoration:line-through;margin-top:10px;font-size:26px;font-weight:300;line-height:1.4em;}
+  .top-renewal-disclaimer {margin-top:10px;font-size:14px;font-weight:300;}
+  .get-started-btn {padding:0 53px;margin:0 auto;display:inline-block;}
+
+  #offers div.got-slide-2 div.find-a-domain, 
+  #offers div.got-slide-2 div.start-here 
+  {display:block;}
+
+  #offers div.got-slide-2 div.add-domain-btn-div,
+  #offers div.got-slide-2 div.search-result-is-available,
+  #offers div.got-slide-2 div.search-result-not-available,
+  #offers div.got-slide-2 div.search-result-invalid,
+  #offers div.got-slide-2 div.search-again,
+  #offers div.got-slide-2 div.try-again
+  {display:none;}
+
+  #offers div.got-slide-3 div.got-available-div div.find-a-domain, 
+  #offers div.got-slide-3 div.got-unavailable-div div.find-a-domain 
+  {display:none;}
+
+  #offers div.got-slide-3 div.got-available-div div.add-domain-btn-div,
+  #offers div.got-slide-3 div.got-available-div div.search-result-is-available,
+  #offers div.got-slide-3 div.got-available-div div.search-again
+  {display:block;}
+
+  #offers div.got-slide-3 div.got-available-div div.search-result-not-available,
+  #offers div.got-slide-3 div.got-available-div div.search-result-invalid,
+  #offers div.got-slide-3 div.got-available-div div.search-area-wrapper
+  {display:none;}
+  
+  #offers div.got-slide-3 div.got-unavailable-div div.search-result-not-available,
+  #offers div.got-slide-3 div.got-unavailable-div div.try-again
+  {display:block;}
+
+  #offers div.got-slide-3 div.got-unavailable-div div.search-result-is-available,
+  #offers div.got-slide-3 div.got-unavailable-div div.search-result-invalid,
+  #offers div.got-slide-3 div.got-unavailable-div div.add-domain-btn-div,
+  #offers div.got-slide-3 div.got-unavailable-div div.search-again,
+  #offers div.got-slide-3 div.got-unavailable-div div.start-here
+  {display:none;}
+  
+  #offers div.got-slide-3 div.got-invalid-div div.search-result-invalid,
+  #offers div.got-slide-3 div.got-invalid-div div.try-again
+  {display:block;}
+
+  #offers div.got-slide-3 div.got-invalid-div div.search-result-not-available,
+  #offers div.got-slide-3 div.got-invalid-div div.search-result-is-available,
+  #offers div.got-slide-3 div.got-invalid-div div.add-domain-btn-div,
+  #offers div.got-slide-3 div.got-invalid-div div.search-again,
+  #offers div.got-slide-3 div.got-invalid-div div.start-here,
+  #offers div.got-slide-3 div.got-invalid-div div.find-a-domain
+  {display:none;}
+
+  #domain-search-div .search-again {
+    text-align: center;
+    color: #70ac00;
+    cursor:pointer;
+    margin-top:20px;
+  }
+  #domain-search-div .search-again:hover {
+    text-decoration: underline;      
+  }
+  .add-domain-btn-div {text-align: center;}
+  
+  .got-slide-3 .got-available-div .add-domain-loading{float:none;margin: 14px auto;}
+  
+  .top-banner-product-image {float:left;height:128px;background: url('[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/online-business/img/green-icons-large-sprite.png') no-repeat transparent;}
+  .top-banner-product-image.domain {background-position: 0px 0px;width:151px;}    
+  .top-banner-product-image.wsb  {background-position: -219px 0px;width:138px;}    
+  .top-banner-product-image.email {background-position: -437px 0px;width:141px;}
+  .top-banner-product-symbols {float:left;width:30px;height:30px;margin:50px 0 0 10px;background: url('[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/online-business/img/plus-minus-sprite.png') no-repeat transparent;}
+  .top-banner-product-symbols.addition {background-position: 0px 0px;}
+  .top-banner-product-symbols.equals {background-position: -47px 0px;}
+  #domainRow .product-name {width:151px;text-align:center;margin-top:25px;text-transform: uppercase;font-size:16px;}
+
+  .top-banner-product-col {float:left;}
+  .top-banner-product-col.col-domain {}
+  .top-banner-product-col.col-domain .addition {margin-left:10px;}
+  .top-banner-product-col.col-wsb {margin-left:32px;}
+  .top-banner-product-col.col-wsb .addition {margin-left:19px;}
+  .top-banner-product-col.col-email {margin-left:32px;}
+  .top-banner-product-col.col-email .equals {margin-left:17px;}
+  .top-banner-product-col.col-get-started {margin-left:40px;width:320px;}
+  .product-icon.email {font-size:13px;}
+  #domainRow .product-icon.email {margin-left:-24px; margin-top: 13px;width:199px;text-align:center;}
+  a.simple-link {color: #333;text-decoration:underline;}
+  a.simple-link:hover {color:#7db701;}
+
+  .search-area-wrapper{min-height:65px;}
+  .search-area-wrapper .tooltips-area {float:left;}
+  .search-area-wrapper .input-area,
+  .search-area-wrapper .dropdownlist-area,
+  .search-area-wrapper .search-button-area  
+  {min-height:65px;float:left;}
+  
+  .search-area-wrapper .tooltips-area { max-width:115px;font-size:16px;margin-right:27px;text-align:center;position:relative;word-wrap:break-word;}
+  html[lang*=en] .search-area-wrapper .tooltips-area {font-size:20px;}
+  .search-area-wrapper .tooltips-area:after {content:"";border-width:10px 0 10px 17px;border-style:solid;border-color:transparent transparent transparent #fc0;position:absolute;right:-17px;top:34%}
+  .search-area-wrapper .tooltips-area .highlight-tooltip {background-color:#fc0;color:#630;text-transform:uppercase;text-align:center;padding:13px 5px 12px;}
+  
+  .search-area-wrapper .input-area {background-color:#fc0;width:400px;font-size:24px;font-weight:300;padding: 8px 0 8px 8px;}            
+  .search-area-wrapper .input-area .search-background {background-color:#fff;position:relative;border:1px solid #a4a4a4;height:49px;}
+  .search-area-wrapper .input-area .search-input-label {color:#333;display:block;outline:medium none;overflow:hidden;width:385px;word-wrap: break-word;position:absolute;left:5px;top:13px;z-index:1;height:30px;}
+  .search-area-wrapper .input-area .search-input {width:385px;height:32px;line-height:32px;color:#333;background-color:transparent;border:0 none;padding:0;outline: medium none;position:absolute;left:5px;top:7px;z-index:2;}
+  
+  .search-area-wrapper .dropdownlist-area {background-color: #fc0;padding:8px 8px 8px 0;}
+  .search-area-wrapper .dropdownlist-area .tld-input {background-color: #fff;border-right:1px solid #a4a4a4;border-top:1px solid #a4a4a4;border-bottom:1px solid #a4a4a4;float:none;font-size:24px;height:49px;width:144px;outline:0 none;position:relative;z-index:2;}
+  .search-area-wrapper .dropdownlist-area .tld-input-selected {position:absolute;top:0px;left:0px;padding:13px 0 15px 9px;} 
+  .search-area-wrapper .dropdownlist-area .tld-input.droplist-open {overflow:visible}            
+  .search-area-wrapper .dropdownlist-area .tld-input > ul {padding:0;list-style:none;cursor:pointer;margin:-1px;border:1px solid #bcbcbc;background-color:#fff;font-size:14px;position:absolute;overflow:hidden;top:-9999em;width:112px;z-index:3}
+  .search-area-wrapper .dropdownlist-area .tld-input.droplist-open > ul {width:145px;top:48px;z-index:2;max-height:120px;overflow:auto;}
+  .search-area-wrapper .dropdownlist-area .tld-input.droplist-open > ul > li{padding:5px 10px}
+  .search-area-wrapper .dropdownlist-area .tld-input.droplist-open > ul > li:hover{background:#f5f5f5}
+  .search-area-wrapper .dropdownlist-area .tld-input.droplist-open > ul > li.selected,
+  .search-area-wrapper .dropdownlist-area .tld-input.droplist-open > ul > li.selected:hover {background:#e4efc7}
+  .search-area-wrapper .dropdownlist-area .ddl-drop-arrow {border-radius:0;outline:medium none;cursor:pointer;font-size:1px;height:30px;margin:2px 2px 2px 0;min-width:31px;padding:0;position:absolute;right:0px;}
+  .search-area-wrapper .dropdownlist-area .ddl-drop-arrow span {border-color:#6B6B6B transparent transparent;border-style:solid;border-width:5px 5px 0;display:block;height:0;width:0;position:absolute;top:22px;left:7px}  
+  
+  
+  .search-area-wrapper .search-button-area {}
+  .search-area-wrapper .search-button-area .domain-search-btn {max-width:180px;min-height:65px;word-wrap:break-word;font-size:24px;padding:24px 36px 0;font-weight:400;}
+
+  .search-domain-loading {margin:10px auto 0;}
+
+{% endless %}
+</style>
+<!-- end-css-elevate -->
+
+<!--[if IE 7]> 
+<style>
+  .search-area-wrapper {height:54px;}
+  .search-area-wrapper .search-button-area .domain-search-btn {height:39px;padding:24px 36px 4px}
+  .search-area-wrapper .dropdownlist-area .tld-input-selected {padding: 9px 0 15px 9px;} 
+  .search-area-wrapper .tooltips-area {float:left;}
+
+  .search-area-wrapper .input-area,
+  .search-area-wrapper .dropdownlist-area,
+  .search-area-wrapper .search-button-area {height:54px;float:left;min-height:0px;}
+</style>   
+<![endif]-->
+  
   
 
 <section class="main-banner main-banner-offers" id="domainRow">
@@ -283,7 +285,11 @@ assetPath: false
     <div class="row got-slides">
       <div class="got-slide got-slide-1">
         <div class="row">
+        ##if(activeLanguageAny(en-us))
           <h1 class="main-banner-title">[@L[cds.sales/offers/online-business:top-banner-headline]@L]</h1>
+        ##else
+          <h1 class="main-banner-title">[@L[cds.sales/offers/online-business:top-banner-headline-non-enus]@L]</h1>
+        ##endif
         </div>
         <div class="clearfix">
           <div class="top-banner-product-col col-domain">
@@ -375,20 +381,6 @@ assetPath: false
                         </div>
                       </li>
                       ##endif
-                      ##if(countrySiteAny(mx) || isManager())
-                      <li data-main=".com.mx" data-view="com.mx" class="availabletld">
-                        <div data-main="true">
-                          <span>.com.mx</span>
-                        </div>
-                      </li>
-                      ##endif
-                      ##if(countrySiteAny(au) || isManager())
-                      <li data-main=".com.au" data-view="com.au" class="availabletld">
-                        <div data-main="true">
-                          <span>.com.au</span>
-                        </div>
-                      </li>
-                      ##endif
                       <li data-main=".co" data-view="co" class="availabletld">
                         <div data-main="true">
                           <span>.co</span>
@@ -401,7 +393,7 @@ assetPath: false
                         </div>
                       </li>
                       ##endif
-                      ##if(countrySiteAny(in))
+                      ##if(countrySiteAny(in) || isManager())
                       <li data-main=".in" data-view="in" class="availabletld">
                         <div data-main="true">
                           <span>.in</span>
@@ -782,61 +774,66 @@ assetPath: false
 
 </script>
 </atlantis:webstash>
-      <!-- end got-top-banner segment -->
+
       
-      <!-- start included-products -->
-<atlantis:webstash type="css">
-  <style>
-    #included-productsRow .included-products-banner {background-size:cover;background-image:url('[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/online-business/img/gybo-background.png');background-repeat:no-repeat;}
-    #products-panel {padding-top:20px;}
-    .product-panel .icon {background-image:url('[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/online-business/img/product_sprite.png');width:90px;height:90px;margin: 0 auto 10px;}
-    .product-panel .title {margin-bottom:14px;}
-    .product-panel .title h3 {font-weight:700;font-size:28px;text-align:left;margin-bottom:10px;}
-    .product-panel .headline {margin-bottom:30px;}
-    .product-panel .headline p {font-weight:300;font-size:20px;text-align:left;line-height:32px;}
-    .product-panel .details {margin-bottom:20px;padding-left:24px;}
-    .product-panel .details {list-style-image:url('[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/online-business/img/check.png');padding-left:24px;}
-    .product-panel .details p {font-weight:300;font-size:20px;text-align:left;line-height:32px;padding-left:6px;}
-    #product-hosting .icon {background-position:0 -90px;}
-    #product-wsb .icon {background-position:0 -180px;}
-    #product-domain .icon {background-position:0 0;}
-    #product-security .icon {background-position:0 -540px;}
-    #product-businessmarketing .icon {background-position:0 -270px;}
-    #product-businessmanagement .icon {background-position:0 -450px;}
-    #product-workspace .icon {background-position:0 -360px;}
-    #product-resellers .icon {background-position:0 -630px;}
-    #product-storage .icon {background-position:0 -720px;}
-        
-    .grid-column {border:1px solid #CCC;}
-    .wraparound p {color:#fff;text-transform:uppercase;font-weight:200;font-size:24px;line-height:1.4em;margin:0;}
-    .wraparound {
-      position: relative;
-      top:-60px;
-      padding: 5px;
-      margin: 0 -6px;
-      border: 1px solid #e67c00;
-      background: #ff8a00;
-      color: #fff;
-      box-shadow: 0 4px 4px rgba(0,0,0,0.3);
-      text-align:center;
-    }
-    .wraparound:before {
-      border-left: 6px solid transparent;
-      left: -1px;
-    }
-    .wraparound:before, .wraparound:after {
-      content: " ";
-      border-top: 6px solid #954709;
-      position: absolute;
-      bottom: -7px;
-    }
-    .wraparound:after {
-      border-right: 6px solid transparent;
-      right: -1px;
-    }
-    #product-workspace .product-icon.email {padding:20px 0;text-align:center;height:85px;font-size:16px;}
-  </style>
-</atlantis:webstash>
+<!------------------------------------>
+<!--       INCLUDED PRODUCTS        -->
+<!------------------------------------>
+
+<!-- start-css-elevate -->
+<style>
+{% less %}
+  #included-productsRow .included-products-banner {background-size:cover;background-image:url('[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/online-business/img/gybo-background.png');background-repeat:no-repeat;}
+  #products-panel {padding-top:20px;}
+  .product-panel .icon {background-image:url('[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/online-business/img/product_sprite.png');width:90px;height:90px;margin: 0 auto 10px;}
+  .product-panel .title {margin-bottom:14px;}
+  .product-panel .title h3 {font-weight:700;font-size:28px;text-align:left;margin-bottom:10px;}
+  .product-panel .headline {margin-bottom:30px;}
+  .product-panel .headline p {font-weight:300;font-size:20px;text-align:left;line-height:32px;}
+  .product-panel .details {margin-bottom:20px;padding-left:24px;}
+  .product-panel .details {list-style-image:url('[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/online-business/img/check.png');padding-left:24px;}
+  .product-panel .details p {font-weight:300;font-size:20px;text-align:left;line-height:32px;padding-left:6px;}
+  #product-hosting .icon {background-position:0 -90px;}
+  #product-wsb .icon {background-position:0 -180px;}
+  #product-domain .icon {background-position:0 0;}
+  #product-security .icon {background-position:0 -540px;}
+  #product-businessmarketing .icon {background-position:0 -270px;}
+  #product-businessmanagement .icon {background-position:0 -450px;}
+  #product-workspace .icon {background-position:0 -360px;}
+  #product-resellers .icon {background-position:0 -630px;}
+  #product-storage .icon {background-position:0 -720px;}
+      
+  .grid-column {border:1px solid #CCC;}
+  .wraparound p {color:#fff;text-transform:uppercase;font-weight:200;font-size:24px;line-height:1.4em;margin:0;}
+  .wraparound {
+    position: relative;
+    top:-60px;
+    padding: 5px;
+    margin: 0 -6px;
+    border: 1px solid #e67c00;
+    background: #ff8a00;
+    color: #fff;
+    box-shadow: 0 4px 4px rgba(0,0,0,0.3);
+    text-align:center;
+  }
+  .wraparound:before {
+    border-left: 6px solid transparent;
+    left: -1px;
+  }
+  .wraparound:before, .wraparound:after {
+    content: " ";
+    border-top: 6px solid #954709;
+    position: absolute;
+    bottom: -7px;
+  }
+  .wraparound:after {
+    border-right: 6px solid transparent;
+    right: -1px;
+  }
+  #product-workspace .product-icon.email {padding:20px 0;text-align:center;height:85px;font-size:16px;}
+{% endless %}
+</style>
+<!-- end-css-elevate -->
 
 <section id="included-productsRow">
   <div class="included-products-banner">
@@ -981,18 +978,23 @@ assetPath: false
   })( jQuery, window, document );
 </script>
 </atlantis:webstash>
-      <!-- end included-products -->
       
-      <!-- start award-winning-support -->
-<atlantis:webstash type="css">
-  <style>
-    #award-winning-support {background-color:#7DB701; min-height: 340px;}
-    #award-winning-support .container {background-image:url('[@T[link:<imageroot />]@T]fos/hp/rebrand/img/c3_greenfill.jpg');background-position: -630px center;}
-    #award-winning-support span {color:#fff;font-weight:300;font-size:54px;text-align:left;line-height:54px;display:block;}
-    #award-winning-support span strong {font-weight:700;}
-    #award-winning-support .support-promo-text {padding:100px 0 100px 240px;}
-  </style>
-</atlantis:webstash>
+
+<!------------------------------------>
+<!--            SUPPORT             -->
+<!------------------------------------>
+
+<!-- start-css-elevate -->
+<style>
+{% less %}
+  #award-winning-support {background-color:#7DB701; min-height: 340px;}
+  #award-winning-support .container {background-image:url('[@T[link:<imageroot />]@T]fos/hp/rebrand/img/c3_greenfill.jpg');background-position: -630px center;}
+  #award-winning-support span {color:#fff;font-weight:300;font-size:54px;text-align:left;line-height:54px;display:block;}
+  #award-winning-support span strong {font-weight:700;}
+  #award-winning-support .support-promo-text {padding:100px 0 100px 240px;}
+{% endless %}
+</style>
+<!-- end-css-elevate -->
 
 <section id="award-winning-support">
   <div class="container l-main-container">
@@ -1003,19 +1005,23 @@ assetPath: false
   </div>
 </section>
 
-      <!-- end award-winning-support -->
       
-      <!-- start team-up -->
-<atlantis:webstash type="css">
-  <style>
-    #team-up {background-color:#fff; min-height: 340px;}
-    #team-up .container {padding-top:80px;padding-bottom:80px;}
-    #team-up span {color:#333;font-weight:300;font-size:54px;text-align:left;line-height:54px;display:block;padding-bottom:20px;}
-    #team-up p {color:#333;font-weight:300;font-size:28px;text-align:left;line-height:42px;margin-bottom:0;}
-    #team-up .team-promo-text {padding:0 400px 0 0;}
-    #team-up .team-promo-img {float:right;margin-left:60px;}
-  </style>
-</atlantis:webstash>
+<!------------------------------------>
+<!--            TEAM UP             -->
+<!------------------------------------>
+
+<!-- start-css-elevate -->
+<style>
+{% less %}
+  #team-up {background-color:#fff; min-height: 340px;}
+  #team-up .container {padding-top:80px;padding-bottom:80px;}
+  #team-up span {color:#333;font-weight:300;font-size:54px;text-align:left;line-height:54px;display:block;padding-bottom:20px;}
+  #team-up p {color:#333;font-weight:300;font-size:28px;text-align:left;line-height:42px;margin-bottom:0;}
+  #team-up .team-promo-text {padding:0 400px 0 0;}
+  #team-up .team-promo-img {float:right;margin-left:60px;}
+{% endless %}
+</style>
+<!-- end-css-elevate -->
 
 <section id="team-up">
   <div class="container l-main-container">
@@ -1029,29 +1035,32 @@ assetPath: false
   </div>
 </section>
 
-      <!-- end team-up -->
       
-      <!-- start get-started -->
-<atlantis:webstash type="css">
-  <style>
-    #get-started { background-color: #f7f7f7; border-top:1px solid #ddd; text-align: center; }
-    .pi{background-image:url('[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/online-business/img/product_sprite.png');background-repeat:no-repeat;width:120px;height:90px;float:left; margin: 7px;}
-    
-    .pi_domains{background-position:center 0;}
-    .pi_websitebuilder{background-position:center -180px;}
-    .pi_workspace{background-position:center -360px;}
-    .orange {color: #ff8a00;}
-    .get-started-banner-content {line-height:1.4em;color: #000; padding-top: 60px; padding-bottom: 20px;}
-    .get-started-banner-headline {padding-bottom:20px;line-height:62px;font-size:62px;font-weight:100}
-    .get-started-banner-subtext {font-size: 22px;}
-    .get-started-medium {padding-bottom:40px;line-height:50px;font-size:62px;font-weight:700}
-    .get-started-small {text-decoration:line-through;line-height:28px;font-size:28px;font-weight:300;}
-    .cta-small {font-size: 28px;1em;padding:10px 80px;margin:20px;line-height:1em;}
-    .get-started-renewal-disclaimer {font-size:16px;font-weight:100}
-    #get-started .icon-row {margin:0 auto;font-size:28px;font-weight:300;line-height:28px;width:402px;}
-    
-  </style>
-</atlantis:webstash>
+<!------------------------------------>
+<!--          GET STARTED           -->
+<!------------------------------------>
+
+<!-- start-css-elevate -->
+<style>
+{% less %}
+  #get-started { background-color: #f7f7f7; border-top:1px solid #ddd; text-align: center; }
+  .pi{background-image:url('[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/online-business/img/product_sprite.png');background-repeat:no-repeat;width:120px;height:90px;float:left; margin: 7px;}
+  
+  .pi_domains{background-position:center 0;}
+  .pi_websitebuilder{background-position:center -180px;}
+  .pi_workspace{background-position:center -360px;}
+  .orange {color: #ff8a00;}
+  .get-started-banner-content {line-height:1.4em;color: #000; padding-top: 60px; padding-bottom: 20px;}
+  .get-started-banner-headline {padding-bottom:20px;line-height:62px;font-size:62px;font-weight:100}
+  .get-started-banner-subtext {font-size: 22px;}
+  .get-started-medium {padding-bottom:40px;line-height:50px;font-size:62px;font-weight:700}
+  .get-started-small {text-decoration:line-through;line-height:28px;font-size:28px;font-weight:300;}
+  .cta-small {font-size: 28px;padding:10px 80px;margin:20px;line-height:1em;}
+  .get-started-renewal-disclaimer {font-size:16px;font-weight:100}
+  #get-started .icon-row {margin:0 auto;font-size:28px;font-weight:300;line-height:28px;width:402px;}
+{% endless %}    
+</style>
+<!-- end-css-elevate -->
 
 <section class="misc-banner-generic" id="get-started">
   <div class="container l-main-container get-started-banner-content got-slider-wrapper">
@@ -1093,7 +1102,34 @@ assetPath: false
 
   </div>
 </section>
-<!-- end get-started -->
+
+
+<!------------------------------------>
+<!--            MODALS              -->
+<!------------------------------------>
+
+<!-- start-css-elevate -->
+<style>
+{% less %}
+  #disclaimers { font-size:14px; margin:20px auto 0; line-height:14px; width:1000px; }
+  
+  #disclaimers a,#disclaimers a:link,
+  #disclaimers a:visited{color:#333; text-decoration:underline}
+  #disclaimers a:active,
+  #disclaimers a:hover{color:#7db701}
+
+  #myModal .modal-title {font-size:24px;}
+  #myModal .modal-dialog {width: 600px;}
+  #myModal .modal-body,
+  #myModal .modal-body p {line-height: 1.4em !important; font-size: 16px !important;}
+
+  #myModal .tlds-br,
+  #myModal .tlds-in,
+  #myModal .tlds-uk {display:none;}
+
+{% endless %}
+</style>
+<!-- end-css-elevate -->
 
 <section class="misc-banner-generic">
   <div class="l-main-container container main-banner-content">
@@ -1116,7 +1152,8 @@ assetPath: false
         </h4>
       </div>
       <div class="modal-body">
-        <p>[@L[cds.sales/offers/online-business:disclaimer-modal-content]@L]</p>
+        <p>[@L[cds.sales/offers/online-business:disclaimer-modal-content]@L]
+        [@L[cds.sales/offers/online-business:disclaimer-modal-content-offer-valid]@L]</p>
       </div>
     </div>
   </div>
@@ -1179,7 +1216,32 @@ assetPath: false
             FastballEvent_MouseClick(e, ci, $(this)[0], 'a');
             fbiLibCheckQueue();
         });
+
+        populateTldsOnDisclaimerModal('#myModal .modal-body');
       });
+
+      function populateTldsOnDisclaimerModal(selector) {
+        var $this = $(selector);
+        ##if(countrySiteAny(br) || isManager())
+          $this.find('.tlds-br').show();
+        ##endif
+        ##if(countrySiteAny(in) || isManager())
+          $this.find('.tlds-in').show();
+        ##endif
+        ##if(countrySiteAny(uk) || isManager())
+          $this.find('.tlds-uk').show();
+        ##endif
+      }
+
+      var tokenizeThis = function($obj, strArr) {
+        var tokenized = $obj.html();
+        for(var idx = 0; idx< strArr.length; idx++) {
+          if(strArr[idx] != null) {
+            tokenized = tokenized.replace('{' + idx + '}', strArr[idx]);
+          }
+        }
+        $obj.html(tokenized);
+      }
 
       // Page Global script -- changes will effect all campaigns 
       // get url parameter by parameter name
