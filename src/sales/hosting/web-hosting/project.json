@@ -4,46 +4,22 @@
             "champion": {
                 "name": "Colyn Brown",
                 "email": "clbrown@godaddy.com"
-            },
-            "cdsLocation": "sales/hosting/web-hosting.aspx",
-            "draft": {
-                "id": "538524b4f778fc2a74c3bc5e",
-                "createdDate": "2014-05-27",
-                "createdBy": {
-                    "fullName": "Anupama Ramu",
-                    "username": "aramu"
-                },
-                "jiraTicket": "FOS-20536",
-                "comments": "Adding check using ad credit condition handler",
-                "url": "http://www.dev-godaddy.com/hosting/web-hosting.aspx"
             }
-        },
-        "assetPath": "fos/201401/sales/hosting/web-hosting/",
-        "metaTitle": "[@L[cds.sales/gd/hosting/web-hosting:page-title]@L]",
-        "metaDescription": "[@L[cds.sales/gd/hosting/web-hosting:meta-description]@L]",
-        "metaKeywords": "[@L[cds.sales/gd/hosting/web-hosting:meta-keywords]@L]",
-        "metaCanonicalPath": "/hosting/web-hosting.aspx",
-        "metaOgTitle": "[@L[cds.sales/gd/hosting/web-hosting:og-title]@L]",
-        "metaOgImage": "fos/hp/rebrand/img/gd_rebrand_og.png",
-        "metaOgDescription": "[@L[cds.sales/gd/hosting/web-hosting:og-description]@L]",
-        "cssVersionOverride": "2"
+        }
+    },
+    "web-hosting-1349b.html": {
+        "cdsDetails": {
+            "champion": {
+                "name": "Colyn Brown",
+                "email": "clbrown@godaddy.com"
+            }
+        }
     },
     "web-hosting.language": {
         "cdsDetails": {
             "champion": {
                 "name": "Colyn Brown",
                 "email": "clbrown@godaddy.com"
-            },
-            "cdsLocation": "localization/sales/hosting/web-hosting/en",
-            "draft": {
-                "id": "5390ed8af778fc21dc6e3f44",
-                "createdDate": "2014-06-05",
-                "createdBy": {
-                    "fullName": "Avinash Peesari",
-                    "username": "apeesari"
-                },
-                "jiraTicket": "FOS-20706",
-                "comments": "Updated miss spelled bing ad credit"
             }
         }
     },
@@ -85,6 +61,14 @@
                 "name": "Sergio Lopez",
                 "email": "sylopez@godaddy.com"
             }
+        }
+    },
+    "page.rule": {
+        "cdsDetails": {
+            "champion": {
+                "name": "",
+                "email": ""
+           }
         }
     }
 }
