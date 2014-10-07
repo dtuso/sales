@@ -1,8 +1,8 @@
 ---
 location: localization/sales/business/office-365/en
-id: 53eba351f778fc1b303a9c31
-name: FOS-24500
-comments: updated meta title to include new token
+id: false
+name: GCE-29606
+comments: Update plan names
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="lp-8-MicrosoftOffice365BoostProductivityVirtuallyAnywhereGoDaddy" />
@@ -773,3 +773,92 @@ More
 WORKS ON IPAD!
 <phrase key="design-asset-background-image-business-card" />
 yourname@your-business-name.com
+<phrase key="lp-42-VideoConferencingIsntJustForCorporationsWith2" />
+Video conferencing isn’t just for corporations. With Microsoft Lync, part of our Online Essentials and Business Premium plans, you can chat, share your screen and, yes, even video conference with customers and colleagues anywhere in the world – all for free.
+<phrase key="faq-45-IfYouAreRunningADifferentOperatingSystem2" />
+If you are running a different operating system, remember that you can still work online with Office Online, browser-based versions of your favorite Microsoft tools like Excel, Word or PowerPoint, which are included with the Online Essentials or Business Premium plans.
+<phrase key="faq-WithOurOnlineEssentialsAndBusinessPremiumPlans" />
+With our Online Essentials and Business Premium plans, documents created or stored in your OneDrive for Business cloud storage can be simultaneously edited with others inside or outside your company – anyone with a link to a document can make edits at the same time as you.  You can even see each other’s edits as you go, so you’ll always be on the same page with the latest version—all without having to send documents back and forth via email.
+<phrase key="faq-LyncOnlineIncludedInThePlan" />
+Lync Online, included in the Online Essentials and Business Premium plans, allows you to communicate with your colleagues, customers and partners via online conference call or HD video conference. With just a couple of clicks, you can share your screen to review or invite up to 250 people inside or outside your company to take part in an online conversation.
+<phrase key="lp-LyncOnlinePartOfThePlan" />
+Lync Online, part of the Online Essentials and Business Premium plans, allows you to communicate with your colleagues, customers, partners and friends via instant message, online conference call or HD video conference. Lync even allows you to share your computer screen so you can look at the same thing at the same time.
+<phrase key="lp-IfYouReRunningADifferentOperatingSystem" />
+If you’re running a different operating system, remember that you can still work online with Office Online, browser-based versions of your favorite Microsoft tools like Excel, Word or PowerPoint, which are included with the Online Essentials or Business Premium plans.
+<phrase key="split-test-b-2-OnlineEssentials" />
+Online Essentials
+<phrase key="split-test-b-40-ChooseOurOnlineEssentialsPlanToAccessWord" />
+Choose our Online Essentials plan to access Word, Excel, PowerPoint and more from any computer with Office Online. Or upgrade to Business Premium and get it all on your iPad, iPhone, Android or Windows Phone with Office Mobile apps.
+<phrase key="split-test-b-43-IfYouAreRunningADifferentOperatingSystem2" />
+If you are running a different operating system, remember that you can still work online with Office Online, browser-based versions of your favorite Microsoft tools like Excel, Word or PowerPoint, which are included with the Online Essentials or Business Premium plans.
+<phrase key="split-test-b-82-WithOurBusinessEssentialsAndProductivityPlusPlans2" />
+With our Online Essentials and Business Premium plans, documents created or stored in your OneDrive for Business cloud storage can be simultaneously edited with others inside or outside your company – anyone with a link to a document can make edits at the same time as you. You can even see each other’s edits as you go, so you’ll always be on the same page with the latest version—all without having to send documents back and forth via email.
+<phrase key="split-test-b-61-LyncOnlineIncludedInThePlan" />
+Lync Online, included in the Online Essentials and Business Premium plans, allows you to communicate with your colleagues, customers and partners via online conference call or HD video conference. With just a couple of clicks, you can share your screen to review or invite up to 250 people inside or outside your company to take part in an online conversation.
+<phrase key="lp-7-AvailableOnlyWithBusinessPremiumPlan" />
+Available only with Business Premium plan:
+<phrase key="lp-2-BusinessPremium-2" />
+Business Premium
+<phrase key="lp-3-BusinessPremiumExclusive" />
+Business Premium Exclusive
+<phrase key="faq-34-PlusIfYouPurchaseOurBusinessPremiumPlan" />
+Plus, if you purchase our Business Premium plan, you can get the latest version of the Office desktop applications you know and love so you’ll have the best functionality at your fingertips.
+<phrase key="faq-10-WhichDesktopApplicationsComeWithTheBusinessPremium" />
+Which desktop applications come with the Business Premium plan?
+<phrase key="faq-55-ThisDependsOnWhetherYouAreUsingA2" />
+This depends on whether you are using a PC or a Mac.  PC users can download the latest versions of Word, PowerPoint, Excel, Outlook, OneNote, Publisher, Access, and the desktop version of Lync.  Mac users will receive the latest desktop versions of Word, PowerPoint, Excel, Outlook should they subscribe to the Business Premium plan.<sup>1</sup>
+<phrase key="faq-24-ToUseThe5DesktopDownloadsYouGet2" />
+To use the 5 desktop downloads you get with the Business Premium package, you must be on one of the following operating systems: 
+<phrase key="faq-19-IPurchasedTheBusinessPremiumPlanCanI" />
+I purchased the Business Premium plan. Can I download the 5 installs of Office on my employees’ computers?
+<phrase key="faq-59-TheDesktopOfficeLicensesThatComeWithThe2" />
+The desktop Office licenses that come with the Business Premium plan are associated with an individual user’s account.  This makes it easy to connect Office desktop applications with the online services and cloud storage that allow you to work anywhere. Downloading a copy onto another user’s computer may keep that second user from experiencing these benefits.
+<phrase key="faq-31-ToGetTheMostOutOfOffice365-2" />
+To get the most out of Office 365 from GoDaddy we highly recommend ensuring that anyone needing the latest desktop version of Office be associated with a Business Premium account.
+<phrase key="faq-19-IHaveAMacCanIStillUse2" />
+I have a Mac.  Can I still use Office 365 from GoDaddy?  What about the Business Premium plan?
+<phrase key="faq-32-AndIfYouChooseTheBusinessPremiumPlan" />
+And if you choose the Business Premium plan, you’ll be able to download Office for Mac 2011 Service Pack 3, which is fully compatible with Mac OS X 10.6.
+<phrase key="lp-19-IPurchasedABusinessPremiumPlanCanI" />
+I purchased a Business Premium plan. Can I download the 5 copies of Office on my employees’ computers?
+<phrase key="lp-46-TheDesktopOfficeLicensesThatComeWithThe2" />
+The desktop Office licenses that come with the Business Premium plan are associated with a single user account, including their personal cloud storage. Installing a copy onto another user’s computer may cause complications with shared calendars in Outlook, as well as syncing files online.
+<phrase key="lp-28-ToGetTheMostOutOfOffice365-2" />
+To get the most out of Office 365 from GoDaddy, we highly recommend a separate Business Premium account for anyone who requires a desktop version of Office.
+<phrase key="lp-24-ToUseThe5DesktopDownloadsYouGet2" />
+To use the 5 desktop downloads you get with the Business Premium package, you must be on one of the following operating systems:
+<phrase key="lp-52-YesTheOffice365WebAppsAreCompatible2" />
+Yes! Office Onlines is compatible with Mac OS X 10.5 and later using Safari 5 and later. If you choose the Business Premium plan, you’ll be able to download Office for Mac 2011 Service Pack 3, which is fully compatible with Mac OS X 10.6.
+<phrase key="lp-35-TheLatestVersionsOfMicrosoftOfficeInOur2" />
+The latest versions of Microsoft Office in our Business Premium plan will sync seamlessly with your online storage, ensuring that the documents you create on your desktop are securely stored online and available anywhere.
+<phrase key="lp-planColumnsBusinessPremium-OfficeDesktop" />
+<span class="compare-cell-bold"><span class="tooltip-underline">Office Desktop<span class="tooltip-caption-left"><span class="tooltip-caption-header">Office Desktop</span>Install the full version of Microsoft Office on up to 5 computers and get FREE updates to the latest version of Office for as long as you have Business Premium plan.<sup>1</sup></span>
+</span></span> for up to 5 PCs or Macs with free updates for life
+<phrase key="split-test-b-2-BusinessPremium" />
+Business Premium
+<phrase key="split-test-b-32-InstallTheFullVersionOfMicrosoftOfficeOnIpad2" />
+Install Microsoft Office on up to 5 PCs or Macs and 5 iPads or Windows tablets per single user and get FREE updates to the latest version for as long as you have Business Premium plan.<sup>1</sup>
+<phrase key="split-test-b-32-InstallTheFullVersionOfMicrosoftOfficeOn2" />
+Install your license for the full version of Microsoft Office on up to 5 computers and get FREE updates to the latest version of Office for as long as you have Business Premium plan.<sup>1</sup>
+<phrase key="split-test-b-9-NeverPayForAnotherUpgradeWithBusinessPremium" />
+Never pay for another upgrade with Business Premium.
+<phrase key="split-test-b-46-KeepWorkingEvenWhenYouReNotConnected2" />
+Keep working, even when you’re not connected to the web, with Microsoft Office installed on up to 5 PCs or Macs and 5 iPads or Windows tablets for a single user. Best of all, get free Office updates for life, as long as you keep your Business Premium plan.
+<phrase key="split-test-b-34-PlusIfYouPurchaseOurBusinessPremiumPlan" />
+Plus, if you purchase our Business Premium plan, you can get the latest version of the Office desktop applications you know and love so you’ll have the best functionality at your fingertips.
+<phrase key="split-test-b-10-WhichDesktopApplicationsComeWithTheBusinessPremium" />
+Which desktop applications come with the Business Premium plan?
+<phrase key="split-test-b-55-ThisDependsOnWhetherYouAreUsingA2" />
+This depends on whether you are using a PC or a Mac. PC users can download the latest versions of Word, PowerPoint, Excel, Outlook, OneNote, Publisher, Access, and the desktop version of Lync. Mac users will receive the latest desktop versions of Word, PowerPoint, Excel, Outlook should they subscribe to the Business Premium 
+<phrase key="split-test-b-24-ToUseThe5DesktopDownloadsYouGet2" />
+To use the 5 desktop downloads you get with the Business Premium package, you must be on one of the following operating systems:plan.<sup>1</sup>
+<phrase key="split-test-b-19-IPurchasedTheBusinessPremiumPlanCanI" />
+I purchased the Business Premium plan. Can I download the 5 installs of Office on my employees’ computers?
+<phrase key="split-test-b-59-TheDesktopOfficeLicensesThatComeWithThe2" />
+The desktop Office licenses that come with the Business Premium plan are associated with an individual user’s account. This makes it easy to connect Office desktop applications with the online services and cloud storage that allow you to work anywhere. Downloading a copy onto another user’s computer may keep that second user from experiencing these benefits.
+<phrase key="split-test-b-31-ToGetTheMostOutOfOffice365-2" />
+To get the most out of Office 365 from GoDaddy we highly recommend ensuring that anyone needing the latest desktop version of Office be associated with a Business Premium account.
+<phrase key="split-test-b-19-IHaveAMacCanIStillUse2" />
+I have a Mac. Can I still use Office 365 from GoDaddy? What about the Business Premium plan?
+<phrase key="split-test-b-32-AndIfYouChooseTheBusinessPremiumPlan" />
+And if you choose the Business Premium plan, you’ll be able to download Office for Mac 2011 Service Pack 3, which is fully compatible with Mac OS X 10.6.

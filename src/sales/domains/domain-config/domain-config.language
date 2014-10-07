@@ -1,7 +1,7 @@
 ---
 location: localization/sales/domains/domain-configuration/en
-id: 53d809a7f778fc27484de577
-name: FOS-24789/ FOS-23778
+id: false
+name: GCE-29606
 ---
 ##if(false)
 <!-- DOC BLOCK (DO NOT REMOVE)
@@ -313,3 +313,9 @@ Web hosting with cPanel to build and manage websites. Some technical skills need
 <span class="perfect">Perfect for:</span> Web designers, web developers and businesses that use a designer
 <phrase key="as.low.as.per.month.free.domain.splitB" comment="{0} will be a price"/>
 As low as {0}/mo + a free domain**
+<phrase key="step.o365.plan2.title.OnlineEssentials" comment="" />
+Online Essentials
+<phrase key="step.o365.plan3.list.title.OnlineEssentials" comment="" />
+All features from Online Essentials PLUS…
+<phrase key="step.o365.plan3.title.BusinessPremium" comment="" />
+Business Premium
