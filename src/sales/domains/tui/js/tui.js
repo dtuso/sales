@@ -815,9 +815,30 @@ if (!domains.controls.cds_gtld_registration) {
 
     function serializeCurrentDomain() {
       verifyAndSubmitDependables();
+      verifyPhoneFields();
       var serialization = $("#form" + currentDomainName).serialize();
       verifyAndRenameDependables();
       return serialization;
+    }
+
+    function verifyPhoneFields() {
+      $.each($("#form" + currentDomainName).find('input[type="tel"]'), function (i, field) {
+        var $field = $(field);
+        var val = $field.val();
+        var isOptional = $field.attr("data-optional") != undefined && $field.attr("data-optional") === "true";
+        if (isOptional && isPhoneFieldJustDialCode($field)) {
+          $field.removeAttr("name");
+        }
+      });
+    }
+
+    function isPhoneFieldJustDialCode($field) {
+      var val = $field.val();
+      var dialCode = "+" + dialCodeFromString(val) + ".";
+      if (val.length > 0 && val === dialCode) {
+        return true;
+      }
+      return false;
     }
 
     function ValidateDPPForm(form, showInvalid) {
@@ -832,6 +853,11 @@ if (!domains.controls.cds_gtld_registration) {
         
         var isOptional = $field.attr("data-optional") != undefined && $field.attr("data-optional") === "true";
         if (isVisible && !isOptional && ($field.val() === undefined || $field.val() == null || $field.val() == "" || $field.val().length <= 0)) {
+          valid = false;
+          if (showInvalid) $field.addClass('invalid');
+        }
+
+        if (!isOptional && $field.attr("type") === "tel" && isPhoneFieldJustDialCode($field)) {
           valid = false;
           if (showInvalid) $field.addClass('invalid');
         }
@@ -931,6 +957,19 @@ if (!domains.controls.cds_gtld_registration) {
           $(this).find("input").removeAttr("data-oldname");
         }
       });
+    }
+
+    function dialCodeFromString(inputVal) {
+      if (inputVal != undefined) {
+        var firstPart = inputVal.trim().split(".")[0];
+        // only interested in international numbers (starting with a plus)
+        if (firstPart.substring(0, 1) == "+") {
+          // strip out non-numeric chars (e.g. pluses, spaces, brackets)
+          var dialCode = firstPart.replace(/\D/g, '');
+          return dialCode;
+        }
+      }
+      return "";
     }
 
     // PUBLIC functions
