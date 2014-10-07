@@ -1,10 +1,10 @@
 ---
 location: sales/ssl/ssl-certificates.aspx
 url: http://www.dev-godaddy.com/ssl/ssl-certificates.aspx
-id: false
-name: GCE-24539
+id: 54208fb7f778fc2490ac4d9f
+name: GCE-25277
 assetPath: false
-comments: BazaarVoice reviews not loading IE8
+comments: Rainier banner
 ---
 
 {% extends 'layouts/base.html' %}
@@ -31,9 +31,11 @@ comments: BazaarVoice reviews not loading IE8
     ul.plan-pricing-list > li {
       padding-top: 5px;
     }
-    .plan-summary {
-		padding-top: 2.428571em;
-	}
+
+    .misc-banner-content{
+      padding-bottom: 2em;
+    }
+    
     {% endless %}
   </style>
 {% endblock %}
@@ -59,6 +61,74 @@ comments: BazaarVoice reviews not loading IE8
       $('.move').scrollToSection();
       $('.rating-stars-init').ratingStars();
     });
+
+    // gdSideBySideAlign plugin
+  (function ( $, window, document, undefined ) {
+
+    var pluginName = 'gdSideBySideAlign',
+        defaults = {
+          bailIfRowCountsMismatch : true
+    };
+
+    function GDSideBySideAlign( element, options ) {
+      this.element = element;
+      this.options = $.extend( {}, defaults, options);
+      this._defaults = defaults;
+      this._name = pluginName;
+      this.init();
+    }
+
+    GDSideBySideAlign.prototype.init = function () {
+
+        // Find the columns
+        var $columns = $(this.element).find('[data-gd-sidebysidealign-col]');
+
+        if($columns.length == 0) {
+          return; // bail if no columns found
+        }
+
+        // Make sure columns have an equal number of rows
+        var numRows = 0, equalLength = true;
+        $.each($columns, function(idx,item){
+          var $rows = $(item).find('[data-gd-sidebysidealign-row]');
+          if(numRows == 0) {
+            numRows = $rows.length;
+          }
+          if(equalLength) {
+            if(numRows != $rows.length) equalLength = false;
+          }
+        });
+        if(numRows==0 || !equalLength && this.options.bailIfRowCountsMismatch) {
+          return; // bail if no rows, or rows are not equal length
+        }
+
+        // loop thru each row and grab the largest cell height and apply to each cell in that row
+        for(var i=1; i<=numRows; i++) {
+          var $cells = $columns.find('[data-gd-sidebysidealign-row="' + i + '"]' );
+          var tallest = 0;
+          $.each($cells,function(idx, cell){
+            tallest = Math.max(tallest, $(cell).outerHeight());
+          });
+          $cells.css({'height':tallest+'px'});
+        }
+
+    }; /* end GDSideBySideAlign.prototype.init */
+
+    // register the function to be used
+    $.fn[pluginName] = function ( options ) {
+      return this.each(function () {
+        if (!$.data(this, 'plugin_' + pluginName)) {
+          $.data(this, 'plugin_' + pluginName, new GDSideBySideAlign( this, $(this).data('gd-sidebysidealign') || options ));
+        }
+      });
+    };
+
+    // load the plugin
+    $(document).ready(function(){
+      $('[data-gd-sidebysidealign]').gdSideBySideAlign();
+    });
+
+  })( jQuery, window, document );
 
   </script>
 
@@ -173,6 +243,27 @@ comments: BazaarVoice reviews not loading IE8
                 </div>
             </div><!-- col-xs-4 -->
           </div>
+          <!-- Start Rainier Banner -->
+          <div class="row tab-content" id="rainier-section">
+            <div id="Rainier_Banner" class="col-xs-12 rainier_banner">
+              <div class="row" data-gd-sidebysidealign="{}">
+                <div class="rainier_logo_container rainier_background" data-gd-sidebysidealign-col="1">
+                  <div class="godaddy_pro_logo" data-gd-sidebysidealign-row="1"></div>
+                </div>
+                <div class="rainier_text_container rainier_background" data-gd-sidebysidealign-col="2">
+                  <p class="text-center rainier_banner_text" data-gd-sidebysidealign-row="1">[@L[cds.sales/gd/hosting/web-hosting:godaddy-pro-get-tech-specs]@L]</p>
+                </div>
+                <div class="rainier_button_container " id="Rainier_LearnMoreButton" data-gd-sidebysidealign-col="3">
+                  <div >
+                    <a class="btn btn-warning btn-block btn-lg" data-gd-sidebysidealign-row="1" href="[@T[link:<relative path="/pro/ssl-encryption"><param name='ci' value='93962' /></relative>]@T]">
+                      <div class="text">[@L[cds.sales/gd/hosting/web-hosting:godaddy-pro-learn-more]@L]</div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Rainier Banner -->
           <!-- Start plan-summary -->
           <section class="plan-summary l-main-content">
             <div class="container l-main-container">
