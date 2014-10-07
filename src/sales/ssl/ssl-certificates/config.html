@@ -1,8 +1,10 @@
 ---
 location: sales/ssl/ssl-certificates-config.aspx
-id: 542ee4b0f778fc3210434d85
-name: GCE-29030
-comments: added pro capabilities
+url: http://www.dev-godaddy.com/ssl/ssl-certificates-config.aspx
+id: 5432fd99f778fc25d4961ee7
+name: GCE-24492
+comments: currency fix
+assetPath: false
 ---
 ##if(false)
 {% include 'modules/doc-block.html' %}
@@ -19,46 +21,10 @@ comments: added pro capabilities
   <script src="[@T[link:<javascriptroot />]@T]shared/js/1.8.3/global.20130605.min.js" type="text/javascript" ></script>
   [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags" />]@P]
   <link rel="Stylesheet" type="text/css" href="[@T[link:<cssroot />]@T]fos/css/1/lp/lp_config_http_20131101.min.css" />
- 
-  <style>
-    #debug{font-size: 11px;margin: 0 auto;width: 1000px;}
-    #hostingConfig .buttons{float:none;left:550px;top:-64px;}
-    #disclaimers {margin:0px;}
-    #hostingConfig .column-left {float:none;}
-    .column-left .site-lock-add{margin:10px 8px auto; display: block;width: 70%;}
-.column-left .site-lock-add>div{position:relative;padding:5px 43px;line-height:16px}
-.column-left .site-lock-add>div>span.sitelock-checkbox{background:url("[@T[link:<imageroot />]@T]/fos/lp/rebrand_config_sprite2.png") no-repeat -53px -159px;cursor:pointer;height:28px;position:absolute;width:34px;top:0;left:0}
-    .column-left .site-lock-add>div>span.active{background:url("[@T[link:<imageroot />]@T]/fos/lp/rebrand_config_sprite2.png") no-repeat 1px -160px}
- #hostingConfig .tt-override{
-    background: none;
-    width: initial;
-    margin: auto;
-    position: relative;
-    border-bottom: 1px dotted #333;
-    float:left;
-    min-width: 194px;
-    margin-right: 5px;
-    }
-    span.ssl-tip-wide{
-    top: 16px;
-    left: 115px;
-    width:460px;
-    }
-     span.stlk-tip-wide{
-    top: 16px;
-    left: 75px;
-    width:460px;    
-    }
-    span.sitelk-add-snt{
-    float: left;
-    padding-right: 5px;
-    }    
-   .sitelock-sent-container{
-    min-width: 350px;
-    }
-    #colFiveDiv{
-    width: 415px;
-}
+   <style type="text/css">
+    {% less %}
+    {% include 'css/config-styles.less' %} 
+    {% endless %}
   </style>
   </head>
 <body>

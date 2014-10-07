@@ -269,9 +269,13 @@ body #pcf .pc-support-wrapper {
 }
 .product-11-image {
   background: no-repeat -263px -173px;
-  width: 322px;
-  height: 95px;
-  margin: auto auto;
+  width: 321px;
+  height: 66px;
+  margin: 0 auto;
+}
+.centered-image-with-text .image-container > div > p {
+  font-family: Arial, Helvetica, "Lucida Grande", sans-serif;
+  font-size: 22px;
 }
 .customer-quote-image {
   background: no-repeat -586px -172px;
@@ -363,6 +367,7 @@ body #pcf .pc-support-wrapper {
 .two-products .info-container {
   margin: 0;
   padding: 0 25px 70px 20px;
+  height: 100%;
 }
 .two-products .container div:nth-child(2) {
   border-right: 1px solid #fff;
@@ -373,6 +378,7 @@ body #pcf .pc-support-wrapper {
   color: #fff;
   margin: 74px 0 0;
   padding: 0;
+  display: inline-block;
 }
 .two-products .info-container h3 {  
   font-size: 16px;
@@ -407,16 +413,30 @@ body #pcf .pc-support-wrapper {
 }
 
 /* Products - Centered Image */
-.centered-image .image-container {
+.centered-image-no-text .image-container {
   position: relative;
 }
-.centered-image .image-container div:first-child {
+.centered-image-no-text .image-container div:first-child {
   position: absolute;
   margin: auto;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
+}
+.centered-image-with-text .image-container {
+  position: relative;
+}
+.centered-image-with-text .image-container > div:first-child {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 500px;
+  height: 95px;
+  text-align: center;
 }
 
 /* List */
@@ -434,7 +454,7 @@ body #pcf .pc-support-wrapper {
   padding-bottom: 0;
 }
 .product-section li:before {
-  background: url('../img/Hosting-Category-Sprite.png') no-repeat -719px -216px;
+  background: url('../img/Hosting-Category-Sprite_v2.png') no-repeat -719px -216px;
   width: 16px;
   height: 12px;
   display: block;
@@ -453,7 +473,7 @@ body #pcf .pc-support-wrapper {
   text-decoration: underline;
 }
 .review-container div {
-  background: url('../img/Hosting-Category-Sprite.png') no-repeat -675px -172px;
+  background: url('../img/Hosting-Category-Sprite_v2.png') no-repeat -675px -172px;
   width: 128px;
   height: 23px;
   float: left;
