@@ -1,6 +1,6 @@
 ---
 location: localization/sales/offers/office365-promo/en
-id: 542f31ddf778fc3210434d9f
+id: 54342ed7f778fc0ff0ff8e2a
 name: GCE-27637
 comments: New GOT POB Landing Page and Config Page
 ---
@@ -26,11 +26,17 @@ Premium Office Bundle
 <phrase key="top-banner-savings" comment="{0} will get replaced with something like 50%" />
 Save up to {0}
 <phrase key="top-banner-best-deal"/>
-Best deal online or in stores for Microsoft Office 365 Business Premium
-<phrase key="top-banner-per-user-discount-price" comment="{0} will get replaced with a price amount" />
-<span class="discount-price">{0}</span>/year per user*
+Best. Deal. <em>Anywhere.</em>
+<phrase key="top-banner-save"/>
+Save on Microsoft Office 365 Business Premium. 
+<phrase key="top-banner-plus"/>
+Plus: Website | Pro email | 24/7 support | And more
+<phrase key="top-banner-per-user-discount-price-mo" comment="{0} will get replaced with a price amount" />
+<span class="discount-price-mo">{0}</span>/mo per user*
+<phrase key="top-banner-per-user-discount-price-yr" comment="{0} will get replaced with a price amount" />
+or <span class="discount-price-yr">{0}</span> annual term
 <phrase key="top-banner-original-price" comment="{0} will get replaced with a price amount" />
-<span class="original-price">{0}</span> full year price
+Bundle renews at <span class="renewal-price-mo">{0}</span>/mo. Cancel any products anytime.
 <phrase key="top-banner-renewal-price-disclaimer" />
 *1st year only. Limited to 5 seats.
 <phrase key="top-banner-see-offer-details" />
@@ -48,57 +54,33 @@ Get the best of Microsoft Office
 <phrase key="included-office-five-devices" />
 Microsoft Office on up to 5 devices
 <phrase key="included-office-five-devices-desc" />
-dry stout; mead terminal gravity autolysis top-fermenting yeast shelf life, bock. enzymes racking mouthfeel ipa rims. mash reinheitsgebot goblet hefe? real ale hoppy copper secondary fermentation, goblet acid rest noble hops. primary fermentation bunghole draft (draught); bunghole conditioning tank? 
+Get the latest version of Word, Excel, PowerPoint and Outlook for your desktop, as well as licenses for your laptops, tablets and smartphones – up to 5 devices per single user.
 <phrase key="included-office-email" />
-Professional email
+Professional domain-based email
 <phrase key="included-office-email-desc" />
-top-fermenting yeast bung scotch ale pilsner cask conditioned ale. mash tun bacterial sparge. additive barleywine barleywine pitching imperial cold filter, hefe! alpha acid carboy goblet infusion malt additive. bacterial; noble hops seidel hop back beer
+Show your customers you take your business seriously with memorable email built on your domain name. You can even create multiple addresses, like yourname@ and support@, that deliver to a single inbox.
 <phrase key="included-office-storage" comment="TB is short for terabyte" />
 1 TB of secure online storage
 <phrase key="included-office-storage-desc" />
-pitch microbrewery bitter anaerobic pitching. units of bitterness wort chiller ipa malt beer cask conditioning. bottle conditioning squares barley hydrometer abv cask conditioned ale. carbonation shelf life pint glass brew kettle. conditioning tank becher enzymes; lagering malt extract.
+Always have the files you need, no matter where you are. Access, edit and save your important files anywhere from your laptop, tablet or smartphone. And with your files saved online, your data is always backed up.
 <phrase key="included-best-of-godaddy" />
 Get the best of GoDaddy
 <phrase key="included-godaddy-support" />
 Free 24/7 support
 <phrase key="included-godaddy-support-desc" />
-pitch microbrewery bitter anaerobic pitching. units of bitterness wort chiller ipa malt beer cask conditioning. bottle conditioning squares barley hydrometer abv cask conditioned ale. carbonation shelf life pint glass brew kettle. conditioning tank becher enzymes; lagering malt extract.
+Whether you have questions about setting up your email or need help deciding on the perfect domain name, our experts are always just a phone call away.
 <phrase key="included-godaddy-domain" />
 Business domain and website
 <phrase key="included-godaddy-domain-desc" />
-top-fermenting yeast bung scotch ale pilsner cask conditioned ale. mash tun bacterial sparge. additive barleywine barleywine pitching imperial cold filter, hefe! alpha acid carboy goblet infusion malt additive. bacterial; noble hops seidel hop back beer
+Use our smart search tools to find the perfect domain for your business and use Website Builder to easily create your own professional site. Just choose from 100s of professional designs, customize and publish. 
 <phrase key="included-godaddy-bookkeeping" />
 Get Paid
 <phrase key="included-godaddy-bookkeeping-desc" />
-dry stout; mead terminal gravity autolysis top-fermenting yeast shelf life, bock. enzymes racking mouthfeel ipa rims. mash reinheitsgebot goblet hefe? real ale hoppy copper secondary fermentation, goblet acid rest noble hops. primary fermentation bunghole draft (draught); bunghole conditioning tank? 
-<phrase key="included-product-domain-headline" />
-Give your business a unique, memorable address online.
-<phrase key="included-product-domain-details-bullet1" />
-Choose from classic domains like .com, .net and .org.
-<phrase key="included-product-domain-details-bullet2" />
-We manage over 57 million domains. We'll take care of yours, too.
-<phrase key="included-product-wsb-title" />
-Your Website
-<phrase key="included-product-wsb-headline" />
-Easily create your own professional website.
-<phrase key="included-product-wsb-details-bullet1" />
-Simple and intuitive - no technical skills required.
-<phrase key="included-product-wsb-details-bullet2" />
-Choose from a library of customizable designs.
-<phrase key="included-product-wsb-details-bullet3" />
-Includes free hosting.
-<phrase key="included-product-email-title" />
-Your Email
-<phrase key="included-product-email-headline" />
-Promote your business with every message you send.
-<phrase key="included-product-email-details-bullet1" />
-Get an address that's built on your domain.
-<phrase key="included-product-email-details-bullet2" />
-Keep your email, calendar and contacts in-sync across all your devices.
+Let our payment system make it easy to get the money you’ve earned. Use our mobile app to accept credit cards on your smartphone, create and send invoices directly from a job site and much more. 
 <phrase key="team-promo-text-headline" />
-Team up with the best
+Team up with the best.
 <phrase key="team-promo-text-content" />
-GoDaddy has over 57 million domains under management, more than anyone on the planet. Microsoft builds the tools that every successful company relies on. With us powering your business, there's no limit to what you can do.
+GoDaddy has over 57 million domains under management, more than anyone on the planet. Microsoft builds the tools that every successful company relies on. With us powering your business, there’s no limit to what you can do.
 <phrase key="disclaimer-modal-title" />
 Disclaimers
 <phrase key="disclaimer-modal-content" />
@@ -106,9 +88,9 @@ Special offer pricing valid for first year only. Offer includes one .COM, .CO, .
 <phrase key="disclaimer-modal-link" />
 Click here for product disclaimers and legal policies.
 <phrase key="search-title" />
-First, let's find a domain name for your site.
+This bundle is built on your domain. Choose yours now.
 <phrase key="search-is-available" />
-Oh ya! <strong class="searched-domain">{0}</strong> is available.
+Oh yeah! <strong class="searched-domain">{0}</strong> is available.
 <phrase key="search-not-available" />
 Sorry, <strong class="searched-domain">{0}</strong> is not available.
 <phrase key="search-again" />
