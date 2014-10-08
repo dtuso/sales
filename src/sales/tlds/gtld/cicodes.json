@@ -90,10 +90,10 @@
           { "Description" : ".WEBSITE Slide Link" }
         ]
       },
-      { ".SOLUTIONS Slide Link" : [
-          { "ITC ID" : "89732" },
-          { "ITC Code" : "GtldEoiSolutionsLink" },
-          { "Description" : ".SOLUTIONS Slide Link" }
+      { ".ATTORNEY Slide Link" : [
+          { "ITC ID" : "93942" },
+          { "ITC Code" : "GtldEoiWebsiteAttorney" },
+          { "Description" : ".ATTORNEY Slide Link" }
         ]
       }
     ],

@@ -13,6 +13,9 @@ try {
   var swig        = require('gulp-swig');
   var uglify      = require('gulp-uglify');
   var debug       = require('gulp-debug');
+  var data        = require('gulp-data');
+  var jade        = require('gulp-jade');
+  
   var elevateCss  = require('./lib/gulp-css-elevate');
   var elevateJs   = require('./lib/gulp-js-elevate');
   var charFix     = require('./lib/gulp-character-fix');

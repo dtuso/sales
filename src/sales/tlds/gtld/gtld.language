@@ -1,7 +1,7 @@
 ---
 location: localization/sales/gd/tlds/gtld/en
-id: 540e3fcdf778fc1720990021
-name: GCE-27605
+id: 5432d8fef778fc25d4961edd
+name: GCE-29677
 comments: Updating slider content.
 ---
 {% include 'modules/doc-block.html' %}
@@ -475,3 +475,7 @@ Be the go-to source with <strong>.reviews</strong>
 They have problems. You have <strong>.solutions</strong>
 <phrase key="MainBannerCarouselSlideText1Website"/>
 <strong>.website</strong> is your home online.
+<phrase key="MainBannerCarouselSlideTextAttorney"/>
+Make your case with <strong>.attorney</strong>
+<phrase key="MainBannerCarouselSlideTextNinja" />
+Show off your <strong>.ninja</strong> skills
