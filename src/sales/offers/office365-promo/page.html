@@ -97,14 +97,14 @@ metaOgDescription:  "[@L[cds.sales/offers/office365-promo:og-description]@L]"
 
   @imgPath : '[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/office365-promo/img/';
 
-  #domain-search-div .find-a-domain 
-  {font-size:48px; margin:90px 0 40px; line-height:1.35em;} 
+  #domain-search-div .find-a-domain,
   #domain-search-div .search-result-is-available,
   #domain-search-div .search-result-not-available,
-  #domain-search-div .search-result-invalid {font-size:48px; margin:90px 0 30px; line-height:1.00em; word-wrap:break-word;}  
-  #domain-search-div .search-result-is-available {text-align:center;}  
+  #domain-search-div .search-result-invalid {font-size:40px; margin:90px 0 50px; line-height:1.00em; word-wrap:break-word;text-align:left;}
   #domain-search-div .add-domain-btn {font-size:24px; padding:18px 36px; font-weight:400}
+  #domain-search-div div.search-result-is-available {text-align: center;}
   
+  #domain-search-div .search-form {max-width: 1000px;}
   div.got-slide-2,
   div.got-slide-3 
   {display:none;}
@@ -171,7 +171,7 @@ metaOgDescription:  "[@L[cds.sales/offers/office365-promo:og-description]@L]"
   
   #domainRow div.got-slide-3 div.got-available-div div.add-domain-loading{float:none;margin: 14px auto;}
   
-  .search-area-wrapper {min-height:65px;}
+  .search-area-wrapper {min-height:65px; margin-bottom:70px;}
   .search-area-wrapper .tooltips-area {float:left;}
   .search-area-wrapper .input-area,
   .search-area-wrapper .dropdownlist-area,
@@ -181,7 +181,7 @@ metaOgDescription:  "[@L[cds.sales/offers/office365-promo:og-description]@L]"
   .search-area-wrapper .tooltips-area { max-width:115px;font-size:16px;margin-right:27px;text-align:center;position:relative;word-wrap:break-word;}
   html[lang*=en] .search-area-wrapper .tooltips-area {font-size:20px;}
   .search-area-wrapper .tooltips-area:after {content:"";border-width:10px 0 10px 17px;border-style:solid;border-color:transparent transparent transparent #fc0;position:absolute;right:-17px;top:34%}
-  .search-area-wrapper .tooltips-area .highlight-tooltip {background-color:#fc0;color:#630;text-transform:uppercase;text-align:center;padding:13px 5px 12px;}
+  .search-area-wrapper .tooltips-area .highlight-tooltip {background-color:#fc0;color:#630;text-transform:uppercase;text-align:center;padding:13px 14px 12px;}
   
   .search-area-wrapper .input-area {background-color:#fc0;width:400px;font-size:24px;font-weight:300;padding: 8px 0 8px 8px;}
   .search-area-wrapper .input-area .search-background {background-color:#fff;position:relative;border:1px solid #a4a4a4;height:49px;}
@@ -255,7 +255,7 @@ metaOgDescription:  "[@L[cds.sales/offers/office365-promo:og-description]@L]"
     <span class="left-corner-ribbon exclusiveoffer [@T[localization:<language full="true" />]@T] [@T[localization:<language />]@T]"></span>
     <div class="container main-banner-content">
       <div class="row got-slides">
-        <div class="row got-slide-1">
+        <div class="row got-slide got-slide-1">
           <div class="col-xs-7">
             <h1 class="main-banner-title condensed text-left">[@L[cds.sales/offers/office365-promo:top-banner-headline]@L]</h1>
             <img class="icon-row solazy" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/office365-promo/img/MSFT-icons.png" />
@@ -274,7 +274,7 @@ metaOgDescription:  "[@L[cds.sales/offers/office365-promo:og-description]@L]"
             </div>
           </div>
         </div> <!-- end slide-1 -->
-        <div class="got-slide-2">
+        <div class="row got-slide got-slide-2">
           <div id="domain-search-div">          
             
             <div class="find-a-domain">[@L[cds.sales/offers/office365-promo:search-title]@L]</div>
@@ -371,7 +371,7 @@ metaOgDescription:  "[@L[cds.sales/offers/office365-promo:og-description]@L]"
             
           </div> <!-- end domain-search-div -->
         </div> 
-        <div class="got-slide-3">
+        <div class="row got-slide got-slide-3">
           <div class="got-available-div"></div>
           <div class="got-unavailable-div"></div>
           <div class="got-invalid-div"></div>
@@ -389,15 +389,19 @@ metaOgDescription:  "[@L[cds.sales/offers/office365-promo:og-description]@L]"
       $dsd = $('#domain-search-div'),
       nextStepUrl = '';
 
+    function showSlide($gotSlides, slideSelector) {
+      $gotSlides.find('.got-slide').hide();
+      $gotSlides.find(slideSelector).show();
+
+    }
     function slideToShowSearch($gotSlides){
       $gotSlides.find('.got-slide-3').find('.got-available-div').hide();      
       $gotSlides.find('.got-slide-3').find('.got-unavailable-div').hide();   
       $gotSlides.find('.got-slide-3').find('.got-invalid-div').hide();
       
       // move the domain search box into the slide 2
-      $gotSlides.find('.got-slide-2').append($dsd);      
-      
-      $gotSlides.animate({left:'-1000px'},slideAnimationMs);
+      $gotSlides.find('.got-slide-2').append($dsd);
+      showSlide($gotSlides, '.got-slide-2');
     }
     function slideToUnavailable($gotSlides){
 
@@ -406,8 +410,7 @@ metaOgDescription:  "[@L[cds.sales/offers/office365-promo:og-description]@L]"
       $gotSlides.find('.got-slide-3').find('.got-available-div').hide();    
       $gotSlides.find('.got-slide-3').find('.got-invalid-div').hide();
       
-      //animate slide
-      $gotSlides.animate({left:'-2000px'},slideAnimationMs);
+      showSlide($gotSlides, '.got-slide-3');
     }
     function slideToAvailable($gotSlides){
 
@@ -416,8 +419,7 @@ metaOgDescription:  "[@L[cds.sales/offers/office365-promo:og-description]@L]"
       $gotSlides.find('.got-slide-3').find('.got-unavailable-div').hide();   
       $gotSlides.find('.got-slide-3').find('.got-invalid-div').hide();
       
-      //animate slide
-      $gotSlides.animate({left:'-2000px'},slideAnimationMs);
+      showSlide($gotSlides, '.got-slide-3');
     }
     function slideToInvalid($gotSlides){
 
@@ -426,13 +428,11 @@ metaOgDescription:  "[@L[cds.sales/offers/office365-promo:og-description]@L]"
       $gotSlides.find('.got-slide-3').find('.got-available-div').hide();  
       $gotSlides.find('.got-slide-3').find('.got-unavailable-div').hide();   
       
-      //animate slide
-      $gotSlides.animate({left:'-2000px'},slideAnimationMs);
+      showSlide($gotSlides, '.got-slide-3');
     }
 
     function slideToSlide1($gotSlides){
-      //animate slide
-      $gotSlides.animate({left:'0px'},slideAnimationMs/4);
+      showSlide($gotSlides, '.got-slide-1');
     }
 
     $(document).ready(function(){      
@@ -856,7 +856,21 @@ metaOgDescription:  "[@L[cds.sales/offers/office365-promo:og-description]@L]"
       $(this).bind("click",scrollToEvent);
     });
 
+    populateTldsOnDisclaimerModal('#myModal .modal-body');
   });
+
+  function populateTldsOnDisclaimerModal(selector) {
+    var $this = $(selector);
+    ##if(countrySiteAny(br) || isManager())
+      $this.find('.tlds-br').show();
+    ##endif
+    ##if(countrySiteAny(in) || isManager())
+      $this.find('.tlds-in').show();
+    ##endif
+    ##if(countrySiteAny(uk) || isManager())
+      $this.find('.tlds-uk').show();
+    ##endif
+  }
 
   function scrollToEvent(event) {
     event.preventDefault();
