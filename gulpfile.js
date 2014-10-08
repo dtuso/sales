@@ -25,6 +25,11 @@ try {
   var getData     = require('./lib/project-data.js');
   var extras      = require('./lib/swig-extras');
 
+  //homepage build process
+  var data = require('gulp-data');
+  var jade = require('gulp-jade');
+  var MongoClient = require('mongodb').MongoClient;
+
 } catch (e) {
 
   console.log(e.toString());
