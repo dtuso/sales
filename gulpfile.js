@@ -25,6 +25,10 @@ try {
   var getData     = require('./lib/project-data.js');
   var extras      = require('./lib/swig-extras');
 
+  //homepage build process
+  var data = require('gulp-data');
+  var jade = require('gulp-jade');
+  
 } catch (e) {
 
   console.log(e.toString());
