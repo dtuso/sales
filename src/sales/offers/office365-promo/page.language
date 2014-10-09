@@ -46,7 +46,7 @@ Get Started
 <phrase key="included-whats-included" />
 What's included?
 <phrase key="included-whats-included-details" comment="{0} will be replace with a price $xxx.xx"/>
-Get the web's best price on Microsoft Office &ndash; plus, <strong><span class="price-total-tools">{0}</span> in online business tools</strong> exclusively from GoDaddy. Best of all, you'll have two of the biggest names on the planet backing your business.
+Get the web's best price on Microsoft Office &ndash; <strong>over <span class="price-total-tools">{0}</span> in online business tools</strong> exclusively from GoDaddy. Best of all, you'll have two of the biggest names on the planet backing your business.
 <phrase key="included-get-started" />
 Get Started
 <phrase key="included-best-of-office" />
