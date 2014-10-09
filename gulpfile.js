@@ -120,6 +120,19 @@ var cdsmOpts = {
   dest: argv.dest || 'dev'
 };
 
+//homepage
+var getJsonData = function(file) {
+  var jsonPath = file.path.replace('.jade','') + '.json';
+  return require(jsonPath);
+};
+
+gulp.task('homepage', function() {
+  return gulp.src('./src/sales/homepage/*.jade')
+    .pipe(data(getJsonData))
+    .pipe(jade({pretty: true}))
+    .pipe(gulp.dest('./build/sales/homepage'));
+});
+
 gulp.task('html', function() {
   return gulp.src(['./**/*.html', '!./**/_*.html'], {cwd: path.join('./src/sales/', assetSrcPath)})
     .pipe(changed(paths.build))
