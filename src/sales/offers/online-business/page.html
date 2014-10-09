@@ -614,7 +614,7 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
 
     function domainSearchFormSubmit(e) {
       // Domain Search
-      PlanBox6UI.recordClick(e, offersCodes.ci.domainSearchSubmit, $(this)[0]);
+      PlanBox6UI.recordClick(e, got1Page.offersCodes.ci.domainSearchSubmit, $(this)[0]);
       
       var domaintoremove = $dsd.find('[name="domaintoadd"]').val(),
         domaintoadd = $dsd.find('[name="domaintoadd"]').val(),
@@ -715,14 +715,14 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
       $dsd.find('.add-domain-loading').fadeIn();
       
       var data = {
-        ciCode: offersCodes.ci.apiAddCi,
-        itcCode: offersCodes.itc, 
-        planSelected: offersCodes.plan,
-        addOns: offersCodes.addOns
+        ciCode: got1Page.offersCodes.ci.apiAddCi,
+        itcCode: got1Page.offersCodes.itc, 
+        planSelected: got1Page.offersCodes.plan,
+        addOns: got1Page.offersCodes.addOns
       }
   
-      PlanBox6UI.recordClick(e, offersCodes.ci.apiAddCi, $(this)[0]);
-      PlanBox6UI.recordClick(e, offersCodes.ci.apiDomainAddToCart, $(this)[0]);
+      PlanBox6UI.recordClick(e, got1Page.offersCodes.ci.apiAddCi, $(this)[0]);
+      PlanBox6UI.recordClick(e, got1Page.offersCodes.ci.apiDomainAddToCart, $(this)[0]);
 
       PlanConfig.apiPlantoCart(data);
 
@@ -769,7 +769,7 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
           .find('form[name=domaincheck]').each(function(){
             //update the form to have correct trackingCode
             var $this = $(this);
-            var newAction = updateUrlParams($this.attr("action"),{'trackingCode':offersCodes.itc})
+            var newAction = updateUrlParams($this.attr("action"),{'trackingCode': got1Page.offersCodes.itc})
             $this.attr("action",newAction);
           });
 
@@ -1173,7 +1173,8 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
     <script>
       // name = does not need to match anything and may not be needed
       // plan =  package name for api
-      var offersCodes = {
+      var got1Page = {
+        offersCodes: {
           'name': 'gybo_1yr',
           'plan': 'gybo_1email_1yr',
           'itc': 'slp_GYBO1',
@@ -1187,10 +1188,15 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
             'disclaimerLink': '92746',
             'searchAgain': '92747'
           }
-      }  
+        },
+        pricing: {
+          promo: '[@T[productprice:<current productid="464069" period="monthly" promocode="24681357" />]@T]',
+          bundleRenewal: '[@T[currencyprice:<price usdamount="1199" htmlsymbol="false" />]@T]'
+        }
+      };
           
       ##if(isManager())
-        offersCodes.itc = 'mgr_' + offersCodes.itc;
+        got1Page.offersCodes.itc = 'mgr_' + got1Page.offersCodes.itc;
       ##endif 
       
       $(document).ready(function () {      
@@ -1199,14 +1205,14 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
        
         $(".price").each(function(){
           $(this)
-            .html('[@T[productprice:<current productid="464069" period="monthly" promocode="24681357" />]@T]')
+            .html( got1Page.pricing.promo )
             .closest('.price-hide')
             .removeClass("price-hide");
         });
 
         $(".original-price").each(function(){
           $(this)
-            .html('[@T[currencyprice:<price usdamount="1199" htmlsymbol="false" />]@T]')
+            .html( got1Page.pricing.bundleRenewal )
             .closest('.price-hide')
             .removeClass("price-hide");
         });
@@ -1217,7 +1223,7 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
             // example, checks to see if data-ci="domainSearchClick"
             // has a value in offersCodes.ci
             // offersCodes Data is in campaign document
-            ci = offersCodes.ci[ci] || ci;
+            ci = got1Page.offersCodes.ci[ci] || ci;
             
             FastballEvent_MouseClick(e, ci, $(this)[0], 'a');
             fbiLibCheckQueue();
