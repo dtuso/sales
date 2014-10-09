@@ -133,6 +133,7 @@ gulp.task('homepage', function() {
     .pipe(data(getJsonData))
     .pipe(jade({pretty: true}))
     .pipe(cdsm(cdsmOpts))
+    .pipe(rename({extname: ".jade"}))
     .pipe(gulp.dest('./build/sales/homepage'));
 });
 

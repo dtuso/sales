@@ -3,33 +3,33 @@
     "backgroundImage":"url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/color-block-background.png) no-repeat top center",
     "dataUrl":"[@T[link:<external linktype='MYAURL' path='/default.aspx'><param name='accid' value='43' /><param name='ci' value='93636' /></external>]@T]",
     "marqID":"gdhp-marq-o365dontforget",
-    "customCSS":".o365-headline{font-size:27px;line-height:27px;}.o365-maintext{font-size:90px;line-height:80px;}.o365-subtext{font-size:54px;line-height:45px;}.o365-subtext2{font-size:89px;line-height:80px;}.o365-subtext2>.rebrand-dash{padding-right:20px;}.o365-rt-headline{font-size:68px;line-height:58px;color:#000000;}.o365-rt-maintext{font-size:65px;line-height:55px;color:#000000;}",
+    "customCSS":".gdhp-marquee-text-right{color:#000000}",
     "leftText":[
       {
         "text":"[@L[cds.sales/homepage/locales/en:active-o365-headline]@L]",
-        "cssClasses":"o365-headline walsheim-black"
+        "cssClasses":""
       },
       {
         "text":"[@L[cds.sales/homepage/locales/en:active-o365-maintext]@L]",
-        "cssClasses":"o365-maintext tungsten"
+        "cssClasses":""
       },
       {
         "text":"[@L[cds.sales/homepage/locales/en:active-o365-subtext]@L]",
-        "cssClasses":"o365-subtext walsheim-black"
+        "cssClasses":""
       },
        {
         "text":"[@L[cds.sales/homepage/locales/en:active-o365-subtext2]@L]",
-        "cssClasses":"o365-subtext2 tungsten"
+        "cssClasses":""
       }     
     ],
     "rightText":[
       {
         "text":"[@L[cds.sales/homepage/locales/en:active-o365-headline-rt]@L]",
-        "cssClasses":"o365-rt-headline walsheim-black"
+        "cssClasses":""
       },
       {
         "text":"[@L[cds.sales/homepage/locales/en:active-o365-maintext-rt]@L]",
-        "cssClasses":"o365-rt-maintext tungsten"
+        "cssClasses":""
       }
     ],
     "buttonText":"[@L[cds.sales/homepage/locales/en:active-o365-btn]@L]",
