@@ -1,8 +1,8 @@
 ---
 location: sales/hosting.aspx
-id: 542f101ff778fc3210434d94
-name: GCE-29132
-comments: Hosting and SSL - Category Listing Page
+id: 5436f3c3f778fc2c9c0805a9
+name: GCE-29487
+comments: Hosting and SSL - Category Listing Page Fast Follow
 cssVersionOverride: 3
 ---
 {% extends 'layouts/base.html' %} 
@@ -142,55 +142,14 @@ cssVersionOverride: 3
       </div>
     </div>
   </section>
-  <!-- Product - Managed Hosting //-->
-  <section class="managed-hosting-product one-product product-section">
-    <div class="l-main-container container">
-      <div class="image-container col-xs-6">
-        <div class="solazy product-5-image" data-sl-method="background" 
-          ##if(countrySiteAny(my,pk,ph))
-            data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/category-listing/hosting-ssl-clp/img/managed_hosting_asia.jpg"
-          ##else
-            data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/category-listing/hosting-ssl-clp/img/managed_hosting.jpg"
-          ##endif
-        ></div>
-      </div>
-      <div class="info-container col-xs-6">
-        <h2>[@L[cds.sales/gd/category-listing/hosting-ssl:subcategory-2-product-3-title]@L]</h2>
-        <h3>[@L[cds.sales/gd/category-listing/hosting-ssl:subcategory-2-product-3-description-1]@L]</h3>
-        <h4>[@L[cds.sales/gd/category-listing/hosting-ssl:subcategory-2-product-3-description-2]@L]</h4>
-        <div class="price-container">
-          <p>[@L[cds.sales/gd/category-listing/hosting-ssl:starting-at]@L]</p>
-          <p class="managed-hosting-price">
-            <span id="addon-one">[@T[productprice:<current productid="1219" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span>
-            <span id="addon-two">[@T[productprice:<current productid="2754" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span>
-            <span id="product-price">[@T[productprice:<current productid="697" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span>
-          </p>
-        </div>
-        <a class="btn btn-primary" id="learn-more-product-five" href="[@T[link:<relative path='~/hosting/managed-hosting.aspx' secure='true'><param name='ci' value='93313' /></relative>]@T]" data-ci="93313" >[@L[cds.sales/gd/category-listing/hosting-ssl:view-details]@L]</a>
-      </div>
-    </div>
-  </section>
   <!-- Product - Reseller Hosting and Dedicated IP //-->
-  <section class="reseller-hosting-and-dedicated-ip-products two-products product-section">
+  <section class="reseller-hosting-and-dedicated-ip-products ded-ip product-section">
     <div class="l-main-container container">
-      <!-- Product - Reseller Hosting //-->
-      <div class="image-container col-xs-3">
-        <div class="solazy product-6-image" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/category-listing/hosting-ssl-clp/img/Hosting-Category-Sprite_v2.png"></div>
-      </div>
-      <div class="info-container col-xs-3">
-        <h2>[@L[cds.sales/gd/category-listing/hosting-ssl:subcategory-2-product-4-title]@L]</h2>
-        <h3>[@L[cds.sales/gd/category-listing/hosting-ssl:subcategory-2-product-4-description]@L]</h3>
-        <div class="price-container">
-          <p>[@L[cds.sales/gd/category-listing/hosting-ssl:starting-at]@L]</p>
-          <p>[@T[productprice:<current productid="1763" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]<span class="price-spacer"> </span>[@L[cds.sales/gd/category-listing/hosting-ssl:mo]@L]</p>
-        </div>
-        <a class="btn btn-primary" id="learn-more-product-six" href="[@T[link:<relative path='~/hosting/reseller-hosting.aspx' secure='true'><param name='ci' value='93319' /></relative>]@T]" data-ci="93319">[@L[cds.sales/gd/category-listing/hosting-ssl:view-details]@L]</a>
-      </div>    
       <!-- Product - Dedicated IP //-->
       <div class="image-container col-xs-3">
         <div class="solazy product-7-image" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/category-listing/hosting-ssl-clp/img/Hosting-Category-Sprite_v2.png"></div>
       </div>
-      <div class="info-container col-xs-3">
+      <div class="info-container-IP ded-ip-border col-xs-3">
         <h2>[@L[cds.sales/gd/category-listing/hosting-ssl:subcategory-2-product-5-title]@L]</h2>
         <h3>[@L[cds.sales/gd/category-listing/hosting-ssl:subcategory-2-product-5-description]@L]</h3>
         <div class="price-container">
@@ -363,11 +322,6 @@ cssVersionOverride: 3
     $('#ssl-anchor').click(function(e){
       scrollTo($('.ssl-subcategory'), categoryMenuOuterHeight);
     });
-
-    $('.managed-hosting-price').html(
-      currencyCalc.evaluate([$('#addon-one').html(),"+",$('#addon-two').html(),"+", $('#product-price').html()]) +
-      "[@L[cds.sales/gd/category-listing/hosting-ssl:mo]@L]"
-    );    
 
     $('.two-products .info-container h2, .two-products .info-container p, .two-products .info-container a').each(function(){
       $(this).resizeTextWidth();
