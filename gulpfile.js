@@ -128,8 +128,12 @@ var getJsonData = function(file) {
 
 gulp.task('homepage', function() {
   return gulp.src('./src/sales/homepage/*.jade')
+    .pipe(changed('./build/sales/homepage'))
+    .pipe(frontMatter({remove:true}))
     .pipe(data(getJsonData))
     .pipe(jade({pretty: true}))
+    .pipe(cdsm(cdsmOpts))
+    .pipe(rename({extname: ".jade"}))
     .pipe(gulp.dest('./build/sales/homepage'));
 });
 
