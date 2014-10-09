@@ -1,8 +1,8 @@
 ---
 location: localization/sales/business/office-365/en
-id: false
-name: GCE-29606
-comments: Update plan names
+id: 5435cd31f778fc30f4905734
+name: GCE-29491
+comments: Remove invalid character
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="lp-8-MicrosoftOffice365BoostProductivityVirtuallyAnywhereGoDaddy" />
@@ -506,7 +506,7 @@ Microsoft<sup>&copy;</sup> Office 365 from GoDaddy
 <phrase key="split-test-b-3-KeepMoreEmails" />
 Keep more emails
 <phrase key="split-test-b-9-WorkAnywhereWithOurEmailAndProductivityTools" />
-Work anywhere with our  email and productivity tools. 
+Work anywhere with our email and productivity tools.
 <phrase key="split-test-b-3-AccessFilesAnywhere" />
 Access files anywhere 
 <phrase key="split-test-b-4-Free247Support" />

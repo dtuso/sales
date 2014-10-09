@@ -1,0 +1,39 @@
+{
+  "marquee":{
+    "backgroundImage":"url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/color-block-background.png) no-repeat top center",
+    "dataUrl":"[@T[link:<external linktype='carturl' path='/basket.aspx'><param name='ci' value='93634' /></external>]@T]",
+    "marqID":"gdhp-marq-abandoncart",
+    "customCSS":".gdhp-marquee-text-right{color:#000000}",
+    "leftText":[
+      {
+        "text":"[@L[cds.sales/homepage/locales/en:aband-cart-headline]@L]",
+        "cssClasses":"line"
+      },
+      {
+        "text":"[@L[cds.sales/homepage/locales/en:aband-cart-maintext]@L]",
+        "cssClasses":"line"       
+      },
+      {
+        "text":"<span class='inline-dash' style='max-width:150px;'>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</span> INTELIGENTE",
+        "cssClasses":"line"          
+      }
+    ],
+    "rightText":[
+      {
+        "text":"[@L[cds.sales/homepage/locales/en:aband-cart-headline-rt]@L]",
+        "cssClasses":"line"
+      },
+      {
+        "text":"[@L[cds.sales/homepage/locales/en:aband-cart-maintext-rt]@L]",
+        "cssClasses":"line"        
+      }
+    ],
+    "buttonText":"[@L[cds.sales/homepage/locales/en:aband-cart-btn]@L]",
+    "buttonCssClasses":"btn btn-warning walsheim-med"
+  },
+  "bugBar":[
+    {"org":"true"},
+    {"co":"true"},
+    {"net":"true"}
+  ]
+}

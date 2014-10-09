@@ -1114,6 +1114,7 @@ var sr_js = {
         }, self);
         self.Template = ko.observable(PhaseOptionViewModel.TemplateInfos.PreReg);
         self.Title = ko.observable('&nbsp;');
+        self.VatCountry = ko.observable(false);
 
         self.Load = function (data) {
             if (data) {
@@ -1134,6 +1135,10 @@ var sr_js = {
                 }
                 if (data.HasIcannFee) {
                     self.HasIcannFee(data.HasIcannFee);
+                }
+
+                if(data.VatCountry){
+                    self.VatCountry(data.VatCountry);
                 }
                 if (data.Prices) {
                     $.each(data.Prices, function (i) { self.Prices()[i] = DomainSearchResults.StringEndsWith(data.Prices[i], '/yr') ? data.Prices[i].slice(0, -3) : data.Prices[i]; });
@@ -1872,8 +1877,9 @@ var sr_js = {
             e.AddUserInput("fullCheckAvail", availableValue);
             e.AddUserInput("responseAvail", self.AvailableValue());
             e.AddUserInput("filters", String.format("[{0}]", activeFilter.join()));
-            e.AddUserInput('filterPosition', self.filterPosition());
-            e.AddUserInput('filtersValue',  String.format("[{0}]", activeFilterValue.join()));
+            e.AddUserInput("filterPosition", self.filterPosition());
+            e.AddUserInput("filtersValue",  String.format("[{0}]", activeFilterValue.join()));
+            e.AddUserInput("Ad", self.IsAd());
             fbiRecordFastballEvent(e);
 //            for(var i = e.inputArray.length; i--;) {
 //                console.log(e.inputArray[i].key + '^' + e.inputArray[i].value);
