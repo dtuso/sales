@@ -1,8 +1,8 @@
 ---
 location: localization/sales/business/office-365-config/en
-id: 53d6d496f778fc27484de545
-name: FOS-24033
-comments: Update devices used on
+id: 5435cc48f778fc30f4905733
+name: GCE-29491
+comments: Update o365 limit
 max: "{{max}}"
 ---
 {% include 'modules/doc-block.html' %}
@@ -138,3 +138,5 @@ Online Essentials
 Business Premium <span class="powered-by-office-365-text">powered by Office 365</span>
 <phrase key="cp-2-BusinessPremium" />
 Business Premium
+<phrase key="cp-BuyingForALargerGroup" />
+Buying for a larger group?
