@@ -98,9 +98,16 @@ Running this task requires you to be logged in if you want your content uploaded
 
 #### LANGUAGE
 
-This task will render/copy your ```.language``` files to the build folder.
+This task will render/copy your ```.language``` files to the build folder. It will also upload it to CDS if you're logged in and did not specify the ```ignore-cds``` argument.
 ```
 gulp language
+```
+
+#### RULE
+
+This task will render/copy your ```.rule``` files to the build folder.  It will also upload it to CDS if you're logged in and did not specify the ```ignore-cds``` argument.
+```
+gulp rule
 ```
 
 #### STYLES
