@@ -87,10 +87,12 @@ metaOgDescription:  "[@L[cds.sales/offers/office365-promo:og-description]@L]"
 {% endblock %}
 {% block body %}
 
+
 <!-- start-css-elevate -->
 <!------------------------------------>
 <!--          MAIN BANNER           -->
 <!------------------------------------> 
+
 
 <style>  
 {% less %}
@@ -270,7 +272,7 @@ metaOgDescription:  "[@L[cds.sales/offers/office365-promo:og-description]@L]"
             <div class="original-price-line price-hide">[@L[cds.sales/offers/office365-promo:top-banner-original-price]@L]</div>
             <div class="renewal-disclaimer">
               [@L[cds.sales/offers/office365-promo:top-banner-renewal-price-disclaimer]@L]
-              <a class="simple-link" href="#" data-toggle="modal" data-target="#myModal" data-ci="disclaimerLink">[@L[cds.sales/offers/office365-promo:top-banner-see-offer-details]@L]</a>
+              <a class="simple-link" href="#" data-toggle="modal" data-target="#myModal" data-ci="93817">[@L[cds.sales/offers/office365-promo:top-banner-see-offer-details]@L]</a>
             </div>
           </div>
         </div> <!-- end slide-1 -->
@@ -747,17 +749,20 @@ metaOgDescription:  "[@L[cds.sales/offers/office365-promo:og-description]@L]"
     </div>
   </div>
 </section>
-     
+
 
 <!-- start-css-elevate -->
 <!------------------------------------>
 <!--            MODALS              -->
 <!------------------------------------>
+
+
 <style>
 {% less %}
-  .modal-title {font-size:24px}
-  .modal-dialog {width: 700px}
-  #disclaimers {font-size:16px;margin:20px auto 0;line-height:14px;width:1000px}
+  #myModal .modal-title {font-size:24px}
+  #myModal .modal-dialog {width:600px; font-size:16px; line-height:1.4em;}
+  /*
+  #disclaimers {font-size:16px;margin:20px auto 0;line-height:1.4em;}
   #disclaimers a,
   #disclaimers a:link,
   #disclaimers a:visited 
@@ -765,6 +770,7 @@ metaOgDescription:  "[@L[cds.sales/offers/office365-promo:og-description]@L]"
   #disclaimers a:active,
   #disclaimers a:hover 
   {color:#7db701;}
+  */
 {% endless %}
 </style>
 <!-- end-css-elevate -->  
