@@ -7,25 +7,25 @@
     "leftText":[
       {
         "text":"[@L[cds.sales/homepage/locales/en:aband-cart-headline]@L]",
-        "cssClasses":"line"
+        "cssClasses":""
       },
       {
         "text":"[@L[cds.sales/homepage/locales/en:aband-cart-maintext]@L]",
-        "cssClasses":"line"       
+        "cssClasses":""       
       },
       {
         "text":"<span class='inline-dash' style='max-width:150px;'>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</span> INTELIGENTE",
-        "cssClasses":"line"          
+        "cssClasses":""          
       }
     ],
     "rightText":[
       {
         "text":"[@L[cds.sales/homepage/locales/en:aband-cart-headline-rt]@L]",
-        "cssClasses":"line"
+        "cssClasses":""
       },
       {
         "text":"[@L[cds.sales/homepage/locales/en:aband-cart-maintext-rt]@L]",
-        "cssClasses":"line"        
+        "cssClasses":""        
       }
     ],
     "buttonText":"[@L[cds.sales/homepage/locales/en:aband-cart-btn]@L]",

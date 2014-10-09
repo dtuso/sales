@@ -16,10 +16,10 @@ div.gdhp-marquee.js-gdhpclick(id=marquee.marqID,data-url!=marquee.dataUrl)
   div.gdhp-marquee-content
     div.gdhp-marquee-text-left.gdhp-hidden
       each leftText in marquee.leftText
-        div(class=leftText.cssClasses)!= leftText.text
+        div(class=leftText.cssClasses).line!= leftText.text
     div.gdhp-marquee-text-right.gdhp-hidden
       each rightText in marquee.rightText
-        span(class=rightText.cssClasses)= rightText.text
+        span(class=rightText.cssClasses).line= rightText.text
       div.btn-wrap
         span(id=marquee.marqID + '-btn',class=marquee.buttonCssClasses)= marquee.buttonText
 script(type='text/javascript').
