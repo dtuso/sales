@@ -1,8 +1,8 @@
 ---
 location: sales/hosting/website-builder.aspx
-id:  5420645ff778fc21449d244a
-name: GCE-27512
-comments: Free Email with WSB three way split Test 
+id: 543454eef778fc0ff0ff8e36
+name: GCE-21960
+comments: All Local markets not support Email and SEO
 ---
 {% extends 'layouts/base.html' %}
 {% block pageTitle %}
@@ -397,12 +397,24 @@ comments: Free Email with WSB three way split Test
                         <li data-gd-sidebysidealign-row="8">[@L[cds.sales/gd/hosting/website-builder:economy-bandwidth]@L]</li>
                         <li data-gd-sidebysidealign-row="9">-</li>
                         <li data-gd-sidebysidealign-row="10">-</li>
+                        ##if(!productIsOffered(4) && !productIsOffered(13))
                         <li data-gd-sidebysidealign-row="11">-</li>
+                        ##else
+                        ##if(productIsOffered(4))
+                        <li data-gd-sidebysidealign-row="11">-</li>
+                        ##else
+
+                        ##endif
+                        ##if(productIsOffered(13))
                         <li data-gd-sidebysidealign-row="12">-</li>
+                        ##else
+
+                        ##endif
                         ##if(splitTestingSideIsActive(1338, C))
                         
                         ##else
                         <li data-gd-sidebysidealign-row="13">-</li>
+                        ##endif
                         ##endif
                     </ul>
                 </div>
@@ -544,22 +556,42 @@ comments: Free Email with WSB three way split Test
                         <li data-gd-sidebysidealign-row="7">[@L[cds.sales/gd/hosting/website-builder:business-diskspace]@L]</li>
                         <li data-gd-sidebysidealign-row="8">[@L[cds.sales/gd/hosting/website-builder:business-bandwidth]@L]</li>
                         ##if(splitTestingSideIsActive(1338, B))
+                        ##if(productIsOffered(4))
                         <li data-gd-sidebysidealign-row="9">[@L[cds.sales/gd/hosting/website-builder:business-email2]@L]</li>
+                        ##else
+
+                        ##endif
                         <li data-gd-sidebysidealign-row="10">[@L[cds.sales/gd/hosting/website-builder:business-mobile]@L]</li>
                         <li data-gd-sidebysidealign-row="11">-</li>
                         <li data-gd-sidebysidealign-row="12">-</li>
+                        ##if(productIsOffered(13))
                         <li data-gd-sidebysidealign-row="13">-</li>
+                        ##else
+
+                        ##endif
                         ##elseif(splitTestingSideIsActive(1338, C))
                         <li data-gd-sidebysidealign-row="9">[@L[cds.sales/gd/hosting/website-builder:business-mobile]@L]</li>
                         <li data-gd-sidebysidealign-row="10">-</li>
                         <li data-gd-sidebysidealign-row="11">-</li>
+                        ##if(productIsOffered(13))
                         <li data-gd-sidebysidealign-row="12">-</li>
                         ##else
+
+                        ##endif
+                        ##else
+                        ##if(productIsOffered(4))
                         <li data-gd-sidebysidealign-row="9">[@L[cds.sales/gd/hosting/website-builder:business-email]@L]</li>
+                        ##else
+
+                        ##endif
                         <li data-gd-sidebysidealign-row="10">[@L[cds.sales/gd/hosting/website-builder:business-mobile]@L]</li>
                         <li data-gd-sidebysidealign-row="11">-</li>
                         <li data-gd-sidebysidealign-row="12">-</li>
+                        ##if(productIsOffered(13))
                         <li data-gd-sidebysidealign-row="13">-</li>
+                        ##else
+
+                        ##endif
                         ##endif
                         
                     </ul>
@@ -568,7 +600,9 @@ comments: Free Email with WSB three way split Test
             <div class="col-xs-4"id="column-3" data-gd-sidebysidealign-col="3">
                 <div class="grid-column no-padding-bottom relative">
                   <div data-gd-sidebysidealign-row="1">
+                    ##if(productIsOffered(13))
                     <span class="badge badge-small badge-important badge-upper-right">[@L[cds.sales/gd/hosting/website-builder:wsb-plus-seo]@L]</span>
+                    ##endif
                     <h2>[@L[cds.sales/gd/hosting/website-builder:unlimited-title]@L]</h2>
                     <p class="font-16 margin-bottom-12 price-description-lead">[@L[cds.sales/gd/hosting/website-builder:unlimited-description]@L]</p>
                   </div>
@@ -703,20 +737,40 @@ comments: Free Email with WSB three way split Test
                         <li data-gd-sidebysidealign-row="7">[@L[cds.sales/gd/hosting/website-builder:unlimited-diskspace]@L]</li>
                         <li data-gd-sidebysidealign-row="8">[@L[cds.sales/gd/hosting/website-builder:unlimited-bandwidth]@L]</li>
                         ##if(splitTestingSideIsActive(1338, B))
+                        ##if(productIsOffered(4))
                         <li data-gd-sidebysidealign-row="9">[@L[cds.sales/gd/hosting/website-builder:unlimited-email2]@L]</li>
+                        ##else
+
+                        ##endif
                         <li data-gd-sidebysidealign-row="10">[@L[cds.sales/gd/hosting/website-builder:unlimited-mobile]@L]</li>
+                        ##if(productIsOffered(13))
                         <li data-gd-sidebysidealign-row="11">[@L[cds.sales/gd/hosting/website-builder:unlimited-seo]@L]</li>
+                        ##else
+
+                        ##endif
                         <li data-gd-sidebysidealign-row="12">[@L[cds.sales/gd/hosting/website-builder:unlimited-oneclick]@L]</li>
                         <li data-gd-sidebysidealign-row="13">[@L[cds.sales/gd/hosting/website-builder:unlimited-ssl]@L]</li>
                         ##elseif(splitTestingSideIsActive(1338, C))
                         <li data-gd-sidebysidealign-row="9">[@L[cds.sales/gd/hosting/website-builder:unlimited-mobile]@L]</li>
+                        ##if(productIsOffered(13))
                         <li data-gd-sidebysidealign-row="10">[@L[cds.sales/gd/hosting/website-builder:unlimited-seo]@L]</li>
+                        ##else
+
+                        ##endif
                         <li data-gd-sidebysidealign-row="11">[@L[cds.sales/gd/hosting/website-builder:unlimited-oneclick]@L]</li>
                         <li data-gd-sidebysidealign-row="12">[@L[cds.sales/gd/hosting/website-builder:unlimited-ssl]@L]</li>
                         ##else
+                        ##if(productIsOffered(4))
                         <li data-gd-sidebysidealign-row="9">[@L[cds.sales/gd/hosting/website-builder:unlimited-email]@L]</li>
+                        ##else
+
+                        ##endif
                         <li data-gd-sidebysidealign-row="10">[@L[cds.sales/gd/hosting/website-builder:unlimited-mobile]@L]</li>
+                        ##if(productIsOffered(13))
                         <li data-gd-sidebysidealign-row="11">[@L[cds.sales/gd/hosting/website-builder:unlimited-seo]@L]</li>
+                        ##else
+
+                        ##endif
                         <li data-gd-sidebysidealign-row="12">[@L[cds.sales/gd/hosting/website-builder:unlimited-oneclick]@L]</li>
                         <li data-gd-sidebysidealign-row="13">[@L[cds.sales/gd/hosting/website-builder:unlimited-ssl]@L]</li>
                         ##endif
