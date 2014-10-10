@@ -7,20 +7,12 @@ comments: New GOT POB Landing Page and Config Page
 {% include 'modules/doc-block.html' %}
 <phrase key="page-title" />
 Microsoft Office 365 Subscription | Cheap O365 Plans For Small Business
-<phrase key="meta-description" />
-Looking for the cheapest Office 365 packages? Buy O365 online, save big and boost your business productivity.
-<phrase key="meta-keywords" />
-microsoft office 365 subscription, office 365 subscription, cheap office 365, O365 plans, office 365 small business, microsoft office 365 small business
-<phrase key="og-title" />
-Microsoft Office 365 Subscription | Cheap O365 Plans For Small Business
-<phrase key="og-description" />
-Looking for the cheapest Office 365 packages? Buy O365 online, save big and boost your business productivity.
 <phrase key="cp-8-MicrosoftOffice365BoostProductivityVirtuallyAnywhereGoDaddy" />
 Microsoft Office 365 | Boost Productivity Virtually Anywhere – GoDaddy
 <phrase key="pop" />
 Premium Office Bundle
 <phrase key="price-per-user-per-year" comment="{0} and {1} will be tokenized with a price, {aX-begin} and {aX-end} do not translate, these tokens will be replaced with HTML" />
-{a0-begin}{0}{a0-end} {a1-begin}{1}{a1-end} {a2-begin}per user/year{a2-end}
+{a0-begin}{0}/mo{a0-end} {a1-begin}{1}/mo per user{a1-end}
 <phrase key="PopIsInYourCart" />
 Premium Office Bundle is in your cart!
 <phrase key="bullet-up-to-five" />
@@ -37,18 +29,6 @@ Add Office 365 Users
 Add your users
 <phrase key="cp-14-KeepYourBusinessRunningSmoothlyAddPlansFor" />
 Keep your business running smoothly. Add plans for key players on your team.
-<phrase key="cp-6-EmailEssentialsPoweredByOffice365" />
-Email Essentials <span class="powered-by-office-365-text">powered by Office 365</span>
-<phrase key="cp-3-PerUserMonth" />
-per user/month
-<phrase key="cp-4-5GBEmailStorage" />
-5 GB Email Storage
-<phrase key="cp-5-2GBCloudFileStorage" />
-2 GB cloud file storage
-<phrase key="cp-4-UpToMax" comment="do not translate [[max]]" />
-Up to [[max]]
-<phrase key="cp-6-BusinessEssentialsPoweredByOffice365" />
-Business Essentials <span class="powered-by-office-365-text">powered by Office 365</span>
 <phrase key="cp-4-50GBEmailStorage" />
 50 GB Email Storage
 <phrase key="cp-5-25GBCloudFileStorage" />
@@ -58,29 +38,7 @@ Unlimited HD video conferencing
 <phrase key="cp-5-MicrosoftOffice365WebApps" />
 Microsoft Office 365 Online
 <phrase key="cp-5-MicrosoftOfficeInstallsOnUpTo5Devices" />
-Microsoft Office installs on up to 5 devices -- PC, Mac or Office for iPad
-<phrase key="cp-6-ProductivityPlusPoweredByOffice365" />
-Productivity Plus <span class="powered-by-office-365-text">powered by Office 365</span>
-<phrase key="cp-8-FullMicrosoftOfficeDesktopInstallsOn5Computers" />
-Full Microsoft Office on 5 PCs or Macs and 5 iPads or Windows tablets per user
-<phrase key="cp-6-AddUsersToADifferentPlan" />
-Add users to a different plan
-<phrase key="cp-2-Step2" />
-Step 2
-<phrase key="cp-4-ChooseYourPlanTerm" />
-Choose your plan term
-<phrase key="cp-3-ExtendAndSave" />
-Extend and save
-<phrase key="cp-14-LockInYourSavingsAndAvoidAnnualRenewals" />
-Lock in your savings and avoid annual renewals with a multi-year term.
-<phrase key="cp-2-1Month" />
-1 month
-<phrase key="cp-2-1Year" />
-1 year
-<phrase key="cp-2-2Years" />
-2 years
-<phrase key="cp-1-Apply" />
-Apply
+Microsoft Office installs on up to 5 devices &ndash; PC, Mac or Office for iPad
 <phrase key="cp-3-ContinueToCart-2" />
 Continue to cart
 <phrase key="cp-1-User" />
@@ -132,4 +90,10 @@ Products will automatically renew until cancelled. You may turn off the auto-ren
 <phrase key="cp-19-ForMoreInformationSeeTheFullMicrosoftService" />
 For more information see the full Microsoft Service Agreement here: <a data-ci="86435" href="http://technet.microsoft.com/en-us/library/jj819284.aspx" target="_blank">http://technet.microsoft.com/en-us/library/jj819284.aspx</a>
 <phrase key="cp-1-OK-3" />
+OK
+<phrase key="modal-discount-limit-title" />
+Discount limit reached
+<phrase key="modal-discount-limit-message" />
+This special bundle offer is available for up to five users. Additional users will be added at the regular price.
+<phrase key="modal-discount-limit-button" />
 OK

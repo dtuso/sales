@@ -5,6 +5,13 @@ name: GCE-27637
 comments: New GOT2 POB Landing Page and Config Page
 url: http://www.dev-godaddy.com/offers/office365-promo.aspx
 assetPath: false
+metaTitle:          "[@L[cds.sales/offers/office365-promo:page-title]@L]"
+metaDescription:    "[@L[cds.sales/offers/office365-promo:meta-description]@L]"
+metaKeywords:       "[@L[cds.sales/offers/office365-promo:meta-keywords]@L]"
+metaCanonicalPath:  /offers/office365-promo.aspx
+metaOgTitle:        "[@L[cds.sales/offers/office365-promo:og-title]@L]"
+metaOgImage:        "fos/sales/themes/scotty/offers/office365-promo/img/og_got_1200x630.jpg"
+metaOgDescription:  "[@L[cds.sales/offers/office365-promo:og-description]@L]"
 ---
 
 {% extends 'sales/offers/default/layouts/base-follow-ok.html' %} 
@@ -22,11 +29,16 @@ assetPath: false
 <!-- start-css-elevate -->
 <style>
 {% less %}
+
+  @imgPath : '[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/office365-promo/img/';
   /* Page Global CSS -- changes will effect all campaigns */
-  html body#offers{background:#fff;line-height:1.4em;font-size:14px;font-family:HelveticaNeue-Light,"Helvetica Neue Light","Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;font-weight:300}
+  div[role="main"] {color:#000;}
+  html body#offers{background:#fff;line-height:1.4em;font-size:14px;font-family:HelveticaNeue-Light,"Helvetica Neue Light","Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;font-weight:300;color:#000;}
+  html body#offers .col-xs-4 {width: 33.3333%;}
+  html body#offers .col-xs-8 {width: 66.6667%;}
   .condensed{font-family:HelveticaNeue-CondensedBold,'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:700}
   .tungsten {font-family: Tungsten,"Tungsten A","Tungsten B","Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;font-weight: 700;}
-  .loading{background:url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/office365-promo/img/ajax-loader_lg.gif) no-repeat;content:"";height:35px;margin:2px 12px;width:35px;display:none;}
+  .loading{background:~"url(@{imgPath}ajax-loader_lg.gif)" no-repeat;content:"";height:35px;margin:2px 12px;width:35px;display:none;}
   .disabled{pointer-events:none;cursor:not-allowed;opacity:.25;filter:alpha(opacity=25);-webkit-box-shadow:none;box-shadow:none}
 
   a:link,a:visited{text-decoration:underline;color:#03c}
@@ -47,7 +59,7 @@ assetPath: false
   .original-price.price-show {display:inline;word-wrap:break-word;}
   html[lang*=en] .price.price-show .decim{display:none}
     
-  .g-toolTip {border-bottom: 1px dotted #333;cursor: pointer;display: inline;position: relative;}
+  .g-toolTip {border-bottom: 1px dotted #000;cursor: pointer;display: inline;position: relative;}
   .g-toolTip:hover span.g-toolTip-tip {display: block;}
   .g-toolTip span.g-toolTip-tip {background: none repeat scroll 0 0 #262626;color: #fff;display: none;font-size: 14px;line-height: 22px;padding: 8px;position: absolute;right: -225px;text-align: left;top: 11px;width: 200px;z-index: 3;}
   .g-toolTip span.g-toolTip-tip:after {border-bottom: 7px solid rgba(0, 0, 0, 0); border-right: 12px solid #262626; border-top: 0 solid rgba(0, 0, 0, 0); content: ""; height: 0; left: -10px; position: absolute; top: 0; width: 0; z-index: 3;}
@@ -61,6 +73,11 @@ assetPath: false
     color: #ff8a00;
   }
 
+  a.simple-link {color: #000;text-decoration:underline;}
+  a.simple-link:hover {color:#7db701;}
+
+  .get-started-btn {padding:0 53px; margin:14px auto 8px; display:inline-block;line-height: 2.8em;}  
+
 {% endless %}
 </style>
 <!-- end-css-elevate -->
@@ -71,91 +88,75 @@ assetPath: false
 {% block body %}
 
 
+<!-- start-css-elevate -->
 <!------------------------------------>
 <!--          MAIN BANNER           -->
 <!------------------------------------> 
 
 
-<!-- start-css-elevate -->
 <style>  
 {% less %}
-  #domainRow {background-color: #F9F9F9; position:relative;/* relative used to position the ribbon*/}
-  #domainRow .main-banner-content {text-align:left;}
-  #domainRow h1.main-banner-title { margin: 35px 0 15px; font-size:24px; color:#333; font-weight:300; text-transform: uppercase;}
-  #domainRow h3.main-banner-subtitle {font-size:48px; color:#333; width:820px; }
-  #domainRow .get-started-btn {margin-top: 10px;}
 
-  #domain-search-div .find-a-domain 
-  {font-size:48px; margin:90px 0 40px; line-height:1.35em;} 
+  @imgPath : '[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/office365-promo/img/';
+
+  #domain-search-div .find-a-domain,
   #domain-search-div .search-result-is-available,
   #domain-search-div .search-result-not-available,
-  #domain-search-div .search-result-invalid {font-size:48px; margin:90px 0 30px; line-height:1.00em; word-wrap:break-word;}  
-  #domain-search-div .search-result-is-available {text-align:center;}  
+  #domain-search-div .search-result-invalid {font-size:40px; margin:90px 0 50px; line-height:1.00em; word-wrap:break-word;text-align:left;}
   #domain-search-div .add-domain-btn {font-size:24px; padding:18px 36px; font-weight:400}
+  #domain-search-div div.search-result-is-available {text-align: center;}
   
-  .got-slider-wrapper {overflow-x:hidden; width:1000px; padding-bottom:40px; position:relative;}
-  .got-slides {width:3000px; position:absolute; left:0px;}
-  .got-slide {width:1000px; float:left; overflow-x:hidden;} 
-
-  @minHeightForBanner: 425;
-
-  .got-slider-wrapper,
-  .got-slide {height:unit(@minHeightForBanner+50,px);} /* non-en markets */
-  html[lang*=en] .got-slider-wrapper,
-  html[lang*=en] .got-slide {height:unit(@minHeightForBanner,px) !important;}
-  
-  .discount-price-line {font-size:36px; font-weight:700; line-height:1.4em;}
-  .original-price-line {font-size:26px; font-weight:300; line-height:1.4em;}
-  .original-price-line .original-price {text-decoration:line-through;}
-  .renewal-disclaimer {margin-top:10px; font-size:14px; font-weight:300;}
-  .get-started-btn {padding:0 53px; margin:0 auto; display:inline-block;}
-  #offers div.got-slide-2 div.find-a-domain, 
-  #offers div.got-slide-2 div.start-here 
+  #domain-search-div .search-form {max-width: 1000px;}
+  div.got-slide-2,
+  div.got-slide-3 
+  {display:none;}
+  div.got-slide-2 div.find-a-domain, 
+  div.got-slide-2 div.start-here 
   {display:block;}
 
-  #offers div.got-slide-2 div.add-domain-btn-div,
-  #offers div.got-slide-2 div.search-result-is-available,
-  #offers div.got-slide-2 div.search-result-not-available,
-  #offers div.got-slide-2 div.search-result-invalid,
-  #offers div.got-slide-2 div.search-again,
-  #offers div.got-slide-2 div.try-again
+  div.got-slide-2 div.add-domain-btn-div,
+  div.got-slide-2 div.search-result-is-available,
+  div.got-slide-2 div.search-result-not-available,
+  div.got-slide-2 div.search-result-invalid,
+  div.got-slide-2 div.search-again,
+  div.got-slide-2 div.try-again
   {display:none;}
 
-  #offers div.got-slide-3 div.got-available-div div.find-a-domain, 
-  #offers div.got-slide-3 div.got-unavailable-div div.find-a-domain 
+  div.got-slide-3 div.got-available-div div.find-a-domain, 
+  div.got-slide-3 div.got-unavailable-div div.find-a-domain 
   {display:none;}
 
-  #offers div.got-slide-3 div.got-available-div div.add-domain-btn-div,
-  #offers div.got-slide-3 div.got-available-div div.search-result-is-available,
-  #offers div.got-slide-3 div.got-available-div div.search-again
+  div.got-slide-3 div.got-available-div div.add-domain-btn-div,
+  div.got-slide-3 div.got-available-div div.search-result-is-available,
+  div.got-slide-3 div.got-available-div div.search-again
   {display:block;}
 
-  #offers div.got-slide-3 div.got-available-div div.search-result-not-available,
-  #offers div.got-slide-3 div.got-available-div div.search-result-invalid,
-  #offers div.got-slide-3 div.got-available-div div.search-area-wrapper
+  div.got-slide-3 div.got-available-div div.search-result-not-available,
+  div.got-slide-3 div.got-available-div div.search-result-invalid,
+  div.got-slide-3 div.got-available-div div.search-area-wrapper
   {display:none;}
   
-  #offers div.got-slide-3 div.got-unavailable-div div.search-result-not-available,
-  #offers div.got-slide-3 div.got-unavailable-div div.try-again
+  div.got-slide-3 div.got-unavailable-div div.search-result-not-available,
+  div.got-slide-3 div.got-unavailable-div div.try-again
   {display:block;}
 
-  #offers div.got-slide-3 div.got-unavailable-div div.search-result-is-available,
-  #offers div.got-slide-3 div.got-unavailable-div div.search-result-invalid,
-  #offers div.got-slide-3 div.got-unavailable-div div.add-domain-btn-div,
-  #offers div.got-slide-3 div.got-unavailable-div div.search-again,
-  #offers div.got-slide-3 div.got-unavailable-div div.start-here
+  div.got-slide-3 div.got-unavailable-div div.search-result-is-available,
+  div.got-slide-3 div.got-unavailable-div div.search-result-invalid,
+  div.got-slide-3 div.got-unavailable-div div.add-domain-btn-div,
+  div.got-slide-3 div.got-unavailable-div div.search-again,
+  div.got-slide-3 div.got-unavailable-div div.start-here
   {display:none;}
   
-  #offers div.got-slide-3 div.got-invalid-div div.search-result-invalid,
-  #offers div.got-slide-3 div.got-invalid-div div.try-again
+  div.got-slide-3 div.got-invalid-div div.search-result-invalid,
+  div.got-slide-3 div.got-invalid-div div.try-again
   {display:block;}
 
-  #offers div.got-slide-3 div.got-invalid-div div.search-result-not-available,
-  #offers div.got-slide-3 div.got-invalid-div div.search-result-is-available,
-  #offers div.got-slide-3 div.got-invalid-div div.add-domain-btn-div,
-  #offers div.got-slide-3 div.got-invalid-div div.search-again,
-  #offers div.got-slide-3 div.got-invalid-div div.start-here,
-  #offers div.got-slide-3 div.got-invalid-div div.find-a-domain
+  div.got-slide-3 div.got-invalid-div div.search-result-not-available,
+  div.got-slide-3 div.got-invalid-div div.search-result-is-available,
+  div.got-slide-3 div.got-invalid-div div.add-domain-btn-div,
+  div.got-slide-3 div.got-invalid-div div.search-again,
+  div.got-slide-3 div.got-invalid-div div.start-here,
+  div.got-slide-3 div.got-invalid-div div.find-a-domain
   {display:none;}
 
   #domain-search-div .search-again {
@@ -168,33 +169,11 @@ assetPath: false
     text-decoration: underline;      
   }
   
-  .add-domain-btn-div {text-align: center;}
+  div.add-domain-btn-div {text-align: center;}
   
-  .got-slide-3 .got-available-div .add-domain-loading{float:none;margin: 14px auto;}
+  #domainRow div.got-slide-3 div.got-available-div div.add-domain-loading{float:none;margin: 14px auto;}
   
-  .top-banner-product-image {float:left;height:128px;background: url('[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/office365-promo/img/green-icons-large-sprite.png') no-repeat transparent;}
-  .top-banner-product-image.domain {background-position: 0px 0px;width:151px;}    
-  .top-banner-product-image.wsb  {background-position: -219px 0px;width:138px;}    
-  .top-banner-product-image.email {background-position: -437px 0px;width:141px;}
-  .top-banner-product-symbols {float:left;width:30px;height:30px;margin:50px 0 0 10px;background: url('[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/office365-promo/img/plus-minus-sprite.png') no-repeat transparent;}
-  .top-banner-product-symbols.addition {background-position: 0px 0px;}
-  .top-banner-product-symbols.equals {background-position: -47px 0px;}
-  #domainRow .product-name {width:151px;text-align:center;margin-top:25px;text-transform: uppercase;font-size:16px;}
-
-  .top-banner-product-col {float:left;}
-  .top-banner-product-col.col-domain {}
-  .top-banner-product-col.col-domain .addition {margin-left:10px;}
-  .top-banner-product-col.col-wsb {margin-left:32px;}
-  .top-banner-product-col.col-wsb .addition {margin-left:19px;}
-  .top-banner-product-col.col-email {margin-left:32px;}
-  .top-banner-product-col.col-email .equals {margin-left:17px;}
-  .top-banner-product-col.col-get-started {margin-left:40px;width:320px;}
-  .product-icon.email {font-size:13px;}
-  #domainRow .product-icon.email {margin-left:-24px; margin-top: 13px;width:199px;text-align:center;}
-  a.simple-link {color: #333;text-decoration:underline;}
-  a.simple-link:hover {color:#7db701;}
-
-  .search-area-wrapper{min-height:65px;}
+  .search-area-wrapper {min-height:65px; margin-bottom:70px;}
   .search-area-wrapper .tooltips-area {float:left;}
   .search-area-wrapper .input-area,
   .search-area-wrapper .dropdownlist-area,
@@ -204,14 +183,14 @@ assetPath: false
   .search-area-wrapper .tooltips-area { max-width:115px;font-size:16px;margin-right:27px;text-align:center;position:relative;word-wrap:break-word;}
   html[lang*=en] .search-area-wrapper .tooltips-area {font-size:20px;}
   .search-area-wrapper .tooltips-area:after {content:"";border-width:10px 0 10px 17px;border-style:solid;border-color:transparent transparent transparent #fc0;position:absolute;right:-17px;top:34%}
-  .search-area-wrapper .tooltips-area .highlight-tooltip {background-color:#fc0;color:#630;text-transform:uppercase;text-align:center;padding:13px 5px 12px;}
+  .search-area-wrapper .tooltips-area .highlight-tooltip {background-color:#fc0;color:#630;text-transform:uppercase;text-align:center;padding:13px 14px 12px;}
   
-  .search-area-wrapper .input-area {background-color:#fc0;width:400px;font-size:24px;font-weight:300;padding: 8px 0 8px 8px;}            
+  .search-area-wrapper .input-area {background-color:#fc0;width:400px;font-size:24px;font-weight:300;padding: 8px 0 8px 8px;}
   .search-area-wrapper .input-area .search-background {background-color:#fff;position:relative;border:1px solid #a4a4a4;height:49px;}
-  .search-area-wrapper .input-area .search-input-label {color:#333;display:block;outline:medium none;overflow:hidden;width:385px;word-wrap: break-word;position:absolute;left:5px;top:13px;z-index:1;height:30px;}
-  .search-area-wrapper .input-area .search-input {width:385px;height:32px;line-height:32px;color:#333;background-color:transparent;border:0 none;padding:0;outline: medium none;position:absolute;left:5px;top:7px;z-index:2;}
+  .search-area-wrapper .input-area .search-input-label {color:#000;display:block;outline:medium none;overflow:hidden;width:385px;word-wrap: break-word;position:absolute;left:5px;top:13px;z-index:1;height:30px;}
+  .search-area-wrapper .input-area .search-input {width:385px;height:32px;line-height:32px;color:#000;background-color:transparent;border:0 none;padding:0;outline: medium none;position:absolute;left:5px;top:7px;z-index:2;}
   
-  .search-area-wrapper .dropdownlist-area {background-color: #fc0;padding:8px 8px 8px 0;}
+  .search-area-wrapper .dropdownlist-area {background-color: #fc0;padding:8px 0;}
   .search-area-wrapper .dropdownlist-area .tld-input {background-color: #fff;border-right:1px solid #a4a4a4;border-top:1px solid #a4a4a4;border-bottom:1px solid #a4a4a4;float:none;font-size:24px;height:49px;width:144px;outline:0 none;position:relative;z-index:2;}
   .search-area-wrapper .dropdownlist-area .tld-input-selected {position:absolute;top:0px;left:0px;padding:13px 0 15px 9px;} 
   .search-area-wrapper .dropdownlist-area .tld-input.droplist-open {overflow:visible}            
@@ -224,23 +203,38 @@ assetPath: false
   .search-area-wrapper .dropdownlist-area .ddl-drop-arrow {border-radius:0;outline:medium none;cursor:pointer;font-size:1px;height:30px;margin:2px 2px 2px 0;min-width:31px;padding:0;position:absolute;right:0px;}
   .search-area-wrapper .dropdownlist-area .ddl-drop-arrow span {border-color:#6B6B6B transparent transparent;border-style:solid;border-width:5px 5px 0;display:block;height:0;width:0;position:absolute;top:22px;left:7px}  
   
-  
-  .search-area-wrapper .search-button-area {}
-  .search-area-wrapper .search-button-area .domain-search-btn {max-width:180px;min-height:65px;word-wrap:break-word;font-size:24px;padding:24px 36px 0;font-weight:400;}
+  .search-area-wrapper .search-button-area {background-color:#fc0; padding:8px 8px 8px 0;}
+  .search-area-wrapper .search-button-area .domain-search-btn {max-width:180px;min-height:49px;word-wrap:break-word;font-size:24px;padding:17px 36px 0;font-weight:400;}
 
   .search-domain-loading {margin:10px auto 0;}
-  .icon-row {width:360px;margin: 0 auto 10px;}
-  .icon {width:70px; height:70px; margin: 0 10px; background: #336699 url() 0 0 no-repeat; float:left;}
-  .icon.word       { background-position: -0px -0px };
-  .icon.excel      { background-position: -0px -0px };
-  .icon.powerpoint { background-position: -0px -0px };
-  .icon.outlook    { background-position: -0px -0px };
+{% endless %}
+</style>
+<!-- end-css-elevate -->
+
+<!-- start-css-elevate -->
+<style>  
+{% less %}
+
+  @imgPath : '[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/office365-promo/img/';
+
+  #domainRow {background-color: #F9F9F9; position:relative;/* relative used to position the ribbon*/}
+  #domainRow .main-banner-content {text-align:left;width:1400px;padding:0;}
+  #domainRow h1.main-banner-title { margin: 35px 0 15px; font-size:24px; color:#000; font-weight:300; text-transform: uppercase;}
+  #domainRow h2.main-banner-subtitle {font-size:62px; color:#000; line-height: 1.4em;}
+  #domainRow p.main-banner-save,
+  #domainRow p.main-banner-plus 
+  {font-size:26px; color:#000; margin-bottom:0px; line-height: 1.4em;}
+  #domainRow .get-started-btn {margin-top: 10px;}
+  #domainRow .discount-price-line-mo {font-size:38px; font-weight:300; line-height:1.4em; margin-top:112px;}
+  #domainRow .discount-price-line-yr {font-size:28px; font-weight:300; line-height:1.4em;}
+  #domainRow .original-price-line {font-size:12px; font-weight:300; line-height:1.4em;}
+  #domainRow .original-price-line .original-price {text-decoration:line-through;}
+  #domainRow .renewal-disclaimer {font-size:12px; font-weight:300; line-height:1.4em;}
+  #domainRow .icon-row {width:330px;height:70px;margin-bottom:10px;display:block;}
   
-  .action-wrapper {margin:0 auto; width:730px;}
-  .action-wrapper .pricing-area {float: left; width: 400px;}
-  .action-wrapper .button-area {float: left; width: 330px;}
-
-
+  #domainRow div.got-slides {width:1000px;margin:0 auto; padding-bottom:73px;}  
+  #domainRow div.col-xs-7 {width:600px;padding:0px;}
+  #domainRow div.col-xs-5 {width:380px;padding:0 10px;}
 {% endless %}
 </style>
 <!-- end-css-elevate -->
@@ -248,53 +242,41 @@ assetPath: false
 <!--[if IE 7]> 
 <style>
   .search-area-wrapper {height:54px;}
-  .search-area-wrapper .search-button-area .domain-search-btn {height:39px;padding:24px 36px 4px}
+  .search-area-wrapper .search-button-area .domain-search-btn {height:39px;padding:17px 36px 4px}
   .search-area-wrapper .dropdownlist-area .tld-input-selected {padding: 9px 0 15px 9px;} 
   .search-area-wrapper .tooltips-area {float:left;}
 
   .search-area-wrapper .input-area,
   .search-area-wrapper .dropdownlist-area,
-  .search-area-wrapper .search-button-area {height:54px;float:left;min-height:0px;}
+  .search-area-wrapper .search-button-area {height:39px;float:left;min-height:0px;}
 </style>   
 <![endif]-->
 
 <section class="main-banner main-banner-offers" id="domainRow">
   <div>
-    <span class="left-corner-ribbon money-back-guarantee-light [@T[localization:<language full="true" />]@T] [@T[localization:<language />]@T]"></span>
-    <div class="l-main-container container main-banner-content got-slider-wrapper" >
+    <span class="left-corner-ribbon exclusiveoffer [@T[localization:<language full="true" />]@T] [@T[localization:<language />]@T]"></span>
+    <div class="container main-banner-content">
       <div class="row got-slides">
-        <div class="got-slide got-slide-1">
-          <div class="row">
-            <h1 class="main-banner-title tungsten text-center">[@L[cds.sales/offers/office365-promo:top-banner-headline]@L]</h1>
+        <div class="row got-slide got-slide-1">
+          <div class="col-xs-7">
+            <h1 class="main-banner-title condensed text-left">[@L[cds.sales/offers/office365-promo:top-banner-headline]@L]</h1>
+            <img class="icon-row solazy" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/office365-promo/img/MSFT-icons.png" />
+            <h2 class="main-banner-subtitle text-left">[@L[cds.sales/offers/office365-promo:top-banner-best-deal]@L]</h2>
+            <p class="main-banner-save">[@L[cds.sales/offers/office365-promo:top-banner-save]@L]</p>
+            <p class="main-banner-plus">[@L[cds.sales/offers/office365-promo:top-banner-plus]@L]</p>
           </div>
-          <div class="row">
-            <div class="icon-row">
-              <div class="icon word"></div>
-              <div class="icon excel"></div>
-              <div class="icon powerpoint"></div>
-              <div class="icon outlook"></div>
+          <div class="col-xs-5 text-center">
+            <div class="discount-price-line-mo gd-color-secondary price-hide">[@L[cds.sales/offers/office365-promo:top-banner-per-user-discount-price-mo]@L]</div>
+            <div class="discount-price-line-yr price-hide">[@L[cds.sales/offers/office365-promo:top-banner-per-user-discount-price-yr]@L]</div>
+            <div class="get-started-btn btn btn-warning cta-medium" data-ci="93815">[@L[cds.sales/offers/office365-promo:top-banner-get-started]@L]</div>
+            <div class="original-price-line price-hide">[@L[cds.sales/offers/office365-promo:top-banner-original-price]@L]</div>
+            <div class="renewal-disclaimer">
+              [@L[cds.sales/offers/office365-promo:top-banner-renewal-price-disclaimer]@L]
+              <a class="simple-link" href="#" data-toggle="modal" data-target="#myModal" data-ci="93817">[@L[cds.sales/offers/office365-promo:top-banner-see-offer-details]@L]</a>
             </div>
           </div>
-          <div class="row">
-            <h3 class="main-banner-subtitle text-center">[@L[cds.sales/offers/office365-promo:top-banner-best-deal]@L]</h3>
-          </div>
-          <div class="row">
-            <div class="row action-wrapper">
-              <div class="pricing-area text-center">
-                <div class="discount-price-line gd-color-secondary price-hide">[@L[cds.sales/offers/office365-promo:top-banner-per-user-discount-price]@L]</div>
-                <div class="original-price-line price-hide">[@L[cds.sales/offers/office365-promo:top-banner-original-price]@L]</div>
-              </div>
-              <div class="button-area text-center">
-                <div class="get-started-btn btn btn-warning cta-medium" data-ci="93815">[@L[cds.sales/offers/office365-promo:top-banner-get-started]@L]</div>
-                <div class="renewal-disclaimer">
-                  [@L[cds.sales/offers/office365-promo:top-banner-renewal-price-disclaimer]@L]
-                  <a class="simple-link" href="#" data-toggle="modal" data-target="#myModal" data-ci="disclaimerLink">[@L[cds.sales/offers/office365-promo:top-banner-see-offer-details]@L]</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="got-slide got-slide-2">
+        </div> <!-- end slide-1 -->
+        <div class="row got-slide got-slide-2">
           <div id="domain-search-div">          
             
             <div class="find-a-domain">[@L[cds.sales/offers/office365-promo:search-title]@L]</div>
@@ -391,7 +373,7 @@ assetPath: false
             
           </div> <!-- end domain-search-div -->
         </div> 
-        <div class="got-slide got-slide-3">
+        <div class="row got-slide got-slide-3">
           <div class="got-available-div"></div>
           <div class="got-unavailable-div"></div>
           <div class="got-invalid-div"></div>
@@ -409,15 +391,19 @@ assetPath: false
       $dsd = $('#domain-search-div'),
       nextStepUrl = '';
 
+    function showSlide($gotSlides, slideSelector) {
+      $gotSlides.find('.got-slide').hide();
+      $gotSlides.find(slideSelector).show();
+
+    }
     function slideToShowSearch($gotSlides){
       $gotSlides.find('.got-slide-3').find('.got-available-div').hide();      
       $gotSlides.find('.got-slide-3').find('.got-unavailable-div').hide();   
       $gotSlides.find('.got-slide-3').find('.got-invalid-div').hide();
       
       // move the domain search box into the slide 2
-      $gotSlides.find('.got-slide-2').append($dsd);      
-      
-      $gotSlides.animate({left:'-1000px'},slideAnimationMs);
+      $gotSlides.find('.got-slide-2').append($dsd);
+      showSlide($gotSlides, '.got-slide-2');
     }
     function slideToUnavailable($gotSlides){
 
@@ -426,8 +412,7 @@ assetPath: false
       $gotSlides.find('.got-slide-3').find('.got-available-div').hide();    
       $gotSlides.find('.got-slide-3').find('.got-invalid-div').hide();
       
-      //animate slide
-      $gotSlides.animate({left:'-2000px'},slideAnimationMs);
+      showSlide($gotSlides, '.got-slide-3');
     }
     function slideToAvailable($gotSlides){
 
@@ -436,8 +421,7 @@ assetPath: false
       $gotSlides.find('.got-slide-3').find('.got-unavailable-div').hide();   
       $gotSlides.find('.got-slide-3').find('.got-invalid-div').hide();
       
-      //animate slide
-      $gotSlides.animate({left:'-2000px'},slideAnimationMs);
+      showSlide($gotSlides, '.got-slide-3');
     }
     function slideToInvalid($gotSlides){
 
@@ -446,13 +430,11 @@ assetPath: false
       $gotSlides.find('.got-slide-3').find('.got-available-div').hide();  
       $gotSlides.find('.got-slide-3').find('.got-unavailable-div').hide();   
       
-      //animate slide
-      $gotSlides.animate({left:'-2000px'},slideAnimationMs);
+      showSlide($gotSlides, '.got-slide-3');
     }
 
     function slideToSlide1($gotSlides){
-      //animate slide
-      $gotSlides.animate({left:'0px'},slideAnimationMs/4);
+      showSlide($gotSlides, '.got-slide-1');
     }
 
     $(document).ready(function(){      
@@ -670,23 +652,20 @@ assetPath: false
 <style>  
 {% less %}
 
-  @bmImgPath : '[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/products/business-marketing/img/';
-  @oImgPath : '[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/office365-promo/img/';
-  @obImgPath : '[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/online-business/img/';
-
+  @imgPath : '[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/office365-promo/img/';
   
-  #included-productsRow h2.title {margin-bottom:14px; font-weight:300; font-size:72px; text-align:left;}
-  #included-productsRow h3.bullet-heading {margin-bottom:14px; font-weight:700; font-size:26px; text-align:left;}
-  #included-productsRow p {font-weight:300; font-size:18px; text-align:left; line-height:1.4em;}
+  #included-productsRow h2.title {margin-bottom:22px; font-weight:300; font-size:72px; text-align:left; line-height: 1.2em;}
+  #included-productsRow h3.bullet-heading {margin-bottom:14px; font-weight:200; font-size:30px; text-align:left; color:#000;}
+  #included-productsRow p {font-weight:300; font-size:19px; text-align:left; line-height:1.5em; color:#000;}
   #included-productsRow .details {margin-bottom:50px; padding-left:24px;}
-  #included-productsRow ul.details li h4 {font-weight:700; font-size:20px; text-align:left; line-height:1.4em; margin: 0; padding:0;}
-  #included-productsRow ul.details li p  {font-weight:300; font-size:14px; text-align:left; line-height:1.4em;}
-  #included-productsRow ul.details { list-style-image: ~"url(@{obImgPath}check.png)"; padding-left: 24px; }
-  .included-products-banner {background-size:cover; background-image:~"url(@{obImgPath}gybo-background.png)"; background-repeat:no-repeat;}  
+  #included-productsRow ul.details li h4 {font-weight:700; font-size:22px; text-align:left; line-height:1.4em; margin: 0; padding:0; color:#000;}
+  #included-productsRow ul.details li p  {font-weight:300; font-size:15px; text-align:left; line-height:1.4em; color:#000;}
+  #included-productsRow ul.details { list-style-image: ~"url(@{imgPath}check.png)"; padding-left: 24px; }
+  .included-products-banner {background-size:cover; background-image:~"url(@{imgPath}main-back.jpg)"; background-repeat:no-repeat;}  
   .included-products-floater {position: relative; top: -20px;}
-  .included-products-wrapper {border: 1px solid #999; background-color: #fff; margin-bottom:50px;}
-  .included-products-leftside {float: left; width:405px; padding: 70px 25px 0 50px;}
-  .included-products-rightside {float: left; width:525px; padding: 70px 25px 0 25px;}
+  .included-products-wrapper {border: 1px solid #ccc; background-color: #fff; margin-bottom:30px;padding-bottom:31px;}
+  .included-products-leftside {float: left; width:405px; padding: 42px 25px 0 50px;}
+  .included-products-rightside {float: left; width:525px; padding: 55px 25px 0 25px;}
 {% endless %}
 </style>
 <!-- end-css-elevate -->
@@ -704,31 +683,31 @@ assetPath: false
           <h3 class="bullet-heading">[@L[cds.sales/offers/office365-promo:included-best-of-office]@L]</h3>
           <ul class="details">
             <li>
-              <h4>[@L[cds.sales/offers/office365-promo:included-office-five-devices]@L]</h4>
+              <h4 class="condensed">[@L[cds.sales/offers/office365-promo:included-office-five-devices]@L]</h4>
               <p>[@L[cds.sales/offers/office365-promo:included-office-five-devices-desc]@L]</p>
             </li>
             <li>
-              <h4>[@L[cds.sales/offers/office365-promo:included-office-email]@L]</h4>
+              <h4 class="condensed">[@L[cds.sales/offers/office365-promo:included-office-email]@L]</h4>
               <p>[@L[cds.sales/offers/office365-promo:included-office-email-desc]@L]</p>
             </li>
             <li>
-              <h4>[@L[cds.sales/offers/office365-promo:included-office-storage]@L]</h4>
+              <h4 class="condensed">[@L[cds.sales/offers/office365-promo:included-office-storage]@L]</h4>
               <p>[@L[cds.sales/offers/office365-promo:included-office-storage-desc]@L]</p>
             </li>
           </ul>
           <h3 class="bullet-heading">[@L[cds.sales/offers/office365-promo:included-best-of-godaddy]@L]</h3>
           <ul class="details">
             <li>
-              <h4>[@L[cds.sales/offers/office365-promo:included-godaddy-support]@L]</h4>
+              <h4 class="condensed">[@L[cds.sales/offers/office365-promo:included-godaddy-support]@L]</h4>
               <p>[@L[cds.sales/offers/office365-promo:included-godaddy-support-desc]@L]</p>
             </li>
             <li>
-              <h4>[@L[cds.sales/offers/office365-promo:included-godaddy-domain]@L]</h4>
+              <h4 class="condensed">[@L[cds.sales/offers/office365-promo:included-godaddy-domain]@L]</h4>
               <p>[@L[cds.sales/offers/office365-promo:included-godaddy-domain-desc]@L]</p>
             </li>
             ##if(productIsOffered(98))
             <li>
-              <h4>[@L[cds.sales/offers/office365-promo:included-godaddy-bookkeeping]@L]</h4>
+              <h4 class="condensed">[@L[cds.sales/offers/office365-promo:included-godaddy-bookkeeping]@L]</h4>
               <p>[@L[cds.sales/offers/office365-promo:included-godaddy-bookkeeping-desc]@L]</p>
             </li>
             ##endif
@@ -748,12 +727,13 @@ assetPath: false
 
 <style>  
 {% less %}
+  @imgPath : '[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/office365-promo/img/';
   #team-up {background-color:#fff; min-height: 340px;}
   #team-up .container {padding-top:80px;padding-bottom:80px;}
-  #team-up span {color:#333;font-weight:300;font-size:54px;text-align:left;line-height:54px;display:block;padding-bottom:20px;}
-  #team-up p {color:#333;font-weight:300;font-size:28px;text-align:left;line-height:42px;margin-bottom:0;}
+  #team-up h2 {font-weight:200;font-size:54px;text-align:left;line-height:54px;display:block;padding-bottom:10px;}
+  #team-up p {font-weight:200;font-size:26px;text-align:left;line-height:1.55em;margin-bottom:0;}
   #team-up .team-promo-text {padding:0 400px 0 0;}
-  #team-up .team-promo-img {float:right;margin-left:60px;}
+  #team-up .team-promo-img {float:right;}
 {% endless %}
 </style>
 <!-- end-css-elevate -->
@@ -761,27 +741,36 @@ assetPath: false
 <section id="team-up">
   <div class="container l-main-container">
     <div class="team-promo-img">
-      <img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/office365-promo/img/godaddy-msft-logo_alt.png"/> 
+      <img class="icon-row solazy" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/office365-promo/img/logos.png" />
     </div>
     <div class="team-promo-text">
-      <span>[@L[cds.sales/offers/office365-promo:team-promo-text-headline]@L]</span>
+      <h2>[@L[cds.sales/offers/office365-promo:team-promo-text-headline]@L]</h2>
       <p>[@L[cds.sales/offers/office365-promo:team-promo-text-content]@L]</p>
     </div>
   </div>
 </section>
-     
+
 
 <!-- start-css-elevate -->
 <!------------------------------------>
 <!--            MODALS              -->
 <!------------------------------------>
+
+
 <style>
 {% less %}
-  .modal-title{font-size:24px}
-  .modal-dialog{width: 700px}
-  #disclaimers{font-size:14px;margin:20px auto 0;line-height:14px;width:1000px}
-  #disclaimers a,#disclaimers a:link,#disclaimers a:visited{color:#333;text-decoration:underline}
-  #disclaimers a:active,#disclaimers a:hover{color:#7db701}
+  #myModal .modal-title {font-size:24px}
+  #myModal .modal-dialog {width:600px; font-size:16px; line-height:1.4em;}
+  /*
+  #disclaimers {font-size:16px;margin:20px auto 0;line-height:1.4em;}
+  #disclaimers a,
+  #disclaimers a:link,
+  #disclaimers a:visited 
+  {color:#000;text-decoration:underline;}
+  #disclaimers a:active,
+  #disclaimers a:hover 
+  {color:#7db701;}
+  */
 {% endless %}
 </style>
 <!-- end-css-elevate -->  
@@ -829,9 +818,22 @@ assetPath: false
 <script type="text/javascript">
   $(document).ready(function () { 
    
-    $(".discount-price").each(function(){
+    $(".discount-price-mo").each(function(){
       $(this)
         .html(got2Page.pricing.mo.o365promo)
+        .closest('.price-hide')
+        .removeClass("price-hide");
+    });
+    $(".discount-price-yr").each(function(){
+      $(this)
+        .html(got2Page.pricing.yr.o365promo)
+        .closest('.price-hide')
+        .removeClass("price-hide");
+    });
+
+    $(".renewal-price-mo").each(function(){
+      $(this)
+        .html(got2Page.pricing.mo.renewal)
         .closest('.price-hide')
         .removeClass("price-hide");
     });
@@ -860,7 +862,21 @@ assetPath: false
       $(this).bind("click",scrollToEvent);
     });
 
+    populateTldsOnDisclaimerModal('#myModal .modal-body');
   });
+
+  function populateTldsOnDisclaimerModal(selector) {
+    var $this = $(selector);
+    ##if(countrySiteAny(br) || isManager())
+      $this.find('.tlds-br').show();
+    ##endif
+    ##if(countrySiteAny(in) || isManager())
+      $this.find('.tlds-in').show();
+    ##endif
+    ##if(countrySiteAny(uk) || isManager())
+      $this.find('.tlds-uk').show();
+    ##endif
+  }
 
   function scrollToEvent(event) {
     event.preventDefault();

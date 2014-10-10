@@ -1,7 +1,7 @@
 ---
 location: sales/offers/office365-promo-config.aspx.rule
-id: 54230d18f778fc222cbd0a76
-name: GCE-27637
+id: 54333cc2f778fc25d4961efb
+name: GCE-29686
 ---
 [
   { 

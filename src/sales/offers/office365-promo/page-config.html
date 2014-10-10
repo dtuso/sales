@@ -4,6 +4,7 @@ id: 542dc170f778fc0840c23169
 name: GCE-27637
 comments: New GOT POB Landing Page and Config Page
 url: http://www.dev-godaddy.com/offers/office365-promo-config.aspx
+metaCanonicalPath:  /offers/office365-promo-config.aspx
 assetPath: false
 ---
 ##if(false)
@@ -20,18 +21,9 @@ assetPath: false
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
   <title>[@L[cds.sales/offers/office365-promo-config:page-title]@L]</title>
-  <meta name="description" content="[@L[cds.sales/offers/office365-promo-config:meta-description]@L]" />
-  <meta name="keywords" content="[@L[cds.sales/offers/office365-promo-config:meta-keywords" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta property="og:title" content="[@L[cds.sales/offers/office365-promo-config:og-title]@L]" />
-  <meta property="og:type" content="product" />
-  <meta property="og:url" content="[@T[link:<external linktype='siteurl' path='/business/office-365-config.aspx' parammode='explicit'/>]@T]" />
-  <meta property="og:image" content="[@T[link:<imageroot />]@T]fos/office365/img/open-graph_20140115.png" />
-  <meta property="og:site_name" content="[@T[companyname:name]@T]" />
-  <meta property="fb:app_id" content="{{ metaOgAppID }}" />
-  <meta property="fb:admins" content="{{ metaOgAdmins }}" />
-  <meta property="og:description" content="[@L[cds.sales/offers/office365-promo-config:og-description]@L]" />
-  
+
   <link rel="shortcut icon" href="[@T[link:<imageroot />]@T]assets/godaddy.ico" />
   <link rel="canonical" href="[@T[link:<external linktype='siteurl' path='{{ metaCanonicalPath }}' parammode='explicit'/>]@T]"/>
 
@@ -55,25 +47,31 @@ assetPath: false
 
 
   <link rel="stylesheet" href="[@T[link:<css path='fos/office365/css/main.20140421.css' /> ]@T]" /> 
+
   <style>
   {% less %}
 
     @imgPath : '[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/offers/office365-promo-config/img/';
     
+    /* NEW */
     #config .config-step {width:657px;}
-
     #config .product-price {display:none;}
-
-    .product-price-original-amount {
-      text-decoration: line-through;
-      color:#999;
-    }
     #config .product-added-to-cart-text {
       top:-4px;left:-10px;}
     #config .config-step h2,
     #config .config-step h3.product-name {
       color: #505050;}
-      
+    #config .universal-close-icon {
+      text-indent: 0px !important;
+    }
+    .product-price-original-amount {
+      text-decoration: line-through;
+      color:#999;
+    }
+    #disclaimerModal .modal-dialog {width:700px;}
+    #disclaimerModal .modal-dialog p {margin-bottom:15px;font-size:16px;line-height:1.4em;}
+    #disclaimerModal .modal-title {font-size:24px}
+
   {% endless %}
   </style>
  
@@ -118,14 +116,14 @@ assetPath: false
                     <li>[@L[cds.sales/offers/office365-promo-config:cp-4-UnlimitedHDVideoConferencing]@L]</li>
                     <li>[@L[cds.sales/offers/office365-promo-config:cp-5-MicrosoftOffice365WebApps]@L]</li>
                     <li>[@L[cds.sales/offers/office365-promo-config:cp-5-MicrosoftOfficeInstallsOnUpTo5Devices]@L]</li>
-                    <li>[@L[cds.sales/offers/office365-promo-config:bullet-up-to-five]@L]</li>
+                    <!--<li>[@L[cds.sales/offers/office365-promo-config:bullet-up-to-five]@L]</li>-->
                   </ul>
                 </div>
                 <div class="config-product-narrow">
                 ##if(isManager())
-                  <input type="text" data-increment-input='{"min":1,"max":300,"limitText":"[@L[cds.sales/offers/office365-promo-config:cp-4-UpToMax]@L]"}' value="1" class="product-quantity" data-ci="93816" />
+                  <input type="text" data-increment-input='{"min":1,"max":300,"limitText":"","extendedMax":300}' value="1" class="product-quantity" data-ci="93816" />
                 ##else
-                  <input type="text" data-increment-input='{"min":1,"max": 25,"limitText":"[@L[cds.sales/offers/office365-promo-config:cp-4-UpToMax]@L]"}' value="1" class="product-quantity" data-ci="93816" />
+                  <input type="text" data-increment-input='{"min":1,"max": 25,"limitText":"","extendedMax":300}' value="1" class="product-quantity" data-ci="93816" />
                 ##endif
 
                 </div>
@@ -151,11 +149,11 @@ assetPath: false
               <div class="order-item" data-planLevel="Premium" >
                 <p class="order-item-title">[@L[cds.sales/offers/office365-promo-config:cp-2-ProductivityPlus]@L]</p>
                 <div class="order-item-details-wrapper up-to-five">
-                  <span class="order-item-details">five</span>
+                  <span class="order-item-details">{0}</span>
                   <span class="order-item-total orange-text"><span class="currency-symbol"></span><span class="currency-amount"></span></span>
                 </div>
                 <div class="order-item-details-wrapper six-and-up">
-                  <span class="order-item-details">six</span>
+                  <span class="order-item-details">{0}</span>
                   <span class="order-item-total orange-text"><span class="currency-symbol"></span><span class="currency-amount"></span></span>
                 </div>
               </div>
@@ -180,7 +178,7 @@ assetPath: false
         <!-- Page Disclaimer -->
         <div id="disclaimers">
           <p>
-            <a data-ci="93812" href="javascript:void(0);">[@L[cds.sales/offers/office365-promo-config:cp-2-LegalDisclaimers]@L]</a>
+            <a href="#" data-toggle="modal" data-target="#disclaimerModal" data-ci="93812">[@L[cds.sales/offers/office365-promo-config:cp-2-LegalDisclaimers]@L]</a>
           </p>
         </div>
         
@@ -199,31 +197,35 @@ assetPath: false
     </div>
   </div>
 
-  <div id="randomModal" style="display:none;">
-    <span class="modal-user-limit-header">[@L[cds.sales/offers/office365-promo-config:randomModal-title]@L]</span>
-    <p class="modal-user-limit-message">[@L[cds.sales/offers/office365-promo-config:randomModal-message]@L]</p>
+  <div id="discountLimitModal" style="display:none;">
+    <span class="modal-user-limit-header">[@L[cds.sales/offers/office365-promo-config:modal-discount-limit-title]@L]</span>
+    <p class="modal-user-limit-message">[@L[cds.sales/offers/office365-promo-config:modal-discount-limit-message]@L]</p>
     <div class="buttons-wrap">
-      <div class="modal-user-limit-ok flt-btn-grn">[@L[cds.sales/offers/office365-promo-config:randomModal-btn]@L]</div>
+      <div class="modal-user-limit-ok flt-btn-grn">[@L[cds.sales/offers/office365-promo-config:modal-discount-limit-button]@L]</div>
     </div>
   </div>
   
-  <div id="disclaimerModal" style="display:none;">
-    <div class="modal-content-wrapper">
-      <span class="modal-user-limit-header">[@L[cds.sales/offers/office365-promo-config:cp-1-Disclaimers]@L]</span>
-          
-      <div class="modal-user-limit-message">
-        <p>[@L[cds.sales/offers/office365-promo-config:cp-80-IncludesOffice365ProPlusForPCSWhich]@L]</p>
-        <p>[@L[cds.sales/offers/office365-promo-config:cp-76-UsersCanConnectTheFollowingVersionsOfOutlook]@L]</p>
-        <p>[@L[cds.sales/offers/office365-promo-config:cp-21-TheSkyDriveProSyncClientIsAvailableWith]@L]</p>
-        <p>[@L[cds.sales/offers/office365-promo-config:cp-8-AnnualDiscountsAvailableOnNEWPurchasesOnly]@L]</p>
-        <p>[@L[cds.sales/offers/office365-promo-config:cp-20-ProductsWillAutomaticallyRenewUntilCancelledYouMay]@L]</p>
-        <p>[@L[cds.sales/offers/office365-promo-config:cp-19-ForMoreInformationSeeTheFullMicrosoftService]@L]</p>
+  <div id="disclaimerModal" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title">
+            <strong>[@L[cds.sales/offers/office365-promo-config:cp-1-Disclaimers]@L]</strong>
+          </h4>
+        </div>
+        <div class="modal-body">
+          <p>[@L[cds.sales/offers/office365-promo-config:cp-80-IncludesOffice365ProPlusForPCSWhich]@L]</p>
+          <p>[@L[cds.sales/offers/office365-promo-config:cp-76-UsersCanConnectTheFollowingVersionsOfOutlook]@L]</p>
+          <p>[@L[cds.sales/offers/office365-promo-config:cp-21-TheSkyDriveProSyncClientIsAvailableWith]@L]</p>
+          <p>[@L[cds.sales/offers/office365-promo-config:cp-8-AnnualDiscountsAvailableOnNEWPurchasesOnly]@L]</p>
+          <p>[@L[cds.sales/offers/office365-promo-config:cp-20-ProductsWillAutomaticallyRenewUntilCancelledYouMay]@L]</p>
+          <p>[@L[cds.sales/offers/office365-promo-config:cp-19-ForMoreInformationSeeTheFullMicrosoftService]@L]</p>
+        </div>
       </div>
     </div>
-    <div class="buttons-wrap">
-      <div class="modal-user-limit-ok flt-btn-grn">[@L[cds.sales/offers/office365-promo-config:cp-1-OK-3]@L]</div>
-    </div>
   </div>
+
 
   [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer" />]@P] 
   [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Script" />]@P] 
@@ -543,7 +545,13 @@ assetPath: false
     } 
        
     office365config = {
-
+      "shownDiscountLimitReachedModal": false,
+      "isShowingModal": function(){
+        return 
+            $("#discountLimitModal").is(":hidden") ||
+            $("#exceedsMaxUsers").is(":hidden") ||
+            $("#disclaimerModal").is(":hidden");
+      },
       "productOrder":{},
       "$premiumPlacard": $('.config-product-wrapper[data-planLevel="Premium"]'),
       "$premiumOrderItem": $('.order-item[data-planLevel="Premium"]'),
@@ -552,13 +560,11 @@ assetPath: false
         var $productPriceDiv = office365config["$premiumPlacard"].find('.product-price');
         var priceLineHtml = $productPriceDiv.html();
         priceLineHtml = priceLineHtml.replace('{a0-begin}','<span class="product-price-original-amount">');
-        priceLineHtml = priceLineHtml.replace('{0}',got2Page.o365.normalPrice);
+        priceLineHtml = priceLineHtml.replace('{0}',got2Page.pricing.mo.renewal);
         priceLineHtml = priceLineHtml.replace('{a0-end}','</span>');
-        priceLineHtml = priceLineHtml.replace('{a1-begin}','<span class="product-price-amount">');
-        priceLineHtml = priceLineHtml.replace('{1}',got2Page.o365.discountPrice);
+        priceLineHtml = priceLineHtml.replace('{a1-begin}','<span class="product-price-text">');
+        priceLineHtml = priceLineHtml.replace('{1}', '<span class="product-price-amount">' + got2Page.pricing.mo.o365promo + '</span>');
         priceLineHtml = priceLineHtml.replace('{a1-end}','</span>');
-        priceLineHtml = priceLineHtml.replace('{a2-begin}','<span class="product-price-text">');
-        priceLineHtml = priceLineHtml.replace('{a2-end}','</span>');
         $productPriceDiv.html(priceLineHtml).show();
 
         $(".js-addtocart").click(function(e){
@@ -592,12 +598,12 @@ assetPath: false
           
         // discount pricing calculations
         upToFiveHtml = upToFiveQty + " " + ((upToFiveQty == 1) ? stringData['1usr'] : stringData['moreUsrs']) + " x 1 " + stringData['yrTerm'];
-        upToFiveTotal = currencyCalc.evaluate([got2Page.o365.discountPrice,'*',upToFiveQty]);
+        upToFiveTotal = currencyCalc.evaluate([got2Page.pricing.yr.o365promo,'*',upToFiveQty]);
 
         // normal pricing calculations
         if(sixAndUpQty > 0) {
           sixAndUpHtml = sixAndUpQty + " " + ((sixAndUpQty == 1) ? stringData['1usr'] : stringData['moreUsrs']) + " x 1 " + stringData['yrTerm'];
-          sixAndUpTotal = currencyCalc.evaluate([got2Page.o365.normalPrice,'*',sixAndUpQty]);
+          sixAndUpTotal = currencyCalc.evaluate([got2Page.pricing.yr.o365,'*',sixAndUpQty]);
         }
         grandTotal = currencyCalc.evaluate([upToFiveTotal,'+',sixAndUpTotal]);   
 
@@ -627,7 +633,7 @@ assetPath: false
         var qty = parseInt(office365config["$premiumPlacard"].find(".product-quantity").val());
         if(qty < 1) {
           var $zeroUsersWarning = $("#zeroUsersWarning");
-          if($zeroUsersWarning.is(":hidden") == true){
+          if($zeroUsersWarning.is(':hidden') === true){
             $zeroUsersWarning.show();
             $zeroUsersWarning.find(".zero-user-warning-close-icon").click(function(){
               $zeroUsersWarning.hide();
@@ -636,14 +642,35 @@ assetPath: false
           }
           return false;
         }
+        if(qty > 5 && !got2Page.isManager && !office365config.shownDiscountLimitReachedModal) {
+          office365config.shownDiscountLimitReachedModal = true;
+          //Show a modal warning
+          var $discountLimitModal = $("#discountLimitModal");
+          if(got2Page.isShowingModal === false){
+            got2Page.isShowingModal = true;
+            $discountLimitModal.show();
+            $("input:focus").blur();
+            $discountLimitModal.universalModal({"width":400});
+            fixUniversalCloserIcon($discountLimitModal.parent().find('a.universal-modal-close.universal-close-icon'));
+
+            $discountLimitModal.find(".modal-user-limit-ok").bind("click",function(){
+              $(".universal-modal-close").trigger("click.universalModal")
+            })
+            // IE will not show the modal at first, triggering the window resize fixes this
+            $(window).trigger("resize");
+          }
+          return false;
+        }
         if(qty > got2Page.maxSeats) {
           //Show a modal warning
           var $exceedsMaxUsers = $("#exceedsMaxUsers");
-          if($exceedsMaxUsers.is(":hidden") == true){
+          if(got2Page.isShowingModal === false){
+            got2Page.isShowingModal = true;
             $exceedsMaxUsers.show();
             $("input:focus").blur();
             $exceedsMaxUsers.universalModal({"width":400});
-            $(".modal-user-limit-ok").bind("click",function(){
+            fixUniversalCloserIcon($exceedsMaxUsers.parent().find('a.universal-modal-close.universal-close-icon'));
+            $exceedsMaxUsers.find(".modal-user-limit-ok").bind("click",function(){
               $(".universal-modal-close").trigger("click.universalModal")
             })
             // IE will not show the modal at first, triggering the window resize fixes this
@@ -706,19 +733,22 @@ assetPath: false
   
   })( jQuery );
 
+  function fixUniversalCloserIcon($a){
+    // add uxixon
+    $a.addClass('uxicon').addClass('uxicon-x');
+    // prune extra closers
+    if($a.length > 1) {
+      for(var x=1;x< $a.length; x++) {
+        $($a[x]).remove();
+      }
+    }
+  }
 
   $(document).ready(function(){
 
-    $("#disclaimers > p > a").click(function (event) {
-      var $disclaimerModal = $("#disclaimerModal");
-      $disclaimerModal.show();
-        $disclaimerModal.universalModal({"width":800});
-        $(".modal-user-limit-ok").bind("click",function(){
-          $(".universal-modal-close").trigger("click.universalModal")
-        });
-        // IE will not show the modal at first, triggering the window resize fixes this
-        $(window).trigger("resize");
-    });
+    $("body").bind("click.universalModal", function(){
+      got2Page.isShowingModal = false;
+    })
 
     $('[data-ci]').click(function(e){
       $this = $(this);
