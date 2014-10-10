@@ -8,14 +8,14 @@
     packageId: 'gybo_got2_pob',
     itcCode: 'slp_GOT2POB',
     pricing:  {
+      yr: {
+        o365:      '[@T[productprice:<current productid="31841" period="yearly" promocode=""></current>]@T]',
+        o365promo: '[@T[productprice:<current productid="31841" period="yearly" promocode="33572469"></current>]@T]',
+        tools:     '[@T[productprice:<current productid="31841" period="yearly" promocode="25896314"></current>]@T]'
+      },
       mo: {
         o365promo: '[@T[productprice:<current productid="31841" period="monthly" promocode="74125896"></current>]@T]',
         renewal:   '[@T[productprice:<current productid="31841" period="monthly" promocode="45632102"></current>]@T]' 
-      },
-      yr: {
-        o365promo: '[@T[productprice:<current productid="31841" period="yearly" promocode="33572469"></current>]@T]',
-        o365:      '[@T[productprice:<current productid="31841" period="yearly" promocode=""></current>]@T]',
-        tools:     '[@T[productprice:<current productid="31841" period="yearly" promocode="25896314"></current>]@T]'
       }
     },
     isManager: false,
@@ -23,7 +23,8 @@
       cart: '[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]',
       config: '[@T[link:<relative path="offers/office365-promo-config.aspx"></relative>]@T]'
     },
-    maxSeats: 25
+    maxSeats: 25,
+    isShowingModal: false
   };
 
   ##if(isManager())
