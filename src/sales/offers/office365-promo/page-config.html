@@ -1,6 +1,6 @@
 ---
 location: sales/offers/office365-promo-config.aspx
-id: 542dc170f778fc0840c23169
+id: 54384a44f778fc2a8c21825d
 name: GCE-27637
 comments: New GOT POB Landing Page and Config Page
 url: http://www.dev-godaddy.com/offers/office365-promo-config.aspx
@@ -92,7 +92,7 @@ assetPath: false
             <div class="config-continue-to-cart-wrapper-top">
               <p class="product-added-to-cart"><span class="green-check"></span><span class="product-added-to-cart-text">[@L[cds.sales/offers/office365-promo-config:PopIsInYourCart]@L]</span>
               </p>
-             <p class="config-continue-to-cart"><span class="icon-arrow-right"></span><a class="js-addtocart" data-ci="93810" href="javascript:void(0)">[@L[cds.sales/offers/office365-promo-config:cp-3-ContinueToCart]@L]</a></p>
+             <p class="config-continue-to-cart"><span class="icon-arrow-right"></span><a id="tealium-got2-config-addtocart-link" class="js-addtocart" data-ci="93810" href="javascript:void(0)">[@L[cds.sales/offers/office365-promo-config:cp-3-ContinueToCart]@L]</a></p>
             </div>
           </div>
           <div class="config-steps-wrapper">
@@ -134,7 +134,7 @@ assetPath: false
             <!-- / End Step 1 -->
 
             <div class="config-continue-to-cart-wrapper">
-              <a data-ci="93809" class="btn btn-warning btn-lg js-addtocart"><span class="icon-shopping-cart"></span> [@L[cds.sales/offers/office365-promo-config:cp-3-ContinueToCart-2]@L]</a>
+              <a id="tealium-got2-config-addtocart-btn" data-ci="93809" class="btn btn-warning btn-lg js-addtocart"><span class="icon-shopping-cart"></span> [@L[cds.sales/offers/office365-promo-config:cp-3-ContinueToCart-2]@L]</a>
             ##if(isManager())
               <form action="[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]" method="get" data-addtocart='[@T[link:<relative path="~/api/package" />]@T]'></form>
             ##else
