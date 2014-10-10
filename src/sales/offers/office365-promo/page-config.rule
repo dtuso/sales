@@ -1,7 +1,8 @@
 ---
 location: sales/offers/office365-promo-config.aspx.rule
-id: 54333cc2f778fc25d4961efb
+id: 54382a77f778fc2c9c0805db
 name: GCE-29686
+notes: remove the !countrySiteAny(www) when ready for other markets. Remove the EMEA VAT tax countries when VAT tax works. 
 ---
 [
   { 
@@ -11,7 +12,7 @@ name: GCE-29686
   },
   { 
     'Type': 'Redirect',
-    'Condition': '!productIsOffered(99)',
+    'Condition': '(!productIsOffered(99) || !countrySiteAny(www) || countrySiteAny(mx) || countrySiteAny(ie) || countrySiteAny(be) || countrySiteAny(at) || countrySiteAny(fr) || countrySiteAny(de) || countrySiteAny(it) || countrySiteAny(es) || countrySiteAny(se) || countrySiteAny(dk) || countrySiteAny(fi) || countrySiteAny(gr) || countrySiteAny(pl) || countrySiteAny(pt) || countrySiteAny(nl))',
     'Data': "{ 'Type' : '302', 'Loc': '[@T[link:<relative path=\"~/\" />]@T]' }"
   }
 ]
