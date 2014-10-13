@@ -1,0 +1,17 @@
+---
+location: localization/sales/homepage/marquee/abandoned_cart/en
+id: false
+name: GCE-2664
+---
+<phrase key="aband-cart-headline" />
+YOU DID THE RESEARCH.
+<phrase key="aband-cart-maintext" />
+YOU SHOPPED
+<phrase key="aband-cart-subtext" />
+<span class='inline-dash' style='max-width:150px;'>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</span> SMART.
+<phrase key="aband-cart-headline-rt" />
+NOW
+<phrase key="aband-cart-maintext-rt" />
+YOU JUST NEED TO...
+<phrase key="aband-cart-btn" />
+GO TO CART

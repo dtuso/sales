@@ -6,34 +6,29 @@
     "customCSS":".gdhp-marquee-text-right{color:#000000}",
     "leftText":[
       {
-        "text":"[@L[cds.sales/homepage/locales/en:aband-cart-headline]@L]",
+        "text":"[@L[cds.sales/homepage/marquee/abandoned_cart/en:aband-cart-headline]@L]",
         "cssClasses":""
       },
       {
-        "text":"[@L[cds.sales/homepage/locales/en:aband-cart-maintext]@L]",
+        "text":"[@L[cds.sales/homepage/marquee/abandoned_cart/en:aband-cart-maintext]@L]",
         "cssClasses":""       
       },
       {
-        "text":"<span class='inline-dash' style='max-width:150px;'>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</span> INTELIGENTE",
+        "text":"[@L[cds.sales/homepage/marquee/abandoned_cart/en:aband-cart-subtext]@L]",
         "cssClasses":""          
       }
     ],
     "rightText":[
       {
-        "text":"[@L[cds.sales/homepage/locales/en:aband-cart-headline-rt]@L]",
+        "text":"[@L[cds.sales/homepage/marquee/abandoned_cart/en:aband-cart-headline-rt]@L]",
         "cssClasses":""
       },
       {
-        "text":"[@L[cds.sales/homepage/locales/en:aband-cart-maintext-rt]@L]",
+        "text":"[@L[cds.sales/homepage/marquee/abandoned_cart/en:aband-cart-maintext-rt]@L]",
         "cssClasses":""        
       }
     ],
-    "buttonText":"[@L[cds.sales/homepage/locales/en:aband-cart-btn]@L]",
+    "buttonText":"[@L[cds.sales/homepage/marquee/abandoned_cart/en:aband-cart-btn]@L]",
     "buttonCssClasses":"btn btn-warning walsheim-med"
-  },
-  "bugBar":[
-    {"org":"true"},
-    {"co":"true"},
-    {"net":"true"}
-  ]
+  }
 }

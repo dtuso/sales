@@ -6,38 +6,33 @@
     "customCSS":".gdhp-marquee-text-right{color:#000000}",
     "leftText":[
       {
-        "text":"[@L[cds.sales/homepage/locales/en:active-o365-headline]@L]",
+        "text":"[@L[cds.sales/homepage/marquee/start-o365/en:start-o365-headline]@L]",
         "cssClasses":""
       },
       {
-        "text":"[@L[cds.sales/homepage/locales/en:active-o365-maintext]@L]",
+        "text":"[@L[cds.sales/homepage/marquee/start-o365/en:start-o365-maintext]@L]",
         "cssClasses":""
       },
       {
-        "text":"[@L[cds.sales/homepage/locales/en:active-o365-subtext]@L]",
+        "text":"[@L[cds.sales/homepage/marquee/start-o365/en:start-o365-subtext]@L]",
         "cssClasses":""
       },
        {
-        "text":"[@L[cds.sales/homepage/locales/en:active-o365-subtext2]@L]",
+        "text":"[@L[cds.sales/homepage/marquee/start-o365/en:start-o365-subtext2]@L]",
         "cssClasses":""
       }     
     ],
     "rightText":[
       {
-        "text":"[@L[cds.sales/homepage/locales/en:active-o365-headline-rt]@L]",
+        "text":"[@L[cds.sales/homepage/marquee/start-o365/en:active-o365-headline-rt]@L]",
         "cssClasses":""
       },
       {
-        "text":"[@L[cds.sales/homepage/locales/en:active-o365-maintext-rt]@L]",
+        "text":"[@L[cds.sales/homepage/marquee/start-o365/en:active-o365-maintext-rt]@L]",
         "cssClasses":""
       }
     ],
-    "buttonText":"[@L[cds.sales/homepage/locales/en:active-o365-btn]@L]",
+    "buttonText":"[@L[cds.sales/homepage/marquee/start-o365/en:active-o365-btn]@L]",
     "buttonCssClasses":"btn btn-warning walsheim-med"
-  },
-  "bugBar":[
-    {"co":"true"},
-    {"org":"true"},
-    {"net":"true"}
-  ]
+  }
 }
