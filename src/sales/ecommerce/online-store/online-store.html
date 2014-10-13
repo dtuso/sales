@@ -361,6 +361,10 @@ url: http://www.dev-godaddy.com/ecommerce/online-store.aspx
 
           <!--- Manager View -->
           <form id="addtocart-form-MgrView" class="addtocart-form" action="[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]" method="post" data-addtocart="[@T[link:<external linktype="SALESPRODUCTSURL" path="/v1/pl/1/cart/packages" />]@T]">
+              <input type="hidden" name="itc" value="slp_onlinestore" />
+              <input type="hidden" name="ci" value="" />
+              <input type="hidden" name="qty" value="" />
+              <input type="hidden" name="package" value=""/>
                 <div class="grid-column mgr-view-section-top-spacer">
                   <p class="mgr-view-label-bottom-spacer"> [@L[cds.sales/gd/ecommerce/online-store:ManagerViewTitle]@L] </p>
                   <div class="select-box" data-ci="94022">
