@@ -71,7 +71,8 @@ var paths = {
   less      : ['./src/sales/**/css/**/*.less'],
   images    : ['./src/sales/**/img/**/*.jpg', './src/sales/**/img/**/*.png'],
   build     : path.join('./build/sales/',assetSrcPath),
-  assets    : path.join(rootAssetPath,assetSrcPath)
+  assets    : path.join(rootAssetPath,assetSrcPath),
+  scripts   : ['./src/sales/**/js/**/*.js']
 };
 
 var swigSetup = function(swig) {
@@ -182,6 +183,7 @@ gulp.task('watch', function() {
   gulp.watch(paths.language, ['language']);
   gulp.watch(paths.less, ['styles', 'assets-deploy']);
   gulp.watch(paths.images, ['images', 'assets-deploy']);
+  gulp.watch(paths.scripts, ['scripts', 'assets-deploy']);
 });
 
 gulp.task('build', ['html', 'language', 'styles', 'scripts', 'images']);

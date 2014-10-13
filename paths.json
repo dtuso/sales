@@ -26,7 +26,7 @@
   "mhi":                "./hosting/managed-hosting-info/",
   "o365":               "./business/office-365/",
   "offers":             "./offers/default/",
-  "os":                 "./ecommerce/onlinestore/",
+  "os":                 "./ecommerce/online-store/",
   "promos-si":		    	"./offers/stick-it-to-high-prices/",
   "qsc":                "./ecommerce/shopping-cart/",
   "search":             "./domains/search/",
