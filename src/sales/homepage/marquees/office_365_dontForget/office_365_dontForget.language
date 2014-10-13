@@ -1,0 +1,19 @@
+---
+location: localization/sales/homepage/marquee/o365_dont_forget/en
+id: false
+name: GCE-2664
+---
+<phrase key="active-o365-headline" />
+WORK ANYTIME, ANYWHERE
+<phrase key="active-o365-maintext" />
+SET UP YOUR EMAIL
+<phrase key="active-o365-subtext" />
+IN JUST ONE STEP.
+<phrase key="active-o365-subtext2" />
+<span class='inline-dash' style='max-width:150px;'>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</span> EASY, PEASY.
+<phrase key="active-o365-headline-rt" />
+ACTIVATE
+<phrase key="active-o365-maintext-rt" />
+OFFICE 365 EMAIL
+<phrase key="active-o365-btn" />
+START NOW
