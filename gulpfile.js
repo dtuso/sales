@@ -6,16 +6,13 @@ try {
   var changed     = require('gulp-changed');
   var concat      = require('gulp-concat');
   var cssmin      = require('gulp-minify-css');
-  var frontMatter = require('gulp-front-matter');
+  var fm          = require('gulp-front-matter');
   var gulpif      = require('gulp-if');
   var less        = require('gulp-less');
   var rename      = require('gulp-rename');
   var swig        = require('gulp-swig');
   var uglify      = require('gulp-uglify');
   var debug       = require('gulp-debug');
-  var data        = require('gulp-data');
-  var jade        = require('gulp-jade');
-  
   var elevateCss  = require('./lib/gulp-css-elevate');
   var elevateJs   = require('./lib/gulp-js-elevate');
   var charFix     = require('./lib/gulp-character-fix');
@@ -71,11 +68,11 @@ if (!argv.src || argv.src == 'all') {
 var paths = {
   templates : ['./src/sales/**/*.html'],
   language  : ['./src/sales/**/*.language'],
-  rule      : ['./src/sales/**/*.rule'],
   less      : ['./src/sales/**/css/**/*.less'],
   images    : ['./src/sales/**/img/**/*.jpg', './src/sales/**/img/**/*.png'],
   build     : path.join('./build/sales/',assetSrcPath),
-  assets    : path.join(rootAssetPath,assetSrcPath)
+  assets    : path.join(rootAssetPath,assetSrcPath),
+  scripts   : ['./src/sales/**/js/**/*.js']
 };
 
 var swigSetup = function(swig) {
@@ -104,48 +101,21 @@ var swigLangOpts = {
   setup: swigSetup
 };
 
-var swigRuleOpts = {
-  data: getProjectData,
-  ext: '.rule',
-  setup: swigSetup
-};
-
 var swigConfigOpts = {
   data: getProjectData,
   ext: '.config',
   setup: swigSetup
 };
 
-var cdsmOpts = {
-  dest: argv.dest || 'dev'
-};
-
-//homepage
-var getJsonData = function(file) {
-  var jsonPath = file.path.replace('.jade','') + '.json';
-  return require(jsonPath);
-};
-
-gulp.task('homepage', function() {
-  return gulp.src('./src/sales/homepage/**/*.jade')
-    .pipe(changed('./build/sales/homepage'))
-    .pipe(frontMatter({remove:true}))
-    .pipe(data(getJsonData))
-    .pipe(jade({pretty: true}))
-    .pipe(cdsm(cdsmOpts))
-    .pipe(rename({extname: ".jade"}))
-    .pipe(gulp.dest('./build/sales/homepage'));
-});
-
 gulp.task('html', function() {
   return gulp.src(['./**/*.html', '!./**/_*.html'], {cwd: path.join('./src/sales/', assetSrcPath)})
     .pipe(changed(paths.build))
     /*.pipe(debug({verbose: false}));*/
-    .pipe(frontMatter({remove:true}))
+    .pipe(fm({remove:true}))
     .pipe(swig(swigTplOpts))
     .pipe(elevateCss())
     .pipe(elevateJs())
-    .pipe(gulpif(!ignoreCDS, cdsm(cdsmOpts)))
+    .pipe(gulpif(!ignoreCDS, cdsm()))
     .pipe(gulp.dest(paths.build));
 });
 
@@ -153,20 +123,10 @@ gulp.task('language', function() {
   return gulp.src('./**/*.language', {cwd: path.join('./src/sales/', assetSrcPath)})
     .pipe(changed(paths.build))
     //.pipe(changed(paths.build))
-    .pipe(frontMatter({remove:true}))
-    .pipe(swig(swigLangOpts))
-    .pipe(gulpif(!ignoreCDS, cdsm(cdsmOpts)))
-    .pipe(gulp.dest(paths.build));
-});
-
-gulp.task('rule', function() {
-  return gulp.src('./**/*.rule', {cwd: path.join('./src/sales/', assetSrcPath)})
-    .pipe(changed(paths.build))
-    //.pipe(changed(paths.build))
     .pipe(charFix())
-    .pipe(frontMatter({remove:true}))
-    .pipe(swig(swigRuleOpts))
-    .pipe(gulpif(!ignoreCDS, cdsm(cdsmOpts)))
+    .pipe(fm({remove:true}))
+    .pipe(swig(swigLangOpts))
+    .pipe(gulpif(!ignoreCDS, cdsm()))
     .pipe(gulp.dest(paths.build));
 });
 
@@ -203,9 +163,9 @@ gulp.task('assets-deploy', ['build'], function() {
 gulp.task('config', function() {
   return gulp.src(['./**/*.config'], {cwd: path.join('./src/sales/', assetSrcPath)})
     .pipe(changed(paths.build))
-    .pipe(frontMatter({remove:true}))
+    .pipe(fm({remove:true}))
     .pipe(swig(swigConfigOpts))
-    .pipe(gulpif(!ignoreCDS, cdsm(cdsmOpts)))
+    .pipe(gulpif(!ignoreCDS, cdsm()))
     .pipe(gulp.dest(paths.build));
 });
 
@@ -220,12 +180,12 @@ gulp.task('js-concat', function() {
 
 gulp.task('watch', function() {
   gulp.watch(paths.templates, ['html']);
-  gulp.watch(paths.language,  ['language']);
-  gulp.watch(paths.rule,      ['rule']);
-  gulp.watch(paths.less,      ['styles', 'assets-deploy']);
-  gulp.watch(paths.images,    ['images', 'assets-deploy']);
+  gulp.watch(paths.language, ['language']);
+  gulp.watch(paths.less, ['styles', 'assets-deploy']);
+  gulp.watch(paths.images, ['images', 'assets-deploy']);
+  gulp.watch(paths.scripts, ['scripts', 'assets-deploy']);
 });
 
-gulp.task('build',            ['html', 'language', 'rule', 'styles', 'scripts', 'images']);
+gulp.task('build', ['html', 'language', 'styles', 'scripts', 'images']);
 gulp.task('css-build-deploy', ['styles', 'assets-deploy']);
-gulp.task('default',          ['watch']);
+gulp.task('default', ['watch']);
