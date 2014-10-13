@@ -32,8 +32,10 @@
 
       <!-- Global CSS -->
       <link href="[@T[link:<css path='private-label/global/css/globals.css' />]@T]" rel="stylesheet" type="text/css">
-
-
+      {% if assetPath %}
+      <link href="[@T[link:<css path='{{ assetPath }}css/styles.css' />]@T]{% if cssVersionOverride %}?v={{cssVersionOverride}}{% endif %}" rel="stylesheet" type="text/css">
+      {% endif %}
+        
       <!-- IE SUPPORT FOR HTML5 and Bootstrap 3 -->
       <!--[if lt IE 9]>
         <link href="[@T[link:<cssroot />]@T]fos/201401/global/css/bootstrap-ie7fix.min.css" rel="stylesheet" type="text/css" />
@@ -53,7 +55,7 @@
 
   <body>
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header" />]@P]
-    <div class="border-box" role="main">
+    <div class="border-box" role="main" >
       {% block body %}{% endblock %}
     </div>
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer" />]@P]

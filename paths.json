@@ -38,6 +38,7 @@
   "static-ip":          "./ssl/static-ip/",
   "tui":                "./domains/tui/",  
   "vps":                "./hosting/vps-hosting/",
+  "vps-PL":              "./hosting/private-label/vps-hosting/",
   "vps-config":         "./hosting/vps-hosting-config/",
   "web-design":         "./design/web-design/",
   "web-hosting":        "./hosting/web-hosting/",
