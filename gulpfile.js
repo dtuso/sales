@@ -127,7 +127,7 @@ var getJsonData = function(file) {
 };
 
 gulp.task('homepage', function() {
-  return gulp.src('./src/sales/homepage/*.jade')
+  return gulp.src('./src/sales/homepage/**/*.jade')
     .pipe(changed('./build/sales/homepage'))
     .pipe(frontMatter({remove:true}))
     .pipe(data(getJsonData))
