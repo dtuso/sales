@@ -1,8 +1,8 @@
 ---
 location: sales/hosting/split-tests/web-hosting-1349b.aspx
-id: 54342eacf778fc0ff0ff8e29
-name: GCE-27801
-comments: Discount pricing display changes.
+id: 543d7805f778fc233071c998
+name: GCE-29607
+comments: Web-hosting updates.
 url: http://www.dev-godaddy.com/hosting/web-hosting.aspx
 splitSide: 1349.B
 cssVersionOverride: 3
@@ -59,8 +59,8 @@ metaOgDescription: "[@L[cds.sales/gd/hosting/web-hosting:og-description]@L]"
       </section>
       <a class="main-banner-read-reviews tab-link" data-ci="89260" href="#reviews">[@L[cds.sales/gd/hosting/web-hosting:labelReadReviews]@L]</a>
     ##endif
-      <p class="main-banner-subtitle">[@L[cds.sales/gd/hosting/web-hosting:mastheadTitle-11166-sideB]@L]</p>
-      <p class="main-banner-subtext subtitle">[@L[cds.sales/gd/hosting/web-hosting:mastheadSubTitle-11166-sideB]@L]</p>
+      <p class="main-banner-subtitle">[@L[cds.sales/gd/hosting/web-hosting:mastheadTitle-25276]@L]</p>
+      <p class="main-banner-subtext subtitle">[@L[cds.sales/gd/hosting/web-hosting:mastheadSubTitle-25276]@L]</p>
     ##if(!activeLanguageAny([en-in]))
       <p class="starting-at starting-at-banner"><span class="starting-at-above">[@L[cds.sales/gd/hosting/web-hosting:starting-at]@L]</span><span class="starting-at-price">[@T[productprice:<current productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span>[@L[cds.sales/hosting/web-hosting-new:mo]@L]</p>
       <a href="[@T[link:<relative path='~/hosting/web-hosting-config-new.aspx' secure='true'><param name='ci' value='89262' /><param name='plan' value='host_GridHostEcoDiabloLin1Yr_us' /></relative>]@T]" class="btn btn-primary cta-small">[@L[cds.sales/gd/hosting/web-hosting:first-slide-btn]@L]</a>
@@ -76,18 +76,18 @@ metaOgDescription: "[@L[cds.sales/gd/hosting/web-hosting:og-description]@L]"
 <section class="main-tabs">
   <div class="container">
     <ul class="nav nav-tabs">
-      <li class="nav-tabs-item active"><a class="nav-tabs-link" data-ci="89263"  href="#plans-pricing" data-toggle="tab">[@L[cds.sales/gd/hosting/web-hosting:TabContentLink1]@L]</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
+      <li class="nav-tabs-item active"><a class="nav-tabs-link" data-ci="89263"  href="#plans-pricing" data-gd-sidebyside-target="#plans-pricing" data-toggle="tab">[@L[cds.sales/gd/hosting/web-hosting:TabContentLink1]@L]</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
       ##if(activeLanguageAny([en-in]))
-        <li class="nav-tabs-item" id="features-tab"><a class="nav-tabs-link lazy-tab" data-ci="89264" href="#features" data-toggle="tab">[@L[cds.sales/gd/hosting/web-hosting:TabContentLink2]@L]</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
+        <li class="nav-tabs-item" id="features-tab"><a class="nav-tabs-link lazy-tab" data-ci="89264" href="#features" data-gd-sidebyside-target="#features" data-toggle="tab">[@L[cds.sales/gd/hosting/web-hosting:TabContentLink2]@L]</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
       ##else
         <li class="nav-tabs-item" id="features-tab"><a class="nav-tabs-link lazy-tab features-tab-link" data-ci="89264" href="#plans-pricing" data-toggle="tab" onclick="scrollTo($('#features'))">[@L[cds.sales/gd/hosting/web-hosting:TabContentLink2]@L]</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
       ##endif
-      <li class="nav-tabs-item"><a class="nav-tabs-link lazy-tab" data-ci="89265" href="#compare-plans" data-toggle="tab">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-tab-title-11166]@L]</a><i class="ico ico-shape ico-shape-arrow-down lazy-tab"></i></li>
-      <li class="nav-tabs-item"><a class="nav-tabs-link lazy-tab" data-ci="89266" href="#platforms" data-toggle="tab">[@L[cds.sales/gd/hosting/web-hosting:platforms-tab-title-11166]@L]</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
+      <li class="nav-tabs-item"><a class="nav-tabs-link lazy-tab" data-ci="89265" href="#compare-plans" data-gd-sidebyside-target="#compare-plans" data-toggle="tab">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-tab-title-11166]@L]</a><i class="ico ico-shape ico-shape-arrow-down lazy-tab"></i></li>
+      <li class="nav-tabs-item"><a class="nav-tabs-link lazy-tab" data-ci="89266" href="#platforms" data-gd-sidebyside-target="#platforms" data-toggle="tab">[@L[cds.sales/gd/hosting/web-hosting:platforms-tab-title-11166]@L]</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
       ##if(activeLanguageAny([en-us]))
-        <li class="nav-tabs-item"><a class="nav-tabs-link lazy-tab" data-ci="89267" href="#reviews" data-toggle="tab">[@L[cds.sales/gd/hosting/web-hosting:TabContentLink3]@L]</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
+        <li class="nav-tabs-item"><a class="nav-tabs-link lazy-tab" data-ci="89267" href="#reviews" data-gd-sidebyside-target="#reviews" data-toggle="tab">[@L[cds.sales/gd/hosting/web-hosting:TabContentLink3]@L]</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
       ##endif
-      <li class="nav-tabs-item"><a class="nav-tabs-link lazy-tab" data-ci="89268" href="#faq" data-toggle="tab">[@L[cds.sales/gd/hosting/web-hosting:TabContentLink4]@L]</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
+      <li class="nav-tabs-item"><a class="nav-tabs-link lazy-tab" data-ci="89268" href="#faq" data-gd-sidebyside-target="#faq" data-toggle="tab">[@L[cds.sales/gd/hosting/web-hosting:TabContentLink4]@L]</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
     </ul>
   </div>
 </section>
@@ -110,7 +110,7 @@ metaOgDescription: "[@L[cds.sales/gd/hosting/web-hosting:og-description]@L]"
         <div class="l-main-container container misc-banner-content misc-banner-content-web-hosting">
           <h2 class="half-width">[@L[cds.sales/gd/hosting/web-hosting:web-hosting-looking-for-11166]@L]</h2>
           <p class="half-width">
-            [@L[cds.sales/gd/hosting/web-hosting:web-hosting-looking-for-description-11166]@L]
+            [@L[cds.sales/gd/hosting/web-hosting:web-hosting-looking-for-description-25276]@L]
           </p>
           <p class="support-container">
           ##if(countrySiteAny(www))
@@ -286,10 +286,13 @@ metaOgDescription: "[@L[cds.sales/gd/hosting/web-hosting:og-description]@L]"
               <p class="no-margin-bottom" data-gd-sidebysidealign-row="4"><button type="submit" data-ci="89269" data-form="addtocart-form" class="btn btn-warning btn-block js-addtocart-btn btn--push-down btn-lg">[@L[cds.sales/gd/hosting/web-hosting:planbox-cart-btn]@L]</button></p>
               <ul class="plan-pricing-list plan-pricing-list-alternate">
                 <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="5">[@L[cds.sales/gd/hosting/web-hosting:one-website]@L]</li>
-                <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="6">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-unlimited-bandwidth]@L]</li>
-                <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="7">[@L[cds.sales/gd/hosting/web-hosting:economy-plan-storage-11166]@L]</li>
-                <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="8">-</li>
-                <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="9">-</li>
+                <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="6">[@L[cds.sales/gd/hosting/web-hosting:economy-plan-storage-11166]@L]</li>
+                <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="7">[@L[cds.sales/gd/hosting/web-hosting:economy-plan-bandwidth-25276]@L]</li>
+                <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="8">[@L[cds.sales/gd/hosting/web-hosting:economy-plan-emails-25276]@L]</li>
+                <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="9">[@L[cds.sales/gd/hosting/web-hosting:economy-plan-domain-25276]@L]</li>
+                <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="10">-</li>
+                <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="11">-</li>
+                <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="12">-</li>
               </ul>
             </div>
           </form>
@@ -458,10 +461,13 @@ metaOgDescription: "[@L[cds.sales/gd/hosting/web-hosting:og-description]@L]"
               <p class="no-margin-bottom" data-gd-sidebysidealign-row="4"><button type="submit" data-ci="89270" data-form="addtocart-form" class="btn btn-warning btn-block js-addtocart-btn btn--push-down btn-lg">[@L[cds.sales/gd/hosting/web-hosting:planbox-cart-btn]@L]</button></p>
               <ul class="plan-pricing-list plan-pricing-list-alternate">
                 <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="5">[@L[cds.sales/gd/hosting/web-hosting:unlimited-websites]@L]</li>
-                <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="6">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-unlimited-bandwidth]@L]</li>
-                <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="7">[@L[cds.sales/gd/hosting/web-hosting:deluxe-plan-storage-11166]@L]</li>
-                <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="8">-</li>
-                <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="9">-</li>
+                <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="6">[@L[cds.sales/gd/hosting/web-hosting:deluxe-plan-storage-11166]@L]</li>
+                <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="7">[@L[cds.sales/gd/hosting/web-hosting:deluxe-plan-bandwidth-25276]@L]</li>
+                <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="8">[@L[cds.sales/gd/hosting/web-hosting:deluxe-plan-emails-25276]@L]</li>
+                <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="9">[@L[cds.sales/gd/hosting/web-hosting:deluxe-plan-domain-25276]@L]</li>
+                <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="10">-</li>
+                <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="11">-</li>
+                <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="12">-</li>
               </ul>
             </div>
           </form>
@@ -472,8 +478,8 @@ metaOgDescription: "[@L[cds.sales/gd/hosting/web-hosting:og-description]@L]"
             <div class="grid-column no-padding-bottom relative">
               <div data-gd-sidebysidealign-row="1">
                 <h2>[@L[cds.sales/gd/hosting/web-hosting:unlimited-title]@L]</h2>
-                <p>[@L[cds.sales/gd/hosting/web-hosting:Ultimate-subheader]@L]</p>
-                <span class="badge badge-small badge-important badge-upper-right">[@L[cds.sales/gd/hosting/web-hosting:secure-tag]@L]</span>
+                <p>[@L[cds.sales/gd/hosting/web-hosting:Ultimate-subheader-25276]@L]</p>
+                <span class="badge badge-small badge-important badge-upper-right">[@L[cds.sales/gd/hosting/web-hosting:secure-tag-25276]@L]</span>
               </div>
               <div data-gd-sidebysidealign-row="2">
                 <p class="starting-at starting-at-alternate-top-spacing">
@@ -629,10 +635,13 @@ metaOgDescription: "[@L[cds.sales/gd/hosting/web-hosting:og-description]@L]"
               <p class="no-margin-bottom" data-gd-sidebysidealign-row="4"><button data-ci="89271" type="submit" data-form="addtocart-form" class="btn btn-warning btn-block js-addtocart-btn btn--push-down btn-lg">[@L[cds.sales/gd/hosting/web-hosting:planbox-cart-btn]@L]</button></p>
               <ul class="plan-pricing-list plan-pricing-list-alternate">
                 <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="5">[@L[cds.sales/gd/hosting/web-hosting:unlimited-websites]@L]</li>
-                <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="6">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-unlimited-bandwidth]@L]</li>
-                <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="7">[@L[cds.sales/gd/hosting/web-hosting:deluxe-plan-storage-11166]@L]</li>
-                <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="8">[@L[cds.sales/gd/hosting/web-hosting:premium-dns-management-tool]@L]</li>
-                <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="9">[@L[cds.sales/gd/hosting/web-hosting:unlimited-1year-ssl]@L]<br><a class="isToolTip smallHoverText" data-toggle="tooltip" title="[@L[cds.sales/gd/hosting/web-hosting:unlimited-ssl-google]@L]">[@L[cds.sales/gd/hosting/web-hosting:restrictions-apply]@L]</a></li>
+                <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="6">[@L[cds.sales/gd/hosting/web-hosting:ultimate-plan-storage-25276]@L]</li>
+                <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="7">[@L[cds.sales/gd/hosting/web-hosting:ultimate-plan-bandwidth-25276]@L]</li>
+                <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="8">[@L[cds.sales/gd/hosting/web-hosting:ultimate-plan-emails-25276]@L]</li>
+                <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="9">[@L[cds.sales/gd/hosting/web-hosting:ultimate-plan-domain-25276]@L]</li>
+                <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="10">[@L[cds.sales/gd/hosting/web-hosting:unlimited-processing-memory-25276]@L]</li>
+                <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="11">[@L[cds.sales/gd/hosting/web-hosting:premium-dns-management-tool]@L]</li>
+                <li class="three-lines one-line-three-lines-fix" data-gd-sidebysidealign-row="12">[@L[cds.sales/gd/hosting/web-hosting:unlimited-1year-ssl]@L]<br><a class="isToolTip smallHoverText" data-toggle="tooltip" title="[@L[cds.sales/gd/hosting/web-hosting:unlimited-ssl-google]@L]">[@L[cds.sales/gd/hosting/web-hosting:restrictions-apply]@L]</a></li>
               </ul>
             </div>
           </form>
@@ -1148,7 +1157,7 @@ metaOgDescription: "[@L[cds.sales/gd/hosting/web-hosting:og-description]@L]"
                   <div data-gd-sidebysidealign-row="1">                                      
                     <h2>[@L[cds.sales/gd/hosting/web-hosting:unlimited-title]@L]</h2>
                     <p>[@L[cds.sales/gd/hosting/web-hosting:ultimate-plan-websites-11166]@L]</p>
-                    <span class="badge badge-small badge-important badge-upper-right">[@L[cds.sales/gd/hosting/web-hosting:secure-tag]@L]</span>
+                    <span class="badge badge-small badge-important badge-upper-right">[@L[cds.sales/gd/hosting/web-hosting:secure-tag-25276]@L]</span>
                   </div>
                   <div data-gd-sidebysidealign-row="2">
                     <p class="starting-at starting-at-alternate-top-spacing"><span class="starting-at-color-black starting-at-alternate-font starting-at-above">[@L[cds.sales/gd/hosting/web-hosting:starting-at]@L]</span><span class="starting-price">[@T[productprice:<current productid="32082" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]<span>[@L[cds.sales/gd/hosting/web-hosting:month]@L]</span></span></p>
@@ -1302,42 +1311,6 @@ metaOgDescription: "[@L[cds.sales/gd/hosting/web-hosting:og-description]@L]"
             </div>
             <!-- col-xs-4 -->
 
-            <div class="col-xs-4 relative">
-              <!-- Digital Coconut Content -->
-              <div id="digital-coconut" class="grid-column clear-padding">
-                <div class="testimonial-background-image solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/hosting/web-hosting/img/digital_coconut_new.jpg">
-                  ##if(activeLanguageAny([en]) && !isManager())
-                  <a class="dc-play-button-wrapper" data-ci="89274" href="#" data-target="#digitalCoconutTestimonial" data-toggle="modal">
-                    <span class="dc-play-button"></span><br>
-                    [@L[cds.sales/gd/hosting/web-hosting:customer-testimonial-watch-video-11166]@L]
-                  </a>
-                  ##endif
-                </div>
-                <p class="testimonial-padding-1">[@L[cds.sales/gd/hosting/web-hosting:customer-testimonial-11166]@L]</p>
-                <p class="testimonial-padding-2"><b>- [@L[cds.sales/gd/hosting/web-hosting:customer-testimonial-name-11166]@L]</b></p>
-                ##if(false)
-                <p class="bottom-reviews-link" ><a class="tab-link" data-ci="89275" href="#reviews">[@L[cds.sales/gd/hosting/web-hosting:customer-testimonial-read-more-reviews-11166]@L]</a></p>
-                ##endif
-              </div>
-                ##if(!isManager())
-              <div class="modal fade videoModal myVideoModal" id="digitalCoconutTestimonial">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <button type="button" class="modal-header-close close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    </div>
-                    <div class="modal-body">
-                      <div class="embedVideo" id="ytplayer1" data-id="H7lZyzSbNWk"></div>
-                      <!--[if lt IE 8]>
-                        <iframe class="embedVideoIE7" width="853" height="480" src="//www.youtube.com/embed/H7lZyzSbNWk?html5=1&rel=0" autoplay scrolling="no" frameborder="0" allowfullscreen>
-                        </iframe>
-                      <![endif]-->
-                    </div>
-                  </div>
-                </div>
-              </div>
-                ##endif
-            </div><!-- col-xs-4 -->
           </div>
         </div>
       </div>
@@ -1401,43 +1374,6 @@ metaOgDescription: "[@L[cds.sales/gd/hosting/web-hosting:og-description]@L]"
         </div>
       </div>
     </section>
-    <section class="section-top-spacing">
-      <div class="container l-main-container">
-        <div class="col-xs-12">
-          <div class="tab-content-column tab-content-right customer-testimonial solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot />]@T]fos/201401/hosting/web-hosting/img/digital_coconut.jpg">
-            ##if(activeLanguageAny([en]) && !isManager())
-            <a class="dc-play-button-wrapper" data-ci="89274" href="#" data-target="#digitalCoconutTestimonial" data-toggle="modal">
-              <span class="dc-play-button"></span><br>
-              [@L[cds.sales/gd/hosting/web-hosting:customer-testimonial-watch-video-11166]@L]
-            </a>
-            ##endif
-            <p>[@L[cds.sales/gd/hosting/web-hosting:customer-testimonial-11166]@L]</p>
-            <p><b>- [@L[cds.sales/gd/hosting/web-hosting:customer-testimonial-name-11166]@L]</b></p>
-            ##if(activeLanguageAny([en-us]))
-            <p class="bottom-reviews-link" ><a class="tab-link" data-ci="89275" href="#reviews">[@L[cds.sales/gd/hosting/web-hosting:customer-testimonial-read-more-reviews-11166]@L]</a></p>
-            ##endif
-          </div>
-        </div>
-      </div>
-        ##if(!isManager())
-      <div class="modal fade videoModal myVideoModal" id="digitalCoconutTestimonial">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="modal-header-close close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            </div>
-            <div class="modal-body office-video-wrapper">
-              <div class="embedVideo" id="ytplayer1" data-id="H7lZyzSbNWk"></div>
-                <!--[if lt IE 8]>
-                  <iframe class="embedVideoIE7" width="853" height="480" src="//www.youtube.com/embed/H7lZyzSbNWk?html5=1&rel=0" autoplay scrolling="no" frameborder="0" allowfullscreen>
-                  </iframe>
-                <![endif]-->
-            </div>
-          </div>
-        </div>
-      </div>
-        ##endif
-    </section>
     <div class="tab-pane " id="features">
       <section>
         <div class="container l-main-container">
@@ -1454,7 +1390,7 @@ metaOgDescription: "[@L[cds.sales/gd/hosting/web-hosting:og-description]@L]"
                 ##endif
                 <div class="badge badge-small badge-important">[@L[cds.sales/gd/hosting/web-hosting:features-tab-fastest-load-times-11166]@L]</div>
                 <h3 class="tab-content-title">[@L[cds.sales/gd/hosting/web-hosting:features-tab-load-time-title-11166]@L]</h3>
-                <p>[@L[cds.sales/gd/hosting/web-hosting:features-tab-first-load-time-text-11166]@L]</p>
+                <p>[@L[cds.sales/gd/hosting/web-hosting:features-tab-first-load-time-text-25276]@L]</p>
                 <ul>
                   <li>[@L[cds.sales/gd/hosting/web-hosting:features-tab-load-time-bullet1-11166]@L]</li>
                   <li>[@L[cds.sales/gd/hosting/web-hosting:features-tab-load-time-bullet2-11166]@L]</li>
@@ -1476,9 +1412,9 @@ metaOgDescription: "[@L[cds.sales/gd/hosting/web-hosting:og-description]@L]"
           </div>
           <div class="row tab-content">
             <div class="col-xs-12">
-              <div class="grid-column tab-content-column tab-content-left tab-content-easy-web-hosting solazy" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/hosting/web-hosting/img/dashboard.jpg" data-sl-method="background" data-sl-condition="#features|display:block">
-                <h3 class="tab-content-title">[@L[cds.sales/gd/hosting/web-hosting:features-tab-easy-title-11166]@L]</h3>
-                <p>[@L[cds.sales/gd/hosting/web-hosting:features-tab-first-easy-text-11166]@L]</p>
+              <div class="grid-column tab-content-column tab-content-left tab-content-easy-web-hosting solazy" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/hosting/web-hosting/img/server_scalable.jpg" data-sl-method="background" data-sl-condition="#features|display:block">
+                <h3 class="tab-content-title">[@L[cds.sales/gd/hosting/web-hosting:features-tab-scalable-resources-title-25276]@L]</h3>
+                <p>[@L[cds.sales/gd/hosting/web-hosting:features-tab-scalable-resources-text-25276]@L]</p>
               </div>
             </div>
           </div>
@@ -1585,7 +1521,7 @@ metaOgDescription: "[@L[cds.sales/gd/hosting/web-hosting:og-description]@L]"
                   ##endif
                   <div class="badge badge-small badge-important">[@L[cds.sales/gd/hosting/web-hosting:features-tab-fastest-load-times-11166]@L]</div>
                   <h3 class="tab-content-title">[@L[cds.sales/gd/hosting/web-hosting:features-tab-load-time-title-11166]@L]</h3>
-                  <p>[@L[cds.sales/gd/hosting/web-hosting:features-tab-first-load-time-text-11166]@L]</p>
+                  <p>[@L[cds.sales/gd/hosting/web-hosting:features-tab-first-load-time-text-25276]@L]</p>
                   <ul>
                     <li>[@L[cds.sales/gd/hosting/web-hosting:features-tab-load-time-bullet1-11166]@L]</li>
                     <li>[@L[cds.sales/gd/hosting/web-hosting:features-tab-load-time-bullet2-11166]@L]</li>
@@ -1607,9 +1543,9 @@ metaOgDescription: "[@L[cds.sales/gd/hosting/web-hosting:og-description]@L]"
             </div>
             <div class="row tab-content">
               <div class="col-xs-12">
-                <div class="grid-column tab-content-column tab-content-left tab-content-easy-web-hosting solazy" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/hosting/web-hosting/img/dashboard.jpg" data-sl-method="background" data-sl-condition="#features|display:block">
-                  <h3 class="tab-content-title">[@L[cds.sales/gd/hosting/web-hosting:features-tab-easy-title-11166]@L]</h3>
-                  <p>[@L[cds.sales/gd/hosting/web-hosting:features-tab-first-easy-text-11166]@L]</p>
+                <div class="grid-column tab-content-column tab-content-left tab-content-easy-web-hosting solazy" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/hosting/web-hosting/img/server_scalable.jpg" data-sl-method="background" data-sl-condition="#features|display:block">
+                  <h3 class="tab-content-title">[@L[cds.sales/gd/hosting/web-hosting:features-tab-scalable-resources-title-25276]@L]</h3>
+                  <p>[@L[cds.sales/gd/hosting/web-hosting:features-tab-scalable-resources-text-25276]@L]</p>
                 </div>
               </div>
             </div>
@@ -3010,7 +2946,7 @@ metaOgDescription: "[@L[cds.sales/gd/hosting/web-hosting:og-description]@L]"
                                             <td class="category-text sp" colspan="5">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-11166]@L]</td>
                                         </tr>
                                         <tr class="standard-row">
-                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-core-features-free-domain-11166]@L]</td>
+                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-free-domain-11166]@L]</td>
                                             <td class="edu">
                                                 <span class="orange-check"></span>
                                             </td>
@@ -3663,6 +3599,7 @@ metaOgDescription: "[@L[cds.sales/gd/hosting/web-hosting:og-description]@L]"
                                             <ul>
                                                 <li>[@L[cds.sales/gd/hosting/web-hosting:platforms-tab-cpanel-module-panel-bullet1-11166]@L]</li>
                                                 <li>[@L[cds.sales/gd/hosting/web-hosting:platforms-tab-cpanel-module-panel-bullet2-11166]@L]</li>
+                                                <li>[@L[cds.sales/gd/hosting/web-hosting:platforms-tab-cpanel-module-panel-bullet3-25276]@L]</li>
                                                 <li>[@L[cds.sales/gd/hosting/web-hosting:platforms-tab-cpanel-module-panel-bullet3-11166]@L]</li>
                                                 <li>[@L[cds.sales/gd/hosting/web-hosting:platforms-tab-cpanel-module-panel-bullet4-11166]@L]</li>
                                             </ul>
@@ -4080,7 +4017,6 @@ metaOgDescription: "[@L[cds.sales/gd/hosting/web-hosting:og-description]@L]"
           if((col[0].id == 'starter'))
           {
             $('#all-plans-include').css({'height':col.outerHeight()+'px'});
-            $('#digital-coconut').css({'height':col.outerHeight()+'px'});
           }
 
     }; /* end GDSideBySideAlign.prototype.init */
@@ -4096,8 +4032,11 @@ metaOgDescription: "[@L[cds.sales/gd/hosting/web-hosting:og-description]@L]"
 
     // load the plugin
     $(document).ready(function(){
-      $('[data-gd-sidebysidealign]').gdSideBySideAlign();
-      $('.dc-play-button-wrapper').solazyVideo();
+      $('#plans-pricing [data-gd-sidebysidealign]').gdSideBySideAlign();
+      $('a[data-toggle="tab"]').on('shown.bs.tab',function(e){
+        var target = $(e.target).data('gd-sidebyside-target');
+        $(target + ' [data-gd-sidebysidealign]').gdSideBySideAlign();
+      });
 
     });
 
