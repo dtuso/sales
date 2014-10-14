@@ -1,8 +1,8 @@
 ---
 location: sales/servers
-id:   541223d0f778fc0f24cc8f26
-name: GCE-28157
-comments: Updated OG URL
+id: 5435bcaaf778fc30f4905728
+name: GCE-29487
+comments: Rainier FF - Remove Reseller Hosting and Managed Hosting from Hosting and Server Category pages
 cssVersionOverride: 2
 ---
 {% extends 'layouts/base.html' %} 
@@ -40,8 +40,6 @@ cssVersionOverride: 2
                 <ul class="list-green">
                     <li class="list-green hnb-16-reg-white">[@L[cds.sales/gd/product-listing/servers:choosing-list-1]@L]</li>
                     <li class="list-green hnb-16-reg-white">[@L[cds.sales/gd/product-listing/servers:choosing-list-2]@L]</li>
-                    <li class="list-green hnb-16-reg-white">[@L[cds.sales/gd/product-listing/servers:choosing-list-3]@L]</li>
-                    <li class="list-green hnb-16-reg-white">[@L[cds.sales/gd/product-listing/servers:choosing-list-4]@L]</li>
                     <li class="list-green hnb-16-reg-white">[@L[cds.sales/gd/product-listing/servers:choosing-list-5]@L]</li>
                 </ul>
                 <p class="hnb-24-cond-bold-white center upper">[@L[cds.sales/gd/product-listing/servers:learn-more-servers]@L]</p>
@@ -104,61 +102,6 @@ cssVersionOverride: 2
         <div class = "l-main-container container">
             <div class="col-xs-5 section-left">
                 <div class="">
-                    <p class="hnb-48-thin center section-title">[@L[cds.sales/gd/product-listing/servers:managed-hosting-title]@L]</p>
-                    <div class="managed-hosting-sprite sprite solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/hosting/servers/img/sprite_server_product.png"></div>
-                    <p class="hnb-18-reg center section-perfect">[@L[cds.sales/gd/product-listing/servers:managed-hosting-perfect]@L]</p>                    
-                </div>
-            </div>
-            <div class="col-xs-7 section-right">
-                <div class="section-description">
-                    <p class="hnb-16-bold">[@L[cds.sales/gd/product-listing/servers:power-dedicated]@L]</p>
-                    <p class="hnb-16-reg">[@L[cds.sales/gd/product-listing/servers:managed-hosting-description]@L]</p>
-                    <ul class="list-green">
-                        <li class="content-text list-green">[@L[cds.sales/gd/product-listing/servers:managed-hosting-list-1]@L]</li>
-                        <li class="content-text list-green">[@L[cds.sales/gd/product-listing/servers:managed-hosting-list-2]@L]</li>
-                        <li class="content-text list-green">[@L[cds.sales/gd/product-listing/servers:managed-hosting-list-3]@L]</li>
-                    </ul>
-                    <p class="hnb-16-reg">[@L[cds.sales/gd/product-listing/servers:managed-hosting-best]@L]</p>
-                </div>
-                <div class="pricing">
-                        <p class="starting-at">[@L[cds.sales/gd/product-listing/servers:starting-at]@L]</p>
-                        <p class="hnb-34-bold-orange" id="managed-hosting-price"><span id="addon-one">[@T[productprice:<current productid="1219" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span id="addon-two">[@T[productprice:<current productid="2754" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span id="product-price">[@T[productprice:<current productid="697" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span> [@L[cds.sales/gd/product-listing/servers:mo]@L] </p>
-                    </div>
-                    <div class="learn-more-button-div">
-                        <a class="btn btn-warning btn-lg hnb-16-reg-white learn-more-button" id="learnmore-managed" href="[@T[link:<relative path='~/hosting/managed-hosting.aspx' secure='true'><param name='ci' value='92464' /></relative>]@T]" data-ci="92464" > [@L[cds.sales/gd/product-listing/servers:learn-more]@L] </a>
-                    </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="grey-bg section-padding">
-        <div class = "l-main-container container">            
-            <div class="col-xs-7 section-left">
-                <div class="section-description">
-                    <p class="hnb-16-bold">[@L[cds.sales/gd/product-listing/servers:sell-hosting]@L]</p>
-                    <p class="hnb-16-reg">[@L[cds.sales/gd/product-listing/servers:resller-hosting-description]@L]</p>
-                </div>
-                <div class="pricing">
-                        <p class="starting-at">[@L[cds.sales/gd/product-listing/servers:starting-at]@L]</p>
-                        <p class="hnb-34-bold-orange">[@T[productprice:<current productid="1763" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T][@L[cds.sales/gd/product-listing/servers:mo]@L] </p>
-                </div>
-                <div class="learn-more-button-div">
-                        <a class="btn btn-warning btn-lg hnb-16-reg-white learn-more-button" id="learnmore-reseller" href="[@T[link:<relative path='~/hosting/reseller-hosting.aspx' secure='true'><param name='ci' value='92466' /></relative>]@T]" data-ci="92466" > [@L[cds.sales/gd/product-listing/servers:learn-more]@L] </a>
-                </div>
-            </div>
-            <div class="col-xs-5 section-right">
-                <div class="">
-                    <p class="hnb-48-thin center section-title">[@L[cds.sales/gd/product-listing/servers:reseller-hosting-title]@L]</p>
-                    <div class="reseller-hosting-sprite sprite solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/hosting/servers/img/sprite_server_product.png"></div>
-                    <p class="hnb-18-reg center">[@L[cds.sales/gd/product-listing/servers:reseller-hosting-perfect]@L]</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="white-bg section-padding">
-        <div class = "l-main-container container">
-            <div class="col-xs-5 section-left">
-                <div class="">
                     <p class="hnb-48-thin center section-title">[@L[cds.sales/gd/product-listing/servers:dedicated-ip-title]@L]</p>
                     <div class="dedicated-ip-sprite sprite solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/hosting/servers/img/sprite_server_product.png"></div>
                     <p class="hnb-18-reg center section-perfect">[@L[cds.sales/gd/product-listing/servers:dedicated-ip-perfect]@L]</p>
@@ -179,6 +122,7 @@ cssVersionOverride: 2
             </div>
         </div>
     </section>
+
     <section class="dark-grey-bg button-section">
         <div class="l-main-container container button-container">
             <div class="col-xs-6 left-button-div">
