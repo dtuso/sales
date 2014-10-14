@@ -1,8 +1,8 @@
 ---
 location: localization/sales/gd/domains/domain-name-search/en
-id: 54208788f778fc1c903fe75b
-name: GCE-28603
-comments: Merchandising Updates 9/30
+id: 535add209faf701884437e3e
+name: GCE-29696
+comments: Merchandising Updates 10/14
 ---
 {% include 'modules/doc-block.html' %}
 <!-- DOC BLOCK (DO NOT REMOVE)
@@ -22,10 +22,10 @@ comments: Merchandising Updates 9/30
       Adam Smith <absmith@godaddy.com>
 
     DRAFT DETAILS:
-      Modified Date:  2014-09-22 2:52:38 pm
-      Created By:     Pooja Singhvi<psinghvi@godaddy.com>
-      JIRA Ticket:    GCE-28603
-      Comments:       Merchandising Updates 9/30
+      Modified Date:  2014-10-06 12:42:33 pm
+      Created By:     Pooja Singhvi <psinghvi@godaddy.com>
+      JIRA Ticket:    GCE-29696
+      Comments:       Merchandising Updates 10/14
       
 
 
@@ -449,6 +449,28 @@ Say hello with <strong>.social</strong>
 <strong>.global</strong> says you're everywhere.
 <phrase key="PodDotAttorneyText" />
 Make your case with <strong>.attorney</strong>
+<phrase key="PodDotChurchText" />
+Bring your <strong>.church</strong> together online.
+<phrase key="PodDotBusinessText" />
+<strong>.business</strong> means commerce
+<phrase key="PodDotBoutiqueText" />
+<strong>.boutique</strong> says you’re exclusive
+<phrase key="PodDotGuideText" />
+Lead the way with <strong>.guide</strong>
+<phrase key="PodDotCoInText" />
+<strong>.co.in</strong> is the preferred option for India businesses.
+<phrase key="PodDotLawyerText" />
+<strong>.lawyer</strong> says you know the law.
+<phrase key="PodDotEuNewText" />
+Conquer Europe with <strong>.eu</strong>
+<phrase key="TldDotGuide" />
+<strong>.guide</strong>
+<phrase key="TldDotBoutique" />
+<strong>.boutique</strong>
+<phrase key="TldDotBusiness" />
+<strong>.business</strong>
+<phrase key="TldDotChurch" />
+<strong>.church</strong>
 <phrase key="TldDotHelp" />
 <strong>.help</strong>
 <phrase key="TldDotOrg" />
@@ -569,26 +591,32 @@ Make your case with <strong>.attorney</strong>
 <strong>.attorney</strong>
 <phrase key="TldDotSocial" />
 <strong>.social</strong>
+<phrase key="TldDotWeb" />
+<strong>.web</strong>
+<phrase key="TldDotInfo" />
+<strong>.info</strong>
 <phrase key="CarouselSlide1Default" />
-Get a web address that tells the world what you do. New domains available now: <strong>.club</strong>, <strong>.today</strong>, <strong>.rocks</strong>, <strong>.vegas</strong> and <strong>.lawyer</strong>. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a> 
+Get a web address that tells the world what you do. New domains available now: <strong>.attorney</strong>, <strong>.rocks</strong>, <strong>.club</strong>, <strong>.xyz</strong> and <strong>.today</strong>. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a> 
 <phrase key="CarouselSlide1AU" />
 New domains are here! <strong>.TIPS</strong>, <strong>.GURU</strong>, <strong>.TODAY</strong> are now available. Plus, pre-register <strong>.CLUB</strong>, <strong>.REVIEWS</strong>, <strong>.NINJA</strong> and more. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Get yours now</a>
 <phrase key="CarouselSlide1DE" />
-Get a web address that tells the world what you do or where you are. New domains available now: <strong>.kaufen</strong>, <strong>.london</strong>, <strong>.club</strong> and <strong>.solutions</strong>. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a> 
+Get a web address that tells the world what you do or where you are. New domains available now: <strong>.immo</strong>, <strong>.london</strong>, <strong>.guide</strong>, <strong>.club</strong> and <strong>.kaufen</strong>. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a> 
 <phrase key="CarouselSlide1ES" />
-Get a web address that tells the world what you do. New domains available now: <strong>.club</strong>, <strong>.tips</strong>, <strong>.guru</strong> and <strong>.company</strong>. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a>
+Get a web address that tells the world what you do. New domains available now: <strong>.club</strong>, <strong>.digital</strong>, <strong>.tips</strong> and <strong>.guru</strong>. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a>
 <phrase key="CarouselSlide1UK" />
-Get a web address that tells the world what you do or where you are. New domains available now: <strong>.london</strong>, <strong>.club</strong>, <strong>.today</strong>, <strong>.company</strong> and <strong>.guru</strong>. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a>
+Get a web address that tells the world what you do or where you are. New domains available now: <strong>.london</strong>, <strong>.club</strong>, <strong>.today</strong>, <strong>.website</strong> and <strong>.global</strong>. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a>
+<phrase key="CarouselSlide1MY" />
+Get a web address that tells the world what you do. New domains available now: <strong>.club</strong>, <strong>.today</strong>, <strong>.email</strong> and <strong>.guide</strong>. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a> 
 <phrase key="CarouselSlide1BR" />
 Get a web address that tells the world what you do. New domains available now: <strong>.club</strong>, <strong>.today</strong>, <strong>.rocks</strong> and <strong>.lawyer</strong>. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a> 
 <phrase key="CarouselSlide2Default" />
-SAVE 30% on new domains: <strong>.global</strong>, <strong>.email</strong>, <strong>.vegas</strong>, <strong>.guru</strong> and more.<span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Search for your perfect domain name now!</a>
+SAVE 30% on new domains: <strong>.global</strong>, <strong>.network</strong>, <strong>.business</strong>, <strong>.army</strong>, <strong>.photo</strong> and more.<span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88004" /></relative>]@T]">Search for your perfect domain name now!</a>
 <phrase key="CarouselSlide2UK" />
-Set your business on its path to glory with your own <strong>.company</strong>, <strong>.email</strong>, <strong>.expert</strong> or <strong>.london</strong><span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a>
+"Set your business on its path to glory with your own <strong>.company</strong>, <strong>.email</strong>, <strong>.guide</strong> or <strong>.london</strong>."<span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88004" /></relative>]@T]">Find yours now!</a>
 <phrase key="CarouselSlide2DE" />
-Get a domain that tells the world what you do. <strong>.club</strong>, <strong>.company</strong>, <strong>.email</strong>, <strong>.haus</strong> and hundreds more are available now.<span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Get yours today!</a>
+Get a domain that tells the world what you do. <strong>.club</strong>, <strong>.company</strong>, <strong>.email</strong>, <strong>.haus</strong> and hundreds more are available now.<span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88004" /></relative>]@T]">Get yours today!</a>
 <phrase key="CarouselSlide2FR" />
-Get a web address that tells the world what you do. <strong>.club</strong>, <strong>.expert</strong>, <strong>.maison</strong>, <strong>.solutions</strong> and hundreds more are available now. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours today!</a>
+Get a web address that tells the world what you do. <strong>.club</strong>, <strong>.expert</strong>, <strong>.maison</strong>, <strong>.solutions</strong> and hundreds more are available now. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88004" /></relative>]@T]">Find yours today!</a>
 <phrase key="CarouselSlide2IN" />
 [@T[companyname:name]@T]'s competitive pricing and excellent customer service personalized to my business reminds me every day that I made the right decision.
 <phrase key="CarouselSlide3Default" />
@@ -597,3 +625,5 @@ SAVE up to 50% or more when you get online today with these popular domains: <a 
 SAVE up to 50% or more when you get online today with these popular domains: <a data-ci="88402" href="[@T[link:<relative path="/tlds/com"></relative>]@T]"><strong>.com</strong></a>, <a data-ci="91412" href="[@T[link:<relative path="/tlds/net"></relative>]@T]"><strong>.net</strong></a>, <a data-ci="88582" href="[@T[link:<relative path="/tlds/co-domain"></relative>]@T]"><strong>.co</strong></a>, <a data-ci="88404" href="[@T[link:<relative path="/tlds/org.aspx"></relative>]@T]"><strong>.org</strong></a>, <a data-ci="90888" href="[@T[link:<relative path="/tlds/me"></relative>]@T]"><strong>.me</strong></a>, <a data-ci="88401" href="[@T[link:<relative path="/tlds/biz.aspx"></relative>]@T]"><strong>.biz</strong></a> and <a data-ci="90058" href="[@T[link:<relative path="/tlds/us.aspx"></relative>]@T]"><strong>.us</strong></a>
 <phrase key="CarouselSlide3AU" />
 It's Go Time! Get online now with your own domain name. Save 50% and more on <a data-ci="88402" href="[@T[link:<relative path="/tlds/com"></relative>]@T]"><strong>.com</strong></a>, <a data-ci="88582" href="[@T[link:<relative path="/tlds/co-domain"></relative>]@T]"><strong>.co</strong></a>, <a data-ci="88404" href="[@T[link:<relative path="/tlds/org.aspx"></relative>]@T]"><strong>.org</strong></a> and <a data-ci="90888" href="[@T[link:<relative path="/tlds/me"></relative>]@T]"><strong>.me</strong></a>.
+<phrase key="CarouselSlide3ES" />
+SAVE up to 50% or more when you get online today with these popular domains:<a data-ci="88402" href="[@T[link:<relative path="/tlds/com"></relative>]@T]"><strong>.com</strong></a>, <a data-ci="91412" href="[@T[link:<relative path="/tlds/net"></relative>]@T]"><strong>.net</strong></a>, <a data-ci="88582" href="[@T[link:<relative path="/tlds/co-domain"></relative>]@T]"><strong>.co</strong></a>, <a data-ci="88404" href="[@T[link:<relative path="/tlds/org.aspx"></relative>]@T]"><strong>.org</strong></a>, <a data-ci="90888" href="[@T[link:<relative path="/tlds/me"></relative>]@T]"><strong>.me</strong></a>, <a data-ci="88401" href="[@T[link:<relative path="/tlds/biz.aspx"></relative>]@T]"><strong>.biz</strong></a> and <a data-ci="93946" href="[@T[link:<relative path="/tlds/eu-domain"></relative>]@T]"><strong>.eu</strong></a>
