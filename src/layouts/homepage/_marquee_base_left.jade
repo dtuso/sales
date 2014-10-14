@@ -23,8 +23,8 @@ div.gdhp-marquee.js-gdhpclick(id=marquee.marqID,data-url!=marquee.dataUrl)
       div.btn-wrap
         span(id=marquee.marqID + '-btn',class=marquee.buttonCssClasses)= marquee.buttonText
 script(type='text/javascript').
-  jQuery(window).load(function () {
-    jQuery('.gdhp-marquee-text-left,.gdhp-marquee-text-right').bigtext();
-    jQuery('.gdhp-marquee-text-left,.gdhp-marquee-text-right').removeClass('gdhp-hidden');
+  $(window).load(function () {
+    $('.gdhp-marquee-text-left,.gdhp-marquee-text-right').bigtext();
+    $('.gdhp-marquee-text-left,.gdhp-marquee-text-right').removeClass('gdhp-hidden');
   });
 // end marquee section

@@ -1,0 +1,19 @@
+---
+location: localization/sales/homepage/marquee/start-o365/en
+id: false
+name: GCE-2664
+---
+<phrase key="start-o365-headline" />
+YOU STILL HAVE INACTIVE
+<phrase key="start-o365-maintext" />
+OFFICE 365 ACCOUNTS.
+<phrase key="start-o365-subtext" />
+PUT THOSE SLACKERS
+<phrase key="start-o365-subtext2" />
+<span class="rebrand-dash">&mdash;&mdash;&mdash;&mdash;</span> TO WORK.
+<phrase key="active-o365-headline-rt" />
+ACTIVATE
+<phrase key="active-o365-maintext-rt" />
+OFFICE 365 EMAIL
+<phrase key="active-o365-btn" />
+START NOW
