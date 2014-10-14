@@ -1,9 +1,9 @@
 ---
 location: sales/ssl/ssl-certificates-config.aspx
 url: http://www.dev-godaddy.com/ssl/ssl-certificates-config.aspx
-id: 5436c4bdf778fc2c9c080599
-name: Pro ITC Update
-comments: Pro ITC Update
+id: 543d5714f778fc233071c976
+name: Update Config Page
+comments: Fix Sitelock Price Wrapping Issue
 assetPath: false
 ---
 ##if(false)
@@ -314,7 +314,7 @@ var PlanConfig = {
     var mgrNumber = $('#mgrNumber').val();
 
     
-    url += '/add'; //action
+    url += '/update'; //action
     if(IsProPage()) {
       url += '/pro_SSL'; //itc code for pro
     }
@@ -334,11 +334,36 @@ var PlanConfig = {
 
     $.getJSON(url, function (data) {
       if (data != 'fail') {
+        if(IsProPage()) {
+         ##if(isManager())
+          window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" ><param name="pro" value="1" /></external>]@T]';
+         ##else
+          window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" ><param name="pro" value="1" /></external>]@T]';
+         ##endif
+       }
+       else {
         ##if(isManager())
-        window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]';
-        ##else
-        window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]';
-        ##endif
+          window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" ></external>]@T]';
+         ##else
+          window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" ></external>]@T]';
+         ##endif
+       }
+      }
+      else {
+        if(IsProPage()) {
+         ##if(isManager())
+          window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" ><param name="pro" value="1" /></external>]@T]';
+         ##else
+          window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" ><param name="pro" value="1" /></external>]@T]';
+         ##endif
+       }
+       else {
+        ##if(isManager())
+          window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" ></external>]@T]';
+         ##else
+          window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" ></external>]@T]';
+         ##endif
+       }
       }
     });
   }

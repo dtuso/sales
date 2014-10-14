@@ -1,0 +1,43 @@
+<div class="table-top-section">
+  <div class="difference-text">
+    <h3>Take a peek under the hood</h3>
+    <p>If you're a developer, IT professional or just a self-taught web pro, here's your opportunity to dig into the details and see what makes our Managed WordPress incredibly fast, secure and easy to use</p>
+  </div>
+  <div class="ovt-plan-wrapper">
+    <div class="plan-info">
+      <p class="plan-name">Starter Plan</p>
+      <p class="plan-price-text"><span class="starting-at">Starting at</span> <span class="price">$6.29</span><span class="monthly">/month</span></p>
+    </div>
+    <div class="purchase-buttom">
+      <button>ADD TO CART</button>
+    </div>
+  </div>
+</div>
+<table>
+  {% for spec in specsSections %}
+    <tr>
+      <td colspan='7' class='table-section-header'>{{spec.sectionName}}</td>
+    </tr>
+    {% for td in spec.row %}
+      <tr>
+        <td colspan='3'>{{td.left}}</td>
+        <td colspan='4'>{{td.right}}</td>
+      </tr>
+    {% endfor %}
+  {% endfor %}
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

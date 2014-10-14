@@ -66,6 +66,12 @@
           { "Description" : "Slide .NET Link" }
         ]
       },
+      { "Slide .EU Link" : [
+          { "ITC ID" : "93946" },
+          { "ITC Code" : "" },
+          { "Description" : "Slide .EU Link" }
+        ]
+      },
       { "Slide .ORG Link" : [
           { "ITC ID" : "88404" },
           { "ITC Code" : "" },
@@ -120,6 +126,18 @@
           { "ITC ID" : "88012" },
           { "ITC Code" : "dpp_absol1" },
           { "Description" : "Top Pod - .guru Link" }
+        ]
+      },
+      { "Top TLD Pods- .LAWYER link" : [
+          { "ITC ID" : "93464" },
+          { "ITC Code" : "dpp_absol1" },
+          { "Description" : "Top Pod - .LAWYER Link" }
+        ]
+      },
+      { "Top TLD Pods- .EU link" : [
+          { "ITC ID" : "89736" },
+          { "ITC Code" : "dpp_absol1" },
+          { "Description" : "Top Pod - .EU Link" }
         ]
       },
       { "Top TLD Pods - .in link" : [
@@ -272,6 +290,54 @@
           { "ITC ID" : "88399" },
           { "ITC Code" : "" },
           { "Description" : "Buttom TLD Pods - .GURU" }
+        ]
+      },
+       { "Buttom TLD Pods - .NET" : [
+          { "ITC ID" : "91412" },
+          { "ITC Code" : "" },
+          { "Description" : "Buttom TLD Pods - .NET" }
+        ]
+      },
+      { "Buttom TLD Pods - .BUSINESS" : [
+          { "ITC ID" : "93954" },
+          { "ITC Code" : "" },
+          { "Description" : "Buttom TLD Pods - .BUSINESS" }
+        ]
+      },
+      { "Buttom TLD Pods - .CHURCH" : [
+          { "ITC ID" : "93955" },
+          { "ITC Code" : "" },
+          { "Description" : "Buttom TLD Pods - .BUSINESS" }
+        ]
+      },
+      { "Buttom TLD Pods - .GUIDE" : [
+          { "ITC ID" : "90588" },
+          { "ITC Code" : "" },
+          { "Description" : "Buttom TLD Pods - .GUIDE" }
+        ]
+      },
+      { "Buttom TLD Pods - .NET" : [
+          { "ITC ID" : "91412" },
+          { "ITC Code" : "" },
+          { "Description" : "Buttom TLD Pods - .NET" }
+        ]
+      },
+       { "Buttom TLD Pods - .INFO" : [
+          { "ITC ID" : "93956" },
+          { "ITC Code" : "" },
+          { "Description" : "Buttom TLD Pods - .INFO" }
+        ]
+      },
+      { "Buttom TLD Pods - .WEBSITE" : [
+          { "ITC ID" : "90328" },
+          { "ITC Code" : "" },
+          { "Description" : "Buttom TLD Pods - .WEBSITE" }
+        ]
+      },
+      { "Buttom TLD Pods - .CO" : [
+          { "ITC ID" : "89737" },
+          { "ITC Code" : "" },
+          { "Description" : "Buttom TLD Pods - .CO" }
         ]
       },
        { "Buttom TLD Pods - .vegas" : [

@@ -1,6 +1,6 @@
-## UPDATE (June 18, 2014)
+## UPDATE (October 13, 2014)
 
-Dependencies were being included with the repo and so didn't need to be installed separately. This was becoming more trouble than it was worth. We are back to installing dependencies via ```npm install```.
+An additional feature was added to cds-lib.  This feature will create a file and folder structure if a file does not exist in CDS instead of displaying an error.  To have access to this new feature you will want to backup and remove your old node modules directory or just the cds-lib directory which is located within the cdsm node modules and complete a npm install.
 
 
 ---
