@@ -1,22 +1,22 @@
 ---
 location: localization/sales/gd/hosting/web-hosting/en
-id: 5432b232f778fc25d4961ed9
-name: GCE-24862
-comments: Fixed typo on compare plans tab.
+id: 5436a50ef778fc2c9c080598
+name: GCE-25276
+comments: Rainer branding and some text changes.
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="page-title" />
 Web Hosting | Lightning Fast Hosting & One Click Setup  - [@T[companyname:nameseotitle]@T]
 <phrase key="page-title-es" />
-Web Hosting | Spanish Friendly Web Hosting Provider - [@T[companyname:name]@T]
+Web Hosting | Spanish Friendly Web Hosting Provider - [@T[companyname:nameseotitle]@T]
 <phrase key="page-title-au" />
-Web Hosting | Reliable Hosting Solutions for Australia - [@T[companyname:name]@T]
+Web Hosting | Reliable Hosting Solutions for Australia - [@T[companyname:nameseotitle]@T]
 <phrase key="page-title-ca" />
-Web Hosting | Canada's Premier Web Hosting Provider - [@T[companyname:name]@T]
+Web Hosting | Canada's Premier Web Hosting Provider - [@T[companyname:nameseotitle]@T]
 <phrase key="page-title-in" />
-Web Hosting | India's World Class Hosting Provider - [@T[companyname:name]@T]
+Web Hosting | India's World Class Hosting Provider - [@T[companyname:nameseotitle]@T]
 <phrase key="page-title-uk" />
-Web Hosting | The UK's Premier Web Hosting Provider - [@T[companyname:name]@T]
+Web Hosting | The UK's Premier Web Hosting Provider - [@T[companyname:nameseotitle]@T]
 <phrase key="meta-description" />
 [@T[companyname:name]@T]'s Reliable Web Hosting keeps your website up and running. Featuring 99.9% uptime guarantee and award winning 24/7 tech support!
 <phrase key="meta-keywords" />
@@ -175,6 +175,8 @@ A [@T[productprice:<current productid="3604" dropdecimal="false" period="yearly"
 A [@T[productprice:<current productid="3604" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T] value, your [@T[companyname:name]@T] SSL certificate keeps payments and customer data secure, and helps increase your search rankings on Google. Take advantage of 256-bit encryption and 99.9% browser recognition. The SSL Certificate is free for 1 year with purchase. After the initial free year, SSL will automatically renew at the then-current price until cancelled. You may cancel automatic renewal at any time in your GoDaddy account. 
 <phrase key="unlimited-malware" />
 <strong>Malware Scanner</strong> <span class="g-toolTip"><span class="left">FREE one-page Malware Scanner monitors your site to ensure hackers haven't infected it with malicious links. Hackers target legitimate business sites to spread worms, Trojans, viruses and spyware. Malware Scanner will notify you if malicious links exist and provide instruction on how to remove them.</span></span>
+<phrase key="unlimited-processing-memory-25276" />
+<a class="isToolTip" data-toggle="tooltip" title="" data-original-title="Available Resources:<br><br>Ultimate Plan<br>2 CPU, 1 MB RAM, 125 Entry Processes<br><br>Economy & Deluxe<br>1 CPU, 512 MB RAM, 100 Entry Processes">2X Processing Power & Memory</a><br>(Available for Linux/cPanel only)
 <phrase key="plan-domain" />
 <strong>Free Domain</strong> <p class="g-toolTip">Restrictions apply <span>One FREE .COM, .CO, .NET or .ORG with purchase of a new 12-, 24- or 36-month plan. Plus ICANN fee of [@T[currencyprice:<price usdamount="18" dropdecimal="false" />]@T] per domain name per year. You must add the domain name into your cart before purchase, and you must select a domain term length equal to or less than the term length of your plan to qualify for the free domain offer. If you purchase a domain name for a term longer than the term of the plan, you will be charged for the additional registration term at the then-current rate. Cannot be used in conjunction with any other offer, sale, discount or promotion. Free domain offer applies only to the initial purchase term. After the initial purchase term, domains purchased through this offer will renew at the then-current renewal price.</span></p>
 <phrase key="plan-domain-in" />
@@ -183,6 +185,8 @@ A [@T[productprice:<current productid="3604" dropdecimal="false" period="yearly"
 Best Value
 <phrase key="secure-tag" />
 Added Security
+<phrase key="secure-tag-25276" />
+More Power and Security
 <phrase key="onSale" />
 On Sale
 <phrase key="save" />
@@ -207,6 +211,8 @@ Save
 60 months
 <phrase key="reg-price" />
 Regular price
+<phrase key="renewal" />
+Renewal
 <phrase key="planbox-cart-btn" />
 Add to Cart
 <phrase key="view-details" />
@@ -221,12 +227,20 @@ Web Hosting
 Looking for hosting that’s easy, reliable and lightning-fast? 
 <phrase key="web-hosting-looking-for-description-11166" />
 Take charge with industry-standard cPanel or Parallels<sup>&reg;</sup> Plesk control panels; 24/7/365 free, support on the phone or online; and 99.9% uptime<sup>*</sup> and money-back guarantees<sup>*</sup>. With our award-winning data center, you’ll know your site is always up and running. GoDaddy Website Hosting is a flexible solution for businesses using a designer to create their website and a powerful option for designers and developers with hundreds of web applications just a click away. 
+<phrase key="web-hosting-looking-for-description-25276" />
+Take charge with industry-standard cPanel or Parallels<sup>&reg;</sup> Plesk control panels, free 24/7 phone or online support and 99.9% uptime* and money-back guarantees*. With our award-winning data center, you’ll know your site is always up and running. Need more CPU, RAM or entry processes? Add them in just one-click.  It’s perfect for businesses using a designer or developer to create their website.
 <phrase key="economy-plan-website-11166" />
 Host a single Website
 <phrase key="economy-plan-starting-at-11166" />
 As low as [@T[productprice:<current productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses"  />]@T]/month
 <phrase key="economy-plan-storage-11166" />
 <b>100 GB</b> Storage
+<phrase key="economy-plan-bandwidth-25276" />
+Unlimited bandwidth
+<phrase key="economy-plan-emails-25276" />
+100 Email Addresses
+<phrase key="economy-plan-domain-25276" />
+Free Domain with annual plan
 <phrase key="economy-plan-core-features-11166" />
 <b>All Core Features</b> listed below
 <phrase key="deluxe-plan-heading-11166" />
@@ -237,6 +251,20 @@ Host unlimited Websites
 As low as [@T[productprice:<current productid="32059" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/month
 <phrase key="deluxe-plan-storage-11166" />
 <a class="isToolTip" data-toggle="tooltip" title="" data-original-title="Our Web Hosting plans are designed to host most personal, small business and organization websites. We don't limit the amount of storage and bandwidth your site can use as long as it complies with our Hosting Agreement. Should your website bandwidth or storage usage present a risk to the stability, performance or uptime of our servers, we will notify you via email and you may be required to upgrade to a Virtual Private Server or Dedicated (Private) Server, or we may restrict the resources your website is using. It’s very rare that a website violates our Hosting Agreement and is typically only seen in sites that use hosting for file sharing or storage."><b>Unlimited</b></a> Storage
+<phrase key="deluxe-plan-bandwidth-25276" />
+Unlimited bandwidth
+<phrase key="deluxe-plan-emails-25276" />
+500 Email Addresses
+<phrase key="deluxe-plan-domain-25276" />
+Free Domain with annual plan
+<phrase key="ultimate-plan-storage-25276" />
+<a class="isToolTip" data-toggle="tooltip" title="" data-original-title="Our Web Hosting plans are designed to host most personal, small business and organization websites. We don't limit the amount of storage and bandwidth your site can use as long as it complies with our Hosting Agreement. Should your website bandwidth or storage usage present a risk to the stability, performance or uptime of our servers, we will notify you via email and you may be required to upgrade to a Virtual Private Server or Dedicated (Private) Server, or we may restrict the resources your website is using. It’s very rare that a website violates our Hosting Agreement and is typically only seen in sites that use hosting for file sharing or storage."><b>Unlimited</b></a> Storage
+<phrase key="ultimate-plan-bandwidth-25276" />
+Unlimited bandwidth
+<phrase key="ultimate-plan-emails-25276" />
+1000 Email Addresses
+<phrase key="ultimate-plan-domain-25276" />
+Free Domain with annual plan
 <phrase key="ultimate-plan-websites-11166" />
 Host unlimited Websites
 <phrase key="ultimate-plan-starting-at-11166" />
@@ -371,6 +399,8 @@ Fast sites = happy visitors
 Fastest load times!
 <phrase key="features-tab-first-load-time-text-11166" />
 Did you know a 1 second delay in your website page load time can cause a <span class="g-toolTip">7% reduction in conversion<span>Source: <a data-ci="89591" href="http://blog.kissmetrics.com/loading-time" target="_BLANK">KISSmetrics</a></span></span>? This can have a huge impact on your bottom line which is why we work hard to maintain top page load times in the industry.
+<phrase key="features-tab-first-load-time-text-25276" />
+Did you know a 1 second delay in your website page load time can cause a <span class="g-toolTip">7% reduction in conversion<span>Source: <a data-ci="89591" href="http://blog.kissmetrics.com/loading-time" target="_BLANK">KISSmetrics</a></span></span>? This can have a huge impact on your bottom line which is why we work hard to maintain industry leading page load times.<br><br>See how we stack up. View on-going hosting performance stats from <a data-ci="89591" href="http://webhosting.cloudspectator.com/summary" target="_BLANK">Cloud Spectator</a>, an independent, unbiased cloud performance research firm.
 <phrase key="features-tab-load-time-bullet1-11166" />
 <a class="isToolTip" data-toggle="tooltip" title="" data-original-title="US comparison 90-day average among top competitors.">Fastest page load times</a> using cPanel for Linux 
 <phrase key="features-tab-load-time-bullet2-11166" />
@@ -387,6 +417,10 @@ Maybe you want to sell products on your website. Try Magento with one-click.
 Powerful hosting made easy
 <phrase key="features-tab-first-easy-text-11166" />
 With its user-friendly control panels featuring cPanel<sup>&reg;</sup> and Parallels Plesk, our Hosting puts you in charge. And thanks to our award-winning data centers, lightning-fast load times and 24/7 monitoring, you know your site will always be safe, secure and online – guaranteed<sup>*</sup>. 
+<phrase key="features-tab-scalable-resources-title-25276" />
+Scalable resources on-demand
+<phrase key="features-tab-scalable-resources-text-25276" />
+When you need more power, level up your CPU, memory, entry processes and I/O with just a click. Access the Stats & Usage dashboard for real-time visibility to your sites’ resource usage. Even get alerts as you approach your limits so you can react quickly and keep your site running at top speed. 
 <phrase key="features-tab-security-title-11166" />
 Award-winning security keeps your site safe
 <phrase key="features-tab-first-security-text-11166" />
@@ -526,6 +560,8 @@ Each Linux plan includes:
 <b>cPanel</b>: Access all the hosting features and settings you need with this industry-standard control panel.
 <phrase key="platforms-tab-cpanel-module-panel-bullet2-11166" />
 <b>CloudLinux</b>: Keep your site online with truly balanced CPU, RAM and Disk IO limits.
+<phrase key="platforms-tab-cpanel-module-panel-bullet3-25276" />
+<b>Resources On-Demand</b>: If you need more power, you can level up your CPU, RAM, Entry Processes and I/O with just a click.
 <phrase key="platforms-tab-cpanel-module-panel-bullet3-11166" />
 <b>CageFS</b>: Protect your Web content 24/7 with this virtualized file system.
 <phrase key="platforms-tab-cpanel-module-panel-bullet4-11166" />
@@ -659,7 +695,7 @@ Server Side Includes (SSI)
 <phrase key="compare-plans-language-support-asp-11166" />
 ASP
 <phrase key="compare-plans-language-support-asp-net-4-11166" />
-ASP.NET v4.0
+ASP.NET v4.0/4.5
 <phrase key="compare-plans-language-support-asp-net-2-3-11166" />
 ASP.NET v2.0/3.0/3.5
 <phrase key="compare-plans-language-support-asp-net-ajax-11166" />
@@ -1010,10 +1046,14 @@ New
 Web Hosting
 <phrase key="mastheadTitle-11166-sideB" />
 Fast, secure, reliable<br> hosting trusted by millions.  
+<phrase key="mastheadTitle-25276" />
+Fast, secure, reliable<br> hosting that grows with your business.  
 <phrase key="mastheadSubTitle" />
 Easy, reliable &amp; always lightning-fast
 <phrase key="mastheadSubTitle-11166-sideB" />
 Industry's <a class="isToolTip" data-toggle="tooltip" title="" data-original-title="US comparison 90-day average among top competitors.">fastest page load times</a>  using cPanel<sup>&reg;</sup> for Linux<br> 99.9% Uptime Guarantee<sup>*</sup>
+<phrase key="mastheadSubTitle-25276" />
+Industry's <a class="isToolTip" data-toggle="tooltip" title="" data-original-title="US comparison 90-day average among top competitors.">leading page load times</a><br> 99.9% Uptime Guarantee<sup>*</sup>
 <phrase key="labelReadReviews" />
 Read Reviews
 <phrase key="starting-at" />
@@ -1050,6 +1090,8 @@ Perfect to get started with a basic site
 Ideal for building and managing multiple sites
 <phrase key="Ultimate-subheader" />
 Great for sites that want additional security
+<phrase key="Ultimate-subheader-25276" />
+Good for higher traffic.  Twice the power, memory, email and more
 <phrase key="one-website" />
 1 Website
 <phrase key="unlimited-websites" />
@@ -1058,5 +1100,9 @@ Unlimited Websites
 <a class="isToolTip" data-toggle="tooltip" title="" data-original-title="Our Web Hosting plans are designed to host most personal, small business and organization websites. We don't limit the amount of storage and bandwidth your site can use as long as it complies with our Hosting Agreement. Should your website bandwidth or storage usage present a risk to the stability, performance or uptime of our servers, we will notify you via email and you may be required to upgrade to a Virtual Private Server or Dedicated (Private) Server, or we may restrict the resources your website is using. It’s very rare that a website violates our Hosting Agreement and is typically only seen in sites that use hosting for file sharing or storage."><strong>Unlimited</strong></a> Bandwidth
 <phrase key="premium-dns-management-tool" />
 <a class="isToolTip" data-toggle="tooltip" title="A [@T[productprice:<current productid="70852" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]/yr value, our Premium DNS makes it easy to resolve common issues that prevent people from accessing your site, improving your overall performance, availability, and security."><strong>Premium DNS</strong></a> Management Tool
+<phrase key="godaddy-pro-get-tech-specs" />
+Designers and developers, get the full tech specs.
+<phrase key="godaddy-pro-learn-more" />
+Learn more
 <phrase key="professional-Hosting-Support" />
 Need help? Call our dedicated Hosting Professionals at
