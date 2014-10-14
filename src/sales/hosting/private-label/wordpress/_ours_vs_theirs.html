@@ -1,0 +1,78 @@
+<div class="table-top-section">
+  <div class="difference-text">
+    <h3>See the difference for yourself</h3>
+    <p>Where you host your WordPress site matters. Our Managed WordPress delivers one of the fastest, most scalable, reliable platforms on the web for up to 75% less than our competitors.</p>
+  </div>
+  <div class="ovt-plan-wrapper">
+    <div class="plan-info">
+      <p class="plan-name">Starter Plan</p>
+      <p class="plan-price-text"><span class="starting-at">Starting at</span> <span class="price">$6.29</span><span class="monthly">/month</span></p>
+    </div>
+    <div class="purchase-buttom">
+      <button>ADD TO CART</button>
+    </div>
+  </div>
+</div>
+<table>
+  <tr>
+    <th colspan='3'></th>
+    <th>Cheap-Custom Registration Starter</th>
+    <th>WP Engine&reg; Personal</th>
+    <th>Pagely&reg; Personal</th>
+    <th>DreamHost&reg; DreamPress</th>
+  </tr>
+  <tr>
+    <td colspan='7' class='table-section-header'> Features</td>
+  </tr>
+  {% for ovt in oursVsTheirsTable %}
+    <tr>
+      <td colspan='3'>{{ovt.features}}</td>
+      {% if ovt.ccrs == true %}
+        <td><span class="check"></span></td>
+      {% elif ovt.ccrs == false %}
+        <td><span class="minus"></span></td>        
+      {% else %}
+        <td><span class="text">{{ovt.ccrs}}</span></td>
+      {% endif %}
+
+      {% if ovt.wpEngine == true %}
+        <td><span class="check"></span></td>
+      {% elif ovt.wpEngine == false %}
+        <td><span class="minus"></span></td>        
+      {% else %}
+        <td><span class="text">{{ovt.wpEngine}}</span></td>
+      {% endif %}
+
+      {% if ovt.pagely == true %}
+        <td><span class="check"></span></td>
+      {% elif ovt.pagely == false %}
+        <td><span class="minus"></span></td>        
+      {% else %}
+        <td><span class="text">{{ovt.pagely}}</span></td>
+      {% endif %}
+
+      {% if ovt.dreamHost == true %}
+        <td><span class="check"></span></td>
+      {% elif ovt.dreamHost == false %}
+        <td><span class="minus"></span></td>        
+      {% else %}
+        <td><span class="text">{{ovt.dreamHost}}</span></td>
+      {% endif %}
+    </tr>
+  {% endfor %}
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
