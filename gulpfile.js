@@ -74,8 +74,8 @@ var paths = {
   rule      : ['./src/sales/**/*.rule'],
   less      : ['./src/sales/**/css/**/*.less'],
   images    : ['./src/sales/**/img/**/*.jpg', './src/sales/**/img/**/*.png'],
-  build     : path.join('./build/sales/',assetSrcPath),
-  assets    : path.join(rootAssetPath,assetSrcPath)
+  build     : path.join('./build/sales/', assetSrcPath),
+  assets    : path.join(rootAssetPath, assetSrcPath)
 };
 
 var swigSetup = function(swig) {
@@ -127,9 +127,12 @@ var getJsonData = function(file) {
 };
 
 var getLocalJson = function(file) {
-  var jsonPath = file.path + '_locals.json';
-  console.log(jsonPath);
-  return require(jsonPath);
+  var jsonPath = path.dirname(file.path) + '/_locals.json';
+  try{ 
+    return require(jsonPath);
+  }catch(ex){
+
+  }
 };
 
 gulp.task('homepage', function() {
@@ -148,7 +151,7 @@ gulp.task('html', function() {
     .pipe(changed(paths.build))
     /*.pipe(debug({verbose: false}));*/
     .pipe(frontMatter({remove:true}))
-    // .pipe(gulpif(localVars, data('./_locals.json')))
+    .pipe(data(getLocalJson))
     .pipe(swig(swigTplOpts))
     .pipe(elevateCss())
     .pipe(elevateJs())

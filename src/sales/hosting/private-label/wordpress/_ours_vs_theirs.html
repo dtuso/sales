@@ -27,6 +27,7 @@
   {% for ovt in oursVsTheirsTable %}
     <tr>
       <td colspan='3'>{{ovt.features}}</td>
+
       {% if ovt.ccrs == true %}
         <td><span class="check"></span></td>
       {% elif ovt.ccrs == false %}
