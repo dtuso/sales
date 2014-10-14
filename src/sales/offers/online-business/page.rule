@@ -6,13 +6,13 @@ notes: Remove the EMEA VAT tax countries when VAT tax works.
 ---
 [
   { 
-    'Type': 'Redirect',
-    'Condition': 'siteContextAny(wwd,br,pl)',
-    'Data': "{ 'Type' : '301', 'Loc': '[@T[link:<relative path=\"~/\" />]@T]' }"
+    "Type": "Redirect",
+    "Condition": "siteContextAny(wwd,br,pl)",
+    "Data": "{ 'Type' : '301', 'Loc': '[@T[link:<relative path=\"~/\" />]@T]' }"
   },
   { 
-    'Type': 'Redirect',
-    'Condition': '(!productIsOffered(99) || countrySiteAny(mx) || countrySiteAny(ie) || countrySiteAny(be) || countrySiteAny(at) || countrySiteAny(fr) || countrySiteAny(de) || countrySiteAny(it) || countrySiteAny(es) || countrySiteAny(se) || countrySiteAny(dk) || countrySiteAny(fi) || countrySiteAny(gr) || countrySiteAny(pl) || countrySiteAny(pt) || countrySiteAny(nl))',
-    'Data': "{ 'Type' : '302', 'Loc': '[@T[link:<relative path=\"~/\" />]@T]' }"
+    "Type": "Redirect",
+    "Condition": "(!productIsOffered(99) || countrySiteAny(mx) || countrySiteAny(ie) || countrySiteAny(be) || countrySiteAny(at) || countrySiteAny(fr) || countrySiteAny(de) || countrySiteAny(it) || countrySiteAny(es) || countrySiteAny(se) || countrySiteAny(dk) || countrySiteAny(fi) || countrySiteAny(gr) || countrySiteAny(pl) || countrySiteAny(pt) || countrySiteAny(nl))",
+    "Data": "{ 'Type' : '302', 'Loc': '[@T[link:<relative path=\"~/\" />]@T]' }"
   }
 ]

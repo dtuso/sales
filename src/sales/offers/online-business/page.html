@@ -322,7 +322,7 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
           </div>
           <div class="top-banner-product-col col-get-started text-center"> 
             <div class="top-package-price price-hide">[@L[cds.sales/offers/online-business:top-banner-monthly-price]@L]</div>
-            <div class="get-started-btn btn btn-warning cta-medium" data-ci="getStartedBtn">[@L[cds.sales/offers/online-business:get-started-banner-get-started]@L]</div>  
+            <div class="get-started-btn btn btn-warning cta-medium" data-ci="94040">[@L[cds.sales/offers/online-business:get-started-banner-get-started]@L]</div>  
             <div class="top-without-package-price price-hide">
               <span class="g-toolTip">
                 [@L[cds.sales/offers/online-business:get-started-banner-up-to-price]@L]
@@ -331,7 +331,7 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
             </div> 
             <div class="top-renewal-disclaimer">
               [@L[cds.sales/offers/online-business:renewal-price-disclaimer]@L]
-              <a class="simple-link" href="#" data-toggle="modal" data-target="#myModal" data-ci="disclaimerLink">[@L[cds.sales/offers/online-business:see-offer-details]@L]</a>              
+              <a class="simple-link" href="#" data-toggle="modal" data-target="#disclaimerModal" data-ci="94042">[@L[cds.sales/offers/online-business:see-offer-details]@L]</a>              
             </div>
           </div>
         </div>
@@ -342,10 +342,10 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
           <div class="find-a-domain">[@L[cds.sales/offers/online-business:search-title]@L]</div>
           <div class="search-result-is-available">[@L[cds.sales/offers/online-business:search-is-available]@L]</div>
           <div class="add-domain-btn-div">
-            <div class="add-domain-btn flt-btn-orng" data-ci="addDomainBtn">[@L[cds.sales/offers/online-business:checkout-now]@L]</div>
+            <div class="add-domain-btn flt-btn-orng" data-ci="92733">[@L[cds.sales/offers/online-business:checkout-now]@L]</div>
           </div>
           <div class="loading add-domain-loading"></div>
-          <div class="search-again" data-ci="searchAgain">[@L[cds.sales/offers/online-business:search-again]@L]</div>
+          <div class="search-again" data-ci="92747">[@L[cds.sales/offers/online-business:search-again]@L]</div>
           <div class="search-result-not-available">[@L[cds.sales/offers/online-business:search-not-available]@L]</div>
           <div class="search-result-invalid">[@L[cds.sales/offers/online-business:domain-is-invalid]@L]</div>
 
@@ -433,7 +433,7 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
 
               </div>
               <div class="search-button-area clearfix">
-                <div class="domain-search-btn flt-btn-grn" data-ci="domainSearchClick">[@L[cds.sales/offers/online-business:search]@L]</div>
+                <div class="domain-search-btn flt-btn-grn" data-ci="92709">[@L[cds.sales/offers/online-business:search]@L]</div>
               </div>
 
             </div>
@@ -614,7 +614,7 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
 
     function domainSearchFormSubmit(e) {
       // Domain Search
-      PlanBox6UI.recordClick(e, got1Page.offersCodes.ci.domainSearchSubmit, $(this)[0]);
+      PlanBox6UI.recordClick(e, '92710', $(this)[0]);
       
       var domaintoremove = $dsd.find('[name="domaintoadd"]').val(),
         domaintoadd = $dsd.find('[name="domaintoadd"]').val(),
@@ -715,14 +715,14 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
       $dsd.find('.add-domain-loading').fadeIn();
       
       var data = {
-        ciCode: got1Page.offersCodes.ci.apiAddCi,
+        ciCode: 92707,
         itcCode: got1Page.offersCodes.itc, 
         planSelected: got1Page.offersCodes.plan,
         addOns: got1Page.offersCodes.addOns
       }
   
-      PlanBox6UI.recordClick(e, got1Page.offersCodes.ci.apiAddCi, $(this)[0]);
-      PlanBox6UI.recordClick(e, got1Page.offersCodes.ci.apiDomainAddToCart, $(this)[0]);
+      PlanBox6UI.recordClick(e, '92707' /*got1Page.offersCodes.ci.apiAddCi*/, $(this)[0]);
+      PlanBox6UI.recordClick(e, '84415' /*got1Page.offersCodes.ci.apiDomainAddToCart*/, $(this)[0]);
 
       PlanConfig.apiPlantoCart(data);
 
@@ -1091,10 +1091,10 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
                 <span class="g-toolTip-tip left">[@L[cds.sales/offers/online-business:bundle-renewal-com]@L]</span>                
               </span>
         </div>
-        <div class="get-started-btn-2 btn btn-warning cta-small" style="cursor:pointer;" data-ci="getStartedBtn">[@L[cds.sales/offers/online-business:get-started-banner-get-started]@L]</div>
+        <div class="get-started-btn-2 btn btn-warning cta-small" style="cursor:pointer;" data-ci="94039">[@L[cds.sales/offers/online-business:get-started-banner-get-started]@L]</div>
         <div class="get-started-renewal-disclaimer">
           [@L[cds.sales/offers/online-business:renewal-price-disclaimer]@L]        
-          <a class="simple-link" href="#" data-toggle="modal" data-target="#myModal" data-ci="disclaimerLink">[@L[cds.sales/offers/online-business:see-offer-details]@L]</a>  
+          <a class="simple-link" href="#" data-toggle="modal" data-target="#disclaimerModal" data-ci="94041">[@L[cds.sales/offers/online-business:see-offer-details]@L]</a>  
         </div>
       </div> <!-- end slide 1 -->
       <div class="got-slide got-slide-2">      
@@ -1124,14 +1124,14 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
   #disclaimers a:active,
   #disclaimers a:hover{color:#7db701}
 
-  #myModal .modal-title {font-size:24px;}
-  #myModal .modal-dialog {width: 600px;}
-  #myModal .modal-body,
-  #myModal .modal-body p {line-height: 1.4em !important; font-size: 16px !important;}
+  #disclaimerModal .modal-title {font-size:24px;}
+  #disclaimerModal .modal-dialog {width: 600px;}
+  #disclaimerModal .modal-body,
+  #disclaimerModal .modal-body p {line-height: 1.4em !important; font-size: 16px !important;}
 
-  #myModal .tlds-br,
-  #myModal .tlds-in,
-  #myModal .tlds-uk {display:none;}
+  #disclaimerModal .tlds-br,
+  #disclaimerModal .tlds-in,
+  #disclaimerModal .tlds-uk {display:none;}
 
 {% endless %}
 </style>
@@ -1142,13 +1142,13 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
   <!-- Page Disclaimer -->
     <div id="disclaimers">
       <p>
-        <a class="simple-link" href="#" data-toggle="modal" data-target="#myModal" data-ci="disclaimerLink">[@L[cds.sales/offers/online-business:disclaimer-modal-link]@L]</a>
+        <a class="simple-link" href="#" data-toggle="modal" data-target="#disclaimerModal" data-ci="92746">[@L[cds.sales/offers/online-business:disclaimer-modal-link]@L]</a>
       </p>
     </div>
   </div>
 </section>
 
-<div class="modal fade" id="myModal">
+<div class="modal fade" id="disclaimerModal">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -1178,16 +1178,7 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
           'name': 'gybo_1yr',
           'plan': 'gybo_1email_1yr',
           'itc': 'slp_GYBO1',
-          'addOns': 'noAddOns',
-          'ci': {
-            'domainSearchClick': '92709',
-            'domainSearchSubmit': '92710',
-            'addDomainBtn': '92733',
-            'apiAddCi': '92707',
-            'apiDomainAddToCart': '84415',
-            'disclaimerLink': '92746',
-            'searchAgain': '92747'
-          }
+          'addOns': 'noAddOns'
         },
         pricing: {
           promo: '[@T[productprice:<current productid="464069" period="monthly" promocode="24681357" />]@T]',
@@ -1229,7 +1220,7 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
             fbiLibCheckQueue();
         });
 
-        populateTldsOnDisclaimerModal('#myModal .modal-body');
+        populateTldsOnDisclaimerModal('#disclaimerModal .modal-body');
       });
 
       function populateTldsOnDisclaimerModal(selector) {
