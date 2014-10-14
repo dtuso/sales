@@ -126,6 +126,12 @@ var getJsonData = function(file) {
   return require(jsonPath);
 };
 
+var getLocalJson = function(file) {
+  var jsonPath = file.path + '_locals.json';
+  console.log(jsonPath);
+  return require(jsonPath);
+};
+
 gulp.task('homepage', function() {
   return gulp.src('./src/sales/homepage/**/*.jade')
     .pipe(changed('./build/sales/homepage'))
@@ -142,6 +148,7 @@ gulp.task('html', function() {
     .pipe(changed(paths.build))
     /*.pipe(debug({verbose: false}));*/
     .pipe(frontMatter({remove:true}))
+    // .pipe(gulpif(localVars, data('./_locals.json')))
     .pipe(swig(swigTplOpts))
     .pipe(elevateCss())
     .pipe(elevateJs())

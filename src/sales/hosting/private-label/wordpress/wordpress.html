@@ -1,14 +1,197 @@
 ---
 location: sales/hosting/private-label/wordpress.aspx
-id:   53f3c877f778fc07b4296fc9
-name: GCE-25517
-comments: added styles to fix dropdown for de and ru
+id:   543c2569f778fc171c425245
+name: GCE-25511
+comments: adding tables
 assetPath: false
+localVars: true
+oursVsTheirsTable: 
+  - 
+    features: "Free domain"
+    ccrs: true
+    wpEngine: false
+    pagely: false
+    dreamHost: false
+  - 
+    features: "Visits per month"
+    ccrs: "25,000"
+    wpEngine: "25,000"
+    pagely: "25,000"
+    dreamHost: "Unlimited"
+  - 
+    features: "Storage"
+    ccrs: "100 GB"
+    wpEngine: "10 GB"
+    pagely: "5 GB"
+    dreamHost: "Unlimited"
+  - 
+    features: "Free 1-click migration"
+    ccrs: true
+    wpEngine: false
+    pagely: false
+    dreamHost: false
+  - 
+    features: "24/7 phone support"
+    ccrs: true
+    wpEngine: false
+    pagely: false
+    dreamHost: false
+  - 
+    features: "sFTP"
+    ccrs: true
+    wpEngine: true
+    pagely: false
+    dreamHost: true
+  - 
+    features: "Database access"
+    ccrs: true
+    wpEngine: true
+    pagely: false
+    dreamHost: true
+  - 
+    features: "Automated backups"
+    ccrs: true
+    wpEngine: true
+    pagely: true
+    dreamHost: false
+  - 
+    features: "Backup retention time"
+    ccrs: "30 days"
+    wpEngine: "30 days"
+    pagely: "14 days"
+    dreamHost: false
+  - 
+    features: "One-click restores"
+    ccrs: true
+    wpEngine: true
+    pagely: true
+    dreamHost: false
+  - 
+    features: "Automatic software updates"
+    ccrs: "WordPress core"
+    wpEngine: "WordPress core"
+    pagely: "WordPress core and plugins"
+    dreamHost: "WordPress core"
+  - 
+    features: "SSL Support"
+    ccrs: true
+    wpEngine: false
+    pagely: false
+    dreamHost: true
+  - 
+    features: "Dedicated IPs (available)"
+    ccrs: true
+    wpEngine: false
+    pagely: false
+    dreamHost: true
+  - 
+    features: "Caching system"
+    ccrs: true
+    wpEngine: true
+    pagely: true
+    dreamHost: true
+  - 
+    features: "Malware scanning"
+    ccrs: true
+    wpEngine: true
+    pagely: true
+    dreamHost: false
+  - 
+    features: "DDoS protection"
+    ccrs: true
+    wpEngine: true
+    pagely: true
+    dreamHost: false
+  - 
+    features: "Redundant firewalls"
+    ccrs: true
+    wpEngine: true
+    pagely: true
+    dreamHost: false
+  - 
+    features: "Optimized servers"
+    ccrs: true
+    wpEngine: true
+    pagely: true
+    dreamHost: true
+  - 
+    features: "Blacklisted malicious plugins"
+    ccrs: true
+    wpEngine: true
+    pagely: true
+    dreamHost: false
+  - 
+    features: "Money-back guarantee"
+    ccrs: true
+    wpEngine: true
+    pagely: true
+    dreamHost: true
+specsSections: 
+  - 
+    sectionName: "Speed, scalability &amp; reliability"
+    row: 
+      - 
+        left: "Optimized WordPress platform"
+        right: "Built just for WordPress with personalized tweaks from our WordPress experts for maximum performance."
+      - 
+        left: "Dedicated load balanced servers"
+        right: "We distribute web requests across multiple servers so the same amount of work gets done faster and can handle spikes in traffic. And if there's a problem withone server, your site won't be affected."
+      - 
+        left: "Massively redundantly SSD-backed file and database servers"
+        right: "Your website content, database and admin load blazing fast with high performace disk servers. Get superior I/O rates and disk access times."
+      - 
+        left: "Multiple caching layers"
+        right: "Your website is enhanced with multiple caching layers for millisecond load times."
+      - 
+        left: "Nightly backups with a 30 day retention time and free restores"
+        right: ""
+      - 
+        left: "Protection from suspicious bots"
+        right: "We've added protection from suspicious bots that like to crawl your site and blast the backend with pointless requests."
+  - 
+    sectionName: "Security"
+    row: 
+      - 
+        left: "Redundant Web Application Firewalls"
+        right: "Enhanced perimeter protection, with fail-safe to keep traffic flowing should a firewall router fail."
+      - 
+        left: "Redundant DoS/DDoS Mitigation"
+        right: "Increased availability, and keeps traffic flowing during one of the most common attacks."
+      - 
+        left: "Intrusion Detection and Prevention"
+        right: "We monitor and mitigate the network and systems against malicious activity."
+      - 
+        left: "Black list for known malicious plugins"
+        right: "To help keep WordPress accounts secure as possible, we <a href='#'>blacklist plugins</a> known to cause security and performance issues."
+      - 
+        left: "Brute force login and comment spam prevention."
+        right: "Added security layers to prevent hackers from stealing login credentials, and flooding \"comments\" with spam."
+      - 
+        left: "Automatic WordPress Core Updates"
+        right: "Our automatic updates make sure you're always running the latest version of WordPress to reduce vulnerabilities, and stay safe from hackers."
+      - 
+        left: "sFTP/SSH"
+        right: "Securely access and manage files on remote file systems. Encrypt commands and data to prevent passwords and sensitive information from being transmitted unprotected over a network."
+  - 
+    sectionName: "Simplicity"
+    row: 
+      - 
+        left: "No set up. We do it for you."
+        right: "You're ready to start building your site in 30 seconds or less."
+      - 
+        left: "Pre-loaded popular Jetpack plugin"
+        right: "Includes over 30 popular plugins to supercharge your site with stats, contact forms, search boxes and more."
+      - 
+        left: "Temporary web address"
+        right: "Build your site on the free domain included with our annual plan or start with a temporary domain and decide on the perfect URL later."
+      - 
+        left: "One-click migrations"
+        right: "Easily move your existing WordPress site with our 1-click migration tool."
 ---
 {% extends 'layouts/pl-base.html' %}
 
 {% block metahead %}
-
+{% include '_wordpress_pl_variables.html' %}
     {% parent %}
 
     <style type="text/css">
@@ -68,8 +251,22 @@ assetPath: false
           {% include "_faq_tab.html" %}
         </div>
         <div class="tab-pane" id="benefits">Benefits</div>
-        <div class="tab-pane" id="ours-vs-theirs">Ours vs. Theirs</div>
-        <div class="tab-pane" id="tech-specs">Tech Specs</div>
+        <!-- End Benefits -->
+        <div class="tab-pane" id="ours-vs-theirs">
+          <section id="ours-vs-theirs-section">
+            <div class="container">
+              {% include "_ours_vs_theirs.html" %}
+            </div>
+          </section>
+        </div>
+        <!-- End Ours Vs Theirs Tab -->
+        <div class="tab-pane" id="tech-specs">
+          <section id="tech-specs-section">
+            <div class="container">
+              {% include "_tech_specs.html" %}
+            </div>
+          </section>
+        </div>
        </div>
     </div>
   </div>
