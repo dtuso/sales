@@ -151,7 +151,6 @@ gulp.task('html', function() {
     .pipe(changed(paths.build))
     /*.pipe(debug({verbose: false}));*/
     .pipe(frontMatter({remove:true}))
-    .pipe(data(getLocalJson))
     .pipe(swig(swigTplOpts))
     .pipe(elevateCss())
     .pipe(elevateJs())
