@@ -22,6 +22,11 @@ div.gdhp-marquee.js-gdhpclick(id=marquee.marqID,data-url!=marquee.dataUrl)
         span(class=rightText.cssClasses).line= rightText.text
       div.btn-wrap
         span(id=marquee.marqID + '-btn',class=marquee.buttonCssClasses)= marquee.buttonText
+| 
+<atlantis:webstash type="js">
+script(src!="[@T[link:<javascriptroot />]@T]fos/hp/rebrand/js/bigtext.min.js")
+| 
+</atlantis:webstash>
 script(type='text/javascript').
   $(window).load(function () {
     $('.gdhp-marquee-text-left,.gdhp-marquee-text-right').bigtext();

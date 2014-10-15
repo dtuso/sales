@@ -1,0 +1,38 @@
+{
+  "marquee":{
+    "backgroundImage":"url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/color-block-background.png) no-repeat top center",
+    "dataUrl":"[@T[link:<relative path='/business/office-365.aspx'><param name='ci' value='11111' /></relative>]@T]",
+    "marqID":"gdhp-marq-abandoncart",
+    "customCSS":".gdhp-marquee-text-right{color:#000000}",
+    "leftText":[
+      {
+        "text":"[@L[cds.sales/homepage/temp/office_365_bossimpressed/en:office_365_bossimpressed-headline]@L]",
+        "cssClasses":""
+      },
+      {
+        "text":"[@L[cds.sales/homepage/temp/office_365_bossimpressed/en:office_365_bossimpressed-maintext]@L]",
+        "cssClasses":""       
+      },
+      {
+        "text":"[@L[cds.sales/homepage/temp/office_365_bossimpressed/en:office_365_bossimpressed-subtext]@L]",
+        "cssClasses":""          
+      },
+      {
+        "text":"[@L[cds.sales/homepage/temp/office_365_bossimpressed/en:office_365_bossimpressed-subtext2]@L]",
+        "cssClasses":""          
+      }
+    ],
+    "rightText":[
+      {
+        "text":"[@L[cds.sales/homepage/temp/office_365_bossimpressed/en:office_365_bossimpressed-headline-rt]@L]",
+        "cssClasses":""
+      },
+      {
+        "text":"[@L[cds.sales/homepage/temp/office_365_bossimpressed/en:office_365_bossimpressed-maintext-rt]@L]",
+        "cssClasses":""        
+      }
+    ],
+    "buttonText":"[@L[cds.sales/homepage/temp/office_365_bossimpressed/en:office_365_bossimpressed-btn]@L]",
+    "buttonCssClasses":"btn btn-warning walsheim-med"
+  }
+}
