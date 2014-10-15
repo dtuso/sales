@@ -7,6 +7,7 @@ try {
   var concat      = require('gulp-concat');
   var cssmin      = require('gulp-minify-css');
   var frontMatter = require('gulp-front-matter');
+  var fm          = require('front-matter');
   var gulpif      = require('gulp-if');
   var less        = require('gulp-less');
   var rename      = require('gulp-rename');
@@ -15,6 +16,7 @@ try {
   var debug       = require('gulp-debug');
   var data        = require('gulp-data');
   var jade        = require('gulp-jade');
+  var _           = require('underscore');
   
   var elevateCss  = require('./lib/gulp-css-elevate');
   var elevateJs   = require('./lib/gulp-js-elevate');
@@ -27,6 +29,11 @@ try {
   var argv        = require('minimist')(process.argv.slice(2));
   var getData     = require('./lib/project-data.js');
   var extras      = require('./lib/swig-extras');
+
+  // underscore and mixins
+  var _           = require('underscore');
+  var underscoreDeepExtend = require('underscore-deep-extend');
+  _.mixin({deepExtend: underscoreDeepExtend(_)});
 
 } catch (e) {
 
@@ -128,11 +135,23 @@ var getJsonData = function(file) {
 
 var getLocalJson = function(file) {
   var jsonPath = path.dirname(file.path) + '/_locals.json';
-  try{ 
-    return require(jsonPath);
-  }catch(ex){
+  // try{ 
+    var locals = require(jsonPath);
+    console.log("------------------------");
+    console.log(locals);
+    console.log("------------------------");
+    // data = _.deepExtend(file.attributes, locals)
+    var f = fm(String(file.contents));
+    var yaml = f.attributes;
+    var data = _.deepExtend(yaml, locals)
+    console.log("------------------------");
+    console.log(data);
+    console.log("------------------------");
+    file.contents = new Buffer(f);
+    return data
+  // }catch(ex){
 
-  }
+  // }
 };
 
 gulp.task('homepage', function() {
@@ -145,6 +164,9 @@ gulp.task('homepage', function() {
     .pipe(rename({extname: ".jade"}))
     .pipe(gulp.dest('./build/sales/homepage'));
 });
+
+    /*.pipe(debug({verbose: false}));*/
+    // .pipe(frontMatter({remove:true}))
 
 gulp.task('html', function() {
   return gulp.src(['./**/*.html', '!./**/_*.html'], {cwd: path.join('./src/sales/', assetSrcPath)})
