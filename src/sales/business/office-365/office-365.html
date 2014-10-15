@@ -1,9 +1,9 @@
 ---
 url: http://www.dev-godaddy.com/business/office-365.aspx
 location: sales/business/office-365.aspx
-id: 543c2567f778fc171c425244
-name: FOS-29606
-comments: O365 teams renames Business Essentials to Online Essentials and Productivity Plus to Business Premium
+id: false
+name: GCE-27461
+comments: FOS-CDS:All local markets:String save is not localized
 metaTitle: "[@L[cds.sales/business/office-365:lp-8-MicrosoftOffice365BoostProductivityVirtuallyAnywhereGoDaddy]@L]"
 metaDescription: "[@L[cds.sales/business/office-365:lp-36-MSOffice365IsEasyToSetUp]@L]"
 metaKeywords: "[@L[cds.sales/business/office-365:lp-18-Office365MicrosoftOffice365Office365Pricing]@L]"
@@ -63,6 +63,38 @@ metaOgDescription: "[@L[cds.sales/business/office-365:lp-48-OgDescription]@L]"
         $(".modal-user-limit-ok").bind("click", function () {
           $(".universal-modal-close").trigger("click.universalModal")
         })
+      });
+
+      $(".ss-value").click(function(){
+         var option=$(this).parent().find('.ss-options');
+         var maxWidth = Math.max.apply(Math, $(this).parent().find('.ss-var-duration').map(function(){ return $(this).width(); }).get());
+         if(option.is(':visible')){
+           $('.ss-var-strike').css('margin-left',maxWidth +20);
+                      
+           // adjest width of rest of elements
+           $(this).parent().find('.ss-var-duration').each(function() {
+           if($(this).width() + 20 > (maxWidth +20)){
+              $(this).css('margin-right',20 -($(this).width() -maxWidth ) );              
+             }
+             else{
+                $(this).css('margin-right',20 +(maxWidth-$(this).width()) );   
+             }
+           });   
+           }       
+          
+          $(this).parent().find('.ss-options').find('.ss-option .bottom-row').each(function(){
+            if($(this).height() > 20){
+              var durationEle = $(this).parent().find('.top-row .ss-var-duration');
+              var marginleft=durationEle.width() + parseInt(durationEle.css('margin-right'));
+              $(this).find('.ss-var-message2').css('margin-left',marginleft);
+              var strike = $(this).find('.ss-var-strike')
+              if(strike.height()> 20){
+                strike.css("width","auto");
+              }
+              strike.css('margin-left',marginleft);
+            }
+          });
+        
       });
 
     ##if(activeLanguageAny([en],[pt-br],[es]))
