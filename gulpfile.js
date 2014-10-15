@@ -172,12 +172,7 @@ gulp.task('html', function() {
   return gulp.src(['./**/*.html', '!./**/_*.html'], {cwd: path.join('./src/sales/', assetSrcPath)})
     .pipe(changed(paths.build))
     /*.pipe(debug({verbose: false}));*/
-<<<<<<< HEAD
     .pipe(frontMatter({remove:true}))
-=======
-    /*.pipe(frontMatter({remove:true}))*/
-    .pipe(data(getLocalJson))
->>>>>>> FETCH_HEAD
     .pipe(swig(swigTplOpts))
     .pipe(elevateCss())
     .pipe(elevateJs())
