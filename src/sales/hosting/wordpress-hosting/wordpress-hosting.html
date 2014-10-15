@@ -1,8 +1,8 @@
 ---
 location: sales/hosting/wordpress-hosting.aspx
-id:    5426042ef778fc1eec7ed203
-name: GCE-25278
-comments: Rainier banner
+id:    543dbbf2f778fc2330964ecd
+name: GCE-29607
+comments: Rainier banner deployment
 cssVersionOverride: 2
 ---
 {% extends 'layouts/base.html' %}
@@ -494,6 +494,8 @@ cssVersionOverride: 2
           </div>
         </div>
       </section>
+
+      ##if(activeLanguageAny([en-us]))
       <!-- Start Rainier Banner -->
         <div class="row tab-content" id="rainier-section">
           <div id="Rainier_Banner" class="col-xs-12 rainier_banner">
@@ -515,6 +517,7 @@ cssVersionOverride: 2
           </div>
         </div>
       <!-- End Rainier Banner -->
+      ##endif
 
       <!-- Start plan-summary -->
       <section class="plan-summary l-main-content">
