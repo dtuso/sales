@@ -1,0 +1,19 @@
+---
+location: localization/sales/homepage/temp/office_365_bossimpressed/en
+id: false
+name: GCE-25370
+---
+<phrase key="office_365_bossimpressed-headline" />
+OFFICE 365 FROM GODADDY
+<phrase key="office_365_bossimpressed-maintext" />
+EMAIL SO PROFESSIONAL,
+<phrase key="office_365_bossimpressed-subtext" />
+EVEN YOUR OLD BOSS
+<phrase key="office_365_bossimpressed-subtext2" />
+<span class='inline-dash' style='max-width:150px;'>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</span> WILL BE IMPRESSED
+<phrase key="office_365_bossimpressed-headline-rt" />
+PLANS FROM ONLY
+<phrase key="office_365_bossimpressed-maintext-rt" />
+$3.99/MO
+<phrase key="office_365_bossimpressed-btn" />
+START NOW
