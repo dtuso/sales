@@ -1,8 +1,8 @@
 ---
 location: sales/offers/office365-promo.aspx
-id: 542f3477f778fc3210434da5
-name: GCE-27637
-comments: New GOT2 POB Landing Page and Config Page
+id: 543d786df778fc233071c99a
+name: GCE-27686
+comments: New GOT2 POB Landing Page and Config Page continuation
 url: http://www.dev-godaddy.com/offers/office365-promo.aspx
 assetPath: false
 metaTitle:          "[@L[cds.sales/offers/office365-promo:page-title]@L]"
@@ -32,7 +32,7 @@ metaOgDescription:  "[@L[cds.sales/offers/office365-promo:og-description]@L]"
 
   @imgPath : '[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/office365-promo/img/';
   /* Page Global CSS -- changes will effect all campaigns */
-  div[role="main"] {color:#000;}
+  div[role="main"] {color:#000;font-size:14px;}
   html body#offers{background:#fff;line-height:1.4em;font-size:14px;font-family:HelveticaNeue-Light,"Helvetica Neue Light","Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;font-weight:300;color:#000;}
   html body#offers .col-xs-4 {width: 33.3333%;}
   html body#offers .col-xs-8 {width: 66.6667%;}
@@ -103,7 +103,7 @@ metaOgDescription:  "[@L[cds.sales/offers/office365-promo:og-description]@L]"
   #domain-search-div .search-result-is-available,
   #domain-search-div .search-result-not-available,
   #domain-search-div .search-result-invalid {font-size:40px; margin:90px 0 50px; line-height:1.00em; word-wrap:break-word;text-align:left;}
-  #domain-search-div .add-domain-btn {font-size:24px; padding:18px 36px; font-weight:400}
+  #domain-search-div .add-domain-btn-got2 {font-size:24px; padding:18px 36px; font-weight:400}
   #domain-search-div div.search-result-is-available {text-align: center;}
   
   #domain-search-div .search-form {max-width: 1000px;}
@@ -220,12 +220,16 @@ metaOgDescription:  "[@L[cds.sales/offers/office365-promo:og-description]@L]"
   #domainRow {background-color: #F9F9F9; position:relative;/* relative used to position the ribbon*/}
   #domainRow .main-banner-content {text-align:left;width:1400px;padding:0;}
   #domainRow h1.main-banner-title { margin: 35px 0 15px; font-size:24px; color:#000; font-weight:300; text-transform: uppercase;}
+
+  #domainRow table h1.main-banner-title {margin-top: 0px;}
   #domainRow h2.main-banner-subtitle {font-size:62px; color:#000; line-height: 1.4em;}
   #domainRow p.main-banner-save,
   #domainRow p.main-banner-plus 
   {font-size:26px; color:#000; margin-bottom:0px; line-height: 1.4em;}
   #domainRow .get-started-btn {margin-top: 10px;}
-  #domainRow .discount-price-line-mo {font-size:38px; font-weight:300; line-height:1.4em; margin-top:112px;}
+  #domainRow .discount-price-line-mo {font-size:38px; font-weight:300; line-height:1.4em; margin-top:72px;}
+  #domainRow table .discount-price-line-mo {margin-top: 0px;}
+  #domainRow table {margin-top: 40px;}
   #domainRow .discount-price-line-yr {font-size:28px; font-weight:300; line-height:1.4em;}
   #domainRow .original-price-line {font-size:12px; font-weight:300; line-height:1.4em;}
   #domainRow .original-price-line .original-price {text-decoration:line-through;}
@@ -258,23 +262,27 @@ metaOgDescription:  "[@L[cds.sales/offers/office365-promo:og-description]@L]"
     <div class="container main-banner-content">
       <div class="row got-slides">
         <div class="row got-slide got-slide-1">
-          <div class="col-xs-7">
-            <h1 class="main-banner-title condensed text-left">[@L[cds.sales/offers/office365-promo:top-banner-headline]@L]</h1>
-            <img class="icon-row solazy" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/office365-promo/img/MSFT-icons.png" />
-            <h2 class="main-banner-subtitle text-left">[@L[cds.sales/offers/office365-promo:top-banner-best-deal]@L]</h2>
-            <p class="main-banner-save">[@L[cds.sales/offers/office365-promo:top-banner-save]@L]</p>
-            <p class="main-banner-plus">[@L[cds.sales/offers/office365-promo:top-banner-plus]@L]</p>
-          </div>
-          <div class="col-xs-5 text-center">
-            <div class="discount-price-line-mo gd-color-secondary price-hide">[@L[cds.sales/offers/office365-promo:top-banner-per-user-discount-price-mo]@L]</div>
-            <div class="discount-price-line-yr price-hide">[@L[cds.sales/offers/office365-promo:top-banner-per-user-discount-price-yr]@L]</div>
-            <div class="get-started-btn btn btn-warning cta-medium" data-ci="93815">[@L[cds.sales/offers/office365-promo:top-banner-get-started]@L]</div>
-            <div class="original-price-line price-hide">[@L[cds.sales/offers/office365-promo:top-banner-original-price]@L]</div>
-            <div class="renewal-disclaimer">
-              [@L[cds.sales/offers/office365-promo:top-banner-renewal-price-disclaimer]@L]
-              <a class="simple-link" href="#" data-toggle="modal" data-target="#myModal" data-ci="93817">[@L[cds.sales/offers/office365-promo:top-banner-see-offer-details]@L]</a>
-            </div>
-          </div>
+          <table border="0" cellspacing="5" cellspacing="0">
+            <tr>
+              <td width="600" valign="center">                
+                <h1 class="main-banner-title condensed text-left">[@L[cds.sales/offers/office365-promo:top-banner-headline]@L]</h1>
+                <img class="icon-row" src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/office365-promo/img/MSFT-icons.png" />
+                <h2 class="main-banner-subtitle text-left">[@L[cds.sales/offers/office365-promo:top-banner-best-deal]@L]</h2>
+                <p class="main-banner-save">[@L[cds.sales/offers/office365-promo:top-banner-save]@L]</p>
+                <p class="main-banner-plus">[@L[cds.sales/offers/office365-promo:top-banner-plus]@L]</p>
+              </td>
+              <td width="400" valign="center" class="text-center">
+                <div class="discount-price-line-mo gd-color-secondary price-hide">[@L[cds.sales/offers/office365-promo:top-banner-per-user-discount-price-mo]@L]</div>
+                <div class="discount-price-line-yr price-hide">[@L[cds.sales/offers/office365-promo:top-banner-per-user-discount-price-yr]@L]</div>
+                <div class="get-started-btn btn btn-warning cta-medium" data-ci="93815">[@L[cds.sales/offers/office365-promo:top-banner-get-started]@L]</div>
+                <div class="original-price-line price-hide">[@L[cds.sales/offers/office365-promo:top-banner-original-price]@L]</div>
+                <div class="renewal-disclaimer">
+                  [@L[cds.sales/offers/office365-promo:top-banner-renewal-price-disclaimer]@L]
+                  <a class="simple-link" href="#" data-toggle="modal" data-target="#myModal" data-ci="93817">[@L[cds.sales/offers/office365-promo:top-banner-see-offer-details]@L]</a>
+                </div>
+              </td>
+            </tr>
+          </table>
         </div> <!-- end slide-1 -->
         <div class="row got-slide got-slide-2">
           <div id="domain-search-div">          
@@ -282,7 +290,7 @@ metaOgDescription:  "[@L[cds.sales/offers/office365-promo:og-description]@L]"
             <div class="find-a-domain">[@L[cds.sales/offers/office365-promo:search-title]@L]</div>
             <div class="search-result-is-available">[@L[cds.sales/offers/office365-promo:search-is-available]@L]</div>
             <div class="add-domain-btn-div">
-              <div class="add-domain-btn flt-btn-orng" data-ci="93808">[@L[cds.sales/offers/office365-promo:checkout-now]@L]</div>
+              <div id="tealium-got2-checkout-btn" class="add-domain-btn-got2 flt-btn-orng" data-ci="93808">[@L[cds.sales/offers/office365-promo:checkout-now]@L]</div>
             </div>
             <div class="loading add-domain-loading"></div>
             <div class="search-again" data-ci="93819">[@L[cds.sales/offers/office365-promo:search-again]@L]</div>
@@ -622,7 +630,7 @@ metaOgDescription:  "[@L[cds.sales/offers/office365-promo:og-description]@L]"
             }
 
           })
-          .on('click', '.add-domain-btn', continueToConfigPage)
+          .on('click', '.add-domain-btn-got2', continueToConfigPage)
           .on('submit','form[name=domaincheck]',domainSearchFormSubmit)
           .on('click', '.domain-search-btn', function () {
             $dsd.find('.search-form').submit();
@@ -740,8 +748,7 @@ metaOgDescription:  "[@L[cds.sales/offers/office365-promo:og-description]@L]"
 
 <section id="team-up">
   <div class="container l-main-container">
-    <div class="team-promo-img">
-      <img class="icon-row solazy" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/office365-promo/img/logos.png" />
+    <div class="team-promo-img solazy" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/office365-promo/img/logos.png">
     </div>
     <div class="team-promo-text">
       <h2>[@L[cds.sales/offers/office365-promo:team-promo-text-headline]@L]</h2>
