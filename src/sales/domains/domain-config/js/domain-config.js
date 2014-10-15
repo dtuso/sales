@@ -275,9 +275,34 @@ if (!domains.controls.cds_domain_configuration) {
 
       // 4) Tokenize order summary
       tokenizeOrderSummary();
+      LogConfigResults(data);
       return;
     }
 
+ function LogConfigResults(data){
+     if ('function' === typeof (fbiRecordFastballEvent)) {
+    var e = new fbiEventObject(new Object(), "tokenizeViewData", 84427,'');     
+    var privacy = data.TmsConfigLogging.displays.Privacy?data.TmsConfigLogging.displays.Privacy:"";     
+    var Hosting = data.TmsConfigLogging.displays.Hosting?data.TmsConfigLogging.displays.Hosting:"";
+    var Email=data.TmsConfigLogging.displays.Email?data.TmsConfigLogging.displays.Email:"";
+     e.AddUserInput("DbpAvailable", data.TmsConfigLogging.conditions.IsDbpAvailable);
+     e.AddUserInput("BackorderDbsOnly", data.TmsConfigLogging.conditions.BackorderDbsOnly);
+     e.AddUserInput("BusinessOffered", data.TmsConfigLogging.conditions.IsBusinessOffered);
+     e.AddUserInput("CertifiedOffered",data.TmsConfigLogging.conditions.IsCertifiedOffered);
+     e.AddUserInput("EmailOffered",data.TmsConfigLogging.conditions.IsEmailOffered);
+     e.AddUserInput("LocuOffered",data.TmsConfigLogging.conditions.IsLocuOffered);
+     e.AddUserInput("O365Offered",data.TmsConfigLogging.conditions.IsO365Offered);
+     e.AddUserInput("WebHostingOffered",data.TmsConfigLogging.conditions.IsWebHostingOffered);
+     e.AddUserInput("WstOffered",data.TmsConfigLogging.conditions.IsWstOffered);
+     e.AddUserInput("Tlds", data.TmsConfigLogging.conditions.Tlds); 
+     e.AddUserInput("Privacy", privacy); 
+     e.AddUserInput("Hosting", Hosting);
+     e.AddUserInput("Email",Email);
+
+     fbiRecordFastballEvent(e);
+   console.log(e);
+  }
+ }
     function tokenize($this, value) {
       if ($this.html() != null)
       {
