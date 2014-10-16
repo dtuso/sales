@@ -1,6 +1,6 @@
 ---
 location: sales/offers/online-business.aspx
-id: 5421cf90f778fc2490ac4dd2
+id: 54401a45f778fc0b78c97c7a
 name: GCE-29310
 comments: Roll Out GOT in International Markets - Sales LP
 url: http://www.dev-godaddy.com/offers/online-business.aspx
@@ -117,34 +117,31 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
 {% less %}
   #domainRow {background-color: #eee;}
   #domainRow .main-banner-content {text-align:left;}
-  #domainRow h1.main-banner-title { margin:16px 0;font-size:48px;color:#333;font-weight:300;}
+  #domainRow h1.main-banner-title { margin:36px 0 16px;font-size:48px;color:#333;font-weight:300;}
   #domainRow h1.main-banner-title span {background-color:gold; padding:8px;letter-spacing: -0.03em;}
   #domainRow h3.main-banner-subtitle {text-align:left; font-size:60px;color:#333;}
   #domainRow p.top-summary {margin:20px 0 0;text-align:left;font-size:28px;font-weight:600;}
   
   #domain-search-div .find-a-domain 
-  {font-size:48px;margin:30px 0 40px;line-height:1.35em;} 
+  {font-size:48px;margin:90px 0 40px;line-height:1.35em;} 
   #domain-search-div .search-result-is-available,
   #domain-search-div .search-result-not-available,
   #domain-search-div .search-result-invalid
-  {font-size:48px;margin:30px 0 30px;line-height:1.00em;word-wrap:break-word;}
+  {font-size:48px;margin:90px 0 30px;line-height:1.00em;word-wrap:break-word;}
   
   #domain-search-div .search-result-is-available {text-align:center;}
   
   #domain-search-div .add-domain-btn {font-size:24px;padding:18px 36px;font-weight:400}
-
-  .got-slider-wrapper {overflow:hidden; width:1000px; padding-bottom:40px; position:relative;}
-  #domainRow .got-slider-wrapper,#domainRow .got-slide {height:400px;}
-  #get-started .got-slider-wrapper,#get-started .got-slide {height:505px;}
-  .got-slides {width:3000px;position:absolute;left:0px;}    
-  .got-slide {width:1000px;float:left;overflow-x:hidden;} 
-  html[lang*=en] #domainRow .got-slider-wrapper,html[lang*=en] #domainRow .got-slide {height:350px !important;}
   
-  .top-package-price {text-decoration:strike;font-size:48px;font-weight:600;line-height:1.4em;}
+  .top-package-price {font-size:48px;font-weight:600;line-height:1.4em;}
   .top-package-price em {color: #ff8a00;}
   .top-without-package-price {text-decoration:line-through;margin-top:10px;font-size:26px;font-weight:300;line-height:1.4em;}
   .top-renewal-disclaimer {margin-top:10px;font-size:14px;font-weight:300;}
   .get-started-btn {padding:0 53px;margin:0 auto;display:inline-block;}
+
+  div.got-slide-2,
+  div.got-slide-3 
+  {display:none;}
 
   #offers div.got-slide-2 div.find-a-domain, 
   #offers div.got-slide-2 div.start-here 
@@ -222,9 +219,9 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
   .top-banner-product-col.col-domain .addition {margin-left:10px;}
   .top-banner-product-col.col-wsb {margin-left:32px;}
   .top-banner-product-col.col-wsb .addition {margin-left:19px;}
-  .top-banner-product-col.col-email {margin-left:32px;}
+  .top-banner-product-col.col-email {margin-left:32px; margin-bottom:40px;}
   .top-banner-product-col.col-email .equals {margin-left:17px;}
-  .top-banner-product-col.col-get-started {margin-left:10px;width:340px;}
+  .top-banner-product-col.col-get-started {margin-left:10px;width:340px;margin-bottom:40px;}
   .product-icon.email {font-size:13px;}
   #domainRow .product-icon.email {margin-left:-24px; margin-top: 13px;width:199px;text-align:center;}
   a.simple-link {color: #333;text-decoration:underline;}
@@ -264,7 +261,7 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
 
   .search-domain-loading {margin:10px auto 0;}
 
-  #offers .search-form {max-width: 1000px;}
+  #offers .search-form {max-width: 1000px; margin-bottom:120px;}
 
 {% endless %}
 </style>
@@ -436,9 +433,11 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
               </div>
 
             </div>
+
+            <div class="loading search-domain-loading"></div>
+            
           </form>
                       
-          <div class="loading search-domain-loading"></div>
           
         </div> <!-- end domain-search-div -->
       </div> 
