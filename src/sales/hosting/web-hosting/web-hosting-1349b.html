@@ -1,8 +1,8 @@
 ---
 location: sales/hosting/split-tests/web-hosting-1349b.aspx
-id: 543d7805f778fc233071c998
+id: 543d7a7df778fc233071c9a1
 name: GCE-29607
-comments: Web-hosting updates.
+comments: Rainier Web-hosting (en-US only)
 url: http://www.dev-godaddy.com/hosting/web-hosting.aspx
 splitSide: 1349.B
 cssVersionOverride: 3
@@ -1316,6 +1316,32 @@ metaOgDescription: "[@L[cds.sales/gd/hosting/web-hosting:og-description]@L]"
       </div>
     ##endif
     </section>
+
+      ##if(activeLanguageAny([en-us]))
+    <!-- Start Rainier Banner -->
+    <section class="pro-page-section container l-main-container section-top-spacing">
+      <div class="row" id="rainier-section">
+        <div id="Rainier_Banner" class="col-xs-12 rainier_banner">
+          <div class="row" data-gd-sidebysidealign="{}">
+            <div class="rainier_logo_container rainier_background" data-gd-sidebysidealign-col="1">
+              <div class="godaddy_pro_logo" data-gd-sidebysidealign-row="1"></div>
+            </div>
+            <div class="rainier_text_container rainier_background" data-gd-sidebysidealign-col="2">
+              <p class="text-center rainier_banner_text" data-gd-sidebysidealign-row="1">[@L[cds.sales/gd/hosting/web-hosting:godaddy-pro-get-tech-specs]@L]</p>
+            </div>
+            <div class="rainier_button_container " id="Rainier_LearnMoreButton" data-gd-sidebysidealign-col="3">
+              <div >
+                <a class="btn btn-warning btn-block btn-lg" data-gd-sidebysidealign-row="1" href="[@T[link:<relative path='/pro/cpanel-hosting'>><param name='ci' value='93999' /></relative>]@T]">
+                  <div class="text">[@L[cds.sales/gd/hosting/web-hosting:godaddy-pro-learn-more]@L]</div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Rainier Banner -->
+      ##endif
 
       ##if(!activeLanguageAny([en-in]))
     <section class="all-plans-include-section section-top-spacing">
