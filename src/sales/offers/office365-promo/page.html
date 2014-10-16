@@ -180,7 +180,7 @@ metaOgDescription:  "[@L[cds.sales/offers/office365-promo:og-description]@L]"
   .search-area-wrapper .search-button-area  
   {min-height:65px;float:left;}
   
-  .search-area-wrapper .tooltips-area { max-width:115px;font-size:16px;margin-right:27px;text-align:center;position:relative;word-wrap:break-word;}
+  .search-area-wrapper .tooltips-area { max-width:140px;font-size:16px;margin-right:27px;text-align:center;position:relative;word-wrap:break-word;}
   html[lang*=en] .search-area-wrapper .tooltips-area {font-size:20px;}
   .search-area-wrapper .tooltips-area:after {content:"";border-width:10px 0 10px 17px;border-style:solid;border-color:transparent transparent transparent #fc0;position:absolute;right:-17px;top:34%}
   .search-area-wrapper .tooltips-area .highlight-tooltip {background-color:#fc0;color:#630;text-transform:uppercase;text-align:center;padding:13px 14px 12px;}
@@ -204,9 +204,11 @@ metaOgDescription:  "[@L[cds.sales/offers/office365-promo:og-description]@L]"
   .search-area-wrapper .dropdownlist-area .ddl-drop-arrow span {border-color:#6B6B6B transparent transparent;border-style:solid;border-width:5px 5px 0;display:block;height:0;width:0;position:absolute;top:22px;left:7px}  
   
   .search-area-wrapper .search-button-area {background-color:#fc0; padding:8px 8px 8px 0;}
-  .search-area-wrapper .search-button-area .domain-search-btn {max-width:180px;min-height:49px;word-wrap:break-word;font-size:24px;padding:17px 36px 0;font-weight:400;}
+  .search-area-wrapper .search-button-area .domain-search-btn {max-width:280px;min-height:49px;word-wrap:break-word;font-size:24px;padding:17px 36px 0;font-weight:400;}
 
   .search-domain-loading {margin:10px auto 0;}
+
+  #offers .search-form {max-width: 1000px;}
 {% endless %}
 </style>
 <!-- end-css-elevate -->
@@ -402,8 +404,8 @@ metaOgDescription:  "[@L[cds.sales/offers/office365-promo:og-description]@L]"
     function showSlide($gotSlides, slideSelector) {
       $gotSlides.find('.got-slide').hide();
       $gotSlides.find(slideSelector).show();
-
     }
+
     function slideToShowSearch($gotSlides){
       $gotSlides.find('.got-slide-3').find('.got-available-div').hide();      
       $gotSlides.find('.got-slide-3').find('.got-unavailable-div').hide();   
@@ -474,29 +476,27 @@ metaOgDescription:  "[@L[cds.sales/offers/office365-promo:og-description]@L]"
         domain = $searchField.val(),
         domainSplit = domain.split('.'),
         newtld = '',
-        data = [],
+        tldList = [],
         $avlTlds = $dsd.find(".availabletld"),
         tld2 = $dsd.find(".availabletld.selected").data("view");
 
       $dsd.removeClass("available not-available invalid");
    
       $avlTlds.each(function(){
-        data.push($(this).data("view"))
+        tldList.push($(this).data("main"))
       });
 
-      var splitSearch = matchEnding($.trim(domain),data);
+      var splitSearch = matchEnding( $.trim(domain), tldList );
         
       $searchField.val(splitSearch[0].split('.')[0].toLowerCase());
 
       $avlTlds.each(function(){
         var $this = $(this);
-        if($this.data('view')==splitSearch[1]){
+        if($this.data('main')==splitSearch[1]){
           $(".availabletld.selected").removeClass('selected');
           $this.addClass('selected');
-          $('.tld-input-selected span').html("."+splitSearch[1]);
-          tld2 = splitSearch[1];
-        } else {
-          
+          $('.tld-input-selected span').html(splitSearch[1]);
+          tld2 = $this.data('view');
         }
       });
 
