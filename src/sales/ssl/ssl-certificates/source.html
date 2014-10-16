@@ -1,10 +1,10 @@
 ---
 location: sales/ssl/ssl-certificates.aspx
 url: http://www.dev-godaddy.com/ssl/ssl-certificates.aspx
-id: 54208fb7f778fc2490ac4d9f
-name: GCE-25277
+id: 543dbc64f778fc2330964ece
+name: GCE-29607
 assetPath: false
-comments: Rainier banner
+comments: Rainier banner deployment
 ---
 
 {% extends 'layouts/base.html' %}
@@ -35,7 +35,11 @@ comments: Rainier banner
     .misc-banner-content{
       padding-bottom: 2em;
     }
-    
+
+    .plan-summary{padding-top:2.428571em;}
+
+    html[lang='en-US'] #rainier-section{margin-bottom:0px;}
+
     {% endless %}
   </style>
 {% endblock %}
@@ -243,6 +247,7 @@ comments: Rainier banner
                 </div>
             </div><!-- col-xs-4 -->
           </div>
+          ##if(activeLanguageAny([en-us]))
           <!-- Start Rainier Banner -->
           <div class="row tab-content" id="rainier-section">
             <div id="Rainier_Banner" class="col-xs-12 rainier_banner">
@@ -264,6 +269,7 @@ comments: Rainier banner
             </div>
           </div>
           <!-- End Rainier Banner -->
+          ##endif
           <!-- Start plan-summary -->
           <section class="plan-summary l-main-content">
             <div class="container l-main-container">
