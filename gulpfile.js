@@ -30,7 +30,6 @@ try {
   var getData     = require('./lib/project-data.js');
   var extras      = require('./lib/swig-extras');
   var through     = require('through2');
-  var File        = require('vinyl');
 
   // underscore and mixins
   var _           = require('underscore');
@@ -156,8 +155,8 @@ var getLocalJson = function(file) {
   // }
 };
 
+// inspect a json file, use 'presentationTemplate' if it exists to load a jade template 
 function getJadeFromJson() {
-  // creating a stream through which each file will pass
   var stream = through.obj(function(file, enc, cb) {
     if (file.isStream()) {
       this.emit('error', new PluginError(PLUGIN_NAME, 'Streams are not supported!'));
@@ -168,35 +167,21 @@ function getJadeFromJson() {
       var templateFilePath = file.data.presentationTemplate;
       if (templateFilePath) {
         file.contents = new Buffer(fs.readFileSync(file.data.presentationTemplate));
-//        file.path = templateFilePath;
         file.base = path.join(file.cwd,path.dirname(templateFilePath));
       }
     }
-
     this.push(file);
-
     cb();
   });
   return stream;
 };
 
-function test()
-{
-  var stream = through.obj(function(file, enc, cb) {
-    console.log(file.data);    
-
-    this.push(file);
-
-    cb();
-  });
-  return stream;
-}
-
 gulp.task('build-marquee', function() {
-  return gulp.src('./src/sales/homepage/marquees/office_365_getStarted/office_365_getStarted.json')
+  return gulp.src('./src/sales/homepage/marquees/**/*.json')
     .pipe(frontMatter({remove:true}))
     .pipe(getJadeFromJson())
     .pipe(jade({pretty: true}))
+    .pipe(cdsm(cdsmOpts))
     .pipe(gulp.dest('./build/sales/homepage'));
 });
 

@@ -1,31 +1,37 @@
 // start marquee section
 atlantis:webstash(type="css")
   style.
-    .gdhp-marquee{width:100%;min-width:1000px;height:400px;cursor:pointer;}
-    .gdhp-marquee-content{width:1000px;margin:0 auto;color:#ffffff;}
-    .gdhp-marquee-text-left{float:left;width:500px;padding-top:80px;}
-    .gdhp-marquee-text-right{float:left;width:325px;height:320px;padding-top:80px;text-align:center;margin-left:90px;color:#000;}
-    .gdhp-hidden{visibility:hidden}
-    .headline { line-height: 0.9; font-family: 'Walsheim-Black';}
+    .marquee-base-left {width:100%;min-width:1000px;height:400px;cursor:pointer;color: #fff;}
+    .left-column {float:left;width:500px;padding-top:80px;}
+    .right-column {float:left;width:325px;height:320px;padding-top:80px;text-align:center;margin-left:90px;color:#000;}
+    .headline { line-height: 0.9; font-family: 'Walsheim-Black';visibility:hidden; font-size: 48px;margin:10px 0;}
     .headline .line:nth-child(odd) { font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', Helvetica, Arial;}
     .headline .line:nth-child(even) { font-family: 'Walsheim-Black'; }
-    .btn-cta { width: 100%; box-sizing: border-box; margin-top: 50px;}
-    .inline-dash{display:inline-block;overflow:hidden;letter-spacing:-0.5em;font-size:1.4em;vertical-align:top;line-height:50%;}
+    .btn-cta { width: 100%; box-sizing: border-box; margin: 10px 0;}
+    .additional-info { font-size: 14px;margin: 10px 0;text-align: left; margin: 10px 0;}
+    .restrictions { margin: 10px 0;text-align: left;font-size: 12px; margin: 10px 0;}
+    .inline-dash{ display:inline-block;overflow:hidden;letter-spacing:-0.5em;font-size:1.4em;vertical-align:top;line-height:50%;}
   if customCSS
     style!= customCSS
-div.gdhp-marquee.js-gdhpclick(id=elementId,data-url!=ctaLink)
-  div.gdhp-marquee-content
-    div.gdhp-marquee-text-left.gdhp-hidden
+div.marquee.marquee-base-left.js-gdhpclick(class=elementClass,data-url!=ctaLink)
+  div.container.l-main-container
+    div.left-column
       div.headline!= headline
-    div.gdhp-marquee-text-right.gdhp-hidden
-      div.gdhp-marquee-sub-headline
-        div.headline!= subHeadline
-      span.btn.btn-warning.btn-lg.btn-cta(id=elementId + '-btn')!= ctaText
+    div.right-column
+      div.headline!= subHeadline
+      span.btn.btn-warning.btn-lg.btn-cta!= ctaText
+      if additionalInfo
+        div.additional-info!= additionalInfo
+      if restrictions
+        div.restrictions(data-toggle="tooltip", title=restrictionsTooltip)!= restrictions
 atlantis:webstash(type="js")
   script(src!="[@T[link:<javascriptroot />]@T]fos/hp/rebrand/js/bigtext.min.js")
 script(type='text/javascript').
   $(window).load(function () {
-    $('.gdhp-marquee-text-left,.gdhp-marquee-sub-headline').bigtext({minfontsize: 48});
-    $('.gdhp-marquee-text-left,.gdhp-marquee-text-right').removeClass('gdhp-hidden');
+    $('.headline').each(function() {
+      if ($(this).children().length > 0)
+        $(this).bigtext();
+      $(this).css('visibility', 'visible');
+    });
   });
 // end marquee section
