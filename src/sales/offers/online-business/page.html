@@ -140,7 +140,6 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
   .got-slide {width:1000px;float:left;overflow-x:hidden;} 
   html[lang*=en] #domainRow .got-slider-wrapper,html[lang*=en] #domainRow .got-slide {height:350px !important;}
   
-  .top-banner-product-col.col-get-started {}
   .top-package-price {text-decoration:strike;font-size:48px;font-weight:600;line-height:1.4em;}
   .top-package-price em {color: #ff8a00;}
   .top-without-package-price {text-decoration:line-through;margin-top:10px;font-size:26px;font-weight:300;line-height:1.4em;}
@@ -225,7 +224,7 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
   .top-banner-product-col.col-wsb .addition {margin-left:19px;}
   .top-banner-product-col.col-email {margin-left:32px;}
   .top-banner-product-col.col-email .equals {margin-left:17px;}
-  .top-banner-product-col.col-get-started {margin-left:40px;width:320px;}
+  .top-banner-product-col.col-get-started {margin-left:10px;width:340px;}
   .product-icon.email {font-size:13px;}
   #domainRow .product-icon.email {margin-left:-24px; margin-top: 13px;width:199px;text-align:center;}
   a.simple-link {color: #333;text-decoration:underline;}
@@ -238,7 +237,7 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
   .search-area-wrapper .search-button-area  
   {min-height:65px;float:left;}
   
-  .search-area-wrapper .tooltips-area { max-width:115px;font-size:16px;margin-right:27px;text-align:center;position:relative;word-wrap:break-word;}
+  .search-area-wrapper .tooltips-area { max-width:140px;font-size:16px;margin-right:27px;text-align:center;position:relative;word-wrap:break-word;}
   html[lang*=en] .search-area-wrapper .tooltips-area {font-size:20px;}
   .search-area-wrapper .tooltips-area:after {content:"";border-width:10px 0 10px 17px;border-style:solid;border-color:transparent transparent transparent #fc0;position:absolute;right:-17px;top:34%}
   .search-area-wrapper .tooltips-area .highlight-tooltip {background-color:#fc0;color:#630;text-transform:uppercase;text-align:center;padding:13px 5px 12px;}
@@ -261,11 +260,11 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
   .search-area-wrapper .dropdownlist-area .ddl-drop-arrow {border-radius:0;outline:medium none;cursor:pointer;font-size:1px;height:30px;margin:2px 2px 2px 0;min-width:31px;padding:0;position:absolute;right:0px;}
   .search-area-wrapper .dropdownlist-area .ddl-drop-arrow span {border-color:#6B6B6B transparent transparent;border-style:solid;border-width:5px 5px 0;display:block;height:0;width:0;position:absolute;top:22px;left:7px}  
   
-  
-  .search-area-wrapper .search-button-area {}
-  .search-area-wrapper .search-button-area .domain-search-btn {max-width:180px;min-height:65px;word-wrap:break-word;font-size:24px;padding:24px 36px 0;font-weight:400;}
+  .search-area-wrapper .search-button-area .domain-search-btn {max-width:280px;min-height:65px;word-wrap:break-word;font-size:24px;padding:24px 36px 0;font-weight:400;}
 
   .search-domain-loading {margin:10px auto 0;}
+
+  #offers .search-form {max-width: 1000px;}
 
 {% endless %}
 </style>
@@ -461,6 +460,11 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
       $dsd = $('#domain-search-div'),
       nextStepUrl = '';
 
+    function showSlide($gotSlides, slideSelector) {
+      $gotSlides.find('.got-slide').hide();
+      $gotSlides.find(slideSelector).show();
+    }
+
     function slideToShowSearch($gotSlides){
       $gotSlides.find('.got-slide-3').find('.got-available-div').hide();      
       $gotSlides.find('.got-slide-3').find('.got-unavailable-div').hide();   
@@ -468,8 +472,7 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
       
       // move the domain search box into the slide 2
       $gotSlides.find('.got-slide-2').append($dsd);      
-      
-      $gotSlides.animate({left:'-1000px'},slideAnimationMs);
+      showSlide($gotSlides, '.got-slide-2');
     }
     function slideToUnavailable($gotSlides){
 
@@ -479,7 +482,7 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
       $gotSlides.find('.got-slide-3').find('.got-invalid-div').hide();
       
       //animate slide
-      $gotSlides.animate({left:'-2000px'},slideAnimationMs);
+      showSlide($gotSlides, '.got-slide-3');
     }
     function slideToAvailable($gotSlides){
 
@@ -489,7 +492,7 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
       $gotSlides.find('.got-slide-3').find('.got-invalid-div').hide();
       
       //animate slide
-      $gotSlides.animate({left:'-2000px'},slideAnimationMs);
+      showSlide($gotSlides, '.got-slide-3');
     }
     function slideToInvalid($gotSlides){
 
@@ -499,12 +502,12 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
       $gotSlides.find('.got-slide-3').find('.got-unavailable-div').hide();   
       
       //animate slide
-      $gotSlides.animate({left:'-2000px'},slideAnimationMs);
+      showSlide($gotSlides, '.got-slide-3');
     }
 
     function slideToSlide1($gotSlides){
       //animate slide
-      $gotSlides.animate({left:'0px'},slideAnimationMs/4);
+      showSlide($gotSlides, '.got-slide-1');
     }
 
     $(document).ready(function(){      
@@ -623,29 +626,27 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
         domain = $searchField.val(),
         domainSplit = domain.split('.'),
         newtld = '',
-        data = [],
+        tldList = [],
         $avlTlds = $dsd.find(".availabletld"),
         tld2 = $dsd.find(".availabletld.selected").data("view");
 
       $dsd.removeClass("available not-available invalid");
    
       $avlTlds.each(function(){
-        data.push($(this).data("view"))
+        tldList.push($(this).data("main"))
       });
 
-      var splitSearch = matchEnding($.trim(domain),data);
+      var splitSearch = matchEnding($.trim(domain), tldList);
         
-      $searchField.val(splitSearch[0].split('.')[0].toLowerCase());
+      $searchField.val( splitSearch[0].split('.')[0].toLowerCase() );
 
       $avlTlds.each(function(){
         var $this = $(this);
-        if($this.data('view')==splitSearch[1]){
+        if($this.data('main')==splitSearch[1]) {
           $(".availabletld.selected").removeClass('selected');
           $this.addClass('selected');
-          $('.tld-input-selected span').html("."+splitSearch[1]);
-          tld2 = splitSearch[1];
-        } else {
-          
+          $('.tld-input-selected span').html(splitSearch[1]);
+          tld2 = $this.data('view');
         }
       });
 
