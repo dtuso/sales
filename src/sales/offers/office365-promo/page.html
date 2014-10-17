@@ -1,6 +1,6 @@
 ---
 location: sales/offers/office365-promo.aspx
-id: 544030b3f778fc0b78c97c80
+id: 54405746f778fc0b78c97ca3
 name: GCE-27686
 comments: New GOT2 POB Landing Page and Config Page continuation
 url: http://www.dev-godaddy.com/offers/office365-promo.aspx
@@ -824,40 +824,28 @@ metaOgDescription:  "[@L[cds.sales/offers/office365-promo:og-description]@L]"
 
 <script type="text/javascript">
   $(document).ready(function () { 
-   
-    $(".discount-price-mo").each(function(){
-      $(this)
-        .html(got2Page.pricing.mo.o365promo)
-        .closest('.price-hide')
-        .removeClass("price-hide");
-    });
-    $(".discount-price-yr").each(function(){
-      $(this)
-        .html(got2Page.pricing.yr.o365promo)
-        .closest('.price-hide')
-        .removeClass("price-hide");
-    });
 
-    $(".renewal-price-mo").each(function(){
-      $(this)
-        .html(got2Page.pricing.mo.renewal)
-        .closest('.price-hide')
-        .removeClass("price-hide");
-    });
+    var tokenizePrice = function(priceSelector, price) {
+      $(priceSelector).each(function(){
+        $(this)
+          .html(price)
+          .closest('.price-hide')
+          .removeClass("price-hide");
+      });
+    };
 
-    $(".original-price").each(function(){
-      $(this)
-        .html(got2Page.pricing.yr.o365)
-        .closest('.price-hide')
-        .removeClass("price-hide");
-    });     
-    
-    $('.price-total-tools').each(function(){
-      $(this)
-        .html(got2Page.pricing.yr.tools)
-        .closest('.price-hide')
-        .removeClass("price-hide");
-    });
+    tokenizePrice(".discount-price-mo", got2Page.pricing.mo.o365promo);
+    tokenizePrice(".renewal-price-mo", got2Page.pricing.mo.renewal); 
+
+    tokenizePrice(".original-price", got2Page.pricing.yr.o365);    
+    tokenizePrice(".discount-price-yr", got2Page.pricing.yr.o365promo);
+    tokenizePrice(".renewal-price-yr", got2Page.pricing.yr.renewal);
+    tokenizePrice('.price-total-tools', got2Page.pricing.yr.tools);
+
+    tokenizePrice('.com-price-yr', got2Page.pricing.yr.com);
+    tokenizePrice('.wsb-price-yr', got2Page.pricing.yr.wsb);
+    tokenizePrice('.getpaid-price-yr', got2Page.pricing.yr.getpaid);
+    tokenizePrice('.o365-price-yr', got2Page.pricing.yr.o365);
 
     $('[data-ci]').click(function (e) {
       var $this = $(this);
@@ -871,6 +859,7 @@ metaOgDescription:  "[@L[cds.sales/offers/office365-promo:og-description]@L]"
 
     populateTldsOnDisclaimerModal('#myModal .modal-body');
   });
+
 
   function populateTldsOnDisclaimerModal(selector) {
     var $this = $(selector);
