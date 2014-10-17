@@ -13,7 +13,7 @@
   "domain-backorders":  "./domainaddon/domain-backorders/",
   "domain-config":      "./domains/domain-config/",
   "ds":                 "./hosting/dedicated-servers/",
-  "dsc":                "./hosting/dedicated-servers-config/",
+  "dsc":                "./pro/dedicated-server-config/",
   "got":                "./offers/online-business/",
   "got2":               "./offers/office365-promo/",
   "gtld":               "./tlds/gtld/",

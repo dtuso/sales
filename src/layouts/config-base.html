@@ -8,10 +8,14 @@
                     <div class="col-xs-12">
                         <div class="config-continue-to-cart-wrapper-top config-title-container">
                             <div class="config-title">
+                            {% if sitecore %}
+                              <p><span class="green-check"></span> {{ configTitleText }}</p>
+                            {% else %}
                                 <h1></h1><a href="#" onclick="changePlan();" data-ci="{{ changeplanci }}">{{ configTitleLink }}</a>
                                 <p>{{ configTitleText }}</p>
+                            {% endif %}   
                             </div>
-                            <p class="config-continue-to-cart"><span class="icon-arrow-right"></span><a class="js-addtocart" data-ci="{{ topAddToCartci }}">{{ configTitleContinueToCart }}</a></p>
+                            <p class="config-continue-to-cart"><span class="icon-arrow-right"></span><a id="continue-to-cart-link" class="js-addtocart" data-ci="{{ topAddToCartci }}">{{ configTitleContinueToCart }}</a></p>
                         </div>
                     </div>
                     <div class="config-steps-wrapper">
@@ -20,7 +24,34 @@
                     </div>
                     <!-- / End Left Column -->
                     <div class="config-cart-wrapper">
+                    {% if sitecore %}
                         <div class="order-summary-wrapper">
+                            <h3>{{ configSummaryTitle }}</h3>
+                            <div class="order-total-wrapper">
+                                <div class="order-item-details-wrapper">
+                                    <p class="order-item-title package" id="summaryOS"></p>
+                                    <p class="order-item-title" id="summaryRAM"></p>
+                                    <p class="order-item-title" id="summaryStorage"></p>
+                                    <p class="order-item-title" id="summaryBandwidth"></p>
+                                </div>
+                                <div class="order-item-addons-wrapper">
+                                     <p class="order-item-title" id="summaryAddon"></p>
+                                     <span><span id="summaryTerm"></span><span id="addonPrice" class="plan-price" ></span></span>
+                                 </div>
+                                 <div class="subtotal-disclaimer">
+                                    <p>{{ configSummarytotal }}</p>
+                                 </div>
+                            </div>
+                        </div>                       
+                         <div>
+                                <span class="order-total"><span class="currency-amount" id="summaryPrice"></span></span>
+                          </div>
+                        <div data-ci="{{ scrolldownci }}" class="scroll-down-wrapper move" data-scroll="{{ configLastBox }}">
+                            <p class="green-text">{{ configSummarytotalDisc }}</p>
+                            <span class="icon-down green-down-arrow-icon"></span>
+                        </div>
+                        {% else %}
+                          <div class="order-summary-wrapper">
                             <h3>{{ configSummaryTitle }}</h3>
                             <div class="order-total-wrapper">
                                 <div class="order-item-details-wrapper">
@@ -45,6 +76,7 @@
                             <p class="green-text">{{ configSummarySubtotalDisc }}</p>
                             <span class="icon-down green-down-arrow-icon"></span>
                         </div>
+                        {% endif %}
                     </div>
                 </div>
                 {% block modals %}

@@ -1,0 +1,121 @@
+---
+location: localization/sales/gd/pro/dedicated-server-config/en
+id: 5421dd8ff778fc2490ac4dd9
+name: GCE-27519
+comments: Web Pro dedicated server config page
+---
+{% include '../../../modules/doc-block.html' %}
+<phrase key="page-title" />
+Dedicated Servers | Fully Configurable Multi-core Servers
+<phrase key="meta-description" />
+Need a Dedicated Server? GoDaddy makes it easy to run your own Dedicated Web Server.
+<phrase key="meta-keywords" />
+dedicated server, dedicated servers, dedicated server hosting, dedicated server web hosting
+<phrase key="og-title" />
+GoDaddy Dedicated Servers provide you with the ultimate in hosting performance, control &amp; convenience.
+<phrase key="og-description" />
+Get the most out of your website! GoDaddy Dedicated Servers provide you with the ultimate in hosting performance, control &amp; convenience.
+<phrase key="configTitleLink" />
+Change plan
+<phrase key="configTitleText" />
+Customize your server to meet your specific needs by selecting any of the features below.
+<phrase key="configTitleContinueToCart" />
+Continue to cart
+<phrase key="configTitleText" />
+Configure your server
+<phrase key="configSummaryTitle" />
+Server Configuration
+<phrase key="configSummarySubtotal" />
+Total
+<phrase key="configSummarytotalDisc" />
+Scroll down to continue to cart
+<phrase key="Managed" />
+Managed
+<phrase key="CentOSOnly" />
+CentOS 6 Only
+<phrase key="Fully-Managed" />
+Fully-Managed
+<phrase key="linuxpromanaged" />
+Includes: cPanel® | Patching | Security | Monitoring | Backups
+<phrase key="linuxpromanagedplus" />
+Includes: Dedicated team of server admin experts | cPanel® | Patching | Security | Monitoring | Backups 
+<phrase key="linuxpromanaged-alt" />
+Includes: Dedicated team of server admin experts (Available in English) | cPanel® | Patching | Security | Monitoring | Backups 
+<phrase key="windowspromanaged" />
+Includes: Parallels® Plesk | Patching | Security | Monitoring | Backups 
+<phrase key="windowspromanagedplus" />
+Includes: Dedicated team of server admin experts | Parallels® Plesk | Patching | Security | Monitoring | Backups 
+<phrase key="windowspromanagedplus-alt" />
+Includes: Dedicated team of server admin experts (Available in English) | Parallels® Plesk | Patching | Security | Monitoring | Backups 
+<phrase key="Self-Managed" />
+Self-Managed
+<phrase key="selfos" />
+Your choice of Ubuntu, Fedora or CentOS 7
+<phrase key="managedself" />
+No control panel or backups. Command-line only for hardcore server pros.
+<phrase key="2GB" />
+2 GB
+<phrase key="4GB" />
+4 GB
+<phrase key="8GB" />
+8 GB
+<phrase key="16GB" />
+16 GB
+<phrase key="32GB" />
+32 GB
+<phrase key="40GB" />
+40 GB
+<phrase key="1TB" />
+1 TB
+<phrase key="1.5TB" />
+1.5 TB
+<phrase key="2TB" />
+2 TB
+<phrase key="10TB" />
+10 TB
+<phrase key="15TB" />
+15 TB
+<phrase key="20TB" />
+20 TB
+<phrase key="windows2008" />
+Windows 2008
+<phrase key="Servermanagement" />
+Server management
+<phrase key="servertagline" />
+Rather spend your time designing, developing, or finding new clients?
+<phrase key="servertagline2" />
+We'll take care of your server.
+<phrase key="TermsHeader" />
+Lock in your price
+<phrase key="termtagline" />
+Have a price you like? Keep it that way.
+<phrase key="termtagline2" />
+Choose a longer term and avoid potentially paying a higher price when it's time to renew
+<phrase key="ctcart" />
+Continue to Cart
+<phrase key="RAM" />
+RAM
+<phrase key="Storage" />
+Storage
+<phrase key="Bandwidth" />
+Bandwidth
+<phrase key="months" />
+months
+<phrase key="month" />
+month
+<phrase key="SAVE" />
+SAVE
+<phrase key="Windows" />
+Windows
+<phrase key="Linux" />
+Linux
+<phrase key="aslow" />
+As Low as
+<phrase key="included" />
+Included
+<phrase key="add" />
+Add
+<phrase key="subtract" />
+Subtract
+<phrase key="mo" />
+/mo
