@@ -1,10 +1,12 @@
-<phrase key="office_365_bossimpressed-headline" />
+---
+location: localization/sales/homepage/marquee/o365_boss_impressed/en
+id: 5440c6faf778fc0b78c97cbe
+name: GCE-25370
+assetPath: false
+---
+<phrase key="headline" />
 OFFICE 365 FROM GODADDY EMAIL SO PROFESSIONAL, EVEN YOUR OLD BOSS WILL BE IMPRESSED.
-<phrase key="office_365_bossimpressed-sub-headline" />
-PLANS FROM ONLY
-<phrase key="office_365_bossimpressed-maintext-rt" />
-[@T[productprice:<current productid="32051" period="monthly" />]@T]
-<phrase key="office_365_bossimpressed-duration-rt" />
-/MO
-<phrase key="office_365_bossimpressed-btn" />
+<phrase key="sub-headline" />
+PLANS FROM ONLY [@T[productprice:<current productid="32051" period="monthly" />]@T]/MO
+<phrase key="cta-text" />
 START NOW
