@@ -1,9 +1,9 @@
 ---
 location: sales/ssl/ssl-certificates-config.aspx
 url: http://www.dev-godaddy.com/ssl/ssl-certificates-config.aspx
-id: 543d5714f778fc233071c976
-name: Update Config Page
-comments: Fix Sitelock Price Wrapping Issue
+id: 54418185f778fc0ce0d0fa8e
+name: GCE-30440 ITC
+comments: Fix ITC Issues
 assetPath: false
 ---
 ##if(false)
@@ -148,6 +148,7 @@ assetPath: false
   <input type="hidden" name="planSelected" id="planSelected" value=""/>
   <input type="hidden" name="mgrNumber" id="mgrNumber" value=""/>
   <input type="hidden" name="clickOrigin" id="clickOrigin" value=""/>
+  <input type="hidden" name="isConfigUpdated" id="isConfigUpdated" value="0"/>
 </div>
 </div>
 <script type="text/javascript">
@@ -170,6 +171,7 @@ var premiumIsAvailable = (premiumCountries.indexOf(country) !== -1);
 $(document).ready(function () {
   $('.site-lock-add').click(function (e) {
 $(this).find('.sitelock-checkbox').toggleClass('active');
+$('#isConfigUpdated').val('1');
 });  
   var productQuery = getParameterByName('plan') || 'ssl_dlx_1';
   var managerQuery = getParameterByName('mgrshopper');
@@ -193,6 +195,7 @@ $(this).find('.sitelock-checkbox').toggleClass('active');
   });
 
   $('.plan-droplist-select').click(function () { //Open & close dropdown
+    $('#isConfigUpdated').val('1');
     var wrap = $(this);
     if (wrap.hasClass('droplist-open')) {
       wrap.removeClass('droplist-open');
@@ -207,6 +210,7 @@ $(this).find('.sitelock-checkbox').toggleClass('active');
   });
 
   $('.plan-droplist-select > ul > li').live('click', function () {
+    $('#isConfigUpdated').val('1');
     var li = $(this);
     var parent = li.parent().parent();
     li.siblings('li').removeClass('selected'); //Remove current selected
@@ -312,62 +316,117 @@ var PlanConfig = {
     var url = '[@T[link:<relative path="/api/package" parammode="explicit"/>]@T]';
     var planselected = $('#planSelected').val();
     var mgrNumber = $('#mgrNumber').val();
+    var url2;
 
+    if(IsProPage()){
+      url += '/update'; //action
+    }
+    else{
+      url += '/add'; //action
+    }
     
-    url += '/update'; //action
     if(IsProPage()) {
-      url += '/pro_SSL'; //itc code for pro
+      url += $("#isConfigUpdated").val() === "0" ?'/pro_SSL':'/pro_SSL_config'; //itc code for pro
     }
     else {
       url += '/slp_ssladdtocart1'; //itc code for non-pro
     }    
     url += '/85362'; //ci code
     url += '/1';
-    url += '/' + planselected; //Plan Name
-    if($("#siteLockCheckbox").hasClass("active"))
+    if(IsProPage()){
+        url2 = url;
+        if($("#siteLockCheckbox").hasClass("active"))
+        {  
+          url2 += '/sitelock_basic1yr'; //SiteLock Basic
+        }
+      url += '/' + planselected; //Plan Name
+      
+
+    }else{
+      url += '/' + planselected; //Plan Name
+
+      if($("#siteLockCheckbox").hasClass("active"))
         {  
           url += '/sitelock_basic1yr'; //SiteLock Basic
         }
+
+    }
+    
     ##if(isManager())
-    url += '?mgrshopper=' +  mgrNumber;
+    if(IsProPage()){
+      url += '?mgrshopper=' +  mgrNumber;
+      url2 += '?mgrshopper=' +  mgrNumber;
+    }else{
+      url += '?mgrshopper=' +  mgrNumber;
+    }
     ##endif
 
-    $.getJSON(url, function (data) {
-      if (data != 'fail') {
-        if(IsProPage()) {
-         ##if(isManager())
-          window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" ><param name="pro" value="1" /></external>]@T]';
-         ##else
-          window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" ><param name="pro" value="1" /></external>]@T]';
-         ##endif
-       }
-       else {
-        ##if(isManager())
-          window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" ></external>]@T]';
-         ##else
-          window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" ></external>]@T]';
-         ##endif
-       }
-      }
-      else {
-        if(IsProPage()) {
-         ##if(isManager())
-          window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" ><param name="pro" value="1" /></external>]@T]';
-         ##else
-          window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" ><param name="pro" value="1" /></external>]@T]';
-         ##endif
-       }
-       else {
-        ##if(isManager())
-          window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" ></external>]@T]';
-         ##else
-          window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" ></external>]@T]';
-         ##endif
-       }
-      }
-    });
+    if(IsProPage()){
+      var sslData, sitelockData;
+      if($("#siteLockCheckbox").hasClass("active"))
+        {  
+          $.when(
+            $.getJSON(url, function (data) {
+              sslData=data;
+            }),
+            $.getJSON(url2,function (data){
+              sitelockData=data;
+            })
+          ).then(function(){
+              if (sslData != 'fail' && sitelockData != 'fail') {
+                 ##if(isManager())
+                  window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" ><param name="pro" value="1" /></external>]@T]';
+                 ##else
+                  window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" ><param name="pro" value="1" /></external>]@T]';
+                 ##endif
+              }else{
+                ##if(isManager())
+                  window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" ><param name="pro" value="1" /></external>]@T]';
+                 ##else
+                  window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" ><param name="pro" value="1" /></external>]@T]';
+                 ##endif
+              }
+          });
+        }else{
+          $.getJSON(url, function (data) {
+            if (data != 'fail') {
+              ##if(isManager())
+              window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" ><param name="pro" value="1" /></external>]@T]';
+             ##else
+              window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" ><param name="pro" value="1" /></external>]@T]';
+             ##endif
+            }
+            else {
+              ##if(isManager())
+              window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" ><param name="pro" value="1" /></external>]@T]';
+             ##else
+              window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" ><param name="pro" value="1" /></external>]@T]';
+             ##endif
+            }
+          });
+        }
+
+     
+    }else{
+      $.getJSON(url, function (data) {
+          if (data != 'fail') {
+            ##if(isManager())
+              window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" ></external>]@T]';
+             ##else
+              window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" ></external>]@T]';
+             ##endif
+          }
+          else {
+            ##if(isManager())
+              window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" ></external>]@T]';
+             ##else
+              window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" ></external>]@T]';
+             ##endif
+          }
+      });
+    }
   }
-}
+};
 
 function processRemainingSSLData(data) {
   var planSelected = $('#planSelected').val();
