@@ -14,6 +14,6 @@ assetPath: false
   "additionalInfo": "",
   "restrictions": "",
   "restrictionsTooltip": "",
-  "elementClass": "o365-boss-impressed",
+  "elementId": "o365-boss-impressed",
   "customCSS": ".o365-boss-impressed {background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/color-block-background.png) no-repeat top center;}"
 }
