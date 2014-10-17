@@ -47,8 +47,9 @@
   "wordpress-pl":       "./hosting/private-label/wordpress/",
   "wp":                 "./hosting/wordpress-hosting/",
   "wsb":                "./hosting/website-builder/",
-  "hostingclp":         "./hosting/category-landing-page/",
-  "ssl-lp":             "./ssl/ssl-lp/",
-  "web-host":           "./hosting/web-host/",
-  "shared":             "./shared/"
+  "hostingclp":          "./hosting/category-landing-page/",
+  "ssl-lp":              "./ssl/ssl-lp/",
+  "shared":             "./shared/",
+  "web-host":            "./hosting/web-host/",
+  "managed-vps-config": "./pro/managed-vps-config/"
 }

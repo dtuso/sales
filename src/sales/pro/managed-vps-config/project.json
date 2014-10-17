@@ -1,0 +1,56 @@
+{
+  "managed-vps-config.html": {
+    "cdsDetails": {
+      "champion": {
+        "name": "Colyn Brown",
+        "email": "clbrown@godaddy.com"
+      },
+      "cdsLocation": "sales/pro/managed-vps-config",
+      "draft": {
+        "id": false,
+        "createdDate": "2014-09-04",
+        "createdBy": {
+          "fullName": "Dharini Patel",
+          "username": "dpatel"
+        },
+        "jiraTicket": "GCE-27518",
+        "comments": "VPS config page for webpro",
+        "url": "http://www.dev-godaddy.com/pro/managed-vps-config"
+      }
+    },
+    "assetPath": "fos/201401/pro/managed-vps-config/",
+    "metaTitle": "[@L[cds.sales/gd/pro/managed-vps-config:page-title]@L]",
+    "metaDescription": "[@L[cds.sales/gd/pro/managed-vps-config:meta-description]@L]",
+    "metaKeywords": "[@L[cds.sales/gd/pro/managed-vps-config:meta-keywords]@L]",
+    "metaCanonicalPath": "/pro/managed-vps-config",
+    "metaOgTitle": "[@L[cds.sales/gd/pro/managed-vps-config:og-title]@L]",
+    "metaOgImage": "fos/hp/rebrand/img/gd_rebrand_og.png",
+    "metaOgDescription": "[@L[cds.sales/gd/pro/managed-vps-config:og-description]@L]",
+    "configTitleContinueToCart":"[@L[cds.sales/gd/pro/managed-vps-config:configTitleContinueToCart]@L]",
+    "configTitleText":"[@L[cds.sales/gd/pro/managed-vps-config:configTitleText]@L]",
+    "configSummaryTitle":"[@L[cds.sales/gd/pro/managed-vps-config:configSummaryTitle]@L]",
+    "configSummarytotal":"[@L[cds.sales/gd/pro/managed-vps-config:configSummarytotal]@L]",
+    "configSummarytotalDisc":"[@L[cds.sales/gd/pro/managed-vps-config:configSummarytotalDisc]@L]",
+    "configLastBox": ".box5"
+
+  },
+  "pro-managed-vps-config.language": {
+    "cdsDetails": {
+      "champion": {
+        "name": "Colyn Brown",
+        "email": "clbrown@godaddy.com"
+      },
+      "cdsLocation": "localization/sales/pro/managed-vps-config/en",
+      "draft": {
+        "id": false,
+        "createdDate": "2014-04-29",
+        "createdBy": {
+          "fullName": "Sergio Lopez",
+          "username": "sylopez"
+        },
+        "jiraTicket": "FOS-1310",
+        "comments": "Landing Page Reskin"
+      }
+    }
+  }
+}

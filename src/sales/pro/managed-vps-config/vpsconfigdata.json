@@ -1,0 +1,1043 @@
+{
+    "vpsconfig": {
+        "addons": {
+            "centos":{
+                "bandwidth": {
+                    "us": [
+                        {
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:NoBandwidth]@L]"
+                        },
+                        {
+                            "id": "addon_centos_bandwidth-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:1TBBandwidth]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:1TBBandwidthAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"172117\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "addon_centos_bandwidth-3",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:3TBBandwidth]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:3TBBandwidthAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"172117\" quantity=\"3\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "addon_centos_bandwidth-5",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:5TBBandwidth]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:5TBBandwidthAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"172117\" quantity=\"5\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "addon_centos_bandwidth-10",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:10TBBandwidth]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:10TBBandwidthAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"172117\" quantity=\"10\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        }
+                    ],
+                    "eu": [
+                        {
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:NoBandwidth]@L]"
+                        },
+                        {
+                            "id": "addon_centos_bandwidth-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:1TBBandwidth]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:1TBBandwidthAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"172117\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "addon_centos_bandwidth-3",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:3TBBandwidth]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:3TBBandwidthAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"172117\" quantity=\"3\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "addon_centos_bandwidth-5",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:5TBBandwidth]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:5TBBandwidthAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"172117\" quantity=\"5\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "addon_centos_bandwidth-10",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:10TBBandwidth]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:10TBBandwidthAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"172117\" quantity=\"10\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        }
+                    ],
+                    "ap": [
+                        {
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:NoBandwidth]@L]"
+                        },
+                        {
+                            "id": "addon_centos_bandwidth-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:1TBBandwidth]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:1TBBandwidthAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"172117\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "addon_centos_bandwidth-3",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:3TBBandwidth]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:3TBBandwidthAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"172117\" quantity=\"3\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "addon_centos_bandwidth-5",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:5TBBandwidth]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:5TBBandwidthAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"172117\" quantity=\"5\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "addon_centos_bandwidth-10",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:10TBBandwidth]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:10TBBandwidthAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"172117\" quantity=\"10\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        }
+                    ]
+                },
+                "controlpanel": {
+                    "us": [
+                        {
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:NoControlPanel]@L]"
+
+                        },
+                        {
+                            "id": "addon_centos_controlpanel_cpanel-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:cPanelText]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:cPanelAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"172113\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        }
+                    ],
+                    "eu": [
+                        {
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:NoControlPanel]@L]"
+
+                        },
+                        {
+                            "id": "addon_centos_controlpanel_cpanel-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:cPanelText]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:cPanelAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"172113\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        }
+                    ],
+                    "ap": [
+                        {
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:NoControlPanel]@L]"
+
+                        },
+                        {
+                            "id": "addon_centos_controlpanel_cpanel-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:cPanelText]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:cPanelAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"172113\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        }
+                    ]
+                }
+            },
+            "fedora":{
+                "ftpsolution": {
+                    "us": [
+                        {
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:NoFTPLabel]@L]"
+                            
+                        },
+                        {
+                            "id": "us_addon_ftp_15-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:15FTPLabel]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:15FTPAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"3070\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "us_addon_ftp_30-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:30FTPLabel]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:30FTPAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"133\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "us_addon_ftp_60-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:60FTPLabel]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:60FTPAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"3071\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "us_addon_ftp_120-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:120FTPLabel]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:120FTPAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"3072\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        }
+                    ]
+                },
+                "managedbackup": {
+                    "us": [
+                        {
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:NoManagedBackup]@L]"
+                        },
+                        {
+                            "id": "us_addon_managedbackup_7-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:7DayManaged]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:DailyManged7Addon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1368\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "us_addon_managedbackup_30-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:30DayManaged]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:DailyManged30Addon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1362\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "us_addon_managedbackup_4-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:4WeekManaged]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:WeeklyManged4Addon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1363\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "us_addon_managedbackup_12-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:12WeekManaged]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:WeeklyManged12Addon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1364\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        }
+                    ]
+                },
+                "bandwidth": {
+                    "us": [
+                        {
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:NoBandwidth]@L]"
+                        },
+                        {
+                            "id": "us_addon_bandwidth_500-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:500GBBandwidth]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:500BandwidthAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1225\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "us_addon_bandwidth_500-2",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:1000GBBandwidth]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:1000BandwidthAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1225\" quantity=\"2\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "us_addon_bandwidth_500-3",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:1500GBBandwidth]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:1500BandwidthAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1225\" quantity=\"3\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "us_addon_bandwidth_500-4",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:2000GBBandwidth]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:2000BandwithAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1225\" quantity=\"4\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        }
+                    ],
+                    "eu": [
+                        {
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:NoBandwidth]@L]"
+                        },
+                        {
+                            "id": "eu_addon_bandwidth_500-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:500GBBandwidth]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:500BandwidthAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1668\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "eu_addon_bandwidth_500-2",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:1000GBBandwidth]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:1000BandwidthAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1668\" quantity=\"2\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "eu_addon_bandwidth_500-3",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:1500GBBandwidth]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:1500BandwidthAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1668\" quantity=\"3\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "eu_addon_bandwidth_500-4",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:2000GBBandwidth]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:2000BandwithAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1668\" quantity=\"4\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        }
+                    ],
+                    "ap": [
+                        {
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:NoBandwidth]@L]"
+                        },
+                        {
+                            "id": "ap_addon_bandwidth_500-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:500GBBandwidth]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:500BandwidthAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"171824\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "ap_addon_bandwidth_500-2",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:1000GBBandwidth]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:1000BandwidthAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"3253\" quantity=\"2\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "ap_addon_bandwidth_500-3",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:1500GBBandwidth]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:1500BandwidthAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"3253\" quantity=\"3\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "ap_addon_bandwidth_500-4",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:2000GBBandwidth]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:2000BandwithAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"3253\" quantity=\"4\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        }
+                    ]
+                }
+            },
+            "windows":{
+                "ftpsolution": {
+                    "us": [
+                        {
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:NoFTPLabel]@L]"
+                            
+                        },
+                        {
+                            "id": "us_addon_ftp_15-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:15FTPLabel]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:15FTPAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"3070\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "us_addon_ftp_30-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:30FTPLabel]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:30FTPAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"133\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "us_addon_ftp_60-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:60FTPLabel]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:60FTPAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"3071\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "us_addon_ftp_120-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:120FTPLabel]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:120FTPAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"3072\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        }
+                    ]
+                },
+                "managedbackup": {
+                    "us": [
+                        {
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:NoManagedBackup]@L]"
+                        },
+                        {
+                            "id": "us_addon_managedbackup_7-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:7DayManaged]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:DailyManged7Addon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1368\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "us_addon_managedbackup_30-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:30DayManaged]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:DailyManged30Addon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1362\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "us_addon_managedbackup_4-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:4WeekManaged]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:WeeklyManged4Addon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1363\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "us_addon_managedbackup_12-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:12WeekManaged]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:WeeklyManged12Addon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1364\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        }
+                    ]
+                },
+                "bandwidth": {
+                    "us": [
+                        {
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:NoBandwidth]@L]"
+                        },
+                        {
+                            "id": "us_addon_bandwidth_500-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:500GBBandwidth]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:500BandwidthAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1225\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "us_addon_bandwidth_500-2",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:1000GBBandwidth]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:1000BandwidthAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1225\" quantity=\"2\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "us_addon_bandwidth_500-3",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:1500GBBandwidth]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:1500BandwidthAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1225\" quantity=\"3\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "us_addon_bandwidth_500-4",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:2000GBBandwidth]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:2000BandwithAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1225\" quantity=\"4\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        }
+                    ],
+                    "eu": [
+                        {
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:NoBandwidth]@L]"
+                        },
+                        {
+                            "id": "eu_addon_bandwidth_500-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:500GBBandwidth]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:500BandwidthAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1668\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "eu_addon_bandwidth_500-2",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:1000GBBandwidth]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:1000BandwidthAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1668\" quantity=\"2\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "eu_addon_bandwidth_500-3",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:1500GBBandwidth]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:1500BandwidthAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1668\" quantity=\"3\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "eu_addon_bandwidth_500-4",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:2000GBBandwidth]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:2000BandwithAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1668\" quantity=\"4\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        }
+                    ],
+                    "ap": [
+                        {
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:NoBandwidth]@L]"
+                        },
+                        {
+                            "id": "ap_addon_bandwidth_500-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:500GBBandwidth]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:500BandwidthAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"171824\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "ap_addon_bandwidth_500-2",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:1000GBBandwidth]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:1000BandwidthAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"3253\" quantity=\"2\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "ap_addon_bandwidth_500-3",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:1500GBBandwidth]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:1500BandwidthAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"3253\" quantity=\"3\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "ap_addon_bandwidth_500-4",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:2000GBBandwidth]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:2000BandwithAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"3253\" quantity=\"4\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        }
+                    ]
+                },
+                "assistedservice": {
+                    "us": [
+                        {
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:NoAssistedPlan]@L]"
+                        },
+                        {
+                            "id": "us_addon_assistedservice-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:AssistedServicePlan]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:ServicePlanAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1264\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        }
+                    ]
+                },
+                "controlpanel": {
+                    "us": [
+                        {
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:NoControlPanel]@L]"
+
+                        },
+                        {
+                            "id": "us_addon_controlpanel_30-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:Plesk30Domains]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:Plesk30Addon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1222\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                            "addonupgrade": [
+                                {
+                                    "id": "us_addon_controlpanel_powerpack-1",
+                                    "addonvalue": " [@L[cds.sales/gd/hosting/vps-hosting-config:NoAdditionalFeatures]@L]"
+                                },
+                                {
+                                    "id": "us_addon_controlpanel_powerpack-1",
+                                    "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:PowerPackText]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:PowerPackAddon]@L]",
+                                    "addonprice": "[@T[productprice:<current productid=\"2751\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "us_addon_controlpanel_100-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:Plesk100Domains]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:Plesk100Addon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1223\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                            "addonupgrade": [
+                                {
+                                    "id": "us_addon_controlpanel_powerpack-1",
+                                    "addonvalue": " [@L[cds.sales/gd/hosting/vps-hosting-config:NoAdditionalFeatures]@L]"
+                                },
+                                {
+                                    "id": "us_addon_controlpanel_powerpack-1",
+                                    "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:PowerPackText]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:PowerPackAddon]@L]",
+                                    "addonprice": "[@T[productprice:<current productid=\"2751\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "us_addon_controlpanel_unlimited-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:PleskUnlimitedDomains]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:PleskUnlimtedAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1224\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                            "addonupgrade": [
+                                {
+                                    "id": "us_addon_controlpanel_powerpack-1",
+                                    "addonvalue": " [@L[cds.sales/gd/hosting/vps-hosting-config:NoAdditionalFeatures]@L]"
+                                },
+                                {
+                                    "id": "us_addon_controlpanel_powerpack-1",
+                                    "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:PowerPackText]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:PowerPackAddon]@L]",
+                                    "addonprice": "[@T[productprice:<current productid=\"2751\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                                }
+                            ]
+                        }
+                    ],
+                    "eu": [
+                        {
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:NoControlPanel]@L]"
+                        },
+                        {
+                            "id": "eu_addon_controlpanel_30-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:Plesk30Domains]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:Plesk30Addon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1665\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                            "addonupgrade": [
+                                {
+                                    "id": "eu_addon_controlpanel_powerpack-1",
+                                    "addonvalue": " [@L[cds.sales/gd/hosting/vps-hosting-config:NoAdditionalFeatures]@L]"
+                                },
+                                {
+                                    "id": "eu_addon_controlpanel_powerpack-1",
+                                    "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:PowerPackText]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:PowerPackAddon]@L]",
+                                    "addonprice": "[@T[productprice:<current productid=\"1695\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "eu_addon_controlpanel_100-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:Plesk100Domains]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:Plesk100Addon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1666\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                            "addonupgrade": [
+                                {
+                                    "id": "eu_addon_controlpanel_powerpack_100-1",
+                                    "addonvalue": " [@L[cds.sales/gd/hosting/vps-hosting-config:NoAdditionalFeatures]@L]"
+                                },
+                                {
+                                    "id": "eu_addon_controlpanel_powerpack_100-1",
+                                    "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:PowerPackText]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:PowerPackAddon]@L]",
+                                    "addonprice": "[@T[productprice:<current productid=\"1695\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "eu_addon_controlpanel_unlimited-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:PleskUnlimitedDomains]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:PleskUnlimtedAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"1667\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                            "addonupgrade": [
+                                {
+                                    "id": "eu_addon_controlpanel_powerpack_unlimited-1",
+                                    "addonvalue": " [@L[cds.sales/gd/hosting/vps-hosting-config:NoAdditionalFeatures]@L]"
+                                },
+                                {
+                                    "id": "eu_addon_controlpanel_powerpack_unlimited-1",
+                                    "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:PowerPackText]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:PowerPackAddon]@L]",
+                                    "addonprice": "[@T[productprice:<current productid=\"1695\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                                }
+                            ]
+                        }
+                    ],
+                    "ap": [
+                        {
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:NoControlPanel]@L]"
+                        },
+                        {
+                            "id": "ap_addon_controlpanel_30-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:Plesk30Domains]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:Plesk30Addon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"3250\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                            "addonupgrade": [
+                                {
+                                    "addonvalue": " [@L[cds.sales/gd/hosting/vps-hosting-config:NoAdditionalFeatures]@L]"
+                                },
+                                {
+                                    "id": "ap_addon_controlpanel_powerpack-1",
+                                    "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:PowerPackText]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:PowerPackAddon]@L]",
+                                    "addonprice": "[@T[productprice:<current productid=\"3261\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "ap_addon_controlpanel_100-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:Plesk100Domains]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:Plesk100Addon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"3251\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                            "addonupgrade": [
+                                {
+                                    "addonvalue": " [@L[cds.sales/gd/hosting/vps-hosting-config:NoAdditionalFeatures]@L]"
+                                },
+                                {
+                                    "id": "ap_addon_controlpanel_powerpack_100-1",
+                                    "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:PowerPackText]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:PowerPackAddon]@L]",
+                                    "addonprice": "[@T[productprice:<current productid=\"3261\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "ap_addon_controlpanel_unlimited-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:PleskUnlimitedDomains]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:PleskUnlimtedAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"3252\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                            "addonupgrade": [
+                                {
+                                    "addonvalue": " [@L[cds.sales/gd/hosting/vps-hosting-config:NoAdditionalFeatures]@L]"
+                                },
+                                {
+                                    "id": "ap_addon_controlpanel_powerpack_unlimited-1",
+                                    "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:PowerPackText]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:PowerPackAddon]@L]",
+                                    "addonprice": "[@T[productprice:<current productid=\"3261\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }                        
+        },
+        "details": {
+            "centos": {
+                "plans": {
+                    "basic": {
+                        "os": "[@L[cds.sales/gd/hosting/vps-hosting-config:basicCentos]@L]",
+                        "ram": "[@L[cds.sales/gd/hosting/vps-hosting-config:512MB]@L]",
+                        "storage": "[@L[cds.sales/gd/hosting/vps-hosting-config:20GB]@L]",
+                        "bandwidth": "[@L[cds.sales/gd/hosting/vps-hosting-config:1000GB]@L]"
+                    },
+                    "eco": {
+                        "os": "[@L[cds.sales/gd/hosting/vps-hosting-config:ecoCentos]@L]",
+                        "ram": "[@L[cds.sales/gd/hosting/vps-hosting-config:1GB]@L]",
+                        "storage": "[@L[cds.sales/gd/hosting/vps-hosting-config:40GB]@L]",
+                        "bandwidth": "[@L[cds.sales/gd/hosting/vps-hosting-config:1000GB]@L]"
+                    },
+                    "val": {
+                        "os": "[@L[cds.sales/gd/hosting/vps-hosting-config:valCentos]@L]",
+                        "ram": "[@L[cds.sales/gd/hosting/vps-hosting-config:2GB]@L]",
+                        "storage": "[@L[cds.sales/gd/hosting/vps-hosting-config:60GB]@L]",
+                        "bandwidth": "[@L[cds.sales/gd/hosting/vps-hosting-config:2000GB]@L]"
+                    },
+                    "deluxe": {
+                        "os": "[@L[cds.sales/gd/hosting/vps-hosting-config:deluxeCentos]@L]",
+                        "ram": "[@L[cds.sales/gd/hosting/vps-hosting-config:3GB]@L]",
+                        "storage": "[@L[cds.sales/gd/hosting/vps-hosting-config:90GB]@L]",
+                        "bandwidth": "[@L[cds.sales/gd/hosting/vps-hosting-config:3000GB]@L]"
+                    },
+                    "premium": {
+                        "os": "[@L[cds.sales/gd/hosting/vps-hosting-config:premiumCentos]@L]",
+                        "ram": "[@L[cds.sales/gd/hosting/vps-hosting-config:4GB]@L]",
+                        "storage": "[@L[cds.sales/gd/hosting/vps-hosting-config:120GB]@L]",
+                        "bandwidth": "[@L[cds.sales/gd/hosting/vps-hosting-config:4000GB]@L]"
+                    },
+                    "ult": {
+                        "os": "[@L[cds.sales/gd/hosting/vps-hosting-config:ultimateCentos]@L]",
+                        "ram": "[@L[cds.sales/gd/hosting/vps-hosting-config:8GB]@L]",
+                        "storage": "[@L[cds.sales/gd/hosting/vps-hosting-config:240GB]@L]",
+                        "bandwidth": "[@L[cds.sales/gd/hosting/vps-hosting-config:8000GB]@L]"
+                    }
+                },
+                "prices": {
+                    "basic": {
+                        "us": {
+                          "1":"[@T[productprice:<current productid=\"171822\" dropdecimal=\"false\" period=\"monthly\"   htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "6":"[@T[productprice:<current productid=\"171830\" dropdecimal=\"false\" period=\"monthly\"   htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "12":"[@T[productprice:<current productid=\"171825\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "24":"[@T[productprice:<current productid=\"171834\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        "eu": {
+                          "1":"[@T[productprice:<current productid=\"171918\" dropdecimal=\"false\" period=\"monthly\"   htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "6":"[@T[productprice:<current productid=\"171926\" dropdecimal=\"false\" period=\"monthly\"   htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "12":"[@T[productprice:<current productid=\"171921\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "24":"[@T[productprice:<current productid=\"171930\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        "ap": {
+                          "1":"[@T[productprice:<current productid=\"172014\" dropdecimal=\"false\" period=\"monthly\"   htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "6":"[@T[productprice:<current productid=\"172022\" dropdecimal=\"false\" period=\"monthly\"   htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "12":"[@T[productprice:<current productid=\"172017\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "24":"[@T[productprice:<current productid=\"172026\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        }
+                    },
+                  "eco": {
+                        "us": {
+                          "1":"[@T[productprice:<current productid=\"171824\" dropdecimal=\"false\" period=\"monthly\"   htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "6":"[@T[productprice:<current productid=\"171832\" dropdecimal=\"false\" period=\"monthly\"   htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "12":"[@T[productprice:<current productid=\"171833\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "24":"[@T[productprice:<current productid=\"171836\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        "eu": {
+                          "1":"[@T[productprice:<current productid=\"171920\" dropdecimal=\"false\" period=\"monthly\"   htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "6":"[@T[productprice:<current productid=\"171928\" dropdecimal=\"false\" period=\"monthly\"   htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "12":"[@T[productprice:<current productid=\"171929\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "24":"[@T[productprice:<current productid=\"171932\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        "ap": {
+                          "1":"[@T[productprice:<current productid=\"172016\" dropdecimal=\"false\" period=\"monthly\"   htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "6":"[@T[productprice:<current productid=\"172024\" dropdecimal=\"false\" period=\"monthly\"   htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "12":"[@T[productprice:<current productid=\"172025\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "24":"[@T[productprice:<current productid=\"172028\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        }
+                    },
+                    "val": {
+                        "us": {
+                          "1":"[@T[productprice:<current productid=\"171847\" dropdecimal=\"false\" period=\"monthly\"   htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "6":"[@T[productprice:<current productid=\"171852\" dropdecimal=\"false\" period=\"monthly\"   htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "12":"[@T[productprice:<current productid=\"171853\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "24":"[@T[productprice:<current productid=\"171855\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        "eu": {
+                          "1":"[@T[productprice:<current productid=\"171943\" dropdecimal=\"false\" period=\"monthly\"   htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "6":"[@T[productprice:<current productid=\"171948\" dropdecimal=\"false\" period=\"monthly\"   htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "12":"[@T[productprice:<current productid=\"171949\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "24":"[@T[productprice:<current productid=\"171951\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        "ap": {
+                          "1":"[@T[productprice:<current productid=\"172039\" dropdecimal=\"false\" period=\"monthly\"   htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "6":"[@T[productprice:<current productid=\"172044\" dropdecimal=\"false\" period=\"monthly\"   htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "12":"[@T[productprice:<current productid=\"172045\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "24":"[@T[productprice:<current productid=\"172047\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        }
+                    },
+                    "deluxe": {
+                        "us": {
+                          "1":"[@T[productprice:<current productid=\"171863\" dropdecimal=\"false\" period=\"monthly\"   htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "6":"[@T[productprice:<current productid=\"171868\" dropdecimal=\"false\" period=\"monthly\"   htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "12":"[@T[productprice:<current productid=\"171869\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "24":"[@T[productprice:<current productid=\"171871\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        "eu": {
+                          "1":"[@T[productprice:<current productid=\"171959\" dropdecimal=\"false\" period=\"monthly\"   htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "6":"[@T[productprice:<current productid=\"171964\" dropdecimal=\"false\" period=\"monthly\"   htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "12":"[@T[productprice:<current productid=\"171965\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "24":"[@T[productprice:<current productid=\"171967\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        "ap": {
+                          "1":"[@T[productprice:<current productid=\"172055\" dropdecimal=\"false\" period=\"monthly\"   htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "6":"[@T[productprice:<current productid=\"172060\" dropdecimal=\"false\" period=\"monthly\"   htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "12":"[@T[productprice:<current productid=\"172061\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "24":"[@T[productprice:<current productid=\"172063\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        }
+                    },
+                    "premium": {
+                        "us": {
+                          "1":"[@T[productprice:<current productid=\"171879\" dropdecimal=\"false\" period=\"monthly\"   htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "6":"[@T[productprice:<current productid=\"171884\" dropdecimal=\"false\" period=\"monthly\"   htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "12":"[@T[productprice:<current productid=\"171885\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "24":"[@T[productprice:<current productid=\"171887\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        "eu": {
+                          "1":"[@T[productprice:<current productid=\"171975\" dropdecimal=\"false\" period=\"monthly\"   htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "6":"[@T[productprice:<current productid=\"171980\" dropdecimal=\"false\" period=\"monthly\"   htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "12":"[@T[productprice:<current productid=\"171981\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "24":"[@T[productprice:<current productid=\"171983\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        "ap": {
+                          "1":"[@T[productprice:<current productid=\"172071\" dropdecimal=\"false\" period=\"monthly\"   htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "6":"[@T[productprice:<current productid=\"172076\" dropdecimal=\"false\" period=\"monthly\"   htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "12":"[@T[productprice:<current productid=\"172077\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "24":"[@T[productprice:<current productid=\"172079\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        }
+                    },
+                    "ult": {
+                        "us": {
+                          "1":"[@T[productprice:<current productid=\"171895\" dropdecimal=\"false\" period=\"monthly\"   htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "6":"[@T[productprice:<current productid=\"171900\" dropdecimal=\"false\" period=\"monthly\"   htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "12":"[@T[productprice:<current productid=\"171901\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "24":"[@T[productprice:<current productid=\"171903\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        "eu": {
+                          "1":"[@T[productprice:<current productid=\"171991\" dropdecimal=\"false\" period=\"monthly\"   htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "6":"[@T[productprice:<current productid=\"171996\" dropdecimal=\"false\" period=\"monthly\"   htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "12":"[@T[productprice:<current productid=\"171997\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "24":"[@T[productprice:<current productid=\"171999\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        "ap": {
+                          "1":"[@T[productprice:<current productid=\"172087\" dropdecimal=\"false\" period=\"monthly\"   htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "6":"[@T[productprice:<current productid=\"172092\" dropdecimal=\"false\" period=\"monthly\"   htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "12":"[@T[productprice:<current productid=\"172093\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "24":"[@T[productprice:<current productid=\"172095\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        }
+                    }
+                }
+            },
+            "fedora": {
+                "plans": {
+                    "eco": {
+                        "os": "[@L[cds.sales/gd/hosting/vps-hosting-config:ecoFedora]@L]",
+                        "ram": "[@L[cds.sales/gd/hosting/vps-hosting-config:1GB]@L]",
+                        "storage": "[@L[cds.sales/gd/hosting/vps-hosting-config:40GB]@L]",
+                        "bandwidth": "[@L[cds.sales/gd/hosting/vps-hosting-config:1000GB]@L]"
+                    },
+                    "val": {
+                        "os": "[@L[cds.sales/gd/hosting/vps-hosting-config:valFedora]@L]",
+                        "ram": "[@L[cds.sales/gd/hosting/vps-hosting-config:2GB]@L]",
+                        "storage": "[@L[cds.sales/gd/hosting/vps-hosting-config:60GB]@L]",
+                        "bandwidth": "[@L[cds.sales/gd/hosting/vps-hosting-config:2000GB]@L]"
+                    },
+                    "deluxe": {
+                        "os": "[@L[cds.sales/gd/hosting/vps-hosting-config:deluxeFedora]@L]",
+                        "ram": "[@L[cds.sales/gd/hosting/vps-hosting-config:3GB]@L]",
+                        "storage": "[@L[cds.sales/gd/hosting/vps-hosting-config:90GB]@L]",
+                        "bandwidth": "[@L[cds.sales/gd/hosting/vps-hosting-config:3000GB]@L]"
+                    },
+                    "premium": {
+                        "os": "[@L[cds.sales/gd/hosting/vps-hosting-config:premiumFedora]@L]",
+                        "ram": "[@L[cds.sales/gd/hosting/vps-hosting-config:4GB]@L]",
+                        "storage": "[@L[cds.sales/gd/hosting/vps-hosting-config:120GB]@L]",
+                        "bandwidth": "[@L[cds.sales/gd/hosting/vps-hosting-config:4000GB]@L]"
+                    },
+                    "ult": {
+                        "os": "[@L[cds.sales/gd/hosting/vps-hosting-config:ultimateFedora]@L]",
+                        "ram": "[@L[cds.sales/gd/hosting/vps-hosting-config:8GB]@L]",
+                        "storage": "[@L[cds.sales/gd/hosting/vps-hosting-config:240GB]@L]",
+                        "bandwidth": "[@L[cds.sales/gd/hosting/vps-hosting-config:8000GB]@L]"
+                    }
+                },
+                "prices": {
+                  "eco": {
+                        "us": {
+                          "1":"[@T[productprice:<current productid=\"3049\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "6":"[@T[productprice:<current productid=\"3049\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "12":"[@T[productprice:<current productid=\"3049\" dropdecimal=\"false\" percentoff=\"10\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "24":"[@T[productprice:<current productid=\"3049\" dropdecimal=\"false\" percentoff=\"20\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        "eu": {
+                          "1":"[@T[productprice:<current productid=\"3062\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "6":"[@T[productprice:<current productid=\"3062\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "12":"[@T[productprice:<current productid=\"3062\" dropdecimal=\"false\" percentoff=\"10\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "24":"[@T[productprice:<current productid=\"3062\" dropdecimal=\"false\" percentoff=\"20\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        "ap": {
+                          "1":"[@T[productprice:<current productid=\"3081\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "6":"[@T[productprice:<current productid=\"3081\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "12":"[@T[productprice:<current productid=\"3081\" dropdecimal=\"false\" percentoff=\"10\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "24":"[@T[productprice:<current productid=\"3081\" dropdecimal=\"false\" percentoff=\"20\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        }
+                    },
+                    "val": {
+                        "us": {
+                          "1":"[@T[productprice:<current productid=\"3050\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "6":"[@T[productprice:<current productid=\"3050\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "12":"[@T[productprice:<current productid=\"3050\" dropdecimal=\"false\" percentoff=\"10\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "24":"[@T[productprice:<current productid=\"3050\" dropdecimal=\"false\" percentoff=\"20\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        "eu": {
+                          "1":"[@T[productprice:<current productid=\"3063\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "6":"[@T[productprice:<current productid=\"3063\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "12":"[@T[productprice:<current productid=\"3063\" dropdecimal=\"false\" percentoff=\"10\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "24":"[@T[productprice:<current productid=\"3063\" dropdecimal=\"false\" percentoff=\"20\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        "ap": {
+                          "1":"[@T[productprice:<current productid=\"3082\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "6":"[@T[productprice:<current productid=\"3082\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "12":"[@T[productprice:<current productid=\"3082\" dropdecimal=\"false\" percentoff=\"10\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "24":"[@T[productprice:<current productid=\"3082\" dropdecimal=\"false\" percentoff=\"20\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        }
+                    },
+                    "deluxe": {
+                        "us": {
+                          "1":"[@T[productprice:<current productid=\"3051\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "6":"[@T[productprice:<current productid=\"3051\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "12":"[@T[productprice:<current productid=\"3051\" dropdecimal=\"false\" percentoff=\"10\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "24":"[@T[productprice:<current productid=\"3051\" dropdecimal=\"false\" percentoff=\"20\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        "eu": {
+                          "1":"[@T[productprice:<current productid=\"3064\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "6":"[@T[productprice:<current productid=\"3064\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "12":"[@T[productprice:<current productid=\"3064\" dropdecimal=\"false\" percentoff=\"10\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "24":"[@T[productprice:<current productid=\"3064\" dropdecimal=\"false\" percentoff=\"20\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        "ap": {
+                          "1":"[@T[productprice:<current productid=\"3083\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "6":"[@T[productprice:<current productid=\"3083\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "12":"[@T[productprice:<current productid=\"3083\" dropdecimal=\"false\" percentoff=\"10\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "24":"[@T[productprice:<current productid=\"3083\" dropdecimal=\"false\" percentoff=\"20\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        }
+                    },
+                    "premium": {
+                        "us": {
+                          "1":"[@T[productprice:<current productid=\"3052\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "6":"[@T[productprice:<current productid=\"3052\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "12":"[@T[productprice:<current productid=\"3052\" dropdecimal=\"false\" percentoff=\"10\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "24":"[@T[productprice:<current productid=\"3052\" dropdecimal=\"false\" percentoff=\"20\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        "eu": {
+                          "1":"[@T[productprice:<current productid=\"3065\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "6":"[@T[productprice:<current productid=\"3065\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "12":"[@T[productprice:<current productid=\"3065\" dropdecimal=\"false\" percentoff=\"10\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "24":"[@T[productprice:<current productid=\"3065\" dropdecimal=\"false\" percentoff=\"20\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        "ap": {
+                          "1":"[@T[productprice:<current productid=\"3084\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "6":"[@T[productprice:<current productid=\"3084\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "12":"[@T[productprice:<current productid=\"3084\" dropdecimal=\"false\" percentoff=\"10\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "24":"[@T[productprice:<current productid=\"3084\" dropdecimal=\"false\" percentoff=\"20\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        }
+                    },
+                    "ult": {
+                        "us": {
+                          "1":"[@T[productprice:<current productid=\"3053\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "6":"[@T[productprice:<current productid=\"3053\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "12":"[@T[productprice:<current productid=\"3053\" dropdecimal=\"false\" percentoff=\"10\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "24":"[@T[productprice:<current productid=\"3053\" dropdecimal=\"false\" percentoff=\"20\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        "eu": {
+                          "1":"[@T[productprice:<current productid=\"3066\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "6":"[@T[productprice:<current productid=\"3066\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "12":"[@T[productprice:<current productid=\"3066\" dropdecimal=\"false\" percentoff=\"10\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "24":"[@T[productprice:<current productid=\"3066\" dropdecimal=\"false\" percentoff=\"20\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        "ap": {
+                          "1":"[@T[productprice:<current productid=\"3085\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "6":"[@T[productprice:<current productid=\"3085\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "12":"[@T[productprice:<current productid=\"3085\" dropdecimal=\"false\" percentoff=\"10\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "24":"[@T[productprice:<current productid=\"3085\" dropdecimal=\"false\" percentoff=\"20\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        }
+                    }
+                }
+            },
+            "windows": {
+                "plans": {
+                    "val": {
+                        "os": "[@L[cds.sales/gd/hosting/vps-hosting-config:valWindows]@L]",
+                        "ram": "[@L[cds.sales/gd/hosting/vps-hosting-config:2GB]@L]",
+                        "storage": "[@L[cds.sales/gd/hosting/vps-hosting-config:30GB]@L]",
+                        "bandwidth": "[@L[cds.sales/gd/hosting/vps-hosting-config:2000GB]@L]"
+                    },
+                    "deluxe": {
+                        "os": "[@L[cds.sales/gd/hosting/vps-hosting-config:deluxeWindows]@L]",
+                        "ram": "[@L[cds.sales/gd/hosting/vps-hosting-config:3GB]@L]",
+                        "storage": "[@L[cds.sales/gd/hosting/vps-hosting-config:45GB]@L]",
+                        "bandwidth": "[@L[cds.sales/gd/hosting/vps-hosting-config:3000GB]@L]"
+                    },
+                    "premium": {
+                        "os": "Premium: Windows 2008 Standard",
+                        "ram": "[@L[cds.sales/gd/hosting/vps-hosting-config:4GB]@L]",
+                        "storage": "[@L[cds.sales/gd/hosting/vps-hosting-config:60GB]@L]",
+                        "bandwidth": "[@L[cds.sales/gd/hosting/vps-hosting-config:4000GB]@L]"
+                    },
+                    "ult": {
+                        "os": "[@L[cds.sales/gd/hosting/vps-hosting-config:ultimateWindows]@L]",
+                        "ram": "[@L[cds.sales/gd/hosting/vps-hosting-config:8GB]@L]",
+                        "storage": "[@L[cds.sales/gd/hosting/vps-hosting-config:120GB]@L]",
+                        "bandwidth": "[@L[cds.sales/gd/hosting/vps-hosting-config:8000GB]@L]"
+                    }
+                },
+                "prices": {
+                    "val": {
+                        "us": {
+                          "1":"[@T[productprice:<current productid=\"3840\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "6":"[@T[productprice:<current productid=\"3840\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "12":"[@T[productprice:<current productid=\"3840\" dropdecimal=\"false\" percentoff=\"10\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "24":"[@T[productprice:<current productid=\"3840\" dropdecimal=\"false\" percentoff=\"20\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        "eu": {
+                          "1":"[@T[productprice:<current productid=\"3845\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "6":"[@T[productprice:<current productid=\"3845\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "12":"[@T[productprice:<current productid=\"3845\" dropdecimal=\"false\" percentoff=\"10\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "24":"[@T[productprice:<current productid=\"3845\" dropdecimal=\"false\" percentoff=\"20\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        "ap": {
+                          "1":"[@T[productprice:<current productid=\"3849\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "6":"[@T[productprice:<current productid=\"3849\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "12":"[@T[productprice:<current productid=\"3849\" dropdecimal=\"false\" percentoff=\"10\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "24":"[@T[productprice:<current productid=\"3849\" dropdecimal=\"false\" percentoff=\"20\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        }
+                    },
+                    "deluxe": {
+                        "us": {
+                          "1":"[@T[productprice:<current productid=\"3841\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "6":"[@T[productprice:<current productid=\"3841\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "12":"[@T[productprice:<current productid=\"3841\" dropdecimal=\"false\" percentoff=\"10\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "24":"[@T[productprice:<current productid=\"3841\" dropdecimal=\"false\" percentoff=\"20\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        "eu": {
+                          "1":"[@T[productprice:<current productid=\"3846\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "6":"[@T[productprice:<current productid=\"3846\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "12":"[@T[productprice:<current productid=\"3846\" dropdecimal=\"false\" percentoff=\"10\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "24":"[@T[productprice:<current productid=\"3846\" dropdecimal=\"false\" percentoff=\"20\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        "ap": {
+                          "1":"[@T[productprice:<current productid=\"3087\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "6":"[@T[productprice:<current productid=\"3087\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "12":"[@T[productprice:<current productid=\"3087\" dropdecimal=\"false\" percentoff=\"10\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "24":"[@T[productprice:<current productid=\"3087\" dropdecimal=\"false\" percentoff=\"20\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        }
+                    },
+                    "premium": {
+                        "us": {
+                          "1":"[@T[productprice:<current productid=\"3842\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "6":"[@T[productprice:<current productid=\"3842\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "12":"[@T[productprice:<current productid=\"3842\" dropdecimal=\"false\" percentoff=\"10\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "24":"[@T[productprice:<current productid=\"3842\" dropdecimal=\"false\" percentoff=\"20\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        "eu": {
+                          "1":"[@T[productprice:<current productid=\"3847\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "6":"[@T[productprice:<current productid=\"3847\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "12":"[@T[productprice:<current productid=\"3847\" dropdecimal=\"false\" percentoff=\"10\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "24":"[@T[productprice:<current productid=\"3847\" dropdecimal=\"false\" percentoff=\"20\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        "ap": {
+                          "1":"[@T[productprice:<current productid=\"3088\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "6":"[@T[productprice:<current productid=\"3088\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "12":"[@T[productprice:<current productid=\"3088\" dropdecimal=\"false\" percentoff=\"10\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "24":"[@T[productprice:<current productid=\"3088\" dropdecimal=\"false\" percentoff=\"20\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        }
+                    },
+                    "ult": {
+                        "us": {
+                          "1":"[@T[productprice:<current productid=\"3843\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "6":"[@T[productprice:<current productid=\"3843\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "12":"[@T[productprice:<current productid=\"3843\" dropdecimal=\"false\" percentoff=\"10\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "24":"[@T[productprice:<current productid=\"3843\" dropdecimal=\"false\" percentoff=\"20\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        "eu": {
+                          "1":"[@T[productprice:<current productid=\"3848\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "6":"[@T[productprice:<current productid=\"3848\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "12":"[@T[productprice:<current productid=\"3848\" dropdecimal=\"false\" percentoff=\"10\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "24":"[@T[productprice:<current productid=\"3848\" dropdecimal=\"false\" percentoff=\"20\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        "ap": {
+                          "1":"[@T[productprice:<current productid=\"3850\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "6":"[@T[productprice:<current productid=\"3850\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "12":"[@T[productprice:<current productid=\"3850\" dropdecimal=\"false\" percentoff=\"10\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "24":"[@T[productprice:<current productid=\"3850\" dropdecimal=\"false\" percentoff=\"20\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

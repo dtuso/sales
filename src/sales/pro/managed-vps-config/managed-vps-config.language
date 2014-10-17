@@ -1,0 +1,121 @@
+---
+location: localization/sales/gd/pro/managed-vps-config/en
+id: 54400199f778fc0b78c97c77
+name: GCE-27124
+---
+
+{% include 'modules/doc-block.html' %}
+<phrase key="page-title" />
+VPS Hosting | Affordable &amp; Configurable VPS plans - GoDaddy
+<phrase key="meta-description" />
+VPS Hosting gives you more power than traditional hosting. Our VPS hosting solutions are affordable and easier to manage than a dedicated server.
+<phrase key="meta-keywords" />
+vps hosting,vps,virtual server,windows vps, linux vps, vps server,virtual private server,virtual servers,virtual private servers,windows virtual server,linux virtual server,virtual private server hosting,vps servers,virtual dedicated server
+<phrase key="og-title" />
+GoDaddy Virtual Private Servers
+<phrase key="og-description" />
+Need a hosting plan that grows with your business but doesn't break the bank? Get all the power and control of a dedicated server for less with a Virtual Private Server from GoDaddy!
+<phrase key="configTitleText" />
+Configure your server
+<phrase key="servermanagement" />
+Server management 
+<phrase key="configSummaryTitle" />
+Server management
+<phrase key="configTitleContinueToCart" />
+Continue to cart
+<phrase key="configSummarytotal" />
+Total
+<phrase key="orderSummaryTitle" />
+Order summary
+<phrase key="mo" />
+/mo
+<phrase key="configSummarytotalDisc" />
+Scroll down to continue to cart
+<phrase key="ramSummary" />
+RAM
+<phrase key="storageSummary" />
+Storage
+<phrase key="bandwidthSummary" />
+Bandwidth
+<phrase key="servertagline" />
+Rather spend your time designing, developing or finding new clients?
+<phrase key="servertagline2" />
+We’ll take care of your server.
+<phrase key="termsHeader" />
+Lock in your price
+<phrase key="termtagline" />
+Have a price you like? Keep it that way.
+<phrase key="termtagline2" />
+Choose a longer term and avoid potentially paying a higher price when it’s time to renew.
+<phrase key="windows" />
+WINDOWS
+<phrase key="linux" />
+LINUX
+<phrase key="managed" />
+Managed
+<phrase key="fullymanaged" />
+Fully-Managed
+<phrase key="selfmanaged" />
+Self-Managed
+<phrase key="managedlinuxOS" />
+CentOS 6 Only
+<phrase key="selfmanagedlinuxOS" />
+Your choice of Ubuntu, Fedora or CentOS 7
+<phrase key="managedlinuxIncludes" />
+Includes: cPanel® | Patching | Security | Monitoring | Backups 
+<phrase key="fullymanagedlinuxIncludes" />
+Includes: Dedicated team of server admin experts | cPanel® | Patching | Security | Monitoring | Backups 
+<phrase key="selfmanagedlinuxIncludes" />
+No control panel or backups. Command-line only for hardcore server pros.
+<phrase key="included" />
+Included
+<phrase key="fullymanagedHeader" />
+Add [@T[productprice:<current productid="483562" dropdecimal="false"  htmlsymbol="false" negative="parentheses" />]@T]/mo
+<phrase key="selfmanagedHeader" />
+Subtract [@T[productprice:<current productid="483560" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo
+<phrase key="managedWindowsOS" />
+Windows 2008
+<phrase key="managedWindowsIncludes" />
+Includes: Parallels® Plesk | Patching | Security | Monitoring | Backups 
+<phrase key="fullymanagedWindowsIncludes" />
+Includes: Dedicated team of server admin experts | Parallels® Plesk | Patching | Security | Monitoring | Backups 
+<phrase key="selfmanagedWindowsIncludes" />
+No control panel or backups. Command-line only for hardcore server pros..
+<phrase key="1GB" />
+1 GB
+<phrase key="40GB" />
+40 GB
+<phrase key="1TB" />
+1 TB
+<phrase key="2GB" />
+2 GB
+<phrase key="60GB" />
+60 GB
+<phrase key="2TB" />
+2 TB
+<phrase key="3GB" />
+3 GB
+<phrase key="90GB" />
+90 GB
+<phrase key="3TB" />
+3 TB
+<phrase key="4GB" />
+4 GB
+<phrase key="120GB" />
+120 GB
+<phrase key="4TB" />
+4 TB
+<phrase key="5GB" />
+5 GB
+<phrase key="240GB" />
+240 GB
+<phrase key="8TB" />
+8 TB
+<phrase key="fullymanagedWindowsIncludesNon-English" />
+Includes: Dedicated team of server admin experts (Available in English) | Parallels® Plesk | Patching | Security | Monitoring | Backups 
+<phrase key="fullymanagedlinuxIncludesNon-English" />
+Includes: Dedicated team of server admin experts (Available in English) | cPanel® | Patching | Security | Monitoring | Backups 
+<phrase key="add" />
+Add
+<phrase key="subtract" />
+Subtract
