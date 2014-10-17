@@ -1,0 +1,33 @@
+  {
+  "dedicated-server-config.html": {
+    "cdsDetails": {
+      "champion": {
+        "name": "Sergio Lopez",
+        "email": "sylopez@godaddy.com"
+      }
+    },
+    "metaTitle": "[@L[cds.sales/gd/pro/dedicated-server-config:page-title]@L]",
+    "metaDescription": "[@L[cds.sales/gd/pro/dedicated-server-config:meta-description]@L]",
+    "metaKeywords": "[@L[cds.sales/gd/pro/dedicated-server-config:meta-keywords]@L]",
+    "metaCanonicalPath": "/pro/pro-dedicated-server-config",
+    "metaOgTitle": "[@L[cds.sales/gd/pro/dedicated-server-config:og-title]@L]",
+    "metaOgImage": "fos/icn/servers.jpg",
+    "metaOgDescription": "[@L[cds.sales/gd/pro/dedicated-server-config:og-description]@L]",
+    "configTitleLink":"[@L[cds.sales/gd/pro/dedicated-server-config:configTitleLink]@L]",
+    "configTitleContinueToCart":"[@L[cds.sales/gd/pro/dedicated-server-config:configTitleContinueToCart]@L]",
+    "configTitleText":"[@L[cds.sales/gd/pro/dedicated-server-config:configTitleText]@L]",
+    "configSummaryTitle":"[@L[cds.sales/gd/pro/dedicated-server-config:configSummaryTitle]@L]",
+    "configSummarytotal":"[@L[cds.sales/gd/pro/dedicated-server-config:configSummarySubtotal]@L]",
+    "configSummarytotalDisc":"[@L[cds.sales/gd/pro/dedicated-server-config:configSummarytotalDisc]@L]",
+    "configLastBox": ".box2"
+
+  },
+  "dedicated-servers-config.language": {
+    "cdsDetails": {
+      "champion": {
+        "name": "Sergio Lopez",
+        "email": "sylopez@godaddy.com"
+      }
+    }
+  }
+}

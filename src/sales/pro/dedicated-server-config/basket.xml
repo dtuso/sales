@@ -1,0 +1,962 @@
+<Packages>
+    <Package id="pro_ds_windows_t1_1month" QtyIsDuration="false">
+        <ProductId>458239</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_windows_t1_3month" QtyIsDuration="false">
+        <ProductId>458244</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_windows_t1_6month" QtyIsDuration="false">
+        <ProductId>458247</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_windows_t1_24month" QtyIsDuration="false">
+        <ProductId>458251</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_windows_t1_36month" QtyIsDuration="false">
+        <ProductId>458254</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_windows_t1_12month" QtyIsDuration="false">
+        <ProductId>458242</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_windows_t1_48month" QtyIsDuration="false">
+        <ProductId>458257</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_windows_t1_60month" QtyIsDuration="false">
+        <ProductId>458260</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_windows_t2_1month" QtyIsDuration="false">
+        <ProductId>458241</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_windows_t2_3month" QtyIsDuration="false">
+        <ProductId>458246</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_windows_t2_6month" QtyIsDuration="false">
+        <ProductId>458249</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_windows_t2_12month" QtyIsDuration="false">
+        <ProductId>458250</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_windows_t2_60month" QtyIsDuration="false">
+        <ProductId>458262</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_windows_t2_24month" QtyIsDuration="false">
+        <ProductId>458253</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_windows_t2_36month" QtyIsDuration="false">
+        <ProductId>458256</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_windows_t2_48month" QtyIsDuration="false">
+        <ProductId>458259</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_windows_t3_1month" QtyIsDuration="false">
+        <ProductId>458264</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_windows_t3_3month" QtyIsDuration="false">
+        <ProductId>458267</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_windows_t3_6month" QtyIsDuration="false">
+        <ProductId>458269</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_windows_t3_12month" QtyIsDuration="false">
+        <ProductId>458270</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_windows_t3_24month" QtyIsDuration="false">
+        <ProductId>458272</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_windows_t3_36month" QtyIsDuration="false">
+        <ProductId>458274</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_windows_t3_48month" QtyIsDuration="false">
+        <ProductId>458276</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_windows_t3_60month" QtyIsDuration="false">
+        <ProductId>458278</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_windows_t4_1month" QtyIsDuration="false">
+        <ProductId>458280</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_windows_t4_3month" QtyIsDuration="false">
+        <ProductId>458283</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_windows_t4_6month" QtyIsDuration="false">
+        <ProductId>458285</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_windows_t4_12month" QtyIsDuration="false">
+        <ProductId>458286</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_windows_t4_24month" QtyIsDuration="false">
+        <ProductId>458288</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_windows_t4_36month" QtyIsDuration="false">
+        <ProductId>458290</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_windows_t4_48month" QtyIsDuration="false">
+        <ProductId>458292</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_windows_t4_60month" QtyIsDuration="false">
+        <ProductId>458294</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_windows_t5_1month" QtyIsDuration="false">
+        <ProductId>458296</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_windows_t5_3month" QtyIsDuration="false">
+        <ProductId>458299</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_windows_t5_6month" QtyIsDuration="false">
+        <ProductId>458301</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_windows_t5_12month" QtyIsDuration="false">
+        <ProductId>458302</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_windows_t5_24month" QtyIsDuration="false">
+        <ProductId>458304</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_windows_t5_36month" QtyIsDuration="false">
+        <ProductId>458306</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_windows_t5_48month" QtyIsDuration="false">
+        <ProductId>458308</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_windows_t5_60month" QtyIsDuration="false">
+        <ProductId>458310</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_linux_t1_1month" QtyIsDuration="false">
+        <ProductId>458239</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_linux_t1_3month" QtyIsDuration="false">
+        <ProductId>458244</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_linux_t1_6month" QtyIsDuration="false">
+        <ProductId>458247</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_linux_t1_24month" QtyIsDuration="false">
+        <ProductId>458251</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_linux_t1_36month" QtyIsDuration="false">
+        <ProductId>458254</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_linux_t1_12month" QtyIsDuration="false">
+        <ProductId>458242</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_linux_t1_48month" QtyIsDuration="false">
+        <ProductId>458257</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_linux_t1_60month" QtyIsDuration="false">
+        <ProductId>458260</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_linux_t2_1month" QtyIsDuration="false">
+        <ProductId>458241</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_linux_t2_3month" QtyIsDuration="false">
+        <ProductId>458246</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_linux_t2_6month" QtyIsDuration="false">
+        <ProductId>458249</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_linux_t2_12month" QtyIsDuration="false">
+        <ProductId>458250</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_linux_t2_60month" QtyIsDuration="false">
+        <ProductId>458262</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_linux_t2_24month" QtyIsDuration="false">
+        <ProductId>458253</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_linux_t2_36month" QtyIsDuration="false">
+        <ProductId>458256</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_linux_t2_48month" QtyIsDuration="false">
+        <ProductId>458259</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_linux_t3_1month" QtyIsDuration="false">
+        <ProductId>458264</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_linux_t3_3month" QtyIsDuration="false">
+        <ProductId>458267</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_linux_t3_6month" QtyIsDuration="false">
+        <ProductId>458269</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_linux_t3_12month" QtyIsDuration="false">
+        <ProductId>458270</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_linux_t3_24month" QtyIsDuration="false">
+        <ProductId>458272</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_linux_t3_36month" QtyIsDuration="false">
+        <ProductId>458274</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_linux_t3_48month" QtyIsDuration="false">
+        <ProductId>458276</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_linux_t3_60month" QtyIsDuration="false">
+        <ProductId>458278</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_linux_t4_1month" QtyIsDuration="false">
+        <ProductId>458280</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_linux_t4_3month" QtyIsDuration="false">
+        <ProductId>458283</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_linux_t4_6month" QtyIsDuration="false">
+        <ProductId>458285</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_linux_t4_12month" QtyIsDuration="false">
+        <ProductId>458286</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_linux_t4_24month" QtyIsDuration="false">
+        <ProductId>458288</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_linux_t4_36month" QtyIsDuration="false">
+        <ProductId>458290</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_linux_t4_48month" QtyIsDuration="false">
+        <ProductId>458292</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_linux_t4_60month" QtyIsDuration="false">
+        <ProductId>458294</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_linux_t5_1month" QtyIsDuration="false">
+        <ProductId>458296</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_linux_t5_3month" QtyIsDuration="false">
+        <ProductId>458299</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_linux_t5_6month" QtyIsDuration="false">
+        <ProductId>458301</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_linux_t5_12month" QtyIsDuration="false">
+        <ProductId>458302</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_linux_t5_24month" QtyIsDuration="false">
+        <ProductId>458304</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_linux_t5_36month" QtyIsDuration="false">
+        <ProductId>458306</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_linux_t5_48month" QtyIsDuration="false">
+        <ProductId>458308</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+    <Package id="pro_ds_linux_t5_60month" QtyIsDuration="false">
+        <ProductId>458310</ProductId>
+        <AddOns>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+            <AddOnGroup MaxSelection="1">
+                <AddOn Name="pro_ds_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1"/>
+                <AddOn Name="pro_ds_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1"/>
+            </AddOnGroup>
+        </AddOns>
+    </Package>
+</Packages>
