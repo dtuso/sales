@@ -1,6 +1,6 @@
 ---
 location: sales/offers/online-business.aspx
-id: 54403070f778fc0b78c97c7f
+id: 54415759f778fc0ce0d0fa4e
 name: GCE-29310
 comments: Roll Out GOT in International Markets - Sales LP
 url: http://www.dev-godaddy.com/offers/online-business.aspx
@@ -123,11 +123,11 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
   #domainRow p.top-summary {margin:20px 0 0;text-align:left;font-size:28px;font-weight:600;}
   
   #domain-search-div .find-a-domain 
-  {font-size:48px;margin:90px 0 40px;line-height:1.35em;} 
+  {font-size:48px;margin:90px 0 40px;line-height:1.35em;text-align: left;} 
   #domain-search-div .search-result-is-available,
   #domain-search-div .search-result-not-available,
   #domain-search-div .search-result-invalid
-  {font-size:48px;margin:90px 0 30px;line-height:1.00em;word-wrap:break-word;}
+  {font-size:48px;margin:90px 0 30px;line-height:1.00em;word-wrap:break-word;text-align: left;}
   
   #domain-search-div .search-result-is-available {text-align:center;}
   
@@ -234,10 +234,10 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
   .search-area-wrapper .search-button-area  
   {min-height:65px;float:left;}
   
-  .search-area-wrapper .tooltips-area { max-width:140px;font-size:16px;margin-right:27px;text-align:center;position:relative;word-wrap:break-word;}
-  html[lang*=en] .search-area-wrapper .tooltips-area {font-size:20px;}
+  .search-area-wrapper .tooltips-area { max-width:180px;font-size:20px;margin-right:27px;text-align:center;position:relative;}
   .search-area-wrapper .tooltips-area:after {content:"";border-width:10px 0 10px 17px;border-style:solid;border-color:transparent transparent transparent #fc0;position:absolute;right:-17px;top:34%}
-  .search-area-wrapper .tooltips-area .highlight-tooltip {background-color:#fc0;color:#630;text-transform:uppercase;text-align:center;padding:13px 5px 12px;}
+  .search-area-wrapper .tooltips-area .highlight-tooltip {background-color:#fc0;color:#630;text-transform:uppercase;text-align:center;
+    padding:13px 15px 12px;}
   
   .search-area-wrapper .input-area {background-color:#fc0;width:400px;font-size:24px;font-weight:300;padding: 8px 0 8px 8px;}            
   .search-area-wrapper .input-area .search-background {background-color:#fff;position:relative;border:1px solid #a4a4a4;height:49px;}
@@ -1193,35 +1193,34 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
       $(document).ready(function () {      
         // move dislcaimes to the modal content
         $(".modal-content").append($("#tms-modal-body"));
-       
-        $(".price").each(function(){
-          $(this)
-            .html( got1Page.pricing.promo )
-            .closest('.price-hide')
-            .removeClass("price-hide");
+        $(".search-area-wrapper .tooltips-area .highlight-tooltip").each(function(){          
+          var $this= $(this),
+            html = $this.html(),
+            fixed = html.replace(' ', '<br/>').replace(' ', '<br/>'); // force each word onto it's own line
+          $this.html(fixed);
         });
-
-        $(".original-price").each(function(){
-          $(this)
-            .html( got1Page.pricing.bundleRenewal )
-            .closest('.price-hide')
-            .removeClass("price-hide");
-        });
+        tokenizePrice(".price", got1Page.pricing.promo );
+        tokenizePrice(".original-price", got1Page.pricing.bundleRenewal );
         
         $('[data-ci]').click(function (e) {
             var $this = $(this);
-            var ci = $this.attr('data-ci');
-            // example, checks to see if data-ci="domainSearchClick"
-            // has a value in offersCodes.ci
-            // offersCodes Data is in campaign document
-            ci = got1Page.offersCodes.ci[ci] || ci;
-            
+            var ci = $this.attr('data-ci');            
             FastballEvent_MouseClick(e, ci, $(this)[0], 'a');
             fbiLibCheckQueue();
         });
 
         populateTldsOnDisclaimerModal('#disclaimerModal .modal-body');
       });
+
+
+      var tokenizePrice = function(priceSelector, price) {
+        $(priceSelector).each(function(){
+          $(this)
+            .html(price)
+            .closest('.price-hide')
+            .removeClass("price-hide");
+        });
+      };
 
       function populateTldsOnDisclaimerModal(selector) {
         var $this = $(selector);
