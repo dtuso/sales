@@ -1,0 +1,463 @@
+---
+location: sales/pro/managed-vps-config
+id: 54416552f778fc0ce0d0fa59
+name: GCE-27124 
+comment: VPS config page for webpro
+configPage: true
+sitecore: true 
+cssVersionOverride: 1
+---
+{% extends 'layouts/config-base.html' %}
+
+{% block steps %}
+                                            ##if(isManager())
+                          <form action="[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" parammode="explicit" />]@T]" method="get" id="configForm" >
+                      ##else
+                          <form action="[@T[link:<external linktype="carturl" path="/basket.aspx" parammode="explicit" />]@T]" method="get" id="configForm"  >
+                      ##endif
+                           <div class="config-step medium-margin-top-step backup">
+                               <h2>[@L[cds.sales/gd/pro/managed-vps-config:servermanagement]@L]</h2>
+                                <p class="config-lead config-tagline">[@L[cds.sales/gd/pro/managed-vps-config:servertagline]@L]</p>
+                                <p class="config-lead ">[@L[cds.sales/gd/pro/managed-vps-config:servertagline2]@L]</p>
+                                <div class="config-product-wrapper config-product-vps" >
+                                    <div>
+                                        <ul class="product-options" id="managedOptions">
+                                        </ul> 
+                                    </div>
+                                </div>
+                                                              
+                                <!-- /End Product -->
+                            </div> 
+                            <div class="config-step-box-shadow backup"></div>
+                            <div data-ci="" class="config-step-break move backup" data-scroll=".box2">
+                                <span class="icon-down"></span>
+                            </div>
+
+                            <div class="config-step medium-margin-top-step box2">
+                                <h2>[@L[cds.sales/gd/pro/managed-vps-config:termsHeader]@L]</h2>
+                                <p class="config-lead orange-text config-tagline">[@L[cds.sales/gd/pro/managed-vps-config:termtagline]@L]</p>
+                                <p class="config-lead">[@L[cds.sales/gd/pro/managed-vps-config:termtagline2]@L]</p>
+                                <div class="config-product-wrapper config-product-vps ">
+                                    <div>
+                                        
+                                        <ul class="product-options" id="termOptions">
+                                        </ul> 
+                                    </div>
+                                </div>
+                                <!-- /End Product -->
+                            </div>
+                           
+                                                     
+                            <div class="config-step-box-shadow"></div>
+
+                            <div class="config-continue-to-cart-wrapper">
+                                <a data-ci="94077" id="continue-to-cart-button" class="btn btn-warning btn-lg js-addtocart box5"><span class="icon-shopping-cart"></span> [@L[cds.sales/gd/pro/managed-vps-config:configTitleContinueToCart]@L]</a>
+                                <input type="hidden" id="osOption" > 
+                                <input type="hidden" id="osAddonPrice">
+                                <input type="hidden" id="isConfigUpdated" value="0">
+                            </div> 
+                        </form> 
+ {% endblock %} 
+
+{% block footer %}
+  <script src="[@T[link:<javascriptroot />]@T]fos/office365/js/currency-calc.v1.0.3.min.js" type="text/javascript"></script>
+    <script>
+      if(typeof currencyCalc != "undefined"){
+        currencyCalc.base = "[@T[currencyprice:<price usdamount="1000000000" dropdecimal="false" dropsymbol="false" htmlsymbol="false" negative="parenthesis" />]@T]";
+      }
+    </script> 
+   
+    <script>
+      $(document).ready(function() {
+        var planBasePrice;
+        var plan = Config.getParameterByName('plan');
+
+        Config.loadData(plan);
+        if (typeof FastballEvent_MouseClick === 'function' && typeof fbiLibCheckQueue === 'function') {
+                $('[data-ci]').click(function(e){
+                    $this = $(this);
+                    FastballEvent_MouseClick(e,$this.attr('data-ci'),$(this)[0],'a');
+                    fbiLibCheckQueue();
+                });
+            }
+
+        $('.move').scrollToSection();
+        $(window).scroll(function() {
+          updateOrderSummaryPosition();
+        });
+        $(window).resize(function() {
+          updateOrderSummaryPosition();
+        });
+        updateOrderSummaryPosition();
+
+        $('.js-addtocart').on('click',function (e){
+          e.preventDefault();
+          $(this).unbind('click');
+          var $this = $(this);
+          var ci = $this.attr('data-ci');
+          var osOption = $('#osOption').val().split('_')[3];
+
+          var itccode = $("#isConfigUpdated").val() === "0" 
+                        ? osOption == 'linux' ? 'pro_VPS_Linux':'pro_VPS_Windows'
+                        : osOption == 'linux' ? 'pro_VPS_Linux_config':'pro_VPS_Windows_config';
+          var qty = 1;
+          var packageId = $('input:radio[name="termOption"]').filter(':checked').val();
+          var addons = Config.generateAddonsURL();
+          var quantity=1;
+          
+          ##if(isManager())
+          var managerId= Config.getParameterByName('mgrshopper');
+          ##endif
+
+          
+          var apiEndpoint = '[@T[link:<relative path="/api/package/{0}/{1}/{2}/{3}/{4}" parammode="explicit"/>]@T]'.replace('{0}','update').replace('{1}',itccode).replace('{2}',ci).replace('{3}',quantity).replace('{4}',packageId);
+
+          apiEndpoint =apiEndpoint +addons;
+          ##if(isManager())
+            apiEndpoint +='&mgrshopper='+ managerId;
+          ##endif
+          $.ajax({
+                type: 'POST',
+                url: apiEndpoint,
+                dataType: 'json',
+                success: function (data) {
+                      if (data.Success) {
+                      ##if(isManager())
+                       window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" ><param name="pro" value="1" /></external>]@T]';
+                      ##else
+                       window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" ><param name="pro" value="1" /></external>]@T]';
+                      ##endif
+                    }
+                },
+               error: function(){
+                if(console != undefined)
+                  {
+                    console.log('package api post failure');
+                  }
+                success = false;
+            }
+          });
+      });
+    
+         function updateOrderSummaryPosition() {
+
+          var paddingTop = 20/* for prettiness when scrolling */,
+            $configCartWrapper = $('.config-cart-wrapper'),
+            scrollTop = $(window).scrollTop(),
+            scrollLeft = $(window).scrollLeft(),
+            topStep1 = $("div.config-step:visible:first").offset().top,
+            topOfWindowAboveTopOfStep1 = (scrollTop <= (topStep1 - paddingTop)),
+            $footer = $('.scroll-down-wrapper');
+           
+            $footer.css('visibility','visible');
+            
+            $configCartWrapper.css({'top':'0px','position':'static'});
+
+          if(!topOfWindowAboveTopOfStep1) {
+            // keep the top of the summary at 0
+            
+          //} else {
+            //check for if summary can fit without going below the bottom of the last step
+            
+            var proposedNewTop = scrollTop - (topStep1 - paddingTop),
+
+              proposedNewBottom = proposedNewTop + $configCartWrapper.height(),
+              //$lastStep = $("div.config-step").eq(3),
+              $lastStep = $("div.config-step:last");
+              bottomOfLastStep = $lastStep.offset().top + $lastStep.height() - topStep1,
+              canFit = (proposedNewBottom <= bottomOfLastStep);
+
+            if(scrollTop>=(topStep1-paddingTop) && ((scrollTop+$configCartWrapper.height())<=$lastStep.offset().top + $lastStep.height() + paddingTop) ){
+              try{
+                var configCartWrapperLeft = $configCartWrapper.offset().left;
+                $configCartWrapper.css({'top':'20px','position':'fixed','width':$configCartWrapper.innerWidth(),'left':(configCartWrapperLeft - scrollLeft) +'px'});
+              }catch(err){
+                //if errors don't float the $confiCartWrapper
+                $configCartWrapper.css({'top':'0px','position':'static'});
+              }
+             
+            } else {
+              try{
+                var configCartWrapperLeft = $configCartWrapper.offset().left;
+                $configCartWrapper.css({'position':'fixed','width':$configCartWrapper.innerWidth(),'left':(configCartWrapperLeft - scrollLeft) +'px'});
+              }catch(err){
+                //if errors don't float the $confiCartWrapper
+                $configCartWrapper.css({'top':'0px','position':'static'});
+
+              }
+              // affix the summary so the bottom lines up with the bottom of the last step
+              $footer.css('visibility','hidden');
+             
+              var topForBottomAligned = ($lastStep.offset().top + $lastStep.height() +$footer.height()) - (scrollTop + $configCartWrapper.height() );
+              //topForBottomAligned = bottomOfLastStep - $configCartWrapper.height() + paddingTop;
+              $configCartWrapper
+                .css({'top': topForBottomAligned + 'px'});
+            }
+          }
+          
+        }
+
+      });
+
+      var Config = {
+        loadData: function(plan){      
+          
+          // map old plan to new plan
+          if(plan.indexOf('pro') == -1){
+                 getMappedPlan(plan);
+          }
+          var defaultPackageId=plan; 
+          var planMonths =  plan.split('_').pop(1);
+          plan = plan.replace('_'+ planMonths,'');
+          // spoof url for confing and packagegrouping removed when both are published
+          var url = '[@T[link:<relative path="~/api/package/config/{0}"/>]@T]'.replace('{0}',plan);
+          //url=url + "?configdocid=54120f73f778fc0f24cc8f04&groupdocid=54120fe4f778fc0f24cc8f06";
+
+          $.getJSON(url).success(function (data){
+              processConfigData(data,defaultPackageId);
+              Config.buildProductOrder(data);
+          });
+          
+        },
+        getParameterByName: function(name){
+          name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+          var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+              results = regex.exec(location.search);
+          return  decodeURIComponent(results[1].replace(/\+/g, " "));
+        },
+        refreshCart: function(){
+          var termOption =$('input:radio[name="termOption"]').filter(':checked');
+          var managedOption =$('input:radio[name="managedOption"]').filter(':checked');
+          var term = termOption.data('term');
+          var monthString = (term > 1) ? " [@L[fosconfigcommon:termmonths]@L]" : " [@L[fosconfigcommon:termmonth]@L]";         
+          var managedPrice = managedOption.data('price');
+          var managedName = managedOption.data('name');
+
+          Config.updateProductPrice(currencyCalc.stripFormat(managedPrice)); 
+            
+          var termPrice = termOption.attr('data-price');
+          planPrice= currencyCalc.evaluate([term,"*",termPrice]);
+          
+          
+          $('#summaryAddon').html(managedName);
+          $('#summaryTerm').html(term + monthString);
+          //$('#addonPrice').html(managedPrice+'[@L[cds.sales/gd/pro/managed-vps-config:mo]@L]');          
+          $('.currency-amount').html(planPrice);
+          
+          
+          $('#addonPrice').html(termOption.attr('data-price')+'[@L[cds.sales/gd/pro/managed-vps-config:mo]@L]');
+          
+        },
+         refreshMangedPrices: function(){
+          var selectedAddonPrice = $('input:radio[name="managedOption"]').filter(':checked').data('price');
+          var selectedAddonValue = currencyCalc.stripFormat(selectedAddonPrice);
+          var addonValue = 0;
+
+          $('input:radio[name="managedOption"]').filter(':checked').parent().find('.price-container').html('<span class="orange-text"> [@L[cds.sales/gd/pro/managed-vps-config:included]@L]</span>');
+
+          $('input:radio[name="managedOption"]').not(':checked').each(function (){
+            addonValue= currencyCalc.stripFormat($(this).data('price'));
+             if (parseFloat(addonValue)>parseFloat(selectedAddonValue)){
+              $(this).parent().find('.price-container').html('<span class="orange-text"> [@L[cds.sales/gd/pro/managed-vps-config:add]@L] '+ currencyCalc.evaluate([$(this).data('price'),"-",selectedAddonPrice]) +'[@L[cds.sales/gd/pro/managed-vps-config:mo]@L]</span>');
+            }else{
+              $(this).parent().find('.price-container').html('<span class="product-desc"> [@L[cds.sales/gd/pro/managed-vps-config:subtract]@L] '+ currencyCalc.evaluate([selectedAddonPrice,"-",$(this).data('price')]) +'[@L[cds.sales/gd/pro/managed-vps-config:mo]@L]</span>');
+            }
+          });
+
+          Config.updateProductPrice(selectedAddonPrice);
+
+        },
+        updateProductPrice : function(managedAddonPrice){
+          var osAddonPrice = currencyCalc.stripFormat($('#osAddonPrice').val()); 
+          
+          $("#termOptions").find("input[type=radio]").each(function(){
+            var term = $(this);
+            var totalAddonPrice  =currencyCalc.evaluate([osAddonPrice,"+",managedAddonPrice]); 
+            var totalAddonPrice =getAddOnDiscount(term.data('addondiscount'),totalAddonPrice);
+          
+            var totalPrice = currencyCalc.evaluate([totalAddonPrice,"+",currencyCalc.stripFormat(term.data('price'))]); 
+            term.attr('data-price',totalPrice);
+            term.parent().find('.price').text(totalPrice + "[@L[cds.sales/gd/hosting/vps-hosting-config:mo]@L]");
+
+          });
+         
+         var oneMonthPrice = $("#termOptions").find("input[type=radio]").first().attr('data-price');
+          $("#termOptions").find("input[type=radio]").each(function(){
+            var secondaryPrice = $(this).attr('data-price');
+            var percent = getPercentage(oneMonthPrice,secondaryPrice);
+            if(percent > 0){
+               var savingsString = " - [@L[fosconfigcommon:save]@L]&nbsp;" + percent + '%' ;
+               var strikeString=  "<span class='product-desc'> - <strike>" + oneMonthPrice + "</strike>[@L[fosconfigcommon:permonth]@L]</span>" ;
+               $(this).parent().find('.price').append(savingsString + strikeString);
+            }
+          });
+           
+        },
+        buildProductOrder: function(data){
+         
+          var planRAM = data.details.ram;
+          var planStorage = data.details.storage;
+          var planBandwidth = data.details.bandwidth;
+          var plan = $("input:radio[name='termOption']:checked");
+          var managedAddon= $("input:radio[name='managedOption']:checked");
+          var monthString =  (plan.data('months') > 1) ? " [@L[fosconfigcommon:termmonths]@L]" : " [@L[fosconfigcommon:termmonth]@L]";
+
+          $('#summaryRAM').html('<span class="server-summary">' + planRAM +'</span> [@L[cds.sales/gd/pro/managed-vps-config:RamSummary]@L]');
+          $('#summaryStorage').html('<span class="server-summary">' + planStorage +'</span> [@L[cds.sales/gd/pro/managed-vps-config:StorageSummary]@L] ');
+          $('#summaryBandwidth').html('<span class="server-summary">' + planBandwidth +'</span> [@L[cds.sales/gd/pro/managed-vps-config:BandwidthSummary]@L]');
+         
+
+        },
+        init: function (){
+          Config.refreshCart();
+         
+          $('input:radio').change(function(){
+            Config.refreshCart();
+            $("#isConfigUpdated").val("1");
+          }); 
+
+           $('input[name=managedOption]').change(function(){
+            Config.refreshMangedPrices();
+            $("#isConfigUpdated").val("1");
+          }); 
+        
+          $('.isToolTip').tooltip();
+        },
+        generateAddonsURL: function(){
+          var addonURL='';
+          var managedOption =$("input:radio[name='managedOption']:checked");
+          var managedPrice = managedOption.data('price');
+          var osOption =$("#osOption").val();
+          addonURL+= '?addons='+osOption + "-1" ;
+          if(currencyCalc.stripFormat(managedPrice) > 0)
+            addonURL+= '|'+ managedOption.val() +"-1";
+          return addonURL;
+        }
+      };
+
+      function processConfigData(data,defaultPackageId){
+        //var planDetails = Config.getParameterByName('plan').split('_');
+        generateManagedOption(data.addons.managed); 
+        generateTermOption(data.terms,defaultPackageId);  
+        $('#osOption').val(data.addons.os.id);   
+        $('#osAddonPrice').val(data.addons.os.addonprice);
+        Config.init();
+      }
+     
+      
+      function generateManagedOption(managedAddOns){       
+        
+        var optionname= "managedOption"
+        var parentid = $("#managedOptions");
+        var planaddons = Config.getParameterByName("planaddons").split('|');        
+        var managedDescHtml="<ul class='managed-details'><li><b>{0}</b></li> <li>{1}</li></ul>";
+        var defaultAddOn = planaddons[0];
+        
+        parentid.empty();
+        $.each(managedAddOns, function(i, item) {
+            var content='';
+           var checked =  item.id == defaultAddOn ? 'checked="checked"' :'';
+
+          content += '<li><input type="radio" style="margin-right:4px;" name="'+optionname+'" value="'+item.id+'"  data-price="'+item.addonprice+'" data-name="'+ item.addonname+'" ' + checked +'/><b>'+ item.addonname+ '</b> -<div class="price-container"></div>' +  managedDescHtml.replace("{0}",item.os).replace("{1}",getIncludesText(item)) +'</li>';       
+        parentid.append(content); 
+        });
+              
+        generateManagementPrices();      
+     }
+
+      function getIncludesText(managedOption){
+        var includes="";
+        ##if(countrySiteAny(www))
+            includes =managedOption.includes;
+        ##else 
+            if($.trim(managedOption.addonname.toUpperCase()) == "FULLY-MANAGED") 
+                  includes= $('#osOption').val().split('_')[3] == 'linux' 
+                                                                  ? "[@L[cds.sales/gd/pro/managed-vps-config:fullymanagedlinuxIncludesNon-English]@L]" 
+                                                                  : "[@L[cds.sales/gd/pro/managed-vps-config:fullymanagedWindowsIncludesNon-English]@L]"
+            else
+                includes =managedOption.includes; 
+        ##endif
+
+        return includes;
+
+      }
+      function generateManagementPrices(){     
+
+         var monthString = "[@L[cds.sales/gd/pro/managed-vps-config:mo]@L]";
+         var selectedAddon = $('input:radio[name="managedOption"]').filter(':checked');
+         var selectedAddonPrice = selectedAddon.data('price');
+         selectedAddon.parent().find('.price-container').append('<span class="orange-text"> [@L[cds.sales/gd/pro/managed-vps-config:included]@L] </span>');
+
+         $('input:radio[name="managedOption"]').not(':checked').each(function (){          
+            var price = $(this).data('price');            
+            var selectedAddonValue = currencyCalc.stripFormat(selectedAddonPrice);
+            var addonValue = currencyCalc.stripFormat(price);
+            
+            if (parseFloat(addonValue)>parseFloat(selectedAddonValue)){
+              $(this).parent().find('.price-container').append(' <span class="orange-text"> [@L[cds.sales/gd/pro/managed-vps-config:add]@L] '+ currencyCalc.evaluate([price,"-",selectedAddonPrice]) + monthString +'</span>');
+            }
+            else{
+              $(this).parent().find('.price-container').append( ' <span class="product-desc"> [@L[cds.sales/gd/pro/managed-vps-config:subtract]@L] '+ currencyCalc.evaluate([selectedAddonPrice,"-",price]) + monthString +'</span>');
+            }
+
+         });
+                       
+      }
+      function generateTermOption(terms,defaultPackageId){
+        var optionname= "termOption"
+        var parentid = $("#termOptions");
+        parentid.empty();
+        $.each(terms,function (){
+            if(this != '')
+            {
+                var planItem=this.split('-');
+                var monthString =  (planItem[0] > 1) ? "[@L[fosconfigcommon:termmonths]@L]" : "[@L[fosconfigcommon:termmonth]@L]";
+                var packageId= planItem[1];
+                var price =  planItem[3];
+                var addonDiscount =planItem[2];
+                //var savingsString = (planItem[3] > 0) ? " - [@L[fosconfigcommon:save]@L]&nbsp;" + planItem[3] + '%' : ''; 
+                //var strikeString= (planItem[3] > 0) ? "<span class='product-desc'> - <strike>" + planItem[4] + "</strike>[@L[fosconfigcommon:permonth]@L]</span>" :'';
+            
+                var checkedRadiobutton= (defaultPackageId ===  packageId) ?"checked='checked'" : '';
+                
+            }
+            var content='';
+            content += '<li><input type="radio" name="'+optionname+'" value="'+packageId+'"  data-addondiscount="'+ addonDiscount+'" data-term="' +  planItem[0] + '" data-price="'+price+'"'+ checkedRadiobutton + '/><span><strong> '+planItem[0] +' '+ monthString + ' - '+' </strong></span><span class="price orange-text"> '+price + ' [@L[cds.sales/gd/hosting/vps-hosting-config:mo]@L] </span></li>';
+            parentid.append(content);
+                           
+        });       
+
+      }
+
+      function getMappedPlan (plan){
+          var month = plan.split('_').pop(1);
+          var plan;
+          var planaddon;
+
+          if((plan.indexOf("linux") > 0)){
+                plan= "pro_vps_linux_t1_"+ month+"month";
+                planaddon="pro_vps_os_linux";
+          }
+          else{
+               plan= "pro_vps_windows_t1_"+ month+"month";
+                planaddon="pro_vps_os_windows";          
+          }
+          window.location.href=  window.location.href.split('?')[0] + "?plan=" + plan + "&planaddons=pro_vps_managed|"+planaddon;
+      }
+
+      function getPercentage(primaryPrice, secondaryPrice){
+        var difference = currencyCalc.evaluate([primaryPrice,"-",secondaryPrice]);
+        var division= currencyCalc.stripFormat(difference) / currencyCalc.stripFormat(primaryPrice)
+        return parseInt(Math.floor(division * 100));
+      }
+
+      function getAddOnDiscount(discountPercent,totalAddonPrice){
+         var totalDiscountedAddon = currencyCalc.evaluate([discountPercent,"*",totalAddonPrice]); 
+         totalDiscountedAddon = currencyCalc.stripFormat(currencyCalc.evaluate([totalDiscountedAddon,"/",100])); 
+         totalAddonPrice =currencyCalc.evaluate([totalAddonPrice,"-",totalDiscountedAddon]); 
+
+         return totalAddonPrice;
+      }
+     
+    </script>
+{% endblock %}

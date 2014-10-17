@@ -7,15 +7,19 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="config-continue-to-cart-wrapper-top config-title-container">
-                            <div class="config-title">
-                            {% if sitecore %}
-                              <p><span class="green-check"></span> {{ configTitleText }}</p>
+                           {% if sitecore %}
+                                <div class="config-continue-to-cart-wrapper-top">
+                                    <p class="product-added-to-cart"><span class="green-check"></span><span class="product-added-to-cart-text">{{ configTitleText }}</span></p>
+                                    <p class="config-continue-to-cart"><span class="icon-arrow-right"></span>
+                                    <a class="js-addtocart" id="continue-to-cart-link" data-ci="{{ topAddToCartci }}">{{ configTitleContinueToCart }}</a></p>
+                                </div>
                             {% else %}
                                 <h1></h1><a href="#" onclick="changePlan();" data-ci="{{ changeplanci }}">{{ configTitleLink }}</a>
                                 <p>{{ configTitleText }}</p>
                             {% endif %}   
                             </div>
                             <p class="config-continue-to-cart"><span class="icon-arrow-right"></span><a id="continue-to-cart-link" class="js-addtocart" data-ci="{{ topAddToCartci }}">{{ configTitleContinueToCart }}</a></p>
+
                         </div>
                     </div>
                     <div class="config-steps-wrapper">
@@ -36,11 +40,11 @@
                                 </div>
                                 <div class="order-item-addons-wrapper">
                                      <p class="order-item-title" id="summaryAddon"></p>
-                                     <span><span id="summaryTerm"></span><span id="addonPrice" class="plan-price" ></span></span>
+                                     <span><span id="summaryTerm"></span><span  id="addonPrice" class="plan-price" ></span></span>
                                  </div>
                                  <div class="subtotal-disclaimer">
-                                    <p>{{ configSummarytotal }}</p>
-                                 </div>
+                            		<p>{{ configSummarytotal }}</p>
+                         		 </div>
                             </div>
                         </div>                       
                          <div>

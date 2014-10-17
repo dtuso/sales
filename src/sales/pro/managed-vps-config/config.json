@@ -1,0 +1,742 @@
+{
+    "vpsconfig": {
+        "addons": {
+            "linux":{
+                "bandwidth": {
+                    "us": [
+                        {
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:NoBandwidth]@L]"
+                        },
+                        {
+                            "id": "us_addon_linux_bandwidth-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:1TBBandwidth]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:1TBBandwidthAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"172117\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "us_addon_linux_bandwidth-3",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:3TBBandwidth]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:3TBBandwidthAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"172117\" quantity=\"3\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                       {
+                            "id": "us_addon_linux_bandwidth-5",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:5TBBandwidth]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:5TBBandwidthAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"172117\" quantity=\"5\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "us_addon_linux_bandwidth-10",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:10TBBandwidth]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:10TBBandwidthAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"172117\" quantity=\"10\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        }
+                     ]
+                  },
+                  "controlpanel": {
+                      "us": [
+                          {
+                           "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:NoControlPanel]@L]"
+
+                          },
+                          {
+                          "id": "addon_linux_controlpanel_cpanel-1",
+                          "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:cPanelText]@L]",
+                          "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:cPanelAddon]@L]",
+                          "addonprice": "[@T[productprice:<current productid=\"172113\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                          }
+                    ]
+                  }
+             },
+            "windows":{
+                "bandwidth": {
+                    "us": [
+                        {
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:NoBandwidth]@L]"
+                        },
+                        {
+                            "id": "us_addon_windows_bandwidth-1",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:1TBBandwidth]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:1TBBandwidthAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"172117\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "us_addon_windows_bandwidth-3",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:3TBBandwidth]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:3TBBandwidthAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"172117\" quantity=\"3\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                       {
+                            "id": "us_addon_windows_bandwidth-5",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:5TBBandwidth]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:5TBBandwidthAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"172117\" quantity=\"5\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        },
+                        {
+                            "id": "us_addon_windows_bandwidth-10",
+                            "addonvalue": "[@L[cds.sales/gd/hosting/vps-hosting-config:10TBBandwidth]@L]",
+                            "addondata":"[@L[cds.sales/gd/hosting/vps-hosting-config:10TBBandwidthAddon]@L]",
+                            "addonprice": "[@T[productprice:<current productid=\"172117\" quantity=\"10\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        }
+                    ]
+                
+              }
+            }                        
+        },
+        "details": {
+            "linux":{
+               "plans":{
+                   "eco":{
+                      "os": "[@L[cds.sales/gd/hosting/vps-hosting-config:ecoLinux]@L]",
+                      "ram": "[@L[cds.sales/gd/hosting/vps-hosting-config:1GB]@L]",
+                      "storage": "[@L[cds.sales/gd/hosting/vps-hosting-config:40GB]@L]",
+                      "bandwidth": "[@L[cds.sales/gd/hosting/vps-hosting-config:1TB]@L]" 
+                    },
+                    "val":{
+                      "os": "[@L[cds.sales/gd/hosting/vps-hosting-config:valLinux]@L]",
+                      "ram": "[@L[cds.sales/gd/hosting/vps-hosting-config:2GB]@L]",
+                      "storage": "[@L[cds.sales/gd/hosting/vps-hosting-config:60GB]@L]",
+                      "bandwidth": "[@L[cds.sales/gd/hosting/vps-hosting-config:2TB]@L]" 
+                    },
+                    "deluxe":{
+                      "os": "[@L[cds.sales/gd/hosting/vps-hosting-config:deluxeLinux]@L]",
+                      "ram": "[@L[cds.sales/gd/hosting/vps-hosting-config:3GB]@L]",
+                      "storage": "[@L[cds.sales/gd/hosting/vps-hosting-config:90GB]@L]",
+                      "bandwidth": "[@L[cds.sales/gd/hosting/vps-hosting-config:3TB]@L]" 
+                    },
+                    "premium":{
+                      "os": "[@L[cds.sales/gd/hosting/vps-hosting-config:premiumLinux]@L]",
+                      "ram": "[@L[cds.sales/gd/hosting/vps-hosting-config:4GB]@L]",
+                      "storage": "[@L[cds.sales/gd/hosting/vps-hosting-config:120GB]@L]",
+                      "bandwidth": "[@L[cds.sales/gd/hosting/vps-hosting-config:4TB]@L]" 
+                    },
+                    "ult":{
+                      "os": "[@L[cds.sales/gd/hosting/vps-hosting-config:ultimateLinux]@L]",
+                      "ram": "[@L[cds.sales/gd/hosting/vps-hosting-config:8GB]@L]",
+                      "storage": "[@L[cds.sales/gd/hosting/vps-hosting-config:240GB]@L]",
+                      "bandwidth": "[@L[cds.sales/gd/hosting/vps-hosting-config:8TB]@L]" 
+                    }
+               },
+               "prices":{
+                   "eco":{
+                      "us":{
+                          "1":"[@T[productprice:<current productid=\"171824\" dropdecimal=\"false\" period=\"monthly\"   htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "3":"[@T[productprice:<current productid=\"171829\" dropdecimal=\"false\" period=\"monthly\"   htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "6":"[@T[productprice:<current productid=\"171832\" dropdecimal=\"false\" period=\"monthly\"   htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "12":"[@T[productprice:<current productid=\"171833\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "24":"[@T[productprice:<current productid=\"171836\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "36":"[@T[productprice:<current productid=\"171839\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "48":"[@T[productprice:<current productid=\"171842\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "60":"[@T[productprice:<current productid=\"171845\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                       }
+                    },
+                    "val":{
+                       "us":{
+                          "1":"[@T[productprice:<current productid=\"171847\" dropdecimal=\"false\" period=\"monthly\"   htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "3":"[@T[productprice:<current productid=\"171850\" dropdecimal=\"false\" period=\"monthly\"   htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "6":"[@T[productprice:<current productid=\"171852\" dropdecimal=\"false\" period=\"monthly\"   htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "12":"[@T[productprice:<current productid=\"171853\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "24":"[@T[productprice:<current productid=\"171855\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "36":"[@T[productprice:<current productid=\"171857\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "48":"[@T[productprice:<current productid=\"171859\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "60":"[@T[productprice:<current productid=\"171861\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                       }
+                    },
+                    "deluxe":{
+                        "us":{
+                          "1":"[@T[productprice:<current productid=\"171863\" dropdecimal=\"false\" period=\"monthly\"   htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "3":"[@T[productprice:<current productid=\"171866\" dropdecimal=\"false\" period=\"monthly\"   htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "6":"[@T[productprice:<current productid=\"171868\" dropdecimal=\"false\" period=\"monthly\"   htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "12":"[@T[productprice:<current productid=\"171869\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "24":"[@T[productprice:<current productid=\"171871\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "36":"[@T[productprice:<current productid=\"171873\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "48":"[@T[productprice:<current productid=\"171875\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "60":"[@T[productprice:<current productid=\"171877\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"       
+                        }
+                    },
+                    "premium":{
+                         "us":{
+                          "1":"[@T[productprice:<current productid=\"171879\" dropdecimal=\"false\" period=\"monthly\"   htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "3":"[@T[productprice:<current productid=\"171882\" dropdecimal=\"false\" period=\"monthly\"   htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "6":"[@T[productprice:<current productid=\"171884\" dropdecimal=\"false\" period=\"monthly\"   htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "12":"[@T[productprice:<current productid=\"171885\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "24":"[@T[productprice:<current productid=\"171887\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "36":"[@T[productprice:<current productid=\"171889\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "48":"[@T[productprice:<current productid=\"171891\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "60":"[@T[productprice:<current productid=\"171893\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"       
+                        }
+                    },
+                    "ult":{
+                         "us":{
+                          "1":"[@T[productprice:<current productid=\"171895\" dropdecimal=\"false\" period=\"monthly\"   htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "3":"[@T[productprice:<current productid=\"171898\" dropdecimal=\"false\" period=\"monthly\"   htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "6":"[@T[productprice:<current productid=\"171900\" dropdecimal=\"false\" period=\"monthly\"   htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "12":"[@T[productprice:<current productid=\"171901\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "24":"[@T[productprice:<current productid=\"171903\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "36":"[@T[productprice:<current productid=\"171905\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "48":"[@T[productprice:<current productid=\"171907\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "60":"[@T[productprice:<current productid=\"171909\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"       
+                          }
+                    }
+               }
+             },
+            "windows": {
+                "plans": {
+                    "eco": {
+                        "os": "[@L[cds.sales/gd/hosting/vps-hosting-config:ecoWindows]@L]",
+                        "ram": "[@L[cds.sales/gd/hosting/vps-hosting-config:2GB]@L]",
+                        "storage": "[@L[cds.sales/gd/hosting/vps-hosting-config:40GB]@L]",
+                        "bandwidth": "[@L[cds.sales/gd/hosting/vps-hosting-config:1TB]@L]"
+                    },
+                    "val": {
+                        "os": "[@L[cds.sales/gd/hosting/vps-hosting-config:valWindows]@L]",
+                        "ram": "[@L[cds.sales/gd/hosting/vps-hosting-config:2GB]@L]",
+                        "storage": "[@L[cds.sales/gd/hosting/vps-hosting-config:60GB]@L]",
+                        "bandwidth": "[@L[cds.sales/gd/hosting/vps-hosting-config:2TB]@L]"
+                    },
+                    "deluxe": {
+                        "os": "[@L[cds.sales/gd/hosting/vps-hosting-config:deluxeWindows]@L]",
+                        "ram": "[@L[cds.sales/gd/hosting/vps-hosting-config:3GB]@L]",
+                        "storage": "[@L[cds.sales/gd/hosting/vps-hosting-config:90GB]@L]",
+                        "bandwidth": "[@L[cds.sales/gd/hosting/vps-hosting-config:3TB]@L]"
+                    },
+                    "premium": {
+                        "os": "Premium: Windows 2008 Standard",
+                        "ram": "[@L[cds.sales/gd/hosting/vps-hosting-config:4GB]@L]",
+                        "storage": "[@L[cds.sales/gd/hosting/vps-hosting-config:120GB]@L]",
+                        "bandwidth": "[@L[cds.sales/gd/hosting/vps-hosting-config:4TB]@L]"
+                    },
+                    "ult": {
+                        "os": "[@L[cds.sales/gd/hosting/vps-hosting-config:ultimateWindows]@L]",
+                        "ram": "[@L[cds.sales/gd/hosting/vps-hosting-config:8GB]@L]",
+                        "storage": "[@L[cds.sales/gd/hosting/vps-hosting-config:240GB]@L]",
+                        "bandwidth": "[@L[cds.sales/gd/hosting/vps-hosting-config:8TB]@L]"
+                    }
+                },
+                "prices": {
+                   "eco":{
+                      "us":{
+                          "1":"[@T[productprice:<current productid=\"457917\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "3":"[@T[productprice:<current productid=\"457922\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "6":"[@T[productprice:<current productid=\"457925\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "12":"[@T[productprice:<current productid=\"457920\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "24":"[@T[productprice:<current productid=\"457929\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "36":"[@T[productprice:<current productid=\"457932\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "48":"[@T[productprice:<current productid=\"457935\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "60":"[@T[productprice:<current productid=\"457938\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                       }
+                    },
+                    "val": {
+                        "us": {
+                          "1":"[@T[productprice:<current productid=\"457919\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "3":"[@T[productprice:<current productid=\"457924\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "6":"[@T[productprice:<current productid=\"457927\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "12":"[@T[productprice:<current productid=\"457928\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "24":"[@T[productprice:<current productid=\"457931\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "36":"[@T[productprice:<current productid=\"457934\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "48":"[@T[productprice:<current productid=\"457937\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "60":"[@T[productprice:<current productid=\"457940\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        }
+                    },
+                    "deluxe": {
+                        "us": {
+                          "1":"[@T[productprice:<current productid=\"457942\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "3":"[@T[productprice:<current productid=\"457945\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "6":"[@T[productprice:<current productid=\"457947\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "12":"[@T[productprice:<current productid=\"457948\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "24":"[@T[productprice:<current productid=\"457950\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "36":"[@T[productprice:<current productid=\"457952\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "48":"[@T[productprice:<current productid=\"457954\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "60":"[@T[productprice:<current productid=\"457956\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        }
+                    },
+                    "premium": {
+                        "us": {
+                          "1":"[@T[productprice:<current productid=\"457958\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "3":"[@T[productprice:<current productid=\"457961\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "6":"[@T[productprice:<current productid=\"457963\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "12":"[@T[productprice:<current productid=\"457964\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "24":"[@T[productprice:<current productid=\"457966\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "36":"[@T[productprice:<current productid=\"457968\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "48":"[@T[productprice:<current productid=\"457970\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "60":"[@T[productprice:<current productid=\"457972\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        }
+                    },
+                    "ult": {
+                        "us": {
+                          "1":"[@T[productprice:<current productid=\"457974\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "3":"[@T[productprice:<current productid=\"457977\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "6":"[@T[productprice:<current productid=\"457979\" dropdecimal=\"false\"  period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "12":"[@T[productprice:<current productid=\"457980\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "24":"[@T[productprice:<current productid=\"457982\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "36":"[@T[productprice:<current productid=\"457984\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "48":"[@T[productprice:<current productid=\"457986\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                          "60":"[@T[productprice:<current productid=\"457988\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "pro_vps_linux_t1": {
+        "addons": {
+            "managed": [
+                {
+                    "id": "pro_vps_managed",
+                    "os": "[@L[cds.sales/gd/pro/managed-vps-config:managedlinuxOS]@L]",
+                    "includes": "[@L[cds.sales/gd/pro/managed-vps-config:managedlinuxIncludes]@L]",
+                    "addonprice": "[@T[productprice:<current productid=\"483560\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                    "addonname" :"[@L[cds.sales/gd/pro/managed-vps-config:managed]@L]"
+                },
+                {
+                    "id": "pro_vps_managed_plus",
+                    "os": "[@L[cds.sales/gd/pro/managed-vps-config:managedlinuxOS]@L]",
+                    "includes": "[@L[cds.sales/gd/pro/managed-vps-config:fullymanagedlinuxIncludes]@L]",
+                    "addonprice": "[@T[productprice:<current productid=\"483562\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                    "addonname" :"[@L[cds.sales/gd/pro/managed-vps-config:fullymanaged]@L]"
+                },
+                {
+                    "id": "pro_vps_self_managed",
+                    "os": "[@L[cds.sales/gd/pro/managed-vps-config:selfmanagedlinuxOS]@L]",
+                    "includes": "[@L[cds.sales/gd/pro/managed-vps-config:selfmanagedlinuxIncludes]@L]",
+                    "addonprice": "[@T[currencyprice:<price usdamount=\"0\" /> ]@T]",
+                    "addonname" :"[@L[cds.sales/gd/pro/managed-vps-config:selfmanaged]@L]"
+                }
+            ],
+            "os": {
+                "id": "pro_vps_os_linux",
+                "addonprice": "[@T[productprice:<current productid=\"483558\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+             }
+        },
+        "terms": [
+            "1-pro_vps_linux_t1_1month-[@T[appSetting:<setting name=\"FOS_VPS_1MONTH_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458319\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458319\" secondaryproductid=\"458319\" />]@T]-[@T[productprice:<list productid=\"458319\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "3-pro_vps_linux_t1_3month-[@T[appSetting:<setting name=\"FOS_VPS_3MONTH_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458324\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458324\" secondaryproductid=\"458324\" />]@T]-[@T[productprice:<list productid=\"458324\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "6-pro_vps_linux_t1_6month-[@T[appSetting:<setting name=\"FOS_VPS_6MONTH_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458327\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458327\" secondaryproductid=\"458327\" />]@T]-[@T[productprice:<list productid=\"458327\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "12-pro_vps_linux_t1_12month-[@T[appSetting:<setting name=\"FOS_VPS_1YEAR_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458322\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458322\" secondaryproductid=\"458322\" />]@T]-[@T[productprice:<list productid=\"458322\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "24-pro_vps_linux_t1_24month-[@T[appSetting:<setting name=\"FOS_VPS_2YEAR_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458331\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458331\" secondaryproductid=\"458331\" />]@T]-[@T[productprice:<list productid=\"458331\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "36-pro_vps_linux_t1_36month-[@T[appSetting:<setting name=\"FOS_VPS_3YEAR_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458334\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458334\" secondaryproductid=\"458334\" />]@T]-[@T[productprice:<list productid=\"458334\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "48-pro_vps_linux_t1_48month-[@T[appSetting:<setting name=\"FOS_VPS_4YEAR_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458337\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458337\" secondaryproductid=\"458337\" />]@T]-[@T[productprice:<list productid=\"458337\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "60-pro_vps_linux_t1_60month-[@T[appSetting:<setting name=\"FOS_VPS_5YEAR_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458340\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458340\" secondaryproductid=\"458340\" />]@T]-[@T[productprice:<list productid=\"458340\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+        ],
+        "details": {
+            "ram": "[@L[cds.sales/gd/pro/managed-vps-config:1GB]@L]",
+            "storage": "[@L[cds.sales/gd/pro/managed-vps-config:40GB]@L]",
+            "bandwidth": "[@L[cds.sales/gd/pro/managed-vps-config:1TB]@L]"
+        }
+    },
+    "pro_vps_linux_t2": {
+        "addons": {
+            "managed": [
+               {
+                    "id": "pro_vps_managed",
+                    "os": "[@L[cds.sales/gd/pro/managed-vps-config:managedlinuxOS]@L]",
+                    "includes": "[@L[cds.sales/gd/pro/managed-vps-config:managedlinuxIncludes]@L]",
+                    "addonprice": "[@T[productprice:<current productid=\"483560\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                    "addonname" :"[@L[cds.sales/gd/pro/managed-vps-config:managed]@L]"
+                },
+                {
+                    "id": "pro_vps_managed_plus",
+                    "os": "[@L[cds.sales/gd/pro/managed-vps-config:managedlinuxOS]@L]",
+                    "includes": "[@L[cds.sales/gd/pro/managed-vps-config:fullymanagedlinuxIncludes]@L]",
+                    "addonprice": "[@T[productprice:<current productid=\"483562\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                    "addonname" :"[@L[cds.sales/gd/pro/managed-vps-config:fullymanaged]@L]"
+                },
+                {
+                    "id": "pro_vps_self_managed",
+                    "os": "[@L[cds.sales/gd/pro/managed-vps-config:selfmanagedlinuxOS]@L]",
+                    "includes": "[@L[cds.sales/gd/pro/managed-vps-config:selfmanagedlinuxIncludes]@L]",
+                    "addonprice": "[@T[currencyprice:<price usdamount=\"0\" /> ]@T]",
+                    "addonname" :"[@L[cds.sales/gd/pro/managed-vps-config:selfmanaged]@L]"
+                }
+            ],
+            "os": {
+                "id": "pro_vps_os_linux",
+                "addonprice": "[@T[productprice:<current productid=\"483558\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+             }
+        },
+        "terms": [
+            "1-pro_vps_linux_t2_1month-[@T[appSetting:<setting name=\"FOS_VPS_1MONTH_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458321\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458321\" secondaryproductid=\"458321\" />]@T]-[@T[productprice:<list productid=\"458321\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "3-pro_vps_linux_t2_3month-[@T[appSetting:<setting name=\"FOS_VPS_3MONTH_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458326\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458326\" secondaryproductid=\"458326\" />]@T]-[@T[productprice:<list productid=\"458326\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "6-pro_vps_linux_t2_6month-[@T[appSetting:<setting name=\"FOS_VPS_6MONTH_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458329\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458329\" secondaryproductid=\"458329\" />]@T]-[@T[productprice:<list productid=\"458329\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "12-pro_vps_linux_t2_12month-[@T[appSetting:<setting name=\"FOS_VPS_1YEAR_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458330\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458330\" secondaryproductid=\"458330\" />]@T]-[@T[productprice:<list productid=\"458330\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "24-pro_vps_linux_t2_24month-[@T[appSetting:<setting name=\"FOS_VPS_2YEAR_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458333\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458333\" secondaryproductid=\"458333\" />]@T]-[@T[productprice:<list productid=\"458333\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "36-pro_vps_linux_t2_36month-[@T[appSetting:<setting name=\"FOS_VPS_3YEAR_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458336\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458336\" secondaryproductid=\"458336\" />]@T]-[@T[productprice:<list productid=\"458336\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "48-pro_vps_linux_t2_48month-[@T[appSetting:<setting name=\"FOS_VPS_4YEAR_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458339\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458339\" secondaryproductid=\"458339\" />]@T]-[@T[productprice:<list productid=\"458339\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "60-pro_vps_linux_t2_60month-[@T[appSetting:<setting name=\"FOS_VPS_5YEAR_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458342\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458342\" secondaryproductid=\"458342\" />]@T]-[@T[productprice:<list productid=\"458342\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+        ],
+        "details": {
+            "ram": "[@L[cds.sales/gd/pro/managed-vps-config:2GB]@L]",
+            "storage": "[@L[cds.sales/gd/pro/managed-vps-config:60GB]@L]",
+            "bandwidth": "[@L[cds.sales/gd/pro/managed-vps-config:2TB]@L]"
+        }
+    },
+    "pro_vps_linux_t3": {
+       "addons": {
+            "managed": [
+               {
+                    "id": "pro_vps_managed",
+                    "os": "[@L[cds.sales/gd/pro/managed-vps-config:managedlinuxOS]@L]",
+                    "includes": "[@L[cds.sales/gd/pro/managed-vps-config:managedlinuxIncludes]@L]",
+                    "addonprice": "[@T[productprice:<current productid=\"483560\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                    "addonname" :"[@L[cds.sales/gd/pro/managed-vps-config:managed]@L]"
+                },
+                {
+                    "id": "pro_vps_managed_plus",
+                    "os": "[@L[cds.sales/gd/pro/managed-vps-config:managedlinuxOS]@L]",
+                    "includes": "[@L[cds.sales/gd/pro/managed-vps-config:fullymanagedlinuxIncludes]@L]",
+                    "addonprice": "[@T[productprice:<current productid=\"483562\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                    "addonname" :"[@L[cds.sales/gd/pro/managed-vps-config:fullymanaged]@L]"
+                },
+                {
+                    "id": "pro_vps_self_managed",
+                    "os": "[@L[cds.sales/gd/pro/managed-vps-config:selfmanagedlinuxOS]@L]",
+                    "includes": "[@L[cds.sales/gd/pro/managed-vps-config:selfmanagedlinuxIncludes]@L]",
+                    "addonprice": "[@T[currencyprice:<price usdamount=\"0\" /> ]@T]",
+                    "addonname" :"[@L[cds.sales/gd/pro/managed-vps-config:selfmanaged]@L]"
+                }
+            ],
+            "os": {
+                "id": "pro_vps_os_linux",
+                "addonprice": "[@T[productprice:<current productid=\"483558\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+             }
+        },
+        "terms": [
+            "1-pro_vps_linux_t3_1month-[@T[appSetting:<setting name=\"FOS_VPS_1MONTH_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458344\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458344\" secondaryproductid=\"458344\" />]@T]-[@T[productprice:<list productid=\"458344\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "3-pro_vps_linux_t3_3month-[@T[appSetting:<setting name=\"FOS_VPS_3MONTH_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458347\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458347\" secondaryproductid=\"458347\" />]@T]-[@T[productprice:<list productid=\"458347\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "6-pro_vps_linux_t3_6month-[@T[appSetting:<setting name=\"FOS_VPS_6MONTH_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458349\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458349\" secondaryproductid=\"458349\" />]@T]-[@T[productprice:<list productid=\"458349\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "12-pro_vps_linux_t3_12month-[@T[appSetting:<setting name=\"FOS_VPS_1YEAR_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458350\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458350\" secondaryproductid=\"458350\" />]@T]-[@T[productprice:<list productid=\"458350\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "24-pro_vps_linux_t3_24month-[@T[appSetting:<setting name=\"FOS_VPS_2YEAR_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458352\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458352\" secondaryproductid=\"458352\" />]@T]-[@T[productprice:<list productid=\"458352\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "36-pro_vps_linux_t3_36month-[@T[appSetting:<setting name=\"FOS_VPS_3YEAR_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458354\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458354\" secondaryproductid=\"458354\" />]@T]-[@T[productprice:<list productid=\"458354\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "48-pro_vps_linux_t3_48month-[@T[appSetting:<setting name=\"FOS_VPS_4YEAR_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458356\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458356\" secondaryproductid=\"458356\" />]@T]-[@T[productprice:<list productid=\"458356\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "60-pro_vps_linux_t3_60month-[@T[appSetting:<setting name=\"FOS_VPS_5YEAR_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458358\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458358\" secondaryproductid=\"458358\" />]@T]-[@T[productprice:<list productid=\"458358\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+        ],
+        "details": {
+            "ram": "[@L[cds.sales/gd/pro/managed-vps-config:3GB]@L]",
+            "storage": "[@L[cds.sales/gd/pro/managed-vps-config:90GB]@L]",
+            "bandwidth": "[@L[cds.sales/gd/pro/managed-vps-config:3TB]@L]"
+        }
+    },
+    "pro_vps_linux_t4": {
+       "addons": {
+            "managed": [
+               {
+                    "id": "pro_vps_managed",
+                    "os": "[@L[cds.sales/gd/pro/managed-vps-config:managedlinuxOS]@L]",
+                    "includes": "[@L[cds.sales/gd/pro/managed-vps-config:managedlinuxIncludes]@L]",
+                    "addonprice": "[@T[productprice:<current productid=\"483560\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                    "addonname" :"[@L[cds.sales/gd/pro/managed-vps-config:managed]@L]"
+                },
+                {
+                    "id": "pro_vps_managed_plus",
+                    "os": "[@L[cds.sales/gd/pro/managed-vps-config:managedlinuxOS]@L]",
+                    "includes": "[@L[cds.sales/gd/pro/managed-vps-config:fullymanagedlinuxIncludes]@L]",
+                    "addonprice": "[@T[productprice:<current productid=\"483562\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                    "addonname" :"[@L[cds.sales/gd/pro/managed-vps-config:fullymanaged]@L]"
+                },
+                {
+                    "id": "pro_vps_self_managed",
+                    "os": "[@L[cds.sales/gd/pro/managed-vps-config:selfmanagedlinuxOS]@L]",
+                    "includes": "[@L[cds.sales/gd/pro/managed-vps-config:selfmanagedlinuxIncludes]@L]",
+                    "addonprice": "[@T[currencyprice:<price usdamount=\"0\" /> ]@T]",
+                    "addonname" :"[@L[cds.sales/gd/pro/managed-vps-config:selfmanaged]@L]"
+                }
+            ],
+            "os": {
+                "id": "pro_vps_os_linux",
+                "addonprice" : "[@T[productprice:<current productid=\"483558\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+             }
+        },
+        "terms": [
+            "1-pro_vps_linux_t4_1month-[@T[appSetting:<setting name=\"FOS_VPS_1MONTH_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458360\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458360\" secondaryproductid=\"458360\" />]@T]-[@T[productprice:<list productid=\"458360\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "3-pro_vps_linux_t4_3month-[@T[appSetting:<setting name=\"FOS_VPS_3MONTH_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458363\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458363\" secondaryproductid=\"458363\" />]@T]-[@T[productprice:<list productid=\"458363\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "6-pro_vps_linux_t4_6month-[@T[appSetting:<setting name=\"FOS_VPS_6MONTH_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458365\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458365\" secondaryproductid=\"458365\" />]@T]-[@T[productprice:<list productid=\"458365\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "12-pro_vps_linux_t4_12month-[@T[appSetting:<setting name=\"FOS_VPS_1YEAR_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458366\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458366\" secondaryproductid=\"458366\" />]@T]-[@T[productprice:<list productid=\"458366\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "24-pro_vps_linux_t4_24month-[@T[appSetting:<setting name=\"FOS_VPS_2YEAR_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458368\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458368\" secondaryproductid=\"458368\" />]@T]-[@T[productprice:<list productid=\"458368\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "36-pro_vps_linux_t4_36month-[@T[appSetting:<setting name=\"FOS_VPS_3YEAR_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458370\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458370\" secondaryproductid=\"458370\" />]@T]-[@T[productprice:<list productid=\"458370\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "48-pro_vps_linux_t4_48month-[@T[appSetting:<setting name=\"FOS_VPS_4YEAR_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458372\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458372\" secondaryproductid=\"458372\" />]@T]-[@T[productprice:<list productid=\"458372\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "60-pro_vps_linux_t4_60month-[@T[appSetting:<setting name=\"FOS_VPS_5YEAR_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458374\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458374\" secondaryproductid=\"458374\" />]@T]-[@T[productprice:<list productid=\"458374\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+        ],
+        "details": {
+            "ram": "[@L[cds.sales/gd/pro/managed-vps-config:4GB]@L]",
+            "storage": "[@L[cds.sales/gd/pro/managed-vps-config:120GB]@L]",
+            "bandwidth": "[@L[cds.sales/gd/pro/managed-vps-config:4TB]@L]"
+        }
+    },
+    "pro_vps_linux_t5": {
+       "addons": {
+            "managed": [
+              {
+                    "id": "pro_vps_managed",
+                    "os": "[@L[cds.sales/gd/pro/managed-vps-config:managedlinuxOS]@L]",
+                    "includes": "[@L[cds.sales/gd/pro/managed-vps-config:managedlinuxIncludes]@L]",
+                    "addonprice": "[@T[productprice:<current productid=\"483560\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                    "addonname" :"[@L[cds.sales/gd/pro/managed-vps-config:managed]@L]"
+                },
+                {
+                    "id": "pro_vps_managed_plus",
+                    "os": "[@L[cds.sales/gd/pro/managed-vps-config:managedlinuxOS]@L]",
+                    "includes": "[@L[cds.sales/gd/pro/managed-vps-config:fullymanagedlinuxIncludes]@L]",
+                    "addonprice": "[@T[productprice:<current productid=\"483562\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                    "addonname" :"[@L[cds.sales/gd/pro/managed-vps-config:fullymanaged]@L]"
+                },
+                {
+                    "id": "pro_vps_self_managed",
+                    "os": "[@L[cds.sales/gd/pro/managed-vps-config:selfmanagedlinuxOS]@L]",
+                    "includes": "[@L[cds.sales/gd/pro/managed-vps-config:selfmanagedlinuxIncludes]@L]",
+                    "addonprice": "[@T[currencyprice:<price usdamount=\"0\" /> ]@T]",
+                    "addonname" :"[@L[cds.sales/gd/pro/managed-vps-config:selfmanaged]@L]"
+                }
+            ],
+            "os": {
+                "id": "pro_vps_os_linux",
+               "addonprice": "[@T[productprice:<current productid=\"483558\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+             }
+        },
+        "terms": [
+            "1-pro_vps_linux_t5_1month-[@T[appSetting:<setting name=\"FOS_VPS_1MONTH_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458376\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458376\" secondaryproductid=\"458376\" />]@T]-[@T[productprice:<list productid=\"458376\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "3-pro_vps_linux_t5_3month-[@T[appSetting:<setting name=\"FOS_VPS_3MONTH_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458379\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458379\" secondaryproductid=\"458379\" />]@T]-[@T[productprice:<list productid=\"458379\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "6-pro_vps_linux_t5_6month-[@T[appSetting:<setting name=\"FOS_VPS_6MONTH_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458381\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458381\" secondaryproductid=\"458381\" />]@T]-[@T[productprice:<list productid=\"458381\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "12-pro_vps_linux_t5_12month-[@T[appSetting:<setting name=\"FOS_VPS_1YEAR_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458382\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458382\" secondaryproductid=\"458382\" />]@T]-[@T[productprice:<list productid=\"458382\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "24-pro_vps_linux_t5_24month-[@T[appSetting:<setting name=\"FOS_VPS_2YEAR_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458384\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458384\" secondaryproductid=\"458384\" />]@T]-[@T[productprice:<list productid=\"458384\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "36-pro_vps_linux_t5_36month-[@T[appSetting:<setting name=\"FOS_VPS_3YEAR_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458386\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458386\" secondaryproductid=\"458386\" />]@T]-[@T[productprice:<list productid=\"458386\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "48-pro_vps_linux_t5_48month-[@T[appSetting:<setting name=\"FOS_VPS_4YEAR_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458388\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458388\" secondaryproductid=\"458388\" />]@T]-[@T[productprice:<list productid=\"458388\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "60-pro_vps_linux_t5_60month-[@T[appSetting:<setting name=\"FOS_VPS_5YEAR_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458390\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458390\" secondaryproductid=\"458390\" />]@T]-[@T[productprice:<list productid=\"458390\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+        ],
+        "details": {
+            "ram": "[@L[cds.sales/gd/pro/managed-vps-config:5GB]@L]",
+            "storage": "[@L[cds.sales/gd/pro/managed-vps-config:240GB]@L]",
+            "bandwidth": "[@L[cds.sales/gd/pro/managed-vps-config:8TB]@L]"
+        }
+    },
+    "pro_vps_windows_t1": {
+         "addons": {
+            "managed": [
+                {
+                    "id": "pro_vps_managed",
+                    "os": "[@L[cds.sales/gd/pro/managed-vps-config:managedWindowsOS]@L]",                    
+                    "includes": "[@L[cds.sales/gd/pro/managed-vps-config:managedWindowsIncludes]@L]",
+                    "addonprice": "[@T[productprice:<current productid=\"483560\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                    "addonname" :"[@L[cds.sales/gd/pro/managed-vps-config:managed]@L]"
+                },
+                {
+                    "id": "pro_vps_managed_plus",
+                    "os": "[@L[cds.sales/gd/pro/managed-vps-config:managedWindowsOS]@L]",
+                    "includes": "[@L[cds.sales/gd/pro/managed-vps-config:fullymanagedWindowsIncludes]@L]",
+                    "addonprice": "[@T[productprice:<current productid=\"483562\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                    "addonname" :"[@L[cds.sales/gd/pro/managed-vps-config:fullymanaged]@L]"
+                },
+                {
+                    "id": "pro_vps_self_managed",                    
+                    "os": "[@L[cds.sales/gd/pro/managed-vps-config:managedWindowsOS]@L]",
+                    "includes": "[@L[cds.sales/gd/pro/managed-vps-config:selfmanagedWindowsIncludes]@L]",
+                    "addonprice": "[@T[currencyprice:<price usdamount=\"0\" /> ]@T]",
+                    "addonname" :"[@L[cds.sales/gd/pro/managed-vps-config:selfmanaged]@L]"
+                }
+            ],
+            "os": {
+                "id": "pro_vps_os_windows",
+             "addonprice" : "[@T[productprice:<current productid=\"483556\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+             }
+        },
+        "terms": [
+            "1-pro_vps_windows_t1_1month-[@T[appSetting:<setting name=\"FOS_VPS_1MONTH_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458319\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458319\" secondaryproductid=\"458319\" />]@T]-[@T[productprice:<list productid=\"458319\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "3-pro_vps_windows_t1_3month-[@T[appSetting:<setting name=\"FOS_VPS_3MONTH_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458324\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458324\" secondaryproductid=\"458324\" />]@T]-[@T[productprice:<list productid=\"458324\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "6-pro_vps_windows_t1_6month-[@T[appSetting:<setting name=\"FOS_VPS_6MONTH_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458327\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458327\" secondaryproductid=\"458327\" />]@T]-[@T[productprice:<list productid=\"458327\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "12-pro_vps_windows_t1_12month-[@T[appSetting:<setting name=\"FOS_VPS_1YEAR_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458322\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458322\" secondaryproductid=\"458322\" />]@T]-[@T[productprice:<list productid=\"458322\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "24-pro_vps_windows_t1_24month-[@T[appSetting:<setting name=\"FOS_VPS_2YEAR_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458331\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458331\" secondaryproductid=\"458331\" />]@T]-[@T[productprice:<list productid=\"458331\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "36-pro_vps_windows_t1_36month-[@T[appSetting:<setting name=\"FOS_VPS_3YEAR_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458334\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458334\" secondaryproductid=\"458334\" />]@T]-[@T[productprice:<list productid=\"458334\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "48-pro_vps_windows_t1_48month-[@T[appSetting:<setting name=\"FOS_VPS_4YEAR_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458337\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458337\" secondaryproductid=\"458337\" />]@T]-[@T[productprice:<list productid=\"458337\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "60-pro_vps_windows_t1_60month-[@T[appSetting:<setting name=\"FOS_VPS_5YEAR_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458340\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458340\" secondaryproductid=\"458340\" />]@T]-[@T[productprice:<list productid=\"458340\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+        ],
+        "details": {
+            "ram": "[@L[cds.sales/gd/pro/managed-vps-config:1GB]@L]",
+            "storage": "[@L[cds.sales/gd/pro/managed-vps-config:40GB]@L]",
+            "bandwidth": "[@L[cds.sales/gd/pro/managed-vps-config:1TB]@L]"
+        }
+    },
+    "pro_vps_windows_t2": {
+        "addons": {
+            "managed": [
+                {
+                    "id": "pro_vps_managed",
+                    "os": "[@L[cds.sales/gd/pro/managed-vps-config:managedWindowsOS]@L]",                    
+                    "includes": "[@L[cds.sales/gd/pro/managed-vps-config:managedWindowsIncludes]@L]",
+                    "addonprice": "[@T[productprice:<current productid=\"483560\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                    "addonname" :"[@L[cds.sales/gd/pro/managed-vps-config:managed]@L]"
+                },
+                {
+                    "id": "pro_vps_managed_plus",
+                    "os": "[@L[cds.sales/gd/pro/managed-vps-config:managedWindowsOS]@L]",
+                    "includes": "[@L[cds.sales/gd/pro/managed-vps-config:fullymanagedWindowsIncludes]@L]",
+                    "addonprice": "[@T[productprice:<current productid=\"483562\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                    "addonname" :"[@L[cds.sales/gd/pro/managed-vps-config:fullymanaged]@L]"
+                },
+                {
+                    "id": "pro_vps_self_managed",                    
+                    "os": "[@L[cds.sales/gd/pro/managed-vps-config:managedWindowsOS]@L]",
+                    "includes": "[@L[cds.sales/gd/pro/managed-vps-config:selfmanagedWindowsIncludes]@L]",
+                    "addonprice": "[@T[currencyprice:<price usdamount=\"0\" /> ]@T]",
+                    "addonname" :"[@L[cds.sales/gd/pro/managed-vps-config:selfmanaged]@L]"
+                }
+            ],
+            "os": {
+                "id": "pro_vps_os_windows",
+                 "addonprice" : "[@T[productprice:<current productid=\"483556\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+            }
+        },
+        "terms": [
+            "1-pro_vps_windows_t2_1month-[@T[appSetting:<setting name=\"FOS_VPS_1MONTH_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458321\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458321\" secondaryproductid=\"458321\" />]@T]-[@T[productprice:<list productid=\"458321\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "3-pro_vps_windows_t2_3month-[@T[appSetting:<setting name=\"FOS_VPS_3MONTH_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458326\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458326\" secondaryproductid=\"458326\" />]@T]-[@T[productprice:<list productid=\"458326\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "6-pro_vps_windows_t2_6month-[@T[appSetting:<setting name=\"FOS_VPS_6MONTH_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458329\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458329\" secondaryproductid=\"458329\" />]@T]-[@T[productprice:<list productid=\"458329\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "12-pro_vps_windows_t2_12month-[@T[appSetting:<setting name=\"FOS_VPS_1YEAR_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458330\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458330\" secondaryproductid=\"458330\" />]@T]-[@T[productprice:<list productid=\"458330\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "24-pro_vps_windows_t2_24month-[@T[appSetting:<setting name=\"FOS_VPS_2YEAR_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458333\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458333\" secondaryproductid=\"458333\" />]@T]-[@T[productprice:<list productid=\"458333\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "36-pro_vps_windows_t2_36month-[@T[appSetting:<setting name=\"FOS_VPS_3YEAR_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458336\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458336\" secondaryproductid=\"458336\" />]@T]-[@T[productprice:<list productid=\"458336\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "48-pro_vps_windows_t2_48month-[@T[appSetting:<setting name=\"FOS_VPS_4YEAR_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458339\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458339\" secondaryproductid=\"458339\" />]@T]-[@T[productprice:<list productid=\"458339\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "60-pro_vps_windows_t2_60month-[@T[appSetting:<setting name=\"FOS_VPS_5YEAR_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458342\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458342\" secondaryproductid=\"458342\" />]@T]-[@T[productprice:<list productid=\"458342\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+        ],
+        "details": {
+            "ram": "[@L[cds.sales/gd/pro/managed-vps-config:2GB]@L]",
+            "storage": "[@L[cds.sales/gd/pro/managed-vps-config:60GB]@L]",
+            "bandwidth": "[@L[cds.sales/gd/pro/managed-vps-config:2TB]@L]"
+        }
+    },
+    "pro_vps_windows_t3": {
+        "addons": {
+            "managed": [
+              {
+                    "id": "pro_vps_managed",
+                    "os": "[@L[cds.sales/gd/pro/managed-vps-config:managedWindowsOS]@L]",                    
+                    "includes": "[@L[cds.sales/gd/pro/managed-vps-config:managedWindowsIncludes]@L]",
+                    "addonprice": "[@T[productprice:<current productid=\"483560\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                    "addonname" :"[@L[cds.sales/gd/pro/managed-vps-config:managed]@L]"
+                },
+                {
+                    "id": "pro_vps_managed_plus",
+                    "os": "[@L[cds.sales/gd/pro/managed-vps-config:managedWindowsOS]@L]",
+                    "includes": "[@L[cds.sales/gd/pro/managed-vps-config:fullymanagedWindowsIncludes]@L]",
+                    "addonprice": "[@T[productprice:<current productid=\"483562\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                    "addonname" :"[@L[cds.sales/gd/pro/managed-vps-config:fullymanaged]@L]"
+                },
+                {
+                    "id": "pro_vps_self_managed",                    
+                    "os": "[@L[cds.sales/gd/pro/managed-vps-config:managedWindowsOS]@L]",
+                    "includes": "[@L[cds.sales/gd/pro/managed-vps-config:selfmanagedWindowsIncludes]@L]",
+                    "addonprice": "[@T[currencyprice:<price usdamount=\"0\" /> ]@T]",
+                    "addonname" :"[@L[cds.sales/gd/pro/managed-vps-config:selfmanaged]@L]"
+                }
+            ],
+            "os": {
+                "id": "pro_vps_os_windows",
+                 "addonprice" : "[@T[productprice:<current productid=\"483556\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+            }
+        },
+        "terms": [
+           "1-pro_vps_windows_t3_1month-[@T[appSetting:<setting name=\"FOS_VPS_1MONTH_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458344\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458344\" secondaryproductid=\"458344\" />]@T]-[@T[productprice:<list productid=\"458344\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "3-pro_vps_windows_t3_3month-[@T[appSetting:<setting name=\"FOS_VPS_3MONTH_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458347\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458347\" secondaryproductid=\"458347\" />]@T]-[@T[productprice:<list productid=\"458347\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "6-pro_vps_windows_t3_6month-[@T[appSetting:<setting name=\"FOS_VPS_6MONTH_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458349\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458349\" secondaryproductid=\"458349\" />]@T]-[@T[productprice:<list productid=\"458349\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "12-pro_vps_windows_t3_12month-[@T[appSetting:<setting name=\"FOS_VPS_1YEAR_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458350\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458350\" secondaryproductid=\"458350\" />]@T]-[@T[productprice:<list productid=\"458350\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "24-pro_vps_windows_t3_24month-[@T[appSetting:<setting name=\"FOS_VPS_2YEAR_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458352\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458352\" secondaryproductid=\"458352\" />]@T]-[@T[productprice:<list productid=\"458352\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "36-pro_vps_windows_t3_36month-[@T[appSetting:<setting name=\"FOS_VPS_3YEAR_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458354\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458354\" secondaryproductid=\"458354\" />]@T]-[@T[productprice:<list productid=\"458354\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "48-pro_vps_windows_t3_48month-[@T[appSetting:<setting name=\"FOS_VPS_4YEAR_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458356\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458356\" secondaryproductid=\"458356\" />]@T]-[@T[productprice:<list productid=\"458356\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "60-pro_vps_windows_t3_60month-[@T[appSetting:<setting name=\"FOS_VPS_5YEAR_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458358\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458358\" secondaryproductid=\"458358\" />]@T]-[@T[productprice:<list productid=\"458358\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+        ],
+        "details": {
+            "ram": "[@L[cds.sales/gd/pro/managed-vps-config:3GB]@L]",
+            "storage": "[@L[cds.sales/gd/pro/managed-vps-config:90GB]@L]",
+            "bandwidth": "[@L[cds.sales/gd/pro/managed-vps-config:3TB]@L]"
+        }
+    },
+    "pro_vps_windows_t4": {
+        "addons": {
+            "managed": [
+               {
+                    "id": "pro_vps_managed",
+                    "os": "[@L[cds.sales/gd/pro/managed-vps-config:managedWindowsOS]@L]",                    
+                    "includes": "[@L[cds.sales/gd/pro/managed-vps-config:managedWindowsIncludes]@L]",
+                    "addonprice": "[@T[productprice:<current productid=\"483560\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                    "addonname" :"[@L[cds.sales/gd/pro/managed-vps-config:managed]@L]"
+                },
+                {
+                    "id": "pro_vps_managed_plus",
+                    "os": "[@L[cds.sales/gd/pro/managed-vps-config:managedWindowsOS]@L]",
+                    "includes": "[@L[cds.sales/gd/pro/managed-vps-config:fullymanagedWindowsIncludes]@L]",
+                    "addonprice": "[@T[productprice:<current productid=\"483562\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                    "addonname" :"[@L[cds.sales/gd/pro/managed-vps-config:fullymanaged]@L]"
+                },
+                {
+                    "id": "pro_vps_self_managed",                    
+                    "os": "[@L[cds.sales/gd/pro/managed-vps-config:managedWindowsOS]@L]",
+                    "includes": "[@L[cds.sales/gd/pro/managed-vps-config:selfmanagedWindowsIncludes]@L]",
+                    "addonprice": "[@T[currencyprice:<price usdamount=\"0\" /> ]@T]",
+                    "addonname" :"[@L[cds.sales/gd/pro/managed-vps-config:selfmanaged]@L]"
+                }
+            ],
+            "os": {
+                "id": "pro_vps_os_windows",
+                 "addonprice" : "[@T[productprice:<current productid=\"483556\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+            }
+        },
+        "terms": [
+            "1-pro_vps_windows_t4_1month-[@T[appSetting:<setting name=\"FOS_VPS_1MONTH_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458360\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458360\" secondaryproductid=\"458360\" />]@T]-[@T[productprice:<list productid=\"458360\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "3-pro_vps_windows_t4_3month-[@T[appSetting:<setting name=\"FOS_VPS_3MONTH_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458363\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458363\" secondaryproductid=\"458363\" />]@T]-[@T[productprice:<list productid=\"458363\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "6-pro_vps_windows_t4_6month-[@T[appSetting:<setting name=\"FOS_VPS_6MONTH_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458365\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458365\" secondaryproductid=\"458365\" />]@T]-[@T[productprice:<list productid=\"458365\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "12-pro_vps_windows_t4_12month-[@T[appSetting:<setting name=\"FOS_VPS_1YEAR_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458366\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458366\" secondaryproductid=\"458366\" />]@T]-[@T[productprice:<list productid=\"458366\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "24-pro_vps_windows_t4_24month-[@T[appSetting:<setting name=\"FOS_VPS_2YEAR_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458368\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458368\" secondaryproductid=\"458368\" />]@T]-[@T[productprice:<list productid=\"458368\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "36-pro_vps_windows_t4_36month-[@T[appSetting:<setting name=\"FOS_VPS_3YEAR_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458370\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458370\" secondaryproductid=\"458370\" />]@T]-[@T[productprice:<list productid=\"458370\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "48-pro_vps_windows_t4_48month-[@T[appSetting:<setting name=\"FOS_VPS_4YEAR_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458372\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458372\" secondaryproductid=\"458372\" />]@T]-[@T[productprice:<list productid=\"458372\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "60-pro_vps_windows_t4_60month-[@T[appSetting:<setting name=\"FOS_VPS_5YEAR_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458374\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458374\" secondaryproductid=\"458374\" />]@T]-[@T[productprice:<list productid=\"458374\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+        ],
+        "details": {
+            "ram": "[@L[cds.sales/gd/pro/managed-vps-config:4GB]@L]",
+            "storage": "[@L[cds.sales/gd/pro/managed-vps-config:120GB]@L]",
+            "bandwidth": "[@L[cds.sales/gd/pro/managed-vps-config:4TB]@L]"
+        }
+    },
+    "pro_vps_windows_t5": {
+        "addons": {
+            "managed": [
+                 {
+                    "id": "pro_vps_managed",
+                    "os": "[@L[cds.sales/gd/pro/managed-vps-config:managedWindowsOS]@L]",                    
+                    "includes": "[@L[cds.sales/gd/pro/managed-vps-config:managedWindowsIncludes]@L]",
+                    "addonprice": "[@T[productprice:<current productid=\"483560\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                    "addonname" :"[@L[cds.sales/gd/pro/managed-vps-config:managed]@L]"
+                },
+                {
+                    "id": "pro_vps_managed_plus",
+                    "os": "[@L[cds.sales/gd/pro/managed-vps-config:managedWindowsOS]@L]",
+                    "includes": "[@L[cds.sales/gd/pro/managed-vps-config:fullymanagedWindowsIncludes]@L]",
+                    "addonprice": "[@T[productprice:<current productid=\"483562\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                    "addonname" :"[@L[cds.sales/gd/pro/managed-vps-config:fullymanaged]@L]"
+                },
+                {
+                    "id": "pro_vps_self_managed",                    
+                    "os": "[@L[cds.sales/gd/pro/managed-vps-config:managedWindowsOS]@L]",
+                    "includes": "[@L[cds.sales/gd/pro/managed-vps-config:selfmanagedWindowsIncludes]@L]",
+                    "addonprice": "[@T[currencyprice:<price usdamount=\"0\" /> ]@T]",
+                    "addonname" :"[@L[cds.sales/gd/pro/managed-vps-config:selfmanaged]@L]"
+                }
+            ],
+            "os": {
+                "id": "pro_vps_os_windows",
+                 "addonprice" : "[@T[productprice:<current productid=\"483556\" dropdecimal=\"false\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+            }
+        },
+        "terms": [
+            "1-pro_vps_windows_t5_1month-[@T[appSetting:<setting name=\"FOS_VPS_1MONTH_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458376\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458376\" secondaryproductid=\"458376\" />]@T]-[@T[productprice:<list productid=\"458376\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "3-pro_vps_windows_t5_3month-[@T[appSetting:<setting name=\"FOS_VPS_3MONTH_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458379\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458379\" secondaryproductid=\"458379\" />]@T]-[@T[productprice:<list productid=\"458379\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "6-pro_vps_windows_t5_6month-[@T[appSetting:<setting name=\"FOS_VPS_6MONTH_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458381\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458381\" secondaryproductid=\"458381\" />]@T]-[@T[productprice:<list productid=\"458381\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "12-pro_vps_windows_t5_12month-[@T[appSetting:<setting name=\"FOS_VPS_1YEAR_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458382\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458382\" secondaryproductid=\"458382\" />]@T]-[@T[productprice:<list productid=\"458382\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "24-pro_vps_windows_t5_24month-[@T[appSetting:<setting name=\"FOS_VPS_2YEAR_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458384\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458384\" secondaryproductid=\"458384\" />]@T]-[@T[productprice:<list productid=\"458384\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "36-pro_vps_windows_t5_36month-[@T[appSetting:<setting name=\"FOS_VPS_3YEAR_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458386\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458386\" secondaryproductid=\"458386\" />]@T]-[@T[productprice:<list productid=\"458386\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "48-pro_vps_windows_t5_48month-[@T[appSetting:<setting name=\"FOS_VPS_4YEAR_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458388\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458388\" secondaryproductid=\"458388\" />]@T]-[@T[productprice:<list productid=\"458388\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "60-pro_vps_windows_t5_60month-[@T[appSetting:<setting name=\"FOS_VPS_5YEAR_ADDON_DISCOUNT\"/>]@T]-[@T[productprice:<current productid=\"458390\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]-[@T[productcompare:<percent primaryproductid=\"458390\" secondaryproductid=\"458390\" />]@T]-[@T[productprice:<list productid=\"458390\" dropdecimal=\"false\" period=\"monthly\" htmlsymbol=\"false\" negative=\"parentheses\" />]@T]"
+        ],
+        "details": {
+            "ram": "[@L[cds.sales/gd/pro/managed-vps-config:5GB]@L]",
+            "storage": "[@L[cds.sales/gd/pro/managed-vps-config:240GB]@L]",
+            "bandwidth": "[@L[cds.sales/gd/pro/managed-vps-config:8TB]@L]"
+        }
+    }
+    
+}

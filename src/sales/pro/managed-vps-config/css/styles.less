@@ -60,6 +60,7 @@ body{
   width: 737px;
   float: left;
   margin-right: 20px;
+  margin-bottom: 30px;
 }
 .config-cart-wrapper {
   display: block;
@@ -67,6 +68,7 @@ body{
   padding: 0;
   float: right;
   margin-right: 0;
+  margin-top: -20px;
 }
 .config-container-fixer,
 .config-container-fixer .row {
@@ -74,10 +76,7 @@ body{
   max-width: 1000px;
   min-width: 1000px;
 }
-.config-container-fixer a,
-.config-container-fixer .row a {
-  text-decoration: underline;
-}
+
 .config-step {
   width: 737px;
   *width: 657px;
@@ -145,7 +144,7 @@ body{
   padding-top: 20px;
   padding-bottom: 20px;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 700;
 }
 .step-ribbon {
   height: 36px;
@@ -418,7 +417,10 @@ padding-bottom: 3px;
 .subtotal-disclaimer p {
   margin-top: 20px;
   font-size: 13px;
-  color: #777;
+  font-weight: 700;
+  border-bottom: 1px solid #333;
+  margin-bottom: 5px;
+
 }
 .limit-box {
   background-color: #f88900;
@@ -490,6 +492,7 @@ padding-bottom: 3px;
   text-align: center;
   margin-bottom: 0;
   color: #579006;
+  padding-top: 60px;
 }
 .scroll-down-wrapper span {
   display: block;
@@ -715,10 +718,16 @@ padding-bottom: 3px;
   color: #a5a5a5;
 }
 .product-options {
+ font-size: 16px;
+ list-style: none;
+ margin-bottom: 0;
+ padding-left: 3.428571429em;
+ padding-top: 0.714285714em;
+}
+.product-no-options {
   list-style: none;
   margin-bottom: 0;
   padding-left: 3.428571429em;
-  padding-top: 0.714285714em;
 }
 .product-options > li {
   margin-bottom: 0.571428571em;
@@ -819,30 +828,35 @@ padding-bottom: 3px;
   display: inline-block;
   vertical-align: middle;
 }
-
-.ico-vpsconf-cPanel {
-  background-position: 0 0;
-  height: 20px;
-  width: 79px;
+.plan-price{
+  float: right;
+	color: #f88900;
+	font-weight: 700;
 }
-
-.ico-vpsconf-parallels {
-  background-position: 0 -20px;
-  height: 21px;
-  width: 100px;
+.order-item-addons-wrapper{
+    margin-bottom: 10px;
 }
-.nocontrolpanel{
-  display: none;
+.price-container{
+  display: inline;
 }
-.nocontrolpanel a{
-  cursor: pointer;
+input[name=managedOptions] {
+  margin-right: 10px;
 }
-.backup{
-  display: none;
+.managed-details {
+  list-style-type: disc;
 }
-.assistedservice{
-  display: none;
+.config-tagline{
+  margin-bottom: 1px;
 }
-.windows{
-  display: none;
+.server-summary{
+  font-weight: 700;
+}
+.green-check {
+background: url(../img/lp_sprite-v2.png) no-repeat -48px -90px transparent;
+width: 34px;
+height: 27px;
+cursor: pointer;
+display: inline-block;
+padding: 4px 10px 0;
+position: relative;
 }
