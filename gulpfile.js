@@ -29,6 +29,7 @@ try {
   var argv        = require('minimist')(process.argv.slice(2));
   var getData     = require('./lib/project-data.js');
   var extras      = require('./lib/swig-extras');
+  var through     = require('through2');
 
   // underscore and mixins
   var _           = require('underscore');
@@ -154,6 +155,36 @@ var getLocalJson = function(file) {
   // }
 };
 
+// inspect a json file, use 'presentationTemplate' if it exists to load a jade template 
+function getJadeFromJson() {
+  var stream = through.obj(function(file, enc, cb) {
+    if (file.isStream()) {
+      this.emit('error', new PluginError(PLUGIN_NAME, 'Streams are not supported!'));
+      return cb();
+    }
+    if (file.isBuffer()) {
+      file.data = JSON.parse(String(file.contents));
+      var templateFilePath = file.data.presentationTemplate;
+      if (templateFilePath) {
+        file.contents = new Buffer(fs.readFileSync(file.data.presentationTemplate));
+        file.base = path.join(file.cwd,path.dirname(templateFilePath));
+      }
+    }
+    this.push(file);
+    cb();
+  });
+  return stream;
+};
+
+gulp.task('build-marquee', function() {
+  return gulp.src('./src/sales/homepage/marquees/**/*.json')
+    .pipe(frontMatter({remove:true}))
+    .pipe(getJadeFromJson())
+    .pipe(jade({pretty: true}))
+    .pipe(cdsm(cdsmOpts))
+    .pipe(gulp.dest('./build/sales/homepage'));
+});
+
 gulp.task('homepage', function() {
   return gulp.src('./src/sales/homepage/**/*.jade')
     .pipe(changed('./build/sales/homepage'))
@@ -165,13 +196,9 @@ gulp.task('homepage', function() {
     .pipe(gulp.dest('./build/sales/homepage'));
 });
 
-    /*.pipe(debug({verbose: false}));*/
-    // .pipe(frontMatter({remove:true}))
-
 gulp.task('html', function() {
   return gulp.src(['./**/*.html', '!./**/_*.html'], {cwd: path.join('./src/sales/', assetSrcPath)})
     .pipe(changed(paths.build))
-    /*.pipe(debug({verbose: false}));*/
     .pipe(frontMatter({remove:true}))
     .pipe(swig(swigTplOpts))
     .pipe(elevateCss())
@@ -183,7 +210,6 @@ gulp.task('html', function() {
 gulp.task('language', function() {
   return gulp.src('./**/*.language', {cwd: path.join('./src/sales/', assetSrcPath)})
     .pipe(changed(paths.build))
-    //.pipe(changed(paths.build))
     .pipe(frontMatter({remove:true}))
     .pipe(swig(swigLangOpts))
     .pipe(gulpif(!ignoreCDS, cdsm(cdsmOpts)))
@@ -227,7 +253,6 @@ gulp.task('images', function() {
 
 gulp.task('assets-deploy', ['build'], function() {
   return gulp.src(['./**/*.*'], {cwd: paths.build})
-    /*.pipe(debug({verbose: false}))*/
     .pipe(gulp.dest(paths.assets));
 });
 
