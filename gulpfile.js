@@ -135,23 +135,10 @@ var getJsonData = function(file) {
 
 var getLocalJson = function(file) {
   var jsonPath = path.dirname(file.path) + '/_locals.json';
-  // try{ 
-    var locals = require(jsonPath);
-    console.log("------------------------");
-    console.log(locals);
-    console.log("------------------------");
-    // data = _.deepExtend(file.attributes, locals)
-    var f = fm(String(file.contents));
-    var yaml = f.attributes;
-    var data = _.deepExtend(yaml, locals)
-    console.log("------------------------");
-    console.log(data);
-    console.log("------------------------");
-    file.contents = new Buffer(f);
-    return data
-  // }catch(ex){
-
-  // }
+  if (fs.existsSync(jsonPath)) {
+    return require(jsonPath);
+  }
+  return false;
 };
 
 gulp.task('homepage', function() {
@@ -165,14 +152,12 @@ gulp.task('homepage', function() {
     .pipe(gulp.dest('./build/sales/homepage'));
 });
 
-    /*.pipe(debug({verbose: false}));*/
-    // .pipe(frontMatter({remove:true}))
-
 gulp.task('html', function() {
   return gulp.src(['./**/*.html', '!./**/_*.html'], {cwd: path.join('./src/sales/', assetSrcPath)})
     .pipe(changed(paths.build))
     /*.pipe(debug({verbose: false}));*/
     .pipe(frontMatter({remove:true}))
+    .pipe(data(getLocalJson))
     .pipe(swig(swigTplOpts))
     .pipe(elevateCss())
     .pipe(elevateJs())
