@@ -1,0 +1,13 @@
+---
+location: localization/sales/homepage/marquee/wsb-job-to-do/en-us
+id: 5444f089f778fc1ba009a9ec
+name: GCE-25360
+---
+<phrase key="headline" />
+<div class="bigtext" style="width:50%;"><div class="line tungsten">WEBSITE BUILDER</div></div><div class="bigtext" style="width:100%"><div class="line walsheim">YOUR DOMAIN</div><div class="line tungsten">HAS A JOB TO DO</div><div class="line walsheim"><span class='inline-dash' style='max-width:200px;'>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</span> PUT IT TO WORK</div></div>
+<phrase key="promo" />
+BUILD A WEBSITE FOR AS LOW AS
+<phrase key="price" />
+[@T[productprice:<current productid="32051" period="monthly" />]@T]/MO
+<phrase key="cta-text" />
+START NOW
