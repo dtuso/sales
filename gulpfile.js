@@ -155,45 +155,14 @@ var getLocalJson = function(file) {
   // }
 };
 
-// inspect a json file, use 'presentationTemplate' if it exists to load a jade template 
-function getJadeFromJson() {
-  var stream = through.obj(function(file, enc, cb) {
-    if (file.isStream()) {
-      this.emit('error', new PluginError(PLUGIN_NAME, 'Streams are not supported!'));
-      return cb();
-    }
-    if (file.isBuffer()) {
-      file.data = JSON.parse(String(file.contents));
-      var templateFilePath = file.data.presentationTemplate;
-      if (templateFilePath) {
-        file.contents = new Buffer(fs.readFileSync(file.data.presentationTemplate));
-        file.base = path.join(file.cwd,path.dirname(templateFilePath));
-      }
-    }
-    this.push(file);
-    cb();
-  });
-  return stream;
-};
-
-gulp.task('build-marquee', function() {
-  return gulp.src('./src/sales/homepage/marquees/**/*.json')
+gulp.task('jade', function() {
+  return gulp.src(['./**/*.jade', '!./**/_*.jade'], {cwd: path.join('./src/sales/', assetSrcPath)})
+    .pipe(changed(paths.build))
     .pipe(frontMatter({remove:true}))
-    .pipe(getJadeFromJson())
+    .pipe(data(function(file) { return file.frontMatter; }))
     .pipe(jade({pretty: true}))
-    .pipe(cdsm(cdsmOpts))
-    .pipe(gulp.dest('./build/sales/homepage'));
-});
-
-gulp.task('homepage', function() {
-  return gulp.src('./src/sales/homepage/**/*.jade')
-    .pipe(changed('./build/sales/homepage'))
-    .pipe(frontMatter({remove:true}))
-    .pipe(data(getJsonData))
-    .pipe(jade({pretty: true}))
-    .pipe(cdsm(cdsmOpts))
-    .pipe(rename({extname: ".jade"}))
-    .pipe(gulp.dest('./build/sales/homepage'));
+    .pipe(gulpif(!ignoreCDS, cdsm(cdsmOpts)))
+    .pipe(gulp.dest(paths.build));
 });
 
 gulp.task('html', function() {
@@ -275,6 +244,7 @@ gulp.task('js-concat', function() {
 });
 
 gulp.task('watch', function() {
+  gulp.watch(['./src/sales/**/*.jade'], ['jade'])
   gulp.watch(paths.templates, ['html']);
   gulp.watch(paths.language,  ['language']);
   gulp.watch(paths.rule,      ['rule']);

@@ -1,0 +1,13 @@
+---
+location: localization/sales/homepage/marquee/tax/en-us
+id: 542c7553e1652806d8912d32
+name: GCE-29322
+---
+<phrase key="headline" />
+<div class="bigtext" style="width:100%"><div class="line">KEEP A CALCULATOR</div><div class="line"><span class='inline-dash' style='max-width:200px;'>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</span> UNDER YOUR PILLOW?</div></div>
+<phrase key="promo" />
+IS FOR YOU
+<phrase key="price" />
+JUST $XX.XX/MO
+<phrase key="cta-text" />
+GET STARTED

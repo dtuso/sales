@@ -1,0 +1,15 @@
+---
+location: localization/sales/homepage/marquee/hosting-awesome/en-us
+id: false
+name: GCE-29417
+---
+<phrase key="headline" />
+<div class="bigtext" style="width:67%;"><div class="line tungsten">OUR WEBSITE</div></div><div class="bigtext" style="width:100%"><div class="line walsheim">IS ONLY AS AWESOME AS</div><div class="line tungsten"><span class='inline-dash' style='max-width:200px;'>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</span> YOUR HOSTING</div></div>
+<phrase key="uptime" />
+GUARANTEED 99.9% UPTIME
+<phrase key="product" />
+WEB HOSTING
+<phrase key="price" />
+NOW JUST [@T[productprice:<current productid="294057" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/MO
+<phrase key="cta-text" />
+GET STARTED

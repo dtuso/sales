@@ -1,0 +1,24 @@
+---
+location: sales/homepage/marquee/lawyer/default_template
+id: false
+name: GCE-29324
+ctaLink: "[@T[link:<relative path='/tlds/lawyer'><param name='ci' value='94084' /></relative>]@T]"
+elementId: lawyer
+---
+extends ../../../layouts/homepage/marqueeLeftHeadline
+block marqueeLeftHeadlineStyles
+	style.
+		#lawyer .left-column { padding-top: 120px; }
+		#lawyer .right-column { width: 280px; margin-left:130px; padding-top:60px;}
+		#lawyer .right-column .bigtext {line-height: 0.9;}
+		#lawyer .dot-tax { font-family: Walsheim-Black; }
+		#lawyer .promo { font-family: Walsheim-Bold; }
+		#lawyer .price { color: #ff8a00; }
+block leftColumn
+	.headline <div class="bigtext" style="width:100%"><div class="line walsheim">FINALLY, A DOMAIN FOR</div><div class="line tungsten">PEOPLE WHO READ <span class='inline-dash' style='max-width:200px;'>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</span></div></div><div class="bigtext walsheim" style="width:50%"><div class="line">THE DISCLAIMERS</div></div>
+block rightColumn
+	.bigtext
+		.promo GET YOUR .LAWYER
+		.price JUST $X.XX/YR
+	a.btn.btn-warning.btn-lg.btn-cta(href=ctaLink) [@L[cds.sales/homepage/marquee/hosting-awesome:cta-text]@L]
+	.restrictions [@L[cds.sales/homepage/marquee/ssl-scrawny-price:restrictions]@L]
