@@ -6,10 +6,18 @@ ctaLink: "[@T[link:<relative path='/ssl/ssl-certificates.aspx'><param name='ci' 
 elementId: ssl-scrawny-price
 ---
 extends ../../../layouts/homepage/marqueeLeftHeadline
+append marqueeStyles
+  style.
+    .restrictions{text-decoration:underline;}
+    .orange-text {color:#ff8a00;}
+    #ssl-scrawny-price sup {font-size: 60%;}
+    #ssl-scrawny-price strike {font-family:'Walsheim-Medium';}
+    #ssl-scrawny-price .left-column {padding-top:125px;}
+    #ssl-scrawny-price .right-column {padding-top:100px;}
 block leftColumn
-	.headline [@L[cds.sales/homepage/marquee/ssl-scrawny-price:headline]@L]
+  .headline [@L[cds.sales/homepage/marquee/ssl-scrawny-price:headline]@L]
 block rightColumn
-	.headline [@L[cds.sales/homepage/marquee/ssl-scrawny-price:sub-headline]@L]
-	span.btn.btn-warning.btn-lg.btn-cta [@L[cds.sales/homepage/marquee/ssl-scrawny-price:cta-text]@L]
-	.additional-info [@L[cds.sales/homepage/marquee/ssl-scrawny-price:additional-info]@L]
-	.restrictions(data-toggle="tooltip", title="[@L[cds.sales/homepage/marquee/ssl-scrawny-price:restrictions-tooltip]@L]") [@L[cds.sales/homepage/marquee/ssl-scrawny-price:restrictions]@L]
+  .headline [@L[cds.sales/homepage/marquee/ssl-scrawny-price:sub-headline]@L]
+  span.btn.btn-warning.btn-lg.btn-cta [@L[cds.sales/homepage/marquee/ssl-scrawny-price:cta-text]@L]
+  .additional-info [@L[cds.sales/homepage/marquee/ssl-scrawny-price:additional-info]@L]
+  .restrictions(data-toggle="tooltip", title="[@L[cds.sales/homepage/marquee/ssl-scrawny-price:restrictions-tooltip]@L]") [@L[cds.sales/homepage/marquee/ssl-scrawny-price:restrictions]@L]
