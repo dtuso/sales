@@ -1,8 +1,8 @@
 ---
 location: localization/sales/offers/online-business/en
-id: 54370464f778fc2c9c0805ba
-name: GCE-29310
-comments: Roll Out GOT in International Markets - Sales LP
+id: 54455bdff778fc1ba009aa2c
+name: GCE-30495
+comments: GOT1 and GOT2 followups
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="page-title" />
@@ -115,3 +115,11 @@ Business Email, Domain, and Web Builder Software
 Powered by Microsoft Office 365
 <phrase key="bundle-renewal-com" />
 Bundle renewal price with .com after first year
+<phrase key="30495-bing-also-includes"  comment="{0} will be tokenized"/>
+Also includes <span class="got-bing-ad-credits">{0}</span> Bing Ad Credits 
+<phrase key="30495-bing-restrictions-apply" />
+Restrictions Apply.
+<phrase key="30495-bing-restrictions-apply-rollover-text" />
+One promotional credit per customer for a new Microsoft&reg; Advertiser account. Products purchased using a Gift Card or Alipay do not provide eligibility for advertising credits. Offer valid to US residents only, other restrictions apply.
+<phrase key="30495-bing-restrictions-apply-view-details" />
+View Details
