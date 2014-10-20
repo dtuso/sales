@@ -10,9 +10,10 @@ block marqueeLeftHeadlineStyles
 	style.
 		#wsb-job-to-do .left-column .headline { line-height: 0.8; }
 		#wsb-job-to-do .promo { font-size:36px; font-family: Walsheim-Bold; line-height:0.9; }
-		#wsb-job-to-do .price { color: #ff8a00; }
+		#wsb-job-to-do .price { color: #ff8a00; font-family: Walsheim-Bold; line-height:1.0;}
+		#wsb-job-to-do sub {font-size:40%;bottom:initial;}
 block leftColumn
-	.headline <div class="bigtext" style="width:50%;"><div class="line tungsten">WEBSITE BUILDER</div></div><div class="bigtext" style="width:100%"><div class="line walsheim">YOUR DOMAIN</div><div class="line tungsten">HAS A JOB TO DO</div><div class="line walsheim"><span class='inline-dash' style='max-width:200px;'>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</span> PUT IT TO WORK</div></div>
+	.headline [@L[cds.sales/homepage/marquee/wsb-job-to-do:headline]@L]
 block rightColumn
 	.promo [@L[cds.sales/homepage/marquee/wsb-job-to-do:promo]@L]
 	.bigtext
