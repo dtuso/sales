@@ -1,8 +1,8 @@
 ---
 location: localization/sales/newscenter/about-godaddy/en
-id: 5409f19ff778fc27d0489228
-name: GCE-27714
-comments: About us Update to Jeff Kings Title (Add Senior)
+id: 544532dcf778fc1ba009a9fe
+name: GCE-30346
+comments: Update PR contacts on the About Us Page
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="NewsCenterAbout-AFinePortraitsVideo" />
@@ -34,7 +34,7 @@ GoDaddy is&hellip;
 <phrase key="NewsCenterAbout-11-TheWorldSLargestDomainNameRegistrarAndWeb" />
 The <strong>world's largest</strong><br /> domain name registrar
 <phrase key="NewsCenterAbout-7-MoreThan55MillionDomainsUnderManagement" />
-<strong>57 million domains</strong><br /> under management
+<strong>58 million domains</strong><br /> under management
 <phrase key="NewsCenterAbout-4-MoreThan12Millioncustomers" />
 <strong>12 million<br />customers</strong>
 <phrase key="NewsCenterAbout-13-9FacilitiesIncludingArizonaIowaCaliforniaColoradoWashingtonD" />
@@ -523,7 +523,7 @@ There was an problem sending your message.
 <phrase key="captchaInvalidCode" />
 Invalid Code Entered
 <phrase key="NewsCenterAbout-Domains" />
-57
+58
 <phrase key="NewsCenterAbout-Customers" />
 12
 <phrase key="NewsCenterAbout-Employees" />
@@ -562,12 +562,18 @@ Website Builder, Online Store, GoMobile, Get Found, Office 365, Online Bookkeepi
 Susie Penner
 <phrase key="NewsCenterAbout-21306-spenner-Phone" />
 +1.480.366.3335
+<phrase key="NewsCenterAbout-30346-spenner-Phone" />
++1.650.793.1162
 <phrase key="NewsCenterAbout-21306-nfuller-Department" />
 Hosting & Security, Domains & After Market
 <phrase key="NewsCenterAbout-21306-nfuller" />
 Nick Fuller
 <phrase key="NewsCenterAbout-21306-nfuller-Phone" />
 +1.602.420.4435
+<phrase key="NewsCenterAbout-30346-drace" />
+Dan Race
+<phrase key="NewsCenterAbout-30346-drace-Phone" />
++1.669.224.7568
 <phrase key="NewsCenterAbout-21306-International" />
 International 
 <phrase key="NewsCenterAbout-cust-KathyName" />
