@@ -1,13 +1,15 @@
 ---
-location: localization/sales/homepage/marquee/tax/en-us
-id: 542c7553e1652806d8912d32
-name: GCE-29322
+location: localization/sales/homepage/marquee/lawyer/en-us
+id: 54453b25f778fc1ba009aa0b
+name: GCE-29324
 ---
 <phrase key="headline" />
-<div class="bigtext" style="width:100%"><div class="line">KEEP A CALCULATOR</div><div class="line"><span class='inline-dash' style='max-width:200px;'>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</span> UNDER YOUR PILLOW?</div></div>
+<div class="bigtext" style="width:100%"><div class="line walsheim">FINALLY, A DOMAIN</div><div class="line tungsten">FOR PEOPLE WHO READ <span class='inline-dash' style='max-width:200px;'>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</span></div></div><div class="bigtext" style="width:50%"><div class="line walsheim">THE DISCLAIMERS</div></div>
 <phrase key="promo" />
-IS FOR YOU
+GET YOUR .LAWYER
 <phrase key="price" />
-JUST $XX.XX/MO
+JUST $X.XX/YR
 <phrase key="cta-text" />
 GET STARTED
+<phrase key="restrictions" />
+*Seriously, it's just $X.XX/yr.
