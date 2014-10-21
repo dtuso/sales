@@ -2,15 +2,16 @@
 location: sales/homepage/marquee/hosting-paid-for-it/default_template
 id: 5444b826f778fc1ba009a9bb
 name: GCE-25381
-ctaLink: "[@T[link:<relative path='/default.aspx'><param name='ci' value='94084' /></relative>]@T]"
+ctaLink: "[@T[link:<external linktype='myaurl'><param name='ci' value='94095' /><param name='accid' value='3' /></external>]@T]"
 elementId: hosting-paid-for-it
 ---
 extends ../../../layouts/homepage/marqueeLeftHeadline
 block marqueeLeftHeadlineStyles
 	style.
 		#hosting-paid-for-it .left-column .headline { line-height: 0.8; }
+		#hosting-paid-for-it .right-column {padding-top:70px;}
 block leftColumn
 	.headline [@L[cds.sales/homepage/marquee/hosting-paid-for-it:headline]@L]
 block rightColumn
 	.headline [@L[cds.sales/homepage/marquee/hosting-paid-for-it:sub-headline]@L]
-	a.btn.btn-warning.btn-lg.btn-cta(href=ctaLink) [@L[cds.sales/homepage/marquee/hosting-paid-for-it:cta-text]@L]
+	a.btn.btn-warning.btn-lg.btn-cta(href!=ctaLink) [@L[cds.sales/homepage/marquee/hosting-paid-for-it:cta-text]@L]

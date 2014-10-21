@@ -2,7 +2,7 @@
 location: sales/homepage/marquee/hosting-awesome/default_template
 id: 5444d3fff778fc1ba009a9d5
 name: GCE-29417
-ctaLink: "[@T[link:<relative path='/domains/domain-transfer.aspx'><param name='ci' value='94084' /></relative>]@T]"
+ctaLink: "[@T[link:<relative path='/hosting/web-hosting.aspx'><param name='ci' value='94098' /></relative>]@T]"
 elementId: hosting-awesome
 ---
 extends ../../../layouts/homepage/marqueeLeftHeadline
@@ -11,6 +11,7 @@ block marqueeLeftHeadlineStyles
 		#hosting-awesome .uptime, .price { font-family: 'Walsheim-Bold'; }
 		#hosting-awesome .product { font-family: 'Walsheim-Black'; }
 		#hosting-awesome .price { color: #ff8a00; }
+		#hosting-awesome .right-column  { line-height: 1.0; padding-top: 100px; }
 block leftColumn
 	.headline [@L[cds.sales/homepage/marquee/hosting-awesome:headline]@L]
 block rightColumn
@@ -18,4 +19,4 @@ block rightColumn
 		.uptime [@L[cds.sales/homepage/marquee/hosting-awesome:uptime]@L]
 		.product [@L[cds.sales/homepage/marquee/hosting-awesome:product]@L]
 		.price [@L[cds.sales/homepage/marquee/hosting-awesome:price]@L]
-	a.btn.btn-warning.btn-lg.btn-cta(href=ctaLink) [@L[cds.sales/homepage/marquee/hosting-awesome:cta-text]@L]
+	a.btn.btn-warning.btn-lg.btn-cta(href!=ctaLink) [@L[cds.sales/homepage/marquee/hosting-awesome:cta-text]@L]

@@ -8,6 +8,6 @@ name: GCE-25360
 <phrase key="promo" />
 BUILD A WEBSITE FOR AS LOW AS
 <phrase key="price" />
-[@T[productprice:<current productid="32051" period="monthly" />]@T]/MO
+[@T[productprice:<current productid="32051" period="monthly" />]@T]<sub>/MO</sub>
 <phrase key="cta-text" />
 START NOW
