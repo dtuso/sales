@@ -1036,8 +1036,8 @@
         ],
         "details": {
             "ram": "[@L[cds.sales/gd/pro/dedicated-server-config:2GB]@L]",
-            "storage": "[@L[cds.sales/gd/pro/dedicated-server-config:40GB]@L]",
-            "bandwidth": "[@L[cds.sales/gd/pro/dedicated-server-config:1TB]@L]"
+            "storage": "[@L[cds.sales/gd/pro/dedicated-server-config:512GB]@L]",
+            "bandwidth": "[@L[cds.sales/gd/pro/dedicated-server-config:5TB]@L]"
         }
     },
     "pro_ds_linux_t2": {
@@ -1271,8 +1271,8 @@
         ],
         "details": {
             "ram": "[@L[cds.sales/gd/pro/dedicated-server-config:2GB]@L]",
-            "storage": "[@L[cds.sales/gd/pro/dedicated-server-config:40GB]@L]",
-            "bandwidth": "[@L[cds.sales/gd/pro/dedicated-server-config:1TB]@L]"
+            "storage": "[@L[cds.sales/gd/pro/dedicated-server-config:512GB]@L]",
+            "bandwidth": "[@L[cds.sales/gd/pro/dedicated-server-config:5TB]@L]"
         }
     },
     "pro_ds_windows_t2": {

@@ -1,10 +1,11 @@
 ---
 location: localization/sales/gd/pro/managed-vps-config/en
-id: 54400199f778fc0b78c97c77
+id: 5444bf61f778fc1ba009a9cb
 name: GCE-27124
 ---
 
 {% include 'modules/doc-block.html' %}
+
 <phrase key="page-title" />
 VPS Hosting | Affordable &amp; Configurable VPS plans - GoDaddy
 <phrase key="meta-description" />
@@ -38,7 +39,7 @@ Storage
 <phrase key="bandwidthSummary" />
 Bandwidth
 <phrase key="servertagline" />
-Rather spend your time designing, developing or finding new clients?
+Rather spend your time designing, developing or finding new clients?
 <phrase key="servertagline2" />
 We’ll take care of your server.
 <phrase key="termsHeader" />
@@ -46,7 +47,7 @@ Lock in your price
 <phrase key="termtagline" />
 Have a price you like? Keep it that way.
 <phrase key="termtagline2" />
-Choose a longer term and avoid potentially paying a higher price when it’s time to renew.
+Choose a longer term and avoid potentially paying a higher price when it’s time to renew.
 <phrase key="windows" />
 WINDOWS
 <phrase key="linux" />
@@ -107,6 +108,8 @@ No control panel or backups. Command-line only for hardcore server pros..
 4 TB
 <phrase key="5GB" />
 5 GB
+<phrase key="8GB" />
+8 GB
 <phrase key="240GB" />
 240 GB
 <phrase key="8TB" />
@@ -118,4 +121,4 @@ Includes: Dedicated team of server admin experts (Available in English) | cPanel
 <phrase key="add" />
 Add
 <phrase key="subtract" />
-Subtract
+subtract
