@@ -83,17 +83,21 @@ metaOgDescription:  "[@L[cds.sales/offers/office365-promo:og-description]@L]"
 <!-- end-css-elevate -->
 ##if(splitTestingSideIsActive(1387,B))
 <style>
+{% less %}
   .a-1387 {display:block!important;}
   .b-1387 {display:none!important;}
   div.included-products-floater .included-products-leftside {padding-top:30px;}
   div.included-products-floater .included-products-rightside {padding-top:43px;}
+{% endless %}
 </style>
 ##else
 <style>
+{% less %}
   .a-1387 {display:none!important;}
   .b-1387 {display:block!important;}
   div.included-products-floater .included-products-leftside {padding-top:80px;}
   div.included-products-floater .included-products-rightside {padding-top:93px;}
+{% endless %}
 </style>
 ##endif
 
@@ -236,14 +240,12 @@ metaOgDescription:  "[@L[cds.sales/offers/office365-promo:og-description]@L]"
 
   #domainRow {background-color: #F9F9F9; position:relative;/* relative used to position the ribbon*/}
   #domainRow .main-banner-content {text-align:left;width:1400px;padding:0;}
-  #domainRow h1.main-banner-title { margin: 35px 0 15px; font-size:24px; color:#000; font-weight:300; text-transform: uppercase;}
-
-  #domainRow table h1.main-banner-title {margin-top: 0px;}
+  #domainRow h1.main-banner-title { margin: 0px 0 13px; font-size:24px; color:#000; font-weight:300; text-transform: uppercase;}
   #domainRow h2.main-banner-subtitle {font-size:62px; color:#000; line-height: 1.4em;}
-  #domainRow h2.main-banner-subtitle.b1387 {font-size:52px;margin-bottom:20px;}
+  #domainRow h2.main-banner-subtitle.b1387 {font-size:52px;margin-bottom:12px;}
   #domainRow p.main-banner-save,
   #domainRow p.main-banner-plus 
-  {font-size:26px; color:#000; margin-bottom:0px; line-height: 1.4em;}
+  {font-size:30px; color:#000; margin-bottom:0px; line-height: 1.4em;}
   #domainRow .get-started-btn {margin-top: 10px;}
   #domainRow .discount-price-line-mo {font-size:36px; font-weight:400; line-height:1.4em; margin-top:72px;}
   #domainRow table .discount-price-line-mo {margin-top: 0px;}
@@ -254,18 +256,18 @@ metaOgDescription:  "[@L[cds.sales/offers/office365-promo:og-description]@L]"
   #domainRow .renewal-disclaimer {font-size:12px; font-weight:300; line-height:1.4em;}
   #domainRow .icon-row {width:330px;height:70px;margin-bottom:10px;}
   
-  #domainRow div.got-slides {width:1000px;margin:0 auto; padding-bottom:47px;} 
-  .top-banner-products {margin-bottom: 20px;}
+  #domainRow div.got-slides {width:1000px;margin:0 auto; padding-bottom:77px;} 
+  .top-banner-products {margin-bottom:14px;}
   .top-banner-product-col {float:left;}
-  .top-banner-product-col .product-name {width:151px;text-align:center;margin-top:10px;text-transform: uppercase;font-size:16px;}
+  .top-banner-product-col .product-name {width:135px;text-align:center;margin-top:0px;text-transform:uppercase;font-size:16px;}
   .top-banner-product-col .top-banner-product-symbols-addition {font-size: 32px;margin-top:46px;}
   .col-office .top-banner-product-symbols-addition {margin-left:0px; margin-right:23px;}
   .col-domain .top-banner-product-symbols-addition {margin-left:11px; margin-right:13px;}
 
-  .top-banner-product-image {float:left;height:128px;background: url('[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/online-business/img/green-icons-large-sprite.png') no-repeat transparent;}
-  .top-banner-product-image.office {width:250px;background: transparent url('[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/online-business/img/godaddy-msft-logo_alt.png') 0 -189px no-repeat;}
-  .top-banner-product-image.domain {width:135px;background-position:    0px 0px;}    
-  .top-banner-product-image.wsb    {width:124px;background-position: -219px 0px;} 
+  .top-banner-product-image {float:left;height:125px;background: ~"url(@{imgPath}GOT2-sprite.png)" no-repeat transparent;}
+  .top-banner-product-image.office {width:243px;background-position:   -0px -0px;}
+  .top-banner-product-image.domain {width:135px;background-position: -292px -0px;}    
+  .top-banner-product-image.wsb    {width:124px;background-position: -488px -0px;} 
 
   
 {% endless %}
@@ -728,20 +730,21 @@ metaOgDescription:  "[@L[cds.sales/offers/office365-promo:og-description]@L]"
 
   @imgPath : '[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/office365-promo/img/';
   
-  #included-productsRow h2.title {margin-bottom:27px; font-weight:300; font-size:72px; text-align:left; line-height: 1.2em;}
+  #included-productsRow h2.title {margin-bottom:27px; font-weight:300; font-size:82px; text-align:left; line-height: 1.2em;}
   #included-productsRow h3.bullet-heading {margin-bottom:14px; font-weight:200; font-size:30px; text-align:left; color:#000;}
   #included-productsRow p {font-weight:300; font-size:19px; text-align:left; line-height:1.5em; color:#000;}
+  html[lang^=en] #included-productsRow p {text-align: justify;}
   #included-productsRow .details {margin-bottom:50px; padding-left:24px;}
   #included-productsRow ul.details li h4 {font-weight:700; font-size:22px; text-align:left; line-height:1.4em; margin: 0; padding:0; color:#000;}
-  #included-productsRow ul.details li p  {font-weight:300; font-size:15px; text-align:left; line-height:1.4em; color:#000;}
+  #included-productsRow ul.details li p  {font-weight:300; font-size:15px; text-align:justify; line-height:1.4em; color:#000;}
   #included-productsRow ul.details { list-style-image: ~"url(@{imgPath}check.png)"; padding-left: 24px; }
   .included-products-banner {background-size:cover; background-image:~"url(@{imgPath}main-back.jpg)"; background-repeat:no-repeat;}  
-  .included-products-floater {position: relative; top: -34px;}
+  .included-products-floater {position: relative; top: -36px;}
   .included-products-wrapper {border: 1px solid #ccc; background-color: #fff; margin-bottom:30px;padding-bottom:31px;}
   .included-products-leftside {float: left; width:405px; padding: 60px 25px 0 50px;}
   .included-products-rightside {float: left; width:525px; padding: 73px 25px 0 25px;}
 
-  #included-productsRow .wraparound p {color:#fff;text-transform:uppercase;font-weight:200;font-size:24px;line-height:1.4em;margin:0;text-align: center;}
+  #included-productsRow .wraparound p {color:#fff;text-transform:uppercase;font-weight:400;font-size:24px;line-height:1.4em;margin:0;text-align: center;}
   #included-productsRow .wraparound {
     position: absolute;
     width:1012px;
@@ -758,15 +761,9 @@ metaOgDescription:  "[@L[cds.sales/offers/office365-promo:og-description]@L]"
   #included-productsRow .wraparound:before, 
   #included-productsRow .wraparound:after {content: " ";border-top: 6px solid #954709; position: absolute;bottom: -7px;}
   #included-productsRow .wraparound:after {border-right: 6px solid transparent;right: -1px;}
-  #included-productsRow .whats-included-product {float:left;margin:0 0 25px 0;}
-  #included-productsRow .whats-included-product-text {text-align: center;width:65px;font-size: 10px}
-  #included-productsRow .whats-included-product-img {width:41px; height: 41px; margin:0 auto; background: #ccc url() no-repeat;}
-  #included-productsRow .whats-included-products-img.excel      {background-position: -1px -1px;}
-  #included-productsRow .whats-included-products-img.onenote    {background-position: -1px -1px;}
-  #included-productsRow .whats-included-products-img.outlook    {background-position: -1px -1px;}
-  #included-productsRow .whats-included-products-img.word       {background-position: -1px -1px;}
-  #included-productsRow .whats-included-products-img.powerpoint {background-position: -1px -1px;}
 
+  #included-productsRow .whats-included-products {margin:0 0 25px 0;}
+  .whats-included-products img {display:block;width:290px;margin:0 auto;}
 
 {% endless %}
 </style>
@@ -782,28 +779,7 @@ metaOgDescription:  "[@L[cds.sales/offers/office365-promo:og-description]@L]"
         <div class="included-products-leftside">
           <h2 class="title gd-color-primary">[@L[cds.sales/offers/office365-promo:included-whats-included]@L]</h2>
           <div class="whats-included-products row b-1387">
-            <div class="whats-included-product">
-              <div class="whats-included-product-img excel"></div>
-              <div class="whats-included-product-text">[@L[cds.sales/offers/office365-promo:split-30495-excel]@L]</div>
-            </div>
-            <div class="whats-included-product">
-              <div class="whats-included-product-img onenote"></div>
-              <div class="whats-included-product-text">[@L[cds.sales/offers/office365-promo:split-30495-onenote]@L]</div>
-            </div>
-            <div class="whats-included-product">
-              <div class="whats-included-product-img outlook"></div>
-              <div class="whats-included-product-text">[@L[cds.sales/offers/office365-promo:split-30495-outlook]@L]</div>
-            </div>
-            <div class="whats-included-product word">
-              <div class="whats-included-product-img"></div>
-              <div class="whats-included-product-text">[@L[cds.sales/offers/office365-promo:split-30495-word]@L]</div>
-            </div>
-            <div class="whats-included-product powerpoint">
-              <div class="whats-included-product-img"></div>
-              <div class="whats-included-product-text">[@L[cds.sales/offers/office365-promo:split-30495-powerpoint]@L]</div>
-            </div>
-
-
+            <img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/office365-promo/img/MSFT-icons-all.png" alt="[@L[cds.sales/offers/office365-promo:split-30495-excel]@L] [@L[cds.sales/offers/office365-promo:split-30495-onenote]@L] [@L[cds.sales/offers/office365-promo:split-30495-outlook]@L] [@L[cds.sales/offers/office365-promo:split-30495-word]@L] [@L[cds.sales/offers/office365-promo:split-30495-powerpoint]@L]" />
           </div>
           <p class="price-hide a-1387">[@L[cds.sales/offers/office365-promo:included-whats-included-details]@L]</p>
           <p class="price-hide b-1387">[@L[cds.sales/offers/office365-promo:included-whats-included-details-split-30495]@L]</p>
@@ -903,14 +879,14 @@ metaOgDescription:  "[@L[cds.sales/offers/office365-promo:og-description]@L]"
   #team-up h2 {font-weight:200;font-size:54px;text-align:left;line-height:54px;display:block;padding-bottom:10px;}
   #team-up p {font-weight:200;font-size:26px;text-align:left;line-height:1.55em;margin-bottom:0;}
   #team-up .team-promo-text {padding:0 400px 0 0;}
-  #team-up .team-promo-img {float:right;}
+  #team-up .team-promo-img {float:right;width:276px;height:278px;background-position:0 -157px}
 {% endless %}
 </style>
 <!-- end-css-elevate -->
 
 <section id="team-up">
   <div class="container l-main-container">
-    <div class="team-promo-img solazy" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/office365-promo/img/logos.png">
+    <div class="team-promo-img solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/office365-promo/img/GOT2-sprite.png">
     </div>
     <div class="team-promo-text">
       <h2>[@L[cds.sales/offers/office365-promo:team-promo-text-headline]@L]</h2>
@@ -929,7 +905,7 @@ metaOgDescription:  "[@L[cds.sales/offers/office365-promo:og-description]@L]"
 <style>
 {% less %}
   #disclaimerModal .modal-title {font-size:24px}
-  #disclaimerModal .modal-dialog {width:600px; font-size:16px; line-height:1.4em;}
+  #disclaimerModal .modal-dialog {width:730px; font-size:16px; line-height:1.4em;}
 
   #disclaimers p {margin-bottom:2px;}
   #disclaimers .disclaimer-link-area a,
