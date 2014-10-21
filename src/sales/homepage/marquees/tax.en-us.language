@@ -4,10 +4,12 @@ id: 542c7553e1652806d8912d32
 name: GCE-29322
 ---
 <phrase key="headline" />
-<div class="bigtext" style="width:100%"><div class="line">KEEP A CALCULATOR</div><div class="line"><span class='inline-dash' style='max-width:200px;'>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</span> UNDER YOUR PILLOW?</div></div>
+<div class="bigtext" style="width:100%"><div class="line">KEEP A CALCULATOR</div><div class="line"><span class='inline-dash' style='max-width:200px;'>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</span> UNDER YOUR PILLOW?</div></div>
+<phrase key="tld" />
+.TAX
 <phrase key="promo" />
-IS FOR YOU
+IS FOR YOU.
 <phrase key="price" />
-JUST $XX.XX/MO
+JUST [@T[productprice:<current productid="426119" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]/YR
 <phrase key="cta-text" />
 GET STARTED

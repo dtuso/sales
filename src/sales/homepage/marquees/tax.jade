@@ -2,23 +2,23 @@
 location: sales/homepage/marquee/tax/default_template
 id: 5444f34ff778fc1ba009a9ef
 name: GCE-29322
-ctaLink: "[@T[link:<relative path='/tlds/tax'><param name='ci' value='94084' /></relative>]@T]"
+ctaLink: "[@T[link:<relative path='/tlds/tax'><param name='ci' value='91417' /></relative>]@T]"
 elementId: tax
 ---
 extends ../../../layouts/homepage/marqueeLeftHeadline
 block marqueeLeftHeadlineStyles
 	style.
 		#tax .left-column { padding-top: 120px; }
-		#tax .right-column { width: 280px; margin-left:130px; padding-top:60px;}
+		#tax .right-column { width: 280px; margin-left:90px; padding-top:60px;}
 		#tax .right-column .bigtext {line-height: 0.9;}
 		#tax .dot-tax { font-family: Walsheim-Black; }
 		#tax .promo { font-family: Walsheim-Bold; }
 		#tax .price { color: #ff8a00; }
 block leftColumn
-	.headline <div class="bigtext" style="width:100%"><div class="line">KEEP A CALCULATOR</div><div class="line"><span class='inline-dash' style='max-width:200px;'>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</span> UNDER YOUR PILLOW?</div></div>
+	.headline [@L[cds.sales/homepage/marquee/tax:headline]@L]
 block rightColumn
 	.bigtext
-		.dot-tax .TAX
-		.promo IS FOR YOU
-		.price JUST $X.XX/YR
-	a.btn.btn-warning.btn-lg.btn-cta(href=ctaLink) [@L[cds.sales/homepage/marquee/hosting-awesome:cta-text]@L]
+		.dot-tax [@L[cds.sales/homepage/marquee/tax:tld]@L]
+		.promo [@L[cds.sales/homepage/marquee/tax:promo]@L]
+		.price [@L[cds.sales/homepage/marquee/tax:price]@L]
+	a.btn.btn-warning.btn-lg.btn-cta(href!=ctaLink) [@L[cds.sales/homepage/marquee/tax:cta-text]@L]
