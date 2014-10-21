@@ -3,36 +3,42 @@
     <h3>See the difference for yourself</h3>
     <p>Where you host your WordPress site matters. Our Managed WordPress delivers one of the fastest, most scalable, reliable platforms on the web for up to 75% less than our competitors.</p>
   </div>
-  <div class="ovt-plan-wrapper">
+  <div class="starter-plan-wrapper">
     <div class="plan-info">
       <p class="plan-name">Starter Plan</p>
-      <p class="plan-price-text"><span class="starting-at">Starting at</span> <span class="price">$6.29</span><span class="monthly">/month</span></p>
+      <p class="plan-price-text"><span class="starting-at">Starting at</span> <span class="price"><span class="currency-symbol">$</span>6.29</span><span class="monthly">/month</span></p>
     </div>
-    <div class="purchase-buttom">
-      <button>ADD TO CART</button>
+    <div class="purchase-button">
+      <!-- <button>ADD TO CART</button> -->
+      <a class="add-to-cart-table-button" href="#"></a>
     </div>
   </div>
 </div>
 <table>
   <tr>
-    <th colspan='3'></th>
-    <th>Cheap-Custom Registration Starter</th>
-    <th>WP Engine&reg; Personal</th>
-    <th>Pagely&reg; Personal</th>
-    <th>DreamHost&reg; DreamPress</th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th class="highlighted ovt-header">Cheap-Custom Registration Starter</th>
+    <th class="ovt-header">WP Engine&reg; Personal</th>
+    <th class="ovt-header">Pagely&reg; Personal</th>
+    <th class="ovt-header">DreamHost&reg; DreamPress</th>
   </tr>
   <tr>
     <td colspan='7' class='table-section-header'> Features</td>
   </tr>
+  <tr>
+    <td colspan='7' class="spacer"></td>
+  </tr>
   {% for ovt in oursVsTheirsTable %}
-    <tr>
-      <td colspan='3'>{{ovt.features}}</td>
+    <tr class="bordered">
+      <td colspan='3' class="features-column">{{ovt.features}}</td>
       {% if ovt.ccrs == true %}
-        <td><span class="check"></span></td>
+        <td><span class="check highligted-td"></span></td>
       {% elif ovt.ccrs == false %}
-        <td><span class="minus"></span></td>        
+        <td><span class="minus highligted-td"></span></td>        
       {% else %}
-        <td><span class="text">{{ovt.ccrs}}</span></td>
+        <td><span class="text highligted-td">{{ovt.ccrs}}</span></td>
       {% endif %}
 
       {% if ovt.wpEngine == true %}
