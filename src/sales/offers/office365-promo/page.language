@@ -1,8 +1,8 @@
 ---
 location: localization/sales/offers/office365-promo/en
-id: 5440564ef778fc0b78c97ca1
-name: GCE-27637
-comments: New GOT POB Landing Page and Config Page
+id: 54456f62f778fc1ba009aa32
+name: GCE-30495
+comments: GOT1 and GOT2 followups
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="page-title" />
@@ -23,14 +23,20 @@ A 'Suite' Deal to Get Online
 Business Email, Domain, and Web Builder Software
 <phrase key="top-banner-headline" />
 Premium Office Bundle
+<phrase key="top-banner-headline-split-30495" />
+Microsoft Office Premium Bundle
 <phrase key="top-banner-savings" comment="{0} will get replaced with something like 50%" />
 Save up to {0}
 <phrase key="top-banner-best-deal"/>
 Best. Deal. <em>Anywhere.</em>
+<phrase key="top-banner-best-deal-split-30495"/>
+Get the <em>best deal Anywhere</em>
 <phrase key="top-banner-save"/>
 Save on Microsoft Office 365 Business Premium. 
 <phrase key="top-banner-plus"/>
 Plus: Website | Pro email | 24/7 support | And more
+<phrase key="top-banner-plus-split-30495"/>
+Plus, professional email, 24/7 support and more.
 <phrase key="top-banner-per-user-discount-price-mo" comment="{0} will get replaced with a price amount" />
 <span class="discount-price-mo">{0}</span>/mo per user*
 <phrase key="top-banner-per-user-discount-price-yr" comment="{0} will get replaced with a price amount" />
@@ -39,6 +45,8 @@ or <span class="discount-price-yr">{0}</span> annual term
 Bundle renews at <span class="renewal-price-mo">{0}</span>/mo. Cancel any products anytime.
 <phrase key="top-banner-renewal-price-disclaimer" />
 *Special pricing valid for 1<sup>st</sup> year only. Offer limited to 5 Microsoft Office accounts.
+<phrase key="top-banner-renewal-price-disclaimer-split-30495" />
+*1<sup>st</sup> year only. Limited to 5 seats.
 <phrase key="top-banner-see-offer-details" />
 See offer details.
 <phrase key="top-banner-get-started" />
@@ -47,6 +55,8 @@ Get Started
 What's included?
 <phrase key="included-whats-included-details" comment="{0} will be replace with a price $xxx.xx"/>
 Get the web's best price on Microsoft Office &ndash; <strong>over <span class="price-total-tools">{0}</span> in online business tools</strong> exclusively from GoDaddy. Best of all, you'll have two of the biggest names on the planet backing your business.
+<phrase key="included-whats-included-details-split-30495" comment="{0} will be replace with a price $xxx.xx"/>
+Get your business online with your own domain, a professional website and much more &ndash; <strong>a <span class="price-total-tools">{0}</span> per year value in online business tools</strong> exclusively from GoDaddy. Plus, the lowest guaranteed price on Microsoft Office. Best of all, you'll have two of the biggest names on the planet backing your business.
 <phrase key="included-get-started" />
 Get Started
 <phrase key="included-best-of-office" />
@@ -84,7 +94,7 @@ GoDaddy has over 57 million domains under management, more than anyone on the pl
 <phrase key="disclaimer-modal-title" />
 Disclaimers
 <phrase key="disclaimer-modal-content" comment="Things in {0} will be tokenized with pricing." />
-Special offer pricing valid for first year only. Bundle offer includes one .COM, .CO, <span class="tlds-uk">.CO.UK, .UK,</span> .NET, <span class="tlds-in">.IN,</span> <span class="tlds-br">.COM.BR,</span> or .ORG domain domain, plus Website Builder Personal Plan, Get Paid Starter Plan, and a Microsoft Office 365 Productivity Plus account for one user. Up to 4 additional Office Productivity Plus user accounts can be purchased at the discounted price of <span class="discount-price-yr">{0}</span>/year. [@T[currencyprice:<price usdamount="10000" /> ]@T] free Bing ad credits for U.S. customers only. Plus ICANN fee of [@T[currencyprice:<price usdamount="0018" /> ]@T]/year. Cannot be used in conjunction with any other offer, sale, discount or promotion. After initial one year purchase term, products will no longer be sold as a bundle and will renew individually at the then-current rate. For illustrative purposes, current product pricing is as follows: .COM domain = <span class="com-price-yr">{0}</span>/year; Website Builder = <span class="wsb-price-yr">{0}</span>/year; Get Paid = <span class="getpaid-price-yr">{0}</span>/year; Office 365 Productivity Plus = <span class="o365-price-yr">{0}</span>/year per user. Offer valid for U.S. residents only. Geographic restrictions apply.
+Special offer pricing valid for first year only. Bundle offer includes one .COM, .CO, <span class="tlds-uk">.CO.UK, .UK,</span> .NET, <span class="tlds-in">.IN,</span> <span class="tlds-br">.COM.BR,</span> or .ORG domain domain, plus Website Builder Personal Plan, Get Paid Starter Plan, and a Microsoft Office 365 Productivity Plus account for one user. Up to 4 additional Office Productivity Plus user accounts can be purchased at the discounted price of <span class="discount-price-yr">{0}</span>/year. <span class="got2-bing-ad-credits">{0}</span> free Bing ad credits for U.S. customers only. Plus ICANN fee of [@T[currencyprice:<price usdamount="0018" /> ]@T]/year. Cannot be used in conjunction with any other offer, sale, discount or promotion. After initial one year purchase term, products will no longer be sold as a bundle and will renew individually at the then-current rate. For illustrative purposes, current product pricing is as follows: .COM domain = <span class="com-price-yr">{0}</span>/year; Website Builder = <span class="wsb-price-yr">{0}</span>/year; Get Paid = <span class="getpaid-price-yr">{0}</span>/year; Office 365 Productivity Plus = <span class="o365-price-yr">{0}</span>/year per user. Offer valid for U.S. residents only. Geographic restrictions apply.
 <phrase key="disclaimer-modal-link" />
 Click here for product disclaimers and legal policies.
 <phrase key="search-title" />
@@ -109,3 +119,27 @@ Search
 Invalid character(s) error.
 <phrase key="ajax-error-msg" />
 Add to cart failure.
+<phrase key="30495-bing-also-includes"  comment="{0} will be tokenized"/>
+Also includes <span class="got2-bing-ad-credits">{0}</span> Bing Ad Credits 
+<phrase key="30495-bing-restrictions-apply" />
+Restrictions Apply.
+<phrase key="30495-bing-restrictions-apply-rollover-text" />
+One promotional credit per customer for a new Microsoft&reg; Advertiser account. Products purchased using a Gift Card or Alipay do not provide eligibility for advertising credits. Offer valid to US residents only, other restrictions apply.
+<phrase key="30495-bing-restrictions-apply-view-details" />
+View Details
+<phrase key="included-product-wraparound-text" />
+Top professional tools at a rock-bottom price &ndash; exclusively from Godaddy
+<phrase key="split-30495-excel" />
+Excel
+<phrase key="split-30495-onenote" />
+OneNote
+<phrase key="split-30495-outlook" />
+Outlook
+<phrase key="split-30495-word" />
+Word
+<phrase key="split-30495-powerpoint" />
+PowerPoint
+<phrase key="split-30495-domain-name" />
+Domain Name
+<phrase key="split-30495-website" />
+Website

@@ -810,8 +810,8 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
   #product-storage .icon {background-position:0 -720px;}
       
   .grid-column {border:1px solid #CCC;}
-  .wraparound p {color:#fff;text-transform:uppercase;font-weight:200;font-size:24px;line-height:1.4em;margin:0;}
-  .wraparound {
+  #included-productsRow .wraparound p {color:#fff;text-transform:uppercase;font-weight:200;font-size:24px;line-height:1.4em;margin:0;}
+  #included-productsRow .wraparound {
     position: relative;
     top:-60px;
     padding: 5px;
@@ -822,20 +822,10 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
     box-shadow: 0 4px 4px rgba(0,0,0,0.3);
     text-align:center;
   }
-  .wraparound:before {
-    border-left: 6px solid transparent;
-    left: -1px;
-  }
-  .wraparound:before, .wraparound:after {
-    content: " ";
-    border-top: 6px solid #954709;
-    position: absolute;
-    bottom: -7px;
-  }
-  .wraparound:after {
-    border-right: 6px solid transparent;
-    right: -1px;
-  }
+  #included-productsRow .wraparound:before {border-left: 6px solid transparent;left: -1px;}
+  #included-productsRow .wraparound:before, 
+  #included-productsRow .wraparound:after {content: " ";border-top: 6px solid #954709;position: absolute;bottom: -7px;}
+  #included-productsRow .wraparound:after {border-right: 6px solid transparent;right: -1px;}
   #product-workspace .product-icon.email {padding:20px 0;text-align:center;height:85px;font-size:16px;}
 {% endless %}
 </style>
@@ -1119,7 +1109,7 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
 {% less %}
   #disclaimers { font-size:14px; margin:20px auto 0; line-height:14px; width:1000px; }
   
-  #disclaimers p {margin-bottom:10px;}
+  #disclaimers p {margin-bottom:2px;}
   #disclaimers .disclaimer-link-area a,
   #disclaimers .disclaimer-link-area a:link,
   #disclaimers .disclaimer-link-area a:visited{color:#333; text-decoration:underline}
@@ -1206,7 +1196,7 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
         pricing: {
           promo: '[@T[productprice:<current productid="464069" period="monthly" promocode="24681357" />]@T]',
           bundleRenewal: '[@T[multipleproductprice:<list productidlist="101|7524|464069" period="monthly"></list>]@T]',
-          bingAddCredits: '[@T[currencyprice:<price usdamount="5000" dropdecimal="true" htmlsymbol="false" />]@T]'
+          bingAdCredits: '[@T[currencyprice:<price usdamount="5000" dropdecimal="true" htmlsymbol="false" />]@T]'
         }
       };
           
@@ -1225,7 +1215,7 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
         });
         tokenizePrice(".price", got1Page.pricing.promo );
         tokenizePrice(".original-price", got1Page.pricing.bundleRenewal );
-        tokenizePrice(".got-bing-ad-credits", got1Page.pricing.bingAddCredits);
+        tokenizePrice(".got-bing-ad-credits", got1Page.pricing.bingAdCredits);
         
         $('[data-ci]').click(function (e) {
             var $this = $(this);
