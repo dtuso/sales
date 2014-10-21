@@ -366,14 +366,24 @@ var PlanConfig = {
       if($("#siteLockCheckbox").hasClass("active"))
         {  
           $.when(
-            $.getJSON(url, function (data) {
-              sslData=data;
+            $.ajax({
+                type: 'POST',
+                url: url,
+                dataType: 'json',
+                success: function (data) {
+                    sslData=data;
+                }
             }),
-            $.getJSON(url2,function (data){
-              sitelockData=data;
+            $.ajax({
+                type: 'POST',
+                url: url,
+                dataType: 'json',
+                success: function (data) {
+                    sitelockData=data;
+                }
             })
           ).then(function(){
-              if (sslData != 'fail' && sitelockData != 'fail') {
+              if (sslData.Success && sitelockData.Success) {
                  ##if(isManager())
                   window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" ><param name="pro" value="1" /></external>]@T]';
                  ##else

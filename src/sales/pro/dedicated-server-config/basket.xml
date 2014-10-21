@@ -1,6 +1,3544 @@
 <Packages>
+    <Package id="ds_centos_economy_1" QtyIsDuration="true">
+      <ProductId>474</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup Block="1232" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_cpanel" ProductId="1232"/>
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_centos_economy_3" QtyIsDuration="true">
+      <ProductId>474</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup Block="1232" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_cpanel" ProductId="1232"/>
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_centos_economy_12" QtyIsDuration="true">
+      <ProductId>474</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup Block="1232" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_cpanel" ProductId="1232"/>
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_centos_economy_24" QtyIsDuration="true">
+      <ProductId>474</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3605" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup Block="1232" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_cpanel" ProductId="1232"/>
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_centos_deluxe_1" QtyIsDuration="true">
+      <ProductId>803</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup Block="1232" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_cpanel" ProductId="1232"/>
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_centos_deluxe_3" QtyIsDuration="true">
+      <ProductId>803</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup Block="1232" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_cpanel" ProductId="1232"/>
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_centos_deluxe_12" QtyIsDuration="true">
+      <ProductId>803</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup Block="1232" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_cpanel" ProductId="1232"/>
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_centos_deluxe_24" QtyIsDuration="true">
+      <ProductId>803</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3605" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup Block="1232" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_cpanel" ProductId="1232"/>
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_centos_premium_1" QtyIsDuration="true">
+      <ProductId>889</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup Block="1232" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_cpanel" ProductId="1232"/>
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_centos_premium_3" QtyIsDuration="true">
+      <ProductId>889</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup Block="1232" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_cpanel" ProductId="1232"/>
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_centos_premium_12" QtyIsDuration="true">
+      <ProductId>889</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup Block="1232" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_cpanel" ProductId="1232"/>
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_centos_premium_24" QtyIsDuration="true">
+      <ProductId>889</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3605" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup Block="1232" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_cpanel" ProductId="1232"/>
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_centos_valuedeal_1" QtyIsDuration="true">
+      <ProductId>929</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup Block="1232" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_cpanel" ProductId="1232"/>
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_centos_valuedeal_3" QtyIsDuration="true">
+      <ProductId>929</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup Block="1232" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_cpanel" ProductId="1232"/>
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_centos_valuedeal_12" QtyIsDuration="true">
+      <ProductId>929</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup Block="1232" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_cpanel" ProductId="1232"/>
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_centos_valuedeal_24" QtyIsDuration="true">
+      <ProductId>929</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3605" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup Block="1232" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_cpanel" ProductId="1232"/>
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_centos_powerplayer_1" QtyIsDuration="true">
+      <ProductId>1072</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup Block="1232" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_cpanel" ProductId="1232"/>
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_centos_powerplayer_3" QtyIsDuration="true">
+      <ProductId>1072</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup Block="1232" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_cpanel" ProductId="1232"/>
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_centos_powerplayer_12" QtyIsDuration="true">
+      <ProductId>1072</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup Block="1232" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_cpanel" ProductId="1232"/>
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_centos_powerplayer_24" QtyIsDuration="true">
+      <ProductId>1072</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3605" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup Block="1232" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_cpanel" ProductId="1232"/>
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_centos_memoryhog_1" QtyIsDuration="true">
+      <ProductId>2804</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup Block="1232" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_cpanel" ProductId="1232"/>
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_centos_memoryhog_3" QtyIsDuration="true">
+      <ProductId>2804</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup Block="1232" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_cpanel" ProductId="1232"/>
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_centos_memoryhog_12" QtyIsDuration="true">
+      <ProductId>2804</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup Block="1232" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_cpanel" ProductId="1232"/>
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_centos_memoryhog_24" QtyIsDuration="true">
+      <ProductId>2804</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3605" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup Block="1232" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_cpanel" ProductId="1232"/>
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_ubuntu_economy_1" QtyIsDuration="true">
+      <ProductId>659</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_ubuntu_economy_3" QtyIsDuration="true">
+      <ProductId>659</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_ubuntu_economy_12" QtyIsDuration="true">
+      <ProductId>659</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_ubuntu_economy_24" QtyIsDuration="true">
+      <ProductId>659</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3605" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_ubuntu_deluxe_1" QtyIsDuration="true">
+      <ProductId>821</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_ubuntu_deluxe_3" QtyIsDuration="true">
+      <ProductId>821</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_ubuntu_deluxe_12" QtyIsDuration="true">
+      <ProductId>821</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_ubuntu_deluxe_24" QtyIsDuration="true">
+      <ProductId>821</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3605" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_ubuntu_premium_1" QtyIsDuration="true">
+      <ProductId>899</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_ubuntu_premium_3" QtyIsDuration="true">
+      <ProductId>899</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_ubuntu_premium_12" QtyIsDuration="true">
+      <ProductId>899</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_ubuntu_premium_24" QtyIsDuration="true">
+      <ProductId>899</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3605" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_ubuntu_valuedeal_1" QtyIsDuration="true">
+      <ProductId>938</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_ubuntu_valuedeal_3" QtyIsDuration="true">
+      <ProductId>938</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_ubuntu_valuedeal_12" QtyIsDuration="true">
+      <ProductId>938</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_ubuntu_valuedeal_24" QtyIsDuration="true">
+      <ProductId>938</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3605" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_ubuntu_powerplayer_1" QtyIsDuration="true">
+      <ProductId>1074</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_ubuntu_powerplayer_3" QtyIsDuration="true">
+      <ProductId>1074</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_ubuntu_powerplayer_12" QtyIsDuration="true">
+      <ProductId>1074</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_ubuntu_powerplayer_24" QtyIsDuration="true">
+      <ProductId>1074</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3605" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_ubuntu_memoryhog_1" QtyIsDuration="true">
+      <ProductId>2800</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_ubuntu_memoryhog_3" QtyIsDuration="true">
+      <ProductId>2800</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_ubuntu_memoryhog_12" QtyIsDuration="true">
+      <ProductId>2800</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_ubuntu_memoryhog_24" QtyIsDuration="true">
+      <ProductId>2800</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3605" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_fedora_economy_1" QtyIsDuration="true">
+      <ProductId>665</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_fedora_economy_3" QtyIsDuration="true">
+      <ProductId>665</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_fedora_economy_12" QtyIsDuration="true">
+      <ProductId>665</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_fedora_economy_24" QtyIsDuration="true">
+      <ProductId>665</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3605" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_fedora_deluxe_1" QtyIsDuration="true">
+      <ProductId>857</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_fedora_deluxe_3" QtyIsDuration="true">
+      <ProductId>857</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_fedora_deluxe_12" QtyIsDuration="true">
+      <ProductId>857</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_fedora_deluxe_24" QtyIsDuration="true">
+      <ProductId>857</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3605" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_fedora_premium_1" QtyIsDuration="true">
+      <ProductId>914</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_fedora_premium_3" QtyIsDuration="true">
+      <ProductId>914</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_fedora_premium_12" QtyIsDuration="true">
+      <ProductId>914</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_fedora_premium_24" QtyIsDuration="true">
+      <ProductId>914</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3605" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_fedora_valuedeal_1" QtyIsDuration="true">
+      <ProductId>943</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_fedora_valuedeal_3" QtyIsDuration="true">
+      <ProductId>943</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_fedora_valuedeal_12" QtyIsDuration="true">
+      <ProductId>943</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_fedora_valuedeal_24" QtyIsDuration="true">
+      <ProductId>943</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3605" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_fedora_powerplayer_1" QtyIsDuration="true">
+      <ProductId>1095</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_fedora_powerplayer_3" QtyIsDuration="true">
+      <ProductId>1095</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_fedora_powerplayer_12" QtyIsDuration="true">
+      <ProductId>1095</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_fedora_powerplayer_24" QtyIsDuration="true">
+      <ProductId>1095</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3605" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_fedora_memoryhog_1" QtyIsDuration="true">
+      <ProductId>2802</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_fedora_memoryhog_3" QtyIsDuration="true">
+      <ProductId>2802</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_fedora_memoryhog_12" QtyIsDuration="true">
+      <ProductId>2802</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_fedora_memoryhog_24" QtyIsDuration="true">
+      <ProductId>2802</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3605" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_windows_economy_1" QtyIsDuration="true">
+      <ProductId>668</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_sql_workgroup" ProductId="1371"/>
+          <AddOn Name="addon_sql_standard" ProductId="1372"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_windows_economy_3" QtyIsDuration="true">
+      <ProductId>668</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_sql_workgroup" ProductId="1371"/>
+          <AddOn Name="addon_sql_standard" ProductId="1372"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_sql_workgroup" ProductId="1371"/>
+          <AddOn Name="addon_sql_standard" ProductId="1372"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_windows_economy_12" QtyIsDuration="true">
+      <ProductId>668</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_sql_workgroup" ProductId="1371"/>
+          <AddOn Name="addon_sql_standard" ProductId="1372"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_windows_economy_24" QtyIsDuration="true">
+      <ProductId>668</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3605" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_sql_workgroup" ProductId="1371"/>
+          <AddOn Name="addon_sql_standard" ProductId="1372"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_windows_deluxe_1" QtyIsDuration="true">
+      <ProductId>859</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_sql_workgroup" ProductId="1371"/>
+          <AddOn Name="addon_sql_standard" ProductId="1372"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_windows_deluxe_3" QtyIsDuration="true">
+      <ProductId>859</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_sql_workgroup" ProductId="1371"/>
+          <AddOn Name="addon_sql_standard" ProductId="1372"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_windows_deluxe_12" QtyIsDuration="true">
+      <ProductId>859</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_sql_workgroup" ProductId="1371"/>
+          <AddOn Name="addon_sql_standard" ProductId="1372"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_windows_deluxe_24" QtyIsDuration="true">
+      <ProductId>859</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3605" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_sql_workgroup" ProductId="1371"/>
+          <AddOn Name="addon_sql_standard" ProductId="1372"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_windows_premium_1" QtyIsDuration="true">
+      <ProductId>918</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_sql_workgroup" ProductId="1371"/>
+          <AddOn Name="addon_sql_standard" ProductId="1372"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_windows_premium_3" QtyIsDuration="true">
+      <ProductId>918</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_sql_workgroup" ProductId="1371"/>
+          <AddOn Name="addon_sql_standard" ProductId="1372"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_windows_premium_12" QtyIsDuration="true">
+      <ProductId>918</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_sql_workgroup" ProductId="1371"/>
+          <AddOn Name="addon_sql_standard" ProductId="1372"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_windows_premium_24" QtyIsDuration="true">
+      <ProductId>918</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3605" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_sql_workgroup" ProductId="1371"/>
+          <AddOn Name="addon_sql_standard" ProductId="1372"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_windows_valuedeal_1" QtyIsDuration="true">
+      <ProductId>945</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_sql_workgroup" ProductId="1371"/>
+          <AddOn Name="addon_sql_standard" ProductId="1372"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_windows_valuedeal_3" QtyIsDuration="true">
+      <ProductId>945</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_sql_workgroup" ProductId="1371"/>
+          <AddOn Name="addon_sql_standard" ProductId="1372"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_windows_valuedeal_12" QtyIsDuration="true">
+      <ProductId>945</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_sql_workgroup" ProductId="1371"/>
+          <AddOn Name="addon_sql_standard" ProductId="1372"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_windows_valuedeal_24" QtyIsDuration="true">
+      <ProductId>945</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3605" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_sql_workgroup" ProductId="1371"/>
+          <AddOn Name="addon_sql_standard" ProductId="1372"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_windows_powerplayer_1" QtyIsDuration="true">
+      <ProductId>1097</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_sql_workgroup" ProductId="1371"/>
+          <AddOn Name="addon_sql_standard" ProductId="1372"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_windows_powerplayer_3" QtyIsDuration="true">
+      <ProductId>1097</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_sql_workgroup" ProductId="1371"/>
+          <AddOn Name="addon_sql_standard" ProductId="1372"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_windows_powerplayer_12" QtyIsDuration="true">
+      <ProductId>1097</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_sql_workgroup" ProductId="1371"/>
+          <AddOn Name="addon_sql_standard" ProductId="1372"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_windows_powerplayer_24" QtyIsDuration="true">
+      <ProductId>1097</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3605" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_sql_workgroup" ProductId="1371"/>
+          <AddOn Name="addon_sql_standard" ProductId="1372"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_windows_memoryhog_1" QtyIsDuration="true">
+      <ProductId>2806</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_sql_workgroup" ProductId="1371"/>
+          <AddOn Name="addon_sql_standard" ProductId="1372"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_windows_memoryhog_3" QtyIsDuration="true">
+      <ProductId>2806</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_sql_workgroup" ProductId="1371"/>
+          <AddOn Name="addon_sql_standard" ProductId="1372"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_windows_memoryhog_12" QtyIsDuration="true">
+      <ProductId>2806</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_sql_workgroup" ProductId="1371"/>
+          <AddOn Name="addon_sql_standard" ProductId="1372"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
+    <Package id="ds_windows_memoryhog_24" QtyIsDuration="true">
+      <ProductId>2806</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3605" />
+      </Rules>
+      <AddOns>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_ftp_20" ProductId="6500" />
+          <AddOn Name="addon_ftp_100" ProductId="6501" />
+          <AddOn Name="addon_ftp_300" ProductId="6502" />
+          <AddOn Name="addon_ftp_600" ProductId="1273" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_managedbackup_7d" ProductId="1361" />
+          <AddOn Name="addon_managedbackup_30d" ProductId="1355" />
+          <AddOn Name="addon_managedbackup_4w" ProductId="1356" />
+          <AddOn Name="addon_managedbackup_12w" ProductId="1357" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_bandwidth" ProductId="1122" MatchParentDuration="false" MaxQty="10"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_controlpanel_30" ProductId="1219" />
+          <AddOn Name="addon_controlpanel_100" ProductId="1220" />
+          <AddOn Name="addon_controlpanel_unlimited" ProductId="1221" />
+        </AddOnGroup>
+        <AddOnGroup Requires="1219|1220|1221" MaxSelection="1">
+          <AddOn Name="addon_controlpanel_powerpack" ProductId="2754" />
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_sql_workgroup" ProductId="1371"/>
+          <AddOn Name="addon_sql_standard" ProductId="1372"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_firewall" ProductId="1259"/>
+        </AddOnGroup>
+        <AddOnGroup MaxSelection="1">
+          <AddOn Name="addon_raid" ProductId="1230"/>
+        </AddOnGroup>
+      </AddOns>
+    </Package>
     <Package id="pro_ds_windows_t1_1month" QtyIsDuration="false">
         <ProductId>458239</ProductId>
+        <ChildProducts>
+            <ProductId>483564</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3604" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
@@ -13,6 +3551,12 @@
     </Package>
     <Package id="pro_ds_windows_t1_3month" QtyIsDuration="false">
         <ProductId>458244</ProductId>
+        <ChildProducts>
+            <ProductId>483564</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3604" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
@@ -25,6 +3569,12 @@
     </Package>
     <Package id="pro_ds_windows_t1_6month" QtyIsDuration="false">
         <ProductId>458247</ProductId>
+        <ChildProducts>
+            <ProductId>483564</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3604" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
@@ -37,6 +3587,12 @@
     </Package>
     <Package id="pro_ds_windows_t1_24month" QtyIsDuration="false">
         <ProductId>458251</ProductId>
+        <ChildProducts>
+            <ProductId>483564</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3605" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
@@ -49,6 +3605,12 @@
     </Package>
     <Package id="pro_ds_windows_t1_36month" QtyIsDuration="false">
         <ProductId>458254</ProductId>
+        <ChildProducts>
+            <ProductId>483564</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3605" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
@@ -61,6 +3623,12 @@
     </Package>
     <Package id="pro_ds_windows_t1_12month" QtyIsDuration="false">
         <ProductId>458242</ProductId>
+        <ChildProducts>
+            <ProductId>483564</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3604" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
@@ -73,6 +3641,12 @@
     </Package>
     <Package id="pro_ds_windows_t1_48month" QtyIsDuration="false">
         <ProductId>458257</ProductId>
+        <ChildProducts>
+            <ProductId>483564</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3605" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
@@ -85,6 +3659,12 @@
     </Package>
     <Package id="pro_ds_windows_t1_60month" QtyIsDuration="false">
         <ProductId>458260</ProductId>
+        <ChildProducts>
+            <ProductId>483564</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3605" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
@@ -97,6 +3677,12 @@
     </Package>
     <Package id="pro_ds_windows_t2_1month" QtyIsDuration="false">
         <ProductId>458241</ProductId>
+        <ChildProducts>
+            <ProductId>483564</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3604" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
@@ -109,6 +3695,12 @@
     </Package>
     <Package id="pro_ds_windows_t2_3month" QtyIsDuration="false">
         <ProductId>458246</ProductId>
+        <ChildProducts>
+            <ProductId>483564</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3604" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
@@ -121,6 +3713,12 @@
     </Package>
     <Package id="pro_ds_windows_t2_6month" QtyIsDuration="false">
         <ProductId>458249</ProductId>
+        <ChildProducts>
+            <ProductId>483564</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3604" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
@@ -133,6 +3731,12 @@
     </Package>
     <Package id="pro_ds_windows_t2_12month" QtyIsDuration="false">
         <ProductId>458250</ProductId>
+        <ChildProducts>
+            <ProductId>483564</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3604" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
@@ -145,6 +3749,12 @@
     </Package>
     <Package id="pro_ds_windows_t2_60month" QtyIsDuration="false">
         <ProductId>458262</ProductId>
+        <ChildProducts>
+            <ProductId>483564</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3605" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
@@ -157,6 +3767,12 @@
     </Package>
     <Package id="pro_ds_windows_t2_24month" QtyIsDuration="false">
         <ProductId>458253</ProductId>
+        <ChildProducts>
+            <ProductId>483564</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3605" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
@@ -169,6 +3785,12 @@
     </Package>
     <Package id="pro_ds_windows_t2_36month" QtyIsDuration="false">
         <ProductId>458256</ProductId>
+        <ChildProducts>
+            <ProductId>483564</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3605" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
@@ -181,6 +3803,12 @@
     </Package>
     <Package id="pro_ds_windows_t2_48month" QtyIsDuration="false">
         <ProductId>458259</ProductId>
+        <ChildProducts>
+            <ProductId>483564</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3605" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
@@ -193,6 +3821,12 @@
     </Package>
     <Package id="pro_ds_windows_t3_1month" QtyIsDuration="false">
         <ProductId>458264</ProductId>
+        <ChildProducts>
+            <ProductId>483564</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3604" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
@@ -205,6 +3839,12 @@
     </Package>
     <Package id="pro_ds_windows_t3_3month" QtyIsDuration="false">
         <ProductId>458267</ProductId>
+        <ChildProducts>
+            <ProductId>483564</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3604" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
@@ -217,6 +3857,12 @@
     </Package>
     <Package id="pro_ds_windows_t3_6month" QtyIsDuration="false">
         <ProductId>458269</ProductId>
+        <ChildProducts>
+            <ProductId>483564</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3604" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
@@ -229,6 +3875,12 @@
     </Package>
     <Package id="pro_ds_windows_t3_12month" QtyIsDuration="false">
         <ProductId>458270</ProductId>
+        <ChildProducts>
+            <ProductId>483564</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3604" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
@@ -241,6 +3893,12 @@
     </Package>
     <Package id="pro_ds_windows_t3_24month" QtyIsDuration="false">
         <ProductId>458272</ProductId>
+        <ChildProducts>
+            <ProductId>483564</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3605" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
@@ -253,6 +3911,12 @@
     </Package>
     <Package id="pro_ds_windows_t3_36month" QtyIsDuration="false">
         <ProductId>458274</ProductId>
+        <ChildProducts>
+            <ProductId>483564</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3605" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
@@ -265,6 +3929,12 @@
     </Package>
     <Package id="pro_ds_windows_t3_48month" QtyIsDuration="false">
         <ProductId>458276</ProductId>
+        <ChildProducts>
+            <ProductId>483564</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3605" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
@@ -277,6 +3947,12 @@
     </Package>
     <Package id="pro_ds_windows_t3_60month" QtyIsDuration="false">
         <ProductId>458278</ProductId>
+        <ChildProducts>
+            <ProductId>483564</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3605" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
@@ -289,6 +3965,12 @@
     </Package>
     <Package id="pro_ds_windows_t4_1month" QtyIsDuration="false">
         <ProductId>458280</ProductId>
+        <ChildProducts>
+            <ProductId>483564</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3604" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
@@ -301,6 +3983,12 @@
     </Package>
     <Package id="pro_ds_windows_t4_3month" QtyIsDuration="false">
         <ProductId>458283</ProductId>
+        <ChildProducts>
+            <ProductId>483564</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3604" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
@@ -313,6 +4001,12 @@
     </Package>
     <Package id="pro_ds_windows_t4_6month" QtyIsDuration="false">
         <ProductId>458285</ProductId>
+        <ChildProducts>
+            <ProductId>483564</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3604" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
@@ -325,6 +4019,12 @@
     </Package>
     <Package id="pro_ds_windows_t4_12month" QtyIsDuration="false">
         <ProductId>458286</ProductId>
+        <ChildProducts>
+            <ProductId>483564</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3604" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
@@ -337,6 +4037,12 @@
     </Package>
     <Package id="pro_ds_windows_t4_24month" QtyIsDuration="false">
         <ProductId>458288</ProductId>
+        <ChildProducts>
+            <ProductId>483564</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3605" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
@@ -349,6 +4055,12 @@
     </Package>
     <Package id="pro_ds_windows_t4_36month" QtyIsDuration="false">
         <ProductId>458290</ProductId>
+        <ChildProducts>
+            <ProductId>483564</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3605" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
@@ -361,6 +4073,12 @@
     </Package>
     <Package id="pro_ds_windows_t4_48month" QtyIsDuration="false">
         <ProductId>458292</ProductId>
+        <ChildProducts>
+            <ProductId>483564</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3605" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
@@ -373,6 +4091,12 @@
     </Package>
     <Package id="pro_ds_windows_t4_60month" QtyIsDuration="false">
         <ProductId>458294</ProductId>
+        <ChildProducts>
+            <ProductId>483564</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3605" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
@@ -385,6 +4109,12 @@
     </Package>
     <Package id="pro_ds_windows_t5_1month" QtyIsDuration="false">
         <ProductId>458296</ProductId>
+        <ChildProducts>
+            <ProductId>483564</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3604" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
@@ -397,6 +4127,12 @@
     </Package>
     <Package id="pro_ds_windows_t5_3month" QtyIsDuration="false">
         <ProductId>458299</ProductId>
+        <ChildProducts>
+            <ProductId>483564</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3604" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
@@ -409,6 +4145,12 @@
     </Package>
     <Package id="pro_ds_windows_t5_6month" QtyIsDuration="false">
         <ProductId>458301</ProductId>
+        <ChildProducts>
+            <ProductId>483564</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3604" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
@@ -421,6 +4163,12 @@
     </Package>
     <Package id="pro_ds_windows_t5_12month" QtyIsDuration="false">
         <ProductId>458302</ProductId>
+        <ChildProducts>
+            <ProductId>483564</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3604" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
@@ -433,6 +4181,12 @@
     </Package>
     <Package id="pro_ds_windows_t5_24month" QtyIsDuration="false">
         <ProductId>458304</ProductId>
+        <ChildProducts>
+            <ProductId>483564</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3605" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
@@ -445,6 +4199,12 @@
     </Package>
     <Package id="pro_ds_windows_t5_36month" QtyIsDuration="false">
         <ProductId>458306</ProductId>
+        <ChildProducts>
+            <ProductId>483564</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3605" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
@@ -457,6 +4217,12 @@
     </Package>
     <Package id="pro_ds_windows_t5_48month" QtyIsDuration="false">
         <ProductId>458308</ProductId>
+        <ChildProducts>
+            <ProductId>483564</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3605" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
@@ -469,6 +4235,12 @@
     </Package>
     <Package id="pro_ds_windows_t5_60month" QtyIsDuration="false">
         <ProductId>458310</ProductId>
+        <ChildProducts>
+            <ProductId>483564</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3605" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_windows" ProductId="483564" MatchParentDuration="true" MaxQty="1"/>
@@ -481,6 +4253,12 @@
     </Package>
     <Package id="pro_ds_linux_t1_1month" QtyIsDuration="false">
         <ProductId>458239</ProductId>
+        <ChildProducts>
+            <ProductId>483566</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3604" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
@@ -493,6 +4271,12 @@
     </Package>
     <Package id="pro_ds_linux_t1_3month" QtyIsDuration="false">
         <ProductId>458244</ProductId>
+        <ChildProducts>
+            <ProductId>483566</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3604" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
@@ -505,6 +4289,12 @@
     </Package>
     <Package id="pro_ds_linux_t1_6month" QtyIsDuration="false">
         <ProductId>458247</ProductId>
+        <ChildProducts>
+            <ProductId>483566</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3604" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
@@ -517,6 +4307,12 @@
     </Package>
     <Package id="pro_ds_linux_t1_24month" QtyIsDuration="false">
         <ProductId>458251</ProductId>
+        <ChildProducts>
+            <ProductId>483566</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3605" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
@@ -529,6 +4325,12 @@
     </Package>
     <Package id="pro_ds_linux_t1_36month" QtyIsDuration="false">
         <ProductId>458254</ProductId>
+        <ChildProducts>
+            <ProductId>483566</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3605" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
@@ -541,6 +4343,12 @@
     </Package>
     <Package id="pro_ds_linux_t1_12month" QtyIsDuration="false">
         <ProductId>458242</ProductId>
+        <ChildProducts>
+            <ProductId>483566</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3604" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
@@ -553,6 +4361,12 @@
     </Package>
     <Package id="pro_ds_linux_t1_48month" QtyIsDuration="false">
         <ProductId>458257</ProductId>
+        <ChildProducts>
+            <ProductId>483566</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3605" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
@@ -565,6 +4379,12 @@
     </Package>
     <Package id="pro_ds_linux_t1_60month" QtyIsDuration="false">
         <ProductId>458260</ProductId>
+        <ChildProducts>
+            <ProductId>483566</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3605" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
@@ -577,6 +4397,12 @@
     </Package>
     <Package id="pro_ds_linux_t2_1month" QtyIsDuration="false">
         <ProductId>458241</ProductId>
+        <ChildProducts>
+            <ProductId>483566</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3604" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
@@ -589,6 +4415,12 @@
     </Package>
     <Package id="pro_ds_linux_t2_3month" QtyIsDuration="false">
         <ProductId>458246</ProductId>
+        <ChildProducts>
+            <ProductId>483566</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3604" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
@@ -601,6 +4433,12 @@
     </Package>
     <Package id="pro_ds_linux_t2_6month" QtyIsDuration="false">
         <ProductId>458249</ProductId>
+        <ChildProducts>
+            <ProductId>483566</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3604" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
@@ -613,6 +4451,12 @@
     </Package>
     <Package id="pro_ds_linux_t2_12month" QtyIsDuration="false">
         <ProductId>458250</ProductId>
+        <ChildProducts>
+            <ProductId>483566</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3604" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
@@ -625,6 +4469,12 @@
     </Package>
     <Package id="pro_ds_linux_t2_60month" QtyIsDuration="false">
         <ProductId>458262</ProductId>
+        <ChildProducts>
+            <ProductId>483566</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3605" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
@@ -637,6 +4487,12 @@
     </Package>
     <Package id="pro_ds_linux_t2_24month" QtyIsDuration="false">
         <ProductId>458253</ProductId>
+        <ChildProducts>
+            <ProductId>483566</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3605" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
@@ -649,6 +4505,12 @@
     </Package>
     <Package id="pro_ds_linux_t2_36month" QtyIsDuration="false">
         <ProductId>458256</ProductId>
+        <ChildProducts>
+            <ProductId>483566</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3605" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
@@ -661,6 +4523,12 @@
     </Package>
     <Package id="pro_ds_linux_t2_48month" QtyIsDuration="false">
         <ProductId>458259</ProductId>
+        <ChildProducts>
+            <ProductId>483566</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3605" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
@@ -673,6 +4541,12 @@
     </Package>
     <Package id="pro_ds_linux_t3_1month" QtyIsDuration="false">
         <ProductId>458264</ProductId>
+        <ChildProducts>
+            <ProductId>483566</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3604" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
@@ -685,6 +4559,12 @@
     </Package>
     <Package id="pro_ds_linux_t3_3month" QtyIsDuration="false">
         <ProductId>458267</ProductId>
+        <ChildProducts>
+            <ProductId>483566</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3604" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
@@ -697,6 +4577,12 @@
     </Package>
     <Package id="pro_ds_linux_t3_6month" QtyIsDuration="false">
         <ProductId>458269</ProductId>
+        <ChildProducts>
+            <ProductId>483566</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3604" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
@@ -709,6 +4595,12 @@
     </Package>
     <Package id="pro_ds_linux_t3_12month" QtyIsDuration="false">
         <ProductId>458270</ProductId>
+        <ChildProducts>
+            <ProductId>483566</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3604" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
@@ -721,6 +4613,12 @@
     </Package>
     <Package id="pro_ds_linux_t3_24month" QtyIsDuration="false">
         <ProductId>458272</ProductId>
+        <ChildProducts>
+            <ProductId>483566</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3605" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
@@ -733,6 +4631,12 @@
     </Package>
     <Package id="pro_ds_linux_t3_36month" QtyIsDuration="false">
         <ProductId>458274</ProductId>
+        <ChildProducts>
+            <ProductId>483566</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3605" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
@@ -745,6 +4649,12 @@
     </Package>
     <Package id="pro_ds_linux_t3_48month" QtyIsDuration="false">
         <ProductId>458276</ProductId>
+        <ChildProducts>
+            <ProductId>483566</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3605" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
@@ -757,6 +4667,12 @@
     </Package>
     <Package id="pro_ds_linux_t3_60month" QtyIsDuration="false">
         <ProductId>458278</ProductId>
+        <ChildProducts>
+            <ProductId>483566</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3605" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
@@ -769,6 +4685,12 @@
     </Package>
     <Package id="pro_ds_linux_t4_1month" QtyIsDuration="false">
         <ProductId>458280</ProductId>
+        <ChildProducts>
+            <ProductId>483566</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3604" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
@@ -781,6 +4703,12 @@
     </Package>
     <Package id="pro_ds_linux_t4_3month" QtyIsDuration="false">
         <ProductId>458283</ProductId>
+        <ChildProducts>
+            <ProductId>483566</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3604" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
@@ -793,6 +4721,12 @@
     </Package>
     <Package id="pro_ds_linux_t4_6month" QtyIsDuration="false">
         <ProductId>458285</ProductId>
+        <ChildProducts>
+            <ProductId>483566</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3604" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
@@ -805,6 +4739,12 @@
     </Package>
     <Package id="pro_ds_linux_t4_12month" QtyIsDuration="false">
         <ProductId>458286</ProductId>
+        <ChildProducts>
+            <ProductId>483566</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3604" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
@@ -817,6 +4757,12 @@
     </Package>
     <Package id="pro_ds_linux_t4_24month" QtyIsDuration="false">
         <ProductId>458288</ProductId>
+        <ChildProducts>
+            <ProductId>483566</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3605" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
@@ -829,6 +4775,12 @@
     </Package>
     <Package id="pro_ds_linux_t4_36month" QtyIsDuration="false">
         <ProductId>458290</ProductId>
+        <ChildProducts>
+            <ProductId>483566</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3605" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
@@ -841,6 +4793,12 @@
     </Package>
     <Package id="pro_ds_linux_t4_48month" QtyIsDuration="false">
         <ProductId>458292</ProductId>
+        <ChildProducts>
+            <ProductId>483566</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3605" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
@@ -853,6 +4811,12 @@
     </Package>
     <Package id="pro_ds_linux_t4_60month" QtyIsDuration="false">
         <ProductId>458294</ProductId>
+        <ChildProducts>
+            <ProductId>483566</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3605" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
@@ -865,6 +4829,12 @@
     </Package>
     <Package id="pro_ds_linux_t5_1month" QtyIsDuration="false">
         <ProductId>458296</ProductId>
+        <ChildProducts>
+            <ProductId>483566</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3604" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
@@ -877,6 +4847,12 @@
     </Package>
     <Package id="pro_ds_linux_t5_3month" QtyIsDuration="false">
         <ProductId>458299</ProductId>
+        <ChildProducts>
+            <ProductId>483566</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3604" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
@@ -889,6 +4865,12 @@
     </Package>
     <Package id="pro_ds_linux_t5_6month" QtyIsDuration="false">
         <ProductId>458301</ProductId>
+        <ChildProducts>
+            <ProductId>483566</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3604" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
@@ -901,6 +4883,12 @@
     </Package>
     <Package id="pro_ds_linux_t5_12month" QtyIsDuration="false">
         <ProductId>458302</ProductId>
+        <ChildProducts>
+            <ProductId>483566</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3604" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
@@ -913,6 +4901,12 @@
     </Package>
     <Package id="pro_ds_linux_t5_24month" QtyIsDuration="false">
         <ProductId>458304</ProductId>
+        <ChildProducts>
+            <ProductId>483566</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3605" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
@@ -925,6 +4919,12 @@
     </Package>
     <Package id="pro_ds_linux_t5_36month" QtyIsDuration="false">
         <ProductId>458306</ProductId>
+        <ChildProducts>
+            <ProductId>483566</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3605" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
@@ -937,6 +4937,12 @@
     </Package>
     <Package id="pro_ds_linux_t5_48month" QtyIsDuration="false">
         <ProductId>458308</ProductId>
+        <ChildProducts>
+            <ProductId>483566</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3605" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
@@ -949,6 +4955,12 @@
     </Package>
     <Package id="pro_ds_linux_t5_60month" QtyIsDuration="false">
         <ProductId>458310</ProductId>
+        <ChildProducts>
+            <ProductId>483566</ProductId>
+        </ChildProducts>
+        <Rules>
+            <Rule Name="FreeSSL" SSLId="3605" />
+        </Rules>
         <AddOns>
             <AddOnGroup MaxSelection="1">
                 <AddOn Name="pro_ds_os_linux" ProductId="483566" MatchParentDuration="true" MaxQty="1"/>
