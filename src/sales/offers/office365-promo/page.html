@@ -1,6 +1,6 @@
 ---
 location: sales/offers/office365-promo.aspx
-id: 54456f75f778fc1ba009aa33
+id: 5446e28ef778fc1834a2acab
 name: GCE-30495
 comments: GOT1 and GOT2 followups
 url: http://www.dev-godaddy.com/offers/office365-promo.aspx
@@ -81,7 +81,7 @@ metaOgDescription:  "[@L[cds.sales/offers/office365-promo:og-description]@L]"
 {% endless %}
 </style>
 <!-- end-css-elevate -->
-##if(splitTestingSideIsActive(1387,B))
+##if(splitTestingSideIsActive(1387,A))
 <style>
 {% less %}
   .a-1387 {display:block!important;}
@@ -638,7 +638,7 @@ metaOgDescription:  "[@L[cds.sales/offers/office365-promo:og-description]@L]"
       urlFragment    += '/' + $(this).data('ci'); //ci code
       urlFragment    += '/' + '1';                // quantity
       urlFragment    += '/' + got2Page.packageId  //Plan Name (aka Package Id)
-      var addUrl = '[@T[link:<relative path="/api/package/add{0}" parammode="explicit"/>]@T]'.replace('{0}', urlFragment);
+      var addUrl = got2Page.apiUrl.add.replace('{0}', urlFragment);
 
       addUrl += ((addUrl.indexOf('?') > -1) ? '&' : '?') + 'domain=' + domain + '&sourceCode=domaincheck';
   

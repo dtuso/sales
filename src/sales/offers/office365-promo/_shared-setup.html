@@ -25,6 +25,10 @@
       bingAdCredits: '[@T[currencyprice:<price usdamount="10000" dropdecimal="true" htmlsymbol="false" />]@T]'
     },
     isManager: false,
+    apiUrl: {
+      update: '[@T[link:<relative path="/api/package/update{0}"/>]@T]',
+      add: '[@T[link:<relative path="/api/package/add{0}"/>]@T]'
+    },
     redirectUrl: {
       cart: '[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]',
       config: '[@T[link:<relative path="offers/office365-promo-config.aspx"></relative>]@T]'

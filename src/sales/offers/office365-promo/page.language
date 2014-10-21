@@ -1,6 +1,6 @@
 ---
 location: localization/sales/offers/office365-promo/en
-id: 54456f62f778fc1ba009aa32
+id: 5446b4f3f778fc1834a2ac81
 name: GCE-30495
 comments: GOT1 and GOT2 followups
 ---
@@ -129,16 +129,6 @@ One promotional credit per customer for a new Microsoft&reg; Advertiser account.
 View Details
 <phrase key="included-product-wraparound-text" />
 Top professional tools at a rock-bottom price &ndash; exclusively from Godaddy
-<phrase key="split-30495-excel" />
-Excel
-<phrase key="split-30495-onenote" />
-OneNote
-<phrase key="split-30495-outlook" />
-Outlook
-<phrase key="split-30495-word" />
-Word
-<phrase key="split-30495-powerpoint" />
-PowerPoint
 <phrase key="split-30495-domain-name" />
 Domain Name
 <phrase key="split-30495-website" />
