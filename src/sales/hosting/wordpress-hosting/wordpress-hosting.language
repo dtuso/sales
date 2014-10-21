@@ -111,7 +111,7 @@ Free domain with annual plan - <span class="g-toolTip restrictions-link">Restric
 <phrase key="wordpress-hosting-4-OneClickMigrationTool" />
 One-click migration tool
 <phrase key="wordpress-hosting-23-SFTPAccessProtectFilesAsTheirTransferredToOr" />
-<span class="g-toolTip">sFTP access<span>Protect files as their transferred to or from your site by encrypting them through a Secure FTP (sFTP) connection </span></span> to WordPress files
+<span class="g-toolTip">sFTP access<span>Protect files as they are transferred to or from your site by encrypting them through a Secure FTP (sFTP) connection </span></span> to WordPress files
 <phrase key="wordpress-hosting-2-NightlyBackups" />
 Nightly backups
 <phrase key="wordpress-hosting-7-RedundantFirewallsMalwareScanningAndDDoSProtection" />
