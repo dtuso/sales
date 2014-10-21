@@ -2,7 +2,7 @@
 location: sales/homepage/marquee/ssl-security-guard/default_template
 id: 5444df7af778fc1ba009a9e8
 name: GCE-29420
-ctaLink: "[@T[link:<relative path='/ssl/ssl-certificates.aspx'><param name='ci' value='94084' /></relative>]@T]"
+ctaLink: "[@T[link:<relative path='/ssl/ssl-certificates.aspx'><param name='ci' value='94099' /></relative>]@T]"
 elementId: ssl-security-guard
 ---
 extends ../../../layouts/homepage/marqueeLeftHeadline
@@ -10,14 +10,15 @@ block marqueeLeftHeadlineStyles
 	style.
 		#ssl-security-guard .left-column { padding-top: 40px; }
 		#ssl-security-guard .left-column .headline { line-height: 0.8; }
-		#ssl-security-guard .uptime, .price { font-family: 'Walsheim-Bold'; }
+		#ssl-security-guard .right-column { line-height: 1; padding-top: 90px; }
+		#ssl-security-guard .onsale, .price { font-family: 'Walsheim-Bold'; }
 		#ssl-security-guard .product { font-family: 'Walsheim-Black'; }
 		#ssl-security-guard .price { color: #ff8a00; }
 block leftColumn
-	.headline <div class="bigtext" style="width:50%;"><div class="line tungsten">SSL CERTIFICATES</div></div><div class="bigtext" style="width:100%"><div class="line walsheim">LIKE AN ONLINE</div><div class="line tungsten">SECURITY GUARD.</div><div class="line walsheim">THAT NEVER TAKES A BREAK.</div><div class="line tungsten"><span class='inline-dash' style='max-width:300px;'>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</span> EVER</div></div>
+	.headline [@L[cds.sales/homepage/marquee/ssl-security-guard:headline]@L]
 block rightColumn
 	.bigtext
-		.uptime ONE SALE NOW
-		.product SSL CERTIFICATES
-		.price NOW JUST $XX.XX/YR
-	a.btn.btn-warning.btn-lg.btn-cta(href=ctaLink) [@L[cds.sales/homepage/marquee/hosting-awesome:cta-text]@L]
+		.onsale [@L[cds.sales/homepage/marquee/ssl-security-guard:onsale]@L]
+		.product [@L[cds.sales/homepage/marquee/ssl-security-guard:product]@L]
+		.price [@L[cds.sales/homepage/marquee/ssl-security-guard:price]@L]
+	a.btn.btn-warning.btn-lg.btn-cta(href!=ctaLink) [@L[cds.sales/homepage/marquee/hosting-awesome:cta-text]@L]
