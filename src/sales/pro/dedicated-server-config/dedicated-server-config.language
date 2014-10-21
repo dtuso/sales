@@ -1,6 +1,6 @@
 ---
 location: localization/sales/gd/pro/dedicated-server-config/en
-id: 5421dd8ff778fc2490ac4dd9
+id: false
 name: GCE-27519
 comments: Web Pro dedicated server config page
 ---
@@ -65,12 +65,16 @@ No control panel or backups. Command-line only for hardcore server pros.
 32 GB
 <phrase key="40GB" />
 40 GB
+<phrase key="512GB" />
+512 GB
 <phrase key="1TB" />
 1 TB
 <phrase key="1.5TB" />
 1.5 TB
 <phrase key="2TB" />
 2 TB
+<phrase key="5TB" />
+5 TB
 <phrase key="10TB" />
 10 TB
 <phrase key="15TB" />
