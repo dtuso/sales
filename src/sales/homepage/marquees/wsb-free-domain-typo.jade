@@ -1,0 +1,31 @@
+---
+location: sales/homepage/marquee/wsb-free-domain-typo/default_template
+id: 5445aa75f778fc1834a2ac39
+name: GCE-25391
+ctaLink: "[@T[link:<relative path='/hosting/website-builder.aspx'><param name='ci' value='94097' /></relative>]@T]"
+elementId: wsb-free-domain-typo
+---
+extends ../../../layouts/homepage/marqueeLeftHeadline
+block marqueeLeftHeadlineStyles
+	style.
+		.gdhp-domains-logo,.gdhp-wsb-logo,.gdhp-store-logo,.gdhp-getfound-logo,.gdhp-support-logo{background: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/marquee-wsb-icons.png) scroll no-repeat;display:inline-block;}
+		.gdhp-domains-logo{background-position:-410px -170px;width:50px;height:56px;margin:12px 50px 0 0}
+		.gdhp-wsb-logo{background-position:-410px -236px;width:45px;height:47px;margin:16.5px 55px 0 0}
+		.gdhp-wsb-text{vertical-align:18px;}
+		.domains-container { line-height: 1; display: inline-block; float: left; font-size: 28px; background: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/marquee-wsb-icons.png) scroll no-repeat; background-position: 0 0; height: 200px; width: 140px;padding-top: 160px;text-align: center;margin-right:30px;}
+		.plus-container { display: inline-block; float: left; font-size: 28px; background: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/marquee-wsb-icons.png) scroll no-repeat; background-position: -150px 0; height: 200px; width: 80px;margin-right:30px;}
+		.wsb-container { display: inline-block; font-size: 28px; background: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/marquee-wsb-icons.png) scroll no-repeat; background-position: -230px 0; height: 200px; width: 140px;padding-top: 152px;text-align: center;}
+		#wsb-free-domain-typo .gdhp-domains-logo, #wsb-free-domain-typo .gdhp-wsb-logo { font-size: 24px; text-align: center; color: #000;}
+		#wsb-free-domain-typo .left-column { padding-top: 100px; color: #333; }
+		#wsb-free-domain-typo .right-column { width: 280px; margin-left:130px; padding-top:40px;}
+		#wsb-free-domain-typo .sub-headline { font-size: 20px;line-height: 1;font-family: Walsheim-Bold;margin: 20px 0; text-align: left;}
+block leftColumn
+	.wsb-icon-container
+		.domains-container.tungsten [@L[cds.sales/homepage/marquee/wsb-free-domain-typo:domain]@L]
+		.plus-container 
+		.wsb-container.tungsten [@L[cds.sales/homepage/marquee/wsb-free-domain-typo:website-builder]@L]
+block rightColumn
+	.headline [@L[cds.sales/homepage/marquee/wsb-free-domain-typo:headline]@L]
+	.sub-headline [@L[cds.sales/homepage/marquee/wsb-free-domain-typo:sub-headline]@L]
+	a.btn.btn-warning.btn-lg.btn-cta(href!=ctaLink) [@L[cds.sales/homepage/marquee/wsb-free-domain-typo:cta-text]@L]
+	.restrictions [@L[cds.sales/homepage/marquee/wsb-free-domain-typo:restrictions]@L]
