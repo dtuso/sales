@@ -1,0 +1,31 @@
+---
+location: sales/homepage/marquee/domain-privacy/default_template
+id: false
+name: GCE-29339
+ctaLink: "[@T[link:<relative path='/domainaddon/private-registration.aspx'><param name='ci' value='94102' /></relative>]@T]"
+elementId: domain-privacy
+---
+extends ../../../layouts/homepage/marqueeLeftHeadline
+block marqueeLeftHeadlineStyles
+	style.
+		#domain-privacy {background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/bg-privacy-personalization.jpg) no-repeat top center;}
+		#domain-privacy .left-column { padding-top: 80px; }
+		#domain-privacy .left-column .headline { line-height: 0.85; }
+		#domain-privacy .right-column { width: 280px; margin-left:90px; padding-top:100px;}
+		#domain-privacy .right-column .bigtext {line-height: .9;}
+		.orange-text {color:#ff8a00;}
+block leftColumn
+	.headline [@L[cds.sales/homepage/marquee/domain-privacy:headline]@L]
+block rightColumn
+	.bigtext
+		.promo.tungsten [@L[cds.sales/homepage/marquee/domain-privacy:promo]@L]
+		.promo.walsheim [@L[cds.sales/homepage/marquee/domain-privacy:promo-additional]@L]
+		| 
+		##if(productHasSavingsMoreThan(7001, 7001, 0))
+		| 
+		.savings.tungsten [@L[cds.sales/homepage/marquee/domain-privacy:savings]@L]
+		| 
+		##endif
+		|  
+		.price.walsheim.orange-text [@L[cds.sales/homepage/marquee/domain-privacy:price]@L]
+	a.btn.btn-warning.btn-lg.btn-cta(href!=ctaLink) [@L[cds.sales/homepage/marquee/domain-privacy:cta-text]@L]
