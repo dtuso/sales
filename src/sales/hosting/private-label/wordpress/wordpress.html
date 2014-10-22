@@ -1,6 +1,6 @@
 ---
 location: sales/hosting/private-label/wordpress.aspx
-id:   543ec5c0f778fc172c27ca49
+id:   54469e92f778fc1834a2ac79
 name: GCE-25511
 comments: adding tables
 assetPath: false
@@ -55,11 +55,11 @@ localVars: true
 <section class="tabbed-section">
   <div class="container">  
     <ul class="nav nav-tabs">
-      <li class="active"><a href="#plans-pricing" data-toggle="tab">Plans &amp; Pricing</a></li>
-      <li><a href="#benefits" data-toggle="tab">Benefits</a></li>
-      <li><a href="#ours-vs-theirs" data-toggle="tab">Ours vs. Theirs</a></li>
-      <li><a href="#tech-specs" data-toggle="tab">Tech Specs</a></li>
-      <li><a href="#faq" data-toggle="tab">FAQ</a></li>
+      <li class="active"><a class='js-tab-init' href="#plans-pricing">Plans &amp; Pricing</a></li>
+      <li><a class='js-tab-init'href="#benefits">Benefits</a></li>
+      <li><a class='js-tab-init'href="#ours-vs-theirs">Ours vs. Theirs</a></li>
+      <li><a class='js-tab-init'href="#tech-specs">Tech Specs</a></li>
+      <li><a class='js-tab-init'href="#faq">FAQ</a></li>
     </ul>
     <div class="tab-content">
         <div class="tab-pane active" id="plans-pricing">
@@ -104,13 +104,68 @@ localVars: true
 <script src="[@T[link:<javascriptroot />]@T]fos/script/atlantis_jquery14.min.js" type="text/javascript"></script>
 <script src="[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2" type="text/javascript"></script>
 <script type="text/javascript">
-$('#myTab a').click(function (e) {
-   e.preventDefault();
-   $(this).tab('show');
+
+function firstTabCheck(){
+    if ($('#plans-pricing').is(':visible')) {
+      $('#plans-pricing-sub-section').show();
+    } else {
+      $('#plans-pricing-sub-section').hide();
+    }
+}
+
+$('.nav-tabs a.js-tab-init').each(function() {
+    var $this = $(this);
+    $this.click(function (e) {
+        e.preventDefault();
+        $this.tab('show');
+        firstTabCheck();
+    });
 });
 
-$(function () {
-$('#myTab a:last').tab('show');
-})
+
+function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+    results = regex.exec(location.search);
+    return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+
+$('.add-to-cart-btn').on('click', function() {
+    var url = '[@T[link:<relative path="/api/package" parammode="explicit"/>]@T]';
+    var planselected = $(this).attr('data-plan');
+    var domain = $(this).attr('data-isqualified');
+    var cicode = $(this).attr('data-ci');
+    var mgrNumber = getParameterByName('mgrshopper');
+
+    url += '/add'; //action
+    ##if(isManager())
+    url += '/mgr_slp_wordpress'; //mgr itc code
+    ##else
+    url += '/slp_wordpress'; //itc code
+    ##endif
+    url += '/' + cicode; //ci code
+    url += '/1';
+    url += '/' + planselected; //Plan Name
+
+    ##if(isManager())
+    url += '/?mgrshopper=' +  mgrNumber;
+    ##endif
+
+    $.getJSON(url, function (data) {
+        if (data.Success == true) {
+            if (domain == 1) {
+                window.location = '[@T[link:<relative path="/hosting/wordpress-hosting-config.aspx" />]@T]';
+            }  else {
+                ##if(isManager())
+                window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]';
+                ##else
+                window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]';
+                ##endif
+            }
+        }
+    });
+});
+
+
 </script>
 {% endblock %}
