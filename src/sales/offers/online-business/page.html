@@ -1,8 +1,8 @@
 ---
 location: sales/offers/online-business.aspx
-id: 54415759f778fc0ce0d0fa4e
-name: GCE-29310
-comments: Roll Out GOT in International Markets - Sales LP
+id: 54455bfdf778fc1ba009aa2d
+name: GCE-30495
+comments: GOT1 and GOT2 followups
 url: http://www.dev-godaddy.com/offers/online-business.aspx
 assetPath: false
 metaTitle: "[@L[cds.sales/offers/online-business:page-title]@L]"
@@ -810,8 +810,8 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
   #product-storage .icon {background-position:0 -720px;}
       
   .grid-column {border:1px solid #CCC;}
-  .wraparound p {color:#fff;text-transform:uppercase;font-weight:200;font-size:24px;line-height:1.4em;margin:0;}
-  .wraparound {
+  #included-productsRow .wraparound p {color:#fff;text-transform:uppercase;font-weight:200;font-size:24px;line-height:1.4em;margin:0;}
+  #included-productsRow .wraparound {
     position: relative;
     top:-60px;
     padding: 5px;
@@ -822,20 +822,10 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
     box-shadow: 0 4px 4px rgba(0,0,0,0.3);
     text-align:center;
   }
-  .wraparound:before {
-    border-left: 6px solid transparent;
-    left: -1px;
-  }
-  .wraparound:before, .wraparound:after {
-    content: " ";
-    border-top: 6px solid #954709;
-    position: absolute;
-    bottom: -7px;
-  }
-  .wraparound:after {
-    border-right: 6px solid transparent;
-    right: -1px;
-  }
+  #included-productsRow .wraparound:before {border-left: 6px solid transparent;left: -1px;}
+  #included-productsRow .wraparound:before, 
+  #included-productsRow .wraparound:after {content: " ";border-top: 6px solid #954709;position: absolute;bottom: -7px;}
+  #included-productsRow .wraparound:after {border-right: 6px solid transparent;right: -1px;}
   #product-workspace .product-icon.email {padding:20px 0;text-align:center;height:85px;font-size:16px;}
 {% endless %}
 </style>
@@ -1119,10 +1109,20 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
 {% less %}
   #disclaimers { font-size:14px; margin:20px auto 0; line-height:14px; width:1000px; }
   
-  #disclaimers a,#disclaimers a:link,
-  #disclaimers a:visited{color:#333; text-decoration:underline}
-  #disclaimers a:active,
-  #disclaimers a:hover{color:#7db701}
+  #disclaimers p {margin-bottom:2px;}
+  #disclaimers .disclaimer-link-area a,
+  #disclaimers .disclaimer-link-area a:link,
+  #disclaimers .disclaimer-link-area a:visited{color:#333; text-decoration:underline}
+  #disclaimers .disclaimer-link-area a:active,
+  #disclaimers .disclaimer-link-area a:hover{color:#7db701}
+
+  #disclaimers .bing-ad-credits-area .g-toolTip span.g-toolTip-tip:after {border-bottom: 18px solid rgba(0, 0, 0, 0);border-right: 14px solid #262626;left: -14px;}
+  #disclaimers .bing-ad-credits-area .g-toolTip span.g-toolTip-tip {right: -310px;width: 300px;top: 5px;}
+  #disclaimers .bing-ad-credits-area a,
+  #disclaimers .bing-ad-credits-area a:link,
+  #disclaimers .bing-ad-credits-area a:visited{color:#7db701; text-decoration:underline;}
+  #disclaimers .bing-ad-credits-area a:active,
+  #disclaimers .bing-ad-credits-area a:hover{color:#7db701}
 
   #disclaimerModal .modal-title {font-size:24px;}
   #disclaimerModal .modal-dialog {width: 600px;}
@@ -1139,9 +1139,22 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
 
 <section class="misc-banner-generic">
   <div class="l-main-container container main-banner-content">
-  <!-- Page Disclaimer -->
+    <!-- Page Disclaimer -->
     <div id="disclaimers">
-      <p>
+    ##if(countrySiteAny(www))
+      <p class="bing-ad-credits-area price-hide">
+        [@L[cds.sales/offers/online-business:30495-bing-also-includes]@L]
+        &nbsp;&ndash;&nbsp;
+        <span class="g-toolTip">
+          [@L[cds.sales/offers/online-business:30495-bing-restrictions-apply]@L]
+          <span class="g-toolTip-tip right">
+            [@L[cds.sales/offers/online-business:30495-bing-restrictions-apply-rollover-text]@L]
+            &nbsp;<a data-ci="94094" href="javascript:void(window.open('https://advertise.bingads.microsoft.com/en-us/godaddy/learn','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=1060,height=675'))">[@L[cds.sales/offers/online-business:30495-bing-restrictions-apply-view-details]@L]</a>
+          </span>
+        </span>
+      </p>
+    ##endif
+      <p class="disclaimer-link-area">
         <a class="simple-link" href="#" data-toggle="modal" data-target="#disclaimerModal" data-ci="92746">[@L[cds.sales/offers/online-business:disclaimer-modal-link]@L]</a>
       </p>
     </div>
@@ -1182,7 +1195,8 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
         },
         pricing: {
           promo: '[@T[productprice:<current productid="464069" period="monthly" promocode="24681357" />]@T]',
-          bundleRenewal: '[@T[multipleproductprice:<list productidlist="101|7524|464069" period="monthly"></list>]@T]'
+          bundleRenewal: '[@T[multipleproductprice:<list productidlist="101|7524|464069" period="monthly"></list>]@T]',
+          bingAdCredits: '[@T[currencyprice:<price usdamount="5000" dropdecimal="true" htmlsymbol="false" />]@T]'
         }
       };
           
@@ -1201,6 +1215,7 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
         });
         tokenizePrice(".price", got1Page.pricing.promo );
         tokenizePrice(".original-price", got1Page.pricing.bundleRenewal );
+        tokenizePrice(".got-bing-ad-credits", got1Page.pricing.bingAdCredits);
         
         $('[data-ci]').click(function (e) {
             var $this = $(this);

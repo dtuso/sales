@@ -1,8 +1,8 @@
 ---
 location: sales/offers/office365-promo.aspx
-id: 54405746f778fc0b78c97ca3
-name: GCE-27686
-comments: New GOT2 POB Landing Page and Config Page continuation
+id: 5446e28ef778fc1834a2acab
+name: GCE-30495
+comments: GOT1 and GOT2 followups
 url: http://www.dev-godaddy.com/offers/office365-promo.aspx
 assetPath: false
 metaTitle:          "[@L[cds.sales/offers/office365-promo:page-title]@L]"
@@ -81,6 +81,25 @@ metaOgDescription:  "[@L[cds.sales/offers/office365-promo:og-description]@L]"
 {% endless %}
 </style>
 <!-- end-css-elevate -->
+##if(splitTestingSideIsActive(1387,A))
+<style>
+{% less %}
+  .a-1387 {display:block!important;}
+  .b-1387 {display:none!important;}
+  div.included-products-floater .included-products-leftside {padding-top:30px;}
+  div.included-products-floater .included-products-rightside {padding-top:43px;}
+{% endless %}
+</style>
+##else
+<style>
+{% less %}
+  .a-1387 {display:none!important;}
+  .b-1387 {display:block!important;}
+  div.included-products-floater .included-products-leftside {padding-top:80px;}
+  div.included-products-floater .included-products-rightside {padding-top:93px;}
+{% endless %}
+</style>
+##endif
 
 {% include './_shared-setup.html' %}
 
@@ -221,26 +240,36 @@ metaOgDescription:  "[@L[cds.sales/offers/office365-promo:og-description]@L]"
 
   #domainRow {background-color: #F9F9F9; position:relative;/* relative used to position the ribbon*/}
   #domainRow .main-banner-content {text-align:left;width:1400px;padding:0;}
-  #domainRow h1.main-banner-title { margin: 35px 0 15px; font-size:24px; color:#000; font-weight:300; text-transform: uppercase;}
-
-  #domainRow table h1.main-banner-title {margin-top: 0px;}
+  #domainRow h1.main-banner-title { margin: 0px 0 13px; font-size:24px; color:#000; font-weight:300; text-transform: uppercase;}
   #domainRow h2.main-banner-subtitle {font-size:62px; color:#000; line-height: 1.4em;}
+  #domainRow h2.main-banner-subtitle.b1387 {font-size:52px;margin-bottom:12px;}
   #domainRow p.main-banner-save,
   #domainRow p.main-banner-plus 
-  {font-size:26px; color:#000; margin-bottom:0px; line-height: 1.4em;}
+  {font-size:30px; color:#000; margin-bottom:0px; line-height: 1.4em;}
   #domainRow .get-started-btn {margin-top: 10px;}
-  #domainRow .discount-price-line-mo {font-size:38px; font-weight:300; line-height:1.4em; margin-top:72px;}
+  #domainRow .discount-price-line-mo {font-size:36px; font-weight:400; line-height:1.4em; margin-top:72px;}
   #domainRow table .discount-price-line-mo {margin-top: 0px;}
   #domainRow table {margin-top: 40px;}
   #domainRow .discount-price-line-yr {font-size:28px; font-weight:300; line-height:1.4em;}
   #domainRow .original-price-line {font-size:12px; font-weight:300; line-height:1.4em;}
   #domainRow .original-price-line .original-price {text-decoration:line-through;}
   #domainRow .renewal-disclaimer {font-size:12px; font-weight:300; line-height:1.4em;}
-  #domainRow .icon-row {width:330px;height:70px;margin-bottom:10px;display:block;}
+  #domainRow .icon-row {width:330px;height:70px;margin-bottom:10px;}
   
-  #domainRow div.got-slides {width:1000px;margin:0 auto; padding-bottom:73px;}  
-  #domainRow div.col-xs-7 {width:600px;padding:0px;}
-  #domainRow div.col-xs-5 {width:380px;padding:0 10px;}
+  #domainRow div.got-slides {width:1000px;margin:0 auto; padding-bottom:77px;} 
+  .top-banner-products {margin-bottom:14px;}
+  .top-banner-product-col {float:left;}
+  .top-banner-product-col .product-name {width:135px;text-align:center;margin-top:0px;text-transform:uppercase;font-size:16px;}
+  .top-banner-product-col .top-banner-product-symbols-addition {font-size: 32px;margin-top:46px;}
+  .col-office .top-banner-product-symbols-addition {margin-left:0px; margin-right:23px;}
+  .col-domain .top-banner-product-symbols-addition {margin-left:11px; margin-right:13px;}
+
+  .top-banner-product-image {float:left;height:125px;background: ~"url(@{imgPath}GOT2-sprite.png)" no-repeat transparent;}
+  .top-banner-product-image.office {width:243px;background-position:   -0px -0px;}
+  .top-banner-product-image.domain {width:135px;background-position: -292px -0px;}    
+  .top-banner-product-image.wsb    {width:124px;background-position: -488px -0px;} 
+
+  
 {% endless %}
 </style>
 <!-- end-css-elevate -->
@@ -266,21 +295,60 @@ metaOgDescription:  "[@L[cds.sales/offers/office365-promo:og-description]@L]"
         <div class="row got-slide got-slide-1">
           <table border="0" cellspacing="5" cellspacing="0">
             <tr>
-              <td width="600" valign="center">                
-                <h1 class="main-banner-title condensed text-left">[@L[cds.sales/offers/office365-promo:top-banner-headline]@L]</h1>
-                <img class="icon-row" src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/office365-promo/img/MSFT-icons.png" />
-                <h2 class="main-banner-subtitle text-left">[@L[cds.sales/offers/office365-promo:top-banner-best-deal]@L]</h2>
-                <p class="main-banner-save">[@L[cds.sales/offers/office365-promo:top-banner-save]@L]</p>
-                <p class="main-banner-plus">[@L[cds.sales/offers/office365-promo:top-banner-plus]@L]</p>
+              <td width="690" valign="center">
+                <div class="a-1387">
+                  <h1 class="main-banner-title condensed text-left">[@L[cds.sales/offers/office365-promo:top-banner-headline]@L]</h1>
+                  <img class="icon-row" src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/office365-promo/img/MSFT-icons.png" />
+                  <h2 class="main-banner-subtitle text-left">[@L[cds.sales/offers/office365-promo:top-banner-best-deal]@L]</h2>                  
+                  <p class="main-banner-save">[@L[cds.sales/offers/office365-promo:top-banner-save]@L]</p>
+                  <p class="main-banner-plus">[@L[cds.sales/offers/office365-promo:top-banner-plus]@L]</p>
+                </div>
+                <div class="b-1387">
+                  <h1 class="main-banner-title condensed text-left">[@L[cds.sales/offers/office365-promo:top-banner-headline-split-30495]@L]</h1>
+                  <h2 class="main-banner-subtitle b1387 text-left">[@L[cds.sales/offers/office365-promo:top-banner-best-deal-split-30495]@L]</h2>
+
+                  <div class="top-banner-products row">
+                    <div class="top-banner-product-col col-office">
+                      <div class="clearfix">
+                        <div class="top-banner-product-image office"></div>
+                        <div class="top-banner-product-symbols-addition uxicon uxicon-plus"></div>
+                      </div>
+                    </div>
+                    <div class="top-banner-product-col col-domain">
+                      <div class="clearfix">
+                        <div class="top-banner-product-image domain"></div>
+                        <div class="top-banner-product-symbols-addition uxicon uxicon-plus"></div>
+                      </div>
+                      <div class="product-name condensed domain">[@L[cds.sales/offers/office365-promo:split-30495-domain-name]@L]</div>
+                    </div>
+                    <div class="top-banner-product-col col-wsb">
+                      <div class="clearfix">
+                        <div class="top-banner-product-image wsb"></div>
+                      </div>
+                      <div class="product-name condensed wsb">[@L[cds.sales/offers/office365-promo:split-30495-website]@L]</div>
+                    </div>
+                  </div>
+
+                  <p class="main-banner-plus">[@L[cds.sales/offers/office365-promo:top-banner-plus-split-30495]@L]</p>
+                </div>
               </td>
-              <td width="400" valign="center" class="text-center">
+              <td width="310" valign="center" class="text-center">
                 <div class="discount-price-line-mo gd-color-secondary price-hide">[@L[cds.sales/offers/office365-promo:top-banner-per-user-discount-price-mo]@L]</div>
                 <div class="discount-price-line-yr price-hide">[@L[cds.sales/offers/office365-promo:top-banner-per-user-discount-price-yr]@L]</div>
                 <div class="get-started-btn btn btn-warning cta-medium" data-ci="93815">[@L[cds.sales/offers/office365-promo:top-banner-get-started]@L]</div>
+                
                 <div class="original-price-line price-hide">[@L[cds.sales/offers/office365-promo:top-banner-original-price]@L]</div>
-                <div class="renewal-disclaimer">
-                  [@L[cds.sales/offers/office365-promo:top-banner-renewal-price-disclaimer]@L]
-                  <a class="simple-link" href="#" data-toggle="modal" data-target="#myModal" data-ci="93817">[@L[cds.sales/offers/office365-promo:top-banner-see-offer-details]@L]</a>
+                <div class="a-1387">
+                  <div class="renewal-disclaimer">
+                    [@L[cds.sales/offers/office365-promo:top-banner-renewal-price-disclaimer]@L]
+                    <a class="simple-link" href="#" data-toggle="modal" data-target="#disclaimerModal" data-ci="93817">[@L[cds.sales/offers/office365-promo:top-banner-see-offer-details]@L]</a>
+                  </div>
+                </div>
+                <div class="b-1387">
+                  <div class="renewal-disclaimer">
+                    [@L[cds.sales/offers/office365-promo:top-banner-renewal-price-disclaimer-split-30495]@L]
+                    <a class="simple-link" href="#" data-toggle="modal" data-target="#disclaimerModal" data-ci="93817">[@L[cds.sales/offers/office365-promo:top-banner-see-offer-details]@L]</a>
+                  </div>
                 </div>
               </td>
             </tr>
@@ -570,7 +638,7 @@ metaOgDescription:  "[@L[cds.sales/offers/office365-promo:og-description]@L]"
       urlFragment    += '/' + $(this).data('ci'); //ci code
       urlFragment    += '/' + '1';                // quantity
       urlFragment    += '/' + got2Page.packageId  //Plan Name (aka Package Id)
-      var addUrl = '[@T[link:<relative path="/api/package/add{0}" parammode="explicit"/>]@T]'.replace('{0}', urlFragment);
+      var addUrl = got2Page.apiUrl.add.replace('{0}', urlFragment);
 
       addUrl += ((addUrl.indexOf('?') > -1) ? '&' : '?') + 'domain=' + domain + '&sourceCode=domaincheck';
   
@@ -662,18 +730,41 @@ metaOgDescription:  "[@L[cds.sales/offers/office365-promo:og-description]@L]"
 
   @imgPath : '[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/office365-promo/img/';
   
-  #included-productsRow h2.title {margin-bottom:22px; font-weight:300; font-size:72px; text-align:left; line-height: 1.2em;}
+  #included-productsRow h2.title {margin-bottom:27px; font-weight:300; font-size:82px; text-align:left; line-height: 1.2em;}
   #included-productsRow h3.bullet-heading {margin-bottom:14px; font-weight:200; font-size:30px; text-align:left; color:#000;}
   #included-productsRow p {font-weight:300; font-size:19px; text-align:left; line-height:1.5em; color:#000;}
+  html[lang^=en] #included-productsRow p {text-align: justify;}
   #included-productsRow .details {margin-bottom:50px; padding-left:24px;}
   #included-productsRow ul.details li h4 {font-weight:700; font-size:22px; text-align:left; line-height:1.4em; margin: 0; padding:0; color:#000;}
-  #included-productsRow ul.details li p  {font-weight:300; font-size:15px; text-align:left; line-height:1.4em; color:#000;}
+  #included-productsRow ul.details li p  {font-weight:300; font-size:15px; text-align:justify; line-height:1.4em; color:#000;}
   #included-productsRow ul.details { list-style-image: ~"url(@{imgPath}check.png)"; padding-left: 24px; }
   .included-products-banner {background-size:cover; background-image:~"url(@{imgPath}main-back.jpg)"; background-repeat:no-repeat;}  
-  .included-products-floater {position: relative; top: -20px;}
+  .included-products-floater {position: relative; top: -36px;}
   .included-products-wrapper {border: 1px solid #ccc; background-color: #fff; margin-bottom:30px;padding-bottom:31px;}
-  .included-products-leftside {float: left; width:405px; padding: 42px 25px 0 50px;}
-  .included-products-rightside {float: left; width:525px; padding: 55px 25px 0 25px;}
+  .included-products-leftside {float: left; width:405px; padding: 60px 25px 0 50px;}
+  .included-products-rightside {float: left; width:525px; padding: 73px 25px 0 25px;}
+
+  #included-productsRow .wraparound p {color:#fff;text-transform:uppercase;font-weight:400;font-size:24px;line-height:1.4em;margin:0;text-align: center;}
+  #included-productsRow .wraparound {
+    position: absolute;
+    width:1012px;
+    top:17px;
+    padding: 5px;
+    margin: 0 -6px;
+    border: 1px solid #e67c00;
+    background: #ff8a00;
+    color: #fff;
+    box-shadow: 0 4px 4px rgba(0,0,0,0.3);
+    text-align:center;
+  }
+  #included-productsRow .wraparound:before {border-left: 6px solid transparent;left: -1px;}
+  #included-productsRow .wraparound:before, 
+  #included-productsRow .wraparound:after {content: " ";border-top: 6px solid #954709; position: absolute;bottom: -7px;}
+  #included-productsRow .wraparound:after {border-right: 6px solid transparent;right: -1px;}
+
+  #included-productsRow .whats-included-products {margin:0 0 25px 0;}
+  .whats-included-products img {display:block;width:290px;margin:0 auto;}
+
 {% endless %}
 </style>
 <!-- end-css-elevate -->
@@ -681,13 +772,21 @@ metaOgDescription:  "[@L[cds.sales/offers/office365-promo:og-description]@L]"
 <section id="included-productsRow">
   <div class="included-products-banner">
     <div class="container l-main-container included-products-floater">
+      <div class="b-1387 wraparound">
+        <p>[@L[cds.sales/offers/office365-promo:included-product-wraparound-text]@L]</p>
+      </div>
       <div class="row included-products-wrapper">
         <div class="included-products-leftside">
           <h2 class="title gd-color-primary">[@L[cds.sales/offers/office365-promo:included-whats-included]@L]</h2>
-          <p class="price-hide">[@L[cds.sales/offers/office365-promo:included-whats-included-details]@L]</p>
+          <div class="whats-included-products row b-1387">
+            <img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/office365-promo/img/MSFT-icons-all.png" alt="[@L[cds.sales/offers/office365-promo:split-30495-excel]@L] [@L[cds.sales/offers/office365-promo:split-30495-onenote]@L] [@L[cds.sales/offers/office365-promo:split-30495-outlook]@L] [@L[cds.sales/offers/office365-promo:split-30495-word]@L] [@L[cds.sales/offers/office365-promo:split-30495-powerpoint]@L]" />
+          </div>
+          <p class="price-hide a-1387">[@L[cds.sales/offers/office365-promo:included-whats-included-details]@L]</p>
+          <p class="price-hide b-1387">[@L[cds.sales/offers/office365-promo:included-whats-included-details-split-30495]@L]</p>
           <div class="get-started-btn btn btn-warning cta-medium" data-ci="93815" data-scroll-event='{"obj":"#domainRow","yoffset":"-10"}'>[@L[cds.sales/offers/office365-promo:included-get-started]@L]</div>
         </div> <!-- included-products-leftside -->
-        <div class="included-products-rightside">
+        <div class="included-products-rightside a-1387">
+
           <h3 class="bullet-heading">[@L[cds.sales/offers/office365-promo:included-best-of-office]@L]</h3>
           <ul class="details">
             <li>
@@ -703,6 +802,28 @@ metaOgDescription:  "[@L[cds.sales/offers/office365-promo:og-description]@L]"
               <p>[@L[cds.sales/offers/office365-promo:included-office-storage-desc]@L]</p>
             </li>
           </ul>
+
+          <h3 class="bullet-heading">[@L[cds.sales/offers/office365-promo:included-best-of-godaddy]@L]</h3>
+          <ul class="details">
+            <li>
+              <h4 class="condensed">[@L[cds.sales/offers/office365-promo:included-godaddy-support]@L]</h4>
+              <p>[@L[cds.sales/offers/office365-promo:included-godaddy-support-desc]@L]</p>
+            </li>
+            <li>
+              <h4 class="condensed">[@L[cds.sales/offers/office365-promo:included-godaddy-domain]@L]</h4>
+              <p>[@L[cds.sales/offers/office365-promo:included-godaddy-domain-desc]@L]</p>
+            </li>
+            ##if(productIsOffered(98))
+            <li>
+              <h4 class="condensed">[@L[cds.sales/offers/office365-promo:included-godaddy-bookkeeping]@L]</h4>
+              <p>[@L[cds.sales/offers/office365-promo:included-godaddy-bookkeeping-desc]@L]</p>
+            </li>
+            ##endif
+
+          </ul>
+        </div> <!-- included-products-rightside -->
+        <div class="included-products-rightside b-1387">
+          
           <h3 class="bullet-heading">[@L[cds.sales/offers/office365-promo:included-best-of-godaddy]@L]</h3>
           <ul class="details">
             <li>
@@ -720,6 +841,23 @@ metaOgDescription:  "[@L[cds.sales/offers/office365-promo:og-description]@L]"
             </li>
             ##endif
           </ul>
+
+          <h3 class="bullet-heading">[@L[cds.sales/offers/office365-promo:included-best-of-office]@L]</h3>
+          <ul class="details">
+            <li>
+              <h4 class="condensed">[@L[cds.sales/offers/office365-promo:included-office-five-devices]@L]</h4>
+              <p>[@L[cds.sales/offers/office365-promo:included-office-five-devices-desc]@L]</p>
+            </li>
+            <li>
+              <h4 class="condensed">[@L[cds.sales/offers/office365-promo:included-office-email]@L]</h4>
+              <p>[@L[cds.sales/offers/office365-promo:included-office-email-desc]@L]</p>
+            </li>
+            <li>
+              <h4 class="condensed">[@L[cds.sales/offers/office365-promo:included-office-storage]@L]</h4>
+              <p>[@L[cds.sales/offers/office365-promo:included-office-storage-desc]@L]</p>
+            </li>
+          </ul>
+
         </div> <!-- included-products-rightside -->
       </div>
     </div>
@@ -741,14 +879,14 @@ metaOgDescription:  "[@L[cds.sales/offers/office365-promo:og-description]@L]"
   #team-up h2 {font-weight:200;font-size:54px;text-align:left;line-height:54px;display:block;padding-bottom:10px;}
   #team-up p {font-weight:200;font-size:26px;text-align:left;line-height:1.55em;margin-bottom:0;}
   #team-up .team-promo-text {padding:0 400px 0 0;}
-  #team-up .team-promo-img {float:right;}
+  #team-up .team-promo-img {float:right;width:276px;height:278px;background-position:0 -157px}
 {% endless %}
 </style>
 <!-- end-css-elevate -->
 
 <section id="team-up">
   <div class="container l-main-container">
-    <div class="team-promo-img solazy" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/office365-promo/img/logos.png">
+    <div class="team-promo-img solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/office365-promo/img/GOT2-sprite.png">
     </div>
     <div class="team-promo-text">
       <h2>[@L[cds.sales/offers/office365-promo:team-promo-text-headline]@L]</h2>
@@ -766,18 +904,27 @@ metaOgDescription:  "[@L[cds.sales/offers/office365-promo:og-description]@L]"
 
 <style>
 {% less %}
-  #myModal .modal-title {font-size:24px}
-  #myModal .modal-dialog {width:600px; font-size:16px; line-height:1.4em;}
-  /*
-  #disclaimers {font-size:16px;margin:20px auto 0;line-height:1.4em;}
-  #disclaimers a,
-  #disclaimers a:link,
-  #disclaimers a:visited 
-  {color:#000;text-decoration:underline;}
-  #disclaimers a:active,
-  #disclaimers a:hover 
-  {color:#7db701;}
-  */
+  #disclaimerModal .modal-title {font-size:24px}
+  #disclaimerModal .modal-dialog {width:730px; font-size:16px; line-height:1.4em;}
+
+  #disclaimers p {margin-bottom:2px;}
+  #disclaimers .disclaimer-link-area a,
+  #disclaimers .disclaimer-link-area a:link,
+  #disclaimers .disclaimer-link-area a:visited{color:#333; text-decoration:underline}
+  #disclaimers .disclaimer-link-area a:active,
+  #disclaimers .disclaimer-link-area a:hover{color:#7db701}
+
+  #disclaimers .bing-ad-credits-area .g-toolTip span.g-toolTip-tip:after {border-bottom: 18px solid rgba(0, 0, 0, 0);border-right: 14px solid #262626;left: -14px;}
+  #disclaimers .bing-ad-credits-area .g-toolTip span.g-toolTip-tip {right: -310px;width: 300px;top: 5px;}
+  #disclaimers .bing-ad-credits-area a,
+  #disclaimers .bing-ad-credits-area a:link,
+  #disclaimers .bing-ad-credits-area a:visited{color:#7db701; text-decoration:underline;}
+  #disclaimers .bing-ad-credits-area a:active,
+  #disclaimers .bing-ad-credits-area a:hover{color:#7db701}
+
+  #disclaimerModal .tlds-br,
+  #disclaimerModal .tlds-in,
+  #disclaimerModal .tlds-uk {display:none;}
 {% endless %}
 </style>
 <!-- end-css-elevate -->  
@@ -787,14 +934,27 @@ metaOgDescription:  "[@L[cds.sales/offers/office365-promo:og-description]@L]"
   <div class="l-main-container container main-banner-content">
   <!-- Page Disclaimer -->
     <div id="disclaimers">
+    ##if(countrySiteAny(www))
+      <p class="bing-ad-credits-area price-hide">
+        [@L[cds.sales/offers/office365-promo:30495-bing-also-includes]@L]
+        &nbsp;&ndash;&nbsp;
+        <span class="g-toolTip">
+          [@L[cds.sales/offers/office365-promo:30495-bing-restrictions-apply]@L]
+          <span class="g-toolTip-tip right">
+            [@L[cds.sales/offers/office365-promo:30495-bing-restrictions-apply-rollover-text]@L]
+            &nbsp;<a data-ci="94094" href="javascript:void(window.open('https://advertise.bingads.microsoft.com/en-us/godaddy/learn','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=1060,height=675'))">[@L[cds.sales/offers/office365-promo:30495-bing-restrictions-apply-view-details]@L]</a>
+          </span>
+        </span>
+      </p>
+    ##endif
       <p>
-        <a class="simple-link" href="#" data-toggle="modal" data-target="#myModal" data-ci="93811">[@L[cds.sales/offers/office365-promo:disclaimer-modal-link]@L]</a>
+        <a class="simple-link" href="#" data-toggle="modal" data-target="#disclaimerModal" data-ci="93811">[@L[cds.sales/offers/office365-promo:disclaimer-modal-link]@L]</a>
       </p>
     </div>
   </div>
 </section>
 
-<div class="modal fade" id="myModal">
+<div class="modal fade" id="disclaimerModal">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -847,6 +1007,9 @@ metaOgDescription:  "[@L[cds.sales/offers/office365-promo:og-description]@L]"
     tokenizePrice('.getpaid-price-yr', got2Page.pricing.yr.getpaid);
     tokenizePrice('.o365-price-yr', got2Page.pricing.yr.o365);
 
+    tokenizePrice(".got2-bing-ad-credits", got2Page.pricing.bingAdCredits);
+
+
     $('[data-ci]').click(function (e) {
       var $this = $(this);
       FastballEvent_MouseClick(e, $this.data('ci'), $this[0], 'a');
@@ -857,7 +1020,7 @@ metaOgDescription:  "[@L[cds.sales/offers/office365-promo:og-description]@L]"
       $(this).bind("click",scrollToEvent);
     });
 
-    populateTldsOnDisclaimerModal('#myModal .modal-body');
+    populateTldsOnDisclaimerModal('#disclaimerModal .modal-body');
   });
 
 

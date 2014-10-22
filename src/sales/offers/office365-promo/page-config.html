@@ -1,8 +1,8 @@
 ---
 location: sales/offers/office365-promo-config.aspx
-id: 54384a44f778fc2a8c21825d
-name: GCE-27637
-comments: New GOT POB Landing Page and Config Page
+id: 5446e536f778fc1834a2acb2
+name: GCE-30495
+comments: GOT1 and GOT2 followups
 url: http://www.dev-godaddy.com/offers/office365-promo-config.aspx
 metaCanonicalPath:  /offers/office365-promo-config.aspx
 assetPath: false
@@ -703,7 +703,7 @@ assetPath: false
         urlFragment += '/' + $(thisClick).data('ci'); //ci code
         urlFragment += '/' + office365config.productOrder.productQty;  // quantity
         urlFragment    += '/' + got2Page.packageId  //Plan Name (aka Package Id)
-        var url = '[@T[link:<relative path="/api/package/update{0}" parammode="explicit"/>]@T]'.replace('{0}', urlFragment);
+        var url = got2Page.apiUrl.update.replace('{0}', urlFragment);
 
         url += ((url.indexOf('?') > -1) ? '&' : '?') + 'domain=' + office365config.productOrder.domain + '&sourceCode=domaincheck';
         if (office365config.productOrder.addOns != 'noAddOns'){
