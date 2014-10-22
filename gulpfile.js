@@ -29,7 +29,6 @@ try {
   var argv        = require('minimist')(process.argv.slice(2));
   var getData     = require('./lib/project-data.js');
   var extras      = require('./lib/swig-extras');
-  var through     = require('through2');
 
   // underscore and mixins
   var _           = require('underscore');
