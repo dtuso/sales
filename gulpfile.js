@@ -181,7 +181,7 @@ gulp.task('language', function() {
     .pipe(changed(paths.build))
     .pipe(frontMatter({remove:true}))
     .pipe(swig(swigLangOpts))
-    .pipe(cdsm(cdsmOpts))
+    .pipe(gulpif(!ignoreCDS, cdsm(cdsmOpts)))
     .pipe(gulp.dest(paths.build));
 });
 
