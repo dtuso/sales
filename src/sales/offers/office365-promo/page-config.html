@@ -1,7 +1,7 @@
 ---
 location: sales/offers/office365-promo-config.aspx
-id: 5446e536f778fc1834a2acb2
-name: GCE-30495
+id: 54494acef778fc21c812d41b
+name: GCE-30746
 comments: GOT1 and GOT2 followups
 url: http://www.dev-godaddy.com/offers/office365-promo-config.aspx
 metaCanonicalPath:  /offers/office365-promo-config.aspx
@@ -642,6 +642,17 @@ assetPath: false
           }
           return false;
         }
+        console.log(1);
+      
+        // update the mini cart
+        office365config.productOrder = {
+          "productQty": qty,
+          "domain": getParameterByName("domain"),
+          "addOns": 'noAddOns'
+        };
+        
+        office365config.refreshCart(); 
+
         if(qty > 5 && !got2Page.isManager && !office365config.shownDiscountLimitReachedModal) {
           office365config.shownDiscountLimitReachedModal = true;
           //Show a modal warning
@@ -678,13 +689,8 @@ assetPath: false
           }
           return false;
         }
-      
-        office365config.productOrder = {
-          "productQty": qty,
-          "domain": getParameterByName("domain"),
-          "addOns": 'noAddOns'
-        };
-        return office365config.refreshCart(); 
+
+
       },
 
       "continueToCart": function(e, thisClick) {
