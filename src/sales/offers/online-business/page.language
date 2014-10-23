@@ -1,7 +1,7 @@
 ---
 location: localization/sales/offers/online-business/en
-id: 54455bdff778fc1ba009aa2c
-name: GCE-30495
+id: 54494951f778fc21c812d416
+name: GCE-30746
 comments: GOT1 and GOT2 followups
 ---
 {% include 'modules/doc-block.html' %}

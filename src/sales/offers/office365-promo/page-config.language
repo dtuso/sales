@@ -1,8 +1,8 @@
 ---
 location: localization/sales/offers/office365-promo-config/en
-id: 542dc192f778fc0840c2316b
-name: GCE-27637
-comments: New GOT POB Landing Page and Config Page
+id: 5449489cf778fc21c812d414
+name: GCE-30746
+comments: GOT1 and GOT2 followups
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="page-title" />
