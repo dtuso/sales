@@ -135,7 +135,6 @@ $('.nav-tabs a.js-tab-init').each(function() {
     });
 });
 
-
 function getParameterByName(name) {
     name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
     var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
@@ -143,40 +142,38 @@ function getParameterByName(name) {
     return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
 
-$('.add-to-cart-btn').on('click', function() {
+$('.js-add-to-cart').on('click', function(e) {
+    e.preventDefault();
     var url = '[@T[link:<relative path="/api/package" parammode="explicit"/>]@T]';
-    var planselected = $(this).attr('data-plan');
-    var domain = $(this).attr('data-isqualified');
-    var cicode = $(this).attr('data-ci');
-    var mgrNumber = getParameterByName('mgrshopper');
+    var plan = $(this).parents('form').serializeArray();
+    console.log($.parseJSON(plan[0].value));
+    // var planselected = $(this).attr('data-plan');
+    // var cicode = $(this).attr('data-ci');
+    // var mgrNumber = getParameterByName('mgrshopper');
 
-    url += '/add'; //action
-    ##if(isManager())
-    url += '/mgr_slp_wordpress'; //mgr itc code
-    ##else
-    url += '/slp_wordpress'; //itc code
-    ##endif
-    url += '/' + cicode; //ci code
-    url += '/1';
-    url += '/' + planselected; //Plan Name
+    // url += '/add'; //action
+    // ##if(isManager())
+    // url += '/mgr_slp_wordpress'; //mgr itc code
+    // ##else
+    // url += '/slp_wordpress'; //itc code
+    // ##endif
+    // url += '/' + cicode; //ci code
+    // url += '/1';
+    // url += '/' + planselected; //Plan Name
 
-    ##if(isManager())
-    url += '/?mgrshopper=' +  mgrNumber;
-    ##endif
+    // ##if(isManager())
+    // url += '/?mgrshopper=' +  mgrNumber;
+    // ##endif
 
-    $.getJSON(url, function (data) {
-        if (data.Success == true) {
-            if (domain == 1) {
-                window.location = '[@T[link:<relative path="/hosting/wordpress-hosting-config.aspx" />]@T]';
-            }  else {
-                ##if(isManager())
-                window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]';
-                ##else
-                window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]';
-                ##endif
-            }
-        }
-    });
+    // $.getJSON(url, function (data) {
+    //     if (data.Success == true) {
+    //             ##if(isManager())
+    //             window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]';
+    //             ##else
+    //             window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]';
+    //             ##endif
+    //     }
+    // });
 });
 
 
