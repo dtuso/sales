@@ -4,7 +4,7 @@ id: false
 name: GCE-25391
 ---
 <phrase key="headline" />
-<div class="bigtext" style="width:100%"><div class="line walsheim">FREE DOMAIN</div><div class="line tungsten">WHEN YOU BUY WEBSITE BUILDER</div><div class="line walsheim">$1.00/MONTH</div><div class="line tungsten">THIS <span class='inline-dash' style='max-width:150px;'>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</span> IS NOT A TYPO</div></div>
+<div class="bigtext" style="width:100%"><div class="line walsheim">FREE DOMAIN</div><div class="line tungsten">WHEN YOU BUY WEBSITE BUILDER</div><div class="line walsheim">[@T[productprice:<current productid="7524" period="monthly" />]@T]/MONTH</div><div class="line tungsten">THIS <span class='inline-dash' style='max-width:150px;'>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</span> IS NOT A TYPO</div></div>
 <phrase key="sub-headline" />
 AND IF IT IS, HURRY BEFORE WE FIGURE IT OUT.
 <phrase key="domain" />

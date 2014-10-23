@@ -10,7 +10,7 @@ ADD PRIVACY
 <phrase key="promo-additional" />
 TO YOUR DOMAIN.
 <phrase key="savings" />
-SAVE [@T[productcompare:<percent primaryproductid="7001" secondaryproductid="7001" />]@T]!
+SAVE [@T[productcompare:<percent primaryproductid="7001" secondaryproductid="7001" />]@T]%!
 <phrase key="price" />
 [@T[productprice:<current productid="7001" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]/YR PER DOMAIN
 <phrase key="cta-text" />

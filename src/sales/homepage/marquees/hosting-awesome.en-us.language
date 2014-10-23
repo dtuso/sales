@@ -10,6 +10,6 @@ GUARANTEED 99.9% UPTIME
 <phrase key="product" />
 WEB HOSTING
 <phrase key="price" />
-NOW JUST [@T[productprice:<current productid="294057" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/MO
+NOW JUST [@T[productprice:<current productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/MO
 <phrase key="cta-text" />
 GET STARTED

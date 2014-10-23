@@ -1,0 +1,28 @@
+---
+location: sales/homepage/marquee/got-2/default_template
+id: false
+name: GCE-29343
+ctaLink: "[@T[link:<relative path='/offers/office365-promo.aspx'><param name='ci' value='94104' /></relative>]@T]"
+elementId: got-2
+---
+extends ../../../layouts/homepage/marqueeLeftHeadline
+block marqueeLeftHeadlineStyles
+	style.
+		#got-2 {background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/got-2-background.png) no-repeat top center;}
+		#got-2 .left-column { padding-top: 180px; color: #77c043; }
+		#got-2 .right-column { width: 300px; margin-left:90px; padding-top:80px;}
+		#got-2 .right-column .bigtext {line-height: 1.0;}
+		#got-2 .price {color: #ff8a00;}
+		#got-2 .price strike { color: #333; }
+		#got-2 .details {font-size: 18px; font-family: 'Walsheim-Medium'; text-align: left;margin: 20px 0;}
+		#got-2 .restrictions {font-family: 'Walsheim-Medium';}
+		#got-2 .restrictions span[data-toggle='tooltip'] { text-decoration: underline; }
+block leftColumn
+	.headline [@L[cds.sales/homepage/marquee/got-2:headline]@L]
+block rightColumn
+	.bigtext
+		.product.tungsten [@L[cds.sales/homepage/marquee/got-2:product]@L]
+		.price.walsheim [@L[cds.sales/homepage/marquee/got-2:price]@L]
+	.details [@L[cds.sales/homepage/marquee/got-2:details]@L]
+	a.btn.btn-warning.btn-lg.btn-cta(href!=ctaLink) [@L[cds.sales/homepage/marquee/got-2:cta-text]@L]
+	.restrictions [@L[cds.sales/homepage/marquee/got-2:restrictions]@L]
