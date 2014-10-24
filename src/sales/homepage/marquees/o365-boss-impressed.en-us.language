@@ -1,0 +1,13 @@
+---
+location: localization/sales/homepage/marquee/o365-boss-impressed/en-us
+id: 54458e66f778fc1ba009aa3d
+name: GCE-25370
+---
+<phrase key="headline" />
+<div class="bigtext" style="width:80%;"><div class="line walsheim">OFFICE 365 FROM GODADDY</div></div><div class="bigtext" style="width:100%"><div class="line">EMAIL SO PROFESSIONAL,</div><div class="line">EVEN YOUR OLD BOSS</div><div class="line"><span class='inline-dash' style='max-width:200px;'>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</span> WILL BE IMPRESSED.</div></div>
+<phrase key="promo" />
+PLANS FROM ONLY
+<phrase key="per-month" />
+/MO
+<phrase key="cta-text" />
+START NOW

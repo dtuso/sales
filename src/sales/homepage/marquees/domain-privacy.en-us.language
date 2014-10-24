@@ -1,0 +1,17 @@
+---
+location: localization/sales/homepage/marquee/domain-privacy/en-us
+id: false
+name: GCE-29339
+---
+<phrase key="headline" />
+<div class="bigtext" style="width:80%"><div class="line tungsten">DON'T LET YOUR</div></div><div class="bigtext" style="width:100%"><div class="line walsheim">PRIVATE INFO</div><div class="line tungsten"><span class='inline-dash' style='max-width:200px;'>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</span> OUT IN PUBLIC.</div></div>
+<phrase key="promo" />
+ADD PRIVACY
+<phrase key="promo-additional" />
+TO YOUR DOMAIN.
+<phrase key="savings" />
+SAVE [@T[productcompare:<percent primaryproductid="7001" secondaryproductid="7001" />]@T]%!
+<phrase key="price" />
+[@T[productprice:<current productid="7001" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]/YR PER DOMAIN
+<phrase key="cta-text" />
+GET STARTED

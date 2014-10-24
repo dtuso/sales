@@ -1,0 +1,15 @@
+---
+location: localization/sales/homepage/marquee/hosting-awesome/en-us
+id: false
+name: GCE-29417
+---
+<phrase key="headline" />
+<div class="bigtext" style="width:50%;"><div class="line tungsten">SSL CERTIFICATES</div></div><div class="bigtext" style="width:100%"><div class="line walsheim">LIKE AN ONLINE</div><div class="line tungsten">SECURITY GUARD.</div><div class="line walsheim">THAT NEVER TAKES A BREAK.</div><div class="line tungsten"><span class='inline-dash' style='max-width:300px;'>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</span> EVER</div></div>
+<phrase key="onsale" />
+ON SALE NOW
+<phrase key="product" />
+SSL CERTIFICATES
+<phrase key="price" />
+NOW JUST [@T[productprice:<current productid="3604" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]/YR
+<phrase key="cta-text" />
+GET STARTED

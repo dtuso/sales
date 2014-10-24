@@ -1,0 +1,15 @@
+---
+location: localization/sales/homepage/marquee/lawyer/en-us
+id: 54453b25f778fc1ba009aa0b
+name: GCE-29324
+---
+<phrase key="headline" />
+<div class="bigtext" style="width:100%"><div class="line walsheim">FINALLY, A DOMAIN FOR</div><div class="line tungsten">PEOPLE WHO READ <span class='inline-dash' style='max-width:200px;'>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</span></div></div><div class="bigtext" style="width:50%"><div class="line walsheim">THE DISCLAIMERS.</div></div>
+<phrase key="promo" />
+GET YOUR .LAWYER
+<phrase key="price" />
+JUST [@T[productprice:<current productid="466716" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]/YR<sup>*</sup>
+<phrase key="cta-text" />
+GET STARTED
+<phrase key="restrictions" />
+*Seriously, it's just [@T[productprice:<current productid="466716" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]/yr.

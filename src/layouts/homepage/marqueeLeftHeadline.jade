@@ -1,0 +1,12 @@
+extends marquee
+append marqueeStyles
+	style.
+		.left-column { float:left;width:500px; padding-top:80px;}
+		.right-column { float:left;width:325px;padding-top:80px;text-align:center;margin-left:90px;color:#000;}
+	block marqueeLeftHeadlineStyles
+block marqueeContent
+	.marquee-left-headline
+		.left-column
+			block leftColumn
+		.right-column
+			block rightColumn

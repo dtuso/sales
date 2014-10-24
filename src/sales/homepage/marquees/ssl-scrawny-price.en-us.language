@@ -1,0 +1,17 @@
+---
+location: localization/sales/homepage/marquee/ssl-scrawny-price/en-us
+id: 5444baa4f778fc1ba009a9c6
+name: GCE-29320
+---
+<phrase key="headline" />
+<div class="bigtext" style="width:100%"><div class="line">POWERFUL SECURITY</div><div class="line"><span class='inline-dash' style='max-width:300px;'>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</span> SCRAWNY LITTLE PRICE.</div></div>
+<phrase key="sub-headline" />
+<div class="bigtext" style="width:100%"><div class="line">STANDARD SSL CERTIFICATES</div><div class="line"><strike>[@T[productprice:<list productid="3604" period="yearly" />]@T]</strike><span class="orange-text"> [@T[productprice:<current productid="3604" period="yearly" promocode="78124565" />]@T]/1<sup>ST</sup> YEAR</span></div><div class="line"><span class='inline-dash' style='max-width:300px;'>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</span> WHEN YOU BUY 2 OR MORE YEARS.</div></div>
+<phrase key="cta-text" />
+START NOW
+<phrase key="additional-info" />
+USE PROMO CODE SSLSAVINGS
+<phrase key="restrictions" />
+RESTRICTIONS APPLY
+<phrase key="restrictions-tooltip" />
+[@T[productprice:<current productid="3604" period="yearly" promocode="78124565" />]@T] for first year of Single Website Protection plan when you purchase a plan of at least 2 years. Price of subsequent years is [@T[productprice:<list productid="3604" period="yearly" />]@T]. Must use 'SSLsavings' promo code for discount. Offer valid for U.S. residents only.

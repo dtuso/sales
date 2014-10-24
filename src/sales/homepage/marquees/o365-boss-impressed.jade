@@ -1,0 +1,22 @@
+---
+location: sales/homepage/marquee/o365-boss-impressed/default_template
+id: false
+name: GCE-25370
+ctaLink: "[@T[link:<relative path='/business/office-365.aspx'><param name='ci' value='94091' /></relative>]@T]"
+elementId: o365-boss-impressed
+---
+extends ../../../layouts/homepage/marqueeLeftHeadline
+block marqueeLeftHeadlineStyles
+	style.
+		#o365-boss-impressed .left-column { padding-top: 100px; }
+		#o365-boss-impressed .right-column { padding-top: 110px; }
+		#o365-boss-impressed .promo { font-family: 'Walsheim-Bold'; font-size: 32px; line-height: 1; }
+		#o365-boss-impressed .price { font-family: 'Walsheim-Black'; font-size: 36px; line-height: 1; }
+		#o365-boss-impressed .price sub { font-size: 40%; bottom: initial; }
+block leftColumn
+	.headline [@L[cds.sales/homepage/marquee/o365-boss-impressed:headline]@L]
+block rightColumn
+	.bigtext
+		.promo [@L[cds.sales/homepage/marquee/o365-boss-impressed:promo]@L]
+		.price [@T[productprice:<current productid="31805" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]<sub>[@L[cds.sales/homepage/marquee/o365-boss-impressed:per-month]@L]</sub>
+	span.btn.btn-warning.btn-lg.btn-cta [@L[cds.sales/homepage/marquee/o365-boss-impressed:cta-text]@L]
