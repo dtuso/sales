@@ -1,6 +1,7 @@
 ---
 location: localization/sales/gd/ecommerce/online-store/en
-id:  54467d01f778fc1834a2ac55
+id:   54490ef0f778fc21c812d3ff
+
 name: GCE-20285
 ---
 {% include 'modules/doc-block.html' %}
@@ -147,19 +148,19 @@ Mobile-optimized sites for tablets and smartphones.
 <phrase key="customerQuote1"/>
 "We graduated from Etsy to GoDaddy Online Store and our sales have soared. We researched all our options for months and landed here. Not only is it cost effective and simple, but the customer service has been quick and personable. We have a beautiful website that is consistent with our brand. I love it!"
 <phrase key="customerByLine1"/>
-— Candis Jones, <a href="thejonesmarket.com">The Jones Market</a>
+— Candis Jones, <a target="blank" href="http://www.thejonesmarket.com">The Jones Market</a>
 <phrase key="customerQuote2"/>
 "Now that I've launched my own product line, I need a simple yet effective solution for a web store so that I can reach customers and fans everywhere. I would recommend GoDaddy Online Store to anyone looking to sell products or feature their business online."
 <phrase key="customerByLine2"/>
-— Billy Lowe, <a href=&quot;glossandtoss.net&quot;>Gloss & Toss</a>
+— Billy Lowe, <a target="blank" href="http://www.glossandtoss.net">Gloss & Toss</a>
 <phrase key="customerQuote3"/>
-"GoDaddy Online Store is a perfect fit for my company. Great looking, clean and easy to use – just like our bibs!""
+"GoDaddy Online Store is a perfect fit for my company. Great looking, clean and easy to use – just like our bibs!"
 <phrase key="customerByLine3"/>
-— Katie Lewis, <a href=&quot;snap-bibs.com&quot;>Snap Bibs</a>
+— Katie Lewis, <a target="blank" href="http://www.snap-bibs.com">Snap Bibs</a>
 <phrase key="customerQuote4"/>
-"I immediately fell in love with GoDaddy Online Store. The process is so easy. Getting started, tracking products and orders, setting up payments, integrating social features – it’s everything a store owner needs built into one!""
+"I immediately fell in love with GoDaddy Online Store. The process is so easy. Getting started, tracking products and orders, setting up payments, integrating social features – it’s everything a store owner needs built into one!"
 <phrase key="customerByLine4"/>
-— Carolyn Pofok, <a href=&quot;thepricessexpress.com&quot;>The Princess Express</a>
+— Carolyn Pofok, <a target="blank" href="http://www.theprincessexpress.com">The Princess Express</a>
 <phrase key="FaqTitleSlide0" />
 How do I get started building my <strong>Online Store</strong>?
 <phrase key="FaqTitleSlide0Text" />
@@ -228,7 +229,7 @@ SSL Certificate
 <p class='disclaimer-p'>In order to accept credit cards, you must have an SSL certificate enabled. A GoDaddy SSL Certificate:</p>
 <ul class='discalimer-ul'><li>Encrypts the data transferred to and from your site.</li><li>Secures credit card numbers and other sensitive information.</li><li>Assures your customers can safely order from your site.</li><li>Supports industry-standard 128-bit and high-grade 256-bit encryption.</li></ul>
 <phrase key="DisclaimerModal0DisclaimerItems0Text" />
-<sup class=\"supSymbol\">&dagger;</sup> See the <a href=\"http://www.godaddy.com/agreements/showdoc.aspx?ci=78457&pageid=HOSTING_SA\">Web Hosting and Virtual Private Hosting Agreement </a>
+<sup class=\"supSymbol\">&dagger;</sup> See the <a href="http://www.godaddy.com/agreements/showdoc.aspx?ci=78457&pageid=HOSTING_SA">Web Hosting and Virtual Private Hosting Agreement </a>
 <phrase key="DisclaimerModal0DisclaimerItems1Text" />
 <sup class=\"supSymbol\">&Dagger;</sup> Annual discounts available on NEW purchases only.
 <phrase key="DisclaimerModal0DisclaimerItems4Text" />

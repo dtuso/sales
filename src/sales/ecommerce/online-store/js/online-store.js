@@ -75,7 +75,7 @@
              r = e.children(".slv").data("slv-video-id"),
              o = e.children(".slv").data("slv-params") || "";
          e.on("click", function(n) {
-             n.preventDefault(), e.html('<iframe width="' + i + '" height="' + t + '" src="//www.youtube.com/embed/' + r + "?autoplay=1&" + o + '" scrolling="no" frameborder="0" allowfullscreen></iframe>').removeClass("slv-hidden").addClass("slv-shown")
+             n.preventDefault(), e.html('<iframe id="player" width="' + i + '" height="' + t + '" src="//www.youtube.com/embed/' + r + "?rel=0&autoplay=1&" + o + '" scrolling="no" frameborder="0" allowfullscreen></iframe>').removeClass("slv-hidden").addClass("slv-shown")
          })
      }
      $.fn.solazyVideo = function() {

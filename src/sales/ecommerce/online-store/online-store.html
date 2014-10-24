@@ -1,6 +1,6 @@
 ---
 location: sales/ecommerce/online-store.aspx
-id:    544698b1f778fc1834a2ac76
+id: 544ab57ef778fc17f82fcaaa  
 name: GCE-20285 - OLS 
 comments: Online Store Landing Page
 url: http://www.dev-godaddy.com/ecommerce/online-store.aspx
@@ -10,14 +10,15 @@ url: http://www.dev-godaddy.com/ecommerce/online-store.aspx
 <!------------------------------------>
 <!--           MARQUEE              -->
 <!------------------------------------>
-
+    
 <section class="main-banner background-container main-banner-onlinestore">
   <div class="container l-main-container center-text main-banner-content main-banner-online-store-content">
-    ##if(countrySiteAny(uk,ca,au,ie,nz,sg,ph))
+    ##if(countrySiteAny(uk,ca,au,nz,sg,ph))
     <span class="ribbon ribbon-right">
         <i class="marquee-flag [@T[localization:<language full="true" />]@T] [@T[localization:<language />]@T] marquee-flag-free-trial"></i>
     </span>
     ##endif
+
     <div class="row">
     <h1 class="main-banner-title condensed">[@L[cds.sales/gd/ecommerce/online-store:OnlineStore]@L]</h1>
       
@@ -27,6 +28,7 @@ url: http://www.dev-godaddy.com/ecommerce/online-store.aspx
             <a id="reviewsLink" class="main-banner-read-reviews-alternate tab-link" style="display:hidden;" data-ci="89260" href="#reviews">[@L[cds.sales/gd/ecommerce/online-store:labelReadReviews]@L]</a>    
       <h2 class="main-banner-subtitle main-banner-subtitle1">[@L[cds.sales/gd/ecommerce/online-store:MainBannerSubTitle1]@L]</h2>
       <h2 class="main-banner-subtitle main-banner-subtitle2">[@L[cds.sales/gd/ecommerce/online-store:MainBannerSubTitle2]@L]</h2>
+
     ##if(isManager()) 
     <div class='row mgr-view' role="main"> <!-- white div for mgr view -->
         <div class="col-xs-2"></div>
@@ -199,7 +201,7 @@ url: http://www.dev-godaddy.com/ecommerce/online-store.aspx
     <div class="mgr-view-bottom-spacer"></div>
     ##else
        <!-- ##if(areAdCreditsEnabled(onlinestorefreecredit)) -->
-        ##if(countrySiteAny(uk,ca,au,ie,nz,sg,ph))
+        ##if(countrySiteAny(uk,ca,au,nz,sg,ph))
           ##if(shopperStatusAny(authenticated, partiallytrusted)) 
                 <a id="marQueeSectionStartFreeTrialLink" data-ci="90987" class="btn btn-primary call-to-action cta-small" href="[@T[link:<external linktype="carturl" path="/freetrial/setup.aspx">  <param name="pfid" value="40966" />  <param name="itc" value="slp_onlinestore" /></external>]@T]">[@L[cds.sales/gd/ecommerce/online-store:StartFreeTrial]@L]</a>
           ##else
@@ -334,12 +336,12 @@ url: http://www.dev-godaddy.com/ecommerce/online-store.aspx
         ##elseif(countrySiteAny(ie))
          [@L[cds.sales/gd/ecommerce/online-store:PaymentSectionContent-Second-amount-IE]@L]
         ##endif
-        [@L[cds.sales/gd/ecommerce/online-store:PaymentSectionContent-Second-per-transaction]@L]
         ##if(countrySiteAny(ie))
             [@L[cds.sales/gd/ecommerce/online-store:PaymentSectionContent-Second-per-transaction]@L][@L[cds.sales/gd/ecommerce/online-store:PaymentSectionContent-VAT]@L].
         ##else
             [@L[cds.sales/gd/ecommerce/online-store:PaymentSectionContent-Second-per-transaction]@L].
         ##endif
+
         </span>
         <p>[@L[cds.sales/gd/ecommerce/online-store:PaymentSectionContent-Third]@L]</p>
         </div>
@@ -358,13 +360,13 @@ url: http://www.dev-godaddy.com/ecommerce/online-store.aspx
     ##if(isManager())
       <p class="pricing">
         <span class="so-easy">
-          [@L[cds.sales/gd/ecommerce/online-store:EasyToSetUpText]@L
+          [@L[cds.sales/gd/ecommerce/online-store:EasyToSetUpText]@L]
             <a id="CTAStartFreeTrialLink" data-ci="90990" class="btn btn-warning call-to-action cta-small" href="[@T[link:<external linktype="carturl" path="/freetrial/setup.aspx">  <param name="pfid" value="40966" />  <param name="itc" value="slp_onlinestore" /></external>]@T]">[@L[cds.sales/gd/ecommerce/online-store:StartFreeTrial]@L]</a>
             <div class="mgr-inline-disclaimer">[@L[cds.sales/gd/ecommerce/online-store:FreeTrialPricingText]@L]</div>
         </span>
       </p>
     ##else
-       ##if(countrySiteAny(uk,ca,au,ie,nz,sg,ph))
+       ##if(countrySiteAny(uk,ca,au,nz,sg,ph))
           <p class="pricing">
             <span class="so-easy">
               [@L[cds.sales/gd/ecommerce/online-store:EasyToSetUpText]@L]          
@@ -415,7 +417,7 @@ url: http://www.dev-godaddy.com/ecommerce/online-store.aspx
   <!------------------------------------>
     <!--     FEATURE CONTENT DESIGNS    -->
     <!------------------------------------>
-    <section class="solazy feature-content-design">  
+<section class="solazy feature-content-design">  
     <div class="container l-main-container center-text main-content-designs-top">
     <div class="callout-horizontal-wrapper horizontal-wrapper-1">
       <div class="callout-horizontal-space horizontal-space-1">
@@ -441,7 +443,6 @@ url: http://www.dev-godaddy.com/ecommerce/online-store.aspx
         </div>
       </div>
     </div>
-<!--     <div class="container l-main-container"> -->
     </div>
      </section>  
     <section class="main-content-designs-bottom">
@@ -452,7 +453,7 @@ url: http://www.dev-godaddy.com/ecommerce/online-store.aspx
     </div>
     <div class="col-xs-2"></div>
     </div>
-    </section>
+</section>
      
  
 <!------------------------------------>
@@ -746,12 +747,12 @@ url: http://www.dev-godaddy.com/ecommerce/online-store.aspx
     </div>
     ##else
     <div id="non-mgrViewPricingSection" class="col-xs-4">
-         ##if(!countrySiteAny(uk,ca,au,ie,nz,sg,ph))
+         ##if(!countrySiteAny(uk,ca,au,nz,sg,ph))
               <p class="pricing pricing-top-spacer"> 
               [@L[cds.sales/gd/ecommerce/online-store:AsLowAsText]@L]
               </p>
          ##endif
-         ##if(countrySiteAny(uk,ca,au,ie,nz,sg,ph))
+         ##if(countrySiteAny(uk,ca,au,nz,sg,ph))
                 ##if(shopperStatusAny(authenticated, partiallytrusted)) 
                      <div class="call-to-action-top-spacer"></div> 
                         <a id="WhatsIncludedStartFreeTrial" data-ci="93906" class="btn btn-warning call-to-action cta-small" href="[@T[link:<external linktype="carturl" path="/freetrial/setup.aspx">  <param name="pfid" value="40966" />  <param name="itc" value="slp_onlinestore" /></external>]@T]">
@@ -765,9 +766,9 @@ url: http://www.dev-godaddy.com/ecommerce/online-store.aspx
                             <a id="WhatsIncludedStartFreeTrial" data-ci="93906" class="btn btn-warning call-to-action cta-small" href="[@T[link:<external linktype="carturl" path="/freetrial/setup.aspx">  <param name="pfid" value="40966" />  <param name="itc" value="slp_onlinestore" /></external>]@T]">
                             [@L[cds.sales/gd/ecommerce/online-store:StartFreeTrial]@L]</a>
                     ##endif
-                            <div class="row"><div class="bottom-inline-disclaimer">
-                            [@L[cds.sales/gd/ecommerce/online-store:FreeTrialPricingText]@L]</div></div>
                 ##endif
+                <div class="row"><div class="bottom-inline-disclaimer">
+                [@L[cds.sales/gd/ecommerce/online-store:FreeTrialPricingText]@L]</div></div>
         ##else
                   <form id="addtocart-form-2" class="addtocart-form" action="[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]" method="post" data-addtocart="[@T[link:<external linktype="SALESPRODUCTSURL" path="/v1/pl/1/cart/packages" />]@T]">
                                 <input type="hidden" name="itc" value="slp_onlinestore" />
@@ -932,14 +933,8 @@ url: http://www.dev-godaddy.com/ecommerce/online-store.aspx
     </p>
     <p>
       <small class="small-print">
-      <span>†, ‡, *, 1</span> 
+      <span>†, ‡, 1</span> 
           <a class="simple-link" href="#" data-toggle="modal" data-target="#product-disclaimer-modal" data-ci="94069">[@L[cds.sales/gd/ecommerce/online-store:DisclaimerContentLinkText]@L]</a></small>
-    </p>
-    <p>
-        <small class="small-print">
-            [@L[cds.sales/gd/ecommerce/online-store:DisclaimerContent]@L] <a class="disclaimerToolTip isToolTip smallHoverText" data-toggle="tooltip" data-original-title="[@L[cds.sales/gd/ecommerce/online-store:DisclaimerToolTipHoverContent]@L]" title="">[@L[cds.sales/gd/ecommerce/online-store:DisclaimerToolTipText]@L] </a>
-            <br/>
-        </small>
     </p>
   </section>
 
@@ -997,7 +992,6 @@ url: http://www.dev-godaddy.com/ecommerce/online-store.aspx
     </div>
 </div>
     ##endif
-
 {% endblock %}
 {% block footer %}
                         <script src="[@T[link:<javascriptroot />]@T]fos/lib/gd-swipe/js/swipe-v2.1.js" type="text/javascript"></script>
@@ -1010,9 +1004,8 @@ url: http://www.dev-godaddy.com/ecommerce/online-store.aspx
                             managerView=false;
                             ##if(isManager())
                               managerView=true;
-                            ##endif
-                            ##endif
-                        });
+                            ##endif  
+                            });              
                         </script>
                         <script src="[@T[link:<javascriptroot />]@T]fos/sales/themes/scotty/ecommerce/online-store/js/online-store.js" type="text/javascript" ></script> 
          
