@@ -1,140 +1,140 @@
 {
   "oursVsTheirsTable":[
     {
-      "features": "Free domain",
+      "features": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-2-FreeDomain]@L]",
       "ccrs": true,
       "wpEngine": false,
       "pagely": false,
       "dreamHost": false
     },
     {
-      "features": "Visits per month",
-      "ccrs": "25,000",
-      "wpEngine": "25,000",
-      "pagely": "25,000",
-      "dreamHost": "Unlimited"
+      "features": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-3-VisitsPerMonth]@L]",
+      "ccrs": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-2-25000]@L]",
+      "wpEngine": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-2-25000]@L]",
+      "pagely": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-2-25000]@L]",
+      "dreamHost": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-1-Unlimited]@L]"
     },
     {
-      "features": "Storage",
-      "ccrs": "100 GB",
-      "wpEngine": "10 GB",
-      "pagely": "5 GB",
-      "dreamHost": "Unlimited"
+      "features": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-1-Storage]@L]",
+      "ccrs": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-2-100GB]@L]",
+      "wpEngine": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-2-10GB]@L]",
+      "pagely": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-2-5GB]@L]",
+      "dreamHost": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-1-Unlimited]@L]"
     },
     {
-      "features": "Free 1-click migration",
+      "features": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-4-Free1ClickMigration]@L]",
       "ccrs": true,
       "wpEngine": false,
       "pagely": false,
       "dreamHost": false
     },
     {
-      "features": "24/7 phone support",
+      "features": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-4-247PhoneSupport]@L]",
       "ccrs": true,
       "wpEngine": false,
       "pagely": false,
       "dreamHost": false
     },
     {
-      "features": "sFTP",
+      "features": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-1-SFTP]@L]",
       "ccrs": true,
       "wpEngine": true,
       "pagely": false,
       "dreamHost": true
     },
     {
-      "features": "Database access",
+      "features": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-2-DatabaseAccess]@L]",
       "ccrs": true,
       "wpEngine": true,
       "pagely": false,
       "dreamHost": true
     },
     {
-      "features": "Automated backups",
+      "features": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-2-AutomatedBackups]@L]",
       "ccrs": true,
       "wpEngine": true,
       "pagely": true,
       "dreamHost": false
     },
     {
-      "features": "Backup retention time",
-      "ccrs": "30 days",
-      "wpEngine": "30 days",
-      "pagely": "14 days",
+      "features": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-3-BackupRetentionTime]@L]",
+      "ccrs": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-2-30Days]@L]",
+      "wpEngine": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-2-30Days]@L]",
+      "pagely": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-2-14Days]@L]",
       "dreamHost": false
     },
     {
-      "features": "One-click restores",
+      "features": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-3-OneClickRestores]@L]",
       "ccrs": true,
       "wpEngine": true,
       "pagely": true,
       "dreamHost": false
     },
     {
-      "features": "Automatic software updates",
-      "ccrs": "WordPress core",
-      "wpEngine": "WordPress core",
-      "pagely": "WordPress core and plugins",
-      "dreamHost": "WordPress core"
+      "features": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-3-AutomaticSoftwareUpdates]@L]",
+      "ccrs": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-2-WordPressCore]@L]",
+      "wpEngine": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-2-WordPressCore]@L]",
+      "pagely": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-4-WordPressCoreAndPlugins]@L]",
+      "dreamHost": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-2-WordPressCore]@L]"
     },
     {
-      "features": "SSL Support",
+      "features": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-2-SSLSupport]@L]",
       "ccrs": true,
       "wpEngine": false,
       "pagely": false,
       "dreamHost": true
     },
     {
-      "features": "Dedicated IPs (available)",
+      "features": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-4-DedicatedIPsAvailable]@L]",
       "ccrs": true,
       "wpEngine": false,
       "pagely": false,
       "dreamHost": true
     },
     {
-      "features": "Caching system",
+      "features": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-2-CachingSystem]@L]",
       "ccrs": true,
       "wpEngine": true,
       "pagely": true,
       "dreamHost": true
     },
     {
-      "features": "Malware scanning",
+      "features": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-2-MalwareScanning]@L]",
       "ccrs": true,
       "wpEngine": true,
       "pagely": true,
       "dreamHost": false
     },
     {
-      "features": "DDoS protection",
+      "features": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-2-DDoSProtection]@L]",
       "ccrs": true,
       "wpEngine": true,
       "pagely": true,
       "dreamHost": false
     },
     {
-      "features": "Redundant firewalls",
+      "features": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-2-RedundantFirewalls]@L]",
       "ccrs": true,
       "wpEngine": true,
       "pagely": true,
       "dreamHost": false
     },
     {
-      "features": "Optimized servers",
+      "features": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-2-OptimizedServers]@L]",
       "ccrs": true,
       "wpEngine": true,
       "pagely": true,
       "dreamHost": true
     },
     {
-      "features": "Blacklisted malicious plugins",
+      "features": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-3-BlacklistedMaliciousPlugins]@L]",
       "ccrs": true,
       "wpEngine": true,
       "pagely": true,
       "dreamHost": false
     },
     {
-      "features": "Money-back guarantee",
+      "features": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-3-MoneyBackGuarantee]@L]",
       "ccrs": true,
       "wpEngine": true,
       "pagely": true,
@@ -143,85 +143,85 @@
   ],
  "specsSections": [
  {
-    "sectionName": "Speed, scalability &amp; reliability",
+    "sectionName": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-3-SpeedScalabilityReliability]@L]",
     "row":[
       {
-        "left": "Optimized WordPress platform",
-        "right": "Built just for WordPress with personalized tweaks from our WordPress experts for maximum performance."
+        "left": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-3-OptimizedWordPressPlatform]@L]",
+        "right": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-15-BuiltJustForWordPressWithPersonalizedTweaksFrom]@L]"
       },
       {
-        "left": "Dedicated load balanced servers",
-        "right": "We distribute web requests across multiple servers so the same amount of work gets done faster and can handle spikes in traffic. And if there's a problem withone server, your site won't be affected."
+        "left": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-4-DedicatedLoadBalancedServers]@L]",
+        "right": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-37-WeDistributeWebRequestsAcrossMultipleServersSo]@L]"
       },
       {
-        "left": "Massively redundantly SSD-backed file and database servers",
-        "right": "Your website content, database and admin load blazing fast with high performace disk servers. Get superior I/O rates and disk access times."
+        "left": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-8-MassivelyRedundantlySSDBackedFileAndDatabaseServers]@L]",
+        "right": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-13-YourWebsiteIsEnhancedWithMultipleCachingLayers]@L]"
       },
       {
-        "left": "Multiple caching layers",
-        "right": "Your website is enhanced with multiple caching layers for millisecond load times."
+        "left": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-3-MultipleCachingLayers]@L]",
+        "right": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-13-YourWebsiteIsEnhancedWithMultipleCachingLayers]@L]"
       },
       {
-        "left": "Nightly backups with a 30 day retention time and free restores",
+        "left": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-11-NightlyBackupsWithA30DayRetentionTime]@L]",
         "right": ""
       },
       {
-        "left": "Protection from suspicious bots",
-        "right": "We've added protection from suspicious bots that like to crawl your site and blast the backend with pointless requests."
+        "left": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-4-ProtectionFromSuspiciousBots]@L]",
+        "right": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-21-WeVeAddedProtectionFromSuspiciousBotsThat]@L]"
       }
       ]
   },
   {
-    "sectionName": "Security",
+    "sectionName": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-1-Security]@L]",
     "row":[
       {
-        "left": "Redundant Web Application Firewalls",
-        "right":"Enhanced perimeter protection, with fail-safe to keep traffic flowing should a firewall router fail."
+        "left": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-4-RedundantWebApplicationFirewalls]@L]",
+        "right":"[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-16-EnhancedPerimeterProtectionWithFailSafeToKeep]@L]"
       },
       {
-        "left": "Redundant DoS/DDoS Mitigation",
-        "right": "Increased availability, and keeps traffic flowing during one of the most common attacks."
+        "left": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-4-RedundantDoSDDoSMitigation]@L]",
+        "right": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-14-IncreasedAvailabilityAndKeepsTrafficFlowingDuringOne]@L]"
       },
       {
-        "left": "Intrusion Detection and Prevention",
-        "right": "We monitor and mitigate the network and systems against malicious activity."
+        "left": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-4-IntrusionDetectionAndPrevention]@L]",
+        "right": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-12-WeMonitorAndMitigateTheNetworkAndSystems]@L]"
       },
       {
-        "left": "Black list for known malicious plugins",
-        "right": "To help keep WordPress accounts secure as possible, we <a href='#'>blacklist plugins</a> known to cause security and performance issues."
+        "left": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-6-BlackListForKnownMaliciousPlugins]@L]",
+        "right": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-22-ToHelpKeepWordPressAccountsSecureAsPossible]@L]"
       },
       {
-        "left": "Brute force login and comment spam prevention.",
-        "right": "Added security layers to prevent hackers from stealing login credentials, and flooding \"comments\" with spam."
+        "left": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-8-BruteForceLoginAndCommentSpamPrevention]@L]",
+        "right": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-16-AddedSecurityLayersToPreventHackersFromStealing]@L]"
       },
       {
-        "left": "Automatic WordPress Core Updates",
-        "right": "Our automatic updates make sure you're always running the latest version of WordPress to reduce vulnerabilities, and stay safe from hackers."
+        "left": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-4-AutomaticWordPressCoreUpdates]@L]",
+        "right": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-23-OurAutomaticUpdatesMakeSureYouReAlways]@L]"
       },
       {
-        "left": "sFTP/SSH",
-        "right": "Securely access and manage files on remote file systems. Encrypt commands and data to prevent passwords and sensitive information from being transmitted unprotected over a network."
+        "left": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-2-SFTPSSH]@L]",
+        "right": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-27-SecurelyAccessAndManageFilesOnRemoteFile]@L]"
       }
       ]
   },
   {
-    "sectionName": "Simplicity",
+    "sectionName": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-1-Simplicity]@L]",
     "row":[
       {
-        "left": "No set up. We do it for you.",
-        "right":"You're ready to start building your site in 30 seconds or less."
+        "left": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-9-NoSetUpWeDoItForYou]@L]",
+        "right":"[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-14-YouReReadyToStartBuildingYourSite]@L]"
       },
       {
-        "left": "Pre-loaded popular Jetpack plugin",
-        "right": "Includes over 30 popular plugins to supercharge your site with stats, contact forms, search boxes and more."
+        "left": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-5-PreLoadedPopularJetpackPlugin]@L]",
+        "right": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-18-IncludesOver30PopularPluginsToSuperchargeYour]@L]"
       },
       {
-        "left": "Temporary web address",
-        "right": "Build your site on the free domain included with our annual plan or start with a temporary domain and decide on the perfect URL later."
+        "left": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-3-TemporaryWebAddress]@L]",
+        "right": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-26-BuildYourSiteOnTheFreeDomainIncluded]@L]"
       },
       {
-        "left": "One-click migrations",
-        "right": "Easily move your existing WordPress site with our 1-click migration tool."
+        "left": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-3-OneClickMigrations]@L]",
+        "right": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-13-EasilyMoveYourExistingWordPressSiteWithOur]@L]"
       }
       ]
   }
