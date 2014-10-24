@@ -141,21 +141,19 @@ var getLocalJson = function(file) {
   return false;
 };
 
-gulp.task('homepage', function() {
-  return gulp.src('./src/sales/homepage/**/*.jade')
-    .pipe(changed('./build/sales/homepage'))
+gulp.task('jade', function() {
+  return gulp.src(['./**/*.jade', '!./**/_*.jade'], {cwd: path.join('./src/sales/', assetSrcPath)})
+    .pipe(changed(paths.build))
     .pipe(frontMatter({remove:true}))
-    .pipe(data(getJsonData))
+    .pipe(data(function(file) { return file.frontMatter; }))
     .pipe(jade({pretty: true}))
-    .pipe(cdsm(cdsmOpts))
-    .pipe(rename({extname: ".jade"}))
-    .pipe(gulp.dest('./build/sales/homepage'));
+    .pipe(gulpif(!ignoreCDS, cdsm(cdsmOpts)))
+    .pipe(gulp.dest(paths.build));
 });
 
 gulp.task('html', function() {
   return gulp.src(['./**/*.html', '!./**/_*.html'], {cwd: path.join('./src/sales/', assetSrcPath)})
     .pipe(changed(paths.build))
-    /*.pipe(debug({verbose: false}));*/
     .pipe(frontMatter({remove:true}))
     .pipe(data(getLocalJson))
     .pipe(swig(swigTplOpts))
@@ -168,7 +166,6 @@ gulp.task('html', function() {
 gulp.task('language', function() {
   return gulp.src('./**/*.language', {cwd: path.join('./src/sales/', assetSrcPath)})
     .pipe(changed(paths.build))
-    //.pipe(changed(paths.build))
     .pipe(frontMatter({remove:true}))
     .pipe(swig(swigLangOpts))
     .pipe(gulpif(!ignoreCDS, cdsm(cdsmOpts)))
@@ -212,7 +209,6 @@ gulp.task('images', function() {
 
 gulp.task('assets-deploy', ['build'], function() {
   return gulp.src(['./**/*.*'], {cwd: paths.build})
-    /*.pipe(debug({verbose: false}))*/
     .pipe(gulp.dest(paths.assets));
 });
 
@@ -235,6 +231,7 @@ gulp.task('js-concat', function() {
 });
 
 gulp.task('watch', function() {
+  gulp.watch(['./src/sales/**/*.jade'], ['jade'])
   gulp.watch(paths.templates, ['html']);
   gulp.watch(paths.language,  ['language']);
   gulp.watch(paths.rule,      ['rule']);

@@ -1,0 +1,11 @@
+---
+location: localization/sales/homepage/marquee/gdpro-beginner-price/en-us
+id: 54453b25f778fc1ba009aa0b
+name: GCE-29326
+---
+<phrase key="headline" />
+<div class="bigtext" style="width:100%"><div class="line tungsten">BUILT FOR PROS <span class='inline-dash' style='max-width:200px;'>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</span></div><div class="line walsheim">PRICED FOR BEGINNERS.</div><div class="line tungsten">SAVE UP TO [@T[productcompare:<percent primaryproductid="32759" secondaryproductid="32759" />]@T]%.</div></div>
+<phrase key="promo" />
+VISIT GODADDY PRO</span>
+<phrase key="cta-text" />
+CHECK IT OUT

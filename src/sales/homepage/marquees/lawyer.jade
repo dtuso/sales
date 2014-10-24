@@ -1,0 +1,24 @@
+---
+location: sales/homepage/marquee/lawyer/default_template
+id: false
+name: GCE-29324
+ctaLink: "[@T[link:<relative path='/tlds/lawyer'><param name='ci' value='93464' /></relative>]@T]"
+elementId: lawyer
+---
+extends ../../../layouts/homepage/marqueeLeftHeadline
+block marqueeLeftHeadlineStyles
+	style.
+		#lawyer .left-column { padding-top: 120px; }
+		#lawyer .right-column { width: 280px; margin-left:90px; padding-top:120px;}
+		#lawyer .right-column .bigtext {line-height: 0.9;}
+		#lawyer .price {color: #ff8a00;}
+		#lawyer .restrictions {font-family: 'Walsheim-Medium';}
+		#lawyer sup {top:0;font-size:100%;}
+block leftColumn
+	.headline [@L[cds.sales/homepage/marquee/lawyer:headline]@L]
+block rightColumn
+	.bigtext
+		.promo.tungsten [@L[cds.sales/homepage/marquee/lawyer:promo]@L]
+		.price.walsheim [@L[cds.sales/homepage/marquee/lawyer:price]@L]
+	a.btn.btn-warning.btn-lg.btn-cta(href!=ctaLink) [@L[cds.sales/homepage/marquee/lawyer:cta-text]@L]
+	.restrictions [@L[cds.sales/homepage/marquee/lawyer:restrictions]@L]

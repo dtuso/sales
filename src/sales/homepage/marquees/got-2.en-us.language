@@ -1,0 +1,17 @@
+---
+location: localization/sales/homepage/marquee/lawyer/en-us
+id: false
+name: GCE-29343
+---
+<phrase key="headline" />
+<div class="bigtext" style="width:100%"><div class="line walsheim">EVERYTHING YOU NEED TO</div><div class="line tungsten">RUN YOUR BUSINESS</div><div class="line walsheim">IN ONE BOX <span class='inline-dash' style='max-width:100px;'>&mdash;&mdash;&mdash;&mdash;&mdash;</span> BUT WITHOUT THE BOX.</div></div>
+<phrase key="product" />
+MICROSOFT OFFICE 365 PREMIUM
+<phrase key="price" />
+<strike>[@T[multipleproductprice:<list productidlist="101|7524|326366|31841" period="monthly"></list>]@T]</strike>[@T[productprice:<current productid="31841" period="monthly" promocode="74125896"></current>]@T]/MO<sup>*</sup>
+<phrase key="promo" />
+Includes Website Builder, Pro Email, 24/7 Support and More.
+<phrase key="cta-text" />
+GET STARTED
+<phrase key="restrictions" />
+<sup>*</sup> PRICE PER USER, ANNUAL PLAN PURCHASE REQUIRED. LIMIT 5 SEATS.<span data-toggle="tooltip" title="*1st year only. Other restrictions apply">SEE DETAILS.</span>
