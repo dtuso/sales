@@ -1871,7 +1871,16 @@ background-position:0 -441px;
 
 .plan-box-button{
   background-color: #a92728;
-  color:  white;
+  color:  #FFFFFF;
+  width: 100%;
+  margin-top: 20px;
+  overflow: hidden;
+  font-weight: bold;
+}
+
+.plan-box-button:hover, .plan-box-button:active{
+  background-color: #900E0F;
+  color:  #FFFFFF;
   width: 100%;
   margin-top: 20px;
   overflow: hidden;
@@ -1900,6 +1909,11 @@ background-position:0 -441px;
 .price{
   font-weight: bold;
   font-size: 35px;
+}
+
+.price .currency-symbol{
+	font-size: 18px;
+	margin-right: 5px;
 }
 
 .time-period{
@@ -2236,14 +2250,44 @@ select{
 }
 
 .starter-plan-wrapper .add-to-cart-table-button{
-	background: url("[@T[link:<imageroot />]@T]private-label/hosting/wordpress/img/GetStarted_Button.png");
+	background: url("[@T[link:<imageroot />]@T]private-label/hosting/wordpress/img/mwp-sprite.min.png");
     display: inline-block;
-    width: 205px;
-    height: 93px;
+    width: 197px;
+	height: 74px;
     margin-top: 20px;
 }
 
+.plan-form .ssl{
+	height: 40px;
+	margin-top: 5px;
+}
 
+.plan-form .ssl p{
+	margin-top: 0;
+	margin-bottom: 0;
+	font-size: 13px;
+}
+
+
+.plan-form .ssl .checkbox-text{
+	margin-top: 15px;
+}
+
+.plan-form .ssl .checkbox-text label{
+	margin: 0;
+}
+
+.plan-form .ssl .ssl-checkbox{
+	width: 20px;
+	display: block;
+	float: left;
+	margin-right: 5px;
+	margin-top: 3px;
+}
+
+.plan-form .ssl .ssl-subtext{
+	padding-left: 25px;
+}
 
 /**
   * END TAB TABLE TOP
@@ -2307,6 +2351,28 @@ select{
 	padding-top: 7px;
 	padding-bottom: 7px;
 }
+
+#ours-vs-theirs-section table td .minus{
+	background: url("[@T[link:<imageroot />]@T]private-label/hosting/wordpress/img/mwp-sprite.min.png") no-repeat -200px -30px;
+	width: 9px;
+	height: 2px;
+	display: inline-block;
+}
+
+#ours-vs-theirs-section table td .check{
+	background: url("[@T[link:<imageroot />]@T]private-label/hosting/wordpress/img/mwp-sprite.min.png") no-repeat -200px 0;
+	width: 15px;
+	height: 13px;
+	display: inline-block;
+}
+
+#ours-vs-theirs-section table td .check.highligted-td{
+	background: url("[@T[link:<imageroot />]@T]private-label/hosting/wordpress/img/mwp-sprite.min.png") no-repeat -200px -14px;
+	width: 15px;
+	height: 13px;
+	display: inline-block;
+}
+
 
 #ours-vs-theirs-section table td span.highligted-td{
 	color: #A92728;

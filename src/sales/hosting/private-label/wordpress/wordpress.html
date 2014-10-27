@@ -1,6 +1,6 @@
 ---
 location: sales/hosting/private-label/wordpress.aspx
-id:   543ec5c0f778fc172c27ca49
+id:   54469e92f778fc1834a2ac79
 name: GCE-25511
 comments: String Extraction/Tokenization
 assetPath: false
@@ -117,23 +117,73 @@ function displayDisclaimer(){
     $("#disclaimer").hide(); 
   }
 };
-  
+
+function firstTabCheck(){
+    if ($('#plans-pricing').is(':visible')) {
+      $('#plans-pricing-sub-section').show();
+    } else {
+      $('#plans-pricing-sub-section').hide();
+    }
+}
+
 $('.nav-tabs a.js-tab-init').each(function() {
     var $this = $(this);
     $this.click(function (e) {
         e.preventDefault();
         $this.tab('show');
-        displayDisclaimer();
+        firstTabCheck();
     });
 });
 
-$('#myTab a').click(function (e) {
-   e.preventDefault();
-   $(this).tab('show');
+function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+    results = regex.exec(location.search);
+    return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+
+$('.js-add-to-cart').on('click', function(e) {
+    e.preventDefault();
+    if($(this).parents('form')){
+      var plan = $(this).parents('form').serializeArray();
+    }
+    if($(this).data('value')){
+      var pkg = $(this).data('value');
+    }else{
+      var pkg = $.parseJSON(plan[0].value);
+    }
+    var sapiurl = '[@T[link:<external linktype="SALESPRODUCTSURL" path="/v1/pl/1724/cart/packages" />]@T]';
+
+    if(plan[1]){
+      var ssl = plan[1].value;
+      pkg.addons = {};
+      pkg['addons'][ssl] = 1;
+    }
+    var postdata = "requestData=" + JSON.stringify(pkg);
+    $.ajax({
+        type:"GET",
+        url: sapiurl,
+        contentType: "application/json",
+        data: postdata,
+        dataType: "jsonp",
+        success: function (response) { 
+           ##if(isManager())
+            var carturl = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]';
+           ##else
+            var carturl = '[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]';
+           ##endif
+           window.location = carturl;
+          },
+       failure: function (response) { 
+         ##if(isManager())
+          var carturl = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]';
+         ##else
+          var carturl = '[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]';
+         ##endif
+         window.location = carturl;
+       }
+    });
 });
 
-$(function () {
-$('#myTab a:last').tab('show');
-})
 </script>
 {% endblock %}
