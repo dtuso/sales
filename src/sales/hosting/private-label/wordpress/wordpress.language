@@ -31,9 +31,9 @@ $
 <phrase key="WordPressPrivateLabel-2-Month" />
 /month
 <phrase key="WordPressPrivateLabel-7-25000MonthlyVisitorsOn1Website" />
-<li><em><strong>25,000</strong></em> monthly visitors on <em><strong>1</strong></em> website</li>
+<li><strong>25,000</strong> monthly visitors on <strong>1</strong> website</li>
 <phrase key="WordPressPrivateLabel-4-100GBStorage" />
-<li><em><strong>100 GB</strong></em> storage.
+<li><strong>100 GB</strong> storage.
 <phrase key="WordPressPrivateLabel-9-StoreApproximately22000ImagesOr500Standard" />
 Store approximately 22,000 images or 500 standard videos
 <phrase key="WordPressPrivateLabel-7-12Mo629Mo10OFF" />
@@ -47,9 +47,9 @@ Business
 <phrase key="WordPressPrivateLabel-2-1799" />
 17.99
 <phrase key="WordPressPrivateLabel-7-250000MonthlyVisitorsOn5Websites" />
-<li><em><strong>250,000</strong></em> monthly visitors on <em><strong>5</strong></em> websites</li>
+<li><strong>250,000</strong> monthly visitors on <strong>5</strong> websites</li>
 <phrase key="WordPressPrivateLabel-4-500GBStorage" />
-<li><em><strong>500 GB</strong></em> storage.
+<li><strong>500 GB</strong> storage.
 <phrase key="WordPressPrivateLabel-10-StoreApproximately110000ImagesOr2500" />
 Store approximately 110,000 images or 2,500 standard videos
 <phrase key="WordPressPrivateLabel-7-OneClickStagingEnvironmentSSHCommandLine" />
@@ -63,9 +63,9 @@ Pro
 <phrase key="WordPressPrivateLabel-2-6299" />
 62.99
 <phrase key="WordPressPrivateLabel-5-MillionsMonthlyVisitors25Website" />
- <li><em><strong>Millions</strong></em> monthly visitors <em><strong>25</strong></em> website</li>
+ <li><strong>Millions</strong> monthly visitors <strong>25</strong> website</li>
 <phrase key="WordPressPrivateLabel-3-UnlimitedStorage" />
-<li><em><strong>Unlimited</strong></em> storage.
+<li><strong>Unlimited</strong> storage.
 <phrase key="WordPressPrivateLabel-4-WhatIsWordPress" />
 What is WordPress?
 <phrase key="WordPressPrivateLabel-84-WordPressIsABlogAndWebPublishingPlatform" />
@@ -103,7 +103,7 @@ How can I access my WordPress installation?
 <phrase key="WordPressPrivateLabel-14-ThereAreSeveralWayToLogInTo" />
 There are several ways to log in to your WordPress website or blog.
 <phrase key="WordPressPrivateLabel-23-GoToTCompanynameNameTComLog" />
-Go to <span id="pretty-link">[@T[companyname:name]@T]</span>, log in to “My Account” and choose Managed WordPress Hosting from your list of products.
+  Go to <span id="pretty-link">[@T[link:<external linktype="SITEURL" secure="true"></external>]@T]</span>, log in to “My Account” and choose Managed WordPress Hosting from your list of products.
 <phrase key="WordPressPrivateLabel-25-TypeHttpCoolexampleComWpAdminWhereCoolexample" />
 Type http://coolexample.com/wp-admin, where coolexample.com is your domain name, and that will take you directly to the Admin login screen.
 <phrase key="WordPressPrivateLabel-5-SeeTheDifferenceForYourself" />
@@ -199,7 +199,7 @@ Optimized WordPress platform
 <phrase key="WordPressPrivateLabel-4-DedicatedLoadBalancedServers" />
 Dedicated load balanced servers
 <phrase key="WordPressPrivateLabel-37-WeDistributeWebRequestsAcrossMultipleServersSo" />
-We distribute web requests across multiple servers so the same amount of work gets done faster and can handle spikes in traffic. And if there&#39;s a problem with one server, your site won&#39;t be affected.
+We distribute web requests across multiple servers so the same amount of work gets done faster and can handle spikes in traffic. And if there&#39;s a problem withone server, your site won&#39;t be affected.
 <phrase key="WordPressPrivateLabel-8-MassivelyRedundantlySSDBackedFileAndDatabaseServers" />
 Massively redundantly SSD-backed file and database servers
 <phrase key="WordPressPrivateLabel-24-YourWebsiteContentDatabaseAndAdminLoadBlazing" />
