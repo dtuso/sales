@@ -81,6 +81,10 @@ localVars: true
   </div>
 </section>
 
+<div id="disclaimer">
+  <p>[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-DisclaimerSection]@L]</p>
+</div>
+
 <section id="plans-pricing-sub-section">
   <div class="container">
     {% include "_plans_and_pricing_sub_section.html" %}
@@ -103,6 +107,24 @@ $(document).ready(function(){
     var linkText = $("#pretty-link").text();
     var splitLink = linkText.split('&');
     $("#pretty-link").text(splitLink[0]);
+});
+
+function displayDisclaimer(){
+  if($('#ours-vs-theirs').is(':visible') || $('#faq').is(':visible')){
+     $("#disclaimer").show(); 
+  }
+  else{
+    $("#disclaimer").hide(); 
+  }
+};
+  
+$('.nav-tabs a.js-tab-init').each(function() {
+    var $this = $(this);
+    $this.click(function (e) {
+        e.preventDefault();
+        $this.tab('show');
+        displayDisclaimer();
+    });
 });
 
 $('#myTab a').click(function (e) {
