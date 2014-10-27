@@ -147,25 +147,19 @@ $('.js-add-to-cart').on('click', function(e) {
     if($(this).parents('form')){
       var plan = $(this).parents('form').serializeArray();
     }
-    // console.log($(this).data('value'));
     if($(this).data('value')){
       var pkg = $(this).data('value');
-      console.log(pkg);
     }else{
       var pkg = $.parseJSON(plan[0].value);
     }
     var sapiurl = '[@T[link:<external linktype="SALESPRODUCTSURL" path="/v1/pl/1724/cart/packages" />]@T]';
-    // var pkg = $.parseJSON(plan[0].value)
 
     if(plan[1]){
       var ssl = plan[1].value;
-      // var addon = $.parseJSON("{"wordpresspl_standard_ssl_addon": 1});
       pkg.addons = {};
       pkg['addons'][ssl] = 1;
-      console.log(pkg);
     }
     var postdata = "requestData=" + JSON.stringify(pkg);
-    console.log(postdata);
     $.ajax({
         type:"GET",
         url: sapiurl,
@@ -173,7 +167,6 @@ $('.js-add-to-cart').on('click', function(e) {
         data: postdata,
         dataType: "jsonp",
         success: function (response) { 
-          // console.log(response);
            ##if(isManager())
             var carturl = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]';
            ##else
@@ -182,7 +175,6 @@ $('.js-add-to-cart').on('click', function(e) {
            window.location = carturl;
           },
        failure: function (response) { 
-          // console.log(response);        
          ##if(isManager())
           var carturl = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]';
          ##else
