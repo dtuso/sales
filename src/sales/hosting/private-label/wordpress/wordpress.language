@@ -75,7 +75,7 @@ What is Managed WordPress Hosting?
 <phrase key="WordPressPrivateLabel-38-BuiltOnOurStateOfTheArtWeb" />
 Built on our state-of-the-art Web hosting, Managed WordPress Hosting from [@T[companyname:name]@T] is the perfect solution for anyone who wants the power and simplicity of WordPress without the hassle of constant updates and technical adjustments.
 <phrase key="WordPressPrivateLabel-57-MoreThanJustASimpleInstallWordPressIs" />
-More than just a simple install, WordPress is seamlessly integrated to your hosting so the moment you log in, you’re able to build, edit and manage your site. We’ve also modified our server specifically for WordPress, giving you a level of speed and security you can’t get from a standard Web hosting plan.
+More than just a simple install, WordPress is seamlessly integrated to your hosting so the moment you log in, you’re able to build, edit and manage your site. We’ve also modified our servers specifically for WordPress, giving you a level of speed and security you can’t get from a standard Web hosting plan.
 <phrase key="WordPressPrivateLabel-38-AndOfCourseOurAwardWinningSupportIs" />
 And of course, our award-winning support is available 24x7 to help with any questions you may have. In short, there’s no easier way to build and manage a fast, secure, reliable WordPress website or blog.
 <phrase key="WordPressPrivateLabel-11-HowDoesYourVersionOfWordPressDifferFrom" />
@@ -103,7 +103,7 @@ How can I access my WordPress installation?
 <phrase key="WordPressPrivateLabel-14-ThereAreSeveralWayToLogInTo" />
 There are several ways to log in to your WordPress website or blog.
 <phrase key="WordPressPrivateLabel-23-GoToTCompanynameNameTComLog" />
-Go to [@T[companyname:name]@T].com, log in to “My Account” and choose Managed WordPress Hosting from your list of products.
+Go to <span id="pretty-link">[@T[companyname:name]@T]</span>, log in to “My Account” and choose Managed WordPress Hosting from your list of products.
 <phrase key="WordPressPrivateLabel-25-TypeHttpCoolexampleComWpAdminWhereCoolexample" />
 Type http://coolexample.com/wp-admin, where coolexample.com is your domain name, and that will take you directly to the Admin login screen.
 <phrase key="WordPressPrivateLabel-5-SeeTheDifferenceForYourself" />
@@ -199,7 +199,7 @@ Optimized WordPress platform
 <phrase key="WordPressPrivateLabel-4-DedicatedLoadBalancedServers" />
 Dedicated load balanced servers
 <phrase key="WordPressPrivateLabel-37-WeDistributeWebRequestsAcrossMultipleServersSo" />
-We distribute web requests across multiple servers so the same amount of work gets done faster and can handle spikes in traffic. And if there&#39;s a problem withone server, your site won&#39;t be affected.
+We distribute web requests across multiple servers so the same amount of work gets done faster and can handle spikes in traffic. And if there&#39;s a problem with one server, your site won&#39;t be affected.
 <phrase key="WordPressPrivateLabel-8-MassivelyRedundantlySSDBackedFileAndDatabaseServers" />
 Massively redundantly SSD-backed file and database servers
 <phrase key="WordPressPrivateLabel-24-YourWebsiteContentDatabaseAndAdminLoadBlazing" />

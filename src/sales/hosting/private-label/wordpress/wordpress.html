@@ -99,6 +99,12 @@ localVars: true
 <script src="[@T[link:<javascriptroot />]@T]fos/script/atlantis_jquery14.min.js" type="text/javascript"></script>
 <script src="[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2" type="text/javascript"></script>
 <script type="text/javascript">
+$(document).ready(function(){
+    var linkText = $("#pretty-link").text();
+    var splitLink = linkText.split('&');
+    $("#pretty-link").text(splitLink[0]);
+});
+
 $('#myTab a').click(function (e) {
    e.preventDefault();
    $(this).tab('show');
