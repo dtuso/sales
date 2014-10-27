@@ -131,36 +131,44 @@ function getParameterByName(name) {
 
 $('.js-add-to-cart').on('click', function(e) {
     e.preventDefault();
-    var url = '[@T[link:<relative path="/api/package" parammode="explicit"/>]@T]';
     var plan = $(this).parents('form').serializeArray();
-    console.log($.parseJSON(plan[0].value));
-    // var planselected = $(this).attr('data-plan');
-    // var cicode = $(this).attr('data-ci');
-    // var mgrNumber = getParameterByName('mgrshopper');
-
-    // url += '/add'; //action
-    // ##if(isManager())
-    // url += '/mgr_slp_wordpress'; //mgr itc code
-    // ##else
-    // url += '/slp_wordpress'; //itc code
-    // ##endif
-    // url += '/' + cicode; //ci code
-    // url += '/1';
-    // url += '/' + planselected; //Plan Name
-
-    // ##if(isManager())
-    // url += '/?mgrshopper=' +  mgrNumber;
-    // ##endif
-
-    // $.getJSON(url, function (data) {
-    //     if (data.Success == true) {
-    //             ##if(isManager())
-    //             window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]';
-    //             ##else
-    //             window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]';
-    //             ##endif
-    //     }
-    // });
+    var pkg = $.parseJSON(plan[0].value);
+    var sapiurl = '[@T[link:<external linktype="SALESPRODUCTSURL" path="/v1/pl/1724/cart/packages" />]@T]';
+    // var pkg = $.parseJSON(plan[0].value)
+    if(plan[1]){
+      var ssl = plan[1].value;
+      // var addon = $.parseJSON("{"wordpresspl_standard_ssl_addon": 1});
+      pkg.addons = {};
+      pkg['addons'][ssl] = 1;
+      console.log(pkg);
+    }
+    var postdata = "requestData=" + JSON.stringify(pkg);
+    console.log(postdata);
+    $.ajax({
+        type:"GET",
+        url: sapiurl,
+        contentType: "application/json",
+        data: postdata,
+        dataType: "jsonp",
+        success: function (response) { 
+          // console.log(response);
+           ##if(isManager())
+            var carturl = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]';
+           ##else
+            var carturl = '[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]';
+           ##endif
+           window.location = carturl;
+          },
+       failure: function (response) { 
+          // console.log(response);        
+         ##if(isManager())
+          var carturl = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]';
+         ##else
+          var carturl = '[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]';
+         ##endif
+         window.location = carturl;
+       }
+    });
 });
 
 
