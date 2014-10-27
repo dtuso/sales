@@ -69,23 +69,19 @@ Pro
 <phrase key="WordPressPrivateLabel-4-WhatIsWordPress" />
 What is WordPress?
 <phrase key="WordPressPrivateLabel-84-WordPressIsABlogAndWebPublishingPlatform" />
-WordPress is a blog- and Web-publishing platform that's not only easy to use, but recognized the world over as a standard in website creation. With its focus on aesthetics, Web standards and usability, WordPress is an open-source platform that lets you manage everything from a small personal blog to a large commercial site with hundreds of pages. Hundreds of thousands of sites trust their online presence to WordPress – and with Managed WordPress Hosting from [@T[companyname:name]@T], you can too
+WordPress<sup>&reg;</sup> is a blog- and Web-publishing platform that's not only easy to use, but recognized the world over as a standard in website creation. With its focus on aesthetics, Web standards and usability, WordPress is an open-source platform that lets you manage everything from a small personal blog to a large commercial site with hundreds of pages. Hundreds of thousands of sites trust their online presence to WordPress – and with Managed WordPress Hosting from [@T[companyname:name]@T], you can too.
 <phrase key="WordPressPrivateLabel-6-WhatIsManagedWordPressHosting" />
 What is Managed WordPress Hosting?
 <phrase key="WordPressPrivateLabel-38-BuiltOnOurStateOfTheArtWeb" />
-Built on our state-of-the-art Web hosting, Managed WordPress Hosting from GoDaddy is the perfect solution for anyone who wants the power and simplicity of WordPress without the hassle of constant updates and technical adjustments.
+Built on our state-of-the-art Web hosting, Managed WordPress Hosting from [@T[companyname:name]@T] is the perfect solution for anyone who wants the power and simplicity of WordPress without the hassle of constant updates and technical adjustments.
 <phrase key="WordPressPrivateLabel-57-MoreThanJustASimpleInstallWordPressIs" />
 More than just a simple install, WordPress is seamlessly integrated to your hosting so the moment you log in, you’re able to build, edit and manage your site. We’ve also modified our server specifically for WordPress, giving you a level of speed and security you can’t get from a standard Web hosting plan.
-<phrase key="WordPressPrivateLabel-29-BestOfAllWeManageYourCoreWordPress" />
-Best of all, we manage your core WordPress updates automatically, so you can give your full attention to your website instead of time-consuming administration and security tasks.
 <phrase key="WordPressPrivateLabel-38-AndOfCourseOurAwardWinningSupportIs" />
 And of course, our award-winning support is available 24x7 to help with any questions you may have. In short, there’s no easier way to build and manage a fast, secure, reliable WordPress website or blog.
 <phrase key="WordPressPrivateLabel-11-HowDoesYourVersionOfWordPressDifferFrom" />
 How does your version of WordPress differ from other installations?
 <phrase key="WordPressPrivateLabel-55-ItDoesnTWeStartYouOutWith" />
 It doesn't. We start you out with the latest version of WordPress, the same one you’d download from WordPress.org. And anytime there’s an update, we install it for you automatically. You never have to hassle with installing another update or worry about running an outdated or compromised version of WordPress.
-<phrase key="WordPressPrivateLabel-28-InFactWeDoTheSameWithYour" />
-In fact, we do the same with your themes and plugins. Just another way we ensure that your site is secure, reliable and running at top speed.
 <phrase key="WordPressPrivateLabel-9-DoINeedToSetUpMyDatabase" />
 Do I need to set up my database?
 <phrase key="WordPressPrivateLabel-36-NoWithManagedWordPressHostingWeTakeCare" />
@@ -93,9 +89,9 @@ No. With Managed WordPress Hosting, we take care of everything so the process is
 <phrase key="WordPressPrivateLabel-19-IfIHaveAWordPressSiteHostedSomewhere" />
 If I have a WordPress site hosted somewhere else, can I move it to [@T[companyname:name]@T]?
 <phrase key="WordPressPrivateLabel-45-YesYouCanMigrateYourSiteOverThe" />
-Yes. You can migrate your site over the [@T[companyname:name]@T] Managed WordPress in just one click. Either move it to your domain name or put it on a temporary domain, then just do a quick review and you’re ready to publish.
+Yes. You can migrate your site over to [@T[companyname:name]@T] Managed WordPress in just one click. Either move it to your domain name or put it on a temporary domain, then just do a quick review and you’re ready to publish.
 <phrase key="WordPressPrivateLabel-12-AfterIPurchaseWordPressManagedHostingHowDo" />
-After I purchase WordPress Managed Hosting, how do I get started?
+After I purchase Managed WordPress Hosting, how do I get started?
 <phrase key="WordPressPrivateLabel-19-NotSureHowToCreateABlogOr" />
 Not sure how to create a blog or get started building your site using WordPress? Don’t worry!
 <phrase key="WordPressPrivateLabel-50-YourHostingPlanIsSeamlesslyConnectedToThe" />
@@ -105,11 +101,9 @@ And if you ever have questions, don't hesitate to contact our award-winning 24x7
 <phrase key="WordPressPrivateLabel-8-HowCanIAccessMyWordPressInstallation" />
 How can I access my WordPress installation?
 <phrase key="WordPressPrivateLabel-14-ThereAreSeveralWayToLogInTo" />
-There are several way to log in to your WordPress website or blog.
+There are several ways to log in to your WordPress website or blog.
 <phrase key="WordPressPrivateLabel-23-GoToTCompanynameNameTComLog" />
 Go to [@T[companyname:name]@T].com, log in to “My Account” and choose Managed WordPress Hosting from your list of products.
-<phrase key="WordPressPrivateLabel-16-GoToYourBlogOrWebsiteAndClick" />
-Go to your blog or website and click “Site Admin” to access your login screen.
 <phrase key="WordPressPrivateLabel-25-TypeHttpCoolexampleComWpAdminWhereCoolexample" />
 Type http://coolexample.com/wp-admin, where coolexample.com is your domain name, and that will take you directly to the Admin login screen.
 <phrase key="WordPressPrivateLabel-5-SeeTheDifferenceForYourself" />
