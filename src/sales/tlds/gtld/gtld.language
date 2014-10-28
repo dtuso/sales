@@ -1,6 +1,6 @@
 ---
 location: localization/sales/gd/tlds/gtld/en
-id: 5432d8fef778fc25d4961edd
+id: 
 name: GCE-29677
 comments: Updating slider content.
 ---
@@ -441,6 +441,8 @@ Enter a <b>Domain Name</b>
 .vegas
 <phrase key="SolutionsHeader" />
 .solutions
+<phrase key="RocksHeader" />
+.rocks
 <phrase key="MainBannerCarouselSlide2TextNinja" />
 Show off your <strong>.ninja</strong> skills
 <phrase key="MainBannerCarouselSlide3TextEmail" />
@@ -479,3 +481,7 @@ They have problems. You have <strong>.solutions</strong>
 Make your case with <strong>.attorney</strong>
 <phrase key="MainBannerCarouselSlideTextNinja" />
 Show off your <strong>.ninja</strong> skills
+<phrase key="MainBannerCarouselSlideTextLawyer"/>
+<strong>.lawyer</strong> says you know the law.
+<phrase key="MainBannerCarouselSlideTextRocks" />
+Tell the world what moves you with <strong>.rocks</strong>
