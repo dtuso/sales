@@ -248,6 +248,12 @@
           { "Description" : "Top Pod - .ca Link" }
         ]
       },
+       { "Top TLD Pods - .QUEBEC link" : [
+          { "ITC ID" : "94089" },
+          { "ITC Code" : "" },
+          { "Description" : "Top Pod - .QUEBEC Link" }
+        ]
+      },
       { "Top TLD Pods - .CLUB link" : [
           { "ITC ID" : "88763" },
           { "ITC Code" : "" },
@@ -290,6 +296,12 @@
           { "ITC ID" : "88399" },
           { "ITC Code" : "" },
           { "Description" : "Buttom TLD Pods - .GURU" }
+        ]
+      },
+      { "Buttom TLD Pods - .LONDON" : [
+          { "ITC ID" : "90608" },
+          { "ITC Code" : "" },
+          { "Description" : "Buttom TLD Pods - .LONDON" }
         ]
       },
        { "Buttom TLD Pods - .NET" : [

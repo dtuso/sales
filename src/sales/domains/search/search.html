@@ -1,8 +1,8 @@
 ---
 location: sales/domains/domain-name-search.aspx
-id: 535a894ef778fc023885482d
-name: GCE-29696
-comments: Merchandising Updates for 10/14
+id: 545002eff778fc1aa8bc31cb
+name: GCE-30012
+comments: Merchandising Updates for 10/29
 ---
 {% extends 'layouts/base.html' %}
 {% block metahead %}
@@ -46,7 +46,11 @@ comments: Merchandising Updates for 10/14
 {% endblock %}
 
 {% block body %}
- 
+ <!--Exists in aspx but not updated to Git due to default Body block.
+<body ng-controller="dnsCtrl" ng-cloak>
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header" />]@P]
+
+    <div class="border-box" role="main">-->
         <!-- Start main-panel -->
         <section class="white-bg main-panel">
             <h1 class="main-panel-subtitle">[@L[cds.sales/gd/domains/domain-name-search:SalesHeaderSubHeading]@L]</h1>
@@ -78,9 +82,9 @@ comments: Merchandising Updates for 10/14
                            <div id="slideContainer" class="carousel-content-container">
                            <div class="carousel-inner carousel-inner-container" id="Sliders">                          
                             
-                            <div class="item carousel-inner-item carousel-inner-item-ds carousel-inner-item-ds-1 active" align="right">
+                           <div class="item carousel-inner-item carousel-inner-item-ds carousel-inner-item-ds-1 active" align="right">
                                  <div class="carousel-inner-text-container"> 
-                                   ##if(ActiveLanguageAny([es-ve], [es-pe], [es-mx], [es-co], [es-cl], [es-ar], [pt-br]))
+                                   ##if(ActiveLanguageAny([es-ve], [es-pe], [es-mx], [es-co], [es-cl], [es-ar]))
                                   <p class="no-margin-bottom">[@L[cds.sales/gd/domains/domain-name-search:CarouselSlide1ES]@L]</p>  
                                   ##elseif(ActiveLanguageAny([de-at],[de-de],[de-ch]))
                                   <p class="no-margin-bottom">[@L[cds.sales/gd/domains/domain-name-search:CarouselSlide1DE]@L]</p>  
@@ -88,7 +92,13 @@ comments: Merchandising Updates for 10/14
                                   <p class="no-margin-bottom">[@L[cds.sales/gd/domains/domain-name-search:CarouselSlide1UK]@L]</p> 
                                     ##elseif(ActiveLanguageAny([en-us],[es-us]))
                                   <p class="no-margin-bottom">[@L[cds.sales/gd/domains/domain-name-search:CarouselSlide1Default]@L]</p>  
-                                  ##else
+                                    ##elseif(ActiveLanguageAny([pt-br]))
+                                  <p class="no-margin-bottom">[@L[cds.sales/gd/domains/domain-name-search:CarouselSlide1BR]@L]</p>  
+                                    ##elseif(ActiveLanguageAny([en-in]))
+                                  <p class="no-margin-bottom" style="text-align:left">"[@L[cds.sales/gd/domains/domain-name-search:CarouselSlide1IN]@L]"</p><p style="margin:15px 0 0;text-align:left"><strong>Pranav Chandar, The Great Indian Adventure</strong></p>
+                                  ##elseif(ActiveLanguageAny([en-ca], [fr-ca]))
+                                  <p class="no-margin-bottom">[@L[cds.sales/gd/domains/domain-name-search:CarouselSlide1CA]@L]</p>  
+                                   ##else
                                     <p class="no-margin-bottom">[@L[cds.sales/gd/domains/domain-name-search:CarouselSlide1MY]@L]</p>  
                                   ##endif
                                 </div>
@@ -110,6 +120,8 @@ comments: Merchandising Updates for 10/14
                                     <p class="no-margin-bottom">[@L[cds.sales/gd/domains/domain-name-search:CarouselSlide3US]@L]</p>
                                   ##elseif(ActiveLanguageAny([es-es], [pt-pt], [fr-be], [fr-fr], [fr-ch], [de-de], [de-at], [de-ch], [en-gb], [en-ie], [nl-be], [da-dk], [it-it], [nl-nl], [pl-pl], [fi-fi], [sv-se], [it-ch], [el-gr]))
                                     <p class="no-margin-bottom">[@L[cds.sales/gd/domains/domain-name-search:CarouselSlide3ES]@L]</p> 
+                                  ##elseif(ActiveLanguageAny([en-in]))
+                                    <p class="no-margin-bottom" style="text-align:left">"[@L[cds.sales/gd/domains/domain-name-search:CarouselSlide3IN]@L]"</p><p style="margin:15px 0 0;text-align:left"><strong> Parminder Singh Saini, AgriWire</strong></p>
                                   ##else
                                    <p class="no-margin-bottom">[@L[cds.sales/gd/domains/domain-name-search:CarouselSlide3Default]@L]</p> 
                                   ##endif  
@@ -146,7 +158,11 @@ comments: Merchandising Updates for 10/14
                     <p id ="btnText"><a class="btn btn-primary btn-block btn-lg btn--push-down" style="white-space: pre-wrap;" href="{{pod.ButtonURL}}" ng-show="'{{pod.LaunchPhase}}'=='28'" >[@L[cds.sales/gd/domains/domain-name-search:Register]@L]</a>
                     <p id ="btnText"><a class="btn btn-primary btn-block btn-lg btn--push-down" style="white-space: pre-wrap;" href="{{pod.ButtonURL}}" ng-hide="'{{pod.LaunchPhase}}'=='28'" >[@L[cds.sales/gd/domains/domain-name-search:PreRegister]@L]</a>
                   </p>
-                    <p ng-bind-html="pod.PodText" ></p>
+                     ##if(ActiveLanguageAny([ru-ru]))
+                    <p style="font-size:0.9em" ng-bind-html="pod.PodText" ></p> 
+                    ##else
+                    <p ng-bind-html="pod.PodText" ></p> 
+                    ##endif
                 </div>
             </div>
         </div>
@@ -391,8 +407,6 @@ comments: Merchandising Updates for 10/14
 
                                     <h2 class="h2-alternate">[@L[cds.sales/gd/domains/domain-name-search:FaqLine5Title]@L]</h2>
                                     <p>[@L[cds.sales/gd/domains/domain-name-search:FaqLine5Text1]@L]</p>
-                                    <p>[@L[cds.sales/gd/domains/domain-name-search:FaqLine5Text2]@L]</p>
-
                                 </div>
                             </div>
                         </div>
@@ -483,7 +497,7 @@ comments: Merchandising Updates for 10/14
         url='[@T[link:<relative path="~/api/package/config/domainlp_ve"/>]@T]';
        ##elseif(activeLanguageAny([de-at]))
         url='[@T[link:<relative path="~/api/package/config/domainlp_at"/>]@T]';
-       ##elseif(activeLanguageAny([nl-be],[fr-be]))
+       ##elseif(activeLanguageAny([fr-be]))
         url='[@T[link:<relative path="~/api/package/config/domainlp_be"/>]@T]';
        ##elseif(activeLanguageAny([da-dk]))
         url='[@T[link:<relative path="~/api/package/config/domainlp_dk"/>]@T]';
@@ -499,7 +513,7 @@ comments: Merchandising Updates for 10/14
         url='[@T[link:<relative path="~/api/package/config/domainlp_se"/>]@T]';
       ##elseif(activeLanguageAny([de-de]))
         url='[@T[link:<relative path="~/api/package/config/domainlp_de"/>]@T]';
-      ##elseif(activeLanguageAny([de-ch],[it-ch],[fr-ch]))
+      ##elseif(activeLanguageAny([de-ch]))
         url='[@T[link:<relative path="~/api/package/config/domainlp_ch"/>]@T]';
       ##elseif(activeLanguageAny([fi-fi]))
         url='[@T[link:<relative path="~/api/package/config/domainlp_fi"/>]@T]';
@@ -514,9 +528,7 @@ comments: Merchandising Updates for 10/14
       ##elseif(activeLanguageAny([uk-ua]))
         url='[@T[link:<relative path="~/api/package/config/domainlp_ua"/>]@T]';
       ##elseif(activeLanguageAny([tr-tr]))
-        url='[@T[link:<relative path="~/api/package/config/domainlp_tr"/>]@T]';
-      ##elseif(activeLanguageAny([no-no]))
-        url='[@T[link:<relative path="~/api/package/config/domainlp_no"/>]@T]';
+        url='[@T[link:<relative path="~/api/package/config/domainlp_tr"/>]@T]';    
       ##elseif(activeLanguageAny([es-cl]))
         url='[@T[link:<relative path="~/api/package/config/domainlp_cl"/>]@T]';
       ##elseif(activeLanguageAny([en-gb]))
@@ -526,7 +538,7 @@ comments: Merchandising Updates for 10/14
        ##elseif(activeLanguageAny([en-ie]))
         url='[@T[link:<relative path="~/api/package/config/domainlp_ie"/>]@T]';
        ##elseif(activeLanguageAny([nb-no]))
-        url='[@T[link:<relative path="~/api/package/config/domainlp_no"/>]@T]';
+        url='[@T[link:<relative path="~/api/package/config/domainlp_nb_no"/>]@T]';
        ##elseif(activeLanguageAny([es-ar]))
         url='[@T[link:<relative path="~/api/package/config/domainlp_ar"/>]@T]';
        ##elseif(activeLanguageAny([es-co]))

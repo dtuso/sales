@@ -16,6 +16,15 @@ comments: gTLD LP - merchandising updates - deploy 10/29
     }
     </style>
 ##endif        
+      
+##if(countrySiteAny(in))
+    <!-- International Background Images -->
+    <style type="text/css">
+      .bg-images > .bg-slide1 {
+      background-image: url("[@T[link:<cssroot />]@T]/fos/201401/tlds/gtld/img/bg-main-banner-website.jpg") !important;
+      }
+    </style>
+##endif
 
 ##if(activeLanguageAny([en-gb]))
     <!-- International Background Images -->
@@ -29,6 +38,33 @@ comments: gTLD LP - merchandising updates - deploy 10/29
     <style type="text/css">
       .bg-images > .bg-slide2 {
       background-image: url("[@T[link:<cssroot />]@T]/fos/201401/tlds/gtld/img/bg-main-banner-email.jpg") !important;
+      }
+    </style>
+##endif
+      
+##if(countrySiteAny(www, ca))
+    <!-- International Background Images -->
+    <style type="text/css">
+      .bg-images > .bg-slide3 {
+      background-image: url("[@T[link:<cssroot />]@T]/fos/201401/tlds/gtld/img/bg-main-banner-club.jpg") !important;
+      }
+    </style>
+##endif
+      
+##if(activeLanguageAny([en-AU],[nl-BE],[fr-BE],[en-CA],[fr-CA],[da-DK],[de-DE],[es-ES],[es-US],[fr-FR],[it-IT],[nl-NL],[en-NZ],[nb-NO],[de-AT],[pl-PL],[pt-PT],[de-CH],[fr-CH],[fi-FI],[sv-SE],[it-CH],[en-US],[en-IE],[en-GB],[en-ZA],[ru-RU],[el-GR],[uk-UA]))
+    <!-- International Background Images -->
+    <style type="text/css">
+      .bg-images > .bg-slide4 {
+      background-image: url("[@T[link:<cssroot />]@T]/fos/201401/tlds/gtld/img/US_bg-main-banner-rocks.jpg") !important;
+      }
+    </style>
+##endif
+      
+##if(countrySiteAny(in))
+    <!-- International Background Images -->
+    <style type="text/css">
+      .bg-images > .bg-slide4 {
+      background-image: url("[@T[link:<cssroot />]@T]/fos/201401/tlds/gtld/img/bg-main-banner-company.jpg") !important;
       }
     </style>
 ##endif
