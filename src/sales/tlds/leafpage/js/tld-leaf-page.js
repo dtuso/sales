@@ -279,11 +279,23 @@ if (!domains.controls.cds_gtld_templates) {
           }
           return phaseData.Prices.TotalCurrent+'*'
         }
-        else
-        {
-          if(phaseData.Code == 'GA' || phaseData.Code == 'ga') {
+         else
+        {   
+          if(phaseData.Code.toUpperCase() == 'GA' && settings.cctldPrice!==true) 
+          { $('#cctldPrice').hide();
             $('#tld-pricetagline').append('<span> <strong style="text-decoration:line-through">'+phaseData.Prices.TotalList+'</em></strong>');
+           
           }
+          else
+          {
+             if(phaseData.Code.toUpperCase()=='GA' && settings.cctldPrice===true) 
+             {  
+                $('#gtldPrice').hide();   
+                $('#tld-pricetagcctld').prepend('<span> <strong style="text-decoration:line-through">'+phaseData.Prices.TotalList+'</em></strong>');
+                $('#FirstYearPrice').html(phaseData.Prices.TotalCurrent);
+                $('#AdditionalYears').html(phaseData.Prices.TotalList);               
+             }
+        }
           $('#limitations-wrap').remove();
         // if(phaseData.HasIcannFee)
         // {
@@ -299,6 +311,7 @@ if (!domains.controls.cds_gtld_templates) {
         }
       }
       if(typeof phaseData.Prices.TotalList !== 'undefined') {
+         $('#cctldPrice').hide();
         if(phaseData.HasIcannFee)
           return phaseData.Prices.TotalList +'*'
         else
@@ -380,7 +393,9 @@ if (!domains.controls.cds_gtld_templates) {
       var gaPrice = getCurrentPrice(gaPhaseData);
       $('#ga-head-price').html(gaPrice);
       $('#tld-pricetagline,#tld-priceline').show(); //show after pricing has been tokenized to prevent FOUC
-      
+      $('#tld-pricetagcctld').show();     
+      if(settings.cctldPrice===true)
+      $('#cctldPrice #tld-priceline span:nth-child(1)').html(gaPrice);
     };
 
     this.SetupPreReg = function() {

@@ -1,8 +1,8 @@
 ---
 location: sales/tlds/gtldga.aspx
-id: 5429e04bf778fc106c634432
-name: GCE-28328
-comments: Fixing Header Background to cover
+id: 54500ae7f778fc1aa8bc31f4
+name: GCE-30217
+comments: Update Leaf Pages and Pricing Grid to reflect sale pricing when 2 yr ccTLD Promo is in play
 ---
 <!DOCTYPE HTML>
 <html lang="[@T[localization:<language full="true" />]@T]">
@@ -25,8 +25,8 @@ comments: Fixing Header Background to cover
 
     <link rel="shortcut icon" href="[@T[link:<imageroot />]@T]assets/godaddy.ico"/>
     <link href="[@T[link:<cssroot />]@T]fos/global/build/0.2.0/gd-fos-global.min.css" rel="stylesheet" type="text/css" />
-    <link href="[@T[link:<css path='fos/201401/tlds/tld-leaf/css/styles.css' />]@T]" rel="stylesheet" type="text/css"  />
-
+    <link href="[@T[link:<css path='fos/sales/themes/scotty/tlds/leafpage/css/styles10272014.css' />]@T]" rel="stylesheet" type="text/css"  />
+<!--Synchronizing the CSS path from Prod to GitHub.-->
 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags" />]@P]
     <script src="[@T[link:<javascriptroot />]@T]shared/js/1.5.1/global.20120918.min.js" type="text/javascript" ></script>
@@ -39,7 +39,7 @@ comments: Fixing Header Background to cover
       .fb_iframe_widget {top:-3px !important;}
       html:lang(en) #main-wrap.tld-vegas .header {background: url('[@T[link:<cssroot />]@T]tldleafpages/vegas/fos/gtld-banner-new.jpg')}
       ##if(countrySiteAny(ru,ua,fi,tr))
-      #main-wrap.tld-london .header{background: url('[@T[link:<cssroot />]@T]tldleafpages/london/fos/gtld-banner.jpg')}
+      #main-wrap.tld-london .header{background: url('[@T[link:<cssroot />]@T]tldleafpages/london/fos/gtld-banner.jpg');background-size: cover;}
       ##endif
     </style>
   </head>
@@ -64,9 +64,8 @@ comments: Fixing Header Background to cover
         </div>
           <div id="head-wrap">
             <div class="header">
-              <div class="header-text">
-                [@L[cds.tldleaf/[@D[gtld]@D]:ga.header.content]@L]
-              </div>
+              <div class="header-text" id="gtldPrice">[@L[cds.tldleaf/[@D[gtld]@D]:ga.header.content]@L]</div>
+              <div class="header-text" id="cctldPrice">[@L[cds.tldleaf/[@D[gtld]@D]:ga.header.content.cctld]@L]</div>
             </div>
           </div>
           <div id="search-wrap">
@@ -117,7 +116,7 @@ comments: Fixing Header Background to cover
     <script src="[@T[link:<javascriptroot />]@T]shared/js/jquery.plugins.min.20111019.js" type="text/javascript" ></script>
     <script src="[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2" type="text/javascript"></script>
     <script src="[@T[link:<javascriptroot />]@T]starfield/fos.share/v1.3/fos.share-20140205.min.js" id="fosShareScript" ></script>
-    <script src="[@T[link:<cssroot />]@T]fos/201401/tlds/tld-leaf/js/tld-leaf-page9192014.min.js"></script>
+    <script src="[@T[link:<cssroot />]@T]fos/201401/tlds/tld-leaf/js/tld-leaf-page10272014.min.js"></script>
     
     <!--[if lte IE 8]>
     <script src="[@T[link:<javascriptroot />]@T]fos/script/JSON2.min.js"></script>
@@ -140,6 +139,7 @@ comments: Fixing Header Background to cover
             redirectUrl: '[@T[link:<relative path="~/tlds/gtld.aspx"></relative>]@T]',
             tldH1TagExists: $.trim('[@L[cds.tldleaf/[@D[gtld]@D]:all.page.h1]@L]').length > 0,
             tldUKLogo:'[@T[link:<imageroot />]@T]tldleafpages/uk/fos/[@L[cds.tldleaf/uk:all.gtld.logo]@L]',
+            cctldPrice:$.trim('[@L[cds.tldleaf/[@D[gtld]@D]:ga.header.content.cctld]@L]').length > 0, 
             icannLink:removeIcannLink(), 
             ##if(activeLanguageAny(en))
               isEnMarket: true,
