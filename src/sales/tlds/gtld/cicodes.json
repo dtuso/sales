@@ -95,6 +95,18 @@
           { "ITC Code" : "GtldEoiWebsiteAttorney" },
           { "Description" : ".ATTORNEY Slide Link" }
         ]
+      },
+      { ".LAWYER Slide Link" : [
+          { "ITC ID" : "94264" },
+          { "ITC Code" : "GtldEoiWebsiteLawyer" },
+          { "Description" : ".LAWYER Slide Link" }
+        ]
+      },
+      { ".ROCKS Slide Link" : [
+          { "ITC ID" : "94265" },
+          { "ITC Code" : "GtldEoiWebsiteRocks" },
+          { "Description" : ".ROCKS Slide Link" }
+        ]
       }
     ],
   "Everything Else" : [
