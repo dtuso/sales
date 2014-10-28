@@ -995,7 +995,7 @@ OK
 <phrase key="29621-Disclaimers-renewed" />
 Products will automatically renew until cancelled. You may turn off the auto-renewal feature by visiting your GoDaddy account.
 <phrase key="29621-Disclaimers-ms-sla" />
-For more information see the full Microsoft Service Agreement here: <a href="94224" target="_blank" data-ci="">http://technet.microsoft.com/en-us/library/jj819284.aspx</a>
+For more information see the full Microsoft Service Agreement here: <a href="http://technet.microsoft.com/en-us/library/jj819284.aspx" target="_blank" data-ci="94224">http://technet.microsoft.com/en-us/library/jj819284.aspx</a>
 <phrase key="29621-FAQ-q-1" />
 Why should I buy Office 365 from GoDaddy if I already have Office on my desktop?
 <phrase key="29621-FAQ-a-1" />
@@ -1008,20 +1008,11 @@ This depends on whether you are using a PC or a Mac. PC users can download the l
 <phrase key="29621-FAQ-q-3" />
 Will the latest version of Microsoft Office work on my computer?
 <phrase key="29621-FAQ-a-3" />
-To use the 5 desktop downloads you get with the Business or Business Premium plan, you must be on one of the following operating systems: 
-<ul>
-<li>Windows Server 2008 R2</li>
-<li>Windows 7</li>
-<li>Windows Server 2012</li>
-<li>Windows 8</li>
-<li>Mac OS X version 10.6 or later.</li>
-</ul>
-If you are running a different operating system, remember that you can still work online with Office Online, browser-based versions of your favorite Microsoft tools like Excel, Word or PowerPoint, which are included with the Online Essentials or Business Premium plans.
+To use the 5 desktop downloads you get with the Business or Business Premium plan, you must be on one of the following operating systems: <ul><li>Windows Server 2008 R2</li><li>Windows 7</li><li>Windows Server 2012</li><li>Windows 8</li><li>Mac OS X version 10.6 or later.</li></ul> If you are running a different operating system, remember that you can still work online with Office Online, browser-based versions of your favorite Microsoft tools like Excel, Word or PowerPoint, which are included with the Online Essentials or Business Premium plans.</div>
 <phrase key="29621-FAQ-q-4" />
 I have a Mac. Can I still use Office 365 from GoDaddy? What about the Business and Business Premium plans?
 <phrase key="29621-FAQ-a-4" />
-Yes. Office Online is compatible with Mac OS X 10.5 and later with Safari 5 and later. 
-And if you choose the Business or Business Premium plan, you’ll be able to download Office for Mac 2011 Service Pack 3, which is fully compatible with Mac OS X 10.6.
+Yes. Office Online is compatible with Mac OS X 10.5 and later with Safari 5 and later. And if you choose the Business or Business Premium plan, you’ll be able to download Office for Mac 2011 Service Pack 3, which is fully compatible with Mac OS X 10.6.
 <phrase key="29621-FAQ-q-5" />
 What is Office for iPad?
 <phrase key="29621-FAQ-a-5" />
@@ -1051,19 +1042,19 @@ What if I already have a Workspace email account from GoDaddy?
 If you would like to switch your domain-based email from Workspace to Office 365, please call us at (480) 505-8877 and we can help you make the right decision regarding your existing email.
 <phrase key="29621-FAQ-q-11" />
 I am part of a larger organization—can I use Microsoft Office 365 from GoDaddy?
-<phrase key="29621-FAQ-a-12" />
+<phrase key="29621-FAQ-a-11" />
 The plans on our website are ideal for businesses that require fewer than 300 accounts. You may purchase up to 300 user accounts on each plan type and up to 900 in total. If you have questions, just give us a call at (480) 505-8877. Our award-winning team is here to help 24/7.
-<phrase key="29621-FAQ-q-13" />
+<phrase key="29621-FAQ-q-12" />
 What is Lync Online?
-<phrase key="29621-FAQ-a-13" />
+<phrase key="29621-FAQ-a-12" />
 Lync Online, included in the Online Essentials and Business Premium plans, allows you to communicate with your colleagues, customers and partners via online conference call or HD video conference. With just a couple of clicks, you can share your screen or invite up to 250 people inside or outside your company to take part in an online conversation.
-<phrase key="29621-FAQ-q-14" />
+<phrase key="29621-FAQ-q-13" />
 What is the cloud?
-<phrase key="29621-FAQ-a-14" />
+<phrase key="29621-FAQ-a-13" />
 Working or storing files in ‘the cloud' means that your programs and documents are stored securely on the Internet — not on your hard drive – so you can access them anytime, anywhere, from almost any device connected to the Web.
 You don't need to buy additional software and you’re not dependent on your computer to get work done. Plus, since your documents are stored on secure servers, you have peace of mind knowing that, even if your hard drive crashes, your documents and programs are safe and accessible from any web browser.
-<phrase key="29621-FAQ-q-15" />
+<phrase key="29621-FAQ-q-14" />
 What are the benefits of having domain-based email addresses?
-<phrase key="29621-FAQ-a-15" />
+<phrase key="29621-FAQ-a-14" />
 A domain-based email address, like info@your-business-name.com, helps you look more professional with customers and promotes your website and company. In fact, customers are 9 times more likely to choose a company with a professional email address*.  Every time you send an email from a domain-based address, you're putting your domain name in front of customers and encouraging them to visit your website.
 And with each plan, you can create free ‘alias’ addresses – like one using your first name (keith@your-business-name.com) and others for different departments (sales@your-business-name.com) -- that all feed into a single inbox and make you look even more professional. 
