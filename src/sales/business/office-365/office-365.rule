@@ -1,13 +1,18 @@
 ---
 location: sales/business/office-365.aspx.rule
-id: 544ead3ff778fc177439a9d6
+id: 544fea24f778fc142061a9cb
 name: GCE-29621
 comments: Office365 redesign
 ---
 [
   { 
     'Type': 'Redirect', 
-    'Condition': '(!siteContextAny(gd) || !productIsOffered(99)) && !isManager()', 
+    'Condition': '!siteContextAny(gd) && !isManager()', 
+    'Data': "{ 'Type' : '301', 'Loc': '[@T[link:<relative path=\"~/email/email-hosting.aspx\"></relative>]@T]' }"
+  },
+  { 
+    'Type': 'Redirect', 
+    'Condition': '!productIsOffered(99) && !isManager()', 
     'Data': "{ 'Type' : '302', 'Loc': '[@T[link:<relative path=\"~/email/email-hosting.aspx\"></relative>]@T]' }"
   }
 ]

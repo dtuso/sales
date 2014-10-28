@@ -1,6 +1,6 @@
 ---
 location: localization/sales/business/office-365/en
-id: 544fc440f778fc142061a9ac
+id: 544fd568f778fc142061a9be
 name: GCE-29621
 comments: Office365 redesign
 ---
@@ -1039,11 +1039,11 @@ With these versions of Office, you can select files stored in the cloud and edit
 <phrase key="29621-FAQ-q-10" />
 What if I already have a Workspace email account from GoDaddy?
 <phrase key="29621-FAQ-a-10" />
-If you would like to switch your domain-based email from Workspace to Office 365, please call us at (480) 505-8877 and we can help you make the right decision regarding your existing email.
+If you would like to switch your domain-based email from Workspace to Office 365, please call us at [@T[supportphone:<technical/>]@T] and we can help you make the right decision regarding your existing email.
 <phrase key="29621-FAQ-q-11" />
-I am part of a larger organization—can I use Microsoft Office 365 from GoDaddy?
+I am part of a larger organization - can I use Microsoft Office 365 from GoDaddy?
 <phrase key="29621-FAQ-a-11" />
-The plans on our website are ideal for businesses that require fewer than 300 accounts. You may purchase up to 300 user accounts on each plan type and up to 900 in total. If you have questions, just give us a call at (480) 505-8877. Our award-winning team is here to help 24/7.
+The plans on our website are ideal for businesses that require fewer than 300 accounts. You may purchase up to 300 user accounts on each plan type and up to 900 in total. If you have questions, just give us a call at [@T[supportphone:<technical/>]@T]. Our award-winning team is here to help 24/7.
 <phrase key="29621-FAQ-q-12" />
 What is Lync Online?
 <phrase key="29621-FAQ-a-12" />
