@@ -30,6 +30,14 @@ $
 6.29
 <phrase key="WordPressPrivateLabel-2-Month" />
 /month
+<phrase key="WordPressPrivateLabel-2-per-mo" />
+/mo
+<phrase key="WordPressPrivateLabel-2-mo" />
+mo
+<phrase key="WordPressPrivateLabel-secure-your-data-with-an-ssl" />
+Secure your data with an SSL:
+<phrase key="WordPressPrivateLabel-standard-ssl-per-year" />
+Standard SSL, [@T[productprice:<current productid="3604" period="annually"/>]@T]/yr
 <phrase key="WordPressPrivateLabel-7-25000MonthlyVisitorsOn1Website" />
 <li><strong>25,000</strong> monthly visitors on <strong>1</strong> website</li>
 <phrase key="WordPressPrivateLabel-4-100GBStorage" />
@@ -116,6 +124,8 @@ Starter Plan
 <span class="starting-at">Starting at</span> <span class="price"><span class="currency-symbol">$</span>6.29</span><span class="monthly">/month</span>
 <phrase key="WordPressPrivateLabel-3-ADDTOCART" />
 ADD TO CART
+<phrase key="WordPressPrivateLabel-3-AddToCart" />
+Add To Cart
 <phrase key="WordPressPrivateLabel-4-CheapCustomRegistrationStarter" />
 Cheap-Custom Registration Starter
 <phrase key="WordPressPrivateLabel-3-WPEnginePersonal" />
