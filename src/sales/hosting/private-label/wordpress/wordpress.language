@@ -243,7 +243,7 @@ Black list for known malicious plugins
 <phrase key="WordPressPrivateLabel-22-ToHelpKeepWordPressAccountsSecureAsPossible" />
 To help keep WordPress accounts secure as possible, we <a href="#">blacklist plugins</a> known to cause security and performance issues.
 <phrase key="WordPressPrivateLabel-8-BruteForceLoginAndCommentSpamPrevention" />
-Brute force login and comment spam prevention.
+Brute force login and comment spam prevention
 <phrase key="WordPressPrivateLabel-16-AddedSecurityLayersToPreventHackersFromStealing" />
 Added security layers to prevent hackers from stealing login credentials, and flooding &quot;comments&quot; with spam.
 <phrase key="WordPressPrivateLabel-4-AutomaticWordPressCoreUpdates" />
@@ -261,7 +261,7 @@ You&#39;re ready to start building your site in 30 seconds or less.
 <phrase key="WordPressPrivateLabel-5-PreLoadedPopularJetpackPlugin" />
 Pre-loaded popular Jetpack plugin
 <phrase key="WordPressPrivateLabel-18-IncludesOver30PopularPluginsToSuperchargeYour" />
-Includes over 30 popular plugins to supercharge your site with stats, contact forms, search boxes and more.
+Includes over 30 popular plugins to supercharge your site with site stats, contact forms, search boxes and more.
 <phrase key="WordPressPrivateLabel-3-TemporaryWebAddress" />
 Temporary web address
 <phrase key="WordPressPrivateLabel-26-BuildYourSiteOnTheFreeDomainIncluded" />
@@ -338,3 +338,7 @@ With our Managed WordPress, nearly 9 out of 10 migrations can be done using our 
 sFTP/SSH
 <phrase key="WordPressPrivateLabel-DisclaimerSection" />
 Updated as of June 30, 2014. Comparison based on entry-level plan for each provider.
+<phrase key="WordPressPrivateLabel-5-PeekUnderTheHood" />
+Take a peek under the hood
+<phrase key="WordPressPrivateLabel-31-IfYoureADeveloper" />
+If you're a developer, IT professional or just a self-taught web pro, here's your opportunity to dig into the details and see what makes our Managed WordPress incredibly fast, secure and easy to use.
