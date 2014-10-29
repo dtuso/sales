@@ -27,7 +27,6 @@
       <meta property="fb:app_id" content="{{ metaOgAppID }}" />
       <meta property="og:description" content="{{ metaOgDescription }}" />
 
-      <link rel="shortcut icon" href="[@T[link:<imageroot />]@T]assets/godaddy.ico" />
       <link rel="canonical" href="[@T[link:<external linktype='siteurl' path='{{ metaCanonicalPath }}' secure='false' parammode='explicit'/>]@T]"/>
 
       <!-- Global CSS -->
@@ -62,7 +61,7 @@
     <!-- End page main -->
 
     <script src="[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2" type="text/javascript"></script>
-    <script src="[@T[link:<javascriptroot />]@T]private-label/global/js/globals.js" type="text/javascript"></script>
+    <script src="[@T[link:<js path'private-label/global/js/globals.js' />]@T]" type="text/javascript"></script>
     {% block footer %}{% endblock %}
   </body>
 </html>
