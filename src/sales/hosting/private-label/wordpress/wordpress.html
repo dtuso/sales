@@ -1,6 +1,6 @@
 ---
 location: sales/hosting/private-label/wordpress.aspx
-id:   54469e92f778fc1834a2ac79
+id:   54501d66f778fc142061a9e6
 name: GCE-25511
 comments: String Extraction/Tokenization
 assetPath: false
@@ -100,8 +100,8 @@ localVars: true
 
 {% block footer %}
 
-<script src="[@T[link:<javascriptroot />]@T]fos/script/atlantis_jquery14.min.js" type="text/javascript"></script>
-<script src="[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2" type="text/javascript"></script>
+<script src="[@T[link:<javascriptroot />]@T]fos/script/atlantis_jquery14.min.js" type="text/javascript">/script>
+
 <script type="text/javascript">
 $(document).ready(function(){
     var linkText = $("#pretty-link").text();
@@ -132,6 +132,7 @@ $('.nav-tabs a.js-tab-init').each(function() {
         e.preventDefault();
         $this.tab('show');
         firstTabCheck();
+        displayDisclaimer();
     });
 });
 
@@ -152,7 +153,7 @@ $('.js-add-to-cart').on('click', function(e) {
     }else{
       var pkg = $.parseJSON(plan[0].value);
     }
-    var sapiurl = '[@T[link:<external linktype="SALESPRODUCTSURL" path="/v1/pl/1724/cart/packages" />]@T]';
+    var sapiurl = '[@T[link:<external linktype="SALESPRODUCTSURL" path="/v1/pl/{privatelabelid}/cart/packages" />]@T]';
 
     if(plan[1]){
       var ssl = plan[1].value;

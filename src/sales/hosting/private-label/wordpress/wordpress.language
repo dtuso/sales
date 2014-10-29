@@ -30,6 +30,14 @@ $
 6.29
 <phrase key="WordPressPrivateLabel-2-Month" />
 /month
+<phrase key="WordPressPrivateLabel-2-per-mo" />
+/mo
+<phrase key="WordPressPrivateLabel-2-mo" />
+mo
+<phrase key="WordPressPrivateLabel-secure-your-data-with-an-ssl" />
+Secure your data with an SSL:
+<phrase key="WordPressPrivateLabel-standard-ssl-per-year" />
+Standard SSL, [@T[productprice:<current productid="3604" period="annually"/>]@T]/yr
 <phrase key="WordPressPrivateLabel-7-25000MonthlyVisitorsOn1Website" />
 <li><strong>25,000</strong> monthly visitors on <strong>1</strong> website</li>
 <phrase key="WordPressPrivateLabel-4-100GBStorage" />
@@ -103,7 +111,7 @@ How can I access my WordPress installation?
 <phrase key="WordPressPrivateLabel-14-ThereAreSeveralWayToLogInTo" />
 There are several ways to log in to your WordPress website or blog.
 <phrase key="WordPressPrivateLabel-23-GoToTCompanynameNameTComLog" />
-  Go to <span id="pretty-link">[@T[link:<external linktype="SITEURL" secure="true"></external>]@T]</span>, log in to “My Account” and choose Managed WordPress Hosting from your list of products.
+  Go to <span id="pretty-link">[@T[link:<external linktype="SITEURL" secure="false"></external>]@T]</span>, log in to “My Account” and choose Managed WordPress Hosting from your list of products.
 <phrase key="WordPressPrivateLabel-25-TypeHttpCoolexampleComWpAdminWhereCoolexample" />
 Type http://coolexample.com/wp-admin, where coolexample.com is your domain name, and that will take you directly to the Admin login screen.
 <phrase key="WordPressPrivateLabel-5-SeeTheDifferenceForYourself" />
@@ -116,6 +124,8 @@ Starter Plan
 <span class="starting-at">Starting at</span> <span class="price"><span class="currency-symbol">$</span>6.29</span><span class="monthly">/month</span>
 <phrase key="WordPressPrivateLabel-3-ADDTOCART" />
 ADD TO CART
+<phrase key="WordPressPrivateLabel-3-AddToCart" />
+Add To Cart
 <phrase key="WordPressPrivateLabel-4-CheapCustomRegistrationStarter" />
 Cheap-Custom Registration Starter
 <phrase key="WordPressPrivateLabel-3-WPEnginePersonal" />
@@ -199,7 +209,7 @@ Optimized WordPress platform
 <phrase key="WordPressPrivateLabel-4-DedicatedLoadBalancedServers" />
 Dedicated load balanced servers
 <phrase key="WordPressPrivateLabel-37-WeDistributeWebRequestsAcrossMultipleServersSo" />
-We distribute web requests across multiple servers so the same amount of work gets done faster and can handle spikes in traffic. And if there&#39;s a problem withone server, your site won&#39;t be affected.
+We distribute web requests across multiple servers so the same amount of work gets done faster and can handle spikes in traffic. And if there&#39;s a problem with one server, your site won&#39;t be affected.
 <phrase key="WordPressPrivateLabel-8-MassivelyRedundantlySSDBackedFileAndDatabaseServers" />
 Massively redundantly SSD-backed file and database servers
 <phrase key="WordPressPrivateLabel-24-YourWebsiteContentDatabaseAndAdminLoadBlazing" />
@@ -231,7 +241,7 @@ We monitor and mitigate the network and systems against malicious activity.
 <phrase key="WordPressPrivateLabel-6-BlackListForKnownMaliciousPlugins" />
 Black list for known malicious plugins
 <phrase key="WordPressPrivateLabel-22-ToHelpKeepWordPressAccountsSecureAsPossible" />
-To help keep WordPress accounts secure as possible, we &lt;a href=&#39;#&#39;&gt;blacklist plugins&lt;/a&gt; known to cause security and performance issues.
+To help keep WordPress accounts secure as possible, we <a href="#">blacklist plugins</a> known to cause security and performance issues.
 <phrase key="WordPressPrivateLabel-8-BruteForceLoginAndCommentSpamPrevention" />
 Brute force login and comment spam prevention.
 <phrase key="WordPressPrivateLabel-16-AddedSecurityLayersToPreventHackersFromStealing" />
