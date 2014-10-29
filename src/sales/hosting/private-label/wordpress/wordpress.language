@@ -103,7 +103,7 @@ How can I access my WordPress installation?
 <phrase key="WordPressPrivateLabel-14-ThereAreSeveralWayToLogInTo" />
 There are several ways to log in to your WordPress website or blog.
 <phrase key="WordPressPrivateLabel-23-GoToTCompanynameNameTComLog" />
-  Go to <span id="pretty-link">[@T[link:<external linktype="SITEURL" secure="true"></external>]@T]</span>, log in to “My Account” and choose Managed WordPress Hosting from your list of products.
+  Go to <span id="pretty-link">[@T[link:<external linktype="SITEURL" secure="false"></external>]@T]</span>, log in to “My Account” and choose Managed WordPress Hosting from your list of products.
 <phrase key="WordPressPrivateLabel-25-TypeHttpCoolexampleComWpAdminWhereCoolexample" />
 Type http://coolexample.com/wp-admin, where coolexample.com is your domain name, and that will take you directly to the Admin login screen.
 <phrase key="WordPressPrivateLabel-5-SeeTheDifferenceForYourself" />
@@ -199,7 +199,7 @@ Optimized WordPress platform
 <phrase key="WordPressPrivateLabel-4-DedicatedLoadBalancedServers" />
 Dedicated load balanced servers
 <phrase key="WordPressPrivateLabel-37-WeDistributeWebRequestsAcrossMultipleServersSo" />
-We distribute web requests across multiple servers so the same amount of work gets done faster and can handle spikes in traffic. And if there&#39;s a problem withone server, your site won&#39;t be affected.
+We distribute web requests across multiple servers so the same amount of work gets done faster and can handle spikes in traffic. And if there&#39;s a problem with one server, your site won&#39;t be affected.
 <phrase key="WordPressPrivateLabel-8-MassivelyRedundantlySSDBackedFileAndDatabaseServers" />
 Massively redundantly SSD-backed file and database servers
 <phrase key="WordPressPrivateLabel-24-YourWebsiteContentDatabaseAndAdminLoadBlazing" />
@@ -231,7 +231,7 @@ We monitor and mitigate the network and systems against malicious activity.
 <phrase key="WordPressPrivateLabel-6-BlackListForKnownMaliciousPlugins" />
 Black list for known malicious plugins
 <phrase key="WordPressPrivateLabel-22-ToHelpKeepWordPressAccountsSecureAsPossible" />
-To help keep WordPress accounts secure as possible, we &lt;a href=&#39;#&#39;&gt;blacklist plugins&lt;/a&gt; known to cause security and performance issues.
+To help keep WordPress accounts secure as possible, we <a href="#">blacklist plugins</a> known to cause security and performance issues.
 <phrase key="WordPressPrivateLabel-8-BruteForceLoginAndCommentSpamPrevention" />
 Brute force login and comment spam prevention.
 <phrase key="WordPressPrivateLabel-16-AddedSecurityLayersToPreventHackersFromStealing" />
