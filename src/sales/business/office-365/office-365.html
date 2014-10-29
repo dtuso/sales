@@ -189,39 +189,31 @@ assetPath: false
     }
 
     /*End Local Globals*/
-    #banner-section{
-      padding-top: 40px;
-      padding-bottom: 50px;
-      position: relative;
+
+    /* BANNER SECTION */
+
+    #banner-section { padding: 40px 0 10px; position: relative; background-image: url("[@T[link:<imageroot />]@T]fos/sales/themes/scotty/business/office-365/img/GCE-24333-O365-LP-R4_Office-background.jpg"); background-repeat: no-repeat;background-size: cover;}
+    #banner-section h1.main-banner-title{ text-transform: uppercase; text-align: left; font-size: 24px; margin-bottom: 28px; color:#000; }
+    #banner-section h1 > sup {font-size: 50%!important; /* override global */ top:-1.1em; /* override global */}
+    #banner-section h2.main-banner-subtitle{ text-align: left; margin: 28px 0 25px; font-size: 48px; color:#000; }          
+    #banner-section .watch-video-container {margin:295px auto 0;width:150px;text-align: center;}    
+    #banner-section .office-365-banner-video-link {font-size:24px;color:#fff;}
+    #banner-section .office-365-banner-video-link:hover {color: #333;cursor: pointer;display: inline-block;}    
+    #banner-section .office-365-banner-video-link > .ico-gt-circle {
+      background-image: url("[@T[link:<imageroot />]@T]fos/sales/themes/scotty/business/office-365/img/ico-gt-circle-white-v2.png");
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      display: inline-block;
+      height: 60px;
+      margin:0px;
+      vertical-align: middle;
+      width: 60px;
     }
 
-    #banner-section h1{
-      text-transform: uppercase;
-      text-align: left;
-      font-size: 24px;
-      margin-bottom: 28px;
-      color:#000;
-    }
-
-    #banner-section h1 > sup {
-      font-size: 50%!important; /* override global */
-      top:-1.1em; /* override global */
-    }
-
-    #banner-section h2{
-      text-align: left;
-      width: 60%;
-      margin-bottom: 25px;
-      font-size: 48px;
-      color:#000;
-    }
-       
-      
-         
     /* Plan Boxes */
         
     #plan-boxes-section{
-      padding-bottom: 30px;
+      padding: 40px 0 30px;
     }
         
     .side-plan{
@@ -244,8 +236,7 @@ assetPath: false
     }
 
     .col-xs-4.plan-box .plan-contents{
-      padding: 20px;
-      padding-bottom: 15px;
+      padding: 12px 20px 15px;
     }
 
     .col-xs-4.highlighted-plan{
@@ -299,7 +290,7 @@ assetPath: false
     }
 
     .plan-box-price{
-      font-size: 32px;
+      font-size: 48px;
       line-height: 1;
       font-weight: 500;
       text-align: center;
@@ -321,10 +312,11 @@ assetPath: false
     }
 
     .price-wrapper .as-low-as{
-      color: #FF910F;
+      color: #000;
       margin: 0;
+      font-weight: 300;
       line-height: 1;
-      font-size: 12px;
+      font-size: 14px;
     }
 
     .price-wrapper .plan-box-price{
@@ -335,20 +327,13 @@ assetPath: false
     .price-wrapper .per-user{
       display: inline-block;
       margin-left: 5px;
-    }
 
-    .price-wrapper .per-user p{
       text-align: left;
-      font-size: 7px;
+      font-size: 15px;
       margin: 0;
       margin-bottom: 0px;
       line-height: 1;
       color: #FF910F;
-    }
-
-    .strike-through-wrapper{
-      width: 80%;
-      margin-left: 10%;
     }
 
     .strike-through-wrapper p{
@@ -356,13 +341,9 @@ assetPath: false
     }
 
     .strike-through-wrapper .strike-through-price{
-      font-size: 18px;
+      font-size: 16px;
+      font-weight: 600px;
     }
-
-    .strike-through-wrapper .strike-through-price{
-      font-size: 18px;
-    }
-
     .strike-through-wrapper .current-renewal-price{
       font-size: 12px;
     }
@@ -379,16 +360,6 @@ assetPath: false
       margin-top: 10px;
     }
        
-    a.compare-plans{
-      font-size: 22px;
-      text-align: center;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 30px;
-      cursor: pointer;
-    }
-
     a .show-span{
       width: 40px;
       height: 40px;
@@ -877,13 +848,53 @@ assetPath: false
 {% block body %}
 
   <!-- POST Header -->
+
   <section id="banner-section" class="white-bg">
     <div class="container l-main-container">
-      <h1 class="condensed">[@L[cds.sales/business/office-365:split-test-b-5-MicrosoftOffice365FromGoDaddy]@L]</h1>
-      <div>
-        <img src="[@T[link:<imageroot />]@T]fos/office365/img/redesign/Office-MSFT-icons.png" />
+      <div class="row">
+        <div class="col-xs-7">
+          <h1 class="main-banner-title condensed">[@L[cds.sales/business/office-365:29621-main-title]@L]</h1>
+          <div>
+            <img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/business/office-365/img/GCE-24333-O365-LP-R4_Office-MSFT-icons.png" />
+          </div>
+          <h2 class="main-banner-subtitle">[@L[cds.sales/business/office-365:29621-main-subtitle]@L]</h2>          
+        </div>
+        <div class="col-xs-3">&nbsp;</div>
+        <div class="col-xs-2">
+          ##if(activeLanguageAny([en],[pt-br],[es]))
+            <div class="watch-video-container">
+              <a class="office-365-banner-video-link" data-toggle="modal" data-target="#myVideoModal" data-ci="94231">
+                <i class="ico ico-gt-circle"></i>
+                <span class="br"></span>
+                <span><strong>[@L[cds.sales/business/office-365:29621-WatchVideo]@L]</strong></span>
+              </a>
+              <div class="modal fade videoModal" id="myVideoModal">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="modal-header-close close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                      <iframe width="854" height="480" 
+                        ##if(activeLanguageAny([en]))
+                          src="//www.youtube.com/embed/xvK76H9olXM?html5=1&rel=0&iv_load_policy=3&modestbranding=1" 
+                        ##elseif(activeLanguageAny([pt-br]))
+                          src="//www.youtube.com/embed/MzKxD1pT8Ys?html5=1&rel=0&iv_load_policy=3&modestbranding=1" 
+                        ##elseif(activeLanguageAny([es]))
+                          src="//www.youtube.com/embed/0VY7OhkMX2w?html5=1&rel=0&iv_load_policy=3&modestbranding=1" 
+                        ##endif
+                      autoplay scrolling="no" frameborder="0" allowfullscreen>
+                      </iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ##endif
+
+
+        </div>
       </div>
-      <h2 class="main-banner-subtitle">[@L[cds.sales/business/office-365:split-test-b-9-WorkAnywhereWithOurEmailAndProductivityTools]@L]</h2>
     </div>
   </section>
 
@@ -892,126 +903,260 @@ assetPath: false
       <div class="row">
         <div class="col-xs-4 plan-box mt5">
           <div class="side-title-container">
-                <h3 class="product-title">[@L[cds.sales/business/office-365:split-test-b-2-EmailEssentials]@L]</h3>
-                </div>
-                <div class="plan-contents side-plan left-side">
-                    <div class="office-box no-office"></div>
-                    <p class="plan-description">
-                        [@L[cds.sales/business/office-365:split-test-b-2-ProfessionalEmail]@L]
-                    </p>
-                    <div class="price-wrapper"> 
-                      <p class="as-low-as">[@L[cds.sales/business/office-365:split-test-b-3-as-low-as]@L]</p> 
-                      <p class="plan-box-price">
-                        [@T[productprice:<current productid="31805" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]
-                      </p> 
-                      <div class="per-user">
-                        <p>[@L[cds.sales/business/office-365:split-test-b-3-PerUser]@L]</p>
-                        <p>[@L[cds.sales/business/office-365:split-test-b-3-slash-month]@L]</p>
-                      </div>
-                    </div>  
-                    ##if(productHasSavingsMoreThan(31805, 31805, 0))
-                      <div class="strike-through-wrapper">
-                        <p class="strike-through-price">[@T[productprice:<template productid="31805" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]<sup>*</sup>
-                          <span class="secondary-color uppercase">
-                            <strong> 
-                              [@L[cds.sales/business/office-365:split-test-b-1-save]@L] [@T[productcompare:<percent primaryproductid="31805" secondaryproductid="31805" hidebelow="5"><html><![CDATA[{0}%]]></html></percent>]@T]
-                            </strong>
-                          </span>
-                        </p>
-                        <p class="current-renewal-price"><sup>*</sup>[@L[cds.sales/business/office-365:split-test-b-3-current-renewal-price]@L]</p>
-                      </div>
-                    ##endif
+            <h3 class="product-title">[@L[cds.sales/business/office-365:29621-PlanBlock-1-title]@L]</h3>
+          </div>
+          <div class="plan-contents side-plan left-side">
+            <p class="plan-description">[@L[cds.sales/business/office-365:29621-PlanBlock-1-description]@L]</p>
+            <div class="office-box no-office"></div>
+            <div class="price-wrapper"> 
+              <p class="as-low-as">[@L[cds.sales/business/office-365:29621-StartingAt]@L]</p> 
+              <p class="plan-box-price">[@T[productprice:<current productid="31805" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</p> 
+              <div class="per-user">[@L[cds.sales/business/office-365:29621-PerUserPerMonth]@L]</div>
+              ##if(!productHasSavingsMoreThan(31805, 31805, 0))
+              <div class="strike-through-wrapper">
+                <p class="strike-through-price">
+                  [@T[productprice:<template productid="31805" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]
+                  <span class="secondary-color uppercase">
+                    <strong data-tokenize="[@T[productcompare:<percent primaryproductid="31805" secondaryproductid="31805" ><html><![CDATA[{0}%]]></html></percent>]@T]"> 
+                      [@L[cds.sales/business/office-365:29621-OnSaleSave]@L]
+                    </strong>
+                  </span>
+                </p>
+                <p class="current-renewal-price" data-tokenize="[@T[productprice:<list productid="31805" period="monthly" htmlsymbol="true" />]@T]">[@L[cds.sales/business/office-365:29621-RenewsAtPerMonth]@L]</p>
+              </div>
+              ##endif
               ##if(countrySiteAny(uk))
-                <div class="vat-tax-message">[@L[cds.sales/business/office-365:vat-price]@L]</div>
+              <div class="vat-tax-message">[@L[cds.sales/business/office-365:vat-price]@L]</div>
               ##endif      
-            <button type="button" class="btn btn-warning btn-block btn-lg js-add-to-cart plan-box-button" data-value="OfficeEmailMsft1yr" data-ci="91160">[@L[cds.sales/business/office-365:split-test-b-3-AddToCart]@L]</button>
+            </div>  
+            <button type="button" class="btn btn-warning btn-block btn-lg js-add-to-cart plan-box-button" data-value="OfficeEmailMsft1yr" data-ci="94226">[@L[cds.sales/business/office-365:29621-AddToCart]@L]</button>
           </div>  
         </div>
         <div class="col-xs-4 plan-box highlighted-plan">
           <div class="side-title-container">
-            <h3 class="product-title">[@L[cds.sales/business/office-365:split-test-b-2-BusinessEssentials]@L]</h3>
+            <h3 class="product-title">[@L[cds.sales/business/office-365:29621-PlanBlock-2-title]@L]</h3>
           </div>
           <div class="plan-contents">
+            <p class="plan-description">[@L[cds.sales/business/office-365:29621-PlanBlock-2-description]@L]</p>
             <div class="office-box"></div>
-            <p class="plan-description">
-              [@L[cds.sales/business/office-365:split-test-b-8-ProfessionalEmail10xMoreStorageOffice365Online]@L]
-            </p>
             <div class="price-wrapper"> 
-              <p class="as-low-as">[@L[cds.sales/business/office-365:split-test-b-3-as-low-as]@L]</p> 
+              <p class="as-low-as">[@L[cds.sales/business/office-365:29621-StartingAt]@L]</p> 
               <p class="plan-box-price">
                 [@T[productprice:<current productid="31825" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]
               </p> 
-              <div class="per-user">
-                <p>[@L[cds.sales/business/office-365:split-test-b-3-PerUser]@L]</p>
-                <p>[@L[cds.sales/business/office-365:split-test-b-3-slash-month]@L]</p>
-              </div>
+              <div class="per-user">[@L[cds.sales/business/office-365:29621-PerUserPerMonth]@L]</div>
+              ##if(!productHasSavingsMoreThan(31825, 31825, 0))
+                <div class="strike-through-wrapper">
+                  <p class="strike-through-price">
+                    [@T[productprice:<template productid="31825" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]
+                    <span class="secondary-color uppercase">
+                      <strong data-tokenize="[@T[productcompare:<percent primaryproductid="31815" secondaryproductid="31815" ><html><![CDATA[{0}%]]></html></percent>]@T]"> 
+                        [@L[cds.sales/business/office-365:29621-OnSaleSave]@L]
+                      </strong>
+                    </span>
+                  </p>
+                  <p class="current-renewal-price" data-tokenize="[@T[productprice:<list productid="31825" period="monthly" htmlsymbol="true" />]@T]">[@L[cds.sales/business/office-365:29621-RenewsAtPerMonth]@L]</p>
+                </div>
+              ##endif
+              ##if(countrySiteAny(uk))
+                <div class="vat-tax-message">[@L[cds.sales/business/office-365:vat-price]@L]</div>
+              ##endif  
             </div>  
-            ##if(productHasSavingsMoreThan(31825, 31825, 0))
-              <div class="strike-through-wrapper">
-                <p class="strike-through-price">[@T[productprice:<template productid="31825" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]<sup>*</sup>
-                  <span class="secondary-color uppercase">
-                    <strong> 
-                      [@L[cds.sales/business/office-365:split-test-b-1-save]@L] [@T[productcompare:<percent primaryproductid="31825" secondaryproductid="31825" hidebelow="5"><html><![CDATA[{0}%]]></html></percent>]@T]
-                    </strong>
-                  </span>
-                </p>
-                <p class="current-renewal-price"><sup>*</sup>[@L[cds.sales/business/office-365:split-test-b-3-current-renewal-price]@L]</p>
-              </div>
-            ##endif
-            ##if(countrySiteAny(uk))
-              <div class="vat-tax-message">[@L[cds.sales/business/office-365:vat-price]@L]</div>
-            ##endif  
-            <button type="button" class="btn btn-warning btn-block btn-lg js-add-to-cart plan-box-button" data-value="OfficeBusMsft1yr" data-ci="91161">[@L[cds.sales/business/office-365:split-test-b-3-AddToCart]@L]</button>
+            <button type="button" class="btn btn-warning btn-block btn-lg js-add-to-cart plan-box-button" data-value="OfficeBusMsft1yr" data-ci="94227">[@L[cds.sales/business/office-365:29621-AddToCart]@L]</button>
           </div>
         </div>
         <div class="col-xs-4 plan-box mt5">
           <div class="side-title-container">        
-            <h3 class="product-title">[@L[cds.sales/business/office-365:split-test-b-2-ProductivityPlus]@L]</h3>
+            <h3 class="product-title">[@L[cds.sales/business/office-365:29621-PlanBlock-3-title]@L]</h3>
           </div>
-        <div class="plan-contents side-plan right-side">                  
+          <div class="plan-contents side-plan right-side">
+            <p class="plan-description">[@L[cds.sales/business/office-365:29621-PlanBlock-3-description]@L]</p>
             <div class="office-box"></div>
-            <p class="plan-description">
-              [@L[cds.sales/business/office-365:split-test-b-10-ProfessionalEmail10xMoreStorageOffice365Online]@L]
-            </p>
             <div class="price-wrapper"> 
-              <p class="as-low-as">[@L[cds.sales/business/office-365:split-test-b-3-as-low-as]@L]</p> 
+              <p class="as-low-as">[@L[cds.sales/business/office-365:29621-StartingAt]@L]</p> 
               <p class="plan-box-price">
-                [@T[productprice:<current productid="31841" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]
+              [@T[productprice:<current productid="31841" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]
               </p> 
-              <div class="per-user">
-                <p>[@L[cds.sales/business/office-365:split-test-b-3-PerUser]@L]</p>
-                <p>[@L[cds.sales/business/office-365:split-test-b-3-slash-month]@L]</p>
-              </div>
+              <div class="per-user">[@L[cds.sales/business/office-365:29621-PerUserPerMonth]@L]</div>
+              ##if(!productHasSavingsMoreThan(31841, 31841, 0))
+                <div class="strike-through-wrapper">
+                  <p class="strike-through-price">
+                    [@T[productprice:<template productid="31841" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]
+                    <span class="secondary-color uppercase">
+                      <strong data-tokenize="[@T[productcompare:<percent primaryproductid="31841" secondaryproductid="31841" ><html><![CDATA[{0}%]]></html></percent>]@T]"> 
+                        [@L[cds.sales/business/office-365:29621-OnSaleSave]@L]
+                      </strong>
+                    </span>
+                  </p>
+                  <p class="current-renewal-price" data-tokenize="[@T[productprice:<list productid="31841" period="monthly" htmlsymbol="true" />]@T]">[@L[cds.sales/business/office-365:29621-RenewsAtPerMonth]@L]</p>
+                </div>
+              ##endif
+              ##if(countrySiteAny(uk))
+                <div class="vat-tax-message">[@L[cds.sales/business/office-365:vat-price]@L]</div>
+              ##endif             
             </div>  
-            ##if(productHasSavingsMoreThan(31841, 31841, 0))
-              <div class="strike-through-wrapper">
-                <p class="strike-through-price">[@T[productprice:<template productid="31841" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]<sup>*</sup>
-                  <span class="secondary-color uppercase">
-                    <strong> 
-                      [@L[cds.sales/business/office-365:split-test-b-1-save]@L] [@T[productcompare:<percent primaryproductid="31841" secondaryproductid="31841" hidebelow="5"><html><![CDATA[{0}%]]></html></percent>]@T]
-                    </strong>
-                  </span>
-                </p>
-                <p class="current-renewal-price"><sup>*</sup>[@L[cds.sales/business/office-365:split-test-b-3-current-renewal-price]@L]</p>
-              </div>
-            ##endif
-            ##if(countrySiteAny(uk))
-              <div class="vat-tax-message">[@L[cds.sales/business/office-365:vat-price]@L]</div>
-            ##endif             
-            <button type="button" class="btn btn-warning btn-block btn-lg js-add-to-cart plan-box-button" data-value="OfficeBusPremMsft1yr" data-ci="91162">[@L[cds.sales/business/office-365:split-test-b-3-AddToCart]@L]</button>
+            <button type="button" class="btn btn-warning btn-block btn-lg js-add-to-cart plan-box-button" data-value="OfficeBusPremMsft1yr" data-ci="94228">[@L[cds.sales/business/office-365:29621-AddToCart]@L]</button>
           </div>
         </div>
-      </div>
-      <!-- / ROW -->
-      <a class="compare-plans" data-ci="91163"><span class="show-span plus-span"></span> [@L[cds.sales/business/office-365:split-test-b-2-ComparePlans]@L]</a>
-    </div>
-    <!-- / Container -->
+      </div> <!-- / row -->
+    </div> <!-- / container -->
   </section>
-  <section class="compare-plans-section" id="js-show-hide-compare" style="display: none">
+
+  <section class="compare-plans-section">
     <p class="section-sub-header">[@L[cds.sales/business/office-365:split-test-b-9-ChooseTheOneThatSRightForYou]@L]</p>
     <div class="container l-main-container">
       {% set table1CI = {'ci1': '91164', 'ci2': '91165', 'ci3':'91166'}%}
-      {% include "_split-compare-table.html" with table1CI %}
+      <div class="compare-table-wrapper">
+        <table>
+          <tr>
+            <th colspan='2' class="tdd"><span class="office-table-logo"></span></th>
+            <th class="email-essentials-header">[@L[cds.sales/business/office-365:split-test-b-2-EmailEssentials]@L]</th>
+            <th class="business-essentials-header">[@L[cds.sales/business/office-365:split-test-b-2-BusinessEssentials]@L]</th>
+            <th class="productivity-plus-header">[@L[cds.sales/business/office-365:split-test-b-2-ProductivityPlus]@L]</th>
+          </tr>
+          <tr class="row-divider">
+            <td colspan='2' class="gray tdd">[@L[cds.sales/business/office-365:split-test-b-3-EmailAndStorage]@L]</td>
+            <td class="gray"></td>
+            <td class="gray"></td>
+            <td class="gray"></td>                      
+          </tr>
+          <tr>
+            <td colspan='2' class="tdd">[@L[cds.sales/business/office-365:split-test-b-2-EmailStorage]@L]</td>
+            <td class="b">[@L[cds.sales/business/office-365:split-test-b-2-5GB]@L]</td>
+            <td class="b">[@L[cds.sales/business/office-365:split-test-b-2-50GB]@L]</td>
+            <td class="b">[@L[cds.sales/business/office-365:split-test-b-2-50GB]@L]</td>                                    
+          </tr>
+          <tr>
+            <td colspan='2' class="tdd">[@L[cds.sales/business/office-365:split-test-b-6-SecureCloudStorageWithMicrosoftOneDrive]@L]</td>
+            <td class="b">[@L[cds.sales/business/office-365:split-test-b-2-2GB]@L]</td>
+            <td class="b">[@L[cds.sales/business/office-365:split-test-b-2-25GB]@L]</td>
+            <td class="b">[@L[cds.sales/business/office-365:split-test-b-2-25GB]@L]</td>                                    
+          </tr>
+          <tr class="row-divider">
+            <td colspan='2' class="gray tdd">[@L[cds.sales/business/office-365:split-test-b-1-Productivity]@L]</td> 
+            <td class="gray"></td>
+            <td class="gray"><span class="table-office-logos"></span></td>
+            <td class="gray"><span class="table-office-logos"></span></td>
+          </tr>
+          <tr>
+            <td colspan='2' class="tdd"><span class="g-toolTip">[@L[cds.sales/business/office-365:split-test-b-5-SyncEmailCalendarAndContacts]@L]<span>[@L[cds.sales/business/office-365:split-test-b-76-UsersCanConnectTheFollowingVersionsOfOutlook]@L]</span></span></td>
+            <td><span class="table-check"></span></td>
+            <td><span class="table-check"></span></td>
+            <td><span class="table-check"></span></td>
+          </tr>
+          <tr>
+            <td colspan='2' class="tdd">[@L[cds.sales/business/office-365:split-test-b-3-OnlineFileSharing]@L]</td>
+            <td></td>
+            <td><span class="table-check"></span></td>
+            <td><span class="table-check"></span></td>                                    
+          </tr>
+          <tr>
+            <td colspan='2' class="tdd">[@L[cds.sales/business/office-365:split-test-b-3-UnlimitedOnlineMeetings]@L]</td>
+            <td></td>
+            <td><span class="table-check"></span></td>
+            <td><span class="table-check"></span></td>                                    
+          </tr>
+          <tr>
+            <td colspan='2' class="tdd">[@L[cds.sales/business/office-365:split-test-b-3-HDVideoConferencing]@L]</td>
+            <td></td>
+            <td><span class="table-check"></span></td>
+            <td><span class="table-check"></span></td>                                    
+          </tr>
+          <tr>
+            <td colspan='2' class="tdd"><span class="g-toolTip b">[@L[cds.sales/business/office-365:split-test-b-2-OfficeOnline]@L]<span>[@L[cds.sales/business/office-365:split-test-b-19-CreateAndEditWordExcelPowerPointAndOneNote]@L]</span></span></td>
+            <td></td>
+            <td><span class="table-check"></span></td>
+            <td><span class="table-check"></span></td>                                    
+          </tr>
+          <tr>
+            <td colspan='2' class="tdd"><span class="g-toolTip b">[@L[cds.sales/business/office-365:split-test-b-2-OfficeMobile]@L]<span>[@L[cds.sales/business/office-365:split-test-b-23-CreateEditAndShareWordExcelPowerPointAnd]@L]</span></span></td>
+            <td></td>
+            <td></td>
+            <td><span class="table-check"></span></td>                                    
+          </tr>
+          <tr>
+            <td colspan='2' class="tdd"><span class="g-toolTip b">[@L[cds.sales/business/office-365:split-test-b-2-OfficeForIpadorDesktop]@L]<span>[@L[cds.sales/business/office-365:split-test-b-32-InstallTheFullVersionOfMicrosoftOfficeOnIpad]@L]</span></span></td>
+            <td></td>
+            <td></td>
+            <td><span class="table-check"></span></td>                                    
+          </tr> 
+          <tr>
+            <td colspan='2' class="tdd">[@L[cds.sales/business/office-365:split-test-b-2-iPadOnlyTableRow]@L]</td>
+            <td></td>
+            <td></td>
+            <td><span class="table-check"></span></td>                                    
+          </tr>
+          <tr>
+            <td colspan='2' class="tdd last">
+              <p class="td-header">[@L[cds.sales/business/office-365:split-test-b-3-AllPlansInclude]@L]</p>
+              <p><span class="g-toolTip">[@L[cds.sales/business/office-365:split-test-b-2-UnlimitedAddresses]@L]<span>[@L[cds.sales/business/office-365:split-test-b-22-CreateUnlimitedEmailAddressesFromYournameToSales]@L]</span></span> [@L[cds.sales/business/office-365:split-test-b-5-DeliveredToTheSameInbox]@L]</p>
+              <p>[@L[cds.sales/business/office-365:split-test-b-4-Expert247Support]@L]</p>
+              <p><span class="g-toolTip">[@L[cds.sales/business/office-365:split-test-b-6-999GuaranteedUptimeAndReliability]@L]<span>[@L[cds.sales/business/office-365:split-test-b-19-SomeLimitationsApplyToThe999Uptime]@L] <a href="http://x.co/365TOS" target="_BLANK">x.co/365TOS</a></span></span></p>
+              <p><span class="g-toolTip">[@L[cds.sales/business/office-365:split-test-b-3-OutlookWebApp]@L]<span>[@L[cds.sales/business/office-365:split-test-b-10-AccessYourEmailCalendarAndContactsOnAny]@L]</span></span></p>
+              <p><span class="g-toolTip">[@L[cds.sales/business/office-365:split-test-b-3-SharedOnlineCalendars]@L]<span>[@L[cds.sales/business/office-365:split-test-b-29-MakeItEasyForAnyoneInYourOrganization]@L]</span></span></p>
+              <p>[@L[cds.sales/business/office-365:split-test-b-7-WorldClassDataSecurityAndSpamFiltering]@L]</p>                          
+            </td>
+            <td class="last">
+              ##if(productHasSavingsMoreThan(31805, 31805, 0))
+                <p class="as-low-as">[@L[cds.sales/business/office-365:29621-StartingAt]@L]</p>               
+                <p class="table-plan-box-price discounted">
+                  [@T[productprice:<template productid="31805" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]
+                  <span class="price">[@T[productprice:<current productid="31805" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span>
+                </p>
+                <span class="table-per-user discounted">[@L[cds.sales/business/office-365:split-test-b-3-PerUserMonth]@L]</span>
+              ##else
+                <span class="as-low-as">[@L[cds.sales/business/office-365:29621-StartingAt]@L]</span>               
+                <span class="table-plan-box-price">
+                  [@T[productprice:<current productid="31805" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]
+                </span>
+                <span class="table-per-user">[@L[cds.sales/business/office-365:split-test-b-3-PerUserMonth]@L]</span>
+                <!-- <p class="as-low-as">[@L[cds.sales/business/office-365:29621-StartingAt]@L]</p>               
+                <p class="table-plan-box-price discounted">
+                  <strike>￦12 743</strike>
+                  <span class="price">￦ 10 199</span> 
+                </p>
+                <span class="table-per-user discounted">[@L[cds.sales/business/office-365:split-test-b-3-PerUserMonth]@L]</span> -->
+              ##endif
+              <button type="button" class="btn btn-warning btn-block table-btn btn-lg js-add-to-cart" data-value="OfficeEmailMsft1yr" data-ci="{{ ci1 }}">[@L[cds.sales/business/office-365:split-test-b-3-AddToCart]@L]</button>
+            </td>
+            <td class="last">
+              ##if(productHasSavingsMoreThan(31825, 31825, 0))
+                <p class="as-low-as">[@L[cds.sales/business/office-365:29621-StartingAt]@L]</p>               
+                <p class="table-plan-box-price discounted">
+                  [@T[productprice:<template productid="31825" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]
+                  <span class="price">[@T[productprice:<current productid="31825" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span>
+                </p>
+                <span class="table-per-user discounted">[@L[cds.sales/business/office-365:split-test-b-3-PerUserMonth]@L]</span>
+              ##else
+                <span class="as-low-as">[@L[cds.sales/business/office-365:29621-StartingAt]@L]</span>               
+                <span class="table-plan-box-price">
+                  [@T[productprice:<current productid="31825" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]
+                </span>
+                <span class="table-per-user">[@L[cds.sales/business/office-365:split-test-b-3-PerUserMonth]@L]</span>
+              ##endif
+              <button type="button" class="btn btn-warning btn-block btn-lg table-btn js-add-to-cart" data-value="OfficeBusMsft1yr" data-ci="{{ ci2 }}">[@L[cds.sales/business/office-365:split-test-b-3-AddToCart]@L]</button>
+            </td>
+            <td class="last">
+              ##if(productHasSavingsMoreThan(31841, 31841, 0)) 
+                <p class="as-low-as">[@L[cds.sales/business/office-365:29621-StartingAt]@L]</p>               
+                <span class="table-plan-box-price discounted">
+                  [@T[productprice:<template productid="31841" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]
+                  <span class="price">[@T[productprice:<current productid="31841" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span>
+                </span>
+                <span class="table-per-user discounted">[@L[cds.sales/business/office-365:split-test-b-3-PerUserMonth]@L]</span>
+              ##else
+                <span class="as-low-as">[@L[cds.sales/business/office-365:29621-StartingAt]@L]</span>               
+                <span class="table-plan-box-price">
+                  [@T[productprice:<current productid="31841" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]
+                </span>
+                <span class="table-per-user ">[@L[cds.sales/business/office-365:split-test-b-3-PerUserMonth]@L]</span>
+              ##endif
+              <button type="button" class="btn btn-warning btn-block btn-lg table-btn js-add-to-cart" data-value="OfficeBusPremMsft1yr" data-ci="{{ci3}}">[@L[cds.sales/business/office-365:split-test-b-3-AddToCart]@L]</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+
     </div>
   </section>
 
@@ -1178,7 +1323,7 @@ assetPath: false
               [@L[cds.sales/business/office-365:split-test-b-10-ProfessionalEmail10xMoreStorageOffice365Online]@L]
             </p>
             <div class="price-wrapper"> 
-              <p class="as-low-as">[@L[cds.sales/business/office-365:split-test-b-3-as-low-as]@L]</p> 
+              <p class="as-low-as">[@L[cds.sales/business/office-365:29621-StartingAt]@L]</p> 
               <p class="plan-box-price">
                 [@T[productprice:<current productid="31841" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]
               </p> 
@@ -1196,7 +1341,7 @@ assetPath: false
                     </strong>
                   </span>
                 </p>
-                <p class="current-renewal-price"><sup>*</sup>[@L[cds.sales/business/office-365:split-test-b-3-current-renewal-price]@L]</p>
+                <p class="current-renewal-price" data-tokenize="['[@T[productprice:<list productid="31805" period="monthly" htmlsymbol="true" />]@T]']">[@L[cds.sales/business/office-365:29621-RenewsAtPerMonth]@L]</p>
               </div>
             ##endif
             <button type="button" class="btn btn-warning btn-block btn-lg js-add-to-cart plan-box-button" data-value="OfficeBusPremMsft1yr" data-ci="91168">[@L[cds.sales/business/office-365:split-test-b-3-AddToCart]@L]</button>
@@ -1353,7 +1498,6 @@ assetPath: false
   <form action="[@T[link:<relative path="~/business/office-365-config.aspx" />]@T]" method="get" data-addtocart='[@T[link:<relative path="~/api/package" />]@T]'>
     <input type="hidden" id="selected-package-id" name="plan" />
   </form>
-
 {% endblock body %}
 
 
@@ -1362,29 +1506,6 @@ assetPath: false
 <script>
   (function ($) {
     'use strict';
-    function config($videoContainer) {
-        var width = $videoContainer.outerWidth(),
-            height = $videoContainer.outerHeight(),
-            videoId = $videoContainer.children('.slv').data('slv-video-id'),
-            params = $videoContainer.children('.slv').data('slv-params') || '';
-
-        $videoContainer.on('click', function (e) {
-            e.preventDefault();
-            $videoContainer.html('<iframe width="' + width + '" height="' + height + '" src="//www.youtube.com/embed/' + videoId + '?autoplay=1&' + params + '" scrolling="no" frameborder="0" allowfullscreen></iframe>').removeClass('slv-hidden').addClass('slv-shown');
-        });
-
-    }
-
-    $.fn.solazyVideo = function () {
-        return this.each(function () {
-              var $videoContainer = $(this);
-              config($videoContainer);
-        });
-    };
-  }(jQuery));
-
-  (function ($) {
-  'use strict';
     $.fn.vertAlign = function () {
         var h = [];
         this.each(function(){
@@ -1396,8 +1517,7 @@ assetPath: false
         });
     };
   }(jQuery)); 
-    
-    
+        
   $(document).ready(function(){
     $('.open-button').click(function(e){
       e.preventDefault();
@@ -1423,37 +1543,37 @@ assetPath: false
       $('#js-more-faq-wrapper').slideDown(300);
     });
     
-    $('.compare-plans').click(function(event){
-      var $this = $(this);
-      var ci = $this.data('ci');
-      if(ci == null || ci == "" || ci == "undefined"){
-        ci = 000000;
-      }
-      if($('#js-show-hide-compare').is(':hidden')){
-        $(this).children('.plus-span').removeClass('plus-span');
-        $(this).children('span').addClass('minus-span');    
-        $('#js-show-hide-compare').slideDown(300);
-      }else{
-        $(this).children('.minus-span').removeClass('minus-span');
-        $(this).children('span').addClass('plus-span');
-        $('#js-show-hide-compare').slideUp(300);
-      }
-    });
-
     $('[data-ci]').click(function(e){
       $this = $(this);
       FastballEvent_MouseClick(e,$this.attr('data-ci'),$(this)[0],'a');
       fbiLibCheckQueue();    
     });
 
-    $('.office-video-click-wrapper').solazyVideo();
+    $('[data-tokenize]').each(function(){
+      var $this = $(this),
+        html = $this.html(),
+        val = $this.data('tokenize'),
+        tokenizedHtml = html.replace('{0}', val);
+      $this.html(tokenizedHtml);
+    });
+
     $('.plan-description').vertAlign();
     $(".plan-contents div.price-wrapper").vertAlign();
-    $(".plan-contents .strike-through-price").vertAlign();
-  }); 
-   
-  $(document).ready(function(){
-    var office365config={};
+    $(".plan-contents .strike-through-wrapper").vertAlign();
+
+
+    ##if(activeLanguageAny([en],[pt-br],[es]))
+      var autoplay = '\&autoplay=1';
+      var src = $('#myVideoModal iframe').attr('src');
+      $('#myVideoModal').on('hidden.bs.modal', function () {
+        $('#myVideoModal iframe').removeAttr('src');
+        $('#myVideoModal iframe').attr('src', src);
+      });
+
+      $('#myVideoModal').on('show.bs.modal', function () {
+        $('#myVideoModal iframe').attr('src', src + autoplay);
+      });
+    ##endif
 
     // input object inside form to add to cart 
     var $selectedPackageId = $("#selected-package-id");
