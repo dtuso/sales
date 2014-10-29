@@ -1,6 +1,6 @@
 ---
 location: localization/sales/gd/ecommerce/online-store/en
-id:   54490ef0f778fc21c812d3ff
+id:   
 
 name: GCE-20285
 ---
@@ -126,7 +126,7 @@ Customer ratings & reviews
 <phrase key="WhatsIncluded-FaceBookStore"/>
 Facebook store
 <phrase key="WhatsIncluded-ShippingRates"/>
-Flexible shipping sates
+Flexible shipping rates
 <phrase key="WhatsIncluded-SEOFeatures"/>
 Built-in SEO features
 <phrase key="WhatsIncluded-Customizable"/>
