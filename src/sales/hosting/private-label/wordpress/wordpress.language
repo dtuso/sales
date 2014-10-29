@@ -263,7 +263,7 @@ Pre-loaded popular Jetpack plugin
 <phrase key="WordPressPrivateLabel-18-IncludesOver30PopularPluginsToSuperchargeYour" />
 Includes over 30 popular plugins to supercharge your site with site stats, contact forms, search boxes and more.
 <phrase key="WordPressPrivateLabel-3-TemporaryWebAddress" />
-Temporary web address
+<span class="g-toolTip">Temporary web address<span>Each plan includes a free domain, but if you’re not ready to choose your name, you can use a temporary domain to set up your account and register your official domain later. </span></span> 
 <phrase key="WordPressPrivateLabel-26-BuildYourSiteOnTheFreeDomainIncluded" />
 Build your site on the free domain included with our annual plan or start with a temporary domain and decide on the perfect URL later.
 <phrase key="WordPressPrivateLabel-3-OneClickMigrations" />
@@ -273,13 +273,13 @@ Easily move your existing WordPress site with our 1-click migration tool.
 <phrase key="WordPressPrivateLabel-3-AllPlansInclude" />
 All Plans Include
 <phrase key="WordPressPrivateLabel-7-FreeDomainWithAnnualPlanRestrictionsApply" />
-<li>Free domain with annual plan <a href="#" class="restrictions-apply">Restrictions apply</a></li>
+  <li>Free domain with annual plan - <span class="g-toolTip restrictions-link">Restrictions apply<span class="gtip-wide">One FREE .COM, .CO, .NET or .ORG with purchase of a new 12-, 24-, 36- or 60-month plan. Plus ICANN fee of $0.18 per domain name per year. You must add the domain name into your cart before purchase, and you must select a domain term length equal to or less than the term length of your plan to qualify for the free domain offer. If you purchase a domain name for a term longer than the term of the plan, you will be charged for the additional registration term at the then-current rate. Cannot be used in conjunction with any other offer, sale, discount or promotion. Free domain offer applies only to the initial purchase term. After the initial purchase term, domains purchased through this offer will renew at the then-current renewal price.</span></span></li>
 <phrase key="WordPressPrivateLabel-5-1000sOfThemesAndPlugins" />
 1000s of themes and plugins
 <phrase key="WordPressPrivateLabel-4-OneClickMigrationTool" />
 One-click migration tool
 <phrase key="WordPressPrivateLabel-5-SFTPAccessToWordPressFiles" />
-sFTP access to WordPress files
+<span class="g-toolTip">sFTP access<span>Protect files as they are transferred to or from your site by encrypting them through a Secure FTP (sFTP) connection </span></span> to WordPress files
 <phrase key="WordPressPrivateLabel-6-NightlyBackupsAndOneClickRestore" />
 Nightly backups and one-click restore
 <phrase key="WordPressPrivateLabel-7-RedundantFirewallsMalwareScanningAndDDoSProtection" />
@@ -291,17 +291,17 @@ One-click SSL installation
 <phrase key="WordPressPrivateLabel-7-LocalizedIn37CountriesAnd17Languages" />
 Localized in 37 countries and 17 languages
 <phrase key="WordPressPrivateLabel-4-PremiumWordPressHostingPlatform" />
-Premium WordPress Hosting Platform
+<span class="g-toolTip">Premium WordPress Hosting Platform<span>Built specifically for WordPress to optimize the speed, reliability and security of your site.</span></span>
 <phrase key="WordPressPrivateLabel-5-AwardWinning247Support" />
 Award-winning 24/7 support
 <phrase key="WordPressPrivateLabel-4-999UptimeGuarantee" />
 99.9% uptime guarantee
 <phrase key="WordPressPrivateLabel-7-100GoogleAdWordsCreditRestrictionsApply" />
-<li>$100 Google<sup>&reg;</sup> AdWords Credit <a href="#" class="restrictions-apply">Restrictions apply</a></li>
+<li>USD $100 Google<sup>&reg;</sup> AdWords Credit- <span class="g-toolTip restrictions-link">Restrictions apply<span>One promotional credit per customer for a new Google AdWords account. Products purchased using a Gift Card or Alipay do not provide eligibility for advertising credits. Minimum spend USD $25. Offer valid to US & Canada residents only, excluding government controlled entities and parties. Other restrictions apply.<a href="javascript:void(window.open('[@T[link:<external linktype="tes.GDOFFER_URL"  path='/popups/google-adwords.aspx'><param name='ci' value='' /><param name='app_hdr' value='99' /></external>]@T]','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=550,height=675'))">View Details</a></span></span></li>
 <phrase key="WordPressPrivateLabel-7-50FacebookAdCreditRestrictionsApply" />
-<li>$50 Facebook<sup>&reg;</sup> Ad Credit <a href="#" class="restrictions-apply">Restrictions apply</a></li>
+<li>USD $50 Facebook<sup>&reg;</sup> Ad Credit- <span class="g-toolTip restrictions-link">Restrictions apply<span>One promotional credit per customer for a new Facebook® Advertiser account. Products purchased using a Gift Card or Alipay do not provide eligibility for advertising credits. Offer valid only for purchase of advertising in the US, Canada, UK, and Australia. Other restrictions apply.<a href="javascript:void(window.open('[@T[link:<external linktype="tes.GDOFFER_URL"  path='/popups/facebook-ads.aspx'><param name='ci' value='' /><param name='app_hdr' value='99' /></external>]@T]','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=550,height=675'))">View Details</a></span></span></li>
 <phrase key="WordPressPrivateLabel-7-10FotoliaPhotoCreditsRestrictionsApply" />
-<li>$10 Fotolia<sup>&reg;</sup> Photo Credits <a href="#" class="restrictions-apply">Restrictions apply</a></li>
+<li>USD $100 Bing<sup>&reg;</sup> Ad Credits- <span class="g-toolTip restrictions-link">Restrictions apply<span>One promotional credit per customer for a new Microsoft® Advertiser account. Products purchased using a Gift Card or Alipay do not provide eligibility for advertising credits. Offer valid to US residents only, other restrictions apply.<a href="javascript:void(window.open('https://advertise.bingads.microsoft.com/en-us/godaddy/learn','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=550,height=675'))">View Details</a></span></span></li>
 <phrase key="WordPressPrivateLabel-11-YouHaveBetterThingsToDoThanManage" />
 You have better things to do than manage your hosting.
 <phrase key="WordPressPrivateLabel-49-MaintainingAWebsiteShouldnTMeanSpendingHours" />
