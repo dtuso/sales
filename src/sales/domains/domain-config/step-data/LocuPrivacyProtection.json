@@ -1,0 +1,36 @@
+{
+  "Type" : "LocuPrivacyProtection",
+  "HeaderText" : "",
+  "DescriptionText" : "",
+  "LowestPrice" : "",
+  "ToolTipDisplayText" : "",
+  "ToolTipHoverText" : "",
+  "Plans" : [
+    {
+      "Id" : "dpp_privacy_bundle",
+      "CurrentPrice" : "",
+      "ListPrice" : "",
+      "PlanTitle" : "",
+      "PlanFeatures" : [
+        "Feature 1 text",
+        "Feature 2 text",
+        "Feature 3 text"
+      ],
+      "Selected" : false
+    },
+    {
+      "Id" : "dpp_business_bundle",
+      "CurrentPrice" : "",
+      "ListPrice" : "",
+      "PlanTitle" : "",
+      "PlanFeatures" : [
+        "Feature 1 text",
+        "Feature 2 text",
+        "Feature 3 text"
+      ],
+      "Selected" : false
+    }
+  ],
+  "Term" : null,
+  "DefaultDuration" : null
+}
