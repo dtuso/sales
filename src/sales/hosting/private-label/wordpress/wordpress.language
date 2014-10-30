@@ -351,5 +351,5 @@ Easily clone your site so you can make changes and thoroughly test your website 
 SSH Access
 <phrase key="WordPressPrivateLabel-SSHLetsYou" />
  SSH lets you manage and administer WordPress using command line tools like wp-cli, vim and git.
-<phrase key=“WordPressPrivateLabel-off" />
+<phrase key="WordPressPrivateLabel-off" />
 OFF
