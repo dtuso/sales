@@ -1,8 +1,8 @@
 ---
 location: sales/hosting/private-label/wordpress.aspx
-id: 545280a7f778fc06d4666da2
-name: GCE-25511
-comments: String Extraction/Tokenization
+id: 54529103f778fc06d4666da7
+name: GCE-31159
+comments: Added some additional CI's and added 2 links
 assetPath: false
 localVars: true
 ---
@@ -52,10 +52,10 @@ localVars: true
 <section class="tabbed-section">
   <div class="container">  
     <ul class="nav nav-tabs">
-      <li class="active"><a class="js-tab-init" href="#plans-pricing" data-toggle="tab">[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-2-PlansPricing]@L]</a></li>
-      <li><a class="js-tab-init" href="#ours-vs-theirs" data-toggle="tab">[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-3-OursVsTheirs]@L]</a></li>
-      <li><a class="js-tab-init" href="#tech-specs" data-toggle="tab">[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-2-TechSpecs]@L]</a></li>
-      <li><a class="js-tab-init" href="#faq" data-toggle="tab">[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-1-FAQ]@L]</a></li>
+      <li class="active"><a class="js-tab-init" data-ci="94292" href="#plans-pricing" data-toggle="tab">[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-2-PlansPricing]@L]</a></li>
+      <li><a class="js-tab-init" data-ci="94293" href="#ours-vs-theirs" data-toggle="tab">[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-3-OursVsTheirs]@L]</a></li>
+      <li><a class="js-tab-init" data-ci="94294" href="#tech-specs" data-toggle="tab">[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-2-TechSpecs]@L]</a></li>
+      <li><a class="js-tab-init" data-ci="94295" href="#faq" data-toggle="tab">[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-1-FAQ]@L]</a></li>
     </ul>
     <div class="tab-content">
         <div class="tab-pane active" id="plans-pricing">
@@ -110,6 +110,13 @@ $(document).ready(function(){
     $("#pretty-link").text(splitLink[0]);
 });
 
+function RecordClick(c, a, b) {
+  if (typeof(FastballEvent_MouseClick) !== "undefined") {
+    FastballEvent_MouseClick(c, a, b, "a");
+    fbiLibCheckQueue();
+  }
+}
+
 function displayDisclaimer(){
   if($('#ours-vs-theirs').is(':visible') || $('#faq').is(':visible')){
      $("#disclaimer").show(); 
@@ -134,6 +141,12 @@ $('.nav-tabs a.js-tab-init').each(function() {
         $this.tab('show');
         firstTabCheck();
         displayDisclaimer();
+
+        //ci codes
+        var cicode = $(this).data('ci');
+        if (cicode) {
+            RecordClick(e,cicode,$(this)[0]);
+        }
     });
 });
 
