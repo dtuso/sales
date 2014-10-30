@@ -241,7 +241,7 @@ We monitor and mitigate the network and systems against malicious activity.
 <phrase key="WordPressPrivateLabel-6-BlackListForKnownMaliciousPlugins" />
 Blacklist for known malicious plugins
 <phrase key="WordPressPrivateLabel-22-ToHelpKeepWordPressAccountsSecureAsPossible" />
-To help keep WordPress accounts secure as possible, we blacklist plugins known to cause security and performance issues.
+To help keep WordPress accounts secure as possible, we <a href="[@T[link:<external linktype="HELPURL" path="/article/8964" secure="true" forcedcontextid="6" parammode="explicit"><param name="prog_id" value="hunter" /></external>]@T]">blacklist plugins</a> known to cause security and performance issues.
 <phrase key="WordPressPrivateLabel-8-BruteForceLoginAndCommentSpamPrevention" />
 Brute force login and comment spam prevention
 <phrase key="WordPressPrivateLabel-16-AddedSecurityLayersToPreventHackersFromStealing" />
