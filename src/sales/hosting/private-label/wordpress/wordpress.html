@@ -81,8 +81,10 @@ localVars: true
   </div>
 </section>
 
+<div class="container">
 <div id="disclaimer">
   <p>[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-DisclaimerSection]@L]</p>
+</div>
 </div>
 
 <section id="plans-pricing-sub-section">
@@ -131,6 +133,7 @@ $('.nav-tabs a.js-tab-init').each(function() {
         e.preventDefault();
         $this.tab('show');
         firstTabCheck();
+        displayDisclaimer();
     });
 });
 
