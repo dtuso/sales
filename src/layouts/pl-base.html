@@ -19,7 +19,7 @@
       <!-- Facebook Open Graph Meta Data -->
       <meta property="og:title" content="{{ metaOgTitle }}" />
       <meta property="og:type" content="product" />
-      <meta property="og:url" content="[@T[link:<external linktype='siteurl' path='{{ metaCanonicalPath }}' secure='false' parammode='explicit'/>]@T]" />
+      <meta property="og:url" content="[@T[link:<external linktype='siteurl' path='{{ metaCanonicalPath }}' secure='false' parammode='common'/>]@T]" />
       {% if metaOgImage %}
       <meta property="og:image" content="[@T[link:<imageroot />]@T]{{ metaOgImage }}" />
       {% endif %}
@@ -27,7 +27,7 @@
       <meta property="fb:app_id" content="{{ metaOgAppID }}" />
       <meta property="og:description" content="{{ metaOgDescription }}" />
 
-      <link rel="canonical" href="[@T[link:<external linktype='siteurl' path='{{ metaCanonicalPath }}' secure='false' parammode='explicit'/>]@T]"/>
+      <link rel="canonical" href="[@T[link:<external linktype='siteurl' path='{{ metaCanonicalPath }}' secure='false' parammode='common'/>]@T]"/>
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=1000">
       <!-- Global CSS -->
