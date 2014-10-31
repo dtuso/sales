@@ -71,7 +71,7 @@ Pro
 <phrase key="WordPressPrivateLabel-2-6299" />
 62.99
 <phrase key="WordPressPrivateLabel-5-MillionsMonthlyVisitors25Website" />
- <li><strong>Millions</strong> monthly visitors <strong>25</strong> website</li>
+ <li><strong>Millions</strong> of monthly visitors on <strong>25</strong> websites</li>
 <phrase key="WordPressPrivateLabel-3-UnlimitedStorage" />
 <li><strong>Unlimited</strong> storage.
 <phrase key="WordPressPrivateLabel-4-WhatIsWordPress" />
@@ -117,7 +117,7 @@ Type http://coolexample.com/wp-admin, where coolexample.com is your domain name,
 <phrase key="WordPressPrivateLabel-5-SeeTheDifferenceForYourself" />
 See the difference for yourself
 <phrase key="WordPressPrivateLabel-31-WhereYouHostYourWordPressSiteMattersOur" />
-Where you host your WordPress site matters. Our Managed WordPress delivers one of the fastest, most scalable, reliable platforms on the web for up to 75% less than our competitors.
+Where you host your WordPress site matters. Our Managed WordPress delivers one of the fastest, most scalable, reliable platforms on the web.
 <phrase key="WordPressPrivateLabel-2-StarterPlan" />
 Starter Plan
 <phrase key="WordPressPrivateLabel-5-StartingAt629Month" />
@@ -239,9 +239,9 @@ Intrusion Detection and Prevention
 <phrase key="WordPressPrivateLabel-12-WeMonitorAndMitigateTheNetworkAndSystems" />
 We monitor and mitigate the network and systems against malicious activity.
 <phrase key="WordPressPrivateLabel-6-BlackListForKnownMaliciousPlugins" />
-Black list for known malicious plugins
+Blacklist for known malicious plugins
 <phrase key="WordPressPrivateLabel-22-ToHelpKeepWordPressAccountsSecureAsPossible" />
-To help keep WordPress accounts secure as possible, we blacklist plugins known to cause security and performance issues.
+To help keep WordPress accounts secure as possible, we <a href="[@T[link:<external linktype="HELPURL" path="/article/8964" secure="true" parammode="common"><param name="ci" value="94289" /></external>]@T]">blacklist plugins</a> known to cause security and performance issues.
 <phrase key="WordPressPrivateLabel-8-BruteForceLoginAndCommentSpamPrevention" />
 Brute force login and comment spam prevention
 <phrase key="WordPressPrivateLabel-16-AddedSecurityLayersToPreventHackersFromStealing" />
@@ -342,3 +342,13 @@ Updated as of June 30, 2014. Comparison based on entry-level plan for each provi
 Take a peek under the hood
 <phrase key="WordPressPrivateLabel-31-IfYoureADeveloper" />
 If you're a developer, IT professional or just a self-taught web pro, here's your opportunity to dig into the details and see what makes our Managed WordPress incredibly fast, secure and easy to use.
+<phrase key="WordPressPrivateLabel-OneClickStaging" />
+One-click staging 
+<phrase key="WordPressPrivateLabel-EasilyClone" />
+Easily clone your site so you can make changes and thoroughly test your website in a staging environment before pushing it live. 
+<phrase key="WordPressPrivateLabel-SSHAccess" />
+SSH Access
+<phrase key="WordPressPrivateLabel-SSHLetsYou" />
+ SSH lets you manage and administer WordPress using command line tools like wp-cli, vim and git.
+<phrase key="WordPressPrivateLabel-off" />
+OFF

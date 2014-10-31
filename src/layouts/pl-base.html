@@ -28,16 +28,33 @@
       <meta property="og:description" content="{{ metaOgDescription }}" />
 
       <link rel="canonical" href="[@T[link:<external linktype='siteurl' path='{{ metaCanonicalPath }}' secure='false' parammode='explicit'/>]@T]"/>
-
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=1000">
       <!-- Global CSS -->
       <link href="[@T[link:<css path='private-label/global/css/globals.css' />]@T]" rel="stylesheet" type="text/css">
-
-
-      <!-- IE SUPPORT FOR HTML5 and Bootstrap 3 -->
+  
       <!--[if lt IE 9]>
-        <link href="[@T[link:<cssroot />]@T]fos/201401/global/css/bootstrap-ie7fix.min.css" rel="stylesheet" type="text/css" />
-        <script src="[@T[link:<javascriptroot />]@T]fos/201401/global/js/html5shiv.js"></script>
-      <![endif]-->
+      <script>
+        //CREATE HTML5 TAGS
+        document.createElement('header');
+        document.createElement('nav');
+        document.createElement('section');
+        document.createElement('article');
+        document.createElement('aside');
+        document.createElement('footer');
+     </script>
+
+     <style>
+      /*SET DEFAULT FOR CREATED TAGS*/
+      header, nav, section, article, aside, footer {
+        display:block;
+      }
+     </style>
+      <link href="respond.proxy.gif" id="respond-redirect" rel="respond-redirect" />
+      <link href="[@T[link:<cssroot />]@T]fos/respond/respond-proxy.min.html" id="respond-proxy" rel="respond-proxy" />
+      <script src="[@T[link:<javascriptroot />]@T]fos/respond/respond-proxy-combo.min.js"></script>
+      <script src="[@T[link:<javascriptroot />]@T]fos/201401/global/js/html5shiv.js"></script>
+      <![endif]--> 
 
       <script src="[@T[link:<javascriptroot />]@T]fos/201401/global/vendor/jquery/1.8.3/jquery.min.js"></script>
       <script src="[@T[link:<javascriptroot />]@T]shared/js/jquery.plugins.min.20140121.js"></script>
@@ -48,8 +65,6 @@
     {% endblock %}
 
   </head>
-  <head>
-
   <body>
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header" />]@P]
     <div class="border-box" role="main">
