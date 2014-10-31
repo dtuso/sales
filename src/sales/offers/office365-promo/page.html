@@ -1,6 +1,6 @@
 ---
 location: sales/offers/office365-promo.aspx
-id: 54503a8af778fc142061a9ef
+id: 5453d9b3f778fc06d4666e0e
 name: GCE-30746
 comments: GOT1 and GOT2 followups
 url: http://www.dev-godaddy.com/offers/office365-promo.aspx
@@ -268,7 +268,8 @@ metaOgDescription:  "[@L[cds.sales/offers/office365-promo:og-description]@L]"
   .top-banner-product-image.office {width:243px;background-position:   -0px -0px;}
   .top-banner-product-image.domain {width:135px;background-position: -292px -0px;}    
   .top-banner-product-image.wsb    {width:124px;background-position: -488px -0px;} 
-
+  .col-office {width:298px;} 
+  .col-domain {width:191px;}    
   
 {% endless %}
 </style>
@@ -413,9 +414,11 @@ metaOgDescription:  "[@L[cds.sales/offers/office365-promo:og-description]@L]"
                           <div data-main="true"><span>.co</span></div>
                         </li>
                         ##if(countrySiteAny(ca) || isManager())
+                        <!--
                         <li data-main=".ca" data-view="ca" class="availabletld">
                           <div data-main="true"><span>.ca</span></div>
                         </li>
+                        -->
                         ##endif
                         ##if(countrySiteAny(in))
                         <li data-main=".in" data-view="in" class="availabletld">
@@ -429,12 +432,14 @@ metaOgDescription:  "[@L[cds.sales/offers/office365-promo:og-description]@L]"
                           <div data-main="true"><span>.org</span></div>
                         </li>
                         ##if(countrySiteAny(uk) || isManager())
+                        <!--
                         <li data-main=".co.uk" data-view="co.uk" class="availabletld">
                           <div data-main="true"><span>.co.uk</span></div>
                         </li>
                         <li data-main=".uk" data-view="uk" class="availabletld">
                           <div data-main="true"><span>.uk</span></div>
                         </li>
+                        -->
                         ##endif
                       </ul>
                     </div>
