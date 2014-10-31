@@ -1,8 +1,8 @@
 ---
 location: sales/domains/domain-name-search.aspx
 id: 545002eff778fc1aa8bc31cb
-name: GCE-30012
-comments: Merchandising Updates for 10/29
+name: GCE-30217
+comments: Update Leaf Pages and Pricing Grid to reflect sale pricing when 2 yr ccTLD Promo is in play
 ---
 {% extends 'layouts/base.html' %}
 {% block metahead %}
@@ -95,7 +95,7 @@ comments: Merchandising Updates for 10/29
                                     ##elseif(ActiveLanguageAny([pt-br]))
                                   <p class="no-margin-bottom">[@L[cds.sales/gd/domains/domain-name-search:CarouselSlide1BR]@L]</p>  
                                     ##elseif(ActiveLanguageAny([en-in]))
-                                  <p class="no-margin-bottom" style="text-align:left">"[@L[cds.sales/gd/domains/domain-name-search:CarouselSlide1IN]@L]"</p><p style="margin:15px 0 0;text-align:left"><strong>Pranav Chandar, The Great Indian Adventure</strong></p>
+                                  <p class="no-margin-bottom" style="text-align:left">"[@L[cds.sales/gd/domains/domain-name-search:CarouselSlide1IN]@L]"</p><p style="margin:15px 0 0;text-align:left"><strong>- Pranav Chandar, The Great Indian Adventure</strong></p>
                                   ##elseif(ActiveLanguageAny([en-ca], [fr-ca]))
                                   <p class="no-margin-bottom">[@L[cds.sales/gd/domains/domain-name-search:CarouselSlide1CA]@L]</p>  
                                    ##else
@@ -121,7 +121,7 @@ comments: Merchandising Updates for 10/29
                                   ##elseif(ActiveLanguageAny([es-es], [pt-pt], [fr-be], [fr-fr], [fr-ch], [de-de], [de-at], [de-ch], [en-gb], [en-ie], [nl-be], [da-dk], [it-it], [nl-nl], [pl-pl], [fi-fi], [sv-se], [it-ch], [el-gr]))
                                     <p class="no-margin-bottom">[@L[cds.sales/gd/domains/domain-name-search:CarouselSlide3ES]@L]</p> 
                                   ##elseif(ActiveLanguageAny([en-in]))
-                                    <p class="no-margin-bottom" style="text-align:left">"[@L[cds.sales/gd/domains/domain-name-search:CarouselSlide3IN]@L]"</p><p style="margin:15px 0 0;text-align:left"><strong> Parminder Singh Saini, AgriWire</strong></p>
+                                    <p class="no-margin-bottom" style="text-align:left">"[@L[cds.sales/gd/domains/domain-name-search:CarouselSlide3IN]@L]"</p><p style="margin:15px 0 0;text-align:left"><strong>- Parminder Singh Saini, AgriWire</strong></p>
                                   ##else
                                    <p class="no-margin-bottom">[@L[cds.sales/gd/domains/domain-name-search:CarouselSlide3Default]@L]</p> 
                                   ##endif  
@@ -268,7 +268,7 @@ comments: Merchandising Updates for 10/29
                                  <li class="list-item"><span class="font-18">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle1]@L]</span></li>
                                  <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:TldDotShop]@L]</span> <a data-ci="88764" href="[@T[link:<relative path="/tlds/gtld.aspx"></relative>]@T]" class="btn btn-primary list-item-button">[@L[cds.sales/gd/domains/domain-name-search:LearnMore]@L]</a></li>
                                 <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:TldDotWeb]@L]</span> <a data-ci="91415" href="[@T[link:<relative path="/tlds/gtld.aspx"></relative>]@T]" class="btn btn-primary list-item-button">[@L[cds.sales/gd/domains/domain-name-search:LearnMore]@L]</a></li>
-                                <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:TldDotHelp]@L]</span> <a data-ci="93465" href="[@T[link:<relative path="/tlds/gtld.aspx"></relative>]@T]" class="btn btn-primary list-item-button">[@L[cds.sales/gd/domains/domain-name-search:LearnMore]@L]</a></li>
+                                <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:TldDotHelp]@L]</span> <a data-ci="93465" href="[@T[link:<relative path="/tlds/help"></relative>]@T]" class="btn btn-primary list-item-button">[@L[cds.sales/gd/domains/domain-name-search:LearnMore]@L]</a></li>
                                 <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:TldDotApp]@L]</span> <a data-ci="90059" href="[@T[link:<relative path="/tlds/gtld.aspx"></relative>]@T]" class="btn btn-primary list-item-button">[@L[cds.sales/gd/domains/domain-name-search:LearnMore]@L]</a></li>
                             </ul>
                         </div>
@@ -574,7 +574,7 @@ comments: Merchandising Updates for 10/29
 </script>
     <script src="[@T[link:<javascriptroot />]@T]fos/angular/domains/angular.1.2.9.min.js" type="text/javascript"></script>
     <script src="[@T[link:<javascriptroot />]@T]fos/sales/themes/scotty/domains/search/js/angular-sanitize.js" type="text/javascript"></script>
-    <script src="[@T[link:<javascriptroot />]@T]fos/sales/themes/scotty/domains/search/js/dns-20141001.js" type="text/javascript" ></script>  
+    <script src="[@T[link:<javascriptroot />]@T]fos/sales/themes/scotty/domains/search/js/dns-20141028.js" type="text/javascript" ></script>  
     <script src="[@T[link:<javascriptroot />]@T]fos/script/atlantis_jquery14.min.js" type="text/javascript"></script>
     <script src="[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2" type="text/javascript"></script>
     <script src="[@T[link:<javascriptroot />]@T]fos/201401/global/vendor/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>

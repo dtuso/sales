@@ -95,7 +95,7 @@
         function buildPriceRequest(pods) {
             var priceRequest = {
                 promo:{
-                  Code:"2943962",
+                  Code:"444888",
                   ShopperType:0,
                   ForExstShopper:false,
                   ForCatalog:false,
@@ -141,7 +141,8 @@
                 if (domainConfigResponse.Pods[x].Tld === tld) {
                     podPrices.CurrentPrice = priceforPodsResponse[x].CurrentPrice;
                     podPrices.ListPrice = priceforPodsResponse[x].ListPrice;
-                  
+                    domainConfigResponse.domainCurrentIcann ='';
+                    domainConfigResponse.domainListIcann = ''; 
                     if (priceforPodsResponse[x].IsOnSale) {
                         if (priceforPodsResponse[x].IsIcann) {                           
                             domainConfigResponse.domainCurrentIcann = '*';
