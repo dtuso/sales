@@ -1,15 +1,50 @@
 doctype html
-html(lang!=[@T[localization:<language full="true" />]@T])
+html(lang!="[@T[localization:<language full='true' />]@T]")
 
   head
+    meta(http-equiv="content-type" content="text/html; charset=utf-8")
+    meta(http-equiv="content-language" content!="[@T[localization:<language full='true' />]@T]")
+    meta(name="google-site-verification" content="odAW2IckEFXrJjMrVxmnpjRPGNxEJp_xnCb7iBydgBY")
+    meta(name="msvalidate.01" content="9D246CEFA0D8894D78306DF6FBA618D9")
+    link(href="https://plus.google.com/108306343581548568740" rel="publisher")
+    meta(name="verify-v1" content="dV1r/ZJJdDEI++fKJ6iDEl6o+TMNtSu0kv18ONeqM0I=")
+    meta(name="y_key" content="1e39c508e0d87750")
+    title [@L[cds.sales/homepage:page-title]@L]
+    meta(name="description" content!="[@L[cds.sales/homepage:meta-description]@L]")
+    meta(name="keywords" content!="[@L[cds.sales/homepage:meta-keywords]@L]")
+    meta(name="format-detection" content="telephone=no")
+    meta(property="og:title" content!="[@L[cds.sales/homepage:og-title]@L]")
+    meta(property="og:type" content="website")
+    meta(property="og:url" content!="[@T[link:<relative parammode='explicit' />]@T]")
+    meta(property="og:image" content!="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/gd_rebrand_og.png")
+    meta(property="og:site_name" content="GoDaddy")
+    meta(property="fb:app_id" content="115696031791232")
+    meta(property="fb:admins" content="633356800")
+    meta(property="og:description" content!="[@L[cds.sales/homepage:og-content]@L]")
+    link(rel="canonical" href!="[@T[link:<external linktype='siteurl' path='' parammode='explicit'/>]@T]")
+    link(rel="shortcut icon" href!="[@T[link:<imageroot />]@T]assets/godaddy.ico")
+    link(href!="[@T[link:<cssroot />]@T]fos/201401/global/css/global-1.8.3.min.css" rel="stylesheet" type="text/css")
+    style.
+      .uk-cookie-banner{background: #8a8a8a; color: #fff; font-size: 12px; padding: 10px;position:fixed;bottom:0;width: 100%;z-index:999}
+      .uk-cookie-banner a{color:#fff;text-decoration: underline}
+      .uk-cookie-banner span {display:block}
+      .uk-cookie-banner i {background-image: url([@T[link:<imageroot />]@T]fos/base/1/alerts.png)}
+      .uk-cookie-ico{background-position: 0 0;height:20px;display: block;float: left;margin: 10px;width: 20px}
+      .uk-cookie-wrap{margin: 0 auto;width: 1000px}
+      .uk-cookie-close{background-position: 4px -228px;cursor:pointer;height: 20px;display: block;position: absolute;top:10px;right:25px;margin: 10px;width: 20px}
 
+    | [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags" />]@P]
+
+    block styles
+
+    script(src!="[@T[link:<javascriptroot />]@T]shared/js/1.8.0/global.20120918.min.js" type="text/javascript")
 
   body
     | [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header" />]@P]
     //  Domain Search Section
     .gdhp-search-section
       .gdhp-main-top
-        form.search-form.search-form-alternate.search-form-certified(method='post' data-url!='[@T[link:<relative path="~/api/dpp/search/single"/>]@T]' action!='[@T[link:<relative path="/domains/searchresults-new.aspx"/>]@T]')
+        form.search-form.search-form-alternate.search-form-certified(method="post" data-url!="[@T[link:<relative path='~/api/dpp/search/single'/>]@T]" action!="[@T[link:<relative path='/domains/searchresults-new.aspx'/>]@T]")
           .gdhp-search-box
             input.search-form-input.searchInput.helveticafont(type="text" id="searchDomainName" name="domainToCheck" autocomplete="off" maxlength="63" title!="[@L[cds.sales/homepage:sb-search-title]@L]")
             button.btn.btn-primary.btn-lg.hp-search(type="submit" name="searchButton" data-ci="54814") [@L[cds.sales/homepage/segments/default:domain-banner-search-btn]@L]
@@ -34,7 +69,7 @@ html(lang!=[@T[localization:<language full="true" />]@T])
           span.bottom-banner-headline-2 [@L[cds.sales/homepage/segments/default:bottom-banner-headline-INTL]@L]
           span.bottom-banner-subtext-2.b [@L[cds.sales/homepage/segments/default:bottom-banner-subtext-INTL]@L]
         .bottom-banner-search
-          form.search-form.search-form-certified(method='post' data-url!='[@T[link:<relative path="~/api/dpp/search/single"/>]@T]' action!='[@T[link:<relative path="/domains/searchresults-new.aspx"/>]@T]')
+          form.search-form.search-form-certified(method="post" data-url!="[@T[link:<relative path='~/api/dpp/search/single'/>]@T]" action!="[@T[link:<relative path='/domains/searchresults-new.aspx'/>]@T]")
             .gdhp-search-box2
               input#searchDomainName2.search-form-input.searchInput.helveticafont(type="text" name="domainToCheck" autocomplete="off" maxlength="63" title!="[@L[cds.sales/homepage:sb-search-title]@L]")
               button.btn.btn-primary.btn-lg.hp-search(type="submit" name="searchButton" data-ci="87137") [@L[cds.sales/homepage/segments/default:domain-banner-search-btn]@L]
@@ -62,7 +97,7 @@ html(lang!=[@T[localization:<language full="true" />]@T])
     // FAQ Slider
     #faqSlider
       .gd-nav-container
-        .gd-swipe(data-gd-swipe='{"auto":0}')
+        .gd-swipe(data-gd-swipe="{'auto':0}")
           .gd-swipe-wrap
             .gd-swipe-item
               .gd-swipe-head
