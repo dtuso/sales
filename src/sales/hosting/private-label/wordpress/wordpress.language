@@ -273,7 +273,7 @@ Easily move your existing WordPress site with our 1-click migration tool.
 <phrase key="WordPressPrivateLabel-3-AllPlansInclude" />
 All Plans Include
 <phrase key="WordPressPrivateLabel-7-FreeDomainWithAnnualPlanRestrictionsApply" />
-  <li>Free domain with annual plan - <span class="g-toolTip restrictions-link">Restrictions apply<span class="gtip-wide">One FREE .COM, .CO, .NET or .ORG with purchase of a new 12-, 24-, 36- or 60-month plan. Plus ICANN fee of $0.18 per domain name per year. You must add the domain name into your cart before purchase, and you must select a domain term length equal to or less than the term length of your plan to qualify for the free domain offer. If you purchase a domain name for a term longer than the term of the plan, you will be charged for the additional registration term at the then-current rate. Cannot be used in conjunction with any other offer, sale, discount or promotion. Free domain offer applies only to the initial purchase term. After the initial purchase term, domains purchased through this offer will renew at the then-current renewal price.</span></span></li>
+  <li>Free domain with annual plan - <span class="g-toolTip restrictions-link">Restrictions apply<span class="gtip-wide">One FREE .COM, .CO, .NET or .ORG with purchase of a new 12-, 24-, 36- or 60-month plan. Plus ICANN fee of USD $0.18 per domain name per year. You must add the domain name into your cart before purchase, and you must select a domain term length equal to or less than the term length of your plan to qualify for the free domain offer. If you purchase a domain name for a term longer than the term of the plan, you will be charged for the additional registration term at the then-current rate. Cannot be used in conjunction with any other offer, sale, discount or promotion. Free domain offer applies only to the initial purchase term. After the initial purchase term, domains purchased through this offer will renew at the then-current renewal price.</span></span></li>
 <phrase key="WordPressPrivateLabel-5-1000sOfThemesAndPlugins" />
 1000s of themes and plugins
 <phrase key="WordPressPrivateLabel-4-OneClickMigrationTool" />
@@ -285,7 +285,7 @@ Nightly backups and one-click restore
 <phrase key="WordPressPrivateLabel-7-RedundantFirewallsMalwareScanningAndDDoSProtection" />
 Redundant firewalls, malware scanning and DDoS protection
 <phrase key="WordPressPrivateLabel-3-TemporaryWebsiteAddress" />
-Temporary website address 
+<span class="g-toolTip">Temporary website address<span>Each plan includes a free domain, but if you’re not ready to choose your name, you can use a temporary domain to set up your account and register your official domain later. </span></span> 
 <phrase key="WordPressPrivateLabel-4-OneClickSSLInstallation" />
 One-click SSL installation
 <phrase key="WordPressPrivateLabel-7-LocalizedIn37CountriesAnd17Languages" />
@@ -327,7 +327,7 @@ We made it simple
 <phrase key="WordPressPrivateLabel-11-SpinUpANewSiteInLessThan" />
 Spin up a new site in less than 30 seconds.
 <phrase key="WordPressPrivateLabel-22-HavenTDecidedOnYourDomainGetStarted" />
-Haven’t decided on your domain? Get started with a free temporary domain so you can choose the perfect URL later.
+Haven’t decided on your domain? Get started with a free <span class="g-toolTip">temporary domain<span>Each plan includes a free domain, but if you’re not ready to choose your name, you can use a temporary domain to set up your account and register your official domain later. </span></span>  so you can choose the perfect URL later.
 <phrase key="WordPressPrivateLabel-12-StayUpToDateAndSecureWithAutomatic" />
 Stay up to date and secure with automatic WordPress core updates.
 <phrase key="WordPressPrivateLabel-5-MigrateWithJustAClick" />
@@ -352,3 +352,9 @@ SSH Access
  SSH lets you manage and administer WordPress using command line tools like wp-cli, vim and git.
 <phrase key="WordPressPrivateLabel-off" />
 OFF
+<phrase key="WordPressPrivateLabel-DisclaimerSymbols" />
+**, °°, ‡, +, 1, 4, 5
+<phrase key="WordPressPrivateLabel-DisclaimerPart1" />
+Click here for product disclaimers and legal policies.
+<phrase key="WordPressPrivateLabel-DisclaimerPart2" />
+Third-party logos and marks are registered trademarks of their respective owners. All rights reserved.
