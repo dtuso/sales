@@ -1,0 +1,24 @@
+{
+  "Type" : "BusinessAndCertified",
+  "HeaderText" : "",
+  "DescriptionText" : "",
+  "LowestPrice" : "",
+  "ToolTipDisplayText" : "",
+  "ToolTipHoverText" : "",
+  "Plans" : [
+    {
+      "Id" : "dpp_business_only_bundle",
+      "CurrentPrice" : "",
+      "ListPrice" : "",
+      "PlanTitle" : "",
+      "PlanFeatures" : [
+        "Feature 1 text",
+        "Feature 2 text",
+        "Feature 3 text"
+      ],
+      "Selected" : false
+    }
+  ],
+  "Term" : null,
+  "DefaultDuration" : null
+}
