@@ -14,7 +14,8 @@ metaOgDescription: "[@L[cds.sales/business/office-365:lp-48-OgDescription]@L]"
 assetPath: false
 ---
 
-{% set pfids = {'essentials': '31805', 'business': '31825', 'premium':'31841'} %}
+{% set pfids =    {'A': '31805', 'B': '31825', 'C':'31841'} %}
+{% set groupids = {'A': 'OfficeEmailMsft1yr', 'B': 'OfficeBusMsft1yr', 'C':'OfficeBusPremMsft1yr'} %}
 
 {% extends 'layouts/base.html' %}
 
@@ -595,41 +596,26 @@ assetPath: false
       text-align: center;
     }
 
-    .compare-table-wrapper table td.last p{
-      width: 90%;
-      margin-left: 5%;
+    .compare-table-wrapper table td.last p {
       margin: 0;
-      margin-top: 8px;
-      margin-right: 8px;
-      font-size: 9px;
-    }
-
-    .compare-table-wrapper table td.last .as-low-as{
-      margin: 0;
-      width: 90%;
-      margin-left: 5%;
-      text-align: left;
-      font-size: 8px;
-      color: #FF910F;
-    }
-
-    .compare-table-wrapper table td.last strike{
-      margin-right: 8px;
-      font-size: 6px;
-      font-weight: 400;
-      color: #333333;
+      font-size: 14px;
     }
 
     .compare-table-wrapper table td.last p.td-header{
-      font-size: 10px;
+      font-size: 14px;
       font-weight: bold;
       margin-top: 10px;
       margin-bottom: 10px;
     }
 
-    .compare-table-wrapper table .table-plan-box-price{
-      width: 90%;
-      margin-left: 5%;
+    .compare-table-wrapper table td.last .as-low-as{
+      margin: 0;
+      text-align: center;
+      font-size: 14px;
+      color: #FF910F;
+    }
+
+    .compare-table-wrapper table td.last .plan-box-price{
       font-size: 20px;
       line-height: 1;
       font-weight: 600;
@@ -639,48 +625,29 @@ assetPath: false
       display: block;
     }
 
-    .compare-table-wrapper table .table-plan-box-price.discounted{
-      margin: 0;
-      width: 90%;
-      margin-left: 5%;
-      font-size: 18px;
-      line-height: 1;
-      font-weight: 400;
-      text-align: left;
-      color: #FF910F;
-      margin-bottom: 0px;
-      display: block;
-    }
-
-    .compare-table-wrapper table .table-plan-box-price.discounted span, .compare-table-wrapper table .table-plan-box-price.discounted strike{
+    .compare-table-wrapper table td.last .per-user{
+      font-size: 14px;
+      text-align: center;
+      margin: 3px 0 3px;
+      font-weight: 200;
       display: inline-block;
+      color: #FF910F;
     }
-
-    .compare-table-wrapper table .table-per-user{
+    .compare-table-wrapper table td.last .vat-tax-message {
       font-size: 9px;
       text-align: center;
-      margin-top: 3px;
-      margin-bottom: 15px;
-      font-weight: 200;
-      display: inline-block;
     }
 
-    .compare-table-wrapper table .table-per-user.discounted{
-      width: 90%;
-      margin-left: 5%;
-      font-size: 9px;
-      text-align: left;
-      margin-top: 3px;
-      margin-bottom: 15px;
-      font-weight: 200;
-      display: block;
+    .compare-table-wrapper table td.last .current-renewal-price {
+      font-size: 12px;
     }
 
     .compare-table-wrapper table td.last button{
       width: 90%;
       margin-left: 5%;
       overflow: hidden;
-      font-size: 10px;
+      font-size: 14px;
+      font-weight: 600;
       display: block;
       white-space: normal;
     }
@@ -920,7 +887,7 @@ assetPath: false
           <div>
             <img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/business/office-365/img/GCE-24333-O365-LP-R4_Office-MSFT-icons.png" />
           </div>
-          <h2 class="main-banner-subtitle price-hide" data-tokenize="[@T[productcompare:<percent primaryproductid="{{pfids.premium}}" secondaryproductid="{{pfids.premium}}" ><html><![CDATA[{0}%]]></html></percent>]@T]">[@L[cds.sales/business/office-365:29621-main-subtitle]@L]</h2>          
+          <h2 class="main-banner-subtitle price-hide" data-tokenize="[@T[productcompare:<percent primaryproductid="{{pfids.C}}" secondaryproductid="{{pfids.C}}" ><html><![CDATA[{0}%]]></html></percent>]@T]">[@L[cds.sales/business/office-365:29621-main-subtitle]@L]</h2>          
         </div>
         <div class="col-xs-3">&nbsp;</div>
         <div class="col-xs-2">
@@ -973,26 +940,26 @@ assetPath: false
             <div class="office-box no-office"></div>
             <div class="price-wrapper"> 
               <p class="as-low-as">[@L[cds.sales/business/office-365:29621-StartingAt]@L]</p> 
-              <p class="plan-box-price">[@T[productprice:<current productid="{{pfids.essentials}}" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</p> 
+              <p class="plan-box-price">[@T[productprice:<current productid="{{pfids.A}}" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</p> 
               <div class="per-user">[@L[cds.sales/business/office-365:29621-PerUserPerMonth]@L]</div>
-              ##if(productHasSavingsMoreThan({{pfids.essentials}}, {{pfids.essentials}}, 0))
+              ##if(productHasSavingsMoreThan({{pfids.A}}, {{pfids.A}}, 0))
                 <div class="strike-through-wrapper">
                   <p class="strike-through-price">
-                    [@T[productprice:<template productid="{{pfids.essentials}}" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]
+                    [@T[productprice:<template productid="{{pfids.A}}" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]
                     <span class="secondary-color uppercase price-hide">
-                      <strong data-tokenize="[@T[productcompare:<percent primaryproductid="{{pfids.essentials}}" secondaryproductid="{{pfids.essentials}}" ><html><![CDATA[{0}%]]></html></percent>]@T]"> 
+                      <strong data-tokenize="[@T[productcompare:<percent primaryproductid="{{pfids.A}}" secondaryproductid="{{pfids.A}}" ><html><![CDATA[{0}%]]></html></percent>]@T]"> 
                         [@L[cds.sales/business/office-365:29621-OnSaleSave]@L]
                       </strong>
                     </span>
                   </p>
-                  <p class="current-renewal-price price-hide" data-tokenize="[@T[productprice:<list productid="{{pfids.essentials}}" period="monthly" htmlsymbol="true" />]@T]">[@L[cds.sales/business/office-365:29621-RenewsAtPerMonth]@L]</p>
+                  <p class="current-renewal-price price-hide" data-tokenize="[@T[productprice:<list productid="{{pfids.A}}" period="monthly" htmlsymbol="true" />]@T]">[@L[cds.sales/business/office-365:29621-RenewsAtPerMonth]@L]</p>
                 </div>
               ##endif
               ##if(countrySiteAny(uk))
                 <div class="vat-tax-message">[@L[cds.sales/business/office-365:vat-price]@L]</div>
               ##endif      
             </div>  
-            <button type="button" class="btn btn-warning btn-block btn-lg js-add-to-cart plan-box-button" data-value="OfficeEmailMsft1yr" data-ci="94226">[@L[cds.sales/business/office-365:29621-AddToCart]@L]</button>
+            <button type="button" class="btn btn-warning btn-block btn-lg js-add-to-cart plan-box-button" data-value="{{groupids.A}}}" data-ci="94226">[@L[cds.sales/business/office-365:29621-AddToCart]@L]</button>
           </div>  
         </div>
         <div class="col-xs-4 plan-box highlighted-plan">
@@ -1005,27 +972,27 @@ assetPath: false
             <div class="price-wrapper"> 
               <p class="as-low-as">[@L[cds.sales/business/office-365:29621-StartingAt]@L]</p> 
               <p class="plan-box-price">
-                [@T[productprice:<current productid="{{pfids.business}}" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]
+                [@T[productprice:<current productid="{{pfids.B}}" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]
               </p> 
               <div class="per-user">[@L[cds.sales/business/office-365:29621-PerUserPerMonth]@L]</div>
-              ##if(productHasSavingsMoreThan({{pfids.business}}, {{pfids.business}}, 0))
+              ##if(productHasSavingsMoreThan({{pfids.B}}, {{pfids.B}}, 0))
                 <div class="strike-through-wrapper">
                   <p class="strike-through-price">
-                    [@T[productprice:<template productid="{{pfids.business}}" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]
+                    [@T[productprice:<template productid="{{pfids.B}}" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]
                     <span class="secondary-color uppercase price-hide">
-                      <strong data-tokenize="[@T[productcompare:<percent primaryproductid="{{pfids.business}}" secondaryproductid="{{pfids.business}}" ><html><![CDATA[{0}%]]></html></percent>]@T]"> 
+                      <strong data-tokenize="[@T[productcompare:<percent primaryproductid="{{pfids.B}}" secondaryproductid="{{pfids.B}}" ><html><![CDATA[{0}%]]></html></percent>]@T]"> 
                         [@L[cds.sales/business/office-365:29621-OnSaleSave]@L]
                       </strong>
                     </span>
                   </p>
-                  <p class="current-renewal-price price-hide" data-tokenize="[@T[productprice:<list productid="{{pfids.business}}" period="monthly" htmlsymbol="true" />]@T]">[@L[cds.sales/business/office-365:29621-RenewsAtPerMonth]@L]</p>
+                  <p class="current-renewal-price price-hide" data-tokenize="[@T[productprice:<list productid="{{pfids.B}}" period="monthly" htmlsymbol="true" />]@T]">[@L[cds.sales/business/office-365:29621-RenewsAtPerMonth]@L]</p>
                 </div>
               ##endif
               ##if(countrySiteAny(uk))
                 <div class="vat-tax-message">[@L[cds.sales/business/office-365:vat-price]@L]</div>
               ##endif  
             </div>  
-            <button type="button" class="btn btn-warning btn-block btn-lg js-add-to-cart plan-box-button" data-value="OfficeBusMsft1yr" data-ci="94227">[@L[cds.sales/business/office-365:29621-AddToCart]@L]</button>
+            <button type="button" class="btn btn-warning btn-block btn-lg js-add-to-cart plan-box-button" data-value="{{groupids.B}}" data-ci="94227">[@L[cds.sales/business/office-365:29621-AddToCart]@L]</button>
           </div>
         </div>
         <div class="col-xs-4 plan-box mt5">
@@ -1038,27 +1005,27 @@ assetPath: false
             <div class="price-wrapper"> 
               <p class="as-low-as">[@L[cds.sales/business/office-365:29621-StartingAt]@L]</p> 
               <p class="plan-box-price">
-              [@T[productprice:<current productid="{{pfids.premium}}" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]
+              [@T[productprice:<current productid="{{pfids.C}}" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]
               </p> 
               <div class="per-user">[@L[cds.sales/business/office-365:29621-PerUserPerMonth]@L]</div>
-              ##if(productHasSavingsMoreThan({{pfids.premium}}, {{pfids.premium}}, 0))
+              ##if(productHasSavingsMoreThan({{pfids.C}}, {{pfids.C}}, 0))
                 <div class="strike-through-wrapper">
                   <p class="strike-through-price">
-                    [@T[productprice:<template productid="{{pfids.premium}}" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]
+                    [@T[productprice:<template productid="{{pfids.C}}" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]
                     <span class="secondary-color uppercase price-hide">
-                      <strong data-tokenize="[@T[productcompare:<percent primaryproductid="{{pfids.premium}}" secondaryproductid="{{pfids.premium}}" ><html><![CDATA[{0}%]]></html></percent>]@T]"> 
+                      <strong data-tokenize="[@T[productcompare:<percent primaryproductid="{{pfids.C}}" secondaryproductid="{{pfids.C}}" ><html><![CDATA[{0}%]]></html></percent>]@T]"> 
                         [@L[cds.sales/business/office-365:29621-OnSaleSave]@L]
                       </strong>
                     </span>
                   </p>
-                  <p class="current-renewal-price price-hide" data-tokenize="[@T[productprice:<list productid="{{pfids.premium}}" period="monthly" htmlsymbol="true" />]@T]">[@L[cds.sales/business/office-365:29621-RenewsAtPerMonth]@L]</p>
+                  <p class="current-renewal-price price-hide" data-tokenize="[@T[productprice:<list productid="{{pfids.C}}" period="monthly" htmlsymbol="true" />]@T]">[@L[cds.sales/business/office-365:29621-RenewsAtPerMonth]@L]</p>
                 </div>
               ##endif
               ##if(countrySiteAny(uk))
                 <div class="vat-tax-message">[@L[cds.sales/business/office-365:vat-price]@L]</div>
               ##endif             
             </div>  
-            <button type="button" class="btn btn-warning btn-block btn-lg js-add-to-cart plan-box-button" data-value="OfficeBusPremMsft1yr" data-ci="94228">[@L[cds.sales/business/office-365:29621-AddToCart]@L]</button>
+            <button type="button" class="btn btn-warning btn-block btn-lg js-add-to-cart plan-box-button" data-value="groupids.C" data-ci="94228">[@L[cds.sales/business/office-365:29621-AddToCart]@L]</button>
           </div>
         </div>
       </div> <!-- / row -->
@@ -1086,12 +1053,12 @@ assetPath: false
      
       <div class="productivity-sub-section">
         <div class="sub-section-column text-side left">
-          <h3 class="price-hide" data-tokenize="[@T[productcompare:<percent primaryproductid="{{pfids.premium}}" secondaryproductid="{{pfids.premium}}" ><html><![CDATA[{0}%]]></html></percent>]@T]">[@L[cds.sales/business/office-365:29621-FeatureContent-2-title]@L]</h3>
+          <h3 class="price-hide" data-tokenize="[@T[productcompare:<percent primaryproductid="{{pfids.C}}" secondaryproductid="{{pfids.C}}" ><html><![CDATA[{0}%]]></html></percent>]@T]">[@L[cds.sales/business/office-365:29621-FeatureContent-2-title]@L]</h3>
           <div class="check-section">
             <div class="check-block">
               <span class="pre-text-green-check"></span>
             </div>
-            <div class="check-text-wrapper price-hide" data-tokenize="[@T[productcompare:<percent primaryproductid="{{pfids.premium}}" secondaryproductid="{{pfids.premium}}" ><html><![CDATA[{0}%]]></html></percent>]@T]">
+            <div class="check-text-wrapper price-hide" data-tokenize="[@T[productcompare:<percent primaryproductid="{{pfids.C}}" secondaryproductid="{{pfids.C}}" ><html><![CDATA[{0}%]]></html></percent>]@T]">
               <p>[@L[cds.sales/business/office-365:29621-FeatureContent-2-description]@L]</p>
             </div>
           </div><!-- /check-section -->
@@ -1227,20 +1194,20 @@ assetPath: false
               <h3>[@L[cds.sales/business/office-365:29621-PlanBlock-3-title]@L]</h3>
 
               <div class="as-low-as">[@L[cds.sales/business/office-365:29621-PlansStartingAt]@L]</div>
-              <div class="plan-box-price">[@T[productprice:<current productid="{{pfids.premium}}" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</div>
+              <div class="plan-box-price">[@T[productprice:<current productid="{{pfids.C}}" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</div>
               <div class="per-user">[@L[cds.sales/business/office-365:29621-PerUserPerMonth]@L]</div>
                
-                ##if(!productHasSavingsMoreThan({{pfids.premium}}, {{pfids.premium}}, 0))
+                ##if(!productHasSavingsMoreThan({{pfids.C}}, {{pfids.C}}, 0))
                   <div class="row strike-through-wrapper">
                     <p class="strike-through-price">
-                      [@T[productprice:<template productid="{{pfids.premium}}" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]
+                      [@T[productprice:<template productid="{{pfids.C}}" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]
                       <span class="secondary-color uppercase price-hide">
-                        <strong data-tokenize="[@T[productcompare:<percent primaryproductid="{{pfids.premium}}" secondaryproductid="{{pfids.premium}}" ><html><![CDATA[{0}%]]></html></percent>]@T]"> 
+                        <strong data-tokenize="[@T[productcompare:<percent primaryproductid="{{pfids.C}}" secondaryproductid="{{pfids.C}}" ><html><![CDATA[{0}%]]></html></percent>]@T]"> 
                           [@L[cds.sales/business/office-365:29621-OnSaleSave]@L]
                         </strong>
                       </span>
                     </p>
-                    <p class="current-renewal-price price-hide" data-tokenize="[@T[productprice:<list productid="{{pfids.premium}}" period="monthly" htmlsymbol="true" />]@T]">[@L[cds.sales/business/office-365:29621-RenewsAtPerMonth]@L]</p>
+                    <p class="current-renewal-price price-hide" data-tokenize="[@T[productprice:<list productid="{{pfids.C}}" period="monthly" htmlsymbol="true" />]@T]">[@L[cds.sales/business/office-365:29621-RenewsAtPerMonth]@L]</p>
                   </div>
                 ##endif
                 ##if(!countrySiteAny(uk))
@@ -1248,7 +1215,7 @@ assetPath: false
                 ##endif
             </div>
             <div class="row">
-              <button type="button" class="btn btn-warning btn-block btn-lg js-add-to-cart plan-box-button" data-value="OfficeBusPremMsft1yr" data-ci="94229">[@L[cds.sales/business/office-365:29621-AddToCart]@L]</button>               
+              <button type="button" class="btn btn-warning btn-block btn-lg js-add-to-cart plan-box-button" data-value="{{groupids.C}}" data-ci="94229">[@L[cds.sales/business/office-365:29621-AddToCart]@L]</button>               
             </div>
           </div>  
 
@@ -1344,55 +1311,36 @@ assetPath: false
               <p>[@L[cds.sales/business/office-365:29621-PlansInclude-uptime]@L]</p>                          
             </td>
             <td class="last">
-              ##if(productHasSavingsMoreThan(31805, 31805, 0))
-                <p class="as-low-as">[@L[cds.sales/business/office-365:split-test-b-3-as-low-as]@L]</p>               
-                <p class="table-plan-box-price discounted">
-                  [@T[productprice:<template productid="31805" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]
-                  <span class="price">[@T[productprice:<current productid="31805" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span>
-                </p>
-                <span class="table-per-user discounted">[@L[cds.sales/business/office-365:split-test-b-3-PerUserMonth]@L]</span>
-              ##else
-                <span class="as-low-as">[@L[cds.sales/business/office-365:split-test-b-3-as-low-as]@L]</span>               
-                <span class="table-plan-box-price">
-                  [@T[productprice:<current productid="31805" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]
-                </span>
-                <span class="table-per-user">[@L[cds.sales/business/office-365:split-test-b-3-PerUserMonth]@L]</span>
-              ##endif
-              <button type="button" class="btn btn-warning btn-block table-btn btn-lg js-add-to-cart" data-value="OfficeEmailMsft1yr" data-ci="{{ ci1 }}">[@L[cds.sales/business/office-365:split-test-b-3-AddToCart]@L]</button>
+              <div class="table-td-cell-vertAlign">
+                <div class="as-low-as">[@L[cds.sales/business/office-365:29621-PlansStartingAt]@L]</div>
+                <div class="plan-box-price">[@T[productprice:<current productid="{{pfids.C}}" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</div>
+                <div class="per-user">[@L[cds.sales/business/office-365:29621-PerUserPerMonth]@L]</div>               
+                ##if(!productHasSavingsMoreThan({{pfids.C}}, {{pfids.C}}, 0))
+                  <div class="row strike-through-wrapper">
+                    <p class="strike-through-price">
+                      [@T[productprice:<template productid="{{pfids.C}}" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]
+                      <span class="secondary-color uppercase price-hide">
+                        <strong data-tokenize="[@T[productcompare:<percent primaryproductid="{{pfids.C}}" secondaryproductid="{{pfids.C}}" ><html><![CDATA[{0}%]]></html></percent>]@T]"> 
+                          [@L[cds.sales/business/office-365:29621-OnSaleSave]@L]
+                        </strong>
+                      </span>
+                    </p>
+                    <p class="current-renewal-price price-hide" data-tokenize="[@T[productprice:<list productid="{{pfids.C}}" period="monthly" htmlsymbol="true" />]@T]">[@L[cds.sales/business/office-365:29621-RenewsAtPerMonth]@L]</p>
+                  </div>
+                ##endif
+                ##if(!countrySiteAny(uk))
+                  <div class="vat-tax-message">[@L[cds.sales/business/office-365:vat-price]@L]</div>
+                ##endif
+              </div>
+              <button type="button" class="btn btn-warning btn-block table-btn btn-lg js-add-to-cart" data-value="groupids.A" data-ci="94221">[@L[cds.sales/business/office-365:split-test-b-3-AddToCart]@L]</button>
+
+
             </td>
             <td class="last">
-              ##if(productHasSavingsMoreThan(31825, 31825, 0))
-                <p class="as-low-as">[@L[cds.sales/business/office-365:split-test-b-3-as-low-as]@L]</p>               
-                <p class="table-plan-box-price discounted">
-                  [@T[productprice:<template productid="31825" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]
-                  <span class="price">[@T[productprice:<current productid="31825" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span>
-                </p>
-                <span class="table-per-user discounted">[@L[cds.sales/business/office-365:split-test-b-3-PerUserMonth]@L]</span>
-              ##else
-                <span class="as-low-as">[@L[cds.sales/business/office-365:split-test-b-3-as-low-as]@L]</span>               
-                <span class="table-plan-box-price">
-                  [@T[productprice:<current productid="31825" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]
-                </span>
-                <span class="table-per-user">[@L[cds.sales/business/office-365:split-test-b-3-PerUserMonth]@L]</span>
-              ##endif
-              <button type="button" class="btn btn-warning btn-block btn-lg table-btn js-add-to-cart" data-value="OfficeBusMsft1yr" data-ci="{{ ci2 }}">[@L[cds.sales/business/office-365:split-test-b-3-AddToCart]@L]</button>
+
             </td>
             <td class="last">
-              ##if(productHasSavingsMoreThan(31841, 31841, 0)) 
-                <p class="as-low-as">[@L[cds.sales/business/office-365:split-test-b-3-as-low-as]@L]</p>               
-                <span class="table-plan-box-price discounted">
-                  [@T[productprice:<template productid="31841" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]
-                  <span class="price">[@T[productprice:<current productid="31841" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span>
-                </span>
-                <span class="table-per-user discounted">[@L[cds.sales/business/office-365:split-test-b-3-PerUserMonth]@L]</span>
-              ##else
-                <span class="as-low-as">[@L[cds.sales/business/office-365:split-test-b-3-as-low-as]@L]</span>               
-                <span class="table-plan-box-price">
-                  [@T[productprice:<current productid="31841" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]
-                </span>
-                <span class="table-per-user ">[@L[cds.sales/business/office-365:split-test-b-3-PerUserMonth]@L]</span>
-              ##endif
-              <button type="button" class="btn btn-warning btn-block btn-lg table-btn js-add-to-cart" data-value="OfficeBusPremMsft1yr" data-ci="{{ci3}}">[@L[cds.sales/business/office-365:split-test-b-3-AddToCart]@L]</button>
+
             </td>
           </tr>
         </table>
@@ -1600,6 +1548,8 @@ assetPath: false
     $('.plan-description').vertAlign();
     $(".plan-contents div.price-wrapper").vertAlign();
     $(".plan-contents .strike-through-wrapper").vertAlign();
+
+    $('td.last .table-td-cell-vertAlign').vertAlign();
 
     ##if(activeLanguageAny([en],[pt-br],[es]))
       var autoplay = '\&autoplay=1';
