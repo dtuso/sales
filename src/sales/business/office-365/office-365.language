@@ -1,8 +1,8 @@
 ---
 location: localization/sales/business/office-365/en
-id: 5435cd31f778fc30f4905734
-name: GCE-29491
-comments: Remove invalid character
+id: 544fd568f778fc142061a9be
+name: GCE-29621
+comments: Office365 redesign
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="lp-8-MicrosoftOffice365BoostProductivityVirtuallyAnywhereGoDaddy" />
@@ -128,7 +128,7 @@ Users can connect the following versions of Outlook to their business-class emai
 <phrase key="lp-3-AcrossAllDevices-2" />
 across all devices
 <phrase key="lp-31-25GBSecureCloudStorageViaMicrosoftSkyDrive-2" />
-<span class="compare-cell-bold">1 TB</span> secure cloud storage via <span class="tooltip-underline">Microsoft OneDrive for Business<span class="tooltip-caption-left" ><span class="tooltip-caption-header">Microsoft OneDrive for Business</span>
+<span class="compare-cell-bold">1 TB</span> secure cloud storage via <span class="tooltip-underline">Microsoft OneDrive for Business<span class="tooltip-caption-right" ><span class="tooltip-caption-header">Microsoft OneDrive for Business</span>
 Store your files for easy, anywhere access and sharing.</span>
 </span>
 <phrase key="lp-7-SimpleFileSharingAndOnlineFileCollaboration-2" />
@@ -152,7 +152,7 @@ Create, edit and share Word, Excel, PowerPoint and OneNote files via the Microso
 <phrase key="lp-7-AppsForIPhoneAndroidAndWindowsPhone" />
 Apps for iPhone, Android, and Windows Phone
 <phrase key="lp-91-LatestMicrosoftOfficeDesktopOfficeDesktopIncludesOffice365ProPlus" />
-<span class="compare-cell-bold">Latest Microsoft <span class="tooltip-underline">Office Desktop<span class="tooltip-caption-left" ><span class="tooltip-caption-header">Office Desktop</span>Always have the latest versions of Word, Excel, PowerPoint, Outlook, OneNote, Publisher and more<sup>1</sup>.</span>
+<span class="compare-cell-bold">Latest Microsoft <span class="tooltip-underline">Office Desktop<span class="tooltip-caption-right" ><span class="tooltip-caption-header">Office Desktop</span>Always have the latest versions of Word, Excel, PowerPoint, Outlook, OneNote, Publisher and more<sup>1</sup>.</span>
 </span></span> on up to 5 PCs or Macs
 <phrase key="lp-3-AllPlansInclude" />
 All Plans Include
@@ -494,10 +494,10 @@ Work everywhere with online, mobile and desktop tools
 <span class="tooltip-underline"><span class="compare-cell-bold">Office Online</span>, <span class="tooltip-caption-right"><span class="tooltip-caption-header">Office Online</span> Create and edit Word, Excel PowerPoint and OneNote documents right from your cloud storage in any web browser.</span>
 </span> web versions of Outlook, Word, Excel and more
 <phrase key="lp-planColumnsProductivityPlus-MobileApps" />
-<span class="tooltip-underline"><span class="compare-cell-bold">Office Mobile Apps</span><span class="tooltip-caption-left"><span class="tooltip-caption-header">Office Mobile</span> Create, edit and share Word, Excel, PowerPoint and OneNote files via the Microsoft Office app for your iPhone, Android or Windows phone.</span>
+<span class="tooltip-underline"><span class="compare-cell-bold">Office Mobile Apps</span><span class="tooltip-caption-right"><span class="tooltip-caption-header">Office Mobile</span> Create, edit and share Word, Excel, PowerPoint and OneNote files via the Microsoft Office app for your iPhone, Android or Windows phone.</span>
 </span> for iPhone, Android, and Windows Phone
 <phrase key="lp-planColumnsProductivityPlus-OfficeDesktop" />
-<span class="compare-cell-bold"><span class="tooltip-underline">Office Desktop<span class="tooltip-caption-left"><span class="tooltip-caption-header">Office Desktop</span>Install the full version of Microsoft Office on up to 5 computers and get FREE updates to the latest version of Office for as long as you have Productivity Plus plan.<sup>1</sup></span>
+<span class="compare-cell-bold"><span class="tooltip-underline">Office Desktop<span class="tooltip-caption-right"><span class="tooltip-caption-header">Office Desktop</span>Install the full version of Microsoft Office on up to 5 computers and get FREE updates to the latest version of Office for as long as you have Productivity Plus plan.<sup>1</sup></span>
 </span></span> for up to 5 PCs or Macs with free updates for life
 <phrase key="NOTRANSLATE-BREAK-POINT-IN-FILE" />
 ***DO NOT TRANSLATE*** BREAK POINT IN FILE FOR SPLIT TEST TEXT ***DO NOT TRANSLATE*** 
@@ -797,8 +797,6 @@ If you are running a different operating system, remember that you can still wor
 With our Online Essentials and Business Premium plans, documents created or stored in your OneDrive for Business cloud storage can be simultaneously edited with others inside or outside your company – anyone with a link to a document can make edits at the same time as you. You can even see each other’s edits as you go, so you’ll always be on the same page with the latest version—all without having to send documents back and forth via email.
 <phrase key="split-test-b-61-LyncOnlineIncludedInThePlan" />
 Lync Online, included in the Online Essentials and Business Premium plans, allows you to communicate with your colleagues, customers and partners via online conference call or HD video conference. With just a couple of clicks, you can share your screen to review or invite up to 250 people inside or outside your company to take part in an online conversation.
-
-
 <phrase key="lp-7-AvailableOnlyWithBusinessPremiumPlan" />
 Available only with Business Premium plan:
 <phrase key="lp-2-BusinessPremium-2" />
@@ -836,7 +834,7 @@ Yes! Office Onlines is compatible with Mac OS X 10.5 and later using Safari 5 an
 <phrase key="lp-35-TheLatestVersionsOfMicrosoftOfficeInOur2" />
 The latest versions of Microsoft Office in our Business Premium plan will sync seamlessly with your online storage, ensuring that the documents you create on your desktop are securely stored online and available anywhere.
 <phrase key="lp-planColumnsBusinessPremium-OfficeDesktop" />
-<span class="compare-cell-bold"><span class="tooltip-underline">Office Desktop<span class="tooltip-caption-left"><span class="tooltip-caption-header">Office Desktop</span>Install the full version of Microsoft Office on up to 5 computers and get FREE updates to the latest version of Office for as long as you have Business Premium plan.<sup>1</sup></span>
+<span class="compare-cell-bold"><span class="tooltip-underline">Office Desktop<span class="tooltip-caption-right"><span class="tooltip-caption-header">Office Desktop</span>Install the full version of Microsoft Office on up to 5 computers and get FREE updates to the latest version of Office for as long as you have Business Premium plan.<sup>1</sup></span>
 </span></span> for up to 5 PCs or Macs with free updates for life
 <phrase key="split-test-b-2-BusinessPremium" />
 Business Premium
@@ -866,3 +864,195 @@ To get the most out of Office 365 from GoDaddy we highly recommend ensuring that
 I have a Mac. Can I still use Office 365 from GoDaddy? What about the Business Premium plan?
 <phrase key="split-test-b-32-AndIfYouChooseTheBusinessPremiumPlan" />
 And if you choose the Business Premium plan, you’ll be able to download Office for Mac 2011 Service Pack 3, which is fully compatible with Mac OS X 10.6.
+<phrase key="29621-main-title" />
+Microsoft<sup>&reg;</sup> Office 365 from Godaddy 
+<phrase key="29621-main-subtitle" comment="{0} replaced with a percentage"/>
+Save {0} on your upgrade to the latest version of Microsoft Office.
+<phrase key="29621-WatchVideo" />
+Watch Video
+<phrase key="29621-PlanBlock-1-title" />
+Online Essentials
+<phrase key="29621-PlanBlock-1-description" />
+Microsoft Office Online for anywhere access.
+<phrase key="29621-PlanBlock-2-title" />
+Business
+<phrase key="29621-PlanBlock-2-description" />
+The latest Microsoft Office suite for your PC or Mac.
+<phrase key="29621-PlanBlock-3-title" />
+Business Premium
+<phrase key="29621-PlanBlock-3-description" />
+The latest Microsoft Office suite, plus professional email.
+<phrase key="29621-FeatureContent-1-title" />
+Upgrade your Office 
+<phrase key="29621-FeatureContent-1-description" />
+Get the latest versions of the programs you rely on &ndash; Excel, Word, PowerPoint, Outlook, OneNote, Access and Publisher &ndash; with a subscription to Microsoft Office 2013 or Office for Mac 2011 for up to 5 devices per single user. <em>Business and Business Premium plans only.</em>
+<phrase key="29621-FeatureContent-2-title" comment="{0} replaced with a percentage" />
+Save {0} when you go with GoDaddy.
+<phrase key="29621-FeatureContent-2-description" />
+We’ve partnered with Microsoft to bring you this exclusive deal on Office 365. Save {0} for the first year on the latest version of Microsoft Office — plus, get free automatic upgrades as they’re released with your subscription. <em>Business and Business Premium plans only.</em>
+<phrase key="29621-FeatureContent-3-title" />
+24/7 support from real Office experts.
+<phrase key="29621-FeatureContent-3-description" />
+When you’re running a small business, you can’t afford downtime. GoDaddy helps keep your business running with free, award-winning support that’s available 24/7. Just pick up the phone to talk to get the answers you need to get back to business.
+<phrase key="29621-FeatureContent-4-title" />
+Never pay for another upgrade.
+<phrase key="29621-FeatureContent-4-description" />
+With Office 365, you get the latest Microsoft Office updates automatically, at no additional cost. Instead of owning a static version of Office that will eventually be out of date, you have a subscription that guarantees you the latest version for as long as you keep your plan. <em>Business and Business Premium plans only.</em>
+<phrase key="29621-FeatureContent-5-title" />
+Office that’s made for mobile.
+<phrase key="29621-FeatureContent-5-description" />
+Create a spreadsheet on your laptop. Edit it on your tablet. Share it from your smartphone. Wherever you are, Office 365 makes it easy to keep working with mobile apps for iPhone<sup>&reg;</sup> and iPad<sup>&reg;</sup>, as well as Android and Windows devices. <em>Business and Business Premium plans only.</em>
+<phrase key="29621-FeatureContent-6-title" />
+Keep your files safe in the cloud.
+<phrase key="29621-FeatureContent-6-description" />
+Hard drive crash. Email virus. Coffee spilled on your laptop. Stuff happens, but with 1 TB of secure online storage with OneDrive for Business, your files are always safe and always accessible.
+<phrase key="29621-FeatureContent-7-title" />
+Take your Office anywhere.
+<phrase key="29621-FeatureContent-7-description" />
+Make sure your important files are always within reach. Office Online lets you create, edit and save files to the cloud from any Web browser. Everyone you work with can work on the same document at once and share it with just a click – no more emailing files back and forth.
+<phrase key="29621-FeatureContent-8-title" />
+More than just Office.
+<phrase key="29621-FeatureContent-8-bullet-get" />
+Get unlimited professional email addresses, all built on your domain name and all delivered to a single inbox. <em>Online Essentials and Business Premium plans only.</em>
+<phrase key="29621-FeatureContent-8-bullet-keep" />
+Keep more of what matters with 50 GB of storage for your email, contacts and shared calendars. <em>Online Essentials and Business Premium plans only.</em>
+<phrase key="29621-FeatureContent-8-bullet-meet" />
+Meet face to face, wherever you are, with video conferencing, screen sharing and more via Microsoft Lync.<em> Online Essentials and Business Premium plans only.</em>
+<phrase key="29621-FeatureContent-8-bullet-be" />
+Be confident that your email, contacts and calendar are always available with guaranteed 99.9% uptime.
+<phrase key="29621-Compare-title" />
+Compare Office plans.
+<phrase key="29621-Compare-subtitle" />
+Choose the one that's right for you.
+<phrase key="29621-Compare-column-title" />
+Features
+<phrase key="29621-Compare-desktop" />
+<span class="tooltip-underline">Office Desktop<span class="tooltip-caption-right" ><span class="tooltip-caption-header">Office Desktop</span>Install Microsoft Office on up to 5 PCs or Macs and 5 iPads or Windows tablets per single user and get FREE updates to the latest version for as long as you have Productivity Plus plan.<sup>1</sup>.</span></span> for up to 5 devices*
+<phrase key="29621-Compare-automatic" />
+Automatic Office upgrades
+<phrase key="29621-Compare-mobile" />
+<span class="tooltip-underline">Office Mobile<span class="tooltip-caption-right" ><span class="tooltip-caption-header">Office Mobile</span>Create, edit and share Word, Excel, PowerPoint and OneNote files via the Microsoft Office app for your iPhone, Android or Windows phone.</span></span>: Apps for iPhone, Android and Windows phones.
+<phrase key="29621-Compare-secure" />
+1 TB secure online storage
+<phrase key="29621-Compare-online" />
+<span class="tooltip-underline">Office Online<span class="tooltip-caption-right" ><span class="tooltip-caption-header">Office Online</span>Create and edit Word, Excel PowerPoint and OneNote documents right from your cloud storage in any web browser.</span></span>: Web versions of Word, Excel and more.
+<phrase key="29621-Compare-email" />
+Professional email using your domain name
+<phrase key="29621-Compare-storage" />
+50 GB storage for email, contacts and calendars
+<phrase key="29621-Compare-sync" />
+<span class="tooltip-underline">Sync across all devices<span class="tooltip-caption-right" ><span class="tooltip-caption-header">Sync email, calendar and contacts</span>Users can connect the following versions of Outlook to their business-class email, so they can use the rich client application they already know: the latest version of Outlook, Outlook 2010, Outlook 2007 (with slightly limited functionality), Outlook 2011 for Mac, and Outlook 2008 for Mac. Email can also be accessed through your non-Outlook desktop program of choice that is Exchange ActiveSync compatible (i.e., Apple Mail). Outlook web application available on all plans.</span></span>
+<phrase key="29621-Compare-meetings" />
+Online meetings with Microsoft Lync
+<phrase key="29621-Compare-spam" />
+World-class spam filtering and data security
+<phrase key="29621-PlansInclude-title" />
+All plans include:
+<phrase key="29621-PlansInclude-support" />
+GoDaddy’s award-winning 24/7 support
+<phrase key="29621-PlansInclude-money" />
+Money-back guarantee
+<phrase key="29621-PlansInclude-uptime" />
+<span class="tooltip-underline">Guaranteed 99.9% uptime<span class="tooltip-caption-right" ><span class="tooltip-caption-header">99.9% guaranteed uptime and reliability</span>Some limitations apply to the 99.9% uptime guarantee. For details see the Microsoft Online Service Level Agreement at <a data-ci="94235" href="http://x.co/365TOS" target="_blank">x.co/365TOS</a></span>
+<phrase key="29621-StartingAt" />
+Starting at
+<phrase key="29621-PlansStartingAt" />
+Plans starting at
+<phrase key="29621-PerUserPerMonth" />
+per user/month
+<phrase key="29621-AddToCart" />
+Add to Cart
+<phrase key="29621-FrequentlyAskedQuestions" />
+Frequently Asked Questions
+<phrase key="29621-More" comment="'more' as in view more when clicked."/>
+More
+<phrase key="29621-AskUsAQuestion" />
+Ask Us a Question
+<phrase key="29621-OnSaleSave" comment="{0} replaced with a save percentage"/>
+On sale &ndash; Save {0}
+<phrase key="29621-RenewsAtPerMonth" comment="{0} replaced with a price"/>
+Renews at {0} per user/month
+<phrase key="29621-TabTitle-features" />
+Features
+<phrase key="29621-TabTitle-compare" />
+Compare Plans
+<phrase key="29621-TabTitle-faq" />
+FAQ
+<phrase key="29621-CustomerTestamonial" />
+"This is exactly what every small business needs to compete in today's market place. Office 365 from GoDaddy allows me to access my files anywhere, while collaborating with team members. It's my Virtual Office 365."
+<phrase key="29621-CustomerTestamonial-byline" />
+Gregory Recupero CTO Performance-IP
+<phrase key="29621-DisclaimersLinkText" />
+*, **, 1 Click here for product disclaimers and legal policies.
+<phrase key="29621-Disclaimers-title" />
+Disclaimers
+<phrase key="29621-Disclaimers-OK" />
+OK
+<phrase key="29621-Disclaimers-one" />
+1 Includes Office 365 ProPlus for PC's (which includes desktop versions of Outlook, Word, Excel, PowerPoint, Access, OneNote, Publisher and Lync) or Office 2011 for Mac (which includes desktop versions of Outlook, Word, Excel and PowerPoint). Access, Publisher and One Note Desktop are Windows PC client programs and/or features only. Cannot be used across devices. Install on up to 5 PCs or Macs. Includes automatic updates and upgrades so you always have the newest versions of these tools.
+<phrase key="29621-Disclaimers-renewed" />
+Products will automatically renew until cancelled. You may turn off the auto-renewal feature by visiting your GoDaddy account.
+<phrase key="29621-Disclaimers-ms-sla" />
+For more information see the full Microsoft Service Agreement here: <a href="http://technet.microsoft.com/en-us/library/jj819284.aspx" target="_blank" data-ci="94224">http://technet.microsoft.com/en-us/library/jj819284.aspx</a>
+<phrase key="29621-FAQ-q-1" />
+Why should I buy Office 365 from GoDaddy if I already have Office on my desktop?
+<phrase key="29621-FAQ-a-1" />
+If you purchase our Business or Business Premium plan, you’ll get the latest version of the Office desktop applications you know and love—Excel, Word, Outlook, PowerPoint, OneNote, and Publisher.  And whenever Office is updated, you will automatically receive the latest upgrade at no additional charge so that you’re always on the current version of Office.   
+Our Office 365 plans give you the ability to easily and securely share and collaborate on documents using OneDrive for Business and Office Online. With Online Essentials, and Business Premium you can also create a domain-based email address and share calendars and contacts with people inside and outside of your company. Finally, unlike the Office you currently have, Office 365 from GoDaddy gives you the ability to have real-time online meetings and screen sharing using Lync. 
+<phrase key="29621-FAQ-q-2" />
+Which desktop applications come with the Business and Business Premium plans?
+<phrase key="29621-FAQ-a-2" />
+This depends on whether you are using a PC or a Mac. PC users can download the latest versions of Word, PowerPoint, Excel, Outlook, OneNote, Publisher, Access, and the desktop version of Lync. Mac users will receive the latest desktop versions of Word, PowerPoint, Excel and Outlook.<sup>1</sup>
+<phrase key="29621-FAQ-q-3" />
+Will the latest version of Microsoft Office work on my computer?
+<phrase key="29621-FAQ-a-3" />
+To use the 5 desktop downloads you get with the Business or Business Premium plan, you must be on one of the following operating systems: <ul><li>Windows Server 2008 R2</li><li>Windows 7</li><li>Windows Server 2012</li><li>Windows 8</li><li>Mac OS X version 10.6 or later.</li></ul> If you are running a different operating system, remember that you can still work online with Office Online, browser-based versions of your favorite Microsoft tools like Excel, Word or PowerPoint, which are included with the Online Essentials or Business Premium plans.
+<phrase key="29621-FAQ-q-4" />
+I have a Mac. Can I still use Office 365 from GoDaddy? What about the Business and Business Premium plans?
+<phrase key="29621-FAQ-a-4" />
+Yes. Office Online is compatible with Mac OS X 10.5 and later with Safari 5 and later. And if you choose the Business or Business Premium plan, you’ll be able to download Office for Mac 2011 Service Pack 3, which is fully compatible with Mac OS X 10.6.
+<phrase key="29621-FAQ-q-5" />
+What is Office for iPad?
+<phrase key="29621-FAQ-a-5" />
+Office for iPad features full, touch-friendly versions of the most popular Office apps: Word, Excel and PowerPoint. While the free iPad apps allow you to read Word documents, use Excel data and present with PowerPoint, only Office for iPad lets you create and edit documents in each app.
+Office for iPad is available with the Business or Business Premium plan, both of which include a license that’s valid for up to 5 iPads or Windows tablets, as well as up to 5 PCs or Macs, for a single user.
+<phrase key="29621-FAQ-q-6" />
+What is Office Online?
+<phrase key="29621-FAQ-a-6" />
+Office Online features easy-to-use versions of Word®, Excel®, PowerPoint® and OneNote® that you use within a Web browser. You can access Office Online from your cloud storage to create new files, edit existing files, share and collaborate online with clients or colleagues. 
+<phrase key="29621-FAQ-q-7" />
+What is online document collaboration?
+<phrase key="29621-FAQ-a-7" />
+With our Online Essentials and Business Premium plans, documents created or stored in your OneDrive for Business cloud storage can be simultaneously edited with others inside or outside your company – anyone with a link to a document can make edits at the same time as you. You can even see each other’s edits as you go, so you’ll always be on the same page with the latest version, all without having to send documents back and forth via email. 
+<phrase key="29621-FAQ-q-8" />
+With the Business or Business Premium plans, can I download the 5 installs of Office on my employees’ computers?
+<phrase key="29621-FAQ-a-8" />
+The desktop Office licenses that come with the Business or Business Premium plan are associated with an individual user’s account. This makes it easy to connect Office desktop applications with the online services and cloud storage that allow you to work anywhere. Downloading a copy onto another user’s computer may keep that second user from experiencing these benefits.
+To get the most out of Office 365 from GoDaddy, we highly recommend ensuring that anyone needing the latest desktop version of Office be associated with a Business or Business Premium account. 
+<phrase key="29621-FAQ-q-9" />
+Will the Excel, PowerPoint and Word programs I already have installed on my computer work with my cloud storage and Office Online?
+<phrase key="29621-FAQ-a-9" />
+OneDrive for Business cloud storage and Office Online work best with the latest version of Microsoft Office, Office 2013, Office 2010, and Office 2011 for Mac.
+With these versions of Office, you can select files stored in the cloud and edit them using your desktop applications instead of Office Online. Simply open the file you wish to edit, click ‘Edit in Word/Excel/PowerPoint’ and when you click ‘Save’ within those applications, your document will sync back to your storage. 
+<phrase key="29621-FAQ-q-10" />
+What if I already have a Workspace email account from GoDaddy?
+<phrase key="29621-FAQ-a-10" />
+If you would like to switch your domain-based email from Workspace to Office 365, please call us at [@T[supportphone:<technical/>]@T] and we can help you make the right decision regarding your existing email.
+<phrase key="29621-FAQ-q-11" />
+I am part of a larger organization - can I use Microsoft Office 365 from GoDaddy?
+<phrase key="29621-FAQ-a-11" />
+The plans on our website are ideal for businesses that require fewer than 300 accounts. You may purchase up to 300 user accounts on each plan type and up to 900 in total. If you have questions, just give us a call at [@T[supportphone:<technical/>]@T]. Our award-winning team is here to help 24/7.
+<phrase key="29621-FAQ-q-12" />
+What is Lync Online?
+<phrase key="29621-FAQ-a-12" />
+Lync Online, included in the Online Essentials and Business Premium plans, allows you to communicate with your colleagues, customers and partners via online conference call or HD video conference. With just a couple of clicks, you can share your screen or invite up to 250 people inside or outside your company to take part in an online conversation.
+<phrase key="29621-FAQ-q-13" />
+What is the cloud?
+<phrase key="29621-FAQ-a-13" />
+Working or storing files in ‘the cloud' means that your programs and documents are stored securely on the Internet — not on your hard drive – so you can access them anytime, anywhere, from almost any device connected to the Web.
+You don't need to buy additional software and you’re not dependent on your computer to get work done. Plus, since your documents are stored on secure servers, you have peace of mind knowing that, even if your hard drive crashes, your documents and programs are safe and accessible from any web browser.
+<phrase key="29621-FAQ-q-14" />
+What are the benefits of having domain-based email addresses?
+<phrase key="29621-FAQ-a-14" />
+A domain-based email address, like info@your-business-name.com, helps you look more professional with customers and promotes your website and company. In fact, customers are 9 times more likely to choose a company with a professional email address*.  Every time you send an email from a domain-based address, you're putting your domain name in front of customers and encouraging them to visit your website.
+And with each plan, you can create free ‘alias’ addresses – like one using your first name (keith@your-business-name.com) and others for different departments (sales@your-business-name.com) -- that all feed into a single inbox and make you look even more professional. 
