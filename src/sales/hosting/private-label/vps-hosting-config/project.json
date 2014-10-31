@@ -1,19 +1,19 @@
 {
-  "vps-hosting.html": {
+  "vps-hosting-config.html": {
     "cdsDetails": {
       "champion": {
         "name": "Colyn Brown",
         "email": "clbrown@godaddy.com"
       }
     },
-    "assetPath": "fos/201401/sales/hosting/vps-hosting/",
-    "metaTitle": "[@L[cds.sales/gd/hosting/vps-hosting:page-title]@L]",
-    "metaDescription": "[@L[cds.sales/gd/hosting/vps-hosting:meta-description]@L]",
-    "metaKeywords": "[@L[cds.sales/gd/hosting/vps-hosting:meta-keywords]@L]",
-    "metaCanonicalPath": "/hosting/vps-hosting.aspx",
-    "metaOgTitle": "[@L[cds.sales/gd/hosting/vps-hosting:og-title]@L]",
+    "assetPath": "fos/201401/sales/hosting/private-label/vps-hosting-config",
+    "metaTitle": "Hunter's, New Show VPS Hosting | Affordable &amp; Configurable VPS plans",
+    "metaDescription": "VPS Hosting gives you more power than traditional hosting. Our VPS hosting solutions are affordable and easier to manage than a dedicated server.",
+    "metaKeywords": "vps hosting,vps,virtual server,windows vps, linux vps, vps server,virtual private server,virtual servers,virtual private servers,windows virtual server,linux virtual server,virtual private server hosting,vps servers,virtual dedicated server",
+    "metaCanonicalPath": "/hosting/vps_hosting.aspx?prog_id=hunter",
+    "metaOgTitle": "og-title",
     "metaOgImage": "fos/hp/rebrand/img/gd_rebrand_og.png",
-    "metaOgDescription": "[@L[cds.sales/gd/hosting/vps-hosting:og-description]@L]"
+    "metaOgDescription": "og-description"
   },
   "vps-hosting-config.language": {
     "cdsDetails": {
