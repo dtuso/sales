@@ -74,6 +74,8 @@ Pro
  <li><strong>Millions</strong> of monthly visitors on <strong>25</strong> websites</li>
 <phrase key="WordPressPrivateLabel-3-UnlimitedStorage" />
 <li><strong>Unlimited</strong> storage.
+<phrase key="WordPressPrivateLabel-3-StoreUnlimitedImagesAndVideos" />
+Store unlimited images and videos
 <phrase key="WordPressPrivateLabel-4-WhatIsWordPress" />
 What is WordPress?
 <phrase key="WordPressPrivateLabel-84-WordPressIsABlogAndWebPublishingPlatform" />
@@ -281,7 +283,7 @@ One-click migration tool
 <phrase key="WordPressPrivateLabel-5-SFTPAccessToWordPressFiles" />
 <span class="g-toolTip">sFTP access<span>Protect files as they are transferred to or from your site by encrypting them through a Secure FTP (sFTP) connection </span></span> to WordPress files
 <phrase key="WordPressPrivateLabel-6-NightlyBackupsAndOneClickRestore" />
-Nightly backups and one-click restore
+Nightly backups and one-click site restore
 <phrase key="WordPressPrivateLabel-7-RedundantFirewallsMalwareScanningAndDDoSProtection" />
 Redundant firewalls, malware scanning and DDoS protection
 <phrase key="WordPressPrivateLabel-3-TemporaryWebsiteAddress" />
