@@ -267,5 +267,23 @@ html(lang!="[@T[localization:<language full='true' />]@T]")
       if(navigator.userAgent.match(/iPad|iPhone|iPod/i)) {
       $('head').append('<meta name="viewport" content="width=1150px">');
       }
+      $('body').on('click','.js-gdhpclick',function(event){
+        var $clickedElement = $(event.currentTarget);
+        var $clickedUrl = $clickedElement.attr('data-url'); 
+        event.stopPropagation();
+        switch($clickedUrl)
+        {
+          case "video":
+             $('div#myVideoModal').modal('show');
+          break;
+          case "none":
+          break;
+          case "video-close":
+            $('div#myVideoModal').modal('hide');
+          break;
+          default:
+            window.location.href=$clickedUrl;
+        }
+      });
 
     block scripts
