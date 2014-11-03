@@ -1,0 +1,44 @@
+---
+location: sales/homepage/default.de-ch
+id: false
+name: GCE-31162
+---
+extends ../../layouts/homepage/default_base
+block styles
+	link(href!="[@T[link:<cssroot />]@T]fos/hp/rebrand/css/de-ch_homepage_20140805.css" rel="stylesheet" type="text/css")
+	| 
+	| [@P[cdsDocument:<data app="sales" location="fonts/fonts" /> ]@P]
+	style.
+		.tungsten{font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-weight:700}
+		.walsheim-black{font-family:'Walsheim-Black';}
+		#co-icon { display: inline-block; width: inherit;}
+
+block marquee
+	|  ##if(targetMessageTagAny(sales_hp_default,hp_existing_customer))
+	|   ##if(splitTestingSideIsActive(1397, B) && !hasISC())
+	|     [@P[cdsDocument:<data app="sales" location="homepage/marquee/gybo/default_template" /> ]@P]
+	|   ##else
+	|     [@P[cdsDocument:<data app="sales" location="homepage/marquee/gtld-phone/default_template" /> ]@P]
+	|   ##endif
+	| ##else
+	|   ##if(splitTestingSideIsActive(1398, B) && !hasISC())
+	|     [@P[cdsDocument:<data app="sales" location="homepage/marquee/gybo/default_template" /> ]@P]
+	|   ##else
+	|     [@P[cdsDocument:<data app="sales" location="homepage/marquee/299com/default_template" /> ]@P]
+	|   ##endif
+	| ##endif
+
+block bugBar
+	a(href!="[@T[link:<relative path='/tlds/co-domain.aspx'><param name='ci' value='83052' /><param name='tld' value='CO' /></relative>]@T]")
+		span#co-icon
+		span [@T[productprice:<current productid="56401" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]
+	a(href!="[@T[link:<relative path='/tlds/org.aspx'><param name='ci' value='93297' /><param name='tld' value='ORG' /></relative>]@T]")
+		span#org-icon.tld-icon
+		span#org-price [@T[productprice:<current productid="12101" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]*
+
+block share
+	.fosshare(data-twshareurl!="[@T[link:<external linktype='XDOTCO' path='/wwwGD' />]@T]" data-twtext!="[@L[cds.sales/homepage:twitter-text-gdbl]@L]" data-twrelated="GoDaddy" data-shareurl!="[@T[link:<relative path='/'/>]@T]" data-buttons="google,facebook,twitter")
+
+block pods
+	| 
+	| [@P[cdsDocument:<data app="sales" location="homepage/locals/de-ch/pods" /> ]@P]
