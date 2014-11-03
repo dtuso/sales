@@ -1,0 +1,42 @@
+---
+location: sales/homepage/default.de-de
+id: false
+name: GCE-31162
+---
+extends ../../layouts/homepage/default_base
+block styles
+	link(href!="[@T[link:<cssroot />]@T]fos/hp/rebrand/css/de-DE_homepage_20140805.css" rel="stylesheet" type="text/css")
+	style.
+		#co-icon { display: inline-block; width: inherit;}
+
+block marquee
+	|  ##if(targetMessageTagAny(sales_hp_default_de,fos23741_1eurode_1))
+	|    ##if(splitTestingSideIsActive(1328, B))
+	|      [@P[tmsdocument:<data interactionpoint="sales_hp_default_de"><MessageTags><MessageTag>fos23741_1eurode_1</MessageTag></MessageTags></data>]@P]
+	|    ##else
+	|      [@P[cdsDocument:<data app="sales" location="homepage/locals/de-de/topmarquee" /> ]@P]
+	|    ##endif
+	|  ##elseif(targetMessageTagAny(sales_hp_default_de,fos23741_1eurode_2) && !hasISC())
+	|    ##if(splitTestingSideIsActive(1328, B))
+	|      [@P[tmsdocument:<data interactionpoint="sales_hp_default_de"><MessageTags><MessageTag>fos23741_1eurode_2</MessageTag></MessageTags></data>]@P]
+	|    ##else
+	|      [@P[cdsDocument:<data app="sales" location="homepage/locals/de-de/topmarquee" /> ]@P]
+	|    ##endif
+	|  ##else
+	|      [@P[cdsDocument:<data app="sales" location="homepage/locals/de-de/topmarquee" /> ]@P]
+	|  ##endif 
+
+block bugBar
+	a(href!="[@T[link:<relative path='/tlds/co-domain.aspx'><param name='ci' value='83052' /><param name='tld' value='CO' /></relative>]@T]")
+		span#co-icon
+		span [@T[productprice:<current productid="56401" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]
+	a(href!="[@T[link:<relative path='/tlds/org.aspx'><param name='ci' value='93297' /><param name='tld' value='ORG' /></relative>]@T]")
+		span#org-icon.tld-icon
+		span#org-price [@T[productprice:<current productid="12101" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]*
+
+block share
+	.fosshare(data-twshareurl!="[@T[link:<external linktype='XDOTCO' path='/wwwGD' />]@T]" data-twtext!="[@L[cds.sales/homepage:twitter-text-gdbl]@L]" data-twrelated="GoDaddy" data-shareurl!="[@T[link:<relative path='/'/>]@T]" data-buttons="google,facebook,twitter")
+
+block pods
+	| 
+	| [@P[cdsDocument:<data app="sales" location="homepage/locals/de-de/pods" /> ]@P]
