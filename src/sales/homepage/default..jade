@@ -1,30 +1,29 @@
 ---
-location: sales/homepage/default.sv-se
+location: sales/homepage/default.pt-pt
 id: false
 name: GCE-31162
 ---
 extends ../../layouts/homepage/default_base
 block styles
-  link(href!="[@T[link:<cssroot />]@T]fos/hp/rebrand/css/sv-se_homepage_20140805.css" rel="stylesheet" type="text/css")
+  link(href!="[@T[link:<cssroot />]@T]fos/hp/rebrand/css/pt-pt_homepage_20140805.css" rel="stylesheet" type="text/css")
   style.
-    #co-price{padding-left:26px;}
-    #co-icon{width:inherit;position:absolute;margin-top:12px;}
+    #co-icon { display: inline-block; width: inherit;}
 
 block marquee
   |  ##if(!targetMessageTagAny(sales_hp_default,hp_existing_customer))
-  |    ##if(splitTestingSideIsActive(1307, B) && !hasISC())
-  |      [@P[cdsDocument:<data app="sales" location="homepage/locals/sv-se/topmarquee" /> ]@P]
+  |    ##if(splitTestingSideIsActive(1305, B) && !hasISC())
+  |      [@P[cdsDocument:<data app="sales" location="homepage/locals/pt-pt/topmarquee" /> ]@P]
   |    ##else
-  |      [@P[cdsDocument:<data app="sales" location="homepage/locals/sv-se/split/topmarquee" /> ]@P]
+  |      [@P[cdsDocument:<data app="sales" location="homepage/locals/pt-pt/split/topmarquee" /> ]@P]
   |    ##endif
   |  ##else
-  |    [@P[cdsDocument:<data app="sales" location="homepage/locals/sv-se/split/topmarquee" /> ]@P]
+  |    [@P[cdsDocument:<data app="sales" location="homepage/locals/pt-pt/split/topmarquee" /> ]@P]
   |  ##endif
 
 block bugBar
   a(href!="[@T[link:<relative path='/tlds/co-domain.aspx'><param name='ci' value='83052' /><param name='tld' value='CO' /></relative>]@T]")
     span#co-icon
-    span#co-price [@T[productprice:<current productid="56401" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]
+    span [@T[productprice:<current productid="56401" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]
   a(href!="[@T[link:<relative path='/tlds/org.aspx'><param name='ci' value='93297' /><param name='tld' value='ORG' /></relative>]@T]")
     span#org-icon.tld-icon
     span#org-price [@T[productprice:<current productid="12101" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]*
@@ -34,4 +33,4 @@ block share
 
 block pods
   | 
-  | [@P[cdsDocument:<data app="sales" location="homepage/locals/sv-se/pods" /> ]@P]
+  | [@P[cdsDocument:<data app="sales" location="homepage/locals/pt-pt/pods" /> ]@P]
