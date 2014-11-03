@@ -1,24 +1,24 @@
 ---
-location: sales/homepage/default.pl-pl
+location: sales/homepage/default.nl-be
 id: false
 name: GCE-31162
 ---
 extends ../../layouts/homepage/default_base
 block styles
-  link(href!="[@T[link:<cssroot />]@T]fos/hp/rebrand/css/pl-pl_homepage_20140805.css" rel="stylesheet" type="text/css")
+  link(href!="[@T[link:<cssroot />]@T]fos/hp/rebrand/css/nl-be_homepage_20140805.css" rel="stylesheet" type="text/css")
   style.
     #co-price{padding-left:26px;}
     #co-icon{width:inherit;position:absolute;margin-top:12px;}
 
 block marquee
   |  ##if(!targetMessageTagAny(sales_hp_default,hp_existing_customer))
-  |    ##if(splitTestingSideIsActive(1304, B) && !hasISC())
-  |      [@P[cdsDocument:<data app="sales" location="homepage/marquee/299com/default_template" /> ]@P]
+  |    ##if(splitTestingSideIsActive(1302, B) && !hasISC())
+  |      [@P[cdsDocument:<data app="sales" location="homepage/locals/nl-be/topmarquee" /> ]@P]
   |    ##else
-  |      [@P[cdsDocument:<data app="sales" location="homepage/marquee/gtld-phone/default_template" /> ]@P]
+  |      [@P[cdsDocument:<data app="sales" location="homepage/locals/nl-be/split/topmarquee" /> ]@P]
   |    ##endif
   |  ##else
-  |    [@P[cdsDocument:<data app="sales" location="homepage/marquee/gtld-phone/default_template" /> ]@P]
+  |    [@P[cdsDocument:<data app="sales" location="homepage/locals/nl-be/split/topmarquee" /> ]@P]
   |  ##endif
 
 block bugBar
@@ -34,4 +34,4 @@ block share
 
 block pods
   | 
-  | [@P[cdsDocument:<data app="sales" location="homepage/locals/pl-pl/pods" /> ]@P]
+  | [@P[cdsDocument:<data app="sales" location="homepage/locals/nl-be/pods" /> ]@P]
