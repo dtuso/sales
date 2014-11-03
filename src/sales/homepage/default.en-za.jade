@@ -1,24 +1,24 @@
 ---
-location: sales/homepage/default.en-ie
+location: sales/homepage/default.en-za
 id: false
 name: GCE-31162
 ---
 extends ../../layouts/homepage/default_base
 block styles
-	link(href!="[@T[link:<cssroot />]@T]fos/hp/rebrand/css/en-ie_homepage_20140805.css" rel="stylesheet" type="text/css")
+	link(href!="[@T[link:<cssroot />]@T]fos/hp/rebrand/css/en-za_homepage_20140702.css" rel="stylesheet" type="text/css")
 	style.
 		#co-price {padding-left:26px;}
 		#co-icon { width: inherit; position: absolute; margin-top: 12px; }
 
 block marquee
 	|  ##if(!targetMessageTagAny(sales_hp_default,hp_existing_customer))
-	|    ##if(splitTestingSideIsActive(1310, B) && !hasISC())
-	|    [@P[cdsDocument:<data app="sales" location="homepage/locals/en-ie/topmarquee" /> ]@P]
+	|    ##if(splitTestingSideIsActive(1315, B) && !hasISC())
+	|    [@P[cdsDocument:<data app="sales" location="homepage/locals/en-za/topmarquee" /> ]@P]
 	|    ##else
-	|    [@P[cdsDocument:<data app="sales" location="homepage/locals/en-ie/split/topmarquee" /> ]@P]
+	|    [@P[cdsDocument:<data app="sales" location="homepage/locals/en-za/split/topmarquee" /> ]@P]
 	|    ##endif
 	|  ##else
-	|    [@P[cdsDocument:<data app="sales" location="homepage/locals/en-ie/split/topmarquee" /> ]@P]
+	|    [@P[cdsDocument:<data app="sales" location="homepage/locals/en-za/split/topmarquee" /> ]@P]
 	|  ##endif
 
 block bugBar
@@ -37,8 +37,24 @@ block share
 
 block pods
 	| 
-	| [@P[cdsDocument:<data app="sales" location="homepage/locals/en-ie/pods" /> ]@P]
+	| [@P[cdsDocument:<data app="sales" location="homepage/locals/en-za/pods" /> ]@P]
 
-append cookieWarning
+block cookieWarning
 	script(type="text/javascript").
 		var ignoreLivePerson = true;
+
+append scripts
+	script(type="text/javascript").
+		$('.com-299-marquee').bind('click',function(event) {
+			var $clickedElement = $(event.target);
+			if(!$clickedElement.hasClass('gtld-pods')) {
+		  		window.location.href='[@T[link:<relative path="/domains/search-new.aspx"><param name="ci" value="91184" /></relative>]@T]';
+			}
+		});
+
+		$('.gdhp-top-banner').bind('click',function(event) {
+			var $clickedElement = $(event.target);
+			if(!$clickedElement.hasClass('gtld-pods')){
+			  window.location.href='[@T[link:<relative path="/domains/search-new.aspx"><param name="ci" value="87716" /></relative>]@T]';
+			}
+		});
