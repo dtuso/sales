@@ -1,6 +1,6 @@
 ---
 location: sales/hosting/private-label/vps-hosting.aspx
-id: 54517544f778fc1318bfbaac
+id: 5458007cf778fc21f0951492
 name: GCE-28592
 comments: Reseller /PL VPS Refresh
 url: http://www.dev-secureserver.net/hosting/vps-hosting.aspx
@@ -426,7 +426,7 @@ assetPath: true
 	    });			
 
         function getData(){
-           var url = '[@T[link:<relative path="~/api/package/config/vpsprodata"  parammode="explicit"/>]@T]';
+           var url = '[@T[link:<relative path="~/api/package/config/vpsprodata" />]@T]';
 
 		    $.getJSON(url, function(data) {
 		        if (data != 'fail') {
