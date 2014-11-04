@@ -1,0 +1,1086 @@
+---
+location: sales/ecommerce/online-store.aspx
+id: 544ab57ef778fc17f82fcaaa  
+name: GCE-20285 - OLS 
+comments: Online Store Landing Page
+url: http://www.dev-godaddy.com/ecommerce/online-store.aspx
+---
+{% extends 'layouts/base.html' %}
+{% block body %}
+<!------------------------------------>
+<!--           MARQUEE              -->
+<!------------------------------------>
+    
+<section class="main-banner background-container main-banner-onlinestore">
+  <div class="container l-main-container center-text main-banner-content main-banner-online-store-content">
+    ##if(countrySiteAny(uk,ca,au,nz,sg,ph))
+    <span class="ribbon ribbon-right">
+        <i class="marquee-flag [@T[localization:<language full="true" />]@T] [@T[localization:<language />]@T] marquee-flag-free-trial"></i>
+    </span>
+    ##endif
+
+    <div class="row">
+    <h1 class="main-banner-title condensed">[@L[cds.sales/gd/ecommerce/online-store:OnlineStore]@L]</h1>
+      
+      <section class="rating-stars-container main-banner-rating-stars-container websitebuilder-rating-stars">
+        <div class="rating-stars-init" data-rating="4.71"></div>
+      </section>
+            <a id="reviewsLink" class="main-banner-read-reviews-alternate tab-link" style="display:hidden;" data-ci="89260" href="#reviews">[@L[cds.sales/gd/ecommerce/online-store:labelReadReviews]@L]</a>    
+      <h2 class="main-banner-subtitle main-banner-subtitle1">[@L[cds.sales/gd/ecommerce/online-store:MainBannerSubTitle1]@L]</h2>
+      <h2 class="main-banner-subtitle main-banner-subtitle2">[@L[cds.sales/gd/ecommerce/online-store:MainBannerSubTitle2]@L]</h2>
+
+    ##if(isManager()) 
+    <div class='row mgr-view' role="main"> <!-- white div for mgr view -->
+        <div class="col-xs-2"></div>
+          <div class="col-xs-5 main-banner-mgr-view-left-spacer">
+                <form id="addtocart-form-MgrView-Marquee" class="addtocart-form mgr-view" action="[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]" method="post" data-addtocart="[@T[link:<external linktype="SALESPRODUCTSURL" path="/v1/pl/1/cart/packages" />]@T]">
+                    <input type="hidden" name="itc" value="slp_onlinestore" />
+                    <input type="hidden" name="ci" value="94022" />
+                    <input type="hidden" name="qty" value="1" />
+                    <input type="hidden" name="package" value=""/>
+                      <div class="grid-column mgr-view-section-top-spacer">
+                        <p class="mgr-view-label-bottom-spacer"> [@L[cds.sales/gd/ecommerce/online-store:ManagerViewTitle]@L] </p>
+                        <div id="mgr-select-box-1" class="select-box" data-ci="94022">
+                            <div class="select-box-head">
+                                <div class="select-box-current">
+                                    <input type="hidden" name="package" value="ols_premium12month"/>
+                                    <span>[@L[cds.sales/gd/ecommerce/online-store:12]@L] [@L[cds.sales/gd/ecommerce/online-store:Months]@L]</span>
+                                    <span class="price">[@T[productprice:<current productid="40972" period="monthly" />]@T][@L[cds.sales/gd/ecommerce/online-store:PerMo]@L]</span>
+                                    ##if(productHasSavingsMoreThan(40972, 40972, 0))
+                                    <span class="save lastChild">[@L[cds.sales/gd/ecommerce/online-store:OnSale]@L]</span>
+                                    ##else
+                                    <span class="save lastChild">[@T[productcompare:<percent primaryproductid="40972" secondaryproductid="40972" hidebelow="1"><html><![CDATA[[@L[cds.sales/gd/ecommerce/online-store:Save]@L] {0}%]]></html></percent>]@T]</span>
+                                    ##endif
+                                </div>
+                                <div class="select-box-cta"><i class="ico ico-download"></i></div>
+                            </div>
+                            <div class="select-box-body">
+                                <ul class="select-box-options">
+                                    <li>
+                                        <label>
+                                            <input type="radio" name="plan" id="40966_1_1" value="40966|1|1">
+                                            <input type="hidden" name="package" value="ols_premium1month"/>
+                                            <div>
+                                                <span>[@L[cds.sales/gd/ecommerce/online-store:1]@L] [@L[cds.sales/gd/ecommerce/online-store:Month]@L]</span>
+                                                <span class="price">[@T[productprice:<current productid="40966" period="monthly" />]@T][@L[cds.sales/gd/ecommerce/online-store:PerMo]@L]</span>
+                                            ##if(productHasSavingsMoreThan(40966, 40966, 0))
+                                                <span class="save">[@L[cds.sales/gd/ecommerce/online-store:OnSale]@L]</span>
+                                            </div>
+                                            <div>
+                                                <span>&nbsp;</span>
+                                                <span>[@T[productprice:<template productid="40966" period="monthly"><strike><![CDATA[<strike>{1}[@L[cds.sales/gd/ecommerce/online-store:Month]@L]</strike>]]></strike></template>]@T]</span>
+                                                <span class="save">[@T[productcompare:<percent primaryproductid="40966" secondaryproductid="40966" hidebelow="1"><html><![CDATA[[@L[cds.sales/gd/ecommerce/online-store:Save]@L] {0}%]]></html></percent>]@T]</span>
+                                            ##else
+                                                <span>&nbsp;</span>
+                                            ##endif
+                                            </div>
+                                        </label>
+                                    </li>
+                                    <li class="selected">
+                                        <label>
+                                            <input type="radio" name="plan" id="40972_1_1" value="40972|1|1" checked="true"/>
+                                            <input type="hidden" name="package" value="ols_premium12month"/>
+                                            <div>
+                                                <span>[@L[cds.sales/gd/ecommerce/online-store:12]@L] [@L[cds.sales/gd/ecommerce/online-store:Months]@L]</span>
+                                                <span class="price">[@T[productprice:<current productid="40972" period="monthly" />]@T][@L[cds.sales/gd/ecommerce/online-store:PerMo]@L]</span>
+                                            ##if(productHasSavingsMoreThan(40972, 40972, 0))
+                                                <span class="save">[@L[cds.sales/gd/ecommerce/online-store:OnSale]@L]</span>
+                                            </div>
+                                            <div>
+                                                <span>&nbsp;</span>
+                                                <span>[@T[productprice:<template productid="40972" period="monthly"><strike><![CDATA[<strike>{1}[@L[cds.sales/gd/ecommerce/online-store:Month]@L]</strike>]]></strike><nostrike><![CDATA[{0}[@L[cds.sales/gd/ecommerce/online-store:Month]@L]]]></nostrike></template>]@T]</span>
+                                                <span class="save">[@T[productcompare:<percent primaryproductid="40972" secondaryproductid="40972" hidebelow="1"><html><![CDATA[[@L[cds.sales/gd/ecommerce/online-store:Save]@L] {0}%]]></html></percent>]@T]</span>
+                                            ##elseif(productHasSavingsMoreThan(40972, 40972, 0))
+                                                <span class="save">[@T[productcompare:<percent primaryproductid="40972" secondaryproductid="40972" hidebelow="1"><html><![CDATA[[@L[cds.sales/gd/ecommerce/online-store:Save]@L] {0}%]]></html></percent>]@T]</span>
+                                            ##endif
+                                            </div>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <input type="radio" name="plan" id="40974_1_1" value="40974|1|1"/>
+                                            <input type="hidden" name="package" value="ols_premium24month"/>
+                                            <div>
+                                                <span>[@L[cds.sales/gd/ecommerce/online-store:24]@L]  [@L[cds.sales/gd/ecommerce/online-store:Months]@L]</span>
+                                                <span class="price">[@T[productprice:<current productid="40974" period="monthly" />]@T][@L[cds.sales/gd/ecommerce/online-store:PerMo]@L]</span>
+                                            ##if(productHasSavingsMoreThan(40974, 40974, 0))
+                                                <span class="save">[@L[cds.sales/gd/ecommerce/online-store:OnSale]@L]</span>
+                                            </div>
+                                            <div>
+                                                <span>&nbsp;</span>
+                                                <span>[@T[productprice:<template productid="40974" period="monthly"><strike><![CDATA[<strike>{1}[@L[cds.sales/gd/ecommerce/online-store:Month]@L]</strike>]]></strike><nostrike><![CDATA[{0}[@L[cds.sales/gd/ecommerce/online-store:Month]@L]]]></nostrike></template>]@T]</span>
+                                                <span class="save">[@T[productcompare:<percent primaryproductid="40974" secondaryproductid="40974" hidebelow="1"><html><![CDATA[[@L[cds.sales/gd/ecommerce/online-store:Save]@L] {0}%]]></html></percent>]@T]</span>
+                                            ##elseif(productHasSavingsMoreThan(40974, 40974, 0))
+                                                <span class="save">[@T[productcompare:<percent primaryproductid="40974" secondaryproductid="40974" hidebelow="1"><html><![CDATA[[@L[cds.sales/gd/ecommerce/online-store:Save]@L] {0}%]]></html></percent>]@T]</span>
+                                            ##endif
+                                            </div>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <input type="radio" name="plan" id="40976_1_1" value="40976|1|1"/>
+                                            <input type="hidden" name="package" value="ols_premium36month"/>
+                                            <div>
+                                                <span>[@L[cds.sales/gd/ecommerce/online-store:36]@L] [@L[cds.sales/gd/ecommerce/online-store:Months]@L]</span>
+                                                <span class="price">[@T[productprice:<current productid="40976" period="monthly" />]@T][@L[cds.sales/gd/ecommerce/online-store:PerMo]@L]</span>
+                                            ##if(productHasSavingsMoreThan(40976,40976,0))
+                                                <span class="save">[@L[cds.sales/gd/ecommerce/online-store:OnSale]@L]</span>
+                                            </div>
+                                            <div>
+                                                <span>&nbsp;</span>
+                                                <span>[@T[productprice:<template productid="40976" period="monthly"><strike><![CDATA[<strike>{1}[@L[cds.sales/gd/ecommerce/online-store:Month]@L]</strike>]]></strike><nostrike><![CDATA[{0}[@L[cds.sales/gd/ecommerce/online-store:Month]@L]]]></nostrike></template>]@T]</span>
+                                                <span class="save">[@T[productcompare:<percent primaryproductid="40976" secondaryproductid="40976" hidebelow="1"><html><![CDATA[[@L[cds.sales/gd/ecommerce/online-store:Save]@L] {0}%]]></html></percent>]@T]</span>
+                                            ##elseif(productHasSavingsMoreThan(40976, 40976, 0))
+                                                <span class="save">[@T[productcompare:<percent primaryproductid="40976" secondaryproductid="40976" hidebelow="1"><html><![CDATA[[@L[cds.sales/gd/ecommerce/online-store:Save]@L] {0}%]]></html></percent>]@T]</span>
+                                            ##endif
+                                            </div>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <input type="radio" name="plan" id="40978_1_1" value="40978|1|1"/>
+                                             <input type="hidden" name="package" value="ols_premium48month"/>
+                                            <div>
+                                                <span>[@L[cds.sales/gd/ecommerce/online-store:48]@L] [@L[cds.sales/gd/ecommerce/online-store:Months]@L]</span>
+                                                <span class="price">[@T[productprice:<current productid="40978" period="monthly" />]@T][@L[cds.sales/gd/ecommerce/online-store:PerMo]@L]</span>
+                                            ##if(productHasSavingsMoreThan(40978,40978,0))
+                                                <span class="save">[@L[cds.sales/gd/ecommerce/online-store:OnSale]@L]</span>
+                                            </div>
+                                            <div>
+                                                <span>&nbsp;</span>
+                                                <span>[@T[productprice:<template productid="40978" period="monthly"><strike><![CDATA[<strike>{1}[@L[cds.sales/gd/ecommerce/online-store:Month]@L]</strike>]]></strike><nostrike><![CDATA[{0}[@L[cds.sales/gd/ecommerce/online-store:Month]@L]]]></nostrike></template>]@T]</span>
+                                                <span class="save">[@T[productcompare:<percent primaryproductid="40978" secondaryproductid="40978" hidebelow="1"><html><![CDATA[[@L[cds.sales/gd/ecommerce/online-store:Save]@L] {0}%]]></html></percent>]@T]</span>
+                                            ##elseif(productHasSavingsMoreThan(40978, 40978, 0))
+                                                <span class="save">[@T[productcompare:<percent primaryproductid="40978" secondaryproductid="40978" hidebelow="1"><html><![CDATA[[@L[cds.sales/gd/ecommerce/online-store:Save]@L] {0}%]]></html></percent>]@T]</span>
+                                            ##endif
+                                            </div>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                            <input type="radio" name="plan" id="40980_1_1" value="40980|1|1"/>
+                                            <input type="hidden" name="package" value="ols_premium60month"/>
+                                            <div>
+                                                <span>[@L[cds.sales/gd/ecommerce/online-store:60]@L] [@L[cds.sales/gd/ecommerce/online-store:Months]@L]</span>
+                                                <span class="price">[@T[productprice:<current productid="40980" period="monthly" />]@T][@L[cds.sales/gd/ecommerce/online-store:PerMo]@L]</span>
+                                            ##if(productHasSavingsMoreThan(40980,40980,0))
+                                                <span class="save">[@L[cds.sales/gd/ecommerce/online-store:OnSale]@L]</span>
+                                            </div>
+                                            <div>
+                                                <span>&nbsp;</span>
+                                                <span>[@T[productprice:<template productid="40980" period="monthly"><strike><![CDATA[<strike>{1}[@L[cds.sales/gd/ecommerce/online-store:Month]@L]</strike>]]></strike><nostrike><![CDATA[{0}[@L[cds.sales/gd/ecommerce/online-store:Month]@L]]]></nostrike></template>]@T]</span>
+                                                <span class="save">[@T[productcompare:<percent primaryproductid="40980" secondaryproductid="40980" hidebelow="1"><html><![CDATA[[@L[cds.sales/gd/ecommerce/online-store:Save]@L] {0}%]]></html></percent>]@T]</span>
+                                            ##elseif(productHasSavingsMoreThan(40978, 40978, 0))
+                                                <span class="save">[@T[productcompare:<percent primaryproductid="40980" secondaryproductid="40980" hidebelow="1"><html><![CDATA[[@L[cds.sales/gd/ecommerce/online-store:Save]@L] {0}%]]></html></percent>]@T]</span>
+                                            ##endif
+                                            </div>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p class="no-margin-bottom"><button id="MarqueeAddToCart" type="submit" data-form="addtocart-form" class="btn btn-warning btn-block btn-lg" data-ci="94021">[@L[cds.sales/gd/ecommerce/online-store:AddToCartButton]@L]</button></p>
+                      </div>
+                </form>
+        </div>
+        <div class="col-xs-2 main-banner-vertical-separator">
+                    <p class="vertical-line"></p>
+                    <span class="main-banner-vertical-separator-OR"> Or </span> 
+                    <p class="vertical-line"></p>
+        </div>
+        <div class="col-xs-3 manager-view-start-free-trial"> 
+            <div class="main-banner-mgr-view-start-free-trial-div">
+
+                <a id="marQueeSectionStartFreeTrialLink-mgrView" data-ci="90987" class="btn btn-primary call-to-action cta-small" href="[@T[link:<external linktype="carturl" path="/freetrial/setup.aspx">  <param name="pfid" value="40966" />  <param name="itc" value="slp_onlinestore" /></external>]@T]">[@L[cds.sales/gd/ecommerce/online-store:StartFreeTrial]@L]</a>
+                  <div class="mgr-view-label-bottom-spacer">[@L[cds.sales/gd/ecommerce/online-store:FreeTrialPricingText]@L]</div>
+            </div>
+        </div>  
+
+        <div class="mgr-view-bottom-spacer"></div>
+    </div>
+    <div class="mgr-view-bottom-spacer"></div>
+    ##else
+       <!-- ##if(areAdCreditsEnabled(onlinestorefreecredit)) -->
+        ##if(countrySiteAny(uk,ca,au,nz,sg,ph))
+          ##if(shopperStatusAny(authenticated, partiallytrusted)) 
+                <a id="marQueeSectionStartFreeTrialLink" data-ci="90987" class="btn btn-primary call-to-action cta-small" href="[@T[link:<external linktype="carturl" path="/freetrial/setup.aspx">  <param name="pfid" value="40966" />  <param name="itc" value="slp_onlinestore" /></external>]@T]">[@L[cds.sales/gd/ecommerce/online-store:StartFreeTrial]@L]</a>
+          ##else
+            ##if(splitTestingSideIsActive(1383,A))
+                <a id="marqueeLoginToStartFreeTrialLink" data-ci="90988" class="btn btn-primary call-to-action cta-small" href="[@T[link:<external linktype="carturl" path="/freetrial/setup.aspx">  <param name="pfid" value="40966" />  <param name="itc" value="slp_onlinestore" /></external>]@T]">[@L[cds.sales/gd/ecommerce/online-store:LoginToStartFreeTrial]@L]</a>
+            ##else
+                <a id="marQueeSectionStartFreeTrialLink" data-ci="90987" class="btn btn-primary call-to-action cta-small" href="[@T[link:<external linktype="carturl" path="/freetrial/setup.aspx">  <param name="pfid" value="40966" />  <param name="itc" value="slp_onlinestore" /></external>]@T]">[@L[cds.sales/gd/ecommerce/online-store:StartFreeTrial]@L]</a>
+            ##endif
+          ##endif
+          <div class="row"><div class="col-xs-3"></div><div class="col-xs-5 top-inline-disclaimer">
+            [@L[cds.sales/gd/ecommerce/online-store:FreeTrialPricingText]@L]</div></div>
+        ##else 
+          <p class="pricing">
+            [@L[cds.sales/gd/ecommerce/online-store:AsLowAsText]@L]
+          </p>
+          <form id="addtocart-form" class="addtocart-form" action="[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]" method="post" data-addtocart="[@T[link:<external linktype="SALESPRODUCTSURL" path="/v1/pl/1/cart/packages" />]@T]">
+                  <input type="hidden" name="itc" value="slp_onlinestore" />
+                  <input type="hidden" name="ci" value="90988" />
+                  <input type="hidden" name="qty" value="1" />
+                  <input type="hidden" name="package" value="ols_premium1month"/>
+            <p class="no-margin-bottom"><button id="marqueeGetStartedLink" type="submit" class="btn btn-primary call-to-action cta-small" data-ci="90988">[@L[cds.sales/gd/ecommerce/online-store:GetStarted]@L]</button></p>
+            <div class="row">
+              <div class="col-xs-3"></div>
+              <p class="col-xs-6 inline-disclaimer">[@L[cds.sales/gd/ecommerce/online-store:CurrentRenewalPrice]@L]</p>
+            </div>
+          </form>
+        ##endif 
+
+      <div class="bottom-spacer"></div>
+    ##endif
+    </div>
+  </div>
+</section>
+
+<!---------------------------------------->
+<!--------4 reasons to belive ------------>
+<!---------------------------------------->
+  <div class="container marquee-bottom-spacer">
+    <!-- floating white feature bullets -->
+    <div class="container l-main-container floating-features rounded-small">
+      <div class="row">
+        <div class="col-xs-3 feature-item">
+          <div class="feature-item-img feature-item-img-setup"></div>
+          <div class="feature-item-text">[@L[cds.sales/gd/ecommerce/online-store:ReasonToBelieve1]@L]</div>
+        </div>
+        <div class="col-xs-3 feature-item">
+          <div class="feature-item-img feature-item-img-paid"></div>
+          <div class="feature-item-text">[@L[cds.sales/gd/ecommerce/online-store:ReasonToBelieve2]@L]</div>
+        </div>
+        <div class="col-xs-3 feature-item">
+          <div class="feature-item-img feature-item-img-track"></div>
+          <div class="feature-item-text">[@L[cds.sales/gd/ecommerce/online-store:ReasonToBelieve3]@L]</div>
+        </div>
+        <div class="col-xs-3 feature-item">
+          <div class="feature-item-img feature-item-img-shipping"></div>
+          <div class="feature-item-text">[@L[cds.sales/gd/ecommerce/online-store:ReasonToBelieve4]@L]</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!------------------------------------>
+<!--        PRODUCT VIDEO           -->
+<!------------------------------------>
+<section class="main-product-video">
+  <div class="container background-container-repeat-x main-video-bg-img"></div>
+  <div class="video-section-bottom-spacer"></div>
+  <div class="container l-main-container center-text carousel-floater">
+
+    <div class="video-section-top-spacer"></div>
+    <div class="row">
+      <div class="col-xs-12 watch-video-title-top-spacer">
+        <h2><strong>[@L[cds.sales/gd/ecommerce/online-store:WatchVideoTitle]@L]</strong></h2>
+        <p>[@L[cds.sales/gd/ecommerce/online-store:WatchVideoSubTitle]@L]</p>
+      </div>
+      <div class="col-xs-2"></div>
+    </div>
+    <div class="video-section-top-spacer"></div>
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="ols-video solazy">
+          <div class="ols-video-click-wrapper" data-ci="91167">
+            <div class="embedVideo slv slv-hidden" data-slv-video-id="rMF9d8-3WBA"></div>
+            <span class="play-button"></span>
+            <p>[@L[cds.sales/gd/ecommerce/online-store:WatchVideo]@L]</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!------------------------------------>
+<!--  FEATURE CONTENT PAYMENT TYPES -->
+<!------------------------------------>
+<section class="container main-payment-types">
+
+  <div class="container l-main-container">
+
+##if(countrySiteAny(nz,sg,ph))
+    <div class="col-xs-3">
+        <div class="payments-section-top-spacer-paypal"></div>
+        <div class="payment-options-paypal-image-div"></div>
+    </div>
+    <div class="col-xs-12">
+      <h2>[@L[cds.sales/gd/ecommerce/online-store:PaymentSectionTitle]@L]</h2>
+      <div>[@L[cds.sales/gd/ecommerce/online-store:PaymentSectionContent-Paypal]@L] </div>
+    </div>
+    <div class="payments-section-bottom-spacer-paypal"></div>
+##elseif(countrySiteAny(www,uk,ca,au,ie))
+    <div class="col-xs-6">
+        <div class="payments-section-bottom-spacer"></div>
+        <div class="payment-options-image-div"></div>
+    </div>
+
+    <div class="col-xs-6 payment-section-content">
+      
+      <h2>[@L[cds.sales/gd/ecommerce/online-store:PaymentSectionTitle]@L]</h2>
+        <p>[@L[cds.sales/gd/ecommerce/online-store:PaymentSectionContent-First]@L] </p>
+        <p>[@L[cds.sales/gd/ecommerce/online-store:PaymentSectionContent-Second]@L] 
+        <span  class="green">
+        ##if(countrySiteAny(www))
+         [@L[cds.sales/gd/ecommerce/online-store:PaymentSectionContent-Second-amount-US]@L]
+        ##elseif(countrySiteAny(uk))
+         [@L[cds.sales/gd/ecommerce/online-store:PaymentSectionContent-Second-amount-UK]@L]
+        ##elseif(countrySiteAny(ca))
+         [@L[cds.sales/gd/ecommerce/online-store:PaymentSectionContent-Second-amount-ca]@L]
+        ##elseif(countrySiteAny(au))
+         [@L[cds.sales/gd/ecommerce/online-store:PaymentSectionContent-Second-amount-AU]@L]
+        ##elseif(countrySiteAny(ie))
+         [@L[cds.sales/gd/ecommerce/online-store:PaymentSectionContent-Second-amount-IE]@L]
+        ##endif
+        ##if(countrySiteAny(ie))
+            [@L[cds.sales/gd/ecommerce/online-store:PaymentSectionContent-Second-per-transaction]@L][@L[cds.sales/gd/ecommerce/online-store:PaymentSectionContent-VAT]@L].
+        ##else
+            [@L[cds.sales/gd/ecommerce/online-store:PaymentSectionContent-Second-per-transaction]@L].
+        ##endif
+
+        </span>
+        <p>[@L[cds.sales/gd/ecommerce/online-store:PaymentSectionContent-Third]@L]</p>
+        </div>
+    </div>
+    <div class="payments-section-bottom-spacer"></div>
+
+##endif
+</section>
+
+<!------------------------------------>
+<!--       CALL TO ACTION  (CTA) BAR       -->
+<!------------------------------------>
+
+<section class="main-call-to-action-bar">
+  <div class="container l-main-container center-text">
+    ##if(isManager())
+      <p class="pricing">
+        <span class="so-easy">
+          [@L[cds.sales/gd/ecommerce/online-store:EasyToSetUpText]@L]
+            <a id="CTAStartFreeTrialLink" data-ci="90990" class="btn btn-warning call-to-action cta-small" href="[@T[link:<external linktype="carturl" path="/freetrial/setup.aspx">  <param name="pfid" value="40966" />  <param name="itc" value="slp_onlinestore" /></external>]@T]">[@L[cds.sales/gd/ecommerce/online-store:StartFreeTrial]@L]</a>
+            <div class="mgr-inline-disclaimer">[@L[cds.sales/gd/ecommerce/online-store:FreeTrialPricingText]@L]</div>
+        </span>
+      </p>
+    ##else
+       ##if(countrySiteAny(uk,ca,au,nz,sg,ph))
+          <p class="pricing">
+            <span class="so-easy">
+              [@L[cds.sales/gd/ecommerce/online-store:EasyToSetUpText]@L]          
+              <!-- <span class="call-to-action-bar-spacer"></span> -->
+              ##if(shopperStatusAny(authenticated, partiallytrusted)) 
+                <a id="CTAStartFreeTrialLink" data-ci="90990" class="btn btn-warning call-to-action cta-small" href="[@T[link:<external linktype="carturl" path="/freetrial/setup.aspx">  <param name="pfid" value="40966" />  <param name="itc" value="slp_onlinestore" /></external>]@T]">[@L[cds.sales/gd/ecommerce/online-store:StartFreeTrial]@L]</a>
+                <div class="col-xs-6 inline-disclaimer non-mgr-view-left-padding">[@L[cds.sales/gd/ecommerce/online-store:FreeTrialPricingText]@L]</div>
+              ##else
+                <span class="call-to-action-bar-spacer"></span>
+                ##if(splitTestingSideIsActive(1383,A))
+                  <a id="CTALoginToStartLink" data-ci="90991" class="btn btn-warning call-to-action cta-small" href="[@T[link:<external linktype="carturl" path="/freetrial/setup.aspx">  <param name="pfid" value="40966" />  <param name="itc" value="slp_onlinestore" /></external>]@T]">[@L[cds.sales/gd/ecommerce/online-store:LoginToStartFreeTrial]@L]</a>
+                  <div class="col-xs-6 inline-disclaimer non-mgr-view-left-padding"><span>[@L[cds.sales/gd/ecommerce/online-store:FreeTrialPricingText]@L]</span></div>
+                ##else
+                  <a id="CTAStartFreeTrialLink" data-ci="90990" class="btn btn-warning call-to-action cta-small" href="[@T[link:<external linktype="carturl" path="/freetrial/setup.aspx">  <param name="pfid" value="40966" />  <param name="itc" value="slp_onlinestore" /></external>]@T]">[@L[cds.sales/gd/ecommerce/online-store:StartFreeTrial]@L]</a>
+                  <div class="col-xs-6 inline-disclaimer non-mgr-view-left-padding">[@L[cds.sales/gd/ecommerce/online-store:FreeTrialPricingText]@L]</div>
+                ##endif
+              ##endif
+               <!-- <div class="col-xs-6 inline-disclaimer non-mgr-view-left-padding">[@L[cds.sales/gd/ecommerce/online-store:FreeTrialPricingText]@L]</div> -->
+            </span>
+          </p>
+      ##else
+          <form id="addtocart-form-1" class="addtocart-form" action="[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]" method="post" data-addtocart="[@T[link:<external linktype="SALESPRODUCTSURL" path="/v1/pl/1/cart/packages" />]@T]">
+                <input type="hidden" name="itc" value="slp_onlinestore" />
+                <input type="hidden" name="ci" value="90989" />
+                <input type="hidden" name="qty" value="1" />
+                <input type="hidden" name="package" value="ols_premium1month"/>
+
+            <p class="pricing">
+                <span class="so-easy">
+                  [@L[cds.sales/gd/ecommerce/online-store:EasyToSetUpText]@L] 
+                  <span class="aslowasText">
+                    [@L[cds.sales/gd/ecommerce/online-store:AsLowAsText]@L]
+                  </span>
+                  <span class="no-margin-bottom"><button id="CTAGetStartedLink" type="submit" class="btn btn-warning call-to-action cta-small" data-ci="93899">[@L[cds.sales/gd/ecommerce/online-store:GetStarted]@L]</button>
+                  </span>
+                  <div class="row">
+                      <div class="col-xs-2"></div>
+                      <div class="col-xs-7 inline-disclaimer mgr-view-left-padding">[@L[cds.sales/gd/ecommerce/online-store:CurrentRenewalPrice]@L]</div>
+                  </div>
+              </span>
+            </p>
+          </form>
+      ##endif  
+    ##endif
+  </div>
+
+</section>
+  <!------------------------------------>
+    <!--     FEATURE CONTENT DESIGNS    -->
+    <!------------------------------------>
+<section class="solazy feature-content-design">  
+    <div class="container l-main-container center-text main-content-designs-top">
+    <div class="callout-horizontal-wrapper horizontal-wrapper-1">
+      <div class="callout-horizontal-space horizontal-space-1">
+        <div class="callout-box-wrapper callout-box-wrapper-1">
+          <div class="callout-box-pointer callout-box-pointer-1"></div>
+          <div class="callout-box callout-box-1">[@L[cds.sales/gd/ecommerce/online-store:Callout1]@L]</div>
+        </div>
+      </div>
+    </div>
+    <div class="callout-horizontal-wrapper horizontal-wrapper-2">
+      <div class="callout-horizontal-space horizontal-space-2">
+        <div class="callout-box-wrapper callout-box-wrapper-2">
+          <div class="callout-box-pointer callout-box-pointer-2"></div>
+          <div class="callout-box callout-box-2">[@L[cds.sales/gd/ecommerce/online-store:Callout2]@L]</div>
+        </div>
+      </div>
+    </div>
+    <div class="callout-horizontal-wrapper horizontal-wrapper-3">
+      <div class="callout-horizontal-space horizontal-space-3">
+        <div class="callout-box-wrapper callout-box-wrapper-3">
+          <div class="callout-box-pointer callout-box-pointer-3"></div>
+          <div class="callout-box callout-box-3">[@L[cds.sales/gd/ecommerce/online-store:Callout3]@L]</div>
+        </div>
+      </div>
+    </div>
+    </div>
+     </section>  
+    <section class="main-content-designs-bottom">
+    <div class="container l-main-container center-text">
+    <div class="col-xs-14">
+    <h2>[@L[cds.sales/gd/ecommerce/online-store:LookBestOnlineTitle]@L]</h2>
+    <p>[@L[cds.sales/gd/ecommerce/online-store:LookBestOnlineSubTitle]@L]</p>
+    </div>
+    <div class="col-xs-2"></div>
+    </div>
+</section>
+     
+ 
+<!------------------------------------>
+<!--        TOOLS CAROUSEL          -->
+<!------------------------------------>
+
+<section class="main-tools-carousel">
+
+  <div class="container l-main-container center-text">  
+   
+    <h2 class="tools-carousel-title center-text">[@L[cds.sales/gd/ecommerce/online-store:BoostSalesTitle]@L]</h2>
+    <div id="tools-slider">
+      <div class="gd-nav-container">
+        <div class="gd-swipe" data-gd-swipe={"auto":6000,"pauseOnHover":true}>
+          <div class="gd-swipe-wrap">
+            <div class="gd-swipe-item tools-slide-swipe-item solazy slide-1">
+
+              <h4 class="tools-slide-title">[@L[cds.sales/gd/ecommerce/online-store:FacebookTitle]@L]</h4>
+               <div class="toole-slider-subtitle">[@L[cds.sales/gd/ecommerce/online-store:FacebookSubTitle]@L]</div>
+              <div class="tools-slide-subtitle-bottom-spacer"></div>
+              <div class="solazy tools-slide slide-fb"></div>
+            </div>
+            <div class="gd-swipe-item tools-slide-swipe-item solazy slide-2">
+              <h4 class="tools-slide-title">[@L[cds.sales/gd/ecommerce/online-store:GoogleAnalyticTitle]@L]</h4>
+              <div class="toole-slider-subtitle">[@L[cds.sales/gd/ecommerce/online-store:GoogleAnalyticsSubTitle]@L]</div>
+              <div class="tools-slide-subtitle-bottom-spacer"></div> 
+              <div class="solazy tools-slide slide-ga"> </div>
+            </div>
+            <div class="gd-swipe-item tools-slide-swipe-item solazy slide-3">
+              <h4 class="tools-slide-title">[@L[cds.sales/gd/ecommerce/online-store:CouponCodesTitle]@L]</h4>
+              <div class="toole-slider-subtitle">[@L[cds.sales/gd/ecommerce/online-store:CouponCodesSubTitle]@L] </div>              
+              <div class="tools-slide-subtitle-bottom-spacer"></div> 
+              <div class="solazy tools-slide slide-coupon"> </div>
+            </div>
+            <div class="gd-swipe-item tools-slide-swipe-item solazy slide-4">
+              <h4 class="tools-slide-title">[@L[cds.sales/gd/ecommerce/online-store:RatingsAndReviewsTitle]@L]</h4>
+              <div class="toole-slider-subtitle">[@L[cds.sales/gd/ecommerce/online-store:RatingsAndReviewsSubTitle]@L]</div>
+              <div class="tools-slide-subtitle-bottom-spacer"></div>
+              <div class="solazy tools-slide slide-review"> </div>
+            </div>
+          </div>
+        </div>
+        <a id="ToolsSlidePreviousSlideLink" href="#" data-slide="prev" class="arrow-left" id="tools-headerPrev" data-ci="93902">
+          [@L[cds.sales/gd/ecommerce/online-store:previous]@L]</a>
+        <a id="ToolsSlideNextSlideLink" href="#" data-slide="next" class="arrow-right" id="tools-headerNext" data-ci="90903">
+            [@L[cds.sales/gd/ecommerce/online-store:next]@L]</a>
+            <div class="gd-swipe-bottom-nav"></div>
+          </div>
+    </div> <!-- end id tools-slider -->
+
+        
+  </div>
+      
+    </section>
+
+  
+
+    <!------------------------------------>
+    <!--   PLAN TIER (What's Included)  -->
+    <!------------------------------------>
+    <section class="container main-plan-tiers">
+      
+      <div class="container l-main-container center-text included-highlighted-bg">
+
+        <div class="col-xs-8 included-light-bg">
+
+          <h2>[@L[cds.sales/gd/ecommerce/online-store:WhatsIncludedTitle]@L]</h2>
+          <h3 class="included-subtitle">[@L[cds.sales/gd/ecommerce/online-store:WhatsIncludedSubTitle]@L]</h3>
+          
+          <div class="row left-text">
+                <div class="col-xs-6 whatsIncludedColumn1">
+                <ul class="checkmark-bullets">
+                  <li>
+                    <table cellspacing="0" cellpadding="0" border="0">
+                        <tr>
+                        <td valign="top" width="50px"><div class="checkmark-icon"></div></td>
+                        <td valign="top">[@L[cds.sales/gd/ecommerce/online-store:WhatsIncluded-UnlimitedProducts]@L]</td>
+                        </tr>
+                    </table></li>
+                  <li>
+                      <table cellspacing="0" cellpadding="0" border="0">
+                        <tr>
+                          <td valign="top" width="50px"><div class="checkmark-icon"></div></td>
+                          <td valign="top">[@L[cds.sales/gd/ecommerce/online-store:WhatsIncluded-ImagesPerProduct]@L]</td>
+                        </tr>
+                      </table></li>              
+                  <li>
+                      <table cellspacing="0" cellpadding="0" border="0">
+                        <tr>
+                          <td valign="top" width="50px"><div class="checkmark-icon"></div></td>
+                          <td valign="top">[@L[cds.sales/gd/ecommerce/online-store:WhatsIncluded-PaymentType]@L]</td>
+                        </tr></table>
+                  </li>              
+                  <li><table cellspacing="0" cellpadding="0" border="0"><tr><td valign="top" width="50px"><div class="checkmark-icon"></div></td>
+                          <td valign="top">[@L[cds.sales/gd/ecommerce/online-store:WhatsIncluded-CouponCodes]@L]</td></tr></table>
+                  </li>
+                  <li><table cellspacing="0" cellpadding="0" border="0"><tr><td valign="top" width="50px"><div class="checkmark-icon"></div></td>
+                            <td valign="top">[@L[cds.sales/gd/ecommerce/online-store:WhatsIncluded-RatingsAndReviews]@L]</td></tr></table>
+                  </li>
+                  <li><table cellspacing="0" cellpadding="0" border="0"><tr><td valign="top" width="50px"><div class="checkmark-icon"></div></td>
+                              <td valign="top">[@L[cds.sales/gd/ecommerce/online-store:WhatsIncluded-FaceBookStore]@L]</td></tr></table>
+                  </li>
+                </ul> 
+          </div>
+           
+           <div class="col-xs-6 whatsIncludedColumn2">
+            <ul class="checkmark-bullets">
+              <li><table cellspacing="0" cellpadding="0" border="0"><tr><td valign="top" width="50px"><div class="checkmark-icon"></div></td>
+                <td valign="top">[@L[cds.sales/gd/ecommerce/online-store:WhatsIncluded-ShippingRates]@L]</td></tr></table></li>
+                <li><table cellspacing="0" cellpadding="0" border="0"><tr><td valign="top" width="50px"><div class="checkmark-icon"></div></td>
+                  <td valign="top">[@L[cds.sales/gd/ecommerce/online-store:WhatsIncluded-SEOFeatures]@L]</td></tr></table></li>
+                  <li><table cellspacing="0" cellpadding="0" border="0"><tr><td valign="top" width="50px"><div class="checkmark-icon"></div></td>
+                    <td valign="top">[@L[cds.sales/gd/ecommerce/online-store:WhatsIncluded-Customizable]@L]</td></tr></table></li>
+                    <li><table cellspacing="0" cellpadding="0" border="0"><tr><td valign="top" width="50px"><div class="checkmark-icon"></div></td>
+                      <td valign="top">[@L[cds.sales/gd/ecommerce/online-store:WhatsIncluded-MobileFriendly]@L]</td></tr></table></li>
+                      <li><table cellspacing="0" cellpadding="0" border="0"><tr><td valign="top" width="50px"><div class="checkmark-icon"></div></td>
+                        <td valign="top">[@L[cds.sales/gd/ecommerce/online-store:WhatsIncluded-FreeHosting]@L]</td></tr></table></li>
+                        <li><table cellspacing="0" cellpadding="0" border="0"><tr><td valign="top" width="50px"><div class="checkmark-icon"></div></td>
+                          <td valign="top">[@L[cds.sales/gd/ecommerce/online-store:WhatsIncluded-SecureCheckout]@L]</td></tr></table></li>
+                        </ul>
+                      </div>        
+          </div>
+
+      </div>
+    ##if(isManager())
+    <div id="mgrViewPricingSection" class="col-xs-4">
+              <form id="addtocart-form-MgrView" class="addtocart-form mgr-view" action="[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]" method="post" data-addtocart="[@T[link:<external linktype="SALESPRODUCTSURL" path="/v1/pl/1/cart/packages" />]@T]">
+                  <input type="hidden" name="itc" value="slp_onlinestore" />
+                  <input type="hidden" name="ci" value="94022" />
+                  <input type="hidden" name="qty" value="1" />
+                  <input type="hidden" name="package" value=""/>
+                    <div class="grid-column mgr-view-section-top-spacer">
+                      <p class="mgr-view-label-bottom-spacer"> [@L[cds.sales/gd/ecommerce/online-store:ManagerViewTitle]@L] </p>
+                      <div class="select-box" data-ci="94022">
+                          <div class="select-box-head">
+                              <div class="select-box-current">
+                                  <span>[@L[cds.sales/gd/ecommerce/online-store:12]@L] [@L[cds.sales/gd/ecommerce/online-store:Months]@L]</span>
+                                  <span class="price">[@T[productprice:<current productid="40972" period="monthly" />]@T][@L[cds.sales/gd/ecommerce/online-store:PerMo]@L]</span>
+                                  ##if(productHasSavingsMoreThan(40972, 40972, 0))
+                                  <span class="save lastChild">[@L[cds.sales/gd/ecommerce/online-store:OnSale]@L]</span>
+                                  ##else
+                                  <span class="save lastChild">[@T[productcompare:<percent primaryproductid="40972" secondaryproductid="40972" hidebelow="1"><html><![CDATA[[@L[cds.sales/gd/ecommerce/online-store:Save]@L] {0}%]]></html></percent>]@T]</span>
+                                  ##endif
+                              </div>
+                              <div class="select-box-cta"><i class="ico ico-download"></i></div>
+                          </div><!-- select-box-head -->
+                          <div class="select-box-body">
+                              <ul class="select-box-options">
+                                  <li class="selected">
+                                      <label>
+                                          <input type="radio" name="plan" id="40966_1_1" value="40966|1|1">
+                                          <input type="hidden" name="package" value="ols_premium1month"/>
+                                          <div>
+                                              <span>[@L[cds.sales/gd/ecommerce/online-store:1]@L] [@L[cds.sales/gd/ecommerce/online-store:Month]@L]</span>
+                                              <span class="price">[@T[productprice:<current productid="40966" period="monthly" />]@T][@L[cds.sales/gd/ecommerce/online-store:PerMo]@L]</span>
+                                          ##if(productHasSavingsMoreThan(40966, 40966, 0))
+                                              <span class="save">[@L[cds.sales/gd/ecommerce/online-store:OnSale]@L]</span>
+                                          </div>
+                                          <div>
+                                              <span>&nbsp;</span>
+                                              <span>[@T[productprice:<template productid="40966" period="monthly"><strike><![CDATA[<strike>{1}[@L[cds.sales/gd/ecommerce/online-store:Month]@L]</strike>]]></strike></template>]@T]</span>
+                                              <span class="save">[@T[productcompare:<percent primaryproductid="79" secondaryproductid="40966" hidebelow="1"><html><![CDATA[[@L[cds.sales/gd/ecommerce/online-store:Save]@L] {0}%]]></html></percent>]@T]</span>
+                                          ##else
+                                              <span>&nbsp;</span>
+                                          ##endif
+                                          </div>
+                                      </label>
+                                  </li>
+                                  <li>
+                                      <label>
+                                          <input type="radio" name="plan" id="40972_1_1" value="40972|1|1" checked="true"/>
+                                          <input type="hidden" name="package" value="ols_premium12month"/>
+                                          <div>
+                                              <span>[@L[cds.sales/gd/ecommerce/online-store:12]@L] [@L[cds.sales/gd/ecommerce/online-store:Months]@L]</span>
+                                              <span class="price">[@T[productprice:<current productid="40972" period="monthly" />]@T][@L[cds.sales/gd/ecommerce/online-store:PerMo]@L]</span>
+                                          ##if(productHasSavingsMoreThan(40972, 40972, 0))
+                                              <span class="save">[@L[cds.sales/gd/ecommerce/online-store:OnSale]@L]</span>
+                                          </div>
+                                          <div>
+                                              <span>&nbsp;</span>
+                                              <span>[@T[productprice:<template productid="40972" period="monthly"><strike><![CDATA[<strike>{1}[@L[cds.sales/gd/ecommerce/online-store:Month]@L]</strike>]]></strike><nostrike><![CDATA[{0}[@L[cds.sales/gd/ecommerce/online-store:Month]@L]]]></nostrike></template>]@T]</span>
+                                              <span class="save">[@T[productcompare:<percent primaryproductid="40972" secondaryproductid="40972" hidebelow="1"><html><![CDATA[[@L[cds.sales/gd/ecommerce/online-store:Save]@L] {0}%]]></html></percent>]@T]</span>
+                                          ##elseif(productHasSavingsMoreThan(40972, 40972, 0))
+                                              <span class="save">[@T[productcompare:<percent primaryproductid="40972" secondaryproductid="40972" hidebelow="1"><html><![CDATA[[@L[cds.sales/gd/ecommerce/online-store:Save]@L] {0}%]]></html></percent>]@T]</span>
+                                          ##endif
+                                          </div>
+                                      </label>
+                                  </li>
+                                  <li>
+                                      <label>
+                                          <input type="radio" name="plan" id="40974_1_1" value="40974|1|1"/>
+                                          <input type="hidden" name="package" value="ols_premium24month"/>
+                                          <div>
+                                              <span>[@L[cds.sales/gd/ecommerce/online-store:24]@L]  [@L[cds.sales/gd/ecommerce/online-store:Months]@L]</span>
+                                              <span class="price">[@T[productprice:<current productid="40974" period="monthly" />]@T][@L[cds.sales/gd/ecommerce/online-store:PerMo]@L]</span>
+                                          ##if(productHasSavingsMoreThan(40974, 40974, 0))
+                                              <span class="save">[@L[cds.sales/gd/ecommerce/online-store:OnSale]@L]</span>
+                                          </div>
+                                          <div>
+                                              <span>&nbsp;</span>
+                                              <span>[@T[productprice:<template productid="40974" period="monthly"><strike><![CDATA[<strike>{1}[@L[cds.sales/gd/ecommerce/online-store:Month]@L]</strike>]]></strike><nostrike><![CDATA[{0}[@L[cds.sales/gd/ecommerce/online-store:Month]@L]]]></nostrike></template>]@T]</span>
+                                              <span class="save">[@T[productcompare:<percent primaryproductid="40974" secondaryproductid="40974" hidebelow="1"><html><![CDATA[[@L[cds.sales/gd/ecommerce/online-store:Save]@L] {0}%]]></html></percent>]@T]</span>
+                                          ##elseif(productHasSavingsMoreThan(40974, 40974, 0))
+                                              <span class="save">[@T[productcompare:<percent primaryproductid="40974" secondaryproductid="40974" hidebelow="1"><html><![CDATA[[@L[cds.sales/gd/ecommerce/online-store:Save]@L] {0}%]]></html></percent>]@T]</span>
+                                          ##endif
+                                          </div>
+                                      </label>
+                                  </li>
+                                  <li>
+                                      <label>
+                                          <input type="radio" name="plan" id="40976_1_1" value="40976|1|1"/>
+                                          <input type="hidden" name="package" value="ols_premium36month"/>
+                                          <div>
+                                              <span>[@L[cds.sales/gd/ecommerce/online-store:36]@L] [@L[cds.sales/gd/ecommerce/online-store:Months]@L]</span>
+                                              <span class="price">[@T[productprice:<current productid="40976" period="monthly" />]@T][@L[cds.sales/gd/ecommerce/online-store:PerMo]@L]</span>
+                                          ##if(productHasSavingsMoreThan(40976,40976,0))
+                                              <span class="save">[@L[cds.sales/gd/ecommerce/online-store:OnSale]@L]</span>
+                                          </div>
+                                          <div>
+                                              <span>&nbsp;</span>
+                                              <span>[@T[productprice:<template productid="40976" period="monthly"><strike><![CDATA[<strike>{1}[@L[cds.sales/gd/ecommerce/online-store:Month]@L]</strike>]]></strike><nostrike><![CDATA[{0}[@L[cds.sales/gd/ecommerce/online-store:Month]@L]]]></nostrike></template>]@T]</span>
+                                              <span class="save">[@T[productcompare:<percent primaryproductid="40976" secondaryproductid="40976" hidebelow="1"><html><![CDATA[[@L[cds.sales/gd/ecommerce/online-store:Save]@L] {0}%]]></html></percent>]@T]</span>
+                                          ##elseif(productHasSavingsMoreThan(40976, 40976, 0))
+                                              <span class="save">[@T[productcompare:<percent primaryproductid="40976" secondaryproductid="40976" hidebelow="1"><html><![CDATA[[@L[cds.sales/gd/ecommerce/online-store:Save]@L] {0}%]]></html></percent>]@T]</span>
+                                          ##endif
+                                          </div>
+                                      </label>
+                                  </li>
+                                  <li>
+                                      <label>
+                                          <input type="radio" name="plan" id="40978_1_1" value="40978|1|1"/>
+                                           <input type="hidden" name="package" value="ols_premium48month"/>
+                                          <div>
+                                              <span>[@L[cds.sales/gd/ecommerce/online-store:48]@L] [@L[cds.sales/gd/ecommerce/online-store:Months]@L]</span>
+                                              <span class="price">[@T[productprice:<current productid="40978" period="monthly" />]@T][@L[cds.sales/gd/ecommerce/online-store:PerMo]@L]</span>
+                                          ##if(productHasSavingsMoreThan(40978,40978,0))
+                                              <span class="save">[@L[cds.sales/gd/ecommerce/online-store:OnSale]@L]</span>
+                                          </div>
+                                          <div>
+                                              <span>&nbsp;</span>
+                                              <span>[@T[productprice:<template productid="40978" period="monthly"><strike><![CDATA[<strike>{1}[@L[cds.sales/gd/ecommerce/online-store:Month]@L]</strike>]]></strike><nostrike><![CDATA[{0}[@L[cds.sales/gd/ecommerce/online-store:Month]@L]]]></nostrike></template>]@T]</span>
+                                              <span class="save">[@T[productcompare:<percent primaryproductid="40978" secondaryproductid="40978" hidebelow="1"><html><![CDATA[[@L[cds.sales/gd/ecommerce/online-store:Save]@L] {0}%]]></html></percent>]@T]</span>
+                                          ##elseif(productHasSavingsMoreThan(40978, 40978, 0))
+                                              <span class="save">[@T[productcompare:<percent primaryproductid="40978" secondaryproductid="40978" hidebelow="1"><html><![CDATA[[@L[cds.sales/gd/ecommerce/online-store:Save]@L] {0}%]]></html></percent>]@T]</span>
+                                          ##endif
+                                          </div>
+                                      </label>
+                                  </li>
+                                  <li>
+                                      <label>
+                                          <input type="radio" name="plan" id="40980_1_1" value="40980|1|1"/>
+                                          <input type="hidden" name="package" value="ols_premium60month"/>
+                                          <div>
+                                              <span>[@L[cds.sales/gd/ecommerce/online-store:60]@L] [@L[cds.sales/gd/ecommerce/online-store:Months]@L]</span>
+                                              <span class="price">[@T[productprice:<current productid="40980" period="monthly" />]@T][@L[cds.sales/gd/ecommerce/online-store:PerMo]@L]</span>
+                                          ##if(productHasSavingsMoreThan(40980,40980,0))
+                                              <span class="save">[@L[cds.sales/gd/ecommerce/online-store:OnSale]@L]</span>
+                                          </div>
+                                          <div>
+                                              <span>&nbsp;</span>
+                                              <span>[@T[productprice:<template productid="40980" period="monthly"><strike><![CDATA[<strike>{1}[@L[cds.sales/gd/ecommerce/online-store:Month]@L]</strike>]]></strike><nostrike><![CDATA[{0}[@L[cds.sales/gd/ecommerce/online-store:Month]@L]]]></nostrike></template>]@T]</span>
+                                              <span class="save">[@T[productcompare:<percent primaryproductid="40980" secondaryproductid="40980" hidebelow="1"><html><![CDATA[[@L[cds.sales/gd/ecommerce/online-store:Save]@L] {0}%]]></html></percent>]@T]</span>
+                                          ##elseif(productHasSavingsMoreThan(40978, 40978, 0))
+                                              <span class="save">[@T[productcompare:<percent primaryproductid="40980" secondaryproductid="40980" hidebelow="1"><html><![CDATA[[@L[cds.sales/gd/ecommerce/online-store:Save]@L] {0}%]]></html></percent>]@T]</span>
+                                          ##endif
+                                          </div>
+                                      </label>
+                                  </li>
+                              </ul>
+                          </div><!-- select-box-body -->
+                      </div><!-- select-box -->
+                      <p class="no-margin-bottom"><button id="WhatsIncludedAddToCartBtn" type="submit" data-form="addtocart-form" class="btn btn-warning btn-block btn-lg" data-ci="94021">[@L[cds.sales/gd/ecommerce/online-store:AddToCartButton]@L]</button></p>
+                    </div>
+                  <div class="mgr-view-divider-or">
+                       <span>
+                            <hr class="hr-left"> 
+                            <span class="or">Or</span> 
+                            <hr class="hr-right">
+                        </span>
+                  </div>
+              </form>
+
+              <div class="col-xs-3 cta-mgr-view-loginbtn-spacer"> <!-- Get started / Login to Start button in mgr view -->
+                    <div class="cta-mgr-voew-free-trial-div"> <!-- Start Free Trial Div -->
+
+                    <a id="WhatsIncludedStartFreeTrial" data-ci="93906" class="btn btn-warning call-to-action cta-small" href="[@T[link:<external linktype="carturl" path="/freetrial/setup.aspx">  <param name="pfid" value="40966" />  <param name="itc" value="slp_onlinestore" /></external>]@T]">
+                    [@L[cds.sales/gd/ecommerce/online-store:StartFreeTrial]@L]</a>
+                      </div>
+                  <div class="mgr-view-free-trial-text-bottom-spacer">[@L[cds.sales/gd/ecommerce/online-store:FreeTrialPricingText]@L]</div>
+                </div>
+    </div>
+    ##else
+    <div id="non-mgrViewPricingSection" class="col-xs-4">
+         ##if(!countrySiteAny(uk,ca,au,nz,sg,ph))
+              <p class="pricing pricing-top-spacer"> 
+              [@L[cds.sales/gd/ecommerce/online-store:AsLowAsText]@L]
+              </p>
+         ##endif
+         ##if(countrySiteAny(uk,ca,au,nz,sg,ph))
+                ##if(shopperStatusAny(authenticated, partiallytrusted)) 
+                     <div class="call-to-action-top-spacer"></div> 
+                        <a id="WhatsIncludedStartFreeTrial" data-ci="93906" class="btn btn-warning call-to-action cta-small" href="[@T[link:<external linktype="carturl" path="/freetrial/setup.aspx">  <param name="pfid" value="40966" />  <param name="itc" value="slp_onlinestore" /></external>]@T]">
+                        [@L[cds.sales/gd/ecommerce/online-store:StartFreeTrial]@L]</a>
+                ##else  
+                    <div class="call-to-action-top-spacer"></div> 
+                    ##if(splitTestingSideIsActive(1383,A))
+                             <a id="WhatsIncludedLoginToStartFreeTrial" data-ci="93907" class="btn btn-warning call-to-action cta-small" href="[@T[link:<external linktype="carturl" path="/freetrial/setup.aspx">  <param name="pfid" value="40966" />  <param name="itc" value="slp_onlinestore" /></external>]@T]">
+                            [@L[cds.sales/gd/ecommerce/online-store:LoginToStartFreeTrial]@L]</a>
+                    ##else
+                            <a id="WhatsIncludedStartFreeTrial" data-ci="93906" class="btn btn-warning call-to-action cta-small" href="[@T[link:<external linktype="carturl" path="/freetrial/setup.aspx">  <param name="pfid" value="40966" />  <param name="itc" value="slp_onlinestore" /></external>]@T]">
+                            [@L[cds.sales/gd/ecommerce/online-store:StartFreeTrial]@L]</a>
+                    ##endif
+                ##endif
+                <div class="row"><div class="bottom-inline-disclaimer">
+                [@L[cds.sales/gd/ecommerce/online-store:FreeTrialPricingText]@L]</div></div>
+        ##else
+                  <form id="addtocart-form-2" class="addtocart-form" action="[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]" method="post" data-addtocart="[@T[link:<external linktype="SALESPRODUCTSURL" path="/v1/pl/1/cart/packages" />]@T]">
+                                <input type="hidden" name="itc" value="slp_onlinestore" />
+                                <input type="hidden" name="ci" value="93908" />
+                                <input type="hidden" name="qty" value="1" />
+                                <input type="hidden" name="package" value="ols_premium1month"/>
+                          <p class="no-margin-bottom"><button id="WhatsIncludedGetStarted" type="submit" class="btn btn-warning call-to-action cta-small" data-ci="93908">[@L[cds.sales/gd/ecommerce/online-store:GetStarted]@L]</button></p>
+
+                  </form>
+                  <p class="col-xs-8 inline-disclaimer paid-version-left-padding-spacer">[@L[cds.sales/gd/ecommerce/online-store:CurrentRenewalPrice]@L]</p>
+        ##endif 
+      </div>
+    ##endif  
+
+    </div> 
+</section>
+
+ <!------------------------------------>
+ <!--     CUSTOMER CAROUSEL 2014Q3   -->
+ <!------------------------------------>
+ <section class="main-customer-carousel">
+  <div class="container background-container-repeat-x main-customer-carousel-img "></div>
+  <div class="container customer-carousel-bottom-spacer"></div>
+  <div class="container l-main-container customer-carousel-floater">  
+    <div class="row center-text">
+      <div class="col-xs-12">
+        <h2 class="customer-carousel-title">[@L[cds.sales/gd/ecommerce/online-store:CarouselTitle]@L]</h2>
+        <p class="customer-carousel-subtitle">[@L[cds.sales/gd/ecommerce/online-store:CarouselSubTitle]@L]</p>
+      </div></div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div id="customer-slider">
+            <div class="gd-nav-container">
+              <div class="gd-swipe">
+                <div class="gd-swipe-wrap">
+                  <div class="gd-swipe-item customer-slide-swipe-item">
+                    <div class="solazy customer-slide slide-1"></div>
+                    <div class="col-xs-11 solazy customer-quote slide-1">[@L[cds.sales/gd/ecommerce/online-store:customerQuote1]@L]</div>
+                    <div class="col-xs-11 solazy customer-byline slide-1">[@L[cds.sales/gd/ecommerce/online-store:customerByLine1]@L]</div>
+                  </div>
+                  <div class="gd-swipe-item customer-slide-swipe-item">
+                    <div class="solazy customer-slide slide-2"></div>
+                    <div class="col-xs-11 solazy customer-quote slide-2">[@L[cds.sales/gd/ecommerce/online-store:customerQuote2]@L]</div>
+                    <div class="col-xs-11 solazy customer-byline slide-2">[@L[cds.sales/gd/ecommerce/online-store:customerByLine2]@L]</div>                    
+                  </div>
+                  <div class="gd-swipe-item customer-slide-swipe-item">
+                    <div class="solazy customer-slide slide-3"></div>
+                    <div class="col-xs-11 solazy customer-quote slide-3">[@L[cds.sales/gd/ecommerce/online-store:customerQuote3]@L]</div>
+                    <div class="col-xs-11 solazy customer-byline slide-3">[@L[cds.sales/gd/ecommerce/online-store:customerByLine3]@L]</div>
+                  </div>
+                  <div class="gd-swipe-item customer-slide-swipe-item">
+                    <div class="solazy customer-slide slide-4"></div>
+                    <div class="col-xs-11 solazy customer-quote slide-4">[@L[cds.sales/gd/ecommerce/online-store:customerQuote4]@L]</div>
+                    <div class="col-xs-11 solazy customer-byline slide-4">[@L[cds.sales/gd/ecommerce/online-store:customerByLine4]@L]</div>
+                  </div>
+                </div>
+              </div>
+              <a id="CustomerCarouselPrevLink" href="#" data-slide="prev" class="arrow-left" id="customer-headerPrev" data-ci="93904">
+              [@L[cds.sales/gd/ecommerce/online-store:previous]@L]</a>
+              <a id="CustomerCarouselNextLink" href="#" data-slide="next" class="arrow-right" id="customer-headerNext" data-ci="93905">
+              [@L[cds.sales/gd/ecommerce/online-store:next]@L]</a>
+              <div class="gd-swipe-bottom-nav"></div>
+            </div>
+          </div> 
+        </div>
+        </div>
+  </div>
+</section>
+<!------------------------------------>
+ <!--                FAQ            -->
+ <!------------------------------------>
+<section class="container main-faq">
+  <div class="container l-main-container">
+    <h2 class="center-text"> Frequently asked questions</h2>
+    <div class="faq-section-top-spacer"></div>
+    <ul class="faq-rows">
+      <li>
+        <div class="row">
+          <div class="col-xs-1 faq-icon"><a id="FaqContentLink1" href="javascript:void(0);" class="faq-content-plus"></a> </div>
+          <div class="col-xs-12  faq-title">[@L[cds.sales/gd/ecommerce/online-store:FaqTitleSlide0]@L]</div>
+        </div>
+        <div class="row faq-content">
+          <div class="col-xs-12 faq-content-text">[@L[cds.sales/gd/ecommerce/online-store:FaqTitleSlide0Text]@L]</div>
+        </div>
+      </li>
+      <li>
+        <div class="row">
+          <div class="col-xs-1 faq-icon"><a id="FaqContentLink2" href="javascript:void(0);" class="faq-content-plus"></a> </div>
+          <div class="col-xs-12  faq-title">[@L[cds.sales/gd/ecommerce/online-store:FaqTitleSlide1]@L]</div>
+        </div>
+        <div class="row faq-content">
+          <div class="col-xs-12 faq-content-text">[@L[cds.sales/gd/ecommerce/online-store:FaqTitleSlide1Text]@L]</div>
+        </div>
+      </li>
+      <li>
+        <div class="row">
+          <div class="col-xs-1 faq-icon"><a id="FaqContentLink3" href="javascript:void(0);" class="faq-content-plus"></a> </div>
+          <div class="col-xs-12  faq-title">[@L[cds.sales/gd/ecommerce/online-store:FaqTitleSlide2]@L]</div>
+        </div>
+        <div class="row faq-content">
+          <div class="col-xs-12 faq-content-text">[@L[cds.sales/gd/ecommerce/online-store:FaqTitleSlide2Text]@L]</div>
+        </div>
+      </li>
+      <li class="morefaqLinks">
+        <div class="row">
+          <div class="col-xs-1 faq-icon"><a id="FaqContentLink4" href="javascript:void(0);" class="faq-content-plus"></a> </div>
+          <div class="col-xs-12  faq-title">[@L[cds.sales/gd/ecommerce/online-store:FaqTitleSlide3]@L]</div>
+        </div>
+        <div class="row faq-content">
+          <div class="col-xs-12 faq-content-text">[@L[cds.sales/gd/ecommerce/online-store:FaqTitleSlide3Text]@L]</div>
+        </div>
+      </li>
+      <li class="morefaqLinks">
+        <div class="row">
+          <div class="col-xs-1 faq-icon"><a  id="FaqContentLink5" href="javascript:void(0);" class="faq-content-plus"></a> </div>
+          <div class="col-xs-12  faq-title">[@L[cds.sales/gd/ecommerce/online-store:FaqTitleSlide4]@L]</div>
+        </div>
+        <div class="row faq-content">
+          <div class="col-xs-12 faq-content-text">[@L[cds.sales/gd/ecommerce/online-store:FaqTitleSlide4Text]@L]</div>
+        </div>
+      </li>
+    </ul>
+   <p class="more-text">
+      <a id="moreLink" class="more" href="javascript:void(0);" data-ci="93931">[@L[cds.sales/gd/ecommerce/online-store:More]@L] <i class="chevron-down"></i></a>
+      <a id="lessLink" class="less" href="javascript:void(0);" data-ci="93932">[@L[cds.sales/gd/ecommerce/online-store:Less]@L] <i class="chevron-up"></i></a> 
+    </p>
+  </div>
+</section>  
+<!------------------------------------>
+ <!--     CUSTOMER REVIEWS  BEGIN   -->
+ <!------------------------------------>
+
+   <div class="tab-pane solazy" id="reviews" data-trigger-function="LoadBV">
+       ##if(activeLanguageAny(en))
+              <section class="tab-content-top-spacing">
+              <div class="container l-main-container">
+      
+                  <div class="row tab-content">
+                     <div class="tab-content-reviews-bg-website-builder">
+                          <h2>Check out what our customers are saying</h2>
+                        </div>
+                      <div class="col-xs-12">
+                          <div class="grid-column tab-content-column-alternate">
+                            <div id="BVRRContainer"><p class="bv-loading">Loading...</p></div>
+                          [@P[userControl:<Data location="~/Shared/Tabs/controls/BVReviewsNoJS.ascx"><Parameters><Parameter key="ProductId" value="online-store" /><Parameter key="ReviewNumber" value="4" /></Parameters></Data>]@P]
+                          </div>
+                      </div>
+                  </div>
+                 
+              </div>
+            </section>
+      ##endif
+    </div>
+
+<!------------------------------------>
+ <!--     PRODUCT DISCLAIMER  -->
+ <!------------------------------------>
+
+<section id="product-disclaimer"  class="container l-main-container section-disclaimer" >
+    <p>
+        <small class="small-print">[@L[cds.sales/gd/ecommerce/online-store:DisclaimerContentDisclaimer]@L]</small>
+    </p>
+    <p>
+      <small class="small-print">
+      <span>†, ‡, 1</span> 
+          <a class="simple-link" href="#" data-toggle="modal" data-target="#product-disclaimer-modal" data-ci="94069">[@L[cds.sales/gd/ecommerce/online-store:DisclaimerContentLinkText]@L]</a></small>
+    </p>
+  </section>
+
+  <div class="modal fade" id="product-disclaimer-modal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <p class="modal-title">
+          <h5 class="modal-title"><strong>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-1-Disclaimers]@L]</strong></h5>
+        </p>
+        </div>
+        <div class="modal-body">
+          <p>[@L[cds.sales/gd/ecommerce/online-store:DisclaimerModal0DisclaimerItems0Text]@L]</p> 
+          <p>[@L[cds.sales/gd/ecommerce/online-store:DisclaimerModal0DisclaimerItems1Text]@L]</p><!--
+          <p>[@L[cds.sales/gd/ecommerce/online-store:DisclaimerModal0DisclaimerItems2Text]@L]</p>
+          <p>[@L[cds.sales/gd/ecommerce/online-store:DisclaimerModal0DisclaimerItems3Text]@L]</p> -->
+          <p>[@L[cds.sales/gd/ecommerce/online-store:DisclaimerModal0DisclaimerItems4Text]@L]</p>
+          <p>[@L[cds.sales/gd/ecommerce/online-store:DisclaimerModal0DisclaimerItems5Text]@L]</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!------------------------------------>
+ <!--     CUSTOMER REVIEWS           -->
+ <!------------------------------------>
+ 
+
+
+  ##if(activeLanguageAny(en))
+    
+
+<div class="modal fade" id="login-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form method="POST" id="g-modal-loginAcct-form" action="[@T[link:<external parammode="explicit" linktype="SSOURL" secure="true" />]@T]/login.aspx?spkey=[@T[sso:spkey]@T]&target=[@T[link:<external linktype='siteurl' path='/hosting/online-store.aspx' secure='false' parammode='explicit'/>]@T]#reviews">
+            <input type="hidden" value="LOGIN" name="LOGIN" />
+            <input type="hidden" value="1" name="verifyShopper" />
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">[@L[cds.sales/gd/hosting/website-builder:please-login]@L]</h4>
+                </div>
+                <div class="modal-body">
+                    <input type="text" id="loginName" name="loginName" autocomplete="off" placeholder="[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Headers.UtilityBar.Username]@L]" />
+                    <input type="password" id="password" name="password" autocomplete="off" placeholder="[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Headers.UtilityBar.Password]@L]" />
+                    <a href="[@T[link:<external linktype="SSOURL" path="/account/accountRetrieval.aspx" secure="true"/>]@T]" class="forgot-pass">[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Headers.UtilityBar.ForgotPassword]@L]</a>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">[@L[cds.sales/gd/hosting/website-builder:cancel]@L]</button>
+                    <input class="btn btn-primary" type="submit" value="[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Headers.UtilityBar.SignIn]@L]"/>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+    ##endif
+{% endblock %}
+{% block footer %}
+                        <script src="[@T[link:<javascriptroot />]@T]fos/lib/gd-swipe/js/swipe-v2.1.js" type="text/javascript"></script>
+                        <script src="[@T[link:<javascriptroot />]@T]fos/lib/gd-swipe/js/gd-swipe-v2.min.js" type="text/javascript"></script>
+                        <script src="[@T[link:<javascriptroot />]@T]fos/lib/solazy/jquery.solazy.1.2.1.min.js" type="text/javascript" ></script>
+                        <script type="text/javascript" >
+                      $(document).ready(function(){
+                            cartURL = '[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]';
+                            managerCartUrl = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]';
+                            managerView=false;
+                            ##if(isManager())
+                              managerView=true;
+                            ##endif  
+                            });              
+                        </script>
+                        <script src="[@T[link:<javascriptroot />]@T]fos/sales/themes/scotty/ecommerce/online-store/js/online-store.js" type="text/javascript" ></script> 
+         
+##if(activeLanguageAny(en))
+        <script type="text/javascript">
+                var loadReviews = function(){
+                  if (typeof $BV != "undefined") {
+                    $BV.configure("global", {
+                      allowSamePageSubmission: true,
+                      userToken: "[@P[userControl:<Data location="~/Shared/BazaarVoice/SessionUserToken.ascx"></Data>]@P]",
+                      doLogin: function(successCallback, successUrl) {
+                        $('#login-modal').modal();
+                      },
+                      doScrollSubmission: function () {
+                        return false;
+                      }
+                    });
+                    $BV.ui("rr", "show_reviews", {
+                      productId: "online-store",
+                      num: 4,
+                      doShowContent: function() {
+                        $('.bv-loading').hide();
+                      }
+                    });
+                  }
+                };
+                 $('a[href="#reviews"]').on('mousedown', function (e) {
+                  e.preventDefault();
+                  (function() {
+                    if (!document.getElementById('bvapi')) {
+                      var bv = document.createElement('script');
+                      bv.type = 'text/javascript';
+                      bv.id = 'bvapi';
+                      bv.async = true;
+                      bv.src = '[@P[userControl:<Data location="~/Scripts/BVScriptUrlOnly.ascx"></Data>]@P]';
+                      bv.onload = loadReviews;
+                      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(bv);
+                    }
+                  })();
+                });
+                function LoadBV() {
+          
+                        if (!document.getElementById('bvapi')) {
+                          
+                            var bv = document.createElement('script');
+                            bv.type = 'text/javascript';
+                            bv.id = 'bvapi';
+                            bv.async = true;
+                            bv.src = '[@P[userControl:<Data location="~/Scripts/BVScriptUrlOnly.ascx"></Data>]@P]';
+                            bv.onload = loadReviews;
+                            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(bv);
+                        }
+                    }
+        
+                //<div id="reviews" data-trigger-function='{"cb":"LoadBV"}'>
+                $(document).ready(function() {
+                    $(window).bind('scroll', function() {
+                      
+                      $('[data-trigger-function]').each(function(){
+                        var $this = $(this);
+                        var data = $this.data('trigger-function') + "();";
+                        var objTop = $this.position().top;
+                        var scrollPos = $(window).scrollTop();
+                        var viewPort = $(window).height();
+
+                        if ((scrollPos + viewPort) >= objTop) {
+                         var tmpFunc = new Function(data);
+                          tmpFunc();                  
+                        }
+                      
+                      });
+                     
+                    });
+                    $('.rating-stars-init').ratingStars();
+                });   
+    </script>
+##endif
+{% endblock %}
