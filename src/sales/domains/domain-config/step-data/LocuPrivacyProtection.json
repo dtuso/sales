@@ -1,16 +1,16 @@
 {
   "Type" : "LocuPrivacyProtection",
-  "HeaderText" : "",
+  "HeaderText" : "[@L[cds.sales/domains/domain-configuration:protect.my.personal]@L]",
   "DescriptionText" : "",
-  "LowestPrice" : "",
-  "ToolTipDisplayText" : "",
-  "ToolTipHoverText" : "",
+  "LowestPrice" : "[@T[productprice:<template productid="xxx" period="yearly"><strike><![CDATA[{0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T]",
+  "ToolTipDisplayText" : "[@L[cds.sales/domains/domain-configuration:what.does.my.domain]@L]",
+  "ToolTipHoverText" : "[@L[cds.sales/domains/domain-configuration:ToolTipDisplayText]@L]",
   "Plans" : [
     {
       "Id" : "dpp_privacy_bundle",
-      "CurrentPrice" : "",
-      "ListPrice" : "",
-      "PlanTitle" : "",
+      "CurrentPrice" : "[@T[productprice:<template productid="xxx" period="yearly"><strike><![CDATA[{0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T]",
+      "ListPrice" : "[@T[productprice:<template productid="xxx" period="yearly"><strike><![CDATA[{0}]]></strike></template>]@T]",
+      "PlanTitle" : "[@L[cds.sales/domains/domain-configuration:privacy.protection]@L]",
       "PlanFeatures" : [
         "Feature 1 text",
         "Feature 2 text",
@@ -20,9 +20,9 @@
     },
     {
       "Id" : "dpp_business_bundle",
-      "CurrentPrice" : "",
-      "ListPrice" : "",
-      "PlanTitle" : "",
+      "CurrentPrice" : "[@T[productprice:<template productid="xxx" period="yearly"><strike><![CDATA[{0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T]",
+      "ListPrice" : "[@T[productprice:<template productid="xxx" period="yearly"><strike><![CDATA[{0}]]></strike></template>]@T]",
+      "PlanTitle" : "[@L[cds.sales/domains/domain-configuration:privacy.and.business.protection]@L]",
       "PlanFeatures" : [
         "Feature 1 text",
         "Feature 2 text",

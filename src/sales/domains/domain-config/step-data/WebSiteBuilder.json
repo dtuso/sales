@@ -1,44 +1,43 @@
 {
   "Type" : "WebSiteBuilder",
-  "HeaderText" : "",
-  "DescriptionText" : "",
-  "LowestPrice" : "",
+  "HeaderText" : "[@L[cds.sales/domains/domain-configuration:website.builder]@L] + [@L[cds.sales/domains/domain-configuration:hosting]@L]",
+  "DescriptionText" : "[@L[cds.sales/domains/domain-configuration:step.wsbAndHosing.wsb.desc]@L] [@L[cds.sales/domains/domain-configuration:step.wsbAndHosing.wsb.perfect]@L]",
+  "LowestPrice" : "[@T[productprice:<template productid="xxx" period="yearly"><strike><![CDATA[{0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T]",
   "ToolTipDisplayText" : "",
   "ToolTipHoverText" : "",
   "Plans" : [
     {
       "Id" : "dpp_xs_wst_economy",
-      "CurrentPrice" : "",
-      "ListPrice" : "",
-      "PlanTitle" : "",
+      "CurrentPrice" : "[@T[productprice:<template productid="xxx" period="yearly"><strike><![CDATA[{0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T]",
+      "ListPrice" : "[@T[productprice:<template productid="xxx" period="yearly"><strike><![CDATA[{0}]]></strike></template>]@T]",
+      "PlanTitle" : "[@L[cds.sales/domains/domain-configuration:personal]@L]",
       "PlanFeatures" : [
-        "Feature 1 text",
-        "Feature 2 text",
-        "Feature 3 text"
+        "[@L[cds.sales/domains/domain-configuration:personal.themes]@L]"
       ],
       "Selected" : false
     },
     {
       "Id" : "dpp_xs_wst_deluxe",
-      "CurrentPrice" : "",
-      "ListPrice" : "",
+      "CurrentPrice" : "[@T[productprice:<template productid="xxx" period="yearly"><strike><![CDATA[{0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T]",
+      "ListPrice" : "[@T[productprice:<template productid="xxx" period="yearly"><strike><![CDATA[{0}]]></strike></template>]@T]",
       "PlanTitle" : "",
       "PlanFeatures" : [
-        "Feature 1 text",
-        "Feature 2 text",
-        "Feature 3 text"
+        "[@L[cds.sales/domains/domain-configuration:business.personal.themes]@L]",
+        "[@L[cds.sales/domains/domain-configuration:business.email.adressess]@L]",
+        "[@L[cds.sales/domains/domain-configuration:mobile.site]@L]"
       ],
       "Selected" : false
     },
     {
       "Id" : "dpp_xs_wst_premium",
-      "CurrentPrice" : "",
-      "ListPrice" : "",
+      "CurrentPrice" : "[@T[productprice:<template productid="xxx" period="yearly"><strike><![CDATA[{0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T]",
+      "ListPrice" : "[@T[productprice:<template productid="xxx" period="yearly"><strike><![CDATA[{0}]]></strike></template>]@T]",
       "PlanTitle" : "",
       "PlanFeatures" : [
-        "Feature 1 text",
-        "Feature 2 text",
-        "Feature 3 text"
+        "[@L[cds.sales/domains/domain-configuration:business.personal.themes]@L]",
+        "[@L[cds.sales/domains/domain-configuration:business.plus.email.adresses]@L]",
+        "[@L[cds.sales/domains/domain-configuration:mobile.site]@L]",
+        "[@L[cds.sales/domains/domain-configuration:ssl.certificates]@L]"
       ],
       "Selected" : false
     }

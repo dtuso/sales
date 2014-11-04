@@ -1,44 +1,52 @@
 {
   "Type" : "WebHosting",
-  "HeaderText" : "",
-  "DescriptionText" : "",
-  "LowestPrice" : "",
+  "HeaderText" : "[@L[cds.sales/domains/domain-configuration:hosting]@L]",
+  "DescriptionText" : "[@L[cds.sales/domains/domain-configuration:step.wsbAndHosing.hosting.desc]@L] [@L[cds.sales/domains/domain-configuration:step.wsbAndHosing.hosting.perfect]@L]",
+  "LowestPrice" : "[@T[productprice:<template productid="xxx" period="yearly"><strike><![CDATA[{0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T]",
   "ToolTipDisplayText" : "",
   "ToolTipHoverText" : "",
   "Plans" : [
     {
       "Id" : "dpp_xs_hosting_diablo_economy_linux",
-      "CurrentPrice" : "",
-      "ListPrice" : "",
-      "PlanTitle" : "",
+      "CurrentPrice" : "[@T[productprice:<template productid="xxx" period="yearly"><strike><![CDATA[{0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T]",
+      "ListPrice" : "[@T[productprice:<template productid="xxx" period="yearly"><strike><![CDATA[{0}]]></strike></template>]@T]",
+      "PlanTitle" : "[@L[cds.sales/domains/domain-configuration:economy]@L]",
       "PlanFeatures" : [
-        "Feature 1 text",
-        "Feature 2 text",
-        "Feature 3 text"
+        "[@L[cds.sales/domains/domain-configuration:webhosting.econ.li.1]@L]",
+        "[@L[cds.sales/domains/domain-configuration:webhosting.econ.li.2]@L]",
+        "[@L[cds.sales/domains/domain-configuration:webhosting.econ.li.3]@L]",
+        "[@L[cds.sales/domains/domain-configuration:webhosting.econ.li.4]@L]",
+        "[@L[cds.sales/domains/domain-configuration:webhosting.econ.li.5]@L]"
       ],
       "Selected" : false
     },
     {
       "Id" : "dpp_xs_hosting_diablo_deluxe_linux",
-      "CurrentPrice" : "",
-      "ListPrice" : "",
-      "PlanTitle" : "",
+      "CurrentPrice" : "[@T[productprice:<template productid="xxx" period="yearly"><strike><![CDATA[{0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T]",
+      "ListPrice" : "[@T[productprice:<template productid="xxx" period="yearly"><strike><![CDATA[{0}]]></strike></template>]@T]",
+      "PlanTitle" : "[@L[cds.sales/domains/domain-configuration:deluxe]@L]",
       "PlanFeatures" : [
-        "Feature 1 text",
-        "Feature 2 text",
-        "Feature 3 text"
+        "[@L[cds.sales/domains/domain-configuration:webhosting.del.li.1]@L]",
+        "[@L[cds.sales/domains/domain-configuration:webhosting.del.li.2]@L]",
+        "[@L[cds.sales/domains/domain-configuration:webhosting.del.li.3]@L]",
+        "[@L[cds.sales/domains/domain-configuration:webhosting.del.li.4]@L]",
+        "[@L[cds.sales/domains/domain-configuration:webhosting.del.li.5]@L]"
       ],
       "Selected" : false
     },
     {
       "Id" : "dpp_xs_hosting_diablo_ultimate_linux",
-      "CurrentPrice" : "",
-      "ListPrice" : "",
-      "PlanTitle" : "",
+      "CurrentPrice" : "[@T[productprice:<template productid="xxx" period="yearly"><strike><![CDATA[{0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T]",
+      "ListPrice" : "[@T[productprice:<template productid="xxx" period="yearly"><strike><![CDATA[{0}]]></strike></template>]@T]",
+      "PlanTitle" : "[@L[cds.sales/domains/domain-configuration:ultimate]@L]",
       "PlanFeatures" : [
-        "Feature 1 text",
-        "Feature 2 text",
-        "Feature 3 text"
+        "[@L[cds.sales/domains/domain-configuration:webhosting.ult.li.1]@L]",
+        "[@L[cds.sales/domains/domain-configuration:webhosting.ult.li.2]@L]",
+        "[@L[cds.sales/domains/domain-configuration:webhosting.ult.li.3]@L]",
+        "[@L[cds.sales/domains/domain-configuration:webhosting.ult.li.4]@L]",
+        "[@L[cds.sales/domains/domain-configuration:webhosting.ult.li.5]@L]",
+        "[@L[cds.sales/domains/domain-configuration:webhosting.ult.li.6]@L]",
+        "[@L[cds.sales/domains/domain-configuration:webhosting.ult.li.7]@L]"
       ],
       "Selected" : false
     }
