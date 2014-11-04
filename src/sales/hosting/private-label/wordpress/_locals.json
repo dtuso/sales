@@ -1,13 +1,6 @@
 {
   "oursVsTheirsTable":[
     {
-      "features": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-2-FreeDomain]@L]",
-      "ccrs": true,
-      "wpEngine": false,
-      "pagely": false,
-      "dreamHost": false
-    },
-    {
       "features": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-3-VisitsPerMonth]@L]",
       "ccrs": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-2-25000]@L]",
       "wpEngine": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-2-25000]@L]",
@@ -155,7 +148,7 @@
       },
       {
         "left": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-8-MassivelyRedundantlySSDBackedFileAndDatabaseServers]@L]",
-        "right": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-13-YourWebsiteIsEnhancedWithMultipleCachingLayers]@L]"
+        "right": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-24-YourWebsiteContentDatabaseAndAdminLoadBlazing]@L]"
       },
       {
         "left": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-3-MultipleCachingLayers]@L]",

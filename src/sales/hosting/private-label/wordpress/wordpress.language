@@ -138,8 +138,6 @@ Pagely&reg; Personal
 DreamHost&reg; DreamPress
 <phrase key="WordPressPrivateLabel-1-Features" />
 Features
-<phrase key="WordPressPrivateLabel-2-FreeDomain" />
-Free domain
 <phrase key="WordPressPrivateLabel-3-VisitsPerMonth" />
 Visits per month
 <phrase key="WordPressPrivateLabel-2-25000" />
@@ -215,7 +213,7 @@ We distribute web requests across multiple servers so the same amount of work ge
 <phrase key="WordPressPrivateLabel-8-MassivelyRedundantlySSDBackedFileAndDatabaseServers" />
 Massively redundantly SSD-backed file and database servers
 <phrase key="WordPressPrivateLabel-24-YourWebsiteContentDatabaseAndAdminLoadBlazing" />
-Your website content, database and admin load blazing fast with high performace disk servers. Get superior I/O rates and disk access times.
+Your website, databases and applications load blazing fast with high performance disk servers. Get superior I/O rates and disk access times.
 <phrase key="WordPressPrivateLabel-3-MultipleCachingLayers" />
 Multiple caching layers
 <phrase key="WordPressPrivateLabel-13-YourWebsiteIsEnhancedWithMultipleCachingLayers" />
@@ -274,8 +272,6 @@ One-click migrations
 Easily move your existing WordPress site with our 1-click migration tool.
 <phrase key="WordPressPrivateLabel-3-AllPlansInclude" />
 All Plans Include
-<phrase key="WordPressPrivateLabel-7-FreeDomainWithAnnualPlanRestrictionsApply" />
-  <li>Free domain with annual plan - <span class="g-toolTip restrictions-link">Restrictions apply<span class="gtip-wide">One FREE .COM, .CO, .NET or .ORG with purchase of a new 12-, 24-, 36- or 60-month plan. Plus ICANN fee of USD $0.18 per domain name per year. You must add the domain name into your cart before purchase, and you must select a domain term length equal to or less than the term length of your plan to qualify for the free domain offer. If you purchase a domain name for a term longer than the term of the plan, you will be charged for the additional registration term at the then-current rate. Cannot be used in conjunction with any other offer, sale, discount or promotion. Free domain offer applies only to the initial purchase term. After the initial purchase term, domains purchased through this offer will renew at the then-current renewal price.</span></span></li>
 <phrase key="WordPressPrivateLabel-5-1000sOfThemesAndPlugins" />
 1000s of themes and plugins
 <phrase key="WordPressPrivateLabel-4-OneClickMigrationTool" />
@@ -298,8 +294,6 @@ Localized in 37 countries and 17 languages
 Award-winning 24/7 support
 <phrase key="WordPressPrivateLabel-4-999UptimeGuarantee" />
 99.9% uptime guarantee
-<phrase key="WordPressPrivateLabel-7-100GoogleAdWordsCreditRestrictionsApply" />
-<li>USD $100 Google<sup>&reg;</sup> AdWords Credit- <span class="g-toolTip restrictions-link">Restrictions apply<span>One promotional credit per customer for a new Google AdWords account. Products purchased using a Gift Card or Alipay do not provide eligibility for advertising credits. Minimum spend USD $25. Offer valid to US & Canada residents only, excluding government controlled entities and parties. Other restrictions apply.<a href="javascript:void(window.open('[@T[link:<external linktype="tes.GDOFFER_URL"  path='/popups/google-adwords.aspx'><param name='ci' value='94286' /><param name='app_hdr' value='99' /></external>]@T]','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=550,height=675'))">View Details</a></span></span></li>
 <phrase key="WordPressPrivateLabel-7-50FacebookAdCreditRestrictionsApply" />
 <li>USD $50 Facebook<sup>&reg;</sup> Ad Credit- <span class="g-toolTip restrictions-link">Restrictions apply<span>One promotional credit per customer for a new Facebook® Advertiser account. Products purchased using a Gift Card or Alipay do not provide eligibility for advertising credits. Offer valid only for purchase of advertising in the US, Canada, UK, and Australia. Other restrictions apply.<a href="javascript:void(window.open('[@T[link:<external linktype="tes.GDOFFER_URL"  path='/popups/facebook-ads.aspx'><param name='ci' value='94287' /><param name='app_hdr' value='99' /></external>]@T]','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=550,height=675'))">View Details</a></span></span></li>
 <phrase key="WordPressPrivateLabel-7-10FotoliaPhotoCreditsRestrictionsApply" />
@@ -321,9 +315,7 @@ Optimized for WordPress with expert tweaks you won't find anywhere else.
 <phrase key="WordPressPrivateLabel-10-DesignedToHandleHugeTrafficSpikesWithAutomatic" />
 Designed to handle huge traffic spikes with automatic scalability.
 <phrase key="WordPressPrivateLabel-11-Guaranteed999UptimeAndAwardWinning24" />
-Guaranteed 99.9% uptime and award-winning 24/7 security.
-<phrase key="WordPressPrivateLabel-8-SeeHowWeDeliverIndustryLeadingPerformance" />
-See how we deliver industry-leading performance.
+Guaranteed 99.9% uptime and support.
 <phrase key="WordPressPrivateLabel-4-WeMadeItSimple" />
 We made it simple
 <phrase key="WordPressPrivateLabel-11-SpinUpANewSiteInLessThan" />
