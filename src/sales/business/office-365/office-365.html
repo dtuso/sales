@@ -326,7 +326,7 @@ assetPath: false
     #banner-section { padding: 40px 0 10px; position: relative; background-image: url("[@T[link:<imageroot />]@T]fos/sales/themes/scotty/business/office-365/img/GCE-24333-O365-LP-R4_Office-background.jpg"); background-repeat: no-repeat;background-size: cover;}
     #banner-section h1.main-banner-title{ text-transform: uppercase; text-align: left; font-size: 24px; margin-bottom: 28px; color:#000; }
     #banner-section h1 > sup {font-size: 50%!important; /* override global */ top:-1.1em; /* override global */}
-    #banner-section h2.main-banner-subtitle{ text-align: left; margin: 28px 0 25px; font-size: 48px; color:#000; }          
+    #banner-section h2.main-banner-subtitle{ text-align: left; margin: 15px 0 25px; font-size: 48px; color:#000; }          
     #banner-section .watch-video-container {margin:295px auto 0;width:150px;text-align: center;}    
     #banner-section .office-365-banner-video-link {font-size:24px;color:#fff;}
     #banner-section .office-365-banner-video-link:hover {color: #333;cursor: pointer;display: inline-block;}    
@@ -339,6 +339,14 @@ assetPath: false
       margin:0px;
       vertical-align: middle;
       width: 60px;
+    }
+
+    #banner-section .exclusive-discount {
+      text-align: left;
+      font-weight: 600;
+      font-size: 24px;
+      font-style: italic;
+      margin: 15px 0;
     }
 
     /* Plan Boxes */
@@ -910,6 +918,13 @@ assetPath: false
           <div>
             <img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/business/office-365/img/GCE-24333-O365-LP-R4_Office-MSFT-icons.png" />
           </div> 
+
+          <div class="exclusive-discount">
+            ##if(productHasSavingsMoreThan({{pfids.C}}, {{pfids.C}}, 0))
+              [@L[cds.sales/business/office-365:31272-exclusive_discount]@L]
+            ##endif
+          </div>
+
           ##if(productHasSavingsMoreThan({{pfids.C}}, {{pfids.C}}, 0))
             <h2 class="main-banner-subtitle price-hide" data-tokenize="[@T[productcompare:<percent primaryproductid="{{pfids.C}}" secondaryproductid="{{pfids.C}}" ><html><![CDATA[{0}%]]></html></percent>]@T]">[@L[cds.sales/business/office-365:29621-main-subtitle]@L]</h2>  
           ##else
