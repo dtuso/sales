@@ -1,8 +1,8 @@
 ---
 location: localization/sales/offers/online-business/en
-id: 54494951f778fc21c812d416
-name: GCE-30746
-comments: GOT1 and GOT2 followups
+id: 545a99def778fc0fb8419af3
+name: GCE-31516
+comments: Update GOT Legal Disclaimer (MSFT request)
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="page-title" />
@@ -123,3 +123,5 @@ Restrictions Apply.
 One promotional credit per customer for a new Microsoft&reg; Advertiser account. Products purchased using a Gift Card or Alipay do not provide eligibility for advertising credits. Offer valid to US residents only, other restrictions apply.
 <phrase key="30495-bing-restrictions-apply-view-details" />
 View Details
+<phrase key="31516-disclaimer-modal-content" comment="{0} will get replaces with a currency amount."/>
+Special offer pricing valid for first year only. Offer includes one .COM, .CO, <span class="tlds-uk">.CO.UK, .UK,</span> .NET, <span class="tlds-in">.IN,</span> <span class="tlds-br">.COM.BR,</span> or .ORG domain, plus Website Builder Personal Plan and Email Starter Package. The "Get Online Today" offer only provides 1 mailbox at the introductory rate. Additional mailboxes for email can purchased at regular prevailing price per mailbox. Plus ICANN fee of [@T[currencyprice:<price usdamount="0018" /> ]@T]/year. Cannot be used in conjunction with any other offer, sale, discount or promotion. After initial one year purchase term, products purchased through this offer will automatically renew individually at the then-current rate. Bundle renewal price with .com after first year is <span class="original-price">{0}</span>/mo. You may cancel automatic renewal at any time in your GoDaddy account. Geographic restrictions apply.
