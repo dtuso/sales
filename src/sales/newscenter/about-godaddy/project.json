@@ -1,1 +1,18 @@
-{}
+{
+    "about-godaddy.html": {
+        "cdsDetails": {
+            "champion": {
+                "name": "Colyn Brown",
+                "email": "clbrown@godaddy.com"
+            }
+        }
+    },
+    "about-godaddy.language": {
+        "cdsDetails": {
+            "champion": {
+                "name": "Colyn Brown",
+                "email": "clbrown@godaddy.com"
+            }
+        }
+    }
+}
