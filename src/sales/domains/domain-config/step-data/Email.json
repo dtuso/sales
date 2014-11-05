@@ -1,44 +1,44 @@
 {
   "Type" : "Email",
-  "HeaderText" : "",
-  "DescriptionText" : "",
-  "LowestPrice" : "",
+  "HeaderText" : "[@L[cds.sales/domains/domain-configuration:add.email.to.your.domain]@L]",
+  "DescriptionText" : "[@L[cds.sales/domains/domain-configuration:get.reliable.mobile.ready.email]@L]",
+  "LowestPrice" : "[@T[productprice:<template productid="xxx" period="yearly"><strike><![CDATA[{0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T]",
   "ToolTipDisplayText" : "",
   "ToolTipHoverText" : "",
   "Plans" : [
     {
       "Id" : "dpp_xs_email_deluxe",
-      "CurrentPrice" : "",
-      "ListPrice" : "",
-      "PlanTitle" : "",
+      "CurrentPrice" : "[@T[productprice:<template productid="xxx" period="yearly"><strike><![CDATA[{0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T]",
+      "ListPrice" : "[@T[productprice:<template productid="xxx" period="yearly"><strike><![CDATA[{0}]]></strike></template>]@T]",
+      "PlanTitle" : "[@L[cds.sales/domains/domain-configuration:business.email]@L]",
       "PlanFeatures" : [
-        "Feature 1 text",
-        "Feature 2 text",
-        "Feature 3 text"
+        "[@L[cds.sales/domains/domain-configuration:five.addresses]@L]",
+        "[@L[cds.sales/domains/domain-configuration:two.gb.storage]@L]",
+        "[@L[cds.sales/domains/domain-configuration:group.calendar]@L]",
+        "[@L[cds.sales/domains/domain-configuration:cloud.storage]@L]"
       ],
       "Selected" : false
     },
     {
       "Id" : "dpp_xs_email_unlimited",
-      "CurrentPrice" : "",
-      "ListPrice" : "",
-      "PlanTitle" : "",
+      "CurrentPrice" : "[@T[productprice:<template productid="xxx" period="yearly"><strike><![CDATA[{0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T]",
+      "ListPrice" : "[@T[productprice:<template productid="xxx" period="yearly"><strike><![CDATA[{0}]]></strike></template>]@T]",
+      "PlanTitle" : "[@L[cds.sales/domains/domain-configuration:unlimited.business.email]@L]",
       "PlanFeatures" : [
-        "Feature 1 text",
-        "Feature 2 text",
-        "Feature 3 text"
+        "[@L[cds.sales/domains/domain-configuration:ten.addresses]@L]",
+        "[@L[cds.sales/domains/domain-configuration:unlimited.storage]@L]",
+        "[@L[cds.sales/domains/domain-configuration:group.calendar]@L]",
+        "[@L[cds.sales/domains/domain-configuration:cloud.storage]@L]"
       ],
       "Selected" : false
     },
     {
       "Id" : "dpp_xs_email_suite",
-      "CurrentPrice" : "",
-      "ListPrice" : "",
-      "PlanTitle" : "",
+      "CurrentPrice" : "[@T[productprice:<template productid="xxx" period="yearly"><strike><![CDATA[{0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T]",
+      "ListPrice" : "[@T[productprice:<template productid="xxx" period="yearly"><strike><![CDATA[{0}]]></strike></template>]@T]",
+      "PlanTitle" : "[@L[cds.sales/domains/domain-configuration:unlimited.email]@L]",
       "PlanFeatures" : [
-        "Feature 1 text",
-        "Feature 2 text",
-        "Feature 3 text"
+        "[@L[cds.sales/domains/domain-configuration:includes.everything.you.need.to.say]@L]"
       ],
       "Selected" : false
     }

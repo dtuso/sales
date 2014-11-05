@@ -2,14 +2,14 @@
   "Type" : "BusinessAndCertified",
   "HeaderText" : "",
   "DescriptionText" : "",
-  "LowestPrice" : "",
+  "LowestPrice" : "[@T[productprice:<template productid="xxx" period="yearly"><strike><![CDATA[{0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T]",
   "ToolTipDisplayText" : "",
   "ToolTipHoverText" : "",
   "Plans" : [
     {
       "Id" : "dpp_business_only_bundle",
-      "CurrentPrice" : "",
-      "ListPrice" : "",
+      "CurrentPrice" : "[@T[productprice:<template productid="xxx" period="yearly"><strike><![CDATA[{0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T]",
+      "ListPrice" : "[@T[productprice:<template productid="xxx" period="yearly"><strike><![CDATA[{0}]]></strike></template>]@T]",
       "PlanTitle" : "",
       "PlanFeatures" : [
         "Feature 1 text",

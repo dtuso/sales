@@ -1,0 +1,20 @@
+---
+location: sales/homepage/marquee/fos23002-abndcart/default_template
+id: false
+name: GCE-30535
+ctaLink: "[@T[link:<external linktype='carturl' path='/basket.aspx'><param name='ci' value='93634' /></external>]@T]"
+elementId: fos23002-abndcart
+---
+extends ../../../layouts/homepage/marqueeLeftHeadline
+block marqueeLeftHeadlineStyles
+	style.
+		#fos23002-abndcart {width:100%;min-width:1000px;height:400px;cursor:pointer;color: #fff;background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/hosting-paid-for-it.png) no-repeat top center;}
+		#fos23002-abndcart .left-column {padding-top:60px}
+		#fos23002-abndcart .left-column .headline {line-height:0.85;}
+		#fos23002-abndcart .left-column .headline .bigtext-line2 {line-height:0.75;}
+		#fos23002-abndcart .right-column {padding-top:70px;}
+block leftColumn
+	.headline [@L[cds.sales/homepage/marquee/fos23002-abndcart:headline]@L]
+block rightColumn
+	.headline [@L[cds.sales/homepage/marquee/fos23002-abndcart:sub-headline]@L]
+	a.btn.btn-warning.btn-lg.btn-cta(href!=ctaLink) [@L[cds.sales/homepage/marquee/fos23002-abndcart:cta-text]@L]

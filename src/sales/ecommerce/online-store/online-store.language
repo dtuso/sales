@@ -1,0 +1,238 @@
+---
+location: localization/sales/gd/ecommerce/online-store/en
+id:   
+
+name: GCE-20285
+---
+{% include 'modules/doc-block.html' %}
+<phrase key="MetaTitle" />
+Online Store | Start Your eCommerce Business Today - GoDaddy
+<phrase key="MetaDescription" />
+Creating an online business with GoDaddy Online Store is simple, fast and affordable. Build your own eCommerce website and start selling online today!
+<phrase key="MetaKeywords" />
+Online Store, ecommerce store, Online Store builder, online shop, build a store, build a store online
+<phrase key="og-description" />
+Creating an online business with GoDaddy Online Store is simple, fast and affordable. Start your own eCommerce website and start selling online today!
+<phrase key="OnlineStore" />
+Online Store
+<phrase key="labelReadReviews" />
+Read Reviews
+<phrase key="MainBannerSubTitle1" />
+Create. Manage. Sell.
+<phrase key="MainBannerSubTitle2" />
+We make it all easy.
+<phrase key="WatchVideo" />
+Watch Video
+<phrase key="StartFreeTrial" />
+Start Free Trial
+<phrase key="StartFreeTrialDisclaimer"/>
+At the end of the free trial, you’ll be automatically billed [@T[productprice:<current productid="40966" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo. You may cancel anytime during the free trial and you won’t be charged.
+<phrase key="LoginToStartFreeTrial" />
+Log In To Start Free Trial
+<phrase key="FreeTrialPricingText" comment="{0} will be replaced with the monetary amount" />
+Just [@T[productprice:<current productid="40966" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo after. Cancel anytime during free trial.
+<phrase key="CurrentRenewalPrice"/>
+
+<phrase key="AsLowAsText"/>
+Only <span class="normal-price">[@T[productprice:<current productid="40966" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</span>
+<phrase key="GetStarted"/>
+Get Started
+<phrase key="savePercentage" comment="{0} will be replaced with the percentage off"/>
+Save {1}%
+<phrase key="next" comment="Action to change carousel to next slide" />
+next
+<phrase key="previous" comment="Action to change carousel to previous slide" />
+previous
+<phrase key="ReasonToBelieve1"/>
+Perfectly simple setup and design
+<phrase key="ReasonToBelieve2"/>
+Built-in payment processing
+<phrase key="ReasonToBelieve3"/>
+Professionally designed themes
+<phrase key="ReasonToBelieve4"/>
+Award-winning 24/7 support
+<phrase key="CarouselTitle"/>
+Real customers. Real sites
+<phrase key="CarouselSubTitle"/>
+Our customers love Online Store.
+<phrase key="WatchVideoTitle"/>
+Choose a design. Add your products. Start selling.
+<phrase key="WatchVideoSubTitle"/>
+Online Store includes everything you need for a complete eCommerce website. See how easy it is.
+<phrase key="PaymentSectionTitle"/>
+Payments from start to finish.
+<phrase key="PaymentSectionContent-First"/>
+With built-in payment processing through Stripe, you can accept all major credit cards and the funds are automatically transferred to your bank account – you don’t have to do a thing.
+<phrase key="PaymentSectionContent-Second" comment="Better yet, there are no monthly fees, refund costs or hidden fees, so you keep more of what you earn. The only time you pay a thing is when you make a sale, and then it’s only {0} per transaction."/>
+Better yet, there are no monthly fees, refund costs or hidden fees, so you keep more of what you earn. The only time you pay a thing is when you make a sale, and then it’s only
+<phrase key="PaymentSectionContent-Second-amount-US"/>
+2.9% + $0.30 
+<phrase key="PaymentSectionContent-Second-amount-UK"/>
+2.4% + 20p
+<phrase key="PaymentSectionContent-Second-amount-CA"/>
+2.9% + 30¢
+<phrase key="PaymentSectionContent-Second-amount-AU"/>
+2.9% + 30¢
+<phrase key="PaymentSectionContent-Second-amount-IE"/>
+2.4% + 24c 
+<phrase key="PaymentSectionContent-Second-per-transaction"/>
+per transaction
+<phrase key="PaymentSectionContent-VAT"/>
+ + VAT
+<phrase key="PaymentSectionContent-Third"/>
+And of course, you can accept PayPal. Our automatic integration lets you quickly tap into millions of PayPal shoppers.
+<phrase key="PaymentSectionContent-Paypal"/>
+With automatic integration with PayPal, your customers can use all major credit cards and you can transfer funds to your bank account with just a few clicks. There are no monthly fees, so you keep more of what you earn. In fact, the only time you pay a thing is when you make a sale, and then it’s only a small fee.
+<phrase key="GetStartedLink"/>
+Get Started
+<phrase key="EasyToSetUpText"/>
+So easy to set up, <span style="font-weight:bold">you can make money today.</span>
+<phrase key="BoostSalesTitle"/>
+Boost sales with powerful marketing tools.
+<phrase key="FacebookTitle"/>
+Sell your products on Facebook instantly.
+<phrase key="FacebookSubTitle"/>
+Create a store in less than a minute and keep it synced to your main store automatically.	
+<phrase key="GoogleAnalyticTitle"/>
+Learn and grow with Google Analytics.
+<phrase key="GoogleAnalyticsSubTitle"/>
+Get the data you need to understand your customers and improve your business.
+<phrase key="CouponCodesTitle"/>
+Attract more customers with coupon codes.
+<phrase key="CouponCodesSubTitle"/>
+Everyone loves a deal. Create your own coupon codes and turn casual prospects into loyal customers.
+<phrase key="RatingsAndReviewsTitle"/>
+Encourage sales with ratings and reviews.
+<phrase key="RatingsAndReviewsSubTitle"/>
+Shoppers love to hear from actual product owners. Give them what they want with user-submitted ratings and reviews.
+<phrase key="LookBestOnlineTitle"/>
+Designed to help you look your best online.
+<phrase key="LookBestOnlineSubTitle"/>
+All of our professionally designed layouts are customizable, so it’s easy to create a web store that’s as unique as your products. Plus, every store is optimized for mobile devices, so customers can easily find what they’re looking for, whether they’re on their computer, tablet or smartphone.
+<phrase key="WhatsIncludedTitle"/>
+What's Included?
+<phrase key="WhatsIncludedSubTitle"/>
+EVERYTHING YOU NEED TO START SELLING ONLINE.
+<phrase key="WhatsIncluded-UnlimitedProducts"/>
+Unlimited products
+<phrase key="WhatsIncluded-ImagesPerProduct"/>
+Up to 10 images per product
+<phrase key="WhatsIncluded-PaymentType"/>
+Accept credit cards & PayPal
+<phrase key="WhatsIncluded-CouponCodes"/>
+Create coupon codes
+<phrase key="WhatsIncluded-RatingsAndReviews"/>
+Customer ratings & reviews
+<phrase key="WhatsIncluded-FaceBookStore"/>
+Facebook store
+<phrase key="WhatsIncluded-ShippingRates"/>
+Flexible shipping rates
+<phrase key="WhatsIncluded-SEOFeatures"/>
+Built-in SEO features
+<phrase key="WhatsIncluded-Customizable"/>
+Customizable website pages
+<phrase key="WhatsIncluded-MobileFriendly"/>
+Mobile-friendly web store
+<phrase key="WhatsIncluded-FreeHosting"/>
+Free hosting with unlimited bandwidth
+<phrase key="WhatsIncluded-SecureCheckout"/>
+Secure checkout
+<phrase key="Reviews-title"/>
+Check out what our customers are saying.
+<phrase key="Callout1"/>
+Beautiful storefronts to promote your products.
+<phrase key="Callout2"/>
+A simple and seamless customer checkout experience.
+<phrase key="Callout3"/>
+Mobile-optimized sites for tablets and smartphones.
+<phrase key="customerQuote1"/>
+"We graduated from Etsy to GoDaddy Online Store and our sales have soared. We researched all our options for months and landed here. Not only is it cost effective and simple, but the customer service has been quick and personable. We have a beautiful website that is consistent with our brand. I love it!"
+<phrase key="customerByLine1"/>
+— Candis Jones, <a target="blank" href="http://www.thejonesmarket.com">The Jones Market</a>
+<phrase key="customerQuote2"/>
+"Now that I've launched my own product line, I need a simple yet effective solution for a web store so that I can reach customers and fans everywhere. I would recommend GoDaddy Online Store to anyone looking to sell products or feature their business online."
+<phrase key="customerByLine2"/>
+— Billy Lowe, <a target="blank" href="http://www.glossandtoss.net">Gloss & Toss</a>
+<phrase key="customerQuote3"/>
+"GoDaddy Online Store is a perfect fit for my company. Great looking, clean and easy to use – just like our bibs!"
+<phrase key="customerByLine3"/>
+— Katie Lewis, <a target="blank" href="http://www.snap-bibs.com">Snap Bibs</a>
+<phrase key="customerQuote4"/>
+"I immediately fell in love with GoDaddy Online Store. The process is so easy. Getting started, tracking products and orders, setting up payments, integrating social features – it’s everything a store owner needs built into one!"
+<phrase key="customerByLine4"/>
+— Carolyn Pofok, <a target="blank" href="http://www.theprincessexpress.com">The Princess Express</a>
+<phrase key="FaqTitleSlide0" />
+How do I get started building my <strong>Online Store</strong>?
+<phrase key="FaqTitleSlide0Text" />
+Choose the theme and colors that best support your brand and give your customers a consistent experience when interacting with your company. Our <strong>eCommerce website builder</strong> allows you to customize the look and feel of your Online Store. Learn how to <a target="blank" href="https://support.godaddy.com/help/article/12054/choosing-and-customizing-online-store-themes">Choose and Customize Online Store Themes.</a>
+<phrase key="FaqTitleSlide1" />
+How do I add products to my <strong>Online Store</strong>?
+<phrase key="FaqTitleSlide1Text" />
+Our <strong>eCommerce solution </strong> allows you to add all of your products, regardless of the various colors, sizes, or styles you offer. Just use our <strong> eCommerce website builder </strong> to add and organize all of your products. You can even track your inventory by price and SKU. See <a target="blank" href="https://support.godaddy.com/help/article/12072/creating-online-store-product-options">Creating Online Store Product Options for more information.</a>
+<phrase key="FaqTitleSlide2" />
+Is it possible to offer customized products, such as monogramming, through the <strong>Online Store</strong>?
+<phrase key="FaqTitleSlide2Text" />
+Yes. Our <strong>eCommerce solutions </strong> make <strong>online selling</strong> easy, even if you provide a higher level of service to your customers through monogramming or engraving. Just specify which products offer custom messages and set up that ability for your customers to input what they want to say. Learn how to <a target="blank" href="https://support.godaddy.com/help/article/12097/adding-custom-message-option-to-a-product">Add Custom Message Option to a Product.</a>
+<phrase key="FaqTitleSlide3" />
+What if I know the technical aspects of website design? Is <strong> Online Store </strong>for me?
+<phrase key="FaqTitleSlide3Text" />
+ Our <strong>Online Store</strong> builder is perfect for everyone who wants to <strong>sell online</strong> through an <strong>eCommerce site</strong>, whether you prefer a plug-and-play option or want to add your own code. When you build your Online Store, you’ll add your logo to make it yours, plus you can add custom code, if you’d like.<br/><br/>Our eCommerce software also integrates with Google Analytics, so if you or your SEO / website administrator is tracking your sales through visits to your site, you can do all of that with Online Store. See how easy it is to <a target=blank href="https://support.godaddy.com/help/article/9046/choosing-your-online-store-site-settings"> Choose Your Online Store Settings.</a>
+<phrase key="FaqTitleSlide4" />
+ Which payment methods does Online Store accept?
+<phrase key="FaqTitleSlide4Text" />
+When you create your Online Store using our eCommerce platform, accepting payments is already integrated. You can take payments via PayPal Express or Stripe, putting money into your account quickly and seamlessly. <a href="https://support.godaddy.com/help/article/9049/managing-payment-methods-in-online-store" target="blank"> Managing Payment Methods in Online Store </a>is as easy as pushing a button.
+<phrase key="More"/>
+More
+<phrase key="Less"/>
+Less
+<phrase key="ManagerViewTitle" />
+Current pricing and term options
+<phrase key="ManagerViewAddToCart" />
+Add to Cart
+<phrase key="ManagerViewDivider-Or" />
+Or
+<phrase key="PerMonth" />
+/month
+<phrase key="PerMo" />
+/mo
+<phrase key="Save" />
+SAVE
+<phrase key="Months" />
+months
+<phrase key="Month" />
+month
+<phrase key="1" />
+1
+<phrase key="12" />
+12
+<phrase key="24" />
+24
+<phrase key="36" />
+36
+<phrase key="48" />
+48
+<phrase key="60" />
+60
+<phrase key="OnSale" />
+ON SALE
+<phrase key="AddToCartButton" />
+Add to Cart
+<phrase key="DisclaimerContentLinkText" />
+Click here for product disclaimers and legal policies.
+<phrase key="DisclaimerContentDisclaimer" />
+Third-party logos and marks are registered trademarks of their respective owners. All rights reserved.
+<phrase key="DisclaimerContent" comment="NOTE: If you would like to accept credit cards with a merchant account, you'll need to secure your site with an {0} where {0} will be replaced by anchor tag for text DisclaimerToolTipText"/>
+NOTE: If you would like to accept credit cards with a merchant account, you'll need to secure your site with an 
+<phrase key="DisclaimerToolTipText"/>
+SSL Certificate
+<phrase key="DisclaimerToolTipHoverContent"/>
+<p class='disclaimer-p'>In order to accept credit cards, you must have an SSL certificate enabled. A GoDaddy SSL Certificate:</p>
+<ul class='discalimer-ul'><li>Encrypts the data transferred to and from your site.</li><li>Secures credit card numbers and other sensitive information.</li><li>Assures your customers can safely order from your site.</li><li>Supports industry-standard 128-bit and high-grade 256-bit encryption.</li></ul>
+<phrase key="DisclaimerModal0DisclaimerItems0Text" />
+<sup class=\"supSymbol\">&dagger;</sup> See the <a href="http://www.godaddy.com/agreements/showdoc.aspx?ci=78457&pageid=HOSTING_SA">Web Hosting and Virtual Private Hosting Agreement </a>
+<phrase key="DisclaimerModal0DisclaimerItems1Text" />
+<sup class=\"supSymbol\">&Dagger;</sup> Annual discounts available on NEW purchases only.
+<phrase key="DisclaimerModal0DisclaimerItems4Text" />
+<sup class=\"supSymbol\">1</sup> Performance may begin to slow at varying numbers of products depending on potential physical and practical constraints, including (but not limited to): system architecture, system capacity, system load, end-user Internet connectivity and end-user computer configurations.
+<phrase key="DisclaimerModal0DisclaimerItems5Text" />
+Products will automatically renew until cancelled. You may turn off the auto-renewal feature by visiting your [@T[companyname:name]@T] account.

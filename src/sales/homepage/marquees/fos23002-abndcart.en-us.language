@@ -1,0 +1,11 @@
+---
+location: localization/sales/homepage/marquee/fos23002-abndcart/en-us
+id: false
+name: GCE-30535
+---
+<phrase key="headline" />
+<div class="bigtext" style="width:100;"><div class="line tungsten">YOU DID THE RESEARCH.</div><div class="line walsheim">YOU SHOPPED</div><div class="line tungsten"><span class='inline-dash' style='max-width:200px;'>&mdash;&mdash;&mdash;&mdash;&mdash;</span> SMART.</div></div>
+<phrase key="sub-headline" />
+<div class="bigtext" style="width:100%"><div class="line walsheim">NOW</div><div class="line walsheim">YOU JUST NEED TO...</div></div>
+<phrase key="cta-text" />
+GO TO CART
