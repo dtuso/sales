@@ -1,6 +1,6 @@
 ---
 location: sales/ecommerce/online-store.aspx
-id: 544ab57ef778fc17f82fcaaa  
+id: 545a9b78f778fc11ac121095
 name: GCE-20285 - OLS 
 comments: Online Store Landing Page
 url: http://www.dev-godaddy.com/ecommerce/online-store.aspx
@@ -13,7 +13,7 @@ url: http://www.dev-godaddy.com/ecommerce/online-store.aspx
     
 <section class="main-banner background-container main-banner-onlinestore">
   <div class="container l-main-container center-text main-banner-content main-banner-online-store-content">
-    ##if(countrySiteAny(uk,ca,au,nz,sg,ph))
+    ##if(countrySiteAny(uk,ca,au,nz,sg,ph) || activeLanguageAny([en-us]))
     <span class="ribbon ribbon-right">
         <i class="marquee-flag [@T[localization:<language full="true" />]@T] [@T[localization:<language />]@T] marquee-flag-free-trial"></i>
     </span>
@@ -201,12 +201,12 @@ url: http://www.dev-godaddy.com/ecommerce/online-store.aspx
     <div class="mgr-view-bottom-spacer"></div>
     ##else
        <!-- ##if(areAdCreditsEnabled(onlinestorefreecredit)) -->
-        ##if(countrySiteAny(uk,ca,au,nz,sg,ph))
+        ##if(countrySiteAny(uk,ca,au,nz,sg,ph)|| activeLanguageAny([en-us]))
           ##if(shopperStatusAny(authenticated, partiallytrusted)) 
                 <a id="marQueeSectionStartFreeTrialLink" data-ci="90987" class="btn btn-primary call-to-action cta-small" href="[@T[link:<external linktype="carturl" path="/freetrial/setup.aspx">  <param name="pfid" value="40966" />  <param name="itc" value="slp_onlinestore" /></external>]@T]">[@L[cds.sales/gd/ecommerce/online-store:StartFreeTrial]@L]</a>
           ##else
             ##if(splitTestingSideIsActive(1383,A))
-                <a id="marqueeLoginToStartFreeTrialLink" data-ci="90988" class="btn btn-primary call-to-action cta-small" href="[@T[link:<external linktype="carturl" path="/freetrial/setup.aspx">  <param name="pfid" value="40966" />  <param name="itc" value="slp_onlinestore" /></external>]@T]">[@L[cds.sales/gd/ecommerce/online-store:LoginToStartFreeTrial]@L]</a>
+                <a id="marqueeLoginToStartFreeTrialLink" data-ci="90988" class="btn btn-primary call-to-action cta-small" href="[@T[link:<external linktype="carturl" path="/freetrial/setup.aspx">  <param name="pfid" value="40966" />  <param name="itc" value="slp_onlinestore" /></external>]@T]">[@L[cds.sales/gd/ecommerce/online-store:StartFreeTrial]@L]</a>
             ##else
                 <a id="marQueeSectionStartFreeTrialLink" data-ci="90987" class="btn btn-primary call-to-action cta-small" href="[@T[link:<external linktype="carturl" path="/freetrial/setup.aspx">  <param name="pfid" value="40966" />  <param name="itc" value="slp_onlinestore" /></external>]@T]">[@L[cds.sales/gd/ecommerce/online-store:StartFreeTrial]@L]</a>
             ##endif
@@ -366,7 +366,7 @@ url: http://www.dev-godaddy.com/ecommerce/online-store.aspx
         </span>
       </p>
     ##else
-       ##if(countrySiteAny(uk,ca,au,nz,sg,ph))
+       ##if(countrySiteAny(uk,ca,au,nz,sg,ph)|| activeLanguageAny([en-us]))
           <p class="pricing">
             <span class="so-easy">
               [@L[cds.sales/gd/ecommerce/online-store:EasyToSetUpText]@L]          
@@ -377,7 +377,7 @@ url: http://www.dev-godaddy.com/ecommerce/online-store.aspx
               ##else
                 <span class="call-to-action-bar-spacer"></span>
                 ##if(splitTestingSideIsActive(1383,A))
-                  <a id="CTALoginToStartLink" data-ci="90991" class="btn btn-warning call-to-action cta-small" href="[@T[link:<external linktype="carturl" path="/freetrial/setup.aspx">  <param name="pfid" value="40966" />  <param name="itc" value="slp_onlinestore" /></external>]@T]">[@L[cds.sales/gd/ecommerce/online-store:LoginToStartFreeTrial]@L]</a>
+                  <a id="CTALoginToStartLink" data-ci="90991" class="btn btn-warning call-to-action cta-small" href="[@T[link:<external linktype="carturl" path="/freetrial/setup.aspx">  <param name="pfid" value="40966" />  <param name="itc" value="slp_onlinestore" /></external>]@T]">[@L[cds.sales/gd/ecommerce/online-store:StartFreeTrial]@L]</a>
                   <div class="col-xs-6 inline-disclaimer non-mgr-view-left-padding"><span>[@L[cds.sales/gd/ecommerce/online-store:FreeTrialPricingText]@L]</span></div>
                 ##else
                   <a id="CTAStartFreeTrialLink" data-ci="90990" class="btn btn-warning call-to-action cta-small" href="[@T[link:<external linktype="carturl" path="/freetrial/setup.aspx">  <param name="pfid" value="40966" />  <param name="itc" value="slp_onlinestore" /></external>]@T]">[@L[cds.sales/gd/ecommerce/online-store:StartFreeTrial]@L]</a>
@@ -747,12 +747,12 @@ url: http://www.dev-godaddy.com/ecommerce/online-store.aspx
     </div>
     ##else
     <div id="non-mgrViewPricingSection" class="col-xs-4">
-         ##if(!countrySiteAny(uk,ca,au,nz,sg,ph))
+         ##if(!countrySiteAny(uk,ca,au,nz,sg,ph) && !activeLanguageAny([en-us]))
               <p class="pricing pricing-top-spacer"> 
               [@L[cds.sales/gd/ecommerce/online-store:AsLowAsText]@L]
               </p>
          ##endif
-         ##if(countrySiteAny(uk,ca,au,nz,sg,ph))
+         ##if(countrySiteAny(uk,ca,au,nz,sg,ph)|| activeLanguageAny([en-us]))
                 ##if(shopperStatusAny(authenticated, partiallytrusted)) 
                      <div class="call-to-action-top-spacer"></div> 
                         <a id="WhatsIncludedStartFreeTrial" data-ci="93906" class="btn btn-warning call-to-action cta-small" href="[@T[link:<external linktype="carturl" path="/freetrial/setup.aspx">  <param name="pfid" value="40966" />  <param name="itc" value="slp_onlinestore" /></external>]@T]">
@@ -761,7 +761,7 @@ url: http://www.dev-godaddy.com/ecommerce/online-store.aspx
                     <div class="call-to-action-top-spacer"></div> 
                     ##if(splitTestingSideIsActive(1383,A))
                              <a id="WhatsIncludedLoginToStartFreeTrial" data-ci="93907" class="btn btn-warning call-to-action cta-small" href="[@T[link:<external linktype="carturl" path="/freetrial/setup.aspx">  <param name="pfid" value="40966" />  <param name="itc" value="slp_onlinestore" /></external>]@T]">
-                            [@L[cds.sales/gd/ecommerce/online-store:LoginToStartFreeTrial]@L]</a>
+                            [@L[cds.sales/gd/ecommerce/online-store:StartFreeTrial]@L]</a>
                     ##else
                             <a id="WhatsIncludedStartFreeTrial" data-ci="93906" class="btn btn-warning call-to-action cta-small" href="[@T[link:<external linktype="carturl" path="/freetrial/setup.aspx">  <param name="pfid" value="40966" />  <param name="itc" value="slp_onlinestore" /></external>]@T]">
                             [@L[cds.sales/gd/ecommerce/online-store:StartFreeTrial]@L]</a>
