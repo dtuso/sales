@@ -1,7 +1,7 @@
 ---
 url: http://www.dev-godaddy.com/business/office-365.aspx
 location: sales/business/office-365.aspx
-id: 545ab7a1f778fc11ac1210e6
+id: 545ad0adf778fc11ac1210eb
 name: GCE-31272
 comments: O365 Office LP - Adding GD Exclusive Text to page
 metaTitle: "[@L[cds.sales/business/office-365:lp-8-MicrosoftOffice365BoostProductivityVirtuallyAnywhereGoDaddy]@L]"
@@ -350,17 +350,7 @@ assetPath: false
     /* Plan Boxes */
         
     #plan-boxes-section{
-      padding: 40px 0 0px;
-    }
-        
-
-    #plan-boxes-section .exclusive-discount {
-      text-align: center;
-      font-weight: 600;
-      font-size:18px;
-      font-style: italic;
-      margin: 15px 0 25px;
-      visibility: hidden;
+      padding: 40px 0 60px;
     }
 
     .side-plan{
@@ -917,14 +907,8 @@ assetPath: false
           <div>
             <img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/business/office-365/img/GCE-24333-O365-LP-R4_Office-MSFT-icons.png" />
           </div> 
-
-          <div class="exclusive-discount">
-            ##if(productHasSavingsMoreThan({{pfids.C}}, {{pfids.C}}, 0))
-              [@L[cds.sales/business/office-365:31272-exclusive_discount]@L]
-            ##endif
-          </div>
-
           ##if(productHasSavingsMoreThan({{pfids.C}}, {{pfids.C}}, 0))
+            <div class="exclusive-discount">[@L[cds.sales/business/office-365:31272-exclusive_discount]@L]</div>
             <h2 class="main-banner-subtitle price-hide" data-tokenize="[@T[productcompare:<percent primaryproductid="{{pfids.C}}" secondaryproductid="{{pfids.C}}" ><html><![CDATA[{0}%]]></html></percent>]@T]">[@L[cds.sales/business/office-365:29621-main-subtitle]@L]</h2>  
           ##else
             <h2 class="main-banner-subtitle price-hide" data-tokenize="">[@L[cds.sales/business/office-365:29621-main-subtitle]@L]</h2>  
@@ -1063,13 +1047,6 @@ assetPath: false
             </div>  
             <button type="button" class="btn btn-warning btn-block btn-lg js-add-to-cart plan-box-button" data-value="{{groupids.C}}" data-ci="94228">[@L[cds.sales/business/office-365:29621-AddToCart]@L]</button>
           </div>
-        </div>
-      </div> <!-- / row -->
-      <div class="row">
-        <div class="exclusive-discount">
-          ##if(productHasSavingsMoreThan({{pfids.C}}, {{pfids.C}}, 0))
-            [@L[cds.sales/business/office-365:31272-exclusive_discount]@L]
-          ##endif
         </div>
       </div> <!-- / row -->
 
