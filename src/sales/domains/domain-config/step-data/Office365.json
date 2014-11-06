@@ -2,14 +2,14 @@
   "Type" : "Office365",
   "HeaderText" : "[@L[cds.sales/domains/domain-configuration:add.email.to.your.domain]@L]",
   "DescriptionText" : "[@L[cds.sales/domains/domain-configuration:step.o365.text]@L]",
-  "LowestPrice" : "[@T[productprice:<template productid="xxxxxx" period="yearly"><strike><![CDATA[{0}]]></strike></template>]@T]",
+  "LowestPrice" : "[@T[productprice:<template productid="31805" period="yearly"><strike><![CDATA[{0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T]",
   "ToolTipDisplayText" : "",
   "ToolTipHoverText" : "",
   "Plans" : [
     {
       "Id" : "dpp_xs_o365_email",
-      "CurrentPrice" : "[@T[productprice:<template productid="xxxxxx" period="yearly"><strike><![CDATA[{0}]]></strike></template>]@T]",
-      "ListPrice" : "[@T[productprice:<template productid="xxxxxx" period="yearly"><strike><![CDATA[{0}]]></strike></template>]@T]",
+      "CurrentPrice" : "[@T[productprice:<template productid="31805" period="yearly"><strike><![CDATA[{0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T]",
+      "ListPrice" : "[@T[productprice:<template productid="31805" period="yearly"><strike><![CDATA[{0}]]></strike></template>]@T]",
       "PlanTitle" : "[@L[cds.sales/domains/domain-configuration:step.o365.plan1.title]@L]",
       "PlanFeatures" : [
         "[@L[cds.sales/domains/domain-configuration:step.o365.plan1.li1]@L]",
@@ -20,8 +20,8 @@
     },
     {
       "Id" : "dpp_xs_o365_business",
-      "CurrentPrice" : "[@T[productprice:<template productid="xxxxxx" period="yearly"><strike><![CDATA[{0}]]></strike></template>]@T]",
-      "ListPrice" : "[@T[productprice:<template productid="xxxxxx" period="yearly"><strike><![CDATA[{0}]]></strike></template>]@T]",
+      "CurrentPrice" : "[@T[productprice:<template productid="31825" period="yearly"><strike><![CDATA[{0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T]",
+      "ListPrice" : "[@T[productprice:<template productid="31825" period="yearly"><strike><![CDATA[{0}]]></strike></template>]@T]",
       "PlanTitle" : "[@L[cds.sales/domains/domain-configuration:step.o365.plan2.title]@L]",
       "PlanFeatures" : [
         "[@L[cds.sales/domains/domain-configuration:step.o365.plan2.li1]@L]",
@@ -33,8 +33,8 @@
     },
     {
       "Id" : "dpp_xs_o365_premium",
-      "CurrentPrice" : "[@T[productprice:<template productid="xxxxxx" period="yearly"><strike><![CDATA[{0}]]></strike></template>]@T]",
-      "ListPrice" : "[@T[productprice:<template productid="xxxxxx" period="yearly"><strike><![CDATA[{0}]]></strike></template>]@T]",
+      "CurrentPrice" : "[@T[productprice:<template productid="31841" period="yearly"><strike><![CDATA[{0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T]",
+      "ListPrice" : "[@T[productprice:<template productid="31841" period="yearly"><strike><![CDATA[{0}]]></strike></template>]@T]",
       "PlanTitle" : "[@L[cds.sales/domains/domain-configuration:step.o365.plan3.title]@L]",
       "PlanFeatures" : [
         "[@L[cds.sales/domains/domain-configuration:step.o365.plan3.li1]@L]",
