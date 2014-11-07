@@ -1,8 +1,8 @@
 ---
 location: sales/hosting/private-label/wordpress.aspx
-id: 54595a68f778fc0fb84199fc
-name: 
-comments: Made guarantee popups open in new window
+id: 545ab42ef778fc11ac1210e4
+name: fixing the business folks mistakes
+comments: changing api endpoint because reqs were basically non-existant
 assetPath: false
 localVars: true
 ---
@@ -165,43 +165,50 @@ function getParameterByName(name) {
     return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
 
-$('.js-add-to-cart').on('click', function(e) {
-    e.preventDefault();
-    if($(this).parents('form')){
-      var plan = $(this).parents('form').serializeArray();
-    }
-    if($(this).data('value')){
-      var pkg = $(this).data('value');
-    }else{
-      var pkg = $.parseJSON(plan[0].value);
-    }
-    var sapiurl = '[@T[link:<external linktype="SALESPRODUCTSURL" path="/v1/pl/{privatelabelid}/cart/packages" />]@T]';
+$(".js-add-to-cart").bind("click",function(event){
+  event.preventDefault();
 
-    var postdata = "requestData=" + JSON.stringify(pkg);
-    $.ajax({
-        type:"GET",
-        url: sapiurl,
-        contentType: "application/json",
-        data: postdata,
-        dataType: "jsonp",
-        success: function (response) { 
-           ##if(isManager())
-            var carturl = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]';
-           ##else
-            var carturl = '[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]';
-           ##endif
-           window.location = carturl;
-          },
-       failure: function (response) { 
-         ##if(isManager())
+  if($(this).parents('form')){
+    var plan = $(this).parents('form').serializeArray();
+  }
+  
+  if($(this).data('value')){
+    var pkg = $(this).data('value');
+  }else{
+    var pkg = $.parseJSON(plan[0].value);
+  }
+
+  var ci = pkg['ci'];
+  var itccode = pkg['itc'];
+  var packageId = pkg['pkgid'];
+  var quantity = pkg['qty'];
+ 
+  
+  var url = window.location.protocol+'//'+ window.location.host+'/api/package/add';
+  url += "/" + itccode;
+  url += "/" + ci;
+  url += "/" + quantity;
+  url += "/" + packageId;
+  url += window.location.search;
+  console.log(url);
+
+  $.ajax({
+    type: 'POST',
+    url: url,
+    complete: function (data) {
+      var response = $.parseJSON(data.responseText);
+      if (response.Success) {
+        ##if(isManager())
           var carturl = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]';
-         ##else
+        ##else
           var carturl = '[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]';
-         ##endif
-         window.location = carturl;
-       }
-    });
-});
+        ##endif
+          window.location = carturl;
+      } 
+    },
+    dataType: 'json'
+  });
+}); 
 
 </script>
 {% endblock %}
