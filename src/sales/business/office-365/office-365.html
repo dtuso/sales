@@ -1,7 +1,7 @@
 ---
 url: http://www.dev-godaddy.com/business/office-365.aspx
 location: sales/business/office-365.aspx
-id: 545ad0adf778fc11ac1210eb
+id: 545d2fb2f778fc1cb499b22c
 name: GCE-31272
 comments: O365 Office LP - Adding GD Exclusive Text to page
 metaTitle: "[@L[cds.sales/business/office-365:lp-8-MicrosoftOffice365BoostProductivityVirtuallyAnywhereGoDaddy]@L]"
@@ -327,7 +327,7 @@ assetPath: false
     #banner-section h1.main-banner-title{ text-transform: uppercase; text-align: left; font-size: 24px; margin-bottom: 28px; color:#000; }
     #banner-section h1 > sup {font-size: 50%!important; /* override global */ top:-1.1em; /* override global */}
     #banner-section h2.main-banner-subtitle{ text-align: left; margin: 15px 0 25px; font-size: 48px; color:#000; }          
-    #banner-section .watch-video-container {margin:295px auto 0;width:150px;text-align: center;}    
+    #banner-section .watch-video-container {margin:295px auto 0;width:150px;text-align: center; visibility: hidden;}    
     #banner-section .office-365-banner-video-link {font-size:24px;color:#fff;}
     #banner-section .office-365-banner-video-link:hover {color: #333;cursor: pointer;display: inline-block;}    
     #banner-section .office-365-banner-video-link > .ico-gt-circle {
@@ -907,9 +907,9 @@ assetPath: false
           <div>
             <img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/business/office-365/img/GCE-24333-O365-LP-R4_Office-MSFT-icons.png" />
           </div> 
+          <div class="exclusive-discount">[@L[cds.sales/business/office-365:31272-exclusive_discount]@L]</div>
           ##if(productHasSavingsMoreThan({{pfids.C}}, {{pfids.C}}, 0))
-            <div class="exclusive-discount">[@L[cds.sales/business/office-365:31272-exclusive_discount]@L]</div>
-            <h2 class="main-banner-subtitle price-hide" data-tokenize="[@T[productcompare:<percent primaryproductid="{{pfids.C}}" secondaryproductid="{{pfids.C}}" ><html><![CDATA[{0}%]]></html></percent>]@T]">[@L[cds.sales/business/office-365:29621-main-subtitle]@L]</h2>  
+            <h2 class="main-banner-subtitle price-hide" data-tokenize="[@T[productcompare:<percent primaryproductid="{{pfids.C}}" secondaryproductid="{{pfids.C}}" showsymbol="true" ><html><![CDATA[{0}]]></html></percent>]@T]">[@L[cds.sales/business/office-365:29621-main-subtitle]@L]</h2>  
           ##else
             <h2 class="main-banner-subtitle price-hide" data-tokenize="">[@L[cds.sales/business/office-365:29621-main-subtitle]@L]</h2>  
           ##endif
@@ -969,7 +969,7 @@ assetPath: false
                 <div class="strike-through-wrapper">
                   <p class="strike-through-price">
                     <span class="secondary-color uppercase price-hide">
-                      <strong data-tokenize="[@T[productcompare:<percent primaryproductid="{{pfids.A}}" secondaryproductid="{{pfids.A}}" ><html><![CDATA[{0}%]]></html></percent>]@T]"> 
+                      <strong data-tokenize="[@T[productcompare:<percent primaryproductid="{{pfids.A}}" secondaryproductid="{{pfids.A}}" showsymbol="true" ><html><![CDATA[{0}]]></html></percent>]@T]"> 
                         [@L[cds.sales/business/office-365:29621-OnSaleSave]@L]
                       </strong>
                     </span>
@@ -1001,7 +1001,7 @@ assetPath: false
                 <div class="strike-through-wrapper">
                   <p class="strike-through-price">
                     <span class="secondary-color uppercase price-hide">
-                      <strong data-tokenize="[@T[productcompare:<percent primaryproductid="{{pfids.B}}" secondaryproductid="{{pfids.B}}" ><html><![CDATA[{0}%]]></html></percent>]@T]"> 
+                      <strong data-tokenize="[@T[productcompare:<percent primaryproductid="{{pfids.B}}" secondaryproductid="{{pfids.B}}" showsymbol="true" ><html><![CDATA[{0}]]></html></percent>]@T]"> 
                         [@L[cds.sales/business/office-365:29621-OnSaleSave]@L]
                       </strong>
                     </span>
@@ -1033,7 +1033,7 @@ assetPath: false
                 <div class="strike-through-wrapper">
                   <p class="strike-through-price">
                     <span class="secondary-color uppercase price-hide">
-                      <strong data-tokenize="[@T[productcompare:<percent primaryproductid="{{pfids.C}}" secondaryproductid="{{pfids.C}}" ><html><![CDATA[{0}%]]></html></percent>]@T]"> 
+                      <strong data-tokenize="[@T[productcompare:<percent primaryproductid="{{pfids.C}}" secondaryproductid="{{pfids.C}}" showsymbol="true" ><html><![CDATA[{0}]]></html></percent>]@T]"> 
                         [@L[cds.sales/business/office-365:29621-OnSaleSave]@L]
                       </strong>
                     </span>
@@ -1076,12 +1076,12 @@ assetPath: false
       ##if(productHasSavingsMoreThan({{pfids.C}}, {{pfids.C}}, 0))
         <div class="productivity-sub-section">
           <div class="sub-section-column text-side left">
-            <h3 class="price-hide" data-tokenize="[@T[productcompare:<percent primaryproductid="{{pfids.C}}" secondaryproductid="{{pfids.C}}" ><html><![CDATA[{0}%]]></html></percent>]@T]">[@L[cds.sales/business/office-365:29621-FeatureContent-2-title]@L]</h3>
+            <h3 class="price-hide" data-tokenize="[@T[productcompare:<percent primaryproductid="{{pfids.C}}" secondaryproductid="{{pfids.C}}" showsymbol="true" ><html><![CDATA[{0}]]></html></percent>]@T]">[@L[cds.sales/business/office-365:29621-FeatureContent-2-title]@L]</h3>
             <div class="check-section">
               <div class="check-block">
                 <span class="pre-text-green-check"></span>
               </div>
-              <div class="check-text-wrapper price-hide" data-tokenize="[@T[productcompare:<percent primaryproductid="{{pfids.C}}" secondaryproductid="{{pfids.C}}" ><html><![CDATA[{0}%]]></html></percent>]@T]">
+              <div class="check-text-wrapper price-hide" data-tokenize="[@T[productcompare:<percent primaryproductid="{{pfids.C}}" secondaryproductid="{{pfids.C}}" showsymbol="true" ><html><![CDATA[{0}]]></html></percent>]@T]">
                 <p>[@L[cds.sales/business/office-365:29621-FeatureContent-2-description]@L]</p>
               </div>
             </div><!-- /check-section -->
@@ -1097,7 +1097,7 @@ assetPath: false
               <div class="check-block">
                 <span class="pre-text-green-check"></span>
               </div>
-              <div class="check-text-wrapper price-hide" data-tokenize="[@T[productcompare:<percent primaryproductid="{{pfids.C}}" secondaryproductid="{{pfids.C}}" ><html><![CDATA[{0}%]]></html></percent>]@T]">
+              <div class="check-text-wrapper price-hide">
                 <p>[@L[cds.sales/business/office-365:31272-backed_by_trust_text]@L]</p>
               </div>
             </div><!-- /check-section -->
@@ -1240,7 +1240,7 @@ assetPath: false
                   <div class="row strike-through-wrapper">
                     <p class="strike-through-price">
                       <span class="secondary-color uppercase price-hide">
-                        <strong data-tokenize="[@T[productcompare:<percent primaryproductid="{{pfids.C}}" secondaryproductid="{{pfids.C}}" ><html><![CDATA[{0}%]]></html></percent>]@T]"> 
+                        <strong data-tokenize="[@T[productcompare:<percent primaryproductid="{{pfids.C}}" secondaryproductid="{{pfids.C}}" showsymbol="true" ><html><![CDATA[{0}]]></html></percent>]@T]"> 
                           [@L[cds.sales/business/office-365:29621-OnSaleSave]@L]
                         </strong>
                       </span>
@@ -1359,7 +1359,7 @@ assetPath: false
                   <div class="row strike-through-wrapper">
                     <p class="strike-through-price">
                       <span class="secondary-color uppercase price-hide">
-                        <strong data-tokenize="[@T[productcompare:<percent primaryproductid="{{pfids.A}}" secondaryproductid="{{pfids.A}}" ><html><![CDATA[{0}%]]></html></percent>]@T]"> 
+                        <strong data-tokenize="[@T[productcompare:<percent primaryproductid="{{pfids.A}}" secondaryproductid="{{pfids.A}}" showsymbol="true" ><html><![CDATA[{0}]]></html></percent>]@T]"> 
                           [@L[cds.sales/business/office-365:29621-OnSaleSave]@L]
                         </strong>
                       </span>
@@ -1382,7 +1382,7 @@ assetPath: false
                   <div class="row strike-through-wrapper">
                     <p class="strike-through-price">
                       <span class="secondary-color uppercase price-hide">
-                        <strong data-tokenize="[@T[productcompare:<percent primaryproductid="{{pfids.B}}" secondaryproductid="{{pfids.B}}" ><html><![CDATA[{0}%]]></html></percent>]@T]"> 
+                        <strong data-tokenize="[@T[productcompare:<percent primaryproductid="{{pfids.B}}" secondaryproductid="{{pfids.B}}" showsymbol="true" ><html><![CDATA[{0}]]></html></percent>]@T]"> 
                           [@L[cds.sales/business/office-365:29621-OnSaleSave]@L]
                         </strong>
                       </span>
@@ -1405,7 +1405,7 @@ assetPath: false
                   <div class="row strike-through-wrapper">
                     <p class="strike-through-price">
                       <span class="secondary-color uppercase price-hide">
-                        <strong data-tokenize="[@T[productcompare:<percent primaryproductid="{{pfids.C}}" secondaryproductid="{{pfids.C}}" ><html><![CDATA[{0}%]]></html></percent>]@T]"> 
+                        <strong data-tokenize="[@T[productcompare:<percent primaryproductid="{{pfids.C}}" secondaryproductid="{{pfids.C}}" showsymbol="true" ><html><![CDATA[{0}]]></html></percent>]@T]"> 
                           [@L[cds.sales/business/office-365:29621-OnSaleSave]@L]
                         </strong>
                       </span>
@@ -1646,30 +1646,33 @@ assetPath: false
       });
     ##endif
 
-    // input object inside form to add to cart 
-    var $selectedPackageId = $("#selected-package-id");
 
     $(".js-add-to-cart").bind("click",function(event){
-      var $this = $(this);
-      
+
+      var $this = $(this);      
       event.preventDefault();
+
       var packageId = $this.data('value');
+
       var ci = $this.data('ci');
       if(ci == null || ci == "" || ci == "undefined"){
         ci = 000000;
       }
      
-      var $form = $selectedPackageId.parents("form");
-      var itccode = "SLP_365";
-      
-      var url = window.location.protocol+'//'+ window.location.host+'/api/package/add';
-      url += "/"+itccode;
-      url += "/"+ci;
-      url += "/1";//quantity
-      url += "/"+packageId;
-      url += window.location.search;
-   
-      $selectedPackageId.val(packageId);
+      ##if(isManager())
+        var itcCode = 'mgr_slp_365';
+      ##else
+        var itcCode = 'slp_365';
+      ##endif 
+
+      var urlFragment = '/' + itcCode;   //itc code
+      urlFragment    += '/' + ci; //ci code
+      urlFragment    += '/' + '1';                // quantity
+      urlFragment    += '/' + packageId  //Plan Name (aka Package Id)
+      var url = '[@T[link:<relative path="/api/package/add{0}"/>]@T]'.replace('{0}', urlFragment);
+
+      var redirectUrl = '[@T[link:<relative path="~/business/office-365-config.aspx"></relative>]@T]';
+      redirectUrl += (redirectUrl.indexOf('?') > 0 ? '&' : '?') + 'plan=' + packageId;
 
       $.ajax({
         type: 'POST',
@@ -1677,7 +1680,7 @@ assetPath: false
         complete: function (data) {
           var response = $.parseJSON(data.responseText);
           if (response.Success) {
-            window.location = '[@T[link:<relative path="~/business/office-365-config.aspx" parammode="explicit" />]@T]?plan=' + packageId ;
+            window.location = redirectUrl;
           } 
         },
         dataType: 'json'
