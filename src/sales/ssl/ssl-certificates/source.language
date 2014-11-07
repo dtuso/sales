@@ -1,8 +1,8 @@
 ---
 location: localization/sales/gd/ssl/ssl-certificates/en
-id: 53fe6da5f778fc1f28c88e0d
-name: GCE-25816
-comments: Add Flag/Violator to SSL LP to Highlight Google Feature
+id:  545ab636f778fc11ac1210e5
+name: GCE-29496
+comments: Update to include new keys for premium ssl banner
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="MetaTitle" />
@@ -205,3 +205,7 @@ Products will automatically renew until cancelled. You may turn off the auto-ren
 Premium SSL available only for USA, Argentina, Australia, Austria, Belgium, Brazil, Canada, Chile, Colombia, Denmark, Finland, France, Germany, India, Ireland, Italy, Malaysia, Mexico, Netherlands, New Zealand, Norway, Pakistan, Peru, Philippines, Portugal, Russia, Singapore, South Africa, Spain, Sweden, Switzerland, and UK.<br />To change product offering, select the correct plan for the customer on the SSL configuration page.<br />
 <phrase key="boostGoogle" />
 Boost Google Ranking
+<phrase key="choosePremSSL" />
+CHOOSE A PREMIUM (EV) SSL
+<phrase key="savePerc" />
+Save <span class="save-perc"></span>
