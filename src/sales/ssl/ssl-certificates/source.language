@@ -1,6 +1,6 @@
 ---
 location: localization/sales/gd/ssl/ssl-certificates/en
-id:  545ab636f778fc11ac1210e5
+id:  false
 name: GCE-29496
 comments: Update to include new keys for premium ssl banner
 ---
@@ -208,4 +208,4 @@ Boost Google Ranking
 <phrase key="choosePremSSL" />
 CHOOSE A PREMIUM (EV) SSL
 <phrase key="savePerc" />
-Save <span class="save-perc"></span>
+SAVE <span class="save-perc"></span>
