@@ -1,0 +1,66 @@
+---
+location: sales/homepage/default.es-mx
+name: GCE-31162
+---
+extends ../../layouts/homepage/default_base
+block styles
+	link(href!="[@T[link:<cssroot />]@T]fos/hp/rebrand/css/es-mx_homepage_20141015.css" rel="stylesheet" type="text/css")
+	| 
+	|    [@P[cdsDocument:<data app="sales" location="fonts/fonts" /> ]@P]
+	style.
+		#co-price {padding-left:26px;}
+		#co-icon { width: inherit; position: absolute; margin-top: 12px; }
+
+block marquee
+	|    ##if(!targetMessageTagAny(sales_hp_default,hp_existing_customer))
+	|      ##if(splitTestingSideIsActive(1351, B) || hasISC())
+	|        [@P[cdsDocument:<data app="sales" location="homepage/locals/es-mx/topmarquee" /> ]@P]
+	|      ##else
+	|        [@P[cdsDocument:<data app="sales" location="homepage/locals/es-mx/split/topmarquee" /> ]@P]
+	|      ##endif
+	|    ##else
+	|      ##if(splitTestingSideIsActive(1352, B))
+	|        [@P[cdsDocument:<data app="sales" location="homepage/locals/es-mx/topmarquee" /> ]@P]
+	|      ##else
+	|        [@P[cdsDocument:<data app="sales" location="homepage/locals/es-mx/split/gtld" /> ]@P]
+	|      ##endif
+	|    ##endif
+
+block bugBar
+	a(href!="[@T[link:<relative path='/tlds/co-domain.aspx'><param name='ci' value='83052' /><param name='tld' value='CO' /></relative>]@T]")
+		span#co-icon
+		span#co-price [@T[productprice:<current productid="56401" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]
+	a(href!="[@T[link:<relative path='/tlds/uno'><param name='ci' value='88299' /><param name='tld' value='UNO' /></relative>]@T]")
+		span#uno-icon
+		span#uno-price [@T[productprice:<current productid="40995" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]
+	a(href!="[@T[link:<relative path='/tlds/org.aspx'><param name='ci' value='93297' /><param name='tld' value='ORG' /></relative>]@T]")
+		span#org-icon.tld-icon
+		span#org-price [@T[productprice:<current productid="12101" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]*
+
+block share
+	.fosshare(data-twshareurl!="[@T[link:<external linktype='XDOTCO' path='/gdSpanish' />]@T]" data-twtext!="[@L[cds.sales/homepage:twitter-text-gdbl]@L]" data-twrelated="GoDaddy" data-shareurl!="[@T[link:<relative path='/'/>]@T]" data-buttons="google,facebook,twitter")
+
+block pods
+	| 
+	| [@P[cdsDocument:<data app="sales" location="homepage/locals/es-mx/pods" /> ]@P]
+
+block cookieWarning
+
+append scripts
+	script(type="text/javascript").
+		var hpLoadVideo = 0;
+		var autoplay = '\&autoplay=1';
+		$("div.gdhp-bottom-banner").mouseenter(function() {
+			if(hpLoadVideo != 1) {
+		      hpLoadVideo = 1;
+		      var src ='//www.youtube.com/embed/lB0BFbZi6mc?html5=1&rel=0';
+		      $('#myVideoModal iframe').attr('src',src);
+		      $('#myVideoModal').on('hidden.bs.modal', function () {          
+		        $('#myVideoModal iframe').removeAttr('src');
+		        $('#myVideoModal iframe').attr('src',src);
+		      })
+		      $('#myVideoModal').on('show.bs.modal', function () {          
+		        $('#myVideoModal iframe').attr('src', src + autoplay);
+		      })
+		    }
+		});
