@@ -13,12 +13,12 @@ block styles
 block marquee
 	|  ##if(!targetMessageTagAny(sales_hp_default,hp_existing_customer))
 	|    ##if(splitTestingSideIsActive(1317, B) && !hasISC())
-	|    [@P[cdsDocument:<data app="sales" location="homepage/locals/en-au/topmarquee" /> ]@P]
+	|    [@P[cdsDocument:<data app="sales" location="homepage/marquee/299com/default_template" /> ]@P]
 	|    ##else
-	|    [@P[cdsDocument:<data app="sales" location="homepage/locals/en-au/split/topmarquee" /> ]@P]
+	|    [@P[cdsDocument:<data app="sales" location="homepage/marquee/gtld/default_template" /> ]@P]
 	|    ##endif
 	|  ##else
-	|    [@P[cdsDocument:<data app="sales" location="homepage/locals/en-au/split/topmarquee" /> ]@P]
+	|    [@P[cdsDocument:<data app="sales" location="homepage/marquee/gtld/default_template" /> ]@P]
 	|  ##endif
 
 block bugBar
