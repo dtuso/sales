@@ -1,7 +1,7 @@
 ---
 location: sales/ssl/ssl-certificates-config.aspx
 url: http://www.dev-godaddy.com/ssl/ssl-certificates-config.aspx
-id:  54502983f778fc142061a9e8
+id:  false
 name: GCE-29496
 comments: Update to use premium ssl banner
 assetPath: false
@@ -403,7 +403,7 @@ var PlanConfig = {
             }),
             $.ajax({
                 type: 'POST',
-                url: url,
+                url: url2,
                 async: false,
                 dataType: 'json',
                 success: function (data) {
