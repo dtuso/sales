@@ -1,8 +1,8 @@
 ---
 location: localization/sales/offers/office365-promo/en
-id: 54516e07f778fc1318bfbaa8
-name: GCE-30746
-comments: GOT1 and GOT2 followups
+id: 5460eb86f778fc26a885edd9
+name: GCE-31871
+comments: GOT2 POB rename of Productivity Plus plan to Business Premium
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="page-title" />
