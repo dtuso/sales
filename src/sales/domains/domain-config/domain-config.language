@@ -1,25 +1,11 @@
 ---
 location: localization/sales/domains/domain-configuration/en
-id: false
-name: GCE-29606
+id: 
+name: GCE-30455
+comments: Intergrate with TMS and rewrite with AngularJS
 ---
 ##if(false)
-<!-- DOC BLOCK (DO NOT REMOVE)
-
-        DEV LEAD:
-          Pooja Singhvi - psinghvi@godaddy.com
-
-        DRAFT DETAILS:
-          Created Date:   2014-07-23
-          Created By:     Pooja Singhvi - psinghvi@godaddy.com
-          JIRA Ticket:    FOS-24789/ FOS-23778 
-          Comments:       Update O365 in DPP Config Page
-                          
-
-         PREVIEW URL:
-         http://www.dev-godaddy.com/domains/domain-configuration.aspx?version=localization/sales/domains/domain-configuration/en|53d809a7f778fc27484de577#
-
-END DOC BLOCK -->
+{% include 'modules/doc-block.html' %}
 ##endif 
 <phrase key="page.title" comment=""/>
 Domain Purchase Path | Configure your domains - [@T[companyname:name]@T]
@@ -319,3 +305,11 @@ Online Essentials
 All features from Online Essentials PLUS…
 <phrase key="step.o365.plan3.title.BusinessPremium" comment="" />
 Business Premium
+<phrase key="lowest.price.domain" comment="{{LowestPrice}} will be replaced with a price, please do not translate" />
+As low as {{LowestPrice}}/domain
+<phrase key="plan.price.per.domain" comment="{{ListPrice}} and {{CurrentPrice}} will be a price"/>
+<span class="list-price weight-light">{{ListPrice}}</span> {{CurrentPrice}}<span class="pricing-per weight-regular">/domain</span>
+<phrase key="plan.price.per.mo" comment="{{CurrentPrice}} will be a price"/>
+{{CurrentPrice}}<span class="pricing-per weight-regular">/mo</span>
+<phrase key="step.privacy" comment="{{card.number}} will be a updated to the position number the step is displayed as"/>
+<span class="number-template weight-bold">Step {{card.number}}</span><span class="step_text weight-light">Privacy</span>

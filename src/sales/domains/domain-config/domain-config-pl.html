@@ -1,0 +1,1358 @@
+---
+location: sales/domains/domain-configuration-pl.aspx
+id: 545a4d03f778fc0fb8419a7d
+name: GCE-30455
+comments: Private Lable Keeps old domain configuration
+---
+##if(false)
+{% include 'modules/doc-block.html' %}
+##endif
+<!DOCTYPE HTML>
+<html lang="[@T[localization:<language full="true" />]@T]">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="content-language" content="[@T[localization:<language full="true" />]@T]" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">    
+
+    <title>[@L[cds.sales/domains/searchresults-new:MetaTitle]@L]</title>
+
+    <link rel="canonical" href="[@T[link:<external linktype='siteurl' path='/domains/domain-configuration.aspx' />]@T]"/>    
+    <link href="[@T[link:<cssroot />]@T]fos/global/build/0.2.0/gd-fos-global.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="[@T[link:<cssroot />]@T]shared/css/1/styles_20130904.min.css">
+    ##if(siteContextAny(gd))  
+    <link href="[@T[link:<cssroot />]@T]fos/domains/domain-configuration/css/cds_domain_configuration_20140415.min.css" rel="stylesheet" type="text/css"  />
+    <link rel="shortcut icon" href="[@T[link:<imageroot />]@T]assets/godaddy.ico"/>  
+    ##else  
+    <link href="[@T[link:<cssroot />]@T]fos/domains/domain-configuration/css/cds_domain_configuration_20140407_pl.css" rel="stylesheet" type="text/css"  />
+      <style>
+      .disclaimer-free-domain{display:none}
+    </style> 
+    ##endif  
+
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags" />]@P]
+    <script src="[@T[link:<javascriptroot />]@T]shared/js/1.5.1/global.20120918.min.js" type="text/javascript" ></script>
+  </head>
+  <body>
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header" />]@P]
+    <div id="head-wrap" class=" clearfix">
+      <div id="serp-header">
+        ##if(splitTestingSideIsActive(1191, B))
+        <h1><span class="checkmark"></span><span id="domains-added-1">[@L[cds.sales/domains/searchresults-new3:ItemAddedMsgTextNew]@L]</span><span id="domains-added-x">[@L[cds.sales/domains/searchresults-new3:ItemsAddedMsgTextNew]@L]</span></h1>
+        ##else
+        <h1><span class="checkmark"></span><span id="domains-added-1">[@L[cds.sales/domains/domain-configuration:one.domain]@L]</span><span id="domains-added-x">[@L[cds.sales/domains/domain-configuration:two.or.more.domains]@L]</span></h1>
+        ##endif
+        <a href="javascript:void(0);"><span class="grey-arrow-right">&nbsp;</span> [@L[cds.sales/domains/domain-configuration:continue.to.cart]@L]</a>
+      </div>
+    </div>
+    
+    <div id="main-wrap" class="clearfix weight-regular">
+      <div class="left">
+        ##if(splitTestingSideIsActive(1163, A))
+        <div class="step-wrapper split-a" id="step-privacyprotection">
+          <div class="step">
+            <div class="section left">
+              <h3 class="weight-ultra">[@L[cds.sales/domains/domain-configuration:protect.my.personal]@L]</h3>
+              <p class="fg-orange">[@L[cds.sales/domains/domain-configuration:prevent.your.personal.info]@L]</p>
+              <p class="last">
+                [@L[cds.sales/domains/domain-configuration:what.does.my.domain]@L]
+                <span class="g-toolTip">
+                  <span>
+                    [@L[cds.sales/domains/domain-configuration:tooltip.without.privacy.your.info]@L]
+                    <br/><br/>
+                    <span class="left">
+                      <span class="weight-bold">[@L[cds.sales/domains/domain-configuration:tooltip.your.info.without.privacy]@L]</span><br/>
+                      John Smith<br/>john@YourDomain.com<br/>1234 Elm Street<br/>Hometown, AZ 85000<br/>(480) 555-5555<br/>
+                    </span>
+                    <span class="right">
+                      <span class="weight-bold">[@L[cds.sales/domains/domain-configuration:tooltip.your.info.with.privacy]@L]</span><br/>
+                      DomainsByProxy.com<br/>ProxiedDomain@DomainsByProxy.com<br/>14747 N Northsight Blvd<br/>Suite 111, PMB 309<br/>Scottsdale, AZ 85260<br/>+1.480.642.2599<br/>
+                    </span>
+                  </span>
+                </span>
+              </p>
+            </div>
+            <div class="section right">
+              <div id="privacyprotection-nothanks">
+                <h3 class="weight-light"><span data-id="dpp_no_selection_bundle" data-ci="86229" class="radio">&nbsp;</span><p>[@L[cds.sales/domains/domain-configuration:no.thanks]@L]</p></h3>
+              </div>
+              <div id="privacyprotection-dpp_privacy_bundle">
+                <h3 class="weight-light"><span data-id="dpp_privacy_bundle" data-ci="86230" class="radio">&nbsp;</span><p>[@L[cds.sales/domains/domain-configuration:privacy.protection]@L]</p></h3>
+                <p>
+                  [@L[cds.sales/domains/domain-configuration:hide.your.personal.information]@L]
+                  <span class="g-toolTip">
+                    <span>
+                      [@L[cds.sales/domains/domain-configuration:tooltip.protect.yourself.with]@L]<br/>
+                      <br/>
+                      - [@L[cds.sales/domains/domain-configuration:tooltip.hides.your.personal.information.name]@L]<br/>
+                      - [@L[cds.sales/domains/domain-configuration:tooltip.prevents.domain.related.spam]@L]<br/>
+                      - [@L[cds.sales/domains/domain-configuration:tooltip.helps.stop.domain]@L]<br/>
+                      - [@L[cds.sales/domains/domain-configuration:tooltip.helps.protect.against]@L]
+                    </span>
+                  </span>
+                </p>
+                <p class="price weight-bold fg-orange" class="weight-light">
+                  <span class="list-price weight-light"></span>
+                  [@L[cds.sales/domains/domain-configuration:price.per.domain]@L]
+                </p>
+              </div>
+              <div id="privacyprotection-dpp_business_bundle" class="weight-light last">
+                <h3><span data-id="dpp_business_bundle" data-ci="86231" class="radio">&nbsp;</span><p>[@L[cds.sales/domains/domain-configuration:privacy.and.business.protection]@L]</p></h3>
+                <p>
+                  [@L[cds.sales/domains/domain-configuration:privacy.business.protection.message]@L]
+                  <span class="g-toolTip">
+                    <span>
+                      [@L[cds.sales/domains/domain-configuration:privacy.business.protection.tooltip]@L]
+                    </span>
+                  </span>
+                </p>
+                <p class="price weight-bold fg-orange">
+                  <span class="list-price weight-light"></span>
+                  [@L[cds.sales/domains/domain-configuration:price.per.domain]@L]
+                </p>
+              </div>
+            </div>
+            <h2 class="flag blue"><span class="number-template weight-bold">[@L[cds.sales/domains/domain-configuration:step.number]@L]</span><span class="step_text weight-light">[@L[cds.sales/domains/domain-configuration:step.title.privacy]@L]</span></h2>
+          </div>
+          <div class="step-separator"><span></span></div>
+        </div>
+        <div class="step-wrapper split-a" id="step-locuprivacyprotection">
+          <div class="step">
+            <div class="section left">
+              <h3 class="weight-ultra">[@L[cds.sales/domains/domain-configuration:protect.my.personal]@L]</h3>
+              <p class="fg-orange">[@L[cds.sales/domains/domain-configuration:prevent.your.personal.info]@L]</p>
+              <p class="last">
+                [@L[cds.sales/domains/domain-configuration:what.does.my.domain]@L]
+                <span class="g-toolTip">
+                  <span>
+                    [@L[cds.sales/domains/domain-configuration:tooltip.without.privacy.your.info]@L]
+                    <br/><br/>
+                    <span class="left">
+                      <span class="weight-bold">[@L[cds.sales/domains/domain-configuration:tooltip.your.info.without.privacy]@L]</span><br/>
+                      John Smith<br/>john@YourDomain.com<br/>1234 Elm Street<br/>Hometown, AZ 85000<br/>(480) 555-5555<br/>
+                    </span>
+                    <span class="right">
+                      <span class="weight-bold">[@L[cds.sales/domains/domain-configuration:tooltip.your.info.with.privacy]@L]</span><br/>
+                      DomainsByProxy.com<br/>ProxiedDomain@DomainsByProxy.com<br/>14747 N Northsight Blvd<br/>Suite 111, PMB 309<br/>Scottsdale, AZ 85260<br/>+1.480.642.2599<br/>
+                    </span>
+                  </span>
+                </span>
+              </p>
+            </div>
+            <div class="section right">
+              <div id="locuprivacyprotection-nothanks">
+                <h3 class="weight-light"><span data-id="dpp_no_selection_bundle" data-ci="87162" class="radio">&nbsp;</span><p>[@L[cds.sales/domains/domain-configuration:no.thanks]@L]</p></h3>
+              </div>
+              <div id="locuprivacyprotection-dpp_privacy_bundle">
+                <h3 class="weight-light"><span data-id="dpp_privacy_bundle" data-ci="87163" class="radio">&nbsp;</span><p>[@L[cds.sales/domains/domain-configuration:privacy.protection]@L]</p></h3>
+                <p>
+                  [@L[cds.sales/domains/domain-configuration:hide.your.personal.information]@L]
+                  <span class="g-toolTip">
+                    <span>
+                      [@L[cds.sales/domains/domain-configuration:tooltip.protect.yourself.with]@L]<br/>
+                      <br/>
+                      - [@L[cds.sales/domains/domain-configuration:tooltip.hides.your.personal.information.name]@L]<br/>
+                      - [@L[cds.sales/domains/domain-configuration:tooltip.prevents.domain.related.spam]@L]<br/>
+                      - [@L[cds.sales/domains/domain-configuration:tooltip.helps.stop.domain]@L]<br/>
+                      - [@L[cds.sales/domains/domain-configuration:tooltip.helps.protect.against]@L]
+                    </span>
+                  </span>
+                </p>
+                <p class="price weight-bold fg-orange" class="weight-light">
+                  <span class="list-price weight-light"></span>
+                  [@L[cds.sales/domains/domain-configuration:price.per.domain]@L]
+                </p>
+              </div>
+              <div id="locuprivacyprotection-dpp_business_bundle" class="weight-light last">
+                <h3><span data-id="dpp_business_bundle" data-ci="87164" class="radio">&nbsp;</span><p>[@L[cds.sales/domains/domain-configuration:privacy.and.business.protection]@L]</p></h3>
+                <p>
+                  [@L[cds.sales/domains/domain-configuration:privacy.business.protection.message]@L]
+                  <span class="g-toolTip">
+                    <span>
+                      [@L[cds.sales/domains/domain-configuration:privacy.business.protection.locu.tooltip]@L]
+                    </span>
+                  </span>
+                </p>
+                <p class="price weight-bold fg-orange">
+                  <span class="list-price weight-light"></span>
+                  [@L[cds.sales/domains/domain-configuration:price.per.domain]@L]
+                </p>
+              </div>
+            </div>
+            <h2 class="flag blue"><span class="number-template weight-bold">[@L[cds.sales/domains/domain-configuration:step.number]@L]</span><span class="step_text weight-light">[@L[cds.sales/domains/domain-configuration:step.title.privacy]@L]</span></h2>
+          </div>
+          <div class="step-separator"><span></span></div>
+        </div>
+        ##elseif(splitTestingSideIsActive(1163, B))
+        <div class="step-wrapper split-b" id="step-privacyprotection">
+          <div class="step">
+            <div class="section full">
+              <h3 class="weight-ultra">[@L[cds.sales/domains/domain-configuration:protect.my.personal]@L]</h3>
+              <p class="fg-orange lowest-price">[@L[cds.sales/domains/searchresults-new3:StartingPriceText]@L] [@L[cds.sales/domains/domain-configuration:price.per.domain]@L]</p>
+              <p>[@L[cds.sales/domains/domain-configuration:prevent.your.personal.info]@L]</p>
+              <div id="privacyprotection-plan" class="plan-droplist-select select-disable">
+                <div class="plan-droplist-selected">
+                  <span>[@L[cds.sales/domains/domain-configuration:no.thanks]@L]</span><span class="price fg-orange" >[@L[cds.sales/domains/domain-configuration:price.per.month]@L]</span>
+                </div>          
+                <div id="privacyprotection-selectbtn" class="plan-droplist-selectbtn"><span></span></div>          
+                <div id="privacyprotection-list" class="plan-droplist">
+                  <div data-id="dpp_no_selection_bundle" data-ci="86229" id="privacyprotection-no" class="plan-option plan-option-selected">
+                    <span class="title">[@L[cds.sales/domains/domain-configuration:no.thanks]@L]</span>
+                  </div> 
+                  <div data-id="dpp_privacy_bundle" data-ci="86230" id="privacyprotection-dpp_privacy_bundle" class="plan-option">
+                    <span class="title">[@L[cds.sales/domains/domain-configuration:privacy.protection]@L]</span>
+                    <span class="plan-droplist-price fg-orange"><span class="list-price weight-light"></span>[@L[cds.sales/domains/domain-configuration:price.per.domain]@L]</span>
+                    <span class="message">[@L[cds.sales/domains/domain-configuration:hide.your.personal.information]@L]</span>
+                    <span>
+                      <br/>
+                      - [@L[cds.sales/domains/domain-configuration:tooltip.hides.your.personal.information.name]@L]<br/>
+                      - [@L[cds.sales/domains/domain-configuration:tooltip.prevents.domain.related.spam]@L]<br/>
+                      - [@L[cds.sales/domains/domain-configuration:tooltip.helps.stop.domain]@L]<br/>
+                      - [@L[cds.sales/domains/domain-configuration:tooltip.helps.protect.against]@L]
+                    </span>
+                  </div>  
+                  <div data-id="dpp_business_bundle" data-ci="86231" id="privacyprotection-dpp_business_bundle" class="plan-option">
+                    <span class="title">[@L[cds.sales/domains/domain-configuration:privacy.and.business.protection]@L]</span>
+                    <span class="plan-droplist-price fg-orange"><span class="list-price weight-light"></span>[@L[cds.sales/domains/domain-configuration:price.per.domain]@L]</span>
+                    <span class="message">[@L[cds.sales/domains/domain-configuration:privacy.business.protection.message]@L]</span>
+                    <span>
+                      [@L[cds.sales/domains/domain-configuration:privacy.business.protection.tooltip]@L]
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <p class="last">
+                [@L[cds.sales/domains/domain-configuration:what.does.my.domain]@L]
+                <span class="g-toolTip g-toolTip-displayDown">
+                  <span>
+                    [@L[cds.sales/domains/domain-configuration:tooltip.without.privacy.your.info]@L]
+                    <br/><br/>
+                    <span class="left">
+                      <span class="weight-bold">[@L[cds.sales/domains/domain-configuration:tooltip.your.info.without.privacy]@L]</span><br/>
+                      John Smith<br/>john@YourDomain.com<br/>1234 Elm Street<br/>Hometown, AZ 85000<br/>(480) 555-5555<br/>
+                    </span>
+                    <span class="right">
+                      <span class="weight-bold">[@L[cds.sales/domains/domain-configuration:tooltip.your.info.with.privacy]@L]</span><br/>
+                      DomainsByProxy.com<br/>ProxiedDomain@DomainsByProxy.com<br/>14747 N Northsight Blvd<br/>Suite 111, PMB 309<br/>Scottsdale, AZ 85260<br/>+1.480.642.2599<br/>
+                    </span>
+                  </span>
+                </span>
+              </p>
+            </div>
+            <h2 class="flag blue"><span class="number-template weight-bold">[@L[cds.sales/domains/domain-configuration:step.number]@L]</span><span class="step_text weight-light">[@L[cds.sales/domains/domain-configuration:step.title.privacy]@L]</span></h2>
+          </div>
+          <div class="step-separator"><span></span></div>
+        </div>
+        <div class="step-wrapper split-b" id="step-locuprivacyprotection">
+          <div class="step">
+            <div class="section full">
+              <h3 class="weight-ultra">[@L[cds.sales/domains/domain-configuration:protect.my.personal]@L]</h3>
+              <p class="fg-orange lowest-price">[@L[cds.sales/domains/searchresults-new3:StartingPriceText]@L] [@L[cds.sales/domains/domain-configuration:price.per.domain]@L]</p>
+              <p>[@L[cds.sales/domains/domain-configuration:prevent.your.personal.info]@L]</p>
+              <div id="locuprivacyprotection-plan" class="plan-droplist-select select-disable">
+                <div class="plan-droplist-selected">
+                  <span>[@L[cds.sales/domains/domain-configuration:no.thanks]@L]</span><span class="price fg-orange" >[@L[cds.sales/domains/domain-configuration:price.per.month]@L]</span>
+                </div>          
+                <div id="locuprivacyprotection-selectbtn" class="plan-droplist-selectbtn"><span></span></div>          
+                <div id="locuprivacyprotection-list" class="plan-droplist">
+                  <div data-id="dpp_no_selection_bundle" data-ci="87162" id="locuprivacyprotection-no" class="plan-option plan-option-selected">
+                    <span class="title">[@L[cds.sales/domains/domain-configuration:no.thanks]@L]</span>
+                  </div> 
+                  <div data-id="dpp_privacy_bundle" data-ci="87163" id="locuprivacyprotection-dpp_privacy_bundle" class="plan-option">
+                    <span class="title">[@L[cds.sales/domains/domain-configuration:privacy.protection]@L]</span>
+                    <span class="plan-droplist-price fg-orange"><span class="list-price weight-light"></span>
+                      [@L[cds.sales/domains/domain-configuration:price.per.domain]@L]</span>
+                    <span class="message">[@L[cds.sales/domains/domain-configuration:hide.your.personal.information]@L]</span>
+                    
+                    <span><br/>
+                      - [@L[cds.sales/domains/domain-configuration:tooltip.hides.your.personal.information.name]@L]<br/>
+                      - [@L[cds.sales/domains/domain-configuration:tooltip.prevents.domain.related.spam]@L]<br/>
+                      - [@L[cds.sales/domains/domain-configuration:tooltip.helps.stop.domain]@L]<br/>
+                      - [@L[cds.sales/domains/domain-configuration:tooltip.helps.protect.against]@L]
+                     </span>
+                  </div>  
+                  <div data-id="dpp_business_bundle" data-ci="87164" id="locuprivacyprotection-dpp_business_bundle" class="plan-option">
+                    <span class="title">[@L[cds.sales/domains/domain-configuration:privacy.and.business.protection]@L]</span>
+                    <span class="plan-droplist-price fg-orange"><span class="list-price weight-light"></span>[@L[cds.sales/domains/domain-configuration:price.per.domain]@L]</span>
+                    <span class="message">[@L[cds.sales/domains/domain-configuration:privacy.business.protection.message]@L]</span>
+                    
+                    <span><br/>
+                      [@L[cds.sales/domains/domain-configuration:privacy.business.protection.locu.tooltip]@L]
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <p class="last">
+                [@L[cds.sales/domains/domain-configuration:what.does.my.domain]@L]
+                <span class="g-toolTip g-toolTip-displayDown">
+                  <span>
+                    [@L[cds.sales/domains/domain-configuration:tooltip.without.privacy.your.info]@L]
+                    <br/><br/>
+                    <span class="left">
+                      <span class="weight-bold">[@L[cds.sales/domains/domain-configuration:tooltip.your.info.without.privacy]@L]</span><br/>
+                      John Smith<br/>john@YourDomain.com<br/>1234 Elm Street<br/>Hometown, AZ 85000<br/>(480) 555-5555<br/>
+                    </span>
+                    <span class="right">
+                      <span class="weight-bold">[@L[cds.sales/domains/domain-configuration:tooltip.your.info.with.privacy]@L]</span><br/>
+                      DomainsByProxy.com<br/>ProxiedDomain@DomainsByProxy.com<br/>14747 N Northsight Blvd<br/>Suite 111, PMB 309<br/>Scottsdale, AZ 85260<br/>+1.480.642.2599<br/>
+                    </span>
+                  </span>
+                </span>
+              </p>
+            </div>
+            <h2 class="flag blue"><span class="number-template weight-bold">[@L[cds.sales/domains/domain-configuration:step.number]@L]</span><span class="step_text weight-light">[@L[cds.sales/domains/domain-configuration:step.title.privacy]@L]</span></h2>
+          </div>
+          <div class="step-separator"><span></span></div>
+        </div>
+        ##elseif(splitTestingSideIsActive(1163, C))
+        <div class="step-wrapper split-c" id="step-privacyprotection">
+          <div class="step">
+            <div class="section full">
+              <h3 class="weight-ultra">[@L[cds.sales/domains/domain-configuration:protect.my.personal]@L]</h3>
+              <p class="last">
+                [@L[cds.sales/domains/domain-configuration:prevent.your.personal.info]@L]
+                [@L[cds.sales/domains/domain-configuration:what.does.my.domain]@L]
+                <span class="g-toolTip">
+                  <span>
+                    [@L[cds.sales/domains/domain-configuration:tooltip.without.privacy.your.info]@L]
+                    <br/><br/>
+                    <span class="left">
+                      <span class="weight-bold">[@L[cds.sales/domains/domain-configuration:tooltip.your.info.without.privacy]@L]</span><br/>
+                      John Smith<br/>john@YourDomain.com<br/>1234 Elm Street<br/>Hometown, AZ 85000<br/>(480) 555-5555<br/>
+                    </span>
+                    <span class="right">
+                      <span class="weight-bold">[@L[cds.sales/domains/domain-configuration:tooltip.your.info.with.privacy]@L]</span><br/>
+                      DomainsByProxy.com<br/>ProxiedDomain@DomainsByProxy.com<br/>14747 N Northsight Blvd<br/>Suite 111, PMB 309<br/>Scottsdale, AZ 85260<br/>+1.480.642.2599<br/>
+                    </span>
+                  </span>
+                </span>
+              </p>
+              <div class="radio-select">
+              <div id="privacyprotection-nothanks">
+                <h3 class="weight-light"><span data-id="dpp_no_selection_bundle" data-ci="86229" class="radio">&nbsp;</span><p>[@L[cds.sales/domains/domain-configuration:no.thanks]@L]</p></h3>
+              </div>
+              <div id="privacyprotection-dpp_privacy_bundle">
+                <h3 class="weight-light"><span data-id="dpp_privacy_bundle" data-ci="86230" class="radio">&nbsp;</span><p>[@L[cds.sales/domains/domain-configuration:privacy.protection]@L]</p></h3>
+                <p>
+                  [@L[cds.sales/domains/domain-configuration:hide.your.personal.information]@L]
+                  <span class="g-toolTip">
+                    <span>
+                      [@L[cds.sales/domains/domain-configuration:tooltip.protect.yourself.with]@L]<br/>
+                      <br/>
+                      - [@L[cds.sales/domains/domain-configuration:tooltip.hides.your.personal.information.name]@L]<br/>
+                      - [@L[cds.sales/domains/domain-configuration:tooltip.prevents.domain.related.spam]@L]<br/>
+                      - [@L[cds.sales/domains/domain-configuration:tooltip.helps.stop.domain]@L]<br/>
+                      - [@L[cds.sales/domains/domain-configuration:tooltip.helps.protect.against]@L]
+                    </span>
+                  </span>
+                </p>
+                <p class="price weight-bold fg-orange" class="weight-light">
+                  <span class="list-price weight-light"></span>
+                  [@L[cds.sales/domains/domain-configuration:price.per.domain]@L]
+                </p>
+              </div>
+              <div id="privacyprotection-dpp_business_bundle" class="last">
+                <h3><span data-id="dpp_business_bundle" data-ci="86231" class="radio">&nbsp;</span><p>[@L[cds.sales/domains/domain-configuration:privacy.and.business.protection]@L]</p></h3>
+                <p>
+                  [@L[cds.sales/domains/domain-configuration:privacy.business.protection.message]@L]
+                  <span class="g-toolTip">
+                    <span>
+                      [@L[cds.sales/domains/domain-configuration:privacy.business.protection.tooltip]@L]
+                    </span>
+                  </span>
+                </p>
+                <p class="price weight-bold fg-orange">
+                  <span class="list-price weight-light"></span>
+                  [@L[cds.sales/domains/domain-configuration:price.per.domain]@L]
+                </p>
+              </div>
+              </div>
+            </div>
+            <h2 class="flag blue"><span class="number-template weight-bold">[@L[cds.sales/domains/domain-configuration:step.number]@L]</span><span class="step_text weight-light">[@L[cds.sales/domains/domain-configuration:step.title.privacy]@L]</span></h2>
+          </div>
+          <div class="step-separator"><span></span></div>
+        </div>
+        <div class="step-wrapper split-c" id="step-locuprivacyprotection">
+          <div class="step">
+            <div class="section full">
+              <h3 class="weight-ultra">[@L[cds.sales/domains/domain-configuration:protect.my.personal]@L]</h3>
+              <p class="last">
+                [@L[cds.sales/domains/domain-configuration:prevent.your.personal.info]@L]
+                [@L[cds.sales/domains/domain-configuration:what.does.my.domain]@L]
+                <span class="g-toolTip">
+                  <span>
+                    [@L[cds.sales/domains/domain-configuration:tooltip.without.privacy.your.info]@L]
+                    <br/><br/>
+                    <span class="left">
+                      <span class="weight-bold">[@L[cds.sales/domains/domain-configuration:tooltip.your.info.without.privacy]@L]</span><br/>
+                      John Smith<br/>john@YourDomain.com<br/>1234 Elm Street<br/>Hometown, AZ 85000<br/>(480) 555-5555<br/>
+                    </span>
+                    <span class="right">
+                      <span class="weight-bold">[@L[cds.sales/domains/domain-configuration:tooltip.your.info.with.privacy]@L]</span><br/>
+                      DomainsByProxy.com<br/>ProxiedDomain@DomainsByProxy.com<br/>14747 N Northsight Blvd<br/>Suite 111, PMB 309<br/>Scottsdale, AZ 85260<br/>+1.480.642.2599<br/>
+                    </span>
+                  </span>
+                </span>
+              </p>
+              <div class="radio-select">
+              <div id="locuprivacyprotection-nothanks">
+                <h3 class="weight-light"><span data-id="dpp_no_selection_bundle" data-ci="87162" class="radio">&nbsp;</span><p>[@L[cds.sales/domains/domain-configuration:no.thanks]@L]</p></h3>
+              </div>
+              <div id="locuprivacyprotection-dpp_privacy_bundle">
+                <h3 class="weight-light"><span data-id="dpp_privacy_bundle" data-ci="87163" class="radio">&nbsp;</span><p>[@L[cds.sales/domains/domain-configuration:privacy.protection]@L]</p></h3>
+                <p>
+                  [@L[cds.sales/domains/domain-configuration:hide.your.personal.information]@L]
+                  <span class="g-toolTip">
+                    <span>
+                      [@L[cds.sales/domains/domain-configuration:tooltip.protect.yourself.with]@L]<br/>
+                      <br/>
+                      - [@L[cds.sales/domains/domain-configuration:tooltip.hides.your.personal.information.name]@L]<br/>
+                      - [@L[cds.sales/domains/domain-configuration:tooltip.prevents.domain.related.spam]@L]<br/>
+                      - [@L[cds.sales/domains/domain-configuration:tooltip.helps.stop.domain]@L]<br/>
+                      - [@L[cds.sales/domains/domain-configuration:tooltip.helps.protect.against]@L]
+                    </span>
+                  </span>
+                </p>
+                <p class="price weight-bold fg-orange" class="weight-light">
+                  <span class="list-price weight-light"></span>
+                  [@L[cds.sales/domains/domain-configuration:price.per.domain]@L]
+                </p>
+              </div>
+              <div id="locuprivacyprotection-dpp_business_bundle" class="last">
+                <h3><span data-id="dpp_business_bundle" data-ci="87164" class="radio">&nbsp;</span><p>[@L[cds.sales/domains/domain-configuration:privacy.and.business.protection]@L]</p></h3>
+                <p>
+                  [@L[cds.sales/domains/domain-configuration:privacy.business.protection.message]@L]
+                  <span class="g-toolTip">
+                    <span>
+                      [@L[cds.sales/domains/domain-configuration:privacy.business.protection.locu.tooltip]@L]
+                    </span>
+                  </span>
+                </p>
+                <p class="price weight-bold fg-orange">
+                  <span class="list-price weight-light"></span>
+                  [@L[cds.sales/domains/domain-configuration:price.per.domain]@L]
+                </p>
+              </div>
+              </div>
+            </div>
+            <h2 class="flag blue"><span class="number-template weight-bold">[@L[cds.sales/domains/domain-configuration:step.number]@L]</span><span class="step_text weight-light">[@L[cds.sales/domains/domain-configuration:step.title.privacy]@L]</span></h2>
+          </div>
+          <div class="step-separator"><span></span></div>
+        </div>
+        ##elseif(splitTestingSideIsActive(1163, D))
+        <div class="step-wrapper split-d" id="step-privacyprotection">
+          <div class="step">
+            <div class="section full">
+              <h3 class="weight-ultra">[@L[cds.sales/domains/domain-configuration:protect.my.personal]@L]</h3>
+              <p class="last">
+                [@L[cds.sales/domains/domain-configuration:prevent.your.personal.info]@L]
+                [@L[cds.sales/domains/domain-configuration:what.does.my.domain]@L]
+                <span class="g-toolTip g-toolTip-displayDown">
+                  <span>
+                    [@L[cds.sales/domains/domain-configuration:tooltip.without.privacy.your.info]@L]
+                    <br/><br/>
+                    <span class="left">
+                      <span class="weight-bold">[@L[cds.sales/domains/domain-configuration:tooltip.your.info.without.privacy]@L]</span><br/>
+                      John Smith<br/>john@YourDomain.com<br/>1234 Elm Street<br/>Hometown, AZ 85000<br/>(480) 555-5555<br/>
+                    </span>
+                    <span class="right">
+                      <span class="weight-bold">[@L[cds.sales/domains/domain-configuration:tooltip.your.info.with.privacy]@L]</span><br/>
+                      DomainsByProxy.com<br/>ProxiedDomain@DomainsByProxy.com<br/>14747 N Northsight Blvd<br/>Suite 111, PMB 309<br/>Scottsdale, AZ 85260<br/>+1.480.642.2599<br/>
+                    </span>
+                  </span>
+                </span>
+              </p>
+              <div class="radio-select">
+                <!--<div id="privacyprotection-nothanks">
+                  <h3 class="weight-light"><span data-id="dpp_no_selection_bundle" data-ci="86229" class="radio">&nbsp;</span><p>[@L[cds.sales/domains/domain-configuration:no.thanks]@L]</p></h3>
+                </div>-->
+                <div id="privacyprotection-dpp_privacy_bundle">
+                  <h3 class="weight-light"><span data-id="dpp_privacy_bundle" data-ci="86230" class="radio">&nbsp;</span><p>[@L[cds.sales/domains/domain-configuration:privacy.protection]@L]</p></h3>
+                  <p>
+                    [@L[cds.sales/domains/domain-configuration:hide.your.personal.information]@L]
+                    <span class="g-toolTip g-toolTip-displayDown">
+                      <span>
+                        [@L[cds.sales/domains/domain-configuration:tooltip.protect.yourself.with]@L]<br/>
+                        <br/>
+                        - [@L[cds.sales/domains/domain-configuration:tooltip.hides.your.personal.information.name]@L]<br/>
+                        - [@L[cds.sales/domains/domain-configuration:tooltip.prevents.domain.related.spam]@L]<br/>
+                        - [@L[cds.sales/domains/domain-configuration:tooltip.helps.stop.domain]@L]<br/>
+                        - [@L[cds.sales/domains/domain-configuration:tooltip.helps.protect.against]@L]
+                      </span>
+                    </span>
+                  </p>
+                  <p class="price weight-bold fg-orange" class="weight-light">
+                    <span class="list-price weight-light"></span>
+                    [@L[cds.sales/domains/domain-configuration:price.per.domain]@L]
+                  </p>
+                </div>
+                <div id="privacyprotection-dpp_business_bundle" class="last">
+                  <h3><span data-id="dpp_business_bundle" data-ci="86231" class="radio">&nbsp;</span><p>[@L[cds.sales/domains/domain-configuration:privacy.and.business.protection]@L]</p></h3>
+                  <p>
+                    [@L[cds.sales/domains/domain-configuration:privacy.business.protection.message]@L]
+                    <span class="g-toolTip g-toolTip-displayDown">
+                      <span>
+                        [@L[cds.sales/domains/domain-configuration:privacy.business.protection.tooltip]@L]
+                      </span>
+                    </span>
+                  </p>
+                  <p class="price weight-bold fg-orange">
+                    <span class="list-price weight-light"></span>
+                    [@L[cds.sales/domains/domain-configuration:price.per.domain]@L]
+                  </p>
+                </div>
+                <div id="privacyprotection-apply">
+                  <div class="btn btn-apply flt-btn flt-btn-grn" id="btn-privacyprotection-apply">[@L[cds.sales/domains/searchresults-new3:FilterApplyActionText]@L]</div>
+                </div>
+              </div>
+            </div>
+            <h2 class="flag blue"><span class="number-template weight-bold">[@L[cds.sales/domains/domain-configuration:step.number]@L]</span><span class="step_text weight-light">[@L[cds.sales/domains/domain-configuration:step.title.privacy]@L]</span></h2>
+          </div>
+          <div class="step-separator"><span></span></div>
+        </div>
+        <div class="step-wrapper split-d" id="step-locuprivacyprotection">
+          <div class="step">
+            <div class="section full">
+              <h3 class="weight-ultra">[@L[cds.sales/domains/domain-configuration:protect.my.personal]@L]</h3>
+              <p class="last">
+                [@L[cds.sales/domains/domain-configuration:prevent.your.personal.info]@L]
+                [@L[cds.sales/domains/domain-configuration:what.does.my.domain]@L]
+                <span class="g-toolTip g-toolTip-displayDown">
+                  <span>
+                    [@L[cds.sales/domains/domain-configuration:tooltip.without.privacy.your.info]@L]
+                    <br/><br/>
+                    <span class="left">
+                      <span class="weight-bold">[@L[cds.sales/domains/domain-configuration:tooltip.your.info.without.privacy]@L]</span><br/>
+                      John Smith<br/>john@YourDomain.com<br/>1234 Elm Street<br/>Hometown, AZ 85000<br/>(480) 555-5555<br/>
+                    </span>
+                    <span class="right">
+                      <span class="weight-bold">[@L[cds.sales/domains/domain-configuration:tooltip.your.info.with.privacy]@L]</span><br/>
+                      DomainsByProxy.com<br/>ProxiedDomain@DomainsByProxy.com<br/>14747 N Northsight Blvd<br/>Suite 111, PMB 309<br/>Scottsdale, AZ 85260<br/>+1.480.642.2599<br/>
+                    </span>
+                  </span>
+                </span>
+              </p>
+              <div class="radio-select">
+                <!--<div id="locuprivacyprotection-nothanks">
+                  <h3 class="weight-light"><span data-id="dpp_no_selection_bundle" data-ci="87162" class="radio">&nbsp;</span><p>[@L[cds.sales/domains/domain-configuration:no.thanks]@L]</p></h3>
+                </div>-->
+                <div id="locuprivacyprotection-dpp_privacy_bundle">
+                  <h3 class="weight-light"><span data-id="dpp_privacy_bundle" data-ci="87163" class="radio">&nbsp;</span><p>[@L[cds.sales/domains/domain-configuration:privacy.protection]@L]</p></h3>
+                  <p>
+                    [@L[cds.sales/domains/domain-configuration:hide.your.personal.information]@L]
+                    <span class="g-toolTip g-toolTip-displayDown">
+                      <span>
+                        [@L[cds.sales/domains/domain-configuration:tooltip.protect.yourself.with]@L]<br/>
+                        <br/>
+                        - [@L[cds.sales/domains/domain-configuration:tooltip.hides.your.personal.information.name]@L]<br/>
+                        - [@L[cds.sales/domains/domain-configuration:tooltip.prevents.domain.related.spam]@L]<br/>
+                        - [@L[cds.sales/domains/domain-configuration:tooltip.helps.stop.domain]@L]<br/>
+                        - [@L[cds.sales/domains/domain-configuration:tooltip.helps.protect.against]@L]
+                      </span>
+                    </span>
+                  </p>
+                  <p class="price weight-bold fg-orange" class="weight-light">
+                    <span class="list-price weight-light"></span>
+                    [@L[cds.sales/domains/domain-configuration:price.per.domain]@L]
+                  </p>
+                </div>
+                <div id="locuprivacyprotection-dpp_business_bundle" class="last">
+                  <h3><span data-id="dpp_business_bundle" data-ci="87164" class="radio">&nbsp;</span><p>[@L[cds.sales/domains/domain-configuration:privacy.and.business.protection]@L]</p></h3>
+                  <p>
+                    [@L[cds.sales/domains/domain-configuration:privacy.business.protection.message]@L]
+                    <span class="g-toolTip g-toolTip-displayDown">
+                      <span>
+                        [@L[cds.sales/domains/domain-configuration:privacy.business.protection.locu.tooltip]@L]
+                      </span>
+                    </span>
+                  </p>
+                  <p class="price weight-bold fg-orange">
+                    <span class="list-price weight-light"></span>
+                    [@L[cds.sales/domains/domain-configuration:price.per.domain]@L]
+                  </p>
+                </div>
+                <div id="locuprivacyprotection-apply">
+                  <div class="btn btn-apply flt-btn flt-btn-grn" id="btn-locuprivacyprotection-apply">[@L[cds.sales/domains/searchresults-new3:FilterApplyActionText]@L]</div>
+                </div>
+              </div>
+            </div>
+            <h2 class="flag blue"><span class="number-template weight-bold">[@L[cds.sales/domains/domain-configuration:step.number]@L]</span><span class="step_text weight-light">[@L[cds.sales/domains/domain-configuration:step.title.privacy]@L]</span></h2>
+          </div>
+          <div class="step-separator"><span></span></div>
+        </div>
+        ##elseif(splitTestingSideIsActive(1163, E))
+        <div class="step-wrapper split-e" id="step-privacyprotection">
+          <div class="step">
+            <div class="section full">
+              <h3 class="weight-ultra">[@L[cds.sales/domains/domain-configuration:protect.my.personal]@L]</h3>
+              <p class="fg-orange lowest-price">[@L[cds.sales/domains/searchresults-new3:StartingPriceText]@L] [@L[cds.sales/domains/domain-configuration:price.per.domain]@L]</p>
+              <p>[@L[cds.sales/domains/domain-configuration:prevent.your.personal.info]@L]</p>
+              <div id="privacyprotection-plan" class="plan-droplist-select select-disable">
+                <div class="plan-droplist-selected">
+                  <span>[@L[cds.sales/domains/domain-configuration:privacy.protection]@L]</span><span class="price fg-orange" >[@L[cds.sales/domains/domain-configuration:price.per.month]@L]</span>
+                </div>          
+                <div id="privacyprotection-selectbtn" class="plan-droplist-selectbtn"><span></span></div>          
+                <div id="privacyprotection-list" class="plan-droplist">
+                  <!--<div data-id="dpp_no_selection_bundle" data-ci="86229" id="privacyprotection-no" class="plan-option plan-option-selected">
+                    <span class="title">[@L[cds.sales/domains/domain-configuration:no.thanks]@L]</span>
+                  </div>--> 
+                  <div data-id="dpp_privacy_bundle" data-ci="86230" id="privacyprotection-dpp_privacy_bundle" class="plan-option">
+                    <span class="title">[@L[cds.sales/domains/domain-configuration:privacy.protection]@L]</span>
+                    <span class="plan-droplist-price fg-orange"><span class="list-price weight-light"></span>[@L[cds.sales/domains/domain-configuration:price.per.domain]@L]</span>
+                    <span class="message">[@L[cds.sales/domains/domain-configuration:hide.your.personal.information]@L]</span>
+                    <span>
+                      <br/>
+                      - [@L[cds.sales/domains/domain-configuration:tooltip.hides.your.personal.information.name]@L]<br/>
+                      - [@L[cds.sales/domains/domain-configuration:tooltip.prevents.domain.related.spam]@L]<br/>
+                      - [@L[cds.sales/domains/domain-configuration:tooltip.helps.stop.domain]@L]<br/>
+                      - [@L[cds.sales/domains/domain-configuration:tooltip.helps.protect.against]@L]
+                    </span>
+                  </div>  
+                  <div data-id="dpp_business_bundle" data-ci="86231" id="privacyprotection-dpp_business_bundle" class="plan-option">
+                    <span class="title">[@L[cds.sales/domains/domain-configuration:privacy.and.business.protection]@L]</span>
+                    <span class="plan-droplist-price fg-orange"><span class="list-price weight-light"></span>[@L[cds.sales/domains/domain-configuration:price.per.domain]@L]</span>
+                    <span class="message">[@L[cds.sales/domains/domain-configuration:privacy.business.protection.message]@L]</span>
+                    <span>
+                      [@L[cds.sales/domains/domain-configuration:privacy.business.protection.tooltip]@L]
+                    </span>
+                  </div>
+                </div>
+                <div id="privacyprotection-apply">
+                  <div class="btn btn-apply flt-btn flt-btn-grn" id="btn-privacyprotection-apply">[@L[cds.sales/domains/searchresults-new3:FilterApplyActionText]@L]</div>
+                </div>
+              </div>
+              <p class="last">
+                [@L[cds.sales/domains/domain-configuration:what.does.my.domain]@L]
+                <span class="g-toolTip">
+                  <span>
+                    [@L[cds.sales/domains/domain-configuration:tooltip.without.privacy.your.info]@L]
+                    <br/><br/>
+                    <span class="left">
+                      <span class="weight-bold">[@L[cds.sales/domains/domain-configuration:tooltip.your.info.without.privacy]@L]</span><br/>
+                      John Smith<br/>john@YourDomain.com<br/>1234 Elm Street<br/>Hometown, AZ 85000<br/>(480) 555-5555<br/>
+                    </span>
+                    <span class="right">
+                      <span class="weight-bold">[@L[cds.sales/domains/domain-configuration:tooltip.your.info.with.privacy]@L]</span><br/>
+                      DomainsByProxy.com<br/>ProxiedDomain@DomainsByProxy.com<br/>14747 N Northsight Blvd<br/>Suite 111, PMB 309<br/>Scottsdale, AZ 85260<br/>+1.480.642.2599<br/>
+                    </span>
+                  </span>
+                </span>
+              </p>
+            </div>
+            <h2 class="flag blue"><span class="number-template weight-bold">[@L[cds.sales/domains/domain-configuration:step.number]@L]</span><span class="step_text weight-light">[@L[cds.sales/domains/domain-configuration:step.title.privacy]@L]</span></h2>
+          </div>
+          <div class="step-separator"><span></span></div>
+        </div>
+        <div class="step-wrapper split-e" id="step-locuprivacyprotection">
+          <div class="step">
+            <div class="section full">
+              <h3 class="weight-ultra">[@L[cds.sales/domains/domain-configuration:protect.my.personal]@L]</h3>
+              <p class="fg-orange lowest-price">[@L[cds.sales/domains/searchresults-new3:StartingPriceText]@L] [@L[cds.sales/domains/domain-configuration:price.per.domain]@L]</p>
+              <p>[@L[cds.sales/domains/domain-configuration:prevent.your.personal.info]@L]</p>
+              <div id="locuprivacyprotection-plan" class="plan-droplist-select select-disable">
+                <div class="plan-droplist-selected">
+                  <span>[@L[cds.sales/domains/domain-configuration:privacy.protection]@L]</span><span class="price fg-orange" >[@L[cds.sales/domains/domain-configuration:price.per.month]@L]</span>
+                </div>          
+                <div id="locuprivacyprotection-selectbtn" class="plan-droplist-selectbtn"><span></span></div>          
+                <div id="locuprivacyprotection-list" class="plan-droplist">
+                  <!--<div data-id="dpp_no_selection_bundle" data-ci="87162" id="locuprivacyprotection-no" class="plan-option plan-option-selected">
+                    <span class="title">[@L[cds.sales/domains/domain-configuration:no.thanks]@L]</span>
+                  </div>--> 
+                  <div data-id="dpp_privacy_bundle" data-ci="87163" id="locuprivacyprotection-dpp_privacy_bundle" class="plan-option">
+                    <span class="title">[@L[cds.sales/domains/domain-configuration:privacy.protection]@L]</span>
+                    <span class="plan-droplist-price fg-orange"><span class="list-price weight-light"></span>[@L[cds.sales/domains/domain-configuration:price.per.domain]@L]</span>
+                    <span class="message">[@L[cds.sales/domains/domain-configuration:hide.your.personal.information]@L]</span>
+                    <span>
+                      <br/>
+                      - [@L[cds.sales/domains/domain-configuration:tooltip.hides.your.personal.information.name]@L]<br/>
+                      - [@L[cds.sales/domains/domain-configuration:tooltip.prevents.domain.related.spam]@L]<br/>
+                      - [@L[cds.sales/domains/domain-configuration:tooltip.helps.stop.domain]@L]<br/>
+                      - [@L[cds.sales/domains/domain-configuration:tooltip.helps.protect.against]@L]
+                    </span>
+                  </div>  
+                  <div data-id="dpp_business_bundle" data-ci="87164" id="locuprivacyprotection-dpp_business_bundle" class="plan-option">
+                    <span class="title">[@L[cds.sales/domains/domain-configuration:privacy.and.business.protection]@L]</span>
+                    <span class="plan-droplist-price fg-orange"><span class="list-price weight-light"></span>[@L[cds.sales/domains/domain-configuration:price.per.domain]@L]</span>
+                    <span class="message">[@L[cds.sales/domains/domain-configuration:privacy.business.protection.message]@L]</span>
+                    <span>
+                      <br/>[@L[cds.sales/domains/domain-configuration:privacy.business.protection.locu.tooltip]@L]
+                    </span>
+                  </div>
+                </div>
+                <div id="locuprivacyprotection-apply">
+                  <div class="btn btn-apply flt-btn flt-btn-grn" id="btn-locuprivacyprotection-apply">[@L[cds.sales/domains/searchresults-new3:FilterApplyActionText]@L]</div>
+                </div>
+              </div>
+              <p class="last">
+                [@L[cds.sales/domains/domain-configuration:what.does.my.domain]@L]
+                <span class="g-toolTip">
+                  <span>
+                    [@L[cds.sales/domains/domain-configuration:tooltip.without.privacy.your.info]@L]
+                    <br/><br/>
+                    <span class="left">
+                      <span class="weight-bold">[@L[cds.sales/domains/domain-configuration:tooltip.your.info.without.privacy]@L]</span><br/>
+                      John Smith<br/>john@YourDomain.com<br/>1234 Elm Street<br/>Hometown, AZ 85000<br/>(480) 555-5555<br/>
+                    </span>
+                    <span class="right">
+                      <span class="weight-bold">[@L[cds.sales/domains/domain-configuration:tooltip.your.info.with.privacy]@L]</span><br/>
+                      DomainsByProxy.com<br/>ProxiedDomain@DomainsByProxy.com<br/>14747 N Northsight Blvd<br/>Suite 111, PMB 309<br/>Scottsdale, AZ 85260<br/>+1.480.642.2599<br/>
+                    </span>
+                  </span>
+                </span>
+              </p>
+            </div>
+            <h2 class="flag blue"><span class="number-template weight-bold">[@L[cds.sales/domains/domain-configuration:step.number]@L]</span><span class="step_text weight-light">[@L[cds.sales/domains/domain-configuration:step.title.privacy]@L]</span></h2>
+          </div>
+          <div class="step-separator"><span></span></div>
+        </div>
+        ##endif
+                
+        <div class="step-wrapper" id="step-businessprotection">  
+          <div class="step">
+            <div class="section left">
+              <h3 class="weight-ultra">[@L[cds.sales/domains/domain-configuration:business.registration]@L]</h3>
+              <p class="fg-orange">[@L[cds.sales/domains/domain-configuration:get.an.online.business.card]@L]</p>
+            </div>
+            <div class="section right">
+              <div id="businessprotection-nothanks" class="">
+                <h3 class="weight-light"><span data-id="dpp_no_selection_bundle" data-ci="86232" class="radio">&nbsp;</span><p>[@L[cds.sales/domains/domain-configuration:no.thanks]@L]</p></h3>
+              </div>
+              <div id="businessprotection-dpp_business_only_bundle" class="last">
+                <h3 class="weight-light"><span data-id="dpp_business_only_bundle" data-ci="86233" class="radio">&nbsp;</span><p>[@L[cds.sales/domains/domain-configuration:business.registration]@L]</p></h3>
+                <p>
+                  [@L[cds.sales/domains/domain-configuration:get.more.hits.visits]@L]
+                  <span class="g-toolTip">
+                    <span>
+                      [@L[cds.sales/domains/domain-configuration:business.registration.tooltip]@L]
+                    </span>
+                  </span>
+                </p>
+                <p class="price weight-bold fg-orange">
+                  [@L[cds.sales/domains/domain-configuration:price.per.domain]@L]
+                </p>
+              </div>
+            </div>
+            <h2 class="flag blue"><span class="number-template weight-bold">[@L[cds.sales/domains/domain-configuration:step.number]@L]</span><span class="step_text weight-light">[@L[cds.sales/domains/domain-configuration:step.title.business]@L]</span></h2>
+          </div>
+          <div class="step-separator"><span></span></div>
+        </div>
+        
+        <div class="step-wrapper" id="step-businessandcertified">  
+          <div class="step">
+            <div class="section left">
+              <h3 class="weight-ultra">[@L[cds.sales/domains/domain-configuration:business.registration]@L]</h3>
+              <p class="fg-orange">[@L[cds.sales/domains/domain-configuration:get.an.online.business.card.seal]@L]</p>
+            </div>
+            <div class="section right">
+              <div id="businessandcertified-nothanks" class="">
+                <h3 class="weight-light"><span data-id="dpp_no_selection_bundle" data-ci="86232" class="radio">&nbsp;</span><p><span>[@L[cds.sales/domains/domain-configuration:no.thanks]@L]</span></p></h3>
+              </div>
+              <div id="businessandcertified-dpp_business_only_bundle" class="last">
+                <h3 class="weight-light"><span data-id="dpp_business_only_bundle" data-ci="86234" class="radio">&nbsp;</span><p>[@L[cds.sales/domains/domain-configuration:business.registration.certified.domain]@L]</p></h3>
+                <p>
+                  [@L[cds.sales/domains/domain-configuration:get.more.hits.visits.and.sales]@L]
+                  <span class="g-toolTip">
+                    <span>
+                      - <span class="weight-bold">[@L[cds.sales/domains/domain-configuration:certified.domain]@L]</span> [@L[cds.sales/domains/domain-configuration:proves.to.visitors.that.your]@L]
+                      <br/>
+                      <br/>
+                      - <span class="weight-bold">[@L[cds.sales/domains/domain-configuration:business.registration]@L]</span> [@L[cds.sales/domains/domain-configuration:creates.an.online.business.card]@L]
+                    </span>
+                  </span>
+                </p>
+                <p class="price weight-bold fg-orange">
+                  [@L[cds.sales/domains/domain-configuration:price.per.domain]@L]
+                </p>
+              </div>
+            </div>
+            <h2 class="flag blue"><span class="number-template weight-bold">[@L[cds.sales/domains/domain-configuration:step.number]@L]</span><span class="step_text weight-light">[@L[cds.sales/domains/domain-configuration:step.title.business]@L]</span></h2>
+          </div>
+          <div class="step-separator"><span></span></div>
+        </div>
+        
+        <div class="step-wrapper" id="step-term">            
+          <div class="step term">
+            <div class="section full">
+              <h3 class="weight-ultra">[@L[cds.sales/domains/domain-configuration:term.headline]@L]</h3>
+              <p class="weight-light">[@L[cds.sales/domains/domain-configuration:term.subline]@L]</p>
+              <div id="year_plan" class="plan-droplist-select select-disable">
+                <div class="plan-droplist-selected">
+                  <span>[@L[cds.sales/domains/domain-configuration:one.year]@L]</span>
+                </div>
+          
+                <div id="year-selectbtn" class="plan-droplist-selectbtn">
+                  <span></span>
+                </div>
+                <div id="one-year-template" style="display:none;">
+                  <div class="plan-option">
+                    <span class="title">[@L[cds.sales/domains/domain-configuration:one.year]@L]</span>
+                  </div>  
+                </div>
+                <div id="n-years-template" style="display:none;">
+                  <div class="plan-option ">
+                    <span class="title">[@L[cds.sales/domains/domain-configuration:two.or.more.years]@L]</span>
+                  </div>  
+                </div>
+                <div id="year-plan-list" data-ci="86235" class="plan-droplist">
+                </div>
+              </div>
+            </div>
+            <h2 class="flag orange"><span class="number-template weight-bold">[@L[cds.sales/domains/domain-configuration:step.number]@L]</span><span class="step_text weight-light">[@L[cds.sales/domains/domain-configuration:step.title.term]@L]</span></h2>
+          </div>
+          <div class="step-separator"><span></span></div>
+        </div>
+        
+        ##if(splitTestingSideIsActive(1167, A))
+        <div class="step-wrapper" id="step-websitebuilderandhosting">  
+          <div class="step options">
+            <div id="buildmywebsite" class="section split left">
+              <h3 class="weight-ultra">[@L[cds.sales/domains/domain-configuration:build.my.website]@L]</h3>
+              <p>[@L[cds.sales/domains/domain-configuration:the.godaddy.website.builder.makes]@L]</p>
+              <p class="last price weight-regular fg-orange">[@L[cds.sales/domains/domain-configuration:as.low.as.per.month.free.domain]@L]</p>
+              <p class="checkbox">
+                <span data-ci="86236" class="icon"><span>&nbsp;</span></span> 
+                <span class="weight-bold">[@L[cds.sales/domains/domain-configuration:website.builder]@L] + [@L[cds.sales/domains/domain-configuration:hosting]@L]</span>
+              </p>
+            </div>
+            <div id="buildmywebsite-options" class="section split right">
+              <div id="websitebuilderandhosting-dpp_xs_wst_economy" class="">
+                <h3 class="weight-light"><span data-id="dpp_xs_wst_economy" data-ci="86238" class="radio"></span><p>[@L[cds.sales/domains/domain-configuration:personal]@L]</p></h3>
+                <li>[@L[cds.sales/domains/domain-configuration:personal.themes]@L]</li>
+                <p class="price weight-bold fg-orange"><span class="list-price weight-light"></span>[@L[cds.sales/domains/domain-configuration:price.per.month]@L]</p>
+              </div>
+              <div id="websitebuilderandhosting-dpp_xs_wst_deluxe">
+                <h3 class="weight-light"><span data-id="dpp_xs_wst_deluxe" data-ci="86239" class="radio"></span><p>[@L[cds.sales/domains/domain-configuration:business]@L]</p></h3>
+                <li>[@L[cds.sales/domains/domain-configuration:business.personal.themes]@L]</li>
+                <li>[@L[cds.sales/domains/domain-configuration:business.email.adressess]@L]</li>
+                <li>[@L[cds.sales/domains/domain-configuration:mobile.site]@L]</li>
+                <p class="price weight-bold fg-orange"><span class="list-price weight-light"></span>[@L[cds.sales/domains/domain-configuration:price.per.month]@L]</p>
+              </div>
+              <div id="websitebuilderandhosting-dpp_xs_wst_premium" class="last">
+                <h3 class="weight-light"><span data-id="dpp_xs_wst_premium" data-ci="86240" class="radio"></span><p>[@L[cds.sales/domains/domain-configuration:business.plus]@L]</p></h3>
+                <li>[@L[cds.sales/domains/domain-configuration:business.personal.themes]@L]</li>
+                <li>[@L[cds.sales/domains/domain-configuration:business.plus.email.adressess]@L]</li>
+                <li>[@L[cds.sales/domains/domain-configuration:mobile.site]@L]</li>
+                <li>[@L[cds.sales/domains/domain-configuration:ssl.certificates]@L]</li>
+                <p class="price weight-bold fg-orange"><span class="list-price weight-light"></span>[@L[cds.sales/domains/domain-configuration:price.per.month]@L]</p>
+              </div>
+            </div>
+            <div id="hostmywebsite-options" class="section split left">
+              <div id="websitebuilderandhosting-dpp_xs_hosting_diablo_economy_linux">
+                <h3 class="weight-light"><span data-id="dpp_xs_hosting_diablo_economy_linux" data-ci="86241" class="radio"></span><p>[@L[cds.sales/domains/domain-configuration:economy]@L]</p></h3>
+                <li>[@L[cds.sales/domains/domain-configuration:webhosting.econ.li.1]@L]</li>
+                <li>[@L[cds.sales/domains/domain-configuration:webhosting.econ.li.2]@L]</li>
+                <li>[@L[cds.sales/domains/domain-configuration:webhosting.econ.li.3]@L]</li>
+                <li>[@L[cds.sales/domains/domain-configuration:webhosting.econ.li.4]@L]</li>
+                <li>[@L[cds.sales/domains/domain-configuration:webhosting.econ.li.5]@L]</li>
+                <p class="price weight-bold fg-orange"><span class="list-price weight-light"></span>[@L[cds.sales/domains/domain-configuration:price.per.month]@L]</p>
+              </div>
+              <div id="websitebuilderandhosting-dpp_xs_hosting_diablo_deluxe_linux">
+                <h3 class="weight-light"><span data-id="dpp_xs_hosting_diablo_deluxe_linux" data-ci="86242" class="radio"></span><p>[@L[cds.sales/domains/domain-configuration:deluxe]@L]</p></h3>
+                <li>[@L[cds.sales/domains/domain-configuration:webhosting.del.li.1]@L]</li>
+                <li>[@L[cds.sales/domains/domain-configuration:webhosting.del.li.2]@L]</li>
+                <li>[@L[cds.sales/domains/domain-configuration:webhosting.del.li.3]@L]</li>
+                <li>[@L[cds.sales/domains/domain-configuration:webhosting.del.li.4]@L]</li>
+                <li>[@L[cds.sales/domains/domain-configuration:webhosting.del.li.5]@L]</li>
+                <p class="price weight-bold fg-orange"><span class="list-price weight-light"></span>[@L[cds.sales/domains/domain-configuration:price.per.month]@L]</p>
+              </div>
+              <div id="websitebuilderandhosting-dpp_xs_hosting_diablo_ultimate_linux" class="last">
+                <h3 class="weight-light"><span data-id="dpp_xs_hosting_diablo_ultimate_linux" data-ci="86243" class="radio"></span><p>[@L[cds.sales/domains/domain-configuration:ultimate]@L]</p></h3>
+                <li>[@L[cds.sales/domains/domain-configuration:webhosting.ult.li.1]@L]</li>
+                <li>[@L[cds.sales/domains/domain-configuration:webhosting.ult.li.2]@L]</li>
+                <li>[@L[cds.sales/domains/domain-configuration:webhosting.ult.li.3]@L]</li>
+                <li>[@L[cds.sales/domains/domain-configuration:webhosting.ult.li.4]@L]</li>
+                <li>[@L[cds.sales/domains/domain-configuration:webhosting.ult.li.5]@L]</li>
+                <li>[@L[cds.sales/domains/domain-configuration:webhosting.ult.li.6]@L]</li>
+                <li>[@L[cds.sales/domains/domain-configuration:webhosting.ult.li.7]@L]</li>
+                <p class="price weight-bold fg-orange"><span class="list-price weight-light"></span>[@L[cds.sales/domains/domain-configuration:price.per.month]@L]</p>
+              </div>
+            </div>
+            <div id="hostmywebsite" class="section split right">
+              <h3 class="weight-ultra">[@L[cds.sales/domains/domain-configuration:host.my.website]@L]</h3>
+              <p>[@L[cds.sales/domains/domain-configuration:godaddy.hosting.provides.an.easy]@L]</p>              
+              <p class="last price weight-regular fg-orange">[@L[cds.sales/domains/domain-configuration:as.low.as.per.month.free.domain]@L]</p>
+              <p class="checkbox">
+                <span data-ci="86237" class="icon"><span>&nbsp;</span></span> 
+                <span class="weight-bold">[@L[cds.sales/domains/domain-configuration:hosting]@L]</span>
+              </p>
+            </div>
+            <h2 class="flag blue"><span class="number-template weight-bold">[@L[cds.sales/domains/domain-configuration:step.number]@L]</span><span class="step_text weight-light">[@L[cds.sales/domains/domain-configuration:step.title.hosting]@L]</span></h2>
+            <div id="or" class="diamond-wrap">
+              <div class="diamond"></div><span class="weight-bold">[@L[cds.sales/domains/domain-configuration:or]@L]</span>
+            </div>
+          </div>   
+          <div class="step-separator"><span></span></div>
+        </div>
+
+        ##elseif(splitTestingSideIsActive(1167, B))
+        <div class="step-wrapper" id="step-websitebuilderandhosting">  
+          <div class="step options">
+
+            <div id="buildmywebsite" class="section split left split-b">
+              <p class="checkbox">
+                <span data-ci="86236" class="icon"><span>&nbsp;</span></span> 
+                <span class="weight-light">[@L[cds.sales/domains/domain-configuration:website.builder]@L] + [@L[cds.sales/domains/domain-configuration:hosting]@L]</span>
+              </p>
+              <p class="weight-light">[@L[cds.sales/domains/domain-configuration:step.wsbAndHosing.wsb.desc]@L]</p>
+              <p class="weight-light">[@L[cds.sales/domains/domain-configuration:step.wsbAndHosing.wsb.perfect]@L]</p>
+              ##if(siteContextAny(gd))
+              <p class="price weight-light fg-orange">[@L[cds.sales/domains/domain-configuration:as.low.as.per.month.free.domain.splitB]@L]</p>
+              ##endif
+              <div id="websitebuilder-plan" class="plan-droplist-select select-disable">
+                <div class="plan-droplist-selected">
+                  <span>[@L[cds.sales/domains/domain-configuration:deluxe]@L]</span><span class= "list-price"></span><span class="price fg-orange" >[@L[cds.sales/domains/domain-configuration:price.per.month]@L]</span>
+                </div>          
+                <div id="websitebuilder-selectbtn" class="plan-droplist-selectbtn"><span></span></div>          
+                <div id="websitebuilder-list" class="plan-droplist">
+                  <div data-id="dpp_xs_wst_economy" data-ci="86238" id="websitebuilderandhosting-dpp_xs_wst_economy" class="plan-option">
+                    <span class="title">[@L[cds.sales/domains/domain-configuration:personal]@L]</span>
+                    <span class="plan-droplist-price weight-bold fg-orange"><span class="list-price weight-light"></span>[@L[cds.sales/domains/domain-configuration:price.per.month]@L]</span>
+                    <ul class="plan-feature-list">
+                      <li class="message">[@L[cds.sales/domains/domain-configuration:personal.themes]@L]</li>
+                    </ul>
+                  </div>  
+                  <div data-id="dpp_xs_wst_deluxe" data-ci="86239" id="websitebuilderandhosting-dpp_xs_wst_deluxe" class="plan-option">
+                    <span class="title">[@L[cds.sales/domains/domain-configuration:business]@L]</span>
+                    <span class="plan-droplist-price weight-bold fg-orange"><span class="list-price weight-light"></span>[@L[cds.sales/domains/domain-configuration:price.per.month]@L]</span>
+                    <ul class="plan-feature-list">
+                      <li>[@L[cds.sales/domains/domain-configuration:business.personal.themes]@L]</li>
+                      <li>[@L[cds.sales/domains/domain-configuration:business.email.adressess]@L]</li>
+                      <li>[@L[cds.sales/domains/domain-configuration:mobile.site]@L]</li>
+                    </ul>
+                  </div>
+                  <div data-id="dpp_xs_wst_premium" data-ci="86240" id="websitebuilderandhosting-dpp_xs_wst_premium" class="plan-option">
+                    <span class="title">[@L[cds.sales/domains/domain-configuration:business.plus]@L]</span>
+                    <span class="plan-droplist-price weight-bold fg-orange"><span class="list-price weight-light"></span>[@L[cds.sales/domains/domain-configuration:price.per.month]@L]</span>
+                    <ul class="plan-feature-list">
+                      <li>[@L[cds.sales/domains/domain-configuration:business.personal.themes]@L]</li>
+                      <li>[@L[cds.sales/domains/domain-configuration:business.plus.email.adressess]@L]</li>
+                      <li>[@L[cds.sales/domains/domain-configuration:mobile.site]@L]</li>
+                      <li>[@L[cds.sales/domains/domain-configuration:ssl.certificates]@L]</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div id="hostmywebsite" class="section split right split-b">   
+              <p class="checkbox">
+                <span data-ci="86237" class="icon"><span>&nbsp;</span></span> 
+                <span class="weight-light">[@L[cds.sales/domains/domain-configuration:hosting]@L]</span>
+              </p>
+              <p class="weight-light">[@L[cds.sales/domains/domain-configuration:step.wsbAndHosing.hosting.desc]@L]</p>
+              <p class="weight-light">[@L[cds.sales/domains/domain-configuration:step.wsbAndHosing.hosting.perfect]@L]</p>
+              ##if(siteContextAny(gd))
+              <p class="price weight-light fg-orange">[@L[cds.sales/domains/domain-configuration:as.low.as.per.month.free.domain.splitB]@L]</p>
+              ##endif
+              <div id="hosting-plan" class="plan-droplist-select select-disable">
+                <div class="plan-droplist-selected">
+                  <span>[@L[cds.sales/domains/domain-configuration:economy]@L]</span><span class= "list-price"></span><span class="price fg-orange" >[@L[cds.sales/domains/domain-configuration:price.per.month]@L]</span>
+                </div>          
+                <div id="hosting-selectbtn" class="plan-droplist-selectbtn"><span></span></div>          
+                <div id="hosting-list" class="plan-droplist">
+                  ##if(siteContextAny(gd))
+                  <div data-id="dpp_xs_hosting_diablo_economy_linux" data-ci="86241" id="websitebuilderandhosting-dpp_xs_hosting_diablo_economy_linux" class="plan-option">
+                  ##else   
+                  <div data-id="dpp_xs_hosting_economy_linux" data-ci="86241" id="websitebuilderandhosting-dpp_xs_hosting_economy_linux" class="plan-option">
+                  ##endif  
+                    <span class="title">[@L[cds.sales/domains/domain-configuration:economy]@L]</span>
+                    <span class="plan-droplist-price weight-bold fg-orange"><span class="list-price weight-light"></span>[@L[cds.sales/domains/domain-configuration:price.per.month]@L]</span>
+                    <ul class="plan-feature-list">
+                      <li>[@L[cds.sales/domains/domain-configuration:webhosting.econ.li.1]@L]</li>
+                      <li>[@L[cds.sales/domains/domain-configuration:webhosting.econ.li.2]@L]</li>
+                      <li>[@L[cds.sales/domains/domain-configuration:webhosting.econ.li.3]@L]</li>
+                      <li>[@L[cds.sales/domains/domain-configuration:webhosting.econ.li.4]@L]</li>
+                      <li>[@L[cds.sales/domains/domain-configuration:webhosting.econ.li.5]@L]</li>
+                    </ul>
+                  </div>
+                  ##if(siteContextAny(gd))  
+                  <div data-id="dpp_xs_hosting_diablo_deluxe_linux" data-ci="86242" id="websitebuilderandhosting-dpp_xs_hosting_diablo_deluxe_linux" class="plan-option">
+                  ##else   
+                  <div data-id="dpp_xs_hosting_deluxe_linux" data-ci="86242" id="websitebuilderandhosting-dpp_xs_hosting_deluxe_linux" class="plan-option">
+                  ##endif  
+                    <span class="title">[@L[cds.sales/domains/domain-configuration:deluxe]@L]</span>
+                    <span class="plan-droplist-price weight-bold fg-orange"><span class="list-price weight-light"></span>[@L[cds.sales/domains/domain-configuration:price.per.month]@L]</span>
+                    <ul class="plan-feature-list">
+                      <li>[@L[cds.sales/domains/domain-configuration:webhosting.del.li.1]@L]</li>
+                      <li>[@L[cds.sales/domains/domain-configuration:webhosting.del.li.2]@L]</li>
+                      <li>[@L[cds.sales/domains/domain-configuration:webhosting.del.li.3]@L]</li>
+                      <li>[@L[cds.sales/domains/domain-configuration:webhosting.del.li.4]@L]</li>
+                      <li>[@L[cds.sales/domains/domain-configuration:webhosting.del.li.5]@L]</li>
+                    </ul>
+                  </div>
+                  ##if(siteContextAny(gd))  
+                  <div data-id="dpp_xs_hosting_diablo_ultimate_linux" data-ci="86243" id="websitebuilderandhosting-dpp_xs_hosting_diablo_ultimate_linux" class="plan-option">
+                  ##else  
+                  <div data-id="dpp_xs_hosting_ultimate_linux" data-ci="86243" id="websitebuilderandhosting-dpp_xs_hosting_ultimate_linux" class="plan-option">
+                  ##endif  
+                    <span class="title">[@L[cds.sales/domains/domain-configuration:ultimate]@L]</span>
+                    <span class="plan-droplist-price weight-bold fg-orange"><span class="list-price weight-light"></span>[@L[cds.sales/domains/domain-configuration:price.per.month]@L]</span>
+                    <ul class="plan-feature-list">
+                      <li>[@L[cds.sales/domains/domain-configuration:webhosting.ult.li.1]@L]</li>
+                      <li>[@L[cds.sales/domains/domain-configuration:webhosting.ult.li.2]@L]</li>
+                      <li>[@L[cds.sales/domains/domain-configuration:webhosting.ult.li.3]@L]</li>
+                      <li>[@L[cds.sales/domains/domain-configuration:webhosting.ult.li.4]@L]</li>
+                      <li>[@L[cds.sales/domains/domain-configuration:webhosting.ult.li.5]@L]</li>
+                      <li>[@L[cds.sales/domains/domain-configuration:webhosting.ult.li.6]@L]</li>
+                      <li>[@L[cds.sales/domains/domain-configuration:webhosting.ult.li.7]@L]</li>
+                    </ul>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <h2 class="flag blue"><span class="number-template weight-bold">[@L[cds.sales/domains/domain-configuration:step.number]@L]</span><span class="step_text weight-light">[@L[cds.sales/domains/domain-configuration:step.title.hosting]@L]</span></h2>
+            <div id="or" class="diamond-wrap">
+              <div class="diamond"></div><span class="weight-bold">[@L[cds.sales/domains/domain-configuration:or]@L]</span>
+            </div>
+          </div>   
+          <div class="step-separator"><span></span></div>
+        </div>
+        ##endif
+        <div class="step-wrapper" id="step-websitebuilder">  
+          <div class="step options allow-radio-unselect">
+            <div class="section split left">
+              <h3 class="weight-ultra">[@L[cds.sales/domains/domain-configuration:build.my.website]@L]</h3>
+              <p> [@L[cds.sales/domains/domain-configuration:the.godaddy.website.builder.makes]@L]</p>
+              <p class="last price weight-regular fg-orange">[@L[cds.sales/domains/domain-configuration:as.low.as.per.month.free.domain]@L]</p>
+            </div>
+            <div class="section split right">
+              <div id="websitebuilder-dpp_xs_wst_economy">
+                <h3 class="weight-light"><span data-id="dpp_xs_wst_economy" data-ci="86238" class="radio"></span><p>[@L[cds.sales/domains/domain-configuration:personal]@L]</p></h3>
+                <li>[@L[cds.sales/domains/domain-configuration:personal.themes]@L]</li>
+                <p class="price weight-bold fg-orange">[@L[cds.sales/domains/domain-configuration:price.per.month]@L]</p>
+              </div>
+              <div id="websitebuilder-dpp_xs_wst_deluxe">
+                <h3 class="weight-light"><span data-id="dpp_xs_wst_deluxe" data-ci="86239" class="radio"></span><p>[@L[cds.sales/domains/domain-configuration:business]@L]</p></h3>
+                <li>[@L[cds.sales/domains/domain-configuration:business.personal.themes]@L]</li>
+                <li>[@L[cds.sales/domains/domain-configuration:business.email.adressess]@L]</li>
+                <li>[@L[cds.sales/domains/domain-configuration:mobile.site]@L]</li>
+                <p class="price weight-bold fg-orange">[@L[cds.sales/domains/domain-configuration:price.per.month]@L]</p>
+              </div>
+              <div id="websitebuilder-dpp_xs_wst_premium" class="last">
+                <h3 class="weight-light"><span data-id="dpp_xs_wst_premium" data-ci="86240" class="radio"></span><p>[@L[cds.sales/domains/domain-configuration:business.plus]@L]</p></h3>
+                <li>[@L[cds.sales/domains/domain-configuration:business.personal.themes]@L]</li>
+                <li>[@L[cds.sales/domains/domain-configuration:business.email.adressess]@L]</li>
+                <li>[@L[cds.sales/domains/domain-configuration:mobile.site]@L]</li>
+                <li>[@L[cds.sales/domains/domain-configuration:ssl.certificates]@L]</li>
+                <p class="price weight-bold fg-orange">[@L[cds.sales/domains/domain-configuration:price.per.month]@L]</p>
+              </div>
+            </div>
+            <h2 class="flag blue"><span class="number-template weight-bold">[@L[cds.sales/domains/domain-configuration:step.number]@L]</span><span class="step_text weight-light">[@L[cds.sales/domains/domain-configuration:step.title.hosting]@L]</span></h2>
+          </div>   
+          <div class="step-separator"><span></span></div>
+        </div>
+
+        <div class="step-wrapper" id="step-hosting">  
+          <div class="step options allow-radio-unselect">
+            <div class="section split left">
+              <h3 class="weight-light">[@L[cds.sales/domains/domain-configuration:host.my.website]@L]</h3>
+              <p>[@L[cds.sales/domains/domain-configuration:godaddy.hosting.provides.an.easy]@L]</p>
+              <p class="last price weight-regular fg-orange">[@L[cds.sales/domains/domain-configuration:as.low.as.per.month.free.domain]@L]</p>
+            </div>
+            <div class="section split right">
+              <div id="hosting-dpp_xs_hosting_economy_linux">
+                <h3 class="weight-light"><span data-id="dpp_xs_hosting_economy_linux" data-ci="86241" class="radio"></span><p>[@L[cds.sales/domains/domain-configuration:economy]@L]</p></h3>
+                   <li>[@L[cds.sales/domains/domain-configuration:webhosting.econ.li.1]@L]</li>
+                   <li>[@L[cds.sales/domains/domain-configuration:webhosting.econ.li.2]@L]</li>
+                   <li>[@L[cds.sales/domains/domain-configuration:webhosting.econ.li.3]@L]</li>
+                   <li>[@L[cds.sales/domains/domain-configuration:webhosting.econ.li.4]@L]</li>
+                   <li>[@L[cds.sales/domains/domain-configuration:webhosting.econ.li.5]@L]</li>
+                <p class="price weight-bold fg-orange">[@L[cds.sales/domains/domain-configuration:price.per.month]@L]</p>
+              </div>
+              <div id="hosting-dpp_xs_hosting_deluxe_linux">
+                <h3 class="weight-light"><span data-id="dpp_xs_hosting_deluxe_linux" data-ci="86242" class="radio"></span><p>[@L[cds.sales/domains/domain-configuration:deluxe]@L]</p></h3>
+                <li>[@L[cds.sales/domains/domain-configuration:webhosting.del.li.1]@L]</li>
+                <li>[@L[cds.sales/domains/domain-configuration:webhosting.del.li.2]@L]</li>
+                <li>[@L[cds.sales/domains/domain-configuration:webhosting.del.li.3]@L]</li>
+                <li>[@L[cds.sales/domains/domain-configuration:webhosting.del.li.4]@L]</li>
+                <li>[@L[cds.sales/domains/domain-configuration:webhosting.del.li.5]@L]</li>
+                <p class="price weight-bold fg-orange">[@L[cds.sales/domains/domain-configuration:price.per.month]@L]</p>
+              </div>
+              <div id="hosting-dpp_xs_hosting_ultimate_linux" class="last">
+                <h3 class="weight-light"><span data-id="dpp_xs_hosting_ultimate_linux" data-ci="86243" class="radio"></span><p>[@L[cds.sales/domains/domain-configuration:ultimate]@L]</p></h3>
+                <li>[@L[cds.sales/domains/domain-configuration:webhosting.ult.li.1]@L]</li>
+                <li>[@L[cds.sales/domains/domain-configuration:webhosting.ult.li.2]@L]</li>
+                <li>[@L[cds.sales/domains/domain-configuration:webhosting.ult.li.3]@L]</li>
+                <li>[@L[cds.sales/domains/domain-configuration:webhosting.ult.li.4]@L]</li>
+                <li>[@L[cds.sales/domains/domain-configuration:webhosting.ult.li.5]@L]</li>
+                <li>[@L[cds.sales/domains/domain-configuration:webhosting.ult.li.6]@L]</li>
+                <li>[@L[cds.sales/domains/domain-configuration:webhosting.ult.li.7]@L]</li>
+                <p class="price weight-bold fg-orange">[@L[cds.sales/domains/domain-configuration:price.per.month]@L]</p>
+              </div>
+            </div>
+            <h2 class="flag blue"><span class="number-template weight-bold">[@L[cds.sales/domains/domain-configuration:step.number]@L]</span><span class="step_text weight-light">[@L[cds.sales/domains/domain-configuration:step.title.hosting]@L]</span></h2>
+          </div>   
+          <div class="step-separator"><span></span></div>
+        </div>
+
+        <div class="step-wrapper" id="step-email">    
+          <div class="step">
+            <div class="section">
+              <h3 class="droplist-steptype-h3 weight-ultra">[@L[cds.sales/domains/domain-configuration:add.email.to.your.domain]@L]</h3>
+              <p class="droplist-steptype-p droplist-steptype-low-price fg-orange price">[@L[cds.sales/domains/domain-configuration:as.low.as.per.month]@L]</p>
+              <p class="droplist-steptype-p weight-light">[@L[cds.sales/domains/domain-configuration:get.reliable.mobile.ready.email]@L]</p>
+              <div id="email_plan" class="plan-droplist-select select-disable">
+                <div class="plan-droplist-selected">
+                  <span>[@L[cds.sales/domains/domain-configuration:no.thanks]@L]</span><span class="price fg-orange" >[@L[cds.sales/domains/domain-configuration:price.per.month]@L]</span>
+                </div>          
+                <div id="email-selectbtn" class="plan-droplist-selectbtn"><span></span></div>          
+                <div id="email-list" class="plan-droplist">
+                  <div data-id="dpp_xs_email_no_selection" data-ci="86244" id="email-no" class="plan-option plan-option-selected">
+                    <span class="title">[@L[cds.sales/domains/domain-configuration:no.thanks]@L]</span>
+                  </div> 
+                  <div data-id="dpp_xs_email_deluxe" data-ci="86245" id="email-dpp_xs_email_deluxe" class="plan-option">
+                    <span class="title">[@L[cds.sales/domains/domain-configuration:business.email]@L]</span>
+                    <span class="plan-droplist-price fg-orange">[@L[cds.sales/domains/domain-configuration:price.per.month]@L]</span>
+                    <span>
+                      <ul class="plan-feature-list">
+                        <li>[@L[cds.sales/domains/domain-configuration:five.addresses]@L]</li>
+                        <li>[@L[cds.sales/domains/domain-configuration:two.gb.storage]@L]</li>
+                        <li>[@L[cds.sales/domains/domain-configuration:group.calendar]@L]</li>
+                        <li>[@L[cds.sales/domains/domain-configuration:cloud.storage]@L]</li>
+                      </ul>
+                    </span>
+                  </div>  
+                  <div data-id="dpp_xs_email_unlimited" data-ci="86246" id="email-dpp_xs_email_unlimited" class="plan-option">
+                    <span class="title">[@L[cds.sales/domains/domain-configuration:unlimited.business.email]@L]</span>
+                    <span class="plan-droplist-price fg-orange">[@L[cds.sales/domains/domain-configuration:price.per.month]@L]</span>
+                    <span>
+                      <ul class="plan-feature-list">
+                        <li>[@L[cds.sales/domains/domain-configuration:ten.addresses]@L]</li>
+                        <li>[@L[cds.sales/domains/domain-configuration:unlimited.storage]@L]</li>
+                        <li>[@L[cds.sales/domains/domain-configuration:group.calendar]@L]</li>
+                        <li>[@L[cds.sales/domains/domain-configuration:cloud.storage]@L]</li>
+                      </ul>
+                    </span>
+                  </div>
+                  ##if(!siteContextAny(pl))
+                  <div data-id="dpp_xs_email_suite" data-ci="86247" id="email-dpp_xs_email_suite" class="plan-option">
+                    <span class="title">[@L[cds.sales/domains/domain-configuration:unlimited.email]@L]</span>
+                    <span class="plan-droplist-price fg-orange">[@L[cds.sales/domains/domain-configuration:price.per.month]@L]</span>
+                    <span>
+                      <ul class="plan-feature-list">
+                        <li>[@L[cds.sales/domains/domain-configuration:includes.everything.you.need.to.say]@L]</li>
+                      </ul>
+                    </span>
+                  </div>
+                  ##endif
+                </div>
+              </div>
+            </div>
+            <h2 class="flag ltred"><span class="number-template weight-bold">[@L[cds.sales/domains/domain-configuration:step.number]@L]</span><span class="step_text weight-light">[@L[cds.sales/domains/domain-configuration:step.title.email]@L]</span></h2>
+          </div>
+          <div class="step-separator"><span></span></div>
+        </div> 
+
+        <div class="step-wrapper" id="step-o365">    
+          <div class="step">
+            <div class="section">
+              <h3 class="droplist-steptype-h3 weight-ultra">[@L[cds.sales/domains/domain-configuration:add.email.to.your.domain]@L]</h3>
+              <p class="droplist-steptype-p droplist-steptype-low-price fg-orange price">[@L[cds.sales/domains/domain-configuration:as.low.as.per.month]@L]</p>
+              <p class="droplist-steptype-p weight-light">[@L[cds.sales/domains/domain-configuration:step.o365.text]@L]</p>
+              <div id="o365_plan" class="plan-droplist-select select-disable">
+                <div class="plan-droplist-selected">
+                  <span>[@L[cds.sales/domains/domain-configuration:no.thanks]@L]</span><span class="price fg-orange" >[@L[cds.sales/domains/domain-configuration:price.per.month]@L]</span>
+                </div>          
+                <div id="o365-selectbtn" class="plan-droplist-selectbtn"><span></span></div>          
+                <div id="o365-list" class="plan-droplist">
+                  <div data-id="dpp_xs_o365_no_selection" data-ci="86244" id="o365-no" class="plan-option plan-option-selected">
+                    <span class="title">[@L[cds.sales/domains/domain-configuration:no.thanks]@L]</span>
+                  </div> 
+                  <div data-id="dpp_xs_o365_email" data-ci="87159" id="o365-dpp_xs_o365_email" class="plan-option">
+                    <span class="title">[@L[cds.sales/domains/domain-configuration:step.o365.plan1.title]@L]</span>
+                    <span class="plan-droplist-price fg-orange">[@L[cds.sales/domains/domain-configuration:price.per.month]@L]</span>
+                    <span>
+                      <ul class="plan-feature-list">
+                        <li>[@L[cds.sales/domains/domain-configuration:step.o365.plan1.li1]@L]</li>
+                        <li>[@L[cds.sales/domains/domain-configuration:step.o365.plan1.li2]@L]</li>
+                        <li>[@L[cds.sales/domains/domain-configuration:step.o365.plan1.li3]@L]</li>
+                      </ul>
+                    </span>
+                  </div>  
+                  <div data-id="dpp_xs_o365_business" data-ci="87160" id="o365-dpp_xs_o365_business" class="plan-option">
+                    <span class="title">[@L[cds.sales/domains/domain-configuration:step.o365.plan2.title.OnlineEssentials]@L]</span>
+                    <span class="plan-droplist-price fg-orange">[@L[cds.sales/domains/domain-configuration:price.per.month]@L]</span>
+                    <span class="title">[@L[cds.sales/domains/domain-configuration:step.o365.plan2.list.title]@L]</span>
+                    <span>
+                      <ul class="plan-feature-list">
+                        <li>[@L[cds.sales/domains/domain-configuration:step.o365.plan2.li1]@L]</li>
+                        <li>[@L[cds.sales/domains/domain-configuration:step.o365.plan2.li2]@L]</li>
+                        <!--<li>[@L[cds.sales/domains/domain-configuration:step.o365.plan2.li3]@L]</li>-->
+                        <li>[@L[cds.sales/domains/domain-configuration:step.o365.plan2.li4]@L]</li>
+                        <li>[@L[cds.sales/domains/domain-configuration:step.o365.plan2.li5]@L]</li>
+                      </ul>
+                    </span>
+                  </div>
+                  <div data-id="dpp_xs_o365_premium" data-ci="87161" id="o365-dpp_xs_o365_premium" class="plan-option">
+                    <span class="title">[@L[cds.sales/domains/domain-configuration:step.o365.plan3.title.BusinessPremium]@L]</span>
+                    <span class="plan-droplist-price fg-orange">[@L[cds.sales/domains/domain-configuration:price.per.month]@L]</span>
+                    <span class="title">[@L[cds.sales/domains/domain-configuration:step.o365.plan3.list.title.OnlineEssentials]@L]</span>
+                    <span>
+                      <ul class="plan-feature-list">
+                        <li>[@L[cds.sales/domains/domain-configuration:step.o365.plan3.li1]@L]</li>
+                        <li>[@L[cds.sales/domains/domain-configuration:step.o365.plan3.li2]@L]</li>
+                      </ul>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h2 class="flag ltred"><span class="number-template weight-bold">[@L[cds.sales/domains/domain-configuration:step.number]@L]</span><span class="step_text weight-light">[@L[cds.sales/domains/domain-configuration:step.title.email]@L]</span></h2>
+          </div>
+          <div class="step-separator"><span></span></div>
+        </div> 
+        
+        
+        <div id="serp-footer" class="clearfix">         
+          <div id="limitations-wrap" class="left" style="width:383px">  
+            <p>[@L[cds.sales/domains/domain-configuration:limitations.symbols]@L]&nbsp;<a  id="limitations-link" data-ci="86249" href="javascript:void(0);">[@L[cds.sales/domains/domain-configuration:limitations.link]@L]</a></p>         
+          </div>          
+          <div id="buttons-wrap" class="right clearfix" style="margin-left:414px;float:none">
+            <a id="btn-continue-to-cart" data-ci="86248" class="btn btn-warning btn-lg js-addtocart"><span class="icon-shopping-cart"></span> [@L[cds.sales/domains/domain-configuration:continue.to.cart]@L]</a>
+          </div>
+          
+        </div>
+      </div>
+      <div class="right ordersummary-wrap">
+
+      ##if(splitTestingSideIsActive(1177, A))
+        <div id="order-summary" class="weight-bold">
+          <p class="summary-footer-padded">[@L[cds.sales/domains/domain-configuration:scroll.down.to.continue]@L]<span>&nbsp;</span></p>
+        </div>
+      ##elseif(splitTestingSideIsActive(1177, B))
+        
+        <div id="order-summary" class="weight-bold">
+         
+          <div class="header-title">[@L[cds.sales/domains/domain-configuration:summary.title]@L]</div>
+                     
+          <div class="os-tld-template" style="display: none;" >
+            <div class="product-friendly-name">{2}</div>
+            <div class="number-domains" style="display:none;">[@L[cds.sales/domains/domain-configuration:summary.n.domains]@L]</div>
+            <p class="line-total">
+              <span class="term weight-regular">[@L[cds.sales/domains/domain-configuration:summary.year.term]@L]</span>
+              <span class="price right fg-orange">{3}</span>
+            </p>
+          </div> 
+          
+          <div class="os-tldfee-template" style="display: none;" >
+            <div class="product-friendly-name">{2}</div>
+            <div class="number-domains" style="display:none;">[@L[cds.sales/domains/domain-configuration:summary.n.domains]@L]</div>
+            <p class="line-total">
+              <span class="term weight-regular">[@L[cds.sales/domains/domain-configuration:summary.year.term.fee]@L]</span>
+              <span class="price right fg-orange">{3}</span>
+            </p>
+          </div>
+
+          <div class="os-bundle-template" style="display: none;" >
+            <div class="product-friendly-name">[@L[cds.sales/domains/domain-configuration:summary.domain.bundle.offer]@L]</div>
+            <p class="line-total">
+              <span class="term weight-regular">[@L[cds.sales/domains/domain-configuration:summary.year.term]@L]</span>
+              <span class="price right fg-orange">{1}</span>
+            </p>
+          </div>
+
+          <div class="os-item-template" style="display: none;" >
+            <div class="product-friendly-name">{2}</div>
+            <div class="number-domains" style="display:none;">[@L[cds.sales/domains/domain-configuration:summary.n.domains]@L]</div>
+            <p class="line-total">
+              <span class="term weight-regular">[@L[cds.sales/domains/domain-configuration:summary.year.term]@L]</span>
+              <span class="price right fg-orange">{3}</span>
+            </p>
+          </div>
+
+          <div id="order-summary-items"></div>
+          
+          <div class="subtotal-title">[@L[cds.sales/domains/domain-configuration:summary.subtotal]@L]</div>
+          <p class="total"><span class="price">{0}</span></p>
+          <p class="legal weight-regular">[@L[cds.sales/domains/domain-configuration:summary.legal]@L]</p>
+          <p class="summary-footer">[@L[cds.sales/domains/domain-configuration:scroll.down.to.continue]@L]<span>&nbsp;</span></p>
+        </div>
+      ##endif
+      </div>
+    </div>
+    
+    <div id="g-modal" class="g-modal" style="display:none;">
+      <a href="#" class="g-modal-close"><span>close</span></a>
+      <div class="g-modal-header">
+        <span class="g-modal-titlebar">[@L[cds.sales/domains/domain-configuration:limitations.modal.header]@L]</span>
+      </div>
+      <div class="g-modal-content">
+        [@L[cds.sales/domains/domain-configuration:limitations.modal.content]@L]
+      </div>
+    </div>
+    <div id="g-modal-overlay" class="g-modal-overlay" style="display:none;z-index:999"></div>
+        
+    <div id="error-modal" class="g-modal" style="display:none;">
+      <a href="#" class="g-modal-close"><span>close</span></a>
+      <div class="g-modal-content">
+        <div class="error-modal-message default">[@L[cds.sales/domains/gtld-registration:gtldTui-genericErrorText]@L]</div>
+        <div class="error-modal-message alternate"></div>
+        <div class="error-modal-footer">
+          <div class="universal-modal-close">Close</div>
+        </div>
+      </div>
+    </div> 
+    
+    [@P[webControl:<Data assembly="App_Code" type="Domains.Controls.TimeoutWarning"><Parameters><Parameter key="OnTimeoutRedirectToUrl" value="~/domains/search.aspx" /><Parameter key="Ci" value="84431" /></Parameters></Data> ]@P]
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer" />]@P]
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Script" />]@P]
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Bottom" />]@P]
+    
+    <!-- JS YOU WILL PROBABLY NEED -->
+    <script src="[@T[link:<javascriptroot />]@T]shared/js/jquery.plugins.min.20111019.js" type="text/javascript" ></script>
+    <script src="[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2" type="text/javascript"></script>
+    <script src="[@T[link:<javascriptroot />]@T]fos/sales/themes/scotty/domains/domain-config/js/domain-config10132014.js"></script>
+
+    <!--[if lte IE 8]>
+    <script src="[@T[link:<javascriptroot />]@T]fos/script/JSON2.min.js"></script>
+    <![endif]-->
+    
+    <script type="text/javascript">
+      gbl.ns.register('domains.controls');
+      $(document).ready(function() {
+        if(domains.controls.domainConfigurationClient) {
+          domains.controls.domainConfigurationClient.Initialize({
+          ##if(splitTestingSideIsActive(1163, A))
+            splitTest1163: 'A',
+          ##elseif(splitTestingSideIsActive(1163, B))
+            splitTest1163: 'B',
+          ##elseif(splitTestingSideIsActive(1163, C))
+            splitTest1163: 'C',
+          ##elseif(splitTestingSideIsActive(1163, D))
+            splitTest1163: 'D',
+          ##elseif(splitTestingSideIsActive(1163, E))
+            splitTest1163: 'E',
+          ##endif
+          ##if(splitTestingSideIsActive(1167, A))
+            splitTest1167: 'A',
+          ##elseif(splitTestingSideIsActive(1167, B))
+            splitTest1167: 'B',
+          ##endif
+          ##if(splitTestingSideIsActive(1177, A))
+            splitTest1177: 'A',
+          ##elseif(splitTestingSideIsActive(1177, B))
+            splitTest1177: 'B',
+          ##endif      
+            apiUrlLoad: '[@T[link:<relative path='/api/dppconfig/1' />]@T]', 
+            apiUrlUpdate: '[@T[link:<relative path='/api/dppconfig/2' />]@T]',
+            apiUrlToCart: '[@T[link:<relative path='/api/dppconfig/3' />]@T]',
+            errorRedirectUrl: '[@T[link:<relative path='domains/search.aspx' />]@T]',
+            waitSpinnerText: '[@L[cds.sales/domains/gtld-registration:gtldTui-spinnerText]@L]',
+            ajaxErrorText: '[@L[cds.sales/domains/gtld-registration:gtldTui-ajaxErrorText]@L]',
+            genericErrorText: '[@L[cds.sales/domains/gtld-registration:gtldTui-genericErrorText]@L]',
+            applyButtonApplyText: '[@L[cds.sales/domains/searchresults-new3:FilterApplyActionText]@L]',
+            applyButtonRemoveText: '[@L[cds.sales/domains/searchresults-new3:RemoveActionText]@L]',
+            applyButtonAddedText: '[@L[cds.sales/domains/searchresults-new3:UpdateActionText]@L]',
+            normalizedNames: {
+              dpp_xs_hosting_diablo_economy_linux: '[@L[cds.sales/domains/domain-configuration:os.normalized.name.1]@L]',
+              dpp_xs_hosting_diablo_deluxe_linux: '[@L[cds.sales/domains/domain-configuration:os.normalized.name.2]@L]',
+              dpp_xs_hosting_diablo_ultimate_linux: '[@L[cds.sales/domains/domain-configuration:os.normalized.name.3]@L]',
+              dpp_xs_hosting_economy_linux: '[@L[cds.sales/domains/domain-configuration:os.normalized.name.1]@L]',
+              dpp_xs_hosting_deluxe_linux: '[@L[cds.sales/domains/domain-configuration:os.normalized.name.2]@L]',
+              dpp_xs_hosting_ultimate_linux: '[@L[cds.sales/domains/domain-configuration:os.normalized.name.3]@L]'}
+          });
+        }
+      });
+    </script>   
+  </body>
+</html>

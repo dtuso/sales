@@ -59,22 +59,22 @@ p {
   width: 700px;
   padding: 40px 0 33px;
 }
-#serp-header>h1 {
-  color: #3182e6;
+#serp-header > h1 {
+  color: rgb(103, 155, 9);
   font-size: 26px;
   line-height: 26px;
   position: relative;
   float: left;
 }
 span.checkmark {
-  background: url("../img/dpp_sprite_pl.png") no-repeat 0 -7px;
+  background: url("../img/DPP_sprite.png") no-repeat 0 -7px;
   display: inline-block;
   height: 34px;
   margin-right: 5px;
   width: 33px;
 }
 span.checkmark.small {
-  background: url("../img/dpp_sprite_pl.png") no-repeat -33px -25px;
+  background: url("../img/DPP_sprite.png") no-repeat -33px -25px;
   display: inline-block;
   height: 16px;
   margin-right: 5px;
@@ -132,7 +132,7 @@ div.step {
   width: 700px;
 }
 div.step::after {
-  background: url("../img/dpp_sprite_pl.png") no-repeat 0 -31px;
+  background: url("../img/DPP_sprite.png") no-repeat 0px -31px;
   background-size: cover;
   bottom: -10px;
   content: "";
@@ -149,8 +149,8 @@ div.step-separator {
   width: 700px;
 }
 div.step-separator > span {
-  background: url("../img/dpp_sprite_pl.png") no-repeat -296px -32px;
-  bottom: 0;
+  background: url("../img/DPP_sprite.png") no-repeat -296px -32px;
+  bottom: 0px;
   height: 10px;
   left: 0;
   margin: auto;
@@ -168,21 +168,21 @@ div.step div.section {
   width: 100%;
 }
 div.step div.left.section {
-  border-right-color: #ccc;
+  border-right-color: rgb(204, 204, 204);
   border-right-style: solid;
   border-right-width: 2px;
   width: 350px;
 }
 div.step div.right.section {
-  border-left-color: #ccc;
+  border-left-color: rgb(204, 204, 204);
   border-left-style: solid;
   border-left-width: 2px;
   margin-left: -2px;
   width: 348px;
 }
-div.step>div.right.section::after {
-  border-left-color: #ccc;
-  border-bottom-color: #ccc;
+div.step > div.right.section::after {
+  border-left-color: rgb(204, 204, 204);
+  border-bottom-color: rgb(204, 204, 204);
   border-style: solid;
   border-width: 2px;
   border-right: 0;
@@ -229,29 +229,29 @@ div.step h2.flag::after {
   position: absolute;
   top: 0;
 }
-div.step h2.blue.flag {
-  background: #0da8e5;
+div.step h2.blue.flag { 
+  background: rgb(13, 168, 229); 
 }
-div.step h2.blue.flag::after {
-  border-color: #0da8e5 transparent #0da8e5 #0da8e5;
+div.step h2.blue.flag::after { 
+  border-color: rgb(13, 168, 229) transparent rgb(13, 168, 229) rgb(13, 168, 229); 
 }
-div.step h2.orange.flag {
-  background: #ffa132;
+div.step h2.orange.flag { 
+  background: rgb(255, 161, 50); 
 }
-div.step h2.orange.flag::after {
-  border-color: #ffa132 transparent #ffa132 #ffa132;
+div.step h2.orange.flag::after { 
+  border-color: rgb(255, 161, 50) transparent rgb(255, 161, 50) rgb(255, 161, 50); 
 }
-div.step h2.ltblue.flag {
-  background: #2fc1d2;
+div.step h2.ltblue.flag { 
+  background: rgb(47, 193, 210); 
 }
-div.step h2.ltblue.flag::after {
-  border-color: #2fc1d2 transparent #2fc1d2 #2fc1d2;
+div.step h2.ltblue.flag::after { 
+  border-color: rgb(47, 193, 210) transparent rgb(47, 193, 210) rgb(47, 193, 210); 
 }
 div.step h2.ltred.flag {
-  background: #f26c4f;
+ background: rgb(242, 108, 79); 
 }
-div.step h2.ltred.flag::after {
-  border-color: #f26c4f transparent #f26c4f #f26c4f;
+div.step h2.ltred.flag::after { 
+  border-color: rgb(242, 108, 79) transparent rgb(242, 108, 79) rgb(242, 108, 79); 
 }
 div.step h2.flag > span {
   display: inline-block;
@@ -317,7 +317,7 @@ div.step div.radio-select > div > h3 > p {
   margin-left:10px;
 }
 div.step span.radio {
-  background: url("../img/dpp_sprite_pl.png") no-repeat -157px -7px;
+  background: url("../img/DPP_sprite.png") no-repeat -157px -7px;
   display: inline-block;
   height: 35px;
   margin: 0 0 0 10px;
@@ -326,7 +326,7 @@ div.step span.radio {
   cursor: pointer;
 }
 div.step span.radio.checked {
-  background: url("../img/dpp_sprite_pl.png") no-repeat -121px -7px;
+  background: url("../img/DPP_sprite.png") no-repeat -121px -7px;
 }
 div.step div.section.right>div>p, div.step div.radio-select>div>p {
   font-size: 13px;
@@ -541,11 +541,11 @@ div.step.options div.section.split.right > p.last > span.g-toolTip span.right {
 #hostmywebsite.open ~ h2.flag { 
   display: none; 
 }
-#hostmywebsite.open::after {
-  border-left: 0;
-  border-bottom: 0;
-  border-right: 2px solid #ccc;
-  border-top: 2px solid #ccc;
+#hostmywebsite.open::after { 
+  border-left: 0; 
+  border-bottom: 0; 
+  border-right: 2px solid rgb(204, 204, 204); 
+  border-top: 2px solid rgb(204, 204, 204); 
 }
 div.step.options { 
   min-height: 494px; 
@@ -558,7 +558,7 @@ div.step.options div.section.split > p.checkbox > span.icon.checked {
   width: 44px; 
 }
 div.step.options div.section.split > p.checkbox > span.icon.checked > span {
-  background: url("../img/dpp_sprite_pl.png") no-repeat -647px -9px;
+  background: url("../img/DPP_sprite.png") no-repeat -647px -9px;
   display: block;
   float: left;
   height: 35px;
@@ -654,9 +654,9 @@ div.step.options div.section.split > div > li {
 .plan-droplist-selected {
   padding: 5px 30px 5px 10px;
 }
-.plan-option.plan-option-selected {
-  background-color: #3182e6;
-  color: #FFF;
+.plan-option.plan-option-selected { 
+  background-color: #679b09; 
+  color: #FFF; 
 }
 .plan-droplist-selected span {
   padding: 0 5px 0 0;
@@ -680,8 +680,8 @@ div.step.options div.section.split > div > li {
   top: 1px;
   width: 26px;
 }
-.plan-option.plan-option-selected:hover {
-  background-color: #3182e6;
+.plan-option.plan-option-selected:hover { 
+  background-color: #679b09; 
 }
 .plan-option span {
   display: block;
@@ -739,7 +739,7 @@ div.step.options div.section.split > div > li {
   margin: 30px 0 40px;
 }
 #limitations-wrap p {
-  color: #3182e6;
+  color: #3282E6;
 }
 #limitations-wrap {
   margin: 25px 0 10px;
@@ -784,14 +784,14 @@ div.step.options div.section.split > div > li {
   display: none;
 }
 .summary-footer {
-  color: #3182e6;
+  color: #679b09;
   font-size: 13px;
   margin: 200px 0 15px;
   position: relative;
   text-align: center;
 }
 .summary-footer > span {
-  background: url("../img/dpp_sprite_pl.png") no-repeat -268px -33px;
+  background: url("../img/DPP_sprite.png") no-repeat -268px -33px;
   height: 10px;
   left: 50%;
   margin: 4px 0 0 -5px;
@@ -828,16 +828,15 @@ div.step.options div.section.split > div > li {
   display: block;
   width: 50%;
 }
-.fg-orange {
-  color: #F00000;
+.fg-orange { 
+  color: #FE7700; 
 }
 .sticky { 
   position: fixed !important; 
   top: 20px !important; 
 }
 .sticky.absolute { 
-  !important; 
-  position: absolute; 
+  position: absolute !important; 
 }
 .diamond-wrap {
   height: 45px;
@@ -883,7 +882,7 @@ div.step.options div.section.split > div > li {
   width: 32px;
 }
 span.grey-arrow-right {
-  background: url("../img/dpp_sprite_pl.png") no-repeat -285px -26px;
+  background: url("../img/DPP_sprite.png") no-repeat -285px -26px; 
   height: 10px;
   width: 10px;
 }
@@ -936,7 +935,7 @@ span.g-toolTip {
   width: 285px;
   z-index: 999;
 }
-.g-toolTip.g-toolTip-displayDown>span {
+.g-toolTip.g-toolTip-displayDown > span {
   right: -132px;
   top: 26px;
   left: auto;
@@ -965,15 +964,15 @@ span.g-toolTip {
 .g-toolTip:hover > span { 
   display: block; 
 }
-.flt-btn-inactive-orng {
-  background: 0 0 #ffe3ba!important;
-  border-bottom-color: #ffe3ba!important;
-  cursor: default;
+.flt-btn-inactive-orng { 
+  background: 0px 0px rgb(255, 227, 186) !important; 
+  border-bottom-color: rgb(255, 227, 186) !important;
+  cursor: default; 
 }
-.flt-btn-inactive-grey {
-  background: 0 0 #e3e3e3!important;
-  border-bottom-color: #e3e3e3!important;
-  cursor: default;
+.flt-btn-inactive-grey { 
+  background: 0px 0px rgb(227, 227, 227) !important; 
+  border-bottom-color: rgb(227, 227, 227) !important; 
+  cursor: default; 
 }
 #domains-added-1, #domains-added-x {
   display: none;
@@ -1001,7 +1000,7 @@ div.step.options div.section.split > p.checkbox > span.icon {
   overflow: hidden;
 }
 div.step.options div.section.split > p.checkbox > span.icon > span {
-  background: url("../img/dpp_sprite_pl.png") no-repeat -612px -9px;
+  background: url("../img/DPP_sprite.png") no-repeat -612px -9px;
   display: block;
   float: left;
   height: 35px;
@@ -1074,13 +1073,13 @@ div.step.options div.section.split > p.checkbox > span.icon > span {
   text-align: right;
 }
 .btn-warning {
-  background-color: #3182e6;
-  border-color: #1d6ccd;
+  background-color: #FF8A00;
+  border-color: #E67C00;
 }
 .btn-warning:hover {
-  background-color: #5A9BEB;
-  border-color:  #327CD7;
-  color:  #fff;
+  background-color: #FF910F;
+  border-color: #F58400;
+  color: #FFFFFF;
 }
 .btn-warning.disabled, .btn-warning[disabled], fieldset[disabled] .btn-warning, .btn-warning.disabled:hover, .btn-warning[disabled]:hover, fieldset[disabled] .btn-warning:hover, .btn-warning.disabled:focus, .btn-warning[disabled]:focus, fieldset[disabled] .btn-warning:focus, .btn-warning.disabled:active, .btn-warning[disabled]:active, fieldset[disabled] .btn-warning:active, .btn-warning.disabled.active, .btn-warning.active[disabled], fieldset[disabled] .btn-warning.active {
   background-color: #FF8A00;
@@ -1095,7 +1094,7 @@ div.step.options div.section.split > p.checkbox > span.icon > span {
   background-image: none;
 }
 span.icon-shopping-cart {
-  background: url("../img/dpp_sprite_pl.png") no-repeat scroll -705px -13px rgba(0, 0, 0, 0);
+  background: url("../img/dpp_sprite.png") no-repeat scroll -705px -13px rgba(0, 0, 0, 0);
   display: inline-block;
   height: 24px;
   margin-bottom: -6px;
@@ -1113,4 +1112,87 @@ span.perfect {
 }
 #limitations-wrap a{
   color:#3282E6;
+}
+body {
+  background-color: #fff !important;
+}
+.border-box div.step {
+  width: 1000px;
+  margin: auto;
+  float: none;
+  min-height: 395px;
+}
+.border-box div.step-separator {
+  float: none;
+  margin: 20px auto;
+}
+.border-box div.step h2.blue.flag {
+  height: 34px;
+  min-width: 230px;
+}
+.border-box div.step > div.section.full > h3 {
+  padding: 84px 0 0 50px;
+}
+.border-box div.step > div.section.full > p {
+  padding: 0 0 0 50px;
+}
+.border-box div.step > div.section.full > p.lowest-price {
+  padding-top: 5px;
+  margin-bottom: 7px;
+}
+.border-box .plan-droplist-select {
+  margin: 27px 0 0 50px;
+  max-width: 880px;
+  min-width: 580px;
+}
+.border-box .left .plan-droplist-select,
+.border-box .right .plan-droplist-select {
+  max-width: 370px;
+  min-width: 330px;
+}
+.border-box .step-wrapper.double .left,
+.border-box .step-wrapper.double .right {
+  width: 50%;
+}
+.border-box div.step > div.right.section::after {
+  display: none;
+}
+.border-box .diamond {
+  left: -7px;
+}
+.double .uxicon-box {
+  font-size: 42px;
+  margin: -8px 0 0 -5px;
+}
+.border-box .diamond-wrap {
+  top: 175px;
+}
+.border-box div.step.options > div.section {
+  height: 393px;
+  min-height: 300px;
+  margin-top: -15px;
+  padding-left: 10px;
+}
+.border-box div.step.options div.section.split.split-b > p.checkbox {
+  padding: 63px 0 0 54px;
+}
+.border-box div.step.options div.section.left.split-b > div, .border-box div.step.options div.section.right.split-b > div {
+  margin: 0px 0 0 54px;
+  bottom: 39px;
+}
+.border-box div.step.options div.section.split.split-b > p {
+  padding: 36px 0 0 54px;
+  margin: 0;
+}
+.border-box div.step.options div.section.split.split-b > p.price {
+  padding-top: 20px;
+}
+.border-box div.step.options div.section.split.right.split-b > p.checkbox,
+.border-box div.step.options div.section.split.left.split-b > p.checkbox {
+  font-size:28px
+}
+.border-box #or span {
+  font-size: 20px;
+  left: -2px;
+  top: -4px;
 }

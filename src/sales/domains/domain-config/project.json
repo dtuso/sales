@@ -1,16 +1,14 @@
 {
-  "search.html": {
+  "domain-congfig.html": {
     "cdsDetails": {
       "champion": {
         "name": "Adam Smith",
         "email": "absmith@godaddy.com"
       },
       "draft": {
-        "comments": "merchandising updates for 7/14",
         "url": "http://www.dev-godaddy.com/domains/domain-configuration.aspx"
       }
     },
-    "cssVersionOverride" : "14",
     "metaTitle": "[@L[cds.sales/gd/domains/domain-configuration:MetaTitle]@L]",
     "metaDescription": "[@L[cds.sales/gd/domains/domain-configuration:MetaDescription]@L]",
     "metaKeywords": "[@L[cds.sales/gd/domains/domain-configuration:MetaKeywords]@L]",
@@ -18,7 +16,7 @@
     "metaOgTitle": "[@L[cds.sales/gd/domains/domain-configuration:MetaTitle]@L]",
     "metaOgDescription": "[@L[cds.sales/gd/domains/domain-configuration:MetaDescription]@L]"
   },
-  "search.language": {
+  "domain-congfig.language": {
     "cdsDetails": {
       "champion": {
         "name": "Adam Smith",
@@ -28,5 +26,22 @@
         "comments": "merchandising updates for 7/14"
       }
     }
+  },
+    "domain-congfig-pl.html": {
+    "cdsDetails": {
+      "champion": {
+        "name": "Adam Smith",
+        "email": "absmith@godaddy.com"
+      },
+      "draft": {
+        "url": "http://www.dev-godaddy.com/domains/domain-configuration.aspx"
+      }
+    },
+    "metaTitle": "[@L[cds.sales/gd/domains/domain-configuration:MetaTitle]@L]",
+    "metaDescription": "[@L[cds.sales/gd/domains/domain-configuration:MetaDescription]@L]",
+    "metaKeywords": "[@L[cds.sales/gd/domains/domain-configuration:MetaKeywords]@L]",
+    "metaCanonicalPath": "/domains/domain-configuration.aspx",
+    "metaOgTitle": "[@L[cds.sales/gd/domains/domain-configuration:MetaTitle]@L]",
+    "metaOgDescription": "[@L[cds.sales/gd/domains/domain-configuration:MetaDescription]@L]"
   }
 }
