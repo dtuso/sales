@@ -1,6 +1,6 @@
 ---
 location: localization/sales/business/office-365/en
-id: 54594197f778fc0fb84199ed
+id: 54612900f778fc26a885ee47
 name: GCE-31272
 comments: O365 Office LP - Adding GD Exclusive Text to page
 ---
@@ -893,7 +893,7 @@ We’ve partnered with Microsoft to bring you this exclusive deal on Office 365.
 <phrase key="29621-FeatureContent-3-title" />
 24/7 support from real Office experts.
 <phrase key="29621-FeatureContent-3-description" />
-When you’re running a small business, you can’t afford downtime. GoDaddy helps keep your business running with free, award-winning support that’s available 24/7. Just pick up the phone to talk to get the answers you need to get back to business.
+When you’re running a small business, you can’t afford downtime. GoDaddy helps keep your business running with free, award-winning support that’s available 24/7. Just pick up the phone to get the answers you need to get back to business.
 <phrase key="29621-FeatureContent-4-title" />
 Never pay for another upgrade.
 <phrase key="29621-FeatureContent-4-description" />
