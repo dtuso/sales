@@ -1,9 +1,9 @@
 ---
-location: sales/hosting/private-label/vps-hosting-config.aspx
-id: 546125dbf778fc26a885ee41
-name: GCE-28592
+location: sales/hosting/private-label/dedicated-server-config.aspx
+id: 54612467f778fc26a885ee3d
+name: GCE-28589
 comments: Reseller /PL VPS Refresh
-url: http://www.dev-secureserver.net/hosting/vps-hosting-config.aspx
+url: http://www.dev-secureserver.net/hosting/dedicated-server-config.aspx
 assetPath: true
 ---
 {% extends 'layouts/pl-base.html' %}
@@ -182,8 +182,8 @@ assetPath: true
           var osOption = $('#osOption').val().split('_')[3];
 
           var itccode = $("#isConfigUpdated").val() === "0" 
-                        ? osOption == 'linux' ? 'pro_VPS_Linux':'pro_VPS_Windows'
-                        : osOption == 'linux' ? 'pro_VPS_Linux_config':'pro_VPS_Windows_config';
+                        ? osOption == 'linux' ? 'pro_DS_Linux':'pro_DS_Windows'
+                        : osOption == 'linux' ? 'pro_DS_Linux_config':'pro_DS_Windows_config';
           var qty = 1;
           var packageId = $('input:radio[name="termOption"]').filter(':checked').val();
           var addons = Config.generateAddonsURL();
@@ -316,7 +316,7 @@ assetPath: true
           var monthString =  (plan.data('months') > 1) ? " months" : " month";
 
           $('#summaryRAM').html('<span class="server-summary">' + planRAM +'</span> RAM');
-          $('#summaryStorage').html('<span class="server-summary">' + planStorage +'</span> Storage ');
+          $('#summaryStorage').html('<span class="server-summary">' + planStorage +'</span> Storage');
           $('#summaryBandwidth').html('<span class="server-summary">' + planBandwidth +'</span> Bandwidth');
          
 
@@ -371,29 +371,13 @@ assetPath: true
             var content='';
            var checked =  item.id == defaultAddOn ? 'checked="checked"' :'';
 
-          content += '<li><input type="radio" style="margin-right:4px;" name="'+optionname+'" value="'+item.id+'"  data-price="'+item.addonprice+'" data-name="'+ item.addonname+'" ' + checked +'/><b>'+ item.addonname+ '</b> -<div class="price-container"></div>' +  managedDescHtml.replace("{0}",item.os).replace("{1}",getIncludesText(item)) +'</li>';       
+          content += '<li><input type="radio" style="margin-right:4px;" name="'+optionname+'" value="'+item.id+'"  data-price="'+item.addonprice+'" data-name="'+ item.name+'" ' + checked +'/><b>'+ item.name+ '</b> -<div class="price-container"></div>' +  managedDescHtml.replace("{0}",item.os).replace("{1}",item.includes) +'</li>';
         parentid.append(content); 
         });
               
         generateManagementPrices();      
      }
 
-      function getIncludesText(managedOption){
-        var includes="";
-        ##if(countrySiteAny(www))
-            includes =managedOption.includes;
-        ##else 
-            if($.trim(managedOption.addonname.toUpperCase()) == "FULLY-MANAGED") 
-                  includes= $('#osOption').val().split('_')[3] == 'linux' 
-                                                                  ? "Includes: Dedicated team of server admin experts (Available in English) | cPanel® | Patching | Security | Monitoring | Backups "
-                                                                  : "Includes: Dedicated team of server admin experts (Available in English) | Parallels® Plesk | Patching | Security | Monitoring | Backups"
-            else
-                includes =managedOption.includes; 
-        ##endif
-
-        return includes;
-
-      }
       function generateManagementPrices(){     
 
          var monthString = "/mo";

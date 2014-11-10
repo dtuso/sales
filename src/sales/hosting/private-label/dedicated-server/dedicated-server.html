@@ -1,9 +1,9 @@
 ---
-location: sales/hosting/private-label/vps-hosting.aspx
-id: 546125a8f778fc26a885ee3f
-name: GCE-28592
-comments: Reseller /PL VPS Refresh
-url: http://www.dev-secureserver.net/hosting/vps-hosting.aspx
+location: sales/hosting/private-label/dedicated-server.aspx
+id: 54611c6ff778fc26a885ee26
+name: GCE-28589
+comments: Reseller/PL Sites Dedicated Servers
+url: http://www.dev-secureserver.net/hosting/dedicated-server.aspx
 assetPath: true
 ---
 {% extends 'layouts/pl-base.html' %}
@@ -22,48 +22,41 @@ assetPath: true
         <a title="Manage now" class="blue-text" href="https://mya.dev-secureserver.net/default.aspx?ci=57595&amp;accid=2&amp;prog_id=hunter&amp;pl_id=1724">Manage now</a>
     </div>
 
-    <div class="vps-main-banner">
+    <div class="ds-main-banner">
         <div class="hdrHeader g-rnd-10">
-            <div class="vpsHdrSprt notInTheCloud">&nbsp;</div>
             <div class="hdrUptime">
                 <div class="hdrUptimePct">99.9%</div>
                 <div class="hdrUptimeText">UPTIME GUARANTEE<br>on network</div>
             </div>
-            <div class="hdrOs">&nbsp;</div>
-            <div class="hdrBanHeadline">Choose the Operating System<br>that's right for you!</div>
-            <div class="hdrCentOS">CentOS<sup style="font-size: 10px;">&reg;</sup></div>
-            <div class="hdrFedora">Fedora<sup style="font-size: 10px;">&reg;</sup></div>
-            <div class="hdrWindows">Windows<sup style="font-size: 10px;">&reg;</sup></div>
-            <div class="hdrPoweredBy">Powered By Linux<sup style="font-size:8px;">&reg;</sup></div>
-            <table class="headerTable">
-                <tbody>
-                    <tr>
-                        <td class="headerRow headerText">
-                            <div class="hdrHeadline OneLinkNoTx">Virtual Private Servers</div>
-                        </td>
+            <div class="hdrBanHeadline">Choose the OS that's right for you!</div>
+
+                <table class="headerTable">
+                    <tbody><tr>
+                        <td class="hdrHeadline">Dedicated Servers</td>
                     </tr>
                     <tr>
-                        <td class="headerRowDetail headerTextDetail">
-                            <div class="hdrSubLine">Now everyone can afford the reliability, security and scalability of the Cloud.</div>
-                        </td>
+                        <td class="hdrSubLine">High performance hardware, generous bandwidth &amp; total control.<br>
+                            <span class="b">Starting at $69.99 per month.</span></td>
                     </tr>
-                </tbody>
-            </table>
+                    </tbody>
+                </table>
+
             <div class="floatend"> </div>
             <div class="hdrBottomBtns">
                 <div class="floatend">&nbsp;</div>
             </div>
         </div>
-        <div class="floatend">&nbsp;</div>
-        <div style="color:#000; font-weight:bold; font-size: 16px; margin:0px 0px 15px 10px;">Our VPS Hosting is made to grow as your needs grow.</div>
-        <div style="font-size:12px; margin:0px 10px 20px 10px;">
-            Get all the power and control of your own Virtual Server for less! With a Hunter's, New Show VPS, your RAM and storage are
-            guaranteed - we never overload. Plus, you can add more capacity anytime with just a few clicks*. Not sure how to set it up? Our experts will help get your server up and running
-            fast! Just choose the plan that's right for you, customize your bandwidth, control panel (Parallels® Plesk Panel or cPanel®) and backup options and leave the rest to us. Call <b>
-                (480) 624-2500
-            </b> to get started now.
-        </div>
-        <div class="switch-os switch-toggle">
+            <div class="floatend">&nbsp;</div>
+            <div class="dsHeader">Dedicated servers - all to yourself and under your command.</div>
+            <div style="font-size:12px; margin:0px 50px 20px 10px;">
+
+            Our dedicated server plans feature lightning-fast processors, up to 16 GB of RAM, 20 TB of bandwidth, and Intel Core i3/i5/i7 processors,
+            all backed by the best service and support in the industry. With our team of experts, you don't have to worry about setup — we'll get your server
+            up and running fast! Choose the plan that's right for you, then customize it to meet your unique needs with even more bandwidth, control panel options, backup plans, firewall protection and more.
+            Questions? Call <b>(480) 624-2500</b> to get started now.
+          </div>
+
+             <div class="switch-os switch-toggle">
             <input id="linux" name="os" type="radio" checked="checked">
             <label for="linux" onclick="">Linux</label>
 
@@ -72,8 +65,8 @@ assetPath: true
 
             <a></a>
         </div>
-        <input type="hidden" id="osaddon">
-        <div class="row brpl-row" style="margin-top:30px;">       
+                <input type="hidden" id="osaddon">
+            <div class="row brpl-row" style="margin-top:30px;">
             <div class="col-xs-4">
                 <div class="plan brpl-plan set-active-col">
                     <div id="t1" class="inner-grid-container">
@@ -135,7 +128,7 @@ assetPath: true
                 </div>
             </div>
         </div>
-        <div class="row brpl-row" style="margin-top:20px;">
+            <div class="row brpl-row" style="margin-top:20px;">
             <div class="col-xs-4">
                 <div class="plan brpl-plan set-active-col">
                     <div id="t4" class="inner-grid-container">
@@ -392,12 +385,12 @@ assetPath: true
             $('.js-addtocart-btn').click(function(){
             	var plan = $(this).data('plan');
             	var osOption = $('#osaddon').val().split('_')[3];
-                var itccode =  osOption == 'linux' ? 'pro_VPS_Linux':'pro_VPS_Windows';
+                var itccode =  osOption == 'linux' ? 'pro_DS_Linux':'pro_DS_Windows';
 
                 var qty = 1;
           		var addons = generateAddonsURL();
           		var quantity=1;
-                var ci = 94077 //$(this).attr('data-ci');
+                var ci = 91041 //$(this).attr('data-ci');
             	var apiEndpoint = '[@T[link:<relative path="/api/package/{0}/{1}/{2}/{3}/{4}" parammode="explicit"/>]@T]'.replace('{0}','add').replace('{1}',itccode).replace('{2}',ci).replace('{3}',quantity).replace('{4}',plan);
 
                 apiEndpoint =apiEndpoint + addons;
@@ -409,8 +402,8 @@ assetPath: true
                 dataType: 'json',
                 success: function (data) {
                       if (data.Success) {
-                           var configUrl= '[@T[link:<relative path="hosting/vps-hosting-config.aspx" />]@T]';
-                           configUrl =configUrl+ '&plan='+ plan +'&planaddons=pro_vps_managed';
+                           var configUrl= '[@T[link:<relative path="hosting/dedicated-servers-config.aspx" />]@T]';
+                           configUrl =configUrl+ '&plan='+ plan +'&planaddons=pro_ds_managed';
                            window.location = configUrl;
                     }
                 },
@@ -427,17 +420,16 @@ assetPath: true
 	    });			
 
         function getData(){
-           var url = '[@T[link:<relative path="~/api/package/config/vpsprodata" />]@T]';
-
-		    $.getJSON(url, function(data) {
+           var url = '[@T[link:<relative path="~/api/package/config/dsprodata" />]@T]';
+             $.getJSON(url, function(data) {
 		        if (data != 'fail') {
-		            processVPSData(data);
+		            processDSData(data);
 		        }
 		    });            
 
         }
 
-        function processVPSData(data){
+        function processDSData(data){
         	var os  = $('input:radio[name=os]:checked').attr('id');
         	var plans = data[os];
         	$("#osaddon").val(plans.t1.osaddon);
@@ -452,11 +444,11 @@ assetPath: true
         	 });
         }
 
-        function generateAddonsURL(){                
+        function generateAddonsURL(){
           var addonURL='';
           var osOption =$("#osaddon").val();
           addonURL+= '?addons='+osOption + "-1" ;
-          addonURL+= '|pro_vps_managed-1';
+          addonURL+= '|pro_ds_managed-1';
           return addonURL;
         }
 	</script>

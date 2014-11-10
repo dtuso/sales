@@ -27,7 +27,7 @@
   "o365":               "./business/office-365/",
   "offers":             "./offers/default/",
   "os":                 "./ecommerce/onlinestore/",
-  "promos-si":		    	"./offers/stick-it-to-high-prices/",
+  "promos-si":		    "./offers/stick-it-to-high-prices/",
   "qsc":                "./ecommerce/shopping-cart/",
   "search":             "./domains/search/",
   "search-config":      "./domains/search/search.config",
@@ -52,5 +52,7 @@
   "hostingclp":         "./hosting/category-landing-page/",
   "ssl-lp":             "./ssl/ssl-lp/",
   "web-host":           "./hosting/web-host/",
-  "shared":             "./shared/"
+  "shared":             "./shared/",
+  "ds-PL":              "./hosting/private-label/dedicated-server/",
+  "ds-config-PL":       "./hosting/private-label/dedicated-server-config/"
 }
