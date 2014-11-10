@@ -1,10 +1,10 @@
 ---
 location: sales/ssl/ssl-certificates.aspx
 url: http://www.dev-godaddy.com/ssl/ssl-certificates.aspx
-id: 543dbc64f778fc2330964ece
-name: GCE-29607
+id: 5450298bf778fc142061a9ea
+name: GCE-29496
 assetPath: false
-comments: Rainier banner deployment
+comments: Adding premium ssl banner
 ---
 
 {% extends 'layouts/base.html' %}
@@ -33,12 +33,60 @@ comments: Rainier banner deployment
     }
 
     .misc-banner-content{
-      padding-bottom: 2em;
+      padding-bottom: 3em;
     }
 
     .plan-summary{padding-top:2.428571em;}
 
     html[lang='en-US'] #rainier-section{margin-bottom:0px;}
+
+    .prem-ssl-marquee{
+      background-color: #79BB02;      
+      height: 60px;
+      display: block;
+      margin-top: -78px;
+      margin-bottom: 20px;
+      margin-left: -25px;
+      min-width: 240px;
+      position: absolute;
+
+    }
+
+    .prem-ssl-marquee-lt{
+      display: block;
+      float: left;
+    }
+
+    .prem-ssl-marquee-lt:hover{      
+      text-decoration: underline;
+      color: white;
+      cursor: pointer;
+    }
+
+    .prem-ssl-marquee-rt{
+      position: absolute;
+      display: inline;
+      float: right;
+      border-top: 30px solid #79BB02;
+      border-bottom: 30px solid #79BB02;
+      border-left: 3px solid #79BB02;
+      border-right: 18px solid transparent;
+    }
+
+    .prem-ssl-marquee .prem-marq1, .prem-ssl-marquee .prem-marq2{
+      color: white;      
+      font-weight: bold;
+      display: block;
+      padding-left: 25px;
+      min-width: 263px;
+    }
+    .prem-ssl-marquee .prem-marq1{
+font-size: 27px;
+    }
+    .prem-ssl-marquee .prem-marq2{
+font-size: 16px;
+line-height: 7px;
+    }
 
     {% endless %}
   </style>
@@ -130,6 +178,8 @@ comments: Rainier banner deployment
     // load the plugin
     $(document).ready(function(){
       $('[data-gd-sidebysidealign]').gdSideBySideAlign();
+
+      $('span.save-perc').html('[@T[productcompare:<percent primaryproductid="3645" secondaryproductid="3645"  showsymbol="true"><html><![CDATA[{0}]]></html></percent>]@T]');
     });
 
   })( jQuery, window, document );
@@ -194,7 +244,14 @@ comments: Rainier banner deployment
 
           <div class="row tab-content equal-height no-margin-bottom">
             <div class="col-xs-4">
+
                 <div class="grid-column no-padding-bottom">
+                <div class="prem-ssl-marquee">
+                <a href='[@T[link:<relative path="/ssl/ssl-certificates-config.aspx"><param name="origin" value="pod" /><param name="plan" value="ssl_prm_1" /></relative>]@T]'>
+                  <div class="prem-ssl-marquee-lt"><span class="prem-marq1">[@L[cds.sales/gd/ssl/ssl-certificates:savePerc]@L]</span> <span class="prem-marq2">[@L[cds.sales/gd/ssl/ssl-certificates:choosePremSSL]@L]</span></div>
+                  <div class="prem-ssl-marquee-rt"></div>
+                  </a>
+                </div>
                   <h2>[@L[cds.sales/gd/ssl/ssl-certificates:plansPricingOne]@L]</h2>
                   <p class="pp-desc">[@L[cds.sales/gd/ssl/ssl-certificates:box1SubText]@L]</p>
                   <p class="starting-at starting-at-alternate-top-spacing">

@@ -12,6 +12,7 @@
   "domain-auctions":    "./product-pages/domain-auctions/",  
   "domain-backorders":  "./domainaddon/domain-backorders/",
   "domain-config":      "./domains/domain-config/",
+  "domain-config-pl":   "./domains/domain-config/domain-config-pl.html",
   "ds":                 "./hosting/dedicated-servers/",
   "dsc":                "./pro/dedicated-server-config/",
   "eoi":                "./tlds/gtld/",
