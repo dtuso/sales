@@ -1,7 +1,7 @@
 ---
 url: http://www.dev-godaddy.com/business/office-365-config.aspx
 location: sales/business/office-365-config.aspx
-id: 5460f0f5f778fc26a885ede1
+id: 546284fff778fc0a70ee7834
 name: GCE-31272
 comments: O365 Office LP - Adding GD Exclusive Text to page
 ---
@@ -206,8 +206,10 @@ comments: O365 Office LP - Adding GD Exclusive Text to page
                   <div class="orange-text product-price"><span class="product-price-amount js-product-price-amount6"></span>  <span class="product-price-text">[@L[cds.sales/business/office-365-config:cp-3-PerUserMonth]@L]</span>
                   </div>
                   <ul>
-                    <li>[@L[cds.sales/business/office-365-config:cp-4-5GBEmailStorage]@L]</li>
-                    <li>[@L[cds.sales/business/office-365-config:cp-5-2GBCloudFileStorage]@L]</li>
+                    <li>[@L[cds.sales/business/office-365-config:cp-4-50GBEmailStorage]@L]</li>
+                    <li>[@L[cds.sales/business/office-365-config:cp-5-25GBCloudFileStorage]@L]</li>
+                    <li>[@L[cds.sales/business/office-365-config:cp-4-UnlimitedHDVideoConferencing]@L]</li>
+                    <li>[@L[cds.sales/business/office-365-config:cp-5-MicrosoftOffice365WebApps]@L]</li>
                   </ul>
                 </div>
                 <div class="config-product-narrow">
@@ -761,9 +763,6 @@ comments: O365 Office LP - Adding GD Exclusive Text to page
       office365config = {
         "productOrder":{},
         "init":function() {
-
-          console.log('office365config.init() for ' + office365config.planLevel );
-          
           // remove unnecessary DOM objects
           if(productGroupName == "Original") {
             $("div[data-product='Email']").remove();
@@ -823,14 +822,14 @@ comments: O365 Office LP - Adding GD Exclusive Text to page
             }
           });
           
-          // $("div[data-product='" + productGroupName + "'] .product-quantity").bind("updateqty",function(){
-          //   office365config.planDuration = $(".js-duration").val();
-          //   office365config.buildProductOrder();
-          // });
+          $("div[data-product='" + productGroupName + "'] .product-quantity").bind("updateqty",function(){
+            office365config.planDuration = $(".js-duration").val();
+            office365config.buildProductOrder();
+          });
 
-          // $("div[data-product='" + productGroupName + "'] .product-quantity").keyup(function(){
-          //   $(this).trigger("updateqty");
-          // });
+          $("div[data-product='" + productGroupName + "'] .product-quantity").keyup(function(){
+            $(this).trigger("updateqty");
+          });
 
           if(office365config.planLevel!=null && office365config.planDuration!=null)
           {
@@ -1204,7 +1203,7 @@ if (typeof incrementInput == "undefined") {
     var $inputControls = $("<div/>").addClass("config-increment-controls");
     var $inputControlsUp = $("<div/>").addClass("icon-increment-up");
     var $inputControlsDown = $("<div/>").addClass("icon-increment-down");
-    var $limitText = $("<div/>").addClass("description-limit-text");
+    //var $limitText = $("<div/>").addClass("description-limit-text");
 
     $outerWrapper.append($inputWrapper);
     $inputWrapper.append($this);
@@ -1218,17 +1217,17 @@ if (typeof incrementInput == "undefined") {
     thisData = $this.data("increment-input");
 
     // limit text will be added
-    if(thisData.limitText != null){
-      $inputWrapper.append($limitText);
-      var limitTextString = thisData.limitText;
-      if(thisData.max!=null){
-        limitTextString = limitTextString.replace("{{max}}",thisData.max)
-      }
-      if(thisData.min!=null){
-        limitTextString = limitTextString.replace("{{min}}",thisData.min)
-      }
-      $limitText.html(limitTextString);
-    }
+    // if(thisData.limitText != null){
+    //   $inputWrapper.append($limitText);
+    //   var limitTextString = thisData.limitText;
+    //   if(thisData.max!=null){
+    //     limitTextString = limitTextString.replace("{{max}}",thisData.max)
+    //   }
+    //   if(thisData.min!=null){
+    //     limitTextString = limitTextString.replace("{{min}}",thisData.min)
+    //   }
+    //   $limitText.html(limitTextString);
+    // }
   
     // add click listeners
     $inputControlsUp.mousedown(function(){
