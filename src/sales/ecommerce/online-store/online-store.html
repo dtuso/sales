@@ -1,6 +1,6 @@
 ---
 location: sales/ecommerce/online-store.aspx
-id: 545a9b78f778fc11ac121095
+id:  54611384f778fc26a885ee08
 name: GCE-20285 - OLS 
 comments: Online Store Landing Page
 url: http://www.dev-godaddy.com/ecommerce/online-store.aspx
@@ -602,7 +602,7 @@ url: http://www.dev-godaddy.com/ecommerce/online-store.aspx
                           </div><!-- select-box-head -->
                           <div class="select-box-body">
                               <ul class="select-box-options">
-                                  <li class="selected">
+                                  <li>
                                       <label>
                                           <input type="radio" name="plan" id="40966_1_1" value="40966|1|1">
                                           <input type="hidden" name="package" value="ols_premium1month"/>
@@ -613,16 +613,14 @@ url: http://www.dev-godaddy.com/ecommerce/online-store.aspx
                                               <span class="save">[@L[cds.sales/gd/ecommerce/online-store:OnSale]@L]</span>
                                           </div>
                                           <div>
-                                              <span>&nbsp;</span>
                                               <span>[@T[productprice:<template productid="40966" period="monthly"><strike><![CDATA[<strike>{1}[@L[cds.sales/gd/ecommerce/online-store:Month]@L]</strike>]]></strike></template>]@T]</span>
                                               <span class="save">[@T[productcompare:<percent primaryproductid="79" secondaryproductid="40966" hidebelow="1"><html><![CDATA[[@L[cds.sales/gd/ecommerce/online-store:Save]@L] {0}%]]></html></percent>]@T]</span>
-                                          ##else
-                                              <span>&nbsp;</span>
-                                          ##endif
                                           </div>
+                                          ##endif
+
                                       </label>
                                   </li>
-                                  <li>
+                                  <li  class="selected">
                                       <label>
                                           <input type="radio" name="plan" id="40972_1_1" value="40972|1|1" checked="true"/>
                                           <input type="hidden" name="package" value="ols_premium12month"/>
@@ -633,7 +631,6 @@ url: http://www.dev-godaddy.com/ecommerce/online-store.aspx
                                               <span class="save">[@L[cds.sales/gd/ecommerce/online-store:OnSale]@L]</span>
                                           </div>
                                           <div>
-                                              <span>&nbsp;</span>
                                               <span>[@T[productprice:<template productid="40972" period="monthly"><strike><![CDATA[<strike>{1}[@L[cds.sales/gd/ecommerce/online-store:Month]@L]</strike>]]></strike><nostrike><![CDATA[{0}[@L[cds.sales/gd/ecommerce/online-store:Month]@L]]]></nostrike></template>]@T]</span>
                                               <span class="save">[@T[productcompare:<percent primaryproductid="40972" secondaryproductid="40972" hidebelow="1"><html><![CDATA[[@L[cds.sales/gd/ecommerce/online-store:Save]@L] {0}%]]></html></percent>]@T]</span>
                                           ##elseif(productHasSavingsMoreThan(40972, 40972, 0))
@@ -653,7 +650,6 @@ url: http://www.dev-godaddy.com/ecommerce/online-store.aspx
                                               <span class="save">[@L[cds.sales/gd/ecommerce/online-store:OnSale]@L]</span>
                                           </div>
                                           <div>
-                                              <span>&nbsp;</span>
                                               <span>[@T[productprice:<template productid="40974" period="monthly"><strike><![CDATA[<strike>{1}[@L[cds.sales/gd/ecommerce/online-store:Month]@L]</strike>]]></strike><nostrike><![CDATA[{0}[@L[cds.sales/gd/ecommerce/online-store:Month]@L]]]></nostrike></template>]@T]</span>
                                               <span class="save">[@T[productcompare:<percent primaryproductid="40974" secondaryproductid="40974" hidebelow="1"><html><![CDATA[[@L[cds.sales/gd/ecommerce/online-store:Save]@L] {0}%]]></html></percent>]@T]</span>
                                           ##elseif(productHasSavingsMoreThan(40974, 40974, 0))
@@ -673,7 +669,6 @@ url: http://www.dev-godaddy.com/ecommerce/online-store.aspx
                                               <span class="save">[@L[cds.sales/gd/ecommerce/online-store:OnSale]@L]</span>
                                           </div>
                                           <div>
-                                              <span>&nbsp;</span>
                                               <span>[@T[productprice:<template productid="40976" period="monthly"><strike><![CDATA[<strike>{1}[@L[cds.sales/gd/ecommerce/online-store:Month]@L]</strike>]]></strike><nostrike><![CDATA[{0}[@L[cds.sales/gd/ecommerce/online-store:Month]@L]]]></nostrike></template>]@T]</span>
                                               <span class="save">[@T[productcompare:<percent primaryproductid="40976" secondaryproductid="40976" hidebelow="1"><html><![CDATA[[@L[cds.sales/gd/ecommerce/online-store:Save]@L] {0}%]]></html></percent>]@T]</span>
                                           ##elseif(productHasSavingsMoreThan(40976, 40976, 0))
@@ -693,7 +688,6 @@ url: http://www.dev-godaddy.com/ecommerce/online-store.aspx
                                               <span class="save">[@L[cds.sales/gd/ecommerce/online-store:OnSale]@L]</span>
                                           </div>
                                           <div>
-                                              <span>&nbsp;</span>
                                               <span>[@T[productprice:<template productid="40978" period="monthly"><strike><![CDATA[<strike>{1}[@L[cds.sales/gd/ecommerce/online-store:Month]@L]</strike>]]></strike><nostrike><![CDATA[{0}[@L[cds.sales/gd/ecommerce/online-store:Month]@L]]]></nostrike></template>]@T]</span>
                                               <span class="save">[@T[productcompare:<percent primaryproductid="40978" secondaryproductid="40978" hidebelow="1"><html><![CDATA[[@L[cds.sales/gd/ecommerce/online-store:Save]@L] {0}%]]></html></percent>]@T]</span>
                                           ##elseif(productHasSavingsMoreThan(40978, 40978, 0))
@@ -713,7 +707,6 @@ url: http://www.dev-godaddy.com/ecommerce/online-store.aspx
                                               <span class="save">[@L[cds.sales/gd/ecommerce/online-store:OnSale]@L]</span>
                                           </div>
                                           <div>
-                                              <span>&nbsp;</span>
                                               <span>[@T[productprice:<template productid="40980" period="monthly"><strike><![CDATA[<strike>{1}[@L[cds.sales/gd/ecommerce/online-store:Month]@L]</strike>]]></strike><nostrike><![CDATA[{0}[@L[cds.sales/gd/ecommerce/online-store:Month]@L]]]></nostrike></template>]@T]</span>
                                               <span class="save">[@T[productcompare:<percent primaryproductid="40980" secondaryproductid="40980" hidebelow="1"><html><![CDATA[[@L[cds.sales/gd/ecommerce/online-store:Save]@L] {0}%]]></html></percent>]@T]</span>
                                           ##elseif(productHasSavingsMoreThan(40978, 40978, 0))
