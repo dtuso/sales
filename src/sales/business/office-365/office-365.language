@@ -1,8 +1,8 @@
 ---
 location: localization/sales/business/office-365/en
-id: 544fd568f778fc142061a9be
-name: GCE-29621
-comments: Office365 redesign
+id: 54612900f778fc26a885ee47
+name: GCE-31272
+comments: O365 Office LP - Adding GD Exclusive Text to page
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="lp-8-MicrosoftOffice365BoostProductivityVirtuallyAnywhereGoDaddy" />
@@ -893,7 +893,7 @@ We’ve partnered with Microsoft to bring you this exclusive deal on Office 365.
 <phrase key="29621-FeatureContent-3-title" />
 24/7 support from real Office experts.
 <phrase key="29621-FeatureContent-3-description" />
-When you’re running a small business, you can’t afford downtime. GoDaddy helps keep your business running with free, award-winning support that’s available 24/7. Just pick up the phone to talk to get the answers you need to get back to business.
+When you’re running a small business, you can’t afford downtime. GoDaddy helps keep your business running with free, award-winning support that’s available 24/7. Just pick up the phone to get the answers you need to get back to business.
 <phrase key="29621-FeatureContent-4-title" />
 Never pay for another upgrade.
 <phrase key="29621-FeatureContent-4-description" />
@@ -1056,3 +1056,11 @@ What are the benefits of having domain-based email addresses?
 <phrase key="29621-FAQ-a-14" />
 A domain-based email address, like info@your-business-name.com, helps you look more professional with customers and promotes your website and company. In fact, customers are 9 times more likely to choose a company with a professional email address*.  Every time you send an email from a domain-based address, you're putting your domain name in front of customers and encouraging them to visit your website.
 And with each plan, you can create free ‘alias’ addresses – like one using your first name (keith@your-business-name.com) and others for different departments (sales@your-business-name.com) -- that all feed into a single inbox and make you look even more professional. 
+<phrase key="31272-backed_by_trust" />
+Backed by names you know and trust.
+<phrase key="31272-backed_by_trust_text" />
+With Microsoft Office 365 from [@T[companyname:name]@T], peace of mind is included. Every email hosting plan is backed by Microsoft’s 99.9% uptime guarantee and our award-winning 24/7 support. You’ll can feel confident knowing our all-star team is powering your email.
+<phrase key="31272-backed_by_trust_text_no_24" />
+With Microsoft Office 365 from [@T[companyname:name]@T], peace of mind is included. Every email hosting plan is backed by Microsoft’s 99.9% uptime guarantee and our award-winning support. You’ll can feel confident knowing our all-star team is powering your email.
+<phrase key="31272-exclusive_discount" />
+Exclusive discount for [@T[companyname:name]@T] customers.

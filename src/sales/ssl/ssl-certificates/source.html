@@ -1,10 +1,10 @@
 ---
 location: sales/ssl/ssl-certificates.aspx
 url: http://www.dev-godaddy.com/ssl/ssl-certificates.aspx
-id: 5450298bf778fc142061a9ea
+id: false
 name: GCE-29496
 assetPath: false
-comments: Adding premium ssl banner
+comments: Updating premium ssl banner css for manager
 ---
 
 {% extends 'layouts/base.html' %}
@@ -86,6 +86,10 @@ font-size: 27px;
     .prem-ssl-marquee .prem-marq2{
 font-size: 16px;
 line-height: 7px;
+    }
+
+    .marg-update{
+      margin: 0 0 75px 0;
     }
 
     {% endless %}
@@ -237,7 +241,7 @@ line-height: 7px;
           <!-- End misc-banner -->
 
 ##if(isManager())
-  <div class="alert alert-danger">
+  <div class="alert alert-danger marg-update">
     [@L[cds.sales/gd/ssl/ssl-certificates:SslManager]@L]
   </div>
 ##endif
