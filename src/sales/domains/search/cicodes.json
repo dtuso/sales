@@ -283,6 +283,18 @@
           { "ITC Code" : "TopPodPELink" },
           { "Description" : "Top Pod - .PE Link" }
         ]
+      },
+      { "Top TLD Pods - .KIWI link" : [
+          { "ITC ID" : "94368" },
+          { "ITC Code" : "" },
+          { "Description" : "Top Pod - .KIWI link" }
+        ]
+      },
+      { "Top TLD Pods - .INFO link" : [
+          { "ITC ID" : "94372" },
+          { "ITC Code" : "TopPodINFOLink" },
+          { "Description" : "Top Pod - .INFO link" }
+        ]
       }
     ],
   "Buttom Tld Pods" :  [
@@ -446,6 +458,18 @@
           { "ITC ID" : "91797" },
           { "ITC Code" : "ButtomPodConsulting" },
           { "Description" : "Buttom TLD Pods - .CONSULTING" }
+        ]
+      },
+      { "Buttom TLD Pods - .ARMY" : [
+          { "ITC ID" : "94373" },
+          { "ITC Code" : "" },
+          { "Description" : "Buttom TLD Pods - .ARMY" }
+        ]
+      },
+      { "Buttom TLD Pods - .SHIKSHA" : [
+          { "ITC ID" : "94374" },
+          { "ITC Code" : "" },
+          { "Description" : "Buttom TLD Pods - .SHIKSHA" }
         ]
       }
     ],
@@ -622,6 +646,12 @@
           { "ITC ID" : "91798" },
           { "ITC Code" : "NewAvailExpert" },
           { "Description" : "New Available TLD's Column - .EXPERT" }
+        ]
+      },
+      { "New Domains Available TLD's Column - .JUEGOS" : [
+          { "ITC ID" : "94375" },
+          { "ITC Code" : "" },
+          { "Description" : "New Available TLD's Column - .JUEGOS" }
         ]
       }
     ],
