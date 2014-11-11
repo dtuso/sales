@@ -1,7 +1,7 @@
 ---
 location: localization/sales/gd/category-listing/hosting-ssl/en
-id: 542484bdf778fc26c89ef544
-name: GCE-29132
+id: 5462465ef778fc0a70ee7813
+name: GCE-30213
 ---
 {% include '../../../modules/doc-block.html' %}
 <phrase key="page-title" />
@@ -21,9 +21,9 @@ Web Host
 <phrase key="subcategory-1-title" />
 Shared Web Hosting
 <phrase key="subcategory-1-description-1" />
-If you want high-performance website hosting that’s scalable, secure and affordable, start here.
+If you’re building a resource-intensive website, developing and hosting an app, or looking for a new test environment, a shared hosting plan may not give you the flexibility and performance you need.
 <phrase key="subcategory-1-description-2" />
-It’s easy to use, yet incredibly powerful, and includes everything you need to manage your site.
+When you’re ready for control and performance, our VPS and Dedicated server plans have the resources and features to meet your demands.
 <phrase key="restrictions-apply-label" />
 Restrictions apply
 <phrase key="restrictions-apply-symbol" />
