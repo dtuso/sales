@@ -1,9 +1,9 @@
 ---
 url: http://www.dev-godaddy.com/business/office-365.aspx
 location: sales/business/office-365.aspx
-id: 544e75ccf778fc177439a9c3
-name: GCE-29621
-comments: Office365 redesign
+id: 5461188af778fc26a885ee11
+name: GCE-31272
+comments: O365 Office LP - Adding GD Exclusive Text to page
 metaTitle: "[@L[cds.sales/business/office-365:lp-8-MicrosoftOffice365BoostProductivityVirtuallyAnywhereGoDaddy]@L]"
 metaDescription: "[@L[cds.sales/business/office-365:lp-36-MSOffice365IsEasyToSetUp]@L]"
 metaKeywords: "[@L[cds.sales/business/office-365:lp-18-Office365MicrosoftOffice365Office365Pricing]@L]"
@@ -14,23 +14,18 @@ metaOgDescription: "[@L[cds.sales/business/office-365:lp-48-OgDescription]@L]"
 assetPath: false
 ---
 
-{% set pfids =    {
-  'A': '31805',
-  'B': '542628',
+{% set pfids = {
+  'A': '31825',
+  'B': '543628',
   'C': '31841'} %}
-{% set groupids_new = {
-  'A': 'Office365_Office_A_Email_Essentials_12month', 
-  'B': 'Office365_Office_B_Business_12month', 
-  'C': 'Office365_Office_C_BusinessPremium_12month'} %}
 {% set groupids = {
-  'A': 'OfficeEmailMsft1yr', 
-  'B': 'OfficeBusMsft1yr', 
-  'C': 'OfficeBusPremMsft1yr'} %}
+  'A': 'Office365_Office_A_12month', 
+  'B': 'Office365_Office_B_12month', 
+  'C': 'Office365_Office_C_12month'} %}
 
 {% extends 'layouts/base.html' %}
 
 {% block metahead %}
- <meta http-equiv="X-UA-Compatible" content="IE=edge" />
  <meta name="viewport" content="width=device-width, initial-scale=1" />
  <meta http-equiv="content-language" content="[@T[localization:<language full="true" />]@T]" />
 {% parent %}
@@ -331,8 +326,8 @@ assetPath: false
     #banner-section { padding: 40px 0 10px; position: relative; background-image: url("[@T[link:<imageroot />]@T]fos/sales/themes/scotty/business/office-365/img/GCE-24333-O365-LP-R4_Office-background.jpg"); background-repeat: no-repeat;background-size: cover;}
     #banner-section h1.main-banner-title{ text-transform: uppercase; text-align: left; font-size: 24px; margin-bottom: 28px; color:#000; }
     #banner-section h1 > sup {font-size: 50%!important; /* override global */ top:-1.1em; /* override global */}
-    #banner-section h2.main-banner-subtitle{ text-align: left; margin: 28px 0 25px; font-size: 48px; color:#000; }          
-    #banner-section .watch-video-container {margin:295px auto 0;width:150px;text-align: center;}    
+    #banner-section h2.main-banner-subtitle{ text-align: left; margin: 15px 0 25px; font-size: 48px; color:#000; }          
+    #banner-section .watch-video-container {margin:295px auto 0;width:150px;text-align: center; visibility: hidden;}    
     #banner-section .office-365-banner-video-link {font-size:24px;color:#fff;}
     #banner-section .office-365-banner-video-link:hover {color: #333;cursor: pointer;display: inline-block;}    
     #banner-section .office-365-banner-video-link > .ico-gt-circle {
@@ -346,12 +341,18 @@ assetPath: false
       width: 60px;
     }
 
+    #banner-section .exclusive-discount {
+      text-align: left;
+      font-size: 28px;
+      margin: 15px 0;
+    }
+
     /* Plan Boxes */
         
     #plan-boxes-section{
       padding: 40px 0 60px;
     }
-        
+
     .side-plan{
       border: 2px solid #DDDDDD;
       border-top: none;
@@ -905,8 +906,13 @@ assetPath: false
           <h1 class="main-banner-title condensed">[@L[cds.sales/business/office-365:29621-main-title]@L]</h1>
           <div>
             <img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/business/office-365/img/GCE-24333-O365-LP-R4_Office-MSFT-icons.png" />
-          </div>
-          <h2 class="main-banner-subtitle price-hide" data-tokenize="[@T[productcompare:<percent primaryproductid="{{pfids.C}}" secondaryproductid="{{pfids.C}}" ><html><![CDATA[{0}%]]></html></percent>]@T]">[@L[cds.sales/business/office-365:29621-main-subtitle]@L]</h2>          
+          </div> 
+          <div class="exclusive-discount">[@L[cds.sales/business/office-365:31272-exclusive_discount]@L]</div>
+          ##if(productHasSavingsMoreThan({{pfids.C}}, {{pfids.C}}, 0))
+            <h2 class="main-banner-subtitle price-hide" data-tokenize="[@T[productcompare:<percent primaryproductid="{{pfids.C}}" secondaryproductid="{{pfids.C}}" showsymbol="true" ><html><![CDATA[{0}]]></html></percent>]@T]">[@L[cds.sales/business/office-365:29621-main-subtitle]@L]</h2>  
+          ##else
+            <h2 class="main-banner-subtitle price-hide" data-tokenize="">[@L[cds.sales/business/office-365:29621-main-subtitle]@L]</h2>  
+          ##endif
         </div>
         <div class="col-xs-3">&nbsp;</div>
         <div class="col-xs-2">
@@ -948,7 +954,7 @@ assetPath: false
   <section id="plan-boxes-section" class="white-bg">
     <div class="container l-main-container">
       <div class="row">
-        <div class="col-xs-4 plan-box mt5">
+        <div id="plan-box-A" class="col-xs-4 plan-box mt5">
           <div class="side-title-container">
             <h3 class="product-title">[@L[cds.sales/business/office-365:29621-PlanBlock-1-title]@L]</h3>
           </div>
@@ -963,7 +969,7 @@ assetPath: false
                 <div class="strike-through-wrapper">
                   <p class="strike-through-price">
                     <span class="secondary-color uppercase price-hide">
-                      <strong data-tokenize="[@T[productcompare:<percent primaryproductid="{{pfids.A}}" secondaryproductid="{{pfids.A}}" ><html><![CDATA[{0}%]]></html></percent>]@T]"> 
+                      <strong data-tokenize="[@T[productcompare:<percent primaryproductid="{{pfids.A}}" secondaryproductid="{{pfids.A}}" showsymbol="true" ><html><![CDATA[{0}]]></html></percent>]@T]"> 
                         [@L[cds.sales/business/office-365:29621-OnSaleSave]@L]
                       </strong>
                     </span>
@@ -975,10 +981,10 @@ assetPath: false
                 <div class="vat-tax-message">[@L[cds.sales/business/office-365:vat-price]@L]</div>
               ##endif      
             </div>  
-            <button type="button" class="btn btn-warning btn-block btn-lg js-add-to-cart plan-box-button" data-value="{{groupids.A}}}" data-ci="94226">[@L[cds.sales/business/office-365:29621-AddToCart]@L]</button>
+            <button type="button" class="btn btn-warning btn-block btn-lg js-add-to-cart plan-box-button" data-value="{{groupids.A}}" data-ci="94226">[@L[cds.sales/business/office-365:29621-AddToCart]@L]</button>
           </div>  
         </div>
-        <div class="col-xs-4 plan-box highlighted-plan">
+        <div id="plan-box-B" class="col-xs-4 plan-box highlighted-plan">
           <div class="side-title-container">
             <h3 class="product-title">[@L[cds.sales/business/office-365:29621-PlanBlock-2-title]@L]</h3>
           </div>
@@ -995,7 +1001,7 @@ assetPath: false
                 <div class="strike-through-wrapper">
                   <p class="strike-through-price">
                     <span class="secondary-color uppercase price-hide">
-                      <strong data-tokenize="[@T[productcompare:<percent primaryproductid="{{pfids.B}}" secondaryproductid="{{pfids.B}}" ><html><![CDATA[{0}%]]></html></percent>]@T]"> 
+                      <strong data-tokenize="[@T[productcompare:<percent primaryproductid="{{pfids.B}}" secondaryproductid="{{pfids.B}}" showsymbol="true" ><html><![CDATA[{0}]]></html></percent>]@T]"> 
                         [@L[cds.sales/business/office-365:29621-OnSaleSave]@L]
                       </strong>
                     </span>
@@ -1010,7 +1016,7 @@ assetPath: false
             <button type="button" class="btn btn-warning btn-block btn-lg js-add-to-cart plan-box-button" data-value="{{groupids.B}}" data-ci="94227">[@L[cds.sales/business/office-365:29621-AddToCart]@L]</button>
           </div>
         </div>
-        <div class="col-xs-4 plan-box mt5">
+        <div id="plan-box-C" class="col-xs-4 plan-box mt5">
           <div class="side-title-container">        
             <h3 class="product-title">[@L[cds.sales/business/office-365:29621-PlanBlock-3-title]@L]</h3>
           </div>
@@ -1027,7 +1033,7 @@ assetPath: false
                 <div class="strike-through-wrapper">
                   <p class="strike-through-price">
                     <span class="secondary-color uppercase price-hide">
-                      <strong data-tokenize="[@T[productcompare:<percent primaryproductid="{{pfids.C}}" secondaryproductid="{{pfids.C}}" ><html><![CDATA[{0}%]]></html></percent>]@T]"> 
+                      <strong data-tokenize="[@T[productcompare:<percent primaryproductid="{{pfids.C}}" secondaryproductid="{{pfids.C}}" showsymbol="true" ><html><![CDATA[{0}]]></html></percent>]@T]"> 
                         [@L[cds.sales/business/office-365:29621-OnSaleSave]@L]
                       </strong>
                     </span>
@@ -1043,6 +1049,7 @@ assetPath: false
           </div>
         </div>
       </div> <!-- / row -->
+
     </div> <!-- / container -->
   </section>
       
@@ -1065,21 +1072,40 @@ assetPath: false
         </div> <!-- /text-side -->       
       </div> <!-- / productivity-sub-section -->
      
-      <div class="productivity-sub-section">
-        <div class="sub-section-column text-side left">
-          <h3 class="price-hide" data-tokenize="[@T[productcompare:<percent primaryproductid="{{pfids.C}}" secondaryproductid="{{pfids.C}}" ><html><![CDATA[{0}%]]></html></percent>]@T]">[@L[cds.sales/business/office-365:29621-FeatureContent-2-title]@L]</h3>
-          <div class="check-section">
-            <div class="check-block">
-              <span class="pre-text-green-check"></span>
-            </div>
-            <div class="check-text-wrapper price-hide" data-tokenize="[@T[productcompare:<percent primaryproductid="{{pfids.C}}" secondaryproductid="{{pfids.C}}" ><html><![CDATA[{0}%]]></html></percent>]@T]">
-              <p>[@L[cds.sales/business/office-365:29621-FeatureContent-2-description]@L]</p>
-            </div>
-          </div><!-- /check-section -->
-        </div><!-- /text-side --> 
-        <div class="sub-section-column img-side solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/business/office-365/img/GCE-24333-O365-LP-R4_06.jpg">
-        </div><!-- /img-side -->
-      </div> <!-- / productivity-sub-section -->
+
+      ##if(productHasSavingsMoreThan({{pfids.C}}, {{pfids.C}}, 0))
+        <div class="productivity-sub-section">
+          <div class="sub-section-column text-side left">
+            <h3 class="price-hide" data-tokenize="[@T[productcompare:<percent primaryproductid="{{pfids.C}}" secondaryproductid="{{pfids.C}}" showsymbol="true" ><html><![CDATA[{0}]]></html></percent>]@T]">[@L[cds.sales/business/office-365:29621-FeatureContent-2-title]@L]</h3>
+            <div class="check-section">
+              <div class="check-block">
+                <span class="pre-text-green-check"></span>
+              </div>
+              <div class="check-text-wrapper price-hide" data-tokenize="[@T[productcompare:<percent primaryproductid="{{pfids.C}}" secondaryproductid="{{pfids.C}}" showsymbol="true" ><html><![CDATA[{0}]]></html></percent>]@T]">
+                <p>[@L[cds.sales/business/office-365:29621-FeatureContent-2-description]@L]</p>
+              </div>
+            </div><!-- /check-section -->
+          </div><!-- /text-side --> 
+          <div class="sub-section-column img-side solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/business/office-365/img/GCE-24333-O365-LP-R4_06.jpg">
+          </div><!-- /img-side -->
+        </div> <!-- / productivity-sub-section -->        
+      ##else
+        <div class="productivity-sub-section">
+          <div class="sub-section-column text-side left">
+            <h3>[@L[cds.sales/business/office-365:31272-backed_by_trust]@L]</h3>
+            <div class="check-section">
+              <div class="check-block">
+                <span class="pre-text-green-check"></span>
+              </div>
+              <div class="check-text-wrapper price-hide">
+                <p>[@L[cds.sales/business/office-365:31272-backed_by_trust_text]@L]</p>
+              </div>
+            </div><!-- /check-section -->
+          </div><!-- /text-side --> 
+          <div class="sub-section-column img-side solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/business/office-365/img/blade-4-go-daddy.jpg">
+          </div><!-- /img-side -->
+        </div> <!-- / productivity-sub-section -->
+      ##endif
 
       <div class="productivity-sub-section">
         <div class="sub-section-column img-side solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/business/office-365/img/GCE-24333-O365-LP-R4_10.jpg">
@@ -1214,7 +1240,7 @@ assetPath: false
                   <div class="row strike-through-wrapper">
                     <p class="strike-through-price">
                       <span class="secondary-color uppercase price-hide">
-                        <strong data-tokenize="[@T[productcompare:<percent primaryproductid="{{pfids.C}}" secondaryproductid="{{pfids.C}}" ><html><![CDATA[{0}%]]></html></percent>]@T]"> 
+                        <strong data-tokenize="[@T[productcompare:<percent primaryproductid="{{pfids.C}}" secondaryproductid="{{pfids.C}}" showsymbol="true" ><html><![CDATA[{0}]]></html></percent>]@T]"> 
                           [@L[cds.sales/business/office-365:29621-OnSaleSave]@L]
                         </strong>
                       </span>
@@ -1238,6 +1264,7 @@ assetPath: false
       
     </div> <!-- /l-main-container   -->
   </section>
+
   <section id="compare-plans" class="compare-plans-section">
     <h2 class="section-header">[@L[cds.sales/business/office-365:29621-Compare-title]@L]</h2>
     <p class="section-sub-header">[@L[cds.sales/business/office-365:29621-Compare-subtitle]@L]</p>
@@ -1332,7 +1359,7 @@ assetPath: false
                   <div class="row strike-through-wrapper">
                     <p class="strike-through-price">
                       <span class="secondary-color uppercase price-hide">
-                        <strong data-tokenize="[@T[productcompare:<percent primaryproductid="{{pfids.A}}" secondaryproductid="{{pfids.A}}" ><html><![CDATA[{0}%]]></html></percent>]@T]"> 
+                        <strong data-tokenize="[@T[productcompare:<percent primaryproductid="{{pfids.A}}" secondaryproductid="{{pfids.A}}" showsymbol="true" ><html><![CDATA[{0}]]></html></percent>]@T]"> 
                           [@L[cds.sales/business/office-365:29621-OnSaleSave]@L]
                         </strong>
                       </span>
@@ -1355,7 +1382,7 @@ assetPath: false
                   <div class="row strike-through-wrapper">
                     <p class="strike-through-price">
                       <span class="secondary-color uppercase price-hide">
-                        <strong data-tokenize="[@T[productcompare:<percent primaryproductid="{{pfids.B}}" secondaryproductid="{{pfids.B}}" ><html><![CDATA[{0}%]]></html></percent>]@T]"> 
+                        <strong data-tokenize="[@T[productcompare:<percent primaryproductid="{{pfids.B}}" secondaryproductid="{{pfids.B}}" showsymbol="true" ><html><![CDATA[{0}]]></html></percent>]@T]"> 
                           [@L[cds.sales/business/office-365:29621-OnSaleSave]@L]
                         </strong>
                       </span>
@@ -1378,7 +1405,7 @@ assetPath: false
                   <div class="row strike-through-wrapper">
                     <p class="strike-through-price">
                       <span class="secondary-color uppercase price-hide">
-                        <strong data-tokenize="[@T[productcompare:<percent primaryproductid="{{pfids.C}}" secondaryproductid="{{pfids.C}}" ><html><![CDATA[{0}%]]></html></percent>]@T]"> 
+                        <strong data-tokenize="[@T[productcompare:<percent primaryproductid="{{pfids.C}}" secondaryproductid="{{pfids.C}}" showsymbol="true" ><html><![CDATA[{0}]]></html></percent>]@T]"> 
                           [@L[cds.sales/business/office-365:29621-OnSaleSave]@L]
                         </strong>
                       </span>
@@ -1508,6 +1535,7 @@ assetPath: false
       </div>
     </div>
   </section> 
+
   <section id="disclaimer-section">
     <div class="container l-main-container content-disclaimer">
       <p>
@@ -1516,22 +1544,23 @@ assetPath: false
         </small>
       </p>
       <div class="modal fade" id="disclaimerModal">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <p class="modal-title"><strong>[@L[cds.sales/business/office-365:29621-Disclaimers-title]@L]</strong></p>
-          </div>
-          <div class="modal-body">
-            <p>[@L[cds.sales/business/office-365:29621-Disclaimers-one]@L]</p>
-            <p>[@L[cds.sales/business/office-365:29621-Disclaimers-renewed]@L]</p>
-            <p>[@L[cds.sales/business/office-365:29621-Disclaimers-ms-sla]@L]</p>
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              <p class="modal-title"><strong>[@L[cds.sales/business/office-365:29621-Disclaimers-title]@L]</strong></p>
+            </div>
+            <div class="modal-body">
+              <p>[@L[cds.sales/business/office-365:29621-Disclaimers-one]@L]</p>
+              <p>[@L[cds.sales/business/office-365:29621-Disclaimers-renewed]@L]</p>
+              <p>[@L[cds.sales/business/office-365:29621-Disclaimers-ms-sla]@L]</p>
+            </div>
           </div>
         </div>
-      </div>
-    </div> 
-  </div>
-  </section>        
+      </div> 
+    </div>
+  </section> 
+
   <form action="[@T[link:<relative path="~/business/office-365-config.aspx" />]@T]" method="get" data-addtocart='[@T[link:<relative path="~/api/package" />]@T]'>
     <input type="hidden" id="selected-package-id" name="plan" />
   </form>
@@ -1617,30 +1646,33 @@ assetPath: false
       });
     ##endif
 
-    // input object inside form to add to cart 
-    var $selectedPackageId = $("#selected-package-id");
 
     $(".js-add-to-cart").bind("click",function(event){
-      var $this = $(this);
-      
+
+      var $this = $(this);      
       event.preventDefault();
+
       var packageId = $this.data('value');
+
       var ci = $this.data('ci');
       if(ci == null || ci == "" || ci == "undefined"){
         ci = 000000;
       }
      
-      var $form = $selectedPackageId.parents("form");
-      var itccode = "SLP_365";
-      
-      var url = window.location.protocol+'//'+ window.location.host+'/api/package/add';
-      url += "/"+itccode;
-      url += "/"+ci;
-      url += "/1";//quantity
-      url += "/"+packageId;
-      url += window.location.search;
-   
-      $selectedPackageId.val(packageId);
+      ##if(isManager())
+        var itcCode = 'mgr_slp_365';
+      ##else
+        var itcCode = 'slp_365';
+      ##endif 
+
+      var urlFragment = '/' + itcCode;   //itc code
+      urlFragment    += '/' + ci; //ci code
+      urlFragment    += '/' + '1';                // quantity
+      urlFragment    += '/' + packageId  //Plan Name (aka Package Id)
+      var url = '[@T[link:<relative path="/api/package/add{0}"/>]@T]'.replace('{0}', urlFragment);
+
+      var redirectUrl = '[@T[link:<relative path="~/business/office-365-config.aspx"></relative>]@T]';
+      redirectUrl += (redirectUrl.indexOf('?') > 0 ? '&' : '?') + 'plan=' + packageId;
 
       $.ajax({
         type: 'POST',
@@ -1648,7 +1680,7 @@ assetPath: false
         complete: function (data) {
           var response = $.parseJSON(data.responseText);
           if (response.Success) {
-            window.location = '[@T[link:<relative path="~/business/office-365-config.aspx" parammode="explicit" />]@T]?plan=' + packageId ;
+            window.location = redirectUrl;
           } 
         },
         dataType: 'json'

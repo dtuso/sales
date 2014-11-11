@@ -1,6 +1,6 @@
 ---
-location: sales/business/office-365.aspx.rule
-id: 54624fb2f778fc0a70ee7814
+location: sales/business/office-365-config.aspx.rule
+id: 5462503ef778fc0a70ee7815
 name: GCE-31272
 comments: O365 Office LP - Adding GD Exclusive Text to page
 ---
