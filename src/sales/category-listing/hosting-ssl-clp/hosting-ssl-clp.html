@@ -1,10 +1,10 @@
 ---
 location: sales/hosting.aspx
-id: 5436f3c3f778fc2c9c0805a9
-name: GCE-29487
-comments: Hosting and SSL - Category Listing Page Fast Follow
+id: 54624648f778fc0a70ee7812
+name: GCE-30213
+comments: VPS and Ded - update hosting and servers category page pricing and descriptive text for new VPS and Ded servers
 cssVersionOverride: 6
----
+
 {% extends 'layouts/base.html' %} 
 {% block metahead %} 
 {% parent %} 
@@ -123,7 +123,7 @@ cssVersionOverride: 6
         <h3>[@L[cds.sales/gd/category-listing/hosting-ssl:subcategory-2-product-1-description]@L]</h3>
         <div class="price-container">
           <p>[@L[cds.sales/gd/category-listing/hosting-ssl:starting-at]@L]</p>
-          <p>[@T[productprice:<current productid="474" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]<span class="price-spacer"> </span>[@L[cds.sales/gd/category-listing/hosting-ssl:mo]@L]</p>
+            <p><span class="product-price" >[@T[productcompare:<addition primaryproductid="458239" secondaryproductid="483566" secondaryperiod="monthly" />]@T]</span><span class="price-spacer"> </span>[@L[cds.sales/gd/category-listing/hosting-ssl:mo]@L]</p>
         </div>
         <a class="btn btn-primary" id="learn-more-product-three" href="[@T[link:<relative path='~/hosting/dedicated-servers.aspx' secure='true'><param name='ci' value='93311' /></relative>]@T]" data-ci="93311">[@L[cds.sales/gd/category-listing/hosting-ssl:view-details]@L]</a>
       </div>    
@@ -136,7 +136,7 @@ cssVersionOverride: 6
         <h3>[@L[cds.sales/gd/category-listing/hosting-ssl:subcategory-2-product-2-description]@L]</h3>
         <div class="price-container">
           <p>[@L[cds.sales/gd/category-listing/hosting-ssl:starting-at]@L]</p>
-          <p>[@T[productprice:<current productid="171824" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]<span class="price-spacer"> </span>[@L[cds.sales/gd/category-listing/hosting-ssl:mo]@L]</p>
+            <p><span class="product-price" >[@T[productcompare:<addition primaryproductid="458319" secondaryproductid="483558" secondaryperiod="monthly" />]@T]</span><span class="price-spacer"> </span>[@L[cds.sales/gd/category-listing/hosting-ssl:mo]@L]</p>
         </div>
         <a class="btn btn-primary" id="learn-more-product-four" href="[@T[link:<relative path='~/hosting/vps-hosting.aspx' secure='true'><param name='ci' value='93314' /></relative>]@T]" data-ci="93314">[@L[cds.sales/gd/category-listing/hosting-ssl:view-details]@L]</a>
       </div>
@@ -328,6 +328,12 @@ cssVersionOverride: 6
     $('.two-products .info-container h2, .two-products .info-container p, .two-products .info-container a').each(function(){
       $(this).resizeTextWidth();
     });
+
+      var linuxOsAddon = "[@T[productprice:<current productid="483560" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]";
+
+      $(".product-price").each(function(){
+          $(this).text(currencyCalc.evaluate([$(this).text(),"+",linuxOsAddon]));
+      });
   });
 
   $(document).ready(function(){
