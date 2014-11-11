@@ -1,12 +1,12 @@
 {
-  "dedicated-server-config.html": {
+  "dedicated-server.html": {
     "cdsDetails": {
       "champion": {
         "name": "Colyn Brown",
         "email": "clbrown@godaddy.com"
       }
     },
-    "assetPath": "fos/201401/sales/hosting/private-label/dedicated-server-config",
+    "assetPath": "fos/201401/sales/hosting/private-label/dedicated-servers",
     "metaTitle": "Hunter's, New Show Dedicated Servers | Fully Configurable Multi-core Servers",
     "metaDescription": "Need a Dedicated Server? Hunter's, New Show makes it easy to run your own Dedicated Web Server.",
     "metaKeywords": "dedicated server, dedicated servers, dedicated server hosting, dedicated server web hosting",
@@ -15,7 +15,7 @@
     "metaOgImage": "fos/hp/rebrand/img/gd_rebrand_og.png",
     "metaOgDescription": "og-description"
   },
-  "dedicated-server-config.language": {
+  "dedicated-server.language": {
     "cdsDetails": {
       "champion": {
         "name": "Colyn Brown",

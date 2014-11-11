@@ -53,6 +53,6 @@
   "ssl-lp":             "./ssl/ssl-lp/",
   "web-host":           "./hosting/web-host/",
   "shared":             "./shared/",
-  "ds-PL":              "./hosting/private-label/dedicated-server/",
-  "ds-config-PL":       "./hosting/private-label/dedicated-server-config/"
+  "ds-PL":              "./hosting/private-label/dedicated-servers/",
+  "ds-config-PL":       "./hosting/private-label/dedicated-servers-config/"
 }
