@@ -28,8 +28,7 @@
             var fields = $form.serializeObject();
             if(managerView && $form.hasClass('mgr-view'))
             {
-               fields['package'] = $('div.select-box').find('ul li.selected').find('input[name="package"]').val()
-               //$('.select-box-options li.selected input[name="package"]').val();
+               fields['package'] = $('div.select-box',$form).find('ul li.selected').find('input[name="package"]').val();
             }
             var params = [fields['itc'], fields['ci'], fields['qty'], fields['package']];
             $.ajax({
