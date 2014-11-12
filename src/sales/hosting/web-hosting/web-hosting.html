@@ -1,8 +1,8 @@
 ---
 location: sales/hosting/web-hosting.aspx
-id: 54404ca4f778fc0b78c97c9e
-name: GCE-29607
-comments: Rainier Web-hosting (en-US only)
+id: 5463a37af778fc0a70ee7857
+name: GCE-31814
+comments:  Enable Web Pro Section for all markets except VAT markets - Ireland Belgium France Germany Italy Spain Sweden
 url: http://www.dev-godaddy.com/hosting/web-hosting.aspx
 splitSide: 1349.A
 cssVersionOverride: 3
@@ -1308,7 +1308,7 @@ metaOgDescription: "[@L[cds.sales/gd/hosting/web-hosting:og-description]@L]"
     ##endif
     </section>
 
-      ##if(activeLanguageAny([en-us]))
+    ##if(!countrySiteAny(ie,be,fr,de,it,es,ch))
     <!-- Start Rainier Banner -->
     <section class="pro-page-section container l-main-container section-top-spacing">
       <div class="row" id="rainier-section">
