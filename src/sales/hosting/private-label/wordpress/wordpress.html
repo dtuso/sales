@@ -190,7 +190,6 @@ $(".js-add-to-cart").bind("click",function(event){
   url += "/" + quantity;
   url += "/" + packageId;
   url += window.location.search;
-  console.log(url);
 
   $.getJSON(url, function (data) {
     if (eval(data.Success)) {  
