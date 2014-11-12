@@ -1,8 +1,8 @@
 ---
 location: sales/hosting/private-label/wordpress.aspx
-id: 545ab42ef778fc11ac1210e4
-name: fixing the business folks mistakes
-comments: changing api endpoint because reqs were basically non-existant
+id: 5463b7ddf778fc0a70ee7864
+name: Updated api call
+comments: added cod to call gui syncshopper so custom PL's will add to cart properly
 assetPath: false
 localVars: true
 ---
@@ -192,21 +192,26 @@ $(".js-add-to-cart").bind("click",function(event){
   url += window.location.search;
   console.log(url);
 
-  $.ajax({
-    type: 'POST',
-    url: url,
-    complete: function (data) {
-      var response = $.parseJSON(data.responseText);
-      if (response.Success) {
-        ##if(isManager())
-          var carturl = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]';
-        ##else
-          var carturl = '[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]';
-        ##endif
-          window.location = carturl;
-      } 
-    },
-    dataType: 'json'
+  $.getJSON(url, function (data) {
+    if (eval(data.Success)) {  
+      var newCartCt = pcCartCt + 1;
+      pcUpdateCart(newCartCt);
+      ##if(isManager())
+      var linkLocation = '[@T[link:<external linktype="GUIURL" path="/syncshopper/mgrcart/{0}" />]@T]'
+      ##else
+      var linkLocation = '[@T[link:<external linktype="GUIURL" path="/syncshopper/cart/{0}" />]@T]'
+      ##endif
+      linkLocation = linkLocation.replace("{0}", data.Shopper);
+      window.location = linkLocation;
+    }
+    else
+    {
+      ##if(isManager())
+      window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]';
+      ##else
+      window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]';
+      ##endif
+    }
   });
 }); 
 
