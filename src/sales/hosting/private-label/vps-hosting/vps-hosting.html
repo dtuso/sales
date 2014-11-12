@@ -1,6 +1,6 @@
 ---
 location: sales/hosting/private-label/vps-hosting.aspx
-id: 546125a8f778fc26a885ee3f
+id: 54639f18f778fc0a70ee7853
 name: GCE-28592
 comments: Reseller /PL VPS Refresh
 url: http://www.dev-secureserver.net/hosting/vps-hosting.aspx
@@ -443,8 +443,9 @@ assetPath: true
         	$("#osaddon").val(plans.t1.osaddon);
         	$.each(plans, function(i, item){
                   var tier =  $("#" + i +"");
+                  var addonPrice=currencyCalc.evaluate([item.osAddonPrice,"+",item.managedaddonprice]);
                   tier.find('.ram').text(item.plandetail.ram + ' RAM');
-                  tier.find('.brpl-price').text(currencyCalc.evaluate([item.productprice,"+",item.managedaddonprice]));
+                  tier.find('.brpl-price').text(currencyCalc.evaluate([item.productprice,"+",addonPrice]));
                   tier.find('#storage').html("<strong>" + item.plandetail.storage + "</strong> Storage");
                   tier.find('#bandwidth').html("<strong>" +item.plandetail.bandwidth  + "</strong> /mo Bandwidth");
                   tier.find('.js-addtocart-btn').attr('data-plan' , item.id);

@@ -533,10 +533,11 @@
    "vpsprodata": {
        "windows" : {
                   "t1" : {
-                        "productprice" : "[@T[productcompare:<addition primaryproductid=\"458322\" secondaryproductid=\"483556\" secondaryperiod=\"monthly\" />]@T]",
+                        "productprice" : "[@T[productprice:<current productid=\"458322\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
                          "id": "pro_vps_windows_t1_12month",
                          "osaddon": "pro_vps_os_windows",
                          "managedaddonprice": "[@T[productprice:<current productid=\"483560\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                         "osAddonPrice": "[@T[productprice:<current productid=\"483556\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
                          "plandetail":{
                               "ram": "2 GB",
                               "storage": "40 GB",
@@ -544,10 +545,11 @@
                          }
                      },
                   "t2" : {
-                        "productprice" : "[@T[productcompare:<addition primaryproductid=\"458321\" secondaryproductid=\"483556\" secondaryperiod=\"monthly\" />]@T]",
+                        "productprice" : "[@T[productprice:<current productid=\"458321\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
                          "id": "pro_vps_windows_t2_12month",
                          "osaddon": "pro_vps_os_windows",
                          "managedaddonprice": "[@T[productprice:<current productid=\"483560\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                         "osAddonPrice": "[@T[productprice:<current productid=\"483556\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
                          "plandetail":{
                               "ram": "2 GB",
                               "storage": "60 GB",
@@ -555,10 +557,11 @@
                          }
                      },
                   "t3" : {
-                        "productprice" : "[@T[productcompare:<addition primaryproductid=\"458344\" secondaryproductid=\"483556\" secondaryperiod=\"monthly\" />]@T]",
+                        "productprice" : "[@T[productprice:<current productid=\"458344\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\"/>]@T]",
                          "id": "pro_vps_windows_t3_12month",
                          "osaddon": "pro_vps_os_windows",
                          "managedaddonprice": "[@T[productprice:<current productid=\"483560\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                         "osAddonPrice": "[@T[productprice:<current productid=\"483556\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
                          "plandetail":{
                               "ram": "3 GB",
                               "storage": "90 GB",
@@ -566,10 +569,11 @@
                          }
                      },
                   "t4" : {
-                        "productprice" : "[@T[productcompare:<addition primaryproductid=\"458360\" secondaryproductid=\"483556\" secondaryperiod=\"monthly\" />]@T]",
+                        "productprice" : "[@T[productprice:<current productid=\"458360\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
                          "id": "pro_vps_windows_t4_12month",
                          "osaddon": "pro_vps_os_windows",
                          "managedaddonprice": "[@T[productprice:<current productid=\"483560\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                         "osAddonPrice": "[@T[productprice:<current productid=\"483556\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
                          "plandetail":{
                               "ram": "4 GB",
                               "storage": "120 GB",
@@ -577,10 +581,11 @@
                          }
                      },
                   "t5" : {
-                        "productprice" : "[@T[productcompare:<addition primaryproductid=\"458376\" secondaryproductid=\"483556\" secondaryperiod=\"monthly\" />]@T]",
+                        "productprice" : "[@T[productprice:<current productid=\"458376\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
                          "id": "pro_vps_windows_t5_12month",
                          "osaddon": "pro_vps_os_windows",
                          "managedaddonprice": "[@T[productprice:<current productid=\"483560\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                         "osAddonPrice": "[@T[productprice:<current productid=\"483556\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
                          "plandetail":{
                               "ram": "8 GB",
                               "storage": "240 GB",
@@ -591,10 +596,11 @@
         "linux" : {
 
                   "t1" : {
-                        "productprice" : "[@T[productcompare:<addition primaryproductid=\"458319\" secondaryproductid=\"483558\" secondaryperiod=\"monthly\" />]@T]",
+                        "productprice" : "[@T[productprice:<current productid=\"458319\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
                          "id": "pro_vps_linux_t1_12month",
                          "osaddon": "pro_vps_os_linux",
                          "managedaddonprice": "[@T[productprice:<current productid=\"483560\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                         "osAddonPrice": "[@T[productprice:<current productid=\"483558\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
                          "plandetail":{
                               "ram": "2 GB",
                               "storage": "40 GB",
@@ -602,10 +608,11 @@
                          }
                      },
                   "t2" : {
-                        "productprice" : "[@T[productcompare:<addition primaryproductid=\"458321\" secondaryproductid=\"483558\" secondaryperiod=\"monthly\" />]@T]",
+                        "productprice" : "[@T[productprice:<current productid=\"458321\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
                          "id": "pro_vps_linux_t2_12month",
                          "osaddon": "pro_vps_os_linux",
                          "managedaddonprice": "[@T[productprice:<current productid=\"483560\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                         "osAddonPrice": "[@T[productprice:<current productid=\"483558\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
                          "plandetail":{
                               "ram": "2 GB",
                               "storage": "60 GB",
@@ -613,10 +620,11 @@
                          }
                      },
                   "t3" : {
-                        "productprice" : "[@T[productcompare:<addition primaryproductid=\"458344\" secondaryproductid=\"483558\" secondaryperiod=\"monthly\" />]@T]",
+                        "productprice" : "[@T[productprice:<current productid=\"458344\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
                          "id": "pro_vps_linux_t3_12month",
                          "osaddon": "pro_vps_os_linux",
                          "managedaddonprice": "[@T[productprice:<current productid=\"483560\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                         "osAddonPrice": "[@T[productprice:<current productid=\"483558\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
                          "plandetail":{
                               "ram": "3 GB",
                               "storage": "90 GB",
@@ -624,10 +632,11 @@
                          }
                      },
                   "t4" : {
-                        "productprice" : "[@T[productcompare:<addition primaryproductid=\"458360\" secondaryproductid=\"483558\" secondaryperiod=\"monthly\" />]@T]",
+                        "productprice" : "[@T[productprice:<current productid=\"458360\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
                          "id": "pro_vps_linux_t4_12month",
                          "osaddon": "pro_vps_os_linux",
                          "managedaddonprice": "[@T[productprice:<current productid=\"483560\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                         "osAddonPrice": "[@T[productprice:<current productid=\"483558\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
                          "plandetail":{
                               "ram": "4 GB",
                               "storage": "120 GB",
@@ -635,10 +644,11 @@
                          }
                      },
                   "t5" : {
-                        "productprice" : "[@T[productcompare:<addition primaryproductid=\"458376\" secondaryproductid=\"483558\" secondaryperiod=\"monthly\" />]@T]",
+                        "productprice" : "[@T[productprice:<current productid=\"458376\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
                          "id": "pro_vps_linux_t5_12month",
                          "osaddon": "pro_vps_os_linux",
                          "managedaddonprice": "[@T[productprice:<current productid=\"483560\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+                         "osAddonPrice": "[@T[productprice:<current productid=\"483558\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
                          "plandetail":{
                               "ram": "8 GB",
                               "storage": "240 GB",
