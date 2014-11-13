@@ -1,0 +1,12 @@
+---
+location: sales/homepage/default.pt-pt
+id: false
+name: GCE-31162
+---
+extends ../../layouts/homepage/default_base
+block styles
+  link(href!="[@T[link:<cssroot />]@T]fos/hp/rebrand/css/pt-pt_homepage_20140805.css" rel="stylesheet" type="text/css")
+
+block pods
+  | 
+  | [@P[cdsDocument:<data app="sales" location="homepage/locals/pt-pt/pods" /> ]@P]

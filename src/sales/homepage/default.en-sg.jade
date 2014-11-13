@@ -1,0 +1,55 @@
+---
+location: sales/homepage/default.en-sg
+id: false
+name: GCE-31162
+---
+extends ../../layouts/homepage/default_base
+block styles
+	link(href!="[@T[link:<cssroot />]@T]fos/hp/rebrand/css/en-sg_homepage_20140929.css" rel="stylesheet" type="text/css")
+
+block marquee
+	|  ##if(targetMessageTagAny(sales_hp_default,hp_existing_customer))
+	|    ##if(splitTestingSideIsActive(1396, B) && !hasISC())
+	|      [@P[cdsDocument:<data app="sales" location="homepage/marquee/gybo/default_template" /> ]@P]
+	|    ##else
+	|      [@P[cdsDocument:<data app="sales" location="homepage/marquee/gtld-phone/default_template" /> ]@P]
+	|    ##endif
+	|  ##else
+	|    ##if(splitTestingSideIsActive(1394, B) && !hasISC())
+	|      [@P[cdsDocument:<data app="sales" location="homepage/marquee/gybo/default_template" /> ]@P]
+	|    ##else
+	|      [@P[cdsDocument:<data app="sales" location="homepage/marquee/299com/default_template" /> ]@P]
+	|    ##endif
+	|  ##endif
+
+block bugBar
+	+gtldBug("co")
+	+gtldBug("club")
+	+gtldBug("org")
+
+block share
+	.fosshare(data-twshareurl!="[@T[link:<external linktype='XDOTCO' path='/wwwGD' />]@T]" data-twtext!="[@L[cds.sales/homepage:twitter-text-gdbl]@L]" data-twrelated="GoDaddy" data-shareurl!="[@T[link:<relative path='/'/>]@T]" data-buttons="google,facebook,twitter")
+
+block pods
+	| 
+	| [@P[cdsDocument:<data app="sales" location="homepage/locals/en-sg/pods" /> ]@P]
+
+block cookieWarning
+	script(type="text/javascript").
+		var ignoreLivePerson = true;
+
+append scripts
+	script(type="text/javascript").
+		$('.com-299-marquee').bind('click',function(event) {
+			var $clickedElement = $(event.target);
+			if(!$clickedElement.hasClass('gtld-pods')) {
+		  		window.location.href='[@T[link:<relative path="/domains/search-new.aspx"><param name="ci" value="91184" /></relative>]@T]';
+			}
+		});
+
+		$('.gdhp-top-banner').bind('click',function(event) {
+			var $clickedElement = $(event.target);
+			if(!$clickedElement.hasClass('gtld-pods')){
+			  window.location.href='[@T[link:<relative path="/domains/search-new.aspx"><param name="ci" value="87716" /></relative>]@T]';
+			}
+		});

@@ -1,0 +1,21 @@
+---
+location: sales/homepage/default.es-es
+id: false
+name: GCE-31162
+---
+extends ../../layouts/homepage/default_base
+block styles
+	link(href!="[@T[link:<cssroot />]@T]fos/hp/rebrand/css/es-es_homepage_20140922.css" rel="stylesheet" type="text/css")
+
+block bugBar
+	+gtldBug("co")
+	+gtldBug("uno")
+	+gtldBug("org")
+
+block share
+	.fosshare(data-twshareurl!="[@T[link:<external linktype='XDOTCO' path='/gdSpanish' />]@T]" data-twtext!="[@L[cds.sales/homepage:twitter-text-gdbl]@L]" data-twrelated="GoDaddy" data-shareurl!="[@T[link:<relative path='/'/>]@T]" data-buttons="google,facebook,twitter")
+
+block pods
+	| 
+	| [@P[cdsDocument:<data app="sales" location="homepage/locals/es-es/pods" /> ]@P]
+

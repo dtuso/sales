@@ -1,8 +1,8 @@
 ---
 location: sales/hosting/wordpress-hosting.aspx
-id:    544556e3f778fc1ba009aa29
-name: GCE-29607
-comments: Rainier banner deployment
+id:    5463a46ef778fc0a70ee785b
+name: GCE-31814
+comments:  Enable Web Pro Section for all markets except VAT markets - Ireland Belgium France Germany Italy Spain Sweden
 cssVersionOverride: 3
 ---
 {% extends 'layouts/base.html' %}
@@ -495,8 +495,8 @@ cssVersionOverride: 3
         </div>
       </section>
 
-      ##if(activeLanguageAny([en-us]))
-      <!-- Start Rainier Banner -->
+        ##if(!countrySiteAny(ie,be,fr,de,it,es,ch))
+        <!-- Start Rainier Banner -->
         <div class="row tab-content" id="rainier-section">
           <div id="Rainier_Banner" class="col-xs-12 rainier_banner">
             <div class="row" data-gd-sidebysidealign="{}">

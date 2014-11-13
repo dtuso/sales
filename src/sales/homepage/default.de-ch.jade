@@ -1,0 +1,30 @@
+---
+location: sales/homepage/default.de-ch
+id: false
+name: GCE-31162
+---
+extends ../../layouts/homepage/default_base
+block styles
+	link(href!="[@T[link:<cssroot />]@T]fos/hp/rebrand/css/de-ch_homepage_20140805.css" rel="stylesheet" type="text/css")
+
+block marquee
+	|  ##if(targetMessageTagAny(sales_hp_default,hp_existing_customer))
+	|   ##if(splitTestingSideIsActive(1403, B))
+	|     [@P[cdsDocument:<data app="sales" location="homepage/marquee/gtld/default_template" /> ]@P]
+	|   ##else
+	|     [@P[cdsDocument:<data app="sales" location="homepage/marquee/gybo/default_template" /> ]@P]
+	|   ##endif
+	| ##else
+	|   ##if(splitTestingSideIsActive(1398, A) && !hasISC())
+	|     [@P[cdsDocument:<data app="sales" location="homepage/marquee/299com/default_template" /> ]@P]
+	|   ##else
+	|     [@P[cdsDocument:<data app="sales" location="homepage/marquee/gybo/default_template" /> ]@P]
+	|   ##endif
+	| ##endif
+
+block share
+	.fosshare(data-twshareurl!="[@T[link:<external linktype='XDOTCO' path='/wwwGD' />]@T]" data-twtext!="[@L[cds.sales/homepage:twitter-text-gdbl]@L]" data-twrelated="GoDaddy" data-shareurl!="[@T[link:<relative path='/'/>]@T]" data-buttons="google,facebook,twitter")
+
+block pods
+	| 
+	| [@P[cdsDocument:<data app="sales" location="homepage/locals/de-ch/pods" /> ]@P]

@@ -1,0 +1,21 @@
+---
+location: sales/homepage/default.en-ie
+id: false
+name: GCE-31162
+---
+extends ../../layouts/homepage/default_base
+block styles
+	link(href!="[@T[link:<cssroot />]@T]fos/hp/rebrand/css/en-ie_homepage_20140805.css" rel="stylesheet" type="text/css")
+
+block bugBar
+	+gtldBug("co")
+	+gtldBug("club")
+	+gtldBug("org")
+
+block pods
+	| 
+	| [@P[cdsDocument:<data app="sales" location="homepage/locals/en-ie/pods" /> ]@P]
+
+append cookieWarning
+	script(type="text/javascript").
+		var ignoreLivePerson = true;

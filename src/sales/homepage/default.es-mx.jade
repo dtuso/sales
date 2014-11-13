@@ -1,0 +1,57 @@
+---
+location: sales/homepage/default.es-mx
+name: GCE-31162
+---
+extends ../../layouts/homepage/default_base
+block styles
+	link(href!="[@T[link:<cssroot />]@T]fos/hp/rebrand/css/es-mx_homepage_20141015.css" rel="stylesheet" type="text/css")
+	| 
+	|    [@P[cdsDocument:<data app="sales" location="fonts/fonts" /> ]@P]
+
+block marquee
+	|    ##if(!targetMessageTagAny(sales_hp_default,hp_existing_customer))
+	|      ##if(splitTestingSideIsActive(1351, B) || hasISC())
+	|        [@P[cdsDocument:<data app="sales" location="homepage/locals/es-mx/topmarquee" /> ]@P]
+	|      ##else
+	|        [@P[cdsDocument:<data app="sales" location="homepage/locals/es-mx/split/topmarquee" /> ]@P]
+	|      ##endif
+	|    ##else
+	|      ##if(splitTestingSideIsActive(1352, B))
+	|        [@P[cdsDocument:<data app="sales" location="homepage/locals/es-mx/topmarquee" /> ]@P]
+	|      ##else
+	|        [@P[cdsDocument:<data app="sales" location="homepage/locals/es-mx/split/gtld" /> ]@P]
+	|      ##endif
+	|    ##endif
+
+block bugBar
+	+gtldBug("co")
+	+gtldBug("uno")
+	+gtldBug("org")
+
+block share
+	.fosshare(data-twshareurl!="[@T[link:<external linktype='XDOTCO' path='/gdSpanish' />]@T]" data-twtext!="[@L[cds.sales/homepage:twitter-text-gdbl]@L]" data-twrelated="GoDaddy" data-shareurl!="[@T[link:<relative path='/'/>]@T]" data-buttons="google,facebook,twitter")
+
+block pods
+	| 
+	| [@P[cdsDocument:<data app="sales" location="homepage/locals/es-mx/pods" /> ]@P]
+
+block cookieWarning
+
+append scripts
+	script(type="text/javascript").
+		var hpLoadVideo = 0;
+		var autoplay = '\&autoplay=1';
+		$("div.gdhp-bottom-banner").mouseenter(function() {
+			if(hpLoadVideo != 1) {
+		      hpLoadVideo = 1;
+		      var src ='//www.youtube.com/embed/lB0BFbZi6mc?html5=1&rel=0';
+		      $('#myVideoModal iframe').attr('src',src);
+		      $('#myVideoModal').on('hidden.bs.modal', function () {          
+		        $('#myVideoModal iframe').removeAttr('src');
+		        $('#myVideoModal iframe').attr('src',src);
+		      })
+		      $('#myVideoModal').on('show.bs.modal', function () {          
+		        $('#myVideoModal iframe').attr('src', src + autoplay);
+		      })
+		    }
+		});

@@ -1,8 +1,8 @@
 ---
 location: localization/sales/offers/office365-promo-config/en
-id: 5449489cf778fc21c812d414
-name: GCE-30746
-comments: GOT1 and GOT2 followups
+id: 5460eb93f778fc26a885edda
+name: GCE-31871
+comments: GOT2 POB rename of Productivity Plus plan to Business Premium
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="page-title" />
@@ -57,6 +57,8 @@ Email Essentials
 Business Essentials
 <phrase key="cp-2-ProductivityPlus" />
 Productivity Plus
+<phrase key="cp-2-BusinessPremium" />
+Business Premium
 <phrase key="cp-1-Subtotal" />
 Subtotal
 <phrase key="cp-6-SubtotalDoesNotIncludeApplicableTaxes" />

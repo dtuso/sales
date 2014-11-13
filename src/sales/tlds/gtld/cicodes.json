@@ -107,6 +107,12 @@
           { "ITC Code" : "GtldEoiWebsiteRocks" },
           { "Description" : ".ROCKS Slide Link" }
         ]
+      },
+      { ".GLOBAL Slide Link" : [
+          { "ITC ID" : "94396" },
+          { "ITC Code" : "GtldEoiWebsiteGlobal" },
+          { "Description" : ".GLOBAL Slide Link" }
+        ]
       }
     ],
   "Everything Else" : [

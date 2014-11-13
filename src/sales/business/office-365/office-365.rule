@@ -1,8 +1,8 @@
 ---
 location: sales/business/office-365.aspx.rule
-id: 544fea24f778fc142061a9cb
-name: GCE-29621
-comments: Office365 redesign
+id: 54624fb2f778fc0a70ee7814
+name: GCE-31272
+comments: O365 Office LP - Adding GD Exclusive Text to page
 ---
 [
   { 
