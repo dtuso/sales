@@ -7,8 +7,6 @@ extends ../../layouts/homepage/default_base
 block styles
 	link(href!="[@T[link:<cssroot />]@T]fos/hp/rebrand/css/pt-br_homepage_20141021.css" rel="stylesheet" type="text/css")
 	style.
-		#co-price{padding-left:26px;}
-		#co-icon{width:inherit;position:absolute;margin-top:12px;}
 		.walsheim-reg{font-family:'Walsheim-Regular';}
 		.walsheim-med{font-family:'Walsheim-Medium';}
 		.gybo-btn-wrapper>.btn-wrap>.btn{font-family:'Walsheim-Medium';font-size:17px;}
@@ -30,15 +28,9 @@ block marquee
 	| ##endif
 
 block bugBar
-	a(href!="[@T[link:<relative path='/tlds/co-domain.aspx'><param name='ci' value='83052' /><param name='tld' value='CO' /></relative>]@T]")
-		span#co-icon
-		span#co-price [@T[productprice:<current productid="56401" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]
-	a(href!="[@T[link:<relative path='/tlds/br-domain'><param name='ci' value='88377' /><param name='tld' value='BR' /></relative>]@T]")
-		span#br-icon.tld-icon
-		span#br-price [@T[productprice:<current productid="57201" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]*
-	a(href!="[@T[link:<relative path='/tlds/org.aspx'><param name='ci' value='93297' /><param name='tld' value='ORG' /></relative>]@T]")
-		span#org-icon.tld-icon
-		span#org-price [@T[productprice:<current productid="12101" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]*
+	+gtldBug("co")
+	+gtldBug("br")
+	+gtldBug("org")
 
 block share
 	.fosshare(data-twshareurl!="[@T[link:<external linktype='XDOTCO' path='/wwwGD' />]@T]" data-twtext!="[@L[cds.sales/homepage:twitter-text-gdbl]@L]" data-twrelated="GoDaddy" data-shareurl!="[@T[link:<relative path='/'/>]@T]" data-buttons="google,facebook,twitter")

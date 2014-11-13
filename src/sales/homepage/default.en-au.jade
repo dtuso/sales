@@ -6,9 +6,6 @@ name: GCE-31162
 extends ../../layouts/homepage/default_base
 block styles
 	link(href!="[@T[link:<cssroot />]@T]fos/hp/rebrand/css/en-au_homepage_20140731.css" rel="stylesheet" type="text/css")
-	style.
-		#co-price {padding-left:26px;}
-		#co-icon { width: inherit; position: absolute; margin-top: 12px; }
 
 block marquee
 	|  ##if(!targetMessageTagAny(sales_hp_default,hp_existing_customer))
@@ -22,15 +19,9 @@ block marquee
 	|  ##endif
 
 block bugBar
-	a(href!="[@T[link:<relative path='/tlds/co-domain.aspx'><param name='ci' value='83052' /><param name='tld' value='CO' /></relative>]@T]")
-		span#co-icon
-		span#co-price [@T[productprice:<current productid="56401" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]
-	a(href!="[@T[link:<relative path='/tlds/club'><param name='ci' value='89153' /><param name='tld' value='CLUB' /></relative>]@T]")
-		span#club-icon
-		span#club-price [@T[productprice:<current productid="172137" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]*
-	a(href!="[@T[link:<relative path='/tlds/org.aspx'><param name='ci' value='93297' /><param name='tld' value='ORG' /></relative>]@T]")
-		span#org-icon.tld-icon
-		span#org-price [@T[productprice:<current productid="12101" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]*
+	+gtldBug("co")
+	+gtldBug("club")
+	+gtldBug("org")
 
 block share
 	.fosshare(data-twshareurl!="[@T[link:<external linktype='XDOTCO' path='/gdAustrali' />]@T]" data-twtext!="[@L[cds.sales/homepage:twitter-text-gdbl]@L]" data-twrelated="GoDaddy" data-shareurl!="[@T[link:<relative path='/'/>]@T]" data-buttons="google,facebook,twitter")

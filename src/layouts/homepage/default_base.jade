@@ -1,4 +1,13 @@
-- var gtldData = {co : { path: "/tlds/co-domain.aspx", ci: 93296, cssClass: "co", productId: 56401 }, org : { path: "/tlds/org.aspx", ci: 93297, cssClass: "org", productId: 12101 },net : { path: "/tlds/net.aspx", ci: 93298, cssClass: "org", productId: 12001 },biz : { path: "/tlds/biz.aspx", ci: 94195, cssClass: "biz", productId: 11301 },club : { path: "/tlds/club", ci: 89153, cssClass: "club", productId: 172137 },uno : { path: "/tlds/uno", ci: 88299, cssClass: "uno", productId: 40995 },br : { path: "/tlds/br-domain", ci: 88377, cssClass: "br", productId: 57201 }}
+//- consider moving this data and the related mixin to a dedicated file (/src/layouts/homepage/bugBar.jade) 
+//- if it gets unreadably long or if addition data/mixin sections are added
+- var gtldData = [];
+- gtldData["co"]    = { path: "/tlds/co-domain.aspx",  ci: 93296,  cssClass: "co",    productId: 56401 };
+- gtldData["org"]   = { path: "/tlds/org.aspx",        ci: 93297,  cssClass: "org",   productId: 12101 };
+- gtldData["net"]   = { path: "/tlds/net.aspx",        ci: 93298,  cssClass: "org",   productId: 12001 };
+- gtldData["biz"]   = { path: "/tlds/biz.aspx",        ci: 94195,  cssClass: "biz",   productId: 11301 };
+- gtldData["club"]  = { path: "/tlds/club",            ci: 89153,  cssClass: "club",  productId: 172137 };
+- gtldData["uno"]   = { path: "/tlds/uno",             ci: 88299,  cssClass: "uno",   productId: 40995 };
+- gtldData["br"]    = { path: "/tlds/br-domain",       ci: 88377,  cssClass: "br",    productId: 57201 };
 
 mixin gtldBug(gtld)
   a.tld-link(href!="[@T[link:<relative path='" + gtldData[gtld].path + "'><param name='ci' value='" + gtldData[gtld].ci + "' /><param name='tld' value='" + gtldData[gtld].tld + "' /></relative>]@T]")
@@ -46,8 +55,6 @@ html(lang!="[@T[localization:<language full='true' />]@T]")
       .hp-sprite { background: url(https://img1.wsimg.com/fos/hp/rebrand/img/gdhp_sprite_20140819.png) scroll no-repeat; vertical-align: top; }
       .hp-sprite.co { background-position:-74px -0px; height:19px; width:19px; vertical-align: top; margin-right: 8px;}
       .hp-sprite.org { background-position:-330px -6px; width: 37px; height: 13px; margin-top: 5px; }
-      /* .hp-sprite.net { background-position:-799px -9px; height:16px; width:42px; } */
-      /* .hp-sprite.biz { background-position:-920px -7px; height:24px; width:35px; } */
       .hp-sprite.club { background-position:-236px -5px; width: 39px; height: 11px; margin-top: 5px; }
       .hp-sprite.uno { background-position:-98px 0; width: 19px; height: 19px; }
       .hp-sprite.br { background-position:-120px 0; width: 14px; height: 19px; }
@@ -64,6 +71,7 @@ html(lang!="[@T[localization:<language full='true' />]@T]")
   body
     | 
     | [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header" />]@P]
+
     //  Domain Search Section
     .gdhp-search-section
       .gdhp-main-top
@@ -75,13 +83,31 @@ html(lang!="[@T[localization:<language full='true' />]@T]")
 
     // Marquee Section
     block marquee
+      |  ##if(targetMessageTagAny(sales_hp_default,hp_existing_customer))
+      |    ##if(splitTestingSideIsActive(1401, B))
+      |      [@P[cdsDocument:<data app="sales" location="homepage/marquee/gtld-phone/default_template" /> ]@P]
+      |    ##else
+      |      [@P[cdsDocument:<data app="sales" location="homepage/marquee/gtld/default_template" /> ]@P]
+      |    ##endif
+      |  ##else
+      |    ##if(splitTestingSideIsActive(1402, A) && !hasISC())
+      |      [@P[cdsDocument:<data app="sales" location="homepage/marquee/299com/default_template" /> ]@P]
+      |    ##else
+      |      [@P[cdsDocument:<data app="sales" location="homepage/marquee/gtld/default_template" /> ]@P]
+      |    ##endif
+      |  ##endif
 
+    // Bugbar (and social links) Sections
     .top-banner-lower-content
       .top-lower-content
         span.gtld-links
           block bugBar
+            +gtldBug("co")
+            +gtldBug("org")
         .gdhp-share
           block share
+            .fosshare(data-twshareurl!="[@T[link:<external linktype='XDOTCO' path='/wwwGD' />]@T]" data-twtext!="[@L[cds.sales/homepage:twitter-text-gdbl]@L]" data-twrelated="GoDaddy" data-shareurl!="[@T[link:<relative path='/'/>]@T]" data-buttons="google,facebook,twitter")
+
 
     // Pods Section
     block pods
