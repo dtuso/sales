@@ -33,7 +33,7 @@ metaOgTitle: "[@L[cds.sales/gd/domains/domain-configuration:MetaTitle]@L]"
         <div class="plan-droplist-selected">
           <span>[@L[cds.sales/domains/searchresults-new3:no.thanks]@L]</span><span class="price fg-orange" style="display: none;"><!-- Will be either "plan.price.per.domain" or "plan.price.per.mo" --></span>
         </div>
-        <div id="selectbtn-{{Type}}" class="plan-droplist-selectbtn"><span></span></div>
+        <div id="selectbtn-{{Type}}" class="plan-droplist-selectbtn"><span class="uxicon uxicon-chevron-down-lt"></span></div>
         <div id="list-{{Type}}" class="plan-droplist" style="display: none;">
           <div data-id="dpp_no_selection_bundle" data-ci="87162" id="no-" class="plan-option plan-option-selected">
             <span class="title">[@L[cds.sales/domains/searchresults-new3:no.thanks]@L]</span>
@@ -58,9 +58,8 @@ metaOgTitle: "[@L[cds.sales/gd/domains/domain-configuration:MetaTitle]@L]"
     </div>
     <h2 class="flag blue">[@L[cds.sales/domains/domain-configuration:step.privacy]@L]</h2>
   </div>
-  <div class="step-separator"><span></span></div>
 </div>
-
+<div class="step-separator"><span class="uxicon uxicon-chevron-down-lt"></span></div>
 
 <div class="step-wrapper double" id="step-{{Type}}" style="display: block;">
   <div class="step options">
@@ -75,7 +74,7 @@ metaOgTitle: "[@L[cds.sales/gd/domains/domain-configuration:MetaTitle]@L]"
         <div class="plan-droplist-selected">
           <span>{{PlanTitle}}</span><span class="price fg-orange" style="display: inline;">[@L[cds.sales/domains/searchresults-new3:plan.price.per.domain]@L]</span>
         </div>
-        <div id="selectbtn-{{Type}}" class="plan-droplist-selectbtn"><span></span></div>
+        <div id="selectbtn-{{Type}}" class="plan-droplist-selectbtn"><span class="uxicon uxicon-chevron-down-lt"></span></div>
         <div id="list-{{Type}}" class="plan-droplist" style="display: none;">
           <div data-id="{{Id}}" data-ci="86238" id="{{Type}}-{{Id}}" class="plan-option">
             <span class="title">{{PlanTitle}}</span>
@@ -98,7 +97,7 @@ metaOgTitle: "[@L[cds.sales/gd/domains/domain-configuration:MetaTitle]@L]"
         <div class="plan-droplist-selected">
           <span>{{PlanTitle}}</span><span class="list-price"></span><span class="price fg-orange" style="display: inline;">[@L[cds.sales/domains/searchresults-new3:plan.price.per.domain]@L]</span>
         </div>
-        <div id="selectbtn-{{Type}}" class="plan-droplist-selectbtn"><span></span></div>
+        <div id="selectbtn-{{Type}}" class="plan-droplist-selectbtn"><span class="uxicon uxicon-chevron-down-lt"></span></div>
         <div id="list-{{Type}}" class="plan-droplist" style="display: none;">
           <div data-id="{{Id}}" data-ci="86241" id="{{Type}}-{{Id}}" class="plan-option">
             <span class="title">{{PlanTitle}}</span>
@@ -116,7 +115,6 @@ metaOgTitle: "[@L[cds.sales/gd/domains/domain-configuration:MetaTitle]@L]"
       <span class="weight-bold">[@L[cds.sales/domains/domain-configuration:or]@L]</span>
     </div>
   </div>
-  <div class="step-separator"><span></span></div>
 </div>
 </div>
 {% endraw %}
@@ -127,6 +125,7 @@ metaOgTitle: "[@L[cds.sales/gd/domains/domain-configuration:MetaTitle]@L]"
     <!-- JS YOU WILL PROBABLY NEED -->
     <script src="[@T[link:<javascriptroot />]@T]shared/js/jquery.plugins.min.20111019.js" type="text/javascript" ></script>
     <script src="[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2" type="text/javascript"></script>
+    <script src="[@T[link:<javascriptroot />]@T]fos/angular/domains/angular.1.2.9.min.js" type="text/javascript"></script>
     <script src="[@T[link:<javascriptroot />]@T]fos/sales/themes/scotty/domains/domain-config/js/domain-config10132014.js"></script>
 
     <!--[if lte IE 8]>
@@ -138,5 +137,6 @@ metaOgTitle: "[@L[cds.sales/gd/domains/domain-configuration:MetaTitle]@L]"
       $(document).ready(function() {
 
       });
+
     </script>   
 {% endblock %}

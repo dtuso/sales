@@ -1,10 +1,10 @@
 ---
 location: sales/ssl/ssl-certificates.aspx
 url: http://www.dev-godaddy.com/ssl/ssl-certificates.aspx
-id: 54625bd3f778fc0a70ee781f
-name: GCE-29496
+id: 
+name: GCE-31814
+comments:  Enable Web Pro Section for all markets except VAT markets - Ireland Belgium France Germany Italy Spain Sweden
 assetPath: false
-comments: Changing protest one website to 2 years
 ---
 
 {% extends 'layouts/base.html' %}
@@ -308,7 +308,7 @@ line-height: 7px;
                 </div>
             </div><!-- col-xs-4 -->
           </div>
-          ##if(activeLanguageAny([en-us]))
+          ##if(!countrySiteAny(ie,be,fr,de,it,es,ch))
           <!-- Start Rainier Banner -->
           <div class="row tab-content" id="rainier-section">
             <div id="Rainier_Banner" class="col-xs-12 rainier_banner">
