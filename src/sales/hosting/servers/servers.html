@@ -191,7 +191,7 @@ $(function () {
     //var product = $('#product-price').html();
     //var total = currencyCalc.evaluate([addonOne,"+",addonTwo,"+", product]);
     //$('#managed-hosting-price').html(total+"[@L[cds.sales/gd/product-listing/servers:mo]@L]");
-<<<<<<< HEAD
+
     ##if(!countrySiteAny(ie,be,fr,de,it,es,se))
     var managedAddon = "[@T[productprice:<current productid="483560" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]";
 
@@ -202,13 +202,8 @@ $(function () {
 
     });
     ##endif
-=======
-    var linuxOsAddon = "[@T[productprice:<current productid="483560" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]";
 
-    $(".product-price").each(function(){
-        $(this).text(currencyCalc.evaluate([$(this).text(),"+",linuxOsAddon]));
-    });
->>>>>>> 623e4e02547bec2bb4ce3b0081724fc254d39cff
+  
 });
 </script>
 {% endblock %}
