@@ -21,11 +21,9 @@ block rightColumn
 		.promo.tungsten [@L[cds.sales/homepage/marquee/domain-privacy:promo]@L]
 		.promo.walsheim [@L[cds.sales/homepage/marquee/domain-privacy:promo-additional]@L]
 		| 
-		##if(productHasSavingsMoreThan(7001, 7001, 0))
-		| 
+		| ##if(productHasSavingsMoreThan(7001, 7001, 0))
 		.savings.tungsten [@L[cds.sales/homepage/marquee/domain-privacy:savings]@L]
 		| 
-		##endif
-		|  
+		| ##endif
 		.price.walsheim.orange-text [@L[cds.sales/homepage/marquee/domain-privacy:price]@L]
 	a.btn.btn-warning.btn-lg.btn-cta(href!=ctaLink) [@L[cds.sales/homepage/marquee/domain-privacy:cta-text]@L]
