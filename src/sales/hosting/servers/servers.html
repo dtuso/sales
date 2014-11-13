@@ -1,10 +1,6 @@
 ---
 location: sales/servers
-<<<<<<< HEAD
-id: 54628402f778fc0a70ee7833
-=======
 id: 546245d3f778fc0a70ee780f
->>>>>>> 623e4e02547bec2bb4ce3b0081724fc254d39cff
 name: GCE-30213
 comments: VPS and Ded - update hosting and servers category page pricing and descriptive text for new VPS and Ded servers
 cssVersionOverride: 2
@@ -68,16 +64,14 @@ cssVersionOverride: 2
                 </div>
                 <div class="pricing">
                     <p class="starting-at">[@L[cds.sales/gd/product-listing/servers:starting-at]@L]</p>
-<<<<<<< HEAD
+
                     ##if(countrySiteAny(ie,be,fr,de,it,es,se))
                     <p class="hnb-34-bold-orange">[@T[productprice:<current productid="474" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T][@L[cds.sales/gd/product-listing/servers:mo]@L] </p>
                     ##else
                     <p class="hnb-34-bold-orange"><span class="product-price" >[@T[productprice:<current productid="458239" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span>[@L[cds.sales/gd/product-listing/servers:mo]@L] </p>
                     <input type="hidden" id="ds-managed-addon" class="os-addon" value='[@T[productprice:<current productid="483566" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]' />
                     ##endif
-=======
-                    <p class="hnb-34-bold-orange"><span class="product-price" >[@T[productcompare:<addition primaryproductid="458239" secondaryproductid="483566" secondaryperiod="monthly" />]@T]</span>[@L[cds.sales/gd/product-listing/servers:mo]@L] </p>
->>>>>>> 623e4e02547bec2bb4ce3b0081724fc254d39cff
+
                 </div>
                 <div class="learn-more-button-div">
                     <a class="btn btn-warning btn-lg hnb-16-reg-white learn-more-button" id="learnmore-dedservers" href="[@T[link:<relative path='~/hosting/dedicated-servers.aspx' secure='true'><param name='ci' value='92462' /></relative>]@T]" data-ci="92462" > [@L[cds.sales/gd/product-listing/servers:learn-more]@L] </a>
@@ -94,7 +88,7 @@ cssVersionOverride: 2
                     <p class="hnb-16-reg">[@L[cds.sales/gd/product-listing/servers:managed-vps-description]@L]</p>
                 </div>
                 <div class="pricing">
-<<<<<<< HEAD
+
                     <p class="starting-at">[@L[cds.sales/gd/product-listing/servers:starting-at]@L]</p>
                     ##if(countrySiteAny(ie,be,fr,de,it,es,se))
                     <p class="hnb-34-bold-orange">[@T[productprice:<current productid="171824" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T][@L[cds.sales/gd/product-listing/servers:mo]@L] </p>
@@ -103,11 +97,7 @@ cssVersionOverride: 2
                     <input type="hidden" id="vps-managed-addon" class="os-addon" value='[@T[productprice:<current productid="483558" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]' />
                     ##endif
                 </div>
-=======
-                        <p class="starting-at">[@L[cds.sales/gd/product-listing/servers:starting-at]@L]</p>
-                    <p class="hnb-34-bold-orange"><span class="product-price" >[@T[productcompare:<addition primaryproductid="458319" secondaryproductid="483558" secondaryperiod="monthly" />]@T]</span>[@L[cds.sales/gd/product-listing/servers:mo]@L] </p>
-                    </div>
->>>>>>> 623e4e02547bec2bb4ce3b0081724fc254d39cff
+
                     <div class="learn-more-button-div">
                         <a class="btn btn-warning btn-lg hnb-16-reg-white learn-more-button" id="learnmore-vps" href="[@T[link:<relative path='~/hosting/vps-hosting.aspx' secure='true'><param name='ci' value='92465' /></relative>]@T]" data-ci="92465" > [@L[cds.sales/gd/product-listing/servers:learn-more]@L] </a>
                     </div>
