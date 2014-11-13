@@ -1,0 +1,58 @@
+{% extends 'pl-base.html' %}
+
+{% block body %}
+        <!-- Start Config Content -->
+        <section class="config-wrapper">
+            <div class="container config-container-fixer">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="config-continue-to-cart-wrapper-top config-title-container">
+                            <div class="config-title">
+                                <h1></h1><a href="#" onclick="changePlan();" data-ci="{{ changeplanci }}">{{ configTitleLink }}</a>
+                                <p>{{ configTitleText }}</p>
+                            </div>
+                            <p class="config-continue-to-cart"><span class="icon-arrow-right"></span><a class="js-addtocart" data-ci="{{ topAddToCartci }}">{{ configTitleContinueToCart }}</a></p>
+                        </div>
+                    </div>
+                    <div class="config-steps-wrapper">
+                        {% block steps %}
+                        {% endblock %} 
+                    </div>
+                    <!-- / End Left Column -->
+                    <div class="config-cart-wrapper">
+                        <div class="order-summary-wrapper">
+                            <h3>{{ configSummaryTitle }}</h3>
+                            <div class="order-total-wrapper">
+                                <div class="order-item-details-wrapper">
+                                    <p class="order-item-title package" id="summaryOS"></p>
+                                    <p class="order-item-title" id="summaryRAM"></p>
+                                    <p class="order-item-title" id="summaryStorage"></p>
+                                    <p class="order-item-title" id="summaryBandwidth"></p>
+                                </div>
+                                <div class="order-item-addons-wrapper">
+                                    <p class="order-item-title package" >{{ configAddonTitle }}</p>
+                                    <ul class="addon-summary" id="addonSummary">
+                                    </ul> 
+                                    <span class="order-total"><span class="currency-amount"></span><span class="per-month"> {{ configPermonth }}</span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="subtotal-disclaimer">
+                            <p>{{ configSummarySubtotal }}</p>
+                            <span class="addon-desc">{{ configBandwidthDisclaimer }}</span>
+                        </div>
+                        <div data-ci="{{ scrolldownci }}" class="scroll-down-wrapper move" data-scroll="{{ configLastBox }}">
+                            <p class="green-text">{{ configSummarySubtotalDisc }}</p>
+                            <span class="icon-down green-down-arrow-icon"></span>
+                        </div>
+                    </div>
+                </div>
+                {% block modals %}
+                
+                {% endblock %}
+            </div>
+        </section>
+        <!-- /End Config Content -->
+
+{% endblock %}    
+
