@@ -1,8 +1,8 @@
 ---
 location: sales/tlds/gtldga.aspx
-id: 54500ae7f778fc1aa8bc31f4
-name: GCE-30217
-comments: Update Leaf Pages and Pricing Grid to reflect sale pricing when 2 yr ccTLD Promo is in play
+id: 545bfe43f778fc1b801a9aa9
+name: GCE-30719
+comments: Can not search non-Ascii characters as domain even the TLD page said it can support non Latin characters 
 ---
 <!DOCTYPE HTML>
 <html lang="[@T[localization:<language full="true" />]@T]">
@@ -29,7 +29,7 @@ comments: Update Leaf Pages and Pricing Grid to reflect sale pricing when 2 yr c
 <!--Synchronizing the CSS path from Prod to GitHub.-->
 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags" />]@P]
-    <script src="[@T[link:<javascriptroot />]@T]shared/js/1.5.1/global.20120918.min.js" type="text/javascript" ></script>
+    <script src="[@T[link:<javascriptroot />]@T]fos/201401/global/vendor/jquery/1.8.3/jquery.min.js"></script>  
     <style>
       #pcf {clear:both;}      
       #main-wrap .header{background:url('[@T[link:<imageroot />]@T]tldleafpages/[@D[gtld]@D]/fos/[@L[cds.tldleaf/[@D[gtld]@D]:all.gtld.banner]@L]');background-size: cover;}
@@ -70,16 +70,18 @@ comments: Update Leaf Pages and Pricing Grid to reflect sale pricing when 2 yr c
           </div>
           <div id="search-wrap">
 
-            <form id="gtld-domain-search-form" action="/domains/search.aspx" method="get" autocomplete="off">
+            <form method="post" data-url="[@T[link:<relative path="~/api/dpp/search/single"/>]@T]" action="[@T[link:<relative path="/domains/searchresults.aspx"/>]@T]" id="gtld-domain-search-form" autocomplete="off">
+              <div class="searchBoxForm">
               ##if(isManager())
               <input id="mgrshopper" type="hidden" name="mgrshopper" value="" />
               ##endif
               <input id="tld" type="hidden" name="tld" value="[@D[gtld]@D]" />
-              <input id="gtld-domain-search-input" class="search-field" type="text" name="domainToCheck" maxlength="63" placeholder="[@L[cds.sales/homepage:search-text]@L]" />
-              <a id="gtld-domain-search-btn" class="flt-btn flt-btn-grn" href="#">[@L[cds.tldleaf/[@D[gtld]@D]:ga.search.button.text]@L]</a>
+              <input type="text" name="domainToCheck" maxlength="63" placeholder="[@L[cds.sales/homepage:search-text]@L]" class="search-field" id="gtld_domain_search_input" />
+              <button type="submit" name="searchButton" data-ci="94531" id="gtld-domain-search-btn" class="btn flt-btn flt-btn-grn">[@L[cds.tldleaf/[@D[gtld]@D]:ga.search.button.text]@L]</button>
               <span class="search-tld">.[@D[gtld]@D]</span>
-            </form>
-
+             </div>
+            </form>          
+            
           </div>
           <div id="body-wrap">
               <div class="content clearfix">
@@ -116,7 +118,7 @@ comments: Update Leaf Pages and Pricing Grid to reflect sale pricing when 2 yr c
     <script src="[@T[link:<javascriptroot />]@T]shared/js/jquery.plugins.min.20111019.js" type="text/javascript" ></script>
     <script src="[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2" type="text/javascript"></script>
     <script src="[@T[link:<javascriptroot />]@T]starfield/fos.share/v1.3/fos.share-20140205.min.js" id="fosShareScript" ></script>
-    <script src="[@T[link:<cssroot />]@T]fos/201401/tlds/tld-leaf/js/tld-leaf-page10272014.min.js"></script>
+    <script src="[@T[link:<cssroot />]@T]fos/201401/tlds/tld-leaf/js/tld-leaf-page11062014.min.js"></script>
     
     <!--[if lte IE 8]>
     <script src="[@T[link:<javascriptroot />]@T]fos/script/JSON2.min.js"></script>
@@ -126,6 +128,30 @@ comments: Update Leaf Pages and Pricing Grid to reflect sale pricing when 2 yr c
             
       $(document).ready(function(){
         gbl.ns.register('domains.controls');
+    
+      $("#gtld-domain-search-form").on("submit", function (e){
+        e.preventDefault();
+
+        $('button[name="searchButton"]', this).addClass('disabled');
+
+        var params = {
+            query:$(this).serialize(),
+            searchUrl:$(this).attr('data-url')
+        };
+        DomainSearch(params,function(err,NextStepUrl){
+            if(err == null )
+            {
+                if(typeof NextStepUrl === 'undefined'){
+      NextStepUrl = '[@T[link:<relative path="~/tlds/gtld.aspx" />]@T]';
+                }
+                window.location = NextStepUrl;
+            }
+            else{
+                if(console != "undefined")
+                console.log(err);
+            }
+        });
+    });
         if (!domains.controls.gtldTemplatesClient) {
           // probably means the cds_gtld_templates_xxxx.js file didn't load correctly
           
@@ -156,6 +182,21 @@ comments: Update Leaf Pages and Pricing Grid to reflect sale pricing when 2 yr c
         }
       
       });
+       function DomainSearch(params, cb) {
+          $.ajax({
+            url: params.searchUrl,
+            type: 'POST',
+            data: params.query,
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+              var data = { Error: errorThrown, Success: false };
+              cb(errorThrown,null);
+            },
+            success: function (data) {
+              cb(null,data.NextStepUrl);
+            }
+          });
+      }
+            
     </script>
   </body>
 </html> 
