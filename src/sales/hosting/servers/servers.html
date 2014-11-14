@@ -1,8 +1,8 @@
 ---
 location: sales/servers
-id: 5435bcaaf778fc30f4905728
-name: GCE-29487
-comments: Rainier FF - Remove Reseller Hosting and Managed Hosting from Hosting and Server Category pages
+id: 546245d3f778fc0a70ee780f
+name: GCE-30213
+comments: VPS and Ded - update hosting and servers category page pricing and descriptive text for new VPS and Ded servers
 cssVersionOverride: 2
 ---
 {% extends 'layouts/base.html' %} 
@@ -64,7 +64,14 @@ cssVersionOverride: 2
                 </div>
                 <div class="pricing">
                     <p class="starting-at">[@L[cds.sales/gd/product-listing/servers:starting-at]@L]</p>
+
+                    ##if(countrySiteAny(ie,be,fr,de,it,es,se))
                     <p class="hnb-34-bold-orange">[@T[productprice:<current productid="474" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T][@L[cds.sales/gd/product-listing/servers:mo]@L] </p>
+                    ##else
+                    <p class="hnb-34-bold-orange"><span class="product-price" >[@T[productprice:<current productid="458239" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span>[@L[cds.sales/gd/product-listing/servers:mo]@L] </p>
+                    <input type="hidden" id="ds-managed-addon" class="os-addon" value='[@T[productprice:<current productid="483566" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]' />
+                    ##endif
+
                 </div>
                 <div class="learn-more-button-div">
                     <a class="btn btn-warning btn-lg hnb-16-reg-white learn-more-button" id="learnmore-dedservers" href="[@T[link:<relative path='~/hosting/dedicated-servers.aspx' secure='true'><param name='ci' value='92462' /></relative>]@T]" data-ci="92462" > [@L[cds.sales/gd/product-listing/servers:learn-more]@L] </a>
@@ -81,9 +88,16 @@ cssVersionOverride: 2
                     <p class="hnb-16-reg">[@L[cds.sales/gd/product-listing/servers:managed-vps-description]@L]</p>
                 </div>
                 <div class="pricing">
-                        <p class="starting-at">[@L[cds.sales/gd/product-listing/servers:starting-at]@L]</p>
-                        <p class="hnb-34-bold-orange">[@T[productprice:<current productid="171824" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T][@L[cds.sales/gd/product-listing/servers:mo]@L] </p>
-                    </div>
+
+                    <p class="starting-at">[@L[cds.sales/gd/product-listing/servers:starting-at]@L]</p>
+                    ##if(countrySiteAny(ie,be,fr,de,it,es,se))
+                    <p class="hnb-34-bold-orange">[@T[productprice:<current productid="171824" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T][@L[cds.sales/gd/product-listing/servers:mo]@L] </p>
+                    ##else
+                    <p class="hnb-34-bold-orange"><span class="product-price" >[@T[productprice:<current productid="458319" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span>[@L[cds.sales/gd/product-listing/servers:mo]@L] </p>
+                    <input type="hidden" id="vps-managed-addon" class="os-addon" value='[@T[productprice:<current productid="483558" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]' />
+                    ##endif
+                </div>
+
                     <div class="learn-more-button-div">
                         <a class="btn btn-warning btn-lg hnb-16-reg-white learn-more-button" id="learnmore-vps" href="[@T[link:<relative path='~/hosting/vps-hosting.aspx' secure='true'><param name='ci' value='92465' /></relative>]@T]" data-ci="92465" > [@L[cds.sales/gd/product-listing/servers:learn-more]@L] </a>
                     </div>
@@ -153,7 +167,7 @@ cssVersionOverride: 2
 
 {% block footer %}
 <script src="[@T[link:<javascriptroot />]@T]fos/lib/solazy/jquery.solazy.1.2.1.min.js" type="text/javascript" ></script>
-  <script src="[@T[link:<javascriptroot />]@T]fos/office365/js/currency-calc.v1.0.2.min.js" type="text/javascript"></script>
+  <script src="[@T[link:<javascriptroot />]@T]fos/office365/js/currency-calc.v1.0.3.min.js" type="text/javascript"></script>
     <script>
       if(typeof currencyCalc != "undefined"){
         currencyCalc.base = "[@T[currencyprice:<price usdamount="1000000000" dropdecimal="false" dropsymbol="false" htmlsymbol="false" negative="parenthesis" />]@T]";
@@ -172,11 +186,24 @@ $(function () {
   });
 $('.move').scrollToSection();
 $(function () {
-  var addonOne = $('#addon-one').html();
-  var addonTwo = $('#addon-two').html();
-  var product = $('#product-price').html();
-  var total = currencyCalc.evaluate([addonOne,"+",addonTwo,"+", product]);
-  $('#managed-hosting-price').html(total+"[@L[cds.sales/gd/product-listing/servers:mo]@L]");
+    //var addonOne = $('#addon-one').html();
+    //var addonTwo = $('#addon-two').html();
+    //var product = $('#product-price').html();
+    //var total = currencyCalc.evaluate([addonOne,"+",addonTwo,"+", product]);
+    //$('#managed-hosting-price').html(total+"[@L[cds.sales/gd/product-listing/servers:mo]@L]");
+
+    ##if(!countrySiteAny(ie,be,fr,de,it,es,se))
+    var managedAddon = "[@T[productprice:<current productid="483560" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]";
+
+    $(".product-price").each(function(){
+        var osAddon = $(this).parents('.pricing').find('.os-addon').val();
+        var addonTotal = currencyCalc.evaluate([managedAddon,"+",osAddon]);
+        $(this).text(currencyCalc.evaluate([$(this).text(),"+",addonTotal]));
+
+    });
+    ##endif
+
+  
 });
 </script>
 {% endblock %}
