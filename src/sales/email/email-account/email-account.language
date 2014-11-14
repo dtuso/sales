@@ -1,6 +1,6 @@
 ---
 location: localization/sales/gd/email/email-account/en
-id: 546245d0f778fc0a70ee780d
+id: 5463a5bbf778fc0a70ee785e
 name: GCE-30748
 comments: Create New Email centric O365 LP 
 ---
@@ -56,11 +56,7 @@ Did you know customers are 9x more likely to choose a business with a profession
 <phrase key="in_sync" />
 All your devices, all in sync.
 <phrase key="in_sync_text" />
-<<<<<<< HEAD
 Always have your latest emails and appointments at your fingertips. Office 365 from [@T[companyname:name]@T] email services work with Outlook, Apple Mail and other top programs to keep all your devices – from your laptop to your smartphone – up to date and in sync. 
-=======
-Always have your latest emails and appointments at your fingertips. Office 365 from [@T[companyname:name]@T] email services work with Outlook, Apple Mail and other top programs to keep all your devices - from your laptop to your smartphone – up to date and in sync. 
->>>>>>> Email LP
 <phrase key="whats_important" />
 Keep more of what’s important.
 <phrase key="whats_important_text" />
