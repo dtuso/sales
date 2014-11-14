@@ -1,0 +1,267 @@
+---
+location: localization/sales/gd/email/email-account/en
+id: 5463a5bbf778fc0a70ee785e
+name: GCE-30748
+comments: Create New Email centric O365 LP 
+---
+{% include 'modules/doc-block.html' %}
+<phrase key="page-title" />
+Create an Email Account | Personal Email Just Got Easier - [@T[companyname:nameseotitle]@T]
+<phrase key="meta-description" />
+Looking for an Email Provider with robust features? Create an Email Account with [@T[companyname:name]@T] Professional Email. Still reading? Why? You could be emailing people by now!
+<phrase key="meta-keywords" />
+Email Account, Create an Email Account, Email Providers, Email Hosting, Email Services
+<phrase key="og-title" />
+[@T[companyname:dotcom]@T] Email Plans
+<phrase key="og-description" />
+Get a personalized email address from [@T[companyname:dotcom]@T] that&#39;s fast, secure and memorable.
+<phrase key="Pro_email_tool" />
+Professional Email Tool
+<phrase key="sub_title" />
+Professional email that shows the world you mean business.
+<phrase key="email_essentials" />
+Email Essentials
+<phrase key="Pro_email_domain" />
+Professional email that matches your domain
+<phrase key="starting_at" />
+Starting at
+<phrase key="per_user" />
+Per User
+<phrase key="per_month" />
+/month
+<phrase key="Save" />
+Save
+<phrase key="current_renew_price" />
+Current Renewal Price
+<phrase key="vat_tax" />
+Price does not include taxes, where applicable.
+<phrase key="online_essentials" />
+Online Essentials
+<phrase key="business_essentials" />
+Business Essentials
+<phrase key="business_essentials_text" />
+Professional email + 10x more storage
+<phrase key="add_to_cart" />
+Add to Cart
+<phrase key="Business_Premium" />
+Business Premium
+<phrase key="Business_Premium_text" />
+Professional email + 10x more storage + Microsoft Office
+<phrase key="like_pro" />
+Look like the pro you are.
+<phrase key="like_pro_text" />
+Did you know customers are 9x more likely to choose a business with a professional email address? With a memorable, domain-based email account, you’ll promote your company with every message. Even create unlimited addresses – from yourname@ to sales@ or support@ – that are delivered to a single inbox.
+<phrase key="like_pro_text_alt" />
+Did you know customers are 9x more likely to choose a business with a professional email address?<sup>1</sup> With a memorable, domain-based email account, you’ll promote your company with every message. Even create unlimited addresses – from yourname@ to sales@ or support@ – that are delivered to a single inbox.
+<phrase key="in_sync" />
+All your devices, all in sync.
+<phrase key="in_sync_text" />
+Always have your latest emails and appointments at your fingertips. Office 365 from [@T[companyname:name]@T] email services work with Outlook, Apple Mail and other top programs to keep all your devices – from your laptop to your smartphone – up to date and in sync. 
+<phrase key="whats_important" />
+Keep more of what’s important.
+<phrase key="whats_important_text" />
+With 50 GB of storage for your email, contacts and shared calendar, you’ll never have to delete files or emails to make sure you have enough space. <i>Online Essentials and Business Premium plans only.</i>
+<phrase key="backed_by_trust" />
+Backed by names you know and trust.
+<phrase key="backed_by_trust_text" />
+With Microsoft Office 365 from [@T[companyname:name]@T], peace of mind is included. Every email hosting plan is backed by Microsoft’s 99.9% uptime guarantee and our award-winning 24/7 support. You’ll can feel confident knowing our all-star team is powering your email.
+<phrase key="backed_by_trust_text_no_24" />
+With Microsoft Office 365 from [@T[companyname:name]@T], peace of mind is included. Every email hosting plan is backed by Microsoft’s 99.9% uptime guarantee and our award-winning support. You’ll can feel confident knowing our all-star team is powering your email.
+<phrase key="quote" />
+“This was the last part of my marketing that wasn’t reflecting the new website and company name. Thankfully [@T[companyname:name]@T] and Office 365 had a great solution for me.”
+<phrase key="quote_author" />
+Andrew M. Boker
+<phrase key="email_easier" />
+Email is easier with [@T[companyname:name]@T].
+<phrase key="email_easier_text" />
+Unlike other email providers, we make Microsoft Office 365 simple. You don’t need to know about SMTP relays or MX records to create an email account – our fast, easy setup process does it all for you, so you’re up and running in minutes. And if you ever do need help, our expert support is here 24/7.
+<phrase key="email_easier_text_no_24" />
+Unlike other email providers, we make Microsoft Office 365 simple. You don’t need to know about SMTP relays or MX records to create an email account – our fast, easy setup process does it all for you, so you’re up and running in minutes. And if you ever do need help, our expert support is here.
+<phrase key="tools" />
+Need more tools for your business?
+<phrase key="tools_text_1" />
+Work anywhere with online, mobile and desktop versions of Microsoft Office, including Word®, Excel® and more. <i>Business Premium plans only.</i>
+<phrase key="tools_text_2" />
+Always have access to important files with 1 TB of secure online storage. <i>Online Essentials and Business Premium plans only.</i>
+<phrase key="tools_text_3" />
+Get free Microsoft Office upgrades for as long as you keep your plan.<i> Online Essentials and Business Premium plans only.</i>
+<phrase key="plans_starting_at" />
+Plans starting at
+<phrase key="mo365" />
+Microsoft® Office 365
+<phrase key="tab_1" />
+Features
+<phrase key="tab_2" />
+Compare Plans
+<phrase key="tab_3" />
+FAQ
+<phrase key="email_example" />
+yourname<span class="green-text">@your-business-name.com</span>
+<phrase key="compare_plans" />
+Compare our plans.
+<phrase key="choose_right_one" />
+Choose the one that's right for you.
+<phrase key="faqs" />
+Frequently Asked Questions
+<phrase key="faq_benefits" />
+What are the benefits of having domain-based email addresses?
+<phrase key="faq_benefits_1" />
+A domain-based email address, like info@your-business-name.com, helps you look more professional with customers and promotes your website and company. In fact, customers are 9 times more likely to choose a company with a professional email address.  Every time you send an email from a domain-based address, you're putting your domain name in front of customers and encouraging them to visit your website.  
+<phrase key="faq_benefits_2" />
+ And with each plan, you can create free ‘alias’ addresses – like one using your first name (keith@your-business-name.com) and others for different departments (sales@your-business-name.com) -- that all feed into a single inbox and make you look even more professional. 
+<phrase key="faq_workspace_email" />
+What if I already have a Workspace email account from [@T[companyname:name]@T]?
+<phrase key="faq_workspace_email_text" />
+If you would like to switch your domain-based email from Workspace to Office 365, please call us at [@T[support:<technicalSupportPhone />]@T] and we can help you make the right decision regarding your existing email.
+<phrase key="faq_mac" />
+I have a Mac. Can I still use Office 365 from [@T[companyname:name]@T]? What about the Business Premium plan?
+<phrase key="faq_mac_text_1" />
+Yes. Office Online is compatible with Mac OS X 10.5 and later with Safari 5 and later. 
+<phrase key="faq_mac_text_2" />
+If you choose the Business Premium plan, you’ll be able to download Office for Mac 2011 Service Pack 3, which is fully compatible with Mac OS X 10.6.
+<phrase key="More" />
+More
+<phrase key="faq_large_org" />
+I am part of a larger organization—can I use Microsoft Office 365 from [@T[companyname:name]@T]?
+<phrase key="faq_large_org_text" />
+The plans on our website are designed for businesses that require fewer than 300 accounts. You may purchase up to 300 user accounts on each plan type and up to 900 in total. If you have questions, just give us a call at [@T[support:<technicalSupportPhone />]@T]. Our award-winning team is here to help 24/7.
+<phrase key="faq_large_org_text_no_24" />
+The plans on our website are designed for businesses that require fewer than 300 accounts. You may purchase up to 300 user accounts on each plan type and up to 900 in total. If you have questions, just give us a call at [@T[support:<technicalSupportPhone />]@T]. Our award-winning team is here to help.
+<phrase key="faq_office_online" />
+What is Office Online?
+<phrase key="faq_office_online_text" />
+Office Online features easy-to-use versions of Word®, Excel®, PowerPoint® and OneNote® that you use within a Web browser. You can access Office Online from your cloud storage to create new files, edit existing files, share and collaborate online with clients or colleagues. 
+<phrase key="faq_why_buy" />
+Why should I buy Office 365 from [@T[companyname:name]@T] if I already have Office on my desktop?
+<phrase key="faq_why_buy_text" />
+Our Business Premium plan gives you the current version of the Office desktop applications you know and love—Excel, Word, Outlook, PowerPoint, OneNote, and Publisher—plus, free automatic upgrades so you’ll always have the latest version. 
+<phrase key="faq_why_buy_text2" />
+Our Office 365 plans make it easy to securely share and collaborate on documents using OneDrive for Business and Office Online. With Email Essentials, Online Essentials, and Business Premium, you can also create domain-based email addresses and share calendars and contacts with people inside and outside of your company. Finally, unlike the Office you currently have, Office 365 from [@T[companyname:name]@T] gives you the ability to have real-time online meetings and screen sharing using Lync.
+<phrase key="faq_bp_plan" />
+Which desktop applications come with the Business Premium plan?
+<phrase key="faq_bp_plan_text" />
+This depends on whether you are using a PC or a Mac. PC users can download the latest versions of Word, PowerPoint, Excel, Outlook, OneNote, Publisher, Access, and the desktop version of Lync. Mac users will be able to download the latest version of Word, PowerPoint, Excel, and Outlook as part of the Business Premium plan.
+<phrase key="faq_latest_version" />
+Will the latest version of Microsoft Office work on my computer?
+<phrase key="faq_latest_version_text" />
+To use the 5 desktop downloads you get with the Business Premium package, you must be on one of the following operating systems:
+<phrase key="faq_windows_2008" />
+Windows Server 2008 R2
+<phrase key="faq_windows_7" />
+Windows 7
+<phrase key="faq_windows_2012" />
+Windows Server 2012
+<phrase key="faq_windows_8" />
+Windows 8
+<phrase key="faq_mac_os" />
+Mac OS X version 10.6 or later.
+<phrase key="faq_latest_version_text2" />
+If you are running a different operating system, remember that you can still use Office Online, browser-based versions of your favorite Microsoft tools like Excel, Word or PowerPoint, which are included with the Online Essentials or Business Premium plans.
+<phrase key="faq_collaboration" />
+What is online document collaboration?
+<phrase key="faq_collaboration_text" />
+With our Online Essentials and Business Premium plans, documents created or stored in your OneDrive for Business cloud storage can be simultaneously edited with others inside or outside your company – anyone with a link to a document can make edits at the same time as you. You can even see each other’s edits as you go, so you’ll always be on the same page with the latest version, all without having to send documents back and forth via email. 
+<phrase key="faq_employees" />
+If I purchase the Business Premium plan, can I download the 5 installs of Office on my employees’ computers?
+<phrase key="faq_employees_text" />
+The desktop Office licenses that come with the Business Premium plan are associated with an individual user’s account. This makes it easy to connect Office desktop applications with the online services and cloud storage that allow you to work anywhere. Downloading a copy onto another user’s computer may keep that second user from experiencing these benefits.
+<phrase key="faq_employees_text2" />
+To get the most out of Office 365 from [@T[companyname:name]@T], we highly recommend ensuring that anyone needing the latest desktop version of Office be associated with a Business Premium account. 
+<phrase key="faq_installed_cloud" />
+Will the Excel, PowerPoint and Word programs I already have installed on my computer work with my cloud storage and Office Online?
+<phrase key="faq_installed_cloud_text" />
+OneDrive for Business cloud storage and Office Online work best with the latest version of Microsoft Office, Office 2013, Office 2010, and Office 2011 for Mac.
+<phrase key="faq_installed_cloud_text2" />
+With these versions of Office, you can select files stored in the cloud and edit them using your desktop applications instead of Office Online. Simply open the file you wish to edit, click ‘Edit in Word/Excel/PowerPoint’ and when you click ‘Save’ within those applications, your document will sync back to your storage. 
+<phrase key="faq_lync" />
+What is Lync Online?
+<phrase key="faq_lync_text" />
+Lync Online, included in the Online Essentials and Business Premium plans, allows you to communicate with your colleagues, customers and partners via online conference call or HD video conference. With just a couple of clicks, you can share your screen or invite up to 250 people inside or outside your company to take part in an online conversation.
+<phrase key="faq_cloud" />
+What is the cloud?
+<phrase key="faq_cloud_text" />
+Working or storing files in ‘the cloud' means that your programs and documents are stored securely on the Internet — not on your hard drive – so you can access them anytime, anywhere, from almost any device connected to the Web.
+<phrase key="faq_cloud_text2" />
+You don't need to buy additional software and you’re not dependent on your computer to get work done. Plus, since your documents are stored on secure servers, you have peace of mind knowing that, even if your hard drive crashes, your documents and programs are safe and accessible from any web browser.
+<phrase key="faq_ipad" />
+What is Office for iPad?
+<phrase key="faq_ipad_text" />
+Office for iPad features full, touch-friendly versions of the most popular Office apps: Word, Excel and PowerPoint. While the free iPad apps allow you to read Word documents, use Excel data and present with PowerPoint, only Office for iPad lets you create and edit documents in each app.
+<phrase key="faq_ipad_text2" />
+Office for iPad is available with the Business Premium plan, which includes a license that’s valid for up to 5 iPads or Windows tablets, as well as up to 5 PCs or Macs, for a single user.
+<phrase key="disclaimer_link" />
+*, ** Click here for product disclaimers and legal policies.
+<phrase key="disclaimer" />
+Disclaimers
+<phrase key="disclaimer_1" />
+* Includes Office 365 ProPlus for PC's (which includes desktop versions of Outlook, Word, Excel, PowerPoint, Access, OneNote, Publisher and Lync) or Office 2011 for Mac (which includes desktop versions of Outlook, Word, Excel and PowerPoint). Access, Publisher and One Note Desktop are Windows PC client programs and/or features only. Cannot be used across devices. Install on up to 5 PCs or Macs. Includes automatic updates and upgrades so you always have the newest versions of these tools.
+<phrase key="disclaimer_2" />
+** The OneDrive for Business sync client is available with Office 2013 or with Office 365 subscriptions that include Office 2013 applications.
+<phrase key="disclaimer_3" />
+Products will automatically renew until cancelled. You may turn off the auto-renewal feature by visiting your [@T[companyname:name]@T] account.
+<phrase key="disclaimer_4" />
+For more information see the full Microsoft Service Agreement here: <a href="http://technet.microsoft.com/library/jj819284.aspx" target="_BLANK" data-ci="94335">http://technet.microsoft.com/library/jj819284.aspx</a>
+<phrase key="email_storage" />
+Email and Storage
+<phrase key="domain_based" />
+<span class="b">Domain-based email</span><span class="br"></span>(i.e. yourname@coolexample.com)
+<phrase key="storage_for" />
+Storage for email, contacts and calendar
+<phrase key="5gb" />
+5 GB
+<phrase key="50gb" />
+50 GB
+<phrase key="sync_all_devices" />
+Sync across all devices
+<phrase key="sync_all_tooltip" />
+Users can connect the following versions of Outlook to their business-class email, so they can use the rich client application they already know: the latest version of Outlook, Outlook 2010, Outlook 2007 (with slightly limited functionality), Outlook 2011 for Mac, and Outlook 2008 for Mac. Email can also be accessed through your non-Outlook desktop program of choice that is Exchange ActiveSync compatible (i.e., Apple Mail). Outlook web application available on all plans.
+<phrase key="shared_calendars" />
+Shared online calendars
+<phrase key="unlimited_aliases" />
+Unlimited email aliases
+<phrase key="unlimited_aliases_tooltip" />
+Create unlimited email addresses, from yourname@ to sales@ to support@, all delivered to the same inbox. Separate inboxes require additional plans.
+<phrase key="secure_storage" />
+<span class="b">Secure online storage</span> via OneDrive® for Business
+<phrase key="2bg" />
+2 GB
+<phrase key="1tb" />
+1 TB
+<phrase key="office_desktop" />
+<span class="g-toolTip b">Office Desktop <span>Install Microsoft Office on up to 5 PCs or Macs and 5 iPads or Windows tablets per single user and get FREE updates to the latest version for as long as you have your Office 365 subscription.</span></span>for up to 5 devices*
+<phrase key="office_online" />
+<span class="g-toolTip b">Office Online:<span>Create, edit and share Word, Excel, PowerPoint and OneNote files via the Microsoft Office app for your iPhone, Android or Windows phone.</span></span> Web versions of Word, Excel and more.
+<phrase key="online_file" />
+Online file sharing**
+<phrase key="online_meetings" />
+<span class="b">Unlimited online meetings</span> & HD video conferencing
+<phrase key="office_mobile" />
+<span class="g-toolTip b">Office Mobile:<span>Create and edit Word, Excel PowerPoint and OneNote documents right from your cloud storage in any web browser.</span></span> Apps for iPhone, Android and Windows phones.
+<phrase key="all_include" />
+All plans include:
+<phrase key="award_support" />
+[@T[companyname:name]@T]’s award-winning 24/7 support
+<phrase key="award_support_no_24" />
+[@T[companyname:name]@T]’s award-winning support
+<phrase key="guaranteed_uptime" />
+Guaranteed 99.9% uptime
+<phrase key="guaranteed_uptime_tooltip" />
+Some limitations apply to the 99.9% uptime guarantee. For details see the Microsoft Online Service Level Agreement at 
+<phrase key="outlook_app" />
+Outlook web application
+<phrase key="access_any_device" />
+Access your email, calendar and contacts on any device.
+<phrase key="data_security" />
+World-class data security and spam filtering
+<phrase key="per_user_month" />
+per user/month
+<phrase key="ask_question" />
+Ask Us a Question
+<phrase key="renews_at" />
+Renews at
+<phrase key="On_sale" />
+ON SALE
+<phrase key="Powered_by" />
+Exclusive discount for [@T[companyname:name]@T] customers
+<phrase key="money_back" />
+Money-back guarantee
