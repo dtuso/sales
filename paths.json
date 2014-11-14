@@ -40,6 +40,8 @@
   "static-ip":          "./ssl/static-ip/",
   "tui":                "./domains/tui/",  
   "vps":                "./hosting/vps-hosting/",
+  "vps-PL":             "./hosting/private-label/vps-hosting/",
+  "vps-config-PL":      "./hosting/private-label/vps-hosting-config/",
   "vps-config":         "./hosting/vps-hosting-config/",
   "web-design":         "./design/web-design/",
   "web-hosting":        "./hosting/web-hosting/",
@@ -53,5 +55,8 @@
   "ssl-lp":              "./ssl/ssl-lp/",
   "shared":             "./shared/",
   "web-host":            "./hosting/web-host/",
-  "managed-vps-config": "./pro/managed-vps-config/"
+  "managed-vps-config": "./pro/managed-vps-config/",
+  "ds-PL":              "./hosting/private-label/dedicated-servers/",
+  "ds-config-PL":       "./hosting/private-label/dedicated-servers-config/"
+
 }

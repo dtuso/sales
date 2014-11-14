@@ -1,7 +1,7 @@
 ---
 location: localization/sales/gd/product-listing/servers/en
-id: false
-name: FOS-23517
+id: 546245ebf778fc0a70ee7811
+name: GCE-30213
 ---
 {% include '../../../modules/doc-block.html' %}
 <phrase key="page-title" />
@@ -43,9 +43,9 @@ Perfect for high-traffic or resource-intensive sites that need complete control.
 <phrase key="servers-description" />
 Just as its name implies, our Dedicated Servers give you an entire server to yourself to set up and manage however you see fit. 
 <phrase key="servers-description-24" />
-Powered by your choice of multi-core processors, up to 32GB RAM and several different hard drive configurations, our customizable Dedicated Server plans deliver the ultimate in performance and control. As with all of our products, we’re here to help with free, award-winning support, available 24/7 by phone or email.
+Your very own single-tenant virtual machine. Linux and Windows distributions to meet any of the performance demands you can throw at it. You need ownership, control and you don’t want to share? Your Dedicated server is waiting for you now.
 <phrase key="servers-description-not-24" />
-Powered by your choice of multi-core processors, up to 32GB RAM and several different hard drive configurations, our customizable Dedicated Server plans deliver the ultimate in performance and control. As with all of our products, we’re here to help with free, award-winning support, available by phone or email.  
+Your very own single-tenant virtual machine. Linux and Windows distributions to meet any of the performance demands you can throw at it. You need ownership, control and you don’t want to share? Your Dedicated server is waiting for you now.
 <phrase key="learn-more" />
 Learn More
 <phrase key="yr" />
@@ -59,7 +59,7 @@ Perfect for high-traffic sites, developers and creative agencies
 <phrase key="no-it" />
 No IT staff? No problem. With Managed VPS, our experts do the heavy lifting, you get the power of your own private server.
 <phrase key="managed-vps-description" />
-If your site demands the power of a dedicated server, but your budget isn’t cooperating, our Managed VPS (Virtual Private Server) is for you. With five customizable plans to choose from, each available in CentOS®, Fedora® and Windows®, you can design a unique hosting solution that fits you perfectly. Choose CentOS with cPanel® or Fedora, select your bandwidth and backup options, even add more capacity anytime with just a few clicks. 
+A server with the resources and hosting plans that scale. You have all of the performance, Linux and Windows distributions, and the flexibility of a Dedicated server. You are thinking performance and value, so we have a VPS solution with backups, monitoring, patching, and security that’s ready to roll in minutes.
 <phrase key="starting-at" />
 Starting at
 <phrase key="managed-hosting-title" />
@@ -91,7 +91,7 @@ Dedicated IP
 <phrase key="dedicated-ip-perfect" />
 Perfect for anyone who needs access to their site, even during DNS propagation periods.
 <phrase key="need-anytime" />
-Need anytime access?If you just can’t wait to access your website, get a Dedicated IP address.Upload files, preview changes and more whenever you like, 24/7/365.
+Need anytime access? If you just can’t wait to access your website, get a Dedicated IP address.Upload files, preview changes and more whenever you like, 24/7/365.
 <phrase key="dedicated-ip-description" />
 Like a dedicated server, the name says it all. While most sites share their server’s IP address, a Dedicated IP is 100% yours and yours alone. If you need to access your domain name when it might not otherwise be available, like during domain propagation periods, a Dedicated IP is the simplest, most affordable solution.
 <phrase key="read-reviews" />

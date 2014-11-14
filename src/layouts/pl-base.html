@@ -32,7 +32,13 @@
       <meta name="viewport" content="width=1000">
       <!-- Global CSS -->
       <link href="[@T[link:<css path='private-label/global/css/globals.css' />]@T]" rel="stylesheet" type="text/css">
-  
+
+      {% if assetPath %}
+      <link href="[@T[link:<css path='{{ assetPath }}css/styles.css' />]@T]{% if cssVersionOverride %}?v={{cssVersionOverride}}{% endif %}" rel="stylesheet" type="text/css">
+      {% endif %}
+        
+      <!-- IE SUPPORT FOR HTML5 and Bootstrap 3 -->
+
       <!--[if lt IE 9]>
       <script>
         //CREATE HTML5 TAGS
@@ -71,9 +77,10 @@
   </head>
   <body>
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header" />]@P]
-    <div class="border-box" role="main">
+    <div class="border-box" role="main" >
       {% block body %}{% endblock %}
     </div>
+   
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer" />]@P]
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Script" />]@P]
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Bottom" />]@P]

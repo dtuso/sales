@@ -1,9 +1,9 @@
 ---
 location: sales/ssl/ssl-certificates.aspx
 url: http://www.dev-godaddy.com/ssl/ssl-certificates.aspx
-id: 
+id: false
 name: GCE-31814
-comments:  Enable Web Pro Section for all markets except VAT markets - Ireland Belgium France Germany Italy Spain Sweden
+comments:  Enable Web Pro Section for all markets except 19 VAT markets
 assetPath: false
 ---
 
@@ -251,7 +251,7 @@ line-height: 7px;
 
                 <div class="grid-column no-padding-bottom">
                 <div class="prem-ssl-marquee">
-                <a href='[@T[link:<relative path="/ssl/ssl-certificates-config.aspx"><param name="origin" value="pod" /><param name="plan" value="ssl_prm_1" /></relative>]@T]'>
+                <a href='[@T[link:<relative path="/ssl/ssl-certificates-config.aspx"><param name="origin" value="pod" /><param name="plan" value="ssl_prm_1" /><param name="ci" value="94859" /></relative>]@T]'>
                   <div class="prem-ssl-marquee-lt"><span class="prem-marq1">[@L[cds.sales/gd/ssl/ssl-certificates:savePerc]@L]</span> <span class="prem-marq2">[@L[cds.sales/gd/ssl/ssl-certificates:choosePremSSL]@L]</span></div>
                   <div class="prem-ssl-marquee-rt"></div>
                   </a>
@@ -308,7 +308,7 @@ line-height: 7px;
                 </div>
             </div><!-- col-xs-4 -->
           </div>
-          ##if(!countrySiteAny(ie,be,fr,de,it,es,ch))
+          ##if(!countrySiteAny(ie,be,fr,de,it,es,ch,at,dk,fi,gr,nl,no,pl,pt,ru,se,tr,ua))
           <!-- Start Rainier Banner -->
           <div class="row tab-content" id="rainier-section">
             <div id="Rainier_Banner" class="col-xs-12 rainier_banner">

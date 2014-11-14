@@ -1,8 +1,8 @@
 ---
 location: localization/sales/newscenter/about-godaddy/en
-id: 544532dcf778fc1ba009a9fe
-name: GCE-30346
-comments: Update PR contacts on the About Us Page
+id: 5457e1fbf778fc21f095144
+name: GCE-31437
+comments: Update El Driscoll info on the About Us Page
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="NewsCenterAbout-AFinePortraitsVideo" />
@@ -539,7 +539,7 @@ Corporate
 <phrase key="NewsCenterAbout-21306-edriscoll-Department" />
 Corporate
 <phrase key="NewsCenterAbout-21306-edriscoll" />
-El Driscoll
+Elizabeth L. Driscoll
 <phrase key="NewsCenterAbout-21306-edriscoll-Phone" />
 +1.480.505.8878
 <phrase key="NewsCenterAbout-21306-kamarosso-Department" />
