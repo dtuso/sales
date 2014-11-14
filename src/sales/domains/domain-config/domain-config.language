@@ -305,11 +305,43 @@ Online Essentials
 All features from Online Essentials PLUS…
 <phrase key="step.o365.plan3.title.BusinessPremium" comment="" />
 Business Premium
-<phrase key="lowest.price.domain" comment="{{LowestPrice}} will be replaced with a price, please do not translate" />
-As low as {{LowestPrice}}/domain
 <phrase key="plan.price.per.domain" comment="{{ListPrice}} and {{CurrentPrice}} will be a price"/>
 <span class="list-price weight-light">{{ListPrice}}</span> {{CurrentPrice}}<span class="pricing-per weight-regular">/domain</span>
 <phrase key="plan.price.per.mo" comment="{{CurrentPrice}} will be a price"/>
 {{CurrentPrice}}<span class="pricing-per weight-regular">/mo</span>
 <phrase key="step.privacy" comment="{{card.number}} will be a updated to the position number the step is displayed as"/>
-<span class="number-template weight-bold">Step {{card.number}}</span><span class="step_text weight-light">Privacy</span>
+Step {{card.number}}<span>Domain Privacy</span>
+<phrase key="step.email" comment="{{card.number}} will be a updated to the position number the step is displayed as"/>
+Step {{card.number}}<span>Email</span>
+<phrase key="step.get.found" comment="{{card.number}} will be a updated to the position number the step is displayed as"/>
+Step {{card.number}}<span>Get Found</span>
+<phrase key="step.ssl.certificates" comment="{{card.number}} will be a updated to the position number the step is displayed as"/>
+Step {{card.number}}<span>SSL Certificates</span>
+<phrase key="step.online.bookkeeping" comment="{{card.number}} will be a updated to the position number the step is displayed as"/>
+Step {{card.number}}<span>Online Bookkeeping</span>
+<phrase key="step.get.paid" comment="{{card.number}} will be a updated to the position number the step is displayed as"/>
+Step {{card.number}}<span>Get Paid</span>
+<phrase key="step.websites.and.hosting" comment="{{card.number}} will be a updated to the position number the step is displayed as"/>
+Step {{card.number}}<span>Websites &amp; Hosting</span>
+<phrase key="step.hosting" comment="{{card.number}} will be a updated to the position number the step is displayed as"/>
+Step {{card.number}}<span>Hosting</span>
+<phrase key="step.websites" comment="{{card.number}} will be a updated to the position number the step is displayed as"/>
+Step {{card.number}}<span>Websites</span>
+<phrase key="step.calendar" comment="{{card.number}} will be a updated to the position number the step is displayed as"/>
+Step {{card.number}}<span>Calendar</span>
+<phrase key="step.online.storage" comment="{{card.number}} will be a updated to the position number the step is displayed as"/>
+Step {{card.number}}<span>Online Storage</span>
+<phrase key="step.certified.domain" comment="{{card.number}} will be a updated to the position number the step is displayed as"/>
+Step {{card.number}}<span>Certified Domain</span>
+<phrase key="step.business.registration" comment="{{card.number}} will be a updated to the position number the step is displayed as"/>
+Step {{card.number}}<span>Business Registration</span>
+<phrase key="lowest.price.domain" comment="{{lowestPrice}} will be replaced with a price"/>
+As low as {{lowestPrice}}/domain
+<phrase key="lowest.price.month" comment="{{lowestPrice}} will be replaced with a price"/>
+As low as {{lowestPrice}}/mo
+<phrase key="ItemAddedMsgTextNew" />
+Select options for 1 domain.
+<phrase key="ItemsAddedMsgTextNew" />
+Select options for {{numDomains}} domains.
+<phrase key="close" />
+Close

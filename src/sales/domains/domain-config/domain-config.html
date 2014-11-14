@@ -22,13 +22,19 @@ metaOgTitle: "[@L[cds.sales/gd/domains/domain-configuration:MetaTitle]@L]"
 
 {% block body %}
 {% raw %}
+
+<!-- BEGIN HEADER -->
 <div id="head-wrap" class=" clearfix">
   <div id="serp-header">
     <h1><span class="uxicon uxicon-checkmark"></span><span id="domains-added-1">[@L[cds.sales/domains/domain-configuration:ItemAddedMsgTextNew]@L]</span><span id="domains-added-x">[@L[cds.sales/domains/domain-configuration:ItemsAddedMsgTextNew]@L]</span></h1>
     <a href="javascript:void(0);"><span class="uxicon uxicon-chevron-right-lt"></span><span>[@L[cds.sales/domains/domain-configuration:continue.to.cart]@L]</span></a>
   </div>
 </div>
+<!-- END HEADER -->
+
 <div class="clearfix">
+
+<!-- BEGIN SINGLE CARD -->
 <div class="step-wrapper single" id="step-{{Type}}" style="display: block;">
   <div class="step">
     <div class="section full">
@@ -65,8 +71,11 @@ metaOgTitle: "[@L[cds.sales/gd/domains/domain-configuration:MetaTitle]@L]"
     <h2 class="flag blue">[@L[cds.sales/domains/domain-configuration:step.privacy]@L]</h2>
   </div>
 </div>
+<!-- END SINGLE CARD -->
+
 <div class="step-separator"><span class="uxicon uxicon-chevron-down-lt"></span></div>
 
+<!-- BEGIN DOUBLE CARD -->
 <div class="step-wrapper double" id="step-{{Type}}" style="display: block;">
   <div class="step options">
     <div id="left-{{Type}}" class="section split left split-b">
@@ -122,6 +131,9 @@ metaOgTitle: "[@L[cds.sales/gd/domains/domain-configuration:MetaTitle]@L]"
     </div>
   </div>
 </div>
+<!-- END DOUBLE CARD -->
+
+<!-- BEGIN FOOTER -->
 <div id="serp-footer" class="clearfix">
   <div id="limitations-wrap" class="left" style="width:383px">
     <p>[@L[cds.sales/domains/domain-configuration:limitations.symbols]@L]&nbsp;<a id="limitations-link" data-ci="xxxxx" href="javascript:void(0);">[@L[cds.sales/domains/domain-configuration:limitations.link]@L]</a></p>
@@ -130,10 +142,25 @@ metaOgTitle: "[@L[cds.sales/gd/domains/domain-configuration:MetaTitle]@L]"
     <a id="btn-continue-to-cart" data-ci="xxxxx" class="btn btn-warning btn-lg js-addtocart"><span class="uxicon uxicon-cart"></span>[@L[cds.sales/domains/domain-configuration:continue.to.cart]@L]</a>
   </div>
 </div>
+<!-- END FOOTER -->
+
+<!-- BEGIN ERROR MODAL -->
+<div id="error-modal" class="g-modal" style="display:none;">
+  <a href="#" class="g-modal-close"><span>[@L[cds.sales/domains/domain-configuration:close]@L]</span></a>
+  <div class="g-modal-content">
+    <div class="error-modal-message default">[@L[cds.sales/domains/gtld-registration:gtldTui-genericErrorText]@L]</div>
+    <div class="error-modal-message alternate"></div>
+    <div class="error-modal-footer">
+      <div class="universal-modal-close">[@L[cds.sales/domains/domain-configuration:close]@L]</div>
+    </div>
+  </div>
+</div>
+<!-- END ERROR MODAL -->
+
 </div>
 
 
-
+[@P[webControl:<Data assembly="App_Code" type="Domains.Controls.TimeoutWarning"><Parameters><Parameter key="OnTimeoutRedirectToUrl" value="~/domains/search.aspx" /><Parameter key="Ci" value="xxxxx" /></Parameters></Data> ]@P]
 {% endraw %}
 {% endblock %}
 
