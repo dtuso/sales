@@ -10,7 +10,7 @@
 - gtldData["br"]    = { path: "/tlds/br-domain",       ci: 88377,  cssClass: "br",    productId: 57201 };
 
 mixin gtldBug(gtld)
-  a.tld-link(href!="[@T[link:<relative path='" + gtldData[gtld].path + "'><param name='ci' value='" + gtldData[gtld].ci + "' /><param name='tld' value='" + gtldData[gtld].tld + "' /></relative>]@T]")
+  a.tld-link(class=gtldData[gtld].cssClass href!="[@T[link:<relative path='" + gtldData[gtld].path + "'><param name='ci' value='" + gtldData[gtld].ci + "' /><param name='tld' value='" + gtldData[gtld].tld + "' /></relative>]@T]")
     span.hp-sprite(class=gtldData[gtld].cssClass)
     span!= "[@T[productprice:<current productid='" + gtldData[gtld].productId + "' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' />]@T]"
 
