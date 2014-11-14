@@ -22,6 +22,12 @@ metaOgTitle: "[@L[cds.sales/gd/domains/domain-configuration:MetaTitle]@L]"
 
 {% block body %}
 {% raw %}
+<div id="head-wrap" class=" clearfix">
+  <div id="serp-header">
+    <h1><span class="uxicon uxicon-checkmark"></span><span id="domains-added-1">[@L[cds.sales/domains/domain-configuration:ItemAddedMsgTextNew]@L]</span><span id="domains-added-x">[@L[cds.sales/domains/domain-configuration:ItemsAddedMsgTextNew]@L]</span></h1>
+    <a href="javascript:void(0);"><span class="uxicon uxicon-chevron-right-lt"></span><span>[@L[cds.sales/domains/domain-configuration:continue.to.cart]@L]</span></a>
+  </div>
+</div>
 <div class="clearfix">
 <div class="step-wrapper single" id="step-{{Type}}" style="display: block;">
   <div class="step">
@@ -116,7 +122,18 @@ metaOgTitle: "[@L[cds.sales/gd/domains/domain-configuration:MetaTitle]@L]"
     </div>
   </div>
 </div>
+<div id="serp-footer" class="clearfix">
+  <div id="limitations-wrap" class="left" style="width:383px">
+    <p>[@L[cds.sales/domains/domain-configuration:limitations.symbols]@L]&nbsp;<a id="limitations-link" data-ci="xxxxx" href="javascript:void(0);">[@L[cds.sales/domains/domain-configuration:limitations.link]@L]</a></p>
+  </div>
+  <div id="buttons-wrap" class="clearfix" style="float:right">
+    <a id="btn-continue-to-cart" data-ci="xxxxx" class="btn btn-warning btn-lg js-addtocart"><span class="uxicon uxicon-cart"></span>[@L[cds.sales/domains/domain-configuration:continue.to.cart]@L]</a>
+  </div>
 </div>
+</div>
+
+
+
 {% endraw %}
 {% endblock %}
 
