@@ -130,8 +130,99 @@ metaOgTitle: "[@L[cds.sales/gd/domains/domain-configuration:MetaTitle]@L]"
       <span class="weight-bold">[@L[cds.sales/domains/domain-configuration:or]@L]</span>
     </div>
   </div>
+    <div class="step-separator"><span></span></div>
 </div>
 <!-- END DOUBLE CARD -->
+
+<!--Triple Card-->
+ <div class="step-wrapper triple" id="step-{{Type}}" style="display: block;">
+  <div id="tripleCard" class="step options">
+    <div style=" height: 45px;">
+     <div style=" height: 34px;min-width: 230px;">[@L[cds.sales/domains/domain-configuration:step.privacy]@L]</div>
+       <h2 class="flag blue">Hello World[@L[cds.sales/domains/searchresults-new3:step.privacy]@L]</h2>
+   </div>   
+    <div id="parentContainer" class="parentContainer">
+    <div id="left-{{Type}}" class="section split left split-b" style="min-height: 316px;margin-top: -32px;padding-left: 10px;border-right-width: 1px;">
+      <p class="checkbox" style="padding: 45px 0 0 49px;">
+        <span data-ci="xxxxxx" class="uxicon uxicon-box"></span>
+        <span class="weight-light">{{HeaderText}}</span>
+      </p>
+      <p class="weight-light">{{DescriptionText}}</p>    
+      <p class="price weight-light fg-orange" style="padding-bottom: 29px;font-size: 16px !important;" >[@L[cds.sales/domains/searchresults-new3:lowest.price.domain]@L]</p>
+      <div id="plan-{{Type}}" class="plan-droplist-select select-disable" style="z-index: 24;height:36px;position: relative;bottom: 0px;">
+        <div class="plan-droplist-selected">
+          <span>{{PlanTitle}}</span><span class="price fg-orange" style="display: inline;">[@L[cds.sales/domains/searchresults-new3:plan.price.per.domain]@L]</span>
+        </div>
+        <div id="selectbtn-{{Type}}" class="plan-droplist-selectbtn"><span class="uxicon uxicon-chevron-down-lt"></span></div>
+        <div id="list-{{Type}}" class="plan-droplist" >
+          <div data-id="{{Id}}" data-ci="86238" id="{{Type}}-{{Id}}" class="plan-option triple-plan-dropdown">
+            <span class="title">{{PlanTitle}}</span>
+            <span class="plan-droplist-price weight-bold fg-orange">[@L[cds.sales/domains/searchresults-new3:plan.price.per.domain]@L]</span>
+            <ul class="plan-feature-list">
+              {{PlanFeatures}}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="right-{{Type}}" class="section split right split-b" style="min-height: 316px;margin-top: -32px;border-left-width: 1px;padding-left: 10px;width: 50%;display: table-cell;margin-left:-1px; float:left;">
+      <p class="checkbox" style="padding: 45px 0 0 49px;">
+        <span data-ci="xxxxxx" class="uxicon uxicon-box"></span>
+        <span class="weight-light">{{HeaderText}}</span>
+      </p>
+      <p class="weight-light">{{DescriptionText}}</p>   
+      <p class="price weight-light fg-orange" style="padding-bottom: 29px;font-size: 16px !important;">[@L[cds.sales/domains/searchresults-new3:lowest.price.domain]@L]</p>
+      <div id="plan-{{Type}}" class="plan-droplist-select select-disable" style="z-index: 23;height:36px;position: relative;bottom: 0px;">
+        <div class="plan-droplist-selected">
+          <span>{{PlanTitle}}</span><span class="list-price"></span><span class="price fg-orange" style="display: inline;">[@L[cds.sales/domains/searchresults-new3:plan.price.per.domain]@L]</span>
+        </div>
+        <div id="selectbtn-{{Type}}" class="plan-droplist-selectbtn"><span class="uxicon uxicon-chevron-down-lt"></span></div>
+        <div id="list-{{Type}}" class="plan-droplist" >
+          <div data-id="{{Id}}" data-ci="86241" id="{{Type}}-{{Id}}" class="plan-option triple-plan-dropdown" >
+            <span class="title">{{PlanTitle}}</span>
+            <span class="plan-droplist-price weight-bold fg-orange">[@L[cds.sales/domains/searchresults-new3:plan.price.per.domain]@L]</span>
+            <ul class="plan-feature-list">
+             {{PlanFeatures}}
+            </ul>
+          </div>         
+        </div>
+      </div>      
+    </div>
+    </div>
+     <div class="step-options" style="border-top-style: solid;border-top-width: 1px;border-top-color: #cccccc;margin-left: 62px;margin-right: 62px;">
+     <div class="weight-light" id="showMoreData" style="padding-top: 20px;padding-bottom: 20px;">Need <a href="javascript:void(0);" class="more-text" style="color: #0da8e5;text-decoration: underline;">Web Hosting </a>Only?</div>     
+      <div id="moreData" style="display:none;margin: auto;float: none;min-height: 232px;">
+      <p class="checkbox" style="font-size: 28px;">
+        <span data-ci="xxxxxx" class="uxicon uxicon-box" style="margin-left: -25px;"></span>
+        <span class="weight-light">{{HeaderText}}</span>
+      </p>
+      <p class="weight-light" style="line-height: 24px;font-size: 16px;">{{DescriptionText}}</p>     
+      <p class="price weight-light fg-orange">[@L[cds.sales/domains/searchresults-new3:lowest.price.domain]@L]</p>
+      <div id="plan-{{Type}}" class="plan-droplist-select select-disable" style="z-index: 24;height:36px;bottom: -25px;margin-left: 1px;border-bottom: 1px solid #ccc;color: #333;min-width: 330px;width: 330px;">
+        <div class="plan-droplist-selected">
+          <span>{{PlanTitle}}</span><span class="price fg-orange" style="display: inline;">[@L[cds.sales/domains/searchresults-new3:plan.price.per.domain]@L]</span>
+        </div>
+        <div id="selectbtn-{{Type}}" class="plan-droplist-selectbtn"><span class="uxicon uxicon-chevron-down-lt"></span></div>
+        <div id="list-{{Type}}" class="plan-droplist" style="display: none;">
+          <div data-id="{{Id}}" data-ci="86238" id="{{Type}}-{{Id}}" class="plan-option triple-plan-dropdown">
+            <span class="title">{{PlanTitle}}</span>
+            <span class="plan-droplist-price weight-bold fg-orange">[@L[cds.sales/domains/searchresults-new3:plan.price.per.domain]@L]</span>
+            <ul class="plan-feature-list">
+              {{PlanFeatures}}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>     
+     </div>
+    <div id="or" class="diamond-wrap" style="top: 163px;">
+      <div class="diamond"></div>
+      <span class="weight-bold">[@L[cds.sales/domains/domain-configuration:or]@L]</span>
+    </div>
+  </div> 
+</div>
+
+<!--End Triple Card-->
 
 <!-- BEGIN FOOTER -->
 <div id="serp-footer" class="clearfix">
@@ -176,11 +267,81 @@ metaOgTitle: "[@L[cds.sales/gd/domains/domain-configuration:MetaTitle]@L]"
     <script src="[@T[link:<javascriptroot />]@T]fos/script/JSON2.min.js"></script>
     <![endif]-->
     
-    <script type="text/javascript">
+  <script type="text/javascript">
 
-      $(document).ready(function() {
+       $(document).ready(function(){ 
 
+       $('.more-text').click(function(){
+        $('#showMoreData').remove();
+        $('#tripleCard').css("min-height","671px;")
+        $('#moreData').slideToggle('slow');
+        $(this).toggleClass('slideSign2');
+        return false;
+    });
+    $('#tripleCard').css("min-height","470px;");     
+      wireupPlanDropdowns();
+});
+
+function wireupPlanDropdowns() {
+      $("div.plan-droplist-select").click(function(e) {
+        e.stopPropagation();
+        e.preventDefault();
+        $(".plan-droplist:visible").toggle();
+        $(this).find(".plan-droplist").toggle();
+        return false;
       });
+
+      $(document).click(function() {
+        $(".plan-droplist").hide();
+      });
+
+      $(".plan-droplist").hover(function() {}, function() {
+        $(this).hide();
+      });
+      // hide the pricing information until something is shown
+      // $('div.plan-droplist-selected').find('span.price').hide();
+
+      // when they select an option, update the one selected item
+      $(document).ready(function() {
+        $("div.plan-droplist").delegate("div.plan-option", "click", function(event) {
+          event.stopPropagation();
+          event.preventDefault();
+          
+          var $chkbx = $(this).parents('.split').find('.checkbox > span.icon');
+          if($chkbx.length > 0 && !($chkbx.hasClass('checked')))
+          {
+            if ( $chkbx.parents('#hostmywebsite').length > 0 ) {
+              checkWSBHostingCheckbox(true);
+      } else {
+              checkWSBHostingCheckbox(false);
+            }
+          }
+          selectDropdownOption($(this));
+          $(".plan-droplist:visible").toggle();
+          return false;
+        });
+      });
+    }    
+      function selectDropdownOption($option) {
+      if ( $option !== undefined && $option != null && $option.length > 0 ) {
+        $option.parent().find('div.plan-option.plan-option-selected').removeClass('plan-option-selected'); // clear all of the dropdown options
+        $option.addClass('plan-option-selected'); // only add the class to the selected one
+
+        // put the selected name into the top row
+        var $dropdownSelectedDispay = $option.parents('div.plan-droplist-select').find('div.plan-droplist-selected');
+        var selectedTitle = $option.find('span.title').html();
+        $dropdownSelectedDispay.find('span:first').html(selectedTitle);
+
+        // appends on a price if it can find one;
+        var $priceSpan = $option.find('span.plan-droplist-price');
+        if ($priceSpan.length == 0) {
+          $dropdownSelectedDispay.find('span.price').hide();
+        } else {
+          var selectedPrice = $priceSpan.html();
+          $dropdownSelectedDispay.find('span.price').show().html('- ' + selectedPrice);
+        }
+      }
+    }
 
     </script>   
 {% endblock %}
