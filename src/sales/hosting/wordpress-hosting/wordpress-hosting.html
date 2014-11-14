@@ -1,8 +1,8 @@
 ---
 location: sales/hosting/wordpress-hosting.aspx
-id:    5463a46ef778fc0a70ee785b
+id: false
 name: GCE-31814
-comments:  Enable Web Pro Section for all markets except VAT markets - Ireland Belgium France Germany Italy Spain Sweden
+comments:  Enable Web Pro Section for all markets except 19 VAT markets
 cssVersionOverride: 3
 ---
 {% extends 'layouts/base.html' %}
@@ -495,7 +495,7 @@ cssVersionOverride: 3
         </div>
       </section>
 
-        ##if(!countrySiteAny(ie,be,fr,de,it,es,ch))
+        ##if(!countrySiteAny(ie,be,fr,de,it,es,ch,at,dk,fi,gr,nl,no,pl,pt,ru,se,tr,ua))
         <!-- Start Rainier Banner -->
         <div class="row tab-content" id="rainier-section">
           <div id="Rainier_Banner" class="col-xs-12 rainier_banner">
