@@ -1,6 +1,6 @@
 ---
 location: localization/sales/business/office-365-config/en
-id: 5435cc48f778fc30f4905733
+id: 54629a4ef778fc0a70ee7843
 name: GCE-29491
 comments: Update o365 limit
 max: "{{max}}"
@@ -140,3 +140,35 @@ Business Premium <span class="powered-by-office-365-text">powered by Office 365<
 Business Premium
 <phrase key="cp-BuyingForALargerGroup" />
 Buying for a larger group?
+<phrase key="email-essentials-pwd" />
+Email Essentials <span class="powered-by-office-365-text">powered by Office 365</span>
+<phrase key="business-essentials-pwd" />
+Business Essentials <span class="powered-by-office-365-text">powered by Office 365</span>
+<phrase key="business-premium-pwd" />
+Business Premium <span class="powered-by-office-365-text">powered by Office 365</span>
+<phrase key="online-essentials-pwd" />
+Online Essentials <span class="powered-by-office-365-text">powered by Office 365</span>
+<phrase key="Business-pwd" />
+Business <span class="powered-by-office-365-text">powered by Office 365</span>
+<phrase key="email-essentials" />
+Email Essentials
+<phrase key="business-essentials" />
+Business Essentials
+<phrase key="business-premium" />
+Business Premium
+<phrase key="online-essentials" />
+Online Essentials
+<phrase key="Business" />
+Business
+<phrase key="business-1" />
+Latest desktop version of Microsoft Office
+<phrase key="business-2" />
+Online and Mobile versions of Office
+<phrase key="business-3" />
+Free automatic Office upgrades
+<phrase key="business-4" />
+1 TB secure online storage
+<phrase key="og-title" />
+Get more done with Microsoft Office 365 from GoDaddy
+<phrase key="og-description" />
+Work anywhere with professional email and productivity tools that are always accessible and in sync. Manage your email, schedule, contacts, even your documents on any device. And if you ever have questions, you can call our award-winning support anytime, day or night, and talk to a real person.

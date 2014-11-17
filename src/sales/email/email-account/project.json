@@ -1,0 +1,27 @@
+{
+  "email-account.html": {
+    "cdsDetails": {
+      "champion": {
+        "name": "Sergio Lopez",
+        "email": "sylopez@godaddy.com"
+      }
+    },
+    "metaTitle": "[@L[cds.sales/gd/email/email-account:page-title]@L]",
+    "metaDescription": "[@L[cds.sales/gd/email/email-account:meta-description]@L]",
+    "metaKeywords": "[@L[cds.sales/gd/email/email-account:meta-keywords]@L]",
+    "metaCanonicalPath": "/email-account.aspx",
+    "metaOgTitle": "[@L[cds.sales/gd/email/email-account:og-title]@L]",
+    "metaOgImage": "fos/icn/email.jpg",
+    "metaOgDescription": "[@L[cds.sales/gd/email/email-account:og-description]@L]"
+  },
+  "email-account.language": {
+    "cdsDetails": {
+      "champion": {
+        "name": "Sergio Lopez",
+        "email": "sylopez@godaddy.com"
+      }
+    }
+  }
+
+
+}

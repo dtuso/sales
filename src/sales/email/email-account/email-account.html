@@ -1,0 +1,601 @@
+---
+location: sales/email-account.aspx
+id: 54650319f778fc10f0fd4a78
+name: GCE-30748
+comments: Create New Email centric O365 LP 
+cssVersionOverride: 2
+---
+{% extends 'layouts/base-no-border-box.html' %}
+
+{% block metahead %}
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta name="viewport" content="width=device-width, initial-scale=1" />
+ <meta http-equiv="content-language" content="[@T[localization:<language full="true" />]@T]" />
+{% parent %}
+  <!--[if lt IE 9]>
+    <style>
+      .row .col-xs-4{
+        margin-left: 0px;
+      }
+      .row .col-xs-4.mt5{
+        margin-top: 5px;
+      }
+      .row .col-xs-4.highlighted-plan .plan-contents{
+        border-left: 2px solid #DEDEDE;
+        border-bottom: 2px solid #DEDEDE;
+        border-right: 2px solid #DEDEDE;
+      }
+    </style>  
+  <![endif]-->
+{% endblock metahead %} 
+
+{% block footer %}
+  {% include "_footer-javascript.html" %}
+{% endblock footer %}
+
+{% block body %}
+
+  <!-- POST Header -->
+  <section id="banner-section" class="main-banner main-banner-email white-bg">
+    <div class="container l-main-container">
+    <div class="header-section">
+      <h1 class="gray-text">[@L[cds.sales/gd/email/email-account:Pro_email_tool]@L]</h1>
+      <h2 class="main-banner-subtitle gray-text">[@L[cds.sales/gd/email/email-account:sub_title]@L]</h2>
+      <h3>
+      ##if(productHasSavingsMoreThan(31825, 31825, 0) || productHasSavingsMoreThan(31841, 31841, 0))
+      [@L[cds.sales/gd/email/email-account:Powered_by]@L]
+      ##endif
+      </h3>
+    </div>
+    </div>
+  </section>
+
+  <section id="plan-boxes-section" class="white-bg">
+    <div class="container l-main-container pt40">
+      <div class="row">
+        <div id="plan-box-A" class="col-xs-4 plan-box mt5">
+          <div class="side-title-container">
+                <h3 class="product-title">[@L[cds.sales/gd/email/email-account:email_essentials]@L]</h3>
+                </div>
+                <div class="plan-contents side-plan left-side">
+                    <p class="plan-description">
+                        [@L[cds.sales/gd/email/email-account:Pro_email_domain]@L]
+                    </p>
+                    <div class="office-box no-office"></div>
+                    <div class="price-wrapper"> 
+                      <p class="as-low-as">[@L[cds.sales/gd/email/email-account:starting_at]@L]</p> 
+                      <p class="plan-box-price">
+                        [@T[productprice:<current productid="31805" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]
+                      </p> 
+                      <div class="per-user">
+                        <p><span class="low-pu">[@L[cds.sales/gd/email/email-account:per_user]@L]</span></p>
+                        <p>[@L[cds.sales/gd/email/email-account:per_month]@L]</p>
+                      </div>
+                    </div>
+                    ##if(productHasSavingsMoreThan(31805, 31805, 0))
+                      <div class="strike-through-wrapper">
+                        <p class="strike-through-price">
+                          <span class="secondary-color uppercase">
+                            <strong> 
+                              [@L[cds.sales/gd/hosting/web-hosting:onSale]@L] - [@L[cds.sales/gd/email/email-account:save]@L] [@T[productcompare:<percent primaryproductid="31805" secondaryproductid="31805" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]
+                            </strong>
+                          </span>
+                        </p>
+                        <p class="current-renewal-price">[@L[cds.sales/gd/email/email-account:renews_at]@L] [@T[productprice:<list productid="31805" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T] <span class="low-pu">[@L[cds.sales/gd/email/email-account:per_user]@L] </span>[@L[cds.sales/gd/email/email-account:per_month]@L]</p>
+                      </div>
+                    ##endif
+              ##if(countrySiteAny(uk))
+                <div class="vat-tax-wmessage">[@L[cds.sales/gd/email/email-account:vat_tax]@L]</div>
+              ##endif      
+            <button type="button" class="btn btn-warning btn-block btn-lg js-add-to-cart plan-box-button" data-value="Office365_Email_A_12month" data-ci="94313">[@L[cds.sales/gd/email/email-account:add_to_cart]@L]</button>
+          </div>  
+        </div>
+        <div id="plan-box-B" class="col-xs-4 plan-box highlighted-plan">
+          <div class="side-title-container">
+            <h3 class="product-title">[@L[cds.sales/gd/email/email-account:online_essentials]@L]</h3>
+          </div>
+          <div class="plan-contents">
+            <p class="plan-description">
+              [@L[cds.sales/gd/email/email-account:business_essentials_text]@L]
+            </p>
+            <div class="office-box no-office"></div>
+            <div class="price-wrapper"> 
+              <p class="as-low-as">[@L[cds.sales/gd/email/email-account:starting_at]@L]</p> 
+              <p class="plan-box-price">
+                [@T[productprice:<current productid="31825" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]
+              </p> 
+              <div class="per-user">
+                <p><span class="low-pu">[@L[cds.sales/gd/email/email-account:per_user]@L]</span></p>
+                <p>[@L[cds.sales/gd/email/email-account:per_month]@L]</p>
+              </div>
+            </div>
+            ##if(productHasSavingsMoreThan(31825, 31825, 0))
+              <div class="strike-through-wrapper">
+                <p class="strike-through-price">
+                  <span class="secondary-color uppercase">
+                    <strong> 
+                      [@L[cds.sales/gd/hosting/web-hosting:onSale]@L] - [@L[cds.sales/gd/email/email-account:save]@L] [@T[productcompare:<percent primaryproductid="31825" secondaryproductid="31825" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]
+                    </strong>
+                  </span>
+                </p>
+                <p class="current-renewal-price">[@L[cds.sales/gd/email/email-account:renews_at]@L] [@T[productprice:<list productid="31825" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T] <span class="low-pu">[@L[cds.sales/gd/email/email-account:per_user]@L] </span>[@L[cds.sales/gd/email/email-account:per_month]@L]</p>
+              </div>
+            ##endif  
+            ##if(countrySiteAny(uk))
+              <div class="vat-tax-message">[@L[cds.sales/gd/email/email-account:vat_tax]@L]</div>
+            ##endif  
+            <button type="button" class="btn btn-warning btn-block btn-lg js-add-to-cart plan-box-button" data-value="Office365_Email_B_12month" data-ci="94314">[@L[cds.sales/gd/email/email-account:add_to_cart]@L]</button>
+          </div>
+        </div>
+        <div id="plan-box-C" class="col-xs-4 plan-box mt5">
+          <div class="side-title-container">
+            <h3 class="product-title">[@L[cds.sales/gd/email/email-account:Business_Premium]@L]</h3>
+          </div>
+        <div class="plan-contents side-plan right-side">                  
+            <p class="plan-description">
+              [@L[cds.sales/gd/email/email-account:Business_Premium_text]@L]
+            </p>
+            <div class="office-box"></div>
+            <div class="price-wrapper"> 
+              <p class="as-low-as">[@L[cds.sales/gd/email/email-account:starting_at]@L]</p> 
+              <p class="plan-box-price">
+                [@T[productprice:<current productid="31841" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]
+              </p> 
+              <div class="per-user">
+                <p><span class="low-pu">[@L[cds.sales/gd/email/email-account:per_user]@L]</span></p>
+                <p>[@L[cds.sales/gd/email/email-account:per_month]@L]</p>
+              </div>
+            </div> 
+            ##if(productHasSavingsMoreThan(31841, 31841, 0))
+              <div class="strike-through-wrapper">
+                <p class="strike-through-price">
+                  <span class="secondary-color uppercase">
+                    <strong> 
+                      [@L[cds.sales/gd/hosting/web-hosting:onSale]@L] - [@L[cds.sales/gd/email/email-account:save]@L] [@T[productcompare:<percent primaryproductid="31841" secondaryproductid="31841" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]
+                    </strong>
+                  </span>
+                </p>
+                <p class="current-renewal-price">[@L[cds.sales/gd/email/email-account:renews_at]@L] [@T[productprice:<list productid="31841" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]  <span class="low-pu">[@L[cds.sales/gd/email/email-account:per_user]@L] </span>[@L[cds.sales/gd/email/email-account:per_month]@L]</p>
+              </div>
+            ##endif
+            ##if(countrySiteAny(uk))
+              <div class="vat-tax-message">[@L[cds.sales/gd/email/email-account:vat_tax]@L]</div>
+            ##endif             
+            <button type="button" class="btn btn-warning btn-block btn-lg js-add-to-cart plan-box-button" data-value="Office365_Email_C_12month" data-ci="94315">[@L[cds.sales/gd/email/email-account:add_to_cart]@L]</button>
+          </div>
+        </div>
+      </div>
+      <!-- / ROW -->
+    </div>
+    <!-- / Container -->
+  </section>
+
+  <section id="productivity-section" class="white-bg">
+    <div class="container l-main-container">
+      ##if(false)
+      <section class="main-tabs">
+          <div class="container">
+              <ul class="nav nav-tabs">
+                  <li class="nav-tabs-item active"><a class="nav-tabs-link" data-ci="89263" data-toggle="tab" onclick="scrollTo($('#features'),0)">[@L[cds.sales/gd/hosting/web-hosting:TabContentLink2]@L]</a>
+                  </li>
+                  <li class="nav-tabs-item" id="features-tab"><a class="nav-tabs-link features-tab-link" data-ci="89264" data-toggle="tab"  onclick="scrollTo($('#compare-plans'),0)">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-tab-title-11166]@L]</a>
+                  </li>
+                  <li class="nav-tabs-item"><a class="nav-tabs-link" data-ci="89265" data-toggle="tab" onclick="scrollTo($('#faq-section'),0)" >[@L[cds.sales/gd/hosting/web-hosting:TabContentLink4]@L]</a>
+                  </li>
+              </ul>
+          </div>
+      </section>
+      ##endif
+      <div id="features"class="productivity-sub-section">
+          <div class="sub-section-column img-side solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/email/email-account/img/blade-1-business.jpg">
+          <div class="image-text ">
+            <span class="email-example">[@L[cds.sales/gd/email/email-account:email_example]@L]</span>
+          </div>
+          </div>
+        <!-- /img-side -->  
+        <div class="sub-section-column text-side">
+          <h3>[@L[cds.sales/gd/email/email-account:like_pro]@L]</h3>
+          <div class="check-section">
+            <div class="check-block">
+              <span class="ico ico-highlight-checkbox-checked"></span>
+            </div>
+            <div class="check-text-wrapper">
+              <p>[@L[cds.sales/gd/email/email-account:like_pro_text]@L]</p>
+            </div>
+          </div>
+          <!-- /check-section -->
+        </div>
+        <!-- /text-side -->         
+      </div>
+      <!-- / productivity-sub-section -->
+      <div class="productivity-sub-section first">
+        <div class="sub-section-column text-side left">
+          <h3>[@L[cds.sales/gd/email/email-account:in_sync]@L]</h3>
+          <div class="check-section">
+            <div class="check-block">
+              <span class="ico ico-highlight-checkbox-checked"></span>
+            </div>
+            <div class="check-text-wrapper">
+              <p>[@L[cds.sales/gd/email/email-account:in_sync_text]@L]</p>
+            </div>
+          </div>
+          <!-- /check-section -->
+        </div>
+        <!-- /text-side -->
+        <div class="sub-section-column img-side solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/email/email-account/img/blade-2-All-your-devices.jpg">
+        </div>
+        <!-- /img-side -->
+      </div>
+      <!-- / productivity-sub-section -->
+      <div class="productivity-sub-section">
+          <div class="sub-section-column img-side solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/email/email-account/img/blade-3-email-contacts.jpg">
+          </div>
+        <!-- /img-side -->  
+        <div class="sub-section-column text-side">
+          <h3>[@L[cds.sales/gd/email/email-account:whats_important]@L]</h3>
+          <div class="check-section">
+            <div class="check-block">
+              <span class="ico ico-highlight-checkbox-checked"></span>
+            </div>
+            <div class="check-text-wrapper">
+              <p>[@L[cds.sales/gd/email/email-account:whats_important_text]@L]</p>
+            </div>
+          </div>
+          <!-- /check-section -->
+        </div>
+        <!-- /text-side -->         
+      </div>
+      ##if(activeLanguageAny(en))
+      <!-- / productivity-sub-section -->
+      <div class="productivity-sub-section">
+      <div class="sub-section-quote-section">
+        <h2 class="sub-section-quote gray-text ">[@L[cds.sales/gd/email/email-account:quote]@L]</h2>
+        <p>
+          [@L[cds.sales/gd/email/email-account:quote_author]@L]
+        </p>
+      </div>
+        <!-- /img-side -->
+      </div>
+      ##endif
+      <!-- / productivity-sub-section -->
+      <div class="productivity-sub-section">
+        <div class="sub-section-column text-side left">
+          <h3>[@L[cds.sales/gd/email/email-account:backed_by_trust]@L]</h3>
+          <div class="check-section">
+            <div class="check-block">
+              <span class="ico ico-highlight-checkbox-checked"></span>
+            </div>
+            <div class="check-text-wrapper">
+              ##if(activeLanguageAny(en))
+              <p>[@L[cds.sales/gd/email/email-account:backed_by_trust_text]@L]</p>
+              ##else
+              <p>[@L[cds.sales/gd/email/email-account:backed_by_trust_text_no_24]@L]</p>
+              ##endif
+            </div>
+          </div>
+          <!-- /check-section -->
+        </div>
+        <!-- /text-side -->
+        <div class="sub-section-column img-side solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/email/email-account/img/blade-4-go-daddy.jpg">
+        </div>
+        <!-- /img-side -->
+      </div>
+      <!-- / productivity-sub-section -->
+      <div class="productivity-sub-section">
+          <div class="sub-section-column img-side solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/email/email-account/img/blade-5-customer-service.jpg">
+          </div>
+        <!-- /img-side -->  
+        <div class="sub-section-column text-side">
+          <h3>[@L[cds.sales/gd/email/email-account:email_easier]@L]</h3>
+          <div class="check-section">
+            <div class="check-block">
+              <span class="ico ico-highlight-checkbox-checked"></span>
+            </div>
+            <div class="check-text-wrapper">
+              <p>
+              ##if(activeLanguageAny(en))
+                [@L[cds.sales/gd/email/email-account:email_easier_text]@L]
+              ##else
+                [@L[cds.sales/gd/email/email-account:email_easier_text_no_24]@L]
+              ##endif
+              </p>
+            </div>
+          </div>
+          <!-- /check-section -->
+        </div>
+        <!-- /text-side -->         
+      </div>
+    </div>
+    <!-- /l-main-container   -->
+  </section>
+  
+  <section id="latest-version-section" class="white-bg">
+    <div class="large-logo-block"></div>
+    <div class="container l-main-container">
+      <div class="row latest-version-row">
+        <div class="col-sm-7">
+          <div class="check-section">
+            <div class="email-details-wrapper">
+              <h3 class="email-section-header common-sub-section-header">[@L[cds.sales/gd/email/email-account:tools]@L]</h3>
+              <div class="check-section-list">
+                <div class="check-section">
+                  <div class="check-block">
+                    <span class="ico ico-highlight-checkbox-checked"></span>
+                  </div>
+                  <div class="check-text-wrapper">
+                    <p>[@L[cds.sales/gd/email/email-account:tools_text_1]@L]</p>
+                  </div>
+                </div>
+                <!-- / check- section -->
+                <div class="check-section">
+                  <div class="check-block">
+                    <span class="ico ico-highlight-checkbox-checked"></span>
+                  </div>
+                  <div class="check-text-wrapper">
+                    <p>[@L[cds.sales/gd/email/email-account:tools_text_2]@L]</p>
+                  </div>
+                </div>
+                <!-- / check- section -->
+                <div class="check-section">
+                  <div class="check-block">
+                    <span class="ico ico-highlight-checkbox-checked"></span>
+                  </div>
+                  <div class="check-text-wrapper">
+                    <p>[@L[cds.sales/gd/email/email-account:tools_text_3]@L]</p>
+                  </div>
+                </div>
+                <!-- / check- section -->
+              </div>
+              <!-- / check-section-list -->
+            </div>            
+          </div>
+          <!-- /check-section -->
+        </div>
+        <div class="col-xs-4">
+          <div class="col-xs-4 plan-box">
+            <span class="office-365-icons solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot />]@T]fos/office365/office-052014/img/office-365-icons.png"></span>
+            <div class="plan-contents side-plan">
+            <h3>[@L[cds.sales/gd/email/email-account:Business_Premium]@L]</h3>
+              <div class="price-wrapper"> 
+                <p class="as-low-as orange-text">[@L[cds.sales/gd/email/email-account:plans_starting_at]@L]</p> 
+                <p class="plan-box-price ">
+                  [@T[productprice:<current productid="31841" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]
+                </p> 
+                <div class="per-user">
+                  <p>[@L[cds.sales/gd/email/email-account:per_user]@L]</p>
+                  <p>[@L[cds.sales/gd/email/email-account:per_month]@L]</p>
+                </div>
+              </div>  
+               ##if(productHasSavingsMoreThan(31841, 31841, 0))
+              <div class="strike-through-wrapper">
+                <p class="strike-through-price">
+                  <span class="secondary-color uppercase">
+                    <strong> 
+                      [@L[cds.sales/gd/hosting/web-hosting:onSale]@L] - [@L[cds.sales/gd/email/email-account:save]@L] [@T[productcompare:<percent primaryproductid="31841" secondaryproductid="31841" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]
+                    </strong>
+                  </span>
+                </p>
+                <p class="current-renewal-price">[@L[cds.sales/gd/email/email-account:renews_at]@L] [@T[productprice:<list productid="31841" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]  <span class="low-pu">[@L[cds.sales/gd/email/email-account:per_user]@L] </span>[@L[cds.sales/gd/email/email-account:per_month]@L]</p>
+              </div>
+            ##endif
+            ##if(countrySiteAny(uk))
+              <div class="vat-tax-message">[@L[cds.sales/gd/email/email-account:vat_tax]@L]</div>
+            ##endif  
+              <button type="button" class="btn btn-warning btn-block btn-lg js-add-to-cart plan-box-button" data-value="Office365_Email_C_12month" data-ci="94318">[@L[cds.sales/gd/email/email-account:add_to_cart]@L]</button>
+            </div>
+          </div>          
+        </div>  
+        <!-- /Productivity Plus Plan Box -->
+      </div>
+      <!-- / row -->
+    </div>
+    <!-- l-main-container -->
+  </section>
+  
+  <section id="compare-plans" class="compare-plans-section">
+    <h2 class="section-header">[@L[cds.sales/gd/email/email-account:compare_plans]@L]</h2>
+    <p class="section-sub-header">[@L[cds.sales/gd/email/email-account:choose_right_one]@L]</p>
+    <div class="container l-main-container">
+      {% set table2CI = {'ci1': '94317', 'ci2': '94316', 'ci3':'94319'} %}
+      {% include "_compare-table.html" with table2CI %}
+    </div>
+  </section>
+
+  <section id="faq-section" class="white-bg">
+    <h2 class="section-header">[@L[cds.sales/gd/email/email-account:faqs]@L]</h2>
+    <div class="container l-main-container"> 
+    <div class="question-section">
+      <div class="show-hide-question-section">
+        <a class="open-button plus" href="#" data-ci="94320"></a>
+      </div>
+      <p class="question">[@L[cds.sales/gd/email/email-account:faq_benefits]@L]</p>
+      <p class="answer">
+        [@L[cds.sales/gd/email/email-account:faq_benefits_1]@L]       
+      </br>
+      </br>
+        [@L[cds.sales/gd/email/email-account:faq_benefits_2]@L]
+      </p>
+    </div>
+    <!-- / question-section -->
+    <div class="question-section">
+      <div class="show-hide-question-section">
+        <a class="open-button plus" href="#" data-ci="94321"></a>
+      </div>
+      <p class="question">[@L[cds.sales/gd/email/email-account:faq_workspace_email]@L]</p>
+      <p class="answer">[@L[cds.sales/gd/email/email-account:faq_workspace_email_text]@L]</p>
+    </div>
+    <!-- / question-section -->
+    <div class="question-section">
+      <div class="show-hide-question-section">
+        <a class="open-button plus" href="#" data-ci="94322"></a>
+      </div>
+      <p class="question">[@L[cds.sales/gd/email/email-account:faq_mac]@L]</p>
+      <p class="answer">
+      [@L[cds.sales/gd/email/email-account:faq_mac_text_1]@L] 
+      </br>
+      </br>
+      [@L[cds.sales/gd/email/email-account:faq_mac_text_2]@L]
+      </p>
+    </div>
+    <!-- / question-section -->
+    <p class="more-text"><a href="javascript:void(0);" data-ci="94334">[@L[cds.sales/gd/email/email-account:More]@L] <i class="ico ico-download"></i></a></p>
+    <div id="js-more-faq-wrapper" style="display:none">
+        <div class="question-section">
+          <div class="show-hide-question-section">
+            <a class="open-button plus" href="#" data-ci="94323"></a>
+          </div>
+          <p class="question">[@L[cds.sales/gd/email/email-account:faq_large_org]@L]</p>
+          ##if(activeLanguageAny(en))
+          <p class="answer">[@L[cds.sales/gd/email/email-account:faq_large_org_text]@L]</p>
+          ##else
+          <p class="answer">[@L[cds.sales/gd/email/email-account:faq_large_org_text_no_24]@L]</p>
+          ##endif
+        </div>
+          <!-- / question-section -->
+    <div class="question-section">
+      <div class="show-hide-question-section">
+        <a class="open-button plus" href="#" data-ci="94324"></a>
+      </div>
+      <p class="question">[@L[cds.sales/gd/email/email-account:faq_office_online]@L]</p>
+      <p class="answer">
+      [@L[cds.sales/gd/email/email-account:faq_office_online_text]@L] 
+      </p>
+    </div>
+    <!-- / question-section -->
+    <div class="question-section">
+      <div class="show-hide-question-section">
+        <a class="open-button plus" href="#" data-ci="94325"></a>
+      </div>
+      <p class="question">[@L[cds.sales/gd/email/email-account:faq_why_buy]@L]</p>
+      <p class="answer">
+      [@L[cds.sales/gd/email/email-account:faq_why_buy_text]@L] 
+      </br>
+      </br>
+      [@L[cds.sales/gd/email/email-account:faq_why_buy_text2]@L]</p>
+    </div>
+    <!-- / question-section -->
+    <div class="question-section">
+      <div class="show-hide-question-section">
+        <a class="open-button plus" href="#" data-ci="94326"></a>
+      </div>
+      <p class="question">[@L[cds.sales/gd/email/email-account:faq_bp_plan]@L]</p>
+      <p class="answer">
+      [@L[cds.sales/gd/email/email-account:faq_bp_plan_text]@L]
+      </p>
+    </div>
+        <!-- / question-section -->
+        <div class="question-section">
+          <div class="show-hide-question-section">
+            <a class="open-button plus" href="#" data-ci="94332"></a>
+          </div>
+          <p class="question">[@L[cds.sales/gd/email/email-account:faq_latest_version]@L]</p>
+          <div class="answer">
+            <p>[@L[cds.sales/gd/email/email-account:faq_latest_version_text]@L] </p>
+            <ul>
+              <li>[@L[cds.sales/gd/email/email-account:faq_windows_2008]@L]</li>
+              <li>[@L[cds.sales/gd/email/email-account:faq_windows_7]@L]</li>
+              <li>[@L[cds.sales/gd/email/email-account:faq_windows_2012]@L]</li>
+              <li>[@L[cds.sales/gd/email/email-account:faq_windows_8]@L]</li>
+              <li>[@L[cds.sales/gd/email/email-account:faq_mac_os]@L]</li>
+            </ul>
+          <p>[@L[cds.sales/gd/email/email-account:faq_latest_version_text2]@L]</p>
+          </div>
+        </div>
+        <!-- / question-section -->
+        <div class="question-section">
+          <div class="show-hide-question-section">
+            <a class="open-button plus" href="#" data-ci="94333"></a>
+          </div>
+          <p class="question">[@L[cds.sales/gd/email/email-account:faq_collaboration]@L]</p>
+          <p class="answer">[@L[cds.sales/gd/email/email-account:faq_collaboration_text]@L]
+          </p>
+        </div>
+        <!-- / question-section -->
+        <div class="question-section">
+          <div class="show-hide-question-section">
+            <a class="open-button plus" href="#" data-ci="94327"></a>
+          </div>
+          <p class="question">[@L[cds.sales/gd/email/email-account:faq_employees]@L] </p>
+          <p class="answer">
+            [@L[cds.sales/gd/email/email-account:faq_employees_text]@L]
+          </br>
+          </br>
+            [@L[cds.sales/gd/email/email-account:faq_employees_text2]@L]
+          </p>
+        </div>
+        <!-- / question-section -->
+        <div class="question-section">
+          <div class="show-hide-question-section">
+            <a class="open-button plus" href="#" data-ci="94328"></a>
+          </div>
+          <p class="question">[@L[cds.sales/gd/email/email-account:faq_installed_cloud]@L]</p>
+          <p class="answer">[@L[cds.sales/gd/email/email-account:faq_installed_cloud_text]@L]
+          </br>
+          </br>
+          [@L[cds.sales/gd/email/email-account:faq_installed_cloud_text2]@L]
+          </p>
+        </div>
+        <!-- / question-section -->
+        <div class="question-section">
+          <div class="show-hide-question-section">
+            <a class="open-button plus" href="#" data-ci="94329"></a>
+          </div>
+          <p class="question">[@L[cds.sales/gd/email/email-account:faq_lync]@L]</p>
+          <p class="answer">
+            [@L[cds.sales/gd/email/email-account:faq_lync_text]@L]
+          </p>
+        </div>
+        <!-- / question-section -->
+        <div class="question-section">
+          <div class="show-hide-question-section">
+            <a class="open-button plus" href="#" data-ci="94330"></a>
+          </div>
+          <p class="question">[@L[cds.sales/gd/email/email-account:faq_cloud]@L]</p>
+          <p class="answer">
+            [@L[cds.sales/gd/email/email-account:faq_cloud_text]@L]
+          </br>
+          </br>
+            [@L[cds.sales/gd/email/email-account:faq_cloud_text2]@L]
+          </p>
+        </div>
+        <!-- / question-section -->
+        <div class="question-section">
+          <div class="show-hide-question-section">
+            <a class="open-button plus" href="#" data-ci="94331"></a>
+          </div>
+          <p class="question">[@L[cds.sales/gd/email/email-account:faq_ipad]@L]</p>
+          <p class="answer">[@L[cds.sales/gd/email/email-account:faq_ipad_text]@L]
+          </br>
+          </br>
+          [@L[cds.sales/gd/email/email-account:faq_ipad_text2]@L]
+          </p>
+        </div>
+      </div>
+    </div>
+  </section> 
+  <section id="disclaimer-section">
+    <div class="container l-main-container content-disclaimer">
+      <p>
+        <small class="small-print">
+          <a class="simple-link" href="#" data-toggle="modal" data-target="#disclaimerModal" data-ci="94336">[@L[cds.sales/gd/email/email-account:disclaimer_link]@L]</a>
+        </small>
+      </p>
+      <div class="modal fade" id="disclaimerModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <p class="modal-title"><strong>[@L[cds.sales/gd/email/email-account:disclaimer]@L]</strong></p>
+          </div>
+          <div class="modal-body">
+            <p>[@L[cds.sales/gd/email/email-account:disclaimer_1]@L]<p>
+            <p>[@L[cds.sales/gd/email/email-account:disclaimer_2]@L]</p>
+            <p>[@L[cds.sales/gd/email/email-account:disclaimer_3]@L]</p>
+            <p>[@L[cds.sales/gd/email/email-account:disclaimer_4]@L]</p>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div>
+  </section>        
+{% endblock body %}
