@@ -1,8 +1,8 @@
 ---
 location: sales/tlds/gtldprereg.aspx
-id: 5429e04bf778fc106c634431
-name: GCE-28328
-comments: Fixing Header Background to cover
+id: 545d061cf778fc1428260c34
+name: GCE-30719
+comments: Can not search non-Ascii characters as domain even the TLD page said it can support non Latin characters 
 ---
 <!DOCTYPE html>
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="[@T[localization:<language full="true" />]@T]"> <![endif]-->
@@ -36,8 +36,9 @@ comments: Fixing Header Background to cover
 
       <!-- Global CSS and Page CSS -->
 
-      <link href="[@T[link:<cssroot />]@T]fos/global/build/0.2.0/gd-fos-global.min.css" rel="stylesheet" type="text/css" />
-      <link href="[@T[link:<css path='fos/sales/themes/scotty/tlds/leafpage/css/styles.css' />]@T]" rel="stylesheet" type="text/css" />
+      <link href="[@T[link:<css path='fos/global/build/0.2.0/gd-fos-global.min.css' />]@T]" rel="stylesheet" type="text/css">
+      
+      <link href="[@T[link:<css path='fos/sales/themes/scotty/tlds/leafpage/css/styles.css?v=2' />]@T]" rel="stylesheet" type="text/css">
       
       <!-- IE SUPPORT FOR HTML5 and Bootstrap 3 -->
       <!--[if lt IE 9]>
@@ -98,15 +99,18 @@ comments: Fixing Header Background to cover
         </div>
       </div>
       <div id="search-wrap" >
-        <form id="gtld-domain-search-form" action="/domains/search.aspx" method="get" autocomplete="off">
-          ##if(isManager())
-          <input id="mgrshopper" type="hidden" name="mgrshopper" value="" />
-          ##endif
-          <input id="tld" type="hidden" name="tld" value="[@D[gtld]@D]" />
-          <input id="gtld-domain-search-input" class="search-field" type="text" name="domainToCheck" maxlength="63" placeholder="[@L[cds.sales/homepage:search-text]@L]" />
-          <a id="gtld-domain-search-btn" class="flt-btn flt-btn-grn" href="javascript:void(0);">[@L[cds.tldleaf/[@D[gtld]@D]:prereg.search.button.text]@L]</a>
-          <span class="search-tld">.[@D[gtld]@D]</span>
-        </form>
+          <form method="post" data-url="[@T[link:<relative path="~/api/dpp/search/single"/>]@T]" action="[@T[link:<relative path="/domains/searchresults.aspx"/>]@T]" id="gtld-domain-search-form" autocomplete="off">
+              <div class="searchBoxForm">
+              ##if(isManager())
+               <input id="mgrshopper" type="hidden" name="mgrshopper" value="" />
+              ##endif
+              <input id="tld" type="hidden" name="tld" value="[@D[gtld]@D]" />
+              <input type="text" name="domainToCheck" maxlength="63" placeholder="[@L[cds.sales/homepage:search-text]@L]" class="search-field" id="gtld_domain_search_input" />
+              <button type="submit" name="searchButton" data-ci="94531" id="gtld-domain-search-btn" class="btn flt-btn flt-btn-grn">[@L[cds.tldleaf/[@D[gtld]@D]:prereg.search.button.text]@L]</button>
+              <span class="search-tld">.[@D[gtld]@D]</span>
+             </div>
+            </form>
+        
       </div>
       <div id="body-wrap">
         <div class="content clearfix">
@@ -221,7 +225,7 @@ comments: Fixing Header Background to cover
     
     <script src="[@T[link:<javascriptroot />]@T]shared/js/jquery.plugins.min.20111019.js" type="text/javascript" ></script>
     <script src="[@T[link:<javascriptroot />]@T]starfield/fos.share/v1.3/fos.share-20140205.min.js" id="fosShareScript" ></script>
-    <script src="[@T[link:<cssroot />]@T]fos/201401/tlds/tld-leaf/js/tld-leaf-page.min.js"></script>
+    <script src="[@T[link:<cssroot />]@T]fos/201401/tlds/tld-leaf/js/tld-leaf-page11072014.js"></script>
 
     <!--[if lte IE 8]>
     <script src="[@T[link:<javascriptroot />]@T]fos/script/JSON2.min.js"></script>
@@ -231,6 +235,29 @@ comments: Fixing Header Background to cover
 
       $(document).ready(function() {
         gbl.ns.register('domains.controls');
+       $("#gtld-domain-search-form").on("submit", function (e){
+        e.preventDefault();
+
+        $('button[name="searchButton"]', this).addClass('disabled');
+
+        var params = {
+            query:$(this).serialize(),
+            searchUrl:$(this).attr('data-url')
+        };
+        DomainSearch(params,function(err,NextStepUrl){
+            if(err == null )
+            {
+                if(typeof NextStepUrl === 'undefined'){
+      NextStepUrl = '[@T[link:<relative path="~/tlds/gtld.aspx" />]@T]';
+                }
+                window.location = NextStepUrl;
+            }
+            else{
+                if(console != "undefined")
+                console.log(err);
+            }
+        });
+    });
         if (!domains.controls.gtldTemplatesClient) {
           // probably means the cds_gtld_templates_xxxx.js file didn't load correctly
 
@@ -273,6 +300,20 @@ comments: Fixing Header Background to cover
         }
       
       });
+      function DomainSearch(params, cb) {
+          $.ajax({
+            url: params.searchUrl,
+            type: 'POST',
+            data: params.query,
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+              var data = { Error: errorThrown, Success: false };
+              cb(errorThrown,null);
+            },
+            success: function (data) {
+              cb(null,data.NextStepUrl);
+            }
+          });
+      }
 
     </script>
 
