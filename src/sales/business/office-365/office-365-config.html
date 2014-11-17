@@ -587,7 +587,7 @@ comments: Cart link issue, support phone issue, microsoft url issue.
 
   <script>
     if(typeof o365PageData == 'undefined'){
-      var o365PageData = {apiUrl: '[@T[link:<relative path="/api/package/{0}"/>]@T]'};
+      var o365PageData = {apiUrl: '[@T[link:<relative path="/api/package{0}"/>]@T]'};
       ##if(isManager())
         o365PageData.configcarturl = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]';
         o365PageData.isManager = true;
@@ -1057,7 +1057,7 @@ comments: Cart link issue, support phone issue, microsoft url issue.
               }
               var ci = productObject[k]['configCiCode'];
 
-              urlFragment = '/' + itccode; //itc code
+              urlFragment += '/' + itccode; //itc code
               urlFragment += '/' + ci; //ci code
               urlFragment += '/' + productObject[k]['productQty'];  // quantity
               urlFragment    += '/' + packageId  //Plan Name (aka Package Id)
