@@ -1,8 +1,8 @@
 ---
 location: localization/sales/business/office-365-config/en
-id: 5435cc48f778fc30f4905733
-name: GCE-29491
-comments: Update o365 limit
+id: 546a80c8f778fc152c6595f8
+name: GCE-32012, 32531, 32197
+comments: Cart link issue, support phone issue, microsoft url issue.
 max: "{{max}}"
 ---
 {% include 'modules/doc-block.html' %}
@@ -140,3 +140,9 @@ Business Premium <span class="powered-by-office-365-text">powered by Office 365<
 Business Premium
 <phrase key="cp-BuyingForALargerGroup" />
 Buying for a larger group?
+<phrase key="cp-19-ForMoreInformationSeeTheFullMicrosoftService-32531" comment="'{0}'' will be replaced with a url"/>
+For more information see the full Microsoft Service Agreement here: <a data-ci="86435" href="{0}" target="_blank">{0}</a>
+<phrase key="cp-10-GoDaddy247AwardWinningSupportCall480-32531" />
+GoDaddy 24/7 award-winning Support, call <span class="customer-service-phone-number">[@T[support:<O365SupportPhone/>]@T]</span>
+<phrase key="cp-30-ToSetUpMoreThan25UsersOn-32531" />
+To set up more than 25 users on one plan (or more than 75 users across multiple plans), please call our 24/7 customer support at [@T[support:<O365SupportPhone/>]@T].
