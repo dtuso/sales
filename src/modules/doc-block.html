@@ -3,8 +3,6 @@
 
 
 
-
-
     IMPORTANT:
       If version control is enabled for this page all changes to this page must also go through version control.
 
@@ -19,17 +17,17 @@
       Created By:     {{ cdsDetails.draft.user.username|safe }}
       JIRA Ticket:    {{ name || cdsDetails.draft.name }}
       Comments:       {{ comments || cdsDetails.draft.comments }}
+    
+    CDS INFO:
+      file path:      {{ cdsDetails.draft.location }}
 {% if cdsDetails.draft.id %}
-    CDS URL:
-      http://siteadmin.dev.intranet.gdg/cds/ide#{{cdsDetails.draft.id}}
+      url:            http://siteadmin.dev.intranet.gdg/cds/ide#{{cdsDetails.draft.id}}
+{% endif %}
+{% if cdsDetails.draft.splitSide %}
+      split preview:  http://gui.dev-godaddy.com/splittest/splittestredirect.aspx?test={{ cdsDetails.draft.splitSide }}&dest={{ cdsDetails.draft.url }}{% if cdsDetails.draft.id %}?version={{ cdsDetails.draft.location }}|{{cdsDetails.draft.id}}{% endif %}
+{% elseif cdsDetails.draft.url %}
+      preview url:    {{ cdsDetails.draft.url }}{% if cdsDetails.draft.id %}?version={{ cdsDetails.draft.location }}|{{cdsDetails.draft.id}}{% endif %}
 {% endif %}
 
-{% if cdsDetails.draft.splitSide %}
-    SPLIT PREVIEW URL:
-      http://gui.dev-godaddy.com/splittest/splittestredirect.aspx?test={{ cdsDetails.draft.splitSide }}&dest={{ cdsDetails.draft.url }}{% if cdsDetails.draft.id %}?version={{ cdsDetails.draft.location }}|{{cdsDetails.draft.id}}{% endif %}
-{% elseif cdsDetails.draft.url %}
-    PREVIEW URL:
-      {{ cdsDetails.draft.url }}{% if cdsDetails.draft.id %}?version={{ cdsDetails.draft.location }}|{{cdsDetails.draft.id}}{% endif %}
-{% endif %}
 
 END DOC BLOCK -->
