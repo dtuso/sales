@@ -1,8 +1,8 @@
 ---
 location: sales/hosting/website-builder.aspx
-id: 543454eef778fc0ff0ff8e36
-name: GCE-21960
-comments: All Local markets not support Email and SEO
+id: 546bc363f778fc10909ad97e
+name: GCE-31167
+comments: Remove Reviews Stars and Read Reviews links in Marquee
 ---
 {% extends 'layouts/base.html' %}
 {% block pageTitle %}
@@ -183,12 +183,6 @@ comments: All Local markets not support Email and SEO
           <div class="main-banner-text text-padding">
   ##endif
           <h1 class="main-banner-title condensed right-padding"><strong>[@L[cds.sales/gd/hosting/website-builder:main-banner-subtitle]@L]</strong></h1>
-          ##if(activeLanguageAny(en) && !isManager() && splitTestingSideIsActive(1214, A))
-          <section class="rating-stars-container main-banner-rating-stars-container websitebuilder-rating-stars">
-              <div class="rating-stars-init" data-rating="5"></div>
-          </section>
-          <a class="main-banner-read-reviews main-banner-read-reviews-alternate tab-link" data-scroll=".main-tabs" data-ci="91392" href="#reviews">[@L[cds.sales/gd/hosting/website-builder:stars-read-reviews]@L]</a>
-          ##endif
           <h2 class="main-banner-subtitle main-banner-subtitle-alternate">[@L[cds.sales/gd/hosting/website-builder:main-banner-title]@L]</h2>
           <ul class="main-banner-list no-wrap">
               <li><span class="wsb-black-check"></span><span class="wsb-li-content">[@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-1]@L]</span></li>

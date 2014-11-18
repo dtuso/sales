@@ -1,9 +1,9 @@
 ---
 location: sales/ssl/ssl-certificates.aspx
 url: http://www.dev-godaddy.com/ssl/ssl-certificates.aspx
-id: false
-name: GCE-31814
-comments:  Enable Web Pro Section for all markets except 19 VAT markets
+id: 546bc1def778fc10909ad97c
+name: GCE-31167
+comments: Remove Reviews Stars and Read Reviews links in Marquee
 assetPath: false
 ---
 
@@ -203,13 +203,6 @@ line-height: 7px;
     <section class="main-banner main-banner-ssl-certificate">
       <div class="l-main-container container main-banner-content main-banner-content-ssl-certificate">
         <h1 class="main-banner-title main-banner-title-alternate">[@L[cds.sales/gd/ssl/ssl-certificates:MastHeadTitle]@L]</h1>
-        ##if(activeLanguageAny(en) && !isManager())
-          <section class="rating-stars-container main-banner-rating-stars-container">
-              <div class="rating-stars-init" data-rating="5"></div>
-          </section>
-          <a class="main-banner-read-reviews main-banner-read-reviews-alternate tab-link" href="#reviews">[@L[cds.sales/gd/ssl/ssl-certificates:LabelReadReviews]@L]</a>
-        ##endif
-
         <h2 class="main-banner-subtitle main-banner-subtitle-alternate">[@L[cds.sales/gd/ssl/ssl-certificates:MastHeadSubTitle]@L]</h2>
         <ul class="main-page-main-list">
           <li>[@L[cds.sales/gd/ssl/ssl-certificates:MastHeadListItem1]@L]</li>
