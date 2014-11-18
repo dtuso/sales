@@ -1,9 +1,9 @@
 ---
 location: sales/email-account.aspx
-id: 54650319f778fc10f0fd4a78
+id: 546afa63f778fc10909ad88f
 name: GCE-30748
 comments: Create New Email centric O365 LP 
-cssVersionOverride: 2
+cssVersionOverride: 3
 ---
 {% extends 'layouts/base-no-border-box.html' %}
 
@@ -189,7 +189,9 @@ cssVersionOverride: 2
       <div id="features"class="productivity-sub-section">
           <div class="sub-section-column img-side solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/email/email-account/img/blade-1-business.jpg">
           <div class="image-text ">
-            <span class="email-example">[@L[cds.sales/gd/email/email-account:email_example]@L]</span>
+            <div class="image-text-container">
+              <span class="email-example">[@L[cds.sales/gd/email/email-account:email_example]@L]</span>
+            </div>
           </div>
           </div>
         <!-- /img-side -->  
@@ -200,7 +202,7 @@ cssVersionOverride: 2
               <span class="ico ico-highlight-checkbox-checked"></span>
             </div>
             <div class="check-text-wrapper">
-              <p>[@L[cds.sales/gd/email/email-account:like_pro_text]@L]</p>
+              <p>[@L[cds.sales/gd/email/email-account:like_pro_text_alt_32008]@L]</p>
             </div>
           </div>
           <!-- /check-section -->
@@ -410,7 +412,7 @@ cssVersionOverride: 2
       </div>
       <p class="question">[@L[cds.sales/gd/email/email-account:faq_benefits]@L]</p>
       <p class="answer">
-        [@L[cds.sales/gd/email/email-account:faq_benefits_1]@L]       
+        [@L[cds.sales/gd/email/email-account:faq_benefits_1_32008]@L]       
       </br>
       </br>
         [@L[cds.sales/gd/email/email-account:faq_benefits_2]@L]
@@ -577,7 +579,7 @@ cssVersionOverride: 2
     <div class="container l-main-container content-disclaimer">
       <p>
         <small class="small-print">
-          <a class="simple-link" href="#" data-toggle="modal" data-target="#disclaimerModal" data-ci="94336">[@L[cds.sales/gd/email/email-account:disclaimer_link]@L]</a>
+          <a class="simple-link" href="#" data-toggle="modal" data-target="#disclaimerModal" data-ci="94336">[@L[cds.sales/gd/email/email-account:disclaimer_link_32008]@L]</a>
         </small>
       </p>
       <div class="modal fade" id="disclaimerModal">
@@ -590,6 +592,7 @@ cssVersionOverride: 2
           <div class="modal-body">
             <p>[@L[cds.sales/gd/email/email-account:disclaimer_1]@L]<p>
             <p>[@L[cds.sales/gd/email/email-account:disclaimer_2]@L]</p>
+            <p>[@L[cds.sales/gd/email/email-account:disclaimer_5]@L]</p>
             <p>[@L[cds.sales/gd/email/email-account:disclaimer_3]@L]</p>
             <p>[@L[cds.sales/gd/email/email-account:disclaimer_4]@L]</p>
           </div>
