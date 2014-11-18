@@ -3,6 +3,7 @@
   "about":              "./newscenter/about-godaddy",
   "accounting":         "./accounting/accounting-software/",
   "bm":                 "./products/business-marketing/",
+  "build-a-website":    "./expansion-pages/website-builder/build-a-website/",
   "build-my-own-website": "./product-pages/build-my-own-website/",  
   "cce":                "./cce/",
   "contact-us":         "./contact-us/",
@@ -47,6 +48,7 @@
   "web-design":         "./design/web-design/",
   "web-hosting":        "./hosting/web-hosting/",
   "web-hosting-config": "./hosting/web-hosting-config/",
+  "website-template-ep":"./expansion-pages/website-builder/website-template-ep/",
   "what-is-a-gtld":     "./domains/what-is-a-gtld",
   "wordpress-hosting":  "./hosting/wordpress-hosting/",
   "wordpress-pl":       "./hosting/private-label/wordpress/",
@@ -59,5 +61,4 @@
   "managed-vps-config": "./pro/managed-vps-config/",
   "ds-PL":              "./hosting/private-label/dedicated-servers/",
   "ds-config-PL":       "./hosting/private-label/dedicated-servers-config/"
-
 }
