@@ -16,6 +16,7 @@
   "ds":                 "./hosting/dedicated-servers/",
   "dsc":                "./pro/dedicated-server-config/",
   "eoi":                "./tlds/gtld/",
+  "email":               "./email/email-account/",
   "got":                "./offers/online-business/",
   "got2":               "./offers/office365-promo/",
   "gtld":               "./tlds/gtld/",

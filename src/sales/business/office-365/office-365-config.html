@@ -1,9 +1,15 @@
 ---
 url: http://www.dev-godaddy.com/business/office-365-config.aspx
 location: sales/business/office-365-config.aspx
+<<<<<<< HEAD
 id: 546a7ba0f778fc152c6595f1
 name: GCE-32012, 32531, 32197
 comments: Cart link issue, support phone issue, microsoft url issue.
+=======
+id: 5463dc04f778fc113888f689
+name: GCE-31272
+comments: O365 Office LP - Adding GD Exclusive Text to page
+>>>>>>> 1fdf63f7e9e51b6fcc0dd2901996f89195894781
 ---
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="[@T[localization:<language full="true" />]@T]"> <![endif]-->
@@ -21,14 +27,14 @@ comments: Cart link issue, support phone issue, microsoft url issue.
   <meta name="description" content="[@L[cds.sales/business/office-365-config:cp-36-MSOffice365IsEasyToSetUp]@L]" />
   <meta name="keywords" content="[@L[cds.sales/business/office-365-config:cp-18-Office365MicrosoftOffice365Office365Pricing]@L]" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta property="og:title" content="Get more done with Microsoft Office 365 from GoDaddy" />
+  <meta property="og:title" content="[@L[cds.sales/business/office-365-config:og-title]@L]" />
   <meta property="og:type" content="product" />
   <meta property="og:url" content="[@T[link:<external linktype='siteurl' path='/business/office-365-config.aspx' parammode='explicit'/>]@T]" />
   <meta property="og:image" content="[@T[link:<imageroot />]@T]fos/office365/img/open-graph_20140115.png" />
-  <meta property="og:site_name" content="GoDaddy" />
+  <meta property="og:site_name" content="[@T[companyname:name]@T]" />
   <meta property="fb:app_id" content="123221524357549" />
   <meta property="fb:admins" content="633356800" />
-  <meta property="og:description" content="Work anywhere with professional email and productivity tools that are always accessible and in sync. Manage your email, schedule, contacts, even your documents on any device. And if you ever have questions, you can call our award-winning support anytime, day or night, and talk to a real person." />
+  <meta property="og:description" content="[@L[cds.sales/business/office-365-config:og-description]@L]" />
   
   <meta http-equiv="content-language" content="[@T[localization:<language full="true" />]@T]" />
   <link href="[@T[link:<cssroot />]@T]fos/201401/global/css/global.min.css" rel="stylesheet" type="text/css">
@@ -789,7 +795,8 @@ comments: Cart link issue, support phone issue, microsoft url issue.
           {
             office365config.plan = office365config.configData[office365config.product][office365config.planLevel][office365config.planDuration];
             office365config.showPlans(office365config.product, office365config.planLevel);
-            office365config.changeQty(office365config.product, office365config.planLevel,1)
+            $(".config-product-wrapper").find(".product-quantity").val(0);
+            office365config.changeQty(office365config.product, office365config.planLevel,1);
           }
           $(".js-addtocart").click(function(e){
 
@@ -814,7 +821,7 @@ comments: Cart link issue, support phone issue, microsoft url issue.
 
           $(".js-duration").change(function(){
             office365config.planDuration = $(".js-duration").val();
-            //office365config.buildProductOrder();
+            office365config.buildProductOrder();
             // adjust all price labels to reflect the correct price for the duration
             if(productGroupName=="Original") {
               $(".js-product-price-amount0").html(office365config.configData["Original"]["Economy"][office365config.planDuration]["currentPrice"]);

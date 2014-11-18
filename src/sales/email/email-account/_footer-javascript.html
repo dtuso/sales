@@ -1,0 +1,148 @@
+ <script src="[@T[link:<javascriptroot />]@T]fos/lib/solazy/jquery.solazy.1.2.1.min.js" type="text/javascript" ></script> 
+  <script>
+    function scrollTo(element, offset){
+        var destination = element.offset().top;
+        if(offset !== undefined)
+        {
+            destination += offset;
+        }
+
+        $('html, body').animate({
+            scrollTop: destination + 'px',
+            easing: 'easein'
+        }, 600);
+    };
+
+    function getParameterByName(name){
+      name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+      var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+          results = regex.exec(location.search);
+      return  decodeURIComponent(results[1].replace(/\+/g, " "));
+    };
+  (function ($) {
+  'use strict';
+    $.fn.vertAlign = function () {
+        var h = [];
+        this.each(function(){
+          h.push($(this).outerHeight());
+        });
+        var height = Math.max.apply(Math, h);
+        this.each(function(){
+          $(this).css('height', height);
+        });
+    };
+  }(jQuery)); 
+    
+    
+  $(document).ready(function(){
+    $('.open-button').click(function(e){
+      e.preventDefault();
+      var $this = $(this);
+      var ci = $this.data('ci');
+      if(ci == null || ci == "" || ci == "undefined"){
+        ci = 000000;
+      }
+
+      if($(this).hasClass('minus')){
+        $(this).removeClass('minus');
+        $(this).addClass('plus');
+        $(this).parent().siblings('.answer').slideUp(300);
+      }else{
+        $(this).removeClass('plus');
+        $(this).addClass('minus');
+        $(this).parent().siblings('.answer').slideDown(300);
+      }
+    });
+
+    $('.more-text a').click(function(e){
+      $(this).hide();
+      $('#js-more-faq-wrapper').slideDown(300);
+    });
+    
+    $('.compare-plans').click(function(event){
+      var $this = $(this);
+      var ci = $this.data('ci');
+      if(ci == null || ci == "" || ci == "undefined"){
+        ci = 000000;
+      }
+      if($('#js-show-hide-compare').is(':hidden')){
+        $(this).children('.plus-span').removeClass('plus-span');
+        $(this).children('span').addClass('minus-span');    
+        $('#js-show-hide-compare').slideDown(300);
+      }else{
+        $(this).children('.minus-span').removeClass('minus-span');
+        $(this).children('span').addClass('plus-span');
+        $('#js-show-hide-compare').slideUp(300);
+      }
+    });
+
+    $('[data-ci]').click(function(e){
+      $this = $(this);
+      FastballEvent_MouseClick(e,$this.attr('data-ci'),$(this)[0],'a');
+      fbiLibCheckQueue();    
+    });
+
+    $('.tab-link').tabLinks();
+    $('.plan-description').vertAlign();
+    $(".plan-contents div.price-wrapper").vertAlign();
+    $(".plan-contents .strike-through-price").vertAlign();
+   }); 
+   
+  $(document).ready(function(){
+
+     if (typeof FastballEvent_MouseClick === 'function' && typeof fbiLibCheckQueue === 'function') {
+          $('[data-ci]').click(function(e){
+              $this = $(this);
+              FastballEvent_MouseClick(e,$this.attr('data-ci'),$(this)[0],'a');
+              fbiLibCheckQueue();
+          });
+      }
+      
+      var office365config={};
+
+
+
+      $(".js-add-to-cart").bind("click",function(event){
+        var $this = $(this);
+        
+        event.preventDefault();
+        var packageId = $this.data('value');
+        var ci = $this.data('ci');
+        if(ci == null || ci == "" || ci == "undefined"){
+          ci = 000000;
+        }
+        var itccode = "slp_365_email";
+        
+        ##if(isManager())
+        itccode = 'mgr_' + itccode;
+        var managerId= getParameterByName('mgrshopper');
+        ##endif 
+
+        var qty = "1";
+
+        var url = '[@T[link:<relative path="api/package/{0}/{1}/{2}/{3}/{4}" parammode="explicit"/>]@T]'.replace('{0}','add').replace('{1}',itccode).replace('{2}',ci).replace('{3}',qty).replace('{4}',packageId);
+        
+        ##if(isManager())
+          url +='?mgrshopper='+ managerId;
+        ##endif
+     
+        $.ajax({
+                type: 'POST',
+                url: url,
+                complete: function (data) {
+                    var response = $.parseJSON(data.responseText);
+                    if (response.Success) {
+                      ##if(isManager())
+                        window.location = '[@T[link:<relative path="~/business/office-365-config.aspx" parammode="explicit" />]@T]?plan=' + packageId+'&mgrshopper='+ managerId;
+                      ##else
+                        window.location = '[@T[link:<relative path="~/business/office-365-config.aspx" parammode="explicit" />]@T]?plan=' + packageId;
+                      ##endif
+                    } 
+                },
+                dataType: 'json'
+              });
+      }); 
+  });   
+
+
+  </script>
