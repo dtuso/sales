@@ -1,9 +1,9 @@
 ---
 url: http://www.dev-godaddy.com/business/office-365-config.aspx
 location: sales/business/office-365-config.aspx
-id: 5463dc04f778fc113888f689
-name: GCE-31272
-comments: O365 Office LP - Adding GD Exclusive Text to page
+id: 546a7ba0f778fc152c6595f1
+name: GCE-32012, 32531, 32197
+comments: Cart link issue, support phone issue, microsoft url issue.
 ---
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="[@T[localization:<language full="true" />]@T]"> <![endif]-->
@@ -507,7 +507,7 @@ comments: O365 Office LP - Adding GD Exclusive Text to page
       <div class="container config-container-fixer">
         <div class="row">
           <div class="col-xs-12">
-            <p class="customer-service-text"><span class="customer-service-need-help">[@L[cds.sales/business/office-365-config:cp-3-NeedHelp]@L]</span> [@L[cds.sales/business/office-365-config:cp-10-GoDaddy247AwardWinningSupportCall480]@L]
+            <p class="customer-service-text"><span class="customer-service-need-help">[@L[cds.sales/business/office-365-config:cp-3-NeedHelp]@L]</span> [@L[cds.sales/business/office-365-config:cp-10-GoDaddy247AwardWinningSupportCall480-32197]@L]
             </p>
           </div>
         </div>
@@ -516,7 +516,7 @@ comments: O365 Office LP - Adding GD Exclusive Text to page
   </div>
   <div id="exceedsMaxUsers" style="display:none;">
     <span class="modal-user-limit-header">[@L[cds.sales/business/office-365-config:cp-BuyingForALargerGroup]@L]</span>
-    <p class="modal-user-limit-message">[@L[cds.sales/business/office-365-config:cp-30-ToSetUpMoreThan25UsersOn]@L]</p>
+    <p class="modal-user-limit-message">[@L[cds.sales/business/office-365-config:cp-30-ToSetUpMoreThan25UsersOn-32197]@L]</p>
     <div class="buttons-wrap">
       <div class="modal-user-limit-ok flt-btn-grn">[@L[cds.sales/business/office-365-config:cp-1-OK]@L]</div>
     </div>
@@ -540,7 +540,7 @@ comments: O365 Office LP - Adding GD Exclusive Text to page
         <p>[@L[cds.sales/business/office-365-config:cp-21-TheSkyDriveProSyncClientIsAvailableWith]@L]</p>
         <p>[@L[cds.sales/business/office-365-config:cp-8-AnnualDiscountsAvailableOnNEWPurchasesOnly]@L]</p>
         <p>[@L[cds.sales/business/office-365-config:cp-20-ProductsWillAutomaticallyRenewUntilCancelledYouMay]@L]</p>
-        <p>[@L[cds.sales/business/office-365-config:cp-19-ForMoreInformationSeeTheFullMicrosoftService]@L]</p>
+        <p data-tokenize="http://technet.microsoft.com/[@T[localization:<language full="true" />]@T]/library/jj819284.aspx">[@L[cds.sales/business/office-365-config:cp-19-ForMoreInformationSeeTheFullMicrosoftService-32531]@L]</p>
       </div>
     </div>
     <div class="buttons-wrap">
@@ -587,7 +587,7 @@ comments: O365 Office LP - Adding GD Exclusive Text to page
 
   <script>
     if(typeof o365PageData == 'undefined'){
-      var o365PageData = {};
+      var o365PageData = {apiUrl: '[@T[link:<relative path="/api/package{0}"/>]@T]'};
       ##if(isManager())
         o365PageData.configcarturl = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]';
         o365PageData.isManager = true;
@@ -624,6 +624,15 @@ comments: O365 Office LP - Adding GD Exclusive Text to page
       fbiLibCheckQueue();    
     });
 
+
+    $('[data-tokenize]').each(function(){
+      var $this = $(this),
+        html = $this.html(),
+        val = $this.data('tokenize'),
+        tokenizedHtml = html.replace(/\{0\}/gi, val);
+      $this
+        .html(tokenizedHtml);
+    });
 
     $(window).scroll(function() {
       updateOrderSummaryPosition();
@@ -1030,33 +1039,33 @@ comments: O365 Office LP - Adding GD Exclusive Text to page
           
           var urlArray = [];
           var urlArrayComplete = [];
-          var cartapi = window.location.protocol+'//'+ window.location.host+'/api/package';
           var urlInc = 0;
           for(var k in productObject){
             
-            if(productObject[k]['productQty']>0){
-              var packageId = productObject[k]['packageId'];
+            if(productObject[k]['productQty'] > 0){
+              var urlFragment,
+                packageId = productObject[k]['packageId'];
               
               if(urlInc==0){
-                var url = cartapi + '/update';
+                urlFragment = '/update';
               } else {
-                var url = cartapi + '/add';
+                urlFragment = '/add';
               }
-              var itccode = packageId.split('_')[1] == 'Email' ? 'slp_365_email':'SLP_365';
+              var itccode = (packageId.split('_')[1] == 'Email') ? 
+                'slp_365_email' : 'SLP_365';
               if( o365PageData.isManager){
                 itccode = 'mgr_' + itccode;
               }
               var ci = productObject[k]['configCiCode'];
-              
-              url += '/'+itccode//itccode
-              url += '/'+ci;//ci
-              url += '/'+productObject[k]['productQty'];//qty number of users
-              url += '/'+packageId;
-              url += window.location.search;
-              urlArray.push({"url":url,"response":null,"responseCheck":0,"ci":ci});
-              urlInc++;
 
-              
+              urlFragment += '/' + itccode; //itc code
+              urlFragment += '/' + ci; //ci code
+              urlFragment += '/' + productObject[k]['productQty'];  // quantity
+              urlFragment    += '/' + packageId  //Plan Name (aka Package Id)
+              var url = o365PageData.apiUrl.replace('{0}', urlFragment);
+
+              urlArray.push({"url":url,"response":null,"responseCheck":0,"ci":ci});
+              urlInc++;              
             }
             
           }
@@ -1101,42 +1110,22 @@ comments: O365 Office LP - Adding GD Exclusive Text to page
             if(urlArray.length==0 || i >= 200){
               //kill the loop
               clearInterval(intervalAddToCart);
-
             
               if(!watchForError>0){
-                //window.location = $("form[data-addtocart]").attr("action");
-               var $form = $("form[data-addtocart]").eq(0);
-                //$form.attr("method","GET");
-                 var action = $form.attr("action");
-                /*var host = window.location.host;
-                //alert(window.location.host+":"+action)
-                if(host.indexOf("catalog")>-1){
-                  var posBasket = action.indexOf("/basket");
-                  host = host.replace("catalog","cart");
-                  action = host + action.substr(posBasket);
+                var $form = $("form[data-addtocart]").eq(0),
+                  action = $form.attr("action"),
+                  windowParams = window.location.search.replace("?",""),
+                  actionArray = action.split("?");
+                $form.attr("action",actionArray[0]);
 
-                } else {
-                  action = actionArray[0];
-                }*/
-
-                      
-
-                
-                      var windowParams = window.location.search.replace("?","");
-                      var actionArray = action.split("?");
-                      $form.attr("action",actionArray[0]);
-                     
-                      var params = windowParams.split("&");
-                      for(var i = 0; i < params.length;i++){
-                        var inputName = params[i].split("=")[0];
-                        var inputValue = params[i].split("=")[1];
-                        
-                        $form.append('<input type="hidden" name="'+ inputName +'" value="'+inputValue+'" />');
-                      }
-                      /**/
-                      $form.trigger("submit"); 
-              }
-              
+                var params = windowParams.split("&");
+                for(var i = 0; i < params.length;i++){
+                  var inputName = params[i].split("=")[0],
+                    inputValue = params[i].split("=")[1];
+                  $form.append('<input type="hidden" name="' + inputName + '" value="' + inputValue + '" />');
+                }
+                $form.trigger("submit"); 
+              }              
               return;
             }
             
@@ -1216,19 +1205,6 @@ if (typeof incrementInput == "undefined") {
     // set val to the data attribute add update the variable
     $this.data("increment-input").val=$this.val();
     thisData = $this.data("increment-input");
-
-    // limit text will be added
-    // if(thisData.limitText != null){
-    //   $inputWrapper.append($limitText);
-    //   var limitTextString = thisData.limitText;
-    //   if(thisData.max!=null){
-    //     limitTextString = limitTextString.replace("{{max}}",thisData.max)
-    //   }
-    //   if(thisData.min!=null){
-    //     limitTextString = limitTextString.replace("{{min}}",thisData.min)
-    //   }
-    //   $limitText.html(limitTextString);
-    // }
   
     // add click listeners
     $inputControlsUp.mousedown(function(){
