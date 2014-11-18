@@ -1,6 +1,6 @@
 ---
 location: localization/sales/gd/email/email-account/en
-id: 5463a5bbf778fc0a70ee785e
+id: 546b0301f778fc10909ad893
 name: GCE-30748
 comments: Create New Email centric O365 LP 
 ---
@@ -51,8 +51,8 @@ Professional email + 10x more storage + Microsoft Office
 Look like the pro you are.
 <phrase key="like_pro_text" />
 Did you know customers are 9x more likely to choose a business with a professional email address? With a memorable, domain-based email account, you’ll promote your company with every message. Even create unlimited addresses – from yourname@ to sales@ or support@ – that are delivered to a single inbox.
-<phrase key="like_pro_text_alt" />
-Did you know customers are 9x more likely to choose a business with a professional email address?<sup>1</sup> With a memorable, domain-based email account, you’ll promote your company with every message. Even create unlimited addresses – from yourname@ to sales@ or support@ – that are delivered to a single inbox.
+<phrase key="like_pro_text_alt_32008" />
+Did you know customers are 9x more likely to choose a business with a professional email address?<sup>+</sup> With a memorable, domain-based email account, you’ll promote your company with every message. Even create unlimited addresses – from yourname@ to sales@ or support@ – that are delivered to a single inbox.
 <phrase key="in_sync" />
 All your devices, all in sync.
 <phrase key="in_sync_text" />
@@ -106,7 +106,9 @@ Frequently Asked Questions
 <phrase key="faq_benefits" />
 What are the benefits of having domain-based email addresses?
 <phrase key="faq_benefits_1" />
-A domain-based email address, like info@your-business-name.com, helps you look more professional with customers and promotes your website and company. In fact, customers are 9 times more likely to choose a company with a professional email address.  Every time you send an email from a domain-based address, you're putting your domain name in front of customers and encouraging them to visit your website.  
+A domain-based email address, like info@your-business-name.com, helps you look more professional with customers and promotes your website and company. In fact, customers are 9 times more likely to choose a company with a professional email address.  Every time you send an email from a domain-based address, you're putting your domain name in front of customers and encouraging them to visit your website.
+<phrase key="faq_benefits_1_32008" />
+A domain-based email address, like info@your-business-name.com, helps you look more professional with customers and promotes your website and company. In fact, customers are 9 times more likely to choose a company with a professional email address.<sup>+</sup>  Every time you send an email from a domain-based address, you're putting your domain name in front of customers and encouraging them to visit your website. 
 <phrase key="faq_benefits_2" />
  And with each plan, you can create free ‘alias’ addresses – like one using your first name (keith@your-business-name.com) and others for different departments (sales@your-business-name.com) -- that all feed into a single inbox and make you look even more professional. 
 <phrase key="faq_workspace_email" />
@@ -191,6 +193,8 @@ Office for iPad features full, touch-friendly versions of the most popular Offic
 Office for iPad is available with the Business Premium plan, which includes a license that’s valid for up to 5 iPads or Windows tablets, as well as up to 5 PCs or Macs, for a single user.
 <phrase key="disclaimer_link" />
 *, ** Click here for product disclaimers and legal policies.
+<phrase key="disclaimer_link_32008" />
+*, **, + Click here for product disclaimers and legal policies.
 <phrase key="disclaimer" />
 Disclaimers
 <phrase key="disclaimer_1" />
@@ -201,6 +205,8 @@ Disclaimers
 Products will automatically renew until cancelled. You may turn off the auto-renewal feature by visiting your [@T[companyname:name]@T] account.
 <phrase key="disclaimer_4" />
 For more information see the full Microsoft Service Agreement here: <a href="http://technet.microsoft.com/library/jj819284.aspx" target="_BLANK" data-ci="94335">http://technet.microsoft.com/library/jj819284.aspx</a>
+<phrase key="disclaimer_5" />
+<sup>+</sup> Small business owner and customer surveys, February 2014.
 <phrase key="email_storage" />
 Email and Storage
 <phrase key="domain_based" />
