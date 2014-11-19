@@ -108,10 +108,31 @@ html(lang!="[@T[localization:<language full='true' />]@T]")
           block share
             .fosshare(data-twshareurl!="[@T[link:<external linktype='XDOTCO' path='/wwwGD' />]@T]" data-twtext!="[@L[cds.sales/homepage:twitter-text-gdbl]@L]" data-twrelated="GoDaddy" data-shareurl!="[@T[link:<relative path='/'/>]@T]" data-buttons="google,facebook,twitter")
 
-
     // Pods Section
     block pods
-
+      atlantis:webstash(type="css")
+        style.
+          .gdhp-tile-wrap{height:580px;width:100%;background-color:#d4d4d4}
+          .gdhp-tile-area{width:1000px;margin:0 auto}
+          .gdhp-tile{width:480px;height:480px;background-color:#fff;float:left;margin:40px 10px 0;cursor:pointer;}
+          .gdhp-tile span{display:block;}
+          .gdhp-tile .btn-lrg{font-size:24px;padding:14px 12px;box-sizing:border-box;height:60px;width:240px;}
+          .gdhp-tile .btn-orange{color:#fff;background-color:#f5811f;border-bottom:4px solid #b25e18;}
+          .gdhp-tile .btn-orange:hover{background-color:#ff9b39;border-color:#cc7832}
+          .tile-sprite{background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gdhp_tile_sprite_20141107.png) scroll no-repeat;}
+      .gdhp-tile-wrap
+        .gdhp-tile-area
+          block tileset
+            | [@P[cdsDocument:<data app="sales" location="homepage/tile/got/default_template" /> ]@P]
+            | [@P[cdsDocument:<data app="sales" location="homepage/tile/30-percent-gtld/default_template" /> ]@P]
+      #myVideoModal.modal.fade.videoModal.js-gdhpclick(data-url="video-close")
+        .modal-dialog
+          .modal-content
+            .modal-header
+              button.modal-header-close.close(type="button",data-dismiss="modal",aria-hidden="true") &times;
+            .modal-body
+              iframe(width="854",height="480",src="",autoplay,scrolling="no",frameborder="0",allowfullscreen)
+    
     // Lower Marquee Section
     block lowerMarquee
       .gdhp-bottom-banner
