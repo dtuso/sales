@@ -227,6 +227,7 @@ html(lang!="[@T[localization:<language full='true' />]@T]")
 
     // End Main Content
     block scripts
+      script(src!="[@T[link:<javascriptroot />]@T]fos/hp/rebrand/js/bigtext.min.js")
       script(src!="[@T[link:<javascriptroot />]@T]fos/script/sales17.min.js" type="text/javascript")
       script(src!="[@T[link:<javascriptroot />]@T]fos/hp/rebrand/js/homepage_script_20140410.min.js" type="text/javascript")
       script(src!="[@T[link:<javascriptroot />]@T]fos/script/atlantis_jquery14.min.js" type="text/javascript")
@@ -353,4 +354,7 @@ html(lang!="[@T[localization:<language full='true' />]@T]")
             default:
               window.location.href=$clickedUrl;
           }
+        });
+        $(window).load(function () {
+          $('.bigtext').bigtext().css('visibility', 'visible');
         });
