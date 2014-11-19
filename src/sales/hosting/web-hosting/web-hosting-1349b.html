@@ -1,8 +1,8 @@
 ---
 location: sales/hosting/split-tests/web-hosting-1349b.aspx
-id: false
-name: GCE-31814
-comments:  Enable Web Pro Section for all markets except 19 VAT markets
+id: 546bc48af778fc10909ad982
+name: GCE-31167
+comments: Remove Reviews Stars and Read Reviews links in Marquee
 url: http://www.dev-godaddy.com/hosting/web-hosting.aspx
 splitSide: 1349.B
 cssVersionOverride: 3
@@ -51,23 +51,16 @@ metaOgDescription: "[@L[cds.sales/gd/hosting/web-hosting:og-description]@L]"
       ##endif
     </span>
 
-    <!-- Start rating-stars -->
     <h1 class="main-banner-title">[@L[cds.sales/gd/hosting/web-hosting:web-hosting-11166]@L]</h1>
-    ##if(activeLanguageAny([en-us]))
-      <section class="rating-stars-container main-banner-rating-stars-container websitebuilder-rating-stars">
-        <div class="rating-stars-init" data-rating="4.71"></div>
-      </section>
-      <a class="main-banner-read-reviews tab-link" data-ci="89260" href="#reviews">[@L[cds.sales/gd/hosting/web-hosting:labelReadReviews]@L]</a>
-    ##endif
-      <p class="main-banner-subtitle">[@L[cds.sales/gd/hosting/web-hosting:mastheadTitle-25276]@L]</p>
-      <p class="main-banner-subtext subtitle">[@L[cds.sales/gd/hosting/web-hosting:mastheadSubTitle-25276]@L]</p>
-    ##if(!activeLanguageAny([en-in]))
-      <p class="starting-at starting-at-banner"><span class="starting-at-above">[@L[cds.sales/gd/hosting/web-hosting:starting-at]@L]</span><span class="starting-at-price">[@T[productprice:<current productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span>[@L[cds.sales/hosting/web-hosting-new:mo]@L]</p>
-      <a href="[@T[link:<relative path='~/hosting/web-hosting-config-new.aspx' secure='true'><param name='ci' value='89262' /><param name='plan' value='host_GridHostEcoDiabloLin1Yr_us' /></relative>]@T]" class="btn btn-primary cta-small">[@L[cds.sales/gd/hosting/web-hosting:first-slide-btn]@L]</a>
-      ##else
-      <p class="starting-at starting-at-banner"><span class="starting-at-above">[@L[cds.sales/gd/hosting/web-hosting:starting-at]@L]</span><span class="starting-at-price">[@T[productprice:<current productid="294057" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span>[@L[cds.sales/hosting/web-hosting-new:mo]@L]</p>
-      <a href="[@T[link:<relative path='~/hosting/web-hosting-config-new.aspx' secure='true'><param name='ci' value='89262' /><param name='plan' value='host_GridHostStrDiabloLin1Yr_in' /></relative>]@T]" class="btn btn-primary cta-small">[@L[cds.sales/gd/hosting/web-hosting:first-slide-btn]@L]</a>
-    ##endif
+    <p class="main-banner-subtitle">[@L[cds.sales/gd/hosting/web-hosting:mastheadTitle-25276]@L]</p>
+    <p class="main-banner-subtext subtitle">[@L[cds.sales/gd/hosting/web-hosting:mastheadSubTitle-25276]@L]</p>
+  ##if(!activeLanguageAny([en-in]))
+    <p class="starting-at starting-at-banner"><span class="starting-at-above">[@L[cds.sales/gd/hosting/web-hosting:starting-at]@L]</span><span class="starting-at-price">[@T[productprice:<current productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span>[@L[cds.sales/hosting/web-hosting-new:mo]@L]</p>
+    <a href="[@T[link:<relative path='~/hosting/web-hosting-config-new.aspx' secure='true'><param name='ci' value='89262' /><param name='plan' value='host_GridHostEcoDiabloLin1Yr_us' /></relative>]@T]" class="btn btn-primary cta-small">[@L[cds.sales/gd/hosting/web-hosting:first-slide-btn]@L]</a>
+  ##else
+    <p class="starting-at starting-at-banner"><span class="starting-at-above">[@L[cds.sales/gd/hosting/web-hosting:starting-at]@L]</span><span class="starting-at-price">[@T[productprice:<current productid="294057" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span>[@L[cds.sales/hosting/web-hosting-new:mo]@L]</p>
+    <a href="[@T[link:<relative path='~/hosting/web-hosting-config-new.aspx' secure='true'><param name='ci' value='89262' /><param name='plan' value='host_GridHostStrDiabloLin1Yr_in' /></relative>]@T]" class="btn btn-primary cta-small">[@L[cds.sales/gd/hosting/web-hosting:first-slide-btn]@L]</a>
+  ##endif
   </div>
 </section>
 <!-- End main-banner -->

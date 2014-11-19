@@ -1,9 +1,9 @@
 ---
 location: sales/ssl/ssl-certificates.aspx
 url: http://www.dev-godaddy.com/ssl/ssl-certificates.aspx
-id: false
-name: GCE-31814
-comments:  Enable Web Pro Section for all markets except 19 VAT markets
+id: 546cbdbff778fc1fd8ea183e
+name: GCE-31167
+comments: Remove Reviews Stars and Read Reviews links in Marquee
 assetPath: false
 ---
 
@@ -203,13 +203,6 @@ line-height: 7px;
     <section class="main-banner main-banner-ssl-certificate">
       <div class="l-main-container container main-banner-content main-banner-content-ssl-certificate">
         <h1 class="main-banner-title main-banner-title-alternate">[@L[cds.sales/gd/ssl/ssl-certificates:MastHeadTitle]@L]</h1>
-        ##if(activeLanguageAny(en) && !isManager())
-          <section class="rating-stars-container main-banner-rating-stars-container">
-              <div class="rating-stars-init" data-rating="5"></div>
-          </section>
-          <a class="main-banner-read-reviews main-banner-read-reviews-alternate tab-link" href="#reviews">[@L[cds.sales/gd/ssl/ssl-certificates:LabelReadReviews]@L]</a>
-        ##endif
-
         <h2 class="main-banner-subtitle main-banner-subtitle-alternate">[@L[cds.sales/gd/ssl/ssl-certificates:MastHeadSubTitle]@L]</h2>
         <ul class="main-page-main-list">
           <li>[@L[cds.sales/gd/ssl/ssl-certificates:MastHeadListItem1]@L]</li>
@@ -246,66 +239,71 @@ line-height: 7px;
   </div>
 ##endif
 
-          <div class="row tab-content equal-height no-margin-bottom">
+          <div class="row tab-content equal-height no-margin-bottom" data-gd-sidebysidealign="{}">
             <div class="col-xs-4">
-
-                <div class="grid-column no-padding-bottom">
+              <div class="grid-column no-padding-bottom" data-gd-sidebysidealign-col="1">
                 <div class="prem-ssl-marquee">
-                <a href='[@T[link:<relative path="/ssl/ssl-certificates-config.aspx"><param name="origin" value="pod" /><param name="plan" value="ssl_prm_1" /><param name="ci" value="94859" /></relative>]@T]'>
+                  <a href='[@T[link:<relative path="/ssl/ssl-certificates-config.aspx"><param name="origin" value="pod" /><param name="plan" value="ssl_prm_1" /><param name="ci" value="94859" /></relative>]@T]'>
                   <div class="prem-ssl-marquee-lt"><span class="prem-marq1">[@L[cds.sales/gd/ssl/ssl-certificates:savePerc]@L]</span> <span class="prem-marq2">[@L[cds.sales/gd/ssl/ssl-certificates:choosePremSSL]@L]</span></div>
                   <div class="prem-ssl-marquee-rt"></div>
                   </a>
                 </div>
+                <div data-gd-sidebysidealign-row="1">
                   <h2>[@L[cds.sales/gd/ssl/ssl-certificates:plansPricingOne]@L]</h2>
                   <p class="pp-desc">[@L[cds.sales/gd/ssl/ssl-certificates:box1SubText]@L]</p>
-                  <p class="starting-at starting-at-alternate-top-spacing">
-                    <span class="starting-at-above">[@L[cds.sales/gd/ssl/ssl-certificates:startingAt]@L]</span>
-                    <span class="starting-at-price">[@T[productprice:<current productid="3606" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]</span>
-                    <span class="starting-at-small">/[@L[cds.sales/gd/ssl/ssl-certificates:year]@L]</span>
-                  </p>
-                  <p class="no-margin-bottom"><a href="[@T[link:<relative path="/ssl/ssl-certificates-config.aspx"><param name="origin" value="pod" /><param name="plan" value="ssl_std_2" /></relative>]@T]" class="btn btn-warning btn-block btn-lg" data-ci="89603">[@L[cds.sales/gd/ssl/ssl-certificates:cartButton]@L]</a></p>
-                  <ul class="plan-pricing-list">
-                    <li>[@L[cds.sales/gd/ssl/ssl-certificates:plansPricingExampleLabel]@L]</li>
-                    <li>SiteProtection.com</li>
-                  </ul>
                 </div>
+                <p class="starting-at starting-at-alternate-top-spacing" data-gd-sidebysidealign-row="2">
+                  <span class="starting-at-above">[@L[cds.sales/gd/ssl/ssl-certificates:startingAt]@L]</span>
+                  <span class="starting-at-price">[@T[productprice:<current productid="3606" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]</span>
+                  <span class="starting-at-small">/[@L[cds.sales/gd/ssl/ssl-certificates:year]@L]</span>
+                </p>
+                <p class="no-margin-bottom"><a href="[@T[link:<relative path="/ssl/ssl-certificates-config.aspx"><param name="origin" value="pod" /><param name="plan" value="ssl_std_2" /></relative>]@T]" class="btn btn-warning btn-block btn-lg" data-ci="89603">[@L[cds.sales/gd/ssl/ssl-certificates:cartButton]@L]</a></p>
+                <ul class="plan-pricing-list" data-gd-sidebysidealign-row="3">
+                  <li>[@L[cds.sales/gd/ssl/ssl-certificates:plansPricingExampleLabel]@L]</li>
+                  <li>SiteProtection.com</li>
+                </ul>
+              </div>
             </div><!-- col-xs-4 -->
 
             <div class="col-xs-4">
-                <div class="grid-column no-padding-bottom">
+              <div class="grid-column no-padding-bottom" data-gd-sidebysidealign-col="2">
+                <div data-gd-sidebysidealign-row="1">
                   <h2>[@L[cds.sales/gd/ssl/ssl-certificates:plansPricingMultiple]@L]</h2>
                   <p class="pp-desc">[@L[cds.sales/gd/ssl/ssl-certificates:box2SubText]@L]</p>
-                  <p class="starting-at starting-at-alternate-top-spacing">
-                    <span class="starting-at-above">[@L[cds.sales/gd/ssl/ssl-certificates:startingAt]@L]</span>
-                    <span class="starting-at-price">[@T[productprice:<current productid="5726" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]</span>
-                    <span class="starting-at-small">/[@L[cds.sales/gd/ssl/ssl-certificates:year]@L]</span>
-                  </p>
-                  <p class="no-margin-bottom"><a href="[@T[link:<relative path="/ssl/ssl-certificates-config.aspx"><param name="origin" value="pod" /><param name="plan" value="ssl_std_3_5" /></relative>]@T]" class="btn btn-warning btn-block btn-lg" data-ci="89603">[@L[cds.sales/gd/ssl/ssl-certificates:cartButton]@L]</a></p>
-                  <ul class="plan-pricing-list plan-pricing-list-alternate">
-                    <li>[@L[cds.sales/gd/ssl/ssl-certificates:plansPricingExampleLabel]@L]</li>
-                    <li>SiteProtection.com</li>
-                    <li>SecureMyWebsites.net</li>
-                  </ul>
                 </div>
+                <p class="starting-at starting-at-alternate-top-spacing" data-gd-sidebysidealign-row="2">
+                  <span class="starting-at-above">[@L[cds.sales/gd/ssl/ssl-certificates:startingAt]@L]</span>
+                  <span class="starting-at-price">[@T[productprice:<current productid="5726" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]</span>
+                  <span class="starting-at-small">/[@L[cds.sales/gd/ssl/ssl-certificates:year]@L]</span>
+                </p>
+                <p class="no-margin-bottom"><a href="[@T[link:<relative path="/ssl/ssl-certificates-config.aspx"><param name="origin" value="pod" /><param name="plan" value="ssl_std_3_5" /></relative>]@T]" class="btn btn-warning btn-block btn-lg" data-ci="89603">[@L[cds.sales/gd/ssl/ssl-certificates:cartButton]@L]</a></p>
+                <ul class="plan-pricing-list plan-pricing-list-alternate" data-gd-sidebysidealign-row="3">
+                  <li>[@L[cds.sales/gd/ssl/ssl-certificates:plansPricingExampleLabel]@L]</li>
+                  <li>SiteProtection.com</li>
+                  <li>SecureMyWebsites.net</li>
+                </ul>
+              </div>
             </div><!-- col-xs-4 -->
 
             <div class="col-xs-4 content-wrap">
-                <div class="grid-column no-padding-bottom has-badge">
+              <div class="grid-column no-padding-bottom has-badge" data-gd-sidebysidealign-col="3">
+                <div data-gd-sidebysidealign-row="1">
                   <h2>[@L[cds.sales/gd/ssl/ssl-certificates:plansPricingAll]@L]</h2>
                   <p class="pp-desc">[@L[cds.sales/gd/ssl/ssl-certificates:box3SubText]@L]</p>
-                  <p class="starting-at starting-at-alternate-top-spacing">
-                    <span class="starting-at-above">[@L[cds.sales/gd/ssl/ssl-certificates:startingAt]@L]</span>
-                    <span class="starting-at-price">[@T[productprice:<current productid="3619" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]</span>
-                    <span class="starting-at-small">/[@L[cds.sales/gd/ssl/ssl-certificates:year]@L]</span>
-                  </p>
-                  <p class="no-margin-bottom"><a href="[@T[link:<relative path="/ssl/ssl-certificates-config.aspx"><param name="origin" value="pod" /><param name="plan" value="ssl_std_3_wc" /></relative>]@T]" class="btn btn-warning btn-block btn-lg" data-ci="89603">[@L[cds.sales/gd/ssl/ssl-certificates:cartButton]@L]</a></p>
-                  <ul class="plan-pricing-list">
-                    <li>[@L[cds.sales/gd/ssl/ssl-certificates:plansPricingExampleLabel]@L]</li>
-                    <li>SiteProtection.com</li>
-                    <li>Cart.SiteProtection.com</li>
-                    <li>Mobile.SiteProtection.com</li>
-                  </ul>
                 </div>
+                <p class="starting-at starting-at-alternate-top-spacing" data-gd-sidebysidealign-row="2">
+                  <span class="starting-at-above">[@L[cds.sales/gd/ssl/ssl-certificates:startingAt]@L]</span>
+                  <span class="starting-at-price">[@T[productprice:<current productid="3619" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]</span>
+                  <span class="starting-at-small">/[@L[cds.sales/gd/ssl/ssl-certificates:year]@L]</span>
+                </p>
+                <p class="no-margin-bottom"><a href="[@T[link:<relative path="/ssl/ssl-certificates-config.aspx"><param name="origin" value="pod" /><param name="plan" value="ssl_std_3_wc" /></relative>]@T]" class="btn btn-warning btn-block btn-lg" data-ci="89603">[@L[cds.sales/gd/ssl/ssl-certificates:cartButton]@L]</a></p>
+                <ul class="plan-pricing-list" data-gd-sidebysidealign-row="3">
+                  <li>[@L[cds.sales/gd/ssl/ssl-certificates:plansPricingExampleLabel]@L]</li>
+                  <li>SiteProtection.com</li>
+                  <li>Cart.SiteProtection.com</li>
+                  <li>Mobile.SiteProtection.com</li>
+                </ul>
+              </div>
             </div><!-- col-xs-4 -->
           </div>
           ##if(!countrySiteAny(ie,be,fr,de,it,es,ch,at,dk,fi,gr,nl,no,pl,pt,ru,se,tr,ua))

@@ -1,8 +1,8 @@
 ---
 location: sales/ecommerce/online-store.aspx
-id:  54611384f778fc26a885ee08
-name: GCE-20285 - OLS 
-comments: Online Store Landing Page
+id: 546bbe93f778fc10909ad978
+name: GCE-31167
+comments: Remove Reviews Stars and Read Reviews links in Marquee
 url: http://www.dev-godaddy.com/ecommerce/online-store.aspx
 ---
 {% extends 'layouts/base.html' %}
@@ -20,17 +20,12 @@ url: http://www.dev-godaddy.com/ecommerce/online-store.aspx
     ##endif
 
     <div class="row">
-    <h1 class="main-banner-title condensed">[@L[cds.sales/gd/ecommerce/online-store:OnlineStore]@L]</h1>
-      
-      <section class="rating-stars-container main-banner-rating-stars-container websitebuilder-rating-stars">
-        <div class="rating-stars-init" data-rating="4.71"></div>
-      </section>
-            <a id="reviewsLink" class="main-banner-read-reviews-alternate tab-link" style="display:hidden;" data-ci="89260" href="#reviews">[@L[cds.sales/gd/ecommerce/online-store:labelReadReviews]@L]</a>    
+      <h1 class="main-banner-title condensed">[@L[cds.sales/gd/ecommerce/online-store:OnlineStore]@L]</h1>         
       <h2 class="main-banner-subtitle main-banner-subtitle1">[@L[cds.sales/gd/ecommerce/online-store:MainBannerSubTitle1]@L]</h2>
       <h2 class="main-banner-subtitle main-banner-subtitle2">[@L[cds.sales/gd/ecommerce/online-store:MainBannerSubTitle2]@L]</h2>
 
     ##if(isManager()) 
-    <div class='row mgr-view' role="main"> <!-- white div for mgr view -->
+      <div class='row mgr-view' role="main"> <!-- white div for mgr view -->
         <div class="col-xs-2"></div>
           <div class="col-xs-5 main-banner-mgr-view-left-spacer">
                 <form id="addtocart-form-MgrView-Marquee" class="addtocart-form mgr-view" action="[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]" method="post" data-addtocart="[@T[link:<external linktype="SALESPRODUCTSURL" path="/v1/pl/1/cart/packages" />]@T]">
@@ -197,8 +192,8 @@ url: http://www.dev-godaddy.com/ecommerce/online-store.aspx
         </div>  
 
         <div class="mgr-view-bottom-spacer"></div>
-    </div>
-    <div class="mgr-view-bottom-spacer"></div>
+      </div>
+      <div class="mgr-view-bottom-spacer"></div>
     ##else
        <!-- ##if(areAdCreditsEnabled(onlinestorefreecredit)) -->
         ##if(countrySiteAny(uk,ca,au,nz,sg,ph)|| activeLanguageAny([en-us]))
