@@ -9,21 +9,6 @@ block styles
 	| 
 	|    [@P[cdsDocument:<data app="sales" location="fonts/fonts" /> ]@P]
 
-block marquee
-	|    ##if(!targetMessageTagAny(sales_hp_default,hp_existing_customer))
-	|      ##if(splitTestingSideIsActive(1353, B) || hasISC())
-	|        [@P[cdsDocument:<data app="sales" location="homepage/locals/es-ar/topmarquee" /> ]@P]
-	|      ##else
-	|        [@P[cdsDocument:<data app="sales" location="homepage/locals/es-ar/split/topmarquee" /> ]@P]
-	|      ##endif
-	|    ##else
-	|      ##if(splitTestingSideIsActive(1354, B))
-	|        [@P[cdsDocument:<data app="sales" location="homepage/locals/es-ar/topmarquee" /> ]@P]
-	|      ##else
-	|        [@P[cdsDocument:<data app="sales" location="homepage/locals/es-ar/split/gtld" /> ]@P]
-	|      ##endif
-	|    ##endif
-
 block bugBar
 	+gtldBug("co")
 	+gtldBug("uno")

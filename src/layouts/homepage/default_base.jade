@@ -83,19 +83,9 @@ html(lang!="[@T[localization:<language full='true' />]@T]")
 
     // Marquee Section
     block marquee
-      |  ##if(targetMessageTagAny(sales_hp_default,hp_existing_customer))
-      |    ##if(splitTestingSideIsActive(1401, B))
-      |      [@P[cdsDocument:<data app="sales" location="homepage/marquee/gtld-phone/default_template" /> ]@P]
-      |    ##else
-      |      [@P[cdsDocument:<data app="sales" location="homepage/marquee/gtld/default_template" /> ]@P]
-      |    ##endif
-      |  ##else
-      |    ##if(splitTestingSideIsActive(1402, A) && !hasISC())
-      |      [@P[cdsDocument:<data app="sales" location="homepage/marquee/299com/default_template" /> ]@P]
-      |    ##else
-      |      [@P[cdsDocument:<data app="sales" location="homepage/marquee/gtld/default_template" /> ]@P]
-      |    ##endif
-      |  ##endif
+      | 
+      |  [@P[cdsDocument:<data app="sales" location="homepage/marquee/499com/default_template" /> ]@P]
+
 
     // Bugbar (and social links) Sections
     .top-banner-lower-content

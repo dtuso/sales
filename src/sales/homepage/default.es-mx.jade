@@ -7,21 +7,6 @@ block styles
 	link(href!="[@T[link:<cssroot />]@T]fos/hp/rebrand/css/es-mx_homepage_20141015.css" rel="stylesheet" type="text/css")
 	| 
 	|    [@P[cdsDocument:<data app="sales" location="fonts/fonts" /> ]@P]
-
-block marquee
-	|    ##if(!targetMessageTagAny(sales_hp_default,hp_existing_customer))
-	|      ##if(splitTestingSideIsActive(1351, B) || hasISC())
-	|        [@P[cdsDocument:<data app="sales" location="homepage/locals/es-mx/topmarquee" /> ]@P]
-	|      ##else
-	|        [@P[cdsDocument:<data app="sales" location="homepage/locals/es-mx/split/topmarquee" /> ]@P]
-	|      ##endif
-	|    ##else
-	|      ##if(splitTestingSideIsActive(1352, B))
-	|        [@P[cdsDocument:<data app="sales" location="homepage/locals/es-mx/topmarquee" /> ]@P]
-	|      ##else
-	|        [@P[cdsDocument:<data app="sales" location="homepage/locals/es-mx/split/gtld" /> ]@P]
-	|      ##endif
-	|    ##endif
 	
 block bugBar
 	+gtldBug("co")

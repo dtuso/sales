@@ -7,17 +7,6 @@ extends ../../layouts/homepage/default_base
 block styles
 	link(href!="[@T[link:<cssroot />]@T]fos/hp/rebrand/css/en-pk_homepage_20140702.css" rel="stylesheet" type="text/css")
 
-block marquee
-	|  ##if(!targetMessageTagAny(sales_hp_default,hp_existing_customer))
-	|    ##if(splitTestingSideIsActive(1316, B) && !hasISC())
-	|    [@P[cdsDocument:<data app="sales" location="homepage/locals/en-pk/topmarquee" /> ]@P]
-	|    ##else
-	|    [@P[cdsDocument:<data app="sales" location="homepage/locals/en-pk/split/topmarquee" /> ]@P]
-	|    ##endif
-	|  ##else
-	|    [@P[cdsDocument:<data app="sales" location="homepage/locals/en-pk/split/topmarquee" /> ]@P]
-	|  ##endif
-
 block bugBar
 	+gtldBug("co")
 	+gtldBug("club")
