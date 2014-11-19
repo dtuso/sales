@@ -48,7 +48,7 @@
   "web-design":         "./design/web-design/",
   "web-hosting":        "./hosting/web-hosting/",
   "web-hosting-config": "./hosting/web-hosting-config/",
-  "website-template-ep":"./expansion-pages/website-builder/website-template-ep/",
+  "website-template":   "./expansion-pages/website-builder/website-template/",
   "what-is-a-gtld":     "./domains/what-is-a-gtld",
   "wordpress-hosting":  "./hosting/wordpress-hosting/",
   "wordpress-pl":       "./hosting/private-label/wordpress/",
