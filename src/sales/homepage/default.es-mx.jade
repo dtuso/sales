@@ -16,27 +16,5 @@ block bugBar
 block share
 	.fosshare(data-twshareurl!="[@T[link:<external linktype='XDOTCO' path='/gdSpanish' />]@T]" data-twtext!="[@L[cds.sales/homepage:twitter-text-gdbl]@L]" data-twrelated="GoDaddy" data-shareurl!="[@T[link:<relative path='/'/>]@T]" data-buttons="google,facebook,twitter")
 
-block pods
-	| 
-	| [@P[cdsDocument:<data app="sales" location="homepage/locals/es-mx/pods" /> ]@P]
-
 block cookieWarning
 
-append scripts
-	script(type="text/javascript").
-		var hpLoadVideo = 0;
-		var autoplay = '\&autoplay=1';
-		$("div.gdhp-bottom-banner").mouseenter(function() {
-			if(hpLoadVideo != 1) {
-		      hpLoadVideo = 1;
-		      var src ='//www.youtube.com/embed/lB0BFbZi6mc?html5=1&rel=0';
-		      $('#myVideoModal iframe').attr('src',src);
-		      $('#myVideoModal').on('hidden.bs.modal', function () {          
-		        $('#myVideoModal iframe').removeAttr('src');
-		        $('#myVideoModal iframe').attr('src',src);
-		      })
-		      $('#myVideoModal').on('show.bs.modal', function () {          
-		        $('#myVideoModal iframe').attr('src', src + autoplay);
-		      })
-		    }
-		});
