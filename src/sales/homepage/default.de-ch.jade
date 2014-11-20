@@ -23,13 +23,19 @@ block marquee
 
 block primaryTile
 	#tile-container-got
-		include ../../sales/homepage/tiles/got.jade
+		//- include ../../sales/homepage/tiles/got.jade
+		| 
+		| [@P[cdsDocument:<data app="sales" location="homepage/tile/got/default_template" /> ]@P]
 	#tile-container-hosting(style="display:none;")
-		include ../../sales/homepage/tiles/hosting.jade
+		//- include ../../sales/homepage/tiles/hosting.jade
+		| 
+		| [@P[cdsDocument:<data app="sales" location="homepage/tile/hosting-old-brand/default_template" /> ]@P]
 	script(type="text/javascript").
 		if ($('#gybo').length) {
 			$('#tile-container-got').hide();
 			$('#tile-container-hosting').show();
 		}
 block secondaryTile
-	include ../../sales/homepage/tiles/30-percent-gtld.jade
+	//- include ../../sales/homepage/tiles/30-percent-gtld.jade
+	| 
+	| [@P[cdsDocument:<data app="sales" location="homepage/tile/30-percent-gtld/default_template" /> ]@P]
