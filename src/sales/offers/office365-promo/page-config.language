@@ -1,6 +1,6 @@
 ---
 location: localization/sales/offers/office365-promo-config/en
-id: 5460eb93f778fc26a885edda
+id: 546e71f7f778fc18bc8c3cf2
 name: GCE-31871
 comments: GOT2 POB rename of Productivity Plus plan to Business Premium
 ---
@@ -75,6 +75,8 @@ Need Help?
 User Limits
 <phrase key="cp-30-ToSetUpMoreThan25UsersOn" />
 To set up more than 25 users on one plan (or more than 75 users across multiple plans), please call our 24/7 customer support at [@T[supportphone:<technical/>]@T].
+<phrase key="cp-30-ToSetUpMoreThan25UsersOn-32197" />
+To set up more than 25 users on one plan (or more than 75 users across multiple plans), please call our 24/7 customer support at [@T[support:<O365SupportPhone/>]@T].
 <phrase key="cp-1-OK" />
 OK
 <phrase key="cp-1-Disclaimers" />
