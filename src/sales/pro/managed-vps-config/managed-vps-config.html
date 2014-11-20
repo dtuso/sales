@@ -1,16 +1,16 @@
 ---
 location: sales/pro/managed-vps-config
-id: 54416552f778fc0ce0d0fa59
-name: GCE-27124 
-comment: VPS config page for webpro
+id: 546b828ff778fc10909ad8c0
+name: GCE-32309 
+comment: VPS Copy Update
 configPage: true
 sitecore: true 
-cssVersionOverride: 1
+cssVersionOverride: 2
 ---
 {% extends 'layouts/config-base.html' %}
 
 {% block steps %}
-                                            ##if(isManager())
+                      ##if(isManager())
                           <form action="[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" parammode="explicit" />]@T]" method="get" id="configForm" >
                       ##else
                           <form action="[@T[link:<external linktype="carturl" path="/basket.aspx" parammode="explicit" />]@T]" method="get" id="configForm"  >
@@ -336,11 +336,11 @@ cssVersionOverride: 1
       };
 
       function processConfigData(data,defaultPackageId){
-        //var planDetails = Config.getParameterByName('plan').split('_');
-        generateManagedOption(data.addons.managed); 
-        generateTermOption(data.terms,defaultPackageId);  
         $('#osOption').val(data.addons.os.id);   
         $('#osAddonPrice').val(data.addons.os.addonprice);
+        generateManagedOption(data.addons.managed); 
+        generateTermOption(data.terms,defaultPackageId);  
+
         Config.init();
       }
      
@@ -367,10 +367,10 @@ cssVersionOverride: 1
 
       function getIncludesText(managedOption){
         var includes="";
-        ##if(countrySiteAny(www))
+        ##if(activeLanguageAny(en))
             includes =managedOption.includes;
         ##else 
-            if($.trim(managedOption.addonname.toUpperCase()) == "FULLY-MANAGED") 
+            if($.trim(managedOption.addonname) == "[@L[cds.sales/gd/pro/managed-vps-config:fullymanaged]@L]") 
                   includes= $('#osOption').val().split('_')[3] == 'linux' 
                                                                   ? "[@L[cds.sales/gd/pro/managed-vps-config:fullymanagedlinuxIncludesNon-English]@L]" 
                                                                   : "[@L[cds.sales/gd/pro/managed-vps-config:fullymanagedWindowsIncludesNon-English]@L]"
@@ -415,9 +415,6 @@ cssVersionOverride: 1
                 var packageId= planItem[1];
                 var price =  planItem[3];
                 var addonDiscount =planItem[2];
-                //var savingsString = (planItem[3] > 0) ? " - [@L[fosconfigcommon:save]@L]&nbsp;" + planItem[3] + '%' : ''; 
-                //var strikeString= (planItem[3] > 0) ? "<span class='product-desc'> - <strike>" + planItem[4] + "</strike>[@L[fosconfigcommon:permonth]@L]</span>" :'';
-            
                 var checkedRadiobutton= (defaultPackageId ===  packageId) ?"checked='checked'" : '';
                 
             }
