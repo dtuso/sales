@@ -7,6 +7,16 @@ extends ../../layouts/homepage/default_base
 block styles
 	link(href!="[@T[link:<cssroot />]@T]fos/hp/rebrand/css/es-us_homepage_20141023.css" rel="stylesheet" type="text/css")
 
+block marquee
+	| 
+	|   [@P[cdsDocument:<data app="sales" location="homepage/marquee/499com/default_template" /> ]@P]
+
+block primaryTile
+	include ../../sales/homepage/tiles/got.jade
+
+block secondaryTile
+	include ../../sales/homepage/tiles/30-percent-gtld.jade
+
 block bugBar
 	+gtldBug("co")
 	+gtldBug("uno")
