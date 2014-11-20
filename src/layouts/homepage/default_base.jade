@@ -119,12 +119,12 @@ html(lang!="[@T[localization:<language full='true' />]@T]")
       .gdhp-tile-wrap
         .gdhp-tile-area
           block primaryTile
-            include ./tiles/hosting.jade
+            include ../../sales/homepage/tiles/hosting.jade
           block secondaryTile
             #tile-container-30-percent-gtld
-              include ./tiles/30-percent-gtld.jade
+              include ../../sales/homepage/tiles/30-percent-gtld.jade
             #tile-container-why-wsb
-              include ./tiles/why-wsb.jade
+              include ../../sales/homepage/tiles/why-wsb.jade
             script(type="text/javascript").
               if ($('#gtld').length) {
                 $('#tile-container-30-percent-gtld').hide();
