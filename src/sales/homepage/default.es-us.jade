@@ -8,86 +8,14 @@ block styles
 	link(href!="[@T[link:<cssroot />]@T]fos/hp/rebrand/css/es-us_homepage_20141023.css" rel="stylesheet" type="text/css")
 
 block marquee
-	|    ##if(!targetMessageTagAny(sales_hp_default,hp_existing_customer))
-	|      ##if(splitTestingSideIsActive(1331, B) || cookieValueHas(Gybo_marquee, Gybo_marquee, seen))
-	|        <atlantis:webstash type="css">
-	|        <style>
-	|        .gybo-marquee{background-color:#f5f5f5;width:100%;min-width:1000px;height:460px;cursor:pointer;}
-	|        .gybo-marquee-content{width:1000px;margin:0 auto}
-	|        .gybo-marquee-content>span,.gybo-marquee-icons>span,.gybo-marquee-icons-titles>span,.gybo-one-dollar-cta>span{display:block;}
-	|        .gybo-marquee-headline{font-size:64px;padding:50px 0 0 80px;font-weight:100}
-	|        .gybo-marquee-icons{margin:20px 0 0 80px;height:145px;}
-	|        .gybo-marquee-icons>span,.gybo-marquee-icons-titles>span{float:left;}
-	|        .gybo-domain-icon{background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gdhp_sprite_20140819.png) scroll -3px -798px;width:164px;height:140px;margin-right:10px}
-	|        .gybo-wsb-icon{background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gdhp_sprite_20140819.png) scroll -170px -797px;width:152px;height:141px;margin-right:25px}
-	|        .gybo-email-icon{background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gdhp_sprite_20140819.png) scroll -327px -797px;width:155px;height:141px;margin-right:20px}
-	|        .gybo-plus-icon{background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gdhp_sprite_20140819.png) scroll -492px -798px;width:32px;height:32px;margin:55px 35px 0 0 }
-	|        .gybo-equal-icon{background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gdhp_sprite_20140819.png) scroll -492px -845px;width:32px;height:24px;margin:60px 35px 0 0}
-	|        .gybo-one-dollar-icon{background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gdhp_sprite_20140819.png) scroll -593px -798px;width:140px;height:140px;}
-	|        .gybo-one-dollar-icon>span{display:block;color:#fff;text-align:center;}
-	|        .gybo-price-text{font-size:42px;font-weight:700;line-height:42px;padding-top:35px;}
-	|        .gybo-term-text{font-size:20px;line-height:20px}
-	|        .gybo-domain-icon-title,.gybo-wsb-icon-title,.gybo-email-icon-title,.gybo-email-icon-subtitle{font-size:24px;line-height:28px;display:block;text-align:center;position:relative;top:175px}
-	|        .gybo-domain-icon-title{width:151px}
-	|        .gybo-wsb-icon-title{width:275px;left:-61.5px}
-	|        .gybo-email-icon-title{width:151px}
-	|        .gybo-email-icon-subtitle{width:151px;font-size:16px;line-height:16px;}
-	|        .gybo-one-dollar-cta{margin:60px 0 0 0;}
-	|        .gybo-one-dollar-cta>a{float:none;background-color:#ff8a00}
-	|        .gybo-one-dollar-cta>span{color:#333;font-size:10px;width:175px;text-align:center;margin:5px 0 0 -15px;}
-	|        </style>
-	|        </atlantis:webstash>
-	|        <div id="gybo-marq" class="gybo-marquee js-gdhpclick" data-url='[@T[link:<relative path='/offers/online-business.aspx'><param name='ci' value='92829' /></relative>]@T]'>
-	|          <div class="gybo-marquee-content" >
-	|            <span class="gybo-marquee-headline">[@L[cds.sales/homepage/locales/en:gybo-marq-headline]@L]</span>
-	|            <span class="gybo-marquee-icons">
-	|                <span class="gybo-domain-icon">
-	|                    <span class="gybo-domain-icon-title condensed">[@L[cds.sales/homepage/locales/en:gybo-marq-domain]@L]</span>
-	|                </span>
-	|                <span class="gybo-plus-icon"></span>
-	|                <span class="gybo-wsb-icon">
-	|                  <span class="gybo-wsb-icon-title condensed">[@L[cds.sales/homepage/locales/en:gybo-marq-wsb]@L]</span>
-	|                </span>
-	|                <span class="gybo-plus-icon"></span>
-	|                <span class="gybo-email-icon">
-	|                  <span class="gybo-email-icon-title condensed">[@L[cds.sales/homepage/locales/en:gybo-marq-email]@L]</span>
-	|                  <span class="gybo-email-icon-subtitle">[@L[cds.sales/homepage/locales/en:gybo-marq-o365]@L]</span>
-	|                </span>
-	|                <span class="gybo-equal-icon"></span>
-	|                <span class="gybo-one-dollar-icon">
-	|                  <span class="gybo-price-text">[@T[productprice:<current productid="464069" period="monthly" promocode="24681357" />]@T]</span><span class="gybo-term-text">[@L[cds.sales/homepage/locales/en:gybo-marq-per-month]@L]</span><span class="gybo-one-dollar-cta"><a id="gybo-btn" class="btn btn-warning btn-top-img" href="javascript:void(0)" data-ci="92829">[@L[cds.sales/homepage/locales/en:gybo-marq-btn]@L]</a><span>[@L[cds.sales/homepage/locales/en:gybo-marq-disclaimer]@L]</span></span>
-	|                </span>
-	|            </span> 
-	|          </div>
-	|        </div>
-	|        <atlantis:webstash type="js">
-	|          <script>
-	|             var GyboCookieDate = new Date;
-	|              GyboCookieDate.setFullYear(GyboCookieDate.getFullYear( ) +10);
-	|              document.cookie = 'Gybo_marquee=Gybo_marquee=seen; expires=' + GyboCookieDate.toGMTString( ) + '; path=/';
-	|              $(document).ready(function() {
-	|                  var gyboPriceElement = $('.gybo-price-text');
-	|                  var gyboPriceFontSize = parseInt(gyboPriceElement.css("font-size"));
-	|                  if(gyboPriceElement.text().length > 7) {
-	|                    $('.gybo-price-text').css("font-size",(gyboPriceFontSize * .6)+"px");
-	|                  }
-	|                  else if(gyboPriceElement.text().length > 6) {
-	|                    $('.gybo-price-text').css("font-size",(gyboPriceFontSize * .7)+"px");
-	|                  }
-	|                  else if(gyboPriceElement.text().length > 5) {
-	|                    $('.gybo-price-text').css("font-size",(gyboPriceFontSize * .76)+"px");
-	|                  }
-	|              });
-	|          </script>
-	|        </atlantis:webstash>        
-	|      ##elseif(!hasISC())
-	|      [@P[cdsDocument:<data app="sales" location="homepage/locals/es-us/topmarquee" /> ]@P]
-	|      ##else
-	|      [@P[cdsDocument:<data app="sales" location="homepage/locals/es-us/split/topmarquee" /> ]@P]
-	|      ##endif
-	|    ##else
-	|    [@P[cdsDocument:<data app="sales" location="homepage/locals/es-us/split/topmarquee" /> ]@P]
-	|   ##endif
+	| 
+	|   [@P[cdsDocument:<data app="sales" location="homepage/marquee/499com/default_template" /> ]@P]
+
+block primaryTile
+	include ../../sales/homepage/tiles/got.jade
+
+block secondaryTile
+	include ../../sales/homepage/tiles/30-percent-gtld.jade
 
 block bugBar
 	+gtldBug("co")
@@ -97,40 +25,9 @@ block bugBar
 block share
 	.fosshare(data-twshareurl!="[@T[link:<external linktype='XDOTCO' path='/gdSpanish' />]@T]" data-twtext!="[@L[cds.sales/homepage:twitter-text-gdbl]@L]" data-twrelated="GoDaddy" data-shareurl!="[@T[link:<relative path='/'/>]@T]" data-buttons="google,facebook,twitter")
 
-block pods
-	| 
-	| [@P[cdsDocument:<data app="sales" location="homepage/locals/es-us/pods" /> ]@P]
-
 block lowerMarquee
 	| 
 	| [@P[cdsDocument:<data app="sales" location="homepage/locals/es-us/lowermarquee" /> ]@P]
 
 block cookieWarning
 	
-append scripts
-	script(type="text/javascript").
-		var hpLoadVideo = 0;
-		var autoplay = '\&autoplay=1';
-		var vidLocation = "div.gdhp-bottom-banner";
-		$(vidLocation).mouseenter(function() {
-		  if(hpLoadVideo != 1)
-		    {
-		      hpLoadVideo = 1;
-		      var src ='//www.youtube.com/embed/0wwflNeojVk?html5=1&rel=0';
-		      $('#myVideoModal iframe').attr('src',src);
-		      $('#myVideoModal').on('hidden.bs.modal', function () {          
-		        $('#myVideoModal iframe').removeAttr('src');
-		        $('#myVideoModal iframe').attr('src',src);
-		      })
-		      $('#myVideoModal').on('show.bs.modal', function () {          
-		        $('#myVideoModal iframe').attr('src', src + autoplay);
-		      })
-		    }
-		});
-
-		$('.gdhp-top-banner').bind('click',function(event) {
-			var $clickedElement = $(event.target);
-			if(!$clickedElement.hasClass('gtld-pods')){
-			  window.location.href='[@T[link:<relative path="/domains/search-new.aspx"><param name="ci" value="91184" /></relative>]@T]';
-			}
-		});
