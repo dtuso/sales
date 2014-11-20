@@ -1,0 +1,133 @@
+doctype html
+html(lang!="[@T[localization:<language full='true' />]@T]")
+  block vars
+
+  head
+    meta(http-equiv="content-type" content="text/html; charset=utf-8")
+    meta(http-equiv="content-language" content!="[@T[localization:<language full='true' />]@T]")
+    meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+    meta(http-equiv="x-ua-compatible" content="IE=edge")
+
+    title [@L[cds.sales/homepage:page-title]@L]
+    meta(name="description" content!="[@L[cds.sales/homepage:meta-description]@L]")
+    meta(name="keywords" content!="[@L[cds.sales/homepage:meta-keywords]@L]")
+    meta(name="format-detection" content="telephone=no")
+    meta(property="og:title" content!="[@L[cds.sales/homepage:og-title]@L]")
+    meta(property="og:type" content="website")
+    meta(property="og:url" content!="[@T[link:<relative parammode='explicit' />]@T]")
+    meta(property="og:image" content!="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/gd_rebrand_og.png")
+    meta(property="og:site_name" content="GoDaddy")
+    meta(property="fb:app_id" content="115696031791232")
+    meta(property="fb:admins" content="633356800")
+    meta(property="og:description" content!="[@L[cds.sales/homepage:og-content]@L]")
+    link(rel="canonical" href!="[@T[link:<external linktype='siteurl' path='' parammode='explicit'/>]@T]")
+    link(rel="shortcut icon" href!="[@T[link:<imageroot />]@T]assets/godaddy.ico")
+
+    //- Fonts
+    link(rel="stylesheet" type="text/css" href="//cloud.typography.com/7914312/697366/css/fonts.css")
+
+    | !{pc.css}
+    if uxcore
+      //- For the moment, hard code the url for prod
+      if (requestContext.appId === 'pro')
+        link(href="#{config.saharaCdnHostUrl}/#{requestContext.version}/css/sahara-pro.css" rel="stylesheet")
+      else
+        link(href="#{config.saharaCdnHostUrl}/#{requestContext.version}/css/sahara.css" rel="stylesheet")
+    else
+      link(href="#{config.gdCdnHostUrl}/fos/201401/global/css/3.4.1/combined-3.4.1.min.css" rel="stylesheet" type="text/css")
+    script(type="text/javascript").
+      window.config = window.config || {};
+      window.config.uxcore = #{uxcore ? true : false};
+      window.config.gdCdnHostUrl = '#{config.gdCdnHostUrl}';
+      window.config.env = '#{config.env}';
+
+    <!--[if lt IE 9]>
+    link(href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect")
+    link(href="#{config.gdCdnHostUrl}/fos/respond/respond-proxy.min.html" id="respond-proxy" rel="respond-proxy")
+    script(src="#{config.gdCdnHostUrl}/fos/respond/respond-proxy-combo.min.js")
+    <![endif]-->
+
+    <!-- liveperson includes -->
+    link(href="#{config.gdCdnHostUrl}/fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css")
+
+    block head
+    //- For the moment, hard code the url for prod
+    script(src='#{config.saharaCdnHostUrl}/#{requestContext.version}/js/sahara.min.js')
+    //- Preload uxcontrols.js if the home page so other pages load faster
+    if (homePage)
+      script(type='text/javascript').
+        //- delayLoader.addScript('#{config.gdCdnHostUrl}/ux/dev/js/uxcontrols.min.js')
+        //- For the moment, hard code the url for prod
+        delayLoader.addScript('#{config.gdCdnHostUrl}/ux/#{config.uxcoreVersion}/js/uxcontrols.min.js')
+    else
+      //- script(src='#{config.gdCdnHostUrl}/ux/dev/js/uxcontrols.min.js')
+      //- For the moment, hard code the url for prod
+      script(src='#{config.gdCdnHostUrl}/ux/#{config.uxcoreVersion}/js/uxcontrols.min.js')
+    | <!-- Google Tag Manager -->
+    noscript
+      iframe(src="//www.googletagmanager.com/ns.html?id=GTM-SXRF" height="0" width="0" style="display:none;visibility:hidden")
+    script(type="text/javascript").
+      var _gaDataLayer = _gaDataLayer || [];
+      _gaDataLayer.push({ 'shopperId': '#{requestContext.shopperId}' });
+      _gaDataLayer.push({ 'privateLabelId': '#{requestContext.plId}' });
+      _gaDataLayer.push({ 'isc': '#{page.isc}' });
+      _gaDataLayer.push({ 'segmentId': '#{requestContext.segmentId}' });
+      _gaDataLayer.push({ 'status': '200' });
+      _gaDataLayer.push({ 'tcc.status': 'on' });
+      var _gaq = _gaq || [];
+      _gaq.push(['_setDomainName', '#{requestContext.domainName}']);
+
+      (function (w, d, s, l, i) { w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' }); var j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl; delayLoader.addElement(j); })(window, document, 'script', '_gaDataLayer', 'GTM-SXRF');
+    if requestContext.splitTestTrackingData
+      script(type="text/javascript").
+        _gaDataLayer.push({ 'splits': '#{requestContext.splitTestTrackingData}' });
+    | <!-- End Google Tag Manager -->
+
+    script(type="text/javascript").
+      var utag_data = { source_code:"gtnila43",pl_id:"1",app_name:"desktop.sales",authenticated:"false",page_type:"home_page" };
+      (function (a, b, c, d) {
+      a = '//tags.tiqcdn.com/utag/godaddy/godaddy/prod/utag.js';
+      b = document; c = 'script'; d = b.createElement(c); d.src = a; d.type = 'text/java' + c; d.async = true;
+      delayLoader.addElement(d);
+      //$ a = b.getElementsByTagName(c)[0]; a.parentNode.insertBefore(d, a);
+      })();
+
+    //-script(type="text/javascript", src="https://img1.wsimg.com/fos/hp/rebrand/js/bigtext.min.js")
+
+  body
+    block bodyEntry
+
+    if page.isc != ""
+      .site-banners
+        script(src="#{config.gdCdnHostUrl}/fastball/js_lib/Fastball.ChannelIntegration-2.0.6.min.js" type="text/javascript")
+        - var languagePrefix = (requestContext.language != 'en' ? requestContext.language + '_' : '')
+        #IscBanner_fastballOfferElementDiv(fastball="banner" placement="#{languagePrefix}iscBannerTop1000" appid="2" plid="1" isc="#{page.isc}" shopperid="0" container="#{languagePrefix}iscBannerTop1000" template="banner")
+        script(type="text/javascript").
+          $(document).ready(function() { Fastball.Common.initialize('#{requestContext.domainName}'); });
+
+    //- googleoff: index
+    // HEADERBEGIN
+    | !{pc.header}
+    // HEADEREND
+    //- googleon: index
+
+    block content
+
+    //- googleoff: index
+    // FOOTERBEGIN
+    | !{pc.footer}
+    // FOOTEREND
+    //- googleon: index
+
+    | !{pc.script}
+
+    <!-- requestId = !{requestContext.reqId} -->
+
+    <!-- liveperson includes -->
+    #lpButtonDiv
+    <!-- End Main Content -->
+
+    script(type="text/javascript").
+      endOfPageScripts();
+
+    block endOfPageScripts
