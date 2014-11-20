@@ -1,8 +1,8 @@
 ---
 location: sales/offers/online-business.aspx
-id: 545a9d0cf778fc11ac121096
-name: GCE-31516
-comments: Update GOT Legal Disclaimer (MSFT request)
+id: 546d1ee6f778fc1b50c69758
+name: GCE-32384
+comments: Fix Security Vulnerability
 url: http://www.dev-godaddy.com/offers/online-business.aspx
 assetPath: false
 metaTitle: "[@L[cds.sales/offers/online-business:page-title]@L]"
@@ -648,7 +648,7 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
         if($this.data('main')==splitSearch[1]) {
           $(".availabletld.selected").removeClass('selected');
           $this.addClass('selected');
-          $('.tld-input-selected span').html(splitSearch[1]);
+          $('.tld-input-selected span').text(splitSearch[1]);
           tld2 = $this.data('view');
         }
       });
@@ -675,7 +675,7 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
       
       $.ajaxSetup({cache:false});
       $.get($(this).attr('action')+'&domaintoremove='+domaintoremove, $(this).serialize(), function (jsonData) {
-          $dsd.find(".searched-domain").html(domain);
+          $dsd.find(".searched-domain").text(domain);
 
           var $gotSlides = $dsd.closest('.got-slides');
           if (jsonData.Properties.anyAreAvailable === false && (jsonData.Properties.domainInfo.length==0 || jsonData.Properties.domainInfo[0].error === "Domain name is already taken")) {
@@ -701,7 +701,7 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
             slideToAvailable($gotSlides);
           }
 
-          $dsd.find(".searched-domain").html(jsonData.Properties.domainInfo[0].shortName.toLowerCase());
+          $dsd.find(".searched-domain").text(jsonData.Properties.domainInfo[0].shortName.toLowerCase());
 
           $dsd.find('.domain-search-btn').removeClass('disabled');
           $dsd.find('.search-domain-loading').hide();
