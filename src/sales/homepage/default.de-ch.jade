@@ -11,14 +11,14 @@ block share
 	.fosshare(data-twshareurl!="[@T[link:<external linktype='XDOTCO' path='/wwwGD' />]@T]" data-twtext!="[@L[cds.sales/homepage:twitter-text-gdbl]@L]" data-twrelated="GoDaddy" data-shareurl!="[@T[link:<relative path='/'/>]@T]" data-buttons="google,facebook,twitter")
 
 block primaryTile
-	#tile-container-30-percent-gtld
-		include ../../sales/homepage/tiles/30-percent-gtld.jade
-	#tile-container-why-wsb
-		include ../../sales/homepage/tiles/why-wsb.jade
+	#tile-container-got
+		include ../../sales/homepage/tiles/got.jade
+	#tile-container-hosting(style="display:none;")
+		include ../../sales/homepage/tiles/hosting.jade
 	script(type="text/javascript").
-		if ($('#gtld').length) {
-			$('#tile-container-30-percent-gtld').hide();
-			$('#tile-container-why-wsb').show();
+		if ($('#gybo').length) {
+			$('#tile-container-got').hide();
+			$('#tile-container-hosting').show();
 		}
 block secondaryTile
 	include ../../sales/homepage/tiles/30-percent-gtld.jade
