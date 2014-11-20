@@ -83,9 +83,15 @@ html(lang!="[@T[localization:<language full='true' />]@T]")
 
     // Marquee Section
     block marquee
-      | 
-      |  [@P[cdsDocument:<data app="sales" location="homepage/marquee/499com/default_template" /> ]@P]
-
+      |  ##if(targetMessageTagAny(sales_hp_default,hp_existing_customer))
+      |   [@P[cdsDocument:<data app="sales" location="homepage/marquee/499com/default_template" /> ]@P]
+      |  ##else
+      |    ##if(splitTestingSideIsActive(1407, A) && !hasISC())
+      |      [@P[cdsDocument:<data app="sales" location="homepage/marquee/499com/default_template" /> ]@P]
+      |    ##else
+      |      [@P[cdsDocument:<data app="sales" location="homepage/marquee/gtld/default_template" /> ]@P]
+      |    ##endif
+      |  ##endif
 
     // Bugbar (and social links) Sections
     .top-banner-lower-content
@@ -98,8 +104,8 @@ html(lang!="[@T[localization:<language full='true' />]@T]")
           block share
             .fosshare(data-twshareurl!="[@T[link:<external linktype='XDOTCO' path='/wwwGD' />]@T]" data-twtext!="[@L[cds.sales/homepage:twitter-text-gdbl]@L]" data-twrelated="GoDaddy" data-shareurl!="[@T[link:<relative path='/'/>]@T]" data-buttons="google,facebook,twitter")
 
-    // Pods Section
-    block pods
+    // Tiles Section
+    block tiles
       atlantis:webstash(type="css")
         style.
           .gdhp-tile-wrap{height:580px;width:100%;background-color:#d4d4d4}
@@ -112,9 +118,18 @@ html(lang!="[@T[localization:<language full='true' />]@T]")
           .tile-sprite{background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gdhp_tile_sprite_20141107.png) scroll no-repeat;}
       .gdhp-tile-wrap
         .gdhp-tile-area
-          block tileset
-            | [@P[cdsDocument:<data app="sales" location="homepage/tile/got/default_template" /> ]@P]
-            | [@P[cdsDocument:<data app="sales" location="homepage/tile/30-percent-gtld/default_template" /> ]@P]
+          block primaryTile
+            include ./tiles/hosting.jade
+          block secondaryTile
+            #tile-container-30-percent-gtld
+              include ./tiles/30-percent-gtld.jade
+            #tile-container-why-wsb
+              include ./tiles/why-wsb.jade
+            script(type="text/javascript").
+              if ($('#gtld').length) {
+                $('#tile-container-30-percent-gtld').hide();
+                $('#tile-container-why-wsb').show();
+              }
       #myVideoModal.modal.fade.videoModal.js-gdhpclick(data-url="video-close")
         .modal-dialog
           .modal-content
