@@ -1,0 +1,41 @@
+---
+location: sales/homepage/tile/got/default_template
+id: false
+name: GCE-32589
+---
+atlantis:webstash(type="css")
+  style.
+    .got-tile{background-position:0 -485px;}
+    .got-tile-products>ul,.got-tile-symbols>ul{list-style:none;}
+    .got-tile-products>ul{margin:0 10px 0 175px;font-size:30px;font-family:'Walsheim-Black'}
+    .got-tile-products>ul>li{padding:55px 10px 20px 10px;}
+    .got-tile-products>ul>li>span{font-size:18px;display:inline;margin-left:20px;font-family:'Walsheim-Regular';}
+    .got-tile-symbols{float:left;position:relative;font-family:'Walsheim-Black'}
+    .got-tile-symbols>ul{font-size:56px;margin:110px 0 0 10px}
+    .got-tile-symbols>ul>li{padding:30px 10px 10px 10px;}
+    .got-tile>.atn-btn-wrap{margin-left:20px}
+    .got-tile>.atn-btn-wrap>span{font-size:36px;line-height:36px;margin:10px 20px 0 0;text-transform:uppercase;text-align:center;width:225px;}
+    .got-tile>.atn-btn-wrap>span>span.got-tile-price{font-size:52px;margin-bottom:5px;color:#ff8a00;}
+    .got-tile>.atn-btn-wrap>span>span.got-tile-pricetext{margin:0 auto;color:#ff8a00;max-width:200px;padding:15px 0 0 0;}
+    .got-tile>.atn-btn-wrap>.btn-top-img{font-size:24px;color:#fff;background-color:#f5811f;border-bottom:4px solid #b25e18;padding:14px 12px;box-sizing:border-box;height:61px;width:160px;margin:-5px 10px 0 20px;}
+    .got-tile>.atn-btn-wrap>.btn-top-img:hover{background-color:#ff9b39}
+    .got-restriction-text{float:right;text-align:center;margin-top:5px;position:relative;left:-40px;font-size:12px;font-family:'Walsheim-Medium'}
+    .bigtext{visibility:hidden;}
+    span.got-tile-price{font-family:'Walsheim-Bold'}
+#gdhp-gottile.gdhp-tile.got-tile.tile-sprite.js-gdhpclick(data-url!="[@T[link:<relative path='/offers/online-business.aspx'><param name='ci' value='93295' /></relative>]@T]",data-ci="93295")
+  span.got-tile-symbols
+    ul
+      li.b +
+      li.b +
+  span.got-tile-products
+    ul
+      li.b [@L[cds.sales/homepage/tile/got:got-tile-domain]@L]
+      li.b [@L[cds.sales/homepage/tile/got:got-tile-wsb]@L]
+      li.b [@L[cds.sales/homepage/tile/got:got-tile-email]@L]
+        span [@L[cds.sales/homepage/tile/got:got-marq-o365]@L]
+  .atn-btn-wrap
+    span.tungsten.bigtext
+      span.b.got-tile-price [@T[productprice:<current productid="464069" period="monthly" promocode="24681357" />]@T]
+      span.got-tile-pricetext [@L[cds.sales/homepage/tile/got:got-per-month]@L]
+    a#gdhp-gottile-btn.btn.btn-top-img(href!="javascript:void(0)",data-ci="93295") [@L[cds.sales/homepage/tile/got:got-get-it-now]@L]
+  .got-restriction-text [@L[cds.sales/homepage/tile/got:got-rest-text]@L]
