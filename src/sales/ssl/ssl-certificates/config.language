@@ -1,0 +1,75 @@
+---
+location: localization/sales/ssl/fosconfigssl/en
+id:  false
+name: GCE-32769
+comments: Updated standard ssl bullet point, fixed currency tokens
+---
+{% include 'modules/doc-block.html' %}
+<phrase key="customize-ssl" />
+Customize Your SSL Certificate
+<phrase key="ssl-pick-plan" />
+Pick your plan type
+<phrase key="choose-protect" />
+Choose type of protection needed
+<phrase key="choose-number" />
+Select number of sites to protect
+<phrase key="continue" />
+Add to Cart
+<phrase key="protection-type-one-site" />
+Protect 1 Website
+<phrase key="protection-type-ucc" />
+Protect Multiple Websites (UCC)
+<phrase key="protection-type-wc" />
+Protect All Subdomains (Wildcard)
+<phrase key="five-sites" />
+Up to 5 Sites
+<phrase key="ten-sites" />
+Up to 10 Sites
+<phrase key="fifteen-sites" />
+Up to 15 Sites
+<phrase key="twenty-sites" />
+Up to 20 Sites
+<phrase key="thirty-sites" />
+Up to 30 Sites
+<phrase key="forty-sites" />
+Up to 40 Sites
+<phrase key="fifty-sites" />
+Up to 50 Sites
+<phrase key="hundred-sites" />
+Up to 100 Sites
+<phrase key="save" />
+Save
+<phrase key="dagger" />
+<sup class="supsymbol">&Dagger;</sup>
+<phrase key="standSSLGrtBlog" />
+Standard SSL:
+<phrase key="delSSLGrtBlog" />
+Deluxe SSL OV:
+<phrase key="premSSLGrtBlog" />
+Premium SSL EV:
+<phrase key="bestBlogsSocial" />
+Best for blogs and social websites
+<phrase key="valDomOwnership" />
+Validates domain ownership
+<phrase key="100kwarranty" />
+[@T[currencyprice:<price usdamount="10000000" dropdecimal="true" dropsymbol="false" htmlsymbol="false" negative="parenthesis" />]@T] warranty
+<phrase key="250kwarranty" />
+[@T[currencyprice:<price usdamount="25000000" dropdecimal="true" dropsymbol="false" htmlsymbol="false" negative="parenthesis" />]@T] warranty
+<phrase key="1milwarranty" />
+[@T[currencyprice:<price usdamount="100000000" dropdecimal="true" dropsymbol="false" htmlsymbol="false" negative="parenthesis" />]@T] warranty
+<phrase key="valDomOwn" />
+Validates domain ownership
+<phrase key="bestForBusOrg" />
+Best for businesses and organizations
+<phrase key="valDomOwnership" />
+Validates domain ownership and organization
+<phrase key="bestEcommWeb" />
+Best for eCommerce websites
+<phrase key="valDomOwnHighest" />
+Validates domain ownership and highest level of organization authentication
+<phrase key="highAssurGreen" />
+High-assurance green address bar
+<phrase key="upgrPremSave" />
+Upgrade to a Premium SSL and SAVE <span class="save-perc"></span>
+<phrase key="valDomOwnershipOnly" />
+Validates domain ownership
