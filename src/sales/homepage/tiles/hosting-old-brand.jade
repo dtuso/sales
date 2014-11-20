@@ -1,0 +1,29 @@
+---
+location: sales/homepage/tile/hosting-old-brand/default_template
+id: false
+name: GCE-32589
+---
+atlantis:webstash(type="css")
+  style.
+    .hosting-old-brand{background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/ob-hosting-sever-sprite.jpg)}
+    .hosting-old-brand-text{width:255px; padding:60px 0 0 30px}
+    .hosting-old-brand-headline{font-size: 18px; line-height: 18px;font-weight: 700;font-family: HelveticaNeue-CondensedBold,'Helvetica Neue',Helvetica,Arial,sans-serif}
+    .hosting-old-brand-subtext{font-size: 36px;line-height: 36px}
+    .hosting-old-brand-limitation{font-size: 12px;margin-top: 20px; display: inline}
+    .hosting-old-brand-limitation>span{display: inline}
+    .hosting-old-brand-limitation>.g-toolTip{border-bottom: none}
+    .atn-btn-wrap>a{padding-bottom:15px}
+    .atn-btn-wrap>div{color: #ff8a00;font-size: 16px;line-height:20px;margin-bottom:15px}
+    .atn-btn-wrap>div>.b{font-size: 24px}
+    .hosting-orange{color:#ff8a00}
+
+.gdhp-tile.hosting-old-brand(onclick!="location.href='[@T[link:<relative path='/hosting/web-hosting.aspx'><param name='ci' value='87853' /></relative>]@T]';" data-ci="87853")
+  .hosting-old-brand-text
+    span.hosting-old-brand-headline [@L[cds.sales/homepage/locales/en:block2-pod1-hosting-headline-INTL]@L]
+    span.hosting-old-brand-subtext [@L[cds.sales/homepage/locales/fr:largepod-hosting-subtext]@L]
+    span.hosting-old-brand-limitation [@L[cds.sales/homepage/locales/fr:largepod-hosting-limitation]@L]
+    .atn-btn-wrap
+      div [@L[cds.sales/homepage/locales/en:price-starting-text]@L] 
+        br
+        .b [@T[productprice:<current productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T][@L[cds.sales/homepage:term-length-month]@L]
+      a.btn.btn-top-img.btn-orange(href="javascript:void(0)" data-ci="87717") [@L[cds.sales/homepage/locales/en:slider-action-btn]@L]
