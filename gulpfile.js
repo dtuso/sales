@@ -143,8 +143,8 @@ var getLocalJson = function(file) {
 };
 
 gulp.task('jade', function() {
-  return gulp.src(['./**/*.jade', '!./**/_*.jade'], {cwd: path.join('./src/sales/', assetSrcPath)})
-    .pipe(changed(paths.build))
+  return gulp.src(['./**/499com.jade', '!./**/_*.jade'], {cwd: path.join('./src/sales/', assetSrcPath)})
+    //.pipe(changed(paths.build))
     .pipe(frontMatter({remove:true}))
     .pipe(data(function(file) { return file.frontMatter; }))
     .pipe(jade({pretty: true}))

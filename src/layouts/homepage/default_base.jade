@@ -119,12 +119,18 @@ html(lang!="[@T[localization:<language full='true' />]@T]")
       .gdhp-tile-wrap
         .gdhp-tile-area
           block primaryTile
-            include ../../sales/homepage/tiles/hosting.jade
+            //- include ../../sales/homepage/tiles/hosting.jade
+            | 
+            | [@P[cdsDocument:<data app="sales" location="homepage/tile/hosting-old-brand/default_template" /> ]@P]
           block secondaryTile
             #tile-container-30-percent-gtld
-              include ../../sales/homepage/tiles/30-percent-gtld.jade
+              //- include ../../sales/homepage/tiles/30-percent-gtld.jade
+              | 
+              | [@P[cdsDocument:<data app="sales" location="homepage/tile/30-percent-gtld/default_template" /> ]@P]
             #tile-container-why-wsb(style="display:none;")
-              include ../../sales/homepage/tiles/why-wsb.jade
+              //- include ../../sales/homepage/tiles/why-wsb.jade
+              | 
+              | [@P[cdsDocument:<data app="sales" location="homepage/tile/why-wsb/default_template" /> ]@P]
             script(type="text/javascript").
               if ($('#gtld').length) {
                 $('#tile-container-30-percent-gtld').hide();

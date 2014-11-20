@@ -1,6 +1,6 @@
 ---
 location: sales/homepage/default.en-my
-id: false
+id: 546e4c4ff778fc18bc8c3c7e
 name: GCE-31162
 ---
 extends ../../layouts/homepage/default_base
@@ -12,10 +12,14 @@ block marquee
 	|   [@P[cdsDocument:<data app="sales" location="homepage/marquee/499com/default_template" /> ]@P]
 
 block primaryTile
-	include ../../sales/homepage/tiles/got.jade
+	//- include ../../sales/homepage/tiles/got.jade
+	| 
+	| [@P[cdsDocument:<data app="sales" location="homepage/tile/got/default_template" /> ]@P]
 
 block secondaryTile
-	include ../../sales/homepage/tiles/30-percent-gtld.jade
+	//- include ../../sales/homepage/tiles/30-percent-gtld.jade
+	| 
+	| [@P[cdsDocument:<data app="sales" location="homepage/tile/30-percent-gtld/default_template" /> ]@P]
 
 block bugBar
 	+gtldBug("co")

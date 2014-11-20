@@ -1,11 +1,11 @@
 ---
 location: sales/homepage/default.nb-no
-id: false
+id: 546e5907f778fc18bc8c3c9e
 name: GCE-31162
 ---
 extends ../../layouts/homepage/default_base
 block styles
-  link(href!="[@T[link:<cssroot />]@T]fos/hp/rebrand/css/nb-no_homepage_20140805.css" rel="stylesheet" type="text/css")
+	link(href!="[@T[link:<cssroot />]@T]fos/hp/rebrand/css/nb-no_homepage_20140805.css" rel="stylesheet" type="text/css")
 
 block marquee
 	|  ##if(targetMessageTagAny(sales_hp_default,hp_existing_customer))
@@ -20,16 +20,20 @@ block marquee
 
 block primaryTile
 	#tile-container-got
-		include ../../sales/homepage/tiles/got.jade
+		| 
+		| [@P[cdsDocument:<data app="sales" location="homepage/tile/got/default_template" /> ]@P]
 	#tile-container-hosting(style="display:none;")
-		include ../../sales/homepage/tiles/hosting.jade
+		| 
+		| [@P[cdsDocument:<data app="sales" location="homepage/tile/hosting-old-brand/default_template" /> ]@P]
 	script(type="text/javascript").
 		if ($('#gybo').length) {
 			$('#tile-container-got').hide();
 			$('#tile-container-hosting').show();
 		}
+
 block secondaryTile
-	include ../../sales/homepage/tiles/30-percent-gtld.jade
+	| 
+	| [@P[cdsDocument:<data app="sales" location="homepage/tile/30-percent-gtld/default_template" /> ]@P]
 
 block share
-  .fosshare(data-twshareurl!="[@T[link:<external linktype='XDOTCO' path='/wwwGD' />]@T]" data-twtext!="[@L[cds.sales/homepage:twitter-text-gdbl]@L]" data-twrelated="GoDaddy" data-shareurl!="[@T[link:<relative path='/'/>]@T]" data-buttons="google,facebook,twitter")
+	.fosshare(data-twshareurl!="[@T[link:<external linktype='XDOTCO' path='/wwwGD' />]@T]" data-twtext!="[@L[cds.sales/homepage:twitter-text-gdbl]@L]" data-twrelated="GoDaddy" data-shareurl!="[@T[link:<relative path='/'/>]@T]" data-buttons="google,facebook,twitter")

@@ -1,11 +1,16 @@
 ---
 location: sales/homepage/default.en-ie
-id: false
+id: 546e4c4ff778fc18bc8c3c7d
 name: GCE-31162
 ---
 extends ../../layouts/homepage/default_base
 block styles
 	link(href!="[@T[link:<cssroot />]@T]fos/hp/rebrand/css/en-ie_homepage_20140805.css" rel="stylesheet" type="text/css")
+
+block primaryTile
+	//- include ../../sales/homepage/tiles/hosting.jade
+	| 
+	| [@P[cdsDocument:<data app="sales" location="homepage/tile/hosting/default_template" /> ]@P]
 
 block bugBar
 	+gtldBug("co")
