@@ -1,8 +1,8 @@
 ---
 location: localization/sales/business/office-365/en
 id: 54612900f778fc26a885ee47
-name: GCE-31272
-comments: O365 Office LP - Adding GD Exclusive Text to page
+name: GCE-32004,31975,32186
+comments: Fixing technet link in disclaimer
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="lp-8-MicrosoftOffice365BoostProductivityVirtuallyAnywhereGoDaddy" />
@@ -890,6 +890,8 @@ Get the latest versions of the programs you rely on &ndash; Excel, Word, PowerPo
 Save {0} when you go with GoDaddy.
 <phrase key="29621-FeatureContent-2-description" />
 We’ve partnered with Microsoft to bring you this exclusive deal on Office 365. Save {0} for the first year on the latest version of Microsoft Office — plus, get free automatic upgrades as they’re released with your subscription. <em>Business and Business Premium plans only.</em>
+<phrase key="32537-FeatureContent-2-description" />
+Only [@T[companyname:name]@T] can bring you an offer this good. Save {0} for the first year on the latest version of Microsoft Office — plus, get free automatic upgrades as they’re released with your subscription. <em>Business and Business Premium plans only.</em>
 <phrase key="29621-FeatureContent-3-title" />
 24/7 support from real Office experts.
 <phrase key="29621-FeatureContent-3-description" />
@@ -941,7 +943,7 @@ Professional email using your domain name
 <phrase key="29621-Compare-storage" />
 50 GB storage for email, contacts and calendars
 <phrase key="29621-Compare-sync" />
-<span class="tooltip-underline">Sync across all devices<span class="tooltip-caption-right" ><span class="tooltip-caption-header">Sync email, calendar and contacts</span>Users can connect the following versions of Outlook to their business-class email, so they can use the rich client application they already know: the latest version of Outlook, Outlook 2010, Outlook 2007 (with slightly limited functionality), Outlook 2011 for Mac, and Outlook 2008 for Mac. Email can also be accessed through your non-Outlook desktop program of choice that is Exchange ActiveSync compatible (i.e., Apple Mail). Outlook web application available on all plans.</span></span>
+<span class="tooltip-underline">Sync across all devices<span class="tooltip-caption-right" ><span class="tooltip-caption-header">Sync email, calendar and contacts</span>Any change you make on one device, such as deleting an email or updating your calendar, will automatically be made on your phone, tablet, computer - anywhere you access Office 365.</span></span>
 <phrase key="29621-Compare-meetings" />
 Online meetings with Microsoft Lync
 <phrase key="29621-Compare-spam" />
@@ -994,6 +996,10 @@ OK
 Products will automatically renew until cancelled. You may turn off the auto-renewal feature by visiting your GoDaddy account.
 <phrase key="29621-Disclaimers-ms-sla" />
 For more information see the full Microsoft Service Agreement here: <a href="http://technet.microsoft.com/en-us/library/jj819284.aspx" target="_blank" data-ci="94224">http://technet.microsoft.com/en-us/library/jj819284.aspx</a>
+<phrase key="29621-Disclaimers-ms-sla-32004" comment="'{0}'' will be replaced with a url"/>
+For more information see the full Microsoft Service Agreement here: <a data-ci="94224" href="{0}" target="_blank">{0}</a>
+<phrase key="32004-2-Disclaimers-ms-sla" />
+For more information see the full Microsoft Service Agreement here: <a href="http://technet.microsoft.com/library/jj819284.aspx" target="_blank" data-ci="94224">http://technet.microsoft.com/library/jj819284.aspx</a>
 <phrase key="29621-FAQ-q-1" />
 Why should I buy Office 365 from GoDaddy if I already have Office on my desktop?
 <phrase key="29621-FAQ-a-1" />

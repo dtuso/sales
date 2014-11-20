@@ -2,8 +2,8 @@
 url: http://www.dev-godaddy.com/business/office-365.aspx
 location: sales/business/office-365.aspx
 id: 5461188af778fc26a885ee11
-name: GCE-31272
-comments: O365 Office LP - Adding GD Exclusive Text to page
+name: GCE-32004,31975,32186
+comments: O365 Office LP - New icons image and text updates
 metaTitle: "[@L[cds.sales/business/office-365:lp-8-MicrosoftOffice365BoostProductivityVirtuallyAnywhereGoDaddy]@L]"
 metaDescription: "[@L[cds.sales/business/office-365:lp-36-MSOffice365IsEasyToSetUp]@L]"
 metaKeywords: "[@L[cds.sales/business/office-365:lp-18-Office365MicrosoftOffice365Office365Pricing]@L]"
@@ -905,7 +905,7 @@ assetPath: false
         <div class="col-xs-7">
           <h1 class="main-banner-title condensed">[@L[cds.sales/business/office-365:29621-main-title]@L]</h1>
           <div>
-            <img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/business/office-365/img/GCE-24333-O365-LP-R4_Office-MSFT-icons.png" />
+            <img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/business/office-365/img/GCE-32186-O365-Office-MSFT-icons.png" />
           </div> 
           <div class="exclusive-discount">[@L[cds.sales/business/office-365:31272-exclusive_discount]@L]</div>
           ##if(productHasSavingsMoreThan({{pfids.C}}, {{pfids.C}}, 0))
@@ -1553,7 +1553,7 @@ assetPath: false
             <div class="modal-body">
               <p>[@L[cds.sales/business/office-365:29621-Disclaimers-one]@L]</p>
               <p>[@L[cds.sales/business/office-365:29621-Disclaimers-renewed]@L]</p>
-              <p>[@L[cds.sales/business/office-365:29621-Disclaimers-ms-sla]@L]</p>
+              <p data-tokenize="http://technet.microsoft.com/library/jj819284.aspx">[@L[cds.sales/business/office-365:29621-Disclaimers-ms-sla-32004]@L]</p>
             </div>
           </div>
         </div>
@@ -1620,7 +1620,7 @@ assetPath: false
       var $this = $(this),
         html = $this.html(),
         val = $this.data('tokenize'),
-        tokenizedHtml = html.replace('{0}', val);
+          tokenizedHtml = html.replace(/\{0\}/gi, val);
       $this
         .html(tokenizedHtml)
         .closest('.price-hide')
