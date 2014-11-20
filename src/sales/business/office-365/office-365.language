@@ -943,7 +943,7 @@ Professional email using your domain name
 <phrase key="29621-Compare-storage" />
 50 GB storage for email, contacts and calendars
 <phrase key="29621-Compare-sync" />
-<span class="tooltip-underline">Sync across all devices<span class="tooltip-caption-right" ><span class="tooltip-caption-header">Sync email, calendar and contacts</span>Any change you make on one device, such as deleting an email or updating your calendar, will automatically be made on your phone, tablet, computer - anywhere you access Office 365.</span></span>
+<span class="tooltip-underline">Sync across all devices<span class="tooltip-caption-right" >Any change you make on one device, such as deleting an email or updating your calendar, will automatically be made on your phone, tablet, computer - anywhere you access Office 365.</span></span>
 <phrase key="29621-Compare-meetings" />
 Online meetings with Microsoft Lync
 <phrase key="29621-Compare-spam" />
