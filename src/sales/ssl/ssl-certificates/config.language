@@ -1,6 +1,6 @@
 ---
 location: localization/sales/ssl/fosconfigssl/en
-id:  false
+id:  123
 name: GCE-32769
 comments: Updated standard ssl bullet point, fixed currency tokens
 ---
