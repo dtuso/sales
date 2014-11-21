@@ -1,7 +1,8 @@
 ---
 location: localization/sales/gd/pro/managed-vps-config/en
-id: 5444bf61f778fc1ba009a9cb
-name: GCE-27124
+id: 546e1169f778fc1fd8ea1915
+name: GCE-32619
+comments: Update Self Managed Wording
 ---
 
 {% include 'modules/doc-block.html' %}
@@ -62,6 +63,8 @@ Self-Managed
 CentOS 6 Only
 <phrase key="selfmanagedlinuxOS" />
 Your choice of Ubuntu, Fedora or CentOS 7
+<phrase key="selfmanagedlinuxOS-32619" />
+Your choice of Ubuntu, Fedora, CentOS 6 or CentOS 7
 <phrase key="managedlinuxIncludes" />
 Includes: cPanel® | Patching | Security | Monitoring | Backups 
 <phrase key="fullymanagedlinuxIncludes" />
