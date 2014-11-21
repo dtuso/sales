@@ -30,8 +30,8 @@ block marqueeContent
 			.headline.line1 [@L[cds.sales/homepage/marquee/499com:first-year]@L]
 			.headline.line2 [@L[cds.sales/homepage/marquee/499com:sub-text]@L]
 			a.btn.btn-lg.btn-cta(href!=ctaLink) [@L[cds.sales/homepage/marquee/499com:cta-text]@L]
-			.disclaimer [@L[cds.sales/homepage/marquee/499com:disclaimer]@L] 
+			.disclaimer [@L[cds.sales/homepage/locales/en:topmarq-com-subtext]@L][@T[productprice:<list productid="105" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses"></list>]@T][@L[cds.sales/homepage/locales/en:topmarq-com-yr]@L]
 			.sprite.com
 	script(type='text/javascript').
 		$('#com499 .line1').html($('#com499 .line1').html().replace('{0}','[@T[productprice:<current productid="101" period="yearly" promocode="444888" htmlsymbol="false" />]@T]'))
-		$('#com499 .disclaimer').html($('#com499 .disclaimer').html().replace('{0}','[@T[productprice:<list productid="105" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses"></list>]@T]'))
+		// $('#com499 .disclaimer').html($('#com499 .disclaimer').html().replace('{0}','[@T[productprice:<list productid="105" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses"></list>]@T]'))
