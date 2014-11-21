@@ -1,0 +1,15 @@
+---
+location: localization/sales/homepage/marquee/499com/en
+id: false
+name: GCE-32589
+---
+<phrase key="sale" />
+SALE
+<phrase key="first-year" />
+{0}*<small>/1<sup>st</sup> YR</small> .COM
+<phrase key="sub-text" />
+A SMALL PRICE TO PAY FOR SUCCESS.
+<phrase key="cta-text" />
+FIND YOUR .COM
+<phrase key="disclaimer" />
+2 year minimum registration required.  Subsequent years charged at {0}/yr. 

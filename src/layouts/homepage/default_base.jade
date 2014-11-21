@@ -52,7 +52,7 @@ html(lang!="[@T[localization:<language full='true' />]@T]")
       .uk-cookie-close{background-position: 4px -228px;cursor:pointer;height: 20px;display: block;position: absolute;top:10px;right:25px;margin: 10px;width: 20px}
       .tungsten{font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-weight:700}
       .walsheim-black{font-family:'Walsheim-Black';}
-      .hp-sprite { background: url(https://img1.wsimg.com/fos/hp/rebrand/img/gdhp_sprite_20140819.png) scroll no-repeat; vertical-align: top; }
+      .hp-sprite { background: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gdhp_sprite_legacy-20141120.png) scroll no-repeat; vertical-align: top; }
       .hp-sprite.co { background-position:-74px -0px; height:19px; width:19px; vertical-align: top; margin-right: 8px;}
       .hp-sprite.org { background-position:-330px -6px; width: 37px; height: 13px; margin-top: 5px; }
       .hp-sprite.club { background-position:-236px -5px; width: 39px; height: 11px; margin-top: 5px; }
@@ -84,14 +84,10 @@ html(lang!="[@T[localization:<language full='true' />]@T]")
     // Marquee Section
     block marquee
       |  ##if(targetMessageTagAny(sales_hp_default,hp_existing_customer))
-      |    ##if(splitTestingSideIsActive(1401, B))
-      |      [@P[cdsDocument:<data app="sales" location="homepage/marquee/gtld-phone/default_template" /> ]@P]
-      |    ##else
-      |      [@P[cdsDocument:<data app="sales" location="homepage/marquee/gtld/default_template" /> ]@P]
-      |    ##endif
+      |   [@P[cdsDocument:<data app="sales" location="homepage/marquee/499com/default_template" /> ]@P]
       |  ##else
-      |    ##if(splitTestingSideIsActive(1402, A) && !hasISC())
-      |      [@P[cdsDocument:<data app="sales" location="homepage/marquee/299com/default_template" /> ]@P]
+      |    ##if(splitTestingSideIsActive(1407, A) && !hasISC())
+      |      [@P[cdsDocument:<data app="sales" location="homepage/marquee/499com/default_template" /> ]@P]
       |    ##else
       |      [@P[cdsDocument:<data app="sales" location="homepage/marquee/gtld/default_template" /> ]@P]
       |    ##endif
@@ -108,10 +104,46 @@ html(lang!="[@T[localization:<language full='true' />]@T]")
           block share
             .fosshare(data-twshareurl!="[@T[link:<external linktype='XDOTCO' path='/wwwGD' />]@T]" data-twtext!="[@L[cds.sales/homepage:twitter-text-gdbl]@L]" data-twrelated="GoDaddy" data-shareurl!="[@T[link:<relative path='/'/>]@T]" data-buttons="google,facebook,twitter")
 
-
-    // Pods Section
-    block pods
-
+    // Tiles Section
+    block tiles
+      atlantis:webstash(type="css")
+        style.
+          .gdhp-tile-wrap{height:580px;width:100%;background-color:#d4d4d4}
+          .gdhp-tile-area{width:1000px;margin:0 auto}
+          .gdhp-tile{width:480px;height:480px;background-color:#fff;float:left;margin:40px 10px 0;cursor:pointer;}
+          .gdhp-tile span{display:block;}
+          .gdhp-tile .btn-lrg{font-size:24px;padding:14px 12px;box-sizing:border-box;height:60px;width:240px;}
+          .gdhp-tile .btn-orange{color:#fff;background-color:#f5811f;border-bottom:4px solid #b25e18;}
+          .gdhp-tile .btn-orange:hover{background-color:#ff9b39;border-color:#cc7832}
+          .tile-sprite{background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gdhp_tile_sprite_20141107.png) scroll no-repeat;}
+      .gdhp-tile-wrap
+        .gdhp-tile-area
+          block primaryTile
+            //- include ../../sales/homepage/tiles/hosting.jade
+            | 
+            | [@P[cdsDocument:<data app="sales" location="homepage/tile/hosting-old-brand/default_template" /> ]@P]
+          block secondaryTile
+            #tile-container-30-percent-gtld
+              //- include ../../sales/homepage/tiles/30-percent-gtld.jade
+              | 
+              | [@P[cdsDocument:<data app="sales" location="homepage/tile/30-percent-gtld/default_template" /> ]@P]
+            #tile-container-why-wsb(style="display:none;")
+              //- include ../../sales/homepage/tiles/why-wsb.jade
+              | 
+              | [@P[cdsDocument:<data app="sales" location="homepage/tile/why-wsb/default_template" /> ]@P]
+            script(type="text/javascript").
+              if ($('#gtld').length) {
+                $('#tile-container-30-percent-gtld').hide();
+                $('#tile-container-why-wsb').show();
+              }
+      #myVideoModal.modal.fade.videoModal.js-gdhpclick(data-url="video-close")
+        .modal-dialog
+          .modal-content
+            .modal-header
+              button.modal-header-close.close(type="button",data-dismiss="modal",aria-hidden="true") &times;
+            .modal-body
+              iframe(width="854",height="480",src="",autoplay,scrolling="no",frameborder="0",allowfullscreen)
+    
     // Lower Marquee Section
     block lowerMarquee
       .gdhp-bottom-banner
@@ -206,6 +238,7 @@ html(lang!="[@T[localization:<language full='true' />]@T]")
 
     // End Main Content
     block scripts
+      script(src!="[@T[link:<javascriptroot />]@T]fos/hp/rebrand/js/bigtext.min.js")
       script(src!="[@T[link:<javascriptroot />]@T]fos/script/sales17.min.js" type="text/javascript")
       script(src!="[@T[link:<javascriptroot />]@T]fos/hp/rebrand/js/homepage_script_20140410.min.js" type="text/javascript")
       script(src!="[@T[link:<javascriptroot />]@T]fos/script/atlantis_jquery14.min.js" type="text/javascript")
@@ -332,4 +365,7 @@ html(lang!="[@T[localization:<language full='true' />]@T]")
             default:
               window.location.href=$clickedUrl;
           }
+        });
+        $(window).load(function () {
+          $('.bigtext').bigtext().css('visibility', 'visible');
         });

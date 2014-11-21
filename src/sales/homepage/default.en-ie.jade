@@ -7,14 +7,15 @@ extends ../../layouts/homepage/default_base
 block styles
 	link(href!="[@T[link:<cssroot />]@T]fos/hp/rebrand/css/en-ie_homepage_20140805.css" rel="stylesheet" type="text/css")
 
+block primaryTile
+	//- include ../../sales/homepage/tiles/hosting.jade
+	| 
+	| [@P[cdsDocument:<data app="sales" location="homepage/tile/hosting/default_template" /> ]@P]
+
 block bugBar
 	+gtldBug("co")
 	+gtldBug("club")
 	+gtldBug("org")
-
-block pods
-	| 
-	| [@P[cdsDocument:<data app="sales" location="homepage/locals/en-ie/pods" /> ]@P]
 
 append cookieWarning
 	script(type="text/javascript").

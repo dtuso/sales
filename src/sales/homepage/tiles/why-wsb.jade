@@ -1,0 +1,29 @@
+---
+location: sales/homepage/tile/why-wsb/default_template
+id: false
+name: GCE-32589
+---
+atlantis:webstash(type="css")
+  style.
+    div.pod-area3{width:inherit;margin:inherit;padding-top:0px}
+    div.block3-pod2{position: relative; background:#75b334}
+    div.block3-pod2 .b{display:inline}
+    .largepod-icons{background: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gdhp_sprite_legacy-20141120.png) no-repeat -875px -10px;width:121px;height:304px;position:absolute;top:80px;left:35px;}
+    div.pod-area3>div.block3-pod2 span.pod-subtext-2{margin: 30px 20px 20px 280px;}
+    html[lang|="da"] div.pod-area3>div.block3-pod2 span.pod-subtext-2{margin: 30px 20px 20px 215px;}
+    html[lang|="de"] div.pod-area3>div.block3-pod2 span.pod-subtext-2{margin: 30px 20px 20px 250px;}
+    html[lang|="fr"] div.pod-area3>div.block3-pod2 span.pod-subtext-2{margin: 30px 20px 20px 260px;}
+    html[lang|="nl"] div.pod-area3>div.block3-pod2 span.pod-subtext-2{margin: 30px 20px 20px 250px;}
+
+.pod-area3
+  .gdhp-tile.block3-pod2.js-gdhpclick(data-url!="[@T[link:<relative path='/hosting/website-builder.aspx'><param name='ci' value='89841' /></relative>]@T]",data-ci="89841")
+    .largepod-icons
+    .largepod-text-left
+      span.pod-headline.condensed [@L[cds.sales/homepage/locales/ru:largepod-whywsb-headline]@L]
+      span.pod-subtext1 [@L[cds.sales/homepage/locales/ru:largepod-whywsb-subtext1]@L]
+      span.pod-subtext2 [@L[cds.sales/homepage/locales/ru:largepod-whywsb-subtext2]@L]
+      span.pod-subtext3 [@L[cds.sales/homepage/locales/ru:largepod-whywsb-subtext3]@L]
+      span.pod-subtext-2
+        a(href!="javascript:void(0)")
+          i.ico.ico-gt-circle-small
+          | [@L[cds.sales/homepage/segments/default:slider-action-btn]@L]
