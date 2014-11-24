@@ -1,10 +1,11 @@
 ---
 location: sales/pro/dedicated-server-config
-id:  544162b5f778fc0ce0d0fa54
-name: GCE-27519
-comments: Web Pro dedicated server config page
+id:  546b8c14f778fc10909ad8f8
+name: GCE-323039
+comments: Dedicated Config Copy Update
 configPage: true
 sitecore: true 
+cssVersionOverride: 1
 ---
 {% extends 'layouts/config-base.html' %}
 
@@ -329,11 +330,13 @@ sitecore: true
       };
 
       function processConfigData(data,defaultPackageId){
+        $('#osAddon').val(data.addons.os.id);
+        $('#osAddonPrice').val(data.addons.os.addonprice);
+        
         generateManagedOptions(data.addons.managed);
         generateTermOptions(data.terms,defaultPackageId);  
 
-        $('#osAddon').val(data.addons.os.id);
-        $('#osAddonPrice').val(data.addons.os.addonprice);
+
 
         Config.init();
       }
@@ -349,15 +352,29 @@ sitecore: true
           var content='';
           var checked =  item.id == defaultAddOn ? 'checked="checked"' :'';
 
-          content += '<li><input type="radio" name="'+optionname+'"'+ checked +'value="'+item.id+'" data-name="'+item.name+'" data-price="'+item.addonprice+'"> <b>'+ item.name+' -</b><div class="price-container"></div>' +'<ul class="managed-details"><li><b>'+item.os+'</b></li>'+'<li>'+item.includes +'</li></ul>';
+          content += '<li><input type="radio" name="'+optionname+'"'+ checked +'value="'+item.id+'" data-name="'+item.name+'" data-price="'+item.addonprice+'"> <b>'+ item.name+' -</b><div class="price-container"></div>' +'<ul class="managed-details"><li><b>'+item.os+'</b></li>'+'<li>'+getIncludesText(item) +'</li></ul>';
          
           $(parentid).append(content);
         });
         generateManagementPrices();
       }
 
+      function getIncludesText(managedOption){
+        var includes="";
+        ##if(activeLanguageAny(en))
+            includes =managedOption.includes;
+        ##else 
+            if($.trim(managedOption.name) == "[@L[cds.sales/gd/pro/dedicated-server-config:Fully-Managed]@L]") 
+                  includes= $('#osAddon').val().split('_')[3] == 'linux' 
+                                                                  ? "[@L[cds.sales/gd/pro/dedicated-server-config:linuxpromanaged-alt]@L]" 
+                                                                  : "[@L[cds.sales/gd/pro/dedicated-server-config:windowspromanagedplus-alt]@L]"
+            else
+                includes =managedOption.includes; 
+        ##endif
 
+        return includes;
 
+      } 
 
       function generateManagementPrices(){
         $('input:radio[name="managedOption"]').filter(':checked').parent().find('.price-container').append('<span class="orange-text"> [@L[cds.sales/gd/pro/dedicated-server-config:included]@L] </span>');
@@ -387,10 +404,7 @@ sitecore: true
                 var monthString =  (planItem[0] > 1) ? "[@L[fosconfigcommon:termmonths]@L]" : "[@L[fosconfigcommon:termmonth]@L]";
                 var discount= planItem[2]
                 var packageId= planItem[1];
-                var price =  planItem[3];
-                //var savingsString = (planItem[3] > 0) ? " - [@L[fosconfigcommon:save]@L]&nbsp;" + planItem[3] + '%' : ''; 
-                //var strikeString= (planItem[3] > 0) ? "<span class='product-desc'> - <strike>" + planItem[4] + "</strike>[@L[fosconfigcommon:permonth]@L]</span>" :'';
-            
+                var price =  planItem[3];            
                 var checkedRadiobutton= (defaultPackageId ===  packageId) ?"checked='checked'" : '';
                 
             }
