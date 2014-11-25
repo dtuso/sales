@@ -4,6 +4,10 @@
   padding: 0;
 }
 
+#gdep .faq-container {
+  background-color: #fff;
+}
+
 #gdep .icon-container {
   background-color: #eee;
   margin: 26px 0px 31px 0;
@@ -71,7 +75,6 @@
 
 #gdep .faq-section .container .col-sm-8 .expansion-page-content .btn-lg {
   padding: 13px 45px;
-  margin-bottom: 45px;
 }
 
 #gdep .sidebar-container {
