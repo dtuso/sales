@@ -1,10 +1,3 @@
----
-location: localization/sales/gd/domains/domain-name-search/en
-id: 5457dbe9f778fc21f095143c
-name: GCE 31170
-comments: Merchandising Updates 11/12/14
----
-{% include 'modules/doc-block.html' %}
 <!-- DOC BLOCK (DO NOT REMOVE)
 
 
@@ -22,10 +15,10 @@ comments: Merchandising Updates 11/12/14
       Adam Smith <absmith@godaddy.com>
 
     DRAFT DETAILS:
-      Modified Date:  2014-10-06 12:42:33 pm
-      Created By:     Pooja Singhvi <psinghvi@godaddy.com>
+      Modified Date:  2014-11-05
+      Created By:     Mike Cowan <mcowan@godaddy.com>
       JIRA Ticket:    GCE-30012
-      Comments:       Merchandising Updates 10/14
+      Comments:       Merchandising Updates 11/12
       
 
 
@@ -471,6 +464,10 @@ Score in New Zealand with <strong>.kiwi</strong>
 Show your stripes with <strong>.army</strong>
 <phrase key="PodDotShikshaText" />
 Reach Indian learners with <strong>.shiksha</strong>
+<phrase key="PodDotCityText" />
+Speak to <strong>.city</strong> dwellers on the web.
+<phrase key="PodDotSarlText" />
+</strong>.sarl</strong> says you're licensed partnership
 <phrase key="TldDotGuide" />
 <strong>.guide</strong>
 <phrase key="TldDotBoutique" />
@@ -609,6 +606,12 @@ Reach Indian learners with <strong>.shiksha</strong>
 <strong>.shiksha</strong>
 <phrase key="TldDotJuegos" />
 <strong>.juegos</strong>
+<phrase key="TldDotBiz" />
+<strong>.biz</strong>
+<phrase key="TldDotCity" />
+<strong>.city</strong>
+<phrase key="TldDotSarl" />
+<strong>.sarl</strong>
 <phrase key="CarouselSlide1Default" />
 Get a web address that tells the world what you do. New domains available now: <strong>.attorney</strong>, <strong>.church</strong>, <strong>.club</strong>, <strong>.xyz</strong> and <strong>.guide</strong>. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a> 
 <phrase key="CarouselSlide1AU" />
