@@ -1,4 +1,7 @@
-extends layout
+include ../../layouts/domainSearchInput.jade
+include ./plansPanel.jade
+
+extends ../../layouts/layout
 
 block vars
   - var uxcore = true
@@ -15,7 +18,7 @@ block endOfPageScripts
 
   //-$ script(src="http://img2.wsimg.com/starfield/fos.share/v1.3/fos.share-20140213.min.js" id="fosShareScript")
   script(type="text/javascript").
-    delayLoader.addScript("#{config.gdCdnHostUrl}/starfield/fos.share/v1.3/fos.share-20140213.min.js", { "id": "fosShareScript" });
+    delayLoader.addScript("[@T[link:<javascriptroot />]@T]starfield/fos.share/v1.3/fos.share-20140213.min.js", { "id": "fosShareScript" });
 
   //-:script From http://img2.wsimg.com/fos/script/sales17.min.js
   script(type="text/javascript").
@@ -40,11 +43,17 @@ block endOfPageScripts
     });
 
 block content
-  | !{renderTile("search", search)}
-  | !{renderTile("marquees/marquee", topBanner)}
-  | !{renderTile("gtldBand", gtldBand)}
-  | !{renderTile("podCarousel", podCarousel)}
-  | !{renderTile("marquees/marquee", domainSearchMarquee)}
-  | !{renderTile("whyUs", whyUs)}
-  | !{renderTile("faqCarousel", faqCarousel)}
-  | !{renderTile("disclaimersTemplate", disclaimers)}
+  .container
+    +domainSearchInput({"buttonColor":"btn-warning"})
+
+  +renderPlanTiles(data.tileData.planBox)
+
+
+  //- | !{renderTile("search", search)}
+  //- | !{renderTile("marquees/marquee", topBanner)}
+  //- | !{renderTile("gtldBand", gtldBand)}
+  //- | !{renderTile("podCarousel", podCarousel)}
+  //- | !{renderTile("marquees/marquee", domainSearchMarquee)}
+  //- | !{renderTile("whyUs", whyUs)}
+  //- | !{renderTile("faqCarousel", faqCarousel)}
+  //- | !{renderTile("disclaimersTemplate", disclaimers)}

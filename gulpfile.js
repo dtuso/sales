@@ -35,6 +35,7 @@ try {
   var underscoreDeepExtend = require('underscore-deep-extend');
   _.mixin({deepExtend: underscoreDeepExtend(_)});
 
+  var rebrandData = require('./src/sales/rebrand/test.json');
 } catch (e) {
 
   console.log(e.toString());

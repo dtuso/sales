@@ -1,0 +1,100 @@
+mixin renderPlanContent(plan, index)
+
+  - var firstProductPackage = (plan.productPackages && plan.productPackages.length > 0) ? plan.productPackages[0] : {}
+
+  //- Plan Flag - usually red
+  if (plan.bestValueText)
+    div(class="plan-flag #{plan.bestValueBackgroundColor ? plan.bestValueBackgroundColor : ''}") !{plan.bestValueText}
+
+  //- Tile top contains: heading, subhead, price stuff, dropdown, and button
+  .plan-tile-top
+    if (plan.title)
+      h2.plan-title !{plan.title}
+    if (plan.subTitle)
+      h5.plan-subtitle !{plan.subTitle}
+    if (plan.text)
+      p.plan-text !{plan.text}
+      //- p.plan-text !{markdownToHtml(plan.text)}
+
+    //- price wrap
+    .plan-price-wrap
+      if (firstProductPackage.priceText)
+        | !{firstProductPackage.priceText}
+
+    if (plan.planDisclaimers)
+      .plan-disclaimers !{plan.planDisclaimers}
+
+    //-dropdown goes here
+
+
+    if (plan.proPlan == true && plan.buttonText)
+      button(id="cart-button-#{index}" class="#{plan.buttonColor ? plan.buttonColor : 'btn-default'} btn btn-plan", data-tcode="#{plan.tcode ? plan.tcode : ''}" data-index="#{index}") !{plan.buttonText}
+    else if (plan.buttonText)
+      button(id="cart-button-#{index}" class="#{plan.buttonColor ? plan.buttonColor : 'btn-default'} btn btn-plan btn-lg btn-block", data-tcode="#{plan.tcode ? plan.tcode : ''}" data-index="#{index}") !{plan.buttonText}
+
+  //- Feature list
+  each feature in plan.features
+    //- Text at the bottom that can have multiple "rows"
+    .plan-item !{feature.text}
+
+mixin renderPlanTiles(planBox)
+  - var numberOfPlans = planBox.planBoxes.length
+  - var containerClass = ""
+
+  if (numberOfPlans > 4)
+    - containerClass = "plan-container"
+  else
+    - containerClass = "container"
+  div(class="pro-plans-wrap #{planBox.backgroundColor ? planBox.backgroundColor : ''} ")
+
+    //- if (planBox.subMarqueePro)
+    //-   | !{renderTile("rebrand/subMarqueePro", planBox.subMarqueePro)}
+
+    #plans(class="#{containerClass} pro-plans", data-icode="#{planBox.icode ? planBox.icode : ''}")
+      if (planBox.title)
+        h2.text-center !{planBox.title}
+
+      if (planBox.appTypeLinkText)
+        h4.text-center
+          a(href="#{planBox.appTypeLink}") !{planBox.appTypeLinkText}
+
+      .row
+        if (planBox.planTitle)
+          h2 !{planBox.planTitle}
+        each plan, index in planBox.planBoxes
+          - var colNumber = ""
+
+          if (numberOfPlans == 6)
+            - colNumber = "plan-col-2"
+
+          else if (numberOfPlans == 5)
+            - colNumber = "plan-col-15"
+
+          else if (numberOfPlans == 4)
+            - colNumber = "col-md-3 col-sm-6"
+
+          else if (numberOfPlans <= 3)
+            - colNumber = "col-sm-4"
+            - var openColumns = 0
+            - var additionalClass = ""
+            if numberOfPlans < 3 && index == 0
+              - openColumns = 12 - (numberOfPlans*4)
+              - additionalClass = "col-sm-offset-"+(openColumns/2)
+
+          div(class="#{colNumber ? colNumber: ''} #{additionalClass ? additionalClass: ''} plan-tile #{plan.proPlan ? 'plan-pro' : ''}")
+            .pro-plan-wrap
+              +renderPlanContent(plan, index)
+
+  script(type="text/javascript").
+    $(window).load(function() {
+      var maxTitleHeight = 0;
+      $(".plan-title").each(function(index, title) {
+        maxTitleHeight = $(title).height() > maxTitleHeight ? $(title).height() : maxTitleHeight;
+      }).css("height", maxTitleHeight);
+
+      var maxHeight = 0;
+      $(".pro-plan-wrap").each(function(index, plan) {
+        maxHeight = $(plan).outerHeight() > maxHeight ? $(plan).outerHeight() : maxHeight;
+      }).css("height", maxHeight);
+    });
+
