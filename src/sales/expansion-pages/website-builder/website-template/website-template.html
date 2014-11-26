@@ -1,0 +1,109 @@
+---
+location: sales/hosting/website-builder/website-template
+id: 54664e71f778fc10f0fd4af0
+name: SEM-172
+comments: SEO Expansion Pages - Website Template
+---
+{% extends 'layouts/base.html' %} 
+{% block metahead %} 
+
+{% parent %} 
+{% endblock %} 
+{% block body %}
+<div id="gdep">
+  <section class="faq-section">
+    <div class="l-main-container container faq-container">
+      <div class="col-sm-12">
+        <div class="col-sm-8">
+          <div class="expansion-page-top">
+            <div class="row">
+              <div class="col-sm-3">
+                <div class="icon-container">
+                  <img class="ep-baw-wsb-image" src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/expansion-pages/build-a-website/img/ep_baw_sprite_20141117_4.png" />
+                </div>
+              </div>
+              <div class="col-sm-9 title-container">
+                <div>
+                  <h1>[@L[cds.sales/gd/expansion-pages/website-builder/website-template:page-title-h1]@L]</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="expansion-page-share">
+            <div class="gdep-view-plans">
+              <a class="btn btn-primary btn-lg" id="gdep-view-plans" href="[@T[link:<relative path='~/hosting/website-builder.aspx' secure='true'><param name='ci' value='94923' /></relative>]@T]" data-ci="94923">[@L[cds.sales/gd/expansion-pages/website-builder/website-template:view-plans-button-label]@L]</a>
+            </div>
+            <div class="gdep-share">
+              <div class="fosshare" data-twshareurl="[@T[link:<relative path='~/hosting/website-builder/website-template' secure='true' />]@T]" data-twtext="Website Templates | Free or Paid? - [@T[companyname:name]@T]" data-twrelated="[@T[companyname:name]@T] Website Builder" data-shareurl="[@T[link:<relative path='~/hosting/website-builder/website-template' secure='true' />]@T]" data-buttons="google,facebook,twitter"></div>
+            </div>
+          </div>
+          <div class="expansion-page-content">
+            <p>[@L[cds.sales/gd/expansion-pages/website-builder/website-template:main-content]@L]</p>
+            <div class="text-center">
+              <a class="btn btn-primary btn-lg" id="gdep-see-all-faqs" href="[@T[link:<relative path='~/hosting/website-builder.aspx' secure='true'><param name='ci' value='94919' /></relative>]@T]#faq" data-ci="94919">[@L[cds.sales/gd/expansion-pages/website-builder/website-template:see-all-faqs-button-label]@L]</a>
+            </div>
+          </div>              
+        </div>
+        <div class="col-sm-4 sidebar-container">
+          <div class="sidebar-box">
+            <h6>[@L[cds.sales/gd/expansion-pages/website-builder/website-template:top-3-faqs-title]@L]</h6>
+            <ul class="list-unstyled">    
+              <li>
+                <a href="[@T[link:<external parammode='explicit' linktype='COMMUNITYURL' secure='true' path='help/article/1048/upgrading-or-downgrading-your-website-builder-plan' />]@T]" data-ci="94920">[@L[cds.sales/gd/expansion-pages/website-builder/website-template:top-3-faqs-1]@L]</a>
+              </li>
+              <li>
+                <a href="[@T[link:<external parammode='explicit' linktype='COMMUNITYURL' secure='true' path='help/article/8372/linking-text-and-images-with-website-builder-v7' />]@T]" data-ci="94921">[@L[cds.sales/gd/expansion-pages/website-builder/website-template:top-3-faqs-2]@L]</a>
+              </li>
+              <li>
+                <a href="[@T[link:<external parammode='explicit' linktype='COMMUNITYURL' secure='true' path='help/article/8465/changing-your-domain-name-in-website-builder-v7' />]@T]" data-ci="94922">[@L[cds.sales/gd/expansion-pages/website-builder/website-template:top-3-faqs-3]@L]</a>
+              </li>
+            </ul>
+          </div>
+          <div class="sidebar-box ">
+            <h6>[@L[cds.sales/gd/expansion-pages/website-builder/website-template:other-resources-title]@L]</h6>
+            <ul class="list-unstyled">
+              <li>
+                <a href="[@T[link:<external parammode='explicit' linktype='COMMUNITYURL' secure='true' path='/help/category/158/registering-domain-names' />]@T]" data-ci="94913">[@L[cds.sales/gd/expansion-pages/website-builder/website-template:other-resources-1]@L]</a>
+              </li>
+              <li>
+                <a href="[@T[link:<external parammode='explicit' linktype='COMMUNITYURL' secure='true' path='/help/category/986/website-builder' />]@T]" data-ci="94917">[@L[cds.sales/gd/expansion-pages/website-builder/website-template:other-resources-2]@L]</a>
+              </li>
+              ##if(!activeLanguageAny([fr-CA]) && (countrySiteAny(uk,ca,au,nz,sg,ph) || activeLanguageAny([en-us],[en-ie])))
+              <li>
+                <a href="[@T[link:<external parammode='explicit' linktype='COMMUNITYURL' secure='true' path='/help/category/1042/online-store' />]@T]" data-ci="94915">[@L[cds.sales/gd/expansion-pages/website-builder/website-template:other-resources-3]@L]</a>
+              </li>
+              ##endif
+              ##if(activeLanguageAny([en-us]))
+              <li>
+                <a href="[@T[link:<external parammode='explicit' linktype='COMMUNITYURL' secure='true' path='/help/category/1038/get-found' />]@T]" data-ci="94914">[@L[cds.sales/gd/expansion-pages/website-builder/website-template:other-resources-4]@L]</a>
+              </li>
+              ##endif
+              <li>
+                <a href="[@T[link:<external parammode='explicit' linktype='COMMUNITYURL' secure='true' path='/'><param name='ci' value='94916' /></external>]@T]" data-ci="94916">[@L[cds.sales/gd/expansion-pages/website-builder/website-template:other-resources-5]@L]</a>
+              </li>
+            </ul>
+          </div>
+          <div class="sidebar-green-box">
+            <div class="text-center">
+              <img src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/expansion-pages/build-a-website/img/ep_baw_green_box_icon.png" alt="undefined" />
+            </div>
+            <h3>[@L[cds.sales/gd/expansion-pages/website-builder/website-template:green-box-title]@L]</h3>
+            <h6>[@L[cds.sales/gd/expansion-pages/website-builder/website-template:green-box-text]@L]</h6>
+            <a href="tel:[@T[support:<technicalSupportPhone />]@T]" class="sidebar-phone">[@T[support:<technicalSupportPhone />]@T]</a>
+          </div>                    
+        </div>
+      </div>
+      <div class="expansion-page-cta-container">
+        <a class="btn btn-primary btn-lg expansion-page-cta" id="gdep-choose-package" href="[@T[link:<relative path='~/hosting/website-builder.aspx' secure='true'><param name='ci' value='94912' /></relative>]@T]" data-ci="94912">
+          <i class="ico ico-gt"></i>
+          [@L[cds.sales/gd/expansion-pages/website-builder/website-template:choose-your-product-package-label]@L]
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
+{% endblock %} 
+
+{% block footer %}
+  <script src="[@T[link:<javascriptroot />]@T]starfield/fos.share/v1.3/fos.share-20140505.min.js" id="fosShareScript" ></script>
+{% endblock %}

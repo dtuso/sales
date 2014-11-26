@@ -1,0 +1,77 @@
+---
+location: localization/sales/gd/expansion-pages/website-builder/website-template/en
+id: 546657d5f778fc1a109d4064
+name: SEM-172
+---
+{% include '../../../../modules/doc-block.html' %}
+<phrase key="page-title" />
+Website Templates | Free or Paid? - [@T[companyname:name]@T]
+<phrase key="meta-description" />
+Not sure if you should use a free website template or pay a small fee to use a website builder? Learn the pros and cons of each right here.
+<phrase key="og-title" />
+Website Templates | Free or Paid? - [@T[companyname:name]@T]
+<phrase key="og-description" />
+Not sure if you should use a free website template or pay a small fee to use a website builder? Learn the pros and cons of each right here.
+<phrase key="meta-keywords" />
+website templates, free website templates, website template, free website template, web template
+<phrase key="page-title-h1" />
+What are Website Templates?
+<phrase key="view-plans-button-label" />
+View Plans
+<phrase key="main-content" />
+Website templates help individuals and business owners create an online presence without having to hire a web developer or webmaster. In other words, using a site template puts you — the website owner — in control. Templates provide a great option for people who are willing to spend some time getting their website online, but are not willing to shell out the thousands of dollars that a web developer might charge.<br /><br />
+
+<b>Two Basic Options – Free or Paid</b><br />
+If you've decided to use a web template to create your site, you'll find a lot of options to choose from. Your first decision will be related to your pocketbook. Are you willing to pay a (typically) small price for a website design or are you looking for completely free website templates? Each option comes with its own pros and cons.<br /><br />
+
+<b>Free Website Templates</b><br />
+Obviously, the main benefit of a free website template is the cost. You spend no money upfront. However, these web templates typically have more limitations than ones that might cost a small fee.<br /><br />
+
+Free web templates are often harder to customize and often lack certain functionalities, such as online shopping carts. While these factors may not be a drawback for a personal website, it's not ideal for a business owner who wants to create a strong, branded image online or needs to sell products through their website.<br /><br />
+
+On a similar note, free templates often look just like that — a free template. They lack the polished look of a professional design. Once again, this might be fine for some websites, but business owners will probably want to consider something else when establishing their company's online presence.<br /><br />
+
+<b>Website Templates for a Fee</b><br />
+If you decide to pay for your web template, you'll find that some places will sell them for a one-time, upfront fee, while others will charge you a small monthly fee.<br /><br />
+
+Places that require a monthly fee typically give you access to a customer support team — a great benefit if you ever run into a problem or just want some help setting up your website.<br /><br />
+
+Most paid templates provide you with designs that can easily be customized to reflect your style or brand, helping you to create a website you can be proud of.<br /><br />
+
+<b>Which One?</b><br />
+If price is your driving factor, going with a free website template might make the most sense for you.<br /><br />
+
+If you want to create a professional-looking website, but can't afford to pay a high-end developer, you'll want to shell out a little bit of money for a paid website template and site building tool. A website builder platform will make customizing your site easier than a free template, which makes it a smart investment for many website owners.<br /><br />
+
+<b>Start Creating</b><br />
+If you've been searching for a website template, check out [@T[companyname:name]@T]'s Website Builder. You'll find great features like the ability integrate social apps from Facebook, Twitter and YouTube, as well as business apps like PayPal.<br /><br />
+
+For as low as [@T[productprice:<current productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/month, you get access to a variety of templates and the support of our award-winning customer service team. Make your website today with [@T[companyname:name]@T].
+<phrase key="see-all-faqs-button-label" />
+See All Website Builder FAQs
+<phrase key="choose-your-product-package-label" />
+Choose Your Website Builder Package
+<phrase key="top-3-faqs-title" />
+Top Three Related FAQs
+<phrase key="top-3-faqs-1" />
+Adjusting your Plan
+<phrase key="top-3-faqs-2" />
+Add Text and Images
+<phrase key="top-3-faqs-3" />
+Changing your domain name
+<phrase key="other-resources-title" />
+Other Resources
+<phrase key="other-resources-1" />
+Domains
+<phrase key="other-resources-2" />
+Website Builder
+<phrase key="other-resources-3" />
+Online Store
+<phrase key="other-resources-4" />
+Get Found Tool
+<phrase key="other-resources-5" />
+24/7 Support
+<phrase key="green-box-title" />
+Need help?
+<phrase key="green-box-text" />
+Call anytime. Our free, award-winning support is here day and night.

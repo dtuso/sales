@@ -1,0 +1,25 @@
+{
+  "website-template.html": {
+    "cdsDetails": {
+      "champion": {
+        "name": "Victor Songco",
+        "email": "vsongco@godaddy.com"
+      }
+    },
+    "metaTitle": "[@L[cds.sales/gd/expansion-pages/website-builder/website-template:page-title]@L]",
+    "metaDescription": "[@L[cds.sales/gd/expansion-pages/website-builder/website-template:meta-description]@L]",
+    "metaKeywords": "[@L[cds.sales/gd/expansion-pages/website-builder/website-template:meta-keywords]@L]",
+    "metaCanonicalPath": "/hosting/website-builder/website-template",
+    "metaOgTitle": "[@L[cds.sales/gd/expansion-pages/website-builder/website-template:og-title]@L]",
+    "metaOgImage": "fos/hp/rebrand/img/gd_rebrand_og.png",
+    "metaOgDescription": "[@L[cds.sales/gd/expansion-pages/website-builder/website-template:og-description]@L]"
+  },
+  "website-template.language": {
+    "cdsDetails": {
+      "champion": {
+        "name": "Victor Songco",
+        "email": "vsongco@godaddy.com"
+      }
+    }
+  }
+}
