@@ -1,8 +1,8 @@
 ---
 location: sales/hosting/website-builder.aspx
-id: 546bc363f778fc10909ad97e
-name: GCE-31167
-comments: Remove Reviews Stars and Read Reviews links in Marquee
+id: 5475076df778fc0a98909646
+name: SEM-213
+comments: FAQ tab link changes to Expansion pages
 ---
 {% extends 'layouts/base.html' %}
 {% block pageTitle %}
@@ -1306,6 +1306,20 @@ comments: Remove Reviews Stars and Read Reviews links in Marquee
     });
 
   })( jQuery, window, document );
+
+  ##if(activeLanguageAny([en-au],[en-ca],[en-gb],[en-in],[en-us]))
+  $(document).ready(function(){
+    $("a[href='http://support.godaddy.com/help/article/5107']").text("How Do I Build a Website?");
+    $("a[href='http://support.godaddy.com/help/article/5107']").attr('data-ci','94986');
+    $("a[href='http://support.godaddy.com/help/article/5107']").removeAttr("target");
+    $("a[href='http://support.godaddy.com/help/article/5107']").attr('href','[@T[link:<relative path='~/hosting/website-builder/how-to-build-a-website' secure='true' />]@T]');
+
+    $("a[href='http://support.godaddy.com/help/article/4026']").text("What are Website Templates?");
+    $("a[href='http://support.godaddy.com/help/article/4026']").attr('data-ci','94987');
+    $("a[href='http://support.godaddy.com/help/article/4026']").removeAttr("target");
+    $("a[href='http://support.godaddy.com/help/article/4026']").attr('href','[@T[link:<relative path='~/hosting/website-builder/website-template' secure='true' />]@T]');
+  });
+  ##endif
 </script>
 
 
