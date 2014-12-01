@@ -3,6 +3,10 @@ location: sales/offers/online-business.aspx
 id: 546d1ee6f778fc1b50c69758
 name: GCE-32384
 comments: Fix Security Vulnerability
+=======
+id: 545a9d0cf778fc11ac121096
+name: GCE-33087
+comments: Hide .co.uk and .uk from disclaimer for UK markets temporary
 url: http://www.dev-godaddy.com/offers/online-business.aspx
 assetPath: false
 metaTitle: "[@L[cds.sales/offers/online-business:page-title]@L]"
@@ -1249,7 +1253,7 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
           $this.find('.tlds-in').show();
         ##endif
         ##if(countrySiteAny(uk) || isManager())
-          $this.find('.tlds-uk').show();
+          $this.find('.tlds-uk').hide(); //This change was temporary in an emergancy ticket: GCE-33087.  Fix with DPP and SAPI team coming soon
         ##endif
       }
 
