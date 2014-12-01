@@ -1,0 +1,70 @@
+---
+location: localization/sales/gd/expansion-pages/online-store/best-ecommerce-solution/en
+id: 547cb435f778fc0d8800e62c
+name: SEM-235
+---
+{% include '../../../../modules/doc-block.html' %}
+<phrase key="page-title" />
+Best eCommerce Solutions | Make Your Store Successful - [@T[companyname:name]@T]
+<phrase key="meta-description" />
+Looking for the best eCommerce solution for your small business? Learn about the great features on [@T[companyname:name]@T]'s Online Store that can help make your business a success!
+<phrase key="og-title" />
+Best eCommerce Solutions | Make Your Store Successful - [@T[companyname:name]@T]
+<phrase key="og-description" />
+Not sure if you should use a free website template or pay a small fee to use a website builder? Learn the pros and cons of each right here.
+<phrase key="meta-keywords" />
+best ecommerce solution, best ecommerce website design, best ecommerce solutions, best ecommerce shopping cart, best ecommerce site builder, best ecommerce web hosting
+<phrase key="page-title-h1" />
+The Best eCommerce Solution
+<phrase key="view-plans-button-label" />
+View Plans
+<phrase key="share-twitter-related" />
+[@T[companyname:name]@T] Online Store
+<phrase key="share-buttons" />
+google,facebook,twitter
+<phrase key="main-content" />
+The best eCommerce website design draws users in and encourages them to complete a purchase. A smart design does more than just make your company look good; it features trust signals that help put first-time visitors at ease. Trust signals are features on your website that inspire consumers to believe in the safety and security of your site for making online purchases. For instance, having testimonials and customer reviews helps new users feel more comfortable purchasing from a website.<br /><br />
+
+Another trust signal that's part of some of the best eCommerce shopping carts is payment assurance. Consumers need to know that their payment information will be safe on your site. Third-party badges—from PayPal, VeriSign, and Visa, just to name a few—help first-time visitors feel more confident and more willing to make transactions.<br /><br />
+
+In addition to including customer reviews and third-party badges, you should also make it easy for visitors to contact you. Being transparent about your company's location and phone number, as well as how visitors can reach you (through phone, email, social media, etc.), helps consumers feel more confident about doing business through your website.<br /><br />
+
+Boost customers' trust in your site by seamlessly integrating your social media presence with your website, allowing users to share your content, follow your business, or provide feedback.<br /><br />
+
+To get started, follow the below steps:<br /><br />
+
+1.	Login to your <a href="[@T[link:<external parammode='explicit' linktype='MYAURL' secure='true' path='/'><param name='ci' value='12345' /></external>]@T]">Account Manager</a>.<br />
+2.	Under <b>Products</b> list, click <b>Online Store</b> then click <b>Launch</b> next to the appropriate account.<br />
+3.	On the <b>Promote</b> tab, click <b>Promote</b>.<br />
+4.	Select <b>Turn On</b> for each of the features you want to activate (Some feature cannot be turned on until you publish your Online Store by clicking the <b>Go Live</b> link).<br /><br/>
+
+By letting you easily add social features and other trust signals to your website, you'll find that Online Store offers one of the best eCommerce site builders out there for your business.
+Plus, with Online Store, you also get access to our award-winning support team. Our outstanding team members are available to answer your questions 24 hours a day, 7 days a week—exactly what you would expect from the best eCommerce solution.
+<phrase key="see-all-faqs-button-label" />
+See All Online Store FAQs
+<phrase key="choose-your-product-package-label" />
+Choose Your Online Store Package
+<phrase key="top-3-faqs-title" />
+Top Three Related FAQs
+<phrase key="top-3-faqs-1" />
+eCommerce Websites
+<phrase key="top-3-faqs-2" />
+Collecting Payment Online
+<phrase key="top-3-faqs-3" />
+Sales &amp; Transactions Fees
+<phrase key="other-resources-title" />
+Other Resources
+<phrase key="other-resources-1" />
+Domains
+<phrase key="other-resources-2" />
+Online Store
+<phrase key="other-resources-3" />
+Online Store
+<phrase key="other-resources-4" />
+Get Found Tool
+<phrase key="other-resources-5" />
+24/7 Support
+<phrase key="green-box-title" />
+Need help?
+<phrase key="green-box-text" />
+Call anytime. Our free, award-winning support is here day and night.
