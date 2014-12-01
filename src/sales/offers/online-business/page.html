@@ -1249,7 +1249,7 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
           $this.find('.tlds-in').show();
         ##endif
         ##if(countrySiteAny(uk) || isManager())
-          $this.find('.tlds-uk').hide();
+          $this.find('.tlds-uk').hide(); //This change was temporary in an emergancy ticket: GCE-33087.  Fix with DPP and SAPI team coming soon
         ##endif
       }
 
