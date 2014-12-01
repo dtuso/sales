@@ -1,8 +1,8 @@
 ---
 location: localization/sales/gd/pro/dedicated-server-config/en
-id: false
-name: GCE-27519
-comments: Web Pro dedicated server config page
+id: 546e10fcf778fc1fd8ea1914
+name: GCE-32619
+comments: Update Self Managed Wording
 ---
 {% include '../../../modules/doc-block.html' %}
 <phrase key="page-title" />
@@ -51,6 +51,8 @@ Includes: Dedicated team of server admin experts (Available in English) | Parall
 Self-Managed
 <phrase key="selfos" />
 Your choice of Ubuntu, Fedora or CentOS 7
+<phrase key="selfos-32619" />
+Your choice of Ubuntu, Fedora, CentOS 6 or CentOS 7
 <phrase key="managedself" />
 No control panel or backups. Command-line only for hardcore server pros.
 <phrase key="2GB" />
