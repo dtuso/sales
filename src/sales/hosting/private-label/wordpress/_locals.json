@@ -211,14 +211,6 @@
       {
         "left": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-3-OneClickMigrations]@L]",
         "right": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-13-EasilyMoveYourExistingWordPressSiteWithOur]@L]"
-      },
-      {
-        "left": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-OneClickStaging]@L]",
-        "right": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-EasilyClone]@L]"
-      },
-      {
-        "left": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-SSHAccess]@L]",
-        "right": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-SSHLetsYou]@L]"
       }
       ]
   }
