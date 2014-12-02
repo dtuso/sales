@@ -1,10 +1,3 @@
----
-location: localization/sales/gd/domains/domain-name-search/en
-id: 535add209faf701884437e3e
-name: GCE-29696
-comments: Merchandising Updates 10/14
----
-{% include 'modules/doc-block.html' %}
 <!-- DOC BLOCK (DO NOT REMOVE)
 
 
@@ -22,10 +15,10 @@ comments: Merchandising Updates 10/14
       Adam Smith <absmith@godaddy.com>
 
     DRAFT DETAILS:
-      Modified Date:  2014-10-06 12:42:33 pm
-      Created By:     Pooja Singhvi <psinghvi@godaddy.com>
+      Modified Date:  2014-11-05
+      Created By:     Mike Cowan <mcowan@godaddy.com>
       JIRA Ticket:    GCE-30012
-      Comments:       Merchandising Updates 10/14
+      Comments:       Merchandising Updates 11/12
       
 
 
@@ -465,6 +458,16 @@ Lead the way with <strong>.guide</strong>
 <strong>.lawyer</strong> says you know the law.
 <phrase key="PodDotEuNewText" />
 Conquer Europe with <strong>.eu</strong>
+<phrase key="PodDotKiwiText" />
+Score in New Zealand with <strong>.kiwi</strong>
+<phrase key="PodDotArmyText" />
+Show your stripes with <strong>.army</strong>
+<phrase key="PodDotShikshaText" />
+Reach Indian learners with <strong>.shiksha</strong>
+<phrase key="PodDotCityText" />
+Speak to <strong>.city</strong> dwellers on the web.
+<phrase key="PodDotSarlText" />
+</strong>.sarl</strong> says you're licensed partnership
 <phrase key="TldDotGuide" />
 <strong>.guide</strong>
 <phrase key="TldDotBoutique" />
@@ -597,12 +600,24 @@ Conquer Europe with <strong>.eu</strong>
 <strong>.web</strong>
 <phrase key="TldDotInfo" />
 <strong>.info</strong>
+<phrase key="TldDotKiwi" />
+<string>.kiwi</strong>
+<phrase key="TldDotShiksha" />
+<strong>.shiksha</strong>
+<phrase key="TldDotJuegos" />
+<strong>.juegos</strong>
+<phrase key="TldDotBiz" />
+<strong>.biz</strong>
+<phrase key="TldDotCity" />
+<strong>.city</strong>
+<phrase key="TldDotSarl" />
+<strong>.sarl</strong>
 <phrase key="CarouselSlide1Default" />
 Get a web address that tells the world what you do. New domains available now: <strong>.attorney</strong>, <strong>.church</strong>, <strong>.club</strong>, <strong>.xyz</strong> and <strong>.guide</strong>. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a> 
 <phrase key="CarouselSlide1AU" />
 New domains are here! <strong>.TIPS</strong>, <strong>.GURU</strong>, <strong>.TODAY</strong> are now available. Plus, pre-register <strong>.CLUB</strong>, <strong>.REVIEWS</strong>, <strong>.NINJA</strong> and more. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Get yours now</a>
 <phrase key="CarouselSlide1DE" />
-Get a web address that tells the world what you do or where you are. New domains available now: <strong>.immo</strong>, <strong>.london</strong>, <strong>.guide</strong>, <strong>.club</strong> and <strong>.kaufen</strong>. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a> 
+Get a web address that tells the world what you do or where you are. New domains available now: <strong>.immo</strong>, <strong>.today</strong>, <strong>.guide</strong>, <strong>.club</strong> and <strong>.kaufen</strong>. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a> 
 <phrase key="CarouselSlide1ES" />
 Get a web address that tells the world what you do. New domains available now: <strong>.club</strong>, <strong>.digital</strong>, <strong>.tips</strong> and <strong>.guru</strong>. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a>
 <phrase key="CarouselSlide1UK" />
@@ -614,7 +629,7 @@ Get a web address that tells the world what you do. New domains available now: <
 <phrase key="CarouselSlide1IN" />
 The buying stage was good, setup was easy and post-launch was smooth. I've called GoDaddy customer service once and had an excellent experience.
 <phrase key="CarouselSlide1CA" />
-Get a web address that tells the world what you do. New domains available now: <strong>.club</strong>, <strong>.today</strong>, <strong>.email</strong>, <strong>.guide</strong> and <strong>.quebec</strong>. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a> 
+Get a web address that tells the world what you do or where you are. New domains available now: <strong>.club</strong>, <strong>.today</strong>, <strong>.email</strong>, <strong>.guide</strong> and <strong>.quebec</strong>. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a> 
 <phrase key="CarouselSlide2Default" />
 SAVE 30% on new domains: <strong>.global</strong>, <strong>.email</strong>, <strong>.website</strong>, <strong>.guru</strong>, <strong>.army</strong> and more.<span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88004" /></relative>]@T]">Search for your perfect domain name now!</a>
 <phrase key="CarouselSlide2UK" />
@@ -634,4 +649,4 @@ It's Go Time! Get online now with your own domain name. Save 50% and more on <a 
 <phrase key="CarouselSlide3ES" />
 SAVE up to 50% or more when you get online today with these popular domains:<a data-ci="88402" href="[@T[link:<relative path="/tlds/com"></relative>]@T]"><strong>.com</strong></a>, <a data-ci="91412" href="[@T[link:<relative path="/tlds/net"></relative>]@T]"><strong>.net</strong></a>, <a data-ci="88582" href="[@T[link:<relative path="/tlds/co-domain"></relative>]@T]"><strong>.co</strong></a>, <a data-ci="88404" href="[@T[link:<relative path="/tlds/org.aspx"></relative>]@T]"><strong>.org</strong></a>, <a data-ci="90888" href="[@T[link:<relative path="/tlds/me"></relative>]@T]"><strong>.me</strong></a>, <a data-ci="88401" href="[@T[link:<relative path="/tlds/biz.aspx"></relative>]@T]"><strong>.biz</strong></a> and <a data-ci="93946" href="[@T[link:<relative path="/tlds/eu-domain"></relative>]@T]"><strong>.eu</strong></a>
 <phrase key="CarouselSlide3IN" />
-GoDaddy is not only a well-known name in the industry that understand your requirements, but they can also help you decide what's best suited for your needs.
+[@T[companyname:name]@T] is not only a well-known name in the industry that understand your requirements, but they can also help you decide what's best suited for your needs.
