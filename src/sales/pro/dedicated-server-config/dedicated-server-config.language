@@ -1,8 +1,8 @@
 ---
 location: localization/sales/gd/pro/dedicated-server-config/en
-id: 546e10fcf778fc1fd8ea1914
-name: GCE-32619
-comments: Update Self Managed Wording
+id: 547cf285f778fc1db8259f29
+name: GCE-31530
+comments: Web Pro Config Page Content Updates
 ---
 {% include '../../../modules/doc-block.html' %}
 <phrase key="page-title" />
@@ -55,6 +55,8 @@ Your choice of Ubuntu, Fedora or CentOS 7
 Your choice of Ubuntu, Fedora, CentOS 6 or CentOS 7
 <phrase key="managedself" />
 No control panel or backups. Command-line only for hardcore server pros.
+<phrase key="managedself-31530" />
+No control panel or backups. Command-line and RDP access for hardcore server pros.
 <phrase key="2GB" />
 2 GB
 <phrase key="4GB" />
