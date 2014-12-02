@@ -1013,8 +1013,8 @@
                 {
                     "id":"pro_ds_self_managed",
                     "name":"[@L[cds.sales/gd/pro/dedicated-server-config:Self-Managed]@L]",
-                    "os": "[@L[cds.sales/gd/pro/dedicated-server-config:selfos]@L]",
-                    "includes": "[@L[cds.sales/gd/pro/dedicated-server-config:managedself]@L]",
+                    "os": "[@L[cds.sales/gd/pro/dedicated-server-config:selfos-32619]@L]",
+                    "includes": "[@L[cds.sales/gd/pro/dedicated-server-config:managedself-31530]@L]",
                     "addonprice": "[@T[currencyprice:<price usdamount=\"0\" /> ]@T]"
                 }
             ],
@@ -1060,8 +1060,8 @@
                 {
                     "id":"pro_ds_self_managed",
                     "name":"[@L[cds.sales/gd/pro/dedicated-server-config:Self-Managed]@L]",
-                    "os": "[@L[cds.sales/gd/pro/dedicated-server-config:selfos]@L]",
-                    "includes": "[@L[cds.sales/gd/pro/dedicated-server-config:managedself]@L]",
+                    "os": "[@L[cds.sales/gd/pro/dedicated-server-config:selfos-32619]@L]",
+                    "includes": "[@L[cds.sales/gd/pro/dedicated-server-config:managedself-31530]@L]",
                     "addonprice": "[@T[currencyprice:<price usdamount=\"0\" /> ]@T]"
                 }
             ],
@@ -1108,8 +1108,8 @@
                 {
                     "id":"pro_ds_self_managed",
                     "name":"[@L[cds.sales/gd/pro/dedicated-server-config:Self-Managed]@L]",
-                    "os": "[@L[cds.sales/gd/pro/dedicated-server-config:selfos]@L]",
-                    "includes": "[@L[cds.sales/gd/pro/dedicated-server-config:managedself]@L]",
+                    "os": "[@L[cds.sales/gd/pro/dedicated-server-config:selfos-32619]@L]",
+                    "includes": "[@L[cds.sales/gd/pro/dedicated-server-config:managedself-31530]@L]",
                     "addonprice": "[@T[currencyprice:<price usdamount=\"0\" /> ]@T]"
                 }
             ],
@@ -1155,8 +1155,8 @@
                 {
                     "id":"pro_ds_self_managed",
                     "name":"[@L[cds.sales/gd/pro/dedicated-server-config:Self-Managed]@L]",
-                    "os": "[@L[cds.sales/gd/pro/dedicated-server-config:selfos]@L]",
-                    "includes": "[@L[cds.sales/gd/pro/dedicated-server-config:managedself]@L]",
+                    "os": "[@L[cds.sales/gd/pro/dedicated-server-config:selfos-32619]@L]",
+                    "includes": "[@L[cds.sales/gd/pro/dedicated-server-config:managedself-31530]@L]",
                     "addonprice": "[@T[currencyprice:<price usdamount=\"0\" /> ]@T]"
                 }
             ],
@@ -1202,8 +1202,8 @@
                 {
                     "id":"pro_ds_self_managed",
                     "name":"[@L[cds.sales/gd/pro/dedicated-server-config:Self-Managed]@L]",
-                    "os": "[@L[cds.sales/gd/pro/dedicated-server-config:selfos]@L]",
-                    "includes": "[@L[cds.sales/gd/pro/dedicated-server-config:managedself]@L]",
+                    "os": "[@L[cds.sales/gd/pro/dedicated-server-config:selfos-32619]@L]",
+                    "includes": "[@L[cds.sales/gd/pro/dedicated-server-config:managedself-31530]@L]",
                     "addonprice": "[@T[currencyprice:<price usdamount=\"0\" /> ]@T]"
                 }
             ],
@@ -1250,7 +1250,7 @@
                     "id":"pro_ds_self_managed",
                     "name":"[@L[cds.sales/gd/pro/dedicated-server-config:Self-Managed]@L]",
                     "os": "[@L[cds.sales/gd/pro/dedicated-server-config:windows2008]@L]",
-                    "includes": "[@L[cds.sales/gd/pro/dedicated-server-config:managedself]@L]",
+                    "includes": "[@L[cds.sales/gd/pro/dedicated-server-config:managedself-31530]@L]",
                     "addonprice": "[@T[currencyprice:<price usdamount=\"0\" /> ]@T]"
                 }
             ],
@@ -1296,7 +1296,7 @@
                     "id":"pro_ds_self_managed",
                     "name":"[@L[cds.sales/gd/pro/dedicated-server-config:Self-Managed]@L]",
                     "os": "[@L[cds.sales/gd/pro/dedicated-server-config:windows2008]@L]",
-                    "includes": "[@L[cds.sales/gd/pro/dedicated-server-config:managedself]@L]",
+                    "includes": "[@L[cds.sales/gd/pro/dedicated-server-config:managedself-31530]@L]",
                     "addonprice": "[@T[currencyprice:<price usdamount=\"0\" /> ]@T]"
                 }
             ],
@@ -1342,7 +1342,7 @@
                     "id":"pro_ds_self_managed",
                     "name":"[@L[cds.sales/gd/pro/dedicated-server-config:Self-Managed]@L]",
                     "os": "[@L[cds.sales/gd/pro/dedicated-server-config:windows2008]@L]",
-                    "includes": "[@L[cds.sales/gd/pro/dedicated-server-config:managedself]@L]",
+                    "includes": "[@L[cds.sales/gd/pro/dedicated-server-config:managedself-31530]@L]",
                     "addonprice": "[@T[currencyprice:<price usdamount=\"0\" /> ]@T]"
                 }
             ],
@@ -1389,7 +1389,7 @@
                     "id":"pro_ds_self_managed",
                     "name":"[@L[cds.sales/gd/pro/dedicated-server-config:Self-Managed]@L]",
                     "os": "[@L[cds.sales/gd/pro/dedicated-server-config:windows2008]@L]",
-                    "includes": "[@L[cds.sales/gd/pro/dedicated-server-config:managedself]@L]",
+                    "includes": "[@L[cds.sales/gd/pro/dedicated-server-config:managedself-31530]@L]",
                     "addonprice": "[@T[currencyprice:<price usdamount=\"0\" /> ]@T]"
                 }
             ],
@@ -1435,7 +1435,7 @@
                     "id":"pro_ds_self_managed",
                     "name":"[@L[cds.sales/gd/pro/dedicated-server-config:Self-Managed]@L]",
                     "os": "[@L[cds.sales/gd/pro/dedicated-server-config:windows2008]@L]",
-                    "includes": "[@L[cds.sales/gd/pro/dedicated-server-config:managedself]@L]",
+                    "includes": "[@L[cds.sales/gd/pro/dedicated-server-config:managedself-31530]@L]",
                     "addonprice": "[@T[currencyprice:<price usdamount=\"0\" /> ]@T]"
                 }
             ],

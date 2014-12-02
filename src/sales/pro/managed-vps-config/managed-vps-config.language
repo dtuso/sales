@@ -1,8 +1,8 @@
 ---
 location: localization/sales/gd/pro/managed-vps-config/en
-id: 546e1169f778fc1fd8ea1915
-name: GCE-32619
-comments: Update Self Managed Wording
+id: 547cf248f778fc1db8259f28
+name: GCE-31530
+comments: Web Pro Config Page Content Updates
 ---
 
 {% include 'modules/doc-block.html' %}
@@ -71,6 +71,8 @@ Includes: cPanel® | Patching | Security | Monitoring | Backups
 Includes: Dedicated team of server admin experts | cPanel® | Patching | Security | Monitoring | Backups 
 <phrase key="selfmanagedlinuxIncludes" />
 No control panel or backups. Command-line only for hardcore server pros.
+<phrase key="selfmanagedlinuxIncludes-31530" />
+No control panel or backups. Command-line and RDP access for hardcore server pros.
 <phrase key="included" />
 Included
 <phrase key="fullymanagedHeader" />
