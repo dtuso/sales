@@ -4,6 +4,7 @@ id: 547cfd7df778fc1db8259f2e
 name: GCE-31167
 comments: Remove Reviews Stars and Read Reviews links in Marquee
 url: http://www.dev-godaddy.com/ecommerce/online-store.aspx
+cssVersionOverride: 2
 ---
 {% extends 'layouts/base.html' %}
 {% block body %}
@@ -959,7 +960,7 @@ url: http://www.dev-godaddy.com/ecommerce/online-store.aspx
 <div class="modal fade" id="login-modal">
     <div class="modal-dialog">
         <div class="modal-content">
-            <form method="POST" id="g-modal-loginAcct-form" action="[@T[link:<external parammode="explicit" linktype="SSOURL" secure="true" />]@T]/login.aspx?spkey=[@T[sso:spkey]@T]&target=[@T[link:<external linktype='siteurl' path='/hosting/online-store.aspx' secure='false' parammode='explicit'/>]@T]#reviews">
+            <form method="POST" id="g-modal-loginAcct-form" action="[@T[link:<external parammode="explicit" linktype="SSOURL" secure="true" />]@T]/login.aspx?spkey=[@T[sso:spkey]@T]&target=[@T[link:<external linktype='siteurl' path='/ecommerce/online-store.aspx' secure='false' parammode='explicit'/>]@T]#reviews">
             <input type="hidden" value="LOGIN" name="LOGIN" />
             <input type="hidden" value="1" name="verifyShopper" />
                 <div class="modal-header">
@@ -998,7 +999,7 @@ url: http://www.dev-godaddy.com/ecommerce/online-store.aspx
                             ##endif                            
                             });              
                         </script>
-                        <script src="[@T[link:<javascriptroot />]@T]fos/sales/themes/scotty/ecommerce/online-store/js/online-store.js" type="text/javascript" ></script> 
+                        <script src="[@T[link:<javascriptroot />]@T]fos/sales/themes/scotty/ecommerce/online-store/js/online-store.js?v=1" type="text/javascript" ></script> 
          
 ##if(activeLanguageAny(en))
         <script type="text/javascript">
