@@ -1,6 +1,6 @@
 ---
 location: sales/ecommerce/online-store.aspx
-id: 546bbe93f778fc10909ad978
+id: 547cfd7df778fc1db8259f2e
 name: GCE-31167
 comments: Remove Reviews Stars and Read Reviews links in Marquee
 url: http://www.dev-godaddy.com/ecommerce/online-store.aspx
@@ -993,6 +993,9 @@ url: http://www.dev-godaddy.com/ecommerce/online-store.aspx
                             ##if(isManager())
                               managerView=true;
                             ##endif  
+                            ##if(activeLanguageAny([en-au],[en-ca],[en-gb],[en-in],[en-us]))
+                              $(".expansion-page-1-link").html(" and <a href=\"[@T[link:<relative path='~/ecommerce/online-store/best-ecommerce-solution' secure='true'><param name='ci' value='94923' /></relative>]@T]\">Add Social and Trust Signals</a>");
+                            ##endif                            
                             });              
                         </script>
                         <script src="[@T[link:<javascriptroot />]@T]fos/sales/themes/scotty/ecommerce/online-store/js/online-store.js" type="text/javascript" ></script> 
