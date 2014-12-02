@@ -1,0 +1,74 @@
+---
+location: sales/homepage/marquee/got/default_template
+id: false
+name: GCE-33230
+ctaLink: "[@T[link:<relative path='/offers/online-business.aspx'><param name='ci' value='93372' /></relative>]@T]"
+elementId: got
+---
+extends ../../../layouts/homepage/marquee
+  block append marqueeStyles
+    style.
+      .got-marquee{width:100%;min-width:1000px;height:400px;cursor:pointer;background-color:#ffffff}
+      .got-marquee-content{width:1000px;margin:0 auto;}
+      .got-text{color:#333333;padding:30px 0 0 0;}
+      .got-text>span{display:block;}
+      .got-text>div{display:inline-block;vertical-align:top;}
+      .got-middle-wrapper{padding:20px 0 0 0;}
+      .got-middle-wrapper>span{display:block;}
+      .got-price-text{text-align:center;}
+      .got-headline{font-size:66px;line-height:66px;}
+      .got-product-text{font-size:28px;line-height:28px;text-align:center;}
+      .got-product-subtext{font-family:'Walsheim-Medium';font-size:18px;line-height:18px;text-align:center;padding:5px 0 0 0;}
+      .got-cond-text{font-size:41px;line-height:41px;display:block;margin-top:50px;}
+      .got-rest-text{font-family:'Walsheim-Medium';font-size:12px;line-height:12px;display:block;padding-top:10px;text-align:center;}
+      .got-btn-wrapper>.got-price-text{color:#ffffff;background-color:#ff8a00;width:140px;height:125px;display:block;margin:20px 0 10px 0;padding:35px 10px 0 10px;}
+      .got-btn-wrapper>.got-price-text>.got-price{position:absolute;line-height:1.1;}
+      .got-plus-img,.got-equal-img{font-size:100px;padding:20px 20px 0 20px;}
+      .btn-wrap>.btn{width:130px;font-size:24px;}
+      .got-domain-image{background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gybo_marquee.jpg) no-repeat 0px 0px;width:160px;height:160px;margin-bottom:10px;}
+      .got-wsb-image{background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gybo_marquee.jpg) no-repeat 0px -162px;width:160px;height:160px;margin-bottom:10px;}
+      .got-o365-image{background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gybo_marquee.jpg) no-repeat 0px -324px;width:160px;height:160px;margin-bottom:10px;}
+      #gdhp-marq-got .btn {font-family:'Walsheim-Medium';}
+      #gdhp-marq-got {font-family:'Walsheim-Regular';}
+      .bigtext{visibility:hidden;}
+      
+      html[lang|="de"] .got-headline{font-size:48px;}
+      html[lang|="de"] .got-product-text{font-size:24px;}
+      html[lang|="de"] .got-marquee .btn-wrap>.btn{font-size:18px;}
+      html[lang|="de"] .got-rest-text{width:168px;}
+
+      html[lang|="it"] .got-headline{font-size:48px;}
+      html[lang|="it"] .got-product-text{font-size:24px;}
+      html[lang|="it"] .got-marquee .btn-wrap>.btn{font-size:14px;}
+      html[lang|="it"] .got-rest-text{width:168px;}
+      
+      html[lang|="fr"] .got-headline{font-size:48px;}
+      html[lang|="fr"] .got-product-text{font-size:24px;}
+      html[lang|="fr"] .got-marquee .btn-wrap>.btn{font-size:14px;}
+      html[lang|="fr"] .got-rest-text{width:168px;}
+
+  block marqueeContent
+    #gdhp-marq-got.got-marquee.js-gdhpclick(data-url!='[@T[link:<relative path="/offers/online-business.aspx"><param name="ci" value="93372" /></relative>]@T]', data-ci="93372")
+      .got-marquee-content
+        .got-text
+          span.got-headline.walsheim-black [@L[cds.sales/homepage/marquee/gybo:gybo-headline]@L]
+          .got-middle-wrapper
+            span.got-domain-image
+            span.got-product-text.tungsten[@L[cds.sales/homepage/marquee/gybo:gybo-marq-domain]@L]
+          .got-plus-img.walsheim-black +
+          .got-middle-wrapper
+            span.got-wsb-image
+            span.got-product-text.tungsten [@L[cds.sales/homepage/marquee/gybo:gybo-marq-wsb]@L]
+          .got-plus-img.walsheim-black +
+          .got-middle-wrapper
+            span.got-o365-image
+            span.got-product-text.tungsten [@L[cds.sales/homepage/marquee/gybo:gybo-marq-email]@L]
+            span.got-product-subtext [@L[cds.sales/homepage/marquee/gybo:gybo-marq-o365]@L]
+          .got-equal-img.walsheim-black =
+          .got-btn-wrapper
+            span.got-price-text.bigtext
+              span.got-price.walsheim-black [@T[productprice:<current productid="464069" period="monthly" promocode="24681357"></current>]@T] 
+              span.got-cond-text.tungsten [@L[cds.sales/homepage/marquee/gybo:gybo-per-month]@L]
+            .btn-wrap
+              span.btn.btn-warning#gdhp-marq-got-btn(data-ci="93372") [@L[cds.sales/homepage/marquee/gybo:gybo-get-it-now]@L]
+              span.got-rest-text [@L[cds.sales/homepage/marquee/gybo:gybo-rest-text]@L]
