@@ -1,9 +1,9 @@
 ---
 location: sales/ssl/ssl-certificates.aspx
 url: http://www.dev-godaddy.com/ssl/ssl-certificates.aspx
-id: 546cbdbff778fc1fd8ea183e
-name: GCE-31167
-comments: Remove Reviews Stars and Read Reviews links in Marquee
+id: 123
+name: GCE-32289
+comments: Fixed Save Percentage
 assetPath: false
 ---
 
@@ -183,7 +183,7 @@ line-height: 7px;
     $(document).ready(function(){
       $('[data-gd-sidebysidealign]').gdSideBySideAlign();
 
-      $('span.save-perc').html('[@T[productcompare:<percent primaryproductid="3645" secondaryproductid="3645"  showsymbol="true"><html><![CDATA[{0}]]></html></percent>]@T]');
+      $('span.save-perc').html('[@T[productcompare:<percent primaryproductid="3645" secondaryproductid="3645"  showsymbol="true" hidebelow="1"><html><![CDATA[{0}]]></html></percent>]@T]');
     });
 
   })( jQuery, window, document );

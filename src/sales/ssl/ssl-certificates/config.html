@@ -1,9 +1,9 @@
 ---
 location: sales/ssl/ssl-certificates-config.aspx
 url: http://www.dev-godaddy.com/ssl/ssl-certificates-config.aspx
-id:  546e0f4af778fc1fd8ea1912
-name: GCE-32769
-comments: changing second bullet of standard ssl
+id:  123
+name: GCE-32751
+comments: updated workflow for one website to default 2yrs
 assetPath: false
 ---
 ##if(false)
@@ -172,12 +172,11 @@ if (!Array.prototype.indexOf) {
 }
 var premiumIsAvailable = (premiumCountries.indexOf(country) !== -1);
 $(document).ready(function () {
-
- 
- 
   $('.site-lock-add').click(function (e) {
 $(this).find('.sitelock-checkbox').toggleClass('active');
 $('#isConfigUpdated').val('1');
+
+
 });  
   var productQuery = getParameterByName('plan') || 'ssl_dlx_1';
   var managerQuery = getParameterByName('mgrshopper');
@@ -523,7 +522,7 @@ function PopulatePlanTypeDropDown(data)
       var newItem = '';
       var planSub = planItem[0].substr(0,4);
       
-      //changing to always be true below
+      
       if (planItem[1].toLowerCase().indexOf("ssl_prm") >= 0){
         containsPremiumPlan = true;
 
@@ -748,14 +747,33 @@ $(".g-modal-close").click(function () {
 });
 
 $('.plan-sub-list').live('click', function () {
-console.log("before");
+
 $(this).prev("INPUT[type='radio']").prop("checked",true);
 $(this).prev("INPUT[type='radio']:checked").click();
-console.log("after");
+
 });
 
-$('span.save-perc').html('[@T[productcompare:<percent primaryproductid="3645" secondaryproductid="3645"  showsymbol="true"><html><![CDATA[{0}]]></html></percent>]@T]');
+$('span.save-perc').html('[@T[productcompare:<percent primaryproductid="3645" secondaryproductid="3645"  showsymbol="true" hidebelow="1" ><html><![CDATA[{0}]]></html></percent>]@T]');
 
+$(document).ready(function () {
+$('#chooseProtection li[data-main]').live('click', function () {
+
+if($(this).attr("data-main").indexOf(("ssl_std_3"))!==-1 && $(this).attr("data-ci").indexOf(("86941"))!==-1){
+
+$('#termList').click();
+
+$('#termList ul li').attr("data-main","ssl_std_2").click();
+}
+
+if($(this).attr("data-main").indexOf(("ssl_dlx_3"))!==-1 && $(this).attr("data-ci").indexOf(("86941"))!==-1){
+
+$('#termList').click();
+
+$('#termList ul li').attr("data-main","ssl_dlx_2").click();
+
+}
+});
+});
 </script>
 <script src="[@T[link:<javascriptroot />]@T]fos/script/atlantis_jquery14.min.js" type="text/javascript"></script>
 <script src="[@T[link:<javascriptroot />]@T]shared/js/jquery.plugins.min.20140925.js" type="text/javascript" ></script>
