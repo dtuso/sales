@@ -759,14 +759,14 @@ $(document).ready(function () {
 $('#chooseProtection li[data-main]').live('click', function () {
 
 if($(this).attr("data-main").indexOf(("ssl_std_3"))!==-1 && $(this).attr("data-ci").indexOf(("86941"))!==-1){
-console.log("made it inside standard");
+
 $('#termList').click();
 
 $('#termList ul li').attr("data-main","ssl_std_2").click();
 }
 
 if($(this).attr("data-main").indexOf(("ssl_dlx_3"))!==-1 && $(this).attr("data-ci").indexOf(("86941"))!==-1){
-console.log("made it inside deluxe");
+
 $('#termList').click();
 
 $('#termList ul li').attr("data-main","ssl_dlx_2").click();
