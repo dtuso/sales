@@ -1,0 +1,59 @@
+[
+  {
+    "TypeName":"Affiliate Program", "EmailAddresses": ["affiliates@godaddy.com"]
+  },
+  {
+    "TypeName":"Business Development/ Partnership", "EmailAddresses": ["bizdev@godaddy.com"]
+  },
+  {
+    "TypeName":"Charity -- 501 C 3 support", "EmailAddresses": ["charity@godaddy.com"]
+  },
+  {
+    "TypeName":"Corporate Development", "EmailAddresses": ["CorpDev@godaddy.com"]
+  },
+  {
+    "TypeName":"Customer Advocacy", "EmailAddresses": ["nthurston@godaddy.com"]
+  },
+  {
+    "TypeName":"Events/Sponsorship – Training /Education", "EmailAddresses": ["education@godaddy.com"]
+  },
+  {
+    "TypeName":"Events/ Sponsorship -- Sports, Motorsports & Signage", "EmailAddresses": ["katrina@godaddy.com"]
+  },
+  {
+    "TypeName":"Events/ Sponsorship -- Local Events", "EmailAddresses": ["nschwartz@godaddy.com"]
+  },
+  {
+    "TypeName":"General customer service -- technical issues, sales assistance", "EmailAddresses": ["support@godaddy.com"]
+  },
+  {
+    "TypeName":"HR -- Resumes, Career, Recruitments, Job Fairs", "EmailAddresses": ["hr@godaddy.com"]
+  },
+  {
+    "TypeName":"Media -- TV, Radio, Print", "EmailAddresses": ["tvmedia@godaddy.com"]
+  },
+  {
+    "TypeName":"Mobile Advertising", "EmailAddresses": ["POSMopps@godaddy.com"]
+  },
+  {
+    "TypeName":"Online Advertising", "EmailAddresses": ["POSMopps@godaddy.com"]
+  },
+  {
+    "TypeName":"Podcast Advertising", "EmailAddresses": ["POSMopps@godaddy.com"]
+  },
+  {
+    "TypeName":"PR -- Press, Interviews", "EmailAddresses": ["PR@GoDaddy.com"]
+  },
+  {
+    "TypeName":"Productions -- Commercials, Movies, Talent & Music", "EmailAddresses": ["gdp@godaddy.com"]
+  },
+  {
+    "TypeName":"Resellers", "EmailAddresses": ["jxjacobs@godaddy.com","jplains@godaddy.com","dtuso@godaddy.com"]
+  },
+  {
+    "TypeName":"Social Media Advertising", "EmailAddresses": ["jwsmith@godaddy.com"]
+  },
+  {
+    "TypeName":"Search Engine Advertising", "EmailAddresses": ["pwilliams@godaddy.com","shull@godaddy.com","sfarebrother@godaddy.com"]
+  }
+]
