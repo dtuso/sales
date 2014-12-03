@@ -1,0 +1,717 @@
+---
+location: sales/domains/discount-domains.aspx
+id: 547e44acf778fc1db8259f9f
+name: GCE-32911
+comments: Create a direct URL to the "Compare Plan" tab on the DDC Landing Page
+---
+{% extends 'layouts/base.html' %} 
+{% block metahead %} 
+{% parent %} 
+  ##if(countrySiteAny(in,pk))
+      <!-- International Background Images -->
+      <style type="text/css">
+      .tab-content-overview-bg-discdom {
+        background-image: url("[@T[link:<cssroot />]@T]fos/201401/domains/discount-domains/img/IN_bg-misc-banner-discount-domains.jpg");
+      }
+      </style>
+  ##endif
+
+  ##if(countrySiteAny(my, ph, sg))
+      <!-- International Background Images -->
+      <style type="text/css">
+      .tab-content-overview-bg-discdom {
+        background-image: url("[@T[link:<cssroot />]@T]fos/201401/domains/discount-domains/img/ASIA_bg-misc-banner-discount-domains.jpg");
+      }
+      </style>
+  ##endif    
+    
+  <style>
+
+  .select-box-options > li {
+    cursor: pointer;
+    padding: 0px;
+    border-right: 1px solid #d4d4d4;
+    border-bottom: 1px solid #d4d4d4;
+    border-left: 1px solid #d4d4d4;
+  }
+
+  .select-box-options label {
+    padding: 15px 10px;
+  }
+
+  .select-box-options label span {
+    padding: 0px;
+    margin: 0px;
+  }
+
+  </style>
+{% endblock %} 
+{% block body %}
+    <!-- Start main-banner -->
+    <section class="main-banner main-banner-discdom">
+      <div class="l-main-container container main-banner-content">
+        <h1 class="main-banner-title"><strong>[@L[cds.sales/gd/domains/discount-domains2:HeaderContentMainHeading]@L]</strong></h1>
+        <h2 class="main-banner-subtitle">[@L[cds.sales/gd/domains/discount-domains2:HeaderContentDescription]@L]</h2> 
+        <p class="no-margin-bottom"><strong>[@L[cds.sales/gd/domains/discount-domains2:HeaderContentText]@L]</strong></p>
+      </div>
+    </section>
+    <!-- End main-banner -->
+
+    <!-- Start main-tabs -->
+    <section class="main-tabs">
+      <div class="container">
+      <ul class="nav nav-tabs">
+        <li class="nav-tabs-item active"><a class="nav-tabs-link" href="#plan-pricing" data-ci="88314" data-toggle="tab">[@L[cds.sales/gd/domains/discount-domains2:TabLink1]@L]</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
+        <li class="nav-tabs-item"><a class="nav-tabs-link" href="#compare-plans" data-ci="88315" data-toggle="tab">[@L[cds.sales/gd/domains/discount-domains2:TabLink2]@L]</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
+        <li class="nav-tabs-item"><a class="nav-tabs-link" href="#faq" data-ci="88316" data-toggle="tab">[@L[cds.sales/gd/domains/discount-domains2:TabLink3]@L]</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
+      </ul>
+      </div>
+    </section>
+    <!-- End main-tabs -->
+
+    <!-- Start main-tabs panes -->
+    <div class="tab-content no-margin-top">
+      <div class="tab-pane tab-content-overview-bg-discdom active" id="plan-pricing">
+      <!-- Start content -->
+    <section class="l-main-container container">
+      <!-- Start misc-banner -->
+      <section class="misc-banner">
+        <div class="l-main-container container misc-banner-content misc-banner-content-db-overview">
+        <h2>[@L[cds.sales/gd/domains/discount-domains2:PlanPricingMiscBannerTitle0]@L]</h2>
+        <p>[@L[cds.sales/gd/domains/discount-domains2:PlanPricingMiscBannerText0]@L]</p>
+        </div>
+      </section>
+      <!-- End misc-banner -->
+      <div class="row equal-height">
+        <div class="col-xs-4">
+          <div class="grid-column no-padding-bottom left-side">
+            <h2>[@L[cds.sales/gd/domains/discount-domains2:PlanPricingContentRightTitle]@L]</h2>
+            <form action="[@T[link:<relative path="/CDS/Widgets/WidgetsPostHandlers/DDCAddToCartPostHandler.ashx" parammode="common" />]@T]" name="frmDiscountDomains" id="frmDiscountDomains" method="post">
+              <input type="hidden" name="formSubmitButton" id="formSubmitButton" value="Add-to-Cart"/>
+              <input type="hidden" name="itc" value="slp_domainclub"/>
+              <input type="hidden" name="nocos" value="False"/>
+              <input type="hidden" name="config" value="discountclub1"/>
+              <input type="hidden" name="sdc" value="True"/>
+              <input type="hidden" name="newxs" value="False"/>
+              <input type="hidden" name="cicode" value="8050"/>
+              <input type="hidden" name="prog_id" value="GoDaddy"/>
+              <input type="hidden" name="selectedPlan" id="selectedPlan" class="selectedPlan" value="frmDiscountDomains_0"/>
+
+              <p class="starting-at"><span class="starting-at-price">[@T[productprice:<current productid="875" period="monthly" />]@T]</span><span class="starting-at-small">/[@L[cds.sales/gd/domains/discount-domains2:Month]@L]</span></p>
+            
+              <div class="select-box">
+                <div class="select-box-head">
+                  <div class="select-box-current">
+                    <span>[@L[cds.sales/gd/domains/discount-domains2:12Months]@L]</span>
+                    <span class="price">[@T[productprice:<current productid="875" period="monthly" />]@T]</span>
+                    <span class="secondary-color">/[@L[cds.sales/gd/domains/discount-domains2:mo]@L]</span>
+                  </div>
+                  <div class="select-box-cta"><i class="ico ico-download"></i></div>
+                </div><!-- select-box-head -->
+                <div class="select-box-body">
+                  <ul class="select-box-options">
+                    <li class="selected">
+                      <label>
+                        <input type="radio" name="product" id="875_1_1" value="875|1|1" checked="checked" />
+                        <span>[@L[cds.sales/gd/domains/discount-domains2:12Months]@L]</span>
+                        <span class="price">[@T[productprice:<current productid="875" period="monthly" />]@T]</span>
+                        <span class="secondary-color">/[@L[cds.sales/gd/domains/discount-domains2:mo]@L]</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label>
+                        <input type="radio" name="product" id="876_1_1" value="876|1|1" />
+                        <span>[@L[cds.sales/gd/domains/discount-domains2:24Months]@L]</span>
+                        <span class="price">[@T[productprice:<current productid="876" period="monthly" />]@T]</span>
+                        <span class="secondary-color">/[@L[cds.sales/gd/domains/discount-domains2:mo]@L] [@L[cds.sales/gd/domains/discount-domains2:Save10]@L]</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label>
+                        <input type="radio" name="product" id="877_1_1" value="877|1|1" />
+                        <span>[@L[cds.sales/gd/domains/discount-domains2:36Months]@L]</span>
+                        <span class="price">[@T[productprice:<current productid="877" period="monthly" />]@T]</span><span class="secondary-color">/[@L[cds.sales/gd/domains/discount-domains2:mo]@L] [@L[cds.sales/gd/domains/discount-domains2:Save20]@L]</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label>
+                        <input type="radio" name="product" id="878_1_1" value="878|1|1" />
+                        <span>[@L[cds.sales/gd/domains/discount-domains2:60Months]@L]</span>
+                        <span class="price">[@T[productprice:<current productid="878" period="monthly" />]@T]</span><span class="secondary-color">/[@L[cds.sales/gd/domains/discount-domains2:mo]@L] [@L[cds.sales/gd/domains/discount-domains2:Save20]@L]</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label>
+                        <input type="radio" name="product" id="879_1_1" value="879|1|1" />
+                        <span>[@L[cds.sales/gd/domains/discount-domains2:120Months]@L]</span>
+                        <span class="price">[@T[productprice:<current productid="879" period="monthly" />]@T]</span><span class="secondary-color">/[@L[cds.sales/gd/domains/discount-domains2:mo]@L] [@L[cds.sales/gd/domains/discount-domains2:Save20]@L]</span>
+                      </label>
+                    </li>
+                  </ul>
+                </div><!-- select-box-body -->
+              </div><!-- select-box -->
+              <p class="no-margin-bottom"><button type="submit" class="btn btn-warning btn-block btn-lg">[@L[cds.sales/gd/domains/discount-domains2:AddToCart]@L]</button></p>
+            </form>
+            <ul class="plan-pricing-list plan-pricing-list-alternate">
+              <li class="two-lines">[@L[cds.sales/gd/domains/discount-domains2:PlanPricingContentRightList0]@L]</li>
+              <li class="two-lines">[@L[cds.sales/gd/domains/discount-domains2:PlanPricingContentRightList1]@L]</li>
+              <li class="two-lines">[@L[cds.sales/gd/domains/discount-domains2:PlanPricingContentRightList2]@L]</li>
+              ##if(productHasSavingsMoreThan(850, 850, 0))
+              <li class="two-lines">[@L[cds.sales/gd/domains/discount-domains2:PlanPricingContentRightList3]@L]</li>
+              ##endif
+              <li>
+                <h3 class="overview-list-title"><strong>[@L[cds.sales/gd/domains/discount-domains2:PlanPricingContentRightList4Title]@L]</strong></h3>
+                <ul class="overview-list">
+                  <li>[@L[cds.sales/gd/domains/discount-domains2:PlanPricingContentRightList4Item1]@L]</li>
+                  <li>[@L[cds.sales/gd/domains/discount-domains2:PlanPricingContentRightList4Item2]@L]</li>
+                  <li>[@L[cds.sales/gd/domains/discount-domains2:PlanPricingContentRightList4Item3]@L]</li>
+                  <li>[@L[cds.sales/gd/domains/discount-domains2:PlanPricingContentRightList4Item4]@L]</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-xs-8">
+          <div class="grid-column dd-grid-column">
+            <div class="row-icon-left">
+              <i class="ico ico-low-prices"></i>
+              <h2 class="h2-alternate">[@L[cds.sales/gd/domains/discount-domains2:HighlightListTile0]@L]</h2>
+              <p>[@L[cds.sales/gd/domains/discount-domains2:HighlightListText0]@L]</p>
+            </div>
+            <div class="row-icon-left">
+              <i class="ico ico-earn-money"></i>
+              <h2 class="h2-alternate">[@L[cds.sales/gd/domains/discount-domains2:HighlightListTile1]@L]</h2>
+              <p>[@L[cds.sales/gd/domains/discount-domains2:HighlightListText1]@L]</p>
+            </div>
+            <div class="row-icon-left">
+              <i class="ico ico-auctions"></i>
+              <h2 class="h2-alternate">[@L[cds.sales/gd/domains/discount-domains2:HighlightListTile2]@L]</h2>
+              <p>[@L[cds.sales/gd/domains/discount-domains2:HighlightListText2]@L]</p>
+            </div>
+            <div class="row-icon-left">
+              <i class="ico ico-get-the-one"></i>
+              <h2 class="h2-alternate">[@L[cds.sales/gd/domains/discount-domains2:HighlightListTile3]@L]</h2>
+              <p>[@L[cds.sales/gd/domains/discount-domains2:HighlightListText3]@L]</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <!-- End content -->
+    <!-- Start plan-summary -->
+    <section class="plan-summary l-main-content">
+      <div class="container l-main-container">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="plan-summary-container">
+              <!-- Start Plan-summary nav tabs -->
+              <ul class="nav nav-tabs plan-summary-tabs">
+                <li class="nav-tabs-item plan-summary-tabs-item active">
+                  <a href="#ps-support" class="nav-tabs-link plan-summary-nav-tabs-link" data-toggle="tab">[@L[cds.sales/gd/domains/discount-domains2:MainContentFooterPagesTabText]@L]</a>
+                </li>
+              </ul>
+              <!-- End Plan-summary nav tabs -->
+
+              <!-- Start Plan-summary Tab panes -->
+              <div class="tab-content no-margin-bottom">
+                <div class="tab-pane active" id="ps-support">
+                  <p><strong>[@L[cds.sales/gd/domains/discount-domains2:PlanSummaryTitle1]@L]</strong></p>
+                  <ul class="plan-summary-tab-pane-list plan-summary-tab-pane-list-columns no-margin-left">
+                    <li>[@L[cds.sales/gd/domains/discount-domains2:PlanSummaryText1]@L]</li>
+                    <li>[@L[cds.sales/gd/domains/discount-domains2:PlanSummaryText2]@L]</li>
+                    <li>[@L[cds.sales/gd/domains/discount-domains2:PlanSummaryText3]@L]</li>
+                  </ul>
+                  <ul class="plan-summary-tab-pane-list plan-summary-tab-pane-list-columns plan-summary-tab-pane-list-two-columns">
+                    <li>[@L[cds.sales/gd/domains/discount-domains2:PlanSummaryText4]@L]</li>
+                    <li>[@L[cds.sales/gd/domains/discount-domains2:PlanSummaryText5]@L]</li>
+                    <li>[@L[cds.sales/gd/domains/discount-domains2:PlanSummaryText6]@L]</li>
+                  </ul>
+                  <p><strong>[@L[cds.sales/gd/domains/discount-domains2:PlanSummaryTitle2]@L]</strong></p>
+                  <ul class="plan-summary-tab-pane-list plan-summary-tab-pane-list-columns no-margin-left no-margin-bottom">
+                    <li>[@L[cds.sales/gd/domains/discount-domains2:PlanSummaryText7]@L] <strong>[@L[cds.sales/gd/domains/discount-domains2:PlanSummaryTechSupportPhone]@L]</strong></li>
+                  </ul>
+                  <ul class="plan-summary-tab-pane-list plan-summary-tab-pane-list-columns no-margin-bottom plan-summary-tab-pane-list-two-columns">
+                    ##if(activeLanguageAny([en-us]))
+                    <li>[@L[cds.sales/_common:ChatSupport]@L]</li>
+                    ##elseif(activeLanguageAny(es) || activeLanguageAny([pt-br]))
+                    <li>[@L[cds.sales/gd/domains/discount-domains2:PlanSummaryText9]@L]</li>
+                    ##endif
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- End Plan-summary Tab panes -->
+          </div>
+        </div>    
+      </div>
+    </section>
+    <!-- End plan-summary -->
+      </div>
+      <div class="tab-pane" id="compare-plans">
+      <section class="l-main-content">
+      <div class="container l-main-container">
+        <div class="tab-header">
+          <h2 class="tab-header-title">[@L[cds.sales/gd/domains/discount-domains2:ComparePlansHeaderTitle]@L]</h2>
+          <p>[@L[cds.sales/gd/domains/discount-domains2:ComparePlansHeaderText]@L]</p>
+        </div>
+
+        <div class="row tab-content">
+          <div class="col-xs-12">
+            <div class="grid-column tab-content-column-alternate">
+              <table>
+                <thead>
+                  <tr class="thead-row thead-row-4c">
+                    <th></th>
+                    <th>
+                      <span class="br">[@L[cds.sales/gd/domains/discount-domains2:ComparePlansTabTitle1]@L]</span><span>[@L[cds.sales/gd/domains/discount-domains2:ComparePlansTabTitle1Sub]@L]</span>
+                    </th>
+                    <th class="th-active th-2-columns" colspan="2">
+                      <span class="br">[@L[cds.sales/gd/domains/discount-domains2:ComparePlansTabTitle2]@L]</span>
+                      <span class="th-column">[@L[cds.sales/gd/domains/discount-domains2:ComparePlansTabTitle2Sub1]@L]</span>
+                      <span class="th-column">[@L[cds.sales/gd/domains/discount-domains2:ComparePlansTabTitle2Sub2]@L]</span>
+                    </th>
+                  </tr>
+                  <tr class="thead-row thead-row-4c bg-gray">
+                    <th colspan="4">[@L[cds.sales/gd/domains/discount-domains2:ComparePlansTabTitle2]@L]</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.com</th>
+                    <td>[@T[currencyprice:<price usdamount="1499" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="829" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %44
+                      ##else
+                      44%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border">[@T[currencyprice:<price usdamount="819" />]@T] ++</td>
+                    
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.co</th>
+                    <td>[@T[currencyprice:<price usdamount="2999" />]@T]</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="2499" />]@T] - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %16
+                      ##else
+                      16%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border">[@T[currencyprice:<price usdamount="819" />]@T] ++</td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.info</th>
+                    <td>[@T[currencyprice:<price usdamount="1499" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="899" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border">[@T[currencyprice:<price usdamount="299" />]@T] ++</td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.net</th>
+                    <td>[@T[currencyprice:<price usdamount="1699" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="799" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %52
+                      ##else
+                      52%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.org</th>
+                    <td>[@T[currencyprice:<price usdamount="1799" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="899" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %50
+                      ##else
+                      50%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.me</th>
+                    <td>[@T[currencyprice:<price usdamount="1999" />]@T]</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="1699" />]@T] - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %15
+                      ##else
+                      15%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border">[@T[currencyprice:<price usdamount="999" />]@T] ++</td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.mobi</th>
+                    <td>[@T[currencyprice:<price usdamount="1799" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="1299" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %27
+                      ##else
+                      27%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border">[@T[currencyprice:<price usdamount="999" />]@T] ++</td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.us</th>
+                    <td>[@T[currencyprice:<price usdamount="1999" />]@T]</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="729" />]@T] - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %63
+                      ##else
+                      63%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border">[@T[currencyprice:<price usdamount="399" />]@T] ++</td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.biz</th>
+                    <td>[@T[currencyprice:<price usdamount="1699" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="899" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %47
+                      ##else
+                      47%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border">[@T[currencyprice:<price usdamount="799" />]@T] ++</td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.asia</th>
+                    <td>[@T[currencyprice:<price usdamount="1999" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="1499" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %25
+                      ##else
+                      25%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border">[@T[currencyprice:<price usdamount="999" />]@T] ++</td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.at</th>
+                    <td>[@T[currencyprice:<price usdamount="5999" />]@T]</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="5399" />]@T] - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %10
+                      ##else
+                      10%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.be</th>
+                    <td>[@T[currencyprice:<price usdamount="1749" />]@T]</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="1599" />]@T] - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %8
+                      ##else
+                      8%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.ca</th>
+                    <td>[@T[currencyprice:<price usdamount="1299" />]@T]</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="999" />]@T] - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %23
+                      ##else
+                      23%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.cc</th>
+                    <td>[@T[currencyprice:<price usdamount="1999" />]@T]</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="1799" />]@T] - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %10
+                      ##else
+                      10%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.de</th>
+                    <td>[@T[currencyprice:<price usdamount="1799" />]@T]</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="1619" />]@T] - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %10
+                      ##else
+                      10%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.eu</th>
+                    <td>[@T[currencyprice:<price usdamount="1499" />]@T]</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="1349" />]@T] - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %10
+                      ##else
+                      10%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.in</th>
+                    <td>[@T[currencyprice:<price usdamount="1699" />]@T]</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="1399" />]@T] - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %17
+                      ##else
+                      17%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border">[@T[currencyprice:<price usdamount="899" />]@T] ++</td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.jp</th>
+                    <td>[@T[currencyprice:<price usdamount="9999" />]@T]</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="8999" />]@T] - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %10
+                      ##else
+                      10%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.co.nz</th>
+                    <td>[@T[currencyprice:<price usdamount="5949" />]@T]</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="4999" />]@T] - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %15
+                      ##else
+                      15%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.net.nz</th>
+                    <td>[@T[currencyprice:<price usdamount="5949" />]@T]</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="4999" />]@T] - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %15
+                      ##else
+                      15%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.org.nz</th>
+                    <td>[@T[currencyprice:<price usdamount="5949" />]@T]</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="4999" />]@T] - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %15
+                      ##else
+                      15%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.tv</th>
+                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="3499" />]@T] - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %12
+                      ##else
+                      12%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.tw</th>
+                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="3199" />]@T] - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %20
+                      ##else
+                      20%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.ws</th>
+                    <td>[@T[currencyprice:<price usdamount="2999" />]@T]</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="1999" />]@T] - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %33
+                      ##else
+                      33%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border">[@T[currencyprice:<price usdamount="999" />]@T] ++</td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <a href="#plan-pricing" class="btn btn-primary btn-lg btn-block tab-link" data-ci="88322"><i class="ico ico-gt"></i>[@L[cds.sales/gd/domains/discount-domains2:PackageBtn]@L]</a>
+      </div>
+    </section>
+
+      </div>
+      <div class="tab-pane" id="faq">
+      <section class="tab-content-top-spacing">
+      <div class="container l-main-container faq">
+        <div class="row tab-content">
+          <div class="col-xs-12">
+            <div class="grid-column tab-content-column-alternate">
+              <h2 class="h2-alternate">[@L[cds.sales/gd/domains/discount-domains2:FaqLine1Title]@L]</h2>
+              <p>[@L[cds.sales/gd/domains/discount-domains2:FaqLine1Text1]@L]</p>
+              <p>[@L[cds.sales/gd/domains/discount-domains2:FaqLine1Text2]@L]</p>
+              <p>[@L[cds.sales/gd/domains/discount-domains2:FaqLine1Text3]@L]</p>
+              <p>[@L[cds.sales/gd/domains/discount-domains2:FaqLine1Text4]@L]</p>
+
+              <hr/>
+
+              <h2 class="h2-alternate">[@L[cds.sales/gd/domains/discount-domains2:FaqLine2Title]@L]</h2>
+              <p>[@L[cds.sales/gd/domains/discount-domains2:FaqLine2Text1]@L]</p>
+              <p>[@L[cds.sales/gd/domains/discount-domains2:FaqLine2Text2]@L]</p>
+
+              <hr/>
+
+              <h2 class="h2-alternate">[@L[cds.sales/gd/domains/discount-domains2:FaqLine3Title]@L]</h2>
+              <p>[@L[cds.sales/gd/domains/discount-domains2:FaqLine3Text1]@L]</p>
+              <p>[@L[cds.sales/gd/domains/discount-domains2:FaqLine3Text2]@L]</p>
+              <p>[@L[cds.sales/gd/domains/discount-domains2:FaqLine3Text3]@L]</p>
+
+              <hr/>
+
+              <h2 class="h2-alternate">[@L[cds.sales/gd/domains/discount-domains2:FaqLine4Title]@L]</h2>
+              <p>[@L[cds.sales/gd/domains/discount-domains2:FaqLine4Text1]@L]</p>
+              <p>[@L[cds.sales/gd/domains/discount-domains2:FaqLine4Text2]@L]</p>
+              <p>[@L[cds.sales/gd/domains/discount-domains2:FaqLine4Text3]@L]</p>
+              <p>[@L[cds.sales/gd/domains/discount-domains2:FaqLine4Text4]@L]</p>
+
+              <hr/>
+
+              <h2 class="h2-alternate">[@L[cds.sales/gd/domains/discount-domains2:FaqLine5Title]@L]</h2>
+              <p>[@L[cds.sales/gd/domains/discount-domains2:FaqLine5Text1]@L]</p>
+              <p>[@L[cds.sales/gd/domains/discount-domains2:FaqLine5Text2]@L]</p>
+
+              <hr/>
+
+              <h2 class="h2-alternate">[@L[cds.sales/gd/domains/discount-domains2:FaqLine6Title]@L]</h2>
+              <p>[@L[cds.sales/gd/domains/discount-domains2:FaqLine6Text1]@L]</p>
+              <p>[@L[cds.sales/gd/domains/discount-domains2:FaqLine6Text2]@L]</p>
+              <p>[@L[cds.sales/gd/domains/discount-domains2:FaqLine6Text3]@L]</p>
+
+              <hr/>
+
+              <h2 class="h2-alternate">[@L[cds.sales/gd/domains/discount-domains2:FaqLine7Title]@L]</h2>
+              <p>[@L[cds.sales/gd/domains/discount-domains2:FaqLine7Text1]@L]</p>
+              <p>[@L[cds.sales/gd/domains/discount-domains2:FaqLine7Text2]@L]</p>
+              <p>[@L[cds.sales/gd/domains/discount-domains2:FaqLine7Text3]@L]</p>
+              <p class="no-margin-bottom">[@L[cds.sales/gd/domains/discount-domains2:FaqLine7Text4]@L]</p>
+
+            </div>
+          </div>
+        </div>
+        <a href="#plan-pricing" class="btn btn-primary btn-lg btn-block tab-link" data-ci="88330"><i class="ico ico-gt"></i>[@L[cds.sales/gd/domains/discount-domains2:PackageBtn]@L]</a>
+      </div>
+    </section>
+      </div>
+    </div>
+    <!-- End main-tabs panes -->
+    <section class="container l-main-container content-disclaimer">
+      <p class="no-margin-bottom"><small class="small-print">[@L[cds.sales/gd/domains/discount-domains2:DisclaimerContentSymbols]@L] <a class="simple-link" href="#" data-toggle="modal" data-target="#myModal" data-ci="88321">[@L[cds.sales/gd/domains/discount-domains2:DisclaimerContentLinkText]@L]</a></small></p>
+      <p><small class="small-print">[@L[cds.sales/gd/domains/discount-domains2:DisclaimerContentDisclaimer]@L]</small></p>
+    </section>
+
+    <div class="modal fade" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <p class="modal-title"><strong>[@L[cds.sales/gd/domains/discount-domains2:DisclaimerModalTitle]@L]</strong></p>
+          </div>
+          <div class="modal-body">
+            <p>[@L[cds.sales/gd/domains/discount-domains2:DisclaimerModalListItem1]@L]</p>
+            <p>[@L[cds.sales/gd/domains/discount-domains2:DisclaimerModalListItem2]@L]</p>
+            <p>[@L[cds.sales/gd/domains/discount-domains2:DisclaimerModalListItem3]@L]</p>
+            <p>[@L[cds.sales/gd/domains/discount-domains2:DisclaimerModalListItem4]@L]</p>
+            <p>[@L[cds.sales/gd/domains/discount-domains2:DisclaimerModalListItem5]@L]</p>
+            <p>[@L[cds.sales/gd/domains/discount-domains2:DisclaimerModalListItem6]@L]</p>
+            <p>[@L[cds.sales/gd/domains/discount-domains2:DisclaimerModalListItem7]@L]</p>
+          </div>
+        </div>
+      </div>
+    </div>
+{% endblock %} 
+
+{% block footer %}
+  <script>
+    $('a.chatSupportLink').attr('data-ci','93503');
+    $(function () {
+      $('.select-box').setSelectBox();
+      $('.tab-link').tabLinks();
+      $('.equal-height').setColumnsEqualHeight();
+
+      // CI code click tracker
+      if (typeof FastballEvent_MouseClick === 'function' && typeof fbiLibCheckQueue === 'function') {
+        $('[data-ci]').click(function(e){
+          $this = $(this);
+          FastballEvent_MouseClick(e,$this.attr('data-ci'),$(this)[0],'a');
+          fbiLibCheckQueue();
+        });
+      }
+      
+      $('[data-popup]').on('click', function(e) {
+        e.preventDefault();
+        var href = $(this).attr('href');
+        var name = $(this).data('popup');
+        window.open(href, name, 'left=20,top=20,scrollbars=yes,resizable=yes,width=400,height=250');
+      });
+      
+    }); 
+
+    $(document).ready(function(){
+      ##if(activeLanguageAny([en-us]))
+        $('.regimark').append("&reg;");
+      ##endif
+    });
+    
+
+    $(document).ready(function(){
+      function getUrlParameter(name){
+        var result = decodeURI((RegExp(name + '=' + '(.+?)(&|$)').exec(location.search)||[,null])[1]);
+        if(result == 'null'){ result = undefined };
+        return result;
+      }
+      if(getUrlParameter('section').toLowerCase()=='compare-plans') {
+        $('a[href="#compare-plans"]').tab('show');
+        $('html, body').animate({scrollTop:$('.main-tabs').position().top});
+      }
+    });
+
+    
+  </script>
+
+{% endblock %}

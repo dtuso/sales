@@ -14,6 +14,7 @@
   "domain-backorders":     "./domainaddon/domain-backorders/",
   "domain-config":         "./domains/domain-config/",
   "domain-config-pl":      "./domains/domain-config/domain-config-pl.html",
+  "domain-discount":       "./domains/discount-domains/",
   "ds":                    "./hosting/dedicated-servers/",
   "dsc":                   "./pro/dedicated-server-config/",
   "eoi":                   "./tlds/gtld/",

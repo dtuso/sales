@@ -1,0 +1,39 @@
+{
+  "discount-domains.html": {
+    "cdsDetails": {
+      "champion": {
+        "name": "",
+        "email": ""
+      },
+      "cdsLocation": "sales/domains/discount-domains.aspx",
+      "draft": {
+        "createdDate": "",
+        "comments": "",
+        "url": "http://www.dev-godaddy.com/domains/discount-domains.aspx"
+      }
+    },
+    "cssVersionOverride" : "",
+    "metaTitle": "[@L[cds.sales/gd/domains/discount-domains2:MetaTitle]@L]",
+    "metaDescription": "[@L[cds.sales/gd/domains/discount-domains2:MetaDescription]@L]",
+    "metaKeywords": "[@L[cds.sales/gd/domains/discount-domains2:MetaKeywords]@L]",
+    "metaCanonicalPath": "/domains/discount-domains.aspx",
+    "metaOgTitle": "[@L[cds.sales/gd/domains/discount-domains2:MetaTitle]@L]",
+    "metaOgImage": "fos/icn/discount_domain_club2.png",
+    "metaOgDescription": "[@L[cds.sales/gd/domains/discount-domains2:MetaDescription]@L]",
+    "metaOgAppID": "115696031791232",
+    "metaOgAdmins": "633356800"
+  },
+  "discount-domains.language": {
+    "cdsDetails": {
+      "champion": {
+        "name": "",
+        "email": ""
+      },
+      "cdsLocation": "localization/sales/gd/domains/discount-domains2/en",
+      "draft": {
+        "createdDate": "",
+        "comments": ""
+      }
+    }
+  }
+}
