@@ -1,0 +1,172 @@
+{
+  "planBox": {
+    "icode": "icodegoodness",
+    "backgroundColor": "bg-gray-light",
+
+    "subMarqueePro": {
+      "title": "Why choose GoDaddy?",
+      "subMarqueeIcons": [
+        {
+          "image": "/img/pro-clock-icon.png",
+          "text": "Industry-leading page load times."
+        },
+        {
+          "image": "/img/pro-cpu-icon.png",
+          "text": "Scalable resources on-demand."
+        },
+        {
+          "image": "/img/pro-cpanel-icon.png",
+          "text": "cPanel with style."
+        }
+      ]
+    },
+    "planBoxes": [
+      {
+        "proPlan": true,
+        "title": "Economy",
+        "text": "Generous storage. Unlimited Bandwidth",
+        "buttonColor":"btn-warning",
+        "buttonText": "Add to Cart",
+        "tcode": "Low",
+        "productPackages": [
+          {
+            "itemTrackingCode": "icodelegit",
+            "priceText": "**As low as**  \n[$6.99]{plan-price text-warning}[/mo]{plan-duration text-warning}  \n**was ~~10.99~~ [Save 30%]{text-primary}**"
+          }
+        ],
+        "features": [
+          {
+            "text":"**1 Website**"
+          },
+          {
+            "text":"**Unlimited bandwidth**"
+          },
+          {
+            "text": "**100 GB Disk Space**"
+          },
+          {
+            "text":"1 CPU []/CPU is the processing power available to your site. The more processing power you have, the faster calculations are performed and the greater your computing power./"
+          },
+          {
+            "text": "512 MB Physical Memory"
+          },
+          {
+            "text": "100 Entry Processes"
+          },
+          {
+            "text": "10x1 GB MySQL Databases"
+          },
+          {
+            "text": "100 Email Addresses"
+          },
+          {
+            "text":"50 FTP Users"
+          },
+          {
+            "text":"Free Domain w/ annual plan"
+          }
+        ]
+      },
+      {
+        "proPlan": true,
+        "bestValueBackgroundColor": "bg-danger",
+        "title": "Deluxe",
+        "text": "Unlimited sites, storage and bandwidth.",
+
+        "buttonColor": "btn-warning",
+        "buttonText": "Add to Cart",
+        "tcode": "somethingcodirific",
+        "productPackages": [
+          {
+            "itemTrackingCode": "icodelegit",
+            "priceText": "**As low as**  \n[$6.99]{plan-price text-warning}[/mo]{plan-duration text-warning}  \n**was ~~10.99~~ [Save 30%]{text-primary}**"
+          }
+        ],
+        "features": [
+          {
+            "text":"**Unlimited Websites**"
+          },
+          {
+            "text":"**Unlimited Bandwidth**"
+          },
+          {
+            "text":"**Unlimited Disk Space**"
+          },
+          {
+            "text":"1 CPU"
+          },
+          {
+            "text":"512 MB Physical Memory"
+          },
+          {
+            "text":"100 Entry Processes"
+          },
+          {
+            "text":"1x1 GB MySQL Databases"
+          },
+          {
+            "text":"500 Email Addresses"
+          },
+          {
+            "text":"50 FTP Users"
+          },
+          {
+            "text":"Free Domain w/ annual plan"
+          }
+        ]
+      },
+      {
+        "proPlan": true,
+        "title": "Ultimate",
+        "text": "**2X** the power, memory,  \nmore for high traffic sites.",
+        "buttonColor": "btn-warning",
+        "buttonText": "Add to Cart",
+        "tcode": "somethingcodirific",
+        "productPackages": [
+          {
+            "itemTrackingCode": "icodelegit",
+            "priceText": "**As low as**  \n[$6.99]{plan-price text-warning}[/mo]{plan-duration text-warning}  \n**was ~~10.99~~ [Save 30%]{text-primary}**"
+          }
+        ],
+        "features": [
+          {
+            "text":"**Unlimited Websites**"
+          },
+          {
+            "text":"**Unlimited Bandwidth**"
+          },
+          {
+            "text":"**Unlimited Disk Space**"
+          },
+          {
+            "text":"2 CPU"
+          },
+          {
+            "text":"1 GB Physical Memory"
+          },
+          {
+            "text":"100 Entry Processes"
+          },
+          {
+            "text":"Unlimitedx1 GB MySQL Databases"
+          },
+          {
+            "text":"1000 Email Addresses"
+          },
+          {
+            "text":"Unlimited FTP Users"
+          },
+          {
+            "text":"Free Domain w/ annual plan"
+          },
+          {
+            "text": "Premium DNS Management Tool"
+          },
+          {
+            "text": "Free SSL Sertificate with Dedicated IP - 1 year with annual plan"
+          }
+        ]
+      }
+    ]
+  }
+}
