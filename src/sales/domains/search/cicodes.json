@@ -283,6 +283,24 @@
           { "ITC Code" : "TopPodPELink" },
           { "Description" : "Top Pod - .PE Link" }
         ]
+      },
+      { "Top TLD Pods - .KIWI link" : [
+          { "ITC ID" : "94368" },
+          { "ITC Code" : "" },
+          { "Description" : "Top Pod - .KIWI link" }
+        ]
+      },
+      { "Top TLD Pods - .INFO link" : [
+          { "ITC ID" : "94372" },
+          { "ITC Code" : "TopPodINFOLink" },
+          { "Description" : "Top Pod - .INFO link" }
+        ]
+      },
+      { "Top TLD Pods - .CITY link" : [
+          { "ITC ID" : "94885" },
+          { "ITC Code" : "TopPodCITYLink" },
+          { "Description" : "Top Pod - .CITY link" }
+        ]
       }
     ],
   "Buttom Tld Pods" :  [
@@ -319,7 +337,7 @@
       { "Buttom TLD Pods - .CHURCH" : [
           { "ITC ID" : "93955" },
           { "ITC Code" : "" },
-          { "Description" : "Buttom TLD Pods - .BUSINESS" }
+          { "Description" : "Buttom TLD Pods - .CHURCH" }
         ]
       },
       { "Buttom TLD Pods - .GUIDE" : [
@@ -446,6 +464,36 @@
           { "ITC ID" : "91797" },
           { "ITC Code" : "ButtomPodConsulting" },
           { "Description" : "Buttom TLD Pods - .CONSULTING" }
+        ]
+      },
+      { "Buttom TLD Pods - .ARMY" : [
+          { "ITC ID" : "94373" },
+          { "ITC Code" : "ButtomPodArmy" },
+          { "Description" : "Buttom TLD Pods - .ARMY" }
+        ]
+      },
+      { "Buttom TLD Pods - .SHIKSHA" : [
+          { "ITC ID" : "94374" },
+          { "ITC Code" : "ButtomPodShiksha" },
+          { "Description" : "Buttom TLD Pods - .SHIKSHA" }
+        ]
+      },
+      { "Buttom TLD Pods - .CITY" : [
+          { "ITC ID" : "94890" },
+          { "ITC Code" : "ButtomPodCity" },
+          { "Description" : "Buttom TLD Pods - .CITY" }
+        ]
+      },
+      { "Buttom TLD Pods - .LAWYER" : [
+          { "ITC ID" : "94891" },
+          { "ITC Code" : "ButtomPodLawyer" },
+          { "Description" : "Buttom TLD Pods - .LAWYER" }
+        ]
+      },
+      { "Buttom TLD Pods - .SARL" : [
+          { "ITC ID" : "94892" },
+          { "ITC Code" : "ButtomPodSarl" },
+          { "Description" : "Buttom TLD Pods - .SARL" }
         ]
       }
     ],
@@ -623,7 +671,25 @@
           { "ITC Code" : "NewAvailExpert" },
           { "Description" : "New Available TLD's Column - .EXPERT" }
         ]
-      }
+      },
+      { "New Domains Available TLD's Column - .JUEGOS" : [
+          { "ITC ID" : "94375" },
+          { "ITC Code" : "" },
+          { "Description" : "New Available TLD's Column - .JUEGOS" }
+        ]
+      },
+      { "New Domains Available TLD's Column - .CITY" : [
+          { "ITC ID" : "94885" },
+          { "ITC Code" : "" },
+          { "Description" : "New Available TLD's Column - .CITY" }
+        ]
+      },
+      { "New Domains Available TLD's Column - .SARL" : [
+          { "ITC ID" : "94893" },
+          { "ITC Code" : "" },
+          { "Description" : "New Available TLD's Column - .SARL" }
+        ]
+      },
     ],
   "Coming Soon Tlds" : [
      { "Coming Soon TLD's Column - .NYC" : [
