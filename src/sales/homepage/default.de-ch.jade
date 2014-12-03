@@ -1,41 +1,41 @@
 ---
 location: sales/homepage/default.de-ch
 id: false
-name: GCE-31162
+name: GCE-33226
 ---
 extends ../../layouts/homepage/default_base
 block styles
-	link(href!="[@T[link:<cssroot />]@T]fos/hp/rebrand/css/de-ch_homepage_20140805.css" rel="stylesheet" type="text/css")
+  link(href!="[@T[link:<cssroot />]@T]fos/hp/rebrand/css/homepage.css" rel="stylesheet" type="text/css")
 
 block share
-	.fosshare(data-twshareurl!="[@T[link:<external linktype='XDOTCO' path='/wwwGD' />]@T]" data-twtext!="[@L[cds.sales/homepage:twitter-text-gdbl]@L]" data-twrelated="GoDaddy" data-shareurl!="[@T[link:<relative path='/'/>]@T]" data-buttons="google,facebook,twitter")
+  .fosshare(data-twshareurl!="[@T[link:<external linktype='XDOTCO' path='/wwwGD' />]@T]" data-twtext!="[@L[cds.sales/homepage:twitter-text-gdbl]@L]" data-twrelated="GoDaddy" data-shareurl!="[@T[link:<relative path='/'/>]@T]" data-buttons="google,facebook,twitter")
 
 block marquee
-	|  ##if(targetMessageTagAny(sales_hp_default,hp_existing_customer))
-	|   [@P[cdsDocument:<data app="sales" location="homepage/marquee/499com/default_template" /> ]@P]
-	|  ##else
-	|    ##if(splitTestingSideIsActive(1408, A) && !hasISC())
-	|      [@P[cdsDocument:<data app="sales" location="homepage/marquee/499com/default_template" /> ]@P]
-	|    ##else
-	|      [@P[cdsDocument:<data app="sales" location="homepage/marquee/gybo/default_template" /> ]@P]
-	|    ##endif
-	|  ##endif
+  |  ##if(targetMessageTagAny(sales_hp_default,hp_existing_customer))
+  |   [@P[cdsDocument:<data app="sales" location="homepage/marquee/499com/default_template" /> ]@P]
+  |  ##else
+  |    ##if(splitTestingSideIsActive(1408, A) && !hasISC())
+  |      [@P[cdsDocument:<data app="sales" location="homepage/marquee/499com/default_template" /> ]@P]
+  |    ##else
+  |      [@P[cdsDocument:<data app="sales" location="homepage/marquee/gybo/default_template" /> ]@P]
+  |    ##endif
+  |  ##endif
 
 block primaryTile
-	#tile-container-got
-		//- include ../../sales/homepage/tiles/got.jade
-		| 
-		| [@P[cdsDocument:<data app="sales" location="homepage/tile/got/default_template" /> ]@P]
-	#tile-container-hosting(style="display:none;")
-		//- include ../../sales/homepage/tiles/hosting.jade
-		| 
-		| [@P[cdsDocument:<data app="sales" location="homepage/tile/hosting-old-brand/default_template" /> ]@P]
-	script(type="text/javascript").
-		if ($('#gdhp-marq-gybo').length) {
-			$('#tile-container-got').hide();
-			$('#tile-container-hosting').show();
-		}
+  #tile-container-got
+    //- include ../../sales/homepage/tiles/got.jade
+    | 
+    | [@P[cdsDocument:<data app="sales" location="homepage/tile/got/default_template" /> ]@P]
+  #tile-container-hosting(style="display:none;")
+    //- include ../../sales/homepage/tiles/hosting.jade
+    | 
+    | [@P[cdsDocument:<data app="sales" location="homepage/tile/hosting-old-brand/default_template" /> ]@P]
+  script(type="text/javascript").
+    if ($('#gybo').length) {
+      $('#tile-container-got').hide();
+      $('#tile-container-hosting').show();
+    }
 block secondaryTile
-	//- include ../../sales/homepage/tiles/30-percent-gtld.jade
-	| 
-	| [@P[cdsDocument:<data app="sales" location="homepage/tile/30-percent-gtld/default_template" /> ]@P]
+  //- include ../../sales/homepage/tiles/30-percent-gtld.jade
+  | 
+  | [@P[cdsDocument:<data app="sales" location="homepage/tile/30-percent-gtld/default_template" /> ]@P]

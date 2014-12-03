@@ -1,34 +1,34 @@
 ---
 location: sales/homepage/default.en-ph
 id: false
-name: GCE-31162
+name: GCE-33226
 ---
 extends ../../layouts/homepage/default_base
 block styles
-	link(href!="[@T[link:<cssroot />]@T]fos/hp/rebrand/css/en-ph_homepage_20140929.css" rel="stylesheet" type="text/css")
+  link(href!="[@T[link:<cssroot />]@T]fos/hp/rebrand/css/homepage.css" rel="stylesheet" type="text/css")
 
 block marquee
-	| 
-	|   [@P[cdsDocument:<data app="sales" location="homepage/marquee/499com/default_template" /> ]@P]
+  | 
+  |   [@P[cdsDocument:<data app="sales" location="homepage/marquee/499com/default_template" /> ]@P]
 
 block primaryTile
-	//- include ../../sales/homepage/tiles/got.jade
-	| 
-	| [@P[cdsDocument:<data app="sales" location="homepage/tile/got/default_template" /> ]@P]
+  //- include ../../sales/homepage/tiles/got.jade
+  | 
+  | [@P[cdsDocument:<data app="sales" location="homepage/tile/got/default_template" /> ]@P]
 
 block secondaryTile
-	//- include ../../sales/homepage/tiles/30-percent-gtld.jade
-	| 
-	| [@P[cdsDocument:<data app="sales" location="homepage/tile/30-percent-gtld/default_template" /> ]@P]
+  //- include ../../sales/homepage/tiles/30-percent-gtld.jade
+  | 
+  | [@P[cdsDocument:<data app="sales" location="homepage/tile/30-percent-gtld/default_template" /> ]@P]
 
 block bugBar
-	+gtldBug("co")
-	+gtldBug("club")
-	+gtldBug("org")
+  +gtldBug("co")
+  +gtldBug("club")
+  +gtldBug("org")
 
 block share
-	.fosshare(data-twshareurl!="[@T[link:<external linktype='XDOTCO' path='/wwwGD' />]@T]" data-twtext!="[@L[cds.sales/homepage:twitter-text-gdbl]@L]" data-twrelated="GoDaddy" data-shareurl!="[@T[link:<relative path='/'/>]@T]" data-buttons="google,facebook,twitter")
+  .fosshare(data-twshareurl!="[@T[link:<external linktype='XDOTCO' path='/wwwGD' />]@T]" data-twtext!="[@L[cds.sales/homepage:twitter-text-gdbl]@L]" data-twrelated="GoDaddy" data-shareurl!="[@T[link:<relative path='/'/>]@T]" data-buttons="google,facebook,twitter")
 
 block cookieWarning
-	script(type="text/javascript").
-		var ignoreLivePerson = true;
+  script(type="text/javascript").
+    var ignoreLivePerson = true;
