@@ -33,10 +33,12 @@ Boost customers' trust in your site by seamlessly integrating your social media 
 
 To get started, follow the below steps:<br /><br />
 
-1.	Login to your <a href="[@T[link:<external parammode='explicit' linktype='MYAURL' secure='true' path='/'><param name='ci' value='12345' /></external>]@T]">Account Manager</a>.<br />
-2.	Under <b>Products</b> list, click <b>Online Store</b> then click <b>Launch</b> next to the appropriate account.<br />
-3.	On the <b>Promote</b> tab, click <b>Promote</b>.<br />
-4.	Select <b>Turn On</b> for each of the features you want to activate (Some feature cannot be turned on until you publish your Online Store by clicking the <b>Go Live</b> link).<br /><br/>
+<ol>
+  <li>Login to your <a href="[@T[link:<external parammode='explicit' linktype='MYAURL' secure='true' path='/'><param name='ci' value='12345' /></external>]@T]">Account Manager</a>.</li>
+  <li>Under <b>Products</b> list, click <b>Online Store</b> then click <b>Launch</b> next to the appropriate account.</li>
+  <li>On the <b>Promote</b> tab, click <b>Promote</b>.</li>
+  <li>Select <b>Turn On</b> for each of the features you want to activate (Some feature cannot be turned on until you publish your Online Store by clicking the <b>Go Live</b> link).</li>
+</ol>
 
 By letting you easily add social features and other trust signals to your website, you'll find that Online Store offers one of the best eCommerce site builders out there for your business.
 Plus, with Online Store, you also get access to our award-winning support team. Our outstanding team members are available to answer your questions 24 hours a day, 7 days a week—exactly what you would expect from the best eCommerce solution.
@@ -57,7 +59,7 @@ Other Resources
 <phrase key="other-resources-1" />
 Domains
 <phrase key="other-resources-2" />
-Online Store
+Website Builder
 <phrase key="other-resources-3" />
 Online Store
 <phrase key="other-resources-4" />
