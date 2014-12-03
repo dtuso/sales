@@ -1,22 +1,22 @@
 ---
 location: sales/homepage/default.en-za
 id: false
-name: GCE-31162
+name: GCE-33226
 ---
 extends ../../layouts/homepage/default_base
 block styles
-	link(href!="[@T[link:<cssroot />]@T]fos/hp/rebrand/css/en-za_homepage_20140702.css" rel="stylesheet" type="text/css")
+  link(href!="[@T[link:<cssroot />]@T]fos/hp/rebrand/css/homepage.css" rel="stylesheet" type="text/css")
 
 block primaryTile
-	//- include ../../sales/homepage/tiles/hosting.jade
-	| 
-	| [@P[cdsDocument:<data app="sales" location="homepage/tile/hosting/default_template" /> ]@P]
+  //- include ../../sales/homepage/tiles/hosting.jade
+  | 
+  | [@P[cdsDocument:<data app="sales" location="homepage/tile/hosting/default_template" /> ]@P]
 
 block bugBar
-	+gtldBug("co")
-	+gtldBug("club")
-	+gtldBug("org")
+  +gtldBug("co")
+  +gtldBug("club")
+  +gtldBug("org")
 
 block cookieWarning
-	script(type="text/javascript").
-		var ignoreLivePerson = true;
+  script(type="text/javascript").
+    var ignoreLivePerson = true;
