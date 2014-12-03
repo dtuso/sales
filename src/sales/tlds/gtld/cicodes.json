@@ -113,6 +113,18 @@
           { "ITC Code" : "GtldEoiWebsiteGlobal" },
           { "Description" : ".GLOBAL Slide Link" }
         ]
+      },
+      { ".EXPERT Slide Link" : [
+          { "ITC ID" : "95107" },
+          { "ITC Code" : "GtldEoiWebsiteExpert" },
+          { "Description" : ".EXPERT Slide Link" }
+          ]
+      },
+      { ".QUEBEC Slide Link" : [
+          { "ITC ID" : "95108" },
+          { "ITC Code" : "GtldEoiWebsiteQuebec" },
+          { "Description" : ".QUEBEC Slide Link" }
+          ]
       }
     ],
   "Everything Else" : [
