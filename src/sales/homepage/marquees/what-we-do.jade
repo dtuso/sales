@@ -1,0 +1,44 @@
+.why-us-wrap
+  .why-us-content       
+    .why-us-text
+      span.why-us-headline [@L[cds.sales/homepage/locales/en:why-us-headline]@L]
+      .why-us-maintext [@L[cds.sales/homepage/locales/en:why-us-maintext]@L]
+      .disclaimers
+        section.container.l-main-container.content-disclaimer
+          p.no-margin-bottom
+            a#gdhp-disclaimer-lnk.simple-link(href="#" data-toggle="modal" data-target="#myModal" data-ci="93289") [@L[cds.sales/homepage:disclaimer-text]@L]
+        
+        .modal.fade#myModal
+          .modal-dialog
+            .modal-content
+              .modal-header
+                button(type="button" class="close" data-dismiss="modal" aria-hidden="true") &times;
+                p .modal-title
+                  strong [@L[cds.sales/homepage:disclaimer-modal-title]@L]
+              .modal-body
+                .g-modal-content
+                  p [@L[cds.sales/homepage:disclaimer-modal-first-content]@L]
+                  p [@L[cds.sales/homepage:disclaimer-modal-third-content]@L]
+                  p [@L[cds.sales/homepage:disclaimer-modal-fourth-content]@L]
+                  | 
+                  | ##if(countrySiteAny(au))
+                  p [@L[cds.sales/homepage:disclaimer-modal-second-content]@L]
+                  | 
+                  | ##endif
+    .why-us-logos
+      ul
+        li.why-us-btn.js-gdhpclick(data-url='[@T[link:<relative path="/domains/domain-name-search.aspx"><param name="ci" value="93299" /></relative>]@T]' data-ci="93299")
+          span#gdhp-why-us-domains.gdhp-domains-logo.hp-sprite
+          span.gdhp-domains-text [@L[cds.sales/homepage/locales/en:whyus-logo-domains]@L]
+        li.why-us-btn.js-gdhpclick(data-url='[@T[link:<relative path="/hosting/website-builder.aspx"><param name="ci" value="93300" /></relative>]@T]' data-ci="93300")
+          span#gdhp-why-us-wsb.gdhp-wsb-logo.hp-sprite
+          span.gdhp-wsb-text [@L[cds.sales/homepage/locales/en:whyus-logo-wsb]@L]
+        li.why-us-btn.js-gdhpclick(data-url='[@T[link:<relative path="/ecommerce/shopping-cart.aspx"><param name="ci" value="93301" /></relative>]@T]' data-ci="93301")
+          span#gdhp-why-us-store.gdhp-store-logo.hp-sprite
+          span#gdhp-store-text [@L[cds.sales/homepage/locales/en:whyus-logo-onlinestore]@L]
+        li.why-us-btn.js-gdhpclick(data-url='[@T[link:<relative path="/products/business-marketing.aspx"><param name="ci" value="93302" /></relative>]@T]' data-ci="93302")
+          span#gdhp-why-us-getfound.gdhp-getfound-logo.hp-sprite
+          span.gdhp-getfound-text [@L[cds.sales/homepage/locales/en:whyus-logo-getfound]@L]
+        li.why-us-btn.js-gdhpclick(data-url='[@T[link:<external parammode="explicit" linktype="COMMUNITYURL"><param name="ci" value="93303" /></external>]@T]' data-ci="93303")
+          span#gdhp-why-us-support.gdhp-support-logo.hp-sprite
+          span.gdhp-support-text [@L[cds.sales/homepage/locales/en:whyus-logo-support]@L]
