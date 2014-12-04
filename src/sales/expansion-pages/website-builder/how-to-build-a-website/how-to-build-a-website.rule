@@ -1,0 +1,22 @@
+---
+location: sales/hosting/website-builder/how-to-build-a-website.rule
+id: 547f6da5f778fc279cdca164
+name: SEM-262
+---
+[
+  { 
+    'Type': 'Redirect',
+    'Condition': 'mobileRedirectRequired()',
+    'Data': "{ 'Type' : '302', 'Loc': '[@T[mobileRedirectLink:<data redirectKey=\"sales.productlanding.wst\" />]@T]' }"
+  },
+  { 
+    'Type': 'Redirect',
+    'Condition': '!activeLanguageAny([en-au],[en-ca],[en-gb],[en-in],[en-us])',
+    'Data': "{ 'Type' : '301', 'Loc': '[@T[link:<relative path=\"~/\" />]@T]' }"
+  },
+  { 
+    'Type': 'Redirect',
+    'Condition': 'siteContextAny(pl)',
+    'Data': "{ 'Type' : '301', 'Loc': '[@T[link:<relative path=\"~/\" />]@T]' }"
+  }
+]

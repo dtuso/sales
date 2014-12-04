@@ -1,7 +1,7 @@
 ---
 location: localization/sales/gd/expansion-pages/website-builder/how-to-build-a-website/en
-id: 5476329df778fc0a989096bb
-name: SEM-172
+id: 547fa401f778fc279cdca1ce
+name: SEM-262
 ---
 {% include '../../../../modules/doc-block.html' %}
 <phrase key="page-title" />
@@ -18,6 +18,10 @@ how build a website, how can I build a website, how do I build a website, how do
 How Do I Build a Website?
 <phrase key="view-plans-button-label" />
 View Plans
+<phrase key="share-twitter-related" />
+[@T[companyname:name]@T] Website Builder
+<phrase key="share-buttons" />
+google,facebook,twitter
 <phrase key="main-content" />
 You need a website, but you're not sure where to begin. Read below to learn the ins and outs of creating an online presence.<br /><br />
 
@@ -34,7 +38,7 @@ While you may want to learn how to build a website on your own, if you choose to
 <b>How to Build a Mobile Website</b><br />
 Over 50% of web searches are completed on a mobile device, and this number is increasing daily. Whether you're creating a personal or business website, you need it to be mobile-friendly so users always have a good experience.<br /><br />
 
-When you are searching for a mobile friendly website building tool, look for something called responsive design. Responsive design simply means your site will automatically adjust to the screen size of the device on which it's being viewed. With responsive design, you can trust that people visiting your website from smartphones and tablets can easily navigate and find what they are looking for, just like people using a desktop computer. All of Godaddy's Website Builder plans include responsive design by default.<br /><br />
+When you are searching for a mobile friendly website building tool, look for something called responsive design. Responsive design simply means your site will automatically adjust to the screen size of the device on which it's being viewed. With responsive design, you can trust that people visiting your website from smartphones and tablets can easily navigate and find what they are looking for, just like people using a desktop computer. All of [@T[companyname:name]@T]'s Website Builder plans include responsive design by default.<br /><br />
 
 <b>How to Build an eCommerce Website</b><br />
 Businesses that sell items online need to make sure the website builder they choose has an online shopping cart. You'll want to look for a system that allows you to add products, manage inventory and accept credit cards.<br /><br />
