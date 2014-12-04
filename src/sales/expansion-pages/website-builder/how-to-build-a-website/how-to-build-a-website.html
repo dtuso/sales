@@ -1,6 +1,6 @@
 ---
 location: sales/hosting/website-builder/how-to-build-a-website
-id: 547fa33bf778fc279cdca1cd
+id: 5480a307f778fc0ce0b0aa25
 name: SEM-262
 comments: Expansion Pages - Fast Follow for 2 WSB pages
 cssVersionOverride: 1
@@ -45,7 +45,7 @@ cssVersionOverride: 1
                 <a class="btn btn-primary btn-lg" id="gdep-view-plans" href="[@T[link:<relative path='~/hosting/website-builder.aspx' secure='true'><param name='ci' value='95019' /></relative>]@T]" data-ci="95019">[@L[cds.sales/gd/expansion-pages/website-builder/how-to-build-a-website:view-plans-button-label]@L]</a>
               </div>
               <div class="gdep-share">
-                <div class="fosshare" data-twshareurl="[@T[link:<relative path='~/hosting/website-builder/how-to-build-a-website' secure='true' />]@T]" data-twtext="[@L[cds.sales/gd/expansion-pages/website-builder/how-to-build-a-website:page-title]@L]" data-twrelated="[@L[cds.sales/gd/expansion-pages/website-builder/how-to-build-a-website:share-twitter-related]@L]" data-shareurl="[@T[link:<relative path='~/hosting/website-builder/how-to-build-a-website' secure='true' />]@T]" data-buttons="[@L[cds.sales/gd/expansion-pages/website-builder/how-to-build-a-website:share-buttons]@L]"></div>
+                <div class="fosshare" data-twshareurl="[@T[link:<relative path='~/hosting/website-builder/how-to-build-a-website' secure='true' />]@T]" data-twtext="[@L[cds.sales/gd/expansion-pages/website-builder/how-to-build-a-website:page-title]@L]" data-twrelated="[@L[cds.sales/gd/expansion-pages/website-builder/how-to-build-a-website:share-twitter-related]@L]" data-shareurl="[@T[link:<relative path='~/hosting/website-builder/how-to-build-a-website' secure='true' />]@T]" data-buttons="google,facebook,twitter"></div>
               </div>
             </div>
             <div class="expansion-page-content">
@@ -117,4 +117,16 @@ cssVersionOverride: 1
 
 {% block footer %}
   <script src="[@T[link:<javascriptroot />]@T]starfield/fos.share/v1.3/fos.share-20140505.min.js" id="fosShareScript" ></script>
+  <script>
+    $(document).ready(function () { 
+      var tokenizePrice = function(priceSelector, price) {
+        $(priceSelector).each(function(){
+          $(this).html(price);
+        });
+      };
+
+      tokenizePrice(".ep-wsb-low-price", "[@T[productprice:<current productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]");
+      tokenizePrice(".ep-wsb-high-price", "[@T[productprice:<current productid="7503" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]");
+    });  
+  </script>
 {% endblock %}
