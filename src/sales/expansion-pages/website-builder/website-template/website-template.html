@@ -1,6 +1,6 @@
 ---
 location: sales/hosting/website-builder/website-template
-id: 547f7360f778fc279cdca173
+id: 5480a2d9f778fc0ce0b0aa24
 name: SEM-262
 comments: Expansion Pages - Fast Follow for 2 WSB pages
 cssVersionOverride: 1
@@ -45,7 +45,7 @@ cssVersionOverride: 1
                 <a class="btn btn-primary btn-lg" id="gdep-view-plans" href="[@T[link:<relative path='~/hosting/website-builder.aspx' secure='true'><param name='ci' value='94923' /></relative>]@T]" data-ci="94923">[@L[cds.sales/gd/expansion-pages/website-builder/website-template:view-plans-button-label]@L]</a>
               </div>
               <div class="gdep-share">
-                <div class="fosshare" data-twshareurl="[@T[link:<relative path='~/hosting/website-builder/website-template' secure='true' />]@T]" data-twtext="[@L[cds.sales/gd/expansion-pages/website-builder/website-template:page-title]@L]" data-twrelated="[@L[cds.sales/gd/expansion-pages/website-builder/website-template:share-twitter-related]@L]" data-shareurl="[@T[link:<relative path='~/hosting/website-builder/website-template' secure='true' />]@T]" data-buttons="[@L[cds.sales/gd/expansion-pages/website-builder/website-template:share-buttons]@L]"></div>
+                <div class="fosshare" data-twshareurl="[@T[link:<relative path='~/hosting/website-builder/website-template' secure='true' />]@T]" data-twtext="[@L[cds.sales/gd/expansion-pages/website-builder/website-template:page-title]@L]" data-twrelated="[@L[cds.sales/gd/expansion-pages/website-builder/website-template:share-twitter-related]@L]" data-shareurl="[@T[link:<relative path='~/hosting/website-builder/website-template' secure='true' />]@T]" data-buttons="google,facebook,twitter"></div>
               </div>
             </div>
             <div class="expansion-page-content">
@@ -116,4 +116,15 @@ cssVersionOverride: 1
 {% endblock %} 
 {% block footer %}
   <script src="[@T[link:<javascriptroot />]@T]starfield/fos.share/v1.3/fos.share-20140505.min.js" id="fosShareScript" ></script>
+  <script>
+    $(document).ready(function () { 
+      var tokenizePrice = function(priceSelector, price) {
+        $(priceSelector).each(function(){
+          $(this).html(price);
+        });
+      };
+
+      tokenizePrice(".ep-wsb-low-price", "[@T[productprice:<current productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]");
+    });  
+  </script>  
 {% endblock %}
