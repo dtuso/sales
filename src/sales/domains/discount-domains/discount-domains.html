@@ -705,7 +705,7 @@ comments: Create a direct URL to the "Compare Plan" tab on the DDC Landing Page
         if(result == 'null'){ result = undefined };
         return result;
       }
-      if(getUrlParameter('section').toLowerCase()=='compare-plans') {
+      if(typeof getUrlParameter('section') != "undefined" && getUrlParameter('section').toLowerCase()=='compare-plans') {
         $('a[href="#compare-plans"]').tab('show');
         $('html, body').animate({scrollTop:$('.main-tabs').position().top});
       }
