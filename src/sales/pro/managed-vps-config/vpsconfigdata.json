@@ -482,7 +482,7 @@
                 {
                     "id": "pro_vps_self_managed",
                     "os": "[@L[cds.sales/gd/pro/managed-vps-config:selfmanagedlinuxOS-32619]@L]",
-                    "includes": "[@L[cds.sales/gd/pro/managed-vps-config:selfmanagedlinuxIncludes-31530]@L]",
+                    "includes": "[@L[cds.sales/gd/pro/managed-vps-config:selfmanagedlinuxIncludes]@L]",
                     "addonprice": "[@T[currencyprice:<price usdamount=\"0\" /> ]@T]",
                     "addonname" :"[@L[cds.sales/gd/pro/managed-vps-config:selfmanaged]@L]"
                 }
