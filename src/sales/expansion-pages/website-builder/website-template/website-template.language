@@ -20,7 +20,7 @@ What are Website Templates?
 View Plans
 <phrase key="share-twitter-related" />
 [@T[companyname:name]@T] Website Builder
-<phrase key="main-content" />
+<phrase key="main-content" comment="{0} will be replaced with a price amount" />
 Website templates help individuals and business owners create an online presence without having to hire a web developer or webmaster. In other words, using a site template puts you — the website owner — in control. Templates provide a great option for people who are willing to spend some time getting their website online, but are not willing to shell out the thousands of dollars that a web developer might charge.<br /><br />
 
 <b>Two Basic Options – Free or Paid</b><br />
