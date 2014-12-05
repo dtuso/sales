@@ -1,7 +1,7 @@
 ---
 location: sales/homepage/default.pt-br
 id: false
-name: GCE-33226
+name: GCE-33589
 ---
 extends ../../layouts/homepage/default_base
 block styles
@@ -20,9 +20,9 @@ block marquee
   |   ##endif
   | ##else
   |   ##if(splitTestingSideIsActive(1405, B))
-  |     [@P[cdsDocument:<data app="sales" location="homepage/marquee/wsb-free-combr/default_template" /> ]@P]
+  |     [@P[cdsDocument:<data app="sales" location="homepage/tile/wsb-free-combr/default_template" /> ]@P]
   |   ##else
-  |     [@P[cdsDocument:<data app="sales" location="homepage/marquee/gybo/default_template" /> ]@P]
+  |     [@P[cdsDocument:<data app="sales" location="homepage/tile/gybo/default_template" /> ]@P]
   |   ##endif
   | ##endif
 
@@ -33,7 +33,7 @@ block bugBar
 
 block primaryTile
   #tile-container-hosting
-    //- include ../../sales/homepage/tiles/hosting.jade
+    //- include ../../sales/homepage/tiles/hosting-old-brand.jade
     | 
     | [@P[cdsDocument:<data app="sales" location="homepage/tile/hosting-old-brand/default_template" /> ]@P]
 

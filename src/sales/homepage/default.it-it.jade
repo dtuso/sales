@@ -1,8 +1,27 @@
 ---
 location: sales/homepage/default.it-it
 id: false
-name: GCE-33226
+name: GCE-33589
 ---
 extends ../../layouts/homepage/default_base
 block styles
   link(href!="[@T[link:<cssroot />]@T]fos/hp/rebrand/css/homepage.css" rel="stylesheet" type="text/css")
+
+block marquee
+  |  ##if(targetMessageTagAny(sales_hp_default,hp_existing_customer))
+  |   [@P[cdsDocument:<data app="sales" location="homepage/marquee/gtld/default_template" /> ]@P]
+  |  ##else
+  |   [@P[cdsDocument:<data app="sales" location="homepage/marquee/499com/default_template" /> ]@P]
+  |  ##endif
+
+block primaryTile
+  //- include ../../sales/homepage/tiles/hosting-old-brand.jade
+  | 
+  | [@P[cdsDocument:<data app="sales" location="homepage/tile/hosting-old-brand/default_template" /> ]@P]
+
+block secondaryTile
+  |  ##if(targetMessageTagAny(sales_hp_default,hp_existing_customer))
+  |   [@P[cdsDocument:<data app="sales" location="homepage/tile/why-wsb/default_template" /> ]@P]
+  |  ##else
+  |   [@P[cdsDocument:<data app="sales" location="homepage/tile/30-percent-gtld/default_template" /> ]@P]
+  |  ##endif

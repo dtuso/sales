@@ -1,7 +1,7 @@
 ---
 location: sales/homepage/default.es-mx
 id: false
-name: GCE-33226
+name: GCE-33589
 ---
 extends ../../layouts/homepage/default_base
 block styles
@@ -10,16 +10,18 @@ block styles
     .gdhp-search-box .domainSearchBox{width:780px;}
   
 block marquee
-  | 
+  |  ##if(targetMessageTagAny(sales_hp_default,hp_existing_customer))
+  |   [@P[cdsDocument:<data app="sales" location="homepage/locals/es-mx/topmarquee" /> ]@P]
+  |  ##else
   |   [@P[cdsDocument:<data app="sales" location="homepage/marquee/499com/default_template" /> ]@P]
+  |  ##endif
 
 block primaryTile
-  //- include ../../sales/homepage/tiles/got.jade
+  //- include ../../sales/homepage/tiles/hosting-old-brand.jade
   | 
   | [@P[cdsDocument:<data app="sales" location="homepage/tile/hosting-old-brand/default_template" /> ]@P]
 
 block secondaryTile
-  //- include ../../sales/homepage/tiles/30-percent-gtld.jade
   | 
   | [@P[cdsDocument:<data app="sales" location="homepage/tile/30-percent-gtld/default_template" /> ]@P]
   
