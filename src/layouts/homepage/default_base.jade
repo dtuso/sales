@@ -1,16 +1,20 @@
 //- consider moving this data and the related mixin to a dedicated file (/src/layouts/homepage/bugBar.jade) 
 //- if it gets unreadably long or if addition data/mixin sections are added
 - var gtldData = [];
-- gtldData["co"]    = { path: "/tlds/co-domain.aspx",  ci: 93296,  cssClass: "co",    productId: 56401 };
-- gtldData["org"]   = { path: "/tlds/org.aspx",        ci: 93297,  cssClass: "org",   productId: 12101 };
-- gtldData["net"]   = { path: "/tlds/net.aspx",        ci: 93298,  cssClass: "org",   productId: 12001 };
-- gtldData["biz"]   = { path: "/tlds/biz.aspx",        ci: 94195,  cssClass: "biz",   productId: 11301 };
-- gtldData["club"]  = { path: "/tlds/club",            ci: 89153,  cssClass: "club",  productId: 172137 };
-- gtldData["uno"]   = { path: "/tlds/uno",             ci: 88299,  cssClass: "uno",   productId: 40995 };
-- gtldData["br"]    = { path: "/tlds/br-domain",       ci: 88377,  cssClass: "br",    productId: 57201 };
+- gtldData["co"]    = { path: "/tlds/co-domain.aspx",  ci: 93296,  cssClass: "co",    productId: 56401,    tld:"co" };
+- gtldData["org"]   = { path: "/tlds/org.aspx",        ci: 93297,  cssClass: "org",   productId: 12101,    tld:"org" };
+- gtldData["net"]   = { path: "/tlds/net.aspx",        ci: 93298,  cssClass: "net",   productId: 12001,    tld:"net" };
+- gtldData["biz"]   = { path: "/tlds/biz.aspx",        ci: 94195,  cssClass: "biz",   productId: 11301,    tld:"biz" };
+- gtldData["club"]  = { path: "/tlds/club",            ci: 89153,  cssClass: "club",  productId: 172137,   tld:"club" };
+- gtldData["uno"]   = { path: "/tlds/uno",             ci: 88299,  cssClass: "uno",   productId: 40995,    tld:"uno" };
+- gtldData["br"]    = { path: "/tlds/br-domain",       ci: 88377,  cssClass: "br",    productId: 57201,    tld:"br" };
+- gtldData["in"]    = { path: "/tlds/in.aspx",         ci: 94304,  cssClass: "in",    productId: 9850,     tld:"in" };
+- gtldData["co-in"] = { path: "/tlds/in.aspx",         ci: 94302,  cssClass: "co-in", productId: 41000,    tld:"co.in" };
+- gtldData["com"]   = { path: "/tlds/com.aspx",        ci: 94303,  cssClass: "com",   productId: 101,      tld:"com" };
+
 
 mixin gtldBug(gtld)
-  a.tld-link(class=gtldData[gtld].cssClass href!="[@T[link:<relative path='" + gtldData[gtld].path + "'><param name='ci' value='" + gtldData[gtld].ci + "' /><param name='tld' value='" + gtldData[gtld].cssClass + "' /></relative>]@T]")
+  a.tld-link(class=gtldData[gtld].cssClass href!="[@T[link:<relative path='" + gtldData[gtld].path + "'><param name='ci' value='" + gtldData[gtld].ci + "' /><param name='tld' value='" + gtldData[gtld].tld + "' /></relative>]@T]")
     span.hp-sprite(class=gtldData[gtld].cssClass)
     span.price!= "[@T[productprice:<current productid='" + gtldData[gtld].productId + "' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' />]@T]"
 
@@ -58,6 +62,10 @@ html(lang!="[@T[localization:<language full='true' />]@T]")
       .hp-sprite.club { background-position:-236px -5px; width: 39px; height: 11px; margin-top: 5px; }
       .hp-sprite.uno { background-position:-98px 0; width: 19px; height: 19px; }
       .hp-sprite.br { background-position:-120px 0; width: 14px; height: 19px; }
+      .hp-sprite.net { background-position:-244px -572px; width: 34px; height: 13px; margin-top:2px;}
+      .hp-sprite.in { background-position:-502px -570px; width: 38px; height: 22px; }
+      .hp-sprite.co-in { background-position:-502px -570px; width: 38px; height: 22px; }
+      .hp-sprite.com { background-position:-647px -578px; width: 54px; height: 13px; }
       .gtld-links a { font-size: 14px; color: #333; margin-right: 30px; display: inline-block; }
       .gtld-links span { display: inline-block; }
       .gtld-links .hp-sprite { margin-right: 8px; }
@@ -73,13 +81,9 @@ html(lang!="[@T[localization:<language full='true' />]@T]")
     | [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header" />]@P]
 
     //  Domain Search Section
-    .gdhp-search-section
-      .gdhp-main-top
-        form.search-form.search-form-alternate.search-form-certified(method="post" data-url!="[@T[link:<relative path='~/api/dpp/search/single'/>]@T]" action!="[@T[link:<relative path='/domains/searchresults-new.aspx'/>]@T]")
-          .gdhp-search-box
-            input.search-form-input.searchInput.helveticafont(type="text" id="searchDomainName" name="domainToCheck" autocomplete="off" maxlength="63" title!="[@L[cds.sales/homepage:sb-search-title]@L]")
-            button.btn.btn-primary.btn-lg.hp-search(type="submit" name="searchButton" data-ci="54814") [@L[cds.sales/homepage/segments/default:domain-banner-search-btn]@L]
-          .clearfix
+    block domainSearch
+      include ../../sales/homepage/sections/domain-search-old.jade
+      
 
     // Marquee Section
     block marquee
