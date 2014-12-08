@@ -1,0 +1,60 @@
+---
+location: sales/homepage/default.en-in
+id: false
+name: GCE-33227
+comment: Templatizing in homepage
+---
+extends ../../layouts/homepage/default_base
+
+block append styles
+  style.
+    .hp-sprite.in { background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gdhp_sprite_20141029.png) scroll no-repeat!important; background-position:-799px -47px; width: 35px; height: 20px; }
+    .hp-sprite.co-in { background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gdhp_sprite_20141029.png) scroll no-repeat!important; background-position:-800px -71px; width: 52px; height: 13px; margin-top: 4px; }
+    .hp-sprite.com { background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gdhp_sprite_20141029.png) scroll no-repeat!important; background-position:-845px -54px; width: 49px; height: 13px; margin-top: 4px; }
+    #pcf .pc-support-wrapper{margin-top:0px !important;}
+    body {font-family:'Walsheim-Regular'; background-color:#ededed;}
+    body .gdhp-tile-wrap{background-color:#ededed;}
+
+block domainSearch
+  include ./sections/domain-search.jade
+
+block marquee
+  | 
+  | ##if(targetMessageTagAny(sales_hp_default,hp_existing_customer))
+  |   [@P[cdsDocument:<data app="sales" location="homepage/marquee/gybo/default_template" /> ]@P]
+  | ##else
+  |   [@P[cdsDocument:<data app="sales" location="homepage/marquee/499com/default_template" /> ]@P]
+  | ##endif
+
+block bugBar
+  +gtldBug("com")
+  +gtldBug("in")
+  +gtldBug("co-in")
+  +gtldBug("org")
+  +gtldBug("co")
+
+block primaryTile
+  | 
+  | [@P[cdsDocument:<data app="sales" location="homepage/tile/hosting/default_template" /> ]@P]
+
+block secondaryTile
+  | 
+  | ##if(targetMessageTagAny(sales_hp_default,hp_existing_customer))
+  |   [@P[cdsDocument:<data app="sales" location="homepage/tile/com299/default_template" /> ]@P]
+  | ##else
+  |   [@P[cdsDocument:<data app="sales" location="homepage/tile/got/default_template" /> ]@P]
+  | ##endif
+  | 
+
+block lowerMarquee
+
+block whyUs
+  include ./sections/what-we-do.jade
+
+block faq
+
+block disclaimers
+
+block cookieWarning
+  script(type="text/javascript").
+    var ignoreLivePerson = true;
