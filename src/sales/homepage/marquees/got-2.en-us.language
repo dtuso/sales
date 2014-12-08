@@ -8,7 +8,7 @@ name: GCE-29343
 <phrase key="product" />
 MICROSOFT OFFICE 365 PREMIUM
 <phrase key="price" />
-<strike>[@T[multipleproductprice:<list productidlist="101|7524|326366|31841" period="monthly"></list>]@T] </strike>[@T[productprice:<current productid="31841" period="monthly" promocode="74125896"></current>]@T]/MO*
+<strike>[@T[multipleproductprice:<list productidlist="101|7524|326366|31841" period="monthly"></list>]@T] </strike>[@T[productprice:<current productid="31841" period="monthly" promocode="74125896"></current>]@T]/MO<sup>*</sup>
 <phrase key="details" />
 Includes Website Builder, Pro Email, 24/7 Support and More.
 <phrase key="cta-text" />
