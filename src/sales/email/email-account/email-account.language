@@ -1,8 +1,8 @@
 ---
 location: localization/sales/gd/email/email-account/en
-id: 546b0301f778fc10909ad893
-name: GCE-30748
-comments: Create New Email centric O365 LP 
+id: 5485eab2f778fc2bc8b3b79b
+name: GCE-33609
+comments: Mouse over text displaying incorrect version.
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="page-title" />
@@ -237,12 +237,24 @@ Create unlimited email addresses, from yourname@ to sales@ to support@, all deli
 <span class="g-toolTip b">Office Desktop <span>Install Microsoft Office on up to 5 PCs or Macs and 5 iPads or Windows tablets per single user and get FREE updates to the latest version for as long as you have your Office 365 subscription.</span></span>for up to 5 devices*
 <phrase key="office_online" />
 <span class="g-toolTip b">Office Online:<span>Create, edit and share Word, Excel, PowerPoint and OneNote files via the Microsoft Office app for your iPhone, Android or Windows phone.</span></span> Web versions of Word, Excel and more.
+<phrase key="office_online_part_1_33609" />
+Office Online:
+<phrase key="office_online_tooltip_33609" />
+Create and edit Word, Excel PowerPoint and OneNote documents right from your cloud storage in any web browser.
+<phrase key="office_online_part_2_33609" />
+Web versions of Word, Excel and more.
 <phrase key="online_file" />
 Online file sharing**
 <phrase key="online_meetings" />
 <span class="b">Unlimited online meetings</span> & HD video conferencing
 <phrase key="office_mobile" />
 <span class="g-toolTip b">Office Mobile:<span>Create and edit Word, Excel PowerPoint and OneNote documents right from your cloud storage in any web browser.</span></span> Apps for iPhone, Android and Windows phones.
+<phrase key="office_mobile_part_1_33609" />
+Office Mobile:
+<phrase key="office_mobile_tooltip_33609" />
+Create, edit and share Word, Excel, PowerPoint and OneNote files via the Microsoft Office app for your iPhone, Android or Windows phone.
+<phrase key="office_mobile_part_2_33609" />
+Apps for iPhone, Android and Windows phones.
 <phrase key="all_include" />
 All plans include:
 <phrase key="award_support" />
