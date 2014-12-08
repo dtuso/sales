@@ -4,7 +4,7 @@ id: false
 name: GCE-29343
 ---
 <phrase key="headline" />
-<div class="bigtext" style="width:100%"><div class="line walsheim">ALL YOUR BUSINESS NEEDS</div><div class="line walsheim"><span class='inline-dash' style='max-width:100px;'>&mdash;&mdash;&mdash;&mdash;&mdash;</span> IN ONE OFFICE.</div></div>
+<div class="bigtext" style="width:100%"><div class="line walsheim">ALL YOUR BUSINESS NEEDS</div><div class="line tungsten"><span class='inline-dash' style='max-width:100px;'>&mdash;&mdash;&mdash;&mdash;&mdash;</span> IN ONE OFFICE.</div></div>
 <phrase key="product" />
 MICROSOFT OFFICE 365 PREMIUM
 <phrase key="price" />
