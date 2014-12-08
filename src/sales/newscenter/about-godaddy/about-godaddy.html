@@ -1,8 +1,8 @@
 ---
 location: sales/newscenter/about-godaddy.aspx
-id: 54637e53f778fc0a70ee784
-name: GCE-31437
-comments: Update El Driscoll info on the About Us Page
+id: 547f3fb0f778fc279cdca121
+name: GCE-32050,32100,28402
+comments: New Release section updates for US and IN
 url: http://www.dev-godaddy.com/newscenter/about-godaddy.aspx
 cssVersionOverride: 7
 pageJsVersionOverride: 2
@@ -49,15 +49,14 @@ metaOgDescription: "[@L[cds.sales/gd/hosting/web-hosting:og-description]@L]"
         </div>
       </div>
 
-          ##if(countrySiteAny(in) && activeLanguageAny(en))
+##if(countrySiteAny(in) && activeLanguageAny(en))
       <style>
-        #section-news-releases div.article-meta {top:0;position:relative;padding:5px 10px;height:90px;color: #fff;overflow:hidden;}
+        #section-news-releases div.article-meta {top:0;position:relative;padding:5px 10px;height:65px;color: #fff;overflow:hidden;}
         #section-news-releases div.article-meta h3 {margin:0px;line-height:1.4em;font-size:18px;color:#fff;}
-        #section-news-releases div.article-meta div.article-date {position:absolute;bottom:5px;font-size: 12px;}
         #section-news-releases div.view-more {text-align:center;padding:10px 0;height:auto!important;background-color:#F2F2F2;color:#333!important;}
         #section-news-releases div.view-more:hover {background-color: #a2a2a2;color:#fff!important;}
         #section-news-releases div.title {margin-bottom:7px;}
-        #section-news-releases div.curtain {top:0;position:absolute;background: #000;height:100px;width:100%;}
+        #section-news-releases div.curtain {top:0;position:absolute;background: #000;height:70px;width:100%;}
         #section-news-releases div.curtain.slide1 {opacity:0.68;}
         #section-news-releases div.curtain.slide2 {opacity:0.79;}
         #section-news-releases div.curtain.slide3 {opacity:0.79;}
@@ -76,7 +75,6 @@ metaOgDescription: "[@L[cds.sales/gd/hosting/web-hosting:og-description]@L]"
                 <div class="curtain slide4"></div>
                 <div class="article-meta">
                   <h3>GoDaddy Shows Importance of Creating an Internet Identity</h3>
-                  <div class="article-date">November 4, 2014</div>
                 </div>
               </div>
             </div>
@@ -86,7 +84,6 @@ metaOgDescription: "[@L[cds.sales/gd/hosting/web-hosting:og-description]@L]"
                 <div class="curtain slide3"></div>
                 <div class="article-meta">
                   <h3>GoDaddy Celebrates Its Second Anniversary in India</h3>
-                  <div class="article-date">September 11, 2014</div>
                 </div>
               </div>
             </div>
@@ -98,7 +95,6 @@ metaOgDescription: "[@L[cds.sales/gd/hosting/web-hosting:og-description]@L]"
                 <div class="curtain slide5"></div>
                 <div class="article-meta">
                   <h3>GoDaddy Enables Payment & Remittance Company Suvidhaa To Establish Global Reach</h3>
-                  <div class="article-date">May 19, 2014</div>
                 </div>
               </div>
             </div>
@@ -107,8 +103,7 @@ metaOgDescription: "[@L[cds.sales/gd/hosting/web-hosting:og-description]@L]"
                 <div class="solazy img preview" data-sl-src="[@T[link:<imageroot />]@T]fos/newscenter/about_godaddy/img/news-releases/thumbnail-gujarat-based.jpg"></div>
                 <div class="curtain slide2"></div>
                 <div class="article-meta">
-                  <h3>GoDaddy Enables Gujarat-Based Manufacturer To Reach Customers Globally</h3>                                
-                  <div class="article-date">April 2, 2014</div>
+                  <h3>GoDaddy Enables Gujarat-Based Manufacturer To Reach Customers Globally</h3>
                 </div>
               </div>
             </div>
@@ -122,40 +117,37 @@ metaOgDescription: "[@L[cds.sales/gd/hosting/web-hosting:og-description]@L]"
           </div>
         </div>
       </div>
-        ##endif
+##endif
 
-      ##if(activeLanguageAny([es-ar], [es-cl], [es-co], [es-mx], [es-pe], [es-ve], [pt-br]))
+##if(activeLanguageAny([es-ar], [es-cl], [es-co], [es-mx], [es-pe], [es-ve], [pt-br]))
       <div id="section-news-releases" class="section news news-releases latam-news-releases">
         <div class="inner">
 
           ##if(activeLanguageAny(es))
-          <h2>Comunicados de Prensa</h2>
-          <div class="news-release-article-wrapper" data-link="/news/article/godaddy-crea-oportunidades-para-la-pequea-empresa-en-latinoamrica.aspx?ci=88476">
-            <h3>GoDaddy Crea Oportunidades Para La Pequena Empresa En LatinoAmerica</h3>
-            <p>GoDaddy, la principal plataforma de la Web para empresas pequeñas, amplía su presencia en Latinoamérica mediante la oferta de soporte a clientes de habla hispana y portugesa y con el lanzamiento de un conjunto de productos que ayudarán a los empresarios y dueños de negocios pequeños a prosperar en línea.</p>
-            <p>
-              <a>
-                <span></span> leer más</a>
+            <h2>Comunicados de Prensa</h2>
+            <div class="news-release-article-wrapper" data-link="/news/article/godaddy-crea-oportunidades-para-la-pequea-empresa-en-latinoamrica.aspx?ci=88476">
+              <h3>GoDaddy Crea Oportunidades Para La Pequena Empresa En LatinoAmerica</h3>
+              <p>GoDaddy, la principal plataforma de la Web para empresas pequeñas, amplía su presencia en Latinoamérica mediante la oferta de soporte a clientes de habla hispana y portugesa y con el lanzamiento de un conjunto de productos que ayudarán a los empresarios y dueños de negocios pequeños a prosperar en línea.</p>
+              <p>
+                <a><span></span> leer más</a>
               </p>
             </div>
+          ##endif
 
-            ##endif
-            ##if(activeLanguageAny(pt))
+          ##if(activeLanguageAny(pt))
             <h2>Comunicados de Imprensa</h2>
             <div class="news-release-article-wrapper" data-link="/news/article/godaddy-cria-oportunidades-para-pequenas-empresas-na-amrica-latina.aspx?ci=88476">
               <h3>GoDaddy Cria Oportunidades Para Pequenas Empresas Na America Latina</h3>
               <p>A GoDaddy, melhor plataforma web para pequenas empresas, aumenta sua presença na América Latina com a oferta de suporte na língua nativa dos clientes e com o lançamento de uma gama completa de produtos para ajudar os donos de pequenas empresas e empreendedores a se desenvolverem no ambiente online.</p>
               <p>
-                <a>
-                  <span></span> leia mais</a>
+                <a><span></span> leia mais</a>
                 </p>
-              </div>
-
-              ##endif
-
             </div>
-          </div>
           ##endif
+
+        </div>
+      </div>
+##endif
 
           <div id="section-godaddy-is" class="section  godaddy-is">
             <div class="inner">
@@ -915,87 +907,84 @@ metaOgDescription: "[@L[cds.sales/gd/hosting/web-hosting:og-description]@L]"
             </div>
           </div>
           ##if(countrySiteAny(www) && activeLanguageAny(en))
-          <style>
-            #section-news-releases div.article-meta {top:0;position:relative;padding:5px 10px;height:90px;color: #fff;overflow:hidden;}
-            #section-news-releases div.article-meta h3 {margin:0px;line-height:1.4em;font-size:18px;color:#fff;}
-            #section-news-releases div.article-meta div.article-date {position:absolute;bottom:5px;font-size: 12px;}
-            #section-news-releases div.view-more {text-align:center;padding:10px 0;height:auto!important;background-color:#F2F2F2;color:#333!important;}
-            #section-news-releases div.view-more:hover {background-color: #a2a2a2;color:#fff!important;}
-            #section-news-releases div.title {margin-bottom:7px;}
-            #section-news-releases div.curtain {top:0;position:absolute;background: #000;height:100px;width:100%;}
-            #section-news-releases div.curtain.slide1 {opacity:0.68;}
-            #section-news-releases div.curtain.slide2 {opacity:0.79;}
-            #section-news-releases div.curtain.slide3 {opacity:0.79;}
-            #section-news-releases div.curtain.slide4 {opacity:0.79;}
-            #section-news-releases div.curtain.slide5 {opacity:0.79; background-color: #1a0f00;}
-            #section-news-releases span.pipe {margin:0 10px;}
-            #corporate .section.news .yui3-c.view-more {margin:0px!important;}
-          </style>
-          <div id="section-news-releases" class="section news news-releases">
-            <div class="inner">
-              <h2>News Releases</h2>
-              <div class="yui3-g">
-                <div class="yui3-u-1-2">
-                  <div class="yui3-c" data-link="/news/article/godaddy-sets-new-workplace-standard-with-state-of-the-art-facility.aspx?ci=88484">
-                    <div class="solazy img preview" data-sl-src="[@T[link:<imageroot />]@T]fos/newscenter/about_godaddy/img/news-releases/articles/slide1.jpg"></div>
-                    <div class="curtain slide1"></div>
-                    <div class="article-meta">
-                      <h3>GoDaddy Sets New Workplace Standard With State-Of-The-Art Facility</h3>
-                      <div class="article-date">October 7th, 2014</div>
+            <style>
+              #section-news-releases div.article-meta {top:0;position:relative;padding:5px 10px;height:65px;color: #fff;overflow:hidden;}
+              #section-news-releases div.article-meta h3 {margin:0px;line-height:1.4em;font-size:18px;color:#fff;}
+              #section-news-releases div.article-meta p {margin-top:5px;line-height:1.4em;font-size:12px;color:#fff;}
+              #section-news-releases div.view-more {text-align:center;padding:10px 0;height:auto!important;background-color:#F2F2F2;color:#333!important;}
+              #section-news-releases div.view-more:hover {background-color: #a2a2a2;color:#fff!important;}
+              #section-news-releases div.title {margin-bottom:7px;}
+              #section-news-releases div.curtain {top:0;position:absolute;background: #000;height:70px;width:100%;}
+              #section-news-releases div.curtain.slide1 {opacity:0.79;}
+              #section-news-releases div.curtain.slide2 {opacity:0.79;}
+              #section-news-releases div.curtain.slide3 {opacity:0.79;}
+              #section-news-releases div.curtain.slide4 {opacity:0.96; background-color: #2a2a2a;}
+              #section-news-releases div.curtain.slide5 {opacity:0.79;}
+              #section-news-releases span.pipe {margin:0 10px;}
+              #corporate .section.news .yui3-c.view-more {margin:0px!important;}
+            </style>
+            <div id="section-news-releases" class="section news news-releases">
+              <div class="inner">
+                <h2>News Releases</h2>
+                <div class="yui3-g">
+                  <div class="yui3-u-1-2">
+                    <div class="yui3-c" data-link="/news/article/godaddys-antidote-to-your-corporate-job-sweatpants.aspx?ci=88484">
+                      <div class="solazy img preview" data-sl-src="[@T[link:<imageroot />]@T]fos/newscenter/about_godaddy/img/news-releases/articles/slide1-32050.jpg"></div>
+                      <div class="curtain slide1"></div>
+                      <div class="article-meta">
+                        <h3>GoDaddy's Antidote To Your Corporate Job: Sweatpants!</h3>
+                        <p>Very Small Businesses Get to Work How &amp; Where They Want &ndash; Doing What They Want.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="yui3-u-1-2">
+                    <div class="yui3-c" data-link="/news/article/godaddy-opens-european-customer-care-centre.aspx?ci=89500">
+                      <div class="solazy img preview" data-sl-src="[@T[link:<imageroot />]@T]fos/newscenter/about_godaddy/img/news-releases/articles/slide2-32050.jpg"></div>
+                      <div class="curtain slide2"></div>
+                      <div class="article-meta">
+                        <h3>GoDaddy Opens European Customer Care Centre</h3>
+                        <p>Localized Product &amp; Customer Care Now in 23 Markets &amp; 16 Languages</p>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="yui3-u-1-2">
-                  <div class="yui3-c" data-link="/news/article/move-over-ellis-island-nyc-is-the-digital-gateway-to-new-york.aspx?ci=89500">
-                    <div class="solazy img preview" data-sl-src="[@T[link:<imageroot />]@T]fos/newscenter/about_godaddy/img/news-releases/articles/slide2.jpg"></div>
-                    <div class="curtain slide2"></div>
-                    <div class="article-meta">
-                      <h3>Move Over Ellis Island - .NYC is the Digital Gateway to New York</h3>
-                      <div class="article-date">October 8th, 2014</div>
+                <div class="yui3-g">
+                  <div class="yui3-u-1-3">
+                    <div class="yui3-c" data-link="/news/article/godaddy-back-in-the-super-bowl-with-a-puppy.aspx?ci=89501">
+                      <div class="solazy img preview" data-sl-src="[@T[link:<imageroot />]@T]fos/newscenter/about_godaddy/img/news-releases/articles/slide3-32050.jpg"></div>
+                      <div class="curtain slide3"></div>
+                      <div class="article-meta">
+                        <h3>GoDaddy Back In The Super Bowl ... With A Puppy</h3>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="yui3-u-1-3">
+                    <div class="yui3-c" data-link="/news/article/godaddy-sets-new-workplace-standard-with-state-of-the-art-facility.aspx?ci=88487">
+                      <div class="solazy img preview" data-sl-src="[@T[link:<imageroot />]@T]fos/newscenter/about_godaddy/img/news-releases/articles/slide4-32050.jpg"></div>
+                      <div class="curtain slide4"></div>
+                      <div class="article-meta">
+                        <h3>GoDaddy Sets New Workplace Standard With State-Of-The-Art Facility</h3>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="yui3-u-1-3">
+                    <div class="yui3-c" data-link="/news/article/godaddy-helps-small-businesses-easily-create-online-retail-stores.aspx?ci=90377">
+                      <div class="solazy img preview" data-sl-src="[@T[link:<imageroot />]@T]fos/newscenter/about_godaddy/img/news-releases/articles/slide5-32050.jpg"></div>
+                      <div class="curtain slide5"></div>
+                      <div class="article-meta">
+                        <h3>GoDaddy Helps Small Businesses Easily Create Online Retail Stores</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="yui3-g">
+                  <div class="yui3-u-1">
+                    <div class="yui3-c view-more" data-link="releases.aspx?ci=50929">
+                      View More<span class="pipe">|</span>View a list of past news releases
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="yui3-g">
-                <div class="yui3-u-1-3">
-                  <div class="yui3-c" data-link="/news/article/danica-godaddy-go-pink-to-put-the-brakes-on-breast-cancer.aspx?ci=89501">
-                    <div class="solazy img preview" data-sl-src="[@T[link:<imageroot />]@T]fos/newscenter/about_godaddy/img/news-releases/articles/slide3.jpg"></div>
-                    <div class="curtain slide3"></div>
-                    <div class="article-meta">
-                      <h3>Danica &amp; GoDaddy 'Go Pink' to 'Put the Brakes' on Breast Cancer</h3>
-                      <div class="article-date">October 1st, 2014</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="yui3-u-1-3">
-                  <div class="yui3-c" data-link="/news/article/godaddy-investing-in-next-gen-tech-women.aspx?ci=88487">
-                    <div class="solazy img preview" data-sl-src="[@T[link:<imageroot />]@T]fos/newscenter/about_godaddy/img/news-releases/articles/slide4.jpg"></div>
-                    <div class="curtain slide4"></div>
-                    <div class="article-meta">
-                      <h3>GoDaddy Investing In Next Gen Tech Women</h3>
-                      <div class="article-date">September 17th, 2014</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="yui3-u-1-3">
-                  <div class="yui3-c" data-link="/news/article/godaddy-acquires-mad-mimi.aspx?ci=90377">
-                    <div class="solazy img preview" data-sl-src="[@T[link:<imageroot />]@T]fos/newscenter/about_godaddy/img/news-releases/articles/slide5.jpg"></div>
-                    <div class="curtain slide5"></div>
-                    <div class="article-meta">
-                      <h3>GoDaddy Acquires Mad Mimi</h3>
-                      <div class="article-date">August 20th, 2014</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="yui3-g">
-                <div class="yui3-u-1">
-                  <div class="yui3-c view-more" data-link="releases.aspx?ci=50929">
-                    View More<span class="pipe">|</span>View a list of past news releases
-                  </div>
-                </div>
-              </div>
-            </div>
             ##endif
             <div id="section-contact-us" class="section contact-us">
               <div class="inner">
