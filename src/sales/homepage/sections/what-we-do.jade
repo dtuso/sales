@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 block prepend style
 =======
 block append styles
 >>>>>>> updating to stash
+=======
+atlantis:webstash(type="css")
+>>>>>>> STUPID fix for what we do
   style.
     .why-us-wrap{width:100%;height:520px;background:radial-gradient(#615e5f 1px, transparent 1px),#d4d4d4;background-size: 5px 5px;}
     .why-us-content{width:1000px;margin:0 auto;border-top:15px solid green;background-color:#fff;height:485px;background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/WWD-background.png) scroll no-repeat;}
@@ -16,10 +20,14 @@ block append styles
     .why-us-btn{cursor:pointer;}
     .why-us-btn:hover span{text-decoration:underline;}
 <<<<<<< HEAD
+<<<<<<< HEAD
     .gdhp-domains-logo,.gdhp-wsb-logo,.gdhp-store-logo,.gdhp-getfound-logo,.gdhp-support-logo,.gdhp-hosting-logo,.gdhp-o365-logo{background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gdhp_sprite_20141029.png) scroll no-repeat;display:inline-block;}
 =======
     .gdhp-domains-logo,.gdhp-wsb-logo,.gdhp-store-logo,.gdhp-getfound-logo,.gdhp-support-logo{display:inline-block;}
 >>>>>>> updating to stash
+=======
+    .gdhp-domains-logo,.gdhp-wsb-logo,.gdhp-store-logo,.gdhp-getfound-logo,.gdhp-support-logo{background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gdhp_sprite_20141024.png) scroll no-repeat;display:inline-block;}
+>>>>>>> STUPID fix for what we do
     .gdhp-domains-logo{background-position:-410px -170px;width:50px;height:56px;margin:12px 50px 0 0}
     .gdhp-wsb-logo{background-position:-410px -236px;width:45px;height:47px;margin:16.5px 55px 0 0}
     .gdhp-store-logo{background-position:-410px -293px;width:47px;height:52px;margin:14px 53px 0 0}
@@ -38,6 +46,7 @@ block append styles
     .gdhp-getfound-text{vertical-align:24px;}
     .gdhp-support-text{vertical-align:24px;}
 <<<<<<< HEAD
+<<<<<<< HEAD
     .gdhp-hosting-text{vertical-align:18px;}
     .gdhp-o365-text{display: inline-block;line-height: 30px;margin-left: 100px;}
     .why-us-wrap #disclaimers a{font-size: 12px;line-height: 14px;text-decoration: none;color: #333;}
@@ -51,12 +60,15 @@ block append styles
       .why-us-maintext
         | ##if(countrySiteAny(in))
 =======
+=======
+    
+>>>>>>> STUPID fix for what we do
 
 .why-us-wrap
-  .why-us-content       
+  .why-us-content
     .why-us-text
       span.why-us-headline [@L[cds.sales/homepage/locales/en:why-us-headline]@L]
-      .why-us-maintext 
+      .why-us-maintext
         | ##if(countrySiteAny([en-in]))
 >>>>>>> updating to stash
         | [@L[cds.sales/homepage/locales/en:why-us-maintext-india]@L]
@@ -69,6 +81,7 @@ block append styles
             a#gdhp-disclaimer-lnk.simple-link(href="#" data-toggle="modal" data-target="#myModal" data-ci="93289") [@L[cds.sales/homepage:disclaimer-text]@L]
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           | 
           | ##if(countrySiteAny(in))
           p.no-margin-bottom
@@ -79,8 +92,13 @@ block append styles
             | 
 =======
 >>>>>>> everything but what we do
+=======
+            | 
+>>>>>>> STUPID fix for what we do
             | ##if(countrySiteAny([en-in]))
+            | 
             a#gdhp-support-scope-link(href!='ta' target!="_blank")
+            | 
             | ##endif
 >>>>>>> updating to stash
         .modal.fade#myModal
@@ -95,12 +113,15 @@ block append styles
                   p [@L[cds.sales/homepage:disclaimer-modal-first-content]@L]
                   p [@L[cds.sales/homepage:disclaimer-modal-third-content]@L]
                   p [@L[cds.sales/homepage:disclaimer-modal-fourth-content]@L]
+                  | 
                   | ##if(countrySiteAny(au))
                   p [@L[cds.sales/homepage:disclaimer-modal-second-content]@L]
+                  | 
                   | ##endif
     .why-us-logos
       ul
         li.why-us-btn.js-gdhpclick(data-url!='[@T[link:<relative path="/domains/domain-name-search.aspx"><param name="ci" value="93299" /></relative>]@T]' data-ci="93299")
+<<<<<<< HEAD
 <<<<<<< HEAD
           span#gdhp-why-us-domains.gdhp-domains-logo
           span.gdhp-domains-text [@L[cds.sales/homepage/locales/en:whyus-logo-domains]@L]
@@ -133,17 +154,25 @@ block append styles
           span.gdhp-support-text [@L[cds.sales/homepage/locales/en:whyus-logo-support]@L]
 =======
           span#gdhp-why-us-domains.gdhp-domains-logo.hp-sprite
+=======
+          span#gdhp-why-us-domains.gdhp-domains-logo
+>>>>>>> STUPID fix for what we do
           span.gdhp-domains-text [@L[cds.sales/homepage/locales/en:whyus-logo-domains]@L]
         li.why-us-btn.js-gdhpclick(data-url!='[@T[link:<relative path="/hosting/website-builder.aspx"><param name="ci" value="93300" /></relative>]@T]' data-ci="93300")
-          span#gdhp-why-us-wsb.gdhp-wsb-logo.hp-sprite
+          span#gdhp-why-us-wsb.gdhp-wsb-logo
           span.gdhp-wsb-text [@L[cds.sales/homepage/locales/en:whyus-logo-wsb]@L]
         li.why-us-btn.js-gdhpclick(data-url!='[@T[link:<relative path="/ecommerce/shopping-cart.aspx"><param name="ci" value="93301" /></relative>]@T]' data-ci="93301")
-          span#gdhp-why-us-store.gdhp-store-logo.hp-sprite
+          span#gdhp-why-us-store.gdhp-store-logo
           span.gdhp-store-text [@L[cds.sales/homepage/locales/en:whyus-logo-onlinestore]@L]
         li.why-us-btn.js-gdhpclick(data-url!='[@T[link:<relative path="/products/business-marketing.aspx"><param name="ci" value="93302" /></relative>]@T]' data-ci="93302")
-          span#gdhp-why-us-getfound.gdhp-getfound-logo.hp-sprite
+          span#gdhp-why-us-getfound.gdhp-getfound-logo
           span.gdhp-getfound-text [@L[cds.sales/homepage/locales/en:whyus-logo-getfound]@L]
         li.why-us-btn.js-gdhpclick(data-url!='[@T[link:<external parammode="explicit" linktype="COMMUNITYURL"><param name="ci" value="93303" /></external>]@T]' data-ci="93303")
+<<<<<<< HEAD
           span#gdhp-why-us-support.gdhp-support-logo.hp-sprite
           span.gdhp-support-text [@L[cds.sales/homepage/locales/en:whyus-logo-support]@L]
 >>>>>>> updating to stash
+=======
+          span#gdhp-why-us-support.gdhp-support-logo
+          span.gdhp-support-text [@L[cds.sales/homepage/locales/en:whyus-logo-support]@L]
+>>>>>>> STUPID fix for what we do
