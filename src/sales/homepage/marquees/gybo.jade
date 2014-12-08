@@ -15,9 +15,9 @@ block append marqueeStyles
     #gybo .middle-wrapper{padding:20px 0 0 0;}
     #gybo .price-text{text-align:center;}
     #gybo .text>.headline{font-size:66px;line-height:66px; display:block; font-family:'walsheim-black'; margin:0;}
-    #gybo .product-text{font-size:28px;line-height:28px;text-align:center;font-family:'tungsten'}
+    #gybo .product-text{font-size:28px;line-height:28px;text-align:center;}
     #gybo .product-subtext{font-family:'Walsheim-Medium';font-size:18px;line-height:18px;text-align:center;padding:5px 0 0 0;}
-    #gybo .cond-text{font-size:41px;line-height:41px;display:block;margin-top:50px;font-family:'tungsten'}
+    #gybo .cond-text{font-size:41px;line-height:41px;display:block;margin-top:50px;}
     #gybo .rest-text{font-family:'Walsheim-Medium';font-size:12px;line-height:12px;display:block;padding-top:10px;text-align:center;}
     #gybo .btn-wrapper>.price-text{color:#ffffff;background-color:#ff8a00;width:140px;height:125px;display:block;margin:20px 0 10px 0;padding:35px 10px 0 10px;}
     #gybo .btn-wrapper>.price-text>.price{position:absolute;line-height:1.1; font-family:'walsheim-black'}
@@ -47,21 +47,21 @@ block marqueeContent
       .headline [@L[cds.sales/homepage/marquee/gybo:gybo-headline]@L]
       .middle-wrapper
         .domain.image
-        .product-text[@L[cds.sales/homepage/marquee/gybo:gybo-marq-domain]@L]
+        .product-text.tungsten [@L[cds.sales/homepage/marquee/gybo:gybo-marq-domain]@L]
       .plus-img +
       .middle-wrapper
         .wsb.image
-        .product-text [@L[cds.sales/homepage/marquee/gybo:gybo-marq-wsb]@L]
+        .product-text.tungsten [@L[cds.sales/homepage/marquee/gybo:gybo-marq-wsb]@L]
       .plus-img +
       .middle-wrapper
         .o365.image
-        .product-text [@L[cds.sales/homepage/marquee/gybo:gybo-marq-email]@L]
+        .product-text.tungsten [@L[cds.sales/homepage/marquee/gybo:gybo-marq-email]@L]
         .product-subtext [@L[cds.sales/homepage/marquee/gybo:gybo-marq-o365]@L]
       .equal-img =
       .btn-wrapper
         .price-text.bigtext
           .price [@T[productprice:<current productid="464069" period="monthly" promocode="24681357"></current>]@T] 
-          .cond-text [@L[cds.sales/homepage/marquee/gybo:gybo-per-month]@L]
+          .cond-text.tungsten [@L[cds.sales/homepage/marquee/gybo:gybo-per-month]@L]
         .btn-wrap
           .btn.btn-warning#gdhp-marq-gybo-btn(data-ci="93372") [@L[cds.sales/homepage/marquee/gybo:gybo-get-it-now]@L]
           .rest-text [@L[cds.sales/homepage/marquee/gybo:gybo-rest-text]@L]
