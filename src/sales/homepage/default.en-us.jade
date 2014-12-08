@@ -27,6 +27,12 @@ block marquee
   |  [@P[tmscontent:<data appproduct="hp" interactionpoint="marquee"><default app="sales" location="homepage/marquee/gtld/default_template"/><content app="sales" location="homepage/marquee"/></data>]@P]
   | ##endif
 
+block bugBar
+  +gtldBug("co")
+  +gtldBug("org")
+  +gtldBug("net")
+  +gtldBug("biz")
+
 block primaryTile
   | 
   | [@P[cdsDocument:<data app="sales" location="homepage/tile/hosting/default_template" /> ]@P]
@@ -34,12 +40,6 @@ block primaryTile
 block secondaryTile
   | 
   | [@P[cdsDocument:<data app="sales" location="homepage/tile/got/default_template" /> ]@P]
-
-block bugBar
-  +gtldBug("co")
-  +gtldBug("org")
-  +gtldBug("net")
-  +gtldBug("biz")
 
 block lowerMarquee
 
