@@ -29,7 +29,6 @@ block append styles
     .why-us-text
       span.why-us-headline [@L[cds.sales/homepage/locales/en:why-us-headline]@L]
       .why-us-maintext 
-        | 
         | ##if(countrySiteAny([en-in]))
         | [@L[cds.sales/homepage/locales/en:why-us-maintext-india]@L]
         | ##else
@@ -39,11 +38,8 @@ block append styles
         section.container.l-main-container.content-disclaimer
           p.no-margin-bottom
             a#gdhp-disclaimer-lnk.simple-link(href="#" data-toggle="modal" data-target="#myModal" data-ci="93289") [@L[cds.sales/homepage:disclaimer-text]@L]
-            | 
             | ##if(countrySiteAny([en-in]))
-            | 
             a#gdhp-support-scope-link(href!='ta' target!="_blank")
-            | 
             | ##endif
         .modal.fade#myModal
           .modal-dialog
@@ -57,10 +53,8 @@ block append styles
                   p [@L[cds.sales/homepage:disclaimer-modal-first-content]@L]
                   p [@L[cds.sales/homepage:disclaimer-modal-third-content]@L]
                   p [@L[cds.sales/homepage:disclaimer-modal-fourth-content]@L]
-                  | 
                   | ##if(countrySiteAny(au))
                   p [@L[cds.sales/homepage:disclaimer-modal-second-content]@L]
-                  | 
                   | ##endif
     .why-us-logos
       ul

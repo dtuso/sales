@@ -1,0 +1,55 @@
+---
+location: sales/homepage/default.en-us
+id: false
+name: GCE-33227
+---
+extends ../../layouts/homepage/default_base
+
+block append styles
+  style.
+    .top-banner-lower-content{height:45px;background-color:#fff;width:100%}
+    .top-lower-content{margin:0 auto;position:relative;width:1000px;padding-top:13px}
+    .gdhp-share{position:relative;float:right;}
+    #pcf .pc-support-wrapper{margin-top:0px !important;}
+    body {font-family:'Walsheim-Regular'; background-color:#ededed;}
+    body .gdhp-tile-wrap{background-color:#ededed;}
+
+block domainSearch
+  include ./sections/domain-search.jade
+
+block marquee
+  | 
+  | ##if(clientMetroCodeAny(501) && clientCityAny([New York]))
+  |  [@P[cdsDocument:<data app="sales" location="homepage/marquee/nyc/default_template" /> ]@P]
+  | ##elseif(clientMetroCodeAny(839))
+  |  [@P[cdsDocument:<data app="sales" location="homepage/marquee/vegas/default_template" /> ]@P]
+  | ##else
+  |  [@P[tmscontent:<data appproduct="hp" interactionpoint="marquee"><default app="sales" location="homepage/marquee/gtld/default_template"/><content app="sales" location="homepage/marquee"/></data>]@P]
+  | ##endif
+
+block primaryTile
+  | 
+  | [@P[cdsDocument:<data app="sales" location="homepage/tile/hosting/default_template" /> ]@P]
+
+block secondaryTile
+  | 
+  | [@P[cdsDocument:<data app="sales" location="homepage/tile/got/default_template" /> ]@P]
+
+block bugBar
+  +gtldBug("co")
+  +gtldBug("org")
+  +gtldBug("net")
+  +gtldBug("biz")
+
+block lowerMarquee
+
+block whyUs
+  include ./sections/what-we-do.jade
+
+block faq
+
+block disclaimers
+
+block cookieWarning
+  script(type="text/javascript").
+    var ignoreLivePerson = true;
