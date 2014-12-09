@@ -1,6 +1,6 @@
 ---
 location: localization/sales/gd/expansion-pages/online-store/best-ecommerce-solution/en
-id: 547cb435f778fc0d8800e62c
+id: 54875e74f778fc14fce4f67c
 name: SEM-235
 ---
 {% include '../../../../modules/doc-block.html' %}
@@ -15,7 +15,7 @@ Not sure if you should use a free website template or pay a small fee to use a w
 <phrase key="meta-keywords" />
 best ecommerce solution, best ecommerce website design, best ecommerce solutions, best ecommerce shopping cart, best ecommerce site builder, best ecommerce web hosting
 <phrase key="page-title-h1" />
-The Best eCommerce Solution
+Best eCommerce Store use Social &amp; Trust Buttons
 <phrase key="view-plans-button-label" />
 View Product
 <phrase key="share-twitter-related" />
@@ -31,17 +31,18 @@ In addition to including customer reviews and third-party badges, you should als
 
 Boost customers' trust in your site by seamlessly integrating your social media presence with your website, allowing users to share your content, follow your business, or provide feedback.<br /><br />
 
-If you're a current [@T[companyname:name]@T] customer, just follow the below steps to turn on your site's social media features:<br /><br />
+If you're a current GoDaddy customer, just follow the below steps to turn on your site's social media features:<br /><br />
 
 <ol>
-  <li>Login to your <a href="[@T[link:<external parammode='explicit' linktype='MYAURL' secure='true' path='/'><param name='ci' value='12345' /></external>]@T]">Account Manager</a>.</li>
+  <li>Login to your <a href="[@T[link:<external parammode='explicit' linktype='MYAURL' secure='true' path='/'><param name='ci' value='95146' /></external>]@T]">Account Manager</a>.</li>
   <li>Under <b>Products</b> list, click <b>Online Store</b> then click <b>Launch</b> next to the appropriate account.</li>
   <li>On the <b>Promote</b> tab, click <b>Promote</b>.</li>
-  <li>Select <b>Turn On</b> for each of the features you want to activate (Some feature cannot be turned on until you publish your Online Store by clicking the <b>Go Live</b> link).</li>
+  <li>Select <b>Turn On</b> for each of the features you want to activate (Some features cannot be turned on until you publish your Online Store by clicking the <b>Go Live</b> link).</li>
 </ol>
 
-By letting you easily add social features and other trust signals to your website, you'll find that Online Store offers one of the best eCommerce site builders out there for your business.
-Plus, with Online Store, you also get access to our award-winning support team. Our outstanding team members are available to answer your questions 24 hours a day, 7 days a week—exactly what you would expect from the best eCommerce solution.
+Want to learn how to add more trust signals to your website? Then check out our articles <a href="[@T[link:<external parammode='explicit' linktype='COMMUNITYURL' secure='true' path='help/article/9130/adding-sitelocks-trust-seal-to-your-site'><param name='ci' value='95147' /></external>]@T]" data-ci="95147">Adding SiteLock's Trust Seal</a> and <a href="[@T[link:<external parammode='explicit' linktype='COMMUNITYURL' secure='true' path='help/article/4073/adding-ssl-site-seals-to-web-pages-in-website-builder'><param name='ci' value='95148' /></external>]@T]" data-ci="95148">Adding SSL Site Seals</a>.<br /><br />
+
+By letting you easily add social features and other trust signals to your website, you'll find that Online Store offers one of the best eCommerce site builders out there for your business. Plus, with Online Store, you also get access to our award-winning support team. Our outstanding team members are available to answer your questions 24 hours a day, 7 days a week—exactly what you would expect from the best eCommerce solution.
 <phrase key="see-all-faqs-button-label" />
 See All Online Store FAQs
 <phrase key="choose-your-product-package-label" />
