@@ -1,0 +1,85 @@
+---
+location: localization/sales/gd/expansion-pages/website-builder/how-to-publish-a-website/en
+id: 547e3ccef778fc1db8259f84
+name: SEM-244
+---
+{% include '../../../../modules/doc-block.html' %}
+<phrase key="page-title" />
+How to Publish a Website | Website Builder Help - [@T[companyname:name]@T]
+<phrase key="meta-description" />
+Learn how to publish your website with [@T[companyname:name]@T]'s Website Builder. In just a few clicks, you'll have your site live!
+<phrase key="og-title" />
+How to Publish a Website | Website Builder Help - [@T[companyname:name]@T]
+<phrase key="og-description" />
+Learn how to publish your website with [@T[companyname:name]@T]'s Website Builder. In just a few clicks, you'll have your site live!
+<phrase key="meta-keywords" />
+how to publish a website, how to publish website, publishing a website, publishing websites, how to publish your website
+<phrase key="page-title-h1" />
+How to Publish Your Website
+<phrase key="view-plans-button-label" />
+View Plans
+<phrase key="share-twitter-related" />
+[@T[companyname:name]@T] Website Builder
+<phrase key="main-content" comment="{0} will be replaced with a price amount" />
+Building and publishing a website can seem intimidating. Yet, with [@T[companyname:name]@T]'s Website Builder, it only takes a few clicks for you to publish your website and get it online for all to see. Check out the instructions below to learn how to publish a website with [@T[companyname:name]@T].<br /><br />
+
+<b>Preview Your Website</b><br />
+Before publishing your website, take a few minutes to preview it and make sure that the layout and the content appear as they should.<br /><br />
+
+<ol>
+  <li>Log in to your Account Manager.</li>
+  <li>Click Website Builder.</li>
+  <li>Click Launch next to the account you want to work on.</li>
+  <li>Click Preview.</li>
+  <li>Make and save any necessary changes.</li>
+</ol>
+
+<b>How to Publish a Website</b><br />
+After logging in to your Account Manager and launching Website Builder for the appropriate account, follow the below steps:<br /><br />
+
+<ol>
+  <li>Click Publish Site.</li>
+  <li>Select that you have read and agree to the terms of service for Google®. If you choose not to accept Google's Terms of Service, then any existing Google sitemaps or access to Google Webmaster Tools will be removed.</li>
+  <li>Create a backup of your website by selecting Back Up Website Prior to Publishing (Always better safe than sorry).</li>
+  <li>To publish your entire website, click Publish All. If this is your first time publishing, Publish All will be your only option.</li>
+  <li>To publish only recently updated pages, click Publish Updates.</li>
+  <li>Allow 24 to 48 hours for your website or edits to appear on the Internet.</li>
+</ol>
+
+Pretty easy, right? If you're not a current [@T[companyname:name]@T] customer but would like to be able to publish websites easily online, read on to learn more about our Website Builder and some of its great features.<br /><br />
+
+<b>Online Website Builder – The Benefits</b><br />
+Our Website Builder provides you with access to hundreds of customizable template designs, so you get the ease of a pre-built website, but you can still alter the designs to reflect your brand. Our sleek, contemporary designs make it easy for you to create a professional presence online. Another bonus when you choose [@T[companyname:name]@T] is that you get access to our amazing customer support team, who will help you get your website online in a timely manner.<br /><br />
+
+If all of this sounds good, but you're still unsure about how to build a mobile website in addition to your desktop version, you'll be happy to know that [@T[companyname:name]@T]'s Website Builder automatically creates a mobile version of your website, so your users have a good experience accessing your site from any device.<br /><br />
+
+<b>It's Go Time</b><br />
+If you're ready to get going on publishing your website, sign up for [@T[companyname:name]@T]'s Website Builder. With 24/7 access to [@T[companyname:name]@T]'s award-winning support team and pricing as low as <span class="ep-wsb-low-price">{0}</span>/month, there's no reason not to try it out.
+<phrase key="see-all-faqs-button-label" />
+See All Website Builder FAQs
+<phrase key="choose-your-product-package-label" />
+Choose Your Website Builder Package
+<phrase key="top-3-faqs-title" />
+Top Three Related FAQs
+<phrase key="top-3-faqs-1" />
+Adjusting your Plan
+<phrase key="top-3-faqs-2" />
+Add Text and Images
+<phrase key="top-3-faqs-3" />
+Changing your domain name
+<phrase key="other-resources-title" />
+Other Resources
+<phrase key="other-resources-1" />
+Domains
+<phrase key="other-resources-2" />
+Website Builder
+<phrase key="other-resources-3" />
+Online Store
+<phrase key="other-resources-4" />
+Get Found Tool
+<phrase key="other-resources-5" />
+24/7 Support
+<phrase key="green-box-title" />
+Need help?
+<phrase key="green-box-text" />
+Call anytime. Our free, award-winning support is here day and night.

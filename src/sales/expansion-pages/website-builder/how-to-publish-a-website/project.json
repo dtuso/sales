@@ -1,0 +1,25 @@
+{
+  "how-to-publish-a-website.html": {
+    "cdsDetails": {
+      "champion": {
+        "name": "Victor Songco",
+        "email": "vsongco@godaddy.com"
+      }
+    },
+    "metaTitle": "[@L[cds.sales/gd/expansion-pages/website-builder/how-to-publish-a-website:page-title]@L]",
+    "metaDescription": "[@L[cds.sales/gd/expansion-pages/website-builder/how-to-publish-a-website:meta-description]@L]",
+    "metaKeywords": "[@L[cds.sales/gd/expansion-pages/website-builder/how-to-publish-a-website:meta-keywords]@L]",
+    "metaCanonicalPath": "/hosting/website-builder/how-to-publish-a-website",
+    "metaOgTitle": "[@L[cds.sales/gd/expansion-pages/website-builder/how-to-publish-a-website:og-title]@L]",
+    "metaOgImage": "fos/hp/rebrand/img/gd_rebrand_og.png",
+    "metaOgDescription": "[@L[cds.sales/gd/expansion-pages/website-builder/how-to-publish-a-website:og-description]@L]"
+  },
+  "how-to-publish-a-website.language": {
+    "cdsDetails": {
+      "champion": {
+        "name": "Victor Songco",
+        "email": "vsongco@godaddy.com"
+      }
+    }
+  }
+}
