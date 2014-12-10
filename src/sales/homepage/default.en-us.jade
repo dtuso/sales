@@ -62,12 +62,6 @@ block scripts
   script(src!="[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2" type="text/javascript")
   script(src!="[@T[link:<javascriptroot />]@T]fos/201401/global/vendor/bootstrap/js/bootstrap.min.js" type="text/javascript")
   script(type="text/javascript").
-    if (/isc=ENGONGROW/i.test(self.location.href)) {
-      $('#marquee-container-orig').hide();
-      $('#marquee-container-isc').show();
-      $('.gtld-tiles').hide();
-      $('.gdhp-tile-wrap').hide();
-    }
     var ignoreLivePerson = true;
     $(document).ready(function() {
     var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&'),
