@@ -1,8 +1,8 @@
 ---
 location: localization/sales/gd/hosting/website-builder/en
-id:  54b4c734f778fc100405226a
-name: GCE-32431 Rebrand
-comments: New Langauge for Rebrand
+id:  5488b03ff778fc16ec4de520
+name: SEM-244
+comments: FAQ link/text changes for new How to Publish a Website expansion page
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="page-title" />
@@ -707,13 +707,13 @@ Get big results, even on the small screen. We automatically convert your site to
 What can a website do for my business?
 <phrase key="faq-first-slide-content" />
 <p>
-  Most people looking for goods or services start on the Web. Unfortunately, many small businesses can't afford to pay someone else to build their website. That's where [@T[companyname:name]@T] comes in – we can show you <strong>how to create a website</strong> for yourself.
+  Most people looking for goods or services start on the Web. Unfortunately, many small businesses can't afford to pay someone else to build their website. That's where [@T[companyname:name]@T] comes in – we can show you <strong>how to create a website</strong> for yourself.
 </p>
 <p>
-  Design your own <strong>website</strong> fast to ensure your customers find you early – while they're still shopping around. In this fast-changing Internet age, there's no time like the present.
+  Design your own <strong>website</strong> fast to ensure your customers find you early – while they're still shopping around. In this fast-changing Internet age, there's no time like the present.
 </p>
 <p>
-  Don't have a business? You'll want a website to connect with family, friends, and others who share your passions. Luckily, it's easy and inexpensive to <strong>make your own website</strong>.
+  Don't have a business? You'll want a website to connect with family, friends, and others who share your passions. Luckily, it's easy and inexpensive to <strong>make your own website</strong>.
 </p>
 <p>
   For more information, see <a data-ci="85534" href="http://support.godaddy.com/help/article/5107" target="_blank">Building Your Web Presence with Our Site-Building Software.</a>
@@ -728,23 +728,23 @@ Can I learn how to make a website?
  You have the ideas. We have the tools to make them a reality.
 </p>
 <p>
-  Just scroll through our library of <strong>website templates</strong>, choose a layout you like, adjust the colors, replace the photos with your own or any of the 8,700 included stock photos, and add your own text. With [@T[companyname:name]@T] Website Builder<sup class="supsymbol">&reg;</sup>, building your own website is actually fun.
+  Just scroll through our library of <strong>website templates</strong>, choose a layout you like, adjust the colors, replace the photos with your own or any of the 8,700 included stock photos, and add your own text. With [@T[companyname:name]@T] Website Builder<sup class="supsymbol">&reg;</sup>, building your own website is actually fun.
 </p>
-<p>Interested in a money making website? See <a data-ci="85535" href="http://support.godaddy.com/help/article/813" target="_blank">How do I build an online store?</a></p>
+<p class="ep-wsb-how-to-publish-a-website-faq">Interested in a money making website? See <a data-ci="85535" href="http://support.godaddy.com/help/article/813" target="_blank">How do I build an online store?</a></p>
 <phrase key="faq-third-slide-title" />
 What should I look for in a Web builder?
 <phrase key="faq-third-slide-content" />
 <p>
-  Be sure to look for a variety of <strong>website templates</strong> and a nice big library of free photos. Also, a good website builder has the flexibility to let you make changes on the fly when your next brilliant idea strikes.
+  Be sure to look for a variety of <strong>website templates</strong> and a nice big library of free photos. Also, a good website builder has the flexibility to let you make changes on the fly when your next brilliant idea strikes.
 </p>
 <p>
-  You'll also want to check to be sure you can switch to a new website template without losing the text you've already added. Short on time? Look for <strong>pre-built websites</strong> with words and pictures already filled in.
+  You'll also want to check to be sure you can switch to a new website template without losing the text you've already added. Short on time? Look for <strong>pre-built websites</strong> with words and pictures already filled in.
 </p>
 <p>
-  Although technology has come a long way, many people still need help as they learn <strong>how to create a website</strong>. Luckily, [@T[companyname:name]@T] is here with answers.
+  Although technology has come a long way, many people still need help as they learn <strong>how to create a website</strong>. Luckily, [@T[companyname:name]@T] is here with answers.
 </p>
 <p>
-  Call our customer service any time day or night with general questions on <strong>how to make a website</strong> or specific help with creating a slideshow, for example, or adding a Facebook<sup class="supsymbol">&reg;</sup> feed to your website.
+  Call our customer service any time day or night with general questions on <strong>how to make a website</strong> or specific help with creating a slideshow, for example, or adding a Facebook<sup class="supsymbol">&reg;</sup> feed to your website.
 </p>
 <p>
  For more information, see <a data-ci="85536" href="http://support.godaddy.com/help/article/4026" target="_blank">What are Pre-Built Sites?</a>
@@ -753,26 +753,26 @@ What should I look for in a Web builder?
 How can I use my website?
 <phrase key="faq-fourth-slide-content" />
 <p>
-  Once you become familiar with your website builder from GoDaddy and <strong>learn how to make a Website</strong>, the possibilities are endless. Are you a doctor or lawyer, or are you still searching for the perfect job? You can create a <strong>Doctor Website</strong> or a <strong>Legal Website</strong> to attract new local clients. If you're a job searcher, you easily make a <strong>resume Website</strong> to show off skills, experiences, and references that will help you land that dream job.
+  Once you become familiar with your website builder from GoDaddy and <strong>learn how to make a Website</strong>, the possibilities are endless. Are you a doctor or lawyer, or are you still searching for the perfect job? You can create a <strong>Doctor Website</strong> or a <strong>Legal Website</strong> to attract new local clients. If you're a job searcher, you easily make a <strong>resume Website</strong> to show off skills, experiences, and references that will help you land that dream job.
 </p>
 <p>
-  Post and <strong>share pictures</strong> of the kids. <strong>Promote your business</strong> product line. Websites are so versatile, everyone should have one.
+  Post and <strong>share pictures</strong> of the kids. <strong>Promote your business</strong> product line. Websites are so versatile, everyone should have one.
 </p>
 <p>
-  Want to sell products or services online? Add a <a href="http://www.godaddy.com/ecommerce/shopping-cart.aspx?ci=75946" target="_blank">shopping cart</a>. Eager to attract more visitors to your website? Optimize your website for search engines. You can find free articles on everything from how to create a website to using social media to promote your business at <a href="http://support.godaddy.com/?ci=75947" target="_blank">Support.GoDaddy.com</a>.
+  Want to sell products or services online? Add a <a href="http://www.godaddy.com/ecommerce/shopping-cart.aspx?ci=75946" target="_blank">shopping cart</a>. Eager to attract more visitors to your website? Optimize your website for search engines. You can find free articles on everything from how to create a website to using social media to promote your business at <a href="http://support.godaddy.com/?ci=75947" target="_blank">Support.GoDaddy.com</a>.
 </p>
 <p class='no-margin-bottom'>
  For more information, see <a data-ci="85537" href="http://support.godaddy.com/help/article/3503?ci=75947" target="_blank">Website Builder Add-ons.</a>
 </p>
 <phrase key="faq-fourth-slide-content-alt" />
 <p>
-  Once you become familiar with your website builder from GoDaddy and <span>learn how to make a Website</span>, the possibilities are endless. Are you a doctor or lawyer, or are you still searching for the perfect job? You can create a <span>Doctor Website</span> or a <span>Legal Website</span> to attract new local clients. If you're a job searcher, you easily make a <span>resume Website</span> to show off skills, experiences, and references that will help you land that dream job.
+  Once you become familiar with your website builder from GoDaddy and <span>learn how to make a Website</span>, the possibilities are endless. Are you a doctor or lawyer, or are you still searching for the perfect job? You can create a <span>Doctor Website</span> or a <span>Legal Website</span> to attract new local clients. If you're a job searcher, you easily make a <span>resume Website</span> to show off skills, experiences, and references that will help you land that dream job.
 </p>
 <p>
-  Post and <span>share pictures</span> of the kids. <span>Promote your business</span> product line. Websites are so versatile, everyone should have one.
+  Post and <span>share pictures</span> of the kids. <span>Promote your business</span> product line. Websites are so versatile, everyone should have one.
 </p>
 <p>
-  Eager to attract more visitors to your website? Optimize your website for search engines. You can find free articles on everything from how to create a website to using social media to promote your business at <a href="http://support.godaddy.com/?ci=75947" target="_blank">Support.GoDaddy.com</a>.
+  Eager to attract more visitors to your website? Optimize your website for search engines. You can find free articles on everything from how to create a website to using social media to promote your business at <a href="http://support.godaddy.com/?ci=75947" target="_blank">Support.GoDaddy.com</a>.
 </p>
 <p>
  For more information, see <a data-ci="85537" href="http://support.godaddy.com/help/article/3503?ci=75947" target="_blank">Website Builder Add-ons.</a>

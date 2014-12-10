@@ -1,6 +1,6 @@
 ---
 location: localization/sales/gd/expansion-pages/website-builder/how-to-publish-a-website/en
-id: 547e3ccef778fc1db8259f84
+id: 5488b03ff778fc16ec4de520
 name: SEM-244
 ---
 {% include '../../../../modules/doc-block.html' %}
@@ -27,10 +27,10 @@ Building and publishing a website can seem intimidating. Yet, with [@T[companyna
 Before publishing your website, take a few minutes to preview it and make sure that the layout and the content appear as they should.<br /><br />
 
 <ol>
-  <li>Log in to your Account Manager.</li>
-  <li>Click Website Builder.</li>
-  <li>Click Launch next to the account you want to work on.</li>
-  <li>Click Preview.</li>
+  <li>Log in to your <a href="[@T[link:<external parammode='explicit' linktype='MYAURL' secure='true' path='/'><param name='ci' value='95075' /></external>]@T]">Account Manager</a>.</li>
+  <li>Click <b>Website Builder</b>.</li>
+  <li>Click <b>Launch</b> next to the account you want to work on.</li>
+  <li>Click <b>Preview</b>.</li>
   <li>Make and save any necessary changes.</li>
 </ol>
 
@@ -38,11 +38,11 @@ Before publishing your website, take a few minutes to preview it and make sure t
 After logging in to your Account Manager and launching Website Builder for the appropriate account, follow the below steps:<br /><br />
 
 <ol>
-  <li>Click Publish Site.</li>
-  <li>Select that you have read and agree to the terms of service for Google®. If you choose not to accept Google's Terms of Service, then any existing Google sitemaps or access to Google Webmaster Tools will be removed.</li>
-  <li>Create a backup of your website by selecting Back Up Website Prior to Publishing (Always better safe than sorry).</li>
-  <li>To publish your entire website, click Publish All. If this is your first time publishing, Publish All will be your only option.</li>
-  <li>To publish only recently updated pages, click Publish Updates.</li>
+  <li>Click <b>Publish Site</b>.</li>
+  <li>Select that you have read and agree to the terms of service for Google<sup>&reg;</sup>. If you choose not to accept Google's Terms of Service, then any existing Google sitemaps or access to Google Webmaster Tools will be removed.</li>
+  <li>Create a backup of your website by selecting <b>Back Up Website Prior to Publishing</b> (Always better safe than sorry).</li>
+  <li>To publish your entire website, click <b>Publish All</b>. If this is your first time publishing, <b>Publish All</b> will be your only option.</li>
+  <li>To publish only recently updated pages, click <b>Publish Updates</b>.</li>
   <li>Allow 24 to 48 hours for your website or edits to appear on the Internet.</li>
 </ol>
 
