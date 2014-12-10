@@ -1,7 +1,7 @@
 ---
 location: localization/sales/gd/expansion-pages/website-builder/how-to-build-a-website/en
-id: 5476329df778fc0a989096bb
-name: SEM-172
+id: 5480a343f778fc0ce0b0aa27
+name: SEM-262
 ---
 {% include '../../../../modules/doc-block.html' %}
 <phrase key="page-title" />
@@ -18,7 +18,9 @@ how build a website, how can I build a website, how do I build a website, how do
 How Do I Build a Website?
 <phrase key="view-plans-button-label" />
 View Plans
-<phrase key="main-content" />
+<phrase key="share-twitter-related" />
+[@T[companyname:name]@T] Website Builder
+<phrase key="main-content" comment="{0} will be replaced with a price amount" />
 You need a website, but you're not sure where to begin. Read below to learn the ins and outs of creating an online presence.<br /><br />
 
 <b>How to Build Your Own Website</b><br />
@@ -27,14 +29,14 @@ If you're not a web developer, then you'll need to find a good template or websi
 A simple, intuitive website builder is typically the best choice for someone looking for ease-of-use. Website builders often operate on a What You See Is What You Get (WYSIWYG) platform. WYSIWYG makes it easier for you to envision the final product and make quick changes to the design layout. With a WYSIWYG platform, you don't have to worry about going into the website code and getting confused or making mistakes. Instead, you get a clean, easy-to-view format — no special technical skills required.<br /><br />
 
 <b>How Much Does a Website Cost to Build?</b><br />
-When it comes to building a website, you can spend as little or as much as you want. Free templates abound, as a quick Google search will show, are great but do require time and some technical ability to setup, FTP, server configuration, etc. For people who would rather focus on running their business there are simple and affordable website builders. [@T[companyname:name]@T] offers website building plans that start at [@T[productprice:<current productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/month and go up to [@T[productprice:<current productid="7503" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/month — all economical packages.<br /><br />
+When it comes to building a website, you can spend as little or as much as you want. Free templates abound, as a quick Google search will show, are great but do require time and some technical ability to setup, FTP, server configuration, etc. For people who would rather focus on running their business there are simple and affordable website builders. [@T[companyname:name]@T] offers website building plans that start at <span class="ep-wsb-low-price">{0}</span>/month and go up to <span class="ep-wsb-high-price">{0}</span>/month — all economical packages.<br /><br />
 
 While you may want to learn how to build a website on your own, if you choose to work with [@T[companyname:name]@T]'s Website Builder, you're never truly alone in the process. Our experienced customer service team is available 24/7 to help you troubleshoot and get your site live as soon as possible. Having access to a knowledgeable customer support team just a phone call away is one of the benefits of paying a small fee for starting up your website.<br /><br />
 
 <b>How to Build a Mobile Website</b><br />
 Over 50% of web searches are completed on a mobile device, and this number is increasing daily. Whether you're creating a personal or business website, you need it to be mobile-friendly so users always have a good experience.<br /><br />
 
-When you are searching for a mobile friendly website building tool, look for something called responsive design. Responsive design simply means your site will automatically adjust to the screen size of the device on which it's being viewed. With responsive design, you can trust that people visiting your website from smartphones and tablets can easily navigate and find what they are looking for, just like people using a desktop computer. All of Godaddy's Website Builder plans include responsive design by default.<br /><br />
+When you are searching for a mobile friendly website building tool, look for something called responsive design. Responsive design simply means your site will automatically adjust to the screen size of the device on which it's being viewed. With responsive design, you can trust that people visiting your website from smartphones and tablets can easily navigate and find what they are looking for, just like people using a desktop computer. All of [@T[companyname:name]@T]'s Website Builder plans include responsive design by default.<br /><br />
 
 <b>How to Build an eCommerce Website</b><br />
 Businesses that sell items online need to make sure the website builder they choose has an online shopping cart. You'll want to look for a system that allows you to add products, manage inventory and accept credit cards.<br /><br />

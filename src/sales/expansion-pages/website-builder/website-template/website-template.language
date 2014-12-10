@@ -1,7 +1,7 @@
 ---
 location: localization/sales/gd/expansion-pages/website-builder/website-template/en
-id: 546657d5f778fc1a109d4064
-name: SEM-172
+id: 5480a331f778fc0ce0b0aa26
+name: SEM-262
 ---
 {% include '../../../../modules/doc-block.html' %}
 <phrase key="page-title" />
@@ -18,7 +18,9 @@ website templates, free website templates, website template, free website templa
 What are Website Templates?
 <phrase key="view-plans-button-label" />
 View Plans
-<phrase key="main-content" />
+<phrase key="share-twitter-related" />
+[@T[companyname:name]@T] Website Builder
+<phrase key="main-content" comment="{0} will be replaced with a price amount" />
 Website templates help individuals and business owners create an online presence without having to hire a web developer or webmaster. In other words, using a site template puts you — the website owner — in control. Templates provide a great option for people who are willing to spend some time getting their website online, but are not willing to shell out the thousands of dollars that a web developer might charge.<br /><br />
 
 <b>Two Basic Options – Free or Paid</b><br />
@@ -46,7 +48,7 @@ If you want to create a professional-looking website, but can't afford to pay a 
 <b>Start Creating</b><br />
 If you've been searching for a website template, check out [@T[companyname:name]@T]'s Website Builder. You'll find great features like the ability integrate social apps from Facebook, Twitter and YouTube, as well as business apps like PayPal.<br /><br />
 
-For as low as [@T[productprice:<current productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/month, you get access to a variety of templates and the support of our award-winning customer service team. Make your website today with [@T[companyname:name]@T].
+For as low as <span class="ep-wsb-low-price">{0}</span>/month, you get access to a variety of templates and the support of our award-winning customer service team. Make your website today with [@T[companyname:name]@T].
 <phrase key="see-all-faqs-button-label" />
 See All Website Builder FAQs
 <phrase key="choose-your-product-package-label" />
