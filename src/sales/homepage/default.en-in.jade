@@ -60,6 +60,8 @@ block faq
 
 block disclaimers
 
+block cookieWarning
+
 block scripts
   script(src!="[@T[link:<javascriptroot />]@T]fos/hp/rebrand/js/bigtext.min.js")
   script(src!="[@T[link:<javascriptroot />]@T]fos/script/sales17.min.js" type="text/javascript")
@@ -190,6 +192,7 @@ block scripts
     });
     $(window).load(function () {
       $('.bigtext').bigtext().css('visibility', 'visible');
+      setTimeout( "$('.bigtext').bigtext().css('visibility', 'visible');",100 );
     });
     var $resizeElements = $('.js-gdhpPriceResize');
     if($resizeElements){
