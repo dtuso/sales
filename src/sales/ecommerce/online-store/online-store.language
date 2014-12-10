@@ -1,7 +1,6 @@
 ---
 location: localization/sales/gd/ecommerce/online-store/en
-id:   
-
+id: 547cdeecf778fc1db8259f20
 name: GCE-20285
 ---
 {% include 'modules/doc-block.html' %}
@@ -163,8 +162,8 @@ Mobile-optimized sites for tablets and smartphones.
 — Carolyn Pofok, <a target="blank" href="http://www.theprincessexpress.com">The Princess Express</a>
 <phrase key="FaqTitleSlide0" />
 How do I get started building my <strong>Online Store</strong>?
-<phrase key="FaqTitleSlide0Text" />
-Choose the theme and colors that best support your brand and give your customers a consistent experience when interacting with your company. Our <strong>eCommerce website builder</strong> allows you to customize the look and feel of your Online Store. Learn how to <a target="blank" href="https://support.godaddy.com/help/article/12054/choosing-and-customizing-online-store-themes">Choose and Customize Online Store Themes.</a>
+<phrase key="FaqTitleSlide0Text" comment="{X} will be replaced with a text link" />
+Choose the theme and colors that best support your brand and give your customers a consistent experience when interacting with your company. Our <strong>eCommerce website builder</strong> allows you to customize the look and feel of your Online Store. Learn how to <a target="blank" href="https://support.godaddy.com/help/article/12054/choosing-and-customizing-online-store-themes">Choose and Customize Online Store Themes</a>.<span class="expansion-page-1-link">{X}</span>
 <phrase key="FaqTitleSlide1" />
 How do I add products to my <strong>Online Store</strong>?
 <phrase key="FaqTitleSlide1Text" />

@@ -1,0 +1,22 @@
+---
+location: sales/ecommerce/online-store/best-ecommerce-solution.rule
+id: 547cb3c4f778fc0d8800e628
+name: SEM-235
+---
+[
+  { 
+    'Type': 'Redirect',
+    'Condition': 'mobileRedirectRequired()',
+    'Data': "{ 'Type' : '302', 'Loc': '[@T[mobileRedirectLink:<data redirectKey=\"sales.productlanding.onlinestore\" />]@T]' }"
+  },
+  { 
+    'Type': 'Redirect',
+    'Condition': '!activeLanguageAny([en-au],[en-ca],[en-gb],[en-in],[en-us])',
+    'Data': "{ 'Type' : '301', 'Loc': '[@T[link:<relative path=\"~/\" />]@T]' }"
+  },
+  { 
+    'Type': 'Redirect',
+    'Condition': 'siteContextAny(pl)',
+    'Data': "{ 'Type' : '301', 'Loc': '[@T[link:<relative path=\"~/\" />]@T]' }"
+  }
+]
