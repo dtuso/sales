@@ -192,7 +192,7 @@
         "right": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-23-OurAutomaticUpdatesMakeSureYouReAlways]@L]"
       },
       {
-        "left": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-2-SFTPSSL]@L]",
+        "left": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-2-SFTPSSH]@L]",
         "right": "[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-27-SecurelyAccessAndManageFilesOnRemoteFile]@L]"
       }
       ]
