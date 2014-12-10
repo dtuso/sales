@@ -15,10 +15,10 @@
       Adam Smith <absmith@godaddy.com>
 
     DRAFT DETAILS:
-      Modified Date:  2014-11-05
+      Modified Date:  2014-12-10
       Created By:     Mike Cowan <mcowan@godaddy.com>
-      JIRA Ticket:    GCE-30012
-      Comments:       Merchandising Updates 11/12
+      JIRA Ticket:    GCE-33067
+      Comments:       Merchandising Updates 12/10/2014
       
 
 
@@ -468,6 +468,10 @@ Reach Indian learners with <strong>.shiksha</strong>
 Speak to <strong>.city</strong> dwellers on the web.
 <phrase key="PodDotSarlText" />
 </strong>.sarl</strong> says you're licensed partnership
+<phrase key="PodDotCasaText" />
+Make <strong>.casa</strong> your home online.
+<phrase key="PodDotPizzaText" />
+Get your <strong>.pizza</strong> while it’s hot!
 <phrase key="TldDotGuide" />
 <strong>.guide</strong>
 <phrase key="TldDotBoutique" />
@@ -612,6 +616,10 @@ Speak to <strong>.city</strong> dwellers on the web.
 <strong>.city</strong>
 <phrase key="TldDotSarl" />
 <strong>.sarl</strong>
+<phrase key="TldDotPizza" />
+<strong>.pizza</strong>
+<phrase key="TldDotSite" />
+<strong>.site</strong>
 <phrase key="CarouselSlide1Default" />
 Get a web address that tells the world what you do. New domains available now: <strong>.attorney</strong>, <strong>.church</strong>, <strong>.club</strong>, <strong>.xyz</strong> and <strong>.guide</strong>. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a> 
 <phrase key="CarouselSlide1AU" />
@@ -647,6 +655,6 @@ SAVE up to 50% or more when you get online today with these popular domains: <a 
 <phrase key="CarouselSlide3AU" />
 It's Go Time! Get online now with your own domain name. Save 50% and more on <a data-ci="88402" href="[@T[link:<relative path="/tlds/com"></relative>]@T]"><strong>.com</strong></a>, <a data-ci="88582" href="[@T[link:<relative path="/tlds/co-domain"></relative>]@T]"><strong>.co</strong></a>, <a data-ci="88404" href="[@T[link:<relative path="/tlds/org.aspx"></relative>]@T]"><strong>.org</strong></a> and <a data-ci="90888" href="[@T[link:<relative path="/tlds/me"></relative>]@T]"><strong>.me</strong></a>.
 <phrase key="CarouselSlide3ES" />
-SAVE up to 50% or more when you get online today with these popular domains:<a data-ci="88402" href="[@T[link:<relative path="/tlds/com"></relative>]@T]"><strong>.com</strong></a>, <a data-ci="91412" href="[@T[link:<relative path="/tlds/net"></relative>]@T]"><strong>.net</strong></a>, <a data-ci="88582" href="[@T[link:<relative path="/tlds/co-domain"></relative>]@T]"><strong>.co</strong></a>, <a data-ci="88404" href="[@T[link:<relative path="/tlds/org.aspx"></relative>]@T]"><strong>.org</strong></a>, <a data-ci="90888" href="[@T[link:<relative path="/tlds/me"></relative>]@T]"><strong>.me</strong></a>, <a data-ci="88401" href="[@T[link:<relative path="/tlds/biz.aspx"></relative>]@T]"><strong>.biz</strong></a> and <a data-ci="93946" href="[@T[link:<relative path="/tlds/eu-domain"></relative>]@T]"><strong>.eu</strong></a>
+SAVE up to 50% or more when you get online today with these popular domains: <a data-ci="88402" href="[@T[link:<relative path="/tlds/com"></relative>]@T]"><strong>.com</strong></a>, <a data-ci="91412" href="[@T[link:<relative path="/tlds/net"></relative>]@T]"><strong>.net</strong></a>, <a data-ci="88582" href="[@T[link:<relative path="/tlds/co-domain"></relative>]@T]"><strong>.co</strong></a>, <a data-ci="88404" href="[@T[link:<relative path="/tlds/org.aspx"></relative>]@T]"><strong>.org</strong></a>, <a data-ci="90888" href="[@T[link:<relative path="/tlds/me"></relative>]@T]"><strong>.me</strong></a>, <a data-ci="88401" href="[@T[link:<relative path="/tlds/biz.aspx"></relative>]@T]"><strong>.biz</strong></a> and <a data-ci="93946" href="[@T[link:<relative path="/tlds/eu-domain"></relative>]@T]"><strong>.eu</strong></a>
 <phrase key="CarouselSlide3IN" />
 [@T[companyname:name]@T] is not only a well-known name in the industry that understand your requirements, but they can also help you decide what's best suited for your needs.
