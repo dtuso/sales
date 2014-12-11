@@ -1,0 +1,147 @@
+#gdep .faq-section {
+  margin-top: 60px;
+  margin-bottom: 64px;
+  padding: 0;
+}
+
+#gdep .faq-container {
+  background-color: #fff;
+}
+
+#gdep .icon-container {
+  background-color: #eee;
+  margin: 26px 0px 31px 0;
+  padding: 35px 34px 28px;
+  width: 159px;
+} 
+
+#gdep .ep-baw-wsb-image {
+  background: no-repeat 0 0;
+  width: 91px;
+  height: 94px;
+}
+
+#gdep .title-container {
+  padding-top: 55px;
+  padding-left: 33px;
+}
+
+#gdep .share-container {
+  padding-top: 18px;
+  margin-left: 100px;
+  text-align: right;
+}
+
+#gdep .expansion-page-top .row .col-sm-9 h1 {
+  color: #000;
+  font-size: 45px;
+  font-weight: 100;
+}
+
+#gdep .expansion-page-top .row {
+  margin-left: 36px;
+  border-bottom: 1px solid black;
+}
+
+#gdep .expansion-page-share {
+  margin-top: 15px;
+  margin-left: 39px;
+  margin-bottom: 100px;
+}
+
+#gdep .gdep-view-plans {
+  float: left;
+}
+
+#gdep .faq-section .expansion-page-share .gdep-view-plans .btn-lg {
+  padding: 13px 45px;
+  margin-bottom: 12px;
+}
+
+#gdep .gdep-share {
+  margin-top: 3px;
+  float: right;  
+}
+
+#gdep .expansion-page-content {
+  margin-left: 41px;
+  margin-top: 89px;
+}
+
+#gdep .expansion-page-content p {
+  font-size: 15px;
+  margin-bottom: 25px;
+}
+
+#gdep .faq-section .container .col-sm-8 .expansion-page-content .btn-lg {
+  padding: 13px 45px;
+}
+
+#gdep .sidebar-container {
+  padding-top: 39px;
+  padding-left: 56px;
+}
+
+#gdep .sidebar-box {
+  border: 1px solid #c0c0c0;
+  width: 246px;
+  padding: 30px 26px 8px 32px;
+  margin-bottom: 26px;
+}
+
+#gdep .sidebar-green-box {
+  width: 246px;
+  padding: 26px 26px 25px 25px;
+  margin-bottom: 26px;
+  background-color: #70ac00;
+  color: #fff;
+}
+
+#gdep .sidebar-green-box h3 {
+  font-size: 38px;
+  margin-top: 20px;
+  margin-bottom: 3px;
+} 
+
+#gdep .sidebar-green-box h6 {
+  font-size: 20px;
+  line-height: 31px;
+}
+
+#gdep .sidebar-green-box a {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+#gdep .sidebar-green-box h3, 
+#gdep .sidebar-green-box h6,
+#gdep .sidebar-green-box a {  
+  color: #fff;
+}
+
+#gdep .sidebar-box h6 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 26px;
+}
+
+#gdep .list-unstyled li {
+  margin-bottom: 17px;
+}
+
+#gdep .list-unstyled li a {
+  font-size: 15px;
+}
+
+#gdep .expansion-page-cta-container {
+  width: 100%;
+}
+
+#gdep .expansion-page-cta-container .expansion-page-cta {
+  width: 100%;
+  font-size: 24px;
+}
+
+#gdep .expansion-page-disclaimers {sr
+  background-color: #d4d4d4;
+}
