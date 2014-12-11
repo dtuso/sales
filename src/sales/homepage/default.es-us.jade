@@ -1,7 +1,7 @@
 ---
 location: sales/homepage/default.es-us
 id: false
-name: BigTextFix
+name: GCE-33892
 ---
 extends ../../layouts/homepage/default_base
 block styles
@@ -11,9 +11,13 @@ block styles
 
 block marquee
   |  ##if(targetMessageTagAny(sales_hp_default,hp_existing_customer))
-  |   [@P[cdsDocument:<data app="sales" location="homepage/marquee/gybo/default_template" /> ]@P]
+  |     [@P[cdsDocument:<data app="sales" location="homepage/marquee/gybo/default_template" /> ]@P]
   |  ##else
-  |   [@P[cdsDocument:<data app="sales" location="homepage/marquee/499com/default_template" /> ]@P]
+  |    ##if(splitTestingSideIsActive(1412, A))
+  |      [@P[cdsDocument:<data app="sales" location="homepage/marquee/gybo/default_template" /> ]@P]
+  |    ##else
+  |      [@P[cdsDocument:<data app="sales" location="homepage/marquee/499com/default_template" /> ]@P]
+  |    ##endif
   |  ##endif
 
 block primaryTile
@@ -25,7 +29,11 @@ block secondaryTile
   |  ##if(targetMessageTagAny(sales_hp_default,hp_existing_customer))
   |   [@P[cdsDocument:<data app="sales" location="homepage/tile/30-percent-gtld/default_template" /> ]@P]
   |  ##else
-  |   [@P[cdsDocument:<data app="sales" location="homepage/tile/got/default_template" /> ]@P]
+  |    ##if(splitTestingSideIsActive(1412, A))
+  |      [@P[cdsDocument:<data app="sales" location="homepage/tile/com299/default_template" /> ]@P]
+  |    ##else
+  |      [@P[cdsDocument:<data app="sales" location="homepage/tile/got/default_template" /> ]@P] 
+  |    ##endif
   |  ##endif
 
 block bugBar
