@@ -1,6 +1,6 @@
 ---
 location: localization/sales/gd/email/email-account/en
-id: 5485eab2f778fc2bc8b3b79b
+id: 548a09c5f778fc0b68fecd97
 name: GCE-33609
 comments: Mouse over text displaying incorrect version.
 ---
@@ -127,8 +127,12 @@ More
 I am part of a larger organization—can I use Microsoft Office 365 from [@T[companyname:name]@T]?
 <phrase key="faq_large_org_text" />
 The plans on our website are designed for businesses that require fewer than 300 accounts. You may purchase up to 300 user accounts on each plan type and up to 900 in total. If you have questions, just give us a call at [@T[support:<technicalSupportPhone />]@T]. Our award-winning team is here to help 24/7.
+<phrase key="faq_large_org_text-2" />
+The plans on our website are designed for businesses that require fewer than 300 accounts. You may purchase up to 300 Business Premium accounts and up to 300 accounts between Email Essentials and Online Essentials for up to 600 accounts total. If you have questions, just give us a call at [@T[support:<technicalSupportPhone />]@T]. Our award-winning team is here to help [@T[TechnicalSupportIs24x7:<tokendata true="24/7" false=""></tokendata>]@T].
 <phrase key="faq_large_org_text_no_24" />
 The plans on our website are designed for businesses that require fewer than 300 accounts. You may purchase up to 300 user accounts on each plan type and up to 900 in total. If you have questions, just give us a call at [@T[support:<technicalSupportPhone />]@T]. Our award-winning team is here to help.
+<phrase key="faq_large_org_text_no_24-text2" />
+The plans on our website are designed for businesses that require fewer than 300 accounts. You may purchase up to 300 Business Premium accounts and up to 300 accounts between Email Essentials and Online Essentials for up to 600 accounts total. If you have questions, just give us a call at [@T[support:<technicalSupportPhone />]@T]. Our award-winning team is here to help.
 <phrase key="faq_office_online" />
 What is Office Online?
 <phrase key="faq_office_online_text" />
