@@ -1,7 +1,8 @@
-include ../../layouts/domainSearchInput.jade
-include ./plansPanel.jade
+include ../domain-search-mixin.jade
+include ../mid-page-nav-mixin.jade
+include ../plan-tiles-mixin.jade
 
-extends ../../layouts/layout
+extends ../page
 
 append vars
   - config.uxcore = true;
@@ -14,6 +15,7 @@ block head
   link(href="https://plus.google.com/108306343581548568740" rel="publisher")
   meta(name="verify-v1" content="dV1r/ZJJdDEI++fKJ6iDEl6o+TMNtSu0kv18ONeqM0I=")
   meta(name="y_key" content="1e39c508e0d87750")
+  block pageStyles
 
 block endOfPageScripts
 
@@ -63,120 +65,26 @@ block endOfPageScripts
       }, 2000);
     });
 
+  block scripts
+
 block content
   
   //- domain search section
-  //-.container
-  //-  +domainSearchInput()
-  
-  //- plans section
-  section.plans
-    +renderProductTiles(3)
-      +column
-        include ./product-hosting-economy.jade
-      +column
-        include ./product-hosting-deluxe.jade
-      +column
-        include ./product-hosting-ultimate.jade
-      .container
-        .row
-          .col-sm-12
-            h3.text-center All Plans Include
-        .row
-          .col-md-4.col-sm-6
-            .include-check Free domain with annual plan
-            .include-check Free Email Addresses
-            .include-check One-click install of 200+ Free Applications
-          .col-md-4.col-sm-6
-            .include-check 1 GB storage MySQL Linux and 200 MB storage Windows SQL Databases
-            .include-check Flexible, easy-to-use control panel
-            .include-check 24/7 security monitoring and DDoS protection
-          .col-md-4.col-sm-6
-            .include-check Compatible with all major browsers
-            .include-check One certificate covers unlimited servers
-            .include-check One-click installation for GoDaddy hosted accounts
-  
-  section#speed-chart
-
-  section#one-click-install.tile-section.one-click-wrapper
+  block domainSearch
     .container
-      style.
-        #one-click-install ul { list-style: none; }
-        #one-click-install li:before { content: '\2713'; }
-      .row
-        .col-sm-6
-          h2 APP INSTALLS JUST A CLICK AWAY
-          p Our one-click install process has all your Web hosting app needs covered, making it easy to build, ehnhance and manage your site.
-          ul(style="list-style")
-            li
-              span.uxicon.uxicon-checkmark(aria-hidden="true")
-              span Need a content management system (CMS) for your Website? Joomla and Drupal are just a click away.
-            li
-              span.uxicon.uxicon-checkmark(aria-hidden="true")
-              span Maybe you want to sell products on your webite.  Try Magento with one-click.
-        .col-sm-6
-          h2 (image goes here)
+      +domainSearchInput()
 
-  section#features.tile-section.bg-pro-gray
-    .container
-      .row
-        .col-sm-4.key-benefit
-          h3.key-benefits-title Scalable resources on-demand
-          .key-benefits-text When you need more power, level up your CPU, memory, entry processes and I/O with just a click. Access the Stats & Usage dashboard for real-time visibility to your sites’ resource usage. Even get alerts as you approach your limits so you can react quickly and keep your site running at top speed.
-        .col-sm-4.key-benefit
-          h3.key-benefits-title Award-winning security keeps your site safe
-          .key-benefits-text Keeping a website secure is a full time job. That’s why our security team is on the job 24/7, monitoring your site for suspicious activity and protecting it against brute force and DDoS attacks.
-        .col-sm-4.key-benefit
-          h3.key-benefits-title What is Hosting?
-          .key-benefits-text Make sure friends, family and customers can see your website. Hosting is what makes it possible for others to view your website over the Internet. Without it, you’re the only one who will ever get a look. GoDaddy serves up:
-            ul
-              li One-click set-up
-              li Unlimited storage and bandwidth
-              li Scalability to fit your needs
-              li 24/7 secure monitoring
+  //- top marquee
+  block marquee
 
-  section#compare
-    p compare
+  //- side by side plan comparisons go here
+  block plans
 
-  section#platforms
-    p platforms
+  //- horizontal nav with jumps to anchor tags (that affixes to top)
+  block sections
 
-  section#reviews
-    p reviews
+  //- suggested alternative products
+  block alternatives
 
-  section#faq
-    p faq
-
-  section#alternate-products
-    p alternate-products
-
-  section#disclaimers
-    p disclaimers
-
-//-
-  mixin lazyImage(src)
-      div(class="#{imgSize}")
-        img.key-benefits-img(
-            src = keyBenefit.lazyLoad ? 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==' : keyBenefit.image
-            data-lazy-load = keyBenefit.lazyLoad ? '{"src":"#{keyBenefit.image}","watch":".key-benefits-wrap"}' : ''
-            alt = keyBenefit.imageAlternateText != 'undefined' ? keyBenefit.imageAlternateText : ''
-            )
-
-    if (keyBenefit.title)
-      h3.key-benefits-title !{markdownToHtml(keyBenefit.title)}
-
-    if (keyBenefit.text)
-      .key-benefits-text !{markdownToHtml(keyBenefit.text)}
-
-    if (keyBenefit.buttonText)
-      a(href=keyBenefit.link class="btn #{keyBenefit.buttonColor}", data-tcode="#{keyBenefit.tcode ? keyBenefit.tcode : ''}") !{keyBenefit.buttonText}
-
-//-
-  div.pro-plans-wrap.bg-gray-light
-    #plans.container.pro-plans
-      div.col-sm-4.plan-tile.plan-pro
-        include ./product-1234.jade
-      div.col-sm-4.plan-tile.plan-pro
-        include ./product-1234.jade
-      div.col-sm-4.plan-tile.plan-pro
-        include ./product-1234.jade
+  //- there's always a catch... show it here.
+  block disclaimers

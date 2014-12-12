@@ -1,31 +1,31 @@
+include ./helper-mixin.jade
+
 doctype html
-html(lang="#{requestContext.market}")
+html(lang!="[@T[localization:<language full='true' />]@T]")
   block vars
-    - var seo = seo || {};
+    - seo = seo || {};
 
-    - var seo.meta = seo.meta || {};
-    - var seo.meta.title = seo.meta.title || "[@L[cds.sales/homepage:page-title]@L]";
-    - var seo.meta.description = seo.meta.description || "[@L[cds.sales/homepage:meta-description]@L]";
-    - var seo.meta.keywords = seo.meta.keywords || "[@L[cds.sales/homepage:meta-keywords]@L]";
+    - seo.meta = seo.meta || {};
+    - seo.meta.title = seo.meta.title || "[@L[cds.sales/homepage:page-title]@L]";
+    - seo.meta.description = seo.meta.description || "[@L[cds.sales/homepage:meta-description]@L]";
+    - seo.meta.keywords = seo.meta.keywords || "[@L[cds.sales/homepage:meta-keywords]@L]";
     
-    - var seo.openGraph = seo.openGraph || {};
-    - var seo.openGraph.title = seo.openGraph.title || "[@L[cds.sales/homepage:og-title]@L]";
-    - var seo.openGraph.type = seo.openGraph.type || "website";
-    - var seo.openGraph.image = seo.openGraph.image || "[@T[link:<imageroot />]@T]fos/hp/rebrand/img/gd_rebrand_og.png";
-    - var seo.openGraph.siteName = seo.openGraph.siteName || "[@T[link:<relative parammode='explicit' />]@T]";
+    - seo.openGraph = seo.openGraph || {};
+    - seo.openGraph.title = seo.openGraph.title || "[@L[cds.sales/homepage:og-title]@L]";
+    - seo.openGraph.type = seo.openGraph.type || "website";
+    - seo.openGraph.image = seo.openGraph.image || "[@T[link:<imageroot />]@T]fos/hp/rebrand/img/gd_rebrand_og.png";
+    - seo.openGraph.siteName = seo.openGraph.siteName || "[@T[link:<relative parammode='explicit' />]@T]";
     
-    - var seo.links = seo.links || {};
-    - var seo.links.canonical = seo.links.canonical || "[@T[link:<relative parammode='explicit' />]@T]";
-    - var seo.links.favicon = seo.links.favicon || "[@T[link:<imageroot />]@T]assets/godaddy.ico";
+    - seo.links = seo.links || {};
+    - seo.links.canonical = seo.links.canonical || "[@T[link:<relative parammode='explicit' />]@T]";
+    - seo.links.favicon = seo.links.favicon || "[@T[link:<imageroot />]@T]assets/godaddy.ico";
 
-    - var config = config || {};
-    - var config.version = config.version || "0.7.0";
-    - var config.uxcoreVersion = config.uxcoreVersion || "1.2.0";
-    - var config.saharaCdnHostUrl = config.saharaCdnHostUrl || "[@T[link:<cssroot />]@T]";
-    - var config.gdCdnHostUrl = config.gdCdnHostUrl || "[@T[link:<cssroot />]@T]";
-    - var config.env = "dev";
-    - var config.uxcore = config.uxcore || true;
-    - var congig.delayLoadControls = config.delayLoadControls || true;
+    - config = config || {};
+    - config.version = config.version || "0.7.0";
+    - config.uxcoreVersion = config.uxcoreVersion || "dev";
+    - config.env = "dev";
+    - config.uxcore = config.uxcore || true;
+    - config.delayLoadControls = config.delayLoadControls || true;
 
   head
     meta(http-equiv="content-type" content="text/html; charset=utf-8")
@@ -34,19 +34,19 @@ html(lang="#{requestContext.market}")
     meta(http-equiv="x-ua-compatible" content="IE=edge")
 
     title #{seo.meta.title}
-    meta(name="description" content="#{seo.meta.description}")
-    meta(name="keywords" content="#{seo.meta.keywords}")
+    meta(name="description" content!="#{seo.meta.description}")
+    meta(name="keywords" content!="#{seo.meta.keywords}")
     meta(name="format-detection" content="telephone=no")
-    meta(property="og:title" content="#{seo.openGraph.title}")
-    meta(property="og:description" content="#{seo.openGraph.description}")
-    meta(property="og:type" content="#{seo.openGraph.type}")
+    meta(property="og:title" content!="#{seo.openGraph.title}")
+    meta(property="og:description" content!="#{seo.openGraph.description}")
+    meta(property="og:type" content!="#{seo.openGraph.type}")
     meta(property="og:url" content!="[@T[link:<relative parammode='explicit' />]@T]")
-    meta(property="og:image" content="#{seo.openGraph.image}")
-    meta(property="og:site_name" content="#{seo.openGraph.siteName}")
+    meta(property="og:image" content!="#{seo.openGraph.image}")
+    meta(property="og:site_name" content!="#{seo.openGraph.siteName}")
     meta(property="fb:app_id" content="115696031791232")
     meta(property="fb:admins" content="633356800")
-    link(rel="canonical" href="#{seo.links.canonical}")
-    link(rel="shortcut icon" href="#{seo.links.favicon}")
+    link(rel="canonical" href!="#{seo.links.canonical}")
+    link(rel="shortcut icon" href!="#{seo.links.favicon}")
 
     //- Fonts
     link(rel="stylesheet" type="text/css" href="//cloud.typography.com/7914312/697366/css/fonts.css")
@@ -54,38 +54,39 @@ html(lang="#{requestContext.market}")
     | 
     | [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags"><Parameters><Parameter key="manifest" value="salesuxcore" /></Parameters></Data>]@P]
 
+    //- TODO: UPDATE PATH
     if config.uxcore
-      link(href="#{config.saharaCdnHostUrl}/#{config.version}/css/sahara.css" rel="stylesheet")
+      link(href!="[@T[link:<cssroot />]@T]/fos/mike/#{config.version}/css/sahara.css" rel="stylesheet")
     else
-      link(href="#{config.gdCdnHostUrl}/fos/201401/global/css/3.4.1/combined-3.4.1.min.css" rel="stylesheet" type="text/css")
+      link(href!="[@T[link:<cssroot />]@T]/fos/201401/global/css/3.4.1/combined-3.4.1.min.css" rel="stylesheet" type="text/css")
     script(type="text/javascript").
       window.config = window.config || {};
       window.config.uxcore = #{config.uxcore};
-      window.config.gdCdnHostUrl = '#{config.gdCdnHostUrl}';
+      window.config.gdCdnHostUrl = '[@T[link:<cssroot />]@T]';
       window.config.env = '#{config.env}';
 
     <!--[if lt IE 9]>
     link(href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect")
-    link(href="#{config.gdCdnHostUrl}/fos/respond/respond-proxy.min.html" id="respond-proxy" rel="respond-proxy")
-    script(src="#{config.gdCdnHostUrl}/fos/respond/respond-proxy-combo.min.js")
+    link(href!="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy.min.html" id="respond-proxy" rel="respond-proxy")
+    script(src!="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy-combo.min.js")
     <![endif]-->
 
     <!-- liveperson includes -->
-    link(href="#{config.gdCdnHostUrl}/fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css")
+    link(href!="[@T[link:<cssroot />]@T]/fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css")
 
     block head
     //- For the moment, hard code the url for prod
-    script(src='#{config.saharaCdnHostUrl}/#{config.version}/js/sahara.min.js')
+    script(src!='[@T[link:<javascriptroot />]@T]/fos/mike/#{config.version}/js/sahara.min.js')
     //- Preload uxcontrols.js if the home page so other pages load faster
     if (config.delayLoadControls)
       script(type='text/javascript').
-        //- delayLoader.addScript('#{config.gdCdnHostUrl}/ux/dev/js/uxcontrols.min.js')
+        //- delayLoader.addScript('[@T[link:<javascriptroot />]@T]/ux/dev/js/uxcontrols.min.js')
         //- For the moment, hard code the url for prod
-        delayLoader.addScript('#{config.gdCdnHostUrl}/ux/#{config.uxcoreVersion}/js/uxcontrols.min.js')
+        delayLoader.addScript('[@T[link:<javascriptroot />]@T]/ux/#{config.uxcoreVersion}/js/uxcontrols.min.js')
     else
-      //- script(src='#{config.gdCdnHostUrl}/ux/dev/js/uxcontrols.min.js')
+      //- script(src='[@T[link:<javascriptroot />]@T]/ux/dev/js/uxcontrols.min.js')
       //- For the moment, hard code the url for prod
-      script(src='#{config.gdCdnHostUrl}/ux/#{config.uxcoreVersion}/js/uxcontrols.min.js')
+      script(src!='[@T[link:<javascriptroot />]@T]/ux/#{config.uxcoreVersion}/js/uxcontrols.min.js')
     
     // Google Tag Manager
     //-
@@ -126,9 +127,9 @@ html(lang="#{requestContext.market}")
     //-
       if page.isc != ""
         .site-banners
-          script(src="#{config.gdCdnHostUrl}/fastball/js_lib/Fastball.ChannelIntegration-2.0.6.min.js" type="text/javascript")
+          script(src!="[@T[link:<javascriptroot />]@T]/fastball/js_lib/Fastball.ChannelIntegration-2.0.6.min.js" type="text/javascript")
           - var languagePrefix = (requestContext.language != 'en' ? requestContext.language + '_' : '')
-          #IscBanner_fastballOfferElementDiv(fastball="banner" placement="#{languagePrefix}iscBannerTop1000" appid="2" plid="1" isc="#{page.isc}" shopperid="0" container="#{languagePrefix}iscBannerTop1000" template="banner")
+          #IscBanner_fastballOfferElementDiv(fastball="banner" placement!="#{languagePrefix}iscBannerTop1000" appid="2" plid="1" isc!="#{page.isc}" shopperid="0" container!="#{languagePrefix}iscBannerTop1000" template="banner")
           script(type="text/javascript").
             $(document).ready(function() { Fastball.Common.initialize('#{requestContext.domainName}'); });
 
