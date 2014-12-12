@@ -15,7 +15,7 @@
 mixin gtldBug(gtld)
   a.tld-link(class=gtldData[gtld].cssClass href!="[@T[link:<relative path='" + gtldData[gtld].path + "'><param name='ci' value='" + gtldData[gtld].ci + "' /><param name='tld' value='" + gtldData[gtld].tld + "' /></relative>]@T]")
     span.hp-sprite(class=gtldData[gtld].cssClass)
-    span.price!= "[@T[productprice:<current productid='" + gtldData[gtld].productId + "' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' />]@T]"
+    span.price!= "[@T[productprice:<current productid='" + gtldData[gtld].productId + "' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' promocode='444888'/>]@T]"
     if gtldData[gtld].showIcannDisclaimer 
       span.icann-disclaimer *
 
