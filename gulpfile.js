@@ -82,6 +82,7 @@ var paths = {
   less      : ['./src/sales/**/css/**/*.less'],
   images    : ['./src/sales/**/img/**/*.jpg', './src/sales/**/img/**/*.png'],
   build     : path.join('./build/sales/', assetSrcPath),
+  cdsBuild  : './build/cds/',
   assets    : path.join(rootAssetPath, assetSrcPath),
   scripts   : ['./src/sales/**/js/**/*.js']
 };
@@ -143,13 +144,14 @@ var getLocalJson = function(file) {
 };
 
 gulp.task('jade', function() {
-  return gulp.src(['./**/*.jade', '!./**/_*.jade'], {cwd: path.join('./src/sales/', assetSrcPath)})
-    .pipe(changed(paths.build))
+  console.log()
+  return gulp.src(['./**/*.jade', '!./**/layouts/**/*.jade', '!./**/_*.jade'], {cwd: path.join('./src/')})
+    .pipe(changed(paths.cdsBuild))
     .pipe(frontMatter({remove:true}))
     .pipe(data(function(file) { return file.frontMatter; }))
     .pipe(jade({pretty: true}))
     .pipe(gulpif(!ignoreCDS, cdsm(cdsmOpts)))
-    .pipe(gulp.dest(paths.build));
+    .pipe(gulp.dest(paths.cdsBuild));
 });
 
 gulp.task('html', function() {

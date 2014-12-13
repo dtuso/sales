@@ -1,7 +1,7 @@
 .DS_Store
 /.tmp/
-./build
-build
+build/*
+!build/cds
 ./lib/.salesupdate
 /lib/.salesupdate
 lib/.salesupdate
