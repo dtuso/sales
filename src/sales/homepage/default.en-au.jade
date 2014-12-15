@@ -4,8 +4,7 @@ id: false
 name: BigTextFix
 ---
 extends ../../layouts/homepage/default_base
-block styles
-  link(href!="[@T[link:<cssroot />]@T]fos/hp/rebrand/css/homepage20141208.css" rel="stylesheet" type="text/css")
+append styles
   style.
     .gdhp-search-box input,.gdhp-search-box .searchInput{width:780px;max-width:780px}
 

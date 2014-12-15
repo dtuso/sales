@@ -1,0 +1,45 @@
+
+<!-- start marquee section-->
+<atlantis:webstash type="css">
+  <style>
+    .marquee {width:100%;min-width:1000px;height:400px;cursor:pointer;color: #fff;background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/color-block-background.png) no-repeat top center;}
+    .headline { line-height: 0.9; font-family: 'Walsheim-Black'; font-size: 48px;margin:10px 0;}
+    .headline .line:nth-child(odd) { font-family: Tungsten, 'Tungsten A', 'Tungsten B', Arial; text-transform: uppercase;}
+    .headline .line:nth-child(even) { font-family: 'Walsheim-Black'; }
+    .tungsten { font-family: Tungsten, 'Tungsten A', 'Tungsten B', Arial !important; text-transform: uppercase !important; }
+    .walsheim { font-family: 'Walsheim-Black' !important; }
+    .btn-cta { width: 100%; box-sizing: border-box; margin: 10px 0;}
+    .bigtext { visibility:hidden;}
+    .additional-info { font-size: 14px;margin: 10px 0;text-align: left; margin: 10px 0;}
+    .restrictions { margin: 10px 0;text-align: left;font-size: 12px; margin: 10px 0;}
+    .inline-dash { display:inline-block;overflow:hidden;letter-spacing:-0.5em;font-size:1.4em;vertical-align:top;line-height:50%;}
+  </style>
+  <style>
+    .left-column { float:left;width:500px; padding-top:80px;}
+    .right-column { float:left;width:325px;padding-top:80px;text-align:center;margin-left:90px;color:#000;}
+  </style>
+  <style>
+    #wsb-job-to-do .left-column .headline { line-height: 0.8; }
+    #wsb-job-to-do .promo { font-size:36px; font-family: Walsheim-Bold; line-height:0.9; }
+    #wsb-job-to-do .price { color: #ff8a00; font-family: Walsheim-Bold; line-height:1.0;}
+    #wsb-job-to-do sub {font-size:40%;bottom:initial;}
+  </style>
+</atlantis:webstash>
+<div id="wsb-job-to-do" data-url="[@T[link:<relative path='/hosting/website-builder.aspx'><param name='ci' value='94090' /></relative>]@T]" class="marquee js-gdhpclick">
+  <div class="container l-main-container">
+    <div class="marquee-left-headline">
+      <div class="left-column">
+        <div class="headline">[@L[cds.sales/homepage/marquee/wsb-job-to-do:headline]@L]</div>
+      </div>
+      <div class="right-column">
+        <div class="promo">[@L[cds.sales/homepage/marquee/wsb-job-to-do:promo]@L]</div>
+        <div class="bigtext">
+          <div class="price">[@L[cds.sales/homepage/marquee/wsb-job-to-do:price]@L]</div>
+        </div><a href="[@T[link:<relative path='/hosting/website-builder.aspx'><param name='ci' value='94090' /></relative>]@T]" class="btn btn-warning btn-lg btn-cta">[@L[cds.sales/homepage/marquee/wsb-job-to-do:cta-text]@L]</a>
+      </div>
+    </div>
+  </div>
+</div>
+<atlantis:webstash type="js">
+</atlantis:webstash>
+<!-- end marquee section-->

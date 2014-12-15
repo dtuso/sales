@@ -1,7 +1,11 @@
 .DS_Store
 /.tmp/
-./build
-build
+build/*
+!build/cds
+!build/wsimg.com
+!build/wsimg-com.ide
+!build/wsimg.com/**
+!build/wsimg-com.ide/**
 ./lib/.salesupdate
 /lib/.salesupdate
 lib/.salesupdate
