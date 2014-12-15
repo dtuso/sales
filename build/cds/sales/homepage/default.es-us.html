@@ -69,9 +69,13 @@
     </div>
     <!-- Marquee Section-->
      ##if(targetMessageTagAny(sales_hp_default,hp_existing_customer))
-      [@P[cdsDocument:<data app="sales" location="homepage/marquee/gybo/default_template" /> ]@P]
+        [@P[cdsDocument:<data app="sales" location="homepage/marquee/gybo/default_template" /> ]@P]
      ##else
-      [@P[cdsDocument:<data app="sales" location="homepage/marquee/499com/default_template" /> ]@P]
+       ##if(splitTestingSideIsActive(1412, A))
+         [@P[cdsDocument:<data app="sales" location="homepage/marquee/gybo/default_template" /> ]@P]
+       ##else
+         [@P[cdsDocument:<data app="sales" location="homepage/marquee/499com/default_template" /> ]@P]
+       ##endif
      ##endif
     <!-- Bugbar (and social links) Sections-->
     <div class="top-banner-lower-content">
@@ -91,7 +95,7 @@
         .gdhp-tile .btn-lrg{font-size:24px;padding:14px 12px;box-sizing:border-box;height:60px;width:240px;}
         .gdhp-tile .btn-orange{color:#fff;background-color:#f5811f;border-bottom:4px solid #b25e18;}
         .gdhp-tile .btn-orange:hover{background-color:#ff9b39;border-color:#cc7832}
-        .tile-sprite{background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gdhp_tile_sprite_20141107.png) scroll no-repeat;}
+        .tile-sprite{background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gdhp_tile_sprite_20141205.png) scroll no-repeat;}
       </style>
     </atlantis:webstash>
     <div class="gdhp-tile-wrap">
@@ -100,7 +104,11 @@
          ##if(targetMessageTagAny(sales_hp_default,hp_existing_customer))
           [@P[cdsDocument:<data app="sales" location="homepage/tile/30-percent-gtld/default_template" /> ]@P]
          ##else
-          [@P[cdsDocument:<data app="sales" location="homepage/tile/got/default_template" /> ]@P]
+           ##if(splitTestingSideIsActive(1412, A))
+             [@P[cdsDocument:<data app="sales" location="homepage/tile/com299/default_template" /> ]@P]
+           ##else
+             [@P[cdsDocument:<data app="sales" location="homepage/tile/got/default_template" /> ]@P]
+           ##endif
          ##endif
       </div>
     </div>
