@@ -10,16 +10,15 @@
     pricing:  {
       yr: {
         o365:      '[@T[productprice:<list productid="31841" period="yearly" promocode=""></list>]@T]',
-        o365promo: '[@T[productprice:<current productid="31841" period="yearly" promocode="33572469"></current>]@T]',
+        o365promo: '[@T[multipleproductprice:<current productidlist="101|7524|326366|31841" period="yearly" promocode="33572469"></current>]@T]',
         renewal:   '[@T[multipleproductprice:<list productidlist="101|7524|326366|31841" period="yearly"></list>]@T]',
         tools:     '[@T[currencyprice:<price usdamount="25000" htmlsymbol="false" />]@T]',
         com:       '[@T[productprice:<list productid="101" period="yearly"></list>]@T]',
         wsb:       '[@T[productprice:<list productid="7524" period="yearly"></list>]@T]',
-        getpaid:   '[@T[productprice:<list productid="326366" period="yearly"></list>]@T]',
-        renewal:   '[@T[productprice:<list productid="31841" period="yearly"></list>]@T]'
+        getpaid:   '[@T[productprice:<list productid="326366" period="yearly"></list>]@T]'
       },
       mo: {
-        o365promo: '[@T[productprice:<current productid="31841" period="monthly" promocode="74125896"></current>]@T]',
+        o365promo: '[@T[multipleproductprice:<current productidlist="101|7524|326366|31841" period="monthly" promocode="74125896"></current>]@T]',
         renewal:   '[@T[multipleproductprice:<list productidlist="101|7524|326366|31841" period="monthly"></list>]@T]' 
       },
       bingAdCredits: '[@T[currencyprice:<price usdamount="10000" dropdecimal="true" htmlsymbol="false" />]@T]'
@@ -45,6 +44,8 @@
   ##endif
 
   ##if(!productIsOffered(98))
+    got2Page.pricing.yr.o365promo = '[@T[multipleproductprice:<current productidlist="101|7524|31841" period="yearly" promocode="33572469"></current>]@T]';
+    got2Page.pricing.mo.o365promo = '[@T[multipleproductprice:<current productidlist="101|7524|31841" period="monthly" promocode="74125896"></current>]@T]'
     got2Page.pricing.yr.renewal = '[@T[multipleproductprice:<list productidlist="101|7524|31841" period="yearly"></list>]@T]';
     got2Page.pricing.mo.renewal = '[@T[multipleproductprice:<list productidlist="101|7524|31841" period="monthly"></list>]@T]';
   ##endif
