@@ -1,8 +1,8 @@
 ---
 location: localization/sales/newscenter/about-godaddy/en
-id: 5457e1fbf778fc21f095144
-name: GCE-31437
-comments: Update El Driscoll info on the About Us Page
+id: 5488cd56f778fc16ec4de589
+name: GCE-32100, 33789
+comments: About Us ... India News Releases section -  URL for India News Release / Update PR contacts on the About Us Page
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="NewsCenterAbout-AFinePortraitsVideo" />
@@ -370,6 +370,8 @@ Marketing Opportunities
 Contact Public Relations
 <phrase key="NewsCenterAbout-71-EnoughAboutUsWhatBurningQuestionsAreOnYour" />
 If you're a member of the media email or call the appropriate PR team member below. If this is a support or billing question, please click <a href="http://support.godaddy.com/">here</a> for our Customer Care Department. <strong>Thank you for your interest in GoDaddy.</strong>
+<phrase key="NewsCenterAbout-71-EnoughAboutUsWhatBurningQuestionsAreOnYour-33789" />
+If you’re a member of the media, please email or call the appropriate PR team member below. If this is a support or billing question, please click <a href="http://support.godaddy.com/">here</a> for our Customer Care Department. <strong>Thank you for your interest in GoDaddy.</strong>
 <phrase key="NewsCenterAbout-1-Name" />
 Name
 <phrase key="NewsCenterAbout-6-PleaseEnterAValidName" />
@@ -558,6 +560,8 @@ Kelsey Pfeffer
 Product
 <phrase key="NewsCenterAbout-21306-spenner-Department" />
 Website Builder, Online Store, GoMobile, Get Found, Office 365, Online Bookkeeping & Get Paid
+<phrase key="NewsCenterAbout-33789-spenner-Department" />
+Website Builder, Online Store, Get Found, Office 365, Online Bookkeeping &amp; Get Paid
 <phrase key="NewsCenterAbout-21306-spenner" />
 Susie Penner
 <phrase key="NewsCenterAbout-21306-spenner-Phone" />
@@ -598,3 +602,10 @@ Enjoying a beer with friends is one thing, but having a passion for it is anothe
 With GoDaddy Website Builder, Marc created a website perfectly suited to his business. Plus, the reliability of GoDaddy hosting and domain services keeps Marc’s business open online 24/7/365.
 <phrase key="NewscenterAbout-BetsyRafaelTitle" />
 Former Chief Accounting Officer at Apple
+
+<phrase key="NewsCenterAbout-33789-pportin" />
+Pamela Portin
+<phrase key="NewsCenterAbout-33789-pportin-Phone" />
++1.425.947.3117
+<phrase key="NewsCenterAbout-33789-pportin-Department" />
+International
