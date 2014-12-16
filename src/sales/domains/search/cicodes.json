@@ -301,7 +301,13 @@
           { "ITC Code" : "TopPodCITYLink" },
           { "Description" : "Top Pod - .CITY link" }
         ]
-      }
+      },
+      { "Top TLD Pods - .CASA link" : [
+          { "ITC ID" : "95053" },
+          { "ITC Code" : "TopPodCASALink" },
+          { "Description" : "Top Pod - .CASA link" }
+        ]
+      }      
     ],
   "Buttom Tld Pods" :  [
      { "Buttom TLD Pods - .ESTATE" : [
@@ -494,6 +500,18 @@
           { "ITC ID" : "94892" },
           { "ITC Code" : "ButtomPodSarl" },
           { "Description" : "Buttom TLD Pods - .SARL" }
+        ]
+      },
+      { "Buttom TLD Pods - .COM" : [
+          { "ITC ID" : "42004" },
+          { "ITC Code" : "ButtomPodCom" },
+          { "Description" : "Buttom TLD Pods - .COM" }
+        ]
+      },
+      { "Buttom TLD Pods - .PIZZA" : [
+          { "ITC ID" : "95054" },
+          { "ITC Code" : "ButtomPodPizza" },
+          { "Description" : "Buttom TLD Pods - .PIZZA" }
         ]
       }
     ],
@@ -768,6 +786,12 @@
           { "ITC ID" : "90061" },
           { "ITC Code" : "" },
           { "Description" : "Coming Soon TLD's Column - .WIKI" }
+        ]
+      },
+      { "Coming Soon TLD's Column - .SITE" : [
+          { "ITC ID" : "95068" },
+          { "ITC Code" : "" },
+          { "Description" : "Coming Soon TLD's Column - .SITE" }
         ]
       }
     ],
