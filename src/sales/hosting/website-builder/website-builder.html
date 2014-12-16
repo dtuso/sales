@@ -1,8 +1,8 @@
 ---
 location: sales/hosting/website-builder.aspx
-id: 5488b221f778fc16ec4de525
-name: SEM-244
-comments: FAQ tab link/text changes for How to Publish a Website expansion page
+id: 5489dad6f778fc0b68fecd82
+name: SEM-253
+comments: FAQ tab link/text changes for Build a Website expansion page
 ---
 {% extends 'layouts/base.html' %}
 {% block pageTitle %}
@@ -1326,21 +1326,24 @@ comments: FAQ tab link/text changes for How to Publish a Website expansion page
   ##if(activeLanguageAny([en-au],[en-ca],[en-gb],[en-in],[en-us]))
   $(document).ready(function(){
     $("a[href='http://support.godaddy.com/help/article/5107']").text("How Do I Build a Website?");
-    $("a[href='http://support.godaddy.com/help/article/5107']").attr('data-ci','94986');
+    $("a[href='http://support.godaddy.com/help/article/5107']").attr("data-ci","94986");
     $("a[href='http://support.godaddy.com/help/article/5107']").removeAttr("target");
-    $("a[href='http://support.godaddy.com/help/article/5107']").attr('href','[@T[link:<relative path='~/hosting/website-builder/how-to-build-a-website' secure='true' />]@T]');
+    $("a[href='http://support.godaddy.com/help/article/5107']").attr("href","[@T[link:<relative path='~/hosting/website-builder/how-to-build-a-website' secure='true' />]@T]");
 
     $("a[href='http://support.godaddy.com/help/article/4026']").text("What are Website Templates?");
-    $("a[href='http://support.godaddy.com/help/article/4026']").attr('data-ci','94987');
+    $("a[href='http://support.godaddy.com/help/article/4026']").attr("data-ci","94987");
     $("a[href='http://support.godaddy.com/help/article/4026']").removeAttr("target");
     $("a[href='http://support.godaddy.com/help/article/4026']").attr('href','[@T[link:<relative path='~/hosting/website-builder/website-template' secure='true' />]@T]');
 
     $(".ep-wsb-how-to-publish-a-website-faq").html(
       "Want to see how easy it is to get a website online? Check out <a href=\"[@T[link:<relative path='~/hosting/website-builder/how-to-publish-a-website' secure='true'><param name='ci' value='95087' /></relative>]@T]\">How to Publish a Website</a>."
     );    
+
+    $("a[href='http://support.godaddy.com/help/article/3503?ci=75947']").text("Tips to Build a Website.");
+    $("a[href='http://support.godaddy.com/help/article/3503?ci=75947']").attr("data-ci","95153");
+    $("a[href='http://support.godaddy.com/help/article/3503?ci=75947']").removeAttr("target");
+    $("a[href='http://support.godaddy.com/help/article/3503?ci=75947']").attr("href","[@T[link:<relative path='~/hosting/website-builder/build-a-website' secure='true' />]@T]");
   });
   ##endif
 </script>
-
-
 {% endblock %}
