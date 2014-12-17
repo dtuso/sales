@@ -1,13 +1,14 @@
 extends ../../templates/pages/landing-page
 
-prepend endOfPageScripts
-  script
-    include ../../templates/planTile.js
-  script.
-    $(document).ready(function() {
-      var ultimatePlanRenderedHtml = renderPlanTile();
-      $('.plan-pro:nth-child(3)').html(ultimatePlanRenderedHtml);
-    });
+//-
+  prepend endOfPageScripts
+    script
+      include ../../templates/planTile.js
+    script.
+      $(document).ready(function() {
+        var ultimatePlanRenderedHtml = renderPlanTile();
+        $('.plan-pro:nth-child(3)').html(ultimatePlanRenderedHtml);
+      });
 
 block pageStyles
   style.
@@ -18,7 +19,7 @@ block domainSearch
 
 block marquee
   section#marquee
-    include ./marquee.jade
+    include ./web-hosting/marquee.jade
 
 block plans
   section#plans
