@@ -237,7 +237,7 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
   .search-area-wrapper .tooltips-area { max-width:180px;font-size:20px;margin-right:27px;text-align:center;position:relative;}
   .search-area-wrapper .tooltips-area:after {content:"";border-width:10px 0 10px 17px;border-style:solid;border-color:transparent transparent transparent #fc0;position:absolute;right:-17px;top:34%}
   .search-area-wrapper .tooltips-area .highlight-tooltip {background-color:#fc0;color:#630;text-transform:uppercase;text-align:center;
-    padding:13px 15px 12px; word-wrap:break-word;}
+    padding:13px 15px 12px;}
   
   .search-area-wrapper .input-area {background-color:#fc0;width:400px;font-size:24px;font-weight:300;padding: 8px 0 8px 8px;}            
   .search-area-wrapper .input-area .search-background {background-color:#fff;position:relative;border:1px solid #a4a4a4;height:49px;}
@@ -326,8 +326,8 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
               </span>
             </div> 
             <div class="top-renewal-disclaimer">
-              <div>[@L[cds.sales/offers/online-business:33909-renewal-price-disclaimer]@L]</div>
-              <a class="simple-link" href="#" data-toggle="modal" data-target="#disclaimerModal" data-ci="94042">[@L[cds.sales/offers/online-business:33909-see-offer-details]@L]</a>              
+              [@L[cds.sales/offers/online-business:renewal-price-disclaimer]@L]
+              <a class="simple-link" href="#" data-toggle="modal" data-target="#disclaimerModal" data-ci="94042">[@L[cds.sales/offers/online-business:see-offer-details]@L]</a>              
             </div>
           </div>
         </div>
@@ -948,7 +948,7 @@ debugger;
   #included-productsRow .wraparound:before, 
   #included-productsRow .wraparound:after {content: " ";border-top: 6px solid #954709;position: absolute;bottom: -7px;}
   #included-productsRow .wraparound:after {border-right: 6px solid transparent;right: -1px;}
-  #product-workspace .product-icon.email {padding:20px 0;text-align:center;height:115px;font-size:16px;}
+  #product-workspace .product-icon.email {padding:20px 0;text-align:center;height:85px;font-size:16px;}
 {% endless %}
 </style>
 <!-- end-css-elevate -->
@@ -1205,8 +1205,8 @@ debugger;
         </div>
         <div class="get-started-btn-2 btn btn-warning cta-small" style="cursor:pointer;" data-ci="94039">[@L[cds.sales/offers/online-business:get-started-banner-get-started]@L]</div>
         <div class="get-started-renewal-disclaimer">
-          [@L[cds.sales/offers/online-business:33909-renewal-price-disclaimer]@L]        
-          <a class="simple-link" href="#" data-toggle="modal" data-target="#disclaimerModal" data-ci="94041">[@L[cds.sales/offers/online-business:33909-see-offer-details]@L]</a>  
+          [@L[cds.sales/offers/online-business:renewal-price-disclaimer]@L]        
+          <a class="simple-link" href="#" data-toggle="modal" data-target="#disclaimerModal" data-ci="94041">[@L[cds.sales/offers/online-business:see-offer-details]@L]</a>  
         </div>
       </div> <!-- end slide 1 -->
       <div class="got-slide got-slide-2">      
@@ -1293,7 +1293,7 @@ debugger;
         </h4>
       </div>
       <div class="modal-body">
-        <p>[@L[cds.sales/offers/online-business:33909-disclaimer-modal-content]@L]</p>
+        <p>[@L[cds.sales/offers/online-business:31516-disclaimer-modal-content]@L]</p>
       </div>
     </div>
   </div>
@@ -1315,8 +1315,8 @@ debugger;
           'addOns': 'noAddOns'
         },
         pricing: {
-          promo: '[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T]',
-          bundleRenewal: '[@T[multipleproductprice:<list productidlist="464069|101|7524" period="monthly"></list>]@T]',
+          promo: '[@T[productprice:<current productid="464069" period="monthly" promocode="24681357" />]@T]',
+          bundleRenewal: '[@T[multipleproductprice:<list productidlist="101|7524|464069" period="monthly"></list>]@T]',
           bingAdCredits: '[@T[currencyprice:<price usdamount="5000" dropdecimal="true" htmlsymbol="false" />]@T]'
         }
       };
