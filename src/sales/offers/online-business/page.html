@@ -1,12 +1,8 @@
 ---
 location: sales/offers/online-business.aspx
-id: 546d1ee6f778fc1b50c69758
-name: GCE-32384
-comments: Fix Security Vulnerability
-=======
-id: 545a9d0cf778fc11ac121096
-name: GCE-33087
-comments: Hide .co.uk and .uk from disclaimer for UK markets temporary
+id: 5491e6ddf778fc1c3885549e
+name: GCE-34025
+comments: Update to pricing token for VAT countries.
 url: http://www.dev-godaddy.com/offers/online-business.aspx
 assetPath: false
 metaTitle: "[@L[cds.sales/offers/online-business:page-title]@L]"
@@ -1201,8 +1197,8 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
           'addOns': 'noAddOns'
         },
         pricing: {
-          promo: '[@T[productprice:<current productid="464069" period="monthly" promocode="24681357" />]@T]',
-          bundleRenewal: '[@T[multipleproductprice:<list productidlist="101|7524|464069" period="monthly"></list>]@T]',
+          promo: '[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T]',
+          bundleRenewal: '[@T[multipleproductprice:<list productidlist="464069|101|7524" period="monthly"></list>]@T]',
           bingAdCredits: '[@T[currencyprice:<price usdamount="5000" dropdecimal="true" htmlsymbol="false" />]@T]'
         }
       };
