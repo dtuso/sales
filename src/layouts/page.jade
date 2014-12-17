@@ -1,0 +1,163 @@
+include ./helper-mixin.jade
+
+doctype html
+html(lang!="[@T[localization:<language full='true' />]@T]")
+  block vars
+    - seo = seo || {};
+
+    - seo.meta = seo.meta || {};
+    - seo.meta.title = seo.meta.title || "[@L[cds.sales/homepage:page-title]@L]";
+    - seo.meta.description = seo.meta.description || "[@L[cds.sales/homepage:meta-description]@L]";
+    - seo.meta.keywords = seo.meta.keywords || "[@L[cds.sales/homepage:meta-keywords]@L]";
+    
+    - seo.openGraph = seo.openGraph || {};
+    - seo.openGraph.title = seo.openGraph.title || "[@L[cds.sales/homepage:og-title]@L]";
+    - seo.openGraph.type = seo.openGraph.type || "website";
+    - seo.openGraph.image = seo.openGraph.image || "[@T[link:<imageroot />]@T]fos/hp/rebrand/img/gd_rebrand_og.png";
+    - seo.openGraph.siteName = seo.openGraph.siteName || "[@T[link:<relative parammode='explicit' />]@T]";
+    
+    - seo.links = seo.links || {};
+    - seo.links.canonical = seo.links.canonical || "[@T[link:<relative parammode='explicit' />]@T]";
+    - seo.links.favicon = seo.links.favicon || "[@T[link:<imageroot />]@T]assets/godaddy.ico";
+
+    - config = config || {};
+    - config.version = config.version || "0.7.0";
+    - config.uxcoreVersion = config.uxcoreVersion || "dev";
+    - config.env = "dev";
+    - config.uxcore = config.uxcore || true;
+    - config.delayLoadControls = config.delayLoadControls || true;
+
+  head
+    meta(http-equiv="content-type" content="text/html; charset=utf-8")
+    meta(http-equiv="content-language" content!="[@T[localization:<language full='true' />]@T]")
+    meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+    meta(http-equiv="x-ua-compatible" content="IE=edge")
+
+    title #{seo.meta.title}
+    meta(name="description" content!="#{seo.meta.description}")
+    meta(name="keywords" content!="#{seo.meta.keywords}")
+    meta(name="format-detection" content="telephone=no")
+    meta(property="og:title" content!="#{seo.openGraph.title}")
+    meta(property="og:description" content!="#{seo.openGraph.description}")
+    meta(property="og:type" content!="#{seo.openGraph.type}")
+    meta(property="og:url" content!="[@T[link:<relative parammode='explicit' />]@T]")
+    meta(property="og:image" content!="#{seo.openGraph.image}")
+    meta(property="og:site_name" content!="#{seo.openGraph.siteName}")
+    meta(property="fb:app_id" content="115696031791232")
+    meta(property="fb:admins" content="633356800")
+    link(rel="canonical" href!="#{seo.links.canonical}")
+    link(rel="shortcut icon" href!="#{seo.links.favicon}")
+
+    //- Fonts
+    link(rel="stylesheet" type="text/css" href="//cloud.typography.com/7914312/697366/css/fonts.css")
+
+    | 
+    | [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags"><Parameters><Parameter key="manifest" value="salesuxcore" /></Parameters></Data>]@P]
+
+    //- TODO: UPDATE PATH
+    if config.uxcore
+      link(href!="[@T[link:<cssroot />]@T]/fos/mike/#{config.version}/css/sahara.css" rel="stylesheet")
+    else
+      link(href!="[@T[link:<cssroot />]@T]/fos/201401/global/css/3.4.1/combined-3.4.1.min.css" rel="stylesheet" type="text/css")
+    script(type="text/javascript").
+      window.config = window.config || {};
+      window.config.uxcore = #{config.uxcore};
+      window.config.gdCdnHostUrl = '[@T[link:<cssroot />]@T]';
+      window.config.env = '#{config.env}';
+
+    <!--[if lt IE 9]>
+    link(href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect")
+    link(href!="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy.min.html" id="respond-proxy" rel="respond-proxy")
+    script(src!="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy-combo.min.js")
+    <![endif]-->
+
+    <!-- liveperson includes -->
+    link(href!="[@T[link:<cssroot />]@T]/fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css")
+
+    block head
+    //- For the moment, hard code the url for prod
+    script(src!='[@T[link:<javascriptroot />]@T]/fos/mike/#{config.version}/js/sahara.min.js')
+    //- Preload uxcontrols.js if the home page so other pages load faster
+    if (config.delayLoadControls)
+      script(type='text/javascript').
+        //- delayLoader.addScript('[@T[link:<javascriptroot />]@T]/ux/dev/js/uxcontrols.min.js')
+        //- For the moment, hard code the url for prod
+        delayLoader.addScript('[@T[link:<javascriptroot />]@T]/ux/#{config.uxcoreVersion}/js/uxcontrols.min.js')
+    else
+      //- script(src='[@T[link:<javascriptroot />]@T]/ux/dev/js/uxcontrols.min.js')
+      //- For the moment, hard code the url for prod
+      script(src!='[@T[link:<javascriptroot />]@T]/ux/#{config.uxcoreVersion}/js/uxcontrols.min.js')
+    
+    // Google Tag Manager
+    //-
+      noscript
+        iframe(src="//www.googletagmanager.com/ns.html?id=GTM-SXRF" height="0" width="0" style="display:none;visibility:hidden")
+      script(type="text/javascript").
+        var _gaDataLayer = _gaDataLayer || [];
+        _gaDataLayer.push({ 'shopperId': '#{requestContext.shopperId}' });
+        _gaDataLayer.push({ 'privateLabelId': '#{requestContext.plId}' });
+        _gaDataLayer.push({ 'isc': '#{page.isc}' });
+        _gaDataLayer.push({ 'segmentId': '#{requestContext.segmentId}' });
+        _gaDataLayer.push({ 'status': '200' });
+        _gaDataLayer.push({ 'tcc.status': 'on' });
+        var _gaq = _gaq || [];
+        _gaq.push(['_setDomainName', '#{requestContext.domainName}']);
+
+        (function (w, d, s, l, i) { w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' }); var j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl; delayLoader.addElement(j); })(window, document, 'script', '_gaDataLayer', 'GTM-SXRF');
+      
+      if requestContext.splitTestTrackingData
+        script(type="text/javascript").
+          _gaDataLayer.push({ 'splits': '#{requestContext.splitTestTrackingData}' });
+    // End Google Tag Manager
+
+    script(type="text/javascript").
+      var utag_data = { source_code:"gtnila43",pl_id:"1",app_name:"desktop.sales",authenticated:"false",page_type:"home_page" };
+      (function (a, b, c, d) {
+      a = '//tags.tiqcdn.com/utag/godaddy/godaddy/prod/utag.js';
+      b = document; c = 'script'; d = b.createElement(c); d.src = a; d.type = 'text/java' + c; d.async = true;
+      delayLoader.addElement(d);
+      //$ a = b.getElementsByTagName(c)[0]; a.parentNode.insertBefore(d, a);
+      })();
+
+    //-script(type="text/javascript", src="https://img1.wsimg.com/fos/hp/rebrand/js/bigtext.min.js")
+
+  body
+    block bodyEntry
+
+    //-
+      if page.isc != ""
+        .site-banners
+          script(src!="[@T[link:<javascriptroot />]@T]/fastball/js_lib/Fastball.ChannelIntegration-2.0.6.min.js" type="text/javascript")
+          - var languagePrefix = (requestContext.language != 'en' ? requestContext.language + '_' : '')
+          #IscBanner_fastballOfferElementDiv(fastball="banner" placement!="#{languagePrefix}iscBannerTop1000" appid="2" plid="1" isc!="#{page.isc}" shopperid="0" container!="#{languagePrefix}iscBannerTop1000" template="banner")
+          script(type="text/javascript").
+            $(document).ready(function() { Fastball.Common.initialize('#{requestContext.domainName}'); });
+
+    //- googleoff: index
+    // HEADERBEGIN
+    | 
+    | [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesuxcore" /></Parameters></Data>]@P]
+    // HEADEREND
+    //- googleon: index
+
+    block content
+
+    //- googleoff: index
+    // FOOTERBEGIN
+    | 
+    | [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer"><Parameters><Parameter key="manifest" value="salesuxcore" /></Parameters></Data>]@P]
+    // FOOTEREND
+    //- googleon: index
+
+    | 
+    | [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Script"><Parameters><Parameter key="manifest" value="salesuxcore" /></Parameters></Data>]@P]
+    | [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Bottom"><Parameters><Parameter key="requestedManifest" value="salesuxcore" /></Parameters></Data>]@P]
+
+    <!-- liveperson includes -->
+    #lpButtonDiv
+    <!-- End Main Content -->
+
+    script(type="text/javascript").
+      endOfPageScripts();
+
+    block endOfPageScripts

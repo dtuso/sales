@@ -34,8 +34,6 @@ try {
   var _           = require('underscore');
   var underscoreDeepExtend = require('underscore-deep-extend');
   _.mixin({deepExtend: underscoreDeepExtend(_)});
-
-  var rebrandData = require('./src/sales/rebrand/test.json');
 } catch (e) {
 
   console.log(e.toString());
@@ -150,7 +148,7 @@ gulp.task('jade', function() {
     console.log(e.message);
     jadeStream.end();
   });
-  return gulp.src(['./**/*.jade', '!./**/layouts/**/*.jade', '!./**/_*.jade'], {cwd: path.join('./src/')})
+  return gulp.src(['./**/*.jade', '!./**/templates/**/*.jade', '!./**/layouts/**/*.jade', '!./**/_*.jade'], {cwd: path.join('./src/')})
     .pipe(changed(paths.cdsBuild))
     .pipe(frontMatter({remove:true}))
     .pipe(data(function(file) { return file.frontMatter; }))
