@@ -1,0 +1,47 @@
+block vars
+  - headerText = headerText || "";
+  - bodyText = bodyText || "";
+  - buttonLink = buttonLink || "";
+  - buttonText = buttonText || "";
+  - disclaimerText = disclaimerText || "";
+  - dataCi = dataCi || "";
+  - containerClass = containerClass || "";
+
+block downArrowTileStyles
+  atlantis:webstash(type="css")
+    style.
+      .tile { width: 480px; height: 480px; position: relative; float: left;margin: 40px 10px 0;cursor: pointer; background-color: #333; }
+      .tile .header-wrapper { background-color: #77c043; padding: 30px 30px 0 30px; }
+      .tile .body-wrapper { padding: 15px 30px 0 30px; }
+      .tile .cta-wrapper { padding: 0 30px 30px 30px; }
+      .tile .disclaimer-wrapper { position: absolute; bottom: 0; }
+      .tile .header-text { font-size: 48px; color: #333; font-family: 'Walsheim-Black', 'Arial Black', sans-serif; margin-top: 0;margin-bottom: 0; line-height: 1;}
+      .tile .arrow-separator { border-left: 160px solid transparent; border-right: 320px solid transparent; border-top: 80px solid #77c043;}
+      .tile .body-text { color: #fff; font-family: 'Walsheim-Black', 'Arial Black', sans-serif; }
+      .tile .cta-wrapper { position: absolute; bottom: 0; }
+      .tile .btn-cta { font-size: 24px; text-transform: uppercase; margin: 0 0 0 0; }
+      .tile .disclaimer { color: #fff; padding-top: 15px; }
+
+.tile.down-arrow-tile.js-gdhpclick(data-url!=buttonLink data-ci=dataCi class=containerClass)
+
+  .header-wrapper
+    block header
+      if (headerText)
+        h2.header-text !{headerText}
+  
+  .arrow-separator
+
+  .body-wrapper
+    block body
+      if (bodyText)
+        h3.body-text !{bodyText}
+
+  .cta-wrapper
+    block cta
+      if (buttonLink && buttonText)
+        a.btn.btn-warning.btn-cta(href!=buttonLink) !{buttonText}
+
+    block disclaimer
+      if (disclaimerText)
+        .disclaimer
+          small !{disclaimerText}
