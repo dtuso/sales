@@ -1,15 +1,20 @@
+---
+location: sales/homepage/tile/berlin/default_template
+id: false
+name: GCE-34082-berlin
+---
 extends ../../../layouts/homepage/downArrowTile.jade
 
 append vars
   - buttonLink = "[@T[link:<relative path='/tlds/berlin'><param name='ci' value='95255' /></relative>]@T]";
   - buttonText = "[@L[cds.sales/homepage/tile/berlin:berlin-tile-btn]@L]";
   - dataCi = 95255;
-  - containerClass = "berlin-percent-off";
+  - containerClass = "berlin";
 
 block append downArrowTileStyles
   style.
-    .berlin-percent-off .body-text{font-size:48px;line-height:48px;color:#fff;font-family: 'Walsheim-Black', 'Arial Black', sans-serif;margin:0 0 0 0;}
-    .berlin-percent-off .body-text:last-child{color:#f2812e;margin-top:20px;}
+    .berlin .body-text{font-size:48px;line-height:48px;color:#fff;font-family: 'Walsheim-Black', 'Arial Black', sans-serif;margin:0 0 0 0;}
+    .berlin .body-text:last-child{color:#f2812e;margin-top:20px;}
 
 block header
   img(src!="[@T[link:<imageroot />]@T]/fos/hp/rebrand/img/berlin-logo.png")
