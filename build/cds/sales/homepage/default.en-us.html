@@ -424,6 +424,7 @@
           }
         });
       }
+      $(document).ready(function(){var url=window.location.hostname.substring(window.location.hostname.indexOf('.')+1);$.cookie("fb_tmsclick",null,{domain:url,path:"/"});$("div[data-tms-trackingid]").on("click",function(e){try{$.cookie("fb_tmsclick",$(this).data("tms-trackingid"),{domain:url,path:"/"})}catch(t){}return true})})
     </script>
   </body>
 </html>
