@@ -85,8 +85,8 @@ html(lang!="[@T[localization:<language full='true' />]@T]")
     | 
     | [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header" />]@P]
 
+    //  Domain Search Section
     block domainSearch
-      //  Domain Search Section
       .gdhp-search-section
         .gdhp-main-top
           form.search-form.search-form-alternate.search-form-certified(method="post" data-url!="[@T[link:<relative path='~/api/dpp/search/single'/>]@T]" action!="[@T[link:<relative path='/domains/searchresults-new.aspx'/>]@T]")
@@ -96,8 +96,8 @@ html(lang!="[@T[localization:<language full='true' />]@T]")
             .clearfix
       
 
+    // Marquee Section
     block marquee
-      // Marquee Section
       |  ##if(targetMessageTagAny(sales_hp_default,hp_existing_customer))
       |   [@P[cdsDocument:<data app="sales" location="homepage/marquee/499com/default_template" /> ]@P]
       |  ##else
@@ -119,8 +119,8 @@ html(lang!="[@T[localization:<language full='true' />]@T]")
           block share
             .fosshare(data-twshareurl!="[@T[link:<relative path=''></relative>]@T]" data-twtext!="[@L[cds.sales/homepage:twitter-text-gdbl]@L]" data-twrelated="GoDaddy" data-shareurl!="[@T[link:<relative path='/'/>]@T]" data-buttons="google,facebook,twitter")
 
+    // Tiles Section
     block tiles
-      // Tiles Section
       atlantis:webstash(type="css")
         style.
           .gdhp-tile-wrap{height:580px;width:100%;background-color:#d4d4d4}
@@ -159,8 +159,8 @@ html(lang!="[@T[localization:<language full='true' />]@T]")
             .modal-body
               iframe(width="854",height="480",src="",autoplay,scrolling="no",frameborder="0",allowfullscreen)
     
+    // Lower Marquee Section
     block lowerMarquee
-      // Lower Marquee Section
       .gdhp-bottom-banner
         .bottom-banner-content
           span.bottom-banner-headline-2 [@L[cds.sales/homepage/segments/default:bottom-banner-headline-INTL]@L]
@@ -172,8 +172,8 @@ html(lang!="[@T[localization:<language full='true' />]@T]")
               button.btn.btn-primary.btn-lg.hp-search(type="submit" name="searchButton" data-ci="87137") [@L[cds.sales/homepage/segments/default:domain-banner-search-btn]@L]
             .clearfix
 
+    // Why Us Section
     block whyUs
-      // Why Us Section
       .why-us-wrap
         .why-us-content
           .why-us-headline-wrap
@@ -193,8 +193,8 @@ html(lang!="[@T[localization:<language full='true' />]@T]")
                 .circle4
                 .circle-text [@L[cds.sales/homepage:whyus-img-text-4]@L]
 
+    // FAQ Section
     block faq
-      // FAQ Section
       #faqSlider
         .gd-nav-container
           .gd-swipe(data-gd-swipe="{'auto':0}")
@@ -219,8 +219,8 @@ html(lang!="[@T[localization:<language full='true' />]@T]")
             i.ico.ico-carousel-arrow-right
           .gd-swipe-bottom-nav
 
+    // Disclaimers Section
     block disclaimers
-      // Disclaimers Section
       #disclaimers
         section.container.l-main-container.content-disclaimer
           p.no-margin-bottom
