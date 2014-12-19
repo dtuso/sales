@@ -1,8 +1,14 @@
 extend ../../../layouts/homepage/downArrowTile.jade
 
 append vars
-  - headerText = "TRANSFER YOUR .CH FOR FREE"
-  - bodyText = "Move your name to the world's #1 domain registrar for a price that can't be beat."
-  - buttonLink = "#";
-  - buttonText = "Get Started";
-  - disclaimerText = "Watch out for this deal!";
+  - headerText = "[@L[cds.sales/homepage/tile/ch-free-transfer:ch-free-transfer-header-text]@L]"
+  - bodyText = "[@L[cds.sales/homepage/tile/ch-free-transfer:ch-free-transfer-body-text]@L]"
+  - buttonLink = "[@T[link:<relative path='/tlds/ch'><param name='ci' value='95258' /></relative>]@T]";
+  - buttonText = "[@L[cds.sales/homepage/tile/ch-free-transfer:ch-free-transfer-cta-text]@L]";
+  - dataCi = 95258;
+  - containerClass = "ch-free-transfer";
+
+block append downArrowTileStyles
+  style.
+    .ch-free-transfer .body-text{font-family:'Walsheim-Medium', Arial, sans-serif;}
+    .ch-free-transfer .btn-warning{border-color: #b25e18;}
