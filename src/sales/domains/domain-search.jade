@@ -1,0 +1,91 @@
+extends ../../templates/pages/landing-page
+
+block pageStyles
+  style.
+    .plan-tile { margin-top: 70px; }
+
+block domainSearch
+  //- remove domain search from top of hosting page
+
+block marquee
+  section#marquee
+    include ./domain-search/marquee.jade
+  .container
+    +domainSearchInput()
+
+block plans
+  section#plans
+    +renderPlanTiles(4)
+      +planTile
+        include ./domain-search/plan-tld-com.jade
+      +planTile
+        include ./domain-search/plan-tld-net.jade
+      +planTile
+        include ./domain-search/plan-tld-org.jade
+      +planTile
+        include ./domain-search/plan-tld-info.jade
+      .container
+        .row
+          .col-sm-12
+            h3.text-center So What All Do You Get?
+        .row
+          .col-md-4.col-sm-6
+            .include-check Simple domain set up - no technical skills needed. Honest.
+            .include-check Quickly forward your domain to any existing website
+          .col-md-4.col-sm-6
+            .include-check Up to 100 subdomains (like pics.coolexample.com) to customize your site.
+            .include-check 100 professional email aliases (like sales@coolexample.com).
+          .col-md-4.col-sm-6
+            .include-check Real-time monitoring to keep you up and running
+
+
+  section.features-carousel-pro-carousel#test-carousel
+    style.
+      #test-carousel .plan-carousel-copy { font-family: 'Walsheim-Black'; font-size: 24px; }
+      #test-carousel .btn { margin-top: 40px; }
+    +carousel("my-carousel", 3)
+      +carouselItem()
+        .plan-carousel-copy(style="text-transform: uppercase;") FINALLY! A WEB ADDRESS THAT TELLS PEOPLE EXACTLY WHAT YOU DO
+        .plan-carousel-copy .attorney, .church, .club, .xyz and .guide are now available.
+        a.btn.btn-default-dark Search Domains Now
+      +carouselItem()
+        .plan-carousel-copy(style="text-transform: uppercase;") 30% OFF
+        .plan-carousel-copy .global, .email, .website, .guru, .army now.
+        a.btn.btn-default-dark Search Domains Now
+      +carouselItem()
+        .plan-carousel-copy SAVE up to 50% when you get online with
+        .plan-carousel-copy .com, .net, .co, .org, .me, .biz, or .us
+        a.btn.btn-default-dark Search Domains Now
+
+block sections  
+  +renderMidPageNav
+    +priceBlock("$69.99", "year", "#alternate-products")
+
+  section#speed-chart
+    .container
+      style.
+        #speed-chart { min-height: 400px; }
+        #speed-chart h3 { margin: 50px auto; text-align: center; }
+        #speed-chart img { margin: 50px auto; display: block; }
+      .speed-chart
+        h3 Fast Sites = Happy Visitors
+        img(src!="[@T[link:<imageroot />]@T]fos/mike/img/pro-wp-speed.png")
+        .speed-text
+          img()
+
+if (tldColumns)
+  if (domainsPlansTitle)
+    .row
+      .col-md-10.col-md-offset-1.col-sm-12
+        h2.text-center.domains-plans-mid-title !{domainsPlansTitle}
+  .row
+    each tldColumn in tldColumns
+      .col-sm-6
+        h6.tld-col-title !{markdownToHtml(tldColumn.title)}
+        .row
+          .col-sm-12
+            each tldLookup in tldColumn.tldLookups
+              .input-group.non-input-group
+                .form-control !{tldLookup.tldName}
+                span.input-group-btn
+                  a(class="btn #{tldLookup.buttonColor}", href="#{tldLookup.link}") !{tldLookup.buttonText}

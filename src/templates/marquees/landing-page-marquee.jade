@@ -48,14 +48,13 @@ append vars
     - showDomainSearch = showDomainSearch || false
 
 block content
-  div.marquee-www-rebrand-wrap
-    .col-sm-12
-      div(data-center-element='{"vertical":{"target":{"method":"parents","selector":".marquee-www-rebrand-wrap"},"verticalStyle":"padding-top","elementHeightMethod":"outerHeight","targetWidthMethod":"height"}}')
-        .row
-          div.col-md-7.col-sm-12
-            .marquee-pro-left-text
-              block topAlignedContent
+  .col-sm-12
+    div(data-center-element='{"vertical":{"target":{"method":"parents","selector":".marquee-www-rebrand-wrap"},"verticalStyle":"padding-top","elementHeightMethod":"outerHeight","targetWidthMethod":"height"}}')
+      .row
+        div.col-md-7.col-sm-12
+          .marquee-pro-left-text
+            block topAlignedContent
 
-              block middleAlignedContent
+            block middleAlignedContent
 
-              block bottomAlignedContent
+            block bottomAlignedContent

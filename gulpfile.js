@@ -153,7 +153,7 @@ gulp.task('jade', function() {
     .pipe(frontMatter({remove:true}))
     .pipe(data(function(file) { return file.frontMatter; }))
     .pipe(jadeStream)
-    .pipe(gulpif(!ignoreCDS, cdsm(cdsmOpts)))
+    //.pipe(gulpif(!ignoreCDS, cdsm(cdsmOpts)))
     .pipe(gulp.dest(paths.cdsBuild));
 });
 
