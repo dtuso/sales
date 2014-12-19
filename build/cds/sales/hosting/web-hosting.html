@@ -22,6 +22,8 @@
     <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7914312/697366/css/fonts.css"> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags"><Parameters><Parameter key="manifest" value="salesuxcore" /></Parameters></Data>]@P]
     <link href="[@T[link:<cssroot />]@T]/fos/mike/0.7.0/css/sahara.css" rel="stylesheet">
+    <link href="[@T[link:<cssroot />]@T]/ux/dev-brand/css/uxcontrols.css" rel="stylesheet">
+    <link href="[@T[link:<cssroot />]@T]/ux/dev-brand/css/uxcore.css" rel="stylesheet">
     <script type="text/javascript">
       window.config = window.config || {};
       window.config.uxcore = true;
@@ -107,7 +109,41 @@
             <div class="pro-plan-wrap">
               <h2 class="plan-title">Economy</h2>
               <p class="plan-text">Perfect to get started with a basic site.</p>
-              <div class="plan-price-wrap"><strong>Starting at</strong><br><span class="plan-price text-warning">$3.49</span><span class="plan-duration text-warning">/mo</span><br><strong>was <strike>10.99</strike> <span class="text-primary">Save 70%</span></strong></div><a href="" data-tcode="" data-index="1" class="btn btn-primary btn-plan btn-lg btn-block">Add to Cart</a>
+              <div class="plan-price-wrap"> <strong>Starting at<br><span class="plan-price text-warning">[@T[productprice:<current productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/mo</span> 
+                  ##if(productHasSavingsMoreThan(32051, 32051, 0))
+                   <br><strong>was 
+                    <strike>[@T[productprice:<list productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary">Save [@T[productcompare:<percent primaryproductid="32051" secondaryproductid="32051" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span></strong> 
+                  ##endif
+                   </strong></div>
+              <div class="sf-droplist-select form-control">
+                <div class="sf-droplist-selectcontent">
+                  <div><span class="sf-droplist-term">12 mo</span><span class="sf-droplist-cost sf-droplist-sale">$X.XX/mo</span><span class="sf-droplist-msg sf-droplist-sale">ON SALE</span></div>
+                </div>
+                <div class="sf-droplist-selectbtn"><span class="sf-droplist-anchor"></span></div>
+              </div>
+              <ul id="basic-plan-list" style="display:none;">
+                <li data-value="1">
+                  <div data-main="true" class="sf-droplist-row"><span class="sf-droplist-term">3 mo</span><span class="sf-droplist-cost sf-droplist-sale">$X.XX/mo</span><span class="sf-droplist-msg sf-droplist-sale">ON SALE</span></div>
+                  <div class="sf-droplist-row"><span class="sf-droplist-term"> </span><span class="sf-droplist-cost">
+                      <strike>$X.XX/mo</strike></span><span class="sf-droplist-msg sf-droplist-sale">Save XX%</span></div>
+                </li>
+                <li data-selected="true" data-value="2">
+                  <div data-main="true" class="sf-droplist-row"><span class="sf-droplist-term">12 mo</span><span class="sf-droplist-cost sf-droplist-sale">$X.XX/mo</span><span class="sf-droplist-msg sf-droplist-sale">ON SALE</span></div>
+                  <div class="sf-droplist-row"><span class="sf-droplist-term"> </span><span class="sf-droplist-cost">
+                      <strike>$X.XX/mo</strike></span><span class="sf-droplist-msg sf-droplist-sale">Save XX%</span></div>
+                </li>
+                <li data-value="3">
+                  <div data-main="true" class="sf-droplist-row"><span class="sf-droplist-term">24 mo</span><span class="sf-droplist-cost sf-droplist-sale">$X.XX/mo</span><span class="sf-droplist-msg sf-droplist-sale">ON SALE</span></div>
+                  <div class="sf-droplist-row"><span class="sf-droplist-term"> </span><span class="sf-droplist-cost">
+                      <strike>$X.XX/mo</strike></span><span class="sf-droplist-msg sf-droplist-sale">Save XX%</span></div>
+                </li>
+              </ul>
+              <script>
+                $("#basic-plan-list").sfDropList({});
+                
+                
+              </script>
+              <button data-tcode="" data-index="1" class="btn btn-purchase btn-plan btn-lg btn-block">Add to Cart</button>
               <div class="plan-item"> <strong>1 Website</strong></div>
               <div class="plan-item"> <strong>100 GB Storage</strong></div>
               <div class="plan-item"> <strong>Unlimited bandwidth</strong></div>
@@ -125,7 +161,41 @@
             <div class="pro-plan-wrap">
               <h2 class="plan-title">Deluxe</h2>
               <p class="plan-text">Ideal for building and managing multiple sites.</p>
-              <div class="plan-price-wrap"><strong>Starting at</strong><br><span class="plan-price text-warning">$4.49</span><span class="plan-duration text-warning">/mo</span></div><a href="" data-tcode="" data-index="1" class="btn btn-primary btn-plan btn-lg btn-block">Add to Cart</a>
+              <div class="plan-price-wrap"> <strong>Starting at<br><span class="plan-price text-warning">[@T[productprice:<current productid="32059" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/mo</span> 
+                  ##if(productHasSavingsMoreThan(32059, 32059, 0))
+                   <br><strong>was 
+                    <strike>[@T[productprice:<list productid="32059" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary">Save [@T[productcompare:<percent primaryproductid="32059" secondaryproductid="32051" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span></strong> 
+                  ##endif
+                   </strong></div>
+              <div class="sf-droplist-select form-control">
+                <div class="sf-droplist-selectcontent">
+                  <div><span class="sf-droplist-term">12 mo</span><span class="sf-droplist-cost sf-droplist-sale">$X.XX/mo</span><span class="sf-droplist-msg sf-droplist-sale">ON SALE</span></div>
+                </div>
+                <div class="sf-droplist-selectbtn"><span class="sf-droplist-anchor"></span></div>
+              </div>
+              <ul id="basic-plan-list" style="display:none;">
+                <li data-value="1">
+                  <div data-main="true" class="sf-droplist-row"><span class="sf-droplist-term">3 mo</span><span class="sf-droplist-cost sf-droplist-sale">$X.XX/mo</span><span class="sf-droplist-msg sf-droplist-sale">ON SALE</span></div>
+                  <div class="sf-droplist-row"><span class="sf-droplist-term"> </span><span class="sf-droplist-cost">
+                      <strike>$X.XX/mo</strike></span><span class="sf-droplist-msg sf-droplist-sale">Save XX%</span></div>
+                </li>
+                <li data-selected="true" data-value="2">
+                  <div data-main="true" class="sf-droplist-row"><span class="sf-droplist-term">12 mo</span><span class="sf-droplist-cost sf-droplist-sale">$X.XX/mo</span><span class="sf-droplist-msg sf-droplist-sale">ON SALE</span></div>
+                  <div class="sf-droplist-row"><span class="sf-droplist-term"> </span><span class="sf-droplist-cost">
+                      <strike>$X.XX/mo</strike></span><span class="sf-droplist-msg sf-droplist-sale">Save XX%</span></div>
+                </li>
+                <li data-value="3">
+                  <div data-main="true" class="sf-droplist-row"><span class="sf-droplist-term">24 mo</span><span class="sf-droplist-cost sf-droplist-sale">$X.XX/mo</span><span class="sf-droplist-msg sf-droplist-sale">ON SALE</span></div>
+                  <div class="sf-droplist-row"><span class="sf-droplist-term"> </span><span class="sf-droplist-cost">
+                      <strike>$X.XX/mo</strike></span><span class="sf-droplist-msg sf-droplist-sale">Save XX%</span></div>
+                </li>
+              </ul>
+              <script>
+                $("#basic-plan-list").sfDropList({});
+                
+                
+              </script>
+              <button data-tcode="" data-index="1" class="btn btn-purchase btn-plan btn-lg btn-block">Add to Cart</button>
               <div class="plan-item"> <strong>Unlimited Websites</strong></div>
               <div class="plan-item"> <strong>Unlimited Storage <span class='sf-tip sf-tipper-target' data-style='qt' data-content='Our Web Hosting plans are designed to host most personal, small business and organization websites. We do not limit the amount of storage and bandwidth your site can use as long as it complies with our Hosting Agreement. Should your website bandwidth or storage usage present a risk to the stability, performance or uptime of our servers, we will notify you via email and you may be required to upgrade to a Virtual Private Server or Dedicated (Private) Server, or we may restrict the resources your website is using. It’s very rare that a website violates our Hosting Agreement and is typically only seen in sites that use hosting for file sharing or storage.'></span></strong></div>
               <div class="plan-item"> <strong>Unlimited bandwidth</strong></div>
@@ -134,6 +204,60 @@
             </div>
           </div>
           <div class="col-sm-4 plan-tile plan-pro">
+            <atlantis:webstash type="css">
+              <style>
+                .pro-plans { margin-top: 0; }
+                
+              </style>
+            </atlantis:webstash>
+            <div class="pro-plan-wrap">
+              <div class="plan-flag">More power and security</div>
+              <h2 class="plan-title">Ultimate</h2>
+              <p class="plan-text">Good for higher traffic. Twice the power, memory, email and more.</p>
+              <div class="plan-price-wrap"> <strong>Starting at<br><span class="plan-price text-warning">[@T[productprice:<current productid="32082" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/mo</span> 
+                  ##if(productHasSavingsMoreThan(32082, 32082, 0))
+                   <br><strong>was 
+                    <strike>[@T[productprice:<list productid="32082" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary">Save [@T[productcompare:<percent primaryproductid="32082" secondaryproductid="32051" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span></strong> 
+                  ##endif
+                   </strong></div>
+              <div class="sf-droplist-select form-control">
+                <div class="sf-droplist-selectcontent">
+                  <div><span class="sf-droplist-term">12 mo</span><span class="sf-droplist-cost sf-droplist-sale">$X.XX/mo</span><span class="sf-droplist-msg sf-droplist-sale">ON SALE</span></div>
+                </div>
+                <div class="sf-droplist-selectbtn"><span class="sf-droplist-anchor"></span></div>
+              </div>
+              <ul id="basic-plan-list" style="display:none;">
+                <li data-value="1">
+                  <div data-main="true" class="sf-droplist-row"><span class="sf-droplist-term">3 mo</span><span class="sf-droplist-cost sf-droplist-sale">$X.XX/mo</span><span class="sf-droplist-msg sf-droplist-sale">ON SALE</span></div>
+                  <div class="sf-droplist-row"><span class="sf-droplist-term"> </span><span class="sf-droplist-cost">
+                      <strike>$X.XX/mo</strike></span><span class="sf-droplist-msg sf-droplist-sale">Save XX%</span></div>
+                </li>
+                <li data-selected="true" data-value="2">
+                  <div data-main="true" class="sf-droplist-row"><span class="sf-droplist-term">12 mo</span><span class="sf-droplist-cost sf-droplist-sale">$X.XX/mo</span><span class="sf-droplist-msg sf-droplist-sale">ON SALE</span></div>
+                  <div class="sf-droplist-row"><span class="sf-droplist-term"> </span><span class="sf-droplist-cost">
+                      <strike>$X.XX/mo</strike></span><span class="sf-droplist-msg sf-droplist-sale">Save XX%</span></div>
+                </li>
+                <li data-value="3">
+                  <div data-main="true" class="sf-droplist-row"><span class="sf-droplist-term">24 mo</span><span class="sf-droplist-cost sf-droplist-sale">$X.XX/mo</span><span class="sf-droplist-msg sf-droplist-sale">ON SALE</span></div>
+                  <div class="sf-droplist-row"><span class="sf-droplist-term"> </span><span class="sf-droplist-cost">
+                      <strike>$X.XX/mo</strike></span><span class="sf-droplist-msg sf-droplist-sale">Save XX%</span></div>
+                </li>
+              </ul>
+              <script>
+                $("#basic-plan-list").sfDropList({});
+                
+                
+              </script>
+              <button data-tcode="" data-index="1" class="btn btn-purchase btn-plan btn-lg btn-block">Add to Cart</button>
+              <div class="plan-item"> <strong>Unlimited Websites</strong></div>
+              <div class="plan-item"> <strong>Unlimited Storage <span class='sf-tip sf-tipper-target' data-style='qt' data-content='Our Web Hosting plans are designed to host most personal, small business and organization websites. We do not limit the amount of storage and bandwidth your site can use as long as it complies with our Hosting Agreement. Should your website bandwidth or storage usage present a risk to the stability, performance or uptime of our servers, we will notify you via email and you may be required to upgrade to a Virtual Private Server or Dedicated (Private) Server, or we may restrict the resources your website is using. It’s very rare that a website violates our Hosting Agreement and is typically only seen in sites that use hosting for file sharing or storage.'></span></strong></div>
+              <div class="plan-item"> <strong>Unlimited bandwidth</strong></div>
+              <div class="plan-item">1000 Email Addresses</div>
+              <div class="plan-item">Free Domain with annual plan</div>
+              <div class="plan-item">2X Processing Power &amp; Memory (Available for Linux/cPanel only) <span class='sf-tip sf-tipper-target' data-style='qt' data-content='Available Resources:<br><br>Ultimate Plan<br>2 CPU, 1 GB RAM, 125 Entry Processes<br><br>Economy &amp; Deluxe<br>1 CPU, 512 MB RAM, 100 Entry Processes'></span></div>
+              <div class="plan-item">Premium DNS Management Tool <span class='sf-tip sf-tipper-target' data-style='qt' data-content='A $35.88/yr value, our Premium DNS makes it easy to resolve common issues that prevent people from accessing your site, improving your overall performance, availability, and security.'></span></div>
+              <div class="plan-item">1 year SSL Certificate - Secures customer data &amp; increases search rackings. Restrictions apply. <span class='sf-tip sf-tipper-target' data-style='qt' data-content='A $69.99 value, your GoDaddy SSL certificate keeps payments and customer data secure, and helps increase your search rankings on Google. Take advantage of 256-bit encryption and 99.9% browser recognition. The SSL Certificate is free for 1 year with purchase. After the initial free year, SSL will automatically renew at the then-current price until cancelled. You may cancel automatic renewal at any time in your GoDaddy account.'></span></div>
+            </div>
           </div>
           <div class="container">
             <div class="row">
@@ -161,108 +285,6 @@
           </div>
         </div>
       </div>
-    </section>
-    <div class="mid-page-nav">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" data-toggle="collapse" data-target="" class="navbar-toggle collapsed"></button>
-        </div>
-        <div id="midPageNav" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav"></ul>
-          <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.mid-page-nav&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="navbar-right">
-            <div class="price-text">Plans starting at</div>
-            <div class="price">$69.99<span>/year</span></div><a href="#alternate-products" class="btn-warning btn btn-sm">See the plans</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <script>
-      $(function(){ 
-        var midPageNavItemTemplate = _.template('<li><a href="#<%= url %>" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.nav&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" style="margin-top: 0px;"><span><%= text %></span></a></li>');
-        $('[data-mid-nav-title]').each(function(index) {
-          var itemData = { text: $(this).data('mid-nav-title'), url: this.id };
-          var itemElement = midPageNavItemTemplate(itemData);
-          $('#midPageNav ul.nav').append(itemElement);
-        });
-      });
-    </script>
-    <section id="speed-chart">
-      <div class="container">
-        <style>
-          #speed-chart { min-height: 400px; }
-          #speed-chart h3 { margin: 50px auto; text-align: center; }
-          #speed-chart img { margin: 50px auto; display: block; }
-        </style>
-        <div class="speed-chart">
-          <h3>Fast Sites = Happy Visitors</h3><img src="[@T[link:<imageroot />]@T]fos/mike/img/pro-wp-speed.png">
-          <div class="speed-text"><img></div>
-        </div>
-      </div>
-    </section>
-    <section id="one-click-install" class="features tile-section one-click-wrapper">
-      <div class="container">
-        <style>#one-click-install { background-color: #689A1D; }</style>
-        <div class="row">
-          <div class="col-sm-6">
-            <h2>APP INSTALLS JUST A CLICK AWAY</h2>
-            <p>Our one-click install process has all your Web hosting app needs covered, making it easy to build, ehnhance and manage your site.</p>
-            <ul style="list-style">
-              <li><span aria-hidden="true" class="uxicon uxicon-checkmark"></span><span>Need a content management system (CMS) for your Website? Joomla and Drupal are just a click away.</span></li>
-              <li><span aria-hidden="true" class="uxicon uxicon-checkmark"></span><span>Maybe you want to sell products on your webite.  Try Magento with one-click.</span></li>
-            </ul>
-          </div>
-          <div class="col-sm-6">
-            <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="text-center"><img src="[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Feature_Small_Logos.png" class="features-img features-img-right"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="features" data-mid-nav-title="Features" class="key-benefits-wrap tile-section bg-pro-gray">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-4 key-benefit">
-            <div class="key-benefits-img-wrap"><img src="[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_Group_ScalableResources.png" class="key-benefits-img">
-            </div>
-            <h3 class="key-benefits-title">Scalable resources on-demand</h3>
-            <div class="key-benefits-text">When you need more power, level up your CPU, memory, entry processes and I/O with just a click. Access the Stats & Usage dashboard for real-time visibility to your sites’ resource usage. Even get alerts as you approach your limits so you can react quickly and keep your site running at top speed.</div>
-          </div>
-          <div class="col-sm-4 key-benefit">
-            <div class="key-benefits-img-wrap"><img src="[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_Group_Security.png" class="key-benefits-img"></div>
-            <h3 class="key-benefits-title">Award-winning security keeps your site safe</h3>
-            <div class="key-benefits-text">Keeping a website secure is a full time job. That’s why our security team is on the job 24/7, monitoring your site for suspicious activity and protecting it against brute force and DDoS attacks.</div>
-          </div>
-          <div class="col-sm-4 key-benefit">
-            <div class="key-benefits-img-wrap"><img src="[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_Group_WhatIsHosting.png" class="key-benefits-img"></div>
-            <h3 class="key-benefits-title">What is Hosting?</h3>
-            <div class="key-benefits-text">Make sure friends, family and customers can see your website. Hosting is what makes it possible for others to view your website over the Internet. Without it, you’re the only one who will ever get a look. GoDaddy serves up:
-              <ul>
-                <li>One-click set-up</li>
-                <li>Unlimited storage and bandwidth</li>
-                <li>Scalability to fit your needs</li>
-                <li>24/7 secure monitoring</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="compare" data-mid-nav-title="Compare">
-      <p>compare</p>
-    </section>
-    <section id="platforms" data-mid-nav-title="Platforms">
-      <p>platforms</p>
-    </section>
-    <section id="reviews">
-      <p>reviews</p>
-    </section>
-    <section id="faq">
-      <p>faq</p>
-    </section>
-    <section id="alternate-products">
-      <p>alternate-products</p>
-    </section>
-    <section id="disclaimers">
-      <p>disclaimers</p>
     </section>
     <!-- FOOTERBEGIN--> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer"><Parameters><Parameter key="manifest" value="salesuxcore" /></Parameters></Data>]@P]
