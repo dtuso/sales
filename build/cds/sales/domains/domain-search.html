@@ -41,6 +41,9 @@
     <meta name="y_key" content="1e39c508e0d87750">
     <style>
       .plan-tile { margin-top: 70px; }
+      .search-template .search-template-box { margin-bottom: 10px; }
+      #domainSearch a { color: #333; font-weight: bold; margin-right: 30px; }
+      #domainSearch { padding-bottom: 10px; }
       
     </style>
     <script src="[@T[link:<javascriptroot />]@T]/fos/mike/0.7.0/js/sahara.min.js"></script>
@@ -70,6 +73,7 @@
       <atlantis:webstash type="css">
         <style>
           .marquee { background: url([@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Marquee.jpg) no-repeat top center;); }
+          .marquee.marquee-app-landing { min-height: 400px; }
           
         </style>
       </atlantis:webstash>
@@ -79,12 +83,14 @@
             <div class="col-sm-12">
               <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.marquee-www-rebrand-wrap&quot;},&quot;verticalStyle&quot;:&quot;padding-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
                 <div class="row">
-                  <div class="col-md-7 col-sm-12">
+                  <div class="col-md-9 col-sm-12">
                     <div class="marquee-pro-left-text">
-                            <div class="marquee-product-review"> <i class="uxicon uxicon-star text-warning"></i><i class="uxicon uxicon-star text-warning"></i><i class="uxicon uxicon-star text-warning"></i><i class="uxicon uxicon-star text-warning"></i><i class="uxicon uxicon-star text-warning"></i><a href="#">Reviews</a>
-                            </div>
-                            <h2 class="marquee-product-description">FAST, SECURE, RELIABLE HOSTING THAT GROWS WITH YOUR BUSINESS</h2>
-                            <div class="marquee-product-text">Industry's leading page load times. 99.9% Uptime Guarantee*.</div><a href="#" class="btn btn-primary jump-arrow-btn">Get Started</a>
+                            <h2 class="marquee-product-description">CUSTOMERS ARE LOOKING FOR YOU ONLINE. A DOMAIN SAYS &quot;HEY - OVER HERE!&quot;</h2>
+                            <ul class="marquee-check-bullets">
+                              <li>12 million customers trust us with their domains.  They must know something.</li>
+                              <li>Experts you can call 24/7 make building a business a little less lonely.</li>
+                              <li>Low prices and a huge selection. Who doesn't love that?</li>
+                            </ul>
                     </div>
                   </div>
                 </div>
@@ -94,19 +100,29 @@
         </div>
       </div>
     </section>
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12 search-template">
-          <form action="[@T[link:&lt;external linktype='siteurl' path='' parammode='explicit'/&gt;]@T]/api/dpp/search/single?ci=54814&amp;isc=gd41166r" data-icode="home:Domain Search:Domains:Domain Search" data-domainsearch="{'search-element':'input.searchInput','placeholder-element':'label.searchInput','button':'button','empty-redirect':'[@T[link:<external linktype='siteurl' path='' parammode='explicit'/>]@T]/domains/domain-name-search.aspx'}">
-            <div class="search-template-box clearfix">
-              <label class="text-primary searchInput">[@L[cds.sales/homepage/segments/default:domain-banner-search-text]@L]</label>
-              <input type="text" autocomplete="off" name="domainToCheck" maxlength="63" class="text-primary searchInput"/>
-              <button type="submit" data-tcode="home:Domain Search:Domains:Domain Search:Search Domain" class="btn-primary btn btn-lg pull-right ">[@L[cds.sales/homepage/locales/en:domain-search-btn]@L]</button>
-            </div>
-          </form>
+    <section id="domainSearch" class="bg-green-official">
+      <div class="container">
+        <div class="row">
+          <div style="padding-top:10px;" class="col-xs-12">
+            <h4>Start your domain name search here</h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 search-template">
+            <form action="[@T[link:&lt;external linktype='siteurl' path='' parammode='explicit'/&gt;]@T]/api/dpp/search/single?ci=54814&amp;isc=gd41166r" data-icode="home:Domain Search:Domains:Domain Search" data-domainsearch="{'search-element':'input.searchInput','placeholder-element':'label.searchInput','button':'button','empty-redirect':'[@T[link:<external linktype='siteurl' path='' parammode='explicit'/>]@T]/domains/domain-name-search.aspx'}">
+              <div class="search-template-box clearfix">
+                <label class="text-primary searchInput">[@L[cds.sales/homepage/segments/default:domain-banner-search-text]@L]</label>
+                <input type="text" autocomplete="off" name="domainToCheck" maxlength="63" class="text-primary searchInput"/>
+                <button type="submit" data-tcode="home:Domain Search:Domains:Domain Search:Search Domain" class="btn-primary btn btn-lg pull-right ">[@L[cds.sales/homepage/locales/en:domain-search-btn]@L]</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12"><a>Domain Pricing</a><a>Bulk Domain Search</a><a>Transfer Domains      </a></div>
         </div>
       </div>
-    </div>
+    </section>
     <section id="plans">
       <div class="pro-plans-wrap bg-gray-light">
         <div id="plans" data-icode="" class="container pro-plans">
@@ -264,6 +280,63 @@
         <div class="speed-chart">
           <h3>Fast Sites = Happy Visitors</h3><img src="[@T[link:<imageroot />]@T]fos/mike/img/pro-wp-speed.png">
           <div class="speed-text"><img></div>
+        </div>
+      </div>
+    </section>
+    <section id="features" data-mid-nav-title="Why GoDaddy?" class="key-benefits-wrap tile-section bg-pro-gray">
+      <div class="container">
+        <div class="row">
+          <div style="padding-top: 30px; padding-bottom: 30px;" class="col-sm-12">
+            <h2>Why Choose GoDaddy?</h2>
+            <h3>With more than 58 million domains under management, we have more experience than anyone.  We're like your favorite local store that's been there for ages and always seems to have everything you need.</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4 key-benefit">
+            <div class="key-benefits-img-wrap"><img src="[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_Group_ScalableResources.png" class="key-benefits-img">
+            </div>
+            <h3 class="key-benefits-title">World's Largest Registrar</h3>
+            <div class="key-benefits-text">More people trust us than any other domain provider.  Since the right domain name can set you up for future success, you don't want to mess around.  Go with the world's largest registrar.</div>
+          </div>
+          <div class="col-sm-4 key-benefit">
+            <div class="key-benefits-img-wrap"><img src="[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_Group_Security.png" class="key-benefits-img"></div>
+            <h3 class="key-benefits-title">Widest Selection on the Web</h3>
+            <div class="key-benefits-text">Every time you enter a name in our domain serach box, our powerful engine searces the web's largest pool of names.  There's no better place to find the right domain name for your business.</div>
+          </div>
+          <div class="col-sm-4 key-benefit">
+            <div class="key-benefits-img-wrap"><img src="[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_Group_WhatIsHosting.png" class="key-benefits-img"></div>
+            <h3 class="key-benefits-title">Award-Winning 24/7 Support</h3>
+            <div class="key-benefits-text">Stumped by... anything?  Our smart, friendly domain experts are here to help.  Call them day or night at (480) 505-8877.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="features" data-mid-nav-title="Options" class="key-benefits-wrap tile-section bg-pro-gray">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4 key-benefit">
+            <div class="key-benefits-img-wrap"><img src="[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_Group_ScalableResources.png" class="key-benefits-img">
+            </div>
+            <h3 class="key-benefits-title">Scalable resources on-demand</h3>
+            <div class="key-benefits-text">When you need more power, level up your CPU, memory, entry processes and I/O with just a click. Access the Stats & Usage dashboard for real-time visibility to your sites’ resource usage. Even get alerts as you approach your limits so you can react quickly and keep your site running at top speed.</div>
+          </div>
+          <div class="col-sm-4 key-benefit">
+            <div class="key-benefits-img-wrap"><img src="[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_Group_Security.png" class="key-benefits-img"></div>
+            <h3 class="key-benefits-title">Award-winning security keeps your site safe</h3>
+            <div class="key-benefits-text">Keeping a website secure is a full time job. That’s why our security team is on the job 24/7, monitoring your site for suspicious activity and protecting it against brute force and DDoS attacks.</div>
+          </div>
+          <div class="col-sm-4 key-benefit">
+            <div class="key-benefits-img-wrap"><img src="[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_Group_WhatIsHosting.png" class="key-benefits-img"></div>
+            <h3 class="key-benefits-title">What is Hosting?</h3>
+            <div class="key-benefits-text">Make sure friends, family and customers can see your website. Hosting is what makes it possible for others to view your website over the Internet. Without it, you’re the only one who will ever get a look. GoDaddy serves up:
+              <ul>
+                <li>One-click set-up</li>
+                <li>Unlimited storage and bandwidth</li>
+                <li>Scalability to fit your needs</li>
+                <li>24/7 secure monitoring</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </section>
