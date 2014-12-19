@@ -71,11 +71,16 @@ html(lang!="[@T[localization:<language full='true' />]@T]")
       .gtld-links a { font-size: 14px; color: #333; margin-right: 30px; display: inline-block; }
       .gtld-links span { display: inline-block; }
       .gtld-links .hp-sprite { margin-right: 8px; }
-      input.search-form-input::-webkit-input-placeholder {color:#999;}
-      input.search-form-input:-moz-placeholder {color:#999;}
-      input.search-form-input::-moz-placeholder {color:#999;}
-      input.search-form-input:-ms-input-placeholder {color:#999;}
-      input.search-form-input.placeholder {color:#999;}
+      .gdhp-search-box input.search-form-input::-webkit-input-placeholder {color:#999;}
+      .gdhp-search-box input.search-form-input:-moz-placeholder {color:#999;}
+      .gdhp-search-box input.search-form-input::-moz-placeholder {color:#999;}
+      .gdhp-search-box input.search-form-input:-ms-input-placeholder {color:#999;}
+      .gdhp-search-box input.search-form-input.placeholder {color:#999;}
+      .gdhp-search-box2 input.search-form-input::-webkit-input-placeholder {color:#7DB701;}
+      .gdhp-search-box2 input.search-form-input:-moz-placeholder {color:#7DB701;}
+      .gdhp-search-box2 input.search-form-input::-moz-placeholder {color:#7DB701;}
+      .gdhp-search-box2 input.search-form-input:-ms-input-placeholder {color:#7DB701;}
+      .gdhp-search-box2 input.search-form-input.placeholder {color:#7DB701;}
     | 
     | [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags" />]@P]
 
@@ -171,7 +176,7 @@ html(lang!="[@T[localization:<language full='true' />]@T]")
         .bottom-banner-search
           form.search-form.search-form-certified(method="post" data-url!="[@T[link:<relative path='~/api/dpp/search/single'/>]@T]" action!="[@T[link:<relative path='/domains/searchresults-new.aspx'/>]@T]")
             .gdhp-search-box2
-              input#searchDomainName2.search-form-input.searchInput.helveticafont(type="text" name="domainToCheck" autocomplete="off" maxlength="63" title!="[@L[cds.sales/homepage:sb-search-title]@L]")
+              input#searchDomainName2.search-form-input.searchInput.helveticafont(type="text" name="domainToCheck" autocomplete="off" maxlength="63" title!="[@L[cds.sales/homepage:sb-search-title]@L]" placeholder="[@L[cds.sales/homepage/segments/default:domain-banner-search-placeholder-text]@L]")
               button.btn.btn-primary.btn-lg.hp-search(type="submit" name="searchButton" data-ci="87137") [@L[cds.sales/homepage/segments/default:domain-banner-search-btn]@L]
             .clearfix
 
