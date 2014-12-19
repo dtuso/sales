@@ -1,0 +1,27 @@
+extend ../../../layouts/homepage/downArrowTile
+
+append vars
+  - headerText = "[@L[cds.sales/homepage/tile/com299:com299-tile-headline]@L] </br> [@L[cds.sales/homepage/tile/com299:com299-tile-maintext]@L]";
+  - buttonLink = "[@T[link:<relative path='/tlds/com.aspx'><param name='ci' value='92432' /></relative>]@T]";
+  - buttonText = "[@L[cds.sales/homepage/tile/com299:com299-tile-btn]@L]";
+  - disclaimerText = "[@L[cds.sales/homepage/tile/com299:com299-tile-restrictions]@L]";
+  - dataCi = "92432";
+  - containerClass = "com299";
+
+append downArrowTileStyles
+  style.
+    html[lang|="en"] .com299.tile .header-text{font-size:60px}
+    .com299.tile .price-text{font-size:26px}
+    .com299.tile .price{color: #f38230;font-size:35px}
+    html[lang|="en"] .com299.tile .price{font-size:40px}
+    .com299.tile .tld{display:inline-block; background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/com-logo.png)0 10px no-repeat;width: 122px;height: 50px;vertical-align: middle; margin-left:10px}
+    .com299.tile .btn{width:auto; max-width:252px}
+    .com299.tile .body-wrapper {display:table;}
+    .com299.tile .body-text {display: table-cell; vertical-align:middle}
+block body
+  h3.body-text
+    .price-text [@L[cds.sales/homepage/tile/com299:com299-tile-subtext]@L]
+    .price [@L[cds.sales/homepage/tile/com299:com299-tile-pricing-text]@L]
+
+append cta
+  .tld

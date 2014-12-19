@@ -1,0 +1,43 @@
+
+<atlantis:webstash type="css">
+  <style>
+    .tile { width: 480px; height: 480px; position: relative; float: left;margin: 40px 10px 0;cursor: pointer; background-color: #333; }
+    .tile .header-wrapper { background-color: #77c043; padding: 30px 30px 0 30px; }
+    .tile .body-wrapper { padding: 15px 30px 0 30px; }
+    .tile .cta-wrapper { padding: 0 30px 30px 30px; }
+    .tile .disclaimer-wrapper { position: absolute; bottom: 0; }
+    .tile .header-text { font-size: 48px; color: #333; font-family: 'Walsheim-Black', 'Arial Black', sans-serif; margin-top: 0;margin-bottom: 0; line-height: 1;}
+    .tile .arrow-separator { border-left: 160px solid transparent; border-right: 320px solid transparent; border-top: 80px solid #77c043;}
+    .tile .body-text { color: #fff; font-family: 'Walsheim-Black', 'Arial Black', sans-serif; }
+    .tile .cta-wrapper { position: absolute; bottom: 0; }
+    .tile .btn-cta { font-size: 24px; text-transform: uppercase; margin: 0 0 0 0; }
+    .tile .disclaimer { color: #fff; padding-top: 15px; }
+    
+  </style>
+  <style>
+    html[lang|="en"] .com299.tile .header-text{font-size:60px}
+    .com299.tile .price-text{font-size:26px}
+    .com299.tile .price{color: #f38230;font-size:35px}
+    html[lang|="en"] .com299.tile .price{font-size:40px}
+    .com299.tile .tld{display:inline-block; background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/com-logo.png)0 10px no-repeat;width: 122px;height: 50px;vertical-align: middle; margin-left:10px}
+    .com299.tile .btn{width:auto; max-width:252px}
+    .com299.tile .body-wrapper {display:table;}
+    .com299.tile .body-text {display: table-cell; vertical-align:middle}
+  </style>
+</atlantis:webstash>
+<div data-url="[@T[link:<relative path='/tlds/com.aspx'><param name='ci' value='92432' /></relative>]@T]" data-ci="92432" class="tile down-arrow-tile js-gdhpclick com299">
+  <div class="header-wrapper">
+    <h2 class="header-text">[@L[cds.sales/homepage/tile/com299:com299-tile-headline]@L] </br> [@L[cds.sales/homepage/tile/com299:com299-tile-maintext]@L]</h2>
+  </div>
+  <div class="arrow-separator"></div>
+  <div class="body-wrapper">
+    <h3 class="body-text">
+      <div class="price-text">[@L[cds.sales/homepage/tile/com299:com299-tile-subtext]@L]</div>
+      <div class="price">[@L[cds.sales/homepage/tile/com299:com299-tile-pricing-text]@L]</div>
+    </h3>
+  </div>
+  <div class="cta-wrapper"><a href="[@T[link:<relative path='/tlds/com.aspx'><param name='ci' value='92432' /></relative>]@T]" class="btn btn-warning btn-cta">[@L[cds.sales/homepage/tile/com299:com299-tile-btn]@L]</a>
+    <div class="tld"></div>
+    <div class="disclaimer"><small>[@L[cds.sales/homepage/tile/com299:com299-tile-restrictions]@L]</small></div>
+  </div>
+</div>
