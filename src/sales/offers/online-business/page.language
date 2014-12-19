@@ -1,7 +1,7 @@
 ---
 location: localization/sales/offers/online-business/en
-id: 545a99def778fc0fb8419af3
-name: GCE-31516
+id:  54921e40f778fc1c388554ae
+name: GCE-33909
 comments: Update GOT Legal Disclaimer (MSFT request)
 ---
 {% include 'modules/doc-block.html' %}
@@ -55,6 +55,10 @@ Click here for product disclaimers and legal policies.
 *Price valid for first year only. 
 <phrase key="see-offer-details" />
 See offer details.
+<phrase key="33909-renewal-price-disclaimer" />
+*Annual purchase required. Price valid 1st year only.
+<phrase key="33909-see-offer-details" />
+See details.
 <phrase key="included-product-domain-title" />
 Your Domain
 <phrase key="included-product-domain-headline" />
@@ -125,3 +129,5 @@ One promotional credit per customer for a new Microsoft&reg; Advertiser account.
 View Details
 <phrase key="31516-disclaimer-modal-content" comment="{0} will get replaces with a currency amount."/>
 Special offer pricing valid for first year only. Offer includes one .COM, .CO, <span class="tlds-uk">.CO.UK, .UK,</span> .NET, <span class="tlds-in">.IN,</span> <span class="tlds-br">.COM.BR,</span> or .ORG domain, plus Website Builder Personal Plan and Email Starter Package. The "Get Online Today" offer only provides 1 mailbox at the introductory rate. Additional mailboxes for email can purchased at regular prevailing price per mailbox. Plus ICANN fee of [@T[currencyprice:<price usdamount="0018" /> ]@T]/year. Cannot be used in conjunction with any other offer, sale, discount or promotion. After initial one year purchase term, products purchased through this offer will automatically renew individually at the then-current rate. Bundle renewal price with .com after first year is <span class="original-price">{0}</span>/mo. You may cancel automatic renewal at any time in your GoDaddy account. Geographic restrictions apply.
+<phrase key="33909-disclaimer-modal-content" comment="{0} will get replaces with a currency amount."/>
+Annual purchase required. Pricing valid for first year only. Offer includes one .COM, .CO, <span class="tlds-uk">.CO.UK, .UK,</span> .NET, <span class="tlds-in">.IN,</span> <span class="tlds-br">.COM.BR,</span> or .ORG domain, plus Website Builder Personal Plan and Email Starter Package. The "Get Online Today" offer only provides 1 mailbox at the introductory rate. Additional mailboxes for email can purchased at regular prevailing price per mailbox. Plus ICANN fee of [@T[currencyprice:<price usdamount="0018" /> ]@T]/year. Cannot be used in conjunction with any other offer, sale, discount or promotion. After initial one year purchase term, products purchased through this offer will automatically renew individually at the then-current rate. Bundle renewal price with .com after first year is <span class="original-price">{0}</span>/mo. You may cancel automatic renewal at any time in your GoDaddy account. Geographic restrictions apply.
