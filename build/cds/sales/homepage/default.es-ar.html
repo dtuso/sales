@@ -55,6 +55,11 @@
       input.search-form-input::-moz-placeholder {color:#999;}
       input.search-form-input:-ms-input-placeholder {color:#999;}
       input.search-form-input.placeholder {color:#999;}
+      .gdhp-search-box2 input.search-form-input::-webkit-input-placeholder {color:#7DB701;}
+      .gdhp-search-box2 input.search-form-input:-moz-placeholder {color:#7DB701;}
+      .gdhp-search-box2 input.search-form-input::-moz-placeholder {color:#7DB701;}
+      .gdhp-search-box2 input.search-form-input:-ms-input-placeholder {color:#7DB701;}
+      .gdhp-search-box2 input.search-form-input.placeholder {color:#7DB701;}
     </style> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags" />]@P]
     <link href="[@T[link:<cssroot />]@T]fos/hp/rebrand/css/homepage20141208.css" rel="stylesheet" type="text/css">
@@ -131,7 +136,7 @@
       <div class="bottom-banner-search">
         <form method="post" data-url="[@T[link:<relative path='~/api/dpp/search/single'/>]@T]" action="[@T[link:<relative path='/domains/searchresults-new.aspx'/>]@T]" class="search-form search-form-certified">
           <div class="gdhp-search-box2">
-            <input id="searchDomainName2" type="text" name="domainToCheck" autocomplete="off" maxlength="63" title="[@L[cds.sales/homepage:sb-search-title]@L]" class="search-form-input searchInput helveticafont">
+            <input id="searchDomainName2" type="text" name="domainToCheck" autocomplete="off" maxlength="63" title="[@L[cds.sales/homepage:sb-search-title]@L]" placeholder="[@L[cds.sales/homepage/segments/default:domain-banner-search-placeholder-text]@L]" class="search-form-input searchInput helveticafont">
             <button type="submit" name="searchButton" data-ci="87137" class="btn btn-primary btn-lg hp-search">[@L[cds.sales/homepage/segments/default:domain-banner-search-btn]@L]</button>
           </div>
           <div class="clearfix"></div>
