@@ -1,0 +1,34 @@
+---
+location: sales/homepage/marquee/got-godaddy-bowl/default_template
+id: false
+name: GCE-34083-GDBowl
+ctaLink: "[@T[link:<relative path='/hosting/website-builder.aspx'><param name='ci' value='94090' /></relative>]@T]"
+elementId: got-godaddy-bowl
+---
+extends ../../../layouts/homepage/marqueeLeftHeadline
+
+append marqueeStyles
+  style.
+    .marquee {background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/bg-GD-bowl-marquee.jpg) no-repeat top center;}
+
+block marqueeLeftHeadlineStyles
+  style.
+    #got-godaddy-bowl .left-column { padding-top: 20px; }
+
+block leftColumn
+    .text
+      .headline [@L[cds.sales/homepage/marquee/got-godaddy-bowl:headline]@L]
+      .middle-wrapper
+        .product-text.tungsten [@L[cds.sales/homepage/marquee/got-godaddy-bowl:domain]@L]
+      .middle-wrapper
+        .product-text.tungsten [@L[cds.sales/homepage/marquee/got-godaddy-bowl:wsb]@L]
+      .middle-wrapper
+        .o365.image
+        .product-text.tungsten [@L[cds.sales/homepage/marquee/got-godaddy-bowl:email]@L]
+        .product-subtext [@L[cds.sales/homepage/marquee/got-godaddy-bowl:o365]@L]
+      .btn-wrapper
+        .price-text.bigtext
+        .btn-wrap
+          .btn.btn-warning#gdhp-marq-gybo-btn(data-ci="93372") [@L[cds.sales/homepage/marquee/got-godaddy-bowl:cta-text]@L]
+        .price [@T[productprice:<current productid="464069" period="monthly" promocode="24681357"></current>]@T] 
+        .cond-text.tungsten [@L[cds.sales/homepage/marquee/got-godaddy-bowl:per-month]@L]
