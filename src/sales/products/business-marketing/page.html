@@ -1015,8 +1015,6 @@ assetPath: false
     locuPage.redirectUrl ='[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]';
   ##endif
 
-  {% jsminify %}
-
   $(document).ready(function(){
 
     // WIRE UP CI CODE TRACKING
@@ -1115,7 +1113,9 @@ assetPath: false
     var plan     = 'locu_Essential1Yr';
     var url      = '[@T[link:<relative path="/api/package/{0}/{1}/{2}/{3}/{4}"/>]@T]'.replace('{0}',action).replace('{1}',itc).replace('{2}',ciCode).replace('{3}',quantity).replace('{4}',plan);
     
+    ##if(!appSettingEnabled(UXCORE_ENABLED))
     var newCartCt = pcCartCt + 1;
+    ##endif
 
     $.getJSON(url, function (data) {
       // 1. check for failures
@@ -1136,7 +1136,6 @@ assetPath: false
       window.location = locuPage.redirectUrl;
     });          
   }
-  {% endjsminify %}
 </script>
 <!-- end-js-elevate -->
 {% endblock %}
