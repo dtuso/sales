@@ -1,8 +1,8 @@
 ---
 location: sales/hosting/private-label/wordpress.aspx
-id: 5463b7ddf778fc0a70ee7864
-name: Updated api call
-comments: added cod to call gui syncshopper so custom PL's will add to cart properly
+id: 54947694f778fc0d344d634a
+name: GCE-34210
+comments: Managed WordPress PL Ours vs Theirs Tab Change
 assetPath: false
 localVars: true
 ---
@@ -193,8 +193,10 @@ $(".js-add-to-cart").bind("click",function(event){
 
   $.getJSON(url, function (data) {
     if (eval(data.Success)) {  
+      ##if(!appSettingEnabled(UXCORE_ENABLED))
       var newCartCt = pcCartCt + 1;
       pcUpdateCart(newCartCt);
+      ##endif
       ##if(isManager())
       var linkLocation = '[@T[link:<external linktype="GUIURL" path="/syncshopper/mgrcart/{0}" />]@T]'
       ##else

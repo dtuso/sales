@@ -1,8 +1,8 @@
 ---
 location: sales/offers/stick-it-to-high-prices.aspx
-id: 541881e2f778fc205c2b5c6e
-name: GCE-27851
-comments: Final pre-release improvements
+id: 54939f16f778fc1aac854064
+name: GCE-33979
+comments: Wrapped pcUpdateCart/pcCartCnt in AppSetting Conditional
 url: http://www.dev-godaddy.com/offers/stick-it-to-high-prices.aspx
 assetPath: false
 ---
@@ -335,13 +335,11 @@ input[type="text"] {border:1px solid #ccc;border-top:3px solid #939597;}
 
         $.getJSON(url, function (data) {
             if (data.Success == true) {
+                ##if(!appSettingEnabled(UXCORE_ENABLED))
                 var newCartCt = pcCartCt + 1;
                 pcUpdateCart(newCartCt);
-                //##if(isManager())
-                //    window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx"/>]@T]';
-                //##else
-                //    window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx"/>]@T]';
-                //##endif
+                ##endif
+                
                 window.location = '[@T[link:<relative path='/hosting/wordpress-hosting-config.aspx'><param name='ci' value='93270' /><param name='isc' value='hl8' /></relative>]@T]';
             }
         });
