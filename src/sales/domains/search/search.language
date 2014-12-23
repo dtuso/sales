@@ -15,10 +15,10 @@
       Adam Smith <absmith@godaddy.com>
 
     DRAFT DETAILS:
-      Modified Date:  2014-12-10
+      Modified Date:  2014-12-16
       Created By:     Mike Cowan <mcowan@godaddy.com>
-      JIRA Ticket:    GCE-33067
-      Comments:       Merchandising Updates 12/10/2014
+      JIRA Ticket:    GCE-33861
+      Comments:       Merchandising Updates 12/23/2014
       
 
 
@@ -472,6 +472,8 @@ Speak to <strong>.city</strong> dwellers on the web.
 Make <strong>.casa</strong> your home online.
 <phrase key="PodDotPizzaText" />
 Get your <strong>.pizza</strong> while it’s hot!
+<phrase key="PodDotBerlinText" />
+Cater to millions with <strong>.berlin</strong>
 <phrase key="TldDotGuide" />
 <strong>.guide</strong>
 <phrase key="TldDotBoutique" />
@@ -620,6 +622,8 @@ Get your <strong>.pizza</strong> while it’s hot!
 <strong>.pizza</strong>
 <phrase key="TldDotSite" />
 <strong>.site</strong>
+<phrase key="TldDotOnline" />
+<strong>.online</strong>
 <phrase key="CarouselSlide1Default" />
 Get a web address that tells the world what you do. New domains available now: <strong>.attorney</strong>, <strong>.church</strong>, <strong>.club</strong>, <strong>.xyz</strong> and <strong>.guide</strong>. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a> 
 <phrase key="CarouselSlide1AU" />
@@ -639,7 +643,7 @@ The buying stage was good, setup was easy and post-launch was smooth. I've calle
 <phrase key="CarouselSlide1CA" />
 Get a web address that tells the world what you do or where you are. New domains available now: <strong>.club</strong>, <strong>.today</strong>, <strong>.email</strong>, <strong>.guide</strong> and <strong>.quebec</strong>. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a> 
 <phrase key="CarouselSlide2Default" />
-SAVE 30% on new domains: <strong>.global</strong>, <strong>.email</strong>, <strong>.website</strong>, <strong>.guru</strong>, <strong>.army</strong> and more.<span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88004" /></relative>]@T]">Search for your perfect domain name now!</a>
+SAVE 30% on new domains: <strong>.global</strong>, <strong>.email</strong>, <strong>.club</strong>, <strong>.guru</strong>, <strong>.company</strong> and more.<span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88004" /></relative>]@T]">Search for your perfect domain name now!</a>
 <phrase key="CarouselSlide2UK" />
 "Set your business on its path to glory with your own <strong>.company</strong>, <strong>.email</strong>, <strong>.guide</strong> or <strong>.london</strong>."<span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88004" /></relative>]@T]">Find yours now!</a>
 <phrase key="CarouselSlide2DE" />
