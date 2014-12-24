@@ -45,8 +45,11 @@
       .hp-sprite.co-in { background-position:-502px -570px; width: 38px; height: 22px; }
       .hp-sprite.com { background-position:-647px -578px; width: 54px; height: 13px; }
       .hp-sprite.biz { background-position:-734px -570px;width: 35px;height: 24px;}
+      .hp-sprite.ca { background-position:-655px -260px;width: 30px;height: 16px;}
+      .hp-sprite.quebec { background-position:-695px -260px;width: 48px;height: 16px;}
       .gtld-links a { font-size: 14px; color: #333; margin-right: 30px; display: inline-block; }
       .gtld-links span { display: inline-block; }
+      .gtld-links a:hover>.price{text-decoration:underline}
       .gtld-links .hp-sprite { margin-right: 8px; }
       
       
@@ -100,11 +103,8 @@
     <div class="gdhp-tile-wrap">
       <div class="gdhp-tile-area"> 
         [@P[cdsDocument:<data app="sales" location="homepage/tile/hosting-old-brand/default_template" /> ]@P]
-         ##if(targetMessageTagAny(sales_hp_default,hp_existing_customer))
-          [@P[cdsDocument:<data app="sales" location="homepage/tile/why-wsb/default_template" /> ]@P]
-         ##else
-          [@P[cdsDocument:<data app="sales" location="homepage/tile/30-percent-gtld/default_template" /> ]@P]
-         ##endif
+         
+          [@P[cdsDocument:<data app="sales" location="homepage/tile/berlin/default_template" /> ]@P]
       </div>
     </div>
     <div id="myVideoModal" data-url="video-close" class="modal fade videoModal js-gdhpclick">

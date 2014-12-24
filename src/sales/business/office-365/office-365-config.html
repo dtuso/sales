@@ -1,10 +1,12 @@
 ---
 url: http://www.dev-godaddy.com/business/office-365-config.aspx
 location: sales/business/office-365-config.aspx
-id: 546d1cbcf778fc1fd8ea18f4
-name: GCE-32012, 32531, 32197
-comments: Cart link issue, support phone issue, microsoft url issue.
+id: 5490d3dbf778fc1cd843c736
+name: GCE-32259
+comments: 2 SKU Split Test 1414
 ---
+{%- set split1414testside = 'splitTestingSideIsActive(1414, B)' -%}
+{% set split1414testside = 'queryValueHas(split,1)' -%}
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="[@T[localization:<language full="true" />]@T]"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="[@T[localization:<language full="true" />]@T]"> <![endif]-->
@@ -94,6 +96,9 @@ comments: Cart link issue, support phone issue, microsoft url issue.
               <h2><span class="office-365-logo"></span>
             <br/>[@L[cds.sales/business/office-365-config:cp-3-AddYourUsers]@L]</h2>
               <p class="config-lead orange-text">[@L[cds.sales/business/office-365-config:cp-14-KeepYourBusinessRunningSmoothlyAddPlansFor]@L]</p>
+              ##if({{split1414testside}})
+              <div style="display:none;">
+              ##endif
               <div class="config-product-wrapper" data-planLevel="Economy" data-product="Original" style="display: none;">
                 <div class="config-product-wide">
                   <h3 class="product-name">[@L[cds.sales/business/office-365-config:cp-6-EmailEssentialsPoweredByOffice365]@L]</h3>
@@ -109,7 +114,10 @@ comments: Cart link issue, support phone issue, microsoft url issue.
 
                 </div>
               </div>
-             <!-- /End Product -->
+              ##if({{split1414testside}})
+              </div>
+              ##endif
+              <!-- /End Product -->
               <div class="config-product-wrapper" data-planLevel="Business" data-product="Original" style="display: none;">
                 <div class="config-product-wide">
                   <h3 class="product-name">[@L[cds.sales/business/office-365-config:cp-6-BusinessPremiumPoweredByOffice365]@L]</h3>
@@ -147,6 +155,9 @@ comments: Cart link issue, support phone issue, microsoft url issue.
                 </div>
               </div>                            
               <!-- /End Product -->
+              ##if({{split1414testside}})
+              <div style="display:none;">
+              ##endif
               <div class="config-product-wrapper" data-planLevel="Email_A" data-product="Email" style="display: none;">
                 <div class="config-product-wide">
                   <h3 class="product-name">[@L[cds.sales/business/office-365-config:email-essentials-pwd]@L]</h3>
@@ -162,6 +173,9 @@ comments: Cart link issue, support phone issue, microsoft url issue.
 
                 </div>
               </div>
+              ##if({{split1414testside}})
+              </div>
+              ##endif
               <!-- /End Product -->
               <div class="config-product-wrapper" data-planLevel="Email_B" data-product="Email"  style="display: none;">
                 <div class="config-product-wide">
@@ -200,6 +214,9 @@ comments: Cart link issue, support phone issue, microsoft url issue.
                 </div>
               </div>                            
               <!-- /End Product -->
+              ##if({{split1414testside}})
+              <div style="display:none;">
+              ##endif
               <div class="config-product-wrapper" data-planLevel="Office_A" data-product="Office" style="display: none;">
                 <div class="config-product-wide">
                   <h3 class="product-name">[@L[cds.sales/business/office-365-config:online-essentials-pwd]@L]</h3>
@@ -217,6 +234,9 @@ comments: Cart link issue, support phone issue, microsoft url issue.
 
                 </div>
               </div>
+              ##if({{split1414testside}})
+              </div>
+              ##endif
               <!-- /End Product -->
               <div class="config-product-wrapper" data-planLevel="Office_B" data-product="Office" style="display: none;">
                 <div class="config-product-wide">
@@ -493,7 +513,6 @@ comments: Cart link issue, support phone issue, microsoft url issue.
       </div>
         
         
-      </div>
       </div>
       
     </section>

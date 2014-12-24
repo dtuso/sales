@@ -45,8 +45,11 @@
       .hp-sprite.co-in { background-position:-502px -570px; width: 38px; height: 22px; }
       .hp-sprite.com { background-position:-647px -578px; width: 54px; height: 13px; }
       .hp-sprite.biz { background-position:-734px -570px;width: 35px;height: 24px;}
+      .hp-sprite.ca { background-position:-655px -260px;width: 30px;height: 16px;}
+      .hp-sprite.quebec { background-position:-695px -260px;width: 48px;height: 16px;}
       .gtld-links a { font-size: 14px; color: #333; margin-right: 30px; display: inline-block; }
       .gtld-links span { display: inline-block; }
+      .gtld-links a:hover>.price{text-decoration:underline}
       .gtld-links .hp-sprite { margin-right: 8px; }
       
       
@@ -109,7 +112,7 @@
     ##endif
     <!-- Bugbar (and social links) Sections-->
     <div class="top-banner-lower-content">
-      <div class="top-lower-content"><span class="gtld-links"><a href="[@T[link:<relative path='/tlds/co-domain.aspx'><param name='ci' value='93296' /><param name='tld' value='co' /></relative>]@T]" class="tld-link co"><span class="hp-sprite co"></span><span class="price">[@T[productprice:<current productid='56401' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' promocode='444888'/>]@T]</span></a><a href="[@T[link:<relative path='/tlds/org.aspx'><param name='ci' value='93297' /><param name='tld' value='org' /></relative>]@T]" class="tld-link org"><span class="hp-sprite org"></span><span class="price">[@T[productprice:<current productid='12101' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' promocode='444888'/>]@T]</span><span class="icann-disclaimer">*</span></a><a href="[@T[link:<relative path='/tlds/net.aspx'><param name='ci' value='93298' /><param name='tld' value='net' /></relative>]@T]" class="tld-link net"><span class="hp-sprite net"></span><span class="price">[@T[productprice:<current productid='12001' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' promocode='444888'/>]@T]</span><span class="icann-disclaimer">*</span></a><a href="[@T[link:<relative path='/tlds/biz.aspx'><param name='ci' value='94195' /><param name='tld' value='biz' /></relative>]@T]" class="tld-link biz"><span class="hp-sprite biz"></span><span class="price">[@T[productprice:<current productid='11301' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' promocode='444888'/>]@T]</span><span class="icann-disclaimer">*</span></a></span>
+      <div class="top-lower-content"><span class="gtld-links"><a href="[@T[link:<relative path='/tlds/co-domain.aspx'><param name='ci' value='93296' /><param name='tld' value='co' /></relative>]@T]" class="tld-link co"><span class="hp-sprite co"></span><span class="price">[@T[productprice:<current productid='56401' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' promocode='444888'/>]@T]</span></a><a href="[@T[link:<relative path='/tlds/club'><param name='ci' value='89153' /><param name='tld' value='club' /></relative>]@T]" class="tld-link club"><span class="hp-sprite club"></span><span class="price">[@T[productprice:<current productid='172137' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' promocode='444888'/>]@T]</span><span class="icann-disclaimer">*</span></a><a href="[@T[link:<relative path='/tlds/net.aspx'><param name='ci' value='93298' /><param name='tld' value='net' /></relative>]@T]" class="tld-link net"><span class="hp-sprite net"></span><span class="price">[@T[productprice:<current productid='12001' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' promocode='444888'/>]@T]</span><span class="icann-disclaimer">*</span></a><a href="[@T[link:<relative path='/tlds/biz.aspx'><param name='ci' value='94195' /><param name='tld' value='biz' /></relative>]@T]" class="tld-link biz"><span class="hp-sprite biz"></span><span class="price">[@T[productprice:<current productid='11301' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' promocode='444888'/>]@T]</span><span class="icann-disclaimer">*</span></a></span>
         <div class="gdhp-share">
           <div data-twshareurl="[@T[link:<relative path=''></relative>]@T]" data-twtext="[@L[cds.sales/homepage:twitter-text-gdbl]@L]" data-twrelated="GoDaddy" data-shareurl="[@T[link:<relative path='/'/>]@T]" data-buttons="google,facebook,twitter" class="fosshare"></div>
         </div>
@@ -424,6 +427,7 @@
           }
         });
       }
+      $(document).ready(function(){var url=window.location.hostname.substring(window.location.hostname.indexOf('.')+1);$.cookie("fb_tmsclick",null,{domain:url,path:"/"});$("div[data-tms-trackingid]").on("click",function(e){try{$.cookie("fb_tmsclick",$(this).data("tms-trackingid"),{domain:url,path:"/"})}catch(t){}return true})})
     </script>
   </body>
 </html>
