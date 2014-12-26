@@ -1,0 +1,42 @@
+- var productTilesTotalColumns;
+- var productTilesColumnsPopulated;
+
+mixin renderProductTile
+  case productTilesTotalColumns
+    when 1
+      div.col-sm-offset-4.col-sm-4.plan-tile.plan-pro
+        block
+    when 2
+      if (productTilesColumnsPopulated === 0)      
+        div.col-sm-offset-2.col-sm-4.plan-tile.plan-pro
+          block
+      else
+        div.col-sm-4.plan-tile.plan-pro
+          block
+    when 3
+        div.col-sm-4.plan-tile.plan-pro
+          block
+    when 4
+        div.col-md-3.col-sm-6.plan-tile.plan-pro
+          block
+    when 5
+        div.plan-col-15.plan-tile.plan-pro
+          block
+    when 6
+        div.plan-col-2.plan-tile.plan-pro
+          block
+
+mixin renderProductTiles(columns, options)
+  - productTilesTotalColumns = columns;
+  - productTilesColumnsPopulated = 0;
+  - options = options || {};
+  - options.backgroundColor = options.backgroundColor || "bg-gray-light";
+
+  if (columns > 4)
+    - containerClass = "plan-container"
+  else
+    - containerClass = "container"
+
+  div(class="pro-plans-wrap #{options.backgroundColor}")
+    #plans(class="#{containerClass} pro-plans", data-icode="#{options.icode}")
+      block

@@ -1,0 +1,39 @@
+- icon = icon || "";
+- title = title || "";
+- titleText = titleText || "";
+- subTitle = subTitle || "";
+- listItems = listItems || [];
+
+block vars
+
+atlantis:webstash(type="css")
+  block styles
+    style.
+      h2.title { }
+      div.title-text { }
+      h5.sub-title { }
+
+div.product-tile-wrapper
+  block icon
+    if (icon)
+        img(url=!{icon})
+  block title
+    if (title)
+      h2.title
+        !{title}
+
+  block title-text
+    if (titleText)
+      div.title-text
+        !{titleText}
+
+  block subTitle
+    if (subTitle)
+      h5.sub-title
+        !{subTitle}
+
+  block checkboxes
+    div.product-list-items
+      each listItem, index in listItems
+        div.product-list-item
+            !{listItem}
