@@ -1,8 +1,8 @@
 ---
 location: sales/pro/managed-vps-config
-id: 546b828ff778fc10909ad8c0
-name: GCE-32309 
-comment: VPS Copy Update
+id: 549d9682f778fc1018b13fe2
+name: GCE-33947
+comment: Fix addon discount calculation
 configPage: true
 sitecore: true 
 cssVersionOverride: 2
@@ -449,11 +449,9 @@ cssVersionOverride: 2
       }
 
       function getAddOnDiscount(discountPercent,totalAddonPrice){
-         var totalDiscountedAddon = currencyCalc.evaluate([discountPercent,"*",totalAddonPrice]); 
-         totalDiscountedAddon = currencyCalc.stripFormat(currencyCalc.evaluate([totalDiscountedAddon,"/",100])); 
-         totalAddonPrice =currencyCalc.evaluate([totalAddonPrice,"-",totalDiscountedAddon]); 
-
-         return totalAddonPrice;
+        var discountAmount = parseInt(currencyCalc.stripFormat(totalAddonPrice)*(1-(discountPercent/100)));
+        discountAmount = currencyCalc.evaluate([discountAmount]);
+        return discountAmount;
       }
      
     </script>
