@@ -1,6 +1,6 @@
 ---
 location: sales/pro/managed-vps-config
-id: 549d9682f778fc1018b13fe2
+id: 549dc685f778fc1018b13fe8
 name: GCE-33947
 comment: Fix addon discount calculation
 configPage: true
@@ -449,7 +449,7 @@ cssVersionOverride: 2
       }
 
       function getAddOnDiscount(discountPercent,totalAddonPrice){
-        var discountAmount = parseInt(currencyCalc.stripFormat(totalAddonPrice)*(1-(discountPercent/100)));
+        var discountAmount = Math.ceil(currencyCalc.stripFormat(totalAddonPrice)*(1-(discountPercent/100)));
         discountAmount = currencyCalc.evaluate([discountAmount]);
         return discountAmount;
       }

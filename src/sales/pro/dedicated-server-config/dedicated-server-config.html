@@ -1,6 +1,6 @@
 ---
 location: sales/pro/dedicated-server-config
-id:  549d9706f778fc1018b13fe3
+id:  549dc650f778fc1018b13fe7
 name: GCE-33947
 comments: Fix add on discount calculation
 configPage: true
@@ -438,7 +438,7 @@ cssVersionOverride: 1
         return parseInt(Math.floor(division * 100));
       }
        function getAddOnDiscount(discountPercent,totalAddonPrice){
-        var discountAmount = parseInt(currencyCalc.stripFormat(totalAddonPrice)*(1-(discountPercent/100)));
+        var discountAmount = Math.ceil(currencyCalc.stripFormat(totalAddonPrice)*(1-(discountPercent/100)));
         discountAmount = currencyCalc.evaluate([discountAmount]);
         return discountAmount;
       }
