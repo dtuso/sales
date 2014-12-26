@@ -1,63 +1,17 @@
+include compare-features-view-all-mixin.jade
 
-mixin compareFeaturesTable(columns, content, options)
-  - numberOfColumns = columns
-  - numberOfRows = content.length / numberOfColumns
-  - currentRow = 0
-  - currentColumn = 0
+mixin compareFeaturesTable(options)
   - options = options || {};
-  - options.numberOfRowsNotHidden = options[0] || 999;
-  - options.showViewAllButton = options[1] || false;
+  - options.numberOfRowsNotHidden = options.numberOfRowsNotHidden || 999;
+  - options.showViewAllButton = options.showViewAllButton || false;
+  - options.tableID = options.tableID || ""
 
-  table
-    thead
-      tr
-        case numberOfColumns
-          when 4
-            th.compare-chart-title
-              div
-                h2 !{content[0]}
-            th.compare-chart-header(style="border-bottom: 8px solid #f47f00; vertical-align: bottom; width: 15pc;")
-              div
-                h4 !{content[1]}
-            th.compare-chart-header(style="border-bottom: 8px solid #7abf4b; vertical-align: bottom; width: 15pc;")
-              div
-                h4 !{content[2]}
-            th.compare-chart-header(style="border-bottom: 8px solid #58585a; vertical-align: bottom; width: 15pc;")
-              div
-                h4 !{content[3]}
-          default
-            - for(currentColumn=0; currentColumn<numberOfColumns; currentColumn++)
-              if currentColumn == 0
-                th.compare-chart-title
-                  div
-                    h2 !{content[currentRow*numberOfColumns + currentColumn]}
-              else
-                th.compare-chart-header(style="vertical-align: bottom;")
-                  div
-                    h4 !{content[currentRow*numberOfColumns + currentColumn]}
-    tbody
-      - for(currentRow=1; currentRow<numberOfRows; currentRow++)
-          tr.compare-chart-row
-            - for(currentColumn=0; currentColumn<numberOfColumns; currentColumn++)
-              if currentColumn == 0
-                if currentRow <= options.numberOfRowsNotHidden
-                  td.compare-chart-header !{content[currentRow*numberOfColumns + currentColumn]}
-                else
-                  td.compare-chart-header(style="display:none") !{content[currentRow*numberOfColumns + currentColumn]}
-              else 
-                if currentRow <= options.numberOfRowsNotHidden
-                  td.compare-chart-entry !{content[currentRow*numberOfColumns + currentColumn]}
-                else
-                  td.compare-chart-entry(style="display:none") !{content[currentRow*numberOfColumns + currentColumn]}
-  if options.showViewAllButton
-    .compare-chart-view-all(style="margin-bottom:-80px;")
-      div
-        strong View All
-      .pro-icon.arrow-down-icon
+  table.compare-table(id = options.tableID)
+    block
     script(type="text/javascript").
-      $(".compare-chart-view-all").click(function() {
-        var chart = $(this).closest(".compare-chart-pro");
-        $(chart).find(".compare-chart-header").show();
-        $(chart).find(".compare-chart-entry").show();
-       $(this).hide();
+      $(window).load(function() {
+        var chart = $(this).closest(".compare-table");
+        $("##{options.tableID} tr:gt(#{options.numberOfRowsNotHidden})").hide();
        });
+  if options.showViewAllButton
+    +compareViewAllButton(options.tableID)
