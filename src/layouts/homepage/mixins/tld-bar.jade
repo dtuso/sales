@@ -26,6 +26,6 @@ mixin tldBugs(tlds)
         span.price!= "[@T[productprice:<current productid='" + tldData[tld].productId + "' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' promocode='444888'/>]@T]"
         if tldData[tld].showIcannDisclaimer
           span.icann-disclaimer *
-      - styles += ".hp-sprite."+ tldData[tld].cssClass +"{"+tldData[tld].styling+"}"
+      - styles += ".tld-bug"+"."+ tldData[tld].cssClass+"{"+tldData[tld].styling+"}"
     atlantis:webstash(type="css")
       style !{styles}
