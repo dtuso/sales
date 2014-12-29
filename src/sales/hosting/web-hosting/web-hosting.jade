@@ -26,18 +26,21 @@ block domainSearch
   //- remove domain search from top of hosting page
 
 block marquee
-  section#marquee
+  section#marquee 
     include ./marquee.jade
 
 block plans
   section#plans
-    +renderPlanTiles(3)
+    +renderPlanTiles(3) 
       +planTile
-        include ../../shared/plans/plan-hosting-economy.jade
+        include ./plans/plan-hosting-economy.jade
       +planTile
-        include ../../shared/plans/plan-hosting-deluxe.jade
+        include ./plans/plan-hosting-deluxe.jade
       +planTile
-        include ../../shared/plans/plan-hosting-ultimate.jade
+        include ./plans/plan-hosting-ultimate.jade
+        
+      +renderCartLogic("[@T[link:<relative path=\"/hosting-config-new.aspx\" parammode=\"common\" />]@T]", "slp_hosting_4GH" )
+
       .container
         .row
           .col-sm-12
