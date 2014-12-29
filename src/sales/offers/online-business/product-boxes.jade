@@ -1,12 +1,15 @@
-- productBoxOptions = {};
+- var productBoxOptions = {backgroundColor:'bg-gray-dark'};
 
 section#products
-  h2.product-box-title.
-    Here's what you get...
-  +renderProductTiles(3,productBoxOptions)
-    +renderProductTile
-      include ./product-box-domain.jade
-    +renderProductTile
-      include ./product-box-website.jade
-    +renderProductTile
-      include ./product-box-email.jade
+  .container
+    .row
+      h2.product-box-title.
+        Here's what you get...
+    .row
+      +renderPlanTiles(3,productBoxOptions)
+        +planTile
+          include ./product-box-domain.jade
+        +planTile
+          include ./product-box-website.jade
+        +planTile
+          include ./product-box-email.jade
