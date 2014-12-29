@@ -1,8 +1,8 @@
 ---
 location: sales/pro/dedicated-server-config
-id:  546b8c14f778fc10909ad8f8
-name: GCE-323039
-comments: Dedicated Config Copy Update
+id:  549dc650f778fc1018b13fe7
+name: GCE-33947
+comments: Fix add on discount calculation
 configPage: true
 sitecore: true 
 cssVersionOverride: 1
@@ -438,11 +438,9 @@ cssVersionOverride: 1
         return parseInt(Math.floor(division * 100));
       }
        function getAddOnDiscount(discountPercent,totalAddonPrice){
-         var totalDiscountedAddon = currencyCalc.evaluate([discountPercent,"*",totalAddonPrice]); 
-         totalDiscountedAddon = currencyCalc.stripFormat(currencyCalc.evaluate([totalDiscountedAddon,"/",100])); 
-         totalAddonPrice =currencyCalc.evaluate([totalAddonPrice,"-",totalDiscountedAddon]); 
-
-         return totalAddonPrice;
+        var discountAmount = Math.ceil(currencyCalc.stripFormat(totalAddonPrice)*(1-(discountPercent/100)));
+        discountAmount = currencyCalc.evaluate([discountAmount]);
+        return discountAmount;
       }
 
     </script>
