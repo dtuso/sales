@@ -20,7 +20,6 @@ mixin tldBugs(tlds)
         span.price!= "[@T[productprice:<current productid='" + tldData[tld].productId + "' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' promocode='444888'/>]@T]"
         if tldData[tld].showIcannDisclaimer
           span.icann-disclaimer *
-
   atlantis:webstash(type="css")
     style.
       .tld-links a { font-size: 14px; color: #333; margin-right: 30px; display: inline-block; }
