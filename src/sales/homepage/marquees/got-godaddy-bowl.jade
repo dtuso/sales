@@ -14,21 +14,18 @@ append marqueeStyles
 block marqueeLeftHeadlineStyles
   style.
     #got-godaddy-bowl .left-column { padding-top: 20px; }
+    .price-text{width:200px}
 
 block leftColumn
     .text
       .headline [@L[cds.sales/homepage/marquee/got-godaddy-bowl:headline]@L]
-      .middle-wrapper
+      .middle-text
         .product-text.tungsten [@L[cds.sales/homepage/marquee/got-godaddy-bowl:domain]@L]
-      .middle-wrapper
         .product-text.tungsten [@L[cds.sales/homepage/marquee/got-godaddy-bowl:wsb]@L]
-      .middle-wrapper
-        .o365.image
         .product-text.tungsten [@L[cds.sales/homepage/marquee/got-godaddy-bowl:email]@L]
         .product-subtext [@L[cds.sales/homepage/marquee/got-godaddy-bowl:o365]@L]
       .btn-wrapper
         .price-text.bigtext
+          .price [@T[productprice:<current productid="464069" period="monthly" promocode="24681357"></current>]@T][@L[cds.sales/homepage/marquee/got-godaddy-bowl:per-month]@L]
         .btn-wrap
           .btn.btn-warning#gdhp-marq-gybo-btn(data-ci="93372") [@L[cds.sales/homepage/marquee/got-godaddy-bowl:cta-text]@L]
-        .price [@T[productprice:<current productid="464069" period="monthly" promocode="24681357"></current>]@T] 
-        .cond-text.tungsten [@L[cds.sales/homepage/marquee/got-godaddy-bowl:per-month]@L]
