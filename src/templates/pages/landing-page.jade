@@ -1,9 +1,9 @@
+extends ../page
+
 include ../domain-search-mixin.jade
 include ../mid-page-nav-mixin.jade
 include ../plan-tiles-mixin.jade
 include ../carousel-mixin.jade
-
-extends ../page
 
 append vars
   - config.uxcore = true;
@@ -66,7 +66,7 @@ block endOfPageScripts
       }, 2000);
     });
 
-  block scripts
+  block pageScripts
 
 block content
   
