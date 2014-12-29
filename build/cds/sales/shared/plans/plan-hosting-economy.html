@@ -2,6 +2,7 @@
 <atlantis:webstash type="css">
   <style>
     .pro-plans { margin-top: 0; }
+    .form-control { margin-bottom: 10px; }
     
   </style>
 </atlantis:webstash>
@@ -14,35 +15,83 @@
         <strike>[@T[productprice:<list productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary">Save [@T[productcompare:<percent primaryproductid="32051" secondaryproductid="32051" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span></strong> 
       ##endif
        </strong></div>
-  <div class="sf-droplist-select form-control">
-    <div class="sf-droplist-selectcontent">
-      <div><span class="sf-droplist-term">12 mo</span><span class="sf-droplist-cost sf-droplist-sale">$X.XX/mo</span><span class="sf-droplist-msg sf-droplist-sale">ON SALE</span></div>
-    </div>
-    <div class="sf-droplist-selectbtn"><span class="sf-droplist-anchor"></span></div>
-  </div>
-  <ul id="basic-plan-list" style="display:none;">
-    <li data-value="1">
-      <div data-main="true" class="sf-droplist-row"><span class="sf-droplist-term">3 mo</span><span class="sf-droplist-cost sf-droplist-sale">$X.XX/mo</span><span class="sf-droplist-msg sf-droplist-sale">ON SALE</span></div>
+  <ul id="product-A">
+    <li data-value='1' data-plan="host_GridHostEcoDiabloLin3Mo_us">
+      <div data-main="true" class="sf-droplist-row"><span class="sf-droplist-term">1 mo</span><span class="sf-droplist-cost sf-droplist-sale">[@T[productprice:<current productid="32048" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</span> 
+        ##if(productHasSavingsMoreThan(32048, 32048, 0))
+         <span class="sf-droplist-msg sf-droplist-sale">ON SALE</span>
+      </div>
       <div class="sf-droplist-row"><span class="sf-droplist-term"> </span><span class="sf-droplist-cost">
-          <strike>$X.XX/mo</strike></span><span class="sf-droplist-msg sf-droplist-sale">Save XX%</span></div>
+          <strike>[@T[productprice:<list productid="32048" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</strike></span><span class="sf-droplist-msg sf-droplist-sale">Save [@T[productcompare:<percent primaryproductid="32048" secondaryproductid="32048" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span> 
+        ##endif
+         
+      </div>
     </li>
-    <li data-selected="true" data-value="2">
-      <div data-main="true" class="sf-droplist-row"><span class="sf-droplist-term">12 mo</span><span class="sf-droplist-cost sf-droplist-sale">$X.XX/mo</span><span class="sf-droplist-msg sf-droplist-sale">ON SALE</span></div>
+    <li data-value='2' data-plan="host_GridHostEcoDiabloLin1Yr_us">
+      <div data-main="true" class="sf-droplist-row"><span class="sf-droplist-term">12 mo</span><span class="sf-droplist-cost sf-droplist-sale">[@T[productprice:<current productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</span> 
+        ##if(productHasSavingsMoreThan(32051, 32051, 0))
+         <span class="sf-droplist-msg sf-droplist-sale">ON SALE</span>
+      </div>
       <div class="sf-droplist-row"><span class="sf-droplist-term"> </span><span class="sf-droplist-cost">
-          <strike>$X.XX/mo</strike></span><span class="sf-droplist-msg sf-droplist-sale">Save XX%</span></div>
+          <strike>[@T[productprice:<list productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</strike></span><span class="sf-droplist-msg sf-droplist-sale">Save [@T[productcompare:<percent primaryproductid="32051" secondaryproductid="32051" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span> 
+        ##endif
+         
+      </div>
     </li>
-    <li data-value="3">
-      <div data-main="true" class="sf-droplist-row"><span class="sf-droplist-term">24 mo</span><span class="sf-droplist-cost sf-droplist-sale">$X.XX/mo</span><span class="sf-droplist-msg sf-droplist-sale">ON SALE</span></div>
+    <li data-value='3' data-plan="host_GridHostEcoDiabloLin2Yr_us">
+      <div data-main="true" class="sf-droplist-row"><span class="sf-droplist-term">24 mo</span><span class="sf-droplist-cost sf-droplist-sale">[@T[productprice:<current productid="32060" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</span> 
+        ##if(productHasSavingsMoreThan(32060, 32060, 0))
+         <span class="sf-droplist-msg sf-droplist-sale">ON SALE</span>
+      </div>
       <div class="sf-droplist-row"><span class="sf-droplist-term"> </span><span class="sf-droplist-cost">
-          <strike>$X.XX/mo</strike></span><span class="sf-droplist-msg sf-droplist-sale">Save XX%</span></div>
+          <strike>[@T[productprice:<list productid="32060" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</strike></span><span class="sf-droplist-msg sf-droplist-sale">Save [@T[productcompare:<percent primaryproductid="32060" secondaryproductid="32060" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span> 
+        ##endif
+         
+      </div>
+    </li>
+    <li data-value='4' data-plan="host_GridHostEcoDiabloLin3Yr_us">
+      <div data-main="true" class="sf-droplist-row"><span class="sf-droplist-term">36 mo</span><span class="sf-droplist-cost sf-droplist-sale">[@T[productprice:<current productid="32063" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</span> 
+        ##if(productHasSavingsMoreThan(32063, 32063, 0))
+         <span class="sf-droplist-msg sf-droplist-sale">ON SALE</span>
+      </div>
+      <div class="sf-droplist-row"><span class="sf-droplist-term"> </span><span class="sf-droplist-cost">
+          <strike>[@T[productprice:<list productid="32063" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</strike></span><span class="sf-droplist-msg sf-droplist-sale">Save [@T[productcompare:<percent primaryproductid="32063" secondaryproductid="32063" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span> 
+        ##endif
+         
+      </div>
+    </li>
+    <li data-value='5' data-plan="host_GridHostEcoDiabloLin4Yr_us">
+      <div data-main="true" class="sf-droplist-row"><span class="sf-droplist-term">48 mo</span><span class="sf-droplist-cost sf-droplist-sale">[@T[productprice:<current productid="32066" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</span> 
+        ##if(productHasSavingsMoreThan(32066, 32066, 0))
+         <span class="sf-droplist-msg sf-droplist-sale">ON SALE</span>
+      </div>
+      <div class="sf-droplist-row"><span class="sf-droplist-term"> </span><span class="sf-droplist-cost">
+          <strike>[@T[productprice:<list productid="32066" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</strike></span><span class="sf-droplist-msg sf-droplist-sale">Save [@T[productcompare:<percent primaryproductid="32066" secondaryproductid="32066" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span> 
+        ##endif
+         
+      </div>
+    </li>
+    <li data-value='6' data-plan="host_GridHostEcoDiabloLin5Yr_us">
+      <div data-main="true" class="sf-droplist-row"><span class="sf-droplist-term">60 mo</span><span class="sf-droplist-cost sf-droplist-sale">[@T[productprice:<current productid="32069" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</span> 
+        ##if(productHasSavingsMoreThan(32069, 32069, 0))
+         <span class="sf-droplist-msg sf-droplist-sale">ON SALE</span>
+      </div>
+      <div class="sf-droplist-row"><span class="sf-droplist-term"> </span><span class="sf-droplist-cost">
+          <strike>[@T[productprice:<list productid="32069" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</strike></span><span class="sf-droplist-msg sf-droplist-sale">Save [@T[productcompare:<percent primaryproductid="32069" secondaryproductid="32069" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span> 
+        ##endif
+         
+      </div>
     </li>
   </ul>
-  <script>
-    $("#basic-plan-list").sfDropList({});
-    
-    
-  </script>
-  <button data-tcode="" data-index="1" class="btn btn-purchase btn-plan btn-lg btn-block">Add to Cart</button>
+  <atlantis:webstash type="js">
+    <script type="text/javascript">
+      $("#product-A").sfDropList({
+        width:320
+      });
+      
+    </script>
+  </atlantis:webstash>
+  <button data-tcode="" data-ul="product-A" class="btn btn-purchase btn-plan btn-lg btn-block">Add to Cart</button>
   <div class="plan-item"> <strong>1 Website</strong></div>
   <div class="plan-item"> <strong>100 GB Storage</strong></div>
   <div class="plan-item"> <strong>Unlimited bandwidth</strong></div>

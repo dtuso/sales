@@ -1,15 +1,5 @@
 extends ../../templates/pages/landing-page
 
-//-
-  prepend endOfPageScripts
-    script
-      include ../../templates/planTile.js
-    script.
-      $(document).ready(function() {
-        var ultimatePlanRenderedHtml = renderPlanTile();
-        $('.plan-pro:nth-child(3)').html(ultimatePlanRenderedHtml);
-      });
-
 block pageStyles
   style.
     .plan-tile { margin-top: -240px; }
@@ -25,11 +15,14 @@ block plans
   section#plans
     +renderPlanTiles(3)
       +planTile
-        include ../shared/plans/plan-hosting-economy.jade
+        include ./web-hosting/plans/plan-hosting-economy.jade
       +planTile
-        include ../shared/plans/plan-hosting-deluxe.jade
+        include ./web-hosting/plans/plan-hosting-deluxe.jade
       +planTile
-        include ../shared/plans/plan-hosting-ultimate.jade
+        include ./web-hosting/plans/plan-hosting-ultimate.jade
+        
+      +renderCartLogic("[@T[link:<relative path=\"/hosting/web-hosting-config-new.aspx\" parammode=\"common\" />]@T]", "slp_hosting_4GH" )
+
       .container
         .row
           .col-sm-12
@@ -47,109 +40,3 @@ block plans
             .include-check Compatible with all major browsers
             .include-check One certificate covers unlimited servers
             .include-check One-click installation for GoDaddy hosted accounts
-//-  
-  block sections  
-    +renderMidPageNav
-      +priceBlock("$69.99", "year", "#alternate-products")
-
-    section#speed-chart
-      .container
-        style.
-          #speed-chart { min-height: 400px; }
-          #speed-chart h3 { margin: 50px auto; text-align: center; }
-          #speed-chart img { margin: 50px auto; display: block; }
-        .speed-chart
-          h3 Fast Sites = Happy Visitors
-          img(src!="[@T[link:<imageroot />]@T]fos/mike/img/pro-wp-speed.png")
-          .speed-text
-            img()
-
-    section#one-click-install.features.tile-section.one-click-wrapper
-      .container
-        style.
-          #one-click-install { background-color: #689A1D; }
-        .row
-          .col-sm-6
-            h2 APP INSTALLS JUST A CLICK AWAY
-            p Our one-click install process has all your Web hosting app needs covered, making it easy to build, ehnhance and manage your site.
-            ul(style="list-style")
-              li
-                span.uxicon.uxicon-checkmark(aria-hidden="true")
-                span Need a content management system (CMS) for your Website? Joomla and Drupal are just a click away.
-              li
-                span.uxicon.uxicon-checkmark(aria-hidden="true")
-                span Maybe you want to sell products on your webite.  Try Magento with one-click.
-          .col-sm-6
-            div.text-center(data-center-element='{"vertical":{"target":{"method":"parents","selector":".features"},"verticalStyle":"margin-top","elementHeightMethod":"outerHeight","targetWidthMethod":"height"}}')
-              img.features-img.features-img-right(src!= "[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Feature_Small_Logos.png")
-
-    section#features.key-benefits-wrap.tile-section.bg-pro-gray(data-mid-nav-title="Features")
-      .container
-        .row
-          .col-sm-4.key-benefit
-            .key-benefits-img-wrap
-              //- +lazyImage("[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_Group_ScalableResources.png")
-              img.key-benefits-img(src != "[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_Group_ScalableResources.png")
-            h3.key-benefits-title Scalable resources on-demand
-            .key-benefits-text When you need more power, level up your CPU, memory, entry processes and I/O with just a click. Access the Stats & Usage dashboard for real-time visibility to your sites’ resource usage. Even get alerts as you approach your limits so you can react quickly and keep your site running at top speed.
-          .col-sm-4.key-benefit
-            .key-benefits-img-wrap
-              img.key-benefits-img(src != "[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_Group_Security.png")
-            h3.key-benefits-title Award-winning security keeps your site safe
-            .key-benefits-text Keeping a website secure is a full time job. That’s why our security team is on the job 24/7, monitoring your site for suspicious activity and protecting it against brute force and DDoS attacks.
-          .col-sm-4.key-benefit
-            .key-benefits-img-wrap
-              img.key-benefits-img(src != "[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_Group_WhatIsHosting.png")
-            h3.key-benefits-title What is Hosting?
-            .key-benefits-text Make sure friends, family and customers can see your website. Hosting is what makes it possible for others to view your website over the Internet. Without it, you’re the only one who will ever get a look. GoDaddy serves up:
-              ul
-                li One-click set-up
-                li Unlimited storage and bandwidth
-                li Scalability to fit your needs
-                li 24/7 secure monitoring
-
-    section#compare(data-mid-nav-title="Compare")
-      p compare
-
-    section#platforms(data-mid-nav-title="Platforms")
-      p platforms
-
-    section#reviews
-      p reviews
-
-    section#faq
-      p faq
-
-    section#alternate-products
-      p alternate-products
-
-    section#disclaimers
-      p disclaimers
-
-//-
-  mixin lazyImage(src)
-      div(class="#{imgSize}")
-        img.key-benefits-img(
-            src = keyBenefit.lazyLoad ? 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==' : keyBenefit.image
-            data-lazy-load = keyBenefit.lazyLoad ? '{"src":"#{keyBenefit.image}","watch":".key-benefits-wrap"}' : ''
-            alt = keyBenefit.imageAlternateText != 'undefined' ? keyBenefit.imageAlternateText : ''
-            )
-
-    if (keyBenefit.title)
-      h3.key-benefits-title !{markdownToHtml(keyBenefit.title)}
-
-    if (keyBenefit.text)
-      .key-benefits-text !{markdownToHtml(keyBenefit.text)}
-
-    if (keyBenefit.buttonText)
-      a(href=keyBenefit.link class="btn #{keyBenefit.buttonColor}", data-tcode="#{keyBenefit.tcode ? keyBenefit.tcode : ''}") !{keyBenefit.buttonText}
-
-//-
-  div.pro-plans-wrap.bg-gray-light
-    #plans.container.pro-plans
-      div.col-sm-4.plan-tile.plan-pro
-        include ./product-1234.jade
-      div.col-sm-4.plan-tile.plan-pro
-        include ./product-1234.jade
-      div.col-sm-4.plan-tile.plan-pro
-        include ./product-1234.jade

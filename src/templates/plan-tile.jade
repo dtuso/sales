@@ -1,20 +1,50 @@
-//- here are the fields that can be set on inheriting classes
-- title = title || "";
-- subTitle = subTitle || "";
-- description = description || "";
-- features = features || [];
-- pfid = pfid || "";
-- flagText = flagText || "";
-- tcode = tcode || "";
-- buttonText = buttonText || "Add to Cart";
-- buttonUrl = buttonUrl || "";
+mixin planSelectList(listID)
+  - optionCount = 0
+  ul(id=listID)
+    block
+  atlantis:webstash(type="js")
+    script(type="text/javascript").
+      $("#!{listID}").sfDropList({
+        width:320
+      });
 
+mixin addPlanOption(duration, pfid, plan)
+  - optionCount++
+  li(data-value=optionCount,data-plan=plan)
+    .sf-droplist-row(data-main='true')
+      span.sf-droplist-term !{duration} mo
+      span.sf-droplist-cost.sf-droplist-sale [@T[productprice:<current productid="!{pfid}" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo
+      | 
+      |##if(productHasSavingsMoreThan(!{pfid}, !{pfid}, 0))
+      | 
+      span.sf-droplist-msg.sf-droplist-sale ON SALE
+    .sf-droplist-row
+      span.sf-droplist-term  
+      span.sf-droplist-cost
+        strike [@T[productprice:<list productid="!{pfid}" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo
+      span.sf-droplist-msg.sf-droplist-sale Save [@T[productcompare:<percent primaryproductid="!{pfid}" secondaryproductid="!{pfid}" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]
+      | 
+      |##endif
+      | 
+
+//- here are the fields that can be set on inheriting classes
 block vars
+  - title = "";
+  - subTitle = "";
+  - description = "";
+  - features = [];
+  - pfid = "";
+  - flagText = "";
+  - tcode = "";
+  - listID = "";
+  - buttonText = "Add to Cart";
+  - showDropDownList = false;
 
 atlantis:webstash(type="css")
   block styles
     style.
       .pro-plans { margin-top: 0; }
+      .form-control { margin-bottom: 10px; }
 
 .pro-plan-wrap
   block flag
@@ -48,62 +78,17 @@ atlantis:webstash(type="css")
             | was 
             strike [@T[productprice:<list productid="!{pfid}" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]
             |  
-            span.text-primary Save [@T[productcompare:<percent primaryproductid="!{pfid}" secondaryproductid="32051" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]
+            span.text-primary Save [@T[productcompare:<percent primaryproductid="!{pfid}" secondaryproductid="!{pfid}" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]
           | 
           |##endif
           | 
-  //- block disclaimers
-  //-   if (plan.planDisclaimers)
-  //-    .plan-disclaimers !{plan.planDisclaimers}
-
-  block selectList
-    div.sf-droplist-select.form-control
-      div.sf-droplist-selectcontent
-        div
-          span.sf-droplist-term 12 mo
-          span.sf-droplist-cost.sf-droplist-sale $X.XX/mo
-          span.sf-droplist-msg.sf-droplist-sale ON SALE
-      div.sf-droplist-selectbtn
-        span.sf-droplist-anchor
-    ul#basic-plan-list(style='display:none;')
-      li(data-value='1')
-        .sf-droplist-row(data-main='true')
-          span.sf-droplist-term 3 mo
-          span.sf-droplist-cost.sf-droplist-sale $X.XX/mo
-          span.sf-droplist-msg.sf-droplist-sale ON SALE
-        .sf-droplist-row
-          span.sf-droplist-term  
-          span.sf-droplist-cost
-            strike $X.XX/mo
-          span.sf-droplist-msg.sf-droplist-sale Save XX%
-      li(data-selected='true', data-value='2')
-        .sf-droplist-row(data-main='true')
-          span.sf-droplist-term 12 mo
-          span.sf-droplist-cost.sf-droplist-sale $X.XX/mo
-          span.sf-droplist-msg.sf-droplist-sale ON SALE
-        .sf-droplist-row
-          span.sf-droplist-term  
-          span.sf-droplist-cost
-            strike $X.XX/mo
-          span.sf-droplist-msg.sf-droplist-sale Save XX%
-      li(data-value='3')
-        .sf-droplist-row(data-main='true')
-          span.sf-droplist-term 24 mo
-          span.sf-droplist-cost.sf-droplist-sale $X.XX/mo
-          span.sf-droplist-msg.sf-droplist-sale ON SALE
-        .sf-droplist-row
-          span.sf-droplist-term  
-          span.sf-droplist-cost
-            strike $X.XX/mo
-          span.sf-droplist-msg.sf-droplist-sale Save XX%
-
-    script.
-      $("#basic-plan-list").sfDropList({});
-
+  if(showDropDownList)
+    +planSelectList(listID)
+      block planOptions
 
   block button
     if (buttonText)
-      a.btn.btn-primary.btn-plan.btn-lg.btn-block(href!=buttonUrl data-tcode!=tcode data-index="1") !{buttonText}
+      button.btn.btn-purchase.btn-plan.btn-lg.btn-block(data-tcode="#{tcode}",data-ul="#{listID}") !{buttonText}
 
   block features
     //- Feature list

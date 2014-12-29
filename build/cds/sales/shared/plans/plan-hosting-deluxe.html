@@ -2,6 +2,7 @@
 <atlantis:webstash type="css">
   <style>
     .pro-plans { margin-top: 0; }
+    .form-control { margin-bottom: 10px; }
     
   </style>
 </atlantis:webstash>
@@ -11,38 +12,86 @@
   <div class="plan-price-wrap"> <strong>Starting at<br/><span class="plan-price text-warning">[@T[productprice:<current productid="32059" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/mo</span> 
       ##if(productHasSavingsMoreThan(32059, 32059, 0))
        <br/><strong>was 
-        <strike>[@T[productprice:<list productid="32059" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary">Save [@T[productcompare:<percent primaryproductid="32059" secondaryproductid="32051" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span></strong> 
+        <strike>[@T[productprice:<list productid="32059" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary">Save [@T[productcompare:<percent primaryproductid="32059" secondaryproductid="32059" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span></strong> 
       ##endif
        </strong></div>
-  <div class="sf-droplist-select form-control">
-    <div class="sf-droplist-selectcontent">
-      <div><span class="sf-droplist-term">12 mo</span><span class="sf-droplist-cost sf-droplist-sale">$X.XX/mo</span><span class="sf-droplist-msg sf-droplist-sale">ON SALE</span></div>
-    </div>
-    <div class="sf-droplist-selectbtn"><span class="sf-droplist-anchor"></span></div>
-  </div>
-  <ul id="basic-plan-list" style="display:none;">
-    <li data-value="1">
-      <div data-main="true" class="sf-droplist-row"><span class="sf-droplist-term">3 mo</span><span class="sf-droplist-cost sf-droplist-sale">$X.XX/mo</span><span class="sf-droplist-msg sf-droplist-sale">ON SALE</span></div>
+  <ul id="product-B">
+    <li data-value='1' data-plan="host_GridHostDlxDiabloLinMo_us">
+      <div data-main="true" class="sf-droplist-row"><span class="sf-droplist-term">1 mo</span><span class="sf-droplist-cost sf-droplist-sale">[@T[productprice:<current productid="32050" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</span> 
+        ##if(productHasSavingsMoreThan(32050, 32050, 0))
+         <span class="sf-droplist-msg sf-droplist-sale">ON SALE</span>
+      </div>
       <div class="sf-droplist-row"><span class="sf-droplist-term"> </span><span class="sf-droplist-cost">
-          <strike>$X.XX/mo</strike></span><span class="sf-droplist-msg sf-droplist-sale">Save XX%</span></div>
+          <strike>[@T[productprice:<list productid="32050" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</strike></span><span class="sf-droplist-msg sf-droplist-sale">Save [@T[productcompare:<percent primaryproductid="32050" secondaryproductid="32050" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span> 
+        ##endif
+         
+      </div>
     </li>
-    <li data-selected="true" data-value="2">
-      <div data-main="true" class="sf-droplist-row"><span class="sf-droplist-term">12 mo</span><span class="sf-droplist-cost sf-droplist-sale">$X.XX/mo</span><span class="sf-droplist-msg sf-droplist-sale">ON SALE</span></div>
+    <li data-value='2' data-plan="host_GridHostDlxDiabloLin1Yr_us">
+      <div data-main="true" class="sf-droplist-row"><span class="sf-droplist-term">12 mo</span><span class="sf-droplist-cost sf-droplist-sale">[@T[productprice:<current productid="32059" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</span> 
+        ##if(productHasSavingsMoreThan(32059, 32059, 0))
+         <span class="sf-droplist-msg sf-droplist-sale">ON SALE</span>
+      </div>
       <div class="sf-droplist-row"><span class="sf-droplist-term"> </span><span class="sf-droplist-cost">
-          <strike>$X.XX/mo</strike></span><span class="sf-droplist-msg sf-droplist-sale">Save XX%</span></div>
+          <strike>[@T[productprice:<list productid="32059" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</strike></span><span class="sf-droplist-msg sf-droplist-sale">Save [@T[productcompare:<percent primaryproductid="32059" secondaryproductid="32059" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span> 
+        ##endif
+         
+      </div>
     </li>
-    <li data-value="3">
-      <div data-main="true" class="sf-droplist-row"><span class="sf-droplist-term">24 mo</span><span class="sf-droplist-cost sf-droplist-sale">$X.XX/mo</span><span class="sf-droplist-msg sf-droplist-sale">ON SALE</span></div>
+    <li data-value='3' data-plan="host_GridHostDlxDiabloLin2Yr_us">
+      <div data-main="true" class="sf-droplist-row"><span class="sf-droplist-term">24 mo</span><span class="sf-droplist-cost sf-droplist-sale">[@T[productprice:<current productid="32062" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</span> 
+        ##if(productHasSavingsMoreThan(32062, 32062, 0))
+         <span class="sf-droplist-msg sf-droplist-sale">ON SALE</span>
+      </div>
       <div class="sf-droplist-row"><span class="sf-droplist-term"> </span><span class="sf-droplist-cost">
-          <strike>$X.XX/mo</strike></span><span class="sf-droplist-msg sf-droplist-sale">Save XX%</span></div>
+          <strike>[@T[productprice:<list productid="32062" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</strike></span><span class="sf-droplist-msg sf-droplist-sale">Save [@T[productcompare:<percent primaryproductid="32062" secondaryproductid="32062" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span> 
+        ##endif
+         
+      </div>
+    </li>
+    <li data-value='4' data-plan="host_GridHostDlxDiabloLin3Yr_us">
+      <div data-main="true" class="sf-droplist-row"><span class="sf-droplist-term">36 mo</span><span class="sf-droplist-cost sf-droplist-sale">[@T[productprice:<current productid="32065" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</span> 
+        ##if(productHasSavingsMoreThan(32065, 32065, 0))
+         <span class="sf-droplist-msg sf-droplist-sale">ON SALE</span>
+      </div>
+      <div class="sf-droplist-row"><span class="sf-droplist-term"> </span><span class="sf-droplist-cost">
+          <strike>[@T[productprice:<list productid="32065" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</strike></span><span class="sf-droplist-msg sf-droplist-sale">Save [@T[productcompare:<percent primaryproductid="32065" secondaryproductid="32065" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span> 
+        ##endif
+         
+      </div>
+    </li>
+    <li data-value='5' data-plan="host_GridHostDlxDiabloLin4Yr_us">
+      <div data-main="true" class="sf-droplist-row"><span class="sf-droplist-term">48 mo</span><span class="sf-droplist-cost sf-droplist-sale">[@T[productprice:<current productid="32068" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</span> 
+        ##if(productHasSavingsMoreThan(32068, 32068, 0))
+         <span class="sf-droplist-msg sf-droplist-sale">ON SALE</span>
+      </div>
+      <div class="sf-droplist-row"><span class="sf-droplist-term"> </span><span class="sf-droplist-cost">
+          <strike>[@T[productprice:<list productid="32068" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</strike></span><span class="sf-droplist-msg sf-droplist-sale">Save [@T[productcompare:<percent primaryproductid="32068" secondaryproductid="32068" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span> 
+        ##endif
+         
+      </div>
+    </li>
+    <li data-value='6' data-plan="host_GridHostDlxDiabloLin5Yr_us">
+      <div data-main="true" class="sf-droplist-row"><span class="sf-droplist-term">60 mo</span><span class="sf-droplist-cost sf-droplist-sale">[@T[productprice:<current productid="32071" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</span> 
+        ##if(productHasSavingsMoreThan(32071, 32071, 0))
+         <span class="sf-droplist-msg sf-droplist-sale">ON SALE</span>
+      </div>
+      <div class="sf-droplist-row"><span class="sf-droplist-term"> </span><span class="sf-droplist-cost">
+          <strike>[@T[productprice:<list productid="32071" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</strike></span><span class="sf-droplist-msg sf-droplist-sale">Save [@T[productcompare:<percent primaryproductid="32071" secondaryproductid="32071" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span> 
+        ##endif
+         
+      </div>
     </li>
   </ul>
-  <script>
-    $("#basic-plan-list").sfDropList({});
-    
-    
-  </script>
-  <button data-tcode="" data-index="1" class="btn btn-purchase btn-plan btn-lg btn-block">Add to Cart</button>
+  <atlantis:webstash type="js">
+    <script type="text/javascript">
+      $("#product-B").sfDropList({
+        width:320
+      });
+      
+    </script>
+  </atlantis:webstash>
+  <button data-tcode="" data-ul="product-B" class="btn btn-purchase btn-plan btn-lg btn-block">Add to Cart</button>
   <div class="plan-item"> <strong>Unlimited Websites</strong></div>
   <div class="plan-item"> <strong>Unlimited Storage <span class='sf-tip sf-tipper-target' data-style='qt' data-content='Our Web Hosting plans are designed to host most personal, small business and organization websites. We do not limit the amount of storage and bandwidth your site can use as long as it complies with our Hosting Agreement. Should your website bandwidth or storage usage present a risk to the stability, performance or uptime of our servers, we will notify you via email and you may be required to upgrade to a Virtual Private Server or Dedicated (Private) Server, or we may restrict the resources your website is using. It’s very rare that a website violates our Hosting Agreement and is typically only seen in sites that use hosting for file sharing or storage.'></span></strong></div>
   <div class="plan-item"> <strong>Unlimited bandwidth</strong></div>

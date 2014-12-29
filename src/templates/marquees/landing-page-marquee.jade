@@ -31,8 +31,8 @@ mixin checkBullets(bullets)
     each bullet in bullets
       li #{bullet}
 
-mixin callToAction(text)
-  a.btn.btn-primary.jump-arrow-btn(href=link) #{text}
+mixin callToAction(text,link)
+  a.btn.btn-primary.jump-arrow-btn(href!=link) #{text}
 
 append vars
   //- parent field overrides
