@@ -1,0 +1,47 @@
+---
+location: sales/homepage/marquee/got-godaddy-bowl/default_template
+id: false
+name: GCE-34083-GDBowl
+ctaLink: "[@T[link:<relative path='/offers/online-business.aspx'><param name='ci' value='95309' /></relative>]@T]"
+elementId: got-godaddy-bowl
+---
+extends ../../../layouts/homepage/marqueeLeftHeadline
+
+append marqueeStyles
+  style.
+    .marquee {background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/bg-GD-bowl-marquee.jpg) no-repeat top center;}
+    .walsheim-black{font-family:'Walsheim-Black', 'Arial Black', sans-serif !important;}
+    .walsheim-regular{font-family:'Walsheim-Regular', Arial, sans-serif;}
+    .headline .line:nth-child(odd){font-size:34px;}
+    .headline .line:nth-child(even){font-size:36px;}
+block marqueeLeftHeadlineStyles
+  style.
+    #got-godaddy-bowl .left-column {padding-top: 20px}
+    .headline{color:#77bf43}
+    .price-text{width:225px;padding:25px 0 0 20px;color:#f27d00}
+    .product-text{margin:28px 0 0 105px;font-size:24px}
+    .product-subtext{margin-left:6px;font-size:14px}
+    .price-text{float:left} 
+    .btn-wrap{float:left;margin:30px 0 0 0}  
+    .btn{font-size:22px}
+    .right-column{color:#fff;padding-top:50px;}
+    .righttext{font-size:22px;width:220px;line-height:1;margin-left:85px;}
+    .datetext{margin-top:200px}
+
+block leftColumn
+  .text
+    .headline [@L[cds.sales/homepage/marquee/got-godaddy-bowl:headline]@L]
+    .middle-text
+      .product-text.walsheim-black [@L[cds.sales/homepage/marquee/got-godaddy-bowl:domain]@L]
+      .product-text.walsheim-black [@L[cds.sales/homepage/marquee/got-godaddy-bowl:wsb]@L]
+      .product-text.walsheim-black [@L[cds.sales/homepage/marquee/got-godaddy-bowl:email]@L]
+        span.product-subtext.walsheim-regular [@L[cds.sales/homepage/marquee/got-godaddy-bowl:o365]@L]
+    .btn-wrapper
+      .btn-wrap
+        .btn.btn-warning#gdhp-marq-gybo-btn(data-ci="95309") [@L[cds.sales/homepage/marquee/got-godaddy-bowl:cta-text]@L]
+      .price-text.bigtext.walsheim-black
+        .price [@T[productprice:<current productid="464069" period="monthly" promocode="24681357"></current>]@T][@L[cds.sales/homepage/marquee/got-godaddy-bowl:per-month]@L]
+block rightColumn
+  .righttext
+    .sponsortext.walsheim-black [@L[cds.sales/homepage/marquee/got-godaddy-bowl:righttext]@L]
+    .datetext.walsheim-black [@L[cds.sales/homepage/marquee/got-godaddy-bowl:righttext-2]@L]
