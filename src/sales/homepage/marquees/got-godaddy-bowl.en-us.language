@@ -1,0 +1,19 @@
+---
+location: localization/sales/homepage/marquee/got-godaddy-bowl/en-us
+id: false
+name: GCE-34083-GDBowl
+---
+<phrase key="headline" />
+<div class="bigtext" style="width:100%"><div class="line walsheim">THREE OF OUR STAR PLAYERS</div><div class="line tungsten"><span class='inline-dash' style='max-width:100px;'>&mdash;&mdash;&mdash;&mdash;&mdash;</span> READY TO JOIN YOUR TEAM.</div></div>
+<phrase key="domain" />
+DOMAIN
+<phrase key="wsb" />
+WEBSITE BUILDER
+<phrase key="email" />
+EMAIL
+<phrase key="o365" />
+Microsoft Office 365
+<phrase key="cta-text" />
+GET STARTED
+<phrase key="per-month" />
+/MO.
