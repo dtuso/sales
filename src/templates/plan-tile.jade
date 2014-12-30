@@ -32,13 +32,14 @@ block vars
   - title = "";
   - subTitle = "";
   - description = "";
-  - features = [];
+  - features = "";
   - pfid = "";
   - flagText = "";
   - tcode = "";
   - listID = "";
   - buttonText = "Add to Cart";
   - showDropDownList = false;
+  - buttonUrl = "";
 
 atlantis:webstash(type="css")
   block styles
@@ -87,15 +88,19 @@ atlantis:webstash(type="css")
       block planOptions
 
   block button
-    if (buttonText)
+    if (buttonText && buttonUrl)
+      a.btn.btn-primary.btn-plan.btn-lg.btn-block(href!=buttonUrl data-tcode!=tcode data-index="1") !{buttonText}
+    else
       button.btn.btn-purchase.btn-plan.btn-lg.btn-block(data-tcode="#{tcode}",data-ul="#{listID}") !{buttonText}
+
 
   block features
     //- Feature list
-    each feature, index in features
-      //- Text at the bottom that can have multiple "rows"
-      if (index < 3)
-        .plan-item 
-          strong !{feature}
-      else
-        .plan-item !{feature}
+    if(features)
+      each feature, index in features
+        //- Text at the bottom that can have multiple "rows"
+        if (index < 3)
+          .plan-item 
+            strong !{feature}
+        else
+          .plan-item !{feature}
