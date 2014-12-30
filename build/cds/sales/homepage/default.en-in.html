@@ -105,11 +105,7 @@
     </div>
     <!-- Marquee Section-->
      
-    ##if(targetMessageTagAny(sales_hp_default,hp_existing_customer))
-      [@P[cdsDocument:<data app="sales" location="homepage/marquee/gybo/default_template" /> ]@P]
-    ##else
-      [@P[cdsDocument:<data app="sales" location="homepage/marquee/499com/default_template" /> ]@P]
-    ##endif
+      [@P[cdsDocument:<data app="sales" location="homepage/marquee/299com-in/default_template" /> ]@P]
     <!-- Bugbar (and social links) Sections-->
     <div class="top-banner-lower-content">
       <div class="top-lower-content"><span class="gtld-links"><a href="[@T[link:<relative path='/tlds/com.aspx'><param name='ci' value='94303' /><param name='tld' value='com' /></relative>]@T]" class="tld-link com"><span class="hp-sprite com"></span><span class="price">[@T[productprice:<current productid='101' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' promocode='444888'/>]@T]</span><span class="icann-disclaimer">*</span></a><a href="[@T[link:<relative path='/tlds/in.aspx'><param name='ci' value='94304' /><param name='tld' value='in' /></relative>]@T]" class="tld-link in"><span class="hp-sprite in"></span><span class="price">[@T[productprice:<current productid='9850' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' promocode='444888'/>]@T]</span></a><a href="[@T[link:<relative path='/tlds/in.aspx'><param name='ci' value='94302' /><param name='tld' value='co.in' /></relative>]@T]" class="tld-link co-in"><span class="hp-sprite co-in"></span><span class="price">[@T[productprice:<current productid='41000' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' promocode='444888'/>]@T]</span></a><a href="[@T[link:<relative path='/tlds/org.aspx'><param name='ci' value='93297' /><param name='tld' value='org' /></relative>]@T]" class="tld-link org"><span class="hp-sprite org"></span><span class="price">[@T[productprice:<current productid='12101' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' promocode='444888'/>]@T]</span><span class="icann-disclaimer">*</span></a><a href="[@T[link:<relative path='/tlds/co-domain.aspx'><param name='ci' value='93296' /><param name='tld' value='co' /></relative>]@T]" class="tld-link co"><span class="hp-sprite co"></span><span class="price">[@T[productprice:<current productid='56401' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' promocode='444888'/>]@T]</span></a></span>
@@ -250,8 +246,7 @@
       </div>
     </div>
     <!-- FAQ Section-->
-    <!-- Disclaimers Section-->
-    <!-- EU Cookie Warning Section--> 
+    <!-- Disclaimers Section--> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer" />]@P]
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Script" />]@P]
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Bottom" />]@P]
