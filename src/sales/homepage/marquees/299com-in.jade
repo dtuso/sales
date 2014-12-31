@@ -3,12 +3,13 @@ location: sales/homepage/marquee/299com-in/default_template
 id: false
 name: GCE-34083-GDBowl
 elementId: com299-in
+ctaLink: "[@T[link:<relative path='/domains/domain-name-search.aspx'><param name='ci' value='95321' /></relative>]@T]"
 ---
 extends ../../../layouts/homepage/marqueeLeftHeadline
 
 append marqueeStyles
   style.
-    #com299-in {background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/bg-hp-Marquee-India-Campaign-02.jpg) no-repeat top center;width:100%;min-width:1000px;height:400px;cursor:pointer;background-color:#333333;}
+    #com299-in {background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/bg-hp-Marquee-India-Campaign-02.jpg) no-repeat top center;width:100%;min-width:1000px;height:400px;cursor:pointer;background-color:#231d1f;}
     .walsheim-black{font-family:'Walsheim-Black', 'Arial Black', sans-serif !important;}
     .walsheim-regular{font-family:'Walsheim-Regular', Arial, sans-serif;}
     .walsheim-med{font-family:'Walsheim-Medium', Arial, sans-serif;}
@@ -30,12 +31,12 @@ block marqueeLeftHeadlineStyles
 
 
 block leftColumn
-  .com299-marquee.js-gdhpclick(data-url!='[@T[link:<relative path="/domains/domain-name-search.aspx"><param name="ci" value="94307" /></relative>]@T]')
+  .com299-marquee
     .com299-marquee-content
       .com299-text
         span.com299-headline.walsheim-black [@L[cds.sales/homepage/marquee/299com-in:com299-headline-offer]@L]
         span.com299-maintext.walsheim-black [@L[cds.sales/homepage/marquee/299com-in:com299-maintext-offer]@L]
         span.com299-subtext.tungsten [@L[cds.sales/homepage/marquee/299com-in:com299-subtext]@L]
         .btn-wrap
-          span.btn.btn-warning.walsheim-med#com299-btn(data-ci="94307") [@L[cds.sales/homepage/marquee/299com-in:com299-btn]@L]
+          span.btn.btn-warning.walsheim-med#com299-btn(data-ci="95321") [@L[cds.sales/homepage/marquee/299com-in:com299-btn]@L]
         .com299-restrictions.walsheim-med [@L[cds.sales/homepage/marquee/299com-in:com299-restrictions]@L]
