@@ -36,7 +36,7 @@ mixin renderUpCompare(columns, options)
     - containerClass = "container"
 
   if (options.id)
-    div(id = options.id class="pro two-up-wrap #{options.backgroundColor}" style!="background-image: url(#{options.backgroundImage});")
+    div(id = options.id class="pro two-up-wrap tile-section" style!="background-image: url(#{options.backgroundImage}); background-color: #{options.backgroundColor};")
       div(class="#{containerClass}")
         block
   else
