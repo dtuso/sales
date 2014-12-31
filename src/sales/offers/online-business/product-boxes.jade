@@ -1,68 +1,18 @@
-- var productBoxOptions = {backgroundColor:'bg-gray-dark'};
+include ../../../templates/column-list-mixin.jade
 
-mixin productTile
-  case plansPanelTotalColumns
-    when 1
-      div.col-sm-offset-4.col-sm-4.plan-tile.plan-pro
-        block
-    when 2
-      if (plansPanelColumnsPopulated === 0)      
-        div.col-sm-offset-2.col-sm-4.plan-tile.plan-pro
-          block
-      else
-        div.col-sm-4.plan-tile.plan-pro
-          block
-    when 3
-        div.col-sm-4.plan-tile.plan-pro
-          block
-    when 4
-        div.col-md-3.col-sm-6.plan-tile.plan-pro
-          block
-    when 5
-        div.plan-col-15.plan-tile.plan-pro
-          block
-    when 6
-        div.plan-col-2.plan-tile.plan-pro
-          block
+- var productBoxOptions = {backgroundColor:'bg-gray-dark'};
 
 section#products
   .container
     .row
-      h2.product-box-title.
-        Here's what you get...
+      .col-sm-12
+        h2.product-box-title.
+          Here's what you get&hellip;
     .row
-      +renderPlanTiles(3,productBoxOptions)
-
-        +planTile
-          extends ../../../templates/feature
-          block vars
-            - image = "domain.jpg";
-            - title = "A domain";
-            - subtitle = "Your own unique address on the web, like GoDaddy.com"
-          block text
-            .features-text
-              .include-check <strong>Choose from</strong> .com, .net, .org, or even .co domains.
-              .include-check <strong>Trust the world leader</strong> with over 58 million domains under management
-
-        +planTile
-          extends ../../../templates/feature
-          block vars
-            - image = "website.jpg";
-            - title = "Your website";
-            - subtitle = "A place to promote your business or sell your stuff on the web."
-          block text
-            .features-text
-              .include-check <strong>Get your business online</strong> with Website Builder
-              .strong or
-              .include-check <strong>Sell products</strong> with your own Online Store (website included)
-
-        +planTile
-          extends ../../../templates/feature
-          block vars
-            - image = "email.jpg";
-            - title = "Pro email";
-            - subtitle = "An address that makes you look like the pro you are."
-          block text
-            .features-text
-              .include-check <strong>Powered by</strong> the reliability of Microsoft Office 365
-              .include-check <strong>Backed by</strong> our free 24/7 phone support
+      +renderColumnList(3,productBoxOptions)
+        +columnListMember
+          include ./products/domain.jade
+        +columnListMember
+          include ./products/website.jade
+        +columnListMember
+          include ./products/email.jade
