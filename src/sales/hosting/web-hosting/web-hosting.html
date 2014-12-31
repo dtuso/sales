@@ -123,6 +123,34 @@
   left: 0;
   top: -6px;
 }
+.mid-page-nav .navbar-collapse {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.mid-page-nav.sticky {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+}
+
+@media (max-width: 991px) {
+  #choose-platform {
+    background-image: none !important;
+    background-color: 
+  }
+
+  #choose-platform.left-side {
+    padding-left: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  #choose-platform .left-side {
+    padding-left: 11.666666667%;
+  }
+}
     </style>
     <script src="[@T[link:<javascriptroot />]@T]/fos/mike/0.7.0/js/sahara.min.js"></script>
     <script type="text/javascript">
@@ -574,6 +602,47 @@
           $('#midPageNav ul.nav').append(itemElement);
         });
       });
+      $(window).load(function() {
+        var midPageMenuItem = 0;
+        $(".mid-page-nav .nav > li a span").each(function(index, tab) {
+          midPageMenuItem = $(tab).outerHeight() > midPageMenuItem ? $(tab).outerHeight() : midPageMenuItem;
+        }).css("height", midPageMenuItem);
+      });
+      $(document).ready(function(){
+        // this sets the nav to fixed when scrolled past and fixes the body for the height of the nav
+        var nav = $('.mid-page-nav');
+        var pos = nav.offset().top;
+      
+        $(window).scroll(function () {
+          var fix = ($(this).scrollTop() > pos) ? true : false;
+          nav.toggleClass("sticky", fix);
+          $('body').toggleClass("fix-body", fix);
+        });
+        $('#midPageNav .dropdown-toggle').dropdown()
+      });
+      function scroll_if_anchor(href) {
+        href = typeof(href) == "string" ? href : $(this).attr("href");
+      
+        var fromTop = 130;
+      
+        if(href.indexOf("#") == 0) {
+          var $target = $(href);
+      
+          // Older browser without pushState might flicker here, as they momentarily
+          // jump to the wrong position (IE < 10)
+          if($target.length) {
+            $('html, body').animate({ scrollTop: $target.offset().top - fromTop }, 1000);
+            if(history && "pushState" in history) {
+              history.pushState({}, document.title, window.location.pathname + href);
+              return false;
+            }
+          }
+        }
+      }
+      
+      scroll_if_anchor(window.location.hash);
+      
+      $("#midPageNav").on("click", "a", scroll_if_anchor);
     </script>
     <section id="speed-chart" class="tile-section">
       <div class="container">
@@ -839,6 +908,31 @@
     </section>
     <section id="platforms" data-mid-nav-title="Platforms">
       <p>platforms</p>
+      <div style="background-color: #5caf2b">
+        <div class="container">
+          <h2 class="text-center">Let's Compare Left and Right</h2>
+        </div>
+      </div>
+      <div id="choose-platform" style="background-image: url([@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Platforms.jpg); background-color: #78c043;" class="pro two-up-wrap tile-section">
+        <div class="container">
+          <div class="col-md-5 left-side">
+            <h2 class="text-center">Cpanel for Linux</h2>
+            <h3 class="text-center">Each Linux plan includes:</h3>
+            <div class="include-check-black"><strong>cPanel:</strong> </br> Access all the hosting features and settings you need with this industry-standard control panel.</div>
+            <div class="include-check-black"><strong>CloudLinux:</strong> </br> Keep your site online with truly balanced CPU, RAM and Disk IO limits.</div>
+            <div class="include-check-black"><strong>Resources On-Demand:</strong> </br> If you need more power, you can level up your CPU, RAM, Entry Processes and I/O with just a click.</div>
+            <div class="include-check-black"><strong>CageFS:</strong> </br> Protect your Web content 24/7 with this virtualized file system.</div>
+            <div class="include-check-black"><strong>Free Applications:</strong> </br> Instanly install over 150 applications on your website with just a few clicks.</div>
+          </div>
+          <div class="col-md-5 col-md-offset-2 right-side">
+            <h2 class="text-center">Plesk for Windows</h2>
+            <h3 class="text-center">Each Windows plan includes:</h3>
+            <div class="include-check-black"><strong>Parallesls Plesk Panel:</strong> </br> Easily manage your server, email accounts and more with this popular, award-winning control panel.</div>
+            <div class="include-check-black"><strong>Windows Server 2012:</strong> </br> Take control of your hosting with Microsoft's newest and most powerful server operating system.</div>
+            <div class="include-check-black"><strong>Free Applications:</strong> </br> Instanly install over 70 applications on your website with just a few clicks.</div>
+          </div>
+        </div>
+      </div>
     </section>
     <section id="reviews">
       <p>reviews</p>

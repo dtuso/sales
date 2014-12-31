@@ -89,3 +89,20 @@
   top: 0;
   z-index: 1000;
 }
+
+@media (max-width: 991px) {
+  #choose-platform {
+    background-image: none !important;
+    background-color: 
+  }
+
+  #choose-platform.left-side {
+    padding-left: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  #choose-platform .left-side {
+    padding-left: 11.666666667%;
+  }
+}
