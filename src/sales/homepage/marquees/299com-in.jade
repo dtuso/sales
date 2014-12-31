@@ -3,6 +3,7 @@ location: sales/homepage/marquee/299com-in/default_template
 id: false
 name: GCE-34083-GDBowl
 elementId: com299-in
+ctaLink: "[@T[link:<relative path='/domains/domain-name-search.aspx'><param name='ci' value='95321' /></relative>]@T]"
 ---
 extends ../../../layouts/homepage/marqueeLeftHeadline
 
@@ -30,7 +31,7 @@ block marqueeLeftHeadlineStyles
 
 
 block leftColumn
-  .com299-marquee.js-gdhpclick(data-url!='[@T[link:<relative path="/domains/domain-name-search.aspx"><param name="ci" value="95321" /></relative>]@T]')
+  .com299-marquee
     .com299-marquee-content
       .com299-text
         span.com299-headline.walsheim-black [@L[cds.sales/homepage/marquee/299com-in:com299-headline-offer]@L]
