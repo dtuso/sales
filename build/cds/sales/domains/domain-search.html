@@ -22,6 +22,10 @@
     <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7914312/697366/css/fonts.css"> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags"><Parameters><Parameter key="manifest" value="salesuxcore" /></Parameters></Data>]@P]
     <link href="[@T[link:<cssroot />]@T]/fos/mike/0.7.0/css/sahara.css" rel="stylesheet">
+    <link href="[@T[link:<cssroot />]@T]/ux/dev-brand/css/uxcontrols.css" rel="stylesheet">
+    <link href="[@T[link:<cssroot />]@T]/ux/dev-brand/css/uxcore.css" rel="stylesheet">
+    <script src="[@T[link:<javascriptroot />]@T]/ux/dev-brand/js/uxcontrols.js"></script>
+    <script src="[@T[link:<javascriptroot />]@T]/ux/dev-brand/js/uxcontrols.en.js"></script>
     <script type="text/javascript">
       window.config = window.config || {};
       window.config.uxcore = true;
@@ -130,52 +134,56 @@
             <atlantis:webstash type="css">
               <style>
                 .pro-plans { margin-top: 0; }
+                .form-control { margin-bottom: 10px; }
                 
               </style>
             </atlantis:webstash>
             <div class="pro-plan-wrap">
               <h2 class="plan-title">.com</h2>
               <p class="plan-text">Get the domain that will never go out of style.</p>
-              <div class="plan-price-wrap"><strong>Starting at</strong><br><span class="plan-price text-warning">$12.99*</span><span class="plan-duration text-warning">/mo</span></div><a href="" data-tcode="" data-index="1" class="btn btn-primary btn-plan btn-lg btn-block">Add to Cart</a>
+              <button data-tcode="undefined" data-ul="undefined" class="btn btn-purchase btn-plan btn-lg btn-block"></button>
             </div>
           </div>
           <div class="col-md-3 col-sm-6 plan-tile plan-pro">
             <atlantis:webstash type="css">
               <style>
                 .pro-plans { margin-top: 0; }
+                .form-control { margin-bottom: 10px; }
                 
               </style>
             </atlantis:webstash>
             <div class="pro-plan-wrap">
               <h2 class="plan-title">.net</h2>
               <p class="plan-text">The domain for entrepreneurs.</p>
-              <div class="plan-price-wrap"><strong>Starting at</strong><br><span class="plan-price text-warning">$9.99*</span><span class="plan-duration text-warning">/mo</span></div><a href="" data-tcode="" data-index="1" class="btn btn-primary btn-plan btn-lg btn-block">Add to Cart</a>
+              <button data-tcode="undefined" data-ul="undefined" class="btn btn-purchase btn-plan btn-lg btn-block"></button>
             </div>
           </div>
           <div class="col-md-3 col-sm-6 plan-tile plan-pro">
             <atlantis:webstash type="css">
               <style>
                 .pro-plans { margin-top: 0; }
+                .form-control { margin-bottom: 10px; }
                 
               </style>
             </atlantis:webstash>
             <div class="pro-plan-wrap">
               <h2 class="plan-title">.org</h2>
               <p class="plan-text">Build trust with this well-known and respected domain.</p>
-              <div class="plan-price-wrap"><strong>Starting at</strong><br><span class="plan-price text-warning">$8.99*</span><span class="plan-duration text-warning">/mo</span></div><a href="" data-tcode="" data-index="1" class="btn btn-primary btn-plan btn-lg btn-block">Add to Cart</a>
+              <button data-tcode="undefined" data-ul="undefined" class="btn btn-purchase btn-plan btn-lg btn-block"></button>
             </div>
           </div>
           <div class="col-md-3 col-sm-6 plan-tile plan-pro">
             <atlantis:webstash type="css">
               <style>
                 .pro-plans { margin-top: 0; }
+                .form-control { margin-bottom: 10px; }
                 
               </style>
             </atlantis:webstash>
             <div class="pro-plan-wrap">
               <h2 class="plan-title">.info</h2>
               <p class="plan-text">Share your info with the world.</p>
-              <div class="plan-price-wrap"><strong>Starting at</strong><br><span class="plan-price text-warning">$2.99*</span><span class="plan-duration text-warning">/mo</span></div><a href="" data-tcode="" data-index="1" class="btn btn-primary btn-plan btn-lg btn-block">Add to Cart</a>
+              <button data-tcode="undefined" data-ul="undefined" class="btn btn-purchase btn-plan btn-lg btn-block"></button>
             </div>
           </div>
           <div class="container">
@@ -269,6 +277,47 @@
           $('#midPageNav ul.nav').append(itemElement);
         });
       });
+      $(window).load(function() {
+        var midPageMenuItem = 0;
+        $(".mid-page-nav .nav > li a span").each(function(index, tab) {
+          midPageMenuItem = $(tab).outerHeight() > midPageMenuItem ? $(tab).outerHeight() : midPageMenuItem;
+        }).css("height", midPageMenuItem);
+      });
+      $(document).ready(function(){
+        // this sets the nav to fixed when scrolled past and fixes the body for the height of the nav
+        var nav = $('.mid-page-nav');
+        var pos = nav.offset().top;
+      
+        $(window).scroll(function () {
+          var fix = ($(this).scrollTop() > pos) ? true : false;
+          nav.toggleClass("sticky", fix);
+          $('body').toggleClass("fix-body", fix);
+        });
+        $('#midPageNav .dropdown-toggle').dropdown()
+      });
+      function scroll_if_anchor(href) {
+        href = typeof(href) == "string" ? href : $(this).attr("href");
+      
+        var fromTop = 130;
+      
+        if(href.indexOf("#") == 0) {
+          var $target = $(href);
+      
+          // Older browser without pushState might flicker here, as they momentarily
+          // jump to the wrong position (IE < 10)
+          if($target.length) {
+            $('html, body').animate({ scrollTop: $target.offset().top - fromTop }, 1000);
+            if(history && "pushState" in history) {
+              history.pushState({}, document.title, window.location.pathname + href);
+              return false;
+            }
+          }
+        }
+      }
+      
+      scroll_if_anchor(window.location.hash);
+      
+      $("#midPageNav").on("click", "a", scroll_if_anchor);
     </script>
     <section id="speed-chart">
       <div class="container">

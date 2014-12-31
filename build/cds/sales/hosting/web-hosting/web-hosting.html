@@ -123,6 +123,17 @@
   left: 0;
   top: -6px;
 }
+.mid-page-nav .navbar-collapse {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.mid-page-nav.sticky {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+}
     </style>
     <script src="[@T[link:<javascriptroot />]@T]/fos/mike/0.7.0/js/sahara.min.js"></script>
     <script type="text/javascript">
@@ -179,10 +190,311 @@
       <div class="pro-plans-wrap bg-gray-light">
         <div id="plans" data-icode="" class="container pro-plans"> 
           <div class="col-sm-4 plan-tile plan-pro">
+            <atlantis:webstash type="css">
+              <style>
+                .pro-plans { margin-top: 0; }
+                .form-control { margin-bottom: 10px; }
+                
+              </style>
+            </atlantis:webstash>
+            <div class="pro-plan-wrap">
+              <h2 class="plan-title">Economy</h2>
+              <p class="plan-text">Perfect to get started with a basic site.</p>
+              <div class="plan-price-wrap"> <strong>Starting at<br><span class="plan-price text-warning">[@T[productprice:<current productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/mo</span> 
+                  ##if(productHasSavingsMoreThan(32051, 32051, 0))
+                   <br><strong>was 
+                    <strike>[@T[productprice:<list productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary">Save [@T[productcompare:<percent primaryproductid="32051" secondaryproductid="32051" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span></strong> 
+                  ##endif
+                   </strong></div>
+              <ul id="product-A">
+                <li data-value='1' data-plan="host_GridHostEcoDiabloLin3Mo_us">
+                  <div data-main="true" class="sf-droplist-row"><span class="sf-droplist-term">1 mo</span><span class="sf-droplist-cost sf-droplist-sale">[@T[productprice:<current productid="32048" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</span> 
+                    ##if(productHasSavingsMoreThan(32048, 32048, 0))
+                     <span class="sf-droplist-msg sf-droplist-sale">ON SALE</span>
+                  </div>
+                  <div class="sf-droplist-row"><span class="sf-droplist-term"> </span><span class="sf-droplist-cost">
+                      <strike>[@T[productprice:<list productid="32048" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</strike></span><span class="sf-droplist-msg sf-droplist-sale">Save [@T[productcompare:<percent primaryproductid="32048" secondaryproductid="32048" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span> 
+                    ##endif
+                     
+                  </div>
+                </li>
+                <li data-value='2' data-plan="host_GridHostEcoDiabloLin1Yr_us">
+                  <div data-main="true" class="sf-droplist-row"><span class="sf-droplist-term">12 mo</span><span class="sf-droplist-cost sf-droplist-sale">[@T[productprice:<current productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</span> 
+                    ##if(productHasSavingsMoreThan(32051, 32051, 0))
+                     <span class="sf-droplist-msg sf-droplist-sale">ON SALE</span>
+                  </div>
+                  <div class="sf-droplist-row"><span class="sf-droplist-term"> </span><span class="sf-droplist-cost">
+                      <strike>[@T[productprice:<list productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</strike></span><span class="sf-droplist-msg sf-droplist-sale">Save [@T[productcompare:<percent primaryproductid="32051" secondaryproductid="32051" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span> 
+                    ##endif
+                     
+                  </div>
+                </li>
+                <li data-value='3' data-plan="host_GridHostEcoDiabloLin2Yr_us">
+                  <div data-main="true" class="sf-droplist-row"><span class="sf-droplist-term">24 mo</span><span class="sf-droplist-cost sf-droplist-sale">[@T[productprice:<current productid="32060" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</span> 
+                    ##if(productHasSavingsMoreThan(32060, 32060, 0))
+                     <span class="sf-droplist-msg sf-droplist-sale">ON SALE</span>
+                  </div>
+                  <div class="sf-droplist-row"><span class="sf-droplist-term"> </span><span class="sf-droplist-cost">
+                      <strike>[@T[productprice:<list productid="32060" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</strike></span><span class="sf-droplist-msg sf-droplist-sale">Save [@T[productcompare:<percent primaryproductid="32060" secondaryproductid="32060" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span> 
+                    ##endif
+                     
+                  </div>
+                </li>
+                <li data-value='4' data-plan="host_GridHostEcoDiabloLin3Yr_us">
+                  <div data-main="true" class="sf-droplist-row"><span class="sf-droplist-term">36 mo</span><span class="sf-droplist-cost sf-droplist-sale">[@T[productprice:<current productid="32063" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</span> 
+                    ##if(productHasSavingsMoreThan(32063, 32063, 0))
+                     <span class="sf-droplist-msg sf-droplist-sale">ON SALE</span>
+                  </div>
+                  <div class="sf-droplist-row"><span class="sf-droplist-term"> </span><span class="sf-droplist-cost">
+                      <strike>[@T[productprice:<list productid="32063" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</strike></span><span class="sf-droplist-msg sf-droplist-sale">Save [@T[productcompare:<percent primaryproductid="32063" secondaryproductid="32063" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span> 
+                    ##endif
+                     
+                  </div>
+                </li>
+                <li data-value='5' data-plan="host_GridHostEcoDiabloLin4Yr_us">
+                  <div data-main="true" class="sf-droplist-row"><span class="sf-droplist-term">48 mo</span><span class="sf-droplist-cost sf-droplist-sale">[@T[productprice:<current productid="32066" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</span> 
+                    ##if(productHasSavingsMoreThan(32066, 32066, 0))
+                     <span class="sf-droplist-msg sf-droplist-sale">ON SALE</span>
+                  </div>
+                  <div class="sf-droplist-row"><span class="sf-droplist-term"> </span><span class="sf-droplist-cost">
+                      <strike>[@T[productprice:<list productid="32066" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</strike></span><span class="sf-droplist-msg sf-droplist-sale">Save [@T[productcompare:<percent primaryproductid="32066" secondaryproductid="32066" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span> 
+                    ##endif
+                     
+                  </div>
+                </li>
+                <li data-value='6' data-plan="host_GridHostEcoDiabloLin5Yr_us">
+                  <div data-main="true" class="sf-droplist-row"><span class="sf-droplist-term">60 mo</span><span class="sf-droplist-cost sf-droplist-sale">[@T[productprice:<current productid="32069" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</span> 
+                    ##if(productHasSavingsMoreThan(32069, 32069, 0))
+                     <span class="sf-droplist-msg sf-droplist-sale">ON SALE</span>
+                  </div>
+                  <div class="sf-droplist-row"><span class="sf-droplist-term"> </span><span class="sf-droplist-cost">
+                      <strike>[@T[productprice:<list productid="32069" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</strike></span><span class="sf-droplist-msg sf-droplist-sale">Save [@T[productcompare:<percent primaryproductid="32069" secondaryproductid="32069" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span> 
+                    ##endif
+                     
+                  </div>
+                </li>
+              </ul>
+              <atlantis:webstash type="js">
+                <script type="text/javascript">
+                  $("#product-A").sfDropList({
+                    width:320
+                  });
+                  
+                </script>
+              </atlantis:webstash>
+              <button data-tcode="" data-ul="product-A" class="btn btn-purchase btn-plan btn-lg btn-block">Add to Cart</button>
+              <div class="plan-item"> <strong>1 Website</strong></div>
+              <div class="plan-item"> <strong>100 GB Storage</strong></div>
+              <div class="plan-item"> <strong>Unlimited bandwidth</strong></div>
+              <div class="plan-item">100 Email Addresses</div>
+              <div class="plan-item">Free Domain with annual plan</div>
+            </div>
           </div>
           <div class="col-sm-4 plan-tile plan-pro">
+            <atlantis:webstash type="css">
+              <style>
+                .pro-plans { margin-top: 0; }
+                .form-control { margin-bottom: 10px; }
+                
+              </style>
+            </atlantis:webstash>
+            <div class="pro-plan-wrap">
+              <h2 class="plan-title">Deluxe</h2>
+              <p class="plan-text">Ideal for building and managing multiple sites.</p>
+              <div class="plan-price-wrap"> <strong>Starting at<br><span class="plan-price text-warning">[@T[productprice:<current productid="32059" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/mo</span> 
+                  ##if(productHasSavingsMoreThan(32059, 32059, 0))
+                   <br><strong>was 
+                    <strike>[@T[productprice:<list productid="32059" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary">Save [@T[productcompare:<percent primaryproductid="32059" secondaryproductid="32059" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span></strong> 
+                  ##endif
+                   </strong></div>
+              <ul id="product-B">
+                <li data-value='1' data-plan="host_GridHostDlxDiabloLinMo_us">
+                  <div data-main="true" class="sf-droplist-row"><span class="sf-droplist-term">1 mo</span><span class="sf-droplist-cost sf-droplist-sale">[@T[productprice:<current productid="32050" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</span> 
+                    ##if(productHasSavingsMoreThan(32050, 32050, 0))
+                     <span class="sf-droplist-msg sf-droplist-sale">ON SALE</span>
+                  </div>
+                  <div class="sf-droplist-row"><span class="sf-droplist-term"> </span><span class="sf-droplist-cost">
+                      <strike>[@T[productprice:<list productid="32050" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</strike></span><span class="sf-droplist-msg sf-droplist-sale">Save [@T[productcompare:<percent primaryproductid="32050" secondaryproductid="32050" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span> 
+                    ##endif
+                     
+                  </div>
+                </li>
+                <li data-value='2' data-plan="host_GridHostDlxDiabloLin1Yr_us">
+                  <div data-main="true" class="sf-droplist-row"><span class="sf-droplist-term">12 mo</span><span class="sf-droplist-cost sf-droplist-sale">[@T[productprice:<current productid="32059" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</span> 
+                    ##if(productHasSavingsMoreThan(32059, 32059, 0))
+                     <span class="sf-droplist-msg sf-droplist-sale">ON SALE</span>
+                  </div>
+                  <div class="sf-droplist-row"><span class="sf-droplist-term"> </span><span class="sf-droplist-cost">
+                      <strike>[@T[productprice:<list productid="32059" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</strike></span><span class="sf-droplist-msg sf-droplist-sale">Save [@T[productcompare:<percent primaryproductid="32059" secondaryproductid="32059" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span> 
+                    ##endif
+                     
+                  </div>
+                </li>
+                <li data-value='3' data-plan="host_GridHostDlxDiabloLin2Yr_us">
+                  <div data-main="true" class="sf-droplist-row"><span class="sf-droplist-term">24 mo</span><span class="sf-droplist-cost sf-droplist-sale">[@T[productprice:<current productid="32062" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</span> 
+                    ##if(productHasSavingsMoreThan(32062, 32062, 0))
+                     <span class="sf-droplist-msg sf-droplist-sale">ON SALE</span>
+                  </div>
+                  <div class="sf-droplist-row"><span class="sf-droplist-term"> </span><span class="sf-droplist-cost">
+                      <strike>[@T[productprice:<list productid="32062" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</strike></span><span class="sf-droplist-msg sf-droplist-sale">Save [@T[productcompare:<percent primaryproductid="32062" secondaryproductid="32062" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span> 
+                    ##endif
+                     
+                  </div>
+                </li>
+                <li data-value='4' data-plan="host_GridHostDlxDiabloLin3Yr_us">
+                  <div data-main="true" class="sf-droplist-row"><span class="sf-droplist-term">36 mo</span><span class="sf-droplist-cost sf-droplist-sale">[@T[productprice:<current productid="32065" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</span> 
+                    ##if(productHasSavingsMoreThan(32065, 32065, 0))
+                     <span class="sf-droplist-msg sf-droplist-sale">ON SALE</span>
+                  </div>
+                  <div class="sf-droplist-row"><span class="sf-droplist-term"> </span><span class="sf-droplist-cost">
+                      <strike>[@T[productprice:<list productid="32065" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</strike></span><span class="sf-droplist-msg sf-droplist-sale">Save [@T[productcompare:<percent primaryproductid="32065" secondaryproductid="32065" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span> 
+                    ##endif
+                     
+                  </div>
+                </li>
+                <li data-value='5' data-plan="host_GridHostDlxDiabloLin4Yr_us">
+                  <div data-main="true" class="sf-droplist-row"><span class="sf-droplist-term">48 mo</span><span class="sf-droplist-cost sf-droplist-sale">[@T[productprice:<current productid="32068" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</span> 
+                    ##if(productHasSavingsMoreThan(32068, 32068, 0))
+                     <span class="sf-droplist-msg sf-droplist-sale">ON SALE</span>
+                  </div>
+                  <div class="sf-droplist-row"><span class="sf-droplist-term"> </span><span class="sf-droplist-cost">
+                      <strike>[@T[productprice:<list productid="32068" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</strike></span><span class="sf-droplist-msg sf-droplist-sale">Save [@T[productcompare:<percent primaryproductid="32068" secondaryproductid="32068" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span> 
+                    ##endif
+                     
+                  </div>
+                </li>
+                <li data-value='6' data-plan="host_GridHostDlxDiabloLin5Yr_us">
+                  <div data-main="true" class="sf-droplist-row"><span class="sf-droplist-term">60 mo</span><span class="sf-droplist-cost sf-droplist-sale">[@T[productprice:<current productid="32071" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</span> 
+                    ##if(productHasSavingsMoreThan(32071, 32071, 0))
+                     <span class="sf-droplist-msg sf-droplist-sale">ON SALE</span>
+                  </div>
+                  <div class="sf-droplist-row"><span class="sf-droplist-term"> </span><span class="sf-droplist-cost">
+                      <strike>[@T[productprice:<list productid="32071" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</strike></span><span class="sf-droplist-msg sf-droplist-sale">Save [@T[productcompare:<percent primaryproductid="32071" secondaryproductid="32071" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span> 
+                    ##endif
+                     
+                  </div>
+                </li>
+              </ul>
+              <atlantis:webstash type="js">
+                <script type="text/javascript">
+                  $("#product-B").sfDropList({
+                    width:320
+                  });
+                  
+                </script>
+              </atlantis:webstash>
+              <button data-tcode="" data-ul="product-B" class="btn btn-purchase btn-plan btn-lg btn-block">Add to Cart</button>
+              <div class="plan-item"> <strong>Unlimited Websites</strong></div>
+              <div class="plan-item"> <strong>Unlimited Storage <span class='sf-tip sf-tipper-target' data-style='qt' data-content='Our Web Hosting plans are designed to host most personal, small business and organization websites. We do not limit the amount of storage and bandwidth your site can use as long as it complies with our Hosting Agreement. Should your website bandwidth or storage usage present a risk to the stability, performance or uptime of our servers, we will notify you via email and you may be required to upgrade to a Virtual Private Server or Dedicated (Private) Server, or we may restrict the resources your website is using. It’s very rare that a website violates our Hosting Agreement and is typically only seen in sites that use hosting for file sharing or storage.'></span></strong></div>
+              <div class="plan-item"> <strong>Unlimited bandwidth</strong></div>
+              <div class="plan-item">500 Email Addresses</div>
+              <div class="plan-item">Free Domain with annual plan</div>
+            </div>
           </div>
           <div class="col-sm-4 plan-tile plan-pro">
+            <atlantis:webstash type="css">
+              <style>
+                .pro-plans { margin-top: 0; }
+                .form-control { margin-bottom: 10px; }
+                
+              </style>
+            </atlantis:webstash>
+            <div class="pro-plan-wrap">
+              <div class="plan-flag">More power and security</div>
+              <h2 class="plan-title">Ultimate</h2>
+              <p class="plan-text">Good for higher traffic. Twice the power, memory, email and more.</p>
+              <div class="plan-price-wrap"> <strong>Starting at<br><span class="plan-price text-warning">[@T[productprice:<current productid="32082" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/mo</span> 
+                  ##if(productHasSavingsMoreThan(32082, 32082, 0))
+                   <br><strong>was 
+                    <strike>[@T[productprice:<list productid="32082" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary">Save [@T[productcompare:<percent primaryproductid="32082" secondaryproductid="32082" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span></strong> 
+                  ##endif
+                   </strong></div>
+              <ul id="product-C">
+                <li data-value='1' data-plan="host_GridHostUnlDiabloLinMo_us">
+                  <div data-main="true" class="sf-droplist-row"><span class="sf-droplist-term">1 mo</span><span class="sf-droplist-cost sf-droplist-sale">[@T[productprice:<current productid="32076" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</span> 
+                    ##if(productHasSavingsMoreThan(32076, 32076, 0))
+                     <span class="sf-droplist-msg sf-droplist-sale">ON SALE</span>
+                  </div>
+                  <div class="sf-droplist-row"><span class="sf-droplist-term"> </span><span class="sf-droplist-cost">
+                      <strike>[@T[productprice:<list productid="32076" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</strike></span><span class="sf-droplist-msg sf-droplist-sale">Save [@T[productcompare:<percent primaryproductid="32076" secondaryproductid="32076" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span> 
+                    ##endif
+                     
+                  </div>
+                </li>
+                <li data-value='2' data-plan="host_GridHostUnlDiabloLin1Yr_us">
+                  <div data-main="true" class="sf-droplist-row"><span class="sf-droplist-term">12 mo</span><span class="sf-droplist-cost sf-droplist-sale">[@T[productprice:<current productid="32082" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</span> 
+                    ##if(productHasSavingsMoreThan(32082, 32082, 0))
+                     <span class="sf-droplist-msg sf-droplist-sale">ON SALE</span>
+                  </div>
+                  <div class="sf-droplist-row"><span class="sf-droplist-term"> </span><span class="sf-droplist-cost">
+                      <strike>[@T[productprice:<list productid="32082" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</strike></span><span class="sf-droplist-msg sf-droplist-sale">Save [@T[productcompare:<percent primaryproductid="32082" secondaryproductid="32082" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span> 
+                    ##endif
+                     
+                  </div>
+                </li>
+                <li data-value='3' data-plan="host_GridHostUnlDiabloLin2Yr_us">
+                  <div data-main="true" class="sf-droplist-row"><span class="sf-droplist-term">24 mo</span><span class="sf-droplist-cost sf-droplist-sale">[@T[productprice:<current productid="32084" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</span> 
+                    ##if(productHasSavingsMoreThan(32084, 32084, 0))
+                     <span class="sf-droplist-msg sf-droplist-sale">ON SALE</span>
+                  </div>
+                  <div class="sf-droplist-row"><span class="sf-droplist-term"> </span><span class="sf-droplist-cost">
+                      <strike>[@T[productprice:<list productid="32084" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</strike></span><span class="sf-droplist-msg sf-droplist-sale">Save [@T[productcompare:<percent primaryproductid="32084" secondaryproductid="32084" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span> 
+                    ##endif
+                     
+                  </div>
+                </li>
+                <li data-value='4' data-plan="host_GridHostUnlDiabloLin3Yr_us">
+                  <div data-main="true" class="sf-droplist-row"><span class="sf-droplist-term">36 mo</span><span class="sf-droplist-cost sf-droplist-sale">[@T[productprice:<current productid="32086" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</span> 
+                    ##if(productHasSavingsMoreThan(32086, 32086, 0))
+                     <span class="sf-droplist-msg sf-droplist-sale">ON SALE</span>
+                  </div>
+                  <div class="sf-droplist-row"><span class="sf-droplist-term"> </span><span class="sf-droplist-cost">
+                      <strike>[@T[productprice:<list productid="32086" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</strike></span><span class="sf-droplist-msg sf-droplist-sale">Save [@T[productcompare:<percent primaryproductid="32086" secondaryproductid="32086" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span> 
+                    ##endif
+                     
+                  </div>
+                </li>
+                <li data-value='5' data-plan="host_GridHostUnlDiabloLin4Yr_us">
+                  <div data-main="true" class="sf-droplist-row"><span class="sf-droplist-term">48 mo</span><span class="sf-droplist-cost sf-droplist-sale">[@T[productprice:<current productid="32088" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</span> 
+                    ##if(productHasSavingsMoreThan(32088, 32088, 0))
+                     <span class="sf-droplist-msg sf-droplist-sale">ON SALE</span>
+                  </div>
+                  <div class="sf-droplist-row"><span class="sf-droplist-term"> </span><span class="sf-droplist-cost">
+                      <strike>[@T[productprice:<list productid="32088" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</strike></span><span class="sf-droplist-msg sf-droplist-sale">Save [@T[productcompare:<percent primaryproductid="32088" secondaryproductid="32088" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span> 
+                    ##endif
+                     
+                  </div>
+                </li>
+                <li data-value='6' data-plan="host_GridHostUnlDiabloLin5Yr_us">
+                  <div data-main="true" class="sf-droplist-row"><span class="sf-droplist-term">60 mo</span><span class="sf-droplist-cost sf-droplist-sale">[@T[productprice:<current productid="32090" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</span> 
+                    ##if(productHasSavingsMoreThan(32090, 32090, 0))
+                     <span class="sf-droplist-msg sf-droplist-sale">ON SALE</span>
+                  </div>
+                  <div class="sf-droplist-row"><span class="sf-droplist-term"> </span><span class="sf-droplist-cost">
+                      <strike>[@T[productprice:<list productid="32090" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</strike></span><span class="sf-droplist-msg sf-droplist-sale">Save [@T[productcompare:<percent primaryproductid="32090" secondaryproductid="32090" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span> 
+                    ##endif
+                     
+                  </div>
+                </li>
+              </ul>
+              <atlantis:webstash type="js">
+                <script type="text/javascript">
+                  $("#product-C").sfDropList({
+                    width:320
+                  });
+                  
+                </script>
+              </atlantis:webstash>
+              <button data-tcode="" data-ul="product-C" class="btn btn-purchase btn-plan btn-lg btn-block">Add to Cart</button>
+              <div class="plan-item"> <strong>Unlimited Websites</strong></div>
+              <div class="plan-item"> <strong>Unlimited Storage <span class='sf-tip sf-tipper-target' data-style='qt' data-content='Our Web Hosting plans are designed to host most personal, small business and organization websites. We do not limit the amount of storage and bandwidth your site can use as long as it complies with our Hosting Agreement. Should your website bandwidth or storage usage present a risk to the stability, performance or uptime of our servers, we will notify you via email and you may be required to upgrade to a Virtual Private Server or Dedicated (Private) Server, or we may restrict the resources your website is using. It’s very rare that a website violates our Hosting Agreement and is typically only seen in sites that use hosting for file sharing or storage.'></span></strong></div>
+              <div class="plan-item"> <strong>Unlimited bandwidth</strong></div>
+              <div class="plan-item">1000 Email Addresses</div>
+              <div class="plan-item">Free Domain with annual plan</div>
+              <div class="plan-item">2X Processing Power &amp; Memory (Available for Linux/cPanel only) <span class='sf-tip sf-tipper-target' data-style='qt' data-content='Available Resources:<br><br>Ultimate Plan<br>2 CPU, 1 GB RAM, 125 Entry Processes<br><br>Economy &amp; Deluxe<br>1 CPU, 512 MB RAM, 100 Entry Processes'></span></div>
+              <div class="plan-item">Premium DNS Management Tool <span class='sf-tip sf-tipper-target' data-style='qt' data-content='A $35.88/yr value, our Premium DNS makes it easy to resolve common issues that prevent people from accessing your site, improving your overall performance, availability, and security.'></span></div>
+              <div class="plan-item">1 year SSL Certificate - Secures customer data &amp; increases search rackings. Restrictions apply. <span class='sf-tip sf-tipper-target' data-style='qt' data-content='A $69.99 value, your GoDaddy SSL certificate keeps payments and customer data secure, and helps increase your search rankings on Google. Take advantage of 256-bit encryption and 99.9% browser recognition. The SSL Certificate is free for 1 year with purchase. After the initial free year, SSL will automatically renew at the then-current price until cancelled. You may cancel automatic renewal at any time in your GoDaddy account.'></span></div>
+            </div>
           </div>
           <atlantis:webstash type="js">
             <script type="text/javascript">
@@ -249,6 +561,348 @@
           </div>
         </div>
       </div>
+    </section>
+    <div class="mid-page-nav">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" data-toggle="collapse" data-target="" class="navbar-toggle collapsed"></button>
+        </div>
+        <div id="midPageNav" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav"></ul>
+          <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.mid-page-nav&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="navbar-right">
+            <div class="price-text">Plans starting at</div>
+            <div class="price">$69.99<span>/year</span></div><a href="#alternate-products" class="btn-warning btn btn-sm">See the plans</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      $(function(){ 
+        var midPageNavItemTemplate = _.template('<li><a href="#<%= url %>" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.nav&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" style="margin-top: 0px;"><span><%= text %></span></a></li>');
+        $('[data-mid-nav-title]').each(function(index) {
+          var itemData = { text: $(this).data('mid-nav-title'), url: this.id };
+          var itemElement = midPageNavItemTemplate(itemData);
+          $('#midPageNav ul.nav').append(itemElement);
+        });
+      });
+      $(window).load(function() {
+        var midPageMenuItem = 0;
+        $(".mid-page-nav .nav > li a span").each(function(index, tab) {
+          midPageMenuItem = $(tab).outerHeight() > midPageMenuItem ? $(tab).outerHeight() : midPageMenuItem;
+        }).css("height", midPageMenuItem);
+      });
+      $(document).ready(function(){
+        // this sets the nav to fixed when scrolled past and fixes the body for the height of the nav
+        var nav = $('.mid-page-nav');
+        var pos = nav.offset().top;
+      
+        $(window).scroll(function () {
+          var fix = ($(this).scrollTop() > pos) ? true : false;
+          nav.toggleClass("sticky", fix);
+          $('body').toggleClass("fix-body", fix);
+        });
+        $('#midPageNav .dropdown-toggle').dropdown()
+      });
+      function scroll_if_anchor(href) {
+        href = typeof(href) == "string" ? href : $(this).attr("href");
+      
+        var fromTop = 130;
+      
+        if(href.indexOf("#") == 0) {
+          var $target = $(href);
+      
+          // Older browser without pushState might flicker here, as they momentarily
+          // jump to the wrong position (IE < 10)
+          if($target.length) {
+            $('html, body').animate({ scrollTop: $target.offset().top - fromTop }, 1000);
+            if(history && "pushState" in history) {
+              history.pushState({}, document.title, window.location.pathname + href);
+              return false;
+            }
+          }
+        }
+      }
+      
+      scroll_if_anchor(window.location.hash);
+      
+      $("#midPageNav").on("click", "a", scroll_if_anchor);
+    </script>
+    <section id="speed-chart" class="tile-section">
+      <div class="container">
+        <style>
+          #speed-chart { min-height: 400px; }
+          #speed-chart h3 { margin: 50px auto; text-align: center; }
+          #speed-chart img { margin: 50px auto; display: block; }
+          #speed-chart p {text-align: right; }
+        </style>
+        <div class="speed-chart">
+          <h3>Fast Sites = Happy Visitors</h3>
+          <p>July 2014</p><img src="[@T[link:<imageroot />]@T]fos/mike/img/pro-wp-speed.png">
+          <div class="speed-text"><img></div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="col-sm-2 text-center"><img src="[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Chart_Polygon.png"></div>
+        <div style="padding-top: 50px;" class="col-sm-10">
+          <div>
+            <h4>Did you know a 1 second delay in your website page load time can cause a <mark>7% reduction</mark> in conversion?</h4>
+          </div>
+          <div><a class="btn btn-default-dark">SEE IT IN ACTION</a></div>
+        </div>
+      </div>
+    </section>
+    <section id="one-click-install" class="features tile-section one-click-wrapper">
+      <div class="container">
+        <style>#one-click-install { background: #77c043; transition: background 750ms ease-in-out; background-image: url("[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_AppInstalls_Banner.jpg"); background-repeat: no-repeat; background-size: 100% 100%; }</style>
+        <div class="row">
+          <div class="col-sm-6">
+            <h2>APP INSTALLS JUST A CLICK AWAY</h2>
+            <p>Our one-click install process has all your Web hosting app needs covered, making it easy to build, ehnhance and manage your site.</p>
+            <div class="col-sm-12">
+              <div class="include-check-black">Need a content management system (CMS) for your Website? Joomla and Drupal are just a click away.</div>
+              <div class="include-check-black">Maybe you want to sell products on your webite.  Try Magento with one-click.</div>
+            </div>
+            <!--ul(style="list-style")-->
+            <!--  li-->
+            <!--    span.uxicon.uxicon-checkmark(aria-hidden="true")-->
+            <!--    span Need a content management system (CMS) for your Website? Joomla and Drupal are just a click away.-->
+            <!--  li-->
+            <!--    span.uxicon.uxicon-checkmark(aria-hidden="true")-->
+            <!--    span Maybe you want to sell products on your webite.  Try Magento with one-click.-->
+          </div>
+          <div class="col-sm-6">
+            <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="text-center"><img src="[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Feature_Small_Logos.png" class="features-img features-img-right"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="features" data-mid-nav-title="Features" class="key-benefits-wrap tile-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4 key-benefit">
+            <div class="key-benefits-img-wrap"><img src="[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_Group_ScalableResources.png" class="key-benefits-img">
+            </div>
+            <h3 class="key-benefits-title">Scalable resources on-demand</h3>
+            <div class="key-benefits-text">When you need more power, level up your CPU, memory, entry processes and I/O with just a click. Access the Stats & Usage dashboard for real-time visibility to your sites’ resource usage. Even get alerts as you approach your limits so you can react quickly and keep your site running at top speed.</div>
+          </div>
+          <div class="col-sm-4 key-benefit">
+            <div class="key-benefits-img-wrap"><img src="[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_Group_Security.png" class="key-benefits-img"></div>
+            <h3 class="key-benefits-title">Award-winning security keeps your site safe</h3>
+            <div class="key-benefits-text">Keeping a website secure is a full time job. That’s why our security team is on the job 24/7, monitoring your site for suspicious activity and protecting it against brute force and DDoS attacks.</div>
+          </div>
+          <div class="col-sm-4 key-benefit">
+            <div class="key-benefits-img-wrap"><img src="[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_Group_WhatIsHosting.png" class="key-benefits-img"></div>
+            <h3 class="key-benefits-title">What is Hosting?</h3>
+            <div class="key-benefits-text">Make sure friends, family and customers can see your website. Hosting is what makes it possible for others to view your website over the Internet. Without it, you’re the only one who will ever get a look. GoDaddy serves up:
+              <ul>
+                <li>One-click set-up</li>
+                <li>Unlimited storage and bandwidth</li>
+                <li>Scalability to fit your needs</li>
+                <li>24/7 secure monitoring</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="compare" data-mid-nav-title="Compare" class="compare-chart-pro section-pro bg-pro-gray tile-section">
+      <div style="background: #fff;" class="container">
+        <div class="text-center">
+          <h2>Hosting Plans</h2><a href="javascript:comparePlans('cpanel-tab')" class="btn btn-default btn-lg">Cpanel</a><a href="javascript:comparePlans('parallels-tab')" class="btn btn-default btn-lg">Parallels</a>
+        </div>
+        <div id="cpanel-tab" class="table-responsive">
+          <table id="cpanel-table" class="compare-table">
+            <thead>
+              <tr>
+                <td style="width: 40%;">
+                  <h2>cPanel Plans</h2>
+                </td>
+                <td style="width: 20%; border-bottom: 8px solid #f47f00;">
+                  <h4>economy</h4>
+                </td>
+                <td style="width: 20%; border-bottom: 8px solid #7abf4b;">
+                  <h4>deluxe</h4>
+                </td>
+                <td style="width: 20%; border-bottom: 8px solid #58585a;">
+                  <h4>ultimate</h4>
+                </td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Free Domain with anual plan restrictions apply</td>
+                <td><span class='pro-icon gray-check-icon'></span></td>
+                <td>yes </td>
+                <td>yes</td>
+              </tr>
+              <tr>
+                <td>Websites</td>
+                <td>1</td>
+                <td>Unlimited</td>
+                <td>Unlimited</td>
+              </tr>
+              <tr>
+                <td>Disk Space</td>
+                <td>100GB</td>
+                <td>Unlimited</td>
+                <td>Unlimited</td>
+              </tr>
+              <tr>
+                <td>Free Domain with anual plan restrictions apply</td>
+                <td><span class='pro-icon gray-check-icon'></span></td>
+                <td>yes </td>
+                <td>yes</td>
+              </tr>
+              <tr>
+                <td>Websites</td>
+                <td>1</td>
+                <td>Unlimited</td>
+                <td>Unlimited</td>
+              </tr>
+              <tr>
+                <td>Disk Space</td>
+                <td>100GB</td>
+                <td>Unlimited</td>
+                <td>Unlimited</td>
+              </tr>
+              <tr>
+                <td>Free Domain with anual plan restrictions apply</td>
+                <td><span class='pro-icon gray-check-icon'></span></td>
+                <td>yes </td>
+                <td>yes</td>
+              </tr>
+              <tr>
+                <td>Websites</td>
+                <td>1</td>
+                <td>Unlimited</td>
+                <td>Unlimited</td>
+              </tr>
+              <tr>
+                <td>Disk Space</td>
+                <td>100GB</td>
+                <td>Unlimited</td>
+                <td>Unlimited</td>
+              </tr>
+            </tbody>
+            <script type="text/javascript">
+              $(window).load(function() {
+                var chart = $(this).closest(".compare-table");
+                $("#cpanel-table tr:gt(5)").hide();
+               });
+            </script>
+          </table>
+        </div>
+        <div id="parallels-tab" style="display:none;" class="table-responsive">
+          <table id="parallels-table" class="compare-table">
+            <thead>
+              <tr>
+                <td style="width: 40%;">
+                  <h2>Plesk Plans</h2>
+                </td>
+                <td style="width: 20%; border-bottom: 8px solid #f47f00;">
+                  <h4>economy</h4>
+                </td>
+                <td style="width: 20%; border-bottom: 8px solid #7abf4b;">
+                  <h4>deluxe</h4>
+                </td>
+                <td style="width: 20%; border-bottom: 8px solid #58585a;">
+                  <h4>ultimate</h4>
+                </td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Free Domain with anual plan restrictions apply</td>
+                <td><span class='pro-icon gray-check-icon'></span></td>
+                <td>yes </td>
+                <td>yes</td>
+              </tr>
+              <tr>
+                <td>Websites</td>
+                <td>1</td>
+                <td>Unlimited</td>
+                <td>Unlimited</td>
+              </tr>
+              <tr>
+                <td>Disk Space</td>
+                <td>100GB</td>
+                <td>Unlimited</td>
+                <td>Unlimited</td>
+              </tr>
+              <tr>
+                <td>Free Domain with anual plan restrictions apply</td>
+                <td><span class='pro-icon gray-check-icon'></span></td>
+                <td>yes </td>
+                <td>yes</td>
+              </tr>
+              <tr>
+                <td>Websites</td>
+                <td>1</td>
+                <td>Unlimited</td>
+                <td>Unlimited</td>
+              </tr>
+              <tr>
+                <td>Disk Space</td>
+                <td>100GB</td>
+                <td>Unlimited</td>
+                <td>Unlimited</td>
+              </tr>
+              <tr>
+                <td>Free Domain with anual plan restrictions apply</td>
+                <td><span class='pro-icon gray-check-icon'></span></td>
+                <td>yes </td>
+                <td>yes</td>
+              </tr>
+              <tr>
+                <td>Websites</td>
+                <td>1</td>
+                <td>Unlimited</td>
+                <td>Unlimited</td>
+              </tr>
+              <tr>
+                <td>Disk Space</td>
+                <td>100GB</td>
+                <td>Unlimited</td>
+                <td>Unlimited</td>
+              </tr>
+            </tbody>
+            <script type="text/javascript">
+              $(window).load(function() {
+                var chart = $(this).closest(".compare-table");
+                $("#parallels-table tr:gt(2)").hide();
+               });
+            </script>
+          </table>
+        </div>
+        <div class="compare-table-view-all">
+          <div><strong>View All</strong></div>
+          <div class="pro-icon arrow-down-icon"></div>
+          <script type="text/javascript">
+            $(".compare-table-view-all").click(function() {
+              var chart = $(this).closest("#cpanel-table");
+              $("#cpanel-table tr").show();
+              var chart = $(this).closest("#parallels-table");
+              $("#parallels-table tr").show();
+             $(this).hide();
+             });
+          </script>
+        </div>
+      </div>
+    </section>
+    <section id="platforms" data-mid-nav-title="Platforms">
+      <p>platforms</p>
+    </section>
+    <section id="reviews">
+      <p>reviews</p>
+    </section>
+    <section id="faq">
+      <p>faq</p>
+    </section>
+    <section id="alternate-products">
+      <p>alternate-products</p>
+    </section>
+    <section id="disclaimers">
+      <p>disclaimers</p>
     </section>
     <!-- FOOTERBEGIN--> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer"><Parameters><Parameter key="manifest" value="salesuxcore" /></Parameters></Data>]@P]
