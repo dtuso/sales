@@ -40,3 +40,44 @@ mixin renderMidPageNav(options)
         $('#midPageNav ul.nav').append(itemElement);
       });
     });
+    $(window).load(function() {
+      var midPageMenuItem = 0;
+      $(".mid-page-nav .nav > li a span").each(function(index, tab) {
+        midPageMenuItem = $(tab).outerHeight() > midPageMenuItem ? $(tab).outerHeight() : midPageMenuItem;
+      }).css("height", midPageMenuItem);
+    });
+    $(document).ready(function(){
+      // this sets the nav to fixed when scrolled past and fixes the body for the height of the nav
+      var nav = $('.mid-page-nav');
+      var pos = nav.offset().top;
+
+      $(window).scroll(function () {
+        var fix = ($(this).scrollTop() > pos) ? true : false;
+        nav.toggleClass("sticky", fix);
+        $('body').toggleClass("fix-body", fix);
+      });
+      $('#midPageNav .dropdown-toggle').dropdown()
+    });
+    function scroll_if_anchor(href) {
+      href = typeof(href) == "string" ? href : $(this).attr("href");
+
+      var fromTop = 130;
+
+      if(href.indexOf("#") == 0) {
+        var $target = $(href);
+
+        // Older browser without pushState might flicker here, as they momentarily
+        // jump to the wrong position (IE < 10)
+        if($target.length) {
+          $('html, body').animate({ scrollTop: $target.offset().top - fromTop }, 1000);
+          if(history && "pushState" in history) {
+            history.pushState({}, document.title, window.location.pathname + href);
+            return false;
+          }
+        }
+      }
+    }
+
+    scroll_if_anchor(window.location.hash);
+
+    $("#midPageNav").on("click", "a", scroll_if_anchor);
