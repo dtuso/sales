@@ -258,6 +258,20 @@ block sections
 
   section#platforms(data-mid-nav-title="Platforms")
     p platforms
+    div(style="background-color: #5caf2b")
+      .container
+        h2.text-center Let's Compare Left and Right
+    +renderUpCompare(2, {backgroundColor: "#fff", id:"choose-platform", backgroundImage: "[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Platforms.jpg"})
+      +upCompareColumn
+        h2 Left Side
+        p stuff
+        p more stuff
+        p yet more stuff
+      +upCompareColumn
+        h2 Right Side
+        p things
+        p more things
+        p yet more things
 
   section#reviews
     p reviews
