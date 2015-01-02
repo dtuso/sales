@@ -2,7 +2,7 @@
 - var totalColumns
 - var columnsPopulated
 
-mixin columnListMember
+mixin columnListMember()
   case totalColumns
     when 1
       div.col-sm-offset-4.col-sm-4
@@ -36,7 +36,7 @@ mixin renderColumnList(columns, options)
     - containerClass = "container"
 
   if (options.id)
-    div(id = options.id class="tile-section" style!="background-image: url(#{options.backgroundImage}); background-color: #{options.backgroundColor};")
+    div(class="tile-section" style!="background-image: url(#{options.backgroundImage}); background-color: #{options.backgroundColor};" id = options.id)
       div(class="#{containerClass}")
         .row
           block
