@@ -93,11 +93,14 @@
 @media (max-width: 991px) {
   #choose-platform {
     background-image: none !important;
-    background-color: 
   }
 
   #choose-platform.left-side {
     padding-left: 0;
+  }
+
+  #alt-products {
+    background-image: none !important;
   }
 }
 
@@ -105,4 +108,10 @@
   #choose-platform .left-side {
     padding-left: 11.666666667%;
   }
+}
+
+.up-compare-wrap {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 }

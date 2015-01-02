@@ -28,6 +28,7 @@ mixin renderUpCompare(columns, options)
   - options = options || {};
   - options.backgroundColor = options.backgroundColor || "bg-gray-light";
   - options.backgroundImage = options.backgroundImage || "";
+  - options.customStyles = options.customStyles || "";
   - options.id = options.id || "";
 
   if (columns > 4)
@@ -36,10 +37,10 @@ mixin renderUpCompare(columns, options)
     - containerClass = "container"
 
   if (options.id)
-    div(id = options.id class="pro two-up-wrap tile-section" style!="background-image: url(#{options.backgroundImage}); background-color: #{options.backgroundColor};")
+    div(id = options.id class="pro tile-section #{options.customStyles}" style!="background-image: url(#{options.backgroundImage}); background-color: #{options.backgroundColor};")
       div(class="#{containerClass}")
         block
   else
-    div(class="pro two-up-wrap #{options.backgroundColor}" style!="background-image: url(#{options.backgroundImage});")
+    div(class="pro #{options.backgroundColor}" style!="background-image: url(#{options.backgroundImage});")
       div(class="#{containerClass}")
         block
