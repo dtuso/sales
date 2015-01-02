@@ -1,0 +1,33 @@
+---
+location: sales/offers/online-business.aspx
+id: 54a71948f778fc235082e32a
+name: GCE-32414
+comments: GOT rebrand 2015 SuperBowl
+url: http://www.dev-godaddy.com/offers/online-business.aspx
+assetPath: false
+greeting: hello world
+---
+
+extends ../../templates/pages/landing-page
+
+block domainSearch
+  .container <!-- empty as the domain search will live in the marquee -->
+
+//- top marquee
+block marquee
+  include ./online-business/_marquee.jade
+
+//- side by side plan comparisons go here
+block plans
+  include ./online-business/_product-boxes.jade
+
+//- horizontal nav with jumps to anchor tags (that affixes to top)
+block sections
+  include ./online-business/_domain-section.jade
+
+//- suggested alternative products
+block alternatives
+  include ./online-business/_site-choice.jade
+
+//- there's always a catch... show it here.
+block disclaimers
