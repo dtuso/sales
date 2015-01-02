@@ -138,11 +138,14 @@
 @media (max-width: 991px) {
   #choose-platform {
     background-image: none !important;
-    background-color: 
   }
 
   #choose-platform.left-side {
     padding-left: 0;
+  }
+
+  #alt-products {
+    background-image: none !important;
   }
 }
 
@@ -150,6 +153,12 @@
   #choose-platform .left-side {
     padding-left: 11.666666667%;
   }
+}
+
+.up-compare-wrap {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
     </style>
     <script src="[@T[link:<javascriptroot />]@T]/fos/mike/0.7.0/js/sahara.min.js"></script>
@@ -552,28 +561,30 @@
               });
             </script>
           </atlantis:webstash>
-          <div style="background-image: url(); background-color: #d9d9d9;" class="tile-section">
-            <div class="container">
-              <div class="row">
+          <div class="tile-section">
+            <div style="background-image: url(); background-color: #d9d9d9;">
+              <div class="container">
                 <div class="row">
-                  <div class="col-sm-12">
-                    <h3 class="text-center">All Plans Include</h3>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <h3 class="text-center">All Plans Include</h3>
+                    </div>
                   </div>
-                </div>
-                <div class="col-sm-4">
-                  <div class="include-check">Free domain with annual plan</div>
-                  <div class="include-check">Free Email Addresses</div>
-                  <div class="include-check">One-click install of 200+ Free Applications</div>
-                </div>
-                <div class="col-sm-4">
-                  <div class="include-check">1 GB storage MySQL Linux and 200 MB storage Windows SQL Databases</div>
-                  <div class="include-check">Flexible, easy-to-use control panel</div>
-                  <div class="include-check">24/7 security monitoring and DDoS protection</div>
-                </div>
-                <div class="col-sm-4">
-                  <div class="include-check">Compatible with all major browsers</div>
-                  <div class="include-check">One certificate covers unlimited servers</div>
-                  <div class="include-check">One-click installation for GoDaddy hosted accounts</div>
+                  <div class="col-sm-4 undefined">
+                    <div class="include-check">Free domain with annual plan</div>
+                    <div class="include-check">Free Email Addresses</div>
+                    <div class="include-check">One-click install of 200+ Free Applications</div>
+                  </div>
+                  <div class="col-sm-4 undefined">
+                    <div class="include-check">1 GB storage MySQL Linux and 200 MB storage Windows SQL Databases</div>
+                    <div class="include-check">Flexible, easy-to-use control panel</div>
+                    <div class="include-check">24/7 security monitoring and DDoS protection</div>
+                  </div>
+                  <div class="col-sm-4 undefined">
+                    <div class="include-check">Compatible with all major browsers</div>
+                    <div class="include-check">One certificate covers unlimited servers</div>
+                    <div class="include-check">One-click installation for GoDaddy hosted accounts</div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -696,29 +707,30 @@
       </div>
     </section>
     <section id="features" data-mid-nav-title="Features" class="key-benefits-wrap tile-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-4 key-benefit">
-            <div class="key-benefits-img-wrap"><img src="[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_Group_ScalableResources.png" class="key-benefits-img">
+      <div style="background-image: url(); background-color: #fff;">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-4 key-benefit">
+              <div class="key-benefits-img-wrap"><img src="[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_Group_ScalableResources.png" class="key-benefits-img"></div>
+              <h3 class="key-benefits-title">Scalable resources on-demand</h3>
+              <div class="key-benefits-text">When you need more power, level up your CPU, memory, entry processes and I/O with just a click. Access the Stats & Usage dashboard for real-time visibility to your sites’ resource usage. Even get alerts as you approach your limits so you can react quickly and keep your site running at top speed.</div>
             </div>
-            <h3 class="key-benefits-title">Scalable resources on-demand</h3>
-            <div class="key-benefits-text">When you need more power, level up your CPU, memory, entry processes and I/O with just a click. Access the Stats & Usage dashboard for real-time visibility to your sites’ resource usage. Even get alerts as you approach your limits so you can react quickly and keep your site running at top speed.</div>
-          </div>
-          <div class="col-sm-4 key-benefit">
-            <div class="key-benefits-img-wrap"><img src="[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_Group_Security.png" class="key-benefits-img"></div>
-            <h3 class="key-benefits-title">Award-winning security keeps your site safe</h3>
-            <div class="key-benefits-text">Keeping a website secure is a full time job. That’s why our security team is on the job 24/7, monitoring your site for suspicious activity and protecting it against brute force and DDoS attacks.</div>
-          </div>
-          <div class="col-sm-4 key-benefit">
-            <div class="key-benefits-img-wrap"><img src="[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_Group_WhatIsHosting.png" class="key-benefits-img"></div>
-            <h3 class="key-benefits-title">What is Hosting?</h3>
-            <div class="key-benefits-text">Make sure friends, family and customers can see your website. Hosting is what makes it possible for others to view your website over the Internet. Without it, you’re the only one who will ever get a look. GoDaddy serves up:
-              <ul>
-                <li>One-click set-up</li>
-                <li>Unlimited storage and bandwidth</li>
-                <li>Scalability to fit your needs</li>
-                <li>24/7 secure monitoring</li>
-              </ul>
+            <div class="col-sm-4 key-benefit">
+              <div class="key-benefits-img-wrap"><img src="[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_Group_Security.png" class="key-benefits-img"></div>
+              <h3 class="key-benefits-title">Award-winning security keeps your site safe</h3>
+              <div class="key-benefits-text">Keeping a website secure is a full time job. That’s why our security team is on the job 24/7, monitoring your site for suspicious activity and protecting it against brute force and DDoS attacks.</div>
+            </div>
+            <div class="col-sm-4 key-benefit">
+              <div class="key-benefits-img-wrap"><img src="[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_Group_WhatIsHosting.png" class="key-benefits-img"></div>
+              <h3 class="key-benefits-title">What is Hosting?</h3>
+              <div class="key-benefits-text">Make sure friends, family and customers can see your website. Hosting is what makes it possible for others to view your website over the Internet. Without it, you’re the only one who will ever get a look. GoDaddy serves up:
+                <ul>
+                  <li>One-click set-up</li>
+                  <li>Unlimited storage and bandwidth</li>
+                  <li>Scalability to fit your needs</li>
+                  <li>24/7 secure monitoring</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -914,7 +926,7 @@
           <h2 class="text-center">Let's Compare Left and Right</h2>
         </div>
       </div>
-      <div id="choose-platform" style="background-image: url([@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Platforms.jpg); background-color: #78c043;" class="pro two-up-wrap tile-section">
+      <div id="choose-platform" style="background-image: url([@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Platforms.jpg); background-color: #78c043;" class="pro tile-section up-compare-wrap">
         <div class="container">
           <div class="col-md-5 left-side">
             <h2 class="text-center">Cpanel for Linux</h2>
@@ -943,6 +955,37 @@
     </section>
     <section id="alternate-products">
       <p>alternate-products</p>
+      <div style="background-color: #fff">
+        <div class="container">
+          <h2 class="text-center">Not finding what you need?</h2>
+        </div>
+      </div>
+      <div id="alt-products" style="background-image: url([@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Finding.jpg); background-color: #62aa2f;" class="pro tile-section up-compare-wrap">
+        <div class="container">
+          <div class="col-md-5 left-side">
+            <h4 class="white-text">WEBSITE BUILDER</h4>
+            <h2>Do-it-yourself with website builder. Hosting Included</h2>
+            <ul>
+              <li>Features cPanel "(Linux)" or Parallels Plesk Panel "(Windows)"</li>
+              <li>One-click install 100s of top apps like Joomla and Drupal</li>
+              <li>Includes 99.9% uptime, lighting-fast load times and more</li>
+            </ul>
+            <button class="btn btn-default-dark">Learn More</button>
+          </div>
+          <div class="col-md-5 col-md-offset-2 right-side">
+            <div class="white-text">
+              <h4 class="white-text">PRIVATE VIRTUAL SERVER</h4>
+              <h2>Get hosting that will grow.</h2>
+              <ul>
+                <li>Get online fast with 100s of customizable designs</li>
+                <li>No technical skills required - just drag and drop</li>
+                <li>Includes a free domain, hosting and more</li>
+              </ul>
+              <button class="btn btn-default-light">Learn More</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
     <section id="disclaimers">
       <p>disclaimers</p>

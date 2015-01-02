@@ -2,24 +2,24 @@
 - var totalColumns
 - var columnsPopulated
 
-mixin columnListMember()
+mixin columnListMember(customStyle)
   case totalColumns
     when 1
-      div.col-sm-offset-4.col-sm-4
+      div(class="col-sm-offset-4 col-sm-4 #{customStyle}")
         block
     when 2
       if (columnsPopulated === 0)
         - columnsPopulated++
-        div.col-md-5.left-side
+        div(class="col-md-5 #{customStyle}")
           block
       else
-        div.col-md-5.col-md-offset-2.right-side
+        div(class="col-md-5 col-md-offset-2 #{customStyle}")
           block
     when 3
-        div.col-sm-4
+        div(class="col-sm-4 #{customStyle}")
           block
     when 4
-        div.col-md-3.col-sm-6
+        div(class="col-md-3 col-sm-6 #{customStyle}")
           block
 
 mixin renderColumnList(columns, options)
@@ -41,7 +41,7 @@ mixin renderColumnList(columns, options)
         .row
           block
   else
-    div(class="tile-section" style!="background-image: url(#{options.backgroundImage}); background-color: #{options.backgroundColor};")
+    div(style!="background-image: url(#{options.backgroundImage}); background-color: #{options.backgroundColor};")
       div(class="#{containerClass}")
         .row
           block
