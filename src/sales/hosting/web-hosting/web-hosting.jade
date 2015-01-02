@@ -40,23 +40,24 @@ block plans
         include ./plans/plan-hosting-ultimate.jade
         
       +renderCartLogic("[@T[link:<relative path=\"/hosting-config-new.aspx\" parammode=\"common\" />]@T]", "slp_hosting_4GH" )
-
-      +renderColumnList(3)
-        .row
-          .col-sm-12
-            h3.text-center All Plans Include
-        +columnListMember
-          .include-check Free domain with annual plan
-          .include-check Free Email Addresses
-          .include-check One-click install of 200+ Free Applications
-        +columnListMember
-          .include-check 1 GB storage MySQL Linux and 200 MB storage Windows SQL Databases
-          .include-check Flexible, easy-to-use control panel
-          .include-check 24/7 security monitoring and DDoS protection
-        +columnListMember
-          .include-check Compatible with all major browsers
-          .include-check One certificate covers unlimited servers
-          .include-check One-click installation for GoDaddy hosted accounts
+      
+      .tile-section
+        +renderColumnList(3)
+          .row
+            .col-sm-12
+              h3.text-center All Plans Include
+          +columnListMember
+            .include-check Free domain with annual plan
+            .include-check Free Email Addresses
+            .include-check One-click install of 200+ Free Applications
+          +columnListMember
+            .include-check 1 GB storage MySQL Linux and 200 MB storage Windows SQL Databases
+            .include-check Flexible, easy-to-use control panel
+            .include-check 24/7 security monitoring and DDoS protection
+          +columnListMember
+            .include-check Compatible with all major browsers
+            .include-check One certificate covers unlimited servers
+            .include-check One-click installation for GoDaddy hosted accounts
   
 block sections  
   +renderMidPageNav
@@ -107,29 +108,27 @@ block sections
             img.features-img.features-img-right(src!= "[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Feature_Small_Logos.png")
 
   section#features.key-benefits-wrap.tile-section(data-mid-nav-title="Features")
-    .container
-      .row
-        .col-sm-4.key-benefit
-          .key-benefits-img-wrap
-            //- +lazyImage("[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_Group_ScalableResources.png")
-            img.key-benefits-img(src != "[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_Group_ScalableResources.png")
-          h3.key-benefits-title Scalable resources on-demand
-          .key-benefits-text When you need more power, level up your CPU, memory, entry processes and I/O with just a click. Access the Stats & Usage dashboard for real-time visibility to your sites’ resource usage. Even get alerts as you approach your limits so you can react quickly and keep your site running at top speed.
-        .col-sm-4.key-benefit
-          .key-benefits-img-wrap
-            img.key-benefits-img(src != "[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_Group_Security.png")
-          h3.key-benefits-title Award-winning security keeps your site safe
-          .key-benefits-text Keeping a website secure is a full time job. That’s why our security team is on the job 24/7, monitoring your site for suspicious activity and protecting it against brute force and DDoS attacks.
-        .col-sm-4.key-benefit
-          .key-benefits-img-wrap
-            img.key-benefits-img(src != "[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_Group_WhatIsHosting.png")
-          h3.key-benefits-title What is Hosting?
-          .key-benefits-text Make sure friends, family and customers can see your website. Hosting is what makes it possible for others to view your website over the Internet. Without it, you’re the only one who will ever get a look. GoDaddy serves up:
-            ul
-              li One-click set-up
-              li Unlimited storage and bandwidth
-              li Scalability to fit your needs
-              li 24/7 secure monitoring
+    +renderColumnList(3, {backgroundColor: "#fff"})
+      +columnListMember("key-benefit")
+        .key-benefits-img-wrap
+          img.key-benefits-img(src != "[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_Group_ScalableResources.png")
+        h3.key-benefits-title Scalable resources on-demand
+        .key-benefits-text When you need more power, level up your CPU, memory, entry processes and I/O with just a click. Access the Stats & Usage dashboard for real-time visibility to your sites’ resource usage. Even get alerts as you approach your limits so you can react quickly and keep your site running at top speed.
+      +columnListMember("key-benefit")
+        .key-benefits-img-wrap
+          img.key-benefits-img(src != "[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_Group_Security.png")
+        h3.key-benefits-title Award-winning security keeps your site safe
+        .key-benefits-text Keeping a website secure is a full time job. That’s why our security team is on the job 24/7, monitoring your site for suspicious activity and protecting it against brute force and DDoS attacks.
+      +columnListMember("key-benefit")
+        .key-benefits-img-wrap
+          img.key-benefits-img(src != "[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_Group_WhatIsHosting.png")
+        h3.key-benefits-title What is Hosting?
+        .key-benefits-text Make sure friends, family and customers can see your website. Hosting is what makes it possible for others to view your website over the Internet. Without it, you’re the only one who will ever get a look. GoDaddy serves up:
+          ul
+            li One-click set-up
+            li Unlimited storage and bandwidth
+            li Scalability to fit your needs
+            li 24/7 secure monitoring
 
   section#compare(data-mid-nav-title="Compare").compare-chart-pro.section-pro.bg-pro-gray.tile-section
     .container(style="background: #fff;")
@@ -259,7 +258,7 @@ block sections
     div(style="background-color: #5caf2b")
       .container
         h2.text-center Let's Compare Left and Right
-    +renderUpCompare(2, {backgroundColor: "#78c043", id:"choose-platform", backgroundImage: "[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Platforms.jpg"})
+    +renderUpCompare(2, {backgroundColor: "#78c043", id:"choose-platform", customStyles: "up-compare-wrap", backgroundImage: "[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Platforms.jpg"})
       +upCompareColumn
         h2.text-center Cpanel for Linux
         h3.text-center Each Linux plan includes:
@@ -283,6 +282,28 @@ block sections
 
   section#alternate-products
     p alternate-products
+
+    div(style="background-color: #fff")
+      .container
+        h2.text-center Not finding what you need?
+    +renderUpCompare(2, {backgroundColor: "#62aa2f", id: "alt-products", customStyles: "up-compare-wrap", backgroundImage: "[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Finding.jpg"})
+      +upCompareColumn
+        h4.white-text WEBSITE BUILDER
+        h2 Do-it-yourself with website builder. Hosting Included
+        ul
+          li Features cPanel "(Linux)" or Parallels Plesk Panel "(Windows)"
+          li One-click install 100s of top apps like Joomla and Drupal
+          li Includes 99.9% uptime, lighting-fast load times and more
+        button.btn.btn-default-dark Learn More
+      +upCompareColumn
+        .white-text
+          h4.white-text PRIVATE VIRTUAL SERVER
+          h2 Get hosting that will grow.
+          ul
+            li Get online fast with 100s of customizable designs
+            li No technical skills required - just drag and drop
+            li Includes a free domain, hosting and more
+          button.btn.btn-default-light Learn More
 
   section#disclaimers
     p disclaimers
