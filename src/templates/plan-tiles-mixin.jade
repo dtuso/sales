@@ -47,6 +47,44 @@ mixin renderPlanTiles(columns, options)
     #plans(class="#{containerClass} pro-plans", data-icode="#{options.icode}")
       block
 
-append pageScripts
-  script.
-    FOO TEST
+mixin renderCartLogic(url, itc)
+  - addToCartRedirectUrl = url
+  - itemTrackingCode = itc
+
+  atlantis:webstash(type="js")
+    script(type="text/javascript").
+      var itemTrackingCode = "!{itemTrackingCode}";
+
+      $(".btn-plan").click(function() {
+        var productTile = $(this).data("ul");
+
+        var productPackage = $("ul#"+productTile+" li").filter('[data-selected="true"]').attr('data-plan');
+
+        var url = "[@T[link:<external linktype="SALESPRODUCTSURL" path="/v1/pl/1/cart/packages" />]@T]";
+
+        $.ajax({
+          type: "POST",
+          url: url,
+          contentType: "application/json",
+          data: "requestData=" + JSON.stringify({
+            pkgid: productPackage,
+            qty: 1,
+            itc: itemTrackingCode
+          }),
+          dataType: "jsonp"
+        })
+        .done(function(data) {
+          var redirectUrl = "!{addToCartRedirectUrl}";
+          if (redirectUrl.indexOf("?") === -1) {
+            redirectUrl += "?plan=";
+          } else {
+            redirectUrl += "&plan=";
+          }
+          redirectUrl += productPackage;
+
+          window.location.href = redirectUrl;
+        })
+        .fail(function(xhr, status, error) {
+          alert('Failed to add to the cart. Please try again later.')
+        });
+      });

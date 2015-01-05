@@ -1,0 +1,47 @@
+//- fails if columnLists ever need to be nested
+- var totalColumns
+- var columnsPopulated
+
+mixin columnListMember(customStyle)
+  case totalColumns
+    when 1
+      div(class="col-sm-offset-4 col-sm-4 #{customStyle}")
+        block
+    when 2
+      if (columnsPopulated === 0)
+        - columnsPopulated++
+        div(class="col-md-5 #{customStyle}")
+          block
+      else
+        div(class="col-md-5 col-md-offset-2 #{customStyle}")
+          block
+    when 3
+        div(class="col-sm-4 #{customStyle}")
+          block
+    when 4
+        div(class="col-md-3 col-sm-6 #{customStyle}")
+          block
+
+mixin renderColumnList(columns, options)
+  - totalColumns = columns
+  - columnsPopulated = 0
+  - options = options || {};
+  - options.backgroundColor = options.backgroundColor || "#d9d9d9";
+  - options.backgroundImage = options.backgroundImage || "";
+  - options.id = options.id || "";
+
+  if (columns > 4)
+    - containerClass = "plan-container"
+  else
+    - containerClass = "container"
+
+  if (options.id)
+    div(class="tile-section" style!="background-image: url(#{options.backgroundImage}); background-color: #{options.backgroundColor};" id = options.id)
+      div(class="#{containerClass}")
+        .row
+          block
+  else
+    div(style!="background-image: url(#{options.backgroundImage}); background-color: #{options.backgroundColor};")
+      div(class="#{containerClass}")
+        .row
+          block

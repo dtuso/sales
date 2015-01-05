@@ -1,0 +1,17 @@
+include compare-features-view-all-mixin.jade
+
+mixin compareFeaturesTable(options)
+  - options = options || {};
+  - options.numberOfRowsNotHidden = options.numberOfRowsNotHidden || 999;
+  - options.showViewAllButton = options.showViewAllButton || false;
+  - options.tableID = options.tableID || ""
+
+  table.compare-table(id = options.tableID)
+    block
+    script(type="text/javascript").
+      $(window).load(function() {
+        var chart = $(this).closest(".compare-table");
+        $("##{options.tableID} tr:gt(#{options.numberOfRowsNotHidden})").hide();
+       });
+  if options.showViewAllButton
+    +compareViewAllButton(options.tableID)
