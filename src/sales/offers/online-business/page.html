@@ -1,12 +1,8 @@
 ---
 location: sales/offers/online-business.aspx
-id: 546d1ee6f778fc1b50c69758
-name: GCE-32384
-comments: Fix Security Vulnerability
-=======
-id: 545a9d0cf778fc11ac121096
-name: GCE-33087
-comments: Hide .co.uk and .uk from disclaimer for UK markets temporary
+id: 54aad5a7f778fc1ffc7fa7b1
+name: GCE-rebrand-testing
+comments: Rebrand testing on original page
 url: http://www.dev-godaddy.com/offers/online-business.aspx
 assetPath: false
 metaTitle: "[@L[cds.sales/offers/online-business:page-title]@L]"
@@ -349,7 +345,7 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
           <div class="search-result-not-available">[@L[cds.sales/offers/online-business:search-not-available]@L]</div>
           <div class="search-result-invalid">[@L[cds.sales/offers/online-business:domain-is-invalid]@L]</div>
 
-          <form name="domaincheck" method="get" action="[@T[link:<relative path='domains/actions/json/domainavailabilitycheck.aspx'></relative>]@T]" class="highlight search-form">
+          <form name="domaincheck" class="highlight search-form">
             <input type="hidden" name="targetdivid" value="x" />
             <input type="hidden" name="source" value="domaincheck" />
             <input type="hidden" name="token"/>
@@ -603,7 +599,7 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
                 }
                 success = false;
             }
-          })
+          });
          
       }, getCartAPIUrl:function(data) {
             var url = '[@T[link:<relative path="/api/package/{0}/{1}/{2}/{3}/{4}"/>]@T]'.replace('{0}',data.action).replace('{1}',data.itcCode).replace('{2}',data.ciCode).replace('{3}',data.quantity).replace('{4}',data.planSelected);
@@ -623,30 +619,30 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
     };
 
     function domainSearchFormSubmit(e) {
+
+
       // Domain Search
       PlanBox6UI.recordClick(e, '92710', $(this)[0]);
       
-      var domaintoremove = $dsd.find('[name="domaintoadd"]').val(),
-        domaintoadd = $dsd.find('[name="domaintoadd"]').val(),
+      var 
         tld = $dsd.find('.txtTld'),
         $searchField = $dsd.find('.search-input'),
-        domain = $searchField.val(),
-        domainSplit = domain.split('.'),
-        newtld = '',
+        domain = $.trim($searchField.val()),
         tldList = [],
         $avlTlds = $dsd.find(".availabletld"),
         tld2 = $dsd.find(".availabletld.selected").data("view");
 
       $dsd.removeClass("available not-available invalid");
    
+      // compose list of available TLDs for user to choose from
       $avlTlds.each(function(){
         tldList.push($(this).data("main"))
       });
-
-      var splitSearch = matchEnding($.trim(domain), tldList);
+      var splitSearch = matchEnding(domain, tldList);
         
       $searchField.val( splitSearch[0].split('.')[0].toLowerCase() );
 
+      // set the dropdown to the selected TLD (maybe the person typed one into the search box)
       $avlTlds.each(function(){
         var $this = $(this);
         if($this.data('main')==splitSearch[1]) {
@@ -661,27 +657,38 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
 
       tld.val(tld2);
 
-      if ($searchField.val().length <= 0) return false;
+      if ($searchField.val().length <= 0) return;
 
-      var valid = false;
-    
+      var hasValidTld = false;    
       $('.availabletld').each(function () {
         if ($(this).attr('data-view') == tld.val()) {
-          valid = true;
+          hasValidTld = true;
         }
       });
-
-
-      if (!valid) return false;
+      if (!hasValidTld) return;
           
       $dsd.find('.domain-search-btn').addClass('disabled');
       $dsd.find('.search-domain-loading').fadeIn();
       
       $.ajaxSetup({cache:false});
-      $.get($(this).attr('action')+'&domaintoremove='+domaintoremove, $(this).serialize(), function (jsonData) {
-          $dsd.find(".searched-domain").text(domain);
+      var apiEndpoint = '[@T[link:<relative path="~/domainsapi/v1/search/free"><param name="q" value="q" /><param name="itc" value="itc" /></relative>]@T]';
+      apiEndpoint = apiEndpoint.replace('q=q', 'q=' + domain);
+      apiEndpoint = apiEndpoint.replace('itc=itc', 'itc=' + got1Page.offersCodes.itc);
 
+      $dsd.find(".searched-domain").text(domain);
+
+      $.ajax({
+        url: apiEndpoint,
+        type: 'GET',
+        dataType: 'json',
+        cache: false,
+        success: function(data){
+          $dsd.find(".searched-domain").text(domain);
           var $gotSlides = $dsd.closest('.got-slides');
+console.dir(data);
+          debugger;
+return;
+
           if (jsonData.Properties.anyAreAvailable === false && (jsonData.Properties.domainInfo.length==0 || jsonData.Properties.domainInfo[0].error === "Domain name is already taken")) {
             $dsd.addClass("not-available");
             slideToUnavailable($gotSlides);
@@ -710,10 +717,24 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
           $dsd.find('.domain-search-btn').removeClass('disabled');
           $dsd.find('.search-domain-loading').hide();
           nextStepUrl = jsonData.Properties.nextStepUrl;
-      }, 'json');
+
+        },
+        error: function(){
+            if(console != undefined) {
+              console.log('package api post failure');
+            }
+            success = false;
+        }
+      });
+
+
+
+
+
+
                      
-      return false;
-    } /* end formSubmit */
+      return false; /* so the default action doesn't happen */
+    } /* end domainSearchFormSubmit() */
 
     function addDomainToCart(e){
  
@@ -770,15 +791,14 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
             PlanBox6UI.changeSelected($li, parent);
           })
           .on('click', '.add-domain-btn', addDomainToCart)
-          .on('submit','form[name=domaincheck]',domainSearchFormSubmit)
+          .on('submit','form[name=domaincheck]', function(e) {
+            window.setTimeout(function(){
+              domainSearchFormSubmit(e);
+            },0);             
+            return false;
+          })
           .on('click', '.domain-search-btn', function () {
             $dsd.find('.search-form').submit();
-          })
-          .find('form[name=domaincheck]').each(function(){
-            //update the form to have correct trackingCode
-            var $this = $(this);
-            var newAction = updateUrlParams($this.attr("action"),{'trackingCode': got1Page.offersCodes.itc})
-            $this.attr("action",newAction);
           });
 
 

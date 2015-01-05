@@ -5,13 +5,21 @@ name: GCE-32414
 comments: GOT rebrand 2015 SuperBowl
 url: http://www.dev-godaddy.com/offers/online-business.aspx
 assetPath: false
-greeting: hello world
 ---
 
 extends ../../templates/pages/landing-page
 
-block domainSearch
-  .container <!-- empty as the domain search will live in the marquee -->
+
+prepend endOfPageScripts
+  script.
+    $(document).ready(function() {
+      
+    });
+
+block pageStyles
+  style
+    include:css ./online-business/styles.css
+
 
 //- top marquee
 block marquee
@@ -28,6 +36,8 @@ block sections
 //- suggested alternative products
 block alternatives
   include ./online-business/_site-choice.jade
+  include ./online-business/_step2-choose-product.jade
 
 //- there's always a catch... show it here.
 block disclaimers
+  section#disclaimers Disclaimers goes here
