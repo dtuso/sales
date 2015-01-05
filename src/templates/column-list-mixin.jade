@@ -3,6 +3,7 @@
 - var columnsPopulated
 
 mixin columnListMember(customStyle)
+  - customStyle = customStyle || '';
   case totalColumns
     when 1
       div(class="col-sm-offset-4 col-sm-4 #{customStyle}")
@@ -10,7 +11,7 @@ mixin columnListMember(customStyle)
     when 2
       if (columnsPopulated === 0)
         - columnsPopulated++
-        div(class="col-md-5 #{customStyle}")
+        div(class="col-md-5 #{customStyle ?? ''}")
           block
       else
         div(class="col-md-5 col-md-offset-2 #{customStyle}")

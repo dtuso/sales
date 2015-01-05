@@ -684,7 +684,10 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
         cache: false,
         success: function(data){
           $dsd.find(".searched-domain").text(domain);
-          var $gotSlides = $dsd.closest('.got-slides');
+          var $gotSlides = $dsd.closest('.got-slides'),
+            isAvailable = data.ExactMatchDomain && data.ExactMatchDomain.IsPurchasable === true,
+            alternateDomains = data.RecommendedDomains || [];
+            
 console.dir(data);
           debugger;
 return;

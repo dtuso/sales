@@ -1,1 +1,47 @@
-styles.css
+#step2-choose-product .pro-plans {
+  margin-top:0px; /* override the -210px from sahara.css */
+}
+.include-check-black, .include-check-green, .include-check-none {
+  padding-left:45px;
+  position: relative;
+  margin-top: 20px;
+}
+.include-check-black:before {
+  content: "";
+  background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+  background-position: 0 -700px;
+  background-size: 205px auto;
+  width: 25px;
+  height: 27px;
+  padding-right: 5px;
+  position: absolute;
+  left: 0;
+  top: -6px;
+}
+.include-check-green:before {
+  content: "";
+  background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+  background-position: 0 -668px;
+  background-size: 205px auto;
+  width: 25px;
+  height: 27px;
+  padding-right: 5px;
+  position: absolute;
+  left: 0;
+  top: -6px;
+}
+#products.tile-section{
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.no-top {
+  margin-top: 0;
+}
+h2.product-box-title {
+  text-align: center;
+}
+h2.equal {margin: 30px 0;}
+
+div.skinny {
+  padding: 0 50px;
+}
