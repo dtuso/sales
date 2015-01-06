@@ -460,8 +460,7 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
 
   (function(){ 
     var slideAnimationMs = 800,
-      $dsd = $('#domain-search-div'),
-      nextStepUrl = '';
+      $dsd = $('#domain-search-div');
 
     function showSlide($gotSlides, slideSelector) {
       $gotSlides.find('.got-slide').hide();
@@ -625,6 +624,7 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
       PlanBox6UI.recordClick(e, '92710', $(this)[0]);
       
       var 
+        $gotSlides = $dsd.closest('.got-slides'),
         tld = $dsd.find('.txtTld'),
         $searchField = $dsd.find('.search-input'),
         domain = $.trim($searchField.val()),
@@ -671,12 +671,12 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
       $dsd.find('.search-domain-loading').fadeIn();
       
       $.ajaxSetup({cache:false});
-      var apiEndpoint = '[@T[link:<relative path="~/domainsapi/v1/search/free"><param name="q" value="q" /><param name="itc" value="itc" /></relative>]@T]';
-      apiEndpoint = apiEndpoint.replace('q=q', 'q=' + domain);
-      apiEndpoint = apiEndpoint.replace('itc=itc', 'itc=' + got1Page.offersCodes.itc);
+      var apiEndpoint = '[@T[link:<relative path="~/domainsapi/v1/search/free"><param name="domain" value="domain" /><param name="itc" value="itc" /></relative>]@T]';
+      apiEndpoint = apiEndpoint.replace('domain=domain', 'q=' + domain);
+      apiEndpoint = apiEndpoint.replace('itc=itc', 'key=' + got1Page.offersCodes.itc);
 
-      $dsd.find(".searched-domain").text(domain);
-
+      $dsd.find(".searched-domain").text(domain);      
+      $dsd.data( "exactMatchDomain", null)
       $.ajax({
         url: apiEndpoint,
         type: 'GET',
@@ -684,45 +684,68 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
         cache: false,
         success: function(data){
           $dsd.find(".searched-domain").text(domain);
-          var $gotSlides = $dsd.closest('.got-slides'),
-            isAvailable = data.ExactMatchDomain && data.ExactMatchDomain.IsPurchasable === true,
+          
+          var 
+            exactMatchDomain = data.ExactMatchDomain || {},
+            searchedForDomain = exactMatchDomain.Fqdn ? exactMatchDomain.Fqdn : domain,
+            isAvailable = exactMatchDomain.IsPurchasable && exactMatchDomain.IsPurchasable === true, /* data.ExactMatchDomain.AvailabilityStatus 1001=unavailable 1000=available*/
             alternateDomains = data.RecommendedDomains || [];
             
-console.dir(data);
-          debugger;
-return;
-
-          if (jsonData.Properties.anyAreAvailable === false && (jsonData.Properties.domainInfo.length==0 || jsonData.Properties.domainInfo[0].error === "Domain name is already taken")) {
-            $dsd.addClass("not-available");
-            slideToUnavailable($gotSlides);
-
-          } else if (jsonData.Properties.domainInfo[0].isPremium) {
-            $dsd.addClass("not-available");
-            slideToUnavailable($gotSlides);
-
-          } else if (jsonData.Properties.domainInfo[0].error === "Domain name is invalid") {
-            $dsd.addClass("invalid");
-            slideToInvalid($gotSlides);
-
-          } else if (jsonData.Properties.domainInfo[0].error != '') {
-            $dsd.addClass("not-available");
-            slideToUnavailable($gotSlides);
-
+          if(isAvailable) {
+            $dsd
+              .addClass("available")
+              .find('.add-domain-btn').data( "domain", exactMatchDomain );
+            slideToAvailable($gotSlides);            
           } else {
-            $dsd.addClass("available");
-            $dsd.find('[name="token"]').val(jsonData.Properties.domainInfo[0].name + '|available');
-            $dsd.find('[name="domaintoadd"]').val(jsonData.Properties.domainInfo[0].name);
-            slideToAvailable($gotSlides);
+
+            /* NOT AVAILABLE */
+            if(alternateDomains.length > 0) {
+              // SHOW SPINS
+              // .Fqdn = full domain name 
+              // .Extension = TLD no .
+              // .NameWithoutExtension = domain name without extension
+              var $unDiv = $gotSlides.find('.got-slide-3').find('.got-unavailable-div').empty();
+              $dsd.addClass("not-available");
+              slideToUnavailable($gotSlides);
+
+              var $listOfDivs = $('<div class="alternate-domains">');
+              $listOfDivs.append($());
+              $.each(alternateDomains, function(idx, item){
+                var $domain = $('<div class="alternate-domain clearfix">');
+                $domain
+                  .append(
+                    $('<div class="name">')
+                      .append($('<div class="domain">').text( item.NameWithoutExtension ))
+                      .append($('<div class="tld">').text( '.' + item.Extension ))                    
+                  )
+                  .append(
+                    $('<button class="btn btn-success cta-small">')
+                      .html( "Select &amp; Continue" ) 
+                      .data( "domain", item )
+                      .on('click', goToDppCheckoutPage)
+                  );
+                $listOfDivs.append($domain);
+              });
+              $unDiv.append($listOfDivs);
+
+            } else {
+              // NO SPINS
+              $dsd.addClass("invalid");
+              slideToInvalid($gotSlides);
+            }
           }
 
-          $dsd.find(".searched-domain").text(jsonData.Properties.domainInfo[0].shortName.toLowerCase());
+          $dsd.find(".searched-domain").text(searchedForDomain);
 
           $dsd.find('.domain-search-btn').removeClass('disabled');
           $dsd.find('.search-domain-loading').hide();
-          nextStepUrl = jsonData.Properties.nextStepUrl;
 
         },
         error: function(){
+
+            $dsd.addClass("invalid");
+            slideToInvalid($gotSlides);
+
             if(console != undefined) {
               console.log('package api post failure');
             }
@@ -730,33 +753,66 @@ return;
         }
       });
 
-
-
-
-
-
                      
-      return false; /* so the default action doesn't happen */
+      return; 
     } /* end domainSearchFormSubmit() */
 
+    function goToDppCheckoutPage(e) {
+      // 1) reverify this domain is avail using:
+      //    [@T[link:<relative path='domains/actions/json/domainavailabilitycheck.aspx'></relative>]@T]
+      // 
+      // 2) if domain is still avail, use: 
+      //    https://www.dev-godaddy.com/api/dpp/searchresultscart/11/?domain=blahblah.com&packageid=gybo_1email_1yr&dpp_itc=slp_GOT
+      //    [@T[link:<relative path='~/api/dpp/searchresultscart/11/'><param name="domain" value="domain" /><param name="packageid" value="packageid" /><param name="dpp_itc" value="dpp_itc" /></relative>]@T]
+      //      Response back from API  {"CurrentlyPending":1,"Success":true}
+      //      if true, redirect to DPP (URL????)
+      var domain = $(e.target).data('domain').Fqdn;
+
+      addDomainToCart(e);
+    }
+
+
     function addDomainToCart(e){
+      var domain = $(e.target).data('domain').Fqdn;
  
       $dsd.find('.search-again').hide();     
       $dsd.find('.domain-search-btn').addClass('disabled');
       $(this).addClass('disabled');
       $dsd.find('.add-domain-loading').fadeIn();
-      
-      var data = {
-        ciCode: 92707,
-        itcCode: got1Page.offersCodes.itc, 
-        planSelected: got1Page.offersCodes.plan,
-        addOns: got1Page.offersCodes.addOns
-      }
-  
+        
       PlanBox6UI.recordClick(e, '92707' /*got1Page.offersCodes.ci.apiAddCi*/, $(this)[0]);
       PlanBox6UI.recordClick(e, '84415' /*got1Page.offersCodes.ci.apiDomainAddToCart*/, $(this)[0]);
 
-      PlanConfig.apiPlantoCart(data);
+      var url = '[@T[link:<relative path="/api/package/add/{1}/92707/1/{4}"/>]@T]'.replace('{1}',got1Page.offersCodes.itc).replace('{4}',got1Page.offersCodes.plan);
+      url += (url.indexOf('?') > -1) ? '&' : '?';
+      url += 'domain=' + domain + '&sourceCode=domaincheck';
+      if (got1Page.offersCodes.addOns != 'noAddOns'){
+        url = url += '&addons=' + got1Page.offersCodes.addOns + '-1';
+      }
+
+      var success = true;
+      $.ajax({
+          url: url,
+          type: 'POST',
+          dataType: 'json',
+          cache: false,
+          success: function(){
+            ##if(isManager())
+              window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" secure="true" />]@T]';
+            ##else
+              window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" secure="true"/>]@T]';
+            ##endif
+          },
+          error: function(){
+              if(console != undefined) {
+                console.log('package api post failure');
+              }
+              success = false;
+          }
+        });
+
+
+
 
     } /* end addDomainToCart */
     
@@ -793,7 +849,7 @@ return;
             //PlanBox6UI.showTerm($li);
             PlanBox6UI.changeSelected($li, parent);
           })
-          .on('click', '.add-domain-btn', addDomainToCart)
+          .on('click', '.add-domain-btn', goToDppCheckoutPage)
           .on('submit','form[name=domaincheck]', function(e) {
             window.setTimeout(function(){
               domainSearchFormSubmit(e);
@@ -811,6 +867,47 @@ return;
 
 </script>
 </atlantis:webstash>
+
+<!-- start-css-elevate -->
+<style>
+{% less %}
+
+.alternate-domains {
+  margin-top: -90px;
+}
+.alternate-domain {
+  margin: 20px 0px;
+  border: 2px solid #aaa;
+  border-top: 4px solid green;
+  padding: 10px;  
+}
+
+.alternate-domain .name {
+  max-width: 800px;
+  float: left;
+  margin:10px;
+  padding:10px;
+}
+
+.alternate-domain .name .domain{
+  font-size: 30px;
+}
+
+.alternate-domain .name .tld {
+  margin-top:10px;
+  font-size: 40px;
+  font-weight: bold;
+}
+.alternate-domain button.btn {
+  float:right;
+  font-size: 20px;
+  text-transform: uppercase;
+  margin:30px 20px;
+}
+
+{% endless %}
+</style>
+<!-- end-css-elevate -->
 
       
 <!------------------------------------>
