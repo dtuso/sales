@@ -1,8 +1,8 @@
 ---
 location: sales/contact-us.aspx
-id:    541070bcf778fc15706586f0
-name: GCE-27773
-comments: changed http links for all markets to be secure
+id:    54aaf6a4f778fc1ffc7fa7bf
+name: GCE-33979
+comments: Prep for uxcore
 ---
 {% extends 'layouts/base.html' %}
 
@@ -472,7 +472,7 @@ comments: changed http links for all markets to be secure
     }
 
   function loadSupportData(){
-    var supportNumberUrl = pc.page.sharedObjectMgr.get('pc_url_gui')+ 'pcjson/support/allmarkets';
+    var supportNumberUrl = "[@T[link:<external linktype='guiurl' path='/pcjson/support/allmarkets' secure='true' parammode='explicit'/>]@T]";
 
     $.ajax({
     url: supportNumberUrl,
@@ -485,7 +485,7 @@ comments: changed http links for all markets to be secure
     });
   }
   function loadMarketSupportData(countryName){
-    var supportNumberUrl = pc.page.sharedObjectMgr.get('pc_url_gui')+ 'pcjson/support/includemarket';
+    var supportNumberUrl = "[@T[link:<external linktype='guiurl' path='/pcjson/support/includemarket' secure='true' parammode='explicit'/>]@T]";
 
     $.ajax({
     url: supportNumberUrl,

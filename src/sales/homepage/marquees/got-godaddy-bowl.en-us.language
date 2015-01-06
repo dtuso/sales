@@ -4,7 +4,11 @@ id: false
 name: GCE-34083-GDBowl
 ---
 <phrase key="headline" />
-<div class="bigtext" style="width:100%"><div class="line walsheim">THREE OF OUR STAR PLAYERS</div><div class="line tungsten"><span class='inline-dash' style='max-width:100px;'>&mdash;&mdash;&mdash;&mdash;&mdash;</span> READY TO JOIN YOUR TEAM.</div></div>
+<div class="bigtext" style="width:100%"><div class="line walsheim">THREE OF OUR STAR PLAYERS</div><div class="line tungsten"><span class='inline-dash' style='max-width:215px;'>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</span> READY TO JOIN YOUR TEAM.</div></div>
+<phrase key="righttext" />
+PROUD SPONSOR OF THE 2015
+<phrase key="righttext-2" />
+JANUARY 4TH<br />MOBILE, ALABAMA
 <phrase key="domain" />
 DOMAIN
 <phrase key="wsb" />
