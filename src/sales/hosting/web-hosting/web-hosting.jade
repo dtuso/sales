@@ -4,10 +4,6 @@ prepend endOfPageScripts
   //script
   //  include ../../../templates/planTile.js
   script.
-    $(document).ready(function() {
-      var ultimatePlanRenderedHtml = renderPlanTile();
-      $('.plan-pro:nth-child(3)').html(ultimatePlanRenderedHtml);
-    });
     function comparePlans(id){
       if(id=="cpanel-tab"){
         $("#parallels-tab").hide();
@@ -40,26 +36,27 @@ block plans
         include ./plans/plan-hosting-ultimate.jade
         
       +renderCartLogic("[@T[link:<relative path=\"/hosting-config-new.aspx\" parammode=\"common\" />]@T]", "slp_hosting_4GH" )
-      
-      .tile-section
-        +renderColumnList(3)
-          .row
-            .col-sm-12
-              h3.text-center All Plans Include
-          +columnListMember
-            .include-check Free domain with annual plan
-            .include-check Free Email Addresses
-            .include-check One-click install of 200+ Free Applications
-          +columnListMember
-            .include-check 1 GB storage MySQL Linux and 200 MB storage Windows SQL Databases
-            .include-check Flexible, easy-to-use control panel
-            .include-check 24/7 security monitoring and DDoS protection
-          +columnListMember
-            .include-check Compatible with all major browsers
-            .include-check One certificate covers unlimited servers
-            .include-check One-click installation for GoDaddy hosted accounts
+    .tile-section
+      +renderColumnList(3)
+        .row
+          .col-sm-12
+            h3.text-center All Plans Include
+        +columnListMember
+          .include-check Free domain with annual plan
+          .include-check Free Email Addresses
+          .include-check One-click install of 200+ Free Applications
+        +columnListMember
+          .include-check 1 GB storage MySQL Linux and 200 MB storage Windows SQL Databases
+          .include-check Flexible, easy-to-use control panel
+          .include-check 24/7 security monitoring and DDoS protection
+        +columnListMember
+          .include-check Compatible with all major browsers
+          .include-check One certificate covers unlimited servers
+          .include-check One-click installation for GoDaddy hosted accounts
   
-block sections  
+block sections
+//  include ./tabbed-carousel.jade
+  
   +renderMidPageNav
     +priceBlock("$69.99", "year", "#alternate-products")
 
