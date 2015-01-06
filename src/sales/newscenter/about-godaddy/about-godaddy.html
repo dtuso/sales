@@ -1397,17 +1397,16 @@ metaOgDescription: "[@L[cds.sales/gd/hosting/web-hosting:og-description]@L]"
       });
 
       $(document).ready(function(){
-        $(".person").click(function(){
-          $(".customers").css('padding-top', '0');
-        });
-        $(".close-button").click(function(){
-          $(".customers").css('padding-top', '150px'); 
-        });
-      });
-
-      $(document).ready(function(){
         if($(".person").hasClass("buddy")){
-          $(".customers").css('padding-top', '150px'); 
+          $(".customers").css('padding-top', '150px');
+          $(".person").click(function(){
+            $("#section-team .inner h2").css('color', '#fff');
+            $(".customers").css('padding-top', '0');
+          });
+          $(".close-button").click(function(){
+            $("#section-team .inner h2").css('color', '#333333');
+            $(".customers").css('padding-top', '150px'); 
+          });
         }
       });
     </script>
