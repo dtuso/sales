@@ -1,8 +1,8 @@
 ---
 location: sales/newscenter/about-godaddy.aspx
 id: 5488c56af778fc16ec4de56c
-name: GCE-32100, 33789
-comments: About Us ... India News Releases section -  URL for India News Release / Update PR contacts on the About Us Page
+name: GCE-34406
+comments: Adding Buddy and Arne to the About-Us Page
 url: http://www.dev-godaddy.com/newscenter/about-godaddy.aspx
 cssVersionOverride: 7
 pageJsVersionOverride: 2
@@ -265,6 +265,17 @@ metaOgDescription: "[@L[cds.sales/gd/hosting/web-hosting:og-description]@L]"
                   </div>
                   <div class="mask"></div>
                 </li>
+                <li class="person arne-josefsberg" data-bio="arne-josefsberg">
+                  <div class="solazy img face" data-sl-src="[@T[link:<imageroot />]@T]fos/newscenter/about_godaddy/img/team/thumbnail-arne-josefsberg.jpg"></div>
+                  <div class="info">
+                    <div class="bg"></div>
+                    <div class="text">
+                      <div class="name">[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-2-ArneJosefsberg]@L]</div>
+                      <div class="position">[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-5-ChiefInfrastructureOfficerExecutiveVicePresident]@L]</div>
+                    </div>
+                  </div>
+                  <div class="mask"></div>
+                </li>
                 <li class="person auguste-goldman" data-bio="auguste-goldman">
                   <div class="solazy img face" data-sl-src="[@T[link:<imageroot />]@T]fos/newscenter/about_godaddy/img/team/thumbnail-auguste-goldman.jpg"></div>
                   <div class="info">
@@ -276,18 +287,7 @@ metaOgDescription: "[@L[cds.sales/gd/hosting/web-hosting:og-description]@L]"
                   </div>
                   <div class="mask"></div>
                 </li>
-                <li class="person jeff-king" data-bio="jeff-king">
-                  <div class="solazy img face" data-sl-src="[@T[link:<imageroot />]@T]fos/newscenter/about_godaddy/img/team/thumbnail-jeff-king.jpg"></div>
-                  <div class="info">
-                    <div class="bg"></div>
-                    <div class="text">
-                      <div class="name">[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-2-JeffKing]@L]</div>
-                      <div class="position">[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-3-VicePresidentHosting]@L]</div>
-                    </div>
-                  </div>
-                  <div class="mask"></div>
-                </li>
-                <li class="person first skip0 james-carroll" data-bio="james-carroll">
+                <li class="person james-carroll" data-bio="james-carroll">
                   <div class="solazy img face" data-sl-src="[@T[link:<imageroot />]@T]fos/newscenter/about_godaddy/img/team/thumbnail-james-carroll.jpg"></div>
                   <div class="info">
                     <div class="bg"></div>
@@ -320,6 +320,28 @@ metaOgDescription: "[@L[cds.sales/gd/hosting/web-hosting:og-description]@L]"
                   </div>
                   <div class="mask"></div>
                 </li>
+                 <li class="person steven-aldrich" data-bio="steven-aldrich">
+                  <div class="solazy img face" data-sl-src="[@T[link:<imageroot />]@T]fos/newscenter/about_godaddy/img/team/thumbnail-steven-aldrich.jpg"></div>
+                  <div class="info">
+                    <div class="bg"></div>
+                    <div class="text">
+                      <div class="name">[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-2-StevenAldrich]@L]</div>
+                      <div class="position">[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-5-SeniorVicePresidentOfApplications]@L]</div>
+                    </div>
+                  </div>
+                  <div class="mask"></div>
+                </li>
+                <li class="person jeff-king" data-bio="jeff-king">
+                  <div class="solazy img face" data-sl-src="[@T[link:<imageroot />]@T]fos/newscenter/about_godaddy/img/team/thumbnail-jeff-king.jpg"></div>
+                  <div class="info">
+                    <div class="bg"></div>
+                    <div class="text">
+                      <div class="name">[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-2-JeffKing]@L]</div>
+                      <div class="position">[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-3-VicePresidentHosting]@L]</div>
+                    </div>
+                  </div>
+                  <div class="mask"></div>
+                </li>
                 <li class="person david-popowitz" data-bio="david-popowitz">
                   <div class="solazy img face" data-sl-src="[@T[link:<imageroot />]@T]fos/newscenter/about_godaddy/img/team/thumbnail-david-popowitz2.jpg"></div>
                   <div class="info">
@@ -331,17 +353,19 @@ metaOgDescription: "[@L[cds.sales/gd/hosting/web-hosting:og-description]@L]"
                   </div>
                   <div class="mask"></div>
                 </li>
-                <li class="person steven-aldrich" data-bio="steven-aldrich">
-                  <div class="solazy img face" data-sl-src="[@T[link:<imageroot />]@T]fos/newscenter/about_godaddy/img/team/thumbnail-steven-aldrich.jpg"></div>
+                ##if(countrySiteAny(wwww) || countrySiteAny(ca))
+                <li class="person skip4 buddy" data-bio="buddy">
+                  <div class="solazy img face" data-sl-src="[@T[link:<imageroot />]@T]fos/newscenter/about_godaddy/img/team/thumbnail-buddy.jpg"></div>
                   <div class="info">
                     <div class="bg"></div>
                     <div class="text">
-                      <div class="name">[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-2-StevenAldrich]@L]</div>
-                      <div class="position">[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-5-SeniorVicePresidentOfApplications]@L]</div>
+                      <div class="name">[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-BuddyName]@L]</div>
+                      <div class="position">[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-BuddyTitle]@L]</div>
                     </div>
                   </div>
                   <div class="mask"></div>
                 </li>
+                ##endif
               </ul>
 
               <ul class="persons directors">
@@ -535,6 +559,28 @@ metaOgDescription: "[@L[cds.sales/gd/hosting/web-hosting:og-description]@L]"
                     </div>
                   </div>
                 </div>
+                <div class="bio arne-josefsberg left dark">
+                  <div class="photo">
+                    <div class="solazy img" data-sl-condition=".bio.arne-josefsberg|display:block" data-sl-src="[@T[link:<imageroot />]@T]fos/newscenter/about_godaddy/img/team/full-arne-josefsberg.jpg"></div>
+                  </div>
+                  <div class="inner left">
+                    <a href="javascript:void(0)" class="close-button">&nbsp;</a>
+                    <h3 class="name">[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-2-ArneJosefsberg]@L]</h3>
+                    <div class="position">[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-5-ChiefInfrastructureOfficerExecutiveVicePresident]@L]</div>
+                    <div class="nav">
+                      <div class="icons">
+                        <a class="icon linkedin" href="https://www.linkedin.com/pub/arne-josefsberg/2/696/667" target="_blank">&nbsp;</a>
+                        <a class="icon resumup" href="http://about.me/ajosefsberg" target="_blank">&nbsp;</a>
+                      </div>
+                    </div>
+                    <div class="part about">
+                      <p>[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-60-ArneAbout1]@L]</p>
+                      <p>[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-60-ArneAbout2]@L]</p>
+                      <p>[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-46-ArneAbout3]@L]</p>
+                      <p>[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-46-ArneAbout4]@L]</p>
+                    </div>
+                  </div>
+                </div>
                 <div class="bio auguste-goldman left dark">
                   <div class="photo">
                     <div class="solazy img" data-sl-condition=".bio.auguste-goldman|display:block" data-sl-src="[@T[link:<imageroot />]@T]fos/newscenter/about_godaddy/img/team/full-auguste-goldman.jpg"></div>
@@ -678,6 +724,25 @@ metaOgDescription: "[@L[cds.sales/gd/hosting/web-hosting:og-description]@L]"
                       <p>[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-40-ItSStevenSJobToSetAndExecute]@L]</p>
                       <p>[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-64-StevenBringsOverADecadeOfExperienceAtIntuit]@L]</p>
                       <p>[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-39-AfterHoursStevenServesAsPresidentOfTheBoard]@L]</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="bio buddy left light-bg">
+                  <div class="photo">
+                    <div class="solazy img" data-sl-condition=".bio.buddy|display:block" data-sl-src="[@T[link:<imageroot />]@T]fos/newscenter/about_godaddy/img/team/full-buddy2.jpg"></div>
+                  </div>
+                  <div class="inner left">
+                    <a href="javascript:void(0)" class="close-button">&nbsp;</a>
+                    <h3 class="name">[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-BuddyName]@L]</h3>
+                    <div class="position">[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-BuddyTitle]@L]</div>
+                    <div class="part about">
+                      <p>[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-BuddyBio1]@L]</p>
+                      <p>[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-BuddyBio2]@L]</p>
+                      <p>[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-BuddyBio3]@L]</p>
+                      <p>[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-BuddyBio4]@L]</p>
+                      <p>[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-BuddyBio5]@L]</p>
+                      <p>[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-BuddyBio6]@L]</p>
+                      <p>[@L[cds.sales/newscenter/about-godaddy:NewsCenterAbout-BuddyBio7]@L]</p>
                     </div>
                   </div>
                 </div>
@@ -1328,6 +1393,21 @@ metaOgDescription: "[@L[cds.sales/gd/hosting/web-hosting:og-description]@L]"
         }
         if(getUrlParameter('section')=='news-releases') {
           $('html, body').animate({scrollTop:$('#section-news-releases').position().top});
+        }
+      });
+
+      $(document).ready(function(){
+        $(".person").click(function(){
+          $(".customers").css('padding-top', '0');
+        });
+        $(".close-button").click(function(){
+          $(".customers").css('padding-top', '150px'); 
+        });
+      });
+
+      $(document).ready(function(){
+        if($(".person").hasClass("buddy")){
+          $(".customers").css('padding-top', '150px'); 
         }
       });
     </script>
