@@ -1,12 +1,15 @@
 block vars
-- icode = "";
-- lazyLoad = false;
-- backgroundImage = "";
-- playButton = "";
-- tagline = "";
-- cta = "";
-- youtubeId = "";
-- tileName = "";
+  - icode = "";
+  - lazyLoad = false;
+  - backgroundImage = "";
+  - playButton = "";
+  - tagline = "";
+  - cta = "";
+  - youtubeId = "";
+  - tileName = "";
+
+style
+  include:css ./css/full-video.css
 
 if(youtubeId != "")
   atlantis:webstash(type="js")
@@ -15,7 +18,7 @@ if(youtubeId != "")
       $(document).ready(function(){
         if(typeof youtubeVideo === 'undefined'){
           window.youtubeVideo = {
-            _src: 'http://www.youtube.com/embed/',
+            _src: 'https://www.youtube.com/embed/',
             loadVideo: function(videoId, height, width, callback, parameters, container, insertType){
               if(typeof parameters === 'object'){
                 var paramString = '';
@@ -89,10 +92,10 @@ if(youtubeId != "")
           }).css({'cursor':'pointer'});
         });
       });
-div(style=(typeof backgroundImage != 'undefined' && !lazyLoad ? 'background-image: url(' + backgroundImage + ');' : ''), data-lazy-load = backgroundImage && lazyLoad ? '{"src":"' + backgroundImage + '"}' : '', data-icode="#{icode}", data-tile="#{tileName}", data-youtube-id="#{youtubeId}", class="marquee marquee-white full-video")
+div(style!=(typeof backgroundImage != "undefined" && !lazyLoad ? "background-image: url(" + backgroundImage + ");" : ""), data-lazy-load != backgroundImage && lazyLoad ? "{'src':'" + backgroundImage + "'}" : "", data-icode="#{icode}", data-tile="#{tileName}", data-youtube-id="#{youtubeId}", class="video-marquee video-marquee-white full-video")
   div.container.relative-position.video-info
     div.row
-      div.col-sm-10.col-sm-offset-1.col-xs-12.marquee-all-centered
-        img.play-button(src="#{playButton}")
+      div.col-sm-10.col-sm-offset-1.col-xs-12.video-marquee-all-centered
+        img.play-button(src!=playButton)
         h4 !{tagline}
         span.cta !{cta}

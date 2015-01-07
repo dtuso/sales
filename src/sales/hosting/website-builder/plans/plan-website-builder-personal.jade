@@ -1,0 +1,15 @@
+extend ../../../../../src/templates/plan-tile
+
+append vars
+  - title = "Personal";
+  - description = "Perfect for personal websites"
+  - features = ["<b>Free Domain with annual Plan</b>","<b>50</b> Personal Themes","<b>Unlimited</b> Pages","<b>1 GB</b> Disk Space","<b>150 GB</b> Bandwidth"];
+  - pfid = "7524";
+  - listID="product-A";
+  - showDropDownList = true;
+
+block planOptions 
+  +addPlanOption("1", "7521", "wsb_personal_1month")
+  +addPlanOption("12", "7524", "wsb_personal_12month")
+  +addPlanOption("24", "7525", "wsb_personal_24month")
+  +addPlanOption("36", "7526", "wsb_personal_36month")
