@@ -1,7 +1,7 @@
 ---
 location: sales/offers/online-business.aspx
-id: 54a71948f778fc235082e32a
-name: GCE-32414
+id: 54ad8a55f778fc2e5c59197f
+name: GCE-32414-dom
 comments: GOT rebrand 2015 SuperBowl
 url: http://www.dev-godaddy.com/offers/online-business.aspx
 assetPath: false
@@ -15,6 +15,9 @@ prepend endOfPageScripts
     $(document).ready(function() {
       
     });
+
+block domainSearch
+  // 
 
 block pageStyles
   style
@@ -39,4 +42,5 @@ block alternatives
 
 //- there's always a catch... show it here.
 block disclaimers
-  section#disclaimers Disclaimers goes here
+  section#disclaimers 
+    p Disclaimers goes here
