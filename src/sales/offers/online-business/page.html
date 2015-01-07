@@ -553,72 +553,7 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
       }
     };
 
-    var PlanConfig = {
-      changeSelected: function (li, parent) {
-        var content = li.find('div[data-main=true]').html();
-        parent.find('div:first').html(content);
-        if (li.hasClass('availabletld')) {
-          $dsd.find('.txtTld').val(li.attr('data-view'));
-        }
-      }, apiPlantoCart: function (data) {
-        if(typeof data != "object") return;
-
-        data = data || {};
-        
-        data.action = data.action || 'add';
-        data.itcCode = data.itcCode || false;
-        data.ciCode = data.ciCode || false;
-        data.quantity = data.quantity || '1';
-        data.planSelected = data.planSelected || false;
-        data.addOns = data.addOns || false;
-        data.domain = $dsd.find('[name="domaintoadd"]').val() || false;
-
-        for(key in data){
-          if(data[key]===false) return;
-        }
-        
-        var apiEndpoint = PlanConfig.getCartAPIUrl(data);
-
-        var success = true;
-        $.ajax({
-            url: apiEndpoint,
-            type: 'POST',
-            dataType: 'json',
-            cache: false,
-            success: function(){
-              ##if(isManager())
-                window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" secure="true" />]@T]';
-              ##else
-                window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" secure="true"/>]@T]';
-              ##endif
-            },
-            error: function(){
-                if(console != undefined) {
-                  console.log('package api post failure');
-                }
-                success = false;
-            }
-          });
-         
-      }, getCartAPIUrl:function(data) {
-            var url = '[@T[link:<relative path="/api/package/{0}/{1}/{2}/{3}/{4}"/>]@T]'.replace('{0}',data.action).replace('{1}',data.itcCode).replace('{2}',data.ciCode).replace('{3}',data.quantity).replace('{4}',data.planSelected);
-            if(url.indexOf('?') > -1){
-              url += '&';
-            }
-            else {
-              url += '?';
-            }
-            url += 'domain=' + data.domain + '&sourceCode=domaincheck';
-            if (data.addOns != 'noAddOns'){
-              url = url += '&addons=' + data.addOns + '-1';
-            }
-           
-            return url;
-        }
-    };
-
     function domainSearchFormSubmit(e) {
-
 
       // Domain Search
       PlanBox6UI.recordClick(e, '92710', $(this)[0]);
@@ -757,6 +692,11 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
       return; 
     } /* end domainSearchFormSubmit() */
 
+
+    function verifyDomainIsStillAvailable(domain,e,callbackFn){
+      callbackFn(domain,e);
+    }
+
     function goToDppCheckoutPage(e) {
       // 1) reverify this domain is avail using:
       //    [@T[link:<relative path='domains/actions/json/domainavailabilitycheck.aspx'></relative>]@T]
@@ -767,13 +707,15 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
       //      Response back from API  {"CurrentlyPending":1,"Success":true}
       //      if true, redirect to DPP (URL????)
       var domain = $(e.target).data('domain').Fqdn;
-
-      addDomainToCart(e);
+      var callbackFn = function(){
+        addDomainToCart(domain,e);  
+      };      
+      verifyDomainIsStillAvailable(domain, e, callbackFn);
+      
     }
 
 
-    function addDomainToCart(e){
-      var domain = $(e.target).data('domain').Fqdn;
+    function addDomainToCart(domain,e){
  
       $dsd.find('.search-again').hide();     
       $dsd.find('.domain-search-btn').addClass('disabled');
