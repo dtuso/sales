@@ -99,8 +99,4 @@ atlantis:webstash(type="css")
     if(features)
       each feature, index in features
         //- Text at the bottom that can have multiple "rows"
-        if (index < 3)
-          .plan-item 
-            strong !{feature}
-        else
-          .plan-item !{feature}
+        .plan-item !{feature}

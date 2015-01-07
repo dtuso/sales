@@ -11,7 +11,6 @@ block vars
   - colClass = "col-md-15"
   - slideBegin = 0, slideEnd = 0;
   - options = options || {};
-  - options.backgroundColor = options.backgroundColor || "bg-gray-light";
   - options.icode = options.icode || "";
 
 
@@ -35,6 +34,9 @@ mixin addTab(item)
   -slideEnd = tabCount
   .features-carousel-pro-icon(data-begin="#{slideBegin}", data-end="#{slideEnd}", class=colClass)
     div(data-center-element='{"vertical":{"target":{"method":"parents","selector":".features-carousel-pro-icon"},"verticalStyle":"margin-top","elementHeightMethod":"outerHeight","targetWidthMethod":"height"}}')
+      if (item.icon)
+        .feature-carousel-icon
+          span.uxicon(class="#{item.icon}")
       if (item.logo)
         .feature-carousel-pro-image
           img.img-responsive.img-center(
@@ -47,6 +49,8 @@ mixin addTab(item)
   - tabCount++        
   - slideBegin = ++slideEnd
 
+style.
+    .feature-carousel-icon {font-size: 36px;margin-bottom: 10px;}
 
 
 +renderTabbedCarousel(options)
@@ -78,10 +82,10 @@ block endOfPageScripts
       var slideNum = $(this).data("begin");
       $(".features-carousel-pro-icon").removeClass("active");
       $(this).addClass("active");
-      $('#carousel-pro-features').carousel(slideNum);
+      $('##{id}').carousel(slideNum);
     });
 
-    $('#carousel-pro-features').on('slid.bs.carousel', function () {
+    $('##{id}').on('slid.bs.carousel', function () {
       var carouselData = $(this).data('bs.carousel');
       var currentIndex = carouselData.getActiveIndex();
       $(".features-carousel-pro-icon").each(function() {
