@@ -22,10 +22,9 @@
     <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7914312/697366/css/fonts.css"> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags"><Parameters><Parameter key="manifest" value="salesuxcore" /></Parameters></Data>]@P]
     <link href="[@T[link:<cssroot />]@T]/fos/mike/0.7.0/css/sahara.css" rel="stylesheet">
-    <link href="[@T[link:<cssroot />]@T]/ux/dev-brand/css/uxcontrols.css" rel="stylesheet">
     <link href="[@T[link:<cssroot />]@T]/ux/dev-brand/css/uxcore.css" rel="stylesheet">
+    <link href="[@T[link:<cssroot />]@T]/ux/dev-brand/css/uxcontrols.css" rel="stylesheet">
     <script src="[@T[link:<javascriptroot />]@T]/ux/dev-brand/js/uxcontrols.js"></script>
-    <script src="[@T[link:<javascriptroot />]@T]/ux/dev-brand/js/uxcontrols.en.js"></script>
     <script type="text/javascript">
       window.config = window.config || {};
       window.config.uxcore = true;
@@ -570,17 +569,17 @@
                       <h3 class="text-center">All Plans Include</h3>
                     </div>
                   </div>
-                  <div class="col-sm-4 undefined">
+                  <div class="col-sm-4 ">
                     <div class="include-check">Free domain with annual plan</div>
                     <div class="include-check">Free Email Addresses</div>
                     <div class="include-check">One-click install of 200+ Free Applications</div>
                   </div>
-                  <div class="col-sm-4 undefined">
+                  <div class="col-sm-4 ">
                     <div class="include-check">1 GB storage MySQL Linux and 200 MB storage Windows SQL Databases</div>
                     <div class="include-check">Flexible, easy-to-use control panel</div>
                     <div class="include-check">24/7 security monitoring and DDoS protection</div>
                   </div>
-                  <div class="col-sm-4 undefined">
+                  <div class="col-sm-4 ">
                     <div class="include-check">Compatible with all major browsers</div>
                     <div class="include-check">One certificate covers unlimited servers</div>
                     <div class="include-check">One-click installation for GoDaddy hosted accounts</div>
@@ -1142,10 +1141,6 @@
     <!--script-->
     <!--  include ../../../templates/planTile.js-->
     <script>
-      $(document).ready(function() {
-        var ultimatePlanRenderedHtml = renderPlanTile();
-        $('.plan-pro:nth-child(3)').html(ultimatePlanRenderedHtml);
-      });
       function comparePlans(id){
         if(id=="cpanel-tab"){
           $("#parallels-tab").hide();
