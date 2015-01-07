@@ -1,0 +1,16 @@
+extend ../../../../../src/templates/plan-tile
+
+append vars
+  - title = "Unlimited";
+  - description = "Good for higher traffic. Twice the power, memory, email and more."
+  - features = ["<b>Free Domain with annual Plan</b>","<b>300</b> Business & Personal Themes","<b>Unlimited</b> Pages","<b>50 GB</b> Disk Space","<b>1000 GB</b> Bandwidth","<b>1</b> Business Email Addresses","<b>Mobile</b> Site","<b>Search Engine Optimization</b>","<b>One-Click</b> Social Media Manager","<b>1 year SSL Certificate</b>"];
+  - pfid = "7514";
+  - listID="product-C";
+  - flagText = "Includes SEO";
+  - showDropDownList = true;
+
+block planOptions 
+  +addPlanOption("1", "7503", "wsb_businessplus_1month")
+  +addPlanOption("12", "7514", "wsb_businessplus_12month")
+  +addPlanOption("24", "7515", "wsb_businessplus_24month")
+  +addPlanOption("36", "7516", "wsb_businessplus_36month")

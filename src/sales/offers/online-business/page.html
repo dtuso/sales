@@ -533,10 +533,7 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
       }); 
 
     });
-
-
     
-    $.ajaxSetup({cache:false});
     
     var PlanBox6UI = {
       changeSelected: function (li, parent) {
@@ -605,13 +602,14 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
       $dsd.find('.domain-search-btn').addClass('disabled');
       $dsd.find('.search-domain-loading').fadeIn();
       
-      $.ajaxSetup({cache:false});
       var apiEndpoint = '[@T[link:<relative path="~/domainsapi/v1/search/free"><param name="domain" value="domain" /><param name="itc" value="itc" /></relative>]@T]';
       apiEndpoint = apiEndpoint.replace('domain=domain', 'q=' + domain);
       apiEndpoint = apiEndpoint.replace('itc=itc', 'key=' + got1Page.offersCodes.itc);
 
       $dsd.find(".searched-domain").text(domain);      
-      $dsd.data( "exactMatchDomain", null)
+      $dsd.data( "exactMatchDomain", null);
+
+      $.ajaxSetup({cache:false});
       $.ajax({
         url: apiEndpoint,
         type: 'GET',
@@ -627,13 +625,18 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
             alternateDomains = data.RecommendedDomains || [];
             
           if(isAvailable) {
+             /***********************/
+            /* DOMAIN IS AVAILABLE */
+
             $dsd
               .addClass("available")
-              .find('.add-domain-btn').data( "domain", exactMatchDomain );
-            slideToAvailable($gotSlides);            
-          } else {
+              .find('.add-domain-btn').data( "domain", exactMatchDomain ).data("spinresult", false);
+            slideToAvailable($gotSlides);   
 
-            /* NOT AVAILABLE */
+          } else {
+             /*****************************/
+            /* DOMAIN IS _NOT_ AVAILABLE */
+
             if(alternateDomains.length > 0) {
               // SHOW SPINS
               // .Fqdn = full domain name 
@@ -657,6 +660,7 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
                     $('<button class="btn btn-success cta-small">')
                       .html( "Select &amp; Continue" ) 
                       .data( "domain", item )
+                      .data("spinresult", true)
                       .on('click', goToDppCheckoutPage)
                   );
                 $listOfDivs.append($domain);
@@ -694,7 +698,72 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
 
 
     function verifyDomainIsStillAvailable(domain,e,callbackFn){
-      callbackFn(domain,e);
+
+      var $target = $(e.target);
+      var isSpinResult = $target.data('spinresult') === true; 
+
+alert(isSpinResult);
+debugger;
+
+      if(isSpinResult) {
+        // 1) check to see if this is a spinner result
+        //    - replace thier click button with a spinner
+        //    - call verification check 
+        //      - if verified send them to callback
+        //      - display error message
+
+        $dsd.find('.search-again').hide();     
+        $dsd.find('.domain-search-btn').addClass('disabled');
+        $target.addClass('disabled');
+        $dsd.find('.add-domain-loading').fadeIn();
+
+        PlanBox6UI.recordClick(e, '92707' /*got1Page.offersCodes.ci.apiAddCi*/, $(this)[0]);
+        PlanBox6UI.recordClick(e, '84415' /*got1Page.offersCodes.ci.apiDomainAddToCart*/, $(this)[0]);
+
+        var url = '[@T[link:<relative path="/api/package/add/{1}/92707/1/{4}"/>]@T]'.replace('{1}',got1Page.offersCodes.itc).replace('{4}',got1Page.offersCodes.plan);
+        url += (url.indexOf('?') > -1) ? '&' : '?';
+        url += 'domain=' + domain + '&sourceCode=domaincheck';
+        if (got1Page.offersCodes.addOns != 'noAddOns'){
+          url = url += '&addons=' + got1Page.offersCodes.addOns + '-1';
+        }
+
+        $.ajaxSetup({cache:false});
+        $.ajax({
+          url: url,
+          type: 'POST',
+          dataType: 'json',
+          cache: false,
+          success: function(data){
+            if(data.success) {
+              alert('still available!');
+              return;
+              // callbackFn(domain,e);
+            } else {
+              alert('NOT available!');
+            }
+          },
+          error: function(){
+            if(console != undefined) {
+              console.log('package api post failure');
+            }
+          }
+        });
+        return;
+
+      } else {
+        // 2) if not a spinner result, meaning they clicked an exact match
+        //    - go ahead and add spinner for domain adding
+        //    - send them straight to the callback
+        $dsd.find('.search-again').hide();
+        $dsd.find('.domain-search-btn').addClass('disabled');
+        $target.addClass('disabled');
+        $dsd.find('.add-domain-loading').fadeIn();
+
+        callbackFn(domain,e);
+
+        return;
+      }
+
     }
 
     function goToDppCheckoutPage(e) {
@@ -707,16 +776,27 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
       //      Response back from API  {"CurrentlyPending":1,"Success":true}
       //      if true, redirect to DPP (URL????)
       var domain = $(e.target).data('domain').Fqdn;
-      var callbackFn = function(){
+      verifyDomainIsStillAvailable(domain, e, function(){
         addDomainToCart(domain,e);  
-      };      
-      verifyDomainIsStillAvailable(domain, e, callbackFn);
+      });
       
     }
 
 
     function addDomainToCart(domain,e){
+
+
+
+      // 2) if domain is still avail, use: 
+      //    https://www.dev-godaddy.com/api/dpp/searchresultscart/11/?domain=blahblah.com&packageid=gybo_1email_1yr&dpp_itc=slp_GOT
+      //    [@T[link:<relative path='~/api/dpp/searchresultscart/11/'><param name="domain" value="domain" /><param name="packageid" value="packageid" /><param name="dpp_itc" value="dpp_itc" /></relative>]@T]
+      //      Response back from API  {"CurrentlyPending":1,"Success":true}
+      //      if true, redirect to DPP (URL????)
+
+
  
+
+      // VERIFY DOMAIN IS STILL AVAILABLE
       $dsd.find('.search-again').hide();     
       $dsd.find('.domain-search-btn').addClass('disabled');
       $(this).addClass('disabled');
@@ -724,34 +804,6 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
         
       PlanBox6UI.recordClick(e, '92707' /*got1Page.offersCodes.ci.apiAddCi*/, $(this)[0]);
       PlanBox6UI.recordClick(e, '84415' /*got1Page.offersCodes.ci.apiDomainAddToCart*/, $(this)[0]);
-
-      var url = '[@T[link:<relative path="/api/package/add/{1}/92707/1/{4}"/>]@T]'.replace('{1}',got1Page.offersCodes.itc).replace('{4}',got1Page.offersCodes.plan);
-      url += (url.indexOf('?') > -1) ? '&' : '?';
-      url += 'domain=' + domain + '&sourceCode=domaincheck';
-      if (got1Page.offersCodes.addOns != 'noAddOns'){
-        url = url += '&addons=' + got1Page.offersCodes.addOns + '-1';
-      }
-
-      var success = true;
-      $.ajax({
-          url: url,
-          type: 'POST',
-          dataType: 'json',
-          cache: false,
-          success: function(){
-            ##if(isManager())
-              window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" secure="true" />]@T]';
-            ##else
-              window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" secure="true"/>]@T]';
-            ##endif
-          },
-          error: function(){
-              if(console != undefined) {
-                console.log('package api post failure');
-              }
-              success = false;
-          }
-        });
 
 
 
