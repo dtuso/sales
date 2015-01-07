@@ -1,0 +1,1326 @@
+---
+location: sales/hosting/website-builder.aspx 
+id: 5475076df778fc0a98909646
+name: SEM-213
+comments: FAQ tab link changes to Expansion pages
+---
+{% extends 'layouts/base.html' %}
+{% block pageTitle %}
+  ##if(activeLanguageAny(es))
+  <title>[@L[cds.sales/gd/hosting/website-builder:page-title-es]@L]</title>
+  ##elseif(countrySiteAny(au))
+  <title>[@L[cds.sales/gd/hosting/website-builder:page-title-au]@L]</title>
+  ##elseif(countrySiteAny(ca))
+  <title>[@L[cds.sales/gd/hosting/website-builder:page-title-ca]@L]</title>
+  ##elseif(countrySiteAny(in))
+  <title>[@L[cds.sales/gd/hosting/website-builder:page-title-in]@L]</title>
+  ##elseif(countrySiteAny(uk))
+  <title>[@L[cds.sales/gd/hosting/website-builder:page-title-uk]@L]</title>
+  ##else
+  <title>[@L[cds.sales/gd/hosting/website-builder:page-title]@L]</title>
+  ##endif
+{% endblock %}
+{% block pageDescription %}
+  ##if(activeLanguageAny(es))
+  <meta name="description" content="[@L[cds.sales/gd/hosting/website-builder:meta-description-es]@L]" />
+  ##elseif(countrySiteAny(au))
+  <meta name="description" content="[@L[cds.sales/gd/hosting/website-builder:meta-description-au]@L]" />
+  ##elseif(countrySiteAny(ca))
+  <meta name="description" content="[@L[cds.sales/gd/hosting/website-builder:meta-description-ca]@L]" />
+  ##elseif(countrySiteAny(in))
+  <meta name="description" content="[@L[cds.sales/gd/hosting/website-builder:meta-description-in]@L]" />
+  ##elseif(countrySiteAny(uk))
+  <meta name="description" content="[@L[cds.sales/gd/hosting/website-builder:meta-description-uk]@L]" />
+  ##else
+  <meta name="description" content="[@L[cds.sales/gd/hosting/website-builder:meta-description]@L]" />
+  ##endif
+{% endblock %}
+
+{% block metahead %}
+  {% parent %}
+
+##if(countrySiteAny(in,pk))
+    <!-- International Background Images -->
+    <style type="text/css">
+    .tab-content-plans-pricing-bg-website-builder {
+      background-image: url("[@T[link:<cssroot />]@T]fos/201401/hosting/website-builder/img/IN_planbg.jpg");
+    }
+    .plan-pricing-help {
+      background-image: url("[@T[link:<cssroot />]@T]fos/201401/hosting/website-builder/img/IN_bg-here-to-help.jpg");
+    }
+    </style>
+##endif
+
+##if(countrySiteAny(my, ph, sg))
+    <!-- International Background Images -->
+    <style type="text/css">
+    .tab-content-plans-pricing-bg-website-builder {
+      background-image: url("[@T[link:<cssroot />]@T]fos/201401/hosting/website-builder/img/ASIA_planbg.jpg");
+    }
+    .plan-pricing-help {
+      background-image: url("[@T[link:<cssroot />]@T]fos/201401/hosting/website-builder/img/ASIA_bg-here-to-help.jpg");
+    }
+    </style>
+##endif
+
+##if(countrySiteAny(tr))
+<style>
+.tab-content-plans-pricing-bg-website-builder {
+    background-image: url("[@T[link:<cssroot />]@T]fos/201401/hosting/website-builder/img/update_MED_wsb_banner_content_eng.jpg");
+  }
+</style>
+##elseif(countrySiteAny(dk,fi,no,se,at,pl,hu,ru,ua,gr))
+<style>
+.tab-content-plans-pricing-bg-website-builder {
+    background-image: url("[@T[link:<cssroot />]@T]fos/201401/hosting/website-builder/img/NOR_wsb_banner_content_eng.min.jpg");
+  }
+</style>
+##elseif(activeLanguageAny(en))
+<style>
+.tab-content-plans-pricing-bg-website-builder {
+  background-image: url("[@T[link:<cssroot />]@T]fos/201401/hosting/website-builder/img/wsb_banner_content_eng.jpg");
+}
+</style>
+##else
+<style type="text/css">
+.tab-content-plans-pricing-bg-website-builder {
+  background-image: url("[@T[link:<cssroot />]@T]fos/201401/hosting/website-builder/img/wsb_banner_content_int.jpg");
+}
+</style>
+##endif
+
+##if(activeLanguageAny(en))
+##else
+<style>
+.xsell-tile {
+  width: auto;
+}
+.xsell-content {
+  width: auto;
+  margin-top: -20px;
+}
+</style>
+##endif
+
+<style>
+  .main-banner-content.main-banner-content-website-builder > .misc-banner-content-website-builder,
+  .misc-banner-link {
+    color: #fff !important;
+  }
+  .vat-tax-message { line-height:16px;width:302px;margin-bottom:5px;margin-top:-3px; }
+
+.plan-pricing-apps>h2,.plan-pricing-apps>p{text-align:center}
+#apps{margin:0 auto;padding-bottom:60px}
+#apps ul{list-style:none}
+.plan-pricing-seo{padding:2.142857143em 4.285714286em;padding-top:0;background-image:none;position:relative}
+.plan-pricing-seo .badge-wrap{position:relative;text-align:center}
+.plan-pricing-seo .badge{background-color:#7db701;border-bottom:3px solid #679b08;-moz-box-shadow:2px 2px 0 #e5e5e5;-webkit-box-shadow:2px 2px 0 #e5e5e5;box-shadow:2px 2px 0 #e5e5e5;display:inline-block;font-size:20px;line-height:normal;padding:12px 55px;position:relative;text-transform:uppercase;top:0;white-space:normal}
+.plan-pricing-seo .row-one .column-two h3{margin-top:122px}
+.plan-pricing-seo .row-one .column-two>a{text-transform:capitalize}
+.plan-pricing-seo .row-one .column-two h3,.plan-pricing-seo .row-one .column-two p,.plan-pricing-seo .row-one .column-two a{padding-left:22px}
+.plan-pricing-seo .row-two .logos{background-image:url([@T[link:<cssroot/>]@T]fos/sales/themes/scotty/hosting/website-builder/img/bg-google-three-steps.jpg);background-position:top right;background-repeat:no-repeat;margin-top:50px;min-height:54px}
+.plan-pricing-seo .row-three{border:1px solid #ff8a00;margin-top:36px;position:relative;display:table;width:100%;padding:30px;}
+  
+.plan-pricing-seo .row-three p{font-size:35px;font-weight:100;line-height:normal;letter-spacing:-0.5px;display:table-cell;vertical-align:middle;width:initial;float:none}
+.plan-pricing-seo .row-three form{position:relative;top:0;right:0;float:none;display:table-cell;vertical-align:middle;text-align:right}
+  
+.plan-pricing-seo .row-three form label{position:absolute}
+#seo-interactive,#seo-interactive div{background-image:url([@T[link:<cssroot/>]@T]fos/201401/hosting/website-builder/img/seo_interactive_sprite.png);background-repeat:no-repeat;position:absolute;-webkit-transition:opacity .2s ease-in-out,visibility .2s ease-in-out;-moz-transition:opacity .2s ease-in-out,visibility .2s ease-in-out;-ms-transition:opacity .2s ease-in-out,visibility .2s ease-in-out;-o-transition:opacity .2s ease-in-out,visibility .2s ease-in-out;transition:opacity .2s ease-in-out,visibility .2s ease-in-out}
+#seo-interactive{display:block;list-style:none;margin-top:12px;position:relative;height:372px;width:475px;overflow:hidden}
+.wsb-business-plus-plan {margin: 40px auto;width: 352px;height: 269px;}
+#seo-interactive .wsb .seo-icon{background-color:#ff8a00;background-position:-4px -497px;height:75px;width:75px;-moz-border-radius:37px;-webkit-border-radius:37px;border-radius:37px;top:5px;left:261px}
+#seo-interactive .wsb .seo-icon:hover,#seo-interactive .wsb .seo-icon.active-seo-icon{height:83px;width:83px;-moz-border-radius:42px;-webkit-border-radius:42px;border-radius:42px;top:1px;left:257px}
+#seo-interactive .wsb .seo-screen{background-position:-196px -380px;height:195px;width:276px;top:76px;left:178px}
+#seo-interactive .wsb .seo-arrow{background-position:-2px -373px;height:79px;width:38px;top:44px;left:320px}
+#seo-interactive .facebook .seo-icon{background-color:#3456a3;background-position:-4px -582px;height:95px;width:95px;-moz-border-radius:47px;-webkit-border-radius:47px;border-radius:47px;top:6px;left:112px}
+#seo-interactive .facebook .seo-icon:hover,#seo-interactive .facebook .seo-icon.active-seo-icon{height:103px;width:103px;-moz-border-radius:52px;-webkit-border-radius:52px;border-radius:52px;top:2px;left:108px}
+#seo-interactive .facebook .seo-screen{background-position:-177px -574px;height:205px;width:316px;top:65px;left:159px}
+#seo-interactive .facebook .seo-arrow{background-position:-46px -372px;height:79px;width:66px;top:84px;left:150px}
+#seo-interactive .twitter .seo-icon{background-color:#28aae1;background-position:-4px -687px;height:110px;width:110px;-moz-border-radius:55px;-webkit-border-radius:55px;border-radius:55px;top:121px;left:23px}
+#seo-interactive .twitter .seo-icon:hover,#seo-interactive .twitter .seo-icon.active-seo-icon{height:118px;width:118px;-moz-border-radius:59px;-webkit-border-radius:59px;border-radius:59px;top:117px;left:19px}
+#seo-interactive .twitter .seo-screen{background-position:-177px -789px;height:195px;width:295px;top:76px;left:159px}
+#seo-interactive .twitter .seo-arrow{background-position:-1px -456px;height:36px;width:90px;top:190px;left:100px}
+#seo-interactive .seo-screen,#seo-interactive .seo-arrow{opacity:.0;visibility:hidden}
+#seo-interactive .seo-icon:hover,#seo-interactive .seo-icon.active-seo-icon{border:4px solid #cdcdcd}
+#seo-interactive .seo-icon:hover ~ div,#seo-interactive .seo-icon.active-seo-icon ~ div{opacity:1.0;visibility:visible}
+
+#seo-interactive .seo-icon{z-index:2}
+#seo-interactive .seo-arrow{z-index:3;pointer-events:none}
+#seo-interactive .seo-screen{z-index:1;pointer-events:none}
+#socialModal .seo-content{height:auto}
+#socialModal .sl-image{margin:40px auto;width:794px;height:368px}
+</style>
+
+<!--[if lt IE 8]>
+<style>
+  .main-banner-text {
+    width:495px;
+  }
+</style>
+<![endif]-->
+
+{% endblock %}
+
+{% block body %}
+
+  <!-- Start main-banner -->
+  ##if(activeLanguageAny(en))
+  <section class="main-banner main-banner-website-builder">
+      <div class="l-main-container container main-banner-content main-banner-content-website-builder">
+        <span class="ribbon ribbon-right">
+            <i class="marquee-flag [@T[localization:<language full="true" />]@T] [@T[localization:<language />]@T] marquee-flag-free-domain-included"></i>
+        </span>
+        <div class="main-banner-text">
+  ##else
+   <section>
+      <div class="marquee marquee-bg">
+        <div class="marquee-content marquee-font">
+          <span class="ribbon ribbon-right absolute-position">
+            <i class="marquee-flag [@T[localization:<language full="true" />]@T] [@T[localization:<language />]@T] marquee-flag-free-domain-included"></i>
+          </span>
+          <span class="marquee-text-1 marquee-font-light">[@L[cds.sales/gd/hosting/website-builder:your-website]@L]</span>
+          <span class="marquee-text-2 marquee-font-light">[@L[cds.sales/gd/hosting/website-builder:here-too]@L]</span>
+          <div class="main-banner-text text-padding">
+  ##endif
+          <h1 class="main-banner-title condensed right-padding"><strong>[@L[cds.sales/gd/hosting/website-builder:main-banner-subtitle]@L]</strong></h1>
+          <h2 class="main-banner-subtitle main-banner-subtitle-alternate">[@L[cds.sales/gd/hosting/website-builder:main-banner-title]@L]</h2>
+          <ul class="main-banner-list no-wrap">
+              <li><span class="wsb-black-check"></span><span class="wsb-li-content">[@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-1]@L]</span></li>
+              <li><span class="wsb-black-check"></span><span class="wsb-li-content">[@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-2]@L]</span></li>
+              <li><span class="wsb-black-check"></span><span class="wsb-li-content">[@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-3]@L]</span></li>
+          </ul>
+          <form class="main-banner-form addtocart-form" id="addtocart-form" method="POST" action="[@T[link:<relative path="~/hosting/website-builder-config.aspx" />]@T]">
+              <label>
+                  <input type="radio" checked="checked" name="plan" value="wsb_personal_12month" />
+              </label>
+            <button type="submit" data-form="addtocart-form" class="btn btn-primary cta-medium" data-ci="87757">[@L[cds.sales/gd/hosting/website-builder:get-started-btn-general]@L]</button>
+            <span class="price-callout">
+              [@L[cds.sales/gd/hosting/website-builder:price-intro-new]@L]
+            </span>
+          </form>
+        </div>
+      </div>
+     ##if(!activeLanguageAny(en))
+     </div>
+     ##endif
+  </section>
+  <!-- End main-banner -->
+
+  <!-- Start main-tabs -->
+  <section class="main-tabs">
+    <div class="container">
+      <ul class="nav nav-tabs">
+        <li class="nav-tabs-item active"><a class="nav-tabs-link" href="#plans-pricing" data-gd-sidebyside-target="#plans-pricing" data-toggle="tab" data-ci="87758">[@L[cds.sales/gd/hosting/website-builder:label-plans-pricing]@L]</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
+        ##if(activeLanguageAny(en) && !isManager() && splitTestingSideIsActive(1214, A))
+        <li class="nav-tabs-item"><a class="nav-tabs-link" href="#reviews" data-gd-sidebyside-target="#reviews" data-toggle="tab" data-ci="87151">[@L[cds.sales/gd/hosting/website-builder:label-reviews]@L]</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
+        ##endif
+        <li class="nav-tabs-item"><a class="nav-tabs-link" href="#faq" data-gd-sidebyside-target="#faq"  data-toggle="tab" data-ci="87759">[@L[cds.sales/gd/hosting/website-builder:label-faq]@L]</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
+      </ul>
+    </div>
+  </section>
+  <!-- End main-tabs -->
+
+<!-- Start main-tabs panes -->
+<div class="tab-content no-margin-top">
+
+  <!-- Pricing Tab Content -->
+  <div class="tab-pane active tab-content-plans-pricing-bg-website-builder" id="plans-pricing">
+    <!-- Start content -->
+
+<section class="l-main-container container">
+    <!-- Start misc-banner -->
+    <section class="misc-banner">
+      <div class="l-main-container container misc-banner-content misc-banner-content-website-builder">
+        <h2>[@L[cds.sales/gd/hosting/website-builder:slider-build-a-site-title]@L]</h2>
+        <p>[@L[cds.sales/gd/hosting/website-builder:plan-pricing-tab-header-text]@L]</p>
+      </div>
+    </section>
+    <!-- End misc-banner -->
+        <div class="row" data-gd-sidebysidealign="{}">
+            <div class="col-xs-4" id="column-1" data-gd-sidebysidealign-col="1">
+                <div class="grid-column no-padding-bottom relative">
+                  <div data-gd-sidebysidealign-row="1">
+                    <h2>
+                      ##if(countrySiteAny(uk))
+                      [@L[cds.sales/gd/hosting/website-builder:economy-title]@L]
+                      ##else
+                      [@L[cds.sales/gd/hosting/website-builder:personal-title]@L]
+                      ##endif
+                    </h2>
+                    <p class="font-16 margin-bottom-12 price-description-lead">
+                      ##if(countrySiteAny(uk))
+                      [@L[cds.sales/gd/hosting/website-builder:economy-description]@L]
+                       ##else
+                      [@L[cds.sales/gd/hosting/website-builder:personal-description]@L]
+                      ##endif
+                    </p>
+                  </div>
+                  <div data-gd-sidebysidealign-row="2">
+                    <p class="starting-at">
+                        <span class="starting-at-price">[@T[productprice:<current productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T][@L[cds.sales/gd/hosting/website-builder:month]@L]</span>
+                    </p>
+                    ##if(productHasSavingsMoreThan(7524, 7524, 0))
+                    <p class="margin-bottom-12">
+                        <span class="tertiary-color line-through">[@T[productprice:<template productid="7524" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]</span>
+                        <span class="secondary-color"><strong>[@T[productcompare:<percent primaryproductid="7524" secondaryproductid="7524" showsymbol="true" hidebelow="1"><html><![CDATA[[@L[cds.sales/gd/hosting/website-builder:save]@L] {0}]]></html></percent>]@T]</strong></span>
+                    </p>
+                    ##endif
+                  <div>
+                    ##if(countrySiteAny(uk))
+                       <div class="vat-tax-message">[@L[cds.sales/gd/hosting/website-builder:vat-price]@L]</div>
+                    ##endif
+                  </div>
+                  </div>
+                  <div data-gd-sidebysidealign-row="3">
+                        <form id="addtocart-form" method="POST" class="addtocart-form"  action="[@T[link:<relative path="~/hosting/website-builder-config.aspx" />]@T]">
+                        <div class="select-box">
+                            <div class="select-box-head">
+                                <div class="select-box-current">
+                                    <span class="price-left">[@L[cds.sales/gd/hosting/website-builder:12-months]@L]</span>
+                                    <span class="price">[@T[productprice:<current productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T][@L[cds.sales/gd/hosting/website-builder:month]@L]</span>
+                                    ##if(productHasSavingsMoreThan(7524, 7524, 0))
+                                    <span class="save price-right">[@L[cds.sales/gd/hosting/website-builder:onSale]@L]</span>
+                                    ##endif
+                                </div>
+                                <div class="select-box-cta"><i class="ico ico-download"></i></div>
+                            </div><!-- select-box-head -->
+                            <div class="select-box-body">
+                                <ul class="select-box-options">
+                                    <li data-plan="wsb_personal_1month">
+                                        <div>
+                                            <label >
+                                                <input type="radio" name="plan" value="wsb_personal_1month" />
+                                                <span class="price-left">[@L[cds.sales/gd/hosting/website-builder:1-month]@L]</span>
+                                                <span class="price">[@T[productprice:<current productid="7521" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses"  />]@T][@L[cds.sales/gd/hosting/website-builder:month]@L]</span>
+                                                ##if(productHasSavingsMoreThan(7521, 7521, 0))
+                                                <span class="save price-right">[@L[cds.sales/gd/hosting/website-builder:onSale]@L]</span>
+                                                <div>
+                                                  <span class="price-left">&nbsp;</span>
+                                                  <span>[@T[productprice:<template productid="7521" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T][@L[cds.sales/gd/hosting/website-builder:month]@L]</span>
+                                                  <span class="save price-right">[@T[productcompare:<percent primaryproductid="7521" secondaryproductid="7521" showsymbol="true" hidebelow="1"><html><![CDATA[[@L[cds.sales/gd/hosting/website-builder:save]@L] {0}]]></html></percent>]@T]</span>
+                                                </div>
+                                                ##endif
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li class="selected" data-plan="wsb_personal_12month">
+                                        <div>
+                                            <label>
+                                                <input type="radio" name="plan" checked="checked" value="wsb_personal_12month" />
+                                                <span class="price-left">[@L[cds.sales/gd/hosting/website-builder:12-months]@L]</span>
+                                                <span class="price">[@T[productprice:<current productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T][@L[cds.sales/gd/hosting/website-builder:month]@L]</span>
+                                                ##if(productHasSavingsMoreThan(7524, 7524, 0))
+                                                <span class="save price-right">[@L[cds.sales/gd/hosting/website-builder:onSale]@L]</span>
+                                                <div>
+                                                  <span class="price-left">&nbsp;</span>
+                                                  <span>[@T[productprice:<template productid="7524" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T][@L[cds.sales/gd/hosting/website-builder:month]@L]</span>
+                                                  <span class="save price-right">[@T[productcompare:<percent primaryproductid="7524" secondaryproductid="7524" showsymbol="true" hidebelow="1"><html><![CDATA[[@L[cds.sales/gd/hosting/website-builder:save]@L] {0}]]></html></percent>]@T]</span>
+                                                </div>
+                                                ##endif
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li data-plan="wsb_personal_24month">
+                                        <div>
+                                            <label>
+                                                <input type="radio" name="plan" value="wsb_personal_24month" />
+                                                <span class="price-left">[@L[cds.sales/gd/hosting/website-builder:24-months]@L]</span>
+                                                <span class="price">[@T[productprice:<current productid="7525" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses"  />]@T][@L[cds.sales/gd/hosting/website-builder:month]@L]</span>
+                                                ##if(productHasSavingsMoreThan(7525, 7525, 0))
+                                                <span class="save price-right">[@L[cds.sales/gd/hosting/website-builder:onSale]@L]</span>
+                                                <div>
+                                                  <span class="price-left">&nbsp;</span>
+                                                  <span>[@T[productprice:<template productid="7525" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T][@L[cds.sales/gd/hosting/website-builder:month]@L]</span>
+                                                  <span class="save price-right">[@T[productcompare:<percent primaryproductid="7525" secondaryproductid="7525" showsymbol="true" hidebelow="1"><html><![CDATA[[@L[cds.sales/gd/hosting/website-builder:save]@L] {0}]]></html></percent>]@T]</span>
+                                                </div>
+                                                ##endif
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li data-plan="wsb_personal_36month">
+                                        <div>
+                                            <label>
+                                                <input type="radio" name="plan" value="wsb_personal_36month" />
+                                                <span class="price-left">[@L[cds.sales/gd/hosting/website-builder:36-months]@L]</span>
+                                                <span class="price">[@T[productprice:<current productid="7526" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses"  />]@T][@L[cds.sales/gd/hosting/website-builder:month]@L]</span>
+                                                ##if(productHasSavingsMoreThan(7526, 7526, 0))
+                                                <span class="save price-right">[@L[cds.sales/gd/hosting/website-builder:onSale]@L]</span>
+                                                <div>
+                                                  <span class="price-left">&nbsp;</span>
+                                                  <span>[@T[productprice:<template productid="7526" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T][@L[cds.sales/gd/hosting/website-builder:month]@L]</span>
+                                                  <span class="save price-right">[@T[productcompare:<percent primaryproductid="7526" secondaryproductid="7526" showsymbol="true" hidebelow="1"><html><![CDATA[[@L[cds.sales/gd/hosting/website-builder:save]@L] {0}]]></html></percent>]@T]</span>
+                                                </div>
+                                                ##endif
+                                            </label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div><!-- select-box-body -->
+                        </div><!-- select-box -->
+                    <p><button type="submit" data-form="addtocart-form" class="btn btn-warning btn-block js-addtocart-btn btn--push-down btn-lg" data-ci="87842">[@L[cds.sales/gd/hosting/website-builder:planbox-cart-btn]@L]</button></p>
+                        </form>
+                  </div>
+                    <ul class="plan-pricing-list">
+                       <li data-gd-sidebysidealign-row="4">
+                                     ##if(countrySiteAny(uk))
+                                     [@L[cds.sales/gd/hosting/website-builder:plan-domain]@L]<span class="br"></span><a class="simple-link websitebuilder-tooltip isToolTip item-note" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltipUK]@L]">[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-restricitons]@L]</a>
+                                     ##elseif(countrySiteAny(br))
+                                     [@L[cds.sales/gd/hosting/website-builder:plan-domain]@L]<span class="br"></span><a class="simple-link websitebuilder-tooltip isToolTip item-note" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltipBR]@L]">[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-restricitons]@L]</a>
+                                     ##elseif(countrySiteAny(mx))
+                                     [@L[cds.sales/gd/hosting/website-builder:plan-domain]@L]<span class="br"></span><a class="simple-link websitebuilder-tooltip isToolTip item-note" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltipMX]@L]">[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-restricitons]@L]</a>
+                                     ##elseif(countrySiteAny(ca))
+                                     [@L[cds.sales/gd/hosting/website-builder:plan-domain]@L]<span class="br"></span><a class="simple-link websitebuilder-tooltip isToolTip item-note" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltipCA]@L]">[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-restricitons]@L]</a>
+                                     ##elseif(countrySiteAny(in))
+                                     [@L[cds.sales/gd/hosting/website-builder:plan-domain]@L]<span class="br"></span><a class="simple-link websitebuilder-tooltip isToolTip item-note" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltipIN]@L]">[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-restricitons]@L]</a>
+                                     ##elseif(isManager())
+                                     [@L[cds.sales/gd/hosting/website-builder:plan-domain]@L]<span class="br"></span><a class="simple-link websitebuilder-tooltip isToolTip item-note" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltipManager]@L]">[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-restricitons]@L]</a>
+
+                                     ##else
+                                     [@L[cds.sales/gd/hosting/website-builder:plan-domain]@L]<span class="br"></span><a class="simple-link websitebuilder-tooltip isToolTip item-note" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltip]@L]">[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-restricitons]@L]</a>                                     
+                                     ##endif
+                       </li>
+                        <li data-gd-sidebysidealign-row="5">
+                            ##if(countrySiteAny(uk))
+                            [@L[cds.sales/gd/hosting/website-builder:economy-themes]@L]
+                            ##else
+                            [@L[cds.sales/gd/hosting/website-builder:personal-themes]@L]
+                            ##endif
+                        </li>
+                        <li data-gd-sidebysidealign-row="6">[@L[cds.sales/gd/hosting/website-builder:business-pages]@L]</li>
+                        <li data-gd-sidebysidealign-row="7">[@L[cds.sales/gd/hosting/website-builder:economy-diskspace]@L]</li>
+                        <li data-gd-sidebysidealign-row="8">[@L[cds.sales/gd/hosting/website-builder:economy-bandwidth]@L]</li>
+                        <li data-gd-sidebysidealign-row="9">-</li>
+                        <li data-gd-sidebysidealign-row="10">-</li>
+                        ##if(!productIsOffered(4) && !productIsOffered(13))
+                        <li data-gd-sidebysidealign-row="11">-</li>
+                        ##else
+                        ##if(productIsOffered(4))
+                        <li data-gd-sidebysidealign-row="11">-</li>
+                        ##else
+
+                        ##endif
+                        ##if(productIsOffered(13))
+                        <li data-gd-sidebysidealign-row="12">-</li>
+                        ##else
+
+                        ##endif
+                        ##if(splitTestingSideIsActive(1338, C))
+                        
+                        ##else
+                        <li data-gd-sidebysidealign-row="13">-</li>
+                        ##endif
+                        ##endif
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xs-4" id="column-2" data-gd-sidebysidealign-col="2">
+                <div class="grid-column no-padding-bottom relative">
+                  <div data-gd-sidebysidealign-row="1">
+                    <span class="badge badge-small badge-important badge-upper-right">[@L[cds.sales/gd/hosting/website-builder:popular-tag]@L]</span>
+                    <h2>[@L[cds.sales/gd/hosting/website-builder:business-title]@L]</h2>
+                    <p class="font-16 margin-bottom-12 price-description-lead">[@L[cds.sales/gd/hosting/website-builder:business-description]@L]</p>
+                  </div>
+                  <div data-gd-sidebysidealign-row="2">
+                  <p class="starting-at"><span class="starting-at-price">[@T[productprice:<current productid="7509" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses"  />]@T][@L[cds.sales/gd/hosting/website-builder:month]@L]</span></p>
+                   ##if(productHasSavingsMoreThan(7509, 7509, 0))
+                        <p class="margin-bottom-12">
+                            <span class="tertiary-color line-through">[@T[productprice:<template productid="7509" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]</span>
+                            <span class="secondary-color"><strong>[@T[productcompare:<percent primaryproductid="7509" secondaryproductid="7509" showsymbol="true" hidebelow="1"><html><![CDATA[[@L[cds.sales/gd/hosting/website-builder:save]@L] {0}]]></html></percent>]@T]</strong></span>
+                        </p>
+                        ##endif
+                        ##if(countrySiteAny(uk))
+                            <div class="vat-tax-message">[@L[cds.sales/gd/hosting/website-builder:vat-price]@L]</div>
+                        ##endif
+                  </div>
+                  <div data-gd-sidebysidealign-row="3">
+                        <form id="addtocart-form2" method="POST" class="addtocart-form" action="[@T[link:<relative path="~/hosting/website-builder-config.aspx" />]@T]">
+                        <div class="select-box">
+                            <div class="select-box-head">
+                                <div class="select-box-current">
+                                    <span class="price-left">[@L[cds.sales/gd/hosting/website-builder:12-months]@L]</span>
+                                    <span class="price">[@T[productprice:<current productid="7509" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses"  />]@T][@L[cds.sales/gd/hosting/website-builder:month]@L]</span>
+                                    ##if(productHasSavingsMoreThan(7509, 7509, 0))
+                                    <span class="save price-right">[@L[cds.sales/gd/hosting/website-builder:onSale]@L]</span>
+                                    ##endif
+                                </div>
+                                <div class="select-box-cta"><i class="ico ico-download"></i></div>
+                            </div><!-- select-box-head -->
+                            <div class="select-box-body">
+                                <ul class="select-box-options">
+                                    <li data-plan="wsb_business_1month">
+                                        <div>
+                                            <label>
+                                                <input type="radio" name="plan" value="wsb_business_1month" />
+                                                <span class="price-left">[@L[cds.sales/gd/hosting/website-builder:1-month]@L]</span>
+                                                <span class="price">[@T[productprice:<current productid="7502" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses"  />]@T][@L[cds.sales/gd/hosting/website-builder:month]@L]</span>
+                                                ##if(productHasSavingsMoreThan(7502, 7502, 0))
+                                                <span class="save price-right">[@L[cds.sales/gd/hosting/website-builder:onSale]@L]</span>
+                                                <div>
+                                                  <span class="price-left">&nbsp;</span>
+                                                  <span>[@T[productprice:<template productid="7502" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T][@L[cds.sales/gd/hosting/website-builder:month]@L]</span>
+                                                  <span class="save price-right">[@T[productcompare:<percent primaryproductid="7502" secondaryproductid="7502" showsymbol="true" hidebelow="1"><html><![CDATA[[@L[cds.sales/gd/hosting/website-builder:save]@L] {0}]]></html></percent>]@T]</span>
+                                                </div>
+                                                ##endif
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li class="selected" data-plan="wsb_business_12month">
+                                        <div>
+                                            <label>
+                                                <input type="radio" name="plan" checked="checked" value="wsb_business_12month" />
+                                                <span class="price-left">[@L[cds.sales/gd/hosting/website-builder:12-months]@L]</span>
+                                                <span class="price">[@T[productprice:<current productid="7509" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses"  />]@T][@L[cds.sales/gd/hosting/website-builder:month]@L]</span>
+                                                ##if(productHasSavingsMoreThan(7509, 7509, 0))
+                                                <span class="save price-right">[@L[cds.sales/gd/hosting/website-builder:onSale]@L]</span>
+                                                <div>
+                                                  <span class="price-left">&nbsp;</span>
+                                                  <span>[@T[productprice:<template productid="7509" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T][@L[cds.sales/gd/hosting/website-builder:month]@L]</span>
+                                                  <span class="save price-right">[@T[productcompare:<percent primaryproductid="7509" secondaryproductid="7509" showsymbol="true" hidebelow="1"><html><![CDATA[[@L[cds.sales/gd/hosting/website-builder:save]@L] {0}]]></html></percent>]@T]</span>
+                                                </div>
+                                                ##endif
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li data-plan="wsb_business_24month">
+                                        <div>
+                                            <label>
+                                                <input type="radio" name="plan" value="wsb_business_24month" />
+                                                <span class="price-left">[@L[cds.sales/gd/hosting/website-builder:24-months]@L]</span>
+                                                <span class="price">[@T[productprice:<current productid="7510" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses"  />]@T][@L[cds.sales/gd/hosting/website-builder:month]@L]</span>
+                                                ##if(productHasSavingsMoreThan(7510, 7510, 0))
+                                                <span class="save price-right">[@L[cds.sales/gd/hosting/website-builder:onSale]@L]</span>
+                                                <div>
+                                                  <span class="price-left">&nbsp;</span>
+                                                  <span>[@T[productprice:<template productid="7510" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T][@L[cds.sales/gd/hosting/website-builder:month]@L]</span>
+                                                  <span class="save price-right">[@T[productcompare:<percent primaryproductid="7510" secondaryproductid="7510" showsymbol="true" hidebelow="1"><html><![CDATA[[@L[cds.sales/gd/hosting/website-builder:save]@L] {0}]]></html></percent>]@T]</span>
+                                                </div>
+                                                ##endif
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li data-plan="wsb_business_36month">
+                                        <div>
+                                            <label>
+                                                <input type="radio" name="plan" value="wsb_business_36month" />
+                                                <span class="price-left">[@L[cds.sales/gd/hosting/website-builder:36-months]@L]</span>
+                                                <span class="price">[@T[productprice:<current productid="7511" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses"  />]@T][@L[cds.sales/gd/hosting/website-builder:month]@L]</span>
+                                                ##if(productHasSavingsMoreThan(7511, 7511, 0))
+                                                <span class="save price-right">[@L[cds.sales/gd/hosting/website-builder:onSale]@L]</span>
+                                                <div>
+                                                  <span class="price-left">&nbsp;</span>
+                                                  <span>[@T[productprice:<template productid="7511" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T][@L[cds.sales/gd/hosting/website-builder:month]@L]</span>
+                                                  <span class="save price-right">[@T[productcompare:<percent primaryproductid="7511" secondaryproductid="7511" showsymbol="true" hidebelow="1"><html><![CDATA[[@L[cds.sales/gd/hosting/website-builder:save]@L] {0}]]></html></percent>]@T]</span>
+                                                </div>
+                                                ##endif
+                                            </label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div><!-- select-box-body -->
+                        </div><!-- select-box -->
+                    <p><button type="submit" data-form="addtocart-form" class="btn btn-warning btn-block js-addtocart-btn btn--push-down btn-lg" data-ci="87843">[@L[cds.sales/gd/hosting/website-builder:planbox-cart-btn]@L]</button></p>
+                        </form>
+                  </div>
+                    <ul class="plan-pricing-list">
+                        <li data-gd-sidebysidealign-row="4">
+                                ##if(countrySiteAny(uk))
+                                   [@L[cds.sales/gd/hosting/website-builder:plan-domain]@L]<span class="br"></span><a class="simple-link websitebuilder-tooltip isToolTip item-note" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltipUK]@L]">[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-restricitons]@L]</a>
+                                  ##elseif(countrySiteAny(br))
+                                     [@L[cds.sales/gd/hosting/website-builder:plan-domain]@L]<span class="br"></span><a class="simple-link websitebuilder-tooltip isToolTip item-note" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltipBR]@L]">[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-restricitons]@L]</a>
+                                  ##elseif(countrySiteAny(mx))
+                                     [@L[cds.sales/gd/hosting/website-builder:plan-domain]@L]<span class="br"></span><a class="simple-link websitebuilder-tooltip isToolTip item-note" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltipMX]@L]">[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-restricitons]@L]</a>
+                                  ##elseif(countrySiteAny(ca))
+                                     [@L[cds.sales/gd/hosting/website-builder:plan-domain]@L]<span class="br"></span><a class="simple-link websitebuilder-tooltip isToolTip item-note" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltipCA]@L]">[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-restricitons]@L]</a>
+                                  ##elseif(countrySiteAny(in))
+                                     [@L[cds.sales/gd/hosting/website-builder:plan-domain]@L]<span class="br"></span><a class="simple-link websitebuilder-tooltip isToolTip item-note" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltipIN]@L]">[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-restricitons]@L]</a>
+                                  ##elseif(isManager())
+                                     [@L[cds.sales/gd/hosting/website-builder:plan-domain]@L]<span class="br"></span><a class="simple-link websitebuilder-tooltip isToolTip item-note" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltipManager]@L]">[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-restricitons]@L]</a>
+                                ##else
+                                  [@L[cds.sales/gd/hosting/website-builder:plan-domain]@L]<span class="br"></span><a class="simple-link websitebuilder-tooltip isToolTip item-note" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltip]@L]">[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-restricitons]@L]</a>
+                                ##endif
+                        </li>
+                        <li data-gd-sidebysidealign-row="5">
+                            ##if(countrySiteAny(uk))
+                            [@L[cds.sales/gd/hosting/website-builder:business-themes-uk]@L]
+                            ##else
+                            [@L[cds.sales/gd/hosting/website-builder:business-themes]@L]
+                            ##endif
+                        </li>
+                        <li data-gd-sidebysidealign-row="6">[@L[cds.sales/gd/hosting/website-builder:unlimited-pages]@L]</li>
+                        <li data-gd-sidebysidealign-row="7">[@L[cds.sales/gd/hosting/website-builder:business-diskspace]@L]</li>
+                        <li data-gd-sidebysidealign-row="8">[@L[cds.sales/gd/hosting/website-builder:business-bandwidth]@L]</li>
+                        ##if(splitTestingSideIsActive(1338, B))
+                        ##if(productIsOffered(4))
+                        <li data-gd-sidebysidealign-row="9">[@L[cds.sales/gd/hosting/website-builder:business-email2]@L]</li>
+                        ##else
+
+                        ##endif
+                        <li data-gd-sidebysidealign-row="10">[@L[cds.sales/gd/hosting/website-builder:business-mobile]@L]</li>
+                        <li data-gd-sidebysidealign-row="11">-</li>
+                        <li data-gd-sidebysidealign-row="12">-</li>
+                        ##if(productIsOffered(13))
+                        <li data-gd-sidebysidealign-row="13">-</li>
+                        ##else
+
+                        ##endif
+                        ##elseif(splitTestingSideIsActive(1338, C))
+                        <li data-gd-sidebysidealign-row="9">[@L[cds.sales/gd/hosting/website-builder:business-mobile]@L]</li>
+                        <li data-gd-sidebysidealign-row="10">-</li>
+                        <li data-gd-sidebysidealign-row="11">-</li>
+                        ##if(productIsOffered(13))
+                        <li data-gd-sidebysidealign-row="12">-</li>
+                        ##else
+
+                        ##endif
+                        ##else
+                        ##if(productIsOffered(4))
+                        <li data-gd-sidebysidealign-row="9">[@L[cds.sales/gd/hosting/website-builder:business-email]@L]</li>
+                        ##else
+
+                        ##endif
+                        <li data-gd-sidebysidealign-row="10">[@L[cds.sales/gd/hosting/website-builder:business-mobile]@L]</li>
+                        <li data-gd-sidebysidealign-row="11">-</li>
+                        <li data-gd-sidebysidealign-row="12">-</li>
+                        ##if(productIsOffered(13))
+                        <li data-gd-sidebysidealign-row="13">-</li>
+                        ##else
+
+                        ##endif
+                        ##endif
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xs-4"id="column-3" data-gd-sidebysidealign-col="3">
+                <div class="grid-column no-padding-bottom relative">
+                  <div data-gd-sidebysidealign-row="1">
+                    ##if(productIsOffered(13))
+                    <span class="badge badge-small badge-important badge-upper-right">[@L[cds.sales/gd/hosting/website-builder:wsb-plus-seo]@L]</span>
+                    ##endif
+                    <h2>[@L[cds.sales/gd/hosting/website-builder:unlimited-title]@L]</h2>
+                    <p class="font-16 margin-bottom-12 price-description-lead">[@L[cds.sales/gd/hosting/website-builder:unlimited-description]@L]</p>
+                  </div>
+                  <div data-gd-sidebysidealign-row="2">
+                        <p class="starting-at"><span class="starting-at-price">[@T[productprice:<current productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses"  />]@T][@L[cds.sales/gd/hosting/website-builder:month]@L]</span>
+                        </p>
+                        ##if(productHasSavingsMoreThan(7514, 7514, 0))
+                        <p class="margin-bottom-12">
+                            <span class="tertiary-color">[@T[productprice:<template productid="7514" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]</span>
+                            <span class="secondary-color"><strong>[@T[productcompare:<percent primaryproductid="7514" secondaryproductid="7514" showsymbol="true" hidebelow="1"><html><![CDATA[[@L[cds.sales/gd/hosting/website-builder:save]@L] {0}]]></html></percent>]@T]</strong></span>
+                        </p>
+                        ##endif
+                        ##if(countrySiteAny(uk))
+                             <div class="vat-tax-message">[@L[cds.sales/gd/hosting/website-builder:vat-price]@L]</div>
+                        ##endif
+                  </div>
+                  <div data-gd-sidebysidealign-row="3">
+                        <form id="addtocart-form3" method="POST" class="addtocart-form" action="[@T[link:<relative path="~/hosting/website-builder-config.aspx" />]@T]">
+                        <div class="select-box">
+                            <div class="select-box-head">
+                                <div class="select-box-current">
+                                    <span class="price-left">[@L[cds.sales/gd/hosting/website-builder:12-months]@L]</span>
+                                    <span class="price">[@T[productprice:<current productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses"  />]@T][@L[cds.sales/gd/hosting/website-builder:month]@L]</span>
+                                    ##if(productHasSavingsMoreThan(7514, 7514, 0))
+                                    <span class="save price-right">[@L[cds.sales/gd/hosting/website-builder:onSale]@L]</span>
+                                    ##endif
+                                </div>
+                                <div class="select-box-cta"><i class="ico ico-download"></i></div>
+                            </div><!-- select-box-head -->
+                            <div class="select-box-body">
+                                <ul class="select-box-options">
+                                    <li data-plan="wsb_businessplus_1month">
+                                        <div>
+                                            <label>
+                                                <input type="radio" name="plan" value="wsb_businessplus_1month" />
+                                                <span class="price-left">[@L[cds.sales/gd/hosting/website-builder:1-month]@L]</span>
+                                                <span class="price">[@T[productprice:<current productid="7503" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses"  />]@T][@L[cds.sales/gd/hosting/website-builder:month]@L]</span>
+                                                ##if(productHasSavingsMoreThan(7503, 7503, 0))
+                                                <span class="save price-right">[@L[cds.sales/gd/hosting/website-builder:onSale]@L]</span>
+                                                <div>
+                                                  <span class="price-left">&nbsp;</span>
+                                                  <span>[@T[productprice:<template productid="7503" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T][@L[cds.sales/gd/hosting/website-builder:month]@L]</span>
+                                                  <span class="save price-right">[@T[productcompare:<percent primaryproductid="7503" secondaryproductid="7503" showsymbol="true" hidebelow="1"><html><![CDATA[[@L[cds.sales/gd/hosting/website-builder:save]@L] {0}]]></html></percent>]@T]</span>
+                                                </div>
+                                                ##endif
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li class="selected" data-plan="wsb_businessplus_12month">
+                                        <div>
+                                            <label>
+                                                 <input type="radio" name="plan" checked="checked" value="wsb_businessplus_12month" />
+                                                <span class="price-left">[@L[cds.sales/gd/hosting/website-builder:12-months]@L]</span>
+                                                <span class="price">[@T[productprice:<current productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses"  />]@T][@L[cds.sales/gd/hosting/website-builder:month]@L]</span>
+                                                ##if(productHasSavingsMoreThan(7514, 7514, 0))
+                                                <span class="save price-right">[@L[cds.sales/gd/hosting/website-builder:onSale]@L]</span>
+                                                <div>
+                                                  <span class="price-left">&nbsp;</span>
+                                                  <span>[@T[productprice:<template productid="7514" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T][@L[cds.sales/gd/hosting/website-builder:month]@L]</span>
+                                                  <span class="save price-right">[@T[productcompare:<percent primaryproductid="7514" secondaryproductid="7514" showsymbol="true" hidebelow="1"><html><![CDATA[[@L[cds.sales/gd/hosting/website-builder:save]@L] {0}]]></html></percent>]@T]</span>
+                                                </div>
+                                                ##endif
+                                            </label>
+                                        </div>
+                                    </li>
+                                   <li data-plan="wsb_businessplus_24month">
+                                        <div>
+                                            <label>
+                                                <input type="radio" name="plan" checked="checked" value="wsb_businessplus_24month" />
+                                                <span class="price-left">[@L[cds.sales/gd/hosting/website-builder:24-months]@L]</span>
+                                                <span class="price">[@T[productprice:<current productid="7515" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses"  />]@T][@L[cds.sales/gd/hosting/website-builder:month]@L]</span>
+                                                ##if(productHasSavingsMoreThan(7515, 7515, 0))
+                                                <span class="save price-right">[@L[cds.sales/gd/hosting/website-builder:onSale]@L]</span>
+                                                <div>
+                                                  <span class="price-left">&nbsp;</span>
+                                                  <span>[@T[productprice:<template productid="7515" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T][@L[cds.sales/gd/hosting/website-builder:month]@L]</span>
+                                                  <span class="save price-right">[@T[productcompare:<percent primaryproductid="7515" secondaryproductid="7515" showsymbol="true" hidebelow="1"><html><![CDATA[[@L[cds.sales/gd/hosting/website-builder:save]@L] {0}]]></html></percent>]@T]</span>
+                                                </div>
+                                                ##endif
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li data-plan="wsb_businessplus_36month">
+                                        <div>
+                                            <label>
+                                                <input type="radio" name="plan" checked="checked" value="wsb_businessplus_36month" />
+                                                <span class="price-left">[@L[cds.sales/gd/hosting/website-builder:36-months]@L]</span>
+                                                <span class="price">[@T[productprice:<current productid="7516" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses"  />]@T][@L[cds.sales/gd/hosting/website-builder:month]@L]</span>
+                                                ##if(productHasSavingsMoreThan(7516, 7516, 0))
+                                                <span class="save price-right">[@L[cds.sales/gd/hosting/website-builder:onSale]@L]</span>
+                                                <div>
+                                                  <span class="price-left">&nbsp;</span>
+                                                  <span>[@T[productprice:<template productid="7516" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T][@L[cds.sales/gd/hosting/website-builder:month]@L]</span>
+                                                  <span class="save price-right">[@T[productcompare:<percent primaryproductid="7516" secondaryproductid="7516" showsymbol="true" hidebelow="1"><html><![CDATA[[@L[cds.sales/gd/hosting/website-builder:save]@L] {0}]]></html></percent>]@T]</span>
+                                                </div>
+                                                ##endif
+                                            </label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div><!-- select-box-body -->
+                        </div><!-- select-box -->
+                    <p><button type="submit" data-form="addtocart-form" class="btn btn-warning btn-block js-addtocart-btn btn--push-down btn-lg" data-ci="87844">[@L[cds.sales/gd/hosting/website-builder:planbox-cart-btn]@L]</button></p>
+                        </form>
+                  </div>
+                    <ul class="plan-pricing-list">
+                        <li data-gd-sidebysidealign-row="4">
+                                 ##if(countrySiteAny(uk))
+                                  [@L[cds.sales/gd/hosting/website-builder:plan-domain]@L]<span class="br"></span><a class="simple-link websitebuilder-tooltip isToolTip item-note" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltipUK]@L]">[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-restricitons]@L]</a>
+                                 ##elseif(countrySiteAny(br))
+                                     [@L[cds.sales/gd/hosting/website-builder:plan-domain]@L]<span class="br"></span><a class="simple-link websitebuilder-tooltip isToolTip item-note" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltipBR]@L]">[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-restricitons]@L]</a>
+                                  ##elseif(countrySiteAny(mx))
+                                     [@L[cds.sales/gd/hosting/website-builder:plan-domain]@L]<span class="br"></span><a class="simple-link websitebuilder-tooltip isToolTip item-note" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltipMX]@L]">[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-restricitons]@L]</a>
+                                  ##elseif(countrySiteAny(ca))
+                                     [@L[cds.sales/gd/hosting/website-builder:plan-domain]@L]<span class="br"></span><a class="simple-link websitebuilder-tooltip isToolTip item-note" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltipCA]@L]">[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-restricitons]@L]</a>
+                                  ##elseif(countrySiteAny(in))
+                                     [@L[cds.sales/gd/hosting/website-builder:plan-domain]@L]<span class="br"></span><a class="simple-link websitebuilder-tooltip isToolTip item-note" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltipIN]@L]">[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-restricitons]@L]</a>
+                                  ##elseif(isManager())
+                                     [@L[cds.sales/gd/hosting/website-builder:plan-domain]@L]<span class="br"></span><a class="simple-link websitebuilder-tooltip isToolTip item-note" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltipManager]@L]">[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-restricitons]@L]</a>
+                                 ##else
+                                [@L[cds.sales/gd/hosting/website-builder:plan-domain]@L]<span class="br"></span><a class="simple-link websitebuilder-tooltip isToolTip item-note" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltip]@L]">[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-restricitons]@L]</a>
+                                 ##endif  
+                        </li>
+                        <li data-gd-sidebysidealign-row="5">
+                             ##if(countrySiteAny(uk))
+                            [@L[cds.sales/gd/hosting/website-builder:unlimited-themes-uk]@L]
+                            ##else
+                            [@L[cds.sales/gd/hosting/website-builder:unlimited-themes]@L]
+                            ##endif
+                        </li>
+                        <li data-gd-sidebysidealign-row="6">[@L[cds.sales/gd/hosting/website-builder:unlimited-pages]@L]</li>
+                        <li data-gd-sidebysidealign-row="7">[@L[cds.sales/gd/hosting/website-builder:unlimited-diskspace]@L]</li>
+                        <li data-gd-sidebysidealign-row="8">[@L[cds.sales/gd/hosting/website-builder:unlimited-bandwidth]@L]</li>
+                        ##if(splitTestingSideIsActive(1338, B))
+                        ##if(productIsOffered(4))
+                        <li data-gd-sidebysidealign-row="9">[@L[cds.sales/gd/hosting/website-builder:unlimited-email2]@L]</li>
+                        ##else
+
+                        ##endif
+                        <li data-gd-sidebysidealign-row="10">[@L[cds.sales/gd/hosting/website-builder:unlimited-mobile]@L]</li>
+                        ##if(productIsOffered(13))
+                        <li data-gd-sidebysidealign-row="11">[@L[cds.sales/gd/hosting/website-builder:unlimited-seo]@L]</li>
+                        ##else
+
+                        ##endif
+                        <li data-gd-sidebysidealign-row="12">[@L[cds.sales/gd/hosting/website-builder:unlimited-oneclick]@L]</li>
+                        <li data-gd-sidebysidealign-row="13">[@L[cds.sales/gd/hosting/website-builder:unlimited-ssl]@L]</li>
+                        ##elseif(splitTestingSideIsActive(1338, C))
+                        <li data-gd-sidebysidealign-row="9">[@L[cds.sales/gd/hosting/website-builder:unlimited-mobile]@L]</li>
+                        ##if(productIsOffered(13))
+                        <li data-gd-sidebysidealign-row="10">[@L[cds.sales/gd/hosting/website-builder:unlimited-seo]@L]</li>
+                        ##else
+
+                        ##endif
+                        <li data-gd-sidebysidealign-row="11">[@L[cds.sales/gd/hosting/website-builder:unlimited-oneclick]@L]</li>
+                        <li data-gd-sidebysidealign-row="12">[@L[cds.sales/gd/hosting/website-builder:unlimited-ssl]@L]</li>
+                        ##else
+                        ##if(productIsOffered(4))
+                        <li data-gd-sidebysidealign-row="9">[@L[cds.sales/gd/hosting/website-builder:unlimited-email]@L]</li>
+                        ##else
+
+                        ##endif
+                        <li data-gd-sidebysidealign-row="10">[@L[cds.sales/gd/hosting/website-builder:unlimited-mobile]@L]</li>
+                        ##if(productIsOffered(13))
+                        <li data-gd-sidebysidealign-row="11">[@L[cds.sales/gd/hosting/website-builder:unlimited-seo]@L]</li>
+                        ##else
+
+                        ##endif
+                        <li data-gd-sidebysidealign-row="12">[@L[cds.sales/gd/hosting/website-builder:unlimited-oneclick]@L]</li>
+                        <li data-gd-sidebysidealign-row="13">[@L[cds.sales/gd/hosting/website-builder:unlimited-ssl]@L]</li>
+                        ##endif
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+</section>
+
+<div class="tab-content-second_half-website-builder">
+    <div class="plan-pricing-carousel">
+      [@P[cdsDocument:<data app="sales" location="hosting/template-slider" /> ]@P]
+    </div>
+
+    <section class="l-main-container container plan-pricing-content-over-top">
+        <div class="row tab-content">
+            <div class="col-xs-12">
+                <div class="plan-pricing-you-can-video">
+                    <h3>[@L[cds.sales/gd/hosting/website-builder:testimony-title]@L]</h3>
+                    <p>[@L[cds.sales/gd/hosting/website-builder:testimony-description]@L]</p>
+                    ##if(activeLanguageAny(en,es))
+                    <a href="#" class="video-link" data-toggle="modal" data-target="#myVideoModal" data-ci="87762">
+                        <i class="ico ico-gt-circle-alternate"></i><span class="br"></span>
+                        <span class="video-link-text-alternate font-18"><strong>[@L[cds.sales/gd/hosting/website-builder:video-link-text]@L]</strong></span>
+                    </a>
+                    ##endif
+                </div>
+                 <div class="modal fade videoModal myVideoModal" id="myVideoModal">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="modal-header-close close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                      </div>
+                      <div class="modal-body">
+                        ##if(activeLanguageAny(es))
+                        <div class="embedVideo" id="ytplayer1" data-id="wXlQyXhIsH8"></div>
+                        <!--[if lt IE 8]>
+                        <iframe class="embedVideoIE7" width="854" height="480" src="//www.youtube.com/embed/wXlQyXhIsH8?html5=1&rel=0" autoplay scrolling="no" frameborder="0" allowfullscreen>
+                        </iframe>
+                        <![endif]-->
+                        ##else
+                        <div class="embedVideo" id="ytplayer1" data-id="-HtVJyxSQmw"></div>
+                        <!--[if lt IE 8]>
+                        <iframe class="embedVideoIE7" width="854" height="480" src="//www.youtube.com/embed/-HtVJyxSQmw?html5=1&rel=0" autoplay scrolling="no" frameborder="0" allowfullscreen>
+                        </iframe>
+                        <![endif]-->
+                        ##endif
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="row tab-content">
+          <div class="col-xs-12">
+            <div class="plan-pricing-apps plan-pricing-grid-colum grid-column">
+              <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-header]@L]</h2>
+              <p class="font-16 margin-bottom-12">[@L[cds.sales/gd/hosting/website-builder:apps-modal-description-2]@L]</p>
+              <div id="apps">
+                <ul class="apps-list float-left">
+                  <li class="facebook-app" data-ci="87767">
+                    <div class="icon"></div>
+                    <div class="arrow"></div>
+                    <h3>[@L[cds.sales/gd/hosting/website-builder:apps-modal-facebook-title]@L]<sup>&reg;</sup></h3>
+                    <span>[@L[cds.sales/gd/hosting/website-builder:apps-modal-facebook-desc]@L]</span>
+                  </li>
+                  <div class="seperator"></div>
+                  <li class="twitter-app" data-ci="87768">
+                    <div class="icon"></div>
+                    <div class="arrow"></div>
+                    <h3>[@L[cds.sales/gd/hosting/website-builder:apps-modal-twitter-title]@L]<sup>&reg;</sup></h3>
+                    <span>[@L[cds.sales/gd/hosting/website-builder:apps-modal-twitter-desc]@L]</span>
+                  </li>
+                  <div class="seperator"></div>
+                  <li class="youtube-app" data-ci="87769">
+                    <div class="icon"></div>
+                    <div class="arrow" id="bottom"></div>
+                    <h3>[@L[cds.sales/gd/hosting/website-builder:apps-modal-youtube-title]@L]<sup>&reg;</sup></h3>
+                    <span>[@L[cds.sales/gd/hosting/website-builder:apps-modal-youtube-desc]@L]</span>
+                  </li>
+                </ul>
+                ##if(countrySiteAny(www))
+                <ul class="apps-list float-right">
+                  <li class="yelp-app" data-ci="87770">
+                    <div class="icon"></div>
+                    <div class="arrow"></div>
+                    <h3>[@L[cds.sales/gd/hosting/website-builder:apps-modal-yelp-title]@L]<sup>&reg;</sup></h3>
+                    <span>[@L[cds.sales/gd/hosting/website-builder:apps-modal-yelp-desc]@L]</span>
+                  </li>
+                  <div class="seperator"></div>
+                  <li class="paypal-app" data-ci="87771">
+                    <div class="icon"></div>
+                    <div class="arrow"></div>
+                    <h3>[@L[cds.sales/gd/hosting/website-builder:apps-modal-paypal-title]@L]<sup>&reg;</sup></h3>
+                    <span>[@L[cds.sales/gd/hosting/website-builder:apps-modal-paypal-desc]@L]</span>
+                  </li>
+                  <div class="seperator"></div>
+                  <li class="homefinder-app" data-ci="87772">
+                    <div class="icon"></div>
+                    <div class="arrow" id="bottom"></div>
+                    <h3>[@L[cds.sales/gd/hosting/website-builder:apps-modal-homefinder-title]@L]<sup>&reg;</sup></h3>
+                    <span>[@L[cds.sales/gd/hosting/website-builder:apps-modal-facebook-desc]@L]</span>
+                  </li>
+                </ul>
+                ##endif
+                <div class="app-images">
+                  <div id="facebook-app-image" class="solazy sl-img" data-sl-src="[@T[link:<cssroot/>]@T]fos/wsb/100150/img/wsb-apps-image-facebook.jpg"></div>
+                  <div id="youtube-app-image" class="solazy sl-img" data-sl-src="[@T[link:<cssroot/>]@T]fos/wsb/100150/img/wsb-apps-image-youtube.jpg"></div>
+                  <div id="twitter-app-image" class="solazy sl-img" data-sl-src="[@T[link:<cssroot/>]@T]fos/wsb/100150/img/wsb-apps-image-twitter.jpg"></div>
+                  ##if(countrySiteAny(www))
+                  <div id="yelp-app-image" class="solazy sl-img" data-sl-src="[@T[link:<cssroot/>]@T]fos/wsb/100150/img/wsb-apps-image-yelp.jpg"></div>
+                  <div id="paypal-app-image" class="solazy sl-img" data-sl-src="[@T[link:<cssroot/>]@T]fos/wsb/100150/img/wsb-apps-image-paypal.jpg"></div>
+                  <div id="homefinder-app-image" class="solazy sl-img" data-sl-src="[@T[link:<cssroot/>]@T]fos/wsb/100150/img/wsb-apps-image-homefinder.jpg"></div>
+                  ##endif
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row tab-content no-margin-bottom">
+          <div class="col-xs-12">
+            <div class="plan-pricing-seo plan-pricing-grid-colum grid-column">
+              <div class="row badge-wrap">
+                <span class="badge badge-small badge-important badge-top-left"><strong>[@L[cds.sales/gd/hosting/website-builder:business-plus-badge-2]@L]</strong></span>
+              </div>
+              <div class="row row-one">
+                <div class="col-xs-6">
+                  ##if(activeLanguageAny([en-us]))
+                  <ul id="seo-interactive">
+                    <li class="wsb">
+                      <div class="seo-icon"></div>
+                      <div class="seo-screen"></div>
+                      <div class="seo-arrow"></div>
+                    </li>
+                    <li class="facebook">
+                      <div class="seo-icon"></div>
+                      <div class="seo-screen"></div>
+                      <div class="seo-arrow"></div>
+                    </li>
+                    <li class="twitter">
+                      <div class="seo-icon"></div>
+                      <div class="seo-screen"></div>
+                      <div class="seo-arrow"></div>
+                    </li>
+                  </ul>
+                  ##else
+                  <div class="solazy sl-image wsb-business-plus-plan" data-sl-src="[@T[link:<imageroot/>]@T]{{assetPath}}img/social-manager-non-us.jpg"></div>
+                  ##endif
+                </div>
+                <div class="col-xs-6 column-two">
+                  <h3 class="h2-alternate">[@L[cds.sales/gd/hosting/website-builder:oneclick-header]@L]</h3>
+                  <p>[@L[cds.sales/gd/hosting/website-builder:oneclick-body-text]@L]</p>
+                  ##if(activeLanguageAny([en-us]))
+                  <a href="#" data-toggle="modal" data-target="#socialModal" class="font-16 simple-link" data-ci="90554"><i class="ico ico-gt-circle-small-alternate"></i>[@L[cds.sales/gd/hosting/website-builder:learn-more]@L]</a>
+                  ##endif
+                </div>
+              </div>
+              <div class="row row-two">
+                <div class="col-xs-6">
+                  <h3 class="h2-alternate">[@L[cds.sales/gd/hosting/website-builder:seofs-header]@L]</h3>
+                  <p>[@L[cds.sales/gd/hosting/website-builder:seofs-body-text]@L]</p>
+                  <a href="#" data-toggle="modal" data-target="#seoModal" class="font-16 simple-link" data-ci="87765"><i class="ico ico-gt-circle-small-alternate"></i>[@L[cds.sales/gd/hosting/website-builder:seofs-dropdown-a-tag]@L]</a>
+                </div>
+                <div class="col-xs-6 logos"></div>
+              </div>
+              <div class="row row-three">
+                <p class="no-margin-bottom col-xs-10">[@L[cds.sales/gd/hosting/website-builder:business-plus-plan-cta]@L] <strong class="secondary-color">[@T[productprice:<current productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses"  />]@T]</strong>[@L[cds.sales/gd/hosting/website-builder:mo]@L]</p>
+                <form class="seo-business-plus-form col-xs-2 addtocart-form" id="addtocart-form" method="POST" action="[@T[link:<relative path="~/hosting/website-builder-config.aspx" />]@T]">
+                  <label><input type="radio" checked="checked" name="plan" value="wsb_businessplus_12month" /></label>
+                  <button type="submit" data-form="addtocart-form" class="btn btn-warning js-addtocart-btn cta-small wsb-cta-width">[@L[cds.sales/gd/hosting/website-builder:planbox-cart-btn]@L]</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        
+
+        <div class="row tab-content no-margin-bottom">
+            <div class="col-xs-12">
+                <div class="plan-pricing-help plan-pricing-grid-colum grid-column">
+                    <h3>[@L[cds.sales/gd/hosting/website-builder:here-to-help-title]@L]</h3>
+                    <p class="no-margin-bottom">[@L[cds.sales/gd/hosting/website-builder:here-to-help-text]@L]</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="main-banner cross-sell-banner misc-banner">
+      <div class="xsell-title-bar">
+        <span class="xsell-main-title condensed">[@L[cds.sales/gd/hosting/website-builder:wsb-not-finding]@L]</span><span class="xsell-main-title">[@L[cds.sales/gd/hosting/website-builder:wsb-might-want]@L]</span>
+      </div>
+      <div class="xsell-wrapper">
+        <div class="xsell-tile">
+          <div class="managed-wordpress-xsell"></div>
+          <div class="xsell-content">
+            <div><span class="xsell-title condensed">[@L[cds.sales/gd/hosting/website-builder:wsb-managed-wordpress]@L]</span></div>
+            <div class="xsell-content-line"><span class="xsell-text">[@L[cds.sales/gd/hosting/website-builder:wp-power]@L]</span></div>
+            <div class="xsell-content-line"><span class="xsell-perfect">[@L[cds.sales/gd/hosting/website-builder:wp-perfect]@L]</span></div>
+            <div class="xsell-content-line"><span class="xsell-starting">[@L[cds.sales/gd/hosting/website-builder:starting-at]@L]</span></div>
+            <div><span class="xsell-price">[@T[productprice:<current productid="32759" dropdecimal="false" period="monthly" negative="parentheses"/>]@T]*</span><span class="xsell-mo">[@L[cds.sales/gd/hosting/website-builder:mo]@L]</span></div>
+            <div class="xsell-content-line"><a href="[@T[link:<relative path="~/hosting/wordpress-hosting.aspx" />]@T]" data-ci="88753"><span class="xsell-learn"><i class="ico ico-gt-circle-small-alternate"></i>&nbsp;[@L[cds.sales/gd/hosting/website-builder:learn-more]@L]</span></a></div>
+          </div>
+        </div>
+        ##if(activeLanguageAny(en))
+        <div class="xsell-tile left-bar">
+          <div class="qsc-xsell"></div>
+          <div class="xsell-content">
+            <div><span class="xsell-title condensed">[@L[cds.sales/gd/hosting/website-builder:wsb-qsc]@L]</span></div>
+            <div class="xsell-content-line"><span class="xsell-text">[@L[cds.sales/gd/hosting/website-builder:qsc-skill]@L]</span></div>
+            <div class="xsell-content-line"><span class="xsell-perfect">[@L[cds.sales/gd/hosting/website-builder:qsc-perfect]@L]</span></div>
+            <div class="xsell-content-line"><span class="xsell-starting">[@L[cds.sales/gd/hosting/website-builder:starting-at]@L]</span></div>
+            <div><span class="xsell-price">[@T[productprice:<current productid="6790" dropdecimal="false" period="monthly" negative="parentheses"/>]@T]*</span><span class="xsell-mo">[@L[cds.sales/gd/hosting/website-builder:mo]@L]</span></div>
+            <div class="xsell-content-line"><a href="[@T[link:<relative path="~/ecommerce/shopping-cart-new1.aspx" />]@T]" data-ci="88754"><span class="xsell-learn"><i class="ico ico-gt-circle-small-alternate"></i>&nbsp;[@L[cds.sales/gd/hosting/website-builder:learn-more]@L]</span></a></div>
+          </div>
+        </div>
+        ##endif
+      </div>
+      ##if(activeLanguageAny(es,[pt-br]))
+      <div class="xsell-bottom">
+      </div>
+      ##endif
+    </section>
+
+</div>
+
+  </div>
+  ##if(activeLanguageAny(en) && !isManager() && splitTestingSideIsActive(1214, A))
+    <div class="tab-pane" id="reviews">
+        <section class="tab-content-top-spacing">
+        <div class="container l-main-container">
+            <div class="row tab-content">
+                <div class="col-xs-12">
+                  <div class="tab-content-reviews-bg-website-builder">
+                    <h2>[@L[cds.sales/gd/hosting/website-builder:CheckoutCustomers]@L]</h2>
+                  </div>
+                    <section class="carousel-container">
+                      <div class="container testimonial-carousel-container">
+                        <div data-ride="carousel" class="carousel slide" data-interval="10000" id="carousel-init">
+                          <!-- Wrapper for slides -->
+                          <div class="carousel-content-container">
+                            <div class="carousel-inner carousel-inner-container testimonial-carousel-inner-container">
+                              <div class="item carousel-inner-item active">
+                                <div class="carousel-inner-text-container">
+                                  <div class="testimonial-simply-sweets testimonial-content-text">
+                                    <p class="font-18 testimonial-title"><strong>[@L[cds.sales/gd/hosting/website-builder:CustomerTestimonialMainTitle]@L]</strong></p>
+                                    <p class="carousel-inner-text">[@L[cds.sales/gd/hosting/website-builder:CustomerTestimonialText3]@L]</p>
+                                    <div class="testimonial-carousel-footer">
+                                      <hr/>
+                                      <span class="font-18 testimonials-name"><strong>[@L[cds.sales/gd/hosting/website-builder:CustomerTestimonialClientName3]@L]</strong></span>
+                                      <span class="testimonials-company"><em>[@L[cds.sales/gd/hosting/website-builder:CustomerTestimonialCompany3]@L]</em></span>
+                                    </div>
+                                  </div>
+                                  <div class="testimonial-simply-sweets-video testimonial-picture">
+                                  </div>
+                                </div>
+                              </div>                                                  
+                              
+                            </div>
+                            <!-- Controls -->
+                            
+                          </div>
+                          <!-- Indicators -->
+                          <ol class="carousel-indicators carousel-indicators-list">
+                          </ol>      
+                        </div>
+                      </div>
+                    </section>
+
+                </div>
+            </div>
+            <div class="row tab-content">
+                <div class="col-xs-12">
+                    <div class="grid-column tab-content-column-alternate">
+                      <div id="BVRRContainer"><p class="bv-loading">Loading...</p></div>
+                    [@P[userControl:<Data location="~/Shared/Tabs/controls/BVReviewsNoJS.ascx"><Parameters><Parameter key="ProductId" value="website_builder" /><Parameter key="ReviewNumber" value="4" /></Parameters></Data>]@P]
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn btn-primary btn-lg btn-block js-open-overview"><i class="ico ico-gt"></i>[@L[cds.sales/gd/hosting/website-builder:choose-your-package]@L]</a>
+        </div>
+      </section>
+    </div>
+  ##endif
+    <div class="tab-pane" id="faq">
+      <section class="tab-content-top-spacing">
+        <div class="container l-main-container">
+            <div class="row tab-content">
+                <div class="col-xs-12">
+                    <div class="grid-column tab-content-column-alternate">
+
+                        <h2 class="h2-alternate">[@L[cds.sales/gd/hosting/website-builder:faq-first-slide-title]@L]</h2>
+                        [@L[cds.sales/gd/hosting/website-builder:faq-first-slide-content]@L]
+                        <hr/>
+
+                        <h2 class="h2-alternate">[@L[cds.sales/gd/hosting/website-builder:faq-third-slide-title]@L]</h2>
+                        [@L[cds.sales/gd/hosting/website-builder:faq-third-slide-content]@L]
+                        <hr/>
+
+                        <h2 class="h2-alternate">[@L[cds.sales/gd/hosting/website-builder:faq-second-slide-title]@L]</h2>
+                        [@L[cds.sales/gd/hosting/website-builder:faq-second-slide-content]@L]
+                        <hr/>
+
+                        <h2 class="h2-alternate">[@L[cds.sales/gd/hosting/website-builder:faq-fourth-slide-title]@L]</h2>
+                        [@L[cds.sales/gd/hosting/website-builder:faq-fourth-slide-content]@L]
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn btn-primary btn-lg btn-block js-open-overview"><i class="ico ico-gt"></i>[@L[cds.sales/gd/hosting/website-builder:cta-package]@L]</a>
+        </div>
+    </section>
+    </div>
+
+</div>
+
+
+  <!-- End main-tabs panes -->
+  <section class="container l-main-container content-disclaimer">
+      <p class="no-margin-bottom">
+          <small class="small-print">[@L[cds.sales/gd/hosting/website-builder:DisclaimerContentDisclaimer]@L]</small>
+      </p>
+      <p>
+          <small class="small-print">[@L[cds.sales/gd/hosting/website-builder:DisclaimerContentSymbols]@L]<a class="simple-link" href="#" data-toggle="modal" data-target="#myModal" data-ci="87766">[@L[cds.sales/gd/hosting/website-builder:DisclaimerContentLinkText]@L]</a>
+          </small>
+      </p>
+  </section>
+  <div class="modal appModal fade" id="socialModal">
+      <div class="app-dialog">
+          <div class="seo-content">
+              <div class="app-header">
+                  <button type="button" class="modal-header-close close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                  <h2>[@L[cds.sales/gd/hosting/website-builder:social-modal-header]@L]</h2>
+                  <p class="font-16 margin-bottom-12">[@L[cds.sales/gd/hosting/website-builder:social-modal-text]@L]</p>
+              </div>
+              <div class="solazy sl-image" data-sl-src="[@T[link:<imageroot/>]@T]fos/201401/hosting/website-builder/img/stand-out-on-social-media.jpg"></div>
+          </div>
+      </div>
+  </div>
+  
+  <div class="modal appModal fade" id="seoModal">
+      <div class="app-dialog">
+          <div class="seo-content">
+              <div class="app-header">
+                  <button type="button" class="modal-header-close close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                  <h2>[@L[cds.sales/gd/hosting/website-builder:seofs-dropdown-header]@L]</h2>
+                  <p class="font-16 margin-bottom-12">[@L[cds.sales/gd/hosting/website-builder:seofs-dropdown-subheader-text]@L]</p>
+              </div>
+              <div id="SEOFS-slider">
+                  <div class="solazy sl-image" id="seofs-how-to-image" data-sl-src="[@T[link:<imageroot/>]@T]fos/wsb/rebrand/img/seofs-how-seo-tools-work.jpg" data-sl-alt="[@L[cds.sales/gd/hosting/website-builder:seofs-how-work-alt]@L]"></div>
+                  <div class="feature-bullet-container">
+                      <div class="feature-bullet">
+                          <h3>[@L[cds.sales/gd/hosting/website-builder:seofs-dropdown-bullet-basic-info]@L]</h3>
+                          <p>[@L[cds.sales/gd/hosting/website-builder:seofs-dropdown-bullet-basic-info-text]@L]</p>
+                      </div>
+                      <div class="feature-bullet second-feature-bullet">
+                          <h3>[@L[cds.sales/gd/hosting/website-builder:seofs-dropdown-bullet-location]@L]</h3>
+                          <p>[@L[cds.sales/gd/hosting/website-builder:seofs-dropdown-bullet-location-text]@L]</p>
+                      </div>
+                      <div class="feature-bullet last-feature-bullet">
+                          <h3>[@L[cds.sales/gd/hosting/website-builder:seofs-dropdown-bullet-keywords]@L]</h3>
+                          <p>[@L[cds.sales/gd/hosting/website-builder:seofs-dropdown-bullet-keywords-text]@L]</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <div class="modal fade" id="myModal">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                  <p class="modal-title">
+                      <strong>[@L[cds.sales/gd/hosting/website-builder:disclaimer-modal-header]@L]</strong>
+                  </p>
+              </div>
+                <div class="modal-body">
+                  ##if(countrySiteAny(uk))
+                  <p>&lowast;[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltipUK]@L]</p>
+                  ##elseif(countrySiteAny(br))
+                  <p>&lowast;[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltipBR]@L]</p>
+                  ##elseif(countrySiteAny(mx))
+                  <p>&lowast;[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltipMX]@L]</p>
+                  ##elseif(countrySiteAny(ca))
+                  <p>&lowast;[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltipCA]@L]</p>
+                  ##elseif(countrySiteAny(in))
+                  <p>&lowast;[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltipIN]@L]</p>
+                  ##elseif(isManager())
+                  <p>&lowast;[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltipManager]@L]</p>
+                  ##else
+                  <p>&lowast;[@L[cds.sales/gd/hosting/website-builder:plan-domain-new-tooltip]@L]</p>
+                  ##endif
+                  <p>[@L[cds.sales/gd/hosting/website-builder:modal-disclaimer-5]@L]</p>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  ##if(activeLanguageAny(en))
+    {% include '_login-modal.html' %}
+    ##endif
+
+{% endblock %}
+
+{% block footer %}
+  <script src="[@T[link:<js path='{{assetPath}}js/website-builder.js' />]@T]?v=2" type="text/javascript"></script>
+  <script src="[@T[link:<js path='fos/201401/global/js/plugins.js' />]@T]" type="text/javascript"></script>
+##if(activeLanguageAny(en))
+  {% include '_load-reviews-js.html' %}
+ ##endif
+  <script type="text/javascript">
+  var url = document.location.toString();
+  if (url.match('#')) {
+      $('.nav-tabs a[href=#'+url.split('#')[1]+']').tab('show') ;
+  } 
+
+  var ytPlayerList = {}; // Maps youtube player with its appropiate iframe based on the iframe id
+
+  function onYouTubeIframeAPIReady() {
+      $('.embedVideo').gdVideos();
+  }
+
+  function onPlayerReady (event) {
+      ytPlayerList[$(event.target.getIframe()).attr('id')] = event.target;
+  }
+
+  $(function () {
+    if (!$('html').hasClass('lt-ie8')) {
+      if ($('.embedVideo').length > 0) {
+        var tag = document.createElement('script'),
+        firstScriptTag = document.getElementsByTagName('script')[0];
+        tag.src = "//www.youtube.com/iframe_api";
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+      }
+    } else {
+      $('.embedVideoIE7').gdVideos();
+    }
+    $('.rating-stars-init').ratingStars();
+    $('.isToolTip').tooltip();
+    $('.equal-height').setColumnsEqualHeight();
+    $('.select-box').setSelectBox();
+    $('.tab-link').tabLinks();
+    $('.tab-link').scrollToSection();
+
+     $('.addtocart-form').on('submit',function(e){
+        e.preventDefault();
+        var $form = $(this);
+        var data= $form.serializeObject();
+        window.location.href = (($form.attr('action').indexOf('?') != -1) ? $form.attr('action') + '&plan=' : $form.attr('action') + '?plan=') + data.plan;
+    });
+  });
+
+
+  $('.js-open-overview').on('click', function(e){
+    e.preventDefault();
+    window.location.hash = '';
+    $('a[href="#plans-pricing"]').tab('show');
+    window.location.hash = '#plans-pricing';
+  });
+
+  // gdSideBySideAlign plugin
+  (function ( $, window, document, undefined ) {
+
+    var pluginName = 'gdSideBySideAlign',
+        defaults = {
+          bailIfRowCountsMismatch : true
+    };
+
+    function GDSideBySideAlign( element, options ) {
+      this.element = element;
+      this.options = $.extend( {}, defaults, options);
+      this._defaults = defaults;
+      this._name = pluginName;
+      this.init();
+    }
+
+    GDSideBySideAlign.prototype.init = function () {
+
+        // Find the columns
+        var $columns = $(this.element).find('[data-gd-sidebysidealign-col]');
+
+        if($columns.length == 0) {
+          return; // bail if no columns found
+        }
+
+        // Make sure columns have an equal number of rows
+        var numRows = 0, equalLength = true;
+        $.each($columns, function(idx,item){
+          var $rows = $(item).find('[data-gd-sidebysidealign-row]');
+          if(numRows == 0) {
+            numRows = $rows.length;
+          }
+          if(equalLength) {
+            if(numRows != $rows.length) equalLength = false;
+          }
+        });
+        if(numRows==0 || !equalLength && this.options.bailIfRowCountsMismatch) {
+          return; // bail if no rows, or rows are not equal length
+        }
+
+        // loop thru each row and grab the largest cell height and apply to each cell in that row
+        for(var i=1; i<=numRows; i++) {
+          var $cells = $columns.find('[data-gd-sidebysidealign-row="' + i + '"]' );
+          var maxHeight = 0;
+          $.each($cells,function(idx, cell){
+            maxHeight = Math.max(maxHeight, $(cell).height());
+          });
+          $cells.height(maxHeight);
+        }
+
+    }; /* end GDSideBySideAlign.prototype.init */
+
+    // register the function to be used
+    $.fn[pluginName] = function ( options ) {
+      return this.each(function () {
+        if (!$.data(this, 'plugin_' + pluginName)) {
+          $.data(this, 'plugin_' + pluginName, new GDSideBySideAlign( this, $(this).data('gd-sidebysidealign') || options ));
+        }
+      });
+    };
+
+    // load the plugin
+    $(document).ready(function(){
+    var url = document.location.toString();
+      if(!(url.match('#reviews')||url.match('#faq'))){
+        $('[data-gd-sidebysidealign]').gdSideBySideAlign();
+      }
+      $('a[data-toggle="tab"]').on('shown.bs.tab',function(e){
+        var target = $(e.target).data('gd-sidebyside-target');
+        if(target ==='#plans-pricing'){
+        console.log(target);
+          $(target + ' [data-gd-sidebysidealign]').gdSideBySideAlign();
+        };
+      });
+    });
+
+  })( jQuery, window, document );
+
+  ##if(activeLanguageAny([en-au],[en-ca],[en-gb],[en-in],[en-us]))
+  $(document).ready(function(){
+    $("a[href='http://support.godaddy.com/help/article/5107']").text("How Do I Build a Website?");
+    $("a[href='http://support.godaddy.com/help/article/5107']").attr('data-ci','94986');
+    $("a[href='http://support.godaddy.com/help/article/5107']").removeAttr("target");
+    $("a[href='http://support.godaddy.com/help/article/5107']").attr('href','[@T[link:<relative path='~/hosting/website-builder/how-to-build-a-website' secure='true' />]@T]');
+
+    $("a[href='http://support.godaddy.com/help/article/4026']").text("What are Website Templates?");
+    $("a[href='http://support.godaddy.com/help/article/4026']").attr('data-ci','94987');
+    $("a[href='http://support.godaddy.com/help/article/4026']").removeAttr("target");
+    $("a[href='http://support.godaddy.com/help/article/4026']").attr('href','[@T[link:<relative path='~/hosting/website-builder/website-template' secure='true' />]@T]');
+  });
+  ##endif
+</script>
+
+
+{% endblock %}

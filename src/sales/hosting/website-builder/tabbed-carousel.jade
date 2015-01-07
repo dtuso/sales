@@ -1,0 +1,32 @@
+extends ../../../templates/tabbed-carousel-mixin.jade
+
+append vars
+  - title = "Simplify your bookkeeping. Get back to business.";
+  - subtitle = "Spend less time on paperwork and more time with customers.";
+  - numOfTabs= 6;
+  - lazyLoad = true;
+  - id = "carousel-social-media"
+
+block tabs
+  +addTab({icon:"uxicon-facebook-box",logo:"",imageAlternateText:"",text:"facebook"})
+  +addTab({icon:"uxicon-twitter",logo:"",imageAlternateText:"",text:"twitter"})
+  +addTab({icon:"uxicon-youtube-box",logo:"",imageAlternateText:"",text:"youtube"})
+  +addTab({icon:"uxicon-yelp",logo:"",imageAlternateText:"",text:"yelp"})
+  +addTab({icon:"uxicon-paypal",logo:"",imageAlternateText:"",text:"paypal"})
+  +addTab({icon:"uxicon-homefinder",logo:"",imageAlternateText:"",text:"home owner"})
+block panels
+  +carouselItem
+    include ./panels/facebook.jade
+  +carouselItem
+    include ./panels/twitter.jade
+  +carouselItem
+    include ./panels/youtube.jade
+  +carouselItem
+    include ./panels/yelp.jade
+  +carouselItem
+    include ./panels/paypal.jade
+  +carouselItem
+    include ./panels/homeOwner.jade
+
+
+
