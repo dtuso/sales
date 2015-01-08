@@ -1,4 +1,5 @@
 section#domains
+
   .features.tile-section
     .container
       .row
@@ -26,21 +27,15 @@ section#domains
       .col-sm-12 
         p + Small business owner and customer surveys. February 2014
 
-  .bg-gray-light
-    .container
-      .row
-        .col-md-6.col-sm-12
-          h2.got-no-top Find your perfect name
-          p Keep it classic or try something new. Either way, we've got your covered. Choose from any of these domains.
-        .col-md-6.col-sm-12
-          .container
-            .row
-              .col-md-3.col-sm-6
-                i.tldlogo.tldlogo-dot-org
-                img(src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/dotcom.jpg")
-              .col-md-3.col-sm-6
-                img(src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/dotnet.jpg")
-              .col-md-3.col-sm-6
-                img(src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/dotorg.jpg")
-              .col-md-3.col-sm-6
-                img(src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/dotco.jpg")
+  - var featuresId = "findYourPerfectDomain";
+  - var presentationTemplate = "featuresSlim";
+  - var backgroundImage = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/bg-shortMod.jpg";
+  - var whiteText = false;
+  - var lazyLoad = false;
+  - var image = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/you-get.png";
+  - var title = "Find your perfect name";
+  - var text = "Keep it classic or try something new. Either way, we've got your covered. Choose from any of these domains.";
+
+  include ../../../templates/feature-templates.jade
+
+

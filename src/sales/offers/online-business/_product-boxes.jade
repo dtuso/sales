@@ -1,18 +1,43 @@
-include ../../../templates/column-list-mixin.jade
-
 - var productBoxOptions = {backgroundColor:'inherit'};
+- var title = "Here's what you get&hellip;";
+- var subtitle;
 
 section#products.bg-gray-light
-
   .container
+    if (title)
+      .row
+        .col-sm-12.text-center
+          h2 !{title}
+
+    if (subtitle)
+      .row
+        .col-sm-12
+          .key-benefits-subtitle.text-center !{subtitle}
+
     .row
-      .col-sm-12
-        h2.text-center Here's what you get&hellip;
-    .row
-      +renderColumnList(3,productBoxOptions)
-        +columnListMember
-          include ./products/_domain.jade
-        +columnListMember
-          include ./products/_website.jade
-        +columnListMember
-          include ./products/_email.jade
+
+      .col-sm-4
+
+        h3.key-benefits-title A domain
+        .key-benefits-text Your own unique address on the web, like GoDaddy.com
+        .features-text
+          .include-check-green <strong>Choose from</strong> .com, .net, .org, or even .co domains.
+          .include-check-green <strong>Trust the world leader</strong> with over 58 million domains under management
+      
+      .col-sm-4
+      
+        h3.key-benefits-title Your website
+        .key-benefits-text A place to promote your business or sell your stuff on the web.
+        .features-text
+          .include-check-green <strong>Get your business online</strong> with Website Builder
+          .include-check-none <strong>or</strong>
+          .include-check-green <strong>Sell products</strong> with your own Online Store (website included)
+
+      .col-sm-4
+
+        h3.key-benefits-title Pro email
+        .key-benefits-text An address that makes you look like the pro you are.
+        .features-text
+          .include-check-green <strong>Powered by</strong> the reliable Microsoft Office 365
+          .include-check-green <strong>Backed by</strong> out free 24/7 phone support
+
