@@ -17,8 +17,9 @@ mixin twoUpCompareColumn(columnOptions)
     - offsetClass = "col-md-offset-2"
   else if populatedColumns == 0
     - offsetClass = "or-container"
+    - populatedColumns++
 
-  div(class="col-md-5 #{offsetClass ? offsetClass : ''} col-sm-6 #{columnOptions.backgroundColor}")
+  div(class="col-md-5 #{offsetClass ? offsetClass : ''} col-sm-6 " style="background-color: #{columnOptions.backgroundColor}")
     div(class="two-up-text-wrap #{columnOptions.whiteText ? 'white-text' : ''}" style="#{columnOptions.style ? columnOptions.style : ''}")
 
       if (columnOptions.shapeText)
@@ -51,12 +52,13 @@ mixin renderTwoUpCompare(twoUpOptions)
   - twoUpOptions.backgroundColor = twoUpOptions.backgroundColor || "";
   - twoUpOptions.backgroundImage = twoUpOptions.backgroundImage || "";
 
-  if (twoUpOptions.title)
-    div(id="#{twoUpOptions.twoUpCompareId ? twoUpOptions.twoUpCompareId : ''}", class="#{twoUpOptions.whiteText ? 'white-text' : ''}" style="background-color: #{twoUpOptions.titleBackgroundColor} ")
-      .container
-        .row
-          .col-sm-12
-            h2.text-center.two-up-title !{twoUpOptions.title}
-  .container
-    .row
-      block
+  div(id="#{twoUpOptions.twoUpCompareId ? twoUpOptions.twoUpCompareId : ''}",  style="background-color: #{twoUpOptions.backgroundColor} ")
+    if (twoUpOptions.title)
+      div(class="#{twoUpOptions.whiteText ? 'white-text' : ''}" style="background-color: #{twoUpOptions.titleBackgroundColor} ")
+        .container
+          .row
+            .col-sm-12
+              h2.text-center.two-up-title !{twoUpOptions.title}
+    .container
+      .row
+        block
