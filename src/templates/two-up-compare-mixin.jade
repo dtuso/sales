@@ -10,7 +10,9 @@ mixin twoUpCompareColumn(columnOptions)
   - columnOptions.image = columnOptions.image || "";
   - columnOptions.altText = columnOptions.altText || "";
   - columnOptions.title = columnOptions.title || "";
+  - columnOptions.titleAlign = columnOptions.titleAlign || "";
   - columnOptions.subtitle = columnOptions.subtitle || "";
+  - columnOptions.subtitleAlign = columnOptions.subtitleAlign || "";
   - var offsetClass = ""
 
   if populatedColumns == 1
@@ -19,7 +21,7 @@ mixin twoUpCompareColumn(columnOptions)
     - offsetClass = "or-container"
     - populatedColumns++
 
-  div(class="col-md-5 #{offsetClass ? offsetClass : ''} col-sm-6 " style="background-color: #{columnOptions.backgroundColor}")
+  div(class="col-md-5 #{offsetClass ? offsetClass : ''} col-sm-6  #{columnOptions.backgroundColor}")
     div(class="two-up-text-wrap #{columnOptions.whiteText ? 'white-text' : ''}" style="#{columnOptions.style ? columnOptions.style : ''}")
 
       if (columnOptions.shapeText)
@@ -31,10 +33,22 @@ mixin twoUpCompareColumn(columnOptions)
           img(src="#{columnOptions.image}", alt="#{columnOptions.altText}")
 
       if (columnOptions.title)
-        h2 !{columnOptions.title}
+        case columnOptions.titleAlign
+          when "center"
+            h2(class="text-center") !{columnOptions.title}
+          when "right"
+            h2(class="text-right") !{columnOptions.title}
+          default
+            h2 !{columnOptions.title}
 
       if (columnOptions.subtitle)
-        h3.subtitle !{columnOptions.subtitle}
+        case columnOptions.subtitleAlign
+          when "center"
+            h3(class="text-center") !{columnOptions.subtitle}
+          when "right"
+            h3(class="text-right") !{columnOptions.subtitle}
+          default
+            h3 !{columnOptions.subtitle}
       
       .row
         .col-sm-10
@@ -49,16 +63,20 @@ mixin renderTwoUpCompare(twoUpOptions)
   - twoUpOptions.titleBackgroundColor = twoUpOptions.titleBackgroundColor || "";
   - twoUpOptions.titleWhiteText = twoUpOptions.titleWhiteText || "";
   - twoUpOptions.icode = twoUpOptions.icode || "";
+  - twoUpOptions.style = twoUpOptions.style || "";
   - twoUpOptions.backgroundColor = twoUpOptions.backgroundColor || "";
   - twoUpOptions.backgroundImage = twoUpOptions.backgroundImage || "";
 
-  div(id="#{twoUpOptions.twoUpCompareId ? twoUpOptions.twoUpCompareId : ''}",  style="background-color: #{twoUpOptions.backgroundColor} ")
+  style
+    include:css styles/two-up-compare-styles.css
+  div(id="#{twoUpOptions.twoUpCompareId ? twoUpOptions.twoUpCompareId : ''}" class = "#{twoUpOptions.titleBackgroundColor}" style="#{twoUpOptions.style ? twoUpOptions.style : ''}")
     if (twoUpOptions.title)
-      div(class="#{twoUpOptions.whiteText ? 'white-text' : ''}" style="background-color: #{twoUpOptions.titleBackgroundColor} ")
+      div(class="#{twoUpOptions.whiteText ? 'white-text' : ''}")
         .container
           .row
             .col-sm-12
               h2.text-center.two-up-title !{twoUpOptions.title}
-    .container
-      .row
-        block
+    div(class="two-up-wrap-compare #{twoUpOptions.backgroundColor}"  style!= twoUpOptions.backgroundImage)
+      .container
+        .row
+          block

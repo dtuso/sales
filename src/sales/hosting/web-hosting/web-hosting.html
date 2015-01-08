@@ -159,6 +159,17 @@
   background-size: cover;
   background-position: center center;
 }
+
+@media (min-width: 768px) and (max-width: 991px) {
+  #choose-platform .or-container:after {
+    bottom: 360px;
+  }
+}
+@media (min-width: 992px) {
+  #choose-platform .or-container:after {
+    bottom: 200px;
+  }
+}
     </style>
     <script src="[@T[link:<javascriptroot />]@T]/fos/mike/0.7.0/js/sahara.min.js"></script>
     <script type="text/javascript">
@@ -920,28 +931,188 @@
       </div>
     </section>
     <section id="platforms" data-mid-nav-title="Platforms">
-      <div style="background-color: #5caf2b">
-        <div class="container">
-          <h2 class="text-center">Let's Compare Left and Right</h2>
-        </div>
-      </div>
-      <div id="choose-platform" style="background-image: url([@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Platforms.jpg); background-color: #78c043;" class="pro tile-section up-compare-wrap">
-        <div class="container">
-          <div class="col-md-5 left-side">
-            <h2 class="text-center">Cpanel for Linux</h2>
-            <h3 class="text-center">Each Linux plan includes:</h3>
-            <div class="include-check-black"><strong>cPanel:</strong> </br> Access all the hosting features and settings you need with this industry-standard control panel.</div>
-            <div class="include-check-black"><strong>CloudLinux:</strong> </br> Keep your site online with truly balanced CPU, RAM and Disk IO limits.</div>
-            <div class="include-check-black"><strong>Resources On-Demand:</strong> </br> If you need more power, you can level up your CPU, RAM, Entry Processes and I/O with just a click.</div>
-            <div class="include-check-black"><strong>CageFS:</strong> </br> Protect your Web content 24/7 with this virtualized file system.</div>
-            <div class="include-check-black"><strong>Free Applications:</strong> </br> Instanly install over 150 applications on your website with just a few clicks.</div>
+      <style>.two-up-wrap-compare {
+  min-height: 980px;
+  background-repeat: no-repeat;
+  background-size: cover !important;
+  background-position: center top;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-white {
+    background-color: transparent;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-yellow {
+    background-color: transparent;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-gray-lighter,
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-pro-gray {
+    background-color: transparent;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-gray-light {
+    background-color: transparent;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-green-official {
+    background-color: transparent;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-green-new {
+    background-color: transparent;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-green-official-light {
+    background-color: transparent;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-gray-darkest {
+    background-color: transparent;
+  }
+}
+@media (max-width: 767px) {
+  .two-up-wrap-compare {
+    background-image: none !important;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-white {
+    background-color: #fff;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-yellow {
+    background-color: ;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-gray-lighter,
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-pro-gray {
+    background-color: ;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-gray-light {
+    background-color: ;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-green-official {
+    background-color: ;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-green-new {
+    background-color: #5caf2b;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-green-official-light {
+    background-color: #84D54A;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-gray-darkest {
+    background-color: ;
+  }
+}
+.two-up-wrap-compare:after {
+  content: '';
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+@media only (max-width: 767px) {
+  .two-up-wrap-compare:after {
+    display: none;
+  }
+}
+.two-up-wrap-compare .two-up-text-wrap {
+  padding: 30px;
+}
+@media (max-width: 767px) {
+  .two-up-wrap-compare .two-up-text-wrap {
+    padding: 60px 0;
+  }
+}
+.two-up-wrap-compare .two-up-text-wrap h3.subtitle {
+  text-transform: none;
+}
+.two-up-wrap-compare .check-bullets li {
+  position: relative;
+  padding-left: 40px;
+  margin-bottom: 20px;
+}
+.two-up-wrap-compare .check-bullets li:before {
+  content: '';
+  background-image: ;
+  background-size: 205px auto;
+  background-position: 0 -700px;
+  width: 25px;
+  height: 27px;
+  position: absolute;
+  left: 0;
+}
+.two-up-wrap-compare .check-bullets li h5 {
+  margin-bottom: 5px;
+}
+.or-container:after {
+  content: '';
+  width: 94px;
+  height: 94px;
+  background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+  background-size: 205px auto;
+  background-position: 0 -896px;
+  position: absolute;
+  bottom: -50px;
+  margin: 0 auto;
+  display: block;
+  margin-left: -50px;
+  z-index: 1;
+}
+@media (max-width: 767px) {
+  .or-container:after {
+    display: block;
+    -webkit-transform: 90deg;
+    -moz-transform: 90deg;
+    transform: rotate(90deg);
+    left: 50%
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .or-container:after {
+    left: 101%
+  }
+}
+@media (min-width: 992px) {
+  .or-container:after {
+    left: 121%
+  }
+}
+      </style>
+      <div id="choose-platform" style="" class="bg-green-official-light">
+        <div>
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12">
+                <h2 class="text-center two-up-title">Choose your platform</h2>
+              </div>
+            </div>
           </div>
-          <div class="col-md-5 col-md-offset-2 right-side">
-            <h2 class="text-center">Plesk for Windows</h2>
-            <h3 class="text-center">Each Windows plan includes:</h3>
-            <div class="include-check-black"><strong>Parallesls Plesk Panel:</strong> </br> Easily manage your server, email accounts and more with this popular, award-winning control panel.</div>
-            <div class="include-check-black"><strong>Windows Server 2012:</strong> </br> Take control of your hosting with Microsoft's newest and most powerful server operating system.</div>
-            <div class="include-check-black"><strong>Free Applications:</strong> </br> Instanly install over 70 applications on your website with just a few clicks.</div>
+        </div>
+        <div style="background-image: url('[@T[link:<imageroot />]@T]fos/mike/img/hosting/two-up-compare-bg-ph.png')" class="two-up-wrap-compare bg-green-official">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-5 or-container col-sm-6  bg-green-official-light">
+                <div style="" class="two-up-text-wrap ">
+                  <h2 class="text-center">Cpanel for Linux</h2>
+                  <h3 class="text-center">Each Linux plan includes:</h3>
+                  <div class="row">
+                    <div class="col-sm-10">
+                      <div class="include-check-black"><strong>cPanel:</strong> </br> Access all the hosting features and settings you need with this industry-standard control panel.</div>
+                      <div class="include-check-black"><strong>CloudLinux:</strong> </br> Keep your site online with truly balanced CPU, RAM and Disk IO limits.</div>
+                      <div class="include-check-black"><strong>Resources On-Demand:</strong> </br> If you need more power, you can level up your CPU, RAM, Entry Processes and I/O with just a click.</div>
+                      <div class="include-check-black"><strong>CageFS:</strong> </br> Protect your Web content 24/7 with this virtualized file system.</div>
+                      <div class="include-check-black"><strong>Free Applications:</strong> </br> Instanly install over 150 applications on your website with just a few clicks.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-5 col-md-offset-2 col-sm-6  bg-gray-darkest">
+                <div style="" class="two-up-text-wrap ">
+                  <h2 class="text-center">Plesk for Windows</h2>
+                  <h3 class="text-center">Each Windows plan includes:</h3>
+                  <div class="row">
+                    <div class="col-sm-10">
+                      <div class="include-check-black"><strong>Parallesls Plesk Panel:</strong> </br> Easily manage your server, email accounts and more with this popular, award-winning control panel.</div>
+                      <div class="include-check-black"><strong>Windows Server 2012:</strong> </br> Take control of your hosting with Microsoft's newest and most powerful server operating system.</div>
+                      <div class="include-check-black"><strong>Free Applications:</strong> </br> Instanly install over 70 applications on your website with just a few clicks.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1122,42 +1293,184 @@
           </div>
         </div>
       </div>
-      <div id="two-up" style="background-color: #f47f00 ">
-        <div style="background-color: #62aa2f ">
+      <style>.two-up-wrap-compare {
+  min-height: 980px;
+  background-repeat: no-repeat;
+  background-size: cover !important;
+  background-position: center top;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-white {
+    background-color: transparent;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-yellow {
+    background-color: transparent;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-gray-lighter,
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-pro-gray {
+    background-color: transparent;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-gray-light {
+    background-color: transparent;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-green-official {
+    background-color: transparent;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-green-new {
+    background-color: transparent;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-green-official-light {
+    background-color: transparent;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-gray-darkest {
+    background-color: transparent;
+  }
+}
+@media (max-width: 767px) {
+  .two-up-wrap-compare {
+    background-image: none !important;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-white {
+    background-color: #fff;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-yellow {
+    background-color: ;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-gray-lighter,
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-pro-gray {
+    background-color: ;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-gray-light {
+    background-color: ;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-green-official {
+    background-color: ;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-green-new {
+    background-color: #5caf2b;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-green-official-light {
+    background-color: #84D54A;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-gray-darkest {
+    background-color: ;
+  }
+}
+.two-up-wrap-compare:after {
+  content: '';
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+@media only (max-width: 767px) {
+  .two-up-wrap-compare:after {
+    display: none;
+  }
+}
+.two-up-wrap-compare .two-up-text-wrap {
+  padding: 30px;
+}
+@media (max-width: 767px) {
+  .two-up-wrap-compare .two-up-text-wrap {
+    padding: 60px 0;
+  }
+}
+.two-up-wrap-compare .two-up-text-wrap h3.subtitle {
+  text-transform: none;
+}
+.two-up-wrap-compare .check-bullets li {
+  position: relative;
+  padding-left: 40px;
+  margin-bottom: 20px;
+}
+.two-up-wrap-compare .check-bullets li:before {
+  content: '';
+  background-image: ;
+  background-size: 205px auto;
+  background-position: 0 -700px;
+  width: 25px;
+  height: 27px;
+  position: absolute;
+  left: 0;
+}
+.two-up-wrap-compare .check-bullets li h5 {
+  margin-bottom: 5px;
+}
+.or-container:after {
+  content: '';
+  width: 94px;
+  height: 94px;
+  background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+  background-size: 205px auto;
+  background-position: 0 -896px;
+  position: absolute;
+  bottom: -50px;
+  margin: 0 auto;
+  display: block;
+  margin-left: -50px;
+  z-index: 1;
+}
+@media (max-width: 767px) {
+  .or-container:after {
+    display: block;
+    -webkit-transform: 90deg;
+    -moz-transform: 90deg;
+    transform: rotate(90deg);
+    left: 50%
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .or-container:after {
+    left: 101%
+  }
+}
+@media (min-width: 992px) {
+  .or-container:after {
+    left: 121%
+  }
+}
+      </style>
+      <div id="two-up" style="" class="bg-green-official-light">
+        <div>
           <div class="container">
             <div class="row">
               <div class="col-sm-12">
-                <h2 class="text-center two-up-title">The Title</h2>
+                <h2 class="text-center two-up-title">Not finding what you need?</h2>
               </div>
             </div>
           </div>
         </div>
-        <div class="container">
-          <div class="row">
-            <div style="background-color: #fff" class="col-md-5 or-container col-sm-6 ">
-              <div style="" class="two-up-text-wrap ">
-                <div class="two-up-speech-shape two-up-speech-shape-green">
-                  <div class="shape-text">shape text</div>
-                </div>
-                <h2>Left side</h2>
-                <h3 class="subtitle">sub left side</h3>
-                <div class="row">
-                  <div class="col-sm-10">
-                    <h4>Block content</h4>
+        <div style="background-image: url('[@T[link:<imageroot />]@T]fos/mike/img/hosting/two-up-compare-bg-ph.png')" class="two-up-wrap-compare bg-green-official">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-5 or-container col-sm-6  bg-green-official-light">
+                <div style="" class="two-up-text-wrap ">
+                  <div class="two-up-speech-shape two-up-speech-shape-orange">
+                    <div class="shape-text">Website Builder</div>
+                  </div>
+                  <h2>Do-it-yourself with Website Builder. Hosting Included.</h2>
+                  <h3>sub left side</h3>
+                  <div class="row">
+                    <div class="col-sm-10">
+                      <h4>Block content</h4>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div style="background-color: " class="col-md-5 col-md-offset-2 col-sm-6 ">
-              <div style="" class="two-up-text-wrap ">
-                <div class="two-up-speech-shape two-up-speech-shape-green">
-                  <div class="shape-text">shape text</div>
-                </div>
-                <h2>Right side</h2>
-                <h3 class="subtitle">sub right side</h3>
-                <div class="row">
-                  <div class="col-sm-10">
-                    <h4>Block content</h4>
+              <div class="col-md-5 col-md-offset-2 col-sm-6  bg-gray-darkest">
+                <div style="" class="two-up-text-wrap white-text">
+                  <div class="two-up-speech-shape two-up-speech-shape-orange">
+                    <div class="shape-text">Private Virtual Server</div>
+                  </div>
+                  <h2>Get Hosting that will grow.</h2>
+                  <h3>sub right side</h3>
+                  <div class="row">
+                    <div class="col-sm-10">
+                      <h4>Block content</h4>
+                    </div>
                   </div>
                 </div>
               </div>
