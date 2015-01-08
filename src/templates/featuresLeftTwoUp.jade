@@ -1,0 +1,31 @@
+mixin twoUp(options)
+  style
+    include:css ./styles/featuresLeftTwoUp.css
+  div(class="features-two-up #{options.featuresWrapClass ? options.featuresWrapClass : ''} #{options.whiteText ? 'text-white' : ''} #{options.backgroundColor ? options.backgroundColor : ''}", style != (typeof options.backgroundImage != 'undefined' && !options.lazyLoad ? 'background-image: url(' + options.backgroundImage + ');' : ''), data-lazy-load != (typeof options.backgroundImage != 'undefined' && options.lazyLoad ? '{"src":"#{options.backgroundImage}"}' : ''))
+    .container
+      .row
+        .col-sm-12
+          if (options.title)
+            h1 !{options.title}
+          if (options.subtitle)
+            h4 !{options.subtitle}
+        block
+        
+mixin twoUpFeature(feature)
+  if (feature)
+    .row.feature-row-height
+      .col-sm-7
+        .row.feature-row
+          .col-sm-5
+            if (feature.image)
+              img.feature-image.img-responsive(src!="#{feature.lazyLoad ? 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==' : feature.image}", data-lazy-load != feature.lazyLoad ? '{"src":"#{feature.image}","watch":".key-benefits-wrap","callback":"triggerResize"}' : '', alt="#{feature.altText ? feature.altText : ''}")
+
+          .col-sm-7
+            if (feature.title)
+              .feature-title !{feature.title}
+
+            if (feature.text)
+              .feature-row-text !{feature.text}
+
+            if (feature.buttonColor && feature.buttonUrl)
+              a(href="#{feature.buttonUrl}", class="btn #{feature.buttonColor ? feature.buttonColor : 'btn-default'}" ) !{feature.buttonText}

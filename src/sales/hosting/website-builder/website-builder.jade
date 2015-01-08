@@ -36,13 +36,14 @@ block sections
 
   include ./fullVideo.jade
 
-  section#social-media
+  section#social-media(data-mid-nav-title="Features")
     include ./tabbed-carousel.jade
 
-  section#business-exclusives.tile-section.bg-pro-gray
-    h2(style="text-align:center") Business Exclusives Section
+  section#business-exclusives.bg-pro-gray
+    include ./business-exclusives.jade
 
-  section#testimonials
+
+  section#testimonials(data-mid-nav-title="Testimonials")
     +carousel("carousel-testimonials",3)
       +carouselItem
         include ./panels/quote.jade
@@ -51,7 +52,7 @@ block sections
       +carouselItem
         include ./panels/quote.jade
 
-  section#faq
+  section#faq(data-mid-nav-title="FAQ")
   +renderAccordion({id: "test-faq", buttonID: "test-button", buttonText: "hey you"})
     h2 FAQ!
     +accordionTab("Where am I?")
