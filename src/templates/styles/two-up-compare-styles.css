@@ -104,6 +104,20 @@
 .two-up-wrap-compare .check-bullets li h5 {
   margin-bottom: 5px;
 }
+.or-container-none:after {
+  content: '';
+  width: 94px;
+  height: 94px;
+  background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+  background-size: 205px auto;
+  background-position: 0 -896px;
+  position: absolute;
+  bottom: -50px;
+  margin: 0 auto;
+  display: none;
+  margin-left: -50px;
+  z-index: 1;
+}
 .or-container:after {
   content: '';
   width: 94px;
