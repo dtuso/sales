@@ -34,6 +34,7 @@ block vars
   - description = "";
   - features = "";
   - pfid = "";
+  - defaultPlan = "";
   - flagText = "";
   - tcode = "";
   - listID = "";
@@ -89,9 +90,14 @@ atlantis:webstash(type="css")
 
   block button
     if (buttonText && buttonUrl)
-      a.btn.btn-primary.btn-plan.btn-lg.btn-block(href!=buttonUrl data-tcode!=tcode data-index="1") !{buttonText}
-    else
+      button.btn.btn-primary.btn-plan.btn-lg.btn-block(href!=buttonUrl data-tcode!=tcode data-index="1") !{buttonText}
+    else if(buttonText && showDropDownList )
       button.btn.btn-purchase.btn-plan.btn-lg.btn-block(data-tcode="#{tcode}",data-ul="#{listID}") !{buttonText}
+    else if (buttonText && !showDropDownList && defaultPlan)
+      button.btn.btn-purchase.btn-plan.btn-lg.btn-block(data-tcode="#{tcode}",data-plan="#{defaultPlan}") !{buttonText}
+    else
+      button.btn.btn-purchase.btn-plan.btn-lg.btn-block(data-tcode="#{tcode}") No Action
+
 
 
   block features
@@ -99,8 +105,4 @@ atlantis:webstash(type="css")
     if(features)
       each feature, index in features
         //- Text at the bottom that can have multiple "rows"
-        if (index < 3)
-          .plan-item 
-            strong !{feature}
-        else
-          .plan-item !{feature}
+        .plan-item !{feature}

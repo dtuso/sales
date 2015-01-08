@@ -1,0 +1,101 @@
+block vars
+  - icode = "";
+  - lazyLoad = false;
+  - backgroundImage = "";
+  - playButton = "";
+  - tagline = "";
+  - cta = "";
+  - youtubeId = "";
+  - tileName = "";
+
+style
+  include:css ./styles/full-video.css
+
+if(youtubeId != "")
+  atlantis:webstash(type="js")
+    script.
+      // https://developers.google.com/youtube/player_parameters#IFrame_Player_API
+      $(document).ready(function(){
+        if(typeof youtubeVideo === 'undefined'){
+          window.youtubeVideo = {
+            _src: 'https://www.youtube.com/embed/',
+            loadVideo: function(videoId, height, width, callback, parameters, container, insertType){
+              if(typeof parameters === 'object'){
+                var paramString = '';
+                
+                // add origin to src
+                parameters.origin = window.location.protocol+'//'+window.location.host
+
+                if(youtubeVideo._src.indexOf('?') === -1){
+                  paramString += '?';
+                }else{
+                  paramString += '&';
+                }
+
+                for(param in parameters){
+                  if(paramString.length > 2){
+                    paramString += '&';
+                  }
+                  paramString += param+'='+parameters[param];
+                }
+                parameters = paramString;
+              }
+              
+              var $video = $('<iframe height="'+height+'" width="'+width+'" style="position:absolute" frameBorder="0" src="'+youtubeVideo._src+videoId+parameters+'" />');
+
+              // append/prepend to container
+              if(typeof container === 'string'){
+                container = $(container);
+              }
+
+              if(typeof insertType === 'undefined' || insertType === 'append'){
+                container.append($video);
+              }else{
+                container.prepend($video);
+              }
+
+              if(typeof callback === 'function'){
+                $video.load(function(){
+                  callback($video[0]);
+                });
+              }
+
+              return $video[0];
+            }
+          };
+        }
+        
+        var $containers = $('[data-tile="#{tileName}"]');
+        $containers.each(function(){
+          var $this = $(this);
+          var videoId = $this.data('youtube-id');
+          $this.find('.play-button, .cta').bind('click.youtube',function(event){
+            // remove this event
+            $(event.target).unbind(event.type+'.'+event.handleObj.namespace);
+
+            // load the video
+            youtubeVideo.loadVideo(
+                videoId,
+                '100%',
+                '100%',
+                function(video){
+                    var $videoInfo = $this.find('.video-info');
+                    $videoInfo.animate({'opacity':0.0},1000,function(){
+                        $videoInfo.css({'display':'none'});
+                    });
+                    //$(video).css({'opacity':0.0}).animate({'opacity':1.0});
+                },
+                {'autoplay':1,'controls':0,'showinfo':0,'playsinline':1,'modestbranding':1,'rel':0},
+                $this,
+                'prepend'
+            );
+          }).css({'cursor':'pointer'});
+        });
+      });
+div(style!=(typeof backgroundImage != "undefined" && !lazyLoad ? "background-image: url(" + backgroundImage + ");" : ""), data-lazy-load != backgroundImage && lazyLoad ? "{'src':'" + backgroundImage + "'}" : "", data-icode="#{icode}", data-tile="#{tileName}", data-youtube-id="#{youtubeId}", class="video-marquee video-marquee-white full-video")
+  div.container.relative-position.video-info
+    div.row
+      div.col-sm-10.col-sm-offset-1.col-xs-12.video-marquee-all-centered
+        img.play-button(src!=playButton)
+        h4 !{tagline}
+        span.cta !{cta}

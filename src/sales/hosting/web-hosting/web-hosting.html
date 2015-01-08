@@ -22,10 +22,9 @@
     <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7914312/697366/css/fonts.css"> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags"><Parameters><Parameter key="manifest" value="salesuxcore" /></Parameters></Data>]@P]
     <link href="[@T[link:<cssroot />]@T]/fos/mike/0.7.0/css/sahara.css" rel="stylesheet">
-    <link href="[@T[link:<cssroot />]@T]/ux/dev-brand/css/uxcontrols.css" rel="stylesheet">
     <link href="[@T[link:<cssroot />]@T]/ux/dev-brand/css/uxcore.css" rel="stylesheet">
+    <link href="[@T[link:<cssroot />]@T]/ux/dev-brand/css/uxcontrols.css" rel="stylesheet">
     <script src="[@T[link:<javascriptroot />]@T]/ux/dev-brand/js/uxcontrols.js"></script>
-    <script src="[@T[link:<javascriptroot />]@T]/ux/dev-brand/js/uxcontrols.en.js"></script>
     <script type="text/javascript">
       window.config = window.config || {};
       window.config.uxcore = true;
@@ -150,7 +149,7 @@
 }
 
 @media (min-width: 992px) {
-  #choose-platform .left-side {
+  #choose-platform .left-sideee {
     padding-left: 11.666666667%;
   }
 }
@@ -570,17 +569,17 @@
                       <h3 class="text-center">All Plans Include</h3>
                     </div>
                   </div>
-                  <div class="col-sm-4 undefined">
+                  <div class="col-sm-4 ">
                     <div class="include-check">Free domain with annual plan</div>
                     <div class="include-check">Free Email Addresses</div>
                     <div class="include-check">One-click install of 200+ Free Applications</div>
                   </div>
-                  <div class="col-sm-4 undefined">
+                  <div class="col-sm-4 ">
                     <div class="include-check">1 GB storage MySQL Linux and 200 MB storage Windows SQL Databases</div>
                     <div class="include-check">Flexible, easy-to-use control panel</div>
                     <div class="include-check">24/7 security monitoring and DDoS protection</div>
                   </div>
-                  <div class="col-sm-4 undefined">
+                  <div class="col-sm-4 ">
                     <div class="include-check">Compatible with all major browsers</div>
                     <div class="include-check">One certificate covers unlimited servers</div>
                     <div class="include-check">One-click installation for GoDaddy hosted accounts</div>
@@ -952,9 +951,146 @@
     </section>
     <section id="faq">
       <p>faq</p>
+      <p>mixin:</p>
+      <style>.accordion-group {
+  border-top: 2px solid #e8e8e8;
+  border-bottom: 2px solid #e8e8e8;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: 'Walsheim-Bold';
+}
+
+.accordion-group h2 {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.accordion-group button {
+  margin-bottom: 40px;
+}
+
+.accordion-group li.accordion-dropdown {
+  padding: 20px 0;
+  cursor: pointer;
+}
+
+.accordion-group li.accordion-dropdown span {
+  font-size: 19px;
+  text-transform: uppercase;
+}
+
+.accordion-group li.accordion-dropdown .carett {
+  display: inline-block;
+  vertical-align: middle;
+  float: left;
+  margin-top: 7px;
+  margin-right: 10px;
+}
+
+.accordion-group li.accordion-dropdown .carett.caret-down {
+  border-top: 8px solid;
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
+}
+
+.accordion-group li.accordion-dropdown .carett.caret-right {
+  border-left: 8px solid;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  margin-top: 4px;
+}
+
+.accordion-group li.accordion-dropdown.active > span:first-child {
+  color: #008a32;
+}
+
+.accordion-group li.accordion-dropdown {
+  margin: 10px 0 0 0;
+  padding: 20px 0;
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.accordion-group li.accordion-dropdown .dropdown {
+  margin: 10px 0 0 0;
+  padding: 10px 0;
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 1;
+  list-style: none;
+}
+
+.accordion-group li.accordion-dropdown ul.dropdown > li div {  
+  padding-left: 15px;
+  border-left: 6px solid #008a32;
+  transition: all 300ms;
+}
+      </style>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <ul id="test-faq" class="accordion-group ">
+              <h2>A Title!</h2>
+              <li class="accordion-dropdown"><span class="carett caret-right"></span><span>things</span>
+                <ul class="dropdown">
+                  <li>
+                    <div>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vestibulum, nisl a lacinia gravida, velit elit convallis ex, ac fringilla ante erat eu ante. Duis pellentesque, dolor et laoreet feugiat, ligula lacus tincidunt ante, id malesuada purus nulla vel erat. Vivamus viverra velit vel imperdiet imperdiet. Morbi fermentum et justo id convallis. Fusce fringilla neque ut vestibulum ornare. Maecenas eleifend diam sit amet cursus finibus. Donec tellus massa, sollicitudin vitae lacus in, posuere suscipit leo. Donec vel dolor sapien. Pellentesque sit amet eleifend justo. Curabitur sed neque ligula. Phasellus vestibulum malesuada erat id elementum. Sed cursus neque et congue accumsan. </p>
+                      <p>Cras varius, tellus eu tristique ultrices, sapien enim ullamcorper odio, nec euismod metus massa vel leo. Praesent finibus lacus purus, in ultrices metus rutrum sed. Vestibulum purus mauris, efficitur id quam vel, consequat malesuada nisi. Duis eu mauris vitae mauris pulvinar maximus eu ac odio. Pellentesque et purus sed lectus dictum auctor non et ligula. Sed pellentesque a urna nec sodales. Vestibulum dignissim iaculis tincidunt. Pellentesque facilisis nec lorem in venenatis. Cras scelerisque aliquet libero, a viverra enim pulvinar id. Maecenas pharetra tortor id quam imperdiet, id accumsan velit dapibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur euismod vulputate enim ac scelerisque. Nunc blandit lectus mattis velit ornare, quis malesuada ex sollicitudin. Phasellus auctor risus et nisl dignissim faucibus vel sit amet ex. Nulla tempor eros et pellentesque maximus. Aliquam finibus auctor justo, quis porta ex vulputate sit amet. </p>
+                      <p>Fusce viverra eget massa ac posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Cras vel ligula venenatis, fringilla purus sit amet, semper ante. Vivamus bibendum maximus dui et finibus. Integer in dignissim dolor, in malesuada massa. Nam accumsan feugiat tortor, eu tincidunt mauris laoreet a. Fusce fermentum dolor eu odio volutpat varius. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis sed augue pretium, ultrices nisi non, maximus tortor. Praesent auctor euismod fringilla.</p>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="accordion-dropdown"><span class="carett caret-right"></span><span>stuff</span>
+                <ul class="dropdown">
+                  <li>
+                    <div>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vestibulum, nisl a lacinia gravida, velit elit convallis ex, ac fringilla ante erat eu ante. Duis pellentesque, dolor et laoreet feugiat, ligula lacus tincidunt ante, id malesuada purus nulla vel erat. Vivamus viverra velit vel imperdiet imperdiet. Morbi fermentum et justo id convallis. Fusce fringilla neque ut vestibulum ornare. Maecenas eleifend diam sit amet cursus finibus. Donec tellus massa, sollicitudin vitae lacus in, posuere suscipit leo. Donec vel dolor sapien. Pellentesque sit amet eleifend justo. Curabitur sed neque ligula. Phasellus vestibulum malesuada erat id elementum. Sed cursus neque et congue accumsan. </p>
+                      <p>Cras varius, tellus eu tristique ultrices, sapien enim ullamcorper odio, nec euismod metus massa vel leo. Praesent finibus lacus purus, in ultrices metus rutrum sed. Vestibulum purus mauris, efficitur id quam vel, consequat malesuada nisi. Duis eu mauris vitae mauris pulvinar maximus eu ac odio. Pellentesque et purus sed lectus dictum auctor non et ligula. Sed pellentesque a urna nec sodales. Vestibulum dignissim iaculis tincidunt. Pellentesque facilisis nec lorem in venenatis. Cras scelerisque aliquet libero, a viverra enim pulvinar id. Maecenas pharetra tortor id quam imperdiet, id accumsan velit dapibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur euismod vulputate enim ac scelerisque. Nunc blandit lectus mattis velit ornare, quis malesuada ex sollicitudin. Phasellus auctor risus et nisl dignissim faucibus vel sit amet ex. Nulla tempor eros et pellentesque maximus. Aliquam finibus auctor justo, quis porta ex vulputate sit amet. </p>
+                      <p>Fusce viverra eget massa ac posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Cras vel ligula venenatis, fringilla purus sit amet, semper ante. Vivamus bibendum maximus dui et finibus. Integer in dignissim dolor, in malesuada massa. Nam accumsan feugiat tortor, eu tincidunt mauris laoreet a. Fusce fermentum dolor eu odio volutpat varius. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis sed augue pretium, ultrices nisi non, maximus tortor. Praesent auctor euismod fringilla.</p>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <div class="text-center">
+                <button id="test-button" class="btn btn-default-dark">hey you</button>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <script type="text/javascript">
+        $(".accordion-dropdown").click(function() {
+          var dropdownGroup = $(this).parent(".accordion-group");
+          var dropdownOptions = $(this).find(".dropdown");
+          var dropdownCaret = $(this).find(".carett");
+          var dropdowns = $(dropdownGroup).find(".accordion-dropdown");
+        
+          $(dropdowns).removeClass("active");
+          $(dropdownGroup).find(".dropdown").slideUp();
+          $(dropdownGroup).find(".carett")
+                          .removeClass("caret-down")
+                          .addClass("caret-right");
+        
+          if (!$(dropdownOptions).is(":visible")) {
+            $(this).addClass("active");
+            $(dropdownOptions).slideDown();
+            $(dropdownCaret).removeClass("caret-right").addClass("caret-down");
+            event.stopPropagation();
+          }
+        });
+        $(window).load(function() {
+          $("#test-faq .accordion-dropdown:first").click();
+        });
+        $("#test-button").click(function() {
+          $('#test-faq').find('.dropdown').slideDown();
+         });
+      </script>
     </section>
     <section id="alternate-products">
-      <p>alternate-products</p>
       <div style="background-color: #fff">
         <div class="container">
           <h2 class="text-center">Not finding what you need?</h2>
@@ -986,6 +1122,19 @@
           </div>
         </div>
       </div>
+      <div id="two-up" style="background-color: #62aa2f ">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <h2 class="text-center two-up-title">The Title</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+        </div>
+      </div>
     </section>
     <section id="disclaimers">
       <p>disclaimers</p>
@@ -1005,10 +1154,6 @@
     <!--script-->
     <!--  include ../../../templates/planTile.js-->
     <script>
-      $(document).ready(function() {
-        var ultimatePlanRenderedHtml = renderPlanTile();
-        $('.plan-pro:nth-child(3)').html(ultimatePlanRenderedHtml);
-      });
       function comparePlans(id){
         if(id=="cpanel-tab"){
           $("#parallels-tab").hide();
@@ -1018,6 +1163,7 @@
           $("#"+id).show();
          }
       }
+      $('.dropdown-toggle').dropdown()
       
     </script>
     <script type="text/javascript">
