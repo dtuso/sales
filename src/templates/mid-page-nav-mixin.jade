@@ -20,7 +20,8 @@ mixin priceBlock(price, duration, link, options)
 mixin renderMidPageNav(options)
   - options = options || {};
   - options.icode = options.icode || "";
-
+  style
+    include:css ./styles/mid-page-nav.css
   .mid-page-nav
     .container
       .navbar-header

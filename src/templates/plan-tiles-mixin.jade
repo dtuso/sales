@@ -47,18 +47,26 @@ mixin renderPlanTiles(columns, options)
     #plans(class="#{containerClass} pro-plans", data-icode="#{options.icode}")
       block
 
-mixin renderCartLogic(url, itc)
+mixin renderCartLogic(url, itc, options)
   - addToCartRedirectUrl = url
   - itemTrackingCode = itc
+  - options = {};
+  - options.dropdown = false;
 
   atlantis:webstash(type="js")
     script(type="text/javascript").
       var itemTrackingCode = "!{itemTrackingCode}";
 
       $(".btn-plan").click(function() {
-        var productTile = $(this).data("ul");
 
-        var productPackage = $("ul#"+productTile+" li").filter('[data-selected="true"]').attr('data-plan');
+        if ("#{options.dropdown}" != "false"){
+          var productTile = $(this).data("ul");
+
+          var productPackage = $("ul#"+productTile+" li").filter('[data-selected="true"]').attr('data-plan');
+        }
+        else{
+          var productPackage = $(this).data("plan");
+        }
 
         var url = "[@T[link:<external linktype="SALESPRODUCTSURL" path="/v1/pl/1/cart/packages" />]@T]";
 

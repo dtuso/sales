@@ -762,7 +762,8 @@ return;
         PlanBox6UI.recordClick(e, '92707' /*got1Page.offersCodes.ci.apiAddCi*/, $(this)[0]);
         PlanBox6UI.recordClick(e, '84415' /*got1Page.offersCodes.ci.apiDomainAddToCart*/, $(this)[0]);
 
-         var url = '[@T[link:<relative path="~/domains/actions/json/domainavailabilitycheck.aspx"></relative>]@T]';
+         var url = '[@T[link:<relative path="~/domains/actions/json/domainavailabilitycheck.aspx"><param name="sld" value="sld" /><param name="tld" value="tld" /><param name="targetdivid" value="x" /><param name="source" value="domaincheck" /><param name="addIfAvailable" value="false" /></relative>]@T]';
+
 
         // <input type="hidden" name="targetdivid" value="x" />
         // <input type="hidden" name="source" value="domaincheck" />
@@ -772,19 +773,8 @@ return;
         // <input type="hidden" name="tld" class="txtTld" value="com" />
         // <input type="hidden" name="addIfAvailable" value="true" />
 
-        //.replace('{1}',got1Page.offersCodes.itc).replace('{4}',got1Page.offersCodes.plan);
-
-        url += (url.indexOf('?') > -1) ? '&' : '?';
-        url += 'domain=' + domain;
-        url += 'token=' + domain + '|available';
-        url += '&domaintoadd=' + domain;
-        url += '&source=domaincheck&sourceCode=domaincheck';
-        url += '&tld=' + domain.Extension;
-        url += '&addIfAvailable=false';
-        
-        if (got1Page.offersCodes.addOns != 'noAddOns'){
-          url = url += '&addons=' + got1Page.offersCodes.addOns + '-1';
-        }
+        url = url.replace('sld=sld', 'sld=' + domain.NameWithoutExtension);
+        url = url.replace('tld=tld', 'tld=' + domain.Extension);
 
         var showNotAvailableFn = function(){
           alert('NOT available!');
@@ -799,7 +789,7 @@ return;
         $.ajaxSetup({cache:false});
         $.ajax({
           url: url,
-          type: 'POST',
+          type: 'GET',
           dataType: 'json',
           cache: false,
           success: function(data){
@@ -840,12 +830,18 @@ return;
       // send them thru the purchase path
 
       // TODO: show choice screen
-      
+      var $gotSlides = $dsd.closest('.got-slides');
+      slideToShowSearch($gotSlides);
+
+
       goToDppCheckoutPage(domain,e);
 
     }
 
-    function goToDppCheckoutPage(domain,e) {
+    function goToDppCheckoutPage(e) {
+
+      var $target = $(e.target),
+        domain = $target.data('domain').Fqdn; 
 
       // We've verified that the domain is still available, so send them thru DPP checkout
       //    https://www.dev-godaddy.com/api/dpp/searchresultscart/11/?domain=blahblah.com&packageid=gybo_1email_1yr&dpp_itc=slp_GOT

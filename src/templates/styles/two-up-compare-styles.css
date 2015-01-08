@@ -1,0 +1,139 @@
+.two-up-wrap-compare {
+  min-height: 980px;
+  background-repeat: no-repeat;
+  background-size: cover !important;
+  background-position: center top;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-white {
+    background-color: transparent;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-yellow {
+    background-color: transparent;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-gray-lighter,
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-pro-gray {
+    background-color: transparent;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-gray-light {
+    background-color: transparent;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-green-official {
+    background-color: transparent;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-green-new {
+    background-color: transparent;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-green-official-light {
+    background-color: transparent;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-gray-darkest {
+    background-color: transparent;
+  }
+}
+@media (max-width: 767px) {
+  .two-up-wrap-compare {
+    background-image: none !important;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-white {
+    background-color: #fff;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-yellow {
+    background-color: ;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-gray-lighter,
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-pro-gray {
+    background-color: ;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-gray-light {
+    background-color: ;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-green-official {
+    background-color: ;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-green-new {
+    background-color: #5caf2b;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-green-official-light {
+    background-color: #84D54A;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-gray-darkest {
+    background-color: ;
+  }
+}
+.two-up-wrap-compare:after {
+  content: '';
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+@media only (max-width: 767px) {
+  .two-up-wrap-compare:after {
+    display: none;
+  }
+}
+.two-up-wrap-compare .two-up-text-wrap {
+  padding: 30px;
+}
+@media (max-width: 767px) {
+  .two-up-wrap-compare .two-up-text-wrap {
+    padding: 60px 0;
+  }
+}
+.two-up-wrap-compare .two-up-text-wrap h3.subtitle {
+  text-transform: none;
+}
+.two-up-wrap-compare .check-bullets li {
+  position: relative;
+  padding-left: 40px;
+  margin-bottom: 20px;
+}
+.two-up-wrap-compare .check-bullets li:before {
+  content: '';
+  background-image: ;
+  background-size: 205px auto;
+  background-position: 0 -700px;
+  width: 25px;
+  height: 27px;
+  position: absolute;
+  left: 0;
+}
+.two-up-wrap-compare .check-bullets li h5 {
+  margin-bottom: 5px;
+}
+.or-container:after {
+  content: '';
+  width: 94px;
+  height: 94px;
+  background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+  background-size: 205px auto;
+  background-position: 0 -896px;
+  position: absolute;
+  bottom: -50px;
+  margin: 0 auto;
+  display: block;
+  margin-left: -50px;
+  z-index: 1;
+}
+@media (max-width: 767px) {
+  .or-container:after {
+    display: block;
+    -webkit-transform: 90deg;
+    -moz-transform: 90deg;
+    transform: rotate(90deg);
+    left: 50%
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .or-container:after {
+    left: 101%
+  }
+}
+@media (min-width: 992px) {
+  .or-container:after {
+    left: 121%
+  }
+}

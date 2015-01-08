@@ -251,21 +251,14 @@ block sections
       +compareViewAllButton(["cpanel-table", "parallels-table"])
 
   section#platforms(data-mid-nav-title="Platforms")
-    div(style="background-color: #5caf2b")
-      .container
-        h2.text-center Let's Compare Left and Right
-    +renderUpCompare(2, {backgroundColor: "#78c043", id:"choose-platform", customStyles: "up-compare-wrap", backgroundImage: "[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Platforms.jpg"})
-      +upCompareColumn
-        h2.text-center Cpanel for Linux
-        h3.text-center Each Linux plan includes:
+    +renderTwoUpCompare({title: "Choose your platform", twoUpCompareId: "choose-platform", titleBackgroundColor: "bg-green-official-light", backgroundColor: "bg-green-official", backgroundImage: "background-image: url('[@T[link:<imageroot />]@T]fos/mike/img/hosting/two-up-compare-bg-ph.png')"})
+      +twoUpCompareColumn({title: "Cpanel for Linux", backgroundColor: "bg-green-official-light", subtitle: "Each Linux plan includes:", titleAlign: "center", subtitleAlign: "center"})
         .include-check-black <strong>cPanel:</strong> </br> Access all the hosting features and settings you need with this industry-standard control panel.
         .include-check-black <strong>CloudLinux:</strong> </br> Keep your site online with truly balanced CPU, RAM and Disk IO limits.
         .include-check-black <strong>Resources On-Demand:</strong> </br> If you need more power, you can level up your CPU, RAM, Entry Processes and I/O with just a click.
         .include-check-black <strong>CageFS:</strong> </br> Protect your Web content 24/7 with this virtualized file system.
         .include-check-black <strong>Free Applications:</strong> </br> Instanly install over 150 applications on your website with just a few clicks.
-      +upCompareColumn
-        h2.text-center Plesk for Windows
-        h3.text-center Each Windows plan includes:
+      +twoUpCompareColumn({title: "Plesk for Windows", backgroundColor: "bg-gray-darkest", subtitle: "Each Windows plan includes:", titleAlign: "center", subtitleAlign: "center"})
         .include-check-black <strong>Parallesls Plesk Panel:</strong> </br> Easily manage your server, email accounts and more with this popular, award-winning control panel.
         .include-check-black <strong>Windows Server 2012:</strong> </br> Take control of your hosting with Microsoft's newest and most powerful server operating system.
         .include-check-black <strong>Free Applications:</strong> </br> Instanly install over 70 applications on your website with just a few clicks.
@@ -309,7 +302,11 @@ block sections
             li Includes a free domain, hosting and more
           button.btn.btn-default-light Learn More
 
-    +renderTwoUpCompare({title: "The Title", twoUpCompareId: "two-up", titleBackgroundColor: "#62aa2f", backgroundColor: "#f47f00"})
+    +renderTwoUpCompare({title: "Not finding what you need?", twoUpCompareId: "two-up", titleBackgroundColor: "bg-green-official-light", backgroundColor: "bg-green-official", backgroundImage: "background-image: url('[@T[link:<imageroot />]@T]fos/mike/img/hosting/two-up-compare-bg-ph.png')"})
+      +twoUpCompareColumn({title: "Do-it-yourself with Website Builder. Hosting Included.", backgroundColor: "bg-green-official-light", shapeText: "Website Builder", shapeColor: "orange", subtitle: "sub left side"})
+        h4 Block content
+      +twoUpCompareColumn({title: "Get Hosting that will grow.", backgroundColor: "bg-gray-darkest", shapeText: "Private Virtual Server", shapeColor: "orange", subtitle: "sub right side", whiteText: "white-text"})
+        h4 Block content
 
   section#disclaimers
     p disclaimers

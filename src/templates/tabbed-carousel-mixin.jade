@@ -31,7 +31,7 @@ mixin renderTabbedCarousel(options)
 
 
 mixin addTab(item)
-  -slideEnd = tabCount
+  - slideEnd = tabCount
   .features-carousel-pro-icon(data-begin="#{slideBegin}", data-end="#{slideEnd}", class=colClass)
     div(data-center-element='{"vertical":{"target":{"method":"parents","selector":".features-carousel-pro-icon"},"verticalStyle":"margin-top","elementHeightMethod":"outerHeight","targetWidthMethod":"height"}}')
       if (item.icon)
