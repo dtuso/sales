@@ -7,10 +7,11 @@ append vars
   - pfid = "7509";
   - listID="product-B";
   - flagText = "Most Popular";
-  - showDropDownList = true;
+  - defaultPlan = "wsb_business_12month";
 
-block planOptions 
-  +addPlanOption("1", "7502", "wsb_business_1month")
-  +addPlanOption("12", "7509", "wsb_business_12month")
-  +addPlanOption("24", "7510", "wsb_business_24month")
-  +addPlanOption("36", "7511", "wsb_business_36month")
+//-
+  block planOptions 
+    +addPlanOption("1", "7502", "wsb_business_1month")
+    +addPlanOption("12", "7509", "wsb_business_12month")
+    +addPlanOption("24", "7510", "wsb_business_24month")
+    +addPlanOption("36", "7511", "wsb_business_36month")

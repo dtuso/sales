@@ -7,10 +7,11 @@ append vars
   - pfid = "7514";
   - listID="product-C";
   - flagText = "Includes SEO";
-  - showDropDownList = true;
+  - defaultPlan = "wsb_businessplus_12month";
 
-block planOptions 
-  +addPlanOption("1", "7503", "wsb_businessplus_1month")
-  +addPlanOption("12", "7514", "wsb_businessplus_12month")
-  +addPlanOption("24", "7515", "wsb_businessplus_24month")
-  +addPlanOption("36", "7516", "wsb_businessplus_36month")
+//-
+  block planOptions 
+    +addPlanOption("1", "7503", "wsb_businessplus_1month")
+    +addPlanOption("12", "7514", "wsb_businessplus_12month")
+    +addPlanOption("24", "7515", "wsb_businessplus_24month")
+    +addPlanOption("36", "7516", "wsb_businessplus_36month")
