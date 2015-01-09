@@ -26,10 +26,10 @@
     #gybo .product-subtext{font-family:'Walsheim-Medium';font-size:18px;line-height:18px;text-align:center;padding:5px 0 0 0;}
     #gybo .cond-text{font-size:41px;line-height:41px;display:block;margin-top:50px;}
     #gybo .rest-text{font-family:'Walsheim-Medium';font-size:12px;line-height:12px;display:block;padding-top:10px;text-align:center;}
-    #gybo .btn-wrapper>.price-text{color:#ffffff;background-color:#ff8a00;width:140px;height:125px;display:block;margin:20px 0 10px 0;padding:35px 10px 0 10px;}
+    #gybo .btn-wrapper>.price-text{color:#ffffff;background-color:#ff8a00;width:140px;height:125px;display:block;margin:20px 0 10px 0;padding:35px 10px 0 10px;box-sizing:content-box;}
     #gybo .btn-wrapper>.price-text>.price{position:absolute;line-height:1.1; font-family:'walsheim-black'}
     #gybo .plus-img,.equal-img{font-size:100px;padding:20px 20px 0 20px; font-family:'walsheim-black'}
-    #gybo .btn-wrap>.btn{width:130px;font-size:24px;font-family:'Walsheim-Medium';}
+    #gybo .btn-wrap>.btn{width:130px;font-size:24px;font-family:'Walsheim-Medium';box-sizing:content-box;}
     #gybo .image{background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gybo_marquee.jpg) no-repeat;width:160px;height:160px;margin-bottom:10px;}
     #gybo .domain{background-position: 0px 0px}
     #gybo .wsb{background-position: 0px -162px}
@@ -37,16 +37,24 @@
     html[lang|="de"] #gybo .headline{font-size:48px;}
     html[lang|="de"] #gybo .product-text{font-size:24px;}
     html[lang|="de"] #gybo .btn-wrap>.btn{font-size:18px;}
-    html[lang|="de"] #gybo .rest-text{width:168px;}
     html[lang|="es"] #gybo .btn-wrap>.btn{font-size:14px;}
     html[lang|="it"] #gybo .headline{font-size:48px;}
     html[lang|="it"] #gybo .product-text{font-size:24px;}
     html[lang|="it"] #gybo .btn-wrap>.btn{font-size:14px;}
-    html[lang|="it"] #gybo .rest-text{width:168px;}
     html[lang|="fr"] #gybo .headline{font-size:48px;}
     html[lang|="fr"] #gybo .product-text{font-size:24px;}
     html[lang|="fr"] #gybo .btn-wrap>.btn{font-size:14px;}
-    html[lang|="fr"] #gybo .rest-text{width:168px;}
+    html[lang|="fr"] #gybo .rest-text,html[lang|="uk"] #gybo .rest-text,html[lang|="it"] #gybo .rest-text,html[lang|="de"] #gybo .rest-text,html[lang|="da"] #gybo .rest-text,html[lang|="pt"] #gybo .rest-text,html[lang|="ru"] #gybo .rest-text{width:168px;}
+    html[lang|="uk"] #gybo .product-text,html[lang|="el"] #gybo .product-text,html[lang|="ru"] #gybo .product-text{font-size:22px;width:160px}
+    html[lang|="uk"] #gybo .btn-wrap>.btn{font-size:16px;}
+    html[lang|="uk"] #gybo .cond-text,html[lang|="el"] #gybo .cond-text{font-size:26px;}
+    html[lang|="tr"] #gybo .btn-wrap>.btn,html[lang|="fi"] #gybo .btn-wrap>.btn{font-size: 20px;}
+    html[lang|="fi"] #gybo .cond-text{font-size:33px;}
+    html[lang|="pt"] #gybo .product-text,html[lang|="sv"] #gybo .product-text{width:160px;}
+    html[lang|="pt"] #gybo .btn-wrap>.btn,html[lang|="el"] #gybo .btn-wrap>.btn,html[lang|="ru"] #gybo .btn-wrap>.btn{font-size:17px;}
+    html[lang|="ru"] #gybo .cond-text{font-size:30px;}
+    html[lang|="sv"] #gybo .text>.headline{font-size:33px;}
+    html[lang|="sv"] #gybo .btn-wrap>.btn{font-size:19px;}
     
   </style>
 </atlantis:webstash>
