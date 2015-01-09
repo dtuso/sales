@@ -3,15 +3,16 @@ extends ../../templates/pages/landing-page
 //- page specific mixins added here
 mixin tldSuggestItem()
 
-block pageStyles
+append pageStyles
   style.
     .plan-tile { margin-top: 70px; }
     .search-template .search-template-box { margin-bottom: 10px; }
     #domainSearch a { color: #333; font-weight: bold; margin-right: 30px; }
     #domainSearch { padding-bottom: 10px; }
-    
+
+
 block domainSearch
-  //- remove domain search from top of hosting page
+  //- remove domain search from top of page
 
 block marquee
   section#marquee

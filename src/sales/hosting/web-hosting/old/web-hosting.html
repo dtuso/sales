@@ -1,8 +1,8 @@
 ---
 location: sales/hosting/web-hosting.aspx
-id: 546bc46ef778fc10909ad980
+id: 54939b42f778fc1aac854061
 name: GCE-31167
-comments: Remove Reviews Stars and Read Reviews links in Marquee
+comments: Wrapped pcUpdateCart/pcCartCnt in AppSetting Conditional
 url: http://www.dev-godaddy.com/hosting/web-hosting.aspx
 splitSide: 1349.A
 cssVersionOverride: 3
@@ -3895,7 +3895,9 @@ metaOgDescription: "[@L[cds.sales/gd/hosting/web-hosting:og-description]@L]"
             dataType: 'json',
             cache: false,
             success: function(){
+                ##if(!appSettingEnabled(UXCORE_ENABLED))
                 pcUpdateCart();
+                ##endif
                 window.location.href = (($form.attr('action').indexOf('?') != -1) ? $form.attr('action') + '&plan=' : $form.attr('action') + '?plan=') + data.plan + '&added=true';
             },
             error: function(){
