@@ -34,7 +34,6 @@ try {
   var _           = require('underscore');
   var underscoreDeepExtend = require('underscore-deep-extend');
   _.mixin({deepExtend: underscoreDeepExtend(_)});
-
 } catch (e) {
 
   console.log(e.toString());
@@ -149,7 +148,11 @@ gulp.task('jade', function() {
     console.log(e.message);
     jadeStream.end();
   });
+<<<<<<< HEAD
   return gulp.src(['./**/*.jade', '!./**/layouts/**/*.jade', '!./**/_*.jade','!./**/layouts/mixins/*.jade'], {cwd: path.join('./src/')})
+=======
+  return gulp.src(['./**/*.jade', '!./**/templates/**/*.jade', '!./**/layouts/**/*.jade', '!./**/_*.jade'], {cwd: path.join('./src/sales/', assetSrcPath)})
+>>>>>>> cacfa7d9fe5fe3162d0311e28b8ed915bfebba0c
     .pipe(changed(paths.cdsBuild))
     .pipe(frontMatter({remove:true}))
     .pipe(data(function(file) { return file.frontMatter; }))

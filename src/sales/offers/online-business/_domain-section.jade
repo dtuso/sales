@@ -1,0 +1,41 @@
+section#domains
+
+  .features.tile-section
+    .container
+      .row
+        .col-md-6.col-sm-12.domain-image.col-md-push-6 
+          img(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png")
+        .col-md-6.col-sm-12.col-md-pull-6 
+          h2 <mark>What's a domain?</mark> It's that name up in the address bar.
+          h4 And your online business needs one. Just make sure it:
+          .include-check-green Fits your business or products
+          .include-check-green Is easy to spell and remember
+
+  .features.tile-section
+    .container
+      .row
+        .col-md-6.col-sm-12.domain-image.col-md-push-6 
+          img(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature2.png")
+        .col-md-6.col-sm-12.col-md-pull-6 
+          h2 Having your own <mark>domain</mark> makes your email even better
+          h4 It changes timscoolstuff1973@gmail.com to tim@coolexample.com. Plus, it:
+          .include-check-green Promotes your website with every message
+          .include-check-green Makes customers 9x more likely to choose your business+
+
+  .container
+    .row.disclaimer
+      .col-sm-12 
+        p + Small business owner and customer surveys. February 2014
+
+  - var featuresId = "findYourPerfectDomain";
+  - var presentationTemplate = "featuresSlim";
+  - var backgroundImage = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/bg-shortMod.jpg";
+  - var whiteText = false;
+  - var lazyLoad = false;
+  - var image = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/you-get.png";
+  - var title = "Find your perfect name";
+  - var text = "Keep it classic or try something new. Either way, we've got your covered. Choose from any of these domains.";
+
+  include ../../../templates/feature-templates.jade
+
+

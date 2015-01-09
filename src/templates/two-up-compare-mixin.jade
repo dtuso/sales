@@ -1,0 +1,87 @@
+- var populatedColumns
+
+mixin twoUpCompareColumn(columnOptions)
+  - columnOptions = columnOptions || {};
+  - columnOptions.backgroundColor = columnOptions.backgroundColor || "";
+  - columnOptions.whiteText = columnOptions.whiteText || "";
+  - columnOptions.style = columnOptions.style || "";
+  - columnOptions.shapeText = columnOptions.shapeText || "";
+  - columnOptions.shapeColor = columnOptions.shapeColor || "";
+  - columnOptions.image = columnOptions.image || "";
+  - columnOptions.altText = columnOptions.altText || "";
+  - columnOptions.title = columnOptions.title || "";
+  - columnOptions.titleAlign = columnOptions.titleAlign || "";
+  - columnOptions.subtitle = columnOptions.subtitle || "";
+  - columnOptions.subtitleAlign = columnOptions.subtitleAlign || "";
+  - columnOptions.orContainer = columnOptions.orContainer || false;
+  - var offsetClass = ""
+
+  if populatedColumns == 1
+    - offsetClass = "col-md-offset-2"
+  else if populatedColumns == 0
+    if columnOptions.orContainer
+      - offsetClass = "or-container"
+      - populatedColumns++
+    else
+      - offsetClass = "or-container-none"
+      - populatedColumns++
+
+  div(class="col-md-5 #{offsetClass ? offsetClass : ''} col-sm-6  #{columnOptions.backgroundColor}")
+    div(class="two-up-text-wrap #{columnOptions.whiteText ? 'white-text' : ''}" style="#{columnOptions.style ? columnOptions.style : ''}")
+
+      if (columnOptions.shapeText)
+        div(class="two-up-speech-shape two-up-speech-shape-#{columnOptions.shapeColor}")
+          .shape-text !{columnOptions.shapeText}
+
+      if (columnOptions.image)
+        .text-center.two-up-image
+          img(src="#{columnOptions.image}", alt="#{columnOptions.altText}")
+
+      if (columnOptions.title)
+        case columnOptions.titleAlign
+          when "center"
+            h2(class="text-center") !{columnOptions.title}
+          when "right"
+            h2(class="text-right") !{columnOptions.title}
+          default
+            h2 !{columnOptions.title}
+
+      if (columnOptions.subtitle)
+        case columnOptions.subtitleAlign
+          when "center"
+            h3(class="text-center") !{columnOptions.subtitle}
+          when "right"
+            h3(class="text-right") !{columnOptions.subtitle}
+          default
+            h3 !{columnOptions.subtitle}
+      
+      .row
+        .col-sm-10
+          block
+
+
+mixin renderTwoUpCompare(twoUpOptions)
+  - populatedColumns = 0
+  - twoUpOptions = twoUpOptions || {};
+  - twoUpOptions.title = twoUpOptions.title || "";
+  - twoUpOptions.twoUpCompareId = twoUpOptions.twoUpCompareId || "";
+  - twoUpOptions.titleBackgroundColor = twoUpOptions.titleBackgroundColor || "";
+  - twoUpOptions.titleWhiteText = twoUpOptions.titleWhiteText || "";
+  - twoUpOptions.icode = twoUpOptions.icode || "";
+  - twoUpOptions.style = twoUpOptions.style || "";
+  - twoUpOptions.backgroundColor = twoUpOptions.backgroundColor || "";
+  - twoUpOptions.backgroundImage = twoUpOptions.backgroundImage || "";
+
+  style
+    include:css styles/two-up-compare-styles.css
+  div(id="#{twoUpOptions.twoUpCompareId ? twoUpOptions.twoUpCompareId : ''}" class = "#{twoUpOptions.titleBackgroundColor}" style="")
+    if (twoUpOptions.title)
+      div(class="#{twoUpOptions.whiteText ? 'white-text' : ''}")
+        .container
+          .row
+            .col-sm-12
+              h2.text-center.two-up-title !{twoUpOptions.title}
+    div(class="two-up-wrap-compare #{twoUpOptions.backgroundColor}"  style!= "#{twoUpOptions.backgroundImage}; #{twoUpOptions.style ? twoUpOptions.style : ''};")
+      .container
+        .row
+          block
