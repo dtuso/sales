@@ -1,9 +1,9 @@
 ---
 url: http://www.dev-godaddy.com/accounting/accounting-software.aspx
 location: sales/accounting/accounting-software.aspx
-id: 5425fd38f778fc1eec7ed201
-name: GCE-29128
-comments: Invalid support option. Iteration 1
+id: 54af0534f778fc2594c77bff
+name: GCE-33979
+comments: CSS Updates for UxCore
 assetPath: false
 ---
 {% extends 'layouts/base.html' %}
@@ -547,6 +547,17 @@ assetPath: false
 
     $( document ).ready(function() {
 
+        ##if(appSettingEnabled(UXCORE_ENABLED))
+          $('body').css('font-size', '10px');
+          $('body').css('background-color', '#d4d4d4');
+          $('.modal-dialog').css('left', '0%');
+          $('.col-xs-8 .accounting-grid-column').css('padding', '1.05714em 4.285714286em');
+          $('.overview-carousel-inner-container-SYIAB').css('width', '103%');
+          $('.carousel-inner-container').css('margin', '0 -15px');
+          $('.overview-carousel-control-SYIAB.left').css('margin-left', '-4.2em');
+          $('.overview-carousel-control-SYIAB.right').css('margin-right', '-4.2em');
+        ##endif
+
         $('.chatSupportLink').attr('data-ci','93502');
         // Fastball click capturing
         $('[data-ci]').click(function (e) {
@@ -567,11 +578,11 @@ assetPath: false
         })
     });
 
+    $(function () {
+        $('.select-box').setSelectBox();
+        $('.isToolTip').tooltip();
+    });
 
-        $(function () {
-            $('.select-box').setSelectBox();
-            $('.isToolTip').tooltip();
-        });
     $('.js-open-overview').on('click', function(e){
         e.preventDefault();
         $('a[href="#overview"]').tab('show');
@@ -644,7 +655,6 @@ assetPath: false
 
   });
 
-
 </script>
 
 {% endblock %}
@@ -666,7 +676,11 @@ assetPath: false
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
+                ##if(appSettingEnabled(UXCORE_ENABLED))
+                <button type="button" class="modal-header-close close" data-dismiss="modal" aria-hidden="true"></button>
+                ##else
                 <button type="button" class="modal-header-close close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                ##endif
               </div>
               <div class="modal-body">
                 <iframe width="854" height="480" src="//www.youtube.com/embed/tc8CHcfnUUs?html5=1&rel=0" autoplay scrolling="no" frameborder="0" allowfullscreen>
@@ -1311,7 +1325,11 @@ assetPath: false
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
+                ##if(appSettingEnabled(UXCORE_ENABLED))
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                ##else
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                ##endif            
                 <p class="modal-title"><strong>[@L[cds.sales/accounting/accounting-software:DisclaimerModalTitle]@L]</strong></p>
             </div>
             <div class="modal-body">
