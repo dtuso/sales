@@ -537,9 +537,15 @@
               var itemTrackingCode = "slp_hosting_4GH";
               
               $(".btn-plan").click(function() {
-                var productTile = $(this).data("ul");
               
-                var productPackage = $("ul#"+productTile+" li").filter('[data-selected="true"]').attr('data-plan');
+                if ("false" != "false"){
+                  var productTile = $(this).data("ul");
+              
+                  var productPackage = $("ul#"+productTile+" li").filter('[data-selected="true"]').attr('data-plan');
+                }
+                else{
+                  var productPackage = $(this).data("plan");
+                }
               
                 var url = "[@T[link:<external linktype="SALESPRODUCTSURL" path="/v1/pl/1/cart/packages" />]@T]";
               
@@ -602,6 +608,96 @@
         </div>
       </div>
     </section>
+    <style>
+.mid-page-nav {
+  background-color: #333333;
+  font-family: 'Walsheim-Bold';
+  height: 130px;
+  color: #fff;
+  -webkit-box-shadow: 0px 3px 0 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 3px 0 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 3px 0 0 rgba(0, 0, 0, 0.1);
+}
+.mid-page-nav.sticky {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+}
+
+.mid-page-nav .navbar-collapse {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.mid-page-nav .nav {
+  height: 130px;
+}
+.mid-page-nav .nav > li {
+  display: table;
+}
+.mid-page-nav .nav > li a {
+  font-size: 24px;
+  font-size: 2.4rem;
+  font-family: 'Walsheim-Bold';
+  color: #808080;
+  padding: 0;
+  text-align: center;
+}
+.mid-page-nav .nav > li > a {
+  display: table-cell;
+  height: 130px;
+  vertical-align: middle;
+}
+.mid-page-nav .nav > li:first-child a span {
+  border-left: 0;
+}
+.mid-page-nav .nav > li a span {
+  display: table-cell;
+  vertical-align: middle;
+  border-left: 1px solid #232323;
+  padding: 7px 40px;
+}
+.mid-page-nav .nav .dropdown-menu {
+  background-clip: padding-box;
+  border: 0;
+  background-color: #333333;
+  display: block;
+  opacity: 0;
+  -webkit-transform: scale(1, 0) rotateX(90deg);
+  -moz-transform: scale(1, 0) rotateX(90deg);
+  -ms-transform: scale(1, 0) rotateX(90deg);
+  transform: scale(1, 0) rotateX(90deg);
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  -webkit-transform-origin: 50% 0;
+  -moz-transform-origin: 50% 0;
+  -ms-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.mid-page-nav .nav .dropdown-menu li > a {
+  display: block;
+  background-color: #333333;
+  padding: 20px;
+  border-bottom: #333333;
+}
+
+.mid-page-nav .price-text {
+  font-size: 12px;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.mid-page-nav .price {
+  font-size: 24px;
+  font-size: 2.4rem;
+}
+    </style>
     <div class="mid-page-nav">
       <div class="container">
         <div class="navbar-header">
@@ -1037,6 +1133,20 @@
 .two-up-wrap-compare .check-bullets li h5 {
   margin-bottom: 5px;
 }
+.or-container-none:after {
+  content: '';
+  width: 94px;
+  height: 94px;
+  background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+  background-size: 205px auto;
+  background-position: 0 -896px;
+  position: absolute;
+  bottom: -50px;
+  margin: 0 auto;
+  display: none;
+  margin-left: -50px;
+  z-index: 1;
+}
 .or-container:after {
   content: '';
   width: 94px;
@@ -1081,7 +1191,7 @@
             </div>
           </div>
         </div>
-        <div style="background-image: url('[@T[link:<imageroot />]@T]fos/mike/img/hosting/two-up-compare-bg-ph.png')" class="two-up-wrap-compare bg-green-official">
+        <div style="background-image: url('[@T[link:<imageroot />]@T]fos/mike/img/hosting/two-up-compare-bg-ph.png'); ;" class="two-up-wrap-compare bg-green-official">
           <div class="container">
             <div class="row">
               <div class="col-md-5 or-container col-sm-6  bg-green-official-light">
@@ -1262,37 +1372,6 @@
       </script>
     </section>
     <section id="alternate-products">
-      <div style="background-color: #fff">
-        <div class="container">
-          <h2 class="text-center">Not finding what you need?</h2>
-        </div>
-      </div>
-      <div id="alt-products" style="background-image: url([@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Finding.jpg); background-color: #62aa2f;" class="pro tile-section up-compare-wrap">
-        <div class="container">
-          <div class="col-md-5 left-side">
-            <h4 class="white-text">WEBSITE BUILDER</h4>
-            <h2>Do-it-yourself with website builder. Hosting Included</h2>
-            <ul>
-              <li>Features cPanel "(Linux)" or Parallels Plesk Panel "(Windows)"</li>
-              <li>One-click install 100s of top apps like Joomla and Drupal</li>
-              <li>Includes 99.9% uptime, lighting-fast load times and more</li>
-            </ul>
-            <button class="btn btn-default-dark">Learn More</button>
-          </div>
-          <div class="col-md-5 col-md-offset-2 right-side">
-            <div class="white-text">
-              <h4 class="white-text">PRIVATE VIRTUAL SERVER</h4>
-              <h2>Get hosting that will grow.</h2>
-              <ul>
-                <li>Get online fast with 100s of customizable designs</li>
-                <li>No technical skills required - just drag and drop</li>
-                <li>Includes a free domain, hosting and more</li>
-              </ul>
-              <button class="btn btn-default-light">Learn More</button>
-            </div>
-          </div>
-        </div>
-      </div>
       <style>.two-up-wrap-compare {
   min-height: 980px;
   background-repeat: no-repeat;
@@ -1399,6 +1478,20 @@
 .two-up-wrap-compare .check-bullets li h5 {
   margin-bottom: 5px;
 }
+.or-container-none:after {
+  content: '';
+  width: 94px;
+  height: 94px;
+  background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+  background-size: 205px auto;
+  background-position: 0 -896px;
+  position: absolute;
+  bottom: -50px;
+  margin: 0 auto;
+  display: none;
+  margin-left: -50px;
+  z-index: 1;
+}
 .or-container:after {
   content: '';
   width: 94px;
@@ -1443,10 +1536,10 @@
             </div>
           </div>
         </div>
-        <div style="background-image: url('[@T[link:<imageroot />]@T]fos/mike/img/hosting/two-up-compare-bg-ph.png')" class="two-up-wrap-compare bg-green-official">
+        <div style="background-image: url('[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Finding.jpg'); min-height: 580px;;" class="two-up-wrap-compare bg-green-official">
           <div class="container">
             <div class="row">
-              <div class="col-md-5 or-container col-sm-6  bg-green-official-light">
+              <div class="col-md-5 or-container-none col-sm-6  bg-green-official-light">
                 <div style="" class="two-up-text-wrap ">
                   <div class="two-up-speech-shape two-up-speech-shape-orange">
                     <div class="shape-text">Website Builder</div>

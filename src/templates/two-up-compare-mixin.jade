@@ -13,13 +13,18 @@ mixin twoUpCompareColumn(columnOptions)
   - columnOptions.titleAlign = columnOptions.titleAlign || "";
   - columnOptions.subtitle = columnOptions.subtitle || "";
   - columnOptions.subtitleAlign = columnOptions.subtitleAlign || "";
+  - columnOptions.orContainer = columnOptions.orContainer || false;
   - var offsetClass = ""
 
   if populatedColumns == 1
     - offsetClass = "col-md-offset-2"
   else if populatedColumns == 0
-    - offsetClass = "or-container"
-    - populatedColumns++
+    if columnOptions.orContainer
+      - offsetClass = "or-container"
+      - populatedColumns++
+    else
+      - offsetClass = "or-container-none"
+      - populatedColumns++
 
   div(class="col-md-5 #{offsetClass ? offsetClass : ''} col-sm-6  #{columnOptions.backgroundColor}")
     div(class="two-up-text-wrap #{columnOptions.whiteText ? 'white-text' : ''}" style="#{columnOptions.style ? columnOptions.style : ''}")
@@ -69,14 +74,14 @@ mixin renderTwoUpCompare(twoUpOptions)
 
   style
     include:css styles/two-up-compare-styles.css
-  div(id="#{twoUpOptions.twoUpCompareId ? twoUpOptions.twoUpCompareId : ''}" class = "#{twoUpOptions.titleBackgroundColor}" style="#{twoUpOptions.style ? twoUpOptions.style : ''}")
+  div(id="#{twoUpOptions.twoUpCompareId ? twoUpOptions.twoUpCompareId : ''}" class = "#{twoUpOptions.titleBackgroundColor}" style="")
     if (twoUpOptions.title)
       div(class="#{twoUpOptions.whiteText ? 'white-text' : ''}")
         .container
           .row
             .col-sm-12
               h2.text-center.two-up-title !{twoUpOptions.title}
-    div(class="two-up-wrap-compare #{twoUpOptions.backgroundColor}"  style!= twoUpOptions.backgroundImage)
+    div(class="two-up-wrap-compare #{twoUpOptions.backgroundColor}"  style!= "#{twoUpOptions.backgroundImage}; #{twoUpOptions.style ? twoUpOptions.style : ''};")
       .container
         .row
           block
