@@ -1,44 +1,75 @@
-block vars
-  - title = "";
-  - subTitle = "";
-  - logo = "";
-  - text = "";
-  - id = "";
-  - imageAlternateText = "";
-  - lazyLoad = true;
-  - numOfTabs= 0;
-  - tabCount = 0;
-  - colClass = "col-md-15"
-  - slideBegin = 0, slideEnd = 0;
-  - options = options || {};
-  - options.icode = options.icode || "";
+- slideBegin = 0, slideEnd = 0;
+- tabCount = 0;
 
 
-
-mixin renderTabbedCarousel(options)
-  div(class="features-carousel-pro-top #{options.backgroundColor ? options.backgroundColor : ''}", data-icode="#{options.icode ? options.icode : ''}", id="#{options.featuresCarouselId ? options.featuresCarouselId : '' }")
+mixin renderTabbedCarousel(tabbedCarousel)
+  style
+    include:css ./styles/tabbed-carousel.css
+  div(class="features-tabbed-carousel-top #{tabbedCarousel.backgroundColor ? tabbedCarousel.backgroundColor : ''}", data-icode="#{tabbedCarousel.icode ? tabbedCarousel.icode : ''}", id="#{tabbedCarousel.featuresCarouselId ? tabbedCarousel.featuresCarouselId : '' }")
     .container
       .row
         .col-sm-12
-          if (title)
-            h2 !{title}
-          if (subtitle)
-            h4 !{subtitle}
+          if (tabbedCarousel.title)
+            h1 !{tabbedCarousel.title}
+          if (tabbedCarousel.subtitle)
+            h4.headline-primary !{tabbedCarousel.subtitle}
       .row
-        if (numOfTabs != 5)
-          - colClass = "col-md-" + (12/numOfTabs)
+        if (tabbedCarousel.numOfTabs != 5)
+          - colClass = "col-md-" + (12/tabbedCarousel.numOfTabs)
         block
+  atlantis:webstash(type="js")
+    script(type="text/javascript").
+      $(window).load(function() {
+        setTimeout(function() {
+          $(".features-tabbed-carousel-icon:first").click();
+        }, 500);
+
+        var maxTabHeight = 0;
+        $(".features-tabbed-carousel-icon").each(function(index, tab) {
+          maxTabHeight = $(tab).outerHeight() > maxTabHeight ? $(tab).outerHeight() : maxTabHeight;
+        }).css("height", maxTabHeight);
+
+        var maxFeatureTextHeight = 0;
+        $(".feature-text").each(function(index, featureText) {
+          maxFeatureTextHeight = $(featureText).height() > maxFeatureTextHeight ? $(featureText).height() : maxFeatureTextHeight;
+        }).css({height: maxFeatureTextHeight});
+
+      });
+
+      $(".features-tabbed-carousel-icon").click(function() {
+        var slideNum = $(this).data("begin");
+        $(".features-tabbed-carousel-icon").removeClass("active");
+        $(this).addClass("active");
+        $('##{tabbedCarousel.id}').carousel(slideNum);
+      });
+
+      $('##{tabbedCarousel.id}').on('slid.bs.carousel', function () {
+        var carouselData = $(this).data('bs.carousel');
+        var currentIndex = carouselData.getActiveIndex();
+        $(".features-tabbed-carousel-icon").each(function() {
+          if (currentIndex >= parseInt($(this).data("begin")) && currentIndex <= parseInt($(this).data("end"))) {
+            $(".features-tabbed-carousel-icon").removeClass("active");
+            $(this).addClass("active");
+          }
+        });
+      });
 
 
 mixin addTab(item)
+<<<<<<< HEAD
   - slideEnd = tabCount
   .features-carousel-pro-icon(data-begin="#{slideBegin}", data-end="#{slideEnd}", class=colClass)
     div(data-center-element='{"vertical":{"target":{"method":"parents","selector":".features-carousel-pro-icon"},"verticalStyle":"margin-top","elementHeightMethod":"outerHeight","targetWidthMethod":"height"}}')
+=======
+  -slideEnd = tabCount
+  .features-tabbed-carousel-icon(data-begin="#{slideBegin}", data-end="#{slideEnd}", class=colClass)
+    div(data-center-element='{"vertical":{"target":{"method":"parents","selector":".features-tabbed-carousel-icon"},"verticalStyle":"margin-top","elementHeightMethod":"outerHeight","targetWidthMethod":"height"}}')
+>>>>>>> Tabbed Carousel Clean up
       if (item.icon)
         .feature-carousel-icon
           span.uxicon(class="#{item.icon}")
       if (item.logo)
-        .feature-carousel-pro-image
+        .feature-carousel-image
           img.img-responsive.img-center(
               src = lazyLoad ? 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==' : item.logo
               data-lazy-load = lazyLoad ? '{"src":"#{item.logo}"}' : ''
@@ -49,49 +80,5 @@ mixin addTab(item)
   - tabCount++        
   - slideBegin = ++slideEnd
 
-style.
-    .feature-carousel-icon {font-size: 36px;margin-bottom: 10px;}
 
 
-+renderTabbedCarousel(options)
-  block tabs
-div(class="features-carousel-pro-carousel #{options.backgroundColor ? options.backgroundColor : ''}")
-  +carousel(id,numOfTabs)
-    block panels
-
-block endOfPageScripts
-  script(type="text/javascript").
-    $(window).load(function() {
-      setTimeout(function() {
-        $(".features-carousel-pro-icon:first").click();
-      }, 500);
-
-      var maxTabHeight = 0;
-      $(".features-carousel-pro-icon").each(function(index, tab) {
-        maxTabHeight = $(tab).outerHeight() > maxTabHeight ? $(tab).outerHeight() : maxTabHeight;
-      }).css("height", maxTabHeight);
-
-      var maxFeatureTextHeight = 0;
-      $(".feature-text").each(function(index, featureText) {
-        maxFeatureTextHeight = $(featureText).height() > maxFeatureTextHeight ? $(featureText).height() : maxFeatureTextHeight;
-      }).css({height: maxFeatureTextHeight});
-
-    });
-
-    $(".features-carousel-pro-icon").click(function() {
-      var slideNum = $(this).data("begin");
-      $(".features-carousel-pro-icon").removeClass("active");
-      $(this).addClass("active");
-      $('##{id}').carousel(slideNum);
-    });
-
-    $('##{id}').on('slid.bs.carousel', function () {
-      var carouselData = $(this).data('bs.carousel');
-      var currentIndex = carouselData.getActiveIndex();
-      $(".features-carousel-pro-icon").each(function() {
-        if (currentIndex >= parseInt($(this).data("begin")) && currentIndex <= parseInt($(this).data("end"))) {
-          $(".features-carousel-pro-icon").removeClass("active");
-          $(this).addClass("active");
-        }
-      });
-    });

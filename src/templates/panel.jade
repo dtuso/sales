@@ -7,7 +7,7 @@ block vars
   - panelTcode = "";
   - lazyLoad = false;
 
-.panel-pro.container.tile-section(data-icode="#{icode ? icode : ''}")
+.carousel-panel.container.tile-section(data-icode="#{icode ? icode : ''}")
   if (panelImage && (panelImagePosition === 'top' || panelImagePosition === undefined))
     img.img-responsive.img-center(src="#{panelImage}" alt="#{panelImageAlternateText}")
 
@@ -19,7 +19,7 @@ block vars
   if (panelTitle)
     .row
       .col-sm-10.col-sm-offset-1.col-xs-12.text-center
-        h2 !{panelTitle}
+        h1 !{panelTitle}
 
   if (panelImage && panelImagePosition === 'middle')
     if (dateHeader)
@@ -37,14 +37,14 @@ block vars
         img(src="#{panelTextImage}", alt="#{panelAltText}")
       .col-sm-7
           if (panelButtonColor && panelButtonText)
-            .panel-pro-text !{panelText}
+            .carousel-panel-text !{panelText}
           else
             div !{panelText}
   else
     .row
       .col-sm-10.col-sm-offset-1.col-xs-12
         if (panelButtonColor && panelButtonText)
-          .panel-pro-text !{panelText}
+          .carousel-panel-text !{panelText}
         else
           div !{panelText}
 
@@ -65,24 +65,5 @@ block vars
   else if (panelButtonColor && panelButtonText)
     .row
       .col-sm-10.col-sm-offset-1.col-xs-12
-        a(class="faq-modal-btn btn #{panelButtonColor}", href="javascript:void(0);", data-tcode="#{tcode ? tcode : ''}") !{panelButtonText}
+        a(class="btn #{panelButtonColor}", href="javascript:void(0);", data-tcode="#{tcode ? tcode : ''}") !{panelButtonText}
 
-
-//- Standard Pro Panel
-//- .panel-pro {
-//-   .panel-pro-text {
-//-     margin-bottom: 25px;
-//-   }
-//-   ul,ol {
-//-     list-style: inside;
-//-     li {
-//-       padding-bottom: 5px;
-//-     }
-//-   }
-//-   h3 {
-//-     .font-size(3.2);
-//-   }
-//-   .img-center {
-//-     margin: 50px auto;
-//-   }
-//- }
