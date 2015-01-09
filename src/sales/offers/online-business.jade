@@ -1,7 +1,7 @@
 ---
 location: sales/offers/online-business.aspx
-id: 54a71948f778fc235082e32a
-name: GCE-32414-dom
+id: 54b06a5ef778fc234c60ae8b
+name: GCE-32414-dom2
 comments: GOT rebrand 2015 SuperBowl
 url: http://www.dev-godaddy.com/offers/online-business.aspx
 assetPath: false
@@ -9,19 +9,114 @@ assetPath: false
 
 extends ../../templates/pages/landing-page
 
+append vars
+  - page.meta.title = "HELLO WORLD!"
 
-prepend endOfPageScripts
+append endOfPageScripts
   script.
     $(document).ready(function() {
-      
+      var tokenizePrice = function(priceSelector, price) {
+        $(priceSelector).each(function(){
+          $(this)
+            .html(price)
+            .closest('.price-hide')
+            .removeClass("price-hide");
+        });
+      };
+      tokenizePrice(".discount-price-mo", "1.00" /*got2Page.pricing.mo.o365promo*/ );
+
+
+      $('[data-tokenize]').each(function(){
+        var $this = $(this),
+          html = $this.html(),
+          val = $this.data('tokenize'),
+            tokenizedHtml = html.replace(/\{0\}/gi, val);
+        $this
+          .html(tokenizedHtml)
+          .closest('.price-hide')
+          .removeClass("price-hide");
+      });
+
+
+
+      // set up domain search buttons to do a domain search
+      $('#marquee').on('click', '.domain-search-action-button', domainSearchFormSubmit);     
+
+      // set up verify buttons on spin results to do validation before sending to DPP
+      $('#marquee').on('click', '.spin-domain-action-button', verifyDomainIsStillAvailable);
+
+
+      // track ci codes
+      $('[data-ci]').click(function (e) {
+          var $this = $(this);
+          var ci = $this.attr('data-ci');
+          FastballEvent_MouseClick(e, ci, $(this)[0], 'a');
+          fbiLibCheckQueue();
+      });
+
+
+
     });
 
-block domainSearch
-  // 
 
-block pageStyles
-  style
-    include:css ./online-business/styles.css
+    function domainSearchFormSubmit(e) {
+
+      var domain = '', 
+        sucessful = false;
+
+      // TODO: perform AJAX call to 
+      if(sucessful) {
+        showSuccessfulSearch(domain);
+      } else {
+        showSearchSpins(domain)
+      }
+
+
+    }
+
+    function verifyDomainIsStillAvailable(e) {
+
+    }
+
+    function showChoicesScreen(e){
+
+    }
+    
+    function goToDppCheckoutPage(e) {
+
+    }
+
+
+    function showSuccessfulSearch(domain){
+      // TODO!
+    }
+
+    function showSearchSpins(domain){
+      // TODO!
+    }
+
+    function showApi1SearchError(e,domain){
+      // TODO!
+    }
+
+    function showApi2SearchError(e,domain){
+      // TODO!
+    }
+
+    function showApi3SearchError(e,domain){
+      // TODO!
+    }
+
+append pageStyles
+  style.
+    include:css ./online-business/styles.css    
+    
+
+
+
+block domainSearch
+  // none
+
 
 //- top marquee
 block marquee
