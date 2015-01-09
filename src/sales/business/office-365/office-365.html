@@ -1,9 +1,9 @@
 ---
 url: http://www.dev-godaddy.com/business/office-365.aspx
 location: sales/business/office-365.aspx
-id: 
-name: test
-comments: testing
+id: 5490b39ff778fc1cd843c6e4
+name: GCE-32259
+comments: Dynamic rule for "Exclusive..." text 
 metaTitle: "[@L[cds.sales/business/office-365:lp-8-MicrosoftOffice365BoostProductivityVirtuallyAnywhereGoDaddy]@L]"
 metaDescription: "[@L[cds.sales/business/office-365:lp-36-MSOffice365IsEasyToSetUp]@L]"
 metaKeywords: "[@L[cds.sales/business/office-365:lp-18-Office365MicrosoftOffice365Office365Pricing]@L]"
@@ -1736,7 +1736,11 @@ assetPath: false
             <a class="open-button plus" href="#" data-ci="94246"></a>
           </div>
           <div class="question">[@L[cds.sales/business/office-365:29621-FAQ-q-11]@L]</div>
-          <div class="answer">[@L[cds.sales/business/office-365:29621-FAQ-a-11]@L]</div>
+          ##if(countrySiteAny(www))
+          <div class="answer" data-tokenize="[@T[support:<hostedExchangePhone/>]@T]">[@L[cds.sales/business/office-365:29621-FAQ-a-11-US]@L]</div>
+          ##else
+          <div class="answer" data-tokenize="[@T[supportphone:<technical/>]@T]">[@L[cds.sales/business/office-365:29621-FAQ-a-11-INT]@L]</div>
+          ##endif
         </div>
         <div class="question-section">
           <div class="show-hide-question-section">

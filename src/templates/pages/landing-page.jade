@@ -37,11 +37,13 @@ block endOfPageScripts
       }).css({height: maxIconHeight, marginBottom: 10});
 
       if ($(window).width() > 768){
-        var maxHeight = 0;
-        $(".pro-plan-wrap").each(function(index, plan) {
-          maxHeight = $(plan).outerHeight() > maxHeight ? $(plan).outerHeight() : maxHeight;
-        }).css("height", maxHeight);
-      };
+        $(".pro-plans").each(function(index, outerPlan) {
+          var maxHeight = 0;
+          $(outerPlan).find(".pro-plan-wrap").each(function(index, plan) {
+            maxHeight = $(plan).outerHeight() > maxHeight ? $(plan).outerHeight() : maxHeight;
+          }).css("height", maxHeight);
+        });
+      }
     });
 
   //-$ script(src="http://img2.wsimg.com/starfield/fos.share/v1.3/fos.share-20140213.min.js" id="fosShareScript")

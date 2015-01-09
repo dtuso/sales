@@ -1,0 +1,16 @@
+extend ../../../layouts/homepage/downArrowTile.jade
+
+append vars
+  - headerText = "[@L[cds.sales/homepage/tile/ch-free-transfer:ch-free-transfer-header-text]@L]"
+  - bodyText = "[@L[cds.sales/homepage/tile/ch-free-transfer:ch-free-transfer-body-text]@L]"
+  - buttonLink = "[@T[link:<relative path='/domains/domain-transfer.aspx'><param name='ci' value='95258' /><param name='tld' value='ch' /></relative>]@T]";
+  - buttonText = "[@L[cds.sales/homepage/tile/ch-free-transfer:ch-free-transfer-cta-text]@L]";
+  - dataCi = 95258;
+  - containerClass = "ch-free-transfer";
+
+block append downArrowTileStyles
+  style.
+    .tile.ch-free-transfer .body-text{font-family:'Walsheim-Medium', Arial, sans-serif;font-size:24px;}
+    .tile.ch-free-transfer .btn {min-width:120px;}
+    .tile.ch-free-transfer .btn-warning{border-color: #b25e18;}
+    .tile.ch-free-transfer .header-text {font-size:42px;}
