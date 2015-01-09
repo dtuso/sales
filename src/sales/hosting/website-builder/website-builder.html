@@ -1,8 +1,8 @@
 ---
 location: sales/hosting/website-builder.aspx
-id: 5475076df778fc0a98909646
-name: SEM-213
-comments: FAQ tab link changes to Expansion pages
+id: 54aee225f778fc2594c77be2
+name: GCE-33979
+comments: Preparing for uxcore
 ---
 {% extends 'layouts/base.html' %}
 {% block pageTitle %}
@@ -103,6 +103,23 @@ comments: FAQ tab link changes to Expansion pages
 ##endif
 
 <style>
+  ##if(appSettingEnabled(UXCORE_ENABLED))
+    body {
+      font-size: 10px;
+      background: #d4d4d4;
+    }
+    .container {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+    .btn.cta-medium,
+    .btn.cta-small {
+      height: 3.3em;
+    }
+    .badge-important {
+      background-color: #F3514C;
+    }
+  ##endif
   .main-banner-content.main-banner-content-website-builder > .misc-banner-content-website-builder,
   .misc-banner-link {
     color: #fff !important;
@@ -591,7 +608,7 @@ comments: FAQ tab link changes to Expansion pages
                     </ul>
                 </div>
             </div>
-            <div class="col-xs-4"id="column-3" data-gd-sidebysidealign-col="3">
+            <div class="col-xs-4" id="column-3" data-gd-sidebysidealign-col="3">
                 <div class="grid-column no-padding-bottom relative">
                   <div data-gd-sidebysidealign-row="1">
                     ##if(productIsOffered(13))
@@ -1299,7 +1316,6 @@ comments: FAQ tab link changes to Expansion pages
       $('a[data-toggle="tab"]').on('shown.bs.tab',function(e){
         var target = $(e.target).data('gd-sidebyside-target');
         if(target ==='#plans-pricing'){
-        console.log(target);
           $(target + ' [data-gd-sidebysidealign]').gdSideBySideAlign();
         };
       });

@@ -1,8 +1,8 @@
 ---
 location: sales/hosting/web-hosting.aspx
-id: 54939b42f778fc1aac854061
-name: GCE-31167
-comments: Wrapped pcUpdateCart/pcCartCnt in AppSetting Conditional
+id: 54aefd9ef778fc2594c77bf2
+name: GCE-33979
+comments: css updates
 url: http://www.dev-godaddy.com/hosting/web-hosting.aspx
 splitSide: 1349.A
 cssVersionOverride: 3
@@ -23,7 +23,23 @@ metaOgDescription: "[@L[cds.sales/gd/hosting/web-hosting:og-description]@L]"
   {% parent %}
 
 <style type="text/css">
-{% less %}
+  ##if(appSettingEnabled(UXCORE_ENABLED))
+    body {
+      font-size: 10px;
+      background-color: #d4d4d4;
+    }
+    .badge-important {
+      background-color: #F3514C;
+    }
+    .pro-page-section {
+      padding-right: 0px;
+    }
+    .col-xs-4 {
+      padding-left: 20px;
+      padding-right: 0;
+      width: 34%;
+    }
+  ##endif
   .margin-bottom-0 { margin-bottom: 0px; }
   .starting-at-color-black { color: #000; }
   .starting-at-alternate-font { font-size: .5em; }
@@ -31,7 +47,6 @@ metaOgDescription: "[@L[cds.sales/gd/hosting/web-hosting:og-description]@L]"
   .starting-at-sale-save-spacing { margin-bottom: 0.1em; margin-top: -0.22857143em; }
   .starting-at-renewal-spacing { padding-bottom: 0.2em; margin-top: -0.22857143em; }
   .starting-at-renewal-font { font-size: 0.9em; }
-{% endless %}
 </style>
 
 {% endblock %}
@@ -2482,21 +2497,6 @@ metaOgDescription: "[@L[cds.sales/gd/hosting/web-hosting:og-description]@L]"
                                             </td>
                                         </tr>
                                         <tr class="standard-row">
-                                            <td class="wide-column sp" colspan="3">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-account-exec-11166]@L]</td>
-                                            <td class="edu">
-                                                <span class="gray-check"></span>
-                                            </td>
-                                            <td class="edu">
-                                                <span class="orange-check"></span>
-                                            </td>
-                                            <td class="edu">
-                                                <span class="green-check"></span>
-                                            </td>
-                                            <td class="edu">
-                                                <span class="black-check"></span>
-                                            </td>
-                                        </tr>
-                                        <tr class="standard-row">
                                             <td class="wide-column sp" colspan="3">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-ssh-11166]@L]</td>
                                             <td class="edu">
                                                 <span class="gray-check"></span>
@@ -3120,18 +3120,6 @@ metaOgDescription: "[@L[cds.sales/gd/hosting/web-hosting:og-description]@L]"
                                         </tr>
                                         <tr class="standard-row">
                                             <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-password-protect-11166]@L]</td>
-                                            <td class="edu">
-                                                <span class="orange-check"></span>
-                                            </td>
-                                            <td class="edu">
-                                                <span class="green-check"></span>
-                                            </td>
-                                            <td class="edu">
-                                                <span class="black-check"></span>
-                                            </td>
-                                        </tr>
-                                        <tr class="standard-row">
-                                            <td class="wide-column sp" colspan="2">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-account-exec-11166]@L]</td>
                                             <td class="edu">
                                                 <span class="orange-check"></span>
                                             </td>
