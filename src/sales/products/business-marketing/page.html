@@ -1,8 +1,8 @@
 ---
 location: sales/products/business-marketing.aspx
-id: 54298d71f778fc1cd05bba0e
-name: GCE-27850
-comments: Redesign of landing page (take 2)
+id: 54939fc5f778fc1aac854065
+name: GCE-33979
+comments: Wrapped pcUpdateCart/pcCartCnt in AppSetting Conditional
 url: http://www.dev-godaddy.com/products/business-marketing.aspx
 assetPath: false
 ---
@@ -1015,8 +1015,6 @@ assetPath: false
     locuPage.redirectUrl ='[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]';
   ##endif
 
-  {% jsminify %}
-
   $(document).ready(function(){
 
     // WIRE UP CI CODE TRACKING
@@ -1115,7 +1113,9 @@ assetPath: false
     var plan     = 'locu_Essential1Yr';
     var url      = '[@T[link:<relative path="/api/package/{0}/{1}/{2}/{3}/{4}"/>]@T]'.replace('{0}',action).replace('{1}',itc).replace('{2}',ciCode).replace('{3}',quantity).replace('{4}',plan);
     
+    ##if(!appSettingEnabled(UXCORE_ENABLED))
     var newCartCt = pcCartCt + 1;
+    ##endif
 
     $.getJSON(url, function (data) {
       // 1. check for failures
@@ -1128,13 +1128,14 @@ assetPath: false
         return;
       }
       // 2. update the new cart count on the page.
+      ##if(!appSettingEnabled(UXCORE_ENABLED))
       pcUpdateCart(newCartCt);
+      ##endif
 
       // 3. redirect user to the cart where their product should be waiting for them.
       window.location = locuPage.redirectUrl;
     });          
   }
-  {% endjsminify %}
 </script>
 <!-- end-js-elevate -->
 {% endblock %}

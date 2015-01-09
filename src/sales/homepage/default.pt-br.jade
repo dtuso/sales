@@ -26,9 +26,7 @@ block marquee
   | ##endif
 
 block bugBar
-  +gtldBug("co")
-  +gtldBug("br")
-  +gtldBug("org")
+  +tldBugs(["co","br","org"])
 
 block primaryTile
   #tile-container-hosting
@@ -50,3 +48,5 @@ block secondaryTile
       $('#tile-container-got').hide();
       $('#tile-container-gtld').show();
     }
+
+block cookieWarning

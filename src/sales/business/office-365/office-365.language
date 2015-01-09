@@ -1,8 +1,8 @@
 ---
 location: localization/sales/business/office-365/en
-id: 54612900f778fc26a885ee47
-name: GCE-32004,31975,32186
-comments: Fixing technet link in disclaimer
+id: 5490c030f778fc1cd843c71b
+name: GCE-33112
+comments: FAQ Update
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="lp-8-MicrosoftOffice365BoostProductivityVirtuallyAnywhereGoDaddy" />
@@ -777,26 +777,44 @@ yourname@your-business-name.com
 Save
 <phrase key="lp-42-VideoConferencingIsntJustForCorporationsWith2" />
 Video conferencing isn’t just for corporations. With Microsoft Lync, part of our Online Essentials and Business Premium plans, you can chat, share your screen and, yes, even video conference with customers and colleagues anywhere in the world – all for free.
+<phrase key="32259-lp-42-VideoConferencingIsntJustForCorporationsWith2" />
+Video conferencing isn’t just for corporations. With Microsoft Lync, part of our Business Premium plan, you can chat, share your screen and, yes, even video conference with customers and colleagues anywhere in the world – all for free.
 <phrase key="faq-45-IfYouAreRunningADifferentOperatingSystem2" />
 If you are running a different operating system, remember that you can still work online with Office Online, browser-based versions of your favorite Microsoft tools like Excel, Word or PowerPoint, which are included with the Online Essentials or Business Premium plans.
+<phrase key="32259-faq-45-IfYouAreRunningADifferentOperatingSystem2" />
+If you are running a different operating system, remember that you can still work online with Office Online, browser-based versions of your favorite Microsoft tools like Excel, Word or PowerPoint, which are included with the Business Premium plan.
 <phrase key="faq-WithOurOnlineEssentialsAndBusinessPremiumPlans" />
 With our Online Essentials and Business Premium plans, documents created or stored in your OneDrive for Business cloud storage can be simultaneously edited with others inside or outside your company – anyone with a link to a document can make edits at the same time as you.  You can even see each other’s edits as you go, so you’ll always be on the same page with the latest version—all without having to send documents back and forth via email.
+<phrase key="32259-faq-WithOurOnlineEssentialsAndBusinessPremiumPlans" />
+With our Business Premium plan, documents created or stored in your OneDrive for Business cloud storage can be simultaneously edited with others inside or outside your company – anyone with a link to a document can make edits at the same time as you.  You can even see each other’s edits as you go, so you’ll always be on the same page with the latest version—all without having to send documents back and forth via email.
 <phrase key="faq-LyncOnlineIncludedInThePlan" />
 Lync Online, included in the Online Essentials and Business Premium plans, allows you to communicate with your colleagues, customers and partners via online conference call or HD video conference. With just a couple of clicks, you can share your screen to review or invite up to 250 people inside or outside your company to take part in an online conversation.
+<phrase key="32259-faq-LyncOnlineIncludedInThePlan" />
+Lync Online, included in the Business Premium plan, allows you to communicate with your colleagues, customers and partners via online conference call or HD video conference. With just a couple of clicks, you can share your screen to review or invite up to 250 people inside or outside your company to take part in an online conversation.
 <phrase key="lp-LyncOnlinePartOfThePlan" />
 Lync Online, part of the Online Essentials and Business Premium plans, allows you to communicate with your colleagues, customers, partners and friends via instant message, online conference call or HD video conference. Lync even allows you to share your computer screen so you can look at the same thing at the same time.
+<phrase key="32259-lp-LyncOnlinePartOfThePlan" />
+Lync Online, part of the Business Premium plan, allows you to communicate with your colleagues, customers, partners and friends via instant message, online conference call or HD video conference. Lync even allows you to share your computer screen so you can look at the same thing at the same time.
 <phrase key="lp-IfYouReRunningADifferentOperatingSystem" />
 If you’re running a different operating system, remember that you can still work online with Office Online, browser-based versions of your favorite Microsoft tools like Excel, Word or PowerPoint, which are included with the Online Essentials or Business Premium plans.
+<phrase key="32259-lp-IfYouReRunningADifferentOperatingSystem" />
+If you’re running a different operating system, remember that you can still work online with Office Online, browser-based versions of your favorite Microsoft tools like Excel, Word or PowerPoint, which are included with the Business Premium plan.
 <phrase key="split-test-b-2-OnlineEssentials" />
 Online Essentials
 <phrase key="split-test-b-40-ChooseOurOnlineEssentialsPlanToAccessWord" />
 Choose our Online Essentials plan to access Word, Excel, PowerPoint and more from any computer with Office Online. Or upgrade to Business Premium and get it all on your iPad, iPhone, Android or Windows Phone with Office Mobile apps.
 <phrase key="split-test-b-43-IfYouAreRunningADifferentOperatingSystem2" />
 If you are running a different operating system, remember that you can still work online with Office Online, browser-based versions of your favorite Microsoft tools like Excel, Word or PowerPoint, which are included with the Online Essentials or Business Premium plans.
+<phrase key="32259-split-test-b-43-IfYouAreRunningADifferentOperatingSystem2" />
+If you are running a different operating system, remember that you can still work online with Office Online, browser-based versions of your favorite Microsoft tools like Excel, Word or PowerPoint, which are included with the Business Premium plan.
 <phrase key="split-test-b-82-WithOurBusinessEssentialsAndProductivityPlusPlans2" />
 With our Online Essentials and Business Premium plans, documents created or stored in your OneDrive for Business cloud storage can be simultaneously edited with others inside or outside your company – anyone with a link to a document can make edits at the same time as you. You can even see each other’s edits as you go, so you’ll always be on the same page with the latest version—all without having to send documents back and forth via email.
+<phrase key="32259-split-test-b-82-WithOurBusinessEssentialsAndProductivityPlusPlans2" />
+With our Business Premium plan, documents created or stored in your OneDrive for Business cloud storage can be simultaneously edited with others inside or outside your company – anyone with a link to a document can make edits at the same time as you. You can even see each other’s edits as you go, so you’ll always be on the same page with the latest version—all without having to send documents back and forth via email.
 <phrase key="split-test-b-61-LyncOnlineIncludedInThePlan" />
 Lync Online, included in the Online Essentials and Business Premium plans, allows you to communicate with your colleagues, customers and partners via online conference call or HD video conference. With just a couple of clicks, you can share your screen to review or invite up to 250 people inside or outside your company to take part in an online conversation.
+<phrase key="32259-split-test-b-61-LyncOnlineIncludedInThePlan" />
+Lync Online, included in the Business Premium plan, allows you to communicate with your colleagues, customers and partners via online conference call or HD video conference. With just a couple of clicks, you can share your screen to review or invite up to 250 people inside or outside your company to take part in an online conversation.
 <phrase key="lp-7-AvailableOnlyWithBusinessPremiumPlan" />
 Available only with Business Premium plan:
 <phrase key="lp-2-BusinessPremium-2" />
@@ -886,14 +904,18 @@ The latest Microsoft Office suite, plus professional email.
 Upgrade your Office 
 <phrase key="29621-FeatureContent-1-description" />
 Get the latest versions of the programs you rely on &ndash; Excel, Word, PowerPoint, Outlook, OneNote, Access and Publisher &ndash; with a subscription to Microsoft Office 2013 or Office for Mac 2011 for up to 5 devices per single user. <em>Business and Business Premium plans only.</em>
+<phrase key="32259-FeatureContent-1-description" />
+Get the latest versions of the programs you rely on &ndash; Excel, Word, PowerPoint, Outlook, OneNote, Access and Publisher &ndash; with a subscription to Microsoft Office 2013 or Office for Mac 2011 for up to 5 devices per single user. 
 <phrase key="29621-FeatureContent-2-title" comment="{0} replaced with a percentage" />
 Save {0} when you go with GoDaddy.
-<phrase key="29621-FeatureContent-2-description" />
-We’ve partnered with Microsoft to bring you this exclusive deal on Office 365. Save {0} for the first year on the latest version of Microsoft Office — plus, get free automatic upgrades as they’re released with your subscription. <em>Business and Business Premium plans only.</em>
 <phrase key="32537-FeatureContent-2-description" />
 Only [@T[companyname:name]@T] can bring you an offer this good. Save {0} for the first year on the latest version of Microsoft Office — plus, get free automatic upgrades as they’re released with your subscription. <em>Business and Business Premium plans only.</em>
+<phrase key="32259-FeatureContent-2-description" />
+Only [@T[companyname:name]@T] can bring you an offer this good. Save {0} for the first year on the latest version of Microsoft Office — plus, get free automatic upgrades as they’re released with your subscription. 
 <phrase key="32904-FeatureContent-2-description" />
 Only [@T[companyname:name]@T] brings you an offer this good. Save {0} for the first year on the latest version of Microsoft Office — plus, get free automatic upgrades as they’re released with your subscription. <em>Business and Business Premium plans only.</em>
+<phrase key="32259-FeatureContent-2-description" />
+Only [@T[companyname:name]@T] brings you an offer this good. Save {0} for the first year on the latest version of Microsoft Office — plus, get free automatic upgrades as they’re released with your subscription. 
 <phrase key="29621-FeatureContent-3-title" />
 24/7 support from real Office experts.
 <phrase key="29621-FeatureContent-3-description" />
@@ -902,10 +924,14 @@ When you’re running a small business, you can’t afford downtime. GoDaddy hel
 Never pay for another upgrade.
 <phrase key="29621-FeatureContent-4-description" />
 With Office 365, you get the latest Microsoft Office updates automatically, at no additional cost. Instead of owning a static version of Office that will eventually be out of date, you have a subscription that guarantees you the latest version for as long as you keep your plan. <em>Business and Business Premium plans only.</em>
+<phrase key="32259-FeatureContent-4-description" />
+With Office 365, you get the latest Microsoft Office updates automatically, at no additional cost. Instead of owning a static version of Office that will eventually be out of date, you have a subscription that guarantees you the latest version for as long as you keep your plan. 
 <phrase key="29621-FeatureContent-5-title" />
 Office that’s made for mobile.
 <phrase key="29621-FeatureContent-5-description" />
 Create a spreadsheet on your laptop. Edit it on your tablet. Share it from your smartphone. Wherever you are, Office 365 makes it easy to keep working with mobile apps for iPhone<sup>&reg;</sup> and iPad<sup>&reg;</sup>, as well as Android and Windows devices. <em>Business and Business Premium plans only.</em>
+<phrase key="32259-FeatureContent-5-description" />
+Create a spreadsheet on your laptop. Edit it on your tablet. Share it from your smartphone. Wherever you are, Office 365 makes it easy to keep working with mobile apps for iPhone<sup>&reg;</sup> and iPad<sup>&reg;</sup>, as well as Android and Windows devices. 
 <phrase key="29621-FeatureContent-6-title" />
 Keep your files safe in the cloud.
 <phrase key="29621-FeatureContent-6-description" />
@@ -918,10 +944,16 @@ Make sure your important files are always within reach. Office Online lets you c
 More than just Office.
 <phrase key="29621-FeatureContent-8-bullet-get" />
 Get unlimited professional email addresses, all built on your domain name and all delivered to a single inbox. <em>Online Essentials and Business Premium plans only.</em>
+<phrase key="32259-FeatureContent-8-bullet-get" />
+Get unlimited professional email addresses, all built on your domain name and all delivered to a single inbox. <em>Business Premium plan only.</em>
 <phrase key="29621-FeatureContent-8-bullet-keep" />
 Keep more of what matters with 50 GB of storage for your email, contacts and shared calendars. <em>Online Essentials and Business Premium plans only.</em>
+<phrase key="32259-FeatureContent-8-bullet-keep" />
+Keep more of what matters with 50 GB of storage for your email, contacts and shared calendars. <em>Business Premium plan only.</em>
 <phrase key="29621-FeatureContent-8-bullet-meet" />
 Meet face to face, wherever you are, with video conferencing, screen sharing and more via Microsoft Lync.<em> Online Essentials and Business Premium plans only.</em>
+<phrase key="32259-FeatureContent-8-bullet-meet" />
+Meet face to face, wherever you are, with video conferencing, screen sharing and more via Microsoft Lync.<em> Business Premium plan only.</em>
 <phrase key="29621-FeatureContent-8-bullet-be" />
 Be confident that your email, contacts and calendar are always available with guaranteed 99.9% uptime.
 <phrase key="29621-Compare-title" />
@@ -1007,6 +1039,9 @@ Why should I buy Office 365 from GoDaddy if I already have Office on my desktop?
 <phrase key="29621-FAQ-a-1" />
 If you purchase our Business or Business Premium plan, you’ll get the latest version of the Office desktop applications you know and love—Excel, Word, Outlook, PowerPoint, OneNote, and Publisher.  And whenever Office is updated, you will automatically receive the latest upgrade at no additional charge so that you’re always on the current version of Office.   
 Our Office 365 plans give you the ability to easily and securely share and collaborate on documents using OneDrive for Business and Office Online. With Online Essentials, and Business Premium you can also create a domain-based email address and share calendars and contacts with people inside and outside of your company. Finally, unlike the Office you currently have, Office 365 from GoDaddy gives you the ability to have real-time online meetings and screen sharing using Lync. 
+<phrase key="32259-FAQ-a-1" />
+If you purchase our Business or Business Premium plan, you’ll get the latest version of the Office desktop applications you know and love—Excel, Word, Outlook, PowerPoint, OneNote, and Publisher.  And whenever Office is updated, you will automatically receive the latest upgrade at no additional charge so that you’re always on the current version of Office.   
+Our Office 365 plans give you the ability to easily and securely share and collaborate on documents using OneDrive for Business and Office Online. With Business Premium you can also create a domain-based email address and share calendars and contacts with people inside and outside of your company. Finally, unlike the Office you currently have, Office 365 from GoDaddy gives you the ability to have real-time online meetings and screen sharing using Lync. 
 <phrase key="29621-FAQ-q-2" />
 Which desktop applications come with the Business and Business Premium plans?
 <phrase key="29621-FAQ-a-2" />
@@ -1015,6 +1050,8 @@ This depends on whether you are using a PC or a Mac. PC users can download the l
 Will the latest version of Microsoft Office work on my computer?
 <phrase key="29621-FAQ-a-3" />
 To use the 5 desktop downloads you get with the Business or Business Premium plan, you must be on one of the following operating systems: <ul><li>Windows Server 2008 R2</li><li>Windows 7</li><li>Windows Server 2012</li><li>Windows 8</li><li>Mac OS X version 10.6 or later.</li></ul> If you are running a different operating system, remember that you can still work online with Office Online, browser-based versions of your favorite Microsoft tools like Excel, Word or PowerPoint, which are included with the Online Essentials or Business Premium plans.
+<phrase key="32259-FAQ-a-3" />
+To use the 5 desktop downloads you get with the Business or Business Premium plan, you must be on one of the following operating systems: <ul><li>Windows Server 2008 R2</li><li>Windows 7</li><li>Windows Server 2012</li><li>Windows 8</li><li>Mac OS X version 10.6 or later.</li></ul> If you are running a different operating system, remember that you can still work online with Office Online, browser-based versions of your favorite Microsoft tools like Excel, Word or PowerPoint, which are included with the Business Premium plan.
 <phrase key="29621-FAQ-q-4" />
 I have a Mac. Can I still use Office 365 from GoDaddy? What about the Business and Business Premium plans?
 <phrase key="29621-FAQ-a-4" />
@@ -1032,6 +1069,8 @@ Office Online features easy-to-use versions of Word®, Excel®, PowerPoint® and
 What is online document collaboration?
 <phrase key="29621-FAQ-a-7" />
 With our Online Essentials and Business Premium plans, documents created or stored in your OneDrive for Business cloud storage can be simultaneously edited with others inside or outside your company – anyone with a link to a document can make edits at the same time as you. You can even see each other’s edits as you go, so you’ll always be on the same page with the latest version, all without having to send documents back and forth via email. 
+<phrase key="32259-FAQ-a-7" />
+With our Business Premium plan, documents created or stored in your OneDrive for Business cloud storage can be simultaneously edited with others inside or outside your company – anyone with a link to a document can make edits at the same time as you. You can even see each other’s edits as you go, so you’ll always be on the same page with the latest version, all without having to send documents back and forth via email. 
 <phrase key="29621-FAQ-q-8" />
 With the Business or Business Premium plans, can I download the 5 installs of Office on my employees’ computers?
 <phrase key="29621-FAQ-a-8" />
@@ -1050,10 +1089,16 @@ If you would like to switch your domain-based email from Workspace to Office 365
 I am part of a larger organization - can I use Microsoft Office 365 from GoDaddy?
 <phrase key="29621-FAQ-a-11" />
 The plans on our website are ideal for businesses that require fewer than 300 accounts. You may purchase up to 300 user accounts on each plan type and up to 900 in total. If you have questions, just give us a call at [@T[supportphone:<technical/>]@T]. Our award-winning team is here to help 24/7.
+<phrase key="29621-FAQ-a-11-US" comment="{0} will be replaced with the support phone" />
+The plans on our website are designed for businesses that require fewer than 300 accounts. You may purchase up to 300 Business Premium accounts and up to 300 accounts between Email Essentials and Online Essentials for up to 600 accounts total. If you have questions, just give us a call at {0}. Our award-winning team is here to help 24/7.
+<phrase key="29621-FAQ-a-11-INT" comment="{0} will be replaced with the support phone"/>
+The plans on our website are designed for businesses that require fewer than 300 accounts. You may purchase up to 300 Business Premium accounts and up to 300 accounts between Email Essentials and Online Essentials for up to 600 accounts total. If you have questions, just give us a call at {0}. Our award-winning team is here to help.
 <phrase key="29621-FAQ-q-12" />
 What is Lync Online?
 <phrase key="29621-FAQ-a-12" />
 Lync Online, included in the Online Essentials and Business Premium plans, allows you to communicate with your colleagues, customers and partners via online conference call or HD video conference. With just a couple of clicks, you can share your screen or invite up to 250 people inside or outside your company to take part in an online conversation.
+<phrase key="32259-FAQ-a-12" />
+Lync Online, included in the Business Premium plan, allows you to communicate with your colleagues, customers and partners via online conference call or HD video conference. With just a couple of clicks, you can share your screen or invite up to 250 people inside or outside your company to take part in an online conversation.
 <phrase key="29621-FAQ-q-13" />
 What is the cloud?
 <phrase key="29621-FAQ-a-13" />

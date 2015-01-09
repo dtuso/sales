@@ -1,0 +1,25 @@
+---
+location: sales/homepage/tile/berlin/default_template
+id: false
+name: GCE-34082-berlin
+---
+extends ../../../layouts/homepage/downArrowTile.jade
+
+append vars
+  - buttonLink = "[@T[link:<relative path='/tlds/berlin'><param name='ci' value='95255' /></relative>]@T]";
+  - buttonText = "[@L[cds.sales/homepage/tile/berlin:berlin-tile-btn]@L]";
+  - dataCi = 95255;
+  - containerClass = "berlin";
+
+block append downArrowTileStyles
+  style.
+    .berlin .body-text{font-size:48px;line-height:48px;color:#fff;font-family: 'Walsheim-Black', 'Arial Black', sans-serif;margin:0 0 0 0;}
+    .berlin .body-text:last-child{color:#f2812e;}
+
+block header
+  img(src!="[@T[link:<imageroot />]@T]/fos/hp/rebrand/img/berlin-logo.png")
+
+block body
+  h3.body-text [@L[cds.sales/homepage/tile/berlin:berlin-tile-maintext-1]@L]
+  h3.body-text [@L[cds.sales/homepage/tile/berlin:berlin-tile-maintext-2]@L]
+  h3.body-text [@L[cds.sales/homepage/tile/berlin:berlin-tile-saletext]@L]

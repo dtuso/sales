@@ -1,0 +1,48 @@
+---
+location: sales/homepage/default.es-ve
+id: false
+name: GCE-34329_Move_LatAm
+---
+extends ../../layouts/homepage/default_base
+
+block marquee
+  | 
+  |  ##if(targetMessageTagAny(sales_hp_default,hp_existing_customer))
+  |    ##if(splitTestingSideIsActive(1416, A))
+  |      [@P[cdsDocument:<data app="sales" location="homepage/marquee/gybo/default_template" /> ]@P]
+  |    ##else
+  |      [@P[cdsDocument:<data app="sales" location="homepage/marquee/gtld/default_template" /> ]@P]
+  |    ##endif
+  |  ##else
+  |    ##if(splitTestingSideIsActive(1417, A))
+  |      [@P[cdsDocument:<data app="sales" location="homepage/marquee/gybo/default_template" /> ]@P]
+  |    ##else
+  |      [@P[cdsDocument:<data app="sales" location="homepage/marquee/499com/default_template" /> ]@P]
+  |    ##endif
+  |  ##endif
+
+block primaryTile
+  | 
+  | [@P[cdsDocument:<data app="sales" location="homepage/tile/hosting-old-brand/default_template" /> ]@P]
+
+block secondaryTile
+  | 
+  |  ##if(targetMessageTagAny(sales_hp_default,hp_existing_customer))
+  |    ##if(splitTestingSideIsActive(1416, A))
+  |      [@P[cdsDocument:<data app="sales" location="homepage/tile/30-percent-gtld/default_template" /> ]@P]
+  |    ##else
+  |      [@P[cdsDocument:<data app="sales" location="homepage/tile/got/default_template" /> ]@P]
+  |    ##endif
+  |  ##else
+  |    ##if(splitTestingSideIsActive(1417, A))
+  |      [@P[cdsDocument:<data app="sales" location="homepage/tile/com299/default_template" /> ]@P]
+  |    ##else
+  |      [@P[cdsDocument:<data app="sales" location="homepage/tile/got/default_template" /> ]@P]
+  |    ##endif
+  |  ##endif
+  | 
+
+block bugBar
+  +tldBugs(["co","uno","xyz"])
+
+block cookieWarning

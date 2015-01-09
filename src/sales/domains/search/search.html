@@ -1,14 +1,24 @@
 ---
 location: sales/domains/domain-name-search.aspx
-id: 545002eff778fc1aa8bc31cb
-name: GCE-32085
-comments: GCE-32085 - Domains LP merchandising updates for 12/10
+id: 54ad8a25f778fc2e5c59197e
+name: GCE-33979
+comments: GCE-33979 - Prepare for uxcore
 ---
 {% extends 'layouts/base.html' %}
 {% block metahead %}
 {% parent %}
 
     <style type="text/css">
+      ##if(appSettingEnabled(UXCORE_ENABLED))
+      body{font-size:10px;background:#d4d4d4;}
+      h1{color:#FFFFFF;}
+      #footer #footer-legal{background:#fff;}
+      .btn-bottom{width:inherit;}
+      h1,h2,h3{margin-top:0px;margin-bottom:20px;}
+      h2{margin-bottom:.222222222em;}
+      .hundreds-domains{margin-bottom:90px;padding:25px 30px;}
+      ul,ol{margin-bottom:20px;}
+      ##endif
       .btn-new-width{min-width: 104px;}
       .londonimg {background-image: url("[@T[link:<imageroot />]@T]fos/201401/domains/search/img/london.png");}
       .left {float:left}
@@ -160,8 +170,10 @@ comments: GCE-32085 - Domains LP merchandising updates for 12/10
                   <p id ="btnText"><a class="btn btn-primary btn-block btn-lg btn--push-down" style="white-space: pre-wrap;" href="{{pod.ButtonURL}}" ng-show="'{{pod.LaunchPhase}}'=='28'" >[@L[cds.sales/gd/domains/domain-name-search:Register]@L]</a>
                   <p id ="btnText"><a class="btn btn-primary btn-block btn-lg btn--push-down" style="white-space: pre-wrap;" href="{{pod.ButtonURL}}" ng-hide="'{{pod.LaunchPhase}}'=='28'" >[@L[cds.sales/gd/domains/domain-name-search:PreRegister]@L]</a>
                   </p>
-                      ##if(ActiveLanguageAny([ru-ru]))
-                    <p style="font-size:0.9em" ng-bind-html="pod.PodText" ></p> 
+                    ##if(ActiveLanguageAny([ru-ru]))
+                    <p style="font-size:0.9em" ng-bind-html="pod.PodText" ></p>
+                    ##elseif(ActiveLanguageAny([fr-ch], [it-ch]))
+                    <p style="font-size: 12px;" ng-bind-html="pod.PodText" class="ng-binding"></p>
                     ##else
                     <p ng-bind-html="pod.PodText" ></p> 
                     ##endif
@@ -246,7 +258,7 @@ comments: GCE-32085 - Domains LP merchandising updates for 12/10
                                 <li class="list-item"><span class="font-18">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle0]@L]</span></li>                                
                                 <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:TldDotCity]@L]</span> <a data-ci="94885" href="[@T[link:<relative path="/tlds/city"></relative>]@T]" class="btn btn-primary list-item-button btn-new-width">[@L[cds.sales/gd/domains/domain-name-search:Register]@L]</a></li>
                               
-                                ##if(ActiveLanguageAny([en-gb]))
+                                ##if(ActiveLanguageAny([en-gb], [fr-BE], [fr-FR], [fr-CH]))
                                 <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:TldDotPhoto]@L]</span> <a data-ci="93957" href="[@T[link:<relative path="/tlds/photo"></relative>]@T]" class="btn btn-primary list-item-button btn-new-width">[@L[cds.sales/gd/domains/domain-name-search:Register]@L]</a></li>
                                 ##elseif(ActiveLanguageAny([es-US], [es-AR], [es-CL], [es-CO], [es-ES], [es-MX], [es-PE], [es-VE]))
                                 <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:TldDotJuegos]@L]</span> <a data-ci="94375" href="[@T[link:<relative path="/tlds/juegos"></relative>]@T]" class="btn btn-primary list-item-button btn-new-width">[@L[cds.sales/gd/domains/domain-name-search:Register]@L]</a></li>
@@ -268,7 +280,7 @@ comments: GCE-32085 - Domains LP merchandising updates for 12/10
                                  <li class="list-item"><span class="font-18">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle1]@L]</span></li>
                                  <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:TldDotShop]@L]</span> <a data-ci="88764" href="[@T[link:<relative path="/tlds/gtld.aspx"></relative>]@T]" class="btn btn-primary list-item-button">[@L[cds.sales/gd/domains/domain-name-search:LearnMore]@L]</a></li>
                                 <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:TldDotWeb]@L]</span> <a data-ci="91415" href="[@T[link:<relative path="/tlds/gtld.aspx"></relative>]@T]" class="btn btn-primary list-item-button">[@L[cds.sales/gd/domains/domain-name-search:LearnMore]@L]</a></li>
-                                <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:TldDotSite]@L]</span> <a data-ci="93465" href="[@T[link:<relative path="/tlds/gtld.aspx"></relative>]@T]" class="btn btn-primary list-item-button">[@L[cds.sales/gd/domains/domain-name-search:LearnMore]@L]</a></li>
+                                <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:TldDotOnline]@L]</span> <a data-ci="95234" href="[@T[link:<relative path="/tlds/gtld.aspx"></relative>]@T]" class="btn btn-primary list-item-button">[@L[cds.sales/gd/domains/domain-name-search:LearnMore]@L]</a></li>
                                 <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:TldDotApp]@L]</span> <a data-ci="90059" href="[@T[link:<relative path="/tlds/gtld.aspx"></relative>]@T]" class="btn btn-primary list-item-button">[@L[cds.sales/gd/domains/domain-name-search:LearnMore]@L]</a></li>
                             </ul>
                         </div>

@@ -1,0 +1,33 @@
+
+<atlantis:webstash type="css">
+  <style>
+    .tile { width: 480px; height: 480px; position: relative; float: left;margin: 40px 10px 0;cursor: pointer; background-color: #333; }
+    .tile .header-wrapper { background-color: #77c043; padding: 30px 30px 0 30px; }
+    .tile .body-wrapper { padding: 15px 30px 0 30px; }
+    .tile .cta-wrapper { padding: 0 30px 30px 30px; }
+    .tile .disclaimer-wrapper { position: absolute; bottom: 0; }
+    .tile .header-text { font-size: 48px; color: #333; font-family: 'Walsheim-Black', 'Arial Black', sans-serif; margin-top: 0;margin-bottom: 0; line-height: 1;}
+    .tile .arrow-separator { border-left: 160px solid transparent; border-right: 320px solid transparent; border-top: 80px solid #77c043;}
+    .tile .body-text { color: #fff; font-family: 'Walsheim-Black', 'Arial Black', sans-serif; }
+    .tile .cta-wrapper { position: absolute; bottom: 0; }
+    .tile .btn-cta { font-size: 24px; text-transform: uppercase; margin: 0 0 0 0; }
+    .tile .disclaimer { color: #fff; padding-top: 15px; }
+    
+  </style>
+  <style>
+    .berlin .body-text{font-size:48px;line-height:48px;color:#fff;font-family: 'Walsheim-Black', 'Arial Black', sans-serif;margin:0 0 0 0;}
+    .berlin .body-text:last-child{color:#f2812e;}
+    
+  </style>
+</atlantis:webstash>
+<div data-url="[@T[link:<relative path='/tlds/berlin'><param name='ci' value='95255' /></relative>]@T]" data-ci='95255' class="tile down-arrow-tile js-gdhpclick berlin">
+  <div class="header-wrapper"><img src="[@T[link:<imageroot />]@T]/fos/hp/rebrand/img/berlin-logo.png"/></div>
+  <div class="arrow-separator"></div>
+  <div class="body-wrapper">
+    <h3 class="body-text">[@L[cds.sales/homepage/tile/berlin:berlin-tile-maintext-1]@L]</h3>
+    <h3 class="body-text">[@L[cds.sales/homepage/tile/berlin:berlin-tile-maintext-2]@L]</h3>
+    <h3 class="body-text">[@L[cds.sales/homepage/tile/berlin:berlin-tile-saletext]@L]</h3>
+  </div>
+  <div class="cta-wrapper"><a href="[@T[link:<relative path='/tlds/berlin'><param name='ci' value='95255' /></relative>]@T]" class="btn btn-warning btn-cta">[@L[cds.sales/homepage/tile/berlin:berlin-tile-btn]@L]</a>
+  </div>
+</div>

@@ -1,0 +1,54 @@
+---
+location: sales/homepage/default.fr-ca
+id: false
+name: GCE-34120
+---
+extends ../../layouts/homepage/default_base
+block styles
+  link(href!="[@T[link:<cssroot />]@T]fos/hp/rebrand/css/homepage20141208.css" rel="stylesheet" type="text/css")
+  style.
+    .gdhp-search-box .domainSearchBox{width:780px;}
+
+block marquee
+  |  ##if(targetMessageTagAny(sales_hp_default,hp_existing_customer))
+  |     [@P[cdsDocument:<data app="sales" location="homepage/marquee/gybo/default_template" /> ]@P]
+  |  ##else
+  |    ##if(splitTestingSideIsActive(1412, A))
+  |      [@P[cdsDocument:<data app="sales" location="homepage/marquee/gybo/default_template" /> ]@P]
+  |    ##else
+  |      [@P[cdsDocument:<data app="sales" location="homepage/marquee/499com/default_template" /> ]@P]
+  |    ##endif
+  |  ##endif
+
+block tiles
+  atlantis:webstash(type="css")
+    style.
+      .gdhp-tile-wrap{height:580px;width:100%;background-color:#d4d4d4}
+      .gdhp-tile-area{width:1000px;margin:0 auto}
+      .gdhp-tile{width:480px;height:480px;background-color:#fff;float:left;margin:40px 10px 0;cursor:pointer;}
+      .gdhp-tile span{display:block;}
+      .gdhp-tile .btn-lrg{font-size:24px;padding:14px 12px;box-sizing:border-box;height:60px;width:240px;}
+      .gdhp-tile .btn-orange{color:#fff;background-color:#f5811f;border-bottom:4px solid #b25e18;}
+      .gdhp-tile .btn-orange:hover{background-color:#ff9b39;border-color:#cc7832}
+      .tile-sprite{background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gdhp_tile_sprite_20141205.png) scroll no-repeat;}
+  .gdhp-tile-wrap
+    .gdhp-tile-area
+      block primaryTile
+        //- include ../../sales/homepage/tiles/hosting.jade
+        | 
+        | [@P[cdsDocument:<data app="sales" location="homepage/tile/hosting-old-brand/default_template" /> ]@P]
+      block secondaryTile
+        |  ##if(targetMessageTagAny(sales_hp_default,hp_existing_customer))
+        |   [@P[cdsDocument:<data app="sales" location="homepage/tile/30-percent-gtld/default_template" /> ]@P]
+        |  ##else
+        |    ##if(splitTestingSideIsActive(1412, A))
+        |      [@P[cdsDocument:<data app="sales" location="homepage/tile/com299/default_template" /> ]@P]
+        |    ##else
+        |      [@P[cdsDocument:<data app="sales" location="homepage/tile/got/default_template" /> ]@P]
+        |    ##endif
+        |  ##endif
+
+block bugBar
+  +tldBugs(["club","co","quebec"])
+
+block cookieWarning

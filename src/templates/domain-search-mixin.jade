@@ -14,3 +14,32 @@ mixin domainSearchInput(params)
           label(class="#{placeholderTextColor} searchInput") !{placeholderText}
           input(class="#{placeholderTextColor} searchInput" type="text" autocomplete="off" name="domainToCheck" maxlength="63")
           button(type="submit" data-tcode="#{tcode}" class="#{buttonColor} btn btn-lg pull-right ") !{buttonText}
+
+mixin domainSearchOffersInput(title, cicode, placeholderText)
+  style.
+    .search-form { margin: 0 auto 1.071428571em;}
+    .search-form-input {height: 67px; padding: 20px; border-top-color: #fff; border-top-width: 3px; border-top-style: inset; border-bottom: 1px solid #ccc; border-left: 1px solid #ccc; border-right: 1px solid #ccc; width: 850px;}
+    .offer-search-box label.searchInput {};
+    .offer-search-btn {font-size: 20pt; }
+    .offer-search-section { padding-bottom:20px;}
+    .type-your-business-name { display: none; }
+    .domain-eligibility-fail { display: none; }
+    .invalid-TLD-entered { display: none; }
+
+  .row
+    .col-md-12
+      h5.get-a-domain-text !{title}
+  .row
+    .col-md-12
+      .offer-search-section
+        .offer-main-top
+          form.search-form
+            .offer-search-box
+              input.search-form-input.searchInput.helveticafont(type="text" id="searchDomainName" placeholder!="#{placeholderText}" name="domainToCheck" autocomplete="off" maxlength="63")
+              button.btn.btn-primary.btn-lg.offer-search-btn(type="button" name="searchButton" data-ci="#{cicode}") SEARCH
+            .clearfix
+  .row
+    .col-md-12
+      mark.type-your-business-name Type your business name here (if you have one)
+      mark.domain-eligibility-fail You do not meet the eligibilty requirements for {0} domains, please select a different domain extension and search again.
+      mark.invalid-TLD-entered You need to choose a valid TLD.
