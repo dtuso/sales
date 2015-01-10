@@ -126,7 +126,8 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
   {font-size:48px;margin:90px 0 40px;line-height:1.35em;text-align: left;} 
   #domain-search-div .search-result-is-available,
   #domain-search-div .search-result-not-available,
-  #domain-search-div .search-result-invalid
+  #domain-search-div .search-result-invalid,
+  #domain-search-div .search-result-error
   {font-size:48px;margin:90px 0 30px;line-height:1.00em;word-wrap:break-word;text-align: left;}
   
   #domain-search-div .search-result-is-available {text-align:center;}
@@ -151,6 +152,7 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
   #offers div.got-slide-2 div.search-result-is-available,
   #offers div.got-slide-2 div.search-result-not-available,
   #offers div.got-slide-2 div.search-result-invalid,
+  #offers div.got-slide-2 div.search-result-error,
   #offers div.got-slide-2 div.search-again,
   #offers div.got-slide-2 div.try-again
   {display:none;}
@@ -175,6 +177,7 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
 
   #offers div.got-slide-3 div.got-unavailable-div div.search-result-is-available,
   #offers div.got-slide-3 div.got-unavailable-div div.search-result-invalid,
+  #offers div.got-slide-3 div.got-unavailable-div div.search-result-error,
   #offers div.got-slide-3 div.got-unavailable-div div.add-domain-btn-div,
   #offers div.got-slide-3 div.got-unavailable-div div.search-again,
   #offers div.got-slide-3 div.got-unavailable-div div.start-here
@@ -186,11 +189,29 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
 
   #offers div.got-slide-3 div.got-invalid-div div.search-result-not-available,
   #offers div.got-slide-3 div.got-invalid-div div.search-result-is-available,
+  #offers div.got-slide-3 div.got-invalid-div div.search-result-error,
   #offers div.got-slide-3 div.got-invalid-div div.add-domain-btn-div,
   #offers div.got-slide-3 div.got-invalid-div div.search-again,
   #offers div.got-slide-3 div.got-invalid-div div.start-here,
   #offers div.got-slide-3 div.got-invalid-div div.find-a-domain
   {display:none;}
+  
+  #offers div.got-slide-3 div.got-error-div div.search-result-error,
+  #offers div.got-slide-3 div.got-error-div div.try-again
+  {display:block;}
+
+  #offers div.got-slide-3 div.got-error-div div.search-result-not-available,
+  #offers div.got-slide-3 div.got-error-div div.search-result-is-available,
+  #offers div.got-slide-3 div.got-error-div div.search-result-invalid,
+  #offers div.got-slide-3 div.got-error-div div.add-domain-btn-div,
+  #offers div.got-slide-3 div.got-error-div div.search-again,
+  #offers div.got-slide-3 div.got-error-div div.start-here,
+  #offers div.got-slide-3 div.got-error-div div.find-a-domain
+  {display:none;}
+
+
+
+
 
   #domain-search-div .search-again {
     text-align: center;
@@ -344,6 +365,7 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
           <div class="search-again" data-ci="92747">[@L[cds.sales/offers/online-business:search-again]@L]</div>
           <div class="search-result-not-available">[@L[cds.sales/offers/online-business:search-not-available]@L]</div>
           <div class="search-result-invalid">[@L[cds.sales/offers/online-business:domain-is-invalid]@L]</div>
+          <div class="search-result-error">An unknown error occurred. Try again.</div>
 
           <form name="domaincheck" class="highlight search-form">
             <input type="hidden" name="targetdivid" value="x" />
@@ -389,13 +411,11 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
                         </div>
                       </li>
                       ##if(countrySiteAny(ca) || isManager())
-                      <!--
                       <li data-main=".ca" data-view="ca" class="availabletld">
                         <div data-main="true">
                           <span>.ca</span>
                         </div>
                       </li>
-                      -->
                       ##endif
                       ##if(countrySiteAny(in) || isManager())
                       <li data-main=".in" data-view="in" class="availabletld">
@@ -415,7 +435,6 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
                         </div>
                       </li>
                       ##if(countrySiteAny(uk) || isManager())
-                      <!--
                       <li data-main=".co.uk" data-view="co.uk" class="availabletld">
                         <div data-main="true">
                           <span>.co.uk</span>
@@ -426,7 +445,6 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
                           <span>.uk</span>
                         </div>
                       </li>
-                      -->
                       ##endif
                     </ul>
                   </div>
@@ -449,6 +467,7 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
         <div class="got-available-div"></div>
         <div class="got-unavailable-div"></div>
         <div class="got-invalid-div"></div>
+        <div class="got-error-div"></div>
       </div> 
     </div> <!--end row got-top-slides -->
   </div>
@@ -471,6 +490,7 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
       $gotSlides.find('.got-slide-3').find('.got-available-div').hide();      
       $gotSlides.find('.got-slide-3').find('.got-unavailable-div').hide();   
       $gotSlides.find('.got-slide-3').find('.got-invalid-div').hide();
+      $gotSlides.find('.got-slide-3').find('.got-error-div').hide();
       
       // move the domain search box into the slide 2
       $gotSlides.find('.got-slide-2').append($dsd);      
@@ -482,6 +502,7 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
       $gotSlides.find('.got-slide-3').find('.got-unavailable-div').append($dsd).show();  
       $gotSlides.find('.got-slide-3').find('.got-available-div').hide();    
       $gotSlides.find('.got-slide-3').find('.got-invalid-div').hide();
+      $gotSlides.find('.got-slide-3').find('.got-error-div').hide();
       
       //animate slide
       showSlide($gotSlides, '.got-slide-3');
@@ -492,6 +513,7 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
       $gotSlides.find('.got-slide-3').find('.got-available-div').append($dsd).show();  
       $gotSlides.find('.got-slide-3').find('.got-unavailable-div').hide();   
       $gotSlides.find('.got-slide-3').find('.got-invalid-div').hide();
+      $gotSlides.find('.got-slide-3').find('.got-error-div').hide();
       
       //animate slide
       showSlide($gotSlides, '.got-slide-3');
@@ -500,6 +522,18 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
 
       // move searchbox to slide 3
       $gotSlides.find('.got-slide-3').find('.got-invalid-div').append($dsd).show();
+      $gotSlides.find('.got-slide-3').find('.got-error-div').hide();
+      $gotSlides.find('.got-slide-3').find('.got-available-div').hide();  
+      $gotSlides.find('.got-slide-3').find('.got-unavailable-div').hide();   
+      
+      //animate slide
+      showSlide($gotSlides, '.got-slide-3');
+    }
+    function slideToError($gotSlides){
+
+      // move searchbox to slide 3
+      $gotSlides.find('.got-slide-3').find('.got-error-div').append($dsd).show();
+      $gotSlides.find('.got-slide-3').find('.got-invalid-div').hide();
       $gotSlides.find('.got-slide-3').find('.got-available-div').hide();  
       $gotSlides.find('.got-slide-3').find('.got-unavailable-div').hide();   
       
@@ -647,7 +681,7 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
               slideToUnavailable($gotSlides);
 
               var $listOfDivs = $('<div class="alternate-domains">');
-              $listOfDivs.append($());
+              $listOfDivs.append($("<h3>").text("Try one of these other suggestions."));
               $.each(alternateDomains, function(idx, item){
                 var $domain = $('<div class="alternate-domain clearfix">');
                 $domain
@@ -661,7 +695,7 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
                       .html( "Select &amp; Continue" ) 
                       .data( "domain", item )
                       .data("spinresult", true)
-                      .on('click', goToDppCheckoutPage)
+                      .on('click', verifyDomainIsStillAvailable)
                   );
                 $listOfDivs.append($domain);
               });
@@ -682,14 +716,13 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
         },
         error: function(){
 
-            $dsd.addClass("invalid");
-            slideToInvalid($gotSlides);
+          $dsd.addClass("invalid");
+          $dsd.find('.domain-search-btn').removeClass('disabled');
+          $dsd.find('.search-domain-loading').hide();
 
-            if(console != undefined) {
-              console.log('package api post failure');
-            }
-            success = false;
-        }
+          slideToError($gotSlides);
+
+      }
       });
 
                      
@@ -697,13 +730,11 @@ metaOgDescription: "[@L[cds.sales/offers/online-business:og-description]@L]"
     } /* end domainSearchFormSubmit() */
 
 
-    function verifyDomainIsStillAvailable(domain,e,callbackFn){
+    function verifyDomainIsStillAvailable(e){
 
-      var $target = $(e.target);
-      var isSpinResult = $target.data('spinresult') === true; 
-
-alert(isSpinResult);
-debugger;
+      var $target = $(e.target),
+        domain = $target.data('domain'),
+        isSpinResult = $target.data('spinresult') === true; 
 
       if(isSpinResult) {
         // 1) check to see if this is a spinner result
@@ -714,42 +745,42 @@ debugger;
 
         $dsd.find('.search-again').hide();     
         $dsd.find('.domain-search-btn').addClass('disabled');
-        $target.addClass('disabled');
         $dsd.find('.add-domain-loading').fadeIn();
+        $target.text("confirming domain is available").addClass('disabled');
 
-        PlanBox6UI.recordClick(e, '92707' /*got1Page.offersCodes.ci.apiAddCi*/, $(this)[0]);
-        PlanBox6UI.recordClick(e, '84415' /*got1Page.offersCodes.ci.apiDomainAddToCart*/, $(this)[0]);
+        var url = '[@T[link:<relative path="~/domains/actions/json/domainavailabilitycheck.aspx"><param name="sld" value="sld" /><param name="tld" value="tld" /><param name="targetdivid" value="x" /><param name="source" value="domaincheck" /><param name="addIfAvailable" value="false" /></relative>]@T]';
+        url = url.replace('sld=sld', 'sld=' + domain.NameWithoutExtension);
+        url = url.replace('tld=tld', 'tld=' + domain.Extension);
 
-        var url = '[@T[link:<relative path="/api/package/add/{1}/92707/1/{4}"/>]@T]'.replace('{1}',got1Page.offersCodes.itc).replace('{4}',got1Page.offersCodes.plan);
-        url += (url.indexOf('?') > -1) ? '&' : '?';
-        url += 'domain=' + domain + '&sourceCode=domaincheck';
-        if (got1Page.offersCodes.addOns != 'noAddOns'){
-          url = url += '&addons=' + got1Page.offersCodes.addOns + '-1';
-        }
+        var showNotAvailableFn = function(){
+
+          $dsd.addClass("not-available");
+          $dsd.find('.domain-search-btn').removeClass('disabled');
+          $dsd.find('.search-domain-loading').hide();
+          var $gotSlides = $dsd.closest('.got-slides');
+          slideToUnavailable($gotSlides);
+        };
 
         $.ajaxSetup({cache:false});
         $.ajax({
           url: url,
-          type: 'POST',
+          type: 'GET',
           dataType: 'json',
           cache: false,
           success: function(data){
-            if(data.success) {
-              alert('still available!');
-              return;
-              // callbackFn(domain,e);
+            data = data || {};
+            data.Properties = data.Properties || {};
+            data.Properties.domainInfo = data.Properties.domainInfo || [{isAvailable: false}];
+            if(data.Properties.domainInfo[0].isAvailable) {
+              showChoicesScreen(e);
             } else {
-              alert('NOT available!');
+              showNotAvailableFn();
             }
           },
           error: function(){
-            if(console != undefined) {
-              console.log('package api post failure');
-            }
+            showNotAvailableFn();
           }
         });
-        return;
-
       } else {
         // 2) if not a spinner result, meaning they clicked an exact match
         //    - go ahead and add spinner for domain adding
@@ -759,44 +790,32 @@ debugger;
         $target.addClass('disabled');
         $dsd.find('.add-domain-loading').fadeIn();
 
-        callbackFn(domain,e);
+        showChoicesScreen(e);
 
-        return;
       }
 
-    }
+    } /* end verifyDomainIsStillAvailable() */
+
+    function showChoicesScreen(e){
+
+      // NOTE: this sceen is not dev'd  
+      // send them thru the purchase path
+
+      // TODO: show choice screen
+      var $gotSlides = $dsd.closest('.got-slides');
+      slideToShowSearch($gotSlides);
+
+
+      goToDppCheckoutPage(e);
+
+    } /* end showChoicesScreen() */
 
     function goToDppCheckoutPage(e) {
-      // 1) reverify this domain is avail using:
-      //    [@T[link:<relative path='domains/actions/json/domainavailabilitycheck.aspx'></relative>]@T]
-      // 
-      // 2) if domain is still avail, use: 
-      //    https://www.dev-godaddy.com/api/dpp/searchresultscart/11/?domain=blahblah.com&packageid=gybo_1email_1yr&dpp_itc=slp_GOT
-      //    [@T[link:<relative path='~/api/dpp/searchresultscart/11/'><param name="domain" value="domain" /><param name="packageid" value="packageid" /><param name="dpp_itc" value="dpp_itc" /></relative>]@T]
-      //      Response back from API  {"CurrentlyPending":1,"Success":true}
-      //      if true, redirect to DPP (URL????)
-      var domain = $(e.target).data('domain').Fqdn;
-      verifyDomainIsStillAvailable(domain, e, function(){
-        addDomainToCart(domain,e);  
-      });
-      
-    }
 
+      var $target = $(e.target),
+        domain = $target.data('domain'); 
 
-    function addDomainToCart(domain,e){
-
-
-
-      // 2) if domain is still avail, use: 
-      //    https://www.dev-godaddy.com/api/dpp/searchresultscart/11/?domain=blahblah.com&packageid=gybo_1email_1yr&dpp_itc=slp_GOT
-      //    [@T[link:<relative path='~/api/dpp/searchresultscart/11/'><param name="domain" value="domain" /><param name="packageid" value="packageid" /><param name="dpp_itc" value="dpp_itc" /></relative>]@T]
-      //      Response back from API  {"CurrentlyPending":1,"Success":true}
-      //      if true, redirect to DPP (URL????)
-
-
- 
-
-      // VERIFY DOMAIN IS STILL AVAILABLE
+      // SEND THEM THRU DOMAIN PURCHASE PATH IF WE CAN SETUP THE CART
       $dsd.find('.search-again').hide();     
       $dsd.find('.domain-search-btn').addClass('disabled');
       $(this).addClass('disabled');
@@ -805,10 +824,46 @@ debugger;
       PlanBox6UI.recordClick(e, '92707' /*got1Page.offersCodes.ci.apiAddCi*/, $(this)[0]);
       PlanBox6UI.recordClick(e, '84415' /*got1Page.offersCodes.ci.apiDomainAddToCart*/, $(this)[0]);
 
+      var url = '[@T[link:<relative path="~/api/dpp/searchresultscart/11/"><param name="domain" value="domain" /><param name="packageid" value="packageid" /><param name="itc" value="itc" /><param name="returnUrl" value="returnUrl" /></relative>]@T]';
+      url = url.replace('domain=domain', 'domain=' + domain.Fqdn);
+      url = url.replace('packageid=packageid', 'packageid=' + got1Page.offersCodes.plan);
+      url = url.replace('itc=itc', 'itc=' + got1Page.offersCodes.itc);
+      url = url.replace('returnUrl=returnUrl', 'returnUrl=' + got1Page.offersCodes.itc);
+
+      var showApiCError = function(){
+        $dsd.addClass("not-available");
+        $dsd.find('.domain-search-btn').removeClass('disabled');
+        $dsd.find('.search-domain-loading').hide();
+        var $gotSlides = $dsd.closest('.got-slides');
+        slideToUnavailable($gotSlides);
+      };
+
+      $.ajaxSetup({cache:false});
+      $.ajax({
+        url: url,
+        type: 'GET',
+        dataType: 'json',
+        cache: false,
+        success: function(data){
+          var nextUrl = data.NextStepUrl;
+          var success = data.Success;
+
+          if(data && data.Success) {
+
+            window.location = data.NextStepUrl;
+            return;
+          } else {
+            showApiCError();
+          }
+        },
+        error: function(){
+          showApiCError();
+        }
+      });
 
 
 
-    } /* end addDomainToCart */
+    } /* end goToDppCheckoutPage() */
     
     $(document).ready(function () {
         // clear form
@@ -843,7 +898,7 @@ debugger;
             //PlanBox6UI.showTerm($li);
             PlanBox6UI.changeSelected($li, parent);
           })
-          .on('click', '.add-domain-btn', goToDppCheckoutPage)
+          .on('click', '.add-domain-btn', verifyDomainIsStillAvailable)
           .on('submit','form[name=domaincheck]', function(e) {
             window.setTimeout(function(){
               domainSearchFormSubmit(e);

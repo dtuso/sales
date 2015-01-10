@@ -1,0 +1,45 @@
+.features-tabbed-carousel-top {
+  padding: 70px 0 0;
+  text-align: center;
+}
+.features-tabbed-carousel-top h2 {
+  margin-top: 0;
+}
+.features-tabbed-carousel-top .features-tabbed-carousel-icon {
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.features-tabbed-carousel-top .features-tabbed-carousel-icon img {
+max-width: 70%;
+vertical-align: middle;
+display: inline-block;
+}
+.features-tabbed-carousel-top .features-tabbed-carousel-icon img {
+margin-bottom: 10px;
+}
+.img-center {
+margin: 0 auto;
+}
+
+.features-tabbed-carousel-top .features-tabbed-carousel-icon.active .feature-text {
+color: #008a32;
+font-family: 'Walsheim-Black';
+}
+.features-tabbed-carousel-top .features-tabbed-carousel-icon .feature-text {
+font-family: 'Walsheim-Bold';
+font-size: 18px;
+font-size: 1.8rem;
+line-height: 1.1;
+text-transform: uppercase;
+}
+.feature-carousel-icon {font-size: 36px;margin-bottom: 10px;}
+
+@media only screen and (min-width: 992px){
+  .features-tabbed-carousel-top .features-tabbed-carousel-icon:not(:first-child) {
+  border-left: 1px solid #808080;
+  }
+}
