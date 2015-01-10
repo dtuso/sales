@@ -25,6 +25,15 @@
     <link href="[@T[link:<cssroot />]@T]/ux/dev-brand/css/uxcore.css" rel="stylesheet">
     <link href="[@T[link:<cssroot />]@T]/ux/dev-brand/css/uxcontrols.css" rel="stylesheet">
     <script src="[@T[link:<javascriptroot />]@T]/ux/dev-brand/js/uxcontrols.js"></script>
+    <style>
+.plan-tile { 
+  margin-top: -240px; 
+}
+.sf-droplist-msg {
+  text-align: inherit;
+}
+
+    </style>
     <script type="text/javascript">
       window.config = window.config || {};
       window.config.uxcore = true;
@@ -42,15 +51,6 @@
     <link href="https://plus.google.com/108306343581548568740" rel="publisher">
     <meta name="verify-v1" content="dV1r/ZJJdDEI++fKJ6iDEl6o+TMNtSu0kv18ONeqM0I=">
     <meta name="y_key" content="1e39c508e0d87750">
-    <style>
-.plan-tile { 
-  margin-top: -240px; 
-}
-.sf-droplist-msg {
-  text-align: inherit;
-}
-
-    </style>
     <script src="[@T[link:<javascriptroot />]@T]/fos/mike/0.7.0/js/sahara.min.js"></script>
     <script type="text/javascript">
       //- delayLoader.addScript('[@T[link:<javascriptroot />]@T]/ux/dev/js/uxcontrols.min.js')
@@ -516,50 +516,608 @@ text-transform: uppercase;
       </div>
     </div>
     <section id="social-media" data-mid-nav-title="Features">
-      <style>
-        .feature-carousel-icon {font-size: 36px;margin-bottom: 10px;}
-        
-        
-        
-      </style>
-      <!--script-->
-      <!--  include ../../../templates/planTile.js-->
-      <script type="text/javascript">
-        $(window).load(function() {
-          setTimeout(function() {
-            $(".features-carousel-pro-icon:first").click();
-          }, 500);
-        
-          var maxTabHeight = 0;
-          $(".features-carousel-pro-icon").each(function(index, tab) {
-            maxTabHeight = $(tab).outerHeight() > maxTabHeight ? $(tab).outerHeight() : maxTabHeight;
-          }).css("height", maxTabHeight);
-        
-          var maxFeatureTextHeight = 0;
-          $(".feature-text").each(function(index, featureText) {
-            maxFeatureTextHeight = $(featureText).height() > maxFeatureTextHeight ? $(featureText).height() : maxFeatureTextHeight;
-          }).css({height: maxFeatureTextHeight});
-        
-        });
-        
-        $(".features-carousel-pro-icon").click(function() {
-          var slideNum = $(this).data("begin");
-          $(".features-carousel-pro-icon").removeClass("active");
-          $(this).addClass("active");
-          $('#carousel-social-media').carousel(slideNum);
-        });
-        
-        $('#carousel-social-media').on('slid.bs.carousel', function () {
-          var carouselData = $(this).data('bs.carousel');
-          var currentIndex = carouselData.getActiveIndex();
-          $(".features-carousel-pro-icon").each(function() {
-            if (currentIndex >= parseInt($(this).data("begin")) && currentIndex <= parseInt($(this).data("end"))) {
-              $(".features-carousel-pro-icon").removeClass("active");
-              $(this).addClass("active");
-            }
-          });
-        });
-      </script>
+      <div data-icode="code" class="carousel-panel container tile-section">
+        <div class="row">
+          <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+            <div></div>
+          </div>
+        </div>
+      </div>
+            <style>.features-tabbed-carousel-top {
+  padding: 70px 0 0;
+  text-align: center;
+}
+.features-tabbed-carousel-top h2 {
+  margin-top: 0;
+}
+.features-tabbed-carousel-top .features-tabbed-carousel-icon {
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.features-tabbed-carousel-top .features-tabbed-carousel-icon img {
+max-width: 70%;
+vertical-align: middle;
+display: inline-block;
+}
+.features-tabbed-carousel-top .features-tabbed-carousel-icon img {
+margin-bottom: 10px;
+}
+.img-center {
+margin: 0 auto;
+}
+
+.features-tabbed-carousel-top .features-tabbed-carousel-icon.active .feature-text {
+color: #008a32;
+font-family: 'Walsheim-Black';
+}
+.features-tabbed-carousel-top .features-tabbed-carousel-icon .feature-text {
+font-family: 'Walsheim-Bold';
+font-size: 18px;
+font-size: 1.8rem;
+line-height: 1.1;
+text-transform: uppercase;
+}
+.feature-carousel-icon {font-size: 36px;margin-bottom: 10px;}
+
+@media only screen and (min-width: 992px){
+  .features-tabbed-carousel-top .features-tabbed-carousel-icon:not(:first-child) {
+  border-left: 1px solid #808080;
+  }
+}
+            </style>
+            <div data-icode="" id="" class="features-tabbed-carousel-top ">
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <h1>Popular apps keep your site fresh</h1>
+                    <h4 class="headline-primary">Easily integrate social and business apps in your site to share information and keep customers coming back.</h4>
+                  </div>
+                </div>
+                <div class="row">
+                        <div data-begin="0" data-end="0" class="features-tabbed-carousel-icon col-md-2">
+                          <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                            <div class="feature-carousel-icon"><span class="uxicon uxicon-facebook-box"></span></div>
+                            <div class="feature-text">facebook</div>
+                          </div>
+                        </div>
+                        <div data-begin="1" data-end="1" class="features-tabbed-carousel-icon col-md-2">
+                          <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                            <div class="feature-carousel-icon"><span class="uxicon uxicon-twitter"></span></div>
+                            <div class="feature-text">twitter</div>
+                          </div>
+                        </div>
+                        <div data-begin="2" data-end="2" class="features-tabbed-carousel-icon col-md-2">
+                          <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                            <div class="feature-carousel-icon"><span class="uxicon uxicon-youtube-box"></span></div>
+                            <div class="feature-text">youtube</div>
+                          </div>
+                        </div> 
+                  ##if(activeLanguageAny(es))
+                    
+                        <div data-begin="3" data-end="3" class="features-tabbed-carousel-icon col-md-2">
+                          <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                            <div class="feature-carousel-icon"><span class="uxicon uxicon-yelp"></span></div>
+                            <div class="feature-text">yelp</div>
+                          </div>
+                        </div> 
+                  ##endif
+                   
+                        <div data-begin="4" data-end="4" class="features-tabbed-carousel-icon col-md-2">
+                          <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                            <div class="feature-carousel-icon"><span class="uxicon uxicon-paypal"></span></div>
+                            <div class="feature-text">paypal</div>
+                          </div>
+                        </div>
+                        <div data-begin="5" data-end="5" class="features-tabbed-carousel-icon col-md-2">
+                          <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                            <div class="feature-carousel-icon"><span class="uxicon uxicon-homefinder"></span></div>
+                            <div class="feature-text">home owner</div>
+                          </div>
+                        </div>
+                </div>
+              </div>
+            </div>
+            <atlantis:webstash type="js">
+              <script type="text/javascript">
+                $(window).load(function() {
+                  setTimeout(function() {
+                    $(".features-tabbed-carousel-icon:first").click();
+                  }, 500);
+                
+                  var maxTabHeight = 0;
+                  $(".features-tabbed-carousel-icon").each(function(index, tab) {
+                    maxTabHeight = $(tab).outerHeight() > maxTabHeight ? $(tab).outerHeight() : maxTabHeight;
+                  }).css("height", maxTabHeight);
+                
+                  var maxFeatureTextHeight = 0;
+                  $(".feature-text").each(function(index, featureText) {
+                    maxFeatureTextHeight = $(featureText).height() > maxFeatureTextHeight ? $(featureText).height() : maxFeatureTextHeight;
+                  }).css({height: maxFeatureTextHeight});
+                
+                });
+                
+                $(".features-tabbed-carousel-icon").click(function() {
+                  var slideNum = $(this).data("begin");
+                  $(".features-tabbed-carousel-icon").removeClass("active");
+                  $(this).addClass("active");
+                  $('#carousel-social-media').carousel(slideNum);
+                });
+                
+                $('#carousel-social-media').on('slid.bs.carousel', function () {
+                  var carouselData = $(this).data('bs.carousel');
+                  var currentIndex = carouselData.getActiveIndex();
+                  $(".features-tabbed-carousel-icon").each(function() {
+                    if (currentIndex >= parseInt($(this).data("begin")) && currentIndex <= parseInt($(this).data("end"))) {
+                      $(".features-tabbed-carousel-icon").removeClass("active");
+                      $(this).addClass("active");
+                    }
+                  });
+                });
+                
+                
+              </script>
+            </atlantis:webstash>
+            <style>.item-wrapper { padding: 70px 0 20px; text-align: center; }
+.carousel-wrap { padding-top: 70px; }
+
+@media only screen and (min-width: 768px){
+  .carousel-container .carousel {
+    padding: 0 120px;
+  }
+}
+
+.carousel {
+  position: relative;
+  padding: 0 0 45px 0;
+}
+
+.carousel-container .carousel .carousel-indicators {
+  bottom: -60px;
+}
+
+@media screen and (min-width: 768px){
+  .carousel-indicators {
+    bottom: -5px;
+  }
+}
+.carousel-indicators {
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  z-index: 15;
+  width: 80%;
+  margin-left: -40%;
+  padding-left: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.carousel-container .carousel .carousel-indicators li.active {
+  background-color: #77c043;
+}
+
+.carousel-container .carousel .carousel-indicators li.active {
+  background-color: #77c043;
+}
+.carousel-container .carousel .carousel-indicators li {
+  width: 15px;
+  height: 15px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  margin: 5px;
+  background-color: #d9d9d9;
+}
+.carousel-indicators .active {
+  background-color: #008a32;
+}
+.carousel-indicators li {
+  display: inline-block;
+  width: 32px;
+  height: 10px;
+  margin: 8px;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: #d9d9d9;
+}
+.carousel-inner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+.carousel-inner > .active {
+  
+}
+.carousel-inner > .active, .carousel-inner > .next, .carousel-inner > .prev {
+  display: block;
+}
+.carousel-inner > .item {
+  display: none;
+  position: relative;
+  -webkit-transition: left 0.6s ease-in-out;
+  -moz-transition: left 0.6s ease-in-out;
+  transition: left 0.6s ease-in-out;
+  overflow: hidden;
+}
+.carousel-container .carousel-panel, .carousel-container .testimonial {
+  padding: 0;
+}
+.carousel-panel .img-center {
+  margin: 50px auto;
+}
+.carousel-panel .carousel-panel-text {
+  margin-bottom: 25px;
+}
+
+.carousel-container .carousel-control.left {
+  left: 0px;
+}
+.carousel-control {
+  position: absolute;
+  top: -11%;
+  bottom: 0;
+  color: #999999;
+  text-align: center;
+}
+.carousel-icon.arrow-left-icon {
+  background-position: 0 0;
+  width: 51px;
+  height: 50px;
+}
+
+.carousel-control .uxicon-chevron-left-lt, .carousel-control .arrow-left-icon, .carousel-control .arrow-left-white-icon {
+  left: 50%;
+}
+.carousel-control .arrow-left-white-icon, .carousel-control .arrow-right-white-icon, .carousel-control .arrow-left-icon, .carousel-control .arrow-right-icon {
+  position: absolute;
+  top: 50%;
+}
+.carousel-icon {
+  background-image: url('[@T[link:<imageroot />]@T]/fos/hp/sahara-rebrand-sprite-20141114.png');
+  display: inline-block;
+  background-size: 205px auto;
+}
+.carousel-container .carousel-control.right {
+  right: 0px;
+}
+.carousel-icon.arrow-right-icon {
+  background-position: 0 -52px;
+  width: 51px;
+  height: 50px;
+}
+.carousel-control .arrow-left-white-icon, .carousel-control .arrow-right-white-icon, .carousel-control .arrow-left-icon, .carousel-control .arrow-right-icon {
+  position: absolute;
+  top: 50%;
+}
+
+.carousel {
+    position: relative;
+    padding: 0 0 45px 0;
+}
+
+.carousel-inner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-inner > .item {
+    display: none;
+    position: relative;
+    -webkit-transition: left 0.6s ease-in-out;
+    -moz-transition: left 0.6s ease-in-out;
+    transition: left 0.6s ease-in-out;
+    overflow: hidden;
+}
+
+.carousel-inner > .item.show-item {
+    display: block;
+}
+
+.carousel-inner > .item > h1,
+.carousel-inner > .item > h2,
+.carousel-inner > .item > h3,
+.carousel-inner > .item > h4,
+.carousel-inner > .item > h5,
+.carousel-inner > .item > h6 {
+    margin-top: 0;
+}
+
+.carousel-inner > .active,
+.carousel-inner > .next,
+.carousel-inner > .prev {
+    display: block;
+}
+
+.carousel-inner > .active {
+    left: 0;
+}
+
+.carousel-inner > .next,
+.carousel-inner > .prev {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.carousel-inner > .next {
+    left: 100%;
+}
+
+.carousel-inner > .prev {
+    left: -100%;
+}
+
+.carousel-inner > .next.left,
+.carousel-inner > .prev.right {
+    left: 0;
+}
+
+.carousel-inner > .active.left {
+    left: -100%;
+}
+
+.carousel-inner > .active.right {
+    left: 100%;
+}
+
+.carousel-text-item {
+    margin-bottom: 20px;
+}
+
+.carousel-text-item h1 {
+    font-size: 14px;
+    display: inline;
+    margin: 0;
+    font-weight: bold;
+    font-weight: 600;
+}
+
+.carousel-control {
+    position: absolute;
+    top: -11%;
+    bottom: 0;
+    color: #999999;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .carousel-control {
+        top: -6%;
+    }
+}
+
+.carousel-control:hover,
+.carousel-control:focus {
+    outline: none;
+    color: #000;
+    text-decoration: none;
+}
+
+.carousel-control .uxicon-chevron-left-lt,
+.carousel-control .uxicon-chevron-right-lt {
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    font-size: 40px;
+    margin-top: -15px;
+}
+
+.carousel-control .arrow-left-white-icon,
+.carousel-control .arrow-right-white-icon,
+.carousel-control .arrow-left-icon,
+.carousel-control .arrow-right-icon {
+    position: absolute;
+    top: 50%;
+}
+
+.carousel-control .uxicon-chevron-left-lt,
+.carousel-control .arrow-left-icon {
+    left: 50%;
+}
+
+.carousel-control .uxicon-chevron-right-lt,
+.carousel-control .arrow-right-icon {
+    right: 50%;
+}
+
+.carousel-control.left {
+    left: -40px;
+}
+
+@media only screen and (max-width: 768px) {
+    .carousel-control.left {
+        left: -10px;
+    }
+}
+
+.carousel-control.right {
+    right: -40px;
+}
+
+@media only screen and (max-width: 768px) {
+    .carousel-control.right {
+        right: -10px;
+    }
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    z-index: 15;
+    width: 80%;
+    margin-left: -40%;
+    padding-left: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.carousel-indicators li {
+    display: inline-block;
+    width: 32px;
+    height: 10px;
+    margin: 8px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #d9d9d9;
+}
+
+.carousel-indicators .active {
+    background-color: #008a32;
+}
+
+@media screen and (min-width: 768px) {
+    .carousel-indicators {
+        bottom: -5px;
+    }
+}
+            </style>
+            <div class="carousel-wrap">
+              <div class="carousel-container container">
+                <div id="carousel-social-media" data-ride="carousel" data-interval="false" class="carousel slide">
+                  <ol class="carousel-indicators">
+                    <li data-target="#carousel-social-media" data-slide-to="0"></li>
+                    <li data-target="#carousel-social-media" data-slide-to="1"></li>
+                    <li data-target="#carousel-social-media" data-slide-to="2"></li>
+                    <li data-target="#carousel-social-media" data-slide-to="3"></li>
+                    <li data-target="#carousel-social-media" data-slide-to="4"></li>
+                    <li data-target="#carousel-social-media" data-slide-to="5"></li>
+                  </ol>
+                  <div class="carousel-inner">
+                          <div class="item">
+                            <div class="item-wrapper">
+                              <div data-icode="code" class="carousel-panel container tile-section"><img src="[@T[link:&lt;imageroot /&gt;]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-apps-image-facebook-int.jpg" alt="undefined" class="img-responsive img-center">
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12 text-center">
+                                    <h1>Facebook</h1>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <div class="carousel-panel-text">Eliminate tedious data entry. Automate sales and expense.GoDaddy Bookkeeping imports and organizes all of your business accounts together and generates income and expense reports. Login with any computer or iPhone, and your profit and loss will be updated and waiting for you. There is nothing to download, install, or update. Ever.</div>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12"><a href="javascript:void(0);" data-tcode="" class="btn btn-default">LEARN MORE</a></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                    <div class="item">
+                      <div class="item-wrapper">
+                        <div data-icode="code" class="carousel-panel container tile-section"><img src="[@T[link:&lt;imageroot /&gt;]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-apps-image-twitter-int.jpg" alt="undefined" class="img-responsive img-center">
+                          <div class="row">
+                            <div class="col-sm-10 col-sm-offset-1 col-xs-12 text-center">
+                              <h1>Twitter</h1>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                              <div class="carousel-panel-text">Eliminate tedious data entry. Automate sales and expense.GoDaddy Bookkeeping imports and organizes all of your business accounts together and generates income and expense reports. Login with any computer or iPhone, and your profit and loss will be updated and waiting for you. There is nothing to download, install, or update. Ever.</div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-sm-10 col-sm-offset-1 col-xs-12"><a href="javascript:void(0);" data-tcode="" class="btn btn-default-dark">LEARN MORE</a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="item-wrapper">
+                        <div data-icode="code" class="carousel-panel container tile-section"><img src="[@T[link:&lt;imageroot /&gt;]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-apps-image-youtube-int.jpg" alt="undefined" class="img-responsive img-center">
+                          <div class="row">
+                            <div class="col-sm-10 col-sm-offset-1 col-xs-12 text-center">
+                              <h1>Youtube</h1>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                              <div class="carousel-panel-text">Eliminate tedious data entry. Automate sales and expense.GoDaddy Bookkeeping imports and organizes all of your business accounts together and generates income and expense reports. Login with any computer or iPhone, and your profit and loss will be updated and waiting for you. There is nothing to download, install, or update. Ever.</div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-sm-10 col-sm-offset-1 col-xs-12"><a href="javascript:void(0);" data-tcode="" class="btn btn-default-dark">LEARN MORE</a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div> 
+                    ##if(activeLanguageAny(es))
+                     
+                    <div class="item">
+                      <div class="item-wrapper">
+                        <div data-icode="code" class="carousel-panel container tile-section"><img src="/img/features-cpanelarousel-ppanelh.png" alt="undefined" class="img-responsive img-center">
+                          <div class="row">
+                            <div class="col-sm-10 col-sm-offset-1 col-xs-12 text-center">
+                              <h1>Yelp</h1>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                              <div class="carousel-panel-text">Eliminate tedious data entry. Automate sales and expense.GoDaddy Bookkeeping imports and organizes all of your business accounts together and generates income and expense reports. Login with any computer or iPhone, and your profit and loss will be updated and waiting for you. There is nothing to download, install, or update. Ever.</div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-sm-10 col-sm-offset-1 col-xs-12"><a href="javascript:void(0);" data-tcode="" class="btn btn-default-dark">LEARN MORE</a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div> 
+                    ##endif
+                     
+                    <div class="item">
+                      <div class="item-wrapper">
+                        <div data-icode="code" class="carousel-panel container tile-section"><img src="/img/features-cpanelarousel-ppanelh.png" alt="undefined" class="img-responsive img-center">
+                          <div class="row">
+                            <div class="col-sm-10 col-sm-offset-1 col-xs-12 text-center">
+                              <h1>PayPal</h1>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                              <div class="carousel-panel-text">Eliminate tedious data entry. Automate sales and expense.GoDaddy Bookkeeping imports and organizes all of your business accounts together and generates income and expense reports. Login with any computer or iPhone, and your profit and loss will be updated and waiting for you. There is nothing to download, install, or update. Ever.</div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-sm-10 col-sm-offset-1 col-xs-12"><a href="javascript:void(0);" data-tcode="" class="btn btn-default-dark">LEARN MORE</a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="item-wrapper">
+                        <div data-icode="code" class="carousel-panel container tile-section"><img src="/img/features-cpanelarousel-ppanelh.png" alt="undefined" class="img-responsive img-center">
+                          <div class="row">
+                            <div class="col-sm-10 col-sm-offset-1 col-xs-12 text-center">
+                              <h1>Home Owner</h1>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                              <div class="carousel-panel-text">Eliminate tedious data entry. Automate sales and expense.GoDaddy Bookkeeping imports and organizes all of your business accounts together and generates income and expense reports. Login with any computer or iPhone, and your profit and loss will be updated and waiting for you. There is nothing to download, install, or update. Ever.</div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-sm-10 col-sm-offset-1 col-xs-12"><a href="javascript:void(0);" data-tcode="" class="btn btn-default-dark">LEARN MORE</a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div><a href="#carousel-social-media" data-slide="prev" class="left carousel-control"><span class="carousel-icon arrow-left-icon"></span></a><a href="#carousel-social-media" data-slide="next" class="right carousel-control"><span class="carousel-icon arrow-right-icon"></span></a>
+                </div>
+                <script>
+                  $('.carousel .carousel-indicators li:first-child').addClass("active");
+                  $('.carousel .carousel-inner .item:first-child').addClass("active");
+                </script>
+              </div>
+            </div>
     </section>
     <section id="business-exclusives" class="bg-pro-gray">
             <style>
@@ -626,12 +1184,327 @@ margin-bottom: 20px;
             </div>
     </section>
     <section id="testimonials" data-mid-nav-title="Testimonials">
-      <style>
-        .item-wrapper { padding: 70px 0 20px; text-align: center; }
-        .carousel-pro-wrap { padding-top: 70px; }
+      <style>.item-wrapper { padding: 70px 0 20px; text-align: center; }
+.carousel-wrap { padding-top: 70px; }
+
+@media only screen and (min-width: 768px){
+  .carousel-container .carousel {
+    padding: 0 120px;
+  }
+}
+
+.carousel {
+  position: relative;
+  padding: 0 0 45px 0;
+}
+
+.carousel-container .carousel .carousel-indicators {
+  bottom: -60px;
+}
+
+@media screen and (min-width: 768px){
+  .carousel-indicators {
+    bottom: -5px;
+  }
+}
+.carousel-indicators {
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  z-index: 15;
+  width: 80%;
+  margin-left: -40%;
+  padding-left: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.carousel-container .carousel .carousel-indicators li.active {
+  background-color: #77c043;
+}
+
+.carousel-container .carousel .carousel-indicators li.active {
+  background-color: #77c043;
+}
+.carousel-container .carousel .carousel-indicators li {
+  width: 15px;
+  height: 15px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  margin: 5px;
+  background-color: #d9d9d9;
+}
+.carousel-indicators .active {
+  background-color: #008a32;
+}
+.carousel-indicators li {
+  display: inline-block;
+  width: 32px;
+  height: 10px;
+  margin: 8px;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: #d9d9d9;
+}
+.carousel-inner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+.carousel-inner > .active {
+  
+}
+.carousel-inner > .active, .carousel-inner > .next, .carousel-inner > .prev {
+  display: block;
+}
+.carousel-inner > .item {
+  display: none;
+  position: relative;
+  -webkit-transition: left 0.6s ease-in-out;
+  -moz-transition: left 0.6s ease-in-out;
+  transition: left 0.6s ease-in-out;
+  overflow: hidden;
+}
+.carousel-container .carousel-panel, .carousel-container .testimonial {
+  padding: 0;
+}
+.carousel-panel .img-center {
+  margin: 50px auto;
+}
+.carousel-panel .carousel-panel-text {
+  margin-bottom: 25px;
+}
+
+.carousel-container .carousel-control.left {
+  left: 0px;
+}
+.carousel-control {
+  position: absolute;
+  top: -11%;
+  bottom: 0;
+  color: #999999;
+  text-align: center;
+}
+.carousel-icon.arrow-left-icon {
+  background-position: 0 0;
+  width: 51px;
+  height: 50px;
+}
+
+.carousel-control .uxicon-chevron-left-lt, .carousel-control .arrow-left-icon, .carousel-control .arrow-left-white-icon {
+  left: 50%;
+}
+.carousel-control .arrow-left-white-icon, .carousel-control .arrow-right-white-icon, .carousel-control .arrow-left-icon, .carousel-control .arrow-right-icon {
+  position: absolute;
+  top: 50%;
+}
+.carousel-icon {
+  background-image: url('[@T[link:<imageroot />]@T]/fos/hp/sahara-rebrand-sprite-20141114.png');
+  display: inline-block;
+  background-size: 205px auto;
+}
+.carousel-container .carousel-control.right {
+  right: 0px;
+}
+.carousel-icon.arrow-right-icon {
+  background-position: 0 -52px;
+  width: 51px;
+  height: 50px;
+}
+.carousel-control .arrow-left-white-icon, .carousel-control .arrow-right-white-icon, .carousel-control .arrow-left-icon, .carousel-control .arrow-right-icon {
+  position: absolute;
+  top: 50%;
+}
+
+.carousel {
+    position: relative;
+    padding: 0 0 45px 0;
+}
+
+.carousel-inner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-inner > .item {
+    display: none;
+    position: relative;
+    -webkit-transition: left 0.6s ease-in-out;
+    -moz-transition: left 0.6s ease-in-out;
+    transition: left 0.6s ease-in-out;
+    overflow: hidden;
+}
+
+.carousel-inner > .item.show-item {
+    display: block;
+}
+
+.carousel-inner > .item > h1,
+.carousel-inner > .item > h2,
+.carousel-inner > .item > h3,
+.carousel-inner > .item > h4,
+.carousel-inner > .item > h5,
+.carousel-inner > .item > h6 {
+    margin-top: 0;
+}
+
+.carousel-inner > .active,
+.carousel-inner > .next,
+.carousel-inner > .prev {
+    display: block;
+}
+
+.carousel-inner > .active {
+    left: 0;
+}
+
+.carousel-inner > .next,
+.carousel-inner > .prev {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.carousel-inner > .next {
+    left: 100%;
+}
+
+.carousel-inner > .prev {
+    left: -100%;
+}
+
+.carousel-inner > .next.left,
+.carousel-inner > .prev.right {
+    left: 0;
+}
+
+.carousel-inner > .active.left {
+    left: -100%;
+}
+
+.carousel-inner > .active.right {
+    left: 100%;
+}
+
+.carousel-text-item {
+    margin-bottom: 20px;
+}
+
+.carousel-text-item h1 {
+    font-size: 14px;
+    display: inline;
+    margin: 0;
+    font-weight: bold;
+    font-weight: 600;
+}
+
+.carousel-control {
+    position: absolute;
+    top: -11%;
+    bottom: 0;
+    color: #999999;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .carousel-control {
+        top: -6%;
+    }
+}
+
+.carousel-control:hover,
+.carousel-control:focus {
+    outline: none;
+    color: #000;
+    text-decoration: none;
+}
+
+.carousel-control .uxicon-chevron-left-lt,
+.carousel-control .uxicon-chevron-right-lt {
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    font-size: 40px;
+    margin-top: -15px;
+}
+
+.carousel-control .arrow-left-white-icon,
+.carousel-control .arrow-right-white-icon,
+.carousel-control .arrow-left-icon,
+.carousel-control .arrow-right-icon {
+    position: absolute;
+    top: 50%;
+}
+
+.carousel-control .uxicon-chevron-left-lt,
+.carousel-control .arrow-left-icon {
+    left: 50%;
+}
+
+.carousel-control .uxicon-chevron-right-lt,
+.carousel-control .arrow-right-icon {
+    right: 50%;
+}
+
+.carousel-control.left {
+    left: -40px;
+}
+
+@media only screen and (max-width: 768px) {
+    .carousel-control.left {
+        left: -10px;
+    }
+}
+
+.carousel-control.right {
+    right: -40px;
+}
+
+@media only screen and (max-width: 768px) {
+    .carousel-control.right {
+        right: -10px;
+    }
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    z-index: 15;
+    width: 80%;
+    margin-left: -40%;
+    padding-left: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.carousel-indicators li {
+    display: inline-block;
+    width: 32px;
+    height: 10px;
+    margin: 8px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #d9d9d9;
+}
+
+.carousel-indicators .active {
+    background-color: #008a32;
+}
+
+@media screen and (min-width: 768px) {
+    .carousel-indicators {
+        bottom: -5px;
+    }
+}
       </style>
-      <div class="tile-section carousel-pro-wrap">
-        <div class="carousel-pro container">
+      <div class="carousel-wrap">
+        <div class="carousel-container container">
           <div id="carousel-testimonials" data-ride="carousel" data-interval="false" class="carousel slide">
             <ol class="carousel-indicators">
               <li data-target="#carousel-testimonials" data-slide-to="0"></li>
@@ -641,10 +1514,10 @@ margin-bottom: 20px;
             <div class="carousel-inner">
               <div class="item">
                 <div class="item-wrapper">
-                  <div data-icode="code" class="panel-pro container tile-section">
+                  <div data-icode="code" class="carousel-panel container tile-section">
                     <div class="row">
                       <div class="col-sm-10 col-sm-offset-1 col-xs-12 text-center">
-                        <h2>quote</h2>
+                        <h1>quote</h1>
                       </div>
                     </div>
                     <div class="row">
@@ -657,10 +1530,10 @@ margin-bottom: 20px;
               </div>
               <div class="item">
                 <div class="item-wrapper">
-                  <div data-icode="code" class="panel-pro container tile-section">
+                  <div data-icode="code" class="carousel-panel container tile-section">
                     <div class="row">
                       <div class="col-sm-10 col-sm-offset-1 col-xs-12 text-center">
-                        <h2>quote</h2>
+                        <h1>quote</h1>
                       </div>
                     </div>
                     <div class="row">
@@ -673,10 +1546,10 @@ margin-bottom: 20px;
               </div>
               <div class="item">
                 <div class="item-wrapper">
-                  <div data-icode="code" class="panel-pro container tile-section">
+                  <div data-icode="code" class="carousel-panel container tile-section">
                     <div class="row">
                       <div class="col-sm-10 col-sm-offset-1 col-xs-12 text-center">
-                        <h2>quote</h2>
+                        <h1>quote</h1>
                       </div>
                     </div>
                     <div class="row">
@@ -687,7 +1560,7 @@ margin-bottom: 20px;
                   </div>
                 </div>
               </div>
-            </div><a href="#carousel-testimonials" data-slide="prev" class="left carousel-control"><span class="pro-icon arrow-left-icon"></span></a><a href="#carousel-testimonials" data-slide="next" class="right carousel-control"><span class="pro-icon arrow-right-icon"></span></a>
+            </div><a href="#carousel-testimonials" data-slide="prev" class="left carousel-control"><span class="carousel-icon arrow-left-icon"></span></a><a href="#carousel-testimonials" data-slide="next" class="right carousel-control"><span class="carousel-icon arrow-right-icon"></span></a>
           </div>
           <script>
             $('.carousel .carousel-indicators li:first-child').addClass("active");
@@ -864,11 +1737,13 @@ margin-bottom: 20px;
         }).css({height: maxIconHeight, marginBottom: 10});
       
         if ($(window).width() > 768){
-          var maxHeight = 0;
-          $(".pro-plan-wrap").each(function(index, plan) {
-            maxHeight = $(plan).outerHeight() > maxHeight ? $(plan).outerHeight() : maxHeight;
-          }).css("height", maxHeight);
-        };
+          $(".pro-plans").each(function(index, outerPlan) {
+            var maxHeight = 0;
+            $(outerPlan).find(".pro-plan-wrap").each(function(index, plan) {
+              maxHeight = $(plan).outerHeight() > maxHeight ? $(plan).outerHeight() : maxHeight;
+            }).css("height", maxHeight);
+          });
+        }
       });
       
     </script>

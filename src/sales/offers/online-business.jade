@@ -10,7 +10,8 @@ assetPath: false
 extends ../../templates/pages/landing-page
 
 append vars
-  - page.meta.title = "HELLO WORLD!"
+  - page.meta.titleExample = "HELLO WORLD!"
+
 
 append endOfPageScripts
   script.
@@ -36,8 +37,6 @@ append endOfPageScripts
           .closest('.price-hide')
           .removeClass("price-hide");
       });
-
-
 
       // set up domain search buttons to do a domain search
       $('#marquee').on('click', '.domain-search-action-button', domainSearchFormSubmit);     
@@ -74,6 +73,7 @@ append endOfPageScripts
 
     }
 
+
     function verifyDomainIsStillAvailable(e) {
 
     }
@@ -85,7 +85,6 @@ append endOfPageScripts
     function goToDppCheckoutPage(e) {
 
     }
-
 
     function showSuccessfulSearch(domain){
       // TODO!
@@ -107,12 +106,11 @@ append endOfPageScripts
       // TODO!
     }
 
+
 append pageStyles
   style.
     include:css ./online-business/styles.css    
     
-
-
 
 block domainSearch
   // none

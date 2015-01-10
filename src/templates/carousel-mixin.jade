@@ -10,12 +10,10 @@ mixin carousel(id, numberOfPanels, options)
   - options = options || {};
   - options.autoRotateSpeed = options.autoRotateSpeed || false;
   - options.backgroundColor = options.backgroundColor || "bg-pro-gray";
-
-  style.
-    .item-wrapper { padding: 70px 0 20px; text-align: center; }
-    .carousel-pro-wrap { padding-top: 70px; }
-  .tile-section.carousel-pro-wrap
-    .carousel-pro.container
+  style
+      include:css ./styles/carousel.css
+  .carousel-wrap
+    .carousel-container.container
       .carousel.slide(id=id data-ride="carousel" data-interval="#{options.autoRotateSpeed}")
 
         if (numberOfPanels > 1)
@@ -32,9 +30,9 @@ mixin carousel(id, numberOfPanels, options)
 
         if (numberOfPanels > 1)
           a.left.carousel-control(href="#"+id data-slide="prev")
-            span.pro-icon(class="arrow-left-#{arrowType}")
+            span.carousel-icon(class="arrow-left-#{arrowType}")
           a.right.carousel-control(href="#"+id data-slide="next")
-            span.pro-icon(class="arrow-right-#{arrowType}")
+            span.carousel-icon(class="arrow-right-#{arrowType}")
       script.
         $('.carousel .carousel-indicators li:first-child').addClass("active");
         $('.carousel .carousel-inner .item:first-child').addClass("active");
