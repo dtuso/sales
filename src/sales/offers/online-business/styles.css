@@ -4255,3 +4255,5 @@ section#site-choice-compare .disclaimer-mark p {
 section#products {
   padding-bottom:40px;
 }
+
+*[data-tokenize] {visibility: hidden;}

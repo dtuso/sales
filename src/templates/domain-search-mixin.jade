@@ -15,7 +15,9 @@ mixin domainSearchInput(params)
           input(class="#{placeholderTextColor} searchInput" type="text" autocomplete="off" name="domainToCheck" maxlength="63")
           button(type="submit" data-tcode="#{tcode}" class="#{buttonColor} btn btn-lg pull-right ") !{buttonText}
 
+
 mixin domainSearchOffersInput(title, cicode, placeholderText)
+
   style.
     .search-form { margin: 0 auto 1.071428571em;}
     .search-form-input {height: 67px; padding: 20px; border-top-color: #fff; border-top-width: 3px; border-top-style: inset; border-bottom: 1px solid #ccc; border-left: 1px solid #ccc; border-right: 1px solid #ccc; width: 850px;}
@@ -35,7 +37,7 @@ mixin domainSearchOffersInput(title, cicode, placeholderText)
         .offer-main-top
           form.search-form
             .offer-search-box
-              input.search-form-input.searchInput.helveticafont(type="text" id="searchDomainName" placeholder!="#{placeholderText}" name="domainToCheck" autocomplete="off" maxlength="63")
+              input.search-form-input.searchInput.helveticafont(type="text" placeholder!="#{placeholderText}" name="domainToCheck" autocomplete="off" maxlength="63")
               button.btn.btn-primary.btn-lg.offer-search-btn(type="button" name="searchButton" data-ci="#{cicode}") SEARCH
             .clearfix
   .row
