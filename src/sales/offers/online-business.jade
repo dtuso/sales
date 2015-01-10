@@ -1,22 +1,15 @@
-
-
 extends ../../templates/pages/landing-page
 
 append vars
-  - page.meta.title = "HELLO WORLD!121f3"
-  - page.meta.title = page.meta.title || "[@L[cds.sales/offers/online-business:page-title]@L]";
-  - page.meta.description = page.meta.description || "[@L[cds.sales/offers/online-business:meta-description]@L]";
-  - page.meta.keywords = page.meta.keywords || "[@L[cds.sales/offers/online-business:meta-keywords]@L]";
+  - page.title = "[@L[cds.sales/offers/online-business:page-title]@L]";
+  - page.description = "[@L[cds.sales/offers/online-business:meta-description]@L]";
+  - page.keywords = "[@L[cds.sales/offers/online-business:meta-keywords]@L]";
   
   - page.openGraph.title = page.openGraph.title || "[@L[cds.sales/offers/online-business:og-title]@L]";
   - page.openGraph.description = page.openGraph.description || "[@L[cds.sales/offers/online-business:og-description]@L]";
   - page.openGraph.image = page.openGraph.image || "[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/online-business/img/og_got_1200x630.jpg";
 
-  - page.links = page.links || {};
-  - page.links.canonical = page.links.canonical || "[@T[link:<relative parammode='explicit' />]@T]";
-  - page.links.favicon = page.links.favicon || "[@T[link:<imageroot />]@T]assets/godaddy.ico";
-
-block extraMeta
+append seo
   meta(name="twitter:card" content="summary")
   meta(name="twitter:site" content="[@L[cds.sales/offers/online-business:twitter-site]@L]")
   meta(name="twitter:title" content="[@L[cds.sales/offers/online-business:twitter-title]@L]")
