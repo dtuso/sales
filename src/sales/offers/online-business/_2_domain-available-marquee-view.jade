@@ -1,0 +1,23 @@
+
+style.
+  #domain-available-marquee-view { display: none; }
+  #domain-available-marquee-view .available-domain-name-row {margin-top: 20px; margin-bottom: 30px; }
+  #domain-available-marquee-view .domain-available-heading-text  { color: #333333; }
+  #domain-available-marquee-view .available-domain-name-text {text-transform: lowercase; color: #333333; background: rgba(254, 220, 69, 0.7); padding: 5px; }
+  #domain-available-marquee-view .get-it-now-btn {top: 15px; }
+  #domain-available-marquee-view .purchase-btn {margin-top: 5px;}
+section#domain-available-marquee-view
+  .bg-green-official
+    .container
+      .row
+        .col-md-12
+          h2.domain-available-heading-text Good news! This domain name is available:
+      .row.available-domain-name-row
+        .col-md-8.col-sm-12
+          h2
+            span.available-domain-name-text#available-domain-name coolexample.com
+        .col-md-4.col-sm-12.get-it-now-btn
+          button.btn.btn-purchase.purchase-btn Get it now
+  .bg-white
+    .container
+      +domainSearchOffersInput('&hellip;OR SEARCH FOR A NEW ONE', '12346', 'Try a different domain name')
