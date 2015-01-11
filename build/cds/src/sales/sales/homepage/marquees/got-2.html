@@ -1,0 +1,52 @@
+
+<!-- start marquee section-->
+<atlantis:webstash type="css">
+  <style>
+    .marquee {width:100%;min-width:1000px;height:400px;cursor:pointer;color: #fff;background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/color-block-background.png) no-repeat top center;}
+    .headline { line-height: 0.9; font-family: 'Walsheim-Black'; font-size: 48px;margin:10px 0;}
+    .headline .line:nth-child(odd) { font-family: Tungsten, 'Tungsten A', 'Tungsten B', Arial; text-transform: uppercase;}
+    .headline .line:nth-child(even) { font-family: 'Walsheim-Black'; }
+    .tungsten { font-family: Tungsten, 'Tungsten A', 'Tungsten B', Arial !important; text-transform: uppercase !important; }
+    .walsheim { font-family: 'Walsheim-Black' !important; }
+    .btn-cta { width: 100%; box-sizing: border-box; margin: 10px 0;}
+    .bigtext { visibility:hidden;}
+    .additional-info { font-size: 14px;margin: 10px 0;text-align: left; margin: 10px 0;}
+    .restrictions { margin: 10px 0;text-align: left;font-size: 12px; margin: 10px 0;}
+    .inline-dash { display:inline-block;overflow:hidden;letter-spacing:-0.5em;font-size:1.4em;vertical-align:top;line-height:50%;}
+  </style>
+  <style>
+    .left-column { float:left;width:500px; padding-top:80px;}
+    .right-column { float:left;width:325px;padding-top:80px;text-align:center;margin-left:90px;color:#000;}
+  </style>
+  <style>
+    #got-2 {background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/got-2-background.png) no-repeat top center;}
+    #got-2 .left-column { padding-top: 180px; color: #77c043; }
+    #got-2 .right-column { width: 300px; margin-left:90px; padding-top:80px;}
+    #got-2 .right-column .bigtext {line-height: 1.0;}
+    #got-2 .price {color: #ff8a00;}
+    #got-2 .price strike { color: #333; }
+    #got-2 .details {font-size: 18px; font-family: 'Walsheim-Medium'; text-align: left;margin: 20px 0;}
+    #got-2 .restrictions {font-family: 'Walsheim-Medium';}
+    #got-2 .restrictions span[data-toggle='tooltip'] { text-decoration: underline; }
+  </style>
+</atlantis:webstash>
+<div id="got-2" data-url="[@T[link:<relative path='/offers/office365-promo.aspx'><param name='ci' value='94104' /></relative>]@T]" class="marquee js-gdhpclick">
+  <div class="container l-main-container">
+    <div class="marquee-left-headline">
+      <div class="left-column">
+        <div class="headline">[@L[cds.sales/homepage/marquee/got-2:headline]@L]</div>
+      </div>
+      <div class="right-column">
+        <div class="bigtext">
+          <div class="product tungsten">[@L[cds.sales/homepage/marquee/got-2:product]@L]</div>
+          <div class="price walsheim">[@L[cds.sales/homepage/marquee/got-2:price]@L]</div>
+        </div>
+        <div class="details">[@L[cds.sales/homepage/marquee/got-2:details]@L]</div><a href="[@T[link:<relative path='/offers/office365-promo.aspx'><param name='ci' value='94104' /></relative>]@T]" class="btn btn-warning btn-lg btn-cta">[@L[cds.sales/homepage/marquee/got-2:cta-text]@L]</a>
+        <div class="restrictions">[@L[cds.sales/homepage/marquee/got-2:restrictions]@L]</div>
+      </div>
+    </div>
+  </div>
+</div>
+<atlantis:webstash type="js">
+</atlantis:webstash>
+<!-- end marquee section-->

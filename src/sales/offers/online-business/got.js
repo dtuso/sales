@@ -57,11 +57,8 @@ $(document).ready(function() {
 
   // set up verify buttons on spin results to do validation before sending to DPP
   $('#marquee').on('click', '.spin-domain-action-button', verifyDomainIsStillAvailable);
-
   $('#marquee').on('click', '.purchase-btn', showChoicesScreen);
-
   $('#marquee').on('click', '.select-and-continue', verifyDomainIsStillAvailable);
-
 
   // track ci codes
   $('[data-ci]').click(function (e) {
@@ -85,16 +82,22 @@ function populateTldsOnDisclaimerModal(selector) {
     $this.find('.tlds-uk').show();
   ##endif
 }
-function formatDomainWithDefaultTld(domain) {
-  alert("todo: formatDomainWithDefaultTld() ");
-  // TODO: check to see fi there's already a TLD on it
+
+function formatDomainWithDefaultTldIfNoneSpecified(domain) {
+  if(domain.indexOf('.') > 0) return domain;
   return domain + '.' + got1Page.defaultTld;
 }
+
 function isTldValid(domain) {
-  //TODO: check list of valid TLDs
-  alert("todo: isTldValid() ");
-  return true;
+  var isValid = false;
+  $.each(got1Page.tlds, function(idx, tld) {
+    if(domain.indexOf(tld, domain.length - tld.length) !== -1) {
+      isValid = true;
+    }
+  });
+  return isValid;
 }
+
 function displayInvlidTldMessage($this){
   alert("todo: displayInvlidTldMessage() ");
 }
@@ -103,12 +106,12 @@ function domainSearchFormSubmit(e) {
  
   var $this = $(e.target),
     $textInput = $this.siblings('.search-form-input'),
-    domain = $textInput.val(), 
+    domain = $textInput.val().trim(), 
     sucessful = false;
 
   if((domain && domain.length==0) || !domain) return;
   
-  domain = formatDomainWithDefaultTld(domain);
+  domain = formatDomainWithDefaultTldIfNoneSpecified(domain);
 
   if(!isTldValid(domain)) {
     displayInvlidTldMessage($this);
@@ -116,8 +119,8 @@ function domainSearchFormSubmit(e) {
   }
 
   var apiEndpoint = '[@T[link:<relative path="~/domainsapi/v1/search/free"><param name="domain" value="domain" /><param name="itc" value="itc" /></relative>]@T]';
-      apiEndpoint = apiEndpoint.replace('domain=domain', 'q=' + domain);
-      apiEndpoint = apiEndpoint.replace('itc=itc', 'key=' + got1Page.offersCodes.itc_wsb);
+  apiEndpoint = apiEndpoint.replace('domain=domain', 'q=' + domain);
+  apiEndpoint = apiEndpoint.replace('itc=itc', 'key=' + got1Page.offersCodes.itc_wsb);
 
   $this.addClass('disabled');
 
@@ -190,12 +193,15 @@ function showSuccessfulSearch(domain){
 
 function showSearchSpins(domain, alternateDomains){  
 
+  // clear any spins from the DOM
+  $('#spin-results .spin-result').remove();
+
   var $spinResults = $('#spin-results');
-  var $spinTemplate = $spinResults.find('.spin-template');
+  var $spinTemplate = $spinResults.find('.spin-template').removeClass('spin-template');
   $.each(alternateDomains, function(idx,domain){
-    var $newSpin = $spinTemplate.clone().removeClass('spin-template');
+    var $newSpin = $spinTemplate.clone();
     $newSpin.find('.domain-name-display').text(domain.NameWithoutExtension);
-    $newSpin.find('.domain-name-display-tld').text(domain.Extension);
+    $newSpin.find('.domain-name-display-tld').text('.' + domain.Extension);
     $newSpin.find('.btn-primary').data('domain', domain);
     $spinResults.append($newSpin);
   });

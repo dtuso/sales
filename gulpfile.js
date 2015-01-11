@@ -1,3 +1,4 @@
+
 try {
 
   // Gulp plugins
@@ -81,7 +82,7 @@ var paths = {
   less      : ['./src/sales/**/css/**/*.less'],
   images    : ['./src/sales/**/img/**/*.jpg', './src/sales/**/img/**/*.png'],
   build     : path.join('./build/sales/', assetSrcPath),
-  cdsBuild  : './build/cds/src/sales/',
+  cdsBuild  : './build/cds/sales/',
   assets    : path.join(rootAssetPath, assetSrcPath),
   scripts   : ['./src/sales/**/js/**/*.js']
 };
@@ -148,7 +149,7 @@ gulp.task('jade', function() {
     console.log(e.message);
     jadeStream.end();
   });
-  return gulp.src(['./**/*.jade', '!./**/templates/**/*.jade', '!./**/layouts/**/*.jade', '!./**/_*.jade'], {cwd: path.join('./src/')})
+  return gulp.src(['./**/*.jade', '!./**/templates/**/*.jade', '!./**/layouts/**/*.jade', '!./**/_*.jade'], {cwd: path.join('./src/sales/',assetSrcPath)})
     .pipe(changed(paths.cdsBuild, {extension: '.html'}))
     .pipe(frontMatter({remove:true}))
     .pipe(data(function(file) { return file.frontMatter; }))
