@@ -3,11 +3,12 @@ include ./helper-mixin.jade
 block vars
   - page = page || {};
 
-  - page.meta = page.meta || {};
-  - page.meta.title = page.meta.title || "[@L[cds.sales/page:page-meta-title]@L]";
-  - page.meta.description = page.meta.description || "[@L[cds.sales/page:page-meta-description]@L]";
-  - page.meta.keywords = page.meta.keywords || "[@L[cds.sales/page:page-meta-keywords]@L]";
-  
+  - page.title = page.title || "[@L[cds.sales/page:page-title]@L]";
+  - page.description = page.description || "[@L[cds.sales/page:page-description]@L]";
+  - page.keywords = page.keywords || "[@L[cds.sales/page:page-keywords]@L]";
+  - page.canonical = page.canonical || "[@T[link:<relative parammode='explicit' />]@T]";
+  - page.favicon = page.favicon || "[@T[link:<imageroot />]@T]assets/godaddy.ico";
+
   - page.openGraph = page.openGraph || {};
   - page.openGraph.title = page.openGraph.title || "[@L[cds.sales/page:page-openGraph-title]@L]";
   - page.openGraph.description = page.openGraph.description || "[@L[cds.sales/page:page-openGraph-description]@L]";
@@ -15,16 +16,9 @@ block vars
   - page.openGraph.image = page.openGraph.image || "[@T[link:<imageroot />]@T]fos/hp/rebrand/img/gd_rebrand_og.png";
   - page.openGraph.siteName = page.openGraph.siteName || "[@T[link:<relative parammode='explicit' />]@T]";
   
-  - page.links = page.links || {};
-  - page.links.canonical = page.links.canonical || "[@T[link:<relative parammode='explicit' />]@T]";
-  - page.links.favicon = page.links.favicon || "[@T[link:<imageroot />]@T]assets/godaddy.ico";
-
   - page.config = page.config || {};
   - page.config.version = page.config.version || "0.7.0";
-  - page.config.uxcoreVersion = page.config.uxcoreVersion || "dev";
-  - page.config.env = "dev";
-  - page.config.uxcore = page.config.uxcore || true;
-  - page.config.delayLoadControls = page.config.delayLoadControls || true;
+  - page.config.uxcoreVersion = page.config.uxcoreVersion || "dev-brand";
 
 doctype html
 html(lang!="[@T[localization:<language full='true' />]@T]")
@@ -33,70 +27,69 @@ html(lang!="[@T[localization:<language full='true' />]@T]")
     meta(http-equiv="content-language" content!="[@T[localization:<language full='true' />]@T]")
     meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
     meta(http-equiv="x-ua-compatible" content="IE=edge")
-
-    title #{page.meta.title}
-    meta(name="description" content!="#{page.meta.description}")
-    meta(name="keywords" content!="#{page.meta.keywords}")
     meta(name="format-detection" content="telephone=no")
-    meta(property="og:title" content!="#{page.openGraph.title}")
-    meta(property="og:description" content!="#{page.openGraph.description}")
-    meta(property="og:type" content!="#{page.openGraph.type}")
-    meta(property="og:url" content!="[@T[link:<relative parammode='explicit' />]@T]")
-    meta(property="og:image" content!="#{page.openGraph.image}")
-    meta(property="og:site_name" content!="#{page.openGraph.siteName}")
-    meta(property="fb:app_id" content="115696031791232")
-    meta(property="fb:admins" content="633356800")
-    link(rel="canonical" href!="#{page.links.canonical}")
-    link(rel="shortcut icon" href!="#{page.links.favicon}")
-    block extraMeta
+    meta(name="google-site-verification" content="odAW2IckEFXrJjMrVxmnpjRPGNxEJp_xnCb7iBydgBY")
+    meta(name="msvalidate.01" content="9D246CEFA0D8894D78306DF6FBA618D9")
+    link(href="https://plus.google.com/108306343581548568740" rel="publisher")
+    meta(name="verify-v1" content="dV1r/ZJJdDEI++fKJ6iDEl6o+TMNtSu0kv18ONeqM0I=")
+    meta(name="y_key" content="1e39c508e0d87750")
+    link(rel="canonical" href!="#{page.canonical}")
+    link(rel="shortcut icon" href!="#{page.favicon}")
 
-    //- Fonts
+    //- fonts - load ASAP as they're on the critical path for page load time 
     link(rel="stylesheet" type="text/css" href="//cloud.typography.com/7914312/697366/css/fonts.css")
 
+    //- page.jade exposes and uses seo variables for the most frequently used meta tags (listed above)
+    //- usually, inherited pages can simply set these variables
+    //- for more flexibility, or to append/prepend this section, an inherited page
+    //- can use jade's block/prepend/append
+    block seo
+      title #{page.title}
+      meta(name="description" content!="#{page.description}")
+      meta(name="keywords" content!="#{page.keywords}")
+      meta(property="og:title" content!="#{page.openGraph.title}")
+      meta(property="og:description" content!="#{page.openGraph.description}")
+      meta(property="og:type" content!="#{page.openGraph.type}")
+      meta(property="og:url" content!="[@T[link:<relative parammode='explicit' />]@T]")
+      meta(property="og:image" content!="#{page.openGraph.image}")
+      meta(property="og:site_name" content!="#{page.openGraph.siteName}")
+      meta(property="fb:app_id" content="115696031791232")
+      meta(property="fb:admins" content="633356800")
+
+    //- oh, great, benevolent PC dev team... please bless this page with your head content here
     | 
     | [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags"><Parameters><Parameter key="manifest" value="salesheader" /></Parameters></Data>]@P]
 
+    //- inherited page classes can prepend/override/append headScripts when 
+    //- that page needs a script loaded early on in DOM processing
     //- TODO: UPDATE PATH
-    if page.config.uxcore
-      link(href!="[@T[link:<cssroot />]@T]/fos/mike/#{page.config.version}/css/sahara.css" rel="stylesheet")
-      script(src!="[@T[link:<javascriptroot />]@T]/ux/dev-brand/js/uxcore.en.min.js")
-      link(href!="[@T[link:<cssroot />]@T]/ux/dev-brand/css/uxcore.css" rel="stylesheet")
-      link(href!="[@T[link:<cssroot />]@T]/ux/dev-brand/css/uxcontrols.css" rel="stylesheet")
-      script(src!="[@T[link:<javascriptroot />]@T]/ux/dev-brand/js/uxcontrols.js")
-    else
-      link(href!="[@T[link:<cssroot />]@T]/fos/201401/global/css/3.4.1/combined-3.4.1.min.css" rel="stylesheet" type="text/css")
+    //- TODO: remove uxcore/uxcontrols from this block once PC head control renders the right stuff
+    block headScripts
+      script(src!="[@T[link:<javascriptroot />]@T]/ux/#{page.config.uxcoreVersion}/js/uxcore.en.min.js")
+      script(src!="[@T[link:<javascriptroot />]@T]/ux/#{page.config.uxcoreVersion}/js/uxcontrols.min.js")
+      script(src!='[@T[link:<javascriptroot />]@T]/fos/mike/#{page.config.version}/js/sahara.min.js')
 
+    //- TODO: UPDATE PATH
+    //- TODO: remove uxcore/uxcontrols from this block once PC head control renders the right stuff
     block pageStyles
+      link(href!="[@T[link:<cssroot />]@T]/ux/#{page.config.uxcoreVersion}/css/uxcontrols.css" rel="stylesheet")
+      link(href!="[@T[link:<cssroot />]@T]/ux/#{page.config.uxcoreVersion}/css/uxcore.css" rel="stylesheet")
+      link(href!="[@T[link:<cssroot />]@T]/fos/mike/#{page.config.version}/css/sahara.css" rel="stylesheet")
+      link(href!="[@T[link:<cssroot />]@T]/fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css")
 
-    script(type="text/javascript").
-      window.config = window.config || {};
-      window.config.uxcore = #{page.config.uxcore};
-      window.config.gdCdnHostUrl = '[@T[link:<cssroot />]@T]';
-      window.config.env = '#{page.config.env}';
-
+    //- TODO: get this content from PC's head-ie-rsiv item
     <!--[if lt IE 9]>
     link(href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect")
     link(href!="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy.min.html" id="respond-proxy" rel="respond-proxy")
     script(src!="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy-combo.min.js")
     <![endif]-->
 
-    <!-- liveperson includes -->
-    link(href!="[@T[link:<cssroot />]@T]/fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css")
-
-    block head
-    //- For the moment, hard code the url for prod
-    script(src!='[@T[link:<javascriptroot />]@T]/fos/mike/#{page.config.version}/js/sahara.min.js')
-    //- Preload uxcontrols.js if the home page so other pages load faster
-    if (page.config.delayLoadControls)
-      script(type='text/javascript').
-        //- delayLoader.addScript('[@T[link:<javascriptroot />]@T]/ux/dev/js/uxcontrols.min.js')
-        //- For the moment, hard code the url for prod
-        delayLoader.addScript('[@T[link:<javascriptroot />]@T]/ux/#{page.config.uxcoreVersion}/js/uxcontrols.min.js')
-    else
-      //- script(src='[@T[link:<javascriptroot />]@T]/ux/dev/js/uxcontrols.min.js')
-      //- For the moment, hard code the url for prod
-      script(src!='[@T[link:<javascriptroot />]@T]/ux/#{page.config.uxcoreVersion}/js/uxcontrols.min.js')
+    //- if an inherited page does not want any of these JS files delay loaded, 
+    //- the delayed load can be overridden by appending the JS file to the headScripts block
+    script(type='text/javascript').
+      delayLoader.addScript('[@T[link:<javascriptroot />]@T]/ux/#{page.config.uxcoreVersion}/js/uxcontrols.min.js')
     
+    //- TODO: does PC load this?
     // Google Tag Manager
     //-
       noscript
@@ -119,6 +112,7 @@ html(lang!="[@T[localization:<language full='true' />]@T]")
           _gaDataLayer.push({ 'splits': '#{requestContext.splitTestTrackingData}' });
     // End Google Tag Manager
 
+    //- TODO: do we need this script section?
     script(type="text/javascript").
       var utag_data = { source_code:"gtnila43",pl_id:"1",app_name:"desktop.sales",authenticated:"false",page_type:"home_page" };
       (function (a, b, c, d) {
@@ -128,11 +122,18 @@ html(lang!="[@T[localization:<language full='true' />]@T]")
       //$ a = b.getElementsByTagName(c)[0]; a.parentNode.insertBefore(d, a);
       })();
 
+    //- TODO: where to load bigtext?
     //-script(type="text/javascript", src="https://img1.wsimg.com/fos/hp/rebrand/js/bigtext.min.js")
+
+    //- inherited pages should attempt to use the correct head block for adding head content
+    //- however, if the content doesn't fit logically into those, the "head" block can be used
+    //- keep in mind this is loaded last and (intentionally or unintentionally) overrides above JS/CSS/meta stuff
+    block head
 
   body
     block bodyEntry
 
+    //- TODO: review this with Todd Buiten - is it necessary? if so, how to adapt it for CDS?
     //-
       if page.isc != ""
         .site-banners
@@ -142,21 +143,17 @@ html(lang!="[@T[localization:<language full='true' />]@T]")
           script(type="text/javascript").
             $(document).ready(function() { Fastball.Common.initialize('#{requestContext.domainName}'); });
 
-    //- googleoff: index
     // HEADERBEGIN
     | 
     | [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /></Parameters></Data>]@P]
     // HEADEREND
-    //- googleon: index
 
     block content
 
-    //- googleoff: index
     // FOOTERBEGIN
     | 
     | [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer"><Parameters><Parameter key="manifest" value="salesheader" /></Parameters></Data>]@P]
     // FOOTEREND
-    //- googleon: index
 
     | 
     | [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Script"><Parameters><Parameter key="manifest" value="salesheader" /></Parameters></Data>]@P]

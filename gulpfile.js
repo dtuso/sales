@@ -81,7 +81,7 @@ var paths = {
   less      : ['./src/sales/**/css/**/*.less'],
   images    : ['./src/sales/**/img/**/*.jpg', './src/sales/**/img/**/*.png'],
   build     : path.join('./build/sales/', assetSrcPath),
-  cdsBuild  : './build/cds/',
+  cdsBuild  : './build/cds/src/sales/',
   assets    : path.join(rootAssetPath, assetSrcPath),
   scripts   : ['./src/sales/**/js/**/*.js']
 };
