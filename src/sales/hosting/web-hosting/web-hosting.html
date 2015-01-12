@@ -1692,11 +1692,7 @@
           var dropdownCaret = $(this).find(".carett");
           var dropdowns = $(dropdownGroup).find(".accordion-dropdown");
         
-          $(dropdowns).removeClass("active");
-          $(dropdownGroup).find(".dropdown").slideUp();
-          $(dropdownGroup).find(".carett")
-                          .removeClass("caret-down")
-                          .addClass("caret-right");
+          
         
           if (!$(dropdownOptions).is(":visible")) {
             $(this).addClass("active");
@@ -1704,9 +1700,15 @@
             $(dropdownCaret).removeClass("caret-right").addClass("caret-down");
             event.stopPropagation();
           }
+          else {
+            $(this).removeClass("active");
+            $(dropdownOptions).slideUp();
+            $(dropdownCaret).removeClass("caret-down").addClass("caret-right");
+            event.stopPropagation();
+          }
         });
         $(window).load(function() {
-          $("#test-faq .accordion-dropdown:first").click();
+          $("#test-faq .accordion-dropdown").click();
         });
         $("#test-button").click(function() {
           $('#test-faq').find('.dropdown').slideDown();
