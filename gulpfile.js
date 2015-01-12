@@ -49,7 +49,6 @@ var rootAssetPath = (process.platform === 'win32')
   : '/Volumes/images/fos/sales/themes/' + theme + '/';
 
 
-
 var assetSrcPaths = require('./paths.json');
 var assetSrcPath = assetSrcPaths[argv.src||'all'];
 
@@ -151,6 +150,7 @@ gulp.task('jade', function() {
   });
   return gulp.src(['./**/*.jade', '!./**/templates/**/*.jade', '!./**/layouts/**/*.jade', '!./**/_*.jade'], {cwd: path.join('./src/sales/',assetSrcPath)})
     .pipe(changed(paths.cdsBuild, {extension: '.html'}))
+    //.pipe(debug())
     .pipe(frontMatter({remove:true}))
     .pipe(data(function(file) { return file.frontMatter; }))
     .pipe(jadeStream)

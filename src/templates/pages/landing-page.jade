@@ -29,7 +29,8 @@ block endOfPageScripts
           var maxHeight = 0;
           $(outerPlan).find(".pro-plan-wrap").each(function(index, plan) {
             maxHeight = $(plan).outerHeight() > maxHeight ? $(plan).outerHeight() : maxHeight;
-          }).css("height", maxHeight);
+          });
+          if( maxHeight > 0 )$(outerPlan).find(".pro-plan-wrap").css("height", maxHeight);
         });
       }
     });

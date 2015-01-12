@@ -20,13 +20,14 @@ mixin domainSearchOffersInput(title, cicode, placeholderText)
 
   style.
     .search-form { margin: 0 auto 1.071428571em;}
-    .search-form-input {height: 67px; padding: 20px; border-top-color: #fff; border-top-width: 3px; border-top-style: inset; border-bottom: 1px solid #ccc; border-left: 1px solid #ccc; border-right: 1px solid #ccc; width: 850px;}
+    .search-form-input {height: 67px; padding: 20px; color: #333; font-size:18px;
+      border-top-color: #fff; border-top-width: 3px; 
+      border-top-style: inset; border-bottom: 1px solid #ccc; border-left: 1px solid #ccc; border-right: 1px solid #ccc; 
+      width: 850px;}
     .offer-search-box label.searchInput {};
     .offer-search-btn {font-size: 20pt; }
     .offer-search-section { padding-bottom:20px;}
-    .type-your-business-name { display: none; }
-    .domain-eligibility-fail { display: none; }
-    .invalid-TLD-entered { display: none; }
+    .search-message { display: none; margin-left:20px}
 
   .row
     .col-md-12
@@ -39,9 +40,8 @@ mixin domainSearchOffersInput(title, cicode, placeholderText)
             .offer-search-box
               input.search-form-input.searchInput.helveticafont(type="text" placeholder!="#{placeholderText}" name="domainToCheck" autocomplete="off" maxlength="63")
               button.btn.btn-primary.btn-lg.offer-search-btn(type="button" name="searchButton" data-ci="#{cicode}") SEARCH
+              .search-message.speech-shape-upsidedown.speech-shape-upsidedown-yellow.type-your-business-name Type your business name here (if you have one)
+              .search-message.speech-shape-upsidedown.speech-shape-upsidedown-orange.domain-eligibility-fail You do not meet the eligibilty requirements for {0} domains, please select a different domain extension and search again.
+              .search-message.speech-shape-upsidedown.speech-shape-upsidedown-white.invalid-TLD-entered You need to choose a valid TLD.
+              .search-message.speech-shape-upsidedown.speech-shape-upsidedown-orange.api-A-failure API A FAILURE
             .clearfix
-  .row
-    .col-md-12
-      mark.type-your-business-name Type your business name here (if you have one)
-      mark.domain-eligibility-fail You do not meet the eligibilty requirements for {0} domains, please select a different domain extension and search again.
-      mark.invalid-TLD-entered You need to choose a valid TLD.
