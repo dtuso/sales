@@ -1,17 +1,22 @@
 include ./panel.jade
 
-mixin carouselItem
+mixin carouselItem(itemOptions)
+  - itemOptions = itemOptions || {};
+  - itemOptions.textCenter = itemOptions.textCenter || false;
   .item
-    .item-wrapper
-      block
+    .item-wrapper(class= "#{itemOptions.textCenter ? 'text-center' : ''}")
+      .carousel-panel.container(data-icode="#{itemOptions.icode ? icode : ''}")
+        block
 
 mixin carousel(id, numberOfPanels, options)
 
   - options = options || {};
   - options.autoRotateSpeed = options.autoRotateSpeed || false;
   - options.backgroundColor = options.backgroundColor || "bg-pro-gray";
-  style
-      include:css ./styles/carousel.css
+
+  if(options.css)
+    style
+        include:css ./styles/carousel.css
   .carousel-wrap
     .carousel-container.container
       .carousel.slide(id=id data-ride="carousel" data-interval="#{options.autoRotateSpeed}")

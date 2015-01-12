@@ -1,0 +1,69 @@
+include ../../../templates/tabbed-carousel-mixin.jade
+include ../../../templates/carousel-mixin.jade
+- tabbedCarousel = tabbedCarousel || {};
+- tabbedCarousel.title = "Keep the bad guys away.";
+- tabbedCarousel.subtitle = "There are people on the web who are always trying to steal your domains and personal details. These optional services can help (you, not them).";
+- tabbedCarousel.numOfTabs= 3;
+- tabbedCarousel.lazyLoad = true;
+- tabbedCarousel.id = "carousel-services";
+- tabbedCarousel.textCenter = false;
+
++renderTabbedCarousel(tabbedCarousel)
+  +addTab({icon:"",logo:"",imageAlternateText:"",text:"Privacy Potection"})
+  +addTab({icon:"",logo:"",imageAlternateText:"",text:"Business Protection"})
+  +addTab({icon:"",logo:"",imageAlternateText:"",text:"Certified Domains"})
++carousel(tabbedCarousel.id ,tabbedCarousel.numOfTabs,{css:true})
+  +carouselItem(tabbedCarousel)
+    img.img-responsive.img-center(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/domains/search/HotelDoors.png")
+    .row
+      .col-sm-10.col-sm-offset-1.col-xs-12
+        h2 Keep your private details, uhh…private.
+    .row
+      .col-sm-10.col-sm-offset-1.col-xs-12
+          .carousel-panel-text As soon as you register a domain with GoDaddy or any other registrar, your personal information is displayed in a public directory. Hackers and spammers often use this to compile email lists and steal domains. Harsh, but true.
+    .row
+      .col-sm-10.col-sm-offset-1.col-xs-12
+          .carousel-panel-text When you add Privacy Protection to your domains:
+    .row
+      .col-sm-10.col-sm-offset-1.col-xs-12
+        .include-check.carousel-panel-text We replace your name and contact details with our partner company’s, Domains By Proxy. No one ever sees your name, address, email or phone number but us.
+    .row
+      .col-sm-10.col-sm-offset-1.col-xs-12
+        .include-check.carousel-panel-text You still control your domains and all email addressed to them, as well as the right to sell, renew or transfer them. Your domains are still 100% yours.
+    .row
+      .col-sm-10.col-sm-offset-1.col-xs-12
+          .carousel-panel-text You may sleep better knowing your personal information isn’t on display to the whole world.
+  +carouselItem(tabbedCarousel)
+    img.img-responsive.img-center(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/domains/search/HotelDoors.png")
+    .row
+      .col-sm-10.col-sm-offset-1.col-xs-12
+        h2 Keep your private details, uhh…private.
+    .row
+      .col-sm-10.col-sm-offset-1.col-xs-12
+          .carousel-panel-text As soon as you register a domain with GoDaddy or any other registrar, your personal information is displayed in a public directory. Hackers and spammers often use this to compile email lists and steal domains. Harsh, but true.
+    .row
+      .col-sm-10.col-sm-offset-1.col-xs-12
+          .carousel-panel-text When you add Privacy Protection to your domains:
+    .row
+      .col-sm-10.col-sm-offset-1.col-xs-12
+        .include-check.carousel-panel-text We replace your name and contact details with our partner company’s, Domains By Proxy. No one ever sees your name, address, email or phone number but us.
+    .row
+      .col-sm-10.col-sm-offset-1.col-xs-12
+        .include-check.carousel-panel-text You still control your domains and all email addressed to them, as well as the right to sell, renew or transfer them. Your domains are still 100% yours.
+    .row
+      .col-sm-10.col-sm-offset-1.col-xs-12
+          .carousel-panel-text You may sleep better knowing your personal information isn’t on display to the whole world.
+  +carouselItem(tabbedCarousel)
+    img.img-responsive.img-center(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/domains/search/HotelDoors.png")
+    .row
+      .col-sm-10.col-sm-offset-1.col-xs-12
+        h2 Keep your private details, uhh…private.
+    .row
+      .col-sm-10.col-sm-offset-1.col-xs-12
+          .carousel-panel-text As soon as you register a domain with GoDaddy or any other registrar, your personal information is displayed in a public directory. Hackers and spammers often use this to compile email lists and steal domains. Harsh, but true.
+    .row
+      .col-sm-10.col-sm-offset-1.col-xs-12
+          .carousel-panel-text When you add Privacy Protection to your domains:
+    .row
+      .col-sm-10.col-sm-offset-1.col-xs-12
+          .carousel-panel-text You may sleep better knowing your personal information isn’t on display to the whole world.
