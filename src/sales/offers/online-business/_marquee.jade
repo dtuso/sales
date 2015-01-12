@@ -7,37 +7,52 @@ section#marquee
   include ./_2_domain-available-marquee-view.jade
   include ./_3_domain-not-available-marquee-view.jade
 
-append endOfPageScripts
-  script(type="text/javascript").
-    $(document).ready(function() {
+  atlantis:webstash(type="js")
+    script(type="text/javascript").
+      $(document).ready(function() {
 
-      $('#default-marquee-view .offer-search-btn').on('click', function(){
-        showDefault();
+        //- $('#default-marquee-view .offer-search-btn').on('click', function(){
+        //-   animateToAvailable();
+        //- });
+        //- $('#domain-available-marquee-view .offer-search-btn').on('click', function(){
+        //-   animateToNotAvailable();
+        //- });
+        //- $('#domain-not-available-marquee-view .offer-search-btn').on('click', function(){
+        //-   animateToDefault();
+        //- });
+
+
       });
-      $('#domain-available-marquee-view .offer-search-btn').on('click', function(){
-        showAvailable();
-      });
-      $('#domain-not-available-marquee-view .offer-search-btn').on('click', function(){
-        showNotAvailable();
-      });
 
-      $('.offer-search-btn').on('click', function(){
-        return false;
-      });
+      function enableAllSearchButtons(){
+        $('#marquee')
+          .find('.offer-search-btn').removeClass('disabled');
+      }
+      function enableAllAddToCartButtons(){
+        $('#marquee')
+          .find('.purchase-btn').removeClass('disabled');
+      }
+      function animateToAvailable (domainToAttach) {
+        $('#domain-available-marquee-view')
+          .show()
+          .find('.purchase-btn')
+            .removeClass('disabled')
+            .data('domain', domainToAttach);
+        $('#default-marquee-view, #domain-not-available-marquee-view').hide();
+        enableAllSearchButtons();
+      }
 
-    });
+      function animateToNotAvailable() {
+        $('#domain-not-available-marquee-view')
+          .show();
+        $('#domain-available-marquee-view, #default-marquee-view').hide();      
+        enableAllSearchButtons();
 
-    function showDefault() {
-      $('#domain-available-marquee-view').show();
-      $('#default-marquee-view, #domain-not-available-marquee-view').hide();
-    }
+      }
 
-    function showAvailable() {
-      $('#domain-not-available-marquee-view').show();
-      $('#domain-available-marquee-view, #default-marquee-view').hide();
-    }
+      function animateToDefault () {
+        $('#default-marquee-view').show();
+        $('#domain-not-available-marquee-view, #domain-available-marquee-view').hide();
+        enableAllSearchButtons();
 
-    function showNotAvailable() {
-      $('#default-marquee-view').show();
-      $('#domain-not-available-marquee-view, #domain-available-marquee-view').hide();
-    }
+      }

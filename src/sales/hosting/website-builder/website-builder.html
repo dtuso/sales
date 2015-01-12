@@ -26,16 +26,9 @@
     <meta property="fb:app_id" content="115696031791232">
     <meta property="fb:admins" content="633356800"> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags"><Parameters><Parameter key="manifest" value="salesheader" /></Parameters></Data>]@P]
-<<<<<<< HEAD
     <script src="[@T[link:<javascriptroot />]@T]/ux/dev-brand/js/uxcore.en.min.js"></script>
     <script src="[@T[link:<javascriptroot />]@T]/ux/dev-brand/js/uxcontrols.min.js"></script>
     <script src="[@T[link:<javascriptroot />]@T]/fos/mike/0.7.0/js/sahara.min.js"></script>
-=======
-    <link href="[@T[link:<cssroot />]@T]/fos/mike/0.7.0/css/sahara.css" rel="stylesheet">
-    <link href="[@T[link:<cssroot />]@T]/ux/dev-brand/css/uxcore.css" rel="stylesheet">
-    <link href="[@T[link:<cssroot />]@T]/ux/dev-brand/css/uxcontrols.css" rel="stylesheet">
-    <script src="[@T[link:<javascriptroot />]@T]/ux/dev-brand/js/uxcontrols.js"></script>
->>>>>>> upstream/rebrand
     <style>
 .plan-tile { 
   margin-top: -240px; 
@@ -44,32 +37,10 @@
   text-align: inherit;
 }
 
-<<<<<<< HEAD
     </style><!--[if lt IE 9]>
     <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
     <link href="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy.min.html" id="respond-proxy" rel="respond-proxy">
     <script src="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy-combo.min.js"></script><![endif]-->
-=======
-    </style>
-    <script type="text/javascript">
-      window.config = window.config || {};
-      window.config.uxcore = true;
-      window.config.gdCdnHostUrl = '[@T[link:<cssroot />]@T]';
-      window.config.env = 'dev';
-      
-    </script><!--[if lt IE 9]>
-    <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
-    <link href="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy.min.html" id="respond-proxy" rel="respond-proxy">
-    <script src="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy-combo.min.js"></script><![endif]-->
-    <!-- liveperson includes -->
-    <link href="[@T[link:<cssroot />]@T]/fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css">
-    <meta name="google-site-verification" content="odAW2IckEFXrJjMrVxmnpjRPGNxEJp_xnCb7iBydgBY">
-    <meta name="msvalidate.01" content="9D246CEFA0D8894D78306DF6FBA618D9">
-    <link href="https://plus.google.com/108306343581548568740" rel="publisher">
-    <meta name="verify-v1" content="dV1r/ZJJdDEI++fKJ6iDEl6o+TMNtSu0kv18ONeqM0I=">
-    <meta name="y_key" content="1e39c508e0d87750">
-    <script src="[@T[link:<javascriptroot />]@T]/fos/mike/0.7.0/js/sahara.min.js"></script>
->>>>>>> upstream/rebrand
     <script type="text/javascript">
       delayLoader.addScript('[@T[link:<javascriptroot />]@T]/ux/dev-brand/js/uxcontrols.min.js')
       
@@ -585,6 +556,20 @@ text-transform: uppercase;
   border-left: 1px solid #808080;
   }
 }
+@media only screen and (min-width: 992px){
+  .features-tabbed-carousel-top .features-tabbed-carousel-icon.active:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 15px solid #008a32;
+  border-right: 15px solid transparent;
+  border-left: 15px solid transparent;
+  position: absolute;
+  bottom: -15px;
+  margin-left: -20px;
+  left: 50%;
+  }
+}
             </style>
             <div data-icode="" id="" class="features-tabbed-carousel-top ">
               <div class="container">
@@ -612,17 +597,13 @@ text-transform: uppercase;
                             <div class="feature-carousel-icon"><span class="uxicon uxicon-youtube-box"></span></div>
                             <div class="feature-text">youtube</div>
                           </div>
-                        </div> 
-                  ##if(activeLanguageAny(es))
-                    
+                        </div>
                         <div data-begin="3" data-end="3" class="features-tabbed-carousel-icon col-md-2">
                           <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
                             <div class="feature-carousel-icon"><span class="uxicon uxicon-yelp"></span></div>
                             <div class="feature-text">yelp</div>
                           </div>
-                        </div> 
-                  ##endif
-                   
+                        </div>
                         <div data-begin="4" data-end="4" class="features-tabbed-carousel-icon col-md-2">
                           <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
                             <div class="feature-carousel-icon"><span class="uxicon uxicon-paypal"></span></div>
@@ -679,7 +660,7 @@ text-transform: uppercase;
               </script>
             </atlantis:webstash>
             <style>.item-wrapper { padding: 70px 0 20px; text-align: center; }
-.carousel-wrap { padding-top: 70px; }
+.carousel-wrap { padding-bottom: 70px; }
 
 @media only screen and (min-width: 768px){
   .carousel-container .carousel {
@@ -1065,9 +1046,7 @@ text-transform: uppercase;
                           </div>
                         </div>
                       </div>
-                    </div> 
-                    ##if(activeLanguageAny(es))
-                     
+                    </div>
                     <div class="item">
                       <div class="item-wrapper">
                         <div data-icode="code" class="carousel-panel container tile-section"><img src="/img/features-cpanelarousel-ppanelh.png" alt="undefined" class="img-responsive img-center">
@@ -1086,9 +1065,7 @@ text-transform: uppercase;
                           </div>
                         </div>
                       </div>
-                    </div> 
-                    ##endif
-                     
+                    </div>
                     <div class="item">
                       <div class="item-wrapper">
                         <div data-icode="code" class="carousel-panel container tile-section"><img src="/img/features-cpanelarousel-ppanelh.png" alt="undefined" class="img-responsive img-center">
@@ -1202,7 +1179,7 @@ margin-bottom: 20px;
     </section>
     <section id="testimonials" data-mid-nav-title="Testimonials">
       <style>.item-wrapper { padding: 70px 0 20px; text-align: center; }
-.carousel-wrap { padding-top: 70px; }
+.carousel-wrap { padding-bottom: 70px; }
 
 @media only screen and (min-width: 768px){
   .carousel-container .carousel {

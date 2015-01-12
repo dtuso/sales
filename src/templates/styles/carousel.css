@@ -1,5 +1,5 @@
 .item-wrapper { padding: 70px 0 20px; text-align: center; }
-.carousel-wrap { padding-top: 70px; }
+.carousel-wrap { padding-bottom: 70px; }
 
 @media only screen and (min-width: 768px){
   .carousel-container .carousel {
