@@ -1,0 +1,28 @@
+
+<atlantis:webstash type="css">
+  <style>
+    .co_uk-tile{background-color:#fff;color:#58585b;}
+    .co_uk-tile-logo{background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gdhp_sprite_20141024.png) -430px -777px no-repeat; width: 305px;height: 240px;position: relative;left: 75px;top: 41px;}
+    .co_uk-tile-text{margin:40px 20px 20px}
+    .co_uk-tile-headline{font-size:55px;line-height:55px;}
+    .co_uk-tile-maintext{font-size:26px;line-height:26px;font-family:"Walsheim-Black"}
+    .co_uk-tile-maintext>.gdhp-dash-sale{display:inline-block;background-color:#58585b;width:60px;height:5px;margin: 0 5px 6px 0}
+    .co_uk-tile-maintext>.gdhp-dash-nosale{display:inline-block;background-color:#58585b;width:190px;height:5px;margin: 0 5px 6px 0}
+    .co_uk-tile>.atn-btn-wrap{position:relative;left:110px;}
+    .co_uk-tile>.atn-btn-wrap>.btn-top-img{font-size:24px;color:#fff;background-color:#f5811f;border-bottom:4px solid #b25e18;padding:14px 12px;box-sizing:border-box;height:60px;width:240px;}
+    .co_uk-tile>.atn-btn-wrap>.btn-top-img:hover{background-color:#ff9b39;border-color:#cc7832}
+  </style>
+</atlantis:webstash>
+<div id="gdhp-dotcodotuktile" data-url="[@T[link:<relative path="/tlds/co-uk.aspx"><param name="ci" value="93445" /></relative>]@T]" data-ci="93445" class="gdhp-tile co_uk-tile js-gdhpclick">
+  <div class="co_uk-tile-logo">    </div>
+  <div class="co_uk-tile-text"><span data-maxchar="24" class="co_uk-tile-headline tungsten js-gdhpPriceResize">[@L[cds.sales/homepage/locales/en:co-uk-tile-headline]@L]</span><span class="co_uk-tile-maintext">
+       
+      ##if(productHasDiscountMoreThan(57465, 5))
+       <span class="gdhp-dash-sale"></span> 
+      [@T[productcompare:<percent primaryproductid="57465" secondaryproductid="57465" showsymbol="true"/>]@T] [@L[cds.sales/homepage/locales/en:co-uk-tile-maintext-off]@L]
+      ##else
+       <span class="gdhp-dash-nosale"></span> 
+      ##endif
+      [@L[cds.sales/homepage/locales/en:co-uk-tile-maintext-brilliant]@L]</span></div>
+  <div class="atn-btn-wrap"><a id="gdhp-dotcodotuktile-btn" href="javascript:void(0)" data-ci="93445" class="btn btn-top-img">[@L[cds.sales/homepage/locales/en:stickit-marq-get-started]@L]</a></div>
+</div>

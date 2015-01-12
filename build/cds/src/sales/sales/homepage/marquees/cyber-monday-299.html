@@ -1,0 +1,52 @@
+
+<!-- start marquee section-->
+<atlantis:webstash type="css">
+  <style>
+    .marquee {width:100%;min-width:1000px;height:400px;cursor:pointer;color: #fff;background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/color-block-background.png) no-repeat top center;}
+    .headline { line-height: 0.9; font-family: 'Walsheim-Black'; font-size: 48px;margin:10px 0;}
+    .headline .line:nth-child(odd) { font-family: Tungsten, 'Tungsten A', 'Tungsten B', Arial; text-transform: uppercase;}
+    .headline .line:nth-child(even) { font-family: 'Walsheim-Black'; }
+    .tungsten { font-family: Tungsten, 'Tungsten A', 'Tungsten B', Arial !important; text-transform: uppercase !important; }
+    .walsheim { font-family: 'Walsheim-Black' !important; }
+    .btn-cta { width: 100%; box-sizing: border-box; margin: 10px 0;}
+    .bigtext { visibility:hidden;}
+    .additional-info { font-size: 14px;margin: 10px 0;text-align: left; margin: 10px 0;}
+    .restrictions { margin: 10px 0;text-align: left;font-size: 12px; margin: 10px 0;}
+    .inline-dash { display:inline-block;overflow:hidden;letter-spacing:-0.5em;font-size:1.4em;vertical-align:top;line-height:50%;}
+  </style>
+  <style>
+    #cyber-monday-299 { background: #77c043 ; cursor:pointer; font-family: 'Walsheim-Regular'; }
+    #cyber-monday-299 .content { min-height: 400px; display: table; height: 400px; position:relative}
+    #cyber-monday-299 .main-content-container { vertical-align: middle; display: table-cell; color: #fff; }
+    #cyber-monday-299 .headline.line1 { font-size: 36px; color: #333; width:60%}
+    #cyber-monday-299 .headline.line2 { font-size: 72px; color: #fff; margin-top: 30px; }
+    #cyber-monday-299 .btn-cta { background-color: #f47f00; color: #fff; border-bottom: 3px solid #b3602f; width: auto; font-family: Walsheim-Medium; font-size: 20px; padding-left: 30px; padding-right: 30px; }
+    #cyber-monday-299 .disclaimer { font-size: 12px; color: #fff; font-family: 'Walsheim-Regular'; margin: 10px 0; }
+    #cyber-monday-299 .sprite { background: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/com499_marquee_sprite.png) no-repeat; display:inline-block; vertical-align:bottom;border-right:25px solid #333}
+    #cyber-monday-299 .sprite.com { background-position: 0 -75px; width: 65px; height: 16px}
+    #cyber-monday-299 .sprite.co { background: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gdhp_sprite_legacy-20141120.png) no-repeat -577px -5px;width: 31px;height: 31px;}
+    #cyber-monday-299 .flag {background: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/cyber-mon-sprite.png) no-repeat 0 0;width: 210px;height: 100px; position:absolute; color:#333; font-size:36px; font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-weight:700; left: -10%; text-align:center}
+    #cyber-monday-299 .tld-image {background: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/cyber-mon-sprite.png) no-repeat -220px 0;width: 450px;height: 259px; position:absolute; top:20%; left:60%}
+    #cyber-monday-299 small { font-size: 65%; }
+  </style>
+</atlantis:webstash>
+<div id="cyber-monday-299" data-url="[@T[link:<relative path='/domains/search-new.aspx'><param name='ci' value='94895' /></relative>]@T]" class="marquee js-gdhpclick">
+  <div class="container l-main-container">
+    <div class="content">
+      <div class="flag tungsten">ONE DAY ONLY</div>
+      <div class="main-content-container">
+        <div class="headline line1">BLACK FRIDAY? PFFFT. HELLO CYBER MONDAY.</div>
+        <div class="headline line2">{0}*<small>/1st YR</small></div><a href="[@T[link:<relative path='/domains/search-new.aspx'><param name='ci' value='94895' /></relative>]@T]" class="btn btn-lg btn-cta">FIND YOURS NOW</a>
+        <div class="disclaimer">[@L[cds.sales/homepage/marquee/499com:disclaimer]@L]</div>
+      </div>
+      <div class="tld-image"></div>
+    </div>
+    <script type="text/javascript">
+      $('#cyber-monday-299 .line2').html($('#cyber-monday-299 .line2').html().replace('{0}','[@T[productprice:<current productid="101" period="yearly" promocode="444888" htmlsymbol="false" />]@T]'))
+      $('#cyber-monday-299 .disclaimer').html($('#cyber-monday-299 .disclaimer').html().replace('{0}','[@T[productprice:<list productid="105" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses"></list>]@T]'))
+    </script>
+  </div>
+</div>
+<atlantis:webstash type="js">
+</atlantis:webstash>
+<!-- end marquee section-->
