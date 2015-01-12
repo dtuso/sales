@@ -1,4 +1,5 @@
-.item-wrapper { padding: 70px 0 20px; text-align: center; }
+.item-wrapper { padding: 70px 0 20px; }
+
 .carousel-wrap { padding-bottom: 70px; }
 
 @media only screen and (min-width: 768px){
@@ -88,6 +89,9 @@
 }
 .carousel-panel .carousel-panel-text {
   margin-bottom: 25px;
+}
+.carousel-panel h2 {
+  margin-top: 0px;
 }
 
 .carousel-container .carousel-control.left {
@@ -268,7 +272,11 @@
 .carousel-control.left {
     left: -40px;
 }
-
+@media only screen and (max-width: 768px){
+  .carousel-container .carousel-control {
+    display: none;
+  }
+}
 @media only screen and (max-width: 768px) {
     .carousel-control.left {
         left: -10px;
@@ -315,4 +323,21 @@
     .carousel-indicators {
         bottom: -5px;
     }
+}
+.carousel-panel .include-check {
+position: relative;
+padding-left: 45px;
+margin-top: 20px;
+}
+.carousel-panel .include-check:before {
+content: "";
+background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
+background-position: 0 -668px;
+background-size: 205px auto;
+width: 25px;
+height: 27px;
+padding-right: 5px;
+position: absolute;
+left: 0;
+top: -6px;
 }
