@@ -37,7 +37,11 @@ mixin renderAccordion(options)
         var dropdownCaret = $(this).find(".carett");
         var dropdowns = $(dropdownGroup).find(".accordion-dropdown");
 
-        
+        $(dropdowns).removeClass("active");
+        $(dropdownGroup).find(".dropdown").slideUp();
+        $(dropdownGroup).find(".carett")
+                        .removeClass("caret-down")
+                        .addClass("caret-right");
 
         if (!$(dropdownOptions).is(":visible")) {
           $(this).addClass("active");
@@ -45,15 +49,9 @@ mixin renderAccordion(options)
           $(dropdownCaret).removeClass("caret-right").addClass("caret-down");
           event.stopPropagation();
         }
-        else {
-          $(this).removeClass("active");
-          $(dropdownOptions).slideUp();
-          $(dropdownCaret).removeClass("caret-down").addClass("caret-right");
-          event.stopPropagation();
-        }
       });
       $(window).load(function() {
-        $("##{options.id} .accordion-dropdown").click();
+        $("##{options.id} .accordion-dropdown:first").click();
       });
       $("##{options.buttonID}").click(function() {
         $('##{options.id}').find('.dropdown').slideDown();
