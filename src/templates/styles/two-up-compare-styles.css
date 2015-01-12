@@ -83,6 +83,12 @@
     padding: 60px 0;
   }
 }
+.two-up-wrap-compare .white-text {
+  color: #fff;
+}
+.two-up-wrap-compare .white-text h2{
+  color: #fff;
+}
 .two-up-wrap-compare .two-up-text-wrap h3.subtitle {
   text-transform: none;
 }
@@ -150,4 +156,68 @@
   .or-container:after {
     left: 121%
   }
+}
+
+.two-up-title {
+  margin: 40px 0;
+  line-height: 1;
+}
+.two-up-speech-shape {
+  font-family: 'Walsheim-Bold';
+  font-size: 18px;
+  font-size: 1.8rem;
+  padding: 5px 10px 5px 17px;
+  color: #fff;
+  display: inline-block;
+  position: relative;
+  margin-bottom: 20px;
+  z-index: 2;
+}
+.two-up-speech-shape .shape-text {
+  position: relative;
+  z-index: 40;
+}
+.two-up-speech-shape:before {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  border-top: 15px solid;
+  border-right: 15px solid transparent;
+}
+.two-up-speech-shape:after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 99%;
+  top: 0;
+  transform: skew(-12deg, 0);
+  z-index: 1;
+}
+.two-up-speech-shape.two-up-speech-shape-green {
+  background-color: #008a32;
+}
+.two-up-speech-shape.two-up-speech-shape-green:before {
+  border-top-color: #008a32;
+}
+.two-up-speech-shape.two-up-speech-shape-green:after {
+  background-color: #008a32;
+}
+.two-up-speech-shape.two-up-speech-shape-orange {
+  background-color: #ef6c0f;
+}
+.two-up-speech-shape.two-up-speech-shape-orange:before {
+  border-top-color: #ef6c0f;
+}
+.two-up-speech-shape.two-up-speech-shape-orange:after {
+  background-color: #ef6c0f;
+}
+.two-up-speech-shape.two-up-speech-shape-white {
+  background-color: #fff;
+}
+.two-up-speech-shape.two-up-speech-shape-white:before {
+  border-top-color: #fff;
+}
+.two-up-speech-shape.two-up-speech-shape-white:after {
+  background-color: #fff;
 }
