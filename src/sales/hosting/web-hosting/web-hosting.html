@@ -29,7 +29,18 @@
     <script src="[@T[link:<javascriptroot />]@T]/ux/dev-brand/js/uxcore.en.min.js"></script>
     <script src="[@T[link:<javascriptroot />]@T]/ux/dev-brand/js/uxcontrols.min.js"></script>
     <script src="[@T[link:<javascriptroot />]@T]/fos/mike/0.7.0/js/sahara.min.js"></script>
-    <style>.compare-table-view-all {
+    <style>h2{
+  margin-bottom: 40px;
+  margin-top: 0;
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-family: 'Walsheim-Black';
+  font-weight: 300;
+  line-height: 1.1;
+  color: #333;
+}
+
+.compare-table-view-all {
   text-align: center;
   margin-top: 50px;
   cursor: pointer;
@@ -791,6 +802,23 @@
 }
 .compare-table h2{
   margin-bottom: 40px;
+  margin-top: 0;
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-family: 'Walsheim-Black';
+  font-weight: 300;
+  line-height: 1.1;
+  color: #333;
+}
+.compare-table h4{
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-size: 24px;
+  text-transform: uppercase;
+  font-family: 'Walsheim-Black';
+  font-weight: 300;
+  line-height: 1.1;
+  color: #333;
 }
 .compare-table tr td:first-child {
   text-align: left;
@@ -933,18 +961,22 @@
 
 
 
-.pro-icon {
+.icon {
   background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
   display: inline-block;
   background-size: 205px auto;
 }
-.pro-icon.jump-arrow-icon,
-.pro-icon.arrow-down-icon {
+.icon.jump-arrow-icon,
+.icon.arrow-down-icon {
   background-position: 0 -321px;
   width: 95px;
   height: 95px;
 }
-
+.icon.gray-check-icon {
+background-position: 0 -606px;
+width: 25px;
+height: 27px;
+}
 .bg-pro-gray {
   background-color: #e8e8e8;
 }
@@ -969,7 +1001,7 @@
             <tbody>
               <tr>
                 <td>Free Domain with anual plan restrictions apply</td>
-                <td><span class='pro-icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
                 <td>yes </td>
                 <td>yes</td>
               </tr>
@@ -987,7 +1019,7 @@
               </tr>
               <tr>
                 <td>Free Domain with anual plan restrictions apply</td>
-                <td><span class='pro-icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
                 <td>yes </td>
                 <td>yes</td>
               </tr>
@@ -1005,7 +1037,7 @@
               </tr>
               <tr>
                 <td>Free Domain with anual plan restrictions apply</td>
-                <td><span class='pro-icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
                 <td>yes </td>
                 <td>yes</td>
               </tr>
@@ -1037,6 +1069,23 @@
 }
 .compare-table h2{
   margin-bottom: 40px;
+  margin-top: 0;
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-family: 'Walsheim-Black';
+  font-weight: 300;
+  line-height: 1.1;
+  color: #333;
+}
+.compare-table h4{
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-size: 24px;
+  text-transform: uppercase;
+  font-family: 'Walsheim-Black';
+  font-weight: 300;
+  line-height: 1.1;
+  color: #333;
 }
 .compare-table tr td:first-child {
   text-align: left;
@@ -1179,18 +1228,22 @@
 
 
 
-.pro-icon {
+.icon {
   background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
   display: inline-block;
   background-size: 205px auto;
 }
-.pro-icon.jump-arrow-icon,
-.pro-icon.arrow-down-icon {
+.icon.jump-arrow-icon,
+.icon.arrow-down-icon {
   background-position: 0 -321px;
   width: 95px;
   height: 95px;
 }
-
+.icon.gray-check-icon {
+background-position: 0 -606px;
+width: 25px;
+height: 27px;
+}
 .bg-pro-gray {
   background-color: #e8e8e8;
 }
@@ -1215,7 +1268,7 @@
             <tbody>
               <tr>
                 <td>Free Domain with anual plan restrictions apply</td>
-                <td><span class='pro-icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
                 <td>yes </td>
                 <td>yes</td>
               </tr>
@@ -1233,7 +1286,7 @@
               </tr>
               <tr>
                 <td>Free Domain with anual plan restrictions apply</td>
-                <td><span class='pro-icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
                 <td>yes </td>
                 <td>yes</td>
               </tr>
@@ -1251,7 +1304,7 @@
               </tr>
               <tr>
                 <td>Free Domain with anual plan restrictions apply</td>
-                <td><span class='pro-icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
                 <td>yes </td>
                 <td>yes</td>
               </tr>
@@ -1278,7 +1331,7 @@
         </div>
         <div class="compare-table-view-all">
           <div><strong>View All</strong></div>
-          <div class="pro-icon arrow-down-icon"></div>
+          <div class="icon arrow-down-icon"></div>
           <script type="text/javascript">
             $(".compare-table-view-all").click(function() {
               var chart = $(this).closest("#cpanel-table");
@@ -1742,7 +1795,11 @@
           var dropdownCaret = $(this).find(".carett");
           var dropdowns = $(dropdownGroup).find(".accordion-dropdown");
         
-          
+          $(dropdowns).removeClass("active");
+          $(dropdownGroup).find(".dropdown").slideUp();
+          $(dropdownGroup).find(".carett")
+                          .removeClass("caret-down")
+                          .addClass("caret-right");
         
           if (!$(dropdownOptions).is(":visible")) {
             $(this).addClass("active");
@@ -1750,15 +1807,9 @@
             $(dropdownCaret).removeClass("caret-right").addClass("caret-down");
             event.stopPropagation();
           }
-          else {
-            $(this).removeClass("active");
-            $(dropdownOptions).slideUp();
-            $(dropdownCaret).removeClass("caret-down").addClass("caret-right");
-            event.stopPropagation();
-          }
         });
         $(window).load(function() {
-          $("#test-faq .accordion-dropdown").click();
+          $("#test-faq .accordion-dropdown:first").click();
         });
         $("#test-button").click(function() {
           $('#test-faq').find('.dropdown').slideDown();
