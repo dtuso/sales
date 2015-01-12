@@ -90,7 +90,7 @@ atlantis:webstash(type="css")
 
   block button
     if (buttonText && buttonUrl)
-      button.btn.btn-primary.btn-plan.btn-lg.btn-block(href!=buttonUrl data-tcode!=tcode data-index="1") !{buttonText}
+      a.btn.btn-primary.btn-plan.btn-lg.btn-block(href!=buttonUrl data-tcode!=tcode data-index="1") !{buttonText}
     else if(buttonText && showDropDownList )
       button.btn.btn-purchase.btn-plan.btn-lg.btn-block(data-tcode="#{tcode}",data-ul="#{listID}") !{buttonText}
     else if (buttonText && !showDropDownList && defaultPlan)
