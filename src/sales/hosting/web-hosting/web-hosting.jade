@@ -265,6 +265,11 @@ block sections
 
   section#reviews
     p reviews
+    .container
+      .row
+        .col-sm-12
+          div
+            [@P[userControl:<Data location="~/Shared/Tabs/controls/BVReviewsNoJS.ascx"><Parameters><Parameter key="ProductId" value="web_hosting" /><Parameter key="ReviewNumber" value="4" /></Parameters></Data>]@P]
 
   section#faq
     p faq
@@ -281,10 +286,18 @@ block sections
         p Fusce viverra eget massa ac posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Cras vel ligula venenatis, fringilla purus sit amet, semper ante. Vivamus bibendum maximus dui et finibus. Integer in dignissim dolor, in malesuada massa. Nam accumsan feugiat tortor, eu tincidunt mauris laoreet a. Fusce fermentum dolor eu odio volutpat varius. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis sed augue pretium, ultrices nisi non, maximus tortor. Praesent auctor euismod fringilla.
   section#alternate-products
     +renderTwoUpCompare({title: "Not finding what you need?", twoUpCompareId: "two-up", titleBackgroundColor: "bg-green-official-light", backgroundColor: "bg-green-official", backgroundImage: "background-image: url('[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Finding.jpg')", style: "min-height: 580px;"})
-      +twoUpCompareColumn({title: "Do-it-yourself with Website Builder. Hosting Included.", backgroundColor: "bg-green-official-light", shapeText: "Website Builder", shapeColor: "orange", subtitle: "sub left side"})
-        h4 Block content
-      +twoUpCompareColumn({title: "Get Hosting that will grow.", backgroundColor: "bg-gray-darkest", shapeText: "Private Virtual Server", shapeColor: "orange", subtitle: "sub right side", whiteText: "white-text"})
-        h4 Block content
+      +twoUpCompareColumn({title: "Do-it-yourself with Website Builder. Hosting Included.", backgroundColor: "bg-green-official-light", shapeText: "Website Builder", shapeColor: "orange"})
+        ul
+          li Features cPanel "(Linux)" or Parallels Plesk Panel "(Windows)"
+          li One-click install 100s of top apps like Joomla and Drupal
+          li Includes 99.9% uptime, lightning-fast load times and more
+        a.btn.btn-default-dark LEARN MORE
+      +twoUpCompareColumn({title: "Get Hosting that will grow.", backgroundColor: "bg-gray-darkest", shapeText: "Private Virtual Server", shapeColor: "orange", whiteText: "white-text"})
+        ul
+          li Get online fast with 100s of customizable designs
+          li No technical skills required - just drag and drop
+          li Includes a free domain, hosting and more
+        a.btn.btn-default-light LEARN MORE
 
   section#disclaimers
     p disclaimers
