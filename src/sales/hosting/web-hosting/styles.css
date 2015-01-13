@@ -9,6 +9,21 @@ h2{
   color: #333;
 }
 
+h3 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-family: 'Walsheim-Black';
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: 300;
+  line-height: 1.1;
+}
+
+.tile-section {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
 .compare-table-view-all {
   text-align: center;
   margin-top: 50px;
