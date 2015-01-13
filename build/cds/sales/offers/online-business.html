@@ -5,12 +5,6 @@
     <meta http-equiv="content-language" content="[@T[localization:<language full='true' />]@T]">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta http-equiv="x-ua-compatible" content="IE=edge">
-<<<<<<< HEAD
-    <title>[@L[cds.sales/page:page-meta-title]@L]</title>
-    <meta name="description" content="[@L[cds.sales/page:page-meta-description]@L]">
-    <meta name="keywords" content="[@L[cds.sales/page:page-meta-keywords]@L]">
-=======
->>>>>>> ad52d031a4c42c2a454ac0290c68e8a55f9079ec
     <meta name="format-detection" content="telephone=no">
     <meta name="google-site-verification" content="odAW2IckEFXrJjMrVxmnpjRPGNxEJp_xnCb7iBydgBY">
     <meta name="msvalidate.01" content="9D246CEFA0D8894D78306DF6FBA618D9">
@@ -20,9 +14,9 @@
     <link rel="canonical" href="[@T[link:<relative parammode='explicit' />]@T]">
     <link rel="shortcut icon" href="[@T[link:<imageroot />]@T]assets/godaddy.ico">
     <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7914312/697366/css/fonts.css">
-    <title>[@L[cds.sales/offers/online-business:page-title]@L]</title>
-    <meta name="description" content="[@L[cds.sales/offers/online-business:meta-description]@L]">
-    <meta name="keywords" content="[@L[cds.sales/offers/online-business:meta-keywords]@L]">
+    <title>[@L[cds.sales/page:page-title]@L]</title>
+    <meta name="description" content="[@L[cds.sales/page:page-description]@L]">
+    <meta name="keywords" content="[@L[cds.sales/page:page-keywords]@L]">
     <meta property="og:title" content="[@L[cds.sales/page:page-openGraph-title]@L]">
     <meta property="og:description" content="[@L[cds.sales/page:page-openGraph-description]@L]">
     <meta property="og:type" content="website">
@@ -35,19 +29,249 @@
     <meta name="twitter:site" content="[@L[cds.sales/offers/online-business:twitter-site]@L]">
     <meta name="twitter:title" content="[@L[cds.sales/offers/online-business:twitter-title]@L]">
     <meta name="twitter:description" content="[@L[cds.sales/offers/online-business:twitter-description]@L]">
-<<<<<<< HEAD
-    <meta name="twitter:image:src" content="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/online-business/img/og_got_1200x630.jpg">
-=======
     <meta name="twitter:image:src" content="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/online-business/img/og_got_1200x630.jpg"> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags"><Parameters><Parameter key="manifest" value="salesheader" /></Parameters></Data>]@P]
     <script src="[@T[link:<javascriptroot />]@T]/ux/dev-brand/js/uxcore.en.min.js"></script>
     <script src="[@T[link:<javascriptroot />]@T]/ux/dev-brand/js/uxcontrols.min.js"></script>
     <script src="[@T[link:<javascriptroot />]@T]/fos/mike/0.7.0/js/sahara.min.js"></script>
+    <atlantis:webstash type="js">
+      <script>
+
+
+var got1Page = {
+  tlds: ['com','org','co','net'],
+  defaultTld: 'com',
+  maxNumberOfSpinsToShowByDefault: 3,
+  offersCodes: {
+    packageId_wsb: 'gybo_1email_1yr',
+    packageId_ols: 'gybo_1email_1yr_ols',
+    itc_wsb: 'slp_GYBO1',
+    itc_ols: 'slp_GYBO2',
+  },
+  pricing: {
+    promo_wsb: '[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T]',
+    promo_ols: '[@T[multipleproductprice:<current productidlist="40972|101|7524" period="monthly" promocode="75315678" />]@T]',
+    bundleRenewal_wsb: '[@T[multipleproductprice:<list productidlist="464069|101|7524" period="monthly"></list>]@T]',
+    bundleRenewal_ols: '[@T[multipleproductprice:<list productidlist="40972|101|7524" period="monthly"></list>]@T]',
+    bingAdCredits: '[@T[currencyprice:<price usdamount="5000" dropdecimal="true" htmlsymbol="false" />]@T]'
+  }
+};
+
+##if(countrySiteAny(br) || isManager())
+  got1Page.tlds.push('br');
+  got1Page.defaultTld = 'br';
+##endif
+##if(countrySiteAny(in) || isManager())
+  got1Page.tlds.push('in');
+  got1Page.defaultTld = 'in';
+##endif
+##if(countrySiteAny(uk) || isManager())
+  got1Page.tlds.push('uk');
+  got1Page.tlds.push('co.uk');
+  got1Page.defaultTld = 'uk';
+##endif
+
+$(document).ready(function() {
+
+  $('[data-tokenize]').each(function(){
+    var $this = $(this),
+      html = $this.html(),
+      val = $this.data('tokenize'),
+        tokenizedHtml = html.replace(/\{0\}/gi, val);
+    $this
+      .html(tokenizedHtml)
+      .removeAttr('data-tokenize');
+  });
+
+  //set up domain search buttons to do a domain search
+  $('#marquee').on('click', '.offer-search-btn', function(e) {
+    window.setTimeout(function(){
+      console.log(1);
+      domainSearchFormSubmit(e);
+    },0);
+    return false;
+  });
+
+  // set up verify buttons on spin results to do validation before sending to DPP
+  $('#marquee').on('click', '.spin-domain-action-button', verifyDomainIsStillAvailable);
+
+  $('#marquee').on('click', '.purchase-btn', showChoicesScreen);
+
+  $('#marquee').on('click', '.select-and-continue', verifyDomainIsStillAvailable);
+
+
+  // track ci codes
+  $('[data-ci]').click(function (e) {
+      var $this = $(this);
+      var ci = $this.attr('data-ci');
+      FastballEvent_MouseClick(e, ci, $(this)[0], 'a');
+      fbiLibCheckQueue();
+  });
+
+});
+
+function populateTldsOnDisclaimerModal(selector) {
+  var $this = $(selector);
+  ##if(countrySiteAny(br) || isManager())
+    $this.find('.tlds-br').show();
+  ##endif
+  ##if(countrySiteAny(in) || isManager())
+    $this.find('.tlds-in').show();
+  ##endif
+  ##if(countrySiteAny(uk) || isManager())
+    $this.find('.tlds-uk').show();
+  ##endif
+}
+function formatDomainWithDefaultTld(domain) {
+  alert("todo: formatDomainWithDefaultTld() ");
+  // TODO: check to see fi there's already a TLD on it
+  return domain + '.' + got1Page.defaultTld;
+}
+function isTldValid(domain) {
+  //TODO: check list of valid TLDs
+  alert("todo: isTldValid() ");
+  return true;
+}
+function displayInvlidTldMessage($this){
+  alert("todo: displayInvlidTldMessage() ");
+}
+
+function domainSearchFormSubmit(e) {
+ 
+  var $this = $(e.target),
+    $textInput = $this.siblings('.search-form-input'),
+    domain = $textInput.val(), 
+    sucessful = false;
+
+  if((domain && domain.length==0) || !domain) return;
+  
+  domain = formatDomainWithDefaultTld(domain);
+
+  if(!isTldValid(domain)) {
+    displayInvlidTldMessage($this);
+    return;
+  }
+
+  var apiEndpoint = '[@T[link:<relative path="~/domainsapi/v1/search/free"><param name="domain" value="domain" /><param name="itc" value="itc" /></relative>]@T]';
+      apiEndpoint = apiEndpoint.replace('domain=domain', 'q=' + domain);
+      apiEndpoint = apiEndpoint.replace('itc=itc', 'key=' + got1Page.offersCodes.itc_wsb);
+
+  $this.addClass('disabled');
+
+  $.ajaxSetup({cache:false});
+  $.ajax({
+    url: apiEndpoint,
+    type: 'GET',
+    dataType: 'json',
+    cache: false,
+    success: function(data){ 
+        var 
+          exactMatchDomain = data.ExactMatchDomain || {},
+          searchedForDomain = exactMatchDomain.Fqdn ? exactMatchDomain.Fqdn : domain,
+          isAvailable = exactMatchDomain.IsPurchasable && exactMatchDomain.IsPurchasable === true, /* data.ExactMatchDomain.AvailabilityStatus 1001=unavailable 1000=available*/
+          alternateDomains = data.RecommendedDomains || [];
+
+        if(isAvailable) {
+          showSuccessfulSearch(exactMatchDomain);
+        } else {
+
+          if(alternateDomains.length > 0) {
+            // SHOW SPINS
+            showSearchSpins(exactMatchDomain, alternateDomains);
+          } else {
+            // NO SPINS
+            showApi1SearchError(e, domain);
+          }
+        }    
+
+    },
+    error: function(){
+        showApi1SearchError(e, domain);
+    }
+  });
+
+}
+
+
+function verifyDomainIsStillAvailable(e) {
+  var $this = $(e.target),
+    domain = $this.data('domain');
+
+  // TODO!
+  alert('TODO verifyDomainIsStillAvailable(' + domain.Fqdn + ')');
+
+}
+
+function showChoicesScreen(e){
+  var $this = $(e.target),
+    domain = $this.data('domain');
+
+  alert('TODO showChoicesScreen(' + domain.Fqdn + ')');
+
+}
+
+function goToDppCheckoutPage(e) {
+  var $this = $(e.target),
+    domain = $this.data('domain');
+
+  alert('TODO goToDppCheckoutPage(' + domain.Fqdn + ')');
+
+}
+
+function showSuccessfulSearch(domain){  
+
+  $('#available-domain-name').text(domain.Fqdn);
+  animateToAvailable(domain);
+
+}
+
+function showSearchSpins(domain, alternateDomains){  
+
+  var $spinResults = $('#spin-results');
+  var $spinTemplate = $spinResults.find('.spin-template');
+  $.each(alternateDomains, function(idx,domain){
+    var $newSpin = $spinTemplate.clone().removeClass('spin-template');
+    $newSpin.find('.domain-name-display').text(domain.NameWithoutExtension);
+    $newSpin.find('.domain-name-display-tld').text(domain.Extension);
+    $newSpin.find('.btn-primary').data('domain', domain);
+    $spinResults.append($newSpin);
+  });
+  var $header = $('#domain-not-available-marquee-view').find('.results-list-heading-text');
+
+  var numbersHtml = $header.html();
+  numbersHtml = numbersHtml.replace(/\{0\}/gi, got1Page.maxNumberOfSpinsToShowByDefault); 
+  numbersHtml = numbersHtml.replace(/\{1\}/gi, alternateDomains.length);
+  $header.html(numbersHtml);
+
+  animateToNotAvailable(domain); 
+
+}
+
+function showApi1SearchError(e,domain){
+  // TODO!
+  alert('TODO showApi1SearchError()');
+}
+
+function showApi2SearchError(e,domain){
+  // TODO!
+  alert('TODO showApi2SearchError()');
+}
+
+function showApi3SearchError(e,domain){
+  // TODO!
+  alert('TODO showApi3SearchError()');
+}
+
+function showDomainRegistrationFailure() {
+  // TODO!
+  alert('TODO showDomainRegistrationFailure()');
+}
+      </script>
+    </atlantis:webstash>
     <link href="[@T[link:<cssroot />]@T]/ux/dev-brand/css/uxcontrols.css" rel="stylesheet">
     <link href="[@T[link:<cssroot />]@T]/ux/dev-brand/css/uxcore.css" rel="stylesheet">
     <link href="[@T[link:<cssroot />]@T]/fos/mike/0.7.0/css/sahara.css" rel="stylesheet">
     <link href="[@T[link:<cssroot />]@T]/fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css">
->>>>>>> ad52d031a4c42c2a454ac0290c68e8a55f9079ec
     <style>/* FONTS */
 @font-face {
   font-family: 'Walsheim-Light';
@@ -4305,261 +4529,9 @@ section#site-choice-compare .disclaimer-mark p {
 section#products {
   padding-bottom:40px;
 }
-<<<<<<< HEAD
 
 *[data-tokenize] {visibility: hidden;}
-    </style>
-    <atlantis:webstash type="js">
-      <script>
-
-
-var got1Page = {
-  tlds: ['com','org','co','net'],
-  defaultTld: 'com',
-  maxNumberOfSpinsToShowByDefault: 3,
-  offersCodes: {
-    packageId_wsb: 'gybo_1email_1yr',
-    packageId_ols: 'gybo_1email_1yr_ols',
-    itc_wsb: 'slp_GYBO1',
-    itc_ols: 'slp_GYBO2',
-  },
-  pricing: {
-    promo_wsb: '[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T]',
-    promo_ols: '[@T[multipleproductprice:<current productidlist="40972|101|7524" period="monthly" promocode="75315678" />]@T]',
-    bundleRenewal_wsb: '[@T[multipleproductprice:<list productidlist="464069|101|7524" period="monthly"></list>]@T]',
-    bundleRenewal_ols: '[@T[multipleproductprice:<list productidlist="40972|101|7524" period="monthly"></list>]@T]',
-    bingAdCredits: '[@T[currencyprice:<price usdamount="5000" dropdecimal="true" htmlsymbol="false" />]@T]'
-  }
-};
-
-##if(countrySiteAny(br) || isManager())
-  got1Page.tlds.push('br');
-  got1Page.defaultTld = 'br';
-##endif
-##if(countrySiteAny(in) || isManager())
-  got1Page.tlds.push('in');
-  got1Page.defaultTld = 'in';
-##endif
-##if(countrySiteAny(uk) || isManager())
-  got1Page.tlds.push('uk');
-  got1Page.tlds.push('co.uk');
-  got1Page.defaultTld = 'uk';
-##endif
-
-$(document).ready(function() {
-
-  $('[data-tokenize]').each(function(){
-    var $this = $(this),
-      html = $this.html(),
-      val = $this.data('tokenize'),
-        tokenizedHtml = html.replace(/\{0\}/gi, val);
-    $this
-      .html(tokenizedHtml)
-      .removeAttr('data-tokenize');
-  });
-
-  //set up domain search buttons to do a domain search
-  $('#marquee').on('click', '.offer-search-btn', function(e) {
-    window.setTimeout(function(){
-      console.log(1);
-      domainSearchFormSubmit(e);
-    },0);
-    return false;
-  });
-
-  // set up verify buttons on spin results to do validation before sending to DPP
-  $('#marquee').on('click', '.spin-domain-action-button', verifyDomainIsStillAvailable);
-
-  $('#marquee').on('click', '.purchase-btn', showChoicesScreen);
-
-  $('#marquee').on('click', '.select-and-continue', verifyDomainIsStillAvailable);
-
-
-  // track ci codes
-  $('[data-ci]').click(function (e) {
-      var $this = $(this);
-      var ci = $this.attr('data-ci');
-      FastballEvent_MouseClick(e, ci, $(this)[0], 'a');
-      fbiLibCheckQueue();
-  });
-
-});
-
-function populateTldsOnDisclaimerModal(selector) {
-  var $this = $(selector);
-  ##if(countrySiteAny(br) || isManager())
-    $this.find('.tlds-br').show();
-  ##endif
-  ##if(countrySiteAny(in) || isManager())
-    $this.find('.tlds-in').show();
-  ##endif
-  ##if(countrySiteAny(uk) || isManager())
-    $this.find('.tlds-uk').show();
-  ##endif
-}
-function formatDomainWithDefaultTld(domain) {
-  alert("todo: formatDomainWithDefaultTld() ");
-  // TODO: check to see fi there's already a TLD on it
-  return domain + '.' + got1Page.defaultTld;
-}
-function isTldValid(domain) {
-  //TODO: check list of valid TLDs
-  alert("todo: isTldValid() ");
-  return true;
-}
-function displayInvlidTldMessage($this){
-  alert("todo: displayInvlidTldMessage() ");
-}
-
-function domainSearchFormSubmit(e) {
- 
-  var $this = $(e.target),
-    $textInput = $this.siblings('.search-form-input'),
-    domain = $textInput.val(), 
-    sucessful = false;
-
-  if((domain && domain.length==0) || !domain) return;
-  
-  domain = formatDomainWithDefaultTld(domain);
-
-  if(!isTldValid(domain)) {
-    displayInvlidTldMessage($this);
-    return;
-  }
-
-  var apiEndpoint = '[@T[link:<relative path="~/domainsapi/v1/search/free"><param name="domain" value="domain" /><param name="itc" value="itc" /></relative>]@T]';
-      apiEndpoint = apiEndpoint.replace('domain=domain', 'q=' + domain);
-      apiEndpoint = apiEndpoint.replace('itc=itc', 'key=' + got1Page.offersCodes.itc_wsb);
-
-  $this.addClass('disabled');
-
-  $.ajaxSetup({cache:false});
-  $.ajax({
-    url: apiEndpoint,
-    type: 'GET',
-    dataType: 'json',
-    cache: false,
-    success: function(data){ 
-        var 
-          exactMatchDomain = data.ExactMatchDomain || {},
-          searchedForDomain = exactMatchDomain.Fqdn ? exactMatchDomain.Fqdn : domain,
-          isAvailable = exactMatchDomain.IsPurchasable && exactMatchDomain.IsPurchasable === true, /* data.ExactMatchDomain.AvailabilityStatus 1001=unavailable 1000=available*/
-          alternateDomains = data.RecommendedDomains || [];
-
-        if(isAvailable) {
-          showSuccessfulSearch(exactMatchDomain);
-        } else {
-
-          if(alternateDomains.length > 0) {
-            // SHOW SPINS
-            showSearchSpins(exactMatchDomain, alternateDomains);
-          } else {
-            // NO SPINS
-            showApi1SearchError(e, domain);
-          }
-        }    
-
-    },
-    error: function(){
-        showApi1SearchError(e, domain);
-    }
-  });
-
-}
-
-
-function verifyDomainIsStillAvailable(e) {
-  var $this = $(e.target),
-    domain = $this.data('domain');
-
-  // TODO!
-  alert('TODO verifyDomainIsStillAvailable(' + domain.Fqdn + ')');
-
-}
-
-function showChoicesScreen(e){
-  var $this = $(e.target),
-    domain = $this.data('domain');
-
-  alert('TODO showChoicesScreen(' + domain.Fqdn + ')');
-
-}
-
-function goToDppCheckoutPage(e) {
-  var $this = $(e.target),
-    domain = $this.data('domain');
-
-  alert('TODO goToDppCheckoutPage(' + domain.Fqdn + ')');
-
-}
-
-function showSuccessfulSearch(domain){  
-
-  $('#available-domain-name').text(domain.Fqdn);
-  animateToAvailable(domain);
-
-}
-
-function showSearchSpins(domain, alternateDomains){  
-
-  var $spinResults = $('#spin-results');
-  var $spinTemplate = $spinResults.find('.spin-template');
-  $.each(alternateDomains, function(idx,domain){
-    var $newSpin = $spinTemplate.clone().removeClass('spin-template');
-    $newSpin.find('.domain-name-display').text(domain.NameWithoutExtension);
-    $newSpin.find('.domain-name-display-tld').text(domain.Extension);
-    $newSpin.find('.btn-primary').data('domain', domain);
-    $spinResults.append($newSpin);
-  });
-  var $header = $('#domain-not-available-marquee-view').find('.results-list-heading-text');
-
-  var numbersHtml = $header.html();
-  numbersHtml = numbersHtml.replace(/\{0\}/gi, got1Page.maxNumberOfSpinsToShowByDefault); 
-  numbersHtml = numbersHtml.replace(/\{1\}/gi, alternateDomains.length);
-  $header.html(numbersHtml);
-
-  animateToNotAvailable(domain); 
-
-}
-
-function showApi1SearchError(e,domain){
-  // TODO!
-  alert('TODO showApi1SearchError()');
-}
-
-function showApi2SearchError(e,domain){
-  // TODO!
-  alert('TODO showApi2SearchError()');
-}
-
-function showApi3SearchError(e,domain){
-  // TODO!
-  alert('TODO showApi3SearchError()');
-}
-
-function showDomainRegistrationFailure() {
-  // TODO!
-  alert('TODO showDomainRegistrationFailure()');
-}
-      </script>
-    </atlantis:webstash>
-    <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7914312/697366/css/fonts.css"> 
-    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags"><Parameters><Parameter key="manifest" value="salesheader" /></Parameters></Data>]@P]
-    <link href="[@T[link:<cssroot />]@T]/fos/mike/0.7.0/css/sahara.css" rel="stylesheet">
-    <script src="[@T[link:<javascriptroot />]@T]/ux/dev-brand/js/uxcore.en.min.js"></script>
-    <link href="[@T[link:<cssroot />]@T]/ux/dev-brand/css/uxcore.css" rel="stylesheet">
-    <link href="[@T[link:<cssroot />]@T]/ux/dev-brand/css/uxcontrols.css" rel="stylesheet">
-    <script src="[@T[link:<javascriptroot />]@T]/ux/dev-brand/js/uxcontrols.js"></script>
-    <script type="text/javascript">
-      window.config = window.config || {};
-      window.config.uxcore = true;
-      window.config.gdCdnHostUrl = '[@T[link:<cssroot />]@T]';
-      window.config.env = 'dev';
-      
-    </script><!--[if lt IE 9]>
-=======
     </style><!--[if lt IE 9]>
->>>>>>> ad52d031a4c42c2a454ac0290c68e8a55f9079ec
     <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
     <link href="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy.min.html" id="respond-proxy" rel="respond-proxy">
     <script src="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy-combo.min.js"></script><![endif]-->
@@ -4584,36 +4556,11 @@ function showDomainRegistrationFailure() {
     <!-- HEADERBEGIN--> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /></Parameters></Data>]@P]
     <!-- HEADEREND-->
-<<<<<<< HEAD
     <!-- none-->
-=======
-    <!-- -->
->>>>>>> ad52d031a4c42c2a454ac0290c68e8a55f9079ec
     <section id="marquee">
       <style>
         #marquee {margin:0 auto; padding-top:15px;background-color: #77c043;}
         #marquee .get-a-domain-text { margin-top: 20px; }
-<<<<<<< HEAD
-=======
-      </style>
-      <style>
-        #default-marquee-view { display: inline; }
-        #default-marquee-view .get-online-wrapper {position: relative; height: 260px;}
-        #default-marquee-view .get-online-dash {position: absolute; left: 20px; top: 10px;}
-        #default-marquee-view .get-online-text {font-size: 46pt; color:#333333;}
-        #default-marquee-view .get-online-image {width: 275px; overflow: hidden; display: inline-block ;height: 35px;}
-        #default-marquee-view .green-arrow {position: absolute; left: 0px; top: 137px;}
-        #default-marquee-view .today-text {position: absolute; left: 20px; top: 55px; font-size: 104pt;margin: 0px;color:#333333;}
-        #default-marquee-view .as-low-as-text {position: absolute; left: 45px; top: 170px; color: #fff;}
-        #default-marquee-view .top-disclaimer-text {position: absolute; left: 45px; top: 240px; color:#00701D;font-size: 12px}
-        #default-marquee-view .you-get-wrapper {position: relative; height: 260px;}
-        #default-marquee-view .you-get-image {position: absolute; left: 10px; top: 70px; height: 35px;}
-        #default-marquee-view .domain-text {position: absolute; left: 30px; top: 185px; font-size: 25px; color: #333333;}
-        #default-marquee-view .website-text {position: absolute; left: 40px; top: 185px; font-size: 25px; color: #333333;}
-        #default-marquee-view .email-text {position: absolute; left: 65px;  top: 185px; font-size: 25px; color: #333333;}
-        #default-marquee-view .powered-by-text {position: absolute; left: 55px; top: 214px; font-size: 11px; color: #333333;}
-        #default-marquee-view .MSO365-text { position: absolute; left: 34px; top: 227px; font-size: 11px; color: #333333;}
->>>>>>> ad52d031a4c42c2a454ac0290c68e8a55f9079ec
       </style>
       <atlantis:webstash type="js">
         <style>
@@ -4785,11 +4732,8 @@ function showDomainRegistrationFailure() {
         #domain-not-available-marquee-view .domain-name-display {text-transform: lowercase; margin-bottom: 0px; margin-top: 0px;}
         #domain-not-available-marquee-view .domain-name-display-tld {text-transform: lowercase;margin-bottom: 0px; margin-top: 0px;}
         #domain-not-available-marquee-view .show-more-arrow { position: relative; top: 16px; left: 15px; bottom: 0; margin-left: -10px; width: 0; height: 0; border: 11px solid transparent; border-top-color: #000; content: ''; }
-<<<<<<< HEAD
         
         #spin-results .spin-template {display:none;}
-=======
->>>>>>> ad52d031a4c42c2a454ac0290c68e8a55f9079ec
       </style>
       <section id="domain-not-available-marquee-view">
         <div class="bg-green-official">
