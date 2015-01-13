@@ -1,6 +1,11 @@
 var got1Page = {
-  tlds: ['com','org','co','net', 'club', 'rocks'],
-  defaultTld: 'com',
+  tldInfo: {
+    defaultTld: 'com',    
+    tlds: ['com','org','co','net', 'club', 'rocks'],  /* todo: drive from a config val */
+    possibleAdditionalTlds: ['in', 'ca'], /* todo: drive from a config val */
+    isPossibleAdditionalTld: function(tld) {return -1 !== $.inArray(tld, got1Page.tldInfo.possibleAdditionalTlds);}
+  },
+  sfDialogErrorButtons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }],
   maxNumberOfSpinsToShowByDefault: 3,
   dppErrorReturnUrl: '[@T[link:<relative path="~/offers/online-business.aspx"><param name="err" value="dpp1" /></relative>]@T]',
   offersCodes: {
@@ -19,26 +24,42 @@ var got1Page = {
   imagePath: '[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/'
 };
 
+##if(countrySiteAny(ca) || isManager())  
+  if(got1Page.tldInfo.isPossibleAdditionalTld('ca')) {
+    got1Page.tldInfo.tlds.push('ca');
+    got1Page.tldInfo.defaultTld = 'ca';
+  }
+##endif
 ##if(countrySiteAny(br) || isManager())
-  got1Page.tlds.push('br');
-  got1Page.defaultTld = 'br';
+  if(got1Page.tldInfo.isPossibleAdditionalTld('br')) {
+    got1Page.tldInfo.tlds.push('br');
+    got1Page.tldInfo.defaultTld = 'br';
+  }
 ##endif
 ##if(countrySiteAny(in) || isManager())
-  got1Page.tlds.push('in');
-  got1Page.defaultTld = 'in';
+  if(got1Page.tldInfo.isPossibleAdditionalTld('in')) {
+    got1Page.tldInfo.tlds.push('in');
+    got1Page.tldInfo.defaultTld = 'in';
+  }
 ##endif
 ##if(countrySiteAny(uk) || isManager())
-  got1Page.tlds.push('uk');
-  got1Page.tlds.push('co.uk');
-  got1Page.defaultTld = 'uk';
+  if(got1Page.tldInfo.isPossibleAdditionalTld('co.uk')) {
+    got1Page.tldInfo.tlds.push('co.uk');
+    got1Page.tldInfo.defaultTld = 'co.uk';
+  }
+  if(got1Page.tldInfo.isPossibleAdditionalTld('uk')) {
+    got1Page.tldInfo.tlds.push('uk');
+    got1Page.tldInfo.defaultTld = 'uk';
+  }
 ##endif
 
-$(document).ready(function() {
 
+$(document).ready(function() {
 
   //dynamically build the tld images in the #findYourPerfectDomain section
   showTldImages();
 
+  $('#marquee .invalid-TLD-entered').append($('<span style="margin-left:10px;">').text("." + got1Page.tldInfo.tlds.join(', .')));
 
   $('[data-tokenize]').each(function(){
     var $this = $(this),
@@ -50,13 +71,32 @@ $(document).ready(function() {
       .removeAttr('data-tokenize');
   });
 
+
   //set up domain search buttons to do a domain search
-  $('#marquee').on('click', '.offer-search-btn', function(e) {
-    window.setTimeout(function(){
+  $('#marquee')
+    .on('keyup', '.search-form-input', function(e) { 
+      console.log(e.which);
+      if ( e.which == 13 ) {
+        // enter key!
+        e.preventDefault();
+        domainSearchFormSubmit(e);
+        return false;
+      } else {
+        // verify domain name has a good tld
+        var domain = $(e.target).val();
+        if(domain.indexOf('.') > 0 && !isTldValid(domain)) {
+          displayInvlidTldMessage();
+        } else {
+          showTypeYourDomain();
+        }
+      }
+
+    })
+    .on('click', '.offer-search-btn', function(e) {
+      e.preventDefault();
       domainSearchFormSubmit(e);
-    },0);
-    return false;
-  });
+      return false;
+    });
 
   // set up verify buttons on spin results to do validation before sending to DPP
   $('#domain-available-marquee-view').on('click', '.purchase-btn', showChoicesScreen);
@@ -77,39 +117,50 @@ $(document).ready(function() {
 });
 
 function showTldImages() {
-  console.log('TODO: showTldImages');
-  return;
   //dynamically build the tld images in the #findYourPerfectDomain section
-  var $imageDiv = $('#findYourPerfectDomain').find(".features-img").parent().empty();
-  $.each(got1Page.tlds, function(idx, tld){
-    var $img = $('<img>').attr('src', got1Page.imagePath + 'tld-' + tld + '.jpg');
+  var $imageDiv = $('#findYourPerfectDomain').find(".features-img").parent().empty().addClass('tld-images');
+  $.each(got1Page.tldInfo.tlds, function(idx, tld){
+    var $img = $('<img>')
+      .addClass('tld-image')
+      .attr('src', got1Page.imagePath + 'tld-' + tld + '.png');
     $imageDiv.append($img);
   });
 
   // TODO: rerun the height alignment
+  $('#findYourPerfectDomain [data-center-element]').css({marginTop:"0px"});
+  $(window).trigger('resize');
 }
 
 function populateTldsOnDisclaimerModal(selector) {
   var $this = $(selector);
   ##if(countrySiteAny(br) || isManager())
-    $this.find('.tlds-br').show();
+    if(got1Page.tldInfo.isPossibleAdditionalTld('br')) {
+      $this.find('.tlds-br').show();
+    }
   ##endif
   ##if(countrySiteAny(in) || isManager())
-    $this.find('.tlds-in').show();
+    if(got1Page.tldInfo.isPossibleAdditionalTld('in')) {
+      $this.find('.tlds-in').show();
+    }
   ##endif
   ##if(countrySiteAny(uk) || isManager())
-    $this.find('.tlds-uk').show();
+    if(got1Page.tldInfo.isPossibleAdditionalTld('uk')) {
+      $this.find('.tlds-uk').show();
+    }
   ##endif
 }
 
 function formatDomainWithDefaultTldIfNoneSpecified(domain) {
   if(domain.indexOf('.') > 0) return domain;
-  return domain + '.' + got1Page.defaultTld;
+  return domain + '.' + got1Page.tldInfo.defaultTld;
 }
 
 function isTldValid(domain) {
   var isValid = false;
-  $.each(got1Page.tlds, function(idx, tld) {
+  if(domain=='test.com') {
+    debugger;
+  }
+  $.each(got1Page.tldInfo.tlds, function(idx, tld) {
     if(domain.indexOf(tld, domain.length - tld.length) !== -1) {
       isValid = true;
     }
@@ -131,7 +182,7 @@ function domainSearchFormSubmit(e) {
   domain = formatDomainWithDefaultTldIfNoneSpecified(domain);
 
   if(!isTldValid(domain)) {
-    displayInvlidTldMessage($this);
+    displayInvlidTldMessage();
     return;
   }
 
@@ -313,31 +364,29 @@ function showApi1SearchError(e,domain){
   $('.api-A-failure').show();
 }
 
-function displayInvlidTldMessage($this){
-  $('.search-message').hide();
-  $('.invalid-TLD-entered').show();
+function displayInvlidTldMessage(){
+  $('#marquee .search-message').hide();
+  $('#marquee .invalid-TLD-entered').show();
 }
 
 function showApi2SearchError(e,domain){
-  // TODO!
-  alert('TODO showApi2SearchError()');
   var $modal = $("#step2-choose-product .api-b-failure-modal");
-  $modal.sfDialog({titleHidden:true});
+  $modal.sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
 }
 
 function showApi3SearchError(e,domain){
   
   var $modal = $("#step2-choose-product .api-c-failure-modal");
-  $modal.sfDialog({titleHidden:true, buttons: []});
+  $modal.sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
 
 }
 
 function showDomainRegistrationFailure() {
-  $('.search-message').hide();
-  $('.domain-eligibility-fail').show();
+  $('#marquee .search-message').hide();
+  $('#marquee .domain-eligibility-fail').show();
 }
 
 function showTypeYourDomain() {  
-  $('.search-message').hide();
-  $('.type-your-business-name').show();
+  $('#marquee .search-message').hide();
+  $('#marquee .type-your-business-name').show();
 }

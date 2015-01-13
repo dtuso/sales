@@ -36,8 +36,13 @@
     <script src="[@T[link:<javascriptroot />]@T]/fos/mike/0.7.0/js/sahara.min.js"></script>
     <atlantis:webstash type="js">
       <script>var got1Page = {
-  tlds: ['com','org','co','net', 'club', 'rocks'],
-  defaultTld: 'com',
+  tldInfo: {
+    defaultTld: 'com',    
+    tlds: ['com','org','co','net', 'club', 'rocks'],  /* todo: drive from a config val */
+    possibleAdditionalTlds: ['in', 'ca'], /* todo: drive from a config val */
+    isPossibleAdditionalTld: function(tld) {return -1 !== $.inArray(tld, got1Page.tldInfo.possibleAdditionalTlds);}
+  },
+  sfDialogErrorButtons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }],
   maxNumberOfSpinsToShowByDefault: 3,
   dppErrorReturnUrl: '[@T[link:<relative path="~/offers/online-business.aspx"><param name="err" value="dpp1" /></relative>]@T]',
   offersCodes: {
@@ -56,26 +61,42 @@
   imagePath: '[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/'
 };
 
+##if(countrySiteAny(ca) || isManager())  
+  if(got1Page.tldInfo.isPossibleAdditionalTld('ca')) {
+    got1Page.tldInfo.tlds.push('ca');
+    got1Page.tldInfo.defaultTld = 'ca';
+  }
+##endif
 ##if(countrySiteAny(br) || isManager())
-  got1Page.tlds.push('br');
-  got1Page.defaultTld = 'br';
+  if(got1Page.tldInfo.isPossibleAdditionalTld('br')) {
+    got1Page.tldInfo.tlds.push('br');
+    got1Page.tldInfo.defaultTld = 'br';
+  }
 ##endif
 ##if(countrySiteAny(in) || isManager())
-  got1Page.tlds.push('in');
-  got1Page.defaultTld = 'in';
+  if(got1Page.tldInfo.isPossibleAdditionalTld('in')) {
+    got1Page.tldInfo.tlds.push('in');
+    got1Page.tldInfo.defaultTld = 'in';
+  }
 ##endif
 ##if(countrySiteAny(uk) || isManager())
-  got1Page.tlds.push('uk');
-  got1Page.tlds.push('co.uk');
-  got1Page.defaultTld = 'uk';
+  if(got1Page.tldInfo.isPossibleAdditionalTld('co.uk')) {
+    got1Page.tldInfo.tlds.push('co.uk');
+    got1Page.tldInfo.defaultTld = 'co.uk';
+  }
+  if(got1Page.tldInfo.isPossibleAdditionalTld('uk')) {
+    got1Page.tldInfo.tlds.push('uk');
+    got1Page.tldInfo.defaultTld = 'uk';
+  }
 ##endif
 
-$(document).ready(function() {
 
+$(document).ready(function() {
 
   //dynamically build the tld images in the #findYourPerfectDomain section
   showTldImages();
 
+  $('#marquee .invalid-TLD-entered').append($('<span style="margin-left:10px;">').text("." + got1Page.tldInfo.tlds.join(', .')));
 
   $('[data-tokenize]').each(function(){
     var $this = $(this),
@@ -87,13 +108,32 @@ $(document).ready(function() {
       .removeAttr('data-tokenize');
   });
 
+
   //set up domain search buttons to do a domain search
-  $('#marquee').on('click', '.offer-search-btn', function(e) {
-    window.setTimeout(function(){
+  $('#marquee')
+    .on('keyup', '.search-form-input', function(e) { 
+      console.log(e.which);
+      if ( e.which == 13 ) {
+        // enter key!
+        e.preventDefault();
+        domainSearchFormSubmit(e);
+        return false;
+      } else {
+        // verify domain name has a good tld
+        var domain = $(e.target).val();
+        if(domain.indexOf('.') > 0 && !isTldValid(domain)) {
+          displayInvlidTldMessage();
+        } else {
+          showTypeYourDomain();
+        }
+      }
+
+    })
+    .on('click', '.offer-search-btn', function(e) {
+      e.preventDefault();
       domainSearchFormSubmit(e);
-    },0);
-    return false;
-  });
+      return false;
+    });
 
   // set up verify buttons on spin results to do validation before sending to DPP
   $('#domain-available-marquee-view').on('click', '.purchase-btn', showChoicesScreen);
@@ -114,39 +154,50 @@ $(document).ready(function() {
 });
 
 function showTldImages() {
-  console.log('TODO: showTldImages');
-  return;
   //dynamically build the tld images in the #findYourPerfectDomain section
-  var $imageDiv = $('#findYourPerfectDomain').find(".features-img").parent().empty();
-  $.each(got1Page.tlds, function(idx, tld){
-    var $img = $('<img>').attr('src', got1Page.imagePath + 'tld-' + tld + '.jpg');
+  var $imageDiv = $('#findYourPerfectDomain').find(".features-img").parent().empty().addClass('tld-images');
+  $.each(got1Page.tldInfo.tlds, function(idx, tld){
+    var $img = $('<img>')
+      .addClass('tld-image')
+      .attr('src', got1Page.imagePath + 'tld-' + tld + '.png');
     $imageDiv.append($img);
   });
 
   // TODO: rerun the height alignment
+  $('#findYourPerfectDomain [data-center-element]').css({marginTop:"0px"});
+  $(window).trigger('resize');
 }
 
 function populateTldsOnDisclaimerModal(selector) {
   var $this = $(selector);
   ##if(countrySiteAny(br) || isManager())
-    $this.find('.tlds-br').show();
+    if(got1Page.tldInfo.isPossibleAdditionalTld('br')) {
+      $this.find('.tlds-br').show();
+    }
   ##endif
   ##if(countrySiteAny(in) || isManager())
-    $this.find('.tlds-in').show();
+    if(got1Page.tldInfo.isPossibleAdditionalTld('in')) {
+      $this.find('.tlds-in').show();
+    }
   ##endif
   ##if(countrySiteAny(uk) || isManager())
-    $this.find('.tlds-uk').show();
+    if(got1Page.tldInfo.isPossibleAdditionalTld('uk')) {
+      $this.find('.tlds-uk').show();
+    }
   ##endif
 }
 
 function formatDomainWithDefaultTldIfNoneSpecified(domain) {
   if(domain.indexOf('.') > 0) return domain;
-  return domain + '.' + got1Page.defaultTld;
+  return domain + '.' + got1Page.tldInfo.defaultTld;
 }
 
 function isTldValid(domain) {
   var isValid = false;
-  $.each(got1Page.tlds, function(idx, tld) {
+  if(domain=='test.com') {
+    debugger;
+  }
+  $.each(got1Page.tldInfo.tlds, function(idx, tld) {
     if(domain.indexOf(tld, domain.length - tld.length) !== -1) {
       isValid = true;
     }
@@ -168,7 +219,7 @@ function domainSearchFormSubmit(e) {
   domain = formatDomainWithDefaultTldIfNoneSpecified(domain);
 
   if(!isTldValid(domain)) {
-    displayInvlidTldMessage($this);
+    displayInvlidTldMessage();
     return;
   }
 
@@ -350,33 +401,31 @@ function showApi1SearchError(e,domain){
   $('.api-A-failure').show();
 }
 
-function displayInvlidTldMessage($this){
-  $('.search-message').hide();
-  $('.invalid-TLD-entered').show();
+function displayInvlidTldMessage(){
+  $('#marquee .search-message').hide();
+  $('#marquee .invalid-TLD-entered').show();
 }
 
 function showApi2SearchError(e,domain){
-  // TODO!
-  alert('TODO showApi2SearchError()');
   var $modal = $("#step2-choose-product .api-b-failure-modal");
-  $modal.sfDialog({titleHidden:true});
+  $modal.sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
 }
 
 function showApi3SearchError(e,domain){
   
   var $modal = $("#step2-choose-product .api-c-failure-modal");
-  $modal.sfDialog({titleHidden:true, buttons: []});
+  $modal.sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
 
 }
 
 function showDomainRegistrationFailure() {
-  $('.search-message').hide();
-  $('.domain-eligibility-fail').show();
+  $('#marquee .search-message').hide();
+  $('#marquee .domain-eligibility-fail').show();
 }
 
 function showTypeYourDomain() {  
-  $('.search-message').hide();
-  $('.type-your-business-name').show();
+  $('#marquee .search-message').hide();
+  $('#marquee .type-your-business-name').show();
 }
       </script>
     </atlantis:webstash>
@@ -4807,7 +4856,7 @@ section#products {
             .offer-search-box label.searchInput {};
             form.search-form button.offer-search-btn { font-size: 20px; height: 66px; margin-top: -6px; }
             .offer-search-section { padding-bottom:20px;}
-            .search-message { display: none; margin-left:20px; margin-top:30px;width:50%;}
+            .search-message { display: none; margin-left:20px; margin-top:30px;width:65%;}
             
             
           </style>
@@ -4871,7 +4920,7 @@ section#products {
               .offer-search-box label.searchInput {};
               form.search-form button.offer-search-btn { font-size: 20px; height: 66px; margin-top: -6px; }
               .offer-search-section { padding-bottom:20px;}
-              .search-message { display: none; margin-left:20px; margin-top:30px;width:50%;}
+              .search-message { display: none; margin-left:20px; margin-top:30px;width:65%;}
               
               
             </style>
@@ -4934,7 +4983,7 @@ section#products {
               .offer-search-box label.searchInput {};
               form.search-form button.offer-search-btn { font-size: 20px; height: 66px; margin-top: -6px; }
               .offer-search-section { padding-bottom:20px;}
-              .search-message { display: none; margin-left:20px; margin-top:30px;width:50%;}
+              .search-message { display: none; margin-left:20px; margin-top:30px;width:65%;}
               
               
             </style>
@@ -5085,6 +5134,16 @@ section#products {
         </div>
       </div>
     </section>
+    <style>
+      #domains .tld-images {margin-top: 0px; margin-left: 60px;}
+      #domains .tld-image {margin: 15px;}
+      #findYourPerfectDomain.tile-section {
+        padding:0 30px;
+      }
+      #findYourPerfectDomain.features-slim {
+        min-height: 241px;
+      }
+    </style>
     <section id="domains">
       <div class="features tile-section">
         <div class="container">
@@ -5169,7 +5228,6 @@ section#products {
                   <div class="plan-inline-disclaimer">Annual purchase required. Price valid 1st year only. Renews for $11.99/month. See details.</div>
                 </div>
                 <button class="btn btn-md btn-block btn-purchase product-wsb">Select</button>
-                <div class="plan-choice-message api-C-failure">API C FAILURE</div>
                 <div class="include-check-green">Choose from dozens of professional website designs</div>
                 <div class="include-check-green"> Customizable text and images with intuitive drag and drop tools</div>
                 <div class="include-check-green"> Create unlimited pages</div>
@@ -5188,7 +5246,6 @@ section#products {
                   <div class="plan-inline-disclaimer">Annual purchase required. Price valid 1st year only. Renews for $29.99/month. See details.</div>
                 </div>
                 <button class="btn btn-md btn-block btn-purchase product-ols">Select</button>
-                <div class="plan-choice-message api-C-failure">API C FAILURE</div>
                 <div class="include-check-green"> Includes Online Store with Website</div>
                 <div class="include-check-green"> Offer unlimited products</div>
                 <div class="include-check-green"> Accept credit cards and PayPal<super>&reg;</super> with secure checkout</div>
