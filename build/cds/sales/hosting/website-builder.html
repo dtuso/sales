@@ -29,6 +29,10 @@
     <script src="[@T[link:<javascriptroot />]@T]/ux/dev-brand/js/uxcore.en.min.js"></script>
     <script src="[@T[link:<javascriptroot />]@T]/ux/dev-brand/js/uxcontrols.min.js"></script>
     <script src="[@T[link:<javascriptroot />]@T]/fos/mike/0.7.0/js/sahara.min.js"></script>
+    <link href="[@T[link:<cssroot />]@T]/ux/dev-brand/css/uxcontrols.css" rel="stylesheet">
+    <link href="[@T[link:<cssroot />]@T]/ux/dev-brand/css/uxcore.css" rel="stylesheet">
+    <link href="[@T[link:<cssroot />]@T]/fos/mike/0.7.0/css/sahara.css" rel="stylesheet">
+    <link href="[@T[link:<cssroot />]@T]/fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css">
     <style>
 .plan-tile { 
   margin-top: -240px; 
@@ -311,6 +315,11 @@
 .mid-page-nav .price {
   font-size: 24px;
   font-size: 2.4rem;
+}
+@media only screen and (max-width: 768px){
+  .mid-page-nav {
+    display: none;
+  }
 }
     </style>
     <div class="mid-page-nav">
@@ -1369,11 +1378,7 @@ margin-bottom: 20px;
         var dropdownCaret = $(this).find(".carett");
         var dropdowns = $(dropdownGroup).find(".accordion-dropdown");
       
-        $(dropdowns).removeClass("active");
-        $(dropdownGroup).find(".dropdown").slideUp();
-        $(dropdownGroup).find(".carett")
-                        .removeClass("caret-down")
-                        .addClass("caret-right");
+        
       
         if (!$(dropdownOptions).is(":visible")) {
           $(this).addClass("active");
@@ -1381,12 +1386,22 @@ margin-bottom: 20px;
           $(dropdownCaret).removeClass("caret-right").addClass("caret-down");
           event.stopPropagation();
         }
+        else {
+          $(this).removeClass("active");
+          $(dropdownOptions).slideUp();
+          $(dropdownCaret).removeClass("caret-down").addClass("caret-right");
+          event.stopPropagation();
+        }
       });
       $(window).load(function() {
-        $("#test-faq .accordion-dropdown:first").click();
+        $("#test-faq .accordion-dropdown").click();
       });
       $("#test-button").click(function() {
         $('#test-faq').find('.dropdown').slideDown();
+        $('#test-faq').find('.accordion-dropdown').find('.carett')
+                        .removeClass("caret-right")
+                        .addClass("caret-down");
+        $('#test-faq').find('.accordion-dropdown').addClass("active");
        });
     </script>
     <section id="other-products">
