@@ -62,8 +62,9 @@ $(document).ready(function() {
 
   // set up verify buttons on spin results to do validation before sending to DPP
   $('#domain-available-marquee-view').on('click', '.purchase-btn', showChoicesScreen);
+  
+  showTypeYourDomain();
 
-  $('#default-marquee-view .type-your-business-name').show();
   $('#domain-not-available-marquee-view').on('click', '.select-and-continue', verifyDomainIsStillAvailable);
   $('#step2-choose-product').on('click','.btn-purchase', goToDppCheckoutPage);
 
@@ -118,9 +119,6 @@ function isTldValid(domain) {
   return isValid;
 }
 
-function displayInvlidTldMessage($this){
-  alert("todo: displayInvlidTldMessage() ");
-}
 
 function domainSearchFormSubmit(e) {
  
@@ -277,6 +275,11 @@ function showApi1SearchError(e,domain){
   $('.api-A-failure').show();
 }
 
+function displayInvlidTldMessage($this){
+  $('.search-message').hide();
+  $('.invalid-TLD-entered').show();
+}
+
 function showApi2SearchError(e,domain){
   // TODO!
   alert('TODO showApi2SearchError()');
@@ -288,6 +291,11 @@ function showApi3SearchError(e,domain){
 }
 
 function showDomainRegistrationFailure() {
-  // TODO!
-  alert('TODO showDomainRegistrationFailure()');
+  $('.search-message').hide();
+  $('.domain-eligibility-fail').show();
+}
+
+function showTypeYourDomain() {  
+  $('.search-message').hide();
+  $('.type-your-business-name').show();
 }

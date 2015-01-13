@@ -54,8 +54,7 @@ var got1Page = {
     bundleRenewal_wsb: '[@T[multipleproductprice:<list productidlist="464069|101|7524" period="monthly"></list>]@T]',
     bundleRenewal_ols: '[@T[multipleproductprice:<list productidlist="40972|101|7524" period="monthly"></list>]@T]',
     bingAdCredits: '[@T[currencyprice:<price usdamount="5000" dropdecimal="true" htmlsymbol="false" />]@T]'
-  },
-  imagePath: '[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/'
+  }
 };
 
 ##if(countrySiteAny(br) || isManager())
@@ -74,11 +73,6 @@ var got1Page = {
 
 $(document).ready(function() {
 
-
-  //dynamically build the tld images in the #findYourPerfectDomain section
-  showTldImages();
-
-
   $('[data-tokenize]').each(function(){
     var $this = $(this),
       html = $this.html(),
@@ -92,18 +86,16 @@ $(document).ready(function() {
   //set up domain search buttons to do a domain search
   $('#marquee').on('click', '.offer-search-btn', function(e) {
     window.setTimeout(function(){
+      console.log(1);
       domainSearchFormSubmit(e);
     },0);
     return false;
   });
 
   // set up verify buttons on spin results to do validation before sending to DPP
-  $('#domain-available-marquee-view').on('click', '.purchase-btn', showChoicesScreen);
-  
-  showTypeYourDomain();
-
-  $('#domain-not-available-marquee-view').on('click', '.select-and-continue', verifyDomainIsStillAvailable);
-  $('#step2-choose-product').on('click','.btn-purchase', goToDppCheckoutPage);
+  $('#marquee').on('click', '.spin-domain-action-button', verifyDomainIsStillAvailable);
+  $('#marquee').on('click', '.purchase-btn', showChoicesScreen);
+  $('#marquee').on('click', '.select-and-continue', verifyDomainIsStillAvailable);
 
   // track ci codes
   $('[data-ci]').click(function (e) {
@@ -114,19 +106,6 @@ $(document).ready(function() {
   });
 
 });
-
-function showTldImages() {
-  console.log('TODO: showTldImages');
-  return;
-  //dynamically build the tld images in the #findYourPerfectDomain section
-  var $imageDiv = $('#findYourPerfectDomain').find(".features-img").parent().empty();
-  $.each(got1Page.tlds, function(idx, tld){
-    var $img = $('<img>').attr('src', got1Page.imagePath + 'tld-' + tld + '.jpg');
-    $imageDiv.append($img);
-  });
-
-  // TODO: rerun the height alignment
-}
 
 function populateTldsOnDisclaimerModal(selector) {
   var $this = $(selector);
@@ -156,14 +135,16 @@ function isTldValid(domain) {
   return isValid;
 }
 
+function displayInvlidTldMessage($this){
+  alert("todo: displayInvlidTldMessage() ");
+}
 
 function domainSearchFormSubmit(e) {
  
   var $this = $(e.target),
     $textInput = $this.siblings('.search-form-input'),
     domain = $textInput.val().trim(), 
-    sucessful = false,
-    apiEndpoint1;
+    sucessful = false;
 
   if((domain && domain.length==0) || !domain) return;
   
@@ -174,13 +155,15 @@ function domainSearchFormSubmit(e) {
     return;
   }
 
-  apiEndpoint1 = '[@T[link:<relative path="~/domainsapi/v1/search/free"><param name="domain" value="domain" /><param name="itc" value="itc" /></relative>]@T]';
-  apiEndpoint1 = apiEndpoint1.replace('domain=domain', 'q=' + domain);
-  apiEndpoint1 = apiEndpoint1.replace('itc=itc', 'key=' + got1Page.offersCodes.itc_wsb);
+  var apiEndpoint = '[@T[link:<relative path="~/domainsapi/v1/search/free"><param name="domain" value="domain" /><param name="itc" value="itc" /></relative>]@T]';
+  apiEndpoint = apiEndpoint.replace('domain=domain', 'q=' + domain);
+  apiEndpoint = apiEndpoint.replace('itc=itc', 'key=' + got1Page.offersCodes.itc_wsb);
+
+  $this.addClass('disabled');
 
   $.ajaxSetup({cache:false});
   $.ajax({
-    url: apiEndpoint1,
+    url: apiEndpoint,
     type: 'GET',
     dataType: 'json',
     cache: false,
@@ -192,9 +175,7 @@ function domainSearchFormSubmit(e) {
           alternateDomains = data.RecommendedDomains || [];
 
         if(isAvailable) {
-          // Domain is available, so allow them to search again or to select this available domain
           showSuccessfulSearch(exactMatchDomain);
-
         } else {
 
           if(alternateDomains.length > 0) {
@@ -204,12 +185,11 @@ function domainSearchFormSubmit(e) {
             // NO SPINS
             showApi1SearchError(e, domain);
           }
-
         }    
 
     },
     error: function(){
-      showApi1SearchError(e, domain);
+        showApi1SearchError(e, domain);
     }
   });
 
@@ -218,39 +198,10 @@ function domainSearchFormSubmit(e) {
 
 function verifyDomainIsStillAvailable(e) {
   var $this = $(e.target),
-    $thisParent = $this.parent(),
-    domain = $this.data('domain'),
-    apiEndpoint2;
+    domain = $this.data('domain');
 
-  $thisParent.find('.spin-results-message').hide(); // aka $this, but code is easier to read with the find()
-  $thisParent.find('.checking-availability').show();
-
-  apiEndpoint2 = '[@T[link:<relative path="~/domains/actions/json/domainavailabilitycheck.aspx"><param name="sld" value="sld" /><param name="tld" value="tld" /><param name="targetdivid" value="x" /><param name="source" value="domaincheck" /><param name="addIfAvailable" value="false" /></relative>]@T]';
-  apiEndpoint2 = apiEndpoint2.replace('sld=sld', 'sld=' + domain.NameWithoutExtension);
-  apiEndpoint2 = apiEndpoint2.replace('tld=tld', 'tld=' + domain.Extension);
-
-  $.ajaxSetup({cache:false});
-  $.ajax({
-    url: apiEndpoint2,
-    type: 'GET',
-    dataType: 'json',
-    cache: false,
-    success: function(data){
-      data = data || {};
-      data.Properties = data.Properties || {};
-      data.Properties.domainInfo = data.Properties.domainInfo || [{isAvailable: false}];
-      if(data.Properties.domainInfo[0].isAvailable) {
-        showChoicesScreen(e);
-      } else {
-        // display domain is now unavailable message
-        $thisParent.find('.spin-results-message').hide();
-        $thisParent.find('.now-unavailable').show();
-      }
-    },
-    error: function(){
-      showApi2SearchError(e, domain);
-    }
-  });
+  // TODO!
+  alert('TODO verifyDomainIsStillAvailable(' + domain.Fqdn + ')');
 
 }
 
@@ -258,12 +209,8 @@ function showChoicesScreen(e){
   var $this = $(e.target),
     domain = $this.data('domain');
 
-  $('#marquee, #domains, #products').hide();
-  $('#step2-choose-product')
-    .show()
-    .find('.btn-purchase').data('domain', domain);
+  alert('TODO showChoicesScreen(' + domain.Fqdn + ')');
 
-  // TODO: rerun the height alignment on the choose product screen
 }
 
 function goToDppCheckoutPage(e) {
@@ -287,13 +234,12 @@ function showSearchSpins(domain, alternateDomains){
   $('#spin-results .spin-result').remove();
 
   var $spinResults = $('#spin-results');
-  var $spinTemplate = $('#spin-template-wrap').find('.spin-template');
+  var $spinTemplate = $spinResults.find('.spin-template').removeClass('spin-template');
   $.each(alternateDomains, function(idx,domain){
     var $newSpin = $spinTemplate.clone();
-    $newSpin.removeClass('spin-template');
     $newSpin.find('.domain-name-display').text(domain.NameWithoutExtension);
     $newSpin.find('.domain-name-display-tld').text('.' + domain.Extension);
-    $newSpin.find('.select-and-continue').show().data('domain', domain);
+    $newSpin.find('.btn-primary').data('domain', domain);
     $spinResults.append($newSpin);
   });
   var $header = $('#domain-not-available-marquee-view').find('.results-list-heading-text');
@@ -308,13 +254,8 @@ function showSearchSpins(domain, alternateDomains){
 }
 
 function showApi1SearchError(e,domain){
-  $('.search-message').hide();
-  $('.api-A-failure').show();
-}
-
-function displayInvlidTldMessage($this){
-  $('.search-message').hide();
-  $('.invalid-TLD-entered').show();
+  // TODO!
+  alert('TODO showApi1SearchError()');
 }
 
 function showApi2SearchError(e,domain){
@@ -323,18 +264,13 @@ function showApi2SearchError(e,domain){
 }
 
 function showApi3SearchError(e,domain){
-  $thisParent.find('.spin-results-message').hide();
-  $thisParent.find('.api-B-failure').show();
+  // TODO!
+  alert('TODO showApi3SearchError()');
 }
 
 function showDomainRegistrationFailure() {
-  $('.search-message').hide();
-  $('.domain-eligibility-fail').show();
-}
-
-function showTypeYourDomain() {  
-  $('.search-message').hide();
-  $('.type-your-business-name').show();
+  // TODO!
+  alert('TODO showDomainRegistrationFailure()');
 }
       </script>
     </atlantis:webstash>
@@ -4601,84 +4537,6 @@ section#products {
 }
 
 *[data-tokenize] {visibility: hidden;}
-
-
-/**********************************/
-/*  speech */
-
-.speech-shape-upsidedown {
-  font-family: 'Walsheim-Bold';
-  font-size: 18px;
-  padding: 5px 10px 5px 17px;
-  color: #fff;
-  display: inline-block;
-  position: relative;
-  margin-bottom: 20px;
-  z-index: 2;
-}
-.speech-shape-upsidedown .shape-text {
-  position: relative;
-  z-index: 40;
-}
-.speech-shape-upsidedown:before {
-  content: '';
-  position: absolute;
-  top: -15px;
-  left: 0;
-  border-bottom: 15px solid;
-  border-right: 15px solid transparent;
-}
-.speech-shape-upsidedown:after {
-  content: '';
-  position: absolute;
-  height: 100%;
-  left: 50%;
-  top: 0;
-  transform: skew(12deg, 0);
-  z-index: 1;
-}
-.speech-shape-upsidedown.speech-shape-upsidedown-green {
-  background-color: #008a32;
-}
-.speech-shape-upsidedown.speech-shape-upsidedown-green:before {
-  border-bottom-color: #008a32;
-}
-.speech-shape-upsidedown.speech-shape-upsidedown-green:after {
-  background-color: #008a32;
-}
-.speech-shape-upsidedown.speech-shape-upsidedown-orange {
-  background-color: #ef6c0f;
-}
-.speech-shape-upsidedown.speech-shape-upsidedown-orange:before {
-  border-bottom-color: #ef6c0f;
-}
-.speech-shape-upsidedown.speech-shape-upsidedown-orange:after {
-  background-color: #ef6c0f;
-}
-.speech-shape-upsidedown.speech-shape-upsidedown-white {
-  background-color: #fff;
-  color: #333;
-}
-.speech-shape-upsidedown.speech-shape-upsidedown-white:before {
-  border-bottom-color: #fff;
-}
-.speech-shape-upsidedown.speech-shape-upsidedown-white:after {
-  background-color: #fff;
-}
-.speech-shape-upsidedown.speech-shape-upsidedown-yellow {
-  background-color: #fedc45;
-  color: #333;
-}
-.speech-shape-upsidedown.speech-shape-upsidedown-yellow:before {
-  border-bottom-color: #fedc45;
-}
-.speech-shape-upsidedown.speech-shape-upsidedown-yellow:after {
-  background-color: #fedc45;
-}
-
-/* end speech */
-
-
     </style><!--[if lt IE 9]>
     <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
     <link href="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy.min.html" id="respond-proxy" rel="respond-proxy">
@@ -4761,14 +4619,13 @@ section#products {
           </div>
           <style>
             .search-form { margin: 0 auto 1.071428571em;}
-            .search-form-input {height: 67px; padding: 20px; color: #333; font-size:18px;
-              border-top-color: #fff; border-top-width: 3px; 
-              border-top-style: inset; border-bottom: 1px solid #ccc; border-left: 1px solid #ccc; border-right: 1px solid #ccc; 
-              width: 850px;}
+            .search-form-input {height: 67px; padding: 20px; border-top-color: #fff; border-top-width: 3px; border-top-style: inset; border-bottom: 1px solid #ccc; border-left: 1px solid #ccc; border-right: 1px solid #ccc; width: 850px;}
             .offer-search-box label.searchInput {};
             .offer-search-btn {font-size: 20pt; }
             .offer-search-section { padding-bottom:20px;}
-            .search-message { display: none; margin-left:20px; margin-top:30px;width:50%;}
+            .type-your-business-name { display: none; }
+            .domain-eligibility-fail { display: none; }
+            .invalid-TLD-entered { display: none; }
             
           </style>
           <div class="row">
@@ -4784,15 +4641,18 @@ section#products {
                     <div class="offer-search-box">
                       <input type="text" placeholder="Enter a domain name" name="domainToCheck" autocomplete="off" maxlength="63" class="search-form-input searchInput helveticafont"/>
                       <button type="button" name="searchButton" data-ci="12345" class="btn btn-primary btn-lg offer-search-btn">SEARCH</button>
-                      <div class="search-message speech-shape-upsidedown speech-shape-upsidedown-yellow type-your-business-name">Type your business name here (if you have one)</div>
-                      <div class="search-message speech-shape-upsidedown speech-shape-upsidedown-orange domain-eligibility-fail">You do not meet the eligibilty requirements for {0} domains, please select a different domain extension and search again.</div>
-                      <div class="search-message speech-shape-upsidedown speech-shape-upsidedown-white invalid-TLD-entered">You need to choose a valid TLD.</div>
-                      <div class="search-message speech-shape-upsidedown speech-shape-upsidedown-orange api-A-failure">API A FAILURE</div>
                     </div>
                     <div class="clearfix"></div>
                   </form>
                 </div>
               </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <mark class="type-your-business-name">Type your business name here (if you have one)</mark>
+              <mark class="domain-eligibility-fail">You do not meet the eligibilty requirements for {0} domains, please select a different domain extension and search again.</mark>
+              <mark class="invalid-TLD-entered">You need to choose a valid TLD.</mark>
             </div>
           </div>
         </div>
@@ -4801,7 +4661,7 @@ section#products {
         #domain-available-marquee-view { display: none; }
         #domain-available-marquee-view .available-domain-name-row {margin-top: 20px; margin-bottom: 30px; }
         #domain-available-marquee-view .domain-available-heading-text  { color: #333333; }
-        #domain-available-marquee-view .available-domain-name-text {text-transform: lowercase; color: #333333; background: rgba(254, 220, 69, 0.7); padding: 5px;line-height: 1.6em;word-wrap: break-word;  }
+        #domain-available-marquee-view .available-domain-name-text {text-transform: lowercase; color: #333333; background: rgba(254, 220, 69, 0.7); padding: 5px; }
         #domain-available-marquee-view .get-it-now-btn {top: 15px; }
         #domain-available-marquee-view .purchase-btn {margin-top: 5px;}
       </style>
@@ -4827,14 +4687,13 @@ section#products {
           <div class="container">
             <style>
               .search-form { margin: 0 auto 1.071428571em;}
-              .search-form-input {height: 67px; padding: 20px; color: #333; font-size:18px;
-                border-top-color: #fff; border-top-width: 3px; 
-                border-top-style: inset; border-bottom: 1px solid #ccc; border-left: 1px solid #ccc; border-right: 1px solid #ccc; 
-                width: 850px;}
+              .search-form-input {height: 67px; padding: 20px; border-top-color: #fff; border-top-width: 3px; border-top-style: inset; border-bottom: 1px solid #ccc; border-left: 1px solid #ccc; border-right: 1px solid #ccc; width: 850px;}
               .offer-search-box label.searchInput {};
               .offer-search-btn {font-size: 20pt; }
               .offer-search-section { padding-bottom:20px;}
-              .search-message { display: none; margin-left:20px; margin-top:30px;width:50%;}
+              .type-your-business-name { display: none; }
+              .domain-eligibility-fail { display: none; }
+              .invalid-TLD-entered { display: none; }
               
             </style>
             <div class="row">
@@ -4850,15 +4709,18 @@ section#products {
                       <div class="offer-search-box">
                         <input type="text" placeholder="Try a different domain name" name="domainToCheck" autocomplete="off" maxlength="63" class="search-form-input searchInput helveticafont"/>
                         <button type="button" name="searchButton" data-ci="12346" class="btn btn-primary btn-lg offer-search-btn">SEARCH</button>
-                        <div class="search-message speech-shape-upsidedown speech-shape-upsidedown-yellow type-your-business-name">Type your business name here (if you have one)</div>
-                        <div class="search-message speech-shape-upsidedown speech-shape-upsidedown-orange domain-eligibility-fail">You do not meet the eligibilty requirements for {0} domains, please select a different domain extension and search again.</div>
-                        <div class="search-message speech-shape-upsidedown speech-shape-upsidedown-white invalid-TLD-entered">You need to choose a valid TLD.</div>
-                        <div class="search-message speech-shape-upsidedown speech-shape-upsidedown-orange api-A-failure">API A FAILURE</div>
                       </div>
                       <div class="clearfix"></div>
                     </form>
                   </div>
                 </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <mark class="type-your-business-name">Type your business name here (if you have one)</mark>
+                <mark class="domain-eligibility-fail">You do not meet the eligibilty requirements for {0} domains, please select a different domain extension and search again.</mark>
+                <mark class="invalid-TLD-entered">You need to choose a valid TLD.</mark>
               </div>
             </div>
           </div>
@@ -4876,8 +4738,8 @@ section#products {
         #domain-not-available-marquee-view .domain-name-display {text-transform: lowercase; margin-bottom: 0px; margin-top: 0px;}
         #domain-not-available-marquee-view .domain-name-display-tld {text-transform: lowercase;margin-bottom: 0px; margin-top: 0px;}
         #domain-not-available-marquee-view .show-more-arrow { position: relative; top: 16px; left: 15px; bottom: 0; margin-left: -10px; width: 0; height: 0; border: 11px solid transparent; border-top-color: #000; content: ''; }
-        #spin-results .spin-results-message,
-        #spin-results .spin-template {display:none;font-size:18px;}
+        
+        #spin-results .spin-template {display:none;}
       </style>
       <section id="domain-not-available-marquee-view">
         <div class="bg-green-official">
@@ -4890,14 +4752,13 @@ section#products {
             </div>
             <style>
               .search-form { margin: 0 auto 1.071428571em;}
-              .search-form-input {height: 67px; padding: 20px; color: #333; font-size:18px;
-                border-top-color: #fff; border-top-width: 3px; 
-                border-top-style: inset; border-bottom: 1px solid #ccc; border-left: 1px solid #ccc; border-right: 1px solid #ccc; 
-                width: 850px;}
+              .search-form-input {height: 67px; padding: 20px; border-top-color: #fff; border-top-width: 3px; border-top-style: inset; border-bottom: 1px solid #ccc; border-left: 1px solid #ccc; border-right: 1px solid #ccc; width: 850px;}
               .offer-search-box label.searchInput {};
               .offer-search-btn {font-size: 20pt; }
               .offer-search-section { padding-bottom:20px;}
-              .search-message { display: none; margin-left:20px; margin-top:30px;width:50%;}
+              .type-your-business-name { display: none; }
+              .domain-eligibility-fail { display: none; }
+              .invalid-TLD-entered { display: none; }
               
             </style>
             <div class="row">
@@ -4913,15 +4774,18 @@ section#products {
                       <div class="offer-search-box">
                         <input type="text" placeholder="Try a different domain name" name="domainToCheck" autocomplete="off" maxlength="63" class="search-form-input searchInput helveticafont"/>
                         <button type="button" name="searchButton" data-ci="12347" class="btn btn-primary btn-lg offer-search-btn">SEARCH</button>
-                        <div class="search-message speech-shape-upsidedown speech-shape-upsidedown-yellow type-your-business-name">Type your business name here (if you have one)</div>
-                        <div class="search-message speech-shape-upsidedown speech-shape-upsidedown-orange domain-eligibility-fail">You do not meet the eligibilty requirements for {0} domains, please select a different domain extension and search again.</div>
-                        <div class="search-message speech-shape-upsidedown speech-shape-upsidedown-white invalid-TLD-entered">You need to choose a valid TLD.</div>
-                        <div class="search-message speech-shape-upsidedown speech-shape-upsidedown-orange api-A-failure">API A FAILURE</div>
                       </div>
                       <div class="clearfix"></div>
                     </form>
                   </div>
                 </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <mark class="type-your-business-name">Type your business name here (if you have one)</mark>
+                <mark class="domain-eligibility-fail">You do not meet the eligibilty requirements for {0} domains, please select a different domain extension and search again.</mark>
+                <mark class="invalid-TLD-entered">You need to choose a valid TLD.</mark>
               </div>
             </div>
           </div>
@@ -4932,8 +4796,7 @@ section#products {
               <h4 class="other-domains-heading-text">Or, here are some other domains you might like too&hellip;</h4>
               <h6 class="results-list-heading-text">1 - {0} of {1} results <a>View all</a></h6>
             </div>
-            <div id="spin-results"></div>
-            <div id="spin-template-wrap">
+            <div id="spin-results">
               <div class="row spin-template spin-result">
                 <div class="col-sm-12 plan-tile plan-pro">
                   <div class="pro-plan-wrap domain-spin-wrap">
@@ -4943,10 +4806,7 @@ section#products {
                         <h2 class="domain-name-display-tld">.com</h2>
                       </div>
                       <div class="col-md-4 col-sm-12 text-right">
-                        <button class="btn btn-primary select-and-continue spin-results-message">Select &amp; Continue</button>
-                        <div class="spin-results-message checking-availability">Checking availability&hellip;</div>
-                        <div class="spin-results-message now-unavailable">This domain is no longer available.</div>
-                        <div class="spin-results-message api-B-failure">API B FAILURE</div>
+                        <button class="btn btn-primary select-and-continue">Select &amp; Continue</button>
                       </div>
                     </div>
                   </div>
@@ -5096,13 +4956,121 @@ section#products {
         </div>
       </div>
     </section>
-    <style>
-      #step2-choose-product {display: none;}
-      .choose-header {margin: 30px 0 40px;}
-      
-    </style>
+    <section id="site-choice-title" class="bg-green-new"> 
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <h2 class="text-center two-up-title">Which site's right for you?</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="site-choice-compare" style="background-image: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/bg-WSB-Mod.jpg')" class="two-up-wrap-compare">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5 col-sm-6 or-container bg-green-official">
+            <div class="two-up-text-wrap">
+              <div class="text-center two-up-image"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-wsb-icon.png"></div>
+              <h2 class="text-center">GoDaddy Website Builder</h2>
+              <h3 class="text-center">Get your business online</h3>
+              <mark class="text-center disclaimer-mark">All of this for just $1.00/month <p class="disclaimer">Annual purchase required. Price valid 1st year only. Renews at $11.99/mo with .com. <a>See details</a></p></mark>
+              <div class="row text-center">
+                <div class="col-md-6">
+                  <button class="btn btn-md btn-primary"><i class="uxicon uxicon-play"></i> Watch video</button>
+                </div>
+                <div class="col-md-6">
+                  <button class="btn btn-md btn-primary">View designs</button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-10">
+                  <ul class="list-unstyled check-bullets">
+                    <li> 
+                      <h5>Professional Website</h5>
+                    </li>
+                    <li> 
+                      <h5>Free domain</h5>
+                    </li>
+                    <li> 
+                      <h5>Free hosting</h5>
+                    </li>
+                    <li> 
+                      <h5>Free business email</h5>
+                    </li>
+                    <li> 
+                      <h5>Customizable themes</h5>
+                    </li>
+                    <li> 
+                      <h5>20,000+ Images</h5>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-5 col-sm-6 col-md-offset-2 bg-green">
+            <div class="two-up-text-wrap">
+              <div class="text-center two-up-image"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-onlineStore.png"></div>
+              <h2 class="text-center">GoDaddy Online Store</h2>
+              <h3 class="text-center">Get online + sell your stuff</h3>
+              <mark class="text-center disclaimer-mark">All of this for just $5.00/month <p class="disclaimer">Annual purchase required. Price valid 1st year only. Renews at $15.99/mo with .com. <a>See details</a></p></mark>
+              <div class="row text-center">
+                <div class="col-md-6">
+                  <button class="btn btn-md btn-primary"><i class="uxicon uxicon-play"></i> Watch video</button>
+                </div>
+                <div class="col-md-6">
+                  <button class="btn btn-md btn-primary">See real stories</button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-10">
+                  <ul class="list-unstyled check-bullets">
+                    <li> 
+                      <h5>Online Store &amp; Website</h5>
+                    </li>
+                    <li> 
+                      <h5>Free domain</h5>
+                    </li>
+                    <li> 
+                      <h5>Free hosting</h5>
+                    </li>
+                    <li> 
+                      <h5>Free business email</h5>
+                    </li>
+                    <li> 
+                      <h5>Customizable themes</h5>
+                    </li>
+                    <li> 
+                      <h5>Unlimited pages &amp; PayPal<super>&reg;</super></h5>
+                    </li>
+                    <li> 
+                      <h5>Mobile-friendly web Store</h5>
+                    </li>
+                    <li> 
+                      <h5>Facebook<super>&reg;</super> store</h5>
+                    </li>
+                    <li> 
+                      <h5>Customer ratings &amp; reviews</h5>
+                    </li>
+                    <li> 
+                      <h5>Flexible shipping rates</h5>
+                    </li>
+                    <li> 
+                      <h5>Built-in SEO features</h5>
+                    </li>
+                    <li> 
+                      <h5>Secure checkout</h5>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <section id="step2-choose-product">
-      <div class="bg-green-new">
+      <div class="bg-green-official">
         <div class="container">
           <div class="row">
             <div class="col-sm-12">
@@ -5115,7 +5083,7 @@ section#products {
         <div class="container pro-plans">
           <div class="row">
             <div class="col-sm-12">
-              <h4 class="choose-header">Step 2: Choose your website</h4>
+              <h4>Step 2: Choose your website</h4>
             </div>
           </div>
           <div class="row">
@@ -5128,7 +5096,6 @@ section#products {
                   <div class="plan-inline-disclaimer">Annual purchase required. Price valid 1st year only. Renews for $11.99/month. See details.</div>
                 </div>
                 <button class="btn btn-md btn-block btn-purchase">Select</button>
-                <div class="plan-choice-message api-C-failure">API C FAILURE</div>
                 <div class="include-check-green">Choose from dozens of professional website designs</div>
                 <div class="include-check-green"> Customizable text and images with intuitive drag and drop tools</div>
                 <div class="include-check-green"> Create unlimited pages</div>
@@ -5147,7 +5114,6 @@ section#products {
                   <div class="plan-inline-disclaimer">Annual purchase required. Price valid 1st year only. Renews for $29.99/month. See details.</div>
                 </div>
                 <button class="btn btn-md btn-block btn-purchase">Select</button>
-                <div class="plan-choice-message api-C-failure">API C FAILURE</div>
                 <div class="include-check-green"> Includes Online Store with Website</div>
                 <div class="include-check-green"> Offer unlimited products</div>
                 <div class="include-check-green"> Accept credit cards and PayPal<super>&reg;</super> with secure checkout</div>
@@ -5159,123 +5125,8 @@ section#products {
         </div>
       </div>
     </section>
-    <section id="site-choice">
-      <div id="site-choice-title" class="bg-green-new"> 
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12">
-              <h2 class="text-center two-up-title">Which site's right for you?</h2>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="site-choice-compare" style="background-image: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/bg-WSB-Mod.jpg')" class="two-up-wrap-compare">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-5 col-sm-6 or-container bg-green-official">
-              <div class="two-up-text-wrap">
-                <div class="text-center two-up-image"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-wsb-icon.png"></div>
-                <h2 class="text-center">GoDaddy Website Builder</h2>
-                <h3 class="text-center">Get your business online</h3>
-                <mark class="text-center disclaimer-mark">All of this for just $1.00/month <p class="disclaimer">Annual purchase required. Price valid 1st year only. Renews at $11.99/mo with .com. <a>See details</a></p></mark>
-                <div class="row text-center">
-                  <div class="col-md-6">
-                    <button class="btn btn-md btn-primary"><i class="uxicon uxicon-play"></i> Watch video</button>
-                  </div>
-                  <div class="col-md-6">
-                    <button class="btn btn-md btn-primary">View designs</button>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-sm-10">
-                    <ul class="list-unstyled check-bullets">
-                      <li> 
-                        <h5>Professional Website</h5>
-                      </li>
-                      <li> 
-                        <h5>Free domain</h5>
-                      </li>
-                      <li> 
-                        <h5>Free hosting</h5>
-                      </li>
-                      <li> 
-                        <h5>Free business email</h5>
-                      </li>
-                      <li> 
-                        <h5>Customizable themes</h5>
-                      </li>
-                      <li> 
-                        <h5>20,000+ Images</h5>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-5 col-sm-6 col-md-offset-2 bg-green-official-light">
-              <div class="two-up-text-wrap">
-                <div class="text-center two-up-image"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-onlineStore.png"></div>
-                <h2 class="text-center">GoDaddy Online Store</h2>
-                <h3 class="text-center">Get online + sell your stuff</h3>
-                <mark class="text-center disclaimer-mark">All of this for just $5.00/month <p class="disclaimer">Annual purchase required. Price valid 1st year only. Renews at $15.99/mo with .com. <a>See details</a></p></mark>
-                <div class="row text-center">
-                  <div class="col-md-6">
-                    <button class="btn btn-md btn-primary"><i class="uxicon uxicon-play"></i> Watch video</button>
-                  </div>
-                  <div class="col-md-6">
-                    <button class="btn btn-md btn-primary">See real stories</button>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-sm-10">
-                    <ul class="list-unstyled check-bullets">
-                      <li> 
-                        <h5>Online Store &amp; Website</h5>
-                      </li>
-                      <li> 
-                        <h5>Free domain</h5>
-                      </li>
-                      <li> 
-                        <h5>Free hosting</h5>
-                      </li>
-                      <li> 
-                        <h5>Free business email</h5>
-                      </li>
-                      <li> 
-                        <h5>Customizable themes</h5>
-                      </li>
-                      <li> 
-                        <h5>Unlimited pages &amp; PayPal<super>&reg;</super></h5>
-                      </li>
-                      <li> 
-                        <h5>Mobile-friendly web Store</h5>
-                      </li>
-                      <li> 
-                        <h5>Facebook<super>&reg;</super> store</h5>
-                      </li>
-                      <li> 
-                        <h5>Customer ratings &amp; reviews</h5>
-                      </li>
-                      <li> 
-                        <h5>Flexible shipping rates</h5>
-                      </li>
-                      <li> 
-                        <h5>Built-in SEO features</h5>
-                      </li>
-                      <li> 
-                        <h5>Secure checkout</h5>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
     <section id="disclaimers"> 
-      <p>Third-party logos and marks are registered trademarks of their respective owners. All rights reserved.</p>
+      <p>Disclaimers goes here</p>
     </section>
     <!-- FOOTERBEGIN--> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer"><Parameters><Parameter key="manifest" value="salesheader" /></Parameters></Data>]@P]
@@ -5306,8 +5157,7 @@ section#products {
             var maxHeight = 0;
             $(outerPlan).find(".pro-plan-wrap").each(function(index, plan) {
               maxHeight = $(plan).outerHeight() > maxHeight ? $(plan).outerHeight() : maxHeight;
-            });
-            if( maxHeight > 0 )$(outerPlan).find(".pro-plan-wrap").css("height", maxHeight);
+            }).css("height", maxHeight);
           });
         }
       });
