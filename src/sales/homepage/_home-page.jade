@@ -53,6 +53,7 @@ block vars
 
 block pageStyles
   link(href!="[@T[link:<cssroot />]@T]/ux/#{page.config.uxcoreVersion}/css/uxcontrols.css" rel="stylesheet")
+  link(href!="[@T[link:<cssroot />]@T]/ux/#{page.config.uxcoreVersion}/css/uxcore.css" rel="stylesheet")
   link(href!="[@T[link:<cssroot />]@T]/fos/mike/#{page.config.version}/css/sahara.css" rel="stylesheet")
   style
     :less
@@ -64,7 +65,6 @@ block pageStyles
       @dark-green:#008a30;
       @gd-orange:#ff8a00;
       body{font-family:Arial, "Helvetica Neue", Helvetica, sans-serif;}
-      h1,h2,h3,h4{text-transform:none;}
       .walsheim-regular{font-family:'Walsheim-Regular', Arial, sans-serif;}
       .walsheim-medium{font-family:'Walsheim-Medium', Arial, sans-serif;}
       .walsheim-bold{font-family:'Walsheim-Bold', 'Arial Black', sans-serif;}
@@ -87,8 +87,10 @@ block pageStyles
       #domain-search{background-color:@gd-green;padding:15px 0}
       .price,.icann-disclaimer{color:@gd-orange}
       #merchandising{background-color:@med-gray;padding:10px 0;font-size:16px;
-        .tile-wrapper{min-height:150px;margin:5px 0}
+        .tile-wrapper{min-height:140px;margin:5px 0}
       }
+      #domain-promo {background-color: #77c043; }
+      #why-godaddy {background-color: #d9d9d9; }
 
 block endOfPageScripts
 
@@ -119,7 +121,7 @@ block endOfPageScripts
 
   //-$ script(src="http://img2.wsimg.com/starfield/fos.share/v1.3/fos.share-20140213.min.js" id="fosShareScript")
   script(type="text/javascript").
-    delayLoader.addScript("[@T[link:<javascriptroot />]@T]starfield/fos.share/v1.3/fos.share-20140213.min.js", { "id": "fosShareScript" });
+    delayLoader.addScript("[@T[link:<javascriptroot />]@T]starfield/fos.share/v1.3/fos.share-20140505.min.js", { "id": "fosShareScript" });
 
   //-:script From http://img2.wsimg.com/fos/script/sales17.min.js
   script(type="text/javascript").
@@ -193,3 +195,28 @@ block content
           .col-md-3.col-sm-6.col-xs-6
             .tile-wrapper
               block merch-tile4
+  block why-godaddy
+    section#domain-promo
+    .container
+      h2.text-center It All Starts With A Domain Name.
+      .row
+        .col-sm-6
+          img(src != "[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_Group_ScalableResources.png")
+        .col-sm-6
+          h3 Find Your Perfect Name
+          p From classic domains like .com and .org to new domains like .menu, .repair, even .ninja (seriously), we can help you find the right name for your business.
+          a.btn.btn-default-dark Get Started
+    section#why-godaddy
+      .container
+        h2.text-center Why Choose A Domain Name From GoDaddy?
+        .row
+          .col-sm-6
+            .feature
+              img(src != "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMzhweCcgaGVpZ2h0PSc0M3B4JyB2aWV3Qm94PScwIDAgMzggNDMnPiAgICA8ZyBzdHJva2U9J25vbmUnIHN0cm9rZS13aWR0aD0nMScgZmlsbD0nbm9uZScgZmlsbC1ydWxlPSdldmVub2RkJz4gICAgICAgIDxnIGZpbGw9JyMwQTBCMDknPiAgICAgICAgICAgIDxwYXRoIGQ9J00yMy4wNzMsMi4xNTIgTDIyLjIzMSwwLjQyOSBMMTkuNDc5LDEuMjAxIEwxOS4zNTMsMTMuNDExIEwyMy42MjQsMTMuNDExIEwyMy4wNzMsMi4xNTInIGlkPSdGaWxsLTgwJz48L3BhdGg+ICAgICAgICAgICAgPHBhdGggZD0nTTI4LjY1OSw3LjA1MiBMMjYuNzE0LDQuMzE1IEwyNS4xOTQsNS4xNTQgTDI0Ljg3NCwxMy40MTEgTDI5LjA2OCwxMy40MTEgTDI4LjY1OSw3LjA1MicgaWQ9J0ZpbGwtODEnPjwvcGF0aD4gICAgICAgICAgICA8cGF0aCBkPSdNMTAuNjU0LDcuMjY4IEw4LjY1Niw3Ljg2MSBMNy43NDYsOS41NzYgTDcuNDQ5LDEzLjQxMSBMMTEuNzU2LDEzLjQxMSBMMTAuNjU0LDcuMjY4JyBpZD0nRmlsbC04Mic+PC9wYXRoPiAgICAgICAgICAgIDxwYXRoIGQ9J00xNi45NCwzLjA5NiBMMTUuOTg0LDIuODc1IEwxMy41MTMsMy44MDUgTDEzLjA5OCwxMy40MTEgTDE3LjU2MywxMy40MTEgTDE2Ljk0LDMuMDk2JyBpZD0nRmlsbC04Myc+PC9wYXRoPiAgICAgICAgICAgIDxwYXRoIGQ9J00xMi42MzUsMTQuNTM0IEwxNC4zMTYsMjUuMzQzIEwxOC4yNzksMjUuMzQzIEwxOC45MjUsMjAuMzgxIEwxOS41NzEsMjUuMzQzIEwyMy41MzQsMjUuMzQzIEwyNS4yMTUsMTQuNTMzIEwyNi4wODIsMjAuMDk4IEwyNy4yNzEsMTYuMTg4IEwyOC44MDcsMTYuNzc2IEwyOC42MTIsMTQuNDY2IEwyMi4wNDIsMTQuNDY2IEwyMS41MDcsMjAuNDU4IEwyMC44NCwxNC40NjYgTDE3LjIzMywxNC40NjYgTDE2LjU0MywyMC41MzQgTDE2LjAzMSwxNC40NjYgTDkuNDYyLDE0LjQ2NiBMOC45MjgsMjAuNDU4IEw4LjI1OSwxNC40NjYgTDQuNjUzLDE0LjQ2NiBMMy45NjIsMjAuNTM0IEwzLjQ1MSwxNC40NjYgTDAuMDQ0LDE0LjQ2NiBMMS43MzYsMjUuMzQzIEw1LjY5OSwyNS4zNDMgTDYuMzQ1LDIwLjM4MSBMNi45OSwyNS4zNDMgTDEwLjk1MywyNS4zNDMgTDEyLjYzNSwxNC41MzQnIGlkPSdGaWxsLTg0Jz48L3BhdGg+ICAgICAgICAgICAgPHBhdGggZD0nTTM0LjYyMywxNC40NjYgTDM0LjA4OSwyMC40NTggTDMzLjQyMSwxNC40NjYgTDI5LjgxMywxNC40NjYgTDI5LjUyLDE3LjA1IEwzMS44OTcsMTcuOTYxIEwzMi4wNSwyNC41NjEgTDMyLjE1MiwyNS4zNDMgTDM2LjExNSwyNS4zNDMgTDM3LjgwNywxNC40NjYgTDM0LjYyMywxNC40NjYnIGlkPSdGaWxsLTg1Jz48L3BhdGg+ICAgICAgICAgICAgPHBhdGggZD0nTTI3LjY4NywxNy42NzIgTDI1LjExNywyNS4yODQgTDIwLjQ1NiwyNy4xOCBMMTguMjU5LDMxLjc2MyBMMTYuODg2LDI2LjM5NiBMNy4xMTcsMjYuMjkyIEw3LjExNywzMi4yNzQgTDEwLjM3NiwzOS4zODQgTDE4LjkyNSw0Mi40NjkgTDI3LjQ3NSw0MS4yNDggTDMxLjgyOCwzMC42MDIgTDMxLjEzLDE4LjkzNCBMMjcuNjg3LDE3LjY3MicgaWQ9J0ZpbGwtODYnPjwvcGF0aD4gICAgICAgIDwvZz4gICAgPC9nPjwvc3ZnPg==")
+              h3 World's Leading Domain Registrar
+              p With over 12 million happy customers and 58 million domains under management, we know how to set you up for success online.
+          .col-sm-6
+            .feature
+              img(src != "[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_Group_Security.png")
+              h3 More Names at Better Prices
+              p We have 100s of domains to choose from. And as the world's largest registrar, we can offer prices that other companies can only dream about.  
