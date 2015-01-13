@@ -25,57 +25,34 @@
     <meta property="og:site_name" content="[@T[link:<relative parammode='explicit' />]@T]">
     <meta property="fb:app_id" content="115696031791232">
     <meta property="fb:admins" content="633356800"> 
-    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags"><Parameters><Parameter key="manifest" value="salesheader" /></Parameters></Data>]@P]
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <script src="[@T[link:<javascriptroot />]@T]/ux/dev-brand/js/uxcore.en.min.js"></script>
     <script src="[@T[link:<javascriptroot />]@T]/ux/dev-brand/js/uxcontrols.min.js"></script>
     <script src="[@T[link:<javascriptroot />]@T]/fos/mike/0.7.0/js/sahara.min.js"></script>
-    <style>.compare-table {
-  width: 100%;
-  margin-top: 30px;
-}
-
-.compare-table h2{
+    <style>h2{
   margin-bottom: 40px;
+  margin-top: 0;
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-family: 'Walsheim-Black';
+  font-weight: 300;
+  line-height: 1.1;
+  color: #333;
 }
 
-.compare-table tr td:first-child {
-  text-align: left;
-  border-left: 0;
-  padding-left: 20px;
+h3 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-family: 'Walsheim-Black';
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: 300;
+  line-height: 1.1;
 }
 
-.compare-table thead tr:first-child td {
-  border-style: none;
-}
-
-.compare-table thead tr td {
-  vertical-align: bottom;
-}
-
-.compare-table th {
-  padding: 20px 0;
-  font-weight: normal;
-}
-
-.compare-table th:first-child {
-  width: 30%;
-  padding-left: 20px;
-}
-
-.compare-table td {
-  text-align: center;
-  white-space: normal;
-  padding: 15px;
-  height: 80px;
-  border: 1px solid #e8e8e8;
-}
-
-.compare-table td:last-child {
-  border-right: 0;
-}
-
-.compare-table td:not(:first-child){
-  max-width: 150px;
+.tile-section {
+  padding-top: 70px;
+  padding-bottom: 70px;
 }
 
 .compare-table-view-all {
@@ -84,11 +61,9 @@
   cursor: pointer;
   margin-bottom: -80px;
 }
-
 .arrow-down-icon {
     margin-top: 10px;
 }
-
 .plan-tile { 
   margin-top: -240px; 
 }
@@ -119,6 +94,22 @@
   right: 0;
   top: 0;
   z-index: 1000;
+}
+
+#one-click-install { 
+  background: #77c043; transition: background 750ms ease-in-out; 
+  background-image: url("[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_AppInstalls_Banner.jpg"); 
+  background-repeat: no-repeat; background-size: 100% 100%; 
+}
+
+@media (max-width: 767px) {
+  #one-click-install {
+    background-image: none !important;
+  }
+  .one-click-right {
+    padding-top: 40px;
+    background-color: 
+  }
 }
 
 @media (max-width: 991px) {
@@ -180,7 +171,7 @@
   </head>
   <body>
     <!-- HEADERBEGIN--> 
-    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /></Parameters></Data>]@P]
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- HEADEREND-->
     <section id="marquee"> 
       <atlantis:webstash type="css">
@@ -596,7 +587,9 @@
         </div>
       </div>
     </section>
-    <style>
+    <style>.fix-body {
+  margin-top: 130px;
+}
 .mid-page-nav {
   background-color: #333333;
   font-family: 'Walsheim-Bold';
@@ -684,6 +677,11 @@
 .mid-page-nav .price {
   font-size: 24px;
   font-size: 2.4rem;
+}
+@media only screen and (max-width: 768px){
+  .mid-page-nav {
+    display: none;
+  }
 }
     </style>
     <div class="mid-page-nav">
@@ -777,9 +775,8 @@
     </section>
     <section id="one-click-install" class="features tile-section one-click-wrapper">
       <div class="container">
-        <style>#one-click-install { background: #77c043; transition: background 750ms ease-in-out; background-image: url("[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_AppInstalls_Banner.jpg"); background-repeat: no-repeat; background-size: 100% 100%; }</style>
         <div class="row">
-          <div class="col-sm-6">
+          <div class="col-sm-6 one-click-left">
             <h2>APP INSTALLS JUST A CLICK AWAY</h2>
             <p>Our one-click install process has all your Web hosting app needs covered, making it easy to build, ehnhance and manage your site.</p>
             <div class="col-sm-12">
@@ -794,7 +791,7 @@
             <!--    span.uxicon.uxicon-checkmark(aria-hidden="true")-->
             <!--    span Maybe you want to sell products on your webite.  Try Magento with one-click.-->
           </div>
-          <div class="col-sm-6">
+          <div class="col-sm-6 one-click-right">
             <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="text-center"><img src="[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Feature_Small_Logos.png" class="features-img features-img-right"></div>
           </div>
         </div>
@@ -836,6 +833,191 @@
           <h2>Hosting Plans</h2><a href="javascript:comparePlans('cpanel-tab')" class="btn btn-default btn-lg">Cpanel</a><a href="javascript:comparePlans('parallels-tab')" class="btn btn-default btn-lg">Parallels</a>
         </div>
         <div id="cpanel-tab" class="table-responsive">
+          <style>.compare-table {
+  width: 100%;
+  margin-top: 30px;
+}
+.compare-table h2{
+  margin-bottom: 40px;
+  margin-top: 0;
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-family: 'Walsheim-Black';
+  font-weight: 300;
+  line-height: 1.1;
+  color: #333;
+}
+.compare-table h4{
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-size: 24px;
+  text-transform: uppercase;
+  font-family: 'Walsheim-Black';
+  font-weight: 300;
+  line-height: 1.1;
+  color: #333;
+}
+.compare-table tr td:first-child {
+  text-align: left;
+  border-left: 0;
+  padding-left: 20px;
+}
+.compare-table thead tr:first-child td {
+  border-style: none;
+}
+.compare-table thead tr td {
+  vertical-align: bottom;
+}
+.compare-table th {
+  padding: 20px 0;
+  font-weight: normal;
+}
+.compare-table th:first-child {
+  width: 30%;
+  padding-left: 20px;
+}
+.compare-table td {
+  text-align: center;
+  white-space: normal;
+  padding: 15px;
+  height: 80px;
+  border: 1px solid #e8e8e8;
+}
+.compare-table td:last-child {
+  border-right: 0;
+}
+.compare-table td:not(:first-child){
+  max-width: 150px;
+}
+
+.compare-chart-pro {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+@media only screen and (max-width: 992px) {
+  .compare-chart-pro {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+.compare-chart-pro[class*="bg-"] .container {
+  background-color: #fff;
+  -webkit-box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
+  padding-top: 40px;
+  padding-bottom: 100px;
+}
+.compare-chart-pro h2 {
+  margin-bottom: 40px;
+}
+.compare-chart-pro table {
+  width: 100%;
+}
+.compare-chart-pro table tr th {
+  padding: 20px 0;
+  font-weight: normal;
+}
+.compare-chart-pro table tr th:first-child {
+  width: 30%;
+  padding-left: 20px;
+}
+.compare-chart-pro table tr td {
+  text-align: center;
+  white-space: normal;
+  padding: 15px;
+  height: 80px;
+  border: 1px solid #e8e8e8;
+}
+.compare-chart-pro table tr td:first-child {
+  text-align: left;
+  border-left: 0;
+  padding-left: 20px;
+}
+.compare-chart-pro table tr td:last-child {
+  border-right: 0;
+}
+.compare-chart-pro table tr td[class*="bg-"]:not(.bg-pro-gray) {
+  background-color: #77c043;
+  color: #333333;
+  border: 1px solid #6baf3b;
+}
+.compare-chart-pro table tr td:not(:first-child) {
+  max-width: 150px;
+}
+.compare-chart-pro .compare-chart-header {
+  text-align: center;
+}
+.compare-chart-pro .compare-chart-header .sf-tipper-target {
+  background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+  background-position: 0 -1069px;
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  background-size: 205px auto;
+  vertical-align: baseline;
+}
+.compare-chart-pro .compare-column-title {
+  font-family: 'Walsheim-Bold';
+  text-transform: uppercase;
+}
+.compare-chart-pro .compare-chart-footer {
+  margin-top: 10px;
+  float: right;
+  font-size: 13px;
+  font-size: 1.3rem;
+  color: #808080;
+}
+.compare-chart-pro .compare-chart-view-all {
+  text-align: center;
+  margin-top: 50px;
+  cursor: pointer;
+  margin-bottom: -144px;
+}
+.compare-chart-pro .compare-chart-view-all .arrow-down-icon {
+  margin-top: 10px;
+}
+.compare-chart-pro .compare-chart-img {
+  height: 70px;
+  margin-bottom: 15px;
+}
+.compare-chart-pro .compare-chart-img img {
+  max-height: 65px;
+  max-width: 120px;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.compare-chart-pro .compare-chart-asterisk {
+  position: relative;
+  bottom: 20px;
+  left: 5px;
+}
+
+
+
+.icon {
+  background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+  display: inline-block;
+  background-size: 205px auto;
+}
+.icon.jump-arrow-icon,
+.icon.arrow-down-icon {
+  background-position: 0 -321px;
+  width: 95px;
+  height: 95px;
+}
+.icon.gray-check-icon {
+background-position: 0 -606px;
+width: 25px;
+height: 27px;
+}
+.bg-pro-gray {
+  background-color: #e8e8e8;
+}
+          </style>
           <table id="cpanel-table" class="compare-table">
             <thead>
               <tr>
@@ -856,7 +1038,7 @@
             <tbody>
               <tr>
                 <td>Free Domain with anual plan restrictions apply</td>
-                <td><span class='pro-icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
                 <td>yes </td>
                 <td>yes</td>
               </tr>
@@ -874,7 +1056,7 @@
               </tr>
               <tr>
                 <td>Free Domain with anual plan restrictions apply</td>
-                <td><span class='pro-icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
                 <td>yes </td>
                 <td>yes</td>
               </tr>
@@ -892,7 +1074,7 @@
               </tr>
               <tr>
                 <td>Free Domain with anual plan restrictions apply</td>
-                <td><span class='pro-icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
                 <td>yes </td>
                 <td>yes</td>
               </tr>
@@ -918,6 +1100,191 @@
           </table>
         </div>
         <div id="parallels-tab" style="display:none;" class="table-responsive">
+          <style>.compare-table {
+  width: 100%;
+  margin-top: 30px;
+}
+.compare-table h2{
+  margin-bottom: 40px;
+  margin-top: 0;
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-family: 'Walsheim-Black';
+  font-weight: 300;
+  line-height: 1.1;
+  color: #333;
+}
+.compare-table h4{
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-size: 24px;
+  text-transform: uppercase;
+  font-family: 'Walsheim-Black';
+  font-weight: 300;
+  line-height: 1.1;
+  color: #333;
+}
+.compare-table tr td:first-child {
+  text-align: left;
+  border-left: 0;
+  padding-left: 20px;
+}
+.compare-table thead tr:first-child td {
+  border-style: none;
+}
+.compare-table thead tr td {
+  vertical-align: bottom;
+}
+.compare-table th {
+  padding: 20px 0;
+  font-weight: normal;
+}
+.compare-table th:first-child {
+  width: 30%;
+  padding-left: 20px;
+}
+.compare-table td {
+  text-align: center;
+  white-space: normal;
+  padding: 15px;
+  height: 80px;
+  border: 1px solid #e8e8e8;
+}
+.compare-table td:last-child {
+  border-right: 0;
+}
+.compare-table td:not(:first-child){
+  max-width: 150px;
+}
+
+.compare-chart-pro {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+@media only screen and (max-width: 992px) {
+  .compare-chart-pro {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+.compare-chart-pro[class*="bg-"] .container {
+  background-color: #fff;
+  -webkit-box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
+  padding-top: 40px;
+  padding-bottom: 100px;
+}
+.compare-chart-pro h2 {
+  margin-bottom: 40px;
+}
+.compare-chart-pro table {
+  width: 100%;
+}
+.compare-chart-pro table tr th {
+  padding: 20px 0;
+  font-weight: normal;
+}
+.compare-chart-pro table tr th:first-child {
+  width: 30%;
+  padding-left: 20px;
+}
+.compare-chart-pro table tr td {
+  text-align: center;
+  white-space: normal;
+  padding: 15px;
+  height: 80px;
+  border: 1px solid #e8e8e8;
+}
+.compare-chart-pro table tr td:first-child {
+  text-align: left;
+  border-left: 0;
+  padding-left: 20px;
+}
+.compare-chart-pro table tr td:last-child {
+  border-right: 0;
+}
+.compare-chart-pro table tr td[class*="bg-"]:not(.bg-pro-gray) {
+  background-color: #77c043;
+  color: #333333;
+  border: 1px solid #6baf3b;
+}
+.compare-chart-pro table tr td:not(:first-child) {
+  max-width: 150px;
+}
+.compare-chart-pro .compare-chart-header {
+  text-align: center;
+}
+.compare-chart-pro .compare-chart-header .sf-tipper-target {
+  background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+  background-position: 0 -1069px;
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  background-size: 205px auto;
+  vertical-align: baseline;
+}
+.compare-chart-pro .compare-column-title {
+  font-family: 'Walsheim-Bold';
+  text-transform: uppercase;
+}
+.compare-chart-pro .compare-chart-footer {
+  margin-top: 10px;
+  float: right;
+  font-size: 13px;
+  font-size: 1.3rem;
+  color: #808080;
+}
+.compare-chart-pro .compare-chart-view-all {
+  text-align: center;
+  margin-top: 50px;
+  cursor: pointer;
+  margin-bottom: -144px;
+}
+.compare-chart-pro .compare-chart-view-all .arrow-down-icon {
+  margin-top: 10px;
+}
+.compare-chart-pro .compare-chart-img {
+  height: 70px;
+  margin-bottom: 15px;
+}
+.compare-chart-pro .compare-chart-img img {
+  max-height: 65px;
+  max-width: 120px;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.compare-chart-pro .compare-chart-asterisk {
+  position: relative;
+  bottom: 20px;
+  left: 5px;
+}
+
+
+
+.icon {
+  background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+  display: inline-block;
+  background-size: 205px auto;
+}
+.icon.jump-arrow-icon,
+.icon.arrow-down-icon {
+  background-position: 0 -321px;
+  width: 95px;
+  height: 95px;
+}
+.icon.gray-check-icon {
+background-position: 0 -606px;
+width: 25px;
+height: 27px;
+}
+.bg-pro-gray {
+  background-color: #e8e8e8;
+}
+          </style>
           <table id="parallels-table" class="compare-table">
             <thead>
               <tr>
@@ -938,7 +1305,7 @@
             <tbody>
               <tr>
                 <td>Free Domain with anual plan restrictions apply</td>
-                <td><span class='pro-icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
                 <td>yes </td>
                 <td>yes</td>
               </tr>
@@ -956,7 +1323,7 @@
               </tr>
               <tr>
                 <td>Free Domain with anual plan restrictions apply</td>
-                <td><span class='pro-icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
                 <td>yes </td>
                 <td>yes</td>
               </tr>
@@ -974,7 +1341,7 @@
               </tr>
               <tr>
                 <td>Free Domain with anual plan restrictions apply</td>
-                <td><span class='pro-icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
                 <td>yes </td>
                 <td>yes</td>
               </tr>
@@ -1001,7 +1368,7 @@
         </div>
         <div class="compare-table-view-all">
           <div><strong>View All</strong></div>
-          <div class="pro-icon arrow-down-icon"></div>
+          <div class="icon arrow-down-icon"></div>
           <script type="text/javascript">
             $(".compare-table-view-all").click(function() {
               var chart = $(this).closest("#cpanel-table");
@@ -1015,7 +1382,34 @@
       </div>
     </section>
     <section id="platforms" data-mid-nav-title="Platforms">
-      <style>.two-up-wrap-compare {
+      <style>
+.two-up-title-wrap.bg-white {
+  background-color: #fff;
+}
+.two-up-title-wrap.bg-yellow {
+  background-color: #ffde2d;
+}
+.two-up-title-wrap.bg-gray-lighter,
+.two-up-title-wrap.bg-pro-gray {
+  background-color: #e8e8e8;
+}
+.two-up-title-wrap.bg-gray-light {
+  background-color: #d9d9d9;
+}
+.two-up-title-wrap.bg-green-official {
+  background-color: #77c043;
+}
+.two-up-title-wrap.bg-green-new {
+  background-color: #5caf2b;
+}
+.two-up-title-wrap.bg-green-official-light {
+  background-color: #84D54A;
+}
+.two-up-title-wrap.bg-gray-darkest {
+  background-color: #333333;
+}
+
+.two-up-wrap-compare {
   min-height: 980px;
   background-repeat: no-repeat;
   background-size: cover !important;
@@ -1057,17 +1451,17 @@
     background-color: #fff;
   }
   .two-up-wrap-compare .col-md-5.col-sm-6.bg-yellow {
-    background-color: ;
+    background-color: #ffde2d;
   }
   .two-up-wrap-compare .col-md-5.col-sm-6.bg-gray-lighter,
   .two-up-wrap-compare .col-md-5.col-sm-6.bg-pro-gray {
-    background-color: ;
+    background-color: #e8e8e8;
   }
   .two-up-wrap-compare .col-md-5.col-sm-6.bg-gray-light {
-    background-color: ;
+    background-color: #d9d9d9;
   }
   .two-up-wrap-compare .col-md-5.col-sm-6.bg-green-official {
-    background-color: ;
+    background-color: #77c043;
   }
   .two-up-wrap-compare .col-md-5.col-sm-6.bg-green-new {
     background-color: #5caf2b;
@@ -1076,7 +1470,7 @@
     background-color: #84D54A;
   }
   .two-up-wrap-compare .col-md-5.col-sm-6.bg-gray-darkest {
-    background-color: ;
+    background-color: #333333;
   }
 }
 .two-up-wrap-compare:after {
@@ -1099,6 +1493,31 @@
   .two-up-wrap-compare .two-up-text-wrap {
     padding: 60px 0;
   }
+}
+.two-up-wrap-compare h2 {
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-family: 'Walsheim-Black';
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: 300;
+  line-height: 1.1;
+  color: #333;
+}
+.two-up-wrap-compare h3 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-family: 'Walsheim-Black';
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: 300;
+  line-height: 1.1;
+}
+.two-up-wrap-compare .white-text {
+  color: #fff;
+}
+.two-up-wrap-compare .white-text h2{
+  color: #fff;
 }
 .two-up-wrap-compare .two-up-text-wrap h3.subtitle {
   text-transform: none;
@@ -1168,8 +1587,76 @@
     left: 121%
   }
 }
+
+.two-up-title {
+  margin: 40px 0;
+  line-height: 1;
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-family: 'Walsheim-Black';
+  font-weight: 300;
+}
+.two-up-speech-shape {
+  font-family: 'Walsheim-Bold';
+  font-size: 18px;
+  font-size: 1.8rem;
+  padding: 5px 10px 5px 17px;
+  color: #fff;
+  display: inline-block;
+  position: relative;
+  margin-bottom: 20px;
+  z-index: 2;
+}
+.two-up-speech-shape .shape-text {
+  position: relative;
+  z-index: 40;
+}
+.two-up-speech-shape:before {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  border-top: 15px solid;
+  border-right: 15px solid transparent;
+}
+.two-up-speech-shape:after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 99%;
+  top: 0;
+  transform: skew(-12deg, 0);
+  z-index: 1;
+}
+.two-up-speech-shape.two-up-speech-shape-green {
+  background-color: #008a32;
+}
+.two-up-speech-shape.two-up-speech-shape-green:before {
+  border-top-color: #008a32;
+}
+.two-up-speech-shape.two-up-speech-shape-green:after {
+  background-color: #008a32;
+}
+.two-up-speech-shape.two-up-speech-shape-orange {
+  background-color: #ef6c0f;
+}
+.two-up-speech-shape.two-up-speech-shape-orange:before {
+  border-top-color: #ef6c0f;
+}
+.two-up-speech-shape.two-up-speech-shape-orange:after {
+  background-color: #ef6c0f;
+}
+.two-up-speech-shape.two-up-speech-shape-white {
+  background-color: #fff;
+}
+.two-up-speech-shape.two-up-speech-shape-white:before {
+  border-top-color: #fff;
+}
+.two-up-speech-shape.two-up-speech-shape-white:after {
+  background-color: #fff;
+}
       </style>
-      <div id="choose-platform" style="" class="bg-green-official-light">
+      <div id="choose-platform" class="two-up-title-wrap bg-green-new">
         <div>
           <div class="container">
             <div class="row">
@@ -1182,7 +1669,7 @@
         <div style="background-image: url('[@T[link:<imageroot />]@T]fos/mike/img/hosting/two-up-compare-bg-ph.png'); ;" class="two-up-wrap-compare bg-green-official">
           <div class="container">
             <div class="row">
-              <div class="col-md-5 or-container col-sm-6  bg-green-official-light">
+              <div class="col-md-5 or-container col-sm-6  bg-green-official">
                 <div style="" class="two-up-text-wrap ">
                   <h2 class="text-center">Cpanel for Linux</h2>
                   <h3 class="text-center">Each Linux plan includes:</h3>
@@ -1197,7 +1684,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-5 col-md-offset-2 col-sm-6  bg-gray-darkest">
+              <div class="col-md-5 col-md-offset-2 col-sm-6  bg-green-official-light">
                 <div style="" class="two-up-text-wrap ">
                   <h2 class="text-center">Plesk for Windows</h2>
                   <h3 class="text-center">Each Windows plan includes:</h3>
@@ -1217,6 +1704,13 @@
     </section>
     <section id="reviews">
       <p>reviews</p>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div>[@P[userControl:<Data location="~/Shared/Tabs/controls/BVReviewsNoJS.ascx"><Parameters><Parameter key="ProductId" value="web_hosting" /><Parameter key="ReviewNumber" value="4" /></Parameters></Data>]@P]</div>
+          </div>
+        </div>
+      </div>
     </section>
     <section id="faq">
       <p>faq</p>
@@ -1356,11 +1850,42 @@
         });
         $("#test-button").click(function() {
           $('#test-faq').find('.dropdown').slideDown();
+          $('#test-faq').find('.accordion-dropdown').find('.carett')
+                          .removeClass("caret-right")
+                          .addClass("caret-down");
+          $('#test-faq').find('.accordion-dropdown').addClass("active");
          });
       </script>
     </section>
     <section id="alternate-products">
-      <style>.two-up-wrap-compare {
+      <style>
+.two-up-title-wrap.bg-white {
+  background-color: #fff;
+}
+.two-up-title-wrap.bg-yellow {
+  background-color: #ffde2d;
+}
+.two-up-title-wrap.bg-gray-lighter,
+.two-up-title-wrap.bg-pro-gray {
+  background-color: #e8e8e8;
+}
+.two-up-title-wrap.bg-gray-light {
+  background-color: #d9d9d9;
+}
+.two-up-title-wrap.bg-green-official {
+  background-color: #77c043;
+}
+.two-up-title-wrap.bg-green-new {
+  background-color: #5caf2b;
+}
+.two-up-title-wrap.bg-green-official-light {
+  background-color: #84D54A;
+}
+.two-up-title-wrap.bg-gray-darkest {
+  background-color: #333333;
+}
+
+.two-up-wrap-compare {
   min-height: 980px;
   background-repeat: no-repeat;
   background-size: cover !important;
@@ -1402,17 +1927,17 @@
     background-color: #fff;
   }
   .two-up-wrap-compare .col-md-5.col-sm-6.bg-yellow {
-    background-color: ;
+    background-color: #ffde2d;
   }
   .two-up-wrap-compare .col-md-5.col-sm-6.bg-gray-lighter,
   .two-up-wrap-compare .col-md-5.col-sm-6.bg-pro-gray {
-    background-color: ;
+    background-color: #e8e8e8;
   }
   .two-up-wrap-compare .col-md-5.col-sm-6.bg-gray-light {
-    background-color: ;
+    background-color: #d9d9d9;
   }
   .two-up-wrap-compare .col-md-5.col-sm-6.bg-green-official {
-    background-color: ;
+    background-color: #77c043;
   }
   .two-up-wrap-compare .col-md-5.col-sm-6.bg-green-new {
     background-color: #5caf2b;
@@ -1421,7 +1946,7 @@
     background-color: #84D54A;
   }
   .two-up-wrap-compare .col-md-5.col-sm-6.bg-gray-darkest {
-    background-color: ;
+    background-color: #333333;
   }
 }
 .two-up-wrap-compare:after {
@@ -1444,6 +1969,31 @@
   .two-up-wrap-compare .two-up-text-wrap {
     padding: 60px 0;
   }
+}
+.two-up-wrap-compare h2 {
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-family: 'Walsheim-Black';
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: 300;
+  line-height: 1.1;
+  color: #333;
+}
+.two-up-wrap-compare h3 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-family: 'Walsheim-Black';
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: 300;
+  line-height: 1.1;
+}
+.two-up-wrap-compare .white-text {
+  color: #fff;
+}
+.two-up-wrap-compare .white-text h2{
+  color: #fff;
 }
 .two-up-wrap-compare .two-up-text-wrap h3.subtitle {
   text-transform: none;
@@ -1513,8 +2063,76 @@
     left: 121%
   }
 }
+
+.two-up-title {
+  margin: 40px 0;
+  line-height: 1;
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-family: 'Walsheim-Black';
+  font-weight: 300;
+}
+.two-up-speech-shape {
+  font-family: 'Walsheim-Bold';
+  font-size: 18px;
+  font-size: 1.8rem;
+  padding: 5px 10px 5px 17px;
+  color: #fff;
+  display: inline-block;
+  position: relative;
+  margin-bottom: 20px;
+  z-index: 2;
+}
+.two-up-speech-shape .shape-text {
+  position: relative;
+  z-index: 40;
+}
+.two-up-speech-shape:before {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  border-top: 15px solid;
+  border-right: 15px solid transparent;
+}
+.two-up-speech-shape:after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 99%;
+  top: 0;
+  transform: skew(-12deg, 0);
+  z-index: 1;
+}
+.two-up-speech-shape.two-up-speech-shape-green {
+  background-color: #008a32;
+}
+.two-up-speech-shape.two-up-speech-shape-green:before {
+  border-top-color: #008a32;
+}
+.two-up-speech-shape.two-up-speech-shape-green:after {
+  background-color: #008a32;
+}
+.two-up-speech-shape.two-up-speech-shape-orange {
+  background-color: #ef6c0f;
+}
+.two-up-speech-shape.two-up-speech-shape-orange:before {
+  border-top-color: #ef6c0f;
+}
+.two-up-speech-shape.two-up-speech-shape-orange:after {
+  background-color: #ef6c0f;
+}
+.two-up-speech-shape.two-up-speech-shape-white {
+  background-color: #fff;
+}
+.two-up-speech-shape.two-up-speech-shape-white:before {
+  border-top-color: #fff;
+}
+.two-up-speech-shape.two-up-speech-shape-white:after {
+  background-color: #fff;
+}
       </style>
-      <div id="two-up" style="" class="bg-green-official-light">
+      <div id="two-up" class="two-up-title-wrap bg-white">
         <div>
           <div class="container">
             <div class="row">
@@ -1524,7 +2142,7 @@
             </div>
           </div>
         </div>
-        <div style="background-image: url('[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Finding.jpg'); min-height: 580px;;" class="two-up-wrap-compare bg-green-official">
+        <div style="background-image: url('[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Sweet.jpg'); min-height: 580px;;" class="two-up-wrap-compare bg-green-official">
           <div class="container">
             <div class="row">
               <div class="col-md-5 or-container-none col-sm-6  bg-green-official-light">
@@ -1533,10 +2151,13 @@
                     <div class="shape-text">Website Builder</div>
                   </div>
                   <h2>Do-it-yourself with Website Builder. Hosting Included.</h2>
-                  <h3>sub left side</h3>
                   <div class="row">
                     <div class="col-sm-10">
-                      <h4>Block content</h4>
+                      <ul>
+                        <li>Features cPanel "(Linux)" or Parallels Plesk Panel "(Windows)"</li>
+                        <li>One-click install 100s of top apps like Joomla and Drupal</li>
+                        <li>Includes 99.9% uptime, lightning-fast load times and more</li>
+                      </ul><a class="btn btn-default-dark">LEARN MORE</a>
                     </div>
                   </div>
                 </div>
@@ -1547,10 +2168,13 @@
                     <div class="shape-text">Private Virtual Server</div>
                   </div>
                   <h2>Get Hosting that will grow.</h2>
-                  <h3>sub right side</h3>
                   <div class="row">
                     <div class="col-sm-10">
-                      <h4>Block content</h4>
+                      <ul>
+                        <li>Get online fast with 100s of customizable designs</li>
+                        <li>No technical skills required - just drag and drop</li>
+                        <li>Includes a free domain, hosting and more</li>
+                      </ul><a class="btn btn-default-light">LEARN MORE</a>
                     </div>
                   </div>
                 </div>
@@ -1564,11 +2188,10 @@
       <p>disclaimers</p>
     </section>
     <!-- FOOTERBEGIN--> 
-    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer"><Parameters><Parameter key="manifest" value="salesheader" /></Parameters></Data>]@P]
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- FOOTEREND-->
      
-    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Script"><Parameters><Parameter key="manifest" value="salesheader" /></Parameters></Data>]@P]
-    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Bottom"><Parameters><Parameter key="requestedManifest" value="salesheader" /></Parameters></Data>]@P]
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Script"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- liveperson includes -->
     <div id="lpButtonDiv"></div><!-- End Main Content -->
     <script type="text/javascript">
@@ -1607,7 +2230,8 @@
             var maxHeight = 0;
             $(outerPlan).find(".pro-plan-wrap").each(function(index, plan) {
               maxHeight = $(plan).outerHeight() > maxHeight ? $(plan).outerHeight() : maxHeight;
-            }).css("height", maxHeight);
+            });
+            if( maxHeight > 0 )$(outerPlan).find(".pro-plan-wrap").css("height", maxHeight);
           });
         }
       });
