@@ -30,10 +30,10 @@ block plans
   
 block sections  
   +renderMidPageNav
-    +priceBlock("$69.99", "year", "#alternate-products")
+    +priceBlock("$69.99", "year", "#marquee")
 
   section#templates.tile-section
-    |[@P[cdsDocument:<data app="sales" location="hosting/template-slider" /> ]@P]
+    |view templates 
 
   include ./website-builder/fullVideo.jade
 
@@ -81,6 +81,10 @@ block sections
       p Fusce viverra eget massa ac posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Cras vel ligula venenatis, fringilla purus sit amet, semper ante. Vivamus bibendum maximus dui et finibus. Integer in dignissim dolor, in malesuada massa. Nam accumsan feugiat tortor, eu tincidunt mauris laoreet a. Fusce fermentum dolor eu odio volutpat varius. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis sed augue pretium, ultrices nisi non, maximus tortor. Praesent auctor euismod fringilla.
   
   section#other-products
-    h1(style="text-align:center").h0 Not finding what you need? 
-
-
+    +renderTwoUpCompare({title: "Not finding what you need?", twoUpCompareId: "two-up", titleBackgroundColor: "bg-white", backgroundColor: "bg-green-official", backgroundImage: "background-image: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/two-up-bg-wsb.jpg')", style: "min-height: 100%"})
+      +twoUpCompareColumn({title: "Get the power of Wordpress with the ease of Fully-Managed Hosting and Security", backgroundColor: "gb-green-official-light", shapeText: "Managed Wordpress", shapeColor: "orange"})
+        p Perfect for: Bloggers, start-ups, small businesses, and designers
+        a.btn.btn-default-dark LEARN MORE
+      +twoUpCompareColumn({title: "Everything you need to open your own online store - no technical skills required.", backgroundColor: "bg-gray-darkest", shapeText: "Quick Shopping Cart", shapeColor: "orange", whiteText: "white-text"})
+        p Perfect for: eCommerce businesses and those looking to add online sales to their site
+        a.btn.btn-default-light LEARN MORE

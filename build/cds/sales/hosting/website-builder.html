@@ -25,7 +25,7 @@
     <meta property="og:site_name" content="[@T[link:<relative parammode='explicit' />]@T]">
     <meta property="fb:app_id" content="115696031791232">
     <meta property="fb:admins" content="633356800"> 
-    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags"><Parameters><Parameter key="manifest" value="salesheader" /></Parameters></Data>]@P]
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <script src="[@T[link:<javascriptroot />]@T]/ux/dev-brand/js/uxcore.en.min.js"></script>
     <script src="[@T[link:<javascriptroot />]@T]/ux/dev-brand/js/uxcontrols.min.js"></script>
     <script src="[@T[link:<javascriptroot />]@T]/fos/mike/0.7.0/js/sahara.min.js"></script>
@@ -64,7 +64,7 @@
   </head>
   <body>
     <!-- HEADERBEGIN--> 
-    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /></Parameters></Data>]@P]
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- HEADEREND-->
     <section id="marquee"> 
       <atlantis:webstash type="css">
@@ -227,7 +227,9 @@
         </div>
       </div>
     </section>
-    <style>
+    <style>.fix-body {
+  margin-top: 130px;
+}
 .mid-page-nav {
   background-color: #333333;
   font-family: 'Walsheim-Bold';
@@ -237,6 +239,15 @@
   -moz-box-shadow: 0px 3px 0 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0px 3px 0 0 rgba(0, 0, 0, 0.1);
 }
+@media only screen and (max-width: 768px) {
+  .mid-page-nav {
+    display: none;
+  }
+}
+.mid-page-nav .navbar-collapse {
+  margin-left: -15px;
+  margin-right: -15px;
+}
 .mid-page-nav.sticky {
   position: fixed;
   left: 0;
@@ -244,16 +255,50 @@
   top: 0;
   z-index: 1000;
 }
-
-.mid-page-nav .navbar-collapse {
-  margin-left: -15px;
-  margin-right: -15px;
-}
 .mid-page-nav .nav {
   height: 130px;
 }
 .mid-page-nav .nav > li {
   display: table;
+}
+.mid-page-nav .nav > li.open > a {
+  background-color: #232323;
+}
+.mid-page-nav .nav > li.open > a:before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-top: 15px solid #008a32;
+  border-right: 20px solid transparent;
+  border-left: 20px solid transparent;
+  position: absolute;
+  bottom: 14px;
+  margin-left: -20px;
+  left: 50%;
+}
+.mid-page-nav .nav > li > a {
+  display: table-cell;
+  height: 130px;
+  vertical-align: middle;
+}
+.mid-page-nav .nav > li > a.active,
+.mid-page-nav .nav > li > a:focus,
+.mid-page-nav .nav > li > a:hover {
+  background-color: #232323;
+}
+.mid-page-nav .nav > li > a.active:before,
+.mid-page-nav .nav > li > a:focus:before,
+.mid-page-nav .nav > li > a:hover:before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-top: 15px solid #008a32;
+  border-right: 20px solid transparent;
+  border-left: 20px solid transparent;
+  position: absolute;
+  bottom: 14px;
+  margin-left: -20px;
+  left: 50%;
 }
 .mid-page-nav .nav > li a {
   font-size: 24px;
@@ -263,19 +308,31 @@
   padding: 0;
   text-align: center;
 }
-.mid-page-nav .nav > li > a {
-  display: table-cell;
-  height: 130px;
-  vertical-align: middle;
-}
-.mid-page-nav .nav > li:first-child a span {
-  border-left: 0;
-}
 .mid-page-nav .nav > li a span {
   display: table-cell;
   vertical-align: middle;
   border-left: 1px solid #232323;
   padding: 7px 40px;
+}
+.mid-page-nav .nav > li a span > em {
+  font-size: 40px;
+  font-size: 4rem;
+  color: #555555;
+  display: inline-block;
+  margin-top: -5px;
+  border: 0;
+  padding: 0;
+  font-style: normal;
+}
+.mid-page-nav .nav > li:first-child a span {
+  border-left: 0;
+}
+.mid-page-nav .nav .open > .dropdown-menu {
+  opacity: 1;
+  -webkit-transform: scale(1, 1) rotateX(0deg);
+  -moz-transform: scale(1, 1) rotateX(0deg);
+  -ms-transform: scale(1, 1) rotateX(0deg);
+  transform: scale(1, 1) rotateX(0deg);
 }
 .mid-page-nav .nav .dropdown-menu {
   background-clip: padding-box;
@@ -298,28 +355,27 @@
   -ms-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
-
 .mid-page-nav .nav .dropdown-menu li > a {
   display: block;
   background-color: #333333;
   padding: 20px;
   border-bottom: #333333;
 }
-
+.mid-page-nav .nav .dropdown-menu li > a:hover {
+  background-color: #232323;
+}
 .mid-page-nav .price-text {
   font-size: 12px;
   font-size: 1.2rem;
   line-height: 1;
 }
-
 .mid-page-nav .price {
   font-size: 24px;
   font-size: 2.4rem;
 }
-@media only screen and (max-width: 768px){
-  .mid-page-nav {
-    display: none;
-  }
+.mid-page-nav .price span {
+  font-size: 14px;
+  font-size: 1.4rem;
 }
     </style>
     <div class="mid-page-nav">
@@ -331,7 +387,7 @@
           <ul class="nav navbar-nav"></ul>
           <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.mid-page-nav&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="navbar-right">
             <div class="price-text">Plans starting at</div>
-            <div class="price">$69.99<span>/year</span></div><a href="#alternate-products" class="btn-warning btn btn-sm">See the plans</a>
+            <div class="price">$69.99<span>/year</span></div><a href="#marquee" class="btn-warning btn btn-sm">See the plans</a>
           </div>
         </div>
       </div>
@@ -387,7 +443,7 @@
       
       $("#midPageNav").on("click", "a", scroll_if_anchor);
     </script>
-    <section id="templates" class="tile-section">[@P[cdsDocument:<data app="sales" location="hosting/template-slider" /> ]@P]</section>
+    <section id="templates" class="tile-section">view templates </section>
     <style>.video-marquee {
 	background-position: top center;
 }
@@ -1378,7 +1434,11 @@ margin-bottom: 20px;
         var dropdownCaret = $(this).find(".carett");
         var dropdowns = $(dropdownGroup).find(".accordion-dropdown");
       
-        
+        $(dropdowns).removeClass("active");
+        $(dropdownGroup).find(".dropdown").slideUp();
+        $(dropdownGroup).find(".carett")
+                        .removeClass("caret-down")
+                        .addClass("caret-right");
       
         if (!$(dropdownOptions).is(":visible")) {
           $(this).addClass("active");
@@ -1386,15 +1446,9 @@ margin-bottom: 20px;
           $(dropdownCaret).removeClass("caret-right").addClass("caret-down");
           event.stopPropagation();
         }
-        else {
-          $(this).removeClass("active");
-          $(dropdownOptions).slideUp();
-          $(dropdownCaret).removeClass("caret-down").addClass("caret-right");
-          event.stopPropagation();
-        }
       });
       $(window).load(function() {
-        $("#test-faq .accordion-dropdown").click();
+        $("#test-faq .accordion-dropdown:first").click();
       });
       $("#test-button").click(function() {
         $('#test-faq').find('.dropdown').slideDown();
@@ -1405,14 +1459,329 @@ margin-bottom: 20px;
        });
     </script>
     <section id="other-products">
-      <h1 style="text-align:center" class="h0">Not finding what you need? </h1>
+      <style>
+.two-up-title-wrap.bg-white {
+  background-color: #fff;
+}
+.two-up-title-wrap.bg-yellow {
+  background-color: #ffde2d;
+}
+.two-up-title-wrap.bg-gray-lighter,
+.two-up-title-wrap.bg-pro-gray {
+  background-color: #e8e8e8;
+}
+.two-up-title-wrap.bg-gray-light {
+  background-color: #d9d9d9;
+}
+.two-up-title-wrap.bg-green-official {
+  background-color: #77c043;
+}
+.two-up-title-wrap.bg-green-new {
+  background-color: #5caf2b;
+}
+.two-up-title-wrap.bg-green-official-light {
+  background-color: #84D54A;
+}
+.two-up-title-wrap.bg-gray-darkest {
+  background-color: #333333;
+}
+
+.two-up-wrap-compare {
+  min-height: 980px;
+  background-repeat: no-repeat;
+  background-size: cover !important;
+  background-position: center top;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-white {
+    background-color: transparent;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-yellow {
+    background-color: transparent;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-gray-lighter,
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-pro-gray {
+    background-color: transparent;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-gray-light {
+    background-color: transparent;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-green-official {
+    background-color: transparent;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-green-new {
+    background-color: transparent;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-green-official-light {
+    background-color: transparent;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-gray-darkest {
+    background-color: transparent;
+  }
+}
+@media (max-width: 767px) {
+  .two-up-wrap-compare {
+    background-image: none !important;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-white {
+    background-color: #fff;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-yellow {
+    background-color: #ffde2d;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-gray-lighter,
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-pro-gray {
+    background-color: #e8e8e8;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-gray-light {
+    background-color: #d9d9d9;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-green-official {
+    background-color: #77c043;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-green-new {
+    background-color: #5caf2b;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-green-official-light {
+    background-color: #84D54A;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-gray-darkest {
+    background-color: #333333;
+  }
+}
+.two-up-wrap-compare:after {
+  content: '';
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+@media only (max-width: 767px) {
+  .two-up-wrap-compare:after {
+    display: none;
+  }
+}
+.two-up-wrap-compare .two-up-text-wrap {
+  padding: 30px;
+}
+@media (max-width: 767px) {
+  .two-up-wrap-compare .two-up-text-wrap {
+    padding: 60px 0;
+  }
+}
+.two-up-wrap-compare h2 {
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-family: 'Walsheim-Black';
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: 300;
+  line-height: 1.1;
+  color: #333;
+}
+.two-up-wrap-compare h3 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-family: 'Walsheim-Black';
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: 300;
+  line-height: 1.1;
+}
+.two-up-wrap-compare .white-text {
+  color: #fff;
+}
+.two-up-wrap-compare .white-text h2{
+  color: #fff;
+}
+.two-up-wrap-compare .two-up-text-wrap h3.subtitle {
+  text-transform: none;
+}
+.two-up-wrap-compare .check-bullets li {
+  position: relative;
+  padding-left: 40px;
+  margin-bottom: 20px;
+}
+.two-up-wrap-compare .check-bullets li:before {
+  content: '';
+  background-image: ;
+  background-size: 205px auto;
+  background-position: 0 -700px;
+  width: 25px;
+  height: 27px;
+  position: absolute;
+  left: 0;
+}
+.two-up-wrap-compare .check-bullets li h5 {
+  margin-bottom: 5px;
+}
+.or-container-none:after {
+  content: '';
+  width: 94px;
+  height: 94px;
+  background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+  background-size: 205px auto;
+  background-position: 0 -896px;
+  position: absolute;
+  bottom: -50px;
+  margin: 0 auto;
+  display: none;
+  margin-left: -50px;
+  z-index: 1;
+}
+.or-container:after {
+  content: '';
+  width: 94px;
+  height: 94px;
+  background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+  background-size: 205px auto;
+  background-position: 0 -896px;
+  position: absolute;
+  bottom: -50px;
+  margin: 0 auto;
+  display: block;
+  margin-left: -50px;
+  z-index: 1;
+}
+@media (max-width: 767px) {
+  .or-container:after {
+    display: block;
+    -webkit-transform: 90deg;
+    -moz-transform: 90deg;
+    transform: rotate(90deg);
+    left: 50%
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .or-container:after {
+    left: 101%
+  }
+}
+@media (min-width: 992px) {
+  .or-container:after {
+    left: 121%
+  }
+}
+
+.two-up-title {
+  margin: 40px 0;
+  line-height: 1;
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-family: 'Walsheim-Black';
+  font-weight: 300;
+}
+.two-up-speech-shape {
+  font-family: 'Walsheim-Bold';
+  font-size: 18px;
+  font-size: 1.8rem;
+  padding: 5px 10px 5px 17px;
+  color: #fff;
+  display: inline-block;
+  position: relative;
+  margin-bottom: 20px;
+  z-index: 2;
+}
+.two-up-speech-shape .shape-text {
+  position: relative;
+  z-index: 40;
+}
+.two-up-speech-shape:before {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  border-top: 15px solid;
+  border-right: 15px solid transparent;
+}
+.two-up-speech-shape:after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 99%;
+  top: 0;
+  transform: skew(-12deg, 0);
+  z-index: 1;
+}
+.two-up-speech-shape.two-up-speech-shape-green {
+  background-color: #008a32;
+}
+.two-up-speech-shape.two-up-speech-shape-green:before {
+  border-top-color: #008a32;
+}
+.two-up-speech-shape.two-up-speech-shape-green:after {
+  background-color: #008a32;
+}
+.two-up-speech-shape.two-up-speech-shape-orange {
+  background-color: #ef6c0f;
+}
+.two-up-speech-shape.two-up-speech-shape-orange:before {
+  border-top-color: #ef6c0f;
+}
+.two-up-speech-shape.two-up-speech-shape-orange:after {
+  background-color: #ef6c0f;
+}
+.two-up-speech-shape.two-up-speech-shape-white {
+  background-color: #fff;
+}
+.two-up-speech-shape.two-up-speech-shape-white:before {
+  border-top-color: #fff;
+}
+.two-up-speech-shape.two-up-speech-shape-white:after {
+  background-color: #fff;
+}
+      </style>
+      <div id="two-up" class="two-up-title-wrap bg-white">
+        <div>
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12">
+                <h2 class="text-center two-up-title">Not finding what you need?</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="background-image: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/two-up-bg-wsb.jpg'); min-height: 100%;" class="two-up-wrap-compare bg-green-official">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-5 or-container-none col-sm-6  gb-green-official-light">
+                <div style="" class="two-up-text-wrap ">
+                  <div class="two-up-speech-shape two-up-speech-shape-orange">
+                    <div class="shape-text">Managed Wordpress</div>
+                  </div>
+                  <h2>Get the power of Wordpress with the ease of Fully-Managed Hosting and Security</h2>
+                  <div class="row">
+                    <div class="col-sm-10">
+                      <p>Perfect for: Bloggers, start-ups, small businesses, and designers</p><a class="btn btn-default-dark">LEARN MORE</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-5 col-md-offset-2 col-sm-6  bg-gray-darkest">
+                <div style="" class="two-up-text-wrap white-text">
+                  <div class="two-up-speech-shape two-up-speech-shape-orange">
+                    <div class="shape-text">Quick Shopping Cart</div>
+                  </div>
+                  <h2>Everything you need to open your own online store - no technical skills required.</h2>
+                  <div class="row">
+                    <div class="col-sm-10">
+                      <p>Perfect for: eCommerce businesses and those looking to add online sales to their site</p><a class="btn btn-default-light">LEARN MORE</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
     <!-- FOOTERBEGIN--> 
-    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer"><Parameters><Parameter key="manifest" value="salesheader" /></Parameters></Data>]@P]
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- FOOTEREND-->
      
-    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Script"><Parameters><Parameter key="manifest" value="salesheader" /></Parameters></Data>]@P]
-    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Bottom"><Parameters><Parameter key="requestedManifest" value="salesheader" /></Parameters></Data>]@P]
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Script"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- liveperson includes -->
     <div id="lpButtonDiv"></div><!-- End Main Content -->
     <script type="text/javascript">
@@ -1438,7 +1807,8 @@ margin-bottom: 20px;
             var maxHeight = 0;
             $(outerPlan).find(".pro-plan-wrap").each(function(index, plan) {
               maxHeight = $(plan).outerHeight() > maxHeight ? $(plan).outerHeight() : maxHeight;
-            }).css("height", maxHeight);
+            });
+            if( maxHeight > 0 )$(outerPlan).find(".pro-plan-wrap").css("height", maxHeight);
           });
         }
       });

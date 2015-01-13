@@ -194,9 +194,6 @@ function formatDomainWithDefaultTldIfNoneSpecified(domain) {
 
 function isTldValid(domain) {
   var isValid = false;
-  if(domain=='test.com') {
-    debugger;
-  }
   $.each(got1Page.tldInfo.tlds, function(idx, tld) {
     if(domain.indexOf(tld, domain.length - tld.length) !== -1) {
       isValid = true;
@@ -4698,6 +4695,7 @@ section#products {
 /*  speech */
 
 .speech-shape-upsidedown {
+  line-height: 1.9em;
   font-family: 'Walsheim-Bold';
   font-size: 18px;
   padding: 5px 10px 5px 17px;
@@ -4723,7 +4721,7 @@ section#products {
   content: '';
   position: absolute;
   height: 100%;
-  left: 50%;
+  right: 0;
   top: 0;
   transform: skew(12deg, 0);
   z-index: 1;
@@ -4851,13 +4849,11 @@ section#products {
             </div>
           </div>
           <style>
-            .search-form { margin: 0 auto 1.071428571em;}
-            .search-form-input {height: 67px; padding: 20px; color: #333; font-size:18px;border-top-color: #fff; border-top-width: 3px; border-top-style: inset; border-bottom: 1px solid #ccc; border-left: 1px solid #ccc; border-right: 1px solid #ccc; width: 850px;}
+            .offer-search-box .search-form-input {height: 67px; padding: 20px; color: #333; font-size:18px;border-top-color: #fff; border-top-width: 3px; border-top-style: inset; border-bottom: 1px solid #ccc; border-left: 1px solid #ccc; border-right: 1px solid #ccc; width: 850px;}
             .offer-search-box label.searchInput {};
-            form.search-form button.offer-search-btn { font-size: 20px; height: 66px; margin-top: -6px; }
-            .offer-search-section { padding-bottom:20px;}
+            .offer-search-box button.offer-search-btn { font-size: 20px; height: 66px; margin-top: -6px; }
+            .offer-search-box { padding-bottom:20px;}
             .search-message { display: none; margin-left:20px; margin-top:30px;width:65%;}
-            
             
           </style>
           <div class="row">
@@ -4866,23 +4862,13 @@ section#products {
             </div>
           </div>
           <div class="row">
-            <div class="col-md-12">
-              <div class="offer-search-section">
-                <div class="offer-main-top">
-                  <form class="search-form">
-                    <div class="offer-search-box">
-                      <input type="text" placeholder="Enter a domain name" name="domainToCheck" autocomplete="off" maxlength="63" class="search-form-input searchInput helveticafont"/>
-                      <button type="button" name="searchButton" data-ci="12345" class="btn btn-primary btn-lg offer-search-btn">SEARCH</button>
-                      <div class="search-message speech-shape-upsidedown speech-shape-upsidedown-yellow type-your-business-name">Type your business name here (if you have one)</div>
-                      <div class="search-message speech-shape-upsidedown speech-shape-upsidedown-orange domain-eligibility-fail">You do not meet the eligibilty requirements for {0} domains, please select a different domain extension and search again.</div>
-                      <div class="search-message speech-shape-upsidedown speech-shape-upsidedown-white invalid-TLD-entered">You need to choose a valid TLD.</div>
-                      <div class="search-message speech-shape-upsidedown speech-shape-upsidedown-orange api-A-failure">API A FAILURE</div>
-                    </div>
-                    <div class="clearfix"></div>
-                  </form>
-                </div>
-              </div>
+            <div class="col-md-12 offer-search-box">
+              <input type="text" placeholder="Enter a domain name" name="domainToCheck" autocomplete="off" maxlength="63" class="search-form-input searchInput helveticafont"/>
+              <button type="button" name="searchButton" data-ci="12345" class="btn btn-primary btn-lg offer-search-btn">Search</button>
             </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12"><span class="search-message speech-shape-upsidedown speech-shape-upsidedown-yellow type-your-business-name">Type your business name here (if you have one)</span><span class="search-message speech-shape-upsidedown speech-shape-upsidedown-orange domain-eligibility-fail">You do not meet the eligibility requirements for {0} domains, please select a different domain extension and search again.</span><span class="search-message speech-shape-upsidedown speech-shape-upsidedown-white invalid-TLD-entered">You need to choose a valid TLD.</span></div>
           </div>
         </div>
       </section>
@@ -4915,13 +4901,11 @@ section#products {
         <div class="bg-white">
           <div class="container">
             <style>
-              .search-form { margin: 0 auto 1.071428571em;}
-              .search-form-input {height: 67px; padding: 20px; color: #333; font-size:18px;border-top-color: #fff; border-top-width: 3px; border-top-style: inset; border-bottom: 1px solid #ccc; border-left: 1px solid #ccc; border-right: 1px solid #ccc; width: 850px;}
+              .offer-search-box .search-form-input {height: 67px; padding: 20px; color: #333; font-size:18px;border-top-color: #fff; border-top-width: 3px; border-top-style: inset; border-bottom: 1px solid #ccc; border-left: 1px solid #ccc; border-right: 1px solid #ccc; width: 850px;}
               .offer-search-box label.searchInput {};
-              form.search-form button.offer-search-btn { font-size: 20px; height: 66px; margin-top: -6px; }
-              .offer-search-section { padding-bottom:20px;}
+              .offer-search-box button.offer-search-btn { font-size: 20px; height: 66px; margin-top: -6px; }
+              .offer-search-box { padding-bottom:20px;}
               .search-message { display: none; margin-left:20px; margin-top:30px;width:65%;}
-              
               
             </style>
             <div class="row">
@@ -4930,23 +4914,13 @@ section#products {
               </div>
             </div>
             <div class="row">
-              <div class="col-md-12">
-                <div class="offer-search-section">
-                  <div class="offer-main-top">
-                    <form class="search-form">
-                      <div class="offer-search-box">
-                        <input type="text" placeholder="Try a different domain name" name="domainToCheck" autocomplete="off" maxlength="63" class="search-form-input searchInput helveticafont"/>
-                        <button type="button" name="searchButton" data-ci="12346" class="btn btn-primary btn-lg offer-search-btn">SEARCH</button>
-                        <div class="search-message speech-shape-upsidedown speech-shape-upsidedown-yellow type-your-business-name">Type your business name here (if you have one)</div>
-                        <div class="search-message speech-shape-upsidedown speech-shape-upsidedown-orange domain-eligibility-fail">You do not meet the eligibilty requirements for {0} domains, please select a different domain extension and search again.</div>
-                        <div class="search-message speech-shape-upsidedown speech-shape-upsidedown-white invalid-TLD-entered">You need to choose a valid TLD.</div>
-                        <div class="search-message speech-shape-upsidedown speech-shape-upsidedown-orange api-A-failure">API A FAILURE</div>
-                      </div>
-                      <div class="clearfix"></div>
-                    </form>
-                  </div>
-                </div>
+              <div class="col-md-12 offer-search-box">
+                <input type="text" placeholder="Try a different domain name" name="domainToCheck" autocomplete="off" maxlength="63" class="search-form-input searchInput helveticafont"/>
+                <button type="button" name="searchButton" data-ci="12346" class="btn btn-primary btn-lg offer-search-btn">Search</button>
               </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12"><span class="search-message speech-shape-upsidedown speech-shape-upsidedown-yellow type-your-business-name">Type your business name here (if you have one)</span><span class="search-message speech-shape-upsidedown speech-shape-upsidedown-orange domain-eligibility-fail">You do not meet the eligibility requirements for {0} domains, please select a different domain extension and search again.</span><span class="search-message speech-shape-upsidedown speech-shape-upsidedown-white invalid-TLD-entered">You need to choose a valid TLD.</span></div>
             </div>
           </div>
         </div>
@@ -4978,13 +4952,11 @@ section#products {
               </div>
             </div>
             <style>
-              .search-form { margin: 0 auto 1.071428571em;}
-              .search-form-input {height: 67px; padding: 20px; color: #333; font-size:18px;border-top-color: #fff; border-top-width: 3px; border-top-style: inset; border-bottom: 1px solid #ccc; border-left: 1px solid #ccc; border-right: 1px solid #ccc; width: 850px;}
+              .offer-search-box .search-form-input {height: 67px; padding: 20px; color: #333; font-size:18px;border-top-color: #fff; border-top-width: 3px; border-top-style: inset; border-bottom: 1px solid #ccc; border-left: 1px solid #ccc; border-right: 1px solid #ccc; width: 850px;}
               .offer-search-box label.searchInput {};
-              form.search-form button.offer-search-btn { font-size: 20px; height: 66px; margin-top: -6px; }
-              .offer-search-section { padding-bottom:20px;}
+              .offer-search-box button.offer-search-btn { font-size: 20px; height: 66px; margin-top: -6px; }
+              .offer-search-box { padding-bottom:20px;}
               .search-message { display: none; margin-left:20px; margin-top:30px;width:65%;}
-              
               
             </style>
             <div class="row">
@@ -4993,23 +4965,13 @@ section#products {
               </div>
             </div>
             <div class="row">
-              <div class="col-md-12">
-                <div class="offer-search-section">
-                  <div class="offer-main-top">
-                    <form class="search-form">
-                      <div class="offer-search-box">
-                        <input type="text" placeholder="Try a different domain name" name="domainToCheck" autocomplete="off" maxlength="63" class="search-form-input searchInput helveticafont"/>
-                        <button type="button" name="searchButton" data-ci="12347" class="btn btn-primary btn-lg offer-search-btn">SEARCH</button>
-                        <div class="search-message speech-shape-upsidedown speech-shape-upsidedown-yellow type-your-business-name">Type your business name here (if you have one)</div>
-                        <div class="search-message speech-shape-upsidedown speech-shape-upsidedown-orange domain-eligibility-fail">You do not meet the eligibilty requirements for {0} domains, please select a different domain extension and search again.</div>
-                        <div class="search-message speech-shape-upsidedown speech-shape-upsidedown-white invalid-TLD-entered">You need to choose a valid TLD.</div>
-                        <div class="search-message speech-shape-upsidedown speech-shape-upsidedown-orange api-A-failure">API A FAILURE</div>
-                      </div>
-                      <div class="clearfix"></div>
-                    </form>
-                  </div>
-                </div>
+              <div class="col-md-12 offer-search-box">
+                <input type="text" placeholder="Try a different domain name" name="domainToCheck" autocomplete="off" maxlength="63" class="search-form-input searchInput helveticafont"/>
+                <button type="button" name="searchButton" data-ci="12347" class="btn btn-primary btn-lg offer-search-btn"></button>
               </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12"><span class="search-message speech-shape-upsidedown speech-shape-upsidedown-yellow type-your-business-name">Search</span><span class="search-message speech-shape-upsidedown speech-shape-upsidedown-orange domain-eligibility-fail">Type your business name here (if you have one)</span><span class="search-message speech-shape-upsidedown speech-shape-upsidedown-white invalid-TLD-entered">You do not meet the eligibility requirements for {0} domains, please select a different domain extension and search again.</span></div>
             </div>
           </div>
         </div>
@@ -5138,11 +5100,16 @@ section#products {
       #domains .tld-images {margin-top: 0px; margin-left: 60px;}
       #domains .tld-image {margin: 15px;}
       #findYourPerfectDomain.tile-section {
-        padding:0 30px;
+        padding:20px 0;
       }
       #findYourPerfectDomain.features-slim {
         min-height: 241px;
       }
+      #findYourPerfectDomain {
+        background-color: #F3F3F3;
+      }
+      
+      
     </style>
     <section id="domains">
       <div class="features tile-section">
@@ -5181,13 +5148,13 @@ section#products {
       <div id="findYourPerfectDomain" style="background-image: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/bg-shortMod.jpg');" data-lazy-load="" class="features tile-section features-slim  ">
         <div class="container">
           <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-6 bg-slim-left">
               <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
                 <h2>Find your perfect name</h2>
                 <div class="features-text">Keep it classic or try something new. Either way, we've got your covered. Choose from any of these domains.</div>
               </div>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-6 bg-slim-right">
               <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="text-center"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/you-get.png" alt="" class="features-img features-img-right-slim">
               </div>
             </div>

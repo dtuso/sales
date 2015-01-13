@@ -157,9 +157,6 @@ function formatDomainWithDefaultTldIfNoneSpecified(domain) {
 
 function isTldValid(domain) {
   var isValid = false;
-  if(domain=='test.com') {
-    debugger;
-  }
   $.each(got1Page.tldInfo.tlds, function(idx, tld) {
     if(domain.indexOf(tld, domain.length - tld.length) !== -1) {
       isValid = true;
