@@ -4,7 +4,6 @@ style.
   #domain-not-available-marquee-view .pro-plans .pro-plan-wrap {border-top: 10px solid #008a32; padding: 20px;}
   #domain-not-available-marquee-view .pro-plans {margin-top: 0px; }
   #domain-not-available-marquee-view .domain-not-available-heading-text  { color: #333333; }
-  #domain-not-available-marquee-view .domain-not-available-subheading-text { color: #000000;}
   #domain-not-available-marquee-view .other-domains-heading-text {padding-top 20px; }
   #domain-not-available-marquee-view .results-list-heading-text {padding-top 20px; }
   #domain-not-available-marquee-view .domain-spin-wrap {min-height: 120px;border: solid 1px #cccccc;margin-bottom: 15px;} 
@@ -13,14 +12,16 @@ style.
   #domain-not-available-marquee-view .show-more-arrow { position: relative; top: 16px; left: 15px; bottom: 0; margin-left: -10px; width: 0; height: 0; border: 11px solid transparent; border-top-color: #000; content: ''; }
   #spin-results .spin-results-message,
   #spin-results .spin-template {display:none;font-size:18px;}
+  #spin-results .select-and-continue {margin-bottom: 0px;}
+  #spin-results .spin-results-message {margin-top:15px;}
+  #spin-results .checking-availability, #spin-results .now-unavailable, #spin-results .api-B-failure {padding-top:5px;}
 section#domain-not-available-marquee-view
   .bg-green-official
     .container
       .row
         .col-md-12
           h2.domain-not-available-heading-text Sorry, that domain's already taken.
-          h4.domain-not-available-subheading-text The right one's out there. Just try again.
-      +domainSearchOffersInput('', '12347', 'Try a different domain name', '')
+      +domainSearchOffersInput('The right one\'s out there. Just try again.', '12347', 'Try a different domain name', '')
   .bg-white
     .container.pro-plans
       .row

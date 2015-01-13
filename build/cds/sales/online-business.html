@@ -11,17 +11,17 @@
     <link href="https://plus.google.com/108306343581548568740" rel="publisher">
     <meta name="verify-v1" content="dV1r/ZJJdDEI++fKJ6iDEl6o+TMNtSu0kv18ONeqM0I=">
     <meta name="y_key" content="1e39c508e0d87750">
-    <link rel="canonical" href="[@T[link:<relative parammode='explicit' />]@T]">
+    <link rel="canonical" href="[@T[link:<relative parammode='explicit' path='~/offers/online-business.aspx' />]@T]">
     <link rel="shortcut icon" href="[@T[link:<imageroot />]@T]assets/godaddy.ico">
     <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7914312/697366/css/fonts.css">
-    <title>[@L[cds.sales/page:page-title]@L]</title>
-    <meta name="description" content="[@L[cds.sales/page:page-description]@L]">
-    <meta name="keywords" content="[@L[cds.sales/page:page-keywords]@L]">
-    <meta property="og:title" content="[@L[cds.sales/page:page-openGraph-title]@L]">
-    <meta property="og:description" content="[@L[cds.sales/page:page-openGraph-description]@L]">
+    <title>[@L[cds.sales/offers/online-business:page-title]@L]</title>
+    <meta name="description" content="[@L[cds.sales/offers/online-business:meta-description]@L]">
+    <meta name="keywords" content="[@L[cds.sales/offers/online-business:meta-keywords]@L]">
+    <meta property="og:title" content="[@L[cds.sales/offers/online-business:og-title]@L]">
+    <meta property="og:description" content="[@L[cds.sales/offers/online-business:og-description]@L]">
     <meta property="og:type" content="website">
     <meta property="og:url" content="[@T[link:<relative parammode='explicit' />]@T]">
-    <meta property="og:image" content="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/gd_rebrand_og.png">
+    <meta property="og:image" content="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/online-business/img/og_got_1200x630.jpg">
     <meta property="og:site_name" content="[@T[link:<relative parammode='explicit' />]@T]">
     <meta property="fb:app_id" content="115696031791232">
     <meta property="fb:admins" content="633356800">
@@ -35,13 +35,11 @@
     <script src="[@T[link:<javascriptroot />]@T]/ux/dev-brand/js/uxcontrols.min.js"></script>
     <script src="[@T[link:<javascriptroot />]@T]/fos/mike/0.7.0/js/sahara.min.js"></script>
     <atlantis:webstash type="js">
-      <script>
-
-
-var got1Page = {
-  tlds: ['com','org','co','net'],
+      <script>var got1Page = {
+  tlds: ['com','org','co','net', 'club', 'rocks'],
   defaultTld: 'com',
   maxNumberOfSpinsToShowByDefault: 3,
+  dppErrorReturnUrl: '[@T[link:<relative path="~/offers/online-business.aspx"><param name="err" value="dpp1" /></relative>]@T]',
   offersCodes: {
     packageId_wsb: 'gybo_1email_1yr',
     packageId_ols: 'gybo_1email_1yr_ols',
@@ -185,27 +183,27 @@ function domainSearchFormSubmit(e) {
     dataType: 'json',
     cache: false,
     success: function(data){ 
-        var 
-          exactMatchDomain = data.ExactMatchDomain || {},
-          searchedForDomain = exactMatchDomain.Fqdn ? exactMatchDomain.Fqdn : domain,
-          isAvailable = exactMatchDomain.IsPurchasable && exactMatchDomain.IsPurchasable === true, /* data.ExactMatchDomain.AvailabilityStatus 1001=unavailable 1000=available*/
-          alternateDomains = data.RecommendedDomains || [];
+      var 
+        exactMatchDomain = data.ExactMatchDomain || {},
+        searchedForDomain = exactMatchDomain.Fqdn ? exactMatchDomain.Fqdn : domain,
+        isAvailable = exactMatchDomain.IsPurchasable && exactMatchDomain.IsPurchasable === true, /* data.ExactMatchDomain.AvailabilityStatus 1001=unavailable 1000=available*/
+        alternateDomains = data.RecommendedDomains || [];
 
-        if(isAvailable) {
-          // Domain is available, so allow them to search again or to select this available domain
-          showSuccessfulSearch(exactMatchDomain);
+      if(isAvailable) {
+        // Domain is available, so allow them to search again or to select this available domain
+        showSuccessfulSearch(exactMatchDomain);
 
+      } else {
+        // Domain is taken, show spins if possible
+        if(alternateDomains.length > 0) {
+          // SHOW SPINS
+          showSearchSpins(exactMatchDomain, alternateDomains);
         } else {
+          // NO SPINS
+          showApi1SearchError(e, domain);
+        }
 
-          if(alternateDomains.length > 0) {
-            // SHOW SPINS
-            showSearchSpins(exactMatchDomain, alternateDomains);
-          } else {
-            // NO SPINS
-            showApi1SearchError(e, domain);
-          }
-
-        }    
+      }    
 
     },
     error: function(){
@@ -217,6 +215,8 @@ function domainSearchFormSubmit(e) {
 
 
 function verifyDomainIsStillAvailable(e) {
+
+
   var $this = $(e.target),
     $thisParent = $this.parent(),
     domain = $this.data('domain'),
@@ -268,13 +268,48 @@ function showChoicesScreen(e){
 
 function goToDppCheckoutPage(e) {
   var $this = $(e.target),
-    domain = $this.data('domain');
+    domain = $this.data('domain'),
+    isOLS = $this.hasClass('product-ols'),
+    apiEndpoint3;
 
-  alert('TODO goToDppCheckoutPage(' + domain.Fqdn + ')');
+  apiEndpoint3 = '[@T[link:<relative path="~/api/dpp/searchresultscart/11/"><param name="domain" value="domain" /><param name="packageid" value="packageid" /><param name="itc" value="itc" /><param name="returnUrl" value="returnUrl" /></relative>]@T]';
+  apiEndpoint3 = apiEndpoint3.replace('domain=domain', 'domain=' + domain.Fqdn);
+  apiEndpoint3 = apiEndpoint3.replace('packageid=packageid', 'packageid=' + (isOLS ? got1Page.offersCodes.packageId_ols : got1Page.offersCodes.packageId_wsb));
+  apiEndpoint3 = apiEndpoint3.replace('itc=itc', 'itc=' + (isOLS ? got1Page.offersCodes.itc_ols : got1Page.offersCodes.itc_wsb));
+  apiEndpoint3 = apiEndpoint3.replace('returnUrl=returnUrl', 'returnUrl=' +  encodeURIComponent(got1Page.dppErrorReturnUrl) );
+
+  $.ajaxSetup({cache:false});
+  $.ajax({
+    url: apiEndpoint3,
+    type: 'GET',
+    dataType: 'json',
+    cache: false,
+    success: function(data){
+
+      if(data && data.Success) {
+
+        window.location = data.NextStepUrl;
+        return;
+
+      } else {
+
+        showApi3SearchError(e, domain);
+
+      }
+    },
+    error: function(){
+
+      showApi3SearchError(e, domain);
+
+    }
+  });
 
 }
 
 function showSuccessfulSearch(domain){  
+
+  // setup search box
+  $('.search-message').hide();
 
   $('#available-domain-name').text(domain.Fqdn);
   animateToAvailable(domain);
@@ -282,6 +317,9 @@ function showSuccessfulSearch(domain){
 }
 
 function showSearchSpins(domain, alternateDomains){  
+
+  // setup search box
+  $('.search-message').hide();
 
   // clear any spins from the DOM
   $('#spin-results .spin-result').remove();
@@ -323,8 +361,10 @@ function showApi2SearchError(e,domain){
 }
 
 function showApi3SearchError(e,domain){
-  $thisParent.find('.spin-results-message').hide();
-  $thisParent.find('.api-B-failure').show();
+  
+  // alert box
+  alert('API 3 error!');
+
 }
 
 function showDomainRegistrationFailure() {
@@ -4761,14 +4801,12 @@ section#products {
           </div>
           <style>
             .search-form { margin: 0 auto 1.071428571em;}
-            .search-form-input {height: 67px; padding: 20px; color: #333; font-size:18px;
-              border-top-color: #fff; border-top-width: 3px; 
-              border-top-style: inset; border-bottom: 1px solid #ccc; border-left: 1px solid #ccc; border-right: 1px solid #ccc; 
-              width: 850px;}
+            .search-form-input {height: 67px; padding: 20px; color: #333; font-size:18px;border-top-color: #fff; border-top-width: 3px; border-top-style: inset; border-bottom: 1px solid #ccc; border-left: 1px solid #ccc; border-right: 1px solid #ccc; width: 850px;}
             .offer-search-box label.searchInput {};
-            .offer-search-btn {font-size: 20pt; }
+            form.search-form button.offer-search-btn { font-size: 20px; height: 66px; margin-top: -6px; }
             .offer-search-section { padding-bottom:20px;}
             .search-message { display: none; margin-left:20px; margin-top:30px;width:50%;}
+            
             
           </style>
           <div class="row">
@@ -4827,14 +4865,12 @@ section#products {
           <div class="container">
             <style>
               .search-form { margin: 0 auto 1.071428571em;}
-              .search-form-input {height: 67px; padding: 20px; color: #333; font-size:18px;
-                border-top-color: #fff; border-top-width: 3px; 
-                border-top-style: inset; border-bottom: 1px solid #ccc; border-left: 1px solid #ccc; border-right: 1px solid #ccc; 
-                width: 850px;}
+              .search-form-input {height: 67px; padding: 20px; color: #333; font-size:18px;border-top-color: #fff; border-top-width: 3px; border-top-style: inset; border-bottom: 1px solid #ccc; border-left: 1px solid #ccc; border-right: 1px solid #ccc; width: 850px;}
               .offer-search-box label.searchInput {};
-              .offer-search-btn {font-size: 20pt; }
+              form.search-form button.offer-search-btn { font-size: 20px; height: 66px; margin-top: -6px; }
               .offer-search-section { padding-bottom:20px;}
               .search-message { display: none; margin-left:20px; margin-top:30px;width:50%;}
+              
               
             </style>
             <div class="row">
@@ -4869,7 +4905,6 @@ section#products {
         #domain-not-available-marquee-view .pro-plans .pro-plan-wrap {border-top: 10px solid #008a32; padding: 20px;}
         #domain-not-available-marquee-view .pro-plans {margin-top: 0px; }
         #domain-not-available-marquee-view .domain-not-available-heading-text  { color: #333333; }
-        #domain-not-available-marquee-view .domain-not-available-subheading-text { color: #000000;}
         #domain-not-available-marquee-view .other-domains-heading-text {padding-top 20px; }
         #domain-not-available-marquee-view .results-list-heading-text {padding-top 20px; }
         #domain-not-available-marquee-view .domain-spin-wrap {min-height: 120px;border: solid 1px #cccccc;margin-bottom: 15px;} 
@@ -4878,6 +4913,9 @@ section#products {
         #domain-not-available-marquee-view .show-more-arrow { position: relative; top: 16px; left: 15px; bottom: 0; margin-left: -10px; width: 0; height: 0; border: 11px solid transparent; border-top-color: #000; content: ''; }
         #spin-results .spin-results-message,
         #spin-results .spin-template {display:none;font-size:18px;}
+        #spin-results .select-and-continue {margin-bottom: 0px;}
+        #spin-results .spin-results-message {margin-top:15px;}
+        #spin-results .checking-availability, #spin-results .now-unavailable, #spin-results .api-B-failure {padding-top:5px;}
       </style>
       <section id="domain-not-available-marquee-view">
         <div class="bg-green-official">
@@ -4885,24 +4923,21 @@ section#products {
             <div class="row">
               <div class="col-md-12">
                 <h2 class="domain-not-available-heading-text">Sorry, that domain's already taken.</h2>
-                <h4 class="domain-not-available-subheading-text">The right one's out there. Just try again.</h4>
               </div>
             </div>
             <style>
               .search-form { margin: 0 auto 1.071428571em;}
-              .search-form-input {height: 67px; padding: 20px; color: #333; font-size:18px;
-                border-top-color: #fff; border-top-width: 3px; 
-                border-top-style: inset; border-bottom: 1px solid #ccc; border-left: 1px solid #ccc; border-right: 1px solid #ccc; 
-                width: 850px;}
+              .search-form-input {height: 67px; padding: 20px; color: #333; font-size:18px;border-top-color: #fff; border-top-width: 3px; border-top-style: inset; border-bottom: 1px solid #ccc; border-left: 1px solid #ccc; border-right: 1px solid #ccc; width: 850px;}
               .offer-search-box label.searchInput {};
-              .offer-search-btn {font-size: 20pt; }
+              form.search-form button.offer-search-btn { font-size: 20px; height: 66px; margin-top: -6px; }
               .offer-search-section { padding-bottom:20px;}
               .search-message { display: none; margin-left:20px; margin-top:30px;width:50%;}
+              
               
             </style>
             <div class="row">
               <div class="col-md-12">
-                <h5 class="get-a-domain-text"></h5>
+                <h5 class="get-a-domain-text">The right one's out there. Just try again.</h5>
               </div>
             </div>
             <div class="row">
@@ -5127,7 +5162,7 @@ section#products {
                 <div class="plan-price-wrap"><span class="plan-price">$1.00</span><span class="plan-duration">/mo</span>
                   <div class="plan-inline-disclaimer">Annual purchase required. Price valid 1st year only. Renews for $11.99/month. See details.</div>
                 </div>
-                <button class="btn btn-md btn-block btn-purchase">Select</button>
+                <button class="btn btn-md btn-block btn-purchase product-wsb">Select</button>
                 <div class="plan-choice-message api-C-failure">API C FAILURE</div>
                 <div class="include-check-green">Choose from dozens of professional website designs</div>
                 <div class="include-check-green"> Customizable text and images with intuitive drag and drop tools</div>
@@ -5146,7 +5181,7 @@ section#products {
                 <div class="plan-price-wrap"><span class="plan-price">$5.00</span><span class="plan-duration">/mo</span>
                   <div class="plan-inline-disclaimer">Annual purchase required. Price valid 1st year only. Renews for $29.99/month. See details.</div>
                 </div>
-                <button class="btn btn-md btn-block btn-purchase">Select</button>
+                <button class="btn btn-md btn-block btn-purchase product-ols">Select</button>
                 <div class="plan-choice-message api-C-failure">API C FAILURE</div>
                 <div class="include-check-green"> Includes Online Store with Website</div>
                 <div class="include-check-green"> Offer unlimited products</div>

@@ -1,10 +1,8 @@
-
-
-
 var got1Page = {
-  tlds: ['com','org','co','net'],
+  tlds: ['com','org','co','net', 'club', 'rocks'],
   defaultTld: 'com',
   maxNumberOfSpinsToShowByDefault: 3,
+  dppErrorReturnUrl: '[@T[link:<relative path="~/offers/online-business.aspx"><param name="err" value="dpp1" /></relative>]@T]',
   offersCodes: {
     packageId_wsb: 'gybo_1email_1yr',
     packageId_ols: 'gybo_1email_1yr_ols',
@@ -148,27 +146,27 @@ function domainSearchFormSubmit(e) {
     dataType: 'json',
     cache: false,
     success: function(data){ 
-        var 
-          exactMatchDomain = data.ExactMatchDomain || {},
-          searchedForDomain = exactMatchDomain.Fqdn ? exactMatchDomain.Fqdn : domain,
-          isAvailable = exactMatchDomain.IsPurchasable && exactMatchDomain.IsPurchasable === true, /* data.ExactMatchDomain.AvailabilityStatus 1001=unavailable 1000=available*/
-          alternateDomains = data.RecommendedDomains || [];
+      var 
+        exactMatchDomain = data.ExactMatchDomain || {},
+        searchedForDomain = exactMatchDomain.Fqdn ? exactMatchDomain.Fqdn : domain,
+        isAvailable = exactMatchDomain.IsPurchasable && exactMatchDomain.IsPurchasable === true, /* data.ExactMatchDomain.AvailabilityStatus 1001=unavailable 1000=available*/
+        alternateDomains = data.RecommendedDomains || [];
 
-        if(isAvailable) {
-          // Domain is available, so allow them to search again or to select this available domain
-          showSuccessfulSearch(exactMatchDomain);
+      if(isAvailable) {
+        // Domain is available, so allow them to search again or to select this available domain
+        showSuccessfulSearch(exactMatchDomain);
 
+      } else {
+        // Domain is taken, show spins if possible
+        if(alternateDomains.length > 0) {
+          // SHOW SPINS
+          showSearchSpins(exactMatchDomain, alternateDomains);
         } else {
+          // NO SPINS
+          showApi1SearchError(e, domain);
+        }
 
-          if(alternateDomains.length > 0) {
-            // SHOW SPINS
-            showSearchSpins(exactMatchDomain, alternateDomains);
-          } else {
-            // NO SPINS
-            showApi1SearchError(e, domain);
-          }
-
-        }    
+      }    
 
     },
     error: function(){
@@ -180,6 +178,8 @@ function domainSearchFormSubmit(e) {
 
 
 function verifyDomainIsStillAvailable(e) {
+
+
   var $this = $(e.target),
     $thisParent = $this.parent(),
     domain = $this.data('domain'),
@@ -231,13 +231,48 @@ function showChoicesScreen(e){
 
 function goToDppCheckoutPage(e) {
   var $this = $(e.target),
-    domain = $this.data('domain');
+    domain = $this.data('domain'),
+    isOLS = $this.hasClass('product-ols'),
+    apiEndpoint3;
 
-  alert('TODO goToDppCheckoutPage(' + domain.Fqdn + ')');
+  apiEndpoint3 = '[@T[link:<relative path="~/api/dpp/searchresultscart/11/"><param name="domain" value="domain" /><param name="packageid" value="packageid" /><param name="itc" value="itc" /><param name="returnUrl" value="returnUrl" /></relative>]@T]';
+  apiEndpoint3 = apiEndpoint3.replace('domain=domain', 'domain=' + domain.Fqdn);
+  apiEndpoint3 = apiEndpoint3.replace('packageid=packageid', 'packageid=' + (isOLS ? got1Page.offersCodes.packageId_ols : got1Page.offersCodes.packageId_wsb));
+  apiEndpoint3 = apiEndpoint3.replace('itc=itc', 'itc=' + (isOLS ? got1Page.offersCodes.itc_ols : got1Page.offersCodes.itc_wsb));
+  apiEndpoint3 = apiEndpoint3.replace('returnUrl=returnUrl', 'returnUrl=' +  encodeURIComponent(got1Page.dppErrorReturnUrl) );
+
+  $.ajaxSetup({cache:false});
+  $.ajax({
+    url: apiEndpoint3,
+    type: 'GET',
+    dataType: 'json',
+    cache: false,
+    success: function(data){
+
+      if(data && data.Success) {
+
+        window.location = data.NextStepUrl;
+        return;
+
+      } else {
+
+        showApi3SearchError(e, domain);
+
+      }
+    },
+    error: function(){
+
+      showApi3SearchError(e, domain);
+
+    }
+  });
 
 }
 
 function showSuccessfulSearch(domain){  
+
+  // setup search box
+  $('.search-message').hide();
 
   $('#available-domain-name').text(domain.Fqdn);
   animateToAvailable(domain);
@@ -245,6 +280,9 @@ function showSuccessfulSearch(domain){
 }
 
 function showSearchSpins(domain, alternateDomains){  
+
+  // setup search box
+  $('.search-message').hide();
 
   // clear any spins from the DOM
   $('#spin-results .spin-result').remove();
@@ -286,8 +324,10 @@ function showApi2SearchError(e,domain){
 }
 
 function showApi3SearchError(e,domain){
-  $thisParent.find('.spin-results-message').hide();
-  $thisParent.find('.api-B-failure').show();
+  
+  // alert box
+  alert('API 3 error!');
+
 }
 
 function showDomainRegistrationFailure() {

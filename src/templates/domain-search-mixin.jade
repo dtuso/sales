@@ -20,18 +20,17 @@ mixin domainSearchOffersInput(title, cicode, placeholderText)
 
   style.
     .search-form { margin: 0 auto 1.071428571em;}
-    .search-form-input {height: 67px; padding: 20px; color: #333; font-size:18px;
-      border-top-color: #fff; border-top-width: 3px; 
-      border-top-style: inset; border-bottom: 1px solid #ccc; border-left: 1px solid #ccc; border-right: 1px solid #ccc; 
-      width: 850px;}
+    .search-form-input {height: 67px; padding: 20px; color: #333; font-size:18px;border-top-color: #fff; border-top-width: 3px; border-top-style: inset; border-bottom: 1px solid #ccc; border-left: 1px solid #ccc; border-right: 1px solid #ccc; width: 850px;}
     .offer-search-box label.searchInput {};
-    .offer-search-btn {font-size: 20pt; }
+    form.search-form button.offer-search-btn { font-size: 20px; height: 66px; margin-top: -6px; }
     .offer-search-section { padding-bottom:20px;}
     .search-message { display: none; margin-left:20px; margin-top:30px;width:50%;}
 
+
   .row
     .col-md-12
-      h5.get-a-domain-text !{title}
+      if(title)
+        h5.get-a-domain-text !{title}
   .row
     .col-md-12
       .offer-search-section
