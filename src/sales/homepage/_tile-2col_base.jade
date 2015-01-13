@@ -1,0 +1,16 @@
+extend ./_tile.jade
+
+block tileStyles
+
+block tileContent
+  .container
+    .row
+      .col-sm-6
+        .left-content-wrapper
+          block leftContent
+      .col-sm-2
+        .borderLine
+          block borderLine
+      .col-sm-4
+        .right-content-wrapper
+          block rightContent      

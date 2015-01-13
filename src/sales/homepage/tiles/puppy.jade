@@ -1,0 +1,24 @@
+extend ../_tile.jade
+
+append vars
+  - ctaLink = "[@T[link:<relative path='/'><param name='ci' value='11111' /></relative>]@T]";
+  - ctaText = "SUBMIT YOUR PUP";
+  - dataCi = 11111;
+  - containerClass = "puppy-tile";
+
+block tileStyles
+  style
+    :less
+      .puppy-tile{background-color:#333}
+      .puppy-tile .tile-content-wrapper{padding:1% 40% 0 5%}
+      .puppy-tile .header-text{font-size:20px;margin-top:20px;color:#fff}
+      .puppy-tile .body-text{font-size:18px;margin-top:10px;color:#fff}
+      .puppy-tile .cta-wrapper>a{color:#ff8a00;font-size:18px;text-decoration:underline;}
+
+block tileContent
+  .header-wrapper
+    h2.header-text.walsheim-black ENTER TO WIN
+  .body-wrapper
+    h3.body-text.walsheim-medium Your pup could be on the GoDaddy race car!
+  .cta-wrapper
+    a.walsheim-black(href!=ctaLink) #{ctaText}
