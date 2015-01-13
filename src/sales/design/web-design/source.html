@@ -1,12 +1,43 @@
 ---
 location: sales/design/web-design.aspx
-id: 54260192f778fc1eec7ed202
-name: GCE-26547
+id: 54b58045f778fc10040523db
+name: GCE-34935
+comments:  Prep for uxcore - css updates
 ---
 {% extends 'layouts/base.html' %}
 
 {% block metahead %}
   {% parent %}
+
+##if(appSettingEnabled(UXCORE_ENABLED))
+<style>
+  body {
+      font-size: 10px;
+      background-color: #d4d4d4;
+  }
+  .badge-important {
+      background-color: #F3514C;
+  }
+  .modal-dialog {
+      left: 0%;
+  }
+  a, a:hover {
+    color: #7db701;
+  }
+  .col-xs-12 {
+    padding-right: 0px;
+  }
+  .col-xs-4 {
+      padding-left: 20px;
+      padding-right: 0;
+      width: 34%;
+  }
+  #footer-legal {
+    background-color: #fff;
+  }
+</style>
+##endif
+
 {% endblock metahead %}
 
 {% block footer %}
@@ -500,7 +531,11 @@ $(function () {
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
+              ##if(appSettingEnabled(UXCORE_ENABLED))
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+              ##else
               <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              ##endif
               <h4 class="modal-title"><strong>[@L[cds.sales/gd/design/web-design:DisclaimerModalHeader]@L]</strong></h4>
             </div>
             <div class="modal-body">
