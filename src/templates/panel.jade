@@ -1,4 +1,4 @@
-block vars
+block panelVars
   - panelImage = "";
   - panelTitle = "";
   - panelText = "";
@@ -6,10 +6,11 @@ block vars
   - panelButtonText = "";
   - panelTcode = "";
   - lazyLoad = false;
+  - customText = "";
 
-.carousel-panel.container.tile-section(data-icode="#{icode ? icode : ''}")
+.carousel-panel.container(data-icode="#{icode ? icode : ''}")
   if (panelImage && (panelImagePosition === 'top' || panelImagePosition === undefined))
-    img.img-responsive.img-center(src="#{panelImage}" alt="#{panelImageAlternateText}")
+    img.img-responsive.img-center(src!="#{panelImage}" alt="#{panelImageAlternateText}")
 
   if (headline)
     .row
@@ -18,8 +19,8 @@ block vars
 
   if (panelTitle)
     .row
-      .col-sm-10.col-sm-offset-1.col-xs-12.text-center
-        h1 !{panelTitle}
+      .col-sm-10.col-sm-offset-1.col-xs-12
+        h2 !{panelTitle}
 
   if (panelImage && panelImagePosition === 'middle')
     if (dateHeader)
@@ -33,7 +34,7 @@ block vars
 
   if (panelTextImage && panelText)
     .row
-      .col-sm-2.col-sm-offset-3.text-center
+      .col-sm-2.col-sm-offset-3
         img(src="#{panelTextImage}", alt="#{panelAltText}")
       .col-sm-7
           if (panelButtonColor && panelButtonText)
@@ -52,9 +53,6 @@ block vars
   if (panelButtonColor && panelButtonText && paneButtonUrl)
     .row
       - var centeredBtn
-      if (requestContext.appId === 'pro')
-        - centeredBtn = "text-center"
-
       if (panelTextImage && panelText)
         div(class="#{centeredBtn ? centeredBtn : ''} col-sm-7 col-sm-offset-5 col-xs-12")
           a(class="btn #{panelButtonColor}", href="#{paneButtonUrl}", data-tcode="#{tcode ? tcode : ''}") !{panelButtonText}

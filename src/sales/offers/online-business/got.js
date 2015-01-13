@@ -17,7 +17,8 @@ var got1Page = {
     bundleRenewal_wsb: '[@T[multipleproductprice:<list productidlist="464069|101|7524" period="monthly"></list>]@T]',
     bundleRenewal_ols: '[@T[multipleproductprice:<list productidlist="40972|101|7524" period="monthly"></list>]@T]',
     bingAdCredits: '[@T[currencyprice:<price usdamount="5000" dropdecimal="true" htmlsymbol="false" />]@T]'
-  }
+  },
+  imagePath: '[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/'
 };
 
 ##if(countrySiteAny(br) || isManager())
@@ -36,6 +37,11 @@ var got1Page = {
 
 $(document).ready(function() {
 
+
+  //dynamically build the tld images in the #findYourPerfectDomain section
+  showTldImages();
+
+
   $('[data-tokenize]').each(function(){
     var $this = $(this),
       html = $this.html(),
@@ -49,19 +55,17 @@ $(document).ready(function() {
   //set up domain search buttons to do a domain search
   $('#marquee').on('click', '.offer-search-btn', function(e) {
     window.setTimeout(function(){
-      console.log(1);
       domainSearchFormSubmit(e);
     },0);
     return false;
   });
 
   // set up verify buttons on spin results to do validation before sending to DPP
-  $('#marquee').on('click', '.spin-domain-action-button', verifyDomainIsStillAvailable);
+  $('#domain-available-marquee-view').on('click', '.purchase-btn', showChoicesScreen);
 
-  $('#marquee').on('click', '.purchase-btn', showChoicesScreen);
-
-  $('#marquee').on('click', '.select-and-continue', verifyDomainIsStillAvailable);
-
+  $('#default-marquee-view .type-your-business-name').show();
+  $('#domain-not-available-marquee-view').on('click', '.select-and-continue', verifyDomainIsStillAvailable);
+  $('#step2-choose-product').on('click','.btn-purchase', goToDppCheckoutPage);
 
   // track ci codes
   $('[data-ci]').click(function (e) {
@@ -72,6 +76,19 @@ $(document).ready(function() {
   });
 
 });
+
+function showTldImages() {
+  console.log('TODO: showTldImages');
+  return;
+  //dynamically build the tld images in the #findYourPerfectDomain section
+  var $imageDiv = $('#findYourPerfectDomain').find(".features-img").parent().empty();
+  $.each(got1Page.tlds, function(idx, tld){
+    var $img = $('<img>').attr('src', got1Page.imagePath + 'tld-' + tld + '.jpg');
+    $imageDiv.append($img);
+  });
+
+  // TODO: rerun the height alignment
+}
 
 function populateTldsOnDisclaimerModal(selector) {
   var $this = $(selector);
@@ -85,16 +102,22 @@ function populateTldsOnDisclaimerModal(selector) {
     $this.find('.tlds-uk').show();
   ##endif
 }
-function formatDomainWithDefaultTld(domain) {
-  alert("todo: formatDomainWithDefaultTld() ");
-  // TODO: check to see fi there's already a TLD on it
+
+function formatDomainWithDefaultTldIfNoneSpecified(domain) {
+  if(domain.indexOf('.') > 0) return domain;
   return domain + '.' + got1Page.defaultTld;
 }
+
 function isTldValid(domain) {
-  //TODO: check list of valid TLDs
-  alert("todo: isTldValid() ");
-  return true;
+  var isValid = false;
+  $.each(got1Page.tlds, function(idx, tld) {
+    if(domain.indexOf(tld, domain.length - tld.length) !== -1) {
+      isValid = true;
+    }
+  });
+  return isValid;
 }
+
 function displayInvlidTldMessage($this){
   alert("todo: displayInvlidTldMessage() ");
 }
@@ -103,27 +126,26 @@ function domainSearchFormSubmit(e) {
  
   var $this = $(e.target),
     $textInput = $this.siblings('.search-form-input'),
-    domain = $textInput.val(), 
-    sucessful = false;
+    domain = $textInput.val().trim(), 
+    sucessful = false,
+    apiEndpoint1;
 
   if((domain && domain.length==0) || !domain) return;
   
-  domain = formatDomainWithDefaultTld(domain);
+  domain = formatDomainWithDefaultTldIfNoneSpecified(domain);
 
   if(!isTldValid(domain)) {
     displayInvlidTldMessage($this);
     return;
   }
 
-  var apiEndpoint = '[@T[link:<relative path="~/domainsapi/v1/search/free"><param name="domain" value="domain" /><param name="itc" value="itc" /></relative>]@T]';
-      apiEndpoint = apiEndpoint.replace('domain=domain', 'q=' + domain);
-      apiEndpoint = apiEndpoint.replace('itc=itc', 'key=' + got1Page.offersCodes.itc_wsb);
-
-  $this.addClass('disabled');
+  apiEndpoint1 = '[@T[link:<relative path="~/domainsapi/v1/search/free"><param name="domain" value="domain" /><param name="itc" value="itc" /></relative>]@T]';
+  apiEndpoint1 = apiEndpoint1.replace('domain=domain', 'q=' + domain);
+  apiEndpoint1 = apiEndpoint1.replace('itc=itc', 'key=' + got1Page.offersCodes.itc_wsb);
 
   $.ajaxSetup({cache:false});
   $.ajax({
-    url: apiEndpoint,
+    url: apiEndpoint1,
     type: 'GET',
     dataType: 'json',
     cache: false,
@@ -135,7 +157,9 @@ function domainSearchFormSubmit(e) {
           alternateDomains = data.RecommendedDomains || [];
 
         if(isAvailable) {
+          // Domain is available, so allow them to search again or to select this available domain
           showSuccessfulSearch(exactMatchDomain);
+
         } else {
 
           if(alternateDomains.length > 0) {
@@ -145,11 +169,12 @@ function domainSearchFormSubmit(e) {
             // NO SPINS
             showApi1SearchError(e, domain);
           }
+
         }    
 
     },
     error: function(){
-        showApi1SearchError(e, domain);
+      showApi1SearchError(e, domain);
     }
   });
 
@@ -158,10 +183,39 @@ function domainSearchFormSubmit(e) {
 
 function verifyDomainIsStillAvailable(e) {
   var $this = $(e.target),
-    domain = $this.data('domain');
+    $thisParent = $this.parent(),
+    domain = $this.data('domain'),
+    apiEndpoint2;
 
-  // TODO!
-  alert('TODO verifyDomainIsStillAvailable(' + domain.Fqdn + ')');
+  $thisParent.find('.spin-results-message').hide(); // aka $this, but code is easier to read with the find()
+  $thisParent.find('.checking-availability').show();
+
+  apiEndpoint2 = '[@T[link:<relative path="~/domains/actions/json/domainavailabilitycheck.aspx"><param name="sld" value="sld" /><param name="tld" value="tld" /><param name="targetdivid" value="x" /><param name="source" value="domaincheck" /><param name="addIfAvailable" value="false" /></relative>]@T]';
+  apiEndpoint2 = apiEndpoint2.replace('sld=sld', 'sld=' + domain.NameWithoutExtension);
+  apiEndpoint2 = apiEndpoint2.replace('tld=tld', 'tld=' + domain.Extension);
+
+  $.ajaxSetup({cache:false});
+  $.ajax({
+    url: apiEndpoint2,
+    type: 'GET',
+    dataType: 'json',
+    cache: false,
+    success: function(data){
+      data = data || {};
+      data.Properties = data.Properties || {};
+      data.Properties.domainInfo = data.Properties.domainInfo || [{isAvailable: false}];
+      if(data.Properties.domainInfo[0].isAvailable) {
+        showChoicesScreen(e);
+      } else {
+        // display domain is now unavailable message
+        $thisParent.find('.spin-results-message').hide();
+        $thisParent.find('.now-unavailable').show();
+      }
+    },
+    error: function(){
+      showApi2SearchError(e, domain);
+    }
+  });
 
 }
 
@@ -169,8 +223,12 @@ function showChoicesScreen(e){
   var $this = $(e.target),
     domain = $this.data('domain');
 
-  alert('TODO showChoicesScreen(' + domain.Fqdn + ')');
+  $('#marquee, #domains, #products').hide();
+  $('#step2-choose-product')
+    .show()
+    .find('.btn-purchase').data('domain', domain);
 
+  // TODO: rerun the height alignment on the choose product screen
 }
 
 function goToDppCheckoutPage(e) {
@@ -190,13 +248,17 @@ function showSuccessfulSearch(domain){
 
 function showSearchSpins(domain, alternateDomains){  
 
+  // clear any spins from the DOM
+  $('#spin-results .spin-result').remove();
+
   var $spinResults = $('#spin-results');
-  var $spinTemplate = $spinResults.find('.spin-template');
+  var $spinTemplate = $('#spin-template-wrap').find('.spin-template');
   $.each(alternateDomains, function(idx,domain){
-    var $newSpin = $spinTemplate.clone().removeClass('spin-template');
+    var $newSpin = $spinTemplate.clone();
+    $newSpin.removeClass('spin-template');
     $newSpin.find('.domain-name-display').text(domain.NameWithoutExtension);
-    $newSpin.find('.domain-name-display-tld').text(domain.Extension);
-    $newSpin.find('.btn-primary').data('domain', domain);
+    $newSpin.find('.domain-name-display-tld').text('.' + domain.Extension);
+    $newSpin.find('.select-and-continue').show().data('domain', domain);
     $spinResults.append($newSpin);
   });
   var $header = $('#domain-not-available-marquee-view').find('.results-list-heading-text');
@@ -211,8 +273,8 @@ function showSearchSpins(domain, alternateDomains){
 }
 
 function showApi1SearchError(e,domain){
-  // TODO!
-  alert('TODO showApi1SearchError()');
+  $('.search-message').hide();
+  $('.api-A-failure').show();
 }
 
 function showApi2SearchError(e,domain){
@@ -221,8 +283,8 @@ function showApi2SearchError(e,domain){
 }
 
 function showApi3SearchError(e,domain){
-  // TODO!
-  alert('TODO showApi3SearchError()');
+  $thisParent.find('.spin-results-message').hide();
+  $thisParent.find('.api-B-failure').show();
 }
 
 function showDomainRegistrationFailure() {

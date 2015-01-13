@@ -6,6 +6,9 @@ mixin compareFeaturesTable(options)
   - options.showViewAllButton = options.showViewAllButton || false;
   - options.tableID = options.tableID || ""
 
+  style
+    include:css styles/compare-features-table.css
+
   table.compare-table(id = options.tableID)
     block
     script(type="text/javascript").

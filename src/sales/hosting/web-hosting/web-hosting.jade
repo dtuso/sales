@@ -147,7 +147,7 @@ block sections
           tbody
             tr
               td Free Domain with anual plan restrictions apply
-              td <span class='pro-icon gray-check-icon'></span>
+              td <span class='icon gray-check-icon'></span>
               td yes 
               td yes
             tr
@@ -162,7 +162,7 @@ block sections
               td Unlimited
             tr
               td Free Domain with anual plan restrictions apply
-              td <span class='pro-icon gray-check-icon'></span>
+              td <span class='icon gray-check-icon'></span>
               td yes 
               td yes
             tr
@@ -177,7 +177,7 @@ block sections
               td Unlimited
             tr
               td Free Domain with anual plan restrictions apply
-              td <span class='pro-icon gray-check-icon'></span>
+              td <span class='icon gray-check-icon'></span>
               td yes 
               td yes
             tr
@@ -205,7 +205,7 @@ block sections
           tbody
             tr
               td Free Domain with anual plan restrictions apply
-              td <span class='pro-icon gray-check-icon'></span>
+              td <span class='icon gray-check-icon'></span>
               td yes 
               td yes
             tr
@@ -220,7 +220,7 @@ block sections
               td Unlimited
             tr
               td Free Domain with anual plan restrictions apply
-              td <span class='pro-icon gray-check-icon'></span>
+              td <span class='icon gray-check-icon'></span>
               td yes 
               td yes
             tr
@@ -235,7 +235,7 @@ block sections
               td Unlimited
             tr
               td Free Domain with anual plan restrictions apply
-              td <span class='pro-icon gray-check-icon'></span>
+              td <span class='icon gray-check-icon'></span>
               td yes 
               td yes
             tr
@@ -251,20 +251,25 @@ block sections
       +compareViewAllButton(["cpanel-table", "parallels-table"])
 
   section#platforms(data-mid-nav-title="Platforms")
-    +renderTwoUpCompare({title: "Choose your platform", twoUpCompareId: "choose-platform", titleBackgroundColor: "bg-green-official-light", backgroundColor: "bg-green-official", backgroundImage: "background-image: url('[@T[link:<imageroot />]@T]fos/mike/img/hosting/two-up-compare-bg-ph.png')"})
-      +twoUpCompareColumn({orContainer: true, title: "Cpanel for Linux", backgroundColor: "bg-green-official-light", subtitle: "Each Linux plan includes:", titleAlign: "center", subtitleAlign: "center"})
+    +renderTwoUpCompare({title: "Choose your platform", twoUpCompareId: "choose-platform", titleBackgroundColor: "bg-green-new", backgroundColor: "bg-green-official", backgroundImage: "background-image: url('[@T[link:<imageroot />]@T]fos/mike/img/hosting/two-up-compare-bg-ph.png')"})
+      +twoUpCompareColumn({orContainer: true, title: "Cpanel for Linux", backgroundColor: "bg-green-official", subtitle: "Each Linux plan includes:", titleAlign: "center", subtitleAlign: "center"})
         .include-check-black <strong>cPanel:</strong> </br> Access all the hosting features and settings you need with this industry-standard control panel.
         .include-check-black <strong>CloudLinux:</strong> </br> Keep your site online with truly balanced CPU, RAM and Disk IO limits.
         .include-check-black <strong>Resources On-Demand:</strong> </br> If you need more power, you can level up your CPU, RAM, Entry Processes and I/O with just a click.
         .include-check-black <strong>CageFS:</strong> </br> Protect your Web content 24/7 with this virtualized file system.
         .include-check-black <strong>Free Applications:</strong> </br> Instanly install over 150 applications on your website with just a few clicks.
-      +twoUpCompareColumn({title: "Plesk for Windows", backgroundColor: "bg-gray-darkest", subtitle: "Each Windows plan includes:", titleAlign: "center", subtitleAlign: "center"})
+      +twoUpCompareColumn({title: "Plesk for Windows", backgroundColor: "bg-green-official-light", subtitle: "Each Windows plan includes:", titleAlign: "center", subtitleAlign: "center"})
         .include-check-black <strong>Parallesls Plesk Panel:</strong> </br> Easily manage your server, email accounts and more with this popular, award-winning control panel.
         .include-check-black <strong>Windows Server 2012:</strong> </br> Take control of your hosting with Microsoft's newest and most powerful server operating system.
         .include-check-black <strong>Free Applications:</strong> </br> Instanly install over 70 applications on your website with just a few clicks.
 
   section#reviews
     p reviews
+    .container
+      .row
+        .col-sm-12
+          div
+            [@P[userControl:<Data location="~/Shared/Tabs/controls/BVReviewsNoJS.ascx"><Parameters><Parameter key="ProductId" value="web_hosting" /><Parameter key="ReviewNumber" value="4" /></Parameters></Data>]@P]
 
   section#faq
     p faq
@@ -280,11 +285,19 @@ block sections
         p Cras varius, tellus eu tristique ultrices, sapien enim ullamcorper odio, nec euismod metus massa vel leo. Praesent finibus lacus purus, in ultrices metus rutrum sed. Vestibulum purus mauris, efficitur id quam vel, consequat malesuada nisi. Duis eu mauris vitae mauris pulvinar maximus eu ac odio. Pellentesque et purus sed lectus dictum auctor non et ligula. Sed pellentesque a urna nec sodales. Vestibulum dignissim iaculis tincidunt. Pellentesque facilisis nec lorem in venenatis. Cras scelerisque aliquet libero, a viverra enim pulvinar id. Maecenas pharetra tortor id quam imperdiet, id accumsan velit dapibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur euismod vulputate enim ac scelerisque. Nunc blandit lectus mattis velit ornare, quis malesuada ex sollicitudin. Phasellus auctor risus et nisl dignissim faucibus vel sit amet ex. Nulla tempor eros et pellentesque maximus. Aliquam finibus auctor justo, quis porta ex vulputate sit amet. 
         p Fusce viverra eget massa ac posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Cras vel ligula venenatis, fringilla purus sit amet, semper ante. Vivamus bibendum maximus dui et finibus. Integer in dignissim dolor, in malesuada massa. Nam accumsan feugiat tortor, eu tincidunt mauris laoreet a. Fusce fermentum dolor eu odio volutpat varius. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis sed augue pretium, ultrices nisi non, maximus tortor. Praesent auctor euismod fringilla.
   section#alternate-products
-    +renderTwoUpCompare({title: "Not finding what you need?", twoUpCompareId: "two-up", titleBackgroundColor: "bg-green-official-light", backgroundColor: "bg-green-official", backgroundImage: "background-image: url('[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Finding.jpg')", style: "min-height: 580px;"})
-      +twoUpCompareColumn({title: "Do-it-yourself with Website Builder. Hosting Included.", backgroundColor: "bg-green-official-light", shapeText: "Website Builder", shapeColor: "orange", subtitle: "sub left side"})
-        h4 Block content
-      +twoUpCompareColumn({title: "Get Hosting that will grow.", backgroundColor: "bg-gray-darkest", shapeText: "Private Virtual Server", shapeColor: "orange", subtitle: "sub right side", whiteText: "white-text"})
-        h4 Block content
+    +renderTwoUpCompare({title: "Not finding what you need?", twoUpCompareId: "two-up", titleBackgroundColor: "bg-white", backgroundColor: "bg-green-official", backgroundImage: "background-image: url('[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Finding.jpg')", style: "min-height: 580px;"})
+      +twoUpCompareColumn({title: "Do-it-yourself with Website Builder. Hosting Included.", backgroundColor: "bg-green-official-light", shapeText: "Website Builder", shapeColor: "orange"})
+        ul
+          li Features cPanel "(Linux)" or Parallels Plesk Panel "(Windows)"
+          li One-click install 100s of top apps like Joomla and Drupal
+          li Includes 99.9% uptime, lightning-fast load times and more
+        a.btn.btn-default-dark LEARN MORE
+      +twoUpCompareColumn({title: "Get Hosting that will grow.", backgroundColor: "bg-gray-darkest", shapeText: "Private Virtual Server", shapeColor: "orange", whiteText: "white-text"})
+        ul
+          li Get online fast with 100s of customizable designs
+          li No technical skills required - just drag and drop
+          li Includes a free domain, hosting and more
+        a.btn.btn-default-light LEARN MORE
 
   section#disclaimers
     p disclaimers

@@ -8,7 +8,7 @@ mixin renderTabbedCarousel(tabbedCarousel)
   div(class="features-tabbed-carousel-top #{tabbedCarousel.backgroundColor ? tabbedCarousel.backgroundColor : ''}", data-icode="#{tabbedCarousel.icode ? tabbedCarousel.icode : ''}", id="#{tabbedCarousel.featuresCarouselId ? tabbedCarousel.featuresCarouselId : '' }")
     .container
       .row
-        .col-sm-12
+        .col-sm-10.col-sm-offset-1.col-xs-12
           if (tabbedCarousel.title)
             h1 !{tabbedCarousel.title}
           if (tabbedCarousel.subtitle)

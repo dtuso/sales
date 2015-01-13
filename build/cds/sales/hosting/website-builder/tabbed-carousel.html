@@ -51,6 +51,20 @@ text-transform: uppercase;
   border-left: 1px solid #808080;
   }
 }
+@media only screen and (min-width: 992px){
+  .features-tabbed-carousel-top .features-tabbed-carousel-icon.active:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 15px solid #008a32;
+  border-right: 15px solid transparent;
+  border-left: 15px solid transparent;
+  position: absolute;
+  bottom: -15px;
+  margin-left: -20px;
+  left: 50%;
+  }
+}
 </style>
 <div data-icode="" id="" class="features-tabbed-carousel-top ">
   <div class="container">
@@ -78,17 +92,13 @@ text-transform: uppercase;
           <div class="feature-carousel-icon"><span class="uxicon uxicon-youtube-box"></span></div>
           <div class="feature-text">youtube</div>
         </div>
-      </div> 
-      ##if(activeLanguageAny(es))
-        
+      </div>
       <div data-begin="3" data-end="3" class="features-tabbed-carousel-icon col-md-2">
         <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
           <div class="feature-carousel-icon"><span class="uxicon uxicon-yelp"></span></div>
           <div class="feature-text">yelp</div>
         </div>
-      </div> 
-      ##endif
-       
+      </div>
       <div data-begin="4" data-end="4" class="features-tabbed-carousel-icon col-md-2">
         <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
           <div class="feature-carousel-icon"><span class="uxicon uxicon-paypal"></span></div>
@@ -145,7 +155,7 @@ text-transform: uppercase;
   </script>
 </atlantis:webstash>
 <style>.item-wrapper { padding: 70px 0 20px; text-align: center; }
-.carousel-wrap { padding-top: 70px; }
+.carousel-wrap { padding-bottom: 70px; }
 
 @media only screen and (min-width: 768px){
   .carousel-container .carousel {
@@ -531,9 +541,7 @@ text-transform: uppercase;
               </div>
             </div>
           </div>
-        </div> 
-        ##if(activeLanguageAny(es))
-         
+        </div>
         <div class="item">
           <div class="item-wrapper">
             <div data-icode="" class="carousel-panel container tile-section"><img src="/img/features-cpanelarousel-ppanelh.png" alt="undefined" class="img-responsive img-center"/>
@@ -552,9 +560,7 @@ text-transform: uppercase;
               </div>
             </div>
           </div>
-        </div> 
-        ##endif
-         
+        </div>
         <div class="item">
           <div class="item-wrapper">
             <div data-icode="" class="carousel-panel container tile-section"><img src="/img/features-cpanelarousel-ppanelh.png" alt="undefined" class="img-responsive img-center"/>

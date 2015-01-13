@@ -9,6 +9,7 @@ assetPath: false
 
 extends ../../templates/pages/landing-page
 
+
 append vars
   - page.title = page.title || "[@L[cds.sales/offers/online-business:page-title]@L]";
   - page.description = page.description || "[@L[cds.sales/offers/online-business:meta-description]@L]";
@@ -58,10 +59,10 @@ block sections
 
 //- suggested alternative products
 block alternatives
-  include ./online-business/_site-choice.jade
   include ./online-business/_step2-choose-product.jade
+  include ./online-business/_site-choice.jade
 
 //- there's always a catch... show it here.
 block disclaimers
   section#disclaimers 
-    p Disclaimers goes here
+    p Third-party logos and marks are registered trademarks of their respective owners. All rights reserved.
