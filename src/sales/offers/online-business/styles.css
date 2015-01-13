@@ -4288,7 +4288,7 @@ section#products {
   content: '';
   position: absolute;
   height: 100%;
-  width: 99%;
+  left: 50%;
   top: 0;
   transform: skew(12deg, 0);
   z-index: 1;
@@ -4313,6 +4313,7 @@ section#products {
 }
 .speech-shape-upsidedown.speech-shape-upsidedown-white {
   background-color: #fff;
+  color: #333;
 }
 .speech-shape-upsidedown.speech-shape-upsidedown-white:before {
   border-bottom-color: #fff;
@@ -4322,6 +4323,7 @@ section#products {
 }
 .speech-shape-upsidedown.speech-shape-upsidedown-yellow {
   background-color: #fedc45;
+  color: #333;
 }
 .speech-shape-upsidedown.speech-shape-upsidedown-yellow:before {
   border-bottom-color: #fedc45;

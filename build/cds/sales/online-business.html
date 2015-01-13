@@ -99,8 +99,9 @@ $(document).ready(function() {
 
   // set up verify buttons on spin results to do validation before sending to DPP
   $('#domain-available-marquee-view').on('click', '.purchase-btn', showChoicesScreen);
+  
+  showTypeYourDomain();
 
-  $('#default-marquee-view .type-your-business-name').show();
   $('#domain-not-available-marquee-view').on('click', '.select-and-continue', verifyDomainIsStillAvailable);
   $('#step2-choose-product').on('click','.btn-purchase', goToDppCheckoutPage);
 
@@ -155,9 +156,6 @@ function isTldValid(domain) {
   return isValid;
 }
 
-function displayInvlidTldMessage($this){
-  alert("todo: displayInvlidTldMessage() ");
-}
 
 function domainSearchFormSubmit(e) {
  
@@ -314,6 +312,11 @@ function showApi1SearchError(e,domain){
   $('.api-A-failure').show();
 }
 
+function displayInvlidTldMessage($this){
+  $('.search-message').hide();
+  $('.invalid-TLD-entered').show();
+}
+
 function showApi2SearchError(e,domain){
   // TODO!
   alert('TODO showApi2SearchError()');
@@ -325,8 +328,13 @@ function showApi3SearchError(e,domain){
 }
 
 function showDomainRegistrationFailure() {
-  // TODO!
-  alert('TODO showDomainRegistrationFailure()');
+  $('.search-message').hide();
+  $('.domain-eligibility-fail').show();
+}
+
+function showTypeYourDomain() {  
+  $('.search-message').hide();
+  $('.type-your-business-name').show();
 }
       </script>
     </atlantis:webstash>
@@ -4624,7 +4632,7 @@ section#products {
   content: '';
   position: absolute;
   height: 100%;
-  width: 99%;
+  left: 50%;
   top: 0;
   transform: skew(12deg, 0);
   z-index: 1;
@@ -4649,6 +4657,7 @@ section#products {
 }
 .speech-shape-upsidedown.speech-shape-upsidedown-white {
   background-color: #fff;
+  color: #333;
 }
 .speech-shape-upsidedown.speech-shape-upsidedown-white:before {
   border-bottom-color: #fff;
@@ -4658,6 +4667,7 @@ section#products {
 }
 .speech-shape-upsidedown.speech-shape-upsidedown-yellow {
   background-color: #fedc45;
+  color: #333;
 }
 .speech-shape-upsidedown.speech-shape-upsidedown-yellow:before {
   border-bottom-color: #fedc45;
@@ -4758,7 +4768,7 @@ section#products {
             .offer-search-box label.searchInput {};
             .offer-search-btn {font-size: 20pt; }
             .offer-search-section { padding-bottom:20px;}
-            .search-message { display: none; margin-left:20px}
+            .search-message { display: none; margin-left:20px; margin-top:30px;width:50%;}
             
           </style>
           <div class="row">
@@ -4824,7 +4834,7 @@ section#products {
               .offer-search-box label.searchInput {};
               .offer-search-btn {font-size: 20pt; }
               .offer-search-section { padding-bottom:20px;}
-              .search-message { display: none; margin-left:20px}
+              .search-message { display: none; margin-left:20px; margin-top:30px;width:50%;}
               
             </style>
             <div class="row">
@@ -4887,7 +4897,7 @@ section#products {
               .offer-search-box label.searchInput {};
               .offer-search-btn {font-size: 20pt; }
               .offer-search-section { padding-bottom:20px;}
-              .search-message { display: none; margin-left:20px}
+              .search-message { display: none; margin-left:20px; margin-top:30px;width:50%;}
               
             </style>
             <div class="row">
