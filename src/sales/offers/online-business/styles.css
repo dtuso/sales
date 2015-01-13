@@ -4174,15 +4174,8 @@ a:not(.btn):hover {
 /**************************************************************/
 
 
-
-
-
-
-#step2-choose-product .pro-plans {
-  margin-top:0px; /* override the -210px from sahara.css */
-}
 .include-check-black, .include-check-green, .include-check-none {
-  padding-left:45px;
+  padding-left: 33px;
   position: relative;
   margin-top: 20px;
 }
@@ -4208,53 +4201,9 @@ a:not(.btn):hover {
   padding-right: 5px;
   position: absolute;
   left: 0;
-  top: -6px;
-}
-#products.tile-section{
-  padding-top: 0;
-  padding-bottom: 0;
-}
-.got-no-top {
-  margin-top: 0;
+  top: 0;
 }
 
-h2.got-equal-vert-30-margin {margin: 30px 0;}
-
-div.skinny {
-  padding: 0 50px;
-}
-.got-h1-40-333 {
-  font-size: 40px;
-  color: #333;
-}
-.got-bold-333 {
-  color: #333;
-  font-weight: bold;
-}
-
-.got-disclaimer-12-666 {
-  font-size: 12px;
-  color: #666;
-}
-section#domains .disclaimer p {
-  font-size: 14px;
-  color: #666;
-}
-section#domains .shortMod {
-  
-}
-
-section#site-choice-compare .disclaimer-mark {
-  font-size: 24px;
-  margin: 10px 10% 20px;
-}
-
-section#site-choice-compare .disclaimer-mark p {
-  font-size: 14px;
-}
-section#products {
-  padding-bottom:40px;
-}
 
 *[data-tokenize] {visibility: hidden;}
 
@@ -4266,7 +4215,7 @@ section#products {
   line-height: 1.9em;
   font-family: 'Walsheim-Bold';
   font-size: 18px;
-  padding: 5px 10px 5px 17px;
+  padding: 5px 24px 5px 17px;
   color: #fff;
   display: inline-block;
   position: relative;
@@ -4289,6 +4238,7 @@ section#products {
   content: '';
   position: absolute;
   height: 100%;
+  width:20px;
   right: 0;
   top: 0;
   transform: skew(12deg, 0);

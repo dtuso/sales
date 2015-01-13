@@ -74,10 +74,21 @@ h3 {
 @media (max-width: 767px) {
   #one-click-install {
     background-image: none !important;
+    background-color: transparent;
+    padding-bottom: 0;
   }
   .one-click-right {
     padding-top: 40px;
-    background-color: 
+    padding-bottom: 70px;
+    background-color: #5caf2b;
+  }
+  .one-click-left {
+    padding-top: 70px;
+    padding-bottom: 40px;
+    background-color: #78c043;
+  }
+  .key-benefits-img-wrap {
+    text-align: center;
   }
 }
 

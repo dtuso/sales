@@ -4606,15 +4606,8 @@ a:not(.btn):hover {
 /**************************************************************/
 
 
-
-
-
-
-#step2-choose-product .pro-plans {
-  margin-top:0px; /* override the -210px from sahara.css */
-}
 .include-check-black, .include-check-green, .include-check-none {
-  padding-left:45px;
+  padding-left: 33px;
   position: relative;
   margin-top: 20px;
 }
@@ -4640,53 +4633,9 @@ a:not(.btn):hover {
   padding-right: 5px;
   position: absolute;
   left: 0;
-  top: -6px;
-}
-#products.tile-section{
-  padding-top: 0;
-  padding-bottom: 0;
-}
-.got-no-top {
-  margin-top: 0;
+  top: 0;
 }
 
-h2.got-equal-vert-30-margin {margin: 30px 0;}
-
-div.skinny {
-  padding: 0 50px;
-}
-.got-h1-40-333 {
-  font-size: 40px;
-  color: #333;
-}
-.got-bold-333 {
-  color: #333;
-  font-weight: bold;
-}
-
-.got-disclaimer-12-666 {
-  font-size: 12px;
-  color: #666;
-}
-section#domains .disclaimer p {
-  font-size: 14px;
-  color: #666;
-}
-section#domains .shortMod {
-  
-}
-
-section#site-choice-compare .disclaimer-mark {
-  font-size: 24px;
-  margin: 10px 10% 20px;
-}
-
-section#site-choice-compare .disclaimer-mark p {
-  font-size: 14px;
-}
-section#products {
-  padding-bottom:40px;
-}
 
 *[data-tokenize] {visibility: hidden;}
 
@@ -4698,7 +4647,7 @@ section#products {
   line-height: 1.9em;
   font-family: 'Walsheim-Bold';
   font-size: 18px;
-  padding: 5px 10px 5px 17px;
+  padding: 5px 24px 5px 17px;
   color: #fff;
   display: inline-block;
   position: relative;
@@ -4721,6 +4670,7 @@ section#products {
   content: '';
   position: absolute;
   height: 100%;
+  width:20px;
   right: 0;
   top: 0;
   transform: skew(12deg, 0);
@@ -4794,14 +4744,17 @@ section#products {
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- HEADEREND-->
     <!-- none-->
-    <section id="marquee">
+    <atlantis:webstash type="css">
       <style>
         #marquee {margin:0 auto; padding-top:15px;background-color: #77c043;}
         #marquee .get-a-domain-text { margin-top: 20px; }
+        
       </style>
-      <atlantis:webstash type="js">
+    </atlantis:webstash>
+    <section id="marquee">
+      <atlantis:webstash type="css">
         <style>
-          #default-marquee-view { display: inline; }
+          #default-marquee-view { display: inline; padding-bottom:40px; }
           #default-marquee-view .get-online-wrapper {position: relative; height: 260px;}
           #default-marquee-view .get-online-dash {position: absolute; left: 20px; top: 10px;}
           #default-marquee-view .get-online-text {font-size: 46pt; color:#333333;}
@@ -4817,6 +4770,7 @@ section#products {
           #default-marquee-view .email-text {position: absolute; left: 65px;  top: 185px; font-size: 25px; color: #333333;}
           #default-marquee-view .powered-by-text {position: absolute; left: 55px; top: 214px; font-size: 11px; color: #333333;}
           #default-marquee-view .MSO365-text { position: absolute; left: 34px; top: 227px; font-size: 11px; color: #333333;}
+          
           
         </style>
       </atlantis:webstash>
@@ -4872,14 +4826,18 @@ section#products {
           </div>
         </div>
       </section>
-      <style>
-        #domain-available-marquee-view { display: none; }
-        #domain-available-marquee-view .available-domain-name-row {margin-top: 20px; margin-bottom: 30px; }
-        #domain-available-marquee-view .domain-available-heading-text  { color: #333333; }
-        #domain-available-marquee-view .available-domain-name-text {text-transform: lowercase; color: #333333; background: rgba(254, 220, 69, 0.7); padding: 5px;line-height: 1.6em;word-wrap: break-word;  }
-        #domain-available-marquee-view .get-it-now-btn {top: 15px; }
-        #domain-available-marquee-view .purchase-btn {margin-top: 5px;}
-      </style>
+      <atlantis:webstash type="css">
+        <style>
+          #domain-available-marquee-view { display: none; }
+          #domain-available-marquee-view .available-domain-name-row {margin-top: 20px; margin-bottom: 30px; }
+          #domain-available-marquee-view .domain-available-heading-text  { color: #333333; }
+          #domain-available-marquee-view .available-domain-name-text {text-transform: lowercase; color: #333333; background: rgba(254, 220, 69, 0.7); padding: 5px;line-height: 1.6em;word-wrap: break-word;  }
+          #domain-available-marquee-view .get-it-now-btn {top: 15px; }
+          #domain-available-marquee-view .purchase-btn {margin-top: 5px;}
+          
+          
+        </style>
+      </atlantis:webstash>
       <section id="domain-available-marquee-view">
         <div class="bg-green-official">
           <div class="container">
@@ -4925,24 +4883,28 @@ section#products {
           </div>
         </div>
       </section>
-      <style>
-        #domain-not-available-marquee-view { display: none; }
-        #domain-not-available-marquee-view .pro-plans .pro-plan-wrap {border-top: 10px solid #008a32; padding: 20px;}
-        #domain-not-available-marquee-view .pro-plans {margin-top: 0px; }
-        #domain-not-available-marquee-view .domain-not-available-heading-text  { color: #333333; }
-        #domain-not-available-marquee-view .other-domains-heading-text {padding-top 20px; }
-        #domain-not-available-marquee-view .results-list-heading-text {padding-top 20px; }
-        #domain-not-available-marquee-view .domain-spin-wrap {min-height: 120px;border: solid 1px #cccccc;margin-bottom: 15px;} 
-        #domain-not-available-marquee-view .domain-name-display {text-transform: lowercase; margin-bottom: 0px; margin-top: 0px;}
-        #domain-not-available-marquee-view .domain-name-display-tld {text-transform: lowercase;margin-bottom: 0px; margin-top: 0px;}
-        #domain-not-available-marquee-view .show-more-arrow { position: relative; top: 16px; left: 15px; bottom: 0; margin-left: -10px; width: 0; height: 0; border: 11px solid transparent; border-top-color: #000; content: ''; }
-        #spin-results .spin-results-message,
-        #spin-results .spin-template {display:none;font-size:18px;}
-        #spin-results .select-and-continue {margin-bottom: 0px;}
-        #spin-results .spin-results-message {margin-top:15px;}
-        #spin-results .checking-availability, #spin-results .now-unavailable {padding-top:5px;}
-        #domain-not-available-marquee-view
-      </style>
+      <atlantis:webstash type="css">
+        <style>
+          #domain-not-available-marquee-view { display: none; }
+          #domain-not-available-marquee-view .pro-plans .pro-plan-wrap {border-top: 10px solid #008a32; padding: 20px;}
+          #domain-not-available-marquee-view .pro-plans {margin-top: 0px; }
+          #domain-not-available-marquee-view .domain-not-available-heading-text  { color: #333333; }
+          #domain-not-available-marquee-view .other-domains-heading-text {padding-top 20px; }
+          #domain-not-available-marquee-view .results-list-heading-text {padding-top 20px; }
+          #domain-not-available-marquee-view .domain-spin-wrap {min-height: 120px;border: solid 1px #cccccc;margin-bottom: 15px;} 
+          #domain-not-available-marquee-view .domain-name-display {text-transform: lowercase; margin-bottom: 0px; margin-top: 0px;}
+          #domain-not-available-marquee-view .domain-name-display-tld {text-transform: lowercase;margin-bottom: 0px; margin-top: 0px;}
+          #domain-not-available-marquee-view .show-more-arrow { position: relative; top: 16px; left: 15px; bottom: 0; margin-left: -10px; width: 0; height: 0; border: 11px solid transparent; border-top-color: #000; content: ''; }
+          #spin-results .spin-results-message,
+          #spin-results .spin-template {display:none;font-size:18px;}
+          #spin-results .select-and-continue {margin-bottom: 0px;}
+          #spin-results .spin-results-message {margin-top:15px;}
+          #spin-results .checking-availability, #spin-results .now-unavailable {padding-top:5px;}
+          #domain-not-available-marquee-view
+          
+          
+        </style>
+      </atlantis:webstash>
       <section id="domain-not-available-marquee-view">
         <div class="bg-green-official">
           <div class="container">
@@ -5008,58 +4970,65 @@ section#products {
           <p>API B FAILURE</p>
         </div>
       </section>
-      <atlantis:webstash type="js">
-        <script type="text/javascript">
-          $(document).ready(function() {
-          
-            //- $('#default-marquee-view .offer-search-btn').on('click', function(){
-            //-   animateToAvailable();
-            //- });
-            //- $('#domain-available-marquee-view .offer-search-btn').on('click', function(){
-            //-   animateToNotAvailable();
-            //- });
-            //- $('#domain-not-available-marquee-view .offer-search-btn').on('click', function(){
-            //-   animateToDefault();
-            //- });
-          
-          
-          });
-          
-          function enableAllSearchButtons(){
-            $('#marquee')
-              .find('.offer-search-btn').removeClass('disabled');
-          }
-          function enableAllAddToCartButtons(){
-            $('#marquee')
-              .find('.purchase-btn').removeClass('disabled');
-          }
-          function animateToAvailable (domainToAttach) {
-            $('#domain-available-marquee-view')
-              .show()
-              .find('.purchase-btn')
-                .removeClass('disabled')
-                .data('domain', domainToAttach);
-            $('#default-marquee-view, #domain-not-available-marquee-view').hide();
-            enableAllSearchButtons();
-          }
-          
-          function animateToNotAvailable() {
-            $('#domain-not-available-marquee-view')
-              .show();
-            $('#domain-available-marquee-view, #default-marquee-view').hide();      
-            enableAllSearchButtons();
-          
-          }
-          
-          function animateToDefault () {
-            $('#default-marquee-view').show();
-            $('#domain-not-available-marquee-view, #domain-available-marquee-view').hide();
-            enableAllSearchButtons();
-          
-          }
-        </script>
-      </atlantis:webstash>
     </section>
+    <atlantis:webstash type="js">
+      <script type="text/javascript">
+        $(document).ready(function() {
+        
+          //- $('#default-marquee-view .offer-search-btn').on('click', function(){
+          //-   animateToAvailable();
+          //- });
+          //- $('#domain-available-marquee-view .offer-search-btn').on('click', function(){
+          //-   animateToNotAvailable();
+          //- });
+          //- $('#domain-not-available-marquee-view .offer-search-btn').on('click', function(){
+          //-   animateToDefault();
+          //- });
+        
+        
+        });
+        
+        function enableAllSearchButtons(){
+          $('#marquee')
+            .find('.offer-search-btn').removeClass('disabled');
+        }
+        function enableAllAddToCartButtons(){
+          $('#marquee')
+            .find('.purchase-btn').removeClass('disabled');
+        }
+        function animateToAvailable (domainToAttach) {
+          $('#domain-available-marquee-view')
+            .show()
+            .find('.purchase-btn')
+              .removeClass('disabled')
+              .data('domain', domainToAttach);
+          $('#default-marquee-view, #domain-not-available-marquee-view').hide();
+          enableAllSearchButtons();
+        }
+        
+        function animateToNotAvailable() {
+          $('#domain-not-available-marquee-view')
+            .show();
+          $('#domain-available-marquee-view, #default-marquee-view').hide();      
+          enableAllSearchButtons();
+        
+        }
+        
+        function animateToDefault () {
+          $('#default-marquee-view').show();
+          $('#domain-not-available-marquee-view, #domain-available-marquee-view').hide();
+          enableAllSearchButtons();
+        
+        }
+      </script>
+    </atlantis:webstash>
+    <atlantis:webstash type="css">
+      <style>
+        #products.tile-section{ padding-top: 0;padding-bottom: 0;}
+        #products {padding-bottom:40px;}
+        
+      </style>
+    </atlantis:webstash>
     <section id="products" class="bg-gray-light">
       <div class="container">
         <div class="row">
@@ -5096,21 +5065,27 @@ section#products {
         </div>
       </div>
     </section>
-    <style>
-      #domains .tld-images {margin-top: 0px; margin-left: 60px;}
-      #domains .tld-image {margin: 15px;}
-      #findYourPerfectDomain.tile-section {
-        padding:20px 0;
-      }
-      #findYourPerfectDomain.features-slim {
-        min-height: 241px;
-      }
-      #findYourPerfectDomain {
-        background-color: #F3F3F3;
-      }
-      
-      
-    </style>
+    <atlantis:webstash type="css">
+      <style>
+        #domains .tld-images {margin-top: 0px; margin-left: 60px;}
+        #domains .tld-image {margin: 15px;}
+        #findYourPerfectDomain.tile-section {
+          padding:20px 0;
+        }
+        #findYourPerfectDomain.features-slim {
+          min-height: 241px;
+        }
+        #findYourPerfectDomain {
+          background-color: #F3F3F3;
+        }
+        #domains .disclaimer p {
+          font-size: 14px;
+          color: #666;
+        }
+        
+        
+      </style>
+    </atlantis:webstash>
     <section id="domains">
       <div class="features tile-section">
         <div class="container">
@@ -5162,12 +5137,18 @@ section#products {
         </div>
       </div>
     </section>
-    <style>
-      #step2-choose-product {display: none;}
-      #step2-choose-product .choose-header {margin: 30px 0 40px;}
-      #step2-choose-product .api-c-failure-modal {display: none;}
-      
-    </style>
+    <atlantis:webstash type="css">
+      <style>
+        #step2-choose-product {display: none;}
+        #step2-choose-product .choose-header {margin: 30px 0 40px;}
+        #step2-choose-product .api-c-failure-modal {display: none;}
+        #step2-choose-product .pro-plans {
+          margin-top:0px; /* override the -210px from sahara.css */
+        }
+        
+        
+      </style>
+    </atlantis:webstash>
     <section id="step2-choose-product">
       <div class="bg-green-new">
         <div class="container">
@@ -5227,6 +5208,20 @@ section#products {
         <p>API 3 error!</p>
       </div>
     </section>
+    <atlantis:webstash type="css">
+      <style>
+        #site-choice-compare .disclaimer-mark {
+          font-size: 24px;
+          margin: 10px 10% 20px;
+        }
+        
+        #site-choice-compare .disclaimer-mark p {
+          font-size: 14px;
+        }
+        
+        
+      </style>
+    </atlantis:webstash>
     <section id="site-choice">
       <div id="site-choice-title" class="bg-green-new"> 
         <div class="container">
