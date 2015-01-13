@@ -1,30 +1,25 @@
-extends ../../../templates/pages/landing-page
-
-
-prepend endOfPageScripts
-  //script
-  //  include ../../../templates/planTile.js
+extends ../../templates/pages/landing-page
 
 block pageStyles
   style
-    include:css styles.css
+    include:css ./website-builder/styles.css
 
 block domainSearch
   //- remove domain search from top of hosting page
 
 block marquee
   section#marquee 
-    include ./marquee.jade
+    include ./website-builder/marquee.jade
 
 block plans
   section#plans
     +renderPlanTiles(3) 
       +planTile
-        include ./plans/plan-website-builder-personal.jade
+        include ./website-builder/plans/plan-website-builder-personal.jade
       +planTile
-        include ./plans/plan-website-builder-business.jade
+        include ./website-builder/plans/plan-website-builder-business.jade
       +planTile
-        include ./plans/plan-website-builder-unlimited.jade
+        include ./website-builder/plans/plan-website-builder-unlimited.jade
         
       +renderCartLogic("[@T[link:<relative path='~/hosting/website-builder-config.aspx' />]@T]", "slp_wst_3" )
   
@@ -35,23 +30,23 @@ block sections
   section#templates.tile-section
     |[@P[cdsDocument:<data app="sales" location="hosting/template-slider" /> ]@P]
 
-  include ./fullVideo.jade
+  include ./website-builder/fullVideo.jade
 
   section#social-media(data-mid-nav-title="Features")
-    include ./tabbed-carousel.jade
+    include ./website-builder/tabbed-carousel.jade
 
   section#business-exclusives.bg-pro-gray
-    include ./business-exclusives.jade
+    include ./website-builder/business-exclusives.jade
 
 
   section#testimonials(data-mid-nav-title="Testimonials")
     +carousel("carousel-testimonials",3)
       +carouselItem
-        include ./panels/quote.jade
+        include ./website-builder/panels/quote.jade
       +carouselItem
-        include ./panels/quote.jade
+        include ./website-builder/panels/quote.jade
       +carouselItem
-        include ./panels/quote.jade
+        include ./website-builder/panels/quote.jade
 
   section#faq(data-mid-nav-title="FAQ")
   +renderAccordion({id: "test-faq", buttonID: "test-button", buttonText: "hey you"})

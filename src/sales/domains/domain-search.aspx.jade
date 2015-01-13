@@ -5,6 +5,7 @@ mixin tldSuggestItem()
 
 append pageStyles
   style.
+    .test { color: red; }
     .plan-tile { margin-top: 70px; }
     .search-template .search-template-box { margin-bottom: 10px; }
     #domainSearch a { color: #333; font-weight: bold; margin-right: 30px; }
@@ -18,7 +19,7 @@ block domainSearch
 
 block marquee
   section#marquee
-    include ./domain-search/marquee.jade
+    include ./domain-search/_marquee.jade
   section#domainSearch.bg-green-official
     .container
       .row
@@ -35,13 +36,13 @@ block plans
   section#plans
     +renderPlanTiles(4)
       +planTile
-        include ./domain-search/plan-tld-com.jade
+        include ./domain-search/_plan-tld-com.jade
       +planTile
-        include ./domain-search/plan-tld-net.jade
+        include ./domain-search/_plan-tld-net.jade
       +planTile
-        include ./domain-search/plan-tld-org.jade
+        include ./domain-search/_plan-tld-org.jade
       +planTile
-        include ./domain-search/plan-tld-info.jade
+        include ./domain-search/_plan-tld-info.jade
       .container
         .row
           .col-sm-12

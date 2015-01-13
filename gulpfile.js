@@ -6,6 +6,7 @@ try {
   var cdsm        = require('gulp-cdsm');
   var changed     = require('gulp-changed');
   var concat      = require('gulp-concat');
+  var extReplace = require('gulp-ext-replace');
   var cssmin      = require('gulp-minify-css');
   var frontMatter = require('gulp-front-matter');
   var fm          = require('front-matter');
@@ -30,6 +31,7 @@ try {
   var argv        = require('minimist')(process.argv.slice(2));
   var getData     = require('./lib/project-data.js');
   var extras      = require('./lib/swig-extras');
+  var exec        = require('child_process').exec;
 
   // underscore and mixins
   var _           = require('underscore');
@@ -70,6 +72,7 @@ if (!assetSrcPath) {
 }
 
 var ignoreCDS = argv['ignore-cds'] || false;
+var rebuild = argv['rebuild'] || false;
 
 if (!argv.src || argv.src == 'all') {
   ignoreCDS = true;
@@ -82,7 +85,7 @@ var paths = {
   less      : ['./src/sales/**/css/**/*.less'],
   images    : ['./src/sales/**/img/**/*.jpg', './src/sales/**/img/**/*.png'],
   build     : path.join('./build/sales/', assetSrcPath),
-  cdsBuild  : './build/cds/sales/',
+  cdsBuild  : './build/cds/',
   assets    : path.join(rootAssetPath, assetSrcPath),
   scripts   : ['./src/sales/**/js/**/*.js']
 };
@@ -129,6 +132,11 @@ var cdsmOpts = {
   dest: argv.dest || 'dev'
 };
 
+// use current git branch as default "name" for CDSM
+exec("git symbolic-ref --short HEAD", function(error, stdout, stderr) {
+  cdsmOpts.branchName = stdout.trim();
+});
+
 //homepage
 var getJsonData = function(file) {
   var jsonPath = file.path.replace('.jade','') + '.json';
@@ -143,17 +151,57 @@ var getLocalJson = function(file) {
   return false;
 };
 
+// copied from gulp-changed,  ignores missing file error
+function fsOperationFailed(stream, sourceFile, err) {
+  if (err) {
+    if (err.code !== 'ENOENT') {
+      stream.emit('error', new gutil.PluginError('gulp-changed', err, {
+        fileName: sourceFile.path
+      }));
+    }
+
+    stream.push(sourceFile);
+  }
+
+  return err;
+}
+
+// passed to gulp-changed, allows for compares when file has no extension (default implementation doesn't)
+function customCompareLastModifiedTime(stream, cb, sourceFile, targetPath) {
+  targetPath.replace(".jade","");
+  fs.stat(targetPath, function (err, targetStat) {
+    if (!fsOperationFailed(stream, sourceFile, err)) {
+      console.log("source:" + sourceFile.stat.mtime);
+      console.log("target" + targetStat.mtime);
+      if (sourceFile.stat.mtime > targetStat.mtime) {
+        stream.push(sourceFile);
+      }
+    }
+    cb();
+  });
+}
+
+gulp.task('cds', function() {
+  gulp.watch('build/cds/**/*', function(event) {
+    console.log('File ' + event.path + ' was ' + event.type + ', uploading to CDS... (' + path.resolve(__dirname, 'build/cds/') + ')');
+    gulp.src(event.path, { cwd: path.resolve(__dirname, 'build/cds/') })
+      .pipe(cdsm(cdsmOpts))
+
+  });
+});
+
 gulp.task('jade', function() {
   var jadeStream = jade({pretty: true});
   jadeStream.on('error',function(e){
     console.log(e.message);
     jadeStream.end();
   });
-  return gulp.src(['./**/*.jade', '!./**/templates/**/*.jade', '!./**/layouts/**/*.jade', '!./**/_*.jade'], {cwd: path.join('./src/sales/',assetSrcPath)})
-    .pipe(changed(paths.cdsBuild, {extension: '.html'}))
+  return gulp.src(['./**/*.jade', '!./**/templates/**/*.jade', '!./**/layouts/**/*.jade', '!./**/_*.jade'], {cwd: path.join('./src/')})
+    .pipe(gulpif(!rebuild,changed(paths.cdsBuild, {hasChanged: customCompareLastModifiedTime})))
     .pipe(frontMatter({remove:true}))
     .pipe(data(function(file) { return file.frontMatter; }))
     .pipe(jadeStream)
+    .pipe(extReplace(''))
     .pipe(gulpif(!ignoreCDS, cdsm(cdsmOpts)))
     .pipe(gulp.dest(paths.cdsBuild));
 });

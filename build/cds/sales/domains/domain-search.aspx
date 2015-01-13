@@ -34,6 +34,7 @@
     <link href="[@T[link:<cssroot />]@T]/fos/mike/0.7.0/css/sahara.css" rel="stylesheet">
     <link href="[@T[link:<cssroot />]@T]/fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css">
     <style>
+      .test { color: red; }
       .plan-tile { margin-top: 70px; }
       .search-template .search-template-box { margin-bottom: 10px; }
       #domainSearch a { color: #333; font-weight: bold; margin-right: 30px; }

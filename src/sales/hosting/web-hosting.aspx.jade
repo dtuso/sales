@@ -1,8 +1,6 @@
-extends ../../../templates/pages/landing-page
+extends ../../templates/pages/landing-page
 
 prepend endOfPageScripts
-  //script
-  //  include ../../../templates/planTile.js
   script.
     function comparePlans(id){
       if(id=="cpanel-tab"){
@@ -17,24 +15,24 @@ prepend endOfPageScripts
 
 block pageStyles
   style
-    include:css styles.css
+    include ./web-hosting/styles.css
 
 block domainSearch
   //- remove domain search from top of hosting page
 
 block marquee
   section#marquee 
-    include ./marquee.jade
+    include ./web-hosting/_marquee.jade
 
 block plans
   section#plans
     +renderPlanTiles(3) 
       +planTile
-        include ./plans/plan-hosting-economy.jade
+        include ./web-hosting/plans/plan-hosting-economy.jade
       +planTile
-        include ./plans/plan-hosting-deluxe.jade
+        include ./web-hosting/plans/plan-hosting-deluxe.jade
       +planTile
-        include ./plans/plan-hosting-ultimate.jade
+        include ./web-hosting/plans/plan-hosting-ultimate.jade
         
       +renderCartLogic("[@T[link:<relative path=\"/hosting-config-new.aspx\" parammode=\"common\" />]@T]", "slp_hosting_4GH" )
       .tile-section
@@ -301,31 +299,3 @@ block sections
 
   section#disclaimers
     p disclaimers
-
-//-
-  mixin lazyImage(src)
-      div(class="#{imgSize}")
-        img.key-benefits-img(
-            src = keyBenefit.lazyLoad ? 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==' : keyBenefit.image
-            data-lazy-load = keyBenefit.lazyLoad ? '{"src":"#{keyBenefit.image}","watch":".key-benefits-wrap"}' : ''
-            alt = keyBenefit.imageAlternateText != 'undefined' ? keyBenefit.imageAlternateText : ''
-            )
-
-    if (keyBenefit.title)
-      h3.key-benefits-title !{markdownToHtml(keyBenefit.title)}
-
-    if (keyBenefit.text)
-      .key-benefits-text !{markdownToHtml(keyBenefit.text)}
-
-    if (keyBenefit.buttonText)
-      a(href=keyBenefit.link class="btn #{keyBenefit.buttonColor}", data-tcode="#{keyBenefit.tcode ? keyBenefit.tcode : ''}") !{keyBenefit.buttonText}
-
-//-
-  div.pro-plans-wrap.bg-gray-light
-    #plans.container.pro-plans
-      div.col-sm-4.plan-tile.plan-pro
-        include ./product-1234.jade
-      div.col-sm-4.plan-tile.plan-pro
-        include ./product-1234.jade
-      div.col-sm-4.plan-tile.plan-pro
-        include ./product-1234.jade
