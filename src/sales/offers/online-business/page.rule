@@ -1,6 +1,6 @@
 ---
 location: sales/offers/online-business.aspx.rule
-id: 54ad9bf9f778fc2e5c5919b0
+id: 54b058acf778fc234c60ae3c
 name: GCE-31515
 ---
 [
@@ -11,7 +11,7 @@ name: GCE-31515
   },
   { 
     "Type": "Redirect",
-    "Condition": "(!productIsOffered(99) || countrySiteAny(mx))",
+    "Condition": "(!productIsOffered(99) || countrySiteAny(mx, ch, no))",
     "Data": "{ 'Type' : '302', 'Loc': '[@T[link:<relative path=\"~/\" />]@T]' }"
   }
 ]
