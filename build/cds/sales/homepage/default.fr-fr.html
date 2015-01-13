@@ -73,7 +73,11 @@
      ##if(targetMessageTagAny(sales_hp_default,hp_existing_customer))
       [@P[cdsDocument:<data app="sales" location="homepage/marquee/gtld/default_template" /> ]@P]
      ##else
-      [@P[cdsDocument:<data app="sales" location="homepage/marquee/499com/default_template" /> ]@P]
+       ##if(splitTestingSideIsActive(1419,b))
+         [@P[cdsDocument:<data app="sales" location="homepage/marquee/gybo/default_template" /> ]@P]
+       ##else
+         [@P[cdsDocument:<data app="sales" location="homepage/marquee/499com/default_template" /> ]@P]
+       ##endif
      ##endif
     <!-- Bugbar (and social links) Sections-->
     <div class="top-banner-lower-content">
@@ -107,11 +111,29 @@
     <div class="gdhp-tile-wrap">
       <div class="gdhp-tile-area"> 
         [@P[cdsDocument:<data app="sales" location="homepage/tile/hosting-old-brand/default_template" /> ]@P]
-         ##if(targetMessageTagAny(sales_hp_default,hp_existing_customer))
+        <div id="tile-container-why-wsb">
+           
           [@P[cdsDocument:<data app="sales" location="homepage/tile/why-wsb/default_template" /> ]@P]
-         ##else
+        </div>
+        <div id="tile-container-got" style="display:none">
+           
+          [@P[cdsDocument:<data app="sales" location="homepage/tile/got/default_template" /> ]@P]
+        </div>
+        <div id="tile-container-30-percent-gtld" style="display:none">
+           
           [@P[cdsDocument:<data app="sales" location="homepage/tile/30-percent-gtld/default_template" /> ]@P]
-         ##endif
+        </div>
+        <script type="text/javascript">
+          if ($('#com499').length || $('#gybo').length) {
+            $('#tile-container-why-wsb').hide();
+            if($('#com499').length) {
+              $('#tile-container-got').show();
+            } 
+            else {
+              $('#tile-container-30-percent-gtld').show();
+            }
+          }
+        </script>
       </div>
     </div>
     <div id="myVideoModal" data-url="video-close" class="modal fade videoModal js-gdhpclick">
