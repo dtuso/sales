@@ -321,12 +321,14 @@ function displayInvlidTldMessage($this){
 function showApi2SearchError(e,domain){
   // TODO!
   alert('TODO showApi2SearchError()');
+  var $modal = $("#step2-choose-product .api-b-failure-modal");
+  $modal.sfDialog({titleHidden:true});
 }
 
 function showApi3SearchError(e,domain){
   
-  // alert box
-  alert('API 3 error!');
+  var $modal = $("#step2-choose-product .api-c-failure-modal");
+  $modal.sfDialog({titleHidden:true, buttons: []});
 
 }
 

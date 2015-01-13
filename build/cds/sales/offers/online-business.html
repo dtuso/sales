@@ -94,9 +94,18 @@ $(document).ready(function() {
 
   // set up verify buttons on spin results to do validation before sending to DPP
   $('#marquee').on('click', '.spin-domain-action-button', verifyDomainIsStillAvailable);
+<<<<<<< HEAD
+
+  $('#marquee').on('click', '.purchase-btn', showChoicesScreen);
+
+  $('#marquee').on('click', '.select-and-continue', verifyDomainIsStillAvailable);
+
+
+=======
   $('#marquee').on('click', '.purchase-btn', showChoicesScreen);
   $('#marquee').on('click', '.select-and-continue', verifyDomainIsStillAvailable);
 
+>>>>>>> 419f92252c97429cb7b8958dbab74979c2d5d91f
   // track ci codes
   $('[data-ci]').click(function (e) {
       var $this = $(this);
@@ -119,6 +128,18 @@ function populateTldsOnDisclaimerModal(selector) {
     $this.find('.tlds-uk').show();
   ##endif
 }
+<<<<<<< HEAD
+function formatDomainWithDefaultTld(domain) {
+  alert("todo: formatDomainWithDefaultTld() ");
+  // TODO: check to see fi there's already a TLD on it
+  return domain + '.' + got1Page.defaultTld;
+}
+function isTldValid(domain) {
+  //TODO: check list of valid TLDs
+  alert("todo: isTldValid() ");
+  return true;
+}
+=======
 
 function formatDomainWithDefaultTldIfNoneSpecified(domain) {
   if(domain.indexOf('.') > 0) return domain;
@@ -135,6 +156,7 @@ function isTldValid(domain) {
   return isValid;
 }
 
+>>>>>>> 419f92252c97429cb7b8958dbab74979c2d5d91f
 function displayInvlidTldMessage($this){
   alert("todo: displayInvlidTldMessage() ");
 }
@@ -143,12 +165,20 @@ function domainSearchFormSubmit(e) {
  
   var $this = $(e.target),
     $textInput = $this.siblings('.search-form-input'),
+<<<<<<< HEAD
+    domain = $textInput.val(), 
+=======
     domain = $textInput.val().trim(), 
+>>>>>>> 419f92252c97429cb7b8958dbab74979c2d5d91f
     sucessful = false;
 
   if((domain && domain.length==0) || !domain) return;
   
+<<<<<<< HEAD
+  domain = formatDomainWithDefaultTld(domain);
+=======
   domain = formatDomainWithDefaultTldIfNoneSpecified(domain);
+>>>>>>> 419f92252c97429cb7b8958dbab74979c2d5d91f
 
   if(!isTldValid(domain)) {
     displayInvlidTldMessage($this);
@@ -156,8 +186,13 @@ function domainSearchFormSubmit(e) {
   }
 
   var apiEndpoint = '[@T[link:<relative path="~/domainsapi/v1/search/free"><param name="domain" value="domain" /><param name="itc" value="itc" /></relative>]@T]';
+<<<<<<< HEAD
+      apiEndpoint = apiEndpoint.replace('domain=domain', 'q=' + domain);
+      apiEndpoint = apiEndpoint.replace('itc=itc', 'key=' + got1Page.offersCodes.itc_wsb);
+=======
   apiEndpoint = apiEndpoint.replace('domain=domain', 'q=' + domain);
   apiEndpoint = apiEndpoint.replace('itc=itc', 'key=' + got1Page.offersCodes.itc_wsb);
+>>>>>>> 419f92252c97429cb7b8958dbab74979c2d5d91f
 
   $this.addClass('disabled');
 
@@ -230,6 +265,14 @@ function showSuccessfulSearch(domain){
 
 function showSearchSpins(domain, alternateDomains){  
 
+<<<<<<< HEAD
+  var $spinResults = $('#spin-results');
+  var $spinTemplate = $spinResults.find('.spin-template');
+  $.each(alternateDomains, function(idx,domain){
+    var $newSpin = $spinTemplate.clone().removeClass('spin-template');
+    $newSpin.find('.domain-name-display').text(domain.NameWithoutExtension);
+    $newSpin.find('.domain-name-display-tld').text(domain.Extension);
+=======
   // clear any spins from the DOM
   $('#spin-results .spin-result').remove();
 
@@ -239,6 +282,7 @@ function showSearchSpins(domain, alternateDomains){
     var $newSpin = $spinTemplate.clone();
     $newSpin.find('.domain-name-display').text(domain.NameWithoutExtension);
     $newSpin.find('.domain-name-display-tld').text('.' + domain.Extension);
+>>>>>>> 419f92252c97429cb7b8958dbab74979c2d5d91f
     $newSpin.find('.btn-primary').data('domain', domain);
     $spinResults.append($newSpin);
   });

@@ -30,7 +30,7 @@
     <meta name="twitter:title" content="[@L[cds.sales/offers/online-business:twitter-title]@L]">
     <meta name="twitter:description" content="[@L[cds.sales/offers/online-business:twitter-description]@L]">
     <meta name="twitter:image:src" content="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/online-business/img/og_got_1200x630.jpg"> 
-    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags"><Parameters><Parameter key="manifest" value="salesheader" /></Parameters></Data>]@P]
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <script src="[@T[link:<javascriptroot />]@T]/ux/dev-brand/js/uxcore.en.min.js"></script>
     <script src="[@T[link:<javascriptroot />]@T]/ux/dev-brand/js/uxcontrols.min.js"></script>
     <script src="[@T[link:<javascriptroot />]@T]/fos/mike/0.7.0/js/sahara.min.js"></script>
@@ -358,12 +358,14 @@ function displayInvlidTldMessage($this){
 function showApi2SearchError(e,domain){
   // TODO!
   alert('TODO showApi2SearchError()');
+  var $modal = $("#step2-choose-product .api-b-failure-modal");
+  $modal.sfDialog({titleHidden:true});
 }
 
 function showApi3SearchError(e,domain){
   
-  // alert box
-  alert('API 3 error!');
+  var $modal = $("#step2-choose-product .api-c-failure-modal");
+  $modal.sfDialog({titleHidden:true, buttons: []});
 
 }
 
@@ -4742,7 +4744,7 @@ section#products {
   </head>
   <body>
     <!-- HEADERBEGIN--> 
-    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /></Parameters></Data>]@P]
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- HEADEREND-->
     <!-- none-->
     <section id="marquee">
@@ -4915,7 +4917,8 @@ section#products {
         #spin-results .spin-template {display:none;font-size:18px;}
         #spin-results .select-and-continue {margin-bottom: 0px;}
         #spin-results .spin-results-message {margin-top:15px;}
-        #spin-results .checking-availability, #spin-results .now-unavailable, #spin-results .api-B-failure {padding-top:5px;}
+        #spin-results .checking-availability, #spin-results .now-unavailable {padding-top:5px;}
+        #domain-not-available-marquee-view
       </style>
       <section id="domain-not-available-marquee-view">
         <div class="bg-green-official">
@@ -4981,7 +4984,6 @@ section#products {
                         <button class="btn btn-primary select-and-continue spin-results-message">Select &amp; Continue</button>
                         <div class="spin-results-message checking-availability">Checking availability&hellip;</div>
                         <div class="spin-results-message now-unavailable">This domain is no longer available.</div>
-                        <div class="spin-results-message api-B-failure">API B FAILURE</div>
                       </div>
                     </div>
                   </div>
@@ -4990,6 +4992,9 @@ section#products {
             </div>
             <h6 class="text-center">SEE MORE RESULTS<span class="show-more-arrow"></span></h6>
           </div>
+        </div>
+        <div class="sf-dialog api-B-failure"> 
+          <p>API B FAILURE</p>
         </div>
       </section>
       <atlantis:webstash type="js">
@@ -5133,7 +5138,8 @@ section#products {
     </section>
     <style>
       #step2-choose-product {display: none;}
-      .choose-header {margin: 30px 0 40px;}
+      #step2-choose-product .choose-header {margin: 30px 0 40px;}
+      #step2-choose-product .api-c-failure-modal {display: none;}
       
     </style>
     <section id="step2-choose-product">
@@ -5192,6 +5198,9 @@ section#products {
             </div>
           </div>
         </div>
+      </div>
+      <div class="sf-dialog api-c-failure-modal">
+        <p>API 3 error!</p>
       </div>
     </section>
     <section id="site-choice">
@@ -5313,11 +5322,10 @@ section#products {
       <p>Third-party logos and marks are registered trademarks of their respective owners. All rights reserved.</p>
     </section>
     <!-- FOOTERBEGIN--> 
-    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer"><Parameters><Parameter key="manifest" value="salesheader" /></Parameters></Data>]@P]
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- FOOTEREND-->
      
-    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Script"><Parameters><Parameter key="manifest" value="salesheader" /></Parameters></Data>]@P]
-    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Bottom"><Parameters><Parameter key="requestedManifest" value="salesheader" /></Parameters></Data>]@P]
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Script"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- liveperson includes -->
     <div id="lpButtonDiv"></div><!-- End Main Content -->
     <script type="text/javascript">
