@@ -16,8 +16,7 @@ mixin domainSearchInput(params)
           button(type="submit" data-tcode="#{tcode}" class="#{buttonColor} btn btn-lg pull-right ") !{buttonText}
 
 
-mixin domainSearchOffersInput(title, cicode, placeholderText)
-
+mixin domainSearchOffersInput(title, cicode, placeholderText, buttonText, infoTypeHere, infoErrorEligibility, infoInvalidTld)
   style.
     .search-form { margin: 0 auto 1.071428571em;}
     .search-form-input {height: 67px; padding: 20px; color: #333; font-size:18px;
@@ -39,9 +38,8 @@ mixin domainSearchOffersInput(title, cicode, placeholderText)
           form.search-form
             .offer-search-box
               input.search-form-input.searchInput.helveticafont(type="text" placeholder!="#{placeholderText}" name="domainToCheck" autocomplete="off" maxlength="63")
-              button.btn.btn-primary.btn-lg.offer-search-btn(type="button" name="searchButton" data-ci="#{cicode}") SEARCH
-              .search-message.speech-shape-upsidedown.speech-shape-upsidedown-yellow.type-your-business-name Type your business name here (if you have one)
-              .search-message.speech-shape-upsidedown.speech-shape-upsidedown-orange.domain-eligibility-fail You do not meet the eligibilty requirements for {0} domains, please select a different domain extension and search again.
-              .search-message.speech-shape-upsidedown.speech-shape-upsidedown-white.invalid-TLD-entered You need to choose a valid TLD.
-              .search-message.speech-shape-upsidedown.speech-shape-upsidedown-orange.api-A-failure API A FAILURE
+              button.btn.btn-primary.btn-lg.offer-search-btn(type="button" name="searchButton" data-ci="#{cicode}") !{buttonText}
+              .search-message.speech-shape-upsidedown.speech-shape-upsidedown-yellow.type-your-business-name !{infoTypeHere}
+              .search-message.speech-shape-upsidedown.speech-shape-upsidedown-orange.domain-eligibility-fail !{infoErrorEligibility}
+              .search-message.speech-shape-upsidedown.speech-shape-upsidedown-white.invalid-TLD-entered !{infoInvalidTld}
             .clearfix
