@@ -25,7 +25,7 @@
     <meta property="og:site_name" content="[@T[link:<relative parammode='explicit' />]@T]">
     <meta property="fb:app_id" content="115696031791232">
     <meta property="fb:admins" content="633356800"> 
-    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags"><Parameters><Parameter key="manifest" value="salesheader" /></Parameters></Data>]@P]
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <script src="[@T[link:<javascriptroot />]@T]/ux/dev-brand/js/uxcore.en.min.js"></script>
     <script src="[@T[link:<javascriptroot />]@T]/ux/dev-brand/js/uxcontrols.min.js"></script>
     <script src="[@T[link:<javascriptroot />]@T]/fos/mike/0.7.0/js/sahara.min.js"></script>
@@ -96,6 +96,21 @@ h3 {
   z-index: 1000;
 }
 
+#one-click-install { 
+  background: #77c043; transition: background 750ms ease-in-out; 
+  background-image: url("[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_AppInstalls_Banner.jpg"); 
+  background-repeat: no-repeat; background-size: 100% 100%; 
+}
+
+@media (max-width: 767px) {
+  #one-click-install {
+    background-image: none !important;
+  }
+  .one-click-right {
+    padding-top: 40px;
+  }
+}
+
 @media (max-width: 991px) {
   #choose-platform {
     background-image: none !important;
@@ -155,7 +170,7 @@ h3 {
   </head>
   <body>
     <!-- HEADERBEGIN--> 
-    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /></Parameters></Data>]@P]
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- HEADEREND-->
     <section id="marquee"> 
       <atlantis:webstash type="css">
@@ -660,6 +675,11 @@ h3 {
   font-size: 24px;
   font-size: 2.4rem;
 }
+@media only screen and (max-width: 768px){
+  .mid-page-nav {
+    display: none;
+  }
+}
     </style>
     <div class="mid-page-nav">
       <div class="container">
@@ -752,7 +772,6 @@ h3 {
     </section>
     <section id="one-click-install" class="features tile-section one-click-wrapper">
       <div class="container">
-        <style>#one-click-install { background: #77c043; transition: background 750ms ease-in-out; background-image: url("[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_AppInstalls_Banner.jpg"); background-repeat: no-repeat; background-size: 100% 100%; }</style>
         <div class="row">
           <div class="col-sm-6">
             <h2>APP INSTALLS JUST A CLICK AWAY</h2>
@@ -769,7 +788,7 @@ h3 {
             <!--    span.uxicon.uxicon-checkmark(aria-hidden="true")-->
             <!--    span Maybe you want to sell products on your webite.  Try Magento with one-click.-->
           </div>
-          <div class="col-sm-6">
+          <div class="col-sm-6 one-click-right">
             <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="text-center"><img src="[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Feature_Small_Logos.png" class="features-img features-img-right"></div>
           </div>
         </div>
@@ -2166,11 +2185,10 @@ height: 27px;
       <p>disclaimers</p>
     </section>
     <!-- FOOTERBEGIN--> 
-    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer"><Parameters><Parameter key="manifest" value="salesheader" /></Parameters></Data>]@P]
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- FOOTEREND-->
      
-    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Script"><Parameters><Parameter key="manifest" value="salesheader" /></Parameters></Data>]@P]
-    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Bottom"><Parameters><Parameter key="requestedManifest" value="salesheader" /></Parameters></Data>]@P]
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Script"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- liveperson includes -->
     <div id="lpButtonDiv"></div><!-- End Main Content -->
     <script type="text/javascript">
@@ -2209,7 +2227,8 @@ height: 27px;
             var maxHeight = 0;
             $(outerPlan).find(".pro-plan-wrap").each(function(index, plan) {
               maxHeight = $(plan).outerHeight() > maxHeight ? $(plan).outerHeight() : maxHeight;
-            }).css("height", maxHeight);
+            });
+            if( maxHeight > 0 )$(outerPlan).find(".pro-plan-wrap").css("height", maxHeight);
           });
         }
       });
