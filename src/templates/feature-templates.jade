@@ -4,7 +4,8 @@ if (presentationTemplate === "featuresRightText"  || presentationTemplate === "f
   - featuresWrapClass = "features-wrap"
 else if (presentationTemplate === "featuresSlim")
   - featuresWrapClass = "features-slim"
-
+- bgColorLeft = bgColorLeft || "transparent";
+- bgColorRight = bgColorRight || "transparent";
 //- Features layouts
 div(id="#{featuresId ? featuresId : ''}", class="features tile-section #{featuresWrapClass ? featuresWrapClass : ''} #{whiteText ? 'text-white' : ''} #{backgroundColor ? backgroundColor : ''}", style != (typeof backgroundImage != 'undefined' && !lazyLoad ? 'background-image: url(\'#{backgroundImage}\');' : ''), data-lazy-load = (typeof backgroundImage != 'undefined' && lazyLoad ? '{"src":"#{backgroundImage}"}' : ''))
   .container
@@ -57,7 +58,7 @@ div(id="#{featuresId ? featuresId : ''}", class="features tile-section #{feature
 
       //- Features smil with left text
       if (presentationTemplate === "featuresSlim")
-        .col-sm-6
+        .col-sm-6.bg-slim-left
           div(data-center-element='{"vertical":{"target":{"method":"parents","selector":".features"},"verticalStyle":"margin-top","elementHeightMethod":"outerHeight","targetWidthMethod":"height"}}')
             if (title)
               h2 !{title}
@@ -71,7 +72,7 @@ div(id="#{featuresId ? featuresId : ''}", class="features tile-section #{feature
             if (buttonText && buttonUrl)
               a(href="#{buttonUrl}", class="btn #{buttonColor ? buttonColor : 'btn-default'}" ) !{buttonText}
 
-        .col-sm-6
+        .col-sm-6.bg-slim-right
           if (image)
             div.text-center(data-center-element='{"vertical":{"target":{"method":"parents","selector":".features"},"verticalStyle":"margin-top","elementHeightMethod":"outerHeight","targetWidthMethod":"height"}}')
               if(lazyLoad)

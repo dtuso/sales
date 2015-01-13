@@ -9,6 +9,21 @@ h2{
   color: #333;
 }
 
+h3 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-family: 'Walsheim-Black';
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: 300;
+  line-height: 1.1;
+}
+
+.tile-section {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
 .compare-table-view-all {
   text-align: center;
   margin-top: 50px;
@@ -48,6 +63,33 @@ h2{
   right: 0;
   top: 0;
   z-index: 1000;
+}
+
+#one-click-install { 
+  background: #77c043; transition: background 750ms ease-in-out; 
+  background-image: url("[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_AppInstalls_Banner.jpg"); 
+  background-repeat: no-repeat; background-size: 100% 100%; 
+}
+
+@media (max-width: 767px) {
+  #one-click-install {
+    background-image: none !important;
+    background-color: transparent;
+    padding-bottom: 0;
+  }
+  .one-click-right {
+    padding-top: 40px;
+    padding-bottom: 70px;
+    background-color: #5caf2b;
+  }
+  .one-click-left {
+    padding-top: 70px;
+    padding-bottom: 40px;
+    background-color: #78c043;
+  }
+  .key-benefits-img-wrap {
+    text-align: center;
+  }
 }
 
 @media (max-width: 991px) {
