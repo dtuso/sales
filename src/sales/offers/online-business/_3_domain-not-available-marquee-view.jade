@@ -1,31 +1,37 @@
+atlantis:webstash(type="css")
+  style.
+    #domain-not-available-marquee-view { display: none; }
+    #domain-not-available-marquee-view .pro-plans .pro-plan-wrap {border-top: 10px solid #008a32; padding: 20px;}
+    #domain-not-available-marquee-view .pro-plans {margin-top: 0px; }
+    #domain-not-available-marquee-view .domain-not-available-heading-text  { color: #333333; }
+    #domain-not-available-marquee-view h4.other-domains-heading-text {padding-top 20px; font-size: 24px; color:#333; font-weight: bold; }
+    #domain-not-available-marquee-view h6.results-list-heading-text {padding-top 20px; font-size: 18px; color:#333; }
+    #domain-not-available-marquee-view .domain-spin-wrap {min-height: 120px;border: solid 1px #cccccc;margin-bottom: 15px;} 
+    #domain-not-available-marquee-view .domain-name-display {text-transform: lowercase; margin-bottom: 0px; margin-top: 0px;}
+    #domain-not-available-marquee-view .domain-name-display-tld {text-transform: lowercase;margin-bottom: 0px; margin-top: 0px;}
+    #domain-not-available-marquee-view .show-more-arrow { position: relative; top: 16px; left: 15px; bottom: 0; margin-left: -10px; width: 0; height: 0; border: 11px solid transparent; border-top-color: #000; content: ''; }
+    #spin-results .spin-results-message,
+    #spin-template-wrap .spin-template {display:none;}
+    #spin-results .select-and-continue {margin-bottom: 0px; font-size:20px;}
+    #spin-results .spin-results-message {margin-top:15px;}
+    #spin-results .checking-availability, #spin-results .now-unavailable {padding-top:5px;}
+    #spin-results h4.domain-name-display {font-size: 30px; color: #333; font-weight:bold;}
+    #spin-results h2.domain-name-display-tld {font-size: 40px; color: #333;}
+    #domain-not-available-marquee-view button.view-all-button {font-size: 18px; color: #6586C4; font-family: Arial;}
 
-style.
-  #domain-not-available-marquee-view { display: none; }
-  #domain-not-available-marquee-view .pro-plans .pro-plan-wrap {border-top: 10px solid #008a32; padding: 20px;}
-  #domain-not-available-marquee-view .pro-plans {margin-top: 0px; }
-  #domain-not-available-marquee-view .domain-not-available-heading-text  { color: #333333; }
-  #domain-not-available-marquee-view .domain-not-available-subheading-text { color: #000000;}
-  #domain-not-available-marquee-view .other-domains-heading-text {padding-top 20px; }
-  #domain-not-available-marquee-view .results-list-heading-text {padding-top 20px; }
-  #domain-not-available-marquee-view .domain-spin-wrap {min-height: 120px;border: solid 1px #cccccc;margin-bottom: 15px;} 
-  #domain-not-available-marquee-view .domain-name-display {text-transform: lowercase; margin-bottom: 0px; margin-top: 0px;}
-  #domain-not-available-marquee-view .domain-name-display-tld {text-transform: lowercase;margin-bottom: 0px; margin-top: 0px;}
-  #domain-not-available-marquee-view .show-more-arrow { position: relative; top: 16px; left: 15px; bottom: 0; margin-left: -10px; width: 0; height: 0; border: 11px solid transparent; border-top-color: #000; content: ''; }
-  #spin-results .spin-results-message,
-  #spin-results .spin-template {display:none;font-size:18px;}
 section#domain-not-available-marquee-view
   .bg-green-official
     .container
       .row
         .col-md-12
           h2.domain-not-available-heading-text Sorry, that domain's already taken.
-          h4.domain-not-available-subheading-text The right one's out there. Just try again.
-      +domainSearchOffersInput('', '12347', 'Try a different domain name', '')
+      +domainSearchOffersInput('The right one\'s out there. Just try again.', '12347', 'Try a different domain name', '', 'Search', 'Type your business name here (if you have one)', 'You do not meet the eligibility requirements for {0} domains, please select a different domain extension and search again.','You need to choose a valid TLD.')
   .bg-white
     .container.pro-plans
       .row
         h4.other-domains-heading-text Or, here are some other domains you might like too&hellip;
-        h6.results-list-heading-text 1 - {0} of {1} results <a>View all</a>
+        h6.results-list-heading-text 1 - {0} of {1} results 
+          button.btn.btn-link.view-all-button View All
       #spin-results
       #spin-template-wrap
         .row.spin-template.spin-result
@@ -39,6 +45,9 @@ section#domain-not-available-marquee-view
                   button.btn.btn-primary.select-and-continue.spin-results-message Select &amp; Continue
                   .spin-results-message.checking-availability Checking availability&hellip;
                   .spin-results-message.now-unavailable This domain is no longer available.
-                  .spin-results-message.api-B-failure API B FAILURE
+                  
       h6.text-center SEE MORE RESULTS
         span.show-more-arrow
+
+  .sf-dialog.api-B-failure 
+    p API B FAILURE

@@ -2,7 +2,101 @@
 - var title = "Here's what you get&hellip;";
 - var subtitle;
 
-section#products.bg-gray-light
+atlantis:webstash(type="css")
+  style.
+    #products.tile-section{ padding-top: 0;padding-bottom: 0;}
+    #products {padding-bottom:40px;}
+
+    /* KEY BENEFITS */
+    .key-benefits-wrap[class*="bg-"]:not(.bg-gray-light) {
+      color: #fff;
+    }
+    .key-benefits-wrap[class*="bg-"]:not(.bg-gray-light) h2,
+    .key-benefits-wrap[class*="bg-"]:not(.bg-gray-light) h3 {
+      color: #fff;
+    }
+    .key-benefits-wrap[class*="bg-"]:not(.bg-gray-light) .btn-white-outline:hover,
+    .key-benefits-wrap[class*="bg-"]:not(.bg-gray-light) a.btn-white-outline:hover,
+    .key-benefits-wrap[class*="bg-"]:not(.bg-gray-light) .btn-white-outline:focus,
+    .key-benefits-wrap[class*="bg-"]:not(.bg-gray-light) a.btn-white-outline:focus {
+      color: #ef6c0f !important;
+    }
+    .key-benefits-wrap[class*="bg-"]:not(.bg-gray-light) a,
+    .key-benefits-wrap[class*="bg-"]:not(.bg-gray-light) a:visited,
+    .key-benefits-wrap[class*="bg-"]:not(.bg-gray-light) a:hover {
+      color: #fff;
+    }
+    .key-benefits-wrap h2 {
+      margin: 35px 0;
+      font-size: 40pt;
+      color: #333;
+    }
+    .key-benefits-wrap h2,
+    .key-benefits-wrap h3 {
+      text-transform: uppercase;
+    }
+    .key-benefits-wrap .key-benefits-img-wrap {
+      height: 100px;
+      margin: 40px 0;
+    }
+    @media only screen and (max-width: 768px) {
+      .key-benefits-wrap .key-benefits-img-wrap {
+        text-align: center;
+      }
+    }
+    .key-benefits-wrap .key-benefits-img-wrap .key-benefits-img {
+      position: relative;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      transform: translateY(-50%);
+      max-height: 100px;
+    }
+    .key-benefits-wrap .key-benefits-img-wrap-lg {
+      height: 250px;
+      margin: 40px auto;
+      text-align: center;
+    }
+    .key-benefits-wrap .key-benefits-img-wrap-lg .key-benefits-img {
+      position: relative;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      transform: translateY(-50%);
+      max-height: 250px;
+    }
+    .key-benefits-wrap .key-benefits-subtitle {
+      font-family: 'Walsheim-Bold';
+      font-size: 18px;
+      font-size: 1.8rem;
+    }
+    .key-benefits-wrap .key-benefit.col-sm-4:nth-child(4n) {
+      clear: left;
+    }
+    .key-benefits-wrap .key-benefit .key-benefits-text {
+      margin-bottom: 20px;
+      font-size: 18px;
+      font-size: 1.8rem;
+      line-height: 1.5;
+      font-size: 16pt;
+      color: #333;
+    }
+    .key-benefits-wrap .key-benefit h3.key-benefits-title {
+      word-wrap: break-word;
+      word-break: break-word;
+      white-space: -moz-pre-wrap;
+      margin-top: 0px;
+      font-size: 30pt;
+      font-weight: bold;
+      color: #333;
+    }
+    .key-benefits-wrap .key-benefits-subtext {
+      margin-top: 40px;
+    }
+
+    /* (end) KEY BENEFITS */
+
+section#products.bg-gray-light.key-benefits-wrap
   .container
     if (title)
       .row
@@ -16,7 +110,7 @@ section#products.bg-gray-light
 
     .row
 
-      .col-sm-4
+      .col-sm-4.key-benefit
 
         h3.key-benefits-title A domain
         .key-benefits-text Your own unique address on the web, like GoDaddy.com
@@ -24,7 +118,7 @@ section#products.bg-gray-light
           .include-check-green <strong>Choose from</strong> .com, .net, .org, or even .co domains.
           .include-check-green <strong>Trust the world leader</strong> with over 58 million domains under management
       
-      .col-sm-4
+      .col-sm-4.key-benefit
       
         h3.key-benefits-title Your website
         .key-benefits-text A place to promote your business or sell your stuff on the web.
@@ -33,7 +127,7 @@ section#products.bg-gray-light
           .include-check-none <strong>or</strong>
           .include-check-green <strong>Sell products</strong> with your own Online Store (website included)
 
-      .col-sm-4
+      .col-sm-4.key-benefit
 
         h3.key-benefits-title Pro email
         .key-benefits-text An address that makes you look like the pro you are.

@@ -1,11 +1,32 @@
+atlantis:webstash(type="css")
+  style.
+    #domains .tld-images {margin-top: 0px; margin-left: 60px;}
+    #domains .tld-image {margin: 15px;}
+    #findYourPerfectDomain.tile-section {
+      padding:20px 0;
+    }
+    #findYourPerfectDomain.features-slim {
+      min-height: 241px;
+    }
+    #findYourPerfectDomain {
+      background-color: #F3F3F3;
+    }
+    #domains .disclaimer p {
+      font-size: 14px;
+      color: #666;
+    }
+    #domains .features-slim h2 {
+      margin: 10px 0px;
+    }
+
 section#domains
 
   .features.tile-section
     .container
       .row
-        .col-md-6.col-sm-12.domain-image.col-md-push-6 
-          img(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png")
-        .col-md-6.col-sm-12.col-md-pull-6 
+        .col-sm-6.domain-image.col-sm-push-6 
+          img.img-responsive(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png")
+        .col-sm-6.col-sm-pull-6 
           h2 <mark>What's a domain?</mark> It's that name up in the address bar.
           h4 And your online business needs one. Just make sure it:
           .include-check-green Fits your business or products
@@ -14,9 +35,9 @@ section#domains
   .features.tile-section
     .container
       .row
-        .col-md-6.col-sm-12.domain-image.col-md-push-6 
-          img(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature2.png")
-        .col-md-6.col-sm-12.col-md-pull-6 
+        .col-sm-6.domain-image.col-sm-push-6 
+          img.img-responsive(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature2.png")
+        .col-sm-6.col-sm-pull-6 
           h2 Having your own <mark>domain</mark> makes your email even better
           h4 It changes timscoolstuff1973@gmail.com to tim@coolexample.com. Plus, it:
           .include-check-green Promotes your website with every message
