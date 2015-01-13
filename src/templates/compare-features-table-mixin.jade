@@ -1,20 +1,22 @@
 include compare-features-view-all-mixin.jade
 
-mixin compareFeaturesTable(options)
-  - options = options || {};
-  - options.numberOfRowsNotHidden = options.numberOfRowsNotHidden || 999;
-  - options.showViewAllButton = options.showViewAllButton || false;
-  - options.tableID = options.tableID || ""
+mixin compareFeaturesTable(compareFeaturesOptions)
+  - compareFeaturesOptions = compareFeaturesOptions || {};
+  - compareFeaturesOptions.numberOfRowsNotHidden = compareFeaturesOptions.numberOfRowsNotHidden || 999;
+  - compareFeaturesOptions.showViewAllButton = compareFeaturesOptions.showViewAllButton || false;
+  - compareFeaturesOptions.tableID = compareFeaturesOptions.tableID || ""
+  - compareFeaturesOptions.includeStyles = compareFeaturesOptions.includeStyles
 
-  style
-    include:css styles/compare-features-table.css
+  if typeof(compareFeaturesOptions.includeStyles) == 'undefined'
+    style
+      include:css styles/compare-features-table.css
 
-  table.compare-table(id = options.tableID)
+  table.compare-table(id = compareFeaturesOptions.tableID)
     block
     script(type="text/javascript").
       $(window).load(function() {
         var chart = $(this).closest(".compare-table");
-        $("##{options.tableID} tr:gt(#{options.numberOfRowsNotHidden})").hide();
+        $("##{compareFeaturesOptions.tableID} tr:gt(#{compareFeaturesOptions.numberOfRowsNotHidden})").hide();
        });
-  if options.showViewAllButton
-    +compareViewAllButton(options.tableID)
+  if compareFeaturesOptions.showViewAllButton
+    +compareViewAllButton(compareFeaturesOptions.tableID)
