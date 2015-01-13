@@ -55,4 +55,8 @@ mixin renderAccordion(options)
       });
       $("##{options.buttonID}").click(function() {
         $('##{options.id}').find('.dropdown').slideDown();
+        $('##{options.id}').find('.accordion-dropdown').find('.carett')
+                        .removeClass("caret-right")
+                        .addClass("caret-down");
+        $('##{options.id}').find('.accordion-dropdown').addClass("active");
        });
