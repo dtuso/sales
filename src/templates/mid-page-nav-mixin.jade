@@ -51,20 +51,18 @@ mixin renderMidPageNav(options)
       // this sets the nav to fixed when scrolled past and fixes the body for the height of the nav
       var nav = $('.mid-page-nav');
       var pos = nav.offset().top;
-      var titles = []
+      var sections = []
 
       $('[data-mid-nav-title]').each(function(){
-        //titles.push($(this).data('mid-nav-title'));
-        titles.push($(this).attr('id'));
+        sections.push($(this).attr('id'));
       });
-      console.log(titles);
       $(window).scroll(function () {
         var scroll = $(this).scrollTop();
         var fix = ($(this).scrollTop() > pos) ? true : false;
         nav.toggleClass("sticky", fix);
         $('body').toggleClass("fix-body", fix);
         if(fix){
-          $.each(titles,function(index,value){
+          $.each(sections,function(index,value){
               var top = ((scroll+131) > $('#'+value).offset().top) ? true : false;
               var bottom = ((scroll+131) < $('#'+value).offset().top + $('#'+value).outerHeight()) ? true : false;
               var activeNav = (top && bottom) ? true : false;
@@ -93,7 +91,7 @@ mixin renderMidPageNav(options)
         if($target.length) {
           $('html, body').animate({ scrollTop: $target.offset().top - fromTop }, 1000);
           if(history && "pushState" in history) {
-            history.pushState({}, document.title, window.location.pathname + href);
+            history.pushState({}, document.title, window.location.pathname + window.location.search + href);
             return false;
           }
         }
