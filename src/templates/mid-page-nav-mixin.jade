@@ -4,7 +4,7 @@ mixin priceBlock(price, duration, link, options)
   - link = link || "#"
   - options = options || {}
   - options.priceText = options.priceText || "Plans starting at"
-  - options.buttonColor = options.buttonColor || "btn-purchase"
+  - options.buttonColor = options.buttonColor || "btn-warning"
   - options.buttonText = options.buttonText || "See the plans"
   
   //- allow consumers to pass a block for full flexiblity
@@ -51,29 +51,12 @@ mixin renderMidPageNav(options)
       // this sets the nav to fixed when scrolled past and fixes the body for the height of the nav
       var nav = $('.mid-page-nav');
       var pos = nav.offset().top;
-      var sections = []
 
-      $('[data-mid-nav-title]').each(function(){
-        sections.push($(this).attr('id'));
-      });
+
       $(window).scroll(function () {
-        var scroll = $(this).scrollTop();
         var fix = ($(this).scrollTop() > pos) ? true : false;
         nav.toggleClass("sticky", fix);
         $('body').toggleClass("fix-body", fix);
-        if(fix){
-          $.each(sections,function(index,value){
-              var top = ((scroll+131) > $('#'+value).offset().top) ? true : false;
-              var bottom = ((scroll+131) < $('#'+value).offset().top + $('#'+value).outerHeight()) ? true : false;
-              var activeNav = (top && bottom) ? true : false;
-              $('a[href="#'+value+'"').toggleClass("active",activeNav);
-              $('.mid-page-nav a').each(function(i,v){
-                  if(v!=value){
-                    $(this).blur();
-                  }
-                });
-            });
-        }
 
       });
       $('#midPageNav .dropdown-toggle').dropdown()
