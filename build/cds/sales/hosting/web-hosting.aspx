@@ -187,7 +187,7 @@ h3 {
     <section id="marquee"> 
       <atlantis:webstash type="css">
         <style>
-          .marquee { background: url([@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Marquee.jpg) no-repeat top center;); }
+          .marquee { background: url([@T[link:<imageroot />]@T]fos/mike/img/hosting/bg-marquee-V10.jpg) no-repeat top center;); }
           
         </style>
       </atlantis:webstash>
@@ -1594,7 +1594,7 @@ height: 27px;
         </div>
       </div>
     </section>
-    <section id="faq">
+    <section id="faq" class="tile-section">
       <style>.accordion-group {
   border-top: 2px solid #e8e8e8;
   border-bottom: 2px solid #e8e8e8;
