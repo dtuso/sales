@@ -1,6 +1,6 @@
 ---
 location: localization/sales/offers/online-business/en
-id:  54b49e37f778fc1004052269
+id:  54b6a963f778fc0f24ed2064
 name: GCE-32573
 comments: GOT rebrand 2015 SuperBowl
 ---
@@ -292,7 +292,7 @@ Create coupon codes
 <phrase key="32573-godaddy-ols-bullet-12" />
 Customer ratings &amp; reviews
 <phrase key="32573-godaddy-ols-bullet-13" />
-Facebook<sup>&reg;</sup>; store
+Facebook<sup>&reg;</sup> store
 <phrase key="32573-godaddy-ols-bullet-14" />
 Mobile-friendly web store
 <phrase key="32573-good-news-domain-available" />
@@ -376,7 +376,7 @@ Checking availability&hellip;
 <phrase key="32573-domain-no-longer-available" />
 This domain is no longer available.
 <phrase key="32573-offer-only-valid" />
-Offer only valid with <span class="tlds-ca">.ca, </span><span class="tlds-club">.club, </span>.com, <span class="tlds-br">.com.br, </span>.co, <span class="tlds-in">.in, </span><span class="tlds-rocks">.rocks, </span><span class="tlds-uk">.co.uk, .uk, </span>.net, or .org domain
+Offer only valid with <span class="tlds-ca">.CA, </span>.COM, <span class="tlds-br">.COM.BR, </span>.CO, <span class="tlds-in">.IN, </span><span class="tlds-uk">.CO.UK, .UK, </span><span class="tlds-club">.CLUB, </span><span class="tlds-rocks">.ROCKS, </span>.NET, &amp; .ORG
 <phrase key="32573-disclaimer-modal-title" />
 Disclaimers
 <phrase key="32573-disclaimer-modal-wsb-content" comment="{0} will get replaced with a currency amount" />
