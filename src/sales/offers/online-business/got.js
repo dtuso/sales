@@ -57,7 +57,7 @@ var got1Page = {
 $(document).ready(function() {
 
   //dynamically build the tld images in the #findYourPerfectDomain section
-  showTldImages();
+  showTldImagesInDomainArea();
 
   $('#marquee .invalid-TLD-entered').append($('<span style="margin-left:10px;">').text("." + got1Page.tldInfo.tlds.join(', .')));
 
@@ -71,11 +71,15 @@ $(document).ready(function() {
       .removeAttr('data-tokenize');
   });
 
+  // wire up see details links
+  $('#default-marquee-view').on('click', '.see-details-disclaimer-link', function(){
+    var $modal = $('#default-marquee-details-modal');
+    $modal.sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
+  });
 
   //set up domain search buttons to do a domain search
   $('#marquee')
     .on('keyup', '.search-form-input', function(e) { 
-      console.log(e.which);
       if ( e.which == 13 ) {
         // enter key!
         e.preventDefault();
@@ -116,7 +120,7 @@ $(document).ready(function() {
 
 });
 
-function showTldImages() {
+function showTldImagesInDomainArea() {
   //dynamically build the tld images in the #findYourPerfectDomain section
   var $imageDiv = $('#findYourPerfectDomain').find(".features-img").parent().empty().addClass('tld-images');
   $.each(got1Page.tldInfo.tlds, function(idx, tld){
@@ -126,7 +130,7 @@ function showTldImages() {
     $imageDiv.append($img);
   });
 
-  // TODO: rerun the height alignment
+  // rerun the height alignment
   $('#findYourPerfectDomain [data-center-element]').css({marginTop:"0px"});
   $(window).trigger('resize');
 }

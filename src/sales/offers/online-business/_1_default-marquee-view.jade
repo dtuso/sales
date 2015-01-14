@@ -1,6 +1,6 @@
-atlantis:webstash(type="js")
+atlantis:webstash(type="css")
   style.
-    #default-marquee-view { display: inline; }
+    #default-marquee-view { display: inline; padding-bottom:40px; }
     #default-marquee-view .get-online-wrapper {position: relative; height: 260px;}
     #default-marquee-view .get-online-dash {position: absolute; left: 20px; top: 10px;}
     #default-marquee-view .get-online-text {font-size: 46pt; color:#333333;}
@@ -15,21 +15,99 @@ atlantis:webstash(type="js")
     #default-marquee-view .website-text {position: absolute; left: 40px; top: 185px; font-size: 25px; color: #333333;}
     #default-marquee-view .email-text {position: absolute; left: 65px;  top: 185px; font-size: 25px; color: #333333;}
     #default-marquee-view .powered-by-text {position: absolute; left: 55px; top: 214px; font-size: 11px; color: #333333;}
-    #default-marquee-view .MSO365-text { position: absolute; left: 34px; top: 227px; font-size: 11px; color: #333333;}
+    #default-marquee-view .see-details-disclaimer-link {color:#00701D;font-size: 12px; text-decoration: none;cursor:pointer;}
+    #default-marquee-view .see-details-disclaimer-link:hover {text-decoration: underline;}
 
+    /*  speech */
+
+    .speech-shape-upsidedown {
+      line-height: 1.9em;
+      font-family: 'Walsheim-Bold';
+      font-size: 18px;
+      padding: 5px 17px;
+      color: #fff;
+      display: inline-block;
+      position: relative;
+      margin-bottom: 20px;
+      z-index: 2;
+    }
+    .speech-shape-upsidedown .shape-text {
+      position: relative;
+      z-index: 40;
+    }
+    .speech-shape-upsidedown:before {
+      content: '';
+      position: absolute;
+      top: -15px;
+      left: 0;
+      border-bottom: 15px solid;
+      border-right: 15px solid transparent;
+    }
+    .speech-shape-upsidedown:after {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width:20px;
+      right: -6px;
+      top: 0;
+      transform: skew(12deg, 0);
+      z-index: 1;
+    }
+    .speech-shape-upsidedown.speech-shape-upsidedown-green {
+      background-color: #008a32;
+    }
+    .speech-shape-upsidedown.speech-shape-upsidedown-green:before {
+      border-bottom-color: #008a32;
+    }
+    .speech-shape-upsidedown.speech-shape-upsidedown-green:after {
+      background-color: #008a32;
+    }
+    .speech-shape-upsidedown.speech-shape-upsidedown-orange {
+      background-color: #ef6c0f;
+    }
+    .speech-shape-upsidedown.speech-shape-upsidedown-orange:before {
+      border-bottom-color: #ef6c0f;
+    }
+    .speech-shape-upsidedown.speech-shape-upsidedown-orange:after {
+      background-color: #ef6c0f;
+    }
+    .speech-shape-upsidedown.speech-shape-upsidedown-white {
+      background-color: #fff;
+      color: #333;
+    }
+    .speech-shape-upsidedown.speech-shape-upsidedown-white:before {
+      border-bottom-color: #fff;
+    }
+    .speech-shape-upsidedown.speech-shape-upsidedown-white:after {
+      background-color: #fff;
+    }
+    .speech-shape-upsidedown.speech-shape-upsidedown-yellow {
+      background-color: #fedc45;
+      color: #333;
+    }
+    .speech-shape-upsidedown.speech-shape-upsidedown-yellow:before {
+      border-bottom-color: #fedc45;
+    }
+    .speech-shape-upsidedown.speech-shape-upsidedown-yellow:after {
+      background-color: #fedc45;
+    }
+
+    /* (end) speech */
+    
 section#default-marquee-view.bg-green-official
   .container
     .row
       .col-md-6.col-sm-12
         .get-online-wrapper
           .clearfix.get-online-dash
-            span.headline-secondary.get-online-text Get Online
+            span.headline-secondary.get-online-text [@L[cds.sales/offers/online-business:32573-top-banner-headline]@L]
             span.get-online-image
               img(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-dash.png")
           img.green-arrow(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-marker.png")
-          h1.headline-primary.today-text Today
-          h3.as-low-as-text AS LOW AS $1.xx/MONTH
-          div.top-disclaimer-text.small Annual purchase required. Price valid 1st year only. <u>See details.</u>
+          h1.headline-primary.today-text [@L[cds.sales/offers/online-business:32573-top-banner-subheadline]@L]
+          h3.as-low-as-text [@L[cds.sales/offers/online-business:32573-as-low-as]@L]
+          div.top-disclaimer-text.small [@L[cds.sales/offers/online-business:32573-top-small-disclaimer-text]@L] 
+            button.btn.btn-link.see-details-disclaimer-link [@L[cds.sales/offers/online-business:32573-top-small-disclaimer-details-link]@L]
       .col-md-6.col-sm-12
         .you-get-wrapper
           .you-get-image
@@ -37,13 +115,14 @@ section#default-marquee-view.bg-green-official
           .row
             .col-md-4
               p.text-center
-                span.headline-secondary.domain-text Domain
+                span.headline-secondary.domain-text [@L[cds.sales/offers/online-business:32573-top-banner-image-domain]@L]
             .col-md-4
               p.text-center
-                span.headline-secondary.website-text Website
+                span.headline-secondary.website-text [@L[cds.sales/offers/online-business:32573-top-banner-image-website]@L]
             .col-md-4
               p.text-center
-                span.headline-secondary.email-text Email<br>
-                span.powered-by-text| Powered by<br>
-                span.MSO365-text| Microsoft Office 365
-    +domainSearchOffersInput('STEP 1: GET A DOMAIN', '12345', 'Enter a domain name', 'Search', 'Type your business name here (if you have one)', 'You do not meet the eligibility requirements for {0} domains, please select a different domain extension and search again.','You need to choose a valid TLD.')
+                span.headline-secondary.email-text [@L[cds.sales/offers/online-business:32573-top-banner-image-email]@L]
+                span.powered-by-text [@L[cds.sales/offers/online-business:32573-powered-by-mso365]@L]
+    +domainSearchOffersInput('[@L[cds.sales/offers/online-business:32573-step-1-get-a-domain]@L]', '12345', '[@L[cds.sales/offers/online-business:32573-domain-search-placeholder]@L]', '[@L[cds.sales/offers/online-business:32573-search]@L]', '[@L[cds.sales/offers/online-business:32573-type-your-business-placeholder]@L]', '[@L[cds.sales/offers/online-business:32573-eligibility-error]@L]','[@L[cds.sales/offers/online-business:32573-offer-only-valid]@L]')
+#default-marquee-details-modal.sf-dialog 
+  p [@L[cds.sales/offers/online-business:32573-disclaimer-modal-both-content]@L]

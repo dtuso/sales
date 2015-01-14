@@ -138,16 +138,16 @@ Package Deal! Quickly setup your business online with a new domain, integrated e
 <phrase key="32573-meta-keywords" />
 get online, get online business, online business email, online business, business email, email domain, web builder, web builder software
 <phrase key="32573-og-title" />
-Get Online | Business Email, Domain, and Web Builder Software
+Get Online | Business Email, Domain and Website
 <phrase key="32573-og-description" />
-Package Deal! Quickly setup your business online with a new domain, integrated email, and a powerful online web builder.
+Package deal! Get your business online with a new domain, integrated email and your own website or online store.
 <phrase key="32573-top-banner-headline" />
 Get Online
 <phrase key="32573-top-banner-subheadline" />
 Today
-<phrase key="32573-as-low-as" />
+<phrase key="32573-as-low-as" comment="{0} will have a currency value" />
 As low as <span class="promo-price">{0}</span>/month
-<phrase key="32573-promo-price-per-month" />
+<phrase key="32573-promo-price-per-month" comment="{0} will have a currency value" />
 <span class="promo-price">{0}</span>/month
 <phrase key="32573-top-banner-image-domain" />
 Domain
@@ -167,8 +167,10 @@ Step 1: Get a domain
 Search
 <phrase key="32573-domain-search-placeholder" />
 Enter a domain name
+<phrase key="32573-type-your-business-placeholder" />
+Type your business name here (if you have one)
 <phrase key="32573-heres-what-you-get" />
-Here's what you get
+Here's what you get&hellip;
 <phrase key="32573-a-domain-heading" />
 A Domain
 <phrase key="32573-a-domain-text" />
@@ -196,7 +198,9 @@ An address that makes you look like the pro you are.
 <phrase key="32573-pro-email-bullet-2" />
 <strong>Backed by</strong> our free, [@T[support:<technicalSupportHours />]@T]
 <phrase key="32573-whats-a-domain-heading" />
-What's a domain? It's that name up in the address bar.
+What's a domain?
+<phrase key="32573-whats-a-domain-text" />
+It's that name up in the address bar.
 <phrase key="32573-whats-a-domain-subtext" />
 And your online business needs one. Just make sure it:
 <phrase key="32573-whats-a-domain-subtext-non-enus" />
@@ -206,7 +210,7 @@ Fits your business or products
 <phrase key="32573-whats-a-domain-bullet-two" />
 Is easy to spell and remember
 <phrase key="32573-email-even-better-heading" />
-Having your own domain makes your email even better.
+Having your own <mark>domain</mark> makes your email even better
 <phrase key="32573-email-even-better-text" />
 It changes timscoolstuff1973@gmail.com to tim@coolexample.com. Plus, it:
 <phrase key="32573-email-even-better-bullet-1" />
@@ -225,7 +229,7 @@ Which site's right for you?
 GoDaddy Website Builder
 <phrase key="32573-godaddy-wsb-text" />
 Get your business online
-<phrase key="32573-godaddy-wsb-text-price" />
+<phrase key="32573-godaddy-wsb-text-price" comment="{0} will have a currency value" />
 All this for just {0}/month
 <phrase key="32573-godaddy-wsb-text-price-disclaimer" comment="{0} will have a currency value" />
 Annual purchase required. Price valid 1st year only. Renews at {0}/mo with .com.
@@ -253,11 +257,11 @@ Unlimited pages
 GoDaddy Online Store
 <phrase key="32573-godaddy-ols-text" />
 Get online + sell your stuff
-<phrase key="32573-godaddy-ols-text-price" />
+<phrase key="32573-godaddy-ols-text-price" comment="{0} will have a currency value" />
 All this for just {0}/month
 <phrase key="32573-godaddy-ols-text-price-disclaimer" comment="{0} will have a currency value" />
 Annual purchase required. Price valid 1st year only. Renews at {0}/mo with .com.
-<phrase key="32573-godaddy-ols-text-price-disclaimer-link" />
+<phrase key="32573-godaddy-ols-text-price-disclaimer-link" /> 
 See details.
 <phrase key="32573-watch-video-button" />
 Watch video
@@ -313,8 +317,10 @@ Step 2: Choose your website
 Website Builder
 <phrase key="32573-choose-wsb-text" />
 Get your business online
-<phrase key="32573-choose-wsb-all-this-for-just" />
-All this for just {0}/month
+<phrase key="32573-choose-wsb-all-this-for-just-text" />
+All this for just
+<phrase key="32573-choose-wsb-all-this-for-just-price" comment="{0} will have a currency value" />
+<span class="promo-price">{0}</span>/month
 <phrase key="32573-choose-wsb-text-price-disclaimer" comment="{0} will have a currency value" />
 Annual purchase required. Price valid 1st year only. Renews at {0}/mo with .com.
 <phrase key="32573-choose-wsb-text-price-disclaimer-link" />
@@ -341,8 +347,10 @@ Upload your own photos or choose from 20,000+ stock photos
 Online Store &amp; Website
 <phrase key="32573-choose-ols-text" />
 Get online + sell your products
-<phrase key="32573-choose-ols-all-this-for-just" />
-All this for just {0}/month
+<phrase key="32573-choose-ols-all-this-for-just-text" />
+All this for just
+<phrase key="32573-choose-ols-all-this-for-just-price" comment="{0} will have a currency value" />
+<span class="promo-price">{0}</span>/month
 <phrase key="32573-choose-ols-text-price-disclaimer" comment="{0} will have a currency value" />
 Annual purchase required. Price valid 1st year only. Renews at {0}/mo with .com.
 <phrase key="32573-choose-ols-text-price-disclaimer-link" />
@@ -367,6 +375,8 @@ Sorry, we're having some technical difficulties. Please try again.
 Checking availability&hellip;
 <phrase key="32573-domain-no-longer-available" />
 This domain is no longer available.
+<phrase key="32573-offer-only-valid" />
+Offer only valid with <span class="tlds-ca">.ca, </span><span class="tlds-club">.club, </span>.com, <span class="tlds-br">.com.br, </span>.co, <span class="tlds-in">.in, </span><span class="tlds-rocks">.rocks, </span><span class="tlds-uk">.co.uk, .uk, </span>.net, or .org domain
 <phrase key="32573-disclaimer-modal-title" />
 Disclaimers
 <phrase key="32573-disclaimer-modal-wsb-content" comment="{0} will get replaced with a currency amount" />
@@ -383,3 +393,5 @@ Restrictions Apply.
 One promotional credit per customer for a new Microsoft<sup>&reg;</sup>; Advertiser account. Products purchased using a Gift Card or Alipay do not provide eligibility for advertising credits. Offer valid to US residents only, other restrictions apply.
 <phrase key="32573-bing-restrictions-apply-view-details" />
 View Details
+<phrase key="32573-third-party-logos-trademarks-disclaimer" />
+Third-party logos and marks are registered trademarks of their respective owners. All rights reserved.

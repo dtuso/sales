@@ -1,58 +1,59 @@
-
-section#marquee
+atlantis:webstash(type="css")
   style.
     #marquee {margin:0 auto; padding-top:15px;background-color: #77c043;}
     #marquee .get-a-domain-text { margin-top: 20px; }
+
+section#marquee
   include ./_1_default-marquee-view.jade
   include ./_2_domain-available-marquee-view.jade
   include ./_3_domain-not-available-marquee-view.jade
 
-  atlantis:webstash(type="js")
-    script(type="text/javascript").
-      $(document).ready(function() {
+atlantis:webstash(type="js")
+  script(type="text/javascript").
+    $(document).ready(function() {
 
-        //- $('#default-marquee-view .offer-search-btn').on('click', function(){
-        //-   animateToAvailable();
-        //- });
-        //- $('#domain-available-marquee-view .offer-search-btn').on('click', function(){
-        //-   animateToNotAvailable();
-        //- });
-        //- $('#domain-not-available-marquee-view .offer-search-btn').on('click', function(){
-        //-   animateToDefault();
-        //- });
+      //- $('#default-marquee-view .offer-search-btn').on('click', function(){
+      //-   animateToAvailable();
+      //- });
+      //- $('#domain-available-marquee-view .offer-search-btn').on('click', function(){
+      //-   animateToNotAvailable();
+      //- });
+      //- $('#domain-not-available-marquee-view .offer-search-btn').on('click', function(){
+      //-   animateToDefault();
+      //- });
 
 
-      });
+    });
 
-      function enableAllSearchButtons(){
-        $('#marquee')
-          .find('.offer-search-btn').removeClass('disabled');
-      }
-      function enableAllAddToCartButtons(){
-        $('#marquee')
-          .find('.purchase-btn').removeClass('disabled');
-      }
-      function animateToAvailable (domainToAttach) {
-        $('#domain-available-marquee-view')
-          .show()
-          .find('.purchase-btn')
-            .removeClass('disabled')
-            .data('domain', domainToAttach);
-        $('#default-marquee-view, #domain-not-available-marquee-view').hide();
-        enableAllSearchButtons();
-      }
+    function enableAllSearchButtons(){
+      $('#marquee')
+        .find('.offer-search-btn').removeClass('disabled');
+    }
+    function enableAllAddToCartButtons(){
+      $('#marquee')
+        .find('.purchase-btn').removeClass('disabled');
+    }
+    function animateToAvailable (domainToAttach) {
+      $('#domain-available-marquee-view')
+        .show()
+        .find('.purchase-btn')
+          .removeClass('disabled')
+          .data('domain', domainToAttach);
+      $('#default-marquee-view, #domain-not-available-marquee-view').hide();
+      enableAllSearchButtons();
+    }
 
-      function animateToNotAvailable() {
-        $('#domain-not-available-marquee-view')
-          .show();
-        $('#domain-available-marquee-view, #default-marquee-view').hide();      
-        enableAllSearchButtons();
+    function animateToNotAvailable() {
+      $('#domain-not-available-marquee-view')
+        .show();
+      $('#domain-available-marquee-view, #default-marquee-view').hide();      
+      enableAllSearchButtons();
 
-      }
+    }
 
-      function animateToDefault () {
-        $('#default-marquee-view').show();
-        $('#domain-not-available-marquee-view, #domain-available-marquee-view').hide();
-        enableAllSearchButtons();
+    function animateToDefault () {
+      $('#default-marquee-view').show();
+      $('#domain-not-available-marquee-view, #domain-available-marquee-view').hide();
+      enableAllSearchButtons();
 
-      }
+    }

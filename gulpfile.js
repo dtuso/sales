@@ -195,6 +195,9 @@ gulp.task('jade', function() {
     jadeStream.end();
   });
 
+  // undo the setting that sets ignore-cds if src isn't specified
+  ignoreCDS = argv['ignore-cds'] || false;
+
   // use current git branch as default "name" for CDSM
   exec("git symbolic-ref --short HEAD", function(error, stdout, stderr) {
     cdsmOpts.branchName = stdout.trim();

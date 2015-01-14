@@ -1,9 +1,353 @@
+atlantis:webstash(type="css")
+  style.
+    #site-choice-compare .disclaimer-mark {
+      font-size: 24px;
+      margin: 10px 10% 20px;
+    }
+
+    #site-choice-compare .disclaimer-mark p {
+      font-size: 14px;
+    }
+
+
+    /* (start) TWO UP COMPARE */
+
+    .two-up-title {
+      margin: 40px 0;
+      line-height: 1;
+    }
+    .two-up-speech-shape {
+      font-family: 'Walsheim-Bold';
+      font-size: 18px;
+      font-size: 1.8rem;
+      padding: 5px 10px 5px 17px;
+      color: #fff;
+      display: inline-block;
+      position: relative;
+      margin-bottom: 20px;
+      z-index: 2;
+    }
+    .two-up-speech-shape .shape-text {
+      position: relative;
+      z-index: 40;
+    }
+    .two-up-speech-shape:before {
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      left: 0;
+      border-top: 15px solid;
+      border-right: 15px solid transparent;
+    }
+    .two-up-speech-shape:after {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 99%;
+      top: 0;
+      transform: skew(-12deg, 0);
+      z-index: 1;
+    }
+    .two-up-speech-shape.two-up-speech-shape-green {
+      background-color: #008a32;
+    }
+    .two-up-speech-shape.two-up-speech-shape-green:before {
+      border-top-color: #008a32;
+    }
+    .two-up-speech-shape.two-up-speech-shape-green:after {
+      background-color: #008a32;
+    }
+    .two-up-speech-shape.two-up-speech-shape-orange {
+      background-color: #ef6c0f;
+    }
+    .two-up-speech-shape.two-up-speech-shape-orange:before {
+      border-top-color: #ef6c0f;
+    }
+    .two-up-speech-shape.two-up-speech-shape-orange:after {
+      background-color: #ef6c0f;
+    }
+    .two-up-speech-shape.two-up-speech-shape-white {
+      background-color: #fff;
+    }
+    .two-up-speech-shape.two-up-speech-shape-white:before {
+      border-top-color: #fff;
+    }
+    .two-up-speech-shape.two-up-speech-shape-white:after {
+      background-color: #fff;
+    }
+    .two-up-wrap {
+      min-height: 780px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
+    .two-up-wrap.two-up-wrap-app {
+      min-height: 500px;
+    }
+    .two-up-wrap.two-up-wrap-app h3 {
+      font-family: 'Walsheim-Bold';
+    }
+    .two-up-wrap.two-up-wrap-app .two-up-text {
+      font-size: 14px;
+      font-size: 1.4rem;
+    }
+    .two-up-wrap.two-up-wrap-app .two-up-text ul {
+      padding-left: 15px;
+    }
+    .two-up-wrap.two-up-wrap-app .two-up-text ul li {
+      padding-bottom: 10px;
+    }
+    .two-up-wrap.two-up-wrap-app .two-up-text ul li:last-child {
+      padding-bottom: 0;
+    }
+    .two-up-wrap.two-up-wrap-app .two-up-text-wrap {
+      padding-top: 70px;
+    }
+    @media only screen and (max-width: 992px) {
+      .two-up-wrap.two-up-wrap-app .two-up-text-wrap {
+        padding-top: 30px !important;
+        padding-bottom: 30px;
+      }
+    }
+    .two-up-wrap h2 {
+      margin-top: 0;
+    }
+    @media only screen and (max-width: 768px) {
+      .two-up-wrap h2 {
+        font-size: 40px;
+        font-size: 4rem;
+      }
+    }
+    .two-up-wrap .two-up-text-wrap {
+      padding-top: 100px;
+    }
+    @media only screen and (max-width: 992px) {
+      .two-up-wrap .two-up-text-wrap {
+        padding-top: 30px !important;
+        padding-bottom: 30px;
+      }
+    }
+    .two-up-wrap .two-up-text {
+      font-size: 20px;
+      font-size: 2rem;
+      line-height: 1.4;
+      margin: 10px 0 30px;
+    }
+    @media only screen and (max-width: 768px) {
+      .two-up-wrap .two-up-text {
+        font-size: 18px;
+        font-size: 1.8rem;
+      }
+    }
+    @media only screen and (min-width: 992px) {
+      .two-up-wrap {
+        min-height: 520px;
+      }
+      .two-up-wrap .col-md-5.col-sm-6.bg-white {
+        background-color: transparent;
+      }
+      .two-up-wrap .col-md-5.col-sm-6.bg-yellow {
+        background-color: transparent;
+      }
+      .two-up-wrap .col-md-5.col-sm-6.bg-gray-lighter,
+      .two-up-wrap .col-md-5.col-sm-6.bg-pro-gray {
+        background-color: transparent;
+      }
+      .two-up-wrap .col-md-5.col-sm-6.bg-gray-light {
+        background-color: transparent;
+      }
+      .two-up-wrap .col-md-5.col-sm-6.bg-green-official {
+        background-color: transparent;
+      }
+      .two-up-wrap .col-md-5.col-sm-6.bg-green-new {
+        background-color: transparent;
+      }
+      .two-up-wrap .col-md-5.col-sm-6.bg-green-official-light {
+        background-color: transparent;
+      }
+      .two-up-wrap .col-md-5.col-sm-6.bg-gray-darkest {
+        background-color: transparent;
+      }
+    }
+    @media only screen and (max-width: 768px) {
+      .two-up-wrap {
+        background-image: none !important;
+        min-height: 0;
+      }
+      .two-up-wrap .col-md-5.col-sm-6.bg-white {
+        background-color: #fff;
+      }
+      .two-up-wrap .col-md-5.col-sm-6.bg-yellow {
+        background-color: #ffde2d;
+      }
+      .two-up-wrap .col-md-5.col-sm-6.bg-gray-lighter,
+      .two-up-wrap .col-md-5.col-sm-6.bg-pro-gray {
+        background-color: #e8e8e8;
+      }
+      .two-up-wrap .col-md-5.col-sm-6.bg-gray-light {
+        background-color: #d9d9d9;
+      }
+      .two-up-wrap .col-md-5.col-sm-6.bg-green-official {
+        background-color: #77c043;
+      }
+      .two-up-wrap .col-md-5.col-sm-6.bg-green-new {
+        background-color: #5caf2b;
+      }
+      .two-up-wrap .col-md-5.col-sm-6.bg-green-official-light {
+        background-color: #84D54A;
+      }
+      .two-up-wrap .col-md-5.col-sm-6.bg-gray-darkest {
+        background-color: #212121;
+      }
+    }
+    .or-container:after {
+      content: '';
+      width: 94px;
+      height: 94px;
+      background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+      background-size: 205px auto;
+      background-position: 0 -896px;
+      position: absolute;
+      bottom: -50px;
+      margin: 0 auto;
+      display: none;
+      left: 50%;
+      margin-left: -50px;
+      z-index: 1;
+    }
+    @media only screen and (max-width: 768px) {
+      .or-container:after {
+        display: block;
+        -webkit-transform: 90deg;
+        -moz-transform: 90deg;
+        transform: rotate(90deg);
+      }
+    }
+    .two-up-wrap-compare {
+      min-height: 980px;
+      background-repeat: no-repeat;
+      background-size: cover !important;
+      background-position: center top;
+      position: relative;
+    }
+    @media only screen and (min-width: 992px) {
+      .two-up-wrap-compare .col-md-5.col-sm-6.bg-white {
+        background-color: transparent;
+      }
+      .two-up-wrap-compare .col-md-5.col-sm-6.bg-yellow {
+        background-color: transparent;
+      }
+      .two-up-wrap-compare .col-md-5.col-sm-6.bg-gray-lighter,
+      .two-up-wrap-compare .col-md-5.col-sm-6.bg-pro-gray {
+        background-color: transparent;
+      }
+      .two-up-wrap-compare .col-md-5.col-sm-6.bg-gray-light {
+        background-color: transparent;
+      }
+      .two-up-wrap-compare .col-md-5.col-sm-6.bg-green-official {
+        background-color: transparent;
+      }
+      .two-up-wrap-compare .col-md-5.col-sm-6.bg-green-new {
+        background-color: transparent;
+      }
+      .two-up-wrap-compare .col-md-5.col-sm-6.bg-green-official-light {
+        background-color: transparent;
+      }
+      .two-up-wrap-compare .col-md-5.col-sm-6.bg-gray-darkest {
+        background-color: transparent;
+      }
+    }
+    @media only screen and (max-width: 768px) {
+      .two-up-wrap-compare {
+        background-image: none !important;
+      }
+      .two-up-wrap-compare .col-md-5.col-sm-6.bg-white {
+        background-color: #fff;
+      }
+      .two-up-wrap-compare .col-md-5.col-sm-6.bg-yellow {
+        background-color: #ffde2d;
+      }
+      .two-up-wrap-compare .col-md-5.col-sm-6.bg-gray-lighter,
+      .two-up-wrap-compare .col-md-5.col-sm-6.bg-pro-gray {
+        background-color: #e8e8e8;
+      }
+      .two-up-wrap-compare .col-md-5.col-sm-6.bg-gray-light {
+        background-color: #d9d9d9;
+      }
+      .two-up-wrap-compare .col-md-5.col-sm-6.bg-green-official {
+        background-color: #77c043;
+      }
+      .two-up-wrap-compare .col-md-5.col-sm-6.bg-green-new {
+        background-color: #5caf2b;
+      }
+      .two-up-wrap-compare .col-md-5.col-sm-6.bg-green-official-light {
+        background-color: #84D54A;
+      }
+      .two-up-wrap-compare .col-md-5.col-sm-6.bg-gray-darkest {
+        background-color: #212121;
+      }
+    }
+    .two-up-wrap-compare:after {
+      content: '';
+      width: 94px;
+      height: 94px;
+      background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+      background-size: 205px auto;
+      background-position: 0 -896px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+    }
+    @media only screen and (max-width: 768px) {
+      .two-up-wrap-compare:after {
+        display: none;
+      }
+    }
+    .two-up-wrap-compare .two-up-text-wrap {
+      padding: 30px;
+    }
+    @media only screen and (max-width: 768px) {
+      .two-up-wrap-compare .two-up-text-wrap {
+        padding: 60px 0;
+      }
+    }
+    .two-up-wrap-compare .two-up-text-wrap h3.subtitle {
+      text-transform: none;
+    }
+    .two-up-wrap-compare .check-bullets li {
+      position: relative;
+      padding-left: 40px;
+      margin-bottom: 20px;
+    }
+    .two-up-wrap-compare .check-bullets li:before {
+      content: '';
+      background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+      background-size: 205px auto;
+      background-position: 0 -700px;
+      width: 25px;
+      height: 27px;
+      position: absolute;
+      left: 0;
+    }
+    .two-up-wrap-compare .check-bullets li h5 {
+      margin-bottom: 5px;
+    }
+    /* (end) TWO UP COMPARE */
+
+
+    /* GLOBAL FEATURES CSS */
+    /* (end) GLOBAL FEATURES CSS */
+
+
 section#site-choice
   #site-choice-title.bg-green-new  
     .container
       .row
         .col-sm-12
-          h2.text-center.two-up-title Which site's right for you?
+          h2.text-center.two-up-title [@L[cds.sales/offers/online-business:32573-which-sites-right-for-you]@L]
 
   #site-choice-compare.two-up-wrap-compare(style!="background-image: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/bg-WSB-Mod.jpg')")
 
@@ -13,66 +357,72 @@ section#site-choice
           .two-up-text-wrap
             .text-center.two-up-image
               img(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-wsb-icon.png")
-            h2.text-center GoDaddy Website Builder
-            h3.text-center Get your business online
-            mark.text-center.disclaimer-mark All of this for just $1.00/month <p class="disclaimer">Annual purchase required. Price valid 1st year only. Renews at $11.99/mo with .com. <a>See details</a></p>
+            h2.text-center [@L[cds.sales/offers/online-business:32573-godaddy-wsb]@L]
+            h3.text-center [@L[cds.sales/offers/online-business:32573-godaddy-wsb-text]@L]
+            mark.text-center.disclaimer-mark [@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price]@L] <p class="disclaimer">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price-disclaimer]@L] <a>[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price-disclaimer-link]@L]</a></p>
             .row.text-center
               .col-md-6
-                button.btn.btn-md.btn-primary <i class="uxicon uxicon-play"></i> Watch video
+                button.btn.btn-md.btn-primary <i class="uxicon uxicon-play"></i> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]
               .col-md-6
-                button.btn.btn-md.btn-primary View designs
+                button.btn.btn-md.btn-primary [@L[cds.sales/offers/online-business:32573-view-designs-button]@L]
 
             .row
               .col-sm-10
                 ul.list-unstyled.check-bullets
                   li 
-                    h5 Professional Website
+                    h5 [@L[cds.sales/offers/online-business:32573-godaddy-wsb-bullet-1]@L]
                   li 
-                    h5 Free domain
+                    h5 [@L[cds.sales/offers/online-business:32573-godaddy-wsb-bullet-2]@L]
                   li 
-                    h5 Free hosting
+                    h5 [@L[cds.sales/offers/online-business:32573-godaddy-wsb-bullet-3]@L]
                   li 
-                    h5 Free business email
+                    h5 [@L[cds.sales/offers/online-business:32573-godaddy-wsb-bullet-4]@L]
                   li 
-                    h5 Customizable themes
+                    h5 [@L[cds.sales/offers/online-business:32573-godaddy-wsb-bullet-5]@L]
                   li 
-                    h5 20,000+ Images
+                    h5 [@L[cds.sales/offers/online-business:32573-godaddy-wsb-bullet-6]@L]
+                  li 
+                    h5 [@L[cds.sales/offers/online-business:32573-godaddy-wsb-bullet-7]@L]
         .col-md-5.col-sm-6.col-md-offset-2.bg-green-official-light
           .two-up-text-wrap
             .text-center.two-up-image
               img(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-onlineStore.png")
-            h2.text-center GoDaddy Online Store
-            h3.text-center Get online + sell your stuff
-            mark.text-center.disclaimer-mark All of this for just $5.00/month <p class="disclaimer">Annual purchase required. Price valid 1st year only. Renews at $15.99/mo with .com. <a>See details</a></p>
+            h2.text-center [@L[cds.sales/offers/online-business:32573-godaddy-ols]@L]
+            h3.text-center [@L[cds.sales/offers/online-business:32573-godaddy-ols-text]@L]
+            mark.text-center.disclaimer-mark [@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price]@L] <p class="disclaimer">[@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price-disclaimer]@L] <a>[@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price-disclaimer-link]@L]</a></p>
             .row.text-center
               .col-md-6
-                button.btn.btn-md.btn-primary <i class="uxicon uxicon-play"></i> Watch video
+                button.btn.btn-md.btn-primary <i class="uxicon uxicon-play"></i> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]
               .col-md-6
-                button.btn.btn-md.btn-primary See real stories
+                button.btn.btn-md.btn-primary [@L[cds.sales/offers/online-business:32573-see-real-stores-button]@L]
             .row
               .col-sm-10
                 ul.list-unstyled.check-bullets
                   li 
-                    h5 Online Store &amp; Website
+                    h5 [@L[cds.sales/offers/online-business:32573-godaddy-ols-bullet-1]@L]
                   li 
-                    h5 Free domain
+                    h5 [@L[cds.sales/offers/online-business:32573-godaddy-ols-bullet-2]@L]
                   li 
-                    h5 Free hosting
+                    h5 [@L[cds.sales/offers/online-business:32573-godaddy-ols-bullet-3]@L]
                   li 
-                    h5 Free business email
+                    h5 [@L[cds.sales/offers/online-business:32573-godaddy-ols-bullet-4]@L]
                   li 
-                    h5 Customizable themes
+                    h5 [@L[cds.sales/offers/online-business:32573-godaddy-ols-bullet-5]@L]
                   li 
-                    h5 Unlimited pages &amp; PayPal<super>&reg;</super>
+                    h5 [@L[cds.sales/offers/online-business:32573-godaddy-ols-bullet-6]@L]
                   li 
-                    h5 Mobile-friendly web Store
+                    h5 [@L[cds.sales/offers/online-business:32573-godaddy-ols-bullet-7]@L]
                   li 
-                    h5 Facebook<super>&reg;</super> store
+                    h5 [@L[cds.sales/offers/online-business:32573-godaddy-ols-bullet-8]@L]
                   li 
-                    h5 Customer ratings &amp; reviews
+                    h5 [@L[cds.sales/offers/online-business:32573-godaddy-ols-bullet-9]@L]
                   li 
-                    h5 Flexible shipping rates
+                    h5 [@L[cds.sales/offers/online-business:32573-godaddy-ols-bullet-10]@L]
                   li 
-                    h5 Built-in SEO features
+                    h5 [@L[cds.sales/offers/online-business:32573-godaddy-ols-bullet-11]@L]
                   li 
-                    h5 Secure checkout
+                    h5 [@L[cds.sales/offers/online-business:32573-godaddy-ols-bullet-12]@L]
+                  li 
+                    h5 [@L[cds.sales/offers/online-business:32573-godaddy-ols-bullet-13]@L]
+                  li 
+                    h5 [@L[cds.sales/offers/online-business:32573-godaddy-ols-bullet-14]@L]

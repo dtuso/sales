@@ -1,14 +1,13 @@
 ---
 location: sales/offers/online-business.aspx
 id: 54b5855ff778fc10040523de
-name: GCE-32414-dom
-comments: GOT rebrand 2015 SuperBowl
+name: GCE-32414-dom2
+comments: GOT rebrand 2015 SuperBowl 2
 url: http://www.dev-godaddy.com/offers/online-business.aspx
 assetPath: false
 ---
 
 extends ../../templates/pages/landing-page
-
 
 append vars
   - page.title = "[@L[cds.sales/offers/online-business:page-title]@L]";
@@ -67,4 +66,4 @@ block alternatives
 //- there's always a catch... show it here.
 block disclaimers
   section#disclaimers 
-    p Third-party logos and marks are registered trademarks of their respective owners. All rights reserved.
+    p [@L[cds.sales/offers/online-business:32573-third-party-logos-trademarks-disclaimer]@L]

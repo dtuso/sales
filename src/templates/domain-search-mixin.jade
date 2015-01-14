@@ -17,14 +17,13 @@ mixin domainSearchInput(params)
 
 
 mixin domainSearchOffersInput(title, cicode, placeholderText, buttonText, infoTypeHere, infoErrorEligibility, infoInvalidTld)
-
-
   style.
     .offer-search-box .search-form-input {height: 67px; padding: 20px; color: #333; font-size:18px;border-top-color: #fff; border-top-width: 3px; border-top-style: inset; border-bottom: 1px solid #ccc; border-left: 1px solid #ccc; border-right: 1px solid #ccc; width: 850px;}
     .offer-search-box label.searchInput {};
     .offer-search-box button.offer-search-btn { font-size: 20px; height: 66px; margin-top: -6px; }
     .offer-search-box { padding-bottom:20px;}
     .search-message { display: none; margin-left:20px; margin-top:30px;width:65%;}
+    .domain-search-messaging-row {padding-bottom: 40px;}
 
   .row
     .col-md-12
@@ -33,9 +32,10 @@ mixin domainSearchOffersInput(title, cicode, placeholderText, buttonText, infoTy
   .row
     .col-md-12.offer-search-box
       input.search-form-input.searchInput.helveticafont(type="text" placeholder!="#{placeholderText}" name="domainToCheck" autocomplete="off" maxlength="63")
-      button.btn.btn-primary.btn-lg.offer-search-btn(type="button" name="searchButton" data-ci="#{cicode}") #{buttonText}
-  .row
+      button.btn.btn-primary.btn-lg.offer-search-btn(type="button" name="searchButton" data-ci="#{cicode}") !{buttonText}
+  .row.domain-search-messaging-row
     .col-md-12
-      span.search-message.speech-shape-upsidedown.speech-shape-upsidedown-yellow.type-your-business-name #{infoTypeHere}
-      span.search-message.speech-shape-upsidedown.speech-shape-upsidedown-orange.domain-eligibility-fail #{infoErrorEligibility}
-      span.search-message.speech-shape-upsidedown.speech-shape-upsidedown-white.invalid-TLD-entered #{infoInvalidTld}
+      span.search-message.speech-shape-upsidedown.speech-shape-upsidedown-yellow.type-your-business-name !{infoTypeHere}
+      span.search-message.speech-shape-upsidedown.speech-shape-upsidedown-orange.domain-eligibility-fail !{infoErrorEligibility}
+      span.search-message.speech-shape-upsidedown.speech-shape-upsidedown-orange.invalid-TLD-entered !{infoInvalidTld}
+
