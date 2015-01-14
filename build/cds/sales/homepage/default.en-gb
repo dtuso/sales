@@ -3,39 +3,113 @@
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta http-equiv="content-language" content="[@T[localization:<language full='true' />]@T]">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
     <meta name="google-site-verification" content="odAW2IckEFXrJjMrVxmnpjRPGNxEJp_xnCb7iBydgBY">
     <meta name="msvalidate.01" content="9D246CEFA0D8894D78306DF6FBA618D9">
     <link href="https://plus.google.com/108306343581548568740" rel="publisher">
     <meta name="verify-v1" content="dV1r/ZJJdDEI++fKJ6iDEl6o+TMNtSu0kv18ONeqM0I=">
     <meta name="y_key" content="1e39c508e0d87750">
+    <link rel="canonical" href="[@T[link:<relative parammode='explicit' />]@T]">
+    <link rel="shortcut icon" href="[@T[link:<imageroot />]@T]assets/godaddy.ico">
+    <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7914312/697366/css/fonts.css">
     <title>[@L[cds.sales/homepage:page-title]@L]</title>
     <meta name="description" content="[@L[cds.sales/homepage:meta-description]@L]">
     <meta name="keywords" content="[@L[cds.sales/homepage:meta-keywords]@L]">
-    <meta name="format-detection" content="telephone=no">
     <meta property="og:title" content="[@L[cds.sales/homepage:og-title]@L]">
+    <meta property="og:description" content="[@L[cds.sales/homepage:og-content]@L]">
     <meta property="og:type" content="website">
     <meta property="og:url" content="[@T[link:<relative parammode='explicit' />]@T]">
     <meta property="og:image" content="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/gd_rebrand_og.png">
-    <meta property="og:site_name" content="GoDaddy">
+    <meta property="og:site_name" content="[@T[link:<relative parammode='explicit' />]@T]">
     <meta property="fb:app_id" content="115696031791232">
-    <meta property="fb:admins" content="633356800">
-    <meta property="og:description" content="[@L[cds.sales/homepage:og-content]@L]">
-    <link rel="canonical" href="[@T[link:<external linktype='siteurl' path='' parammode='explicit'/>]@T]">
-    <link rel="shortcut icon" href="[@T[link:<imageroot />]@T]assets/godaddy.ico">
-    <link href="[@T[link:<cssroot />]@T]fos/201401/global/css/global-1.8.3.min.css" rel="stylesheet" type="text/css"> 
-    [@P[cdsDocument:<data app="sales" location="fonts/fonts" /> ]@P]
-    <style>
-      .uk-cookie-banner{background: #8a8a8a; color: #fff; font-size: 12px; padding: 10px;position:fixed;bottom:0;width: 100%;z-index:999}
-      .uk-cookie-banner a{color:#fff;text-decoration: underline}
-      .uk-cookie-banner span {display:block}
-      .uk-cookie-banner i {background-image: url([@T[link:<imageroot />]@T]fos/base/1/alerts.png)}
-      .uk-cookie-ico{background-position: 0 0;height:20px;display: block;float: left;margin: 10px;width: 20px}
-      .uk-cookie-wrap{margin: 0 auto;width: 1000px}
-      .uk-cookie-close{background-position: 4px -228px;cursor:pointer;height: 20px;display: block;position: absolute;top:10px;right:25px;margin: 10px;width: 20px}
-      .tungsten{font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-weight:700}
-      .walsheim-black{font-family:'Walsheim-Black';}
-      .hp-sprite { background: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gdhp_sprite_legacy-20141120.png) scroll no-repeat; vertical-align: top; }
+    <meta property="fb:admins" content="633356800"> 
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags"><Parameters><Parameter key="manifest" value="salesheader" /></Parameters></Data>]@P]
+    <script src="[@T[link:<javascriptroot />]@T]/ux/dev-brand/js/uxcore.en.min.js"></script>
+    <script src="[@T[link:<javascriptroot />]@T]/ux/dev-brand/js/uxcontrols.min.js"></script>
+    <script src="[@T[link:<javascriptroot />]@T]/fos/mike/0.7.0/js/sahara.min.js"></script>
+    <style>body {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+.walsheim-regular {
+  font-family: 'Walsheim-Regular', Arial, sans-serif;
+}
+.walsheim-medium {
+  font-family: 'Walsheim-Medium', Arial, sans-serif;
+}
+.walsheim-bold {
+  font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
+}
+.walsheim-black {
+  font-family: 'Walsheim-Black', 'Arial Black', sans-serif;
+}
+.tungsten {
+  font-family: Tungsten, 'Tungsten A', 'Tungsten B', Impact, sans-serif;
+}
+#searchDomainName {
+  min-height: 50px;
+}
+#marquee {
+  position: relative;
+}
+.hero-wrapper {
+  min-height: 300px;
+  background-color: blue;
+}
+#marquee .tile-wrapper {
+  margin-top: 6.5px;
+}
+#marquee .tile {
+  min-height: 140px;
+}
+#marquee .tile-wrapper:last-child {
+  background-color: green;
+  margin-bottom: 6.5px;
+}
+.tile {
+  cursor: pointer;
+}
+.top-banner-lower-content {
+  min-height: 40px;
+}
+.gdhp-share {
+  position: relative;
+  float: right;
+}
+#bugbar {
+  min-height: 45px;
+  background-color: #f5f5f5;
+}
+#bugbar .row {
+  padding: 10px 15px;
+}
+#domain-search {
+  background-color: #77bf43;
+  padding: 15px 0;
+}
+.price,
+.icann-disclaimer {
+  color: #ff8a00;
+}
+#merchandising {
+  background-color: #f3f3f4;
+  padding: 10px 0;
+  font-size: 1.1em;
+}
+#merchandising .tile-wrapper {
+  min-height: 150px;
+  margin: 5px 0;
+}
+
+    </style><!--[if lt IE 9]>
+    <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
+    <link href="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy.min.html" id="respond-proxy" rel="respond-proxy">
+    <script src="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy-combo.min.js"></script><![endif]-->
+    <script type="text/javascript">
+      delayLoader.addScript('[@T[link:<javascriptroot />]@T]/ux/dev-brand/js/uxcontrols.min.js')
       
+<<<<<<< HEAD:build/cds/sales/homepage/default.en-gb
     </style> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags" />]@P]
     <style>
@@ -48,11 +122,24 @@
       .atn-btn-wrap{padding-top:20px;width:450px;height:54px;}
       .atn-btn-wrap>span {visibility: visible;margin-right: 20px;float: left;}
       .b {font-family: 'Walsheim-Bold'}
+=======
+    </script>
+    <!-- Google Tag Manager-->
+    <!-- End Google Tag Manager-->
+    <script type="text/javascript">
+      var utag_data = { source_code:"gtnila43",pl_id:"1",app_name:"desktop.sales",authenticated:"false",page_type:"home_page" };
+      (function (a, b, c, d) {
+      a = '//tags.tiqcdn.com/utag/godaddy/godaddy/prod/utag.js';
+      b = document; c = 'script'; d = b.createElement(c); d.src = a; d.type = 'text/java' + c; d.async = true;
+      delayLoader.addElement(d);
+      //$ a = b.getElementsByTagName(c)[0]; a.parentNode.insertBefore(d, a);
+      })();
+>>>>>>> green buddy hero and templates:build/cds/sales/homepage/default.en-us.html
       
-    </style>
-    <script src="[@T[link:<javascriptroot />]@T]shared/js/1.8.0/global.20120918.min.js" type="text/javascript"></script>
+    </script>
   </head>
   <body>
+<<<<<<< HEAD:build/cds/sales/homepage/default.en-gb
      
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header" />]@P]
     <!--  Domain Search Section-->
@@ -144,89 +231,194 @@
         </script>
          
         [@P[cdsDocument:<data app="sales" location="homepage/tile/co-uk-brilliant/default_template" /> ]@P]
+=======
+    <!-- HEADERBEGIN--> 
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /></Parameters></Data>]@P]
+    <!-- HEADEREND-->
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 search-template">
+          <form action="[@T[link:&lt;external linktype='siteurl' path='' parammode='explicit'/&gt;]@T]/api/dpp/search/single?ci=54814&amp;isc=gd41166r" data-icode="home:Domain Search:Domains:Domain Search" data-domainsearch="{'search-element':'input.searchInput','placeholder-element':'label.searchInput','button':'button','empty-redirect':'[@T[link:<external linktype='siteurl' path='' parammode='explicit'/>]@T]/domains/domain-name-search.aspx'}">
+            <div class="search-template-box clearfix">
+              <label class="text-primary searchInput">[@L[cds.sales/homepage/segments/default:domain-banner-search-text]@L]</label>
+              <input type="text" autocomplete="off" name="domainToCheck" maxlength="63" class="text-primary searchInput"/>
+              <button type="submit" data-tcode="home:Domain Search:Domains:Domain Search:Search Domain" class="btn-primary btn btn-lg pull-right ">[@L[cds.sales/homepage/locales/en:domain-search-btn]@L]</button>
+            </div>
+          </form>
+        </div>
+>>>>>>> green buddy hero and templates:build/cds/sales/homepage/default.en-us.html
       </div>
     </div>
-    <div id="myVideoModal" data-url="video-close" class="modal fade videoModal js-gdhpclick">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" data-dismiss="modal" aria-hidden="true" class="modal-header-close close">&times;</button>
+    <section id="bugbar">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8"><span class="tld-links"> <a href="[@T[link:<relative path='/tlds/co-domain.aspx'><param name='ci' value='93296' /><param name='tld' value='co' /></relative>]@T]" class="tld-link co"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATBAMAAACAfiv/AAAAJ1BMVEX/cwD4p2RMaXGMnAX8oyT/bQD/////jiv18vL83dn7ysP5gwD5uaW+a2q+AAAABXRSTlP9/AAE9/nKmfkAAABpSURBVHgBYwiFAiMFODMIwQw1ADNZgSA0AC5KHDMAzmRFFi0PDQ2vBjOPpU0PWJa2AMgMTJuRwZmxLAfIjEgMmHasPTyNgSE0LDU02m1p6LQCiOiyBpDojoVwtZyiQBPCp4FNCI2GmgsAdG9DIIl4bvcAAAAASUVORK5CYII=" class="tld-image co"/><span class="price">[@T[productprice:<current productid='56401' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' promocode='444888'/>]@T]</span></a><a href="[@T[link:<relative path='/tlds/org.aspx'><param name='ci' value='93297' /><param name='tld' value='org' /></relative>]@T]" class="tld-link org"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAATCAMAAAAgYzSBAAAATlBMVEVMaXExNTwuNTg0NjonLDUyNTv/igAUPFAuMDIUQVA1Nz0rMDT/gAD/hQD+fAD+hwD/iAD/fAAICQk7OTv/igD7fgD/iQD/igD/gAD/iADJaA/nAAAAGHRSTlMAgZhBDmrF/sTdVa2Im0kPZa8aLvMs2HhQ3/01AAAAz0lEQVR4XtWQyRLDIAxDFTazhiTd6P//aLHh0FzSczUDM8IPI4y/V26uiomBiEIEPJEl0kZ1r/ohgNU5lxmyNGQ7xToCTQEPbPeCR4Xp1i9cMYPiW8oyipK31lpZnzVyXdjYKW+gOgQcTLXSWKW9FqIEybT0pUc6AIGpfG9vprYzZYDEvaQ5trzKizvOL87fWJ2YQsXqct+lHiQ9mJKDqTmJ/XsScVK4yfzCMNntFSzpnjSgvGd/QGstua4Uglo4gr+CLE3drigjX6E0oN/6AHKzCygF6jg1AAAAAElFTkSuQmCC" class="tld-image org"/><span class="price">[@T[productprice:<current productid='12101' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' promocode='444888'/>]@T]</span><span class="icann-disclaimer">*</span></a><a href="[@T[link:<relative path='/tlds/net.aspx'><param name='ci' value='93298' /><param name='tld' value='net' /></relative>]@T]" class="tld-link net"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAATCAMAAADCvy/4AAAARVBMVEVMaXEICQkmKjE7OTs1Nz0iHyA1NTUrMDQuMDIyNTsxNTwuNTg0NjouS2n/0wD/1wD/zgT2xQD/zwD/2AD/lQAiHiD/zQBwNP4IAAAAFXRSTlMAGg8uVencrcRqgZhBCYrfRf1XMBp0hYENAAAArElEQVR4Xs2QSw7DIAwFnYBjG8i3de5/1D4aJaJZdFl1FmiMBgmZ/oI0ePle9O5u59BZ6U1UbMQQMixCChJJsIo4s1eUyPywUf3gTE5CgPAAM74nXN7vY4L2hFNDnXMMVzIQdTVRaIwZYfPde3LQJsv2vCWslXwl076vjybJ0GYvCbKDqUmKw0WUjciBGM1Itia5FiB0KNMyrxNF1UQ0impHZAMCloCLzDX9FS+SmxC3lyWwXgAAAABJRU5ErkJggg==" class="tld-image net"/><span class="price">[@T[productprice:<current productid='12001' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' promocode='444888'/>]@T]</span><span class="icann-disclaimer">*</span></a><a href="[@T[link:<relative path='/tlds/biz.aspx'><param name='ci' value='94195' /><param name='tld' value='biz' /></relative>]@T]" class="tld-link biz"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAATCAMAAAC0hZ1zAAACnVBMVEVMaXESOF3p7ej7+/sHJ1AWO18XOlrW2tYMMlkCKlKvtruMjIwKMlbr6+dtgJHz9/L2+fXk5OLl6Of///8xT3BAWnnt7u3j4+Pe4NxufINVboovTWnm7N8KMFdidYzl5eTU1dPCxMazwrcbP2E+V3NPaYHJy8lJZID4+PVgd5GPnJ/V1tSjsrD+//nHzMft7+rI0NHLzMvv9On29/f7/PbY3t3Dx8m6wLju8Oju7Ovn5uSLkZl8fH29vLoOMFn///klR2gbMVsSNFhWcYYFKk+6ubt7enwQMFVpf5evvMHS3tP5+vjx8+/6+vuywLXs7u7E486xurrJ2cPT3Netu7PN1Mzn5eNxiZbc2tihsKjR09DX1tT08e7n8t+4u7jO2cZyeH+7yL7h496ws7awvLSnwrUYOGLFzcqiralSaoSDlKTGzc+1wMn///8VOGAILFdddIhygZEqR2kwTG23ur0PKE5KYnjExcRUZ3o2UnMeNl9ccIZZbH7BytKXnqU5TGx3g5SVoa8nRWOusa0NMlyaqLDMycgYLlUdO1lxhIgePmQ+WXKTlZkaNFkEK0nv9eh6g4u9xdDy9PXY2M/T2MouSGYNLFNgbHx2gY3CwL8SNl8UMku3xL/l6elCTGJDXn7c5Np7j6Hw8+6DjZpseYSJjZMWNV60uLrF0MjEy8V7j5p3hpidprGLlJ8WJ1JAU2r///sjQ2PAwMCPn6wnRF7JztQMJUyxs7ROX3aSmKCrt7VAWGedq7KEl5qusbW0v7fW39Lq6+FXbYZWa4O+ycFibHbr/Nm5v8YrOEXb7M9fZmsNHUAHIT44UWmQm6Lk69by8fD5+faDlplRZ3iPoqBue492e49FY3iGmKuZp6nU1NUqRl5OZ3QyUGsUNFURCJCDAAAAbXRSTlMA/Rsv/vz+CPz87B77Wv5+di7aIvz9EH6EEf7+pP3+NrLUNvr+/Rj+iP6G4X6d6w3Ws647WdLgvn3FAfNW1/5j+/7+/v5BUf7+/ECs3cDcJyftkZj+Q7z9TvJsaU6rIcqPVXa39/j+/v7+/v7+wjvs4wAAAddJREFUeAFjgAJBXgUuLkUJXnkxBnQgqcO1ZHd9/dlTExoV7JlR5QTNO7dsK11X2nfmdMf6TlsZE32EnJri0dml7e3tvRXVVevyXU7MszaVYILKWYmvndHdkpdnJzr34OH8vFnTWKY1FeoJQCz3Cry6XD2/ZRajyJ6MSg4Oxqreqia2ec1G8iDJoFUFK/gqpqt0KU+fIM3nmVM7sfZ4N8vsvUJAl8XFX5dasGnmzJLC4uYpl89dnDQpN7fVyTGN7Yo3A0Niym2p/pDC1fvK5Xadr5FWrVx4YWJXyzJHjlU+DAxJdfc0N4S7yB7atLh1cg0Pz9TsRZkcectYimo1GBg0Glmkcm+4588v6elpq+ZgvNSfxSPbkt+xxpeJQS25sUg9d00fp1x54dK2ak7VkyvLKud3FZdYukoyaBXdbSjIvcW3MH1l2YzJBV1zjh1YMHfr5hW6SjZuDAkbNy4pyM3dsGhKJ1tBuXPNkf3N25fPERJgZ+DmZuDWSr3D6uzhoanCxioi6tBUPHVHnTY/LPDZY292cHIwsrIqKzNyOjWV7TTgF0aEu3/Y2voORnc71qL1FQ1mhuJMKDEmHBy5dPW1hsV1fjIWxuzocc2uFBEdxRsTGoAmAwAOlaKCGhr8bAAAAABJRU5ErkJggg==" class="tld-image biz"/><span class="price">[@T[productprice:<current productid='11301' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' promocode='444888'/>]@T]</span><span class="icann-disclaimer">*</span></a></span>
+            <atlantis:webstash type="css">
+              <style>
+                .tld-links a { font-size: 14px; color: #333; margin-right: 30px; display: inline-block; }
+                .tld-links span, .tld-links img { display: inline-block; }
+                .tld-links a:hover>.price{text-decoration:underline}
+                .tld-image {vertical-align: top; margin-right: 8px;}
+                
+              </style>
+            </atlantis:webstash>
           </div>
-          <div class="modal-body">
-            <iframe width="854" height="480" src="" autoplay scrolling="no" frameborder="0" allowfullscreen></iframe>
+          <div class="col-sm-4">
+            <div class="gdhp-share">
+              <div data-twshareurl="[@T[link:<relative path=''></relative>]@T]" data-twtext="[@L[cds.sales/homepage:twitter-text-gdbl]@L]" data-twrelated="GoDaddy" data-shareurl="[@T[link:<relative path='/'/>]@T]" data-buttons="google,facebook,twitter" class="fosshare"></div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- Lower Marquee Section-->
-    <!-- Why Us Section-->
-    <atlantis:webstash type="css">
-      <style>
-        .why-us-wrap{width:100%;height:520px;background:radial-gradient(#615e5f 1px, transparent 1px),#d4d4d4;background-size: 5px 5px;}
-        .why-us-content{width:1000px;margin:0 auto;border-top:15px solid green;background-color:#fff;height:485px;background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/WWD-background.png) scroll no-repeat;}
-        .why-us-text{width:52%;padding:5px 0 0 20px;font-size:13px;float:left;box-sizing:border-box;position:relative;}
-        .why-us-text h1 {font-size:14px;line-height:12px;display:inline;color:#333;}
-        .why-us-headline{font-size:56px;font-family:'Walsheim-Black'}
-        .why-us-maintext>div{margin-bottom:.8em}
-        .why-us-logos{width:48%;height:100%;float:left;}
-        .why-us-logos>ul{list-style:none;margin:30px 0 0 100px}
-        .why-us-logos>ul>li{line-height:0px;height:80px;}
-        .why-us-btn{cursor:pointer;}
-        .why-us-btn:hover span{text-decoration:underline;}
-        .gdhp-domains-logo,.gdhp-wsb-logo,.gdhp-store-logo,.gdhp-getfound-logo,.gdhp-support-logo,.gdhp-hosting-logo,.gdhp-o365-logo{background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gdhp_sprite_20141029.png) scroll no-repeat;display:inline-block;}
-        .gdhp-domains-logo{background-position:-410px -170px;width:50px;height:56px;margin:12px 50px 0 0}
-        .gdhp-wsb-logo{background-position:-410px -236px;width:45px;height:47px;margin:16.5px 55px 0 0}
-        .gdhp-store-logo{background-position:-410px -293px;width:47px;height:52px;margin:14px 53px 0 0}
-        .gdhp-getfound-logo{background-position:-410px -355px;width:68px;height:51px;margin:15px 42px 0 -10px}
-        .gdhp-support-logo{background-position:-410px -416px;width:52px;height:58px;margin:11px 48px 0 0}
-        .gdhp-hosting-logo{background-position: -476px -170px;width: 50px;height: 50px;margin: 10px 50px 0 0;}
-        .gdhp-o365-logo{background-position: -476px -235px;width: 52px;height: 45px;margin: 10px 0 0 0;position: absolute;}
-        .gdhp-domains-text,.gdhp-wsb-text,.gdhp-store-text,.gdhp-getfound-text,.gdhp-support-text,.gdhp-hosting-text,.gdhp-o365-text{font-size:24px;}
-        .gdhp-domains-text{vertical-align:21px;}
-        .gdhp-wsb-text{vertical-align:18px;}
-        .gdhp-store-text{vertical-align:20px;}
-        .gdhp-getfound-text{vertical-align:24px;}
-        .gdhp-support-text{vertical-align:24px;}
-        .gdhp-hosting-text{vertical-align:18px;}
-        .gdhp-o365-text{display: inline-block;line-height: 30px;margin-left: 100px;}
-        .why-us-wrap #disclaimers a{font-size: 12px;line-height: 14px;text-decoration: none;color: #333;}
-        .why-us-wrap #gdhp-support-scope-link:hover,.why-us-wrap #gdhp-disclaimer-lnk:hover{color: #7db701;text-decoration: underline;}
-        .why-us-wrap .content-disclaimer {padding-left:0px; line-height:14px}
-        
-      </style>
-    </atlantis:webstash>
-    <div class="why-us-wrap">
-      <div class="why-us-content">
-        <div class="why-us-text"><span class="why-us-headline">[@L[cds.sales/homepage/locales/en:why-us-headline]@L]</span>
-          <div class="why-us-maintext">
-            ##if(countrySiteAny(in))
-            [@L[cds.sales/homepage/locales/en:why-us-maintext-india]@L]
-            ##else
-            [@L[cds.sales/homepage/locales/en:why-us-maintext]@L]
-            ##endif
+    </section>
+    <section id="marquee">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8">
+            <div class="hero-wrapper">
+              <!-- start hero section-->
+              <atlantis:webstash type="css">
+                <style>
+                  .hero-wrapper{cursor:pointer;}
+                  .hero{background: #fff; min-height:inherit}
+                  .hero:hover{cursor:pointer}
+                  .dash{letter-spacing:-.1rem}
+                  
+                </style>
+                <style>.rightContent {}</style>
+                <style>
+                  #marquee {background-color: #64a838}
+                  .hero.got-puppy {background-color:#64A838;}
+                  .hero.got-puppy h2{font-size:3.2em}
+                  .hero.got-puppy h3{font-size:2em}
+                  .hero.got-puppy h4{font-size:1.4em}
+                  .hero.got-puppy h5{font-size:.8em}
+                  .hero .leftContent *{color:#fff;line-height:.9}
+                  .hero.rightContent img{margin-left:70px}
+                  
+                  
+                </style>
+              </atlantis:webstash>
+              <div data-url="[@T[link:<relative path='/offers/online-business.aspx'><param name='ci' value='22222' /></relative>]@T]" class="hero row">
+                <div class="leftContent col-sm-7">
+                  <h3 class="headline walsheim-black">[@L[cds.sales/homepage/heros/got-puppy:products]@L]</h3>
+                  <h3 class="pricetext tungsten">[@L[cds.sales/homepage/heros/got-puppy:starting]@L]</h3>
+                  <h2 class="price walsheim-black">[@L[cds.sales/homepage/heros/got-puppy:price]@L]</h2>
+                  <h4 class="smile walsheim-regular">[@L[cds.sales/homepage/heros/got-puppy:buddy]@L]</h4><a class="btn btn-warning btn-lg">[@L[cds.sales/homepage/heros/got-puppy:cta]@L]</a>
+                  <h5 class="walsheim-medium">[@L[cds.sales/homepage/heros/got-puppy:disclaimer]@L]</h5>
+                </div>
+                <div class="rightContent col-sm-5">
+                  <image src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/got-puppy.png" class="img-responsive"></image>
+                </div>
+              </div>
+              <atlantis:webstash type="js"></atlantis:webstash>
+              <!--end hero section-->
+            </div>
           </div>
-          <div id="disclaimers">
-            <section class="container l-main-container content-disclaimer">
-              <p class="no-margin-bottom"><a id="gdhp-disclaimer-lnk" href="#" data-toggle="modal" data-target="#myModal" data-ci="93289" class="simple-link">[@L[cds.sales/homepage:disclaimer-text]@L]</a></p> 
-              ##if(countrySiteAny(in))
-              <p class="no-margin-bottom"><a id="gdhp-support-scope-link" href="[@T[link:<external parammode="explicit" path="/help/article/9522/godaddy-statement-of-support" linktype="COMMUNITYURL"><param name="countrysite" value="in" /><param name="ci" value="94858" /></external>]@T]" target="_blank">[@L[cds.sales/homepage/locales/en:scopesupport]@L]</a></p> 
-              ##endif
-            </section>
-            <div id="myModal" class="modal fade">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" data-dismiss="modal" aria-hidden="true" class="close">&times;</button>
-                    <p class="modal-title"><strong>[@L[cds.sales/homepage:disclaimer-modal-title]@L]</strong></p>
+          <div class="col-sm-4">
+            <div class="tile-wrapper">
+              <style>.puppy-tile {
+  background-color: #333333;
+}
+.puppy-tile .tile-content-wrapper {
+  padding: 1% 40% 0 5%;
+}
+.puppy-tile .header-text {
+  font-size: 20px;
+  margin-top: 20px;
+  color: #ffffff;
+}
+.puppy-tile .body-text {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #ffffff;
+}
+.puppy-tile .cta-wrapper > a {
+  color: #ff8a00;
+  font-size: 18px;
+  text-decoration: underline;
+}
+
+              </style>
+              <div data-url="[@T[link:<relative path='/'><param name='ci' value='11111' /></relative>]@T]" data-ci='11111' class="tile puppy-tile">
+                <div class="tile-content-wrapper">
+                  <div class="header-wrapper">
+                    <h2 class="header-text walsheim-black">ENTER TO WIN</h2>
                   </div>
-                  <div class="modal-body">
-                    <div class="g-modal-content">
-                      <p>[@L[cds.sales/homepage:disclaimer-modal-first-content]@L]</p>
-                      <p>[@L[cds.sales/homepage:disclaimer-modal-third-content]@L]</p>
-                      <p>[@L[cds.sales/homepage:disclaimer-modal-fourth-content]@L]</p> 
-                      ##if(countrySiteAny(au))
-                      <p>[@L[cds.sales/homepage:disclaimer-modal-second-content]@L]</p> 
-                      ##endif
+                  <div class="body-wrapper">
+                    <h3 class="body-text walsheim-medium">Your pup could be on the GoDaddy race car!</h3>
+                  </div>
+                  <div class="cta-wrapper"><a href="[@T[link:<relative path='/'><param name='ci' value='11111' /></relative>]@T]" class="walsheim-black">SUBMIT YOUR PUP</a></div>
+                </div>
+              </div>
+            </div>
+            <div class="tile-wrapper">
+              <style>.gtld-marquee-tile {
+  background: #ff8a00;
+}
+.gtld-marquee-tile .left-content-wrapper {
+  padding-left: 10%;
+}
+.gtld-marquee-tile .header-text {
+  font-size: 20px;
+  margin-top: 20px;
+  color: #ffffff;
+}
+.gtld-marquee-tile .body-text {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #333333;
+}
+.gtld-marquee-tile .cta-wrapper > a {
+  color: #fff;
+  font-size: 20px;
+  text-decoration: underline;
+}
+.gtld-marquee-tile .gtld-links-wrapper {
+  padding-left: -15px;
+}
+.gtld-marquee-tile ul {
+  list-style-type: none;
+  padding-top: 20px;
+}
+.gtld-marquee-tile li {
+  color: #75c239;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+              </style>
+              <div data-url="[@T[link:<relative path='/domains/domain-name-search.aspx'><param name='ci' value='11111' /></relative>]@T]" data-ci='11111' class="tile gtld-marquee-tile">
+                <div class="tile-content-wrapper">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <div class="left-content-wrapper">
+                          <div class="header-wrapper">
+                            <h2 class="header-text walsheim-black">30% OFF</h2>
+                          </div>
+                          <div class="body-wrapper">
+                            <h3 class="body-text walsheim-medium">The right name, right now.</h3>
+                          </div>
+                          <div class="cta-wrapper"><a href="[@T[link:<relative path='/domains/domain-name-search.aspx'><param name='ci' value='11111' /></relative>]@T]" class="walsheim-black">SEACH NOW</a></div>
+                        </div>
+                      </div>
+                      <div class="col-sm-2">
+                        <div class="borderLine">
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="right-content-wrapper">
+                          <div class="gtld-links-wrapper">
+                            <ul>
+                              <li class="walsheim-black">.guru</li>
+                              <li class="walsheim-black">.club</li>
+                              <li class="walsheim-black">.company</li>
+                              <li class="walsheim-black">.email</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -234,23 +426,90 @@
             </div>
           </div>
         </div>
-        <div class="why-us-logos">
-          <ul>
-            <li data-url="[@T[link:<relative path="/domains/domain-name-search.aspx"><param name="ci" value="93299" /></relative>]@T]" data-ci="93299" class="why-us-btn js-gdhpclick"><span id="gdhp-why-us-domains" class="gdhp-domains-logo"></span><span class="gdhp-domains-text">[@L[cds.sales/homepage/locales/en:whyus-logo-domains]@L]</span></li>
-            <li data-url="[@T[link:<relative path="/hosting/website-builder.aspx"><param name="ci" value="93300" /></relative>]@T]" data-ci="93300" class="why-us-btn js-gdhpclick"><span id="gdhp-why-us-wsb" class="gdhp-wsb-logo"></span><span class="gdhp-wsb-text">[@L[cds.sales/homepage/locales/en:whyus-logo-wsb]@L]</span></li> 
-            ##if(countrySiteAny(www,uk))
-            <li data-url="[@T[link:<relative path="/ecommerce/shopping-cart.aspx"><param name="ci" value="93301" /></relative>]@T]" data-ci="93301" class="why-us-btn js-gdhpclick"><span id="gdhp-why-us-store" class="gdhp-store-logo"></span><span class="gdhp-store-text">[@L[cds.sales/homepage/locales/en:whyus-logo-onlinestore]@L]</span></li> 
-            ##elseif(countrySiteAny(in))
-            <li data-url="[@T[link:<relative path="/hosting/web-hosting.aspx"><param name="ci" value="94309" /></relative>]@T]" data-ci="94309" class="why-us-btn js-gdhpclick"><span id="gdhp-why-us-hosting" class="gdhp-hosting-logo"></span><span class="gdhp-hosting-text">[@L[cds.sales/homepage/locales/en:whyus-logo-hosting]@L]</span></li>
-            <li data-url="[@T[link:<relative path="/business/office-365.aspx"><param name="ci" value="94310" /></relative>]@T]" data-ci="94310" class="why-us-btn js-gdhpclick"><span id="gdhp-why-us-o365" class="gdhp-o365-logo"></span><span class="gdhp-o365-text">[@L[cds.sales/homepage/locales/en:whyus-logo-o365]@L]</span></li> 
-            ##endif
-            ##if(countrySiteAny(www))
-            <li data-url="[@T[link:<relative path="/products/business-marketing.aspx"><param name="ci" value="93302" /></relative>]@T]" data-ci="93302" class="why-us-btn js-gdhpclick"><span id="gdhp-why-us-getfound" class="gdhp-getfound-logo"></span><span class="gdhp-getfound-text">[@L[cds.sales/homepage/locales/en:whyus-logo-getfound]@L]</span></li> 
-            ##endif
-            <li data-url="[@T[link:<external parammode="explicit" linktype="COMMUNITYURL"><param name="ci" value="93303" /></external>]@T]" data-ci="93303" class="why-us-btn js-gdhpclick"><span id="gdhp-why-us-support" class="gdhp-support-logo"></span><span class="gdhp-support-text">[@L[cds.sales/homepage/locales/en:whyus-logo-support]@L]</span></li>
-          </ul>
+      </div>
+    </section>
+    <section id="merchandising">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-sm-6 col-xs-6">
+            <div class="tile-wrapper"> 
+              <style>
+                .get-found-tile .tile-content-wrapper{padding:20px 15px;color:#333}
+                .get-found-tile .promo-logo{width:80%}
+                .get-found-tile .promo-text{padding-top:10px}
+                .get-found-tile .promo-cta{position:absolute;bottom:5px}
+                .get-found-tile a{text-decoration:underline;color:#f2812e}
+              </style>
+              <div data-url="[@T[link:<relative path='/products/business-marketing.aspx'><param name='ci' value='11111' /></relative>]@T]" data-ci='11111' class="tile get-found-tile">
+                <div class="tile-content-wrapper">
+                  <div class="promo-logo-wrapper"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMTg5LjY5MSAzOC45OTYiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDE4OS42OTEgMzguOTk2IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGw9IiM3OEMwNDQiIGQ9Ik02OC41NjIsMTcuMDExaDIuNzg0Yy0wLjI0LDEuMjk2LTEuMjQ4LDIuMzc2LTMuMTkyLDIuMzc2Yy0yLjczNiwwLTQuMDgtMi4xMTItNC4wOC00LjYwOA0KCWMwLTIuNDQ4LDEuMjcyLTQuNzI4LDMuODQtNC43MjhjMS43MjgsMCwyLjY2NCwxLjA1NiwyLjgzMiwyLjAxNmg1LjUyMWMtMC4zMTItMy40NTYtMy41NzYtNi4yODktOC4yODEtNi4yODkNCgljLTUuNzEzLDAtOS4wMDEsNC4xNTItOS4wMDEsOC45NTNjMCw0LjcyOCwzLjE2OCw4Ljc2MSw5LjA0OSw4Ljc2MWM0Ljc1MiwwLDcuNzc3LTIuNjE2LDguMzc3LTYuNDhoMS42MDh2LTMuMjg4aC05LjQ1N1YxNy4wMTF6Ii8+DQo8cGF0aCBmaWxsPSIjNzhDMDQ0IiBkPSJNODkuOTA2LDkuOTc4VjYuMjM0SDc5LjA4MXYxNi44MDJoMTAuODI1di0zLjc0NGgtNS44MzJ2LTIuODA4aDUuODMydi0zLjU3NmgtNS44MzJWOS45NzhIODkuOTA2eiIvPg0KPHBhdGggZmlsbD0iIzc4QzA0NCIgZD0iTTk0LjgzNCwyMy4wMzVoNC45OTJWMTAuNTA2aDMuNDU2VjYuMjM0SDkxLjM3N3Y0LjI3MmgzLjQ1NlYyMy4wMzV6Ii8+DQo8cGF0aCBmaWxsPSIjNzhDMDQ0IiBkPSJNMTIwLjc0NiwxMC4zMTR2LTQuMDhoLTEwLjgyNXYxNi44MDJoNC45OTJ2LTUuMDY1aDUuODMzdi0zLjkzNmgtNS44MzN2LTMuNzJIMTIwLjc0NnoiLz4NCjxwYXRoIGZpbGw9IiM3OEMwNDQiIGQ9Ik0xMzAuNDU4LDIzLjQ5MWM1Ljc4NSwwLDkuMTIxLTQuMjI0LDkuMTIxLTguODU3cy0zLjMzNi04Ljg1Ny05LjEyMS04Ljg1N2MtNS43NiwwLTkuMDk3LDQuMjI0LTkuMDk3LDguODU3DQoJUzEyNC42OTgsMjMuNDkxLDEzMC40NTgsMjMuNDkxeiBNMTMwLjQ1OCwxOC45MzFjLTIuNTQ0LDAtNC4wNTYtMi4wNjQtNC4wNTYtNC4yOTZjMC0yLjIzMiwxLjUxMi00LjI5Niw0LjA1Ni00LjI5Ng0KCWMyLjU2OCwwLDQuMDU2LDIuMDY0LDQuMDU2LDQuMjk2QzEzNC41MTQsMTYuODY3LDEzMy4wMjYsMTguOTMxLDEzMC40NTgsMTguOTMxeiIvPg0KPHBhdGggZmlsbD0iIzc4QzA0NCIgZD0iTTE0MC4wNzMsMTcuMjAzYzAsMy42NDgsMi42NjQsNi4yODgsNy4wMzMsNi4yODhjNC4zNjgsMCw3LjAwOS0yLjY0LDcuMDA5LTYuMjg4VjYuMjM0aC00Ljk5MnYxMC45MjENCgljMCwxLjE1Mi0wLjg0LDIuMTEyLTIuMDE2LDIuMTEyYy0xLjE3NiwwLTIuMDQtMC45Ni0yLjA0LTIuMTEyVjYuMjM0aC00Ljk5M1YxNy4yMDN6Ii8+DQo8cGF0aCBmaWxsPSIjNzhDMDQ0IiBkPSJNMTYwLjg1LDYuMjM0aC01LjA4OHYxNi44MDJoNC45OTJWMTMuNDFsNS40OTcsOS42MjVoNS4wODhWNi4yMzRoLTUuMDE2djkuOTYxTDE2MC44NSw2LjIzNHoiLz4NCjxwYXRoIGZpbGw9IiM3OEMwNDQiIGQ9Ik0xNzQuMDQxLDYuMjM0djE2LjgwMmg2Ljg2NWM1LjYxNiwwLDguNzg1LTQuMDMyLDguNzg1LTguNDAxYzAtNC4zNjgtMy4yMTYtOC40MDEtOC43ODUtOC40MDFIMTc0LjA0MXoNCgkgTTE4MC41NDYsMTAuNDU4YzIuNTIsMCw0LjAzMiwyLjAxNiw0LjAzMiw0LjE3NmMwLDIuMTYtMS41MTIsNC4xNzYtNC4wMzIsNC4xNzZoLTEuNTEydi04LjM1M0gxODAuNTQ2eiIvPg0KPHBhdGggZmlsbD0iIzc4QzA0NCIgZD0iTTM4Ljc1Niw0LjI5M0wyNC45OTksMEwxMS4yNDIsNC4yOTNMMCwxNC42NTdsMTEuMjQyLDEwLjM2NGw1LjQ4OCwxLjcxM2wtNC4yMjEtNC44MzdsMC40OC0xMC4zODQNCglsNy4zOTQtNi45ODlsOS45NzcsMC40OTlsNi43MTUsNy42OTVsLTAuNDgsMTAuMzgzbC00LjA5NiwzLjg3Mmw2LjI1Ny0xLjk1M2wxMS4yNDEtMTAuMzY0TDM4Ljc1Niw0LjI5M3oiLz4NCjxwYXRoIGZpbGw9IiM3OEMwNDQiIGQ9Ik0yNS4wNTksMTEuNTk5bC0zLjk1NywxLjQ3NWwtMS43OTYsMy45NTVsMS40MTgsNC4xMThsMy44LDEuODY5bDMuOTU3LTEuNDc1bDEuNzk2LTMuOTU1bC0xLjQxNy00LjExOA0KCUwyNS4wNTksMTEuNTk5eiIvPg0KPHBhdGggZmlsbD0iIzc4QzA0NCIgZD0iTTM1LjM2MiwzMi4xNjhMMjUuMDk4LDE0LjY1N2wtMS41MjQsMC42MzNsLTEuMjM4LDEuMTIxbDEwLjI2NSwxNy41MTFsLTUuMzg5LDMuNDIybDEwLjI1OCwxLjY1Mw0KCWwzLjI4MS0xMC4yNUwzNS4zNjIsMzIuMTY4eiIvPg0KPC9zdmc+DQo=" data-fallback="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/get-found-logo.png" class="promo-logo">
+                  </div>
+                  <div class="promo-text walsheim-black">GET YOUR BUSINESS LISTED EVERYWHERE.</div>
+                  <div class="promo-cta"><a href="[@T[link:<relative path='/products/business-marketing.aspx'><param name='ci' value='11111' /></relative>]@T]" class="walsheim-black">LEARN MORE </a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-6">
+            <div class="tile-wrapper">
+              <style>
+                .o365-tile .tile-content-wrapper{padding:20px 15px;color:#333}
+                .o365-tile .promo-logo{width:80%}
+                .o365-tile .promo-text{padding-top:10px}
+                .o365-tile .promo-cta{position:absolute;bottom:5px}
+                .o365-tile a{text-decoration:underline;color:#f2812e}
+              </style>
+              <div data-url="[@T[link:<relative path='/business/office-365.aspx'><param name='ci' value='11111' /></relative>]@T]" data-ci='11111' class="tile o365-tile">
+                <div class="tile-content-wrapper">
+                  <div class="promo-logo-wrapper"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNDExLjQzOCA5MC41MzYiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDQxMS40MzggOTAuNTM2IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxwYXRoIGZpbGw9IiNFQjNEMDEiIGQ9Ik0xNTQuMjI1LDQ0LjY0MmMwLDUuNzc4LTEuMDUyLDEwLjg0NC0zLjE1NywxNS4xOTVjLTIuMTExLDQuMzUxLTUuMTM3LDcuNzAxLTkuMDg3LDEwLjA0Nw0KCQljLTMuOTQ4LDIuMzQ2LTguNDk0LDMuNTIyLTEzLjY0MywzLjUyMmMtNC45NzMsMC05LjM5Mi0xLjE0Mi0xMy4yNjYtMy40MjRjLTMuODc2LTIuMjgzLTYuODY4LTUuNTI0LTguOTg3LTkuNzMNCgkJYy0yLjEyMS00LjE5OS0zLjE4Mi04Ljk2LTMuMTgyLTE0LjI4NGMwLTUuNzMxLDEuMDczLTEwLjc3MywzLjIxOS0xNS4xNGMyLjE0LTQuMzYyLDUuMjIzLTcuNzEzLDkuMjMzLTEwLjA0Ng0KCQljNC4wMTEtMi4zMzQsOC42NTUtMy41MDMsMTMuOTI3LTMuNTAzYzQuODIsMCw5LjE0MywxLjE0OSwxMi45NjcsMy40NDRjMy44MTksMi4yOTUsNi43NzIsNS41MjcsOC44NTQsOS42ODcNCgkJQzE1My4xODYsMzQuNTczLDE1NC4yMjUsMzkuMzE4LDE1NC4yMjUsNDQuNjQyIE0xNDcuNTY2LDQ1LjQ3NWMwLTcuMDY3LTEuNjUzLTEyLjU4LTQuOTU3LTE2LjU0DQoJCWMtMy4zMTEtMy45NTktNy45MTQtNS45NDItMTMuODE1LTUuOTQyYy0zLjcxLDAtNy4wMzYsMC45NDItOS45NzQsMi44MThjLTIuOTM4LDEuODgxLTUuMjE3LDQuNTQ3LTYuODMzLDguMDA2DQoJCWMtMS42MTMsMy40Ni0yLjQyMiw3LjMxOC0yLjQyMiwxMS41NzljMCw0LjMzOSwwLjc3Niw4LjIwOSwyLjMzLDExLjYwMmMxLjU1MiwzLjM5MywzLjc2Myw2LjAxNiw2LjY0LDcuODczDQoJCWMyLjg3OSwxLjg1Myw2LjE0NSwyLjc4Myw5LjgwNCwyLjc4M2M2LjAwNCwwLDEwLjcxMS0xLjk3LDE0LjExOC01LjkwNkMxNDUuODY0LDU3LjgxMywxNDcuNTY2LDUyLjM4NywxNDcuNTY2LDQ1LjQ3NSIvPg0KCTxwYXRoIGZpbGw9IiNFQjNEMDEiIGQ9Ik0xODEuNTEzLDIwLjUzNWMtMS4yMTQtMC42ODQtMi41ODYtMS4wMjQtNC4xMjgtMS4wMjRjLTQuMzM5LDAtNi41MDksMi43NC02LjUwOSw4LjIxN3Y1Ljk3N2g5LjA4M3Y1LjI1OA0KCQloLTkuMDgzVjcyLjQ2aC02LjIwOFYzOC45NjNoLTYuNTg1di01LjI1OGg2LjU4NXYtNi4yODJjMC0zLjk0MSwxLjE2MS03LjExOSwzLjQ4MS05LjUzOWMyLjMyMi0yLjQyMyw1LjI3Ny0zLjYzNSw4Ljg2LTMuNjM1DQoJCWMxLjg5MiwwLDMuMzg5LDAuMjI3LDQuNTAzLDAuNjg0VjIwLjUzNXoiLz4NCgk8cGF0aCBmaWxsPSIjRUIzRDAxIiBkPSJNMjAyLjkwNCwyMC41MzVjLTEuMjEyLTAuNjg0LTIuNTg2LTEuMDI0LTQuMTI2LTEuMDI0Yy00LjMzOSwwLTYuNTA5LDIuNzQtNi41MDksOC4yMTd2NS45NzdoOS4wODN2NS4yNTgNCgkJaC05LjA4M1Y3Mi40NmgtNi4yMVYzOC45NjNoLTYuNTg1di01LjI1OGg2LjU4NXYtNi4yODJjMC0zLjk0MSwxLjE2MS03LjExOSwzLjQ4My05LjUzOWMyLjMyMi0yLjQyMyw1LjI3NS0zLjYzNSw4Ljg1OC0zLjYzNQ0KCQljMS44OTQsMCwzLjM5MSwwLjIyNyw0LjUwNCwwLjY4NFYyMC41MzV6Ii8+DQoJPHBhdGggZmlsbD0iI0VCM0QwMSIgZD0iTTIxNC4zNSwxOS44MTZjMCwxLjE2MS0wLjQwMywyLjEyNy0xLjIxMiwyLjg5M2MtMC44MDksMC43Ny0xLjc2NSwxLjE1My0yLjg3NSwxLjE1Mw0KCQljLTEuMTM1LDAtMi4wOTctMC4zNjgtMi44NzctMS4xMTRjLTAuNzgyLTAuNzQzLTEuMTcyLTEuNzI0LTEuMTcyLTIuOTMyYzAtMS4wODcsMC4zODMtMi4wMjUsMS4xNTMtMi44MTgNCgkJYzAuNzcyLTAuNzk4LDEuNzM1LTEuMTkyLDIuODk2LTEuMTkyYzEuMTU3LDAsMi4xMzEsMC4zODcsMi45MTQsMS4xNzJDMjEzLjk1OCwxNy43NTYsMjE0LjM1LDE4LjcwMSwyMTQuMzUsMTkuODE2IE0yMTMuMjksNzIuNDU2DQoJCWgtNi4yMDlWMzMuNzAxaDYuMjA5VjcyLjQ1NnoiLz4NCgk8cGF0aCBmaWxsPSIjRUIzRDAxIiBkPSJNMjQ4LjcxNSw3MC42ODJjLTMuMDAyLDEuODE4LTYuNTUsMi43MjUtMTAuNjM3LDIuNzI1Yy0zLjUzLDAtNi43MDQtMC44MTctOS41MTktMi40MzkNCgkJYy0yLjgxNS0xLjYzLTUtMy45MzMtNi41NjYtNi45MTFjLTEuNTY1LTIuOTc1LTIuMzQ1LTYuMzE3LTIuMzQ1LTEwLjAyN2MwLTYuNDA3LDEuODMzLTExLjU1Niw1LjUwNC0xNS40NDUNCgkJYzMuNjcxLTMuODgyLDguNTYzLTUuODI4LDE0LjY2Ny01LjgyOGMzLjM4MywwLDYuMzcyLDAuNjU3LDguOTcyLDEuOTd2Ni4zNTZjLTIuOTAyLTIuMDE3LTUuOTgxLTMuMDI2LTkuMjM1LTMuMDI2DQoJCWMtNC4wMTEsMC03LjI3MywxLjQzNS05Ljc4NSw0LjI5NmMtMi41MSwyLjg2Ni0zLjc2Nyw2LjU2My0zLjc2NywxMS4xMWMwLDQuNTE5LDEuMTk1LDguMDg0LDMuNTc5LDEwLjcxMQ0KCQljMi4zODIsMi42MjMsNS41OCwzLjkzMyw5LjU5MSwzLjkzM2MzLjM4MywwLDYuNTYxLTEuMTA3LDkuNTQtMy4zMzFWNzAuNjgyeiIvPg0KCTxwYXRoIGZpbGw9IiNFQjNEMDEiIGQ9Ik0yODYuODUyLDU0LjYzNWgtMjcuMzY0YzAuMTA0LDQuMzY2LDEuMjU3LDcuNywzLjQ2NiwxMC4wMTFjMi4yMDYsMi4zMDYsNS4yNjMsMy40Niw5LjE3NSwzLjQ2DQoJCWM0LjM5MSwwLDguMzkxLTEuNDExLDEyLjAwMS00LjIzOHY1Ljc5M2MtMy4zODEsMi40OTgtNy44NzQsMy43NDUtMTMuNDczLDMuNzQ1Yy01LjUyOSwwLTkuODM5LTEuNzg3LTEyLjk0Ny01LjM1Ng0KCQljLTMuMTAyLTMuNTY5LTQuNjU1LTguNTEtNC42NTUtMTQuODE5YzAtMy44MzUsMC43NzgtNy4zMzMsMi4zMy0xMC41YzEuNTUtMy4xNjcsMy42OTItNS42MTcsNi40MTMtNy4zNjENCgkJYzIuNzI3LTEuNzQsNS43NTYtMi42MTUsOS4wODMtMi42MTVjNS4wMTksMCw4LjkzOCwxLjYzNCwxMS43NTMsNC45MDZjMi44MTQsMy4yNjQsNC4yMiw3LjgzOCw0LjIyLDEzLjcxN1Y1NC42MzV6DQoJCSBNMjgwLjQ5Niw0OS4zNzNjLTAuMDUzLTMuNTgxLTAuOTE2LTYuMzY0LTIuNTk2LTguMzQ2Yy0xLjY3Ny0xLjk4MS00LjA0Mi0yLjk3MS03LjA5My0yLjk3MWMtMi44NzcsMC01LjM0LDEuMDM2LTcuMzgsMy4xMDQNCgkJYy0yLjA0NiwyLjA2OC0zLjMzMSw0LjgwOC0zLjg1OCw4LjIxM0gyODAuNDk2eiIvPg0KCTxwYXRoIGZpbGw9IiNFQjNEMDEiIGQ9Ik0zMzQuMDc5LDU3LjA5M2MwLDQuODk0LTEuNzUzLDguODM5LTUuMjYsMTEuODI5Yy0zLjUwNywyLjk5LTguMTE1LDQuNDg0LTEzLjgxNSw0LjQ4NA0KCQljLTUuMTcyLDAtOS4yODYtMC45ODUtMTIuMzQxLTIuOTUxdi02LjY2MWMzLjY2MiwyLjg3Myw3Ljg0OSw0LjMxMiwxMi41NjUsNC4zMTJjMy44MTIsMCw2Ljg0Ni0wLjk0Myw5LjEwMy0yLjgxOQ0KCQljMi4yNjEtMS44NzYsMy4zOTEtNC40MjEsMy4zOTEtNy42MjdjMC03LjA4Ny01LjA0OS0xMC42MzMtMTUuMTQtMTAuNjMzaC00LjUwNHYtNS4yNjJoNC4yNzVjOC45MzEsMCwxMy4zOTktMy4zMzEsMTMuMzk5LTkuOTkyDQoJCWMwLTYuMTU3LTMuNDA3LTkuMjMzLTEwLjIyLTkuMjMzYy0zLjgzNSwwLTcuNDI5LDEuMjg2LTEwLjc4MywzLjg1OHYtNi4wMTdjMy40NTYtMi4wNjgsNy41NjYtMy4xMDQsMTIuMzM3LTMuMTA0DQoJCWM0LjQ5MiwwLDguMTE3LDEuMTg5LDEwLjg4MiwzLjU3N2MyLjc2MiwyLjM4NCw0LjE0Miw1LjUwOCw0LjE0Miw5LjM2NmMwLDcuMTQyLTMuNjA3LDExLjczMi0xMC44MjQsMTMuNzh2MC4xNDkNCgkJYzMuODM1LDAuNDMsNi45MzEsMS44MTMsOS4yNzYsNC4xNjNDMzMyLjkwNiw1MC42NTksMzM0LjA3OSw1My41ODcsMzM0LjA3OSw1Ny4wOTMiLz4NCgk8cGF0aCBmaWxsPSIjRUIzRDAxIiBkPSJNMzc0LjkxMyw1NS4yNDFjMCwzLjQzMi0wLjczNyw2LjU0Ny0yLjIxMiw5LjM0NmMtMS40NzQsMi43OTktMy41MSw0Ljk3Mi02LjExNCw2LjUwOQ0KCQljLTIuNTk3LDEuNTQtNS41MTIsMi4zMS04Ljc0MSwyLjMxYy01LjQyNCwwLTkuNjc5LTIuMTgxLTEyLjc3Ni02LjU0OGMtMy4wOS00LjM2My00LjYzNC0xMC40NjEtNC42MzQtMTguMjgzDQoJCWMwLTYuMjA0LDAuOTE2LTExLjY4OCwyLjc0Ni0xNi40NDJjMS44MjktNC43NTgsNC40MTktOC40MjEsNy43NzMtMTAuOTkyYzMuMzU4LTIuNTc3LDcuMjMtMy44NjMsMTEuNjItMy44NjMNCgkJYzMuNzM1LDAsNi43MzgsMC41MTYsOS4wMTEsMS41NTJ2NS44NjhjLTIuODAxLTEuNDM5LTUuNzU2LTIuMTU4LTguODU5LTIuMTU4Yy00Ljc5NCwwLTguNjMzLDIuMTUtMTEuNTI0LDYuNDU0DQoJCWMtMi44OTEsNC4zMDEtNC4zMzYsMTAuMDM1LTQuMzM2LDE3LjIwMWgwLjE1MmMyLjQ5OC01LjEyNSw2LjYyNS03LjY4NSwxMi4zNzctNy42ODVjNC42OTMsMCw4LjQ1NiwxLjUzMiwxMS4yODIsNC42MDENCgkJQzM3My41MDQsNDYuMTc1LDM3NC45MTMsNTAuMjE3LDM3NC45MTMsNTUuMjQxIE0zNjguNTU3LDU2LjAzNGMwLTMuNzg4LTAuOTI5LTYuNzc1LTIuNzgxLTguOTcyDQoJCWMtMS44NTUtMi4xOTMtNC40NDktMy4yODgtNy43NzktMy4yODhjLTMuMDI2LDAtNS41NzQsMS4wNjQtNy42NDUsMy4xOThjLTIuMDY5LDIuMTI3LTMuMTAyLDQuNzExLTMuMTAyLDcuNzM2DQoJCWMwLDMuODEyLDEuMDI4LDYuOTk4LDMuMDgyLDkuNTU1YzIuMDU3LDIuNTY0LDQuNjUsMy44NDMsNy43ODEsMy44NDNjMy4xMDIsMCw1LjYyLTEuMTE0LDcuNTQ5LTMuMzUxDQoJCUMzNjcuNTkxLDYyLjUyMywzNjguNTU3LDU5LjYxNSwzNjguNTU3LDU2LjAzNCIvPg0KCTxwYXRoIGZpbGw9IiNFQjNEMDEiIGQ9Ik00MTEuNDM4LDU1Ljg4MmMwLDUuMjc3LTEuNzQ1LDkuNTExLTUuMjQsMTIuNzIxYy0zLjQ5NSwzLjIwMS04LjE1OSw0LjgtMTMuOTg3LDQuOA0KCQljLTUuMDQ3LDAtOC43OTMtMC43NTQtMTEuMjM4LTIuMjY3di02LjU4N2MzLjY4MiwyLjM3Nyw3LjQ1MywzLjU2MiwxMS4zMTUsMy41NjJjMy44MzUsMCw2LjkyNS0xLjA3NSw5LjI3MS0zLjIyMQ0KCQljMi4zNTEtMi4xNDYsMy41MjQtNS4wMTksMy41MjQtOC42MjRjMC0zLjUzNy0xLjE5LTYuMzA1LTMuNTU5LTguMzExYy0yLjM3My0yLjAwNS01LjgxNy0zLjAwNi0xMC4zMzItMy4wMDYNCgkJYy0zLjYxLDAtNi42NzcsMC4xNDgtOS4xOTgsMC40NDlsMS44NTMtMjcuMjEyaDI1LjA5NXY1LjYwMmgtMTkuNzE5bC0xLjA5NywxNS45MzRsNC45OTYtMC4xOTJjNS42NTIsMCwxMC4xMiwxLjQzMSwxMy4zOTksNC4yOA0KCQlDNDA5Ljc5Nyw0Ni42Niw0MTEuNDM4LDUwLjY4Niw0MTEuNDM4LDU1Ljg4MiIvPg0KCTxwb2x5Z29uIGZpbGw9IiNFQjNEMDEiIHBvaW50cz0iNzUuNTIxLDgyLjk5MiA3NS41MTMsODIuOTg3IDc1LjUxMyw3Ljc3NiA0OC41NjUsMCAwLjEyMSwxOC4xOSAwLDE4LjIxMyAwLjAwNiw3Mi41OTcgDQoJCTE2LjUzNyw2Ni4xMjcgMTYuNTM3LDIxLjg4IDQ4LjU2NSwxNC4yMjIgNDguNTYxLDc5LjI3OCAwLjAzMyw3Mi41OTcgNDguNTYxLDkwLjUxNyA0OC41NjEsOTAuNTM2IDc1LjUxMyw4My4wNzcgNzUuNTEzLDgyLjk5MiAJDQoJCSIvPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPC9zdmc+DQo=" data-fallback="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/O365-logo.png" class="promo-logo">
+                  </div>
+                  <div class="promo-text walsheim-black">MICROSOFT OFFICE 365 FROM GODADDY</div>
+                  <div class="promo-cta"><a href="[@T[link:<relative path='/business/office-365.aspx'><param name='ci' value='11111' /></relative>]@T]" class="walsheim-black">Save up to 50% </a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-6">
+            <div class="tile-wrapper">
+              <style>
+                .gdpro-tile .tile-content-wrapper{padding:12px 20px 20px 15px;color:#333}
+                .gdpro-tile .promo-logo{width:80%}
+                .gdpro-tile .promo-text{padding-top:10px}
+                .gdpro-tile .promo-cta{position:absolute;bottom:5px}
+                .gdpro-tile a{text-decoration:underline;color:#f2812e}
+              </style>
+              <div data-url="[@T[link:<relative path='/pro'><param name='ci' value='11111' /></relative>]@T]" data-ci='11111' class="tile gdpro-tile">
+                <div class="tile-content-wrapper">
+                  <div class="promo-logo-wrapper"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIyLjc3MiAxODMuMjg0IDQ5Ny4yMjggMTMzLjQzMiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAyLjc3MiAxODMuMjg0IDQ5Ny4yMjggMTMzLjQzMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cG9seWdvbiBmaWxsPSIjRkY4MzAwIiBwb2ludHM9IjM5My40NDksMTgzLjI4NCAzNDIuNzA4LDIyOC4yNDkgMzQ3LjUxLDI4Mi45ODggNDIxLjM1NiwzMTYuNzE2IDUwMCwyNzkuNTczIDQ4NS44MjIsMjEyLjYxICIvPg0KPGc+DQoJPHBhdGggZmlsbD0iIzM0MzMzNCIgZD0iTTM1LjIzOSwyNDguNjAzaDI0LjI5N3Y3LjUxNWgtNS42MThjLTIuMjYyLDExLjQ1NC0xMC43MjUsMTkuMzM1LTI0Ljg3OSwxOS4zMzUNCgkJYy0xNi43MDgsMC0yNi4yNjYtMTIuOTE0LTI2LjI2Ni0yNi43NzZjMC0xMy44NjIsMTAuMTQyLTI2Ljc3NiwyNi4yNjYtMjYuNzc2YzEyLjAzOSwwLDIwLjk0LDcuNTE1LDIxLjc0MiwxNi41NjFoLTguNDYzDQoJCWMtMC44NzYtNS4wMzQtNi4yMDMtOS4wNDctMTMuMjc5LTkuMDQ3Yy0xMC45NDQsMC0xNy42NTUsOS4yNjYtMTcuNjU1LDE5LjI2MWMwLDkuOTk2LDYuMTI5LDE5LjI2MywxOC43NTIsMTkuMjYzDQoJCWM4LjY4MiwwLDEzLjg2Mi01LjU0NSwxNC44ODMtMTEuODE5aC05Ljc3N3YtNy41MTVIMzUuMjM5eiIvPg0KPC9nPg0KPGc+DQoJPHBhdGggZmlsbD0iIzM0MzMzNCIgZD0iTTYyLjUyOCwyNTcuMjEzYzAtOS42MzEsNy4wNzctMTcuODc3LDE3Ljg3NS0xNy44NzdjMTAuOTQ0LDAsMTguMDIyLDguMjQ1LDE4LjAyMiwxNy44NzcNCgkJYzAsOS42My03LjA3NywxNy44NzUtMTguMDIyLDE3Ljg3NUM2OS42MDQsMjc1LjA4OCw2Mi41MjgsMjY2Ljg0Myw2Mi41MjgsMjU3LjIxM3ogTTkwLjQ3MSwyNTcuMjEzDQoJCWMwLTUuODM4LTMuOTQxLTEwLjc5OC0xMC4wNjgtMTAuNzk4Yy01Ljk4MywwLTkuOTIzLDQuOTYyLTkuOTIzLDEwLjc5OHMzLjkzOSwxMC43OTgsOS45MjMsMTAuNzk4DQoJCUM4Ni41MywyNjguMDEyLDkwLjQ3MSwyNjMuMDQ5LDkwLjQ3MSwyNTcuMjEzeiIvPg0KCTxwYXRoIGZpbGw9IiMzNDMzMzQiIGQ9Ik0xMjEuODQyLDIyMy4xNDFjMTYuOTI2LDAsMjYuNDg1LDEyLjYyMSwyNi40ODUsMjUuNTM2cy05LjU1OCwyNS41MzYtMjYuNDg1LDI1LjUzNkgxMDUuMjh2LTUxLjA3MQ0KCQlIMTIxLjg0MnogTTExMy42NzEsMjMwLjY1N3YzNi4wNDNoOC4xNzFjMTEuMzgxLDAsMTcuODc1LTguOTAxLDE3Ljg3NS0xOC4wMjJjMC05LjExOS02LjQ5NC0xOC4wMi0xNy44NzUtMTguMDINCgkJQzEyMS44NDIsMjMwLjY1NywxMTMuNjcxLDIzMC42NTcsMTEzLjY3MSwyMzAuNjU3eiIvPg0KCTxwYXRoIGZpbGw9IiMzNDMzMzQiIGQ9Ik0xODguNTI5LDI0MC4yMTJ2MzMuOTk4aC03Ljk1MnYtNC41OTdjLTIuMTE2LDMuNDMtNi41NjYsNS40NzMtMTAuNTA3LDUuNDczDQoJCWMtMTAuMzYsMC0xNy40MzgtOC4yNDUtMTcuNDM4LTE3Ljg3NWMwLTkuNjMxLDcuMDc3LTE3Ljg3NywxNy40MzgtMTcuODc3YzMuOTQxLDAsOC4zOTEsMi4wNDQsMTAuNTA3LDUuNDczdi00LjU5N2g3Ljk1MlYyNDAuMjEyeg0KCQkgTTE4MC41NzcsMjU3LjIxM2MwLTUuODM4LTMuOTQxLTEwLjc5OC0xMC4wNjgtMTAuNzk4Yy01Ljk4MywwLTkuOTIzLDQuOTYyLTkuOTIzLDEwLjc5OHMzLjkzOSwxMC43OTgsOS45MjMsMTAuNzk4DQoJCUMxNzYuNjM2LDI2OC4wMTIsMTgwLjU3NywyNjMuMDQ5LDE4MC41NzcsMjU3LjIxM3oiLz4NCjwvZz4NCjxnPg0KCTxwYXRoIGZpbGw9IiMzNDMzMzQiIGQ9Ik0yMjMuMTExLDI2OS42MTVjLTIuMTE2LDMuNDMtNi41NjYsNS40NzMtMTAuNTA3LDUuNDczYy0xMC4zNiwwLTE3LjQzOC04LjI0NS0xNy40MzgtMTcuODc1DQoJCWMwLTkuNjMxLDcuMDc3LTE3Ljg3NywxNy40MzgtMTcuODc3YzMuOTQxLDAsOC4zOTEsMi4wNDQsMTAuNTA3LDUuNDczdi0yMS42NjhoNy45NTJ2NTEuMDcxaC03Ljk1MkwyMjMuMTExLDI2OS42MTUNCgkJTDIyMy4xMTEsMjY5LjYxNXogTTIyMy4xMTEsMjU3LjIxM2MwLTUuODM4LTMuOTQxLTEwLjc5OC0xMC4wNjgtMTAuNzk4Yy01Ljk4MywwLTkuOTIzLDQuOTYyLTkuOTIzLDEwLjc5OA0KCQlzMy45MzksMTAuNzk4LDkuOTIzLDEwLjc5OEMyMTkuMTcyLDI2OC4wMTIsMjIzLjExMSwyNjMuMDQ5LDIyMy4xMTEsMjU3LjIxM3oiLz4NCjwvZz4NCjxnPg0KCTxwYXRoIGZpbGw9IiMzNDMzMzQiIGQ9Ik0yNjUuNTAyLDI2OS42MTVjLTIuMTE0LDMuNDMtNi41NjYsNS40NzMtMTAuNTA1LDUuNDczYy0xMC4zNiwwLTE3LjQzOC04LjI0NS0xNy40MzgtMTcuODc1DQoJCWMwLTkuNjMxLDcuMDc3LTE3Ljg3NywxNy40MzgtMTcuODc3YzMuOTM5LDAsOC4zOTEsMi4wNDQsMTAuNTA1LDUuNDczdi0yMS42NjhoNy45NTJ2NTEuMDcxaC03Ljk1MlYyNjkuNjE1eiBNMjY1LjUwMiwyNTcuMjEzDQoJCWMwLTUuODM4LTMuOTM5LTEwLjc5OC0xMC4wNjctMTAuNzk4Yy01Ljk4MywwLTkuOTIzLDQuOTYyLTkuOTIzLDEwLjc5OHMzLjkzOSwxMC43OTgsOS45MjMsMTAuNzk4DQoJCUMyNjEuNTYxLDI2OC4wMTIsMjY1LjUwMiwyNjMuMDQ5LDI2NS41MDIsMjU3LjIxM3oiLz4NCjwvZz4NCjxnPg0KCTxwYXRoIGZpbGw9IiMzNDMzMzQiIGQ9Ik0yODAuNzUyLDI3OC4wNzhoNy43MzNjMC4wNzIsMy43OTQsMi41NTMsNi45MzEsOC4wOTgsNi45MzFjNS42OSwwLDguNTM2LTIuNTUzLDguNTM2LTkuMTkzdi02LjM0Nw0KCQljLTIuMTE2LDMuNjQ4LTYuMDU1LDUuNjE4LTExLjA5LDUuNjE4Yy00Ljg4OCwwLTguMzE3LTEuNzUxLTEwLjIxNC00LjU5N2MtMS42NzctMi41NTMtMi4xODgtNS4zOTktMi4xODgtMTAuMDY4di0yMC4yMWg3Ljk1Mg0KCQl2MTcuNTg0YzAsNS44MzYsMS42NzcsMTAuMjg4LDcuMzY4LDEwLjI4OGM1LjU0NSwwLDguMTcxLTQuNDUyLDguMTcxLTEwLjI4OHYtMTcuNTg0aDcuOTUydjM1LjYwNA0KCQljMCwxMS42LTYuMzQ4LDE2LjI2OS0xNy41MSwxNi4yNjlDMjg2LjgwOCwyOTIuMDg3LDI4MC44MjQsMjg1LjUyMiwyODAuNzUyLDI3OC4wNzh6Ii8+DQo8L2c+DQo8Zz4NCgk8cGF0aCBmaWxsPSIjMzQzMzM0IiBkPSJNMzE2LjcxNCwyNDAuOTExYzAtMy4zMjcsMi4zOTktNi40MjcsNi4zMzgtNi40MjdzNi4zMzgsMy4xLDYuMzM4LDYuNDI3YzAsMy4zMjctMi4zOTksNi40MjYtNi4zMzgsNi40MjYNCgkJUzMxNi43MTQsMjQ0LjIzOCwzMTYuNzE0LDI0MC45MTF6IE0zMjguMzQxLDI0MC45MTFjMC0yLjg3Mi0xLjk5Ny01LjUzMi01LjI4OS01LjUzMmMtMy4yNzQsMC01LjI3MSwyLjY2Mi01LjI3MSw1LjUzMg0KCQljMCwyLjg1MywxLjk5Nyw1LjUxNyw1LjI3MSw1LjUxN0MzMjYuMzQ0LDI0Ni40MjYsMzI4LjM0MSwyNDMuNzY0LDMyOC4zNDEsMjQwLjkxMXogTTMyMC44ODIsMjQ0LjIwM3YtNy4xMjdoMi42MjcNCgkJYzEuNDE4LDAsMi4zNDYsMS4xMDQsMi4zNDYsMi4zODFjMCwxLjAzMi0wLjYzLDEuOTQyLTEuNjQ2LDIuMjIzbDEuNTkzLDIuNTIxaC0wLjk2M2wtMS41MjMtMi40MTZoLTEuNTkzdjIuNDE2aC0wLjg0MVYyNDQuMjAzeg0KCQkgTTMyMy40MzgsMjQxLjAzNGMwLjkyNiwwLDEuNTIzLTAuNzE4LDEuNTIzLTEuNTc2YzAtMC44NzYtMC41OTctMS42MTEtMS41MjMtMS42MTFoLTEuNzE4djMuMTg2DQoJCUMzMjEuNzIsMjQxLjAzNCwzMjMuNDM4LDI0MS4wMzQsMzIzLjQzOCwyNDEuMDM0eiIvPg0KPC9nPg0KPGc+DQoJPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTM3My4wMzIsMjIzLjE0MWgxOC4zMTNjMTAuOTQ0LDAsMTguMDIyLDguMjQzLDE4LjAyMiwxNy44NzVzLTcuMDc3LDE3Ljg3NS0xOC4wMjIsMTcuODc1aC05LjkyMXYxNS4zMjINCgkJaC04LjM5MXYtNTEuMDcxSDM3My4wMzJ6IE00MDAuOTc3LDI0MS4wMTZjMC01LjYxOC0zLjc5NC0xMC4zNi05LjYzMS0xMC4zNmgtOS45MjF2MjAuNzIxaDkuOTIxDQoJCUMzOTcuMTgyLDI1MS4zNzYsNDAwLjk3NywyNDYuNjMzLDQwMC45NzcsMjQxLjAxNnoiLz4NCjwvZz4NCjxnPg0KCTxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik00MzYuMjg4LDI0Ny41ODJjLTEuMjQxLTAuMjkzLTEuODk3LTAuMzY1LTMuMTM3LTAuMzY1Yy02Ljc4NCwwLTEwLjUwNSwzLjg2Ny0xMC41MDUsMTIuMzN2MTQuNjY0aC03Ljk1Mg0KCQl2LTMzLjk5OGg3Ljk1MnY1LjQ3M2MxLjUzMi0zLjEzNyw1Ljk4My01LjkxLDEwLjUwNS01LjkxYzEuMjQxLDAsMi4yNjIsMC4xNDYsMy4xMzcsMC41MTFWMjQ3LjU4MnoiLz4NCjwvZz4NCjxnPg0KCTxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik00MzcuMDkyLDI1Ny4yMTNjMC05LjYzMSw3LjA3Ny0xNy44NzcsMTcuODc3LTE3Ljg3N2MxMC45NDIsMCwxOC4wMiw4LjI0NSwxOC4wMiwxNy44NzcNCgkJYzAsOS42My03LjA3NywxNy44NzUtMTguMDIsMTcuODc1QzQ0NC4xNjgsMjc1LjA4OCw0MzcuMDkyLDI2Ni44NDMsNDM3LjA5MiwyNTcuMjEzeiBNNDY1LjAzMywyNTcuMjEzDQoJCWMwLTUuODM4LTMuOTM5LTEwLjc5OC0xMC4wNjctMTAuNzk4Yy01Ljk4MywwLTkuOTIzLDQuOTYyLTkuOTIzLDEwLjc5OHMzLjkzOSwxMC43OTgsOS45MjMsMTAuNzk4DQoJCUM0NjEuMDk0LDI2OC4wMTIsNDY1LjAzMywyNjMuMDQ5LDQ2NS4wMzMsMjU3LjIxM3oiLz4NCjwvZz4NCjwvc3ZnPg0K" data-fallback="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/GD-pro-logo.png" class="promo-logo">
+                  </div>
+                  <div class="promo-text walsheim-black">VIRUAL PRIVATE SERVERS</div>
+                  <div class="promo-cta"><a href="[@T[link:<relative path='/pro'><param name='ci' value='11111' /></relative>]@T]" class="walsheim-black">Now 20% OFF </a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-6">
+            <div class="tile-wrapper">
+              <style>
+                .online-store-tile .tile-content-wrapper{padding:20px 15px;color:#333}
+                .online-store-tile .promo-logo{width:80%}
+                .online-store-tile .promo-text{padding-top:10px;}
+                .online-store-tile .promo-cta{position:absolute;bottom:5px}
+                .online-store-tile a{text-decoration:underline;color:#f2812e}
+              </style>
+              <div data-url="[@T[link:<relative path='/ecommerce/online-store.aspx'><param name='ci' value='11111' /></relative>]@T]" data-ci='11111' class="tile online-store-tile">
+                <div class="tile-content-wrapper">
+                  <div class="promo-logo-wrapper"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMjExLjcxMyA0NS4wMiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMjExLjcxMyA0NS4wMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8Zz4NCgk8cGF0aCBmaWxsPSIjNzhDMDQ0IiBkPSJNNTguMDY0LDMwLjU2M2M1Ljc4NSwwLDkuMTIxLTQuMjI0LDkuMTIxLTguODU3cy0zLjMzNi04Ljg1Ny05LjEyMS04Ljg1N2MtNS43NiwwLTkuMDk3LDQuMjI0LTkuMDk3LDguODU3DQoJCVM1Mi4zMDQsMzAuNTYzLDU4LjA2NCwzMC41NjN6IE01OC4wNjQsMjYuMDAzYy0yLjU0NCwwLTQuMDU2LTIuMDY0LTQuMDU2LTQuMjk2YzAtMi4yMzIsMS41MTItNC4yOTYsNC4wNTYtNC4yOTYNCgkJYzIuNTY4LDAsNC4wNTYsMi4wNjQsNC4wNTYsNC4yOTZDNjIuMTIxLDIzLjkzOCw2MC42MzMsMjYuMDAzLDU4LjA2NCwyNi4wMDN6Ii8+DQoJPHBhdGggZmlsbD0iIzc4QzA0NCIgZD0iTTczLjE3NiwxMy4zMDZoLTUuMDg4djE2LjgwMWg0Ljk5MnYtOS42MjVsNS40OTYsOS42MjVoNS4wODhWMTMuMzA2aC01LjAxNnY5Ljk2MUw3My4xNzYsMTMuMzA2eiIvPg0KCTxwYXRoIGZpbGw9IiM3OEMwNDQiIGQ9Ik05MS4zNiwyNS44MzVWMTMuMzA2aC00Ljk5MnYxNi44MDFoOS4zODV2LTQuMjcySDkxLjM2eiIvPg0KCTxwYXRoIGZpbGw9IiM3OEMwNDQiIGQ9Ik05Ni42NDgsMzAuMTA3aDUuMDRWMTMuMzA2aC01LjA0VjMwLjEwN3oiLz4NCgk8cGF0aCBmaWxsPSIjNzhDMDQ0IiBkPSJNMTA5LjAxNiwxMy4zMDZoLTUuMDg4djE2LjgwMWg0Ljk5MnYtOS42MjVsNS40OTcsOS42MjVoNS4wODhWMTMuMzA2aC01LjAxNnY5Ljk2MUwxMDkuMDE2LDEzLjMwNnoiLz4NCgk8cGF0aCBmaWxsPSIjNzhDMDQ0IiBkPSJNMTMzLjAzMywxNy4wNXYtMy43NDRoLTEwLjgyNXYxNi44MDFoMTAuODI1di0zLjc0NEgxMjcuMnYtMi44MDhoNS44MzJ2LTMuNTc2SDEyNy4yVjE3LjA1SDEzMy4wMzN6Ii8+DQoJPHBhdGggZmlsbD0iIzc4QzA0NCIgZD0iTTE0MC4xMiwyNC40NDNjMCwzLjkzNiwyLjY4OCw2LjEyMSw2Ljk2MSw2LjEyMWM0LjIsMCw2LjgxNy0yLjA4OCw2LjgxNy01LjQNCgkJYzAtMy44MTYtMy41MDQtNC43MDUtNi4wOTctNS42ODljLTEuNTYtMC41NzYtMi4zMDQtMS4wMzItMi4zMDQtMS45NDRjMC0wLjg4OCwwLjcyLTEuMjk2LDEuNTM2LTEuMjk2DQoJCWMxLjEyOCwwLDEuNjU2LDAuNzQ0LDEuNjU2LDIuMDg4aDQuOTkzYzAtMi42NC0xLjY1Ni01LjQ3Mi02LjUyOS01LjQ3MmMtMy4zODQsMC02LjY3MywxLjM2OC02LjY3Myw0Ljk0NA0KCQljMCwzLjQ1NiwzLjA5Niw0LjQ4OCw1Ljg1Nyw1LjU2OGMxLjc3NiwwLjY5NiwyLjU0NCwxLjA4LDIuNTQ0LDIuMDE2YzAsMC44ODgtMC42NDgsMS40NC0xLjY1NiwxLjQ0DQoJCWMtMS4yNzIsMC0yLjExMi0wLjg2NC0yLjExMi0yLjM3NkgxNDAuMTJ6Ii8+DQoJPHBhdGggZmlsbD0iIzc4QzA0NCIgZD0iTTE1Ny41MiwzMC4xMDdoNC45OTJWMTcuNTc4aDMuNDU2di00LjI3MmgtMTEuOTA1djQuMjcyaDMuNDU2VjMwLjEwN3oiLz4NCgk8cGF0aCBmaWxsPSIjNzhDMDQ0IiBkPSJNMTc0LjU4NCwzMC41NjNjNS43ODUsMCw5LjEyMS00LjIyNCw5LjEyMS04Ljg1N3MtMy4zMzYtOC44NTctOS4xMjEtOC44NTcNCgkJYy01Ljc2LDAtOS4wOTcsNC4yMjQtOS4wOTcsOC44NTdTMTY4LjgyNCwzMC41NjMsMTc0LjU4NCwzMC41NjN6IE0xNzQuNTg0LDI2LjAwM2MtMi41NDQsMC00LjA1Ni0yLjA2NC00LjA1Ni00LjI5Ng0KCQljMC0yLjIzMiwxLjUxMi00LjI5Niw0LjA1Ni00LjI5NmMyLjU2OCwwLDQuMDU2LDIuMDY0LDQuMDU2LDQuMjk2QzE3OC42NDEsMjMuOTM4LDE3Ny4xNTMsMjYuMDAzLDE3NC41ODQsMjYuMDAzeiIvPg0KCTxwYXRoIGZpbGw9IiM3OEMwNDQiIGQ9Ik0xODQuNjA4LDMwLjEwN2g0Ljk5MnYtNC4yOTZoMC45MzZsMi44NTYsNC4yOTZoNS44ODFsLTMuMzYtNS4xMTJjMS45Mi0xLjA4LDMuMDcyLTMuMTQ0LDMuMDcyLTUuNDI0DQoJCWMwLTMuMzg0LTIuNDcyLTYuMjY1LTYuMzEyLTYuMjY1aC04LjA2NVYzMC4xMDd6IE0xOTEuNjY0LDIxLjk0NkgxODkuNnYtNC43NTJoMi4wODhjMS4zNDQsMCwyLjIwOCwxLjA4LDIuMjA4LDIuMzc2DQoJCVMxOTMuMDA4LDIxLjk0NiwxOTEuNjY0LDIxLjk0NnoiLz4NCgk8cGF0aCBmaWxsPSIjNzhDMDQ0IiBkPSJNMjExLjcxMywxNy4wNXYtMy43NDRoLTEwLjgyNXYxNi44MDFoMTAuODI1di0zLjc0NGgtNS44MzN2LTIuODA4aDUuODMzdi0zLjU3NmgtNS44MzNWMTcuMDVIMjExLjcxM3oiLz4NCgk8cGF0aCBmaWxsPSIjNzhDMDQ0IiBkPSJNMTMuNjg1LDM4LjIxMmwtMi4wNTUsMS45MDNsLTAuMDkyLDIuNzgybDEuOTI0LDIuMDMybDIuODEzLDAuMDkybDIuMDU1LTEuOTAybDAuMDkzLTIuNzgybC0xLjkyNC0yLjAzMg0KCQlMMTMuNjg1LDM4LjIxMnoiLz4NCgk8cGF0aCBmaWxsPSIjNzhDMDQ0IiBkPSJNMzEuMTQ1LDM1LjcwM2wtMC40MTktMy40NTFsMi4yNi0xMy45MzNsNi4wMTMtNC4zMTZsLTEuNjM5LTMuMTcyTDI1LjcxNywwTDIwLjY2LDUuMDE4bC0wLjAxMywwLjEzNg0KCQljLTIuNDE1LDEuMjA3LTE5LjM4NSwxMC41OS0xOS4zODUsMTAuNTlsMC41NjIsMC44MjZsMTcuOTY0LTguMTI3bDcuNTgsNi41MzNoMi45ODRsLTguNjc1LTcuOTNsNC45NTEtMy43NzJsOS4wMDIsOS4wMzMNCgkJbC01LjI3OCw0LjUwMmwwLjAyNCwwLjAzNkw2LjI4OCwyMi40NDNsMC44LDE0LjkyNmwyMC45NjUtNC41MzlsMC41NzQsMy4zNTZsLTEuNjA2LDEuMDAxbC0wLjc0MiwzLjI0bDEuNzkyLDIuODExbDMuMjc3LDAuNzM0DQoJCWwyLjg0Mi0xLjc3MmwwLjc0My0zLjI0MWwtMS43OTItMi44MTFMMzEuMTQ1LDM1LjcwM3oiLz4NCgk8cGF0aCBmaWxsPSIjNzhDMDQ0IiBkPSJNMCwxNi4wMjhsMS42MSwxMS43NDZsMy44NzMsOC4yMzJMNC42NzgsMjEuNzRMMCwxNi4wMjh6Ii8+DQo8L2c+DQo8L3N2Zz4NCg==" data-fallback="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/online-store-logo.png" class="promo-logo">
+                  </div>
+                  <div class="promo-text walsheim-black">SO EASY TO SET UP, YOU CAN MAKE MONEY TODAY.</div>
+                  <div class="promo-cta"><a href="[@T[link:<relative path='/ecommerce/online-store.aspx'><param name='ci' value='11111' /></relative>]@T]" class="walsheim-black">Start your FREE TRIAL </a></div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+<<<<<<< HEAD:build/cds/sales/homepage/default.en-gb
     </div>
     <!-- FAQ Section-->
     <!-- Disclaimers Section-->
@@ -316,112 +575,73 @@
               e.preventDefault();
       
               $('button[name="searchButton"]', this).addClass('disabled');
+=======
+    </section>
+    <!-- FOOTERBEGIN--> 
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer"><Parameters><Parameter key="manifest" value="salesheader" /></Parameters></Data>]@P]
+    <!-- FOOTEREND-->
+     
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Script"><Parameters><Parameter key="manifest" value="salesheader" /></Parameters></Data>]@P]
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Bottom"><Parameters><Parameter key="requestedManifest" value="salesheader" /></Parameters></Data>]@P]
+    <!-- liveperson includes -->
+    <div id="lpButtonDiv"></div><!-- End Main Content -->
+    <script type="text/javascript">
+      endOfPageScripts();
+>>>>>>> green buddy hero and templates:build/cds/sales/homepage/default.en-us.html
       
-              var params = {
-                  query:$(this).serialize(),
-                  searchUrl:$(this).attr('data-url')
-              };
-              DomainSearch(params,function(err,NextStepUrl){
-                  if(typeof NextStepUrl === 'undefined')
-                  {
-                    NextStepUrl = '[@T[link:<relative path="/domains/search-new.aspx"></relative>]@T]';
-                  }
-                  if(err == null )
-                  {
-                      window.location = NextStepUrl;
-                  }
-                  else{
-                      if(console != "undefined")
-                      console.log(err);
-                  }
-              });
-          });
+    </script>
+    <script type="text/javascript">
+      window.config = window.config || {};
+      window.config.uxcore = ;
+      window.config.gdCdnHostUrl = '[@T[link:<cssroot />]@T]';
+      window.config.env = '';
       
-          function DomainSearch(params, cb) {
-                $.ajax({
-                  url: params.searchUrl,
-                  type: 'POST',
-                  data: params.query,
-                  error: function (XMLHttpRequest, textStatus, errorThrown) {
-                    var data = { Error: errorThrown, Success: false };
-                    cb(errorThrown,null);
-                  },
-                  success: function (data) {
-                    cb(null,data.NextStepUrl);
-                  }
-                });
-          }
-        $("#disclaimers > p > a").click(function () {
-              $("#g-modal").modal({
-                overlayId: "g-modal-overlay",
-                close: "false", // disables default close button
-                autoPosition: "true"
-              });
-            });
-            $(".g-modal-close").click(function () {
-              // Closes the last modal
-              $.modal.close();
-            });
-      });
-      $('.uk-cookie-close').click(function() {
-            $('.uk-cookie-banner').css("display","none");
-            var CookieDate = new Date;
-            CookieDate.setFullYear(CookieDate.getFullYear( ) +10);
-            document.cookie = 'uk_banner=closed; expires=' + CookieDate.toGMTString( ) + '; path=/';
-            })
-      if (document.cookie.indexOf("uk_banner") >= 0) {
-             $('.uk-cookie-banner').css("display","none"); 
-             } else {
-             $('.uk-cookie-banner').css("display","block");
-             }     
-      if(navigator.userAgent.match(/iPad|iPhone|iPod/i)) {
-      $('head').append('<meta name="viewport" content="width=1150px">');
-      }
-      $('body').on('click','.js-gdhpclick',function(event){
+    </script>
+    <script type="text/javascript">
+      $('body').on('click','[data-url]',function(event){
         var $clickedElement = $(event.currentTarget);
         var $clickedUrl = $clickedElement.attr('data-url'); 
         event.stopPropagation();
-        switch($clickedUrl)
-        {
-          case "video":
-             $('div#myVideoModal').modal('show');
-          break;
-          case "none":
-          break;
-          case "video-close":
-            $('div#myVideoModal').modal('hide');
-          break;
-          default:
-            window.location.href=$clickedUrl;
-        }
+        window.location.href=$clickedUrl;
       });
-      $(window).load(function () {
-        $('.bigtext').bigtext().css('visibility', 'visible');
-        setTimeout( "$('.bigtext').bigtext().css('visibility', 'visible');",500 );
-      });
-      var $resizeElements = $('.js-gdhpPriceResize');
-      if($resizeElements){
-      $resizeElements.each(function(){
-        var currentFontSize = parseInt($(this).css("font-size"));
-        var currentWidth = parseInt($(this).css("width"));
-        var maxCharOvrd = $(this).attr('data-maxchar');
-        var numOfChar = $(this).text().length;
-        var containsSymbol =  $(this).text().match(/[₪|₨|￦|﷼]/i);
-        var maxChar = Math.ceil((currentWidth/currentFontSize) * 2);
-        if(maxCharOvrd){maxChar = parseInt(maxCharOvrd);}
-        if(containsSymbol && numOfChar <= maxChar){maxChar -= 1;}
-        if(numOfChar > maxChar){
-          var newFontSize =  currentFontSize - (Math.ceil(((numOfChar - maxChar)/numOfChar) * 100));
-          if($(this).hasClass("tungsten")){
-            newFontSize *= .82;
-          }
-          else if(!containsSymbol){
-            newFontSize += 10;
-          }
-            $(this).css("font-size",newFontSize +"px").css("line-height",newFontSize +"px");
-          }
-        });
+      var reSizeTiles = function(){
+        var maxTitleHeight = 0;
+          $("#merchandising .tile-wrapper").each(function(index, title) {
+            maxTitleHeight = $(title).height() > maxTitleHeight ? $(title).height() : maxTitleHeight;
+          }).css("min-height", maxTitleHeight + 10);
+      
+          var maxHeroHeight = 0;
+          $("#marquee .tile").each(function(index, title) {maxHeroHeight += $(title).height();});
+          $("#marquee .hero-wrapper").css("min-height", maxHeroHeight + 19.5);
       }
+<<<<<<< HEAD:build/cds/sales/homepage/default.en-gb
+=======
+      $(window).load(reSizeTiles);
+      
+    </script>
+    <script type="text/javascript">
+      delayLoader.addScript("[@T[link:<javascriptroot />]@T]starfield/fos.share/v1.3/fos.share-20140213.min.js", { "id": "fosShareScript" });
+      
+    </script>
+    <script type="text/javascript">jQuery.query={get:function(c){var b=window.location.search.substring(1);var a=b.split("&");for(i=0;i<a.length;i++){ft=a[i].split("=");if(ft[0]==c){return ft[1]}}return""}};(function(a){a.fn.wresize=function(b){version="1.1";wresize={fired:false,width:0};function d(){if(a.browser.msie){if(!wresize.fired){wresize.fired=true}else{var e=parseInt(a.browser.version,10);wresize.fired=false;if(e<7){return false}else{if(e==7){var f=a(window).width();if(f!=wresize.width){wresize.width=f;return false}}}}}return true}function c(f){if(d()){return b.apply(this,[f])}}this.each(function(){if(this==window){a(this).resize(c)}else{a(this).resize(b)}});return this}})(jQuery);function getMaxZ(){var a=Math.max.apply(null,$.map($("body > *"),function(b,c){if($(b).css("position")=="absolute"){return parseInt($(b).css("z-index"),10)||1}else{return 1}}));return a}function getMaxZ(a){var c="body *:not(#"+a+")";var b=Math.max.apply(null,$.map($(c),function(d,f){if($(d).css("position")=="absolute"){return parseInt($(d).css("z-index"),10)||1}else{return 1}}));return b}jQuery.fn.currentMousePosition=function(b){var a=$("#[isjsonrendercontainer]");if(b!==null&&b!==undefined){$(a).data("currentMousePosition",b)}else{if($(a).data("currentMousePosition")==null||$(a).data("currentMousePosition")==undefined){$(a).data("currentMousePosition",{left:0,top:0})}return $(a).data("currentMousePosition")}};jQuery.fn.lockMousePosition=function(b){var a=$(this).getJsonContainerDiv();$(a).data("lockedMousePosition",$(a).currentMousePosition())};jQuery.fn.lockedMousePosition=function(){return $(this).getJsonContainerDiv().data("lockedMousePosition")};jQuery.fn.getJsonContainerDiv=function(){var a=$(this).parents().andSelf().filter("#[isjsonrendercontainer]:first");return a};var atl_HideInvoked=false;function atl_ToggleDisplay(b){var a=document.getElementById(b);if(a){a.style.display=(a.style.display=="block"?"none":"block")}return true}function atl_SwapDisplay(a,b){atl_ToggleDisplay(a);atl_ToggleDisplay(b);return true}function atl_Go(b,a){if((a==null)||(a=="")){a="_self"}window.open(b,a)}function atl_PopHelp(a){var b=window.open(a,"spop","left=20,top=20,resizable=yes,scrollbars=yes,width=610,height=620")}function atl_PopUp(c,b,a){var d=window.open(c,b,a)}var atl_quickhelp_source;function atl_OnQuickHelpError(a){}function atl_GetQuickHelpContent(b,d,c,e){if(typeof(atl_GetQuickHelpUrl)!="undefined"){var f=atl_GetQuickHelpUrl();var a=(f.indexOf("?")<0)?"?":"&";atl_quickhelp_source=e;$.ajax({type:"GET",url:f+a+"targetDivId=qh&name="+b,contentType:"application/json; charset=utf-8",dataType:"json",success:d,error:c})}}function atl_ShowDivContent(a){if(a!=null&&!atl_HideInvoked){a.style.display="block";a.style.visibility="visible"}}function atl_ShowHelp(a){var c=a.offsetTop;var b=a.offsetParent;while(b){c+=b.offsetTop;b=b.offsetParent}return c}function atl_getOffsetLeft(a){var b=a.offsetLeft;var c=a.offsetParent;while(c){b+=c.offsetLeft;c=c.offsetParent}return b}function atl_getScrollY(){var a=0;if(typeof(window.pageYOffset)=="number"){a=window.pageYOffset}else{if(document.body&&(document.body.scrollLeft||document.body.scrollTop)){a=document.body.scrollTop}else{if(document.documentElement&&(document.documentElement.scrollLeft||document.documentElement.scrollTop)){a=document.documentElement.scrollTop}}}return a}function atl_ShowHelpById(d,c){if(c){var b=340;var e=atl_getOffsetLeft(d);var h=(window.innerWidth)?window.innerWidth-25:document.body.clientWidth;if((e+b)>h){e=h-b}newX=e;var a=c.offsetHeight;var f=atl_ShowHelp(d)+d.offsetHeight;var g=(window.innerHeight)?window.innerHeight-25:document.body.clientHeight;if((f+a)>g+atl_getScrollY()){f=atl_ShowHelp(d)-a}newY=f;c.style.top=newY+"px";c.style.left=newX+"px";c.left=newX+"px";c.left=newY+"px"}}function atl_SetQuickHelpDiv(b,c){c=atl_quickhelp_source;var a=document.getElementById("atl_quickhelp");if(a!=null&&b!=null){a.innerHTML=b.Html;atl_ShowHelpById(c,a);atl_ShowDivContent(a);if(!$.jCache.hasItem(b.Data)){$.jCache.setItem(b.Data,b.Html)}}}function atl_ShowQuickHelp(a,c,e){atl_HideInvoked=false;var d=document.getElementById("atl_quickhelp");if(d==null){return}var f;if(a.target!=null){f=a.target}else{if(a.srcElement!=null){f=a.srcElement}else{return}}if(e){var b=getMaxZ(d.id);if(d.style.zIndex<=b){d.style.zIndex=b+1}}if(!$.jCache.hasItem(c)){atl_GetQuickHelpContent(c,atl_SetQuickHelpDiv,atl_OnQuickHelpError,f)}else{d.innerHTML=$.jCache.getItem(c);atl_ShowHelpById(f,d);atl_ShowDivContent(d)}}function atl_HideQuickHelp(){atl_HideInvoked=true;var a=document.getElementById("atl_quickhelp");if(a!=null){a.style.display="none";a.style.visibility="hidden"}}function atlCookieDomain(){var b=window.location.hostname;var c=b.lastIndexOf(".");if(c<0){return"."+b}else{var a="";if(b.lastIndexOf(".",c-1)>-1){a=b.substr(b.lastIndexOf(".",c-1))}else{a="."+b}return a}}function atlSetMemCookie(c,d,e){var b=new Date();var a=c+"="+d+"; path=/; domain="+atlCookieDomain();document.cookie=a}function atlSetCookie(d,e,f){var b=new Date();var c=new Date(Date.parse(b.getDay()+"/"+b.getMonth()+"/"+(b.getFullYear()+f)));var a=d+"="+e+"; expires="+c.toGMTString()+"; path=/; domain="+atlCookieDomain();document.cookie=a}function atlReadCookie(e){var b="";if(document.cookie.length>0){var d=e+"=";var a=document.cookie.indexOf(d);var c=0;if(a>-1){a+=d.length;c=document.cookie.indexOf(";",a);if(c<a){c=document.cookie.length}b=document.cookie.substring(a,c)}}return unescape(b)}function atl_isemailvalid(c){var a="@";var b=".";var d=c.indexOf(a);var f=c.length;var e=c.indexOf(b);if(c.indexOf(a)==-1){return false}if(c.indexOf(a)==-1||c.indexOf(a)==0||c.indexOf(a)==f){return false}if(c.indexOf(b)==-1||c.indexOf(b)==0||c.indexOf(b)==f){return false}if(c.indexOf(a,(d+1))!=-1){return false}if(c.substring(d-1,d)==b||c.substring(d+1,d+2)==b){return false}if(c.indexOf(b,(d+2))==-1){return false}if(c.indexOf(" ")!=-1){return false}return true}function atl_isnoscript(b){var a=/[<>]+/;if(a.test(b)){return false}return true}function atl_textarea_trim(a,b){if(a.value.length<=b){return}a.value=a.value.substr(0,b)}function atl_textarea_canaddchar(b,d){var c=null;if(typeof(b.onkeypress.arguments[0])!="undefined"){c=b.onkeypress.arguments[0].keyCode}else{if(document.selection.createRange().text.length!=0){return true}var c=event.keyCode}var a=[8,37,38,39,40,46];for(var e=0;e<a.length;e++){if(a[e]==c){return true}}if(b.value.length<d){return true}return false}(function(a){this.version="(beta)(0.0.1)";this.maxSize=10;this.keys=[];this.cache_length=0;this.items=[];this.setItem=function(b,c){if(typeof(c)!="undefined"){if(typeof(this.items[b])=="undefined"){this.cache_length++}this.keys.push(b);this.items[b]=c;if(this.cache_length>this.maxSize){this.removeOldestItem()}}return c};this.removeItem=function(b){var c;if(typeof(this.items[b])!="undefined"){this.cache_length--;var c=this.items[b];delete this.items[b]}return c};this.getItem=function(b){return this.items[b]};this.hasItem=function(b){return typeof(this.items[b])!="undefined"};this.removeOldestItem=function(){this.removeItem(this.keys.shift())};this.clear=function(){var b=this.cache_length;this.keys=[];this.cache_length=0;this.items=[];return b};a.jCache=this;return a})(jQuery);var stDivsLoadedList="";function piPositionDiv(c){var d=-1;var e=-1;if($(c).args().doCenterToScreen===true){$(c).centerToScreen()}else{var b=$(c).lockedMousePosition();if(b!==undefined&&b!==null){d=b.left-10;e=b.top-10}if($(c).args().overridePosition!==undefined&&$(c).args().overridePosition!==null){e=$(c).args().overridePosition.top;d=$(c).args().overridePosition.left}var a=document.body.clientWidth;if((d+$(c).width())>a){d=d-$(c).width()+20}if($(c).args().doOffsetFromBottom===true){e-=$(c).height()-20}if(d>0&&e>0){$(c).css({position:"absolute",top:e,left:d})}}}function stHideElement(a,b){for(i=0;i<document.getElementsByTagName(a).length;i++){obj=document.getElementsByTagName(a)[i];if(!obj||!obj.offsetParent){continue}objLeft=obj.offsetLeft-b.offsetParent.offsetLeft;objTop=obj.offsetTop;objParent=obj.offsetParent;while((objParent.tagName.toUpperCase()!="BODY")&&(objParent.tagName.toUpperCase()!="HTML")){objLeft+=objParent.offsetLeft;objTop+=objParent.offsetTop;objParent=objParent.offsetParent}objHeight=obj.offsetHeight;objWidth=obj.offsetWidth;if((b.offsetLeft+b.offsetWidth)<=objLeft){}else{if((b.offsetParent.offsetTop+b.offsetHeight+20)<=objTop){}else{if(b.offsetParent.offsetTop>=objTop+objHeight){}else{if(b.offsetLeft>=objLeft+objWidth){}else{obj.style.visibility="hidden"}}}}}}function getJsonCallback(a,c){var b=document.getElementById(a.TargetDivID);if(jQuery.trim(a.Html)==""){$(b).trigger("popInLoadCompleteWithNoData",a)}$(b).html(a.Html);if($(b).args()==undefined&&$(b).doCacheContent===false){return}if(stDivsLoadedList.indexOf(a.TargetDivID+";")<0){stDivsLoadedList+=a.TargetDivID+";"}$(b).trigger("jsonCallbackComplete",a)}function stShowTarget(a){if(a!=null){$(a).show()}}function stContentIsLoaded(a){if(a!=null){return stDivsLoadedList.indexOf(a.id+";")>=0}else{return true}}function stHideSiblings(a){if(a!=null){$(a).siblings().hide()}}function stShowInt(a){if(a!=null){stHideSiblings(a);stShowTarget(a)}}function stShow(a,c){var b=document.getElementById(c);stShowInt(b);if(a!=""&&!stContentIsLoaded(b)){$.ajax({url:a,dataType:"json",success:getJsonCallback,error:function(){var d=$("#"+c);$(d).html("<div style='width:100%; text-align:center; padding:14px;'>No Results Available.</div>");stShowTarget(d)}})}}function stTabActivate(b){var c=document.getElementById(b);var a=$(c).attr("src");var e=$(c).attr("targetdiv");$(c).parent().siblings(".simple_tab_active").addClass("simple_tab_inactive");$(c).parent().siblings(".simple_tab_active").removeClass("simple_tab_active");$(c).parent().addClass("simple_tab_active");$(c).parent().removeClass("simple_tab_inactive");var d=$("#"+e);stShow(a,e)}jQuery.fn.jsonGet=function(b){if(b==undefined||b==null){b=$(this).args()}var c=b.cache!==false;var d=b.url;if(d==undefined||d==null){d=$(this).attr("src")}if(d==undefined||d==null||d.length<=0){handleJsonError("failed","No URL Specified on jsonGet call")}d=appendQueryStringArguments(b,d);var a={url:d,dataType:"json",cache:b.doCacheContent==true,success:b.success,error:function(g,f,e){handleJsonError(f,b,e,g)}};$.ajax(a)};function appendQueryStringArguments(a,c){if(a.queryStringArguments!=undefined&&a.queryStringArguments!=null){c+=(c.indexOf("?")>=0)?"&":"?";var b;for(b in a.queryStringArguments){c+=b+"="+escape(a.queryStringArguments[b])+"&"}c=c.substring(0,c.length-1)}return c}function jsonPost(b){var c=appendQueryStringArguments(b,b.url);var a={url:c,type:"POST",dataType:"json",data:b.postData,success:b.success,error:function(f,e,d){handleJsonError(e,b)}};$.ajax(a)}jQuery.fn.jsonPost=function(){var a=$(this).args().url;if(a==undefined||a==null){$(this).args().url=$(this).attr("src")}jsonPost($(this).args())};function handleJsonError(c,a,b,d){if(c=="timeout"&&a.timeoutFunction!=undefined&&a.timeoutFunction!=null){a.timeoutFunction()}else{if(a.generalErrorFunction!=undefined&&a.generalErrorFunction!=null){a.generalErrorFunction(c,a)}else{}}}jQuery.fn.args=function(a,b){if(a!==null&&a!==undefined){if(typeof(a)=="object"){this.data("args",a);this.data("lockedMousePosition",null)}else{if(b!=undefined){arguments=this.data("args");arguments[a]=b}else{return this.data("args")[a]}}}else{a=this.data("args");if((a==null)||(a==undefined)){a={};this.data("args",a)}return a}};jQuery.fn.showAndSetVisible=function(){$(this).getJsonContainerDiv().show();this.css({visibility:"visible"});this.show()};jQuery.fn.piSetTimeout=function(){var a="piHidePopIn({targetDivId:'"+this[0].id+"', doNotCloseModal: true})";var b=setTimeout(a,2000);if($(this).args().timerIds==null&&$(this).args().timerIds==undefined){$(this).args().timerIds=[]}$(this).args().timerIds.push(b)};jQuery.fn.piClearMousedOverPopInTimeout=function(){if($(this).args().timerIds!=null){$.each($(this).args().timerIds,function(){clearTimeout(this)})}};function piJsonCallback(a,c){var b=$("#"+a.TargetDivID);getJsonCallback(a,c);if(jQuery.trim(a.Html)==""){return}else{$(b).piClearMousedOverPopInTimeout();$(b).trigger("popInLoadCompleteInternal");$(b).trigger("popInLoadComplete")}}function piRenderPopIn(d){var a=$(d).args();if(a.showBeforeContentLoaded===true){$(d).getJsonContainerDiv().showAndSetVisible();piPositionDiv(d)}if(a.sourceUrl!=null&&a.sourceUrl!=""){var c="?";if(a.sourceUrl.indexOf("?")>=0){c="&"}var b=a.sourceUrl+c+"TargetDivID="+a.targetDivId;a.url=b;a.success=piJsonCallback;if(a.postData!=null&&a.postData!=undefined&&a.postData.length>0){$(d).jsonPost()}else{$(d).jsonGet()}}}jQuery.fn.hideSelectsForIE6PopIn=function(){if($.browser.msie&&$.browser.version.substr(0,1)<7){$("select:visible").each(function(){$(this).attr("hideForIE6PopIn",1);$(this).hide()});$(this).bind("popInHideComplete",function(){$(this).showSelectsForIE6PopIn()});$(this).bind("dialogclose",function(){$(this).showSelectsForIE6PopIn()})}};jQuery.fn.showSelectsForIE6PopIn=function(){$("select[hideForIE6PopIn=1]").each(function(){$(this).attr("hideForIE6PopIn","");$(this).show()})};function piShowPopIn(b,a){var c=$("#"+a.targetDivId);if(a.sourceUrl){$(c).attr("isJsonTargetDiv",true)}$(c).piClearMousedOverPopInTimeout();$(c).hideSelectsForIE6PopIn();$(c).args(a);if(a.doMoveToMousePosition==true){b=b||window.event;$(c).currentMousePosition({left:b.clientX+$(document).scrollLeft(),top:b.clientY+$(document).scrollTop()});$(c).lockMousePosition();if(a.showBeforeContentLoaded===true){$(c).getJsonContainerDiv().showAndSetVisible();piPositionDiv(c)}}piRenderPopIn(c);if(a.doAutoHideOnMouseLeave){$(c).mouseover(function(){$(c).piClearMousedOverPopInTimeout()});$(c).mouseenter(function(){if($(c).is(":visible")){$(c).piClearMousedOverPopInTimeout()}});$(c).mouseleave(function(){if($(c).is(":visible")){$(c).piClearMousedOverPopInTimeout();$(c).piSetTimeout()}})}$(c).one("popInLoadCompleteInternal",function(d){if($(c).args().doCenterToScreen===true){$(c).centerToScreen();$(c).getJsonContainerDiv().showAndSetVisible()}else{piPositionDiv(c);$(c).getJsonContainerDiv().showAndSetVisible()}})}function piShowPopInWithStaticContent(b,a){var c=$("#"+a.targetDivId);piShowPopIn(b,a);piPositionDiv(c);$(c).getJsonContainerDiv().showAndSetVisible()}function piHidePopIn(a){var c=$("#"+a.targetDivId);a=$(c).mergeArgs(a);var b=$(c).data("forcePageRefreshOnClose");if(b!=undefined&&b!=null&&(b===true||b===false)){a.forcePageRefreshOnClose=b}$(c).piClearMousedOverPopInTimeout();if($(c).args().forcePageRefreshOnClose===true){reloadPage()}$(c).getJsonContainerDiv().fadeOut("fast");if(a.doNotCloseModal!==true){$(".ui-widget-overlay").fadeOut("fast",function(){if(typeof($(c).dialog)=="function"){$(c).dialog("close")}})}$(c).args({});$(c).trigger("popInHideComplete",a)}jQuery.fn.hideJsonPopIn=function(a){if(a==null||a==undefined){a={}}var b=$(this).parents("[isJsonTargetDiv]");if(a.targetDivId==undefined||a.targetDivId==null){a.targetDivId=$(b).attr("id")}piHidePopIn(a)};function piShowPopInModal(a){var c=a.targetDivId;var b=$("#"+c);if(a.sourceUrl){$(b).attr("isJsonTargetDiv",true)}$(b).args(a);$(b).hideSelectsForIE6PopIn();$(b).showAndSetVisible();$(b).css("z-index",getMaxZ()+100);$(b).dialog({draggable:false,resizable:false,modal:true,position:"center",width:$(b).width()+10,closeOnEscape:false});$(b).bind("popInLoadCompleteInternal",function(d){piBindContainerDivToAutoHideOnClick(a);if($(b).args().doCenterToScreen===true){$(b).dialog("option","position",$(b).dialog("option","position"))}});$(b).dialog("open");piRenderPopIn(b);if(a.autoHideOnClickOutBeforeLoadComplete!==false){piBindContainerDivToAutoHideOnClick(a)}$(b).click=function(d){$(d).stopPropagation()}}function piBindContainerDivToAutoHideOnClick(a){var b=$(".ui-widget-overlay");var c=$(b).data("events");var d=$("#"+a.targetDivId);if(c==null||c.click==null){$(b).bind("click",function(){if($(d).args().autoHideOnClickOut!==false){piHidePopIn(a)}})}}jQuery.fn.centerToScreen=function(){return this.each(function(){var k=$(this).width();var e=$(this).height();var d=$(window).width();var a=d/2;var b=$(window).height();var c=b/2;var g=$(document).scrollLeft();var h=$(document).scrollTop();var j=c+h-(e/2);var f=a+g-(k/2);$(this).css({top:j+"px"});$(this).css({left:f+"px"})})};jQuery.fn.setAutoEllipseDomain=function(a){$(this).each(function(){var c=$.trim($(this).html());$(this).html("");$(this).show();if(a==null||a==undefined){a=$(this).width()}var e=document.createElement("label");$(e).attr("title",c);var h=c.split(".",2)[1];if(h==undefined){h=""}$(e).html(c);$(this)[0].appendChild(e);var g=$(e).width();if(g>=a){var d=10;var f;$(e).html("");while(e.offsetWidth<a&&d<c.length){var b=c.substr(0,d)+"..."+h;$(e).html(b);d++;g=e.offsetWidth;if(g>a){break}f=b}$(e).html(f)}})};function reloadPage(){document.body.style.cursor="wait";var a=location.toString().replace(window.location.hash,"");document.location.replace(a)}jQuery.fn.mergeArgs=function(a){if(a&&a!=null){var b;for(b in a){$(this).args(b,a[b])}}return $(this).args()};jQuery.fn.rebind=function(b,a){$(this).unbind(b).bind(b,a);return this};function formatCurrency(f,b,h,d,m,j){if(b===undefined){b="$"}if(h===undefined){h=2}if(d===undefined){d="."}if(m===undefined){m=","}if(j===undefined){j=true}function g(n,p,o){var q=""+n;while(q.length<p){q=o+q}return q}f=f.toString().replace(/\$|\,/g,"");if(isNaN(f)){f="0"}var c=Math.pow(10,h);var l=(f==(f=Math.abs(f)));f=Math.floor(f*c+0.50000000001);var a=(f%c);f=Math.floor(f/c).toString();a=g(a,h,"0");for(var e=0;e<Math.floor((f.length-(1+e))/3);e++){f=f.substring(0,f.length-(4*e+3))+m+f.substring(f.length-(4*e+3))}var k=(((l)?"":"-")+f);if(h>0){k=k+d+a}if(j){k=b+k}else{k=k+b}return k}jQuery.fn.onenter=function(a){$(this).live("keypress",function(b){if((b.which&&b.which==13)||(b.keyCode&&b.keyCode==13)){a()}});return this};function LogFastballPageEvent(a,c,d){var b=new fbiEventObject(new Object(),"click",a,"");b.AddUserInput(c,d);fbiRecordFastballEvent(b)}jQuery.fn.validateDomainNames=function(b){var a=$(this).val();if(a.length==0){b("Enter a domain name to search.");return false}return true};function LogFastballEvent(a,b,c){LogFastballPageEvent(a,b,c)}function stripSpecialCharacters(b){var a=b.replace(/\s*/g,"").replace(/[^a-zA-Z0-9-\s.]+/g,"");return a}jQuery.fn.stripSpecialCharacters=function(){$(this).val(stripSpecialCharacters($(this).val()))};</script>
+    <script type="text/javascript">!function(a){function c(a,b,c){var d=c.replace("px","");if(b.length>6){var e=d-4;$(a).css({"font-size":e+"px"})}else $(a).css({"font-size":c});$(a).val(b)}function e(b,c,d){a(c).length>0&&a(d).css({display:"none"})}function f(b,c){a(c).hasClass("stoggledown")?a(c).html("&#9650;").removeClass("stoggledown").addClass("stoggleup"):a(c).html("&#9660;").removeClass("stoggleup").addClass("stoggledown"),a(b).toggle()}function g(b,c,d,e,g){var h=document.layers?c.which:document.all?event.keyCode:document.getElementById?c.keyCode:0;a(e).is(":hidden")&&f(e,g);var i=a(d);if(h!==a.ui.keyCode.UP&&h!==a.ui.keyCode.DOWN){var j=i.val();a(e).is(":hidden")&&f(e,g),IntialTLD?IntialTLD=!1:a(e+" li").each(function(){a(this).html().indexOf(j)>=0?a(this).removeClass("tldhidden").addClass("tldshown").show():a(this).removeClass("tldshown").addClass("tldhidden").hide()})}}function h(b,c,d,e,f){var g=document.layers?c.which:document.all?event.keyCode:document.getElementById?c.keyCode:0,h=a(".t-hilite");(g===a.ui.keyCode.DOWN||g===a.ui.keyCode.UP)&&(0===h.length?a("li.tldshown").eq(0).addClass("t-hilite"):g===a.ui.keyCode.DOWN?a("li.t-hilite").removeClass("t-hilite").nextAll(":visible").eq(0).addClass("t-hilite"):a("li.t-hilite").removeClass("t-hilite").prevAll(":visible").eq(0).addClass("t-hilite"),null===a("li.t-hilite").html()||a(f).val(a(".t-hilite").html()))}a.gdhpSearchUI=function(){},a.gdhpSearchUI.defaults={searchUrl:null,idnUrl:null,domainInputId:"#searchDomainName",tldInputId:"#searchTldName",tldToggleId:"#searchTldToggle",tldListId:"#searchTldList",searchButton:"#searchButton",tldListHighlightColor:"#E4EFC7",domainInputLabelText:"Search for a new domain",initialTld:!0,focusOnLoad:!0},a.fn.gdhpDomainSearch=function(b){var d=a.extend({},a.gdhpSearchUI.defaults,b||{}),i=a(d.tldInputId).css("font-size"),j=d.domainInputId+"-label";a("<div id='"+j.replace("#","")+"' unselectable='on'>"+d.domainInputLabelText+"</div>").appendTo(a(d.domainInputId).parent()),a("<style type='text/css'> .t-hilite{ background-color:"+d.tldListHighlightColor+"} </style>").appendTo("head"),a(j).bind("click",function(){a(d.domainInputId).focus()}).addClass(a(d.domainInputId).attr("class")).css({position:"absolute",color:"#CCCCCC",top:"0px",left:"0px"}),d.focusOnLoad&&a(d.domainInputId).focus(),a(d.domainInputId).bind("paste",function(a){e(a,d.domainInputId,j)}).bind("click",function(a){e(a,d.domainInputId,j)}).bind("keypress",function(a){e(a,d.domainInputId,j)}).bind("focus",function(){"Start your domain search"===a(this).val()&&a(this).val("")}).bind("blur",function(){""===a(d.domainInputId).val()&&a(j).css({display:"block"})}),a(d.tldInputId).focus(function(){f(d.tldListId,d.tldToggleId)}).keyup(function(a){g(this,a,d.tldInputId,d.tldListId,d.tldToggleId)}).keydown(function(a){h(this,a,d.tldListId,d.tldToggleId,d.tldInputId)}),a(d.tldToggleId).html("&#9660;").addClass("stoggledown").bind("click",function(){f(d.tldListId,d.tldToggleId)}),a(d.tldListId+" li").each(function(){a(this).bind("click",function(){c(d.tldInputId,this.innerHTML,i),f(d.tldListId,d.tldToggleId)}).bind("mouseover mouseout",function(){a(this).toggleClass("t-hilite")})}),IntialTLD=d.initialTld,a(d.domainInputId).keypress(function(b){b&&b.which===a.ui.keyCode.ENTER&&(a(d.domainInputId),a(d.tldInputId))}),a(d.searchButton).click(function(b){var c=a(d.domainInputId),e=a(d.tldInputId);domainSearch(d.searchUrl,d.idnUrl,c,e,d.tldListId),b.preventDefault(),b.stopPropagation()})}}(jQuery);var gdhpCaptcha={showCaptcha:function(a,b,c,d,e,f,g){if(jsonModal.display(a,"gdhp-captcha-modal"),$("#captchaContentDiv").length>0){$(".captcha-submt-btn").unbind("click").bind("click",function(){gdhpCaptcha.validateCaptcha(b,c,d,e,f,g)}),$(".gdhp-captcha-input").unbind("keypress").bind("keypress",function(a){a&&13===a.which&&gdhpCaptcha.validateCaptcha(b,c,d,e,f,g)});var h=new Object,i=b;i+=i.indexOf("?")>=0?"&":"?",i+="TargetDivID=captchaContentDiv",h.url=i,h.success=function(a,b){getJsonCallback(a,b),$("#captcha").show()},h.timeout=1e4,$(this).args(h),$(this).jsonGet()}},validateCaptcha:function(a,b,c,d,e,f){var g=new Object,h=a,i=$("#captchaInputDiv");h+=h.indexOf("?")>=0?"&":"?",h+="TargetDivID=captchaContentDiv&cac="+i.val(),g.url=h,g.success=function(a,g){a.Properties.IsSolved?(modal.close("gdhp-captcha-modal",!0),$(this).gdhpBulkSearch("search",{bulkSearchUrl:b,domains:c,tlds:d,searchtype:e,pageSource:f})):(alertBox.showAlertErrorBox("107"),getJsonCallback(a,g),__initiateCaptcha=!1,i.focus())},g.timeout=1e4,$(this).args(g),$(this).jsonGet()}};$("[data-ci]").click(function(a){$this=$(this),FastballEvent_MouseClick(a,$this.attr("data-ci"),$(this)[0],"a"),fbiLibCheckQueue()});var jsonModal={display:function(a,b,c,d,e){if($("#"+b).length<=0){var f=$("<div>").attr("id",b).css({position:"absolute"}).appendTo("body");"undefined"!==d&&f.width(d),"undefined"!==e&&f.height(e)}jsonContent.load(b,a,!1),modal.display(b,"popUpDiv ui-widget-overlay",".modal_close_btn",c)}},jsonContent={load:function(a,b,c){0===$("#"+a).html().length?null!==b&&(b+=b.indexOf("?")>=0?"&":"?",b+="callback=jsonContent._fill&targetDivId="+a,jsonContent._call("jsonContent._fill",b,c)):this._fill({TargetDivID:a})},_call:function(a,b,c){$.ajax({dataType:"jsonp",jsonp:a,url:b,async:c})},_fill:function(a){if(null!==a){var b=a.TargetDivID;null!==a.Html&&$("#"+b).html(a.Html)}}},globalModal={display:function(a){$(a).modal({overlayId:"g-modal-overlay",close:!0,autoPosition:!0}),$("#g-modal-overlay").bind("click",function(){$.modal.close()})}},modal={display:function(a,b,c,d){if($("#curtain").length<=0){var e=$("<div>").attr("id","curtain").addClass(b).css({"z-index":getMaxZ(),display:"none",filter:"alpha(opacity=50)"}).height($(document).height()).width($(document).width()).bind("click",function(){d?modal.remove(a):modal.close(a)}).appendTo("body").fadeIn("slow");$(c).live("click",function(){d?modal.remove(a):modal.close(a)}),$(window).bind("resize scroll",function(){e.height($(document).height()).width($(document).width())}),$("body").css("overflow-x","hidden\0/IE9")}else $("#curtain").css("z-index",getMaxZ()-1).height($(document).height()).width($(document).width()).bind("click",function(){d?modal.remove(a):modal.close(a)}).show(),$(c).live("click",function(){d?modal.remove(a):modal.close(a)}),$("body").css("overflow-x","hidden\0/IE9");modal._center(a)},_center:function(a){var b=$(window).width()/2+$(document).scrollLeft()-$("#"+a).width()/2,c=$(window).height()/2+$(document).scrollTop()-$("#"+a).height()/2;0>c&&(c=0),0>b&&(b=0),$("#"+a).css({top:c+"px",left:b+"px","z-index":getMaxZ()+100}).show()},close:function(a){$("#"+a).hide(),$("#curtain").css("filter","alpha(opacity=50)").fadeOut("fast",function(){$(this).remove()}),$(window).unbind("resize"),$("body").css("overflow-x","auto\0/IE9")},remove:function(a){var b=$("#"+a),c=b.find("iframe");c.length&&c.attr("src","");try{setTimeout(function(){b.remove(),$("#curtain").css("filter","alpha(opacity=50)").fadeOut("fast",function(){$(this).remove()}),$(window).unbind("resize"),$("body").css("overflow-x","auto\0/IE9")},100)}catch(d){}}},alertBox={showAlertErrorBox:function(a){var b=a,c=$("#gdhp-errors\\.error\\["+a+"\\]");c.length>0&&(b=c.html()),$("#gdhp-alert-box").length<=0&&$("<div>").attr("id","gdhp-alert-box").addClass("gdhp-alert-box").css({display:"none",position:"absolute",width:"300px"}).appendTo("body"),$("#gdhp-alert-box").html("<div class='g-alert g-err'><a href='#' class='g-close-notify' onclick='alertBox.closeAlertErrorBox();return false;'><span>Close</span></a><p>"+b+"</p></div>"),alertBox._center("gdhp-alert-box")},closeAlertErrorBox:function(){$("#gdhp-alert-box").html("").css({display:"none"})},_center:function(a){var b=$(window).width()/2+$(document).scrollLeft()-$("#"+a).width()/2,c=$(window).height()/2+$(document).scrollTop()-$("#"+a).height()/2;0>c&&(c=0),0>b&&(b=0),$.browser.safari&&"523.12.9"===$.browser.version?$("#"+a).css({top:"200px",left:"320px","z-index":getMaxZ()+100,display:"block"}):$("#"+a).css({top:c+"px",left:b+"px","z-index":getMaxZ()+100,display:"block"})}},solazy={};!function(){function j(){b.each(function(){k($(this))})}function k(a){var b=a,c=b.attr("data-sl-condition");if("undefined"!=typeof c){var d=c.split("|"),e=d[1].split(":");b[0]["sl-condition-property"]=e[0],b[0]["sl-condition-css-value"]=e[1],b[0]["sl-condition-target"]=$(d[0])}}var b,c,h,d=750,e=0,f=100,g=300,i=!1;$(document).ready(function(){b=$(".solazy"),c=$(window);var a=$("div,ul"),d=c.add(a);j(),$('[data-sl-type="request"]').each(function(){b=b.not($(this))}),setTimeout(function(){solazy.check()},500),$(d).bind("scroll",function(){i||(solazy.check(),clearInterval(h),h=setInterval(function(){solazy.check(),clearInterval(h),i=!1},g)),i=!0})}),$.extend(solazy,{check:function(){var a=c.scrollTop(),d=a+c.height();b.each(function(){var b=$(this),c=b.offset().top,e=b.height(),g=!0;"undefined"!=typeof b[0]["sl-condition-target"]&&(g=!1,$(b[0]["sl-condition-target"]).css(b[0]["sl-condition-property"])===b[0]["sl-condition-css-value"]&&(g=!0)),c>a-e-f&&d+f>c&&g&&solazy.loadObject(b)})},addLazyOjects:function(a){var c=$(a).find(".solazy");c.each(function(){k($(this))}),b=b.add(c)},loadObject:function(a){var c=a.attr("data-sl-src"),f=a.attr("data-sl-alt");b=b.not(a);var g=$('<img src="'+c+'" alt="'+f+'" />').css({opacity:0,width:"100%",height:"100%"});g.load(function(){g.appendTo(a),setTimeout(function(){g.animate({opacity:1},d,function(){a.css("background-image","none")})},e)})}})}(solazy.$);</script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&'),
+                     qs = [],
+                     date = new Date();
+        for(var i = 0; i < hashes.length; i++) {
+          var hash = hashes[i].split('=');
+          qs.push(hash[0]);
+          qs[hash[0]] = hash[1];
+        }
+      
+        delayLoader.onDelayLoadComplete(function() {
+          $('#shareme').fosShare({});
+        }, 2000);
+      });
+      
+>>>>>>> green buddy hero and templates:build/cds/sales/homepage/default.en-us.html
     </script>
   </body>
 </html>
