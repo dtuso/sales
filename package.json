@@ -20,6 +20,7 @@
     "gulp-concat": "^2.2.0",
     "gulp-data": ">=1.0.0",
     "gulp-debug": "~0.3.0",
+    "gulp-ext-replace": "^0.1.0",
     "gulp-front-matter": "^1.0.0",
     "gulp-if": "^1.1.0",
     "gulp-jade": ">=0.8.0",
