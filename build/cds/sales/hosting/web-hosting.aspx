@@ -154,11 +154,6 @@ h3 {
     bottom: 360px;
   }
 }
-@media (min-width: 992px) {
-  #choose-platform .or-container:after {
-    bottom: 200px;
-  }
-}
     </style><!--[if lt IE 9]>
     <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
     <link href="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy.min.html" id="respond-proxy" rel="respond-proxy">
@@ -187,7 +182,7 @@ h3 {
     <section id="marquee"> 
       <atlantis:webstash type="css">
         <style>
-          .marquee { background: url([@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Marquee.jpg) no-repeat top center;); }
+          .marquee { background: url([@T[link:<imageroot />]@T]fos/mike/img/hosting/bg-marquee-V10.jpg) no-repeat top center;); }
           
         </style>
       </atlantis:webstash>
@@ -814,40 +809,30 @@ h3 {
       
       $("#midPageNav").on("click", "a", scroll_if_anchor);
     </script>
-    <section id="speed-chart" class="tile-section">
-      <div class="container">
-        <style>
-          #speed-chart { min-height: 400px; }
-          #speed-chart h3 { margin: 50px auto; text-align: center; }
-          #speed-chart img { margin: 50px auto; display: block; }
-          #speed-chart p {text-align: right; }
-        </style>
-        <div class="speed-chart">
-          <h3>Fast Sites = Happy Visitors</h3>
-          <p>July 2014</p><img src="[@T[link:<imageroot />]@T]fos/mike/img/pro-wp-speed.png">
-          <div class="speed-text"><img></div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="col-sm-2 text-center"><img src="[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Chart_Polygon.png"></div>
-        <div style="padding-top: 50px;" class="col-sm-10">
-          <div>
-            <h4>Did you know a 1 second delay in your website page load time can cause a <mark>7% reduction</mark> in conversion?</h4>
-          </div>
-          <div><a class="btn btn-default-dark">SEE IT IN ACTION</a></div>
-        </div>
-      </div>
-    </section>
     <section id="one-click-install" class="features tile-section one-click-wrapper">
       <div class="container">
         <div class="row">
           <div class="col-sm-6 one-click-left">
-            <h2>APP INSTALLS JUST A CLICK AWAY</h2>
-            <p>Our one-click install process has all your Web hosting app needs covered, making it easy to build, ehnhance and manage your site.</p>
-            <div class="col-sm-12">
-              <div class="include-check-black">Need a content management system (CMS) for your Website? Joomla and Drupal are just a click away.</div>
-              <div class="include-check-black">Maybe you want to sell products on your webite.  Try Magento with one-click.</div>
-            </div>
+             
+            ##if(activeLanguageAny([en-US]))
+             
+            <h2>[@L[cds.sales/hosting/web-hosting-rebrand:hostingAppsRebrand]@L]</h2> 
+            ##else
+             
+            <h2>[@L[cds.sales/hosting/web-hosting-rebrand:hostingApps]@L]</h2> 
+            ##endif
+             
+             
+            ##if(activeLanguageAny([en-US]))
+             
+            <p>[@L[cds.sales/hosting/web-hosting-rebrand:hostingAppsDescRebrand]@L]</p>
+            <p>[@L[cds.sales/hosting/web-hosting-rebrand:hostingAppsChoiceRebrand]@L]</p> 
+            ##else
+             
+            <p>[@L[cds.sales/hosting/web-hosting-rebrand:hostingAppsDesc]@L]</p>
+            <p>[@L[cds.sales/hosting/web-hosting-rebrand:hostingAppsChoice]@L]</p> 
+            ##endif
+             
             <!--ul(style="list-style")-->
             <!--  li-->
             <!--    span.uxicon.uxicon-checkmark(aria-hidden="true")-->
@@ -862,31 +847,120 @@ h3 {
         </div>
       </div>
     </section>
+    <section id="speed-chart" class="tile-section">
+      <div class="container">
+        <style>
+          #speed-chart { min-height: 400px; }
+          #speed-chart h3 { margin: 50px auto; text-align: center; }
+          #speed-chart img { margin: 50px auto; display: block; }
+          #speed-chart p {text-align: right; }
+        </style>
+        <div class="speed-chart">
+           
+          ##if(activeLanguageAny([en-US]))
+           
+          <h3>[@L[cds.sales/hosting/web-hosting-rebrand:fastWebRebrand]@L]</h3> 
+          ##else
+           
+          <h3>[@L[cds.sales/hosting/web-hosting-rebrand:fastWeb]@L]</h3> 
+          ##endif
+           
+          <p>July 2014</p><img src="[@T[link:<imageroot />]@T]fos/mike/img/pro-wp-speed.png">
+          <div class="speed-text"><img></div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="col-sm-2 text-center"><img src="[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Chart_Polygon.png"></div>
+        <div style="padding-top: 50px;" class="col-sm-10">
+          <div>
+             
+            ##if(activeLanguageAny([en-US]))
+             
+            <h4>[@L[cds.sales/hosting/web-hosting-rebrand:conversionRebrand]@L]</h4> 
+            ##else
+             
+            <h4>[@L[cds.sales/hosting/web-hosting-rebrand:conversion]@L]</h4> 
+            ##endif
+             
+          </div>
+          <div>
+             
+            ##if(activeLanguageAny([en-US]))
+             <a class="btn btn-default-dark">[@L[cds.sales/hosting/web-hosting-rebrand:seeWhatRebrand]@L]</a> 
+            ##else
+             <a class="btn btn-default-dark">[@L[cds.sales/hosting/web-hosting-rebrand:learnMore]@L]</a> 
+            ##endif
+             
+          </div>
+        </div>
+      </div>
+    </section>
     <section id="features" data-mid-nav-title="Features" class="key-benefits-wrap tile-section">
       <div style="background-image: url(); background-color: #fff;">
         <div class="container">
           <div class="row">
             <div class="col-sm-4 key-benefit">
-              <div class="key-benefits-img-wrap"><img src="[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_Group_ScalableResources.png" class="key-benefits-img"></div>
-              <h3 class="key-benefits-title">Scalable resources on-demand</h3>
-              <div class="key-benefits-text">When you need more power, level up your CPU, memory, entry processes and I/O with just a click. Access the Stats & Usage dashboard for real-time visibility to your sites’ resource usage. Even get alerts as you approach your limits so you can react quickly and keep your site running at top speed.</div>
+              <div class="key-benefits-img-wrap"><img src="[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_Group_ScalableResources.png" class="key-benefits-img"></div> 
+              ##if(activeLanguageAny([en-US]))
+               
+              <h3 class="key-benefits-title">[@L[cds.sales/hosting/web-hosting-rebrand:moreResourcesRebrand]@L]</h3> 
+              ##else
+               
+              <h3 class="key-benefits-title">[@L[cds.sales/hosting/web-hosting-rebrand:moreResources]@L]</h3> 
+              ##endif
+               
+              ##if(activeLanguageAny([en-US]))
+               
+              <p class="key-benefits-text">[@L[cds.sales/hosting/web-hosting-rebrand:moreResourcesDescRebrand]@L]</p> 
+              ##else
+               
+              <p class="key-benefits-text">[@L[cds.sales/hosting/web-hosting-rebrand:moreResourcesDesc]@L]</p> 
+              ##endif
+               
             </div>
             <div class="col-sm-4 key-benefit">
               <div class="key-benefits-img-wrap"><img src="[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_Group_Security.png" class="key-benefits-img"></div>
-              <h3 class="key-benefits-title">Award-winning security keeps your site safe</h3>
-              <div class="key-benefits-text">Keeping a website secure is a full time job. That’s why our security team is on the job 24/7, monitoring your site for suspicious activity and protecting it against brute force and DDoS attacks.</div>
+              <h3 class="key-benefits-title">[@L[cds.sales/hosting/web-hosting-rebrand:awardSecurity]@L]</h3> 
+              ##if(activeLanguageAny([en-US]))
+               
+              <p class="key-benefits-text">[@L[cds.sales/hosting/web-hosting-rebrand:awardSecurityDescRebrand]@L]</p> 
+              ##else
+               
+              <p class="key-benefits-text">[@L[cds.sales/hosting/web-hosting-rebrand:awardSecurityDesc]@L]</p> 
+              ##endif
+               
             </div>
             <div class="col-sm-4 key-benefit">
-              <div class="key-benefits-img-wrap"><img src="[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_Group_WhatIsHosting.png" class="key-benefits-img"></div>
-              <h3 class="key-benefits-title">What is Hosting?</h3>
-              <div class="key-benefits-text">Make sure friends, family and customers can see your website. Hosting is what makes it possible for others to view your website over the Internet. Without it, you’re the only one who will ever get a look. GoDaddy serves up:
-                <ul>
-                  <li>One-click set-up</li>
-                  <li>Unlimited storage and bandwidth</li>
-                  <li>Scalability to fit your needs</li>
-                  <li>24/7 secure monitoring</li>
-                </ul>
-              </div>
+              <div class="key-benefits-img-wrap"><img src="[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_Group_WhatIsHosting.png" class="key-benefits-img"></div> 
+              ##if(activeLanguageAny([en-US]))
+               
+              <h3 class="key-benefits-title">[@L[cds.sales/hosting/web-hosting-rebrand:hostingQuestionRebrand]@L]</h3> 
+              ##else
+               
+              <h3 class="key-benefits-title">[@L[cds.sales/hosting/web-hosting-rebrand:hostingQuestion]@L]</h3> 
+              ##endif
+               
+              ##if(activeLanguageAny([en-US]))
+               
+              <p class="key-benefits-text">[@L[cds.sales/hosting/web-hosting-rebrand:hostingAnswerRebrand]@L]</p> 
+              ##else
+               
+              <p class="key-benefits-text">[@L[cds.sales/hosting/web-hosting-rebrand:hostingAnswer]@L]</p> 
+              ##endif
+               
+              <ul>
+                <li>[@L[cds.sales/hosting/web-hosting-rebrand:hostingAnswerList1]@L]</li> 
+                ##if(activeLanguageAny([en-US]))
+                 
+                <li>[@L[cds.sales/hosting/web-hosting-rebrand:hostingAnswerList2Rebrand]@L]</li> 
+                ##else
+                 
+                <li>[@L[cds.sales/hosting/web-hosting-rebrand:hostingAnswerList2]@L]</li> 
+                ##endif
+                 
+                <li>[@L[cds.sales/hosting/web-hosting-rebrand:hostingAnswerList3]@L]</li>
+                <li>[@L[cds.sales/hosting/web-hosting-rebrand:hostingAnswerList4]@L]</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -895,7 +969,7 @@ h3 {
     <section id="compare" data-mid-nav-title="Compare" class="compare-chart-pro section-pro bg-pro-gray tile-section">
       <div style="background: #fff;" class="container">
         <div class="text-center">
-          <h2>Hosting Plans</h2><a href="javascript:comparePlans('cpanel-tab')" class="btn btn-default btn-lg">Cpanel</a><a href="javascript:comparePlans('parallels-tab')" class="btn btn-default btn-lg">Parallels</a>
+          <h2>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-tab-title-11166]@L]</h2><a href="javascript:comparePlans('cpanel-tab')" class="btn btn-default btn-lg">Cpanel</a><a href="javascript:comparePlans('parallels-tab')" class="btn btn-default btn-lg">Parallels</a>
         </div>
         <div id="cpanel-tab" class="table-responsive">
           <style>.compare-table {
@@ -926,6 +1000,9 @@ h3 {
   text-align: left;
   border-left: 0;
   padding-left: 20px;
+}
+.compare-table tr td:nth-child(3n+3) {
+  background-color: #f3f3f3;
 }
 .compare-table thead tr:first-child td {
   border-style: none;
@@ -1087,79 +1164,338 @@ height: 27px;
             <thead>
               <tr>
                 <td style="width: 40%;">
-                  <h2>cPanel Plans</h2>
+                  <h2>[@L[cds.sales/hosting/web-hosting-rebrand:cPanelTitle]@L]</h2>
                 </td>
                 <td style="width: 20%; border-bottom: 8px solid #f47f00;">
-                  <h4>economy</h4>
+                  <h4>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-economy-11166]@L]</h4>
                 </td>
-                <td style="width: 20%; border-bottom: 8px solid #7abf4b;">
-                  <h4>deluxe</h4>
+                <td style="width: 20%; border-bottom: 8px solid #7abf4b; background-color: transparent;">
+                  <h4>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-deluxe-11166]@L]</h4>
                 </td>
                 <td style="width: 20%; border-bottom: 8px solid #58585a;">
-                  <h4>ultimate</h4>
+                  <h4>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-ultimate-11166]@L]</h4>
                 </td>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Free Domain with anual plan restrictions apply</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-free-domain-11166]@L]</td>
                 <td><span class='icon gray-check-icon'></span></td>
-                <td>yes </td>
-                <td>yes</td>
-              </tr>
-              <tr>
-                <td>Websites</td>
-                <td>1</td>
-                <td>Unlimited</td>
-                <td>Unlimited</td>
-              </tr>
-              <tr>
-                <td>Disk Space</td>
-                <td>100GB</td>
-                <td>Unlimited</td>
-                <td>Unlimited</td>
-              </tr>
-              <tr>
-                <td>Free Domain with anual plan restrictions apply</td>
                 <td><span class='icon gray-check-icon'></span></td>
-                <td>yes </td>
-                <td>yes</td>
+                <td><span class='icon gray-check-icon'></span>  </td>
+                <!-- [@L[cds.sales/gd/hosting/web-hosting:compare]@L]-->
               </tr>
               <tr>
-                <td>Websites</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-11166]@L]</td>
                 <td>1</td>
-                <td>Unlimited</td>
-                <td>Unlimited</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
               </tr>
               <tr>
-                <td>Disk Space</td>
-                <td>100GB</td>
-                <td>Unlimited</td>
-                <td>Unlimited</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-disk-space-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-disk-space-economy-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
               </tr>
               <tr>
-                <td>Free Domain with anual plan restrictions apply</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-monthly-bandwidth-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-monthly-bandwidth-unlimited-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-monthly-bandwidth-unlimited-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-monthly-bandwidth-unlimited-11166]@L]</td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-core-features-ftp-users-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-core-features-ftp-users-economy-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-core-features-ftp-users-economy-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/hosting/web-hosting-rebrand:msqDatabase]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-databases-mysql-economy-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-databases-mysql-deluxe-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-databases-mysql-ultimate-11166]@L]</td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-databases-database-backup-11166]@L]</td>
                 <td><span class='icon gray-check-icon'></span></td>
-                <td>yes </td>
-                <td>yes</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
               </tr>
               <tr>
-                <td>Websites</td>
-                <td>1</td>
-                <td>Unlimited</td>
-                <td>Unlimited</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-databases-direct-database-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
               </tr>
               <tr>
-                <td>Disk Space</td>
-                <td>100GB</td>
-                <td>Unlimited</td>
-                <td>Unlimited</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-dns-management-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-domains-dns-management-unlimited-11166]@L]</td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-access-www-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-external-domains-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-subdomain-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-subdomain-economy-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-multiple-web-sites-11166]@L]</td>
+                <td>-</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-domains-multiple-web-sites-unlimited-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-domains-multiple-web-sites-unlimited-11166]@L]</td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-alias-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-cpanel-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-cpanel-plans-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-cpanel-plans-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-cpanel-plans-11166]@L]</td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-easy-application-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-phpmyadmin-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-cloud-linux-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-cageFS-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-password-protect-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-ssh-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-ftp-over-ssl-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-raw-access-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-site-statistics-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-premium-dns-11166]@L]</td>
+                <td>-</td>
+                <td>-</td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-ssl-cert-11166]@L]</td>
+                <td>-</td>
+                <td>-</td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-general-features-support-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-cron-jobs-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-general-features-file-manager-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-file-image-magick-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-150-free-apps-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-general-features-drupal-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-general-features-wordpress-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-magento-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-general-features-phpbb-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-language-support-php-54-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-language-support-php-ini-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-language-support-perl-india-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-language-support-python-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-addresses-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-addresses-economy-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-addresses-deluxe-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-addresses-ultimate-11166]@L]</td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-storage-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-storage-economy-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-storage-deluxe-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-storage-ultimate-11166]@L]</td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-webmail-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-email-features-pop-3-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-email-features-smtp-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-email-features-imap-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-forwarding-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-auto-responders-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-catch-all-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-fraud-virus-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-sender-id-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-email-privacy-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
               </tr>
             </tbody>
             <script type="text/javascript">
               $(window).load(function() {
                 var chart = $(this).closest(".compare-table");
-                $("#cpanel-table tr:gt(5)").hide();
+                $("#cpanel-table tr:gt(9)").hide();
                });
             </script>
           </table>
@@ -1169,79 +1505,350 @@ height: 27px;
             <thead>
               <tr>
                 <td style="width: 40%;">
-                  <h2>Plesk Plans</h2>
+                  <h2>[@L[cds.sales/hosting/web-hosting-rebrand:windowsTitle]@L]</h2>
                 </td>
                 <td style="width: 20%; border-bottom: 8px solid #f47f00;">
-                  <h4>economy</h4>
+                  <h4>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-economy-11166]@L]</h4>
                 </td>
-                <td style="width: 20%; border-bottom: 8px solid #7abf4b;">
-                  <h4>deluxe</h4>
+                <td style="width: 20%; border-bottom: 8px solid #7abf4b; background-color: transparent;">
+                  <h4>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-deluxe-11166]@L]</h4>
                 </td>
                 <td style="width: 20%; border-bottom: 8px solid #58585a;">
-                  <h4>ultimate</h4>
+                  <h4>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-ultimate-11166]@L]</h4>
                 </td>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Free Domain with anual plan restrictions apply</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-free-domain-11166]@L]</td>
                 <td><span class='icon gray-check-icon'></span></td>
-                <td>yes </td>
-                <td>yes</td>
-              </tr>
-              <tr>
-                <td>Websites</td>
-                <td>1</td>
-                <td>Unlimited</td>
-                <td>Unlimited</td>
-              </tr>
-              <tr>
-                <td>Disk Space</td>
-                <td>100GB</td>
-                <td>Unlimited</td>
-                <td>Unlimited</td>
-              </tr>
-              <tr>
-                <td>Free Domain with anual plan restrictions apply</td>
                 <td><span class='icon gray-check-icon'></span></td>
-                <td>yes </td>
-                <td>yes</td>
+                <td><span class='icon gray-check-icon'></span>  </td>
+                <!-- [@L[cds.sales/gd/hosting/web-hosting:compare]@L]-->
               </tr>
               <tr>
-                <td>Websites</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-11166]@L]</td>
                 <td>1</td>
-                <td>Unlimited</td>
-                <td>Unlimited</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
               </tr>
               <tr>
-                <td>Disk Space</td>
-                <td>100GB</td>
-                <td>Unlimited</td>
-                <td>Unlimited</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-disk-space-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-disk-space-economy-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
               </tr>
               <tr>
-                <td>Free Domain with anual plan restrictions apply</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-monthly-bandwidth-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-monthly-bandwidth-unlimited-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-monthly-bandwidth-unlimited-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-monthly-bandwidth-unlimited-11166]@L]</td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-ftp-users-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-ftp-users-50-unlimited-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-ftp-users-50-unlimited-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-ftp-users-50-unlimited-11166]@L]</td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-databases-sql2012-11166]@L]</td>
                 <td><span class='icon gray-check-icon'></span></td>
-                <td>yes </td>
-                <td>yes</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
               </tr>
               <tr>
-                <td>Websites</td>
-                <td>1</td>
-                <td>Unlimited</td>
-                <td>Unlimited</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-databases-mssql-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-databases-mssql-economy-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-databases-mssql-deluxe-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-databases-mssql-ultimate-11166]@L]</td>
               </tr>
               <tr>
-                <td>Disk Space</td>
-                <td>100GB</td>
-                <td>Unlimited</td>
-                <td>Unlimited</td>
+                <td>[@L[cds.sales/hosting/web-hosting-rebrand:msqDatabase]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-databases-mysql-economy-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-databases-mysql-deluxe-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-databases-mysql-ultimate-11166]@L]</td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-databases-database-backup-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-databases-direct-database-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-databases-microsoft-access-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-dns-management-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-domains-dns-management-unlimited-11166]@L]</td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-access-www-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-external-domains-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-subdomain-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-subdomain-economy-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-multiple-web-sites-11166]@L]</td>
+                <td>-</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-domains-multiple-web-sites-unlimited-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-domains-multiple-web-sites-unlimited-11166]@L]</td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-alias-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-general-features-windows-server-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-general-features-plesk-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-ftp-over-ssl-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-raw-access-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-site-statistics-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-premium-dns-11166]@L]</td>
+                <td>-</td>
+                <td>-</td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-ssl-cert-11166]@L]</td>
+                <td>-</td>
+                <td>-</td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-general-features-support-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-general-features-scheduled-tasks-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-general-features-file-manager-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-general-features-web-deploy-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-general-features-webmatrix-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-general-features-free-applications-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-general-features-drupal-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-general-features-wordpress-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-general-features-joomla-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-language-support-server-side-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-language-support-asp-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-language-support-asp-net-4-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-language-support-asp-net-2-3-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-language-support-asp-net-ajax-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-language-support-php5-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-language-support-cgi-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-language-support-asp-mv3-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-language-support-silverlight-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-language-support-perl-india-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-addresses-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-addresses-economy-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-addresses-deluxe-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-addresses-ultimate-11166]@L]</td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-storage-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-storage-economy-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-storage-deluxe-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-storage-ultimate-11166]@L]</td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-webmail-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-forwarding-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-auto-responders-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-catch-all-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-fraud-virus-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-sender-id-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-email-privacy-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare]@L]</td>
               </tr>
             </tbody>
             <script type="text/javascript">
               $(window).load(function() {
                 var chart = $(this).closest(".compare-table");
-                $("#parallels-table tr:gt(2)").hide();
+                $("#parallels-table tr:gt(9)").hide();
                });
             </script>
           </table>
@@ -1464,7 +2071,8 @@ height: 27px;
 }
 @media (min-width: 992px) {
   .or-container:after {
-    left: 121%
+    left: 121%;
+    bottom: 50%;
   }
 }
 
@@ -1535,13 +2143,22 @@ height: 27px;
 .two-up-speech-shape.two-up-speech-shape-white:after {
   background-color: #fff;
 }
+.two-up-speech-shape.two-up-speech-shape-yellow {
+  background-color: #ffde2d;
+}
+.two-up-speech-shape.two-up-speech-shape-yellow:before {
+  border-top-color: #ffde2d;
+}
+.two-up-speech-shape.two-up-speech-shape-yellow:after {
+  background-color: #ffde2d;
+}
       </style>
       <div id="choose-platform" class="two-up-title-wrap bg-green-new">
         <div>
           <div class="container">
             <div class="row">
               <div class="col-sm-12">
-                <h2 class="text-center two-up-title">Choose your platform</h2>
+                <h2 class="text-center two-up-title">[@L[cds.sales/hosting/web-hosting-rebrand:choosePlatform]@L]</h2>
               </div>
             </div>
           </div>
@@ -1552,8 +2169,8 @@ height: 27px;
               <div class="col-md-5 or-container col-sm-6  bg-green-official">
                 <div style="" class="two-up-text-wrap ">
                   <div class="text-center two-up-image"><img src="[@T[link:<imageroot />]@T]fos/mike/img/hosting/img-cpanel-linux.png" alt=""/></div>
-                  <h2 class="text-center">Cpanel for Linux</h2>
-                  <h3 class="text-center">Each Linux plan includes:</h3>
+                  <h2 class="text-center">[@L[cds.sales/hosting/web-hosting-rebrand:cPanelTitle2]@L]</h2>
+                  <h3 class="text-center">[@L[cds.sales/hosting/web-hosting-rebrand:linuxPlan]@L]</h3>
                   <div class="row">
                     <div class="col-sm-10">
                       <div class="include-check-black"><strong>cPanel:</strong> </br> Access all the hosting features and settings you need with this industry-standard control panel.</div>
@@ -1568,7 +2185,7 @@ height: 27px;
               <div class="col-md-5 col-md-offset-2 col-sm-6  bg-green-official-light">
                 <div style="" class="two-up-text-wrap ">
                   <div class="text-center two-up-image"><img src="[@T[link:<imageroot />]@T]fos/mike/img/hosting/img-Windows8.png" alt=""/></div>
-                  <h2 class="text-center">Plesk for Windows</h2>
+                  <h2 class="text-center">[@L[cds.sales/hosting/web-hosting-rebrand:choosePlatform]@L]</h2>
                   <h3 class="text-center">Each Windows plan includes:</h3>
                   <div class="row">
                     <div class="col-sm-10">
@@ -1594,7 +2211,7 @@ height: 27px;
         </div>
       </div>
     </section>
-    <section id="faq">
+    <section id="faq" class="tile-section">
       <style>.accordion-group {
   border-top: 2px solid #e8e8e8;
   border-bottom: 2px solid #e8e8e8;
@@ -1753,7 +2370,7 @@ height: 27px;
             <div class="row">
               <div class="col-md-5 or-container-none col-sm-6  bg-green-official-light">
                 <div style="" class="two-up-text-wrap ">
-                  <div class="two-up-speech-shape two-up-speech-shape-orange">
+                  <div class="two-up-speech-shape two-up-speech-shape-yellow">
                     <div class="shape-text">Website Builder</div>
                   </div>
                   <h2>Do-it-yourself with Website Builder. Hosting Included.</h2>
