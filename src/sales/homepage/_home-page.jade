@@ -90,7 +90,6 @@ block pageStyles
       }
       #domain-promo {padding-bottom:100px}
       .domain-promo-text{padding-top:80px;}
-      .domain-promo-image{padding-left:60px;}
       #domain-promo .text-center{color:#333;font-size:3.6rem;margin:50px 0 30px;text-transform:uppercase;}
       #domain-promo h1{display:inline;color:#333;}
       #domain-promo h3{font-size:3.4rem}
@@ -99,7 +98,8 @@ block pageStyles
       #why-godaddy .why-gd-prices{padding-top:40px}
       #why-godaddy .why-gd-support{padding-top:34px}
       #o365-promo{padding-bottom:105px}
-      .o365-promo-text ul{list-style-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAWCAYAAADAQbwGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QAAAAAAAD5Q7t/AAAACXBIWXMAAAsSAAALEgHS3X78AAABaElEQVQ4y53UsWoVQRSA4e9eJCCIZXCLVDZ2+giWlrGToIXiWk1hY2OVGAVTpchWTmWTwkZCVFRs7AxYpEtESRdGfAEhoKbIBG7W3bu798DC7J6Z//x7mJmRGaOsiodYwQ98z8+30Yyw8zjApVrq9XhWwQYYrA42LKtiLv/mQi21FUNanMXwXgOMk34aZDjF7kMM6QYMNWyzWz4d9DbsY3fGsKyKq2VVXJjCvNNi92TyZVRWxTye4y5+YRUvYkhHE8XOYR+Xa7DPMaTrkx/G2M4wmMcG9sqqWCqr4rQltxtgZ3o3aXgFO7jYsGAXj3ORTjsYx5D2sYS/DcBreNdi97Sp0WOIIb3NJn1jJ4b0qRWYoWvY7AlcbkvUN/Z9fO1h974XMIb0G4v4OQX4bFq1/45eDOkQN3HUMH8XbwYBM/QLHjSkVmJI/wYDM/Ql1mt2Wzqi67Z5hI95vNZl1wmMIf3BrWz2qgsGx1qqaedhoYAzAAAAAElFTkSuQmCC)}
+      .o365-promo-text ul{list-style-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAWCAYAAADAQbwGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QAAAAAAAD5Q7t/AAAACXBIWXMAAAsSAAALEgHS3X78AAABaElEQVQ4y53UsWoVQRSA4e9eJCCIZXCLVDZ2+giWlrGToIXiWk1hY2OVGAVTpchWTmWTwkZCVFRs7AxYpEtESRdGfAEhoKbIBG7W3bu798DC7J6Z//x7mJmRGaOsiodYwQ98z8+30Yyw8zjApVrq9XhWwQYYrA42LKtiLv/mQi21FUNanMXwXgOMk34aZDjF7kMM6QYMNWyzWz4d9DbsY3fGsKyKq2VVXJjCvNNi92TyZVRWxTye4y5+YRUvYkhHE8XOYR+Xa7DPMaTrkx/G2M4wmMcG9sqqWCqr4rQltxtgZ3o3aXgFO7jYsGAXj3ORTjsYx5D2sYS/DcBreNdi97Sp0WOIIb3NJn1jJ4b0qRWYoWvY7AlcbkvUN/Z9fO1h974XMIb0G4v4OQX4bFq1/45eDOkQN3HUMH8XbwYBM/QLHjSkVmJI/wYDM/Ql1mt2Wzqi67Z5hI95vNZl1wmMIf3BrWz2qgsGx1qqaedhoYAzAAAAAElFTkSuQmCC);margin:0 0 20px -12px}
+      .o365-promo-image{padding-top:120px;width:100%}
 
 
 block endOfPageScripts
@@ -239,7 +239,7 @@ block content
         h2.text-center.walsheim-black The Right Email Makes A Difference.
         .row
           .col-sm-6.o365-promo-text
-            h3 Customers <3 Pro Email
+            h3 Customers <3<br />Pro Email
             p Did you know that customers are nine times more likely to choose a business that has a professional email address?<br/>With Microsoft Office 365, you'll:
             ul
               li <b>Get a professional address</b>, like yourname@coolexample.com.
@@ -247,4 +247,65 @@ block content
               li <b>Store more of your email</b> with 50 GB of secure online storage. 
             a.btn.btn-default-dark Learn More
           .col-sm-6
-            img.domain-promo-image(src != "[@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/office365_laptop.svg")
+            img.o365-promo-image(src != "[@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/office365_laptop.svg")
+    section#website-promo
+      .container
+        h2.text-center.walsheim-black.bg-green-official Get Your Website Online Today.
+        .row
+          .col-sm-6.wsb-promo-text
+            h3 No Skills?<br />No Time?<br />No Problem.
+            ul
+              li Start with your choice of 100s of professional designs.
+              li Customize it with our simple drag-&-drop tools.
+              li Put your beautiful new site online with free hosting.
+            a.btn.btn-default-dark Learn More
+          .col-sm-6.web-hosting-promo-text.bg-green-official
+            h3 Already<br />Have a site?<br />Host it with us.
+            ul
+              li Industry-leading page load times.
+              li Powered by cPanel&reg; or Parallels&reg; Plesk
+              li Guaranteed 99.9% uptime + 24/7 support
+            a.btn.btn-default-dark Learn More
+    section#new-customers-promo
+      .container
+        h2.text-center.walsheim-black Find And Keep New Customers
+        p.text-center.walsheim-black Online or off, we can help your business
+        .row
+          .col-sm-4
+            .feature.new-customers-get-found
+              img(src != "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMTA4LjA1NHB4IiBoZWlnaHQ9IjE1Mi45MjZweCIgdmlld0JveD0iMCAwIDEwOC4wNTQgMTUyLjkyNiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTA4LjA1NCAxNTIuOTI2Ig0KCSB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxwb2x5Z29uIGZpbGw9IiMzMzMzMzMiIHBvaW50cz0iMjcuNDQsMTQ2LjQ5NyA0LjIwNSwxMjEuNjcyIDAsODcuOTI3IDE2LjQzMiw1OC4xNTkgNDcuMjI2LDQzLjczMyA4MC42MTQsNTAuMTYyIDEwMy44NSw3NC45ODkgDQoJCTEwOC4wNTQsMTA4LjczMSA5MS42MjIsMTM4LjUwMSA2MC44MzEsMTUyLjkyNiAJIi8+DQoJPHBhdGggZmlsbD0iIzdBQkE0NyIgZD0iTTUwLjA5MiwxMDEuNjg3bC00LjM2MS03LjU3N2wtMTAuMTc4LTMuOTk4bC04Ljc3Ny03LjE5NWMwLDAtNC4xNzEtMTYuNTE4LTQuMDQzLTE3LjQ5OQ0KCQljMC4xMjktMC45ODUsMTAuNjczLTEyLjU1OCwxMC42NzMtMTIuNTU4bDEzLjkzLTQuMjRsMTYuNDM3LDIuMTUzbC0xMy40MTUsMS41OGw4LjI2OCw3LjA4NWwxLjQxOS02LjY5OGwxNS40NDQsNS42MjUNCgkJbC02LjI0OS0wLjgxOGwwLjQ2NSw2LjY2OGMwLDAtNy40OTIsMS4wMy03LjgyLDAuOTg2Yy0wLjI4Ny0wLjAzNy0wLjU5OCw0LjAzNi0wLjYxNCw0LjU4NGMwLjAwMywwLjAwNiwwLjAxNiwwLDAuMDEzLDAuMDA2DQoJCWMtMC4wMSwwLjA4Mi0wLjAxMywwLjA3Mi0wLjAxMy0wLjAwNmMtMC4wNzgtMC40ODEtNy4xMzUsNi4wNzYtNy4xMzUsNi4wNzZsMi4wODksMS45NDRsLTAuNjQ1LDQuOTE4bC00LjQzMy03LjE2NWwtMTIuNjc3LTAuMDc3DQoJCWwtMS44ODYsNi43NmwyLjkzNyw0LjM4NGw3LjQxMS0xLjY5N2wtMi4yNDQsNC4zNzRsNS45MTksMC43NzdMNTAuMDkyLDEwMS42ODd6Ii8+DQoJPHBhdGggZmlsbD0iIzdBQkE0NyIgZD0iTTg1LjkzNiwxMzMuNjc0bC02LjgzMywwLjkyM2wtMS4yOTQsMy40NjZsLTYuMjA1LDUuNzYxYzAsMC0xLjMzOS0zLjY3MS0xLjk3NC00LjE3NA0KCQljLTAuNjMxLTAuNS0yLjg5Nyw1LjA3NS0yLjg5Nyw1LjA3NWwtMTAuNDM2LDQuOTI5bC0zLjkzOCwwLjE4NGw2LjQyOS04LjUyOGwxLjgxNi0xMC42NjlsLTkuNzk5LTEyLjQ3MWwxMS44MzctMjIuMzYzDQoJCWwxMi40MTUsMy40MzlsMTAuNjE5LDEzLjk3OGMwLDAsOS4wODMsNS4zODMsOS40OTYsNS40MzdDOTUuNTg2LDExOC43MTcsODUuOTM2LDEzMy42NzQsODUuOTM2LDEzMy42NzQiLz4NCgk8cGF0aCBmaWxsPSIjMzMzMzMzIiBkPSJNNzUuOTI4LDcuNDI3TDYxLjU3OSwwTDQ2LjE3OSw0Ljg5M2wtNy40MjcsMTQuMzUxbDQuODkyLDE1LjM5OEw1NS4wMDEsNjguOTdsMTguMzk0LTMxLjc5M2w3LjQyNy0xNC4zNQ0KCQlMNzUuOTI4LDcuNDI3eiBNNjcuNTI0LDI1LjM0NmwtNC40OSw0LjEwN2wtNi4wNzksMC4yNTlsLTQuODI0LTMuNzA4bC0xLjMxMy01Ljk0MWwyLjgxNC01LjM5Nmw1LjYyNC0yLjMyNGw1LjgwMSwxLjgzNA0KCQlsMy4yNjcsNS4xMzhMNjcuNTI0LDI1LjM0NnoiLz4NCjwvZz4NCjwvc3ZnPg0K")
+              h3 Get Found
+              p You don't need to be online to put the web to work for you. Get Found lets you list your business on the web's most popular sites - Google, Yelp, Foursquare and more - all from one place.
+              a.btn.btn-default-dark Learn More
+          .col-sm-4
+            .feature.new-customers-get-found
+              img(src != "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMTA4LjA1NHB4IiBoZWlnaHQ9IjE1Mi45MjZweCIgdmlld0JveD0iMCAwIDEwOC4wNTQgMTUyLjkyNiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTA4LjA1NCAxNTIuOTI2Ig0KCSB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxwb2x5Z29uIGZpbGw9IiMzMzMzMzMiIHBvaW50cz0iMjcuNDQsMTQ2LjQ5NyA0LjIwNSwxMjEuNjcyIDAsODcuOTI3IDE2LjQzMiw1OC4xNTkgNDcuMjI2LDQzLjczMyA4MC42MTQsNTAuMTYyIDEwMy44NSw3NC45ODkgDQoJCTEwOC4wNTQsMTA4LjczMSA5MS42MjIsMTM4LjUwMSA2MC44MzEsMTUyLjkyNiAJIi8+DQoJPHBhdGggZmlsbD0iIzdBQkE0NyIgZD0iTTUwLjA5MiwxMDEuNjg3bC00LjM2MS03LjU3N2wtMTAuMTc4LTMuOTk4bC04Ljc3Ny03LjE5NWMwLDAtNC4xNzEtMTYuNTE4LTQuMDQzLTE3LjQ5OQ0KCQljMC4xMjktMC45ODUsMTAuNjczLTEyLjU1OCwxMC42NzMtMTIuNTU4bDEzLjkzLTQuMjRsMTYuNDM3LDIuMTUzbC0xMy40MTUsMS41OGw4LjI2OCw3LjA4NWwxLjQxOS02LjY5OGwxNS40NDQsNS42MjUNCgkJbC02LjI0OS0wLjgxOGwwLjQ2NSw2LjY2OGMwLDAtNy40OTIsMS4wMy03LjgyLDAuOTg2Yy0wLjI4Ny0wLjAzNy0wLjU5OCw0LjAzNi0wLjYxNCw0LjU4NGMwLjAwMywwLjAwNiwwLjAxNiwwLDAuMDEzLDAuMDA2DQoJCWMtMC4wMSwwLjA4Mi0wLjAxMywwLjA3Mi0wLjAxMy0wLjAwNmMtMC4wNzgtMC40ODEtNy4xMzUsNi4wNzYtNy4xMzUsNi4wNzZsMi4wODksMS45NDRsLTAuNjQ1LDQuOTE4bC00LjQzMy03LjE2NWwtMTIuNjc3LTAuMDc3DQoJCWwtMS44ODYsNi43NmwyLjkzNyw0LjM4NGw3LjQxMS0xLjY5N2wtMi4yNDQsNC4zNzRsNS45MTksMC43NzdMNTAuMDkyLDEwMS42ODd6Ii8+DQoJPHBhdGggZmlsbD0iIzdBQkE0NyIgZD0iTTg1LjkzNiwxMzMuNjc0bC02LjgzMywwLjkyM2wtMS4yOTQsMy40NjZsLTYuMjA1LDUuNzYxYzAsMC0xLjMzOS0zLjY3MS0xLjk3NC00LjE3NA0KCQljLTAuNjMxLTAuNS0yLjg5Nyw1LjA3NS0yLjg5Nyw1LjA3NWwtMTAuNDM2LDQuOTI5bC0zLjkzOCwwLjE4NGw2LjQyOS04LjUyOGwxLjgxNi0xMC42NjlsLTkuNzk5LTEyLjQ3MWwxMS44MzctMjIuMzYzDQoJCWwxMi40MTUsMy40MzlsMTAuNjE5LDEzLjk3OGMwLDAsOS4wODMsNS4zODMsOS40OTYsNS40MzdDOTUuNTg2LDExOC43MTcsODUuOTM2LDEzMy42NzQsODUuOTM2LDEzMy42NzQiLz4NCgk8cGF0aCBmaWxsPSIjMzMzMzMzIiBkPSJNNzUuOTI4LDcuNDI3TDYxLjU3OSwwTDQ2LjE3OSw0Ljg5M2wtNy40MjcsMTQuMzUxbDQuODkyLDE1LjM5OEw1NS4wMDEsNjguOTdsMTguMzk0LTMxLjc5M2w3LjQyNy0xNC4zNQ0KCQlMNzUuOTI4LDcuNDI3eiBNNjcuNTI0LDI1LjM0NmwtNC40OSw0LjEwN2wtNi4wNzksMC4yNTlsLTQuODI0LTMuNzA4bC0xLjMxMy01Ljk0MWwyLjgxNC01LjM5Nmw1LjYyNC0yLjMyNGw1LjgwMSwxLjgzNA0KCQlsMy4yNjcsNS4xMzhMNjcuNTI0LDI1LjM0NnoiLz4NCjwvZz4NCjwvc3ZnPg0K")
+              h3 SSL Certificates
+              p If customers don't feel safe on your site, they won't buy from you. An SSL Certificate encrypts sensitive data like credit cards and passwords so your customers (and your reputation) are secure.
+              a.btn.btn-default-dark Learn More
+          .col-sm-4
+            .feature.new-customers-get-found
+              img(src != "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMTA4LjA1NHB4IiBoZWlnaHQ9IjE1Mi45MjZweCIgdmlld0JveD0iMCAwIDEwOC4wNTQgMTUyLjkyNiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTA4LjA1NCAxNTIuOTI2Ig0KCSB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxwb2x5Z29uIGZpbGw9IiMzMzMzMzMiIHBvaW50cz0iMjcuNDQsMTQ2LjQ5NyA0LjIwNSwxMjEuNjcyIDAsODcuOTI3IDE2LjQzMiw1OC4xNTkgNDcuMjI2LDQzLjczMyA4MC42MTQsNTAuMTYyIDEwMy44NSw3NC45ODkgDQoJCTEwOC4wNTQsMTA4LjczMSA5MS42MjIsMTM4LjUwMSA2MC44MzEsMTUyLjkyNiAJIi8+DQoJPHBhdGggZmlsbD0iIzdBQkE0NyIgZD0iTTUwLjA5MiwxMDEuNjg3bC00LjM2MS03LjU3N2wtMTAuMTc4LTMuOTk4bC04Ljc3Ny03LjE5NWMwLDAtNC4xNzEtMTYuNTE4LTQuMDQzLTE3LjQ5OQ0KCQljMC4xMjktMC45ODUsMTAuNjczLTEyLjU1OCwxMC42NzMtMTIuNTU4bDEzLjkzLTQuMjRsMTYuNDM3LDIuMTUzbC0xMy40MTUsMS41OGw4LjI2OCw3LjA4NWwxLjQxOS02LjY5OGwxNS40NDQsNS42MjUNCgkJbC02LjI0OS0wLjgxOGwwLjQ2NSw2LjY2OGMwLDAtNy40OTIsMS4wMy03LjgyLDAuOTg2Yy0wLjI4Ny0wLjAzNy0wLjU5OCw0LjAzNi0wLjYxNCw0LjU4NGMwLjAwMywwLjAwNiwwLjAxNiwwLDAuMDEzLDAuMDA2DQoJCWMtMC4wMSwwLjA4Mi0wLjAxMywwLjA3Mi0wLjAxMy0wLjAwNmMtMC4wNzgtMC40ODEtNy4xMzUsNi4wNzYtNy4xMzUsNi4wNzZsMi4wODksMS45NDRsLTAuNjQ1LDQuOTE4bC00LjQzMy03LjE2NWwtMTIuNjc3LTAuMDc3DQoJCWwtMS44ODYsNi43NmwyLjkzNyw0LjM4NGw3LjQxMS0xLjY5N2wtMi4yNDQsNC4zNzRsNS45MTksMC43NzdMNTAuMDkyLDEwMS42ODd6Ii8+DQoJPHBhdGggZmlsbD0iIzdBQkE0NyIgZD0iTTg1LjkzNiwxMzMuNjc0bC02LjgzMywwLjkyM2wtMS4yOTQsMy40NjZsLTYuMjA1LDUuNzYxYzAsMC0xLjMzOS0zLjY3MS0xLjk3NC00LjE3NA0KCQljLTAuNjMxLTAuNS0yLjg5Nyw1LjA3NS0yLjg5Nyw1LjA3NWwtMTAuNDM2LDQuOTI5bC0zLjkzOCwwLjE4NGw2LjQyOS04LjUyOGwxLjgxNi0xMC42NjlsLTkuNzk5LTEyLjQ3MWwxMS44MzctMjIuMzYzDQoJCWwxMi40MTUsMy40MzlsMTAuNjE5LDEzLjk3OGMwLDAsOS4wODMsNS4zODMsOS40OTYsNS40MzdDOTUuNTg2LDExOC43MTcsODUuOTM2LDEzMy42NzQsODUuOTM2LDEzMy42NzQiLz4NCgk8cGF0aCBmaWxsPSIjMzMzMzMzIiBkPSJNNzUuOTI4LDcuNDI3TDYxLjU3OSwwTDQ2LjE3OSw0Ljg5M2wtNy40MjcsMTQuMzUxbDQuODkyLDE1LjM5OEw1NS4wMDEsNjguOTdsMTguMzk0LTMxLjc5M2w3LjQyNy0xNC4zNQ0KCQlMNzUuOTI4LDcuNDI3eiBNNjcuNTI0LDI1LjM0NmwtNC40OSw0LjEwN2wtNi4wNzksMC4yNTlsLTQuODI0LTMuNzA4bC0xLjMxMy01Ljk0MWwyLjgxNC01LjM5Nmw1LjYyNC0yLjMyNGw1LjgwMSwxLjgzNA0KCQlsMy4yNjcsNS4xMzhMNjcuNTI0LDI1LjM0NnoiLz4NCjwvZz4NCjwvc3ZnPg0K")
+              h3 GoDaddy Pro
+              p If you can code a website in your sleep and provision servers for fun, we haven't forgotten about you. Head over to GoDaddy Pro to see the big guns like VPS and dedicated servers.
+              a.btn.btn-default-dark Learn More
+    section#support-promo
+      .container
+        h2.text-center.walsheim-black We're Always Here To Help.
+        .row
+          .col-sm-6
+            img.support-promo-img(src != "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMTA4LjA1NHB4IiBoZWlnaHQ9IjE1Mi45MjZweCIgdmlld0JveD0iMCAwIDEwOC4wNTQgMTUyLjkyNiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTA4LjA1NCAxNTIuOTI2Ig0KCSB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxwb2x5Z29uIGZpbGw9IiMzMzMzMzMiIHBvaW50cz0iMjcuNDQsMTQ2LjQ5NyA0LjIwNSwxMjEuNjcyIDAsODcuOTI3IDE2LjQzMiw1OC4xNTkgNDcuMjI2LDQzLjczMyA4MC42MTQsNTAuMTYyIDEwMy44NSw3NC45ODkgDQoJCTEwOC4wNTQsMTA4LjczMSA5MS42MjIsMTM4LjUwMSA2MC44MzEsMTUyLjkyNiAJIi8+DQoJPHBhdGggZmlsbD0iIzdBQkE0NyIgZD0iTTUwLjA5MiwxMDEuNjg3bC00LjM2MS03LjU3N2wtMTAuMTc4LTMuOTk4bC04Ljc3Ny03LjE5NWMwLDAtNC4xNzEtMTYuNTE4LTQuMDQzLTE3LjQ5OQ0KCQljMC4xMjktMC45ODUsMTAuNjczLTEyLjU1OCwxMC42NzMtMTIuNTU4bDEzLjkzLTQuMjRsMTYuNDM3LDIuMTUzbC0xMy40MTUsMS41OGw4LjI2OCw3LjA4NWwxLjQxOS02LjY5OGwxNS40NDQsNS42MjUNCgkJbC02LjI0OS0wLjgxOGwwLjQ2NSw2LjY2OGMwLDAtNy40OTIsMS4wMy03LjgyLDAuOTg2Yy0wLjI4Ny0wLjAzNy0wLjU5OCw0LjAzNi0wLjYxNCw0LjU4NGMwLjAwMywwLjAwNiwwLjAxNiwwLDAuMDEzLDAuMDA2DQoJCWMtMC4wMSwwLjA4Mi0wLjAxMywwLjA3Mi0wLjAxMy0wLjAwNmMtMC4wNzgtMC40ODEtNy4xMzUsNi4wNzYtNy4xMzUsNi4wNzZsMi4wODksMS45NDRsLTAuNjQ1LDQuOTE4bC00LjQzMy03LjE2NWwtMTIuNjc3LTAuMDc3DQoJCWwtMS44ODYsNi43NmwyLjkzNyw0LjM4NGw3LjQxMS0xLjY5N2wtMi4yNDQsNC4zNzRsNS45MTksMC43NzdMNTAuMDkyLDEwMS42ODd6Ii8+DQoJPHBhdGggZmlsbD0iIzdBQkE0NyIgZD0iTTg1LjkzNiwxMzMuNjc0bC02LjgzMywwLjkyM2wtMS4yOTQsMy40NjZsLTYuMjA1LDUuNzYxYzAsMC0xLjMzOS0zLjY3MS0xLjk3NC00LjE3NA0KCQljLTAuNjMxLTAuNS0yLjg5Nyw1LjA3NS0yLjg5Nyw1LjA3NWwtMTAuNDM2LDQuOTI5bC0zLjkzOCwwLjE4NGw2LjQyOS04LjUyOGwxLjgxNi0xMC42NjlsLTkuNzk5LTEyLjQ3MWwxMS44MzctMjIuMzYzDQoJCWwxMi40MTUsMy40MzlsMTAuNjE5LDEzLjk3OGMwLDAsOS4wODMsNS4zODMsOS40OTYsNS40MzdDOTUuNTg2LDExOC43MTcsODUuOTM2LDEzMy42NzQsODUuOTM2LDEzMy42NzQiLz4NCgk8cGF0aCBmaWxsPSIjMzMzMzMzIiBkPSJNNzUuOTI4LDcuNDI3TDYxLjU3OSwwTDQ2LjE3OSw0Ljg5M2wtNy40MjcsMTQuMzUxbDQuODkyLDE1LjM5OEw1NS4wMDEsNjguOTdsMTguMzk0LTMxLjc5M2w3LjQyNy0xNC4zNQ0KCQlMNzUuOTI4LDcuNDI3eiBNNjcuNTI0LDI1LjM0NmwtNC40OSw0LjEwN2wtNi4wNzksMC4yNTlsLTQuODI0LTMuNzA4bC0xLjMxMy01Ljk0MWwyLjgxNC01LjM5Nmw1LjYyNC0yLjMyNGw1LjgwMSwxLjgzNA0KCQlsMy4yNjcsNS4xMzhMNjcuNTI0LDI1LjM0NnoiLz4NCjwvZz4NCjwvc3ZnPg0K")        
+          .col-sm-6
+            .support-promo-text
+              h3 Award-Winning 24/7 Support
+              p We make it easy to get online, but if you do need help or just wanna talk to someone, we have an army of online experts available 24/7/365.
+              a.btn.btn-default-dark Learn More
+              .support-promo-number [@T[supportphone:<technical />]@T]
+    section#puppy-promo
+      .container
+        .row
+          .col-sm-6.text-center
+            h3.walsheim-black Enter To Win
+            p Your pup could be on the GoDaddy race car!
+            a.btn.btn-default-dark Submit Your Pup
+          .col-sm-6
