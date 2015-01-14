@@ -1,7 +1,8 @@
 extends ../../templates/pages/landing-page
 
 append pageStyles
-  include:css ./website-builder/styles.css
+  style
+    include ./website-builder/styles.css
 
 block domainSearch
   //- remove domain search from top of hosting page
