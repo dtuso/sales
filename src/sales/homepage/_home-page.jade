@@ -14,7 +14,7 @@ mixin tldBugs(tlds)
       .tld-image {vertical-align: top; margin-right: 8px;}
 
 include ../../templates/domain-search-mixin.jade
-
+include ../../templates/two-up-compare-mixin.jade
 extends ../../templates/page
 
 block vars
@@ -103,7 +103,7 @@ block pageStyles
 
 
 block endOfPageScripts
-
+  script(src!="[@T[link:<javascriptroot />]@T]fos/hp/rebrand/js/bigtext.min.js")
   script(type="text/javascript").
     window.config = window.config || {};
     window.config.uxcore = #{page.config.uxcore};
@@ -128,6 +128,11 @@ block endOfPageScripts
         $("#marquee .hero-wrapper").css("min-height", maxHeroHeight + 19.5);
     }
     $(window).load(reSizeTiles);
+    $(window).load(function () {
+      $('.bigtext').bigtext().css('visibility', 'visible');
+        setTimeout( "$('.bigtext').bigtext().css('visibility', 'visible');",500 );
+    });
+    script(src!="[@T[link:<javascriptroot />]@T]fos/hp/rebrand/js/bigtext.min.js")
 
   //-$ script(src="http://img2.wsimg.com/starfield/fos.share/v1.3/fos.share-20140213.min.js" id="fosShareScript")
   script(type="text/javascript").
