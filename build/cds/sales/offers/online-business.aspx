@@ -39,7 +39,7 @@
   tldInfo: {
     defaultTld: 'com',    
     tlds: ['com','org','co','net', 'club', 'rocks'],  /* todo: drive from a config val */
-    possibleAdditionalTlds: ['in', 'ca'], /* todo: drive from a config val */
+    possibleAdditionalTlds: ['in', 'ca', 'uk', 'co.uk'], /* todo: drive from a config val */
     isPossibleAdditionalTld: function(tld) {return -1 !== $.inArray(tld, got1Page.tldInfo.possibleAdditionalTlds);}
   },
   sfDialogErrorButtons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }],
@@ -1286,6 +1286,7 @@ function showTypeYourDomain() {
           margin: 40px 0;
           line-height: 1;
         }
+        
         .two-up-speech-shape {
           font-family: 'Walsheim-Bold';
           font-size: 18px;
@@ -1297,6 +1298,7 @@ function showTypeYourDomain() {
           margin-bottom: 20px;
           z-index: 2;
         }
+        
         .two-up-speech-shape .shape-text {
           position: relative;
           z-index: 40;
@@ -1607,11 +1609,6 @@ function showTypeYourDomain() {
         }
         /* (end) TWO UP COMPARE */
         
-        
-        /* GLOBAL FEATURES CSS */
-        /* (end) GLOBAL FEATURES CSS */
-        
-        
       </style>
     </atlantis:webstash>
     <section id="site-choice">
@@ -1755,7 +1752,15 @@ function showTypeYourDomain() {
       </div>
     </section>
     <section id="disclaimers"> 
-      <p>[@L[cds.sales/offers/online-business:32573-third-party-logos-trademarks-disclaimer]@L]</p>
+      <div class="disclaimers-row">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="disclaimers-text">[@L[cds.sales/offers/online-business:32573-third-party-logos-trademarks-disclaimer]@L]</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
     <!-- FOOTERBEGIN--> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
