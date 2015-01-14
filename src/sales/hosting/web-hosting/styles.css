@@ -123,8 +123,3 @@ h3 {
     bottom: 360px;
   }
 }
-@media (min-width: 992px) {
-  #choose-platform .or-container:after {
-    bottom: 200px;
-  }
-}
