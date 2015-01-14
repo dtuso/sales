@@ -417,6 +417,7 @@
         var sections = []
       
         $('[data-mid-nav-title]').each(function(){
+          //titles.push($(this).data('mid-nav-title'));
           sections.push($(this).attr('id'));
         });
         $(window).scroll(function () {
@@ -424,6 +425,7 @@
           var fix = ($(this).scrollTop() > pos) ? true : false;
           nav.toggleClass("sticky", fix);
           $('body').toggleClass("fix-body", fix);
+      
           if(fix){
             $.each(sections,function(index,value){
                 var top = ((scroll+131) > $('#'+value).offset().top) ? true : false;
@@ -1206,8 +1208,8 @@ top: -6px;
                 </script>
               </div>
             </div>
-      <div class="bg-pro-gray"></div>
-            <style>
+      <div class="bg-pro-gray">
+                <style>
 .features-two-up {
   min-height: 940px;
   background-size: cover;
@@ -1235,40 +1237,41 @@ line-height: 1.1;
 .features-two-up .feature-row-text {
 margin-bottom: 20px;
 }
-            </style>
-            <div style="background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rebrand-features-bg-ph.jpg);" data-lazy-load="" class="features-two-up   ">
-              <div class="container">
-                <div class="row">
-                  <div class="col-sm-12">
-                    <h1>Business Exclusives Section</h1>
+                </style>
+                <div style="background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rebrand-features-bg-ph.jpg);" data-lazy-load="" class="features-two-up   ">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <h1>Business Exclusives Section</h1>
+                      </div>
+                              <div class="row feature-row-height">
+                                <div class="col-sm-7">
+                                  <div class="row feature-row">
+                                    <div class="col-sm-5"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rebrand-features-img1-ph.png" data-lazy-load="" alt="" class="feature-image img-responsive">
+                                    </div>
+                                    <div class="col-sm-7">
+                                      <div class="feature-title">Get more than just a website</div>
+                                      <div class="feature-row-text">With our One-Click Social Media Manager, we'll instantly match your Facebook.....</div><a href="http://godaddy.com" class="btn btn-default-dark">Learn More</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row feature-row-height">
+                                <div class="col-sm-7">
+                                  <div class="row feature-row">
+                                    <div class="col-sm-5"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rebrand-features-img1-ph.png" data-lazy-load="" alt="" class="feature-image img-responsive">
+                                    </div>
+                                    <div class="col-sm-7">
+                                      <div class="feature-title">Get on Google in 3 easy steps with our built-in SEO tool</div>
+                                      <div class="feature-row-text">See how the built-in Search Engine Optimization (SEO) tool in our Business Plus plan will help you show up on Google<sup>&reg;</sup>, Yahoo!<sup>&reg;</sup> and more.</div><a href="http://godaddy.com" class="btn btn-default-dark">Learn More</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                    </div>
                   </div>
-                        <div class="row feature-row-height">
-                          <div class="col-sm-7">
-                            <div class="row feature-row">
-                              <div class="col-sm-5"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rebrand-features-img1-ph.png" data-lazy-load="" alt="" class="feature-image img-responsive">
-                              </div>
-                              <div class="col-sm-7">
-                                <div class="feature-title">Get more than just a website</div>
-                                <div class="feature-row-text">With our One-Click Social Media Manager, we'll instantly match your Facebook.....</div><a href="http://godaddy.com" class="btn btn-default-dark">Learn More</a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="row feature-row-height">
-                          <div class="col-sm-7">
-                            <div class="row feature-row">
-                              <div class="col-sm-5"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rebrand-features-img1-ph.png" data-lazy-load="" alt="" class="feature-image img-responsive">
-                              </div>
-                              <div class="col-sm-7">
-                                <div class="feature-title">Get on Google in 3 easy steps with our built-in SEO tool</div>
-                                <div class="feature-row-text">See how the built-in Search Engine Optimization (SEO) tool in our Business Plus plan will help you show up on Google<sup>&reg;</sup>, Yahoo!<sup>&reg;</sup> and more.</div><a href="http://godaddy.com" class="btn btn-default-dark">Learn More</a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
                 </div>
-              </div>
-            </div>
+      </div>
       <div class="bg-black">
         <div class="container">
           <div class="row">
