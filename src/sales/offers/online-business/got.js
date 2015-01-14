@@ -21,8 +21,14 @@ var got1Page = {
     bundleRenewal_ols: '[@T[multipleproductprice:<list productidlist="40972|101|7524" period="monthly"></list>]@T]',
     bingAdCredits: '[@T[currencyprice:<price usdamount="5000" dropdecimal="true" htmlsymbol="false" />]@T]'
   },
-  imagePath: '[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/'
+  imagePath: '[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/',
+  canOfferOls: true
 };
+
+##if(!productIsOffered(105))
+got1Page.canOfferOls = false;
+##endif
+
 
 ##if(countrySiteAny(ca) || isManager())  
   if(got1Page.tldInfo.isPossibleAdditionalTld('ca')) {
@@ -56,26 +62,17 @@ var got1Page = {
 
 $(document).ready(function() {
 
-  //dynamically build the tld images in the #findYourPerfectDomain section
-  showTldImagesInDomainArea();
+  showTldImagesInDomainArea(); //dynamically build the tld images in the #findYourPerfectDomain section
+  
+  showDynamicTldsInLists($(document)); // fix up list of valid tlds from lang files
 
-  $('#marquee .invalid-TLD-entered').append($('<span style="margin-left:10px;">').text("." + got1Page.tldInfo.tlds.join(', .')));
+  tokenizeDisclaimerModals();
+ 
+  tokenizeOnDataTokenizeAttribute();
 
-  $('[data-tokenize]').each(function(){
-    var $this = $(this),
-      html = $this.html(),
-      val = $this.data('tokenize'),
-        tokenizedHtml = html.replace(/\{0\}/gi, val);
-    $this
-      .html(tokenizedHtml)
-      .removeAttr('data-tokenize');
-  });
+  wireUpDisclaimerModals();
 
-  // wire up see details links
-  $('#default-marquee-view').on('click', '.see-details-disclaimer-link', function(){
-    var $modal = $('#default-marquee-details-modal');
-    $modal.sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
-  });
+
 
   //set up domain search buttons to do a domain search
   $('#marquee')
@@ -120,6 +117,59 @@ $(document).ready(function() {
 
 });
 
+function tokenizeOnDataTokenizeAttribute() {
+  $('[data-tokenize]').each(function(){
+    var $this = $(this),
+      html = $this.html(),
+      val = $this.data('tokenize'),
+        tokenizedHtml = html.replace(/\{0\}/gi, val);
+    $this
+      .html(tokenizedHtml)
+      .removeAttr('data-tokenize');
+  });
+}
+
+function tokenizeDisclaimerModals() {
+
+  var tokenizeDisclaimerModal = function(selector, price0, price1) {
+    $(selector).each(function(idx, modal) {
+      var $modal = $(modal);
+      var htmlTokenized = $modal.html();
+      htmlTokenized = htmlTokenized.replace(/\{0\}/gi, price0);
+      htmlTokenized = htmlTokenized.replace(/\{1\}/gi, price1);
+      $modal.html(htmlTokenized);
+    });
+  };
+  tokenizeDisclaimerModal(
+    '#default-marquee-details-modal.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_wsb,got1Page.pricing.ols);
+  tokenizeDisclaimerModal(
+    '#default-marquee-details-modal-wsb-only.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_wsb);
+  tokenizeDisclaimerModal(
+    '#site-choice-wsb-modal.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_wsb);
+  tokenizeDisclaimerModal(
+    '#site-choice-ols-modal.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_ols);
+}
+
+function wireUpDisclaimerModals() {
+
+  // wire up see details links
+  var marqueeModalId = got1Page.canOfferOls ? "#default-marquee-details-modal" : "#default-marquee-details-modal-wsb-only";
+  $('#default-marquee-view').on('click', '.see-details-disclaimer-link', function(){
+    var $modal = $(marqueeModalId);
+    $modal.sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
+  });
+
+  // product split modals
+  $('#site-choice').on('click', '.see-wsb-disclaimer-link', function(){
+    $("#site-choice-wsb-modal").sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
+  });
+  $('#site-choice').on('click', '.see-ols-disclaimer-link', function(){
+    $("#site-choice-ols-modal").sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
+  });
+
+}
+
+
 function showTldImagesInDomainArea() {
   //dynamically build the tld images in the #findYourPerfectDomain section
   var $imageDiv = $('#findYourPerfectDomain').find(".features-img").parent().empty().addClass('tld-images');
@@ -135,23 +185,11 @@ function showTldImagesInDomainArea() {
   $(window).trigger('resize');
 }
 
-function populateTldsOnDisclaimerModal(selector) {
+function showDynamicTldsInLists(selector) {
   var $this = $(selector);
-  ##if(countrySiteAny(br) || isManager())
-    if(got1Page.tldInfo.isPossibleAdditionalTld('br')) {
-      $this.find('.tlds-br').show();
-    }
-  ##endif
-  ##if(countrySiteAny(in) || isManager())
-    if(got1Page.tldInfo.isPossibleAdditionalTld('in')) {
-      $this.find('.tlds-in').show();
-    }
-  ##endif
-  ##if(countrySiteAny(uk) || isManager())
-    if(got1Page.tldInfo.isPossibleAdditionalTld('uk')) {
-      $this.find('.tlds-uk').show();
-    }
-  ##endif
+  $.each(got1Page.tldInfo.tlds, function(idx, tld){
+    $this.find('.tlds-' + tld).show();
+  });
 }
 
 function formatDomainWithDefaultTldIfNoneSpecified(domain) {

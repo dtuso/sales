@@ -39,5 +39,9 @@
 
 *[data-tokenize] {visibility: hidden;}
 
-
-
+.tlds-br,
+.tlds-ca,
+.tlds-uk,
+.tlds-in,
+.tlds-rocks,
+.tlds-club { display: none;}
