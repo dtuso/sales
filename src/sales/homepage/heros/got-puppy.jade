@@ -12,19 +12,20 @@ block append heroStyles
   style.
     #marquee {background-color: #64a838}
     .hero.got-puppy {background-color:#64A838;}
-    .hero.got-puppy h2{font-size:3.2em}
-    .hero.got-puppy h3{font-size:2em}
-    .hero.got-puppy h4{font-size:1.4em}
-    .hero.got-puppy h5{font-size:.8em}
-    .hero .leftContent *{color:#fff;line-height:.9}
-    .hero.rightContent img{margin-left:70px}
+    .hero.got-puppy .subtext{padding:4% 0}
+    .hero.got-puppy .leftContent *{color:#fff;line-height:1}
+    .hero.got-puppy .rightContent img{}
+    .hero.got-puppy .bigtextContainer {width:100%}
+
   +addHeroClasses("got-puppy")
 
 
 block leftContent
-  h3.headline.walsheim-black!= headline
-  h3.pricetext.tungsten [@L[cds.sales/homepage/heros/got-puppy:starting]@L]
-  h2.price.walsheim-black!= price
-  h4.smile.walsheim-regular [@L[cds.sales/homepage/heros/got-puppy:buddy]@L]
-  a.btn.btn-warning.btn-lg!= ctaText
-  h5.walsheim-medium [@L[cds.sales/homepage/heros/got-puppy:disclaimer]@L]
+  .bigtextContainer.bigtext
+    .headline.walsheim-black!= headline
+    .pricetext.tungsten [@L[cds.sales/homepage/heros/got-puppy:starting]@L]
+    .price.walsheim-black!= price
+    .subtext.walsheim-regular [@L[cds.sales/homepage/heros/got-puppy:buddy]@L]
+    .btn-wrapper
+      a.btn.btn-warning.btn-lg!= ctaText
+      .walsheim-medium [@L[cds.sales/homepage/heros/got-puppy:disclaimer]@L]

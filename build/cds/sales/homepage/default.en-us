@@ -212,7 +212,43 @@
         <div class="row">
           <div class="col-md-8 col-sm-12">
             <div class="hero-wrapper">
-              <Some>awesome text here</Some>
+              <!-- start hero section-->
+              <atlantis:webstash type="css">
+                <style>
+                  .hero-wrapper{cursor:pointer;}
+                  .hero{background: #fff; min-height:inherit}
+                  .hero:hover{cursor:pointer}
+                  .dash{letter-spacing:-.1rem}
+                </style>
+                <style>.rightContent {}</style>
+                <style>
+                  #marquee {background-color: #64a838}
+                  .hero.got-puppy {background-color:#64A838;}
+                  .hero.got-puppy .subtext{padding:4% 0}
+                  .hero.got-puppy .leftContent *{color:#fff;line-height:1}
+                  .hero.got-puppy .rightContent img{}
+                  .hero.got-puppy .bigtextContainer {width:100%}
+                  
+                </style>
+              </atlantis:webstash>
+              <div data-url="[@T[link:<relative path='/offers/online-business.aspx'><param name='ci' value='22222' /></relative>]@T]" class=" hero row left-headline got-puppy">
+                <div class="leftContent col-sm-7">
+                  <div class="bigtextContainer bigtext">
+                    <div class="headline walsheim-black">[@L[cds.sales/homepage/heros/got-puppy:products]@L]</div>
+                    <div class="pricetext tungsten">[@L[cds.sales/homepage/heros/got-puppy:starting]@L]</div>
+                    <div class="price walsheim-black">[@L[cds.sales/homepage/heros/got-puppy:price]@L]</div>
+                    <div class="subtext walsheim-regular">[@L[cds.sales/homepage/heros/got-puppy:buddy]@L]</div>
+                    <div class="btn-wrapper"><a class="btn btn-warning btn-lg">[@L[cds.sales/homepage/heros/got-puppy:cta]@L]</a>
+                      <div class="walsheim-medium">[@L[cds.sales/homepage/heros/got-puppy:disclaimer]@L]</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="rightContent col-sm-5">
+                  <image src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/got-puppy.png" class="img-responsive"></image>
+                </div>
+              </div>
+              <atlantis:webstash type="js"></atlantis:webstash>
+              <!--end hero section-->
             </div>
           </div>
           <div class="col-sm-4">
@@ -576,8 +612,12 @@
           $("#marquee .hero-wrapper").css("min-height", maxHeroHeight + 19.5);
       }
       $(window).load(reSizeTiles);
-      
+      $(window).load(function () {
+        $('.bigtext').bigtext().css('visibility', 'visible');
+          setTimeout( "$('.bigtext').bigtext().css('visibility', 'visible');",500 );
+      });
     </script>
+    <script src="[@T[link:<javascriptroot />]@T]fos/hp/rebrand/js/bigtext.min.js"></script>
     <script type="text/javascript">
       delayLoader.addScript("[@T[link:<javascriptroot />]@T]starfield/fos.share/v1.3/fos.share-20140505.min.js", { "id": "fosShareScript" });
       
