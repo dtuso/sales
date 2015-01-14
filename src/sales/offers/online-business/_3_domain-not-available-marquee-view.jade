@@ -24,14 +24,14 @@ section#domain-not-available-marquee-view
     .container
       .row
         .col-md-12
-          h2.domain-not-available-heading-text Sorry, that domain's already taken.
-      +domainSearchOffersInput('The right one\'s out there. Just try again.', '12347', 'Try a different domain name', '', 'Search', 'Type your business name here (if you have one)', 'You do not meet the eligibility requirements for {0} domains, please select a different domain extension and search again.','You need to choose a valid TLD.')
+          h2.domain-not-available-heading-text [@L[cds.sales/offers/online-business:32573-sorry-domain-unavailable]@L]
+      +domainSearchOffersInput('[@L[cds.sales/offers/online-business:32573-search-try-again]@L]', '12347', '[@L[cds.sales/offers/online-business:32573-try-a-different-domain-name-placeholder]@L]', '[@L[cds.sales/offers/online-business:32573-search]@L]', '[@L[cds.sales/offers/online-business:32573-type-your-business-placeholder]@L]', '[@L[cds.sales/offers/online-business:32573-eligibility-error]@L]', '[@L[cds.sales/offers/online-business:32573-offer-only-valid]@L]')
   .bg-white
     .container.pro-plans
       .row
-        h4.other-domains-heading-text Or, here are some other domains you might like too&hellip;
-        h6.results-list-heading-text 1 - {0} of {1} results 
-          button.btn.btn-link.view-all-button View All
+        h4.other-domains-heading-text [@L[cds.sales/offers/online-business:32573-here-are-some-others]@L]
+        h6.results-list-heading-text [@L[cds.sales/offers/online-business:32573-number-of-number-results]@L] 
+          button.btn.btn-link.view-all-button [@L[cds.sales/offers/online-business:32573-view-all-results]@L]
       #spin-results
       #spin-template-wrap
         .row.spin-template.spin-result
@@ -42,12 +42,12 @@ section#domain-not-available-marquee-view
                   h4.domain-name-display thisreallycoolexample
                   h2.domain-name-display-tld .com
                 .col-md-4.col-sm-12.text-right
-                  button.btn.btn-primary.select-and-continue.spin-results-message Select &amp; Continue
-                  .spin-results-message.checking-availability Checking availability&hellip;
-                  .spin-results-message.now-unavailable This domain is no longer available.
+                  button.btn.btn-primary.select-and-continue.spin-results-message [@L[cds.sales/offers/online-business:32573-select-and-continue-button]@L]
+                  .spin-results-message.checking-availability [@L[cds.sales/offers/online-business:32573-checking-availability]@L]
+                  .spin-results-message.now-unavailable [@L[cds.sales/offers/online-business:32573-domain-no-longer-available]@L]
                   
-      h6.text-center SEE MORE RESULTS
+      h6.text-center [@L[cds.sales/offers/online-business:32573-see-more-results]@L]
         span.show-more-arrow
 
-  .sf-dialog.api-B-failure 
-    p API B FAILURE
+  .sf-dialog.api-B-failure
+    p [@L[cds.sales/offers/online-business:32573-generic-domain-search-error]@L]
