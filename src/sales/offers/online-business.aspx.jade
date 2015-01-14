@@ -1,0 +1,68 @@
+---
+location: sales/offers/online-business.aspx
+id: 54b5855ff778fc10040523de
+name: GCE-32414-dom2
+comments: GOT rebrand 2015 SuperBowl 2
+url: http://www.dev-godaddy.com/offers/online-business.aspx
+assetPath: false
+---
+
+extends ../../templates/pages/landing-page
+
+append vars
+  - page.title = "[@L[cds.sales/offers/online-business:page-title]@L]";
+  - page.description = "[@L[cds.sales/offers/online-business:meta-description]@L]";
+  - page.keywords = "[@L[cds.sales/offers/online-business:meta-keywords]@L]"; 
+  - page.canonical = "[@T[link:<relative parammode='explicit' path='~/offers/online-business.aspx' />]@T]";
+
+  - page.openGraph = page.openGraph || {};
+  - page.openGraph.title = "[@L[cds.sales/offers/online-business:og-title]@L]";
+  - page.openGraph.description = "[@L[cds.sales/offers/online-business:og-description]@L]";
+  - page.openGraph.image = "[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/online-business/img/og_got_1200x630.jpg";
+
+  - page.links = page.links || {};
+  - page.links.canonical = "[@T[link:<relative parammode='explicit' />]@T]";
+  - page.links.favicon = "[@T[link:<imageroot />]@T]assets/godaddy.ico";
+
+append seo
+  meta(name="twitter:card" content="summary")
+  meta(name="twitter:site" content="[@L[cds.sales/offers/online-business:twitter-site]@L]")
+  meta(name="twitter:title" content="[@L[cds.sales/offers/online-business:twitter-title]@L]")
+  meta(name="twitter:description" content="[@L[cds.sales/offers/online-business:twitter-description]@L]")
+  meta(name="twitter:image:src" content!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/online-business/img/og_got_1200x630.jpg")
+  
+append pageStyles  
+  style
+    include:css ./online-business/styles.css
+
+
+append headScripts
+  atlantis:webstash(type="js")
+    script
+      include:js online-business/got.js
+    
+
+block domainSearch
+  // none
+
+//- top marquee
+block marquee
+  include ./online-business/_marquee.jade
+
+//- side by side plan comparisons go here
+block plans
+  include ./online-business/_product-boxes.jade
+
+//- horizontal nav with jumps to anchor tags (that affixes to top)
+block sections
+  include ./online-business/_domain-section.jade
+
+//- suggested alternative products
+block alternatives
+  include ./online-business/_step2-choose-product.jade
+  include ./online-business/_site-choice.jade
+
+//- there's always a catch... show it here.
+block disclaimers
+  section#disclaimers 
+    p [@L[cds.sales/offers/online-business:32573-third-party-logos-trademarks-disclaimer]@L]
