@@ -724,350 +724,6 @@ text-transform: uppercase;
                 
               </script>
             </atlantis:webstash>
-            <style>.item-wrapper { padding: 70px 0 20px; }
-
-.carousel-wrap { padding-bottom: 70px; }
-
-@media only screen and (min-width: 768px){
-  .carousel-container .carousel {
-    padding: 0 120px;
-  }
-}
-
-.carousel {
-  position: relative;
-  padding: 0 0 45px 0;
-}
-
-.carousel-container .carousel .carousel-indicators {
-  bottom: -60px;
-}
-
-@media screen and (min-width: 768px){
-  .carousel-indicators {
-    bottom: -5px;
-  }
-}
-.carousel-indicators {
-  position: absolute;
-  bottom: -5px;
-  left: 50%;
-  z-index: 15;
-  width: 80%;
-  margin-left: -40%;
-  padding-left: 0;
-  list-style: none;
-  text-align: center;
-}
-
-.carousel-container .carousel .carousel-indicators li.active {
-  background-color: #77c043;
-}
-
-.carousel-container .carousel .carousel-indicators li.active {
-  background-color: #77c043;
-}
-.carousel-container .carousel .carousel-indicators li {
-  width: 15px;
-  height: 15px;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-  margin: 5px;
-  background-color: #d9d9d9;
-}
-.carousel-indicators .active {
-  background-color: #008a32;
-}
-.carousel-indicators li {
-  display: inline-block;
-  width: 32px;
-  height: 10px;
-  margin: 8px;
-  text-indent: -999px;
-  cursor: pointer;
-  background-color: #d9d9d9;
-}
-.carousel-inner {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-}
-.carousel-inner > .active {
-  
-}
-.carousel-inner > .active, .carousel-inner > .next, .carousel-inner > .prev {
-  display: block;
-}
-.carousel-inner > .item {
-  display: none;
-  position: relative;
-  -webkit-transition: left 0.6s ease-in-out;
-  -moz-transition: left 0.6s ease-in-out;
-  transition: left 0.6s ease-in-out;
-  overflow: hidden;
-}
-.carousel-container .carousel-panel, .carousel-container .testimonial {
-  padding: 0;
-}
-.carousel-panel .img-center {
-  margin: 50px auto;
-}
-.carousel-panel .carousel-panel-text {
-  margin-bottom: 25px;
-}
-.carousel-panel h2 {
-  margin-top: 0px;
-}
-
-.carousel-container .carousel-control.left {
-  left: 0px;
-}
-.carousel-control {
-  position: absolute;
-  top: -11%;
-  bottom: 0;
-  color: #999999;
-  text-align: center;
-}
-.carousel-icon.arrow-left-icon {
-  background-position: 0 0;
-  width: 51px;
-  height: 50px;
-}
-
-.carousel-control .uxicon-chevron-left-lt, .carousel-control .arrow-left-icon, .carousel-control .arrow-left-white-icon {
-  left: 50%;
-}
-.carousel-control .arrow-left-white-icon, .carousel-control .arrow-right-white-icon, .carousel-control .arrow-left-icon, .carousel-control .arrow-right-icon {
-  position: absolute;
-  top: 50%;
-}
-.carousel-icon {
-  background-image: url('[@T[link:<imageroot />]@T]/fos/hp/sahara-rebrand-sprite-20141114.png');
-  display: inline-block;
-  background-size: 205px auto;
-}
-.carousel-container .carousel-control.right {
-  right: 0px;
-}
-.carousel-icon.arrow-right-icon {
-  background-position: 0 -52px;
-  width: 51px;
-  height: 50px;
-}
-.carousel-control .arrow-left-white-icon, .carousel-control .arrow-right-white-icon, .carousel-control .arrow-left-icon, .carousel-control .arrow-right-icon {
-  position: absolute;
-  top: 50%;
-}
-
-.carousel {
-    position: relative;
-    padding: 0 0 45px 0;
-}
-
-.carousel-inner {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-}
-
-.carousel-inner > .item {
-    display: none;
-    position: relative;
-    -webkit-transition: left 0.6s ease-in-out;
-    -moz-transition: left 0.6s ease-in-out;
-    transition: left 0.6s ease-in-out;
-    overflow: hidden;
-}
-
-.carousel-inner > .item.show-item {
-    display: block;
-}
-
-.carousel-inner > .item > h1,
-.carousel-inner > .item > h2,
-.carousel-inner > .item > h3,
-.carousel-inner > .item > h4,
-.carousel-inner > .item > h5,
-.carousel-inner > .item > h6 {
-    margin-top: 0;
-}
-
-.carousel-inner > .active,
-.carousel-inner > .next,
-.carousel-inner > .prev {
-    display: block;
-}
-
-.carousel-inner > .active {
-    left: 0;
-}
-
-.carousel-inner > .next,
-.carousel-inner > .prev {
-    position: absolute;
-    top: 0;
-    width: 100%;
-}
-
-.carousel-inner > .next {
-    left: 100%;
-}
-
-.carousel-inner > .prev {
-    left: -100%;
-}
-
-.carousel-inner > .next.left,
-.carousel-inner > .prev.right {
-    left: 0;
-}
-
-.carousel-inner > .active.left {
-    left: -100%;
-}
-
-.carousel-inner > .active.right {
-    left: 100%;
-}
-
-.carousel-text-item {
-    margin-bottom: 20px;
-}
-
-.carousel-text-item h1 {
-    font-size: 14px;
-    display: inline;
-    margin: 0;
-    font-weight: bold;
-    font-weight: 600;
-}
-
-.carousel-control {
-    position: absolute;
-    top: -11%;
-    bottom: 0;
-    color: #999999;
-    text-align: center;
-}
-
-@media screen and (max-width: 768px) {
-    .carousel-control {
-        top: -6%;
-    }
-}
-
-.carousel-control:hover,
-.carousel-control:focus {
-    outline: none;
-    color: #000;
-    text-decoration: none;
-}
-
-.carousel-control .uxicon-chevron-left-lt,
-.carousel-control .uxicon-chevron-right-lt {
-    position: absolute;
-    top: 50%;
-    z-index: 5;
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    font-size: 40px;
-    margin-top: -15px;
-}
-
-.carousel-control .arrow-left-white-icon,
-.carousel-control .arrow-right-white-icon,
-.carousel-control .arrow-left-icon,
-.carousel-control .arrow-right-icon {
-    position: absolute;
-    top: 50%;
-}
-
-.carousel-control .uxicon-chevron-left-lt,
-.carousel-control .arrow-left-icon {
-    left: 50%;
-}
-
-.carousel-control .uxicon-chevron-right-lt,
-.carousel-control .arrow-right-icon {
-    right: 50%;
-}
-
-.carousel-control.left {
-    left: -40px;
-}
-@media only screen and (max-width: 768px){
-  .carousel-container .carousel-control {
-    display: none;
-  }
-}
-@media only screen and (max-width: 768px) {
-    .carousel-control.left {
-        left: -10px;
-    }
-}
-
-.carousel-control.right {
-    right: -40px;
-}
-
-@media only screen and (max-width: 768px) {
-    .carousel-control.right {
-        right: -10px;
-    }
-}
-
-.carousel-indicators {
-    position: absolute;
-    bottom: -5px;
-    left: 50%;
-    z-index: 15;
-    width: 80%;
-    margin-left: -40%;
-    padding-left: 0;
-    list-style: none;
-    text-align: center;
-}
-
-.carousel-indicators li {
-    display: inline-block;
-    width: 32px;
-    height: 10px;
-    margin: 8px;
-    text-indent: -999px;
-    cursor: pointer;
-    background-color: #d9d9d9;
-}
-
-.carousel-indicators .active {
-    background-color: #008a32;
-}
-
-@media screen and (min-width: 768px) {
-    .carousel-indicators {
-        bottom: -5px;
-    }
-}
-.carousel-panel .include-check {
-position: relative;
-padding-left: 45px;
-margin-top: 20px;
-}
-.carousel-panel .include-check:before {
-content: "";
-background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
-background-position: 0 -668px;
-background-size: 205px auto;
-width: 25px;
-height: 27px;
-padding-right: 5px;
-position: absolute;
-left: 0;
-top: -6px;
-}
-            </style>
             <div class="carousel-wrap">
               <div class="carousel-container container">
                 <div id="carousel-social-media" data-ride="carousel" data-interval="false" class="carousel slide">
@@ -1081,101 +737,83 @@ top: -6px;
                   </ol>
                   <div class="carousel-inner">
                           <div class="item">
-                            <div class="item-wrapper text-center">
-                              <div data-icode="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-apps-image-facebook-int.jpg" class="img-responsive img-center">
-                                <div class="row">
-                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <h2>FACEBOOK</h2>
-                                  </div>
-                                </div>
-                                <div class="row">
-                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <div class="carousel-panel-text">Share your status updates or photos.</div>
+                            <div class="item-wrapper">
+                              <div data-icode="" class="carousel-panel container">
+                                <div data-icode="code" class="carousel-panel container">
+                                  <div class="row">
+                                    <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                      <div></div>
+                                    </div>
                                   </div>
                                 </div>
                               </div>
                             </div>
                           </div>
-                          <div class="item">
-                            <div class="item-wrapper text-center">
-                              <div data-icode="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-apps-image-twitter-int.jpg" class="img-responsive img-center">
-                                <div class="row">
-                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <h2>TWITTER</h2>
-                                  </div>
-                                </div>
-                                <div class="row">
-                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <div class="carousel-panel-text">Share your status updates or photos.</div>
-                                  </div>
-                                </div>
+                    <div class="item">
+                      <div class="item-wrapper">
+                        <div data-icode="" class="carousel-panel container">
+                          <div data-icode="code" class="carousel-panel container">
+                            <div class="row">
+                              <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                <div></div>
                               </div>
                             </div>
                           </div>
-                          <div class="item">
-                            <div class="item-wrapper text-center">
-                              <div data-icode="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-apps-image-youtube-int.jpg" class="img-responsive img-center">
-                                <div class="row">
-                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <h2>YOUTUBE</h2>
-                                  </div>
-                                </div>
-                                <div class="row">
-                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <div class="carousel-panel-text">Share your status updates or photos.</div>
-                                  </div>
-                                </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="item-wrapper">
+                        <div data-icode="" class="carousel-panel container">
+                          <div data-icode="code" class="carousel-panel container">
+                            <div class="row">
+                              <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                <div></div>
                               </div>
                             </div>
                           </div>
-                          <div class="item">
-                            <div class="item-wrapper text-center">
-                              <div data-icode="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-apps-image-facebook-int.jpg" class="img-responsive img-center">
-                                <div class="row">
-                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <h2>YELP</h2>
-                                  </div>
-                                </div>
-                                <div class="row">
-                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <div class="carousel-panel-text">Share your status updates or photos.</div>
-                                  </div>
-                                </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="item-wrapper">
+                        <div data-icode="" class="carousel-panel container">
+                          <div data-icode="code" class="carousel-panel container">
+                            <div class="row">
+                              <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                <div></div>
                               </div>
                             </div>
                           </div>
-                          <div class="item">
-                            <div class="item-wrapper text-center">
-                              <div data-icode="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-apps-image-facebook-int.jpg" class="img-responsive img-center">
-                                <div class="row">
-                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <h2>PAYPAL</h2>
-                                  </div>
-                                </div>
-                                <div class="row">
-                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <div class="carousel-panel-text">Share your status updates or photos.</div>
-                                  </div>
-                                </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="item-wrapper">
+                        <div data-icode="" class="carousel-panel container">
+                          <div data-icode="code" class="carousel-panel container">
+                            <div class="row">
+                              <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                <div></div>
                               </div>
                             </div>
                           </div>
-                          <div class="item">
-                            <div class="item-wrapper text-center">
-                              <div data-icode="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-apps-image-facebook-int.jpg" class="img-responsive img-center">
-                                <div class="row">
-                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <h2>HOMEOWNER</h2>
-                                  </div>
-                                </div>
-                                <div class="row">
-                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <div class="carousel-panel-text">Share your status updates or photos.</div>
-                                  </div>
-                                </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="item-wrapper">
+                        <div data-icode="" class="carousel-panel container">
+                          <div data-icode="code" class="carousel-panel container">
+                            <div class="row">
+                              <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                <div></div>
                               </div>
                             </div>
                           </div>
+                        </div>
+                      </div>
+                    </div>
                   </div><a href="#carousel-social-media" data-slide="prev" class="left carousel-control"><span class="carousel-icon arrow-left-icon"></span></a><a href="#carousel-social-media" data-slide="next" class="right carousel-control"><span class="carousel-icon arrow-right-icon"></span></a>
                 </div>
                 <script>
@@ -1250,71 +888,71 @@ margin-bottom: 20px;
             </div>
     </section>
     <section id="testimonials" data-mid-nav-title="Testimonials">
-            <div class="carousel-wrap">
-              <div class="carousel-container container">
-                <div id="carousel-testimonials" data-ride="carousel" data-interval="false" class="carousel slide">
-                  <ol class="carousel-indicators">
-                    <li data-target="#carousel-testimonials" data-slide-to="0"></li>
-                    <li data-target="#carousel-testimonials" data-slide-to="1"></li>
-                    <li data-target="#carousel-testimonials" data-slide-to="2"></li>
-                  </ol>
-                  <div class="carousel-inner">
-                          <div class="item">
-                            <div class="item-wrapper text-center">
-                              <div data-icode="" class="carousel-panel container">
-                                <div class="row">
-                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <h2>Quote</h2>
-                                  </div>
-                                </div>
-                                <div class="row">
-                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <div class="carousel-panel-text">GoDaddy is Awesome.</div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="item">
-                            <div class="item-wrapper text-center">
-                              <div data-icode="" class="carousel-panel container">
-                                <div class="row">
-                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <h2>Quote</h2>
-                                  </div>
-                                </div>
-                                <div class="row">
-                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <div class="carousel-panel-text">GoDaddy is Awesome.</div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="item">
-                            <div class="item-wrapper text-center">
-                              <div data-icode="" class="carousel-panel container">
-                                <div class="row">
-                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <h2>Quote</h2>
-                                  </div>
-                                </div>
-                                <div class="row">
-                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <div class="carousel-panel-text">GoDaddy is Awesome.</div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                  </div><a href="#carousel-testimonials" data-slide="prev" class="left carousel-control"><span class="carousel-icon arrow-left-icon"></span></a><a href="#carousel-testimonials" data-slide="next" class="right carousel-control"><span class="carousel-icon arrow-right-icon"></span></a>
+      <div class="carousel-wrap">
+        <div class="carousel-container container">
+          <div id="carousel-testimonials" data-ride="carousel" data-interval="false" class="carousel slide">
+            <ol class="carousel-indicators">
+              <li data-target="#carousel-testimonials" data-slide-to="0"></li>
+              <li data-target="#carousel-testimonials" data-slide-to="1"></li>
+              <li data-target="#carousel-testimonials" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="item">
+                <div class="item-wrapper text-center">
+                  <div data-icode="" class="carousel-panel container">
+                    <div class="row">
+                      <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                        <h2>Quote</h2>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                        <div class="carousel-panel-text">GoDaddy is Awesome.</div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <script>
-                  $('.carousel .carousel-indicators li:first-child').addClass("active");
-                  $('.carousel .carousel-inner .item:first-child').addClass("active");
-                </script>
               </div>
-            </div>
+              <div class="item">
+                <div class="item-wrapper text-center">
+                  <div data-icode="" class="carousel-panel container">
+                    <div class="row">
+                      <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                        <h2>Quote</h2>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                        <div class="carousel-panel-text">GoDaddy is Awesome.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="item-wrapper text-center">
+                  <div data-icode="" class="carousel-panel container">
+                    <div class="row">
+                      <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                        <h2>Quote</h2>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                        <div class="carousel-panel-text">GoDaddy is Awesome.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><a href="#carousel-testimonials" data-slide="prev" class="left carousel-control"><span class="carousel-icon arrow-left-icon"></span></a><a href="#carousel-testimonials" data-slide="next" class="right carousel-control"><span class="carousel-icon arrow-right-icon"></span></a>
+          </div>
+          <script>
+            $('.carousel .carousel-indicators li:first-child').addClass("active");
+            $('.carousel .carousel-inner .item:first-child').addClass("active");
+          </script>
+        </div>
+      </div>
     </section>
     <section id="faq" data-mid-nav-title="FAQ"></section>
     <style>.accordion-group {
@@ -1782,14 +1420,13 @@ margin-bottom: 20px;
     <!-- FOOTEREND-->
      
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Script"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Bottom"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- liveperson includes -->
     <div id="lpButtonDiv"></div><!-- End Main Content -->
     <script type="text/javascript">
       endOfPageScripts();
       
     </script>
-    <!--script-->
-    <!--  include ../../../templates/planTile.js-->
     <script type="text/javascript">
       $(window).load(function() {
         var maxTitleHeight = 0;

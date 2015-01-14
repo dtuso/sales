@@ -1,30 +1,25 @@
 extends ../../templates/pages/landing-page
 
-
-prepend endOfPageScripts
-  //script
-  //  include ../../../templates/planTile.js
-
 append pageStyles
   style
-    include:css ./website-builder/styles.css
+    include ./website-builder/styles.css
 
 block domainSearch
   //- remove domain search from top of hosting page
 
 block marquee
   section#marquee 
-    include ./website-builder/marquee.jade
+    include ./website-builder/_marquee.jade
 
 block plans
   section#plans
     +renderPlanTiles(3) 
       +planTile
-        include ./website-builder/plans/plan-website-builder-personal.jade
+        include ./website-builder/plans/_plan-website-builder-personal.jade
       +planTile
-        include ./website-builder/plans/plan-website-builder-business.jade
+        include ./website-builder/plans/_plan-website-builder-business.jade
       +planTile
-        include ./website-builder/plans/plan-website-builder-unlimited.jade
+        include ./website-builder/plans/_plan-website-builder-unlimited.jade
         
       +renderCartLogic("[@T[link:<relative path='~/hosting/website-builder-config.aspx' />]@T]", "slp_wst_3" )
   
@@ -35,13 +30,13 @@ block sections
   section#templates.tile-section
     |view templates 
 
-  include ./website-builder/fullVideo.jade
+  include ./website-builder/_fullVideo.jade
 
   section#social-media(data-mid-nav-title="Features")
     include ./website-builder/_tabbed-carousel.jade
 
   section#business-exclusives.bg-pro-gray
-    include ./website-builder/business-exclusives.jade
+    include ./website-builder/_business-exclusives.jade
 
 
   section#testimonials(data-mid-nav-title="Testimonials")

@@ -10,13 +10,12 @@ append pageStyles
     #domainSearch a { color: #333; font-weight: bold; margin-right: 30px; }
     #domainSearch { padding-bottom: 10px; }
 
-
 block domainSearch
   //- remove domain search from top of page
 
 block marquee
   section#marquee
-    include ./domain-search/marquee.jade
+    include ./domain-search/_marquee.jade
   section#domainSearch.bg-green-official
     .container
       .row
@@ -33,13 +32,13 @@ block plans
   section#plans
     +renderPlanTiles(4)
       +planTile
-        include ./domain-search/plan-tld-com.jade
+        include ./domain-search/_plan-tld-com.jade
       +planTile
-        include ./domain-search/plan-tld-net.jade
+        include ./domain-search/_plan-tld-net.jade
       +planTile
-        include ./domain-search/plan-tld-org.jade
+        include ./domain-search/_plan-tld-org.jade
       +planTile
-        include ./domain-search/plan-tld-info.jade
+        include ./domain-search/_plan-tld-info.jade
       .container
         .row
           .col-sm-12
@@ -53,7 +52,6 @@ block plans
             .include-check 100 professional email aliases (like sales@coolexample.com).
           .col-md-4.col-sm-6
             .include-check Real-time monitoring to keep you up and running
-
 
   section.features-carousel-pro-carousel#test-carousel
     style.
