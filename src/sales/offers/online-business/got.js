@@ -156,16 +156,25 @@ function wireUpDisclaimerModals() {
   var marqueeModalId = got1Page.canOfferOls ? "#default-marquee-details-modal" : "#default-marquee-details-modal-wsb-only";
   $('#default-marquee-view').on('click', '.see-details-disclaimer-link', function(){
     var $modal = $(marqueeModalId);
-    $modal.sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
+    $modal.sfDialog({buttons: got1Page.sfDialogErrorButtons});
   });
 
   // product split modals
   $('#site-choice').on('click', '.see-wsb-disclaimer-link', function(){
-    $("#site-choice-wsb-modal").sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
+    $("#site-choice-wsb-modal").sfDialog({buttons: got1Page.sfDialogErrorButtons});
   });
   $('#site-choice').on('click', '.see-ols-disclaimer-link', function(){
-    $("#site-choice-ols-modal").sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
+    $("#site-choice-ols-modal").sfDialog({buttons: got1Page.sfDialogErrorButtons});
   });
+
+  // choose product screen
+  $('#step2-choose-product').on('click', '.see-wsb-disclaimer-link', function(){
+    $("#step2-choose-product-wsb-modal").sfDialog({buttons: got1Page.sfDialogErrorButtons});
+  });
+  $('#step2-choose-product').on('click', '.see-ols-disclaimer-link', function(){
+    $("#step2-choose-product-ols-modal").sfDialog({buttons: got1Page.sfDialogErrorButtons});
+  });
+
 
 }
 

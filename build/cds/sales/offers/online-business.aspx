@@ -193,16 +193,25 @@ function wireUpDisclaimerModals() {
   var marqueeModalId = got1Page.canOfferOls ? "#default-marquee-details-modal" : "#default-marquee-details-modal-wsb-only";
   $('#default-marquee-view').on('click', '.see-details-disclaimer-link', function(){
     var $modal = $(marqueeModalId);
-    $modal.sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
+    $modal.sfDialog({buttons: got1Page.sfDialogErrorButtons});
   });
 
   // product split modals
   $('#site-choice').on('click', '.see-wsb-disclaimer-link', function(){
-    $("#site-choice-wsb-modal").sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
+    $("#site-choice-wsb-modal").sfDialog({buttons: got1Page.sfDialogErrorButtons});
   });
   $('#site-choice').on('click', '.see-ols-disclaimer-link', function(){
-    $("#site-choice-ols-modal").sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
+    $("#site-choice-ols-modal").sfDialog({buttons: got1Page.sfDialogErrorButtons});
   });
+
+  // choose product screen
+  $('#step2-choose-product').on('click', '.see-wsb-disclaimer-link', function(){
+    $("#step2-choose-product-wsb-modal").sfDialog({buttons: got1Page.sfDialogErrorButtons});
+  });
+  $('#step2-choose-product').on('click', '.see-ols-disclaimer-link', function(){
+    $("#step2-choose-product-ols-modal").sfDialog({buttons: got1Page.sfDialogErrorButtons});
+  });
+
 
 }
 
@@ -488,7 +497,7 @@ function showTypeYourDomain() {
 }
 .include-check-black:before {
   content: "";
-  background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+  background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
   background-position: 0 -700px;
   background-size: 205px auto;
   width: 25px;
@@ -500,7 +509,7 @@ function showTypeYourDomain() {
 }
 .include-check-green:before {
   content: "";
-  background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+  background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
   background-position: 0 -668px;
   background-size: 205px auto;
   width: 25px;
@@ -663,7 +672,7 @@ function showTypeYourDomain() {
               <div class="get-online-wrapper">
                 <div class="clearfix get-online-dash"><span class="headline-secondary get-online-text">[@L[cds.sales/offers/online-business:32573-top-banner-headline]@L]</span><span class="get-online-image"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-dash.png"></span></div><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-marker.png" class="green-arrow">
                 <h1 class="headline-primary today-text">[@L[cds.sales/offers/online-business:32573-top-banner-subheadline]@L]</h1>
-                <h3 data-tokenize="$1.00" class="as-low-as-text">[@L[cds.sales/offers/online-business:32573-as-low-as]@L]</h3>
+                <h3 data-tokenize="[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T]" class="as-low-as-text">[@L[cds.sales/offers/online-business:32573-as-low-as]@L]</h3>
                 <div class="top-disclaimer-text small">[@L[cds.sales/offers/online-business:32573-top-small-disclaimer-text]@L] 
                   <button class="btn-link see-details-disclaimer-link">[@L[cds.sales/offers/online-business:32573-top-small-disclaimer-details-link]@L]</button>
                 </div>
@@ -713,14 +722,12 @@ function showTypeYourDomain() {
       </section> 
       ##if(productIsOffered(105)) 
        
-      <div id="default-marquee-details-modal" class="tokenizable-disclaimer-modal sf-dialog">
-        <h2>[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]</h2>
+      <div id="default-marquee-details-modal" data-title="[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]" class="tokenizable-disclaimer-modal sf-dialog">
         <p>[@L[cds.sales/offers/online-business:32573-disclaimer-modal-both-content]@L]</p>
       </div> 
       ##else
        
-      <div id="default-marquee-details-modal-wsb-only" class="tokenizable-disclaimer-modal sf-dialog">
-        <h2>[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]</h2>
+      <div id="default-marquee-details-modal-wsb-only" data-title="[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]" class="tokenizable-disclaimer-modal sf-dialog">
         <p>[@L[cds.sales/offers/online-business:32573-disclaimer-modal-wsb-content]@L]</p>
       </div> 
       ##endif
@@ -733,6 +740,7 @@ function showTypeYourDomain() {
           #domain-available-marquee-view .available-domain-name-text {text-transform: lowercase; color: #333333; background: rgba(254, 220, 69, 0.7); padding: 5px;line-height: 1.6em;word-wrap: break-word;  }
           #domain-available-marquee-view .get-it-now-btn {top: 15px; }
           #domain-available-marquee-view .purchase-btn {margin-top: 5px;}
+          #domain-available-marquee-view h2 {margin: 0px;}
           
           
         </style>
@@ -795,7 +803,8 @@ function showTypeYourDomain() {
           #domain-not-available-marquee-view .domain-name-display {text-transform: lowercase; margin-bottom: 0px; margin-top: 0px;}
           #domain-not-available-marquee-view .domain-name-display-tld {text-transform: lowercase;margin-bottom: 0px; margin-top: 0px;}
           #domain-not-available-marquee-view .show-more-arrow { position: relative; top: 16px; left: 15px; bottom: 0; margin-left: -10px; width: 0; height: 0; border: 11px solid transparent; border-top-color: #000; content: ''; }
-          #spin-results .spin-results-message,
+          #spin-results .spin-results-message, 
+          #spin-results .spin-result, 
           #spin-template-wrap .spin-template {display:none;}
           #spin-results .select-and-continue {margin-bottom: 0px; font-size:20px;}
           #spin-results .spin-results-message {margin-top:15px;}
@@ -1233,8 +1242,9 @@ function showTypeYourDomain() {
                 <div class="plan-flag">[@L[cds.sales/offers/online-business:32573-choose-wsb]@L]</div>
                 <h2>[@L[cds.sales/offers/online-business:32573-choose-wsb-text]@L]</h2>
                 <h4>[@L[cds.sales/offers/online-business:32573-choose-wsb-all-this-for-just-text]@L]</h4>
-                <div class="plan-price-wrap">[@L[cds.sales/offers/online-business:32573-choose-wsb-all-this-for-just-price]@L]
-                  <div class="plan-inline-disclaimer">[@L[cds.sales/offers/online-business:32573-choose-wsb-text-price-disclaimer]@L] [@L[cds.sales/offers/online-business:32573-choose-wsb-text-price-disclaimer-link]@L]</div>
+                <div data-tokenize="[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T]" class="plan-price-wrap">[@L[cds.sales/offers/online-business:32573-choose-wsb-all-this-for-just-price]@L]</div>
+                <div data-tokenize="[@T[multipleproductprice:<list productidlist="464069|101|7524" period="monthly"></list>]@T]" class="plan-inline-disclaimer">[@L[cds.sales/offers/online-business:32573-choose-wsb-text-price-disclaimer]@L] 
+                  <button class="btn-link see-wsb-disclaimer-link">[@L[cds.sales/offers/online-business:32573-choose-wsb-text-price-disclaimer-link]@L]</button>
                 </div>
                 <button class="btn btn-md btn-block btn-purchase product-wsb">[@L[cds.sales/offers/online-business:32573-choose-select-button]@L]</button>
                 <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-choose-wsb-bullet-1]@L]</div>
@@ -1251,8 +1261,9 @@ function showTypeYourDomain() {
                 <div class="plan-flag">[@L[cds.sales/offers/online-business:32573-choose-ols]@L]</div>
                 <h2>[@L[cds.sales/offers/online-business:32573-choose-ols-text]@L]</h2>
                 <h4>[@L[cds.sales/offers/online-business:32573-choose-ols-all-this-for-just-text]@L]</h4>
-                <div class="plan-price-wrap">[@L[cds.sales/offers/online-business:32573-choose-ols-all-this-for-just-price]@L]
-                  <div class="plan-inline-disclaimer">[@L[cds.sales/offers/online-business:32573-choose-ols-text-price-disclaimer]@L] [@L[cds.sales/offers/online-business:32573-choose-ols-text-price-disclaimer-link]@L]</div>
+                <div data-tokenize="[@T[multipleproductprice:<current productidlist="40972|101|7524" period="monthly" promocode="75315678" />]@T]" class="plan-price-wrap">[@L[cds.sales/offers/online-business:32573-choose-ols-all-this-for-just-price]@L]</div>
+                <div data-tokenize="[@T[multipleproductprice:<list productidlist="40972|101|7524" period="monthly"></list>]@T]" class="plan-inline-disclaimer">[@L[cds.sales/offers/online-business:32573-choose-ols-text-price-disclaimer]@L] 
+                  <button class="btn-link see-ols-disclaimer-link">[@L[cds.sales/offers/online-business:32573-choose-ols-text-price-disclaimer-link]@L]</button>
                 </div>
                 <button class="btn btn-md btn-block btn-purchase product-ols">[@L[cds.sales/offers/online-business:32573-choose-select-button]@L]</button>
                 <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-choose-ols-bullet-1]@L]</div>
@@ -1268,12 +1279,23 @@ function showTypeYourDomain() {
       <div class="sf-dialog api-c-failure-modal">
         <p>[@L[cds.sales/offers/online-business:32573-get-it-now-error]@L]</p>
       </div>
+      <div id="step2-choose-product-wsb-modal" data-title="[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]" class="tokenizable-disclaimer-modal sf-dialog">
+        <h2>WSB [@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]</h2>
+        <p>[@L[cds.sales/offers/online-business:32573-disclaimer-modal-wsb-content]@L]</p>
+      </div>
+      <div id="step2-choose-product-ols-modal" data-title="[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]" class="tokenizable-disclaimer-modal sf-dialog">
+        <h2>OLS [@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]</h2>
+        <p>[@L[cds.sales/offers/online-business:32573-disclaimer-modal-ols-content]@L]</p>
+      </div>
     </section>
     <atlantis:webstash type="css">
       <style>
         #site-choice-compare .disclaimer-mark {
           font-size: 24px;
           margin: 10px 10% 20px;
+        }
+        #site-choice-compare .button-margin {
+          margin-top:20px;
         }
         
         #site-choice-compare .disclaimer-mark p {
@@ -1476,7 +1498,7 @@ function showTypeYourDomain() {
           content: '';
           width: 94px;
           height: 94px;
-          background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+          background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
           background-size: 205px auto;
           background-position: 0 -896px;
           position: absolute;
@@ -1563,7 +1585,7 @@ function showTypeYourDomain() {
           content: '';
           width: 94px;
           height: 94px;
-          background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+          background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
           background-size: 205px auto;
           background-position: 0 -896px;
           position: absolute;
@@ -1596,7 +1618,7 @@ function showTypeYourDomain() {
         }
         .two-up-wrap-compare .check-bullets li:before {
           content: '';
-          background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+          background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
           background-size: 205px auto;
           background-position: 0 -700px;
           width: 25px;
@@ -1629,16 +1651,17 @@ function showTypeYourDomain() {
                 <div class="text-center two-up-image"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-wsb-icon.png"></div>
                 <h2 class="text-center">[@L[cds.sales/offers/online-business:32573-godaddy-wsb]@L]</h2>
                 <h3 class="text-center">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text]@L]</h3>
-                <mark class="text-center disclaimer-mark">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price]@L] 
-                  <p class="disclaimer">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price-disclaimer]@L] 
+                <mark class="text-center disclaimer-mark"> 
+                  <div data-tokenize="[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T]">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price]@L] </div>
+                  <p data-tokenize="[@T[multipleproductprice:<list productidlist="464069|101|7524" period="monthly"></list>]@T]" class="disclaimer">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price-disclaimer]@L] 
                     <button class="btn-link see-wsb-disclaimer-link">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price-disclaimer-link]@L]</a></button>
                   </p>
                 </mark>
                 <div class="row text-center">
-                  <div class="col-md-6">
+                  <div class="col-md-6 button-margin">
                     <button class="btn btn-md btn-primary"><i class="uxicon uxicon-play"></i> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]</button>
                   </div>
-                  <div class="col-md-6">
+                  <div class="col-md-6 button-margin">
                     <button class="btn btn-md btn-primary">[@L[cds.sales/offers/online-business:32573-view-designs-button]@L]</button>
                   </div>
                 </div>
@@ -1676,16 +1699,17 @@ function showTypeYourDomain() {
                 <div class="text-center two-up-image"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-onlineStore.png"></div>
                 <h2 class="text-center">[@L[cds.sales/offers/online-business:32573-godaddy-ols]@L]</h2>
                 <h3 class="text-center">[@L[cds.sales/offers/online-business:32573-godaddy-ols-text]@L]</h3>
-                <mark class="text-center disclaimer-mark">[@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price]@L] 
-                  <p class="disclaimer">[@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price-disclaimer]@L] 
+                <mark class="text-center disclaimer-mark"> 
+                  <div data-tokenize="[@T[multipleproductprice:<current productidlist="40972|101|7524" period="monthly" promocode="75315678" />]@T]">[@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price]@L] </div>
+                  <p data-tokenize="[@T[multipleproductprice:<list productidlist="40972|101|7524" period="monthly"></list>]@T]" class="disclaimer">[@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price-disclaimer]@L] 
                     <button class="btn-link see-ols-disclaimer-link">[@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price-disclaimer-link]@L]</button>
                   </p>
                 </mark>
                 <div class="row text-center">
-                  <div class="col-md-6">
+                  <div class="col-md-6 button-margin">
                     <button class="btn btn-md btn-primary"><i class="uxicon uxicon-play"></i> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]</button>
                   </div>
-                  <div class="col-md-6">
+                  <div class="col-md-6 button-margin">
                     <button class="btn btn-md btn-primary">[@L[cds.sales/offers/online-business:32573-see-real-stores-button]@L]</button>
                   </div>
                 </div>
@@ -1742,12 +1766,10 @@ function showTypeYourDomain() {
           </div>
         </div>
       </div>
-      <div id="site-choice-wsb-modal" class="tokenizable-disclaimer-modal sf-dialog">
-        <h2>[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]</h2>
+      <div id="site-choice-wsb-modal" data-title="[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]" class="tokenizable-disclaimer-modal sf-dialog">
         <p>[@L[cds.sales/offers/online-business:32573-disclaimer-modal-wsb-content]@L]</p>
       </div>
-      <div id="site-choice-ols-modal" class="tokenizable-disclaimer-modal sf-dialog">
-        <h2>[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]</h2>
+      <div id="site-choice-ols-modal" data-title="[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]" class="tokenizable-disclaimer-modal sf-dialog">
         <p>[@L[cds.sales/offers/online-business:32573-disclaimer-modal-ols-content]@L]</p>
       </div>
     </section>
