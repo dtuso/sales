@@ -4,6 +4,23 @@
 }
 .compare-table h2{
   margin-bottom: 40px;
+  margin-top: 0;
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-family: 'Walsheim-Black';
+  font-weight: 300;
+  line-height: 1.1;
+  color: #333;
+}
+.compare-table h4{
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-size: 24px;
+  text-transform: uppercase;
+  font-family: 'Walsheim-Black';
+  font-weight: 300;
+  line-height: 1.1;
+  color: #333;
 }
 .compare-table tr td:first-child {
   text-align: left;
@@ -146,18 +163,22 @@
 
 
 
-.pro-icon {
+.icon {
   background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
   display: inline-block;
   background-size: 205px auto;
 }
-.pro-icon.jump-arrow-icon,
-.pro-icon.arrow-down-icon {
+.icon.jump-arrow-icon,
+.icon.arrow-down-icon {
   background-position: 0 -321px;
   width: 95px;
   height: 95px;
 }
-
+.icon.gray-check-icon {
+background-position: 0 -606px;
+width: 25px;
+height: 27px;
+}
 .bg-pro-gray {
   background-color: #e8e8e8;
 }

@@ -240,7 +240,471 @@
         #test-carousel .plan-carousel-copy { font-family: 'Walsheim-Black'; font-size: 24px; }
         #test-carousel .btn { margin-top: 40px; }
       </style>
-      <style>.item-wrapper { padding: 70px 0 20px; text-align: center; }
+      <div class="carousel-wrap">
+        <div class="carousel-container container">
+          <div id="my-carousel" data-ride="carousel" data-interval="false" class="carousel slide">
+            <ol class="carousel-indicators">
+              <li data-target="#my-carousel" data-slide-to="0"></li>
+              <li data-target="#my-carousel" data-slide-to="1"></li>
+              <li data-target="#my-carousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="item">
+                <div class="item-wrapper text-center">
+                  <div data-icode="" class="carousel-panel container">
+                    <div style="text-transform: uppercase;" class="plan-carousel-copy">FINALLY! A WEB ADDRESS THAT TELLS PEOPLE EXACTLY WHAT YOU DO</div>
+                    <div class="plan-carousel-copy">.attorney, .church, .club, .xyz and .guide are now available.</div><a class="btn btn-default-dark">Search Domains Now</a>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="item-wrapper text-center">
+                  <div data-icode="" class="carousel-panel container">
+                    <div style="text-transform: uppercase;" class="plan-carousel-copy">30% OFF</div>
+                    <div class="plan-carousel-copy">.global, .email, .website, .guru, .army now.</div><a class="btn btn-default-dark">Search Domains Now</a>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="item-wrapper text-center">
+                  <div data-icode="" class="carousel-panel container">
+                    <div class="plan-carousel-copy">SAVE up to 50% when you get online with</div>
+                    <div class="plan-carousel-copy">.com, .net, .co, .org, .me, .biz, or .us</div><a class="btn btn-default-dark">Search Domains Now</a>
+                  </div>
+                </div>
+              </div>
+            </div><a href="#my-carousel" data-slide="prev" class="left carousel-control"><span class="carousel-icon arrow-left-icon"></span></a><a href="#my-carousel" data-slide="next" class="right carousel-control"><span class="carousel-icon arrow-right-icon"></span></a>
+          </div>
+          <script>
+            $('.carousel .carousel-indicators li:first-child').addClass("active");
+            $('.carousel .carousel-inner .item:first-child').addClass("active");
+          </script>
+        </div>
+      </div>
+    </section>
+    <style>.fix-body {
+  margin-top: 130px;
+}
+.mid-page-nav {
+  background-color: #333333;
+  font-family: 'Walsheim-Bold';
+  height: 130px;
+  color: #fff;
+  -webkit-box-shadow: 0px 3px 0 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 3px 0 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 3px 0 0 rgba(0, 0, 0, 0.1);
+}
+@media only screen and (max-width: 768px) {
+  .mid-page-nav {
+    display: none;
+  }
+}
+.mid-page-nav .navbar-collapse {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.mid-page-nav.sticky {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+}
+.mid-page-nav .nav {
+  height: 130px;
+}
+.mid-page-nav .nav > li {
+  display: table;
+}
+.mid-page-nav .nav > li.open > a {
+  background-color: #232323;
+}
+.mid-page-nav .nav > li.open > a:before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-top: 15px solid #008a32;
+  border-right: 20px solid transparent;
+  border-left: 20px solid transparent;
+  position: absolute;
+  bottom: 14px;
+  margin-left: -20px;
+  left: 50%;
+}
+.mid-page-nav .nav > li > a {
+  display: table-cell;
+  height: 130px;
+  vertical-align: middle;
+}
+.mid-page-nav .nav > li > a.active,
+.mid-page-nav .nav > li > a:focus,
+.mid-page-nav .nav > li > a:hover {
+  background-color: #232323;
+}
+.mid-page-nav .nav > li > a.active:before,
+.mid-page-nav .nav > li > a:focus:before,
+.mid-page-nav .nav > li > a:hover:before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-top: 15px solid #008a32;
+  border-right: 20px solid transparent;
+  border-left: 20px solid transparent;
+  position: absolute;
+  bottom: 14px;
+  margin-left: -20px;
+  left: 50%;
+}
+.mid-page-nav .nav > li a {
+  font-size: 24px;
+  font-size: 2.4rem;
+  font-family: 'Walsheim-Bold';
+  color: #808080;
+  padding: 0;
+  text-align: center;
+}
+.mid-page-nav .nav > li a span {
+  display: table-cell;
+  vertical-align: middle;
+  border-left: 1px solid #232323;
+  padding: 7px 40px;
+}
+.mid-page-nav .nav > li a span > em {
+  font-size: 40px;
+  font-size: 4rem;
+  color: #555555;
+  display: inline-block;
+  margin-top: -5px;
+  border: 0;
+  padding: 0;
+  font-style: normal;
+}
+.mid-page-nav .nav > li:first-child a span {
+  border-left: 0;
+}
+.mid-page-nav .nav .open > .dropdown-menu {
+  opacity: 1;
+  -webkit-transform: scale(1, 1) rotateX(0deg);
+  -moz-transform: scale(1, 1) rotateX(0deg);
+  -ms-transform: scale(1, 1) rotateX(0deg);
+  transform: scale(1, 1) rotateX(0deg);
+}
+.mid-page-nav .nav .dropdown-menu {
+  background-clip: padding-box;
+  border: 0;
+  background-color: #333333;
+  display: block;
+  opacity: 0;
+  -webkit-transform: scale(1, 0) rotateX(90deg);
+  -moz-transform: scale(1, 0) rotateX(90deg);
+  -ms-transform: scale(1, 0) rotateX(90deg);
+  transform: scale(1, 0) rotateX(90deg);
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  -webkit-transform-origin: 50% 0;
+  -moz-transform-origin: 50% 0;
+  -ms-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.mid-page-nav .nav .dropdown-menu li > a {
+  display: block;
+  background-color: #333333;
+  padding: 20px;
+  border-bottom: #333333;
+}
+.mid-page-nav .nav .dropdown-menu li > a:hover {
+  background-color: #232323;
+}
+.mid-page-nav .price-text {
+  font-size: 12px;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+.mid-page-nav .price {
+  font-size: 24px;
+  font-size: 2.4rem;
+}
+.mid-page-nav .price span {
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+    </style>
+    <div class="mid-page-nav">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" data-toggle="collapse" data-target="" class="navbar-toggle collapsed"></button>
+        </div>
+        <div id="midPageNav" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav"></ul>
+          <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.mid-page-nav&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="navbar-right">
+            <div class="price-text">Plans starting at</div>
+            <div class="price">$69.99<span>/year</span></div><a href="#alternate-products" class="btn-warning btn btn-sm">See the plans</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      $(function(){ 
+        var midPageNavItemTemplate = _.template('<li><a href="#<%= url %>" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.nav&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" style="margin-top: 0px;"><span><%= text %></span></a></li>');
+        $('[data-mid-nav-title]').each(function(index) {
+          var itemData = { text: $(this).data('mid-nav-title'), url: this.id };
+          var itemElement = midPageNavItemTemplate(itemData);
+          $('#midPageNav ul.nav').append(itemElement);
+        });
+      });
+      $(window).load(function() {
+        var midPageMenuItem = 0;
+        $(".mid-page-nav .nav > li a span").each(function(index, tab) {
+          midPageMenuItem = $(tab).outerHeight() > midPageMenuItem ? $(tab).outerHeight() : midPageMenuItem;
+        }).css("height", midPageMenuItem);
+      });
+      $(document).ready(function(){
+        // this sets the nav to fixed when scrolled past and fixes the body for the height of the nav
+        var nav = $('.mid-page-nav');
+        var pos = nav.offset().top;
+      
+        $(window).scroll(function () {
+          var fix = ($(this).scrollTop() > pos) ? true : false;
+          nav.toggleClass("sticky", fix);
+          $('body').toggleClass("fix-body", fix);
+        });
+        $('#midPageNav .dropdown-toggle').dropdown()
+      });
+      function scroll_if_anchor(href) {
+        href = typeof(href) == "string" ? href : $(this).attr("href");
+      
+        var fromTop = 130;
+      
+        if(href.indexOf("#") == 0) {
+          var $target = $(href);
+      
+          // Older browser without pushState might flicker here, as they momentarily
+          // jump to the wrong position (IE < 10)
+          if($target.length) {
+            $('html, body').animate({ scrollTop: $target.offset().top - fromTop }, 1000);
+            if(history && "pushState" in history) {
+              history.pushState({}, document.title, window.location.pathname + href);
+              return false;
+            }
+          }
+        }
+      }
+      
+      scroll_if_anchor(window.location.hash);
+      
+      $("#midPageNav").on("click", "a", scroll_if_anchor);
+    </script>
+    <section id="speed-chart">
+      <div class="container">
+        <style>
+          #speed-chart { min-height: 400px; }
+          #speed-chart h3 { margin: 50px auto; text-align: center; }
+          #speed-chart img { margin: 50px auto; display: block; }
+        </style>
+        <div class="speed-chart">
+          <h3>Fast Sites = Happy Visitors</h3><img src="[@T[link:<imageroot />]@T]fos/mike/img/pro-wp-speed.png">
+          <div class="speed-text"><img></div>
+        </div>
+      </div>
+    </section>
+    <section id="features" data-mid-nav-title="Why GoDaddy?" class="key-benefits-wrap tile-section bg-pro-gray">
+      <div class="container">
+        <div class="row">
+          <div style="padding-top: 30px; padding-bottom: 30px;" class="col-sm-12">
+            <h2>Why Choose GoDaddy?</h2>
+            <h3>With more than 58 million domains under management, we have more experience than anyone.  We're like your favorite local store that's been there for ages and always seems to have everything you need.</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4 key-benefit">
+            <div class="key-benefits-img-wrap"><img src="[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_Group_ScalableResources.png" class="key-benefits-img">
+            </div>
+            <h3 class="key-benefits-title">World's Largest Registrar</h3>
+            <div class="key-benefits-text">More people trust us than any other domain provider.  Since the right domain name can set you up for future success, you don't want to mess around.  Go with the world's largest registrar.</div>
+          </div>
+          <div class="col-sm-4 key-benefit">
+            <div class="key-benefits-img-wrap"><img src="[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_Group_Security.png" class="key-benefits-img"></div>
+            <h3 class="key-benefits-title">Widest Selection on the Web</h3>
+            <div class="key-benefits-text">Every time you enter a name in our domain serach box, our powerful engine searces the web's largest pool of names.  There's no better place to find the right domain name for your business.</div>
+          </div>
+          <div class="col-sm-4 key-benefit">
+            <div class="key-benefits-img-wrap"><img src="[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_Group_WhatIsHosting.png" class="key-benefits-img"></div>
+            <h3 class="key-benefits-title">Award-Winning 24/7 Support</h3>
+            <div class="key-benefits-text">Stumped by... anything?  Our smart, friendly domain experts are here to help.  Call them day or night at (480) 505-8877.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="features" data-mid-nav-title="Options" class="key-benefits-wrap tile-section bg-pro-gray">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4 key-benefit">
+            <div class="key-benefits-img-wrap"><img src="[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_Group_ScalableResources.png" class="key-benefits-img">
+            </div>
+            <h3 class="key-benefits-title">Scalable resources on-demand</h3>
+            <div class="key-benefits-text">When you need more power, level up your CPU, memory, entry processes and I/O with just a click. Access the Stats & Usage dashboard for real-time visibility to your sites’ resource usage. Even get alerts as you approach your limits so you can react quickly and keep your site running at top speed.</div>
+          </div>
+          <div class="col-sm-4 key-benefit">
+            <div class="key-benefits-img-wrap"><img src="[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_Group_Security.png" class="key-benefits-img"></div>
+            <h3 class="key-benefits-title">Award-winning security keeps your site safe</h3>
+            <div class="key-benefits-text">Keeping a website secure is a full time job. That’s why our security team is on the job 24/7, monitoring your site for suspicious activity and protecting it against brute force and DDoS attacks.</div>
+          </div>
+          <div class="col-sm-4 key-benefit">
+            <div class="key-benefits-img-wrap"><img src="[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_Group_WhatIsHosting.png" class="key-benefits-img"></div>
+            <h3 class="key-benefits-title">What is Hosting?</h3>
+            <div class="key-benefits-text">Make sure friends, family and customers can see your website. Hosting is what makes it possible for others to view your website over the Internet. Without it, you’re the only one who will ever get a look. GoDaddy serves up:
+              <ul>
+                <li>One-click set-up</li>
+                <li>Unlimited storage and bandwidth</li>
+                <li>Scalability to fit your needs</li>
+                <li>24/7 secure monitoring</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="tabbed-carousel">
+      <div data-icode="" class="carousel-panel container">
+        <div class="row">
+          <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+            <div></div>
+          </div>
+        </div>
+      </div>
+            <style>.features-tabbed-carousel-top {
+  padding: 70px 0 0;
+  text-align: center;
+}
+.features-tabbed-carousel-top h2 {
+  margin-top: 0;
+}
+.features-tabbed-carousel-top .features-tabbed-carousel-icon {
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.features-tabbed-carousel-top .features-tabbed-carousel-icon img {
+max-width: 70%;
+vertical-align: middle;
+display: inline-block;
+}
+.features-tabbed-carousel-top .features-tabbed-carousel-icon img {
+margin-bottom: 10px;
+}
+.img-center {
+margin: 0 auto;
+}
+
+.features-tabbed-carousel-top .features-tabbed-carousel-icon.active .feature-text {
+color: #008a32;
+font-family: 'Walsheim-Black';
+}
+.features-tabbed-carousel-top .features-tabbed-carousel-icon .feature-text {
+font-family: 'Walsheim-Bold';
+font-size: 18px;
+font-size: 1.8rem;
+line-height: 1.1;
+text-transform: uppercase;
+}
+.feature-carousel-icon {font-size: 36px;margin-bottom: 10px;}
+
+@media only screen and (min-width: 992px){
+  .features-tabbed-carousel-top .features-tabbed-carousel-icon:not(:first-child) {
+  border-left: 1px solid #808080;
+  }
+}
+@media only screen and (min-width: 992px){
+  .features-tabbed-carousel-top .features-tabbed-carousel-icon.active:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 15px solid #008a32;
+  border-right: 15px solid transparent;
+  border-left: 15px solid transparent;
+  position: absolute;
+  bottom: -15px;
+  margin-left: -20px;
+  left: 50%;
+  }
+}
+            </style>
+            <div data-icode="" id="" class="features-tabbed-carousel-top ">
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                    <h1>Keep the bad guys away.</h1>
+                    <h4 class="headline-primary">There are people on the web who are always trying to steal your domains and personal details. These optional services can help (you, not them).</h4>
+                  </div>
+                </div>
+                <div class="row">
+                        <div data-begin="0" data-end="0" class="features-tabbed-carousel-icon col-md-4">
+                          <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                            <div class="feature-text">Privacy Potection</div>
+                          </div>
+                        </div>
+                        <div data-begin="1" data-end="1" class="features-tabbed-carousel-icon col-md-4">
+                          <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                            <div class="feature-text">Business Protection</div>
+                          </div>
+                        </div>
+                        <div data-begin="2" data-end="2" class="features-tabbed-carousel-icon col-md-4">
+                          <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                            <div class="feature-text">Certified Domains</div>
+                          </div>
+                        </div>
+                </div>
+              </div>
+            </div>
+            <atlantis:webstash type="js">
+              <script type="text/javascript">
+                $(window).load(function() {
+                  setTimeout(function() {
+                    $(".features-tabbed-carousel-icon:first").click();
+                  }, 500);
+                
+                  var maxTabHeight = 0;
+                  $(".features-tabbed-carousel-icon").each(function(index, tab) {
+                    maxTabHeight = $(tab).outerHeight() > maxTabHeight ? $(tab).outerHeight() : maxTabHeight;
+                  }).css("height", maxTabHeight);
+                
+                  var maxFeatureTextHeight = 0;
+                  $(".feature-text").each(function(index, featureText) {
+                    maxFeatureTextHeight = $(featureText).height() > maxFeatureTextHeight ? $(featureText).height() : maxFeatureTextHeight;
+                  }).css({height: maxFeatureTextHeight});
+                
+                });
+                
+                $(".features-tabbed-carousel-icon").click(function() {
+                  var slideNum = $(this).data("begin");
+                  $(".features-tabbed-carousel-icon").removeClass("active");
+                  $(this).addClass("active");
+                  $('#carousel-services').carousel(slideNum);
+                });
+                
+                $('#carousel-services').on('slid.bs.carousel', function () {
+                  var carouselData = $(this).data('bs.carousel');
+                  var currentIndex = carouselData.getActiveIndex();
+                  $(".features-tabbed-carousel-icon").each(function() {
+                    if (currentIndex >= parseInt($(this).data("begin")) && currentIndex <= parseInt($(this).data("end"))) {
+                      $(".features-tabbed-carousel-icon").removeClass("active");
+                      $(this).addClass("active");
+                    }
+                  });
+                });
+                
+                
+              </script>
+            </atlantis:webstash>
+            <style>.item-wrapper { padding: 70px 0 20px; }
+
 .carousel-wrap { padding-bottom: 70px; }
 
 @media only screen and (min-width: 768px){
@@ -330,6 +794,9 @@
 }
 .carousel-panel .carousel-panel-text {
   margin-bottom: 25px;
+}
+.carousel-panel h2 {
+  margin-top: 0px;
 }
 
 .carousel-container .carousel-control.left {
@@ -510,7 +977,11 @@
 .carousel-control.left {
     left: -40px;
 }
-
+@media only screen and (max-width: 768px){
+  .carousel-container .carousel-control {
+    display: none;
+  }
+}
 @media only screen and (max-width: 768px) {
     .carousel-control.left {
         left: -10px;
@@ -558,267 +1029,139 @@
         bottom: -5px;
     }
 }
-      </style>
-      <div class="carousel-wrap">
-        <div class="carousel-container container">
-          <div id="my-carousel" data-ride="carousel" data-interval="false" class="carousel slide">
-            <ol class="carousel-indicators">
-              <li data-target="#my-carousel" data-slide-to="0"></li>
-              <li data-target="#my-carousel" data-slide-to="1"></li>
-              <li data-target="#my-carousel" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-              <div class="item">
-                <div class="item-wrapper">
-                  <div style="text-transform: uppercase;" class="plan-carousel-copy">FINALLY! A WEB ADDRESS THAT TELLS PEOPLE EXACTLY WHAT YOU DO</div>
-                  <div class="plan-carousel-copy">.attorney, .church, .club, .xyz and .guide are now available.</div><a class="btn btn-default-dark">Search Domains Now</a>
+.carousel-panel .include-check {
+position: relative;
+padding-left: 45px;
+margin-top: 20px;
+}
+.carousel-panel .include-check:before {
+content: "";
+background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
+background-position: 0 -668px;
+background-size: 205px auto;
+width: 25px;
+height: 27px;
+padding-right: 5px;
+position: absolute;
+left: 0;
+top: -6px;
+}
+            </style>
+            <div class="carousel-wrap">
+              <div class="carousel-container container">
+                <div id="carousel-services" data-ride="carousel" data-interval="false" class="carousel slide">
+                  <ol class="carousel-indicators">
+                    <li data-target="#carousel-services" data-slide-to="0"></li>
+                    <li data-target="#carousel-services" data-slide-to="1"></li>
+                    <li data-target="#carousel-services" data-slide-to="2"></li>
+                  </ol>
+                  <div class="carousel-inner">
+                          <div class="item">
+                            <div class="item-wrapper">
+                              <div data-icode="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/domains/search/HotelDoors.png" class="img-responsive img-center">
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <h2>Keep your private details, uhh…private.</h2>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <div class="carousel-panel-text">As soon as you register a domain with GoDaddy or any other registrar, your personal information is displayed in a public directory. Hackers and spammers often use this to compile email lists and steal domains. Harsh, but true.</div>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <div class="carousel-panel-text">When you add Privacy Protection to your domains:</div>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <div class="include-check carousel-panel-text">We replace your name and contact details with our partner company’s, Domains By Proxy. No one ever sees your name, address, email or phone number but us.</div>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <div class="include-check carousel-panel-text">You still control your domains and all email addressed to them, as well as the right to sell, renew or transfer them. Your domains are still 100% yours.</div>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <div class="carousel-panel-text">You may sleep better knowing your personal information isn’t on display to the whole world.</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <div class="item-wrapper">
+                              <div data-icode="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/domains/search/HotelDoors.png" class="img-responsive img-center">
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <h2>Keep your private details, uhh…private.</h2>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <div class="carousel-panel-text">As soon as you register a domain with GoDaddy or any other registrar, your personal information is displayed in a public directory. Hackers and spammers often use this to compile email lists and steal domains. Harsh, but true.</div>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <div class="carousel-panel-text">When you add Privacy Protection to your domains:</div>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <div class="include-check carousel-panel-text">We replace your name and contact details with our partner company’s, Domains By Proxy. No one ever sees your name, address, email or phone number but us.</div>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <div class="include-check carousel-panel-text">You still control your domains and all email addressed to them, as well as the right to sell, renew or transfer them. Your domains are still 100% yours.</div>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <div class="carousel-panel-text">You may sleep better knowing your personal information isn’t on display to the whole world.</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <div class="item-wrapper">
+                              <div data-icode="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/domains/search/HotelDoors.png" class="img-responsive img-center">
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <h2>Keep your private details, uhh…private.</h2>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <div class="carousel-panel-text">As soon as you register a domain with GoDaddy or any other registrar, your personal information is displayed in a public directory. Hackers and spammers often use this to compile email lists and steal domains. Harsh, but true.</div>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <div class="carousel-panel-text">When you add Privacy Protection to your domains:</div>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <div class="carousel-panel-text">You may sleep better knowing your personal information isn’t on display to the whole world.</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                  </div><a href="#carousel-services" data-slide="prev" class="left carousel-control"><span class="carousel-icon arrow-left-icon"></span></a><a href="#carousel-services" data-slide="next" class="right carousel-control"><span class="carousel-icon arrow-right-icon"></span></a>
                 </div>
+                <script>
+                  $('.carousel .carousel-indicators li:first-child').addClass("active");
+                  $('.carousel .carousel-inner .item:first-child').addClass("active");
+                </script>
               </div>
-              <div class="item">
-                <div class="item-wrapper">
-                  <div style="text-transform: uppercase;" class="plan-carousel-copy">30% OFF</div>
-                  <div class="plan-carousel-copy">.global, .email, .website, .guru, .army now.</div><a class="btn btn-default-dark">Search Domains Now</a>
-                </div>
-              </div>
-              <div class="item">
-                <div class="item-wrapper">
-                  <div class="plan-carousel-copy">SAVE up to 50% when you get online with</div>
-                  <div class="plan-carousel-copy">.com, .net, .co, .org, .me, .biz, or .us</div><a class="btn btn-default-dark">Search Domains Now</a>
-                </div>
-              </div>
-            </div><a href="#my-carousel" data-slide="prev" class="left carousel-control"><span class="carousel-icon arrow-left-icon"></span></a><a href="#my-carousel" data-slide="next" class="right carousel-control"><span class="carousel-icon arrow-right-icon"></span></a>
-          </div>
-          <script>
-            $('.carousel .carousel-indicators li:first-child').addClass("active");
-            $('.carousel .carousel-inner .item:first-child').addClass("active");
-          </script>
-        </div>
-      </div>
-    </section>
-    <style>
-.mid-page-nav {
-  background-color: #333333;
-  font-family: 'Walsheim-Bold';
-  height: 130px;
-  color: #fff;
-  -webkit-box-shadow: 0px 3px 0 0 rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0px 3px 0 0 rgba(0, 0, 0, 0.1);
-  box-shadow: 0px 3px 0 0 rgba(0, 0, 0, 0.1);
-}
-.mid-page-nav.sticky {
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  z-index: 1000;
-}
-
-.mid-page-nav .navbar-collapse {
-  margin-left: -15px;
-  margin-right: -15px;
-}
-.mid-page-nav .nav {
-  height: 130px;
-}
-.mid-page-nav .nav > li {
-  display: table;
-}
-.mid-page-nav .nav > li a {
-  font-size: 24px;
-  font-size: 2.4rem;
-  font-family: 'Walsheim-Bold';
-  color: #808080;
-  padding: 0;
-  text-align: center;
-}
-.mid-page-nav .nav > li > a {
-  display: table-cell;
-  height: 130px;
-  vertical-align: middle;
-}
-.mid-page-nav .nav > li:first-child a span {
-  border-left: 0;
-}
-.mid-page-nav .nav > li a span {
-  display: table-cell;
-  vertical-align: middle;
-  border-left: 1px solid #232323;
-  padding: 7px 40px;
-}
-.mid-page-nav .nav .dropdown-menu {
-  background-clip: padding-box;
-  border: 0;
-  background-color: #333333;
-  display: block;
-  opacity: 0;
-  -webkit-transform: scale(1, 0) rotateX(90deg);
-  -moz-transform: scale(1, 0) rotateX(90deg);
-  -ms-transform: scale(1, 0) rotateX(90deg);
-  transform: scale(1, 0) rotateX(90deg);
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-  -webkit-transform-origin: 50% 0;
-  -moz-transform-origin: 50% 0;
-  -ms-transform-origin: 50% 0;
-  transform-origin: 50% 0;
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-}
-
-.mid-page-nav .nav .dropdown-menu li > a {
-  display: block;
-  background-color: #333333;
-  padding: 20px;
-  border-bottom: #333333;
-}
-
-.mid-page-nav .price-text {
-  font-size: 12px;
-  font-size: 1.2rem;
-  line-height: 1;
-}
-
-.mid-page-nav .price {
-  font-size: 24px;
-  font-size: 2.4rem;
-}
-    </style>
-    <div class="mid-page-nav">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" data-toggle="collapse" data-target="" class="navbar-toggle collapsed"></button>
-        </div>
-        <div id="midPageNav" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav"></ul>
-          <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.mid-page-nav&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="navbar-right">
-            <div class="price-text">Plans starting at</div>
-            <div class="price">$69.99<span>/year</span></div><a href="#alternate-products" class="btn-warning btn btn-sm">See the plans</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <script>
-      $(function(){ 
-        var midPageNavItemTemplate = _.template('<li><a href="#<%= url %>" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.nav&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" style="margin-top: 0px;"><span><%= text %></span></a></li>');
-        $('[data-mid-nav-title]').each(function(index) {
-          var itemData = { text: $(this).data('mid-nav-title'), url: this.id };
-          var itemElement = midPageNavItemTemplate(itemData);
-          $('#midPageNav ul.nav').append(itemElement);
-        });
-      });
-      $(window).load(function() {
-        var midPageMenuItem = 0;
-        $(".mid-page-nav .nav > li a span").each(function(index, tab) {
-          midPageMenuItem = $(tab).outerHeight() > midPageMenuItem ? $(tab).outerHeight() : midPageMenuItem;
-        }).css("height", midPageMenuItem);
-      });
-      $(document).ready(function(){
-        // this sets the nav to fixed when scrolled past and fixes the body for the height of the nav
-        var nav = $('.mid-page-nav');
-        var pos = nav.offset().top;
-      
-        $(window).scroll(function () {
-          var fix = ($(this).scrollTop() > pos) ? true : false;
-          nav.toggleClass("sticky", fix);
-          $('body').toggleClass("fix-body", fix);
-        });
-        $('#midPageNav .dropdown-toggle').dropdown()
-      });
-      function scroll_if_anchor(href) {
-        href = typeof(href) == "string" ? href : $(this).attr("href");
-      
-        var fromTop = 130;
-      
-        if(href.indexOf("#") == 0) {
-          var $target = $(href);
-      
-          // Older browser without pushState might flicker here, as they momentarily
-          // jump to the wrong position (IE < 10)
-          if($target.length) {
-            $('html, body').animate({ scrollTop: $target.offset().top - fromTop }, 1000);
-            if(history && "pushState" in history) {
-              history.pushState({}, document.title, window.location.pathname + href);
-              return false;
-            }
-          }
-        }
-      }
-      
-      scroll_if_anchor(window.location.hash);
-      
-      $("#midPageNav").on("click", "a", scroll_if_anchor);
-    </script>
-    <section id="speed-chart">
-      <div class="container">
-        <style>
-          #speed-chart { min-height: 400px; }
-          #speed-chart h3 { margin: 50px auto; text-align: center; }
-          #speed-chart img { margin: 50px auto; display: block; }
-        </style>
-        <div class="speed-chart">
-          <h3>Fast Sites = Happy Visitors</h3><img src="[@T[link:<imageroot />]@T]fos/mike/img/pro-wp-speed.png">
-          <div class="speed-text"><img></div>
-        </div>
-      </div>
-    </section>
-    <section id="features" data-mid-nav-title="Why GoDaddy?" class="key-benefits-wrap tile-section bg-pro-gray">
-      <div class="container">
-        <div class="row">
-          <div style="padding-top: 30px; padding-bottom: 30px;" class="col-sm-12">
-            <h2>Why Choose GoDaddy?</h2>
-            <h3>With more than 58 million domains under management, we have more experience than anyone.  We're like your favorite local store that's been there for ages and always seems to have everything you need.</h3>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-4 key-benefit">
-            <div class="key-benefits-img-wrap"><img src="[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_Group_ScalableResources.png" class="key-benefits-img">
             </div>
-            <h3 class="key-benefits-title">World's Largest Registrar</h3>
-            <div class="key-benefits-text">More people trust us than any other domain provider.  Since the right domain name can set you up for future success, you don't want to mess around.  Go with the world's largest registrar.</div>
-          </div>
-          <div class="col-sm-4 key-benefit">
-            <div class="key-benefits-img-wrap"><img src="[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_Group_Security.png" class="key-benefits-img"></div>
-            <h3 class="key-benefits-title">Widest Selection on the Web</h3>
-            <div class="key-benefits-text">Every time you enter a name in our domain serach box, our powerful engine searces the web's largest pool of names.  There's no better place to find the right domain name for your business.</div>
-          </div>
-          <div class="col-sm-4 key-benefit">
-            <div class="key-benefits-img-wrap"><img src="[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_Group_WhatIsHosting.png" class="key-benefits-img"></div>
-            <h3 class="key-benefits-title">Award-Winning 24/7 Support</h3>
-            <div class="key-benefits-text">Stumped by... anything?  Our smart, friendly domain experts are here to help.  Call them day or night at (480) 505-8877.</div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="features" data-mid-nav-title="Options" class="key-benefits-wrap tile-section bg-pro-gray">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-4 key-benefit">
-            <div class="key-benefits-img-wrap"><img src="[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_Group_ScalableResources.png" class="key-benefits-img">
-            </div>
-            <h3 class="key-benefits-title">Scalable resources on-demand</h3>
-            <div class="key-benefits-text">When you need more power, level up your CPU, memory, entry processes and I/O with just a click. Access the Stats & Usage dashboard for real-time visibility to your sites’ resource usage. Even get alerts as you approach your limits so you can react quickly and keep your site running at top speed.</div>
-          </div>
-          <div class="col-sm-4 key-benefit">
-            <div class="key-benefits-img-wrap"><img src="[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_Group_Security.png" class="key-benefits-img"></div>
-            <h3 class="key-benefits-title">Award-winning security keeps your site safe</h3>
-            <div class="key-benefits-text">Keeping a website secure is a full time job. That’s why our security team is on the job 24/7, monitoring your site for suspicious activity and protecting it against brute force and DDoS attacks.</div>
-          </div>
-          <div class="col-sm-4 key-benefit">
-            <div class="key-benefits-img-wrap"><img src="[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_Group_WhatIsHosting.png" class="key-benefits-img"></div>
-            <h3 class="key-benefits-title">What is Hosting?</h3>
-            <div class="key-benefits-text">Make sure friends, family and customers can see your website. Hosting is what makes it possible for others to view your website over the Internet. Without it, you’re the only one who will ever get a look. GoDaddy serves up:
-              <ul>
-                <li>One-click set-up</li>
-                <li>Unlimited storage and bandwidth</li>
-                <li>Scalability to fit your needs</li>
-                <li>24/7 secure monitoring</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
     <section id="faq">
       <style>.accordion-group {
@@ -1025,7 +1368,8 @@
             var maxHeight = 0;
             $(outerPlan).find(".pro-plan-wrap").each(function(index, plan) {
               maxHeight = $(plan).outerHeight() > maxHeight ? $(plan).outerHeight() : maxHeight;
-            }).css("height", maxHeight);
+            });
+            if( maxHeight > 0 )$(outerPlan).find(".pro-plan-wrap").css("height", maxHeight);
           });
         }
       });

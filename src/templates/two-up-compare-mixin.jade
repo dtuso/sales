@@ -35,7 +35,7 @@ mixin twoUpCompareColumn(columnOptions)
 
       if (columnOptions.image)
         .text-center.two-up-image
-          img(src="#{columnOptions.image}", alt="#{columnOptions.altText}")
+          img(src!="#{columnOptions.image}", alt="#{columnOptions.altText}")
 
       if (columnOptions.title)
         case columnOptions.titleAlign
@@ -71,10 +71,12 @@ mixin renderTwoUpCompare(twoUpOptions)
   - twoUpOptions.style = twoUpOptions.style || "";
   - twoUpOptions.backgroundColor = twoUpOptions.backgroundColor || "";
   - twoUpOptions.backgroundImage = twoUpOptions.backgroundImage || "";
+  - twoUpOptions.includeStyles = twoUpOptions.includeStyles
 
-  style
-    include:css styles/two-up-compare-styles.css
-  div(id="#{twoUpOptions.twoUpCompareId ? twoUpOptions.twoUpCompareId : ''}" class = "#{twoUpOptions.titleBackgroundColor}" style="")
+  if typeof(twoUpOptions.includeStyles) == 'undefined'
+    style
+      include:css styles/two-up-compare-styles.css
+  div(id="#{twoUpOptions.twoUpCompareId ? twoUpOptions.twoUpCompareId : ''}" class = "two-up-title-wrap #{twoUpOptions.titleBackgroundColor}")
     if (twoUpOptions.title)
       div(class="#{twoUpOptions.whiteText ? 'white-text' : ''}")
         .container

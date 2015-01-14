@@ -51,7 +51,6 @@ var rootAssetPath = (process.platform === 'win32')
   : '/Volumes/images/fos/sales/themes/' + theme + '/';
 
 
-
 var assetSrcPaths = require('./paths.json');
 var assetSrcPath = assetSrcPaths[argv.src||'all'];
 

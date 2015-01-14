@@ -3,7 +3,7 @@ style.
   #domain-available-marquee-view { display: none; }
   #domain-available-marquee-view .available-domain-name-row {margin-top: 20px; margin-bottom: 30px; }
   #domain-available-marquee-view .domain-available-heading-text  { color: #333333; }
-  #domain-available-marquee-view .available-domain-name-text {text-transform: lowercase; color: #333333; background: rgba(254, 220, 69, 0.7); padding: 5px; }
+  #domain-available-marquee-view .available-domain-name-text {text-transform: lowercase; color: #333333; background: rgba(254, 220, 69, 0.7); padding: 5px;line-height: 1.6em;word-wrap: break-word;  }
   #domain-available-marquee-view .get-it-now-btn {top: 15px; }
   #domain-available-marquee-view .purchase-btn {margin-top: 5px;}
 section#domain-available-marquee-view
@@ -20,4 +20,4 @@ section#domain-available-marquee-view
           button.btn.btn-purchase.purchase-btn Get it now
   .bg-white
     .container
-      +domainSearchOffersInput('&hellip;OR SEARCH FOR A NEW ONE', '12346', 'Try a different domain name')
+      +domainSearchOffersInput('&hellip;OR SEARCH FOR A NEW ONE', '12346', 'Try a different domain name', 'Search', 'Type your business name here (if you have one)', 'You do not meet the eligibility requirements for {0} domains, please select a different domain extension and search again.','You need to choose a valid TLD.')

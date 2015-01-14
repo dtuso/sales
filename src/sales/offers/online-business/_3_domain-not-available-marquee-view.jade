@@ -4,29 +4,32 @@ style.
   #domain-not-available-marquee-view .pro-plans .pro-plan-wrap {border-top: 10px solid #008a32; padding: 20px;}
   #domain-not-available-marquee-view .pro-plans {margin-top: 0px; }
   #domain-not-available-marquee-view .domain-not-available-heading-text  { color: #333333; }
-  #domain-not-available-marquee-view .domain-not-available-subheading-text { color: #000000;}
   #domain-not-available-marquee-view .other-domains-heading-text {padding-top 20px; }
   #domain-not-available-marquee-view .results-list-heading-text {padding-top 20px; }
   #domain-not-available-marquee-view .domain-spin-wrap {min-height: 120px;border: solid 1px #cccccc;margin-bottom: 15px;} 
   #domain-not-available-marquee-view .domain-name-display {text-transform: lowercase; margin-bottom: 0px; margin-top: 0px;}
   #domain-not-available-marquee-view .domain-name-display-tld {text-transform: lowercase;margin-bottom: 0px; margin-top: 0px;}
   #domain-not-available-marquee-view .show-more-arrow { position: relative; top: 16px; left: 15px; bottom: 0; margin-left: -10px; width: 0; height: 0; border: 11px solid transparent; border-top-color: #000; content: ''; }
-
-  #spin-results .spin-template {display:none;}
+  #spin-results .spin-results-message,
+  #spin-results .spin-template {display:none;font-size:18px;}
+  #spin-results .select-and-continue {margin-bottom: 0px;}
+  #spin-results .spin-results-message {margin-top:15px;}
+  #spin-results .checking-availability, #spin-results .now-unavailable {padding-top:5px;}
+  #domain-not-available-marquee-view
 section#domain-not-available-marquee-view
   .bg-green-official
     .container
       .row
         .col-md-12
           h2.domain-not-available-heading-text Sorry, that domain's already taken.
-          h4.domain-not-available-subheading-text The right one's out there. Just try again.
-      +domainSearchOffersInput('', '12347', 'Try a different domain name')
+      +domainSearchOffersInput('The right one\'s out there. Just try again.', '12347', 'Try a different domain name', '', 'Search', 'Type your business name here (if you have one)', 'You do not meet the eligibility requirements for {0} domains, please select a different domain extension and search again.','You need to choose a valid TLD.')
   .bg-white
     .container.pro-plans
       .row
         h4.other-domains-heading-text Or, here are some other domains you might like too&hellip;
         h6.results-list-heading-text 1 - {0} of {1} results <a>View all</a>
       #spin-results
+      #spin-template-wrap
         .row.spin-template.spin-result
           .col-sm-12.plan-tile.plan-pro
             .pro-plan-wrap.domain-spin-wrap
@@ -35,6 +38,12 @@ section#domain-not-available-marquee-view
                   h4.domain-name-display thisreallycoolexample
                   h2.domain-name-display-tld .com
                 .col-md-4.col-sm-12.text-right
-                  button.btn.btn-primary.select-and-continue Select &amp; Continue
+                  button.btn.btn-primary.select-and-continue.spin-results-message Select &amp; Continue
+                  .spin-results-message.checking-availability Checking availability&hellip;
+                  .spin-results-message.now-unavailable This domain is no longer available.
+                  
       h6.text-center SEE MORE RESULTS
         span.show-more-arrow
+
+  .sf-dialog.api-B-failure 
+    p API B FAILURE

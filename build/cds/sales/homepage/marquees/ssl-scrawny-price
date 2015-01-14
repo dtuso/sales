@@ -1,0 +1,46 @@
+
+<!-- start marquee section-->
+<atlantis:webstash type="css">
+  <style>
+    .marquee {width:100%;min-width:1000px;height:400px;cursor:pointer;color: #fff;background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/color-block-background.png) no-repeat top center;}
+    .headline { line-height: 0.9; font-family: 'Walsheim-Black'; font-size: 48px;margin:10px 0;}
+    .headline .line:nth-child(odd) { font-family: Tungsten, 'Tungsten A', 'Tungsten B', Arial; text-transform: uppercase;}
+    .headline .line:nth-child(even) { font-family: 'Walsheim-Black'; }
+    .tungsten { font-family: Tungsten, 'Tungsten A', 'Tungsten B', Arial !important; text-transform: uppercase !important; }
+    .walsheim { font-family: 'Walsheim-Black' !important; }
+    .btn-cta { width: 100%; box-sizing: border-box; margin: 10px 0;}
+    .bigtext { visibility:hidden;}
+    .additional-info { font-size: 14px;margin: 10px 0;text-align: left; margin: 10px 0;}
+    .restrictions { margin: 10px 0;text-align: left;font-size: 12px; margin: 10px 0;}
+    .inline-dash { display:inline-block;overflow:hidden;letter-spacing:-0.5em;font-size:1.4em;vertical-align:top;line-height:50%;}
+  </style>
+  <style>
+    .left-column { float:left;width:500px; padding-top:80px;}
+    .right-column { float:left;width:325px;padding-top:80px;text-align:center;margin-left:90px;color:#000;}
+  </style>
+  <style>
+    .orange-text {color:#ff8a00;}
+    #ssl-scrawny-price sup {font-size: 60%;}
+    #ssl-scrawny-price strike {font-family:'Walsheim-Medium';}
+    #ssl-scrawny-price .left-column {padding-top:125px;}
+    #ssl-scrawny-price .right-column {padding-top:100px;}
+    #ssl-scrawny-price .restrictions{text-decoration:underline;}
+  </style>
+</atlantis:webstash>
+<div id="ssl-scrawny-price" data-url="[@T[link:<relative path='/ssl/ssl-certificates.aspx'><param name='ci' value='94084' /><param name='isc' value='SSLSAVINGS' /></relative>]@T]" class="marquee js-gdhpclick">
+  <div class="container l-main-container">
+    <div class="marquee-left-headline">
+      <div class="left-column">
+        <div class="headline">[@L[cds.sales/homepage/marquee/ssl-scrawny-price:headline]@L]</div>
+      </div>
+      <div class="right-column">
+        <div class="headline">[@L[cds.sales/homepage/marquee/ssl-scrawny-price:sub-headline]@L]</div><span class="btn btn-warning btn-lg btn-cta">[@L[cds.sales/homepage/marquee/ssl-scrawny-price:cta-text]@L]</span>
+        <div class="additional-info">[@L[cds.sales/homepage/marquee/ssl-scrawny-price:additional-info]@L]</div>
+        <div data-toggle="tooltip" title="[@L[cds.sales/homepage/marquee/ssl-scrawny-price:restrictions-tooltip]@L]" class="restrictions">[@L[cds.sales/homepage/marquee/ssl-scrawny-price:restrictions]@L]</div>
+      </div>
+    </div>
+  </div>
+</div>
+<atlantis:webstash type="js">
+</atlantis:webstash>
+<!-- end marquee section-->

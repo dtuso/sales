@@ -87,16 +87,16 @@ block plans
     style.
       #test-carousel .plan-carousel-copy { font-family: 'Walsheim-Black'; font-size: 24px; }
       #test-carousel .btn { margin-top: 40px; }
-    +carousel("my-carousel", 3)
-      +carouselItem()
+    +carousel("my-carousel", 3,{css:false})
+      +carouselItem({textCenter:true})
         .plan-carousel-copy(style="text-transform: uppercase;") FINALLY! A WEB ADDRESS THAT TELLS PEOPLE EXACTLY WHAT YOU DO
         .plan-carousel-copy .attorney, .church, .club, .xyz and .guide are now available.
         a.btn.btn-default-dark Search Domains Now
-      +carouselItem()
+      +carouselItem({textCenter:true})
         .plan-carousel-copy(style="text-transform: uppercase;") 30% OFF
         .plan-carousel-copy .global, .email, .website, .guru, .army now.
         a.btn.btn-default-dark Search Domains Now
-      +carouselItem()
+      +carouselItem({textCenter:true})
         .plan-carousel-copy SAVE up to 50% when you get online with
         .plan-carousel-copy .com, .net, .co, .org, .me, .biz, or .us
         a.btn.btn-default-dark Search Domains Now
@@ -165,7 +165,8 @@ block sections
               li Unlimited storage and bandwidth
               li Scalability to fit your needs
               li 24/7 secure monitoring
-
+  section#tabbed-carousel
+      include ./domain-search/_tabbed-carousel.jade
   section#faq
     +renderAccordion({id: "faq", buttonID: "faq-button", buttonText: "See All Questions"})
       h2 Your Questions, Our Answers
@@ -189,7 +190,6 @@ block sections
         p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vestibulum, nisl a lacinia gravida, velit elit convallis ex, ac fringilla ante erat eu ante. Duis pellentesque, dolor et laoreet feugiat, ligula lacus tincidunt ante, id malesuada purus nulla vel erat. Vivamus viverra velit vel imperdiet imperdiet. Morbi fermentum et justo id convallis. Fusce fringilla neque ut vestibulum ornare. Maecenas eleifend diam sit amet cursus finibus. Donec tellus massa, sollicitudin vitae lacus in, posuere suscipit leo. Donec vel dolor sapien. Pellentesque sit amet eleifend justo. Curabitur sed neque ligula. Phasellus vestibulum malesuada erat id elementum. Sed cursus neque et congue accumsan. 
         p Cras varius, tellus eu tristique ultrices, sapien enim ullamcorper odio, nec euismod metus massa vel leo. Praesent finibus lacus purus, in ultrices metus rutrum sed. Vestibulum purus mauris, efficitur id quam vel, consequat malesuada nisi. Duis eu mauris vitae mauris pulvinar maximus eu ac odio. Pellentesque et purus sed lectus dictum auctor non et ligula. Sed pellentesque a urna nec sodales. Vestibulum dignissim iaculis tincidunt. Pellentesque facilisis nec lorem in venenatis. Cras scelerisque aliquet libero, a viverra enim pulvinar id. Maecenas pharetra tortor id quam imperdiet, id accumsan velit dapibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur euismod vulputate enim ac scelerisque. Nunc blandit lectus mattis velit ornare, quis malesuada ex sollicitudin. Phasellus auctor risus et nisl dignissim faucibus vel sit amet ex. Nulla tempor eros et pellentesque maximus. Aliquam finibus auctor justo, quis porta ex vulputate sit amet. 
         p Fusce viverra eget massa ac posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Cras vel ligula venenatis, fringilla purus sit amet, semper ante. Vivamus bibendum maximus dui et finibus. Integer in dignissim dolor, in malesuada massa. Nam accumsan feugiat tortor, eu tincidunt mauris laoreet a. Fusce fermentum dolor eu odio volutpat varius. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis sed augue pretium, ultrices nisi non, maximus tortor. Praesent auctor euismod fringilla.
-
 
 if (tldColumns)
   if (domainsPlansTitle)
