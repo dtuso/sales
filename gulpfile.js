@@ -167,12 +167,11 @@ function fsOperationFailed(stream, sourceFile, err) {
 
 // passed to gulp-changed, allows for compares when file has no extension (default implementation doesn't)
 function customCompareLastModifiedTime(stream, cb, sourceFile, targetPath) {
-  targetPath.replace(".jade","");
+  targetPath = targetPath.replace(".jade","");
   fs.stat(targetPath, function (err, targetStat) {
     if (!fsOperationFailed(stream, sourceFile, err)) {
-      console.log("source:" + sourceFile.stat.mtime);
-      console.log("target" + targetStat.mtime);
       if (sourceFile.stat.mtime > targetStat.mtime) {
+        console.log("Processing " + sourceFile.path);
         stream.push(sourceFile);
       }
     }
@@ -195,14 +194,19 @@ gulp.task('jade', function() {
     console.log(e.message);
     jadeStream.end();
   });
-  return gulp.src(['./**/*.jade', '!./**/templates/**/*.jade', '!./**/layouts/**/*.jade', '!./**/_*.jade'], {cwd: path.join('./src/')})
-    .pipe(gulpif(!rebuild,changed(paths.cdsBuild, {hasChanged: customCompareLastModifiedTime})))
-    .pipe(frontMatter({remove:true}))
-    .pipe(data(function(file) { return file.frontMatter; }))
-    .pipe(jadeStream)
-    .pipe(extReplace(''))
-    .pipe(gulpif(!ignoreCDS, cdsm(cdsmOpts)))
-    .pipe(gulp.dest(paths.cdsBuild));
+
+  // use current git branch as default "name" for CDSM
+  exec("git symbolic-ref --short HEAD", function(error, stdout, stderr) {
+    cdsmOpts.branchName = stdout.trim();
+    return gulp.src(['./**/*.jade', '!./**/templates/**/*.jade', '!./**/layouts/**/*.jade', '!./**/_*.jade'], {cwd: path.join('./src/')})
+      .pipe(gulpif(!rebuild,changed(paths.cdsBuild, {hasChanged: customCompareLastModifiedTime})))
+      .pipe(frontMatter({remove:true}))
+      .pipe(data(function(file) { return file.frontMatter; }))
+      .pipe(jadeStream)
+      .pipe(extReplace(''))
+      .pipe(gulpif(!ignoreCDS, cdsm(cdsmOpts)))
+      .pipe(gulp.dest(paths.cdsBuild));
+  });
 });
 
 gulp.task('html', function() {
