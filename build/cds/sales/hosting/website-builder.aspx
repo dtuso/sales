@@ -40,6 +40,9 @@
 .sf-droplist-msg {
   text-align: inherit;
 }
+.bg-black {
+  background-color: #333333;
+}
 
     </style><!--[if lt IE 9]>
     <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
@@ -81,7 +84,7 @@
                 <div class="row">
                   <div class="col-md-7 col-sm-12">
                     <div class="marquee-pro-left-text">
-                            <h2 class="marquee-product-description">FAST, SECURE, RELIABLE HOSTING THAT GROWS WITH YOUR BUSINESS</h2>
+                            <h2 class="marquee-product-description">[@L[cds.sales/gd/hosting/website-builder:header_sb_subtitle_1]@L]</br>[@L[cds.sales/gd/hosting/website-builder:header_sb_subtitle_2]@L]</h2>
                             <div class="marquee-product-text">Industry's leading page load times. 99.9% Uptime Guarantee*.</div><a href="[@T[link:<relative path='~/hosting/website-builder-config.aspx' secure='true'><param name='ci' value='' /><param name='plan' value='wsb_personal_12month' /></relative>]@T]" class="btn btn-primary jump-arrow-btn">Get Started</a>
                     </div>
                   </div>
@@ -387,7 +390,7 @@
           <ul class="nav navbar-nav"></ul>
           <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.mid-page-nav&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="navbar-right">
             <div class="price-text">Plans starting at</div>
-            <div class="price">$69.99<span>/year</span></div><a href="#marquee" class="btn-warning btn btn-sm">See the plans</a>
+            <div class="price">[@T[productprice:<current productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]<span>/year</span></div><a href="#marquee" class="btn-purchase btn btn-sm">See the plans</a>
           </div>
         </div>
       </div>
@@ -411,11 +414,32 @@
         // this sets the nav to fixed when scrolled past and fixes the body for the height of the nav
         var nav = $('.mid-page-nav');
         var pos = nav.offset().top;
+        var sections = []
       
+        $('[data-mid-nav-title]').each(function(){
+          //titles.push($(this).data('mid-nav-title'));
+          sections.push($(this).attr('id'));
+        });
         $(window).scroll(function () {
+          var scroll = $(this).scrollTop();
           var fix = ($(this).scrollTop() > pos) ? true : false;
           nav.toggleClass("sticky", fix);
           $('body').toggleClass("fix-body", fix);
+      
+          if(fix){
+            $.each(sections,function(index,value){
+                var top = ((scroll+131) > $('#'+value).offset().top) ? true : false;
+                var bottom = ((scroll+131) < $('#'+value).offset().top + $('#'+value).outerHeight()) ? true : false;
+                var activeNav = (top && bottom) ? true : false;
+                $('a[href="#'+value+'"').toggleClass("active",activeNav);
+                $('.mid-page-nav a').each(function(i,v){
+                    if(v!=value){
+                      $(this).blur();
+                    }
+                  });
+              });
+          }
+      
         });
         $('#midPageNav .dropdown-toggle').dropdown()
       });
@@ -432,7 +456,7 @@
           if($target.length) {
             $('html, body').animate({ scrollTop: $target.offset().top - fromTop }, 1000);
             if(history && "pushState" in history) {
-              history.pushState({}, document.title, window.location.pathname + href);
+              history.pushState({}, document.title, window.location.pathname + window.location.search + href);
               return false;
             }
           }
@@ -568,7 +592,7 @@ text-transform: uppercase;
         </div>
       </div>
     </div>
-    <section id="social-media" data-mid-nav-title="Features">
+    <section id="features" data-mid-nav-title="Features">
       <div data-icode="code" class="carousel-panel container">
         <div class="row">
           <div class="col-sm-10 col-sm-offset-1 col-xs-12">
@@ -724,6 +748,350 @@ text-transform: uppercase;
                 
               </script>
             </atlantis:webstash>
+            <style>.item-wrapper { padding: 70px 0 20px; }
+
+.carousel-wrap { padding-bottom: 70px; }
+
+@media only screen and (min-width: 768px){
+  .carousel-container .carousel {
+    padding: 0 120px;
+  }
+}
+
+.carousel {
+  position: relative;
+  padding: 0 0 45px 0;
+}
+
+.carousel-container .carousel .carousel-indicators {
+  bottom: -60px;
+}
+
+@media screen and (min-width: 768px){
+  .carousel-indicators {
+    bottom: -5px;
+  }
+}
+.carousel-indicators {
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  z-index: 15;
+  width: 80%;
+  margin-left: -40%;
+  padding-left: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.carousel-container .carousel .carousel-indicators li.active {
+  background-color: #77c043;
+}
+
+.carousel-container .carousel .carousel-indicators li.active {
+  background-color: #77c043;
+}
+.carousel-container .carousel .carousel-indicators li {
+  width: 15px;
+  height: 15px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  margin: 5px;
+  background-color: #d9d9d9;
+}
+.carousel-indicators .active {
+  background-color: #008a32;
+}
+.carousel-indicators li {
+  display: inline-block;
+  width: 32px;
+  height: 10px;
+  margin: 8px;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: #d9d9d9;
+}
+.carousel-inner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+.carousel-inner > .active {
+  
+}
+.carousel-inner > .active, .carousel-inner > .next, .carousel-inner > .prev {
+  display: block;
+}
+.carousel-inner > .item {
+  display: none;
+  position: relative;
+  -webkit-transition: left 0.6s ease-in-out;
+  -moz-transition: left 0.6s ease-in-out;
+  transition: left 0.6s ease-in-out;
+  overflow: hidden;
+}
+.carousel-container .carousel-panel, .carousel-container .testimonial {
+  padding: 0;
+}
+.carousel-panel .img-center {
+  margin: 50px auto;
+}
+.carousel-panel .carousel-panel-text {
+  margin-bottom: 25px;
+}
+.carousel-panel h2 {
+  margin-top: 0px;
+}
+
+.carousel-container .carousel-control.left {
+  left: 0px;
+}
+.carousel-control {
+  position: absolute;
+  top: -11%;
+  bottom: 0;
+  color: #999999;
+  text-align: center;
+}
+.carousel-icon.arrow-left-icon {
+  background-position: 0 0;
+  width: 51px;
+  height: 50px;
+}
+
+.carousel-control .uxicon-chevron-left-lt, .carousel-control .arrow-left-icon, .carousel-control .arrow-left-white-icon {
+  left: 50%;
+}
+.carousel-control .arrow-left-white-icon, .carousel-control .arrow-right-white-icon, .carousel-control .arrow-left-icon, .carousel-control .arrow-right-icon {
+  position: absolute;
+  top: 50%;
+}
+.carousel-icon {
+  background-image: url('[@T[link:<imageroot />]@T]/fos/hp/sahara-rebrand-sprite-20141114.png');
+  display: inline-block;
+  background-size: 205px auto;
+}
+.carousel-container .carousel-control.right {
+  right: 0px;
+}
+.carousel-icon.arrow-right-icon {
+  background-position: 0 -52px;
+  width: 51px;
+  height: 50px;
+}
+.carousel-control .arrow-left-white-icon, .carousel-control .arrow-right-white-icon, .carousel-control .arrow-left-icon, .carousel-control .arrow-right-icon {
+  position: absolute;
+  top: 50%;
+}
+
+.carousel {
+    position: relative;
+    padding: 0 0 45px 0;
+}
+
+.carousel-inner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-inner > .item {
+    display: none;
+    position: relative;
+    -webkit-transition: left 0.6s ease-in-out;
+    -moz-transition: left 0.6s ease-in-out;
+    transition: left 0.6s ease-in-out;
+    overflow: hidden;
+}
+
+.carousel-inner > .item.show-item {
+    display: block;
+}
+
+.carousel-inner > .item > h1,
+.carousel-inner > .item > h2,
+.carousel-inner > .item > h3,
+.carousel-inner > .item > h4,
+.carousel-inner > .item > h5,
+.carousel-inner > .item > h6 {
+    margin-top: 0;
+}
+
+.carousel-inner > .active,
+.carousel-inner > .next,
+.carousel-inner > .prev {
+    display: block;
+}
+
+.carousel-inner > .active {
+    left: 0;
+}
+
+.carousel-inner > .next,
+.carousel-inner > .prev {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.carousel-inner > .next {
+    left: 100%;
+}
+
+.carousel-inner > .prev {
+    left: -100%;
+}
+
+.carousel-inner > .next.left,
+.carousel-inner > .prev.right {
+    left: 0;
+}
+
+.carousel-inner > .active.left {
+    left: -100%;
+}
+
+.carousel-inner > .active.right {
+    left: 100%;
+}
+
+.carousel-text-item {
+    margin-bottom: 20px;
+}
+
+.carousel-text-item h1 {
+    font-size: 14px;
+    display: inline;
+    margin: 0;
+    font-weight: bold;
+    font-weight: 600;
+}
+
+.carousel-control {
+    position: absolute;
+    top: -11%;
+    bottom: 0;
+    color: #999999;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .carousel-control {
+        top: -6%;
+    }
+}
+
+.carousel-control:hover,
+.carousel-control:focus {
+    outline: none;
+    color: #000;
+    text-decoration: none;
+}
+
+.carousel-control .uxicon-chevron-left-lt,
+.carousel-control .uxicon-chevron-right-lt {
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    font-size: 40px;
+    margin-top: -15px;
+}
+
+.carousel-control .arrow-left-white-icon,
+.carousel-control .arrow-right-white-icon,
+.carousel-control .arrow-left-icon,
+.carousel-control .arrow-right-icon {
+    position: absolute;
+    top: 50%;
+}
+
+.carousel-control .uxicon-chevron-left-lt,
+.carousel-control .arrow-left-icon {
+    left: 50%;
+}
+
+.carousel-control .uxicon-chevron-right-lt,
+.carousel-control .arrow-right-icon {
+    right: 50%;
+}
+
+.carousel-control.left {
+    left: -40px;
+}
+@media only screen and (max-width: 768px){
+  .carousel-container .carousel-control {
+    display: none;
+  }
+}
+@media only screen and (max-width: 768px) {
+    .carousel-control.left {
+        left: -10px;
+    }
+}
+
+.carousel-control.right {
+    right: -40px;
+}
+
+@media only screen and (max-width: 768px) {
+    .carousel-control.right {
+        right: -10px;
+    }
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    z-index: 15;
+    width: 80%;
+    margin-left: -40%;
+    padding-left: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.carousel-indicators li {
+    display: inline-block;
+    width: 32px;
+    height: 10px;
+    margin: 8px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #d9d9d9;
+}
+
+.carousel-indicators .active {
+    background-color: #008a32;
+}
+
+@media screen and (min-width: 768px) {
+    .carousel-indicators {
+        bottom: -5px;
+    }
+}
+.carousel-panel .include-check {
+position: relative;
+padding-left: 45px;
+margin-top: 20px;
+}
+.carousel-panel .include-check:before {
+content: "";
+background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
+background-position: 0 -668px;
+background-size: 205px auto;
+width: 25px;
+height: 27px;
+padding-right: 5px;
+position: absolute;
+left: 0;
+top: -6px;
+}
+            </style>
             <div class="carousel-wrap">
               <div class="carousel-container container">
                 <div id="carousel-social-media" data-ride="carousel" data-interval="false" class="carousel slide">
@@ -737,83 +1105,101 @@ text-transform: uppercase;
                   </ol>
                   <div class="carousel-inner">
                           <div class="item">
-                            <div class="item-wrapper">
-                              <div data-icode="" class="carousel-panel container">
-                                <div data-icode="code" class="carousel-panel container">
-                                  <div class="row">
-                                    <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                      <div></div>
-                                    </div>
+                            <div class="item-wrapper text-center">
+                              <div data-icode="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-apps-image-facebook-int.jpg" class="img-responsive img-center">
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <h2>FACEBOOK</h2>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <div class="carousel-panel-text">Share your status updates or photos.</div>
                                   </div>
                                 </div>
                               </div>
                             </div>
                           </div>
-                    <div class="item">
-                      <div class="item-wrapper">
-                        <div data-icode="" class="carousel-panel container">
-                          <div data-icode="code" class="carousel-panel container">
-                            <div class="row">
-                              <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                <div></div>
+                          <div class="item">
+                            <div class="item-wrapper text-center">
+                              <div data-icode="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-apps-image-twitter-int.jpg" class="img-responsive img-center">
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <h2>TWITTER</h2>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <div class="carousel-panel-text">Share your status updates or photos.</div>
+                                  </div>
+                                </div>
                               </div>
                             </div>
                           </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="item">
-                      <div class="item-wrapper">
-                        <div data-icode="" class="carousel-panel container">
-                          <div data-icode="code" class="carousel-panel container">
-                            <div class="row">
-                              <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                <div></div>
+                          <div class="item">
+                            <div class="item-wrapper text-center">
+                              <div data-icode="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-apps-image-youtube-int.jpg" class="img-responsive img-center">
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <h2>YOUTUBE</h2>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <div class="carousel-panel-text">Share your status updates or photos.</div>
+                                  </div>
+                                </div>
                               </div>
                             </div>
                           </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="item">
-                      <div class="item-wrapper">
-                        <div data-icode="" class="carousel-panel container">
-                          <div data-icode="code" class="carousel-panel container">
-                            <div class="row">
-                              <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                <div></div>
+                          <div class="item">
+                            <div class="item-wrapper text-center">
+                              <div data-icode="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-apps-image-facebook-int.jpg" class="img-responsive img-center">
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <h2>YELP</h2>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <div class="carousel-panel-text">Share your status updates or photos.</div>
+                                  </div>
+                                </div>
                               </div>
                             </div>
                           </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="item">
-                      <div class="item-wrapper">
-                        <div data-icode="" class="carousel-panel container">
-                          <div data-icode="code" class="carousel-panel container">
-                            <div class="row">
-                              <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                <div></div>
+                          <div class="item">
+                            <div class="item-wrapper text-center">
+                              <div data-icode="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-apps-image-facebook-int.jpg" class="img-responsive img-center">
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <h2>PAYPAL</h2>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <div class="carousel-panel-text">Share your status updates or photos.</div>
+                                  </div>
+                                </div>
                               </div>
                             </div>
                           </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="item">
-                      <div class="item-wrapper">
-                        <div data-icode="" class="carousel-panel container">
-                          <div data-icode="code" class="carousel-panel container">
-                            <div class="row">
-                              <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                <div></div>
+                          <div class="item">
+                            <div class="item-wrapper text-center">
+                              <div data-icode="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-apps-image-facebook-int.jpg" class="img-responsive img-center">
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <h2>HOMEOWNER</h2>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <div class="carousel-panel-text">Share your status updates or photos.</div>
+                                  </div>
+                                </div>
                               </div>
                             </div>
                           </div>
-                        </div>
-                      </div>
-                    </div>
                   </div><a href="#carousel-social-media" data-slide="prev" class="left carousel-control"><span class="carousel-icon arrow-left-icon"></span></a><a href="#carousel-social-media" data-slide="next" class="right carousel-control"><span class="carousel-icon arrow-right-icon"></span></a>
                 </div>
                 <script>
@@ -822,9 +1208,8 @@ text-transform: uppercase;
                 </script>
               </div>
             </div>
-    </section>
-    <section id="business-exclusives" class="bg-pro-gray">
-            <style>
+      <div class="bg-pro-gray">
+                <style>
 .features-two-up {
   min-height: 940px;
   background-size: cover;
@@ -852,110 +1237,125 @@ line-height: 1.1;
 .features-two-up .feature-row-text {
 margin-bottom: 20px;
 }
-            </style>
-            <div style="background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rebrand-features-bg-ph.jpg);" data-lazy-load="" class="features-two-up   ">
-              <div class="container">
-                <div class="row">
-                  <div class="col-sm-12">
-                    <h1>Business Exclusives Section</h1>
+                </style>
+                <div style="background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rebrand-features-bg-ph.jpg);" data-lazy-load="" class="features-two-up   ">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <h1>Business Exclusives Section</h1>
+                      </div>
+                              <div class="row feature-row-height">
+                                <div class="col-sm-7">
+                                  <div class="row feature-row">
+                                    <div class="col-sm-5"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rebrand-features-img1-ph.png" data-lazy-load="" alt="" class="feature-image img-responsive">
+                                    </div>
+                                    <div class="col-sm-7">
+                                      <div class="feature-title">Get more than just a website</div>
+                                      <div class="feature-row-text">With our One-Click Social Media Manager, we'll instantly match your Facebook.....</div><a href="http://godaddy.com" class="btn btn-default-dark">Learn More</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row feature-row-height">
+                                <div class="col-sm-7">
+                                  <div class="row feature-row">
+                                    <div class="col-sm-5"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rebrand-features-img1-ph.png" data-lazy-load="" alt="" class="feature-image img-responsive">
+                                    </div>
+                                    <div class="col-sm-7">
+                                      <div class="feature-title">Get on Google in 3 easy steps with our built-in SEO tool</div>
+                                      <div class="feature-row-text">See how the built-in Search Engine Optimization (SEO) tool in our Business Plus plan will help you show up on Google<sup>&reg;</sup>, Yahoo!<sup>&reg;</sup> and more.</div><a href="http://godaddy.com" class="btn btn-default-dark">Learn More</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                    </div>
                   </div>
-                        <div class="row feature-row-height">
-                          <div class="col-sm-7">
-                            <div class="row feature-row">
-                              <div class="col-sm-5"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rebrand-features-img1-ph.png" data-lazy-load="" alt="" class="feature-image img-responsive">
-                              </div>
-                              <div class="col-sm-7">
-                                <div class="feature-title">Get more than just a website</div>
-                                <div class="feature-row-text">With our One-Click Social Media Manager, we'll instantly match your Facebook.....</div><a href="http://godaddy.com" class="btn btn-default-dark">Learn More</a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="row feature-row-height">
-                          <div class="col-sm-7">
-                            <div class="row feature-row">
-                              <div class="col-sm-5"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rebrand-features-img1-ph.png" data-lazy-load="" alt="" class="feature-image img-responsive">
-                              </div>
-                              <div class="col-sm-7">
-                                <div class="feature-title">Get on Google in 3 easy steps with our built-in SEO tool</div>
-                                <div class="feature-row-text">See how the built-in Search Engine Optimization (SEO) tool in our Business Plus plan will help you show up on Google<sup>&reg;</sup>, Yahoo!<sup>&reg;</sup> and more.</div><a href="http://godaddy.com" class="btn btn-default-dark">Learn More</a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
                 </div>
+      </div>
+      <div class="bg-black">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8">
+              <h3 class="text-center text-muted">Business Plus Starting at [@T[productprice:<current productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</h3>
+            </div>
+            <div class="col-sm-4">
+              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.bg-black&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="right">
+                <button data-tcode="" data-plan="wsb_businessplus_12month" class="btn btn-purchase btn-plan btn-sm">Add to Cart</button>
               </div>
             </div>
-    </section>
-    <section id="testimonials" data-mid-nav-title="Testimonials">
-      <div class="carousel-wrap">
-        <div class="carousel-container container">
-          <div id="carousel-testimonials" data-ride="carousel" data-interval="false" class="carousel slide">
-            <ol class="carousel-indicators">
-              <li data-target="#carousel-testimonials" data-slide-to="0"></li>
-              <li data-target="#carousel-testimonials" data-slide-to="1"></li>
-              <li data-target="#carousel-testimonials" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-              <div class="item">
-                <div class="item-wrapper text-center">
-                  <div data-icode="" class="carousel-panel container">
-                    <div class="row">
-                      <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                        <h2>Quote</h2>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                        <div class="carousel-panel-text">GoDaddy is Awesome.</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="item-wrapper text-center">
-                  <div data-icode="" class="carousel-panel container">
-                    <div class="row">
-                      <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                        <h2>Quote</h2>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                        <div class="carousel-panel-text">GoDaddy is Awesome.</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="item-wrapper text-center">
-                  <div data-icode="" class="carousel-panel container">
-                    <div class="row">
-                      <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                        <h2>Quote</h2>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                        <div class="carousel-panel-text">GoDaddy is Awesome.</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div><a href="#carousel-testimonials" data-slide="prev" class="left carousel-control"><span class="carousel-icon arrow-left-icon"></span></a><a href="#carousel-testimonials" data-slide="next" class="right carousel-control"><span class="carousel-icon arrow-right-icon"></span></a>
           </div>
-          <script>
-            $('.carousel .carousel-indicators li:first-child').addClass("active");
-            $('.carousel .carousel-inner .item:first-child').addClass("active");
-          </script>
         </div>
       </div>
     </section>
-    <section id="faq" data-mid-nav-title="FAQ"></section>
-    <style>.accordion-group {
+    <section id="testimonials" data-mid-nav-title="Testimonials">
+            <div class="carousel-wrap">
+              <div class="carousel-container container">
+                <div id="carousel-testimonials" data-ride="carousel" data-interval="false" class="carousel slide">
+                  <ol class="carousel-indicators">
+                    <li data-target="#carousel-testimonials" data-slide-to="0"></li>
+                    <li data-target="#carousel-testimonials" data-slide-to="1"></li>
+                    <li data-target="#carousel-testimonials" data-slide-to="2"></li>
+                  </ol>
+                  <div class="carousel-inner">
+                          <div class="item">
+                            <div class="item-wrapper text-center">
+                              <div data-icode="" class="carousel-panel container">
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <h2>Quote</h2>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <div class="carousel-panel-text">GoDaddy is Awesome.</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <div class="item-wrapper text-center">
+                              <div data-icode="" class="carousel-panel container">
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <h2>Quote</h2>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <div class="carousel-panel-text">GoDaddy is Awesome.</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <div class="item-wrapper text-center">
+                              <div data-icode="" class="carousel-panel container">
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <h2>Quote</h2>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <div class="carousel-panel-text">GoDaddy is Awesome.</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                  </div><a href="#carousel-testimonials" data-slide="prev" class="left carousel-control"><span class="carousel-icon arrow-left-icon"></span></a><a href="#carousel-testimonials" data-slide="next" class="right carousel-control"><span class="carousel-icon arrow-right-icon"></span></a>
+                </div>
+                <script>
+                  $('.carousel .carousel-indicators li:first-child').addClass("active");
+                  $('.carousel .carousel-inner .item:first-child').addClass("active");
+                </script>
+              </div>
+            </div>
+    </section>
+    <section id="faq" data-mid-nav-title="FAQ">
+      <style>.accordion-group {
   border-top: 2px solid #e8e8e8;
   border-bottom: 2px solid #e8e8e8;
   list-style: none;
@@ -1030,72 +1430,73 @@ margin-bottom: 20px;
   border-left: 6px solid #008a32;
   transition: all 300ms;
 }
-    </style>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <ul id="test-faq" class="accordion-group ">
-            <h2>FAQ!</h2>
-            <li class="accordion-dropdown"><span class="carett caret-right"></span><span>Where am I?</span>
-              <ul class="dropdown">
-                <li>
-                  <div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vestibulum, nisl a lacinia gravida, velit elit convallis ex, ac fringilla ante erat eu ante. Duis pellentesque, dolor et laoreet feugiat, ligula lacus tincidunt ante, id malesuada purus nulla vel erat. Vivamus viverra velit vel imperdiet imperdiet. Morbi fermentum et justo id convallis. Fusce fringilla neque ut vestibulum ornare. Maecenas eleifend diam sit amet cursus finibus. Donec tellus massa, sollicitudin vitae lacus in, posuere suscipit leo. Donec vel dolor sapien. Pellentesque sit amet eleifend justo. Curabitur sed neque ligula. Phasellus vestibulum malesuada erat id elementum. Sed cursus neque et congue accumsan. </p>
-                    <p>Cras varius, tellus eu tristique ultrices, sapien enim ullamcorper odio, nec euismod metus massa vel leo. Praesent finibus lacus purus, in ultrices metus rutrum sed. Vestibulum purus mauris, efficitur id quam vel, consequat malesuada nisi. Duis eu mauris vitae mauris pulvinar maximus eu ac odio. Pellentesque et purus sed lectus dictum auctor non et ligula. Sed pellentesque a urna nec sodales. Vestibulum dignissim iaculis tincidunt. Pellentesque facilisis nec lorem in venenatis. Cras scelerisque aliquet libero, a viverra enim pulvinar id. Maecenas pharetra tortor id quam imperdiet, id accumsan velit dapibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur euismod vulputate enim ac scelerisque. Nunc blandit lectus mattis velit ornare, quis malesuada ex sollicitudin. Phasellus auctor risus et nisl dignissim faucibus vel sit amet ex. Nulla tempor eros et pellentesque maximus. Aliquam finibus auctor justo, quis porta ex vulputate sit amet. </p>
-                    <p>Fusce viverra eget massa ac posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Cras vel ligula venenatis, fringilla purus sit amet, semper ante. Vivamus bibendum maximus dui et finibus. Integer in dignissim dolor, in malesuada massa. Nam accumsan feugiat tortor, eu tincidunt mauris laoreet a. Fusce fermentum dolor eu odio volutpat varius. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis sed augue pretium, ultrices nisi non, maximus tortor. Praesent auctor euismod fringilla.</p>
-                  </div>
-                </li>
-              </ul>
-            </li>
-            <li class="accordion-dropdown"><span class="carett caret-right"></span><span>What's the purpose of life?</span>
-              <ul class="dropdown">
-                <li>
-                  <div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vestibulum, nisl a lacinia gravida, velit elit convallis ex, ac fringilla ante erat eu ante. Duis pellentesque, dolor et laoreet feugiat, ligula lacus tincidunt ante, id malesuada purus nulla vel erat. Vivamus viverra velit vel imperdiet imperdiet. Morbi fermentum et justo id convallis. Fusce fringilla neque ut vestibulum ornare. Maecenas eleifend diam sit amet cursus finibus. Donec tellus massa, sollicitudin vitae lacus in, posuere suscipit leo. Donec vel dolor sapien. Pellentesque sit amet eleifend justo. Curabitur sed neque ligula. Phasellus vestibulum malesuada erat id elementum. Sed cursus neque et congue accumsan. </p>
-                    <p>Cras varius, tellus eu tristique ultrices, sapien enim ullamcorper odio, nec euismod metus massa vel leo. Praesent finibus lacus purus, in ultrices metus rutrum sed. Vestibulum purus mauris, efficitur id quam vel, consequat malesuada nisi. Duis eu mauris vitae mauris pulvinar maximus eu ac odio. Pellentesque et purus sed lectus dictum auctor non et ligula. Sed pellentesque a urna nec sodales. Vestibulum dignissim iaculis tincidunt. Pellentesque facilisis nec lorem in venenatis. Cras scelerisque aliquet libero, a viverra enim pulvinar id. Maecenas pharetra tortor id quam imperdiet, id accumsan velit dapibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur euismod vulputate enim ac scelerisque. Nunc blandit lectus mattis velit ornare, quis malesuada ex sollicitudin. Phasellus auctor risus et nisl dignissim faucibus vel sit amet ex. Nulla tempor eros et pellentesque maximus. Aliquam finibus auctor justo, quis porta ex vulputate sit amet. </p>
-                    <p>Fusce viverra eget massa ac posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Cras vel ligula venenatis, fringilla purus sit amet, semper ante. Vivamus bibendum maximus dui et finibus. Integer in dignissim dolor, in malesuada massa. Nam accumsan feugiat tortor, eu tincidunt mauris laoreet a. Fusce fermentum dolor eu odio volutpat varius. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis sed augue pretium, ultrices nisi non, maximus tortor. Praesent auctor euismod fringilla.</p>
-                  </div>
-                </li>
-              </ul>
-            </li>
-            <div class="text-center">
-              <button id="test-button" class="btn btn-default-dark">hey you</button>
-            </div>
-          </ul>
+      </style>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <ul id="test-faq" class="accordion-group ">
+              <h2>FAQ!</h2>
+              <li class="accordion-dropdown"><span class="carett caret-right"></span><span>Where am I?</span>
+                <ul class="dropdown">
+                  <li>
+                    <div>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vestibulum, nisl a lacinia gravida, velit elit convallis ex, ac fringilla ante erat eu ante. Duis pellentesque, dolor et laoreet feugiat, ligula lacus tincidunt ante, id malesuada purus nulla vel erat. Vivamus viverra velit vel imperdiet imperdiet. Morbi fermentum et justo id convallis. Fusce fringilla neque ut vestibulum ornare. Maecenas eleifend diam sit amet cursus finibus. Donec tellus massa, sollicitudin vitae lacus in, posuere suscipit leo. Donec vel dolor sapien. Pellentesque sit amet eleifend justo. Curabitur sed neque ligula. Phasellus vestibulum malesuada erat id elementum. Sed cursus neque et congue accumsan. </p>
+                      <p>Cras varius, tellus eu tristique ultrices, sapien enim ullamcorper odio, nec euismod metus massa vel leo. Praesent finibus lacus purus, in ultrices metus rutrum sed. Vestibulum purus mauris, efficitur id quam vel, consequat malesuada nisi. Duis eu mauris vitae mauris pulvinar maximus eu ac odio. Pellentesque et purus sed lectus dictum auctor non et ligula. Sed pellentesque a urna nec sodales. Vestibulum dignissim iaculis tincidunt. Pellentesque facilisis nec lorem in venenatis. Cras scelerisque aliquet libero, a viverra enim pulvinar id. Maecenas pharetra tortor id quam imperdiet, id accumsan velit dapibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur euismod vulputate enim ac scelerisque. Nunc blandit lectus mattis velit ornare, quis malesuada ex sollicitudin. Phasellus auctor risus et nisl dignissim faucibus vel sit amet ex. Nulla tempor eros et pellentesque maximus. Aliquam finibus auctor justo, quis porta ex vulputate sit amet. </p>
+                      <p>Fusce viverra eget massa ac posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Cras vel ligula venenatis, fringilla purus sit amet, semper ante. Vivamus bibendum maximus dui et finibus. Integer in dignissim dolor, in malesuada massa. Nam accumsan feugiat tortor, eu tincidunt mauris laoreet a. Fusce fermentum dolor eu odio volutpat varius. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis sed augue pretium, ultrices nisi non, maximus tortor. Praesent auctor euismod fringilla.</p>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="accordion-dropdown"><span class="carett caret-right"></span><span>What's the purpose of life?</span>
+                <ul class="dropdown">
+                  <li>
+                    <div>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vestibulum, nisl a lacinia gravida, velit elit convallis ex, ac fringilla ante erat eu ante. Duis pellentesque, dolor et laoreet feugiat, ligula lacus tincidunt ante, id malesuada purus nulla vel erat. Vivamus viverra velit vel imperdiet imperdiet. Morbi fermentum et justo id convallis. Fusce fringilla neque ut vestibulum ornare. Maecenas eleifend diam sit amet cursus finibus. Donec tellus massa, sollicitudin vitae lacus in, posuere suscipit leo. Donec vel dolor sapien. Pellentesque sit amet eleifend justo. Curabitur sed neque ligula. Phasellus vestibulum malesuada erat id elementum. Sed cursus neque et congue accumsan. </p>
+                      <p>Cras varius, tellus eu tristique ultrices, sapien enim ullamcorper odio, nec euismod metus massa vel leo. Praesent finibus lacus purus, in ultrices metus rutrum sed. Vestibulum purus mauris, efficitur id quam vel, consequat malesuada nisi. Duis eu mauris vitae mauris pulvinar maximus eu ac odio. Pellentesque et purus sed lectus dictum auctor non et ligula. Sed pellentesque a urna nec sodales. Vestibulum dignissim iaculis tincidunt. Pellentesque facilisis nec lorem in venenatis. Cras scelerisque aliquet libero, a viverra enim pulvinar id. Maecenas pharetra tortor id quam imperdiet, id accumsan velit dapibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur euismod vulputate enim ac scelerisque. Nunc blandit lectus mattis velit ornare, quis malesuada ex sollicitudin. Phasellus auctor risus et nisl dignissim faucibus vel sit amet ex. Nulla tempor eros et pellentesque maximus. Aliquam finibus auctor justo, quis porta ex vulputate sit amet. </p>
+                      <p>Fusce viverra eget massa ac posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Cras vel ligula venenatis, fringilla purus sit amet, semper ante. Vivamus bibendum maximus dui et finibus. Integer in dignissim dolor, in malesuada massa. Nam accumsan feugiat tortor, eu tincidunt mauris laoreet a. Fusce fermentum dolor eu odio volutpat varius. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis sed augue pretium, ultrices nisi non, maximus tortor. Praesent auctor euismod fringilla.</p>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <div class="text-center">
+                <button id="test-button" class="btn btn-default-dark">hey you</button>
+              </div>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-    <script type="text/javascript">
-      $(".accordion-dropdown").click(function() {
-        var dropdownGroup = $(this).parent(".accordion-group");
-        var dropdownOptions = $(this).find(".dropdown");
-        var dropdownCaret = $(this).find(".carett");
-        var dropdowns = $(dropdownGroup).find(".accordion-dropdown");
-      
-        $(dropdowns).removeClass("active");
-        $(dropdownGroup).find(".dropdown").slideUp();
-        $(dropdownGroup).find(".carett")
-                        .removeClass("caret-down")
-                        .addClass("caret-right");
-      
-        if (!$(dropdownOptions).is(":visible")) {
-          $(this).addClass("active");
-          $(dropdownOptions).slideDown();
-          $(dropdownCaret).removeClass("caret-right").addClass("caret-down");
-          event.stopPropagation();
-        }
-      });
-      $(window).load(function() {
-        $("#test-faq .accordion-dropdown:first").click();
-      });
-      $("#test-button").click(function() {
-        $('#test-faq').find('.dropdown').slideDown();
-        $('#test-faq').find('.accordion-dropdown').find('.carett')
-                        .removeClass("caret-right")
-                        .addClass("caret-down");
-        $('#test-faq').find('.accordion-dropdown').addClass("active");
-       });
-    </script>
+      <script type="text/javascript">
+        $(".accordion-dropdown").click(function() {
+          var dropdownGroup = $(this).parent(".accordion-group");
+          var dropdownOptions = $(this).find(".dropdown");
+          var dropdownCaret = $(this).find(".carett");
+          var dropdowns = $(dropdownGroup).find(".accordion-dropdown");
+        
+          $(dropdowns).removeClass("active");
+          $(dropdownGroup).find(".dropdown").slideUp();
+          $(dropdownGroup).find(".carett")
+                          .removeClass("caret-down")
+                          .addClass("caret-right");
+        
+          if (!$(dropdownOptions).is(":visible")) {
+            $(this).addClass("active");
+            $(dropdownOptions).slideDown();
+            $(dropdownCaret).removeClass("caret-right").addClass("caret-down");
+            event.stopPropagation();
+          }
+        });
+        $(window).load(function() {
+          $("#test-faq .accordion-dropdown:first").click();
+        });
+        $("#test-button").click(function() {
+          $('#test-faq').find('.dropdown').slideDown();
+          $('#test-faq').find('.accordion-dropdown').find('.carett')
+                          .removeClass("caret-right")
+                          .addClass("caret-down");
+          $('#test-faq').find('.accordion-dropdown').addClass("active");
+         });
+      </script>
+    </section>
     <section id="other-products">
       <style>
 .two-up-title-wrap.bg-white {
@@ -1415,6 +1816,7 @@ margin-bottom: 20px;
         </div>
       </div>
     </section>
+    <section id="disclaimers">disclaimers</section>
     <!-- FOOTERBEGIN--> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- FOOTEREND-->
