@@ -1,0 +1,15 @@
+extends ../../../templates/marquees/landing-page-marquee.jade
+
+block marqueeStyles
+  style.
+    .marquee { background: url([@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Marquee.jpg) no-repeat top center;); }
+    .marquee.marquee-app-landing { min-height: 400px; }
+
+block content
+  .col-sm-12
+    div(data-center-element='{"vertical":{"target":{"method":"parents","selector":".marquee-www-rebrand-wrap"},"verticalStyle":"padding-top","elementHeightMethod":"outerHeight","targetWidthMethod":"height"}}')
+      .row
+        div.col-md-9.col-sm-12
+          .marquee-pro-left-text
+            +productDescription('CUSTOMERS ARE LOOKING FOR YOU ONLINE. A DOMAIN SAYS "HEY - OVER HERE!"')
+            +checkBullets(["12 million customers trust us with their domains.  They must know something.", "Experts you can call 24/7 make building a business a little less lonely.", "Low prices and a huge selection. Who doesn't love that?"])

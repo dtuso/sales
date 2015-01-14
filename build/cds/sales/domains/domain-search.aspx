@@ -25,7 +25,7 @@
     <meta property="og:site_name" content="[@T[link:<relative parammode='explicit' />]@T]">
     <meta property="fb:app_id" content="115696031791232">
     <meta property="fb:admins" content="633356800"> 
-    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags"><Parameters><Parameter key="manifest" value="salesheader" /></Parameters></Data>]@P]
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <script src="[@T[link:<javascriptroot />]@T]/ux/dev-brand/js/uxcore.en.min.js"></script>
     <script src="[@T[link:<javascriptroot />]@T]/ux/dev-brand/js/uxcontrols.min.js"></script>
     <script src="[@T[link:<javascriptroot />]@T]/fos/mike/0.7.0/js/sahara.min.js"></script>
@@ -38,7 +38,6 @@
       .search-template .search-template-box { margin-bottom: 10px; }
       #domainSearch a { color: #333; font-weight: bold; margin-right: 30px; }
       #domainSearch { padding-bottom: 10px; }
-      
       
     </style><!--[if lt IE 9]>
     <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
@@ -63,7 +62,7 @@
   </head>
   <body>
     <!-- HEADERBEGIN--> 
-    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /></Parameters></Data>]@P]
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- HEADEREND-->
     <section id="marquee">
       <atlantis:webstash type="css">
@@ -248,7 +247,9 @@
         </div>
       </div>
     </section>
-    <style>
+    <style>.fix-body {
+  margin-top: 130px;
+}
 .mid-page-nav {
   background-color: #333333;
   font-family: 'Walsheim-Bold';
@@ -258,6 +259,15 @@
   -moz-box-shadow: 0px 3px 0 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0px 3px 0 0 rgba(0, 0, 0, 0.1);
 }
+@media only screen and (max-width: 768px) {
+  .mid-page-nav {
+    display: none;
+  }
+}
+.mid-page-nav .navbar-collapse {
+  margin-left: -15px;
+  margin-right: -15px;
+}
 .mid-page-nav.sticky {
   position: fixed;
   left: 0;
@@ -265,16 +275,50 @@
   top: 0;
   z-index: 1000;
 }
-
-.mid-page-nav .navbar-collapse {
-  margin-left: -15px;
-  margin-right: -15px;
-}
 .mid-page-nav .nav {
   height: 130px;
 }
 .mid-page-nav .nav > li {
   display: table;
+}
+.mid-page-nav .nav > li.open > a {
+  background-color: #232323;
+}
+.mid-page-nav .nav > li.open > a:before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-top: 15px solid #008a32;
+  border-right: 20px solid transparent;
+  border-left: 20px solid transparent;
+  position: absolute;
+  bottom: 14px;
+  margin-left: -20px;
+  left: 50%;
+}
+.mid-page-nav .nav > li > a {
+  display: table-cell;
+  height: 130px;
+  vertical-align: middle;
+}
+.mid-page-nav .nav > li > a.active,
+.mid-page-nav .nav > li > a:focus,
+.mid-page-nav .nav > li > a:hover {
+  background-color: #232323;
+}
+.mid-page-nav .nav > li > a.active:before,
+.mid-page-nav .nav > li > a:focus:before,
+.mid-page-nav .nav > li > a:hover:before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-top: 15px solid #008a32;
+  border-right: 20px solid transparent;
+  border-left: 20px solid transparent;
+  position: absolute;
+  bottom: 14px;
+  margin-left: -20px;
+  left: 50%;
 }
 .mid-page-nav .nav > li a {
   font-size: 24px;
@@ -284,19 +328,31 @@
   padding: 0;
   text-align: center;
 }
-.mid-page-nav .nav > li > a {
-  display: table-cell;
-  height: 130px;
-  vertical-align: middle;
-}
-.mid-page-nav .nav > li:first-child a span {
-  border-left: 0;
-}
 .mid-page-nav .nav > li a span {
   display: table-cell;
   vertical-align: middle;
   border-left: 1px solid #232323;
   padding: 7px 40px;
+}
+.mid-page-nav .nav > li a span > em {
+  font-size: 40px;
+  font-size: 4rem;
+  color: #555555;
+  display: inline-block;
+  margin-top: -5px;
+  border: 0;
+  padding: 0;
+  font-style: normal;
+}
+.mid-page-nav .nav > li:first-child a span {
+  border-left: 0;
+}
+.mid-page-nav .nav .open > .dropdown-menu {
+  opacity: 1;
+  -webkit-transform: scale(1, 1) rotateX(0deg);
+  -moz-transform: scale(1, 1) rotateX(0deg);
+  -ms-transform: scale(1, 1) rotateX(0deg);
+  transform: scale(1, 1) rotateX(0deg);
 }
 .mid-page-nav .nav .dropdown-menu {
   background-clip: padding-box;
@@ -319,23 +375,27 @@
   -ms-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
-
 .mid-page-nav .nav .dropdown-menu li > a {
   display: block;
   background-color: #333333;
   padding: 20px;
   border-bottom: #333333;
 }
-
+.mid-page-nav .nav .dropdown-menu li > a:hover {
+  background-color: #232323;
+}
 .mid-page-nav .price-text {
   font-size: 12px;
   font-size: 1.2rem;
   line-height: 1;
 }
-
 .mid-page-nav .price {
   font-size: 24px;
   font-size: 2.4rem;
+}
+.mid-page-nav .price span {
+  font-size: 14px;
+  font-size: 1.4rem;
 }
     </style>
     <div class="mid-page-nav">
@@ -1068,12 +1128,188 @@ top: -6px;
               </div>
             </div>
     </section>
+    <section id="faq">
+      <style>.accordion-group {
+  border-top: 2px solid #e8e8e8;
+  border-bottom: 2px solid #e8e8e8;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: 'Walsheim-Bold';
+}
+
+.accordion-group h2 {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.accordion-group button {
+  margin-bottom: 40px;
+}
+
+.accordion-group li.accordion-dropdown {
+  padding: 20px 0;
+  cursor: pointer;
+}
+
+.accordion-group li.accordion-dropdown span {
+  font-size: 19px;
+  text-transform: uppercase;
+}
+
+.accordion-group li.accordion-dropdown .carett {
+  display: inline-block;
+  vertical-align: middle;
+  float: left;
+  margin-top: 7px;
+  margin-right: 10px;
+}
+
+.accordion-group li.accordion-dropdown .carett.caret-down {
+  border-top: 8px solid;
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
+}
+
+.accordion-group li.accordion-dropdown .carett.caret-right {
+  border-left: 8px solid;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  margin-top: 4px;
+}
+
+.accordion-group li.accordion-dropdown.active > span:first-child {
+  color: #008a32;
+}
+
+.accordion-group li.accordion-dropdown {
+  margin: 10px 0 0 0;
+  padding: 20px 0;
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.accordion-group li.accordion-dropdown .dropdown {
+  margin: 10px 0 0 0;
+  padding: 10px 0;
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 1;
+  list-style: none;
+}
+
+.accordion-group li.accordion-dropdown ul.dropdown > li div {  
+  padding-left: 15px;
+  border-left: 6px solid #008a32;
+  transition: all 300ms;
+}
+      </style>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <ul id="faq" class="accordion-group ">
+              <h2>Your Questions, Our Answers</h2>
+              <li class="accordion-dropdown"><span class="carett caret-right"></span><span>What's a domain name?</span>
+                <ul class="dropdown">
+                  <li>
+                    <div>
+                      <p>A website is the key to doing business around the world. But without a memorable web address - a.k.a. domain name - customers may have a hard time finding your or remembering how to get back to your site.</p>
+                      <p>Finding the right name is as easy as doing a domain check at GoDaddy. Just enter the domain you want in the box at the top of this page and we'll let you know if it's available to be registered.</p>
+                      <p>But GoDaddy isn't just about domain names. We've got everything you need to get online. From building your own website to attracting new customers to securing their data when they make a purchase, GoDaddy has you covered.</p>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="accordion-dropdown"><span class="carett caret-right"></span><span>How do I search domain names?</span>
+                <ul class="dropdown">
+                  <li>
+                    <div>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vestibulum, nisl a lacinia gravida, velit elit convallis ex, ac fringilla ante erat eu ante. Duis pellentesque, dolor et laoreet feugiat, ligula lacus tincidunt ante, id malesuada purus nulla vel erat. Vivamus viverra velit vel imperdiet imperdiet. Morbi fermentum et justo id convallis. Fusce fringilla neque ut vestibulum ornare. Maecenas eleifend diam sit amet cursus finibus. Donec tellus massa, sollicitudin vitae lacus in, posuere suscipit leo. Donec vel dolor sapien. Pellentesque sit amet eleifend justo. Curabitur sed neque ligula. Phasellus vestibulum malesuada erat id elementum. Sed cursus neque et congue accumsan. </p>
+                      <p>Cras varius, tellus eu tristique ultrices, sapien enim ullamcorper odio, nec euismod metus massa vel leo. Praesent finibus lacus purus, in ultrices metus rutrum sed. Vestibulum purus mauris, efficitur id quam vel, consequat malesuada nisi. Duis eu mauris vitae mauris pulvinar maximus eu ac odio. Pellentesque et purus sed lectus dictum auctor non et ligula. Sed pellentesque a urna nec sodales. Vestibulum dignissim iaculis tincidunt. Pellentesque facilisis nec lorem in venenatis. Cras scelerisque aliquet libero, a viverra enim pulvinar id. Maecenas pharetra tortor id quam imperdiet, id accumsan velit dapibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur euismod vulputate enim ac scelerisque. Nunc blandit lectus mattis velit ornare, quis malesuada ex sollicitudin. Phasellus auctor risus et nisl dignissim faucibus vel sit amet ex. Nulla tempor eros et pellentesque maximus. Aliquam finibus auctor justo, quis porta ex vulputate sit amet. </p>
+                      <p>Fusce viverra eget massa ac posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Cras vel ligula venenatis, fringilla purus sit amet, semper ante. Vivamus bibendum maximus dui et finibus. Integer in dignissim dolor, in malesuada massa. Nam accumsan feugiat tortor, eu tincidunt mauris laoreet a. Fusce fermentum dolor eu odio volutpat varius. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis sed augue pretium, ultrices nisi non, maximus tortor. Praesent auctor euismod fringilla.</p>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="accordion-dropdown"><span class="carett caret-right"></span><span>What payment options do you offer?</span>
+                <ul class="dropdown">
+                  <li>
+                    <div>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vestibulum, nisl a lacinia gravida, velit elit convallis ex, ac fringilla ante erat eu ante. Duis pellentesque, dolor et laoreet feugiat, ligula lacus tincidunt ante, id malesuada purus nulla vel erat. Vivamus viverra velit vel imperdiet imperdiet. Morbi fermentum et justo id convallis. Fusce fringilla neque ut vestibulum ornare. Maecenas eleifend diam sit amet cursus finibus. Donec tellus massa, sollicitudin vitae lacus in, posuere suscipit leo. Donec vel dolor sapien. Pellentesque sit amet eleifend justo. Curabitur sed neque ligula. Phasellus vestibulum malesuada erat id elementum. Sed cursus neque et congue accumsan. </p>
+                      <p>Cras varius, tellus eu tristique ultrices, sapien enim ullamcorper odio, nec euismod metus massa vel leo. Praesent finibus lacus purus, in ultrices metus rutrum sed. Vestibulum purus mauris, efficitur id quam vel, consequat malesuada nisi. Duis eu mauris vitae mauris pulvinar maximus eu ac odio. Pellentesque et purus sed lectus dictum auctor non et ligula. Sed pellentesque a urna nec sodales. Vestibulum dignissim iaculis tincidunt. Pellentesque facilisis nec lorem in venenatis. Cras scelerisque aliquet libero, a viverra enim pulvinar id. Maecenas pharetra tortor id quam imperdiet, id accumsan velit dapibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur euismod vulputate enim ac scelerisque. Nunc blandit lectus mattis velit ornare, quis malesuada ex sollicitudin. Phasellus auctor risus et nisl dignissim faucibus vel sit amet ex. Nulla tempor eros et pellentesque maximus. Aliquam finibus auctor justo, quis porta ex vulputate sit amet. </p>
+                      <p>Fusce viverra eget massa ac posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Cras vel ligula venenatis, fringilla purus sit amet, semper ante. Vivamus bibendum maximus dui et finibus. Integer in dignissim dolor, in malesuada massa. Nam accumsan feugiat tortor, eu tincidunt mauris laoreet a. Fusce fermentum dolor eu odio volutpat varius. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis sed augue pretium, ultrices nisi non, maximus tortor. Praesent auctor euismod fringilla.</p>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="accordion-dropdown"><span class="carett caret-right"></span><span>What if I need help?</span>
+                <ul class="dropdown">
+                  <li>
+                    <div>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vestibulum, nisl a lacinia gravida, velit elit convallis ex, ac fringilla ante erat eu ante. Duis pellentesque, dolor et laoreet feugiat, ligula lacus tincidunt ante, id malesuada purus nulla vel erat. Vivamus viverra velit vel imperdiet imperdiet. Morbi fermentum et justo id convallis. Fusce fringilla neque ut vestibulum ornare. Maecenas eleifend diam sit amet cursus finibus. Donec tellus massa, sollicitudin vitae lacus in, posuere suscipit leo. Donec vel dolor sapien. Pellentesque sit amet eleifend justo. Curabitur sed neque ligula. Phasellus vestibulum malesuada erat id elementum. Sed cursus neque et congue accumsan. </p>
+                      <p>Cras varius, tellus eu tristique ultrices, sapien enim ullamcorper odio, nec euismod metus massa vel leo. Praesent finibus lacus purus, in ultrices metus rutrum sed. Vestibulum purus mauris, efficitur id quam vel, consequat malesuada nisi. Duis eu mauris vitae mauris pulvinar maximus eu ac odio. Pellentesque et purus sed lectus dictum auctor non et ligula. Sed pellentesque a urna nec sodales. Vestibulum dignissim iaculis tincidunt. Pellentesque facilisis nec lorem in venenatis. Cras scelerisque aliquet libero, a viverra enim pulvinar id. Maecenas pharetra tortor id quam imperdiet, id accumsan velit dapibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur euismod vulputate enim ac scelerisque. Nunc blandit lectus mattis velit ornare, quis malesuada ex sollicitudin. Phasellus auctor risus et nisl dignissim faucibus vel sit amet ex. Nulla tempor eros et pellentesque maximus. Aliquam finibus auctor justo, quis porta ex vulputate sit amet. </p>
+                      <p>Fusce viverra eget massa ac posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Cras vel ligula venenatis, fringilla purus sit amet, semper ante. Vivamus bibendum maximus dui et finibus. Integer in dignissim dolor, in malesuada massa. Nam accumsan feugiat tortor, eu tincidunt mauris laoreet a. Fusce fermentum dolor eu odio volutpat varius. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis sed augue pretium, ultrices nisi non, maximus tortor. Praesent auctor euismod fringilla.</p>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="accordion-dropdown"><span class="carett caret-right"></span><span>Why should I choose GoDaddy?</span>
+                <ul class="dropdown">
+                  <li>
+                    <div>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vestibulum, nisl a lacinia gravida, velit elit convallis ex, ac fringilla ante erat eu ante. Duis pellentesque, dolor et laoreet feugiat, ligula lacus tincidunt ante, id malesuada purus nulla vel erat. Vivamus viverra velit vel imperdiet imperdiet. Morbi fermentum et justo id convallis. Fusce fringilla neque ut vestibulum ornare. Maecenas eleifend diam sit amet cursus finibus. Donec tellus massa, sollicitudin vitae lacus in, posuere suscipit leo. Donec vel dolor sapien. Pellentesque sit amet eleifend justo. Curabitur sed neque ligula. Phasellus vestibulum malesuada erat id elementum. Sed cursus neque et congue accumsan. </p>
+                      <p>Cras varius, tellus eu tristique ultrices, sapien enim ullamcorper odio, nec euismod metus massa vel leo. Praesent finibus lacus purus, in ultrices metus rutrum sed. Vestibulum purus mauris, efficitur id quam vel, consequat malesuada nisi. Duis eu mauris vitae mauris pulvinar maximus eu ac odio. Pellentesque et purus sed lectus dictum auctor non et ligula. Sed pellentesque a urna nec sodales. Vestibulum dignissim iaculis tincidunt. Pellentesque facilisis nec lorem in venenatis. Cras scelerisque aliquet libero, a viverra enim pulvinar id. Maecenas pharetra tortor id quam imperdiet, id accumsan velit dapibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur euismod vulputate enim ac scelerisque. Nunc blandit lectus mattis velit ornare, quis malesuada ex sollicitudin. Phasellus auctor risus et nisl dignissim faucibus vel sit amet ex. Nulla tempor eros et pellentesque maximus. Aliquam finibus auctor justo, quis porta ex vulputate sit amet. </p>
+                      <p>Fusce viverra eget massa ac posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Cras vel ligula venenatis, fringilla purus sit amet, semper ante. Vivamus bibendum maximus dui et finibus. Integer in dignissim dolor, in malesuada massa. Nam accumsan feugiat tortor, eu tincidunt mauris laoreet a. Fusce fermentum dolor eu odio volutpat varius. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis sed augue pretium, ultrices nisi non, maximus tortor. Praesent auctor euismod fringilla.</p>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <div class="text-center">
+                <button id="faq-button" class="btn btn-default-dark">See All Questions</button>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <script type="text/javascript">
+        $(".accordion-dropdown").click(function() {
+          var dropdownGroup = $(this).parent(".accordion-group");
+          var dropdownOptions = $(this).find(".dropdown");
+          var dropdownCaret = $(this).find(".carett");
+          var dropdowns = $(dropdownGroup).find(".accordion-dropdown");
+        
+          $(dropdowns).removeClass("active");
+          $(dropdownGroup).find(".dropdown").slideUp();
+          $(dropdownGroup).find(".carett")
+                          .removeClass("caret-down")
+                          .addClass("caret-right");
+        
+          if (!$(dropdownOptions).is(":visible")) {
+            $(this).addClass("active");
+            $(dropdownOptions).slideDown();
+            $(dropdownCaret).removeClass("caret-right").addClass("caret-down");
+            event.stopPropagation();
+          }
+        });
+        $(window).load(function() {
+          $("#faq .accordion-dropdown:first").click();
+        });
+        $("#faq-button").click(function() {
+          $('#faq').find('.dropdown').slideDown();
+          $('#faq').find('.accordion-dropdown').find('.carett')
+                          .removeClass("caret-right")
+                          .addClass("caret-down");
+          $('#faq').find('.accordion-dropdown').addClass("active");
+         });
+      </script>
+    </section>
     <!-- FOOTERBEGIN--> 
-    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer"><Parameters><Parameter key="manifest" value="salesheader" /></Parameters></Data>]@P]
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- FOOTEREND-->
      
-    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Script"><Parameters><Parameter key="manifest" value="salesheader" /></Parameters></Data>]@P]
-    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Bottom"><Parameters><Parameter key="requestedManifest" value="salesheader" /></Parameters></Data>]@P]
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Script"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Bottom"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- liveperson includes -->
     <div id="lpButtonDiv"></div><!-- End Main Content -->
     <script type="text/javascript">
@@ -1097,7 +1333,8 @@ top: -6px;
             var maxHeight = 0;
             $(outerPlan).find(".pro-plan-wrap").each(function(index, plan) {
               maxHeight = $(plan).outerHeight() > maxHeight ? $(plan).outerHeight() : maxHeight;
-            }).css("height", maxHeight);
+            });
+            if( maxHeight > 0 )$(outerPlan).find(".pro-plan-wrap").css("height", maxHeight);
           });
         }
       });
