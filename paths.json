@@ -28,6 +28,7 @@
   "how-to-build-a-website":  "./expansion-pages/website-builder/how-to-build-a-website/",
   "leaf-pages":              "./tlds/leafpage",
   "lenovo":                  "./lenovo/",
+  "locations":               "./careers/locations/",
   "logo-design":             "./design/logo-design/",
   "malware-scanner":         "./security/malware-scanner/",
   "mhi":                     "./hosting/managed-hosting-info/",

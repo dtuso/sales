@@ -1,22 +1,22 @@
 ---
 location: localization/sales/gd/hosting/website-builder/en
-id:  541c57eaf778fc14545dc859
-name: FOS-27512
-comments: Free Email with WSB three way split Test
+id:  54b4c734f778fc100405226a
+name: GCE-32431 Rebrand
+comments: New Langauge for Rebrand
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="page-title" />
-Website Builder | Create Your Own Website in Minutes  - [@T[companyname:name]@T]
+Website Builder | Create Your Own Website in Minutes  - [@T[companyname:nameseotitle]@T]
 <phrase key="page-title-es" />
-Website Builder | Spanish Web Design Software - [@T[companyname:name]@T]
+Website Builder | Spanish Web Design Software - [@T[companyname:nameseotitle]@T]
 <phrase key="page-title-au" />
-Website Builder | Australia's Website Creation Software - [@T[companyname:name]@T]
+Website Builder | Australia's Website Creation Software - [@T[companyname:nameseotitle]@T]
 <phrase key="page-title-ca" />
-Website Builder | Canadian Web Design Software - [@T[companyname:name]@T]
+Website Builder | Canadian Web Design Software - [@T[companyname:nameseotitle]@T]
 <phrase key="page-title-in" />
-Website Builder | India's Leading Web Design Software - [@T[companyname:name]@T]
+Website Builder | India's Leading Web Design Software - [@T[companyname:nameseotitle]@T]
 <phrase key="page-title-uk" />
-Website Builder | Create Your Own Website in Minutes - [@T[companyname:name]@T]
+Website Builder | Create Your Own Website in Minutes - [@T[companyname:nameseotitle]@T]
 <phrase key="meta-description" />
 Learn How to Make a Website Quickly and Easily with our Highly Acclaimed Website Builder. Our easy to use Web Design software will let you Create a Website in no time at all!
 <phrase key="meta-description-es" />
@@ -681,6 +681,8 @@ PayPal
 Securely accept payments and donations.
 <phrase key="apps-modal-homefinder-title" />
 HomeFinder
+<phrase key="apps-modal-home-finder-title" />
+Home Finder
 <phrase key="apps-modal-homefinder-desc" />
 Feature your latest real estate listings.
 <phrase key="apps-modal-okbtn" />
@@ -974,4 +976,123 @@ Cancel
 See how these business owners took their passion for success online with GoDaddy Website Builder.
 <phrase key="CheckoutCustomers" />
 Check out what our customers are saying.
-
+<phrase key="header_sb_title" />
+Website Builder
+<phrase key="header_subtitle_1" />
+Easily create your 
+<phrase key="header_subtitle_2" />
+own professional website
+<phrase key="header_sb_subtitle_1" />
+NO SKILLS? NO TIME?
+<phrase key="header_sb_subtitle_2" />
+------------- NO PROBLEM.
+<phrase key="header_sb_bullet_1" />
+<span class="condensed">EASY TO USE</span> – you’ve got the skills, seriously
+<phrase key="header_sb_bullet_2" />
+<span class="condensed">HUNDREDS(!)</span> of customizable designs
+<phrase key="header_sb_bullet_3" />
+<span class="condensed">FREE DOMAIN</span> and <span class="condensed">FREE HOSTING</span>
+<phrase key="sb_plans_title_1" />
+GET YOUR OWN WEBSITE--------
+<phrase key="sb_plans_title_2" />
+WITHOUT HIRING SOME HIPSTER DESIGNER
+<phrase key="sb_text" />
+Trying to track down a local bearded millennial to build your professional website? Avoid the coffee houses, and build it yourself. Website Builder gives you all the templates and tools you need to quickly build a beautiful, unique site to be proud of. Do it yourself and save your money for your own new flannel.
+<phrase key="sb_templates_title_1" />
+CREATE A PROFESSIONAL WEBSITE
+<phrase key="sb_templates_title_2" />
+---------- JUST LIKE THAT
+<phrase key="sb_templates_text" />
+Choose from hundreds of customizable designs, tailored to what you do.
+<phrase key="sb_video_title" />
+MAKE IT YOUR WAY---------------ASSUMING YOU WANT IT UNCOMPLICATED AND GORGEOUS
+<phrase key="sb_video_subtitle" />
+We give you intuitive design tools; you plug in some info and create the site you've always wanted easier than you ever imagined.
+<phrase key="sb__apps_title" />
+Popular apps keep your site fresh
+<phrase key="sb_apps_subtitle" />
+Easily integrate social and business apps in your site to share information and keep customers coming back.
+<phrase key="sb_business_title" />
+Business Plus Plan Exclusives
+<phrase key="sb_business_subtitle_1" />
+Get a website with a social life
+<phrase key="sb_business_subtitle_2" />
+Getting seen on Google is a cinch
+<phrase key="sb_business_text_1" />
+Our One-Click Social Media Manager instantly matches your Facebook® and Twitter® pages to your website so they're always in sync. Don't have a Twitter page? Create one with just a click!
+<phrase key="sb_business_text_2" />
+The built-in Search Engine Optimization (SEO) tool in our Business Plus plan helps you show up on Google®, Yahoo!®, and more.
+<phrase key="sb_help_title" />
+WE’LL HOLD YOUR HAND UNTIL ----------- IT’S AWKWARD
+<phrase key="sb_text" />
+You don’t have time to work on your website during “business hours;” you don’t even have time to sweep. That’s why our award-winning support staff is here 24/7/365. So, when inspiration strikes at 2am on a Tuesday, you can breathe easy, knowing our friendly, knowledgeable web pros are here to hear your cries and step you through it all.
+<phrase key="sb_xsell_title" />
+NOT FINDING WHAT YOU NEED?
+<phrase key="sb_xsell_wp" />
+MANAGED WORDPRESS
+<phrase key="sb_xsell_wp_1" />
+Get the power of WordPress with the ease of fully-managed hosting and security.
+<phrase key="sb_xsell_wp_2" />
+Perfect for: Bloggers, start-ups, small businesses, and designers
+<phrase key="sb_xsell_qs" />
+QUICK SHOPPING CART
+<phrase key="sb_xsell_qs_1" />
+Everything you need to open your own online store – no technical skills required.
+<phrase key="sb_qs_2" />
+Perfect for: eCommerce businesses and those looking to add online sales to their site
+<phrase key="sb_nav_1" />
+FEATURES
+<phrase key="sb_nav_2" />
+REVIEWS
+<phrase key="sb_nav_3" />
+FAQ
+<phrase key="yr" />
+/yr
+<phrase key="year" />
+/year
+<phrase key="sb_nav_see" />
+See The Plans
+<phrase key="sb_plans_starting_at" />
+Plans starting at
+<phrase key="sb_view_templates" />
+View All Templates
+<phrase key="sb_view_preview" />
+Preview
+<phrase key="sb_bpp_starting_at" />
+<span class="condensed">Business Plus Plans</span> starting at
+<phrase key="sb_faq_see" />
+See All Questions
+<phrase key="rb_disclaimers" />
+Product disclaimers and legal policies
+<phrase key="rb_disclaimers_view" />
+View
+<phrase key="rb_disclaimers_3p" />
+Third-party logos and marks are registered trademarks of their respective owners. All rights reserved.
+<phrase key="rb_how_it_works" />
+How it works
+<phrase key="rb_5_business_emails" />
+<strong>5</strong> Business Email Addresses
+<phrase key="rb_5_business_emails_tooltip" />
+Email account storage limited to the following: Business Plan comes with up to 5 Email Addresses and up to 500 MB of total storage; Business Plus Plan comes with up to 10 Email Addresses and up to 1 GB of total storage.
+<phrase key="rb_2_business_emails" />
+<strong>2</strong> Business Email Addresses
+<phrase key="rb_2_business_emails_tooltip" />
+Email account storage limited to the following: Business Plan comes with up to 2 Email Addresses and up to 500 MB of total storage; Business Plus Plan comes with up to 5 Email Addresses and up to 1 GB of total storage.
+<phrase key="rb_10_business_emails" />
+<strong>10</strong> Business Email Addresses
+<phrase key="rb_mobile_site" />
+<strong>Mobile</strong> Site
+<phrase key="rb_mobile_site_tooltip" />
+Any site you create with Website Builder will automatically be converted to work beautifully on smartphones.
+<phrase key="rb_seo" />
+<strong>Search Engine Optimization</strong>
+<phrase key="rb_seo_tooltip" />
+Get ranked higher on search engines with our integrated SEO feature. In 3 simple steps, we’ll help you choose effective keywords, headlines and body text based on your business and target customers. No technical skills required.
+<phrase key="rb_oneclick" />
+<strong>One-Click</strong> Social Media Manager
+<phrase key="rb_oneclick_tooltip" />
+Give your Facebook and Twitter profile the same look as your website with just one click. And anytime you change your website design, your social media pages will automatically update so they always match your site.
+<phrase key="rb_ssl" />
+<strong>1 year SSL Certificate</strong>
+<phrase key="rb_ssl_tooltip" />
+A [@T[productprice:<current productid="3604" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]/yr value, your [@T[companyname:name]@T] SSL certificate keeps transactions with your website secure. Take advantage of 256-bit encryption and 99.9% browser recognition. SSL Certificate is free for 1 year with purchase. After the initial free year, SSL will automatically renew at the then-current price until cancelled. You may cancel automatic renewal at any time in your [@T[companyname:name]@T] account.

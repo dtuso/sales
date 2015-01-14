@@ -1,0 +1,44 @@
+{
+  "locations.html": {
+    "cdsDetails": {
+      "champion": {
+        "name": "Anupama Ramu",
+        "email": "aramu@godaddy.com"
+      },
+      "draft": {
+        "createdDate": "",
+        "createdBy": {
+          "fullName": "Anupama",
+          "username": "aramu"
+        },
+        "jiraTicket": "GCE-25607",
+        "comments": "Connect Career Page - Change map and Addresses",
+        "url": "http://www.dev-godaddy.com/careers/locations"
+      }
+    },
+    "metaTitle": "[@L[cds.sales/gd/careers/locations:MetaTitle]@L]",
+    "metaDescription": "[@L[cds.sales/gd/careers/locations:MetaDescription]@L]",
+    "metaKeywords": "[@L[cds.sales/gd/careers/locations:MetaKeywords]@L]",
+    "metaCanonicalPath": "/careers/locations",
+    "metaOgTitle": "",
+    "metaOgImage": "",
+    "metaOgDescription": ""
+  },
+  "locations.language": {
+    "cdsDetails": {
+      "champion": {
+        "name": "None",
+        "email": "none"
+      },
+      "draft": {
+        "createdDate": "2014-01-08",
+        "createdBy": {
+          "fullName": "Anupama Ramu",
+          "username": "aramu"
+        },
+        "jiraTicket": "GCE-25607",
+        "comments": "Changes to map and addresses"
+      }
+    }
+  }
+}
