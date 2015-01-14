@@ -1408,6 +1408,12 @@ metaOgDescription: "[@L[cds.sales/gd/hosting/web-hosting:og-description]@L]"
             $(".customers").css('padding-top', '150px'); 
           });
         }
+
+        ##if(activeLanguageAny([fr-CH]))
+        $('.arne-josefsberg').hover(function(){
+           $('.arne-josefsberg .info .text').css('margin-bottom', '0');
+        });
+        ##endif
       });
     </script>
   {% endblock %}
