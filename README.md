@@ -1,3 +1,7 @@
+## UPDATE (December 9, 2014)
+
+Package.json versions have been changed to static versions, to prevent newer untested versions from being installed. To ensure we are all using the same versions, Delete node_modules folder and run npm install. After npm has been reinstalled, we should all be using the same depenency versions.
+
 ## UPDATE (October 13, 2014)
 
 An additional feature was added to cds-lib.  This feature will create a file and folder structure if a file does not exist in CDS instead of displaying an error.  To have access to this new feature you will want to backup and remove your old node modules directory or just the cds-lib directory which is located within the cdsm node modules and complete a npm install.
