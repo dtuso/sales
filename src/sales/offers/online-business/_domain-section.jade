@@ -15,7 +15,9 @@ atlantis:webstash(type="css")
       font-size: 14px;
       color: #666;
     }
-
+    #domains .features-slim h2 {
+      margin: 10px 0px;
+    }
 
 section#domains
 
@@ -33,9 +35,9 @@ section#domains
   .features.tile-section
     .container
       .row
-        .col-md-6.col-sm-12.domain-image.col-md-push-6 
+        .col-sm-6.domain-image.col-sm-push-6 
           img(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature2.png")
-        .col-md-6.col-sm-12.col-md-pull-6 
+        .col-sm-6.col-sm-pull-6 
           h2 [@L[cds.sales/offers/online-business:32573-email-even-better-heading]@L]
           h4 [@L[cds.sales/offers/online-business:32573-email-even-better-text]@L]
           .include-check-green [@L[cds.sales/offers/online-business:32573-email-even-better-bullet-1]@L]
@@ -56,5 +58,3 @@ section#domains
   - var text = "[@L[cds.sales/offers/online-business:32573-find-your-perfect-name-text]@L]";
 
   include ../../../templates/feature-templates.jade
-
-

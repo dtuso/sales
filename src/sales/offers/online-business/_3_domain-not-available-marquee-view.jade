@@ -4,19 +4,20 @@ atlantis:webstash(type="css")
     #domain-not-available-marquee-view .pro-plans .pro-plan-wrap {border-top: 10px solid #008a32; padding: 20px;}
     #domain-not-available-marquee-view .pro-plans {margin-top: 0px; }
     #domain-not-available-marquee-view .domain-not-available-heading-text  { color: #333333; }
-    #domain-not-available-marquee-view .other-domains-heading-text {padding-top 20px; }
-    #domain-not-available-marquee-view .results-list-heading-text {padding-top 20px; }
+    #domain-not-available-marquee-view h4.other-domains-heading-text {padding-top 20px; font-size: 24px; color:#333; font-weight: bold; }
+    #domain-not-available-marquee-view h6.results-list-heading-text {padding-top 20px; font-size: 18px; color:#333; }
     #domain-not-available-marquee-view .domain-spin-wrap {min-height: 120px;border: solid 1px #cccccc;margin-bottom: 15px;} 
     #domain-not-available-marquee-view .domain-name-display {text-transform: lowercase; margin-bottom: 0px; margin-top: 0px;}
     #domain-not-available-marquee-view .domain-name-display-tld {text-transform: lowercase;margin-bottom: 0px; margin-top: 0px;}
     #domain-not-available-marquee-view .show-more-arrow { position: relative; top: 16px; left: 15px; bottom: 0; margin-left: -10px; width: 0; height: 0; border: 11px solid transparent; border-top-color: #000; content: ''; }
     #spin-results .spin-results-message,
-    #spin-results .spin-template {display:none;font-size:18px;}
-    #spin-results .select-and-continue {margin-bottom: 0px;}
+    #spin-template-wrap .spin-template {display:none;}
+    #spin-results .select-and-continue {margin-bottom: 0px; font-size:20px;}
     #spin-results .spin-results-message {margin-top:15px;}
     #spin-results .checking-availability, #spin-results .now-unavailable {padding-top:5px;}
-    #domain-not-available-marquee-view
-
+    #spin-results h4.domain-name-display {font-size: 30px; color: #333; font-weight:bold;}
+    #spin-results h2.domain-name-display-tld {font-size: 40px; color: #333;}
+    #domain-not-available-marquee-view button.view-all-button {font-size: 18px; color: #6586C4; font-family: Arial;}
 
 section#domain-not-available-marquee-view
   .bg-green-official
@@ -29,7 +30,8 @@ section#domain-not-available-marquee-view
     .container.pro-plans
       .row
         h4.other-domains-heading-text [@L[cds.sales/offers/online-business:32573-here-are-some-others]@L]
-        h6.results-list-heading-text [@L[cds.sales/offers/online-business:32573-number-of-number-results]@L] <a>[@L[cds.sales/offers/online-business:32573-view-all-results]@L]</a>
+        h6.results-list-heading-text [@L[cds.sales/offers/online-business:32573-number-of-number-results]@L] 
+          button.btn.btn-link.view-all-button [@L[cds.sales/offers/online-business:32573-view-all-results]@L]
       #spin-results
       #spin-template-wrap
         .row.spin-template.spin-result
