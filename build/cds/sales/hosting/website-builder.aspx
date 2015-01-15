@@ -31,6 +31,7 @@
     <script src="[@T[link:<javascriptroot />]@T]/fos/mike/0.7.0/js/sahara.min.js"></script>
     <link href="[@T[link:<cssroot />]@T]/ux/dev-brand/css/uxcontrols.css" rel="stylesheet">
     <link href="[@T[link:<cssroot />]@T]/ux/dev-brand/css/uxcore.css" rel="stylesheet">
+    <link href="[@T[link:<cssroot />]@T]/fos/mike/0.7.0/css/sahara.css" rel="stylesheet">
     <link href="[@T[link:<cssroot />]@T]/fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css">
     <style>
 .plan-tile { 
@@ -490,7 +491,7 @@
     }
 }
 .marquee {
-    background-size: cover;
+    background-size: cover !important;
     position: relative;
     background-position: bottom center;
     background-color: #fff;
@@ -1307,6 +1308,7 @@ h2.marquee-product-name,
     text-align: left;
     font-size: 16px;
     font-size: 1.6rem;
+    margin-bottom: 15px;
 }
 
 .pro-plans .include-check {
@@ -1331,8 +1333,8 @@ h2.marquee-product-name,
 .pro-plans .sf-tipper-target {
     background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
     background-position: 0 -864px;
-    width: 14px;
-    height: 15px;
+    width: 15px;
+    height: 16px;
     display: inline-block;
     background-size: 205px auto;
     vertical-align: baseline;
@@ -1362,7 +1364,7 @@ h2.marquee-product-name,
                 ##endif
                  
               </div>
-              <button data-tcode="" data-plan="wsb_personal_12month" class="btn btn-purchase btn-plan btn-lg btn-block">Add to Cart</button>
+              <button id="product-A" data-tcode="" data-plan="wsb_personal_12month" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
               <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:plan-domain]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]'></span></div>
               <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:economy-themes]@L]</div>
               <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:economy-pages]@L]</div>
@@ -1390,7 +1392,7 @@ h2.marquee-product-name,
                 ##endif
                  
               </div>
-              <button data-tcode="" data-plan="wsb_personal_12month" class="btn btn-purchase btn-plan btn-lg btn-block">Add to Cart</button>
+              <button id="product-A" data-tcode="" data-plan="wsb_personal_12month" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
               <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:plan-domain]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]'></span></div>
               <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:personal-themes]@L]</div>
               <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:economy-pages]@L]</div>
@@ -1419,7 +1421,7 @@ h2.marquee-product-name,
                 ##endif
                  
               </div>
-              <button data-tcode="" data-plan="wsb_business_12month" class="btn btn-purchase btn-plan btn-lg btn-block">Add to Cart</button>
+              <button id="product-B" data-tcode="" data-plan="wsb_business_12month" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
               <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:plan-domain]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]'></span></div>
               <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:business-themes]@L]</div>
               <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:business-pages]@L]</div>
@@ -1448,7 +1450,7 @@ h2.marquee-product-name,
                 ##endif
                  
               </div>
-              <button data-tcode="" data-plan="wsb_businessplus_12month" class="btn btn-purchase btn-plan btn-lg btn-block">Add to Cart</button>
+              <button id="product-C" data-tcode="" data-plan="wsb_businessplus_12month" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
               <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:plan-domain]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]'></span></div>
               <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:unlimited-themes]@L]</div>
               <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:unlimited-pages]@L]</div>
