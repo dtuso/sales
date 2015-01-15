@@ -29,6 +29,10 @@
     <script src="[@T[link:<javascriptroot />]@T]/ux/dev-brand/js/uxcore.en.min.js"></script>
     <script src="[@T[link:<javascriptroot />]@T]/ux/dev-brand/js/uxcontrols.min.js"></script>
     <script src="[@T[link:<javascriptroot />]@T]/fos/mike/0.7.0/js/sahara.min.js"></script>
+    <link href="[@T[link:<cssroot />]@T]/ux/dev-brand/css/uxcontrols.css" rel="stylesheet">
+    <link href="[@T[link:<cssroot />]@T]/ux/dev-brand/css/uxcore.css" rel="stylesheet">
+    <link href="[@T[link:<cssroot />]@T]/fos/mike/0.7.0/css/sahara.css" rel="stylesheet">
+    <link href="[@T[link:<cssroot />]@T]/fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css">
     <style>h2{
   margin-bottom: 40px;
   margin-top: 0;
@@ -156,6 +160,70 @@ h3 {
 }
 .bg-gray-light {
     background-color: #d9d9d9;
+}
+.BVDITitle {
+  text-transform: uppercase !important;
+  text-align: center !important;
+  font-family: 'Walsheim-Black' !important;
+  font-weight: 300 !important;
+  line-height: 1.1 !important;
+  color: #333 !important;
+}
+
+#BVRRDisplayContentLinkWriteID a {
+  -webkit-font-smoothing: antialiased !important;
+  -webkit-transition-delay: 0s !important;
+  -webkit-transition-duration: 0.1s !important;
+  -webkit-transition-property: transform !important;
+  -webkit-transition-timing-function: ease !important;
+  -webkit-user-select: none !important;
+  background-color: rgb(0, 138, 50) !important;
+  border-bottom-color: rgb(0, 112, 41) !important;
+  border-bottom-left-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+  border-bottom-style: solid !important;
+  border-bottom-width: 4px !important;
+  border-image-outset: 0px !important;
+  border-image-repeat: stretch !important;
+  border-image-slice: 100% !important;
+  border-image-source: none !important;
+  border-image-width: 1 !important;
+  border-left-color: rgb(0, 112, 41) !important;
+  border-left-style: solid !important;
+  border-left-width: 0px !important;
+  border-right-color: rgb(0, 112, 41) !important;
+  border-right-style: solid !important;
+  border-right-width: 0px !important;
+  border-top-color: rgb(0, 112, 41) !important;
+  border-top-left-radius: 0px !important;
+  border-top-right-radius: 0px !important;
+  border-top-style: solid !important;
+  border-top-width: 0px !important;
+  box-sizing: border-box !important;
+  color: rgb(255, 255, 255) !important;
+  cursor: pointer !important;
+  display: inline-block !important;
+  font-family: Walsheim-Medium, Arial, sans-serif !important;
+  font-size: 18px !important;
+  font-weight: normal !important;
+  height: 46px !important;
+  line-height: 25.7142868041992px !important;
+  margin-bottom: 0px !important;
+  min-width: 88px !important;
+  padding-bottom: 7px !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  padding-top: 10px !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  text-transform: uppercase !important;
+  transition-delay: 0s !important;
+  transition-duration: 0.1s !important;
+  transition-property: transform !important;
+  transition-timing-function: ease !important;
+  vertical-align: middle !important;
+  white-space: nowrap !important;
+  background-image: none !important;
 }
     </style><!--[if lt IE 9]>
     <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
@@ -1469,7 +1537,7 @@ h2.marquee-product-name,
                 ##endif
                  
               </div>
-              <button data-tcode="" data-plan="host_GridHostEcoDiabloLin1Yr_us" class="btn btn-purchase btn-plan btn-lg btn-block">Add to Cart</button>
+              <button id="product-A" data-tcode="" data-plan="host_GridHostEcoDiabloLin1Yr_us" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
               <div class="plan-item">1 Website</div>
               <div class="plan-item">100 GB Storage</div>
               <div class="plan-item">Unlimited bandwidth</div>
@@ -1495,7 +1563,7 @@ h2.marquee-product-name,
                 ##endif
                  
               </div>
-              <button data-tcode="" data-plan="host_GridHostDlxDiabloLin1Yr_us" class="btn btn-purchase btn-plan btn-lg btn-block">Add to Cart</button>
+              <button id="product-B" data-tcode="" data-plan="host_GridHostDlxDiabloLin1Yr_us" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
               <div class="plan-item">Unlimited Websites</div>
               <div class="plan-item">Unlimited Storage <span class='sf-tip sf-tipper-target' data-style='qt' data-content='Our Web Hosting plans are designed to host most personal, small business and organization websites. We do not limit the amount of storage and bandwidth your site can use as long as it complies with our Hosting Agreement. Should your website bandwidth or storage usage present a risk to the stability, performance or uptime of our servers, we will notify you via email and you may be required to upgrade to a Virtual Private Server or Dedicated (Private) Server, or we may restrict the resources your website is using. It’s very rare that a website violates our Hosting Agreement and is typically only seen in sites that use hosting for file sharing or storage.'></span></div>
               <div class="plan-item">Unlimited bandwidth</div>
@@ -1522,7 +1590,7 @@ h2.marquee-product-name,
                 ##endif
                  
               </div>
-              <button data-tcode="" data-plan="host_GridHostUnlDiabloLin1Yr_us" class="btn btn-purchase btn-plan btn-lg btn-block">Add to Cart</button>
+              <button id="product-C" data-tcode="" data-plan="host_GridHostUnlDiabloLin1Yr_us" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
               <div class="plan-item">Unlimited Websites</div>
               <div class="plan-item">Unlimited Storage <span class='sf-tip sf-tipper-target' data-style='qt' data-content='Our Web Hosting plans are designed to host most personal, small business and organization websites. We do not limit the amount of storage and bandwidth your site can use as long as it complies with our Hosting Agreement. Should your website bandwidth or storage usage present a risk to the stability, performance or uptime of our servers, we will notify you via email and you may be required to upgrade to a Virtual Private Server or Dedicated (Private) Server, or we may restrict the resources your website is using. It’s very rare that a website violates our Hosting Agreement and is typically only seen in sites that use hosting for file sharing or storage.'></span></div>
               <div class="plan-item">Unlimited bandwidth</div>
@@ -1913,10 +1981,10 @@ h2.marquee-product-name,
              
             ##if(activeLanguageAny([en-US]))
              
-            <h4>[@L[cds.sales/hosting/web-hosting-rebrand:conversionRebrand]@L]</h4> 
+            <h4 style="font-family: 'Walsheim-Black';">[@L[cds.sales/hosting/web-hosting-rebrand:conversionRebrand]@L]</h4> 
             ##else
              
-            <h4>[@L[cds.sales/hosting/web-hosting-rebrand:conversion]@L]</h4> 
+            <h4 style="font-family: 'Walsheim-Black';">[@L[cds.sales/hosting/web-hosting-rebrand:conversion]@L]</h4> 
             ##endif
              
           </div>
@@ -3210,11 +3278,11 @@ height: 27px;
                   <h3 class="text-center">[@L[cds.sales/hosting/web-hosting-rebrand:linuxPlan]@L]</h3>
                   <div class="row">
                     <div class="col-sm-10">
-                      <div class="include-check-black"><strong>cPanel:</strong> </br> Access all the hosting features and settings you need with this industry-standard control panel.</div>
-                      <div class="include-check-black"><strong>CloudLinux:</strong> </br> Keep your site online with truly balanced CPU, RAM and Disk IO limits.</div>
-                      <div class="include-check-black"><strong>Resources On-Demand:</strong> </br> If you need more power, you can level up your CPU, RAM, Entry Processes and I/O with just a click.</div>
-                      <div class="include-check-black"><strong>CageFS:</strong> </br> Protect your Web content 24/7 with this virtualized file system.</div>
-                      <div class="include-check-black"><strong>Free Applications:</strong> </br> Instanly install over 150 applications on your website with just a few clicks.</div>
+                      <div class="include-check-black"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:cPanelListItem]@L]</strong> </br> [@L[cds.sales/hosting/web-hosting-rebrand:cPanelListItemDesc]@L]</div>
+                      <div class="include-check-black"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:cloudLinuxListItem]@L]</strong> </br> [@L[cds.sales/hosting/web-hosting-rebrand:cloudLinuxListItemDesc]@L]</div>
+                      <div class="include-check-black"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:resourcesOnDemandListItem]@L]</strong> </br> [@L[cds.sales/hosting/web-hosting-rebrand:resourcesOnDemandListItemDesc]@L]</div>
+                      <div class="include-check-black"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:cageFSListItem]@L]</strong> </br> [@L[cds.sales/hosting/web-hosting-rebrand:cageFSListItemDesc]@L]</div>
+                      <div class="include-check-black"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:freeApps]@L]</strong> </br> [@L[cds.sales/hosting/web-hosting-rebrand:oneHundredFifty]@L]</div>
                     </div>
                   </div>
                 </div>
@@ -3222,13 +3290,13 @@ height: 27px;
               <div class="col-md-5 col-md-offset-2 col-sm-6  bg-green-official-light">
                 <div style="" class="two-up-text-wrap ">
                   <div class="text-center two-up-image"><img src="[@T[link:<imageroot />]@T]fos/mike/img/hosting/img-Windows8.png" alt=""/></div>
-                  <h2 class="text-center">[@L[cds.sales/hosting/web-hosting-rebrand:choosePlatform]@L]</h2>
-                  <h3 class="text-center">Each Windows plan includes:</h3>
+                  <h2 class="text-center">[@L[cds.sales/hosting/web-hosting-rebrand:windowsTitle2]@L]</h2>
+                  <h3 class="text-center">[@L[cds.sales/hosting/web-hosting-rebrand:windowsPlan]@L]</h3>
                   <div class="row">
                     <div class="col-sm-10">
-                      <div class="include-check-black"><strong>Parallesls Plesk Panel:</strong> </br> Easily manage your server, email accounts and more with this popular, award-winning control panel.</div>
-                      <div class="include-check-black"><strong>Windows Server 2012:</strong> </br> Take control of your hosting with Microsoft's newest and most powerful server operating system.</div>
-                      <div class="include-check-black"><strong>Free Applications:</strong> </br> Instanly install over 70 applications on your website with just a few clicks.</div>
+                      <div class="include-check-black"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:windowsPlanPlesk]@L]</strong> </br> [@L[cds.sales/hosting/web-hosting-rebrand:windowsPlanPleskDesc]@L]</div>
+                      <div class="include-check-black"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:windowsServer]@L]</strong> </br> [@L[cds.sales/hosting/web-hosting-rebrand:windowsServerDesc]@L]</div>
+                      <div class="include-check-black"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:freeApps]@L]</strong> </br> [@L[cds.sales/hosting/web-hosting-rebrand:seventyPlus]@L]</div>
                     </div>
                   </div>
                 </div>
@@ -3243,7 +3311,10 @@ height: 27px;
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
-            <div>[@P[userControl:<Data location="~/Shared/Tabs/controls/BVReviewsNoJS.ascx"><Parameters><Parameter key="ProductId" value="web_hosting" /><Parameter key="ReviewNumber" value="4" /></Parameters></Data>]@P]</div>
+            <div id="BVRRContainer">
+              <p class="bv-loading">Loading...</p>
+            </div>
+            <div>[@P[userControl:<Data location="~/Shared/Tabs/controls/BVReviewsNoJS.ascx"><Parameters><Parameter key="ProductId" value="web_hosting" /><Parameter key="ReviewNumber" value="1" /></Parameters></Data>]@P]</div>
           </div>
         </div>
       </div>
@@ -3329,25 +3400,59 @@ height: 27px;
         <div class="row">
           <div class="col-sm-12">
             <ul id="test-faq" class="accordion-group ">
-              <h2>A Title!</h2>
-              <li class="accordion-dropdown"><span class="carett caret-right"></span><span>things</span>
+              <h2>[@L[cds.sales/hosting/web-hosting-rebrand:yourQuestOurAns]@L]</h2>
+              <li class="accordion-dropdown"><span class="carett caret-right"></span><span>[@L[cds.sales/gd/hosting/web-hosting:faq-first-slide-title-cp]@L]</span>
                 <ul class="dropdown">
                   <li>
-                    <div>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vestibulum, nisl a lacinia gravida, velit elit convallis ex, ac fringilla ante erat eu ante. Duis pellentesque, dolor et laoreet feugiat, ligula lacus tincidunt ante, id malesuada purus nulla vel erat. Vivamus viverra velit vel imperdiet imperdiet. Morbi fermentum et justo id convallis. Fusce fringilla neque ut vestibulum ornare. Maecenas eleifend diam sit amet cursus finibus. Donec tellus massa, sollicitudin vitae lacus in, posuere suscipit leo. Donec vel dolor sapien. Pellentesque sit amet eleifend justo. Curabitur sed neque ligula. Phasellus vestibulum malesuada erat id elementum. Sed cursus neque et congue accumsan. </p>
-                      <p>Cras varius, tellus eu tristique ultrices, sapien enim ullamcorper odio, nec euismod metus massa vel leo. Praesent finibus lacus purus, in ultrices metus rutrum sed. Vestibulum purus mauris, efficitur id quam vel, consequat malesuada nisi. Duis eu mauris vitae mauris pulvinar maximus eu ac odio. Pellentesque et purus sed lectus dictum auctor non et ligula. Sed pellentesque a urna nec sodales. Vestibulum dignissim iaculis tincidunt. Pellentesque facilisis nec lorem in venenatis. Cras scelerisque aliquet libero, a viverra enim pulvinar id. Maecenas pharetra tortor id quam imperdiet, id accumsan velit dapibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur euismod vulputate enim ac scelerisque. Nunc blandit lectus mattis velit ornare, quis malesuada ex sollicitudin. Phasellus auctor risus et nisl dignissim faucibus vel sit amet ex. Nulla tempor eros et pellentesque maximus. Aliquam finibus auctor justo, quis porta ex vulputate sit amet. </p>
-                      <p>Fusce viverra eget massa ac posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Cras vel ligula venenatis, fringilla purus sit amet, semper ante. Vivamus bibendum maximus dui et finibus. Integer in dignissim dolor, in malesuada massa. Nam accumsan feugiat tortor, eu tincidunt mauris laoreet a. Fusce fermentum dolor eu odio volutpat varius. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis sed augue pretium, ultrices nisi non, maximus tortor. Praesent auctor euismod fringilla.</p>
+                    <div>[@L[cds.sales/gd/hosting/web-hosting:faq-first-slide-content-cp]@L]
                     </div>
                   </li>
                 </ul>
               </li>
-              <li class="accordion-dropdown"><span class="carett caret-right"></span><span>stuff</span>
+              <li class="accordion-dropdown"><span class="carett caret-right"></span><span>[@L[cds.sales/gd/hosting/web-hosting:faq-second-slide-title-cp]@L]</span>
                 <ul class="dropdown">
                   <li>
-                    <div>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vestibulum, nisl a lacinia gravida, velit elit convallis ex, ac fringilla ante erat eu ante. Duis pellentesque, dolor et laoreet feugiat, ligula lacus tincidunt ante, id malesuada purus nulla vel erat. Vivamus viverra velit vel imperdiet imperdiet. Morbi fermentum et justo id convallis. Fusce fringilla neque ut vestibulum ornare. Maecenas eleifend diam sit amet cursus finibus. Donec tellus massa, sollicitudin vitae lacus in, posuere suscipit leo. Donec vel dolor sapien. Pellentesque sit amet eleifend justo. Curabitur sed neque ligula. Phasellus vestibulum malesuada erat id elementum. Sed cursus neque et congue accumsan. </p>
-                      <p>Cras varius, tellus eu tristique ultrices, sapien enim ullamcorper odio, nec euismod metus massa vel leo. Praesent finibus lacus purus, in ultrices metus rutrum sed. Vestibulum purus mauris, efficitur id quam vel, consequat malesuada nisi. Duis eu mauris vitae mauris pulvinar maximus eu ac odio. Pellentesque et purus sed lectus dictum auctor non et ligula. Sed pellentesque a urna nec sodales. Vestibulum dignissim iaculis tincidunt. Pellentesque facilisis nec lorem in venenatis. Cras scelerisque aliquet libero, a viverra enim pulvinar id. Maecenas pharetra tortor id quam imperdiet, id accumsan velit dapibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur euismod vulputate enim ac scelerisque. Nunc blandit lectus mattis velit ornare, quis malesuada ex sollicitudin. Phasellus auctor risus et nisl dignissim faucibus vel sit amet ex. Nulla tempor eros et pellentesque maximus. Aliquam finibus auctor justo, quis porta ex vulputate sit amet. </p>
-                      <p>Fusce viverra eget massa ac posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Cras vel ligula venenatis, fringilla purus sit amet, semper ante. Vivamus bibendum maximus dui et finibus. Integer in dignissim dolor, in malesuada massa. Nam accumsan feugiat tortor, eu tincidunt mauris laoreet a. Fusce fermentum dolor eu odio volutpat varius. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis sed augue pretium, ultrices nisi non, maximus tortor. Praesent auctor euismod fringilla.</p>
+                    <div>[@L[cds.sales/gd/hosting/web-hosting:faq-second-slide-content-cp]@L]
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="accordion-dropdown"><span class="carett caret-right"></span><span>[@L[cds.sales/gd/hosting/web-hosting:faq-third-slide-title]@L]</span>
+                <ul class="dropdown">
+                  <li>
+                    <div>[@L[cds.sales/gd/hosting/web-hosting:faq-third-slide-content-cp]@L]
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="accordion-dropdown"><span class="carett caret-right"></span><span>[@L[cds.sales/gd/hosting/web-hosting:faq-fourth-slide-title]@L]</span>
+                <ul class="dropdown">
+                  <li>
+                    <div>[@L[cds.sales/gd/hosting/web-hosting:faq-fourth-slide-content-cp]@L]
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="accordion-dropdown"><span class="carett caret-right"></span><span>[@L[cds.sales/gd/hosting/web-hosting:faq-fifth-slide-title]@L]</span>
+                <ul class="dropdown">
+                  <li>
+                    <div>[@L[cds.sales/gd/hosting/web-hosting:faq-fifth-slide-content-cp]@L]
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="accordion-dropdown"><span class="carett caret-right"></span><span>[@L[cds.sales/gd/hosting/web-hosting:faq-seventh-slide-title]@L]</span>
+                <ul class="dropdown">
+                  <li>
+                    <div>[@L[cds.sales/gd/hosting/web-hosting:faq-seventh-slide-content-cp]@L]
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="accordion-dropdown"><span class="carett caret-right"></span><span>[@L[cds.sales/gd/hosting/web-hosting:faq-eighth-slide-title]@L]</span>
+                <ul class="dropdown">
+                  <li>
+                    <div>[@L[cds.sales/gd/hosting/web-hosting:faq-eighth-slide-content-cp]@L]
                     </div>
                   </li>
                 </ul>
@@ -3390,14 +3495,16 @@ height: 27px;
           $('#test-faq').find('.accordion-dropdown').addClass("active");
          });
       </script>
-    </section>
+    </section> 
+    ##if(activeLanguageAny([en-US]))
+     
     <section id="alternate-products">
       <div id="two-up" class="two-up-title-wrap bg-white">
         <div>
           <div class="container">
             <div class="row">
               <div class="col-sm-12">
-                <h2 class="text-center two-up-title">Not finding what you need?</h2>
+                <h2 class="text-center two-up-title">[@L[cds.sales/hosting/web-hosting-rebrand:didNotFindRebrand]@L]</h2>
               </div>
             </div>
           </div>
@@ -3407,17 +3514,17 @@ height: 27px;
             <div class="row">
               <div class="col-md-5 or-container-none col-sm-6  bg-green-official-light">
                 <div style="" class="two-up-text-wrap ">
-                  <div class="two-up-speech-shape two-up-speech-shape-yellow">
-                    <div class="shape-text">Website Builder</div>
+                  <div class="two-up-speech-shape two-up-speech-shape-orange">
+                    <div class="shape-text">[@L[cds.sales/hosting/web-hosting-rebrand:wsb]@L]</div>
                   </div>
-                  <h2>Do-it-yourself with Website Builder. Hosting Included.</h2>
+                  <h2>[@L[cds.sales/hosting/web-hosting-rebrand:wsbDoIt]@L] </br> [@L[cds.sales/hosting/web-hosting-rebrand:wsbHosting]@L]</h2>
                   <div class="row">
                     <div class="col-sm-10">
                       <ul>
-                        <li>Features cPanel "(Linux)" or Parallels Plesk Panel "(Windows)"</li>
-                        <li>One-click install 100s of top apps like Joomla and Drupal</li>
-                        <li>Includes 99.9% uptime, lightning-fast load times and more</li>
-                      </ul><a class="btn btn-default-dark">LEARN MORE</a>
+                        <li>[@L[cds.sales/hosting/web-hosting-rebrand:wsbList1]@L]</li>
+                        <li>[@L[cds.sales/hosting/web-hosting-rebrand:wsbList2]@L]</li>
+                        <li>[@L[cds.sales/hosting/web-hosting-rebrand:wsbList3]@L]</li>
+                      </ul><a class="btn btn-default-dark">[@L[cds.sales/hosting/web-hosting-rebrand:learnMore]@L]</a>
                     </div>
                   </div>
                 </div>
@@ -3425,16 +3532,16 @@ height: 27px;
               <div class="col-md-5 col-md-offset-2 col-sm-6  bg-gray-darkest">
                 <div style="" class="two-up-text-wrap white-text">
                   <div class="two-up-speech-shape two-up-speech-shape-orange">
-                    <div class="shape-text">Private Virtual Server</div>
+                    <div class="shape-text">[@L[cds.sales/hosting/web-hosting-rebrand:vps]@L]</div>
                   </div>
-                  <h2>Get Hosting that will grow.</h2>
+                  <h2>[@L[cds.sales/hosting/web-hosting-rebrand:vpsGrow]@L]</h2>
                   <div class="row">
                     <div class="col-sm-10">
                       <ul>
-                        <li>Get online fast with 100s of customizable designs</li>
-                        <li>No technical skills required - just drag and drop</li>
-                        <li>Includes a free domain, hosting and more</li>
-                      </ul><a class="btn btn-default-light">LEARN MORE</a>
+                        <li>[@L[cds.sales/hosting/web-hosting-rebrand:vpsList1]@L]</li>
+                        <li>[@L[cds.sales/hosting/web-hosting-rebrand:vpsList2]@L]</li>
+                        <li>[@L[cds.sales/hosting/web-hosting-rebrand:vpsList3]@L]</li>
+                      </ul><a class="btn btn-default-light">[@L[cds.sales/hosting/web-hosting-rebrand:learnMore]@L]</a>
                     </div>
                   </div>
                 </div>
@@ -3443,7 +3550,64 @@ height: 27px;
           </div>
         </div>
       </div>
-    </section>
+    </section> 
+    ##else
+     
+    <section id="alternate-products">
+      <div id="two-up" class="two-up-title-wrap bg-white">
+        <div>
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12">
+                <h2 class="text-center two-up-title">[@L[cds.sales/hosting/web-hosting-rebrand:didNotFind]@L]</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="background-image: url('[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Sweet.jpg'); min-height: 580px;;" class="two-up-wrap-compare bg-green-official">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-5 or-container-none col-sm-6  bg-green-official-light">
+                <div style="" class="two-up-text-wrap ">
+                  <div class="two-up-speech-shape two-up-speech-shape-orange">
+                    <div class="shape-text">[@L[cds.sales/hosting/web-hosting-rebrand:wsb]@L]</div>
+                  </div>
+                  <h2>[@L[cds.sales/hosting/web-hosting-rebrand:wsbDoIt]@L] </br> [@L[cds.sales/hosting/web-hosting-rebrand:wsbHosting]@L]</h2>
+                  <div class="row">
+                    <div class="col-sm-10">
+                      <ul>
+                        <li>[@L[cds.sales/hosting/web-hosting-rebrand:wsbList1]@L]</li>
+                        <li>[@L[cds.sales/hosting/web-hosting-rebrand:wsbList2]@L]</li>
+                        <li>[@L[cds.sales/hosting/web-hosting-rebrand:wsbList3]@L]</li>
+                      </ul><a class="btn btn-default-dark">[@L[cds.sales/hosting/web-hosting-rebrand:learnMore]@L]</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-5 col-md-offset-2 col-sm-6  bg-gray-darkest">
+                <div style="" class="two-up-text-wrap white-text">
+                  <div class="two-up-speech-shape two-up-speech-shape-orange">
+                    <div class="shape-text">[@L[cds.sales/hosting/web-hosting-rebrand:vps]@L]</div>
+                  </div>
+                  <h2>[@L[cds.sales/hosting/web-hosting-rebrand:vpsGrow]@L]</h2>
+                  <div class="row">
+                    <div class="col-sm-10">
+                      <ul>
+                        <li>[@L[cds.sales/hosting/web-hosting-rebrand:vpsList1]@L]</li>
+                        <li>[@L[cds.sales/hosting/web-hosting-rebrand:vpsList2]@L]</li>
+                        <li>[@L[cds.sales/hosting/web-hosting-rebrand:vpsList3]@L]</li>
+                      </ul><a class="btn btn-default-light">[@L[cds.sales/hosting/web-hosting-rebrand:learnMore]@L]</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> 
+    ##endif
+     
     <section id="disclaimers">
       <p>disclaimers</p>
     </section>
@@ -3460,6 +3624,40 @@ height: 27px;
       
     </script>
     <script>
+      ##if(activeLanguageAny([en-us]))
+        var loadReviews = function(){
+          if (typeof $BV != "undefined") {
+            $BV.configure("global", {
+              allowSamePageSubmission: true,
+              userToken: "[@P[userControl:<Data location="~/Shared/BazaarVoice/SessionUserToken.ascx"></Data>]@P]",
+              doLogin: function(successCallback, successUrl) {
+                $('#login-modal').modal();
+              },
+              doScrollSubmission: function () {
+                return false;
+              }
+            });
+            $BV.ui("rr", "show_reviews", {
+              productId: "web_hosting",
+              num: 1,
+              doShowContent: function() {
+                $('.bv-loading').hide();
+              }
+            });
+          }
+        };
+        $(window).load(function() {
+          if (!document.getElementById('bvapi')) {
+            var bv = document.createElement('script');
+            bv.type = 'text/javascript';
+            bv.id = 'bvapi';
+            bv.async = true;
+            bv.src = '[@P[userControl:<Data location="~/Scripts/BVScriptUrlOnly.ascx"></Data>]@P]';
+            bv.onload = loadReviews;
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(bv);
+          }
+        });
+      ##endif
       function comparePlans(id){
         if(id=="cpanel-tab"){
           $("#parallels-tab").hide();
