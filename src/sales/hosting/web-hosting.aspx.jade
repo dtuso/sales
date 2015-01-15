@@ -68,7 +68,7 @@ block plans
       +planTile
         include ./web-hosting/plans/_plan-hosting-ultimate.jade
         
-      +renderCartLogic("[@T[link:<relative path=\"/hosting-config-new.aspx\" parammode=\"common\" />]@T]", "slp_hosting_4GH" )
+      +renderCartLogic("[@T[link:<relative path=\"~/hosting/web-hosting-config-new.aspx\" parammode=\"common\" />]@T]", "slp_hosting_4GH" )
       .tile-section
         +renderColumnList(3)
           .row
@@ -89,7 +89,7 @@ block plans
   
 block sections
   +renderMidPageNav
-    +priceBlock("$69.99", "year", "#alternate-products")
+    +priceBlock('[@T[productprice:<current productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]', "month", "#marquee")
 
   section#one-click-install.features.tile-section.one-click-wrapper
     .container
