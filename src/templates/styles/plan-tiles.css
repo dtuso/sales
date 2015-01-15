@@ -331,6 +331,7 @@
     text-align: left;
     font-size: 16px;
     font-size: 1.6rem;
+    margin-bottom: 15px;
 }
 
 .pro-plans .include-check {
@@ -355,8 +356,8 @@
 .pro-plans .sf-tipper-target {
     background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
     background-position: 0 -864px;
-    width: 14px;
-    height: 15px;
+    width: 15px;
+    height: 16px;
     display: inline-block;
     background-size: 205px auto;
     vertical-align: baseline;

@@ -7,12 +7,5 @@ append vars
   - pfid = "32082";
   - listID="product-C";
   - flagText = "More power and security";
-  - showDropDownList = true;
-
-block planOptions 
-  +addPlanOption("1", "32076", "host_GridHostUnlDiabloLinMo_us")
-  +addPlanOption("12", "32082", "host_GridHostUnlDiabloLin1Yr_us")
-  +addPlanOption("24", "32084", "host_GridHostUnlDiabloLin2Yr_us")
-  +addPlanOption("36", "32086", "host_GridHostUnlDiabloLin3Yr_us")
-  +addPlanOption("48", "32088", "host_GridHostUnlDiabloLin4Yr_us")
-  +addPlanOption("60", "32090", "host_GridHostUnlDiabloLin5Yr_us")
+  - term ="/[@L[cds.sales/_common:month]@L]"
+  - defaultPlan = "host_GridHostUnlDiabloLin1Yr_us";

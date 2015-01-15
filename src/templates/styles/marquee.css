@@ -416,7 +416,7 @@
     }
 }
 .marquee {
-    background-size: cover;
+    background-size: cover !important;
     position: relative;
     background-position: bottom center;
     background-color: #fff;
