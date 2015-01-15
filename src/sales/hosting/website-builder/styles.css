@@ -1,7 +1,13 @@
 
 .plan-tile { 
-  margin-top: -240px; 
+  margin-top: -145px; 
 }
 .sf-droplist-msg {
   text-align: inherit;
+}
+.bg-black {
+  background-color: #333333;
+}
+.bg-gray-light {
+    background-color: #d9d9d9;
 }

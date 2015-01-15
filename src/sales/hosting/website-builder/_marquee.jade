@@ -1,22 +1,10 @@
 extends ../../../templates/marquees/landing-page-marquee.jade
 
-block marqueeStyles
+append marqueeStyles
   style.
     .marquee { background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/GD_WebsiteBuilder_Marquee.jpg) no-repeat top center;); }
 
 block topAlignedContent
-  +productDescription("FAST, SECURE, RELIABLE HOSTING THAT GROWS WITH YOUR BUSINESS")
-  +productText("Industry's leading page load times. 99.9% Uptime Guarantee*.")
-  +callToAction("Get Started","[@T[link:<relative path='~/hosting/website-builder-config.aspx' secure='true'><param name='ci' value='' /><param name='plan' value='wsb_personal_12month' /></relative>]@T]")
-
-  //-
-    .marquee-product-review
-      i.uxicon.uxicon-star.text-warning
-      i.uxicon.uxicon-star.text-warning
-      i.uxicon.uxicon-star.text-warning
-      i.uxicon.uxicon-star.text-warning
-      i.uxicon.uxicon-star.text-warning
-      a Reviews
-    h2.marquee-product-description FAST, SECURE, RELIABLE HOSTING THAT GROWS WITH YOUR BUSINESS
-    .marquee-product-text Industry's leading page load times. 99.9% Uptime Guarantee*.
-    a.btn.btn-primary.jump-arrow-btn Get Started
+  +productDescription("[@L[cds.sales/gd/hosting/website-builder:header_subtitle_1]@L]</br>[@L[cds.sales/gd/hosting/website-builder:header_subtitle_2]@L]")
+  +checkBullets(["[@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-1]@L]","[@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-2]@L]","[@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-3]@L]"])
+  +callToAction("[@L[cds.sales/gd/hosting/website-builder:get-started-btn-general]@L]","[@T[link:<relative path='~/hosting/website-builder-config.aspx' secure='true'><param name='ci' value='' /><param name='plan' value='wsb_personal_12month' /></relative>]@T]")

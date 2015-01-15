@@ -1,15 +1,10 @@
 extend ../../../../../src/templates/plan-tile
 
 append vars
-  - title = "Personal";
-  - description = "Perfect for personal websites"
-  - features = ["<b>Free Domain with annual Plan</b>","<b>50</b> Personal Themes","<b>Unlimited</b> Pages","<b>1 GB</b> Disk Space","<b>150 GB</b> Bandwidth"];
+  - title = "[@L[cds.sales/gd/hosting/website-builder:personal-title]@L]";
+  - description = "[@L[cds.sales/gd/hosting/website-builder:personal-description]@L]"
+  - features = ["[@L[cds.sales/gd/hosting/website-builder:plan-domain]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]'></span>","[@L[cds.sales/gd/hosting/website-builder:personal-themes]@L]","[@L[cds.sales/gd/hosting/website-builder:economy-pages]@L]","[@L[cds.sales/gd/hosting/website-builder:economy-diskspace]@L]","[@L[cds.sales/gd/hosting/website-builder:economy-bandwidth]@L]"];
   - pfid = "7524";
-  - listID="product-A";
+  - buttonid="product-A";
+  - term ="/[@L[cds.sales/_common:month]@L]"
   - defaultPlan = "wsb_personal_12month";
-//-
-  block planOptions 
-    +addPlanOption("1", "7521", "wsb_personal_1month")
-    +addPlanOption("12", "7524", "wsb_personal_12month")
-    +addPlanOption("24", "7525", "wsb_personal_24month")
-    +addPlanOption("36", "7526", "wsb_personal_36month")

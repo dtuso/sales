@@ -117,3 +117,76 @@ h3 {
   background-size: cover;
   background-position: center center;
 }
+
+@media (min-width: 768px) and (max-width: 991px) {
+  #choose-platform .or-container:after {
+    bottom: 360px;
+  }
+}
+.bg-gray-light {
+    background-color: #d9d9d9;
+}
+.BVDITitle {
+  text-transform: uppercase !important;
+  text-align: center !important;
+  font-family: 'Walsheim-Black' !important;
+  font-weight: 300 !important;
+  line-height: 1.1 !important;
+  color: #333 !important;
+}
+
+#BVRRDisplayContentLinkWriteID a {
+  -webkit-font-smoothing: antialiased !important;
+  -webkit-transition-delay: 0s !important;
+  -webkit-transition-duration: 0.1s !important;
+  -webkit-transition-property: transform !important;
+  -webkit-transition-timing-function: ease !important;
+  -webkit-user-select: none !important;
+  background-color: rgb(0, 138, 50) !important;
+  border-bottom-color: rgb(0, 112, 41) !important;
+  border-bottom-left-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+  border-bottom-style: solid !important;
+  border-bottom-width: 4px !important;
+  border-image-outset: 0px !important;
+  border-image-repeat: stretch !important;
+  border-image-slice: 100% !important;
+  border-image-source: none !important;
+  border-image-width: 1 !important;
+  border-left-color: rgb(0, 112, 41) !important;
+  border-left-style: solid !important;
+  border-left-width: 0px !important;
+  border-right-color: rgb(0, 112, 41) !important;
+  border-right-style: solid !important;
+  border-right-width: 0px !important;
+  border-top-color: rgb(0, 112, 41) !important;
+  border-top-left-radius: 0px !important;
+  border-top-right-radius: 0px !important;
+  border-top-style: solid !important;
+  border-top-width: 0px !important;
+  box-sizing: border-box !important;
+  color: rgb(255, 255, 255) !important;
+  cursor: pointer !important;
+  display: inline-block !important;
+  font-family: Walsheim-Medium, Arial, sans-serif !important;
+  font-size: 18px !important;
+  font-weight: normal !important;
+  height: 46px !important;
+  line-height: 25.7142868041992px !important;
+  margin-bottom: 0px !important;
+  min-width: 88px !important;
+  padding-bottom: 7px !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  padding-top: 10px !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  text-transform: uppercase !important;
+  transition-delay: 0s !important;
+  transition-duration: 0.1s !important;
+  transition-property: transform !important;
+  transition-timing-function: ease !important;
+  vertical-align: middle !important;
+  white-space: nowrap !important;
+  background-image: none !important;
+}

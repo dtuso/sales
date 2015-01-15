@@ -200,7 +200,8 @@
 }
 @media (min-width: 992px) {
   .or-container:after {
-    left: 121%
+    left: 121%;
+    bottom: 50%;
   }
 }
 
@@ -270,4 +271,13 @@
 }
 .two-up-speech-shape.two-up-speech-shape-white:after {
   background-color: #fff;
+}
+.two-up-speech-shape.two-up-speech-shape-yellow {
+  background-color: #ffde2d;
+}
+.two-up-speech-shape.two-up-speech-shape-yellow:before {
+  border-top-color: #ffde2d;
+}
+.two-up-speech-shape.two-up-speech-shape-yellow:after {
+  background-color: #ffde2d;
 }

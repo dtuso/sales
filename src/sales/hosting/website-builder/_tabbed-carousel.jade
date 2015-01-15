@@ -1,4 +1,12 @@
-extends ../../../templates/tabbed-carousel-mixin.jade
+include ../../../templates/tabbed-carousel-mixin.jade
+include ../../../templates/carousel-mixin.jade
+- tabbedCarousel = tabbedCarousel || {};
+- tabbedCarousel.title = "Popular apps keep your site fresh";
+- tabbedCarousel.subtitle = "Easily integrate social and business apps in your site to share information and keep customers coming back.";
+- tabbedCarousel.numOfTabs= 6;
+- tabbedCarousel.lazyLoad = true;
+- tabbedCarousel.id = "carousel-social-media";
+- tabbedCarousel.textCenter = true;
 
 append vars
   - title = "Simplify your bookkeeping. Get back to business.";
@@ -14,16 +22,53 @@ block tabs
   +addTab({icon:"uxicon-yelp",logo:"",imageAlternateText:"",text:"yelp"})
   +addTab({icon:"uxicon-paypal",logo:"",imageAlternateText:"",text:"paypal"})
   +addTab({icon:"uxicon-homefinder",logo:"",imageAlternateText:"",text:"home owner"})
-block panels
-  +carouselItem
-    include ./panels/_facebook.jade
-  +carouselItem
-    include ./panels/_twitter.jade
-  +carouselItem
-    include ./panels/_youtube.jade
-  +carouselItem
-    include ./panels/_yelp.jade
-  +carouselItem
-    include ./panels/_paypal.jade
-  +carouselItem
-    include ./panels/_homeOwner.jade
++carousel(tabbedCarousel.id ,tabbedCarousel.numOfTabs,{css:true})
+  +carouselItem(tabbedCarousel)
+    img.img-responsive.img-center(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-apps-image-facebook-int.jpg")
+    .row
+      .col-sm-10.col-sm-offset-1.col-xs-12
+        h2 FACEBOOK
+    .row
+      .col-sm-10.col-sm-offset-1.col-xs-12
+          .carousel-panel-text Share your status updates or photos.
+  +carouselItem(tabbedCarousel)
+    img.img-responsive.img-center(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-apps-image-twitter-int.jpg")
+    .row
+      .col-sm-10.col-sm-offset-1.col-xs-12
+        h2 TWITTER
+    .row
+      .col-sm-10.col-sm-offset-1.col-xs-12
+          .carousel-panel-text Share your status updates or photos.
+  +carouselItem(tabbedCarousel)
+    img.img-responsive.img-center(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-apps-image-youtube-int.jpg")
+    .row
+      .col-sm-10.col-sm-offset-1.col-xs-12
+        h2 YOUTUBE
+    .row
+      .col-sm-10.col-sm-offset-1.col-xs-12
+          .carousel-panel-text Share your status updates or photos.
+  +carouselItem(tabbedCarousel)
+    img.img-responsive.img-center(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-apps-image-facebook-int.jpg")
+    .row
+      .col-sm-10.col-sm-offset-1.col-xs-12
+        h2 YELP
+    .row
+      .col-sm-10.col-sm-offset-1.col-xs-12
+          .carousel-panel-text Share your status updates or photos.
+  +carouselItem(tabbedCarousel)
+    img.img-responsive.img-center(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-apps-image-facebook-int.jpg")
+    .row
+      .col-sm-10.col-sm-offset-1.col-xs-12
+        h2 PAYPAL
+    .row
+      .col-sm-10.col-sm-offset-1.col-xs-12
+          .carousel-panel-text Share your status updates or photos.
+  +carouselItem(tabbedCarousel)
+    img.img-responsive.img-center(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-apps-image-facebook-int.jpg")
+    .row
+      .col-sm-10.col-sm-offset-1.col-xs-12
+        h2 HOMEOWNER
+    .row
+      .col-sm-10.col-sm-offset-1.col-xs-12
+          .carousel-panel-text Share your status updates or photos.
+

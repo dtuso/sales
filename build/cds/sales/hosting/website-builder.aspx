@@ -31,12 +31,17 @@
     <link href="[@T[link:<cssroot />]@T]/fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css">
     <style>
 .plan-tile { 
-  margin-top: -240px; 
+  margin-top: -145px; 
 }
 .sf-droplist-msg {
   text-align: inherit;
 }
-
+.bg-black {
+  background-color: #333333;
+}
+.bg-gray-light {
+    background-color: #d9d9d9;
+}
     </style><!--[if lt IE 9]>
     <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
     <link href="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy.min.html" id="respond-proxy" rel="respond-proxy">
@@ -61,6 +66,879 @@
     <section id="marquee"> 
       <atlantis:webstash type="css">
         <style>
+.marquee {
+    background-position: top center;
+}
+
+.marquee .marquee-product-img {
+    margin-bottom: 10px;
+}
+
+.marquee .jump-arrow-btn {
+    margin-top: 10px;
+}
+
+.marquee .marquee-buttons a {
+    margin-right: 20px;
+}
+
+.marquee .marquee-buttons a:last-child {
+    margin-right: 0;
+}
+
+.marquee .marquee-product-review {
+    font-size: 18px;
+    font-size: 1.8rem;
+    line-height: 1;
+}
+
+.marquee .marquee-product-review a {
+    text-decoration: none;
+    padding-left: 10px;
+    color: #333333;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-size: 1.2rem;
+}
+
+.marquee .marquee-product-review a:hover {
+    text-decoration: none;
+}
+
+.marquee.marquee-app-landing {
+    min-height: 655px;
+}
+
+.marquee.marquee-app-landing .marquee-product-name {
+    margin-top: 0;
+}
+
+.marquee.marquee-app-landing .marquee-check-bullets {
+    list-style: none;
+    margin-bottom: 20px;
+    padding-left: 0;
+    font-size: 16px;
+    font-size: 1.6rem;
+}
+
+.marquee.marquee-app-landing .marquee-check-bullets li {
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 20px;
+}
+
+.marquee.marquee-app-landing .marquee-check-bullets li:before {
+    content: "";
+    background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+    background-position: 0 -668px;
+    background-size: 205px auto;
+    width: 25px;
+    height: 27px;
+    padding-right: 5px;
+    position: absolute;
+    left: 0;
+    top: -6px;
+}
+
+.marquee.marquee-app-landing .marquee-pro-left-text {
+    padding-top: 45px;
+}
+
+.marquee.marquee-app-landing .marquee-product-description {
+    font-family: 'Walsheim-Bold';
+    margin-top: 10px;
+}
+
+.marquee.marquee-app-landing .marquee-product-name {
+    font-size: 20px;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #ef6c0f;
+    font-family: 'Walsheim-Bold';
+    margin-bottom: 10px;
+}
+
+.marquee-pro-signup {
+    min-height: 584px;
+}
+
+.marquee-pro-signup .marquee-pro-signup-wrap {
+    margin-bottom: 75px;
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee-pro-signup h2 {
+        font-size: 40px;
+        font-size: 4rem;
+    }
+}
+
+.marquee-pro-signup h3 {
+    margin-top: 0;
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee-pro-signup .marquee-pro-signup-img img {
+        width: 50%;
+        margin: 30px 0;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .marquee-pro-signup .marquee-pro-signup-img img {
+        width: 80%;
+    }
+}
+
+.marquee-pro-signup .marquee-pro-signup-check-wrap {
+    margin-top: 30px;
+}
+
+.marquee-pro-signup .jump-to-plans {
+    position: absolute;
+    bottom: -60px;
+    margin: 0 auto;
+    text-align: center;
+    right: 0;
+    left: 0;
+}
+
+.marquee-pro-signup .jump-to-plans .marquee-jump-text {
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1;
+    font-family: 'Walsheim-Bold';
+    font-size: 20px;
+    font-size: 2rem;
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee-pro-signup .jump-to-plans .marquee-jump-text {
+        margin-bottom: 5px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee-pro-signup .marquee-pro-signup-buttons {
+        text-align: center;
+        padding-bottom: 10px;
+    }
+}
+
+.marquee-pro-signup .marquee-pro-signup-buttons a:first-child {
+    margin-right: 20px;
+}
+
+.marquee-pro-signup .marquee-pro-signup-check {
+    padding-left: 35px;
+    font-family: 'Walsheim-Bold';
+    position: relative;
+    font-size: 18px;
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+}
+
+.marquee-pro-signup .marquee-pro-signup-check:before {
+    content: '';
+    background-position: 0px -234px;
+    background-size: 205px auto;
+    width: 25px;
+    height: 27px;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -3px;
+}
+
+.marquee-pro-rebrand {
+    min-height: 378px;
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee-pro-rebrand {
+        padding-bottom: 50px;
+    }
+}
+
+.marquee-pro-rebrand .marquee-pro-left-text {
+    margin-bottom: 65px;
+}
+
+.marquee-pro-rebrand .marquee-pro-left-text h1 {
+    font-size: 20px;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #ef6c0f;
+    font-family: 'Walsheim-Bold';
+    margin-bottom: 10px;
+}
+
+.marquee-pro-rebrand .marquee-pro-left-text h2 {
+    font-size: 40px;
+    font-size: 4rem;
+    text-transform: uppercase;
+    font-family: 'Walsheim-Bold';
+    margin-top: 10px;
+    line-height: 1;
+}
+
+.marquee-pro {
+    min-height: 450px;
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee-pro {
+        padding-bottom: 50px;
+    }
+}
+
+.marquee-pro .well {
+    background-color: rgba(239, 108, 15, 0.8);
+    border: none;
+    color: #fff;
+    padding: 30px;
+    min-height: 275px;
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee-pro .well {
+        min-height: 0;
+        margin-top: 20px;
+    }
+}
+
+.marquee-pro .well .row {
+    min-height: 0 !important;
+}
+
+.marquee-pro .well .marquee-pro-icon-wrap {
+    border-left: 1px solid #fff;
+}
+
+@media only screen and (max-width: 768px) {
+    .marquee-pro .well .marquee-pro-icon-wrap {
+        border-left: 0;
+    }
+
+    .marquee-pro .well .marquee-pro-icon-wrap:not(:first-child) {
+        margin-top: 30px;
+    }
+}
+
+.marquee-pro .well .marquee-pro-icon-wrap .marquee-pro-icon-height {
+    height: 95px;
+}
+
+.marquee-pro .well .marquee-pro-icon-wrap .marquee-pro-icon-height img {
+    max-width: 75%;
+    max-height: 75%;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.marquee-pro .well .marquee-pro-icon-wrap h5 {
+    font-weight: 500;
+}
+
+.marquee-pro .well .marquee-pro-icon-wrap:first-child {
+    border-left: 0;
+}
+
+.marquee-pro .well .marquee-pro-icon-wrap .marquee-pro-icon {
+    margin: 0 auto 15px;
+    max-height: 85px;
+}
+
+.marquee-pro .well.marquee-pro-centered a {
+    font-weight: 500;
+}
+
+.marquee-pro .well.marquee-pro-centered h1 {
+    font-size: 20px;
+    font-size: 2rem;
+    font-family: 'Walsheim-Bold';
+    text-transform: uppercase;
+    margin: 0 0 10px 0;
+}
+
+.marquee-pro .well.marquee-pro-centered h2 {
+    margin-top: 0;
+    word-wrap: break-word;
+    word-break: break-word;
+    white-space: -moz-pre-wrap;
+}
+
+.marquee-pro .well.marquee-pro-centered .pro-marquee-home-deals {
+    border-top: 1px solid #fff;
+    font-weight: 700;
+}
+
+.marquee-pro .well.marquee-pro-centered .pro-marquee-home-deals .pro-marquee-deal {
+    margin-top: 20px;
+}
+
+.marquee-pro .well.marquee-pro-centered .pro-marquee-home-deals .pro-marquee-deal .pro-marquee-deal-text,
+.marquee-pro .well.marquee-pro-centered .pro-marquee-home-deals .pro-marquee-deal .pro-marquee-deal-savings {
+    font-size: 18px;
+    font-size: 1.8rem;
+}
+
+.marquee-pro .well.marquee-pro-centered .pro-marquee-home-deals .pro-marquee-deal-price {
+    margin-top: 15px;
+}
+
+.marquee-pro .well.marquee-pro-centered .pro-marquee-home-deals .pro-marquee-deal-price .marquee-price-small-text {
+    font-size: 15px;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.marquee-pro .well.marquee-pro-centered .pro-marquee-home-deals .pro-marquee-deal-price .marquee-price {
+    font-size: 35px;
+    font-size: 3.5rem;
+    line-height: 1;
+    font-family: 'Walsheim-Bold';
+}
+
+.marquee-pro .well.marquee-pro-centered .search-template-box {
+    border: 3px solid #fff;
+    margin-top: 10px;
+}
+
+.marquee-pro .marquee-pro-first-area h1 {
+    font-size: 20px;
+    font-size: 2rem;
+    font-family: 'Walsheim-Bold';
+    margin: 0 0 10px 0;
+}
+
+.marquee-pro .marquee-pro-first-area h2 {
+    margin-top: 12px;
+}
+
+.marquee-pro .marquee-pro-first-area .marquee-pro-product-text {
+    padding-top: 10px;
+    border-top: 1px solid #fff;
+}
+
+.marquee-pro .marquee-product-text {
+    margin-bottom: 20px;
+}
+
+.marquee-pro .jump-to-plans {
+    position: absolute;
+    bottom: -60px;
+    margin: 0 auto;
+    text-align: center;
+    right: 0;
+    left: 0;
+}
+
+.marquee-pro .jump-to-plans .marquee-jump-text {
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1;
+    color: #333333;
+    font-size: 20px;
+    font-size: 2rem;
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee-pro .jump-to-plans .marquee-jump-text {
+        margin-bottom: 5px;
+    }
+}
+
+.marquee-table-grid > .row {
+    display: table;
+}
+
+@media only screen and (max-width: 768px) {
+    .marquee-table-grid > .row {
+        display: block;
+    }
+}
+
+.marquee-table-grid > .row > [class*="col-"] {
+    float: none;
+    display: table-cell;
+    vertical-align: top;
+}
+
+@media only screen and (max-width: 768px) {
+    .marquee-table-grid > .row > [class*="col-"] {
+        display: block;
+        float: none;
+        border-left: none;
+        border-right: none;
+        padding: 20px inherit;
+        border-top: 1px solid #fff;
+    }
+
+    .marquee-table-grid > .row > [class*="col-"]:first-child {
+        border-top: 0;
+    }
+}
+.marquee {
+    background-size: cover !important;
+    position: relative;
+    background-position: bottom center;
+    background-color: #fff;
+  /* Ribbon */
+}
+
+.marquee .relative-position {
+    position: relative;
+}
+
+.marquee .marquee-all-centered {
+    text-align: center;
+}
+
+.marquee .marquee-two-col-txt ul.marquee-product-bullets {
+    text-align: left;
+}
+
+.marquee.marquee-short {
+    min-height: 368px;
+}
+
+.marquee.marquee-short .container {
+    min-height: inherit;
+}
+
+.marquee.marquee-short .container .row {
+    min-height: inherit;
+}
+
+.marquee.marquee-short .container .row .col-sm-pull-6 {
+    min-height: inherit;
+}
+
+@media only screen and (max-width: 767px) {
+    .marquee.marquee-short .container .row .col-sm-pull-6 {
+        min-height: 100px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee.marquee-short .vertical-height.marquee-sm-vertical-fix {
+        height: auto !important;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee.marquee-short .vertical-height.marquee-sm-vertical-fix .vertical-text {
+        -webkit-transform: translateY(0%);
+        -moz-transform: translateY(0%);
+        transform: translateY(0%);
+        top: 0%;
+    }
+}
+
+.marquee.marquee-tall {
+    min-height: 523px;
+}
+
+.marquee.marquee-tall .container {
+    min-height: inherit;
+}
+
+.marquee.marquee-tall .container .row {
+    min-height: inherit;
+}
+
+.marquee.marquee-tall .container .row .col-sm-pull-6 {
+    min-height: inherit;
+}
+
+@media only screen and (max-width: 767px) {
+    .marquee.marquee-tall .container .row .col-sm-pull-6 {
+        min-height: 100px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee.marquee-tall {
+        min-height: 400px;
+    }
+}
+
+.marquee.marquee-img-tall-left-txt {
+    height: 523px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .marquee.marquee-img-tall-left-txt {
+        height: 430px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee.marquee-img-tall-left-txt {
+        height: 332px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .marquee.marquee-img-tall-left-txt {
+        height: 332px;
+        background-position: -160px;
+    }
+}
+
+.marquee.marquee-img-short-left-txt {
+    height: 368px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .marquee.marquee-img-short-left-txt {
+        height: 300px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee.marquee-img-short-left-txt {
+        height: 234px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .marquee.marquee-img-short-left-txt {
+        height: 234px;
+        background-position: -160px;
+    }
+}
+
+.marquee.marquee-white {
+    color: #fff;
+}
+
+.marquee.marquee-white h1,
+.marquee.marquee-white h2,
+.marquee.marquee-white h3,
+.marquee.marquee-white h4,
+.marquee.marquee-white h5,
+.marquee.marquee-white h6 {
+    color: #fff;
+}
+
+.marquee.marquee-white .dashed-underline {
+    border-bottom-color: #fff;
+}
+
+.marquee.marquee-white a:not(.btn) {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.marquee.marquee-white a:not(.btn):hover {
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 480px) {
+    .marquee .marquee-customer-wrap {
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .marquee .marquee-customer-wrap .vertical-height {
+        height: auto !important;
+    }
+}
+
+.marquee .img-center {
+    margin: 0 auto;
+}
+
+.marquee .marquee-corner-img {
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    top: 0;
+    min-width: 165px;
+    min-height: 169px;
+}
+
+.marquee .marquee-product-img {
+    max-width: 100%;
+}
+
+.marquee .marquee-product-review {
+    font-size: 18px;
+    font-size: 1.8rem;
+}
+
+.marquee .marquee-product-review a {
+    text-decoration: underline;
+    padding-left: 10px;
+    color: #808080;
+}
+
+.marquee .marquee-product-review a:hover {
+    text-decoration: none;
+}
+
+.marquee .marquee-product-description {
+    font-size: 56px;
+    font-size: 5.6rem;
+    font-weight: 100;
+    line-height: 1.1;
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee .marquee-product-description {
+        font-size: 40px;
+        font-size: 4rem;
+    }
+}
+
+.marquee .marquee-product-text {
+    font-size: 18px;
+    font-size: 1.8rem;
+    padding: 0 0 14px;
+}
+
+.marquee ul.marquee-product-bullets {
+    font-size: 18px;
+    font-size: 1.8rem;
+    text-align: center;
+    list-style-position: inside;
+    padding: 0;
+}
+
+.marquee .marquee-restrictions-text {
+    font-size: 14px;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.marquee .marquee-ribbon {
+    width: 112px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-repeat: no-repeat;
+    z-index: 100;
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee .marquee-ribbon {
+        position: relative;
+        margin: 0 auto;
+    }
+}
+
+.marquee .marquee-left-ribbon .marquee-ribbon {
+    left: 0;
+    right: auto;
+}
+
+.marquee .marquee-price-btn-wrap {
+    color: #ef6c0f;
+    line-height: 1;
+    font-weight: 400;
+    padding: 5px 0 20px;
+}
+
+@media only screen and (max-width: 768px) {
+    .marquee .marquee-price-btn-wrap {
+        line-height: 1.2;
+    }
+}
+
+.marquee .marquee-price-btn-wrap .btn {
+    margin-right: 10px;
+}
+
+.marquee .marquee-price-btn-wrap .marquee-price-text {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.marquee .marquee-price-btn-wrap .marquee-price-small-text {
+    font-size: 18px;
+    font-size: 1.8rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .marquee .marquee-price-btn-wrap .marquee-price-small-text {
+        font-size: 16px;
+        font-size: 1.6rem;
+    }
+}
+
+.marquee .marquee-price-btn-wrap .marquee-price {
+    font-size: 36px;
+    font-size: 3.6rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .marquee .marquee-price-btn-wrap .marquee-price {
+        font-size: 30px;
+        font-size: 3rem;
+    }
+}
+
+.marquee .marquee-check-bullets {
+    list-style: none;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding-left: 0;
+    font-size: 18px;
+    font-size: 1.8rem;
+}
+
+.marquee .marquee-check-bullets span {
+    font-family: 'HelveticaNeue-CondensedBold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-stretch: condensed;
+    text-transform: uppercase;
+}
+
+.marquee .marquee-check-bullets li:before {
+    content: "\e207";
+    font-family: 'uxfont';
+    padding-right: 5px;
+}
+
+.marquee .marquee-btn-wrap {
+    margin-bottom: 20px;
+}
+
+.marquee .search-template .search-template-box {
+    border: 1px solid #cecece;
+}
+
+.marquee .marquee-customer-name-wrap {
+    position: absolute;
+    bottom: 10px;
+    font-size: 16px;
+    font-size: 1.6rem;
+}
+
+@media only screen and (max-width: 480px) {
+    .marquee .marquee-customer-name-wrap {
+        position: relative;
+        bottom: auto;
+    }
+}
+
+.marquee .marquee-customer-name-wrap .marquee-customer-name {
+    font-weight: bold;
+}
+
+.marquee .marquee-customer-name-wrap .marquee-customer-text {
+    font-weight: 100;
+}
+
+.marquee .marquee-customer-name-wrap .marquee-customer-website {
+    color: #008a32;
+    text-decoration: underline;
+}
+
+.marquee .marquee-two-col-abstract.left-column {
+    color: #fff;
+}
+
+.marquee .marquee-two-col-abstract.left-column .marquee-product-name {
+    color: #fff;
+    font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;
+    font-size: 46px;
+    margin: 34px 0 0 0;
+}
+
+.marquee .marquee-two-col-abstract.left-column .marquee-product-description {
+    font-family: "Walsheim-Bold";
+    font-size: 22px;
+}
+
+.marquee .marquee-two-col-abstract.left-column .marquee-product-text {
+    font-family: "Walsheim-Medium";
+    font-size: 18px;
+    margin-top: 18px;
+}
+
+.marquee .marquee-two-col-abstract.left-column .marquee-product-price {
+    display: block;
+    font-family: "Walsheim-Black";
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.marquee .marquee-two-col-abstract.left-column .btn {
+    font-family: "Walsheim-Medium";
+    font-size: 24px;
+}
+
+.marquee .marquee-two-col-abstract.left-column .marquee-restrictions-text {
+    margin: 12px 0 24px;
+    font-family: "Walsheim-Regular";
+}
+
+.marquee .marquee-two-col-abstract.left-column .marquee-restrictions-text ul {
+    padding-left: 0;
+}
+
+.marquee .marquee-two-col-abstract.left-column .marquee-restrictions-text ul li {
+    list-style: none;
+}
+
+.marquee .marquee-two-col-abstract.right-column {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    background-position: top center;
+    background-size: cover;
+}
+
+.marquee .marquee-two-col-abstract.right-column img.abstract-left {
+    position: absolute;
+    left: 0;
+    height: 100%;
+}
+
+.marquee .marquee-two-col-abstract.right-column img.abstract-right {
+    position: absolute;
+    right: 0;
+    height: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+    .marquee .marquee-two-col-abstract.right-column {
+        position: relative;
+        min-height: 200px;
+    }
+}
+
+h1.marquee-product-name,
+h2.marquee-product-name,
+.marquee-product-name {
+    font-size: 24px;
+    font-size: 2.4rem;
+    font-family: 'HelveticaNeue-CondensedBold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-stretch: condensed;
+    text-transform: uppercase;
+}
+
+@media only screen and (max-width: 992px) {
+    h1.marquee-product-name,
+  h2.marquee-product-name,
+  .marquee-product-name {
+        font-size: 20px;
+        font-size: 2rem;
+        margin-top: 10px;
+    }
+}
+        </style>
+        <style>
           .marquee { background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/GD_WebsiteBuilder_Marquee.jpg) no-repeat top center;); }
           
         </style>
@@ -73,8 +951,10 @@
                 <div class="row">
                   <div class="col-md-7 col-sm-12">
                     <div class="marquee-pro-left-text">
-                            <h2 class="marquee-product-description">FAST, SECURE, RELIABLE HOSTING THAT GROWS WITH YOUR BUSINESS</h2>
-                            <div class="marquee-product-text">Industry's leading page load times. 99.9% Uptime Guarantee*.</div><a href="[@T[link:<relative path='~/hosting/website-builder-config.aspx' secure='true'><param name='ci' value='' /><param name='plan' value='wsb_personal_12month' /></relative>]@T]" class="btn btn-primary jump-arrow-btn">Get Started</a>
+                            <h2 class="marquee-product-description">[@L[cds.sales/gd/hosting/website-builder:header_subtitle_1]@L]</br>[@L[cds.sales/gd/hosting/website-builder:header_subtitle_2]@L]</h2>
+                            <ul class="marquee-check-bullets">
+                              <li>[@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-1]@L],[@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-2]@L],[@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-3]@L]</li>
+                            </ul><a href="[@T[link:<relative path='~/hosting/website-builder-config.aspx' secure='true'><param name='ci' value='' /><param name='plan' value='wsb_personal_12month' /></relative>]@T]" class="btn btn-primary jump-arrow-btn">[@L[cds.sales/gd/hosting/website-builder:get-started-btn-general]@L]</a>
                     </div>
                   </div>
                 </div>
@@ -85,8 +965,377 @@
       </div>
     </section>
     <section id="plans">
+      <style>
+.pro-plans {
+    margin-top: 0px;
+    padding-bottom: 80px;
+}
+
+.pro-plans .tld-col-title {
+    text-transform: uppercase;
+}
+
+.pro-plans .non-input-group {
+    margin-bottom: 10px;
+}
+
+.pro-plans .non-input-group .form-control {
+    border: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    font-family: 'Walsheim-Black';
+    font-size: 30px;
+    font-size: 3rem;
+    padding: 4px 20px;
+    height: 44px;
+    line-height: 1;
+    color: #333333;
+}
+
+.pro-plans .sub-plan-text {
+    margin-top: 30px;
+    margin-bottom: -30px;
+}
+
+.pro-plans h2 {
+    margin-top: 0;
+}
+
+.pro-plans h2.domains-plans-mid-title {
+    margin: 40px 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .pro-plans {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
+
+.pro-plans.plan-container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.pro-plans.plan-container:before,
+.pro-plans.plan-container:after {
+    content: " ";
+  /* 1 */
+    display: table;
+  /* 2 */
+}
+
+.pro-plans.plan-container:after {
+    clear: both;
+}
+
+@media only screen and (max-width: 1535px) {
+    .pro-plans.plan-container {
+        max-width: 1170px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .pro-plans.plan-container {
+        max-width: 970px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .pro-plans.plan-container {
+        max-width: 750px;
+    }
+}
+
+.pro-plans.plan-container .plan-col-15 {
+    width: 20%;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@media only screen and (max-width: 1535px) {
+    .pro-plans.plan-container .plan-col-15 {
+        width: 33.3333%;
+    }
+
+    .pro-plans.plan-container .plan-col-15:nth-child(4n) {
+        border: 0;
+        margin-left: 16.66666666667%;
+        clear: left;
+    }
+
+    .pro-plans.plan-container .plan-col-15:nth-child(1) {
+        border: 0;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .pro-plans.plan-container .plan-col-15 {
+        width: 50%;
+    }
+
+    .pro-plans.plan-container .plan-col-15:nth-child(4n) {
+        clear: none;
+        margin-left: 0;
+    }
+
+    .pro-plans.plan-container .plan-col-15:nth-child(3) {
+        clear: left;
+        border-left: 0;
+    }
+
+    .pro-plans.plan-container .plan-col-15:nth-child(5) {
+        clear: left;
+        border-left: 0;
+        margin-left: 25%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .pro-plans.plan-container .plan-col-15 {
+        width: 100%;
+        border: 0;
+        clear: none;
+        float: none;
+    }
+
+    .pro-plans.plan-container .plan-col-15:nth-child(5) {
+        margin-left: 0;
+    }
+}
+
+.pro-plans.plan-container .plan-col-2 {
+    width: 16.66666666667%;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@media only screen and (max-width: 1535px) {
+    .pro-plans.plan-container .plan-col-2 {
+        width: 33.3333%;
+    }
+
+    .pro-plans.plan-container .plan-col-2:nth-child(4n) {
+        border: 0;
+        clear: left;
+    }
+
+    .pro-plans.plan-container .plan-col-2:nth-child(1) {
+        border-left: 0;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .pro-plans.plan-container .plan-col-2 {
+        width: 50%;
+    }
+
+    .pro-plans.plan-container .plan-col-2:nth-child(4n) {
+        clear: none;
+    }
+
+    .pro-plans.plan-container .plan-col-2:nth-child(3) {
+        clear: left;
+        border-left: 0;
+    }
+
+    .pro-plans.plan-container .plan-col-2:nth-child(5) {
+        clear: left;
+        border-left: 0;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .pro-plans.plan-container .plan-col-2 {
+        width: 100%;
+        border: 0;
+        clear: none;
+        float: none;
+    }
+}
+
+.pro-plans .pro-plan-wrap {
+    border-top: 10px solid #008a32;
+    padding: 40px;
+    background-color: #fff;
+    -webkit-box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
+}
+
+@media only screen and (max-width: 992px) {
+    .pro-plans .pro-plan-wrap {
+        padding: 40px 30px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .pro-plans .pro-plan-wrap {
+        margin-bottom: 40px;
+    }
+}
+
+.pro-plans .pro-plan-wrap .features-row {
+    margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+    .pro-plans .pro-plan-wrap .features-row {
+        margin-bottom: 0;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .pro-plans .pro-plan-wrap .features-row .col-sm-6 {
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .pro-plans .pro-plan-wrap .features-row .col-sm-6 img {
+        margin: 0 auto 20px;
+    }
+}
+
+.pro-plans .pro-plan-wrap .plan-flag {
+    color: #000;
+    font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;
+    font-size: 28px;
+    font-size: 2.8rem;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    line-height: 1;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMTgxLjggNjQuMiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTgxLjggNjQuMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cG9seWdvbiBmaWxsPSIjRkVEQzQ1IiBwb2ludHM9IjE3LDAgMCwyNC4yIDMsNTYgMTY0LjUsNjQuMiAxODEuOCw0My44IDE4MSw0LjMgIi8+DQo8L3N2Zz4NCg==) no-repeat center center;
+    background-size: cover;
+    overflow: visible;
+}
+
+.pro-plans .pro-plan-wrap .plan-flag:before {
+    content: '';
+}
+
+.plan-tile .plan-flag {
+    position: absolute;
+    top: -20px;
+    right: 30px;
+    color: #fff;
+    display: inline-block;
+    padding: 0 15px;
+    line-height: 2.5;
+}
+
+.pro-plans .pro-plan-wrap h6 {
+    margin-top: 0;
+}
+
+.pro-plans .pro-plan-wrap h2 {
+    margin-bottom: 14px;
+}
+
+.pro-plans .pro-plan-wrap .plan-title {
+    font-size: 30px;
+    font-size: 3rem;
+    margin-top: 0;
+    font-family: 'Walsheim-Bold';
+    text-transform: none;
+    word-wrap: break-word;
+    word-break: break-word;
+    white-space: -moz-pre-wrap;
+}
+
+.pro-plans .pro-plan-wrap .plan-subtitle {
+    color: #b3b3b3;
+    font-weight: 700;
+}
+
+.pro-plans .pro-plan-wrap .plan-text {
+    min-height: 44px;
+    margin-bottom: 5px;
+}
+
+.pro-plans .pro-plan-wrap .plan-tile-top {
+    padding: 0px;
+}
+
+.pro-plans .pro-plan-wrap .plan-disclaimers {
+    font-size: 14px;
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+}
+
+.pro-plans .pro-plan-wrap .plan-price-wrap {
+    min-height: 92px;
+}
+
+.pro-plans .pro-plan-wrap .plan-price-wrap .plan-price {
+    font-size: 45px;
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: #ef6c0f;
+    font-family: 'Walsheim-Bold';
+}
+
+.pro-plans .pro-plan-wrap .plan-price-wrap .plan-duration {
+    font-size: 24px;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #ef6c0f;
+}
+
+.pro-plans .pro-plan-wrap .btn {
+    margin-bottom: 20px;
+}
+
+.pro-plans .pro-plan-wrap .plan-item {
+    border-top: 0 none;
+    min-height: 0;
+    padding: 5px 0;
+    text-align: left;
+    font-size: 16px;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+}
+
+.pro-plans .include-check {
+    position: relative;
+    padding-left: 45px;
+    margin-top: 20px;
+}
+
+.pro-plans .include-check:before {
+    content: "";
+    background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
+    background-position: 0 -668px;
+    background-size: 205px auto;
+    width: 25px;
+    height: 27px;
+    padding-right: 5px;
+    position: absolute;
+    left: 0;
+    top: -6px;
+}
+
+.pro-plans .sf-tipper-target {
+    background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
+    background-position: 0 -864px;
+    width: 15px;
+    height: 16px;
+    display: inline-block;
+    background-size: 205px auto;
+    vertical-align: baseline;
+}
+      </style>
       <div class="pro-plans-wrap bg-gray-light">
-        <div id="plans" data-icode="" class="container pro-plans"> 
+        <div id="plans" data-icode="" class="container pro-plans">
+           
+           
+          ##if(if(countrySiteAny(uk)))
+           
           <div class="col-sm-4 plan-tile plan-pro">
             <atlantis:webstash type="css">
               <style>
@@ -96,20 +1345,80 @@
               </style>
             </atlantis:webstash>
             <div class="pro-plan-wrap">
-              <h2 class="plan-title">Personal</h2>
-              <p class="plan-text">Perfect for personal websites</p>
-              <div class="plan-price-wrap"> <strong>Starting at<br><span class="plan-price text-warning">[@T[productprice:<current productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/mo</span> 
-                  ##if(productHasSavingsMoreThan(7524, 7524, 0))
-                   <br><strong>was 
-                    <strike>[@T[productprice:<list productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary">Save [@T[productcompare:<percent primaryproductid="7524" secondaryproductid="7524" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span></strong> 
-                  ##endif
-                   </strong></div>
-              <button data-tcode="" data-plan="wsb_personal_12month" class="btn btn-purchase btn-plan btn-lg btn-block">Add to Cart</button>
-              <div class="plan-item"><b>Free Domain with annual Plan</b></div>
-              <div class="plan-item"><b>50</b> Personal Themes</div>
-              <div class="plan-item"><b>Unlimited</b> Pages</div>
-              <div class="plan-item"><b>1 GB</b> Disk Space</div>
-              <div class="plan-item"><b>150 GB</b> Bandwidth</div>
+              <h2 class="plan-title">[@L[cds.sales/gd/hosting/website-builder:economy-title]@L]</h2>
+              <p class="plan-text">[@L[cds.sales/gd/hosting/website-builder:economy-description]@L]</p>
+              <div class="plan-price-wrap"><span class="plan-price text-warning">[@T[productprice:<current productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
+                ##if(productHasSavingsMoreThan(7524, 7524, 0))
+                 <br><strong>[@L[cds.sales/_common:was]@L] 
+                  <strike>[@T[productprice:<list productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary">[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7524" secondaryproductid="7524" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span></strong> 
+                ##endif
+                 
+              </div>
+              <button id="product-A" data-tcode="" data-plan="wsb_personal_12month" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:plan-domain]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]'></span></div>
+              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:economy-themes]@L]</div>
+              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:economy-pages]@L]</div>
+              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:economy-diskspace]@L]</div>
+              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:economy-bandwidth]@L]</div>
+            </div>
+          </div> 
+          ##else
+           
+          <div class="col-sm-4 plan-tile plan-pro">
+            <atlantis:webstash type="css">
+              <style>
+                .pro-plans { margin-top: 0; }
+                .form-control { margin-bottom: 10px; }
+                
+              </style>
+            </atlantis:webstash>
+            <div class="pro-plan-wrap">
+              <h2 class="plan-title">[@L[cds.sales/gd/hosting/website-builder:personal-title]@L]</h2>
+              <p class="plan-text">[@L[cds.sales/gd/hosting/website-builder:personal-description]@L]</p>
+              <div class="plan-price-wrap"><span class="plan-price text-warning">[@T[productprice:<current productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
+                ##if(productHasSavingsMoreThan(7524, 7524, 0))
+                 <br><strong>[@L[cds.sales/_common:was]@L] 
+                  <strike>[@T[productprice:<list productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary">[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7524" secondaryproductid="7524" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span></strong> 
+                ##endif
+                 
+              </div>
+              <button id="product-A" data-tcode="" data-plan="wsb_personal_12month" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:plan-domain]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]'></span></div>
+              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:personal-themes]@L]</div>
+              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:economy-pages]@L]</div>
+              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:economy-diskspace]@L]</div>
+              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:economy-bandwidth]@L]</div>
+            </div>
+          </div> 
+          ##endif
+           
+          <div class="col-sm-4 plan-tile plan-pro">
+            <atlantis:webstash type="css">
+              <style>
+                .pro-plans { margin-top: 0; }
+                .form-control { margin-bottom: 10px; }
+                
+              </style>
+            </atlantis:webstash>
+            <div class="pro-plan-wrap">
+              <div class="plan-flag">[@L[cds.sales/gd/hosting/website-builder:popular-tag]@L]</div>
+              <h2 class="plan-title">[@L[cds.sales/gd/hosting/website-builder:business-title]@L]</h2>
+              <p class="plan-text">[@L[cds.sales/gd/hosting/website-builder:business-description]@L]</p>
+              <div class="plan-price-wrap"><span class="plan-price text-warning">[@T[productprice:<current productid="7509" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
+                ##if(productHasSavingsMoreThan(7509, 7509, 0))
+                 <br><strong>[@L[cds.sales/_common:was]@L] 
+                  <strike>[@T[productprice:<list productid="7509" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary">[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7509" secondaryproductid="7509" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span></strong> 
+                ##endif
+                 
+              </div>
+              <button id="product-B" data-tcode="" data-plan="wsb_business_12month" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:plan-domain]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]'></span></div>
+              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:business-themes]@L]</div>
+              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:business-pages]@L]</div>
+              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:business-diskspace]@L]</div>
+              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:business-bandwidth]@L]</div>
+              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:rb_5_business_emails]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-content='[@L[cds.sales/gd/hosting/website-builder:rb_5_business_emails_tooltip]@L]'></span></div>
+              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:rb_mobile_site]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-content='[@L[cds.sales/gd/hosting/website-builder:rb_mobile_site_tooltip]@L]'></span></div>
             </div>
           </div>
           <div class="col-sm-4 plan-tile plan-pro">
@@ -121,54 +1430,27 @@
               </style>
             </atlantis:webstash>
             <div class="pro-plan-wrap">
-              <div class="plan-flag">Most Popular</div>
-              <h2 class="plan-title">Business</h2>
-              <p class="plan-text">Ideal for building and managing multiple sites.</p>
-              <div class="plan-price-wrap"> <strong>Starting at<br><span class="plan-price text-warning">[@T[productprice:<current productid="7509" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/mo</span> 
-                  ##if(productHasSavingsMoreThan(7509, 7509, 0))
-                   <br><strong>was 
-                    <strike>[@T[productprice:<list productid="7509" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary">Save [@T[productcompare:<percent primaryproductid="7509" secondaryproductid="7509" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span></strong> 
-                  ##endif
-                   </strong></div>
-              <button data-tcode="" data-plan="wsb_business_12month" class="btn btn-purchase btn-plan btn-lg btn-block">Add to Cart</button>
-              <div class="plan-item"><b>Free Domain with annual Plan</b></div>
-              <div class="plan-item"><b>300</b> Business & Personal Themes</div>
-              <div class="plan-item"><b>Unlimited</b> Pages</div>
-              <div class="plan-item"><b>10 GB</b> Disk Space</div>
-              <div class="plan-item"><b>500 GB</b> Bandwidth</div>
-              <div class="plan-item"><b>5</b> Business Email Addresses</div>
-              <div class="plan-item"><b>Mobile</b> Site</div>
-            </div>
-          </div>
-          <div class="col-sm-4 plan-tile plan-pro">
-            <atlantis:webstash type="css">
-              <style>
-                .pro-plans { margin-top: 0; }
-                .form-control { margin-bottom: 10px; }
-                
-              </style>
-            </atlantis:webstash>
-            <div class="pro-plan-wrap">
-              <div class="plan-flag">Includes SEO</div>
-              <h2 class="plan-title">Unlimited</h2>
-              <p class="plan-text">Good for higher traffic. Twice the power, memory, email and more.</p>
-              <div class="plan-price-wrap"> <strong>Starting at<br><span class="plan-price text-warning">[@T[productprice:<current productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/mo</span> 
-                  ##if(productHasSavingsMoreThan(7514, 7514, 0))
-                   <br><strong>was 
-                    <strike>[@T[productprice:<list productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary">Save [@T[productcompare:<percent primaryproductid="7514" secondaryproductid="7514" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span></strong> 
-                  ##endif
-                   </strong></div>
-              <button data-tcode="" data-plan="wsb_businessplus_12month" class="btn btn-purchase btn-plan btn-lg btn-block">Add to Cart</button>
-              <div class="plan-item"><b>Free Domain with annual Plan</b></div>
-              <div class="plan-item"><b>300</b> Business & Personal Themes</div>
-              <div class="plan-item"><b>Unlimited</b> Pages</div>
-              <div class="plan-item"><b>50 GB</b> Disk Space</div>
-              <div class="plan-item"><b>1000 GB</b> Bandwidth</div>
-              <div class="plan-item"><b>1</b> Business Email Addresses</div>
-              <div class="plan-item"><b>Mobile</b> Site</div>
-              <div class="plan-item"><b>Search Engine Optimization</b></div>
-              <div class="plan-item"><b>One-Click</b> Social Media Manager</div>
-              <div class="plan-item"><b>1 year SSL Certificate</b></div>
+              <div class="plan-flag">[@L[cds.sales/gd/hosting/website-builder:wsb-plus-seo]@L]</div>
+              <h2 class="plan-title">[@L[cds.sales/gd/hosting/website-builder:unlimited-plan-title]@L]</h2>
+              <p class="plan-text">[@L[cds.sales/gd/hosting/website-builder:unlimited-description]@L]</p>
+              <div class="plan-price-wrap"><span class="plan-price text-warning">[@T[productprice:<current productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
+                ##if(productHasSavingsMoreThan(7514, 7514, 0))
+                 <br><strong>[@L[cds.sales/_common:was]@L] 
+                  <strike>[@T[productprice:<list productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary">[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7514" secondaryproductid="7514" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span></strong> 
+                ##endif
+                 
+              </div>
+              <button id="product-C" data-tcode="" data-plan="wsb_businessplus_12month" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:plan-domain]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]'></span></div>
+              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:unlimited-themes]@L]</div>
+              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:unlimited-pages]@L]</div>
+              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:unlimited-diskspace]@L]</div>
+              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:unlimited-bandwidth]@L]</div>
+              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:rb_10_business_emails]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-content='[@L[cds.sales/gd/hosting/website-builder:rb_5_business_emails_tooltip]@L]'></span></div>
+              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:rb_mobile_site]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-content='[@L[cds.sales/gd/hosting/website-builder:rb_mobile_site_tooltip]@L]'></span></div>
+              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:rb_seo]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-content='[@L[cds.sales/gd/hosting/website-builder:rb_seo_tooltip]@L]'></span></div>
+              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:rb_oneclick]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-content='[@L[cds.sales/gd/hosting/website-builder:rb_oneclick_tooltip]@L]'></span></div>
+              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:rb_ssl]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-width='300' data-content='[@L[cds.sales/gd/hosting/website-builder:rb_ssl_tooltip]@L]'></span></div>
             </div>
           </div>
           <atlantis:webstash type="js">
@@ -379,7 +1661,7 @@
           <ul class="nav navbar-nav"></ul>
           <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.mid-page-nav&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="navbar-right">
             <div class="price-text">Plans starting at</div>
-            <div class="price">$69.99<span>/year</span></div><a href="#marquee" class="btn-warning btn btn-sm">See the plans</a>
+            <div class="price">[@T[productprice:<current productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]<span>/year</span></div><a href="#marquee" class="btn-purchase btn btn-sm">See the plans</a>
           </div>
         </div>
       </div>
@@ -403,11 +1685,32 @@
         // this sets the nav to fixed when scrolled past and fixes the body for the height of the nav
         var nav = $('.mid-page-nav');
         var pos = nav.offset().top;
+        var sections = []
       
+        $('[data-mid-nav-title]').each(function(){
+          //titles.push($(this).data('mid-nav-title'));
+          sections.push($(this).attr('id'));
+        });
         $(window).scroll(function () {
+          var scroll = $(this).scrollTop();
           var fix = ($(this).scrollTop() > pos) ? true : false;
           nav.toggleClass("sticky", fix);
           $('body').toggleClass("fix-body", fix);
+      
+          if(fix){
+            $.each(sections,function(index,value){
+                var top = ((scroll+131) > $('#'+value).offset().top) ? true : false;
+                var bottom = ((scroll+131) < $('#'+value).offset().top + $('#'+value).outerHeight()) ? true : false;
+                var activeNav = (top && bottom) ? true : false;
+                $('a[href="#'+value+'"').toggleClass("active",activeNav);
+                $('.mid-page-nav a').each(function(i,v){
+                    if(v!=value){
+                      $(this).blur();
+                    }
+                  });
+              });
+          }
+      
         });
         $('#midPageNav .dropdown-toggle').dropdown()
       });
@@ -424,7 +1727,7 @@
           if($target.length) {
             $('html, body').animate({ scrollTop: $target.offset().top - fromTop }, 1000);
             if(history && "pushState" in history) {
-              history.pushState({}, document.title, window.location.pathname + href);
+              history.pushState({}, document.title, window.location.pathname + window.location.search + href);
               return false;
             }
           }
@@ -560,10 +1863,512 @@ text-transform: uppercase;
         </div>
       </div>
     </div>
-    <section id="social-media" data-mid-nav-title="Features">
-    </section>
-    <section id="business-exclusives" class="bg-pro-gray">
-            <style>
+    <section id="features" data-mid-nav-title="Features">
+      <div data-icode="code" class="carousel-panel container">
+        <div class="row">
+          <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+            <div></div>
+          </div>
+        </div>
+      </div>
+            <div data-begin="0" data-end="0" class="features-tabbed-carousel-icon">
+              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                <div class="feature-carousel-icon"><span class="uxicon uxicon-facebook-box"></span></div>
+                <div class="feature-text">facebook</div>
+              </div>
+            </div>
+            <div data-begin="1" data-end="1" class="features-tabbed-carousel-icon">
+              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                <div class="feature-carousel-icon"><span class="uxicon uxicon-twitter"></span></div>
+                <div class="feature-text">twitter</div>
+              </div>
+            </div>
+            <div data-begin="2" data-end="2" class="features-tabbed-carousel-icon">
+              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                <div class="feature-carousel-icon"><span class="uxicon uxicon-youtube-box"></span></div>
+                <div class="feature-text">youtube</div>
+              </div>
+            </div>
+            <div data-begin="3" data-end="3" class="features-tabbed-carousel-icon">
+              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                <div class="feature-carousel-icon"><span class="uxicon uxicon-yelp"></span></div>
+                <div class="feature-text">yelp</div>
+              </div>
+            </div>
+            <div data-begin="4" data-end="4" class="features-tabbed-carousel-icon">
+              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                <div class="feature-carousel-icon"><span class="uxicon uxicon-paypal"></span></div>
+                <div class="feature-text">paypal</div>
+              </div>
+            </div>
+            <div data-begin="5" data-end="5" class="features-tabbed-carousel-icon">
+              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                <div class="feature-carousel-icon"><span class="uxicon uxicon-homefinder"></span></div>
+                <div class="feature-text">home owner</div>
+              </div>
+            </div>
+            <style>.item-wrapper { padding: 70px 0 20px; }
+
+.carousel-wrap { padding-bottom: 70px; }
+
+@media only screen and (min-width: 768px){
+  .carousel-container .carousel {
+    padding: 0 120px;
+  }
+}
+
+.carousel {
+  position: relative;
+  padding: 0 0 45px 0;
+}
+
+.carousel-container .carousel .carousel-indicators {
+  bottom: -60px;
+}
+
+@media screen and (min-width: 768px){
+  .carousel-indicators {
+    bottom: -5px;
+  }
+}
+.carousel-indicators {
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  z-index: 15;
+  width: 80%;
+  margin-left: -40%;
+  padding-left: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.carousel-container .carousel .carousel-indicators li.active {
+  background-color: #77c043;
+}
+
+.carousel-container .carousel .carousel-indicators li.active {
+  background-color: #77c043;
+}
+.carousel-container .carousel .carousel-indicators li {
+  width: 15px;
+  height: 15px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  margin: 5px;
+  background-color: #d9d9d9;
+}
+.carousel-indicators .active {
+  background-color: #008a32;
+}
+.carousel-indicators li {
+  display: inline-block;
+  width: 32px;
+  height: 10px;
+  margin: 8px;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: #d9d9d9;
+}
+.carousel-inner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+.carousel-inner > .active {
+  
+}
+.carousel-inner > .active, .carousel-inner > .next, .carousel-inner > .prev {
+  display: block;
+}
+.carousel-inner > .item {
+  display: none;
+  position: relative;
+  -webkit-transition: left 0.6s ease-in-out;
+  -moz-transition: left 0.6s ease-in-out;
+  transition: left 0.6s ease-in-out;
+  overflow: hidden;
+}
+.carousel-container .carousel-panel, .carousel-container .testimonial {
+  padding: 0;
+}
+.carousel-panel .img-center {
+  margin: 50px auto;
+}
+.carousel-panel .carousel-panel-text {
+  margin-bottom: 25px;
+}
+.carousel-panel h2 {
+  margin-top: 0px;
+}
+
+.carousel-container .carousel-control.left {
+  left: 0px;
+}
+.carousel-control {
+  position: absolute;
+  top: -11%;
+  bottom: 0;
+  color: #999999;
+  text-align: center;
+}
+.carousel-icon.arrow-left-icon {
+  background-position: 0 0;
+  width: 51px;
+  height: 50px;
+}
+
+.carousel-control .uxicon-chevron-left-lt, .carousel-control .arrow-left-icon, .carousel-control .arrow-left-white-icon {
+  left: 50%;
+}
+.carousel-control .arrow-left-white-icon, .carousel-control .arrow-right-white-icon, .carousel-control .arrow-left-icon, .carousel-control .arrow-right-icon {
+  position: absolute;
+  top: 50%;
+}
+.carousel-icon {
+  background-image: url('[@T[link:<imageroot />]@T]/fos/hp/sahara-rebrand-sprite-20141114.png');
+  display: inline-block;
+  background-size: 205px auto;
+}
+.carousel-container .carousel-control.right {
+  right: 0px;
+}
+.carousel-icon.arrow-right-icon {
+  background-position: 0 -52px;
+  width: 51px;
+  height: 50px;
+}
+.carousel-control .arrow-left-white-icon, .carousel-control .arrow-right-white-icon, .carousel-control .arrow-left-icon, .carousel-control .arrow-right-icon {
+  position: absolute;
+  top: 50%;
+}
+
+.carousel {
+    position: relative;
+    padding: 0 0 45px 0;
+}
+
+.carousel-inner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-inner > .item {
+    display: none;
+    position: relative;
+    -webkit-transition: left 0.6s ease-in-out;
+    -moz-transition: left 0.6s ease-in-out;
+    transition: left 0.6s ease-in-out;
+    overflow: hidden;
+}
+
+.carousel-inner > .item.show-item {
+    display: block;
+}
+
+.carousel-inner > .item > h1,
+.carousel-inner > .item > h2,
+.carousel-inner > .item > h3,
+.carousel-inner > .item > h4,
+.carousel-inner > .item > h5,
+.carousel-inner > .item > h6 {
+    margin-top: 0;
+}
+
+.carousel-inner > .active,
+.carousel-inner > .next,
+.carousel-inner > .prev {
+    display: block;
+}
+
+.carousel-inner > .active {
+    left: 0;
+}
+
+.carousel-inner > .next,
+.carousel-inner > .prev {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.carousel-inner > .next {
+    left: 100%;
+}
+
+.carousel-inner > .prev {
+    left: -100%;
+}
+
+.carousel-inner > .next.left,
+.carousel-inner > .prev.right {
+    left: 0;
+}
+
+.carousel-inner > .active.left {
+    left: -100%;
+}
+
+.carousel-inner > .active.right {
+    left: 100%;
+}
+
+.carousel-text-item {
+    margin-bottom: 20px;
+}
+
+.carousel-text-item h1 {
+    font-size: 14px;
+    display: inline;
+    margin: 0;
+    font-weight: bold;
+    font-weight: 600;
+}
+
+.carousel-control {
+    position: absolute;
+    top: -11%;
+    bottom: 0;
+    color: #999999;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .carousel-control {
+        top: -6%;
+    }
+}
+
+.carousel-control:hover,
+.carousel-control:focus {
+    outline: none;
+    color: #000;
+    text-decoration: none;
+}
+
+.carousel-control .uxicon-chevron-left-lt,
+.carousel-control .uxicon-chevron-right-lt {
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    font-size: 40px;
+    margin-top: -15px;
+}
+
+.carousel-control .arrow-left-white-icon,
+.carousel-control .arrow-right-white-icon,
+.carousel-control .arrow-left-icon,
+.carousel-control .arrow-right-icon {
+    position: absolute;
+    top: 50%;
+}
+
+.carousel-control .uxicon-chevron-left-lt,
+.carousel-control .arrow-left-icon {
+    left: 50%;
+}
+
+.carousel-control .uxicon-chevron-right-lt,
+.carousel-control .arrow-right-icon {
+    right: 50%;
+}
+
+.carousel-control.left {
+    left: -40px;
+}
+@media only screen and (max-width: 768px){
+  .carousel-container .carousel-control {
+    display: none;
+  }
+}
+@media only screen and (max-width: 768px) {
+    .carousel-control.left {
+        left: -10px;
+    }
+}
+
+.carousel-control.right {
+    right: -40px;
+}
+
+@media only screen and (max-width: 768px) {
+    .carousel-control.right {
+        right: -10px;
+    }
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    z-index: 15;
+    width: 80%;
+    margin-left: -40%;
+    padding-left: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.carousel-indicators li {
+    display: inline-block;
+    width: 32px;
+    height: 10px;
+    margin: 8px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #d9d9d9;
+}
+
+.carousel-indicators .active {
+    background-color: #008a32;
+}
+
+@media screen and (min-width: 768px) {
+    .carousel-indicators {
+        bottom: -5px;
+    }
+}
+.carousel-panel .include-check {
+position: relative;
+padding-left: 45px;
+margin-top: 20px;
+}
+.carousel-panel .include-check:before {
+content: "";
+background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
+background-position: 0 -668px;
+background-size: 205px auto;
+width: 25px;
+height: 27px;
+padding-right: 5px;
+position: absolute;
+left: 0;
+top: -6px;
+}
+            </style>
+            <div class="carousel-wrap">
+              <div class="carousel-container container">
+                <div id="carousel-social-media" data-ride="carousel" data-interval="false" class="carousel slide">
+                  <ol class="carousel-indicators">
+                    <li data-target="#carousel-social-media" data-slide-to="0"></li>
+                    <li data-target="#carousel-social-media" data-slide-to="1"></li>
+                    <li data-target="#carousel-social-media" data-slide-to="2"></li>
+                    <li data-target="#carousel-social-media" data-slide-to="3"></li>
+                    <li data-target="#carousel-social-media" data-slide-to="4"></li>
+                    <li data-target="#carousel-social-media" data-slide-to="5"></li>
+                  </ol>
+                  <div class="carousel-inner">
+                          <div class="item">
+                            <div class="item-wrapper text-center">
+                              <div data-icode="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-apps-image-facebook-int.jpg" class="img-responsive img-center">
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <h2>FACEBOOK</h2>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <div class="carousel-panel-text">Share your status updates or photos.</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <div class="item-wrapper text-center">
+                              <div data-icode="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-apps-image-twitter-int.jpg" class="img-responsive img-center">
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <h2>TWITTER</h2>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <div class="carousel-panel-text">Share your status updates or photos.</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <div class="item-wrapper text-center">
+                              <div data-icode="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-apps-image-youtube-int.jpg" class="img-responsive img-center">
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <h2>YOUTUBE</h2>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <div class="carousel-panel-text">Share your status updates or photos.</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <div class="item-wrapper text-center">
+                              <div data-icode="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-apps-image-facebook-int.jpg" class="img-responsive img-center">
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <h2>YELP</h2>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <div class="carousel-panel-text">Share your status updates or photos.</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <div class="item-wrapper text-center">
+                              <div data-icode="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-apps-image-facebook-int.jpg" class="img-responsive img-center">
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <h2>PAYPAL</h2>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <div class="carousel-panel-text">Share your status updates or photos.</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <div class="item-wrapper text-center">
+                              <div data-icode="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-apps-image-facebook-int.jpg" class="img-responsive img-center">
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <h2>HOMEOWNER</h2>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <div class="carousel-panel-text">Share your status updates or photos.</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                  </div><a href="#carousel-social-media" data-slide="prev" class="left carousel-control"><span class="carousel-icon arrow-left-icon"></span></a><a href="#carousel-social-media" data-slide="next" class="right carousel-control"><span class="carousel-icon arrow-right-icon"></span></a>
+                </div>
+                <script>
+                  $('.carousel .carousel-indicators li:first-child').addClass("active");
+                  $('.carousel .carousel-inner .item:first-child').addClass("active");
+                </script>
+              </div>
+            </div>
+      <div class="bg-pro-gray">
+                <style>
 .features-two-up {
   min-height: 940px;
   background-size: cover;
@@ -591,110 +2396,125 @@ line-height: 1.1;
 .features-two-up .feature-row-text {
 margin-bottom: 20px;
 }
-            </style>
-            <div style="background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rebrand-features-bg-ph.jpg);" data-lazy-load="" class="features-two-up   ">
-              <div class="container">
-                <div class="row">
-                  <div class="col-sm-12">
-                    <h1>Business Exclusives Section</h1>
+                </style>
+                <div style="background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rebrand-features-bg-ph.jpg);" data-lazy-load="" class="features-two-up   ">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <h1>Business Exclusives Section</h1>
+                      </div>
+                              <div class="row feature-row-height">
+                                <div class="col-sm-7">
+                                  <div class="row feature-row">
+                                    <div class="col-sm-5"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rebrand-features-img1-ph.png" data-lazy-load="" alt="" class="feature-image img-responsive">
+                                    </div>
+                                    <div class="col-sm-7">
+                                      <div class="feature-title">Get more than just a website</div>
+                                      <div class="feature-row-text">With our One-Click Social Media Manager, we'll instantly match your Facebook.....</div><a href="http://godaddy.com" class="btn btn-default-dark">Learn More</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row feature-row-height">
+                                <div class="col-sm-7">
+                                  <div class="row feature-row">
+                                    <div class="col-sm-5"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rebrand-features-img1-ph.png" data-lazy-load="" alt="" class="feature-image img-responsive">
+                                    </div>
+                                    <div class="col-sm-7">
+                                      <div class="feature-title">Get on Google in 3 easy steps with our built-in SEO tool</div>
+                                      <div class="feature-row-text">See how the built-in Search Engine Optimization (SEO) tool in our Business Plus plan will help you show up on Google<sup>&reg;</sup>, Yahoo!<sup>&reg;</sup> and more.</div><a href="http://godaddy.com" class="btn btn-default-dark">Learn More</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                    </div>
                   </div>
-                        <div class="row feature-row-height">
-                          <div class="col-sm-7">
-                            <div class="row feature-row">
-                              <div class="col-sm-5"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rebrand-features-img1-ph.png" data-lazy-load="" alt="" class="feature-image img-responsive">
-                              </div>
-                              <div class="col-sm-7">
-                                <div class="feature-title">Get more than just a website</div>
-                                <div class="feature-row-text">With our One-Click Social Media Manager, we'll instantly match your Facebook.....</div><a href="http://godaddy.com" class="btn btn-default-dark">Learn More</a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="row feature-row-height">
-                          <div class="col-sm-7">
-                            <div class="row feature-row">
-                              <div class="col-sm-5"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rebrand-features-img1-ph.png" data-lazy-load="" alt="" class="feature-image img-responsive">
-                              </div>
-                              <div class="col-sm-7">
-                                <div class="feature-title">Get on Google in 3 easy steps with our built-in SEO tool</div>
-                                <div class="feature-row-text">See how the built-in Search Engine Optimization (SEO) tool in our Business Plus plan will help you show up on Google<sup>&reg;</sup>, Yahoo!<sup>&reg;</sup> and more.</div><a href="http://godaddy.com" class="btn btn-default-dark">Learn More</a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
                 </div>
+      </div>
+      <div class="bg-black">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8">
+              <h3 class="text-center text-muted">Business Plus Starting at [@T[productprice:<current productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</h3>
+            </div>
+            <div class="col-sm-4">
+              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.bg-black&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="right">
+                <button data-tcode="" data-plan="wsb_businessplus_12month" class="btn btn-purchase btn-plan btn-sm">Add to Cart</button>
               </div>
             </div>
-    </section>
-    <section id="testimonials" data-mid-nav-title="Testimonials">
-      <div class="carousel-wrap">
-        <div class="carousel-container container">
-          <div id="carousel-testimonials" data-ride="carousel" data-interval="false" class="carousel slide">
-            <ol class="carousel-indicators">
-              <li data-target="#carousel-testimonials" data-slide-to="0"></li>
-              <li data-target="#carousel-testimonials" data-slide-to="1"></li>
-              <li data-target="#carousel-testimonials" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-              <div class="item">
-                <div class="item-wrapper text-center">
-                  <div data-icode="" class="carousel-panel container">
-                    <div class="row">
-                      <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                        <h2>Quote</h2>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                        <div class="carousel-panel-text">GoDaddy is Awesome.</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="item-wrapper text-center">
-                  <div data-icode="" class="carousel-panel container">
-                    <div class="row">
-                      <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                        <h2>Quote</h2>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                        <div class="carousel-panel-text">GoDaddy is Awesome.</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="item-wrapper text-center">
-                  <div data-icode="" class="carousel-panel container">
-                    <div class="row">
-                      <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                        <h2>Quote</h2>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                        <div class="carousel-panel-text">GoDaddy is Awesome.</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div><a href="#carousel-testimonials" data-slide="prev" class="left carousel-control"><span class="carousel-icon arrow-left-icon"></span></a><a href="#carousel-testimonials" data-slide="next" class="right carousel-control"><span class="carousel-icon arrow-right-icon"></span></a>
           </div>
-          <script>
-            $('.carousel .carousel-indicators li:first-child').addClass("active");
-            $('.carousel .carousel-inner .item:first-child').addClass("active");
-          </script>
         </div>
       </div>
     </section>
-    <section id="faq" data-mid-nav-title="FAQ"></section>
-    <style>.accordion-group {
+    <section id="testimonials" data-mid-nav-title="Testimonials">
+            <div class="carousel-wrap">
+              <div class="carousel-container container">
+                <div id="carousel-testimonials" data-ride="carousel" data-interval="false" class="carousel slide">
+                  <ol class="carousel-indicators">
+                    <li data-target="#carousel-testimonials" data-slide-to="0"></li>
+                    <li data-target="#carousel-testimonials" data-slide-to="1"></li>
+                    <li data-target="#carousel-testimonials" data-slide-to="2"></li>
+                  </ol>
+                  <div class="carousel-inner">
+                          <div class="item">
+                            <div class="item-wrapper text-center">
+                              <div data-icode="" class="carousel-panel container">
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <h2>Quote</h2>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <div class="carousel-panel-text">GoDaddy is Awesome.</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <div class="item-wrapper text-center">
+                              <div data-icode="" class="carousel-panel container">
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <h2>Quote</h2>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <div class="carousel-panel-text">GoDaddy is Awesome.</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <div class="item-wrapper text-center">
+                              <div data-icode="" class="carousel-panel container">
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <h2>Quote</h2>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <div class="carousel-panel-text">GoDaddy is Awesome.</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                  </div><a href="#carousel-testimonials" data-slide="prev" class="left carousel-control"><span class="carousel-icon arrow-left-icon"></span></a><a href="#carousel-testimonials" data-slide="next" class="right carousel-control"><span class="carousel-icon arrow-right-icon"></span></a>
+                </div>
+                <script>
+                  $('.carousel .carousel-indicators li:first-child').addClass("active");
+                  $('.carousel .carousel-inner .item:first-child').addClass("active");
+                </script>
+              </div>
+            </div>
+    </section>
+    <section id="faq" data-mid-nav-title="FAQ">
+      <style>.accordion-group {
   border-top: 2px solid #e8e8e8;
   border-bottom: 2px solid #e8e8e8;
   list-style: none;
@@ -769,72 +2589,73 @@ margin-bottom: 20px;
   border-left: 6px solid #008a32;
   transition: all 300ms;
 }
-    </style>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <ul id="test-faq" class="accordion-group ">
-            <h2>FAQ!</h2>
-            <li class="accordion-dropdown"><span class="carett caret-right"></span><span>Where am I?</span>
-              <ul class="dropdown">
-                <li>
-                  <div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vestibulum, nisl a lacinia gravida, velit elit convallis ex, ac fringilla ante erat eu ante. Duis pellentesque, dolor et laoreet feugiat, ligula lacus tincidunt ante, id malesuada purus nulla vel erat. Vivamus viverra velit vel imperdiet imperdiet. Morbi fermentum et justo id convallis. Fusce fringilla neque ut vestibulum ornare. Maecenas eleifend diam sit amet cursus finibus. Donec tellus massa, sollicitudin vitae lacus in, posuere suscipit leo. Donec vel dolor sapien. Pellentesque sit amet eleifend justo. Curabitur sed neque ligula. Phasellus vestibulum malesuada erat id elementum. Sed cursus neque et congue accumsan. </p>
-                    <p>Cras varius, tellus eu tristique ultrices, sapien enim ullamcorper odio, nec euismod metus massa vel leo. Praesent finibus lacus purus, in ultrices metus rutrum sed. Vestibulum purus mauris, efficitur id quam vel, consequat malesuada nisi. Duis eu mauris vitae mauris pulvinar maximus eu ac odio. Pellentesque et purus sed lectus dictum auctor non et ligula. Sed pellentesque a urna nec sodales. Vestibulum dignissim iaculis tincidunt. Pellentesque facilisis nec lorem in venenatis. Cras scelerisque aliquet libero, a viverra enim pulvinar id. Maecenas pharetra tortor id quam imperdiet, id accumsan velit dapibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur euismod vulputate enim ac scelerisque. Nunc blandit lectus mattis velit ornare, quis malesuada ex sollicitudin. Phasellus auctor risus et nisl dignissim faucibus vel sit amet ex. Nulla tempor eros et pellentesque maximus. Aliquam finibus auctor justo, quis porta ex vulputate sit amet. </p>
-                    <p>Fusce viverra eget massa ac posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Cras vel ligula venenatis, fringilla purus sit amet, semper ante. Vivamus bibendum maximus dui et finibus. Integer in dignissim dolor, in malesuada massa. Nam accumsan feugiat tortor, eu tincidunt mauris laoreet a. Fusce fermentum dolor eu odio volutpat varius. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis sed augue pretium, ultrices nisi non, maximus tortor. Praesent auctor euismod fringilla.</p>
-                  </div>
-                </li>
-              </ul>
-            </li>
-            <li class="accordion-dropdown"><span class="carett caret-right"></span><span>What's the purpose of life?</span>
-              <ul class="dropdown">
-                <li>
-                  <div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vestibulum, nisl a lacinia gravida, velit elit convallis ex, ac fringilla ante erat eu ante. Duis pellentesque, dolor et laoreet feugiat, ligula lacus tincidunt ante, id malesuada purus nulla vel erat. Vivamus viverra velit vel imperdiet imperdiet. Morbi fermentum et justo id convallis. Fusce fringilla neque ut vestibulum ornare. Maecenas eleifend diam sit amet cursus finibus. Donec tellus massa, sollicitudin vitae lacus in, posuere suscipit leo. Donec vel dolor sapien. Pellentesque sit amet eleifend justo. Curabitur sed neque ligula. Phasellus vestibulum malesuada erat id elementum. Sed cursus neque et congue accumsan. </p>
-                    <p>Cras varius, tellus eu tristique ultrices, sapien enim ullamcorper odio, nec euismod metus massa vel leo. Praesent finibus lacus purus, in ultrices metus rutrum sed. Vestibulum purus mauris, efficitur id quam vel, consequat malesuada nisi. Duis eu mauris vitae mauris pulvinar maximus eu ac odio. Pellentesque et purus sed lectus dictum auctor non et ligula. Sed pellentesque a urna nec sodales. Vestibulum dignissim iaculis tincidunt. Pellentesque facilisis nec lorem in venenatis. Cras scelerisque aliquet libero, a viverra enim pulvinar id. Maecenas pharetra tortor id quam imperdiet, id accumsan velit dapibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur euismod vulputate enim ac scelerisque. Nunc blandit lectus mattis velit ornare, quis malesuada ex sollicitudin. Phasellus auctor risus et nisl dignissim faucibus vel sit amet ex. Nulla tempor eros et pellentesque maximus. Aliquam finibus auctor justo, quis porta ex vulputate sit amet. </p>
-                    <p>Fusce viverra eget massa ac posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Cras vel ligula venenatis, fringilla purus sit amet, semper ante. Vivamus bibendum maximus dui et finibus. Integer in dignissim dolor, in malesuada massa. Nam accumsan feugiat tortor, eu tincidunt mauris laoreet a. Fusce fermentum dolor eu odio volutpat varius. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis sed augue pretium, ultrices nisi non, maximus tortor. Praesent auctor euismod fringilla.</p>
-                  </div>
-                </li>
-              </ul>
-            </li>
-            <div class="text-center">
-              <button id="test-button" class="btn btn-default-dark">hey you</button>
-            </div>
-          </ul>
+      </style>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <ul id="test-faq" class="accordion-group ">
+              <h2>FAQ!</h2>
+              <li class="accordion-dropdown"><span class="carett caret-right"></span><span>Where am I?</span>
+                <ul class="dropdown">
+                  <li>
+                    <div>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vestibulum, nisl a lacinia gravida, velit elit convallis ex, ac fringilla ante erat eu ante. Duis pellentesque, dolor et laoreet feugiat, ligula lacus tincidunt ante, id malesuada purus nulla vel erat. Vivamus viverra velit vel imperdiet imperdiet. Morbi fermentum et justo id convallis. Fusce fringilla neque ut vestibulum ornare. Maecenas eleifend diam sit amet cursus finibus. Donec tellus massa, sollicitudin vitae lacus in, posuere suscipit leo. Donec vel dolor sapien. Pellentesque sit amet eleifend justo. Curabitur sed neque ligula. Phasellus vestibulum malesuada erat id elementum. Sed cursus neque et congue accumsan. </p>
+                      <p>Cras varius, tellus eu tristique ultrices, sapien enim ullamcorper odio, nec euismod metus massa vel leo. Praesent finibus lacus purus, in ultrices metus rutrum sed. Vestibulum purus mauris, efficitur id quam vel, consequat malesuada nisi. Duis eu mauris vitae mauris pulvinar maximus eu ac odio. Pellentesque et purus sed lectus dictum auctor non et ligula. Sed pellentesque a urna nec sodales. Vestibulum dignissim iaculis tincidunt. Pellentesque facilisis nec lorem in venenatis. Cras scelerisque aliquet libero, a viverra enim pulvinar id. Maecenas pharetra tortor id quam imperdiet, id accumsan velit dapibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur euismod vulputate enim ac scelerisque. Nunc blandit lectus mattis velit ornare, quis malesuada ex sollicitudin. Phasellus auctor risus et nisl dignissim faucibus vel sit amet ex. Nulla tempor eros et pellentesque maximus. Aliquam finibus auctor justo, quis porta ex vulputate sit amet. </p>
+                      <p>Fusce viverra eget massa ac posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Cras vel ligula venenatis, fringilla purus sit amet, semper ante. Vivamus bibendum maximus dui et finibus. Integer in dignissim dolor, in malesuada massa. Nam accumsan feugiat tortor, eu tincidunt mauris laoreet a. Fusce fermentum dolor eu odio volutpat varius. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis sed augue pretium, ultrices nisi non, maximus tortor. Praesent auctor euismod fringilla.</p>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="accordion-dropdown"><span class="carett caret-right"></span><span>What's the purpose of life?</span>
+                <ul class="dropdown">
+                  <li>
+                    <div>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vestibulum, nisl a lacinia gravida, velit elit convallis ex, ac fringilla ante erat eu ante. Duis pellentesque, dolor et laoreet feugiat, ligula lacus tincidunt ante, id malesuada purus nulla vel erat. Vivamus viverra velit vel imperdiet imperdiet. Morbi fermentum et justo id convallis. Fusce fringilla neque ut vestibulum ornare. Maecenas eleifend diam sit amet cursus finibus. Donec tellus massa, sollicitudin vitae lacus in, posuere suscipit leo. Donec vel dolor sapien. Pellentesque sit amet eleifend justo. Curabitur sed neque ligula. Phasellus vestibulum malesuada erat id elementum. Sed cursus neque et congue accumsan. </p>
+                      <p>Cras varius, tellus eu tristique ultrices, sapien enim ullamcorper odio, nec euismod metus massa vel leo. Praesent finibus lacus purus, in ultrices metus rutrum sed. Vestibulum purus mauris, efficitur id quam vel, consequat malesuada nisi. Duis eu mauris vitae mauris pulvinar maximus eu ac odio. Pellentesque et purus sed lectus dictum auctor non et ligula. Sed pellentesque a urna nec sodales. Vestibulum dignissim iaculis tincidunt. Pellentesque facilisis nec lorem in venenatis. Cras scelerisque aliquet libero, a viverra enim pulvinar id. Maecenas pharetra tortor id quam imperdiet, id accumsan velit dapibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur euismod vulputate enim ac scelerisque. Nunc blandit lectus mattis velit ornare, quis malesuada ex sollicitudin. Phasellus auctor risus et nisl dignissim faucibus vel sit amet ex. Nulla tempor eros et pellentesque maximus. Aliquam finibus auctor justo, quis porta ex vulputate sit amet. </p>
+                      <p>Fusce viverra eget massa ac posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Cras vel ligula venenatis, fringilla purus sit amet, semper ante. Vivamus bibendum maximus dui et finibus. Integer in dignissim dolor, in malesuada massa. Nam accumsan feugiat tortor, eu tincidunt mauris laoreet a. Fusce fermentum dolor eu odio volutpat varius. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis sed augue pretium, ultrices nisi non, maximus tortor. Praesent auctor euismod fringilla.</p>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <div class="text-center">
+                <button id="test-button" class="btn btn-default-dark">hey you</button>
+              </div>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-    <script type="text/javascript">
-      $(".accordion-dropdown").click(function() {
-        var dropdownGroup = $(this).parent(".accordion-group");
-        var dropdownOptions = $(this).find(".dropdown");
-        var dropdownCaret = $(this).find(".carett");
-        var dropdowns = $(dropdownGroup).find(".accordion-dropdown");
-      
-        $(dropdowns).removeClass("active");
-        $(dropdownGroup).find(".dropdown").slideUp();
-        $(dropdownGroup).find(".carett")
-                        .removeClass("caret-down")
-                        .addClass("caret-right");
-      
-        if (!$(dropdownOptions).is(":visible")) {
-          $(this).addClass("active");
-          $(dropdownOptions).slideDown();
-          $(dropdownCaret).removeClass("caret-right").addClass("caret-down");
-          event.stopPropagation();
-        }
-      });
-      $(window).load(function() {
-        $("#test-faq .accordion-dropdown:first").click();
-      });
-      $("#test-button").click(function() {
-        $('#test-faq').find('.dropdown').slideDown();
-        $('#test-faq').find('.accordion-dropdown').find('.carett')
-                        .removeClass("caret-right")
-                        .addClass("caret-down");
-        $('#test-faq').find('.accordion-dropdown').addClass("active");
-       });
-    </script>
+      <script type="text/javascript">
+        $(".accordion-dropdown").click(function() {
+          var dropdownGroup = $(this).parent(".accordion-group");
+          var dropdownOptions = $(this).find(".dropdown");
+          var dropdownCaret = $(this).find(".carett");
+          var dropdowns = $(dropdownGroup).find(".accordion-dropdown");
+        
+          $(dropdowns).removeClass("active");
+          $(dropdownGroup).find(".dropdown").slideUp();
+          $(dropdownGroup).find(".carett")
+                          .removeClass("caret-down")
+                          .addClass("caret-right");
+        
+          if (!$(dropdownOptions).is(":visible")) {
+            $(this).addClass("active");
+            $(dropdownOptions).slideDown();
+            $(dropdownCaret).removeClass("caret-right").addClass("caret-down");
+            event.stopPropagation();
+          }
+        });
+        $(window).load(function() {
+          $("#test-faq .accordion-dropdown:first").click();
+        });
+        $("#test-button").click(function() {
+          $('#test-faq').find('.dropdown').slideDown();
+          $('#test-faq').find('.accordion-dropdown').find('.carett')
+                          .removeClass("caret-right")
+                          .addClass("caret-down");
+          $('#test-faq').find('.accordion-dropdown').addClass("active");
+         });
+      </script>
+    </section>
     <section id="other-products">
       <style>
 .two-up-title-wrap.bg-white {
@@ -1038,7 +2859,8 @@ margin-bottom: 20px;
 }
 @media (min-width: 992px) {
   .or-container:after {
-    left: 121%
+    left: 121%;
+    bottom: 50%;
   }
 }
 
@@ -1109,6 +2931,15 @@ margin-bottom: 20px;
 .two-up-speech-shape.two-up-speech-shape-white:after {
   background-color: #fff;
 }
+.two-up-speech-shape.two-up-speech-shape-yellow {
+  background-color: #ffde2d;
+}
+.two-up-speech-shape.two-up-speech-shape-yellow:before {
+  border-top-color: #ffde2d;
+}
+.two-up-speech-shape.two-up-speech-shape-yellow:after {
+  background-color: #ffde2d;
+}
       </style>
       <div id="two-up" class="two-up-title-wrap bg-white">
         <div>
@@ -1154,6 +2985,7 @@ margin-bottom: 20px;
         </div>
       </div>
     </section>
+    <section id="disclaimers">disclaimers</section>
     <!-- FOOTERBEGIN--> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- FOOTEREND-->

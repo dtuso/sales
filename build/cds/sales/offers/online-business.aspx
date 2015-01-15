@@ -483,8 +483,7 @@ function showTypeYourDomain() {
     </atlantis:webstash>
     <link href="[@T[link:<cssroot />]@T]/fos/mike/0.7.0/css/sahara.css" rel="stylesheet">
     <link href="[@T[link:<cssroot />]@T]/fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css">
-    <style>
-.bg-gray-light {
+    <style>.bg-gray-light {
   background-color: #d9d9d9;
 }
 
@@ -530,6 +529,7 @@ function showTypeYourDomain() {
 .tlds-in,
 .tlds-rocks,
 .tlds-club { display: none;}
+
     </style><!--[if lt IE 9]>
     <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
     <link href="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy.min.html" id="respond-proxy" rel="respond-proxy">
@@ -936,6 +936,7 @@ function showTypeYourDomain() {
       <style>
         #products.tile-section{ padding-top: 0;padding-bottom: 0;}
         #products {padding-bottom:40px;}
+        #products .key-benefits-wrap .features-text {color:#333;}
         
         /* KEY BENEFITS */
         .key-benefits-wrap[class*="bg-"]:not(.bg-gray-light) {
@@ -1238,8 +1239,9 @@ function showTypeYourDomain() {
                 <div class="plan-flag">[@L[cds.sales/offers/online-business:32573-choose-wsb]@L]</div>
                 <h2>[@L[cds.sales/offers/online-business:32573-choose-wsb-text]@L]</h2>
                 <h4>[@L[cds.sales/offers/online-business:32573-choose-wsb-all-this-for-just-text]@L]</h4>
-                <div class="plan-price-wrap">[@L[cds.sales/offers/online-business:32573-choose-wsb-all-this-for-just-price]@L]
-                  <div class="plan-inline-disclaimer">[@L[cds.sales/offers/online-business:32573-choose-wsb-text-price-disclaimer]@L] [@L[cds.sales/offers/online-business:32573-choose-wsb-text-price-disclaimer-link]@L]</div>
+                <div data-tokenize="[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T]" class="plan-price-wrap">[@L[cds.sales/offers/online-business:32573-choose-wsb-all-this-for-just-price]@L]</div>
+                <div data-tokenize="[@T[multipleproductprice:<list productidlist="464069|101|7524" period="monthly" promocode="0" />]@T]" class="plan-inline-disclaimer">[@L[cds.sales/offers/online-business:32573-choose-wsb-text-price-disclaimer]@L] 
+                  <button class="btn-link see-wsb-disclaimer-link">[@L[cds.sales/offers/online-business:32573-choose-wsb-text-price-disclaimer-link]@L]</button>
                 </div>
                 <button class="btn btn-md btn-block btn-purchase product-wsb">[@L[cds.sales/offers/online-business:32573-choose-select-button]@L]</button>
                 <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-choose-wsb-bullet-1]@L]</div>
@@ -1256,8 +1258,9 @@ function showTypeYourDomain() {
                 <div class="plan-flag">[@L[cds.sales/offers/online-business:32573-choose-ols]@L]</div>
                 <h2>[@L[cds.sales/offers/online-business:32573-choose-ols-text]@L]</h2>
                 <h4>[@L[cds.sales/offers/online-business:32573-choose-ols-all-this-for-just-text]@L]</h4>
-                <div class="plan-price-wrap">[@L[cds.sales/offers/online-business:32573-choose-ols-all-this-for-just-price]@L]
-                  <div class="plan-inline-disclaimer">[@L[cds.sales/offers/online-business:32573-choose-ols-text-price-disclaimer]@L] [@L[cds.sales/offers/online-business:32573-choose-ols-text-price-disclaimer-link]@L]</div>
+                <div data-tokenize="[@T[multipleproductprice:<current productidlist="464069|101|40972" period="monthly" promocode="75315678" />]@T]" class="plan-price-wrap">[@L[cds.sales/offers/online-business:32573-choose-ols-all-this-for-just-price]@L]</div>
+                <div data-tokenize="[@T[multipleproductprice:<list productidlist="464069|101|40972" period="monthly" promocode="0" />]@T]" class="plan-inline-disclaimer">[@L[cds.sales/offers/online-business:32573-choose-ols-text-price-disclaimer]@L] 
+                  <button class="btn-link see-ols-disclaimer-link">[@L[cds.sales/offers/online-business:32573-choose-ols-text-price-disclaimer-link]@L]</button>
                 </div>
                 <button class="btn btn-md btn-block btn-purchase product-ols">[@L[cds.sales/offers/online-business:32573-choose-select-button]@L]</button>
                 <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-choose-ols-bullet-1]@L]</div>
@@ -1273,6 +1276,14 @@ function showTypeYourDomain() {
       <div class="sf-dialog api-c-failure-modal">
         <p>[@L[cds.sales/offers/online-business:32573-get-it-now-error]@L]</p>
       </div>
+      <div id="step2-choose-product-wsb-modal" data-title="[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]" class="tokenizable-disclaimer-modal sf-dialog">
+        <h2>WSB [@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]</h2>
+        <p>[@L[cds.sales/offers/online-business:32573-disclaimer-modal-wsb-content]@L]</p>
+      </div>
+      <div id="step2-choose-product-ols-modal" data-title="[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]" class="tokenizable-disclaimer-modal sf-dialog">
+        <h2>OLS [@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]</h2>
+        <p>[@L[cds.sales/offers/online-business:32573-disclaimer-modal-ols-content]@L]</p>
+      </div>
     </section>
     <atlantis:webstash type="css">
       <style>
@@ -1280,11 +1291,13 @@ function showTypeYourDomain() {
           font-size: 24px;
           margin: 10px 10% 20px;
         }
+        #site-choice-compare .button-margin {
+          margin-top:20px;
+        }
         
         #site-choice-compare .disclaimer-mark p {
           font-size: 14px;
         }
-        
         
         /* (start) TWO UP COMPARE */
         
@@ -1292,6 +1305,7 @@ function showTypeYourDomain() {
           margin: 40px 0;
           line-height: 1;
         }
+        
         .two-up-speech-shape {
           font-family: 'Walsheim-Bold';
           font-size: 18px;
@@ -1303,6 +1317,7 @@ function showTypeYourDomain() {
           margin-bottom: 20px;
           z-index: 2;
         }
+        
         .two-up-speech-shape .shape-text {
           position: relative;
           z-index: 40;
@@ -1480,7 +1495,7 @@ function showTypeYourDomain() {
           content: '';
           width: 94px;
           height: 94px;
-          background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+          background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
           background-size: 205px auto;
           background-position: 0 -896px;
           position: absolute;
@@ -1567,7 +1582,7 @@ function showTypeYourDomain() {
           content: '';
           width: 94px;
           height: 94px;
-          background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+          background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
           background-size: 205px auto;
           background-position: 0 -896px;
           position: absolute;
@@ -1600,7 +1615,7 @@ function showTypeYourDomain() {
         }
         .two-up-wrap-compare .check-bullets li:before {
           content: '';
-          background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+          background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
           background-size: 205px auto;
           background-position: 0 -700px;
           width: 25px;
@@ -1612,11 +1627,6 @@ function showTypeYourDomain() {
           margin-bottom: 5px;
         }
         /* (end) TWO UP COMPARE */
-        
-        
-        /* GLOBAL FEATURES CSS */
-        /* (end) GLOBAL FEATURES CSS */
-        
         
       </style>
     </atlantis:webstash>
@@ -1638,12 +1648,17 @@ function showTypeYourDomain() {
                 <div class="text-center two-up-image"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-wsb-icon.png"></div>
                 <h2 class="text-center">[@L[cds.sales/offers/online-business:32573-godaddy-wsb]@L]</h2>
                 <h3 class="text-center">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text]@L]</h3>
-                <mark class="text-center disclaimer-mark">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price]@L] <p class="disclaimer">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price-disclaimer]@L] <a>[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price-disclaimer-link]@L]</a></p></mark>
+                <mark class="text-center disclaimer-mark"> 
+                  <div data-tokenize="[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T]">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price]@L] </div>
+                  <p data-tokenize="[@T[multipleproductprice:<list productidlist="464069|101|7524" period="monthly" promocode="0" />]@T]" class="disclaimer">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price-disclaimer]@L] 
+                    <button class="btn-link see-wsb-disclaimer-link">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price-disclaimer-link]@L]</a></button>
+                  </p>
+                </mark>
                 <div class="row text-center">
-                  <div class="col-md-6">
+                  <div class="col-md-6 button-margin">
                     <button class="btn btn-md btn-primary"><i class="uxicon uxicon-play"></i> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]</button>
                   </div>
-                  <div class="col-md-6">
+                  <div class="col-md-6 button-margin">
                     <button class="btn btn-md btn-primary">[@L[cds.sales/offers/online-business:32573-view-designs-button]@L]</button>
                   </div>
                 </div>
@@ -1681,12 +1696,17 @@ function showTypeYourDomain() {
                 <div class="text-center two-up-image"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-onlineStore.png"></div>
                 <h2 class="text-center">[@L[cds.sales/offers/online-business:32573-godaddy-ols]@L]</h2>
                 <h3 class="text-center">[@L[cds.sales/offers/online-business:32573-godaddy-ols-text]@L]</h3>
-                <mark class="text-center disclaimer-mark">[@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price]@L] <p class="disclaimer">[@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price-disclaimer]@L] <a>[@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price-disclaimer-link]@L]</a></p></mark>
+                <mark class="text-center disclaimer-mark"> 
+                  <div data-tokenize="[@T[multipleproductprice:<current productidlist="464069|101|40972" period="monthly" promocode="75315678" />]@T]">[@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price]@L] </div>
+                  <p data-tokenize="[@T[multipleproductprice:<list productidlist="464069|101|40972" period="monthly" promocode="0" />]@T]" class="disclaimer">[@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price-disclaimer]@L] 
+                    <button class="btn-link see-ols-disclaimer-link">[@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price-disclaimer-link]@L]</button>
+                  </p>
+                </mark>
                 <div class="row text-center">
-                  <div class="col-md-6">
+                  <div class="col-md-6 button-margin">
                     <button class="btn btn-md btn-primary"><i class="uxicon uxicon-play"></i> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]</button>
                   </div>
-                  <div class="col-md-6">
+                  <div class="col-md-6 button-margin">
                     <button class="btn btn-md btn-primary">[@L[cds.sales/offers/online-business:32573-see-real-stores-button]@L]</button>
                   </div>
                 </div>
@@ -1742,6 +1762,12 @@ function showTypeYourDomain() {
             </div>
           </div>
         </div>
+      </div>
+      <div id="site-choice-wsb-modal" data-title="[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]" class="tokenizable-disclaimer-modal sf-dialog">
+        <p>[@L[cds.sales/offers/online-business:32573-disclaimer-modal-wsb-content]@L]</p>
+      </div>
+      <div id="site-choice-ols-modal" data-title="[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]" class="tokenizable-disclaimer-modal sf-dialog">
+        <p>[@L[cds.sales/offers/online-business:32573-disclaimer-modal-ols-content]@L]</p>
       </div>
     </section>
     <section id="disclaimers"> 
