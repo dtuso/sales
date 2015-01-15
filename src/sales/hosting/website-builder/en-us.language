@@ -1,23 +1,21 @@
 <phrase key="main-banner-subtitle" />
 Website Builder
 <phrase key="header_subtitle_1" />
-Easily create your 
+NO SKILLS? NO TIME?
 <phrase key="header_subtitle_2" />
-own professional website
+------------- NO PROBLEM.
 <phrase key="wsb-main-listitem-1" />
-<span class="condensed">EASY</span>&nbsp;to use - no technical skills required
+<span class="condensed">EASY TO USE</span> – you’ve got the skills, seriously
 <phrase key="wsb-main-listitem-2" />
-<span class="condensed">HUNDREDS</span>&nbsp;of customizable designs
+<span class="condensed">HUNDREDS(!)</span> of customizable designs
 <phrase key="wsb-main-listitem-3" />
-<span class="condensed">FREE DOMAIN</span>&nbsp;and&nbsp;<span class="condensed">FREE HOSTING</span>
-<phrase key="get-started-btn-general" />
-Get Started
+<span class="condensed">FREE DOMAIN</span> and <span class="condensed">FREE HOSTING</span>
 <phrase key="slider-build-a-site-title" />
-Create a site you can be proud of
+GET YOUR OWN WEBSITE--------
 <phrase key="sb_plans_title_2" />
 WITHOUT HIRING SOME HIPSTER DESIGNER
 <phrase key="plan-pricing-tab-header-text" />
-We understand that you don’t always have time to work on your website during “business hours.” That’s why our award-winning support staff is here 24/7/365. If inspiration strikes at 2am on a Tuesday, one of our friendly, knowledgeable web pros will be here to help you make the most of it.
+Trying to track down a local bearded millennial to build your professional website? Avoid the coffee houses, and build it yourself. Website Builder gives you all the templates and tools you need to quickly build a beautiful, unique site to be proud of. Do it yourself and save your money for your own new flannel.
 <phrase key="personal-title" />
 Personal
 <phrase key="economy-title" />
@@ -95,7 +93,7 @@ For your growing business needs
 <phrase key="unlimited-bandwidth" />
 <strong>1000 GB</strong> Bandwidth
 <phrase key="unlimited-themes" />
-<strong>300</strong> Business &amp; Personal Themes
+<strong>300</strong> Business<span class="text-uk"> & Personal</span> Themes
 <phrase key="was" comment="was X Save x percent" />
 was
 <phrase key="save" />
@@ -103,3 +101,76 @@ Save
 
 
 
+
+<phrase key="sb_templates_title_1" />
+CREATE A PROFESSIONAL WEBSITE
+<phrase key="sb_templates_title_2" />
+---------- JUST LIKE THAT
+<phrase key="sb_templates_text" />
+Choose from hundreds of customizable designs, tailored to what you do.
+<phrase key="sb_video_title" />
+MAKE IT YOUR WAY---------------ASSUMING YOU WANT IT UNCOMPLICATED AND GORGEOUS
+<phrase key="sb_video_subtitle" />
+We give you intuitive design tools; you plug in some info and create the site you've always wanted easier than you ever imagined.
+<phrase key="sb__apps_title" />
+Popular apps keep your site fresh
+<phrase key="sb_apps_subtitle" />
+Easily integrate social and business apps in your site to share information and keep customers coming back.
+<phrase key="sb_business_title" />
+Business Plus Plan Exclusives
+<phrase key="sb_business_subtitle_1" />
+Get a website with a social life
+<phrase key="sb_business_subtitle_2" />
+Getting seen on Google is a cinch
+<phrase key="sb_business_text_1" />
+Our One-Click Social Media Manager instantly matches your Facebook® and Twitter® pages to your website so they're always in sync. Don't have a Twitter page? Create one with just a click!
+<phrase key="sb_business_text_2" />
+The built-in Search Engine Optimization (SEO) tool in our Business Plus plan helps you show up on Google®, Yahoo!®, and more.
+<phrase key="sb_help_title" />
+WE’LL HOLD YOUR HAND UNTIL ----------- IT’S AWKWARD
+<phrase key="sb_text" />
+You don’t have time to work on your website during “business hours;” you don’t even have time to sweep. That’s why our award-winning support staff is here 24/7/365. So, when inspiration strikes at 2am on a Tuesday, you can breathe easy, knowing our friendly, knowledgeable web pros are here to hear your cries and step you through it all.
+<phrase key="sb_xsell_title" />
+NOT FINDING WHAT YOU NEED?
+<phrase key="sb_xsell_wp" />
+MANAGED WORDPRESS
+<phrase key="sb_xsell_wp_1" />
+Get the power of WordPress with the ease of fully-managed hosting and security.
+<phrase key="sb_xsell_wp_2" />
+Perfect for: Bloggers, start-ups, small businesses, and designers
+<phrase key="sb_xsell_qs" />
+QUICK SHOPPING CART
+<phrase key="sb_xsell_qs_1" />
+Everything you need to open your own online store – no technical skills required.
+<phrase key="sb_qs_2" />
+Perfect for: eCommerce businesses and those looking to add online sales to their site
+<phrase key="sb_nav_1" />
+FEATURES
+<phrase key="sb_nav_2" />
+REVIEWS
+<phrase key="sb_nav_3" />
+FAQ
+<phrase key="yr" />
+/yr
+<phrase key="year" />
+/year
+<phrase key="sb_nav_see" />
+See The Plans
+<phrase key="sb_plans_starting_at" />
+Plans starting at
+<phrase key="sb_view_templates" />
+View All Templates
+<phrase key="sb_view_preview" />
+Preview
+<phrase key="sb_bpp_starting_at" />
+<span class="condensed">Business Plus Plans</span> starting at
+<phrase key="sb_faq_see" />
+See All Questions
+<phrase key="rb_disclaimers" />
+Product disclaimers and legal policies
+<phrase key="rb_disclaimers_view" />
+View
+<phrase key="rb_disclaimers_3p" />
+Third-party logos and marks are registered trademarks of their respective owners. All rights reserved.
+<phrase key="rb_how_it_works" />
+How it works
