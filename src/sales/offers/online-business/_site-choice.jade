@@ -4,6 +4,9 @@ atlantis:webstash(type="css")
       font-size: 24px;
       margin: 10px 10% 20px;
     }
+    #site-choice-compare .button-margin {
+      margin-top:20px;
+    }
 
     #site-choice-compare .disclaimer-mark p {
       font-size: 14px;
@@ -15,6 +18,7 @@ atlantis:webstash(type="css")
       margin: 40px 0;
       line-height: 1;
     }
+
     .two-up-speech-shape {
       font-family: 'Walsheim-Bold';
       font-size: 18px;
@@ -26,6 +30,7 @@ atlantis:webstash(type="css")
       margin-bottom: 20px;
       z-index: 2;
     }
+
     .two-up-speech-shape .shape-text {
       position: relative;
       z-index: 40;
@@ -203,7 +208,7 @@ atlantis:webstash(type="css")
       content: '';
       width: 94px;
       height: 94px;
-      background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+      background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
       background-size: 205px auto;
       background-position: 0 -896px;
       position: absolute;
@@ -290,7 +295,7 @@ atlantis:webstash(type="css")
       content: '';
       width: 94px;
       height: 94px;
-      background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+      background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
       background-size: 205px auto;
       background-position: 0 -896px;
       position: absolute;
@@ -323,7 +328,7 @@ atlantis:webstash(type="css")
     }
     .two-up-wrap-compare .check-bullets li:before {
       content: '';
-      background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+      background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
       background-size: 205px auto;
       background-position: 0 -700px;
       width: 25px;
@@ -335,11 +340,6 @@ atlantis:webstash(type="css")
       margin-bottom: 5px;
     }
     /* (end) TWO UP COMPARE */
-
-
-    /* GLOBAL FEATURES CSS */
-    /* (end) GLOBAL FEATURES CSS */
-
 
 section#site-choice
   #site-choice-title.bg-green-new  
@@ -358,13 +358,14 @@ section#site-choice
               img(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-wsb-icon.png")
             h2.text-center [@L[cds.sales/offers/online-business:32573-godaddy-wsb]@L]
             h3.text-center [@L[cds.sales/offers/online-business:32573-godaddy-wsb-text]@L]
-            mark.text-center.disclaimer-mark [@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price]@L] 
-              p.disclaimer[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price-disclaimer]@L] 
+            mark.text-center.disclaimer-mark 
+              div(data-tokenize!='[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T]') [@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price]@L] 
+              p.disclaimer(data-tokenize!='[@T[multipleproductprice:<list productidlist="464069|101|7524" period="monthly" promocode="0" />]@T]') [@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price-disclaimer]@L] 
                 button.btn-link.see-wsb-disclaimer-link [@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price-disclaimer-link]@L]</a>
             .row.text-center
-              .col-md-6
+              .col-md-6.button-margin
                 button.btn.btn-md.btn-primary <i class="uxicon uxicon-play"></i> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]
-              .col-md-6
+              .col-md-6.button-margin
                 button.btn.btn-md.btn-primary [@L[cds.sales/offers/online-business:32573-view-designs-button]@L]
             .row
               .col-sm-10
@@ -389,13 +390,14 @@ section#site-choice
               img(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-onlineStore.png")
             h2.text-center [@L[cds.sales/offers/online-business:32573-godaddy-ols]@L]
             h3.text-center [@L[cds.sales/offers/online-business:32573-godaddy-ols-text]@L]
-            mark.text-center.disclaimer-mark [@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price]@L] 
-              p.disclaimer [@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price-disclaimer]@L] 
+            mark.text-center.disclaimer-mark 
+              div(data-tokenize!='[@T[multipleproductprice:<current productidlist="464069|101|40972" period="monthly" promocode="75315678" />]@T]')[@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price]@L] 
+              p.disclaimer(data-tokenize!='[@T[multipleproductprice:<list productidlist="464069|101|40972" period="monthly" promocode="0" />]@T]') [@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price-disclaimer]@L] 
                 button.btn-link.see-ols-disclaimer-link [@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price-disclaimer-link]@L]
             .row.text-center
-              .col-md-6
+              .col-md-6.button-margin
                 button.btn.btn-md.btn-primary <i class="uxicon uxicon-play"></i> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]
-              .col-md-6
+              .col-md-6.button-margin
                 button.btn.btn-md.btn-primary [@L[cds.sales/offers/online-business:32573-see-real-stores-button]@L]
             .row
               .col-sm-10
@@ -428,9 +430,7 @@ section#site-choice
                     h5 [@L[cds.sales/offers/online-business:32573-godaddy-ols-bullet-13]@L]
                   li 
                     h5 [@L[cds.sales/offers/online-business:32573-godaddy-ols-bullet-14]@L]
-  #site-choice-wsb-modal.tokenizable-disclaimer-modal.sf-dialog
-    h2 [@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]
+  #site-choice-wsb-modal.tokenizable-disclaimer-modal.sf-dialog(data-title!='[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]')
     p [@L[cds.sales/offers/online-business:32573-disclaimer-modal-wsb-content]@L]
-  #site-choice-ols-modal.tokenizable-disclaimer-modal.sf-dialog
-    h2 [@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]
+  #site-choice-ols-modal.tokenizable-disclaimer-modal.sf-dialog(data-title!='[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]')
     p [@L[cds.sales/offers/online-business:32573-disclaimer-modal-ols-content]@L]

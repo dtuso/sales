@@ -1,14 +1,14 @@
 extends ../../../templates/marquees/landing-page-marquee.jade
 
-block marqueeStyles
+append marqueeStyles
   style.
-    .marquee { background: url([@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Marquee.jpg) no-repeat top center;); }
+    .marquee { background: url([@T[link:<imageroot />]@T]fos/mike/img/hosting/bg-marquee-V10.jpg) no-repeat top center;); }
 
 block topAlignedContent
   +productReview(5, "#")
-  +productDescription("FAST, SECURE, RELIABLE HOSTING THAT GROWS WITH YOUR BUSINESS")
-  +productText("Industry's leading page load times. 99.9% Uptime Guarantee*.")
-  +callToAction("Get Started","[@T[link:<relative path='~/hosting/web-hosting-config-new.aspx' secure='true'><param name='ci' value='89262' /><param name='plan' value='host_GridHostEcoDiabloLin1Yr_us' /></relative>]@T]")
+  +productDescription("[@L[cds.sales/hosting/web-hosting-rebrand:marquee]@L]")
+  +productText("[@L[cds.sales/hosting/web-hosting-rebrand:guaranteeText1]@L] [@L[cds.sales/hosting/web-hosting-rebrand:guaranteeText2]@L]")
+  +callToAction("[@L[cds.sales/hosting/web-hosting-rebrand:getstarted]@L]","[@T[link:<relative path='~/hosting/web-hosting-config-new.aspx' secure='true'><param name='ci' value='89262' /><param name='plan' value='host_GridHostEcoDiabloLin1Yr_us' /></relative>]@T]")
 
   //-
     .marquee-product-review

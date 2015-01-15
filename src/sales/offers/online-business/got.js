@@ -2,7 +2,7 @@ var got1Page = {
   tldInfo: {
     defaultTld: 'com',    
     tlds: ['com','org','co','net', 'club', 'rocks'],  /* todo: drive from a config val */
-    possibleAdditionalTlds: ['in', 'ca'], /* todo: drive from a config val */
+    possibleAdditionalTlds: ['in', 'ca', 'uk', 'co.uk'], /* todo: drive from a config val */
     isPossibleAdditionalTld: function(tld) {return -1 !== $.inArray(tld, got1Page.tldInfo.possibleAdditionalTlds);}
   },
   sfDialogErrorButtons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }],
@@ -17,9 +17,9 @@ var got1Page = {
   },
   pricing: {
     promo_wsb: '[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T]',
-    promo_ols: '[@T[multipleproductprice:<current productidlist="40972|101|7524" period="monthly" promocode="75315678" />]@T]',
+    promo_ols: '[@T[multipleproductprice:<current productidlist="464069|101|40972" period="monthly" promocode="75315678" />]@T]',
     bundleRenewal_wsb: '[@T[multipleproductprice:<list productidlist="464069|101|7524" period="monthly"></list>]@T]',
-    bundleRenewal_ols: '[@T[multipleproductprice:<list productidlist="40972|101|7524" period="monthly"></list>]@T]',
+    bundleRenewal_ols: '[@T[multipleproductprice:<list productidlist="464069|101|40972" period="monthly"></list>]@T]',
     bingAdCredits: '[@T[currencyprice:<price usdamount="5000" dropdecimal="true" htmlsymbol="false" />]@T]'
   },
   imagePath: '[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/',
@@ -27,7 +27,7 @@ var got1Page = {
 };
 
 ##if(!productIsOffered(105))
-got1Page.canOfferOls = false;
+  got1Page.canOfferOls = false;
 ##endif
 
 
@@ -161,16 +161,25 @@ function wireUpDisclaimerModals() {
   var marqueeModalId = got1Page.canOfferOls ? "#default-marquee-details-modal" : "#default-marquee-details-modal-wsb-only";
   $('#default-marquee-view').on('click', '.see-details-disclaimer-link', function(){
     var $modal = $(marqueeModalId);
-    $modal.sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
+    $modal.sfDialog({buttons: got1Page.sfDialogErrorButtons});
   });
 
   // product split modals
   $('#site-choice').on('click', '.see-wsb-disclaimer-link', function(){
-    $("#site-choice-wsb-modal").sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
+    $("#site-choice-wsb-modal").sfDialog({buttons: got1Page.sfDialogErrorButtons});
   });
   $('#site-choice').on('click', '.see-ols-disclaimer-link', function(){
-    $("#site-choice-ols-modal").sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
+    $("#site-choice-ols-modal").sfDialog({buttons: got1Page.sfDialogErrorButtons});
   });
+
+  // choose product screen
+  $('#step2-choose-product').on('click', '.see-wsb-disclaimer-link', function(){
+    $("#step2-choose-product-wsb-modal").sfDialog({buttons: got1Page.sfDialogErrorButtons});
+  });
+  $('#step2-choose-product').on('click', '.see-ols-disclaimer-link', function(){
+    $("#step2-choose-product-ols-modal").sfDialog({buttons: got1Page.sfDialogErrorButtons});
+  });
+
 
 }
 
@@ -313,6 +322,12 @@ function verifyDomainIsStillAvailable(e) {
 }
 
 function showChoicesScreen(e){
+
+  // bypass the choices if OLS is not available for their market
+  if(!got1Page.canOfferOls) {
+    goToDppCheckoutPage(e);
+    return;
+  }
   var $this = $(e.target),
     domain = $this.data('domain');
 

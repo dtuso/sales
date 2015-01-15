@@ -32,14 +32,108 @@
     <meta name="twitter:image:src" content="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/online-business/img/og_got_1200x630.jpg"> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <script src="[@T[link:<javascriptroot />]@T]/ux/dev-brand/js/uxcore.en.min.js"></script>
-    <script src="[@T[link:<javascriptroot />]@T]/ux/dev-brand/js/uxcontrols.min.js"></script>
-    <script src="[@T[link:<javascriptroot />]@T]/fos/mike/0.7.0/js/sahara.min.js"></script>
+    <script>
+      var head = (typeof document.head !== 'undefined' ? document.head : document.getElementsByTagName('head')[0]);
+      var insertBefore = head.insertBefore;
+      var delayLoader = (function(headNode) {
+        var elements = [];
+        var fnOnDelayLoadComplete = [];
+      
+        function addElement(element) {
+          elements.unshift(element);  // Insert in the order received
+        }
+      
+        return {
+          addElement: function(element) {
+            addElement(element);
+          },
+          addScript: function(url, params) {
+            params = params || {};
+      
+            var script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.src = url;
+            script.async = true;
+            if (typeof params.id !== 'undefined') {
+              script.id = params.id;
+            }
+            addElement(script);
+            for (var i = 0; i < fnOnDelayLoadComplete.length; i++) {
+              fnOnDelayLoadComplete[i]();
+            }
+          },
+          onDelayLoadComplete: function(callback) {
+            fnOnDelayLoadComplete.unshift(callback);
+          },
+          load: function() {
+            for (var i = 0; i < elements.length; i++) {
+              insertBefore.call(headNode, elements[i], headNode.firstChild);
+            }
+            head.insertBefore = insertBefore;
+          }
+        };
+      })(head);
+      
+      var oldOnload = window.onload;
+      window.onload = function() {
+        delayLoader.load();
+        if (oldOnload) {
+          oldOnload();
+        }
+      };
+      
+      head.insertBefore = function (newElement, referenceElement) {
+        if (newElement.tagName === 'SCRIPT') {
+          delayLoader.addElement(newElement);
+        } else {
+          insertBefore.call(head, newElement, referenceElement);
+        }
+      };
+      
+      function endOfPageScripts() {
+      
+        // jquery.domainscout.1.0.0.js
+        if("undefined"==typeof domainscout){var domainscout={version:"1.0.2"};$(document).ready(function(){function b(a){var b=a,d=b.data("domainscout")||b.data("domainsearch");if(b[0]["ds-domain"]=b.find(d["search-element"]),b[0]["ds-placeholder"]=b.find(d["placeholder-element"]),b[0]["ds-button"]=b.find(d.button),b[0]["ds-url"]=d.url,b[0]["ds-ci"]=d.ci,b[0]["ds-hide-label"]=d["hide-label"],b[0]["ds-empty-redirect"]=d["empty-redirect"],"undefined"==typeof b[0]["ds-hide-label"]&&(b[0]["ds-hide-label"]=!0),1==b[0]["ds-domain"].length&&(b[0]["ds-domain"].is("input")||b[0]["ds-domain"].is("textarea"))){if(domainscout.items=domainscout.items.add(b),b[0]["ds-placeholder"].is("label")){var e=b[0]["ds-domain"].attr("id");"undefined"==typeof e&&(e="ds-"+domainscout.items.length,b[0]["ds-domain"].attr("id",e)),b[0]["ds-placeholder"].attr("for",e)}else b[0]["ds-placeholder"].bind("click",function(){b[0]["ds-domain"].focus()});b[0]["ds-domain"].val(""),b[0]["ds-domain"].bind("focus.ds-event",function(){b.addClass("ds-focus"),b[0]["ds-domain"].bind("keydown.ds-event",function(a){var d=[16,27,20,8,37,38,39,40];13==a.which?(c(b),a.preventDefault()):-1==d.indexOf(a.which)&&b[0]["ds-hide-label"]&&b[0]["ds-placeholder"].css("display","none")})}),b[0]["ds-domain"].bind("blur.ds-event",function(){b.removeClass("ds-focus"),b[0]["ds-domain"].unbind("keydown.ds-event"),b[0]["ds-hide-label"]&&""==b[0]["ds-domain"].val()&&"none"==b[0]["ds-placeholder"].css("display")&&b[0]["ds-placeholder"].css("display","block")})}b[0]["ds-button"].bind("click",function(a){a.stopPropagation(),a.preventDefault(),"undefined"!=typeof _trfq&&_trfq.push(["cmdLogPageEvent","click","","",b[0]]),c(b)})}function c(a){var b=$(a),c=!0,e=!1,g=b[0]["ds-url"];"undefined"==typeof b[0]["ds-url"]&&(g=b.attr("action"),("undefined"==typeof g||"#"==g)&&(c=!1));var h;c&&1==b[0]["ds-domain"].length?(h=b[0]["ds-domain"].val(),"undefined"!=typeof h&&""!=h?(g=g.split("?")[0],g=g+"?domainToCheck="+d(h)):(g=b[0]["ds-empty-redirect"],g.indexOf(location.protocol)&&(g=location.protocol+g),e=!0,"undefined"==typeof g&&(c=!1))):c=!1,c&&(e||(g+="&checkAvail=1","undefined"==b[0]["ds-ci"]&&(b[0]["ds-url"]=f("ci")),"undefined"!=b[0]["ds-ci"]&&(g=g+"&"+b[0]["ds-ci"])),window.location.href=g)}function d(a){return a}function e(a){return a instanceof $||(a=$(a)),a}function f(a){var b=decodeURI((RegExp(a+"="+"(.+?)(&|$)").exec(location.search)||[,null])[1]);return"null"==b&&(b=void 0),b}var a=$("[data-domainscout],[data-domainsearch]");domainscout.items=$(),a.each(function(){b($(this))}),domainscout.add=function(a){b(e(a))},domainscout.search=function(a){c(e(a))}})}
+      
+        // jquery.lazyload.1.0.0.js
+        !function(a){function b(a,b){"undefined"==typeof b&&(b=a.data("lazy-load"));var c=b.src||b.source;"undefined"!=typeof c&&(a[0].lazyload=b,lazyload.items=lazyload.items.add(a),e(a))}function c(){e(a(window)),lazyload.items.each(function(){d(a(this))})}function d(b){var c=b[0].lazyload.updatePosition||lazyload.__defaults.updatePosition,d=d||lazyload.__defaults.updateWindowScroll;b[0].lazyload.checkHorizontal||lazyload.__defaults.checkHorizontal,c&&e(b),e(a(window));var g=b[0].lazyload.positionTop,i=b[0].lazyload.positionBottom,j=lazyload.windowTop,k=lazyload.windowBottom;g<k+lazyload.__defaults.loadBufferDistance&&i>j-lazyload.__defaults.loadBufferDistance&&h(b)}function e(a){var b=a[0];if(b==window)lazyload.updateWindowPosition&&(lazyload.windowTop=a.scrollTop(),lazyload.windowLeft=a.scrollLeft(),lazyload.windowRight=lazyload.windowLeft+a.width(),lazyload.windowBottom=lazyload.windowTop+a.height(),lazyload.updateWindowPosition=!1,clearTimeout(lazyload.windowPositionDelayTimer),lazyload.windowPositionDelayTimer=setTimeout(function(){lazyload.updateWindowPosition=!0},lazyload.__defaults.scrollCheckDelay));else{if("undefined"!=typeof b.lazyload.watch){var c=a.parents(b.lazyload.watch);c.length>=1&&(a=c)}b.lazyload.positionTop=a.offset().top,b.lazyload.positionLeft=a.offset().left,b.lazyload.positionRight=b.lazyload.positionLeft+a.width(),b.lazyload.positionBottom=b.lazyload.positionTop+a.height()}}function f(a){function e(a,b){try{"undefined"!=typeof b&&b.length>=1?a.apply(null,b):a.call(null)}catch(d){}}if("string"==typeof a){var b=a.split(","),c=b.shift();c=g(c),e(c,b,a)}else if("object"==typeof a)for(var d=0;d<a.length;d++)!function(){var b=a[d].split(","),c=b.shift(),f=c;c=g(c),e(c,b,f)}()}function g(a){for(var b=window,c=a.split("."),d=c.pop(),e=!0,f=0;f<c.length;f++)"undefined"!=typeof b[c[f]]?b=b[c[f]]:e=!1;return e?b[d]:null}function h(a){var b=a[0].lazyload.src||a[0].lazyload.source,c=a[0].lazyload.callback,d=a[0].lazyload.callbackAfter;lazyload.items=lazyload.items.not(a),-1==lazyload.loadedSrc.indexOf(b)&&lazyload.loadedSrc.push(b);var e=new Image;e.onload=function(){function j(a){var b=document.createElement("canvas");b.width=a.width,b.height=a.height;var c=b.getContext("2d");c.drawImage(a,0,0);var d=b.toDataURL("image/png");return d.replace(/^data:image\/(png|jpg);base64,/,"")}if("undefined"!=typeof c&&(a.trigger("lazyloaded").addClass("lazyloaded"),f(c)),a.is("img"))a.css({opacity:0}).attr("src",b).delay(lazyload.__defaults.fadeInDelay).animate({opacity:1},lazyload.__defaults.fadeInSpeed,function(){"undefined"!=typeof d&&setTimeout(function(){a.trigger("lazyloadedafter"),f(d)},lazyload.__defaults.fadeInSpeed)});else{var g=200;try{var h="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",i=new Image;i.src=h,i.height=e.height,i.width=e.width;var k=j(i);a.css({"background-image":"url(data:image/gif;base64,"+k+")","-moz-transition":"all "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out"})}catch(l){g=0}setTimeout(function(){a.css({"background-image":"url("+b+")","-webkit-transition":"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out","-moz-transition":"all "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out","-o-transition":"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out",transition:"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out"}),"undefined"!=typeof d&&setTimeout(function(){a.trigger("lazyloadafter"),f(d)},lazyload.__defaults.fadeInSpeed)},g)}},e.src=b}"undefined"==typeof lazyload&&(window.lazyload={version:"1.0.0",items:a(),__defaults:{updatePosition:!0,checkHorizontal:!1,scrollCheckDelay:300,loadBufferDistance:0,fadeInDelay:0,fadeInSpeed:500}},a(document).ready(function(){lazyload.updateWindowPosition=!0,lazyload.scrollCheck=!0,lazyload.loadedSrc=[],$foundItems=a("[data-lazy-load]"),$foundItems.length>=1&&(lazyload.scrollElements=a("div,ul"),lazyload.scrollElements.each(function(){var b=a(this),c=b.css("overflow"),d=b.css("overflow-x"),e=b.css("overflow-y"),f=["hidden","scroll","auto"];0==b.find("[data-lazy-load]").length&&-1==f.indexOf(c)&&-1==f.indexOf(e)&&-1==f.indexOf(d)&&(lazyload.scrollElements=lazyload.scrollElements.not(b))}),lazyload.scrollElements=lazyload.scrollElements.add(window),lazyload.scrollElements.bind("scroll.lazyload",function(){lazyload.scrollCheck&&(c(),lazyload.scrollCheck=!1,clearTimeout(lazyload.scrollCheckDelayTimer),lazyload.scrollCheckDelayTimer=setTimeout(function(){lazyload.scrollCheck=!0},lazyload.__defaults.scrollCheckDelay))}),$foundItems.each(function(){b(a(this))}),c())}),lazyload.check=function(){c()},lazyload.add=function(c,d){b(a(c),d)},lazyload.load=function(){h(a($item))})}(jQuery);
+      
+        $(document).ready(function(){
+          // fix centering elements
+          window.triggerResize = function(){
+            setTimeout(function(){
+              $(window).trigger('resize');
+            },50);
+          }
+          setTimeout(function(){
+            triggerResize();
+          },200);
+      
+          // Wire up tooltips
+          $(document).sfTipper({ wireup: true });
+        });
+      
+        $('.jump-arrow-icon, .jump-arrow-btn').click(function(){
+          $('html, body').animate({
+            scrollTop: $($.attr(this, 'href')).offset().top
+          }, 500);
+          return false;
+        });
+      
+        // Track all the icodes (tcodes handled by gtm.js)
+        window._trfq = window._trfq || [];
+        $('[data-icode]').each(function(index, element) {
+          window._trfq.push(['cmdLogImpression', $(element).attr('data-icode'), null, element]);
+        });
+      }
+      
+    </script>
     <atlantis:webstash type="js">
       <script>var got1Page = {
   tldInfo: {
     defaultTld: 'com',    
     tlds: ['com','org','co','net', 'club', 'rocks'],  /* todo: drive from a config val */
-    possibleAdditionalTlds: ['in', 'ca'], /* todo: drive from a config val */
+    possibleAdditionalTlds: ['in', 'ca', 'uk', 'co.uk'], /* todo: drive from a config val */
     isPossibleAdditionalTld: function(tld) {return -1 !== $.inArray(tld, got1Page.tldInfo.possibleAdditionalTlds);}
   },
   sfDialogErrorButtons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }],
@@ -54,9 +148,9 @@
   },
   pricing: {
     promo_wsb: '[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T]',
-    promo_ols: '[@T[multipleproductprice:<current productidlist="40972|101|7524" period="monthly" promocode="75315678" />]@T]',
+    promo_ols: '[@T[multipleproductprice:<current productidlist="464069|101|40972" period="monthly" promocode="75315678" />]@T]',
     bundleRenewal_wsb: '[@T[multipleproductprice:<list productidlist="464069|101|7524" period="monthly"></list>]@T]',
-    bundleRenewal_ols: '[@T[multipleproductprice:<list productidlist="40972|101|7524" period="monthly"></list>]@T]',
+    bundleRenewal_ols: '[@T[multipleproductprice:<list productidlist="464069|101|40972" period="monthly"></list>]@T]',
     bingAdCredits: '[@T[currencyprice:<price usdamount="5000" dropdecimal="true" htmlsymbol="false" />]@T]'
   },
   imagePath: '[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/',
@@ -64,7 +158,7 @@
 };
 
 ##if(!productIsOffered(105))
-got1Page.canOfferOls = false;
+  got1Page.canOfferOls = false;
 ##endif
 
 
@@ -198,16 +292,25 @@ function wireUpDisclaimerModals() {
   var marqueeModalId = got1Page.canOfferOls ? "#default-marquee-details-modal" : "#default-marquee-details-modal-wsb-only";
   $('#default-marquee-view').on('click', '.see-details-disclaimer-link', function(){
     var $modal = $(marqueeModalId);
-    $modal.sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
+    $modal.sfDialog({buttons: got1Page.sfDialogErrorButtons});
   });
 
   // product split modals
   $('#site-choice').on('click', '.see-wsb-disclaimer-link', function(){
-    $("#site-choice-wsb-modal").sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
+    $("#site-choice-wsb-modal").sfDialog({buttons: got1Page.sfDialogErrorButtons});
   });
   $('#site-choice').on('click', '.see-ols-disclaimer-link', function(){
-    $("#site-choice-ols-modal").sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
+    $("#site-choice-ols-modal").sfDialog({buttons: got1Page.sfDialogErrorButtons});
   });
+
+  // choose product screen
+  $('#step2-choose-product').on('click', '.see-wsb-disclaimer-link', function(){
+    $("#step2-choose-product-wsb-modal").sfDialog({buttons: got1Page.sfDialogErrorButtons});
+  });
+  $('#step2-choose-product').on('click', '.see-ols-disclaimer-link', function(){
+    $("#step2-choose-product-ols-modal").sfDialog({buttons: got1Page.sfDialogErrorButtons});
+  });
+
 
 }
 
@@ -350,6 +453,12 @@ function verifyDomainIsStillAvailable(e) {
 }
 
 function showChoicesScreen(e){
+
+  // bypass the choices if OLS is not available for their market
+  if(!got1Page.canOfferOls) {
+    goToDppCheckoutPage(e);
+    return;
+  }
   var $this = $(e.target),
     domain = $this.data('domain');
 
@@ -516,12 +625,9 @@ function updateDomainCountText(initial, numberShown) {
 
       </script>
     </atlantis:webstash>
-    <link href="[@T[link:<cssroot />]@T]/ux/dev-brand/css/uxcontrols.css" rel="stylesheet">
-    <link href="[@T[link:<cssroot />]@T]/ux/dev-brand/css/uxcore.css" rel="stylesheet">
     <link href="[@T[link:<cssroot />]@T]/fos/mike/0.7.0/css/sahara.css" rel="stylesheet">
     <link href="[@T[link:<cssroot />]@T]/fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css">
-    <style>
-.bg-gray-light {
+    <style>.bg-gray-light {
   background-color: #d9d9d9;
 }
 
@@ -536,7 +642,7 @@ function updateDomainCountText(initial, numberShown) {
 }
 .include-check-black:before {
   content: "";
-  background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+  background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
   background-position: 0 -700px;
   background-size: 205px auto;
   width: 25px;
@@ -548,7 +654,7 @@ function updateDomainCountText(initial, numberShown) {
 }
 .include-check-green:before {
   content: "";
-  background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+  background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
   background-position: 0 -668px;
   background-size: 205px auto;
   width: 25px;
@@ -573,7 +679,7 @@ function updateDomainCountText(initial, numberShown) {
     <link href="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy.min.html" id="respond-proxy" rel="respond-proxy">
     <script src="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy-combo.min.js"></script><![endif]-->
     <script type="text/javascript">
-      delayLoader.addScript('[@T[link:<javascriptroot />]@T]/ux/dev-brand/js/uxcontrols.min.js')
+      delayLoader.addScript('[@T[link:<javascriptroot />]@T]/fos/liveperson/js/liveperson_20141013a.min.js')
       
     </script>
     <!-- Google Tag Manager-->
@@ -711,7 +817,7 @@ function updateDomainCountText(initial, numberShown) {
               <div class="get-online-wrapper">
                 <div class="clearfix get-online-dash"><span class="headline-secondary get-online-text">[@L[cds.sales/offers/online-business:32573-top-banner-headline]@L]</span><span class="get-online-image"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-dash.png"></span></div><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-marker.png" class="green-arrow">
                 <h1 class="headline-primary today-text">[@L[cds.sales/offers/online-business:32573-top-banner-subheadline]@L]</h1>
-                <h3 data-tokenize="$1.00" class="as-low-as-text">[@L[cds.sales/offers/online-business:32573-as-low-as]@L]</h3>
+                <h3 data-tokenize="[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T]" class="as-low-as-text">[@L[cds.sales/offers/online-business:32573-as-low-as]@L]</h3>
                 <div class="top-disclaimer-text small">[@L[cds.sales/offers/online-business:32573-top-small-disclaimer-text]@L] 
                   <button class="btn-link see-details-disclaimer-link">[@L[cds.sales/offers/online-business:32573-top-small-disclaimer-details-link]@L]</button>
                 </div>
@@ -761,14 +867,12 @@ function updateDomainCountText(initial, numberShown) {
       </section> 
       ##if(productIsOffered(105)) 
        
-      <div id="default-marquee-details-modal" class="tokenizable-disclaimer-modal sf-dialog">
-        <h2>[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]</h2>
+      <div id="default-marquee-details-modal" data-title="[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]" class="tokenizable-disclaimer-modal sf-dialog">
         <p>[@L[cds.sales/offers/online-business:32573-disclaimer-modal-both-content]@L]</p>
       </div> 
       ##else
        
-      <div id="default-marquee-details-modal-wsb-only" class="tokenizable-disclaimer-modal sf-dialog">
-        <h2>[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]</h2>
+      <div id="default-marquee-details-modal-wsb-only" data-title="[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]" class="tokenizable-disclaimer-modal sf-dialog">
         <p>[@L[cds.sales/offers/online-business:32573-disclaimer-modal-wsb-content]@L]</p>
       </div> 
       ##endif
@@ -781,6 +885,7 @@ function updateDomainCountText(initial, numberShown) {
           #domain-available-marquee-view .available-domain-name-text {text-transform: lowercase; color: #333333; background: rgba(254, 220, 69, 0.7); padding: 5px;line-height: 1.6em;word-wrap: break-word;  }
           #domain-available-marquee-view .get-it-now-btn {top: 15px; }
           #domain-available-marquee-view .purchase-btn {margin-top: 5px;}
+          #domain-available-marquee-view h2 {margin: 0px;}
           
           
         </style>
@@ -1284,8 +1389,9 @@ function updateDomainCountText(initial, numberShown) {
                 <div class="plan-flag">[@L[cds.sales/offers/online-business:32573-choose-wsb]@L]</div>
                 <h2>[@L[cds.sales/offers/online-business:32573-choose-wsb-text]@L]</h2>
                 <h4>[@L[cds.sales/offers/online-business:32573-choose-wsb-all-this-for-just-text]@L]</h4>
-                <div class="plan-price-wrap">[@L[cds.sales/offers/online-business:32573-choose-wsb-all-this-for-just-price]@L]
-                  <div class="plan-inline-disclaimer">[@L[cds.sales/offers/online-business:32573-choose-wsb-text-price-disclaimer]@L] [@L[cds.sales/offers/online-business:32573-choose-wsb-text-price-disclaimer-link]@L]</div>
+                <div data-tokenize="[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T]" class="plan-price-wrap">[@L[cds.sales/offers/online-business:32573-choose-wsb-all-this-for-just-price]@L]</div>
+                <div data-tokenize="[@T[multipleproductprice:<list productidlist="464069|101|7524" period="monthly" promocode="0" />]@T]" class="plan-inline-disclaimer">[@L[cds.sales/offers/online-business:32573-choose-wsb-text-price-disclaimer]@L] 
+                  <button class="btn-link see-wsb-disclaimer-link">[@L[cds.sales/offers/online-business:32573-choose-wsb-text-price-disclaimer-link]@L]</button>
                 </div>
                 <button class="btn btn-md btn-block btn-purchase product-wsb">[@L[cds.sales/offers/online-business:32573-choose-select-button]@L]</button>
                 <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-choose-wsb-bullet-1]@L]</div>
@@ -1302,8 +1408,9 @@ function updateDomainCountText(initial, numberShown) {
                 <div class="plan-flag">[@L[cds.sales/offers/online-business:32573-choose-ols]@L]</div>
                 <h2>[@L[cds.sales/offers/online-business:32573-choose-ols-text]@L]</h2>
                 <h4>[@L[cds.sales/offers/online-business:32573-choose-ols-all-this-for-just-text]@L]</h4>
-                <div class="plan-price-wrap">[@L[cds.sales/offers/online-business:32573-choose-ols-all-this-for-just-price]@L]
-                  <div class="plan-inline-disclaimer">[@L[cds.sales/offers/online-business:32573-choose-ols-text-price-disclaimer]@L] [@L[cds.sales/offers/online-business:32573-choose-ols-text-price-disclaimer-link]@L]</div>
+                <div data-tokenize="[@T[multipleproductprice:<current productidlist="464069|101|40972" period="monthly" promocode="75315678" />]@T]" class="plan-price-wrap">[@L[cds.sales/offers/online-business:32573-choose-ols-all-this-for-just-price]@L]</div>
+                <div data-tokenize="[@T[multipleproductprice:<list productidlist="464069|101|40972" period="monthly" promocode="0" />]@T]" class="plan-inline-disclaimer">[@L[cds.sales/offers/online-business:32573-choose-ols-text-price-disclaimer]@L] 
+                  <button class="btn-link see-ols-disclaimer-link">[@L[cds.sales/offers/online-business:32573-choose-ols-text-price-disclaimer-link]@L]</button>
                 </div>
                 <button class="btn btn-md btn-block btn-purchase product-ols">[@L[cds.sales/offers/online-business:32573-choose-select-button]@L]</button>
                 <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-choose-ols-bullet-1]@L]</div>
@@ -1319,12 +1426,23 @@ function updateDomainCountText(initial, numberShown) {
       <div class="sf-dialog api-c-failure-modal">
         <p>[@L[cds.sales/offers/online-business:32573-get-it-now-error]@L]</p>
       </div>
+      <div id="step2-choose-product-wsb-modal" data-title="[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]" class="tokenizable-disclaimer-modal sf-dialog">
+        <h2>WSB [@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]</h2>
+        <p>[@L[cds.sales/offers/online-business:32573-disclaimer-modal-wsb-content]@L]</p>
+      </div>
+      <div id="step2-choose-product-ols-modal" data-title="[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]" class="tokenizable-disclaimer-modal sf-dialog">
+        <h2>OLS [@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]</h2>
+        <p>[@L[cds.sales/offers/online-business:32573-disclaimer-modal-ols-content]@L]</p>
+      </div>
     </section>
     <atlantis:webstash type="css">
       <style>
         #site-choice-compare .disclaimer-mark {
           font-size: 24px;
           margin: 10px 10% 20px;
+        }
+        #site-choice-compare .button-margin {
+          margin-top:20px;
         }
         
         #site-choice-compare .disclaimer-mark p {
@@ -1337,6 +1455,7 @@ function updateDomainCountText(initial, numberShown) {
           margin: 40px 0;
           line-height: 1;
         }
+        
         .two-up-speech-shape {
           font-family: 'Walsheim-Bold';
           font-size: 18px;
@@ -1348,6 +1467,7 @@ function updateDomainCountText(initial, numberShown) {
           margin-bottom: 20px;
           z-index: 2;
         }
+        
         .two-up-speech-shape .shape-text {
           position: relative;
           z-index: 40;
@@ -1525,7 +1645,7 @@ function updateDomainCountText(initial, numberShown) {
           content: '';
           width: 94px;
           height: 94px;
-          background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+          background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
           background-size: 205px auto;
           background-position: 0 -896px;
           position: absolute;
@@ -1612,7 +1732,7 @@ function updateDomainCountText(initial, numberShown) {
           content: '';
           width: 94px;
           height: 94px;
-          background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+          background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
           background-size: 205px auto;
           background-position: 0 -896px;
           position: absolute;
@@ -1645,7 +1765,7 @@ function updateDomainCountText(initial, numberShown) {
         }
         .two-up-wrap-compare .check-bullets li:before {
           content: '';
-          background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+          background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
           background-size: 205px auto;
           background-position: 0 -700px;
           width: 25px;
@@ -1657,11 +1777,6 @@ function updateDomainCountText(initial, numberShown) {
           margin-bottom: 5px;
         }
         /* (end) TWO UP COMPARE */
-        
-        
-        /* GLOBAL FEATURES CSS */
-        /* (end) GLOBAL FEATURES CSS */
-        
         
       </style>
     </atlantis:webstash>
@@ -1683,16 +1798,17 @@ function updateDomainCountText(initial, numberShown) {
                 <div class="text-center two-up-image"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-wsb-icon.png"></div>
                 <h2 class="text-center">[@L[cds.sales/offers/online-business:32573-godaddy-wsb]@L]</h2>
                 <h3 class="text-center">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text]@L]</h3>
-                <mark class="text-center disclaimer-mark">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price]@L] 
-                  <p class="disclaimer">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price-disclaimer]@L] 
+                <mark class="text-center disclaimer-mark"> 
+                  <div data-tokenize="[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T]">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price]@L] </div>
+                  <p data-tokenize="[@T[multipleproductprice:<list productidlist="464069|101|7524" period="monthly" promocode="0" />]@T]" class="disclaimer">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price-disclaimer]@L] 
                     <button class="btn-link see-wsb-disclaimer-link">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price-disclaimer-link]@L]</a></button>
                   </p>
                 </mark>
                 <div class="row text-center">
-                  <div class="col-md-6">
+                  <div class="col-md-6 button-margin">
                     <button class="btn btn-md btn-primary"><i class="uxicon uxicon-play"></i> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]</button>
                   </div>
-                  <div class="col-md-6">
+                  <div class="col-md-6 button-margin">
                     <button class="btn btn-md btn-primary">[@L[cds.sales/offers/online-business:32573-view-designs-button]@L]</button>
                   </div>
                 </div>
@@ -1730,16 +1846,17 @@ function updateDomainCountText(initial, numberShown) {
                 <div class="text-center two-up-image"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-onlineStore.png"></div>
                 <h2 class="text-center">[@L[cds.sales/offers/online-business:32573-godaddy-ols]@L]</h2>
                 <h3 class="text-center">[@L[cds.sales/offers/online-business:32573-godaddy-ols-text]@L]</h3>
-                <mark class="text-center disclaimer-mark">[@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price]@L] 
-                  <p class="disclaimer">[@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price-disclaimer]@L] 
+                <mark class="text-center disclaimer-mark"> 
+                  <div data-tokenize="[@T[multipleproductprice:<current productidlist="464069|101|40972" period="monthly" promocode="75315678" />]@T]">[@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price]@L] </div>
+                  <p data-tokenize="[@T[multipleproductprice:<list productidlist="464069|101|40972" period="monthly" promocode="0" />]@T]" class="disclaimer">[@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price-disclaimer]@L] 
                     <button class="btn-link see-ols-disclaimer-link">[@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price-disclaimer-link]@L]</button>
                   </p>
                 </mark>
                 <div class="row text-center">
-                  <div class="col-md-6">
+                  <div class="col-md-6 button-margin">
                     <button class="btn btn-md btn-primary"><i class="uxicon uxicon-play"></i> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]</button>
                   </div>
-                  <div class="col-md-6">
+                  <div class="col-md-6 button-margin">
                     <button class="btn btn-md btn-primary">[@L[cds.sales/offers/online-business:32573-see-real-stores-button]@L]</button>
                   </div>
                 </div>
@@ -1796,23 +1913,28 @@ function updateDomainCountText(initial, numberShown) {
           </div>
         </div>
       </div>
-      <div id="site-choice-wsb-modal" class="tokenizable-disclaimer-modal sf-dialog">
-        <h2>[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]</h2>
+      <div id="site-choice-wsb-modal" data-title="[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]" class="tokenizable-disclaimer-modal sf-dialog">
         <p>[@L[cds.sales/offers/online-business:32573-disclaimer-modal-wsb-content]@L]</p>
       </div>
-      <div id="site-choice-ols-modal" class="tokenizable-disclaimer-modal sf-dialog">
-        <h2>[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]</h2>
+      <div id="site-choice-ols-modal" data-title="[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]" class="tokenizable-disclaimer-modal sf-dialog">
         <p>[@L[cds.sales/offers/online-business:32573-disclaimer-modal-ols-content]@L]</p>
       </div>
     </section>
     <section id="disclaimers"> 
-      <p>[@L[cds.sales/offers/online-business:32573-third-party-logos-trademarks-disclaimer]@L]</p>
+      <div class="disclaimers-row">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="disclaimers-text">[@L[cds.sales/offers/online-business:32573-third-party-logos-trademarks-disclaimer]@L]</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
     <!-- FOOTERBEGIN--> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- FOOTEREND-->
      
-    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Script"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Bottom"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- liveperson includes -->
     <div id="lpButtonDiv"></div><!-- End Main Content -->

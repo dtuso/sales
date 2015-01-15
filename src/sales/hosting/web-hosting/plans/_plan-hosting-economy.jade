@@ -1,17 +1,10 @@
 extend ../../../../../src/templates/plan-tile
 
 append vars
-  - title = "Economy";
-  - description = "Perfect to get started with a basic site."
-  - features = ["1 Website","100 GB Storage","Unlimited bandwidth","100 Email Addresses","Free Domain with annual plan"];
+  - title = "[@L[cds.sales/hosting/web-hosting-rebrand:economyPlan]@L]";
+  - description = "[@L[cds.sales/hosting/web-hosting-rebrand:basicPrice]@L]";
+  - features = ["[@L[cds.sales/hosting/web-hosting-rebrand:oneWeb]@L]","[@L[cds.sales/hosting/web-hosting-rebrand:oneHundredStorage]@L]","[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedBand]@L]","[@L[cds.sales/hosting/web-hosting-rebrand:oneHundredEMail]@L]","[@L[cds.sales/hosting/web-hosting-rebrand:freeDomain]@L]"];
   - pfid = "32051";
-  - listID="product-A";
-  - showDropDownList = true;
-
-block planOptions 
-  +addPlanOption("1", "32048", "host_GridHostEcoDiabloLin3Mo_us")
-  +addPlanOption("12", "32051", "host_GridHostEcoDiabloLin1Yr_us")
-  +addPlanOption("24", "32060", "host_GridHostEcoDiabloLin2Yr_us")
-  +addPlanOption("36", "32063", "host_GridHostEcoDiabloLin3Yr_us")
-  +addPlanOption("48", "32066", "host_GridHostEcoDiabloLin4Yr_us")
-  +addPlanOption("60", "32069", "host_GridHostEcoDiabloLin5Yr_us")
+  - buttonid="product-A";
+  - term ="/[@L[cds.sales/_common:month]@L]"
+  - defaultPlan = "host_GridHostEcoDiabloLin1Yr_us";

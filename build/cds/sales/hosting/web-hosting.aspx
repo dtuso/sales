@@ -27,8 +27,104 @@
     <meta property="fb:admins" content="633356800"> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <script src="[@T[link:<javascriptroot />]@T]/ux/dev-brand/js/uxcore.en.min.js"></script>
-    <script src="[@T[link:<javascriptroot />]@T]/ux/dev-brand/js/uxcontrols.min.js"></script>
-    <script src="[@T[link:<javascriptroot />]@T]/fos/mike/0.7.0/js/sahara.min.js"></script>
+    <script>
+      var head = (typeof document.head !== 'undefined' ? document.head : document.getElementsByTagName('head')[0]);
+      var insertBefore = head.insertBefore;
+      var delayLoader = (function(headNode) {
+        var elements = [];
+        var fnOnDelayLoadComplete = [];
+      
+        function addElement(element) {
+          elements.unshift(element);  // Insert in the order received
+        }
+      
+        return {
+          addElement: function(element) {
+            addElement(element);
+          },
+          addScript: function(url, params) {
+            params = params || {};
+      
+            var script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.src = url;
+            script.async = true;
+            if (typeof params.id !== 'undefined') {
+              script.id = params.id;
+            }
+            addElement(script);
+            for (var i = 0; i < fnOnDelayLoadComplete.length; i++) {
+              fnOnDelayLoadComplete[i]();
+            }
+          },
+          onDelayLoadComplete: function(callback) {
+            fnOnDelayLoadComplete.unshift(callback);
+          },
+          load: function() {
+            for (var i = 0; i < elements.length; i++) {
+              insertBefore.call(headNode, elements[i], headNode.firstChild);
+            }
+            head.insertBefore = insertBefore;
+          }
+        };
+      })(head);
+      
+      var oldOnload = window.onload;
+      window.onload = function() {
+        delayLoader.load();
+        if (oldOnload) {
+          oldOnload();
+        }
+      };
+      
+      head.insertBefore = function (newElement, referenceElement) {
+        if (newElement.tagName === 'SCRIPT') {
+          delayLoader.addElement(newElement);
+        } else {
+          insertBefore.call(head, newElement, referenceElement);
+        }
+      };
+      
+      function endOfPageScripts() {
+      
+        // jquery.domainscout.1.0.0.js
+        if("undefined"==typeof domainscout){var domainscout={version:"1.0.2"};$(document).ready(function(){function b(a){var b=a,d=b.data("domainscout")||b.data("domainsearch");if(b[0]["ds-domain"]=b.find(d["search-element"]),b[0]["ds-placeholder"]=b.find(d["placeholder-element"]),b[0]["ds-button"]=b.find(d.button),b[0]["ds-url"]=d.url,b[0]["ds-ci"]=d.ci,b[0]["ds-hide-label"]=d["hide-label"],b[0]["ds-empty-redirect"]=d["empty-redirect"],"undefined"==typeof b[0]["ds-hide-label"]&&(b[0]["ds-hide-label"]=!0),1==b[0]["ds-domain"].length&&(b[0]["ds-domain"].is("input")||b[0]["ds-domain"].is("textarea"))){if(domainscout.items=domainscout.items.add(b),b[0]["ds-placeholder"].is("label")){var e=b[0]["ds-domain"].attr("id");"undefined"==typeof e&&(e="ds-"+domainscout.items.length,b[0]["ds-domain"].attr("id",e)),b[0]["ds-placeholder"].attr("for",e)}else b[0]["ds-placeholder"].bind("click",function(){b[0]["ds-domain"].focus()});b[0]["ds-domain"].val(""),b[0]["ds-domain"].bind("focus.ds-event",function(){b.addClass("ds-focus"),b[0]["ds-domain"].bind("keydown.ds-event",function(a){var d=[16,27,20,8,37,38,39,40];13==a.which?(c(b),a.preventDefault()):-1==d.indexOf(a.which)&&b[0]["ds-hide-label"]&&b[0]["ds-placeholder"].css("display","none")})}),b[0]["ds-domain"].bind("blur.ds-event",function(){b.removeClass("ds-focus"),b[0]["ds-domain"].unbind("keydown.ds-event"),b[0]["ds-hide-label"]&&""==b[0]["ds-domain"].val()&&"none"==b[0]["ds-placeholder"].css("display")&&b[0]["ds-placeholder"].css("display","block")})}b[0]["ds-button"].bind("click",function(a){a.stopPropagation(),a.preventDefault(),"undefined"!=typeof _trfq&&_trfq.push(["cmdLogPageEvent","click","","",b[0]]),c(b)})}function c(a){var b=$(a),c=!0,e=!1,g=b[0]["ds-url"];"undefined"==typeof b[0]["ds-url"]&&(g=b.attr("action"),("undefined"==typeof g||"#"==g)&&(c=!1));var h;c&&1==b[0]["ds-domain"].length?(h=b[0]["ds-domain"].val(),"undefined"!=typeof h&&""!=h?(g=g.split("?")[0],g=g+"?domainToCheck="+d(h)):(g=b[0]["ds-empty-redirect"],g.indexOf(location.protocol)&&(g=location.protocol+g),e=!0,"undefined"==typeof g&&(c=!1))):c=!1,c&&(e||(g+="&checkAvail=1","undefined"==b[0]["ds-ci"]&&(b[0]["ds-url"]=f("ci")),"undefined"!=b[0]["ds-ci"]&&(g=g+"&"+b[0]["ds-ci"])),window.location.href=g)}function d(a){return a}function e(a){return a instanceof $||(a=$(a)),a}function f(a){var b=decodeURI((RegExp(a+"="+"(.+?)(&|$)").exec(location.search)||[,null])[1]);return"null"==b&&(b=void 0),b}var a=$("[data-domainscout],[data-domainsearch]");domainscout.items=$(),a.each(function(){b($(this))}),domainscout.add=function(a){b(e(a))},domainscout.search=function(a){c(e(a))}})}
+      
+        // jquery.lazyload.1.0.0.js
+        !function(a){function b(a,b){"undefined"==typeof b&&(b=a.data("lazy-load"));var c=b.src||b.source;"undefined"!=typeof c&&(a[0].lazyload=b,lazyload.items=lazyload.items.add(a),e(a))}function c(){e(a(window)),lazyload.items.each(function(){d(a(this))})}function d(b){var c=b[0].lazyload.updatePosition||lazyload.__defaults.updatePosition,d=d||lazyload.__defaults.updateWindowScroll;b[0].lazyload.checkHorizontal||lazyload.__defaults.checkHorizontal,c&&e(b),e(a(window));var g=b[0].lazyload.positionTop,i=b[0].lazyload.positionBottom,j=lazyload.windowTop,k=lazyload.windowBottom;g<k+lazyload.__defaults.loadBufferDistance&&i>j-lazyload.__defaults.loadBufferDistance&&h(b)}function e(a){var b=a[0];if(b==window)lazyload.updateWindowPosition&&(lazyload.windowTop=a.scrollTop(),lazyload.windowLeft=a.scrollLeft(),lazyload.windowRight=lazyload.windowLeft+a.width(),lazyload.windowBottom=lazyload.windowTop+a.height(),lazyload.updateWindowPosition=!1,clearTimeout(lazyload.windowPositionDelayTimer),lazyload.windowPositionDelayTimer=setTimeout(function(){lazyload.updateWindowPosition=!0},lazyload.__defaults.scrollCheckDelay));else{if("undefined"!=typeof b.lazyload.watch){var c=a.parents(b.lazyload.watch);c.length>=1&&(a=c)}b.lazyload.positionTop=a.offset().top,b.lazyload.positionLeft=a.offset().left,b.lazyload.positionRight=b.lazyload.positionLeft+a.width(),b.lazyload.positionBottom=b.lazyload.positionTop+a.height()}}function f(a){function e(a,b){try{"undefined"!=typeof b&&b.length>=1?a.apply(null,b):a.call(null)}catch(d){}}if("string"==typeof a){var b=a.split(","),c=b.shift();c=g(c),e(c,b,a)}else if("object"==typeof a)for(var d=0;d<a.length;d++)!function(){var b=a[d].split(","),c=b.shift(),f=c;c=g(c),e(c,b,f)}()}function g(a){for(var b=window,c=a.split("."),d=c.pop(),e=!0,f=0;f<c.length;f++)"undefined"!=typeof b[c[f]]?b=b[c[f]]:e=!1;return e?b[d]:null}function h(a){var b=a[0].lazyload.src||a[0].lazyload.source,c=a[0].lazyload.callback,d=a[0].lazyload.callbackAfter;lazyload.items=lazyload.items.not(a),-1==lazyload.loadedSrc.indexOf(b)&&lazyload.loadedSrc.push(b);var e=new Image;e.onload=function(){function j(a){var b=document.createElement("canvas");b.width=a.width,b.height=a.height;var c=b.getContext("2d");c.drawImage(a,0,0);var d=b.toDataURL("image/png");return d.replace(/^data:image\/(png|jpg);base64,/,"")}if("undefined"!=typeof c&&(a.trigger("lazyloaded").addClass("lazyloaded"),f(c)),a.is("img"))a.css({opacity:0}).attr("src",b).delay(lazyload.__defaults.fadeInDelay).animate({opacity:1},lazyload.__defaults.fadeInSpeed,function(){"undefined"!=typeof d&&setTimeout(function(){a.trigger("lazyloadedafter"),f(d)},lazyload.__defaults.fadeInSpeed)});else{var g=200;try{var h="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",i=new Image;i.src=h,i.height=e.height,i.width=e.width;var k=j(i);a.css({"background-image":"url(data:image/gif;base64,"+k+")","-moz-transition":"all "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out"})}catch(l){g=0}setTimeout(function(){a.css({"background-image":"url("+b+")","-webkit-transition":"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out","-moz-transition":"all "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out","-o-transition":"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out",transition:"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out"}),"undefined"!=typeof d&&setTimeout(function(){a.trigger("lazyloadafter"),f(d)},lazyload.__defaults.fadeInSpeed)},g)}},e.src=b}"undefined"==typeof lazyload&&(window.lazyload={version:"1.0.0",items:a(),__defaults:{updatePosition:!0,checkHorizontal:!1,scrollCheckDelay:300,loadBufferDistance:0,fadeInDelay:0,fadeInSpeed:500}},a(document).ready(function(){lazyload.updateWindowPosition=!0,lazyload.scrollCheck=!0,lazyload.loadedSrc=[],$foundItems=a("[data-lazy-load]"),$foundItems.length>=1&&(lazyload.scrollElements=a("div,ul"),lazyload.scrollElements.each(function(){var b=a(this),c=b.css("overflow"),d=b.css("overflow-x"),e=b.css("overflow-y"),f=["hidden","scroll","auto"];0==b.find("[data-lazy-load]").length&&-1==f.indexOf(c)&&-1==f.indexOf(e)&&-1==f.indexOf(d)&&(lazyload.scrollElements=lazyload.scrollElements.not(b))}),lazyload.scrollElements=lazyload.scrollElements.add(window),lazyload.scrollElements.bind("scroll.lazyload",function(){lazyload.scrollCheck&&(c(),lazyload.scrollCheck=!1,clearTimeout(lazyload.scrollCheckDelayTimer),lazyload.scrollCheckDelayTimer=setTimeout(function(){lazyload.scrollCheck=!0},lazyload.__defaults.scrollCheckDelay))}),$foundItems.each(function(){b(a(this))}),c())}),lazyload.check=function(){c()},lazyload.add=function(c,d){b(a(c),d)},lazyload.load=function(){h(a($item))})}(jQuery);
+      
+        $(document).ready(function(){
+          // fix centering elements
+          window.triggerResize = function(){
+            setTimeout(function(){
+              $(window).trigger('resize');
+            },50);
+          }
+          setTimeout(function(){
+            triggerResize();
+          },200);
+      
+          // Wire up tooltips
+          $(document).sfTipper({ wireup: true });
+        });
+      
+        $('.jump-arrow-icon, .jump-arrow-btn').click(function(){
+          $('html, body').animate({
+            scrollTop: $($.attr(this, 'href')).offset().top
+          }, 500);
+          return false;
+        });
+      
+        // Track all the icodes (tcodes handled by gtm.js)
+        window._trfq = window._trfq || [];
+        $('[data-icode]').each(function(index, element) {
+          window._trfq.push(['cmdLogImpression', $(element).attr('data-icode'), null, element]);
+        });
+      }
+      
+    </script>
+    <link href="[@T[link:<cssroot />]@T]/fos/mike/0.7.0/css/sahara.css" rel="stylesheet">
+    <link href="[@T[link:<cssroot />]@T]/fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css">
     <style>h2{
   margin-bottom: 40px;
   margin-top: 0;
@@ -51,8 +147,8 @@ h3 {
 }
 
 .tile-section {
-  padding-top: 70px;
-  padding-bottom: 70px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .compare-table-view-all {
@@ -154,17 +250,105 @@ h3 {
     bottom: 360px;
   }
 }
-@media (min-width: 992px) {
-  #choose-platform .or-container:after {
-    bottom: 200px;
-  }
+.bg-gray-light {
+    background-color: #d9d9d9;
 }
+.BVDITitle {
+  text-transform: uppercase !important;
+  text-align: center !important;
+  font-family: 'Walsheim-Black' !important;
+  font-weight: 300 !important;
+  line-height: 1.1 !important;
+  color: #333 !important;
+}
+
+#BVRRDisplayContentLinkWriteID a {
+  -webkit-font-smoothing: antialiased !important;
+  -webkit-transition-delay: 0s !important;
+  -webkit-transition-duration: 0.1s !important;
+  -webkit-transition-property: transform !important;
+  -webkit-transition-timing-function: ease !important;
+  -webkit-user-select: none !important;
+  background-color: rgb(0, 138, 50) !important;
+  border-bottom-color: rgb(0, 112, 41) !important;
+  border-bottom-left-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+  border-bottom-style: solid !important;
+  border-bottom-width: 4px !important;
+  border-image-outset: 0px !important;
+  border-image-repeat: stretch !important;
+  border-image-slice: 100% !important;
+  border-image-source: none !important;
+  border-image-width: 1 !important;
+  border-left-color: rgb(0, 112, 41) !important;
+  border-left-style: solid !important;
+  border-left-width: 0px !important;
+  border-right-color: rgb(0, 112, 41) !important;
+  border-right-style: solid !important;
+  border-right-width: 0px !important;
+  border-top-color: rgb(0, 112, 41) !important;
+  border-top-left-radius: 0px !important;
+  border-top-right-radius: 0px !important;
+  border-top-style: solid !important;
+  border-top-width: 0px !important;
+  box-sizing: border-box !important;
+  color: rgb(255, 255, 255) !important;
+  cursor: pointer !important;
+  display: inline-block !important;
+  font-family: Walsheim-Medium, Arial, sans-serif !important;
+  font-size: 18px !important;
+  font-weight: normal !important;
+  height: 46px !important;
+  line-height: 25.7142868041992px !important;
+  margin-bottom: 0px !important;
+  min-width: 88px !important;
+  padding-bottom: 7px !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  padding-top: 10px !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  text-transform: uppercase !important;
+  transition-delay: 0s !important;
+  transition-duration: 0.1s !important;
+  transition-property: transform !important;
+  transition-timing-function: ease !important;
+  vertical-align: middle !important;
+  white-space: nowrap !important;
+  background-image: none !important;
+}
+
+.isToolTip {
+color: #333;
+text-decoration: none;
+cursor: pointer;
+}
+
+.heartIcon {
+  background-image: url(//img1.wsimg-com.ide/fos/mike/img/hosting/img-feature2-heart.png);
+  display: inline-block;
+  width: 59px;
+  height: 50px;
+  vertical-align: middle;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#speed-chart { min-height: 400px; }
+#speed-chart h3 { margin: 50px auto; text-align: center; }
+
+#speed-chart img { 
+  margin-bottom: 0;
+  margin-top: 20px;
+}
+
+#speed-chart p {text-align: right; }
     </style><!--[if lt IE 9]>
     <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
     <link href="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy.min.html" id="respond-proxy" rel="respond-proxy">
     <script src="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy-combo.min.js"></script><![endif]-->
     <script type="text/javascript">
-      delayLoader.addScript('[@T[link:<javascriptroot />]@T]/ux/dev-brand/js/uxcontrols.min.js')
+      delayLoader.addScript('[@T[link:<javascriptroot />]@T]/fos/liveperson/js/liveperson_20141013a.min.js')
       
     </script>
     <!-- Google Tag Manager-->
@@ -184,10 +368,886 @@ h3 {
     <!-- HEADERBEGIN--> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- HEADEREND-->
+     
+    ##if(activeLanguageAny([en-US]))
+     
     <section id="marquee"> 
       <atlantis:webstash type="css">
         <style>
-          .marquee { background: url([@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Marquee.jpg) no-repeat top center;); }
+.marquee {
+    background-position: top center;
+}
+
+.marquee .marquee-product-img {
+    margin-bottom: 10px;
+}
+
+.marquee .jump-arrow-btn {
+    margin-top: 10px;
+}
+
+.marquee .marquee-buttons a {
+    margin-right: 20px;
+}
+
+.marquee .marquee-buttons a:last-child {
+    margin-right: 0;
+}
+
+.marquee .marquee-product-review {
+    font-size: 18px;
+    font-size: 1.8rem;
+    line-height: 1;
+}
+
+.marquee .marquee-product-review a {
+    text-decoration: none;
+    padding-left: 10px;
+    color: #333333;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-size: 1.2rem;
+}
+
+.marquee .marquee-product-review a:hover {
+    text-decoration: none;
+}
+
+.marquee.marquee-app-landing {
+    min-height: 655px;
+}
+
+.marquee.marquee-app-landing .marquee-product-name {
+    margin-top: 0;
+}
+
+.marquee.marquee-app-landing .marquee-check-bullets {
+    list-style: none;
+    margin-bottom: 20px;
+    padding-left: 0;
+    font-size: 16px;
+    font-size: 1.6rem;
+}
+
+.marquee.marquee-app-landing .marquee-check-bullets li {
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 20px;
+}
+
+.marquee.marquee-app-landing .marquee-check-bullets li:before {
+    content: "";
+    background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+    background-position: 0 -668px;
+    background-size: 205px auto;
+    width: 25px;
+    height: 27px;
+    padding-right: 5px;
+    position: absolute;
+    left: 0;
+    top: -6px;
+}
+
+.marquee.marquee-app-landing .marquee-pro-left-text {
+    padding-top: 45px;
+}
+
+.marquee.marquee-app-landing .marquee-product-description {
+    font-family: 'Walsheim-Bold';
+    margin-top: 10px;
+}
+
+.marquee.marquee-app-landing .marquee-product-name {
+    font-size: 20px;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #ef6c0f;
+    font-family: 'Walsheim-Bold';
+    margin-bottom: 10px;
+}
+
+.marquee-pro-signup {
+    min-height: 584px;
+}
+
+.marquee-pro-signup .marquee-pro-signup-wrap {
+    margin-bottom: 75px;
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee-pro-signup h2 {
+        font-size: 40px;
+        font-size: 4rem;
+    }
+}
+
+.marquee-pro-signup h3 {
+    margin-top: 0;
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee-pro-signup .marquee-pro-signup-img img {
+        width: 50%;
+        margin: 30px 0;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .marquee-pro-signup .marquee-pro-signup-img img {
+        width: 80%;
+    }
+}
+
+.marquee-pro-signup .marquee-pro-signup-check-wrap {
+    margin-top: 30px;
+}
+
+.marquee-pro-signup .jump-to-plans {
+    position: absolute;
+    bottom: -60px;
+    margin: 0 auto;
+    text-align: center;
+    right: 0;
+    left: 0;
+}
+
+.marquee-pro-signup .jump-to-plans .marquee-jump-text {
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1;
+    font-family: 'Walsheim-Bold';
+    font-size: 20px;
+    font-size: 2rem;
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee-pro-signup .jump-to-plans .marquee-jump-text {
+        margin-bottom: 5px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee-pro-signup .marquee-pro-signup-buttons {
+        text-align: center;
+        padding-bottom: 10px;
+    }
+}
+
+.marquee-pro-signup .marquee-pro-signup-buttons a:first-child {
+    margin-right: 20px;
+}
+
+.marquee-pro-signup .marquee-pro-signup-check {
+    padding-left: 35px;
+    font-family: 'Walsheim-Bold';
+    position: relative;
+    font-size: 18px;
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+}
+
+.marquee-pro-signup .marquee-pro-signup-check:before {
+    content: '';
+    background-position: 0px -234px;
+    background-size: 205px auto;
+    width: 25px;
+    height: 27px;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -3px;
+}
+
+.marquee-pro-rebrand {
+    min-height: 378px;
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee-pro-rebrand {
+        padding-bottom: 50px;
+    }
+}
+
+.marquee-pro-rebrand .marquee-pro-left-text {
+    margin-bottom: 65px;
+}
+
+.marquee-pro-rebrand .marquee-pro-left-text h1 {
+    font-size: 20px;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #ef6c0f;
+    font-family: 'Walsheim-Bold';
+    margin-bottom: 10px;
+}
+
+.marquee-pro-rebrand .marquee-pro-left-text h2 {
+    font-size: 40px;
+    font-size: 4rem;
+    text-transform: uppercase;
+    font-family: 'Walsheim-Bold';
+    margin-top: 10px;
+    line-height: 1;
+}
+
+.marquee-pro {
+    min-height: 450px;
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee-pro {
+        padding-bottom: 50px;
+    }
+}
+
+.marquee-pro .well {
+    background-color: rgba(239, 108, 15, 0.8);
+    border: none;
+    color: #fff;
+    padding: 30px;
+    min-height: 275px;
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee-pro .well {
+        min-height: 0;
+        margin-top: 20px;
+    }
+}
+
+.marquee-pro .well .row {
+    min-height: 0 !important;
+}
+
+.marquee-pro .well .marquee-pro-icon-wrap {
+    border-left: 1px solid #fff;
+}
+
+@media only screen and (max-width: 768px) {
+    .marquee-pro .well .marquee-pro-icon-wrap {
+        border-left: 0;
+    }
+
+    .marquee-pro .well .marquee-pro-icon-wrap:not(:first-child) {
+        margin-top: 30px;
+    }
+}
+
+.marquee-pro .well .marquee-pro-icon-wrap .marquee-pro-icon-height {
+    height: 95px;
+}
+
+.marquee-pro .well .marquee-pro-icon-wrap .marquee-pro-icon-height img {
+    max-width: 75%;
+    max-height: 75%;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.marquee-pro .well .marquee-pro-icon-wrap h5 {
+    font-weight: 500;
+}
+
+.marquee-pro .well .marquee-pro-icon-wrap:first-child {
+    border-left: 0;
+}
+
+.marquee-pro .well .marquee-pro-icon-wrap .marquee-pro-icon {
+    margin: 0 auto 15px;
+    max-height: 85px;
+}
+
+.marquee-pro .well.marquee-pro-centered a {
+    font-weight: 500;
+}
+
+.marquee-pro .well.marquee-pro-centered h1 {
+    font-size: 20px;
+    font-size: 2rem;
+    font-family: 'Walsheim-Bold';
+    text-transform: uppercase;
+    margin: 0 0 10px 0;
+}
+
+.marquee-pro .well.marquee-pro-centered h2 {
+    margin-top: 0;
+    word-wrap: break-word;
+    word-break: break-word;
+    white-space: -moz-pre-wrap;
+}
+
+.marquee-pro .well.marquee-pro-centered .pro-marquee-home-deals {
+    border-top: 1px solid #fff;
+    font-weight: 700;
+}
+
+.marquee-pro .well.marquee-pro-centered .pro-marquee-home-deals .pro-marquee-deal {
+    margin-top: 20px;
+}
+
+.marquee-pro .well.marquee-pro-centered .pro-marquee-home-deals .pro-marquee-deal .pro-marquee-deal-text,
+.marquee-pro .well.marquee-pro-centered .pro-marquee-home-deals .pro-marquee-deal .pro-marquee-deal-savings {
+    font-size: 18px;
+    font-size: 1.8rem;
+}
+
+.marquee-pro .well.marquee-pro-centered .pro-marquee-home-deals .pro-marquee-deal-price {
+    margin-top: 15px;
+}
+
+.marquee-pro .well.marquee-pro-centered .pro-marquee-home-deals .pro-marquee-deal-price .marquee-price-small-text {
+    font-size: 15px;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.marquee-pro .well.marquee-pro-centered .pro-marquee-home-deals .pro-marquee-deal-price .marquee-price {
+    font-size: 35px;
+    font-size: 3.5rem;
+    line-height: 1;
+    font-family: 'Walsheim-Bold';
+}
+
+.marquee-pro .well.marquee-pro-centered .search-template-box {
+    border: 3px solid #fff;
+    margin-top: 10px;
+}
+
+.marquee-pro .marquee-pro-first-area h1 {
+    font-size: 20px;
+    font-size: 2rem;
+    font-family: 'Walsheim-Bold';
+    margin: 0 0 10px 0;
+}
+
+.marquee-pro .marquee-pro-first-area h2 {
+    margin-top: 12px;
+}
+
+.marquee-pro .marquee-pro-first-area .marquee-pro-product-text {
+    padding-top: 10px;
+    border-top: 1px solid #fff;
+}
+
+.marquee-pro .marquee-product-text {
+    margin-bottom: 20px;
+}
+
+.marquee-pro .jump-to-plans {
+    position: absolute;
+    bottom: -60px;
+    margin: 0 auto;
+    text-align: center;
+    right: 0;
+    left: 0;
+}
+
+.marquee-pro .jump-to-plans .marquee-jump-text {
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1;
+    color: #333333;
+    font-size: 20px;
+    font-size: 2rem;
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee-pro .jump-to-plans .marquee-jump-text {
+        margin-bottom: 5px;
+    }
+}
+
+.marquee-table-grid > .row {
+    display: table;
+}
+
+@media only screen and (max-width: 768px) {
+    .marquee-table-grid > .row {
+        display: block;
+    }
+}
+
+.marquee-table-grid > .row > [class*="col-"] {
+    float: none;
+    display: table-cell;
+    vertical-align: top;
+}
+
+@media only screen and (max-width: 768px) {
+    .marquee-table-grid > .row > [class*="col-"] {
+        display: block;
+        float: none;
+        border-left: none;
+        border-right: none;
+        padding: 20px inherit;
+        border-top: 1px solid #fff;
+    }
+
+    .marquee-table-grid > .row > [class*="col-"]:first-child {
+        border-top: 0;
+    }
+}
+.marquee {
+    background-size: cover !important;
+    position: relative;
+    background-position: bottom center;
+    background-color: #fff;
+  /* Ribbon */
+}
+
+.marquee .relative-position {
+    position: relative;
+}
+
+.marquee .marquee-all-centered {
+    text-align: center;
+}
+
+.marquee .marquee-two-col-txt ul.marquee-product-bullets {
+    text-align: left;
+}
+
+.marquee.marquee-short {
+    min-height: 368px;
+}
+
+.marquee.marquee-short .container {
+    min-height: inherit;
+}
+
+.marquee.marquee-short .container .row {
+    min-height: inherit;
+}
+
+.marquee.marquee-short .container .row .col-sm-pull-6 {
+    min-height: inherit;
+}
+
+@media only screen and (max-width: 767px) {
+    .marquee.marquee-short .container .row .col-sm-pull-6 {
+        min-height: 100px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee.marquee-short .vertical-height.marquee-sm-vertical-fix {
+        height: auto !important;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee.marquee-short .vertical-height.marquee-sm-vertical-fix .vertical-text {
+        -webkit-transform: translateY(0%);
+        -moz-transform: translateY(0%);
+        transform: translateY(0%);
+        top: 0%;
+    }
+}
+
+.marquee.marquee-tall {
+    min-height: 523px;
+}
+
+.marquee.marquee-tall .container {
+    min-height: inherit;
+}
+
+.marquee.marquee-tall .container .row {
+    min-height: inherit;
+}
+
+.marquee.marquee-tall .container .row .col-sm-pull-6 {
+    min-height: inherit;
+}
+
+@media only screen and (max-width: 767px) {
+    .marquee.marquee-tall .container .row .col-sm-pull-6 {
+        min-height: 100px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee.marquee-tall {
+        min-height: 400px;
+    }
+}
+
+.marquee.marquee-img-tall-left-txt {
+    height: 523px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .marquee.marquee-img-tall-left-txt {
+        height: 430px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee.marquee-img-tall-left-txt {
+        height: 332px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .marquee.marquee-img-tall-left-txt {
+        height: 332px;
+        background-position: -160px;
+    }
+}
+
+.marquee.marquee-img-short-left-txt {
+    height: 368px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .marquee.marquee-img-short-left-txt {
+        height: 300px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee.marquee-img-short-left-txt {
+        height: 234px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .marquee.marquee-img-short-left-txt {
+        height: 234px;
+        background-position: -160px;
+    }
+}
+
+.marquee.marquee-white {
+    color: #fff;
+}
+
+.marquee.marquee-white h1,
+.marquee.marquee-white h2,
+.marquee.marquee-white h3,
+.marquee.marquee-white h4,
+.marquee.marquee-white h5,
+.marquee.marquee-white h6 {
+    color: #fff;
+}
+
+.marquee.marquee-white .dashed-underline {
+    border-bottom-color: #fff;
+}
+
+.marquee.marquee-white a:not(.btn) {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.marquee.marquee-white a:not(.btn):hover {
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 480px) {
+    .marquee .marquee-customer-wrap {
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .marquee .marquee-customer-wrap .vertical-height {
+        height: auto !important;
+    }
+}
+
+.marquee .img-center {
+    margin: 0 auto;
+}
+
+.marquee .marquee-corner-img {
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    top: 0;
+    min-width: 165px;
+    min-height: 169px;
+}
+
+.marquee .marquee-product-img {
+    max-width: 100%;
+}
+
+.marquee .marquee-product-review {
+    font-size: 18px;
+    font-size: 1.8rem;
+}
+
+.marquee .marquee-product-review a {
+    text-decoration: underline;
+    padding-left: 10px;
+    color: #808080;
+}
+
+.marquee .marquee-product-review a:hover {
+    text-decoration: none;
+}
+
+.marquee .marquee-product-description {
+    font-size: 56px;
+    font-size: 5.6rem;
+    font-weight: 100;
+    line-height: 1.1;
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee .marquee-product-description {
+        font-size: 40px;
+        font-size: 4rem;
+    }
+}
+
+.marquee .marquee-product-text {
+    font-size: 18px;
+    font-size: 1.8rem;
+    padding: 0 0 14px;
+}
+
+.marquee ul.marquee-product-bullets {
+    font-size: 18px;
+    font-size: 1.8rem;
+    text-align: center;
+    list-style-position: inside;
+    padding: 0;
+}
+
+.marquee .marquee-restrictions-text {
+    font-size: 14px;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.marquee .marquee-ribbon {
+    width: 112px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-repeat: no-repeat;
+    z-index: 100;
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee .marquee-ribbon {
+        position: relative;
+        margin: 0 auto;
+    }
+}
+
+.marquee .marquee-left-ribbon .marquee-ribbon {
+    left: 0;
+    right: auto;
+}
+
+.marquee .marquee-price-btn-wrap {
+    color: #ef6c0f;
+    line-height: 1;
+    font-weight: 400;
+    padding: 5px 0 20px;
+}
+
+@media only screen and (max-width: 768px) {
+    .marquee .marquee-price-btn-wrap {
+        line-height: 1.2;
+    }
+}
+
+.marquee .marquee-price-btn-wrap .btn {
+    margin-right: 10px;
+}
+
+.marquee .marquee-price-btn-wrap .marquee-price-text {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.marquee .marquee-price-btn-wrap .marquee-price-small-text {
+    font-size: 18px;
+    font-size: 1.8rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .marquee .marquee-price-btn-wrap .marquee-price-small-text {
+        font-size: 16px;
+        font-size: 1.6rem;
+    }
+}
+
+.marquee .marquee-price-btn-wrap .marquee-price {
+    font-size: 36px;
+    font-size: 3.6rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .marquee .marquee-price-btn-wrap .marquee-price {
+        font-size: 30px;
+        font-size: 3rem;
+    }
+}
+
+.marquee .marquee-check-bullets {
+    list-style: none;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding-left: 0;
+    font-size: 18px;
+    font-size: 1.8rem;
+}
+
+.marquee .marquee-check-bullets span {
+    font-family: 'HelveticaNeue-CondensedBold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-stretch: condensed;
+    text-transform: uppercase;
+}
+
+.marquee .marquee-check-bullets li:before {
+    content: "\e207";
+    font-family: 'uxfont';
+    padding-right: 5px;
+}
+
+.marquee .marquee-btn-wrap {
+    margin-bottom: 20px;
+}
+
+.marquee .search-template .search-template-box {
+    border: 1px solid #cecece;
+}
+
+.marquee .marquee-customer-name-wrap {
+    position: absolute;
+    bottom: 10px;
+    font-size: 16px;
+    font-size: 1.6rem;
+}
+
+@media only screen and (max-width: 480px) {
+    .marquee .marquee-customer-name-wrap {
+        position: relative;
+        bottom: auto;
+    }
+}
+
+.marquee .marquee-customer-name-wrap .marquee-customer-name {
+    font-weight: bold;
+}
+
+.marquee .marquee-customer-name-wrap .marquee-customer-text {
+    font-weight: 100;
+}
+
+.marquee .marquee-customer-name-wrap .marquee-customer-website {
+    color: #008a32;
+    text-decoration: underline;
+}
+
+.marquee .marquee-two-col-abstract.left-column {
+    color: #fff;
+}
+
+.marquee .marquee-two-col-abstract.left-column .marquee-product-name {
+    color: #fff;
+    font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;
+    font-size: 46px;
+    margin: 34px 0 0 0;
+}
+
+.marquee .marquee-two-col-abstract.left-column .marquee-product-description {
+    font-family: "Walsheim-Bold";
+    font-size: 22px;
+}
+
+.marquee .marquee-two-col-abstract.left-column .marquee-product-text {
+    font-family: "Walsheim-Medium";
+    font-size: 18px;
+    margin-top: 18px;
+}
+
+.marquee .marquee-two-col-abstract.left-column .marquee-product-price {
+    display: block;
+    font-family: "Walsheim-Black";
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.marquee .marquee-two-col-abstract.left-column .btn {
+    font-family: "Walsheim-Medium";
+    font-size: 24px;
+}
+
+.marquee .marquee-two-col-abstract.left-column .marquee-restrictions-text {
+    margin: 12px 0 24px;
+    font-family: "Walsheim-Regular";
+}
+
+.marquee .marquee-two-col-abstract.left-column .marquee-restrictions-text ul {
+    padding-left: 0;
+}
+
+.marquee .marquee-two-col-abstract.left-column .marquee-restrictions-text ul li {
+    list-style: none;
+}
+
+.marquee .marquee-two-col-abstract.right-column {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    background-position: top center;
+    background-size: cover;
+}
+
+.marquee .marquee-two-col-abstract.right-column img.abstract-left {
+    position: absolute;
+    left: 0;
+    height: 100%;
+}
+
+.marquee .marquee-two-col-abstract.right-column img.abstract-right {
+    position: absolute;
+    right: 0;
+    height: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+    .marquee .marquee-two-col-abstract.right-column {
+        position: relative;
+        min-height: 200px;
+    }
+}
+
+h1.marquee-product-name,
+h2.marquee-product-name,
+.marquee-product-name {
+    font-size: 24px;
+    font-size: 2.4rem;
+    font-family: 'HelveticaNeue-CondensedBold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-stretch: condensed;
+    text-transform: uppercase;
+}
+
+@media only screen and (max-width: 992px) {
+    h1.marquee-product-name,
+  h2.marquee-product-name,
+  .marquee-product-name {
+        font-size: 20px;
+        font-size: 2rem;
+        margin-top: 10px;
+    }
+}
+        </style>
+        <style>
+          .marquee { background: url([@T[link:<imageroot />]@T]fos/mike/img/hosting/bg-marquee-V10.jpg) no-repeat top center;); }
           
         </style>
       </atlantis:webstash>
@@ -201,8 +1261,8 @@ h3 {
                     <div class="marquee-pro-left-text">
                             <div class="marquee-product-review"> <i class="uxicon uxicon-star text-warning"></i><i class="uxicon uxicon-star text-warning"></i><i class="uxicon uxicon-star text-warning"></i><i class="uxicon uxicon-star text-warning"></i><i class="uxicon uxicon-star text-warning"></i><a href="#">Reviews</a>
                             </div>
-                            <h2 class="marquee-product-description">FAST, SECURE, RELIABLE HOSTING THAT GROWS WITH YOUR BUSINESS</h2>
-                            <div class="marquee-product-text">Industry's leading page load times. 99.9% Uptime Guarantee*.</div><a href="[@T[link:<relative path='~/hosting/web-hosting-config-new.aspx' secure='true'><param name='ci' value='89262' /><param name='plan' value='host_GridHostEcoDiabloLin1Yr_us' /></relative>]@T]" class="btn btn-primary jump-arrow-btn">Get Started</a>
+                            <h2 class="marquee-product-description">HOSTING THAT'S MORE </br> RELIABLE THAN YOUR </br> BEAN ROASTING -------------------- PLAID SHIRT</h2>
+                            <div class="marquee-product-text">[@L[cds.sales/hosting/web-hosting-rebrand:guaranteeText1Rebrand]@L] [@L[cds.sales/hosting/web-hosting-rebrand:guaranteeText2Rebrand]@L] [@L[cds.sales/hosting/web-hosting-rebrand:guaranteeText3Rebrand]@L]</div><a href="[@T[link:<relative path='~/hosting/web-hosting-config-new.aspx' secure='true'><param name='ci' value='89262' /><param name='plan' value='host_GridHostEcoDiabloLin1Yr_us' /></relative>]@T]" class="btn btn-primary jump-arrow-btn">[@L[cds.sales/hosting/web-hosting-rebrand:getstarted]@L]</a>
                     </div>
                   </div>
                 </div>
@@ -211,8 +1271,1278 @@ h3 {
           </div>
         </div>
       </div>
-    </section>
-    <section id="plans">
+    </section> 
+    ##else
+     
+    <section id="marquee"> 
+      <atlantis:webstash type="css">
+        <style>
+.marquee {
+    background-position: top center;
+}
+
+.marquee .marquee-product-img {
+    margin-bottom: 10px;
+}
+
+.marquee .jump-arrow-btn {
+    margin-top: 10px;
+}
+
+.marquee .marquee-buttons a {
+    margin-right: 20px;
+}
+
+.marquee .marquee-buttons a:last-child {
+    margin-right: 0;
+}
+
+.marquee .marquee-product-review {
+    font-size: 18px;
+    font-size: 1.8rem;
+    line-height: 1;
+}
+
+.marquee .marquee-product-review a {
+    text-decoration: none;
+    padding-left: 10px;
+    color: #333333;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-size: 1.2rem;
+}
+
+.marquee .marquee-product-review a:hover {
+    text-decoration: none;
+}
+
+.marquee.marquee-app-landing {
+    min-height: 655px;
+}
+
+.marquee.marquee-app-landing .marquee-product-name {
+    margin-top: 0;
+}
+
+.marquee.marquee-app-landing .marquee-check-bullets {
+    list-style: none;
+    margin-bottom: 20px;
+    padding-left: 0;
+    font-size: 16px;
+    font-size: 1.6rem;
+}
+
+.marquee.marquee-app-landing .marquee-check-bullets li {
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 20px;
+}
+
+.marquee.marquee-app-landing .marquee-check-bullets li:before {
+    content: "";
+    background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+    background-position: 0 -668px;
+    background-size: 205px auto;
+    width: 25px;
+    height: 27px;
+    padding-right: 5px;
+    position: absolute;
+    left: 0;
+    top: -6px;
+}
+
+.marquee.marquee-app-landing .marquee-pro-left-text {
+    padding-top: 45px;
+}
+
+.marquee.marquee-app-landing .marquee-product-description {
+    font-family: 'Walsheim-Bold';
+    margin-top: 10px;
+}
+
+.marquee.marquee-app-landing .marquee-product-name {
+    font-size: 20px;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #ef6c0f;
+    font-family: 'Walsheim-Bold';
+    margin-bottom: 10px;
+}
+
+.marquee-pro-signup {
+    min-height: 584px;
+}
+
+.marquee-pro-signup .marquee-pro-signup-wrap {
+    margin-bottom: 75px;
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee-pro-signup h2 {
+        font-size: 40px;
+        font-size: 4rem;
+    }
+}
+
+.marquee-pro-signup h3 {
+    margin-top: 0;
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee-pro-signup .marquee-pro-signup-img img {
+        width: 50%;
+        margin: 30px 0;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .marquee-pro-signup .marquee-pro-signup-img img {
+        width: 80%;
+    }
+}
+
+.marquee-pro-signup .marquee-pro-signup-check-wrap {
+    margin-top: 30px;
+}
+
+.marquee-pro-signup .jump-to-plans {
+    position: absolute;
+    bottom: -60px;
+    margin: 0 auto;
+    text-align: center;
+    right: 0;
+    left: 0;
+}
+
+.marquee-pro-signup .jump-to-plans .marquee-jump-text {
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1;
+    font-family: 'Walsheim-Bold';
+    font-size: 20px;
+    font-size: 2rem;
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee-pro-signup .jump-to-plans .marquee-jump-text {
+        margin-bottom: 5px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee-pro-signup .marquee-pro-signup-buttons {
+        text-align: center;
+        padding-bottom: 10px;
+    }
+}
+
+.marquee-pro-signup .marquee-pro-signup-buttons a:first-child {
+    margin-right: 20px;
+}
+
+.marquee-pro-signup .marquee-pro-signup-check {
+    padding-left: 35px;
+    font-family: 'Walsheim-Bold';
+    position: relative;
+    font-size: 18px;
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+}
+
+.marquee-pro-signup .marquee-pro-signup-check:before {
+    content: '';
+    background-position: 0px -234px;
+    background-size: 205px auto;
+    width: 25px;
+    height: 27px;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -3px;
+}
+
+.marquee-pro-rebrand {
+    min-height: 378px;
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee-pro-rebrand {
+        padding-bottom: 50px;
+    }
+}
+
+.marquee-pro-rebrand .marquee-pro-left-text {
+    margin-bottom: 65px;
+}
+
+.marquee-pro-rebrand .marquee-pro-left-text h1 {
+    font-size: 20px;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #ef6c0f;
+    font-family: 'Walsheim-Bold';
+    margin-bottom: 10px;
+}
+
+.marquee-pro-rebrand .marquee-pro-left-text h2 {
+    font-size: 40px;
+    font-size: 4rem;
+    text-transform: uppercase;
+    font-family: 'Walsheim-Bold';
+    margin-top: 10px;
+    line-height: 1;
+}
+
+.marquee-pro {
+    min-height: 450px;
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee-pro {
+        padding-bottom: 50px;
+    }
+}
+
+.marquee-pro .well {
+    background-color: rgba(239, 108, 15, 0.8);
+    border: none;
+    color: #fff;
+    padding: 30px;
+    min-height: 275px;
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee-pro .well {
+        min-height: 0;
+        margin-top: 20px;
+    }
+}
+
+.marquee-pro .well .row {
+    min-height: 0 !important;
+}
+
+.marquee-pro .well .marquee-pro-icon-wrap {
+    border-left: 1px solid #fff;
+}
+
+@media only screen and (max-width: 768px) {
+    .marquee-pro .well .marquee-pro-icon-wrap {
+        border-left: 0;
+    }
+
+    .marquee-pro .well .marquee-pro-icon-wrap:not(:first-child) {
+        margin-top: 30px;
+    }
+}
+
+.marquee-pro .well .marquee-pro-icon-wrap .marquee-pro-icon-height {
+    height: 95px;
+}
+
+.marquee-pro .well .marquee-pro-icon-wrap .marquee-pro-icon-height img {
+    max-width: 75%;
+    max-height: 75%;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.marquee-pro .well .marquee-pro-icon-wrap h5 {
+    font-weight: 500;
+}
+
+.marquee-pro .well .marquee-pro-icon-wrap:first-child {
+    border-left: 0;
+}
+
+.marquee-pro .well .marquee-pro-icon-wrap .marquee-pro-icon {
+    margin: 0 auto 15px;
+    max-height: 85px;
+}
+
+.marquee-pro .well.marquee-pro-centered a {
+    font-weight: 500;
+}
+
+.marquee-pro .well.marquee-pro-centered h1 {
+    font-size: 20px;
+    font-size: 2rem;
+    font-family: 'Walsheim-Bold';
+    text-transform: uppercase;
+    margin: 0 0 10px 0;
+}
+
+.marquee-pro .well.marquee-pro-centered h2 {
+    margin-top: 0;
+    word-wrap: break-word;
+    word-break: break-word;
+    white-space: -moz-pre-wrap;
+}
+
+.marquee-pro .well.marquee-pro-centered .pro-marquee-home-deals {
+    border-top: 1px solid #fff;
+    font-weight: 700;
+}
+
+.marquee-pro .well.marquee-pro-centered .pro-marquee-home-deals .pro-marquee-deal {
+    margin-top: 20px;
+}
+
+.marquee-pro .well.marquee-pro-centered .pro-marquee-home-deals .pro-marquee-deal .pro-marquee-deal-text,
+.marquee-pro .well.marquee-pro-centered .pro-marquee-home-deals .pro-marquee-deal .pro-marquee-deal-savings {
+    font-size: 18px;
+    font-size: 1.8rem;
+}
+
+.marquee-pro .well.marquee-pro-centered .pro-marquee-home-deals .pro-marquee-deal-price {
+    margin-top: 15px;
+}
+
+.marquee-pro .well.marquee-pro-centered .pro-marquee-home-deals .pro-marquee-deal-price .marquee-price-small-text {
+    font-size: 15px;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.marquee-pro .well.marquee-pro-centered .pro-marquee-home-deals .pro-marquee-deal-price .marquee-price {
+    font-size: 35px;
+    font-size: 3.5rem;
+    line-height: 1;
+    font-family: 'Walsheim-Bold';
+}
+
+.marquee-pro .well.marquee-pro-centered .search-template-box {
+    border: 3px solid #fff;
+    margin-top: 10px;
+}
+
+.marquee-pro .marquee-pro-first-area h1 {
+    font-size: 20px;
+    font-size: 2rem;
+    font-family: 'Walsheim-Bold';
+    margin: 0 0 10px 0;
+}
+
+.marquee-pro .marquee-pro-first-area h2 {
+    margin-top: 12px;
+}
+
+.marquee-pro .marquee-pro-first-area .marquee-pro-product-text {
+    padding-top: 10px;
+    border-top: 1px solid #fff;
+}
+
+.marquee-pro .marquee-product-text {
+    margin-bottom: 20px;
+}
+
+.marquee-pro .jump-to-plans {
+    position: absolute;
+    bottom: -60px;
+    margin: 0 auto;
+    text-align: center;
+    right: 0;
+    left: 0;
+}
+
+.marquee-pro .jump-to-plans .marquee-jump-text {
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1;
+    color: #333333;
+    font-size: 20px;
+    font-size: 2rem;
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee-pro .jump-to-plans .marquee-jump-text {
+        margin-bottom: 5px;
+    }
+}
+
+.marquee-table-grid > .row {
+    display: table;
+}
+
+@media only screen and (max-width: 768px) {
+    .marquee-table-grid > .row {
+        display: block;
+    }
+}
+
+.marquee-table-grid > .row > [class*="col-"] {
+    float: none;
+    display: table-cell;
+    vertical-align: top;
+}
+
+@media only screen and (max-width: 768px) {
+    .marquee-table-grid > .row > [class*="col-"] {
+        display: block;
+        float: none;
+        border-left: none;
+        border-right: none;
+        padding: 20px inherit;
+        border-top: 1px solid #fff;
+    }
+
+    .marquee-table-grid > .row > [class*="col-"]:first-child {
+        border-top: 0;
+    }
+}
+.marquee {
+    background-size: cover !important;
+    position: relative;
+    background-position: bottom center;
+    background-color: #fff;
+  /* Ribbon */
+}
+
+.marquee .relative-position {
+    position: relative;
+}
+
+.marquee .marquee-all-centered {
+    text-align: center;
+}
+
+.marquee .marquee-two-col-txt ul.marquee-product-bullets {
+    text-align: left;
+}
+
+.marquee.marquee-short {
+    min-height: 368px;
+}
+
+.marquee.marquee-short .container {
+    min-height: inherit;
+}
+
+.marquee.marquee-short .container .row {
+    min-height: inherit;
+}
+
+.marquee.marquee-short .container .row .col-sm-pull-6 {
+    min-height: inherit;
+}
+
+@media only screen and (max-width: 767px) {
+    .marquee.marquee-short .container .row .col-sm-pull-6 {
+        min-height: 100px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee.marquee-short .vertical-height.marquee-sm-vertical-fix {
+        height: auto !important;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee.marquee-short .vertical-height.marquee-sm-vertical-fix .vertical-text {
+        -webkit-transform: translateY(0%);
+        -moz-transform: translateY(0%);
+        transform: translateY(0%);
+        top: 0%;
+    }
+}
+
+.marquee.marquee-tall {
+    min-height: 523px;
+}
+
+.marquee.marquee-tall .container {
+    min-height: inherit;
+}
+
+.marquee.marquee-tall .container .row {
+    min-height: inherit;
+}
+
+.marquee.marquee-tall .container .row .col-sm-pull-6 {
+    min-height: inherit;
+}
+
+@media only screen and (max-width: 767px) {
+    .marquee.marquee-tall .container .row .col-sm-pull-6 {
+        min-height: 100px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee.marquee-tall {
+        min-height: 400px;
+    }
+}
+
+.marquee.marquee-img-tall-left-txt {
+    height: 523px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .marquee.marquee-img-tall-left-txt {
+        height: 430px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee.marquee-img-tall-left-txt {
+        height: 332px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .marquee.marquee-img-tall-left-txt {
+        height: 332px;
+        background-position: -160px;
+    }
+}
+
+.marquee.marquee-img-short-left-txt {
+    height: 368px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .marquee.marquee-img-short-left-txt {
+        height: 300px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee.marquee-img-short-left-txt {
+        height: 234px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .marquee.marquee-img-short-left-txt {
+        height: 234px;
+        background-position: -160px;
+    }
+}
+
+.marquee.marquee-white {
+    color: #fff;
+}
+
+.marquee.marquee-white h1,
+.marquee.marquee-white h2,
+.marquee.marquee-white h3,
+.marquee.marquee-white h4,
+.marquee.marquee-white h5,
+.marquee.marquee-white h6 {
+    color: #fff;
+}
+
+.marquee.marquee-white .dashed-underline {
+    border-bottom-color: #fff;
+}
+
+.marquee.marquee-white a:not(.btn) {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.marquee.marquee-white a:not(.btn):hover {
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 480px) {
+    .marquee .marquee-customer-wrap {
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .marquee .marquee-customer-wrap .vertical-height {
+        height: auto !important;
+    }
+}
+
+.marquee .img-center {
+    margin: 0 auto;
+}
+
+.marquee .marquee-corner-img {
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    top: 0;
+    min-width: 165px;
+    min-height: 169px;
+}
+
+.marquee .marquee-product-img {
+    max-width: 100%;
+}
+
+.marquee .marquee-product-review {
+    font-size: 18px;
+    font-size: 1.8rem;
+}
+
+.marquee .marquee-product-review a {
+    text-decoration: underline;
+    padding-left: 10px;
+    color: #808080;
+}
+
+.marquee .marquee-product-review a:hover {
+    text-decoration: none;
+}
+
+.marquee .marquee-product-description {
+    font-size: 56px;
+    font-size: 5.6rem;
+    font-weight: 100;
+    line-height: 1.1;
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee .marquee-product-description {
+        font-size: 40px;
+        font-size: 4rem;
+    }
+}
+
+.marquee .marquee-product-text {
+    font-size: 18px;
+    font-size: 1.8rem;
+    padding: 0 0 14px;
+}
+
+.marquee ul.marquee-product-bullets {
+    font-size: 18px;
+    font-size: 1.8rem;
+    text-align: center;
+    list-style-position: inside;
+    padding: 0;
+}
+
+.marquee .marquee-restrictions-text {
+    font-size: 14px;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.marquee .marquee-ribbon {
+    width: 112px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-repeat: no-repeat;
+    z-index: 100;
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee .marquee-ribbon {
+        position: relative;
+        margin: 0 auto;
+    }
+}
+
+.marquee .marquee-left-ribbon .marquee-ribbon {
+    left: 0;
+    right: auto;
+}
+
+.marquee .marquee-price-btn-wrap {
+    color: #ef6c0f;
+    line-height: 1;
+    font-weight: 400;
+    padding: 5px 0 20px;
+}
+
+@media only screen and (max-width: 768px) {
+    .marquee .marquee-price-btn-wrap {
+        line-height: 1.2;
+    }
+}
+
+.marquee .marquee-price-btn-wrap .btn {
+    margin-right: 10px;
+}
+
+.marquee .marquee-price-btn-wrap .marquee-price-text {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.marquee .marquee-price-btn-wrap .marquee-price-small-text {
+    font-size: 18px;
+    font-size: 1.8rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .marquee .marquee-price-btn-wrap .marquee-price-small-text {
+        font-size: 16px;
+        font-size: 1.6rem;
+    }
+}
+
+.marquee .marquee-price-btn-wrap .marquee-price {
+    font-size: 36px;
+    font-size: 3.6rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .marquee .marquee-price-btn-wrap .marquee-price {
+        font-size: 30px;
+        font-size: 3rem;
+    }
+}
+
+.marquee .marquee-check-bullets {
+    list-style: none;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding-left: 0;
+    font-size: 18px;
+    font-size: 1.8rem;
+}
+
+.marquee .marquee-check-bullets span {
+    font-family: 'HelveticaNeue-CondensedBold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-stretch: condensed;
+    text-transform: uppercase;
+}
+
+.marquee .marquee-check-bullets li:before {
+    content: "\e207";
+    font-family: 'uxfont';
+    padding-right: 5px;
+}
+
+.marquee .marquee-btn-wrap {
+    margin-bottom: 20px;
+}
+
+.marquee .search-template .search-template-box {
+    border: 1px solid #cecece;
+}
+
+.marquee .marquee-customer-name-wrap {
+    position: absolute;
+    bottom: 10px;
+    font-size: 16px;
+    font-size: 1.6rem;
+}
+
+@media only screen and (max-width: 480px) {
+    .marquee .marquee-customer-name-wrap {
+        position: relative;
+        bottom: auto;
+    }
+}
+
+.marquee .marquee-customer-name-wrap .marquee-customer-name {
+    font-weight: bold;
+}
+
+.marquee .marquee-customer-name-wrap .marquee-customer-text {
+    font-weight: 100;
+}
+
+.marquee .marquee-customer-name-wrap .marquee-customer-website {
+    color: #008a32;
+    text-decoration: underline;
+}
+
+.marquee .marquee-two-col-abstract.left-column {
+    color: #fff;
+}
+
+.marquee .marquee-two-col-abstract.left-column .marquee-product-name {
+    color: #fff;
+    font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;
+    font-size: 46px;
+    margin: 34px 0 0 0;
+}
+
+.marquee .marquee-two-col-abstract.left-column .marquee-product-description {
+    font-family: "Walsheim-Bold";
+    font-size: 22px;
+}
+
+.marquee .marquee-two-col-abstract.left-column .marquee-product-text {
+    font-family: "Walsheim-Medium";
+    font-size: 18px;
+    margin-top: 18px;
+}
+
+.marquee .marquee-two-col-abstract.left-column .marquee-product-price {
+    display: block;
+    font-family: "Walsheim-Black";
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.marquee .marquee-two-col-abstract.left-column .btn {
+    font-family: "Walsheim-Medium";
+    font-size: 24px;
+}
+
+.marquee .marquee-two-col-abstract.left-column .marquee-restrictions-text {
+    margin: 12px 0 24px;
+    font-family: "Walsheim-Regular";
+}
+
+.marquee .marquee-two-col-abstract.left-column .marquee-restrictions-text ul {
+    padding-left: 0;
+}
+
+.marquee .marquee-two-col-abstract.left-column .marquee-restrictions-text ul li {
+    list-style: none;
+}
+
+.marquee .marquee-two-col-abstract.right-column {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    background-position: top center;
+    background-size: cover;
+}
+
+.marquee .marquee-two-col-abstract.right-column img.abstract-left {
+    position: absolute;
+    left: 0;
+    height: 100%;
+}
+
+.marquee .marquee-two-col-abstract.right-column img.abstract-right {
+    position: absolute;
+    right: 0;
+    height: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+    .marquee .marquee-two-col-abstract.right-column {
+        position: relative;
+        min-height: 200px;
+    }
+}
+
+h1.marquee-product-name,
+h2.marquee-product-name,
+.marquee-product-name {
+    font-size: 24px;
+    font-size: 2.4rem;
+    font-family: 'HelveticaNeue-CondensedBold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-stretch: condensed;
+    text-transform: uppercase;
+}
+
+@media only screen and (max-width: 992px) {
+    h1.marquee-product-name,
+  h2.marquee-product-name,
+  .marquee-product-name {
+        font-size: 20px;
+        font-size: 2rem;
+        margin-top: 10px;
+    }
+}
+        </style>
+        <style>
+          .marquee { background: url([@T[link:<imageroot />]@T]fos/mike/img/hosting/bg-marquee-V10.jpg) no-repeat top center;); }
+          
+        </style>
+      </atlantis:webstash>
+      <div data-onclick="#" data-icode="" class="marquee marquee-app-landing ">
+        <div class="container relative-position">
+          <div class="row">
+            <div class="col-sm-12">
+              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.marquee-www-rebrand-wrap&quot;},&quot;verticalStyle&quot;:&quot;padding-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                <div class="row">
+                  <div class="col-md-7 col-sm-12">
+                    <div class="marquee-pro-left-text">
+                            <div class="marquee-product-review"> <i class="uxicon uxicon-star text-warning"></i><i class="uxicon uxicon-star text-warning"></i><i class="uxicon uxicon-star text-warning"></i><i class="uxicon uxicon-star text-warning"></i><i class="uxicon uxicon-star text-warning"></i><a href="#">Reviews</a>
+                            </div>
+                            <h2 class="marquee-product-description">[@L[cds.sales/hosting/web-hosting-rebrand:marquee]@L]</h2>
+                            <div class="marquee-product-text">[@L[cds.sales/hosting/web-hosting-rebrand:guaranteeText1]@L] [@L[cds.sales/hosting/web-hosting-rebrand:guaranteeText2]@L]</div><a href="[@T[link:<relative path='~/hosting/web-hosting-config-new.aspx' secure='true'><param name='ci' value='89262' /><param name='plan' value='host_GridHostEcoDiabloLin1Yr_us' /></relative>]@T]" class="btn btn-primary jump-arrow-btn">[@L[cds.sales/hosting/web-hosting-rebrand:getstarted]@L]</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> 
+    ##endif
+     
+    <section id="plans" style="padding-top: 15px;">
+      <style>
+.pro-plans {
+    margin-top: 0px;
+    padding-bottom: 80px;
+}
+
+.pro-plans .tld-col-title {
+    text-transform: uppercase;
+}
+
+.pro-plans .non-input-group {
+    margin-bottom: 10px;
+}
+
+.pro-plans .non-input-group .form-control {
+    border: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    font-family: 'Walsheim-Black';
+    font-size: 30px;
+    font-size: 3rem;
+    padding: 4px 20px;
+    height: 44px;
+    line-height: 1;
+    color: #333333;
+}
+
+.pro-plans .sub-plan-text {
+    margin-top: 30px;
+    margin-bottom: -30px;
+}
+
+.pro-plans h2 {
+    margin-top: 0;
+}
+
+.pro-plans h2.domains-plans-mid-title {
+    margin: 40px 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .pro-plans {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
+
+.pro-plans.plan-container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.pro-plans.plan-container:before,
+.pro-plans.plan-container:after {
+    content: " ";
+  /* 1 */
+    display: table;
+  /* 2 */
+}
+
+.pro-plans.plan-container:after {
+    clear: both;
+}
+
+@media only screen and (max-width: 1535px) {
+    .pro-plans.plan-container {
+        max-width: 1170px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .pro-plans.plan-container {
+        max-width: 970px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .pro-plans.plan-container {
+        max-width: 750px;
+    }
+}
+
+.pro-plans.plan-container .plan-col-15 {
+    width: 20%;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@media only screen and (max-width: 1535px) {
+    .pro-plans.plan-container .plan-col-15 {
+        width: 33.3333%;
+    }
+
+    .pro-plans.plan-container .plan-col-15:nth-child(4n) {
+        border: 0;
+        margin-left: 16.66666666667%;
+        clear: left;
+    }
+
+    .pro-plans.plan-container .plan-col-15:nth-child(1) {
+        border: 0;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .pro-plans.plan-container .plan-col-15 {
+        width: 50%;
+    }
+
+    .pro-plans.plan-container .plan-col-15:nth-child(4n) {
+        clear: none;
+        margin-left: 0;
+    }
+
+    .pro-plans.plan-container .plan-col-15:nth-child(3) {
+        clear: left;
+        border-left: 0;
+    }
+
+    .pro-plans.plan-container .plan-col-15:nth-child(5) {
+        clear: left;
+        border-left: 0;
+        margin-left: 25%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .pro-plans.plan-container .plan-col-15 {
+        width: 100%;
+        border: 0;
+        clear: none;
+        float: none;
+    }
+
+    .pro-plans.plan-container .plan-col-15:nth-child(5) {
+        margin-left: 0;
+    }
+}
+
+.pro-plans.plan-container .plan-col-2 {
+    width: 16.66666666667%;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@media only screen and (max-width: 1535px) {
+    .pro-plans.plan-container .plan-col-2 {
+        width: 33.3333%;
+    }
+
+    .pro-plans.plan-container .plan-col-2:nth-child(4n) {
+        border: 0;
+        clear: left;
+    }
+
+    .pro-plans.plan-container .plan-col-2:nth-child(1) {
+        border-left: 0;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .pro-plans.plan-container .plan-col-2 {
+        width: 50%;
+    }
+
+    .pro-plans.plan-container .plan-col-2:nth-child(4n) {
+        clear: none;
+    }
+
+    .pro-plans.plan-container .plan-col-2:nth-child(3) {
+        clear: left;
+        border-left: 0;
+    }
+
+    .pro-plans.plan-container .plan-col-2:nth-child(5) {
+        clear: left;
+        border-left: 0;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .pro-plans.plan-container .plan-col-2 {
+        width: 100%;
+        border: 0;
+        clear: none;
+        float: none;
+    }
+}
+
+.pro-plans .pro-plan-wrap {
+    border-top: 10px solid #008a32;
+    padding: 40px;
+    background-color: #fff;
+    -webkit-box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
+}
+
+@media only screen and (max-width: 992px) {
+    .pro-plans .pro-plan-wrap {
+        padding: 40px 30px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .pro-plans .pro-plan-wrap {
+        margin-bottom: 40px;
+    }
+}
+
+.pro-plans .pro-plan-wrap .features-row {
+    margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+    .pro-plans .pro-plan-wrap .features-row {
+        margin-bottom: 0;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .pro-plans .pro-plan-wrap .features-row .col-sm-6 {
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .pro-plans .pro-plan-wrap .features-row .col-sm-6 img {
+        margin: 0 auto 20px;
+    }
+}
+
+.pro-plans .pro-plan-wrap .plan-flag {
+    color: #000;
+    font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;
+    font-size: 28px;
+    font-size: 2.8rem;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    line-height: 1;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMTgxLjggNjQuMiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTgxLjggNjQuMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cG9seWdvbiBmaWxsPSIjRkVEQzQ1IiBwb2ludHM9IjE3LDAgMCwyNC4yIDMsNTYgMTY0LjUsNjQuMiAxODEuOCw0My44IDE4MSw0LjMgIi8+DQo8L3N2Zz4NCg==) no-repeat center center;
+    background-size: cover;
+    overflow: visible;
+}
+
+.pro-plans .pro-plan-wrap .plan-flag:before {
+    content: '';
+}
+
+.plan-tile .plan-flag {
+    position: absolute;
+    top: -20px;
+    right: 30px;
+    color: #fff;
+    display: inline-block;
+    padding: 0 15px;
+    line-height: 2.5;
+}
+
+.pro-plans .pro-plan-wrap h6 {
+    margin-top: 0;
+}
+
+.pro-plans .pro-plan-wrap h2 {
+    margin-bottom: 14px;
+}
+
+.pro-plans .pro-plan-wrap .plan-title {
+    font-size: 30px;
+    font-size: 3rem;
+    margin-top: 0;
+    font-family: 'Walsheim-Bold';
+    text-transform: none;
+    word-wrap: break-word;
+    word-break: break-word;
+    white-space: -moz-pre-wrap;
+}
+
+.pro-plans .pro-plan-wrap .plan-subtitle {
+    color: #b3b3b3;
+    font-weight: 700;
+}
+
+.pro-plans .pro-plan-wrap .plan-text {
+    min-height: 44px;
+    margin-bottom: 5px;
+}
+
+.pro-plans .pro-plan-wrap .plan-tile-top {
+    padding: 0px;
+}
+
+.pro-plans .pro-plan-wrap .plan-disclaimers {
+    font-size: 14px;
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+}
+
+.pro-plans .pro-plan-wrap .plan-price-wrap {
+    min-height: 92px;
+}
+
+.pro-plans .pro-plan-wrap .plan-price-wrap .plan-price {
+    font-size: 45px;
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: #ef6c0f;
+    font-family: 'Walsheim-Bold';
+}
+
+.pro-plans .pro-plan-wrap .plan-price-wrap .plan-duration {
+    font-size: 24px;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #ef6c0f;
+}
+
+.pro-plans .pro-plan-wrap .btn {
+    margin-bottom: 20px;
+}
+
+.pro-plans .pro-plan-wrap .plan-item {
+    border-top: 0 none;
+    min-height: 0;
+    padding: 5px 0;
+    text-align: left;
+    font-size: 16px;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+}
+
+.pro-plans .include-check {
+    position: relative;
+    padding-left: 45px;
+    margin-top: 20px;
+}
+
+.pro-plans .include-check:before {
+    content: "";
+    background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
+    background-position: 0 -668px;
+    background-size: 205px auto;
+    width: 25px;
+    height: 27px;
+    padding-right: 5px;
+    position: absolute;
+    left: 0;
+    top: -6px;
+}
+
+.pro-plans .sf-tipper-target {
+    background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
+    background-position: 0 -864px;
+    width: 15px;
+    height: 16px;
+    display: inline-block;
+    background-size: 205px auto;
+    vertical-align: baseline;
+}
+      </style>
       <div class="pro-plans-wrap bg-gray-light">
         <div id="plans" data-icode="" class="container pro-plans"> 
           <div class="col-sm-4 plan-tile plan-pro">
@@ -224,96 +2554,21 @@ h3 {
               </style>
             </atlantis:webstash>
             <div class="pro-plan-wrap">
-              <h2 class="plan-title">Economy</h2>
-              <p class="plan-text">Perfect to get started with a basic site.</p>
-              <div class="plan-price-wrap"> <strong>Starting at<br><span class="plan-price text-warning">[@T[productprice:<current productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/mo</span> 
-                  ##if(productHasSavingsMoreThan(32051, 32051, 0))
-                   <br><strong>was 
-                    <strike>[@T[productprice:<list productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary">Save [@T[productcompare:<percent primaryproductid="32051" secondaryproductid="32051" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span></strong> 
-                  ##endif
-                   </strong></div>
-              <ul id="product-A">
-                <li data-value='1' data-plan="host_GridHostEcoDiabloLin3Mo_us">
-                  <div data-main="true" class="sf-droplist-row"><span class="sf-droplist-term">1 mo</span><span class="sf-droplist-cost sf-droplist-sale">[@T[productprice:<current productid="32048" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</span> 
-                    ##if(productHasSavingsMoreThan(32048, 32048, 0))
-                     <span class="sf-droplist-msg sf-droplist-sale">ON SALE</span>
-                  </div>
-                  <div class="sf-droplist-row"><span class="sf-droplist-term"> </span><span class="sf-droplist-cost">
-                      <strike>[@T[productprice:<list productid="32048" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</strike></span><span class="sf-droplist-msg sf-droplist-sale">Save [@T[productcompare:<percent primaryproductid="32048" secondaryproductid="32048" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span> 
-                    ##endif
-                     
-                  </div>
-                </li>
-                <li data-value='2' data-plan="host_GridHostEcoDiabloLin1Yr_us">
-                  <div data-main="true" class="sf-droplist-row"><span class="sf-droplist-term">12 mo</span><span class="sf-droplist-cost sf-droplist-sale">[@T[productprice:<current productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</span> 
-                    ##if(productHasSavingsMoreThan(32051, 32051, 0))
-                     <span class="sf-droplist-msg sf-droplist-sale">ON SALE</span>
-                  </div>
-                  <div class="sf-droplist-row"><span class="sf-droplist-term"> </span><span class="sf-droplist-cost">
-                      <strike>[@T[productprice:<list productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</strike></span><span class="sf-droplist-msg sf-droplist-sale">Save [@T[productcompare:<percent primaryproductid="32051" secondaryproductid="32051" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span> 
-                    ##endif
-                     
-                  </div>
-                </li>
-                <li data-value='3' data-plan="host_GridHostEcoDiabloLin2Yr_us">
-                  <div data-main="true" class="sf-droplist-row"><span class="sf-droplist-term">24 mo</span><span class="sf-droplist-cost sf-droplist-sale">[@T[productprice:<current productid="32060" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</span> 
-                    ##if(productHasSavingsMoreThan(32060, 32060, 0))
-                     <span class="sf-droplist-msg sf-droplist-sale">ON SALE</span>
-                  </div>
-                  <div class="sf-droplist-row"><span class="sf-droplist-term"> </span><span class="sf-droplist-cost">
-                      <strike>[@T[productprice:<list productid="32060" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</strike></span><span class="sf-droplist-msg sf-droplist-sale">Save [@T[productcompare:<percent primaryproductid="32060" secondaryproductid="32060" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span> 
-                    ##endif
-                     
-                  </div>
-                </li>
-                <li data-value='4' data-plan="host_GridHostEcoDiabloLin3Yr_us">
-                  <div data-main="true" class="sf-droplist-row"><span class="sf-droplist-term">36 mo</span><span class="sf-droplist-cost sf-droplist-sale">[@T[productprice:<current productid="32063" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</span> 
-                    ##if(productHasSavingsMoreThan(32063, 32063, 0))
-                     <span class="sf-droplist-msg sf-droplist-sale">ON SALE</span>
-                  </div>
-                  <div class="sf-droplist-row"><span class="sf-droplist-term"> </span><span class="sf-droplist-cost">
-                      <strike>[@T[productprice:<list productid="32063" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</strike></span><span class="sf-droplist-msg sf-droplist-sale">Save [@T[productcompare:<percent primaryproductid="32063" secondaryproductid="32063" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span> 
-                    ##endif
-                     
-                  </div>
-                </li>
-                <li data-value='5' data-plan="host_GridHostEcoDiabloLin4Yr_us">
-                  <div data-main="true" class="sf-droplist-row"><span class="sf-droplist-term">48 mo</span><span class="sf-droplist-cost sf-droplist-sale">[@T[productprice:<current productid="32066" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</span> 
-                    ##if(productHasSavingsMoreThan(32066, 32066, 0))
-                     <span class="sf-droplist-msg sf-droplist-sale">ON SALE</span>
-                  </div>
-                  <div class="sf-droplist-row"><span class="sf-droplist-term"> </span><span class="sf-droplist-cost">
-                      <strike>[@T[productprice:<list productid="32066" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</strike></span><span class="sf-droplist-msg sf-droplist-sale">Save [@T[productcompare:<percent primaryproductid="32066" secondaryproductid="32066" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span> 
-                    ##endif
-                     
-                  </div>
-                </li>
-                <li data-value='6' data-plan="host_GridHostEcoDiabloLin5Yr_us">
-                  <div data-main="true" class="sf-droplist-row"><span class="sf-droplist-term">60 mo</span><span class="sf-droplist-cost sf-droplist-sale">[@T[productprice:<current productid="32069" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</span> 
-                    ##if(productHasSavingsMoreThan(32069, 32069, 0))
-                     <span class="sf-droplist-msg sf-droplist-sale">ON SALE</span>
-                  </div>
-                  <div class="sf-droplist-row"><span class="sf-droplist-term"> </span><span class="sf-droplist-cost">
-                      <strike>[@T[productprice:<list productid="32069" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</strike></span><span class="sf-droplist-msg sf-droplist-sale">Save [@T[productcompare:<percent primaryproductid="32069" secondaryproductid="32069" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span> 
-                    ##endif
-                     
-                  </div>
-                </li>
-              </ul>
-              <atlantis:webstash type="js">
-                <script type="text/javascript">
-                  $("#product-A").sfDropList({
-                    width:320
-                  });
-                  
-                </script>
-              </atlantis:webstash>
-              <button data-tcode="" data-ul="product-A" class="btn btn-purchase btn-plan btn-lg btn-block">Add to Cart</button>
-              <div class="plan-item">1 Website</div>
-              <div class="plan-item">100 GB Storage</div>
-              <div class="plan-item">Unlimited bandwidth</div>
-              <div class="plan-item">100 Email Addresses</div>
-              <div class="plan-item">Free Domain with annual plan</div>
+              <h2 class="plan-title">[@L[cds.sales/hosting/web-hosting-rebrand:economyPlan]@L]</h2>
+              <p class="plan-text">[@L[cds.sales/hosting/web-hosting-rebrand:basicPrice]@L]</p>
+              <div class="plan-price-wrap"><span class="plan-price text-warning">[@T[productprice:<current productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
+                ##if(productHasSavingsMoreThan(32051, 32051, 0))
+                 <br><strong>[@L[cds.sales/_common:was]@L] 
+                  <strike>[@T[productprice:<list productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary">[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="32051" secondaryproductid="32051" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span></strong> 
+                ##endif
+                 
+              </div>
+              <button id="product-A" data-tcode="" data-plan="host_GridHostEcoDiabloLin1Yr_us" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+              <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:oneWeb]@L]</div>
+              <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:oneHundredStorage]@L]</div>
+              <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedBand]@L]</div>
+              <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:oneHundredEMail]@L]</div>
+              <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:freeDomain]@L]</div>
             </div>
           </div>
           <div class="col-sm-4 plan-tile plan-pro">
@@ -325,96 +2580,21 @@ h3 {
               </style>
             </atlantis:webstash>
             <div class="pro-plan-wrap">
-              <h2 class="plan-title">Deluxe</h2>
-              <p class="plan-text">Ideal for building and managing multiple sites.</p>
-              <div class="plan-price-wrap"> <strong>Starting at<br><span class="plan-price text-warning">[@T[productprice:<current productid="32059" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/mo</span> 
-                  ##if(productHasSavingsMoreThan(32059, 32059, 0))
-                   <br><strong>was 
-                    <strike>[@T[productprice:<list productid="32059" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary">Save [@T[productcompare:<percent primaryproductid="32059" secondaryproductid="32059" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span></strong> 
-                  ##endif
-                   </strong></div>
-              <ul id="product-B">
-                <li data-value='1' data-plan="host_GridHostDlxDiabloLinMo_us">
-                  <div data-main="true" class="sf-droplist-row"><span class="sf-droplist-term">1 mo</span><span class="sf-droplist-cost sf-droplist-sale">[@T[productprice:<current productid="32050" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</span> 
-                    ##if(productHasSavingsMoreThan(32050, 32050, 0))
-                     <span class="sf-droplist-msg sf-droplist-sale">ON SALE</span>
-                  </div>
-                  <div class="sf-droplist-row"><span class="sf-droplist-term"> </span><span class="sf-droplist-cost">
-                      <strike>[@T[productprice:<list productid="32050" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</strike></span><span class="sf-droplist-msg sf-droplist-sale">Save [@T[productcompare:<percent primaryproductid="32050" secondaryproductid="32050" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span> 
-                    ##endif
-                     
-                  </div>
-                </li>
-                <li data-value='2' data-plan="host_GridHostDlxDiabloLin1Yr_us">
-                  <div data-main="true" class="sf-droplist-row"><span class="sf-droplist-term">12 mo</span><span class="sf-droplist-cost sf-droplist-sale">[@T[productprice:<current productid="32059" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</span> 
-                    ##if(productHasSavingsMoreThan(32059, 32059, 0))
-                     <span class="sf-droplist-msg sf-droplist-sale">ON SALE</span>
-                  </div>
-                  <div class="sf-droplist-row"><span class="sf-droplist-term"> </span><span class="sf-droplist-cost">
-                      <strike>[@T[productprice:<list productid="32059" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</strike></span><span class="sf-droplist-msg sf-droplist-sale">Save [@T[productcompare:<percent primaryproductid="32059" secondaryproductid="32059" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span> 
-                    ##endif
-                     
-                  </div>
-                </li>
-                <li data-value='3' data-plan="host_GridHostDlxDiabloLin2Yr_us">
-                  <div data-main="true" class="sf-droplist-row"><span class="sf-droplist-term">24 mo</span><span class="sf-droplist-cost sf-droplist-sale">[@T[productprice:<current productid="32062" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</span> 
-                    ##if(productHasSavingsMoreThan(32062, 32062, 0))
-                     <span class="sf-droplist-msg sf-droplist-sale">ON SALE</span>
-                  </div>
-                  <div class="sf-droplist-row"><span class="sf-droplist-term"> </span><span class="sf-droplist-cost">
-                      <strike>[@T[productprice:<list productid="32062" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</strike></span><span class="sf-droplist-msg sf-droplist-sale">Save [@T[productcompare:<percent primaryproductid="32062" secondaryproductid="32062" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span> 
-                    ##endif
-                     
-                  </div>
-                </li>
-                <li data-value='4' data-plan="host_GridHostDlxDiabloLin3Yr_us">
-                  <div data-main="true" class="sf-droplist-row"><span class="sf-droplist-term">36 mo</span><span class="sf-droplist-cost sf-droplist-sale">[@T[productprice:<current productid="32065" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</span> 
-                    ##if(productHasSavingsMoreThan(32065, 32065, 0))
-                     <span class="sf-droplist-msg sf-droplist-sale">ON SALE</span>
-                  </div>
-                  <div class="sf-droplist-row"><span class="sf-droplist-term"> </span><span class="sf-droplist-cost">
-                      <strike>[@T[productprice:<list productid="32065" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</strike></span><span class="sf-droplist-msg sf-droplist-sale">Save [@T[productcompare:<percent primaryproductid="32065" secondaryproductid="32065" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span> 
-                    ##endif
-                     
-                  </div>
-                </li>
-                <li data-value='5' data-plan="host_GridHostDlxDiabloLin4Yr_us">
-                  <div data-main="true" class="sf-droplist-row"><span class="sf-droplist-term">48 mo</span><span class="sf-droplist-cost sf-droplist-sale">[@T[productprice:<current productid="32068" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</span> 
-                    ##if(productHasSavingsMoreThan(32068, 32068, 0))
-                     <span class="sf-droplist-msg sf-droplist-sale">ON SALE</span>
-                  </div>
-                  <div class="sf-droplist-row"><span class="sf-droplist-term"> </span><span class="sf-droplist-cost">
-                      <strike>[@T[productprice:<list productid="32068" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</strike></span><span class="sf-droplist-msg sf-droplist-sale">Save [@T[productcompare:<percent primaryproductid="32068" secondaryproductid="32068" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span> 
-                    ##endif
-                     
-                  </div>
-                </li>
-                <li data-value='6' data-plan="host_GridHostDlxDiabloLin5Yr_us">
-                  <div data-main="true" class="sf-droplist-row"><span class="sf-droplist-term">60 mo</span><span class="sf-droplist-cost sf-droplist-sale">[@T[productprice:<current productid="32071" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</span> 
-                    ##if(productHasSavingsMoreThan(32071, 32071, 0))
-                     <span class="sf-droplist-msg sf-droplist-sale">ON SALE</span>
-                  </div>
-                  <div class="sf-droplist-row"><span class="sf-droplist-term"> </span><span class="sf-droplist-cost">
-                      <strike>[@T[productprice:<list productid="32071" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</strike></span><span class="sf-droplist-msg sf-droplist-sale">Save [@T[productcompare:<percent primaryproductid="32071" secondaryproductid="32071" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span> 
-                    ##endif
-                     
-                  </div>
-                </li>
-              </ul>
-              <atlantis:webstash type="js">
-                <script type="text/javascript">
-                  $("#product-B").sfDropList({
-                    width:320
-                  });
-                  
-                </script>
-              </atlantis:webstash>
-              <button data-tcode="" data-ul="product-B" class="btn btn-purchase btn-plan btn-lg btn-block">Add to Cart</button>
-              <div class="plan-item">Unlimited Websites</div>
-              <div class="plan-item">Unlimited Storage <span class='sf-tip sf-tipper-target' data-style='qt' data-content='Our Web Hosting plans are designed to host most personal, small business and organization websites. We do not limit the amount of storage and bandwidth your site can use as long as it complies with our Hosting Agreement. Should your website bandwidth or storage usage present a risk to the stability, performance or uptime of our servers, we will notify you via email and you may be required to upgrade to a Virtual Private Server or Dedicated (Private) Server, or we may restrict the resources your website is using. It’s very rare that a website violates our Hosting Agreement and is typically only seen in sites that use hosting for file sharing or storage.'></span></div>
-              <div class="plan-item">Unlimited bandwidth</div>
-              <div class="plan-item">500 Email Addresses</div>
-              <div class="plan-item">Free Domain with annual plan</div>
+              <h2 class="plan-title">[@L[cds.sales/hosting/web-hosting-rebrand:deluxePlan]@L]</h2>
+              <p class="plan-text">[@L[cds.sales/hosting/web-hosting-rebrand:greatHome]@L]</p>
+              <div class="plan-price-wrap"><span class="plan-price text-warning">[@T[productprice:<current productid="32059" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
+                ##if(productHasSavingsMoreThan(32059, 32059, 0))
+                 <br><strong>[@L[cds.sales/_common:was]@L] 
+                  <strike>[@T[productprice:<list productid="32059" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary">[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="32059" secondaryproductid="32059" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span></strong> 
+                ##endif
+                 
+              </div>
+              <button id="product-B" data-tcode="" data-plan="host_GridHostDlxDiabloLin1Yr_us" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+              <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedWeb]@L]</div>
+              <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedStorage]@L]</div>
+              <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedBand]@L]</div>
+              <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:fiveHundredEMail]@L]</div>
+              <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:freeDomain]@L]</div>
             </div>
           </div>
           <div class="col-sm-4 plan-tile plan-pro">
@@ -427,99 +2607,24 @@ h3 {
             </atlantis:webstash>
             <div class="pro-plan-wrap">
               <div class="plan-flag">More power and security</div>
-              <h2 class="plan-title">Ultimate</h2>
-              <p class="plan-text">Good for higher traffic. Twice the power, memory, email and more.</p>
-              <div class="plan-price-wrap"> <strong>Starting at<br><span class="plan-price text-warning">[@T[productprice:<current productid="32082" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/mo</span> 
-                  ##if(productHasSavingsMoreThan(32082, 32082, 0))
-                   <br><strong>was 
-                    <strike>[@T[productprice:<list productid="32082" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary">Save [@T[productcompare:<percent primaryproductid="32082" secondaryproductid="32082" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span></strong> 
-                  ##endif
-                   </strong></div>
-              <ul id="product-C">
-                <li data-value='1' data-plan="host_GridHostUnlDiabloLinMo_us">
-                  <div data-main="true" class="sf-droplist-row"><span class="sf-droplist-term">1 mo</span><span class="sf-droplist-cost sf-droplist-sale">[@T[productprice:<current productid="32076" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</span> 
-                    ##if(productHasSavingsMoreThan(32076, 32076, 0))
-                     <span class="sf-droplist-msg sf-droplist-sale">ON SALE</span>
-                  </div>
-                  <div class="sf-droplist-row"><span class="sf-droplist-term"> </span><span class="sf-droplist-cost">
-                      <strike>[@T[productprice:<list productid="32076" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</strike></span><span class="sf-droplist-msg sf-droplist-sale">Save [@T[productcompare:<percent primaryproductid="32076" secondaryproductid="32076" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span> 
-                    ##endif
-                     
-                  </div>
-                </li>
-                <li data-value='2' data-plan="host_GridHostUnlDiabloLin1Yr_us">
-                  <div data-main="true" class="sf-droplist-row"><span class="sf-droplist-term">12 mo</span><span class="sf-droplist-cost sf-droplist-sale">[@T[productprice:<current productid="32082" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</span> 
-                    ##if(productHasSavingsMoreThan(32082, 32082, 0))
-                     <span class="sf-droplist-msg sf-droplist-sale">ON SALE</span>
-                  </div>
-                  <div class="sf-droplist-row"><span class="sf-droplist-term"> </span><span class="sf-droplist-cost">
-                      <strike>[@T[productprice:<list productid="32082" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</strike></span><span class="sf-droplist-msg sf-droplist-sale">Save [@T[productcompare:<percent primaryproductid="32082" secondaryproductid="32082" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span> 
-                    ##endif
-                     
-                  </div>
-                </li>
-                <li data-value='3' data-plan="host_GridHostUnlDiabloLin2Yr_us">
-                  <div data-main="true" class="sf-droplist-row"><span class="sf-droplist-term">24 mo</span><span class="sf-droplist-cost sf-droplist-sale">[@T[productprice:<current productid="32084" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</span> 
-                    ##if(productHasSavingsMoreThan(32084, 32084, 0))
-                     <span class="sf-droplist-msg sf-droplist-sale">ON SALE</span>
-                  </div>
-                  <div class="sf-droplist-row"><span class="sf-droplist-term"> </span><span class="sf-droplist-cost">
-                      <strike>[@T[productprice:<list productid="32084" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</strike></span><span class="sf-droplist-msg sf-droplist-sale">Save [@T[productcompare:<percent primaryproductid="32084" secondaryproductid="32084" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span> 
-                    ##endif
-                     
-                  </div>
-                </li>
-                <li data-value='4' data-plan="host_GridHostUnlDiabloLin3Yr_us">
-                  <div data-main="true" class="sf-droplist-row"><span class="sf-droplist-term">36 mo</span><span class="sf-droplist-cost sf-droplist-sale">[@T[productprice:<current productid="32086" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</span> 
-                    ##if(productHasSavingsMoreThan(32086, 32086, 0))
-                     <span class="sf-droplist-msg sf-droplist-sale">ON SALE</span>
-                  </div>
-                  <div class="sf-droplist-row"><span class="sf-droplist-term"> </span><span class="sf-droplist-cost">
-                      <strike>[@T[productprice:<list productid="32086" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</strike></span><span class="sf-droplist-msg sf-droplist-sale">Save [@T[productcompare:<percent primaryproductid="32086" secondaryproductid="32086" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span> 
-                    ##endif
-                     
-                  </div>
-                </li>
-                <li data-value='5' data-plan="host_GridHostUnlDiabloLin4Yr_us">
-                  <div data-main="true" class="sf-droplist-row"><span class="sf-droplist-term">48 mo</span><span class="sf-droplist-cost sf-droplist-sale">[@T[productprice:<current productid="32088" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</span> 
-                    ##if(productHasSavingsMoreThan(32088, 32088, 0))
-                     <span class="sf-droplist-msg sf-droplist-sale">ON SALE</span>
-                  </div>
-                  <div class="sf-droplist-row"><span class="sf-droplist-term"> </span><span class="sf-droplist-cost">
-                      <strike>[@T[productprice:<list productid="32088" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</strike></span><span class="sf-droplist-msg sf-droplist-sale">Save [@T[productcompare:<percent primaryproductid="32088" secondaryproductid="32088" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span> 
-                    ##endif
-                     
-                  </div>
-                </li>
-                <li data-value='6' data-plan="host_GridHostUnlDiabloLin5Yr_us">
-                  <div data-main="true" class="sf-droplist-row"><span class="sf-droplist-term">60 mo</span><span class="sf-droplist-cost sf-droplist-sale">[@T[productprice:<current productid="32090" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</span> 
-                    ##if(productHasSavingsMoreThan(32090, 32090, 0))
-                     <span class="sf-droplist-msg sf-droplist-sale">ON SALE</span>
-                  </div>
-                  <div class="sf-droplist-row"><span class="sf-droplist-term"> </span><span class="sf-droplist-cost">
-                      <strike>[@T[productprice:<list productid="32090" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</strike></span><span class="sf-droplist-msg sf-droplist-sale">Save [@T[productcompare:<percent primaryproductid="32090" secondaryproductid="32090" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span> 
-                    ##endif
-                     
-                  </div>
-                </li>
-              </ul>
-              <atlantis:webstash type="js">
-                <script type="text/javascript">
-                  $("#product-C").sfDropList({
-                    width:320
-                  });
-                  
-                </script>
-              </atlantis:webstash>
-              <button data-tcode="" data-ul="product-C" class="btn btn-purchase btn-plan btn-lg btn-block">Add to Cart</button>
-              <div class="plan-item">Unlimited Websites</div>
-              <div class="plan-item">Unlimited Storage <span class='sf-tip sf-tipper-target' data-style='qt' data-content='Our Web Hosting plans are designed to host most personal, small business and organization websites. We do not limit the amount of storage and bandwidth your site can use as long as it complies with our Hosting Agreement. Should your website bandwidth or storage usage present a risk to the stability, performance or uptime of our servers, we will notify you via email and you may be required to upgrade to a Virtual Private Server or Dedicated (Private) Server, or we may restrict the resources your website is using. It’s very rare that a website violates our Hosting Agreement and is typically only seen in sites that use hosting for file sharing or storage.'></span></div>
-              <div class="plan-item">Unlimited bandwidth</div>
-              <div class="plan-item">1000 Email Addresses</div>
-              <div class="plan-item">Free Domain with annual plan</div>
-              <div class="plan-item">2X Processing Power &amp; Memory (Available for Linux/cPanel only) <span class='sf-tip sf-tipper-target' data-style='qt' data-content='Available Resources:<br><br>Ultimate Plan<br>2 CPU, 1 GB RAM, 125 Entry Processes<br><br>Economy &amp; Deluxe<br>1 CPU, 512 MB RAM, 100 Entry Processes'></span></div>
-              <div class="plan-item">Premium DNS Management Tool <span class='sf-tip sf-tipper-target' data-style='qt' data-content='A $35.88/yr value, our Premium DNS makes it easy to resolve common issues that prevent people from accessing your site, improving your overall performance, availability, and security.'></span></div>
-              <div class="plan-item">1 year SSL Certificate - Secures customer data &amp; increases search rackings. Restrictions apply. <span class='sf-tip sf-tipper-target' data-style='qt' data-content='A $69.99 value, your GoDaddy SSL certificate keeps payments and customer data secure, and helps increase your search rankings on Google. Take advantage of 256-bit encryption and 99.9% browser recognition. The SSL Certificate is free for 1 year with purchase. After the initial free year, SSL will automatically renew at the then-current price until cancelled. You may cancel automatic renewal at any time in your GoDaddy account.'></span></div>
+              <h2 class="plan-title">[@L[cds.sales/hosting/web-hosting-rebrand:ultimatePlan]@L]</h2>
+              <p class="plan-text">[@L[cds.sales/hosting/web-hosting-rebrand:handlesMost]@L]</p>
+              <div class="plan-price-wrap"><span class="plan-price text-warning">[@T[productprice:<current productid="32082" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
+                ##if(productHasSavingsMoreThan(32082, 32082, 0))
+                 <br><strong>[@L[cds.sales/_common:was]@L] 
+                  <strike>[@T[productprice:<list productid="32082" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary">[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="32082" secondaryproductid="32082" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span></strong> 
+                ##endif
+                 
+              </div>
+              <button id="product-C" data-tcode="" data-plan="host_GridHostUnlDiabloLin1Yr_us" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+              <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedWeb]@L]</div>
+              <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedStorage]@L]</div>
+              <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedBand]@L]</div>
+              <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:oneThousandEMail]@L]</div>
+              <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:freeDomain]@L]</div>
+              <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:twoXPowerLinux]@L]</div>
+              <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:oneThousandEMail]@L]</div>
+              <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:ultimateSSL]@L]</div>
             </div>
           </div>
           <atlantis:webstash type="js">
@@ -551,7 +2656,7 @@ h3 {
                   dataType: "jsonp"
                 })
                 .done(function(data) {
-                  var redirectUrl = "[@T[link:<relative path="/hosting-config-new.aspx" parammode="common" />]@T]";
+                  var redirectUrl = "[@T[link:<relative path="~/hosting/web-hosting-config-new.aspx" parammode="common" />]@T]";
                   if (redirectUrl.indexOf("?") === -1) {
                     redirectUrl += "?plan=";
                   } else {
@@ -573,23 +2678,29 @@ h3 {
                 <div class="row">
                   <div class="row">
                     <div class="col-sm-12">
-                      <h3 class="text-center">All Plans Include</h3>
+                       
+                      ##if(activeLanguageAny([en-US]))
+                       
+                      <h2 style="padding-top: 50px;" class="text-center">[@L[cds.sales/hosting/web-hosting-rebrand:theresMoreRebrand]@L]</h2> 
+                      ##endif
+                       
+                      <h3 class="text-center">[@L[cds.sales/hosting/web-hosting-rebrand:allPlans]@L]</h3>
                     </div>
                   </div>
                   <div class="col-sm-4 ">
-                    <div class="include-check">Free domain with annual plan</div>
-                    <div class="include-check">Free Email Addresses</div>
-                    <div class="include-check">One-click install of 200+ Free Applications</div>
+                    <div class="include-check">[@L[cds.sales/hosting/web-hosting-rebrand:freeDomain]@L]</div>
+                    <div class="include-check">[@L[cds.sales/hosting/web-hosting-rebrand:freeEmail]@L]</div>
+                    <div class="include-check">[@L[cds.sales/hosting/web-hosting-rebrand:oneClick]@L]</div>
                   </div>
                   <div class="col-sm-4 ">
-                    <div class="include-check">1 GB storage MySQL Linux and 200 MB storage Windows SQL Databases</div>
-                    <div class="include-check">Flexible, easy-to-use control panel</div>
-                    <div class="include-check">24/7 security monitoring and DDoS protection</div>
+                    <div class="include-check">[@L[cds.sales/hosting/web-hosting-rebrand:storageOptions]@L]</div>
+                    <div class="include-check">[@L[cds.sales/hosting/web-hosting-rebrand:securityMonitoring]@L]</div>
+                    <div class="include-check">[@L[cds.sales/hosting/web-hosting-rebrand:easyPanel]@L]</div>
                   </div>
                   <div class="col-sm-4 ">
-                    <div class="include-check">Compatible with all major browsers</div>
-                    <div class="include-check">One certificate covers unlimited servers</div>
-                    <div class="include-check">One-click installation for GoDaddy hosted accounts</div>
+                    <div class="include-check">[@L[cds.sales/hosting/web-hosting-rebrand:compatible]@L]</div>
+                    <div class="include-check">[@L[cds.sales/hosting/web-hosting-rebrand:sslCert]@L]</div>
+                    <div class="include-check">[@L[cds.sales/hosting/web-hosting-rebrand:oneClickGoDaddy]@L]</div>
                   </div>
                 </div>
               </div>
@@ -758,7 +2869,7 @@ h3 {
           <ul class="nav navbar-nav"></ul>
           <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.mid-page-nav&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="navbar-right">
             <div class="price-text">Plans starting at</div>
-            <div class="price">$69.99<span>/year</span></div><a href="#alternate-products" class="btn-warning btn btn-sm">See the plans</a>
+            <div class="price">[@T[productprice:<current productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]<span>/month</span></div><a href="#marquee" class="btn-purchase btn btn-sm">See the plans</a>
           </div>
         </div>
       </div>
@@ -782,11 +2893,32 @@ h3 {
         // this sets the nav to fixed when scrolled past and fixes the body for the height of the nav
         var nav = $('.mid-page-nav');
         var pos = nav.offset().top;
+        var sections = []
       
+        $('[data-mid-nav-title]').each(function(){
+          //titles.push($(this).data('mid-nav-title'));
+          sections.push($(this).attr('id'));
+        });
         $(window).scroll(function () {
+          var scroll = $(this).scrollTop();
           var fix = ($(this).scrollTop() > pos) ? true : false;
           nav.toggleClass("sticky", fix);
           $('body').toggleClass("fix-body", fix);
+      
+          if(fix){
+            $.each(sections,function(index,value){
+                var top = ((scroll+131) > $('#'+value).offset().top) ? true : false;
+                var bottom = ((scroll+131) < $('#'+value).offset().top + $('#'+value).outerHeight()) ? true : false;
+                var activeNav = (top && bottom) ? true : false;
+                $('a[href="#'+value+'"').toggleClass("active",activeNav);
+                $('.mid-page-nav a').each(function(i,v){
+                    if(v!=value){
+                      $(this).blur();
+                    }
+                  });
+              });
+          }
+      
         });
         $('#midPageNav .dropdown-toggle').dropdown()
       });
@@ -803,7 +2935,7 @@ h3 {
           if($target.length) {
             $('html, body').animate({ scrollTop: $target.offset().top - fromTop }, 1000);
             if(history && "pushState" in history) {
-              history.pushState({}, document.title, window.location.pathname + href);
+              history.pushState({}, document.title, window.location.pathname + window.location.search + href);
               return false;
             }
           }
@@ -814,40 +2946,30 @@ h3 {
       
       $("#midPageNav").on("click", "a", scroll_if_anchor);
     </script>
-    <section id="speed-chart" class="tile-section">
-      <div class="container">
-        <style>
-          #speed-chart { min-height: 400px; }
-          #speed-chart h3 { margin: 50px auto; text-align: center; }
-          #speed-chart img { margin: 50px auto; display: block; }
-          #speed-chart p {text-align: right; }
-        </style>
-        <div class="speed-chart">
-          <h3>Fast Sites = Happy Visitors</h3>
-          <p>July 2014</p><img src="[@T[link:<imageroot />]@T]fos/mike/img/pro-wp-speed.png">
-          <div class="speed-text"><img></div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="col-sm-2 text-center"><img src="[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Chart_Polygon.png"></div>
-        <div style="padding-top: 50px;" class="col-sm-10">
-          <div>
-            <h4>Did you know a 1 second delay in your website page load time can cause a <mark>7% reduction</mark> in conversion?</h4>
-          </div>
-          <div><a class="btn btn-default-dark">SEE IT IN ACTION</a></div>
-        </div>
-      </div>
-    </section>
     <section id="one-click-install" class="features tile-section one-click-wrapper">
       <div class="container">
         <div class="row">
           <div class="col-sm-6 one-click-left">
-            <h2>APP INSTALLS JUST A CLICK AWAY</h2>
-            <p>Our one-click install process has all your Web hosting app needs covered, making it easy to build, ehnhance and manage your site.</p>
-            <div class="col-sm-12">
-              <div class="include-check-black">Need a content management system (CMS) for your Website? Joomla and Drupal are just a click away.</div>
-              <div class="include-check-black">Maybe you want to sell products on your webite.  Try Magento with one-click.</div>
-            </div>
+             
+            ##if(activeLanguageAny([en-US]))
+             
+            <h2>[@L[cds.sales/hosting/web-hosting-rebrand:hostingAppsRebrand]@L]</h2> 
+            ##else
+             
+            <h2>[@L[cds.sales/hosting/web-hosting-rebrand:hostingApps]@L]</h2> 
+            ##endif
+             
+             
+            ##if(activeLanguageAny([en-US]))
+             
+            <p>[@L[cds.sales/hosting/web-hosting-rebrand:hostingAppsDescRebrand]@L]</p>
+            <p>[@L[cds.sales/hosting/web-hosting-rebrand:hostingAppsChoiceRebrand]@L]</p> 
+            ##else
+             
+            <p>[@L[cds.sales/hosting/web-hosting-rebrand:hostingAppsDesc]@L]</p>
+            <p>[@L[cds.sales/hosting/web-hosting-rebrand:hostingAppsChoice]@L]</p> 
+            ##endif
+             
             <!--ul(style="list-style")-->
             <!--  li-->
             <!--    span.uxicon.uxicon-checkmark(aria-hidden="true")-->
@@ -857,7 +2979,48 @@ h3 {
             <!--    span Maybe you want to sell products on your webite.  Try Magento with one-click.-->
           </div>
           <div class="col-sm-6 one-click-right">
-            <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="text-center"><img src="[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Feature_Small_Logos.png" class="features-img features-img-right"></div>
+            <div class="text-center"><img src="[@T[link:<imageroot />]@T]fos/mike/img/hosting/img-feature1-logos.png" class="features-img features-img-right"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="speed-chart" class="tile-section">
+      <div class="container">
+        <div class="speed-chart">
+           
+          ##if(activeLanguageAny([en-US]))
+           
+          <h3>People <span class='heartIcon'></span> Fast Websites</h3> 
+          ##else
+           
+          <h3>[@L[cds.sales/hosting/web-hosting-rebrand:fastWeb]@L]</h3> 
+          ##endif
+           <img src="[@T[link:<imageroot />]@T]fos/mike/img/hosting/img-graph-chart.png">
+          <div class="speed-text"><img></div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="col-sm-2 text-center"><img src="[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Chart_Polygon.png"></div>
+        <div class="col-sm-10">
+          <div>
+             
+            ##if(activeLanguageAny([en-US]))
+             
+            <h4 style="font-family: 'Walsheim-Black';">[@L[cds.sales/hosting/web-hosting-rebrand:conversionRebrand]@L]</h4> 
+            ##else
+             
+            <h4 style="font-family: 'Walsheim-Black';">[@L[cds.sales/hosting/web-hosting-rebrand:conversion]@L]</h4> 
+            ##endif
+             
+          </div>
+          <div>
+             
+            ##if(activeLanguageAny([en-US]))
+             <a class="btn btn-default-dark">[@L[cds.sales/hosting/web-hosting-rebrand:seeWhatRebrand]@L]</a> 
+            ##else
+             <a class="btn btn-default-dark">[@L[cds.sales/hosting/web-hosting-rebrand:learnMore]@L]</a> 
+            ##endif
+             
           </div>
         </div>
       </div>
@@ -867,26 +3030,60 @@ h3 {
         <div class="container">
           <div class="row">
             <div class="col-sm-4 key-benefit">
-              <div class="key-benefits-img-wrap"><img src="[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_Group_ScalableResources.png" class="key-benefits-img"></div>
-              <h3 class="key-benefits-title">Scalable resources on-demand</h3>
-              <div class="key-benefits-text">When you need more power, level up your CPU, memory, entry processes and I/O with just a click. Access the Stats & Usage dashboard for real-time visibility to your sites’ resource usage. Even get alerts as you approach your limits so you can react quickly and keep your site running at top speed.</div>
+              <div class="key-benefits-img-wrap"><img src="[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_Group_ScalableResources.png" class="key-benefits-img"></div> 
+              ##if(activeLanguageAny([en-US]))
+               
+              <h3 class="key-benefits-title">[@L[cds.sales/hosting/web-hosting-rebrand:moreResourcesRebrand]@L]</h3> 
+              ##else
+               
+              <h3 class="key-benefits-title">[@L[cds.sales/hosting/web-hosting-rebrand:moreResources]@L]</h3> 
+              ##endif
+               
+              ##if(activeLanguageAny([en-US]))
+               
+              <p class="key-benefits-text">[@L[cds.sales/hosting/web-hosting-rebrand:moreResourcesDescRebrand]@L]</p> 
+              ##else
+               
+              <p class="key-benefits-text">[@L[cds.sales/hosting/web-hosting-rebrand:moreResourcesDesc]@L]</p> 
+              ##endif
+               
             </div>
             <div class="col-sm-4 key-benefit">
               <div class="key-benefits-img-wrap"><img src="[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_Group_Security.png" class="key-benefits-img"></div>
-              <h3 class="key-benefits-title">Award-winning security keeps your site safe</h3>
-              <div class="key-benefits-text">Keeping a website secure is a full time job. That’s why our security team is on the job 24/7, monitoring your site for suspicious activity and protecting it against brute force and DDoS attacks.</div>
+              <h3 class="key-benefits-title">[@L[cds.sales/hosting/web-hosting-rebrand:awardSecurity]@L]</h3> 
+              ##if(activeLanguageAny([en-US]))
+               
+              <p class="key-benefits-text">[@L[cds.sales/hosting/web-hosting-rebrand:awardSecurityDescRebrand]@L]</p> 
+              ##else
+               
+              <p class="key-benefits-text">[@L[cds.sales/hosting/web-hosting-rebrand:awardSecurityDesc]@L]</p> 
+              ##endif
+               
             </div>
             <div class="col-sm-4 key-benefit">
-              <div class="key-benefits-img-wrap"><img src="[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_Group_WhatIsHosting.png" class="key-benefits-img"></div>
-              <h3 class="key-benefits-title">What is Hosting?</h3>
-              <div class="key-benefits-text">Make sure friends, family and customers can see your website. Hosting is what makes it possible for others to view your website over the Internet. Without it, you’re the only one who will ever get a look. GoDaddy serves up:
-                <ul>
-                  <li>One-click set-up</li>
-                  <li>Unlimited storage and bandwidth</li>
-                  <li>Scalability to fit your needs</li>
-                  <li>24/7 secure monitoring</li>
-                </ul>
-              </div>
+              <div class="key-benefits-img-wrap"><img src="[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_Group_WhatIsHosting.png" class="key-benefits-img"></div> 
+              ##if(activeLanguageAny([en-US]))
+               
+              <h3 class="key-benefits-title">[@L[cds.sales/hosting/web-hosting-rebrand:hostingQuestionRebrand]@L]</h3> 
+              ##else
+               
+              <h3 class="key-benefits-title">[@L[cds.sales/hosting/web-hosting-rebrand:hostingQuestion]@L]</h3> 
+              ##endif
+               
+              ##if(activeLanguageAny([en-US]))
+               
+              <p class="key-benefits-text">[@L[cds.sales/hosting/web-hosting-rebrand:hostingAnswerRebrand]@L]</p> 
+              ##else
+               
+              <p class="key-benefits-text">[@L[cds.sales/hosting/web-hosting-rebrand:hostingAnswer]@L]</p> 
+              ##endif
+               
+              <ul>
+                <li>[@L[cds.sales/hosting/web-hosting-rebrand:hostingAnswerList1]@L]</li>
+                <li>[@L[cds.sales/hosting/web-hosting-rebrand:hostingAnswerList2]@L]</li>
+                <li>[@L[cds.sales/hosting/web-hosting-rebrand:hostingAnswerList3]@L]</li>
+                <li>[@L[cds.sales/hosting/web-hosting-rebrand:hostingAnswerList4]@L]</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -895,7 +3092,7 @@ h3 {
     <section id="compare" data-mid-nav-title="Compare" class="compare-chart-pro section-pro bg-pro-gray tile-section">
       <div style="background: #fff;" class="container">
         <div class="text-center">
-          <h2>Hosting Plans</h2><a href="javascript:comparePlans('cpanel-tab')" class="btn btn-default btn-lg">Cpanel</a><a href="javascript:comparePlans('parallels-tab')" class="btn btn-default btn-lg">Parallels</a>
+          <h2>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-tab-title-11166]@L]</h2><a href="javascript:comparePlans('cpanel-tab')" class="btn btn-default btn-lg">Cpanel</a><a href="javascript:comparePlans('parallels-tab')" class="btn btn-default btn-lg">Parallels</a>
         </div>
         <div id="cpanel-tab" class="table-responsive">
           <style>.compare-table {
@@ -926,6 +3123,9 @@ h3 {
   text-align: left;
   border-left: 0;
   padding-left: 20px;
+}
+.compare-table tr td:nth-child(3n+3) {
+  background-color: #f3f3f3;
 }
 .compare-table thead tr:first-child td {
   border-style: none;
@@ -1087,79 +3287,332 @@ height: 27px;
             <thead>
               <tr>
                 <td style="width: 40%;">
-                  <h2>cPanel Plans</h2>
+                  <h2>[@L[cds.sales/hosting/web-hosting-rebrand:cPanelTitle]@L]</h2>
                 </td>
                 <td style="width: 20%; border-bottom: 8px solid #f47f00;">
-                  <h4>economy</h4>
+                  <h4>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-economy-11166]@L]</h4>
                 </td>
-                <td style="width: 20%; border-bottom: 8px solid #7abf4b;">
-                  <h4>deluxe</h4>
+                <td style="width: 20%; border-bottom: 8px solid #7abf4b; background-color: transparent;">
+                  <h4>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-deluxe-11166]@L]</h4>
                 </td>
                 <td style="width: 20%; border-bottom: 8px solid #58585a;">
-                  <h4>ultimate</h4>
+                  <h4>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-ultimate-11166]@L]</h4>
                 </td>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Free Domain with anual plan restrictions apply</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-free-domain-11166]@L]</td>
                 <td><span class='icon gray-check-icon'></span></td>
-                <td>yes </td>
-                <td>yes</td>
-              </tr>
-              <tr>
-                <td>Websites</td>
-                <td>1</td>
-                <td>Unlimited</td>
-                <td>Unlimited</td>
-              </tr>
-              <tr>
-                <td>Disk Space</td>
-                <td>100GB</td>
-                <td>Unlimited</td>
-                <td>Unlimited</td>
-              </tr>
-              <tr>
-                <td>Free Domain with anual plan restrictions apply</td>
                 <td><span class='icon gray-check-icon'></span></td>
-                <td>yes </td>
-                <td>yes</td>
+                <td><span class='icon gray-check-icon'></span>  </td>
+                <!-- [@L[cds.sales/gd/hosting/web-hosting:compare]@L]-->
               </tr>
               <tr>
-                <td>Websites</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-11166]@L]</td>
                 <td>1</td>
-                <td>Unlimited</td>
-                <td>Unlimited</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
               </tr>
               <tr>
-                <td>Disk Space</td>
-                <td>100GB</td>
-                <td>Unlimited</td>
-                <td>Unlimited</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-disk-space-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-disk-space-economy-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
               </tr>
               <tr>
-                <td>Free Domain with anual plan restrictions apply</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-monthly-bandwidth-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-monthly-bandwidth-unlimited-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-monthly-bandwidth-unlimited-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-monthly-bandwidth-unlimited-11166]@L]</td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-core-features-ftp-users-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-core-features-ftp-users-economy-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-core-features-ftp-users-economy-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/hosting/web-hosting-rebrand:msqDatabase]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-databases-mysql-economy-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-databases-mysql-deluxe-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-databases-mysql-ultimate-11166]@L]</td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-databases-database-backup-11166]@L]</td>
                 <td><span class='icon gray-check-icon'></span></td>
-                <td>yes </td>
-                <td>yes</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
               </tr>
               <tr>
-                <td>Websites</td>
-                <td>1</td>
-                <td>Unlimited</td>
-                <td>Unlimited</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-databases-direct-database-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
               </tr>
               <tr>
-                <td>Disk Space</td>
-                <td>100GB</td>
-                <td>Unlimited</td>
-                <td>Unlimited</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-dns-management-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-domains-dns-management-unlimited-11166]@L]</td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-access-www-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-external-domains-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-subdomain-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-subdomain-economy-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-multiple-web-sites-11166]@L]</td>
+                <td>-</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-domains-multiple-web-sites-unlimited-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-domains-multiple-web-sites-unlimited-11166]@L]</td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-alias-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-cpanel-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-cpanel-plans-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-cpanel-plans-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-cpanel-plans-11166]@L]</td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-easy-application-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-phpmyadmin-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-cloud-linux-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-cageFS-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-password-protect-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-ssh-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-ftp-over-ssl-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-raw-access-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-site-statistics-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-premium-dns-11166]@L]</td>
+                <td>-</td>
+                <td>-</td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-ssl-cert-11166]@L]</td>
+                <td>-</td>
+                <td>-</td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-general-features-support-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-cron-jobs-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-general-features-file-manager-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-file-image-magick-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-150-free-apps-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-general-features-drupal-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-general-features-wordpress-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-magento-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-general-features-phpbb-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-language-support-php-54-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-language-support-php-ini-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-language-support-perl-india-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-language-support-python-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-addresses-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-addresses-economy-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-addresses-deluxe-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-addresses-ultimate-11166]@L]</td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-storage-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-storage-economy-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-storage-deluxe-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-storage-ultimate-11166]@L]</td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-webmail-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-email-features-pop-3-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-email-features-smtp-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-email-features-imap-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-forwarding-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-auto-responders-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-catch-all-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-fraud-virus-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-sender-id-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-email-privacy-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
               </tr>
             </tbody>
             <script type="text/javascript">
               $(window).load(function() {
                 var chart = $(this).closest(".compare-table");
-                $("#cpanel-table tr:gt(5)").hide();
+                $("#cpanel-table tr:gt(9)").hide();
                });
             </script>
           </table>
@@ -1169,79 +3622,338 @@ height: 27px;
             <thead>
               <tr>
                 <td style="width: 40%;">
-                  <h2>Plesk Plans</h2>
+                  <h2>[@L[cds.sales/hosting/web-hosting-rebrand:windowsTitle]@L]</h2>
                 </td>
                 <td style="width: 20%; border-bottom: 8px solid #f47f00;">
-                  <h4>economy</h4>
+                  <h4>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-economy-11166]@L]</h4>
                 </td>
-                <td style="width: 20%; border-bottom: 8px solid #7abf4b;">
-                  <h4>deluxe</h4>
+                <td style="width: 20%; border-bottom: 8px solid #7abf4b; background-color: transparent;">
+                  <h4>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-deluxe-11166]@L]</h4>
                 </td>
                 <td style="width: 20%; border-bottom: 8px solid #58585a;">
-                  <h4>ultimate</h4>
+                  <h4>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-ultimate-11166]@L]</h4>
                 </td>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Free Domain with anual plan restrictions apply</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-free-domain-11166]@L]</td>
                 <td><span class='icon gray-check-icon'></span></td>
-                <td>yes </td>
-                <td>yes</td>
-              </tr>
-              <tr>
-                <td>Websites</td>
-                <td>1</td>
-                <td>Unlimited</td>
-                <td>Unlimited</td>
-              </tr>
-              <tr>
-                <td>Disk Space</td>
-                <td>100GB</td>
-                <td>Unlimited</td>
-                <td>Unlimited</td>
-              </tr>
-              <tr>
-                <td>Free Domain with anual plan restrictions apply</td>
                 <td><span class='icon gray-check-icon'></span></td>
-                <td>yes </td>
-                <td>yes</td>
+                <td><span class='icon gray-check-icon'></span>  </td>
+                <!-- [@L[cds.sales/gd/hosting/web-hosting:compare]@L]-->
               </tr>
               <tr>
-                <td>Websites</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-11166]@L]</td>
                 <td>1</td>
-                <td>Unlimited</td>
-                <td>Unlimited</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
               </tr>
               <tr>
-                <td>Disk Space</td>
-                <td>100GB</td>
-                <td>Unlimited</td>
-                <td>Unlimited</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-disk-space-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-disk-space-economy-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
               </tr>
               <tr>
-                <td>Free Domain with anual plan restrictions apply</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-monthly-bandwidth-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-monthly-bandwidth-unlimited-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-monthly-bandwidth-unlimited-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-monthly-bandwidth-unlimited-11166]@L]</td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-ftp-users-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-ftp-users-50-unlimited-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-ftp-users-50-unlimited-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-ftp-users-50-unlimited-11166]@L]</td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-databases-sql2012-11166]@L]</td>
                 <td><span class='icon gray-check-icon'></span></td>
-                <td>yes </td>
-                <td>yes</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
               </tr>
               <tr>
-                <td>Websites</td>
-                <td>1</td>
-                <td>Unlimited</td>
-                <td>Unlimited</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-databases-mssql-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-databases-mssql-economy-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-databases-mssql-deluxe-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-databases-mssql-ultimate-11166]@L]</td>
               </tr>
               <tr>
-                <td>Disk Space</td>
-                <td>100GB</td>
-                <td>Unlimited</td>
-                <td>Unlimited</td>
+                <td>[@L[cds.sales/hosting/web-hosting-rebrand:msqDatabase]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-databases-mysql-economy-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-databases-mysql-deluxe-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-databases-mysql-ultimate-11166]@L]</td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-databases-database-backup-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-databases-direct-database-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-databases-microsoft-access-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-dns-management-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-domains-dns-management-unlimited-11166]@L]</td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-access-www-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-external-domains-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-subdomain-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-subdomain-economy-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-multiple-web-sites-11166]@L]</td>
+                <td>-</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-domains-multiple-web-sites-unlimited-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-domains-multiple-web-sites-unlimited-11166]@L]</td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-alias-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-general-features-windows-server-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-general-features-plesk-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-ftp-over-ssl-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-raw-access-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-site-statistics-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-premium-dns-11166]@L]</td>
+                <td>-</td>
+                <td>-</td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-ssl-cert-11166]@L]</td>
+                <td>-</td>
+                <td>-</td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-general-features-support-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-general-features-scheduled-tasks-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-general-features-file-manager-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-general-features-web-deploy-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-general-features-webmatrix-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-general-features-free-applications-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-general-features-drupal-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-general-features-wordpress-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-general-features-joomla-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-language-support-server-side-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-language-support-asp-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-language-support-asp-net-4-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-language-support-asp-net-2-3-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-language-support-asp-net-ajax-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-language-support-php5-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-language-support-cgi-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-language-support-asp-mv3-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-language-support-silverlight-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-language-support-perl-india-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-addresses-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-addresses-economy-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-addresses-deluxe-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-addresses-ultimate-11166]@L]</td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-storage-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-storage-economy-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-storage-deluxe-11166]@L]</td>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-storage-ultimate-11166]@L]</td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-webmail-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-forwarding-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-auto-responders-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-catch-all-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-fraud-virus-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-sender-id-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+              </tr>
+              <tr>
+                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-email-privacy-11166]@L]</td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
+                <td><span class='icon gray-check-icon'></span></td>
               </tr>
             </tbody>
             <script type="text/javascript">
               $(window).load(function() {
                 var chart = $(this).closest(".compare-table");
-                $("#parallels-table tr:gt(2)").hide();
+                $("#parallels-table tr:gt(9)").hide();
                });
             </script>
           </table>
@@ -1464,7 +4176,8 @@ height: 27px;
 }
 @media (min-width: 992px) {
   .or-container:after {
-    left: 121%
+    left: 121%;
+    bottom: 50%;
   }
 }
 
@@ -1535,13 +4248,22 @@ height: 27px;
 .two-up-speech-shape.two-up-speech-shape-white:after {
   background-color: #fff;
 }
+.two-up-speech-shape.two-up-speech-shape-yellow {
+  background-color: #ffde2d;
+}
+.two-up-speech-shape.two-up-speech-shape-yellow:before {
+  border-top-color: #ffde2d;
+}
+.two-up-speech-shape.two-up-speech-shape-yellow:after {
+  background-color: #ffde2d;
+}
       </style>
       <div id="choose-platform" class="two-up-title-wrap bg-green-new">
         <div>
           <div class="container">
             <div class="row">
               <div class="col-sm-12">
-                <h2 class="text-center two-up-title">Choose your platform</h2>
+                <h2 class="text-center two-up-title">[@L[cds.sales/hosting/web-hosting-rebrand:choosePlatform]@L]</h2>
               </div>
             </div>
           </div>
@@ -1552,15 +4274,15 @@ height: 27px;
               <div class="col-md-5 or-container col-sm-6  bg-green-official">
                 <div style="" class="two-up-text-wrap ">
                   <div class="text-center two-up-image"><img src="[@T[link:<imageroot />]@T]fos/mike/img/hosting/img-cpanel-linux.png" alt=""/></div>
-                  <h2 class="text-center">Cpanel for Linux</h2>
-                  <h3 class="text-center">Each Linux plan includes:</h3>
+                  <h2 class="text-center">[@L[cds.sales/hosting/web-hosting-rebrand:cPanelTitle2]@L]</h2>
+                  <h3 class="text-center">[@L[cds.sales/hosting/web-hosting-rebrand:linuxPlan]@L]</h3>
                   <div class="row">
                     <div class="col-sm-10">
-                      <div class="include-check-black"><strong>cPanel:</strong> </br> Access all the hosting features and settings you need with this industry-standard control panel.</div>
-                      <div class="include-check-black"><strong>CloudLinux:</strong> </br> Keep your site online with truly balanced CPU, RAM and Disk IO limits.</div>
-                      <div class="include-check-black"><strong>Resources On-Demand:</strong> </br> If you need more power, you can level up your CPU, RAM, Entry Processes and I/O with just a click.</div>
-                      <div class="include-check-black"><strong>CageFS:</strong> </br> Protect your Web content 24/7 with this virtualized file system.</div>
-                      <div class="include-check-black"><strong>Free Applications:</strong> </br> Instanly install over 150 applications on your website with just a few clicks.</div>
+                      <div class="include-check-black"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:cPanelListItem]@L]</strong> </br> [@L[cds.sales/hosting/web-hosting-rebrand:cPanelListItemDesc]@L]</div>
+                      <div class="include-check-black"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:cloudLinuxListItem]@L]</strong> </br> [@L[cds.sales/hosting/web-hosting-rebrand:cloudLinuxListItemDesc]@L]</div>
+                      <div class="include-check-black"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:resourcesOnDemandListItem]@L]</strong> </br> [@L[cds.sales/hosting/web-hosting-rebrand:resourcesOnDemandListItemDesc]@L]</div>
+                      <div class="include-check-black"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:cageFSListItem]@L]</strong> </br> [@L[cds.sales/hosting/web-hosting-rebrand:cageFSListItemDesc]@L]</div>
+                      <div class="include-check-black"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:freeApps]@L]</strong> </br> [@L[cds.sales/hosting/web-hosting-rebrand:oneHundredFifty]@L]</div>
                     </div>
                   </div>
                 </div>
@@ -1568,13 +4290,13 @@ height: 27px;
               <div class="col-md-5 col-md-offset-2 col-sm-6  bg-green-official-light">
                 <div style="" class="two-up-text-wrap ">
                   <div class="text-center two-up-image"><img src="[@T[link:<imageroot />]@T]fos/mike/img/hosting/img-Windows8.png" alt=""/></div>
-                  <h2 class="text-center">Plesk for Windows</h2>
-                  <h3 class="text-center">Each Windows plan includes:</h3>
+                  <h2 class="text-center">[@L[cds.sales/hosting/web-hosting-rebrand:windowsTitle2]@L]</h2>
+                  <h3 class="text-center">[@L[cds.sales/hosting/web-hosting-rebrand:windowsPlan]@L]</h3>
                   <div class="row">
                     <div class="col-sm-10">
-                      <div class="include-check-black"><strong>Parallesls Plesk Panel:</strong> </br> Easily manage your server, email accounts and more with this popular, award-winning control panel.</div>
-                      <div class="include-check-black"><strong>Windows Server 2012:</strong> </br> Take control of your hosting with Microsoft's newest and most powerful server operating system.</div>
-                      <div class="include-check-black"><strong>Free Applications:</strong> </br> Instanly install over 70 applications on your website with just a few clicks.</div>
+                      <div class="include-check-black"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:windowsPlanPlesk]@L]</strong> </br> [@L[cds.sales/hosting/web-hosting-rebrand:windowsPlanPleskDesc]@L]</div>
+                      <div class="include-check-black"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:windowsServer]@L]</strong> </br> [@L[cds.sales/hosting/web-hosting-rebrand:windowsServerDesc]@L]</div>
+                      <div class="include-check-black"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:freeApps]@L]</strong> </br> [@L[cds.sales/hosting/web-hosting-rebrand:seventyPlus]@L]</div>
                     </div>
                   </div>
                 </div>
@@ -1584,17 +4306,19 @@ height: 27px;
         </div>
       </div>
     </section>
-    <section id="reviews">
-      <p>reviews</p>
+    <section id="reviews" class="tile-section">
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
-            <div>[@P[userControl:<Data location="~/Shared/Tabs/controls/BVReviewsNoJS.ascx"><Parameters><Parameter key="ProductId" value="web_hosting" /><Parameter key="ReviewNumber" value="4" /></Parameters></Data>]@P]</div>
+            <div id="BVRRContainer">
+              <p class="bv-loading">Loading...</p>
+            </div>
+            <div>[@P[userControl:<Data location="~/Shared/Tabs/controls/BVReviewsNoJS.ascx"><Parameters><Parameter key="ProductId" value="web_hosting" /><Parameter key="ReviewNumber" value="1" /></Parameters></Data>]@P]</div>
           </div>
         </div>
       </div>
     </section>
-    <section id="faq">
+    <section id="faq" class="tile-section">
       <style>.accordion-group {
   border-top: 2px solid #e8e8e8;
   border-bottom: 2px solid #e8e8e8;
@@ -1675,31 +4399,65 @@ height: 27px;
         <div class="row">
           <div class="col-sm-12">
             <ul id="test-faq" class="accordion-group ">
-              <h2>A Title!</h2>
-              <li class="accordion-dropdown"><span class="carett caret-right"></span><span>things</span>
+              <h2>[@L[cds.sales/hosting/web-hosting-rebrand:yourQuestOurAns]@L]</h2>
+              <li class="accordion-dropdown"><span class="carett caret-right"></span><span>[@L[cds.sales/gd/hosting/web-hosting:faq-first-slide-title-cp]@L]</span>
                 <ul class="dropdown">
                   <li>
-                    <div>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vestibulum, nisl a lacinia gravida, velit elit convallis ex, ac fringilla ante erat eu ante. Duis pellentesque, dolor et laoreet feugiat, ligula lacus tincidunt ante, id malesuada purus nulla vel erat. Vivamus viverra velit vel imperdiet imperdiet. Morbi fermentum et justo id convallis. Fusce fringilla neque ut vestibulum ornare. Maecenas eleifend diam sit amet cursus finibus. Donec tellus massa, sollicitudin vitae lacus in, posuere suscipit leo. Donec vel dolor sapien. Pellentesque sit amet eleifend justo. Curabitur sed neque ligula. Phasellus vestibulum malesuada erat id elementum. Sed cursus neque et congue accumsan. </p>
-                      <p>Cras varius, tellus eu tristique ultrices, sapien enim ullamcorper odio, nec euismod metus massa vel leo. Praesent finibus lacus purus, in ultrices metus rutrum sed. Vestibulum purus mauris, efficitur id quam vel, consequat malesuada nisi. Duis eu mauris vitae mauris pulvinar maximus eu ac odio. Pellentesque et purus sed lectus dictum auctor non et ligula. Sed pellentesque a urna nec sodales. Vestibulum dignissim iaculis tincidunt. Pellentesque facilisis nec lorem in venenatis. Cras scelerisque aliquet libero, a viverra enim pulvinar id. Maecenas pharetra tortor id quam imperdiet, id accumsan velit dapibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur euismod vulputate enim ac scelerisque. Nunc blandit lectus mattis velit ornare, quis malesuada ex sollicitudin. Phasellus auctor risus et nisl dignissim faucibus vel sit amet ex. Nulla tempor eros et pellentesque maximus. Aliquam finibus auctor justo, quis porta ex vulputate sit amet. </p>
-                      <p>Fusce viverra eget massa ac posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Cras vel ligula venenatis, fringilla purus sit amet, semper ante. Vivamus bibendum maximus dui et finibus. Integer in dignissim dolor, in malesuada massa. Nam accumsan feugiat tortor, eu tincidunt mauris laoreet a. Fusce fermentum dolor eu odio volutpat varius. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis sed augue pretium, ultrices nisi non, maximus tortor. Praesent auctor euismod fringilla.</p>
+                    <div>[@L[cds.sales/gd/hosting/web-hosting:faq-first-slide-content-cp]@L]
                     </div>
                   </li>
                 </ul>
               </li>
-              <li class="accordion-dropdown"><span class="carett caret-right"></span><span>stuff</span>
+              <li class="accordion-dropdown"><span class="carett caret-right"></span><span>[@L[cds.sales/gd/hosting/web-hosting:faq-second-slide-title-cp]@L]</span>
                 <ul class="dropdown">
                   <li>
-                    <div>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vestibulum, nisl a lacinia gravida, velit elit convallis ex, ac fringilla ante erat eu ante. Duis pellentesque, dolor et laoreet feugiat, ligula lacus tincidunt ante, id malesuada purus nulla vel erat. Vivamus viverra velit vel imperdiet imperdiet. Morbi fermentum et justo id convallis. Fusce fringilla neque ut vestibulum ornare. Maecenas eleifend diam sit amet cursus finibus. Donec tellus massa, sollicitudin vitae lacus in, posuere suscipit leo. Donec vel dolor sapien. Pellentesque sit amet eleifend justo. Curabitur sed neque ligula. Phasellus vestibulum malesuada erat id elementum. Sed cursus neque et congue accumsan. </p>
-                      <p>Cras varius, tellus eu tristique ultrices, sapien enim ullamcorper odio, nec euismod metus massa vel leo. Praesent finibus lacus purus, in ultrices metus rutrum sed. Vestibulum purus mauris, efficitur id quam vel, consequat malesuada nisi. Duis eu mauris vitae mauris pulvinar maximus eu ac odio. Pellentesque et purus sed lectus dictum auctor non et ligula. Sed pellentesque a urna nec sodales. Vestibulum dignissim iaculis tincidunt. Pellentesque facilisis nec lorem in venenatis. Cras scelerisque aliquet libero, a viverra enim pulvinar id. Maecenas pharetra tortor id quam imperdiet, id accumsan velit dapibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur euismod vulputate enim ac scelerisque. Nunc blandit lectus mattis velit ornare, quis malesuada ex sollicitudin. Phasellus auctor risus et nisl dignissim faucibus vel sit amet ex. Nulla tempor eros et pellentesque maximus. Aliquam finibus auctor justo, quis porta ex vulputate sit amet. </p>
-                      <p>Fusce viverra eget massa ac posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Cras vel ligula venenatis, fringilla purus sit amet, semper ante. Vivamus bibendum maximus dui et finibus. Integer in dignissim dolor, in malesuada massa. Nam accumsan feugiat tortor, eu tincidunt mauris laoreet a. Fusce fermentum dolor eu odio volutpat varius. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis sed augue pretium, ultrices nisi non, maximus tortor. Praesent auctor euismod fringilla.</p>
+                    <div>[@L[cds.sales/gd/hosting/web-hosting:faq-second-slide-content-cp]@L]
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="accordion-dropdown"><span class="carett caret-right"></span><span>[@L[cds.sales/gd/hosting/web-hosting:faq-third-slide-title]@L]</span>
+                <ul class="dropdown">
+                  <li>
+                    <div>[@L[cds.sales/gd/hosting/web-hosting:faq-third-slide-content-cp]@L]
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="accordion-dropdown"><span class="carett caret-right"></span><span>[@L[cds.sales/gd/hosting/web-hosting:faq-fourth-slide-title]@L]</span>
+                <ul class="dropdown">
+                  <li>
+                    <div>[@L[cds.sales/gd/hosting/web-hosting:faq-fourth-slide-content-cp]@L]
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="accordion-dropdown"><span class="carett caret-right"></span><span>[@L[cds.sales/gd/hosting/web-hosting:faq-fifth-slide-title]@L]</span>
+                <ul class="dropdown">
+                  <li>
+                    <div>[@L[cds.sales/gd/hosting/web-hosting:faq-fifth-slide-content-cp]@L]
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="accordion-dropdown"><span class="carett caret-right"></span><span>[@L[cds.sales/gd/hosting/web-hosting:faq-seventh-slide-title]@L]</span>
+                <ul class="dropdown">
+                  <li>
+                    <div>[@L[cds.sales/gd/hosting/web-hosting:faq-seventh-slide-content-cp]@L]
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="accordion-dropdown"><span class="carett caret-right"></span><span>[@L[cds.sales/gd/hosting/web-hosting:faq-eighth-slide-title]@L]</span>
+                <ul class="dropdown">
+                  <li>
+                    <div>[@L[cds.sales/gd/hosting/web-hosting:faq-eighth-slide-content-cp]@L]
                     </div>
                   </li>
                 </ul>
               </li>
               <div class="text-center">
-                <button id="test-button" class="btn btn-default-dark">hey you</button>
+                <button id="test-button" class="btn btn-default-dark">[@L[cds.sales/hosting/web-hosting-rebrand:seeAllQuestions]@L]</button>
               </div>
             </ul>
           </div>
@@ -1736,14 +4494,16 @@ height: 27px;
           $('#test-faq').find('.accordion-dropdown').addClass("active");
          });
       </script>
-    </section>
+    </section> 
+    ##if(activeLanguageAny([en-US]))
+     
     <section id="alternate-products">
       <div id="two-up" class="two-up-title-wrap bg-white">
         <div>
           <div class="container">
             <div class="row">
               <div class="col-sm-12">
-                <h2 class="text-center two-up-title">Not finding what you need?</h2>
+                <h2 class="text-center two-up-title">[@L[cds.sales/hosting/web-hosting-rebrand:didNotFindRebrand]@L]</h2>
               </div>
             </div>
           </div>
@@ -1754,16 +4514,16 @@ height: 27px;
               <div class="col-md-5 or-container-none col-sm-6  bg-green-official-light">
                 <div style="" class="two-up-text-wrap ">
                   <div class="two-up-speech-shape two-up-speech-shape-orange">
-                    <div class="shape-text">Website Builder</div>
+                    <div class="shape-text">[@L[cds.sales/hosting/web-hosting-rebrand:wsb]@L]</div>
                   </div>
-                  <h2>Do-it-yourself with Website Builder. Hosting Included.</h2>
+                  <h2>[@L[cds.sales/hosting/web-hosting-rebrand:wsbDoIt]@L] </br> [@L[cds.sales/hosting/web-hosting-rebrand:wsbHosting]@L]</h2>
                   <div class="row">
                     <div class="col-sm-10">
                       <ul>
-                        <li>Features cPanel "(Linux)" or Parallels Plesk Panel "(Windows)"</li>
-                        <li>One-click install 100s of top apps like Joomla and Drupal</li>
-                        <li>Includes 99.9% uptime, lightning-fast load times and more</li>
-                      </ul><a class="btn btn-default-dark">LEARN MORE</a>
+                        <li>[@L[cds.sales/hosting/web-hosting-rebrand:wsbList1]@L]</li>
+                        <li>[@L[cds.sales/hosting/web-hosting-rebrand:wsbList2]@L]</li>
+                        <li>[@L[cds.sales/hosting/web-hosting-rebrand:wsbList3]@L]</li>
+                      </ul><a class="btn btn-default-dark">[@L[cds.sales/hosting/web-hosting-rebrand:learnMore]@L]</a>
                     </div>
                   </div>
                 </div>
@@ -1771,16 +4531,16 @@ height: 27px;
               <div class="col-md-5 col-md-offset-2 col-sm-6  bg-gray-darkest">
                 <div style="" class="two-up-text-wrap white-text">
                   <div class="two-up-speech-shape two-up-speech-shape-orange">
-                    <div class="shape-text">Private Virtual Server</div>
+                    <div class="shape-text">[@L[cds.sales/hosting/web-hosting-rebrand:vps]@L]</div>
                   </div>
-                  <h2>Get Hosting that will grow.</h2>
+                  <h2>[@L[cds.sales/hosting/web-hosting-rebrand:vpsGrow]@L]</h2>
                   <div class="row">
                     <div class="col-sm-10">
                       <ul>
-                        <li>Get online fast with 100s of customizable designs</li>
-                        <li>No technical skills required - just drag and drop</li>
-                        <li>Includes a free domain, hosting and more</li>
-                      </ul><a class="btn btn-default-light">LEARN MORE</a>
+                        <li>[@L[cds.sales/hosting/web-hosting-rebrand:vpsList1]@L]</li>
+                        <li>[@L[cds.sales/hosting/web-hosting-rebrand:vpsList2]@L]</li>
+                        <li>[@L[cds.sales/hosting/web-hosting-rebrand:vpsList3]@L]</li>
+                      </ul><a class="btn btn-default-light">[@L[cds.sales/hosting/web-hosting-rebrand:learnMore]@L]</a>
                     </div>
                   </div>
                 </div>
@@ -1789,7 +4549,64 @@ height: 27px;
           </div>
         </div>
       </div>
-    </section>
+    </section> 
+    ##else
+     
+    <section id="alternate-products">
+      <div id="two-up" class="two-up-title-wrap bg-white">
+        <div>
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12">
+                <h2 class="text-center two-up-title">[@L[cds.sales/hosting/web-hosting-rebrand:didNotFind]@L]</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="background-image: url('[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Sweet.jpg'); min-height: 580px;;" class="two-up-wrap-compare bg-green-official">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-5 or-container-none col-sm-6  bg-green-official-light">
+                <div style="" class="two-up-text-wrap ">
+                  <div class="two-up-speech-shape two-up-speech-shape-orange">
+                    <div class="shape-text">[@L[cds.sales/hosting/web-hosting-rebrand:wsb]@L]</div>
+                  </div>
+                  <h2>[@L[cds.sales/hosting/web-hosting-rebrand:wsbDoIt]@L] </br> [@L[cds.sales/hosting/web-hosting-rebrand:wsbHosting]@L]</h2>
+                  <div class="row">
+                    <div class="col-sm-10">
+                      <ul>
+                        <li>[@L[cds.sales/hosting/web-hosting-rebrand:wsbList1]@L]</li>
+                        <li>[@L[cds.sales/hosting/web-hosting-rebrand:wsbList2]@L]</li>
+                        <li>[@L[cds.sales/hosting/web-hosting-rebrand:wsbList3]@L]</li>
+                      </ul><a class="btn btn-default-dark">[@L[cds.sales/hosting/web-hosting-rebrand:learnMore]@L]</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-5 col-md-offset-2 col-sm-6  bg-gray-darkest">
+                <div style="" class="two-up-text-wrap white-text">
+                  <div class="two-up-speech-shape two-up-speech-shape-orange">
+                    <div class="shape-text">[@L[cds.sales/hosting/web-hosting-rebrand:vps]@L]</div>
+                  </div>
+                  <h2>[@L[cds.sales/hosting/web-hosting-rebrand:vpsGrow]@L]</h2>
+                  <div class="row">
+                    <div class="col-sm-10">
+                      <ul>
+                        <li>[@L[cds.sales/hosting/web-hosting-rebrand:vpsList1]@L]</li>
+                        <li>[@L[cds.sales/hosting/web-hosting-rebrand:vpsList2]@L]</li>
+                        <li>[@L[cds.sales/hosting/web-hosting-rebrand:vpsList3]@L]</li>
+                      </ul><a class="btn btn-default-light">[@L[cds.sales/hosting/web-hosting-rebrand:learnMore]@L]</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> 
+    ##endif
+     
     <section id="disclaimers">
       <p>disclaimers</p>
     </section>
@@ -1797,7 +4614,6 @@ height: 27px;
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- FOOTEREND-->
      
-    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Script"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Bottom"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- liveperson includes -->
     <div id="lpButtonDiv"></div><!-- End Main Content -->
@@ -1806,6 +4622,40 @@ height: 27px;
       
     </script>
     <script>
+      ##if(activeLanguageAny([en-us]))
+        var loadReviews = function(){
+          if (typeof $BV != "undefined") {
+            $BV.configure("global", {
+              allowSamePageSubmission: true,
+              userToken: "[@P[userControl:<Data location="~/Shared/BazaarVoice/SessionUserToken.ascx"></Data>]@P]",
+              doLogin: function(successCallback, successUrl) {
+                $('#login-modal').modal();
+              },
+              doScrollSubmission: function () {
+                return false;
+              }
+            });
+            $BV.ui("rr", "show_reviews", {
+              productId: "web_hosting",
+              num: 1,
+              doShowContent: function() {
+                $('.bv-loading').hide();
+              }
+            });
+          }
+        };
+        $(window).load(function() {
+          if (!document.getElementById('bvapi')) {
+            var bv = document.createElement('script');
+            bv.type = 'text/javascript';
+            bv.id = 'bvapi';
+            bv.async = true;
+            bv.src = '[@P[userControl:<Data location="~/Scripts/BVScriptUrlOnly.ascx"></Data>]@P]';
+            bv.onload = loadReviews;
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(bv);
+          }
+        });
+      ##endif
       function comparePlans(id){
         if(id=="cpanel-tab"){
           $("#parallels-tab").hide();
@@ -1816,6 +4666,22 @@ height: 27px;
          }
       }
       $('.dropdown-toggle').dropdown()
+      $(function() {
+      $('.isToolTip').tooltip({
+          placement: 'bottom',
+          html: true
+      }).on('show.bs.tooltip', function() {
+          $('.tooltip-delay').tooltip('hide');
+      });
+      $('.tooltip-delay').tooltip({
+          placement: 'bottom',
+          html: true,
+          delay: {
+              hide: 3000
+          }
+      }).on('show.bs.tooltip', function() {
+          $('.tooltip-delay').tooltip('hide');
+      });});
       
     </script>
     <script type="text/javascript">

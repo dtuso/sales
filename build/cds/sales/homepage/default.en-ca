@@ -60,7 +60,6 @@
         </form>
       </div>
     </div>
-    <!-- Marquee Section-->
      ##if(targetMessageTagAny(sales_hp_default,hp_existing_customer))
         [@P[cdsDocument:<data app="sales" location="homepage/marquee/gybo/default_template" /> ]@P]
      ##else
@@ -86,7 +85,6 @@
         </div>
       </div>
     </div>
-    <!-- Tiles Section-->
     <atlantis:webstash type="css">
       <style>
         .gdhp-tile-wrap{height:580px;width:100%;background-color:#d4d4d4}

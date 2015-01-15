@@ -58,7 +58,6 @@
   <body>
      
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header" />]@P]
-    <!--  Domain Search Section-->
     <atlantis:webstash type="css">
       <style>
         .gdhp-main-top{margin:0 auto;padding:10px 0 0;position:relative;width:1000px;z-index:2;*margin-top:-3px}
@@ -86,7 +85,6 @@
         </form>
       </div>
     </div>
-    <!-- Marquee Section-->
      
       [@P[cdsDocument:<data app="sales" location="homepage/marquee/299com-in/default_template" /> ]@P]
     <!-- Bugbar (and social links) Sections-->
@@ -142,8 +140,6 @@
         </div>
       </div>
     </div>
-    <!-- Lower Marquee Section-->
-    <!-- Why Us Section-->
     <atlantis:webstash type="css">
       <style>
         .why-us-wrap{width:100%;height:520px;background:radial-gradient(#615e5f 1px, transparent 1px),#d4d4d4;background-size: 5px 5px;}
@@ -235,9 +231,7 @@
           </ul>
         </div>
       </div>
-    </div>
-    <!-- FAQ Section-->
-    <!-- Disclaimers Section--> 
+    </div> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer" />]@P]
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Script" />]@P]
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Bottom" />]@P]
