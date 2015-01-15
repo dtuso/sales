@@ -1448,316 +1448,6 @@ function updateDomainCountText(initial, numberShown) {
         #site-choice-compare .disclaimer-mark p {
           font-size: 14px;
         }
-        
-        /* (start) TWO UP COMPARE */
-        
-        .two-up-title {
-          margin: 40px 0;
-          line-height: 1;
-        }
-        
-        .two-up-speech-shape {
-          font-family: 'Walsheim-Bold';
-          font-size: 18px;
-          font-size: 1.8rem;
-          padding: 5px 10px 5px 17px;
-          color: #fff;
-          display: inline-block;
-          position: relative;
-          margin-bottom: 20px;
-          z-index: 2;
-        }
-        
-        .two-up-speech-shape .shape-text {
-          position: relative;
-          z-index: 40;
-        }
-        .two-up-speech-shape:before {
-          content: '';
-          position: absolute;
-          bottom: -15px;
-          left: 0;
-          border-top: 15px solid;
-          border-right: 15px solid transparent;
-        }
-        .two-up-speech-shape:after {
-          content: '';
-          position: absolute;
-          height: 100%;
-          width: 99%;
-          top: 0;
-          transform: skew(-12deg, 0);
-          z-index: 1;
-        }
-        .two-up-speech-shape.two-up-speech-shape-green {
-          background-color: #008a32;
-        }
-        .two-up-speech-shape.two-up-speech-shape-green:before {
-          border-top-color: #008a32;
-        }
-        .two-up-speech-shape.two-up-speech-shape-green:after {
-          background-color: #008a32;
-        }
-        .two-up-speech-shape.two-up-speech-shape-orange {
-          background-color: #ef6c0f;
-        }
-        .two-up-speech-shape.two-up-speech-shape-orange:before {
-          border-top-color: #ef6c0f;
-        }
-        .two-up-speech-shape.two-up-speech-shape-orange:after {
-          background-color: #ef6c0f;
-        }
-        .two-up-speech-shape.two-up-speech-shape-white {
-          background-color: #fff;
-        }
-        .two-up-speech-shape.two-up-speech-shape-white:before {
-          border-top-color: #fff;
-        }
-        .two-up-speech-shape.two-up-speech-shape-white:after {
-          background-color: #fff;
-        }
-        .two-up-wrap {
-          min-height: 780px;
-          background-repeat: no-repeat;
-          background-size: cover;
-          background-position: center center;
-        }
-        .two-up-wrap.two-up-wrap-app {
-          min-height: 500px;
-        }
-        .two-up-wrap.two-up-wrap-app h3 {
-          font-family: 'Walsheim-Bold';
-        }
-        .two-up-wrap.two-up-wrap-app .two-up-text {
-          font-size: 14px;
-          font-size: 1.4rem;
-        }
-        .two-up-wrap.two-up-wrap-app .two-up-text ul {
-          padding-left: 15px;
-        }
-        .two-up-wrap.two-up-wrap-app .two-up-text ul li {
-          padding-bottom: 10px;
-        }
-        .two-up-wrap.two-up-wrap-app .two-up-text ul li:last-child {
-          padding-bottom: 0;
-        }
-        .two-up-wrap.two-up-wrap-app .two-up-text-wrap {
-          padding-top: 70px;
-        }
-        @media only screen and (max-width: 992px) {
-          .two-up-wrap.two-up-wrap-app .two-up-text-wrap {
-            padding-top: 30px !important;
-            padding-bottom: 30px;
-          }
-        }
-        .two-up-wrap h2 {
-          margin-top: 0;
-        }
-        @media only screen and (max-width: 768px) {
-          .two-up-wrap h2 {
-            font-size: 40px;
-            font-size: 4rem;
-          }
-        }
-        .two-up-wrap .two-up-text-wrap {
-          padding-top: 100px;
-        }
-        @media only screen and (max-width: 992px) {
-          .two-up-wrap .two-up-text-wrap {
-            padding-top: 30px !important;
-            padding-bottom: 30px;
-          }
-        }
-        .two-up-wrap .two-up-text {
-          font-size: 20px;
-          font-size: 2rem;
-          line-height: 1.4;
-          margin: 10px 0 30px;
-        }
-        @media only screen and (max-width: 768px) {
-          .two-up-wrap .two-up-text {
-            font-size: 18px;
-            font-size: 1.8rem;
-          }
-        }
-        @media only screen and (min-width: 992px) {
-          .two-up-wrap {
-            min-height: 520px;
-          }
-          .two-up-wrap .col-md-5.col-sm-6.bg-white {
-            background-color: transparent;
-          }
-          .two-up-wrap .col-md-5.col-sm-6.bg-yellow {
-            background-color: transparent;
-          }
-          .two-up-wrap .col-md-5.col-sm-6.bg-gray-lighter,
-          .two-up-wrap .col-md-5.col-sm-6.bg-pro-gray {
-            background-color: transparent;
-          }
-          .two-up-wrap .col-md-5.col-sm-6.bg-gray-light {
-            background-color: transparent;
-          }
-          .two-up-wrap .col-md-5.col-sm-6.bg-green-official {
-            background-color: transparent;
-          }
-          .two-up-wrap .col-md-5.col-sm-6.bg-green-new {
-            background-color: transparent;
-          }
-          .two-up-wrap .col-md-5.col-sm-6.bg-green-official-light {
-            background-color: transparent;
-          }
-          .two-up-wrap .col-md-5.col-sm-6.bg-gray-darkest {
-            background-color: transparent;
-          }
-        }
-        @media only screen and (max-width: 768px) {
-          .two-up-wrap {
-            background-image: none !important;
-            min-height: 0;
-          }
-          .two-up-wrap .col-md-5.col-sm-6.bg-white {
-            background-color: #fff;
-          }
-          .two-up-wrap .col-md-5.col-sm-6.bg-yellow {
-            background-color: #ffde2d;
-          }
-          .two-up-wrap .col-md-5.col-sm-6.bg-gray-lighter,
-          .two-up-wrap .col-md-5.col-sm-6.bg-pro-gray {
-            background-color: #e8e8e8;
-          }
-          .two-up-wrap .col-md-5.col-sm-6.bg-gray-light {
-            background-color: #d9d9d9;
-          }
-          .two-up-wrap .col-md-5.col-sm-6.bg-green-official {
-            background-color: #77c043;
-          }
-          .two-up-wrap .col-md-5.col-sm-6.bg-green-new {
-            background-color: #5caf2b;
-          }
-          .two-up-wrap .col-md-5.col-sm-6.bg-green-official-light {
-            background-color: #84D54A;
-          }
-          .two-up-wrap .col-md-5.col-sm-6.bg-gray-darkest {
-            background-color: #212121;
-          }
-        }
-        .or-container:after {
-          content: '';
-          width: 94px;
-          height: 94px;
-          background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
-          background-size: 205px auto;
-          background-position: 0 -896px;
-          position: absolute;
-          bottom: -50px;
-          margin: 0 auto;
-          display: none;
-          left: 50%;
-          margin-left: -50px;
-          z-index: 1;
-        }
-        @media only screen and (max-width: 768px) {
-          .or-container:after {
-            display: block;
-            -webkit-transform: 90deg;
-            -moz-transform: 90deg;
-            transform: rotate(90deg);
-          }
-        }
-        .two-up-wrap-compare {
-          min-height: 980px;
-          background-repeat: no-repeat;
-          background-size: cover !important;
-          background-position: center top;
-          position: relative;
-        }
-        @media only screen and (min-width: 992px) {
-          .two-up-wrap-compare .col-md-5.col-sm-6.bg-white {
-            background-color: transparent;
-          }
-          .two-up-wrap-compare .col-md-5.col-sm-6.bg-yellow {
-            background-color: transparent;
-          }
-          .two-up-wrap-compare .col-md-5.col-sm-6.bg-gray-lighter,
-          .two-up-wrap-compare .col-md-5.col-sm-6.bg-pro-gray {
-            background-color: transparent;
-          }
-          .two-up-wrap-compare .col-md-5.col-sm-6.bg-gray-light {
-            background-color: transparent;
-          }
-          .two-up-wrap-compare .col-md-5.col-sm-6.bg-green-official {
-            background-color: transparent;
-          }
-          .two-up-wrap-compare .col-md-5.col-sm-6.bg-green-new {
-            background-color: transparent;
-          }
-          .two-up-wrap-compare .col-md-5.col-sm-6.bg-green-official-light {
-            background-color: transparent;
-          }
-          .two-up-wrap-compare .col-md-5.col-sm-6.bg-gray-darkest {
-            background-color: transparent;
-          }
-        }
-        @media only screen and (max-width: 768px) {
-          .two-up-wrap-compare {
-            background-image: none !important;
-          }
-          .two-up-wrap-compare .col-md-5.col-sm-6.bg-white {
-            background-color: #fff;
-          }
-          .two-up-wrap-compare .col-md-5.col-sm-6.bg-yellow {
-            background-color: #ffde2d;
-          }
-          .two-up-wrap-compare .col-md-5.col-sm-6.bg-gray-lighter,
-          .two-up-wrap-compare .col-md-5.col-sm-6.bg-pro-gray {
-            background-color: #e8e8e8;
-          }
-          .two-up-wrap-compare .col-md-5.col-sm-6.bg-gray-light {
-            background-color: #d9d9d9;
-          }
-          .two-up-wrap-compare .col-md-5.col-sm-6.bg-green-official {
-            background-color: #77c043;
-          }
-          .two-up-wrap-compare .col-md-5.col-sm-6.bg-green-new {
-            background-color: #5caf2b;
-          }
-          .two-up-wrap-compare .col-md-5.col-sm-6.bg-green-official-light {
-            background-color: #84D54A;
-          }
-          .two-up-wrap-compare .col-md-5.col-sm-6.bg-gray-darkest {
-            background-color: #212121;
-          }
-        }
-        .two-up-wrap-compare:after {
-          content: '';
-          width: 94px;
-          height: 94px;
-          background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
-          background-size: 205px auto;
-          background-position: 0 -896px;
-          position: absolute;
-          left: 0;
-          right: 0;
-          top: 0;
-          bottom: 0;
-          margin: auto;
-        }
-        @media only screen and (max-width: 768px) {
-          .two-up-wrap-compare:after {
-            display: none;
-          }
-        }
-        .two-up-wrap-compare .two-up-text-wrap {
-          padding: 30px;
-        }
-        @media only screen and (max-width: 768px) {
-          .two-up-wrap-compare .two-up-text-wrap {
-            padding: 60px 0;
-          }
-        }
-        .two-up-wrap-compare .two-up-text-wrap h3.subtitle {
-          text-transform: none;
-        }
         .two-up-wrap-compare .check-bullets li {
           position: relative;
           padding-left: 40px;
@@ -1781,131 +1471,426 @@ function updateDomainCountText(initial, numberShown) {
       </style>
     </atlantis:webstash>
     <section id="site-choice">
-      <div id="site-choice-title" class="bg-green-new"> 
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12">
-              <h2 class="text-center two-up-title">[@L[cds.sales/offers/online-business:32573-which-sites-right-for-you]@L]</h2>
+      <style>
+.two-up-title-wrap.bg-white {
+  background-color: #fff;
+}
+.two-up-title-wrap.bg-yellow {
+  background-color: #ffde2d;
+}
+.two-up-title-wrap.bg-gray-lighter,
+.two-up-title-wrap.bg-pro-gray {
+  background-color: #e8e8e8;
+}
+.two-up-title-wrap.bg-gray-light {
+  background-color: #d9d9d9;
+}
+.two-up-title-wrap.bg-green-official {
+  background-color: #77c043;
+}
+.two-up-title-wrap.bg-green-new {
+  background-color: #5caf2b;
+}
+.two-up-title-wrap.bg-green-official-light {
+  background-color: #84D54A;
+}
+.two-up-title-wrap.bg-gray-darkest {
+  background-color: #333333;
+}
+
+.two-up-wrap-compare {
+  min-height: 980px;
+  background-repeat: no-repeat;
+  background-size: cover !important;
+  background-position: center top;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-white {
+    background-color: transparent;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-yellow {
+    background-color: transparent;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-gray-lighter,
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-pro-gray {
+    background-color: transparent;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-gray-light {
+    background-color: transparent;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-green-official {
+    background-color: transparent;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-green-new {
+    background-color: transparent;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-green-official-light {
+    background-color: transparent;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-gray-darkest {
+    background-color: transparent;
+  }
+}
+@media (max-width: 767px) {
+  .two-up-wrap-compare {
+    background-image: none !important;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-white {
+    background-color: #fff;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-yellow {
+    background-color: #ffde2d;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-gray-lighter,
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-pro-gray {
+    background-color: #e8e8e8;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-gray-light {
+    background-color: #d9d9d9;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-green-official {
+    background-color: #77c043;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-green-new {
+    background-color: #5caf2b;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-green-official-light {
+    background-color: #84D54A;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-gray-darkest {
+    background-color: #333333;
+  }
+}
+.two-up-wrap-compare:after {
+  content: '';
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+@media only (max-width: 767px) {
+  .two-up-wrap-compare:after {
+    display: none;
+  }
+}
+.two-up-wrap-compare .two-up-text-wrap {
+  padding: 30px;
+}
+@media (max-width: 767px) {
+  .two-up-wrap-compare .two-up-text-wrap {
+    padding: 60px 0;
+  }
+}
+.two-up-wrap-compare h2 {
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-family: 'Walsheim-Black';
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: 300;
+  line-height: 1.1;
+  color: #333;
+}
+.two-up-wrap-compare h3 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-family: 'Walsheim-Black';
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: 300;
+  line-height: 1.1;
+}
+.two-up-wrap-compare .white-text {
+  color: #fff;
+}
+.two-up-wrap-compare .white-text h2{
+  color: #fff;
+}
+.two-up-wrap-compare .two-up-text-wrap h3.subtitle {
+  text-transform: none;
+}
+.two-up-wrap-compare .check-bullets li {
+  position: relative;
+  padding-left: 40px;
+  margin-bottom: 20px;
+}
+.two-up-wrap-compare .check-bullets li:before {
+  content: '';
+  background-image: ;
+  background-size: 205px auto;
+  background-position: 0 -700px;
+  width: 25px;
+  height: 27px;
+  position: absolute;
+  left: 0;
+}
+.two-up-wrap-compare .check-bullets li h5 {
+  margin-bottom: 5px;
+}
+.or-container-none:after {
+  content: '';
+  width: 94px;
+  height: 94px;
+  background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+  background-size: 205px auto;
+  background-position: 0 -896px;
+  position: absolute;
+  bottom: -50px;
+  margin: 0 auto;
+  display: none;
+  margin-left: -50px;
+  z-index: 1;
+}
+.or-container:after {
+  content: '';
+  width: 94px;
+  height: 94px;
+  background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+  background-size: 205px auto;
+  background-position: 0 -896px;
+  position: absolute;
+  bottom: -50px;
+  margin: 0 auto;
+  display: block;
+  margin-left: -50px;
+  z-index: 1;
+}
+@media (max-width: 767px) {
+  .or-container:after {
+    display: block;
+    -webkit-transform: 90deg;
+    -moz-transform: 90deg;
+    transform: rotate(90deg);
+    left: 50%
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .or-container:after {
+    left: 101%;
+    bottom: 50%;
+  }
+}
+@media (min-width: 992px) {
+  .or-container:after {
+    left: 121%;
+    bottom: 50%;
+  }
+}
+
+.two-up-title {
+  margin: 40px 0;
+  line-height: 1;
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-family: 'Walsheim-Black';
+  font-weight: 300;
+}
+.two-up-speech-shape {
+  font-family: 'Walsheim-Bold';
+  font-size: 18px;
+  font-size: 1.8rem;
+  padding: 5px 10px 5px 17px;
+  color: #fff;
+  display: inline-block;
+  position: relative;
+  margin-bottom: 20px;
+  z-index: 2;
+}
+.two-up-speech-shape .shape-text {
+  position: relative;
+  z-index: 40;
+}
+.two-up-speech-shape:before {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  border-top: 15px solid;
+  border-right: 15px solid transparent;
+}
+.two-up-speech-shape:after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 99%;
+  top: 0;
+  transform: skew(-12deg, 0);
+  z-index: 1;
+}
+.two-up-speech-shape.two-up-speech-shape-green {
+  background-color: #008a32;
+}
+.two-up-speech-shape.two-up-speech-shape-green:before {
+  border-top-color: #008a32;
+}
+.two-up-speech-shape.two-up-speech-shape-green:after {
+  background-color: #008a32;
+}
+.two-up-speech-shape.two-up-speech-shape-orange {
+  background-color: #ef6c0f;
+}
+.two-up-speech-shape.two-up-speech-shape-orange:before {
+  border-top-color: #ef6c0f;
+}
+.two-up-speech-shape.two-up-speech-shape-orange:after {
+  background-color: #ef6c0f;
+}
+.two-up-speech-shape.two-up-speech-shape-white {
+  background-color: #fff;
+}
+.two-up-speech-shape.two-up-speech-shape-white:before {
+  border-top-color: #fff;
+}
+.two-up-speech-shape.two-up-speech-shape-white:after {
+  background-color: #fff;
+}
+.two-up-speech-shape.two-up-speech-shape-yellow {
+  background-color: #ffde2d;
+}
+.two-up-speech-shape.two-up-speech-shape-yellow:before {
+  border-top-color: #ffde2d;
+}
+.two-up-speech-shape.two-up-speech-shape-yellow:after {
+  background-color: #ffde2d;
+}
+      </style>
+      <div id="site-choice-compare" class="two-up-title-wrap bg-green-new">
+        <div>
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12">
+                <h2 class="text-center two-up-title">[@L[cds.sales/offers/online-business:32573-which-sites-right-for-you]@L]</h2>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div id="site-choice-compare" style="background-image: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/bg-WSB-Mod.jpg')" class="two-up-wrap-compare">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-5 col-sm-6 or-container bg-green-official">
-              <div class="two-up-text-wrap">
-                <div class="text-center two-up-image"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-wsb-icon.png"></div>
-                <h2 class="text-center">[@L[cds.sales/offers/online-business:32573-godaddy-wsb]@L]</h2>
-                <h3 class="text-center">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text]@L]</h3>
-                <mark class="text-center disclaimer-mark"> 
-                  <div data-tokenize="[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T]">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price]@L] </div>
-                  <p data-tokenize="[@T[multipleproductprice:<list productidlist="464069|101|7524" period="monthly" promocode="0" />]@T]" class="disclaimer">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price-disclaimer]@L] 
-                    <button class="btn-link see-wsb-disclaimer-link">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price-disclaimer-link]@L]</a></button>
-                  </p>
-                </mark>
-                <div class="row text-center">
-                  <div class="col-md-6 button-margin">
-                    <button class="btn btn-md btn-primary"><i class="uxicon uxicon-play"></i> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]</button>
-                  </div>
-                  <div class="col-md-6 button-margin">
-                    <button class="btn btn-md btn-primary">[@L[cds.sales/offers/online-business:32573-view-designs-button]@L]</button>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-sm-10">
-                    <ul class="list-unstyled check-bullets">
-                      <li> 
-                        <h5>[@L[cds.sales/offers/online-business:32573-godaddy-wsb-bullet-1]@L]</h5>
-                      </li>
-                      <li> 
-                        <h5>[@L[cds.sales/offers/online-business:32573-godaddy-wsb-bullet-2]@L]</h5>
-                      </li>
-                      <li> 
-                        <h5>[@L[cds.sales/offers/online-business:32573-godaddy-wsb-bullet-3]@L]</h5>
-                      </li>
-                      <li> 
-                        <h5>[@L[cds.sales/offers/online-business:32573-godaddy-wsb-bullet-4]@L]</h5>
-                      </li>
-                      <li> 
-                        <h5>[@L[cds.sales/offers/online-business:32573-godaddy-wsb-bullet-5]@L]</h5>
-                      </li>
-                      <li> 
-                        <h5>[@L[cds.sales/offers/online-business:32573-godaddy-wsb-bullet-6]@L]</h5>
-                      </li>
-                      <li> 
-                        <h5>[@L[cds.sales/offers/online-business:32573-godaddy-wsb-bullet-7]@L]</h5>
-                      </li>
-                    </ul>
+        <div style="background-image: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/bg-WSB-Mod.jpg'); ;" class="two-up-wrap-compare ">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-5 or-container col-sm-6  bg-green-official">
+                <div style="" class="two-up-text-wrap ">
+                  <div class="text-center two-up-image"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-wsb-icon.png" alt=""/></div>
+                  <h2 class="text-center">[@L[cds.sales/offers/online-business:32573-godaddy-wsb]@L]</h2>
+                  <h3 class="text-center">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text]@L]</h3>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <mark class="text-center disclaimer-mark"> 
+                        <div data-tokenize="[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T]">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price]@L] </div>
+                        <p data-tokenize="[@T[multipleproductprice:<list productidlist="464069|101|7524" period="monthly" promocode="0" />]@T]" class="disclaimer">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price-disclaimer]@L] 
+                          <button class="btn-link see-wsb-disclaimer-link">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price-disclaimer-link]@L]</a></button>
+                        </p>
+                      </mark>
+                      <div class="row text-center">
+                        <div class="col-md-6 button-margin">
+                          <button class="btn btn-md btn-primary"><i class="uxicon uxicon-play"></i> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]</button>
+                        </div>
+                        <div class="col-md-6 button-margin">
+                          <button class="btn btn-md btn-primary">[@L[cds.sales/offers/online-business:32573-view-designs-button]@L]</button>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <ul class="list-unstyled check-bullets">
+                            <li> 
+                              <h5>[@L[cds.sales/offers/online-business:32573-godaddy-wsb-bullet-1]@L]</h5>
+                            </li>
+                            <li> 
+                              <h5>[@L[cds.sales/offers/online-business:32573-godaddy-wsb-bullet-2]@L]</h5>
+                            </li>
+                            <li> 
+                              <h5>[@L[cds.sales/offers/online-business:32573-godaddy-wsb-bullet-3]@L]</h5>
+                            </li>
+                            <li> 
+                              <h5>[@L[cds.sales/offers/online-business:32573-godaddy-wsb-bullet-4]@L]</h5>
+                            </li>
+                            <li> 
+                              <h5>[@L[cds.sales/offers/online-business:32573-godaddy-wsb-bullet-5]@L]</h5>
+                            </li>
+                            <li> 
+                              <h5>[@L[cds.sales/offers/online-business:32573-godaddy-wsb-bullet-6]@L]</h5>
+                            </li>
+                            <li> 
+                              <h5>[@L[cds.sales/offers/online-business:32573-godaddy-wsb-bullet-7]@L]</h5>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="col-md-5 col-sm-6 col-md-offset-2 bg-green-official-light">
-              <div class="two-up-text-wrap">
-                <div class="text-center two-up-image"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-onlineStore.png"></div>
-                <h2 class="text-center">[@L[cds.sales/offers/online-business:32573-godaddy-ols]@L]</h2>
-                <h3 class="text-center">[@L[cds.sales/offers/online-business:32573-godaddy-ols-text]@L]</h3>
-                <mark class="text-center disclaimer-mark"> 
-                  <div data-tokenize="[@T[multipleproductprice:<current productidlist="464069|101|40972" period="monthly" promocode="75315678" />]@T]">[@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price]@L] </div>
-                  <p data-tokenize="[@T[multipleproductprice:<list productidlist="464069|101|40972" period="monthly" promocode="0" />]@T]" class="disclaimer">[@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price-disclaimer]@L] 
-                    <button class="btn-link see-ols-disclaimer-link">[@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price-disclaimer-link]@L]</button>
-                  </p>
-                </mark>
-                <div class="row text-center">
-                  <div class="col-md-6 button-margin">
-                    <button class="btn btn-md btn-primary"><i class="uxicon uxicon-play"></i> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]</button>
-                  </div>
-                  <div class="col-md-6 button-margin">
-                    <button class="btn btn-md btn-primary">[@L[cds.sales/offers/online-business:32573-see-real-stores-button]@L]</button>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-sm-10">
-                    <ul class="list-unstyled check-bullets">
-                      <li> 
-                        <h5>[@L[cds.sales/offers/online-business:32573-godaddy-ols-bullet-1]@L]</h5>
-                      </li>
-                      <li> 
-                        <h5>[@L[cds.sales/offers/online-business:32573-godaddy-ols-bullet-2]@L]</h5>
-                      </li>
-                      <li> 
-                        <h5>[@L[cds.sales/offers/online-business:32573-godaddy-ols-bullet-3]@L]</h5>
-                      </li>
-                      <li> 
-                        <h5>[@L[cds.sales/offers/online-business:32573-godaddy-ols-bullet-4]@L]</h5>
-                      </li>
-                      <li> 
-                        <h5>[@L[cds.sales/offers/online-business:32573-godaddy-ols-bullet-5]@L]</h5>
-                      </li>
-                      <li> 
-                        <h5>[@L[cds.sales/offers/online-business:32573-godaddy-ols-bullet-6]@L]</h5>
-                      </li>
-                      <li> 
-                        <h5>[@L[cds.sales/offers/online-business:32573-godaddy-ols-bullet-7]@L]</h5>
-                      </li>
-                      <li> 
-                        <h5>[@L[cds.sales/offers/online-business:32573-godaddy-ols-bullet-8]@L]</h5>
-                      </li>
-                      <li> 
-                        <h5>[@L[cds.sales/offers/online-business:32573-godaddy-ols-bullet-9]@L]</h5>
-                      </li>
-                      <li> 
-                        <h5>[@L[cds.sales/offers/online-business:32573-godaddy-ols-bullet-10]@L]</h5>
-                      </li>
-                      <li> 
-                        <h5>[@L[cds.sales/offers/online-business:32573-godaddy-ols-bullet-11]@L]</h5>
-                      </li>
-                      <li> 
-                        <h5>[@L[cds.sales/offers/online-business:32573-godaddy-ols-bullet-12]@L]</h5>
-                      </li>
-                      <li> 
-                        <h5>[@L[cds.sales/offers/online-business:32573-godaddy-ols-bullet-13]@L]</h5>
-                      </li>
-                      <li> 
-                        <h5>[@L[cds.sales/offers/online-business:32573-godaddy-ols-bullet-14]@L]</h5>
-                      </li>
-                    </ul>
+              <div class="col-md-5 col-md-offset-2 col-sm-6  bg-green-official-light">
+                <div style="" class="two-up-text-wrap ">
+                  <div class="text-center two-up-image"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-onlineStore.png" alt=""/></div>
+                  <h2 class="text-center">[@L[cds.sales/offers/online-business:32573-godaddy-ols]@L]</h2>
+                  <h3 class="text-center">[@L[cds.sales/offers/online-business:32573-godaddy-ols-text]@L]</h3>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <mark class="text-center disclaimer-mark"> 
+                        <div data-tokenize="[@T[multipleproductprice:<current productidlist="464069|101|40972" period="monthly" promocode="75315678" />]@T]">[@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price]@L] </div>
+                        <p data-tokenize="[@T[multipleproductprice:<list productidlist="464069|101|40972" period="monthly" promocode="0" />]@T]" class="disclaimer">[@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price-disclaimer]@L] 
+                          <button class="btn-link see-ols-disclaimer-link">[@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price-disclaimer-link]@L]</button>
+                        </p>
+                      </mark>
+                      <div class="row text-center">
+                        <div class="col-md-6 button-margin">
+                          <button class="btn btn-md btn-primary"><i class="uxicon uxicon-play"></i> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]</button>
+                        </div>
+                        <div class="col-md-6 button-margin">
+                          <button class="btn btn-md btn-primary">[@L[cds.sales/offers/online-business:32573-see-real-stores-button]@L]</button>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <ul class="list-unstyled check-bullets">
+                            <li> 
+                              <h5>[@L[cds.sales/offers/online-business:32573-godaddy-ols-bullet-1]@L]</h5>
+                            </li>
+                            <li> 
+                              <h5>[@L[cds.sales/offers/online-business:32573-godaddy-ols-bullet-2]@L]</h5>
+                            </li>
+                            <li> 
+                              <h5>[@L[cds.sales/offers/online-business:32573-godaddy-ols-bullet-3]@L]</h5>
+                            </li>
+                            <li> 
+                              <h5>[@L[cds.sales/offers/online-business:32573-godaddy-ols-bullet-4]@L]</h5>
+                            </li>
+                            <li> 
+                              <h5>[@L[cds.sales/offers/online-business:32573-godaddy-ols-bullet-5]@L]</h5>
+                            </li>
+                            <li> 
+                              <h5>[@L[cds.sales/offers/online-business:32573-godaddy-ols-bullet-6]@L]</h5>
+                            </li>
+                            <li> 
+                              <h5>[@L[cds.sales/offers/online-business:32573-godaddy-ols-bullet-7]@L]</h5>
+                            </li>
+                            <li> 
+                              <h5>[@L[cds.sales/offers/online-business:32573-godaddy-ols-bullet-8]@L]</h5>
+                            </li>
+                            <li> 
+                              <h5>[@L[cds.sales/offers/online-business:32573-godaddy-ols-bullet-9]@L]</h5>
+                            </li>
+                            <li> 
+                              <h5>[@L[cds.sales/offers/online-business:32573-godaddy-ols-bullet-10]@L]</h5>
+                            </li>
+                            <li> 
+                              <h5>[@L[cds.sales/offers/online-business:32573-godaddy-ols-bullet-11]@L]</h5>
+                            </li>
+                            <li> 
+                              <h5>[@L[cds.sales/offers/online-business:32573-godaddy-ols-bullet-12]@L]</h5>
+                            </li>
+                            <li> 
+                              <h5>[@L[cds.sales/offers/online-business:32573-godaddy-ols-bullet-13]@L]</h5>
+                            </li>
+                            <li> 
+                              <h5>[@L[cds.sales/offers/online-business:32573-godaddy-ols-bullet-14]@L]</h5>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>

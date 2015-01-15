@@ -1,0 +1,17 @@
+extend ./_tile.jade
+
+block append vars
+  - logoImage = logoImage || "";
+  - logoImageFallback = logoImageFallback || "";
+  - logoText = logoText || "";
+  - promoText = promoText || "";
+
+
+block tileContent
+  .promo-logo-wrapper
+    img.promo-logo(src=logoImage data-fallback!=logoImageFallback)
+    if (logoText)
+      .promo-logo-text #{logoText}
+  .promo-text.walsheim-black #{promoText}
+  .promo-cta
+    a.walsheim-black(href!=ctaLink) #{ctaText} 
