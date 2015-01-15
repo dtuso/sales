@@ -1,0 +1,16 @@
+extends ../../../templates/marquees/landing-page-marquee.jade
+
+block marqueeStyles
+  style.
+    .marquee { background-color: #ffffff }
+    .marquee.marquee-app-landing { min-height: 400px; color: #333333; }
+    .marquee.marquee-app-landing h2 { color: #333333; }
+
+block content
+  .col-sm-12
+    div(data-center-element='{"vertical":{"target":{"method":"parents","selector":".marquee-www-rebrand-wrap"},"verticalStyle":"padding-top","elementHeightMethod":"outerHeight","targetWidthMethod":"height"}}')
+      .row
+        div.col-md-9.col-sm-12
+          .marquee-pro-left-text
+            +productDescription('FIND YOUR PERFECT NAME.')
+            +checkBullets("12 million customers trust us with their domains.  They must know something.", "Experts you can call 24/7 make building a business a little less lonely.", "Low prices and a huge selection. Who doesn't love that?")

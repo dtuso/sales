@@ -26,27 +26,21 @@
     <meta property="fb:app_id" content="115696031791232">
     <meta property="fb:admins" content="633356800"> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
-    <script src="[@T[link:<javascriptroot />]@T]/ux/dev-brand/js/uxcore.en.min.js"></script>
-    <script src="[@T[link:<javascriptroot />]@T]/ux/dev-brand/js/uxcontrols.min.js"></script>
     <script src="[@T[link:<javascriptroot />]@T]/fos/mike/0.7.0/js/sahara.min.js"></script>
-    <link href="[@T[link:<cssroot />]@T]/ux/dev-brand/css/uxcontrols.css" rel="stylesheet">
-    <link href="[@T[link:<cssroot />]@T]/ux/dev-brand/css/uxcore.css" rel="stylesheet">
     <link href="[@T[link:<cssroot />]@T]/fos/mike/0.7.0/css/sahara.css" rel="stylesheet">
     <link href="[@T[link:<cssroot />]@T]/fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css">
-    <style>
-      .plan-tile { margin-top: 70px; }
-      .search-template .search-template-box { margin-bottom: 10px; }
-      #domainSearch a { color: #333; font-weight: bold; margin-right: 30px; }
-      #domainSearch { padding-bottom: 10px; }
-      
-    </style><!--[if lt IE 9]>
+    <atlantis:webstash type="css">
+      <style>
+        .plan-tile { margin-top: 70px; }
+        .search-template .search-template-box { margin-bottom: 10px; }
+        #domainSearch a { color: #333; font-weight: bold; margin-right: 30px; }
+        #domainSearch { padding-bottom: 10px; }
+        
+      </style>
+    </atlantis:webstash><!--[if lt IE 9]>
     <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
     <link href="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy.min.html" id="respond-proxy" rel="respond-proxy">
     <script src="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy-combo.min.js"></script><![endif]-->
-    <script type="text/javascript">
-      delayLoader.addScript('[@T[link:<javascriptroot />]@T]/ux/dev-brand/js/uxcontrols.min.js')
-      
-    </script>
     <!-- Google Tag Manager-->
     <!-- End Google Tag Manager-->
     <script type="text/javascript">
@@ -67,8 +61,9 @@
     <section id="marquee">
       <atlantis:webstash type="css">
         <style>
-          .marquee { background: url([@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Marquee.jpg) no-repeat top center;); }
-          .marquee.marquee-app-landing { min-height: 400px; }
+          .marquee { background-color: #ffffff }
+          .marquee.marquee-app-landing { min-height: 400px; color: #333333; }
+          .marquee.marquee-app-landing h2 { color: #333333; }
           
         </style>
       </atlantis:webstash>
@@ -80,7 +75,7 @@
                 <div class="row">
                   <div class="col-md-9 col-sm-12">
                     <div class="marquee-pro-left-text">
-                            <h2 class="marquee-product-description">CUSTOMERS ARE LOOKING FOR YOU ONLINE. A DOMAIN SAYS &quot;HEY - OVER HERE!&quot;</h2>
+                            <h2 class="marquee-product-description">FIND YOUR PERFECT NAME.</h2>
                             <ul class="marquee-check-bullets">
                               <li>12 million customers trust us with their domains.  They must know something.</li>
                               <li>Experts you can call 24/7 make building a business a little less lonely.</li>
@@ -104,107 +99,230 @@
         </div>
         <div class="row">
           <div class="col-xs-12 search-template">
-            <form action="[@T[link:&lt;external linktype='siteurl' path='' parammode='explicit'/&gt;]@T]/api/dpp/search/single?ci=54814&amp;isc=gd41166r" data-icode="home:Domain Search:Domains:Domain Search" data-domainsearch="{'search-element':'input.searchInput','placeholder-element':'label.searchInput','button':'button','empty-redirect':'[@T[link:<external linktype='siteurl' path='' parammode='explicit'/>]@T]/domains/domain-name-search.aspx'}">
+            <form action="[@T[link:<external linktype='siteurl' path='' parammode='explicit'/>]@T]/api/dpp/search/single?ci=54814&isc=gd41166r" data-icode="home:Domain Search:Domains:Domain Search" data-domainsearch="{'search-element':'input.searchInput','placeholder-element':'label.searchInput','button':'button','empty-redirect':'[@T[link:<external linktype='siteurl' path='' parammode='explicit'/>]@T]/domains/domain-name-search.aspx'}">
               <div class="search-template-box clearfix">
-                <label class="text-primary searchInput">[@L[cds.sales/homepage/segments/default:domain-banner-search-text]@L]</label>
-                <input type="text" autocomplete="off" name="domainToCheck" maxlength="63" class="text-primary searchInput"/>
+                <input type="text" autocomplete="off" name="domainToCheck" maxlength="63" placeholder="Type the one you want here" class="text-primary searchInput"/>
                 <button type="submit" data-tcode="home:Domain Search:Domains:Domain Search:Search Domain" class="btn-primary btn btn-lg pull-right ">[@L[cds.sales/homepage/locales/en:domain-search-btn]@L]</button>
               </div>
             </form>
           </div>
         </div>
         <div class="row">
-          <div class="col-xs-12"><a>Domain Pricing</a><a>Bulk Domain Search</a><a>Transfer Domains      </a></div>
+          <div class="col-xs-12"><a href="#" data-toggle="modal" data-target="#bulkModal" class="btn-link">Domain Pricing</a><a href="[@T[link:<relative path='../bulk-domain-search.aspx'></relative>]@T]" class="btn-link">Bulk Domain Search</a><a href="[@T[link:<relative path='/domains/transfers.aspx'></relative>]@T]" class="btn-link">Transfer Domains</a></div>
         </div>
       </div>
     </section>
     <section id="plans">
-      <div class="pro-plans-wrap bg-gray-light">
-        <div id="plans" data-icode="" class="container pro-plans">
-          <div class="col-md-3 col-sm-6 plan-tile plan-pro">
-            <atlantis:webstash type="css">
-              <style>
-                .pro-plans { margin-top: 0; }
-                .form-control { margin-bottom: 10px; }
-                
-              </style>
-            </atlantis:webstash>
-            <div class="pro-plan-wrap">
-              <h2 class="plan-title">.com</h2>
-              <p class="plan-text">Get the domain that will never go out of style.</p>
-              <button data-tcode="undefined" class="btn btn-purchase btn-plan btn-lg btn-block">No Action</button>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6 plan-tile plan-pro">
-            <atlantis:webstash type="css">
-              <style>
-                .pro-plans { margin-top: 0; }
-                .form-control { margin-bottom: 10px; }
-                
-              </style>
-            </atlantis:webstash>
-            <div class="pro-plan-wrap">
-              <h2 class="plan-title">.net</h2>
-              <p class="plan-text">The domain for entrepreneurs.</p>
-              <button data-tcode="undefined" class="btn btn-purchase btn-plan btn-lg btn-block">No Action</button>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6 plan-tile plan-pro">
-            <atlantis:webstash type="css">
-              <style>
-                .pro-plans { margin-top: 0; }
-                .form-control { margin-bottom: 10px; }
-                
-              </style>
-            </atlantis:webstash>
-            <div class="pro-plan-wrap">
-              <h2 class="plan-title">.org</h2>
-              <p class="plan-text">Build trust with this well-known and respected domain.</p>
-              <button data-tcode="undefined" class="btn btn-purchase btn-plan btn-lg btn-block">No Action</button>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6 plan-tile plan-pro">
-            <atlantis:webstash type="css">
-              <style>
-                .pro-plans { margin-top: 0; }
-                .form-control { margin-bottom: 10px; }
-                
-              </style>
-            </atlantis:webstash>
-            <div class="pro-plan-wrap">
-              <h2 class="plan-title">.info</h2>
-              <p class="plan-text">Share your info with the world.</p>
-              <button data-tcode="undefined" class="btn btn-purchase btn-plan btn-lg btn-block">No Action</button>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-12">
-                <h3 class="text-center">So What All Do You Get?</h3>
+      <atlantis:webstash type="css">
+        <style>
+          #plans .tldlogo{background-image:url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/domains/search/img/tldlogos-s9ffd8fe504.png);background-repeat:no-repeat;display:inline-block;vertical-align:middle;}
+          #plans .pro-plans .pro-plan-wrap { padding: 40px 30px !important; }
+          #plans .pro-plan-wrap .plan-price-wrap .plan-price { font-size: 35px !important; font-weight: 300 !important; }
+        </style>
+      </atlantis:webstash> 
+      ##if(activeLanguageAny([en-ca]))
+            <div class="pro-plans-wrap bg-gray-light">
+              <div id="plans" data-icode="" class="container pro-plans">
+                      <div class="col-md-3 col-sm-6 plan-tile plan-pro">
+                        <atlantis:webstash type="css">
+                          <style>
+                            .pro-plans { margin-top: 0; }
+                            .form-control { margin-bottom: 10px; }
+                            
+                          </style>
+                        </atlantis:webstash>
+                        <div class="pro-plan-wrap">
+                          <style>
+                            .tldlogo-dot-com{background-position:-52px -676px; height:40px; width:101px; margin-bottom:10px;}
+                            .plan-text { height: 66px; }
+                          </style>
+                          <div class="tldlogo tldlogo-dot-com"></div>
+                          <p class="plan-text">Get the domain that will never go out of style.</p>
+                          <div class="plan-price-wrap">[@T[productprice:<template productid='101' period='yearly'><nostrike><![CDATA[<span class='plan-price text-warning'>{0}*</span>]]></nostrike><strike><![CDATA[<span class='plan-price text-warning'>{0}*</span><br /> <strong>was <strike>{1}</strike></strong>]]></strike></template>]@T]</div><a href="[@T[link:<relative path='/tlds/com.aspx'><param name='ci' value='xxxxx' /></relative>]@T]" data-index="1" class="btn btn-primary btn-plan btn-lg btn-block">REGISTER</a>
+                        </div>
+                      </div>
+                <div class="col-md-3 col-sm-6 plan-tile plan-pro">
+                  <atlantis:webstash type="css">
+                    <style>
+                      .pro-plans { margin-top: 0; }
+                      .form-control { margin-bottom: 10px; }
+                      
+                    </style>
+                  </atlantis:webstash>
+                  <div class="pro-plan-wrap">
+                    <style>
+                      .tldlogo-dot-ca{background-position:-51px -1277px; height:40px; width:49px; margin-bottom:10px;}
+                      .plan-text { height: 66px; }
+                    </style>
+                    <div class="tldlogo tldlogo-dot-ca"></div>
+                    <p class="plan-text">[@L[cds.sales/gd/domains/domain-name-search:PodDotCaText]@L]</p>
+                    <div class="plan-price-wrap">[@T[productprice:<template productid='9405' period='yearly'><nostrike><![CDATA[<span class='plan-price text-warning'>{0}*</span>]]></nostrike><strike><![CDATA[<span class='plan-price text-warning'>{0}*</span><br /> <strong>was <strike>{1}</strike></strong>]]></strike></template>]@T]</div><a href="[@T[link:<relative path='/tlds/ca.aspx'><param name='ci' value='xxxxx' /></relative>]@T]" data-index="1" class="btn btn-primary btn-plan btn-lg btn-block">REGISTER</a>
+                  </div>
+                </div>
+                <div class="col-md-3 col-sm-6 plan-tile plan-pro">
+                  <atlantis:webstash type="css">
+                    <style>
+                      .pro-plans { margin-top: 0; }
+                      .form-control { margin-bottom: 10px; }
+                      
+                    </style>
+                  </atlantis:webstash>
+                  <div class="pro-plan-wrap">
+                    <style>
+                      .tldlogo-dot-quebec{background-position:-53px -597px; height:40px; width:102px; margin-bottom:10px;}
+                      .plan-text { height: 66px; }
+                    </style>
+                    <div class="tldlogo tldlogo-dot-quebec"></div>
+                    <p class="plan-text">[@L[cds.sales/gd/domains/domain-name-search:PodDotQuebecText]@L]</p>
+                    <div class="plan-price-wrap">[@T[productprice:<template productid='546605' period='yearly'><nostrike><![CDATA[<span class='plan-price text-warning'>{0}*</span>]]></nostrike><strike><![CDATA[<span class='plan-price text-warning'>{0}*</span><br /> <strong>was <strike>{1}</strike></strong>]]></strike></template>]@T]</div><a href="[@T[link:<relative path='/tlds/quebec'><param name='ci' value='xxxxx' /></relative>]@T]" data-index="1" class="btn btn-primary btn-plan btn-lg btn-block">REGISTER</a>
+                  </div>
+                </div>
+                <div class="col-md-3 col-sm-6 plan-tile plan-pro">
+                  <atlantis:webstash type="css">
+                    <style>
+                      .pro-plans { margin-top: 0; }
+                      .form-control { margin-bottom: 10px; }
+                      
+                    </style>
+                  </atlantis:webstash>
+                  <div class="pro-plan-wrap">
+                    <style>
+                      .tldlogo-dot-website{background-position:0px -279px; height:40px; width:133px; margin-bottom:10px;}
+                      .plan-text { height: 66px; }
+                    </style>
+                    <div class="tldlogo tldlogo-dot-website"></div>
+                    <p class="plan-text">[@L[cds.sales/gd/domains/domain-name-search:PodDotWebsiteText]@L]</p>
+                    <div class="plan-price-wrap">[@T[productprice:<template productid='461465' period='yearly'><nostrike><![CDATA[<span class='plan-price text-warning'>{0}*</span>]]></nostrike><strike><![CDATA[<span class='plan-price text-warning'>{0}*</span><br /> <strong>was <strike>{1}</strike></strong>]]></strike></template>]@T]</div><a href="[@T[link:<relative path='/tlds/website'><param name='ci' value='xxxxx' /></relative>]@T]" data-index="1" class="btn btn-primary btn-plan btn-lg btn-block">REGISTER</a>
+                  </div>
+                </div>
+                <div class="container">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <h3 class="text-center">So What All Do You Get?</h3>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-4 col-sm-6">
+                      <div class="include-check">Simple domain set up - no technical skills needed. Honest.</div>
+                      <div class="include-check">Quickly forward your domain to any existing website</div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                      <div class="include-check">Up to 100 subdomains (like pics.coolexample.com) to customize your site.</div>
+                      <div class="include-check">100 professional email aliases (like sales@coolexample.com).</div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                      <div class="include-check">Real-time monitoring to keep you up and running</div>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="row">
-              <div class="col-md-4 col-sm-6">
-                <div class="include-check">Simple domain set up - no technical skills needed. Honest.</div>
-                <div class="include-check">Quickly forward your domain to any existing website</div>
+            </div> 
+      ##else
+            <div class="pro-plans-wrap bg-gray-light">
+              <div id="plans" data-icode="" class="container pro-plans">
+                      <div class="col-md-3 col-sm-6 plan-tile plan-pro">
+                        <atlantis:webstash type="css">
+                          <style>
+                            .pro-plans { margin-top: 0; }
+                            .form-control { margin-bottom: 10px; }
+                            
+                          </style>
+                        </atlantis:webstash>
+                        <div class="pro-plan-wrap">
+                          <style>
+                            .tldlogo-dot-com{background-position:-52px -676px; height:40px; width:101px; margin-bottom:10px;}
+                            .plan-text { height: 66px; }
+                          </style>
+                          <div class="tldlogo tldlogo-dot-com"></div>
+                          <p class="plan-text">Get the domain that will never go out of style.</p>
+                          <div class="plan-price-wrap">[@T[productprice:<template productid='101' period='yearly'><nostrike><![CDATA[<span class='plan-price text-warning'>{0}*</span>]]></nostrike><strike><![CDATA[<span class='plan-price text-warning'>{0}*</span><br /> <strong>was <strike>{1}</strike></strong>]]></strike></template>]@T]</div><a href="[@T[link:<relative path='/tlds/com.aspx'><param name='ci' value='xxxxx' /></relative>]@T]" data-index="1" class="btn btn-primary btn-plan btn-lg btn-block">REGISTER</a>
+                        </div>
+                      </div>
+                <div class="col-md-3 col-sm-6 plan-tile plan-pro">
+                  <atlantis:webstash type="css">
+                    <style>
+                      .pro-plans { margin-top: 0; }
+                      .form-control { margin-bottom: 10px; }
+                      
+                    </style>
+                  </atlantis:webstash>
+                  <div class="pro-plan-wrap">
+                    <style>
+                      .tldlogo-dot-net{background-position:0px -36px; height:40px; width:74px; margin-bottom:10px;}
+                      .plan-text { height: 66px; }
+                    </style>
+                    <div class="tldlogo tldlogo-dot-net"></div>
+                    <p class="plan-text">The domain for entrepreneurs.</p>
+                    <div class="plan-price-wrap">[@T[productprice:<template productid='12001' period='yearly'><nostrike><![CDATA[<span class='plan-price text-warning'>{0}*</span>]]></nostrike><strike><![CDATA[<span class='plan-price text-warning'>{0}*</span><br /> <strong>was <strike>{1}</strike></strong>]]></strike></template>]@T]</div><a href="[@T[link:<relative path='/tlds/net.aspx'><param name='ci' value='xxxxx' /></relative>]@T]" data-index="1" class="btn btn-primary btn-plan btn-lg btn-block">REGISTER</a>
+                  </div>
+                </div>
+                <div class="col-md-3 col-sm-6 plan-tile plan-pro">
+                  <atlantis:webstash type="css">
+                    <style>
+                      .pro-plans { margin-top: 0; }
+                      .form-control { margin-bottom: 10px; }
+                      
+                    </style>
+                  </atlantis:webstash>
+                  <div class="pro-plan-wrap">
+                    <style>
+                      .tldlogo-dot-org{background-position:-63px -960px; height:40px; width:76px; margin-bottom:10px;}
+                      .plan-text { height: 66px; }
+                    </style>
+                    <div class="tldlogo tldlogo-dot-org"></div>
+                    <p class="plan-text">Build trust with this well-known and respected domain.</p>
+                    <div class="plan-price-wrap">[@T[productprice:<template productid='12101' period='yearly'><nostrike><![CDATA[<span class='plan-price text-warning'>{0}*</span>]]></nostrike><strike><![CDATA[<span class='plan-price text-warning'>{0}*</span><br /> <strong>was <strike>{1}</strike></strong>]]></strike></template>]@T]</div><a href="[@T[link:<relative path='/tlds/org.aspx'><param name='ci' value='xxxxx' /></relative>]@T]" data-index="1" class="btn btn-primary btn-plan btn-lg btn-block">REGISTER</a>
+                  </div>
+                </div>
+                <div class="col-md-3 col-sm-6 plan-tile plan-pro">
+                  <atlantis:webstash type="css">
+                    <style>
+                      .pro-plans { margin-top: 0; }
+                      .form-control { margin-bottom: 10px; }
+                      
+                    </style>
+                  </atlantis:webstash>
+                  <div class="pro-plan-wrap">
+                    <style>
+                      .tldlogo-dot-info{background-position:0px -1198px; height:40px; width:57px; margin-bottom:10px;}
+                      .plan-text { height: 66px; }
+                    </style>
+                    <div class="tldlogo tldlogo-dot-info"></div>
+                    <p class="plan-text">Share your info with the world.</p>
+                    <div class="plan-price-wrap">[@T[productprice:<template productid='201' period='yearly'><nostrike><![CDATA[<span class='plan-price text-warning'>{0}*</span>]]></nostrike><strike><![CDATA[<span class='plan-price text-warning'>{0}*</span><br /> <strong>was <strike>{1}</strike></strong>]]></strike></template>]@T]</div><a href="[@T[link:<relative path='/tlds/info.aspx'><param name='ci' value='xxxxx' /></relative>]@T]" data-index="1" class="btn btn-primary btn-plan btn-lg btn-block">REGISTER</a>
+                  </div>
+                </div>
+                <div class="container">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <h3 class="text-center">So What All Do You Get?</h3>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-4 col-sm-6">
+                      <div class="include-check">Simple domain set up - no technical skills needed. Honest.</div>
+                      <div class="include-check">Quickly forward your domain to any existing website</div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                      <div class="include-check">Up to 100 subdomains (like pics.coolexample.com) to customize your site.</div>
+                      <div class="include-check">100 professional email aliases (like sales@coolexample.com).</div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                      <div class="include-check">Real-time monitoring to keep you up and running</div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="col-md-4 col-sm-6">
-                <div class="include-check">Up to 100 subdomains (like pics.coolexample.com) to customize your site.</div>
-                <div class="include-check">100 professional email aliases (like sales@coolexample.com).</div>
-              </div>
-              <div class="col-md-4 col-sm-6">
-                <div class="include-check">Real-time monitoring to keep you up and running</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+            </div> 
+      ##endif
     </section>
-    <section id="test-carousel" class="features-carousel-pro-carousel">
-      <style>
-        #test-carousel .plan-carousel-copy { font-family: 'Walsheim-Black'; font-size: 24px; }
-        #test-carousel .btn { margin-top: 40px; }
-      </style>
+    <section id="promo-carousel" class="features-carousel-pro-carousel">
+      <atlantis:webstash type="css">
+        <style>
+          #promo-carousel .plan-carousel-copy { font-family: 'Walsheim-Black'; font-size: 24px; }
+          #promo-carousel .btn { margin-top: 40px; }
+        </style>
+      </atlantis:webstash>
       <div class="carousel-wrap">
         <div class="carousel-container container">
           <div id="my-carousel" data-ride="carousel" data-interval="false" class="carousel slide">
@@ -215,26 +333,26 @@
             </ol>
             <div class="carousel-inner">
               <div class="item">
-                <div class="item-wrapper text-center">
+                <div class="item-wrapper">
                   <div data-icode="" class="carousel-panel container">
                     <div style="text-transform: uppercase;" class="plan-carousel-copy">FINALLY! A WEB ADDRESS THAT TELLS PEOPLE EXACTLY WHAT YOU DO</div>
-                    <div class="plan-carousel-copy">.attorney, .church, .club, .xyz and .guide are now available.</div><a class="btn btn-default-dark">Search Domains Now</a>
+                    <div class="plan-carousel-copy">.attorney, .church, .club, .xyz and .guide are now available.</div><a href="[@T[link:<relative path='/tlds/gtld.aspx'></relative>]@T]" class="btn btn-default-dark">Search Domains Now</a>
                   </div>
                 </div>
               </div>
               <div class="item">
-                <div class="item-wrapper text-center">
+                <div class="item-wrapper">
                   <div data-icode="" class="carousel-panel container">
                     <div style="text-transform: uppercase;" class="plan-carousel-copy">30% OFF</div>
-                    <div class="plan-carousel-copy">.global, .email, .website, .guru, .army now.</div><a class="btn btn-default-dark">Search Domains Now</a>
+                    <div class="plan-carousel-copy">.global, .email, .website, .guru, .army now.</div><a href="[@T[link:<relative path='/tlds/gtld.aspx'></relative>]@T]" class="btn btn-default-dark">Search Domains Now</a>
                   </div>
                 </div>
               </div>
               <div class="item">
-                <div class="item-wrapper text-center">
+                <div class="item-wrapper">
                   <div data-icode="" class="carousel-panel container">
                     <div class="plan-carousel-copy">SAVE up to 50% when you get online with</div>
-                    <div class="plan-carousel-copy">.com, .net, .co, .org, .me, .biz, or .us</div><a class="btn btn-default-dark">Search Domains Now</a>
+                    <div class="plan-carousel-copy">.com, .net, .co, .org, .me, .biz, or .us</div><a href="[@T[link:<relative path='/tlds/gtld.aspx'></relative>]@T]" class="btn btn-default-dark">Search Domains Now</a>
                   </div>
                 </div>
               </div>
@@ -405,10 +523,6 @@
         </div>
         <div id="midPageNav" class="collapse navbar-collapse">
           <ul class="nav navbar-nav"></ul>
-          <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.mid-page-nav&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="navbar-right">
-            <div class="price-text">Plans starting at</div>
-            <div class="price">$69.99<span>/year</span></div><a href="#alternate-products" class="btn-warning btn btn-sm">See the plans</a>
-          </div>
         </div>
       </div>
     </div>
@@ -463,20 +577,7 @@
       
       $("#midPageNav").on("click", "a", scroll_if_anchor);
     </script>
-    <section id="speed-chart">
-      <div class="container">
-        <style>
-          #speed-chart { min-height: 400px; }
-          #speed-chart h3 { margin: 50px auto; text-align: center; }
-          #speed-chart img { margin: 50px auto; display: block; }
-        </style>
-        <div class="speed-chart">
-          <h3>Fast Sites = Happy Visitors</h3><img src="[@T[link:<imageroot />]@T]fos/mike/img/pro-wp-speed.png">
-          <div class="speed-text"><img></div>
-        </div>
-      </div>
-    </section>
-    <section id="features" data-mid-nav-title="Why GoDaddy?" class="key-benefits-wrap tile-section bg-pro-gray">
+    <section id="why-godaddy" data-mid-nav-title="Why GoDaddy?" class="key-benefits-wrap tile-section bg-pro-gray">
       <div class="container">
         <div class="row">
           <div style="padding-top: 30px; padding-bottom: 30px;" class="col-sm-12">
@@ -504,44 +605,155 @@
         </div>
       </div>
     </section>
-    <section id="features" data-mid-nav-title="Options" class="key-benefits-wrap tile-section bg-pro-gray">
+    <section id="bottom-pods" class="bg-green-official">
+      <atlantis:webstash type="css">
+        <style>
+          #bottom-pods .pro-plans-wrap { margin-bottom: -310px; }
+          #bottom-pods .pro-plan-wrap .plan-price-wrap .plan-price { font-size: 35px !important; font-weight: 300 !important; }
+          #bottom-pods .bottom-headline { font-family: "Walsheim-Black"; font-size: 40px; color: #333333; text-align: center; display:block; padding:80px 0 0 0; }
+        </style>
+      </atlantis:webstash><span class="bottom-headline">HUNDREDS OF GREAT NEW DOMAINS JOIN .COM, .NET AND .ORG</span> 
+      ##if(activeLanguageAny([en-ca]))
+            <div class="pro-plans-wrap bg-green-official">
+              <div id="plans" data-icode="" class="container pro-plans">
+                      <div class="col-sm-4 plan-tile plan-pro">
+                        <atlantis:webstash type="css">
+                          <style>
+                            .pro-plans { margin-top: 0; }
+                            .form-control { margin-bottom: 10px; }
+                            
+                          </style>
+                        </atlantis:webstash>
+                        <div class="pro-plan-wrap">
+                          <div class="plan-flag">NOW AVAILABLE</div>
+                          <h2 class="plan-title">.global</h2>
+                          <p class="plan-text">[@L[cds.sales/gd/domains/domain-name-search:PodDotGlobalText]@L]</p>
+                          <div class="plan-price-wrap">[@T[productprice:<template productid='483124' period='yearly'><nostrike><![CDATA[<span class='plan-price text-warning'>{0}*</span>]]></nostrike><strike><![CDATA[<span class='plan-price text-warning'>{0}*</span><br /> <strong>was <strike>{1}</strike></strong>]]></strike></template>]@T]</div><a href="[@T[link:<relative path='/tlds/global'><param name='ci' value='xxxxx' /></relative>]@T]" data-index="1" class="btn btn-primary btn-plan btn-lg btn-block">REGISTER</a>
+                        </div>
+                      </div>
+                <div class="col-sm-4 plan-tile plan-pro">
+                  <atlantis:webstash type="css">
+                    <style>
+                      .pro-plans { margin-top: 0; }
+                      .form-control { margin-bottom: 10px; }
+                      
+                    </style>
+                  </atlantis:webstash>
+                  <div class="pro-plan-wrap">
+                    <div class="plan-flag">NOW AVAILABLE</div>
+                    <h2 class="plan-title">.club</h2>
+                    <p class="plan-text">[@L[cds.sales/gd/domains/domain-name-search:PodDotClubText]@L]</p>
+                    <div class="plan-price-wrap">[@T[productprice:<template productid='172137' period='yearly'><nostrike><![CDATA[<span class='plan-price text-warning'>{0}*</span>]]></nostrike><strike><![CDATA[<span class='plan-price text-warning'>{0}*</span><br /> <strong>was <strike>{1}</strike></strong>]]></strike></template>]@T]</div><a href="[@T[link:<relative path='/tlds/club'><param name='ci' value='xxxxx' /></relative>]@T]" data-index="1" class="btn btn-primary btn-plan btn-lg btn-block">REGISTER</a>
+                  </div>
+                </div>
+                <div class="col-sm-4 plan-tile plan-pro">
+                  <atlantis:webstash type="css">
+                    <style>
+                      .pro-plans { margin-top: 0; }
+                      .form-control { margin-bottom: 10px; }
+                      
+                    </style>
+                  </atlantis:webstash>
+                  <div class="pro-plan-wrap">
+                    <div class="plan-flag">NOW AVAILABLE</div>
+                    <h2 class="plan-title">.co</h2>
+                    <p class="plan-text">[@L[cds.sales/gd/domains/domain-name-search:PodDotCoText]@L]</p>
+                    <div class="plan-price-wrap">[@T[productprice:<template productid='56401' period='yearly'><nostrike><![CDATA[<span class='plan-price text-warning'>{0}*</span>]]></nostrike><strike><![CDATA[<span class='plan-price text-warning'>{0}*</span><br /> <strong>was <strike>{1}</strike></strong>]]></strike></template>]@T]</div><a href="[@T[link:<relative path='/tlds/co-domain.aspx'><param name='ci' value='xxxxx' /></relative>]@T]" data-index="1" class="btn btn-primary btn-plan btn-lg btn-block">REGISTER</a>
+                  </div>
+                </div>
+              </div>
+            </div> 
+      ##else
+            <div class="pro-plans-wrap bg-green-official">
+              <div id="plans" data-icode="" class="container pro-plans">
+                      <div class="col-sm-4 plan-tile plan-pro">
+                        <atlantis:webstash type="css">
+                          <style>
+                            .pro-plans { margin-top: 0; }
+                            .form-control { margin-bottom: 10px; }
+                            
+                          </style>
+                        </atlantis:webstash>
+                        <div class="pro-plan-wrap">
+                          <div class="plan-flag">NOW AVAILABLE</div>
+                          <h2 class="plan-title">.global</h2>
+                          <p class="plan-text">[@L[cds.sales/gd/domains/domain-name-search:PodDotGlobalText]@L]</p>
+                          <div class="plan-price-wrap">[@T[productprice:<template productid='483124' period='yearly'><nostrike><![CDATA[<span class='plan-price text-warning'>{0}*</span>]]></nostrike><strike><![CDATA[<span class='plan-price text-warning'>{0}*</span><br /> <strong>was <strike>{1}</strike></strong>]]></strike></template>]@T]</div><a href="[@T[link:<relative path='/tlds/global'><param name='ci' value='xxxxx' /></relative>]@T]" data-index="1" class="btn btn-primary btn-plan btn-lg btn-block">REGISTER</a>
+                        </div>
+                      </div>
+                <div class="col-sm-4 plan-tile plan-pro">
+                  <atlantis:webstash type="css">
+                    <style>
+                      .pro-plans { margin-top: 0; }
+                      .form-control { margin-bottom: 10px; }
+                      
+                    </style>
+                  </atlantis:webstash>
+                  <div class="pro-plan-wrap">
+                    <div class="plan-flag">NOW AVAILABLE</div>
+                    <h2 class="plan-title">.club</h2>
+                    <p class="plan-text">[@L[cds.sales/gd/domains/domain-name-search:PodDotClubText]@L]</p>
+                    <div class="plan-price-wrap">[@T[productprice:<template productid='172137' period='yearly'><nostrike><![CDATA[<span class='plan-price text-warning'>{0}*</span>]]></nostrike><strike><![CDATA[<span class='plan-price text-warning'>{0}*</span><br /> <strong>was <strike>{1}</strike></strong>]]></strike></template>]@T]</div><a href="[@T[link:<relative path='/tlds/club'><param name='ci' value='xxxxx' /></relative>]@T]" data-index="1" class="btn btn-primary btn-plan btn-lg btn-block">REGISTER</a>
+                  </div>
+                </div>
+                <div class="col-sm-4 plan-tile plan-pro">
+                  <atlantis:webstash type="css">
+                    <style>
+                      .pro-plans { margin-top: 0; }
+                      .form-control { margin-bottom: 10px; }
+                      
+                    </style>
+                  </atlantis:webstash>
+                  <div class="pro-plan-wrap">
+                    <div class="plan-flag">NOW AVAILABLE</div>
+                    <h2 class="plan-title">.co</h2>
+                    <p class="plan-text">[@L[cds.sales/gd/domains/domain-name-search:PodDotCoText]@L]</p>
+                    <div class="plan-price-wrap">[@T[productprice:<template productid='56401' period='yearly'><nostrike><![CDATA[<span class='plan-price text-warning'>{0}*</span>]]></nostrike><strike><![CDATA[<span class='plan-price text-warning'>{0}*</span><br /> <strong>was <strike>{1}</strike></strong>]]></strike></template>]@T]</div><a href="[@T[link:<relative path='/tlds/co-domain.aspx'><param name='ci' value='xxxxx' /></relative>]@T]" data-index="1" class="btn btn-primary btn-plan btn-lg btn-block">REGISTER</a>
+                  </div>
+                </div>
+              </div>
+            </div> 
+      ##endif
+    </section>
+    <section id="new-domains" class="bg-pro-gray">
       <div class="container">
+        <atlantis:webstash type="css">
+          <style>
+            #new-domains {padding:280px 0 0 0;}
+            #new-domains.container{margin:0 auto;}
+            #new-domains ul{list-style-type:none; -webkit-padding-start:10px;}
+            #new-domains ul li {background-color:#ffffff; width: 100%; height:46px;}
+            #new-domains ul li span{font-family: "Walsheim-Black"; font-size: 30px; padding-left:10px;}
+            #new-domains ul li a{float:right;}
+            #new-domains .col-tld-title {padding-left: 10px;}
+          </style>
+        </atlantis:webstash>
         <div class="row">
-          <div class="col-sm-4 key-benefit">
-            <div class="key-benefits-img-wrap"><img src="[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_Group_ScalableResources.png" class="key-benefits-img">
-            </div>
-            <h3 class="key-benefits-title">Scalable resources on-demand</h3>
-            <div class="key-benefits-text">When you need more power, level up your CPU, memory, entry processes and I/O with just a click. Access the Stats & Usage dashboard for real-time visibility to your sites’ resource usage. Even get alerts as you approach your limits so you can react quickly and keep your site running at top speed.</div>
+          <div class="col-md-6"><span class="col-tld-title">NEW DOMAINS </span><span class="bg-warning">AVAILABLE:</span></div>
+          <div class="col-md-6"><span class="col-tld-title">NEW DOMAINS </span><span class="bg-warning">COMING SOON:</span></div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <ul>
+              <li><span>domain name</span><a href="[@T[link:<relative path='/tlds/com.aspx'><param name='ci' value='xxxxx' /></relative>]@T]" class="btn btn-primary">REGISTER</a>
+              </li>
+              <li><span>domain name</span><a href="[@T[link:<relative path='/tlds/com.aspx'><param name='ci' value='xxxxx' /></relative>]@T]" class="btn btn-primary">REGISTER</a>
+              </li>
+            </ul>
           </div>
-          <div class="col-sm-4 key-benefit">
-            <div class="key-benefits-img-wrap"><img src="[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_Group_Security.png" class="key-benefits-img"></div>
-            <h3 class="key-benefits-title">Award-winning security keeps your site safe</h3>
-            <div class="key-benefits-text">Keeping a website secure is a full time job. That’s why our security team is on the job 24/7, monitoring your site for suspicious activity and protecting it against brute force and DDoS attacks.</div>
-          </div>
-          <div class="col-sm-4 key-benefit">
-            <div class="key-benefits-img-wrap"><img src="[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_Group_WhatIsHosting.png" class="key-benefits-img"></div>
-            <h3 class="key-benefits-title">What is Hosting?</h3>
-            <div class="key-benefits-text">Make sure friends, family and customers can see your website. Hosting is what makes it possible for others to view your website over the Internet. Without it, you’re the only one who will ever get a look. GoDaddy serves up:
-              <ul>
-                <li>One-click set-up</li>
-                <li>Unlimited storage and bandwidth</li>
-                <li>Scalability to fit your needs</li>
-                <li>24/7 secure monitoring</li>
-              </ul>
-            </div>
+          <div class="col-md-6">
+            <ul>
+              <li><span>domain name</span><a href="[@T[link:<relative path='/tlds/com.aspx'><param name='ci' value='xxxxx' /></relative>]@T]" class="btn btn-primary">REGISTER</a>
+              </li>
+              <li><span>domain name</span><a href="[@T[link:<relative path='/tlds/com.aspx'><param name='ci' value='xxxxx' /></relative>]@T]" class="btn btn-primary">REGISTER</a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
-    <section id="tabbed-carousel">
-      <div data-icode="" class="carousel-panel container">
-        <div class="row">
-          <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-            <div></div>
-          </div>
-        </div>
-      </div>
-            <style>.features-tabbed-carousel-top {
+    <section id="options" data-mid-nav-title="Options" class="key-benefits-wrap tile-section bg-pro-gray">
+      <style>.features-tabbed-carousel-top {
   padding: 70px 0 0;
   text-align: center;
 }
@@ -600,535 +812,72 @@ text-transform: uppercase;
   left: 50%;
   }
 }
-            </style>
-            <div data-icode="" id="" class="features-tabbed-carousel-top ">
-              <div class="container">
-                <div class="row">
-                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                    <h1>Keep the bad guys away.</h1>
-                    <h4 class="headline-primary">There are people on the web who are always trying to steal your domains and personal details. These optional services can help (you, not them).</h4>
-                  </div>
-                </div>
-                <div class="row">
-                        <div data-begin="0" data-end="0" class="features-tabbed-carousel-icon col-md-4">
-                          <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
-                            <div class="feature-text">Privacy Potection</div>
-                          </div>
-                        </div>
-                        <div data-begin="1" data-end="1" class="features-tabbed-carousel-icon col-md-4">
-                          <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
-                            <div class="feature-text">Business Protection</div>
-                          </div>
-                        </div>
-                        <div data-begin="2" data-end="2" class="features-tabbed-carousel-icon col-md-4">
-                          <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
-                            <div class="feature-text">Certified Domains</div>
-                          </div>
-                        </div>
-                </div>
+      </style>
+      <div data-icode="12345" id="" class="features-tabbed-carousel-top ">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+            </div>
+          </div>
+          <div class="row">
+            <div data-begin="undefined" data-end="undefined" class="features-tabbed-carousel-icon col-md-NaN">
+              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                <div class="feature-text">first-tab</div>
               </div>
             </div>
-            <atlantis:webstash type="js">
-              <script type="text/javascript">
-                $(window).load(function() {
-                  setTimeout(function() {
-                    $(".features-tabbed-carousel-icon:first").click();
-                  }, 500);
-                
-                  var maxTabHeight = 0;
-                  $(".features-tabbed-carousel-icon").each(function(index, tab) {
-                    maxTabHeight = $(tab).outerHeight() > maxTabHeight ? $(tab).outerHeight() : maxTabHeight;
-                  }).css("height", maxTabHeight);
-                
-                  var maxFeatureTextHeight = 0;
-                  $(".feature-text").each(function(index, featureText) {
-                    maxFeatureTextHeight = $(featureText).height() > maxFeatureTextHeight ? $(featureText).height() : maxFeatureTextHeight;
-                  }).css({height: maxFeatureTextHeight});
-                
-                });
-                
-                $(".features-tabbed-carousel-icon").click(function() {
-                  var slideNum = $(this).data("begin");
-                  $(".features-tabbed-carousel-icon").removeClass("active");
-                  $(this).addClass("active");
-                  $('#carousel-services').carousel(slideNum);
-                });
-                
-                $('#carousel-services').on('slid.bs.carousel', function () {
-                  var carouselData = $(this).data('bs.carousel');
-                  var currentIndex = carouselData.getActiveIndex();
-                  $(".features-tabbed-carousel-icon").each(function() {
-                    if (currentIndex >= parseInt($(this).data("begin")) && currentIndex <= parseInt($(this).data("end"))) {
-                      $(".features-tabbed-carousel-icon").removeClass("active");
-                      $(this).addClass("active");
-                    }
-                  });
-                });
-                
-                
-              </script>
-            </atlantis:webstash>
-            <style>.item-wrapper { padding: 70px 0 20px; }
-
-.carousel-wrap { padding-bottom: 70px; }
-
-@media only screen and (min-width: 768px){
-  .carousel-container .carousel {
-    padding: 0 120px;
-  }
-}
-
-.carousel {
-  position: relative;
-  padding: 0 0 45px 0;
-}
-
-.carousel-container .carousel .carousel-indicators {
-  bottom: -60px;
-}
-
-@media screen and (min-width: 768px){
-  .carousel-indicators {
-    bottom: -5px;
-  }
-}
-.carousel-indicators {
-  position: absolute;
-  bottom: -5px;
-  left: 50%;
-  z-index: 15;
-  width: 80%;
-  margin-left: -40%;
-  padding-left: 0;
-  list-style: none;
-  text-align: center;
-}
-
-.carousel-container .carousel .carousel-indicators li.active {
-  background-color: #77c043;
-}
-
-.carousel-container .carousel .carousel-indicators li.active {
-  background-color: #77c043;
-}
-.carousel-container .carousel .carousel-indicators li {
-  width: 15px;
-  height: 15px;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-  margin: 5px;
-  background-color: #d9d9d9;
-}
-.carousel-indicators .active {
-  background-color: #008a32;
-}
-.carousel-indicators li {
-  display: inline-block;
-  width: 32px;
-  height: 10px;
-  margin: 8px;
-  text-indent: -999px;
-  cursor: pointer;
-  background-color: #d9d9d9;
-}
-.carousel-inner {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-}
-.carousel-inner > .active {
-  
-}
-.carousel-inner > .active, .carousel-inner > .next, .carousel-inner > .prev {
-  display: block;
-}
-.carousel-inner > .item {
-  display: none;
-  position: relative;
-  -webkit-transition: left 0.6s ease-in-out;
-  -moz-transition: left 0.6s ease-in-out;
-  transition: left 0.6s ease-in-out;
-  overflow: hidden;
-}
-.carousel-container .carousel-panel, .carousel-container .testimonial {
-  padding: 0;
-}
-.carousel-panel .img-center {
-  margin: 50px auto;
-}
-.carousel-panel .carousel-panel-text {
-  margin-bottom: 25px;
-}
-.carousel-panel h2 {
-  margin-top: 0px;
-}
-
-.carousel-container .carousel-control.left {
-  left: 0px;
-}
-.carousel-control {
-  position: absolute;
-  top: -11%;
-  bottom: 0;
-  color: #999999;
-  text-align: center;
-}
-.carousel-icon.arrow-left-icon {
-  background-position: 0 0;
-  width: 51px;
-  height: 50px;
-}
-
-.carousel-control .uxicon-chevron-left-lt, .carousel-control .arrow-left-icon, .carousel-control .arrow-left-white-icon {
-  left: 50%;
-}
-.carousel-control .arrow-left-white-icon, .carousel-control .arrow-right-white-icon, .carousel-control .arrow-left-icon, .carousel-control .arrow-right-icon {
-  position: absolute;
-  top: 50%;
-}
-.carousel-icon {
-  background-image: url('[@T[link:<imageroot />]@T]/fos/hp/sahara-rebrand-sprite-20141114.png');
-  display: inline-block;
-  background-size: 205px auto;
-}
-.carousel-container .carousel-control.right {
-  right: 0px;
-}
-.carousel-icon.arrow-right-icon {
-  background-position: 0 -52px;
-  width: 51px;
-  height: 50px;
-}
-.carousel-control .arrow-left-white-icon, .carousel-control .arrow-right-white-icon, .carousel-control .arrow-left-icon, .carousel-control .arrow-right-icon {
-  position: absolute;
-  top: 50%;
-}
-
-.carousel {
-    position: relative;
-    padding: 0 0 45px 0;
-}
-
-.carousel-inner {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-}
-
-.carousel-inner > .item {
-    display: none;
-    position: relative;
-    -webkit-transition: left 0.6s ease-in-out;
-    -moz-transition: left 0.6s ease-in-out;
-    transition: left 0.6s ease-in-out;
-    overflow: hidden;
-}
-
-.carousel-inner > .item.show-item {
-    display: block;
-}
-
-.carousel-inner > .item > h1,
-.carousel-inner > .item > h2,
-.carousel-inner > .item > h3,
-.carousel-inner > .item > h4,
-.carousel-inner > .item > h5,
-.carousel-inner > .item > h6 {
-    margin-top: 0;
-}
-
-.carousel-inner > .active,
-.carousel-inner > .next,
-.carousel-inner > .prev {
-    display: block;
-}
-
-.carousel-inner > .active {
-    left: 0;
-}
-
-.carousel-inner > .next,
-.carousel-inner > .prev {
-    position: absolute;
-    top: 0;
-    width: 100%;
-}
-
-.carousel-inner > .next {
-    left: 100%;
-}
-
-.carousel-inner > .prev {
-    left: -100%;
-}
-
-.carousel-inner > .next.left,
-.carousel-inner > .prev.right {
-    left: 0;
-}
-
-.carousel-inner > .active.left {
-    left: -100%;
-}
-
-.carousel-inner > .active.right {
-    left: 100%;
-}
-
-.carousel-text-item {
-    margin-bottom: 20px;
-}
-
-.carousel-text-item h1 {
-    font-size: 14px;
-    display: inline;
-    margin: 0;
-    font-weight: bold;
-    font-weight: 600;
-}
-
-.carousel-control {
-    position: absolute;
-    top: -11%;
-    bottom: 0;
-    color: #999999;
-    text-align: center;
-}
-
-@media screen and (max-width: 768px) {
-    .carousel-control {
-        top: -6%;
-    }
-}
-
-.carousel-control:hover,
-.carousel-control:focus {
-    outline: none;
-    color: #000;
-    text-decoration: none;
-}
-
-.carousel-control .uxicon-chevron-left-lt,
-.carousel-control .uxicon-chevron-right-lt {
-    position: absolute;
-    top: 50%;
-    z-index: 5;
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    font-size: 40px;
-    margin-top: -15px;
-}
-
-.carousel-control .arrow-left-white-icon,
-.carousel-control .arrow-right-white-icon,
-.carousel-control .arrow-left-icon,
-.carousel-control .arrow-right-icon {
-    position: absolute;
-    top: 50%;
-}
-
-.carousel-control .uxicon-chevron-left-lt,
-.carousel-control .arrow-left-icon {
-    left: 50%;
-}
-
-.carousel-control .uxicon-chevron-right-lt,
-.carousel-control .arrow-right-icon {
-    right: 50%;
-}
-
-.carousel-control.left {
-    left: -40px;
-}
-@media only screen and (max-width: 768px){
-  .carousel-container .carousel-control {
-    display: none;
-  }
-}
-@media only screen and (max-width: 768px) {
-    .carousel-control.left {
-        left: -10px;
-    }
-}
-
-.carousel-control.right {
-    right: -40px;
-}
-
-@media only screen and (max-width: 768px) {
-    .carousel-control.right {
-        right: -10px;
-    }
-}
-
-.carousel-indicators {
-    position: absolute;
-    bottom: -5px;
-    left: 50%;
-    z-index: 15;
-    width: 80%;
-    margin-left: -40%;
-    padding-left: 0;
-    list-style: none;
-    text-align: center;
-}
-
-.carousel-indicators li {
-    display: inline-block;
-    width: 32px;
-    height: 10px;
-    margin: 8px;
-    text-indent: -999px;
-    cursor: pointer;
-    background-color: #d9d9d9;
-}
-
-.carousel-indicators .active {
-    background-color: #008a32;
-}
-
-@media screen and (min-width: 768px) {
-    .carousel-indicators {
-        bottom: -5px;
-    }
-}
-.carousel-panel .include-check {
-position: relative;
-padding-left: 45px;
-margin-top: 20px;
-}
-.carousel-panel .include-check:before {
-content: "";
-background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
-background-position: 0 -668px;
-background-size: 205px auto;
-width: 25px;
-height: 27px;
-padding-right: 5px;
-position: absolute;
-left: 0;
-top: -6px;
-}
-            </style>
-            <div class="carousel-wrap">
-              <div class="carousel-container container">
-                <div id="carousel-services" data-ride="carousel" data-interval="false" class="carousel slide">
-                  <ol class="carousel-indicators">
-                    <li data-target="#carousel-services" data-slide-to="0"></li>
-                    <li data-target="#carousel-services" data-slide-to="1"></li>
-                    <li data-target="#carousel-services" data-slide-to="2"></li>
-                  </ol>
-                  <div class="carousel-inner">
-                          <div class="item">
-                            <div class="item-wrapper">
-                              <div data-icode="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/domains/search/HotelDoors.png" class="img-responsive img-center">
-                                <div class="row">
-                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <h2>Keep your private details, uhh…private.</h2>
-                                  </div>
-                                </div>
-                                <div class="row">
-                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <div class="carousel-panel-text">As soon as you register a domain with GoDaddy or any other registrar, your personal information is displayed in a public directory. Hackers and spammers often use this to compile email lists and steal domains. Harsh, but true.</div>
-                                  </div>
-                                </div>
-                                <div class="row">
-                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <div class="carousel-panel-text">When you add Privacy Protection to your domains:</div>
-                                  </div>
-                                </div>
-                                <div class="row">
-                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <div class="include-check carousel-panel-text">We replace your name and contact details with our partner company’s, Domains By Proxy. No one ever sees your name, address, email or phone number but us.</div>
-                                  </div>
-                                </div>
-                                <div class="row">
-                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <div class="include-check carousel-panel-text">You still control your domains and all email addressed to them, as well as the right to sell, renew or transfer them. Your domains are still 100% yours.</div>
-                                  </div>
-                                </div>
-                                <div class="row">
-                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <div class="carousel-panel-text">You may sleep better knowing your personal information isn’t on display to the whole world.</div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="item">
-                            <div class="item-wrapper">
-                              <div data-icode="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/domains/search/HotelDoors.png" class="img-responsive img-center">
-                                <div class="row">
-                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <h2>Keep your private details, uhh…private.</h2>
-                                  </div>
-                                </div>
-                                <div class="row">
-                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <div class="carousel-panel-text">As soon as you register a domain with GoDaddy or any other registrar, your personal information is displayed in a public directory. Hackers and spammers often use this to compile email lists and steal domains. Harsh, but true.</div>
-                                  </div>
-                                </div>
-                                <div class="row">
-                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <div class="carousel-panel-text">When you add Privacy Protection to your domains:</div>
-                                  </div>
-                                </div>
-                                <div class="row">
-                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <div class="include-check carousel-panel-text">We replace your name and contact details with our partner company’s, Domains By Proxy. No one ever sees your name, address, email or phone number but us.</div>
-                                  </div>
-                                </div>
-                                <div class="row">
-                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <div class="include-check carousel-panel-text">You still control your domains and all email addressed to them, as well as the right to sell, renew or transfer them. Your domains are still 100% yours.</div>
-                                  </div>
-                                </div>
-                                <div class="row">
-                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <div class="carousel-panel-text">You may sleep better knowing your personal information isn’t on display to the whole world.</div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="item">
-                            <div class="item-wrapper">
-                              <div data-icode="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/domains/search/HotelDoors.png" class="img-responsive img-center">
-                                <div class="row">
-                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <h2>Keep your private details, uhh…private.</h2>
-                                  </div>
-                                </div>
-                                <div class="row">
-                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <div class="carousel-panel-text">As soon as you register a domain with GoDaddy or any other registrar, your personal information is displayed in a public directory. Hackers and spammers often use this to compile email lists and steal domains. Harsh, but true.</div>
-                                  </div>
-                                </div>
-                                <div class="row">
-                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <div class="carousel-panel-text">When you add Privacy Protection to your domains:</div>
-                                  </div>
-                                </div>
-                                <div class="row">
-                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <div class="carousel-panel-text">You may sleep better knowing your personal information isn’t on display to the whole world.</div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                  </div><a href="#carousel-services" data-slide="prev" class="left carousel-control"><span class="carousel-icon arrow-left-icon"></span></a><a href="#carousel-services" data-slide="next" class="right carousel-control"><span class="carousel-icon arrow-right-icon"></span></a>
-                </div>
-                <script>
-                  $('.carousel .carousel-indicators li:first-child').addClass("active");
-                  $('.carousel .carousel-inner .item:first-child').addClass("active");
-                </script>
+            <div data-begin="NaN" data-end="NaN" class="features-tabbed-carousel-icon col-md-NaN">
+              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                <div class="feature-text">second-tab</div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+      <atlantis:webstash type="js">
+        <script type="text/javascript">
+          $(window).load(function() {
+            setTimeout(function() {
+              $(".features-tabbed-carousel-icon:first").click();
+            }, 500);
+          
+            var maxTabHeight = 0;
+            $(".features-tabbed-carousel-icon").each(function(index, tab) {
+              maxTabHeight = $(tab).outerHeight() > maxTabHeight ? $(tab).outerHeight() : maxTabHeight;
+            }).css("height", maxTabHeight);
+          
+            var maxFeatureTextHeight = 0;
+            $(".feature-text").each(function(index, featureText) {
+              maxFeatureTextHeight = $(featureText).height() > maxFeatureTextHeight ? $(featureText).height() : maxFeatureTextHeight;
+            }).css({height: maxFeatureTextHeight});
+          
+          });
+          
+          $(".features-tabbed-carousel-icon").click(function() {
+            var slideNum = $(this).data("begin");
+            $(".features-tabbed-carousel-icon").removeClass("active");
+            $(this).addClass("active");
+            $('#').carousel(slideNum);
+          });
+          
+          $('#').on('slid.bs.carousel', function () {
+            var carouselData = $(this).data('bs.carousel');
+            var currentIndex = carouselData.getActiveIndex();
+            $(".features-tabbed-carousel-icon").each(function() {
+              if (currentIndex >= parseInt($(this).data("begin")) && currentIndex <= parseInt($(this).data("end"))) {
+                $(".features-tabbed-carousel-icon").removeClass("active");
+                $(this).addClass("active");
+              }
+            });
+          });
+          
+          
+        </script>
+      </atlantis:webstash>
     </section>
-    <section id="faq">
+    <section id="questions" data-mid-nav-title="Questions?" class="bg-pro-gray">
+      <atlantis:webstash type="css">
+        <style>#questions .question-headline {font-family: "Walsheim-Black"; font-size: 40px; color: #333333; text-align: center; display:block; }</style>
+      </atlantis:webstash><span class="question-headline">YOUR QUESTIONS, OUR ANSWERS</span>
       <style>.accordion-group {
   border-top: 2px solid #e8e8e8;
   border-bottom: 2px solid #e8e8e8;
@@ -1208,65 +957,25 @@ top: -6px;
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
-            <ul id="faq" class="accordion-group ">
-              <h2>Your Questions, Our Answers</h2>
-              <li class="accordion-dropdown"><span class="carett caret-right"></span><span>What's a domain name?</span>
+            <ul id="question-accordion" class="accordion-group ">
+              <li class="accordion-dropdown"><span class="carett caret-right"></span><span>WHAT'S A DOMAIN NAME?</span>
                 <ul class="dropdown">
                   <li>
-                    <div>
-                      <p>A website is the key to doing business around the world. But without a memorable web address - a.k.a. domain name - customers may have a hard time finding your or remembering how to get back to your site.</p>
-                      <p>Finding the right name is as easy as doing a domain check at GoDaddy. Just enter the domain you want in the box at the top of this page and we'll let you know if it's available to be registered.</p>
-                      <p>But GoDaddy isn't just about domain names. We've got everything you need to get online. From building your own website to attracting new customers to securing their data when they make a purchase, GoDaddy has you covered.</p>
+                    <div><span>A website is the key to blah blah blah blah</span>
                     </div>
                   </li>
                 </ul>
               </li>
-              <li class="accordion-dropdown"><span class="carett caret-right"></span><span>How do I search domain names?</span>
+              <li class="accordion-dropdown"><span class="carett caret-right"></span><span>HOW DO I SEARCH DOMAIN NAMES?</span>
                 <ul class="dropdown">
                   <li>
-                    <div>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vestibulum, nisl a lacinia gravida, velit elit convallis ex, ac fringilla ante erat eu ante. Duis pellentesque, dolor et laoreet feugiat, ligula lacus tincidunt ante, id malesuada purus nulla vel erat. Vivamus viverra velit vel imperdiet imperdiet. Morbi fermentum et justo id convallis. Fusce fringilla neque ut vestibulum ornare. Maecenas eleifend diam sit amet cursus finibus. Donec tellus massa, sollicitudin vitae lacus in, posuere suscipit leo. Donec vel dolor sapien. Pellentesque sit amet eleifend justo. Curabitur sed neque ligula. Phasellus vestibulum malesuada erat id elementum. Sed cursus neque et congue accumsan. </p>
-                      <p>Cras varius, tellus eu tristique ultrices, sapien enim ullamcorper odio, nec euismod metus massa vel leo. Praesent finibus lacus purus, in ultrices metus rutrum sed. Vestibulum purus mauris, efficitur id quam vel, consequat malesuada nisi. Duis eu mauris vitae mauris pulvinar maximus eu ac odio. Pellentesque et purus sed lectus dictum auctor non et ligula. Sed pellentesque a urna nec sodales. Vestibulum dignissim iaculis tincidunt. Pellentesque facilisis nec lorem in venenatis. Cras scelerisque aliquet libero, a viverra enim pulvinar id. Maecenas pharetra tortor id quam imperdiet, id accumsan velit dapibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur euismod vulputate enim ac scelerisque. Nunc blandit lectus mattis velit ornare, quis malesuada ex sollicitudin. Phasellus auctor risus et nisl dignissim faucibus vel sit amet ex. Nulla tempor eros et pellentesque maximus. Aliquam finibus auctor justo, quis porta ex vulputate sit amet. </p>
-                      <p>Fusce viverra eget massa ac posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Cras vel ligula venenatis, fringilla purus sit amet, semper ante. Vivamus bibendum maximus dui et finibus. Integer in dignissim dolor, in malesuada massa. Nam accumsan feugiat tortor, eu tincidunt mauris laoreet a. Fusce fermentum dolor eu odio volutpat varius. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis sed augue pretium, ultrices nisi non, maximus tortor. Praesent auctor euismod fringilla.</p>
-                    </div>
-                  </li>
-                </ul>
-              </li>
-              <li class="accordion-dropdown"><span class="carett caret-right"></span><span>What payment options do you offer?</span>
-                <ul class="dropdown">
-                  <li>
-                    <div>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vestibulum, nisl a lacinia gravida, velit elit convallis ex, ac fringilla ante erat eu ante. Duis pellentesque, dolor et laoreet feugiat, ligula lacus tincidunt ante, id malesuada purus nulla vel erat. Vivamus viverra velit vel imperdiet imperdiet. Morbi fermentum et justo id convallis. Fusce fringilla neque ut vestibulum ornare. Maecenas eleifend diam sit amet cursus finibus. Donec tellus massa, sollicitudin vitae lacus in, posuere suscipit leo. Donec vel dolor sapien. Pellentesque sit amet eleifend justo. Curabitur sed neque ligula. Phasellus vestibulum malesuada erat id elementum. Sed cursus neque et congue accumsan. </p>
-                      <p>Cras varius, tellus eu tristique ultrices, sapien enim ullamcorper odio, nec euismod metus massa vel leo. Praesent finibus lacus purus, in ultrices metus rutrum sed. Vestibulum purus mauris, efficitur id quam vel, consequat malesuada nisi. Duis eu mauris vitae mauris pulvinar maximus eu ac odio. Pellentesque et purus sed lectus dictum auctor non et ligula. Sed pellentesque a urna nec sodales. Vestibulum dignissim iaculis tincidunt. Pellentesque facilisis nec lorem in venenatis. Cras scelerisque aliquet libero, a viverra enim pulvinar id. Maecenas pharetra tortor id quam imperdiet, id accumsan velit dapibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur euismod vulputate enim ac scelerisque. Nunc blandit lectus mattis velit ornare, quis malesuada ex sollicitudin. Phasellus auctor risus et nisl dignissim faucibus vel sit amet ex. Nulla tempor eros et pellentesque maximus. Aliquam finibus auctor justo, quis porta ex vulputate sit amet. </p>
-                      <p>Fusce viverra eget massa ac posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Cras vel ligula venenatis, fringilla purus sit amet, semper ante. Vivamus bibendum maximus dui et finibus. Integer in dignissim dolor, in malesuada massa. Nam accumsan feugiat tortor, eu tincidunt mauris laoreet a. Fusce fermentum dolor eu odio volutpat varius. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis sed augue pretium, ultrices nisi non, maximus tortor. Praesent auctor euismod fringilla.</p>
-                    </div>
-                  </li>
-                </ul>
-              </li>
-              <li class="accordion-dropdown"><span class="carett caret-right"></span><span>What if I need help?</span>
-                <ul class="dropdown">
-                  <li>
-                    <div>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vestibulum, nisl a lacinia gravida, velit elit convallis ex, ac fringilla ante erat eu ante. Duis pellentesque, dolor et laoreet feugiat, ligula lacus tincidunt ante, id malesuada purus nulla vel erat. Vivamus viverra velit vel imperdiet imperdiet. Morbi fermentum et justo id convallis. Fusce fringilla neque ut vestibulum ornare. Maecenas eleifend diam sit amet cursus finibus. Donec tellus massa, sollicitudin vitae lacus in, posuere suscipit leo. Donec vel dolor sapien. Pellentesque sit amet eleifend justo. Curabitur sed neque ligula. Phasellus vestibulum malesuada erat id elementum. Sed cursus neque et congue accumsan. </p>
-                      <p>Cras varius, tellus eu tristique ultrices, sapien enim ullamcorper odio, nec euismod metus massa vel leo. Praesent finibus lacus purus, in ultrices metus rutrum sed. Vestibulum purus mauris, efficitur id quam vel, consequat malesuada nisi. Duis eu mauris vitae mauris pulvinar maximus eu ac odio. Pellentesque et purus sed lectus dictum auctor non et ligula. Sed pellentesque a urna nec sodales. Vestibulum dignissim iaculis tincidunt. Pellentesque facilisis nec lorem in venenatis. Cras scelerisque aliquet libero, a viverra enim pulvinar id. Maecenas pharetra tortor id quam imperdiet, id accumsan velit dapibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur euismod vulputate enim ac scelerisque. Nunc blandit lectus mattis velit ornare, quis malesuada ex sollicitudin. Phasellus auctor risus et nisl dignissim faucibus vel sit amet ex. Nulla tempor eros et pellentesque maximus. Aliquam finibus auctor justo, quis porta ex vulputate sit amet. </p>
-                      <p>Fusce viverra eget massa ac posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Cras vel ligula venenatis, fringilla purus sit amet, semper ante. Vivamus bibendum maximus dui et finibus. Integer in dignissim dolor, in malesuada massa. Nam accumsan feugiat tortor, eu tincidunt mauris laoreet a. Fusce fermentum dolor eu odio volutpat varius. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis sed augue pretium, ultrices nisi non, maximus tortor. Praesent auctor euismod fringilla.</p>
-                    </div>
-                  </li>
-                </ul>
-              </li>
-              <li class="accordion-dropdown"><span class="carett caret-right"></span><span>Why should I choose GoDaddy?</span>
-                <ul class="dropdown">
-                  <li>
-                    <div>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vestibulum, nisl a lacinia gravida, velit elit convallis ex, ac fringilla ante erat eu ante. Duis pellentesque, dolor et laoreet feugiat, ligula lacus tincidunt ante, id malesuada purus nulla vel erat. Vivamus viverra velit vel imperdiet imperdiet. Morbi fermentum et justo id convallis. Fusce fringilla neque ut vestibulum ornare. Maecenas eleifend diam sit amet cursus finibus. Donec tellus massa, sollicitudin vitae lacus in, posuere suscipit leo. Donec vel dolor sapien. Pellentesque sit amet eleifend justo. Curabitur sed neque ligula. Phasellus vestibulum malesuada erat id elementum. Sed cursus neque et congue accumsan. </p>
-                      <p>Cras varius, tellus eu tristique ultrices, sapien enim ullamcorper odio, nec euismod metus massa vel leo. Praesent finibus lacus purus, in ultrices metus rutrum sed. Vestibulum purus mauris, efficitur id quam vel, consequat malesuada nisi. Duis eu mauris vitae mauris pulvinar maximus eu ac odio. Pellentesque et purus sed lectus dictum auctor non et ligula. Sed pellentesque a urna nec sodales. Vestibulum dignissim iaculis tincidunt. Pellentesque facilisis nec lorem in venenatis. Cras scelerisque aliquet libero, a viverra enim pulvinar id. Maecenas pharetra tortor id quam imperdiet, id accumsan velit dapibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur euismod vulputate enim ac scelerisque. Nunc blandit lectus mattis velit ornare, quis malesuada ex sollicitudin. Phasellus auctor risus et nisl dignissim faucibus vel sit amet ex. Nulla tempor eros et pellentesque maximus. Aliquam finibus auctor justo, quis porta ex vulputate sit amet. </p>
-                      <p>Fusce viverra eget massa ac posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Cras vel ligula venenatis, fringilla purus sit amet, semper ante. Vivamus bibendum maximus dui et finibus. Integer in dignissim dolor, in malesuada massa. Nam accumsan feugiat tortor, eu tincidunt mauris laoreet a. Fusce fermentum dolor eu odio volutpat varius. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis sed augue pretium, ultrices nisi non, maximus tortor. Praesent auctor euismod fringilla.</p>
+                    <div><span>Well first you stick your left foot in, then you stick your left foot out...</span>
                     </div>
                   </li>
                 </ul>
               </li>
               <div class="text-center">
-                <button id="faq-button" class="btn btn-default-dark">See All Questions</button>
+                <button id="question-btn" class="btn btn-default-dark">SEE ALL QUESTIONS</button>
               </div>
             </ul>
           </div>
@@ -1293,16 +1002,36 @@ top: -6px;
           }
         });
         $(window).load(function() {
-          $("#faq .accordion-dropdown:first").click();
+          $("#question-accordion .accordion-dropdown:first").click();
         });
-        $("#faq-button").click(function() {
-          $('#faq').find('.dropdown').slideDown();
-          $('#faq').find('.accordion-dropdown').find('.carett')
+        $("#question-btn").click(function() {
+          $('#question-accordion').find('.dropdown').slideDown();
+          $('#question-accordion').find('.accordion-dropdown').find('.carett')
                           .removeClass("caret-right")
                           .addClass("caret-down");
-          $('#faq').find('.accordion-dropdown').addClass("active");
+          $('#question-accordion').find('.accordion-dropdown').addClass("active");
          });
       </script>
+    </section>
+    <section id="hidden-modal">
+      <atlantis:webstash type="css">
+        <style>
+          .bulk-modal-dialog{width:895px;}
+          .modal-content{border-radius:6px !important;}
+          .iframe-modal{width:100%;height:600px;border:0 !important;}
+          button.close{padding:10px !important;}
+        </style>
+      </atlantis:webstash>
+      <div id="bulkModal" class="modal fade">
+        <div class="modal-dialog bulk-modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body">
+              <button type="button" data-dismiss="modal" aria-hidden="true" class="close"></button>
+              <div id="chart-iframe-container" data-src="[@T[link:<relative path='domains/popups/chart.aspx'/>]@T]"></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
     <!-- FOOTERBEGIN--> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
@@ -1361,6 +1090,26 @@ top: -6px;
           $('#shareme').fosShare({});
         }, 2000);
       });
+      
+    </script>
+    <script src="[@T[link:<javascriptroot />]@T]fos/201401/global/vendor/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      $("#bulkModal").on('show.bs.modal',function (e){
+            var $container = $('#chart-iframe-container');
+            if ($container.data('hasIframe')) {
+              $iframe = $('#bulkModal .iframe-modal');
+                $iframe.contents().find('a.secondary-action-fos-button').hide();
+                $iframe.contents().find('body').on('click', 'a', function(e){ $(this).attr('target', '_parent'); });
+            } else {
+                $container.html('<h4>Loading...</h4>');
+                var frameSrc = $container.data('src');
+                $iframe = $('<iframe></iframe>');
+                $iframe.addClass('iframe-modal');
+                $iframe.attr('src', frameSrc);
+                $container.html($iframe);
+                $container.data('hasIframe', true);
+            }
+        });
       
     </script>
   </body>

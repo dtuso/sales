@@ -1,6 +1,6 @@
 ---
 location: sales/offers/online-business.aspx
-id: 54b5855ff778fc10040523de
+id: 54b703ebf778fc0f24ed20f4
 name: GCE-32414-dom2
 comments: GOT rebrand 2015 SuperBowl 2
 url: http://www.dev-godaddy.com/offers/online-business.aspx
@@ -35,12 +35,11 @@ append pageStyles
   style
     include:css ./online-business/styles.css
 
+
 append headScripts
   atlantis:webstash(type="js")
     script
       include:js online-business/got.js
-
-
     
 
 block domainSearch
@@ -66,4 +65,8 @@ block alternatives
 //- there's always a catch... show it here.
 block disclaimers
   section#disclaimers 
-    p [@L[cds.sales/offers/online-business:32573-third-party-logos-trademarks-disclaimer]@L]
+    .disclaimers-row
+      .container
+        .row
+          .col-sm-12
+            .disclaimers-text [@L[cds.sales/offers/online-business:32573-third-party-logos-trademarks-disclaimer]@L]

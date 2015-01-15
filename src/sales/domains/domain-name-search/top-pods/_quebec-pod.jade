@@ -1,0 +1,17 @@
+extend ../../../../templates/plan-tile
+
+block vars
+  - title = "";
+  - description = "[@L[cds.sales/gd/domains/domain-name-search:PodDotQuebecText]@L]";
+  - pfid = "[@T[productprice:<template productid='546605' period='yearly'><nostrike><![CDATA[<span class='plan-price text-warning'>{0}*</span>]]></nostrike><strike><![CDATA[<span class='plan-price text-warning'>{0}*</span><br /> <strong>was <strike>{1}</strike></strong>]]></strike></template>]@T]";
+  - buttonText = "REGISTER";
+  - buttonUrl = "[@T[link:<relative path='/tlds/quebec'><param name='ci' value='xxxxx' /></relative>]@T]"
+
+block title
+  style.
+    .tldlogo-dot-quebec{background-position:-53px -597px; height:40px; width:102px; margin-bottom:10px;}
+    .plan-text { height: 66px; }
+  .tldlogo.tldlogo-dot-quebec
+
+block price
+  .plan-price-wrap !{pfid}

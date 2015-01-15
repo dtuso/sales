@@ -60,7 +60,6 @@
         </form>
       </div>
     </div>
-    <!-- Marquee Section-->
      ##if(targetMessageTagAny(sales_hp_default,hp_existing_customer))
       [@P[cdsDocument:<data app="sales" location="homepage/locals/es-mx/topmarquee" /> ]@P]
      ##else

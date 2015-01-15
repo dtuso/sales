@@ -1,8 +1,8 @@
 ---
 location: localization/sales/business/office-365/en
 id: 5490c030f778fc1cd843c71b
-name: GCE-33112
-comments: FAQ Update
+name: GCE-32259
+comments: 2 SKU split test 1414
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="lp-8-MicrosoftOffice365BoostProductivityVirtuallyAnywhereGoDaddy" />
@@ -1089,10 +1089,6 @@ If you would like to switch your domain-based email from Workspace to Office 365
 I am part of a larger organization - can I use Microsoft Office 365 from GoDaddy?
 <phrase key="29621-FAQ-a-11" />
 The plans on our website are ideal for businesses that require fewer than 300 accounts. You may purchase up to 300 user accounts on each plan type and up to 900 in total. If you have questions, just give us a call at [@T[supportphone:<technical/>]@T]. Our award-winning team is here to help 24/7.
-<phrase key="29621-FAQ-a-11-US" comment="{0} will be replaced with the support phone" />
-The plans on our website are designed for businesses that require fewer than 300 accounts. You may purchase up to 300 Business Premium accounts and up to 300 accounts between Email Essentials and Online Essentials for up to 600 accounts total. If you have questions, just give us a call at {0}. Our award-winning team is here to help 24/7.
-<phrase key="29621-FAQ-a-11-INT" comment="{0} will be replaced with the support phone"/>
-The plans on our website are designed for businesses that require fewer than 300 accounts. You may purchase up to 300 Business Premium accounts and up to 300 accounts between Email Essentials and Online Essentials for up to 600 accounts total. If you have questions, just give us a call at {0}. Our award-winning team is here to help.
 <phrase key="29621-FAQ-q-12" />
 What is Lync Online?
 <phrase key="29621-FAQ-a-12" />

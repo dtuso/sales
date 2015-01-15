@@ -9,11 +9,10 @@ mixin domainSearchInput(params)
   - var placeholderText       = params.placeholderText || "[@L[cds.sales/homepage/segments/default:domain-banner-search-text]@L]";
   .row
     .col-xs-12.search-template
-      form(action="#{actionUrl}", data-icode="#{icode}", data-domainsearch!="{'search-element':'input.searchInput','placeholder-element':'label.searchInput','button':'button','empty-redirect':'[@T[link:<external linktype='siteurl' path='' parammode='explicit'/>]@T]/domains/domain-name-search.aspx'}")
+      form(action!="#{actionUrl}", data-icode!="#{icode}", data-domainsearch!="{'search-element':'input.searchInput','placeholder-element':'label.searchInput','button':'button','empty-redirect':'[@T[link:<external linktype='siteurl' path='' parammode='explicit'/>]@T]/domains/domain-name-search.aspx'}")
         .search-template-box.clearfix
-          label(class="#{placeholderTextColor} searchInput") !{placeholderText}
-          input(class="#{placeholderTextColor} searchInput" type="text" autocomplete="off" name="domainToCheck" maxlength="63")
-          button(type="submit" data-tcode="#{tcode}" class="#{buttonColor} btn btn-lg pull-right ") !{buttonText}
+          input(class!="#{placeholderTextColor} searchInput" type="text" autocomplete="off" name="domainToCheck" maxlength="63" placeholder=placeholderText)
+          button(type="submit" data-tcode!="#{tcode}" class!="#{buttonColor} btn btn-lg pull-right ") !{buttonText}
 
 
 mixin domainSearchOffersInput(title, cicode, placeholderText, buttonText, infoTypeHere, infoErrorEligibility, infoInvalidTld)

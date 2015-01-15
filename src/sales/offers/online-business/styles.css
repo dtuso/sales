@@ -14,7 +14,7 @@
 }
 .include-check-black:before {
   content: "";
-  background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+  background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
   background-position: 0 -700px;
   background-size: 205px auto;
   width: 25px;
@@ -26,7 +26,7 @@
 }
 .include-check-green:before {
   content: "";
-  background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+  background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
   background-position: 0 -668px;
   background-size: 205px auto;
   width: 25px;
@@ -39,5 +39,9 @@
 
 *[data-tokenize] {visibility: hidden;}
 
-
-
+.tlds-br,
+.tlds-ca,
+.tlds-uk,
+.tlds-in,
+.tlds-rocks,
+.tlds-club { display: none;}
