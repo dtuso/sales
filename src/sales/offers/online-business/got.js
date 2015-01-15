@@ -16,9 +16,9 @@ var got1Page = {
   },
   pricing: {
     promo_wsb: '[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T]',
-    promo_ols: '[@T[multipleproductprice:<current productidlist="40972|101|7524" period="monthly" promocode="75315678" />]@T]',
+    promo_ols: '[@T[multipleproductprice:<current productidlist="464069|101|40972" period="monthly" promocode="75315678" />]@T]',
     bundleRenewal_wsb: '[@T[multipleproductprice:<list productidlist="464069|101|7524" period="monthly"></list>]@T]',
-    bundleRenewal_ols: '[@T[multipleproductprice:<list productidlist="40972|101|7524" period="monthly"></list>]@T]',
+    bundleRenewal_ols: '[@T[multipleproductprice:<list productidlist="464069|101|40972" period="monthly"></list>]@T]',
     bingAdCredits: '[@T[currencyprice:<price usdamount="5000" dropdecimal="true" htmlsymbol="false" />]@T]'
   },
   imagePath: '[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/',
@@ -26,7 +26,7 @@ var got1Page = {
 };
 
 ##if(!productIsOffered(105))
-got1Page.canOfferOls = false;
+  got1Page.canOfferOls = false;
 ##endif
 
 
@@ -317,6 +317,12 @@ function verifyDomainIsStillAvailable(e) {
 }
 
 function showChoicesScreen(e){
+
+  // bypass the choices if OLS is not available for their market
+  if(!got1Page.canOfferOls) {
+    goToDppCheckoutPage(e);
+    return;
+  }
   var $this = $(e.target),
     domain = $this.data('domain');
 
