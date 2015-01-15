@@ -1,6 +1,6 @@
 ---
 location: localization/sales/gd/expansion-pages/website-builder/how-to-publish-a-website/en
-id: 5488b03ff778fc16ec4de520
+id: 54b7f260f778fc1c443c2016
 name: SEM-244
 ---
 {% include '../../../../modules/doc-block.html' %}
@@ -27,7 +27,7 @@ Building and publishing a website can seem intimidating. Yet, with [@T[companyna
 Before publishing your website, take a few minutes to preview it and make sure that the layout and the content appear as they should.<br /><br />
 
 <ol>
-  <li>Log in to your <a href="[@T[link:<external parammode='explicit' linktype='MYAURL' secure='true' path='/'><param name='ci' value='95075' /></external>]@T]">Account Manager</a>.</li>
+  <li>Log in to your <a href="[@T[link:<external parammode='explicit' linktype='MYAURL' secure='true' path='/'><param name='ci' value='95075' /></external>]@T]" rel="nofollow">Account Manager</a>.</li>
   <li>Click <b>Website Builder</b>.</li>
   <li>Click <b>Launch</b> next to the account you want to work on.</li>
   <li>Click <b>Preview</b>.</li>
