@@ -3040,6 +3040,7 @@ margin-bottom: 20px;
 .two-up-speech-shape.two-up-speech-shape-yellow:after {
   background-color: #ffde2d;
 }
+
       </style>
       <div id="two-up" class="two-up-title-wrap bg-white">
         <div>

@@ -1,0 +1,31 @@
+extends ../../../layouts/homepage/heroLeftHeadLine.jade
+
+block append heroVars
+  - ci = "22222";
+  - image = "[@T[link:<imageroot />]@T]fos/hp/rebrand/img/got-puppy.png";
+  - ctaLink = "[@T[link:<relative path='/offers/online-business.aspx'><param name='ci' value='22222' /></relative>]@T]";
+  - ctaText = "[@L[cds.sales/homepage/heros/got-puppy:cta]@L]";
+  - price = "[@L[cds.sales/homepage/heros/got-puppy:price]@L]";
+  - headline = "[@L[cds.sales/homepage/heros/got-puppy:products]@L]";
+
+block append heroStyles
+  style.
+    #marquee {background-color: #64a838}
+    .hero.got-puppy {background-color:#64A838;}
+    .hero.got-puppy .subtext{padding:4% 0}
+    .hero.got-puppy .leftContent *{color:#fff;line-height:1}
+    .hero.got-puppy .rightContent img{}
+    .hero.got-puppy .bigtextContainer {width:100%}
+
+  +addHeroClasses("got-puppy")
+
+
+block leftContent
+  .bigtextContainer.bigtext
+    .headline.walsheim-black!= headline
+    .pricetext.tungsten [@L[cds.sales/homepage/heros/got-puppy:starting]@L]
+    .price.walsheim-black!= price
+    .subtext.walsheim-regular [@L[cds.sales/homepage/heros/got-puppy:buddy]@L]
+    .btn-wrapper
+      a.btn.btn-warning.btn-lg!= ctaText
+      .walsheim-medium [@L[cds.sales/homepage/heros/got-puppy:disclaimer]@L]

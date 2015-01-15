@@ -1,0 +1,15 @@
+extend ../_tile.jade
+
+append vars
+  - ctaLink = "[@T[link:<relative path='/'><param name='ci' value='11111' /></relative>]@T]";
+  - ctaText = "SUBMIT YOUR PUP";
+  - dataCi = 11111;
+  - containerClass = "puppy-tile";
+
+block tileStyles
+  style
+    :less
+      .puppy-tile{background-color:#333}
+
+block tileContent
+  .header-wrapper
