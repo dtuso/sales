@@ -72,7 +72,7 @@ block pageStyles
       .tungsten{font-family:Tungsten, 'Tungsten A', 'Tungsten B', Impact, sans-serif;}
       .search-template .search-template-box{margin-top:20px}
       #marquee{position:relative}
-      .hero-wrapper{min-height:300px;background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/example/PRIMARY_MERCHANDISING.png) -379px -15px;}
+      .hero-wrapper{min-height:300px;}
       #marquee .tile-wrapper{margin-top:6.5px}
       #marquee .tile{min-height:140px;}
       #marquee .tile-wrapper:last-child{margin-bottom:6.5px}
@@ -136,7 +136,7 @@ block endOfPageScripts
       $('.bigtext').bigtext().css('visibility', 'visible');
         setTimeout( "$('.bigtext').bigtext().css('visibility', 'visible');",500 );
     });
-    script(src!="[@T[link:<javascriptroot />]@T]fos/hp/rebrand/js/bigtext.min.js")
+  script(src!="[@T[link:<javascriptroot />]@T]fos/hp/rebrand/js/bigtext.min.js")
 
   //-$ script(src="http://img2.wsimg.com/starfield/fos.share/v1.3/fos.share-20140213.min.js" id="fosShareScript")
   script(type="text/javascript").
@@ -168,21 +168,17 @@ block content
   
   //- domain search section
   block domainSearch
-    section#domainSearch.bg-green-official
+    section#domainSearch
       .container
         .row
         +domainSearchInput({"placeholderText":"Find your perfect domain name"})
-  //- Bugbar (and social links) Sections
+  //- Bugbar
   block bugBar
     section#bugbar
       .container
         .row
-          .col-sm-8
+          .col-sm-12
             +tldBugs(["co","org","net","biz"])
-          .col-sm-4
-            .gdhp-share
-              block share
-                .fosshare(data-twshareurl!="[@T[link:<relative path=''></relative>]@T]" data-twtext!="[@L[cds.sales/homepage:twitter-text-gdbl]@L]" data-twrelated="GoDaddy" data-shareurl!="[@T[link:<relative path='/'/>]@T]" data-buttons="google,facebook,twitter")
   //-  Marquee Section
   block marquee
     section#marquee
@@ -306,11 +302,3 @@ block content
               p We make it easy to get online, but if you do need help or just wanna talk to someone, we have an army of online experts available 24/7/365.
               a.btn.btn-default-dark Learn More
               .support-promo-number [@T[supportphone:<technical />]@T]
-    section#puppy-promo
-      .container
-        .row
-          .col-sm-6.text-center
-            h3.walsheim-black Enter To Win
-            p Your pup could be on the GoDaddy race car!
-            a.btn.btn-default-dark Submit Your Pup
-          .col-sm-6
