@@ -1,0 +1,13 @@
+extends ./hero_base.jade
+
+block append heroStyles
+  style.
+    .rightContent {}
+  +addHeroClasses("left-headline")
+
+block heroContent
+  .leftContent.col-sm-7
+    block leftContent
+  .rightContent.col-sm-5
+    block rightContent
+      image.img-responsive(src!= image)

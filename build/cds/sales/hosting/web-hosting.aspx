@@ -4257,6 +4257,7 @@ height: 27px;
 .two-up-speech-shape.two-up-speech-shape-yellow:after {
   background-color: #ffde2d;
 }
+
       </style>
       <div id="choose-platform" class="two-up-title-wrap bg-green-new">
         <div>
