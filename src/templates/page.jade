@@ -56,7 +56,6 @@ html(lang!="[@T[localization:<language full='true' />]@T]")
       meta(property="fb:app_id" content="115696031791232")
       meta(property="fb:admins" content="633356800")
 
-    //- oh, great, benevolent PC dev team... please bless this page with your head content here
     | 
     | [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
 
@@ -65,15 +64,11 @@ html(lang!="[@T[localization:<language full='true' />]@T]")
     //- TODO: UPDATE PATH
     //- TODO: remove uxcore/uxcontrols from this block once PC head control renders the right stuff
     block headScripts
-      script(src!="[@T[link:<javascriptroot />]@T]/ux/#{page.config.uxcoreVersion}/js/uxcore.en.min.js")
-      script(src!="[@T[link:<javascriptroot />]@T]/ux/#{page.config.uxcoreVersion}/js/uxcontrols.min.js")
       script(src!='[@T[link:<javascriptroot />]@T]/fos/mike/#{page.config.version}/js/sahara.min.js')
 
     //- TODO: UPDATE PATH
     //- TODO: remove uxcore/uxcontrols from this block once PC head control renders the right stuff
     block pageStyles
-      link(href!="[@T[link:<cssroot />]@T]/ux/#{page.config.uxcoreVersion}/css/uxcontrols.css" rel="stylesheet")
-      link(href!="[@T[link:<cssroot />]@T]/ux/#{page.config.uxcoreVersion}/css/uxcore.css" rel="stylesheet")
       link(href!="[@T[link:<cssroot />]@T]/fos/mike/#{page.config.version}/css/sahara.css" rel="stylesheet")
       link(href!="[@T[link:<cssroot />]@T]/fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css")
 
@@ -86,8 +81,8 @@ html(lang!="[@T[localization:<language full='true' />]@T]")
 
     //- if an inherited page does not want any of these JS files delay loaded, 
     //- the delayed load can be overridden by appending the JS file to the headScripts block
-    script(type='text/javascript').
-      delayLoader.addScript('[@T[link:<javascriptroot />]@T]/ux/#{page.config.uxcoreVersion}/js/uxcontrols.min.js')
+    //- script(type='text/javascript').
+    //-   delayLoader.addScript('[@T[link:<javascriptroot />]@T]/ux/#{page.config.uxcoreVersion}/js/uxcontrols.min.js')
     
     //- TODO: does PC load this?
     // Google Tag Manager
