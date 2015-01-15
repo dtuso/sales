@@ -80,7 +80,7 @@
                 <div class="row">
                   <div class="col-md-9 col-sm-12">
                     <div class="marquee-pro-left-text">
-                            <h2 class="marquee-product-description">CUSTOMERS ARE LOOKING FOR YOU ONLINE. A DOMAIN SAYS &quot;HEY - OVER HERE!&quot;</h2>
+                            <h2 class="marquee-product-description">CUSTOMERS ARE LOOKING FOR YOU ONLINE. A DOMAIN SAYS "HEY - OVER HERE!"</h2>
                             <ul class="marquee-check-bullets">
                               <li>12 million customers trust us with their domains.  They must know something.</li>
                               <li>Experts you can call 24/7 make building a business a little less lonely.</li>
@@ -407,7 +407,7 @@
           <ul class="nav navbar-nav"></ul>
           <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.mid-page-nav&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="navbar-right">
             <div class="price-text">Plans starting at</div>
-            <div class="price">$69.99<span>/year</span></div><a href="#alternate-products" class="btn-warning btn btn-sm">See the plans</a>
+            <div class="price">$69.99<span>/year</span></div><a href="#alternate-products" class="btn-purchase btn btn-sm">See the plans</a>
           </div>
         </div>
       </div>
@@ -431,11 +431,32 @@
         // this sets the nav to fixed when scrolled past and fixes the body for the height of the nav
         var nav = $('.mid-page-nav');
         var pos = nav.offset().top;
+        var sections = []
       
+        $('[data-mid-nav-title]').each(function(){
+          //titles.push($(this).data('mid-nav-title'));
+          sections.push($(this).attr('id'));
+        });
         $(window).scroll(function () {
+          var scroll = $(this).scrollTop();
           var fix = ($(this).scrollTop() > pos) ? true : false;
           nav.toggleClass("sticky", fix);
           $('body').toggleClass("fix-body", fix);
+      
+          if(fix){
+            $.each(sections,function(index,value){
+                var top = ((scroll+131) > $('#'+value).offset().top) ? true : false;
+                var bottom = ((scroll+131) < $('#'+value).offset().top + $('#'+value).outerHeight()) ? true : false;
+                var activeNav = (top && bottom) ? true : false;
+                $('a[href="#'+value+'"').toggleClass("active",activeNav);
+                $('.mid-page-nav a').each(function(i,v){
+                    if(v!=value){
+                      $(this).blur();
+                    }
+                  });
+              });
+          }
+      
         });
         $('#midPageNav .dropdown-toggle').dropdown()
       });
@@ -452,7 +473,7 @@
           if($target.length) {
             $('html, body').animate({ scrollTop: $target.offset().top - fromTop }, 1000);
             if(history && "pushState" in history) {
-              history.pushState({}, document.title, window.location.pathname + href);
+              history.pushState({}, document.title, window.location.pathname + window.location.search + href);
               return false;
             }
           }

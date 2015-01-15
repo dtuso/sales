@@ -44,6 +44,7 @@
   },
   sfDialogErrorButtons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }],
   maxNumberOfSpinsToShowByDefault: 3,
+  lastSpinResultCount: 0,
   dppErrorReturnUrl: '[@T[link:<relative path="~/offers/online-business.aspx"><param name="err" value="dpp1" /></relative>]@T]',
   offersCodes: {
     packageId_wsb: 'gybo_1email_1yr',
@@ -143,6 +144,10 @@ $(document).ready(function() {
 
   $('#domain-not-available-marquee-view').on('click', '.select-and-continue', verifyDomainIsStillAvailable);
   $('#step2-choose-product').on('click','.btn-purchase', goToDppCheckoutPage);
+
+  displayMoreResultsLinks();
+  $('#show-more-section').on('click', '.show-more-arrow', displayMoreResultsArea);
+  $('#domain-not-available-marquee-view').on('click', '.view-all-button', displayMoreResultsArea);
 
   // track ci codes
   $('[data-ci]').click(function (e) {
@@ -410,10 +415,11 @@ function showSearchSpins(domain, alternateDomains){
 
   // setup search box
   $('.search-message').hide();
+  displayMoreResultsLinks();
 
   // clear any spins from the DOM
   $('#spin-results .spin-result').remove();
-
+  lastSpinResultCount =  0;
   var $spinResults = $('#spin-results');
   var $spinTemplate = $('#spin-template-wrap').find('.spin-template');
   $.each(alternateDomains, function(idx,domain){
@@ -424,12 +430,10 @@ function showSearchSpins(domain, alternateDomains){
     $newSpin.find('.select-and-continue').show().data('domain', domain);
     $spinResults.append($newSpin);
   });
-  var $header = $('#domain-not-available-marquee-view').find('.results-list-heading-text');
-
-  var numbersHtml = $header.html();
-  numbersHtml = numbersHtml.replace(/\{0\}/gi, got1Page.maxNumberOfSpinsToShowByDefault); 
-  numbersHtml = numbersHtml.replace(/\{1\}/gi, alternateDomains.length);
-  $header.html(numbersHtml);
+  got1Page.lastSpinResultCount = alternateDomains.length;
+  debugger;
+  updateDomainCountText(true, got1Page.lastSpinResultCount);
+  $("#spin-results .spin-result:lt(" + got1Page.maxNumberOfSpinsToShowByDefault + ")").show(); // show first 3 results
 
   animateToNotAvailable(domain); 
 
@@ -466,6 +470,50 @@ function showTypeYourDomain() {
   $('#marquee .search-message').hide();
   $('#marquee .type-your-business-name').show();
 }
+
+function displayMoreResultsLinks() {
+  $("#domain-not-available-marquee-view button.view-all-button").show();
+  $("#show-more-section").show();
+}
+
+function hideMoreResultsLinks() {
+  $("#domain-not-available-marquee-view button.view-all-button").hide();
+  $("#show-more-section").hide();
+}
+
+function displayMoreResultsArea () {
+  $("#spin-results .spin-result").show('slow');
+  hideMoreResultsLinks();
+  debugger;
+  updateDomainCountText(false, got1Page.lastSpinResultCount);
+}
+
+function updateDomainCountText(initial, numberShown) {
+  var $header = $('#domain-not-available-marquee-view').find('.results-list-heading-text');
+  var numbersHtml = $header.html();
+  if (initial) {
+    numbersHtml = '[@L[cds.sales/offers/online-business:32573-number-of-number-results]@L]';
+    numbersHtml = numbersHtml.replace(/\{0\}/gi, got1Page.maxNumberOfSpinsToShowByDefault); 
+    numbersHtml = numbersHtml.replace(/\{1\}/gi, got1Page.lastSpinResultCount);
+  }
+  else {
+    numbersHtml = '[@L[cds.sales/offers/online-business:32573-number-of-number-results]@L]';
+    numbersHtml = numbersHtml.replace(/\{0\}/gi, got1Page.lastSpinResultCount); 
+    numbersHtml = numbersHtml.replace(/\{1\}/gi, got1Page.lastSpinResultCount);
+  }
+  // if ((numbersHtml.indexOf('{0}') == -1) && (numberShown != got1Page.maxNumberOfSpinsToShowByDefault)) // not found (we replaced it already), and 
+  // {
+  //   numbersHtml = numbersHtml.replace('1 - ' + got1Page.maxNumberOfSpinsToShowByDefault, '1 - ' + numberShown);
+  // }
+  // else
+  // {
+  //   numbersHtml = '[@L[cds.sales/offers/online-business:32573-number-of-number-results]@L]';
+  //   numbersHtml = numbersHtml.replace(/\{0\}/gi, got1Page.maxNumberOfSpinsToShowByDefault); 
+  //   numbersHtml = numbersHtml.replace(/\{1\}/gi, got1Page.lastSpinResultCount);
+  // }
+  $header.html(numbersHtml);
+}
+
       </script>
     </atlantis:webstash>
     <link href="[@T[link:<cssroot />]@T]/ux/dev-brand/css/uxcontrols.css" rel="stylesheet">
@@ -795,7 +843,8 @@ function showTypeYourDomain() {
           #domain-not-available-marquee-view .domain-name-display {text-transform: lowercase; margin-bottom: 0px; margin-top: 0px;}
           #domain-not-available-marquee-view .domain-name-display-tld {text-transform: lowercase;margin-bottom: 0px; margin-top: 0px;}
           #domain-not-available-marquee-view .show-more-arrow { position: relative; top: 16px; left: 15px; bottom: 0; margin-left: -10px; width: 0; height: 0; border: 11px solid transparent; border-top-color: #000; content: ''; }
-          #spin-results .spin-results-message,
+          #spin-results .spin-results-message, 
+          #spin-results .spin-result, 
           #spin-template-wrap .spin-template {display:none;}
           #spin-results .select-and-continue {margin-bottom: 0px; font-size:20px;}
           #spin-results .spin-results-message {margin-top:15px;}
@@ -867,7 +916,9 @@ function showTypeYourDomain() {
                 </div>
               </div>
             </div>
-            <h6 class="text-center">[@L[cds.sales/offers/online-business:32573-see-more-results]@L]<span class="show-more-arrow"></span></h6>
+            <div id="show-more-section">
+              <h6 class="text-center">[@L[cds.sales/offers/online-business:32573-see-more-results]@L]<span class="show-more-arrow"></span></h6>
+            </div>
           </div>
         </div>
         <div class="sf-dialog api-B-failure">
