@@ -75,18 +75,20 @@
 
 .marquee.marquee-app-landing .marquee-pro-left-text {
     padding-top: 45px;
+    color: #FFFFFF;
 }
 
 .marquee.marquee-app-landing .marquee-product-description {
     font-family: 'Walsheim-Bold';
     margin-top: 10px;
+    color: #FFFFFF;
 }
 
 .marquee.marquee-app-landing .marquee-product-name {
     font-size: 20px;
     font-size: 2rem;
     text-transform: uppercase;
-    color: #ef6c0f;
+    color: #FFFFFF;
     font-family: 'Walsheim-Bold';
     margin-bottom: 10px;
 }

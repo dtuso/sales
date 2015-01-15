@@ -1,5 +1,4 @@
-.item-wrapper { padding: 70px 0 20px; }
-
+.item-wrapper { padding: 35px 0 20px; }
 .carousel-wrap { padding-bottom: 70px; }
 
 @media only screen and (min-width: 768px){
@@ -14,7 +13,7 @@
 }
 
 .carousel-container .carousel .carousel-indicators {
-  bottom: -60px;
+  bottom: -35px;
 }
 
 @media screen and (min-width: 768px){
@@ -85,13 +84,14 @@
   padding: 0;
 }
 .carousel-panel .img-center {
-  margin: 50px auto;
+  margin: 15px auto;
 }
 .carousel-panel .carousel-panel-text {
   margin-bottom: 25px;
 }
 .carousel-panel h2 {
   margin-top: 0px;
+  margin-bottom: 10px;
 }
 
 .carousel-container .carousel-control.left {

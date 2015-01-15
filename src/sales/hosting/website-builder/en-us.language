@@ -1,3 +1,37 @@
+<phrase key="page-title" />
+Website Builder | Create Your Own Website in Minutes  - [@T[companyname:name]@T]
+<phrase key="page-title-es" />
+Website Builder | Spanish Web Design Software - [@T[companyname:name]@T]
+<phrase key="page-title-au" />
+Website Builder | Australia's Website Creation Software - [@T[companyname:name]@T]
+<phrase key="page-title-ca" />
+Website Builder | Canadian Web Design Software - [@T[companyname:name]@T]
+<phrase key="page-title-in" />
+Website Builder | India's Leading Web Design Software - [@T[companyname:name]@T]
+<phrase key="page-title-uk" />
+Website Builder | Create Your Own Website in Minutes - [@T[companyname:name]@T]
+<phrase key="meta-description" />
+Learn How to Make a Website Quickly and Easily with our Highly Acclaimed Website Builder. Our easy to use Web Design software will let you Create a Website in no time at all!
+<phrase key="meta-description-es" />
+Learn how to make a website in minutes with [@T[companyname:name]@T]'s Website Builder program. With [@T[companyname:name]@T]'s award winning 24/7 Spanish tech support you'll always have someone that can answer any of your questions.
+<phrase key="meta-description-au" />
+Building a website in Australia doesn't have to be difficult. Learn How to Make a Website Quickly and Easily with [@T[companyname:name]@T]'s Highly Acclaimed Web Design Software.
+<phrase key="meta-description-ca" />
+Build the perfect Canadian Website with Website Builder. Learn how to make a website in minutes with [@T[companyname:name]@T]'s World class Website Builder program.
+<phrase key="meta-description-in" />
+Learn How to Make a Website in minutes with [@T[companyname:name]@T]'s Website Builder. [@T[companyname:name]@T] has local India based tech support to answer all of your questions. Get online today!
+<phrase key="meta-description-uk" />
+Build a great feature loaded UK website with [@T[companyname:name]@T]'s Website Builder Program. You can't beat our world class Hosting & competitive prices.
+<phrase key="meta-keywords" />
+Website, templates, template, how to make a website, website templates, website builder, make your own website, create a website, creating a website, website template, website layout, site traffic, building your own website, advertise your business, money making website promote your business, promoting your website, do it yourself website builder, pre-built websites
+<phrase key="og-title" />
+Get online and grow your business with [@T[companyname:name]@T] Website Builder&trade;
+<phrase key="og-description" />
+Create your own beautiful website and never miss another customer! With hundreds of ready-made templates and easy, drag-&amp;-drop functionality, [@T[companyname:name]@T] Website Builder makes it easy for anyone to build their own website in minutes - no technical skills or coding required.
+<phrase key="twitter-text" />
+Never miss another customer! Just drag &amp; drop to create the perfect website in minutes with [@T[companyname:name]@T] Website Builder
+<phrase key="masthead-title" />
+Website Builder | <span>Easily create your own professional website</span>
 <phrase key="main-banner-subtitle" />
 Website Builder
 <phrase key="header_subtitle_1" />
@@ -94,38 +128,131 @@ For your growing business needs
 <strong>1000 GB</strong> Bandwidth
 <phrase key="unlimited-themes" />
 <strong>300</strong> Business<span class="text-uk"> & Personal</span> Themes
-<phrase key="was" comment="was X Save x percent" />
-was
-<phrase key="save" />
-Save
-
-
-
-
-<phrase key="sb_templates_title_1" />
+<phrase key="sb_nav_1" />
+FEATURES
+<phrase key="sb_nav_2" />
+REVIEWS
+<phrase key="sb_nav_3" />
+FAQ
+<phrase key="templates-desription" />
 CREATE A PROFESSIONAL WEBSITE
 <phrase key="sb_templates_title_2" />
 ---------- JUST LIKE THAT
 <phrase key="sb_templates_text" />
 Choose from hundreds of customizable designs, tailored to what you do.
-<phrase key="sb_video_title" />
+<phrase key="testimony-title" />
 MAKE IT YOUR WAY---------------ASSUMING YOU WANT IT UNCOMPLICATED AND GORGEOUS
-<phrase key="sb_video_subtitle" />
+<phrase key="testimony-description" />
 We give you intuitive design tools; you plug in some info and create the site you've always wanted easier than you ever imagined.
-<phrase key="sb__apps_title" />
+<phrase key="apps-modal-header" />
 Popular apps keep your site fresh
-<phrase key="sb_apps_subtitle" />
+<phrase key="apps-modal-description" />
 Easily integrate social and business apps in your site to share information and keep customers coming back.
+<phrase key="apps-modal-facebook-title" />
+Facebook
+<phrase key="apps-modal-facebook-desc" />
+Share your status updates or photos.
+<phrase key="apps-modal-twitter-title" />
+Twitter
+<phrase key="apps-modal-twitter-desc" />
+Post your company's Twitter feed.
+<phrase key="apps-modal-youtube-title" />
+YouTube
+<phrase key="apps-modal-youtube-desc" />
+Add YouTube videos directly to your site.
+<phrase key="apps-modal-yelp-title" />
+Yelp
+<phrase key="apps-modal-yelp-desc" />
+Display your business' ratings and reviews.
+<phrase key="apps-modal-paypal-title" />
+PayPal
+<phrase key="apps-modal-paypal-desc" />
+Securely accept payments and donations.
+<phrase key="apps-modal-homefinder-title" />
+HomeFinder
+<phrase key="apps-modal-home-finder-title" />
+Home Finder
+<phrase key="apps-modal-homefinder-desc" />
+Feature your latest real estate listings.
 <phrase key="sb_business_title" />
 Business Plus Plan Exclusives
-<phrase key="sb_business_subtitle_1" />
+<phrase key="sb_faq_see" />
+See All Questions
+<phrase key="sb_bpp_starting_at" />
+<span class="condensed">Business Plus Plans</span> starting at
+<phrase key="oneclick-header" />
 Get a website with a social life
-<phrase key="sb_business_subtitle_2" />
-Getting seen on Google is a cinch
-<phrase key="sb_business_text_1" />
+<phrase key="oneclick-body-text" />
 Our One-Click Social Media Manager instantly matches your Facebook® and Twitter® pages to your website so they're always in sync. Don't have a Twitter page? Create one with just a click!
-<phrase key="sb_business_text_2" />
+<phrase key="seofs-header" />
+Getting seen on Google is a cinch
+<phrase key="seofs-body-text" />
 The built-in Search Engine Optimization (SEO) tool in our Business Plus plan helps you show up on Google®, Yahoo!®, and more.
+<phrase key="learn-more" />
+Learn more
+<phrase key="rb_how_it_works" />
+How it works
+<phrase key="faq-first-slide-title" />
+What can a website do for my business?
+<phrase key="faq-first-slide-content" />
+<p>
+  Most people looking for goods or services start on the Web. Unfortunately, many small businesses can't afford to pay someone else to build their website. That's where [@T[companyname:name]@T] comes in – we can show you <strong>how to create a website</strong> for yourself.
+</p>
+<p>
+  Design your own <strong>website</strong> fast to ensure your customers find you early – while they're still shopping around. In this fast-changing Internet age, there's no time like the present.
+</p>
+<p>
+  Don't have a business? You'll want a website to connect with family, friends, and others who share your passions. Luckily, it's easy and inexpensive to <strong>make your own website</strong>.
+</p>
+<p>
+  For more information, see <a data-ci="85534" href="http://support.godaddy.com/help/article/5107" target="_blank">Building Your Web Presence with Our Site-Building Software.</a>
+</p>
+<phrase key="faq-second-slide-title" />
+Can I learn how to make a website?
+<phrase key="faq-second-slide-content" />
+<p>
+ Yes! If you'd like to create a website but have limited technical skills, don't worry. [@T[companyname:name]@T]'s easy, do-it-yourself Website Builder is just what you need.
+</p>
+<p>
+ You have the ideas. We have the tools to make them a reality.
+</p>
+<p>
+  Just scroll through our library of <strong>website templates</strong>, choose a layout you like, adjust the colors, replace the photos with your own or any of the 8,700 included stock photos, and add your own text. With [@T[companyname:name]@T] Website Builder<sup class="supsymbol">&reg;</sup>, building your own website is actually fun.
+</p>
+<p>Interested in a money making website? See <a data-ci="85535" href="http://support.godaddy.com/help/article/813" target="_blank">How do I build an online store?</a></p>
+<phrase key="faq-third-slide-title" />
+What should I look for in a Web builder?
+<phrase key="faq-third-slide-content" />
+<p>
+  Be sure to look for a variety of <strong>website templates</strong> and a nice big library of free photos. Also, a good website builder has the flexibility to let you make changes on the fly when your next brilliant idea strikes.
+</p>
+<p>
+  You'll also want to check to be sure you can switch to a new website template without losing the text you've already added. Short on time? Look for <strong>pre-built websites</strong> with words and pictures already filled in.
+</p>
+<p>
+  Although technology has come a long way, many people still need help as they learn <strong>how to create a website</strong>. Luckily, [@T[companyname:name]@T] is here with answers.
+</p>
+<p>
+  Call our customer service any time day or night with general questions on <strong>how to make a website</strong> or specific help with creating a slideshow, for example, or adding a Facebook<sup class="supsymbol">&reg;</sup> feed to your website.
+</p>
+<p>
+ For more information, see <a data-ci="85536" href="http://support.godaddy.com/help/article/4026" target="_blank">What are Pre-Built Sites?</a>
+</p>
+<phrase key="faq-fourth-slide-title" />
+How can I use my website?
+<phrase key="faq-fourth-slide-content" />
+<p>
+  Once you become familiar with your website builder from GoDaddy and <strong>learn how to make a Website</strong>, the possibilities are endless. Are you a doctor or lawyer, or are you still searching for the perfect job? You can create a <strong>Doctor Website</strong> or a <strong>Legal Website</strong> to attract new local clients. If you're a job searcher, you easily make a <strong>resume Website</strong> to show off skills, experiences, and references that will help you land that dream job.
+</p>
+<p>
+  Post and <strong>share pictures</strong> of the kids. <strong>Promote your business</strong> product line. Websites are so versatile, everyone should have one.
+</p>
+<p>
+  Want to sell products or services online? Add a <a href="http://www.godaddy.com/ecommerce/shopping-cart.aspx?ci=75946" target="_blank">shopping cart</a>. Eager to attract more visitors to your website? Optimize your website for search engines. You can find free articles on everything from how to create a website to using social media to promote your business at <a href="http://support.godaddy.com/?ci=75947" target="_blank">Support.GoDaddy.com</a>.
+</p>
+<p class='no-margin-bottom'>
+ For more information, see <a data-ci="85537" href="http://support.godaddy.com/help/article/3503?ci=75947" target="_blank">Website Builder Add-ons.</a>
+</p>
 <phrase key="sb_help_title" />
 WE’LL HOLD YOUR HAND UNTIL ----------- IT’S AWKWARD
 <phrase key="sb_text" />
@@ -144,12 +271,6 @@ QUICK SHOPPING CART
 Everything you need to open your own online store – no technical skills required.
 <phrase key="sb_qs_2" />
 Perfect for: eCommerce businesses and those looking to add online sales to their site
-<phrase key="sb_nav_1" />
-FEATURES
-<phrase key="sb_nav_2" />
-REVIEWS
-<phrase key="sb_nav_3" />
-FAQ
 <phrase key="yr" />
 /yr
 <phrase key="year" />
@@ -162,15 +283,453 @@ Plans starting at
 View All Templates
 <phrase key="sb_view_preview" />
 Preview
-<phrase key="sb_bpp_starting_at" />
-<span class="condensed">Business Plus Plans</span> starting at
-<phrase key="sb_faq_see" />
-See All Questions
 <phrase key="rb_disclaimers" />
 Product disclaimers and legal policies
 <phrase key="rb_disclaimers_view" />
 View
 <phrase key="rb_disclaimers_3p" />
 Third-party logos and marks are registered trademarks of their respective owners. All rights reserved.
-<phrase key="rb_how_it_works" />
-How it works
+<phrase key="temapltes-title" />
+Simply <span class="primary-color"><strong>personalize</strong></span> and publish
+<phrase key="templates-desription" />
+Easily create a professional website with hundreds of customizable designs, tailored to your business.
+<phrase key="templates-rollover" />
+<p>All Designs <span>feature text and images for your industry</span></p><p> Select Any Design<span>to get started</span></p><p> Customize<span>anything</span></p>
+<phrase key="templates-slider-auto" />
+Auto
+<phrase key="templates-slider-business" />
+Business
+<phrase key="templates-slider-design" />
+Creative Design
+<phrase key="templates-slider-commerce" />
+e-Commerce
+<phrase key="templates-slider-education" />
+Education
+<phrase key="templates-slider-food" />
+Food / Restaurant
+<phrase key="templates-slider-health" />
+Health &amp; Beauty
+<phrase key="templates-slider-music" />
+Music
+<phrase key="templates-slider-non-profit" />
+Non-Profit
+<phrase key="templates-slider-personal" />
+Personal / Family
+<phrase key="templates-slider-pets" />
+Pets / Animals
+<phrase key="templates-slider-photog" />
+Photography
+<phrase key="templates-slider-real-estate" />
+Real Estate
+<phrase key="templates-slider-sports" />
+Sports
+<phrase key="templates-slider-travel" />
+Travel
+<phrase key="templates-slider-misc" />
+Miscellaneous
+<phrase key="templates-slider-all" />
+View All Designs
+<phrase key="templates-menu-auto" />
+Auto/Transportation
+<phrase key="templates-menu-business" />
+Business/Finance/Law
+<phrase key="templates-menu-design" />
+Creative/Design
+<phrase key="templates-menu-commerce" />
+E-commerce/Products
+<phrase key="templates-menu-education" />
+Education
+<phrase key="templates-menu-food" />
+Food/Restaurant
+<phrase key="templates-menu-health" />
+Health/Beauty
+<phrase key="templates-menu-music" />
+Music &amp; Entertainment
+<phrase key="templates-menu-non-profit" />
+Non-profit/Causes/Religion
+<phrase key="templates-menu-personal" />
+Personal/Family
+<phrase key="templates-menu-pets" />
+Pets/Animals
+<phrase key="templates-menu-photog" />
+Photography/Art
+<phrase key="templates-menu-real-estate" />
+Real Estate
+<phrase key="templates-menu-sports" />
+Sports/Recreation
+<phrase key="templates-menu-travel" />
+Travel/Hotels
+<phrase key="templates-menu-misc" />
+Miscellaneous/Other
+<phrase key="templates-menu-all" />
+All
+<phrase key="templates-modal-header" />
+Website Builder Design Gallery
+<phrase key="templates-modal-auto-first" />
+Luxury Transport
+<phrase key="templates-modal-auto-second" />
+Car Repair
+<phrase key="templates-modal-auto-third" />
+Car Repair Company
+<phrase key="templates-modal-auto-fourth" />
+Transportation Service
+<phrase key="templates-modal-auto-fifth" />
+Car Repair Service
+<phrase key="templates-modal-auto-sixth" />
+Special Event Transport
+<phrase key="templates-modal-auto-seventh" />
+Trucking Service
+<phrase key="templates-modal-auto-eighth" />
+On Time Trucking
+<phrase key="templates-modal-business-first" />
+Brick Architecture
+<phrase key="templates-modal-business-second" />
+Strategy Consulting
+<phrase key="templates-modal-business-third" />
+TM Accountants
+<phrase key="templates-modal-business-fourth" />
+Classic Legal
+<phrase key="templates-modal-business-fifth" />
+Urban Law Office
+<phrase key="templates-modal-business-sixth" />
+Accounting Service
+<phrase key="templates-modal-business-seventh" />
+Law Firm
+<phrase key="templates-modal-business-eighth" />
+Insurance Company
+<phrase key="templates-modal-business-ninth" />
+Consulting Service
+<phrase key="templates-modal-business-tenth" />
+Painting Company
+<phrase key="templates-modal-business-eleven" />
+Human Resources Services
+<phrase key="templates-modal-business-twelve" />
+Welding Company
+<phrase key="templates-modal-business-thirteen" />
+Vivid Paint
+<phrase key="templates-modal-business-fourteen" />
+Builder/Contractor
+<phrase key="templates-modal-business-fifteen" />
+Foreman
+<phrase key="templates-modal-design-first" />
+Brick Architecture
+<phrase key="templates-modal-design-second" />
+Wedding Photographer
+<phrase key="templates-modal-design-third" />
+Unique Boutique
+<phrase key="templates-modal-design-fourth" />
+Freelance Portfolio
+<phrase key="templates-modal-design-fifth" />
+Interior Design
+<phrase key="templates-modal-design-sixth" />
+Photo Folio
+<phrase key="templates-modal-design-seventh" />
+Wedding Planner
+<phrase key="templates-modal-design-eighth" />
+Art &amp; Style
+<phrase key="templates-modal-design-ninth" />
+Interior Solutions
+<phrase key="templates-modal-design-tenth" />
+Web Design Studio
+<phrase key="templates-modal-design-eleven" />
+Photography Business
+<phrase key="templates-modal-design-twelve" />
+Graphic Design Studio
+<phrase key="templates-modal-design-thirteen" />
+Modern Designer
+<phrase key="templates-modal-design-fourteen" />
+Digital World
+<phrase key="templates-modal-design-fifteen" />
+Photography Studio
+<phrase key="templates-modal-design-sixteen" />
+Terra Real Estate
+<phrase key="templates-modal-design-seventeen" />
+ColorX Painting
+<phrase key="templates-modal-design-eighteen" />
+Children's Author
+<phrase key="templates-modal-design-nineteen" />
+Blurb
+<phrase key="templates-modal-design-twenty" />
+Urban Studio
+<phrase key="templates-modal-design-twentyone" />
+Continent Travel
+<phrase key="templates-modal-design-twentytwo" />
+Professional Photography
+<phrase key="templates-modal-commerce-first" />
+Tea Shop
+<phrase key="templates-modal-commerce-second" />
+Elegant Florist
+<phrase key="templates-modal-commerce-third" />
+Luxury Spa Accessories
+<phrase key="templates-modal-commerce-fourth" />
+Insurance Company
+<phrase key="templates-modal-commerce-fifth" />
+Watch Store
+<phrase key="templates-modal-commerce-sixth" />
+Crop Farmer
+<phrase key="templates-modal-commerce-seventh" />
+Smart Phone App
+<phrase key="templates-modal-commerce-eighth" />
+Natural Soaps
+<phrase key="templates-modal-commerce-ninth" />
+Golden Crop Farmer
+<phrase key="templates-modal-commerce-tenth" />
+ColorX Painting
+<phrase key="templates-modal-education-first" />
+Learning Center
+<phrase key="templates-modal-education-second" />
+Online Education
+<phrase key="templates-modal-education-third" />
+Preschool Education
+<phrase key="templates-modal-education-fourth" />
+Elementary School
+<phrase key="templates-modal-education-fifth" />
+Summer Camp
+<phrase key="templates-modal-education-sixth" />
+Modern Elementary School
+<phrase key="templates-modal-education-seventh" />
+International University
+<phrase key="templates-modal-education-eighth" />
+Tutoring Source
+<phrase key="templates-modal-food-first" />
+Mama Mia Italian
+<phrase key="templates-modal-food-second" />
+Sweets Bakery
+<phrase key="templates-modal-food-third" />
+Bread Company
+<phrase key="templates-modal-food-fourth" />
+Tea Shop
+<phrase key="templates-modal-food-fifth" />
+Specialty Foods
+<phrase key="templates-modal-food-sixth" />
+Farmers Market
+<phrase key="templates-modal-food-seventh" />
+Casual Brewery
+<phrase key="templates-modal-food-eighth" />
+Italian Restaurant
+<phrase key="templates-modal-food-ninth" />
+Gourmet Restaurant
+<phrase key="templates-modal-food-tenth" />
+Gourmet Recipes
+<phrase key="templates-modal-food-eleven" />
+Winery Classic
+<phrase key="templates-modal-food-twelve" />
+Mexican Restaurant
+<phrase key="templates-modal-food-thirteen" />
+Tropical Vacation
+<phrase key="templates-modal-food-fourteen" />
+Sumptuous Cuisine
+<phrase key="templates-modal-food-fifteen" />
+Local Brew
+<phrase key="templates-modal-food-sixteen" />
+Happy Hour
+<phrase key="templates-modal-food-seventeen" />
+BBQ Joint
+<phrase key="templates-modal-food-eighteen" />
+So Thai
+<phrase key="templates-modal-food-nineteen" />
+British Pub
+<phrase key="templates-modal-food-twenty" />
+China China
+<phrase key="templates-modal-health-first" />
+Outdoor Recreation
+<phrase key="templates-modal-health-second" />
+Contemporary Fitness
+<phrase key="templates-modal-health-third" />
+Serenity Spa
+<phrase key="templates-modal-health-fourth" />
+Lotus Yoga &amp; Fitness
+<phrase key="templates-modal-health-fifth" />
+Unique Boutique
+<phrase key="templates-modal-health-sixth" />
+Fitness Club
+<phrase key="templates-modal-health-seventh" />
+Luxury Spa Accessories
+<phrase key="templates-modal-health-eighth" />
+Fitness Boot Camp
+<phrase key="templates-modal-health-ninth" />
+Power Fitness
+<phrase key="templates-modal-health-tenth" />
+Family Health Service
+<phrase key="templates-modal-health-eleven" />
+Natural Soaps
+<phrase key="templates-modal-health-twelve" />
+Nail and Spa Care
+<phrase key="templates-modal-health-thirteen" />
+Classic Barber Shop
+<phrase key="templates-modal-misc-first" />
+Antique Restoration
+<phrase key="templates-modal-misc-second" />
+Wedding Planner
+<phrase key="templates-modal-misc-third" />
+Christian Church
+<phrase key="templates-modal-misc-fourth" />
+Handyman
+<phrase key="templates-modal-misc-fifth" />
+Children's Author
+<phrase key="templates-modal-misc-sixth" />
+Builder/Contractor
+<phrase key="templates-modal-misc-seventh" />
+Blurb
+<phrase key="templates-modal-misc-eighth" />
+Urban Studio
+<phrase key="templates-modal-music-first" />
+Modern Musician
+<phrase key="templates-modal-music-second" />
+Music Lessons Dark
+<phrase key="templates-modal-music-third" />
+Feel The Music
+<phrase key="templates-modal-music-fourth" />
+Music Lessons Light
+<phrase key="templates-modal-music-fifth" />
+Music Venue
+<phrase key="templates-modal-non-profit-first" />
+Hope and Support
+<phrase key="templates-modal-non-profit-second" />
+Hopeful Message
+<phrase key="templates-modal-non-profit-third" />
+Developing Country Charity
+<phrase key="templates-modal-non-profit-fourth" />
+Heart Charity Organization
+<phrase key="templates-modal-non-profit-fifth" />
+Family Health Service
+<phrase key="templates-modal-non-profit-sixth" />
+Charity Organization
+<phrase key="templates-modal-non-profit-seventh" />
+Christian Church
+<phrase key="templates-modal-non-profit-eighth" />
+Family Support Center
+<phrase key="templates-modal-non-profit-ninth" />
+My Congregation
+<phrase key="templates-modal-personal-first" />
+Family Pet
+<phrase key="templates-modal-personal-second" />
+Wedding Bliss
+<phrase key="templates-modal-personal-third" />
+Bulletin Board
+<phrase key="templates-modal-personal-fourth" />
+Parenting
+<phrase key="templates-modal-personal-fifth" />
+Baby Girl Announcement
+<phrase key="templates-modal-personal-sixth" />
+Family Support Center
+<phrase key="templates-modal-personal-seventh" />
+My Athlete
+<phrase key="templates-modal-personal-eighth" />
+Babysitters
+<phrase key="templates-modal-personal-ninth" />
+Baby Boy Announcement
+<phrase key="templates-modal-personal-tenth" />
+My Congregation
+<phrase key="templates-modal-pets-first" />
+Family Pet
+<phrase key="templates-modal-pets-second" />
+Pampered Pets
+<phrase key="templates-modal-pets-third" />
+Vet Care Plus
+<phrase key="templates-modal-pets-fourth" />
+Premier Pet Sitters
+<phrase key="templates-modal-pets-fifth" />
+Pet Hospital
+<phrase key="templates-modal-pets-sixth" />
+Heart Pet Clinic
+<phrase key="templates-modal-pets-seventh" />
+Animal Shelter
+<phrase key="templates-modal-pets-eighth" />
+Veterinarian
+<phrase key="templates-modal-pets-ninth" />
+Exotic Pet Clinic
+<phrase key="templates-modal-photog-first" />
+Wedding Photographer
+<phrase key="templates-modal-photog-second" />
+Freelance Portfolio
+<phrase key="templates-modal-photog-third" />
+Photo Folio
+<phrase key="templates-modal-photog-fourth" />
+Art &amp; Style
+<phrase key="templates-modal-photog-fifth" />
+Photography Business
+<phrase key="templates-modal-photog-sixth" />
+Modern Designer
+<phrase key="templates-modal-photog-seventh" />
+Family Photography
+<phrase key="templates-modal-photog-eighth" />
+Photography Studio
+<phrase key="templates-modal-photog-ninth" />
+Urban Studio
+<phrase key="templates-modal-photog-tenth" />
+Professional Photography
+<phrase key="templates-modal-real-estate-first" />
+Urban Real Estate
+<phrase key="templates-modal-real-estate-second" />
+Modern Real Estate
+<phrase key="templates-modal-real-estate-third" />
+Hometown Real Estate
+<phrase key="templates-modal-real-estate-fourth" />
+Commercial Real Estate
+<phrase key="templates-modal-real-estate-fifth" />
+Southwest Real Estate
+<phrase key="templates-modal-real-estate-sixth" />
+We Find Homes
+<phrase key="templates-modal-real-estate-seventh" />
+Smith Real Estate
+<phrase key="templates-modal-real-estate-eighth" />
+Priceless Housing
+<phrase key="templates-modal-real-estate-ninth" />
+Suburban Real Estate
+<phrase key="templates-modal-real-estate-tenth" />
+Triumph Real Estate
+<phrase key="templates-modal-real-estate-eleven" />
+Urban Apartments
+<phrase key="templates-modal-real-estate-twelve" />
+Terra Real Estate
+<phrase key="templates-modal-sports-first" />
+Outdoor Recreation
+<phrase key="templates-modal-sports-second" />
+Contemporary Fitness
+<phrase key="templates-modal-sports-third" />
+Summer Camp
+<phrase key="templates-modal-sports-fourth" />
+Skate Surf and Snow
+<phrase key="templates-modal-sports-fifth" />
+My Athlete
+<phrase key="templates-modal-sports-sixth" />
+Rugby
+<phrase key="templates-modal-sports-seventh" />
+Underwater
+<phrase key="templates-modal-sports-eighth" />
+Little League
+<phrase key="templates-modal-sports-ninth" />
+Skydiving Club
+<phrase key="templates-modal-sports-tenth" />
+Golf Club
+<phrase key="templates-modal-sports-eleven" />
+Pool Club
+<phrase key="templates-modal-travel-first" />
+World Travel
+<phrase key="templates-modal-travel-second" />
+Caribbean Vacation
+<phrase key="templates-modal-travel-third" />
+Boutique Hotel
+<phrase key="templates-modal-travel-fourth" />
+Bed &amp; Breakfast
+<phrase key="templates-modal-travel-fifth" />
+Winery Classic
+<phrase key="templates-modal-travel-sixth" />
+180 South
+<phrase key="templates-modal-travel-seventh" />
+Scenic Travel
+<phrase key="templates-modal-travel-eighth" />
+Tropical Vacation
+<phrase key="templates-modal-travel-ninth" />
+Garden Inn
+<phrase key="templates-modal-travel-tenth" />
+Travel Guide
+<phrase key="templates-modal-travel-eleven" />
+Ok Travel
+<phrase key="templates-modal-travel-twelve" />
+Continent Travel
+<phrase key="templates-modal-travel-thirteen" />
+Best Travel
+<phrase key="templates-modal-okbtn" />
+OK

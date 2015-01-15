@@ -3,9 +3,9 @@ mixin priceBlock(price, duration, link, options)
   - duration = duration || "year"
   - link = link || "#"
   - options = options || {}
-  - options.priceText = options.priceText || "Plans starting at"
+  - options.priceText = options.priceText || "[@L[cds.sales/_common:plans-starting-at]@L]"
   - options.buttonColor = options.buttonColor || "btn-purchase"
-  - options.buttonText = options.buttonText || "See the plans"
+  - options.buttonText = options.buttonText || "[@L[cds.sales/_common:see-the-plans]@L]"
   
   //- allow consumers to pass a block for full flexiblity
   if block
