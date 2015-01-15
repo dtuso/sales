@@ -271,3 +271,21 @@
 .two-up-speech-shape.two-up-speech-shape-white:after {
   background-color: #fff;
 }
+.two-up-speech-shape.two-up-speech-shape-yellow {
+  background-color: #ffde2d;
+}
+.two-up-speech-shape.two-up-speech-shape-yellow:before {
+  border-top-color: #ffde2d;
+}
+.two-up-speech-shape.two-up-speech-shape-yellow:after {
+  background-color: #ffde2d;
+}
+.two-up-speech-shape.two-up-speech-shape-gold {
+  background-color: #fedc45;
+}
+.two-up-speech-shape.two-up-speech-shape-gold:before {
+  border-top-color: #fedc45;
+}
+.two-up-speech-shape.two-up-speech-shape-gold:after {
+  background-color: #fedc45;
+}
