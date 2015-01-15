@@ -7,7 +7,11 @@
             <input type="hidden" value="LOGIN" name="LOGIN" />
             <input type="hidden" value="1" name="verifyShopper" />
                 <div class="modal-header">
+                    ##if(appSettingEnabled(UXCORE_ENABLED))
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                    ##else
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    ##endif
                     <h4 class="modal-title">Please login to access your account</h4>
                 </div>
                 <div class="modal-body">
