@@ -27,15 +27,107 @@
     <meta property="fb:admins" content="633356800"> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <script src="[@T[link:<javascriptroot />]@T]/ux/dev-brand/js/uxcore.en.min.js"></script>
-    <script src="[@T[link:<javascriptroot />]@T]/ux/dev-brand/js/uxcontrols.min.js"></script>
-    <script src="[@T[link:<javascriptroot />]@T]/fos/mike/0.7.0/js/sahara.min.js"></script>
-    <link href="[@T[link:<cssroot />]@T]/ux/dev-brand/css/uxcontrols.css" rel="stylesheet">
-    <link href="[@T[link:<cssroot />]@T]/ux/dev-brand/css/uxcore.css" rel="stylesheet">
+    <script>
+      var head = (typeof document.head !== 'undefined' ? document.head : document.getElementsByTagName('head')[0]);
+      var insertBefore = head.insertBefore;
+      var delayLoader = (function(headNode) {
+        var elements = [];
+        var fnOnDelayLoadComplete = [];
+      
+        function addElement(element) {
+          elements.unshift(element);  // Insert in the order received
+        }
+      
+        return {
+          addElement: function(element) {
+            addElement(element);
+          },
+          addScript: function(url, params) {
+            params = params || {};
+      
+            var script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.src = url;
+            script.async = true;
+            if (typeof params.id !== 'undefined') {
+              script.id = params.id;
+            }
+            addElement(script);
+            for (var i = 0; i < fnOnDelayLoadComplete.length; i++) {
+              fnOnDelayLoadComplete[i]();
+            }
+          },
+          onDelayLoadComplete: function(callback) {
+            fnOnDelayLoadComplete.unshift(callback);
+          },
+          load: function() {
+            for (var i = 0; i < elements.length; i++) {
+              insertBefore.call(headNode, elements[i], headNode.firstChild);
+            }
+            head.insertBefore = insertBefore;
+          }
+        };
+      })(head);
+      
+      var oldOnload = window.onload;
+      window.onload = function() {
+        delayLoader.load();
+        if (oldOnload) {
+          oldOnload();
+        }
+      };
+      
+      head.insertBefore = function (newElement, referenceElement) {
+        if (newElement.tagName === 'SCRIPT') {
+          delayLoader.addElement(newElement);
+        } else {
+          insertBefore.call(head, newElement, referenceElement);
+        }
+      };
+      
+      function endOfPageScripts() {
+      
+        // jquery.domainscout.1.0.0.js
+        if("undefined"==typeof domainscout){var domainscout={version:"1.0.2"};$(document).ready(function(){function b(a){var b=a,d=b.data("domainscout")||b.data("domainsearch");if(b[0]["ds-domain"]=b.find(d["search-element"]),b[0]["ds-placeholder"]=b.find(d["placeholder-element"]),b[0]["ds-button"]=b.find(d.button),b[0]["ds-url"]=d.url,b[0]["ds-ci"]=d.ci,b[0]["ds-hide-label"]=d["hide-label"],b[0]["ds-empty-redirect"]=d["empty-redirect"],"undefined"==typeof b[0]["ds-hide-label"]&&(b[0]["ds-hide-label"]=!0),1==b[0]["ds-domain"].length&&(b[0]["ds-domain"].is("input")||b[0]["ds-domain"].is("textarea"))){if(domainscout.items=domainscout.items.add(b),b[0]["ds-placeholder"].is("label")){var e=b[0]["ds-domain"].attr("id");"undefined"==typeof e&&(e="ds-"+domainscout.items.length,b[0]["ds-domain"].attr("id",e)),b[0]["ds-placeholder"].attr("for",e)}else b[0]["ds-placeholder"].bind("click",function(){b[0]["ds-domain"].focus()});b[0]["ds-domain"].val(""),b[0]["ds-domain"].bind("focus.ds-event",function(){b.addClass("ds-focus"),b[0]["ds-domain"].bind("keydown.ds-event",function(a){var d=[16,27,20,8,37,38,39,40];13==a.which?(c(b),a.preventDefault()):-1==d.indexOf(a.which)&&b[0]["ds-hide-label"]&&b[0]["ds-placeholder"].css("display","none")})}),b[0]["ds-domain"].bind("blur.ds-event",function(){b.removeClass("ds-focus"),b[0]["ds-domain"].unbind("keydown.ds-event"),b[0]["ds-hide-label"]&&""==b[0]["ds-domain"].val()&&"none"==b[0]["ds-placeholder"].css("display")&&b[0]["ds-placeholder"].css("display","block")})}b[0]["ds-button"].bind("click",function(a){a.stopPropagation(),a.preventDefault(),"undefined"!=typeof _trfq&&_trfq.push(["cmdLogPageEvent","click","","",b[0]]),c(b)})}function c(a){var b=$(a),c=!0,e=!1,g=b[0]["ds-url"];"undefined"==typeof b[0]["ds-url"]&&(g=b.attr("action"),("undefined"==typeof g||"#"==g)&&(c=!1));var h;c&&1==b[0]["ds-domain"].length?(h=b[0]["ds-domain"].val(),"undefined"!=typeof h&&""!=h?(g=g.split("?")[0],g=g+"?domainToCheck="+d(h)):(g=b[0]["ds-empty-redirect"],g.indexOf(location.protocol)&&(g=location.protocol+g),e=!0,"undefined"==typeof g&&(c=!1))):c=!1,c&&(e||(g+="&checkAvail=1","undefined"==b[0]["ds-ci"]&&(b[0]["ds-url"]=f("ci")),"undefined"!=b[0]["ds-ci"]&&(g=g+"&"+b[0]["ds-ci"])),window.location.href=g)}function d(a){return a}function e(a){return a instanceof $||(a=$(a)),a}function f(a){var b=decodeURI((RegExp(a+"="+"(.+?)(&|$)").exec(location.search)||[,null])[1]);return"null"==b&&(b=void 0),b}var a=$("[data-domainscout],[data-domainsearch]");domainscout.items=$(),a.each(function(){b($(this))}),domainscout.add=function(a){b(e(a))},domainscout.search=function(a){c(e(a))}})}
+      
+        // jquery.lazyload.1.0.0.js
+        !function(a){function b(a,b){"undefined"==typeof b&&(b=a.data("lazy-load"));var c=b.src||b.source;"undefined"!=typeof c&&(a[0].lazyload=b,lazyload.items=lazyload.items.add(a),e(a))}function c(){e(a(window)),lazyload.items.each(function(){d(a(this))})}function d(b){var c=b[0].lazyload.updatePosition||lazyload.__defaults.updatePosition,d=d||lazyload.__defaults.updateWindowScroll;b[0].lazyload.checkHorizontal||lazyload.__defaults.checkHorizontal,c&&e(b),e(a(window));var g=b[0].lazyload.positionTop,i=b[0].lazyload.positionBottom,j=lazyload.windowTop,k=lazyload.windowBottom;g<k+lazyload.__defaults.loadBufferDistance&&i>j-lazyload.__defaults.loadBufferDistance&&h(b)}function e(a){var b=a[0];if(b==window)lazyload.updateWindowPosition&&(lazyload.windowTop=a.scrollTop(),lazyload.windowLeft=a.scrollLeft(),lazyload.windowRight=lazyload.windowLeft+a.width(),lazyload.windowBottom=lazyload.windowTop+a.height(),lazyload.updateWindowPosition=!1,clearTimeout(lazyload.windowPositionDelayTimer),lazyload.windowPositionDelayTimer=setTimeout(function(){lazyload.updateWindowPosition=!0},lazyload.__defaults.scrollCheckDelay));else{if("undefined"!=typeof b.lazyload.watch){var c=a.parents(b.lazyload.watch);c.length>=1&&(a=c)}b.lazyload.positionTop=a.offset().top,b.lazyload.positionLeft=a.offset().left,b.lazyload.positionRight=b.lazyload.positionLeft+a.width(),b.lazyload.positionBottom=b.lazyload.positionTop+a.height()}}function f(a){function e(a,b){try{"undefined"!=typeof b&&b.length>=1?a.apply(null,b):a.call(null)}catch(d){}}if("string"==typeof a){var b=a.split(","),c=b.shift();c=g(c),e(c,b,a)}else if("object"==typeof a)for(var d=0;d<a.length;d++)!function(){var b=a[d].split(","),c=b.shift(),f=c;c=g(c),e(c,b,f)}()}function g(a){for(var b=window,c=a.split("."),d=c.pop(),e=!0,f=0;f<c.length;f++)"undefined"!=typeof b[c[f]]?b=b[c[f]]:e=!1;return e?b[d]:null}function h(a){var b=a[0].lazyload.src||a[0].lazyload.source,c=a[0].lazyload.callback,d=a[0].lazyload.callbackAfter;lazyload.items=lazyload.items.not(a),-1==lazyload.loadedSrc.indexOf(b)&&lazyload.loadedSrc.push(b);var e=new Image;e.onload=function(){function j(a){var b=document.createElement("canvas");b.width=a.width,b.height=a.height;var c=b.getContext("2d");c.drawImage(a,0,0);var d=b.toDataURL("image/png");return d.replace(/^data:image\/(png|jpg);base64,/,"")}if("undefined"!=typeof c&&(a.trigger("lazyloaded").addClass("lazyloaded"),f(c)),a.is("img"))a.css({opacity:0}).attr("src",b).delay(lazyload.__defaults.fadeInDelay).animate({opacity:1},lazyload.__defaults.fadeInSpeed,function(){"undefined"!=typeof d&&setTimeout(function(){a.trigger("lazyloadedafter"),f(d)},lazyload.__defaults.fadeInSpeed)});else{var g=200;try{var h="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",i=new Image;i.src=h,i.height=e.height,i.width=e.width;var k=j(i);a.css({"background-image":"url(data:image/gif;base64,"+k+")","-moz-transition":"all "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out"})}catch(l){g=0}setTimeout(function(){a.css({"background-image":"url("+b+")","-webkit-transition":"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out","-moz-transition":"all "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out","-o-transition":"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out",transition:"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out"}),"undefined"!=typeof d&&setTimeout(function(){a.trigger("lazyloadafter"),f(d)},lazyload.__defaults.fadeInSpeed)},g)}},e.src=b}"undefined"==typeof lazyload&&(window.lazyload={version:"1.0.0",items:a(),__defaults:{updatePosition:!0,checkHorizontal:!1,scrollCheckDelay:300,loadBufferDistance:0,fadeInDelay:0,fadeInSpeed:500}},a(document).ready(function(){lazyload.updateWindowPosition=!0,lazyload.scrollCheck=!0,lazyload.loadedSrc=[],$foundItems=a("[data-lazy-load]"),$foundItems.length>=1&&(lazyload.scrollElements=a("div,ul"),lazyload.scrollElements.each(function(){var b=a(this),c=b.css("overflow"),d=b.css("overflow-x"),e=b.css("overflow-y"),f=["hidden","scroll","auto"];0==b.find("[data-lazy-load]").length&&-1==f.indexOf(c)&&-1==f.indexOf(e)&&-1==f.indexOf(d)&&(lazyload.scrollElements=lazyload.scrollElements.not(b))}),lazyload.scrollElements=lazyload.scrollElements.add(window),lazyload.scrollElements.bind("scroll.lazyload",function(){lazyload.scrollCheck&&(c(),lazyload.scrollCheck=!1,clearTimeout(lazyload.scrollCheckDelayTimer),lazyload.scrollCheckDelayTimer=setTimeout(function(){lazyload.scrollCheck=!0},lazyload.__defaults.scrollCheckDelay))}),$foundItems.each(function(){b(a(this))}),c())}),lazyload.check=function(){c()},lazyload.add=function(c,d){b(a(c),d)},lazyload.load=function(){h(a($item))})}(jQuery);
+      
+        $(document).ready(function(){
+          // fix centering elements
+          window.triggerResize = function(){
+            setTimeout(function(){
+              $(window).trigger('resize');
+            },50);
+          }
+          setTimeout(function(){
+            triggerResize();
+          },200);
+      
+          // Wire up tooltips
+          $(document).sfTipper({ wireup: true });
+        });
+      
+        $('.jump-arrow-icon, .jump-arrow-btn').click(function(){
+          $('html, body').animate({
+            scrollTop: $($.attr(this, 'href')).offset().top
+          }, 500);
+          return false;
+        });
+      
+        // Track all the icodes (tcodes handled by gtm.js)
+        window._trfq = window._trfq || [];
+        $('[data-icode]').each(function(index, element) {
+          window._trfq.push(['cmdLogImpression', $(element).attr('data-icode'), null, element]);
+        });
+      }
+      
+    </script>
     <link href="[@T[link:<cssroot />]@T]/fos/mike/0.7.0/css/sahara.css" rel="stylesheet">
     <link href="[@T[link:<cssroot />]@T]/fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css">
     <style>
 .plan-tile { 
-  margin-top: -240px; 
+  margin-top: -145px; 
 }
 .sf-droplist-msg {
   text-align: inherit;
@@ -43,13 +135,15 @@
 .bg-black {
   background-color: #333333;
 }
-
+.bg-gray-light {
+    background-color: #d9d9d9;
+}
     </style><!--[if lt IE 9]>
     <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
     <link href="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy.min.html" id="respond-proxy" rel="respond-proxy">
     <script src="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy-combo.min.js"></script><![endif]-->
     <script type="text/javascript">
-      delayLoader.addScript('[@T[link:<javascriptroot />]@T]/ux/dev-brand/js/uxcontrols.min.js')
+      delayLoader.addScript('[@T[link:<javascriptroot />]@T]/fos/liveperson/js/liveperson_20141013a.min.js')
       
     </script>
     <!-- Google Tag Manager-->
@@ -72,6 +166,879 @@
     <section id="marquee"> 
       <atlantis:webstash type="css">
         <style>
+.marquee {
+    background-position: top center;
+}
+
+.marquee .marquee-product-img {
+    margin-bottom: 10px;
+}
+
+.marquee .jump-arrow-btn {
+    margin-top: 10px;
+}
+
+.marquee .marquee-buttons a {
+    margin-right: 20px;
+}
+
+.marquee .marquee-buttons a:last-child {
+    margin-right: 0;
+}
+
+.marquee .marquee-product-review {
+    font-size: 18px;
+    font-size: 1.8rem;
+    line-height: 1;
+}
+
+.marquee .marquee-product-review a {
+    text-decoration: none;
+    padding-left: 10px;
+    color: #333333;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-size: 1.2rem;
+}
+
+.marquee .marquee-product-review a:hover {
+    text-decoration: none;
+}
+
+.marquee.marquee-app-landing {
+    min-height: 655px;
+}
+
+.marquee.marquee-app-landing .marquee-product-name {
+    margin-top: 0;
+}
+
+.marquee.marquee-app-landing .marquee-check-bullets {
+    list-style: none;
+    margin-bottom: 20px;
+    padding-left: 0;
+    font-size: 16px;
+    font-size: 1.6rem;
+}
+
+.marquee.marquee-app-landing .marquee-check-bullets li {
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 20px;
+}
+
+.marquee.marquee-app-landing .marquee-check-bullets li:before {
+    content: "";
+    background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+    background-position: 0 -668px;
+    background-size: 205px auto;
+    width: 25px;
+    height: 27px;
+    padding-right: 5px;
+    position: absolute;
+    left: 0;
+    top: -6px;
+}
+
+.marquee.marquee-app-landing .marquee-pro-left-text {
+    padding-top: 45px;
+}
+
+.marquee.marquee-app-landing .marquee-product-description {
+    font-family: 'Walsheim-Bold';
+    margin-top: 10px;
+}
+
+.marquee.marquee-app-landing .marquee-product-name {
+    font-size: 20px;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #ef6c0f;
+    font-family: 'Walsheim-Bold';
+    margin-bottom: 10px;
+}
+
+.marquee-pro-signup {
+    min-height: 584px;
+}
+
+.marquee-pro-signup .marquee-pro-signup-wrap {
+    margin-bottom: 75px;
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee-pro-signup h2 {
+        font-size: 40px;
+        font-size: 4rem;
+    }
+}
+
+.marquee-pro-signup h3 {
+    margin-top: 0;
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee-pro-signup .marquee-pro-signup-img img {
+        width: 50%;
+        margin: 30px 0;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .marquee-pro-signup .marquee-pro-signup-img img {
+        width: 80%;
+    }
+}
+
+.marquee-pro-signup .marquee-pro-signup-check-wrap {
+    margin-top: 30px;
+}
+
+.marquee-pro-signup .jump-to-plans {
+    position: absolute;
+    bottom: -60px;
+    margin: 0 auto;
+    text-align: center;
+    right: 0;
+    left: 0;
+}
+
+.marquee-pro-signup .jump-to-plans .marquee-jump-text {
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1;
+    font-family: 'Walsheim-Bold';
+    font-size: 20px;
+    font-size: 2rem;
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee-pro-signup .jump-to-plans .marquee-jump-text {
+        margin-bottom: 5px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee-pro-signup .marquee-pro-signup-buttons {
+        text-align: center;
+        padding-bottom: 10px;
+    }
+}
+
+.marquee-pro-signup .marquee-pro-signup-buttons a:first-child {
+    margin-right: 20px;
+}
+
+.marquee-pro-signup .marquee-pro-signup-check {
+    padding-left: 35px;
+    font-family: 'Walsheim-Bold';
+    position: relative;
+    font-size: 18px;
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+}
+
+.marquee-pro-signup .marquee-pro-signup-check:before {
+    content: '';
+    background-position: 0px -234px;
+    background-size: 205px auto;
+    width: 25px;
+    height: 27px;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -3px;
+}
+
+.marquee-pro-rebrand {
+    min-height: 378px;
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee-pro-rebrand {
+        padding-bottom: 50px;
+    }
+}
+
+.marquee-pro-rebrand .marquee-pro-left-text {
+    margin-bottom: 65px;
+}
+
+.marquee-pro-rebrand .marquee-pro-left-text h1 {
+    font-size: 20px;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #ef6c0f;
+    font-family: 'Walsheim-Bold';
+    margin-bottom: 10px;
+}
+
+.marquee-pro-rebrand .marquee-pro-left-text h2 {
+    font-size: 40px;
+    font-size: 4rem;
+    text-transform: uppercase;
+    font-family: 'Walsheim-Bold';
+    margin-top: 10px;
+    line-height: 1;
+}
+
+.marquee-pro {
+    min-height: 450px;
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee-pro {
+        padding-bottom: 50px;
+    }
+}
+
+.marquee-pro .well {
+    background-color: rgba(239, 108, 15, 0.8);
+    border: none;
+    color: #fff;
+    padding: 30px;
+    min-height: 275px;
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee-pro .well {
+        min-height: 0;
+        margin-top: 20px;
+    }
+}
+
+.marquee-pro .well .row {
+    min-height: 0 !important;
+}
+
+.marquee-pro .well .marquee-pro-icon-wrap {
+    border-left: 1px solid #fff;
+}
+
+@media only screen and (max-width: 768px) {
+    .marquee-pro .well .marquee-pro-icon-wrap {
+        border-left: 0;
+    }
+
+    .marquee-pro .well .marquee-pro-icon-wrap:not(:first-child) {
+        margin-top: 30px;
+    }
+}
+
+.marquee-pro .well .marquee-pro-icon-wrap .marquee-pro-icon-height {
+    height: 95px;
+}
+
+.marquee-pro .well .marquee-pro-icon-wrap .marquee-pro-icon-height img {
+    max-width: 75%;
+    max-height: 75%;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.marquee-pro .well .marquee-pro-icon-wrap h5 {
+    font-weight: 500;
+}
+
+.marquee-pro .well .marquee-pro-icon-wrap:first-child {
+    border-left: 0;
+}
+
+.marquee-pro .well .marquee-pro-icon-wrap .marquee-pro-icon {
+    margin: 0 auto 15px;
+    max-height: 85px;
+}
+
+.marquee-pro .well.marquee-pro-centered a {
+    font-weight: 500;
+}
+
+.marquee-pro .well.marquee-pro-centered h1 {
+    font-size: 20px;
+    font-size: 2rem;
+    font-family: 'Walsheim-Bold';
+    text-transform: uppercase;
+    margin: 0 0 10px 0;
+}
+
+.marquee-pro .well.marquee-pro-centered h2 {
+    margin-top: 0;
+    word-wrap: break-word;
+    word-break: break-word;
+    white-space: -moz-pre-wrap;
+}
+
+.marquee-pro .well.marquee-pro-centered .pro-marquee-home-deals {
+    border-top: 1px solid #fff;
+    font-weight: 700;
+}
+
+.marquee-pro .well.marquee-pro-centered .pro-marquee-home-deals .pro-marquee-deal {
+    margin-top: 20px;
+}
+
+.marquee-pro .well.marquee-pro-centered .pro-marquee-home-deals .pro-marquee-deal .pro-marquee-deal-text,
+.marquee-pro .well.marquee-pro-centered .pro-marquee-home-deals .pro-marquee-deal .pro-marquee-deal-savings {
+    font-size: 18px;
+    font-size: 1.8rem;
+}
+
+.marquee-pro .well.marquee-pro-centered .pro-marquee-home-deals .pro-marquee-deal-price {
+    margin-top: 15px;
+}
+
+.marquee-pro .well.marquee-pro-centered .pro-marquee-home-deals .pro-marquee-deal-price .marquee-price-small-text {
+    font-size: 15px;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.marquee-pro .well.marquee-pro-centered .pro-marquee-home-deals .pro-marquee-deal-price .marquee-price {
+    font-size: 35px;
+    font-size: 3.5rem;
+    line-height: 1;
+    font-family: 'Walsheim-Bold';
+}
+
+.marquee-pro .well.marquee-pro-centered .search-template-box {
+    border: 3px solid #fff;
+    margin-top: 10px;
+}
+
+.marquee-pro .marquee-pro-first-area h1 {
+    font-size: 20px;
+    font-size: 2rem;
+    font-family: 'Walsheim-Bold';
+    margin: 0 0 10px 0;
+}
+
+.marquee-pro .marquee-pro-first-area h2 {
+    margin-top: 12px;
+}
+
+.marquee-pro .marquee-pro-first-area .marquee-pro-product-text {
+    padding-top: 10px;
+    border-top: 1px solid #fff;
+}
+
+.marquee-pro .marquee-product-text {
+    margin-bottom: 20px;
+}
+
+.marquee-pro .jump-to-plans {
+    position: absolute;
+    bottom: -60px;
+    margin: 0 auto;
+    text-align: center;
+    right: 0;
+    left: 0;
+}
+
+.marquee-pro .jump-to-plans .marquee-jump-text {
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1;
+    color: #333333;
+    font-size: 20px;
+    font-size: 2rem;
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee-pro .jump-to-plans .marquee-jump-text {
+        margin-bottom: 5px;
+    }
+}
+
+.marquee-table-grid > .row {
+    display: table;
+}
+
+@media only screen and (max-width: 768px) {
+    .marquee-table-grid > .row {
+        display: block;
+    }
+}
+
+.marquee-table-grid > .row > [class*="col-"] {
+    float: none;
+    display: table-cell;
+    vertical-align: top;
+}
+
+@media only screen and (max-width: 768px) {
+    .marquee-table-grid > .row > [class*="col-"] {
+        display: block;
+        float: none;
+        border-left: none;
+        border-right: none;
+        padding: 20px inherit;
+        border-top: 1px solid #fff;
+    }
+
+    .marquee-table-grid > .row > [class*="col-"]:first-child {
+        border-top: 0;
+    }
+}
+.marquee {
+    background-size: cover !important;
+    position: relative;
+    background-position: bottom center;
+    background-color: #fff;
+  /* Ribbon */
+}
+
+.marquee .relative-position {
+    position: relative;
+}
+
+.marquee .marquee-all-centered {
+    text-align: center;
+}
+
+.marquee .marquee-two-col-txt ul.marquee-product-bullets {
+    text-align: left;
+}
+
+.marquee.marquee-short {
+    min-height: 368px;
+}
+
+.marquee.marquee-short .container {
+    min-height: inherit;
+}
+
+.marquee.marquee-short .container .row {
+    min-height: inherit;
+}
+
+.marquee.marquee-short .container .row .col-sm-pull-6 {
+    min-height: inherit;
+}
+
+@media only screen and (max-width: 767px) {
+    .marquee.marquee-short .container .row .col-sm-pull-6 {
+        min-height: 100px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee.marquee-short .vertical-height.marquee-sm-vertical-fix {
+        height: auto !important;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee.marquee-short .vertical-height.marquee-sm-vertical-fix .vertical-text {
+        -webkit-transform: translateY(0%);
+        -moz-transform: translateY(0%);
+        transform: translateY(0%);
+        top: 0%;
+    }
+}
+
+.marquee.marquee-tall {
+    min-height: 523px;
+}
+
+.marquee.marquee-tall .container {
+    min-height: inherit;
+}
+
+.marquee.marquee-tall .container .row {
+    min-height: inherit;
+}
+
+.marquee.marquee-tall .container .row .col-sm-pull-6 {
+    min-height: inherit;
+}
+
+@media only screen and (max-width: 767px) {
+    .marquee.marquee-tall .container .row .col-sm-pull-6 {
+        min-height: 100px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee.marquee-tall {
+        min-height: 400px;
+    }
+}
+
+.marquee.marquee-img-tall-left-txt {
+    height: 523px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .marquee.marquee-img-tall-left-txt {
+        height: 430px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee.marquee-img-tall-left-txt {
+        height: 332px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .marquee.marquee-img-tall-left-txt {
+        height: 332px;
+        background-position: -160px;
+    }
+}
+
+.marquee.marquee-img-short-left-txt {
+    height: 368px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .marquee.marquee-img-short-left-txt {
+        height: 300px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee.marquee-img-short-left-txt {
+        height: 234px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .marquee.marquee-img-short-left-txt {
+        height: 234px;
+        background-position: -160px;
+    }
+}
+
+.marquee.marquee-white {
+    color: #fff;
+}
+
+.marquee.marquee-white h1,
+.marquee.marquee-white h2,
+.marquee.marquee-white h3,
+.marquee.marquee-white h4,
+.marquee.marquee-white h5,
+.marquee.marquee-white h6 {
+    color: #fff;
+}
+
+.marquee.marquee-white .dashed-underline {
+    border-bottom-color: #fff;
+}
+
+.marquee.marquee-white a:not(.btn) {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.marquee.marquee-white a:not(.btn):hover {
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 480px) {
+    .marquee .marquee-customer-wrap {
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .marquee .marquee-customer-wrap .vertical-height {
+        height: auto !important;
+    }
+}
+
+.marquee .img-center {
+    margin: 0 auto;
+}
+
+.marquee .marquee-corner-img {
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    top: 0;
+    min-width: 165px;
+    min-height: 169px;
+}
+
+.marquee .marquee-product-img {
+    max-width: 100%;
+}
+
+.marquee .marquee-product-review {
+    font-size: 18px;
+    font-size: 1.8rem;
+}
+
+.marquee .marquee-product-review a {
+    text-decoration: underline;
+    padding-left: 10px;
+    color: #808080;
+}
+
+.marquee .marquee-product-review a:hover {
+    text-decoration: none;
+}
+
+.marquee .marquee-product-description {
+    font-size: 56px;
+    font-size: 5.6rem;
+    font-weight: 100;
+    line-height: 1.1;
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee .marquee-product-description {
+        font-size: 40px;
+        font-size: 4rem;
+    }
+}
+
+.marquee .marquee-product-text {
+    font-size: 18px;
+    font-size: 1.8rem;
+    padding: 0 0 14px;
+}
+
+.marquee ul.marquee-product-bullets {
+    font-size: 18px;
+    font-size: 1.8rem;
+    text-align: center;
+    list-style-position: inside;
+    padding: 0;
+}
+
+.marquee .marquee-restrictions-text {
+    font-size: 14px;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.marquee .marquee-ribbon {
+    width: 112px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-repeat: no-repeat;
+    z-index: 100;
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee .marquee-ribbon {
+        position: relative;
+        margin: 0 auto;
+    }
+}
+
+.marquee .marquee-left-ribbon .marquee-ribbon {
+    left: 0;
+    right: auto;
+}
+
+.marquee .marquee-price-btn-wrap {
+    color: #ef6c0f;
+    line-height: 1;
+    font-weight: 400;
+    padding: 5px 0 20px;
+}
+
+@media only screen and (max-width: 768px) {
+    .marquee .marquee-price-btn-wrap {
+        line-height: 1.2;
+    }
+}
+
+.marquee .marquee-price-btn-wrap .btn {
+    margin-right: 10px;
+}
+
+.marquee .marquee-price-btn-wrap .marquee-price-text {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.marquee .marquee-price-btn-wrap .marquee-price-small-text {
+    font-size: 18px;
+    font-size: 1.8rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .marquee .marquee-price-btn-wrap .marquee-price-small-text {
+        font-size: 16px;
+        font-size: 1.6rem;
+    }
+}
+
+.marquee .marquee-price-btn-wrap .marquee-price {
+    font-size: 36px;
+    font-size: 3.6rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .marquee .marquee-price-btn-wrap .marquee-price {
+        font-size: 30px;
+        font-size: 3rem;
+    }
+}
+
+.marquee .marquee-check-bullets {
+    list-style: none;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding-left: 0;
+    font-size: 18px;
+    font-size: 1.8rem;
+}
+
+.marquee .marquee-check-bullets span {
+    font-family: 'HelveticaNeue-CondensedBold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-stretch: condensed;
+    text-transform: uppercase;
+}
+
+.marquee .marquee-check-bullets li:before {
+    content: "\e207";
+    font-family: 'uxfont';
+    padding-right: 5px;
+}
+
+.marquee .marquee-btn-wrap {
+    margin-bottom: 20px;
+}
+
+.marquee .search-template .search-template-box {
+    border: 1px solid #cecece;
+}
+
+.marquee .marquee-customer-name-wrap {
+    position: absolute;
+    bottom: 10px;
+    font-size: 16px;
+    font-size: 1.6rem;
+}
+
+@media only screen and (max-width: 480px) {
+    .marquee .marquee-customer-name-wrap {
+        position: relative;
+        bottom: auto;
+    }
+}
+
+.marquee .marquee-customer-name-wrap .marquee-customer-name {
+    font-weight: bold;
+}
+
+.marquee .marquee-customer-name-wrap .marquee-customer-text {
+    font-weight: 100;
+}
+
+.marquee .marquee-customer-name-wrap .marquee-customer-website {
+    color: #008a32;
+    text-decoration: underline;
+}
+
+.marquee .marquee-two-col-abstract.left-column {
+    color: #fff;
+}
+
+.marquee .marquee-two-col-abstract.left-column .marquee-product-name {
+    color: #fff;
+    font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;
+    font-size: 46px;
+    margin: 34px 0 0 0;
+}
+
+.marquee .marquee-two-col-abstract.left-column .marquee-product-description {
+    font-family: "Walsheim-Bold";
+    font-size: 22px;
+}
+
+.marquee .marquee-two-col-abstract.left-column .marquee-product-text {
+    font-family: "Walsheim-Medium";
+    font-size: 18px;
+    margin-top: 18px;
+}
+
+.marquee .marquee-two-col-abstract.left-column .marquee-product-price {
+    display: block;
+    font-family: "Walsheim-Black";
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.marquee .marquee-two-col-abstract.left-column .btn {
+    font-family: "Walsheim-Medium";
+    font-size: 24px;
+}
+
+.marquee .marquee-two-col-abstract.left-column .marquee-restrictions-text {
+    margin: 12px 0 24px;
+    font-family: "Walsheim-Regular";
+}
+
+.marquee .marquee-two-col-abstract.left-column .marquee-restrictions-text ul {
+    padding-left: 0;
+}
+
+.marquee .marquee-two-col-abstract.left-column .marquee-restrictions-text ul li {
+    list-style: none;
+}
+
+.marquee .marquee-two-col-abstract.right-column {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    background-position: top center;
+    background-size: cover;
+}
+
+.marquee .marquee-two-col-abstract.right-column img.abstract-left {
+    position: absolute;
+    left: 0;
+    height: 100%;
+}
+
+.marquee .marquee-two-col-abstract.right-column img.abstract-right {
+    position: absolute;
+    right: 0;
+    height: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+    .marquee .marquee-two-col-abstract.right-column {
+        position: relative;
+        min-height: 200px;
+    }
+}
+
+h1.marquee-product-name,
+h2.marquee-product-name,
+.marquee-product-name {
+    font-size: 24px;
+    font-size: 2.4rem;
+    font-family: 'HelveticaNeue-CondensedBold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-stretch: condensed;
+    text-transform: uppercase;
+}
+
+@media only screen and (max-width: 992px) {
+    h1.marquee-product-name,
+  h2.marquee-product-name,
+  .marquee-product-name {
+        font-size: 20px;
+        font-size: 2rem;
+        margin-top: 10px;
+    }
+}
+        </style>
+        <style>
           .marquee { background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/GD_WebsiteBuilder_Marquee.jpg) no-repeat top center;); }
           
         </style>
@@ -84,8 +1051,10 @@
                 <div class="row">
                   <div class="col-md-7 col-sm-12">
                     <div class="marquee-pro-left-text">
-                            <h2 class="marquee-product-description">[@L[cds.sales/gd/hosting/website-builder:header_sb_subtitle_1]@L]</br>[@L[cds.sales/gd/hosting/website-builder:header_sb_subtitle_2]@L]</h2>
-                            <div class="marquee-product-text">Industry's leading page load times. 99.9% Uptime Guarantee*.</div><a href="[@T[link:<relative path='~/hosting/website-builder-config.aspx' secure='true'><param name='ci' value='' /><param name='plan' value='wsb_personal_12month' /></relative>]@T]" class="btn btn-primary jump-arrow-btn">Get Started</a>
+                            <h2 class="marquee-product-description">[@L[cds.sales/gd/hosting/website-builder:header_subtitle_1]@L]</br>[@L[cds.sales/gd/hosting/website-builder:header_subtitle_2]@L]</h2>
+                            <ul class="marquee-check-bullets">
+                              <li>[@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-1]@L],[@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-2]@L],[@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-3]@L]</li>
+                            </ul><a href="[@T[link:<relative path='~/hosting/website-builder-config.aspx' secure='true'><param name='ci' value='' /><param name='plan' value='wsb_personal_12month' /></relative>]@T]" class="btn btn-primary jump-arrow-btn">[@L[cds.sales/gd/hosting/website-builder:get-started-btn-general]@L]</a>
                     </div>
                   </div>
                 </div>
@@ -96,8 +1065,377 @@
       </div>
     </section>
     <section id="plans">
+      <style>
+.pro-plans {
+    margin-top: 0px;
+    padding-bottom: 80px;
+}
+
+.pro-plans .tld-col-title {
+    text-transform: uppercase;
+}
+
+.pro-plans .non-input-group {
+    margin-bottom: 10px;
+}
+
+.pro-plans .non-input-group .form-control {
+    border: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    font-family: 'Walsheim-Black';
+    font-size: 30px;
+    font-size: 3rem;
+    padding: 4px 20px;
+    height: 44px;
+    line-height: 1;
+    color: #333333;
+}
+
+.pro-plans .sub-plan-text {
+    margin-top: 30px;
+    margin-bottom: -30px;
+}
+
+.pro-plans h2 {
+    margin-top: 0;
+}
+
+.pro-plans h2.domains-plans-mid-title {
+    margin: 40px 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .pro-plans {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
+
+.pro-plans.plan-container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.pro-plans.plan-container:before,
+.pro-plans.plan-container:after {
+    content: " ";
+  /* 1 */
+    display: table;
+  /* 2 */
+}
+
+.pro-plans.plan-container:after {
+    clear: both;
+}
+
+@media only screen and (max-width: 1535px) {
+    .pro-plans.plan-container {
+        max-width: 1170px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .pro-plans.plan-container {
+        max-width: 970px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .pro-plans.plan-container {
+        max-width: 750px;
+    }
+}
+
+.pro-plans.plan-container .plan-col-15 {
+    width: 20%;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@media only screen and (max-width: 1535px) {
+    .pro-plans.plan-container .plan-col-15 {
+        width: 33.3333%;
+    }
+
+    .pro-plans.plan-container .plan-col-15:nth-child(4n) {
+        border: 0;
+        margin-left: 16.66666666667%;
+        clear: left;
+    }
+
+    .pro-plans.plan-container .plan-col-15:nth-child(1) {
+        border: 0;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .pro-plans.plan-container .plan-col-15 {
+        width: 50%;
+    }
+
+    .pro-plans.plan-container .plan-col-15:nth-child(4n) {
+        clear: none;
+        margin-left: 0;
+    }
+
+    .pro-plans.plan-container .plan-col-15:nth-child(3) {
+        clear: left;
+        border-left: 0;
+    }
+
+    .pro-plans.plan-container .plan-col-15:nth-child(5) {
+        clear: left;
+        border-left: 0;
+        margin-left: 25%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .pro-plans.plan-container .plan-col-15 {
+        width: 100%;
+        border: 0;
+        clear: none;
+        float: none;
+    }
+
+    .pro-plans.plan-container .plan-col-15:nth-child(5) {
+        margin-left: 0;
+    }
+}
+
+.pro-plans.plan-container .plan-col-2 {
+    width: 16.66666666667%;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@media only screen and (max-width: 1535px) {
+    .pro-plans.plan-container .plan-col-2 {
+        width: 33.3333%;
+    }
+
+    .pro-plans.plan-container .plan-col-2:nth-child(4n) {
+        border: 0;
+        clear: left;
+    }
+
+    .pro-plans.plan-container .plan-col-2:nth-child(1) {
+        border-left: 0;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .pro-plans.plan-container .plan-col-2 {
+        width: 50%;
+    }
+
+    .pro-plans.plan-container .plan-col-2:nth-child(4n) {
+        clear: none;
+    }
+
+    .pro-plans.plan-container .plan-col-2:nth-child(3) {
+        clear: left;
+        border-left: 0;
+    }
+
+    .pro-plans.plan-container .plan-col-2:nth-child(5) {
+        clear: left;
+        border-left: 0;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .pro-plans.plan-container .plan-col-2 {
+        width: 100%;
+        border: 0;
+        clear: none;
+        float: none;
+    }
+}
+
+.pro-plans .pro-plan-wrap {
+    border-top: 10px solid #008a32;
+    padding: 40px;
+    background-color: #fff;
+    -webkit-box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
+}
+
+@media only screen and (max-width: 992px) {
+    .pro-plans .pro-plan-wrap {
+        padding: 40px 30px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .pro-plans .pro-plan-wrap {
+        margin-bottom: 40px;
+    }
+}
+
+.pro-plans .pro-plan-wrap .features-row {
+    margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+    .pro-plans .pro-plan-wrap .features-row {
+        margin-bottom: 0;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .pro-plans .pro-plan-wrap .features-row .col-sm-6 {
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .pro-plans .pro-plan-wrap .features-row .col-sm-6 img {
+        margin: 0 auto 20px;
+    }
+}
+
+.pro-plans .pro-plan-wrap .plan-flag {
+    color: #000;
+    font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;
+    font-size: 28px;
+    font-size: 2.8rem;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    line-height: 1;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMTgxLjggNjQuMiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTgxLjggNjQuMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cG9seWdvbiBmaWxsPSIjRkVEQzQ1IiBwb2ludHM9IjE3LDAgMCwyNC4yIDMsNTYgMTY0LjUsNjQuMiAxODEuOCw0My44IDE4MSw0LjMgIi8+DQo8L3N2Zz4NCg==) no-repeat center center;
+    background-size: cover;
+    overflow: visible;
+}
+
+.pro-plans .pro-plan-wrap .plan-flag:before {
+    content: '';
+}
+
+.plan-tile .plan-flag {
+    position: absolute;
+    top: -20px;
+    right: 30px;
+    color: #fff;
+    display: inline-block;
+    padding: 0 15px;
+    line-height: 2.5;
+}
+
+.pro-plans .pro-plan-wrap h6 {
+    margin-top: 0;
+}
+
+.pro-plans .pro-plan-wrap h2 {
+    margin-bottom: 14px;
+}
+
+.pro-plans .pro-plan-wrap .plan-title {
+    font-size: 30px;
+    font-size: 3rem;
+    margin-top: 0;
+    font-family: 'Walsheim-Bold';
+    text-transform: none;
+    word-wrap: break-word;
+    word-break: break-word;
+    white-space: -moz-pre-wrap;
+}
+
+.pro-plans .pro-plan-wrap .plan-subtitle {
+    color: #b3b3b3;
+    font-weight: 700;
+}
+
+.pro-plans .pro-plan-wrap .plan-text {
+    min-height: 44px;
+    margin-bottom: 5px;
+}
+
+.pro-plans .pro-plan-wrap .plan-tile-top {
+    padding: 0px;
+}
+
+.pro-plans .pro-plan-wrap .plan-disclaimers {
+    font-size: 14px;
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+}
+
+.pro-plans .pro-plan-wrap .plan-price-wrap {
+    min-height: 92px;
+}
+
+.pro-plans .pro-plan-wrap .plan-price-wrap .plan-price {
+    font-size: 45px;
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: #ef6c0f;
+    font-family: 'Walsheim-Bold';
+}
+
+.pro-plans .pro-plan-wrap .plan-price-wrap .plan-duration {
+    font-size: 24px;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #ef6c0f;
+}
+
+.pro-plans .pro-plan-wrap .btn {
+    margin-bottom: 20px;
+}
+
+.pro-plans .pro-plan-wrap .plan-item {
+    border-top: 0 none;
+    min-height: 0;
+    padding: 5px 0;
+    text-align: left;
+    font-size: 16px;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+}
+
+.pro-plans .include-check {
+    position: relative;
+    padding-left: 45px;
+    margin-top: 20px;
+}
+
+.pro-plans .include-check:before {
+    content: "";
+    background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
+    background-position: 0 -668px;
+    background-size: 205px auto;
+    width: 25px;
+    height: 27px;
+    padding-right: 5px;
+    position: absolute;
+    left: 0;
+    top: -6px;
+}
+
+.pro-plans .sf-tipper-target {
+    background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
+    background-position: 0 -864px;
+    width: 15px;
+    height: 16px;
+    display: inline-block;
+    background-size: 205px auto;
+    vertical-align: baseline;
+}
+      </style>
       <div class="pro-plans-wrap bg-gray-light">
-        <div id="plans" data-icode="" class="container pro-plans"> 
+        <div id="plans" data-icode="" class="container pro-plans">
+           
+           
+          ##if(if(countrySiteAny(uk)))
+           
           <div class="col-sm-4 plan-tile plan-pro">
             <atlantis:webstash type="css">
               <style>
@@ -107,20 +1445,80 @@
               </style>
             </atlantis:webstash>
             <div class="pro-plan-wrap">
-              <h2 class="plan-title">Personal</h2>
-              <p class="plan-text">Perfect for personal websites</p>
-              <div class="plan-price-wrap"> <strong>Starting at<br><span class="plan-price text-warning">[@T[productprice:<current productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/mo</span> 
-                  ##if(productHasSavingsMoreThan(7524, 7524, 0))
-                   <br><strong>was 
-                    <strike>[@T[productprice:<list productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary">Save [@T[productcompare:<percent primaryproductid="7524" secondaryproductid="7524" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span></strong> 
-                  ##endif
-                   </strong></div>
-              <button data-tcode="" data-plan="wsb_personal_12month" class="btn btn-purchase btn-plan btn-lg btn-block">Add to Cart</button>
-              <div class="plan-item"><b>Free Domain with annual Plan</b></div>
-              <div class="plan-item"><b>50</b> Personal Themes</div>
-              <div class="plan-item"><b>Unlimited</b> Pages</div>
-              <div class="plan-item"><b>1 GB</b> Disk Space</div>
-              <div class="plan-item"><b>150 GB</b> Bandwidth</div>
+              <h2 class="plan-title">[@L[cds.sales/gd/hosting/website-builder:economy-title]@L]</h2>
+              <p class="plan-text">[@L[cds.sales/gd/hosting/website-builder:economy-description]@L]</p>
+              <div class="plan-price-wrap"><span class="plan-price text-warning">[@T[productprice:<current productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
+                ##if(productHasSavingsMoreThan(7524, 7524, 0))
+                 <br><strong>[@L[cds.sales/_common:was]@L] 
+                  <strike>[@T[productprice:<list productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary">[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7524" secondaryproductid="7524" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span></strong> 
+                ##endif
+                 
+              </div>
+              <button id="product-A" data-tcode="" data-plan="wsb_personal_12month" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:plan-domain]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]'></span></div>
+              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:economy-themes]@L]</div>
+              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:economy-pages]@L]</div>
+              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:economy-diskspace]@L]</div>
+              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:economy-bandwidth]@L]</div>
+            </div>
+          </div> 
+          ##else
+           
+          <div class="col-sm-4 plan-tile plan-pro">
+            <atlantis:webstash type="css">
+              <style>
+                .pro-plans { margin-top: 0; }
+                .form-control { margin-bottom: 10px; }
+                
+              </style>
+            </atlantis:webstash>
+            <div class="pro-plan-wrap">
+              <h2 class="plan-title">[@L[cds.sales/gd/hosting/website-builder:personal-title]@L]</h2>
+              <p class="plan-text">[@L[cds.sales/gd/hosting/website-builder:personal-description]@L]</p>
+              <div class="plan-price-wrap"><span class="plan-price text-warning">[@T[productprice:<current productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
+                ##if(productHasSavingsMoreThan(7524, 7524, 0))
+                 <br><strong>[@L[cds.sales/_common:was]@L] 
+                  <strike>[@T[productprice:<list productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary">[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7524" secondaryproductid="7524" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span></strong> 
+                ##endif
+                 
+              </div>
+              <button id="product-A" data-tcode="" data-plan="wsb_personal_12month" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:plan-domain]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]'></span></div>
+              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:personal-themes]@L]</div>
+              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:economy-pages]@L]</div>
+              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:economy-diskspace]@L]</div>
+              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:economy-bandwidth]@L]</div>
+            </div>
+          </div> 
+          ##endif
+           
+          <div class="col-sm-4 plan-tile plan-pro">
+            <atlantis:webstash type="css">
+              <style>
+                .pro-plans { margin-top: 0; }
+                .form-control { margin-bottom: 10px; }
+                
+              </style>
+            </atlantis:webstash>
+            <div class="pro-plan-wrap">
+              <div class="plan-flag">[@L[cds.sales/gd/hosting/website-builder:popular-tag]@L]</div>
+              <h2 class="plan-title">[@L[cds.sales/gd/hosting/website-builder:business-title]@L]</h2>
+              <p class="plan-text">[@L[cds.sales/gd/hosting/website-builder:business-description]@L]</p>
+              <div class="plan-price-wrap"><span class="plan-price text-warning">[@T[productprice:<current productid="7509" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
+                ##if(productHasSavingsMoreThan(7509, 7509, 0))
+                 <br><strong>[@L[cds.sales/_common:was]@L] 
+                  <strike>[@T[productprice:<list productid="7509" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary">[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7509" secondaryproductid="7509" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span></strong> 
+                ##endif
+                 
+              </div>
+              <button id="product-B" data-tcode="" data-plan="wsb_business_12month" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:plan-domain]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]'></span></div>
+              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:business-themes]@L]</div>
+              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:business-pages]@L]</div>
+              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:business-diskspace]@L]</div>
+              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:business-bandwidth]@L]</div>
+              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:rb_5_business_emails]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-content='[@L[cds.sales/gd/hosting/website-builder:rb_5_business_emails_tooltip]@L]'></span></div>
+              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:rb_mobile_site]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-content='[@L[cds.sales/gd/hosting/website-builder:rb_mobile_site_tooltip]@L]'></span></div>
             </div>
           </div>
           <div class="col-sm-4 plan-tile plan-pro">
@@ -132,54 +1530,27 @@
               </style>
             </atlantis:webstash>
             <div class="pro-plan-wrap">
-              <div class="plan-flag">Most Popular</div>
-              <h2 class="plan-title">Business</h2>
-              <p class="plan-text">Ideal for building and managing multiple sites.</p>
-              <div class="plan-price-wrap"> <strong>Starting at<br><span class="plan-price text-warning">[@T[productprice:<current productid="7509" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/mo</span> 
-                  ##if(productHasSavingsMoreThan(7509, 7509, 0))
-                   <br><strong>was 
-                    <strike>[@T[productprice:<list productid="7509" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary">Save [@T[productcompare:<percent primaryproductid="7509" secondaryproductid="7509" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span></strong> 
-                  ##endif
-                   </strong></div>
-              <button data-tcode="" data-plan="wsb_business_12month" class="btn btn-purchase btn-plan btn-lg btn-block">Add to Cart</button>
-              <div class="plan-item"><b>Free Domain with annual Plan</b></div>
-              <div class="plan-item"><b>300</b> Business & Personal Themes</div>
-              <div class="plan-item"><b>Unlimited</b> Pages</div>
-              <div class="plan-item"><b>10 GB</b> Disk Space</div>
-              <div class="plan-item"><b>500 GB</b> Bandwidth</div>
-              <div class="plan-item"><b>5</b> Business Email Addresses</div>
-              <div class="plan-item"><b>Mobile</b> Site</div>
-            </div>
-          </div>
-          <div class="col-sm-4 plan-tile plan-pro">
-            <atlantis:webstash type="css">
-              <style>
-                .pro-plans { margin-top: 0; }
-                .form-control { margin-bottom: 10px; }
-                
-              </style>
-            </atlantis:webstash>
-            <div class="pro-plan-wrap">
-              <div class="plan-flag">Includes SEO</div>
-              <h2 class="plan-title">Unlimited</h2>
-              <p class="plan-text">Good for higher traffic. Twice the power, memory, email and more.</p>
-              <div class="plan-price-wrap"> <strong>Starting at<br><span class="plan-price text-warning">[@T[productprice:<current productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/mo</span> 
-                  ##if(productHasSavingsMoreThan(7514, 7514, 0))
-                   <br><strong>was 
-                    <strike>[@T[productprice:<list productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary">Save [@T[productcompare:<percent primaryproductid="7514" secondaryproductid="7514" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span></strong> 
-                  ##endif
-                   </strong></div>
-              <button data-tcode="" data-plan="wsb_businessplus_12month" class="btn btn-purchase btn-plan btn-lg btn-block">Add to Cart</button>
-              <div class="plan-item"><b>Free Domain with annual Plan</b></div>
-              <div class="plan-item"><b>300</b> Business & Personal Themes</div>
-              <div class="plan-item"><b>Unlimited</b> Pages</div>
-              <div class="plan-item"><b>50 GB</b> Disk Space</div>
-              <div class="plan-item"><b>1000 GB</b> Bandwidth</div>
-              <div class="plan-item"><b>1</b> Business Email Addresses</div>
-              <div class="plan-item"><b>Mobile</b> Site</div>
-              <div class="plan-item"><b>Search Engine Optimization</b></div>
-              <div class="plan-item"><b>One-Click</b> Social Media Manager</div>
-              <div class="plan-item"><b>1 year SSL Certificate</b></div>
+              <div class="plan-flag">[@L[cds.sales/gd/hosting/website-builder:wsb-plus-seo]@L]</div>
+              <h2 class="plan-title">[@L[cds.sales/gd/hosting/website-builder:unlimited-plan-title]@L]</h2>
+              <p class="plan-text">[@L[cds.sales/gd/hosting/website-builder:unlimited-description]@L]</p>
+              <div class="plan-price-wrap"><span class="plan-price text-warning">[@T[productprice:<current productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
+                ##if(productHasSavingsMoreThan(7514, 7514, 0))
+                 <br><strong>[@L[cds.sales/_common:was]@L] 
+                  <strike>[@T[productprice:<list productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary">[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7514" secondaryproductid="7514" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span></strong> 
+                ##endif
+                 
+              </div>
+              <button id="product-C" data-tcode="" data-plan="wsb_businessplus_12month" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:plan-domain]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]'></span></div>
+              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:unlimited-themes]@L]</div>
+              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:unlimited-pages]@L]</div>
+              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:unlimited-diskspace]@L]</div>
+              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:unlimited-bandwidth]@L]</div>
+              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:rb_10_business_emails]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-content='[@L[cds.sales/gd/hosting/website-builder:rb_5_business_emails_tooltip]@L]'></span></div>
+              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:rb_mobile_site]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-content='[@L[cds.sales/gd/hosting/website-builder:rb_mobile_site_tooltip]@L]'></span></div>
+              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:rb_seo]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-content='[@L[cds.sales/gd/hosting/website-builder:rb_seo_tooltip]@L]'></span></div>
+              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:rb_oneclick]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-content='[@L[cds.sales/gd/hosting/website-builder:rb_oneclick_tooltip]@L]'></span></div>
+              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:rb_ssl]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-width='300' data-content='[@L[cds.sales/gd/hosting/website-builder:rb_ssl_tooltip]@L]'></span></div>
             </div>
           </div>
           <atlantis:webstash type="js">
@@ -600,154 +1971,42 @@ text-transform: uppercase;
           </div>
         </div>
       </div>
-            <style>.features-tabbed-carousel-top {
-  padding: 70px 0 0;
-  text-align: center;
-}
-.features-tabbed-carousel-top h2 {
-  margin-top: 0;
-}
-.features-tabbed-carousel-top .features-tabbed-carousel-icon {
-  text-align: center;
-  cursor: pointer;
-  position: relative;
-  padding-top: 15px;
-  padding-bottom: 15px;
-}
-
-.features-tabbed-carousel-top .features-tabbed-carousel-icon img {
-max-width: 70%;
-vertical-align: middle;
-display: inline-block;
-}
-.features-tabbed-carousel-top .features-tabbed-carousel-icon img {
-margin-bottom: 10px;
-}
-.img-center {
-margin: 0 auto;
-}
-
-.features-tabbed-carousel-top .features-tabbed-carousel-icon.active .feature-text {
-color: #008a32;
-font-family: 'Walsheim-Black';
-}
-.features-tabbed-carousel-top .features-tabbed-carousel-icon .feature-text {
-font-family: 'Walsheim-Bold';
-font-size: 18px;
-font-size: 1.8rem;
-line-height: 1.1;
-text-transform: uppercase;
-}
-.feature-carousel-icon {font-size: 36px;margin-bottom: 10px;}
-
-@media only screen and (min-width: 992px){
-  .features-tabbed-carousel-top .features-tabbed-carousel-icon:not(:first-child) {
-  border-left: 1px solid #808080;
-  }
-}
-@media only screen and (min-width: 992px){
-  .features-tabbed-carousel-top .features-tabbed-carousel-icon.active:after {
-  content: "";
-  width: 0;
-  height: 0;
-  border-top: 15px solid #008a32;
-  border-right: 15px solid transparent;
-  border-left: 15px solid transparent;
-  position: absolute;
-  bottom: -15px;
-  margin-left: -20px;
-  left: 50%;
-  }
-}
-            </style>
-            <div data-icode="" id="" class="features-tabbed-carousel-top ">
-              <div class="container">
-                <div class="row">
-                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                    <h1>Popular apps keep your site fresh</h1>
-                    <h4 class="headline-primary">Easily integrate social and business apps in your site to share information and keep customers coming back.</h4>
-                  </div>
-                </div>
-                <div class="row">
-                        <div data-begin="0" data-end="0" class="features-tabbed-carousel-icon col-md-2">
-                          <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
-                            <div class="feature-carousel-icon"><span class="uxicon uxicon-facebook-box"></span></div>
-                            <div class="feature-text">facebook</div>
-                          </div>
-                        </div>
-                        <div data-begin="1" data-end="1" class="features-tabbed-carousel-icon col-md-2">
-                          <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
-                            <div class="feature-carousel-icon"><span class="uxicon uxicon-twitter"></span></div>
-                            <div class="feature-text">twitter</div>
-                          </div>
-                        </div>
-                        <div data-begin="2" data-end="2" class="features-tabbed-carousel-icon col-md-2">
-                          <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
-                            <div class="feature-carousel-icon"><span class="uxicon uxicon-youtube-box"></span></div>
-                            <div class="feature-text">youtube</div>
-                          </div>
-                        </div>
-                        <div data-begin="3" data-end="3" class="features-tabbed-carousel-icon col-md-2">
-                          <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
-                            <div class="feature-carousel-icon"><span class="uxicon uxicon-yelp"></span></div>
-                            <div class="feature-text">yelp</div>
-                          </div>
-                        </div>
-                        <div data-begin="4" data-end="4" class="features-tabbed-carousel-icon col-md-2">
-                          <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
-                            <div class="feature-carousel-icon"><span class="uxicon uxicon-paypal"></span></div>
-                            <div class="feature-text">paypal</div>
-                          </div>
-                        </div>
-                        <div data-begin="5" data-end="5" class="features-tabbed-carousel-icon col-md-2">
-                          <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
-                            <div class="feature-carousel-icon"><span class="uxicon uxicon-homefinder"></span></div>
-                            <div class="feature-text">home owner</div>
-                          </div>
-                        </div>
-                </div>
+            <div data-begin="0" data-end="0" class="features-tabbed-carousel-icon">
+              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                <div class="feature-carousel-icon"><span class="uxicon uxicon-facebook-box"></span></div>
+                <div class="feature-text">facebook</div>
               </div>
             </div>
-            <atlantis:webstash type="js">
-              <script type="text/javascript">
-                $(window).load(function() {
-                  setTimeout(function() {
-                    $(".features-tabbed-carousel-icon:first").click();
-                  }, 500);
-                
-                  var maxTabHeight = 0;
-                  $(".features-tabbed-carousel-icon").each(function(index, tab) {
-                    maxTabHeight = $(tab).outerHeight() > maxTabHeight ? $(tab).outerHeight() : maxTabHeight;
-                  }).css("height", maxTabHeight);
-                
-                  var maxFeatureTextHeight = 0;
-                  $(".feature-text").each(function(index, featureText) {
-                    maxFeatureTextHeight = $(featureText).height() > maxFeatureTextHeight ? $(featureText).height() : maxFeatureTextHeight;
-                  }).css({height: maxFeatureTextHeight});
-                
-                });
-                
-                $(".features-tabbed-carousel-icon").click(function() {
-                  var slideNum = $(this).data("begin");
-                  $(".features-tabbed-carousel-icon").removeClass("active");
-                  $(this).addClass("active");
-                  $('#carousel-social-media').carousel(slideNum);
-                });
-                
-                $('#carousel-social-media').on('slid.bs.carousel', function () {
-                  var carouselData = $(this).data('bs.carousel');
-                  var currentIndex = carouselData.getActiveIndex();
-                  $(".features-tabbed-carousel-icon").each(function() {
-                    if (currentIndex >= parseInt($(this).data("begin")) && currentIndex <= parseInt($(this).data("end"))) {
-                      $(".features-tabbed-carousel-icon").removeClass("active");
-                      $(this).addClass("active");
-                    }
-                  });
-                });
-                
-                
-              </script>
-            </atlantis:webstash>
+            <div data-begin="1" data-end="1" class="features-tabbed-carousel-icon">
+              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                <div class="feature-carousel-icon"><span class="uxicon uxicon-twitter"></span></div>
+                <div class="feature-text">twitter</div>
+              </div>
+            </div>
+            <div data-begin="2" data-end="2" class="features-tabbed-carousel-icon">
+              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                <div class="feature-carousel-icon"><span class="uxicon uxicon-youtube-box"></span></div>
+                <div class="feature-text">youtube</div>
+              </div>
+            </div>
+            <div data-begin="3" data-end="3" class="features-tabbed-carousel-icon">
+              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                <div class="feature-carousel-icon"><span class="uxicon uxicon-yelp"></span></div>
+                <div class="feature-text">yelp</div>
+              </div>
+            </div>
+            <div data-begin="4" data-end="4" class="features-tabbed-carousel-icon">
+              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                <div class="feature-carousel-icon"><span class="uxicon uxicon-paypal"></span></div>
+                <div class="feature-text">paypal</div>
+              </div>
+            </div>
+            <div data-begin="5" data-end="5" class="features-tabbed-carousel-icon">
+              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                <div class="feature-carousel-icon"><span class="uxicon uxicon-homefinder"></span></div>
+                <div class="feature-text">home owner</div>
+              </div>
+            </div>
             <style>.item-wrapper { padding: 70px 0 20px; }
 
 .carousel-wrap { padding-bottom: 70px; }
@@ -1700,7 +2959,8 @@ margin-bottom: 20px;
 }
 @media (min-width: 992px) {
   .or-container:after {
-    left: 121%
+    left: 121%;
+    bottom: 50%;
   }
 }
 
@@ -1771,6 +3031,15 @@ margin-bottom: 20px;
 .two-up-speech-shape.two-up-speech-shape-white:after {
   background-color: #fff;
 }
+.two-up-speech-shape.two-up-speech-shape-yellow {
+  background-color: #ffde2d;
+}
+.two-up-speech-shape.two-up-speech-shape-yellow:before {
+  border-top-color: #ffde2d;
+}
+.two-up-speech-shape.two-up-speech-shape-yellow:after {
+  background-color: #ffde2d;
+}
       </style>
       <div id="two-up" class="two-up-title-wrap bg-white">
         <div>
@@ -1821,7 +3090,6 @@ margin-bottom: 20px;
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- FOOTEREND-->
      
-    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Script"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Bottom"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- liveperson includes -->
     <div id="lpButtonDiv"></div><!-- End Main Content -->

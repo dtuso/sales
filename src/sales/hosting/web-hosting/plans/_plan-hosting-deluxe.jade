@@ -1,17 +1,10 @@
 extend ../../../../../src/templates/plan-tile
 
 append vars
-  - title = "Deluxe";
-  - description = "Ideal for building and managing multiple sites."
-  - features = ["Unlimited Websites","Unlimited Storage <span class='sf-tip sf-tipper-target' data-style='qt' data-content='Our Web Hosting plans are designed to host most personal, small business and organization websites. We do not limit the amount of storage and bandwidth your site can use as long as it complies with our Hosting Agreement. Should your website bandwidth or storage usage present a risk to the stability, performance or uptime of our servers, we will notify you via email and you may be required to upgrade to a Virtual Private Server or Dedicated (Private) Server, or we may restrict the resources your website is using. It’s very rare that a website violates our Hosting Agreement and is typically only seen in sites that use hosting for file sharing or storage.'></span>","Unlimited bandwidth","500 Email Addresses","Free Domain with annual plan"];
+  - title = "[@L[cds.sales/hosting/web-hosting-rebrand:deluxePlan]@L]";
+  - description = "[@L[cds.sales/hosting/web-hosting-rebrand:greatHome]@L]";
+  - features = ["[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedWeb]@L]","[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedStorage]@L]","[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedBand]@L]","[@L[cds.sales/hosting/web-hosting-rebrand:fiveHundredEMail]@L]","[@L[cds.sales/hosting/web-hosting-rebrand:freeDomain]@L]"];
   - pfid = "32059";
-  - listID="product-B";
-  - showDropDownList = true;
-
-block planOptions 
-  +addPlanOption("1", "32050", "host_GridHostDlxDiabloLinMo_us")
-  +addPlanOption("12", "32059", "host_GridHostDlxDiabloLin1Yr_us")
-  +addPlanOption("24", "32062", "host_GridHostDlxDiabloLin2Yr_us")
-  +addPlanOption("36", "32065", "host_GridHostDlxDiabloLin3Yr_us")
-  +addPlanOption("48", "32068", "host_GridHostDlxDiabloLin4Yr_us")
-  +addPlanOption("60", "32071", "host_GridHostDlxDiabloLin5Yr_us")
+  - buttonid="product-B";
+  - term ="/[@L[cds.sales/_common:month]@L]"
+  - defaultPlan = "host_GridHostDlxDiabloLin1Yr_us";

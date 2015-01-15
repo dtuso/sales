@@ -1,0 +1,23 @@
+extends ../../../templates/marquees/landing-page-marquee.jade
+
+append marqueeStyles
+  style.
+    .marquee { background: url([@T[link:<imageroot />]@T]fos/mike/img/hosting/bg-marquee-V10.jpg) no-repeat top center;); }
+
+block topAlignedContent
+  +productReview(5, "#")
+  +productDescription("HOSTING THAT'S MORE </br> RELIABLE THAN YOUR </br> BEAN ROASTING -------------------- PLAID SHIRT")
+  +productText("[@L[cds.sales/hosting/web-hosting-rebrand:guaranteeText1Rebrand]@L] [@L[cds.sales/hosting/web-hosting-rebrand:guaranteeText2Rebrand]@L] [@L[cds.sales/hosting/web-hosting-rebrand:guaranteeText3Rebrand]@L]")
+  +callToAction("[@L[cds.sales/hosting/web-hosting-rebrand:getstarted]@L]","[@T[link:<relative path='~/hosting/web-hosting-config-new.aspx' secure='true'><param name='ci' value='89262' /><param name='plan' value='host_GridHostEcoDiabloLin1Yr_us' /></relative>]@T]")
+
+  //-
+    .marquee-product-review
+      i.uxicon.uxicon-star.text-warning
+      i.uxicon.uxicon-star.text-warning
+      i.uxicon.uxicon-star.text-warning
+      i.uxicon.uxicon-star.text-warning
+      i.uxicon.uxicon-star.text-warning
+      a Reviews
+    h2.marquee-product-description FAST, SECURE, RELIABLE HOSTING THAT GROWS WITH YOUR BUSINESS
+    .marquee-product-text Industry's leading page load times. 99.9% Uptime Guarantee*.
+    a.btn.btn-primary.jump-arrow-btn Get Started

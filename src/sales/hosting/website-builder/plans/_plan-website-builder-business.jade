@@ -1,17 +1,11 @@
 extend ../../../../../src/templates/plan-tile
 
 append vars
-  - title = "Business";
-  - description = "Ideal for building and managing multiple sites."
-  - features = ["<b>Free Domain with annual Plan</b>","<b>300</b> Business & Personal Themes","<b>Unlimited</b> Pages","<b>10 GB</b> Disk Space","<b>500 GB</b> Bandwidth","<b>5</b> Business Email Addresses","<b>Mobile</b> Site"];
+  - title = "[@L[cds.sales/gd/hosting/website-builder:business-title]@L]";
+  - description = "[@L[cds.sales/gd/hosting/website-builder:business-description]@L]"
+  - features = ["[@L[cds.sales/gd/hosting/website-builder:plan-domain]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]'></span>","[@L[cds.sales/gd/hosting/website-builder:business-themes]@L]","[@L[cds.sales/gd/hosting/website-builder:business-pages]@L]","[@L[cds.sales/gd/hosting/website-builder:business-diskspace]@L]","[@L[cds.sales/gd/hosting/website-builder:business-bandwidth]@L]","[@L[cds.sales/gd/hosting/website-builder:rb_5_business_emails]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-content='[@L[cds.sales/gd/hosting/website-builder:rb_5_business_emails_tooltip]@L]'></span>","[@L[cds.sales/gd/hosting/website-builder:rb_mobile_site]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-content='[@L[cds.sales/gd/hosting/website-builder:rb_mobile_site_tooltip]@L]'></span>"];
   - pfid = "7509";
-  - listID="product-B";
-  - flagText = "Most Popular";
+  - buttonid="product-B";
+  - flagText = "[@L[cds.sales/gd/hosting/website-builder:popular-tag]@L]";
+  - term ="/[@L[cds.sales/_common:month]@L]"
   - defaultPlan = "wsb_business_12month";
-
-//-
-  block planOptions 
-    +addPlanOption("1", "7502", "wsb_business_1month")
-    +addPlanOption("12", "7509", "wsb_business_12month")
-    +addPlanOption("24", "7510", "wsb_business_24month")
-    +addPlanOption("36", "7511", "wsb_business_36month")

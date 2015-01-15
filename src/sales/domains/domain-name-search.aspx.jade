@@ -1,0 +1,191 @@
+extends ../../templates/pages/landing-page
+
+mixin tldMini(tldName, bntText, btnUrl)
+  span !{tldName}
+  a.btn.btn-primary(href!=btnUrl) !{bntText}
+
+append pageStyles
+  atlantis:webstash(type="css")
+    style.
+      .plan-tile { margin-top: 70px; }
+      .search-template .search-template-box { margin-bottom: 10px; }
+      #domainSearch a { color: #333; font-weight: bold; margin-right: 30px; }
+      #domainSearch { padding-bottom: 10px; }
+
+append endOfPageScripts
+  script(src!="[@T[link:<javascriptroot />]@T]fos/201401/global/vendor/bootstrap/js/bootstrap.min.js" type="text/javascript")
+  script(type="text/javascript").
+    $("#bulkModal").on('show.bs.modal',function (e){
+          var $container = $('#chart-iframe-container');
+          if ($container.data('hasIframe')) {
+            $iframe = $('#bulkModal .iframe-modal');
+              $iframe.contents().find('a.secondary-action-fos-button').hide();
+              $iframe.contents().find('body').on('click', 'a', function(e){ $(this).attr('target', '_parent'); });
+          } else {
+              $container.html('<h4>Loading...</h4>');
+              var frameSrc = $container.data('src');
+              $iframe = $('<iframe></iframe>');
+              $iframe.addClass('iframe-modal');
+              $iframe.attr('src', frameSrc);
+              $container.html($iframe);
+              $container.data('hasIframe', true);
+          }
+      });
+    
+block domainSearch
+  //- remove domain search from top of page
+
+block marquee
+  section#marquee
+    include ./domain-name-search/_marquee.jade
+  section#domainSearch.bg-green-official
+    .container
+      .row
+        .col-xs-12(style="padding-top:10px;")
+          h4 Start your domain name search here
+      +domainSearchInput({"placeholderText":"Type the one you want here"})
+      .row
+        .col-xs-12
+          a.btn-link(href="#" data-toggle="modal" data-target="#bulkModal") Domain Pricing
+          a.btn-link(href!="[@T[link:<relative path='../bulk-domain-search.aspx'></relative>]@T]") Bulk Domain Search
+          a.btn-link(href!="[@T[link:<relative path='/domains/transfers.aspx'></relative>]@T]") Transfer Domains
+
+block plans
+  section#plans
+    atlantis:webstash(type="css")
+      style.
+        #plans .tldlogo{background-image:url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/domains/search/img/tldlogos-s9ffd8fe504.png);background-repeat:no-repeat;display:inline-block;vertical-align:middle;}
+        #plans .pro-plans .pro-plan-wrap { padding: 40px 30px !important; }
+        #plans .pro-plan-wrap .plan-price-wrap .plan-price { font-size: 35px !important; font-weight: 300 !important; }
+    | 
+    |##if(activeLanguageAny([en-ca]))
+    include ./domain-name-search/pod-locales/_top-pod-en-ca.jade
+    | 
+    |##else
+    include ./domain-name-search/pod-locales/_top-pod-en-us.jade
+    | 
+    |##endif
+
+  section#promo-carousel.features-carousel-pro-carousel
+    atlantis:webstash(type="css")
+      style.
+        #promo-carousel .plan-carousel-copy { font-family: 'Walsheim-Black'; font-size: 24px; }
+        #promo-carousel .btn { margin-top: 40px; }
+    +carousel("my-carousel", 3)
+      +carouselItem()
+        .plan-carousel-copy(style="text-transform: uppercase;") FINALLY! A WEB ADDRESS THAT TELLS PEOPLE EXACTLY WHAT YOU DO
+        .plan-carousel-copy .attorney, .church, .club, .xyz and .guide are now available.
+        a.btn.btn-default-dark(href!="[@T[link:<relative path='/tlds/gtld.aspx'></relative>]@T]") Search Domains Now
+      +carouselItem()
+        .plan-carousel-copy(style="text-transform: uppercase;") 30% OFF
+        .plan-carousel-copy .global, .email, .website, .guru, .army now.
+        a.btn.btn-default-dark(href!="[@T[link:<relative path='/tlds/gtld.aspx'></relative>]@T]") Search Domains Now
+      +carouselItem()
+        .plan-carousel-copy SAVE up to 50% when you get online with
+        .plan-carousel-copy .com, .net, .co, .org, .me, .biz, or .us
+        a.btn.btn-default-dark(href!="[@T[link:<relative path='/tlds/gtld.aspx'></relative>]@T]") Search Domains Now
+
+block sections  
+  +renderMidPageNav
+
+  section#why-godaddy.key-benefits-wrap.tile-section.bg-pro-gray(data-mid-nav-title="Why GoDaddy?")
+    .container
+      .row
+        .col-sm-12(style="padding-top: 30px; padding-bottom: 30px;")
+          h2 Why Choose GoDaddy?
+          h3 With more than 58 million domains under management, we have more experience than anyone.  We're like your favorite local store that's been there for ages and always seems to have everything you need.
+      .row
+        .col-sm-4.key-benefit
+          .key-benefits-img-wrap
+            //- +lazyImage("[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_Group_ScalableResources.png")
+            img.key-benefits-img(src != "[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_Group_ScalableResources.png")
+          h3.key-benefits-title World's Largest Registrar
+          .key-benefits-text More people trust us than any other domain provider.  Since the right domain name can set you up for future success, you don't want to mess around.  Go with the world's largest registrar.
+        .col-sm-4.key-benefit
+          .key-benefits-img-wrap
+            img.key-benefits-img(src != "[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_Group_Security.png")
+          h3.key-benefits-title Widest Selection on the Web
+          .key-benefits-text Every time you enter a name in our domain serach box, our powerful engine searces the web's largest pool of names.  There's no better place to find the right domain name for your business.
+        .col-sm-4.key-benefit
+          .key-benefits-img-wrap
+            img.key-benefits-img(src != "[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_Group_WhatIsHosting.png")
+          h3.key-benefits-title Award-Winning 24/7 Support
+          .key-benefits-text Stumped by... anything?  Our smart, friendly domain experts are here to help.  Call them day or night at (480) 505-8877.
+
+  section#bottom-pods.bg-green-official
+    atlantis:webstash(type="css")
+      style.
+        #bottom-pods .pro-plans-wrap { margin-bottom: -310px; }
+        #bottom-pods .pro-plan-wrap .plan-price-wrap .plan-price { font-size: 35px !important; font-weight: 300 !important; }
+        #bottom-pods .bottom-headline { font-family: "Walsheim-Black"; font-size: 40px; color: #333333; text-align: center; display:block; padding:80px 0 0 0; }
+    span.bottom-headline HUNDREDS OF GREAT NEW DOMAINS JOIN .COM, .NET AND .ORG
+    | 
+    |##if(activeLanguageAny([en-ca]))
+    include ./domain-name-search/pod-locales/_bottom-pod-en-ca.jade
+    | 
+    |##else
+    include ./domain-name-search/pod-locales/_bottom-pod-en-us.jade
+    | 
+    |##endif
+
+  section#new-domains.bg-pro-gray
+    .container
+      atlantis:webstash(type="css")
+        style.
+          #new-domains {padding:280px 0 0 0;}
+          #new-domains.container{margin:0 auto;}
+          #new-domains ul{list-style-type:none; -webkit-padding-start:10px;}
+          #new-domains ul li {background-color:#ffffff; width: 100%; height:46px;}
+          #new-domains ul li span{font-family: "Walsheim-Black"; font-size: 30px; padding-left:10px;}
+          #new-domains ul li a{float:right;}
+          #new-domains .col-tld-title {padding-left: 10px;}
+      .row
+        .col-md-6
+          span.col-tld-title NEW DOMAINS 
+          span.bg-warning AVAILABLE:
+        .col-md-6
+          span.col-tld-title NEW DOMAINS 
+          span.bg-warning COMING SOON:
+      .row
+        .col-md-6
+          ul
+            li
+              +tldMini("domain name","REGISTER","[@T[link:<relative path='/tlds/com.aspx'><param name='ci' value='xxxxx' /></relative>]@T]")
+            li
+              +tldMini("domain name","REGISTER","[@T[link:<relative path='/tlds/com.aspx'><param name='ci' value='xxxxx' /></relative>]@T]")
+        .col-md-6
+          ul
+            li
+              +tldMini("domain name","REGISTER","[@T[link:<relative path='/tlds/com.aspx'><param name='ci' value='xxxxx' /></relative>]@T]")
+            li
+              +tldMini("domain name","REGISTER","[@T[link:<relative path='/tlds/com.aspx'><param name='ci' value='xxxxx' /></relative>]@T]")
+  
+  section#options.key-benefits-wrap.tile-section.bg-pro-gray(data-mid-nav-title="Options")
+    +renderTabbedCarousel({"icode":"12345"})
+      +addTab({"text":"first-tab"})
+      +addTab({"text":"second-tab"})
+
+  section#questions.bg-pro-gray(data-mid-nav-title="Questions?")
+    atlantis:webstash(type="css")
+      style.
+        #questions .question-headline {font-family: "Walsheim-Black"; font-size: 40px; color: #333333; text-align: center; display:block; }
+    span.question-headline YOUR QUESTIONS, OUR ANSWERS
+    +renderAccordion({"id":"question-accordion","buttonID":"question-btn","buttonText":"SEE ALL QUESTIONS"})
+      +accordionTab("WHAT'S A DOMAIN NAME?")
+        span A website is the key to blah blah blah blah
+      +accordionTab("HOW DO I SEARCH DOMAIN NAMES?")
+        span Well first you stick your left foot in, then you stick your left foot out...
+
+  section#hidden-modal
+    atlantis:webstash(type="css")
+      style.
+        .bulk-modal-dialog{width:895px;}
+        .modal-content{border-radius:6px !important;}
+        .iframe-modal{width:100%;height:600px;border:0 !important;}
+        button.close{padding:10px !important;}
+    .modal.fade#bulkModal
+      .modal-dialog.bulk-modal-dialog
+        .modal-content
+          .modal-body
+            button.close(type="button" data-dismiss="modal" aria-hidden="true")
+            #chart-iframe-container(data-src!="[@T[link:<relative path='domains/popups/chart.aspx'/>]@T]")
