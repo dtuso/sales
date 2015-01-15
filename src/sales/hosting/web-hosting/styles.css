@@ -20,8 +20,8 @@ h3 {
 }
 
 .tile-section {
-  padding-top: 70px;
-  padding-bottom: 70px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .compare-table-view-all {
@@ -190,3 +190,29 @@ h3 {
   white-space: nowrap !important;
   background-image: none !important;
 }
+
+.isToolTip {
+color: #333;
+text-decoration: none;
+cursor: pointer;
+}
+
+.heartIcon {
+  background-image: url(//img1.wsimg-com.ide/fos/mike/img/hosting/img-feature2-heart.png);
+  display: inline-block;
+  width: 59px;
+  height: 50px;
+  vertical-align: middle;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#speed-chart { min-height: 400px; }
+#speed-chart h3 { margin: 50px auto; text-align: center; }
+
+#speed-chart img { 
+  margin-bottom: 0;
+  margin-top: 20px;
+}
+
+#speed-chart p {text-align: right; }

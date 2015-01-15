@@ -46,6 +46,22 @@ prepend endOfPageScripts
        }
     }
     $('.dropdown-toggle').dropdown()
+    $(function() {
+    $('.isToolTip').tooltip({
+        placement: 'bottom',
+        html: true
+    }).on('show.bs.tooltip', function() {
+        $('.tooltip-delay').tooltip('hide');
+    });
+    $('.tooltip-delay').tooltip({
+        placement: 'bottom',
+        html: true,
+        delay: {
+            hide: 3000
+        }
+    }).on('show.bs.tooltip', function() {
+        $('.tooltip-delay').tooltip('hide');
+    });});
 
 append pageStyles
   style
@@ -55,11 +71,22 @@ block domainSearch
   //- remove domain search from top of hosting page
 
 block marquee
+  | 
+  |##if(activeLanguageAny([en-US]))
+  | 
+  section#marquee 
+    include ./web-hosting/_marquee-en-us.jade
+  | 
+  |##else
+  | 
   section#marquee 
     include ./web-hosting/_marquee.jade
+  | 
+  |##endif
+  | 
 
 block plans
-  section#plans(style="padding-top: 50px;")
+  section#plans(style="padding-top: 15px;")
     +renderPlanTiles(3) 
       +planTile
         include ./web-hosting/plans/_plan-hosting-economy.jade
@@ -134,21 +161,16 @@ block sections
           //    span.uxicon.uxicon-checkmark(aria-hidden="true")
           //    span Maybe you want to sell products on your webite.  Try Magento with one-click.
         .col-sm-6.one-click-right
-          div.text-center(data-center-element='{"vertical":{"target":{"method":"parents","selector":".features"},"verticalStyle":"margin-top","elementHeightMethod":"outerHeight","targetWidthMethod":"height"}}')
-            img.features-img.features-img-right(src!= "[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Feature_Small_Logos.png")
+          div.text-center
+            img.features-img.features-img-right(src!= "[@T[link:<imageroot />]@T]fos/mike/img/hosting/img-feature1-logos.png")
 
   section#speed-chart.tile-section
     .container
-      style.
-        #speed-chart { min-height: 400px; }
-        #speed-chart h3 { margin: 50px auto; text-align: center; }
-        #speed-chart img { margin: 50px auto; display: block; }
-        #speed-chart p {text-align: right; }
       .speed-chart
         | 
         |##if(activeLanguageAny([en-US]))
         | 
-        h3 [@L[cds.sales/hosting/web-hosting-rebrand:fastWebRebrand]@L]
+        h3 People <span class='heartIcon'></span> Fast Websites
         | 
         |##else
         | 
@@ -156,14 +178,13 @@ block sections
         | 
         |##endif
         | 
-        p July 2014
-        img(src!="[@T[link:<imageroot />]@T]fos/mike/img/pro-wp-speed.png")
+        img(src!="[@T[link:<imageroot />]@T]fos/mike/img/hosting/img-graph-chart.png")
         .speed-text
           img()
     .container
       .col-sm-2.text-center
         img(src!="[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Chart_Polygon.png")
-      .col-sm-10(style="padding-top: 50px;")
+      .col-sm-10
         div
           | 
           |##if(activeLanguageAny([en-US]))
@@ -256,17 +277,7 @@ block sections
         | 
         ul
           li [@L[cds.sales/hosting/web-hosting-rebrand:hostingAnswerList1]@L]
-          | 
-          |##if(activeLanguageAny([en-US]))
-          | 
-          li [@L[cds.sales/hosting/web-hosting-rebrand:hostingAnswerList2Rebrand]@L]
-          | 
-          |##else
-          | 
           li [@L[cds.sales/hosting/web-hosting-rebrand:hostingAnswerList2]@L]
-          | 
-          |##endif
-          | 
           li [@L[cds.sales/hosting/web-hosting-rebrand:hostingAnswerList3]@L]
           li [@L[cds.sales/hosting/web-hosting-rebrand:hostingAnswerList4]@L]
 
@@ -545,11 +556,6 @@ block sections
               td <span class='icon gray-check-icon'></span>
               td <span class='icon gray-check-icon'></span>
               td <span class='icon gray-check-icon'></span>
-            tr
-              td [@L[cds.sales/gd/hosting/web-hosting:compare]@L]
-              td <span class='icon gray-check-icon'></span>
-              td <span class='icon gray-check-icon'></span>
-              td <span class='icon gray-check-icon'></span>
             
       #parallels-tab.table-responsive(style="display:none;")
         +compareFeaturesTable({showViewAllButton: false, numberOfRowsNotHidden: 9, tableID: "parallels-table", includeStyles: false})
@@ -825,16 +831,6 @@ block sections
               td <span class='icon gray-check-icon'></span>
               td <span class='icon gray-check-icon'></span>
               td <span class='icon gray-check-icon'></span>
-            tr
-              td [@L[cds.sales/gd/hosting/web-hosting:compare]@L]
-              td <span class='icon gray-check-icon'></span>
-              td <span class='icon gray-check-icon'></span>
-              td <span class='icon gray-check-icon'></span>
-            tr
-              td [@L[cds.sales/gd/hosting/web-hosting:compare]@L]
-              td [@L[cds.sales/gd/hosting/web-hosting:compare]@L]
-              td [@L[cds.sales/gd/hosting/web-hosting:compare]@L]
-              td [@L[cds.sales/gd/hosting/web-hosting:compare]@L]
       +compareViewAllButton(["cpanel-table", "parallels-table"])
 
   section#platforms(data-mid-nav-title="Platforms")
@@ -864,7 +860,7 @@ block sections
           div [@P[userControl:<Data location="~/Shared/Tabs/controls/BVReviewsNoJS.ascx"><Parameters><Parameter key="ProductId" value="web_hosting" /><Parameter key="ReviewNumber" value="1" /></Parameters></Data>]@P]
 
   section#faq.tile-section
-    +renderAccordion({id: "test-faq", buttonID: "test-button", buttonText: "hey you"})
+    +renderAccordion({id: "test-faq", buttonID: "test-button", buttonText: "[@L[cds.sales/hosting/web-hosting-rebrand:seeAllQuestions]@L]"})
       h2 [@L[cds.sales/hosting/web-hosting-rebrand:yourQuestOurAns]@L]
       +accordionTab("[@L[cds.sales/gd/hosting/web-hosting:faq-first-slide-title-cp]@L]")
         [@L[cds.sales/gd/hosting/web-hosting:faq-first-slide-content-cp]@L]
