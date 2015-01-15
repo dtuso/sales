@@ -317,6 +317,12 @@ function verifyDomainIsStillAvailable(e) {
 }
 
 function showChoicesScreen(e){
+
+  // bypass the choices if OLS is not available for their market
+  if(!got1Page.canOfferOls) {
+    goToDppCheckoutPage(e);
+    return;
+  }
   var $this = $(e.target),
     domain = $this.data('domain');
 

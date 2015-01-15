@@ -63,7 +63,7 @@
 };
 
 ##if(!productIsOffered(105))
-got1Page.canOfferOls = false;
+  got1Page.canOfferOls = false;
 ##endif
 
 
@@ -354,6 +354,12 @@ function verifyDomainIsStillAvailable(e) {
 }
 
 function showChoicesScreen(e){
+
+  // bypass the choices if OLS is not available for their market
+  if(!got1Page.canOfferOls) {
+    goToDppCheckoutPage(e);
+    return;
+  }
   var $this = $(e.target),
     domain = $this.data('domain');
 
@@ -1243,7 +1249,7 @@ function showTypeYourDomain() {
                 <h2>[@L[cds.sales/offers/online-business:32573-choose-wsb-text]@L]</h2>
                 <h4>[@L[cds.sales/offers/online-business:32573-choose-wsb-all-this-for-just-text]@L]</h4>
                 <div data-tokenize="[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T]" class="plan-price-wrap">[@L[cds.sales/offers/online-business:32573-choose-wsb-all-this-for-just-price]@L]</div>
-                <div data-tokenize="[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="0" />]@T]" class="plan-inline-disclaimer">[@L[cds.sales/offers/online-business:32573-choose-wsb-text-price-disclaimer]@L] 
+                <div data-tokenize="[@T[multipleproductprice:<list productidlist="464069|101|7524" period="monthly" promocode="0" />]@T]" class="plan-inline-disclaimer">[@L[cds.sales/offers/online-business:32573-choose-wsb-text-price-disclaimer]@L] 
                   <button class="btn-link see-wsb-disclaimer-link">[@L[cds.sales/offers/online-business:32573-choose-wsb-text-price-disclaimer-link]@L]</button>
                 </div>
                 <button class="btn btn-md btn-block btn-purchase product-wsb">[@L[cds.sales/offers/online-business:32573-choose-select-button]@L]</button>
@@ -1262,7 +1268,7 @@ function showTypeYourDomain() {
                 <h2>[@L[cds.sales/offers/online-business:32573-choose-ols-text]@L]</h2>
                 <h4>[@L[cds.sales/offers/online-business:32573-choose-ols-all-this-for-just-text]@L]</h4>
                 <div data-tokenize="[@T[multipleproductprice:<current productidlist="464069|101|40972" period="monthly" promocode="75315678" />]@T]" class="plan-price-wrap">[@L[cds.sales/offers/online-business:32573-choose-ols-all-this-for-just-price]@L]</div>
-                <div data-tokenize="[@T[multipleproductprice:<current productidlist="464069|101|40972" period="monthly" promocode="0" />]@T]" class="plan-inline-disclaimer">[@L[cds.sales/offers/online-business:32573-choose-ols-text-price-disclaimer]@L] 
+                <div data-tokenize="[@T[multipleproductprice:<list productidlist="464069|101|40972" period="monthly" promocode="0" />]@T]" class="plan-inline-disclaimer">[@L[cds.sales/offers/online-business:32573-choose-ols-text-price-disclaimer]@L] 
                   <button class="btn-link see-ols-disclaimer-link">[@L[cds.sales/offers/online-business:32573-choose-ols-text-price-disclaimer-link]@L]</button>
                 </div>
                 <button class="btn btn-md btn-block btn-purchase product-ols">[@L[cds.sales/offers/online-business:32573-choose-select-button]@L]</button>
@@ -1653,7 +1659,7 @@ function showTypeYourDomain() {
                 <h3 class="text-center">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text]@L]</h3>
                 <mark class="text-center disclaimer-mark"> 
                   <div data-tokenize="[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T]">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price]@L] </div>
-                  <p data-tokenize="[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="0" />]@T]" class="disclaimer">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price-disclaimer]@L] 
+                  <p data-tokenize="[@T[multipleproductprice:<list productidlist="464069|101|7524" period="monthly" promocode="0" />]@T]" class="disclaimer">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price-disclaimer]@L] 
                     <button class="btn-link see-wsb-disclaimer-link">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price-disclaimer-link]@L]</a></button>
                   </p>
                 </mark>
@@ -1701,7 +1707,7 @@ function showTypeYourDomain() {
                 <h3 class="text-center">[@L[cds.sales/offers/online-business:32573-godaddy-ols-text]@L]</h3>
                 <mark class="text-center disclaimer-mark"> 
                   <div data-tokenize="[@T[multipleproductprice:<current productidlist="464069|101|40972" period="monthly" promocode="75315678" />]@T]">[@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price]@L] </div>
-                  <p data-tokenize="[@T[multipleproductprice:<current productidlist="464069|101|40972" period="monthly" promocode="0" />]@T]" class="disclaimer">[@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price-disclaimer]@L] 
+                  <p data-tokenize="[@T[multipleproductprice:<list productidlist="464069|101|40972" period="monthly" promocode="0" />]@T]" class="disclaimer">[@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price-disclaimer]@L] 
                     <button class="btn-link see-ols-disclaimer-link">[@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price-disclaimer-link]@L]</button>
                   </p>
                 </mark>
