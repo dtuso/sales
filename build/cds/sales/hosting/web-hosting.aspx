@@ -154,8 +154,70 @@ h3 {
     bottom: 360px;
   }
 }
-.bg-gray-light {
-    background-color: #d9d9d9;
+
+.BVDITitle {
+  text-transform: uppercase !important;
+  text-align: center !important;
+  font-family: 'Walsheim-Black' !important;
+  font-weight: 300 !important;
+  line-height: 1.1 !important;
+  color: #333 !important;
+}
+
+#BVRRDisplayContentLinkWriteID a {
+  -webkit-font-smoothing: antialiased !important;
+  -webkit-transition-delay: 0s !important;
+  -webkit-transition-duration: 0.1s !important;
+  -webkit-transition-property: transform !important;
+  -webkit-transition-timing-function: ease !important;
+  -webkit-user-select: none !important;
+  background-color: rgb(0, 138, 50) !important;
+  border-bottom-color: rgb(0, 112, 41) !important;
+  border-bottom-left-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+  border-bottom-style: solid !important;
+  border-bottom-width: 4px !important;
+  border-image-outset: 0px !important;
+  border-image-repeat: stretch !important;
+  border-image-slice: 100% !important;
+  border-image-source: none !important;
+  border-image-width: 1 !important;
+  border-left-color: rgb(0, 112, 41) !important;
+  border-left-style: solid !important;
+  border-left-width: 0px !important;
+  border-right-color: rgb(0, 112, 41) !important;
+  border-right-style: solid !important;
+  border-right-width: 0px !important;
+  border-top-color: rgb(0, 112, 41) !important;
+  border-top-left-radius: 0px !important;
+  border-top-right-radius: 0px !important;
+  border-top-style: solid !important;
+  border-top-width: 0px !important;
+  box-sizing: border-box !important;
+  color: rgb(255, 255, 255) !important;
+  cursor: pointer !important;
+  display: inline-block !important;
+  font-family: Walsheim-Medium, Arial, sans-serif !important;
+  font-size: 18px !important;
+  font-weight: normal !important;
+  height: 46px !important;
+  line-height: 25.7142868041992px !important;
+  margin-bottom: 0px !important;
+  min-width: 88px !important;
+  padding-bottom: 7px !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  padding-top: 10px !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  text-transform: uppercase !important;
+  transition-delay: 0s !important;
+  transition-duration: 0.1s !important;
+  transition-property: transform !important;
+  transition-timing-function: ease !important;
+  vertical-align: middle !important;
+  white-space: nowrap !important;
+  background-image: none !important;
 }
 .BVDITitle {
   text-transform: uppercase !important;
@@ -1549,6 +1611,7 @@ h2.marquee-product-name,
               <h2 class="plan-title">Deluxe</h2>
               <p class="plan-text">Ideal for building and managing multiple sites.</p>
               <div class="plan-price-wrap"><span class="plan-price text-warning">[@T[productprice:<current productid="32059" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
+              <div class="plan-price-wrap"><span class="plan-price text-warning">[@T[productprice:<current productid="32059" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning"></span> 
                 ##if(productHasSavingsMoreThan(32059, 32059, 0))
                  <br><strong>[@L[cds.sales/_common:was]@L] 
                   <strike>[@T[productprice:<list productid="32059" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary">[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="32059" secondaryproductid="32059" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span></strong> 
@@ -1644,23 +1707,23 @@ h2.marquee-product-name,
                 <div class="row">
                   <div class="row">
                     <div class="col-sm-12">
-                      <h3 class="text-center">All Plans Include</h3>
+                      <h3 class="text-center">[@L[cds.sales/hosting/web-hosting-rebrand:allPlans]@L]</h3>
                     </div>
                   </div>
                   <div class="col-sm-4 ">
-                    <div class="include-check">Free domain with annual plan</div>
-                    <div class="include-check">Free Email Addresses</div>
-                    <div class="include-check">One-click install of 200+ Free Applications</div>
+                    <div class="include-check">[@L[cds.sales/hosting/web-hosting-rebrand:hostingAppsRebrand]@L]</div>
+                    <div class="include-check">[@L[cds.sales/hosting/web-hosting-rebrand:hostingAppsRebrand]@L]</div>
+                    <div class="include-check">[@L[cds.sales/hosting/web-hosting-rebrand:hostingAppsRebrand]@L]</div>
                   </div>
                   <div class="col-sm-4 ">
-                    <div class="include-check">1 GB storage MySQL Linux and 200 MB storage Windows SQL Databases</div>
-                    <div class="include-check">Flexible, easy-to-use control panel</div>
-                    <div class="include-check">24/7 security monitoring and DDoS protection</div>
+                    <div class="include-check">[@L[cds.sales/hosting/web-hosting-rebrand:hostingAppsRebrand]@L]</div>
+                    <div class="include-check">[@L[cds.sales/hosting/web-hosting-rebrand:hostingAppsRebrand]@L]</div>
+                    <div class="include-check">[@L[cds.sales/hosting/web-hosting-rebrand:hostingAppsRebrand]@L]</div>
                   </div>
                   <div class="col-sm-4 ">
-                    <div class="include-check">Compatible with all major browsers</div>
-                    <div class="include-check">One certificate covers unlimited servers</div>
-                    <div class="include-check">One-click installation for GoDaddy hosted accounts</div>
+                    <div class="include-check">[@L[cds.sales/hosting/web-hosting-rebrand:hostingAppsRebrand]@L]</div>
+                    <div class="include-check">[@L[cds.sales/hosting/web-hosting-rebrand:hostingAppsRebrand]@L]</div>
+                    <div class="include-check">[@L[cds.sales/hosting/web-hosting-rebrand:hostingAppsRebrand]@L]</div>
                   </div>
                 </div>
               </div>
@@ -3298,8 +3361,7 @@ height: 27px;
         </div>
       </div>
     </section>
-    <section id="reviews">
-      <p>reviews</p>
+    <section id="reviews" class="tile-section">
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
@@ -3402,6 +3464,11 @@ height: 27px;
                 </ul>
               </li>
               <li class="accordion-dropdown"><span class="carett caret-right"></span><span>[@L[cds.sales/gd/hosting/web-hosting:faq-second-slide-title-cp]@L]</span>
+<<<<<<< HEAD
+                <ul class="dropdown">
+                  <li>
+                    <div>[@L[cds.sales/gd/hosting/web-hosting:faq-second-slide-content-cp]@L]
+=======
                 <ul class="dropdown">
                   <li>
                     <div>[@L[cds.sales/gd/hosting/web-hosting:faq-second-slide-content-cp]@L]
@@ -3421,6 +3488,24 @@ height: 27px;
                 <ul class="dropdown">
                   <li>
                     <div>[@L[cds.sales/gd/hosting/web-hosting:faq-fourth-slide-content-cp]@L]
+>>>>>>> Web-hosting improvements
+                    </div>
+                  </li>
+                </ul>
+              </li>
+<<<<<<< HEAD
+              <li class="accordion-dropdown"><span class="carett caret-right"></span><span>[@L[cds.sales/gd/hosting/web-hosting:faq-third-slide-title]@L]</span>
+                <ul class="dropdown">
+                  <li>
+                    <div>[@L[cds.sales/gd/hosting/web-hosting:faq-third-slide-content-cp]@L]
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="accordion-dropdown"><span class="carett caret-right"></span><span>[@L[cds.sales/gd/hosting/web-hosting:faq-fourth-slide-title]@L]</span>
+                <ul class="dropdown">
+                  <li>
+                    <div>[@L[cds.sales/gd/hosting/web-hosting:faq-fourth-slide-content-cp]@L]
                     </div>
                   </li>
                 </ul>
@@ -3428,6 +3513,11 @@ height: 27px;
               <li class="accordion-dropdown"><span class="carett caret-right"></span><span>[@L[cds.sales/gd/hosting/web-hosting:faq-fifth-slide-title]@L]</span>
                 <ul class="dropdown">
                   <li>
+=======
+              <li class="accordion-dropdown"><span class="carett caret-right"></span><span>[@L[cds.sales/gd/hosting/web-hosting:faq-fifth-slide-title]@L]</span>
+                <ul class="dropdown">
+                  <li>
+>>>>>>> Web-hosting improvements
                     <div>[@L[cds.sales/gd/hosting/web-hosting:faq-fifth-slide-content-cp]@L]
                     </div>
                   </li>
