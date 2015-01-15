@@ -2,6 +2,40 @@ extends ../../templates/pages/landing-page
 
 prepend endOfPageScripts
   script.
+    ##if(activeLanguageAny([en-us]))
+      var loadReviews = function(){
+        if (typeof $BV != "undefined") {
+          $BV.configure("global", {
+            allowSamePageSubmission: true,
+            userToken: "[@P[userControl:<Data location="~/Shared/BazaarVoice/SessionUserToken.ascx"></Data>]@P]",
+            doLogin: function(successCallback, successUrl) {
+              $('#login-modal').modal();
+            },
+            doScrollSubmission: function () {
+              return false;
+            }
+          });
+          $BV.ui("rr", "show_reviews", {
+            productId: "web_hosting",
+            num: 1,
+            doShowContent: function() {
+              $('.bv-loading').hide();
+            }
+          });
+        }
+      };
+      $(window).load(function() {
+        if (!document.getElementById('bvapi')) {
+          var bv = document.createElement('script');
+          bv.type = 'text/javascript';
+          bv.id = 'bvapi';
+          bv.async = true;
+          bv.src = '[@P[userControl:<Data location="~/Scripts/BVScriptUrlOnly.ascx"></Data>]@P]';
+          bv.onload = loadReviews;
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(bv);
+        }
+      });
+    ##endif
     function comparePlans(id){
       if(id=="cpanel-tab"){
         $("#parallels-tab").hide();
@@ -127,11 +161,11 @@ block sections
           | 
           |##if(activeLanguageAny([en-US]))
           | 
-          h4 [@L[cds.sales/hosting/web-hosting-rebrand:conversionRebrand]@L]
+          h4(style="font-family: 'Walsheim-Black';") [@L[cds.sales/hosting/web-hosting-rebrand:conversionRebrand]@L]
           | 
           |##else
           | 
-          h4 [@L[cds.sales/hosting/web-hosting-rebrand:conversion]@L]
+          h4(style="font-family: 'Walsheim-Black';") [@L[cds.sales/hosting/web-hosting-rebrand:conversion]@L]
           | 
           |##endif
           | 
@@ -797,67 +831,113 @@ block sections
       +compareViewAllButton(["cpanel-table", "parallels-table"])
 
   section#platforms(data-mid-nav-title="Platforms")
-    +renderTwoUpCompare({ title: "[@L[cds.sales/hosting/web-hosting-rebrand:choosePlatform]@L]", 
-                          twoUpCompareId: "choose-platform", 
-                          titleBackgroundColor: "bg-green-new", 
-                          backgroundColor: "bg-green-official", 
-                          backgroundImage: "background-image: url('[@T[link:<imageroot />]@T]fos/mike/img/hosting/two-up-compare-bg-ph.png')"})
-      +twoUpCompareColumn({ orContainer: true, 
-                            title: "[@L[cds.sales/hosting/web-hosting-rebrand:cPanelTitle2]@L]", 
-                            backgroundColor: "bg-green-official", 
-                            subtitle: "[@L[cds.sales/hosting/web-hosting-rebrand:linuxPlan]@L]", 
-                            titleAlign: "center", 
-                            subtitleAlign: "center", 
-                            image: "[@T[link:<imageroot />]@T]fos/mike/img/hosting/img-cpanel-linux.png"})
-        .include-check-black <strong>cPanel:</strong> </br> Access all the hosting features and settings you need with this industry-standard control panel.
-        .include-check-black <strong>CloudLinux:</strong> </br> Keep your site online with truly balanced CPU, RAM and Disk IO limits.
-        .include-check-black <strong>Resources On-Demand:</strong> </br> If you need more power, you can level up your CPU, RAM, Entry Processes and I/O with just a click.
-        .include-check-black <strong>CageFS:</strong> </br> Protect your Web content 24/7 with this virtualized file system.
-        .include-check-black <strong>Free Applications:</strong> </br> Instanly install over 150 applications on your website with just a few clicks.
-      +twoUpCompareColumn({ title: "[@L[cds.sales/hosting/web-hosting-rebrand:choosePlatform]@L]", 
+    +renderTwoUpCompare({ title: "[@L[cds.sales/hosting/web-hosting-rebrand:choosePlatform]@L]", twoUpCompareId: "choose-platform", titleBackgroundColor: "bg-green-new", backgroundColor: "bg-green-official", backgroundImage: "background-image: url('[@T[link:<imageroot />]@T]fos/mike/img/hosting/two-up-compare-bg-ph.png')"})
+      +twoUpCompareColumn({ orContainer: true, title: "[@L[cds.sales/hosting/web-hosting-rebrand:cPanelTitle2]@L]", backgroundColor: "bg-green-official", subtitle: "[@L[cds.sales/hosting/web-hosting-rebrand:linuxPlan]@L]", titleAlign: "center", subtitleAlign: "center", image: "[@T[link:<imageroot />]@T]fos/mike/img/hosting/img-cpanel-linux.png"})
+        .include-check-black <strong>[@L[cds.sales/hosting/web-hosting-rebrand:cPanelListItem]@L]</strong> </br> [@L[cds.sales/hosting/web-hosting-rebrand:cPanelListItemDesc]@L]
+        .include-check-black <strong>[@L[cds.sales/hosting/web-hosting-rebrand:cloudLinuxListItem]@L]</strong> </br> [@L[cds.sales/hosting/web-hosting-rebrand:cloudLinuxListItemDesc]@L]
+        .include-check-black <strong>[@L[cds.sales/hosting/web-hosting-rebrand:resourcesOnDemandListItem]@L]</strong> </br> [@L[cds.sales/hosting/web-hosting-rebrand:resourcesOnDemandListItemDesc]@L]
+        .include-check-black <strong>[@L[cds.sales/hosting/web-hosting-rebrand:cageFSListItem]@L]</strong> </br> [@L[cds.sales/hosting/web-hosting-rebrand:cageFSListItemDesc]@L]
+        .include-check-black <strong>[@L[cds.sales/hosting/web-hosting-rebrand:freeApps]@L]</strong> </br> [@L[cds.sales/hosting/web-hosting-rebrand:oneHundredFifty]@L]
+      +twoUpCompareColumn({ title: "[@L[cds.sales/hosting/web-hosting-rebrand:windowsTitle2]@L]", 
                             backgroundColor: "bg-green-official-light", 
-                            subtitle: "Each Windows plan includes:", 
+                            subtitle: "[@L[cds.sales/hosting/web-hosting-rebrand:windowsPlan]@L]", 
                             titleAlign: "center", 
                             subtitleAlign: "center", 
                             image: "[@T[link:<imageroot />]@T]fos/mike/img/hosting/img-Windows8.png"})
-        .include-check-black <strong>Parallesls Plesk Panel:</strong> </br> Easily manage your server, email accounts and more with this popular, award-winning control panel.
-        .include-check-black <strong>Windows Server 2012:</strong> </br> Take control of your hosting with Microsoft's newest and most powerful server operating system.
-        .include-check-black <strong>Free Applications:</strong> </br> Instanly install over 70 applications on your website with just a few clicks.
+        .include-check-black <strong>[@L[cds.sales/hosting/web-hosting-rebrand:windowsPlanPlesk]@L]</strong> </br> [@L[cds.sales/hosting/web-hosting-rebrand:windowsPlanPleskDesc]@L]
+        .include-check-black <strong>[@L[cds.sales/hosting/web-hosting-rebrand:windowsServer]@L]</strong> </br> [@L[cds.sales/hosting/web-hosting-rebrand:windowsServerDesc]@L]
+        .include-check-black <strong>[@L[cds.sales/hosting/web-hosting-rebrand:freeApps]@L]</strong> </br> [@L[cds.sales/hosting/web-hosting-rebrand:seventyPlus]@L]
 
   section#reviews
     p reviews
     .container
       .row
         .col-sm-12
-          div
-            [@P[userControl:<Data location="~/Shared/Tabs/controls/BVReviewsNoJS.ascx"><Parameters><Parameter key="ProductId" value="web_hosting" /><Parameter key="ReviewNumber" value="4" /></Parameters></Data>]@P]
+          div#BVRRContainer
+            p.bv-loading Loading...
+          div [@P[userControl:<Data location="~/Shared/Tabs/controls/BVReviewsNoJS.ascx"><Parameters><Parameter key="ProductId" value="web_hosting" /><Parameter key="ReviewNumber" value="1" /></Parameters></Data>]@P]
 
   section#faq.tile-section
     +renderAccordion({id: "test-faq", buttonID: "test-button", buttonText: "hey you"})
-      h2 A Title!
-      +accordionTab("things")
-        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vestibulum, nisl a lacinia gravida, velit elit convallis ex, ac fringilla ante erat eu ante. Duis pellentesque, dolor et laoreet feugiat, ligula lacus tincidunt ante, id malesuada purus nulla vel erat. Vivamus viverra velit vel imperdiet imperdiet. Morbi fermentum et justo id convallis. Fusce fringilla neque ut vestibulum ornare. Maecenas eleifend diam sit amet cursus finibus. Donec tellus massa, sollicitudin vitae lacus in, posuere suscipit leo. Donec vel dolor sapien. Pellentesque sit amet eleifend justo. Curabitur sed neque ligula. Phasellus vestibulum malesuada erat id elementum. Sed cursus neque et congue accumsan. 
-        p Cras varius, tellus eu tristique ultrices, sapien enim ullamcorper odio, nec euismod metus massa vel leo. Praesent finibus lacus purus, in ultrices metus rutrum sed. Vestibulum purus mauris, efficitur id quam vel, consequat malesuada nisi. Duis eu mauris vitae mauris pulvinar maximus eu ac odio. Pellentesque et purus sed lectus dictum auctor non et ligula. Sed pellentesque a urna nec sodales. Vestibulum dignissim iaculis tincidunt. Pellentesque facilisis nec lorem in venenatis. Cras scelerisque aliquet libero, a viverra enim pulvinar id. Maecenas pharetra tortor id quam imperdiet, id accumsan velit dapibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur euismod vulputate enim ac scelerisque. Nunc blandit lectus mattis velit ornare, quis malesuada ex sollicitudin. Phasellus auctor risus et nisl dignissim faucibus vel sit amet ex. Nulla tempor eros et pellentesque maximus. Aliquam finibus auctor justo, quis porta ex vulputate sit amet. 
-        p Fusce viverra eget massa ac posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Cras vel ligula venenatis, fringilla purus sit amet, semper ante. Vivamus bibendum maximus dui et finibus. Integer in dignissim dolor, in malesuada massa. Nam accumsan feugiat tortor, eu tincidunt mauris laoreet a. Fusce fermentum dolor eu odio volutpat varius. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis sed augue pretium, ultrices nisi non, maximus tortor. Praesent auctor euismod fringilla.
-      +accordionTab("stuff")
-        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vestibulum, nisl a lacinia gravida, velit elit convallis ex, ac fringilla ante erat eu ante. Duis pellentesque, dolor et laoreet feugiat, ligula lacus tincidunt ante, id malesuada purus nulla vel erat. Vivamus viverra velit vel imperdiet imperdiet. Morbi fermentum et justo id convallis. Fusce fringilla neque ut vestibulum ornare. Maecenas eleifend diam sit amet cursus finibus. Donec tellus massa, sollicitudin vitae lacus in, posuere suscipit leo. Donec vel dolor sapien. Pellentesque sit amet eleifend justo. Curabitur sed neque ligula. Phasellus vestibulum malesuada erat id elementum. Sed cursus neque et congue accumsan. 
-        p Cras varius, tellus eu tristique ultrices, sapien enim ullamcorper odio, nec euismod metus massa vel leo. Praesent finibus lacus purus, in ultrices metus rutrum sed. Vestibulum purus mauris, efficitur id quam vel, consequat malesuada nisi. Duis eu mauris vitae mauris pulvinar maximus eu ac odio. Pellentesque et purus sed lectus dictum auctor non et ligula. Sed pellentesque a urna nec sodales. Vestibulum dignissim iaculis tincidunt. Pellentesque facilisis nec lorem in venenatis. Cras scelerisque aliquet libero, a viverra enim pulvinar id. Maecenas pharetra tortor id quam imperdiet, id accumsan velit dapibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur euismod vulputate enim ac scelerisque. Nunc blandit lectus mattis velit ornare, quis malesuada ex sollicitudin. Phasellus auctor risus et nisl dignissim faucibus vel sit amet ex. Nulla tempor eros et pellentesque maximus. Aliquam finibus auctor justo, quis porta ex vulputate sit amet. 
-        p Fusce viverra eget massa ac posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Cras vel ligula venenatis, fringilla purus sit amet, semper ante. Vivamus bibendum maximus dui et finibus. Integer in dignissim dolor, in malesuada massa. Nam accumsan feugiat tortor, eu tincidunt mauris laoreet a. Fusce fermentum dolor eu odio volutpat varius. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis sed augue pretium, ultrices nisi non, maximus tortor. Praesent auctor euismod fringilla.
-  
+      h2 [@L[cds.sales/hosting/web-hosting-rebrand:yourQuestOurAns]@L]
+      +accordionTab("[@L[cds.sales/gd/hosting/web-hosting:faq-first-slide-title-cp]@L]")
+        [@L[cds.sales/gd/hosting/web-hosting:faq-first-slide-content-cp]@L]
+      +accordionTab("[@L[cds.sales/gd/hosting/web-hosting:faq-second-slide-title-cp]@L]")
+        [@L[cds.sales/gd/hosting/web-hosting:faq-second-slide-content-cp]@L]
+      +accordionTab("[@L[cds.sales/gd/hosting/web-hosting:faq-third-slide-title]@L]")
+        [@L[cds.sales/gd/hosting/web-hosting:faq-third-slide-content-cp]@L]
+      +accordionTab("[@L[cds.sales/gd/hosting/web-hosting:faq-fourth-slide-title]@L]")
+        [@L[cds.sales/gd/hosting/web-hosting:faq-fourth-slide-content-cp]@L]
+      +accordionTab("[@L[cds.sales/gd/hosting/web-hosting:faq-fifth-slide-title]@L]")
+        [@L[cds.sales/gd/hosting/web-hosting:faq-fifth-slide-content-cp]@L]
+      +accordionTab("[@L[cds.sales/gd/hosting/web-hosting:faq-seventh-slide-title]@L]")
+        [@L[cds.sales/gd/hosting/web-hosting:faq-seventh-slide-content-cp]@L]
+      +accordionTab("[@L[cds.sales/gd/hosting/web-hosting:faq-eighth-slide-title]@L]")
+        [@L[cds.sales/gd/hosting/web-hosting:faq-eighth-slide-content-cp]@L]
+
+  | 
+  |##if(activeLanguageAny([en-US]))
+  | 
   section#alternate-products
-    +renderTwoUpCompare({title: "Not finding what you need?", twoUpCompareId: "two-up", titleBackgroundColor: "bg-white", backgroundColor: "bg-green-official", backgroundImage: "background-image: url('[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Sweet.jpg')", style: "min-height: 580px;", includeStyles: false})
-      +twoUpCompareColumn({title: "Do-it-yourself with Website Builder. Hosting Included.", backgroundColor: "bg-green-official-light", shapeText: "Website Builder", shapeColor: "yellow"})
+    +renderTwoUpCompare({ title: "[@L[cds.sales/hosting/web-hosting-rebrand:didNotFindRebrand]@L]", 
+                          twoUpCompareId: "two-up", 
+                          titleBackgroundColor: "bg-white", 
+                          backgroundColor: "bg-green-official", 
+                          backgroundImage: "background-image: url('[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Sweet.jpg')", 
+                          style: "min-height: 580px;", 
+                          includeStyles: false})
+      +twoUpCompareColumn({ title: "[@L[cds.sales/hosting/web-hosting-rebrand:wsbDoIt]@L] </br> [@L[cds.sales/hosting/web-hosting-rebrand:wsbHosting]@L]", 
+                            backgroundColor: "bg-green-official-light", 
+                            shapeText: "[@L[cds.sales/hosting/web-hosting-rebrand:wsb]@L]", 
+                            shapeColor: "orange"})
         ul
-          li Features cPanel "(Linux)" or Parallels Plesk Panel "(Windows)"
-          li One-click install 100s of top apps like Joomla and Drupal
-          li Includes 99.9% uptime, lightning-fast load times and more
-        a.btn.btn-default-dark LEARN MORE
-      +twoUpCompareColumn({title: "Get Hosting that will grow.", backgroundColor: "bg-gray-darkest", shapeText: "Private Virtual Server", shapeColor: "orange", whiteText: "white-text"})
+          li [@L[cds.sales/hosting/web-hosting-rebrand:wsbList1]@L]
+          li [@L[cds.sales/hosting/web-hosting-rebrand:wsbList2]@L]
+          li [@L[cds.sales/hosting/web-hosting-rebrand:wsbList3]@L]
+        a.btn.btn-default-dark [@L[cds.sales/hosting/web-hosting-rebrand:learnMore]@L]
+      +twoUpCompareColumn({ title: "[@L[cds.sales/hosting/web-hosting-rebrand:vpsGrow]@L]", 
+                            backgroundColor: "bg-gray-darkest", 
+                            shapeText: "[@L[cds.sales/hosting/web-hosting-rebrand:vps]@L]", 
+                            shapeColor: "orange", 
+                            whiteText: "white-text"})
         ul
-          li Get online fast with 100s of customizable designs
-          li No technical skills required - just drag and drop
-          li Includes a free domain, hosting and more
-        a.btn.btn-default-light LEARN MORE
+          li [@L[cds.sales/hosting/web-hosting-rebrand:vpsList1]@L]
+          li [@L[cds.sales/hosting/web-hosting-rebrand:vpsList2]@L]
+          li [@L[cds.sales/hosting/web-hosting-rebrand:vpsList3]@L]
+        a.btn.btn-default-light [@L[cds.sales/hosting/web-hosting-rebrand:learnMore]@L]
+  | 
+  |##else
+  | 
+  section#alternate-products
+    +renderTwoUpCompare({ title: "[@L[cds.sales/hosting/web-hosting-rebrand:didNotFind]@L]", 
+                          twoUpCompareId: "two-up", 
+                          titleBackgroundColor: "bg-white", 
+                          backgroundColor: "bg-green-official", 
+                          backgroundImage: "background-image: url('[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Sweet.jpg')", 
+                          style: "min-height: 580px;", 
+                          includeStyles: false})
+      +twoUpCompareColumn({ title: "[@L[cds.sales/hosting/web-hosting-rebrand:wsbDoIt]@L] </br> [@L[cds.sales/hosting/web-hosting-rebrand:wsbHosting]@L]", 
+                            backgroundColor: "bg-green-official-light", 
+                            shapeText: "[@L[cds.sales/hosting/web-hosting-rebrand:wsb]@L]", 
+                            shapeColor: "orange"})
+        ul
+          li [@L[cds.sales/hosting/web-hosting-rebrand:wsbList1]@L]
+          li [@L[cds.sales/hosting/web-hosting-rebrand:wsbList2]@L]
+          li [@L[cds.sales/hosting/web-hosting-rebrand:wsbList3]@L]
+        a.btn.btn-default-dark [@L[cds.sales/hosting/web-hosting-rebrand:learnMore]@L]
+      +twoUpCompareColumn({ title: "[@L[cds.sales/hosting/web-hosting-rebrand:vpsGrow]@L]", 
+                            backgroundColor: "bg-gray-darkest", 
+                            shapeText: "[@L[cds.sales/hosting/web-hosting-rebrand:vps]@L]", 
+                            shapeColor: "orange", 
+                            whiteText: "white-text"})
+        ul
+          li [@L[cds.sales/hosting/web-hosting-rebrand:vpsList1]@L]
+          li [@L[cds.sales/hosting/web-hosting-rebrand:vpsList2]@L]
+          li [@L[cds.sales/hosting/web-hosting-rebrand:vpsList3]@L]
+        a.btn.btn-default-light [@L[cds.sales/hosting/web-hosting-rebrand:learnMore]@L]
+  | 
+  |##endif
+  | 
 
   section#disclaimers
     p disclaimers
