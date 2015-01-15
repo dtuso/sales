@@ -131,9 +131,9 @@
     <atlantis:webstash type="js">
       <script>var got1Page = {
   tldInfo: {
-    defaultTld: 'com',    
-    tlds: ['com','org','co','net', 'club', 'rocks'],  /* todo: drive from a config val */
-    possibleAdditionalTlds: ['in', 'ca', 'uk', 'co.uk'], /* todo: drive from a config val */
+    defaultTld: 'com', 
+    tlds: [@T[appSetting:<setting name="SALES_GOT_TLD_EVERYONE_LIST" />]@T],   
+    possibleAdditionalTlds: [@T[appSetting:<setting name="SALES_GOT_TLD_RESTRICTED_LIST" />]@T],  
     isPossibleAdditionalTld: function(tld) {return -1 !== $.inArray(tld, got1Page.tldInfo.possibleAdditionalTlds);}
   },
   sfDialogErrorButtons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }],
@@ -1086,7 +1086,8 @@ function updateDomainCountText(initial, numberShown) {
       <style>
         #products.tile-section{ padding-top: 0;padding-bottom: 0;}
         #products {padding-bottom:40px;}
-        #products .key-benefits-wrap .features-text {color:#333;}
+        #products.key-benefits-wrap h2.products-title-text {color:#333;}
+        #products.key-benefits-wrap div.features-text {color:#333;}
         
         /* KEY BENEFITS */
         .key-benefits-wrap[class*="bg-"]:not(.bg-gray-light) {
@@ -1176,14 +1177,13 @@ function updateDomainCountText(initial, numberShown) {
         }
         
         /* (end) KEY BENEFITS */
-        
       </style>
     </atlantis:webstash>
     <section id="products" class="bg-gray-light key-benefits-wrap">
       <div class="container">
         <div class="row">
           <div class="col-sm-12 text-center">
-            <h2>[@L[cds.sales/offers/online-business:32573-heres-what-you-get]@L]</h2>
+            <h2 class="products-title-text">[@L[cds.sales/offers/online-business:32573-heres-what-you-get]@L]</h2>
           </div>
         </div>
         <div class="row">
