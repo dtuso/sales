@@ -154,7 +154,9 @@ h3 {
     bottom: 360px;
   }
 }
-
+.bg-gray-light {
+    background-color: #d9d9d9;
+}
 .BVDITitle {
   text-transform: uppercase !important;
   text-align: center !important;
@@ -1205,7 +1207,7 @@ h2.marquee-product-name,
         </div>
       </div>
     </section>
-    <section id="plans">
+    <section id="plans" style="padding-top: 50px;">
       <style>
 .pro-plans {
     margin-top: 0px;
@@ -1582,8 +1584,8 @@ h2.marquee-product-name,
               </style>
             </atlantis:webstash>
             <div class="pro-plan-wrap">
-              <h2 class="plan-title">Economy</h2>
-              <p class="plan-text">Perfect to get started with a basic site.</p>
+              <h2 class="plan-title">[@L[cds.sales/hosting/web-hosting-rebrand:economyPlan]@L]</h2>
+              <p class="plan-text">[@L[cds.sales/hosting/web-hosting-rebrand:basicPrice]@L]</p>
               <div class="plan-price-wrap"><span class="plan-price text-warning">[@T[productprice:<current productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
                 ##if(productHasSavingsMoreThan(32051, 32051, 0))
                  <br><strong>[@L[cds.sales/_common:was]@L] 
@@ -1591,12 +1593,12 @@ h2.marquee-product-name,
                 ##endif
                  
               </div>
-              <button id="product-A" data-tcode="" data-plan="host_GridHostEcoDiabloLin1Yr_us" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
-              <div class="plan-item">1 Website</div>
-              <div class="plan-item">100 GB Storage</div>
-              <div class="plan-item">Unlimited bandwidth</div>
-              <div class="plan-item">100 Email Addresses</div>
-              <div class="plan-item">Free Domain with annual plan</div>
+              <button data-tcode="" data-plan="host_GridHostEcoDiabloLin1Yr_us" class="btn btn-purchase btn-plan btn-lg btn-block">Add to Cart</button>
+              <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:oneWeb]@L]</div>
+              <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:oneHundredStorage]@L]</div>
+              <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedBand]@L]</div>
+              <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:oneHundredEMail]@L]</div>
+              <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:freeDomain]@L]</div>
             </div>
           </div>
           <div class="col-sm-4 plan-tile plan-pro">
@@ -1608,22 +1610,21 @@ h2.marquee-product-name,
               </style>
             </atlantis:webstash>
             <div class="pro-plan-wrap">
-              <h2 class="plan-title">Deluxe</h2>
-              <p class="plan-text">Ideal for building and managing multiple sites.</p>
+              <h2 class="plan-title">[@L[cds.sales/hosting/web-hosting-rebrand:deluxePlan]@L]</h2>
+              <p class="plan-text">[@L[cds.sales/hosting/web-hosting-rebrand:greatHome]@L]</p>
               <div class="plan-price-wrap"><span class="plan-price text-warning">[@T[productprice:<current productid="32059" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
-              <div class="plan-price-wrap"><span class="plan-price text-warning">[@T[productprice:<current productid="32059" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning"></span> 
                 ##if(productHasSavingsMoreThan(32059, 32059, 0))
                  <br><strong>[@L[cds.sales/_common:was]@L] 
                   <strike>[@T[productprice:<list productid="32059" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary">[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="32059" secondaryproductid="32059" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span></strong> 
                 ##endif
                  
               </div>
-              <button id="product-B" data-tcode="" data-plan="host_GridHostDlxDiabloLin1Yr_us" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
-              <div class="plan-item">Unlimited Websites</div>
-              <div class="plan-item">Unlimited Storage <span class='sf-tip sf-tipper-target' data-style='qt' data-content='Our Web Hosting plans are designed to host most personal, small business and organization websites. We do not limit the amount of storage and bandwidth your site can use as long as it complies with our Hosting Agreement. Should your website bandwidth or storage usage present a risk to the stability, performance or uptime of our servers, we will notify you via email and you may be required to upgrade to a Virtual Private Server or Dedicated (Private) Server, or we may restrict the resources your website is using. It’s very rare that a website violates our Hosting Agreement and is typically only seen in sites that use hosting for file sharing or storage.'></span></div>
-              <div class="plan-item">Unlimited bandwidth</div>
-              <div class="plan-item">500 Email Addresses</div>
-              <div class="plan-item">Free Domain with annual plan</div>
+              <button data-tcode="" data-plan="host_GridHostDlxDiabloLin1Yr_us" class="btn btn-purchase btn-plan btn-lg btn-block">Add to Cart</button>
+              <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedWeb]@L]</div>
+              <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedStorage]@L]</div>
+              <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedBand]@L]</div>
+              <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:fiveHundredEMail]@L]</div>
+              <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:freeDomain]@L]</div>
             </div>
           </div>
           <div class="col-sm-4 plan-tile plan-pro">
@@ -1636,8 +1637,8 @@ h2.marquee-product-name,
             </atlantis:webstash>
             <div class="pro-plan-wrap">
               <div class="plan-flag">More power and security</div>
-              <h2 class="plan-title">Ultimate</h2>
-              <p class="plan-text">Good for higher traffic. Twice the power, memory, email and more.</p>
+              <h2 class="plan-title">[@L[cds.sales/hosting/web-hosting-rebrand:ultimatePlan]@L]</h2>
+              <p class="plan-text">[@L[cds.sales/hosting/web-hosting-rebrand:handlesMost]@L]</p>
               <div class="plan-price-wrap"><span class="plan-price text-warning">[@T[productprice:<current productid="32082" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
                 ##if(productHasSavingsMoreThan(32082, 32082, 0))
                  <br><strong>[@L[cds.sales/_common:was]@L] 
@@ -1645,15 +1646,15 @@ h2.marquee-product-name,
                 ##endif
                  
               </div>
-              <button id="product-C" data-tcode="" data-plan="host_GridHostUnlDiabloLin1Yr_us" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
-              <div class="plan-item">Unlimited Websites</div>
-              <div class="plan-item">Unlimited Storage <span class='sf-tip sf-tipper-target' data-style='qt' data-content='Our Web Hosting plans are designed to host most personal, small business and organization websites. We do not limit the amount of storage and bandwidth your site can use as long as it complies with our Hosting Agreement. Should your website bandwidth or storage usage present a risk to the stability, performance or uptime of our servers, we will notify you via email and you may be required to upgrade to a Virtual Private Server or Dedicated (Private) Server, or we may restrict the resources your website is using. It’s very rare that a website violates our Hosting Agreement and is typically only seen in sites that use hosting for file sharing or storage.'></span></div>
-              <div class="plan-item">Unlimited bandwidth</div>
-              <div class="plan-item">1000 Email Addresses</div>
-              <div class="plan-item">Free Domain with annual plan</div>
-              <div class="plan-item">2X Processing Power &amp; Memory (Available for Linux/cPanel only) <span class='sf-tip sf-tipper-target' data-style='qt' data-content='Available Resources:<br><br>Ultimate Plan<br>2 CPU, 1 GB RAM, 125 Entry Processes<br><br>Economy &amp; Deluxe<br>1 CPU, 512 MB RAM, 100 Entry Processes'></span></div>
-              <div class="plan-item">Premium DNS Management Tool <span class='sf-tip sf-tipper-target' data-style='qt' data-content='A $35.88/yr value, our Premium DNS makes it easy to resolve common issues that prevent people from accessing your site, improving your overall performance, availability, and security.'></span></div>
-              <div class="plan-item">1 year SSL Certificate - Secures customer data &amp; increases search rackings. Restrictions apply. <span class='sf-tip sf-tipper-target' data-style='qt' data-content='A $69.99 value, your GoDaddy SSL certificate keeps payments and customer data secure, and helps increase your search rankings on Google. Take advantage of 256-bit encryption and 99.9% browser recognition. The SSL Certificate is free for 1 year with purchase. After the initial free year, SSL will automatically renew at the then-current price until cancelled. You may cancel automatic renewal at any time in your GoDaddy account.'></span></div>
+              <button data-tcode="" data-plan="host_GridHostUnlDiabloLin1Yr_us" class="btn btn-purchase btn-plan btn-lg btn-block">Add to Cart</button>
+              <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedWeb]@L]</div>
+              <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedStorage]@L]</div>
+              <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedBand]@L]</div>
+              <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:oneThousandEMail]@L]</div>
+              <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:freeDomain]@L]</div>
+              <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:twoXPowerLinux]@L]</div>
+              <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:oneThousandEMail]@L]</div>
+              <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:ultimateSSL]@L]</div>
             </div>
           </div>
           <atlantis:webstash type="js">
@@ -1707,23 +1708,29 @@ h2.marquee-product-name,
                 <div class="row">
                   <div class="row">
                     <div class="col-sm-12">
+                       
+                      ##if(activeLanguageAny([en-US]))
+                       
+                      <h2 style="padding-top: 50px;" class="text-center">[@L[cds.sales/hosting/web-hosting-rebrand:theresMoreRebrand]@L]</h2> 
+                      ##endif
+                       
                       <h3 class="text-center">[@L[cds.sales/hosting/web-hosting-rebrand:allPlans]@L]</h3>
                     </div>
                   </div>
                   <div class="col-sm-4 ">
-                    <div class="include-check">[@L[cds.sales/hosting/web-hosting-rebrand:hostingAppsRebrand]@L]</div>
-                    <div class="include-check">[@L[cds.sales/hosting/web-hosting-rebrand:hostingAppsRebrand]@L]</div>
-                    <div class="include-check">[@L[cds.sales/hosting/web-hosting-rebrand:hostingAppsRebrand]@L]</div>
+                    <div class="include-check">[@L[cds.sales/hosting/web-hosting-rebrand:freeDomain]@L]</div>
+                    <div class="include-check">[@L[cds.sales/hosting/web-hosting-rebrand:freeEmail]@L]</div>
+                    <div class="include-check">[@L[cds.sales/hosting/web-hosting-rebrand:oneClick]@L]</div>
                   </div>
                   <div class="col-sm-4 ">
-                    <div class="include-check">[@L[cds.sales/hosting/web-hosting-rebrand:hostingAppsRebrand]@L]</div>
-                    <div class="include-check">[@L[cds.sales/hosting/web-hosting-rebrand:hostingAppsRebrand]@L]</div>
-                    <div class="include-check">[@L[cds.sales/hosting/web-hosting-rebrand:hostingAppsRebrand]@L]</div>
+                    <div class="include-check">[@L[cds.sales/hosting/web-hosting-rebrand:storageOptions]@L]</div>
+                    <div class="include-check">[@L[cds.sales/hosting/web-hosting-rebrand:securityMonitoring]@L]</div>
+                    <div class="include-check">[@L[cds.sales/hosting/web-hosting-rebrand:easyPanel]@L]</div>
                   </div>
                   <div class="col-sm-4 ">
-                    <div class="include-check">[@L[cds.sales/hosting/web-hosting-rebrand:hostingAppsRebrand]@L]</div>
-                    <div class="include-check">[@L[cds.sales/hosting/web-hosting-rebrand:hostingAppsRebrand]@L]</div>
-                    <div class="include-check">[@L[cds.sales/hosting/web-hosting-rebrand:hostingAppsRebrand]@L]</div>
+                    <div class="include-check">[@L[cds.sales/hosting/web-hosting-rebrand:compatible]@L]</div>
+                    <div class="include-check">[@L[cds.sales/hosting/web-hosting-rebrand:sslCert]@L]</div>
+                    <div class="include-check">[@L[cds.sales/hosting/web-hosting-rebrand:oneClickGoDaddy]@L]</div>
                   </div>
                 </div>
               </div>
@@ -3464,11 +3471,6 @@ height: 27px;
                 </ul>
               </li>
               <li class="accordion-dropdown"><span class="carett caret-right"></span><span>[@L[cds.sales/gd/hosting/web-hosting:faq-second-slide-title-cp]@L]</span>
-<<<<<<< HEAD
-                <ul class="dropdown">
-                  <li>
-                    <div>[@L[cds.sales/gd/hosting/web-hosting:faq-second-slide-content-cp]@L]
-=======
                 <ul class="dropdown">
                   <li>
                     <div>[@L[cds.sales/gd/hosting/web-hosting:faq-second-slide-content-cp]@L]
@@ -3488,24 +3490,6 @@ height: 27px;
                 <ul class="dropdown">
                   <li>
                     <div>[@L[cds.sales/gd/hosting/web-hosting:faq-fourth-slide-content-cp]@L]
->>>>>>> Web-hosting improvements
-                    </div>
-                  </li>
-                </ul>
-              </li>
-<<<<<<< HEAD
-              <li class="accordion-dropdown"><span class="carett caret-right"></span><span>[@L[cds.sales/gd/hosting/web-hosting:faq-third-slide-title]@L]</span>
-                <ul class="dropdown">
-                  <li>
-                    <div>[@L[cds.sales/gd/hosting/web-hosting:faq-third-slide-content-cp]@L]
-                    </div>
-                  </li>
-                </ul>
-              </li>
-              <li class="accordion-dropdown"><span class="carett caret-right"></span><span>[@L[cds.sales/gd/hosting/web-hosting:faq-fourth-slide-title]@L]</span>
-                <ul class="dropdown">
-                  <li>
-                    <div>[@L[cds.sales/gd/hosting/web-hosting:faq-fourth-slide-content-cp]@L]
                     </div>
                   </li>
                 </ul>
@@ -3513,11 +3497,6 @@ height: 27px;
               <li class="accordion-dropdown"><span class="carett caret-right"></span><span>[@L[cds.sales/gd/hosting/web-hosting:faq-fifth-slide-title]@L]</span>
                 <ul class="dropdown">
                   <li>
-=======
-              <li class="accordion-dropdown"><span class="carett caret-right"></span><span>[@L[cds.sales/gd/hosting/web-hosting:faq-fifth-slide-title]@L]</span>
-                <ul class="dropdown">
-                  <li>
->>>>>>> Web-hosting improvements
                     <div>[@L[cds.sales/gd/hosting/web-hosting:faq-fifth-slide-content-cp]@L]
                     </div>
                   </li>

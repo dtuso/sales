@@ -59,7 +59,7 @@ block marquee
     include ./web-hosting/_marquee.jade
 
 block plans
-  section#plans
+  section#plans(style="padding-top: 50px;")
     +renderPlanTiles(3) 
       +planTile
         include ./web-hosting/plans/_plan-hosting-economy.jade
@@ -73,19 +73,26 @@ block plans
         +renderColumnList(3)
           .row
             .col-sm-12
+              | 
+              |##if(activeLanguageAny([en-US]))
+              | 
+              h2.text-center(style="padding-top: 50px;") [@L[cds.sales/hosting/web-hosting-rebrand:theresMoreRebrand]@L]
+              | 
+              |##endif
+              | 
               h3.text-center [@L[cds.sales/hosting/web-hosting-rebrand:allPlans]@L]
           +columnListMember
-            .include-check [@L[cds.sales/hosting/web-hosting-rebrand:hostingAppsRebrand]@L]
-            .include-check [@L[cds.sales/hosting/web-hosting-rebrand:hostingAppsRebrand]@L]
-            .include-check [@L[cds.sales/hosting/web-hosting-rebrand:hostingAppsRebrand]@L]
+            .include-check [@L[cds.sales/hosting/web-hosting-rebrand:freeDomain]@L]
+            .include-check [@L[cds.sales/hosting/web-hosting-rebrand:freeEmail]@L]
+            .include-check [@L[cds.sales/hosting/web-hosting-rebrand:oneClick]@L]
           +columnListMember
-            .include-check [@L[cds.sales/hosting/web-hosting-rebrand:hostingAppsRebrand]@L]
-            .include-check [@L[cds.sales/hosting/web-hosting-rebrand:hostingAppsRebrand]@L]
-            .include-check [@L[cds.sales/hosting/web-hosting-rebrand:hostingAppsRebrand]@L]
+            .include-check [@L[cds.sales/hosting/web-hosting-rebrand:storageOptions]@L]
+            .include-check [@L[cds.sales/hosting/web-hosting-rebrand:securityMonitoring]@L]
+            .include-check [@L[cds.sales/hosting/web-hosting-rebrand:easyPanel]@L]
           +columnListMember
-            .include-check [@L[cds.sales/hosting/web-hosting-rebrand:hostingAppsRebrand]@L]
-            .include-check [@L[cds.sales/hosting/web-hosting-rebrand:hostingAppsRebrand]@L]
-            .include-check [@L[cds.sales/hosting/web-hosting-rebrand:hostingAppsRebrand]@L]
+            .include-check [@L[cds.sales/hosting/web-hosting-rebrand:compatible]@L]
+            .include-check [@L[cds.sales/hosting/web-hosting-rebrand:sslCert]@L]
+            .include-check [@L[cds.sales/hosting/web-hosting-rebrand:oneClickGoDaddy]@L]
   
 block sections
   +renderMidPageNav
