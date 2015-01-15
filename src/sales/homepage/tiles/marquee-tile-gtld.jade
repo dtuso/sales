@@ -1,0 +1,11 @@
+extend ../_tile-2col_base.jade
+
+append vars
+  - ctaLink = "[@T[link:<relative path='/domains/domain-name-search.aspx'><param name='ci' value='11111' /></relative>]@T]";
+  - dataCi = 11111;
+  - containerClass = "gtld-marquee-tile";
+
+block tileStyles
+  style
+    :less
+      .gtld-marquee-tile{background: #ff8a00}

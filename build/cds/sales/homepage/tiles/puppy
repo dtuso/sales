@@ -1,0 +1,11 @@
+
+<style>.puppy-tile {
+  background-color: #333333;
+}
+
+</style>
+<div data-url="[@T[link:<relative path='/'><param name='ci' value='11111' /></relative>]@T]" data-ci='11111' class="tile puppy-tile">
+  <div class="tile-content-wrapper">
+    <div class="header-wrapper"></div>
+  </div>
+</div>
