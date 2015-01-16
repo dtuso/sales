@@ -9,7 +9,7 @@ block append vars
 
 block tileContent
   .promo-logo-wrapper
-    +svgFallback({elementClass:"promo-logo",backgroundImage:logoImage,fallbackImage:logoImageFallback})
+    img.promo-logo(src!=logoImage,data-svg-fallback!=logoImageFallback)
     if (logoText)
       .promo-logo-text #{logoText}
   .promo-text.walsheim-black #{promoText}
