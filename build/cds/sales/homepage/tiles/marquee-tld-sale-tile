@@ -1,0 +1,34 @@
+
+<style>.tld-sale-tile {
+  background-color: #333;
+  color: #fff;
+}
+.tld-sale-tile .tile-content-wrapper {
+  padding: 10px 15px;
+}
+.tld-sale-tile .header-text {
+  font-size: 40px;
+  color: #f2812e;
+  float: left;
+}
+.tld-sale-tile .body {
+  font-size: 20px;
+  line-height: 1em;
+  margin: 8px 0 13px;
+}
+.tld-sale-tile .restrictions-text {
+  font-size: 10px;
+  position: absolute;
+  bottom: 18px;
+}
+
+</style>
+<div data-url="" data-ci="" class="tile -sale tld-sale-tile">
+  <div class="tile-content-wrapper">
+    <div class="clearfix">
+      <div class="header-text walsheim-black">[@T[productprice:<current productid="" period="yearly" promocode="" htmlsymbol="false" />]@T]</div><img src="" class="-sale-tile-logo"/>
+    </div>
+    <div class="body walsheim-medium"></div>
+    <div class="restrictions-text walsheim-regular"></div>
+  </div>
+</div>
