@@ -1,7 +1,9 @@
 atlantis:webstash(type="css")
   style.
     #step2-choose-product {display: none;}
-    #step2-choose-product .choose-header {margin: 30px 0 40px;}
+    #step2-choose-product .choose-header {
+      margin: 30px 0 40px;      
+    }
     #step2-choose-product .api-c-failure-modal {display: none;}
     #step2-choose-product .pro-plans {
       margin-top:0px; /* override the -210px from sahara.css */
@@ -22,7 +24,7 @@ section#step2-choose-product
 
       .row
         .col-sm-12
-          h4.choose-header [@L[cds.sales/offers/online-business:32573-step-2-choose-your-website]@L]
+          h3.choose-header [@L[cds.sales/offers/online-business:32573-step-2-choose-your-website]@L]
 
       .row
         .col-md-5.col-sm-12.plan-tile.plan-pro
@@ -61,8 +63,6 @@ section#step2-choose-product
     p [@L[cds.sales/offers/online-business:32573-get-it-now-error]@L]
 
   #step2-choose-product-wsb-modal.tokenizable-disclaimer-modal.sf-dialog(data-title!='[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]')
-    h2 WSB [@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]
     p [@L[cds.sales/offers/online-business:32573-disclaimer-modal-wsb-content]@L]
   #step2-choose-product-ols-modal.tokenizable-disclaimer-modal.sf-dialog(data-title!='[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]')
-    h2 OLS [@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]
     p [@L[cds.sales/offers/online-business:32573-disclaimer-modal-ols-content]@L]

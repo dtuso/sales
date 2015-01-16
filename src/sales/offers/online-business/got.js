@@ -1,8 +1,16 @@
+//- TODO: fix fastball stuff
+
+if(typeof(FastballEvent_MouseClick) === "undefined") FastballEvent_MouseClick = function(){return true;};
+if(typeof(fbiLibCheckQueue) === "undefined") fbiLibCheckQueue = function(){return true;};
+
+
+
 var got1Page = {
   tldInfo: {
-    defaultTld: 'com',    
-    tlds: ['com','org','co','net', 'club', 'rocks'],  /* todo: drive from a config val */
-    possibleAdditionalTlds: ['in', 'ca', 'uk', 'co.uk'], /* todo: drive from a config val */
+    defaultTld: 'com', 
+    lastTldInList: 'org', 
+    tlds: [@T[appSetting:<setting name="SALES_GOT_TLD_EVERYONE_LIST" />]@T],   
+    possibleAdditionalTlds: [@T[appSetting:<setting name="SALES_GOT_TLD_RESTRICTED_LIST" />]@T],  
     isPossibleAdditionalTld: function(tld) {return -1 !== $.inArray(tld, got1Page.tldInfo.possibleAdditionalTlds);}
   },
   sfDialogErrorButtons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }],
@@ -25,6 +33,73 @@ var got1Page = {
   imagePath: '[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/',
   canOfferOls: true
 };
+
+/* see: http://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php */
+// Find all YouTube videos
+var $allVideos = $("iframe[src^='http://www.youtube.com']"),
+
+    // The element that is fluid width
+    $fluidEl = $("body");
+
+// Figure out and save aspect ratio for each video
+$allVideos.each(function() {
+
+  $(this)
+    .data('aspectRatio', this.height / this.width)
+
+    // and remove the hard coded width/height
+    .removeAttr('height')
+    .removeAttr('width');
+
+});
+
+// When the window is resized
+$(window).resize(function() {
+
+  var newWidth = $fluidEl.width();
+
+  // Resize all videos according to their own aspect ratio
+  $allVideos.each(function() {
+
+    var $el = $(this);
+    $el
+      .width(newWidth)
+      .height(newWidth * $el.data('aspectRatio'));
+
+  });
+
+// Kick off one resize to fix all videos on page load
+}).resize();
+/* end import */
+
+
+function showAndOrderDynamicTldsInList(selector) {
+
+  //- <span class="sorted-tld-list"><span class="tld-list tld-ca">.CA, </span>
+  //- <span class="tld-list tld-club">.CLUB, </span></span>or .ORG
+
+  var $this = $(selector),
+    formatTldSelector = function(tld) { return '.tld-' + tld.replace('.','-')},
+    tldList = got1Page.tldInfo.tlds,
+    removedSpansArr = [],
+    $sortedArea = $this.find(".sorted-tld-list");
+
+  //- remove all dynamic tlds from this
+  $.each(tldList, function(idx, tld){
+    var $tldItem = $this.find(formatTldSelector(tld));
+    removedSpansArr.push($tldItem);
+  });
+
+  //- insert sorted HTML back into the original object and show the ones that are turned on
+  $sortedArea.empty();
+  $.each(removedSpansArr, function(idx, tldSpan) {
+    $sortedArea.append(tldSpan);
+  });
+
+  //- show sorted list
+  $this.find('.tld-list').show();
+}
+
 
 ##if(!productIsOffered(105))
   got1Page.canOfferOls = false;
@@ -60,28 +135,46 @@ var got1Page = {
   }
 ##endif
 
+//- sort the list of TLDs, keeping default at the head of the list and lastTldInList at the end of the list
+got1Page.tldInfo.tlds.sort();
+got1Page.tldInfo.tlds.splice(got1Page.tldInfo.tlds.indexOf(got1Page.tldInfo.defaultTld), 1); //- remove default from list
+got1Page.tldInfo.tlds.unshift(got1Page.tldInfo.defaultTld); //- add default to the beginning
+got1Page.tldInfo.tlds.splice(got1Page.tldInfo.tlds.indexOf(got1Page.tldInfo.lastTldInList), 1); //- remove  lastTldInList from list
+got1Page.tldInfo.tlds.push(got1Page.tldInfo.lastTldInList); //- add to the end of the list
 
 $(document).ready(function() {
 
-  showTldImagesInDomainArea(); //dynamically build the tld images in the #findYourPerfectDomain section
+  showTldImagesInDomainArea(); //- dynamically build the tld images in the #findYourPerfectDomain section
   
-  showDynamicTldsInLists($(document)); // fix up list of valid tlds from lang files
+  //- fix up list of valid tlds from lang files
+  showAndOrderDynamicTldsInList("#default-marquee-details-modal-wsb-only p");
+  showAndOrderDynamicTldsInList("#default-marquee-details-modal p");
+  showAndOrderDynamicTldsInList("#site-choice-wsb-modal p");
+  showAndOrderDynamicTldsInList("#step2-choose-product-wsb-modal p");
+  if(got1Page.canOfferOls) {
+    showAndOrderDynamicTldsInList("#site-choice-ols-modal p");
+    showAndOrderDynamicTldsInList("#step2-choose-product-ols-modal p"); 
+  }
+  showAndOrderDynamicTldsInList("#default-marquee-view .invalid-TLD-entered");
+  showAndOrderDynamicTldsInList("#domain-available-marquee-view .invalid-TLD-entered");
+  showAndOrderDynamicTldsInList("#domain-not-available-marquee-view .invalid-TLD-entered");
 
   tokenizeDisclaimerModals();
  
-  tokenizeOnDataTokenizeAttribute();
+  tokenizeTheDataTokenizeAttribute();
 
-  wireUpDisclaimerModals();
+  wireupModals();
 
 
 
   //set up domain search buttons to do a domain search
   $('#marquee')
     .on('keyup', '.search-form-input', function(e) { 
+      
       if ( e.which == 13 ) {
         // enter key!
         e.preventDefault();
-        domainSearchFormSubmit(e);
+        $('#marquee').find('.offer-search-btn').trigger('click');
         return false;
       } else {
         // verify domain name has a good tld
@@ -116,13 +209,14 @@ $(document).ready(function() {
   $('[data-ci]').click(function (e) {
       var $this = $(this);
       var ci = $this.attr('data-ci');
-      FastballEvent_MouseClick(e, ci, $(this)[0], 'a');
-      fbiLibCheckQueue();
+      //- TODO: fix fastball
+      //FastballEvent_MouseClick(e, ci, $(this)[0], 'a');
+      //fbiLibCheckQueue();
   });
 
 });
 
-function tokenizeOnDataTokenizeAttribute() {
+function tokenizeTheDataTokenizeAttribute() {
   $('[data-tokenize]').each(function(){
     var $this = $(this),
       html = $this.html(),
@@ -145,17 +239,15 @@ function tokenizeDisclaimerModals() {
       $modal.html(htmlTokenized);
     });
   };
-  tokenizeDisclaimerModal(
-    '#default-marquee-details-modal.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_wsb,got1Page.pricing.ols);
-  tokenizeDisclaimerModal(
-    '#default-marquee-details-modal-wsb-only.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_wsb);
-  tokenizeDisclaimerModal(
-    '#site-choice-wsb-modal.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_wsb);
-  tokenizeDisclaimerModal(
-    '#site-choice-ols-modal.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_ols);
+  
+
+  if(got1Page.canOfferOls) tokenizeDisclaimerModal('#default-marquee-details-modal.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_wsb,got1Page.pricing.ols);
+  tokenizeDisclaimerModal('#default-marquee-details-modal-wsb-only.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_wsb);
+  tokenizeDisclaimerModal('#site-choice-wsb-modal.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_wsb);  
+  if(got1Page.canOfferOls) tokenizeDisclaimerModal('#site-choice-ols-modal.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_ols);
 }
 
-function wireUpDisclaimerModals() {
+function wireupModals() {
 
   // wire up see details links
   var marqueeModalId = got1Page.canOfferOls ? "#default-marquee-details-modal" : "#default-marquee-details-modal-wsb-only";
@@ -165,21 +257,44 @@ function wireUpDisclaimerModals() {
   });
 
   // product split modals
-  $('#site-choice').on('click', '.see-wsb-disclaimer-link', function(){
+  $('#site-choice, #wsb-only').on('click', '.see-wsb-disclaimer-link', function(){
     $("#site-choice-wsb-modal").sfDialog({buttons: got1Page.sfDialogErrorButtons});
   });
-  $('#site-choice').on('click', '.see-ols-disclaimer-link', function(){
-    $("#site-choice-ols-modal").sfDialog({buttons: got1Page.sfDialogErrorButtons});
-  });
+
+  if(got1Page.canOfferOls) {
+    $('#site-choice').on('click', '.see-ols-disclaimer-link', function(){
+      $("#site-choice-ols-modal").sfDialog({buttons: got1Page.sfDialogErrorButtons});
+    });
+  }
+
+
 
   // choose product screen
   $('#step2-choose-product').on('click', '.see-wsb-disclaimer-link', function(){
     $("#step2-choose-product-wsb-modal").sfDialog({buttons: got1Page.sfDialogErrorButtons});
   });
-  $('#step2-choose-product').on('click', '.see-ols-disclaimer-link', function(){
-    $("#step2-choose-product-ols-modal").sfDialog({buttons: got1Page.sfDialogErrorButtons});
+  if(got1Page.canOfferOls) {
+    $('#step2-choose-product').on('click', '.see-ols-disclaimer-link', function(){
+      $("#step2-choose-product-ols-modal").sfDialog({buttons: got1Page.sfDialogErrorButtons});
+    });
+  }
+
+
+  $('#wsb-video-btn, #wsb-only-video-btn').on('click', function(){
+    $("#site-choice-wsb-video-modal").sfDialog({titleHidden:true, dialogWidthIdeal:840, buttons: got1Page.sfDialogErrorButtons});
+  });
+  $('#wsb-designs-btn, #wsb-only-designs-btn').on('click', function(){
+    $("#site-choice-wsb-designs-modal").sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
   });
 
+  if(got1Page.canOfferOls) {
+    $('#ols-video-btn').on('click', function(){
+      $("#site-choice-ols-video-modal").sfDialog({titleHidden:true, dialogWidthIdeal:840, buttons: got1Page.sfDialogErrorButtons});
+    });
+    $('#ols-stories-btn').on('click', function(){
+      $("#site-choice-ols-stories-modal").sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
+    });
+  }
 
 }
 
@@ -197,13 +312,6 @@ function showTldImagesInDomainArea() {
   // rerun the height alignment
   $('#findYourPerfectDomain [data-center-element]').css({marginTop:"0px"});
   $(window).trigger('resize');
-}
-
-function showDynamicTldsInLists(selector) {
-  var $this = $(selector);
-  $.each(got1Page.tldInfo.tlds, function(idx, tld){
-    $this.find('.tlds-' + tld).show();
-  });
 }
 
 function formatDomainWithDefaultTldIfNoneSpecified(domain) {
@@ -336,7 +444,7 @@ function showChoicesScreen(e){
     .show()
     .find('.btn-purchase').data('domain', domain);
 
-  // TODO: rerun the height alignment on the choose product screen
+  //- TODO: rerun the height alignment on the choose product screen
 }
 
 function goToDppCheckoutPage(e) {
@@ -409,8 +517,7 @@ function showSearchSpins(domain, alternateDomains){
     $spinResults.append($newSpin);
   });
   got1Page.lastSpinResultCount = alternateDomains.length;
-  debugger;
-  updateDomainCountText(true, got1Page.lastSpinResultCount);
+  updateDomainCountText(true);
   $("#spin-results .spin-result:lt(" + got1Page.maxNumberOfSpinsToShowByDefault + ")").show(); // show first 3 results
 
   animateToNotAvailable(domain); 
@@ -462,11 +569,10 @@ function hideMoreResultsLinks() {
 function displayMoreResultsArea () {
   $("#spin-results .spin-result").show('slow');
   hideMoreResultsLinks();
-  debugger;
-  updateDomainCountText(false, got1Page.lastSpinResultCount);
+  updateDomainCountText(false);
 }
 
-function updateDomainCountText(initial, numberShown) {
+function updateDomainCountText(initial) {
   var $header = $('#domain-not-available-marquee-view').find('.results-list-heading-text');
   var numbersHtml = $header.html();
   if (initial) {
@@ -479,15 +585,5 @@ function updateDomainCountText(initial, numberShown) {
     numbersHtml = numbersHtml.replace(/\{0\}/gi, got1Page.lastSpinResultCount); 
     numbersHtml = numbersHtml.replace(/\{1\}/gi, got1Page.lastSpinResultCount);
   }
-  // if ((numbersHtml.indexOf('{0}') == -1) && (numberShown != got1Page.maxNumberOfSpinsToShowByDefault)) // not found (we replaced it already), and 
-  // {
-  //   numbersHtml = numbersHtml.replace('1 - ' + got1Page.maxNumberOfSpinsToShowByDefault, '1 - ' + numberShown);
-  // }
-  // else
-  // {
-  //   numbersHtml = '[@L[cds.sales/offers/online-business:32573-number-of-number-results]@L]';
-  //   numbersHtml = numbersHtml.replace(/\{0\}/gi, got1Page.maxNumberOfSpinsToShowByDefault); 
-  //   numbersHtml = numbersHtml.replace(/\{1\}/gi, got1Page.lastSpinResultCount);
-  // }
   $header.html(numbersHtml);
 }
