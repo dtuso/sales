@@ -123,7 +123,9 @@ $(document).ready(function() {
  
   tokenizeTheDataTokenizeAttribute();
 
-  wireUpDisclaimerModals();
+  wireupModals();
+
+
 
   //set up domain search buttons to do a domain search
   $('#marquee')
@@ -207,7 +209,7 @@ function tokenizeDisclaimerModals() {
     '#site-choice-ols-modal.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_ols);
 }
 
-function wireUpDisclaimerModals() {
+function wireupModals() {
 
   // wire up see details links
   var marqueeModalId = got1Page.canOfferOls ? "#default-marquee-details-modal" : "#default-marquee-details-modal-wsb-only";
@@ -224,6 +226,8 @@ function wireUpDisclaimerModals() {
     $("#site-choice-ols-modal").sfDialog({buttons: got1Page.sfDialogErrorButtons});
   });
 
+
+
   // choose product screen
   $('#step2-choose-product').on('click', '.see-wsb-disclaimer-link', function(){
     $("#step2-choose-product-wsb-modal").sfDialog({buttons: got1Page.sfDialogErrorButtons});
@@ -232,6 +236,20 @@ function wireUpDisclaimerModals() {
     $("#step2-choose-product-ols-modal").sfDialog({buttons: got1Page.sfDialogErrorButtons});
   });
 
+
+  $('#wsb-video-btn').on('click', function(){
+    $("#site-choice-wsb-video-modal").sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
+  });
+  $('#wsb-designs-btn').on('click', function(){
+    $("#site-choice-wsb-designs-modal").sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
+  });
+  $('#ols-video-btn').on('click', function(){
+    $("#site-choice-ols-video-modal").sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
+  });
+  $('#ols-stories-btn').on('click', function(){
+    $("#site-choice-ols-stories-modal").sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
+  });
+  
 
 }
 

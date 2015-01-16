@@ -254,7 +254,9 @@ $(document).ready(function() {
  
   tokenizeTheDataTokenizeAttribute();
 
-  wireUpDisclaimerModals();
+  wireupModals();
+
+
 
   //set up domain search buttons to do a domain search
   $('#marquee')
@@ -338,7 +340,7 @@ function tokenizeDisclaimerModals() {
     '#site-choice-ols-modal.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_ols);
 }
 
-function wireUpDisclaimerModals() {
+function wireupModals() {
 
   // wire up see details links
   var marqueeModalId = got1Page.canOfferOls ? "#default-marquee-details-modal" : "#default-marquee-details-modal-wsb-only";
@@ -355,6 +357,8 @@ function wireUpDisclaimerModals() {
     $("#site-choice-ols-modal").sfDialog({buttons: got1Page.sfDialogErrorButtons});
   });
 
+
+
   // choose product screen
   $('#step2-choose-product').on('click', '.see-wsb-disclaimer-link', function(){
     $("#step2-choose-product-wsb-modal").sfDialog({buttons: got1Page.sfDialogErrorButtons});
@@ -363,6 +367,20 @@ function wireUpDisclaimerModals() {
     $("#step2-choose-product-ols-modal").sfDialog({buttons: got1Page.sfDialogErrorButtons});
   });
 
+
+  $('#wsb-video-btn').on('click', function(){
+    $("#site-choice-wsb-video-modal").sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
+  });
+  $('#wsb-designs-btn').on('click', function(){
+    $("#site-choice-wsb-designs-modal").sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
+  });
+  $('#ols-video-btn').on('click', function(){
+    $("#site-choice-ols-video-modal").sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
+  });
+  $('#ols-stories-btn').on('click', function(){
+    $("#site-choice-ols-stories-modal").sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
+  });
+  
 
 }
 
@@ -1810,10 +1828,10 @@ function updateDomainCountText(initial) {
                       </mark>
                       <div class="row text-center">
                         <div class="col-md-6 button-margin">
-                          <button class="btn btn-md btn-primary"><i class="uxicon uxicon-play"></i> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]</button>
+                          <button id="wsb-video-btn" class="btn btn-md btn-primary"><i class="uxicon uxicon-play"></i> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]</button>
                         </div>
                         <div class="col-md-6 button-margin">
-                          <button class="btn btn-md btn-primary">[@L[cds.sales/offers/online-business:32573-view-designs-button]@L]</button>
+                          <button id="wsb-designs-btn" class="btn btn-md btn-primary">[@L[cds.sales/offers/online-business:32573-view-designs-button]@L]</button>
                         </div>
                       </div>
                       <div class="row">
@@ -1862,10 +1880,10 @@ function updateDomainCountText(initial) {
                       </mark>
                       <div class="row text-center">
                         <div class="col-md-6 button-margin">
-                          <button class="btn btn-md btn-primary"><i class="uxicon uxicon-play"></i> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]</button>
+                          <button id="ols-video-btn" class="btn btn-md btn-primary"><i class="uxicon uxicon-play"></i> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]</button>
                         </div>
                         <div class="col-md-6 button-margin">
-                          <button class="btn btn-md btn-primary">[@L[cds.sales/offers/online-business:32573-see-real-stores-button]@L]</button>
+                          <button id="ols-stories-btn" class="btn btn-md btn-primary">[@L[cds.sales/offers/online-business:32573-see-real-stores-button]@L]</button>
                         </div>
                       </div>
                       <div class="row">
@@ -1929,6 +1947,18 @@ function updateDomainCountText(initial) {
       </div>
       <div id="site-choice-ols-modal" data-title="[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]" class="tokenizable-disclaimer-modal sf-dialog">
         <p>[@L[cds.sales/offers/online-business:32573-disclaimer-modal-ols-content]@L]</p>
+      </div>
+      <div id="site-choice-wsb-video-modal" class="sf-modal">
+        <iframe width="100%" height="100%" src="//www.youtube.com/embed/-HtVJyxSQmw?html5=1&amp;rel=0&amp;iv_load_policy=3&amp;modestbranding=1" autoplay scrolling="no" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div id="site-choice-wsb-designs-modal" class="sf-modal">
+        <h1>_modal_wsb_designs.jade</h1>
+      </div>
+      <div id="site-choice-ols-video-modal" class="sf-modal">
+        <iframe width="100%" height="100%" src="//www.youtube.com/embed/rMF9d8-3WBA?html5=1&amp;rel=0&amp;iv_load_policy=3&amp;modestbranding=1" autoplay scrolling="no" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div id="site-choice-ols-stories-modal" class="sf-modal">
+        <h1>_modal_ols_stories.jade</h1>
       </div>
     </section>
     <section id="disclaimers"> 

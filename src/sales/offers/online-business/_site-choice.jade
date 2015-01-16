@@ -49,9 +49,9 @@ section#site-choice
           button.btn-link.see-wsb-disclaimer-link [@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price-disclaimer-link]@L]</a>
       .row.text-center
         .col-md-6.button-margin
-          button.btn.btn-md.btn-primary <i class="uxicon uxicon-play"></i> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]
+          button#wsb-video-btn.btn.btn-md.btn-primary <i class="uxicon uxicon-play"></i> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]
         .col-md-6.button-margin
-          button.btn.btn-md.btn-primary [@L[cds.sales/offers/online-business:32573-view-designs-button]@L]
+          button#wsb-designs-btn.btn.btn-md.btn-primary [@L[cds.sales/offers/online-business:32573-view-designs-button]@L]
       .row
         .col-sm-12
           ul.list-unstyled.check-bullets
@@ -81,9 +81,9 @@ section#site-choice
           button.btn-link.see-ols-disclaimer-link [@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price-disclaimer-link]@L]
       .row.text-center
         .col-md-6.button-margin
-          button.btn.btn-md.btn-primary <i class="uxicon uxicon-play"></i> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]
+          button#ols-video-btn.btn.btn-md.btn-primary <i class="uxicon uxicon-play"></i> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]
         .col-md-6.button-margin
-          button.btn.btn-md.btn-primary [@L[cds.sales/offers/online-business:32573-see-real-stores-button]@L]
+          button#ols-stories-btn.btn.btn-md.btn-primary [@L[cds.sales/offers/online-business:32573-see-real-stores-button]@L]
       .row
         .col-sm-12
           ul.list-unstyled.check-bullets
@@ -120,3 +120,16 @@ section#site-choice
     p [@L[cds.sales/offers/online-business:32573-disclaimer-modal-wsb-content]@L]
   #site-choice-ols-modal.tokenizable-disclaimer-modal.sf-dialog(data-title!='[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]')
     p [@L[cds.sales/offers/online-business:32573-disclaimer-modal-ols-content]@L]
+
+
+  #site-choice-wsb-video-modal.sf-modal
+    iframe(width="100%", height="100%",src="//www.youtube.com/embed/-HtVJyxSQmw?html5=1&rel=0&iv_load_policy=3&modestbranding=1",autoplay, scrolling="no", frameborder="0", allowfullscreen)
+
+  #site-choice-wsb-designs-modal.sf-modal
+    include ./_modal_wsb_designs.jade
+
+  #site-choice-ols-video-modal.sf-modal
+    iframe(width="100%", height="100%",src="//www.youtube.com/embed/rMF9d8-3WBA?html5=1&rel=0&iv_load_policy=3&modestbranding=1",autoplay, scrolling="no", frameborder="0", allowfullscreen)
+
+  #site-choice-ols-stories-modal.sf-modal
+    include ./_modal_ols_stories.jade
