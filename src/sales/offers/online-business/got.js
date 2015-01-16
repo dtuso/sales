@@ -525,16 +525,6 @@ function updateDomainCountText(initial, numberShown) {
     numbersHtml = numbersHtml.replace(/\{0\}/gi, got1Page.lastSpinResultCount); 
     numbersHtml = numbersHtml.replace(/\{1\}/gi, got1Page.lastSpinResultCount);
   }
-  // if ((numbersHtml.indexOf('{0}') == -1) && (numberShown != got1Page.maxNumberOfSpinsToShowByDefault)) // not found (we replaced it already), and 
-  // {
-  //   numbersHtml = numbersHtml.replace('1 - ' + got1Page.maxNumberOfSpinsToShowByDefault, '1 - ' + numberShown);
-  // }
-  // else
-  // {
-  //   numbersHtml = '[@L[cds.sales/offers/online-business:32573-number-of-number-results]@L]';
-  //   numbersHtml = numbersHtml.replace(/\{0\}/gi, got1Page.maxNumberOfSpinsToShowByDefault); 
-  //   numbersHtml = numbersHtml.replace(/\{1\}/gi, got1Page.lastSpinResultCount);
-  // }
   $header.html(numbersHtml);
 }
 
