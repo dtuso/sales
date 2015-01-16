@@ -23,6 +23,13 @@ atlantis:webstash(type="css")
       font-size: 14px;
       font-weight: normal;
     }
+
+    #wsb-only .see-wsb-disclaimer-link,   
+    #site-choice .see-wsb-disclaimer-link, 
+    #site-choice .see-ols-disclaimer-link {
+      color: #333;
+    }
+    
     #site-choice ul.check-bullets li,
     #wsb-only ul.check-bullets li {
       position: relative;
@@ -39,6 +46,7 @@ atlantis:webstash(type="css")
       height: 27px;
       position: absolute;
       left: 0;
+      top: -6px;
     }
     #site-choice ul.check-bullets li h5,
     #wsb-only ul.check-bullets li h5  {
@@ -58,6 +66,22 @@ atlantis:webstash(type="css")
     #wsb-only .top-row {padding-top:30px;} /* to match 2-up compare's styling */
     #wsb-only.bg-green-official-light {background-color: #77C043;}
 
+    .videoWrapper {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 */
+      padding-top: 25px;
+      height: 0;
+    }
+    .videoWrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  .sf-dialog .close { top: 0px; right: 10px; }
+
+
 | 
 |##if(!productIsOffered(105))
 | 
@@ -74,10 +98,11 @@ section#wsb-only.bg-green-official-light
         p.disclaimer(data-tokenize!='[@T[multipleproductprice:<list productidlist="464069|101|7524" period="monthly" promocode="0" />]@T]') [@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price-disclaimer]@L] 
           button.btn-link.see-wsb-disclaimer-link [@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price-disclaimer-link]@L]</a>
     .row
-      .col-sm-3.col-sm-push-3.button-margin
-        button#wsb-only-video-btn.btn.btn-md.btn-primary <i class="uxicon uxicon-play"></i> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]
-      .col-sm-3.col-sm-push-3.button-margin
-        button#wsb-only-designs-btn.btn.btn-md.btn-primary [@L[cds.sales/offers/online-business:32573-view-designs-button]@L]    
+      .col-sm-12.button-margin
+        button#wsb-only-video-btn.btn.btn-md.btn-block.btn-primary <i class="uxicon uxicon-play"></i> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]
+    .row
+      .col-sm-12.button-margin
+        button#wsb-only-designs-btn.btn.btn-md.btn-block.btn-primary [@L[cds.sales/offers/online-business:32573-view-designs-button]@L]    
     .row
       .col-sm-3.col-sm-push-3
         ul.list-unstyled.check-bullets
@@ -120,11 +145,12 @@ section#site-choice
         div.headline-primary(data-tokenize!='[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T]') [@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price]@L] 
         p.disclaimer(data-tokenize!='[@T[multipleproductprice:<list productidlist="464069|101|7524" period="monthly" promocode="0" />]@T]') [@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price-disclaimer]@L] 
           button.btn-link.see-wsb-disclaimer-link [@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price-disclaimer-link]@L]</a>
-      .row.text-center
-        .col-md-6.button-margin
-          button#wsb-video-btn.btn.btn-md.btn-primary <i class="uxicon uxicon-play"></i> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]
-        .col-md-6.button-margin
-          button#wsb-designs-btn.btn.btn-md.btn-primary [@L[cds.sales/offers/online-business:32573-view-designs-button]@L]
+      .row
+        .col-sm-12.button-margin
+          button#wsb-video-btn.btn.btn-md.btn-block.btn-primary <i class="uxicon uxicon-play"></i> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]
+      .row
+        .col-sm-12.button-margin
+          button#wsb-designs-btn.btn.btn-md.btn-block.btn-primary [@L[cds.sales/offers/online-business:32573-view-designs-button]@L]
       .row
         .col-sm-12
           ul.list-unstyled.check-bullets
@@ -152,11 +178,12 @@ section#site-choice
         div.headline-primary(data-tokenize!='[@T[multipleproductprice:<current productidlist="464069|101|40972" period="monthly" promocode="75315678" />]@T]') [@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price]@L] 
         p.disclaimer(data-tokenize!='[@T[multipleproductprice:<list productidlist="464069|101|40972" period="monthly" promocode="0" />]@T]') [@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price-disclaimer]@L] 
           button.btn-link.see-ols-disclaimer-link [@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price-disclaimer-link]@L]
-      .row.text-center
-        .col-md-6.button-margin
-          button#ols-video-btn.btn.btn-md.btn-primary <i class="uxicon uxicon-play"></i> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]
-        .col-md-6.button-margin
-          button#ols-stories-btn.btn.btn-md.btn-primary [@L[cds.sales/offers/online-business:32573-see-real-stores-button]@L]
+      .row
+        .col-sm-12.button-margin
+          button#ols-video-btn.btn.btn-md.btn-block.btn-primary <i class="uxicon uxicon-play"></i> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]
+      .row
+        .col-sm-12.button-margin
+          button#ols-stories-btn.btn.btn-md.btn-block.btn-primary [@L[cds.sales/offers/online-business:32573-see-real-stores-button]@L]
       .row
         .col-sm-12
           ul.list-unstyled.check-bullets
@@ -192,8 +219,9 @@ section#site-choice
 #site-choice-ols-modal.tokenizable-disclaimer-modal.sf-dialog(data-title!='[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]')
   p [@L[cds.sales/offers/online-business:32573-disclaimer-modal-ols-content]@L]
 
-#site-choice-ols-video-modal.sf-dialog
-  iframe(width="100%", height="100%",src="//www.youtube.com/embed/rMF9d8-3WBA?html5=1&rel=0&iv_load_policy=3&modestbranding=1",autoplay, scrolling="no", frameborder="0", allowfullscreen)
+#site-choice-ols-video-modal.sf-dialog.got-video-modal
+  .videoWrapper
+    iframe(width="640", height="390", src="//www.youtube.com/embed/rMF9d8-3WBA?html5=1&rel=0&iv_load_policy=3&modestbranding=1",autoplay, scrolling="no", frameborder="0", allowfullscreen)
 
 #site-choice-ols-stories-modal.sf-dialog
   include ./_modal_ols_stories.jade
@@ -206,8 +234,9 @@ section#site-choice
   p [@L[cds.sales/offers/online-business:32573-disclaimer-modal-wsb-content]@L]
 
 
-#site-choice-wsb-video-modal.sf-dialog
-  iframe(width="100%", height="100%",src="//www.youtube.com/embed/-HtVJyxSQmw?html5=1&rel=0&iv_load_policy=3&modestbranding=1",autoplay, scrolling="no", frameborder="0", allowfullscreen)
+#site-choice-wsb-video-modal.sf-dialog.got-video-modal
+  .videoWrapper
+    iframe(width="640", height="390", src="//www.youtube.com/embed/-HtVJyxSQmw?html5=1&rel=0&iv_load_policy=3&modestbranding=1",autoplay, scrolling="no", frameborder="0", allowfullscreen)
 
 #site-choice-wsb-designs-modal.sf-dialog
   include ./_modal_wsb_designs.jade

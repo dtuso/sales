@@ -33,9 +33,24 @@
   padding-right: 5px;
   position: absolute;
   left: 0;
-  top: 0;
+  top: -6px;
 }
 
 *[data-tokenize] {visibility: hidden;}
 
 .tld-list { display: none;}
+
+
+#marquee h3.get-a-domain-text,
+#step2-choose-product h3.choose-header {
+  font-size: 24px; 
+  color: #232323;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.disclaimers-row {
+  margin: 20px 0;
+  font-size:14px;
+  color:#666;
+}

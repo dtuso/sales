@@ -168,6 +168,44 @@ var got1Page = {
   canOfferOls: true
 };
 
+/* see: http://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php */
+// Find all YouTube videos
+var $allVideos = $("iframe[src^='http://www.youtube.com']"),
+
+    // The element that is fluid width
+    $fluidEl = $("body");
+
+// Figure out and save aspect ratio for each video
+$allVideos.each(function() {
+
+  $(this)
+    .data('aspectRatio', this.height / this.width)
+
+    // and remove the hard coded width/height
+    .removeAttr('height')
+    .removeAttr('width');
+
+});
+
+// When the window is resized
+$(window).resize(function() {
+
+  var newWidth = $fluidEl.width();
+
+  // Resize all videos according to their own aspect ratio
+  $allVideos.each(function() {
+
+    var $el = $(this);
+    $el
+      .width(newWidth)
+      .height(newWidth * $el.data('aspectRatio'));
+
+  });
+
+// Kick off one resize to fix all videos on page load
+}).resize();
+/* end import */
+
 
 function showAndOrderDynamicTldsInList(selector) {
 
@@ -377,7 +415,7 @@ function wireupModals() {
 
 
   $('#wsb-video-btn, #wsb-only-video-btn').on('click', function(){
-    $("#site-choice-wsb-video-modal").sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
+    $("#site-choice-wsb-video-modal").sfDialog({titleHidden:true, dialogWidthIdeal:840, buttons: got1Page.sfDialogErrorButtons});
   });
   $('#wsb-designs-btn, #wsb-only-designs-btn').on('click', function(){
     $("#site-choice-wsb-designs-modal").sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
@@ -385,7 +423,7 @@ function wireupModals() {
 
   if(got1Page.canOfferOls) {
     $('#ols-video-btn').on('click', function(){
-      $("#site-choice-ols-video-modal").sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
+      $("#site-choice-ols-video-modal").sfDialog({titleHidden:true, dialogWidthIdeal:840, buttons: got1Page.sfDialogErrorButtons});
     });
     $('#ols-stories-btn').on('click', function(){
       $("#site-choice-ols-stories-modal").sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
@@ -686,7 +724,6 @@ function updateDomainCountText(initial) {
 
       </script>
     </atlantis:webstash>
-    <link href="[@T[link:<cssroot />]@T]/fos/mike/0.7.0/css/sahara.css" rel="stylesheet">
     <link href="[@T[link:<cssroot />]@T]/fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css">
     <style>.bg-gray-light {
   background-color: #d9d9d9;
@@ -723,12 +760,28 @@ function updateDomainCountText(initial) {
   padding-right: 5px;
   position: absolute;
   left: 0;
-  top: 0;
+  top: -6px;
 }
 
 *[data-tokenize] {visibility: hidden;}
 
 .tld-list { display: none;}
+
+
+#marquee h3.get-a-domain-text,
+#step2-choose-product h3.choose-header {
+  font-size: 24px; 
+  color: #232323;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.disclaimers-row {
+  margin: 20px 0;
+  font-size:14px;
+  color:#666;
+}
+
     </style><!--[if lt IE 9]>
     <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
     <link href="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy.min.html" id="respond-proxy" rel="respond-proxy">
@@ -750,11 +803,10 @@ function updateDomainCountText(initial) {
     <!-- HEADERBEGIN--> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- HEADEREND-->
-    <!-- none-->
+    <!-- nothing to see here-->
     <atlantis:webstash type="css">
       <style>
         #marquee {margin:0 auto; padding-top:15px;background-color: #77c043;}
-        #marquee .get-a-domain-text { margin-top: 20px; }
         
       </style>
     </atlantis:webstash>
@@ -837,27 +889,35 @@ function updateDomainCountText(initial) {
           
           /* (end) speech */
           
-          
           #default-marquee-view { display: inline; padding-bottom:40px; }
           #default-marquee-view .get-online-wrapper {position: relative; height: 260px;}
-          #default-marquee-view .get-online-dash {position: absolute; left: 20px; top: 10px;}
-          #default-marquee-view .get-online-text {font-size: 46pt; color:#333333;}
+          #default-marquee-view .get-online-dash {position: absolute; left: 20px; top: 10px; }
+          #default-marquee-view .get-online-text {font-size: 46pt; color:#333333; font-weight: bold;}
           #default-marquee-view .get-online-image {display:none;width: 275px; overflow: hidden; height: 35px;}
           #default-marquee-view .green-arrow {position: absolute; left: 0px; top: 137px;}
           #default-marquee-view .today-text {position: absolute; left: 20px; top: 55px; font-size: 104pt;margin: 0px;color:#333333;}
-          #default-marquee-view .as-low-as-text {position: absolute; left: 45px; top: 160px; color: #fff;}
-          #default-marquee-view .top-disclaimer-text {position: absolute; left: 45px; top: 240px; color:#00701D;font-size: 12px}
+          #default-marquee-view .as-low-as-text {position: absolute; left: 45px; top: 160px; color: #fff;font-size:30px; font-weight: bold; text-transform: uppercase;}
+          #default-marquee-view .top-disclaimer-text {position: absolute; left: 45px; top: 240px; color:#00701D;font-size: 12px;}
           #default-marquee-view .you-get-wrapper {position: relative; height: 260px;}
           #default-marquee-view .you-get-image {position: absolute; left: 10px; top: 70px; height: 35px;}
           #default-marquee-view .domain-text {position: absolute; left: 30px; top: 185px; font-size: 25px; color: #333333;}
           #default-marquee-view .website-text {position: absolute; left: 40px; top: 185px; font-size: 25px; color: #333333;}
           #default-marquee-view .email-text {position: absolute; left: 65px;  top: 185px; font-size: 25px; color: #333333;}
           #default-marquee-view .powered-by-text {position: absolute; left: 55px; top: 214px; font-size: 11px; color: #333333;}
-          #default-marquee-view .see-details-disclaimer-link {color:#00701D;font-size: 12px; text-decoration: none;cursor:pointer;}
-          #default-marquee-view .see-details-disclaimer-link:hover {text-decoration: underline;}
+          #default-marquee-view .see-details-disclaimer-link {color:#00701D;font-size: 12px; cursor:pointer;}
           #default-marquee-details-modal h2 {margin: 0 0 20px;}
           
-          html[lang*=en] .get-online-image {display:inline-block;}
+          html[lang="en-US"] #default-marquee-view .get-online-image {display:inline-block;}
+          
+          
+          //- @media only screen and (max-width: 768px) {
+          //-   .features {
+          //-     background-image: none !important;
+          //-   }
+          //- }
+          
+          
+          
           
         </style>
       </atlantis:webstash>
@@ -869,7 +929,7 @@ function updateDomainCountText(initial) {
                 <div class="clearfix get-online-dash"><span class="headline-secondary get-online-text">[@L[cds.sales/offers/online-business:32573-top-banner-headline]@L]</span><span class="get-online-image"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-dash.png"></span></div><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-marker.png" class="green-arrow">
                 <h1 class="headline-primary today-text">[@L[cds.sales/offers/online-business:32573-top-banner-subheadline]@L]</h1>
                 <h3 data-tokenize="[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T]" class="as-low-as-text">[@L[cds.sales/offers/online-business:32573-as-low-as]@L]</h3>
-                <div class="top-disclaimer-text small">[@L[cds.sales/offers/online-business:32573-top-small-disclaimer-text]@L] 
+                <div class="top-disclaimer-text">[@L[cds.sales/offers/online-business:32573-top-small-disclaimer-text]@L] 
                   <button class="btn-link see-details-disclaimer-link">[@L[cds.sales/offers/online-business:32573-top-small-disclaimer-details-link]@L]</button>
                 </div>
               </div>
@@ -892,23 +952,23 @@ function updateDomainCountText(initial) {
             </div>
           </div>
           <style>
-            .offer-search-box .search-form-input {height: 67px; padding: 20px; color: #333; font-size:18px;border-top-color: #fff; border-top-width: 3px; border-top-style: inset; border-bottom: 1px solid #ccc; border-left: 1px solid #ccc; border-right: 1px solid #ccc; width: 850px;}
-            .offer-search-box label.searchInput {};
-            .offer-search-box button.offer-search-btn { font-size: 20px; height: 66px; margin-top: -6px; }
             .offer-search-box { padding-bottom:20px;}
             .search-message { display: none; margin-left:20px; margin-top:30px;width:65%;}
             .domain-search-messaging-row {padding-bottom: 40px;}
+            .get-a-domain-text {margin: 20px 0 5px;}
             
           </style>
           <div class="row">
             <div class="col-md-12">
-              <h5 class="get-a-domain-text">[@L[cds.sales/offers/online-business:32573-step-1-get-a-domain]@L]</h5>
+              <h3 class="get-a-domain-text">[@L[cds.sales/offers/online-business:32573-step-1-get-a-domain]@L]</h3>
             </div>
           </div>
           <div class="row">
             <div class="col-md-12 offer-search-box">
-              <input type="text" placeholder="[@L[cds.sales/offers/online-business:32573-domain-search-placeholder]@L]" name="domainToCheck" autocomplete="off" maxlength="63" class="search-form-input searchInput helveticafont"/>
-              <button type="button" name="searchButton" data-ci="12345" class="btn btn-primary btn-lg offer-search-btn">[@L[cds.sales/offers/online-business:32573-search]@L]</button>
+              <div class="input-group">
+                <input type="text" placeholder="[@L[cds.sales/offers/online-business:32573-domain-search-placeholder]@L]" name="domainToCheck" autocomplete="off" maxlength="63" class="form-control input-lg search-form-input searchInput helveticafont"/><span class="input-group-btn">
+                  <button type="button" name="searchButton" data-ci="12345" class="btn btn-primary btn-lg offer-search-btn">[@L[cds.sales/offers/online-business:32573-search]@L]</button></span>
+              </div>
             </div>
           </div>
           <div class="row domain-search-messaging-row">
@@ -962,23 +1022,23 @@ function updateDomainCountText(initial) {
         <div class="bg-white">
           <div class="container">
             <style>
-              .offer-search-box .search-form-input {height: 67px; padding: 20px; color: #333; font-size:18px;border-top-color: #fff; border-top-width: 3px; border-top-style: inset; border-bottom: 1px solid #ccc; border-left: 1px solid #ccc; border-right: 1px solid #ccc; width: 850px;}
-              .offer-search-box label.searchInput {};
-              .offer-search-box button.offer-search-btn { font-size: 20px; height: 66px; margin-top: -6px; }
               .offer-search-box { padding-bottom:20px;}
               .search-message { display: none; margin-left:20px; margin-top:30px;width:65%;}
               .domain-search-messaging-row {padding-bottom: 40px;}
+              .get-a-domain-text {margin: 20px 0 5px;}
               
             </style>
             <div class="row">
               <div class="col-md-12">
-                <h5 class="get-a-domain-text">[@L[cds.sales/offers/online-business:32573-or-search-for-a-new-one]@L]</h5>
+                <h3 class="get-a-domain-text">[@L[cds.sales/offers/online-business:32573-or-search-for-a-new-one]@L]</h3>
               </div>
             </div>
             <div class="row">
               <div class="col-md-12 offer-search-box">
-                <input type="text" placeholder="[@L[cds.sales/offers/online-business:32573-try-a-different-domain-name-placeholder]@L]" name="domainToCheck" autocomplete="off" maxlength="63" class="search-form-input searchInput helveticafont"/>
-                <button type="button" name="searchButton" data-ci="12346" class="btn btn-primary btn-lg offer-search-btn">[@L[cds.sales/offers/online-business:32573-search]@L]</button>
+                <div class="input-group">
+                  <input type="text" placeholder="[@L[cds.sales/offers/online-business:32573-try-a-different-domain-name-placeholder]@L]" name="domainToCheck" autocomplete="off" maxlength="63" class="form-control input-lg search-form-input searchInput helveticafont"/><span class="input-group-btn">
+                    <button type="button" name="searchButton" data-ci="12346" class="btn btn-primary btn-lg offer-search-btn">[@L[cds.sales/offers/online-business:32573-search]@L]</button></span>
+                </div>
               </div>
             </div>
             <div class="row domain-search-messaging-row">
@@ -1020,23 +1080,23 @@ function updateDomainCountText(initial) {
               </div>
             </div>
             <style>
-              .offer-search-box .search-form-input {height: 67px; padding: 20px; color: #333; font-size:18px;border-top-color: #fff; border-top-width: 3px; border-top-style: inset; border-bottom: 1px solid #ccc; border-left: 1px solid #ccc; border-right: 1px solid #ccc; width: 850px;}
-              .offer-search-box label.searchInput {};
-              .offer-search-box button.offer-search-btn { font-size: 20px; height: 66px; margin-top: -6px; }
               .offer-search-box { padding-bottom:20px;}
               .search-message { display: none; margin-left:20px; margin-top:30px;width:65%;}
               .domain-search-messaging-row {padding-bottom: 40px;}
+              .get-a-domain-text {margin: 20px 0 5px;}
               
             </style>
             <div class="row">
               <div class="col-md-12">
-                <h5 class="get-a-domain-text">[@L[cds.sales/offers/online-business:32573-search-try-again]@L]</h5>
+                <h3 class="get-a-domain-text">[@L[cds.sales/offers/online-business:32573-search-try-again]@L]</h3>
               </div>
             </div>
             <div class="row">
               <div class="col-md-12 offer-search-box">
-                <input type="text" placeholder="[@L[cds.sales/offers/online-business:32573-try-a-different-domain-name-placeholder]@L]" name="domainToCheck" autocomplete="off" maxlength="63" class="search-form-input searchInput helveticafont"/>
-                <button type="button" name="searchButton" data-ci="12347" class="btn btn-primary btn-lg offer-search-btn">[@L[cds.sales/offers/online-business:32573-search]@L]</button>
+                <div class="input-group">
+                  <input type="text" placeholder="[@L[cds.sales/offers/online-business:32573-try-a-different-domain-name-placeholder]@L]" name="domainToCheck" autocomplete="off" maxlength="63" class="form-control input-lg search-form-input searchInput helveticafont"/><span class="input-group-btn">
+                    <button type="button" name="searchButton" data-ci="12347" class="btn btn-primary btn-lg offer-search-btn">[@L[cds.sales/offers/online-business:32573-search]@L]</button></span>
+                </div>
               </div>
             </div>
             <div class="row domain-search-messaging-row">
@@ -1268,58 +1328,101 @@ function updateDomainCountText(initial) {
     </section>
     <atlantis:webstash type="css">
       <style>
-        #domains .tld-images {margin-top: 0px; margin-left: 60px;}
-        #domains .tld-image {margin: 15px;}
-        #findYourPerfectDomain.tile-section {
-          padding:20px 0;
-        }
-        #findYourPerfectDomain.features-slim {
-          min-height: 241px;
-        }
-        #findYourPerfectDomain {
-          background-color: #F3F3F3;
-        }
         #domains .disclaimer p {
           font-size: 14px;
           color: #666;
         }
-        #domains .features-slim h2 {
-          margin: 10px 0px;
+        #domains .features.features-wrap {
+          min-height: 360px;
         }
         
       </style>
     </atlantis:webstash>
     <section id="domains">
-      <div class="features tile-section">
+      <atlantis:webstash type="css">
+        <style>
+          .features {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: top center;
+          }
+          @media only screen and (max-width: 768px) {
+            .features {
+              background-image: none !important;
+            }
+          }
+          @media only screen and (max-width: 992px) {
+            .features .features-img {
+              width: 85%;
+            }
+          }
+          @media only screen and (max-width: 768px) {
+            .features .features-img {
+              width: 50%;
+            }
+          }
+          @media only screen and (max-width: 992px) {
+            .features .features-img.features-img-right-slim {
+              margin: 40px 0 0;
+            }
+          }
+          @media only screen and (max-width: 992px) {
+            .features .features-img.features-img-left,
+            .features .features-img.features-img-right {
+              margin: 0 0 40px;
+            }
+          }
+          .features.features-wrap {
+            min-height: 560px;
+          }
+          @media only screen and (max-width: 992px) {
+            .features.features-wrap {
+              min-height: 0;
+            }
+          }
+          @media only screen and (max-width: 992px) {
+            .features.features-wrap {
+              padding: 40px 0;
+            }
+          }
+          .features.features-wrap h2,
+          .features.features-slim h2 {
+            font-family: 'Walsheim-Black';
+            margin: 0 0 20px;
+            color: #333;
+            font-size: 40px;
+          }
+          .features.text-white * {
+            color: #fff !important;
+          }
+          .features .features-subtitle {
+            font-family: 'Walsheim-Bold';
+            margin-top: 20px;
+          }
+          .features .features-text {
+            margin-bottom: 20px;
+          }
+          .features.features-slim {
+            min-height: 300px;
+          }
+          
+          
+        </style>
+      </atlantis:webstash>
+      <div id="domainSection1What" style="background-image: url('null');" data-lazy-load="" class="features tile-section features-wrap  ">
         <div class="container">
           <div class="row">
-            <div class="col-md-6 col-sm-12 domain-image col-md-push-6"> <img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png"></div>
-            <div class="col-md-6 col-sm-12 col-md-pull-6"> 
-              <h2><mark>[@L[cds.sales/offers/online-business:32573-whats-a-domain-heading]@L]</mark> [@L[cds.sales/offers/online-business:32573-whats-a-domain-text]@L]</h2>
-              <h4>[@L[cds.sales/offers/online-business:32573-whats-a-domain-subtext]@L]</h4>
-              <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-whats-a-domain-bullet-one]@L]</div>
-              <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-whats-a-domain-bullet-two]@L]</div>
+            <div class="col-sm-6 col-sm-push-6">
+              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="text-center"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png" alt="" class="features-img features-img-right">
+              </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="features tile-section">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-6 domain-image col-sm-push-6"> <img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature2.png"></div>
-            <div class="col-sm-6 col-sm-pull-6"> 
-              <h2>[@L[cds.sales/offers/online-business:32573-email-even-better-heading]@L]</h2>
-              <h4>[@L[cds.sales/offers/online-business:32573-email-even-better-text]@L]</h4>
-              <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-email-even-better-bullet-1]@L]</div>
-              <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-email-even-better-bullet-2]@L]</div>
+            <div class="col-sm-6 col-sm-pull-6">
+              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                <h2><mark>[@L[cds.sales/offers/online-business:32573-whats-a-domain-heading]@L]</mark> [@L[cds.sales/offers/online-business:32573-whats-a-domain-text]@L]</h2>
+                <h4 class="features-subtitle">[@L[cds.sales/offers/online-business:32573-whats-a-domain-subtext]@L]</h4>
+                <div class="features-text"><div class="include-check-green">[@L[cds.sales/offers/online-business:32573-whats-a-domain-bullet-one]@L]</div><div class="include-check-green">[@L[cds.sales/offers/online-business:32573-whats-a-domain-bullet-two]@L]</div></div>
+              </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row disclaimer">
-          <div class="col-sm-12"> 
-            <p>[@L[cds.sales/offers/online-business:32573-plus-inline-disclaimer]@L]</p>
           </div>
         </div>
       </div>
@@ -1364,19 +1467,135 @@ function updateDomainCountText(initial) {
               min-height: 0;
             }
           }
-          .features.features-wrap h2 {
-            margin-top: 0;
-          }
           @media only screen and (max-width: 992px) {
             .features.features-wrap {
               padding: 40px 0;
             }
+          }
+          .features.features-wrap h2,
+          .features.features-slim h2 {
+            font-family: 'Walsheim-Black';
+            margin: 0 0 20px;
+            color: #333;
+            font-size: 40px;
           }
           .features.text-white * {
             color: #fff !important;
           }
           .features .features-subtitle {
             font-family: 'Walsheim-Bold';
+            margin-top: 20px;
+          }
+          .features .features-text {
+            margin-bottom: 20px;
+          }
+          .features.features-slim {
+            min-height: 300px;
+          }
+          
+          
+        </style>
+      </atlantis:webstash>
+      <div id="domainSection2Email" style="background-image: url('null');" data-lazy-load="" class="features tile-section features-wrap  ">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6 col-sm-push-6">
+              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="text-center"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature2.png" alt="" class="features-img features-img-right">
+              </div>
+            </div>
+            <div class="col-sm-6 col-sm-pull-6">
+              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                <h2><mark>[@L[cds.sales/offers/online-business:32573-whats-a-domain-heading]@L]</mark> [@L[cds.sales/offers/online-business:32573-whats-a-domain-text]@L]</h2>
+                <h4 class="features-subtitle">[@L[cds.sales/offers/online-business:32573-email-even-better-text]@L]</h4>
+                <div class="features-text"><div class="include-check-green">[@L[cds.sales/offers/online-business:32573-email-even-better-bullet-1]@L]</div><div class="include-check-green">[@L[cds.sales/offers/online-business:32573-email-even-better-bullet-2]@L]</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row disclaimer">
+          <div class="col-sm-12"> 
+            <p class="disclaimers-text">[@L[cds.sales/offers/online-business:32573-plus-inline-disclaimer]@L]</p>
+          </div>
+        </div>
+      </div>
+      <atlantis:webstash type="css">
+        <style>
+          #findYourPerfectDomain .tld-images {margin-top: 0px; margin-left: 60px;}
+          #findYourPerfectDomain .tld-image {margin: 15px;}
+          #findYourPerfectDomain.tile-section {
+            padding:20px 0;
+          }
+          #findYourPerfectDomain.features-slim {
+            min-height: 241px;
+          }
+          #findYourPerfectDomain {
+            background-color: #F3F3F3;
+          }
+          
+          
+        </style>
+      </atlantis:webstash>
+      <atlantis:webstash type="css">
+        <style>
+          .features {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: top center;
+          }
+          @media only screen and (max-width: 768px) {
+            .features {
+              background-image: none !important;
+            }
+          }
+          @media only screen and (max-width: 992px) {
+            .features .features-img {
+              width: 85%;
+            }
+          }
+          @media only screen and (max-width: 768px) {
+            .features .features-img {
+              width: 50%;
+            }
+          }
+          @media only screen and (max-width: 992px) {
+            .features .features-img.features-img-right-slim {
+              margin: 40px 0 0;
+            }
+          }
+          @media only screen and (max-width: 992px) {
+            .features .features-img.features-img-left,
+            .features .features-img.features-img-right {
+              margin: 0 0 40px;
+            }
+          }
+          .features.features-wrap {
+            min-height: 560px;
+          }
+          @media only screen and (max-width: 992px) {
+            .features.features-wrap {
+              min-height: 0;
+            }
+          }
+          @media only screen and (max-width: 992px) {
+            .features.features-wrap {
+              padding: 40px 0;
+            }
+          }
+          .features.features-wrap h2,
+          .features.features-slim h2 {
+            font-family: 'Walsheim-Black';
+            margin: 0 0 20px;
+            color: #333;
+            font-size: 40px;
+          }
+          .features.text-white * {
+            color: #fff !important;
+          }
+          .features .features-subtitle {
+            font-family: 'Walsheim-Bold';
+            margin-top: 20px;
           }
           .features .features-text {
             margin-bottom: 20px;
@@ -1408,7 +1627,9 @@ function updateDomainCountText(initial) {
     <atlantis:webstash type="css">
       <style>
         #step2-choose-product {display: none;}
-        #step2-choose-product .choose-header {margin: 30px 0 40px;}
+        #step2-choose-product .choose-header {
+          margin: 30px 0 40px;      
+        }
         #step2-choose-product .api-c-failure-modal {display: none;}
         #step2-choose-product .pro-plans {
           margin-top:0px; /* override the -210px from sahara.css */
@@ -1431,7 +1652,7 @@ function updateDomainCountText(initial) {
         <div class="container pro-plans">
           <div class="row">
             <div class="col-sm-12">
-              <h4 class="choose-header">[@L[cds.sales/offers/online-business:32573-step-2-choose-your-website]@L]</h4>
+              <h3 class="choose-header">[@L[cds.sales/offers/online-business:32573-step-2-choose-your-website]@L]</h3>
             </div>
           </div>
           <div class="row">
@@ -1508,6 +1729,13 @@ function updateDomainCountText(initial) {
           font-size: 14px;
           font-weight: normal;
         }
+        
+        #wsb-only .see-wsb-disclaimer-link,   
+        #site-choice .see-wsb-disclaimer-link, 
+        #site-choice .see-ols-disclaimer-link {
+          color: #333;
+        }
+        
         #site-choice ul.check-bullets li,
         #wsb-only ul.check-bullets li {
           position: relative;
@@ -1524,6 +1752,7 @@ function updateDomainCountText(initial) {
           height: 27px;
           position: absolute;
           left: 0;
+          top: -6px;
         }
         #site-choice ul.check-bullets li h5,
         #wsb-only ul.check-bullets li h5  {
@@ -1543,7 +1772,21 @@ function updateDomainCountText(initial) {
         #wsb-only .top-row {padding-top:30px;} /* to match 2-up compare's styling */
         #wsb-only.bg-green-official-light {background-color: #77C043;}
         
+        .videoWrapper {
+          position: relative;
+          padding-bottom: 56.25%; /* 16:9 */
+          padding-top: 25px;
+          height: 0;
+        }
+        .videoWrapper iframe {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
       </style>
+      <div class="sf-dialog">.close { top: 0px; right: 10px; }</div>
     </atlantis:webstash> 
     ##if(!productIsOffered(105))
      
@@ -1563,11 +1806,13 @@ function updateDomainCountText(initial) {
           </div>
         </div>
         <div class="row">
-          <div class="col-sm-3 col-sm-push-3 button-margin">
-            <button id="wsb-only-video-btn" class="btn btn-md btn-primary"><i class="uxicon uxicon-play"></i> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]</button>
+          <div class="col-sm-12 button-margin">
+            <button id="wsb-only-video-btn" class="btn btn-md btn-block btn-primary"><i class="uxicon uxicon-play"></i> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]</button>
           </div>
-          <div class="col-sm-3 col-sm-push-3 button-margin">
-            <button id="wsb-only-designs-btn" class="btn btn-md btn-primary">[@L[cds.sales/offers/online-business:32573-view-designs-button]@L]    </button>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 button-margin">
+            <button id="wsb-only-designs-btn" class="btn btn-md btn-block btn-primary">[@L[cds.sales/offers/online-business:32573-view-designs-button]@L]    </button>
           </div>
         </div>
         <div class="row">
@@ -1771,7 +2016,7 @@ function updateDomainCountText(initial) {
   content: '';
   width: 94px;
   height: 94px;
-  background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+  background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
   background-size: 205px auto;
   background-position: 0 -896px;
   position: absolute;
@@ -1785,7 +2030,7 @@ function updateDomainCountText(initial) {
   content: '';
   width: 94px;
   height: 94px;
-  background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+  background-image: url([@T[link:<imageroot />]@T]ffos/hp/sahara-rebrand-sprite-20141114.png);
   background-size: 205px auto;
   background-position: 0 -896px;
   position: absolute;
@@ -1921,12 +2166,14 @@ function updateDomainCountText(initial) {
                           <button class="btn-link see-wsb-disclaimer-link">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price-disclaimer-link]@L]</a></button>
                         </p>
                       </div>
-                      <div class="row text-center">
-                        <div class="col-md-6 button-margin">
-                          <button id="wsb-video-btn" class="btn btn-md btn-primary"><i class="uxicon uxicon-play"></i> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]</button>
+                      <div class="row">
+                        <div class="col-sm-12 button-margin">
+                          <button id="wsb-video-btn" class="btn btn-md btn-block btn-primary"><i class="uxicon uxicon-play"></i> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]</button>
                         </div>
-                        <div class="col-md-6 button-margin">
-                          <button id="wsb-designs-btn" class="btn btn-md btn-primary">[@L[cds.sales/offers/online-business:32573-view-designs-button]@L]</button>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-12 button-margin">
+                          <button id="wsb-designs-btn" class="btn btn-md btn-block btn-primary">[@L[cds.sales/offers/online-business:32573-view-designs-button]@L]</button>
                         </div>
                       </div>
                       <div class="row">
@@ -1973,12 +2220,14 @@ function updateDomainCountText(initial) {
                           <button class="btn-link see-ols-disclaimer-link">[@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price-disclaimer-link]@L]</button>
                         </p>
                       </div>
-                      <div class="row text-center">
-                        <div class="col-md-6 button-margin">
-                          <button id="ols-video-btn" class="btn btn-md btn-primary"><i class="uxicon uxicon-play"></i> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]</button>
+                      <div class="row">
+                        <div class="col-sm-12 button-margin">
+                          <button id="ols-video-btn" class="btn btn-md btn-block btn-primary"><i class="uxicon uxicon-play"></i> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]</button>
                         </div>
-                        <div class="col-md-6 button-margin">
-                          <button id="ols-stories-btn" class="btn btn-md btn-primary">[@L[cds.sales/offers/online-business:32573-see-real-stores-button]@L]</button>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-12 button-margin">
+                          <button id="ols-stories-btn" class="btn btn-md btn-block btn-primary">[@L[cds.sales/offers/online-business:32573-see-real-stores-button]@L]</button>
                         </div>
                       </div>
                       <div class="row">
@@ -2041,8 +2290,10 @@ function updateDomainCountText(initial) {
     <div id="site-choice-ols-modal" data-title="[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]" class="tokenizable-disclaimer-modal sf-dialog">
       <p>[@L[cds.sales/offers/online-business:32573-disclaimer-modal-ols-content]@L]</p>
     </div>
-    <div id="site-choice-ols-video-modal" class="sf-dialog">
-      <iframe width="100%" height="100%" src="//www.youtube.com/embed/rMF9d8-3WBA?html5=1&amp;rel=0&amp;iv_load_policy=3&amp;modestbranding=1" autoplay scrolling="no" frameborder="0" allowfullscreen></iframe>
+    <div id="site-choice-ols-video-modal" class="sf-dialog got-video-modal">
+      <div class="videoWrapper">
+        <iframe width="640" height="390" src="//www.youtube.com/embed/rMF9d8-3WBA?html5=1&amp;rel=0&amp;iv_load_policy=3&amp;modestbranding=1" autoplay scrolling="no" frameborder="0" allowfullscreen></iframe>
+      </div>
     </div>
     <div id="site-choice-ols-stories-modal" class="sf-dialog">
       <h1>_modal_ols_stories.jade</h1>
@@ -2052,8 +2303,10 @@ function updateDomainCountText(initial) {
     <div id="site-choice-wsb-modal" data-title="[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]" class="tokenizable-disclaimer-modal sf-dialog">
       <p>[@L[cds.sales/offers/online-business:32573-disclaimer-modal-wsb-content]@L]</p>
     </div>
-    <div id="site-choice-wsb-video-modal" class="sf-dialog">
-      <iframe width="100%" height="100%" src="//www.youtube.com/embed/-HtVJyxSQmw?html5=1&amp;rel=0&amp;iv_load_policy=3&amp;modestbranding=1" autoplay scrolling="no" frameborder="0" allowfullscreen></iframe>
+    <div id="site-choice-wsb-video-modal" class="sf-dialog got-video-modal">
+      <div class="videoWrapper">
+        <iframe width="640" height="390" src="//www.youtube.com/embed/-HtVJyxSQmw?html5=1&amp;rel=0&amp;iv_load_policy=3&amp;modestbranding=1" autoplay scrolling="no" frameborder="0" allowfullscreen></iframe>
+      </div>
     </div>
     <div id="site-choice-wsb-designs-modal" class="sf-dialog">
       <h1>_modal_wsb_designs.jade</h1>

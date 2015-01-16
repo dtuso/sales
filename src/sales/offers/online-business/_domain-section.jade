@@ -1,60 +1,23 @@
 atlantis:webstash(type="css")
   style.
-    #domains .tld-images {margin-top: 0px; margin-left: 60px;}
-    #domains .tld-image {margin: 15px;}
-    #findYourPerfectDomain.tile-section {
-      padding:20px 0;
-    }
-    #findYourPerfectDomain.features-slim {
-      min-height: 241px;
-    }
-    #findYourPerfectDomain {
-      background-color: #F3F3F3;
-    }
     #domains .disclaimer p {
       font-size: 14px;
       color: #666;
     }
-    #domains .features-slim h2 {
-      margin: 10px 0px;
+    #domains .features.features-wrap {
+      min-height: 360px;
     }
 
 section#domains
 
-  .features.tile-section
-    .container
-      .row
-        .col-md-6.col-sm-12.domain-image.col-md-push-6 
-          img(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png")
-        .col-md-6.col-sm-12.col-md-pull-6 
-          h2 <mark>[@L[cds.sales/offers/online-business:32573-whats-a-domain-heading]@L]</mark> [@L[cds.sales/offers/online-business:32573-whats-a-domain-text]@L]
-          h4 [@L[cds.sales/offers/online-business:32573-whats-a-domain-subtext]@L]
-          .include-check-green [@L[cds.sales/offers/online-business:32573-whats-a-domain-bullet-one]@L]
-          .include-check-green [@L[cds.sales/offers/online-business:32573-whats-a-domain-bullet-two]@L]
+  include ./_domain-section-1-what.jade
 
-  .features.tile-section
-    .container
-      .row
-        .col-sm-6.domain-image.col-sm-push-6 
-          img(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature2.png")
-        .col-sm-6.col-sm-pull-6 
-          h2 [@L[cds.sales/offers/online-business:32573-email-even-better-heading]@L]
-          h4 [@L[cds.sales/offers/online-business:32573-email-even-better-text]@L]
-          .include-check-green [@L[cds.sales/offers/online-business:32573-email-even-better-bullet-1]@L]
-          .include-check-green [@L[cds.sales/offers/online-business:32573-email-even-better-bullet-2]@L]
+  include ./_domain-section-2-email.jade
 
   .container
     .row.disclaimer
       .col-sm-12 
-        p [@L[cds.sales/offers/online-business:32573-plus-inline-disclaimer]@L]
+        p.disclaimers-text [@L[cds.sales/offers/online-business:32573-plus-inline-disclaimer]@L]
+        
+  include ./_domain-section-3-slim.jade
 
-  - var featuresId = "findYourPerfectDomain";
-  - var presentationTemplate = "featuresSlim";
-  - var backgroundImage = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/bg-shortMod.jpg";
-  - var whiteText = false;
-  - var lazyLoad = false;
-  - var image = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/you-get.png";
-  - var title = "[@L[cds.sales/offers/online-business:32573-find-your-perfect-name-heading]@L]";
-  - var text = "[@L[cds.sales/offers/online-business:32573-find-your-perfect-name-text]@L]";
-
-  include ../../../templates/feature-templates.jade

@@ -34,6 +34,44 @@ var got1Page = {
   canOfferOls: true
 };
 
+/* see: http://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php */
+// Find all YouTube videos
+var $allVideos = $("iframe[src^='http://www.youtube.com']"),
+
+    // The element that is fluid width
+    $fluidEl = $("body");
+
+// Figure out and save aspect ratio for each video
+$allVideos.each(function() {
+
+  $(this)
+    .data('aspectRatio', this.height / this.width)
+
+    // and remove the hard coded width/height
+    .removeAttr('height')
+    .removeAttr('width');
+
+});
+
+// When the window is resized
+$(window).resize(function() {
+
+  var newWidth = $fluidEl.width();
+
+  // Resize all videos according to their own aspect ratio
+  $allVideos.each(function() {
+
+    var $el = $(this);
+    $el
+      .width(newWidth)
+      .height(newWidth * $el.data('aspectRatio'));
+
+  });
+
+// Kick off one resize to fix all videos on page load
+}).resize();
+/* end import */
+
 
 function showAndOrderDynamicTldsInList(selector) {
 
@@ -243,7 +281,7 @@ function wireupModals() {
 
 
   $('#wsb-video-btn, #wsb-only-video-btn').on('click', function(){
-    $("#site-choice-wsb-video-modal").sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
+    $("#site-choice-wsb-video-modal").sfDialog({titleHidden:true, dialogWidthIdeal:840, buttons: got1Page.sfDialogErrorButtons});
   });
   $('#wsb-designs-btn, #wsb-only-designs-btn').on('click', function(){
     $("#site-choice-wsb-designs-modal").sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
@@ -251,7 +289,7 @@ function wireupModals() {
 
   if(got1Page.canOfferOls) {
     $('#ols-video-btn').on('click', function(){
-      $("#site-choice-ols-video-modal").sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
+      $("#site-choice-ols-video-modal").sfDialog({titleHidden:true, dialogWidthIdeal:840, buttons: got1Page.sfDialogErrorButtons});
     });
     $('#ols-stories-btn').on('click', function(){
       $("#site-choice-ols-stories-modal").sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
