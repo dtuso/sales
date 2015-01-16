@@ -91,7 +91,7 @@ mixin fullVideoModule(fullVideoParams)
             }).css({'cursor':'pointer'});
           });
         });
-  div(style!=(typeof fullVideoParams.backgroundImage != "undefined" && !fullVideoParams.lazyLoad ? "background-image: url(" + fullVideoParams.backgroundImage + ");" : ""), data-lazy-load != fullVideoParams.backgroundImage && fullVideoParams.lazyLoad ? "{'src':'" + fullVideoParams.backgroundImage + "'}" : "", data-icode="#{fullVideoParams.icode}", data-tile="#{fullVideoParams.tileName}", data-youtube-id="#{fullVideoParams.youtubeId}", class="video-marquee video-marquee-white full-video")
+  div(style!=(fullVideoParams.backgroundImage != "" && !fullVideoParams.lazyLoad ? "background-image: url(" + fullVideoParams.backgroundImage + ");" : ""), data-lazy-load != fullVideoParams.backgroundImage && fullVideoParams.lazyLoad ? "{'src':'" + fullVideoParams.backgroundImage + "'}" : "", data-icode="#{fullVideoParams.icode}", data-tile="#{fullVideoParams.tileName}", data-youtube-id="#{fullVideoParams.youtubeId}", class="video-marquee video-marquee-white full-video")
     div.container.relative-position.video-info
       div.row
         div.col-sm-10.col-sm-offset-1.col-xs-12.video-marquee-all-centered
