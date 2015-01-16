@@ -376,7 +376,7 @@ Checking availability&hellip;
 <phrase key="32573-domain-no-longer-available" />
 This domain is no longer available.
 <phrase key="32573-offer-only-valid" />
-Offer only valid with <span class="sorted-tld-list"><span class="tld-list tld-ca">.CA, </span><span class="tld-list tld-club">.CLUB, </span><span class="tld-list tld-com">.COM, </span><span class="tld-list tld-br">.BR, </span><span class="tld-list tld-com-br">.COM.BR, </span><span class="tld-list tld-co">.CO, </span><span class="tld-list tld-in">.IN, </span><span class="tld-list tld-rocks">.ROCKS, </span><span class="tld-list tld-uk">.UK, </span><span class="tld-list tld-co-uk">.CO.UK, </span><span class="tld-list tld-net">.NET, </span></span>or .ORG &amp; .ORG
+Offer only valid with <span class="sorted-tld-list"><span class="tld-list tld-ca">.CA, </span><span class="tld-list tld-club">.CLUB, </span><span class="tld-list tld-com">.COM, </span><span class="tld-list tld-br">.BR, </span><span class="tld-list tld-com-br">.COM.BR, </span><span class="tld-list tld-co">.CO, </span><span class="tld-list tld-in">.IN, </span><span class="tld-list tld-rocks">.ROCKS, </span><span class="tld-list tld-uk">.UK, </span><span class="tld-list tld-co-uk">.CO.UK, </span><span class="tld-list tld-net">.NET, </span></span>or .ORG
 <phrase key="32573-disclaimer-modal-title" />
 Disclaimers
 <phrase key="32573-disclaimer-modal-wsb-content" comment="{0} will get replaced with a currency amount" />
