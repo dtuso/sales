@@ -1976,6 +1976,10 @@ function updateDomainCountText(initial) {
             .gd-swipe-bottom-nav li{display:inline-block;overflow:hidden;padding:15px;position:relative}
             .gd-swipe-bottom-nav li a{background:transparent url('../img/online-store-sprite2.png') no-repeat -28px -19px;color:#dadada;display:block;height:11px;text-decoration:none;text-indent:-9999em;width:27px}
             .gd-swipe-bottom-nav li.active a{background:transparent url('../img/online-store-sprite2.png') no-repeat 0 -19px;color:#70ac00;height:11px;width:27px}
+            a.arrow-right{background:transparent url('../img/online-store-sprite2.png') no-repeat -27px -30px;display:block;height:51px;outline:0 none;position:absolute;right:-60px;text-decoration:none;text-indent:-9999em;top:140px;width:29px;z-index:1}
+            a.arrow-left{background:transparent url('../img/online-store-sprite2.png') no-repeat 0 -30px;display:block;height:51px;left:-60px;outline:0 none;position:absolute;text-decoration:none;text-indent:-9999em;top:140px;width:25px;z-index:1}
+            .arrow-left:hover,.arrow-right:hover{background-color:#ededed;transition:all .3s ease-in-out 0s}
+            
             
             .tools-slide-title{color:#ff8234;font-weight:bold}
             .toole-slider-subtitle{color:#333;font-size:16px;height:60px}
