@@ -126,7 +126,6 @@
       delayLoader.addScript('[@T[link:<javascriptroot />]@T]/fos/liveperson/js/liveperson_20141013a.min.js')
       
     </script>
-    <link href="[@T[link:<cssroot />]@T]/fos/mike/0.7.0/css/sahara.css" rel="stylesheet">
     <link href="[@T[link:<cssroot />]@T]/fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css">
     <style>
 .bg-black {
@@ -207,6 +206,11 @@
     <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
     <link href="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy.min.html" id="respond-proxy" rel="respond-proxy">
     <script src="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy-combo.min.js"></script><![endif]-->
+    <script type="text/javascript">
+      delayLoader.addScript('[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2')
+      //- delayLoader.addScript('[@T[link:<javascriptroot />]@T]/fastball/js_lib/Fastball.ChannelIntegration-2.0.6.min.js')
+      
+    </script>
     <!-- Google Tag Manager-->
     <!-- End Google Tag Manager-->
     <script type="text/javascript">
@@ -1964,7 +1968,6 @@ text-transform: uppercase;
                       container.append($video);
                     }else{
                       container.prepend($video);
-<<<<<<< HEAD
                     }
             
                     if(typeof callback === 'function'){
@@ -1973,16 +1976,6 @@ text-transform: uppercase;
                       });
                     }
             
-=======
-                    }
-            
-                    if(typeof callback === 'function'){
-                      $video.load(function(){
-                        callback($video[0]);
-                      });
-                    }
-            
->>>>>>> bff4e0d40949bf8ece379a78e172050808a4054d
                     return $video[0];
                   }
                 };
@@ -2026,11 +2019,7 @@ text-transform: uppercase;
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-    <section id="features" data-mid-nav-title="Features">
-=======
     <section id="features" data-mid-nav-title="[@L[cds.sales/gd/hosting/website-builder:sb_nav_1]@L]">
->>>>>>> bff4e0d40949bf8ece379a78e172050808a4054d
       <div data-icode="" class="carousel-panel container">
         <div class="row">
           <div class="col-sm-10 col-sm-offset-1 col-xs-12">
@@ -3199,11 +3188,7 @@ margin-bottom: 20px;
                   <h2>[@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp_1]@L]</h2>
                   <div class="row">
                     <div class="col-sm-12">
-<<<<<<< HEAD
-                      <p>Perfect for: Bloggers, start-ups, small businesses, and designers</p><a class="btn btn-default-dark">LEARN MORE</a>
-=======
                       <p>[@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp_2]@L]</p><a class="btn btn-default-dark">[@L[cds.sales/gd/hosting/website-builder:learn-more]@L]</a>
->>>>>>> bff4e0d40949bf8ece379a78e172050808a4054d
                     </div>
                   </div>
                 </div>
@@ -3216,11 +3201,7 @@ margin-bottom: 20px;
                   <h2>[@L[cds.sales/gd/hosting/website-builder:sb_xsell_qs_1]@L]</h2>
                   <div class="row">
                     <div class="col-sm-12">
-<<<<<<< HEAD
-                      <p>Perfect for: eCommerce businesses and those looking to add online sales to their site</p><a class="btn btn-default-light">LEARN MORE</a>
-=======
                       <p>Perfect for: [@L[cds.sales/gd/hosting/website-builder:sb_qs_2]@L]</p><a class="btn btn-default-light">[@L[cds.sales/gd/hosting/website-builder:learn-more]@L]</a>
->>>>>>> bff4e0d40949bf8ece379a78e172050808a4054d
                     </div>
                   </div>
                 </div>

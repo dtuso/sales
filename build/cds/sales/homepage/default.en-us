@@ -172,11 +172,7 @@
   float: right;
 }
 #bugbar {
-<<<<<<< HEAD
-  margin: -15px 0 5px;
-=======
   margin: 10px 0;
->>>>>>> bff4e0d40949bf8ece379a78e172050808a4054d
 }
 #domain-search {
   margin-top: 10px;
@@ -294,6 +290,11 @@ div.video-marquee {
     <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
     <link href="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy.min.html" id="respond-proxy" rel="respond-proxy">
     <script src="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy-combo.min.js"></script><![endif]-->
+    <script type="text/javascript">
+      delayLoader.addScript('[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2')
+      //- delayLoader.addScript('[@T[link:<javascriptroot />]@T]/fastball/js_lib/Fastball.ChannelIntegration-2.0.6.min.js')
+      
+    </script>
     <!-- Google Tag Manager-->
     <!-- End Google Tag Manager-->
     <script type="text/javascript">
@@ -470,14 +471,6 @@ div.video-marquee {
                 <style>#marquee .tile-wrapper {
   margin-top: 0;
 }
-<<<<<<< HEAD
-
-              </style>
-              <div data-url="[@T[link:<relative path='/'><param name='ci' value='11111' /></relative>]@T]" data-ci='11111' class="tile puppy-tile">
-                <div class="tile-content-wrapper">
-                  <div class="header-wrapper"></div>
-                </div>
-=======
 #marquee .tile.puppy {
   background-color: #333;
   color: #fff;
@@ -539,7 +532,6 @@ div.video-marquee {
               <div class="tile puppy"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzEzIiBoZWlnaHQ9IjE4OCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCiAgPHBvbHlnb24gc3Ryb2tlPSIjZjNmM2Y0IiBmaWxsPSIjZjNmM2Y0IiBwb2ludHM9IjAsMCAwLDUwIDE1LDAiLz4NCiAgPHBvbHlnb24gc3Ryb2tlPSIjZjNmM2Y0IiBmaWxsPSIjZjNmM2Y0IiBwb2ludHM9IjAsMTc0IDAsNTAgMjUsMTU4IDE0MCwxNzQiLz4NCiAgPHBvbHlnb24gc3Ryb2tlPSIjZjNmM2Y0IiBmaWxsPSIjZjNmM2Y0IiBwb2ludHM9IjMxMywxNzQgMTQwLDE3NCAyODAsMTQwIDMxMywwIi8+DQo8L3N2Zz4=" class="mask"><img src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/nascar_360.png" class="nascar">
                 <h3>Enter to Win</h3>
                 <p>Your pup could be on the GoDaddy race car!</p><a>Submit Your Pup</a>
->>>>>>> bff4e0d40949bf8ece379a78e172050808a4054d
               </div>
             </div>
           </div>
@@ -979,7 +971,7 @@ text-transform: uppercase;
   content: '';
   width: 94px;
   height: 94px;
-  background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+  background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
   background-size: 205px auto;
   background-position: 0 -896px;
   position: absolute;
@@ -993,7 +985,7 @@ text-transform: uppercase;
   content: '';
   width: 94px;
   height: 94px;
-  background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+  background-image: url([@T[link:<imageroot />]@T]ffos/hp/sahara-rebrand-sprite-20141114.png);
   background-size: 205px auto;
   background-position: 0 -896px;
   position: absolute;
