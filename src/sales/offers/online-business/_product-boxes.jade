@@ -1,12 +1,11 @@
-- var productBoxOptions = {backgroundColor:'inherit'};
-- var title = "[@L[cds.sales/offers/online-business:32573-heres-what-you-get]@L]"; 
-- var subtitle;
+
 
 atlantis:webstash(type="css")
   style.
     #products.tile-section{ padding-top: 0;padding-bottom: 0;}
     #products {padding-bottom:40px;}
-    #products .key-benefits-wrap .features-text {color:#333;}
+    #products.key-benefits-wrap h2.products-title-text {color:#333;}
+    #products.key-benefits-wrap div.features-text {color:#333;}
 
     /* KEY BENEFITS */
     .key-benefits-wrap[class*="bg-"]:not(.bg-gray-light) {
@@ -96,18 +95,11 @@ atlantis:webstash(type="css")
     }
 
     /* (end) KEY BENEFITS */
-
 section#products.bg-gray-light.key-benefits-wrap
   .container
-    if (title)
-      .row
-        .col-sm-12.text-center
-          h2 !{title}
-
-    if (subtitle)
-      .row
-        .col-sm-12
-          .key-benefits-subtitle.text-center !{subtitle}
+    .row
+      .col-sm-12.text-center
+        h2.products-title-text [@L[cds.sales/offers/online-business:32573-heres-what-you-get]@L]
 
     .row
 

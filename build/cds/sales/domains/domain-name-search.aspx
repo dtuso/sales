@@ -2529,9 +2529,12 @@ text-transform: uppercase;
 }
 
 .accordion-group li.accordion-dropdown ul.dropdown > li div {  
-  padding-left: 15px;
-  border-left: 6px solid #008a32;
+  padding-left: 30px;
   transition: all 300ms;
+}
+
+.dropdown li {
+  font-family: Arial;
 }
       </style>
       <div class="container">

@@ -74,7 +74,7 @@ block marquee
   | 
   |##if(activeLanguageAny([en-US]))
   | 
-  section#marquee 
+  section#marquee(style="padding-bottom: 60px;")
     include ./web-hosting/_marquee-en-us.jade
   | 
   |##else
@@ -86,7 +86,7 @@ block marquee
   | 
 
 block plans
-  section#plans(style="padding-top: 15px;")
+  section#plans
     +renderPlanTiles(3) 
       +planTile
         include ./web-hosting/plans/_plan-hosting-economy.jade
@@ -918,7 +918,7 @@ block sections
                           backgroundImage: "background-image: url('[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Sweet.jpg')", 
                           style: "min-height: 580px;", 
                           includeStyles: false})
-      +twoUpCompareColumn({ title: "[@L[cds.sales/hosting/web-hosting-rebrand:wsbDoIt]@L] </br> [@L[cds.sales/hosting/web-hosting-rebrand:wsbHosting]@L]", 
+      +twoUpCompareColumn({ title: "[@L[cds.sales/hosting/web-hosting-rebrand:wsbDoIt]@L] [@L[cds.sales/hosting/web-hosting-rebrand:wsbHosting]@L]", 
                             backgroundColor: "bg-green-official-light", 
                             shapeText: "[@L[cds.sales/hosting/web-hosting-rebrand:wsb]@L]", 
                             shapeColor: "orange"})
