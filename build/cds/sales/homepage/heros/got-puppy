@@ -1,38 +1,75 @@
 
-<!-- start hero section-->
 <atlantis:webstash type="css">
-  <style>
-    .hero-wrapper{cursor:pointer;}
-    .hero{background: #fff; min-height:inherit}
-    .hero:hover{cursor:pointer}
-    .dash{letter-spacing:-.1rem}
-  </style>
-  <style>.rightContent {}</style>
-  <style>
-    #marquee {background-color: #64a838}
-    .hero.got-puppy {background-color:#64A838;}
-    .hero.got-puppy .subtext{padding:4% 0}
-    .hero.got-puppy .leftContent *{color:#fff;line-height:1}
-    .hero.got-puppy .rightContent img{}
-    .hero.got-puppy .bigtextContainer {width:100%}
-    
+  <style>#marquee {
+  background-color: #f3f3f4;
+  overflow-y: hidden;
+}
+#marquee .promo-wrapper,
+#marquee .price-wrapper {
+  margin-top: 20px;
+}
+#marquee .inline-dash {
+  display: inline-block;
+  overflow: hidden;
+  letter-spacing: -0.5em;
+  font-size: 1.4em;
+  vertical-align: top;
+  line-height: 50%;
+}
+#marquee .headline-wrapper {
+  margin-top: 40px;
+  line-height: 1;
+}
+#marquee .promo-wrapper {
+  color: #77c043;
+}
+#marquee .price {
+  color: #ff8a00;
+}
+#marquee .btn-purchase {
+  float: right;
+  min-width: 40%;
+  position: absolute;
+  right: 10px;
+  bottom: 20px;
+}
+#marquee .disclaimer {
+  font-size: 0.6em;
+  text-align: right;
+}
+#marquee img {
+  margin: 0 auto;
+  display: block;
+}
+@media (min-width: 768px) {
+  #marquee .hero-wrapper > .row {
+    max-height: 315px;
+  }
+  #marquee img {
+    margin: -72px 0 0 0;
+  }
+}
+
   </style>
 </atlantis:webstash>
-<div data-url="[@T[link:<relative path='/offers/online-business.aspx'><param name='ci' value='22222' /></relative>]@T]" class=" hero row left-headline got-puppy">
-  <div class="leftContent col-sm-7">
-    <div class="bigtextContainer bigtext">
-      <div class="headline walsheim-black">[@L[cds.sales/homepage/heros/got-puppy:products]@L]</div>
-      <div class="pricetext tungsten">[@L[cds.sales/homepage/heros/got-puppy:starting]@L]</div>
-      <div class="price walsheim-black">[@L[cds.sales/homepage/heros/got-puppy:price]@L]</div>
-      <div class="subtext walsheim-regular">[@L[cds.sales/homepage/heros/got-puppy:buddy]@L]</div>
-      <div class="btn-wrapper"><a class="btn btn-warning btn-lg">[@L[cds.sales/homepage/heros/got-puppy:cta]@L]</a>
-        <div class="walsheim-medium">[@L[cds.sales/homepage/heros/got-puppy:disclaimer]@L]</div>
+<div class="row">
+  <div class="col-xs-12 col-sm-6">
+    <div class="headline-wrapper">
+      <div style="width:100%" class="bigtext">
+        <div class="line walsheim-black">WOOK AT THE PUPPY!</div>
+        <div class="line tungsten">NOW STOP WOOKING AT THE PUPPY</div>
+        <div class="line walsheim-black"><span class='inline-dash'>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</span> AND WOOK AT THIS OFFER</div>
       </div>
     </div>
+    <div class="promo-wrapper">
+      <div style="width:100%" class="bigtext">
+        <div class="walsheim-black">DOMAIN + WEBSITE + EMAIL</div>
+      </div>
+    </div>
+    <div class="price-wrapper">
+      <div style="width:55%; display: inline-block;" class="bigtext"><span class="price walsheim-black">$1.00/MO</span></div><a class="btn btn-purchase">Get Started</a>
+    </div>
+    <div class="disclaimer">First year only. Other restrictions apply.</div>
   </div>
-  <div class="rightContent col-sm-5">
-    <image src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/got-puppy.png" class="img-responsive"></image>
-  </div>
+  <div class="col-xs-12 col-sm-6"><img src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/got-buddy.jpg"/></div>
 </div>
-<atlantis:webstash type="js"></atlantis:webstash>
-<!--end hero section-->

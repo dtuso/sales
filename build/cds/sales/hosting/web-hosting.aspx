@@ -26,7 +26,6 @@
     <meta property="fb:app_id" content="115696031791232">
     <meta property="fb:admins" content="633356800"> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
-    <script src="[@T[link:<javascriptroot />]@T]/ux/dev-brand/js/uxcore.en.min.js"></script>
     <script>
       var head = (typeof document.head !== 'undefined' ? document.head : document.getElementsByTagName('head')[0]);
       var insertBefore = head.insertBefore;
@@ -121,6 +120,10 @@
           window._trfq.push(['cmdLogImpression', $(element).attr('data-icode'), null, element]);
         });
       }
+      
+    </script>
+    <script type="text/javascript">
+      delayLoader.addScript('[@T[link:<javascriptroot />]@T]/fos/liveperson/js/liveperson_20141013a.min.js')
       
     </script>
     <link href="[@T[link:<cssroot />]@T]/fos/mike/0.7.0/css/sahara.css" rel="stylesheet">
@@ -347,10 +350,6 @@ cursor: pointer;
     <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
     <link href="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy.min.html" id="respond-proxy" rel="respond-proxy">
     <script src="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy-combo.min.js"></script><![endif]-->
-    <script type="text/javascript">
-      delayLoader.addScript('[@T[link:<javascriptroot />]@T]/fos/liveperson/js/liveperson_20141013a.min.js')
-      
-    </script>
     <!-- Google Tag Manager-->
     <!-- End Google Tag Manager-->
     <script type="text/javascript">
