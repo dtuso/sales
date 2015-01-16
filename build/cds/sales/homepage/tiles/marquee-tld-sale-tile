@@ -14,12 +14,10 @@
 .tld-sale-tile .body {
   font-size: 20px;
   line-height: 1em;
-  margin: 8px 0 13px;
+  margin: 8px 0 18px;
 }
 .tld-sale-tile .restrictions-text {
   font-size: 10px;
-  position: absolute;
-  bottom: 18px;
 }
 
 </style>
