@@ -1,0 +1,26 @@
+atlantis:webstash(type="css")
+  style.
+    #findYourPerfectDomain .tld-images {margin-top: 0px; margin-left: 60px;}
+    #findYourPerfectDomain .tld-image {margin: 15px;}
+    #findYourPerfectDomain.tile-section {
+      padding:20px 0;
+    }
+    #findYourPerfectDomain.features-slim {
+      min-height: 241px;
+    }
+    #findYourPerfectDomain {
+      background-color: #F3F3F3;
+    }
+
+
+- var featuresId = "findYourPerfectDomain";
+- var presentationTemplate = "featuresSlim";
+- var backgroundImage = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/bg-shortMod.jpg";
+- var whiteText = false;
+- var lazyLoad = false;
+- var image = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/you-get.png";
+- var title = "[@L[cds.sales/offers/online-business:32573-find-your-perfect-name-heading]@L]";
+- var subtitle = null;
+- var text = "[@L[cds.sales/offers/online-business:32573-find-your-perfect-name-text]@L]";
+
+include ../../../templates/feature-templates.jade
