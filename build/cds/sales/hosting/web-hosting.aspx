@@ -195,6 +195,101 @@ h3 {
   z-index: 1000;
 }
 
+.pro-banner {
+  background-image: url("[@T[link:<imageroot />]@T]fos/mike/img/hosting/bg-webpro-promo.png"); 
+  background-repeat: no-repeat; background-size: 100% 100%; 
+}
+.pro-banner a {
+  white-space: normal;
+  max-width: 100%;
+}
+.proBannerIcon {
+  background-image: url("[@T[link:<imageroot />]@T]fos/mike/img/hosting/img-webpro-logo.png");
+  display: inline-block;
+  vertical-align: middle;
+  height: 100px;
+  width: 275px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.pro-banner .top-text {
+  font-size: 20px;
+  text-transform: uppercase;
+  font-family: 'Walsheim-Black';
+}
+.pro-banner .bottom-text {
+  font-size: 40px;
+  text-transform: uppercase;
+  font-family: 'Walsheim-Black';
+}
+
+.pro-banner .pro-banner-image {
+  padding-top: 20px;
+}
+.pro-banner .pro-banner-button {
+  padding-top: 30px;
+}
+
+@media (min-width: 1200px) {
+  .pro-banner .pro-banner-image {
+    
+  }
+  .pro-banner .pro-banner-text {
+    width:55%;
+  }
+  .pro-banner .pro-banner-button {
+    
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .pro-banner .pro-banner-image {
+    width: 29%;
+  }
+  .pro-banner .pro-banner-text {
+    width:50%;
+  }
+  .pro-banner .pro-banner-button {
+    width: 21%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .pro-banner {
+    background-image: none;
+    background-color: #ef6b0d;
+    box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
+  }
+  .pro-banner .pro-banner-image {
+    width: 38%;
+  }
+  .pro-banner .pro-banner-text {
+    width: 62%;
+  }
+  .pro-banner .pro-banner-button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .pro-banner .pro-banner-image {
+
+  }
+  .pro-banner .pro-banner-text {
+    
+  }
+  .pro-banner .pro-banner-button {
+    
+  }
+}
+
+
+
+
+
+
+
 #one-click-install { 
   background: #77c043; transition: background 750ms ease-in-out; 
   background-image: url("[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_AppInstalls_Banner.jpg"); 
@@ -2675,6 +2770,18 @@ h2.marquee-product-name,
             <div style="background-image: url(); background-color: #d9d9d9;">
               <div class="container">
                 <div class="row">
+                  <div class="row pro-banner white-text">
+                    <div class="col-sm-3 pro-banner-image">
+                      <div class="text-center"><img src="[@T[link:<imageroot />]@T]fos/mike/img/hosting/img-webpro-logo.png"></div>
+                    </div>
+                    <div class="col-sm-6 pro-banner-text">
+                      <p class="top-text">test test test test test test test test test test test test test test test</p>
+                      <p class="bottom-text">test test test test test estsetstestseta</p>
+                    </div>
+                    <div class="col-sm-2 pro-banner-button"><a class="btn btn-default-light">Learn More more more more more more</a>
+                      <p>asdf</p>
+                    </div>
+                  </div>
                   <div class="row">
                     <div class="col-sm-12">
                        
