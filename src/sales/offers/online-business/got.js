@@ -112,9 +112,11 @@ $(document).ready(function() {
   showAndOrderDynamicTldsInList("#default-marquee-details-modal-wsb-only p");
   showAndOrderDynamicTldsInList("#default-marquee-details-modal p");
   showAndOrderDynamicTldsInList("#site-choice-wsb-modal p");
-  showAndOrderDynamicTldsInList("#site-choice-ols-modal p");
   showAndOrderDynamicTldsInList("#step2-choose-product-wsb-modal p");
-  showAndOrderDynamicTldsInList("#step2-choose-product-ols-modal p"); 
+  if(got1Page.canOfferOls) {
+    showAndOrderDynamicTldsInList("#site-choice-ols-modal p");
+    showAndOrderDynamicTldsInList("#step2-choose-product-ols-modal p"); 
+  }
   showAndOrderDynamicTldsInList("#default-marquee-view .invalid-TLD-entered");
   showAndOrderDynamicTldsInList("#domain-available-marquee-view .invalid-TLD-entered");
   showAndOrderDynamicTldsInList("#domain-not-available-marquee-view .invalid-TLD-entered");
@@ -199,14 +201,12 @@ function tokenizeDisclaimerModals() {
       $modal.html(htmlTokenized);
     });
   };
-  tokenizeDisclaimerModal(
-    '#default-marquee-details-modal.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_wsb,got1Page.pricing.ols);
-  tokenizeDisclaimerModal(
-    '#default-marquee-details-modal-wsb-only.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_wsb);
-  tokenizeDisclaimerModal(
-    '#site-choice-wsb-modal.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_wsb);
-  tokenizeDisclaimerModal(
-    '#site-choice-ols-modal.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_ols);
+  
+
+  if(got1Page.canOfferOls) tokenizeDisclaimerModal('#default-marquee-details-modal.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_wsb,got1Page.pricing.ols);
+  tokenizeDisclaimerModal('#default-marquee-details-modal-wsb-only.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_wsb);
+  tokenizeDisclaimerModal('#site-choice-wsb-modal.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_wsb);  
+  if(got1Page.canOfferOls) tokenizeDisclaimerModal('#site-choice-ols-modal.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_ols);
 }
 
 function wireupModals() {
@@ -219,12 +219,15 @@ function wireupModals() {
   });
 
   // product split modals
-  $('#site-choice').on('click', '.see-wsb-disclaimer-link', function(){
+  $('#site-choice, #wsb-only').on('click', '.see-wsb-disclaimer-link', function(){
     $("#site-choice-wsb-modal").sfDialog({buttons: got1Page.sfDialogErrorButtons});
   });
-  $('#site-choice').on('click', '.see-ols-disclaimer-link', function(){
-    $("#site-choice-ols-modal").sfDialog({buttons: got1Page.sfDialogErrorButtons});
-  });
+
+  if(got1Page.canOfferOls) {
+    $('#site-choice').on('click', '.see-ols-disclaimer-link', function(){
+      $("#site-choice-ols-modal").sfDialog({buttons: got1Page.sfDialogErrorButtons});
+    });
+  }
 
 
 
@@ -232,24 +235,28 @@ function wireupModals() {
   $('#step2-choose-product').on('click', '.see-wsb-disclaimer-link', function(){
     $("#step2-choose-product-wsb-modal").sfDialog({buttons: got1Page.sfDialogErrorButtons});
   });
-  $('#step2-choose-product').on('click', '.see-ols-disclaimer-link', function(){
-    $("#step2-choose-product-ols-modal").sfDialog({buttons: got1Page.sfDialogErrorButtons});
-  });
+  if(got1Page.canOfferOls) {
+    $('#step2-choose-product').on('click', '.see-ols-disclaimer-link', function(){
+      $("#step2-choose-product-ols-modal").sfDialog({buttons: got1Page.sfDialogErrorButtons});
+    });
+  }
 
 
-  $('#wsb-video-btn').on('click', function(){
+  $('#wsb-video-btn, #wsb-only-video-btn').on('click', function(){
     $("#site-choice-wsb-video-modal").sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
   });
-  $('#wsb-designs-btn').on('click', function(){
+  $('#wsb-designs-btn, #wsb-only-designs-btn').on('click', function(){
     $("#site-choice-wsb-designs-modal").sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
   });
-  $('#ols-video-btn').on('click', function(){
-    $("#site-choice-ols-video-modal").sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
-  });
-  $('#ols-stories-btn').on('click', function(){
-    $("#site-choice-ols-stories-modal").sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
-  });
-  
+
+  if(got1Page.canOfferOls) {
+    $('#ols-video-btn').on('click', function(){
+      $("#site-choice-ols-video-modal").sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
+    });
+    $('#ols-stories-btn').on('click', function(){
+      $("#site-choice-ols-stories-modal").sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
+    });
+  }
 
 }
 
