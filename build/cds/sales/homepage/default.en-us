@@ -255,19 +255,15 @@ h2 {
 #website-promo ul {
   margin-left: -20px;
 }
-<<<<<<< HEAD
 #website-promo li {
   width: 125%;
 }
-=======
->>>>>>> marquee-tiles-rebrand
 .new-customers-gd-pro {
   padding-bottom: 50px;
 }
 .new-customers-gd-pro img {
   width: 42%;
 }
-<<<<<<< HEAD
 h2.two-up-title {
   margin: 20px 0;
 }
@@ -292,8 +288,6 @@ h2.two-up-title {
 div.video-marquee {
   background-color: transparent;
 }
-=======
->>>>>>> marquee-tiles-rebrand
 
     </style><!--[if lt IE 9]>
     <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
@@ -353,7 +347,6 @@ div.video-marquee {
         <div class="row">
           <div class="col-xs-12 col-md-9">
             <div class="hero-wrapper">
-<<<<<<< HEAD
               <atlantis:webstash type="css">
                 <style>#marquee {
   background-color: #f3f3f4;
@@ -425,50 +418,6 @@ div.video-marquee {
                     <div style="width:55%; display: inline-block;" class="bigtext"><span class="price walsheim-black">$1.00/MO</span></div><a class="btn btn-purchase">Get Started</a>
                   </div>
                   <div class="disclaimer">First year only. Other restrictions apply.</div>
-=======
-              <Some>awesome text here</Some>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-12">
-            <div class="tile-wrapper">
-              <style>.gtld-marquee-got {
-  background-color: #333;
-  font-family: 'Walsheim-Black';
-}
-.gtld-marquee-got .tile-content-wrapper {
-  padding: 15px 0 0 10px;
-}
-.gtld-marquee-got .header-text {
-  font-size: 25px;
-  color: #77c043;
-  margin: 0;
-}
-.gtld-marquee-got .price-text {
-  font-size: 25px;
-  color: #fff;
-  margin: -3px 0 0;
-  text-transform: uppercase;
-}
-.gtld-marquee-got .price {
-  font-size: 36px;
-  margin: -10px 0 0;
-  text-transform: uppercase;
-}
-.gtld-marquee-got .restrictions-text {
-  font-size: 10px;
-  font-family: "Walsheim-Regular";
-  color: #fff;
-  margin: 5px 0 0;
-}
-
-              </style>
-              <div data-url="[@T[link:<relative path='offers/online-business.aspx'><param name='ci' value='95726' /></relative>]@T]" data-ci='95726' class="tile gtld-marquee-got">
-                <div class="tile-content-wrapper">
-                  <h2 class="header-text">[@L[cds.sales/homepage/tile/marquee-tile-got:marquee-tile-got-domain]@L] + [@L[cds.sales/homepage/tile/marquee-tile-got:marquee-tile-got-wsb]@L] + [@L[cds.sales/homepage/tile/marquee-tile-got:marquee-tile-got-email]@L]</h2>
-                  <div class="price-text">[@L[cds.sales/homepage/tile/marquee-tile-got:marquee-tile-got-price-text]@L]</div>
-                  <div class="price">[@L[cds.sales/homepage/tile/marquee-tile-got:marquee-tile-got-price]@L]</div>
-                  <div class="restrictions-text">[@L[cds.sales/homepage/tile/marquee-tile-got:marquee-tile-got-rest-text]@L]</div>
->>>>>>> marquee-tiles-rebrand
                 </div>
                 <div class="col-xs-12 col-sm-6"><img src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/got-buddy.jpg"></div>
               </div>
@@ -476,74 +425,39 @@ div.video-marquee {
           </div>
           <div class="col-xs-12 col-md-3">
             <div class="tile-wrapper">
-<<<<<<< HEAD
               <style>.puppy-tile {
   background-color: #333333;
+}
+.puppy-tile .tile-content-wrapper {
+  padding: 1% 35% 0 10%;
+}
+.puppy-tile .header-text {
+  font-size: 24px;
+  margin: 12px 0 0 0;
+  color: #ffffff;
+}
+.puppy-tile .body-text {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #fff;
+  text-transform: none;
+}
+.puppy-tile .cta-wrapper > a {
+  color: #6aad38;
+  font-size: 18px;
+  text-decoration: underline;
 }
 
               </style>
               <div data-url="[@T[link:<relative path='/'><param name='ci' value='11111' /></relative>]@T]" data-ci='11111' class="tile puppy-tile">
                 <div class="tile-content-wrapper">
-                  <div class="header-wrapper"></div>
-=======
-              <style>.gtld-marquee-tile {
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxIiBpZD0iTGF5ZXJfMSIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDM2MiAxMzUiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDM2MiAxMzUiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KICA8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZmlsbD0iI0YxODEyRCIgZD0iTTAgMGgzNjJ2MTM1SDBWMHoiLz4NCiAgPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGZpbGw9IiMzMzMzMzMiIGQ9Ik0xOTYgMTM1aDE2NlYwTDE4MSAwIDE5NiAxMzV6Ii8+DQo8L3N2Zz4NCg==);
-}
-.gtld-marquee-tile .left-content-wrapper {
-  padding-left: 10%;
-}
-.gtld-marquee-tile .header-text {
-  font-size: 40px;
-  color: #333;
-  margin: 25px 0 0 10px;
-}
-.gtld-marquee-tile .gtld-links-wrapper {
-  padding-left: -15px;
-}
-.gtld-marquee-tile ul {
-  list-style-type: none;
-  padding: 20px 0 0 20px;
-}
-.gtld-marquee-tile li {
-  color: #77c043;
-  font-size: 20px;
-  line-height: 25px;
-  margin: 0;
-}
-.gtld-marquee-tile li:hover {
-  color: #00a55e;
-}
-
-              </style>
-              <div data-url="[@T[link:<relative path='/domains/domain-name-search.aspx'><param name='ci' value='95717' /></relative>]@T]" data-ci='95717' class="tile gtld-marquee-tile">
-                <div class="tile-content-wrapper">
-                  <div class="container">
-                    <div class="row">
-                      <div class="col-sm-6">
-                        <div class="left-content-wrapper">
-                          <div class="header-wrapper">
-                            <h2 class="header-text walsheim-black">[@L[cds.sales/homepage/tile/marquee-tile-gtld:header-text]@L]</h2>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-sm-6">
-                        <div class="right-content-wrapper">
-                          <div class="gtld-links-wrapper">
-                            <ul>
-                              <li data-url="[@T[link:<relative path='/tlds/guru'><param name='ci' value='95716' /></relative>]@T]" data-ci='95716' class="walsheim-black tld-guru">.guru</li>
-                              <li data-url="[@T[link:<relative path='/tlds/club'><param name='ci' value='95713' /></relative>]@T]" data-ci='95713' class="walsheim-black tld-club">.club</li>
-                              <li data-url="[@T[link:<relative path='/tlds/company'><param name='ci' value='95714' /></relative>]@T]" data-ci='95714' class="walsheim-black tld-company">.company</li>
-                              <li data-url="[@T[link:<relative path='/tlds/guru'><param name='ci' value='95715' /></relative>]@T]" data-ci='95715' class="walsheim-black tld-email">.email</li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                  <div class="header-wrapper">
+                    <h2 class="header-text walsheim-black">Enter to win</h2>
                   </div>
->>>>>>> marquee-tiles-rebrand
+                  <div class="body-wrapper">
+                    <h3 class="body-text walsheim-medium">Your pup could be on the GoDaddy race car!</h3>
+                  </div>
+                  <div class="cta-wrapper"><a href="[@T[link:<relative path='/'><param name='ci' value='11111' /></relative>]@T]" class="walsheim-black">SUBMIT YOUR PUP</a></div>
                 </div>
               </div>
             </div>
@@ -1019,22 +933,14 @@ text-transform: uppercase;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .or-container:after {
-<<<<<<< HEAD
     left: 101%;
     bottom: 50%;
-=======
-    left: 101%
->>>>>>> marquee-tiles-rebrand
   }
 }
 @media (min-width: 992px) {
   .or-container:after {
-<<<<<<< HEAD
     left: 121%;
     bottom: 50%;
-=======
-    left: 121%
->>>>>>> marquee-tiles-rebrand
   }
 }
 
@@ -1114,19 +1020,7 @@ text-transform: uppercase;
 .two-up-speech-shape.two-up-speech-shape-yellow:after {
   background-color: #ffde2d;
 }
-<<<<<<< HEAD
 
-=======
-.two-up-speech-shape.two-up-speech-shape-gold {
-  background-color: #fedc45;
-}
-.two-up-speech-shape.two-up-speech-shape-gold:before {
-  border-top-color: #fedc45;
-}
-.two-up-speech-shape.two-up-speech-shape-gold:after {
-  background-color: #fedc45;
-}
->>>>>>> marquee-tiles-rebrand
       </style>
       <div id="website-promo" class="two-up-title-wrap bg-green-official">
         <div>
@@ -1148,20 +1042,12 @@ text-transform: uppercase;
                   </div>
                   <h2>No Skills?<br />No Time?<br />No Problem.</h2>
                   <div class="row">
-<<<<<<< HEAD
                     <div class="col-sm-12">
-=======
-                    <div class="col-sm-10">
->>>>>>> marquee-tiles-rebrand
                       <ul>
                         <li>Start with your choice of 100s of professional designs.</li>
                         <li>Customize it with our simple drag-&-drop tools.</li>
                         <li>Put your beautiful new site online with free hosting.</li>
-<<<<<<< HEAD
                       </ul><a data-url="[@T[link:<relative path='/hosting/website-builder.aspx'><param name='ci' value='11111' /></relative>]@T]" class="btn btn-default-light website-promo-wsb-btn">LEARN MORE</a>
-=======
-                      </ul><a class="btn btn-default-light website-promo-wsb-btn">LEARN MORE</a>
->>>>>>> marquee-tiles-rebrand
                     </div>
                   </div>
                 </div>
@@ -1173,20 +1059,12 @@ text-transform: uppercase;
                   </div>
                   <h2>Already<br />Have a Site?<br />Host it with us.</h2>
                   <div class="row">
-<<<<<<< HEAD
                     <div class="col-sm-12">
-=======
-                    <div class="col-sm-10">
->>>>>>> marquee-tiles-rebrand
                       <ul>
                         <li>Industry-leading page load times.</li>
                         <li>Powered by cPanel&reg; or Parallels&reg; Plesk</li>
                         <li>Guaranteed 99.9% uptime + 24/7 support</li>
-<<<<<<< HEAD
                       </ul><a data-url="[@T[link:<relative path='/hosting/web-hosting.aspx'><param name='ci' value='11111' /></relative>]@T]" class="btn btn-default-dark website-promo-hosting-btn">LEARN MORE    </a>
-=======
-                      </ul><a class="btn btn-default-dark website-promo-hosting-btn">LEARN MORE    </a>
->>>>>>> marquee-tiles-rebrand
                     </div>
                   </div>
                 </div>
@@ -1277,11 +1155,6 @@ text-transform: uppercase;
         $('.bigtext').bigtext().css('visibility', 'visible');
           setTimeout( "$('.bigtext').bigtext().css('visibility', 'visible');",500 );
       });
-<<<<<<< HEAD
-=======
-      script(src!="[@T[link:<javascriptroot />]@T]fos/hp/rebrand/js/bigtext.min.js")
-      
->>>>>>> marquee-tiles-rebrand
     </script>
     <script src="[@T[link:<javascriptroot />]@T]fos/hp/rebrand/js/bigtext.min.js"></script>
     <script type="text/javascript">
