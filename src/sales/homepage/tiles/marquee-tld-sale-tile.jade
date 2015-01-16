@@ -7,9 +7,9 @@ append vars
   - tldSaleTileParam.pfid = pfid || "";
   - tldSaleTileParam.promo = promo || "";
   - tldSaleTileParam.bodyText = bodyText || "";
-  - tldSaleTileParam.restText = restText || "";
+  - tldSaleTileParam.restrictionsText = restrictionsText || "";
   - tldSaleTileParam.logoClass = tldSaleTileParam.tld+"-sale-tile-logo";
-  - containerClass = tldSaleTileParam.tld+"-sale tld-sale-tile" || "";
+  - containerClass = tldSaleTileParam.tld+"-sale tld-sale-tile";
 
 block append tileStyles
   style
@@ -17,12 +17,12 @@ block append tileStyles
       .tld-sale-tile{background-color:#333; color:#fff;}
       .tld-sale-tile .tile-content-wrapper{padding:10px 15px;}
       .tld-sale-tile .header-text{font-size:40px; color:#f2812e;float:left}
-      .tld-sale-tile .body{font-size:20px;line-height:1em;margin:8px 0 13px;}
-      .tld-sale-tile .restrictions-text{font-size:10px;position:absolute;bottom:18px}
+      .tld-sale-tile .body{font-size:20px;line-height:1em;margin:8px 0 18px;}
+      .tld-sale-tile .restrictions-text{font-size:10px;}
 
 block tileContent
   .clearfix
     .header-text.walsheim-black [@T[productprice:<current productid="#{tldSaleTileParam.pfid}" period="yearly" promocode="#{tldSaleTileParam.promo}" htmlsymbol="false" />]@T]
     img(src!=tldSaleTileParam.logo class=tldSaleTileParam.logoClass)
   .body.walsheim-medium #{tldSaleTileParam.bodyText}
-  .restrictions-text.walsheim-regular #{tldSaleTileParam.restText}
+  .restrictions-text.walsheim-regular #{tldSaleTileParam.restrictionsText}
