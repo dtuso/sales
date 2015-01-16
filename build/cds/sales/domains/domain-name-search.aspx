@@ -262,6 +262,12 @@
       </atlantis:webstash> 
       ##if(activeLanguageAny([en-ca]))
             <style>
+.plan-tile { 
+  margin-top: -145px; 
+}
+.sf-droplist-msg {
+  text-align: inherit;
+}
 .pro-plans {
     margin-top: 0px;
     padding-bottom: 80px;
@@ -545,8 +551,9 @@
 }
 
 .pro-plans .pro-plan-wrap .plan-subtitle {
-    color: #b3b3b3;
+    color: #000 !important;
     font-weight: 700;
+    text-transform: uppercase;
 }
 
 .pro-plans .pro-plan-wrap .plan-text {
@@ -596,6 +603,14 @@
     font-size: 1.6rem;
     margin-bottom: 15px;
 }
+.pro-plans .pro-plan-wrap .check-item {
+    border-top: 0 none;
+    min-height: 0;
+    text-align: left;
+    font-size: 16px;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+}
 
 .pro-plans .include-check {
     position: relative;
@@ -620,7 +635,7 @@
     background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
     background-position: 0 -864px;
     width: 15px;
-    height: 16px;
+    height: 17px;
     display: inline-block;
     background-size: 205px auto;
     vertical-align: baseline;
@@ -629,13 +644,6 @@
             <div class="pro-plans-wrap bg-gray-light">
               <div id="plans" data-icode="" class="container pro-plans">
                       <div class="col-md-3 col-sm-6 plan-tile plan-pro">
-                        <atlantis:webstash type="css">
-                          <style>
-                            .pro-plans { margin-top: 0; }
-                            .form-control { margin-bottom: 10px; }
-                            
-                          </style>
-                        </atlantis:webstash>
                         <div class="pro-plan-wrap">
                           <style>
                             .tldlogo-dot-com{background-position:-52px -676px; height:40px; width:101px; margin-bottom:10px;}
@@ -647,13 +655,6 @@
                         </div>
                       </div>
                 <div class="col-md-3 col-sm-6 plan-tile plan-pro">
-                  <atlantis:webstash type="css">
-                    <style>
-                      .pro-plans { margin-top: 0; }
-                      .form-control { margin-bottom: 10px; }
-                      
-                    </style>
-                  </atlantis:webstash>
                   <div class="pro-plan-wrap">
                     <style>
                       .tldlogo-dot-ca{background-position:-51px -1277px; height:40px; width:49px; margin-bottom:10px;}
@@ -665,13 +666,6 @@
                   </div>
                 </div>
                 <div class="col-md-3 col-sm-6 plan-tile plan-pro">
-                  <atlantis:webstash type="css">
-                    <style>
-                      .pro-plans { margin-top: 0; }
-                      .form-control { margin-bottom: 10px; }
-                      
-                    </style>
-                  </atlantis:webstash>
                   <div class="pro-plan-wrap">
                     <style>
                       .tldlogo-dot-quebec{background-position:-53px -597px; height:40px; width:102px; margin-bottom:10px;}
@@ -683,13 +677,6 @@
                   </div>
                 </div>
                 <div class="col-md-3 col-sm-6 plan-tile plan-pro">
-                  <atlantis:webstash type="css">
-                    <style>
-                      .pro-plans { margin-top: 0; }
-                      .form-control { margin-bottom: 10px; }
-                      
-                    </style>
-                  </atlantis:webstash>
                   <div class="pro-plan-wrap">
                     <style>
                       .tldlogo-dot-website{background-position:0px -279px; height:40px; width:133px; margin-bottom:10px;}
@@ -724,6 +711,12 @@
             </div> 
       ##else
             <style>
+.plan-tile { 
+  margin-top: -145px; 
+}
+.sf-droplist-msg {
+  text-align: inherit;
+}
 .pro-plans {
     margin-top: 0px;
     padding-bottom: 80px;
@@ -1007,8 +1000,9 @@
 }
 
 .pro-plans .pro-plan-wrap .plan-subtitle {
-    color: #b3b3b3;
+    color: #000 !important;
     font-weight: 700;
+    text-transform: uppercase;
 }
 
 .pro-plans .pro-plan-wrap .plan-text {
@@ -1058,6 +1052,14 @@
     font-size: 1.6rem;
     margin-bottom: 15px;
 }
+.pro-plans .pro-plan-wrap .check-item {
+    border-top: 0 none;
+    min-height: 0;
+    text-align: left;
+    font-size: 16px;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+}
 
 .pro-plans .include-check {
     position: relative;
@@ -1082,7 +1084,7 @@
     background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
     background-position: 0 -864px;
     width: 15px;
-    height: 16px;
+    height: 17px;
     display: inline-block;
     background-size: 205px auto;
     vertical-align: baseline;
@@ -1091,13 +1093,6 @@
             <div class="pro-plans-wrap bg-gray-light">
               <div id="plans" data-icode="" class="container pro-plans">
                       <div class="col-md-3 col-sm-6 plan-tile plan-pro">
-                        <atlantis:webstash type="css">
-                          <style>
-                            .pro-plans { margin-top: 0; }
-                            .form-control { margin-bottom: 10px; }
-                            
-                          </style>
-                        </atlantis:webstash>
                         <div class="pro-plan-wrap">
                           <style>
                             .tldlogo-dot-com{background-position:-52px -676px; height:40px; width:101px; margin-bottom:10px;}
@@ -1109,13 +1104,6 @@
                         </div>
                       </div>
                 <div class="col-md-3 col-sm-6 plan-tile plan-pro">
-                  <atlantis:webstash type="css">
-                    <style>
-                      .pro-plans { margin-top: 0; }
-                      .form-control { margin-bottom: 10px; }
-                      
-                    </style>
-                  </atlantis:webstash>
                   <div class="pro-plan-wrap">
                     <style>
                       .tldlogo-dot-net{background-position:0px -36px; height:40px; width:74px; margin-bottom:10px;}
@@ -1127,13 +1115,6 @@
                   </div>
                 </div>
                 <div class="col-md-3 col-sm-6 plan-tile plan-pro">
-                  <atlantis:webstash type="css">
-                    <style>
-                      .pro-plans { margin-top: 0; }
-                      .form-control { margin-bottom: 10px; }
-                      
-                    </style>
-                  </atlantis:webstash>
                   <div class="pro-plan-wrap">
                     <style>
                       .tldlogo-dot-org{background-position:-63px -960px; height:40px; width:76px; margin-bottom:10px;}
@@ -1145,13 +1126,6 @@
                   </div>
                 </div>
                 <div class="col-md-3 col-sm-6 plan-tile plan-pro">
-                  <atlantis:webstash type="css">
-                    <style>
-                      .pro-plans { margin-top: 0; }
-                      .form-control { margin-bottom: 10px; }
-                      
-                    </style>
-                  </atlantis:webstash>
                   <div class="pro-plan-wrap">
                     <style>
                       .tldlogo-dot-info{background-position:0px -1198px; height:40px; width:57px; margin-bottom:10px;}
@@ -1506,6 +1480,12 @@
       </atlantis:webstash><span class="bottom-headline">HUNDREDS OF GREAT NEW DOMAINS JOIN .COM, .NET AND .ORG</span> 
       ##if(activeLanguageAny([en-ca]))
             <style>
+.plan-tile { 
+  margin-top: -145px; 
+}
+.sf-droplist-msg {
+  text-align: inherit;
+}
 .pro-plans {
     margin-top: 0px;
     padding-bottom: 80px;
@@ -1789,8 +1769,9 @@
 }
 
 .pro-plans .pro-plan-wrap .plan-subtitle {
-    color: #b3b3b3;
+    color: #000 !important;
     font-weight: 700;
+    text-transform: uppercase;
 }
 
 .pro-plans .pro-plan-wrap .plan-text {
@@ -1840,6 +1821,14 @@
     font-size: 1.6rem;
     margin-bottom: 15px;
 }
+.pro-plans .pro-plan-wrap .check-item {
+    border-top: 0 none;
+    min-height: 0;
+    text-align: left;
+    font-size: 16px;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+}
 
 .pro-plans .include-check {
     position: relative;
@@ -1864,7 +1853,7 @@
     background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
     background-position: 0 -864px;
     width: 15px;
-    height: 16px;
+    height: 17px;
     display: inline-block;
     background-size: 205px auto;
     vertical-align: baseline;
@@ -1873,13 +1862,6 @@
             <div class="pro-plans-wrap bg-green-official">
               <div id="plans" data-icode="" class="container pro-plans">
                       <div class="col-sm-4 plan-tile plan-pro">
-                        <atlantis:webstash type="css">
-                          <style>
-                            .pro-plans { margin-top: 0; }
-                            .form-control { margin-bottom: 10px; }
-                            
-                          </style>
-                        </atlantis:webstash>
                         <div class="pro-plan-wrap">
                           <div class="plan-flag">NOW AVAILABLE</div>
                           <h2 class="plan-title">.global</h2>
@@ -1888,13 +1870,6 @@
                         </div>
                       </div>
                 <div class="col-sm-4 plan-tile plan-pro">
-                  <atlantis:webstash type="css">
-                    <style>
-                      .pro-plans { margin-top: 0; }
-                      .form-control { margin-bottom: 10px; }
-                      
-                    </style>
-                  </atlantis:webstash>
                   <div class="pro-plan-wrap">
                     <div class="plan-flag">NOW AVAILABLE</div>
                     <h2 class="plan-title">.club</h2>
@@ -1903,13 +1878,6 @@
                   </div>
                 </div>
                 <div class="col-sm-4 plan-tile plan-pro">
-                  <atlantis:webstash type="css">
-                    <style>
-                      .pro-plans { margin-top: 0; }
-                      .form-control { margin-bottom: 10px; }
-                      
-                    </style>
-                  </atlantis:webstash>
                   <div class="pro-plan-wrap">
                     <div class="plan-flag">NOW AVAILABLE</div>
                     <h2 class="plan-title">.co</h2>
@@ -1921,6 +1889,12 @@
             </div> 
       ##else
             <style>
+.plan-tile { 
+  margin-top: -145px; 
+}
+.sf-droplist-msg {
+  text-align: inherit;
+}
 .pro-plans {
     margin-top: 0px;
     padding-bottom: 80px;
@@ -2204,8 +2178,9 @@
 }
 
 .pro-plans .pro-plan-wrap .plan-subtitle {
-    color: #b3b3b3;
+    color: #000 !important;
     font-weight: 700;
+    text-transform: uppercase;
 }
 
 .pro-plans .pro-plan-wrap .plan-text {
@@ -2255,6 +2230,14 @@
     font-size: 1.6rem;
     margin-bottom: 15px;
 }
+.pro-plans .pro-plan-wrap .check-item {
+    border-top: 0 none;
+    min-height: 0;
+    text-align: left;
+    font-size: 16px;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+}
 
 .pro-plans .include-check {
     position: relative;
@@ -2279,7 +2262,7 @@
     background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
     background-position: 0 -864px;
     width: 15px;
-    height: 16px;
+    height: 17px;
     display: inline-block;
     background-size: 205px auto;
     vertical-align: baseline;
@@ -2288,13 +2271,6 @@
             <div class="pro-plans-wrap bg-green-official">
               <div id="plans" data-icode="" class="container pro-plans">
                       <div class="col-sm-4 plan-tile plan-pro">
-                        <atlantis:webstash type="css">
-                          <style>
-                            .pro-plans { margin-top: 0; }
-                            .form-control { margin-bottom: 10px; }
-                            
-                          </style>
-                        </atlantis:webstash>
                         <div class="pro-plan-wrap">
                           <div class="plan-flag">NOW AVAILABLE</div>
                           <h2 class="plan-title">.global</h2>
@@ -2303,13 +2279,6 @@
                         </div>
                       </div>
                 <div class="col-sm-4 plan-tile plan-pro">
-                  <atlantis:webstash type="css">
-                    <style>
-                      .pro-plans { margin-top: 0; }
-                      .form-control { margin-bottom: 10px; }
-                      
-                    </style>
-                  </atlantis:webstash>
                   <div class="pro-plan-wrap">
                     <div class="plan-flag">NOW AVAILABLE</div>
                     <h2 class="plan-title">.club</h2>
@@ -2318,13 +2287,6 @@
                   </div>
                 </div>
                 <div class="col-sm-4 plan-tile plan-pro">
-                  <atlantis:webstash type="css">
-                    <style>
-                      .pro-plans { margin-top: 0; }
-                      .form-control { margin-bottom: 10px; }
-                      
-                    </style>
-                  </atlantis:webstash>
                   <div class="pro-plan-wrap">
                     <div class="plan-flag">NOW AVAILABLE</div>
                     <h2 class="plan-title">.co</h2>
@@ -2375,7 +2337,6 @@
     </section>
     <section id="options" data-mid-nav-title="Options" class="key-benefits-wrap tile-section bg-pro-gray">
       <style>.features-tabbed-carousel-top {
-  padding: 70px 0 0;
   text-align: center;
 }
 .features-tabbed-carousel-top h2 {
