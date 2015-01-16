@@ -447,8 +447,7 @@ function showSearchSpins(domain, alternateDomains){
     $spinResults.append($newSpin);
   });
   got1Page.lastSpinResultCount = alternateDomains.length;
-  debugger;
-  updateDomainCountText(true, got1Page.lastSpinResultCount);
+  updateDomainCountText(true);
   $("#spin-results .spin-result:lt(" + got1Page.maxNumberOfSpinsToShowByDefault + ")").show(); // show first 3 results
 
   animateToNotAvailable(domain); 
@@ -500,11 +499,10 @@ function hideMoreResultsLinks() {
 function displayMoreResultsArea () {
   $("#spin-results .spin-result").show('slow');
   hideMoreResultsLinks();
-  debugger;
-  updateDomainCountText(false, got1Page.lastSpinResultCount);
+  updateDomainCountText(false);
 }
 
-function updateDomainCountText(initial, numberShown) {
+function updateDomainCountText(initial) {
   var $header = $('#domain-not-available-marquee-view').find('.results-list-heading-text');
   var numbersHtml = $header.html();
   if (initial) {
