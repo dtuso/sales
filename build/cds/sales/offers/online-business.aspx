@@ -129,7 +129,7 @@
       
     </script>
     <atlantis:webstash type="js">
-      <script>// TODO: fix fastball stuff
+      <script>//- TODO: fix fastball stuff
 
 if(typeof(FastballEvent_MouseClick) === "undefined") FastballEvent_MouseClick = function(){return true;};
 if(typeof(fbiLibCheckQueue) === "undefined") fbiLibCheckQueue = function(){return true;};
@@ -168,8 +168,8 @@ var got1Page = {
 
 function showAndOrderDynamicTldsInList(selector) {
 
-  // <span class="sorted-tld-list"><span class="tld-list tld-ca">.CA, </span>
-  // <span class="tld-list tld-club">.CLUB, </span></span>or .ORG
+  //- <span class="sorted-tld-list"><span class="tld-list tld-ca">.CA, </span>
+  //- <span class="tld-list tld-club">.CLUB, </span></span>or .ORG
 
   var $this = $(selector),
     formatTldSelector = function(tld) { return '.tld-' + tld.replace('.','-')},
@@ -177,19 +177,19 @@ function showAndOrderDynamicTldsInList(selector) {
     removedSpansArr = [],
     $sortedArea = $this.find(".sorted-tld-list");
 
-  // remove all dynamic tlds from this
+  //- remove all dynamic tlds from this
   $.each(tldList, function(idx, tld){
     var $tldItem = $this.find(formatTldSelector(tld));
     removedSpansArr.push($tldItem);
   });
 
-  // insert sorted HTML back into the original object and show the ones that are turned on
+  //- insert sorted HTML back into the original object and show the ones that are turned on
   $sortedArea.empty();
   $.each(removedSpansArr, function(idx, tldSpan) {
     $sortedArea.append(tldSpan);
   });
 
-  // show sorted list
+  //- show sorted list
   $this.find('.tld-list').show();
 }
 
@@ -228,21 +228,21 @@ function showAndOrderDynamicTldsInList(selector) {
   }
 ##endif
 
-// sort the list of TLDs, keeping default at the head of the list and lastTldInList at the end of the list
+//- sort the list of TLDs, keeping default at the head of the list and lastTldInList at the end of the list
 got1Page.tldInfo.tlds.sort();
-got1Page.tldInfo.tlds.splice(got1Page.tldInfo.tlds.indexOf(got1Page.tldInfo.defaultTld), 1); // remove default from list
-got1Page.tldInfo.tlds.unshift(got1Page.tldInfo.defaultTld); // add default to the beginning
-got1Page.tldInfo.tlds.splice(got1Page.tldInfo.tlds.indexOf(got1Page.tldInfo.lastTldInList), 1); // remove  lastTldInList from list
-got1Page.tldInfo.tlds.push(got1Page.tldInfo.lastTldInList); // add to the end of the list
+got1Page.tldInfo.tlds.splice(got1Page.tldInfo.tlds.indexOf(got1Page.tldInfo.defaultTld), 1); //- remove default from list
+got1Page.tldInfo.tlds.unshift(got1Page.tldInfo.defaultTld); //- add default to the beginning
+got1Page.tldInfo.tlds.splice(got1Page.tldInfo.tlds.indexOf(got1Page.tldInfo.lastTldInList), 1); //- remove  lastTldInList from list
+got1Page.tldInfo.tlds.push(got1Page.tldInfo.lastTldInList); //- add to the end of the list
 
 $(document).ready(function() {
 
-  showTldImagesInDomainArea(); //dynamically build the tld images in the #findYourPerfectDomain section
+  showTldImagesInDomainArea(); //- dynamically build the tld images in the #findYourPerfectDomain section
   
-  // fix up list of valid tlds from lang files
-  showAndOrderDynamicTldsInList("#marquee .invalid-TLD-entered");
-  showAndOrderDynamicTldsInList("#default-marquee-details-modal-wsb-only");
-  showAndOrderDynamicTldsInList("#default-marquee-details-modal");
+  //- fix up list of valid tlds from lang files
+  showAndOrderDynamicTldsInList("#default-marquee-view .invalid-TLD-entered");
+  showAndOrderDynamicTldsInList("#default-marquee-details-modal-wsb-only .invalid-TLD-entered");
+  showAndOrderDynamicTldsInList("#default-marquee-details-modal .invalid-TLD-entered");
   showAndOrderDynamicTldsInList("#site-choice-wsb-modal p");
   showAndOrderDynamicTldsInList("#site-choice-ols-modal p");
   showAndOrderDynamicTldsInList("#step2-choose-product-wsb-modal p");
@@ -299,7 +299,7 @@ $(document).ready(function() {
   $('[data-ci]').click(function (e) {
       var $this = $(this);
       var ci = $this.attr('data-ci');
-      // TODO: fix fastball
+      //- TODO: fix fastball
       //FastballEvent_MouseClick(e, ci, $(this)[0], 'a');
       //fbiLibCheckQueue();
   });
@@ -513,7 +513,7 @@ function showChoicesScreen(e){
     .show()
     .find('.btn-purchase').data('domain', domain);
 
-  // TODO: rerun the height alignment on the choose product screen
+  //- TODO: rerun the height alignment on the choose product screen
 }
 
 function goToDppCheckoutPage(e) {
@@ -586,8 +586,7 @@ function showSearchSpins(domain, alternateDomains){
     $spinResults.append($newSpin);
   });
   got1Page.lastSpinResultCount = alternateDomains.length;
-  
-  updateDomainCountText(true, got1Page.lastSpinResultCount);
+  updateDomainCountText(true);
   $("#spin-results .spin-result:lt(" + got1Page.maxNumberOfSpinsToShowByDefault + ")").show(); // show first 3 results
 
   animateToNotAvailable(domain); 
@@ -639,11 +638,10 @@ function hideMoreResultsLinks() {
 function displayMoreResultsArea () {
   $("#spin-results .spin-result").show('slow');
   hideMoreResultsLinks();
-  
-  updateDomainCountText(false, got1Page.lastSpinResultCount);
+  updateDomainCountText(false);
 }
 
-function updateDomainCountText(initial, numberShown) {
+function updateDomainCountText(initial) {
   var $header = $('#domain-not-available-marquee-view').find('.results-list-heading-text');
   var numbersHtml = $header.html();
   if (initial) {
@@ -656,19 +654,8 @@ function updateDomainCountText(initial, numberShown) {
     numbersHtml = numbersHtml.replace(/\{0\}/gi, got1Page.lastSpinResultCount); 
     numbersHtml = numbersHtml.replace(/\{1\}/gi, got1Page.lastSpinResultCount);
   }
-  // if ((numbersHtml.indexOf('{0}') == -1) && (numberShown != got1Page.maxNumberOfSpinsToShowByDefault)) // not found (we replaced it already), and 
-  // {
-  //   numbersHtml = numbersHtml.replace('1 - ' + got1Page.maxNumberOfSpinsToShowByDefault, '1 - ' + numberShown);
-  // }
-  // else
-  // {
-  //   numbersHtml = '[@L[cds.sales/offers/online-business:32573-number-of-number-results]@L]';
-  //   numbersHtml = numbersHtml.replace(/\{0\}/gi, got1Page.maxNumberOfSpinsToShowByDefault); 
-  //   numbersHtml = numbersHtml.replace(/\{1\}/gi, got1Page.lastSpinResultCount);
-  // }
   $header.html(numbersHtml);
 }
-
 
       </script>
     </atlantis:webstash>
