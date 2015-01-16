@@ -243,9 +243,11 @@ $(document).ready(function() {
   showAndOrderDynamicTldsInList("#default-marquee-details-modal-wsb-only p");
   showAndOrderDynamicTldsInList("#default-marquee-details-modal p");
   showAndOrderDynamicTldsInList("#site-choice-wsb-modal p");
-  showAndOrderDynamicTldsInList("#site-choice-ols-modal p");
   showAndOrderDynamicTldsInList("#step2-choose-product-wsb-modal p");
-  showAndOrderDynamicTldsInList("#step2-choose-product-ols-modal p"); 
+  if(got1Page.canOfferOls) {
+    showAndOrderDynamicTldsInList("#site-choice-ols-modal p");
+    showAndOrderDynamicTldsInList("#step2-choose-product-ols-modal p"); 
+  }
   showAndOrderDynamicTldsInList("#default-marquee-view .invalid-TLD-entered");
   showAndOrderDynamicTldsInList("#domain-available-marquee-view .invalid-TLD-entered");
   showAndOrderDynamicTldsInList("#domain-not-available-marquee-view .invalid-TLD-entered");
@@ -330,14 +332,12 @@ function tokenizeDisclaimerModals() {
       $modal.html(htmlTokenized);
     });
   };
-  tokenizeDisclaimerModal(
-    '#default-marquee-details-modal.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_wsb,got1Page.pricing.ols);
-  tokenizeDisclaimerModal(
-    '#default-marquee-details-modal-wsb-only.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_wsb);
-  tokenizeDisclaimerModal(
-    '#site-choice-wsb-modal.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_wsb);
-  tokenizeDisclaimerModal(
-    '#site-choice-ols-modal.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_ols);
+  
+
+  if(got1Page.canOfferOls) tokenizeDisclaimerModal('#default-marquee-details-modal.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_wsb,got1Page.pricing.ols);
+  tokenizeDisclaimerModal('#default-marquee-details-modal-wsb-only.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_wsb);
+  tokenizeDisclaimerModal('#site-choice-wsb-modal.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_wsb);  
+  if(got1Page.canOfferOls) tokenizeDisclaimerModal('#site-choice-ols-modal.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_ols);
 }
 
 function wireupModals() {
@@ -350,12 +350,15 @@ function wireupModals() {
   });
 
   // product split modals
-  $('#site-choice').on('click', '.see-wsb-disclaimer-link', function(){
+  $('#site-choice, #wsb-only').on('click', '.see-wsb-disclaimer-link', function(){
     $("#site-choice-wsb-modal").sfDialog({buttons: got1Page.sfDialogErrorButtons});
   });
-  $('#site-choice').on('click', '.see-ols-disclaimer-link', function(){
-    $("#site-choice-ols-modal").sfDialog({buttons: got1Page.sfDialogErrorButtons});
-  });
+
+  if(got1Page.canOfferOls) {
+    $('#site-choice').on('click', '.see-ols-disclaimer-link', function(){
+      $("#site-choice-ols-modal").sfDialog({buttons: got1Page.sfDialogErrorButtons});
+    });
+  }
 
 
 
@@ -363,24 +366,28 @@ function wireupModals() {
   $('#step2-choose-product').on('click', '.see-wsb-disclaimer-link', function(){
     $("#step2-choose-product-wsb-modal").sfDialog({buttons: got1Page.sfDialogErrorButtons});
   });
-  $('#step2-choose-product').on('click', '.see-ols-disclaimer-link', function(){
-    $("#step2-choose-product-ols-modal").sfDialog({buttons: got1Page.sfDialogErrorButtons});
-  });
+  if(got1Page.canOfferOls) {
+    $('#step2-choose-product').on('click', '.see-ols-disclaimer-link', function(){
+      $("#step2-choose-product-ols-modal").sfDialog({buttons: got1Page.sfDialogErrorButtons});
+    });
+  }
 
 
-  $('#wsb-video-btn').on('click', function(){
+  $('#wsb-video-btn, #wsb-only-video-btn').on('click', function(){
     $("#site-choice-wsb-video-modal").sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
   });
-  $('#wsb-designs-btn').on('click', function(){
+  $('#wsb-designs-btn, #wsb-only-designs-btn').on('click', function(){
     $("#site-choice-wsb-designs-modal").sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
   });
-  $('#ols-video-btn').on('click', function(){
-    $("#site-choice-ols-video-modal").sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
-  });
-  $('#ols-stories-btn').on('click', function(){
-    $("#site-choice-ols-stories-modal").sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
-  });
-  
+
+  if(got1Page.canOfferOls) {
+    $('#ols-video-btn').on('click', function(){
+      $("#site-choice-ols-video-modal").sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
+    });
+    $('#ols-stores-btn').on('click', function(){
+      $("#site-choice-ols-stores-modal").sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
+    });
+  }
 
 }
 
@@ -1388,6 +1395,7 @@ function updateDomainCountText(initial) {
             <div class="col-sm-6 bg-slim-left">
               <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
                 <h2>[@L[cds.sales/offers/online-business:32573-find-your-perfect-name-heading]@L]</h2>
+                <h4 class="features-subtitle">Spend less time on paperwork and more time with customers.</h4>
                 <div class="features-text">[@L[cds.sales/offers/online-business:32573-find-your-perfect-name-text]@L]</div>
               </div>
             </div>
@@ -1480,23 +1488,36 @@ function updateDomainCountText(initial) {
     </section>
     <atlantis:webstash type="css">
       <style>
-        #site-choice-compare .disclaimer-mark {
-          font-size: 24px;
-          margin: 10px 10% 20px;
+        #site-choice-compare h2,
+        #site-choice-compare h3,
+        #wsb-only h2,
+        #wsb-only h3  {
+          color: #232323!important;
         }
-        #site-choice-compare .button-margin {
+        
+        #site-choice-compare .disclaimer-mark div.headline-primary,
+        #wsb-only .disclaimer-mark div.headline-primary {
+          color: #333;
+        }
+        
+        #site-choice-compare .button-margin,    
+        #wsb-only .button-margin  {
           margin-top:20px;
         }
         
-        #site-choice-compare .disclaimer-mark p {
+        #site-choice-compare .disclaimer-mark p.disclaimer,    
+        #wsb-only .disclaimer-mark p.disclaimer {
           font-size: 14px;
+          font-weight: normal;
         }
-        .two-up-wrap-compare .check-bullets li {
+        #site-choice ul.check-bullets li,
+        #wsb-only ul.check-bullets li {
           position: relative;
           padding-left: 40px;
           margin-bottom: 20px;
         }
-        .two-up-wrap-compare .check-bullets li:before {
+        #site-choice ul.check-bullets li:before,
+        #wsb-only ul.check-bullets li:before {
           content: '';
           background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
           background-size: 205px auto;
@@ -1506,13 +1527,89 @@ function updateDomainCountText(initial) {
           position: absolute;
           left: 0;
         }
-        .two-up-wrap-compare .check-bullets li h5 {
+        #site-choice ul.check-bullets li h5,
+        #wsb-only ul.check-bullets li h5  {
           margin-bottom: 5px;
         }
-        /* (end) TWO UP COMPARE */
+        
+        
+        #site-choice .disclaimer-mark ,
+        #wsb-only .disclaimer-mark {
+          background-color: #FEDC45;
+          padding: 10px;
+          margin-bottom: 20px;
+          font-size: 24px;
+          margin: 0 0 10px;
+        }
+        
+        #wsb-only .top-row {padding-top:30px;} /* to match 2-up compare's styling */
+        #wsb-only.bg-green-official-light {background-color: #77C043;}
         
       </style>
-    </atlantis:webstash>
+    </atlantis:webstash> 
+    ##if(!productIsOffered(105))
+     
+    <section id="wsb-only" class="bg-green-official-light">
+      <div class="container">
+        <div class="row top-row text-center">       <img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_wsb_icon_large_feature.png"></div>
+        <div class="row text-center">     
+          <h2 class="text-center">[@L[cds.sales/offers/online-business:32573-godaddy-wsb]@L]</h2>
+          <h3 class="text-center">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text]@L]</h3>
+        </div>
+        <div class="row">  
+          <div class="col-sm-6 col-sm-push-3 text-center disclaimer-mark"> 
+            <div data-tokenize="[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T]" class="headline-primary">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price]@L] </div>
+            <p data-tokenize="[@T[multipleproductprice:<list productidlist="464069|101|7524" period="monthly" promocode="0" />]@T]" class="disclaimer">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price-disclaimer]@L] 
+              <button class="btn-link see-wsb-disclaimer-link">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price-disclaimer-link]@L]</a></button>
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-3 col-sm-push-3 button-margin">
+            <button id="wsb-only-video-btn" class="btn btn-md btn-primary"><i class="uxicon uxicon-play"></i> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]</button>
+          </div>
+          <div class="col-sm-3 col-sm-push-3 button-margin">
+            <button id="wsb-only-designs-btn" class="btn btn-md btn-primary">[@L[cds.sales/offers/online-business:32573-view-designs-button]@L]    </button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-3 col-sm-push-3">
+            <ul class="list-unstyled check-bullets">
+              <li> 
+                <h5>[@L[cds.sales/offers/online-business:32573-godaddy-wsb-bullet-1]@L]</h5>
+              </li>
+              <li> 
+                <h5>[@L[cds.sales/offers/online-business:32573-godaddy-wsb-bullet-2]@L]</h5>
+              </li>
+              <li> 
+                <h5>[@L[cds.sales/offers/online-business:32573-godaddy-wsb-bullet-3]@L]</h5>
+              </li>
+              <li> 
+                <h5>[@L[cds.sales/offers/online-business:32573-godaddy-wsb-bullet-4]@L]</h5>
+              </li>
+            </ul>
+          </div>
+          <div class="col-sm-3 col-sm-push-3">
+            <ul class="list-unstyled check-bullets">
+              <li> 
+                <h5>[@L[cds.sales/offers/online-business:32573-godaddy-wsb-bullet-5]@L]</h5>
+              </li>
+              <li> 
+                <h5>[@L[cds.sales/offers/online-business:32573-godaddy-wsb-bullet-6]@L]</h5>
+              </li>
+              <li> 
+                <h5>[@L[cds.sales/offers/online-business:32573-godaddy-wsb-bullet-7]@L]</h5>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section> 
+    ##endif
+     
+     
+    ##if(productIsOffered(105))
+     
     <section id="site-choice">
       <style>
 .two-up-title-wrap.bg-white {
@@ -1820,12 +1917,12 @@ function updateDomainCountText(initial) {
                   <h3 class="text-center">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text]@L]</h3>
                   <div class="row">
                     <div class="col-sm-12">
-                      <mark class="text-center disclaimer-mark"> 
-                        <div data-tokenize="[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T]">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price]@L] </div>
+                      <div class="row text-center disclaimer-mark"> 
+                        <div data-tokenize="[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T]" class="headline-primary">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price]@L] </div>
                         <p data-tokenize="[@T[multipleproductprice:<list productidlist="464069|101|7524" period="monthly" promocode="0" />]@T]" class="disclaimer">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price-disclaimer]@L] 
                           <button class="btn-link see-wsb-disclaimer-link">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price-disclaimer-link]@L]</a></button>
                         </p>
-                      </mark>
+                      </div>
                       <div class="row text-center">
                         <div class="col-md-6 button-margin">
                           <button id="wsb-video-btn" class="btn btn-md btn-primary"><i class="uxicon uxicon-play"></i> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]</button>
@@ -1872,18 +1969,18 @@ function updateDomainCountText(initial) {
                   <h3 class="text-center">[@L[cds.sales/offers/online-business:32573-godaddy-ols-text]@L]</h3>
                   <div class="row">
                     <div class="col-sm-12">
-                      <mark class="text-center disclaimer-mark"> 
-                        <div data-tokenize="[@T[multipleproductprice:<current productidlist="464069|101|40972" period="monthly" promocode="75315678" />]@T]">[@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price]@L] </div>
+                      <div class="row text-center disclaimer-mark"> 
+                        <div data-tokenize="[@T[multipleproductprice:<current productidlist="464069|101|40972" period="monthly" promocode="75315678" />]@T]" class="headline-primary">[@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price]@L] </div>
                         <p data-tokenize="[@T[multipleproductprice:<list productidlist="464069|101|40972" period="monthly" promocode="0" />]@T]" class="disclaimer">[@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price-disclaimer]@L] 
                           <button class="btn-link see-ols-disclaimer-link">[@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price-disclaimer-link]@L]</button>
                         </p>
-                      </mark>
+                      </div>
                       <div class="row text-center">
                         <div class="col-md-6 button-margin">
                           <button id="ols-video-btn" class="btn btn-md btn-primary"><i class="uxicon uxicon-play"></i> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]</button>
                         </div>
                         <div class="col-md-6 button-margin">
-                          <button id="ols-stories-btn" class="btn btn-md btn-primary">[@L[cds.sales/offers/online-business:32573-see-real-stores-button]@L]</button>
+                          <button id="ols-stores-btn" class="btn btn-md btn-primary">[@L[cds.sales/offers/online-business:32573-see-real-stores-button]@L]</button>
                         </div>
                       </div>
                       <div class="row">
@@ -1942,106 +2039,532 @@ function updateDomainCountText(initial) {
           </div>
         </div>
       </div>
-      <div id="site-choice-wsb-modal" data-title="[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]" class="tokenizable-disclaimer-modal sf-dialog">
-        <p>[@L[cds.sales/offers/online-business:32573-disclaimer-modal-wsb-content]@L]</p>
+    </section>
+    <div id="site-choice-ols-modal" data-title="[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]" class="tokenizable-disclaimer-modal sf-dialog">
+      <p>[@L[cds.sales/offers/online-business:32573-disclaimer-modal-ols-content]@L]</p>
+    </div>
+    <div id="site-choice-ols-video-modal" class="sf-dialog">
+      <iframe width="100%" height="100%" src="//www.youtube.com/embed/rMF9d8-3WBA?html5=1&amp;rel=0&amp;iv_load_policy=3&amp;modestbranding=1" autoplay scrolling="no" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div id="site-choice-ols-stores-modal" class="sf-dialog">
+      <atlantis:webstash type="css">
+        <style>
+          .plan-tile { 
+            margin-top: -145px; 
+          }
+          .sf-droplist-msg {
+            text-align: inherit;
+          }
+          .bg-black {
+            background-color: #333333;
+          }
+          .bg-gray-light {
+              background-color: #d9d9d9;
+          }
+          
+        </style>
+      </atlantis:webstash>
+      <div data-icode="" class="carousel-panel container">
+        <div class="row">
+          <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+            <div></div>
+          </div>
+        </div>
       </div>
-      <div id="site-choice-ols-modal" data-title="[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]" class="tokenizable-disclaimer-modal sf-dialog">
-        <p>[@L[cds.sales/offers/online-business:32573-disclaimer-modal-ols-content]@L]</p>
-      </div>
-      <div id="site-choice-wsb-video-modal" class="sf-modal">
-        <iframe width="100%" height="100%" src="//www.youtube.com/embed/-HtVJyxSQmw?html5=1&amp;rel=0&amp;iv_load_policy=3&amp;modestbranding=1" autoplay scrolling="no" frameborder="0" allowfullscreen></iframe>
-      </div>
-      <div id="site-choice-wsb-designs-modal" class="sf-modal"></div>
-      <div id="site-choice-ols-video-modal" class="sf-modal">
-        <iframe width="100%" height="100%" src="//www.youtube.com/embed/rMF9d8-3WBA?html5=1&amp;rel=0&amp;iv_load_policy=3&amp;modestbranding=1" autoplay scrolling="no" frameborder="0" allowfullscreen></iframe>
-      </div>
-      <div id="site-choice-ols-stores-modal" class="sf-modal">
-        <atlantis:webstash type="css">
-          <style>
-            .main-tools-carousel{background-color:#ededed;padding-top:95px}
-            .main-tools-carousel h2.tools-carousel-title{margin:0 0 35px}
-            .main-tools-carousel .gd-nav-container{background-color:#fff;margin:0 auto;position:relative;width:1000px}
-            .main-tools-carousel .gd-nav-container a.arrow-left,.main-tools-carousel .gd-nav-container a.arrow-right{top:275px}
-            
-            .main-content-designs-top{background:url("../img/online-store-sprite2.png") no-repeat scroll -2px -646px transparent;height:508px;margin-top:100px;position:relative;width:1182px}
-            .main-content-designs-top .l-main-container{min-height:580px}
-            
-            .gd-nav-container{margin:0 auto;position:relative;width:1000px}
-            .gd-swipe-wrap{overflow:hidden;position:relative}
-            .gd-swipe-wrap>div{float:left;position:relative;top:0;width:100%}
-            .gd-swipe{margin:0 auto;max-width:100%;overflow:hidden;position:relative}
-            .gd-swipe-bottom-nav{position:relative;text-align:center;padding-bottom:35px;margin-top:40px}
-            .gd-swipe-bottom-nav a[data-slide="prev"],.gd-swipe-bottom-nav a[data-slide="next"]{position:relative;top:-2px}
-            .gd-swipe-bottom-nav ul{list-style:none outside none;margin:0;padding:0}
-            .gd-swipe-bottom-nav li{display:inline-block;overflow:hidden;padding:15px;position:relative}
-            .gd-swipe-bottom-nav li a{background:transparent url('../img/online-store-sprite2.png') no-repeat -28px -19px;color:#dadada;display:block;height:11px;text-decoration:none;text-indent:-9999em;width:27px}
-            .gd-swipe-bottom-nav li.active a{background:transparent url('../img/online-store-sprite2.png') no-repeat 0 -19px;color:#70ac00;height:11px;width:27px}
-            a.arrow-right{background:transparent url('../img/online-store-sprite2.png') no-repeat -27px -30px;display:block;height:51px;outline:0 none;position:absolute;right:-60px;text-decoration:none;text-indent:-9999em;top:140px;width:29px;z-index:1}
-            a.arrow-left{background:transparent url('../img/online-store-sprite2.png') no-repeat 0 -30px;display:block;height:51px;left:-60px;outline:0 none;position:absolute;text-decoration:none;text-indent:-9999em;top:140px;width:25px;z-index:1}
-            .arrow-left:hover,.arrow-right:hover{background-color:#ededed;transition:all .3s ease-in-out 0s}
-            
-            
-            .tools-slide-title{color:#ff8234;font-weight:bold}
-            .toole-slider-subtitle{color:#333;font-size:16px;height:60px}
-            .tools-slide-swipe-item{height:530px;padding:70px 230px;width:970px}
-            .tools-slide.slide-review{background-position:-40px -3660px;width:609px;height:297px}
-            
-            
-            
-          </style>
-        </atlantis:webstash>
-        <section class="main-customer-carousel-stores">
-          <div class="container background-container-repeat-x main-customer-carousel-img"></div>
-          <div class="container customer-carousel-bottom-spacer"></div>
-          <div class="container l-main-container customer-carousel-floater">
-            <div class="row center-text">
-              <div class="col-xs-12">
-                <h2 class="customer-carousel-title">[@L[cds.sales/gd/ecommerce/online-store:CarouselTitle]@L]</h2>
-                <p class="customer-carousel-subtitle">[@L[cds.sales/gd/ecommerce/online-store:CarouselSubTitle]@L]</p>
-              </div>
-              <div class="row">
-                <div class="col-xs-12">
-                  <div id="customer-slider">
-                    <div class="gd-nav-container">
-                      <div class="gd-swipe">
-                        <div class="gd-swipe-wrap">
-                          <div class="gd-swipe-item customer-slide-swipe-item">
-                            <div class="solazy customer-slide slide-1"></div>
-                            <div class="col-xs-11 solazy customer-quote slide-1">[@L[cds.sales/gd/ecommerce/online-store:customerQuote1]@L]</div>
-                            <div class="col-xs-11 solazy customer-byline slide-1">[@L[cds.sales/gd/ecommerce/online-store:customerByLine1]@L]</div>
-                          </div>
-                          <div class="gd-swipe-item customer-slide-swipe-item">
-                            <div class="solazy customer-slide slide-2"></div>
-                            <div class="col-xs-11 solazy customer-quote slide-2">[@L[cds.sales/gd/ecommerce/online-store:customerQuote2]@L]</div>
-                            <div class="col-xs-11 solazy customer-byline slide-2">[@L[cds.sales/gd/ecommerce/online-store:customerByLine2]@L]</div>
-                          </div>
-                          <div class="gd-swipe-item customer-slide-swipe-item">
-                            <div class="solazy customer-slide slide-3"></div>
-                            <div class="col-xs-11 solazy customer-quote slide-3">[@L[cds.sales/gd/ecommerce/online-store:customerQuote3]@L]</div>
-                            <div class="col-xs-11 solazy customer-byline slide-3">[@L[cds.sales/gd/ecommerce/online-store:customerByLine3]@L]</div>
-                          </div>
-                          <div class="gd-swipe-item customer-slide-swipe-item">
-                            <div class="solazy customer-slide slide-4"></div>
-                            <div class="col-xs-11 solazy customer-quote slide-4">[@L[cds.sales/gd/ecommerce/online-store:customerQuote4]@L]</div>
-                            <div class="col-xs-11 solazy customer-byline slide-4">[@L[cds.sales/gd/ecommerce/online-store:customerByLine4]@L]</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            <div data-begin="0" data-end="0" class="features-tabbed-carousel-icon">
+              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                <div class="feature-carousel-icon"><span class="uxicon uxicon-facebook-box"></span></div>
+                <div class="feature-text">facebook</div>
               </div>
             </div>
-          </div>
-        </section>
-        <!--              a#CustomerCarouselOLSPrevLink(href="#" data-slide="prev" class="arrow-left" id="customer-ols2-headerPrev" data-ci="93904")| [@L[cds.sales/gd/ecommerce/online-store:previous]@L]
-        -->
-        <!--              a#CustomerCarouselOLSNextLink(href="#" data-slide="next" class="arrow-right" id="customer-ols2-headerNext" data-ci="93905")
-        | [@L[cds.sales/gd/ecommerce/online-store:next]@L]
-        .gd-swipe-bottom-nav
-        -->
-      </div>
-    </section>
+            <div data-begin="1" data-end="1" class="features-tabbed-carousel-icon">
+              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                <div class="feature-carousel-icon"><span class="uxicon uxicon-twitter"></span></div>
+                <div class="feature-text">twitter</div>
+              </div>
+            </div>
+            <div data-begin="2" data-end="2" class="features-tabbed-carousel-icon">
+              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                <div class="feature-carousel-icon"><span class="uxicon uxicon-youtube-box"></span></div>
+                <div class="feature-text">youtube</div>
+              </div>
+            </div>
+            <div data-begin="3" data-end="3" class="features-tabbed-carousel-icon">
+              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                <div class="feature-carousel-icon"><span class="uxicon uxicon-yelp"></span></div>
+                <div class="feature-text">yelp</div>
+              </div>
+            </div>
+            <style>.item-wrapper { padding: 70px 0 20px; }
+
+.carousel-wrap { padding-bottom: 70px; }
+
+@media only screen and (min-width: 768px){
+  .carousel-container .carousel {
+    padding: 0 120px;
+  }
+}
+
+.carousel {
+  position: relative;
+  padding: 0 0 45px 0;
+}
+
+.carousel-container .carousel .carousel-indicators {
+  bottom: -60px;
+}
+
+@media screen and (min-width: 768px){
+  .carousel-indicators {
+    bottom: -5px;
+  }
+}
+.carousel-indicators {
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  z-index: 15;
+  width: 80%;
+  margin-left: -40%;
+  padding-left: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.carousel-container .carousel .carousel-indicators li.active {
+  background-color: #77c043;
+}
+
+.carousel-container .carousel .carousel-indicators li.active {
+  background-color: #77c043;
+}
+.carousel-container .carousel .carousel-indicators li {
+  width: 15px;
+  height: 15px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  margin: 5px;
+  background-color: #d9d9d9;
+}
+.carousel-indicators .active {
+  background-color: #008a32;
+}
+.carousel-indicators li {
+  display: inline-block;
+  width: 32px;
+  height: 10px;
+  margin: 8px;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: #d9d9d9;
+}
+.carousel-inner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+.carousel-inner > .active {
+  
+}
+.carousel-inner > .active, .carousel-inner > .next, .carousel-inner > .prev {
+  display: block;
+}
+.carousel-inner > .item {
+  display: none;
+  position: relative;
+  -webkit-transition: left 0.6s ease-in-out;
+  -moz-transition: left 0.6s ease-in-out;
+  transition: left 0.6s ease-in-out;
+  overflow: hidden;
+}
+.carousel-container .carousel-panel, .carousel-container .testimonial {
+  padding: 0;
+}
+.carousel-panel .img-center {
+  margin: 50px auto;
+}
+.carousel-panel .carousel-panel-text {
+  margin-bottom: 25px;
+}
+.carousel-panel h2 {
+  margin-top: 0px;
+}
+
+.carousel-container .carousel-control.left {
+  left: 0px;
+}
+.carousel-control {
+  position: absolute;
+  top: -11%;
+  bottom: 0;
+  color: #999999;
+  text-align: center;
+}
+.carousel-icon.arrow-left-icon {
+  background-position: 0 0;
+  width: 51px;
+  height: 50px;
+}
+
+.carousel-control .uxicon-chevron-left-lt, .carousel-control .arrow-left-icon, .carousel-control .arrow-left-white-icon {
+  left: 50%;
+}
+.carousel-control .arrow-left-white-icon, .carousel-control .arrow-right-white-icon, .carousel-control .arrow-left-icon, .carousel-control .arrow-right-icon {
+  position: absolute;
+  top: 50%;
+}
+.carousel-icon {
+  background-image: url('[@T[link:<imageroot />]@T]/fos/hp/sahara-rebrand-sprite-20141114.png');
+  display: inline-block;
+  background-size: 205px auto;
+}
+.carousel-container .carousel-control.right {
+  right: 0px;
+}
+.carousel-icon.arrow-right-icon {
+  background-position: 0 -52px;
+  width: 51px;
+  height: 50px;
+}
+.carousel-control .arrow-left-white-icon, .carousel-control .arrow-right-white-icon, .carousel-control .arrow-left-icon, .carousel-control .arrow-right-icon {
+  position: absolute;
+  top: 50%;
+}
+
+.carousel {
+    position: relative;
+    padding: 0 0 45px 0;
+}
+
+.carousel-inner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-inner > .item {
+    display: none;
+    position: relative;
+    -webkit-transition: left 0.6s ease-in-out;
+    -moz-transition: left 0.6s ease-in-out;
+    transition: left 0.6s ease-in-out;
+    overflow: hidden;
+}
+
+.carousel-inner > .item.show-item {
+    display: block;
+}
+
+.carousel-inner > .item > h1,
+.carousel-inner > .item > h2,
+.carousel-inner > .item > h3,
+.carousel-inner > .item > h4,
+.carousel-inner > .item > h5,
+.carousel-inner > .item > h6 {
+    margin-top: 0;
+}
+
+.carousel-inner > .active,
+.carousel-inner > .next,
+.carousel-inner > .prev {
+    display: block;
+}
+
+.carousel-inner > .active {
+    left: 0;
+}
+
+.carousel-inner > .next,
+.carousel-inner > .prev {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.carousel-inner > .next {
+    left: 100%;
+}
+
+.carousel-inner > .prev {
+    left: -100%;
+}
+
+.carousel-inner > .next.left,
+.carousel-inner > .prev.right {
+    left: 0;
+}
+
+.carousel-inner > .active.left {
+    left: -100%;
+}
+
+.carousel-inner > .active.right {
+    left: 100%;
+}
+
+.carousel-text-item {
+    margin-bottom: 20px;
+}
+
+.carousel-text-item h1 {
+    font-size: 14px;
+    display: inline;
+    margin: 0;
+    font-weight: bold;
+    font-weight: 600;
+}
+
+.carousel-control {
+    position: absolute;
+    top: -11%;
+    bottom: 0;
+    color: #999999;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .carousel-control {
+        top: -6%;
+    }
+}
+
+.carousel-control:hover,
+.carousel-control:focus {
+    outline: none;
+    color: #000;
+    text-decoration: none;
+}
+
+.carousel-control .uxicon-chevron-left-lt,
+.carousel-control .uxicon-chevron-right-lt {
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    font-size: 40px;
+    margin-top: -15px;
+}
+
+.carousel-control .arrow-left-white-icon,
+.carousel-control .arrow-right-white-icon,
+.carousel-control .arrow-left-icon,
+.carousel-control .arrow-right-icon {
+    position: absolute;
+    top: 50%;
+}
+
+.carousel-control .uxicon-chevron-left-lt,
+.carousel-control .arrow-left-icon {
+    left: 50%;
+}
+
+.carousel-control .uxicon-chevron-right-lt,
+.carousel-control .arrow-right-icon {
+    right: 50%;
+}
+
+.carousel-control.left {
+    left: -40px;
+}
+@media only screen and (max-width: 768px){
+  .carousel-container .carousel-control {
+    display: none;
+  }
+}
+@media only screen and (max-width: 768px) {
+    .carousel-control.left {
+        left: -10px;
+    }
+}
+
+.carousel-control.right {
+    right: -40px;
+}
+
+@media only screen and (max-width: 768px) {
+    .carousel-control.right {
+        right: -10px;
+    }
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    z-index: 15;
+    width: 80%;
+    margin-left: -40%;
+    padding-left: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.carousel-indicators li {
+    display: inline-block;
+    width: 32px;
+    height: 10px;
+    margin: 8px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #d9d9d9;
+}
+
+.carousel-indicators .active {
+    background-color: #008a32;
+}
+
+@media screen and (min-width: 768px) {
+    .carousel-indicators {
+        bottom: -5px;
+    }
+}
+.carousel-panel .include-check {
+position: relative;
+padding-left: 45px;
+margin-top: 20px;
+}
+.carousel-panel .include-check:before {
+content: "";
+background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
+background-position: 0 -668px;
+background-size: 205px auto;
+width: 25px;
+height: 27px;
+padding-right: 5px;
+position: absolute;
+left: 0;
+top: -6px;
+}
+            </style>
+            <div class="carousel-wrap">
+              <div class="carousel-container container">
+                <div id="carousel-ols-stores" data-ride="carousel" data-interval="false" class="carousel slide">
+                  <ol class="carousel-indicators">
+                    <li data-target="#carousel-ols-stores" data-slide-to="0"></li>
+                    <li data-target="#carousel-ols-stores" data-slide-to="1"></li>
+                    <li data-target="#carousel-ols-stores" data-slide-to="2"></li>
+                    <li data-target="#carousel-ols-stores" data-slide-to="3"></li>
+                  </ol>
+                  <div class="carousel-inner">
+                          <div class="item">
+                            <div class="item-wrapper text-center">
+                              <div data-icode="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-apps-image-facebook-int.jpg" class="img-responsive img-center">
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <h2>FACEBOOK</h2>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <div class="carousel-panel-text">Share your status updates or photos.</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <div class="item-wrapper text-center">
+                              <div data-icode="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-apps-image-twitter-int.jpg" class="img-responsive img-center">
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <h2>TWITTER</h2>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <div class="carousel-panel-text">Share your status updates or photos.</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <div class="item-wrapper text-center">
+                              <div data-icode="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-apps-image-youtube-int.jpg" class="img-responsive img-center">
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <h2>YOUTUBE</h2>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <div class="carousel-panel-text">Share your status updates or photos.</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <div class="item-wrapper text-center">
+                              <div data-icode="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-apps-image-facebook-int.jpg" class="img-responsive img-center">
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <h2>YELP</h2>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <div class="carousel-panel-text">Share your status updates or photos.</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <div class="item-wrapper text-center">
+                              <div data-icode="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-apps-image-facebook-int.jpg" class="img-responsive img-center">
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <h2>PAYPAL</h2>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <div class="carousel-panel-text">Share your status updates or photos.</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <div class="item-wrapper text-center">
+                              <div data-icode="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-apps-image-facebook-int.jpg" class="img-responsive img-center">
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <h2>HOMEOWNER</h2>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <div class="carousel-panel-text">Share your status updates or photos.</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                  </div><a href="#carousel-ols-stores" data-slide="prev" class="left carousel-control"><span class="carousel-icon arrow-left-icon"></span></a><a href="#carousel-ols-stores" data-slide="next" class="right carousel-control"><span class="carousel-icon arrow-right-icon"></span></a>
+                </div>
+                <script>
+                  $('.carousel .carousel-indicators li:first-child').addClass("active");
+                  $('.carousel .carousel-inner .item:first-child').addClass("active");
+                </script>
+              </div>
+            </div>
+    </div> 
+    ##endif
+     
+    <div id="site-choice-wsb-modal" data-title="[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]" class="tokenizable-disclaimer-modal sf-dialog">
+      <p>[@L[cds.sales/offers/online-business:32573-disclaimer-modal-wsb-content]@L]</p>
+    </div>
+    <div id="site-choice-wsb-video-modal" class="sf-dialog">
+      <iframe width="100%" height="100%" src="//www.youtube.com/embed/-HtVJyxSQmw?html5=1&amp;rel=0&amp;iv_load_policy=3&amp;modestbranding=1" autoplay scrolling="no" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div id="site-choice-wsb-designs-modal" class="sf-dialog">
+      <h1>_modal_wsb_designs.jade</h1>
+    </div>
     <section id="disclaimers"> 
       <div class="disclaimers-row">
         <div class="container">
