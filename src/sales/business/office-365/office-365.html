@@ -1,9 +1,9 @@
 ---
 url: http://www.dev-godaddy.com/business/office-365.aspx
 location: sales/business/office-365.aspx
-id: 5490b39ff778fc1cd843c6e4
-name: GCE-32259
-comments: Dynamic rule for "Exclusive..." text 
+id: 54b83ffff778fc1c443c2046
+name: GCE-34935
+comments: Prep for uxcore - css updates
 metaTitle: "[@L[cds.sales/business/office-365:lp-8-MicrosoftOffice365BoostProductivityVirtuallyAnywhereGoDaddy]@L]"
 metaDescription: "[@L[cds.sales/business/office-365:lp-36-MSOffice365IsEasyToSetUp]@L]"
 metaKeywords: "[@L[cds.sales/business/office-365:lp-18-Office365MicrosoftOffice365Office365Pricing]@L]"
@@ -46,6 +46,32 @@ assetPath: false
       }
     </style>  
   <![endif]-->
+
+##if(appSettingEnabled(UXCORE_ENABLED))
+  <style>
+    a, a:hover {
+      color: #7db701;
+    }
+    .faq-uxcore-fix {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+    .row {
+      margin-left: 0;
+      margin-right: 0;
+    }
+    .modal-dialog {
+      left: 0%;
+    }
+     #footer-legal {
+      background-color: #fff;
+    }
+    #footer-legal a {
+      color: #3282e6;
+    }
+  </style>
+##endif
+
   <style type="text/css">
   {% less %}
     /*Local Globals*/
@@ -1643,7 +1669,7 @@ assetPath: false
 
   <section id="faq-section" class="white-bg">
     <h2 class="section-header">[@L[cds.sales/business/office-365:split-test-b-3-FrequentlyAskedQuestions]@L]</h2>
-    <div class="container l-main-container"> 
+    <div class="container l-main-container faq-uxcore-fix"> 
       <div class="question-section">
         <div class="show-hide-question-section">
           <a class="open-button plus" href="#" data-ci="94244"></a>
