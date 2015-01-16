@@ -1,3 +1,10 @@
+// TODO: fix fastball stuff
+
+if(typeof(FastballEvent_MouseClick) === "undefined") FastballEvent_MouseClick = function(){return true;};
+if(typeof(fbiLibCheckQueue) === "undefined") fbiLibCheckQueue = function(){return true;};
+
+
+
 var got1Page = {
   tldInfo: {
     defaultTld: 'com', 
@@ -96,8 +103,6 @@ got1Page.tldInfo.tlds.splice(got1Page.tldInfo.tlds.indexOf(got1Page.tldInfo.defa
 got1Page.tldInfo.tlds.unshift(got1Page.tldInfo.defaultTld); // add default to the beginning
 got1Page.tldInfo.tlds.splice(got1Page.tldInfo.tlds.indexOf(got1Page.tldInfo.lastTldInList), 1); // remove  lastTldInList from list
 got1Page.tldInfo.tlds.push(got1Page.tldInfo.lastTldInList); // add to the end of the list
-console.dir(got1Page.tldInfo.tlds);
-console.log(got1Page.tldInfo.tlds);
 
 $(document).ready(function() {
 
@@ -114,19 +119,21 @@ $(document).ready(function() {
   showAndOrderDynamicTldsInList("#default-marquee-view .invalid-TLD-entered");
   showAndOrderDynamicTldsInList("#domain-available-marquee-view .invalid-TLD-entered");
   showAndOrderDynamicTldsInList("#domain-not-available-marquee-view .invalid-TLD-entered");
+
   tokenizeDisclaimerModals();
  
-  tokenizeOnDataTokenizeAttribute();
+  tokenizeTheDataTokenizeAttribute();
 
   wireUpDisclaimerModals();
 
   //set up domain search buttons to do a domain search
   $('#marquee')
     .on('keyup', '.search-form-input', function(e) { 
+      
       if ( e.which == 13 ) {
         // enter key!
         e.preventDefault();
-        domainSearchFormSubmit(e);
+        $('#marquee').find('.offer-search-btn').trigger('click');
         return false;
       } else {
         // verify domain name has a good tld
@@ -161,13 +168,14 @@ $(document).ready(function() {
   $('[data-ci]').click(function (e) {
       var $this = $(this);
       var ci = $this.attr('data-ci');
-      FastballEvent_MouseClick(e, ci, $(this)[0], 'a');
-      fbiLibCheckQueue();
+      // TODO: fix fastball
+      //FastballEvent_MouseClick(e, ci, $(this)[0], 'a');
+      //fbiLibCheckQueue();
   });
 
 });
 
-function tokenizeOnDataTokenizeAttribute() {
+function tokenizeTheDataTokenizeAttribute() {
   $('[data-tokenize]').each(function(){
     var $this = $(this),
       html = $this.html(),
@@ -517,4 +525,3 @@ function updateDomainCountText(initial) {
   }
   $header.html(numbersHtml);
 }
-
