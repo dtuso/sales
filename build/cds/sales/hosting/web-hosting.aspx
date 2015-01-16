@@ -11,20 +11,25 @@
     <link href="https://plus.google.com/108306343581548568740" rel="publisher">
     <meta name="verify-v1" content="dV1r/ZJJdDEI++fKJ6iDEl6o+TMNtSu0kv18ONeqM0I=">
     <meta name="y_key" content="1e39c508e0d87750">
-    <link rel="canonical" href="[@T[link:<relative parammode='explicit' />]@T]">
+    <link rel="canonical" href="[@T[link:<relative parammode='explicit' path='~/hosting/web-hosting.aspx' />]@T]">
     <link rel="shortcut icon" href="[@T[link:<imageroot />]@T]assets/godaddy.ico">
     <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7914312/697366/css/fonts.css">
-    <title>[@L[cds.sales/page:page-title]@L]</title>
-    <meta name="description" content="[@L[cds.sales/page:page-description]@L]">
-    <meta name="keywords" content="[@L[cds.sales/page:page-keywords]@L]">
-    <meta property="og:title" content="[@L[cds.sales/page:page-openGraph-title]@L]">
-    <meta property="og:description" content="[@L[cds.sales/page:page-openGraph-description]@L]">
+    <title>[@L[cds.sales/gd/hosting/web-hosting:page-title]@L]</title>
+    <meta name="description" content="[@L[cds.sales/gd/hosting/web-hosting:meta-description]@L]">
+    <meta name="keywords" content="[@L[cds.sales/gd/hosting/web-hosting:meta-keywords]@L]">
+    <meta property="og:title" content="[@L[cds.sales/gd/hosting/web-hosting:og-title]@L]">
+    <meta property="og:description" content="[@L[cds.sales/gd/hosting/web-hosting:og-description]@L]">
     <meta property="og:type" content="website">
     <meta property="og:url" content="[@T[link:<relative parammode='explicit' />]@T]">
     <meta property="og:image" content="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/gd_rebrand_og.png">
     <meta property="og:site_name" content="[@T[link:<relative parammode='explicit' />]@T]">
     <meta property="fb:app_id" content="115696031791232">
-    <meta property="fb:admins" content="633356800"> 
+    <meta property="fb:admins" content="633356800">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="[@L[cds.sales/gd/hosting/web-hosting:stuff]@L]">
+    <meta name="twitter:title" content="[@L[cds.sales/gd/hosting/web-hosting:stuff]@L]">
+    <meta name="twitter:description" content="[@L[cds.sales/gd/hosting/web-hosting:twitter-text]@L]">
+    <meta name="twitter:image:src" content="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/gd_rebrand_og.png"> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <script>
       var head = (typeof document.head !== 'undefined' ? document.head : document.getElementsByTagName('head')[0]);
@@ -162,9 +167,6 @@ h3 {
 }
 .arrow-down-icon {
     margin-top: 10px;
-}
-.plan-tile { 
-  margin-top: -240px; 
 }
 .include-check-black {
         position: relative;
@@ -447,6 +449,16 @@ cursor: pointer;
 }
 
 #speed-chart p {text-align: right; }
+
+.tool-tip-black {
+  background-image: url(https://img1.wsimg-com.ide/fos/mike/img/hosting/img-tootip-.png);
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  vertical-align: baseline;
+  cursor: pointer;
+}
+
     </style><!--[if lt IE 9]>
     <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
     <link href="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy.min.html" id="respond-proxy" rel="respond-proxy">
@@ -471,9 +483,11 @@ cursor: pointer;
      
     ##if(activeLanguageAny([en-US]))
      
-    <section id="marquee" style="padding-bottom: 60px;">
+    <section id="marquee">
       <atlantis:webstash type="css">
-        <style>
+        <style>.white-text{
+    color: #FFFFFF;
+}
 .marquee {
     background-position: top center;
 }
@@ -537,7 +551,7 @@ cursor: pointer;
 
 .marquee.marquee-app-landing .marquee-check-bullets li:before {
     content: "";
-    background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+    background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
     background-position: 0 -668px;
     background-size: 205px auto;
     width: 25px;
@@ -561,7 +575,6 @@ cursor: pointer;
     font-size: 20px;
     font-size: 2rem;
     text-transform: uppercase;
-    color: #ef6c0f;
     font-family: 'Walsheim-Bold';
     margin-bottom: 10px;
 }
@@ -1359,8 +1372,6 @@ h2.marquee-product-name,
                 <div class="row">
                   <div class="col-md-7 col-sm-12">
                     <div class="marquee-pro-left-text">
-                            <div class="marquee-product-review"> <i class="uxicon uxicon-star text-warning"></i><i class="uxicon uxicon-star text-warning"></i><i class="uxicon uxicon-star text-warning"></i><i class="uxicon uxicon-star text-warning"></i><i class="uxicon uxicon-star text-warning"></i><a href="#">Reviews</a>
-                            </div>
                             <h2 class="marquee-product-description">HOSTING THAT'S MORE RELIABLE THAN YOUR BEAN ROASTING <span style='letter-spacing:-.5rem;'>----------------</span> PLAID SHIRT</h2>
                             <div class="marquee-product-text">[@L[cds.sales/hosting/web-hosting-rebrand:guaranteeText1Rebrand]@L] [@L[cds.sales/hosting/web-hosting-rebrand:guaranteeText2Rebrand]@L] </br> [@L[cds.sales/hosting/web-hosting-rebrand:guaranteeText3Rebrand]@L]</div><a href="[@T[link:<relative path='~/hosting/web-hosting-config-new.aspx' secure='true'><param name='ci' value='89262' /><param name='plan' value='host_GridHostEcoDiabloLin1Yr_us' /></relative>]@T]" class="btn btn-primary jump-arrow-btn">[@L[cds.sales/hosting/web-hosting-rebrand:getstarted]@L]</a>
                     </div>
@@ -1376,7 +1387,9 @@ h2.marquee-product-name,
      
     <section id="marquee"> 
       <atlantis:webstash type="css">
-        <style>
+        <style>.white-text{
+    color: #FFFFFF;
+}
 .marquee {
     background-position: top center;
 }
@@ -1440,7 +1453,7 @@ h2.marquee-product-name,
 
 .marquee.marquee-app-landing .marquee-check-bullets li:before {
     content: "";
-    background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+    background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
     background-position: 0 -668px;
     background-size: 205px auto;
     width: 25px;
@@ -1464,7 +1477,6 @@ h2.marquee-product-name,
     font-size: 20px;
     font-size: 2rem;
     text-transform: uppercase;
-    color: #ef6c0f;
     font-family: 'Walsheim-Bold';
     margin-bottom: 10px;
 }
@@ -2262,8 +2274,6 @@ h2.marquee-product-name,
                 <div class="row">
                   <div class="col-md-7 col-sm-12">
                     <div class="marquee-pro-left-text">
-                            <div class="marquee-product-review"> <i class="uxicon uxicon-star text-warning"></i><i class="uxicon uxicon-star text-warning"></i><i class="uxicon uxicon-star text-warning"></i><i class="uxicon uxicon-star text-warning"></i><i class="uxicon uxicon-star text-warning"></i><a href="#">Reviews</a>
-                            </div>
                             <h2 class="marquee-product-description">[@L[cds.sales/hosting/web-hosting-rebrand:marquee]@L]</h2>
                             <div class="marquee-product-text">[@L[cds.sales/hosting/web-hosting-rebrand:guaranteeText1]@L] [@L[cds.sales/hosting/web-hosting-rebrand:guaranteeText2]@L]</div><a href="[@T[link:<relative path='~/hosting/web-hosting-config-new.aspx' secure='true'><param name='ci' value='89262' /><param name='plan' value='host_GridHostEcoDiabloLin1Yr_us' /></relative>]@T]" class="btn btn-primary jump-arrow-btn">[@L[cds.sales/hosting/web-hosting-rebrand:getstarted]@L]</a>
                     </div>
@@ -2279,6 +2289,12 @@ h2.marquee-product-name,
      
     <section id="plans">
       <style>
+.plan-tile { 
+  margin-top: -145px; 
+}
+.sf-droplist-msg {
+  text-align: inherit;
+}
 .pro-plans {
     margin-top: 0px;
     padding-bottom: 80px;
@@ -2562,8 +2578,9 @@ h2.marquee-product-name,
 }
 
 .pro-plans .pro-plan-wrap .plan-subtitle {
-    color: #b3b3b3;
+    color: #000 !important;
     font-weight: 700;
+    text-transform: uppercase;
 }
 
 .pro-plans .pro-plan-wrap .plan-text {
@@ -2613,6 +2630,14 @@ h2.marquee-product-name,
     font-size: 1.6rem;
     margin-bottom: 15px;
 }
+.pro-plans .pro-plan-wrap .check-item {
+    border-top: 0 none;
+    min-height: 0;
+    text-align: left;
+    font-size: 16px;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+}
 
 .pro-plans .include-check {
     position: relative;
@@ -2637,7 +2662,7 @@ h2.marquee-product-name,
     background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
     background-position: 0 -864px;
     width: 15px;
-    height: 16px;
+    height: 17px;
     display: inline-block;
     background-size: 205px auto;
     vertical-align: baseline;
@@ -2645,14 +2670,7 @@ h2.marquee-product-name,
       </style>
       <div class="pro-plans-wrap bg-gray-light">
         <div id="plans" data-icode="" class="container pro-plans"> 
-          <div class="col-sm-4 plan-tile plan-pro">
-            <atlantis:webstash type="css">
-              <style>
-                .pro-plans { margin-top: 0; }
-                .form-control { margin-bottom: 10px; }
-                
-              </style>
-            </atlantis:webstash>
+          <div id="planTileOne" class="col-sm-4 plan-tile plan-pro">
             <div class="pro-plan-wrap">
               <h2 class="plan-title">[@L[cds.sales/hosting/web-hosting-rebrand:economyPlan]@L]</h2>
               <p class="plan-text">[@L[cds.sales/hosting/web-hosting-rebrand:basicPrice]@L]</p>
@@ -2663,22 +2681,15 @@ h2.marquee-product-name,
                 ##endif
                  
               </div>
-              <button id="product-A" data-tcode="" data-plan="host_GridHostEcoDiabloLin1Yr_us" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
-              <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:oneWeb]@L]</div>
-              <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:oneHundredStorage]@L]</div>
-              <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedBand]@L]</div>
+              <button id="product-A" data-tcode="undefined" data-plan="host_GridHostEcoDiabloLin1Yr_us" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+              <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:oneWeb]@L]</strong></div>
+              <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:oneHundredStorage]@L]</strong></div>
+              <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedBand]@L]</strong></div>
               <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:oneHundredEMail]@L]</div>
               <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:freeDomain]@L]</div>
             </div>
           </div>
           <div class="col-sm-4 plan-tile plan-pro">
-            <atlantis:webstash type="css">
-              <style>
-                .pro-plans { margin-top: 0; }
-                .form-control { margin-bottom: 10px; }
-                
-              </style>
-            </atlantis:webstash>
             <div class="pro-plan-wrap">
               <h2 class="plan-title">[@L[cds.sales/hosting/web-hosting-rebrand:deluxePlan]@L]</h2>
               <p class="plan-text">[@L[cds.sales/hosting/web-hosting-rebrand:greatHome]@L]</p>
@@ -2689,22 +2700,15 @@ h2.marquee-product-name,
                 ##endif
                  
               </div>
-              <button id="product-B" data-tcode="" data-plan="host_GridHostDlxDiabloLin1Yr_us" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
-              <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedWeb]@L]</div>
-              <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedStorage]@L]</div>
-              <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedBand]@L]</div>
+              <button id="product-B" data-tcode="undefined" data-plan="host_GridHostDlxDiabloLin1Yr_us" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+              <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedWeb]@L]</strong></div>
+              <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedStorage]@L]</strong> <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedHostingToolTip]@L]'></span></div>
+              <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedBand]@L]</strong></div>
               <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:fiveHundredEMail]@L]</div>
               <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:freeDomain]@L]</div>
             </div>
           </div>
           <div class="col-sm-4 plan-tile plan-pro">
-            <atlantis:webstash type="css">
-              <style>
-                .pro-plans { margin-top: 0; }
-                .form-control { margin-bottom: 10px; }
-                
-              </style>
-            </atlantis:webstash>
             <div class="pro-plan-wrap">
               <div class="plan-flag">More power and security</div>
               <h2 class="plan-title">[@L[cds.sales/hosting/web-hosting-rebrand:ultimatePlan]@L]</h2>
@@ -2716,15 +2720,15 @@ h2.marquee-product-name,
                 ##endif
                  
               </div>
-              <button id="product-C" data-tcode="" data-plan="host_GridHostUnlDiabloLin1Yr_us" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
-              <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedWeb]@L]</div>
-              <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedStorage]@L]</div>
-              <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedBand]@L]</div>
+              <button id="product-C" data-tcode="undefined" data-plan="host_GridHostUnlDiabloLin1Yr_us" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+              <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedWeb]@L]</strong></div>
+              <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedStorage]@L]</strong> <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedHostingToolTip]@L]'></span></div>
+              <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedBand]@L]</strong></div>
               <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:oneThousandEMail]@L]</div>
               <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:freeDomain]@L]</div>
-              <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:twoXPowerLinux]@L]</div>
-              <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:oneThousandEMail]@L]</div>
-              <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:ultimateSSL]@L]</div>
+              <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:twoXPowerLinux]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:twoXPowerToolTip]@L]'></span></div>
+              <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:premiumdns]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:premiumDNSToolTip]@L]'></span></div>
+              <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:ultimateSSL]@L] [@L[cds.sales/hosting/web-hosting-rebrand:restrictionsapply]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:sslRestrictionsToolTip]@L]'></span></div>
             </div>
           </div>
           <atlantis:webstash type="js">
@@ -2781,12 +2785,10 @@ h2.marquee-product-name,
                       <div class="text-center"><img src="[@T[link:<imageroot />]@T]fos/mike/img/hosting/img-webpro-logo.png"></div>
                     </div>
                     <div class="col-sm-6 pro-banner-text">
-                      <p class="top-text">test test test test test test test test test test test test test test test</p>
-                      <p class="bottom-text">test test test test test estsetstestseta</p>
+                      <p class="top-text">[@L[cds.sales/hosting/web-hosting-rebrand:proBannerTop]@L]</p>
+                      <p class="bottom-text">[@L[cds.sales/hosting/web-hosting-rebrand:proBannerBottom]@L]</p>
                     </div>
-                    <div class="col-sm-2 pro-banner-button"><a class="btn btn-default-light">Learn More more more more more more</a>
-                      <p>asdf</p>
-                    </div>
+                    <div class="col-sm-2 pro-banner-button"><a class="btn btn-default-light">[@L[cds.sales/hosting/web-hosting-rebrand:learnMore]@L]</a></div>
                   </div>
                   <div class="row">
                     <div class="col-sm-12">
@@ -2800,7 +2802,7 @@ h2.marquee-product-name,
                     </div>
                   </div>
                   <div class="col-sm-4 ">
-                    <div class="include-check">[@L[cds.sales/hosting/web-hosting-rebrand:freeDomain]@L]</div>
+                    <div class="include-check">[@L[cds.sales/hosting/web-hosting-rebrand:freeDomain]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:freeDomainRestrictions]@L]'></span></div>
                     <div class="include-check">[@L[cds.sales/hosting/web-hosting-rebrand:freeEmail]@L]</div>
                     <div class="include-check">[@L[cds.sales/hosting/web-hosting-rebrand:oneClick]@L]</div>
                   </div>
@@ -2980,8 +2982,8 @@ h2.marquee-product-name,
         <div id="midPageNav" class="collapse navbar-collapse">
           <ul class="nav navbar-nav"></ul>
           <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.mid-page-nav&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="navbar-right">
-            <div class="price-text">Plans starting at</div>
-            <div class="price">[@T[productprice:<current productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]<span>/month</span></div><a href="#marquee" class="btn-purchase btn btn-sm">See the plans</a>
+            <div class="price-text">[@L[cds.sales/_common:plans-starting-at]@L]</div>
+            <div class="price">[@T[productprice:<current productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]<span>/month</span></div><a href="#planTileOne" class="btn-purchase btn btn-sm">[@L[cds.sales/_common:see-the-plans]@L]</a>
           </div>
         </div>
       </div>
@@ -3414,11 +3416,10 @@ height: 27px;
             </thead>
             <tbody>
               <tr>
-                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-free-domain-11166]@L]</td>
+                <td>[@L[cds.sales/hosting/web-hosting-rebrand:freeDomain]@L] <span class='tool-tip-black sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:freeDomainRestrictions]@L]'></span></td>
                 <td><span class='icon gray-check-icon'></span></td>
                 <td><span class='icon gray-check-icon'></span></td>
-                <td><span class='icon gray-check-icon'></span>  </td>
-                <!-- [@L[cds.sales/gd/hosting/web-hosting:compare]@L]-->
+                <td><span class='icon gray-check-icon'></span></td>
               </tr>
               <tr>
                 <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-11166]@L]</td>
@@ -3434,9 +3435,9 @@ height: 27px;
               </tr>
               <tr>
                 <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-monthly-bandwidth-11166]@L]</td>
-                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-monthly-bandwidth-unlimited-11166]@L]</td>
-                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-monthly-bandwidth-unlimited-11166]@L]</td>
-                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-monthly-bandwidth-unlimited-11166]@L]</td>
+                <td>[@L[cds.sales/hosting/web-hosting-rebrand:unlimited]@L] <span class='tool-tip-black sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedHostingToolTip]@L]'></span></td>
+                <td>[@L[cds.sales/hosting/web-hosting-rebrand:unlimited]@L] <span class='tool-tip-black sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedHostingToolTip]@L]'></span></td>
+                <td>[@L[cds.sales/hosting/web-hosting-rebrand:unlimited]@L] <span class='tool-tip-black sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedHostingToolTip]@L]'></span></td>
               </tr>
               <tr>
                 <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-core-features-ftp-users-11166]@L]</td>
@@ -3457,7 +3458,7 @@ height: 27px;
                 <td><span class='icon gray-check-icon'></span></td>
               </tr>
               <tr>
-                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-databases-direct-database-11166]@L]</td>
+                <td>[@L[cds.sales/hosting/web-hosting-rebrand:directDatabase]@L] <span class='tool-tip-black sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:directDatabaseToolTip]@L]'></span></td>
                 <td><span class='icon gray-check-icon'></span></td>
                 <td><span class='icon gray-check-icon'></span></td>
                 <td><span class='icon gray-check-icon'></span></td>
@@ -3475,25 +3476,25 @@ height: 27px;
                 <td><span class='icon gray-check-icon'></span></td>
               </tr>
               <tr>
-                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-external-domains-11166]@L]</td>
+                <td>[@L[cds.sales/hosting/web-hosting-rebrand:externalDomains]@L] <span class='tool-tip-black sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:externalDomainsToolTip]@L]'></span></td>
                 <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
                 <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
                 <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
               </tr>
               <tr>
-                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-subdomain-11166]@L]</td>
+                <td>[@L[cds.sales/hosting/web-hosting-rebrand:subdomains]@L] <span class='tool-tip-black sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:subDomainsToolTip]@L]'></span></td>
                 <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-subdomain-economy-11166]@L]</td>
                 <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
                 <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
               </tr>
               <tr>
-                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-multiple-web-sites-11166]@L]</td>
+                <td>[@L[cds.sales/hosting/web-hosting-rebrand:multipleWeb]@L] <span class='tool-tip-black sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:multipleWebsitesToolTip]@L]'></span></td>
                 <td>-</td>
                 <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-domains-multiple-web-sites-unlimited-11166]@L]</td>
                 <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-domains-multiple-web-sites-unlimited-11166]@L]</td>
               </tr>
               <tr>
-                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-alias-11166]@L]</td>
+                <td>[@L[cds.sales/hosting/web-hosting-rebrand:aliasDomains]@L] <span class='tool-tip-black sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:aliasDomainsToolTip]@L]'></span></td>
                 <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
                 <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
                 <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
@@ -3541,7 +3542,7 @@ height: 27px;
                 <td><span class='icon gray-check-icon'></span></td>
               </tr>
               <tr>
-                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-ftp-over-ssl-11166]@L]</td>
+                <td>[@L[cds.sales/hosting/web-hosting-rebrand:ftpOverSsl]@L] <span class='tool-tip-black sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:ftpOverSslToolTip]@L]'></span></td>
                 <td><span class='icon gray-check-icon'></span></td>
                 <td><span class='icon gray-check-icon'></span></td>
                 <td><span class='icon gray-check-icon'></span></td>
@@ -3709,7 +3710,7 @@ height: 27px;
                 <td><span class='icon gray-check-icon'></span></td>
               </tr>
               <tr>
-                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-sender-id-11166]@L]</td>
+                <td>[@L[cds.sales/hosting/web-hosting-rebrand:senderID]@L] <span class='tool-tip-black sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:senderIDToolTip]@L]'></span></td>
                 <td><span class='icon gray-check-icon'></span></td>
                 <td><span class='icon gray-check-icon'></span></td>
                 <td><span class='icon gray-check-icon'></span></td>
@@ -3749,11 +3750,10 @@ height: 27px;
             </thead>
             <tbody>
               <tr>
-                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-free-domain-11166]@L]</td>
+                <td>[@L[cds.sales/hosting/web-hosting-rebrand:freeDomain]@L] <span class='tool-tip-black sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:freeDomainRestrictions]@L]'></span></td>
                 <td><span class='icon gray-check-icon'></span></td>
                 <td><span class='icon gray-check-icon'></span></td>
-                <td><span class='icon gray-check-icon'></span>  </td>
-                <!-- [@L[cds.sales/gd/hosting/web-hosting:compare]@L]-->
+                <td><span class='icon gray-check-icon'></span></td>
               </tr>
               <tr>
                 <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-11166]@L]</td>
@@ -3769,12 +3769,12 @@ height: 27px;
               </tr>
               <tr>
                 <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-monthly-bandwidth-11166]@L]</td>
-                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-monthly-bandwidth-unlimited-11166]@L]</td>
-                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-monthly-bandwidth-unlimited-11166]@L]</td>
-                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-monthly-bandwidth-unlimited-11166]@L]</td>
+                <td>[@L[cds.sales/hosting/web-hosting-rebrand:unlimited]@L] <span class='tool-tip-black sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedHostingToolTip]@L]'></span></td>
+                <td>[@L[cds.sales/hosting/web-hosting-rebrand:unlimited]@L] <span class='tool-tip-black sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedHostingToolTip]@L]'></span></td>
+                <td>[@L[cds.sales/hosting/web-hosting-rebrand:unlimited]@L] <span class='tool-tip-black sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedHostingToolTip]@L]'></span></td>
               </tr>
               <tr>
-                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-ftp-users-11166]@L]</td>
+                <td>[@L[cds.sales/hosting/web-hosting-rebrand:ftpUsers]@L] <span class='tool-tip-black sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:ftpUsersToolTip]@L]'></span></td>
                 <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-ftp-users-50-unlimited-11166]@L]</td>
                 <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-ftp-users-50-unlimited-11166]@L]</td>
                 <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-ftp-users-50-unlimited-11166]@L]</td>
@@ -3804,7 +3804,7 @@ height: 27px;
                 <td><span class='icon gray-check-icon'></span></td>
               </tr>
               <tr>
-                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-databases-direct-database-11166]@L]</td>
+                <td>[@L[cds.sales/hosting/web-hosting-rebrand:directDatabase]@L] <span class='tool-tip-black sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:directDatabaseToolTip]@L]'></span></td>
                 <td><span class='icon gray-check-icon'></span></td>
                 <td><span class='icon gray-check-icon'></span></td>
                 <td><span class='icon gray-check-icon'></span></td>
@@ -3828,25 +3828,25 @@ height: 27px;
                 <td><span class='icon gray-check-icon'></span></td>
               </tr>
               <tr>
-                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-external-domains-11166]@L]</td>
+                <td>[@L[cds.sales/hosting/web-hosting-rebrand:externalDomains]@L] <span class='tool-tip-black sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:externalDomainsToolTip]@L]'></span></td>
                 <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
                 <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
                 <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
               </tr>
               <tr>
-                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-subdomain-11166]@L]</td>
+                <td>[@L[cds.sales/hosting/web-hosting-rebrand:subdomains]@L] <span class='tool-tip-black sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:subDomainsToolTip]@L]'></span></td>
                 <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-subdomain-economy-11166]@L]</td>
                 <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
                 <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
               </tr>
               <tr>
-                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-multiple-web-sites-11166]@L]</td>
+                <td>[@L[cds.sales/hosting/web-hosting-rebrand:multipleWeb]@L] <span class='tool-tip-black sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:multipleWebsitesToolTip]@L]'></span></td>
                 <td>-</td>
                 <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-domains-multiple-web-sites-unlimited-11166]@L]</td>
                 <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-domains-multiple-web-sites-unlimited-11166]@L]</td>
               </tr>
               <tr>
-                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-alias-11166]@L]</td>
+                <td>[@L[cds.sales/hosting/web-hosting-rebrand:aliasDomains]@L] <span class='tool-tip-black sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:aliasDomainsToolTip]@L]'></span></td>
                 <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
                 <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
                 <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
@@ -3864,7 +3864,7 @@ height: 27px;
                 <td><span class='icon gray-check-icon'></span></td>
               </tr>
               <tr>
-                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-ftp-over-ssl-11166]@L]</td>
+                <td>[@L[cds.sales/hosting/web-hosting-rebrand:ftpOverSsl]@L] <span class='tool-tip-black sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:ftpOverSslToolTip]@L]'></span></td>
                 <td><span class='icon gray-check-icon'></span></td>
                 <td><span class='icon gray-check-icon'></span></td>
                 <td><span class='icon gray-check-icon'></span></td>
@@ -3888,7 +3888,7 @@ height: 27px;
                 <td><span class='icon gray-check-icon'></span></td>
               </tr>
               <tr>
-                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-cpanel-general-features-ssl-cert-11166]@L]</td>
+                <td>[@L[cds.sales/hosting/web-hosting-rebrand:sslCertificate]@L] ([@L[cds.sales/hosting/web-hosting-rebrand:restrictionsApply]@L] <span class='tool-tip-black sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:sslRestrictionsToolTip]@L]'></span>)</td>
                 <td>-</td>
                 <td>-</td>
                 <td><span class='icon gray-check-icon'></span></td>
@@ -3990,13 +3990,13 @@ height: 27px;
                 <td><span class='icon gray-check-icon'></span></td>
               </tr>
               <tr>
-                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-language-support-asp-mv3-11166]@L]</td>
+                <td>[@L[cds.sales/hosting/web-hosting-rebrand:aspNetMVC]@L] <span class='tool-tip-black sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:onlyaspnetfour]@L]'></span></td>
                 <td><span class='icon gray-check-icon'></span></td>
                 <td><span class='icon gray-check-icon'></span></td>
                 <td><span class='icon gray-check-icon'></span></td>
               </tr>
               <tr>
-                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-language-support-silverlight-11166]@L]</td>
+                <td>[@L[cds.sales/hosting/web-hosting-rebrand:silverlightfive]@L] <span class='tool-tip-black sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:onlyaspnetfour]@L]'></span>, [@L[cds.sales/hosting/web-hosting-rebrand:silverlightfour]@L]</td>
                 <td><span class='icon gray-check-icon'></span></td>
                 <td><span class='icon gray-check-icon'></span></td>
                 <td><span class='icon gray-check-icon'></span></td>
@@ -4050,7 +4050,7 @@ height: 27px;
                 <td><span class='icon gray-check-icon'></span></td>
               </tr>
               <tr>
-                <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-email-features-sender-id-11166]@L]</td>
+                <td>[@L[cds.sales/hosting/web-hosting-rebrand:senderID]@L] <span class='tool-tip-black sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:senderIDToolTip]@L]'></span></td>
                 <td><span class='icon gray-check-icon'></span></td>
                 <td><span class='icon gray-check-icon'></span></td>
                 <td><span class='icon gray-check-icon'></span></td>
@@ -4248,7 +4248,7 @@ height: 27px;
   content: '';
   width: 94px;
   height: 94px;
-  background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+  background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
   background-size: 205px auto;
   background-position: 0 -896px;
   position: absolute;
@@ -4262,7 +4262,7 @@ height: 27px;
   content: '';
   width: 94px;
   height: 94px;
-  background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+  background-image: url([@T[link:<imageroot />]@T]ffos/hp/sahara-rebrand-sprite-20141114.png);
   background-size: 205px auto;
   background-position: 0 -896px;
   position: absolute;
@@ -4419,7 +4419,9 @@ height: 27px;
           </div>
         </div>
       </div>
-    </section>
+    </section> 
+    ##if(activeLanguageAny([en-US]))
+     
     <section id="reviews" class="tile-section">
       <div class="container">
         <div class="row">
@@ -4431,7 +4433,9 @@ height: 27px;
           </div>
         </div>
       </div>
-    </section>
+    </section> 
+    ##endif
+     
     <section id="faq" class="tile-section">
       <style>.accordion-group {
   border-top: 2px solid #e8e8e8;
@@ -4633,7 +4637,7 @@ height: 27px;
                   <div class="two-up-speech-shape two-up-speech-shape-orange">
                     <div class="shape-text">[@L[cds.sales/hosting/web-hosting-rebrand:wsb]@L]</div>
                   </div>
-                  <h2>[@L[cds.sales/hosting/web-hosting-rebrand:wsbDoIt]@L] </br> [@L[cds.sales/hosting/web-hosting-rebrand:wsbHosting]@L]</h2>
+                  <h2>[@L[cds.sales/hosting/web-hosting-rebrand:wsbDoIt]@L] [@L[cds.sales/hosting/web-hosting-rebrand:wsbHosting]@L]</h2>
                   <div class="row">
                     <div class="col-sm-12">
                       <ul>
@@ -4724,8 +4728,22 @@ height: 27px;
     </section> 
     ##endif
      
-    <section id="disclaimers">
-      <p>disclaimers</p>
+    <section id="disclaimers" class="tile-section">
+      <div class="container">
+        <div>
+          <p>‡, *, ‡‡, ºº, ††, 4 &nbsp; [@L[cds.sales/hosting/web-hosting-rebrand:productDisclaimers]@L] <a onClick="disclaimersModal()">[@L[cds.sales/hosting/web-hosting-rebrand:viewDisclaimers]@L]</a></p>
+          <div id="disclaimersModal" data-title="[@L[cds.sales/gd/hosting/web-hosting:disclaimer-modal-header]@L]" style="display:none">
+             
+            [@L[cds.sales/gd/hosting/web-hosting:modal-disclaimer-1]@L] </br></br>
+            [@L[cds.sales/gd/hosting/web-hosting:modal-disclaimer-2]@L] </br></br>
+            [@L[cds.sales/gd/hosting/web-hosting:modal-disclaimer-3]@L] </br></br>
+            [@L[cds.sales/gd/hosting/web-hosting:modal-disclaimer-4-special]@L] </br></br>
+            [@L[cds.sales/gd/hosting/web-hosting:modal-disclaimer-4]@L] </br></br>
+            [@L[cds.sales/gd/hosting/web-hosting:modal-disclaimer-11166]@L] </br></br>
+          </div>
+        </div>
+        <p>[@L[cds.sales/hosting/web-hosting-rebrand:trademark]@L]</p>
+      </div>
     </section>
     <!-- FOOTERBEGIN--> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
@@ -4737,6 +4755,11 @@ height: 27px;
     <script type="text/javascript">
       endOfPageScripts();
       
+    </script>
+    <script>
+      function disclaimersModal() {
+        $('#disclaimersModal').sfDialog();
+      }
     </script>
     <script>
       ##if(activeLanguageAny([en-us]))

@@ -33,9 +33,6 @@ h3 {
 .arrow-down-icon {
     margin-top: 10px;
 }
-.plan-tile { 
-  margin-top: -240px; 
-}
 .include-check-black {
         position: relative;
         padding-left: 45px;
@@ -317,3 +314,12 @@ cursor: pointer;
 }
 
 #speed-chart p {text-align: right; }
+
+.tool-tip-black {
+  background-image: url(https://img1.wsimg-com.ide/fos/mike/img/hosting/img-tootip-.png);
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  vertical-align: baseline;
+  cursor: pointer;
+}

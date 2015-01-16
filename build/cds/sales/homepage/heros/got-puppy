@@ -37,7 +37,7 @@
   font-size: 0.6em;
   text-align: right;
 }
-#marquee img {
+#marquee .hero-wrapper > .row img {
   margin: 0 auto;
   display: block;
 }
@@ -45,7 +45,7 @@
   #marquee .hero-wrapper > .row {
     max-height: 315px;
   }
-  #marquee img {
+  #marquee .hero-wrapper > .row img {
     margin: -72px 0 0 0;
   }
 }
@@ -71,5 +71,5 @@
     </div>
     <div class="disclaimer">First year only. Other restrictions apply.</div>
   </div>
-  <div class="col-xs-12 col-sm-6"><img src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/got-buddy.jpg"/></div>
+  <div class="col-xs-12 col-sm-5"><img src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/got-buddy.jpg"/></div>
 </div>
