@@ -4171,7 +4171,8 @@ height: 27px;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .or-container:after {
-    left: 101%
+    left: 101%;
+    bottom: 50%;
   }
 }
 @media (min-width: 992px) {
@@ -4278,7 +4279,7 @@ height: 27px;
                   <h2 class="text-center">[@L[cds.sales/hosting/web-hosting-rebrand:cPanelTitle2]@L]</h2>
                   <h3 class="text-center">[@L[cds.sales/hosting/web-hosting-rebrand:linuxPlan]@L]</h3>
                   <div class="row">
-                    <div class="col-sm-10">
+                    <div class="col-sm-12">
                       <div class="include-check-black"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:cPanelListItem]@L]</strong> </br> [@L[cds.sales/hosting/web-hosting-rebrand:cPanelListItemDesc]@L]</div>
                       <div class="include-check-black"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:cloudLinuxListItem]@L]</strong> </br> [@L[cds.sales/hosting/web-hosting-rebrand:cloudLinuxListItemDesc]@L]</div>
                       <div class="include-check-black"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:resourcesOnDemandListItem]@L]</strong> </br> [@L[cds.sales/hosting/web-hosting-rebrand:resourcesOnDemandListItemDesc]@L]</div>
@@ -4294,7 +4295,7 @@ height: 27px;
                   <h2 class="text-center">[@L[cds.sales/hosting/web-hosting-rebrand:windowsTitle2]@L]</h2>
                   <h3 class="text-center">[@L[cds.sales/hosting/web-hosting-rebrand:windowsPlan]@L]</h3>
                   <div class="row">
-                    <div class="col-sm-10">
+                    <div class="col-sm-12">
                       <div class="include-check-black"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:windowsPlanPlesk]@L]</strong> </br> [@L[cds.sales/hosting/web-hosting-rebrand:windowsPlanPleskDesc]@L]</div>
                       <div class="include-check-black"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:windowsServer]@L]</strong> </br> [@L[cds.sales/hosting/web-hosting-rebrand:windowsServerDesc]@L]</div>
                       <div class="include-check-black"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:freeApps]@L]</strong> </br> [@L[cds.sales/hosting/web-hosting-rebrand:seventyPlus]@L]</div>
@@ -4391,9 +4392,12 @@ height: 27px;
 }
 
 .accordion-group li.accordion-dropdown ul.dropdown > li div {  
-  padding-left: 15px;
-  border-left: 6px solid #008a32;
+  padding-left: 30px;
   transition: all 300ms;
+}
+
+.dropdown li {
+  font-family: Arial;
 }
       </style>
       <div class="container">
@@ -4519,7 +4523,7 @@ height: 27px;
                   </div>
                   <h2>[@L[cds.sales/hosting/web-hosting-rebrand:wsbDoIt]@L] </br> [@L[cds.sales/hosting/web-hosting-rebrand:wsbHosting]@L]</h2>
                   <div class="row">
-                    <div class="col-sm-10">
+                    <div class="col-sm-12">
                       <ul>
                         <li>[@L[cds.sales/hosting/web-hosting-rebrand:wsbList1]@L]</li>
                         <li>[@L[cds.sales/hosting/web-hosting-rebrand:wsbList2]@L]</li>
@@ -4536,7 +4540,7 @@ height: 27px;
                   </div>
                   <h2>[@L[cds.sales/hosting/web-hosting-rebrand:vpsGrow]@L]</h2>
                   <div class="row">
-                    <div class="col-sm-10">
+                    <div class="col-sm-12">
                       <ul>
                         <li>[@L[cds.sales/hosting/web-hosting-rebrand:vpsList1]@L]</li>
                         <li>[@L[cds.sales/hosting/web-hosting-rebrand:vpsList2]@L]</li>
@@ -4574,7 +4578,7 @@ height: 27px;
                   </div>
                   <h2>[@L[cds.sales/hosting/web-hosting-rebrand:wsbDoIt]@L] [@L[cds.sales/hosting/web-hosting-rebrand:wsbHosting]@L]</h2>
                   <div class="row">
-                    <div class="col-sm-10">
+                    <div class="col-sm-12">
                       <ul>
                         <li>[@L[cds.sales/hosting/web-hosting-rebrand:wsbList1]@L]</li>
                         <li>[@L[cds.sales/hosting/web-hosting-rebrand:wsbList2]@L]</li>
@@ -4591,7 +4595,7 @@ height: 27px;
                   </div>
                   <h2>[@L[cds.sales/hosting/web-hosting-rebrand:vpsGrow]@L]</h2>
                   <div class="row">
-                    <div class="col-sm-10">
+                    <div class="col-sm-12">
                       <ul>
                         <li>[@L[cds.sales/hosting/web-hosting-rebrand:vpsList1]@L]</li>
                         <li>[@L[cds.sales/hosting/web-hosting-rebrand:vpsList2]@L]</li>

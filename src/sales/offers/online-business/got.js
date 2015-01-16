@@ -1,8 +1,9 @@
 var got1Page = {
   tldInfo: {
-    defaultTld: 'com',    
-    tlds: ['com','org','co','net', 'club', 'rocks'],  /* todo: drive from a config val */
-    possibleAdditionalTlds: ['in', 'ca', 'uk', 'co.uk'], /* todo: drive from a config val */
+    defaultTld: 'com', 
+    lastTldInList: 'org', 
+    tlds: [@T[appSetting:<setting name="SALES_GOT_TLD_EVERYONE_LIST" />]@T],   
+    possibleAdditionalTlds: [@T[appSetting:<setting name="SALES_GOT_TLD_RESTRICTED_LIST" />]@T],  
     isPossibleAdditionalTld: function(tld) {return -1 !== $.inArray(tld, got1Page.tldInfo.possibleAdditionalTlds);}
   },
   sfDialogErrorButtons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }],
@@ -25,6 +26,35 @@ var got1Page = {
   imagePath: '[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/',
   canOfferOls: true
 };
+
+
+function showAndOrderDynamicTldsInList(selector) {
+
+  // <span class="sorted-tld-list"><span class="tld-list tld-ca">.CA, </span>
+  // <span class="tld-list tld-club">.CLUB, </span></span>or .ORG
+
+  var $this = $(selector),
+    formatTldSelector = function(tld) { return '.tld-' + tld.replace('.','-')},
+    tldList = got1Page.tldInfo.tlds,
+    removedSpansArr = [],
+    $sortedArea = $this.find(".sorted-tld-list");
+
+  // remove all dynamic tlds from this
+  $.each(tldList, function(idx, tld){
+    var $tldItem = $this.find(formatTldSelector(tld));
+    removedSpansArr.push($tldItem);
+  });
+
+  // insert sorted HTML back into the original object and show the ones that are turned on
+  $sortedArea.empty();
+  $.each(removedSpansArr, function(idx, tldSpan) {
+    $sortedArea.append(tldSpan);
+  });
+
+  // show sorted list
+  $this.find('.tld-list').show();
+}
+
 
 ##if(!productIsOffered(105))
   got1Page.canOfferOls = false;
@@ -60,20 +90,35 @@ var got1Page = {
   }
 ##endif
 
+// sort the list of TLDs, keeping default at the head of the list and lastTldInList at the end of the list
+got1Page.tldInfo.tlds.sort();
+got1Page.tldInfo.tlds.splice(got1Page.tldInfo.tlds.indexOf(got1Page.tldInfo.defaultTld), 1); // remove default from list
+got1Page.tldInfo.tlds.unshift(got1Page.tldInfo.defaultTld); // add default to the beginning
+got1Page.tldInfo.tlds.splice(got1Page.tldInfo.tlds.indexOf(got1Page.tldInfo.lastTldInList), 1); // remove  lastTldInList from list
+got1Page.tldInfo.tlds.push(got1Page.tldInfo.lastTldInList); // add to the end of the list
+console.dir(got1Page.tldInfo.tlds);
+console.log(got1Page.tldInfo.tlds);
 
 $(document).ready(function() {
 
   showTldImagesInDomainArea(); //dynamically build the tld images in the #findYourPerfectDomain section
   
-  showDynamicTldsInLists($(document)); // fix up list of valid tlds from lang files
-
+  // fix up list of valid tlds from lang files
+  showAndOrderDynamicTldsInList("#marquee .invalid-TLD-entered");
+  showAndOrderDynamicTldsInList("#default-marquee-details-modal-wsb-only");
+  showAndOrderDynamicTldsInList("#default-marquee-details-modal");
+  showAndOrderDynamicTldsInList("#site-choice-wsb-modal p");
+  showAndOrderDynamicTldsInList("#site-choice-ols-modal p");
+  showAndOrderDynamicTldsInList("#step2-choose-product-wsb-modal p");
+  showAndOrderDynamicTldsInList("#step2-choose-product-ols-modal p"); 
+  showAndOrderDynamicTldsInList("#default-marquee-view .invalid-TLD-entered");
+  showAndOrderDynamicTldsInList("#domain-available-marquee-view .invalid-TLD-entered");
+  showAndOrderDynamicTldsInList("#domain-not-available-marquee-view .invalid-TLD-entered");
   tokenizeDisclaimerModals();
  
   tokenizeOnDataTokenizeAttribute();
 
   wireUpDisclaimerModals();
-
-
 
   //set up domain search buttons to do a domain search
   $('#marquee')
@@ -197,13 +242,6 @@ function showTldImagesInDomainArea() {
   // rerun the height alignment
   $('#findYourPerfectDomain [data-center-element]').css({marginTop:"0px"});
   $(window).trigger('resize');
-}
-
-function showDynamicTldsInLists(selector) {
-  var $this = $(selector);
-  $.each(got1Page.tldInfo.tlds, function(idx, tld){
-    $this.find('.tlds-' + tld).show();
-  });
 }
 
 function formatDomainWithDefaultTldIfNoneSpecified(domain) {
@@ -481,3 +519,4 @@ function updateDomainCountText(initial, numberShown) {
   }
   $header.html(numbersHtml);
 }
+
