@@ -163,9 +163,6 @@ h3 {
 .arrow-down-icon {
     margin-top: 10px;
 }
-.plan-tile { 
-  margin-top: -240px; 
-}
 .include-check-black {
         position: relative;
         padding-left: 45px;
@@ -456,6 +453,7 @@ cursor: pointer;
   vertical-align: baseline;
   cursor: pointer;
 }
+
     </style><!--[if lt IE 9]>
     <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
     <link href="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy.min.html" id="respond-proxy" rel="respond-proxy">
@@ -482,7 +480,9 @@ cursor: pointer;
      
     <section id="marquee" style="padding-bottom: 60px;">
       <atlantis:webstash type="css">
-        <style>
+        <style>.white-text{
+    color: #FFFFFF;
+}
 .marquee {
     background-position: top center;
 }
@@ -546,7 +546,7 @@ cursor: pointer;
 
 .marquee.marquee-app-landing .marquee-check-bullets li:before {
     content: "";
-    background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+    background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
     background-position: 0 -668px;
     background-size: 205px auto;
     width: 25px;
@@ -570,7 +570,6 @@ cursor: pointer;
     font-size: 20px;
     font-size: 2rem;
     text-transform: uppercase;
-    color: #ef6c0f;
     font-family: 'Walsheim-Bold';
     margin-bottom: 10px;
 }
@@ -1383,7 +1382,9 @@ h2.marquee-product-name,
      
     <section id="marquee"> 
       <atlantis:webstash type="css">
-        <style>
+        <style>.white-text{
+    color: #FFFFFF;
+}
 .marquee {
     background-position: top center;
 }
@@ -1447,7 +1448,7 @@ h2.marquee-product-name,
 
 .marquee.marquee-app-landing .marquee-check-bullets li:before {
     content: "";
-    background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+    background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
     background-position: 0 -668px;
     background-size: 205px auto;
     width: 25px;
@@ -1471,7 +1472,6 @@ h2.marquee-product-name,
     font-size: 20px;
     font-size: 2rem;
     text-transform: uppercase;
-    color: #ef6c0f;
     font-family: 'Walsheim-Bold';
     margin-bottom: 10px;
 }
@@ -2284,6 +2284,12 @@ h2.marquee-product-name,
      
     <section id="plans">
       <style>
+.plan-tile { 
+  margin-top: -145px; 
+}
+.sf-droplist-msg {
+  text-align: inherit;
+}
 .pro-plans {
     margin-top: 0px;
     padding-bottom: 80px;
@@ -2567,8 +2573,9 @@ h2.marquee-product-name,
 }
 
 .pro-plans .pro-plan-wrap .plan-subtitle {
-    color: #b3b3b3;
+    color: #000 !important;
     font-weight: 700;
+    text-transform: uppercase;
 }
 
 .pro-plans .pro-plan-wrap .plan-text {
@@ -2618,6 +2625,14 @@ h2.marquee-product-name,
     font-size: 1.6rem;
     margin-bottom: 15px;
 }
+.pro-plans .pro-plan-wrap .check-item {
+    border-top: 0 none;
+    min-height: 0;
+    text-align: left;
+    font-size: 16px;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+}
 
 .pro-plans .include-check {
     position: relative;
@@ -2642,7 +2657,7 @@ h2.marquee-product-name,
     background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
     background-position: 0 -864px;
     width: 15px;
-    height: 16px;
+    height: 17px;
     display: inline-block;
     background-size: 205px auto;
     vertical-align: baseline;
@@ -2651,13 +2666,6 @@ h2.marquee-product-name,
       <div class="pro-plans-wrap bg-gray-light">
         <div id="plans" data-icode="" class="container pro-plans"> 
           <div class="col-sm-4 plan-tile plan-pro">
-            <atlantis:webstash type="css">
-              <style>
-                .pro-plans { margin-top: 0; }
-                .form-control { margin-bottom: 10px; }
-                
-              </style>
-            </atlantis:webstash>
             <div class="pro-plan-wrap">
               <h2 class="plan-title">[@L[cds.sales/hosting/web-hosting-rebrand:economyPlan]@L]</h2>
               <p class="plan-text">[@L[cds.sales/hosting/web-hosting-rebrand:basicPrice]@L]</p>
@@ -2677,13 +2685,6 @@ h2.marquee-product-name,
             </div>
           </div>
           <div class="col-sm-4 plan-tile plan-pro">
-            <atlantis:webstash type="css">
-              <style>
-                .pro-plans { margin-top: 0; }
-                .form-control { margin-bottom: 10px; }
-                
-              </style>
-            </atlantis:webstash>
             <div class="pro-plan-wrap">
               <h2 class="plan-title">[@L[cds.sales/hosting/web-hosting-rebrand:deluxePlan]@L]</h2>
               <p class="plan-text">[@L[cds.sales/hosting/web-hosting-rebrand:greatHome]@L]</p>
@@ -2703,13 +2704,6 @@ h2.marquee-product-name,
             </div>
           </div>
           <div class="col-sm-4 plan-tile plan-pro">
-            <atlantis:webstash type="css">
-              <style>
-                .pro-plans { margin-top: 0; }
-                .form-control { margin-bottom: 10px; }
-                
-              </style>
-            </atlantis:webstash>
             <div class="pro-plan-wrap">
               <div class="plan-flag">More power and security</div>
               <h2 class="plan-title">[@L[cds.sales/hosting/web-hosting-rebrand:ultimatePlan]@L]</h2>
@@ -2983,8 +2977,8 @@ h2.marquee-product-name,
         <div id="midPageNav" class="collapse navbar-collapse">
           <ul class="nav navbar-nav"></ul>
           <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.mid-page-nav&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="navbar-right">
-            <div class="price-text">Plans starting at</div>
-            <div class="price">[@T[productprice:<current productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]<span>/month</span></div><a href="#marquee" class="btn-purchase btn btn-sm">See the plans</a>
+            <div class="price-text">[@L[cds.sales/_common:plans-starting-at]@L]</div>
+            <div class="price">[@T[productprice:<current productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]<span>/month</span></div><a href="#marquee" class="btn-purchase btn btn-sm">[@L[cds.sales/_common:see-the-plans]@L]</a>
           </div>
         </div>
       </div>
@@ -4249,7 +4243,7 @@ height: 27px;
   content: '';
   width: 94px;
   height: 94px;
-  background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+  background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
   background-size: 205px auto;
   background-position: 0 -896px;
   position: absolute;
@@ -4263,7 +4257,7 @@ height: 27px;
   content: '';
   width: 94px;
   height: 94px;
-  background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+  background-image: url([@T[link:<imageroot />]@T]ffos/hp/sahara-rebrand-sprite-20141114.png);
   background-size: 205px auto;
   background-position: 0 -896px;
   position: absolute;

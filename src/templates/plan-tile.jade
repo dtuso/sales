@@ -33,24 +33,23 @@ block vars
   - subTitle = "";
   - description = "";
   - features = "";
+  - checkFeatures = "";
+  - disclaimer = "";
   - pfid = "";
+  - packageids = "";
+  - promocode = "";
   - defaultPlan = "";
   - flagText = "";
   - tcode = "";
   - listID = "";
   - buttonid = "";
-  - buttonText = "[@L[cds.sales/_common:add-to-cart-cap]@L]";
+  - buttonText = "";
   - showDropDownList = false;
   - buttonUrl = "";
   - priceText = "";
   - term = "";
 
 
-atlantis:webstash(type="css")
-  block styles
-    style.
-      .pro-plans { margin-top: 0; }
-      .form-control { margin-bottom: 10px; }
 
 .pro-plan-wrap
   block flag
@@ -89,9 +88,35 @@ atlantis:webstash(type="css")
         | 
         |##endif
         | 
+        if(disclaimer)
+          p!{disclaimer}
+        if(vat)
+          | 
+          |##if(countrySiteAny(uk))
+          | 
+          p [@L[cds.sales/_common:vat-price]@L] 
+          | 
+          |##endif
+          | 
+
+    if (packageids)
+      .plan-price-wrap
+        span.plan-price.text-warning [@T[multipleproductprice:<current productidlist="!{packageids}" period="monthly" promocode="!{promocode}" />]@T]
+        span.plan-duration.text-warning !{term}
+        if(disclaimer)
+          p !{disclaimer}
+        if(vat)
+          | 
+          |##if(countrySiteAny(uk))
+          | 
+          p [@L[cds.sales/_common:vat-price]@L] 
+          | 
+          |##endif
+          | 
   if(showDropDownList)
     +planSelectList(listID)
       block planOptions
+
 
   block button
     if (buttonText && buttonUrl)
@@ -103,11 +128,15 @@ atlantis:webstash(type="css")
     else
       button.btn.btn-purchase.btn-plan.btn-lg.btn-block(data-tcode="#{tcode}") No Action
 
-
-
   block features
     //- Feature list
     if(features)
       each feature, index in features
         //- Text at the bottom that can have multiple "rows"
         .plan-item !{feature}
+
+  block checkFeatures
+    if(checkFeatures)
+      each feature, index in checkFeatures
+          //- Text at the bottom that can have multiple "rows"
+          .include-check.check-item !{feature}
