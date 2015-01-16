@@ -122,10 +122,7 @@
       }
       
     </script>
-    <style>body {
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-}
-h2 {
+    <style>h2 {
   font-size: 4rem;
 }
 .walsheim-regular {
@@ -175,10 +172,10 @@ h2 {
   float: right;
 }
 #bugbar {
-  margin: -15px 0 5px;
+  margin: 10px 0;
 }
 #domain-search {
-  padding: 15px 0;
+  margin-top: 10px;
 }
 .price,
 .icann-disclaimer {
@@ -310,15 +307,55 @@ div.video-marquee {
     <!-- HEADERBEGIN--> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- HEADEREND-->
-    <section id="domainSearch">
+    <section id="domain-search">
       <div class="container">
-        <div class="row"></div>
         <div class="row">
-          <div class="col-xs-12 search-template">
-            <form action="[@T[link:<external linktype='siteurl' path='' parammode='explicit'/>]@T]/api/dpp/search/single?ci=54814&isc=gd41166r" data-icode="home:Domain Search:Domains:Domain Search" data-domainsearch="{'search-element':'input.searchInput','placeholder-element':'label.searchInput','button':'button','empty-redirect':'[@T[link:<external linktype='siteurl' path='' parammode='explicit'/>]@T]/domains/domain-name-search.aspx'}">
-              <div class="search-template-box clearfix">
-                <input type="text" autocomplete="off" name="domainToCheck" maxlength="63" placeholder="Find your perfect domain name" class="text-primary searchInput"/>
-                <button type="submit" data-tcode="home:Domain Search:Domains:Domain Search:Search Domain" class="btn-primary btn btn-lg pull-right ">[@L[cds.sales/homepage/locales/en:domain-search-btn]@L]</button>
+          <div class="col-xs-12">
+            <atlantis:webstash type="css">
+              <style>#domain-name-input {
+  color: #008a32;
+  font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
+}
+#domain-name-input::-webkit-input-placeholder {
+  color: #008a32;
+  font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
+}
+#domain-name-input:-moz-placeholder {
+  color: #008a32;
+  opacity: 1;
+  font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
+}
+#domain-name-input::-moz-placeholder {
+  color: #008a32;
+  opacity: 1;
+  font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
+}
+#domain-name-input:-ms-input-placeholder {
+  color: #008a32;
+  font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
+}
+.search-text {
+  display: none;
+}
+.search-icon {
+  font-size: 22px;
+}
+@media (min-width: 768px) {
+  .search-text {
+    display: inline;
+  }
+  .search-icon {
+    display: none;
+  }
+}
+
+              </style>
+            </atlantis:webstash>
+            <form action="[@T[link:<external linktype='siteurl' path='' parammode='explicit'/>]@T]/api/dpp/search/single?ci=54814&isc=gd41166r" data-icode="home:Domain Search:Domains:Domain Search" data-domainsearch="{'search-element':'input.searchInput','placeholder-element':'input.searchInput','button':'button','empty-redirect':'[@T[link:<external linktype='siteurl' path='' parammode='explicit'/>]@T]/domains/domain-name-search.aspx'}" role="form">
+              <div class="input-group">
+                <label for="domain-name-input" class="searchInput sr-only">Find your perfect domain name</label>
+                <input id="domain-name-input" type="text" placeholder="Find your perfect domain name" name="domainToCheck" maxlength="63" class="searchInput form-control"/><span class="input-group-btn">
+                  <button type="submit" data-ci="undefined" class="btn btn-primary"> <span class="search-icon uxicon uxicon-magnifying-glass"></span><span class="search-text">[@L[cds.sales/homepage/locales/en:domain-search-btn]@L]</span></button></span>
               </div>
             </form>
           </div>
@@ -385,7 +422,7 @@ div.video-marquee {
   font-size: 0.6em;
   text-align: right;
 }
-#marquee img {
+#marquee .hero-wrapper > .row img {
   margin: 0 auto;
   display: block;
 }
@@ -393,7 +430,7 @@ div.video-marquee {
   #marquee .hero-wrapper > .row {
     max-height: 315px;
   }
-  #marquee img {
+  #marquee .hero-wrapper > .row img {
     margin: -72px 0 0 0;
   }
 }
@@ -419,21 +456,77 @@ div.video-marquee {
                   </div>
                   <div class="disclaimer">First year only. Other restrictions apply.</div>
                 </div>
-                <div class="col-xs-12 col-sm-6"><img src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/got-buddy.jpg"></div>
+                <div class="col-xs-12 col-sm-5"><img src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/got-buddy.jpg"></div>
               </div>
             </div>
           </div>
           <div class="col-xs-12 col-md-3">
             <div class="tile-wrapper">
-              <style>.puppy-tile {
-  background-color: #333333;
+              <atlantis:webstash type="css">
+                <style>#marquee .tile-wrapper {
+  margin-top: 0;
+}
+#marquee .tile.puppy {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 22px;
+  font-size: 16px;
+  position: relative;
+  overflow: hidden;
+}
+#marquee .tile.puppy h3 {
+  font-size: 1.5em;
+  margin: 0;
+  padding: 10px 0;
+  text-transform: uppercase;
+  font-family: 'Walsheim-Black', 'Arial Black', sans-serif;
+}
+#marquee .tile.puppy p {
+  font-size: 1em;
+  font-family: 'Walsheim-Regular', 'Arial', sans-serif;
+}
+#marquee .tile.puppy a {
+  font-size: 1.3em;
+  color: #77c043;
+  text-transform: uppercase;
+  font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
+  font-size: 1.2em;
+}
+#marquee .tile.puppy img.nascar {
+  height: 80px;
+  float: right;
+  margin-top: 20px;
+}
+#marquee .tile.puppy img.mask {
+  display: none;
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  #marquee .tile.puppy {
+    min-height: 294px;
+  }
+}
+@media (min-width: 1200px) {
+  #marquee .tile.puppy {
+    padding: 10px 30px 46px 40px;
+    margin-left: -40px;
+    font-size: 14px;
+  }
+  img.mask {
+    display: block !important;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  img.nascar {
+    margin-right: -70px;
+  }
 }
 
-              </style>
-              <div data-url="[@T[link:<relative path='/'><param name='ci' value='11111' /></relative>]@T]" data-ci='11111' class="tile puppy-tile">
-                <div class="tile-content-wrapper">
-                  <div class="header-wrapper"></div>
-                </div>
+                </style>
+              </atlantis:webstash>
+              <div class="tile puppy"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzEzIiBoZWlnaHQ9IjE4OCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCiAgPHBvbHlnb24gc3Ryb2tlPSIjZjNmM2Y0IiBmaWxsPSIjZjNmM2Y0IiBwb2ludHM9IjAsMCAwLDUwIDE1LDAiLz4NCiAgPHBvbHlnb24gc3Ryb2tlPSIjZjNmM2Y0IiBmaWxsPSIjZjNmM2Y0IiBwb2ludHM9IjAsMTc0IDAsNTAgMjUsMTU4IDE0MCwxNzQiLz4NCiAgPHBvbHlnb24gc3Ryb2tlPSIjZjNmM2Y0IiBmaWxsPSIjZjNmM2Y0IiBwb2ludHM9IjMxMywxNzQgMTQwLDE3NCAyODAsMTQwIDMxMywwIi8+DQo8L3N2Zz4=" class="mask"><img src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/nascar_360.png" class="nascar">
+                <h3>Enter to Win</h3>
+                <p>Your pup could be on the GoDaddy race car!</p><a>Submit Your Pup</a>
               </div>
             </div>
           </div>

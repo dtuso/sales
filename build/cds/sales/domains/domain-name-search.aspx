@@ -197,11 +197,52 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-xs-12 search-template">
-            <form action="[@T[link:<external linktype='siteurl' path='' parammode='explicit'/>]@T]/api/dpp/search/single?ci=54814&isc=gd41166r" data-icode="home:Domain Search:Domains:Domain Search" data-domainsearch="{'search-element':'input.searchInput','placeholder-element':'label.searchInput','button':'button','empty-redirect':'[@T[link:<external linktype='siteurl' path='' parammode='explicit'/>]@T]/domains/domain-name-search.aspx'}">
-              <div class="search-template-box clearfix">
-                <input type="text" autocomplete="off" name="domainToCheck" maxlength="63" placeholder="Type the one you want here" class="text-primary searchInput"/>
-                <button type="submit" data-tcode="home:Domain Search:Domains:Domain Search:Search Domain" class="btn-primary btn btn-lg pull-right ">[@L[cds.sales/homepage/locales/en:domain-search-btn]@L]</button>
+          <div class="col-xs-12">
+            <atlantis:webstash type="css">
+              <style>#domain-name-input {
+  color: #008a32;
+  font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
+}
+#domain-name-input::-webkit-input-placeholder {
+  color: #008a32;
+  font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
+}
+#domain-name-input:-moz-placeholder {
+  color: #008a32;
+  opacity: 1;
+  font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
+}
+#domain-name-input::-moz-placeholder {
+  color: #008a32;
+  opacity: 1;
+  font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
+}
+#domain-name-input:-ms-input-placeholder {
+  color: #008a32;
+  font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
+}
+.search-text {
+  display: none;
+}
+.search-icon {
+  font-size: 22px;
+}
+@media (min-width: 768px) {
+  .search-text {
+    display: inline;
+  }
+  .search-icon {
+    display: none;
+  }
+}
+
+              </style>
+            </atlantis:webstash>
+            <form action="[@T[link:<external linktype='siteurl' path='' parammode='explicit'/>]@T]/api/dpp/search/single?ci=54814&isc=gd41166r" data-icode="home:Domain Search:Domains:Domain Search" data-domainsearch="{'search-element':'input.searchInput','placeholder-element':'input.searchInput','button':'button','empty-redirect':'[@T[link:<external linktype='siteurl' path='' parammode='explicit'/>]@T]/domains/domain-name-search.aspx'}" role="form">
+              <div class="input-group">
+                <label for="domain-name-input" class="searchInput sr-only">Type the one you  here</label>
+                <input id="domain-name-input" type="text" placeholder="Type the one you  here" name="domainToCheck" maxlength="63" class="searchInput form-control"/><span class="input-group-btn">
+                  <button type="submit" data-ci="undefined" class="btn btn-primary"> <span class="search-icon uxicon uxicon-magnifying-glass"></span><span class="search-text">Search</span></button></span>
               </div>
             </form>
           </div>
