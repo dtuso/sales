@@ -3,11 +3,22 @@ id: 54ac8049f778fc2e5c591944
 ---
 extends ./_home-page.jade
 
-block hero  
-  include ./heros/got-puppy.jade
-block marquee-tile1 
-  include ./tiles/puppy.jade
-block marquee-tile2
+block marquee
+  section#marquee
+    .container
+      .row
+        .col-xs-12.col-md-9
+          .hero-wrapper
+            include ./heros/got-puppy.jade
+        .col-xs-12.col-md-3
+          .tile-wrapper
+            include ./tiles/puppy.jade
+
+//- block hero  
+//-   include ./heros/got-puppy.jade
+//- block marquee-tile1 
+//-   include ./tiles/puppy.jade
+//- block marquee-tile2
   include ./tiles/marquee-tile-gtld.jade
 block merch-tile1
   include ./tiles/get-found.jade

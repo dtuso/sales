@@ -74,7 +74,7 @@ block marquee
   | 
   |##if(activeLanguageAny([en-US]))
   | 
-  section#marquee 
+  section#marquee(style="padding-bottom: 60px;")
     include ./web-hosting/_marquee-en-us.jade
   | 
   |##else
@@ -86,7 +86,7 @@ block marquee
   | 
 
 block plans
-  section#plans(style="padding-top: 15px;")
+  section#plans
     +renderPlanTiles(3) 
       +planTile
         include ./web-hosting/plans/_plan-hosting-economy.jade
@@ -98,6 +98,16 @@ block plans
       +renderCartLogic("[@T[link:<relative path=\"~/hosting/web-hosting-config-new.aspx\" parammode=\"common\" />]@T]", "slp_hosting_4GH" )
       .tile-section
         +renderColumnList(3)
+          .row.pro-banner.white-text
+            .col-sm-3.pro-banner-image
+              div.text-center
+                img(src!= "[@T[link:<imageroot />]@T]fos/mike/img/hosting/img-webpro-logo.png")
+            .col-sm-6.pro-banner-text
+              p.top-text test test test test test test test test test test test test test test test
+              p.bottom-text test test test test test estsetstestseta
+            .col-sm-2.pro-banner-button
+              a.btn.btn-default-light Learn More more more more more more
+              p asdf
           .row
             .col-sm-12
               | 
@@ -918,7 +928,7 @@ block sections
                           backgroundImage: "background-image: url('[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Sweet.jpg')", 
                           style: "min-height: 580px;", 
                           includeStyles: false})
-      +twoUpCompareColumn({ title: "[@L[cds.sales/hosting/web-hosting-rebrand:wsbDoIt]@L] </br> [@L[cds.sales/hosting/web-hosting-rebrand:wsbHosting]@L]", 
+      +twoUpCompareColumn({ title: "[@L[cds.sales/hosting/web-hosting-rebrand:wsbDoIt]@L] [@L[cds.sales/hosting/web-hosting-rebrand:wsbHosting]@L]", 
                             backgroundColor: "bg-green-official-light", 
                             shapeText: "[@L[cds.sales/hosting/web-hosting-rebrand:wsb]@L]", 
                             shapeColor: "orange"})

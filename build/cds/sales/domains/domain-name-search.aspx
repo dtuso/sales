@@ -26,7 +26,6 @@
     <meta property="fb:app_id" content="115696031791232">
     <meta property="fb:admins" content="633356800"> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
-    <script src="[@T[link:<javascriptroot />]@T]/ux/dev-brand/js/uxcore.en.min.js"></script>
     <script>
       var head = (typeof document.head !== 'undefined' ? document.head : document.getElementsByTagName('head')[0]);
       var insertBefore = head.insertBefore;
@@ -123,6 +122,10 @@
       }
       
     </script>
+    <script type="text/javascript">
+      delayLoader.addScript('[@T[link:<javascriptroot />]@T]/fos/liveperson/js/liveperson_20141013a.min.js')
+      
+    </script>
     <link href="[@T[link:<cssroot />]@T]/fos/mike/0.7.0/css/sahara.css" rel="stylesheet">
     <link href="[@T[link:<cssroot />]@T]/fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css">
     <atlantis:webstash type="css">
@@ -137,10 +140,6 @@
     <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
     <link href="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy.min.html" id="respond-proxy" rel="respond-proxy">
     <script src="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy-combo.min.js"></script><![endif]-->
-    <script type="text/javascript">
-      delayLoader.addScript('[@T[link:<javascriptroot />]@T]/fos/liveperson/js/liveperson_20141013a.min.js')
-      
-    </script>
     <!-- Google Tag Manager-->
     <!-- End Google Tag Manager-->
     <script type="text/javascript">
@@ -2530,9 +2529,12 @@ text-transform: uppercase;
 }
 
 .accordion-group li.accordion-dropdown ul.dropdown > li div {  
-  padding-left: 15px;
-  border-left: 6px solid #008a32;
+  padding-left: 30px;
   transition: all 300ms;
+}
+
+.dropdown li {
+  font-family: Arial;
 }
       </style>
       <div class="container">

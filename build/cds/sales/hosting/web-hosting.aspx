@@ -26,7 +26,6 @@
     <meta property="fb:app_id" content="115696031791232">
     <meta property="fb:admins" content="633356800"> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
-    <script src="[@T[link:<javascriptroot />]@T]/ux/dev-brand/js/uxcore.en.min.js"></script>
     <script>
       var head = (typeof document.head !== 'undefined' ? document.head : document.getElementsByTagName('head')[0]);
       var insertBefore = head.insertBefore;
@@ -123,6 +122,10 @@
       }
       
     </script>
+    <script type="text/javascript">
+      delayLoader.addScript('[@T[link:<javascriptroot />]@T]/fos/liveperson/js/liveperson_20141013a.min.js')
+      
+    </script>
     <link href="[@T[link:<cssroot />]@T]/fos/mike/0.7.0/css/sahara.css" rel="stylesheet">
     <link href="[@T[link:<cssroot />]@T]/fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css">
     <style>h2{
@@ -191,6 +194,107 @@ h3 {
   top: 0;
   z-index: 1000;
 }
+
+.pro-banner {
+  background-image: url("[@T[link:<imageroot />]@T]fos/mike/img/hosting/bg-webpro-promo.png"); 
+  background-repeat: no-repeat; background-size: 100% 100%; 
+}
+.pro-banner a {
+  white-space: normal;
+  max-width: 100%;
+}
+.proBannerIcon {
+  background-image: url("[@T[link:<imageroot />]@T]fos/mike/img/hosting/img-webpro-logo.png");
+  display: inline-block;
+  vertical-align: middle;
+  height: 100px;
+  width: 275px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.pro-banner .top-text {
+  font-size: 20px;
+  text-transform: uppercase;
+  font-family: 'Walsheim-Black';
+}
+.pro-banner .bottom-text {
+  font-size: 40px;
+  text-transform: uppercase;
+  font-family: 'Walsheim-Black';
+}
+
+.pro-banner .pro-banner-image {
+  padding-top: 20px;
+}
+.pro-banner .pro-banner-button {
+  padding-top: 30px;
+}
+
+@media (min-width: 1200px) {
+  .pro-banner .pro-banner-image {
+    
+  }
+  .pro-banner .pro-banner-text {
+    width:55%;
+  }
+  .pro-banner .pro-banner-button {
+    
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .pro-banner .pro-banner-image {
+    width: 29%;
+  }
+  .pro-banner .pro-banner-text {
+    width:50%;
+  }
+  .pro-banner .pro-banner-button {
+    width: 21%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .pro-banner {
+    background-image: none;
+    background-color: #ef6b0d;
+    box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
+  }
+  .pro-banner .pro-banner-image {
+    width: 38%;
+  }
+  .pro-banner .pro-banner-text {
+    width: 62%;
+  }
+  .pro-banner .pro-banner-button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .pro-banner {
+    background-image: none;
+    background-color: #ef6b0d;
+    box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
+  }
+  .pro-banner .pro-banner-image {
+    width: 100%;
+  }
+  .pro-banner .pro-banner-text {
+    width: 100%;
+  }
+  .pro-banner .pro-banner-button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+
+
+
+
 
 #one-click-install { 
   background: #77c043; transition: background 750ms ease-in-out; 
@@ -347,10 +451,6 @@ cursor: pointer;
     <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
     <link href="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy.min.html" id="respond-proxy" rel="respond-proxy">
     <script src="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy-combo.min.js"></script><![endif]-->
-    <script type="text/javascript">
-      delayLoader.addScript('[@T[link:<javascriptroot />]@T]/fos/liveperson/js/liveperson_20141013a.min.js')
-      
-    </script>
     <!-- Google Tag Manager-->
     <!-- End Google Tag Manager-->
     <script type="text/javascript">
@@ -371,7 +471,7 @@ cursor: pointer;
      
     ##if(activeLanguageAny([en-US]))
      
-    <section id="marquee"> 
+    <section id="marquee" style="padding-bottom: 60px;">
       <atlantis:webstash type="css">
         <style>
 .marquee {
@@ -1261,8 +1361,8 @@ h2.marquee-product-name,
                     <div class="marquee-pro-left-text">
                             <div class="marquee-product-review"> <i class="uxicon uxicon-star text-warning"></i><i class="uxicon uxicon-star text-warning"></i><i class="uxicon uxicon-star text-warning"></i><i class="uxicon uxicon-star text-warning"></i><i class="uxicon uxicon-star text-warning"></i><a href="#">Reviews</a>
                             </div>
-                            <h2 class="marquee-product-description">HOSTING THAT'S MORE </br> RELIABLE THAN YOUR </br> BEAN ROASTING -------------------- PLAID SHIRT</h2>
-                            <div class="marquee-product-text">[@L[cds.sales/hosting/web-hosting-rebrand:guaranteeText1Rebrand]@L] [@L[cds.sales/hosting/web-hosting-rebrand:guaranteeText2Rebrand]@L] [@L[cds.sales/hosting/web-hosting-rebrand:guaranteeText3Rebrand]@L]</div><a href="[@T[link:<relative path='~/hosting/web-hosting-config-new.aspx' secure='true'><param name='ci' value='89262' /><param name='plan' value='host_GridHostEcoDiabloLin1Yr_us' /></relative>]@T]" class="btn btn-primary jump-arrow-btn">[@L[cds.sales/hosting/web-hosting-rebrand:getstarted]@L]</a>
+                            <h2 class="marquee-product-description">HOSTING THAT'S MORE RELIABLE THAN YOUR BEAN ROASTING <span style='letter-spacing:-.5rem;'>----------------</span> PLAID SHIRT</h2>
+                            <div class="marquee-product-text">[@L[cds.sales/hosting/web-hosting-rebrand:guaranteeText1Rebrand]@L] [@L[cds.sales/hosting/web-hosting-rebrand:guaranteeText2Rebrand]@L] </br> [@L[cds.sales/hosting/web-hosting-rebrand:guaranteeText3Rebrand]@L]</div><a href="[@T[link:<relative path='~/hosting/web-hosting-config-new.aspx' secure='true'><param name='ci' value='89262' /><param name='plan' value='host_GridHostEcoDiabloLin1Yr_us' /></relative>]@T]" class="btn btn-primary jump-arrow-btn">[@L[cds.sales/hosting/web-hosting-rebrand:getstarted]@L]</a>
                     </div>
                   </div>
                 </div>
@@ -2177,7 +2277,7 @@ h2.marquee-product-name,
     </section> 
     ##endif
      
-    <section id="plans" style="padding-top: 15px;">
+    <section id="plans">
       <style>
 .pro-plans {
     margin-top: 0px;
@@ -2676,6 +2776,18 @@ h2.marquee-product-name,
             <div style="background-image: url(); background-color: #d9d9d9;">
               <div class="container">
                 <div class="row">
+                  <div class="row pro-banner white-text">
+                    <div class="col-sm-3 pro-banner-image">
+                      <div class="text-center"><img src="[@T[link:<imageroot />]@T]fos/mike/img/hosting/img-webpro-logo.png"></div>
+                    </div>
+                    <div class="col-sm-6 pro-banner-text">
+                      <p class="top-text">test test test test test test test test test test test test test test test</p>
+                      <p class="bottom-text">test test test test test estsetstestseta</p>
+                    </div>
+                    <div class="col-sm-2 pro-banner-button"><a class="btn btn-default-light">Learn More more more more more more</a>
+                      <p>asdf</p>
+                    </div>
+                  </div>
                   <div class="row">
                     <div class="col-sm-12">
                        
@@ -4171,7 +4283,8 @@ height: 27px;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .or-container:after {
-    left: 101%
+    left: 101%;
+    bottom: 50%;
   }
 }
 @media (min-width: 992px) {
@@ -4278,7 +4391,7 @@ height: 27px;
                   <h2 class="text-center">[@L[cds.sales/hosting/web-hosting-rebrand:cPanelTitle2]@L]</h2>
                   <h3 class="text-center">[@L[cds.sales/hosting/web-hosting-rebrand:linuxPlan]@L]</h3>
                   <div class="row">
-                    <div class="col-sm-10">
+                    <div class="col-sm-12">
                       <div class="include-check-black"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:cPanelListItem]@L]</strong> </br> [@L[cds.sales/hosting/web-hosting-rebrand:cPanelListItemDesc]@L]</div>
                       <div class="include-check-black"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:cloudLinuxListItem]@L]</strong> </br> [@L[cds.sales/hosting/web-hosting-rebrand:cloudLinuxListItemDesc]@L]</div>
                       <div class="include-check-black"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:resourcesOnDemandListItem]@L]</strong> </br> [@L[cds.sales/hosting/web-hosting-rebrand:resourcesOnDemandListItemDesc]@L]</div>
@@ -4294,7 +4407,7 @@ height: 27px;
                   <h2 class="text-center">[@L[cds.sales/hosting/web-hosting-rebrand:windowsTitle2]@L]</h2>
                   <h3 class="text-center">[@L[cds.sales/hosting/web-hosting-rebrand:windowsPlan]@L]</h3>
                   <div class="row">
-                    <div class="col-sm-10">
+                    <div class="col-sm-12">
                       <div class="include-check-black"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:windowsPlanPlesk]@L]</strong> </br> [@L[cds.sales/hosting/web-hosting-rebrand:windowsPlanPleskDesc]@L]</div>
                       <div class="include-check-black"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:windowsServer]@L]</strong> </br> [@L[cds.sales/hosting/web-hosting-rebrand:windowsServerDesc]@L]</div>
                       <div class="include-check-black"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:freeApps]@L]</strong> </br> [@L[cds.sales/hosting/web-hosting-rebrand:seventyPlus]@L]</div>
@@ -4391,9 +4504,12 @@ height: 27px;
 }
 
 .accordion-group li.accordion-dropdown ul.dropdown > li div {  
-  padding-left: 15px;
-  border-left: 6px solid #008a32;
+  padding-left: 30px;
   transition: all 300ms;
+}
+
+.dropdown li {
+  font-family: Arial;
 }
       </style>
       <div class="container">
@@ -4519,7 +4635,7 @@ height: 27px;
                   </div>
                   <h2>[@L[cds.sales/hosting/web-hosting-rebrand:wsbDoIt]@L] </br> [@L[cds.sales/hosting/web-hosting-rebrand:wsbHosting]@L]</h2>
                   <div class="row">
-                    <div class="col-sm-10">
+                    <div class="col-sm-12">
                       <ul>
                         <li>[@L[cds.sales/hosting/web-hosting-rebrand:wsbList1]@L]</li>
                         <li>[@L[cds.sales/hosting/web-hosting-rebrand:wsbList2]@L]</li>
@@ -4536,7 +4652,7 @@ height: 27px;
                   </div>
                   <h2>[@L[cds.sales/hosting/web-hosting-rebrand:vpsGrow]@L]</h2>
                   <div class="row">
-                    <div class="col-sm-10">
+                    <div class="col-sm-12">
                       <ul>
                         <li>[@L[cds.sales/hosting/web-hosting-rebrand:vpsList1]@L]</li>
                         <li>[@L[cds.sales/hosting/web-hosting-rebrand:vpsList2]@L]</li>
@@ -4572,9 +4688,9 @@ height: 27px;
                   <div class="two-up-speech-shape two-up-speech-shape-orange">
                     <div class="shape-text">[@L[cds.sales/hosting/web-hosting-rebrand:wsb]@L]</div>
                   </div>
-                  <h2>[@L[cds.sales/hosting/web-hosting-rebrand:wsbDoIt]@L] </br> [@L[cds.sales/hosting/web-hosting-rebrand:wsbHosting]@L]</h2>
+                  <h2>[@L[cds.sales/hosting/web-hosting-rebrand:wsbDoIt]@L] [@L[cds.sales/hosting/web-hosting-rebrand:wsbHosting]@L]</h2>
                   <div class="row">
-                    <div class="col-sm-10">
+                    <div class="col-sm-12">
                       <ul>
                         <li>[@L[cds.sales/hosting/web-hosting-rebrand:wsbList1]@L]</li>
                         <li>[@L[cds.sales/hosting/web-hosting-rebrand:wsbList2]@L]</li>
@@ -4591,7 +4707,7 @@ height: 27px;
                   </div>
                   <h2>[@L[cds.sales/hosting/web-hosting-rebrand:vpsGrow]@L]</h2>
                   <div class="row">
-                    <div class="col-sm-10">
+                    <div class="col-sm-12">
                       <ul>
                         <li>[@L[cds.sales/hosting/web-hosting-rebrand:vpsList1]@L]</li>
                         <li>[@L[cds.sales/hosting/web-hosting-rebrand:vpsList2]@L]</li>

@@ -11,6 +11,13 @@ include ../accordion-mixin.jade
 include ../two-up-compare-mixin.jade
 include ../tabbed-carousel-mixin.jade
 
+append pageStyles
+  link(href!="[@T[link:<cssroot />]@T]/fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css")
+
+append headScripts
+  script(type='text/javascript').
+    delayLoader.addScript('[@T[link:<javascriptroot />]@T]/fos/liveperson/js/liveperson_20141013a.min.js')
+
 block endOfPageScripts
 
   script(type="text/javascript").

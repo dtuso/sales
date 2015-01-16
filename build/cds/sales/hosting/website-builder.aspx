@@ -26,7 +26,6 @@
     <meta property="fb:app_id" content="115696031791232">
     <meta property="fb:admins" content="633356800"> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
-    <script src="[@T[link:<javascriptroot />]@T]/ux/dev-brand/js/uxcore.en.min.js"></script>
     <script>
       var head = (typeof document.head !== 'undefined' ? document.head : document.getElementsByTagName('head')[0]);
       var insertBefore = head.insertBefore;
@@ -123,6 +122,10 @@
       }
       
     </script>
+    <script type="text/javascript">
+      delayLoader.addScript('[@T[link:<javascriptroot />]@T]/fos/liveperson/js/liveperson_20141013a.min.js')
+      
+    </script>
     <link href="[@T[link:<cssroot />]@T]/fos/mike/0.7.0/css/sahara.css" rel="stylesheet">
     <link href="[@T[link:<cssroot />]@T]/fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css">
     <style>
@@ -142,10 +145,6 @@
     <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
     <link href="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy.min.html" id="respond-proxy" rel="respond-proxy">
     <script src="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy-combo.min.js"></script><![endif]-->
-    <script type="text/javascript">
-      delayLoader.addScript('[@T[link:<javascriptroot />]@T]/fos/liveperson/js/liveperson_20141013a.min.js')
-      
-    </script>
     <!-- Google Tag Manager-->
     <!-- End Google Tag Manager-->
     <script type="text/javascript">
@@ -1839,7 +1838,7 @@ h2.marquee-product-name,
       $("#midPageNav").on("click", "a", scroll_if_anchor);
     </script>
     <section id="templates" class="tile-section">view templates </section>
-    <style>.video-marquee {
+        <style>.video-marquee {
 	background-position: top center;
 }
 .video-marquee {
@@ -1871,100 +1870,100 @@ color: #fff;
 font-family: 'Walsheim-Black';
 text-transform: uppercase;
 }
-    </style>
-    <atlantis:webstash type="js">
-      <script>
-        // https://developers.google.com/youtube/player_parameters#IFrame_Player_API
-        $(document).ready(function(){
-          if(typeof youtubeVideo === 'undefined'){
-            window.youtubeVideo = {
-              _src: 'https://www.youtube.com/embed/',
-              loadVideo: function(videoId, height, width, callback, parameters, container, insertType){
-                if(typeof parameters === 'object'){
-                  var paramString = '';
-                  
-                  // add origin to src
-                  parameters.origin = window.location.protocol+'//'+window.location.host
-        
-                  if(youtubeVideo._src.indexOf('?') === -1){
-                    paramString += '?';
-                  }else{
-                    paramString += '&';
-                  }
-        
-                  for(param in parameters){
-                    if(paramString.length > 2){
-                      paramString += '&';
+        </style>
+        <atlantis:webstash type="js">
+          <script>
+            // https://developers.google.com/youtube/player_parameters#IFrame_Player_API
+            $(document).ready(function(){
+              if(typeof youtubeVideo === 'undefined'){
+                window.youtubeVideo = {
+                  _src: 'https://www.youtube.com/embed/',
+                  loadVideo: function(videoId, height, width, callback, parameters, container, insertType){
+                    if(typeof parameters === 'object'){
+                      var paramString = '';
+                      
+                      // add origin to src
+                      parameters.origin = window.location.protocol+'//'+window.location.host
+            
+                      if(youtubeVideo._src.indexOf('?') === -1){
+                        paramString += '?';
+                      }else{
+                        paramString += '&';
+                      }
+            
+                      for(param in parameters){
+                        if(paramString.length > 2){
+                          paramString += '&';
+                        }
+                        paramString += param+'='+parameters[param];
+                      }
+                      parameters = paramString;
                     }
-                    paramString += param+'='+parameters[param];
-                  }
-                  parameters = paramString;
-                }
-                
-                var $video = $('<iframe height="'+height+'" width="'+width+'" style="position:absolute" frameBorder="0" src="'+youtubeVideo._src+videoId+parameters+'" />');
-        
-                // append/prepend to container
-                if(typeof container === 'string'){
-                  container = $(container);
-                }
-        
-                if(typeof insertType === 'undefined' || insertType === 'append'){
-                  container.append($video);
-                }else{
-                  container.prepend($video);
-                }
-        
-                if(typeof callback === 'function'){
-                  $video.load(function(){
-                    callback($video[0]);
-                  });
-                }
-        
-                return $video[0];
-              }
-            };
-          }
-          
-          var $containers = $('[data-tile="wsbVideo"]');
-          $containers.each(function(){
-            var $this = $(this);
-            var videoId = $this.data('youtube-id');
-            $this.find('.play-button, .cta').bind('click.youtube',function(event){
-              // remove this event
-              $(event.target).unbind(event.type+'.'+event.handleObj.namespace);
-        
-              // load the video
-              youtubeVideo.loadVideo(
-                  videoId,
-                  '100%',
-                  '100%',
-                  function(video){
-                      var $videoInfo = $this.find('.video-info');
-                      $videoInfo.animate({'opacity':0.0},1000,function(){
-                          $videoInfo.css({'display':'none'});
+                    
+                    var $video = $('<iframe height="'+height+'" width="'+width+'" style="position:absolute" frameBorder="0" src="'+youtubeVideo._src+videoId+parameters+'" />');
+            
+                    // append/prepend to container
+                    if(typeof container === 'string'){
+                      container = $(container);
+                    }
+            
+                    if(typeof insertType === 'undefined' || insertType === 'append'){
+                      container.append($video);
+                    }else{
+                      container.prepend($video);
+                    }
+            
+                    if(typeof callback === 'function'){
+                      $video.load(function(){
+                        callback($video[0]);
                       });
-                      //$(video).css({'opacity':0.0}).animate({'opacity':1.0});
-                  },
-                  {'autoplay':1,'controls':0,'showinfo':0,'playsinline':1,'modestbranding':1,'rel':0},
-                  $this,
-                  'prepend'
-              );
-            }).css({'cursor':'pointer'});
-          });
-        });
-      </script>
-    </atlantis:webstash>
-    <div style="background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-video-background.jpg);" data-lazy-load="" data-icode="code" data-tile="wsbVideo" data-youtube-id="-HtVJyxSQmw" class="video-marquee video-marquee-white full-video">
-      <div class="container relative-position video-info">
-        <div class="row">
-          <div class="col-sm-10 col-sm-offset-1 col-xs-12 video-marquee-all-centered"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rb-play-button.png" class="play-button">
-            <h4>Make it your way ---- Assuming you want it uncomplicated and gorgeous</h4><span class="cta">We give you intuitive design tools; you plug in some info and create the site you've always wanted easier than you ever imagined.</span>
+                    }
+            
+                    return $video[0];
+                  }
+                };
+              }
+              
+              var $containers = $('[data-tile="wsbVideo"]');
+              $containers.each(function(){
+                var $this = $(this);
+                var videoId = $this.data('youtube-id');
+                $this.find('.play-button, .cta').bind('click.youtube',function(event){
+                  // remove this event
+                  $(event.target).unbind(event.type+'.'+event.handleObj.namespace);
+            
+                  // load the video
+                  youtubeVideo.loadVideo(
+                      videoId,
+                      '100%',
+                      '100%',
+                      function(video){
+                          var $videoInfo = $this.find('.video-info');
+                          $videoInfo.animate({'opacity':0.0},1000,function(){
+                              $videoInfo.css({'display':'none'});
+                          });
+                          //$(video).css({'opacity':0.0}).animate({'opacity':1.0});
+                      },
+                      {'autoplay':1,'controls':0,'showinfo':0,'playsinline':1,'modestbranding':1,'rel':0},
+                      $this,
+                      'prepend'
+                  );
+                }).css({'cursor':'pointer'});
+              });
+            });
+          </script>
+        </atlantis:webstash>
+        <div style="background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-video.jpg);" data-lazy-load="" data-icode="code" data-tile="wsbVideo" data-youtube-id="-HtVJyxSQmw" class="video-marquee video-marquee-white full-video">
+          <div class="container relative-position video-info">
+            <div class="row">
+              <div class="col-sm-10 col-sm-offset-1 col-xs-12 video-marquee-all-centered"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rb-play-button.png" class="play-button">
+                <h4>Make it your way ---- Assuming you want it uncomplicated and gorgeous</h4><span class="cta">We give you intuitive design tools; you plug in some info and create the site you've always wanted easier than you ever imagined.</span>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
     <section id="features" data-mid-nav-title="Features">
-      <div data-icode="code" class="carousel-panel container">
+      <div data-icode="" class="carousel-panel container">
         <div class="row">
           <div class="col-sm-10 col-sm-offset-1 col-xs-12">
             <div></div>
@@ -2685,9 +2684,12 @@ margin-bottom: 20px;
 }
 
 .accordion-group li.accordion-dropdown ul.dropdown > li div {  
-  padding-left: 15px;
-  border-left: 6px solid #008a32;
+  padding-left: 30px;
   transition: all 300ms;
+}
+
+.dropdown li {
+  font-family: Arial;
 }
       </style>
       <div class="container">
@@ -2954,7 +2956,8 @@ margin-bottom: 20px;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .or-container:after {
-    left: 101%
+    left: 101%;
+    bottom: 50%;
   }
 }
 @media (min-width: 992px) {
@@ -3062,7 +3065,7 @@ margin-bottom: 20px;
                   </div>
                   <h2>Get the power of Wordpress with the ease of Fully-Managed Hosting and Security</h2>
                   <div class="row">
-                    <div class="col-sm-10">
+                    <div class="col-sm-12">
                       <p>Perfect for: Bloggers, start-ups, small businesses, and designers</p><a class="btn btn-default-dark">LEARN MORE</a>
                     </div>
                   </div>
@@ -3075,7 +3078,7 @@ margin-bottom: 20px;
                   </div>
                   <h2>Everything you need to open your own online store - no technical skills required.</h2>
                   <div class="row">
-                    <div class="col-sm-10">
+                    <div class="col-sm-12">
                       <p>Perfect for: eCommerce businesses and those looking to add online sales to their site</p><a class="btn btn-default-light">LEARN MORE</a>
                     </div>
                   </div>

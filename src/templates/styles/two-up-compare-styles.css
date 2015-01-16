@@ -195,7 +195,8 @@
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .or-container:after {
-    left: 101%
+    left: 101%;
+    bottom: 50%;
   }
 }
 @media (min-width: 992px) {
