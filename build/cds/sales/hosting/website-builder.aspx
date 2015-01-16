@@ -129,17 +129,79 @@
     <link href="[@T[link:<cssroot />]@T]/fos/mike/0.7.0/css/sahara.css" rel="stylesheet">
     <link href="[@T[link:<cssroot />]@T]/fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css">
     <style>
-.plan-tile { 
-  margin-top: -145px; 
-}
-.sf-droplist-msg {
-  text-align: inherit;
-}
 .bg-black {
   background-color: #333333;
 }
 .bg-gray-light {
     background-color: #d9d9d9;
+}
+.dash{
+  letter-spacing: -.5rem;
+}
+
+.BVDITitle {
+  text-transform: uppercase !important;
+  text-align: center !important;
+  font-family: 'Walsheim-Black' !important;
+  font-weight: 300 !important;
+  line-height: 1.1 !important;
+  color: #333 !important;
+}
+
+#BVRRDisplayContentLinkWriteID a {
+  -webkit-font-smoothing: antialiased !important;
+  -webkit-transition-delay: 0s !important;
+  -webkit-transition-duration: 0.1s !important;
+  -webkit-transition-property: transform !important;
+  -webkit-transition-timing-function: ease !important;
+  -webkit-user-select: none !important;
+  background-color: rgb(0, 138, 50) !important;
+  border-bottom-color: rgb(0, 112, 41) !important;
+  border-bottom-left-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+  border-bottom-style: solid !important;
+  border-bottom-width: 4px !important;
+  border-image-outset: 0px !important;
+  border-image-repeat: stretch !important;
+  border-image-slice: 100% !important;
+  border-image-source: none !important;
+  border-image-width: 1 !important;
+  border-left-color: rgb(0, 112, 41) !important;
+  border-left-style: solid !important;
+  border-left-width: 0px !important;
+  border-right-color: rgb(0, 112, 41) !important;
+  border-right-style: solid !important;
+  border-right-width: 0px !important;
+  border-top-color: rgb(0, 112, 41) !important;
+  border-top-left-radius: 0px !important;
+  border-top-right-radius: 0px !important;
+  border-top-style: solid !important;
+  border-top-width: 0px !important;
+  box-sizing: border-box !important;
+  color: rgb(255, 255, 255) !important;
+  cursor: pointer !important;
+  display: inline-block !important;
+  font-family: Walsheim-Medium, Arial, sans-serif !important;
+  font-size: 18px !important;
+  font-weight: normal !important;
+  height: 46px !important;
+  line-height: 25.7142868041992px !important;
+  margin-bottom: 0px !important;
+  min-width: 88px !important;
+  padding-bottom: 7px !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  padding-top: 10px !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  text-transform: uppercase !important;
+  transition-delay: 0s !important;
+  transition-duration: 0.1s !important;
+  transition-property: transform !important;
+  transition-timing-function: ease !important;
+  vertical-align: middle !important;
+  white-space: nowrap !important;
+  background-image: none !important;
 }
     </style><!--[if lt IE 9]>
     <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
@@ -164,7 +226,9 @@
     <!-- HEADEREND-->
     <section id="marquee"> 
       <atlantis:webstash type="css">
-        <style>
+        <style>.white-text{
+    color: #FFFFFF;
+}
 .marquee {
     background-position: top center;
 }
@@ -228,7 +292,7 @@
 
 .marquee.marquee-app-landing .marquee-check-bullets li:before {
     content: "";
-    background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+    background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
     background-position: 0 -668px;
     background-size: 205px auto;
     width: 25px;
@@ -241,20 +305,17 @@
 
 .marquee.marquee-app-landing .marquee-pro-left-text {
     padding-top: 45px;
-    color: #FFFFFF;
 }
 
 .marquee.marquee-app-landing .marquee-product-description {
     font-family: 'Walsheim-Bold';
     margin-top: 10px;
-    color: #FFFFFF;
 }
 
 .marquee.marquee-app-landing .marquee-product-name {
     font-size: 20px;
     font-size: 2rem;
     text-transform: uppercase;
-    color: #FFFFFF;
     font-family: 'Walsheim-Bold';
     margin-bottom: 10px;
 }
@@ -1040,11 +1101,11 @@ h2.marquee-product-name,
 }
         </style>
         <style>
-          .marquee { background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/GD_WebsiteBuilder_Marquee.jpg) no-repeat top center;); }
+          .marquee { background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-marquee.jpg) no-repeat top center;); }
           
         </style>
       </atlantis:webstash>
-      <div data-onclick="#" data-icode="" class="marquee marquee-app-landing ">
+      <div data-onclick="#" data-icode="" class="marquee marquee-app-landing marquee-white">
         <div class="container relative-position">
           <div class="row">
             <div class="col-sm-12">
@@ -1055,7 +1116,9 @@ h2.marquee-product-name,
                             <h1 class="marquee-product-name">[@L[cds.sales/gd/hosting/website-builder:main-banner-subtitle]@L]</h1>
                             <h2 class="marquee-product-description">[@L[cds.sales/gd/hosting/website-builder:header_subtitle_1]@L]</br>[@L[cds.sales/gd/hosting/website-builder:header_subtitle_2]@L]</h2>
                             <ul class="marquee-check-bullets">
-                              <li>[@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-1]@L],[@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-2]@L],[@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-3]@L]</li>
+                              <li>[@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-1]@L]</li>
+                              <li>[@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-2]@L]</li>
+                              <li>[@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-3]@L]</li>
                             </ul><a href="[@T[link:<relative path='~/hosting/website-builder-config.aspx' secure='true'><param name='ci' value='' /><param name='plan' value='wsb_personal_12month' /></relative>]@T]" class="btn btn-primary jump-arrow-btn">[@L[cds.sales/gd/hosting/website-builder:get-started-btn-general]@L]</a>
                     </div>
                   </div>
@@ -1068,6 +1131,12 @@ h2.marquee-product-name,
     </section>
     <section id="plans">
       <style>
+.plan-tile { 
+  margin-top: -145px; 
+}
+.sf-droplist-msg {
+  text-align: inherit;
+}
 .pro-plans {
     margin-top: 0px;
     padding-bottom: 80px;
@@ -1447,14 +1516,7 @@ h2.marquee-product-name,
            
           ##if(countrySiteAny(uk))
            
-          <div class="col-sm-4 plan-tile plan-pro">
-            <atlantis:webstash type="css">
-              <style>
-                .pro-plans { margin-top: 0; }
-                .form-control { margin-bottom: 10px; }
-                
-              </style>
-            </atlantis:webstash>
+          <div id="plan-A" class="col-sm-4 plan-tile plan-pro">
             <div class="pro-plan-wrap">
               <h2 class="plan-title">[@L[cds.sales/gd/hosting/website-builder:economy-title]@L]</h2>
               <p class="plan-text">[@L[cds.sales/gd/hosting/website-builder:economy-description]@L]</p>
@@ -1475,14 +1537,7 @@ h2.marquee-product-name,
           </div> 
           ##else
            
-          <div class="col-sm-4 plan-tile plan-pro">
-            <atlantis:webstash type="css">
-              <style>
-                .pro-plans { margin-top: 0; }
-                .form-control { margin-bottom: 10px; }
-                
-              </style>
-            </atlantis:webstash>
+          <div id="plan-A" class="col-sm-4 plan-tile plan-pro">
             <div class="pro-plan-wrap">
               <h2 class="plan-title">[@L[cds.sales/gd/hosting/website-builder:personal-title]@L]</h2>
               <p class="plan-text">[@L[cds.sales/gd/hosting/website-builder:personal-description]@L]</p>
@@ -1504,13 +1559,6 @@ h2.marquee-product-name,
           ##endif
            
           <div class="col-sm-4 plan-tile plan-pro">
-            <atlantis:webstash type="css">
-              <style>
-                .pro-plans { margin-top: 0; }
-                .form-control { margin-bottom: 10px; }
-                
-              </style>
-            </atlantis:webstash>
             <div class="pro-plan-wrap">
               <div class="plan-flag">[@L[cds.sales/gd/hosting/website-builder:popular-tag]@L]</div>
               <h2 class="plan-title">[@L[cds.sales/gd/hosting/website-builder:business-title]@L]</h2>
@@ -1533,13 +1581,6 @@ h2.marquee-product-name,
             </div>
           </div>
           <div class="col-sm-4 plan-tile plan-pro">
-            <atlantis:webstash type="css">
-              <style>
-                .pro-plans { margin-top: 0; }
-                .form-control { margin-bottom: 10px; }
-                
-              </style>
-            </atlantis:webstash>
             <div class="pro-plan-wrap">
               <div class="plan-flag">[@L[cds.sales/gd/hosting/website-builder:wsb-plus-seo]@L]</div>
               <h2 class="plan-title">[@L[cds.sales/gd/hosting/website-builder:unlimited-plan-title]@L]</h2>
@@ -1772,7 +1813,7 @@ h2.marquee-product-name,
           <ul class="nav navbar-nav"></ul>
           <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.mid-page-nav&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="navbar-right">
             <div class="price-text">[@L[cds.sales/_common:plans-starting-at]@L]</div>
-            <div class="price">[@T[productprice:<current productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]<span>/year</span></div><a href="#marquee" class="btn-purchase btn btn-sm">[@L[cds.sales/_common:see-the-plans]@L]</a>
+            <div class="price">[@T[productprice:<current productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]<span>/[@L[cds.sales/_common:month]@L]</span></div><a href="#plan-A" class="btn-purchase btn btn-sm">[@L[cds.sales/_common:see-the-plans]@L]</a>
           </div>
         </div>
       </div>
@@ -2487,10 +2528,10 @@ top: -6px;
                   <div class="carousel-inner">
                           <div class="item">
                             <div class="item-wrapper text-center">
-                              <div data-icode="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-apps-image-facebook-int.jpg" class="img-responsive img-center">
+                              <div data-icode="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-fb.png" class="img-responsive img-center">
                                 <div class="row">
                                   <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-facebook-title]@L]</h2>
+                                    <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-facebook-title]@L]<sup class="supsymbol">&reg;</sup></h2>
                                   </div>
                                 </div>
                                 <div class="row">
@@ -2503,10 +2544,10 @@ top: -6px;
                           </div>
                           <div class="item">
                             <div class="item-wrapper text-center">
-                              <div data-icode="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-apps-image-twitter-int.jpg" class="img-responsive img-center">
+                              <div data-icode="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-twitter.png" class="img-responsive img-center">
                                 <div class="row">
                                   <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-twitter-title]@L]</h2>
+                                    <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-twitter-title]@L]<sup class="supsymbol">&reg;</sup></h2>
                                   </div>
                                 </div>
                                 <div class="row">
@@ -2519,10 +2560,10 @@ top: -6px;
                           </div>
                           <div class="item">
                             <div class="item-wrapper text-center">
-                              <div data-icode="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-apps-image-youtube-int.jpg" class="img-responsive img-center">
+                              <div data-icode="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-youtube.png" class="img-responsive img-center">
                                 <div class="row">
                                   <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-youtube-title]@L]</h2>
+                                    <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-youtube-title]@L]<sup class="supsymbol">&reg;</sup></h2>
                                   </div>
                                 </div>
                                 <div class="row">
@@ -2535,15 +2576,15 @@ top: -6px;
                           </div>
                           <div class="item">
                             <div class="item-wrapper text-center">
-                              <div data-icode="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-apps-image-facebook-int.jpg" class="img-responsive img-center">
+                              <div data-icode="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-yelp.png" class="img-responsive img-center">
                                 <div class="row">
                                   <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-yelp-title]@L]</h2>
+                                    <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-yelp-title]@L]<sup class="supsymbol">&reg;</sup></h2>
                                   </div>
                                 </div>
                                 <div class="row">
                                   <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <div class="carousel-panel-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-yelp-desc]@L]</div>
+                                    <div class="carousel-panel-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-yelp-desc]@L]<sup class="supsymbol">&reg;</sup></div>
                                   </div>
                                 </div>
                               </div>
@@ -2551,10 +2592,10 @@ top: -6px;
                           </div>
                           <div class="item">
                             <div class="item-wrapper text-center">
-                              <div data-icode="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-apps-image-facebook-int.jpg" class="img-responsive img-center">
+                              <div data-icode="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-paypal.png" class="img-responsive img-center">
                                 <div class="row">
                                   <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-paypal-title]@L]</h2>
+                                    <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-paypal-title]@L]<sup class="supsymbol">&reg;</sup></h2>
                                   </div>
                                 </div>
                                 <div class="row">
@@ -2567,10 +2608,10 @@ top: -6px;
                           </div>
                           <div class="item">
                             <div class="item-wrapper text-center">
-                              <div data-icode="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-apps-image-facebook-int.jpg" class="img-responsive img-center">
+                              <div data-icode="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-homeFinder.png" class="img-responsive img-center">
                                 <div class="row">
                                   <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-homefinder-title]@L]</h2>
+                                    <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-homefinder-title]@L]<sup class="supsymbol">&reg;</sup></h2>
                                   </div>
                                 </div>
                                 <div class="row">
@@ -2618,7 +2659,7 @@ line-height: 1.1;
 margin-bottom: 20px;
 }
                 </style>
-                <div style="background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rebrand-features-bg-ph.jpg);" data-lazy-load="" class="features-two-up   ">
+                <div style="background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-computer-illustration.png);" data-lazy-load="" class="features-two-up   ">
                   <div class="container">
                     <div class="row">
                       <div class="col-sm-12">
@@ -2627,11 +2668,11 @@ margin-bottom: 20px;
                               <div class="row feature-row-height">
                                 <div class="col-sm-7">
                                   <div class="row feature-row">
-                                    <div class="col-sm-5"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rebrand-features-img1-ph.png" data-lazy-load="" alt="" class="feature-image img-responsive">
+                                    <div class="col-sm-5"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-getAwebsite.png" data-lazy-load="" alt="" class="feature-image img-responsive">
                                     </div>
                                     <div class="col-sm-7">
                                       <div class="feature-title">[@L[cds.sales/gd/hosting/website-builder:oneclick-header]@L]</div>
-                                      <div class="feature-row-text">[@L[cds.sales/gd/hosting/website-builder:oneclick-body-text]@L]</div><a href="http://godaddy.com" class="btn btn-default-dark">[@L[cds.sales/gd/hosting/website-builder:learn-more]@L]</a>
+                                      <div class="feature-row-text">[@L[cds.sales/gd/hosting/website-builder:oneclick-body-text]@L]</div>
                                     </div>
                                   </div>
                                 </div>
@@ -2639,11 +2680,11 @@ margin-bottom: 20px;
                               <div class="row feature-row-height">
                                 <div class="col-sm-7">
                                   <div class="row feature-row">
-                                    <div class="col-sm-5"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rebrand-features-img1-ph.png" data-lazy-load="" alt="" class="feature-image img-responsive">
+                                    <div class="col-sm-5"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-gettingGoogle.png" data-lazy-load="" alt="" class="feature-image img-responsive">
                                     </div>
                                     <div class="col-sm-7">
                                       <div class="feature-title">[@L[cds.sales/gd/hosting/website-builder:seofs-header]@L]</div>
-                                      <div class="feature-row-text">[@L[cds.sales/gd/hosting/website-builder:seofs-body-text]@L]</div><a href="http://godaddy.com" class="btn btn-default-dark">[@L[cds.sales/gd/hosting/website-builder:rb_how_it_works]@L]</a>
+                                      <div class="feature-row-text">[@L[cds.sales/gd/hosting/website-builder:seofs-body-text]@L]</div>
                                     </div>
                                   </div>
                                 </div>
@@ -2667,72 +2708,17 @@ margin-bottom: 20px;
         </div>
       </div>
     </section>
-    <section id="testimonials" data-mid-nav-title="[@L[cds.sales/gd/hosting/website-builder:sb_nav_2]@L]">
-            <div class="carousel-wrap">
-              <div class="carousel-container container">
-                <div id="carousel-testimonials" data-ride="carousel" data-interval="false" class="carousel slide">
-                  <ol class="carousel-indicators">
-                    <li data-target="#carousel-testimonials" data-slide-to="0"></li>
-                    <li data-target="#carousel-testimonials" data-slide-to="1"></li>
-                    <li data-target="#carousel-testimonials" data-slide-to="2"></li>
-                  </ol>
-                  <div class="carousel-inner">
-                          <div class="item">
-                            <div class="item-wrapper text-center">
-                              <div data-icode="" class="carousel-panel container">
-                                <div class="row">
-                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <h2>Quote</h2>
-                                  </div>
-                                </div>
-                                <div class="row">
-                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <div class="carousel-panel-text">GoDaddy is Awesome.</div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="item">
-                            <div class="item-wrapper text-center">
-                              <div data-icode="" class="carousel-panel container">
-                                <div class="row">
-                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <h2>Quote</h2>
-                                  </div>
-                                </div>
-                                <div class="row">
-                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <div class="carousel-panel-text">GoDaddy is Awesome.</div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="item">
-                            <div class="item-wrapper text-center">
-                              <div data-icode="" class="carousel-panel container">
-                                <div class="row">
-                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <h2>Quote</h2>
-                                  </div>
-                                </div>
-                                <div class="row">
-                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <div class="carousel-panel-text">GoDaddy is Awesome.</div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                  </div><a href="#carousel-testimonials" data-slide="prev" class="left carousel-control"><span class="carousel-icon arrow-left-icon"></span></a><a href="#carousel-testimonials" data-slide="next" class="right carousel-control"><span class="carousel-icon arrow-right-icon"></span></a>
-                </div>
-                <script>
-                  $('.carousel .carousel-indicators li:first-child').addClass("active");
-                  $('.carousel .carousel-inner .item:first-child').addClass("active");
-                </script>
-              </div>
+    <section id="reviews" data-mid-nav-title="[@L[cds.sales/gd/hosting/website-builder:sb_nav_2]@L]">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div id="BVRRContainer">
+              <p class="bv-loading">Loading...</p>
             </div>
+            <div>[@P[userControl:<Data location="~/Shared/Tabs/controls/BVReviewsNoJS.ascx"><Parameters><Parameter key="ProductId" value="web_hosting" /><Parameter key="ReviewNumber" value="1" /></Parameters></Data>]@P]</div>
+          </div>
+        </div>
+      </div>
     </section>
     <section id="faq" data-mid-nav-title="[@L[cds.sales/gd/hosting/website-builder:sb_nav_3]@L]">
       <style>.accordion-group {
@@ -2818,7 +2804,7 @@ margin-bottom: 20px;
         <div class="row">
           <div class="col-sm-12">
             <ul id="test-faq" class="accordion-group ">
-              <h2>[@L[cds.sales/gd/hosting/website-builder:sb_nav_3]@L]</h2>
+              <h2>[@L[cds.sales/gd/hosting/website-builder:rb_your_question]@L]</h2>
               <li class="accordion-dropdown"><span class="carett caret-right"></span><span>[@L[cds.sales/gd/hosting/website-builder:faq-first-slide-title]@L]</span>
                 <ul class="dropdown">
                   <li>
@@ -2846,7 +2832,7 @@ margin-bottom: 20px;
               <li class="accordion-dropdown"><span class="carett caret-right"></span><span>[@L[cds.sales/gd/hosting/website-builder:faq-fourth-slide-title]@L]</span>
                 <ul class="dropdown">
                   <li>
-                    <div>@L[cds.sales/gd/hosting/website-builder:faq-fourth-slide-content]@L]
+                    <div>[@L[cds.sales/gd/hosting/website-builder:faq-fourth-slide-content]@L]
                     </div>
                   </li>
                 </ul>
@@ -3053,7 +3039,7 @@ margin-bottom: 20px;
   content: '';
   width: 94px;
   height: 94px;
-  background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+  background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
   background-size: 205px auto;
   background-position: 0 -896px;
   position: absolute;
@@ -3067,7 +3053,7 @@ margin-bottom: 20px;
   content: '';
   width: 94px;
   height: 94px;
-  background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+  background-image: url([@T[link:<imageroot />]@T]ffos/hp/sahara-rebrand-sprite-20141114.png);
   background-size: 205px auto;
   background-position: 0 -896px;
   position: absolute;
@@ -3221,7 +3207,12 @@ margin-bottom: 20px;
         </div>
       </div>
     </section>
-    <section id="disclaimers">disclaimers</section>
+    <section id="disclaimers"><a onClick="disclaimersModal()">disclaimers link</a>
+      <div id="disclaimersModal" data-title="Modal" style="display:none">
+        <p>hello</p>
+        <p>hide</p>
+      </div>
+    </section>
     <!-- FOOTERBEGIN--> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- FOOTEREND-->
@@ -3232,6 +3223,45 @@ margin-bottom: 20px;
     <script type="text/javascript">
       endOfPageScripts();
       
+    </script>
+    <script>
+      function disclaimersModal() {
+        $('#disclaimersModal').sfDialog();
+      }
+      ##if(activeLanguageAny([en-us]))
+        var loadReviews = function(){
+          if (typeof $BV != "undefined") {
+            $BV.configure("global", {
+              allowSamePageSubmission: true,
+              userToken: "[@P[userControl:<Data location="~/Shared/BazaarVoice/SessionUserToken.ascx"></Data>]@P]",
+              doLogin: function(successCallback, successUrl) {
+                $('#login-modal').modal();
+              },
+              doScrollSubmission: function () {
+                return false;
+              }
+            });
+            $BV.ui("rr", "show_reviews", {
+              productId: "web_hosting",
+              num: 1,
+              doShowContent: function() {
+                $('.bv-loading').hide();
+              }
+            });
+          }
+        };
+        $(window).load(function() {
+          if (!document.getElementById('bvapi')) {
+            var bv = document.createElement('script');
+            bv.type = 'text/javascript';
+            bv.id = 'bvapi';
+            bv.async = true;
+            bv.src = '[@P[userControl:<Data location="~/Scripts/BVScriptUrlOnly.ascx"></Data>]@P]';
+            bv.onload = loadReviews;
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(bv);
+          }
+        });
+      ##endif
     </script>
     <script type="text/javascript">
       $(window).load(function() {

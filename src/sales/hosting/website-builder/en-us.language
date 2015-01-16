@@ -37,7 +37,7 @@ Website Builder
 <phrase key="header_subtitle_1" />
 NO SKILLS? NO TIME?
 <phrase key="header_subtitle_2" />
-------------- NO PROBLEM.
+<span class="dash">----------------</span> NO PROBLEM.
 <phrase key="wsb-main-listitem-1" />
 <span class="condensed">EASY TO USE</span> – you’ve got the skills, seriously
 <phrase key="wsb-main-listitem-2" />
@@ -45,7 +45,7 @@ NO SKILLS? NO TIME?
 <phrase key="wsb-main-listitem-3" />
 <span class="condensed">FREE DOMAIN</span> and <span class="condensed">FREE HOSTING</span>
 <phrase key="slider-build-a-site-title" />
-GET YOUR OWN WEBSITE--------
+GET YOUR OWN WEBSITE <span class="dash">----------------</span>
 <phrase key="sb_plans_title_2" />
 WITHOUT HIRING SOME HIPSTER DESIGNER
 <phrase key="plan-pricing-tab-header-text" />
@@ -137,11 +137,11 @@ FAQ
 <phrase key="templates-desription" />
 CREATE A PROFESSIONAL WEBSITE
 <phrase key="sb_templates_title_2" />
----------- JUST LIKE THAT
+<span class="dash">----------------</span> JUST LIKE THAT
 <phrase key="sb_templates_text" />
 Choose from hundreds of customizable designs, tailored to what you do.
 <phrase key="testimony-title" />
-MAKE IT YOUR WAY---------------ASSUMING YOU WANT IT UNCOMPLICATED AND GORGEOUS
+MAKE IT YOUR WAY <span class="dash">----------------</span> ASSUMING YOU WANT IT UNCOMPLICATED AND GORGEOUS
 <phrase key="testimony-description" />
 We give you intuitive design tools; you plug in some info and create the site you've always wanted easier than you ever imagined.
 <phrase key="apps-modal-header" />
@@ -183,15 +183,17 @@ See All Questions
 <phrase key="oneclick-header" />
 Get a website with a social life
 <phrase key="oneclick-body-text" />
-Our One-Click Social Media Manager instantly matches your Facebook® and Twitter® pages to your website so they're always in sync. Don't have a Twitter page? Create one with just a click!
+Our One-Click Social Media Manager instantly matches your Facebook<sup class="supsymbol">&reg;</sup> and Twitter<sup class="supsymbol">&reg;</sup> pages to your website so they're always in sync. Don't have a Twitter page? Create one with just a click!
 <phrase key="seofs-header" />
 Getting seen on Google is a cinch
 <phrase key="seofs-body-text" />
-The built-in Search Engine Optimization (SEO) tool in our Business Plus plan helps you show up on Google®, Yahoo!®, and more.
+The built-in Search Engine Optimization (SEO) tool in our Business Plus plan helps you show up on Google<sup class="supsymbol">&reg;</sup>, Yahoo!<sup class="supsymbol">&reg;</sup>, and more.
 <phrase key="learn-more" />
 Learn more
 <phrase key="rb_how_it_works" />
 How it works
+<phrase key="rb_your_question" />
+your questions, our answers
 <phrase key="faq-first-slide-title" />
 What can a website do for my business?
 <phrase key="faq-first-slide-content" />
@@ -254,7 +256,7 @@ How can I use my website?
  For more information, see <a data-ci="85537" href="http://support.godaddy.com/help/article/3503?ci=75947" target="_blank">Website Builder Add-ons.</a>
 </p>
 <phrase key="sb_help_title" />
-WE’LL HOLD YOUR HAND UNTIL ----------- IT’S AWKWARD
+WE’LL HOLD YOUR HAND UNTIL <span class="dash">----------------</span> IT’S AWKWARD
 <phrase key="sb_text" />
 You don’t have time to work on your website during “business hours;” you don’t even have time to sweep. That’s why our award-winning support staff is here 24/7/365. So, when inspiration strikes at 2am on a Tuesday, you can breathe easy, knowing our friendly, knowledgeable web pros are here to hear your cries and step you through it all.
 <phrase key="sb_xsell_title" />

@@ -1,3 +1,32 @@
+<!-- DOC BLOCK (DO NOT REMOVE)
+
+
+
+
+    IMPORTANT:
+      If version control is enabled for this page all changes to this page must also go through version control.
+
+    VERSION CONTROL:
+      https://github.secureserver.net/FOS-CDS-Pages/Sales
+
+    WEB PAGE CHAMPION:
+      David Utley <dutley@godaddy.com>
+
+    DRAFT DETAILS:
+      Modified Date:  2015-01-13 12:24:54 am
+      Created By:     "Sergio Lopez " <sergoh@outlook.com>
+      JIRA Ticket:    GCE-32431 Rebrand
+      Comments:       New Langauge for Rebrand
+    
+    CDS INFO:
+      file path:      localization/sales/gd/hosting/website-builder/en
+
+      url:            http://siteadmin.dev.intranet.gdg/cds/ide#54b4c734f778fc100405226a
+
+
+
+
+END DOC BLOCK -->
 <phrase key="page-title" />
 Website Builder | Create Your Own Website in Minutes  - [@T[companyname:name]@T]
 <phrase key="page-title-es" />
@@ -190,6 +219,8 @@ See All Questions
 Learn more
 <phrase key="rb_how_it_works" />
 How it works
+<phrase key="rb_your_question" />
+your questions, our answers
 <phrase key="faq-first-slide-title" />
 What can a website do for my business?
 <phrase key="faq-first-slide-content" />

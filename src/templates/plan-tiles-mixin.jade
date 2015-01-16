@@ -2,29 +2,29 @@
 - var plansPanelTotalColumns
 - var plansPanelColumnsPopulated
 
-mixin planTile
+mixin planTile(planid)
   case plansPanelTotalColumns
     when 1
-      div.col-sm-offset-4.col-sm-4.plan-tile.plan-pro
+      div.col-sm-offset-4.col-sm-4.plan-tile.plan-pro(id=planid)
         block
     when 2
       if (plansPanelColumnsPopulated === 0)      
-        div.col-sm-offset-2.col-sm-4.plan-tile.plan-pro
+        div.col-sm-offset-2.col-sm-4.plan-tile.plan-pro(id=planid)
           block
       else
-        div.col-sm-4.plan-tile.plan-pro
+        div.col-sm-4.plan-tile.plan-pro(id=planid)
           block
     when 3
-      div.col-sm-4.plan-tile.plan-pro
+      div.col-sm-4.plan-tile.plan-pro(id=planid)
         block
     when 4
-      div.col-md-3.col-sm-6.plan-tile.plan-pro
+      div.col-md-3.col-sm-6.plan-tile.plan-pro(id=planid)
         block
     when 5
-      div.plan-col-15.plan-tile.plan-pro
+      div.plan-col-15.plan-tile.plan-pro(id=planid)
         block
     when 6
-      div.plan-col-2.plan-tile.plan-pro
+      div.plan-col-2.plan-tile.plan-pro(id=planid)
         block
 
 mixin renderPlanTiles(columns, options)

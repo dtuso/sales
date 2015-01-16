@@ -50,11 +50,6 @@ block vars
   - term = "";
 
 
-atlantis:webstash(type="css")
-  block styles
-    style.
-      .pro-plans { margin-top: 0; }
-      .form-control { margin-bottom: 10px; }
 
 .pro-plan-wrap
   block flag
@@ -93,18 +88,35 @@ atlantis:webstash(type="css")
         | 
         |##endif
         | 
+        if(disclaimer)
+          p!{disclaimer}
+        if(vat)
+          | 
+          |##if(countrySiteAny(uk))
+          | 
+          p [@L[cds.sales/_common:vat-price]@L] 
+          | 
+          |##endif
+          | 
+
     if (packageids)
       .plan-price-wrap
         span.plan-price.text-warning [@T[multipleproductprice:<current productidlist="!{packageids}" period="monthly" promocode="!{promocode}" />]@T]
         span.plan-duration.text-warning !{term}
-        
+        if(disclaimer)
+          p !{disclaimer}
+        if(vat)
+          | 
+          |##if(countrySiteAny(uk))
+          | 
+          p [@L[cds.sales/_common:vat-price]@L] 
+          | 
+          |##endif
+          | 
   if(showDropDownList)
     +planSelectList(listID)
       block planOptions
 
-  block legalDisclaimer
-    if(disclaimer)
-      div !{disclaimer}
 
   block button
     if (buttonText && buttonUrl)

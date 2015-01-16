@@ -1,4 +1,10 @@
 
+.plan-tile { 
+  margin-top: -145px; 
+}
+.sf-droplist-msg {
+  text-align: inherit;
+}
 .pro-plans {
     margin-top: 0px;
     padding-bottom: 80px;
