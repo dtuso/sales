@@ -10,6 +10,15 @@ block tileStyles
   style
     :less
       .puppy-tile{background-color:#333}
+      .puppy-tile .tile-content-wrapper{padding:1% 35% 0 10%}
+      .puppy-tile .header-text{font-size:24px;margin:12px 0 0 0;color:#fff}
+      .puppy-tile .body-text{font-size:18px;margin:10px 0;color:#fff;text-transform:none;}
+      .puppy-tile .cta-wrapper>a{color:#6aad38;font-size:18px;text-decoration:underline;}
 
 block tileContent
   .header-wrapper
+    h2.header-text.walsheim-black Enter to win
+  .body-wrapper
+    h3.body-text.walsheim-medium Your pup could be on the GoDaddy race car!
+  .cta-wrapper
+    a.walsheim-black(href!=ctaLink) #{ctaText}

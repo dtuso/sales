@@ -428,11 +428,36 @@ div.video-marquee {
               <style>.puppy-tile {
   background-color: #333333;
 }
+.puppy-tile .tile-content-wrapper {
+  padding: 1% 35% 0 10%;
+}
+.puppy-tile .header-text {
+  font-size: 24px;
+  margin: 12px 0 0 0;
+  color: #ffffff;
+}
+.puppy-tile .body-text {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #fff;
+  text-transform: none;
+}
+.puppy-tile .cta-wrapper > a {
+  color: #6aad38;
+  font-size: 18px;
+  text-decoration: underline;
+}
 
               </style>
               <div data-url="[@T[link:<relative path='/'><param name='ci' value='11111' /></relative>]@T]" data-ci='11111' class="tile puppy-tile">
                 <div class="tile-content-wrapper">
-                  <div class="header-wrapper"></div>
+                  <div class="header-wrapper">
+                    <h2 class="header-text walsheim-black">Enter to win</h2>
+                  </div>
+                  <div class="body-wrapper">
+                    <h3 class="body-text walsheim-medium">Your pup could be on the GoDaddy race car!</h3>
+                  </div>
+                  <div class="cta-wrapper"><a href="[@T[link:<relative path='/'><param name='ci' value='11111' /></relative>]@T]" class="walsheim-black">SUBMIT YOUR PUP</a></div>
                 </div>
               </div>
             </div>
