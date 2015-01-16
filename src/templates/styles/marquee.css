@@ -1,4 +1,6 @@
-
+.white-text{
+    color: #FFFFFF;
+}
 .marquee {
     background-position: top center;
 }
@@ -62,7 +64,7 @@
 
 .marquee.marquee-app-landing .marquee-check-bullets li:before {
     content: "";
-    background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+    background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
     background-position: 0 -668px;
     background-size: 205px auto;
     width: 25px;
@@ -86,7 +88,6 @@
     font-size: 20px;
     font-size: 2rem;
     text-transform: uppercase;
-    color: #ef6c0f;
     font-family: 'Walsheim-Bold';
     margin-bottom: 10px;
 }

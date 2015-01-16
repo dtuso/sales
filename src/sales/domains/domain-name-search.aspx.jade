@@ -43,7 +43,9 @@ block marquee
       .row
         .col-xs-12(style="padding-top:10px;")
           h4 Start your domain name search here
-      +domainSearchInput({"placeholderText":"Type the one you want here"})
+      .row
+        .col-xs-12
+          +domainSearchInput({"placeholderText":"Type the one you  here", "buttonText":"Search"})
       .row
         .col-xs-12
           a.btn-link(href="#" data-toggle="modal" data-target="#bulkModal") Domain Pricing

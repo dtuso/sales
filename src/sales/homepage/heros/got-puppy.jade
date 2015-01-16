@@ -10,11 +10,11 @@ atlantis:webstash(type="css")
         .price { color: #ff8a00; }
         .btn-purchase { float: right; min-width: 40%; position: absolute; right: 10px; bottom: 20px; }
         .disclaimer { font-size: 0.6em; text-align: right; }
-        img { margin: 0 auto; display: block; }
+        .hero-wrapper > .row img { margin: 0 auto; display: block; }
       }
       @media (min-width: 768px) {
         #marquee .hero-wrapper > .row { max-height: 315px; }
-        #marquee img { margin: -72px 0 0 0; }
+        #marquee .hero-wrapper > .row img { margin: -72px 0 0 0; }
       }
 .row
   .col-xs-12.col-sm-6
@@ -31,5 +31,5 @@ atlantis:webstash(type="css")
         span.price.walsheim-black $1.00/MO
       a.btn.btn-purchase Get Started
     .disclaimer First year only. Other restrictions apply.
-  .col-xs-12.col-sm-6
+  .col-xs-12.col-sm-5
     img(src!="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/got-buddy.jpg")

@@ -1,18 +1,35 @@
-mixin domainSearchInput(params)
-  - var params                = params || {};
-  - var actionUrl             = params.actionUrl || "[@T[link:<external linktype='siteurl' path='' parammode='explicit'/>]@T]/api/dpp/search/single?ci=54814&isc=gd41166r";
-  - var icode                 = params.icode || "home:Domain Search:Domains:Domain Search";
-  - var tcode                 = params.tcode || "home:Domain Search:Domains:Domain Search:Search Domain";
-  - var placeholderTextColor  = params.placeholderTextColor || "text-primary";
-  - var buttonColor           = params.buttonColor || "btn-primary";
-  - var buttonText            = params.buttonText || "[@L[cds.sales/homepage/locales/en:domain-search-btn]@L]";
-  - var placeholderText       = params.placeholderText || "[@L[cds.sales/homepage/segments/default:domain-banner-search-text]@L]";
-  .row
-    .col-xs-12.search-template
-      form(action!="#{actionUrl}", data-icode!="#{icode}", data-domainsearch!="{'search-element':'input.searchInput','placeholder-element':'label.searchInput','button':'button','empty-redirect':'[@T[link:<external linktype='siteurl' path='' parammode='explicit'/>]@T]/domains/domain-name-search.aspx'}")
-        .search-template-box.clearfix
-          input(class!="#{placeholderTextColor} searchInput" type="text" autocomplete="off" name="domainToCheck" maxlength="63" placeholder=placeholderText)
-          button(type="submit" data-tcode!="#{tcode}" class!="#{buttonColor} btn btn-lg pull-right ") !{buttonText}
+mixin domainSearchInput(domainSearchParams)
+  - domainSearchParams                       = domainSearchParams || {};
+  - domainSearchParams.actionUrl             = domainSearchParams.actionUrl || "[@T[link:<external linktype='siteurl' path='' parammode='explicit'/>]@T]/api/dpp/search/single?ci=54814&isc=gd41166r";
+  - domainSearchParams.cicode                = domainSearchParams.cicode || "";
+  - domainSearchParams.icode                 = domainSearchParams.icode || "home:Domain Search:Domains:Domain Search";
+  - domainSearchParams.tcode                 = domainSearchParams.tcode || "home:Domain Search:Domains:Domain Search:Search Domain";
+  - domainSearchParams.buttonText            = domainSearchParams.buttonText || "[@L[cds.sales/homepage/locales/en:domain-search-btn]@L]";
+  - domainSearchParams.placeholderText       = domainSearchParams.placeholderText || "[@L[cds.sales/homepage/segments/default:domain-banner-search-text]@L]";
+
+  atlantis:webstash(type="css")
+    style
+      :less
+        #domain-name-input { color: #008a32; font-family: 'Walsheim-Bold', 'Arial Black', sans-serif; }
+        #domain-name-input::-webkit-input-placeholder { color: #008a32; font-family: 'Walsheim-Bold', 'Arial Black', sans-serif; }
+        #domain-name-input:-moz-placeholder { color: #008a32; opacity: 1; font-family: 'Walsheim-Bold', 'Arial Black', sans-serif; }
+        #domain-name-input::-moz-placeholder { color: #008a32; opacity: 1; font-family: 'Walsheim-Bold', 'Arial Black', sans-serif; }
+        #domain-name-input:-ms-input-placeholder { color: #008a32; font-family: 'Walsheim-Bold', 'Arial Black', sans-serif; }
+        .search-text { display: none; }
+        .search-icon { font-size: 22px; }
+        @media (min-width: 768px) {
+          .search-text { display: inline; }
+          .search-icon { display: none; }
+        }
+
+  form(action!="#{domainSearchParams.actionUrl}", data-icode!="#{domainSearchParams.icode}", data-domainsearch!="{'search-element':'input.searchInput','placeholder-element':'input.searchInput','button':'button','empty-redirect':'[@T[link:<external linktype='siteurl' path='' parammode='explicit'/>]@T]/domains/domain-name-search.aspx'}" role='form')
+    .input-group
+      label.searchInput.sr-only(for='domain-name-input') !{domainSearchParams.placeholderText}
+      input#domain-name-input.searchInput.form-control(type='text', placeholder!='#{domainSearchParams.placeholderText}', name='domainToCheck' maxlength='63')
+      span.input-group-btn
+        button.btn.btn-primary(type='submit' data-ci='#{cicode}') 
+          span.search-icon.uxicon.uxicon-magnifying-glass
+          span.search-text !{domainSearchParams.buttonText}
 
 
 mixin domainSearchOffersInput(title, cicode, placeholderText, buttonText, infoTypeHere, infoErrorEligibility, infoInvalidTld)
