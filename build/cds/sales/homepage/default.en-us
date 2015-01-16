@@ -129,6 +129,9 @@
     <style>body {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
+h2 {
+  font-size: 4rem;
+}
 .walsheim-regular {
   font-family: 'Walsheim-Regular', Arial, sans-serif;
 }
@@ -173,10 +176,7 @@
   float: right;
 }
 #bugbar {
-  min-height: 50px;
-}
-#bugbar .row {
-  padding: 10px 15px;
+  margin: -15px 0 5px;
 }
 #domain-search {
   padding: 15px 0;
@@ -194,27 +194,41 @@
   min-height: 140px;
   margin: 5px 0;
 }
-#domain-promo {
-  padding-bottom: 100px;
+#puppy-promo {
+  background-image: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/buddy-video.jpg);
+}
+.domain-promo-content {
+  background-image: url('[@T[link:<imageroot />]@T]fos/hp/rebrand/img/domain_background.jpg');
+  background-size: cover;
+  min-height: 420px;
 }
 .domain-promo-text {
   padding-top: 80px;
 }
 #domain-promo .text-center {
   color: #333;
-  font-size: 3.6rem;
-  margin: 50px 0 30px;
+  margin: 0;
+  padding: 30px 0;
   text-transform: uppercase;
 }
 #domain-promo h1 {
   display: inline;
   color: #333;
+  text-transform: none;
+  font-size: 1.6rem;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 #domain-promo h3 {
   font-size: 3.4rem;
 }
+#domain-promo .btn {
+  margin-top: 20px;
+}
 #why-godaddy {
   padding-bottom: 70px;
+}
+#why-godaddy p {
+  margin-right: 15px;
 }
 #why-godaddy h2 {
   color: #333333;
@@ -242,11 +256,38 @@
 #website-promo ul {
   margin-left: -20px;
 }
+#website-promo li {
+  width: 125%;
+}
 .new-customers-gd-pro {
   padding-bottom: 50px;
 }
 .new-customers-gd-pro img {
   width: 42%;
+}
+h2.two-up-title {
+  margin: 20px 0;
+}
+.two-up-speech-shape.two-up-speech-shape-gold,
+.two-up-speech-shape.two-up-speech-shape-gold:after {
+  background-color: #fedc45;
+}
+.two-up-speech-shape.two-up-speech-shape-gold:before {
+  border-top-color: #fedc45;
+}
+#support-promo {
+  background-color: #333;
+  padding-bottom: 50px;
+}
+.support-promo-img {
+  width: 60%;
+}
+.support-promo-number {
+  font-size: 2.0rem;
+  margin-top: 2%;
+}
+div.video-marquee {
+  background-color: transparent;
 }
 
     </style><!--[if lt IE 9]>
@@ -365,7 +406,42 @@
             </div>
             <div class="tile-wrapper">
               <style>.gtld-marquee-tile {
-  background: #ff8a00;
+  background-size: cover;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxIiBpZD0iTGF5ZXJfMSIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDM2MiAxMzUiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDM2MiAxMzUiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KICA8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZmlsbD0iI0YxODEyRCIgZD0iTTAgMGgzNjJ2MTM1SDBWMHoiLz4NCiAgPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGZpbGw9IiMzMzMzMzMiIGQ9Ik0xOTYgMTM1aDE2NlYwTDE4MSAwIDE5NiAxMzV6Ii8+DQo8L3N2Zz4NCg==);
+  background-repeat: no-repeat;
+  background-position: center center;
+  /*background: #ff8a00*/
+}
+.gtld-marquee-tile .left-content-wrapper {
+  padding-left: 10%;
+}
+.gtld-marquee-tile .header-text {
+  font-size: 40px;
+  color: #333;
+  margin: 25px 0 0 10px;
+}
+.gtld-marquee-tile .body-text {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #333;
+}
+.gtld-marquee-tile .cta-wrapper > a {
+  color: #fff;
+  font-size: 20px;
+  text-decoration: underline;
+}
+.gtld-marquee-tile .gtld-links-wrapper {
+  padding-left: -15px;
+}
+.gtld-marquee-tile ul {
+  list-style-type: none;
+  padding: 20px 0 0 20px;
+}
+.gtld-marquee-tile li {
+  color: #77c043;
+  font-size: 20px;
+  line-height: 25px;
+  margin: 0;
 }
 
               </style>
@@ -375,14 +451,21 @@
                     <div class="row">
                       <div class="col-sm-6">
                         <div class="left-content-wrapper">
+                          <div class="header-wrapper">
+                            <h2 class="header-text walsheim-black">30% OFF</h2>
+                          </div>
                         </div>
                       </div>
-                      <div class="col-sm-2">
-                        <div class="borderLine">
-                        </div>
-                      </div>
-                      <div class="col-sm-4">
+                      <div class="col-sm-6">
                         <div class="right-content-wrapper">
+                          <div class="gtld-links-wrapper">
+                            <ul>
+                              <li class="walsheim-black tld-guru">.guru</li>
+                              <li class="walsheim-black tld-club">.club</li>
+                              <li class="walsheim-black tld-company">.company</li>
+                              <li class="walsheim-black tld-email">.email</li>
+                            </ul>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -476,38 +559,172 @@
         </div>
       </div>
     </section>
-    <section id="domain-promo" class="bg-green-official">
+    <section id="puppy-promo">
       <div class="container">
-        <div class="text-center walsheim-black">It All Starts With A <h1>Domain Name</h1>.</div>
         <div class="row">
-          <div class="col-sm-6"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iNDQ3LjA2MXB4IiBoZWlnaHQ9IjQyNHB4IiB2aWV3Qm94PSIwIDAgNDQ3LjA2MSA0MjQiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDQ0Ny4wNjEgNDI0IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxwb2x5Z29uIGZpbGw9IiMzMzMzMzMiIHBvaW50cz0iMTEyLjE2NSwyODAuNjQzIC0yLjA0LDM4My44ODggNC41Myw0MDkuMTk2IDMyLjAwMyw0MjUuOTM1IDE0OS4wMTgsMzE4LjIxNyAxMjIuMjU5LDMwMS43MDcgCSIvPg0KCTxwb2x5Z29uIGZpbGw9IiNGRkZGRkYiIHBvaW50cz0iMTU1LjE4MywyNTguNjQyIDEyMi4zODMsMjg2LjUzMyAxMjguNzc1LDI5Ny4xODUgMTQ2Ljg4MywzMDUuNzA2IDE3NS42NDMsMjc1Ljg4MSAJIi8+DQoJPHBhdGggZmlsbD0iIzMzMzMzMyIgZD0iTTM3Mi44MjIsMjIuODQyTDI2Mi44OTMsMEwxNTIuOTYxLDY5Ljk1NWwtMjYuMDI1LDc4LjQwOGwyOS4yNzMsMTAxLjU4bDI5Ljk4MSwyOC41NTNsMTI2LjE5NywzMS4wNjcNCgkJbDEwMy40NC01Ni4zNzJsMzEuMjMzLTE1Ni4xMTFMMzcyLjgyMiwyMi44NDJ6IE0zODkuMDM0LDIzMS43NjlsLTgwLjcwMyw0Ni45NTVsLTEwNC4xNjktMjcuNDE0bC0yNy40MTEtMjUuNTg0bC0xNS41MzUtNzAuMzYNCgkJbDIxLjAxNi03Mi4xODhsODguNjM2LTUxLjE2OWw4OS41NDYsMTkuMTg2bDUyLjk5OSw1OS4zOTdMMzg5LjAzNCwyMzEuNzY5eiIvPg0KCTxnPg0KCQk8cG9seWdvbiBmaWxsPSIjRkVEQzQ1IiBwb2ludHM9IjMwOC41Miw1Ni40NTQgMzAyLjYyNiw0OC4wMTEgMjg4LjU0OCw1Mi45OTIgMjg3LjQ4MywxMDUuOTg1IDMwOS4yMDksMTA2LjI2NCAJCSIvPg0KCQk8cG9seWdvbiBmaWxsPSIjRkVEQzQ1IiBwb2ludHM9IjMzMy4wMSw3OC44MTQgMzIzLjgxNyw2Ni4wODcgMzE2LjYzMyw2OS45OTIgMzE1LjExOSwxMDYuMjY0IDMzNC45NDYsMTA2LjI2NCAJCSIvPg0KCQk8cG9seWdvbiBmaWxsPSIjRkVEQzQ1IiBwb2ludHM9IjI0OS4yMjksNzkuODIxIDIzOS43ODgsODIuNTggMjM1LjQ4Niw5MC41NTYgMjM0LjA3NCwxMDYuMjYzIDI1NC40MzgsMTA2LjI2MyAJCSIvPg0KCQk8cG9seWdvbiBmaWxsPSIjRkVEQzQ1IiBwb2ludHM9IjI3Ny42MSw2MC40MiAyNzEuNzcxLDU4Ljc2MiAyNjEuNDExLDYzLjcyIDI1OS40NTUsMTA2LjI1OSAyODAuNTU4LDEwNi4yNTkgCQkiLz4NCgkJPHBvbHlnb24gZmlsbD0iI0ZFREM0NSIgcG9pbnRzPSIyNTcuMjY3LDExMy42MTcgMjY1LjIwNywxNjMuODg1IDI4My45NDgsMTYzLjg4NSAyODYuOTk3LDE0MC44MTEgMjkwLjA0NSwxNjMuODg1IA0KCQkJMzA4Ljc4LDE2My44ODUgMzE2LjczLDExMy42MDggMzIwLjgzMSwxMzkuNDkyIDMyNi40NTEsMTIxLjMwNSAzMzMuNzE2LDEyNC4wNDcgMzMyLjc5MSwxMTMuMzAxIDMxNi43ODYsMTEzLjMwMSAzMTYuNjksMTEzLjMwMSANCgkJCTMwMS43MzIsMTEzLjMwMSAyOTkuMjA4LDE0MS4xNzEgMjk2LjA0OSwxMTMuMzAxIDI3OS4wMDEsMTEzLjMwMSAyNzUuNzMzLDE0MS41MjUgMjczLjMxNSwxMTMuMzAxIDI1Ny4zMTYsMTEzLjMwMSANCgkJCTI1Ny4yMTQsMTEzLjMwMSAyNDIuMjY1LDExMy4zMDEgMjM5Ljc0MSwxNDEuMTcxIDIzNi41NzcsMTEzLjMwMSAyMTkuNTMsMTEzLjMwMSAyMTYuMjY2LDE0MS41MjUgMjEzLjg0NiwxMTMuMzAxIA0KCQkJMTk3Ljc0MSwxMTMuMzAxIDIwNS43MzYsMTYzLjg4NSAyMjQuNDc1LDE2My44ODUgMjI3LjUzMiwxNDAuODExIDIzMC41NzgsMTYzLjg4NSAyNDkuMzEsMTYzLjg4NSAJCSIvPg0KCQk8cG9seWdvbiBmaWxsPSIjRkVEQzQ1IiBwb2ludHM9IjM2MS4yMSwxMTMuMjk4IDM1OC42NzcsMTQxLjE2NSAzNTUuNTIyLDExMy4yOTggMzM4LjQ2NiwxMTMuMjk4IDMzNy4wODgsMTI1LjMxOCANCgkJCTM0OC4zMTksMTI5LjU1OSAzNDkuMDQ0LDE2MC4yNDcgMzQ5LjUyNSwxNjMuODg2IDM2OC4yNiwxNjMuODg2IDM3Ni4yNTcsMTEzLjI5OCAJCSIvPg0KCQk8cG9seWdvbiBmaWxsPSIjRkVEQzQ1IiBwb2ludHM9IjMzMC4wOSwxMjguMzU0IDMxOC42MzksMTYzLjc3MSAyOTUuNzM4LDE3MS40OTQgMjgyLjk1NiwxODIuNjc4IDI2Ny41MSwyMDEuODUyIDI3Ni4wMzIsMTgyLjE0NiANCgkJCTI4Ni42ODQsMTcxLjIyOCAyMzMuNDI1LDE3MS4yMjggMjMzLjQyNSwxOTkuNzIxIDI0My41NDQsMjE3LjgzIDI1OC45ODksMjI1LjgxOCAyNTYuMzI2LDI0NC40NTkgMzE0LjM3OSwyNDUuNTI0IA0KCQkJMzE0LjM3OSwyMzMuMjc1IDMzMi40ODcsMjE4LjM2MiAzNDcuOTkxLDE4OC4zNDYgMzQ0LjY5MSwxMzQuMDc5IAkJIi8+DQoJPC9nPg0KPC9nPg0KPC9zdmc+DQo=" class="domain-promo-image"></div>
-          <div class="col-sm-6 domain-promo-text">
-            <h3>Find Your Perfect Name</h3>
-            <p>From classic domains like <strong>.com</strong> and <strong>.org</strong> to new domains like <strong>.menu</strong>, <strong>.repair</strong>, even <strong>.ninja</strong> (seriously), we can help you find the right name for your business.</p><a class="btn btn-default-dark">Get Started</a>
+          <div class="col-sm-12">
+            <style>.video-marquee {
+	background-position: top center;
+}
+.video-marquee {
+	background-size: cover;
+	position: relative;
+	background-position: bottom center;
+	background-color: #fff;
+}
+.video-marquee.video-marquee-white {
+color: #fff;
+}
+.video-marquee.full-video {
+height: 535px;
+padding-top: 1px;
+}
+.video-marquee.full-video .video-info {
+margin-top: 150px;
+}
+.video-marquee .relative-position {
+position: relative;
+}
+.video-marquee .video-marquee-all-centered {
+text-align: center;
+}
+.video-marquee.video-marquee-white h1, .video-marquee.video-marquee-white h2, .video-marquee.video-marquee-white h3, .video-marquee.video-marquee-white h4, .video-marquee.video-marquee-white h5, .video-marquee.video-marquee-white h6 {
+color: #fff;
+}
+.video-marquee.full-video .video-info .cta {
+font-family: 'Walsheim-Black';
+text-transform: uppercase;
+}
+            </style>
+            <atlantis:webstash type="js">
+              <script>
+                // https://developers.google.com/youtube/player_parameters#IFrame_Player_API
+                $(document).ready(function(){
+                  if(typeof youtubeVideo === 'undefined'){
+                    window.youtubeVideo = {
+                      _src: 'https://www.youtube.com/embed/',
+                      loadVideo: function(videoId, height, width, callback, parameters, container, insertType){
+                        if(typeof parameters === 'object'){
+                          var paramString = '';
+                          
+                          // add origin to src
+                          parameters.origin = window.location.protocol+'//'+window.location.host
+                
+                          if(youtubeVideo._src.indexOf('?') === -1){
+                            paramString += '?';
+                          }else{
+                            paramString += '&';
+                          }
+                
+                          for(param in parameters){
+                            if(paramString.length > 2){
+                              paramString += '&';
+                            }
+                            paramString += param+'='+parameters[param];
+                          }
+                          parameters = paramString;
+                        }
+                        
+                        var $video = $('<iframe height="'+height+'" width="'+width+'" style="position:absolute" frameBorder="0" src="'+youtubeVideo._src+videoId+parameters+'" />');
+                
+                        // append/prepend to container
+                        if(typeof container === 'string'){
+                          container = $(container);
+                        }
+                
+                        if(typeof insertType === 'undefined' || insertType === 'append'){
+                          container.append($video);
+                        }else{
+                          container.prepend($video);
+                        }
+                
+                        if(typeof callback === 'function'){
+                          $video.load(function(){
+                            callback($video[0]);
+                          });
+                        }
+                
+                        return $video[0];
+                      }
+                    };
+                  }
+                  
+                  var $containers = $('[data-tile="buddyVideo"]');
+                  $containers.each(function(){
+                    var $this = $(this);
+                    var videoId = $this.data('youtube-id');
+                    $this.find('.play-button, .cta').bind('click.youtube',function(event){
+                      // remove this event
+                      $(event.target).unbind(event.type+'.'+event.handleObj.namespace);
+                
+                      // load the video
+                      youtubeVideo.loadVideo(
+                          videoId,
+                          '100%',
+                          '100%',
+                          function(video){
+                              var $videoInfo = $this.find('.video-info');
+                              $videoInfo.animate({'opacity':0.0},1000,function(){
+                                  $videoInfo.css({'display':'none'});
+                              });
+                              //$(video).css({'opacity':0.0}).animate({'opacity':1.0});
+                          },
+                          {'autoplay':1,'controls':0,'showinfo':0,'playsinline':1,'modestbranding':1,'rel':0},
+                          $this,
+                          'prepend'
+                      );
+                    }).css({'cursor':'pointer'});
+                  });
+                });
+              </script>
+            </atlantis:webstash>
+            <div style="" data-lazy-load="" data-icode="code" data-tile="buddyVideo" data-youtube-id="-HtVJyxSQmw" class="video-marquee video-marquee-white full-video">
+              <div class="container relative-position video-info">
+                <div class="row">
+                  <div class="col-sm-10 col-sm-offset-1 col-xs-12 video-marquee-all-centered"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rb-play-button.png" class="play-button"/>
+                    <h4>Will Buddy find his way home?</h4><span class="cta">WATCH VIDEO</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
-    <section id="why-godaddy" class="bg-green-official">
+    <section id="domain-promo" class="bg-green-official">
+      <h2 class="text-center walsheim-black">It All Starts With A Domain Name.</h2>
+      <div class="domain-promo-content">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6"></div>
+            <div class="col-sm-6 domain-promo-text">
+              <h3>Find Your<br />Perfect Name</h3>
+              <div>From classic <h1>domain names</h1> like <strong>.com</strong> and <strong>.org</strong> to new domain names like <strong>.menu</strong>, <strong>.repair</strong>, even <strong>.ninja</strong> (seriously), we can help you find the right name for your business.</div><a data-url="[@T[link:<relative path='/domains/domain-name-search.aspx'><param name='ci' value='11111' /></relative>]@T]" class="btn btn-default-dark">Get Started</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="why-godaddy">
       <div class="container">
-        <h2 class="text-center">Why Choose A Domain Name From GoDaddy?</h2>
+        <h2 class="text-center">Why get online with us?</h2>
         <div class="row">
           <div class="col-sm-4">
             <div class="feature why-gd-registrar"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMTA4LjA1NHB4IiBoZWlnaHQ9IjE1Mi45MjZweCIgdmlld0JveD0iMCAwIDEwOC4wNTQgMTUyLjkyNiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTA4LjA1NCAxNTIuOTI2Ig0KCSB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxwb2x5Z29uIGZpbGw9IiMzMzMzMzMiIHBvaW50cz0iMjcuNDQsMTQ2LjQ5NyA0LjIwNSwxMjEuNjcyIDAsODcuOTI3IDE2LjQzMiw1OC4xNTkgNDcuMjI2LDQzLjczMyA4MC42MTQsNTAuMTYyIDEwMy44NSw3NC45ODkgDQoJCTEwOC4wNTQsMTA4LjczMSA5MS42MjIsMTM4LjUwMSA2MC44MzEsMTUyLjkyNiAJIi8+DQoJPHBhdGggZmlsbD0iIzdBQkE0NyIgZD0iTTUwLjA5MiwxMDEuNjg3bC00LjM2MS03LjU3N2wtMTAuMTc4LTMuOTk4bC04Ljc3Ny03LjE5NWMwLDAtNC4xNzEtMTYuNTE4LTQuMDQzLTE3LjQ5OQ0KCQljMC4xMjktMC45ODUsMTAuNjczLTEyLjU1OCwxMC42NzMtMTIuNTU4bDEzLjkzLTQuMjRsMTYuNDM3LDIuMTUzbC0xMy40MTUsMS41OGw4LjI2OCw3LjA4NWwxLjQxOS02LjY5OGwxNS40NDQsNS42MjUNCgkJbC02LjI0OS0wLjgxOGwwLjQ2NSw2LjY2OGMwLDAtNy40OTIsMS4wMy03LjgyLDAuOTg2Yy0wLjI4Ny0wLjAzNy0wLjU5OCw0LjAzNi0wLjYxNCw0LjU4NGMwLjAwMywwLjAwNiwwLjAxNiwwLDAuMDEzLDAuMDA2DQoJCWMtMC4wMSwwLjA4Mi0wLjAxMywwLjA3Mi0wLjAxMy0wLjAwNmMtMC4wNzgtMC40ODEtNy4xMzUsNi4wNzYtNy4xMzUsNi4wNzZsMi4wODksMS45NDRsLTAuNjQ1LDQuOTE4bC00LjQzMy03LjE2NWwtMTIuNjc3LTAuMDc3DQoJCWwtMS44ODYsNi43NmwyLjkzNyw0LjM4NGw3LjQxMS0xLjY5N2wtMi4yNDQsNC4zNzRsNS45MTksMC43NzdMNTAuMDkyLDEwMS42ODd6Ii8+DQoJPHBhdGggZmlsbD0iIzdBQkE0NyIgZD0iTTg1LjkzNiwxMzMuNjc0bC02LjgzMywwLjkyM2wtMS4yOTQsMy40NjZsLTYuMjA1LDUuNzYxYzAsMC0xLjMzOS0zLjY3MS0xLjk3NC00LjE3NA0KCQljLTAuNjMxLTAuNS0yLjg5Nyw1LjA3NS0yLjg5Nyw1LjA3NWwtMTAuNDM2LDQuOTI5bC0zLjkzOCwwLjE4NGw2LjQyOS04LjUyOGwxLjgxNi0xMC42NjlsLTkuNzk5LTEyLjQ3MWwxMS44MzctMjIuMzYzDQoJCWwxMi40MTUsMy40MzlsMTAuNjE5LDEzLjk3OGMwLDAsOS4wODMsNS4zODMsOS40OTYsNS40MzdDOTUuNTg2LDExOC43MTcsODUuOTM2LDEzMy42NzQsODUuOTM2LDEzMy42NzQiLz4NCgk8cGF0aCBmaWxsPSIjMzMzMzMzIiBkPSJNNzUuOTI4LDcuNDI3TDYxLjU3OSwwTDQ2LjE3OSw0Ljg5M2wtNy40MjcsMTQuMzUxbDQuODkyLDE1LjM5OEw1NS4wMDEsNjguOTdsMTguMzk0LTMxLjc5M2w3LjQyNy0xNC4zNQ0KCQlMNzUuOTI4LDcuNDI3eiBNNjcuNTI0LDI1LjM0NmwtNC40OSw0LjEwN2wtNi4wNzksMC4yNTlsLTQuODI0LTMuNzA4bC0xLjMxMy01Ljk0MWwyLjgxNC01LjM5Nmw1LjYyNC0yLjMyNGw1LjgwMSwxLjgzNA0KCQlsMy4yNjcsNS4xMzhMNjcuNTI0LDI1LjM0NnoiLz4NCjwvZz4NCjwvc3ZnPg0K">
-              <h3>World's Leading Domain Registrar</h3>
+              <h3>World's Leading<br />Domain Registrar</h3>
               <p>With over 12 million happy customers and 58 million domains under management, we know how to set you up for success online.</p>
             </div>
           </div>
           <div class="col-sm-4">
             <div class="feature why-gd-prices"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iOTkuMzMxcHgiIGhlaWdodD0iMTEzcHgiIHZpZXdCb3g9IjAgMCA5OS4zMzEgMTEzIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA5OS4zMzEgMTEzIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxwb2x5Z29uIGZpbGw9IiMzMzMzMzMiIHBvaW50cz0iNjYuMDM5LDU3LjQ3OSA5OS4zMzEsMzIuMDE0IDY2LjUwNCwwIDY2LjQwNywxMS45MzYgMjcuODk1LDEyLjAxNyAxOS4yNjIsNDkuODE2IDY2LjEzMyw0NS43NTMgCQ0KCQkiLz4NCgk8cG9seWdvbiBmaWxsPSIjMzMzMzMzIiBwb2ludHM9IjM2LjM1Myw1Mi4wMjUgMCw3OS45NzcgMzMuMDU4LDExMi44MDggMzMuODE5LDk4Ljc4IDcwLjQyLDk3Ljg1NiA3Ny45MjMsNjQuNjI2IDM1LjYwMSw2NS45MDYgCQ0KCQkiLz4NCjwvZz4NCjwvc3ZnPg0K">
-              <h3>More Names at Better Prices</h3>
+              <h3>More Names<br />at Better Prices</h3>
               <p>We have 100s of domains to choose from. And as the world's largest registrar, we can offer prices that other companies can only dream about.  </p>
             </div>
           </div>
           <div class="col-sm-4">
             <div class="feature why-gd-support"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iOTUuOTMycHgiIGhlaWdodD0iMTE3Ljc3OXB4IiB2aWV3Qm94PSIwIDAgOTUuOTMyIDExNy43NzkiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDk1LjkzMiAxMTcuNzc5Ig0KCSB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxwb2x5Z29uIGZpbGw9IiMzMzMzMzMiIHBvaW50cz0iMTEuNTksNTguMTY5IDguNzIyLDYwLjE5NSAxMS4yMTYsODQuODg1IDE0LjY1NSw4OC4xNDcgMjQuMjcsODYuNzE4IDIxLjk2LDU4LjE2OSAJIi8+DQoJPHBvbHlnb24gZmlsbD0iIzMzMzMzMyIgcG9pbnRzPSIyNS45OSwwIDAsMzMuMzQzIDYuMjUsNzMuNTk2IDguNzIyLDczLjQ5NCA1LjY1LDM1LjA0MSAyNS41ODksMTMuNjQxIDY2LjYwMiwxMy40IDkxLjQyNywzMy41NTEgDQoJCTg3LjkzNSw4OS44NiA4Mi40ODMsOTcuODk3IDYxLjAzNiwxMDYuNjUzIDUwLjU1MywxMDMuNDAzIDQ5Ljc1NywxMDMuMTY1IDQ3LjkzNiwxMTAuMjcyIDUyLjQ3MSwxMTcuNzc5IDYwLjc3MSwxMTcuNjIgDQoJCTg0LjYyMSwxMDEuMTQ3IDkxLjUyLDg5Ljk2NiA5NS45MzIsMzIuNTEyIDY4LjY4NywwLjU2MiAJIi8+DQoJPHBvbHlnb24gZmlsbD0iIzMzMzMzMyIgcG9pbnRzPSI4NS43MDYsODMuOTk5IDg3LjI0Myw2MC44NTcgODMuNTYzLDU3LjM4MiA3NS4wMjcsNTcuMzI3IDcyLjcwOCw4OC41NzMgODMuMDgsODguNjQgCSIvPg0KPC9nPg0KPC9zdmc+DQo=">
-              <h3>Award-Winning 24/7 Support</h3>
-              <p>We make it easy to get online, but if you do need help or just wanna talk to someone, we have an army of online experts available 24/7/365.  </p>
+              <h3>Award-Winning<br />24/7 Support</h3>
+              <p>Not sure what you need? You're not alone. That's why we have hundreds of smart, friendly web pros waiting by the phone, ready to help.  </p>
             </div>
           </div>
         </div>
@@ -518,13 +735,13 @@
         <h2 class="text-center walsheim-black">The Right Email Makes A Difference.</h2>
         <div class="row">
           <div class="col-sm-6 o365-promo-text">
-            <h3>Customers <3<br />Pro Email</h3>
+            <h3>Customers<br />Love Pro Email</h3>
             <p>Did you know that customers are nine times more likely to choose a business that has a professional email address?<br/>With Microsoft Office 365, you'll:</p>
             <ul>
               <li><b>Get a professional address</b>, like yourname@coolexample.com.</li>
               <li><b>Sync email across all your computers</b>, smartphones and more.</li>
               <li><b>Store more of your email</b> with 50 GB of secure online storage. </li>
-            </ul><a class="btn btn-default-dark">Learn More</a>
+            </ul><a data-url="[@T[link:<relative path='/business/office-365.aspx'><param name='ci' value='11111' /></relative>]@T]" class="btn btn-default-dark">Learn More</a>
           </div>
           <div class="col-sm-6"><img src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/office365_laptop.svg" class="o365-promo-image"></div>
         </div>
@@ -841,7 +1058,7 @@
                         <li>Start with your choice of 100s of professional designs.</li>
                         <li>Customize it with our simple drag-&-drop tools.</li>
                         <li>Put your beautiful new site online with free hosting.</li>
-                      </ul><a class="btn btn-default-light website-promo-wsb-btn">LEARN MORE</a>
+                      </ul><a data-url="[@T[link:<relative path='/hosting/website-builder.aspx'><param name='ci' value='11111' /></relative>]@T]" class="btn btn-default-light website-promo-wsb-btn">LEARN MORE</a>
                     </div>
                   </div>
                 </div>
@@ -858,7 +1075,7 @@
                         <li>Industry-leading page load times.</li>
                         <li>Powered by cPanel&reg; or Parallels&reg; Plesk</li>
                         <li>Guaranteed 99.9% uptime + 24/7 support</li>
-                      </ul><a class="btn btn-default-dark website-promo-hosting-btn">LEARN MORE    </a>
+                      </ul><a data-url="[@T[link:<relative path='/hosting/web-hosting.aspx'><param name='ci' value='11111' /></relative>]@T]" class="btn btn-default-dark website-promo-hosting-btn">LEARN MORE    </a>
                     </div>
                   </div>
                 </div>
@@ -876,19 +1093,19 @@
           <div class="col-sm-4">
             <div class="feature new-customers-get-found"><img src="data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMCIgeT0iMCIgd2lkdGg9IjE2MyIgaGVpZ2h0PSIxMjIiIHZpZXdCb3g9Ii02NyAwIDE2MyAxMjIiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgLTY2LjcyIDAgMTYyLjY1MiAxMjIiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KICA8cG9seWdvbiBmaWxsPSIjMzMzMzMzIiBwb2ludHM9IjU5IDEzIDE1IDAgLTMwIDEzIC02NyA0NiAtMzAgNzggLTEyIDg0IC0yNiA2OCAtMjQgMzYgMCAxNCAzMiAxNiA1NCA0MCA1MiA3MiAzOSA4NCA1OSA3OCA5NiA0NiAiLz4NCiAgPHBvbHlnb24gZmlsbD0iIzMzMzMzMyIgcG9pbnRzPSIxNSAzNiAyIDQxIC00IDUzIDEgNjYgMTMgNzIgMjYgNjcgMzIgNTUgMjcgNDIgIi8+DQogIDxwb2x5Z29uIGZpbGw9IiMzMzMzMzMiIHBvaW50cz0iNDggMTAxIDE1IDQ2IDEwIDQ4IDYgNTEgMzkgMTA2IDIyIDExNyA1NSAxMjIgNjYgOTAgIi8+DQo8L3N2Zz4NCg==">
               <h3>Get Found</h3>
-              <p>You don't need to be online to put the web to work for you. Get Found lets you list your business on the web's most popular sites - Google, Yelp, Foursquare and more - all from one place.</p><a class="btn btn-default-dark">Learn More</a>
+              <p>You don't need to be online to put the web to work for you. Get Found lets you list your business on the web's most popular sites - Google, Yelp, Foursquare and more - all from one place.</p><a data-url="[@T[link:<relative path='/products/business-marketing.aspx'><param name='ci' value='11111' /></relative>]@T]" class="btn btn-default-dark">Learn More</a>
             </div>
           </div>
           <div class="col-sm-4">
             <div class="feature new-customers-ssl"><img src="data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMCIgeT0iMCIgd2lkdGg9IjExMyIgaGVpZ2h0PSIxMzIiIHZpZXdCb3g9Ii02NyAtNSAxMTMgMTMyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IC02Ni43MiAtNSAxMTMuMTk2IDEzMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQogIDxwYXRoIGZpbGw9IiMzMzMzMzMiIGQ9Ik0yOSA5N0g5di02N0gyMXY1N2g4Vjk3ek03IDg3TDIgOThoLTE1bC02LTExVjcyaDEydjEzaDNWNzJsLTgtOC02LTdWNDBsNi0xMUgxbDYgMTF2MTRILTVWNDJoLTJ2MTJMMiA2Mmw1IDdWODd6TS0yMSA4N2wtNSAxMWgtMTVsLTYtMTFWNzJoMTJ2MTNoM1Y3MmwtOC04LTYtN1Y0MGw2LTExaDE0bDYgMTF2MTRoLTEyVjQyaC0ydjEybDkgOCA1IDdWODd6TTM4IDQ0bDktMTJMMzIgNWwtMTYgNEw2IDgtMTAtNS0yNiA4bC0xMCAyLTE2LTRMLTY3IDMybDkgMTItMSA3LTggMjQgMyAxNyAxMSAxNSA0MiAyMCA0Mi0yMCAxMS0xNSAzLTE3LTgtMjRMMzggNDR6Ii8+DQo8L3N2Zz4NCg==">
               <h3>SSL Certificates</h3>
-              <p>If customers don't feel safe on your site, they won't buy from you. An SSL Certificate encrypts sensitive data like credit cards and passwords so your customers (and your reputation) are secure.</p><a class="btn btn-default-dark">Learn More</a>
+              <p>If customers don't feel safe on your site, they won't buy from you. An SSL Certificate encrypts sensitive data like credit cards and passwords so your customers (and your reputation) are secure.</p><a data-url="[@T[link:<relative path='/ssl/ssl-certificates.aspx'><param name='ci' value='11111' /></relative>]@T]" class="btn btn-default-dark">Learn More</a>
             </div>
           </div>
           <div class="col-sm-4">
             <div class="feature new-customers-gd-pro"><img src="data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDE1OCAxMzQiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDE1OC4xNjkgMTM0LjE3NiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQogIDxwb2x5Z29uIGZpbGw9IiNGRjgzMDAiIHBvaW50cz0iNTEgMCAwIDQ1IDUgMTAwIDc5IDEzNCAxNTggOTcgMTQ0IDI5ICIvPg0KICA8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMzAgNDBoMThjMTEgMCAxOCA4IDE4IDE4cy03IDE4LTE4IDE4aC0xMHYxNWgtOFY0MEwzMCA0MCAzMCA0MHpNNTkgNThjMC02LTQtMTAtMTAtMTBoLTEwdjIxaDEwQzU1IDY4IDU5IDY0IDU5IDU4eiIvPg0KICA8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNOTQgNjVjLTEgMC0yIDAtMyAwIC03IDAtMTEgNC0xMSAxMnYxNWgtOFY1N2g4djZjMi0zIDYtNiAxMS02IDEgMCAyIDAgMyAxVjY1eiIvPg0KICA8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNOTUgNzRjMC0xMCA3LTE4IDE4LTE4IDExIDAgMTggOCAxOCAxOCAwIDEwLTcgMTgtMTggMThDMTAyIDkyIDk1IDg0IDk1IDc0ek0xMjMgNzRjMC02LTQtMTEtMTAtMTEgLTYgMC0xMCA1LTEwIDExIDAgNiA0IDExIDEwIDExQzExOSA4NSAxMjMgODAgMTIzIDc0eiIvPg0KPC9zdmc+DQo=">
               <h3>GoDaddy Pro</h3>
-              <p>If you can code a website in your sleep and provision servers for fun, we haven't forgotten about you. Head over to GoDaddy Pro to see the big guns like VPS and dedicated servers.</p><a class="btn btn-default-dark">Learn More</a>
+              <p>If you can code a website in your sleep and provision servers for fun, we haven't forgotten about you. Head over to GoDaddy Pro to see the big guns like VPS and dedicated servers.</p><a data-url="[@T[link:<relative path='/pro'><param name='ci' value='11111' /></relative>]@T]" class="btn btn-default-dark">Learn More</a>
             </div>
           </div>
         </div>
@@ -896,14 +1113,21 @@
     </section>
     <section id="support-promo">
       <div class="container">
-        <h2 class="text-center walsheim-black">We're Always Here To Help.</h2>
+        <h2 class="text-center walsheim-black text-white">We're Always Here To Help.</h2>
         <div class="row">
-          <div class="col-sm-6"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMTA4LjA1NHB4IiBoZWlnaHQ9IjE1Mi45MjZweCIgdmlld0JveD0iMCAwIDEwOC4wNTQgMTUyLjkyNiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTA4LjA1NCAxNTIuOTI2Ig0KCSB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxwb2x5Z29uIGZpbGw9IiMzMzMzMzMiIHBvaW50cz0iMjcuNDQsMTQ2LjQ5NyA0LjIwNSwxMjEuNjcyIDAsODcuOTI3IDE2LjQzMiw1OC4xNTkgNDcuMjI2LDQzLjczMyA4MC42MTQsNTAuMTYyIDEwMy44NSw3NC45ODkgDQoJCTEwOC4wNTQsMTA4LjczMSA5MS42MjIsMTM4LjUwMSA2MC44MzEsMTUyLjkyNiAJIi8+DQoJPHBhdGggZmlsbD0iIzdBQkE0NyIgZD0iTTUwLjA5MiwxMDEuNjg3bC00LjM2MS03LjU3N2wtMTAuMTc4LTMuOTk4bC04Ljc3Ny03LjE5NWMwLDAtNC4xNzEtMTYuNTE4LTQuMDQzLTE3LjQ5OQ0KCQljMC4xMjktMC45ODUsMTAuNjczLTEyLjU1OCwxMC42NzMtMTIuNTU4bDEzLjkzLTQuMjRsMTYuNDM3LDIuMTUzbC0xMy40MTUsMS41OGw4LjI2OCw3LjA4NWwxLjQxOS02LjY5OGwxNS40NDQsNS42MjUNCgkJbC02LjI0OS0wLjgxOGwwLjQ2NSw2LjY2OGMwLDAtNy40OTIsMS4wMy03LjgyLDAuOTg2Yy0wLjI4Ny0wLjAzNy0wLjU5OCw0LjAzNi0wLjYxNCw0LjU4NGMwLjAwMywwLjAwNiwwLjAxNiwwLDAuMDEzLDAuMDA2DQoJCWMtMC4wMSwwLjA4Mi0wLjAxMywwLjA3Mi0wLjAxMy0wLjAwNmMtMC4wNzgtMC40ODEtNy4xMzUsNi4wNzYtNy4xMzUsNi4wNzZsMi4wODksMS45NDRsLTAuNjQ1LDQuOTE4bC00LjQzMy03LjE2NWwtMTIuNjc3LTAuMDc3DQoJCWwtMS44ODYsNi43NmwyLjkzNyw0LjM4NGw3LjQxMS0xLjY5N2wtMi4yNDQsNC4zNzRsNS45MTksMC43NzdMNTAuMDkyLDEwMS42ODd6Ii8+DQoJPHBhdGggZmlsbD0iIzdBQkE0NyIgZD0iTTg1LjkzNiwxMzMuNjc0bC02LjgzMywwLjkyM2wtMS4yOTQsMy40NjZsLTYuMjA1LDUuNzYxYzAsMC0xLjMzOS0zLjY3MS0xLjk3NC00LjE3NA0KCQljLTAuNjMxLTAuNS0yLjg5Nyw1LjA3NS0yLjg5Nyw1LjA3NWwtMTAuNDM2LDQuOTI5bC0zLjkzOCwwLjE4NGw2LjQyOS04LjUyOGwxLjgxNi0xMC42NjlsLTkuNzk5LTEyLjQ3MWwxMS44MzctMjIuMzYzDQoJCWwxMi40MTUsMy40MzlsMTAuNjE5LDEzLjk3OGMwLDAsOS4wODMsNS4zODMsOS40OTYsNS40MzdDOTUuNTg2LDExOC43MTcsODUuOTM2LDEzMy42NzQsODUuOTM2LDEzMy42NzQiLz4NCgk8cGF0aCBmaWxsPSIjMzMzMzMzIiBkPSJNNzUuOTI4LDcuNDI3TDYxLjU3OSwwTDQ2LjE3OSw0Ljg5M2wtNy40MjcsMTQuMzUxbDQuODkyLDE1LjM5OEw1NS4wMDEsNjguOTdsMTguMzk0LTMxLjc5M2w3LjQyNy0xNC4zNQ0KCQlMNzUuOTI4LDcuNDI3eiBNNjcuNTI0LDI1LjM0NmwtNC40OSw0LjEwN2wtNi4wNzksMC4yNTlsLTQuODI0LTMuNzA4bC0xLjMxMy01Ljk0MWwyLjgxNC01LjM5Nmw1LjYyNC0yLjMyNGw1LjgwMSwxLjgzNA0KCQlsMy4yNjcsNS4xMzhMNjcuNTI0LDI1LjM0NnoiLz4NCjwvZz4NCjwvc3ZnPg0K" class="support-promo-img"></div>
+          <div class="col-sm-6 text-center"><img src="data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjAiIHk9IjAiIHdpZHRoPSI0ODIiIGhlaWdodD0iMzM3IiB2aWV3Qm94PSIwIDAgNDgyIDMzNyIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgNDgxLjY1IDMzNi45NTciIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwb2x5Z29uIGZpbGw9IiM3REI4MjkiIHBvaW50cz0iODEgMjU5IDkyIDIyMyA5OSAyNjggOTUgMzAxIDkwIDI5NyAiLz48cG9seWdvbiBmaWxsPSIjN0RCODI5IiBwb2ludHM9IjU5IDEzOCA1NSAxMzQgNjMgMTA2IDg0IDY2IDc5IDEwNiAiLz48cG9seWdvbiBmaWxsPSIjN0RCODI5IiBwb2ludHM9IjU4IDIwMyA1NCAxOTcgNTcgMTY4IDc5IDEzMyA3MCAxNzQgIi8+PHBvbHlnb24gZmlsbD0iIzdEQjgyOSIgcG9pbnRzPSI3MSAyNTAgNjUgMjQ2IDY1IDIxNyA4NCAxNzcgNzYgMjI5ICIvPjxwb2x5Z29uIGZpbGw9IiM3REI4MjkiIHBvaW50cz0iNTEgNzkgNTUgNDIgMzQgNjIgNDUgMTAyICIvPjxwb2x5Z29uIGZpbGw9IiM3REI4MjkiIHBvaW50cz0iMzggMTQ3IDMzIDEyMSAyNyA3OSAxNiAxMjkgMzUgMTUxICIvPjxwb2x5Z29uIGZpbGw9IiM3REI4MjkiIHBvaW50cz0iMzUgMjA0IDM4IDIwMCAyNyAxNzMgMCAxNDMgOCAxODIgIi8+PHBvbHlsaW5lIGZpbGw9IiM3REI4MjkiIHBvaW50cz0iNDcgMjUzIDQ5IDI0NyAzNiAyMjMgMCAyMDIgMjAgMjM5ICIvPjxwb2x5Z29uIGZpbGw9IiM3REI4MjkiIHBvaW50cz0iNjUgMjkxIDY0IDI4NCA0NiAyNjMgNCAyNjAgMzQgMjg3ICIvPjxwb2x5Z29uIGZpbGw9IiM3REI4MjkiIHBvaW50cz0iNzggMzE2IDc4IDMwOSA1NCAyOTkgMTQgMzA4IDUyIDMyNyAiLz48cGF0aCBmaWxsPSIjN0RCODI5IiBkPSJNNjYgNzR2MGw2LTE4TDg4IDMgNjYgMjBsLTQgNDcgMCAwYy0zOCA4OC0yMyAxOTcgNDQgMjY5bDQtNUM0NiAyNjMgMzEgMTU5IDY2IDc0Ii8+PHBvbHlnb24gZmlsbD0iIzdEQjgyOSIgcG9pbnRzPSI0MDAgMjU5IDM5MCAyMjAgMzgzIDI2NSAzODcgMjk4IDM5MSAyOTQgIi8+PHBvbHlnb24gZmlsbD0iIzdEQjgyOSIgcG9pbnRzPSI0MjIgMTM1IDQyNiAxMzEgNDE5IDEwMyAzOTggNjMgNDA1IDEwNyAiLz48cG9seWdvbiBmaWxsPSIjN0RCODI5IiBwb2ludHM9IjQyNCAyMDAgNDI3IDE5NCA0MjQgMTY1IDQwMyAxMzQgNDEyIDE3MSAiLz48cG9seWdvbiBmaWxsPSIjN0RCODI5IiBwb2ludHM9IjQxMSAyNDcgNDE3IDI0MyA0MTcgMjE0IDM5NyAxNzQgNDAzIDIyMiAiLz48cG9seWdvbiBmaWxsPSIjN0RCODI5IiBwb2ludHM9IjQzMSA3NiA0MjUgMzMgNDQ1IDYzIDQzNiA5OSAiLz48cG9seWdvbiBmaWxsPSIjN0RCODI5IiBwb2ludHM9IjQ0NCAxNDQgNDQ5IDExOCA0NTQgNzYgNDY3IDExOSA0NDYgMTQ4ICIvPjxwb2x5Z29uIGZpbGw9IiM3REI4MjkiIHBvaW50cz0iNDQ3IDIwMSA0NDMgMTk3IDQ1OSAxNjIgNDgyIDE0MCA0NzAgMTc4ICIvPjxwb2x5Z29uIGZpbGw9IiM3REI4MjkiIHBvaW50cz0iNDM0IDI1MCA0MzMgMjQ0IDQ0NiAyMjAgNDgyIDE5OSA0NjggMjMzICIvPjxwb2x5Z29uIGZpbGw9IiM3REI4MjkiIHBvaW50cz0iNDE3IDI4OCA0MTcgMjgxIDQ0NCAyNTkgNDc3IDI1NyA0NDcgMjg0ICIvPjxwb2x5Z29uIGZpbGw9IiM3REI4MjkiIHBvaW50cz0iNDA0IDMxMyA0MDMgMzA2IDQyOCAyOTYgNDY4IDMwNSA0MzAgMzE5ICIvPjxwYXRoIGZpbGw9IiM3REI4MjkiIGQ9Ik00MTUgNzFMNDE1IDcxbC02LTE4TDM5NCAwbDIzIDIzIDIgNDIgMCAwYzM4IDg4IDIzIDE5Ny00NCAyNjlsLTQtNUM0MzUgMjYwIDQ1MCAxNTYgNDE1IDcxIi8+PHBvbHlnb24gZmlsbD0iI0ZFREM0NSIgcG9pbnRzPSIxNjUgMTY3IDE1OSAxNzEgMTY0IDIyMiAxNzEgMjI4IDE5MSAyMjUgMTg2IDE2NyAiLz48cG9seWdvbiBmaWxsPSIjRkVEQzQ1IiBwb2ludHM9IjE5NSA0OCAxNDAgMTE2IDE1NCAxOTkgMTU5IDE5OCAxNTIgMTIwIDE5NCA3NiAyODAgNzUgMzMyIDExNyAzMjQgMjMyIDMxMyAyNDggMjY4IDI2NiAyNDYgMjU5IDI0NSAyNTkgMjQxIDI3NCAyNTAgMjg5IDI2OCAyODkgMzE4IDI1NSAzMzIgMjMyIDM0MSAxMTUgMjg0IDQ5ICIvPjxwb2x5Z29uIGZpbGw9IiNGRURDNDUiIHBvaW50cz0iMzIwIDIyMCAzMjMgMTczIDMxNSAxNjUgMjk3IDE2NSAyOTMgMjI5IDMxNCAyMjkgIi8+PC9zdmc+" class="support-promo-img"></div>
           <div class="col-sm-6">
-            <div class="support-promo-text">
-              <h3>Award-Winning 24/7 Support</h3>
-              <p>We make it easy to get online, but if you do need help or just wanna talk to someone, we have an army of online experts available 24/7/365.</p><a class="btn btn-default-dark">Learn More</a>
-              <div class="support-promo-number">[@T[supportphone:<technical />]@T]</div>
+            <div class="support-promo-text text-white">
+              <h3>Award-Winning<br />24/7 Support</h3>
+              <p>We make it easy to get online, but if you do need help or just wanna talk to someone, we have an army of online experts available 24/7/365.</p>
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm-4"><a class="btn btn-default-light">Learn More</a></div>
+                  <div class="col-sm-8">
+                    <div class="support-promo-number walsheim-medium">[@T[supportphone:<technical />]@T]</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
