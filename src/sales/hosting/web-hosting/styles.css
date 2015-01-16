@@ -143,14 +143,20 @@ h3 {
 }
 
 @media (max-width: 767px) {
+  .pro-banner {
+    background-image: none;
+    background-color: #ef6b0d;
+    box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
+  }
   .pro-banner .pro-banner-image {
-
+    width: 100%;
   }
   .pro-banner .pro-banner-text {
-    
+    width: 100%;
   }
   .pro-banner .pro-banner-button {
-    
+    width: 100%;
+    text-align: center;
   }
 }
 
