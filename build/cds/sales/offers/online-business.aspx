@@ -1951,14 +1951,91 @@ function updateDomainCountText(initial) {
       <div id="site-choice-wsb-video-modal" class="sf-modal">
         <iframe width="100%" height="100%" src="//www.youtube.com/embed/-HtVJyxSQmw?html5=1&amp;rel=0&amp;iv_load_policy=3&amp;modestbranding=1" autoplay scrolling="no" frameborder="0" allowfullscreen></iframe>
       </div>
-      <div id="site-choice-wsb-designs-modal" class="sf-modal">
-        <h1>_modal_wsb_designs.jade</h1>
-      </div>
+      <div id="site-choice-wsb-designs-modal" class="sf-modal"></div>
       <div id="site-choice-ols-video-modal" class="sf-modal">
         <iframe width="100%" height="100%" src="//www.youtube.com/embed/rMF9d8-3WBA?html5=1&amp;rel=0&amp;iv_load_policy=3&amp;modestbranding=1" autoplay scrolling="no" frameborder="0" allowfullscreen></iframe>
       </div>
-      <div id="site-choice-ols-stories-modal" class="sf-modal">
-        <h1>_modal_ols_stories.jade</h1>
+      <div id="site-choice-ols-stores-modal" class="sf-modal">
+        <atlantis:webstash type="css">
+          <style>
+            .main-tools-carousel{background-color:#ededed;padding-top:95px}
+            .main-tools-carousel h2.tools-carousel-title{margin:0 0 35px}
+            .main-tools-carousel .gd-nav-container{background-color:#fff;margin:0 auto;position:relative;width:1000px}
+            .main-tools-carousel .gd-nav-container a.arrow-left,.main-tools-carousel .gd-nav-container a.arrow-right{top:275px}
+            
+            .main-content-designs-top{background:url("../img/online-store-sprite2.png") no-repeat scroll -2px -646px transparent;height:508px;margin-top:100px;position:relative;width:1182px}
+            .main-content-designs-top .l-main-container{min-height:580px}
+            
+            .gd-nav-container{margin:0 auto;position:relative;width:1000px}
+            .gd-swipe-wrap{overflow:hidden;position:relative}
+            .gd-swipe-wrap>div{float:left;position:relative;top:0;width:100%}
+            .gd-swipe{margin:0 auto;max-width:100%;overflow:hidden;position:relative}
+            .gd-swipe-bottom-nav{position:relative;text-align:center;padding-bottom:35px;margin-top:40px}
+            .gd-swipe-bottom-nav a[data-slide="prev"],.gd-swipe-bottom-nav a[data-slide="next"]{position:relative;top:-2px}
+            .gd-swipe-bottom-nav ul{list-style:none outside none;margin:0;padding:0}
+            .gd-swipe-bottom-nav li{display:inline-block;overflow:hidden;padding:15px;position:relative}
+            .gd-swipe-bottom-nav li a{background:transparent url('../img/online-store-sprite2.png') no-repeat -28px -19px;color:#dadada;display:block;height:11px;text-decoration:none;text-indent:-9999em;width:27px}
+            .gd-swipe-bottom-nav li.active a{background:transparent url('../img/online-store-sprite2.png') no-repeat 0 -19px;color:#70ac00;height:11px;width:27px}
+            
+            .tools-slide-title{color:#ff8234;font-weight:bold}
+            .toole-slider-subtitle{color:#333;font-size:16px;height:60px}
+            .tools-slide-swipe-item{height:530px;padding:70px 230px;width:970px}
+            .tools-slide.slide-review{background-position:-40px -3660px;width:609px;height:297px}
+            
+            
+            
+          </style>
+        </atlantis:webstash>
+        <section class="main-customer-carousel-stores">
+          <div class="container background-container-repeat-x main-customer-carousel-img"></div>
+          <div class="container customer-carousel-bottom-spacer"></div>
+          <div class="container l-main-container customer-carousel-floater">
+            <div class="row center-text">
+              <div class="col-xs-12">
+                <h2 class="customer-carousel-title">[@L[cds.sales/gd/ecommerce/online-store:CarouselTitle]@L]</h2>
+                <p class="customer-carousel-subtitle">[@L[cds.sales/gd/ecommerce/online-store:CarouselSubTitle]@L]</p>
+              </div>
+              <div class="row">
+                <div class="col-xs-12">
+                  <div id="customer-slider">
+                    <div class="gd-nav-container">
+                      <div class="gd-swipe">
+                        <div class="gd-swipe-wrap">
+                          <div class="gd-swipe-item customer-slide-swipe-item">
+                            <div class="solazy customer-slide slide-1"></div>
+                            <div class="col-xs-11 solazy customer-quote slide-1">[@L[cds.sales/gd/ecommerce/online-store:customerQuote1]@L]</div>
+                            <div class="col-xs-11 solazy customer-byline slide-1">[@L[cds.sales/gd/ecommerce/online-store:customerByLine1]@L]</div>
+                          </div>
+                          <div class="gd-swipe-item customer-slide-swipe-item">
+                            <div class="solazy customer-slide slide-2"></div>
+                            <div class="col-xs-11 solazy customer-quote slide-2">[@L[cds.sales/gd/ecommerce/online-store:customerQuote2]@L]</div>
+                            <div class="col-xs-11 solazy customer-byline slide-2">[@L[cds.sales/gd/ecommerce/online-store:customerByLine2]@L]</div>
+                          </div>
+                          <div class="gd-swipe-item customer-slide-swipe-item">
+                            <div class="solazy customer-slide slide-3"></div>
+                            <div class="col-xs-11 solazy customer-quote slide-3">[@L[cds.sales/gd/ecommerce/online-store:customerQuote3]@L]</div>
+                            <div class="col-xs-11 solazy customer-byline slide-3">[@L[cds.sales/gd/ecommerce/online-store:customerByLine3]@L]</div>
+                          </div>
+                          <div class="gd-swipe-item customer-slide-swipe-item">
+                            <div class="solazy customer-slide slide-4"></div>
+                            <div class="col-xs-11 solazy customer-quote slide-4">[@L[cds.sales/gd/ecommerce/online-store:customerQuote4]@L]</div>
+                            <div class="col-xs-11 solazy customer-byline slide-4">[@L[cds.sales/gd/ecommerce/online-store:customerByLine4]@L]</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--              a#CustomerCarouselOLSPrevLink(href="#" data-slide="prev" class="arrow-left" id="customer-ols2-headerPrev" data-ci="93904")| [@L[cds.sales/gd/ecommerce/online-store:previous]@L]
+        -->
+        <!--              a#CustomerCarouselOLSNextLink(href="#" data-slide="next" class="arrow-right" id="customer-ols2-headerNext" data-ci="93905")
+        | [@L[cds.sales/gd/ecommerce/online-store:next]@L]
+        .gd-swipe-bottom-nav
+        -->
       </div>
     </section>
     <section id="disclaimers"> 
