@@ -109,9 +109,8 @@ $(document).ready(function() {
   showTldImagesInDomainArea(); //- dynamically build the tld images in the #findYourPerfectDomain section
   
   //- fix up list of valid tlds from lang files
-  showAndOrderDynamicTldsInList("#default-marquee-view .invalid-TLD-entered");
-  showAndOrderDynamicTldsInList("#default-marquee-details-modal-wsb-only .invalid-TLD-entered");
-  showAndOrderDynamicTldsInList("#default-marquee-details-modal .invalid-TLD-entered");
+  showAndOrderDynamicTldsInList("#default-marquee-details-modal-wsb-only p");
+  showAndOrderDynamicTldsInList("#default-marquee-details-modal p");
   showAndOrderDynamicTldsInList("#site-choice-wsb-modal p");
   showAndOrderDynamicTldsInList("#site-choice-ols-modal p");
   showAndOrderDynamicTldsInList("#step2-choose-product-wsb-modal p");
