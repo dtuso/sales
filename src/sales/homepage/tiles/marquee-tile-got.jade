@@ -1,0 +1,25 @@
+extend ../_tile.jade
+
+append vars
+  - ctaLink = "[@T[link:<relative path='offers/online-business.aspx'><param name='ci' value='95726' /></relative>]@T]";
+  - dataCi = 95726;
+  - containerClass = "gtld-marquee-got";
+
+block append tileStyles
+  style
+    :less
+      .upper() {
+        text-transform:uppercase;
+      }
+      .gtld-marquee-got {background-color:#333;font-family:'Walsheim-Black';}
+      .gtld-marquee-got .tile-content-wrapper {padding:15px 0 0 10px;}
+      .gtld-marquee-got .header-text {font-size: 25px;color:#77c043;margin:0;}
+      .gtld-marquee-got .price-text {font-size: 25px;color:#fff;margin:-3px 0 0;.upper()}
+      .gtld-marquee-got .price {font-size:36px;margin:-10px 0 0;.upper()}
+      .gtld-marquee-got .restrictions-text {font-size:10px;font-family:"Walsheim-Regular";color:#fff;margin:5px 0 0;}
+
+block tileContent
+  h2.header-text [@L[cds.sales/homepage/tile/marquee-tile-got:marquee-tile-got-domain]@L] + [@L[cds.sales/homepage/tile/marquee-tile-got:marquee-tile-got-wsb]@L] + [@L[cds.sales/homepage/tile/marquee-tile-got:marquee-tile-got-email]@L]
+  .price-text [@L[cds.sales/homepage/tile/marquee-tile-got:marquee-tile-got-price-text]@L]
+  .price [@L[cds.sales/homepage/tile/marquee-tile-got:marquee-tile-got-price]@L]
+  .restrictions-text [@L[cds.sales/homepage/tile/marquee-tile-got:marquee-tile-got-rest-text]@L]

@@ -31,14 +31,14 @@
 }
 
 </style>
-<div data-url="[@T[link:<relative path='/domains/domain-name-search.aspx'><param name='ci' value='11111' /></relative>]@T]" data-ci='11111' class="tile gtld-marquee-tile">
+<div data-url="[@T[link:<relative path='/domains/domain-name-search.aspx'><param name='ci' value='95717' /></relative>]@T]" data-ci='95717' class="tile gtld-marquee-tile">
   <div class="tile-content-wrapper">
     <div class="container">
       <div class="row">
         <div class="col-sm-6">
           <div class="left-content-wrapper">
             <div class="header-wrapper">
-              <h2 class="header-text walsheim-black">30% OFF</h2>
+              <h2 class="header-text walsheim-black">[@L[cds.sales/homepage/tile/marquee-tile-gtld:header-text]@L]</h2>
             </div>
           </div>
         </div>
@@ -46,10 +46,10 @@
           <div class="right-content-wrapper">
             <div class="gtld-links-wrapper">
               <ul>
-                <li data-url="[@T[link:<relative path='/tlds/guru'><param name='ci' value='11111' /></relative>]@T]" class="walsheim-black tld-guru">.guru</li>
-                <li data-url="[@T[link:<relative path='/tlds/club'><param name='ci' value='11111' /></relative>]@T]" class="walsheim-black tld-club">.club</li>
-                <li data-url="[@T[link:<relative path='/tlds/company'><param name='ci' value='11111' /></relative>]@T]" class="walsheim-black tld-company">.company</li>
-                <li data-url="[@T[link:<relative path='/tlds/guru'><param name='ci' value='11111' /></relative>]@T]" class="walsheim-black tld-email">.email</li>
+                <li data-url="[@T[link:<relative path='/tlds/guru'><param name='ci' value='95716' /></relative>]@T]" data-ci='95716' class="walsheim-black tld-guru">.guru</li>
+                <li data-url="[@T[link:<relative path='/tlds/club'><param name='ci' value='95713' /></relative>]@T]" data-ci='95713' class="walsheim-black tld-club">.club</li>
+                <li data-url="[@T[link:<relative path='/tlds/company'><param name='ci' value='95714' /></relative>]@T]" data-ci='95714' class="walsheim-black tld-company">.company</li>
+                <li data-url="[@T[link:<relative path='/tlds/guru'><param name='ci' value='95715' /></relative>]@T]" data-ci='95715' class="walsheim-black tld-email">.email</li>
               </ul>
             </div>
           </div>

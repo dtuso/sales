@@ -229,39 +229,43 @@
           </div>
           <div class="col-md-4 col-sm-12">
             <div class="tile-wrapper">
-              <style>.puppy-tile {
-  background-color: #333333;
+              <style>.gtld-marquee-got {
+  background-color: #333;
+  font-family: 'Walsheim-Black';
 }
-.puppy-tile .tile-content-wrapper {
-  padding: 1% 35% 0 10%;
+.gtld-marquee-got .tile-content-wrapper {
+  padding: 15px 0 0 10px;
 }
-.puppy-tile .header-text {
-  font-size: 24px;
-  margin: 12px 0 0 0;
-  color: #ffffff;
+.gtld-marquee-got .header-text {
+  font-size: 25px;
+  color: #77c043;
+  margin: 0;
 }
-.puppy-tile .body-text {
-  font-size: 18px;
-  margin: 10px 0;
+.gtld-marquee-got .price-text {
+  font-size: 25px;
   color: #fff;
-  text-transform: none;
+  margin: -3px 0 0;
+  text-transform: uppercase;
 }
-.puppy-tile .cta-wrapper > a {
-  color: #6aad38;
-  font-size: 18px;
-  text-decoration: underline;
+.gtld-marquee-got .price {
+  font-size: 36px;
+  margin: -10px 0 0;
+  text-transform: uppercase;
+}
+.gtld-marquee-got .restrictions-text {
+  font-size: 10px;
+  font-family: "Walsheim-Regular";
+  color: #fff;
+  margin: 5px 0 0;
 }
 
               </style>
-              <div data-url="[@T[link:<relative path='/'><param name='ci' value='11111' /></relative>]@T]" data-ci='11111' class="tile puppy-tile">
+              <div data-url="[@T[link:<relative path='offers/online-business.aspx'><param name='ci' value='95726' /></relative>]@T]" data-ci='95726' class="tile gtld-marquee-got">
                 <div class="tile-content-wrapper">
-                  <div class="header-wrapper">
-                    <h2 class="header-text walsheim-black">Enter to win</h2>
-                  </div>
-                  <div class="body-wrapper">
-                    <h3 class="body-text walsheim-medium">Your pup could be on the GoDaddy race car!</h3>
-                  </div>
-                  <div class="cta-wrapper"><a href="[@T[link:<relative path='/'><param name='ci' value='11111' /></relative>]@T]" class="walsheim-black">SUBMIT YOUR PUP</a></div>
+                  <h2 class="header-text">[@L[cds.sales/homepage/tile/marquee-tile-got:marquee-tile-got-domain]@L] + [@L[cds.sales/homepage/tile/marquee-tile-got:marquee-tile-got-wsb]@L] + [@L[cds.sales/homepage/tile/marquee-tile-got:marquee-tile-got-email]@L]</h2>
+                  <div class="price-text">[@L[cds.sales/homepage/tile/marquee-tile-got:marquee-tile-got-price-text]@L]</div>
+                  <div class="price">[@L[cds.sales/homepage/tile/marquee-tile-got:marquee-tile-got-price]@L]</div>
+                  <div class="restrictions-text">[@L[cds.sales/homepage/tile/marquee-tile-got:marquee-tile-got-rest-text]@L]</div>
                 </div>
               </div>
             </div>
@@ -298,14 +302,14 @@
 }
 
               </style>
-              <div data-url="[@T[link:<relative path='/domains/domain-name-search.aspx'><param name='ci' value='11111' /></relative>]@T]" data-ci='11111' class="tile gtld-marquee-tile">
+              <div data-url="[@T[link:<relative path='/domains/domain-name-search.aspx'><param name='ci' value='95717' /></relative>]@T]" data-ci='95717' class="tile gtld-marquee-tile">
                 <div class="tile-content-wrapper">
                   <div class="container">
                     <div class="row">
                       <div class="col-sm-6">
                         <div class="left-content-wrapper">
                           <div class="header-wrapper">
-                            <h2 class="header-text walsheim-black">30% OFF</h2>
+                            <h2 class="header-text walsheim-black">[@L[cds.sales/homepage/tile/marquee-tile-gtld:header-text]@L]</h2>
                           </div>
                         </div>
                       </div>
@@ -313,10 +317,10 @@
                         <div class="right-content-wrapper">
                           <div class="gtld-links-wrapper">
                             <ul>
-                              <li data-url="[@T[link:<relative path='/tlds/guru'><param name='ci' value='11111' /></relative>]@T]" class="walsheim-black tld-guru">.guru</li>
-                              <li data-url="[@T[link:<relative path='/tlds/club'><param name='ci' value='11111' /></relative>]@T]" class="walsheim-black tld-club">.club</li>
-                              <li data-url="[@T[link:<relative path='/tlds/company'><param name='ci' value='11111' /></relative>]@T]" class="walsheim-black tld-company">.company</li>
-                              <li data-url="[@T[link:<relative path='/tlds/guru'><param name='ci' value='11111' /></relative>]@T]" class="walsheim-black tld-email">.email</li>
+                              <li data-url="[@T[link:<relative path='/tlds/guru'><param name='ci' value='95716' /></relative>]@T]" data-ci='95716' class="walsheim-black tld-guru">.guru</li>
+                              <li data-url="[@T[link:<relative path='/tlds/club'><param name='ci' value='95713' /></relative>]@T]" data-ci='95713' class="walsheim-black tld-club">.club</li>
+                              <li data-url="[@T[link:<relative path='/tlds/company'><param name='ci' value='95714' /></relative>]@T]" data-ci='95714' class="walsheim-black tld-company">.company</li>
+                              <li data-url="[@T[link:<relative path='/tlds/guru'><param name='ci' value='95715' /></relative>]@T]" data-ci='95715' class="walsheim-black tld-email">.email</li>
                             </ul>
                           </div>
                         </div>
