@@ -186,7 +186,7 @@ var got1Page = {
   sfDialogErrorButtons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }],
   maxNumberOfSpinsToShowByDefault: 3,
   lastSpinResultCount: 0,
-  dppErrorReturnUrl: '[@T[link:<relative path="~/offers/online-business.aspx"><param name="err" value="dpp1" /></relative>]@T]',
+  dppErrorReturnUrl: '[@T[link:<relative path="~/offers/online-business.aspx"><param name="tldRegErr" value="{0}" /></relative>]@T]',
   offersCodes: {
     packageId_wsb: 'gybo_1email_1yr',
     packageId_ols: 'gybo_1email_1yr_ols',
@@ -202,7 +202,7 @@ var got1Page = {
   },
   imagePath: '[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/',
   canOfferOls: true,
-  animationTime: 800,
+  animationTime: 600,
   animationEasingType: 'swing'
 };
 
@@ -268,8 +268,8 @@ $(document).ready(function() {
   tokenizeTheDataTokenizeAttribute();
 
   wireupModals();
-  if(getParameterByName('err') === "dpp1") {
-    showDomainRegistrationFailure(getParameterByName('tld'));
+  if(getParameterByName('tldRegErr').length > 0) {
+    showDomainRegistrationFailure(getParameterByName('tldRegErr'));
   } else {
     showTypeYourDomain();
   }
@@ -505,7 +505,7 @@ function domainSearchFormSubmit(e) {
         showTypeYourDomain();
 
         // tokenize header on search available page
-        $('#available-domain-name').text(exactMatchDomain.Fqdn);
+        $('span#available-domain-name').text(exactMatchDomain.Fqdn);
 
         var $thisSection = $this.closest('.js-marquee-section');
         if($thisSection[0].id != "domain-available-marquee-view") {
@@ -515,7 +515,9 @@ function domainSearchFormSubmit(e) {
 
       } else {
 
-        alternateDomains = []; // for testingcd
+        // tokenize header on search available page
+        $('span#not-available-domain-name').text(exactMatchDomain.Fqdn);
+
         // Domain is taken, show spins if possible
         if(alternateDomains.length > 0) {
           // SHOW SPINS
@@ -598,13 +600,16 @@ function goToDppCheckoutPage(e) {
   var $this = $(e.target),
     domain = $this.data('domain'),
     isOLS = $this.hasClass('product-ols'),
-    apiEndpoint3;
+    apiEndpoint3,
+    sourceurl = encodeURIComponent(got1Page.dppErrorReturnUrl.replace(/\{0\}/gi, '.' + domain.Extension));
 
-  apiEndpoint3 = '[@T[link:<relative path="~/api/dpp/searchresultscart/11/"><param name="domain" value="domain" /><param name="packageid" value="packageid" /><param name="itc" value="itc" /><param name="returnUrl" value="returnUrl" /></relative>]@T]';
+
+  apiEndpoint3 = '[@T[link:<relative path="~/api/dpp/searchresultscart/11/"><param name="domain" value="domain" /><param name="packageid" value="packageid" /><param name="itc" value="itc" /><param name="sourceurl" value="sourceurl" /><param name="returnUrl" value="returnUrl" /></relative>]@T]';
   apiEndpoint3 = apiEndpoint3.replace('domain=domain', 'domain=' + domain.Fqdn);
   apiEndpoint3 = apiEndpoint3.replace('packageid=packageid', 'packageid=' + (isOLS ? got1Page.offersCodes.packageId_ols : got1Page.offersCodes.packageId_wsb));
   apiEndpoint3 = apiEndpoint3.replace('itc=itc', 'itc=' + (isOLS ? got1Page.offersCodes.itc_ols : got1Page.offersCodes.itc_wsb));
-  apiEndpoint3 = apiEndpoint3.replace('returnUrl=returnUrl', 'returnUrl=' +  encodeURIComponent(got1Page.dppErrorReturnUrl) );
+  apiEndpoint3 = apiEndpoint3.replace('sourceurl=sourceurl', 'sourceurl=' +  sourceurl );
+  apiEndpoint3 = apiEndpoint3.replace('returnUrl=returnUrl', 'returnUrl=' +  sourceurl );
 
   $.ajaxSetup({cache:false});
   $.ajax({
@@ -723,7 +728,6 @@ function updateDomainCountText(initial) {
 
 function animateMarquee($currentView, $animateToView) {  
   
-
   var currentViewHeight = $currentView.height(),
     windowWidth = $(window).width(),
     $marquee = $('#marquee'),
@@ -754,7 +758,6 @@ function animateHeight($obj, startHeight, finishHeight, zIndex) {
         $obj.css({"position":"relative", "height": "auto", "z-index": "1"});
       }
   });
-
 }
 
 function animateObjectOffToTheLeft($obj, windowWidth, zIndex) {
@@ -769,7 +772,6 @@ function animateObjectOffToTheLeft($obj, windowWidth, zIndex) {
 
         // clean up the views of the screens
         $obj.hide().css({"position":"relative", "width": "auto", "left": "0px", "z-index": "1"});
-        console.log('2');
       }
   });
 }
@@ -785,10 +787,10 @@ function animateObjectInFromTheRight($obj, windowWidth, zIndex) {
       duration: got1Page.animationTime , 
       easing: got1Page.animationEasingType, 
       complete:function(){
-        $obj.css({"position":"relative", "width": "auto", "left": "0px", "z-index": "1"}).show();            
-        console.log('3');
+        $obj.css({"position":"relative", "width": "auto", "left": "0px", "z-index": "1"}).show();  
       }
     });
+  $(document).trigger('resize');
 }
 
 
@@ -849,6 +851,7 @@ function getParameterByName(name) {
 
 #marquee h3.get-a-domain-text,
 #step2-choose-product h3.choose-header {
+  font-family: "Walsheim";
   font-size: 24px; 
   color: #232323;
   font-weight: bold;
@@ -898,6 +901,387 @@ h2.api-error-header img {
 
 h2.api-error-header {
 
+}
+    </style>
+    <style>
+.plan-tile { 
+  margin-top: -145px; 
+  margin-bottom: 20px;
+}
+.sf-droplist-msg {
+  text-align: inherit;
+}
+.pro-plans {
+    margin-top: 0px;
+    padding-bottom: 80px;
+}
+
+.pro-plans .tld-col-title {
+    text-transform: uppercase;
+}
+
+.pro-plans .non-input-group {
+    margin-bottom: 10px;
+}
+
+.pro-plans .non-input-group .form-control {
+    border: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    font-family: 'Walsheim-Black';
+    font-size: 30px;
+    font-size: 3rem;
+    padding: 4px 20px;
+    height: 44px;
+    line-height: 1;
+    color: #333333;
+}
+
+.pro-plans .sub-plan-text {
+    margin-top: 30px;
+    margin-bottom: -30px;
+}
+
+.pro-plans h2 {
+    margin-top: 0;
+}
+
+.pro-plans h2.domains-plans-mid-title {
+    margin: 40px 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .pro-plans {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
+
+.pro-plans.plan-container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.pro-plans.plan-container:before,
+.pro-plans.plan-container:after {
+    content: " ";
+  /* 1 */
+    display: table;
+  /* 2 */
+}
+
+.pro-plans.plan-container:after {
+    clear: both;
+}
+
+@media only screen and (max-width: 1535px) {
+    .pro-plans.plan-container {
+        max-width: 1170px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .pro-plans.plan-container {
+        max-width: 970px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .pro-plans.plan-container {
+        max-width: 750px;
+    }
+}
+
+.pro-plans.plan-container .plan-col-15 {
+    width: 20%;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@media only screen and (max-width: 1535px) {
+    .pro-plans.plan-container .plan-col-15 {
+        width: 33.3333%;
+    }
+
+    .pro-plans.plan-container .plan-col-15:nth-child(4n) {
+        border: 0;
+        margin-left: 16.66666666667%;
+        clear: left;
+    }
+
+    .pro-plans.plan-container .plan-col-15:nth-child(1) {
+        border: 0;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .pro-plans.plan-container .plan-col-15 {
+        width: 50%;
+    }
+
+    .pro-plans.plan-container .plan-col-15:nth-child(4n) {
+        clear: none;
+        margin-left: 0;
+    }
+
+    .pro-plans.plan-container .plan-col-15:nth-child(3) {
+        clear: left;
+        border-left: 0;
+    }
+
+    .pro-plans.plan-container .plan-col-15:nth-child(5) {
+        clear: left;
+        border-left: 0;
+        margin-left: 25%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .pro-plans.plan-container .plan-col-15 {
+        width: 100%;
+        border: 0;
+        clear: none;
+        float: none;
+    }
+
+    .pro-plans.plan-container .plan-col-15:nth-child(5) {
+        margin-left: 0;
+    }
+}
+
+.pro-plans.plan-container .plan-col-2 {
+    width: 16.66666666667%;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@media only screen and (max-width: 1535px) {
+    .pro-plans.plan-container .plan-col-2 {
+        width: 33.3333%;
+    }
+
+    .pro-plans.plan-container .plan-col-2:nth-child(4n) {
+        border: 0;
+        clear: left;
+    }
+
+    .pro-plans.plan-container .plan-col-2:nth-child(1) {
+        border-left: 0;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .pro-plans.plan-container .plan-col-2 {
+        width: 50%;
+    }
+
+    .pro-plans.plan-container .plan-col-2:nth-child(4n) {
+        clear: none;
+    }
+
+    .pro-plans.plan-container .plan-col-2:nth-child(3) {
+        clear: left;
+        border-left: 0;
+    }
+
+    .pro-plans.plan-container .plan-col-2:nth-child(5) {
+        clear: left;
+        border-left: 0;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .pro-plans.plan-container .plan-col-2 {
+        width: 100%;
+        border: 0;
+        clear: none;
+        float: none;
+    }
+}
+
+.pro-plans .pro-plan-wrap {
+    border-top: 10px solid #008a32;
+    padding: 40px;
+    background-color: #fff;
+    -webkit-box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
+}
+
+@media only screen and (max-width: 992px) {
+    .pro-plans .pro-plan-wrap {
+        padding: 40px 30px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .pro-plans .pro-plan-wrap {
+        margin-bottom: 40px;
+    }
+}
+
+.pro-plans .pro-plan-wrap .features-row {
+    margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+    .pro-plans .pro-plan-wrap .features-row {
+        margin-bottom: 0;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .pro-plans .pro-plan-wrap .features-row .col-sm-6 {
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .pro-plans .pro-plan-wrap .features-row .col-sm-6 img {
+        margin: 0 auto 20px;
+    }
+}
+
+.pro-plans .pro-plan-wrap .plan-flag {
+    color: #000;
+    font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;
+    font-size: 28px;
+    font-size: 2.8rem;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    line-height: 1;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMTgxLjggNjQuMiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTgxLjggNjQuMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cG9seWdvbiBmaWxsPSIjRkVEQzQ1IiBwb2ludHM9IjE3LDAgMCwyNC4yIDMsNTYgMTY0LjUsNjQuMiAxODEuOCw0My44IDE4MSw0LjMgIi8+DQo8L3N2Zz4NCg==) no-repeat center center;
+    background-size: cover;
+    overflow: visible;
+}
+
+.pro-plans .pro-plan-wrap .plan-flag:before {
+    content: '';
+}
+
+.plan-tile .plan-flag {
+    position: absolute;
+    top: -20px;
+    right: 30px;
+    color: #fff;
+    display: inline-block;
+    padding: 0 15px;
+    line-height: 2.5;
+}
+
+.pro-plans .pro-plan-wrap h6 {
+    margin-top: 0;
+}
+
+.pro-plans .pro-plan-wrap h2 {
+    margin-bottom: 14px;
+}
+
+.pro-plans .pro-plan-wrap .plan-title {
+    font-size: 30px;
+    font-size: 3rem;
+    margin-top: 0;
+    font-family: 'Walsheim-Bold';
+    text-transform: none;
+    word-wrap: break-word;
+    word-break: break-word;
+    white-space: -moz-pre-wrap;
+}
+
+.pro-plans .pro-plan-wrap .plan-subtitle {
+    color: #000 !important;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.pro-plans .pro-plan-wrap .plan-text {
+    min-height: 44px;
+    margin-bottom: 5px;
+}
+
+.pro-plans .pro-plan-wrap .plan-tile-top {
+    padding: 0px;
+}
+
+.pro-plans .pro-plan-wrap .plan-disclaimers {
+    font-size: 14px;
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+}
+
+.pro-plans .pro-plan-wrap .plan-price-wrap {
+    min-height: 92px;
+}
+
+.pro-plans .pro-plan-wrap .plan-price-wrap .plan-price {
+    font-size: 45px;
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: #ef6c0f;
+    font-family: 'Walsheim-Bold';
+}
+
+.pro-plans .pro-plan-wrap .plan-price-wrap .plan-duration {
+    font-size: 24px;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #ef6c0f;
+}
+
+.pro-plans .pro-plan-wrap .btn {
+    margin-bottom: 20px;
+}
+
+.pro-plans .pro-plan-wrap .plan-item {
+    border-top: 0 none;
+    min-height: 0;
+    padding: 5px 0;
+    text-align: left;
+    font-size: 16px;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+}
+.pro-plans .pro-plan-wrap .check-item {
+    border-top: 0 none;
+    min-height: 0;
+    text-align: left;
+    font-size: 16px;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+}
+
+.pro-plans .include-check {
+    position: relative;
+    padding-left: 45px;
+    margin-top: 20px;
+}
+
+.pro-plans .include-check:before {
+    content: "";
+    background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
+    background-position: 0 -668px;
+    background-size: 205px auto;
+    width: 25px;
+    height: 27px;
+    padding-right: 5px;
+    position: absolute;
+    left: 0;
+    top: -6px;
+}
+
+.pro-plans .sf-tipper-target {
+    background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
+    background-position: 0 -864px;
+    width: 15px;
+    height: 17px;
+    display: inline-block;
+    background-size: 205px auto;
+    vertical-align: baseline;
 }
     </style><!--[if lt IE 9]>
     <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
@@ -1120,10 +1504,9 @@ h2.api-error-header {
           #domain-available-marquee-view .get-it-now-btn {top: 15px; }
           #domain-available-marquee-view .purchase-btn {margin-top: 5px;}
           #domain-available-marquee-view h2 {margin: 0px;}
-          
-          
         </style>
       </atlantis:webstash>
+      <available-domain-name></available-domain-name>
       <section id="domain-available-marquee-view" class="js-marquee-section">
         <div class="bg-green-official">
           <div class="container">
@@ -1175,7 +1558,7 @@ h2.api-error-header {
           #domain-not-available-marquee-view { display: none; }
           #domain-not-available-marquee-view .pro-plans .pro-plan-wrap {border-top: 10px solid #008a32; padding: 20px;}
           #domain-not-available-marquee-view .pro-plans {margin-top: 0px; }
-          #domain-not-available-marquee-view .domain-not-available-heading-text  { color: #333333; }
+          #domain-not-available-marquee-view h2.domain-not-available-heading-text  { color: #333333; margin: 10px 0 0; font-size: 40px; font-family: "Walsheim-Black"; }
           #domain-not-available-marquee-view h4.other-domains-heading-text {padding-top 20px; font-size: 24px; color:#333; font-weight: bold; }
           #domain-not-available-marquee-view h6.results-list-heading-text {padding-top 20px; font-size: 18px; color:#333; }
           #domain-not-available-marquee-view .domain-spin-wrap {min-height: 120px;border: solid 1px #cccccc;margin-bottom: 15px;} 
@@ -1192,6 +1575,11 @@ h2.api-error-header {
           #spin-results h4.domain-name-display {font-size: 30px; color: #333; font-weight:bold;}
           #spin-results h2.domain-name-display-tld {font-size: 40px; color: #333;}
           #domain-not-available-marquee-view button.view-all-button {font-size: 18px; color: #6586C4; font-family: Arial;}
+          #spin-results .plan-tile {margin-top: 0px;}
+          
+          #domain-not-available-marquee-view h2.not-available-domain-name-text {margin: 10px 0 0;}
+          span#not-available-domain-name {text-transform: lowercase; color: #333333; background: rgba(254, 220, 69, 0.7); padding: 5px;line-height: 1.6em;word-wrap: break-word;  }
+          #domain-available-marquee-view .available-domain-name-text {text-transform: lowercase; color: #333333; background: rgba(254, 220, 69, 0.7); padding: 5px;line-height: 1.6em;word-wrap: break-word;  }
           
         </style>
       </atlantis:webstash>
@@ -1201,6 +1589,11 @@ h2.api-error-header {
             <div class="row">
               <div class="col-md-12">
                 <h2 class="domain-not-available-heading-text">[@L[cds.sales/offers/online-business:32573-sorry-domain-unavailable]@L]</h2>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-8 col-sm-12">
+                <h2 class="not-available-domain-name-text"><span id="not-available-domain-name"></span></h2>
               </div>
             </div>
             <style>

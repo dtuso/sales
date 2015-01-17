@@ -52,7 +52,7 @@ var got1Page = {
   sfDialogErrorButtons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }],
   maxNumberOfSpinsToShowByDefault: 3,
   lastSpinResultCount: 0,
-  dppErrorReturnUrl: '[@T[link:<relative path="~/offers/online-business.aspx"><param name="err" value="dpp1" /></relative>]@T]',
+  dppErrorReturnUrl: '[@T[link:<relative path="~/offers/online-business.aspx"><param name="tldRegErr" value="{0}" /></relative>]@T]',
   offersCodes: {
     packageId_wsb: 'gybo_1email_1yr',
     packageId_ols: 'gybo_1email_1yr_ols',
@@ -68,7 +68,7 @@ var got1Page = {
   },
   imagePath: '[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/',
   canOfferOls: true,
-  animationTime: 800,
+  animationTime: 600,
   animationEasingType: 'swing'
 };
 
@@ -134,8 +134,8 @@ $(document).ready(function() {
   tokenizeTheDataTokenizeAttribute();
 
   wireupModals();
-  if(getParameterByName('err') === "dpp1") {
-    showDomainRegistrationFailure(getParameterByName('tld'));
+  if(getParameterByName('tldRegErr').length > 0) {
+    showDomainRegistrationFailure(getParameterByName('tldRegErr'));
   } else {
     showTypeYourDomain();
   }
@@ -371,7 +371,7 @@ function domainSearchFormSubmit(e) {
         showTypeYourDomain();
 
         // tokenize header on search available page
-        $('#available-domain-name').text(exactMatchDomain.Fqdn);
+        $('span#available-domain-name').text(exactMatchDomain.Fqdn);
 
         var $thisSection = $this.closest('.js-marquee-section');
         if($thisSection[0].id != "domain-available-marquee-view") {
@@ -381,7 +381,9 @@ function domainSearchFormSubmit(e) {
 
       } else {
 
-        alternateDomains = []; // for testingcd
+        // tokenize header on search available page
+        $('span#not-available-domain-name').text(exactMatchDomain.Fqdn);
+
         // Domain is taken, show spins if possible
         if(alternateDomains.length > 0) {
           // SHOW SPINS
@@ -464,13 +466,16 @@ function goToDppCheckoutPage(e) {
   var $this = $(e.target),
     domain = $this.data('domain'),
     isOLS = $this.hasClass('product-ols'),
-    apiEndpoint3;
+    apiEndpoint3,
+    sourceurl = encodeURIComponent(got1Page.dppErrorReturnUrl.replace(/\{0\}/gi, '.' + domain.Extension));
 
-  apiEndpoint3 = '[@T[link:<relative path="~/api/dpp/searchresultscart/11/"><param name="domain" value="domain" /><param name="packageid" value="packageid" /><param name="itc" value="itc" /><param name="returnUrl" value="returnUrl" /></relative>]@T]';
+
+  apiEndpoint3 = '[@T[link:<relative path="~/api/dpp/searchresultscart/11/"><param name="domain" value="domain" /><param name="packageid" value="packageid" /><param name="itc" value="itc" /><param name="sourceurl" value="sourceurl" /><param name="returnUrl" value="returnUrl" /></relative>]@T]';
   apiEndpoint3 = apiEndpoint3.replace('domain=domain', 'domain=' + domain.Fqdn);
   apiEndpoint3 = apiEndpoint3.replace('packageid=packageid', 'packageid=' + (isOLS ? got1Page.offersCodes.packageId_ols : got1Page.offersCodes.packageId_wsb));
   apiEndpoint3 = apiEndpoint3.replace('itc=itc', 'itc=' + (isOLS ? got1Page.offersCodes.itc_ols : got1Page.offersCodes.itc_wsb));
-  apiEndpoint3 = apiEndpoint3.replace('returnUrl=returnUrl', 'returnUrl=' +  encodeURIComponent(got1Page.dppErrorReturnUrl) );
+  apiEndpoint3 = apiEndpoint3.replace('sourceurl=sourceurl', 'sourceurl=' +  sourceurl );
+  apiEndpoint3 = apiEndpoint3.replace('returnUrl=returnUrl', 'returnUrl=' +  sourceurl );
 
   $.ajaxSetup({cache:false});
   $.ajax({
@@ -589,7 +594,6 @@ function updateDomainCountText(initial) {
 
 function animateMarquee($currentView, $animateToView) {  
   
-
   var currentViewHeight = $currentView.height(),
     windowWidth = $(window).width(),
     $marquee = $('#marquee'),
@@ -620,7 +624,6 @@ function animateHeight($obj, startHeight, finishHeight, zIndex) {
         $obj.css({"position":"relative", "height": "auto", "z-index": "1"});
       }
   });
-
 }
 
 function animateObjectOffToTheLeft($obj, windowWidth, zIndex) {
@@ -635,7 +638,6 @@ function animateObjectOffToTheLeft($obj, windowWidth, zIndex) {
 
         // clean up the views of the screens
         $obj.hide().css({"position":"relative", "width": "auto", "left": "0px", "z-index": "1"});
-        console.log('2');
       }
   });
 }
@@ -651,10 +653,10 @@ function animateObjectInFromTheRight($obj, windowWidth, zIndex) {
       duration: got1Page.animationTime , 
       easing: got1Page.animationEasingType, 
       complete:function(){
-        $obj.css({"position":"relative", "width": "auto", "left": "0px", "z-index": "1"}).show();            
-        console.log('3');
+        $obj.css({"position":"relative", "width": "auto", "left": "0px", "z-index": "1"}).show();  
       }
     });
+  $(document).trigger('resize');
 }
 
 

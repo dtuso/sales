@@ -1,6 +1,8 @@
 //- fails if plansPanels ever need to be nested
 - var plansPanelTotalColumns
 - var plansPanelColumnsPopulated
+- var hasIncludedCss = false
+
 
 mixin planTile(planid)
   case plansPanelTotalColumns
@@ -27,24 +29,26 @@ mixin planTile(planid)
       div.plan-col-2.plan-tile.plan-pro(id=planid)
         block
 
+
 mixin renderPlanTiles(columns, options)
   - plansPanelTotalColumns = columns
   - plansPanelColumnsPopulated = 0
   - options = options || {};
   - options.backgroundColor = options.backgroundColor || "bg-gray-light";
   - options.icode = options.icode || "";
-  style
-    include:css ./styles/plan-tiles.css
+  if(hasIncludedCss === false) 
+    - hasIncludedCss = true
+    style
+      include:css ./styles/plan-tiles.css
   if (columns > 4)
     - containerClass = "plan-container"
   else
     - containerClass = "container"
 
   div(class="pro-plans-wrap #{options.backgroundColor}")
-
-
     #plans(class="#{containerClass} pro-plans", data-icode="#{options.icode}")
       block
+
 
 mixin renderCartLogic(url, itc, options)
   - addToCartRedirectUrl = url
