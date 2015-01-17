@@ -9,7 +9,13 @@ section#marquee
   include ./_3_domain-not-available-marquee-view.jade
 
 atlantis:webstash(type="js")
-  script(type="text/javascript").
+  script(type="text/javascript", src="https://img1.wsimg.com/fos/hp/rebrand/js/bigtext.min.js")
+
+  script(type="text/javascript")
+   // $(window).load(function () {
+   //    $('.bigtext').bigtext().css('visibility', 'visible');
+   //      setTimeout( "$('.bigtext').bigtext().css('visibility', 'visible');",500 );
+   //  });
     $(document).ready(function() {
 
       //- $('#default-marquee-view .offer-search-btn').on('click', function(){
