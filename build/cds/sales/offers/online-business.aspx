@@ -132,11 +132,47 @@
       
     </script>
     <atlantis:webstash type="js">
-      <script>//- TODO: fix fastball stuff
+      <script>// Array indexOf shim for IE9 and below
+if (!Array.prototype.indexOf){
+  Array.prototype.indexOf = function(elt /*, from*/) {
+    var len = this.length >>> 0;
+    var from = Number(arguments[1]) || 0;
+    from = (from < 0) ? Math.ceil(from) : Math.floor(from);
+    if (from < 0) from += len;
+    for (; from < len; from++) {
+      if (from in this && this[from] === elt) return from;
+    }
+    return -1;
+  };
+}
 
-if(typeof(FastballEvent_MouseClick) === "undefined") FastballEvent_MouseClick = function(){return true;};
-if(typeof(fbiLibCheckQueue) === "undefined") fbiLibCheckQueue = function(){return true;};
+/* see: http://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php */
 
+var $allVideos = $("iframe[src^='http://www.youtube.com']"),/* Find all YouTube videos */    
+    $fluidEl = $("body"); /*The element that is fluid width*/
+
+// Figure out and save aspect ratio for each video
+$allVideos.each(function() {
+  $(this)
+    .data('aspectRatio', this.height / this.width)
+    // and remove the hard coded width/height
+    .removeAttr('height')
+    .removeAttr('width');
+});
+
+// When the window is resized
+$(window).resize(function() {
+  var newWidth = $fluidEl.width();
+  // Resize all videos according to their own aspect ratio
+  $allVideos.each(function() {
+    var $el = $(this);
+    $el
+      .width(newWidth)
+      .height(newWidth * $el.data('aspectRatio'));
+  });
+// Kick off one resize to fix all videos on page load
+}).resize();
+/* end import */
 
 
 var got1Page = {
@@ -165,42 +201,15 @@ var got1Page = {
     bingAdCredits: '[@T[currencyprice:<price usdamount="5000" dropdecimal="true" htmlsymbol="false" />]@T]'
   },
   imagePath: '[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/',
-  canOfferOls: true
+  canOfferOls: true,
+  animationTime: 800,
+  animationEasingType: 'swing'
 };
-
-
-function showAndOrderDynamicTldsInList(selector) {
-
-  //- <span class="sorted-tld-list"><span class="tld-list tld-ca">.CA, </span>
-  //- <span class="tld-list tld-club">.CLUB, </span></span>or .ORG
-
-  var $this = $(selector),
-    formatTldSelector = function(tld) { return '.tld-' + tld.replace('.','-')},
-    tldList = got1Page.tldInfo.tlds,
-    removedSpansArr = [],
-    $sortedArea = $this.find(".sorted-tld-list");
-
-  //- remove all dynamic tlds from this
-  $.each(tldList, function(idx, tld){
-    var $tldItem = $this.find(formatTldSelector(tld));
-    removedSpansArr.push($tldItem);
-  });
-
-  //- insert sorted HTML back into the original object and show the ones that are turned on
-  $sortedArea.empty();
-  $.each(removedSpansArr, function(idx, tldSpan) {
-    $sortedArea.append(tldSpan);
-  });
-
-  //- show sorted list
-  $this.find('.tld-list').show();
-}
 
 
 ##if(!productIsOffered(105))
   got1Page.canOfferOls = false;
 ##endif
-
 
 ##if(countrySiteAny(ca) || isManager())  
   if(got1Page.tldInfo.isPossibleAdditionalTld('ca')) {
@@ -255,13 +264,15 @@ $(document).ready(function() {
   showAndOrderDynamicTldsInList("#domain-available-marquee-view .invalid-TLD-entered");
   showAndOrderDynamicTldsInList("#domain-not-available-marquee-view .invalid-TLD-entered");
 
-  tokenizeDisclaimerModals();
- 
+  tokenizeDisclaimerModals(); 
   tokenizeTheDataTokenizeAttribute();
 
   wireupModals();
-
-
+  if(getParameterByName('err') === "dpp1") {
+    showDomainRegistrationFailure(getParameterByName('tld'));
+  } else {
+    showTypeYourDomain();
+  }
 
   //set up domain search buttons to do a domain search
   $('#marquee')
@@ -292,25 +303,49 @@ $(document).ready(function() {
   // set up verify buttons on spin results to do validation before sending to DPP
   $('#domain-available-marquee-view').on('click', '.purchase-btn', showChoicesScreen);
   
-  showTypeYourDomain();
 
   $('#domain-not-available-marquee-view').on('click', '.select-and-continue', verifyDomainIsStillAvailable);
   $('#step2-choose-product').on('click','.btn-purchase', goToDppCheckoutPage);
 
   displayMoreResultsLinks();
-  $('#show-more-section').on('click', '.show-more-arrow', displayMoreResultsArea);
+  $('#show-more-section').on('click', '.clickable-show-more', displayMoreResultsArea);
   $('#domain-not-available-marquee-view').on('click', '.view-all-button', displayMoreResultsArea);
 
   // track ci codes
   $('[data-ci]').click(function (e) {
       var $this = $(this);
       var ci = $this.attr('data-ci');
-      //- TODO: fix fastball
-      //FastballEvent_MouseClick(e, ci, $(this)[0], 'a');
-      //fbiLibCheckQueue();
+      FastballEvent_MouseClick(e, ci, $(this)[0], 'a');
+      fbiLibCheckQueue();
+  });
+});
+
+function showAndOrderDynamicTldsInList(selector) {
+
+  //- <span class="sorted-tld-list"><span class="tld-list tld-ca">.CA, </span>
+  //- <span class="tld-list tld-club">.CLUB, </span></span>or .ORG
+
+  var $this = $(selector),
+    formatTldSelector = function(tld) { return '.tld-' + tld.replace('.','-')},
+    tldList = got1Page.tldInfo.tlds,
+    removedSpansArr = [],
+    $sortedArea = $this.find(".sorted-tld-list");
+
+  //- remove all dynamic tlds from this
+  $.each(tldList, function(idx, tld){
+    var $tldItem = $this.find(formatTldSelector(tld));
+    removedSpansArr.push($tldItem);
   });
 
-});
+  //- insert sorted HTML back into the original object and show the ones that are turned on
+  $sortedArea.empty();
+  $.each(removedSpansArr, function(idx, tldSpan) {
+    $sortedArea.append(tldSpan);
+  });
+
+  //- show sorted list
+  $this.find('.tld-list').show();
+}
 
 function tokenizeTheDataTokenizeAttribute() {
   $('[data-tokenize]').each(function(){
@@ -377,7 +412,7 @@ function wireupModals() {
 
 
   $('#wsb-video-btn, #wsb-only-video-btn').on('click', function(){
-    $("#site-choice-wsb-video-modal").sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
+    $("#site-choice-wsb-video-modal").sfDialog({titleHidden:true, dialogWidthIdeal:840, buttons: []});
   });
   $('#wsb-designs-btn, #wsb-only-designs-btn').on('click', function(){
     $("#site-choice-wsb-designs-modal").sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
@@ -385,7 +420,7 @@ function wireupModals() {
 
   if(got1Page.canOfferOls) {
     $('#ols-video-btn').on('click', function(){
-      $("#site-choice-ols-video-modal").sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
+      $("#site-choice-ols-video-modal").sfDialog({titleHidden:true, dialogWidthIdeal:840, buttons: []});
     });
     $('#ols-stores-btn').on('click', function(){
       $("#site-choice-ols-stores-modal").sfDialog({titleHidden:true, buttons: [], dialogWidthIdeal:1240 });
@@ -428,20 +463,23 @@ function isTldValid(domain) {
 
 function domainSearchFormSubmit(e) {
  
+
   var $this = $(e.target),
-    $textInput = $this.siblings('.search-form-input'),
-    domain = $textInput.val().trim(), 
+    $textInput = $this.closest('.offer-search-box').find('.search-form-input'),
+    domain = $.trim($textInput.val()), 
     sucessful = false,
     apiEndpoint1;
 
   if((domain && domain.length==0) || !domain) return;
-  
+
   domain = formatDomainWithDefaultTldIfNoneSpecified(domain);
 
   if(!isTldValid(domain)) {
     displayInvlidTldMessage();
     return;
   }
+
+  $('#marquee').find('.search-form-input').val(''); 
 
   apiEndpoint1 = '[@T[link:<relative path="~/domainsapi/v1/search/free"><param name="domain" value="domain" /><param name="itc" value="itc" /></relative>]@T]';
   apiEndpoint1 = apiEndpoint1.replace('domain=domain', 'q=' + domain);
@@ -462,23 +500,36 @@ function domainSearchFormSubmit(e) {
 
       if(isAvailable) {
         // Domain is available, so allow them to search again or to select this available domain
-        showSuccessfulSearch(exactMatchDomain);
+
+        // setup search box
+        showTypeYourDomain();
+
+        // tokenize header on search available page
+        $('#available-domain-name').text(exactMatchDomain.Fqdn);
+
+        var $thisSection = $this.closest('.js-marquee-section');
+        if($thisSection[0].id != "domain-available-marquee-view") {
+          $('#domain-available-marquee-view').find('.purchase-btn').data('domain', exactMatchDomain);
+          animateMarquee($thisSection, $('#domain-available-marquee-view') /*toView*/);
+        }
 
       } else {
+
+        alternateDomains = []; // for testingcd
         // Domain is taken, show spins if possible
         if(alternateDomains.length > 0) {
           // SHOW SPINS
-          showSearchSpins(exactMatchDomain, alternateDomains);
+          showSearchSpins($this, exactMatchDomain, alternateDomains);
         } else {
           // NO SPINS
-          showApi1SearchError(e, domain);
+          showApi1or2SearchError(e, domain);
         }
 
       }    
 
     },
     error: function(){
-      showApi1SearchError(e, domain);
+      showApi1or2SearchError(e, domain);
     }
   });
 
@@ -519,7 +570,7 @@ function verifyDomainIsStillAvailable(e) {
       }
     },
     error: function(){
-      showApi2SearchError(e, domain);
+      showApi1or2SearchError(e, domain);
     }
   });
 
@@ -562,41 +613,25 @@ function goToDppCheckoutPage(e) {
     dataType: 'json',
     cache: false,
     success: function(data){
-
       if(data && data.Success) {
-
         window.location = data.NextStepUrl;
         return;
-
       } else {
-
         showApi3SearchError(e, domain);
-
       }
     },
     error: function(){
-
       showApi3SearchError(e, domain);
-
     }
   });
 
 }
 
-function showSuccessfulSearch(domain){  
+function showSearchSpins($this, domain, alternateDomains){  
 
-  // setup search box
-  $('.search-message').hide();
+  // setup search box  
+  showTypeYourDomain();
 
-  $('#available-domain-name').text(domain.Fqdn);
-  animateToAvailable(domain);
-
-}
-
-function showSearchSpins(domain, alternateDomains){  
-
-  // setup search box
-  $('.search-message').hide();
   displayMoreResultsLinks();
 
   // clear any spins from the DOM
@@ -616,13 +651,21 @@ function showSearchSpins(domain, alternateDomains){
   updateDomainCountText(true);
   $("#spin-results .spin-result:lt(" + got1Page.maxNumberOfSpinsToShowByDefault + ")").show(); // show first 3 results
 
-  animateToNotAvailable(domain); 
+  var $thisSection = $this.closest('.js-marquee-section');
+  if($thisSection[0].id != "domain-not-available-marquee-view") {
+    animateMarquee($thisSection, $('#domain-not-available-marquee-view') /*toView*/);
+  }
 
 }
 
-function showApi1SearchError(e,domain){
-  $('.search-message').hide();
-  $('.api-A-failure').show();
+function showApi1or2SearchError(e,domain){
+  var $modal = $("#api-failure");
+  $modal.sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
+}
+
+function showApi3SearchError(e,domain){  
+  var $modal = $("#step2-choose-product .api-c-failure-modal");
+  $modal.sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
 }
 
 function displayInvlidTldMessage(){
@@ -630,19 +673,12 @@ function displayInvlidTldMessage(){
   $('#marquee .invalid-TLD-entered').show();
 }
 
-function showApi2SearchError(e,domain){
-  var $modal = $("#step2-choose-product .api-b-failure-modal");
-  $modal.sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
-}
-
-function showApi3SearchError(e,domain){
-  
-  var $modal = $("#step2-choose-product .api-c-failure-modal");
-  $modal.sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
-
-}
-
-function showDomainRegistrationFailure() {
+function showDomainRegistrationFailure(tld) {
+  var 
+    $failArea = $('#marquee .domain-eligibility-fail'), 
+    html = $failArea.html();
+  html = html.replace(/\{0\}/gi, tld)
+  $failArea.html(html);
   $('#marquee .search-message').hide();
   $('#marquee .domain-eligibility-fail').show();
 }
@@ -653,17 +689,17 @@ function showTypeYourDomain() {
 }
 
 function displayMoreResultsLinks() {
-  $("#domain-not-available-marquee-view button.view-all-button").show();
+  $("#domain-not-available-marquee-view .view-all-button").show();
   $("#show-more-section").show();
 }
 
 function hideMoreResultsLinks() {
-  $("#domain-not-available-marquee-view button.view-all-button").hide();
+  $("#domain-not-available-marquee-view .view-all-button").hide();
   $("#show-more-section").hide();
 }
 
 function displayMoreResultsArea () {
-  $("#spin-results .spin-result").show('slow');
+  $("#spin-results .spin-result").slideDown(got1Page.animationTime);
   hideMoreResultsLinks();
   updateDomainCountText(false);
 }
@@ -682,6 +718,87 @@ function updateDomainCountText(initial) {
     numbersHtml = numbersHtml.replace(/\{1\}/gi, got1Page.lastSpinResultCount);
   }
   $header.html(numbersHtml);
+}
+
+
+function animateMarquee($currentView, $animateToView) {  
+  
+
+  var currentViewHeight = $currentView.height(),
+    windowWidth = $(window).width(),
+    $marquee = $('#marquee'),
+    marqueeHeight = $('#marquee').height();
+
+  // show view offscreen to get height
+  $animateToView.css({"position":"absolute", "left": windowWidth + "px", "width": windowWidth + "px"}).show();
+  // can only get height when shown      
+  var toViewHeight = $animateToView.height(),
+    maxHeight = Math.max(currentViewHeight, toViewHeight),
+    minHeight = Math.min(currentViewHeight, toViewHeight);
+  
+  //run the animations
+  animateHeight($marquee, marqueeHeight, toViewHeight, 1);  
+  animateObjectOffToTheLeft($currentView, windowWidth, 2);
+  animateObjectInFromTheRight($animateToView, windowWidth, 3);
+}
+
+function animateHeight($obj, startHeight, finishHeight, zIndex) {
+  $obj
+    .css({"height": startHeight + "px", "z-index": zIndex})
+    .animate({
+      "height": finishHeight + "px"
+    },{ 
+      duration: got1Page.animationTime, 
+      easing: got1Page.animationEasingType, 
+      complete:function(){
+        $obj.css({"position":"relative", "height": "auto", "z-index": "1"});
+      }
+  });
+
+}
+
+function animateObjectOffToTheLeft($obj, windowWidth, zIndex) {
+  $obj
+    .css({"position":"absolute", "left": "0px", "width": windowWidth + "px", "z-index": zIndex})
+    .animate({
+      "left": "-" + windowWidth + "px"
+    },{ 
+      duration: got1Page.animationTime, 
+      easing: got1Page.animationEasingType, 
+      complete:function(){
+
+        // clean up the views of the screens
+        $obj.hide().css({"position":"relative", "width": "auto", "left": "0px", "z-index": "1"});
+        console.log('2');
+      }
+  });
+}
+
+function animateObjectInFromTheRight($obj, windowWidth, zIndex) {
+
+  $obj
+    .css({"position":"absolute", "left": windowWidth + "px", "width": windowWidth + "px", "z-index": zIndex})
+    .show()
+    .animate({
+      "left": "0px"
+    },{ 
+      duration: got1Page.animationTime , 
+      easing: got1Page.animationEasingType, 
+      complete:function(){
+        $obj.css({"position":"relative", "width": "auto", "left": "0px", "z-index": "1"}).show();            
+        console.log('3');
+      }
+    });
+}
+
+
+// Page Global script -- changes will effect all campaigns 
+// get url parameter by parameter name
+function getParameterByName(name) {
+  name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+  var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+      results = regex.exec(location.search);
+  return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
 
       </script>
@@ -722,16 +839,75 @@ function updateDomainCountText(initial) {
   padding-right: 5px;
   position: absolute;
   left: 0;
-  top: 0;
+  top: -6px;
 }
 
 *[data-tokenize] {visibility: hidden;}
 
 .tld-list { display: none;}
+
+
+#marquee h3.get-a-domain-text,
+#step2-choose-product h3.choose-header {
+  font-size: 24px; 
+  color: #232323;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.disclaimers-row {
+  margin: 20px 0;
+  font-size:14px;
+  color:#666;
+}
+
+.bg-white {
+    background-color: #fff;
+}
+.bg-yellow {
+    background-color: #ffde2d;
+}
+.bg-gray-lighter, .bg-pro-gray {
+    background-color: #e8e8e8;
+}
+.bg-gray-light {
+    background-color: #d9d9d9;
+}
+.bg-green-official {
+    background-color: #77c043;
+}
+.bg-green-new {
+    background-color: #5caf2b;
+}
+.bg-green-official-light {
+    background-color: #84d54a;
+}
+.bg-gray-darkest {
+    background-color: #333333;
+}
+
+h2.api-error-header {
+  font-size: 30px;
+  color: #333;
+  font-family: "Walsheim-Black";
+}
+h2.api-error-header img {
+  float:left;
+  margin-right: 10px;
+}
+
+h2.api-error-header {
+
+}
     </style><!--[if lt IE 9]>
     <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
     <link href="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy.min.html" id="respond-proxy" rel="respond-proxy">
     <script src="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy-combo.min.js"></script><![endif]-->
+    <script type="text/javascript">
+      delayLoader.addScript('[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2')
+      //- delayLoader.addScript('[@T[link:<javascriptroot />]@T]/fastball/js_lib/Fastball.ChannelIntegration-2.0.6.min.js')
+      
+    </script>
     <!-- Google Tag Manager-->
     <!-- End Google Tag Manager-->
     <script type="text/javascript">
@@ -749,11 +925,11 @@ function updateDomainCountText(initial) {
     <!-- HEADERBEGIN--> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- HEADEREND-->
-    <!-- none-->
+    <!-- nothing to see here-->
     <atlantis:webstash type="css">
       <style>
         #marquee {margin:0 auto; padding-top:15px;background-color: #77c043;}
-        #marquee .get-a-domain-text { margin-top: 20px; }
+        #api-failure {display: none;}
         
       </style>
     </atlantis:webstash>
@@ -836,31 +1012,39 @@ function updateDomainCountText(initial) {
           
           /* (end) speech */
           
-          
           #default-marquee-view { display: inline; padding-bottom:40px; }
           #default-marquee-view .get-online-wrapper {position: relative; height: 260px;}
-          #default-marquee-view .get-online-dash {position: absolute; left: 20px; top: 10px;}
-          #default-marquee-view .get-online-text {font-size: 46pt; color:#333333;}
+          #default-marquee-view .get-online-dash {position: absolute; left: 20px; top: 10px; }
+          #default-marquee-view .get-online-text {font-size: 46pt; color:#333333; font-weight: bold;}
           #default-marquee-view .get-online-image {display:none;width: 275px; overflow: hidden; height: 35px;}
           #default-marquee-view .green-arrow {position: absolute; left: 0px; top: 137px;}
           #default-marquee-view .today-text {position: absolute; left: 20px; top: 55px; font-size: 104pt;margin: 0px;color:#333333;}
-          #default-marquee-view .as-low-as-text {position: absolute; left: 45px; top: 160px; color: #fff;}
-          #default-marquee-view .top-disclaimer-text {position: absolute; left: 45px; top: 240px; color:#00701D;font-size: 12px}
+          #default-marquee-view .as-low-as-text {position: absolute; left: 45px; top: 160px; color: #fff;font-size:30px; font-weight: bold; text-transform: uppercase;}
+          #default-marquee-view .top-disclaimer-text {position: absolute; left: 45px; top: 240px; color:#00701D;font-size: 12px;}
           #default-marquee-view .you-get-wrapper {position: relative; height: 260px;}
           #default-marquee-view .you-get-image {position: absolute; left: 10px; top: 70px; height: 35px;}
           #default-marquee-view .domain-text {position: absolute; left: 30px; top: 185px; font-size: 25px; color: #333333;}
           #default-marquee-view .website-text {position: absolute; left: 40px; top: 185px; font-size: 25px; color: #333333;}
           #default-marquee-view .email-text {position: absolute; left: 65px;  top: 185px; font-size: 25px; color: #333333;}
           #default-marquee-view .powered-by-text {position: absolute; left: 55px; top: 214px; font-size: 11px; color: #333333;}
-          #default-marquee-view .see-details-disclaimer-link {color:#00701D;font-size: 12px; text-decoration: none;cursor:pointer;}
-          #default-marquee-view .see-details-disclaimer-link:hover {text-decoration: underline;}
+          #default-marquee-view .see-details-disclaimer-link {color:#00701D;font-size: 12px; cursor:pointer;}
           #default-marquee-details-modal h2 {margin: 0 0 20px;}
           
-          html[lang*=en] .get-online-image {display:inline-block;}
+          html[lang="en-US"] #default-marquee-view .get-online-image {display:inline-block;}
+          
+          
+          //- @media only screen and (max-width: 768px) {
+          //-   .features {
+          //-     background-image: none !important;
+          //-   }
+          //- }
+          
+          
+          
           
         </style>
       </atlantis:webstash>
-      <section id="default-marquee-view" class="bg-green-official">
+      <section id="default-marquee-view" class="bg-green-official js-marquee-section">
         <div class="container">
           <div class="row">
             <div class="col-md-6 col-sm-12">
@@ -868,7 +1052,7 @@ function updateDomainCountText(initial) {
                 <div class="clearfix get-online-dash"><span class="headline-secondary get-online-text">[@L[cds.sales/offers/online-business:32573-top-banner-headline]@L]</span><span class="get-online-image"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-dash.png"></span></div><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-marker.png" class="green-arrow">
                 <h1 class="headline-primary today-text">[@L[cds.sales/offers/online-business:32573-top-banner-subheadline]@L]</h1>
                 <h3 data-tokenize="[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T]" class="as-low-as-text">[@L[cds.sales/offers/online-business:32573-as-low-as]@L]</h3>
-                <div class="top-disclaimer-text small">[@L[cds.sales/offers/online-business:32573-top-small-disclaimer-text]@L] 
+                <div class="top-disclaimer-text">[@L[cds.sales/offers/online-business:32573-top-small-disclaimer-text]@L] 
                   <button class="btn-link see-details-disclaimer-link">[@L[cds.sales/offers/online-business:32573-top-small-disclaimer-details-link]@L]</button>
                 </div>
               </div>
@@ -891,23 +1075,23 @@ function updateDomainCountText(initial) {
             </div>
           </div>
           <style>
-            .offer-search-box .search-form-input {height: 67px; padding: 20px; color: #333; font-size:18px;border-top-color: #fff; border-top-width: 3px; border-top-style: inset; border-bottom: 1px solid #ccc; border-left: 1px solid #ccc; border-right: 1px solid #ccc; width: 850px;}
-            .offer-search-box label.searchInput {};
-            .offer-search-box button.offer-search-btn { font-size: 20px; height: 66px; margin-top: -6px; }
             .offer-search-box { padding-bottom:20px;}
             .search-message { display: none; margin-left:20px; margin-top:30px;width:65%;}
             .domain-search-messaging-row {padding-bottom: 40px;}
+            .get-a-domain-text {margin: 20px 0 5px;}
             
           </style>
           <div class="row">
             <div class="col-md-12">
-              <h5 class="get-a-domain-text">[@L[cds.sales/offers/online-business:32573-step-1-get-a-domain]@L]</h5>
+              <h3 class="get-a-domain-text">[@L[cds.sales/offers/online-business:32573-step-1-get-a-domain]@L]</h3>
             </div>
           </div>
           <div class="row">
             <div class="col-md-12 offer-search-box">
-              <input type="text" placeholder="[@L[cds.sales/offers/online-business:32573-domain-search-placeholder]@L]" name="domainToCheck" autocomplete="off" maxlength="63" class="search-form-input searchInput helveticafont"/>
-              <button type="button" name="searchButton" data-ci="12345" class="btn btn-primary btn-lg offer-search-btn">[@L[cds.sales/offers/online-business:32573-search]@L]</button>
+              <div class="input-group">
+                <input type="text" placeholder="[@L[cds.sales/offers/online-business:32573-domain-search-placeholder]@L]" name="domainToCheck" autocomplete="off" maxlength="63" class="form-control input-lg search-form-input searchInput helveticafont"/><span class="input-group-btn">
+                  <button type="button" name="searchButton" data-ci="12345" class="btn btn-primary btn-lg offer-search-btn">[@L[cds.sales/offers/online-business:32573-search]@L]</button></span>
+              </div>
             </div>
           </div>
           <div class="row domain-search-messaging-row">
@@ -940,7 +1124,7 @@ function updateDomainCountText(initial) {
           
         </style>
       </atlantis:webstash>
-      <section id="domain-available-marquee-view">
+      <section id="domain-available-marquee-view" class="js-marquee-section">
         <div class="bg-green-official">
           <div class="container">
             <div class="row">
@@ -961,23 +1145,23 @@ function updateDomainCountText(initial) {
         <div class="bg-white">
           <div class="container">
             <style>
-              .offer-search-box .search-form-input {height: 67px; padding: 20px; color: #333; font-size:18px;border-top-color: #fff; border-top-width: 3px; border-top-style: inset; border-bottom: 1px solid #ccc; border-left: 1px solid #ccc; border-right: 1px solid #ccc; width: 850px;}
-              .offer-search-box label.searchInput {};
-              .offer-search-box button.offer-search-btn { font-size: 20px; height: 66px; margin-top: -6px; }
               .offer-search-box { padding-bottom:20px;}
               .search-message { display: none; margin-left:20px; margin-top:30px;width:65%;}
               .domain-search-messaging-row {padding-bottom: 40px;}
+              .get-a-domain-text {margin: 20px 0 5px;}
               
             </style>
             <div class="row">
               <div class="col-md-12">
-                <h5 class="get-a-domain-text">[@L[cds.sales/offers/online-business:32573-or-search-for-a-new-one]@L]</h5>
+                <h3 class="get-a-domain-text">[@L[cds.sales/offers/online-business:32573-or-search-for-a-new-one]@L]</h3>
               </div>
             </div>
             <div class="row">
               <div class="col-md-12 offer-search-box">
-                <input type="text" placeholder="[@L[cds.sales/offers/online-business:32573-try-a-different-domain-name-placeholder]@L]" name="domainToCheck" autocomplete="off" maxlength="63" class="search-form-input searchInput helveticafont"/>
-                <button type="button" name="searchButton" data-ci="12346" class="btn btn-primary btn-lg offer-search-btn">[@L[cds.sales/offers/online-business:32573-search]@L]</button>
+                <div class="input-group">
+                  <input type="text" placeholder="[@L[cds.sales/offers/online-business:32573-try-a-different-domain-name-placeholder]@L]" name="domainToCheck" autocomplete="off" maxlength="63" class="form-control input-lg search-form-input searchInput helveticafont"/><span class="input-group-btn">
+                    <button type="button" name="searchButton" data-ci="12346" class="btn btn-primary btn-lg offer-search-btn">[@L[cds.sales/offers/online-business:32573-search]@L]</button></span>
+                </div>
               </div>
             </div>
             <div class="row domain-search-messaging-row">
@@ -997,7 +1181,8 @@ function updateDomainCountText(initial) {
           #domain-not-available-marquee-view .domain-spin-wrap {min-height: 120px;border: solid 1px #cccccc;margin-bottom: 15px;} 
           #domain-not-available-marquee-view .domain-name-display {text-transform: lowercase; margin-bottom: 0px; margin-top: 0px;}
           #domain-not-available-marquee-view .domain-name-display-tld {text-transform: lowercase;margin-bottom: 0px; margin-top: 0px;}
-          #domain-not-available-marquee-view .show-more-arrow { position: relative; top: 16px; left: 15px; bottom: 0; margin-left: -10px; width: 0; height: 0; border: 11px solid transparent; border-top-color: #000; content: ''; }
+          #domain-not-available-marquee-view .clickable-show-more {cursor: pointer;}
+          #domain-not-available-marquee-view .show-more-arrow { position: relative; top: 12px; margin-left: 5px; width: 0; height: 0; border: 11px solid transparent; border-top-color: #000; content: ''; }
           #spin-results .spin-results-message, 
           #spin-results .spin-result, 
           #spin-template-wrap .spin-template {display:none;}
@@ -1010,7 +1195,7 @@ function updateDomainCountText(initial) {
           
         </style>
       </atlantis:webstash>
-      <section id="domain-not-available-marquee-view">
+      <section id="domain-not-available-marquee-view" class="js-marquee-section">
         <div class="bg-green-official">
           <div class="container">
             <div class="row">
@@ -1019,23 +1204,23 @@ function updateDomainCountText(initial) {
               </div>
             </div>
             <style>
-              .offer-search-box .search-form-input {height: 67px; padding: 20px; color: #333; font-size:18px;border-top-color: #fff; border-top-width: 3px; border-top-style: inset; border-bottom: 1px solid #ccc; border-left: 1px solid #ccc; border-right: 1px solid #ccc; width: 850px;}
-              .offer-search-box label.searchInput {};
-              .offer-search-box button.offer-search-btn { font-size: 20px; height: 66px; margin-top: -6px; }
               .offer-search-box { padding-bottom:20px;}
               .search-message { display: none; margin-left:20px; margin-top:30px;width:65%;}
               .domain-search-messaging-row {padding-bottom: 40px;}
+              .get-a-domain-text {margin: 20px 0 5px;}
               
             </style>
             <div class="row">
               <div class="col-md-12">
-                <h5 class="get-a-domain-text">[@L[cds.sales/offers/online-business:32573-search-try-again]@L]</h5>
+                <h3 class="get-a-domain-text">[@L[cds.sales/offers/online-business:32573-search-try-again]@L]</h3>
               </div>
             </div>
             <div class="row">
               <div class="col-md-12 offer-search-box">
-                <input type="text" placeholder="[@L[cds.sales/offers/online-business:32573-try-a-different-domain-name-placeholder]@L]" name="domainToCheck" autocomplete="off" maxlength="63" class="search-form-input searchInput helveticafont"/>
-                <button type="button" name="searchButton" data-ci="12347" class="btn btn-primary btn-lg offer-search-btn">[@L[cds.sales/offers/online-business:32573-search]@L]</button>
+                <div class="input-group">
+                  <input type="text" placeholder="[@L[cds.sales/offers/online-business:32573-try-a-different-domain-name-placeholder]@L]" name="domainToCheck" autocomplete="off" maxlength="63" class="form-control input-lg search-form-input searchInput helveticafont"/><span class="input-group-btn">
+                    <button type="button" name="searchButton" data-ci="12347" class="btn btn-primary btn-lg offer-search-btn">[@L[cds.sales/offers/online-business:32573-search]@L]</button></span>
+                </div>
               </div>
             </div>
             <div class="row domain-search-messaging-row">
@@ -1058,8 +1243,8 @@ function updateDomainCountText(initial) {
                   <div class="pro-plan-wrap domain-spin-wrap">
                     <div class="row">
                       <div class="col-md-8 col-sm-12">
-                        <h4 class="domain-name-display">thisreallycoolexample</h4>
-                        <h2 class="domain-name-display-tld">.com</h2>
+                        <h4 class="domain-name-display"></h4>
+                        <h2 class="domain-name-display-tld"></h2>
                       </div>
                       <div class="col-md-4 col-sm-12 text-right">
                         <button class="btn btn-primary select-and-continue spin-results-message">[@L[cds.sales/offers/online-business:32573-select-and-continue-button]@L]</button>
@@ -1072,12 +1257,9 @@ function updateDomainCountText(initial) {
               </div>
             </div>
             <div id="show-more-section">
-              <h6 class="text-center">[@L[cds.sales/offers/online-business:32573-see-more-results]@L]<span class="show-more-arrow"></span></h6>
+              <h6 class="text-center"><span class="clickable-show-more">[@L[cds.sales/offers/online-business:32573-see-more-results]@L]<span class="show-more-arrow"></span></span></h6>
             </div>
           </div>
-        </div>
-        <div class="sf-dialog api-B-failure">
-          <p>[@L[cds.sales/offers/online-business:32573-generic-domain-search-error]@L]</p>
         </div>
       </section>
     </section>
@@ -1098,40 +1280,14 @@ function updateDomainCountText(initial) {
         
         });
         
-        function enableAllSearchButtons(){
-          $('#marquee')
-            .find('.offer-search-btn').removeClass('disabled');
-        }
-        function enableAllAddToCartButtons(){
-          $('#marquee')
-            .find('.purchase-btn').removeClass('disabled');
-        }
-        function animateToAvailable (domainToAttach) {
-          $('#domain-available-marquee-view')
-            .show()
-            .find('.purchase-btn')
-              .removeClass('disabled')
-              .data('domain', domainToAttach);
-          $('#default-marquee-view, #domain-not-available-marquee-view').hide();
-          enableAllSearchButtons();
-        }
-        
-        function animateToNotAvailable() {
-          $('#domain-not-available-marquee-view')
-            .show();
-          $('#domain-available-marquee-view, #default-marquee-view').hide();      
-          enableAllSearchButtons();
-        
-        }
-        
-        function animateToDefault () {
-          $('#default-marquee-view').show();
-          $('#domain-not-available-marquee-view, #domain-available-marquee-view').hide();
-          enableAllSearchButtons();
-        
-        }
       </script>
     </atlantis:webstash>
+    <div id="api-failure" class="sf-dialog api-B-failure">
+      <h2 class="api-error-header"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/WarningSign.png">
+        <div>[@L[cds.sales/offers/online-business:32573-something-unexpected-happened]@L]</div>
+      </h2>
+      <p>[@L[cds.sales/offers/online-business:32573-generic-domain-search-error]@L]</p>
+    </div>
     <atlantis:webstash type="css">
       <style>
         #products.tile-section{ padding-top: 0;padding-bottom: 0;}
@@ -1267,58 +1423,101 @@ function updateDomainCountText(initial) {
     </section>
     <atlantis:webstash type="css">
       <style>
-        #domains .tld-images {margin-top: 0px; margin-left: 60px;}
-        #domains .tld-image {margin: 15px;}
-        #findYourPerfectDomain.tile-section {
-          padding:20px 0;
-        }
-        #findYourPerfectDomain.features-slim {
-          min-height: 241px;
-        }
-        #findYourPerfectDomain {
-          background-color: #F3F3F3;
-        }
         #domains .disclaimer p {
           font-size: 14px;
           color: #666;
         }
-        #domains .features-slim h2 {
-          margin: 10px 0px;
+        #domains .features.features-wrap {
+          min-height: 360px;
         }
         
       </style>
     </atlantis:webstash>
     <section id="domains">
-      <div class="features tile-section">
+      <atlantis:webstash type="css">
+        <style>
+          .features {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: top center;
+          }
+          @media only screen and (max-width: 768px) {
+            .features {
+              background-image: none !important;
+            }
+          }
+          @media only screen and (max-width: 992px) {
+            .features .features-img {
+              width: 85%;
+            }
+          }
+          @media only screen and (max-width: 768px) {
+            .features .features-img {
+              width: 50%;
+            }
+          }
+          @media only screen and (max-width: 992px) {
+            .features .features-img.features-img-right-slim {
+              margin: 40px 0 0;
+            }
+          }
+          @media only screen and (max-width: 992px) {
+            .features .features-img.features-img-left,
+            .features .features-img.features-img-right {
+              margin: 0 0 40px;
+            }
+          }
+          .features.features-wrap {
+            min-height: 560px;
+          }
+          @media only screen and (max-width: 992px) {
+            .features.features-wrap {
+              min-height: 0;
+            }
+          }
+          @media only screen and (max-width: 992px) {
+            .features.features-wrap {
+              padding: 40px 0;
+            }
+          }
+          .features.features-wrap h2,
+          .features.features-slim h2 {
+            font-family: 'Walsheim-Black';
+            margin: 0 0 20px;
+            color: #333;
+            font-size: 40px;
+          }
+          .features.text-white * {
+            color: #fff !important;
+          }
+          .features .features-subtitle {
+            font-family: 'Walsheim-Bold';
+            margin-top: 20px;
+          }
+          .features .features-text {
+            margin-bottom: 20px;
+          }
+          .features.features-slim {
+            min-height: 300px;
+          }
+          
+          
+        </style>
+      </atlantis:webstash>
+      <div id="domainSection1What" style="background-image: url('null');" data-lazy-load="" class="features tile-section features-wrap  ">
         <div class="container">
           <div class="row">
-            <div class="col-md-6 col-sm-12 domain-image col-md-push-6"> <img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png"></div>
-            <div class="col-md-6 col-sm-12 col-md-pull-6"> 
-              <h2><mark>[@L[cds.sales/offers/online-business:32573-whats-a-domain-heading]@L]</mark> [@L[cds.sales/offers/online-business:32573-whats-a-domain-text]@L]</h2>
-              <h4>[@L[cds.sales/offers/online-business:32573-whats-a-domain-subtext]@L]</h4>
-              <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-whats-a-domain-bullet-one]@L]</div>
-              <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-whats-a-domain-bullet-two]@L]</div>
+            <div class="col-sm-6 col-sm-push-6">
+              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="text-center"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png" alt="" class="features-img features-img-right">
+              </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="features tile-section">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-6 domain-image col-sm-push-6"> <img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature2.png"></div>
-            <div class="col-sm-6 col-sm-pull-6"> 
-              <h2>[@L[cds.sales/offers/online-business:32573-email-even-better-heading]@L]</h2>
-              <h4>[@L[cds.sales/offers/online-business:32573-email-even-better-text]@L]</h4>
-              <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-email-even-better-bullet-1]@L]</div>
-              <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-email-even-better-bullet-2]@L]</div>
+            <div class="col-sm-6 col-sm-pull-6">
+              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                <h2><mark>[@L[cds.sales/offers/online-business:32573-whats-a-domain-heading]@L]</mark> [@L[cds.sales/offers/online-business:32573-whats-a-domain-text]@L]</h2>
+                <h4 class="features-subtitle">[@L[cds.sales/offers/online-business:32573-whats-a-domain-subtext]@L]</h4>
+                <div class="features-text"><div class="include-check-green">[@L[cds.sales/offers/online-business:32573-whats-a-domain-bullet-one]@L]</div><div class="include-check-green">[@L[cds.sales/offers/online-business:32573-whats-a-domain-bullet-two]@L]</div></div>
+              </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row disclaimer">
-          <div class="col-sm-12"> 
-            <p>[@L[cds.sales/offers/online-business:32573-plus-inline-disclaimer]@L]</p>
           </div>
         </div>
       </div>
@@ -1363,19 +1562,135 @@ function updateDomainCountText(initial) {
               min-height: 0;
             }
           }
-          .features.features-wrap h2 {
-            margin-top: 0;
-          }
           @media only screen and (max-width: 992px) {
             .features.features-wrap {
               padding: 40px 0;
             }
+          }
+          .features.features-wrap h2,
+          .features.features-slim h2 {
+            font-family: 'Walsheim-Black';
+            margin: 0 0 20px;
+            color: #333;
+            font-size: 40px;
           }
           .features.text-white * {
             color: #fff !important;
           }
           .features .features-subtitle {
             font-family: 'Walsheim-Bold';
+            margin-top: 20px;
+          }
+          .features .features-text {
+            margin-bottom: 20px;
+          }
+          .features.features-slim {
+            min-height: 300px;
+          }
+          
+          
+        </style>
+      </atlantis:webstash>
+      <div id="domainSection2Email" style="background-image: url('null');" data-lazy-load="" class="features tile-section features-wrap  ">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6 col-sm-push-6">
+              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="text-center"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature2.png" alt="" class="features-img features-img-right">
+              </div>
+            </div>
+            <div class="col-sm-6 col-sm-pull-6">
+              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                <h2><mark>[@L[cds.sales/offers/online-business:32573-whats-a-domain-heading]@L]</mark> [@L[cds.sales/offers/online-business:32573-whats-a-domain-text]@L]</h2>
+                <h4 class="features-subtitle">[@L[cds.sales/offers/online-business:32573-email-even-better-text]@L]</h4>
+                <div class="features-text"><div class="include-check-green">[@L[cds.sales/offers/online-business:32573-email-even-better-bullet-1]@L]</div><div class="include-check-green">[@L[cds.sales/offers/online-business:32573-email-even-better-bullet-2]@L]</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row disclaimer">
+          <div class="col-sm-12"> 
+            <p class="disclaimers-text">[@L[cds.sales/offers/online-business:32573-plus-inline-disclaimer]@L]</p>
+          </div>
+        </div>
+      </div>
+      <atlantis:webstash type="css">
+        <style>
+          #findYourPerfectDomain .tld-images {margin-top: 0px; margin-left: 60px;}
+          #findYourPerfectDomain .tld-image {margin: 15px;}
+          #findYourPerfectDomain.tile-section {
+            padding:20px 0;
+          }
+          #findYourPerfectDomain.features-slim {
+            min-height: 241px;
+          }
+          #findYourPerfectDomain {
+            background-color: #F3F3F3;
+          }
+          
+          
+        </style>
+      </atlantis:webstash>
+      <atlantis:webstash type="css">
+        <style>
+          .features {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: top center;
+          }
+          @media only screen and (max-width: 768px) {
+            .features {
+              background-image: none !important;
+            }
+          }
+          @media only screen and (max-width: 992px) {
+            .features .features-img {
+              width: 85%;
+            }
+          }
+          @media only screen and (max-width: 768px) {
+            .features .features-img {
+              width: 50%;
+            }
+          }
+          @media only screen and (max-width: 992px) {
+            .features .features-img.features-img-right-slim {
+              margin: 40px 0 0;
+            }
+          }
+          @media only screen and (max-width: 992px) {
+            .features .features-img.features-img-left,
+            .features .features-img.features-img-right {
+              margin: 0 0 40px;
+            }
+          }
+          .features.features-wrap {
+            min-height: 560px;
+          }
+          @media only screen and (max-width: 992px) {
+            .features.features-wrap {
+              min-height: 0;
+            }
+          }
+          @media only screen and (max-width: 992px) {
+            .features.features-wrap {
+              padding: 40px 0;
+            }
+          }
+          .features.features-wrap h2,
+          .features.features-slim h2 {
+            font-family: 'Walsheim-Black';
+            margin: 0 0 20px;
+            color: #333;
+            font-size: 40px;
+          }
+          .features.text-white * {
+            color: #fff !important;
+          }
+          .features .features-subtitle {
+            font-family: 'Walsheim-Bold';
+            margin-top: 20px;
           }
           .features .features-text {
             margin-bottom: 20px;
@@ -1407,12 +1722,13 @@ function updateDomainCountText(initial) {
     <atlantis:webstash type="css">
       <style>
         #step2-choose-product {display: none;}
-        #step2-choose-product .choose-header {margin: 30px 0 40px;}
+        #step2-choose-product .choose-header {
+          margin: 30px 0 40px;      
+        }
         #step2-choose-product .api-c-failure-modal {display: none;}
         #step2-choose-product .pro-plans {
           margin-top:0px; /* override the -210px from sahara.css */
         }
-        
         
       </style>
     </atlantis:webstash>
@@ -1430,7 +1746,7 @@ function updateDomainCountText(initial) {
         <div class="container pro-plans">
           <div class="row">
             <div class="col-sm-12">
-              <h4 class="choose-header">[@L[cds.sales/offers/online-business:32573-step-2-choose-your-website]@L]</h4>
+              <h3 class="choose-header">[@L[cds.sales/offers/online-business:32573-step-2-choose-your-website]@L]</h3>
             </div>
           </div>
           <div class="row">
@@ -1474,6 +1790,9 @@ function updateDomainCountText(initial) {
         </div>
       </div>
       <div class="sf-dialog api-c-failure-modal">
+        <h2 class="api-error-header"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/WarningSign.png">
+          <div>[@L[cds.sales/offers/online-business:32573-something-unexpected-happened]@L]</div>
+        </h2>
         <p>[@L[cds.sales/offers/online-business:32573-get-it-now-error]@L]</p>
       </div>
       <div id="step2-choose-product-wsb-modal" data-title="[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]" class="tokenizable-disclaimer-modal sf-dialog">
@@ -1507,6 +1826,13 @@ function updateDomainCountText(initial) {
           font-size: 14px;
           font-weight: normal;
         }
+        
+        #wsb-only .see-wsb-disclaimer-link,   
+        #site-choice .see-wsb-disclaimer-link, 
+        #site-choice .see-ols-disclaimer-link {
+          color: #333;
+        }
+        
         #site-choice ul.check-bullets li,
         #wsb-only ul.check-bullets li {
           position: relative;
@@ -1523,6 +1849,7 @@ function updateDomainCountText(initial) {
           height: 27px;
           position: absolute;
           left: 0;
+          top: -6px;
         }
         #site-choice ul.check-bullets li h5,
         #wsb-only ul.check-bullets li h5  {
@@ -1541,6 +1868,26 @@ function updateDomainCountText(initial) {
         
         #wsb-only .top-row {padding-top:30px;} /* to match 2-up compare's styling */
         #wsb-only.bg-green-official-light {background-color: #77C043;}
+        
+        .videoWrapper {
+          position: relative;
+          padding-bottom: 56.25%; /* 16:9 */
+          padding-top: 25px;
+          height: 0;
+        }
+        .videoWrapper iframe {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
+        
+        img.video-play-icon {
+          margin-right:10px;
+          vertical-align: top;
+        }
+        
         
       </style>
     </atlantis:webstash> 
@@ -1562,11 +1909,13 @@ function updateDomainCountText(initial) {
           </div>
         </div>
         <div class="row">
-          <div class="col-sm-3 col-sm-push-3 button-margin">
-            <button id="wsb-only-video-btn" class="btn btn-md btn-primary"><i class="uxicon uxicon-play"></i> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]</button>
+          <div class="col-sm-12 button-margin">
+            <button id="wsb-only-video-btn" class="btn btn-md btn-block btn-primary"><img class="video-play-icon" src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_play_icon_small.png" /> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]</button>
           </div>
-          <div class="col-sm-3 col-sm-push-3 button-margin">
-            <button id="wsb-only-designs-btn" class="btn btn-md btn-primary">[@L[cds.sales/offers/online-business:32573-view-designs-button]@L]    </button>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 button-margin">
+            <button id="wsb-only-designs-btn" class="btn btn-md btn-block btn-primary">[@L[cds.sales/offers/online-business:32573-view-designs-button]@L]    </button>
           </div>
         </div>
         <div class="row">
@@ -1602,10 +1951,7 @@ function updateDomainCountText(initial) {
         </div>
       </div>
     </section> 
-    ##endif
-     
-     
-    ##if(productIsOffered(105))
+    ##else
      
     <section id="site-choice">
       <style>
@@ -1770,7 +2116,7 @@ function updateDomainCountText(initial) {
   content: '';
   width: 94px;
   height: 94px;
-  background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+  background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
   background-size: 205px auto;
   background-position: 0 -896px;
   position: absolute;
@@ -1784,7 +2130,7 @@ function updateDomainCountText(initial) {
   content: '';
   width: 94px;
   height: 94px;
-  background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+  background-image: url([@T[link:<imageroot />]@T]ffos/hp/sahara-rebrand-sprite-20141114.png);
   background-size: 205px auto;
   background-position: 0 -896px;
   position: absolute;
@@ -1920,12 +2266,14 @@ function updateDomainCountText(initial) {
                           <button class="btn-link see-wsb-disclaimer-link">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price-disclaimer-link]@L]</a></button>
                         </p>
                       </div>
-                      <div class="row text-center">
-                        <div class="col-md-6 button-margin">
-                          <button id="wsb-video-btn" class="btn btn-md btn-primary"><i class="uxicon uxicon-play"></i> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]</button>
+                      <div class="row">
+                        <div class="col-sm-12 button-margin">
+                          <button id="wsb-video-btn" class="btn btn-md btn-block btn-primary"><img class="video-play-icon" src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_play_icon_small.png" /> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]</button>
                         </div>
-                        <div class="col-md-6 button-margin">
-                          <button id="wsb-designs-btn" class="btn btn-md btn-primary">[@L[cds.sales/offers/online-business:32573-view-designs-button]@L]</button>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-12 button-margin">
+                          <button id="wsb-designs-btn" class="btn btn-md btn-block btn-primary">[@L[cds.sales/offers/online-business:32573-view-designs-button]@L]</button>
                         </div>
                       </div>
                       <div class="row">
@@ -1972,12 +2320,14 @@ function updateDomainCountText(initial) {
                           <button class="btn-link see-ols-disclaimer-link">[@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price-disclaimer-link]@L]</button>
                         </p>
                       </div>
-                      <div class="row text-center">
-                        <div class="col-md-6 button-margin">
-                          <button id="ols-video-btn" class="btn btn-md btn-primary"><i class="uxicon uxicon-play"></i> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]</button>
+                      <div class="row">
+                        <div class="col-sm-12 button-margin">
+                          <button id="ols-video-btn" class="btn btn-md btn-block btn-primary"><img class="video-play-icon" src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_play_icon_small.png" /> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]</button>
                         </div>
-                        <div class="col-md-6 button-margin">
-                          <button id="ols-stores-btn" class="btn btn-md btn-primary">[@L[cds.sales/offers/online-business:32573-see-real-stores-button]@L]</button>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-12 button-margin">
+                          <button id="ols-stories-btn" class="btn btn-md btn-block btn-primary">[@L[cds.sales/offers/online-business:32573-see-real-stores-button]@L]</button>
                         </div>
                       </div>
                       <div class="row">
@@ -2040,8 +2390,10 @@ function updateDomainCountText(initial) {
     <div id="site-choice-ols-modal" data-title="[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]" class="tokenizable-disclaimer-modal sf-dialog">
       <p>[@L[cds.sales/offers/online-business:32573-disclaimer-modal-ols-content]@L]</p>
     </div>
-    <div id="site-choice-ols-video-modal" class="sf-dialog">
-      <iframe width="100%" height="100%" src="//www.youtube.com/embed/rMF9d8-3WBA?html5=1&amp;rel=0&amp;iv_load_policy=3&amp;modestbranding=1" autoplay scrolling="no" frameborder="0" allowfullscreen></iframe>
+    <div id="site-choice-ols-video-modal" class="sf-dialog got-video-modal">
+      <div class="videoWrapper">
+        <iframe width="640" height="390" src="//www.youtube.com/embed/rMF9d8-3WBA?html5=1&amp;rel=0&amp;iv_load_policy=3&amp;modestbranding=1" autoplay scrolling="no" frameborder="0" allowfullscreen></iframe>
+      </div>
     </div>
     <div id="site-choice-ols-stores-modal" class="sf-dialog">
       <atlantis:webstash type="css">
@@ -2129,8 +2481,7 @@ function updateDomainCountText(initial) {
       </div>
       <h1 class="main-heading text-center">[@L[cds.sales/offers/online-business:32573-real-customers-real-sites]@L]</h1>
       <h3 class="subheading text-center">[@L[cds.sales/offers/online-business:32573-our-customers-love-ols]@L]</h3>
-            <style>.item-wrapper { padding: 70px 0 20px; }
-
+            <style>.item-wrapper { padding: 35px 0 20px; }
 .carousel-wrap { padding-bottom: 70px; }
 
 @media only screen and (min-width: 768px){
@@ -2145,7 +2496,7 @@ function updateDomainCountText(initial) {
 }
 
 .carousel-container .carousel .carousel-indicators {
-  bottom: -60px;
+  bottom: -35px;
 }
 
 @media screen and (min-width: 768px){
@@ -2216,13 +2567,14 @@ function updateDomainCountText(initial) {
   padding: 0;
 }
 .carousel-panel .img-center {
-  margin: 50px auto;
+  margin: 15px auto;
 }
 .carousel-panel .carousel-panel-text {
   margin-bottom: 25px;
 }
 .carousel-panel h2 {
   margin-top: 0px;
+  margin-bottom: 10px;
 }
 
 .carousel-container .carousel-control.left {
@@ -2581,8 +2933,10 @@ top: -6px;
     <div id="site-choice-wsb-modal" data-title="[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]" class="tokenizable-disclaimer-modal sf-dialog">
       <p>[@L[cds.sales/offers/online-business:32573-disclaimer-modal-wsb-content]@L]</p>
     </div>
-    <div id="site-choice-wsb-video-modal" class="sf-dialog">
-      <iframe width="100%" height="100%" src="//www.youtube.com/embed/-HtVJyxSQmw?html5=1&amp;rel=0&amp;iv_load_policy=3&amp;modestbranding=1" autoplay scrolling="no" frameborder="0" allowfullscreen></iframe>
+    <div id="site-choice-wsb-video-modal" class="sf-dialog got-video-modal">
+      <div class="videoWrapper">
+        <iframe width="640" height="390" src="//www.youtube.com/embed/-HtVJyxSQmw?html5=1&amp;rel=0&amp;iv_load_policy=3&amp;modestbranding=1" autoplay scrolling="no" frameborder="0" allowfullscreen></iframe>
+      </div>
     </div>
     <div id="site-choice-wsb-designs-modal" class="sf-dialog">
       <h1>_modal_wsb_designs.jade</h1>
