@@ -32,7 +32,11 @@ atlantis:webstash(type="js")
       $('#marquee')
         .find('.purchase-btn').removeClass('disabled');
     }
+
+
+
     function animateToAvailable (domainToAttach) {
+
       $('#domain-available-marquee-view')
         .show()
         .find('.purchase-btn')
@@ -42,13 +46,27 @@ atlantis:webstash(type="js")
       enableAllSearchButtons();
     }
 
-    function animateToNotAvailable() {
+
+    function animateToNotAvailable($currentView) {
+      
+      var currentViewHeight = $currentView.height(),
+        windowWidth = $(window).width(),
+        $notView = $('#domain-not-available-marquee-view');
+
+      // show view offscreen to get height
+      $notView.css({"position":"absolute", "left": windowWidth + "px"});
+
+      var notViewHeight = $notView.height(),
+        maxHeight = Math.max(currentViewHeight, notViewHeight),
+        minHeight = Math.min(currentViewHeight, notViewHeight);
+
       $('#domain-not-available-marquee-view')
         .show();
       $('#domain-available-marquee-view, #default-marquee-view').hide();      
       enableAllSearchButtons();
 
     }
+
 
     function animateToDefault () {
       $('#default-marquee-view').show();
