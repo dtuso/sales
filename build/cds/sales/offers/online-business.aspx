@@ -388,7 +388,7 @@ function wireupModals() {
       $("#site-choice-ols-video-modal").sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
     });
     $('#ols-stores-btn').on('click', function(){
-      $("#site-choice-ols-stores-modal").sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
+      $("#site-choice-ols-stores-modal").sfDialog({titleHidden:true, buttons: [], dialogWidthIdeal:1240 });
     });
   }
 
@@ -686,7 +686,6 @@ function updateDomainCountText(initial) {
 
       </script>
     </atlantis:webstash>
-    <link href="[@T[link:<cssroot />]@T]/fos/mike/0.7.0/css/sahara.css" rel="stylesheet">
     <link href="[@T[link:<cssroot />]@T]/fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css">
     <style>.bg-gray-light {
   background-color: #d9d9d9;
@@ -1394,7 +1393,6 @@ function updateDomainCountText(initial) {
             <div class="col-sm-6 bg-slim-left">
               <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
                 <h2>[@L[cds.sales/offers/online-business:32573-find-your-perfect-name-heading]@L]</h2>
-                <h4 class="features-subtitle">Spend less time on paperwork and more time with customers.</h4>
                 <div class="features-text">[@L[cds.sales/offers/online-business:32573-find-your-perfect-name-text]@L]</div>
               </div>
             </div>
@@ -2048,6 +2046,9 @@ function updateDomainCountText(initial) {
     <div id="site-choice-ols-stores-modal" class="sf-dialog">
       <atlantis:webstash type="css">
         <style>
+          #carousel-ols-stores {
+            width: 1000px;
+          }
           .plan-tile { 
             margin-top: -145px; 
           }
@@ -2058,8 +2059,64 @@ function updateDomainCountText(initial) {
             background-color: #333333;
           }
           .bg-gray-light {
-              background-color: #d9d9d9;
+            background-color: #d9d9d9;
           }
+          .customer-slide {
+            background-image: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-sprite_ols_modal.png');
+            background-repeat: no-repeat;
+            margin-bottom: 20px;
+          }
+          .customer-slide.slide-1 {
+            background-position: 0px 5px;
+            height: 410px;
+            width: 665px;
+          }
+          .customer-slide.slide-2 {
+            background-position: 0px -405px;
+            height: 410px;
+            width: 665px;
+          }
+          .customer-slide.slide-3 {
+            background-position: -0px -815px;
+            height: 410px;
+            width: 665px;
+          }
+          .customer-slide.slide-4 {
+            background-position: 0px -1225px; 
+            height: 410px; 
+            width: 665px;
+          }
+          .customer-byline {
+            font-size: 15px;
+            margin-bottom: 10px;
+          }
+          .btn-default-black {
+            color: #000;
+            border-color: #000;
+          }
+          .carousel-panel-text {
+            min-height: 50px;
+            margin-bottom: 0px;
+          }
+          .main-heading {
+            margin: 0px;
+          }
+          .subheading {
+            margin-bottom: 5px;
+            margin-top: 5px;
+          }
+          .customer-quote {
+            margin-top: 0px;
+            margin-bottom: 10px;
+          }
+          .store-name {
+            margin-top: 10px;
+            margin-bottom: 10px;
+          }
+          .item-wrapper {
+            padding: 20px 0 20px !important;
+          }
+          
           
         </style>
       </atlantis:webstash>
@@ -2070,30 +2127,8 @@ function updateDomainCountText(initial) {
           </div>
         </div>
       </div>
-            <div data-begin="0" data-end="0" class="features-tabbed-carousel-icon">
-              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
-                <div class="feature-carousel-icon"><span class="uxicon uxicon-facebook-box"></span></div>
-                <div class="feature-text">facebook</div>
-              </div>
-            </div>
-            <div data-begin="1" data-end="1" class="features-tabbed-carousel-icon">
-              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
-                <div class="feature-carousel-icon"><span class="uxicon uxicon-twitter"></span></div>
-                <div class="feature-text">twitter</div>
-              </div>
-            </div>
-            <div data-begin="2" data-end="2" class="features-tabbed-carousel-icon">
-              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
-                <div class="feature-carousel-icon"><span class="uxicon uxicon-youtube-box"></span></div>
-                <div class="feature-text">youtube</div>
-              </div>
-            </div>
-            <div data-begin="3" data-end="3" class="features-tabbed-carousel-icon">
-              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
-                <div class="feature-carousel-icon"><span class="uxicon uxicon-yelp"></span></div>
-                <div class="feature-text">yelp</div>
-              </div>
-            </div>
+      <h1 class="main-heading text-center">[@L[cds.sales/offers/online-business:32573-real-customers-real-sites]@L]</h1>
+      <h3 class="subheading text-center">[@L[cds.sales/offers/online-business:32573-our-customers-love-ols]@L]</h3>
             <style>.item-wrapper { padding: 70px 0 20px; }
 
 .carousel-wrap { padding-bottom: 70px; }
@@ -2449,96 +2484,84 @@ top: -6px;
                   </ol>
                   <div class="carousel-inner">
                           <div class="item">
-                            <div class="item-wrapper text-center">
-                              <div data-icode="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-apps-image-facebook-int.jpg" class="img-responsive img-center">
+                            <div class="item-wrapper">
+                              <div data-icode="" class="carousel-panel container">
                                 <div class="row">
-                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <h2>FACEBOOK</h2>
+                                  <div class="col-sm-12">
+                                    <div class="customer-slide slide-2"></div>
                                   </div>
                                 </div>
                                 <div class="row">
-                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <div class="carousel-panel-text">Share your status updates or photos.</div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="item">
-                            <div class="item-wrapper text-center">
-                              <div data-icode="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-apps-image-twitter-int.jpg" class="img-responsive img-center">
-                                <div class="row">
-                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <h2>TWITTER</h2>
+                                  <div class="col-sm-12 col-xs-12">
+                                    <h2 class="store-name">[@L[cds.sales/offers/online-business:32573-ols-customerStoreName2]@L]</h2>
                                   </div>
                                 </div>
                                 <div class="row">
-                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <div class="carousel-panel-text">Share your status updates or photos.</div>
+                                  <div class="col-sm-12 col-xs-12">
+                                    <div class="customer-quote">[@L[cds.sales/offers/online-business:32573-ols-customerQuote2]@L]</div>
+                                    <div class="customer-byline">&mdash; [@L[cds.sales/offers/online-business:32573-ols-customerByLine2]@L]</div><a href="http://www.glossandtoss.net" target="_blank" class="btn btn-default btn-default-black">[@L[cds.sales/offers/online-business:32573-see-it-in-action]@L]</a>
                                   </div>
                                 </div>
                               </div>
                             </div>
                           </div>
                           <div class="item">
-                            <div class="item-wrapper text-center">
-                              <div data-icode="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-apps-image-youtube-int.jpg" class="img-responsive img-center">
+                            <div class="item-wrapper">
+                              <div data-icode="" class="carousel-panel container">
                                 <div class="row">
-                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <h2>YOUTUBE</h2>
+                                  <div class="col-sm-12">
+                                    <div class="customer-slide slide-3"></div>
                                   </div>
                                 </div>
                                 <div class="row">
-                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <div class="carousel-panel-text">Share your status updates or photos.</div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="item">
-                            <div class="item-wrapper text-center">
-                              <div data-icode="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-apps-image-facebook-int.jpg" class="img-responsive img-center">
-                                <div class="row">
-                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <h2>YELP</h2>
+                                  <div class="col-sm-12 col-xs-12">
+                                    <h2 class="store-name">[@L[cds.sales/offers/online-business:32573-ols-customerStoreName3]@L]</h2>
                                   </div>
                                 </div>
                                 <div class="row">
-                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <div class="carousel-panel-text">Share your status updates or photos.</div>
+                                  <div class="col-sm-12 col-xs-12">
+                                    <div class="customer-quote">[@L[cds.sales/offers/online-business:32573-ols-customerQuote3]@L]</div>
+                                    <div class="customer-byline">&mdash; [@L[cds.sales/offers/online-business:32573-ols-customerByLine3]@L]</div><a href="http://www.snap-bibs.com" target="_blank" class="btn btn-default btn-default-black">[@L[cds.sales/offers/online-business:32573-see-it-in-action]@L]</a>
                                   </div>
                                 </div>
                               </div>
                             </div>
                           </div>
                           <div class="item">
-                            <div class="item-wrapper text-center">
-                              <div data-icode="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-apps-image-facebook-int.jpg" class="img-responsive img-center">
+                            <div class="item-wrapper">
+                              <div data-icode="" class="carousel-panel container">
                                 <div class="row">
-                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <h2>PAYPAL</h2>
+                                  <div class="col-sm-12">
+                                    <div class="customer-slide slide-4"></div>
                                   </div>
                                 </div>
                                 <div class="row">
-                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <div class="carousel-panel-text">Share your status updates or photos.</div>
+                                  <div class="col-sm-12 col-xs-12">
+                                    <h2 class="store-name">[@L[cds.sales/offers/online-business:32573-ols-customerStoreName4]@L]</h2>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-sm-12 col-xs-12">
+                                    <div class="customer-quote">[@L[cds.sales/offers/online-business:32573-ols-customerQuote4]@L]</div>
+                                    <div class="customer-byline">&mdash; [@L[cds.sales/offers/online-business:32573-ols-customerByLine4]@L]</div><a href="http://www.theprincessexpress.com" target="_blank" class="btn btn-default btn-default-black">[@L[cds.sales/offers/online-business:32573-see-it-in-action]@L]</a>
                                   </div>
                                 </div>
                               </div>
                             </div>
                           </div>
                           <div class="item">
-                            <div class="item-wrapper text-center">
-                              <div data-icode="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-apps-image-facebook-int.jpg" class="img-responsive img-center">
+                            <div class="item-wrapper">
+                              <div data-icode="" class="carousel-panel container">
                                 <div class="row">
-                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <h2>HOMEOWNER</h2>
+                                  <div class="col-sm-12">
+                                    <div class="customer-slide slide-1"></div>
                                   </div>
                                 </div>
                                 <div class="row">
-                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <div class="carousel-panel-text">Share your status updates or photos.</div>
+                                  <div class="col-sm-12 col-xs-12">
+                                    <h2 class="store-name">[@L[cds.sales/offers/online-business:32573-ols-customerStoreName1]@L]</h2>
+                                    <div class="customer-quote">[@L[cds.sales/offers/online-business:32573-ols-customerQuote1]@L]</div>
+                                    <div class="customer-byline">&mdash; [@L[cds.sales/offers/online-business:32573-ols-customerByLine1]@L]</div><a href="http://www.thejonesmarket.com" target="_blank" class="btn btn-default btn-default-black">[@L[cds.sales/offers/online-business:32573-see-it-in-action]@L]</a>
                                   </div>
                                 </div>
                               </div>

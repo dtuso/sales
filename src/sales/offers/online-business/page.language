@@ -1,6 +1,6 @@
 ---
 location: localization/sales/offers/online-business/en
-id:  54b6a963f778fc0f24ed2064
+id:  
 name: GCE-32573
 comments: GOT rebrand 2015 SuperBowl
 ---
@@ -401,3 +401,35 @@ Price does not include taxes, where applicable
 See details.
 <phrase key="32573-vat-excludes-price-percentage" />
 Prices exclude 20% VAT where applicable
+<phrase key="32573-ols-customerQuote1" />
+&quot;We graduated from Etsy to GoDaddy Online Store and our sales have soared. We researched all our options for months and landed here. Not only is it cost effective and simple, but the customer service has been quick and personable. We have a beautiful website that is consistent with our brand. I love it!&quot;
+<phrase key="32573-ols-customerByLine1" />
+Candis Jones
+<phrase key="32573-ols-customerStoreName1" />
+The Jones Market
+<phrase key="32573-ols-customerQuote2" />
+&quot;Now that I've launched my own product line, I need a simple yet effective solution for a web store so that I can reach customers and fans everywhere. I would recommend GoDaddy Online Store to anyone looking to sell products or feature their business online.&quot;
+<phrase key="32573-ols-customerByLine2" />
+Billy Lowe
+<phrase key="32573-ols-customerStoreName2" />
+Gloss &amp; Toss
+<phrase key="32573-ols-customerQuote3" />
+&quot;GoDaddy Online Store is a perfect fit for my company. Great looking, clean and easy to use – just like our bibs!&quot;
+<phrase key="32573-ols-customerByLine3" />
+Katie Lewis
+<phrase key="32573-ols-customerStoreName3" />
+Snap Bibs
+<phrase key="32573-ols-customerQuote4" />
+&quot;I immediately fell in love with GoDaddy Online Store. The process is so easy. Getting started, tracking products and orders, setting up payments, integrating social features – it’s everything a store owner needs built into one!&quot;
+<phrase key="32573-ols-customerByLine4" />
+Carolyn Pofok
+<phrase key="32573-ols-customerStoreName4" />
+The Princess Express
+<phrase key="32573-see-it-in-action" />
+See It In Action
+<phrase key="32573-something-unexpected-happened" />
+Something unexpected happened
+<phrase key="32573-real-customers-real-sites" />
+Real customers. Real sites.
+<phrase key="32573-our-customers-love-ols" />
+Our customers love Online Store.

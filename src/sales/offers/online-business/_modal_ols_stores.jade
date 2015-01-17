@@ -1,5 +1,8 @@
 atlantis:webstash(type="css")
   style.
+    #carousel-ols-stores {
+      width: 1000px;
+    }
     .plan-tile { 
       margin-top: -145px; 
     }
@@ -10,78 +13,120 @@ atlantis:webstash(type="css")
       background-color: #333333;
     }
     .bg-gray-light {
-        background-color: #d9d9d9;
+      background-color: #d9d9d9;
+    }
+    .customer-slide {
+      background-image: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-sprite_ols_modal.png');
+      background-repeat: no-repeat;
+      margin-bottom: 20px;
+    }
+    .customer-slide.slide-1 {
+      background-position: 0px 5px;
+      height: 410px;
+      width: 665px;
+    }
+    .customer-slide.slide-2 {
+      background-position: 0px -405px;
+      height: 410px;
+      width: 665px;
+    }
+    .customer-slide.slide-3 {
+      background-position: -0px -815px;
+      height: 410px;
+      width: 665px;
+    }
+    .customer-slide.slide-4 {
+      background-position: 0px -1225px; 
+      height: 410px; 
+      width: 665px;
+    }
+    .customer-byline {
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+    .btn-default-black {
+      color: #000;
+      border-color: #000;
+    }
+    .carousel-panel-text {
+      min-height: 50px;
+      margin-bottom: 0px;
+    }
+    .main-heading {
+      margin: 0px;
+    }
+    .subheading {
+      margin-bottom: 5px;
+      margin-top: 5px;
+    }
+    .customer-quote {
+      margin-top: 0px;
+      margin-bottom: 10px;
+    }
+    .store-name {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    .item-wrapper {
+      padding: 20px 0 20px !important;
     }
 
-include ../../../templates/tabbed-carousel-mixin.jade
+
 include ../../../templates/carousel-mixin.jade
-- tabbedCarousel = tabbedCarousel || {};
-- tabbedCarousel.title = "Popular apps keep your site fresh";
-- tabbedCarousel.subtitle = "Easily integrate social and business apps in your site to share information and keep customers coming back.";
-- tabbedCarousel.numOfTabs= 4;
-- tabbedCarousel.lazyLoad = true;
-- tabbedCarousel.id = "carousel-ols-stores";
-- tabbedCarousel.textCenter = true;
+- olsCarousel = olsCarousel || {};
+- olsCarousel.numOfTabs= 4;
+- olsCarousel.lazyLoad = true;
+- olsCarousel.id = "carousel-ols-stores";
+- olsCarousel.textCenter = false;
 
-append vars
-  - title = "Simplify your bookkeeping. Get back to business.";
-  - subtitle = "Spend less time on paperwork and more time with customers.";
-  - numOfTabs= 4;
-  - lazyLoad = true;
-  - id = "carousel-ols-stores"
+block heading
+  h1.main-heading.text-center [@L[cds.sales/offers/online-business:32573-real-customers-real-sites]@L]
+  h3.subheading.text-center [@L[cds.sales/offers/online-business:32573-our-customers-love-ols]@L]
 
-block tabs
-  +addTab({icon:"uxicon-facebook-box",logo:"",imageAlternateText:"",text:"facebook"})
-  +addTab({icon:"uxicon-twitter",logo:"",imageAlternateText:"",text:"twitter"})
-  +addTab({icon:"uxicon-youtube-box",logo:"",imageAlternateText:"",text:"youtube"})
-  +addTab({icon:"uxicon-yelp",logo:"",imageAlternateText:"",text:"yelp"})
-+carousel(tabbedCarousel.id ,tabbedCarousel.numOfTabs,{css:true})
-  +carouselItem(tabbedCarousel)
-    img.img-responsive.img-center(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-apps-image-facebook-int.jpg")
++carousel(olsCarousel.id ,olsCarousel.numOfTabs,{css:true})
+  +carouselItem(olsCarousel)
     .row
-      .col-sm-10.col-sm-offset-1.col-xs-12
-        h2 FACEBOOK
+      .col-sm-12
+        .customer-slide.slide-2
     .row
-      .col-sm-10.col-sm-offset-1.col-xs-12
-          .carousel-panel-text Share your status updates or photos.
-  +carouselItem(tabbedCarousel)
-    img.img-responsive.img-center(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-apps-image-twitter-int.jpg")
+      .col-sm-12.col-xs-12
+        h2.store-name [@L[cds.sales/offers/online-business:32573-ols-customerStoreName2]@L]
     .row
-      .col-sm-10.col-sm-offset-1.col-xs-12
-        h2 TWITTER
+      .col-sm-12.col-xs-12
+        .customer-quote [@L[cds.sales/offers/online-business:32573-ols-customerQuote2]@L]
+        .customer-byline &mdash; [@L[cds.sales/offers/online-business:32573-ols-customerByLine2]@L]
+        a.btn.btn-default.btn-default-black(href="http://www.glossandtoss.net",target="_blank") [@L[cds.sales/offers/online-business:32573-see-it-in-action]@L]
+  +carouselItem(olsCarousel)
     .row
-      .col-sm-10.col-sm-offset-1.col-xs-12
-          .carousel-panel-text Share your status updates or photos.
-  +carouselItem(tabbedCarousel)
-    img.img-responsive.img-center(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-apps-image-youtube-int.jpg")
+      .col-sm-12
+        .customer-slide.slide-3
     .row
-      .col-sm-10.col-sm-offset-1.col-xs-12
-        h2 YOUTUBE
+      .col-sm-12.col-xs-12
+        h2.store-name [@L[cds.sales/offers/online-business:32573-ols-customerStoreName3]@L]
     .row
-      .col-sm-10.col-sm-offset-1.col-xs-12
-          .carousel-panel-text Share your status updates or photos.
-  +carouselItem(tabbedCarousel)
-    img.img-responsive.img-center(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-apps-image-facebook-int.jpg")
+      .col-sm-12.col-xs-12
+        .customer-quote [@L[cds.sales/offers/online-business:32573-ols-customerQuote3]@L]
+        .customer-byline &mdash; [@L[cds.sales/offers/online-business:32573-ols-customerByLine3]@L]
+        a.btn.btn-default.btn-default-black(href="http://www.snap-bibs.com",target="_blank") [@L[cds.sales/offers/online-business:32573-see-it-in-action]@L]
+  +carouselItem(olsCarousel)
     .row
-      .col-sm-10.col-sm-offset-1.col-xs-12
-        h2 YELP
+      .col-sm-12
+        .customer-slide.slide-4
     .row
-      .col-sm-10.col-sm-offset-1.col-xs-12
-          .carousel-panel-text Share your status updates or photos.
-  +carouselItem(tabbedCarousel)
-    img.img-responsive.img-center(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-apps-image-facebook-int.jpg")
+      .col-sm-12.col-xs-12
+        h2.store-name [@L[cds.sales/offers/online-business:32573-ols-customerStoreName4]@L]
     .row
-      .col-sm-10.col-sm-offset-1.col-xs-12
-        h2 PAYPAL
+      .col-sm-12.col-xs-12
+        .customer-quote [@L[cds.sales/offers/online-business:32573-ols-customerQuote4]@L]
+        .customer-byline &mdash; [@L[cds.sales/offers/online-business:32573-ols-customerByLine4]@L]
+        a.btn.btn-default.btn-default-black(href="http://www.theprincessexpress.com",target="_blank") [@L[cds.sales/offers/online-business:32573-see-it-in-action]@L]
+  +carouselItem(olsCarousel)
     .row
-      .col-sm-10.col-sm-offset-1.col-xs-12
-          .carousel-panel-text Share your status updates or photos.
-  +carouselItem(tabbedCarousel)
-    img.img-responsive.img-center(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-apps-image-facebook-int.jpg")
+      .col-sm-12
+        .customer-slide.slide-1
     .row
-      .col-sm-10.col-sm-offset-1.col-xs-12
-        h2 HOMEOWNER
-    .row
-      .col-sm-10.col-sm-offset-1.col-xs-12
-          .carousel-panel-text Share your status updates or photos.
-
+      .col-sm-12.col-xs-12
+        h2.store-name [@L[cds.sales/offers/online-business:32573-ols-customerStoreName1]@L]
+        .customer-quote [@L[cds.sales/offers/online-business:32573-ols-customerQuote1]@L]
+        .customer-byline &mdash; [@L[cds.sales/offers/online-business:32573-ols-customerByLine1]@L]
+        a.btn.btn-default.btn-default-black(href="http://www.thejonesmarket.com",target="_blank") [@L[cds.sales/offers/online-business:32573-see-it-in-action]@L]

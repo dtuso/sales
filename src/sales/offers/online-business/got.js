@@ -254,7 +254,7 @@ function wireupModals() {
       $("#site-choice-ols-video-modal").sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
     });
     $('#ols-stores-btn').on('click', function(){
-      $("#site-choice-ols-stores-modal").sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
+      $("#site-choice-ols-stores-modal").sfDialog({titleHidden:true, buttons: [], dialogWidthIdeal:1240 });
     });
   }
 
