@@ -381,12 +381,9 @@ function domainSearchFormSubmit(e) {
 
       } else {
 
-<<<<<<< HEAD
         // tokenize header on search available page
         $('span#not-available-domain-name').text(exactMatchDomain.Fqdn);
 
-=======
->>>>>>> 5668ffc0180ffb4ca824c3a99fb9534b97bf2bea
         // Domain is taken, show spins if possible
         if(alternateDomains.length > 0) {
           // SHOW SPINS
