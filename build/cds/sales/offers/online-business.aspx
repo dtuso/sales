@@ -2428,7 +2428,7 @@ h2.api-error-header {
                       </div>
                       <div class="row">
                         <div class="col-sm-12 button-margin">
-                          <button id="ols-stories-btn" class="btn btn-md btn-block btn-primary">[@L[cds.sales/offers/online-business:32573-see-real-stores-button]@L]</button>
+                          <button id="ols-stores-btn" class="btn btn-md btn-block btn-primary">[@L[cds.sales/offers/online-business:32573-see-real-stores-button]@L]</button>
                         </div>
                       </div>
                       <div class="row">
