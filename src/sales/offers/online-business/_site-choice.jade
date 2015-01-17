@@ -79,7 +79,11 @@ atlantis:webstash(type="css")
       width: 100%;
       height: 100%;
     }
-  .sf-dialog .close { top: 0px; right: 10px; }
+
+    img.video-play-icon {
+      margin-right:10px;
+      vertical-align: top;
+    }
 
 
 | 
@@ -99,7 +103,7 @@ section#wsb-only.bg-green-official-light
           button.btn-link.see-wsb-disclaimer-link [@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price-disclaimer-link]@L]</a>
     .row
       .col-sm-12.button-margin
-        button#wsb-only-video-btn.btn.btn-md.btn-block.btn-primary <i class="uxicon uxicon-play"></i> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]
+        button#wsb-only-video-btn.btn.btn-md.btn-block.btn-primary <img class="video-play-icon" src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_play_icon_small.png" /> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]
     .row
       .col-sm-12.button-margin
         button#wsb-only-designs-btn.btn.btn-md.btn-block.btn-primary [@L[cds.sales/offers/online-business:32573-view-designs-button]@L]    
@@ -123,11 +127,7 @@ section#wsb-only.bg-green-official-light
           li 
             h5 [@L[cds.sales/offers/online-business:32573-godaddy-wsb-bullet-7]@L]
 | 
-|##endif
-| 
-
-| 
-|##if(productIsOffered(105))
+|##else
 | 
 section#site-choice
   +renderTwoUpCompare({ title: "[@L[cds.sales/offers/online-business:32573-which-sites-right-for-you]@L]", 
@@ -147,7 +147,8 @@ section#site-choice
           button.btn-link.see-wsb-disclaimer-link [@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price-disclaimer-link]@L]</a>
       .row
         .col-sm-12.button-margin
-          button#wsb-video-btn.btn.btn-md.btn-block.btn-primary <i class="uxicon uxicon-play"></i> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]
+          button#wsb-video-btn.btn.btn-md.btn-block.btn-primary <img class="video-play-icon" src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_play_icon_small.png" /> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]
+
       .row
         .col-sm-12.button-margin
           button#wsb-designs-btn.btn.btn-md.btn-block.btn-primary [@L[cds.sales/offers/online-business:32573-view-designs-button]@L]
@@ -180,7 +181,7 @@ section#site-choice
           button.btn-link.see-ols-disclaimer-link [@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price-disclaimer-link]@L]
       .row
         .col-sm-12.button-margin
-          button#ols-video-btn.btn.btn-md.btn-block.btn-primary <i class="uxicon uxicon-play"></i> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]
+          button#ols-video-btn.btn.btn-md.btn-block.btn-primary <img class="video-play-icon" src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_play_icon_small.png" /> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]
       .row
         .col-sm-12.button-margin
           button#ols-stories-btn.btn.btn-md.btn-block.btn-primary [@L[cds.sales/offers/online-business:32573-see-real-stores-button]@L]

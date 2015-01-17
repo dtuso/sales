@@ -132,11 +132,47 @@
       
     </script>
     <atlantis:webstash type="js">
-      <script>//- TODO: fix fastball stuff
+      <script>// Array indexOf shim for IE9 and below
+if (!Array.prototype.indexOf){
+  Array.prototype.indexOf = function(elt /*, from*/) {
+    var len = this.length >>> 0;
+    var from = Number(arguments[1]) || 0;
+    from = (from < 0) ? Math.ceil(from) : Math.floor(from);
+    if (from < 0) from += len;
+    for (; from < len; from++) {
+      if (from in this && this[from] === elt) return from;
+    }
+    return -1;
+  };
+}
 
-if(typeof(FastballEvent_MouseClick) === "undefined") FastballEvent_MouseClick = function(){return true;};
-if(typeof(fbiLibCheckQueue) === "undefined") fbiLibCheckQueue = function(){return true;};
+/* see: http://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php */
 
+var $allVideos = $("iframe[src^='http://www.youtube.com']"),/* Find all YouTube videos */    
+    $fluidEl = $("body"); /*The element that is fluid width*/
+
+// Figure out and save aspect ratio for each video
+$allVideos.each(function() {
+  $(this)
+    .data('aspectRatio', this.height / this.width)
+    // and remove the hard coded width/height
+    .removeAttr('height')
+    .removeAttr('width');
+});
+
+// When the window is resized
+$(window).resize(function() {
+  var newWidth = $fluidEl.width();
+  // Resize all videos according to their own aspect ratio
+  $allVideos.each(function() {
+    var $el = $(this);
+    $el
+      .width(newWidth)
+      .height(newWidth * $el.data('aspectRatio'));
+  });
+// Kick off one resize to fix all videos on page load
+}).resize();
+/* end import */
 
 
 var got1Page = {
@@ -165,80 +201,15 @@ var got1Page = {
     bingAdCredits: '[@T[currencyprice:<price usdamount="5000" dropdecimal="true" htmlsymbol="false" />]@T]'
   },
   imagePath: '[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/',
-  canOfferOls: true
+  canOfferOls: true,
+  animationTime: 800,
+  animationEasingType: 'swing'
 };
-
-/* see: http://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php */
-// Find all YouTube videos
-var $allVideos = $("iframe[src^='http://www.youtube.com']"),
-
-    // The element that is fluid width
-    $fluidEl = $("body");
-
-// Figure out and save aspect ratio for each video
-$allVideos.each(function() {
-
-  $(this)
-    .data('aspectRatio', this.height / this.width)
-
-    // and remove the hard coded width/height
-    .removeAttr('height')
-    .removeAttr('width');
-
-});
-
-// When the window is resized
-$(window).resize(function() {
-
-  var newWidth = $fluidEl.width();
-
-  // Resize all videos according to their own aspect ratio
-  $allVideos.each(function() {
-
-    var $el = $(this);
-    $el
-      .width(newWidth)
-      .height(newWidth * $el.data('aspectRatio'));
-
-  });
-
-// Kick off one resize to fix all videos on page load
-}).resize();
-/* end import */
-
-
-function showAndOrderDynamicTldsInList(selector) {
-
-  //- <span class="sorted-tld-list"><span class="tld-list tld-ca">.CA, </span>
-  //- <span class="tld-list tld-club">.CLUB, </span></span>or .ORG
-
-  var $this = $(selector),
-    formatTldSelector = function(tld) { return '.tld-' + tld.replace('.','-')},
-    tldList = got1Page.tldInfo.tlds,
-    removedSpansArr = [],
-    $sortedArea = $this.find(".sorted-tld-list");
-
-  //- remove all dynamic tlds from this
-  $.each(tldList, function(idx, tld){
-    var $tldItem = $this.find(formatTldSelector(tld));
-    removedSpansArr.push($tldItem);
-  });
-
-  //- insert sorted HTML back into the original object and show the ones that are turned on
-  $sortedArea.empty();
-  $.each(removedSpansArr, function(idx, tldSpan) {
-    $sortedArea.append(tldSpan);
-  });
-
-  //- show sorted list
-  $this.find('.tld-list').show();
-}
 
 
 ##if(!productIsOffered(105))
   got1Page.canOfferOls = false;
 ##endif
-
 
 ##if(countrySiteAny(ca) || isManager())  
   if(got1Page.tldInfo.isPossibleAdditionalTld('ca')) {
@@ -293,13 +264,15 @@ $(document).ready(function() {
   showAndOrderDynamicTldsInList("#domain-available-marquee-view .invalid-TLD-entered");
   showAndOrderDynamicTldsInList("#domain-not-available-marquee-view .invalid-TLD-entered");
 
-  tokenizeDisclaimerModals();
- 
+  tokenizeDisclaimerModals(); 
   tokenizeTheDataTokenizeAttribute();
 
   wireupModals();
-
-
+  if(getParameterByName('err') === "dpp1") {
+    showDomainRegistrationFailure(getParameterByName('tld'));
+  } else {
+    showTypeYourDomain();
+  }
 
   //set up domain search buttons to do a domain search
   $('#marquee')
@@ -330,25 +303,49 @@ $(document).ready(function() {
   // set up verify buttons on spin results to do validation before sending to DPP
   $('#domain-available-marquee-view').on('click', '.purchase-btn', showChoicesScreen);
   
-  showTypeYourDomain();
 
   $('#domain-not-available-marquee-view').on('click', '.select-and-continue', verifyDomainIsStillAvailable);
   $('#step2-choose-product').on('click','.btn-purchase', goToDppCheckoutPage);
 
   displayMoreResultsLinks();
-  $('#show-more-section').on('click', '.show-more-arrow', displayMoreResultsArea);
+  $('#show-more-section').on('click', '.clickable-show-more', displayMoreResultsArea);
   $('#domain-not-available-marquee-view').on('click', '.view-all-button', displayMoreResultsArea);
 
   // track ci codes
   $('[data-ci]').click(function (e) {
       var $this = $(this);
       var ci = $this.attr('data-ci');
-      //- TODO: fix fastball
-      //FastballEvent_MouseClick(e, ci, $(this)[0], 'a');
-      //fbiLibCheckQueue();
+      FastballEvent_MouseClick(e, ci, $(this)[0], 'a');
+      fbiLibCheckQueue();
+  });
+});
+
+function showAndOrderDynamicTldsInList(selector) {
+
+  //- <span class="sorted-tld-list"><span class="tld-list tld-ca">.CA, </span>
+  //- <span class="tld-list tld-club">.CLUB, </span></span>or .ORG
+
+  var $this = $(selector),
+    formatTldSelector = function(tld) { return '.tld-' + tld.replace('.','-')},
+    tldList = got1Page.tldInfo.tlds,
+    removedSpansArr = [],
+    $sortedArea = $this.find(".sorted-tld-list");
+
+  //- remove all dynamic tlds from this
+  $.each(tldList, function(idx, tld){
+    var $tldItem = $this.find(formatTldSelector(tld));
+    removedSpansArr.push($tldItem);
   });
 
-});
+  //- insert sorted HTML back into the original object and show the ones that are turned on
+  $sortedArea.empty();
+  $.each(removedSpansArr, function(idx, tldSpan) {
+    $sortedArea.append(tldSpan);
+  });
+
+  //- show sorted list
+  $this.find('.tld-list').show();
+}
 
 function tokenizeTheDataTokenizeAttribute() {
   $('[data-tokenize]').each(function(){
@@ -466,20 +463,23 @@ function isTldValid(domain) {
 
 function domainSearchFormSubmit(e) {
  
+
   var $this = $(e.target),
-    $textInput = $this.siblings('.search-form-input'),
-    domain = $textInput.val().trim(), 
+    $textInput = $this.closest('.offer-search-box').find('.search-form-input'),
+    domain = $.trim($textInput.val()), 
     sucessful = false,
     apiEndpoint1;
 
   if((domain && domain.length==0) || !domain) return;
-  
+
   domain = formatDomainWithDefaultTldIfNoneSpecified(domain);
 
   if(!isTldValid(domain)) {
     displayInvlidTldMessage();
     return;
   }
+
+  $('#marquee').find('.search-form-input').val(''); 
 
   apiEndpoint1 = '[@T[link:<relative path="~/domainsapi/v1/search/free"><param name="domain" value="domain" /><param name="itc" value="itc" /></relative>]@T]';
   apiEndpoint1 = apiEndpoint1.replace('domain=domain', 'q=' + domain);
@@ -500,23 +500,36 @@ function domainSearchFormSubmit(e) {
 
       if(isAvailable) {
         // Domain is available, so allow them to search again or to select this available domain
-        showSuccessfulSearch(exactMatchDomain);
+
+        // setup search box
+        showTypeYourDomain();
+
+        // tokenize header on search available page
+        $('#available-domain-name').text(exactMatchDomain.Fqdn);
+
+        var $thisSection = $this.closest('.js-marquee-section');
+        if($thisSection[0].id != "domain-available-marquee-view") {
+          $('#domain-available-marquee-view').find('.purchase-btn').data('domain', exactMatchDomain);
+          animateMarquee($thisSection, $('#domain-available-marquee-view') /*toView*/);
+        }
 
       } else {
+
+        alternateDomains = []; // for testingcd
         // Domain is taken, show spins if possible
         if(alternateDomains.length > 0) {
           // SHOW SPINS
-          showSearchSpins(exactMatchDomain, alternateDomains);
+          showSearchSpins($this, exactMatchDomain, alternateDomains);
         } else {
           // NO SPINS
-          showApi1SearchError(e, domain);
+          showApi1or2SearchError(e, domain);
         }
 
       }    
 
     },
     error: function(){
-      showApi1SearchError(e, domain);
+      showApi1or2SearchError(e, domain);
     }
   });
 
@@ -557,7 +570,7 @@ function verifyDomainIsStillAvailable(e) {
       }
     },
     error: function(){
-      showApi2SearchError(e, domain);
+      showApi1or2SearchError(e, domain);
     }
   });
 
@@ -600,41 +613,25 @@ function goToDppCheckoutPage(e) {
     dataType: 'json',
     cache: false,
     success: function(data){
-
       if(data && data.Success) {
-
         window.location = data.NextStepUrl;
         return;
-
       } else {
-
         showApi3SearchError(e, domain);
-
       }
     },
     error: function(){
-
       showApi3SearchError(e, domain);
-
     }
   });
 
 }
 
-function showSuccessfulSearch(domain){  
+function showSearchSpins($this, domain, alternateDomains){  
 
-  // setup search box
-  $('.search-message').hide();
+  // setup search box  
+  showTypeYourDomain();
 
-  $('#available-domain-name').text(domain.Fqdn);
-  animateToAvailable(domain);
-
-}
-
-function showSearchSpins(domain, alternateDomains){  
-
-  // setup search box
-  $('.search-message').hide();
   displayMoreResultsLinks();
 
   // clear any spins from the DOM
@@ -654,13 +651,21 @@ function showSearchSpins(domain, alternateDomains){
   updateDomainCountText(true);
   $("#spin-results .spin-result:lt(" + got1Page.maxNumberOfSpinsToShowByDefault + ")").show(); // show first 3 results
 
-  animateToNotAvailable(domain); 
+  var $thisSection = $this.closest('.js-marquee-section');
+  if($thisSection[0].id != "domain-not-available-marquee-view") {
+    animateMarquee($thisSection, $('#domain-not-available-marquee-view') /*toView*/);
+  }
 
 }
 
-function showApi1SearchError(e,domain){
-  $('.search-message').hide();
-  $('.api-A-failure').show();
+function showApi1or2SearchError(e,domain){
+  var $modal = $("#api-failure");
+  $modal.sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
+}
+
+function showApi3SearchError(e,domain){  
+  var $modal = $("#step2-choose-product .api-c-failure-modal");
+  $modal.sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
 }
 
 function displayInvlidTldMessage(){
@@ -668,19 +673,12 @@ function displayInvlidTldMessage(){
   $('#marquee .invalid-TLD-entered').show();
 }
 
-function showApi2SearchError(e,domain){
-  var $modal = $("#step2-choose-product .api-b-failure-modal");
-  $modal.sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
-}
-
-function showApi3SearchError(e,domain){
-  
-  var $modal = $("#step2-choose-product .api-c-failure-modal");
-  $modal.sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
-
-}
-
-function showDomainRegistrationFailure() {
+function showDomainRegistrationFailure(tld) {
+  var 
+    $failArea = $('#marquee .domain-eligibility-fail'), 
+    html = $failArea.html();
+  html = html.replace(/\{0\}/gi, tld)
+  $failArea.html(html);
   $('#marquee .search-message').hide();
   $('#marquee .domain-eligibility-fail').show();
 }
@@ -691,17 +689,17 @@ function showTypeYourDomain() {
 }
 
 function displayMoreResultsLinks() {
-  $("#domain-not-available-marquee-view button.view-all-button").show();
+  $("#domain-not-available-marquee-view .view-all-button").show();
   $("#show-more-section").show();
 }
 
 function hideMoreResultsLinks() {
-  $("#domain-not-available-marquee-view button.view-all-button").hide();
+  $("#domain-not-available-marquee-view .view-all-button").hide();
   $("#show-more-section").hide();
 }
 
 function displayMoreResultsArea () {
-  $("#spin-results .spin-result").show('slow');
+  $("#spin-results .spin-result").slideDown(got1Page.animationTime);
   hideMoreResultsLinks();
   updateDomainCountText(false);
 }
@@ -722,6 +720,86 @@ function updateDomainCountText(initial) {
   $header.html(numbersHtml);
 }
 
+
+function animateMarquee($currentView, $animateToView) {  
+  
+
+  var currentViewHeight = $currentView.height(),
+    windowWidth = $(window).width(),
+    $marquee = $('#marquee'),
+    marqueeHeight = $('#marquee').height();
+
+  // show view offscreen to get height
+  $animateToView.css({"position":"absolute", "left": windowWidth + "px", "width": windowWidth + "px"}).show();
+  // can only get height when shown      
+  var toViewHeight = $animateToView.height(),
+    maxHeight = Math.max(currentViewHeight, toViewHeight),
+    minHeight = Math.min(currentViewHeight, toViewHeight);
+  
+  //run the animations
+  animateHeight($marquee, marqueeHeight, toViewHeight, 1);  
+  animateObjectOffToTheLeft($currentView, windowWidth, 2);
+  animateObjectInFromTheRight($animateToView, windowWidth, 3);
+}
+
+function animateHeight($obj, startHeight, finishHeight, zIndex) {
+  $obj
+    .css({"height": startHeight + "px", "z-index": zIndex})
+    .animate({
+      "height": finishHeight + "px"
+    },{ 
+      duration: got1Page.animationTime, 
+      easing: got1Page.animationEasingType, 
+      complete:function(){
+        $obj.css({"position":"relative", "height": "auto", "z-index": "1"});
+      }
+  });
+
+}
+
+function animateObjectOffToTheLeft($obj, windowWidth, zIndex) {
+  $obj
+    .css({"position":"absolute", "left": "0px", "width": windowWidth + "px", "z-index": zIndex})
+    .animate({
+      "left": "-" + windowWidth + "px"
+    },{ 
+      duration: got1Page.animationTime, 
+      easing: got1Page.animationEasingType, 
+      complete:function(){
+
+        // clean up the views of the screens
+        $obj.hide().css({"position":"relative", "width": "auto", "left": "0px", "z-index": "1"});
+        console.log('2');
+      }
+  });
+}
+
+function animateObjectInFromTheRight($obj, windowWidth, zIndex) {
+
+  $obj
+    .css({"position":"absolute", "left": windowWidth + "px", "width": windowWidth + "px", "z-index": zIndex})
+    .show()
+    .animate({
+      "left": "0px"
+    },{ 
+      duration: got1Page.animationTime , 
+      easing: got1Page.animationEasingType, 
+      complete:function(){
+        $obj.css({"position":"relative", "width": "auto", "left": "0px", "z-index": "1"}).show();            
+        console.log('3');
+      }
+    });
+}
+
+
+// Page Global script -- changes will effect all campaigns 
+// get url parameter by parameter name
+function getParameterByName(name) {
+  name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+  var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+      results = regex.exec(location.search);
+  return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
       </script>
     </atlantis:webstash>
     <link href="[@T[link:<cssroot />]@T]/fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css">
@@ -782,6 +860,44 @@ function updateDomainCountText(initial) {
   color:#666;
 }
 
+.bg-white {
+    background-color: #fff;
+}
+.bg-yellow {
+    background-color: #ffde2d;
+}
+.bg-gray-lighter, .bg-pro-gray {
+    background-color: #e8e8e8;
+}
+.bg-gray-light {
+    background-color: #d9d9d9;
+}
+.bg-green-official {
+    background-color: #77c043;
+}
+.bg-green-new {
+    background-color: #5caf2b;
+}
+.bg-green-official-light {
+    background-color: #84d54a;
+}
+.bg-gray-darkest {
+    background-color: #333333;
+}
+
+h2.api-error-header {
+  font-size: 30px;
+  color: #333;
+  font-family: "Walsheim-Black";
+}
+h2.api-error-header img {
+  float:left;
+  margin-right: 10px;
+}
+
+h2.api-error-header {
+
+}
     </style><!--[if lt IE 9]>
     <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
     <link href="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy.min.html" id="respond-proxy" rel="respond-proxy">
@@ -812,6 +928,7 @@ function updateDomainCountText(initial) {
     <atlantis:webstash type="css">
       <style>
         #marquee {margin:0 auto; padding-top:15px;background-color: #77c043;}
+        #api-failure {display: none;}
         
       </style>
     </atlantis:webstash>
@@ -926,7 +1043,7 @@ function updateDomainCountText(initial) {
           
         </style>
       </atlantis:webstash>
-      <section id="default-marquee-view" class="bg-green-official">
+      <section id="default-marquee-view" class="bg-green-official js-marquee-section">
         <div class="container">
           <div class="row">
             <div class="col-md-6 col-sm-12">
@@ -1006,7 +1123,7 @@ function updateDomainCountText(initial) {
           
         </style>
       </atlantis:webstash>
-      <section id="domain-available-marquee-view">
+      <section id="domain-available-marquee-view" class="js-marquee-section">
         <div class="bg-green-official">
           <div class="container">
             <div class="row">
@@ -1063,7 +1180,8 @@ function updateDomainCountText(initial) {
           #domain-not-available-marquee-view .domain-spin-wrap {min-height: 120px;border: solid 1px #cccccc;margin-bottom: 15px;} 
           #domain-not-available-marquee-view .domain-name-display {text-transform: lowercase; margin-bottom: 0px; margin-top: 0px;}
           #domain-not-available-marquee-view .domain-name-display-tld {text-transform: lowercase;margin-bottom: 0px; margin-top: 0px;}
-          #domain-not-available-marquee-view .show-more-arrow { position: relative; top: 16px; left: 15px; bottom: 0; margin-left: -10px; width: 0; height: 0; border: 11px solid transparent; border-top-color: #000; content: ''; }
+          #domain-not-available-marquee-view .clickable-show-more {cursor: pointer;}
+          #domain-not-available-marquee-view .show-more-arrow { position: relative; top: 12px; margin-left: 5px; width: 0; height: 0; border: 11px solid transparent; border-top-color: #000; content: ''; }
           #spin-results .spin-results-message, 
           #spin-results .spin-result, 
           #spin-template-wrap .spin-template {display:none;}
@@ -1076,7 +1194,7 @@ function updateDomainCountText(initial) {
           
         </style>
       </atlantis:webstash>
-      <section id="domain-not-available-marquee-view">
+      <section id="domain-not-available-marquee-view" class="js-marquee-section">
         <div class="bg-green-official">
           <div class="container">
             <div class="row">
@@ -1124,8 +1242,8 @@ function updateDomainCountText(initial) {
                   <div class="pro-plan-wrap domain-spin-wrap">
                     <div class="row">
                       <div class="col-md-8 col-sm-12">
-                        <h4 class="domain-name-display">thisreallycoolexample</h4>
-                        <h2 class="domain-name-display-tld">.com</h2>
+                        <h4 class="domain-name-display"></h4>
+                        <h2 class="domain-name-display-tld"></h2>
                       </div>
                       <div class="col-md-4 col-sm-12 text-right">
                         <button class="btn btn-primary select-and-continue spin-results-message">[@L[cds.sales/offers/online-business:32573-select-and-continue-button]@L]</button>
@@ -1138,12 +1256,9 @@ function updateDomainCountText(initial) {
               </div>
             </div>
             <div id="show-more-section">
-              <h6 class="text-center">[@L[cds.sales/offers/online-business:32573-see-more-results]@L]<span class="show-more-arrow"></span></h6>
+              <h6 class="text-center"><span class="clickable-show-more">[@L[cds.sales/offers/online-business:32573-see-more-results]@L]<span class="show-more-arrow"></span></span></h6>
             </div>
           </div>
-        </div>
-        <div class="sf-dialog api-B-failure">
-          <p>[@L[cds.sales/offers/online-business:32573-generic-domain-search-error]@L]</p>
         </div>
       </section>
     </section>
@@ -1164,40 +1279,14 @@ function updateDomainCountText(initial) {
         
         });
         
-        function enableAllSearchButtons(){
-          $('#marquee')
-            .find('.offer-search-btn').removeClass('disabled');
-        }
-        function enableAllAddToCartButtons(){
-          $('#marquee')
-            .find('.purchase-btn').removeClass('disabled');
-        }
-        function animateToAvailable (domainToAttach) {
-          $('#domain-available-marquee-view')
-            .show()
-            .find('.purchase-btn')
-              .removeClass('disabled')
-              .data('domain', domainToAttach);
-          $('#default-marquee-view, #domain-not-available-marquee-view').hide();
-          enableAllSearchButtons();
-        }
-        
-        function animateToNotAvailable() {
-          $('#domain-not-available-marquee-view')
-            .show();
-          $('#domain-available-marquee-view, #default-marquee-view').hide();      
-          enableAllSearchButtons();
-        
-        }
-        
-        function animateToDefault () {
-          $('#default-marquee-view').show();
-          $('#domain-not-available-marquee-view, #domain-available-marquee-view').hide();
-          enableAllSearchButtons();
-        
-        }
       </script>
     </atlantis:webstash>
+    <div id="api-failure" class="sf-dialog api-B-failure">
+      <h2 class="api-error-header"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/WarningSign.png">
+        <div>[@L[cds.sales/offers/online-business:32573-something-unexpected-happened]@L]</div>
+      </h2>
+      <p>[@L[cds.sales/offers/online-business:32573-generic-domain-search-error]@L]</p>
+    </div>
     <atlantis:webstash type="css">
       <style>
         #products.tile-section{ padding-top: 0;padding-bottom: 0;}
@@ -1640,7 +1729,6 @@ function updateDomainCountText(initial) {
           margin-top:0px; /* override the -210px from sahara.css */
         }
         
-        
       </style>
     </atlantis:webstash>
     <section id="step2-choose-product">
@@ -1701,6 +1789,9 @@ function updateDomainCountText(initial) {
         </div>
       </div>
       <div class="sf-dialog api-c-failure-modal">
+        <h2 class="api-error-header"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/WarningSign.png">
+          <div>[@L[cds.sales/offers/online-business:32573-something-unexpected-happened]@L]</div>
+        </h2>
         <p>[@L[cds.sales/offers/online-business:32573-get-it-now-error]@L]</p>
       </div>
       <div id="step2-choose-product-wsb-modal" data-title="[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]" class="tokenizable-disclaimer-modal sf-dialog">
@@ -1790,8 +1881,14 @@ function updateDomainCountText(initial) {
           width: 100%;
           height: 100%;
         }
+        
+        img.video-play-icon {
+          margin-right:10px;
+          vertical-align: top;
+        }
+        
+        
       </style>
-      <div class="sf-dialog">.close { top: 0px; right: 10px; }</div>
     </atlantis:webstash> 
     ##if(!productIsOffered(105))
      
@@ -1812,7 +1909,7 @@ function updateDomainCountText(initial) {
         </div>
         <div class="row">
           <div class="col-sm-12 button-margin">
-            <button id="wsb-only-video-btn" class="btn btn-md btn-block btn-primary"><i class="uxicon uxicon-play"></i> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]</button>
+            <button id="wsb-only-video-btn" class="btn btn-md btn-block btn-primary"><img class="video-play-icon" src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_play_icon_small.png" /> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]</button>
           </div>
         </div>
         <div class="row">
@@ -1853,10 +1950,7 @@ function updateDomainCountText(initial) {
         </div>
       </div>
     </section> 
-    ##endif
-     
-     
-    ##if(productIsOffered(105))
+    ##else
      
     <section id="site-choice">
       <style>
@@ -2173,7 +2267,7 @@ function updateDomainCountText(initial) {
                       </div>
                       <div class="row">
                         <div class="col-sm-12 button-margin">
-                          <button id="wsb-video-btn" class="btn btn-md btn-block btn-primary"><i class="uxicon uxicon-play"></i> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]</button>
+                          <button id="wsb-video-btn" class="btn btn-md btn-block btn-primary"><img class="video-play-icon" src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_play_icon_small.png" /> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]</button>
                         </div>
                       </div>
                       <div class="row">
@@ -2227,7 +2321,7 @@ function updateDomainCountText(initial) {
                       </div>
                       <div class="row">
                         <div class="col-sm-12 button-margin">
-                          <button id="ols-video-btn" class="btn btn-md btn-block btn-primary"><i class="uxicon uxicon-play"></i> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]</button>
+                          <button id="ols-video-btn" class="btn btn-md btn-block btn-primary"><img class="video-play-icon" src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_play_icon_small.png" /> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]</button>
                         </div>
                       </div>
                       <div class="row">
