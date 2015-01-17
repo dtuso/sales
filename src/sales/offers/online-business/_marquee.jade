@@ -1,6 +1,7 @@
 atlantis:webstash(type="css")
   style.
     #marquee {margin:0 auto; padding-top:15px;background-color: #77c043;}
+    #api-failure {display: none;}
 
 section#marquee
   include ./_1_default-marquee-view.jade
@@ -24,35 +25,8 @@ atlantis:webstash(type="js")
 
     });
 
-    function enableAllSearchButtons(){
-      $('#marquee')
-        .find('.offer-search-btn').removeClass('disabled');
-    }
-    function enableAllAddToCartButtons(){
-      $('#marquee')
-        .find('.purchase-btn').removeClass('disabled');
-    }
-    function animateToAvailable (domainToAttach) {
-      $('#domain-available-marquee-view')
-        .show()
-        .find('.purchase-btn')
-          .removeClass('disabled')
-          .data('domain', domainToAttach);
-      $('#default-marquee-view, #domain-not-available-marquee-view').hide();
-      enableAllSearchButtons();
-    }
-
-    function animateToNotAvailable() {
-      $('#domain-not-available-marquee-view')
-        .show();
-      $('#domain-available-marquee-view, #default-marquee-view').hide();      
-      enableAllSearchButtons();
-
-    }
-
-    function animateToDefault () {
-      $('#default-marquee-view').show();
-      $('#domain-not-available-marquee-view, #domain-available-marquee-view').hide();
-      enableAllSearchButtons();
-
-    }
+#api-failure.sf-dialog.api-B-failure
+  h2.api-error-header
+    img(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/WarningSign.png")
+    div [@L[cds.sales/offers/online-business:32573-something-unexpected-happened]@L]
+  p [@L[cds.sales/offers/online-business:32573-generic-domain-search-error]@L]

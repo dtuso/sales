@@ -164,8 +164,7 @@ html(lang!="[@T[localization:<language full='true' />]@T]")
 
     //- TODO: UPDATE PATH
     //- TODO: remove uxcore/uxcontrols from this block once PC head control renders the right stuff
-    block pageStyles      
-      //- link(href!="[@T[link:<cssroot />]@T]/fos/mike/#{page.config.version}/css/sahara.css" rel="stylesheet")
+    block pageStyles
 
     //- TODO: get this content from PC's head-ie-rsiv item
     <!--[if lt IE 9]>
@@ -176,8 +175,9 @@ html(lang!="[@T[localization:<language full='true' />]@T]")
 
     //- if an inherited page does not want any of these JS files delay loaded, 
     //- the delayed load can be overridden by appending the JS file to the headScripts block
-    //- script(type='text/javascript').
-    //-   delayLoader.addScript('[@T[link:<javascriptroot />]@T]/fos/liveperson/js/liveperson_20141013a.min.js')
+    script(type='text/javascript').
+      delayLoader.addScript('[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2')
+      //- delayLoader.addScript('[@T[link:<javascriptroot />]@T]/fastball/js_lib/Fastball.ChannelIntegration-2.0.6.min.js')
 
     //- TODO: does PC load this?
     // Google Tag Manager

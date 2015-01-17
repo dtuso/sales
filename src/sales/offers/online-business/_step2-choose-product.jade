@@ -9,7 +9,6 @@ atlantis:webstash(type="css")
       margin-top:0px; /* override the -210px from sahara.css */
     }
 
-    
 section#step2-choose-product
 
   .bg-green-new
@@ -60,6 +59,9 @@ section#step2-choose-product
             .include-check-green [@L[cds.sales/offers/online-business:32573-choose-ols-bullet-5]@L]
 
   .sf-dialog.api-c-failure-modal
+    h2.api-error-header
+      img(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/WarningSign.png")
+      div [@L[cds.sales/offers/online-business:32573-something-unexpected-happened]@L]
     p [@L[cds.sales/offers/online-business:32573-get-it-now-error]@L]
 
   #step2-choose-product-wsb-modal.tokenizable-disclaimer-modal.sf-dialog(data-title!='[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]')
