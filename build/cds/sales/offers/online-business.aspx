@@ -515,7 +515,6 @@ function domainSearchFormSubmit(e) {
 
       } else {
 
-        alternateDomains = []; // for testingcd
         // Domain is taken, show spins if possible
         if(alternateDomains.length > 0) {
           // SHOW SPINS
@@ -1012,25 +1011,119 @@ h2.api-error-header {
           
           /* (end) speech */
           
-          #default-marquee-view { display: inline; padding-bottom:40px; }
-          #default-marquee-view .get-online-wrapper {position: relative; height: 260px;}
-          #default-marquee-view .get-online-dash {position: absolute; left: 20px; top: 10px; }
-          #default-marquee-view .get-online-text {font-size: 46pt; color:#333333; font-weight: bold;}
-          #default-marquee-view .get-online-image {display:none;width: 275px; overflow: hidden; height: 35px;}
-          #default-marquee-view .green-arrow {position: absolute; left: 0px; top: 137px;}
-          #default-marquee-view .today-text {position: absolute; left: 20px; top: 55px; font-size: 104pt;margin: 0px;color:#333333;}
-          #default-marquee-view .as-low-as-text {position: absolute; left: 45px; top: 160px; color: #fff;font-size:30px; font-weight: bold; text-transform: uppercase;}
-          #default-marquee-view .top-disclaimer-text {position: absolute; left: 45px; top: 240px; color:#00701D;font-size: 12px;}
-          #default-marquee-view .you-get-wrapper {position: relative; height: 260px;}
-          #default-marquee-view .you-get-image {position: absolute; left: 10px; top: 70px; height: 35px;}
-          #default-marquee-view .domain-text {position: absolute; left: 30px; top: 185px; font-size: 25px; color: #333333;}
-          #default-marquee-view .website-text {position: absolute; left: 40px; top: 185px; font-size: 25px; color: #333333;}
-          #default-marquee-view .email-text {position: absolute; left: 65px;  top: 185px; font-size: 25px; color: #333333;}
-          #default-marquee-view .powered-by-text {position: absolute; left: 55px; top: 214px; font-size: 11px; color: #333333;}
-          #default-marquee-view .see-details-disclaimer-link {color:#00701D;font-size: 12px; cursor:pointer;}
-          #default-marquee-details-modal h2 {margin: 0 0 20px;}
+          #default-marquee-view {
+            display: inline;
+            padding-bottom:40px;
+          }
+          #default-marquee-view .get-online-wrapper {
+            position: relative;
+            height: 260px;
+          }
+          #default-marquee-view .get-online-dash {
+            position: absolute;
+            left: 20px; top: 10px;
+          }
+          #default-marquee-view .get-online-text {
+            font-size: 46pt;
+            color:#333333;
+            font-weight: bold;
+          }
+          #default-marquee-view .get-online-image {
+            display:none;
+            width: 275px;
+            overflow: hidden;
+            height: 35px;
+          }
+          #default-marquee-view .green-arrow {
+            position: absolute;
+            left: 0px;
+            top: 137px;
+          }
+          #default-marquee-view .today-text {
+            position: absolute;
+            left: 20px;
+            top: 55px;
+            font-size: 140px;
+            margin: 0px;
+            color:#333333;
+          }
+          #default-marquee-view .as-low-as-text {
+            position: absolute; 
+            left: 45px;
+            top: 160px;
+            color: #fff;
+            font-size:30px;
+            font-weight: bold;
+            text-transform: uppercase;
+          }
+          #default-marquee-view .top-disclaimer-text {
+            position: absolute;
+            left: 45px;
+            top: 240px;
+            color:#00701D;
+            font-size: 12px;
+          }
+          #default-marquee-view .vat-disclaimer-text {
+            position: absolute;
+            left: 0px;
+            top: 18px;
+            color:#00701D;
+            font-size: 12px;
+          }
+          #default-marquee-view .you-get-wrapper {
+            position: relative;
+            height: 260px;
+          }
+          #default-marquee-view .you-get-image {
+            position: absolute;
+            left: 10px;
+            top: 70px;
+            height: 35px;
+          }
+          #default-marquee-view .domain-text {
+            position: absolute;
+            left: 30px;
+            top: 185px;
+            font-size: 25px;
+            color: #333333;
+          }
+          #default-marquee-view .website-text {
+            position: absolute;
+            left: 40px;
+            top: 185px;
+            font-size: 25px;
+            color: #333333;
+          }
+          #default-marquee-view .email-text {
+            position: absolute;
+            left: 65px;
+            top: 185px;
+            font-size: 25px;
+            color: #333333;
+          }
+          #default-marquee-view .powered-by-text {
+            position: absolute;
+            left: 55px;
+            top: 214px;
+            font-size: 11px;
+            color: #333333;
+          }
+          #default-marquee-view .see-details-disclaimer-link {
+            color:#00701D;
+            font-size: 12px;
+            cursor: pointer;
+          }
+          #default-marquee-details-modal h2 {
+            margin: 0 0 20px;
+          }
           
-          html[lang="en-US"] #default-marquee-view .get-online-image {display:inline-block;}
+          html[lang="en-US"] #default-marquee-view .get-online-image {
+            display:inline-block;
+          }
+          
+          .bigtext {
+            visibility:hidden;
+          }
           
           
           //- @media only screen and (max-width: 768px) {
@@ -1038,9 +1131,6 @@ h2.api-error-header {
           //-     background-image: none !important;
           //-   }
           //- }
-          
-          
-          
           
         </style>
       </atlantis:webstash>
@@ -1053,7 +1143,12 @@ h2.api-error-header {
                 <h1 class="headline-primary today-text">[@L[cds.sales/offers/online-business:32573-top-banner-subheadline]@L]</h1>
                 <h3 data-tokenize="[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T]" class="as-low-as-text">[@L[cds.sales/offers/online-business:32573-as-low-as]@L]</h3>
                 <div class="top-disclaimer-text">[@L[cds.sales/offers/online-business:32573-top-small-disclaimer-text]@L] 
-                  <button class="btn-link see-details-disclaimer-link">[@L[cds.sales/offers/online-business:32573-top-small-disclaimer-details-link]@L]</button>
+                  <button class="btn-link see-details-disclaimer-link">[@L[cds.sales/offers/online-business:32573-top-small-disclaimer-details-link]@L]</button> 
+                  ##if(countrySiteAny(uk)) 
+                   
+                  <div class="vat-disclaimer-text">[@L[cds.sales/offers/online-business:32573-price-does-not-include-taxes-vat]@L]</div> 
+                  ##endif 
+                   
                 </div>
               </div>
             </div>
@@ -1264,7 +1359,12 @@ h2.api-error-header {
       </section>
     </section>
     <atlantis:webstash type="js">
+      <script type="text/javascript" src="https://img1.wsimg.com/fos/hp/rebrand/js/bigtext.min.js"></script>
       <script type="text/javascript">
+        <!-- $(window).load(function () {-->
+        <!--    $('.bigtext').bigtext().css('visibility', 'visible');-->
+        <!--      setTimeout( "$('.bigtext').bigtext().css('visibility', 'visible');",500 );-->
+        <!--  });
         $(document).ready(function() {
         
           //- $('#default-marquee-view .offer-search-btn').on('click', function(){
@@ -1280,6 +1380,7 @@ h2.api-error-header {
         
         });
         
+        -->
       </script>
     </atlantis:webstash>
     <div id="api-failure" class="sf-dialog api-B-failure">

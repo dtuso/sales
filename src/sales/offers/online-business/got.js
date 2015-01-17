@@ -381,7 +381,6 @@ function domainSearchFormSubmit(e) {
 
       } else {
 
-        alternateDomains = []; // for testingcd
         // Domain is taken, show spins if possible
         if(alternateDomains.length > 0) {
           // SHOW SPINS
