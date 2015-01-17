@@ -179,6 +179,7 @@ section#site-choice
         div.headline-primary(data-tokenize!='[@T[multipleproductprice:<current productidlist="464069|101|40972" period="monthly" promocode="75315678" />]@T]') [@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price]@L] 
         p.disclaimer(data-tokenize!='[@T[multipleproductprice:<list productidlist="464069|101|40972" period="monthly" promocode="0" />]@T]') [@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price-disclaimer]@L] 
           button.btn-link.see-ols-disclaimer-link [@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price-disclaimer-link]@L]
+
       .row
         .col-sm-12.button-margin
           button#ols-video-btn.btn.btn-md.btn-block.btn-primary <img class="video-play-icon" src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_play_icon_small.png" /> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]
@@ -224,8 +225,8 @@ section#site-choice
   .videoWrapper
     iframe(width="640", height="390", src="//www.youtube.com/embed/rMF9d8-3WBA?html5=1&rel=0&iv_load_policy=3&modestbranding=1",autoplay, scrolling="no", frameborder="0", allowfullscreen)
 
-#site-choice-ols-stories-modal.sf-dialog
-  include ./_modal_ols_stories.jade
+#site-choice-ols-stores-modal.sf-dialog
+  include ./_modal_ols_stores.jade
 
 | 
 |##endif
@@ -233,7 +234,6 @@ section#site-choice
 
 #site-choice-wsb-modal.tokenizable-disclaimer-modal.sf-dialog(data-title!='[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]')
   p [@L[cds.sales/offers/online-business:32573-disclaimer-modal-wsb-content]@L]
-
 
 #site-choice-wsb-video-modal.sf-dialog.got-video-modal
   .videoWrapper
