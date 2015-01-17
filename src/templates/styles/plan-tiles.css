@@ -1,4 +1,11 @@
 
+.plan-tile { 
+  margin-top: -145px; 
+  margin-bottom: 20px;
+}
+.sf-droplist-msg {
+  text-align: inherit;
+}
 .pro-plans {
     margin-top: 0px;
     padding-bottom: 80px;
@@ -282,8 +289,9 @@
 }
 
 .pro-plans .pro-plan-wrap .plan-subtitle {
-    color: #b3b3b3;
+    color: #000 !important;
     font-weight: 700;
+    text-transform: uppercase;
 }
 
 .pro-plans .pro-plan-wrap .plan-text {
@@ -333,6 +341,14 @@
     font-size: 1.6rem;
     margin-bottom: 15px;
 }
+.pro-plans .pro-plan-wrap .check-item {
+    border-top: 0 none;
+    min-height: 0;
+    text-align: left;
+    font-size: 16px;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+}
 
 .pro-plans .include-check {
     position: relative;
@@ -357,7 +373,7 @@
     background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
     background-position: 0 -864px;
     width: 15px;
-    height: 16px;
+    height: 17px;
     display: inline-block;
     background-size: 205px auto;
     vertical-align: baseline;

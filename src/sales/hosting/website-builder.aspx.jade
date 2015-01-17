@@ -3,7 +3,7 @@ extends ../../templates/pages/landing-page
 append pageStyles
   style
     include ./website-builder/styles.css
-
+ 
 block domainSearch
   //- remove domain search from top of hosting page
 
@@ -15,14 +15,14 @@ block plans
   section#plans
     +renderPlanTiles(3) 
       | 
-      |##if(if(countrySiteAny(uk)))
+      |##if(countrySiteAny(uk))
       | 
-      +planTile
+      +planTile("plan-A")
         include ./website-builder/plans/_plan-website-builder-personal-uk.jade
       | 
       |##else
       | 
-      +planTile
+      +planTile("plan-A")
         include ./website-builder/plans/_plan-website-builder-personal.jade
       | 
       |##endif
@@ -36,14 +36,14 @@ block plans
   
 block sections  
   +renderMidPageNav
-    +priceBlock('[@T[productprice:<current productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]', "year", "#marquee")
+    +priceBlock('[@T[productprice:<current productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]', "[@L[cds.sales/_common:month]@L]", "#plan-A")
 
   section#templates.tile-section
     |view templates 
 
   include ./website-builder/_fullVideo.jade
 
-  section#features(data-mid-nav-title="Features")
+  section#features(data-mid-nav-title="[@L[cds.sales/gd/hosting/website-builder:sb_nav_1]@L]")
     include ./website-builder/_tabbed-carousel.jade
     .bg-pro-gray
       include ./website-builder/_business-exclusives.jade
@@ -51,55 +51,81 @@ block sections
         .container
           .row
             .col-sm-8
-              h3.text-center.text-muted Business Plus Starting at [@T[productprice:<current productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo
+              h3.text-center.text-muted [@L[cds.sales/gd/hosting/website-builder:sb_bpp_starting_at]@L] [@T[productprice:<current productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:mo]@L]
             .col-sm-4
               .right(data-center-element='{"vertical":{"target":{"method":"parents","selector":".bg-black"},"verticalStyle":"margin-top","elementHeightMethod":"outerHeight","targetWidthMethod":"height"}}')
-                button.btn.btn-purchase.btn-plan.btn-sm(data-tcode='', data-plan='wsb_businessplus_12month') Add to Cart
+                button.btn.btn-purchase.btn-plan.btn-sm(data-tcode='', data-plan='wsb_businessplus_12month') [@L[cds.sales/_common:add-to-cart-cap]@L]
 
-  section#testimonials(data-mid-nav-title="Testimonials")
-    +carousel("carousel-testimonials",3,{css:false})
-      +carouselItem({textCenter:true})
-        .row
-          .col-sm-10.col-sm-offset-1.col-xs-12
-            h2 Quote
-        .row
-          .col-sm-10.col-sm-offset-1.col-xs-12
-            .carousel-panel-text GoDaddy is Awesome.
-      +carouselItem({textCenter:true})
-        .row
-          .col-sm-10.col-sm-offset-1.col-xs-12
-            h2 Quote
-        .row
-          .col-sm-10.col-sm-offset-1.col-xs-12
-            .carousel-panel-text GoDaddy is Awesome.
-      +carouselItem({textCenter:true})
-        .row
-          .col-sm-10.col-sm-offset-1.col-xs-12
-            h2 Quote
-        .row
-          .col-sm-10.col-sm-offset-1.col-xs-12
-            .carousel-panel-text GoDaddy is Awesome.
+  section#reviews(data-mid-nav-title="[@L[cds.sales/gd/hosting/website-builder:sb_nav_2]@L]")
+    .container
+      .row
+        .col-sm-12
+          div#BVRRContainer
+            p.bv-loading Loading...
+          div [@P[userControl:<Data location="~/Shared/Tabs/controls/BVReviewsNoJS.ascx"><Parameters><Parameter key="ProductId" value="web_hosting" /><Parameter key="ReviewNumber" value="1" /></Parameters></Data>]@P]
 
-  section#faq(data-mid-nav-title="FAQ")
-    +renderAccordion({id: "test-faq", buttonID: "test-button", buttonText: "hey you"})
-      h2 FAQ!
-      +accordionTab("Where am I?")
-        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vestibulum, nisl a lacinia gravida, velit elit convallis ex, ac fringilla ante erat eu ante. Duis pellentesque, dolor et laoreet feugiat, ligula lacus tincidunt ante, id malesuada purus nulla vel erat. Vivamus viverra velit vel imperdiet imperdiet. Morbi fermentum et justo id convallis. Fusce fringilla neque ut vestibulum ornare. Maecenas eleifend diam sit amet cursus finibus. Donec tellus massa, sollicitudin vitae lacus in, posuere suscipit leo. Donec vel dolor sapien. Pellentesque sit amet eleifend justo. Curabitur sed neque ligula. Phasellus vestibulum malesuada erat id elementum. Sed cursus neque et congue accumsan. 
-        p Cras varius, tellus eu tristique ultrices, sapien enim ullamcorper odio, nec euismod metus massa vel leo. Praesent finibus lacus purus, in ultrices metus rutrum sed. Vestibulum purus mauris, efficitur id quam vel, consequat malesuada nisi. Duis eu mauris vitae mauris pulvinar maximus eu ac odio. Pellentesque et purus sed lectus dictum auctor non et ligula. Sed pellentesque a urna nec sodales. Vestibulum dignissim iaculis tincidunt. Pellentesque facilisis nec lorem in venenatis. Cras scelerisque aliquet libero, a viverra enim pulvinar id. Maecenas pharetra tortor id quam imperdiet, id accumsan velit dapibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur euismod vulputate enim ac scelerisque. Nunc blandit lectus mattis velit ornare, quis malesuada ex sollicitudin. Phasellus auctor risus et nisl dignissim faucibus vel sit amet ex. Nulla tempor eros et pellentesque maximus. Aliquam finibus auctor justo, quis porta ex vulputate sit amet. 
-        p Fusce viverra eget massa ac posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Cras vel ligula venenatis, fringilla purus sit amet, semper ante. Vivamus bibendum maximus dui et finibus. Integer in dignissim dolor, in malesuada massa. Nam accumsan feugiat tortor, eu tincidunt mauris laoreet a. Fusce fermentum dolor eu odio volutpat varius. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis sed augue pretium, ultrices nisi non, maximus tortor. Praesent auctor euismod fringilla.
-      +accordionTab("What's the purpose of life?")
-        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vestibulum, nisl a lacinia gravida, velit elit convallis ex, ac fringilla ante erat eu ante. Duis pellentesque, dolor et laoreet feugiat, ligula lacus tincidunt ante, id malesuada purus nulla vel erat. Vivamus viverra velit vel imperdiet imperdiet. Morbi fermentum et justo id convallis. Fusce fringilla neque ut vestibulum ornare. Maecenas eleifend diam sit amet cursus finibus. Donec tellus massa, sollicitudin vitae lacus in, posuere suscipit leo. Donec vel dolor sapien. Pellentesque sit amet eleifend justo. Curabitur sed neque ligula. Phasellus vestibulum malesuada erat id elementum. Sed cursus neque et congue accumsan. 
-        p Cras varius, tellus eu tristique ultrices, sapien enim ullamcorper odio, nec euismod metus massa vel leo. Praesent finibus lacus purus, in ultrices metus rutrum sed. Vestibulum purus mauris, efficitur id quam vel, consequat malesuada nisi. Duis eu mauris vitae mauris pulvinar maximus eu ac odio. Pellentesque et purus sed lectus dictum auctor non et ligula. Sed pellentesque a urna nec sodales. Vestibulum dignissim iaculis tincidunt. Pellentesque facilisis nec lorem in venenatis. Cras scelerisque aliquet libero, a viverra enim pulvinar id. Maecenas pharetra tortor id quam imperdiet, id accumsan velit dapibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur euismod vulputate enim ac scelerisque. Nunc blandit lectus mattis velit ornare, quis malesuada ex sollicitudin. Phasellus auctor risus et nisl dignissim faucibus vel sit amet ex. Nulla tempor eros et pellentesque maximus. Aliquam finibus auctor justo, quis porta ex vulputate sit amet. 
-        p Fusce viverra eget massa ac posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Cras vel ligula venenatis, fringilla purus sit amet, semper ante. Vivamus bibendum maximus dui et finibus. Integer in dignissim dolor, in malesuada massa. Nam accumsan feugiat tortor, eu tincidunt mauris laoreet a. Fusce fermentum dolor eu odio volutpat varius. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis sed augue pretium, ultrices nisi non, maximus tortor. Praesent auctor euismod fringilla.
-    
+  section#faq(data-mid-nav-title="[@L[cds.sales/gd/hosting/website-builder:sb_nav_3]@L]")
+    +renderAccordion({id: "test-faq", buttonID: "test-button", buttonText: "[@L[cds.sales/gd/hosting/website-builder:sb_faq_see]@L]"})
+      h2 [@L[cds.sales/gd/hosting/website-builder:rb_your_question]@L]
+      +accordionTab("[@L[cds.sales/gd/hosting/website-builder:faq-first-slide-title]@L]")
+        [@L[cds.sales/gd/hosting/website-builder:faq-first-slide-content]@L]
+      +accordionTab("[@L[cds.sales/gd/hosting/website-builder:faq-second-slide-title]@L]")
+        [@L[cds.sales/gd/hosting/website-builder:faq-second-slide-content]@L]
+      +accordionTab("[@L[cds.sales/gd/hosting/website-builder:faq-third-slide-title]@L]")
+        [@L[cds.sales/gd/hosting/website-builder:faq-third-slide-content]@L]
+      +accordionTab("[@L[cds.sales/gd/hosting/website-builder:faq-fourth-slide-title]@L]")
+        [@L[cds.sales/gd/hosting/website-builder:faq-fourth-slide-content]@L]
   section#other-products
-    +renderTwoUpCompare({title: "Not finding what you need?", twoUpCompareId: "two-up", titleBackgroundColor: "bg-white", backgroundColor: "bg-green-official", backgroundImage: "background-image: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/two-up-bg-wsb.jpg')", style: "min-height: 100%"})
-      +twoUpCompareColumn({title: "Get the power of Wordpress with the ease of Fully-Managed Hosting and Security", backgroundColor: "gb-green-official-light", shapeText: "Managed Wordpress", shapeColor: "orange"})
-        p Perfect for: Bloggers, start-ups, small businesses, and designers
-        a.btn.btn-default-dark LEARN MORE
-      +twoUpCompareColumn({title: "Everything you need to open your own online store - no technical skills required.", backgroundColor: "bg-gray-darkest", shapeText: "Quick Shopping Cart", shapeColor: "orange", whiteText: "white-text"})
-        p Perfect for: eCommerce businesses and those looking to add online sales to their site
-        a.btn.btn-default-light LEARN MORE
+    +renderTwoUpCompare({title: "[@L[cds.sales/gd/hosting/website-builder:sb_xsell_title]@L]", twoUpCompareId: "two-up", titleBackgroundColor: "bg-white", backgroundColor: "bg-green-official", backgroundImage: "background-image: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/two-up-bg-wsb.jpg')", style: "min-height: 100%"})
+      +twoUpCompareColumn({title: "[@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp_1]@L]", backgroundColor: "gb-green-official-light", shapeText: "[@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp]@L]", shapeColor: "orange"})
+        p [@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp_2]@L]
+        a.btn.btn-default-dark [@L[cds.sales/gd/hosting/website-builder:learn-more]@L]
+      +twoUpCompareColumn({title: "[@L[cds.sales/gd/hosting/website-builder:sb_xsell_qs_1]@L]", backgroundColor: "bg-gray-darkest", shapeText: "[@L[cds.sales/gd/hosting/website-builder:sb_xsell_qs]@L]", shapeColor: "orange", whiteText: "white-text"})
+        p Perfect for: [@L[cds.sales/gd/hosting/website-builder:sb_qs_2]@L]
+        a.btn.btn-default-light [@L[cds.sales/gd/hosting/website-builder:learn-more]@L]
 
   section#disclaimers
-    |disclaimers
+    a(onClick="disclaimersModal()") disclaimers link
+    #disclaimersModal(data-title="Modal",style="display:none")
+      p hello
+      p hide
+
+prepend endOfPageScripts
+  script.
+    function disclaimersModal() {
+      $('#disclaimersModal').sfDialog();
+    }
+    ##if(activeLanguageAny([en-us]))
+      var loadReviews = function(){
+        if (typeof $BV != "undefined") {
+          $BV.configure("global", {
+            allowSamePageSubmission: true,
+            userToken: "[@P[userControl:<Data location="~/Shared/BazaarVoice/SessionUserToken.ascx"></Data>]@P]",
+            doLogin: function(successCallback, successUrl) {
+              $('#login-modal').modal();
+            },
+            doScrollSubmission: function () {
+              return false;
+            }
+          });
+          $BV.ui("rr", "show_reviews", {
+            productId: "web_hosting",
+            num: 1,
+            doShowContent: function() {
+              $('.bv-loading').hide();
+            }
+          });
+        }
+      };
+      $(window).load(function() {
+        if (!document.getElementById('bvapi')) {
+          var bv = document.createElement('script');
+          bv.type = 'text/javascript';
+          bv.id = 'bvapi';
+          bv.async = true;
+          bv.src = '[@P[userControl:<Data location="~/Scripts/BVScriptUrlOnly.ascx"></Data>]@P]';
+          bv.onload = loadReviews;
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(bv);
+        }
+      });
+    ##endif

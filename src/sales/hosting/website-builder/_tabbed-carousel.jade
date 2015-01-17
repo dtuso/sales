@@ -1,8 +1,8 @@
 include ../../../templates/tabbed-carousel-mixin.jade
 include ../../../templates/carousel-mixin.jade
 - tabbedCarousel = tabbedCarousel || {};
-- tabbedCarousel.title = "Popular apps keep your site fresh";
-- tabbedCarousel.subtitle = "Easily integrate social and business apps in your site to share information and keep customers coming back.";
+- tabbedCarousel.title = "[@L[cds.sales/gd/hosting/website-builder:apps-modal-header]@L]";
+- tabbedCarousel.subtitle = "[@L[cds.sales/gd/hosting/website-builder:apps-modal-description]@L]";
 - tabbedCarousel.numOfTabs= 6;
 - tabbedCarousel.lazyLoad = true;
 - tabbedCarousel.id = "carousel-social-media";
@@ -15,60 +15,59 @@ append vars
   - lazyLoad = true;
   - id = "carousel-social-media"
 
-block tabs
-  +addTab({icon:"uxicon-facebook-box",logo:"",imageAlternateText:"",text:"facebook"})
-  +addTab({icon:"uxicon-twitter",logo:"",imageAlternateText:"",text:"twitter"})
-  +addTab({icon:"uxicon-youtube-box",logo:"",imageAlternateText:"",text:"youtube"})
-  +addTab({icon:"uxicon-yelp",logo:"",imageAlternateText:"",text:"yelp"})
-  +addTab({icon:"uxicon-paypal",logo:"",imageAlternateText:"",text:"paypal"})
-  +addTab({icon:"uxicon-homefinder",logo:"",imageAlternateText:"",text:"home owner"})
++renderTabbedCarousel(tabbedCarousel)
+  +addTab({icon:"uxicon-facebook-box",logo:"",imageAlternateText:"",text:"[@L[cds.sales/gd/hosting/website-builder:apps-modal-facebook-title]@L]"})
+  +addTab({icon:"uxicon-twitter",logo:"",imageAlternateText:"",text:"[@L[cds.sales/gd/hosting/website-builder:apps-modal-twitter-title]@L]"})
+  +addTab({icon:"uxicon-youtube-box",logo:"",imageAlternateText:"",text:"[@L[cds.sales/gd/hosting/website-builder:apps-modal-youtube-title]@L]"})
+  +addTab({icon:"uxicon-yelp",logo:"",imageAlternateText:"",text:"[@L[cds.sales/gd/hosting/website-builder:apps-modal-yelp-title]@L]"})
+  +addTab({icon:"uxicon-paypal",logo:"",imageAlternateText:"",text:"[@L[cds.sales/gd/hosting/website-builder:apps-modal-paypal-title]@L]"})
+  +addTab({icon:"uxicon-homefinder",logo:"",imageAlternateText:"",text:"[@L[cds.sales/gd/hosting/website-builder:apps-modal-homefinder-title]@L]"})
 +carousel(tabbedCarousel.id ,tabbedCarousel.numOfTabs,{css:true})
   +carouselItem(tabbedCarousel)
-    img.img-responsive.img-center(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-apps-image-facebook-int.jpg")
+    img.img-responsive.img-center(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-fb.png")
     .row
       .col-sm-10.col-sm-offset-1.col-xs-12
-        h2 FACEBOOK
+        h2 [@L[cds.sales/gd/hosting/website-builder:apps-modal-facebook-title]@L]<sup class="supsymbol">&reg;</sup>
     .row
       .col-sm-10.col-sm-offset-1.col-xs-12
-          .carousel-panel-text Share your status updates or photos.
+          .carousel-panel-text [@L[cds.sales/gd/hosting/website-builder:apps-modal-facebook-desc]@L]
   +carouselItem(tabbedCarousel)
-    img.img-responsive.img-center(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-apps-image-twitter-int.jpg")
+    img.img-responsive.img-center(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-twitter.png")
     .row
       .col-sm-10.col-sm-offset-1.col-xs-12
-        h2 TWITTER
+        h2 [@L[cds.sales/gd/hosting/website-builder:apps-modal-twitter-title]@L]<sup class="supsymbol">&reg;</sup>
     .row
       .col-sm-10.col-sm-offset-1.col-xs-12
-          .carousel-panel-text Share your status updates or photos.
+          .carousel-panel-text [@L[cds.sales/gd/hosting/website-builder:apps-modal-twitter-desc]@L]
   +carouselItem(tabbedCarousel)
-    img.img-responsive.img-center(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-apps-image-youtube-int.jpg")
+    img.img-responsive.img-center(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-youtube.png")
     .row
       .col-sm-10.col-sm-offset-1.col-xs-12
-        h2 YOUTUBE
+        h2 [@L[cds.sales/gd/hosting/website-builder:apps-modal-youtube-title]@L]<sup class="supsymbol">&reg;</sup>
     .row
       .col-sm-10.col-sm-offset-1.col-xs-12
-          .carousel-panel-text Share your status updates or photos.
+          .carousel-panel-text [@L[cds.sales/gd/hosting/website-builder:apps-modal-youtube-desc]@L]
   +carouselItem(tabbedCarousel)
-    img.img-responsive.img-center(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-apps-image-facebook-int.jpg")
+    img.img-responsive.img-center(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-yelp.png")
     .row
       .col-sm-10.col-sm-offset-1.col-xs-12
-        h2 YELP
+        h2 [@L[cds.sales/gd/hosting/website-builder:apps-modal-yelp-title]@L]<sup class="supsymbol">&reg;</sup>
     .row
       .col-sm-10.col-sm-offset-1.col-xs-12
-          .carousel-panel-text Share your status updates or photos.
+          .carousel-panel-text [@L[cds.sales/gd/hosting/website-builder:apps-modal-yelp-desc]@L]<sup class="supsymbol">&reg;</sup>
   +carouselItem(tabbedCarousel)
-    img.img-responsive.img-center(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-apps-image-facebook-int.jpg")
+    img.img-responsive.img-center(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-paypal.png")
     .row
       .col-sm-10.col-sm-offset-1.col-xs-12
-        h2 PAYPAL
+        h2 [@L[cds.sales/gd/hosting/website-builder:apps-modal-paypal-title]@L]<sup class="supsymbol">&reg;</sup>
     .row
       .col-sm-10.col-sm-offset-1.col-xs-12
-          .carousel-panel-text Share your status updates or photos.
+          .carousel-panel-text [@L[cds.sales/gd/hosting/website-builder:apps-modal-paypal-desc]@L]
   +carouselItem(tabbedCarousel)
-    img.img-responsive.img-center(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-apps-image-facebook-int.jpg")
+    img.img-responsive.img-center(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-homeFinder.png")
     .row
       .col-sm-10.col-sm-offset-1.col-xs-12
-        h2 HOMEOWNER
+        h2 [@L[cds.sales/gd/hosting/website-builder:apps-modal-homefinder-title]@L]<sup class="supsymbol">&reg;</sup>
     .row
       .col-sm-10.col-sm-offset-1.col-xs-12
-          .carousel-panel-text Share your status updates or photos.
-
+          .carousel-panel-text [@L[cds.sales/gd/hosting/website-builder:apps-modal-homefinder-desc]@L]

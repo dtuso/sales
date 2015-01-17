@@ -33,9 +33,63 @@
   padding-right: 5px;
   position: absolute;
   left: 0;
-  top: 0;
+  top: -6px;
 }
 
 *[data-tokenize] {visibility: hidden;}
 
 .tld-list { display: none;}
+
+
+#marquee h3.get-a-domain-text,
+#step2-choose-product h3.choose-header {
+  font-size: 24px; 
+  color: #232323;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.disclaimers-row {
+  margin: 20px 0;
+  font-size:14px;
+  color:#666;
+}
+
+.bg-white {
+    background-color: #fff;
+}
+.bg-yellow {
+    background-color: #ffde2d;
+}
+.bg-gray-lighter, .bg-pro-gray {
+    background-color: #e8e8e8;
+}
+.bg-gray-light {
+    background-color: #d9d9d9;
+}
+.bg-green-official {
+    background-color: #77c043;
+}
+.bg-green-new {
+    background-color: #5caf2b;
+}
+.bg-green-official-light {
+    background-color: #84d54a;
+}
+.bg-gray-darkest {
+    background-color: #333333;
+}
+
+h2.api-error-header {
+  font-size: 30px;
+  color: #333;
+  font-family: "Walsheim-Black";
+}
+h2.api-error-header img {
+  float:left;
+  margin-right: 10px;
+}
+
+h2.api-error-header {
+
+}
