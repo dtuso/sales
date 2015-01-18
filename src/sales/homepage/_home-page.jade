@@ -61,20 +61,24 @@ block pageStyles
       @shadow:rgba(0,0,0,0.1);
       @dark-green:#008a30;
       @gd-orange:#ff8a00;
-      h2{font-size:4rem}
+      @desktop: ~"only screen and (min-width:991px)";
+      @desktop-lg: ~"only screen and (min-width:1200px)";
+      h2{
+        @media @desktop {font-size:4rem;} 
+      }
       .text-white{color:#fff}
       .walsheim-regular{font-family:'Walsheim-Regular', Arial, sans-serif;}
       .walsheim-medium{font-family:'Walsheim-Medium', Arial, sans-serif;}
       .walsheim-bold{font-family:'Walsheim-Bold', 'Arial Black', sans-serif;}
       .walsheim-black{font-family:'Walsheim-Black', 'Arial Black', sans-serif;}
       .tungsten{font-family:Tungsten, 'Tungsten A', 'Tungsten B', Impact, sans-serif;}
-      .search-template .search-template-box{margin-top:20px}
-      .search-template .search-template-box{margin-bottom:0}
-      #marquee{position:relative}
+      .search-template .search-template-box{margin-top:20px;margin-bottom:0}
+      #marquee{position:relative;
+        .tile-wrapper{margin-top:6.5px;}
+        .tile-wrapper:last-child{margin-bottom:6.5px;}
+        .tile{min-height:140px;}
+      }
       .hero-wrapper{min-height:300px;}
-      #marquee .tile-wrapper{margin-top:6.5px}
-      #marquee .tile{min-height:140px;}
-      #marquee .tile-wrapper:last-child{margin-bottom:6.5px}
       .tile{cursor:pointer}
       .top-banner-lower-content{min-height:40px;}
       .gdhp-share{position:relative;float:right;}
@@ -84,7 +88,15 @@ block pageStyles
       #merchandising{background-color:#fff;padding:10px 0;font-size:16px;
         .tile-wrapper{min-height:140px;margin:5px 0}
       }
-      #puppy-promo{background-image:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/buddy-video.jpg)}
+      #puppy-promo{background-image:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/buddy-video.jpg);
+        h4{font-size:4.0rem;text-transform:uppercase;margin-bottom:10px;font-family:'Walsheim-Bold', 'Arial Black', sans-serif;}
+      }
+      #danica-puppy-promo{background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/danica-buddy-placeholder.jpg) top center no-repeat;background-size:cover;min-height:266px;
+        h3{@media @desktop{padding-top:5%;}@media @desktop-lg{padding-top:10%;}}
+        img{width:100%}
+      }
+      .videoWrapper{position:relative;padding-bottom: 56.25%; /* 16:9 */padding-top:25px;height:0;}
+      .videoWrapper iframe {position:absolute;top:0;left:0;width:100%;height:100%;}
       .domain-promo-content{background-image:url('[@T[link:<imageroot />]@T]fos/hp/rebrand/img/domain_background.jpg');background-size:cover;min-height:420px}
       .domain-promo-text{padding-top:80px;}
       #domain-promo .text-center{color:#333;margin:0;padding:30px 0;text-transform:uppercase;}
@@ -222,6 +234,22 @@ block content
         .row
           .col-sm-12
             +fullVideoModule({"icode":"code","playButton":"[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rb-play-button.png","tagline":"Will Buddy find his way home?","cta":"WATCH VIDEO","youtubeId":"-HtVJyxSQmw","tileName":"buddyVideo"})
+    section#danica-puppy-promo
+      .container
+        .row
+          .col-md-5.col-sm-8.col-xs-12
+            .container
+              .row
+                .col-sm-12
+                  h2.walsheim-bold Danica and Buddy
+              .row
+                .col-md-4.col-sm-3.col-xs-2
+                  img(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rb-play-button.png")
+                .col-md-8.col-sm-4.col-xs-3
+                  h3.walsheim-bold Watch the video!
+          .col-md-7.col-sm-0.col-xs-9
+      .videoWrapper
+        iframe(width="640", height="390", src="//www.youtube.com/embed/rMF9d8-3WBA?html5=1&rel=0&iv_load_policy=3&modestbranding=1",autoplay, scrolling="no", frameborder="0", allowfullscreen)
     section#domain-promo.bg-green-official
       h2.text-center.walsheim-black It All Starts With A Domain Name.
       div.domain-promo-content
@@ -256,7 +284,7 @@ block content
         h2.text-center.walsheim-black The Right Email Makes A Difference.
         .row
           .col-sm-6.o365-promo-text
-            h3 Customers<br />Love Pro Email
+            h3 Look like the<br />pro you are
             p Did you know that customers are nine times more likely to choose a business that has a professional email address?<br/>With Microsoft Office 365, you'll:
             ul
               li <b>Get a professional address</b>, like yourname@coolexample.com.
