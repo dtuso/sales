@@ -14,3 +14,6 @@ node_modules/*
 .gitignore
 *.log
 .vagrant
+src/templates/3.3.1-wsb-templates.html
+src/templates/bootsrap-templates
+src/templates/star-field-templates.html
