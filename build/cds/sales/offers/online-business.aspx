@@ -2278,7 +2278,7 @@ h2.api-error-header {
             </div>
           </div>
           <div class="row">
-            <div class="col-md-5 col-md-offset-2 col-sm-6 plan-tile plan-pro or-container">
+            <div class="col-md-5 col-sm-6 plan-tile plan-pro or-container">
               <div class="pro-plan-wrap">
                 <div class="plan-flag">[@L[cds.sales/offers/online-business:32573-choose-wsb]@L]</div>
                 <h2 class="h0">[@L[cds.sales/offers/online-business:32573-choose-wsb-text]@L]</h2>
