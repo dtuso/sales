@@ -8,7 +8,9 @@
 .dash{
   letter-spacing: -.5rem;
 }
-
+.BVBrowserWebkit{
+  margin-top:  50px;
+}
 .BVDITitle {
   text-transform: uppercase !important;
   text-align: center !important;
