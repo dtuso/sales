@@ -515,12 +515,9 @@ function domainSearchFormSubmit(e) {
 
       } else {
 
-<<<<<<< HEAD
         // tokenize header on search available page
         $('span#not-available-domain-name').text(exactMatchDomain.Fqdn);
 
-=======
->>>>>>> 5668ffc0180ffb4ca824c3a99fb9534b97bf2bea
         // Domain is taken, show spins if possible
         if(alternateDomains.length > 0) {
           // SHOW SPINS
@@ -2219,15 +2216,48 @@ h2.api-error-header {
     </section>
     <atlantis:webstash type="css">
       <style>
-        #step2-choose-product {display: none;}
-        #step2-choose-product .choose-header {
-          margin: 30px 0 40px;      
-        }
-        #step2-choose-product .api-c-failure-modal {display: none;}
-        #step2-choose-product .pro-plans {
-          margin-top:0px; /* override the -210px from sahara.css */
+        #step2-choose-product {
+          display: none;
         }
         
+        #step2-choose-product h3.choose-header {
+          margin: 30px 0 40px;      
+        }
+        
+        #step2-choose-product h2 {
+          margin: 30px 0;
+        }
+        
+        #step2-choose-product .api-c-failure-modal {
+          /* display: none; */
+        }
+        
+        #step2-choose-product .plan-pro {
+          margin-top:0px; /* override the -210px from sahara.css */
+        }
+        #step2-choose-product h2.h0 {
+          font-size: 30px;
+          font-color: #232323;
+        }
+        #step2-choose-product h4.headline-primary {
+          font-size: 20px;
+          color: #333;
+          margin: 15px 0 0;
+        }
+        #step2-choose-product .plan-price-wrap {
+          color: #EF6C0F;
+          font-family: "Walsheim-Bold";
+          font-size: 25px;
+        }
+        #step2-choose-product .plan-price-wrap .promo-price {
+          font-size: 45px;
+        }
+        #step2-choose-product .pro-plans .pro-plan-wrap .plan-price-wrap {
+          min-height: 12px;
+        }
+        #step2-choose-product .pro-plans .pro-plan-wrap .btn {
+            margin: 20px 0 30px;
+        }
       </style>
     </atlantis:webstash>
     <section id="step2-choose-product">
@@ -2235,7 +2265,7 @@ h2.api-error-header {
         <div class="container">
           <div class="row">
             <div class="col-sm-12">
-              <h2>[@L[cds.sales/offers/online-business:32573-youve-got-your-domain]@L]</h2>
+              <h2 class="headline-primary">[@L[cds.sales/offers/online-business:32573-youve-got-your-domain]@L]</h2>
             </div>
           </div>
         </div>
@@ -2248,11 +2278,11 @@ h2.api-error-header {
             </div>
           </div>
           <div class="row">
-            <div class="col-md-5 col-sm-12 plan-tile plan-pro">
+            <div class="col-md-5 col-md-offset-2 col-sm-6 plan-tile plan-pro or-container">
               <div class="pro-plan-wrap">
                 <div class="plan-flag">[@L[cds.sales/offers/online-business:32573-choose-wsb]@L]</div>
-                <h2>[@L[cds.sales/offers/online-business:32573-choose-wsb-text]@L]</h2>
-                <h4>[@L[cds.sales/offers/online-business:32573-choose-wsb-all-this-for-just-text]@L]</h4>
+                <h2 class="h0">[@L[cds.sales/offers/online-business:32573-choose-wsb-text]@L]</h2>
+                <h4 class="headline-primary">[@L[cds.sales/offers/online-business:32573-choose-wsb-all-this-for-just-text]@L]</h4>
                 <div data-tokenize="[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T]" class="plan-price-wrap">[@L[cds.sales/offers/online-business:32573-choose-wsb-all-this-for-just-price]@L]</div>
                 <div data-tokenize="[@T[multipleproductprice:<list productidlist="464069|101|7524" period="monthly" promocode="0" />]@T]" class="plan-inline-disclaimer">[@L[cds.sales/offers/online-business:32573-choose-wsb-text-price-disclaimer]@L] 
                   <button class="btn-link see-wsb-disclaimer-link">[@L[cds.sales/offers/online-business:32573-choose-wsb-text-price-disclaimer-link]@L]</button>
@@ -2264,14 +2294,11 @@ h2.api-error-header {
                 <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-choose-wsb-bullet-4]@L]</div>
               </div>
             </div>
-            <div class="col-md-2 col-sm-12">
-              <p>Or</p>
-            </div>
-            <div class="col-md-5 col-sm-12 plan-tile plan-pro">
+            <div class="col-md-5 col-md-offset-2 col-sm-6 plan-tile plan-pro">
               <div class="pro-plan-wrap">
                 <div class="plan-flag">[@L[cds.sales/offers/online-business:32573-choose-ols]@L]</div>
-                <h2>[@L[cds.sales/offers/online-business:32573-choose-ols-text]@L]</h2>
-                <h4>[@L[cds.sales/offers/online-business:32573-choose-ols-all-this-for-just-text]@L]</h4>
+                <h2 class="h0">[@L[cds.sales/offers/online-business:32573-choose-ols-text]@L]</h2>
+                <h4 class="headline-primary">[@L[cds.sales/offers/online-business:32573-choose-ols-all-this-for-just-text]@L]</h4>
                 <div data-tokenize="[@T[multipleproductprice:<current productidlist="464069|101|40972" period="monthly" promocode="75315678" />]@T]" class="plan-price-wrap">[@L[cds.sales/offers/online-business:32573-choose-ols-all-this-for-just-price]@L]</div>
                 <div data-tokenize="[@T[multipleproductprice:<list productidlist="464069|101|40972" period="monthly" promocode="0" />]@T]" class="plan-inline-disclaimer">[@L[cds.sales/offers/online-business:32573-choose-ols-text-price-disclaimer]@L] 
                   <button class="btn-link see-ols-disclaimer-link">[@L[cds.sales/offers/online-business:32573-choose-ols-text-price-disclaimer-link]@L]</button>
@@ -2628,7 +2655,7 @@ h2.api-error-header {
   content: '';
   width: 94px;
   height: 94px;
-  background-image: url([@T[link:<imageroot />]@T]ffos/hp/sahara-rebrand-sprite-20141114.png);
+  background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
   background-size: 205px auto;
   background-position: 0 -896px;
   position: absolute;
