@@ -3,7 +3,7 @@ atlantis:webstash(type="css")
     #domain-not-available-marquee-view { display: none; }
     #domain-not-available-marquee-view .pro-plans .pro-plan-wrap {border-top: 10px solid #008a32; padding: 20px;}
     #domain-not-available-marquee-view .pro-plans {margin-top: 0px; }
-    #domain-not-available-marquee-view .domain-not-available-heading-text  { color: #333333; }
+    #domain-not-available-marquee-view h2.domain-not-available-heading-text  { color: #333333; margin: 10px 0 0; font-size: 40px; font-family: "Walsheim-Black"; }
     #domain-not-available-marquee-view h4.other-domains-heading-text {padding-top 20px; font-size: 24px; color:#333; font-weight: bold; }
     #domain-not-available-marquee-view h6.results-list-heading-text {padding-top 20px; font-size: 18px; color:#333; }
     #domain-not-available-marquee-view .domain-spin-wrap {min-height: 120px;border: solid 1px #cccccc;margin-bottom: 15px;} 
@@ -20,6 +20,11 @@ atlantis:webstash(type="css")
     #spin-results h4.domain-name-display {font-size: 30px; color: #333; font-weight:bold;}
     #spin-results h2.domain-name-display-tld {font-size: 40px; color: #333;}
     #domain-not-available-marquee-view button.view-all-button {font-size: 18px; color: #6586C4; font-family: Arial;}
+    #spin-results .plan-tile {margin-top: 0px;}
+
+    #domain-not-available-marquee-view h2.not-available-domain-name-text {margin: 10px 0 0;}
+    span#not-available-domain-name {text-transform: lowercase; color: #333333; background: rgba(254, 220, 69, 0.7); padding: 5px;line-height: 1.6em;word-wrap: break-word;  }
+    #domain-available-marquee-view .available-domain-name-text {text-transform: lowercase; color: #333333; background: rgba(254, 220, 69, 0.7); padding: 5px;line-height: 1.6em;word-wrap: break-word;  }
 
 section#domain-not-available-marquee-view.js-marquee-section
   .bg-green-official
@@ -27,6 +32,10 @@ section#domain-not-available-marquee-view.js-marquee-section
       .row
         .col-md-12
           h2.domain-not-available-heading-text [@L[cds.sales/offers/online-business:32573-sorry-domain-unavailable]@L]
+      .row
+        .col-md-8.col-sm-12
+          h2.not-available-domain-name-text
+            span#not-available-domain-name
       +domainSearchOffersInput('[@L[cds.sales/offers/online-business:32573-search-try-again]@L]', '12347', '[@L[cds.sales/offers/online-business:32573-try-a-different-domain-name-placeholder]@L]', '[@L[cds.sales/offers/online-business:32573-search]@L]', '[@L[cds.sales/offers/online-business:32573-type-your-business-placeholder]@L]', '[@L[cds.sales/offers/online-business:32573-eligibility-error]@L]', '[@L[cds.sales/offers/online-business:32573-offer-only-valid]@L]')
   .bg-white
     .container.pro-plans

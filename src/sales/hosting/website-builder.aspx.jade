@@ -1,5 +1,20 @@
 extends ../../templates/pages/landing-page
 
+append vars
+  - page.title = "[@L[cds.sales/gd/hosting/website-builder:page-title]@L]";
+  - page.description = "[@L[cds.sales/gd/hosting/website-builder:meta-description]@L]";
+  - page.keywords = "[@L[cds.sales/gd/hosting/website-builder:meta-keywords]@L]"; 
+  - page.canonical = "[@T[link:<relative parammode='explicit' path='~/hosting/website-builder.aspx' />]@T]";
+
+  - page.openGraph = page.openGraph || {};
+  - page.openGraph.title = "[@L[cds.sales/gd/hosting/website-builder:og-title]@L]";
+  - page.openGraph.description = "[@L[cds.sales/gd/hosting/website-builder:og-description]@L]";
+  - page.openGraph.image = "[@T[link:<imageroot />]@T]fos/201401/hosting/website-builder/img/og.png";
+
+  - page.links = page.links || {};
+  - page.links.canonical = "[@T[link:<relative parammode='explicit' />]@T]";
+  - page.links.favicon = "[@T[link:<imageroot />]@T]assets/godaddy.ico";
+
 append pageStyles
   style
     include ./website-builder/styles.css
@@ -39,7 +54,8 @@ block sections
     +priceBlock('[@T[productprice:<current productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]', "[@L[cds.sales/_common:month]@L]", "#plan-A")
 
   section#templates.tile-section
-    |view templates 
+    include ../../templates/wsb-templates.html
+ 
 
   include ./website-builder/_fullVideo.jade
 

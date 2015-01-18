@@ -1,6 +1,6 @@
 ---
 location: localization/sales/offers/online-business/en
-id:  54b6a963f778fc0f24ed2064
+id:  54bac811f778fc23d00293a1
 name: GCE-32573
 comments: GOT rebrand 2015 SuperBowl
 ---
@@ -304,7 +304,7 @@ Get it now
 <phrase key="32573-try-a-different-domain-name-placeholder" />
 Try a different domain name
 <phrase key="32573-sorry-domain-unavailable" />
-Sorry, this domain's already taken:
+Sorry, this domain's not available:
 <phrase key="32573-search-try-again" />
 The right one's out there. Just try again.
 <phrase key="32573-here-are-some-others" />
