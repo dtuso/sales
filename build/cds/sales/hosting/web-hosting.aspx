@@ -132,7 +132,14 @@
       
     </script>
     <link href="[@T[link:<cssroot />]@T]/fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css">
-    <style>h2{
+    <style>h1 {
+  text-transform: uppercase;
+  font-family: 'Walsheim-Black';
+  font-size: 20px;
+  color: #333;
+}
+
+h2{
   margin-bottom: 40px;
   margin-top: 0;
   font-size: 4rem;
@@ -1439,6 +1446,7 @@ h2.marquee-product-name,
                 <div class="row">
                   <div class="col-md-7 col-sm-12">
                     <div class="marquee-pro-left-text">
+                            <h1 class="marquee-product-name">[@L[cds.sales/gd/hosting/web-hosting:web-hosting-11166]@L]</h1>
                             <h2 class="marquee-product-description">HOSTING THAT'S MORE RELIABLE THAN YOUR BEAN ROASTING <span style='letter-spacing:-.5rem;'>----------------</span> PLAID SHIRT</h2>
                             <div class="marquee-product-text">[@L[cds.sales/hosting/web-hosting-rebrand:guaranteeText1Rebrand]@L] [@L[cds.sales/hosting/web-hosting-rebrand:guaranteeText2Rebrand]@L] </br> [@L[cds.sales/hosting/web-hosting-rebrand:guaranteeText3Rebrand]@L]</div><a href="[@T[link:<relative path='~/hosting/web-hosting-config-new.aspx' secure='true'><param name='ci' value='89262' /><param name='plan' value='host_GridHostEcoDiabloLin1Yr_us' /></relative>]@T]" class="btn btn-primary jump-arrow-btn">[@L[cds.sales/hosting/web-hosting-rebrand:getstarted]@L]</a>
                     </div>
@@ -2341,6 +2349,7 @@ h2.marquee-product-name,
                 <div class="row">
                   <div class="col-md-7 col-sm-12">
                     <div class="marquee-pro-left-text">
+                            <h1 class="marquee-product-name">[@L[cds.sales/gd/hosting/web-hosting:web-hosting-11166]@L]</h1>
                             <h2 class="marquee-product-description">[@L[cds.sales/hosting/web-hosting-rebrand:marquee]@L]</h2>
                             <div class="marquee-product-text">[@L[cds.sales/hosting/web-hosting-rebrand:guaranteeText1]@L] [@L[cds.sales/hosting/web-hosting-rebrand:guaranteeText2]@L]</div><a href="[@T[link:<relative path='~/hosting/web-hosting-config-new.aspx' secure='true'><param name='ci' value='89262' /><param name='plan' value='host_GridHostEcoDiabloLin1Yr_us' /></relative>]@T]" class="btn btn-primary jump-arrow-btn">[@L[cds.sales/hosting/web-hosting-rebrand:getstarted]@L]</a>
                     </div>
@@ -2367,6 +2376,12 @@ h2.marquee-product-name,
                   <strike>[@T[productprice:<list productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary">[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="32051" secondaryproductid="32051" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span></strong> 
                 ##endif
                  
+                 
+                ##if(countrySiteAny(uk))
+                 
+                <p>[@L[cds.sales/_common:vat-price]@L] </p> 
+                ##endif
+                 
               </div>
               <button id="product-A" data-tcode="undefined" data-plan="host_GridHostEcoDiabloLin1Yr_us" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
               <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:oneWeb]@L]</strong></div>
@@ -2384,6 +2399,12 @@ h2.marquee-product-name,
                 ##if(productHasSavingsMoreThan(32059, 32059, 0))
                  <br><strong>[@L[cds.sales/_common:was]@L] 
                   <strike>[@T[productprice:<list productid="32059" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary">[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="32059" secondaryproductid="32059" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span></strong> 
+                ##endif
+                 
+                 
+                ##if(countrySiteAny(uk))
+                 
+                <p>[@L[cds.sales/_common:vat-price]@L] </p> 
                 ##endif
                  
               </div>
@@ -2404,6 +2425,12 @@ h2.marquee-product-name,
                 ##if(productHasSavingsMoreThan(32082, 32082, 0))
                  <br><strong>[@L[cds.sales/_common:was]@L] 
                   <strike>[@T[productprice:<list productid="32082" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary">[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="32082" secondaryproductid="32082" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span></strong> 
+                ##endif
+                 
+                 
+                ##if(countrySiteAny(uk))
+                 
+                <p>[@L[cds.sales/_common:vat-price]@L] </p> 
                 ##endif
                  
               </div>
@@ -4412,6 +4439,34 @@ height: 27px;
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> 
+    ##endif
+     
+     
+    ##if(activeLanguageAny([en-US]))
+     
+    <section id="modals">
+      <div id="login-modal" class="modal fade">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <form method="POST" id="g-modal-loginAcct-form" action="[@T[link:<external parammode='explicit' linktype='SSOURL' secure='true' />]@T]/login.aspx?spkey=[@T[sso:spkey]@T]&target=[@T[link:<external linktype='siteurl' path='/hosting/web-hosting.aspx' secure='false' parammode='explicit'/>]@T]"></form>
+            <input type="hidden" value="LOGIN" name="LOGIN">
+            <input type="hidden" value="1" name="verifyShopper">
+            <div class="modal-header">
+              <button type="button" data-dismiss="modal" aria-hidden="true" class="close">&times;</button>
+              <h4 class="modal-title">Please login to access your account</h4>
+            </div>
+            <div class="modal-body">
+              <input type="text" id="loginName" name="loginName" autocomplete="off" placeholder="[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Headers.UtilityBar.Username]@L]">
+              <input type="password" id="password" name="password" autocomplete="off" placeholder="[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Headers.UtilityBar.Password]@L]"><a href="[@T[link:<external linktype='SSOURL' path='/account/accountRetrieval.aspx' secure='true'/>]@T]" class="forgot-pass">[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Headers.UtilityBar.ForgotPassword]@L]</a>
+            </div>
+            <div class="modal-footer">
+              <button type="button" data-dismiss="modal" class="btn btn-default">Cancel</button>
+              <input type="submit" value="[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Headers.UtilityBar.SignIn]@L]" class="btn btn-primary">
             </div>
           </div>
         </div>

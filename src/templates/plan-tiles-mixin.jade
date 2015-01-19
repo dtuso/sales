@@ -41,6 +41,10 @@ mixin renderPlanTiles(columns, options)
   - options = options || {};
   - options.backgroundColor = options.backgroundColor || "bg-gray-light";
   - options.icode = options.icode || "";
+  if(!hasIncludedCss) 
+    - hasIncludedCss = true
+    style
+      include:css ./styles/plan-tiles.css
   if (columns > 4)
     - containerClass = "plan-container"
   else

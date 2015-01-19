@@ -1,3 +1,10 @@
+h1 {
+  text-transform: uppercase;
+  font-family: 'Walsheim-Black';
+  font-size: 20px;
+  color: #333;
+}
+
 h2{
   margin-bottom: 40px;
   margin-top: 0;
