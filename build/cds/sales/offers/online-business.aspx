@@ -423,7 +423,7 @@ function wireupModals() {
       $("#site-choice-ols-video-modal").sfDialog({titleHidden:true, dialogWidthIdeal:840, buttons: []});
     });
     $('#ols-stores-btn').on('click', function(){
-      $("#site-choice-ols-stores-modal").sfDialog({titleHidden:true, buttons: [], dialogWidthIdeal:1240 });
+      $("#site-choice-ols-stores-modal").sfDialog({titleHidden:true, buttons: [], dialogWidthIdeal:1230 });
     });
   }
 
@@ -3007,6 +3007,12 @@ h2.api-error-header {
             min-height: 50px;
             margin-bottom: 0px;
           }
+          .carousel-wrap {
+            padding-bottom: 60px !important;
+          }
+          .carousel-container .carousel .carousel-indicators {
+            bottom: -50px !important;
+          }
           .main-heading {
             margin: 0px;
           }
@@ -3017,6 +3023,7 @@ h2.api-error-header {
           .customer-quote {
             margin-top: 0px;
             margin-bottom: 10px;
+            min-height: 70px;
           }
           .store-name {
             margin-top: 10px;
