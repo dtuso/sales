@@ -458,6 +458,68 @@ cursor: pointer;
   cursor: pointer;
 }
 
+.compareButtons {
+  height: 54px;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 11px;
+}
+
+.compareButtons.leftActive {
+    background-image:url([@T[link:<imageroot />]@T]fos/mike/img/hosting/img-toggle-cpanel.png); 
+}
+
+.compareButtons.rightActive {
+    background-image:url([@T[link:<imageroot />]@T]fos/mike/img/hosting/img-toggle-parallels.png); 
+}
+
+.compareButtons a {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: 'Walsheim-Black';
+  font-size: 20px;
+}
+
+.compareButtons .activeButton a {
+  color: #088A44;
+}
+
+.compareButtons .inactiveButton a {
+  color: #666666;
+}
+
+.compareButtonsLeft {
+  width: 180px;
+}
+.compareButtonsRight {
+  width: 180px;
+}
+
+
+
+@media (min-width: 1200px) {
+  .compareButtons {
+    padding-left: 395px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .compareButtons {
+    padding-left: 290px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .compareButtons {
+    padding-left: 180px;
+  }
+}
+
+@media (max-width: 767px) {
+  .compareButtons {
+    padding-left: 25px;
+  }
+}
     </style><!--[if lt IE 9]>
     <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
     <link href="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy.min.html" id="respond-proxy" rel="respond-proxy">
@@ -484,6 +546,7 @@ cursor: pointer;
     <!-- HEADERBEGIN--> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- HEADEREND-->
+    <!-- nothing to see here-->
      
     ##if(activeLanguageAny([en-US]))
      
@@ -2793,7 +2856,7 @@ h2.marquee-product-name,
                       <p class="top-text">[@L[cds.sales/hosting/web-hosting-rebrand:proBannerTop]@L]</p>
                       <p class="bottom-text">[@L[cds.sales/hosting/web-hosting-rebrand:proBannerBottom]@L]</p>
                     </div>
-                    <div class="col-sm-2 pro-banner-button"><a class="btn btn-default-light">[@L[cds.sales/hosting/web-hosting-rebrand:learnMore]@L]</a></div>
+                    <div class="col-sm-2 pro-banner-button"><a href="[@T[link:<relative path='/pro/cpanel-hosting'>><param name='ci' value='93999' /></relative>]@T]" class="btn btn-default-light">[@L[cds.sales/hosting/web-hosting-rebrand:learnMore]@L]</a></div>
                   </div>
                   <div class="row">
                     <div class="col-sm-12">
@@ -3135,9 +3198,9 @@ h2.marquee-product-name,
           <div>
              
             ##if(activeLanguageAny([en-US]))
-             <a class="btn btn-default-dark">[@L[cds.sales/hosting/web-hosting-rebrand:seeWhatRebrand]@L]</a> 
+             <a data-ci="89591" href="http://webhosting.cloudspectator.com/summary" target="_BLANK" class="btn btn-default-dark">[@L[cds.sales/hosting/web-hosting-rebrand:seeWhatRebrand]@L]</a> 
             ##else
-             <a class="btn btn-default-dark">[@L[cds.sales/hosting/web-hosting-rebrand:learnMore]@L]</a> 
+             <a data-ci="89591" href="http://webhosting.cloudspectator.com/summary" target="_BLANK" class="btn btn-default-dark">[@L[cds.sales/hosting/web-hosting-rebrand:learnMore]@L]</a> 
             ##endif
              
           </div>
@@ -3211,7 +3274,11 @@ h2.marquee-product-name,
     <section id="compare" data-mid-nav-title="Compare" class="compare-chart-pro section-pro bg-pro-gray tile-section">
       <div style="background: #fff;" class="container">
         <div class="text-center">
-          <h2>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-tab-title-11166]@L]</h2><a href="javascript:comparePlans('cpanel-tab')" class="btn btn-default btn-lg">Cpanel</a><a href="javascript:comparePlans('parallels-tab')" class="btn btn-default btn-lg">Parallels</a>
+          <h2>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-tab-title-11166]@L]</h2>
+          <div class="compareButtons leftActive">
+            <div class="col-xs-6 compareButtonsLeft activeButton"><a href="javascript:comparePlans('cpanel-tab')">Cpanel</a></div>
+            <div class="col-xs-6 compareButtonsRight inactiveButton"><a href="javascript:comparePlans('parallels-tab')">Parallels</a></div>
+          </div>
         </div>
         <div id="cpanel-tab" class="table-responsive">
           <style>.compare-table {
@@ -4267,7 +4334,7 @@ height: 27px;
   content: '';
   width: 94px;
   height: 94px;
-  background-image: url([@T[link:<imageroot />]@T]ffos/hp/sahara-rebrand-sprite-20141114.png);
+  background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
   background-size: 205px auto;
   background-position: 0 -896px;
   position: absolute;
@@ -4387,7 +4454,7 @@ height: 27px;
             </div>
           </div>
         </div>
-        <div style="background-image: url('[@T[link:<imageroot />]@T]fos/mike/img/hosting/two-up-compare-bg-ph.png'); ;" class="two-up-wrap-compare bg-green-official">
+        <div style="background-image: url('[@T[link:<imageroot />]@T]fos/mike/img/hosting/linux-v-windows.png'); ;" class="two-up-wrap-compare bg-green-official">
           <div class="container">
             <div class="row">
               <div class="col-md-5 or-container col-sm-6  bg-green-official">
@@ -4634,7 +4701,7 @@ height: 27px;
             </div>
           </div>
         </div>
-        <div style="background-image: url('[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Sweet.jpg'); min-height: 580px;;" class="two-up-wrap-compare bg-green-official">
+        <div style="background-image: url('[@T[link:<imageroot />]@T]fos/mike/img/hosting/compare-bg.png'); min-height: 580px;;" class="two-up-wrap-compare bg-green-official">
           <div class="container">
             <div class="row">
               <div class="col-md-5 or-container-none col-sm-6  bg-green-official-light">
@@ -4689,7 +4756,7 @@ height: 27px;
             </div>
           </div>
         </div>
-        <div style="background-image: url('[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Sweet.jpg'); min-height: 580px;;" class="two-up-wrap-compare bg-green-official">
+        <div style="background-image: url('[@T[link:<imageroot />]@T]fos/mike/img/hosting/compare-bg.png'); min-height: 580px;;" class="two-up-wrap-compare bg-green-official">
           <div class="container">
             <div class="row">
               <div class="col-md-5 or-container-none col-sm-6  bg-green-official-light">
@@ -4765,8 +4832,11 @@ height: 27px;
       function disclaimersModal() {
         $('#disclaimersModal').sfDialog();
       }
-    </script>
-    <script>
+      $("#alternate-products").find(".col-md-offset-2").find("h2").hover(function(){
+          $(this).hide().text("GET HOSTING THAT WILL GROOOW.").fadeIn("slow");
+      }, function() {
+          $(this).hide().text("[@L[cds.sales/hosting/web-hosting-rebrand:vpsGrow]@L]").fadeIn("slow");
+      });
       ##if(activeLanguageAny([en-us]))
         var loadReviews = function(){
           if (typeof $BV != "undefined") {
@@ -4805,9 +4875,15 @@ height: 27px;
         if(id=="cpanel-tab"){
           $("#parallels-tab").hide();
           $("#"+id).show();
+          $(".compareButtons").removeClass("rightActive").addClass("leftActive");
+          $(".compareButtonsRight").removeClass("activeButton").addClass("inactiveButton");
+          $(".compareButtonsLeft").removeClass("inactiveButton").addClass("activeButton");
          }else if(id =="parallels-tab"){
           $("#cpanel-tab").hide();
           $("#"+id).show();
+          $(".compareButtons").removeClass("leftActive").addClass("rightActive");
+          $(".compareButtonsLeft").removeClass("activeButton").addClass("inactiveButton");
+          $(".compareButtonsRight").removeClass("inactiveButton").addClass("activeButton");
          }
       }
       $('.dropdown-toggle').dropdown()
