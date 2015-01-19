@@ -63,6 +63,7 @@ block pageStyles
       @gd-orange:#ff8a00;
       @desktop: ~"only screen and (min-width:991px)";
       @desktop-lg: ~"only screen and (min-width:1200px)";
+      @desktop-sm: ~"only screen and (min-width:768px)";
       h2{
         @media @desktop {font-size:4rem;} 
       }
@@ -97,12 +98,16 @@ block pageStyles
       }
       .videoWrapper{position:relative;padding-bottom: 56.25%; /* 16:9 */padding-top:25px;height:0;}
       .videoWrapper iframe {position:absolute;top:0;left:0;width:100%;height:100%;}
-      .domain-promo-content{background-image:url('[@T[link:<imageroot />]@T]fos/hp/rebrand/img/Jones_Studio.jpg');background-size:cover;min-height:420px;}
-      .domain-promo-text{padding-top:80px;}
-      #domain-promo .text-center{color:#333;margin:0;padding:30px 0;text-transform:uppercase;}
-      #domain-promo h1{display:inline;color:#333;text-transform:none;font-size:1.6rem;font-family:Arial, "Helvetica Neue", Helvetica, sans-serif;}
-      #domain-promo h3{font-size:3.4rem}
-      #domain-promo .btn{margin-top:20px}
+      .domain-promo-content{background-color:#333;
+        @media @desktop-sm{background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/Jones_Studio.jpg) 50% 100% no-repeat;background-size:cover;}
+      }
+      .domain-promo-text{padding:7% 2%;}
+      #domain-promo{
+        .text-center{color:#333;margin:0;padding:30px 0;text-transform:uppercase;}
+        h1{display:inline;color:#fff;text-transform:none;font-size:1.6rem;font-family:Arial, "Helvetica Neue", Helvetica, sans-serif;}
+        h3{font-size:3.4rem}
+        .btn{margin-top:20px}
+      } 
       #danica-puppy-play-button{cursor:pointer}
       #why-godaddy{padding-bottom:25px;background-color:#ccc;}
       #why-godaddy p{margin-right:15px;}
@@ -262,11 +267,11 @@ block content
       div.domain-promo-content
         .container
           .row
-            .col-sm-6
-            .col-sm-6.domain-promo-text
+            .col-sm-6.col-xs-2
+            .col-sm-6.col-xs-8.domain-promo-text.text-white
               h3 Find Your<br />Perfect Name
               div From classic <h1>domain names</h1> like <strong>.com</strong> and <strong>.org</strong> to new domain names like <strong>.menu</strong>, <strong>.repair</strong>, even <strong>.ninja</strong> (seriously), we can help you find the right name for your business.
-              a.btn.btn-default-dark(data-url!="[@T[link:<relative path='/domains/domain-name-search.aspx'><param name='ci' value='11111' /></relative>]@T]") Get Started
+              a.btn.btn-default-light(data-url!="[@T[link:<relative path='/domains/domain-name-search.aspx'><param name='ci' value='11111' /></relative>]@T]") Get Started
     section#why-godaddy
       .container
         h2.text-center.walsheim-black Why get online with us?
