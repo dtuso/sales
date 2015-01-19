@@ -24,6 +24,9 @@ append seo
 
 prepend endOfPageScripts
   script.
+    function disclaimersModal() {
+      $('#disclaimersModal').sfDialog();
+    }
     $("#alternate-products").find(".col-md-offset-2").find("h2").hover(function(){
         $(this).hide().text("GET HOSTING THAT WILL GROOOW.").fadeIn("slow");
     }, function() {
@@ -67,9 +70,15 @@ prepend endOfPageScripts
       if(id=="cpanel-tab"){
         $("#parallels-tab").hide();
         $("#"+id).show();
+        $(".compareButtons").removeClass("rightActive").addClass("leftActive");
+        $(".compareButtonsRight").removeClass("activeButton").addClass("inactiveButton");
+        $(".compareButtonsLeft").removeClass("inactiveButton").addClass("activeButton");
        }else if(id =="parallels-tab"){
         $("#cpanel-tab").hide();
         $("#"+id).show();
+        $(".compareButtons").removeClass("leftActive").addClass("rightActive");
+        $(".compareButtonsLeft").removeClass("activeButton").addClass("inactiveButton");
+        $(".compareButtonsRight").removeClass("inactiveButton").addClass("activeButton");
        }
     }
     $('.dropdown-toggle').dropdown()
@@ -95,7 +104,8 @@ append pageStyles
     include ./web-hosting/styles.css
 
 block domainSearch
-  //- remove domain search from top of hosting page
+  // nothing to see here
+  //- override the landing-page.jade with a blank section
 
 block marquee
   | 
@@ -133,7 +143,7 @@ block plans
               p.top-text [@L[cds.sales/hosting/web-hosting-rebrand:proBannerTop]@L]
               p.bottom-text [@L[cds.sales/hosting/web-hosting-rebrand:proBannerBottom]@L]
             .col-sm-2.pro-banner-button
-              a.btn.btn-default-light [@L[cds.sales/hosting/web-hosting-rebrand:learnMore]@L]
+              a(class= "btn btn-default-light" href!="[@T[link:<relative path='/pro/cpanel-hosting'>><param name='ci' value='93999' /></relative>]@T]") [@L[cds.sales/hosting/web-hosting-rebrand:learnMore]@L]
           .row
             .col-sm-12
               | 
@@ -237,11 +247,11 @@ block sections
           | 
           |##if(activeLanguageAny([en-US]))
           | 
-          a.btn.btn-default-dark [@L[cds.sales/hosting/web-hosting-rebrand:seeWhatRebrand]@L]
+          a.btn.btn-default-dark(data-ci="89591" href="http://webhosting.cloudspectator.com/summary" target="_BLANK") [@L[cds.sales/hosting/web-hosting-rebrand:seeWhatRebrand]@L]
           | 
           |##else
           | 
-          a.btn.btn-default-dark [@L[cds.sales/hosting/web-hosting-rebrand:learnMore]@L]
+          a.btn.btn-default-dark(data-ci="89591" href="http://webhosting.cloudspectator.com/summary" target="_BLANK") [@L[cds.sales/hosting/web-hosting-rebrand:learnMore]@L]
           | 
           |##endif
           | 
@@ -321,8 +331,11 @@ block sections
     .container(style="background: #fff;")
       .text-center
         h2 [@L[cds.sales/gd/hosting/web-hosting:compare-plans-tab-title-11166]@L]
-        a.btn.btn-default.btn-lg(href="javascript:comparePlans('cpanel-tab')") Cpanel
-        a.btn.btn-default.btn-lg(href="javascript:comparePlans('parallels-tab')") Parallels
+        div.compareButtons.leftActive
+          div.col-xs-6.compareButtonsLeft.activeButton
+            a(href="javascript:comparePlans('cpanel-tab')") Cpanel
+          div.col-xs-6.compareButtonsRight.inactiveButton
+            a(href="javascript:comparePlans('parallels-tab')") Parallels
       #cpanel-tab.table-responsive
         +compareFeaturesTable({showViewAllButton: false, numberOfRowsNotHidden: 9, tableID: "cpanel-table"})
           thead
@@ -868,7 +881,7 @@ block sections
       +compareViewAllButton(["cpanel-table", "parallels-table"])
 
   section#platforms(data-mid-nav-title="Platforms")
-    +renderTwoUpCompare({ title: "[@L[cds.sales/hosting/web-hosting-rebrand:choosePlatform]@L]", twoUpCompareId: "choose-platform", titleBackgroundColor: "bg-green-new", backgroundColor: "bg-green-official", backgroundImage: "background-image: url('[@T[link:<imageroot />]@T]fos/mike/img/hosting/two-up-compare-bg-ph.png')"})
+    +renderTwoUpCompare({ title: "[@L[cds.sales/hosting/web-hosting-rebrand:choosePlatform]@L]", twoUpCompareId: "choose-platform", titleBackgroundColor: "bg-green-new", backgroundColor: "bg-green-official", backgroundImage: "background-image: url('[@T[link:<imageroot />]@T]fos/mike/img/hosting/linux-v-windows.png')"})
       +twoUpCompareColumn({ orContainer: true, title: "[@L[cds.sales/hosting/web-hosting-rebrand:cPanelTitle2]@L]", backgroundColor: "bg-green-official", subtitle: "[@L[cds.sales/hosting/web-hosting-rebrand:linuxPlan]@L]", titleAlign: "center", subtitleAlign: "center", image: "[@T[link:<imageroot />]@T]fos/mike/img/hosting/img-cpanel-linux.png"})
         .include-check-black <strong>[@L[cds.sales/hosting/web-hosting-rebrand:cPanelListItem]@L]</strong> </br> [@L[cds.sales/hosting/web-hosting-rebrand:cPanelListItemDesc]@L]
         .include-check-black <strong>[@L[cds.sales/hosting/web-hosting-rebrand:cloudLinuxListItem]@L]</strong> </br> [@L[cds.sales/hosting/web-hosting-rebrand:cloudLinuxListItemDesc]@L]
@@ -925,7 +938,7 @@ block sections
                           twoUpCompareId: "two-up", 
                           titleBackgroundColor: "bg-white", 
                           backgroundColor: "bg-green-official", 
-                          backgroundImage: "background-image: url('[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Sweet.jpg')", 
+                          backgroundImage: "background-image: url('[@T[link:<imageroot />]@T]fos/mike/img/hosting/compare-bg.png')", 
                           style: "min-height: 580px;", 
                           includeStyles: false})
       +twoUpCompareColumn({ title: "[@L[cds.sales/hosting/web-hosting-rebrand:wsbDoIt]@L] [@L[cds.sales/hosting/web-hosting-rebrand:wsbHosting]@L]", 
@@ -955,7 +968,7 @@ block sections
                           twoUpCompareId: "two-up", 
                           titleBackgroundColor: "bg-white", 
                           backgroundColor: "bg-green-official", 
-                          backgroundImage: "background-image: url('[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Sweet.jpg')", 
+                          backgroundImage: "background-image: url('[@T[link:<imageroot />]@T]fos/mike/img/hosting/compare-bg.png')", 
                           style: "min-height: 580px;", 
                           includeStyles: false})
       +twoUpCompareColumn({ title: "[@L[cds.sales/hosting/web-hosting-rebrand:wsbDoIt]@L] [@L[cds.sales/hosting/web-hosting-rebrand:wsbHosting]@L]", 
@@ -994,9 +1007,3 @@ block sections
           [@L[cds.sales/gd/hosting/web-hosting:modal-disclaimer-4]@L] </br></br>
           [@L[cds.sales/gd/hosting/web-hosting:modal-disclaimer-11166]@L] </br></br>
       p [@L[cds.sales/hosting/web-hosting-rebrand:trademark]@L]
-
-prepend endOfPageScripts
-  script.
-    function disclaimersModal() {
-      $('#disclaimersModal').sfDialog();
-    }
