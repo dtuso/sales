@@ -248,7 +248,7 @@ Can I learn how to make a website?
 <p>
   Just scroll through our library of <strong>website templates</strong>, choose a layout you like, adjust the colors, replace the photos with your own or any of the 8,700 included stock photos, and add your own text. With [@T[companyname:name]@T] Website Builder<sup class="supsymbol">&reg;</sup>, building your own website is actually fun.
 </p>
-<p>Interested in a money making website? See <a data-ci="85535" href="http://support.godaddy.com/help/article/813" target="_blank">How do I build an online store?</a></p>
+<p class="ep-wsb-how-to-publish-a-website-faq">Interested in a money making website? See <a data-ci="85535" href="http://support.godaddy.com/help/article/813" target="_blank">How do I build an online store?</a></p>
 <phrase key="faq-third-slide-title" />
 What should I look for in a Web builder?
 <phrase key="faq-third-slide-content" />
@@ -309,7 +309,7 @@ Get the power of WordPress with the ease of fully-managed hosting and security.
 <phrase key="sb_xsell_wp_2" />
 Perfect for: Bloggers, start-ups, small businesses, and designers
 <phrase key="sb_xsell_qs" />
-QUICK SHOPPING CART
+ONLINE STORE
 <phrase key="sb_xsell_qs_1" />
 Everything you need to open your own online store – no technical skills required.
 <phrase key="sb_qs_2" />
@@ -764,3 +764,7 @@ SSL Certificate is free for 1 year with purchase. After the initial free year, S
 Recommended
 <phrase key="disclaimer-modal-header" />
 Disclaimers
+<phrase key="renewal-disclaimer" />
+<sup>4</sup> Special introductory pricing valid for the initial purchase term only. Product renewal pricing subject to change.
+<phrase key="renewal-text" comment="$x.xx when you renew" />
+when you renew<sup>4</sup>
