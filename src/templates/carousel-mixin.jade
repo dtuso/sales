@@ -13,6 +13,7 @@ mixin carouselItem(itemOptions)
 mixin carousel(id, numberOfPanels, options)
 
   - options = options || {};
+  - options.css = options.css || false;
   - options.autoRotateSpeed = options.autoRotateSpeed || false;
   - options.backgroundColor = options.backgroundColor || "bg-pro-gray";
   - options.ci = options.ci || {};

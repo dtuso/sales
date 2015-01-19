@@ -323,3 +323,66 @@ cursor: pointer;
   vertical-align: baseline;
   cursor: pointer;
 }
+
+.compareButtons {
+  height: 54px;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 11px;
+}
+
+.compareButtons.leftActive {
+    background-image:url([@T[link:<imageroot />]@T]fos/mike/img/hosting/img-toggle-cpanel.png); 
+}
+
+.compareButtons.rightActive {
+    background-image:url([@T[link:<imageroot />]@T]fos/mike/img/hosting/img-toggle-parallels.png); 
+}
+
+.compareButtons a {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: 'Walsheim-Black';
+  font-size: 20px;
+}
+
+.compareButtons .activeButton a {
+  color: #088A44;
+}
+
+.compareButtons .inactiveButton a {
+  color: #666666;
+}
+
+.compareButtonsLeft {
+  width: 180px;
+}
+.compareButtonsRight {
+  width: 180px;
+}
+
+
+
+@media (min-width: 1200px) {
+  .compareButtons {
+    padding-left: 395px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .compareButtons {
+    padding-left: 290px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .compareButtons {
+    padding-left: 180px;
+  }
+}
+
+@media (max-width: 767px) {
+  .compareButtons {
+    padding-left: 25px;
+  }
+}

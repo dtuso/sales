@@ -3430,10 +3430,10 @@ top: -6px;
               <div class="carousel-container container">
                 <div id="carousel-ols-stores" data-ride="carousel" data-interval="false" class="carousel slide">
                   <ol class="carousel-indicators">
-                    <li data-target="#carousel-ols-stores" data-slide-to="0" data-ci=""></li>
-                    <li data-target="#carousel-ols-stores" data-slide-to="1" data-ci=""></li>
-                    <li data-target="#carousel-ols-stores" data-slide-to="2" data-ci=""></li>
-                    <li data-target="#carousel-ols-stores" data-slide-to="3" data-ci=""></li>
+                    <li data-target="#carousel-ols-stores" data-slide-to="0" data-ci="95263"></li>
+                    <li data-target="#carousel-ols-stores" data-slide-to="1" data-ci="95263"></li>
+                    <li data-target="#carousel-ols-stores" data-slide-to="2" data-ci="95263"></li>
+                    <li data-target="#carousel-ols-stores" data-slide-to="3" data-ci="95263"></li>
                   </ol>
                   <div class="carousel-inner">
                           <div class="item">
@@ -3520,7 +3520,7 @@ top: -6px;
                               </div>
                             </div>
                           </div>
-                  </div><a href="#carousel-ols-stores" data-slide="prev" data-ci="" class="left carousel-control"><span class="carousel-icon arrow-left-icon"></span></a><a href="#carousel-ols-stores" data-slide="next" class="right carousel-control"><span data-ci="" class="carousel-icon arrow-right-icon"></span></a>
+                  </div><a href="#carousel-ols-stores" data-slide="prev" data-ci="95262" class="left carousel-control"><span class="carousel-icon arrow-left-icon"></span></a><a href="#carousel-ols-stores" data-slide="next" class="right carousel-control"><span data-ci="95264" class="carousel-icon arrow-right-icon"></span></a>
                 </div>
                 <script>
                   $('.carousel .carousel-indicators li:first-child').addClass("active");
