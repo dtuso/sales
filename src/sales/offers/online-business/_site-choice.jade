@@ -3,41 +3,41 @@ atlantis:webstash(type="css")
 
     #site-choice-compare h2,
     #site-choice-compare h3,
-    #wsb-only h2,
-    #wsb-only h3  {
+    #wsb-only-choice h2,
+    #wsb-only-choice h3  {
       color: #232323!important;
     }
 
     #site-choice-compare .disclaimer-mark div.headline-primary,
-    #wsb-only .disclaimer-mark div.headline-primary {
+    #wsb-only-choice .disclaimer-mark div.headline-primary {
       color: #333;
     }
 
     #site-choice-compare .button-margin,    
-    #wsb-only .button-margin  {
+    #wsb-only-choice .button-margin  {
       margin-top:20px;
     }
 
     #site-choice-compare .disclaimer-mark p.disclaimer,    
-    #wsb-only .disclaimer-mark p.disclaimer {
+    #wsb-only-choice .disclaimer-mark p.disclaimer {
       font-size: 14px;
       font-weight: normal;
     }
 
-    #wsb-only .see-wsb-disclaimer-link,   
+    #wsb-only-choice .see-wsb-disclaimer-link,   
     #site-choice .see-wsb-disclaimer-link, 
     #site-choice .see-ols-disclaimer-link {
       color: #333;
     }
     
     #site-choice ul.check-bullets li,
-    #wsb-only ul.check-bullets li {
+    #wsb-only-choice ul.check-bullets li {
       position: relative;
       padding-left: 40px;
       margin-bottom: 20px;
     }
     #site-choice ul.check-bullets li:before,
-    #wsb-only ul.check-bullets li:before {
+    #wsb-only-choice ul.check-bullets li:before {
       content: '';
       background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
       background-size: 205px auto;
@@ -49,13 +49,13 @@ atlantis:webstash(type="css")
       top: -6px;
     }
     #site-choice ul.check-bullets li h5,
-    #wsb-only ul.check-bullets li h5  {
+    #wsb-only-choice ul.check-bullets li h5  {
       margin-bottom: 5px;
     }
 
 
     #site-choice .disclaimer-mark ,
-    #wsb-only .disclaimer-mark {
+    #wsb-only-choice .disclaimer-mark {
       background-color: #FEDC45;
       padding: 10px;
       margin-bottom: 20px;
@@ -63,8 +63,8 @@ atlantis:webstash(type="css")
       margin: 0 0 10px;
     }
 
-    #wsb-only .top-row {padding-top:30px;} /* to match 2-up compare's styling */
-    #wsb-only.bg-green-official-light {background-color: #77C043;}
+    #wsb-only-choice .top-row {padding-top:30px;} /* to match 2-up compare's styling */
+    #wsb-only-choice.bg-green-official-light {background-color: #77C043;}
 
     .videoWrapper {
       position: relative;
@@ -85,11 +85,27 @@ atlantis:webstash(type="css")
       vertical-align: top;
     }
 
+    #site-choice .or-container:after,
+    #wsb-only-choice .or-container:after {
+      width: 94px;
+      height: 98px;
+      background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_or-shape_white_int.png);
+      background-position: 0 0;
+      background-size: auto auto;
+    }
+    #site-choice .or-container.or-container-en-us:after,
+    #wsd-only .or-container.or-container-en-us:after {
+      width: 94px;
+      height: 98px;
+      background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_or-shape_white_en.png);
+      background-position: 0 0;
+      background-size: auto auto;
+    }
 
 | 
 |##if(!productIsOffered(105))
 | 
-section#wsb-only.bg-green-official-light
+section#wsb-only-choice.bg-green-official-light
   .container
     .row.top-row.text-center        
         img(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_wsb_icon_large_feature.png")
@@ -140,6 +156,7 @@ section#site-choice
                           subtitle: "[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text]@L]", 
                           titleAlign: "center", 
                           subtitleAlign: "center", 
+                          orContaineOverrideEnUs: true, /* TODO */
                           image: "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-wsb-icon.png"})
       .row.text-center.disclaimer-mark 
         div.headline-primary(data-tokenize!='[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T]') [@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price]@L] 
@@ -147,7 +164,7 @@ section#site-choice
           button.btn-link.see-wsb-disclaimer-link [@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price-disclaimer-link]@L]</a>
       .row
         .col-sm-12.button-margin
-          button#wsb-video-btn.btn.btn-md.btn-block.btn-primary <img class="video-play-icon" src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_play_icon_small.png" /> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]
+          button#wsb-video-btn.btn.btn-md.btn-block.btn-primary(data-ci="95270") <img class="video-play-icon" src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_play_icon_small.png" /> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]
 
       .row
         .col-sm-12.button-margin
