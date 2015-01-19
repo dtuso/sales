@@ -203,7 +203,8 @@ var got1Page = {
   imagePath: '[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/',
   canOfferOls: true,
   animationTime: 600,
-  animationEasingType: 'swing'
+  animationEasingType: 'swing',
+  isEnUs: '[@T[localization:<language full='true' />]@T]'.toLowerCase() === 'en-us'
 };
 
 
@@ -268,13 +269,20 @@ $(document).ready(function() {
   tokenizeTheDataTokenizeAttribute();
 
   wireupModals();
+
+  // when on the English page (US only) show the words OR rather than the universal OR graphic
+  if(got1Page.isEnUs) {
+    $("#site-choice-compare, #step2-choose-product").find('.or-container').addClass('or-container-en-us');
+  }
+
+  //- display error on return from DPP's TLD eligibility requirements failure
   if(getParameterByName('tldRegErr').length > 0) {
     showDomainRegistrationFailure(getParameterByName('tldRegErr'));
   } else {
     showTypeYourDomain();
   }
 
-  //set up domain search buttons to do a domain search
+  //- set up domain search buttons to do a domain search
   $('#marquee')
     .on('keyup', '.search-form-input', function(e) { 
       
@@ -311,13 +319,7 @@ $(document).ready(function() {
   $('#show-more-section').on('click', '.clickable-show-more', displayMoreResultsArea);
   $('#domain-not-available-marquee-view').on('click', '.view-all-button', displayMoreResultsArea);
 
-  // track ci codes
-  $('[data-ci]').click(function (e) {
-      var $this = $(this);
-      var ci = $this.attr('data-ci');
-      FastballEvent_MouseClick(e, ci, $(this)[0], 'a');
-      fbiLibCheckQueue();
-  });
+
 });
 
 function showAndOrderDynamicTldsInList(selector) {
@@ -373,7 +375,7 @@ function tokenizeDisclaimerModals() {
   
 
   if(got1Page.canOfferOls) tokenizeDisclaimerModal('#default-marquee-details-modal.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_wsb,got1Page.pricing.ols);
-  tokenizeDisclaimerModal('#default-marquee-details-modal-wsb-only.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_wsb);
+  tokenizeDisclaimerModal('#default-marquee-details-modal-wsb-only-choice.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_wsb);
   tokenizeDisclaimerModal('#site-choice-wsb-modal.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_wsb);  
   if(got1Page.canOfferOls) tokenizeDisclaimerModal('#site-choice-ols-modal.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_ols);
 }
@@ -388,7 +390,7 @@ function wireupModals() {
   });
 
   // product split modals
-  $('#site-choice, #wsb-only').on('click', '.see-wsb-disclaimer-link', function(){
+  $('#site-choice, #wsb-only-choice').on('click', '.see-wsb-disclaimer-link', function(){
     $("#site-choice-wsb-modal").sfDialog({buttons: got1Page.sfDialogErrorButtons});
   });
 
@@ -2265,6 +2267,23 @@ h2.api-error-header {
         #step2-choose-product .pro-plans .pro-plan-wrap .btn {
             margin: 20px 0 30px;
         }
+        
+        
+        #step2-choose-product .or-container:after {
+          width: 94px;
+          height: 98px;
+          background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_or-shape_green_int.png);
+          background-position: 0 0;
+          background-size: auto auto;
+        }
+        #step2-choose-product .or-container.or-container-en-us:after {
+          width: 94px;
+          height: 98px;
+          background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_or-shape_green_en.png);
+          background-position: 0 0;
+          background-size: auto auto;
+        }
+        
       </style>
     </atlantis:webstash>
     <section id="step2-choose-product">
@@ -2348,41 +2367,41 @@ h2.api-error-header {
       <style>
         #site-choice-compare h2,
         #site-choice-compare h3,
-        #wsb-only h2,
-        #wsb-only h3  {
+        #wsb-only-choice h2,
+        #wsb-only-choice h3  {
           color: #232323!important;
         }
         
         #site-choice-compare .disclaimer-mark div.headline-primary,
-        #wsb-only .disclaimer-mark div.headline-primary {
+        #wsb-only-choice .disclaimer-mark div.headline-primary {
           color: #333;
         }
         
         #site-choice-compare .button-margin,    
-        #wsb-only .button-margin  {
+        #wsb-only-choice .button-margin  {
           margin-top:20px;
         }
         
         #site-choice-compare .disclaimer-mark p.disclaimer,    
-        #wsb-only .disclaimer-mark p.disclaimer {
+        #wsb-only-choice .disclaimer-mark p.disclaimer {
           font-size: 14px;
           font-weight: normal;
         }
         
-        #wsb-only .see-wsb-disclaimer-link,   
+        #wsb-only-choice .see-wsb-disclaimer-link,   
         #site-choice .see-wsb-disclaimer-link, 
         #site-choice .see-ols-disclaimer-link {
           color: #333;
         }
         
         #site-choice ul.check-bullets li,
-        #wsb-only ul.check-bullets li {
+        #wsb-only-choice ul.check-bullets li {
           position: relative;
           padding-left: 40px;
           margin-bottom: 20px;
         }
         #site-choice ul.check-bullets li:before,
-        #wsb-only ul.check-bullets li:before {
+        #wsb-only-choice ul.check-bullets li:before {
           content: '';
           background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
           background-size: 205px auto;
@@ -2394,13 +2413,13 @@ h2.api-error-header {
           top: -6px;
         }
         #site-choice ul.check-bullets li h5,
-        #wsb-only ul.check-bullets li h5  {
+        #wsb-only-choice ul.check-bullets li h5  {
           margin-bottom: 5px;
         }
         
         
         #site-choice .disclaimer-mark ,
-        #wsb-only .disclaimer-mark {
+        #wsb-only-choice .disclaimer-mark {
           background-color: #FEDC45;
           padding: 10px;
           margin-bottom: 20px;
@@ -2408,8 +2427,8 @@ h2.api-error-header {
           margin: 0 0 10px;
         }
         
-        #wsb-only .top-row {padding-top:30px;} /* to match 2-up compare's styling */
-        #wsb-only.bg-green-official-light {background-color: #77C043;}
+        #wsb-only-choice .top-row {padding-top:30px;} /* to match 2-up compare's styling */
+        #wsb-only-choice.bg-green-official-light {background-color: #77C043;}
         
         .videoWrapper {
           position: relative;
@@ -2430,12 +2449,28 @@ h2.api-error-header {
           vertical-align: top;
         }
         
+        #site-choice .or-container:after,
+        #wsb-only-choice .or-container:after {
+          width: 94px;
+          height: 98px;
+          background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_or-shape_white_int.png);
+          background-position: 0 0;
+          background-size: auto auto;
+        }
+        #site-choice .or-container.or-container-en-us:after,
+        #wsd-only .or-container.or-container-en-us:after {
+          width: 94px;
+          height: 98px;
+          background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_or-shape_white_en.png);
+          background-position: 0 0;
+          background-size: auto auto;
+        }
         
       </style>
     </atlantis:webstash> 
     ##if(!productIsOffered(105))
      
-    <section id="wsb-only" class="bg-green-official-light">
+    <section id="wsb-only-choice" class="bg-green-official-light">
       <div class="container">
         <div class="row top-row text-center">       <img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_wsb_icon_large_feature.png"></div>
         <div class="row text-center">     
@@ -2820,7 +2855,7 @@ h2.api-error-header {
                       </div>
                       <div class="row">
                         <div class="col-sm-12 button-margin">
-                          <button id="wsb-video-btn" class="btn btn-md btn-block btn-primary"><img class="video-play-icon" src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_play_icon_small.png" /> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]</button>
+                          <button id="wsb-video-btn" data-ci="95270" class="btn btn-md btn-block btn-primary"><img class="video-play-icon" src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_play_icon_small.png" /> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]</button>
                         </div>
                       </div>
                       <div class="row">

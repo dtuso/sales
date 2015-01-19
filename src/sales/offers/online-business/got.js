@@ -69,7 +69,8 @@ var got1Page = {
   imagePath: '[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/',
   canOfferOls: true,
   animationTime: 600,
-  animationEasingType: 'swing'
+  animationEasingType: 'swing',
+  isEnUs: '[@T[localization:<language full='true' />]@T]'.toLowerCase() === 'en-us'
 };
 
 
@@ -134,13 +135,20 @@ $(document).ready(function() {
   tokenizeTheDataTokenizeAttribute();
 
   wireupModals();
+
+  // when on the English page (US only) show the words OR rather than the universal OR graphic
+  if(got1Page.isEnUs) {
+    $("#site-choice-compare, #step2-choose-product").find('.or-container').addClass('or-container-en-us');
+  }
+
+  //- display error on return from DPP's TLD eligibility requirements failure
   if(getParameterByName('tldRegErr').length > 0) {
     showDomainRegistrationFailure(getParameterByName('tldRegErr'));
   } else {
     showTypeYourDomain();
   }
 
-  //set up domain search buttons to do a domain search
+  //- set up domain search buttons to do a domain search
   $('#marquee')
     .on('keyup', '.search-form-input', function(e) { 
       
@@ -177,13 +185,7 @@ $(document).ready(function() {
   $('#show-more-section').on('click', '.clickable-show-more', displayMoreResultsArea);
   $('#domain-not-available-marquee-view').on('click', '.view-all-button', displayMoreResultsArea);
 
-  // track ci codes
-  $('[data-ci]').click(function (e) {
-      var $this = $(this);
-      var ci = $this.attr('data-ci');
-      FastballEvent_MouseClick(e, ci, $(this)[0], 'a');
-      fbiLibCheckQueue();
-  });
+
 });
 
 function showAndOrderDynamicTldsInList(selector) {
@@ -239,7 +241,7 @@ function tokenizeDisclaimerModals() {
   
 
   if(got1Page.canOfferOls) tokenizeDisclaimerModal('#default-marquee-details-modal.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_wsb,got1Page.pricing.ols);
-  tokenizeDisclaimerModal('#default-marquee-details-modal-wsb-only.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_wsb);
+  tokenizeDisclaimerModal('#default-marquee-details-modal-wsb-only-choice.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_wsb);
   tokenizeDisclaimerModal('#site-choice-wsb-modal.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_wsb);  
   if(got1Page.canOfferOls) tokenizeDisclaimerModal('#site-choice-ols-modal.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_ols);
 }
@@ -254,7 +256,7 @@ function wireupModals() {
   });
 
   // product split modals
-  $('#site-choice, #wsb-only').on('click', '.see-wsb-disclaimer-link', function(){
+  $('#site-choice, #wsb-only-choice').on('click', '.see-wsb-disclaimer-link', function(){
     $("#site-choice-wsb-modal").sfDialog({buttons: got1Page.sfDialogErrorButtons});
   });
 
