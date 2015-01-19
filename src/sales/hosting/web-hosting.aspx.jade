@@ -24,6 +24,11 @@ append seo
 
 prepend endOfPageScripts
   script.
+    $("#alternate-products").find(".col-md-offset-2").find("h2").hover(function(){
+        $(this).hide().text("GET HOSTING THAT WILL GROOOW.").fadeIn("slow");
+    }, function() {
+        $(this).hide().text("[@L[cds.sales/hosting/web-hosting-rebrand:vpsGrow]@L]").fadeIn("slow");
+    });
     ##if(activeLanguageAny([en-us]))
       var loadReviews = function(){
         if (typeof $BV != "undefined") {
