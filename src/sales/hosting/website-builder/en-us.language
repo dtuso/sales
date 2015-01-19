@@ -293,8 +293,6 @@ View
 Third-party logos and marks are registered trademarks of their respective owners. All rights reserved.
 <phrase key="temapltes-title" />
 Simply <span class="primary-color"><strong>personalize</strong></span> and publish
-<phrase key="templates-desription" />
-Easily create a professional website with hundreds of customizable designs, tailored to your business.
 <phrase key="templates-rollover" />
 <p>All Designs <span>feature text and images for your industry</span></p><p> Select Any Design<span>to get started</span></p><p> Customize<span>anything</span></p>
 <phrase key="templates-slider-auto" />
@@ -735,3 +733,9 @@ Continent Travel
 Best Travel
 <phrase key="templates-modal-okbtn" />
 OK
+<phrase key="modal-disclaimer-5" />
+SSL Certificate is free for 1 year with purchase. After the initial free year, SSL will automatically renew at the then-current price until cancelled. You may cancel automatic renewal at any time in your [@T[companyname:name]@T] account.
+<phrase key="recommended" />
+Recommended
+<phrase key="disclaimer-modal-header" />
+Disclaimers

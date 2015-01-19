@@ -758,3 +758,9 @@ Continent Travel
 Best Travel
 <phrase key="templates-modal-okbtn" />
 OK
+<phrase key="modal-disclaimer-5" />
+SSL Certificate is free for 1 year with purchase. After the initial free year, SSL will automatically renew at the then-current price until cancelled. You may cancel automatic renewal at any time in your [@T[companyname:name]@T] account.
+<phrase key="recommended" />
+Recommended
+<phrase key="disclaimer-modal-header" />
+Disclaimers
