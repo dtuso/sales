@@ -916,22 +916,28 @@ h2.api-error-header {
   font-size: 12px;
   text-transform: uppercase;
   fill: #333;
+  /* <svg width='100' height='100' xmlns='http://www.w3.org/2000/svg'><g><rect id='svg_1' fill='#333' x='0' y='39' width='100' height='22'/></g></svg> */
 }
-.main-marquee .dash::after {
-  content: "\2014\2014\2014\2014\2014\2014\2014\2014\2014\2014\2014\2014\2014\2014\2014\2014";
-  letter-spacing: -5px;
-  width: 50%;
-  display: inline-block;
-  overflow: hidden;
-  font-size: 1.8em;
-  vertical-align: -18%;
+.main-marquee .dash {
+  background-size: contain;
+  background-repeat: x;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMTAwJyBoZWlnaHQ9JzEwMCcgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48Zz48cmVjdCBpZD0nc3ZnXzEnIGZpbGw9JyMzMzMnIHg9JzAnIHk9JzM5JyB3aWR0aD0nMTAwJyBoZWlnaHQ9JzIyJy8+PC9nPjwvc3ZnPg==);
 }
 .main-marquee .header-text {
   padding-left: 5%;
   line-height: 0.8;
   padding-right: 15%;
 }
-.main-marquee .header-text.get-online {
+.main-marquee .header-text:first-child {
+  padding-left: 0;
+  line-height: 0.8;
+  padding-right: 0;
+  margin-left: 5%;
+  margin-right: 15%;
+}
+.main-marquee .header-text .get-online {
+  display: inline;
+  background-color: #77c043;
   font-family: Tungsten, 'Tungsten A', 'Tungsten B', Impact, sans-serif;
   font-size: 3em;
 }
@@ -940,7 +946,8 @@ h2.api-error-header {
   font-size: 11.5em;
 }
 .main-marquee .header-text.as-low-as-price {
-  padding-top: 57px;
+  line-height: 1;
+  padding-top: 60px;
   padding-bottom: 45px;
   margin-top: -45px;
   color: #fff;
@@ -952,7 +959,7 @@ h2.api-error-header {
   color: #00701D;
   font-size: 1em;
   margin-top: -14px;
-  text-transform: initial;
+  text-transform: none;
 }
 .main-marquee .header-text.disclaimers .btn-link {
   color: #00701D;
@@ -995,28 +1002,30 @@ h2.api-error-header {
   font-weight: bold;
 }
 .main-marquee .logo-wrapper .office-365 {
+  line-height: 1;
   font-size: 0.5em;
-  text-transform: initial;
+  text-transform: none;
   display: block;
   font-family: 'Walsheim-Regular', Arial, sans-serif;
 }
 @media (min-width: 992px) {
-  .main-marquee .dash {
-    position: relative;
-    top: 12px;
-  }
-  .main-marquee .header-text.get-online {
+  .main-marquee .header-text .get-online {
     font-size: 5em;
   }
   .main-marquee .logo-wrapper {
     margin-top: 0;
   }
   .main-marquee .logo-wrapper .icon {
-    min-height: 195px;
+    min-height: 140px;
   }
   .main-marquee .logo-wrapper .plus {
     font-size: 6em;
-    padding-top: 90px;
+    padding-top: 60px;
+  }
+}
+@media (min-width: 1200px) {
+  .main-marquee .logo-wrapper .icon {
+    min-height: 160px;
   }
 }
 /* domain search styling */
@@ -1054,7 +1063,9 @@ h2.api-error-header {
       <div class="container main-marquee">
         <div class="row">
           <div class="col-md-6 col-xs-12">
-            <div class="header-text get-online dash">[@L[cds.sales/offers/online-business:32573-top-banner-headline]@L]</div>
+            <div class="header-text dash">
+              <div class="get-online">[@L[cds.sales/offers/online-business:32573-top-banner-headline]@L]</div>
+            </div>
             <div class="header-text bigtext">
               <div class="today">[@L[cds.sales/offers/online-business:32573-top-banner-subheadline]@L]</div>
             </div>
