@@ -1,5 +1,20 @@
 extends ../../templates/pages/landing-page
 
+append vars
+  - page.title = "[@L[cds.sales/gd/hosting/website-builder:page-title]@L]";
+  - page.description = "[@L[cds.sales/gd/hosting/website-builder:meta-description]@L]";
+  - page.keywords = "[@L[cds.sales/gd/hosting/website-builder:meta-keywords]@L]"; 
+  - page.canonical = "[@T[link:<relative parammode='explicit' path='~/hosting/website-builder.aspx' />]@T]";
+
+  - page.openGraph = page.openGraph || {};
+  - page.openGraph.title = "[@L[cds.sales/gd/hosting/website-builder:og-title]@L]";
+  - page.openGraph.description = "[@L[cds.sales/gd/hosting/website-builder:og-description]@L]";
+  - page.openGraph.image = "[@T[link:<imageroot />]@T]fos/201401/hosting/website-builder/img/og.png";
+
+  - page.links = page.links || {};
+  - page.links.canonical = "[@T[link:<relative parammode='explicit' />]@T]";
+  - page.links.favicon = "[@T[link:<imageroot />]@T]assets/godaddy.ico";
+
 append pageStyles
   style
     include ./website-builder/styles.css
@@ -38,13 +53,52 @@ block sections
   +renderMidPageNav
     +priceBlock('[@T[productprice:<current productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]', "[@L[cds.sales/_common:month]@L]", "#plan-A")
 
-  section#templates.tile-section
-    |view templates 
+  section#templates-section
+    .templates-chart.bg-gray-light
+      .container.templates-container
+        h2[@L[cds.sales/gd/hosting/website-builder:templates-desription]@L][@L[cds.sales/gd/hosting/website-builder:sb_templates_title_2]@L]
+        button.btn.btn-primary.view-all.btn-lg(data-toggle='bsModal', data-target='#g-modal') [@L[cds.sales/gd/hosting/website-builder:sb_view_templates]@L]
+        .row
+          .col-md-4
+            img(src="//nebula.wsimg.com/97d611570df922cf947daef6ea7c720b?AccessKeyId=531592D248B589D87A56")
+          .col-md-4
+            img(src="//nebula.wsimg.com/97d611570df922cf947daef6ea7c720b?AccessKeyId=531592D248B589D87A56")
+          .col-md-4
+            img(src="//nebula.wsimg.com/97d611570df922cf947daef6ea7c720b?AccessKeyId=531592D248B589D87A56")
+
+        .row
+          .col-md-4
+            img(src="//nebula.wsimg.com/97d611570df922cf947daef6ea7c720b?AccessKeyId=531592D248B589D87A56")
+          .col-md-4
+            img(src="//nebula.wsimg.com/97d611570df922cf947daef6ea7c720b?AccessKeyId=531592D248B589D87A56")
+          .col-md-4
+            img(src="//nebula.wsimg.com/97d611570df922cf947daef6ea7c720b?AccessKeyId=531592D248B589D87A56")
+        .row
+          .col-md-4
+            img(src="//nebula.wsimg.com/97d611570df922cf947daef6ea7c720b?AccessKeyId=531592D248B589D87A56")
+          .col-md-4
+            img(src="//nebula.wsimg.com/97d611570df922cf947daef6ea7c720b?AccessKeyId=531592D248B589D87A56")
+          .col-md-4
+            img(src="//nebula.wsimg.com/97d611570df922cf947daef6ea7c720b?AccessKeyId=531592D248B589D87A56")
+
+    include ../../templates/wsb-templates.html
+ 
 
   include ./website-builder/_fullVideo.jade
 
   section#features(data-mid-nav-title="[@L[cds.sales/gd/hosting/website-builder:sb_nav_1]@L]")
+    | 
+    |##if(countrySiteAny(www))
+    | 
     include ./website-builder/_tabbed-carousel.jade
+    | 
+    |##else
+    | 
+    include ./website-builder/_tabbed-carousel-nonUS.jade
+    | 
+    |##endif
+    | 
+
     .bg-pro-gray
       include ./website-builder/_business-exclusives.jade
     .bg-black
@@ -85,10 +139,12 @@ block sections
         a.btn.btn-default-light [@L[cds.sales/gd/hosting/website-builder:learn-more]@L]
 
   section#disclaimers
-    a(onClick="disclaimersModal()") disclaimers link
-    #disclaimersModal(data-title="Modal",style="display:none")
-      p hello
-      p hide
+    div [@L[cds.sales/gd/hosting/website-builder:rb_disclaimers]@L] 
+      a(onClick="disclaimersModal()") [@L[cds.sales/gd/hosting/website-builder:rb_disclaimers_view]@L]
+    #disclaimersModal(data-title="[@L[cds.sales/gd/hosting/website-builder:disclaimer-modal-header]@L]",style="display:none")
+      p [@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]
+      p [@L[cds.sales/gd/hosting/website-builder:modal-disclaimer-5]@L]
+    [@L[cds.sales/gd/hosting/website-builder:rb_disclaimers_3p]@L]
 
 prepend endOfPageScripts
   script.

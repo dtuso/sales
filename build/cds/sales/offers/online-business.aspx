@@ -203,7 +203,8 @@ var got1Page = {
   imagePath: '[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/',
   canOfferOls: true,
   animationTime: 600,
-  animationEasingType: 'swing'
+  animationEasingType: 'swing',
+  isEnUs: '[@T[localization:<language full='true' />]@T]'.toLowerCase() === 'en-us'
 };
 
 
@@ -268,13 +269,20 @@ $(document).ready(function() {
   tokenizeTheDataTokenizeAttribute();
 
   wireupModals();
+
+  // when on the English page (US only) show the words OR rather than the universal OR graphic
+  if(got1Page.isEnUs) {
+    $("#site-choice-compare, #step2-choose-product").find('.or-container').addClass('or-container-en-us');
+  }
+
+  //- display error on return from DPP's TLD eligibility requirements failure
   if(getParameterByName('tldRegErr').length > 0) {
     showDomainRegistrationFailure(getParameterByName('tldRegErr'));
   } else {
     showTypeYourDomain();
   }
 
-  //set up domain search buttons to do a domain search
+  //- set up domain search buttons to do a domain search
   $('#marquee')
     .on('keyup', '.search-form-input', function(e) { 
       
@@ -311,13 +319,7 @@ $(document).ready(function() {
   $('#show-more-section').on('click', '.clickable-show-more', displayMoreResultsArea);
   $('#domain-not-available-marquee-view').on('click', '.view-all-button', displayMoreResultsArea);
 
-  // track ci codes
-  $('[data-ci]').click(function (e) {
-      var $this = $(this);
-      var ci = $this.attr('data-ci');
-      FastballEvent_MouseClick(e, ci, $(this)[0], 'a');
-      fbiLibCheckQueue();
-  });
+
 });
 
 function showAndOrderDynamicTldsInList(selector) {
@@ -373,7 +375,7 @@ function tokenizeDisclaimerModals() {
   
 
   if(got1Page.canOfferOls) tokenizeDisclaimerModal('#default-marquee-details-modal.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_wsb,got1Page.pricing.ols);
-  tokenizeDisclaimerModal('#default-marquee-details-modal-wsb-only.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_wsb);
+  tokenizeDisclaimerModal('#default-marquee-details-modal-wsb-only-choice.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_wsb);
   tokenizeDisclaimerModal('#site-choice-wsb-modal.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_wsb);  
   if(got1Page.canOfferOls) tokenizeDisclaimerModal('#site-choice-ols-modal.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_ols);
 }
@@ -388,7 +390,7 @@ function wireupModals() {
   });
 
   // product split modals
-  $('#site-choice, #wsb-only').on('click', '.see-wsb-disclaimer-link', function(){
+  $('#site-choice, #wsb-only-choice').on('click', '.see-wsb-disclaimer-link', function(){
     $("#site-choice-wsb-modal").sfDialog({buttons: got1Page.sfDialogErrorButtons});
   });
 
@@ -423,7 +425,7 @@ function wireupModals() {
       $("#site-choice-ols-video-modal").sfDialog({titleHidden:true, dialogWidthIdeal:840, buttons: []});
     });
     $('#ols-stores-btn').on('click', function(){
-      $("#site-choice-ols-stores-modal").sfDialog({titleHidden:true, buttons: [], dialogWidthIdeal:1240 });
+      $("#site-choice-ols-stores-modal").sfDialog({titleHidden:true, buttons: [], dialogWidthIdeal:1230 });
     });
   }
 
@@ -863,6 +865,13 @@ function getParameterByName(name) {
   margin: 20px 0;
   font-size:14px;
   color:#666;
+}
+
+.vat-price-disclaimer {
+  font-size: 14px;
+  font-weight: normal;
+  margin-top: -10px;
+  margin-bottom: -10px;
 }
 
 .bg-white {
@@ -1721,13 +1730,63 @@ h2.api-error-header {
     </section>
     <atlantis:webstash type="css">
       <style>
-        #step2-choose-product {display: none;}
-        #step2-choose-product .choose-header {
+        #step2-choose-product {
+          display: none;
+        }
+        
+        #step2-choose-product h3.choose-header {
           margin: 30px 0 40px;      
         }
-        #step2-choose-product .api-c-failure-modal {display: none;}
-        #step2-choose-product .pro-plans {
+        
+        #step2-choose-product h2 {
+          margin: 30px 0;
+        }
+        
+        #step2-choose-product .api-c-failure-modal {
+          /* display: none; */
+        }
+        
+        #step2-choose-product .plan-pro {
           margin-top:0px; /* override the -210px from sahara.css */
+        }
+        #step2-choose-product h2.h0 {
+          font-size: 30px;
+          font-color: #232323;
+        }
+        #step2-choose-product h4.headline-primary {
+          font-size: 20px;
+          color: #333;
+          margin: 15px 0 0;
+        }
+        #step2-choose-product .plan-price-wrap {
+          color: #EF6C0F;
+          font-family: "Walsheim-Bold";
+          font-size: 25px;
+        }
+        #step2-choose-product .plan-price-wrap .promo-price {
+          font-size: 45px;
+        }
+        #step2-choose-product .pro-plans .pro-plan-wrap .plan-price-wrap {
+          min-height: 12px;
+        }
+        #step2-choose-product .pro-plans .pro-plan-wrap .btn {
+            margin: 20px 0 30px;
+        }
+        
+        
+        #step2-choose-product .or-container:after {
+          width: 94px;
+          height: 98px;
+          background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_or-shape_green_int.png);
+          background-position: 0 0;
+          background-size: auto auto;
+        }
+        #step2-choose-product .or-container.or-container-en-us:after {
+          width: 94px;
+          height: 98px;
+          background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_or-shape_green_en.png);
+          background-position: 0 0;
+          background-size: auto auto;
         }
         
       </style>
@@ -1737,7 +1796,7 @@ h2.api-error-header {
         <div class="container">
           <div class="row">
             <div class="col-sm-12">
-              <h2>[@L[cds.sales/offers/online-business:32573-youve-got-your-domain]@L]</h2>
+              <h2 class="headline-primary">[@L[cds.sales/offers/online-business:32573-youve-got-your-domain]@L]</h2>
             </div>
           </div>
         </div>
@@ -1750,14 +1809,19 @@ h2.api-error-header {
             </div>
           </div>
           <div class="row">
-            <div class="col-md-5 col-sm-12 plan-tile plan-pro">
+            <div class="col-md-5 col-sm-6 plan-tile plan-pro or-container">
               <div class="pro-plan-wrap">
                 <div class="plan-flag">[@L[cds.sales/offers/online-business:32573-choose-wsb]@L]</div>
-                <h2>[@L[cds.sales/offers/online-business:32573-choose-wsb-text]@L]</h2>
-                <h4>[@L[cds.sales/offers/online-business:32573-choose-wsb-all-this-for-just-text]@L]</h4>
+                <h2 class="h0">[@L[cds.sales/offers/online-business:32573-choose-wsb-text]@L]</h2>
+                <h4 class="headline-primary">[@L[cds.sales/offers/online-business:32573-choose-wsb-all-this-for-just-text]@L]</h4>
                 <div data-tokenize="[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T]" class="plan-price-wrap">[@L[cds.sales/offers/online-business:32573-choose-wsb-all-this-for-just-price]@L]</div>
                 <div data-tokenize="[@T[multipleproductprice:<list productidlist="464069|101|7524" period="monthly" promocode="0" />]@T]" class="plan-inline-disclaimer">[@L[cds.sales/offers/online-business:32573-choose-wsb-text-price-disclaimer]@L] 
-                  <button class="btn-link see-wsb-disclaimer-link">[@L[cds.sales/offers/online-business:32573-choose-wsb-text-price-disclaimer-link]@L]</button>
+                  <button class="btn-link see-wsb-disclaimer-link">[@L[cds.sales/offers/online-business:32573-choose-wsb-text-price-disclaimer-link]@L]</button> 
+                  ##if(countrySiteAny(uk))
+                   
+                  <div>[@L[cds.sales/offers/online-business:32573-vat-excludes-price-percentage]@L]</div> 
+                  ##endif
+                   
                 </div>
                 <button class="btn btn-md btn-block btn-purchase product-wsb">[@L[cds.sales/offers/online-business:32573-choose-select-button]@L]</button>
                 <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-choose-wsb-bullet-1]@L]</div>
@@ -1766,17 +1830,19 @@ h2.api-error-header {
                 <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-choose-wsb-bullet-4]@L]</div>
               </div>
             </div>
-            <div class="col-md-2 col-sm-12">
-              <p>Or</p>
-            </div>
-            <div class="col-md-5 col-sm-12 plan-tile plan-pro">
+            <div class="col-md-5 col-md-offset-2 col-sm-6 plan-tile plan-pro">
               <div class="pro-plan-wrap">
                 <div class="plan-flag">[@L[cds.sales/offers/online-business:32573-choose-ols]@L]</div>
-                <h2>[@L[cds.sales/offers/online-business:32573-choose-ols-text]@L]</h2>
-                <h4>[@L[cds.sales/offers/online-business:32573-choose-ols-all-this-for-just-text]@L]</h4>
+                <h2 class="h0">[@L[cds.sales/offers/online-business:32573-choose-ols-text]@L]</h2>
+                <h4 class="headline-primary">[@L[cds.sales/offers/online-business:32573-choose-ols-all-this-for-just-text]@L]</h4>
                 <div data-tokenize="[@T[multipleproductprice:<current productidlist="464069|101|40972" period="monthly" promocode="75315678" />]@T]" class="plan-price-wrap">[@L[cds.sales/offers/online-business:32573-choose-ols-all-this-for-just-price]@L]</div>
                 <div data-tokenize="[@T[multipleproductprice:<list productidlist="464069|101|40972" period="monthly" promocode="0" />]@T]" class="plan-inline-disclaimer">[@L[cds.sales/offers/online-business:32573-choose-ols-text-price-disclaimer]@L] 
-                  <button class="btn-link see-ols-disclaimer-link">[@L[cds.sales/offers/online-business:32573-choose-ols-text-price-disclaimer-link]@L]</button>
+                  <button class="btn-link see-ols-disclaimer-link">[@L[cds.sales/offers/online-business:32573-choose-ols-text-price-disclaimer-link]@L]</button> 
+                  ##if(countrySiteAny(uk))
+                   
+                  <div>[@L[cds.sales/offers/online-business:32573-vat-excludes-price-percentage]@L]</div> 
+                  ##endif
+                   
                 </div>
                 <button class="btn btn-md btn-block btn-purchase product-ols">[@L[cds.sales/offers/online-business:32573-choose-select-button]@L]</button>
                 <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-choose-ols-bullet-1]@L]</div>
@@ -1806,41 +1872,41 @@ h2.api-error-header {
       <style>
         #site-choice-compare h2,
         #site-choice-compare h3,
-        #wsb-only h2,
-        #wsb-only h3  {
+        #wsb-only-choice h2,
+        #wsb-only-choice h3  {
           color: #232323!important;
         }
         
         #site-choice-compare .disclaimer-mark div.headline-primary,
-        #wsb-only .disclaimer-mark div.headline-primary {
+        #wsb-only-choice .disclaimer-mark div.headline-primary {
           color: #333;
         }
         
         #site-choice-compare .button-margin,    
-        #wsb-only .button-margin  {
+        #wsb-only-choice .button-margin  {
           margin-top:20px;
         }
         
         #site-choice-compare .disclaimer-mark p.disclaimer,    
-        #wsb-only .disclaimer-mark p.disclaimer {
+        #wsb-only-choice .disclaimer-mark p.disclaimer {
           font-size: 14px;
           font-weight: normal;
         }
         
-        #wsb-only .see-wsb-disclaimer-link,   
+        #wsb-only-choice .see-wsb-disclaimer-link,   
         #site-choice .see-wsb-disclaimer-link, 
         #site-choice .see-ols-disclaimer-link {
           color: #333;
         }
         
         #site-choice ul.check-bullets li,
-        #wsb-only ul.check-bullets li {
+        #wsb-only-choice ul.check-bullets li {
           position: relative;
           padding-left: 40px;
           margin-bottom: 20px;
         }
         #site-choice ul.check-bullets li:before,
-        #wsb-only ul.check-bullets li:before {
+        #wsb-only-choice ul.check-bullets li:before {
           content: '';
           background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
           background-size: 205px auto;
@@ -1852,13 +1918,13 @@ h2.api-error-header {
           top: -6px;
         }
         #site-choice ul.check-bullets li h5,
-        #wsb-only ul.check-bullets li h5  {
+        #wsb-only-choice ul.check-bullets li h5  {
           margin-bottom: 5px;
         }
         
         
         #site-choice .disclaimer-mark ,
-        #wsb-only .disclaimer-mark {
+        #wsb-only-choice .disclaimer-mark {
           background-color: #FEDC45;
           padding: 10px;
           margin-bottom: 20px;
@@ -1866,8 +1932,8 @@ h2.api-error-header {
           margin: 0 0 10px;
         }
         
-        #wsb-only .top-row {padding-top:30px;} /* to match 2-up compare's styling */
-        #wsb-only.bg-green-official-light {background-color: #77C043;}
+        #wsb-only-choice .top-row {padding-top:30px;} /* to match 2-up compare's styling */
+        #wsb-only-choice.bg-green-official-light {background-color: #77C043;}
         
         .videoWrapper {
           position: relative;
@@ -1888,12 +1954,28 @@ h2.api-error-header {
           vertical-align: top;
         }
         
+        #site-choice .or-container:after,
+        #wsb-only-choice .or-container:after {
+          width: 94px;
+          height: 98px;
+          background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_or-shape_white_int.png);
+          background-position: 0 0;
+          background-size: auto auto;
+        }
+        #site-choice .or-container.or-container-en-us:after,
+        #wsd-only .or-container.or-container-en-us:after {
+          width: 94px;
+          height: 98px;
+          background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_or-shape_white_en.png);
+          background-position: 0 0;
+          background-size: auto auto;
+        }
         
       </style>
     </atlantis:webstash> 
     ##if(!productIsOffered(105))
      
-    <section id="wsb-only" class="bg-green-official-light">
+    <section id="wsb-only-choice" class="bg-green-official-light">
       <div class="container">
         <div class="row top-row text-center">       <img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_wsb_icon_large_feature.png"></div>
         <div class="row text-center">     
@@ -1904,7 +1986,12 @@ h2.api-error-header {
           <div class="col-sm-6 col-sm-push-3 text-center disclaimer-mark"> 
             <div data-tokenize="[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T]" class="headline-primary">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price]@L] </div>
             <p data-tokenize="[@T[multipleproductprice:<list productidlist="464069|101|7524" period="monthly" promocode="0" />]@T]" class="disclaimer">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price-disclaimer]@L] 
-              <button class="btn-link see-wsb-disclaimer-link">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price-disclaimer-link]@L]</a></button>
+              <button class="btn-link see-wsb-disclaimer-link">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price-disclaimer-link]@L]</a></button> 
+              ##if(countrySiteAny(uk))
+               
+              <div class="vat-price-disclaimer">[@L[cds.sales/offers/online-business:32573-vat-excludes-price-percentage]@L]</div> 
+              ##endif
+               
             </p>
           </div>
         </div>
@@ -2130,7 +2217,7 @@ h2.api-error-header {
   content: '';
   width: 94px;
   height: 94px;
-  background-image: url([@T[link:<imageroot />]@T]ffos/hp/sahara-rebrand-sprite-20141114.png);
+  background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
   background-size: 205px auto;
   background-position: 0 -896px;
   position: absolute;
@@ -2263,12 +2350,17 @@ h2.api-error-header {
                       <div class="row text-center disclaimer-mark"> 
                         <div data-tokenize="[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T]" class="headline-primary">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price]@L] </div>
                         <p data-tokenize="[@T[multipleproductprice:<list productidlist="464069|101|7524" period="monthly" promocode="0" />]@T]" class="disclaimer">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price-disclaimer]@L] 
-                          <button class="btn-link see-wsb-disclaimer-link">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price-disclaimer-link]@L]</a></button>
+                          <button class="btn-link see-wsb-disclaimer-link">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price-disclaimer-link]@L]</a></button> 
+                          ##if(countrySiteAny(uk))
+                           
+                          <div class="vat-price-disclaimer">[@L[cds.sales/offers/online-business:32573-vat-excludes-price-percentage]@L]</div> 
+                          ##endif
+                           
                         </p>
                       </div>
                       <div class="row">
                         <div class="col-sm-12 button-margin">
-                          <button id="wsb-video-btn" class="btn btn-md btn-block btn-primary"><img class="video-play-icon" src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_play_icon_small.png" /> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]</button>
+                          <button id="wsb-video-btn" data-ci="95270" class="btn btn-md btn-block btn-primary"><img class="video-play-icon" src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_play_icon_small.png" /> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]</button>
                         </div>
                       </div>
                       <div class="row">
@@ -2317,7 +2409,12 @@ h2.api-error-header {
                       <div class="row text-center disclaimer-mark"> 
                         <div data-tokenize="[@T[multipleproductprice:<current productidlist="464069|101|40972" period="monthly" promocode="75315678" />]@T]" class="headline-primary">[@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price]@L] </div>
                         <p data-tokenize="[@T[multipleproductprice:<list productidlist="464069|101|40972" period="monthly" promocode="0" />]@T]" class="disclaimer">[@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price-disclaimer]@L] 
-                          <button class="btn-link see-ols-disclaimer-link">[@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price-disclaimer-link]@L]</button>
+                          <button class="btn-link see-ols-disclaimer-link">[@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price-disclaimer-link]@L]</button> 
+                          ##if(countrySiteAny(uk))
+                           
+                          <div class="vat-price-disclaimer">[@L[cds.sales/offers/online-business:32573-vat-excludes-price-percentage]@L]</div> 
+                          ##endif
+                           
                         </p>
                       </div>
                       <div class="row">
@@ -2450,6 +2547,12 @@ h2.api-error-header {
             min-height: 50px;
             margin-bottom: 0px;
           }
+          .carousel-wrap {
+            padding-bottom: 60px !important;
+          }
+          .carousel-container .carousel .carousel-indicators {
+            bottom: -50px !important;
+          }
           .main-heading {
             margin: 0px;
           }
@@ -2460,6 +2563,7 @@ h2.api-error-header {
           .customer-quote {
             margin-top: 0px;
             margin-bottom: 10px;
+            min-height: 70px;
           }
           .store-name {
             margin-top: 10px;
