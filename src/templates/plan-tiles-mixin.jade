@@ -1,8 +1,13 @@
 //- fails if plansPanels ever need to be nested
 - var plansPanelTotalColumns
 - var plansPanelColumnsPopulated
-- var hasIncludedCss = false
+- var hasIncludedPlanTilesMixinCss = false
 
+if(hasIncludedPlanTilesMixinCss === false) 
+  - hasIncludedPlanTilesMixinCss = true
+  atlantis:webstash(type="css")
+    style
+      include:css ./styles/plan-tiles.css
 
 mixin planTile(planid)
   case plansPanelTotalColumns
@@ -36,10 +41,6 @@ mixin renderPlanTiles(columns, options)
   - options = options || {};
   - options.backgroundColor = options.backgroundColor || "bg-gray-light";
   - options.icode = options.icode || "";
-  if(hasIncludedCss === false) 
-    - hasIncludedCss = true
-    style
-      include:css ./styles/plan-tiles.css
   if (columns > 4)
     - containerClass = "plan-container"
   else
