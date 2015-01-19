@@ -28,52 +28,38 @@ append headScripts
       include:js online-business/got.js
     script(type="text/javascript", src="https://img1.wsimg.com/fos/hp/rebrand/js/bigtext.min.js")
 
-append pageStyles  
+append pageStyles
   style
     include:css ./online-business/styles.css
-  style
-    :less
-      /* marquee styling */
-      #marquee {margin:0 auto; padding-top:15px;background-color: #77c043; color: #333; }
-      .main-marquee { 
-        color: #333; font-size: 12px; text-transform: uppercase; fill: #333;
-        /* <svg width='100' height='100' xmlns='http://www.w3.org/2000/svg'><g><rect id='svg_1' fill='#333' x='0' y='39' width='100' height='22'/></g></svg> */
-        .dash { background-size: contain; background-repeat: x; background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMTAwJyBoZWlnaHQ9JzEwMCcgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48Zz48cmVjdCBpZD0nc3ZnXzEnIGZpbGw9JyMzMzMnIHg9JzAnIHk9JzM5JyB3aWR0aD0nMTAwJyBoZWlnaHQ9JzIyJy8+PC9nPjwvc3ZnPg==); }
-        .header-text { padding-left: 5%; line-height: 0.8; padding-right: 15%; }
-        .header-text:first-child { padding-left: 0; line-height: 0.8; padding-right: 0; margin-left: 5%; margin-right: 15%; }
-        .header-text .get-online { display: inline; background-color: #77c043; font-family:Tungsten, 'Tungsten A', 'Tungsten B', Impact, sans-serif; font-size: 3em; }
-        .header-text .today { font-family:'Walsheim-Bold', 'Arial Black', sans-serif; font-size: 11.5em; }
-        .header-text.as-low-as-price { line-height: 1; padding-top: 60px; padding-bottom: 45px; margin-top: -45px; color: #fff; font-family:'Walsheim-Black', 'Arial Black', sans-serif; font-size: 2em; background-image: url(data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PScwLDAsNTUzLDEyNScgcHJlc2VydmVBc3BlY3RSYXRpbz0nbm9uZScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48cG9seWdvbiBwb2ludHM9JzAsMzggNDc5LDMxIDQ3OSwwIDU1Myw2OCA0NzksMTI1IDQ4MSw5OSAyMiwxMDEnIHN0eWxlPSdmaWxsOiMzZTk2MzU7IHN0cm9rZTojM2U5NjM1OycgLz48L3N2Zz4=);}
-        .header-text.disclaimers { color: #00701D; font-size: 1em; margin-top: -14px; text-transform: none; }
-        .header-text.disclaimers .btn-link { color: #00701D; cursor: pointer; }
-        .logo-wrapper { margin-top: 20px; }
-        .logo-wrapper .column { width: 25%; position: relative; float: left; text-align: center; padding-left: 20px; padding-right: 20px; font-family: Tungsten,'Tungsten A','Tungsten B',Impact,sans-serif; font-size: 2em; }
-        .logo-wrapper .icon { min-height: 50px; background-position: center bottom; background-repeat: no-repeat; }
-        .logo-wrapper .domain .icon { background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzOCA0MyI+PHBhdGggc3R5bGU9ImZpbGw6IzMzMzsiIGQ9Ik0yMyAyTDIyIDAgMTkgMSAxOSAxMyAyNCAxMyAyMyAyTTI5IDdMMjcgNCAyNSA1IDI1IDEzIDI5IDEzIDI5IDdNMTEgN0w5IDggOCAxMCA3IDEzIDEyIDEzIDExIDdNMTcgM0wxNiAzIDE0IDQgMTMgMTMgMTggMTMgMTcgM00xMyAxNUwxNCAyNSAxOCAyNSAxOSAyMCAyMCAyNSAyNCAyNSAyNSAxNSAyNiAyMCAyNyAxNiAyOSAxNyAyOSAxNCAyMiAxNCAyMiAyMCAyMSAxNCAxNyAxNCAxNyAyMSAxNiAxNCA5IDE0IDkgMjAgOCAxNCA1IDE0IDQgMjEgMyAxNCAwIDE0IDIgMjUgNiAyNSA2IDIwIDcgMjUgMTEgMjUgMTMgMTVNMzUgMTRMMzQgMjAgMzMgMTQgMzAgMTQgMzAgMTcgMzIgMTggMzIgMjUgMzIgMjUgMzYgMjUgMzggMTQgMzUgMTRNMjggMThMMjUgMjUgMjAgMjcgMTggMzIgMTcgMjYgNyAyNiA3IDMyIDEwIDM5IDE5IDQyIDI3IDQxIDMyIDMxIDMxIDE5IDI4IDE4Ii8+PC9zdmc+); }
-        .logo-wrapper .website .icon { background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNSAzNyI+PHBhdGggc3R5bGU9ImZpbGw6IzMzMzsiIGQ9Ik0yMyAxNkwzMiAxNyAxNCAwIDggMCAyMyAxNk0xNiAyMkwyMyAyMiAyMyAxNyA3IDAgMSA1IDE2IDIyTTE1IDI5TDE1IDIzIDAgNiAxIDE1IDE1IDI5TTMwIDI5TDMzIDI4IDMzIDE4IDI1IDE3IDI0IDI0IDE2IDI0IDE2IDMwIDI3IDMzIDMwIDI5TTMxIDMxTDI5IDM0IDM0IDM1IDMzIDMwIDMxIDMxIi8+PC9zdmc+); }
-        .logo-wrapper .email .icon { background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MiAzNSI+PHBhdGggc3R5bGU9ImZpbGw6IzMzMzsiIGQ9Ik0yNCAyNkwwIDQgMSAzNSA0MCAzMiA0MiAxMSAyNCAyNk00MSA4TDEgMCAyNCAyNCA0MSA4Ii8+PC9zdmc+ICA=); }
-        .logo-wrapper .plus { font-family: 'Walsheim-Black', 'Arial Black', sans-serif; text-align: center; width: 12.5%; font-size: 3em; position: relative; float: left; font-weight: bold; }
-        .logo-wrapper .office-365 { line-height: 1; font-size: 0.5em; text-transform: none; display: block; font-family: 'Walsheim-Regular', Arial, sans-serif; }
+  style.
+    /* marquee styling */
+    .main-marquee { color: #333; font-size: 12px; text-transform: uppercase; fill: #333; }
+    .main-marquee html[lang|="en"] .dash { background: nonebackground-size: contain; background-repeat: x; background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMTAwJyBoZWlnaHQ9JzEwMCcgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48Zz48cmVjdCBpZD0nc3ZnXzEnIGZpbGw9JyMzMzMnIHg9JzAnIHk9JzM5JyB3aWR0aD0nMTAwJyBoZWlnaHQ9JzIyJy8+PC9nPjwvc3ZnPg==); }
+    .main-marquee .header-text { padding-left: 5%; line-height: 0.8; padding-right: 15%; }
+    .main-marquee .header-text:first-child { padding-left: 0; line-height: 0.8; padding-right: 0; margin-left: 5%; margin-right: 15%; }
+    .main-marquee .header-text .get-online { display: inline; background-color: #77c043; font-family:Tungsten, 'Tungsten A', 'Tungsten B', Impact, sans-serif; font-size: 3em; }
+    .main-marquee .header-text .today { font-family:'Walsheim-Bold', 'Arial Black', sans-serif; font-size: 11.5em; }
+    .main-marquee .header-text.as-low-as-price { line-height: 1; padding-top: 60px; padding-bottom: 45px; margin-top: -45px; color: #fff; font-family:'Walsheim-Black', 'Arial Black', sans-serif; font-size: 2em; background-image: url(data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PScwLDAsNTUzLDEyNScgcHJlc2VydmVBc3BlY3RSYXRpbz0nbm9uZScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48cG9seWdvbiBwb2ludHM9JzAsMzggNDc5LDMxIDQ3OSwwIDU1Myw2OCA0NzksMTI1IDQ4MSw5OSAyMiwxMDEnIHN0eWxlPSdmaWxsOiMzZTk2MzU7IHN0cm9rZTojM2U5NjM1OycgLz48L3N2Zz4=);}
+    .main-marquee .header-text.disclaimers { color: #00701D; font-size: 1em; margin-top: -14px; text-transform: none; }
+    .main-marquee .header-text.disclaimers .btn-link { color: #00701D; cursor: pointer; }
+    .main-marquee .logo-wrapper { margin-top: 20px; }
+    .main-marquee .logo-wrapper .column { width: 25%; position: relative; float: left; text-align: center; padding-left: 20px; padding-right: 20px; font-family: Tungsten,'Tungsten A','Tungsten B',Impact,sans-serif; font-size: 2em; }
+    .main-marquee .logo-wrapper .icon { min-height: 50px; background-position: center bottom; background-repeat: no-repeat; }
+    .main-marquee .logo-wrapper .domain .icon { background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzOCA0MyI+PHBhdGggc3R5bGU9ImZpbGw6IzMzMzsiIGQ9Ik0yMyAyTDIyIDAgMTkgMSAxOSAxMyAyNCAxMyAyMyAyTTI5IDdMMjcgNCAyNSA1IDI1IDEzIDI5IDEzIDI5IDdNMTEgN0w5IDggOCAxMCA3IDEzIDEyIDEzIDExIDdNMTcgM0wxNiAzIDE0IDQgMTMgMTMgMTggMTMgMTcgM00xMyAxNUwxNCAyNSAxOCAyNSAxOSAyMCAyMCAyNSAyNCAyNSAyNSAxNSAyNiAyMCAyNyAxNiAyOSAxNyAyOSAxNCAyMiAxNCAyMiAyMCAyMSAxNCAxNyAxNCAxNyAyMSAxNiAxNCA5IDE0IDkgMjAgOCAxNCA1IDE0IDQgMjEgMyAxNCAwIDE0IDIgMjUgNiAyNSA2IDIwIDcgMjUgMTEgMjUgMTMgMTVNMzUgMTRMMzQgMjAgMzMgMTQgMzAgMTQgMzAgMTcgMzIgMTggMzIgMjUgMzIgMjUgMzYgMjUgMzggMTQgMzUgMTRNMjggMThMMjUgMjUgMjAgMjcgMTggMzIgMTcgMjYgNyAyNiA3IDMyIDEwIDM5IDE5IDQyIDI3IDQxIDMyIDMxIDMxIDE5IDI4IDE4Ii8+PC9zdmc+); }
+    .main-marquee .logo-wrapper .website .icon { background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNSAzNyI+PHBhdGggc3R5bGU9ImZpbGw6IzMzMzsiIGQ9Ik0yMyAxNkwzMiAxNyAxNCAwIDggMCAyMyAxNk0xNiAyMkwyMyAyMiAyMyAxNyA3IDAgMSA1IDE2IDIyTTE1IDI5TDE1IDIzIDAgNiAxIDE1IDE1IDI5TTMwIDI5TDMzIDI4IDMzIDE4IDI1IDE3IDI0IDI0IDE2IDI0IDE2IDMwIDI3IDMzIDMwIDI5TTMxIDMxTDI5IDM0IDM0IDM1IDMzIDMwIDMxIDMxIi8+PC9zdmc+); }
+    .main-marquee .logo-wrapper .email .icon { background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MiAzNSI+PHBhdGggc3R5bGU9ImZpbGw6IzMzMzsiIGQ9Ik0yNCAyNkwwIDQgMSAzNSA0MCAzMiA0MiAxMSAyNCAyNk00MSA4TDEgMCAyNCAyNCA0MSA4Ii8+PC9zdmc+ICA=); }
+    .main-marquee .logo-wrapper .plus { font-family: 'Walsheim-Black', 'Arial Black', sans-serif; text-align: center; width: 12.5%; font-size: 3em; position: relative; float: left; font-weight: bold; }
+    .main-marquee .logo-wrapper .office-365 { line-height: 1; font-size: 0.5em; text-transform: none; display: block; font-family: 'Walsheim-Regular', Arial, sans-serif; }
+    @media (min-width: 992px) { 
+      .main-marquee .header-text .get-online { font-size: 5em; }
+      .main-marquee .logo-wrapper  { margin-top: 0; }
+      .main-marquee .logo-wrapper .icon { min-height: 140px; }
+      .main-marquee .logo-wrapper .plus { font-size: 6em; padding-top: 60px; }
       }
-
-      @media (min-width: 992px) { 
-        .main-marquee {
-          .header-text .get-online { font-size: 5em; }
-          .logo-wrapper  { margin-top: 0; }
-          .logo-wrapper .icon { min-height: 140px; }
-          .logo-wrapper .plus { font-size: 6em; padding-top: 60px; }
-        }
-      }
-
-      @media (min-width: 1200px) { 
-        .main-marquee {
-          .logo-wrapper .icon { min-height: 160px; }
-        }
-      }
-
-
-      /* domain search styling */
-      #api-failure {display: none;}
+    }
+    @media (min-width: 1200px) { 
+      .main-marquee .logo-wrapper .icon { min-height: 160px; }
+    }
 
 block domainSearch
   //- nothing to see here
@@ -81,55 +67,7 @@ block domainSearch
 
 //- top marquee
 block marquee
-  section#marquee
-    .container.main-marquee
-      .row
-        .col-md-6.col-xs-12
-          .header-text.dash
-            .get-online [@L[cds.sales/offers/online-business:32573-top-banner-headline]@L]
-          .header-text.bigtext
-            .today [@L[cds.sales/offers/online-business:32573-top-banner-subheadline]@L]
-          .header-text.as-low-as-price(data-tokenize!='[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T]') [@L[cds.sales/offers/online-business:32573-as-low-as]@L]
-          .header-text.disclaimers
-            span.text-disclaimers [@L[cds.sales/offers/online-business:32573-top-small-disclaimer-text]@L] 
-            button.btn-link.see-details-disclaimer-link [@L[cds.sales/offers/online-business:32573-top-small-disclaimer-details-link]@L]
-            | 
-            |##if(countrySiteAny(uk)) 
-            | 
-            div.text-vat-disclaimer [@L[cds.sales/offers/online-business:32573-price-does-not-include-taxes-vat]@L]
-            | 
-            |##endif 
-            | 
-        .col-md-6.col-xs-12
-          .logo-wrapper
-            .column.domain
-              //- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 38 43"><path style="fill:#333;" d="M23 2L22 0 19 1 19 13 24 13 23 2M29 7L27 4 25 5 25 13 29 13 29 7M11 7L9 8 8 10 7 13 12 13 11 7M17 3L16 3 14 4 13 13 18 13 17 3M13 15L14 25 18 25 19 20 20 25 24 25 25 15 26 20 27 16 29 17 29 14 22 14 22 20 21 14 17 14 17 21 16 14 9 14 9 20 8 14 5 14 4 21 3 14 0 14 2 25 6 25 6 20 7 25 11 25 13 15M35 14L34 20 33 14 30 14 30 17 32 18 32 25 32 25 36 25 38 14 35 14M28 18L25 25 20 27 18 32 17 26 7 26 7 32 10 39 19 42 27 41 32 31 31 19 28 18"/></svg>
-              //- TODO: IE 8 fallback img here
-              .icon
-              span DOMAIN
-            .plus +
-            .column.website
-              //- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 37"><path style="fill:#333;" d="M23 16L32 17 14 0 8 0 23 16M16 22L23 22 23 17 7 0 1 5 16 22M15 29L15 23 0 6 1 15 15 29M30 29L33 28 33 18 25 17 24 24 16 24 16 30 27 33 30 29M31 31L29 34 34 35 33 30 31 31"/></svg>
-              //- TODO: IE 8 fallback img here
-              .icon
-              span WEBSITE
-            .plus +
-            .column.email
-              //- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42 35"><path style="fill:#333;" d="M24 26L0 4 1 35 40 32 42 11 24 26M41 8L1 0 24 24 41 8"/></svg>  
-              //- TODO: IE 8 fallback img here
-              .icon
-              span EMAIL
-              span.office-365 Powered by Microsoft Office 365
-
-    .container
-      +domainSearchOffersInput('[@L[cds.sales/offers/online-business:32573-step-1-get-a-domain]@L]', '12345', '[@L[cds.sales/offers/online-business:32573-domain-search-placeholder]@L]', '[@L[cds.sales/offers/online-business:32573-search]@L]', '[@L[cds.sales/offers/online-business:32573-type-your-business-placeholder]@L]', '[@L[cds.sales/offers/online-business:32573-eligibility-error]@L]','[@L[cds.sales/offers/online-business:32573-offer-only-valid]@L]')
-    #api-failure.sf-dialog.api-B-failure
-      h2.api-error-header
-        img(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/WarningSign.png")
-        div [@L[cds.sales/offers/online-business:32573-something-unexpected-happened]@L]
-      p [@L[cds.sales/offers/online-business:32573-generic-domain-search-error]@L]
-    include ./online-business/_2_domain-available-marquee-view.jade
-    include ./online-business/_3_domain-not-available-marquee-view.jade
+  include ./online-business/_marquee.jade
 
 //- side by side plan comparisons go here
 block plans
