@@ -48,6 +48,7 @@ block vars
   - buttonUrl = "";
   - priceText = "";
   - term = "";
+  - vat = "";
 
 
 
@@ -84,17 +85,17 @@ block vars
           | [@L[cds.sales/_common:was]@L] 
           strike [@T[productprice:<list productid="!{pfid}" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]
           |  
-          span.text-primary [@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="!{pfid}" secondaryproductid="!{pfid}" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]
+          span.text-primary <mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="!{pfid}" secondaryproductid="!{pfid}" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark>
         | 
         |##endif
         | 
         if(disclaimer)
-          p!{disclaimer}
+          p.h6 !{disclaimer}
         if(vat)
           | 
           |##if(countrySiteAny(uk))
           | 
-          p [@L[cds.sales/_common:vat-price]@L] 
+          p.h6 [@L[cds.sales/_common:vat-price-uk]@L] 
           | 
           |##endif
           | 
@@ -104,12 +105,12 @@ block vars
         span.plan-price.text-warning [@T[multipleproductprice:<current productidlist="!{packageids}" period="monthly" promocode="!{promocode}" />]@T]
         span.plan-duration.text-warning !{term}
         if(disclaimer)
-          p !{disclaimer}
+          p.h6 !{disclaimer}
         if(vat)
           | 
           |##if(countrySiteAny(uk))
           | 
-          p [@L[cds.sales/_common:vat-price]@L] 
+          p.h6 [@L[cds.sales/_common:vat-price-uk]@L] 
           | 
           |##endif
           | 
