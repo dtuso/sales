@@ -191,12 +191,12 @@ section#site-choice
                           image: "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-onlineStore.png"})
       .row.text-center.disclaimer-mark 
         div.headline-primary(data-tokenize!='[@T[multipleproductprice:<current productidlist="464069|101|40972" period="monthly" promocode="75315678" />]@T]') [@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price]@L] 
-        .got-price-disclaimer(data-tokenize!='[@T[multipleproductprice:<list productidlist="464069|101|40972" period="monthly" promocode="0" />]@T]') [@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price-disclaimer]@L] 
+        p.disclaimer(data-tokenize!='[@T[multipleproductprice:<list productidlist="464069|101|40972" period="monthly" promocode="0" />]@T]') [@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price-disclaimer]@L] 
           button.btn-link.see-ols-disclaimer-link [@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price-disclaimer-link]@L]
           | 
           |##if(countrySiteAny(uk))
           | 
-          .vat-price-disclaimer [@L[cds.sales/offers/online-business:32573-vat-excludes-price-percentage]@L] goofy2
+          .vat-price-disclaimer [@L[cds.sales/offers/online-business:32573-vat-excludes-price-percentage]@L]
           | 
           |##endif
           | 

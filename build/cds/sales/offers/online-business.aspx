@@ -867,6 +867,8 @@ function getParameterByName(name) {
 .vat-price-disclaimer {
   font-size: 14px;
   font-weight: normal;
+  margin-top: -10px;
+  margin-bottom: -10px;
 }
 
 .bg-white {
@@ -2292,7 +2294,8 @@ h2.api-error-header {
                 <div data-tokenize="[@T[multipleproductprice:<list productidlist="464069|101|7524" period="monthly" promocode="0" />]@T]" class="plan-inline-disclaimer">[@L[cds.sales/offers/online-business:32573-choose-wsb-text-price-disclaimer]@L] 
                   <button class="btn-link see-wsb-disclaimer-link">[@L[cds.sales/offers/online-business:32573-choose-wsb-text-price-disclaimer-link]@L]</button> 
                   ##if(countrySiteAny(uk))
-                   <span class="vat-price-disclaimer">[@L[cds.sales/offers/online-business:32573-vat-excludes-price-percentage]@L] goofy</span> 
+                   
+                  <div>[@L[cds.sales/offers/online-business:32573-vat-excludes-price-percentage]@L]</div> 
                   ##endif
                    
                 </div>
@@ -2313,7 +2316,7 @@ h2.api-error-header {
                   <button class="btn-link see-ols-disclaimer-link">[@L[cds.sales/offers/online-business:32573-choose-ols-text-price-disclaimer-link]@L]</button> 
                   ##if(countrySiteAny(uk))
                    
-                  <div class="vat-price-disclaimer">[@L[cds.sales/offers/online-business:32573-vat-excludes-price-percentage]@L]</div> 
+                  <div>[@L[cds.sales/offers/online-business:32573-vat-excludes-price-percentage]@L]</div> 
                   ##endif
                    
                 </div>
@@ -2865,14 +2868,14 @@ h2.api-error-header {
                     <div class="col-sm-12">
                       <div class="row text-center disclaimer-mark"> 
                         <div data-tokenize="[@T[multipleproductprice:<current productidlist="464069|101|40972" period="monthly" promocode="75315678" />]@T]" class="headline-primary">[@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price]@L] </div>
-                        <div data-tokenize="[@T[multipleproductprice:<list productidlist="464069|101|40972" period="monthly" promocode="0" />]@T]" class="got-price-disclaimer">[@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price-disclaimer]@L] 
+                        <p data-tokenize="[@T[multipleproductprice:<list productidlist="464069|101|40972" period="monthly" promocode="0" />]@T]" class="disclaimer">[@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price-disclaimer]@L] 
                           <button class="btn-link see-ols-disclaimer-link">[@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price-disclaimer-link]@L]</button> 
                           ##if(countrySiteAny(uk))
                            
-                          <div class="vat-price-disclaimer">[@L[cds.sales/offers/online-business:32573-vat-excludes-price-percentage]@L] goofy2</div> 
+                          <div class="vat-price-disclaimer">[@L[cds.sales/offers/online-business:32573-vat-excludes-price-percentage]@L]</div> 
                           ##endif
                            
-                        </div>
+                        </p>
                       </div>
                       <div class="row">
                         <div class="col-sm-12 button-margin">
