@@ -78,6 +78,10 @@ include ../../../templates/carousel-mixin.jade
 - olsCarousel.lazyLoad = true;
 - olsCarousel.id = "carousel-ols-stores";
 - olsCarousel.textCenter = false;
+- olsCarousel.ci = {panelContainer:'95265',carouselIndicator:'95263',prev:'95262', next:'95264'};
+}
+
+- itemOptions.ci.panelContainer = itemOptions.ci.panelContainer || '';
 
 block heading
   h1.main-heading.text-center [@L[cds.sales/offers/online-business:32573-real-customers-real-sites]@L]
