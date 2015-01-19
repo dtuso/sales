@@ -101,6 +101,13 @@ section#wsb-only.bg-green-official-light
         div.headline-primary(data-tokenize!='[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T]') [@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price]@L] 
         p.disclaimer(data-tokenize!='[@T[multipleproductprice:<list productidlist="464069|101|7524" period="monthly" promocode="0" />]@T]') [@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price-disclaimer]@L] 
           button.btn-link.see-wsb-disclaimer-link [@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price-disclaimer-link]@L]</a>
+          | 
+          |##if(countrySiteAny(uk))
+          | 
+          .vat-price-disclaimer [@L[cds.sales/offers/online-business:32573-vat-excludes-price-percentage]@L]
+          | 
+          |##endif
+          | 
     .row
       .col-sm-12.button-margin
         button#wsb-only-video-btn.btn.btn-md.btn-block.btn-primary <img class="video-play-icon" src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_play_icon_small.png" /> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]
@@ -145,6 +152,13 @@ section#site-choice
         div.headline-primary(data-tokenize!='[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T]') [@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price]@L] 
         p.disclaimer(data-tokenize!='[@T[multipleproductprice:<list productidlist="464069|101|7524" period="monthly" promocode="0" />]@T]') [@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price-disclaimer]@L] 
           button.btn-link.see-wsb-disclaimer-link [@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price-disclaimer-link]@L]</a>
+          | 
+          |##if(countrySiteAny(uk))
+          | 
+          .vat-price-disclaimer [@L[cds.sales/offers/online-business:32573-vat-excludes-price-percentage]@L]
+          | 
+          |##endif
+          | 
       .row
         .col-sm-12.button-margin
           button#wsb-video-btn.btn.btn-md.btn-block.btn-primary <img class="video-play-icon" src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_play_icon_small.png" /> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]
@@ -177,9 +191,15 @@ section#site-choice
                           image: "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-onlineStore.png"})
       .row.text-center.disclaimer-mark 
         div.headline-primary(data-tokenize!='[@T[multipleproductprice:<current productidlist="464069|101|40972" period="monthly" promocode="75315678" />]@T]') [@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price]@L] 
-        p.disclaimer(data-tokenize!='[@T[multipleproductprice:<list productidlist="464069|101|40972" period="monthly" promocode="0" />]@T]') [@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price-disclaimer]@L] 
+        .got-price-disclaimer(data-tokenize!='[@T[multipleproductprice:<list productidlist="464069|101|40972" period="monthly" promocode="0" />]@T]') [@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price-disclaimer]@L] 
           button.btn-link.see-ols-disclaimer-link [@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price-disclaimer-link]@L]
-
+          | 
+          |##if(countrySiteAny(uk))
+          | 
+          .vat-price-disclaimer [@L[cds.sales/offers/online-business:32573-vat-excludes-price-percentage]@L] goofy2
+          | 
+          |##endif
+          | 
       .row
         .col-sm-12.button-margin
           button#ols-video-btn.btn.btn-md.btn-block.btn-primary <img class="video-play-icon" src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_play_icon_small.png" /> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]
