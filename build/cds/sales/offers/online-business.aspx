@@ -384,6 +384,8 @@ function wireupModals() {
 
   // wire up see details links
   var marqueeModalId = got1Page.canOfferOls ? "#default-marquee-details-modal" : "#default-marquee-details-modal-wsb-only";
+  
+  $('#default-marquee-view').find('.see-details-disclaimer-link').attr('data-ci', got1Page.canOfferOls ? "95734" : "95736");
   $('#default-marquee-view').on('click', '.see-details-disclaimer-link', function(){
     var $modal = $(marqueeModalId);
     $modal.sfDialog({buttons: got1Page.sfDialogErrorButtons});
@@ -425,7 +427,7 @@ function wireupModals() {
       $("#site-choice-ols-video-modal").sfDialog({titleHidden:true, dialogWidthIdeal:840, buttons: []});
     });
     $('#ols-stores-btn').on('click', function(){
-      $("#site-choice-ols-stores-modal").sfDialog({titleHidden:true, buttons: [], dialogWidthIdeal:1240 });
+      $("#site-choice-ols-stores-modal").sfDialog({titleHidden:true, buttons: [], dialogWidthIdeal:1230 });
     });
   }
 
@@ -1648,7 +1650,7 @@ h2.api-error-header {
               <div class="col-md-12 offer-search-box">
                 <div class="input-group">
                   <input type="text" placeholder="[@L[cds.sales/offers/online-business:32573-try-a-different-domain-name-placeholder]@L]" name="domainToCheck" autocomplete="off" maxlength="63" class="form-control input-lg search-form-input searchInput helveticafont"/><span class="input-group-btn">
-                    <button type="button" name="searchButton" data-ci="12346" class="btn btn-primary btn-lg offer-search-btn">[@L[cds.sales/offers/online-business:32573-search]@L]</button></span>
+                    <button type="button" name="searchButton" data-ci="95737" class="btn btn-primary btn-lg offer-search-btn">[@L[cds.sales/offers/online-business:32573-search]@L]</button></span>
                 </div>
               </div>
             </div>
@@ -1717,7 +1719,7 @@ h2.api-error-header {
               <div class="col-md-12 offer-search-box">
                 <div class="input-group">
                   <input type="text" placeholder="[@L[cds.sales/offers/online-business:32573-try-a-different-domain-name-placeholder]@L]" name="domainToCheck" autocomplete="off" maxlength="63" class="form-control input-lg search-form-input searchInput helveticafont"/><span class="input-group-btn">
-                    <button type="button" name="searchButton" data-ci="12347" class="btn btn-primary btn-lg offer-search-btn">[@L[cds.sales/offers/online-business:32573-search]@L]</button></span>
+                    <button type="button" name="searchButton" data-ci="95736" class="btn btn-primary btn-lg offer-search-btn">[@L[cds.sales/offers/online-business:32573-search]@L]</button></span>
                 </div>
               </div>
             </div>
@@ -1731,7 +1733,7 @@ h2.api-error-header {
             <div class="row">
               <h4 class="other-domains-heading-text">[@L[cds.sales/offers/online-business:32573-here-are-some-others]@L]</h4>
               <h6 class="results-list-heading-text">[@L[cds.sales/offers/online-business:32573-number-of-number-results]@L] 
-                <button class="btn btn-link view-all-button">[@L[cds.sales/offers/online-business:32573-view-all-results]@L]</button>
+                <button data-ci="95269" class="btn btn-link view-all-button">[@L[cds.sales/offers/online-business:32573-view-all-results]@L]</button>
               </h6>
             </div>
             <div id="spin-results"></div>
@@ -1745,7 +1747,7 @@ h2.api-error-header {
                         <h2 class="domain-name-display-tld"></h2>
                       </div>
                       <div class="col-md-4 col-sm-12 text-right">
-                        <button class="btn btn-primary select-and-continue spin-results-message">[@L[cds.sales/offers/online-business:32573-select-and-continue-button]@L]</button>
+                        <button data-ci="95267" class="btn btn-primary select-and-continue spin-results-message">[@L[cds.sales/offers/online-business:32573-select-and-continue-button]@L]</button>
                         <div class="spin-results-message checking-availability">[@L[cds.sales/offers/online-business:32573-checking-availability]@L]</div>
                         <div class="spin-results-message now-unavailable">[@L[cds.sales/offers/online-business:32573-domain-no-longer-available]@L]</div>
                       </div>
@@ -1755,7 +1757,7 @@ h2.api-error-header {
               </div>
             </div>
             <div id="show-more-section">
-              <h6 class="text-center"><span class="clickable-show-more">[@L[cds.sales/offers/online-business:32573-see-more-results]@L]<span class="show-more-arrow"></span></span></h6>
+              <h6 class="text-center"><span data-ci="95268" class="clickable-show-more">[@L[cds.sales/offers/online-business:32573-see-more-results]@L]<span class="show-more-arrow"></span></span></h6>
             </div>
           </div>
         </div>
@@ -2311,14 +2313,14 @@ h2.api-error-header {
                 <h4 class="headline-primary">[@L[cds.sales/offers/online-business:32573-choose-wsb-all-this-for-just-text]@L]</h4>
                 <div data-tokenize="[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T]" class="plan-price-wrap">[@L[cds.sales/offers/online-business:32573-choose-wsb-all-this-for-just-price]@L]</div>
                 <div data-tokenize="[@T[multipleproductprice:<list productidlist="464069|101|7524" period="monthly" promocode="0" />]@T]" class="plan-inline-disclaimer">[@L[cds.sales/offers/online-business:32573-choose-wsb-text-price-disclaimer]@L] 
-                  <button class="btn-link see-wsb-disclaimer-link">[@L[cds.sales/offers/online-business:32573-choose-wsb-text-price-disclaimer-link]@L]</button> 
+                  <button data-ci="95736" class="btn-link see-wsb-disclaimer-link">[@L[cds.sales/offers/online-business:32573-choose-wsb-text-price-disclaimer-link]@L]</button> 
                   ##if(countrySiteAny(uk))
                    
                   <div>[@L[cds.sales/offers/online-business:32573-vat-excludes-price-percentage]@L]</div> 
                   ##endif
                    
                 </div>
-                <button class="btn btn-md btn-block btn-purchase product-wsb">[@L[cds.sales/offers/online-business:32573-choose-select-button]@L]</button>
+                <button data-ci="95741" class="btn btn-md btn-block btn-purchase product-wsb">[@L[cds.sales/offers/online-business:32573-choose-select-button]@L]</button>
                 <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-choose-wsb-bullet-1]@L]</div>
                 <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-choose-wsb-bullet-2]@L]</div>
                 <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-choose-wsb-bullet-3]@L]</div>
@@ -2332,14 +2334,14 @@ h2.api-error-header {
                 <h4 class="headline-primary">[@L[cds.sales/offers/online-business:32573-choose-ols-all-this-for-just-text]@L]</h4>
                 <div data-tokenize="[@T[multipleproductprice:<current productidlist="464069|101|40972" period="monthly" promocode="75315678" />]@T]" class="plan-price-wrap">[@L[cds.sales/offers/online-business:32573-choose-ols-all-this-for-just-price]@L]</div>
                 <div data-tokenize="[@T[multipleproductprice:<list productidlist="464069|101|40972" period="monthly" promocode="0" />]@T]" class="plan-inline-disclaimer">[@L[cds.sales/offers/online-business:32573-choose-ols-text-price-disclaimer]@L] 
-                  <button class="btn-link see-ols-disclaimer-link">[@L[cds.sales/offers/online-business:32573-choose-ols-text-price-disclaimer-link]@L]</button> 
+                  <button data-ci="95735" class="btn-link see-ols-disclaimer-link">[@L[cds.sales/offers/online-business:32573-choose-ols-text-price-disclaimer-link]@L]</button> 
                   ##if(countrySiteAny(uk))
                    
                   <div>[@L[cds.sales/offers/online-business:32573-vat-excludes-price-percentage]@L]</div> 
                   ##endif
                    
                 </div>
-                <button class="btn btn-md btn-block btn-purchase product-ols">[@L[cds.sales/offers/online-business:32573-choose-select-button]@L]</button>
+                <button data-ci="95740" class="btn btn-md btn-block btn-purchase product-ols">[@L[cds.sales/offers/online-business:32573-choose-select-button]@L]</button>
                 <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-choose-ols-bullet-1]@L]</div>
                 <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-choose-ols-bullet-2]@L]</div>
                 <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-choose-ols-bullet-3]@L]</div>
@@ -2481,7 +2483,7 @@ h2.api-error-header {
           <div class="col-sm-6 col-sm-push-3 text-center disclaimer-mark"> 
             <div data-tokenize="[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T]" class="headline-primary">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price]@L] </div>
             <p data-tokenize="[@T[multipleproductprice:<list productidlist="464069|101|7524" period="monthly" promocode="0" />]@T]" class="disclaimer">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price-disclaimer]@L] 
-              <button class="btn-link see-wsb-disclaimer-link">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price-disclaimer-link]@L]</a></button> 
+              <button data-ci="95736" class="btn-link see-wsb-disclaimer-link">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price-disclaimer-link]@L]</a></button> 
               ##if(countrySiteAny(uk))
                
               <div class="vat-price-disclaimer">[@L[cds.sales/offers/online-business:32573-vat-excludes-price-percentage]@L]</div> 
@@ -2492,12 +2494,12 @@ h2.api-error-header {
         </div>
         <div class="row">
           <div class="col-sm-12 button-margin">
-            <button id="wsb-only-video-btn" class="btn btn-md btn-block btn-primary"><img class="video-play-icon" src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_play_icon_small.png" /> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]</button>
+            <button id="wsb-only-video-btn" data-ci="95266" class="btn btn-md btn-block btn-primary"><img class="video-play-icon" src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_play_icon_small.png" /> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]</button>
           </div>
         </div>
         <div class="row">
           <div class="col-sm-12 button-margin">
-            <button id="wsb-only-designs-btn" class="btn btn-md btn-block btn-primary">[@L[cds.sales/offers/online-business:32573-view-designs-button]@L]    </button>
+            <button id="wsb-only-designs-btn" data-ci="95266" class="btn btn-md btn-block btn-primary">[@L[cds.sales/offers/online-business:32573-view-designs-button]@L]    </button>
           </div>
         </div>
         <div class="row">
@@ -2845,7 +2847,7 @@ h2.api-error-header {
                       <div class="row text-center disclaimer-mark"> 
                         <div data-tokenize="[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T]" class="headline-primary">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price]@L] </div>
                         <p data-tokenize="[@T[multipleproductprice:<list productidlist="464069|101|7524" period="monthly" promocode="0" />]@T]" class="disclaimer">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price-disclaimer]@L] 
-                          <button class="btn-link see-wsb-disclaimer-link">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price-disclaimer-link]@L]</a></button> 
+                          <button data-ci="95736" class="btn-link see-wsb-disclaimer-link">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price-disclaimer-link]@L]</a></button> 
                           ##if(countrySiteAny(uk))
                            
                           <div class="vat-price-disclaimer">[@L[cds.sales/offers/online-business:32573-vat-excludes-price-percentage]@L]</div> 
@@ -2855,12 +2857,12 @@ h2.api-error-header {
                       </div>
                       <div class="row">
                         <div class="col-sm-12 button-margin">
-                          <button id="wsb-video-btn" data-ci="95270" class="btn btn-md btn-block btn-primary"><img class="video-play-icon" src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_play_icon_small.png" /> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]</button>
+                          <button id="wsb-video-btn" data-ci="95266" class="btn btn-md btn-block btn-primary"><img class="video-play-icon" src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_play_icon_small.png" /> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]</button>
                         </div>
                       </div>
                       <div class="row">
                         <div class="col-sm-12 button-margin">
-                          <button id="wsb-designs-btn" class="btn btn-md btn-block btn-primary">[@L[cds.sales/offers/online-business:32573-view-designs-button]@L]</button>
+                          <button id="wsb-designs-btn" data-ci="95266" class="btn btn-md btn-block btn-primary">[@L[cds.sales/offers/online-business:32573-view-designs-button]@L]</button>
                         </div>
                       </div>
                       <div class="row">
@@ -2904,7 +2906,7 @@ h2.api-error-header {
                       <div class="row text-center disclaimer-mark"> 
                         <div data-tokenize="[@T[multipleproductprice:<current productidlist="464069|101|40972" period="monthly" promocode="75315678" />]@T]" class="headline-primary">[@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price]@L] </div>
                         <p data-tokenize="[@T[multipleproductprice:<list productidlist="464069|101|40972" period="monthly" promocode="0" />]@T]" class="disclaimer">[@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price-disclaimer]@L] 
-                          <button class="btn-link see-ols-disclaimer-link">[@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price-disclaimer-link]@L]</button> 
+                          <button data-ci="95735" class="btn-link see-ols-disclaimer-link">[@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price-disclaimer-link]@L]</button> 
                           ##if(countrySiteAny(uk))
                            
                           <div class="vat-price-disclaimer">[@L[cds.sales/offers/online-business:32573-vat-excludes-price-percentage]@L]</div> 
@@ -2914,12 +2916,12 @@ h2.api-error-header {
                       </div>
                       <div class="row">
                         <div class="col-sm-12 button-margin">
-                          <button id="ols-video-btn" class="btn btn-md btn-block btn-primary"><img class="video-play-icon" src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_play_icon_small.png" /> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]</button>
+                          <button id="ols-video-btn" data-ci="95266" class="btn btn-md btn-block btn-primary"><img class="video-play-icon" src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_play_icon_small.png" /> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]</button>
                         </div>
                       </div>
                       <div class="row">
                         <div class="col-sm-12 button-margin">
-                          <button id="ols-stores-btn" class="btn btn-md btn-block btn-primary">[@L[cds.sales/offers/online-business:32573-see-real-stores-button]@L]</button>
+                          <button id="ols-stores-btn" data-ci="95266" class="btn btn-md btn-block btn-primary">[@L[cds.sales/offers/online-business:32573-see-real-stores-button]@L]</button>
                         </div>
                       </div>
                       <div class="row">
@@ -3042,6 +3044,12 @@ h2.api-error-header {
             min-height: 50px;
             margin-bottom: 0px;
           }
+          .carousel-wrap {
+            padding-bottom: 60px !important;
+          }
+          .carousel-container .carousel .carousel-indicators {
+            bottom: -50px !important;
+          }
           .main-heading {
             margin: 0px;
           }
@@ -3052,6 +3060,7 @@ h2.api-error-header {
           .customer-quote {
             margin-top: 0px;
             margin-bottom: 10px;
+            min-height: 70px;
           }
           .store-name {
             margin-top: 10px;
@@ -3421,15 +3430,15 @@ top: -6px;
               <div class="carousel-container container">
                 <div id="carousel-ols-stores" data-ride="carousel" data-interval="false" class="carousel slide">
                   <ol class="carousel-indicators">
-                    <li data-target="#carousel-ols-stores" data-slide-to="0"></li>
-                    <li data-target="#carousel-ols-stores" data-slide-to="1"></li>
-                    <li data-target="#carousel-ols-stores" data-slide-to="2"></li>
-                    <li data-target="#carousel-ols-stores" data-slide-to="3"></li>
+                    <li data-target="#carousel-ols-stores" data-slide-to="0" data-ci=""></li>
+                    <li data-target="#carousel-ols-stores" data-slide-to="1" data-ci=""></li>
+                    <li data-target="#carousel-ols-stores" data-slide-to="2" data-ci=""></li>
+                    <li data-target="#carousel-ols-stores" data-slide-to="3" data-ci=""></li>
                   </ol>
                   <div class="carousel-inner">
                           <div class="item">
                             <div class="item-wrapper">
-                              <div data-icode="" class="carousel-panel container">
+                              <div data-icode="" data-ci="95265" class="carousel-panel container">
                                 <div class="row">
                                   <div class="col-sm-12">
                                     <div class="customer-slide slide-2"></div>
@@ -3451,7 +3460,7 @@ top: -6px;
                           </div>
                           <div class="item">
                             <div class="item-wrapper">
-                              <div data-icode="" class="carousel-panel container">
+                              <div data-icode="" data-ci="95265" class="carousel-panel container">
                                 <div class="row">
                                   <div class="col-sm-12">
                                     <div class="customer-slide slide-3"></div>
@@ -3473,7 +3482,7 @@ top: -6px;
                           </div>
                           <div class="item">
                             <div class="item-wrapper">
-                              <div data-icode="" class="carousel-panel container">
+                              <div data-icode="" data-ci="95265" class="carousel-panel container">
                                 <div class="row">
                                   <div class="col-sm-12">
                                     <div class="customer-slide slide-4"></div>
@@ -3495,7 +3504,7 @@ top: -6px;
                           </div>
                           <div class="item">
                             <div class="item-wrapper">
-                              <div data-icode="" class="carousel-panel container">
+                              <div data-icode="" data-ci="95265" class="carousel-panel container">
                                 <div class="row">
                                   <div class="col-sm-12">
                                     <div class="customer-slide slide-1"></div>
@@ -3511,7 +3520,7 @@ top: -6px;
                               </div>
                             </div>
                           </div>
-                  </div><a href="#carousel-ols-stores" data-slide="prev" class="left carousel-control"><span class="carousel-icon arrow-left-icon"></span></a><a href="#carousel-ols-stores" data-slide="next" class="right carousel-control"><span class="carousel-icon arrow-right-icon"></span></a>
+                  </div><a href="#carousel-ols-stores" data-slide="prev" data-ci="" class="left carousel-control"><span class="carousel-icon arrow-left-icon"></span></a><a href="#carousel-ols-stores" data-slide="next" class="right carousel-control"><span data-ci="" class="carousel-icon arrow-right-icon"></span></a>
                 </div>
                 <script>
                   $('.carousel .carousel-indicators li:first-child').addClass("active");
