@@ -338,9 +338,11 @@
         </style>
       </atlantis:webstash> 
       ##if(activeLanguageAny([en-ca]))
-            <style>
+      <atlantis:webstash type="css">
+        <style>
 .plan-tile { 
   margin-top: -145px; 
+  margin-bottom: 20px;
 }
 .sf-droplist-msg {
   text-align: inherit;
@@ -717,7 +719,8 @@
     background-size: 205px auto;
     vertical-align: baseline;
 }
-            </style>
+        </style>
+      </atlantis:webstash>
             <div class="pro-plans-wrap bg-gray-light">
               <div id="plans" data-icode="" class="container pro-plans">
                       <div class="col-md-3 col-sm-6 plan-tile plan-pro">
@@ -787,9 +790,11 @@
               </div>
             </div> 
       ##else
-            <style>
+      <atlantis:webstash type="css">
+        <style>
 .plan-tile { 
   margin-top: -145px; 
+  margin-bottom: 20px;
 }
 .sf-droplist-msg {
   text-align: inherit;
@@ -1166,7 +1171,8 @@
     background-size: 205px auto;
     vertical-align: baseline;
 }
-            </style>
+        </style>
+      </atlantis:webstash>
             <div class="pro-plans-wrap bg-gray-light">
               <div id="plans" data-icode="" class="container pro-plans">
                       <div class="col-md-3 col-sm-6 plan-tile plan-pro">
@@ -1556,9 +1562,11 @@
         </style>
       </atlantis:webstash><span class="bottom-headline">HUNDREDS OF GREAT NEW DOMAINS JOIN .COM, .NET AND .ORG</span> 
       ##if(activeLanguageAny([en-ca]))
-            <style>
+      <atlantis:webstash type="css">
+        <style>
 .plan-tile { 
   margin-top: -145px; 
+  margin-bottom: 20px;
 }
 .sf-droplist-msg {
   text-align: inherit;
@@ -1935,7 +1943,8 @@
     background-size: 205px auto;
     vertical-align: baseline;
 }
-            </style>
+        </style>
+      </atlantis:webstash>
             <div class="pro-plans-wrap bg-green-official">
               <div id="plans" data-icode="" class="container pro-plans">
                       <div class="col-sm-4 plan-tile plan-pro">
@@ -1965,9 +1974,11 @@
               </div>
             </div> 
       ##else
-            <style>
+      <atlantis:webstash type="css">
+        <style>
 .plan-tile { 
   margin-top: -145px; 
+  margin-bottom: 20px;
 }
 .sf-droplist-msg {
   text-align: inherit;
@@ -2344,7 +2355,8 @@
     background-size: 205px auto;
     vertical-align: baseline;
 }
-            </style>
+        </style>
+      </atlantis:webstash>
             <div class="pro-plans-wrap bg-green-official">
               <div id="plans" data-icode="" class="container pro-plans">
                       <div class="col-sm-4 plan-tile plan-pro">
