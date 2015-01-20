@@ -419,12 +419,12 @@ function wireupModals() {
   $('#wsb-video-btn, #wsb-only-video-btn').on('click', function(){
     $("#site-choice-wsb-video-modal").sfDialog({titleHidden:true, dialogWidthIdeal:840, buttons: []});
   });
-  $('#wsb-designs-btn, #wsb-only-designs-btn').on('click', function(){
+/*  $('#wsb-designs-btn, #wsb-only-designs-btn').on('click', function(){
     $("#site-choice-wsb-designs-modal").sfDialog({titleHidden:true, dialogWidthIdeal:1, buttons: []});
     $("#site-choice-wsb-designs-modal").sfDialog('cancel');
     $('.view-all').click();
   });
-
+*/
   if(got1Page.canOfferOls) {
     $('#ols-video-btn').on('click', function(){      
       $("#site-choice-ols-video-modal").sfDialog({titleHidden:true, dialogWidthIdeal:840, buttons: []});
@@ -1689,8 +1689,18 @@ h2.api-error-header {
       <style>
         #products.tile-section{ padding-top: 0;padding-bottom: 0;}
         #products {padding-bottom:40px;}
-        #products.key-benefits-wrap h2.products-title-text {color:#333;}
+        #products.key-benefits-wrap h2.products-title-text {
+          color:#333;
+          font-family: "Walsheim-Bold";
+          font-size: 40px;
+        }
         #products.key-benefits-wrap div.features-text {color:#333;}
+        
+        #products.key-benefits-wrap h3.key-benefits-title {
+          color:#333;
+          font-family: "Walsheim-Regular";
+          font-size: 30px;
+        }
         
         /* KEY BENEFITS */
         .key-benefits-wrap[class*="bg-"]:not(.bg-gray-light) {
@@ -2390,7 +2400,7 @@ h2.api-error-header {
         </div>
         <div class="row">
           <div class="col-sm-12 button-margin">
-            <button id="wsb-only-designs-btn" data-ci="95266" data-toggle="bsModal" data-target="#g-modal" class="btn btn-md btn-block btn-primary">[@L[cds.sales/offers/online-business:32573-view-designs-button]@L]</button>
+            <button id="wsb-only-designs-btn" data-ci="95266" data-toggle="bsModal" data-target="#g-modal" class="btn btn-md btn-block view-all btn-primary">[@L[cds.sales/offers/online-business:32573-view-designs-button]@L]</button>
           </div>
         </div>
         <div class="row">
@@ -2753,7 +2763,7 @@ h2.api-error-header {
                       </div>
                       <div class="row">
                         <div class="col-sm-12 button-margin">
-                          <button id="wsb-designs-btn" data-ci="95266" data-toggle="bsModal" data-target="#g-modal" class="btn btn-md btn-block btn-primary">[@L[cds.sales/offers/online-business:32573-view-designs-button]@L]</button>
+                          <button id="wsb-designs-btn" data-ci="95266" data-toggle="bsModal" data-target="#g-modal" class="btn btn-md btn-block view-all btn-primary">[@L[cds.sales/offers/online-business:32573-view-designs-button]@L]</button>
                         </div>
                       </div>
                       <div class="row">
@@ -3430,7 +3440,7 @@ top: -6px;
         <iframe width="640" height="390" src="//www.youtube.com/embed/-HtVJyxSQmw?html5=1&amp;rel=0&amp;iv_load_policy=3&amp;modestbranding=1" autoplay scrolling="no" frameborder="0" allowfullscreen></iframe>
       </div>
     </div>
-    <div id="site-choice-wsb-designs-modal"><style>
+    <section><style>
   #faqSlider{margin:20px 0}#faqSlider .gd-swipe{box-sizing:border-box;border:1px solid #ededed;background-color:#ededed;color:#595959;margin:0 auto;position:relative;width:1000px}#faqSlider .gd-swipe-wrap .gd-swipe-item{box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;padding:40px 70px 50px;line-height:1.5;*width:860px!important}
   #faqSlider .gd-swipe-head,#faqSlider .gd-swipe-head h1,#faqSlider .gd-swipe-head h2{color:#222;font-size:20px}#faqSlider .gd-swipe-body p{margin-bottom:15px;font-size:14px;line-height:24px}#faqSlider .gd-swipe-body p span{font-weight:700}.arrow-left:hover,.arrow-right:hover{background-color:#ededed;-webkit-transition:all .3s ease-in-out;-moz-transition:all .3s ease-in-out;-ms-transition:all .3s ease-in-out;-o-transition:all .3s ease-in-out;transition:all .3s ease-in-out}
   #faqSlider a.arrow-left,#faqSlider a.arrow-right,#templates .arrow-left,#templates .arrow-right{top:42%}#templates{position:relative;padding-top:35px;margin:40px auto 0;width:1000px;clear:both}#templates>h2{display:block;text-align:center;font-size:36px;color:#333;margin:0 auto}
@@ -5080,6 +5090,7 @@ $(document).ready(function(){
 
 
 <!-- JavaScript Test -->
+<atlantis:webstash type="js">
 <script type="text/javascript">
  /* ========================================================================
  * Bootstrap: bsmodal.js v3.0.3
@@ -5596,7 +5607,9 @@ var PlanBox6UI = {
         });
 });
 </script>
-    </div>
+</atlantis:webstash>
+
+    </section>
     <section id="disclaimers"> 
       <div class="disclaimers-row">
         <div class="container">
