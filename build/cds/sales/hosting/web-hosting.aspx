@@ -125,8 +125,9 @@
           window._trfq.push(['cmdLogImpression', $(element).attr('data-icode'), null, element]);
         });
       }
-      
-    </script>
+    </script><!--[if lt IE 9]>
+    <script type="text/javascript">$("[data-svg-fallback]").each(function() {if($(this).attr('background-image')){$(this).attr("background-image",$(this).attr("data-svg-fallback"));}else if($(this).attr('src')){$(this).attr("src",$(this).attr("data-svg-fallback"));}});</script>
+    <![endif]-->
     <script type="text/javascript">
       delayLoader.addScript('[@T[link:<javascriptroot />]@T]/fos/liveperson/js/liveperson_20141013a.min.js')
       
