@@ -1,0 +1,88 @@
+
+<atlantis:webstash type="css">
+  <link href="[@T[link:&lt;css path='ux/test-brand/css/uxcontrols.min.css' namemode='explicit']@T]" rel="stylesheet" media="screen"/>
+</atlantis:webstash>
+<style>#p4p-list {
+  border-top-width: 3px;
+  border-bottom-width: 1px;
+  width: 80%;
+  text-align: left;
+  text-transform: none;
+  font-size: 18px;
+  padding-top: 0;
+  padding-bottom: 0;
+  color: #333;
+  background-color: #fdda54;
+  border-color: #fcc335;
+}
+#p4p-list .caret {
+  float: right;
+  margin-top: 4px;
+}
+.marquee-tile-p4p {
+  background-color: #77c043;
+  background-repeat: no-repeat;
+  background-position: 95% 100%;
+  background-size: 120px 110px;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDExMy4xIDExOCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTEzLjA1OCAxMTgiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwb2x5Z29uIGZpbGw9IiMzMzMzMzMiIHBvaW50cz0iMTUuNCA1OSA3LjcgNjMuNyAxNy40IDEwMi4xIDIyLjUgMTAyLjggNDQuOSA5MS44IDQyLjIgMTE4IDkwIDExOCA5Mi4zIDk0LjggOTkuNyAxMDYuNCA5NC43IDExOCAxMDUuNCAxMTggMTEzLjEgMTA0LjQgOTEuOSA2Ny43IDc1LjEgNjUuOCA3NC45IDY1LjkgNzQuNCA1NS45IDgyLjggNTAuOCA4NC42IDMzLjkgODQuNyAzMy45IDg5LjkgMTcuMSA4NS4yIDEwLjIgNzkuNiAwIDU3LjUgMy43IDQ5LjUgMTAgNDUuMyAyMS45IDUxIDM5LjQgNTIuNiA1MS45IDYxLjkgNTcuMiA2MS4zIDY1LjkgNjEuMiA2NS44IDQ1LjggNjkuOCA0My42IDcxLjcgNDIuOCA3MiA0MyA3Mi4zIDI0LjYgODguMSAiLz48cG9seWdvbiBmaWxsPSIjMzMzMzMzIiBwb2ludHM9IjE2LjcgNTEuOCAxNC40IDQ1IDEzLjQgNDUuOCAxMy4xIDQ5LjYgNyAzNi4xIDUuNyAzNi4zIDYuNSAzOS43IDMuOSAzNS4zIDIuNSAzNS41IDQuMiA0NC4xIDEuNyAzNy45IDAuOCAzOC43IDIuOCA0OC4xIDAuOCA0Mi40IDAgNDMuMSAyLjIgNTYuNSA2LjYgNjAuMyAxNC44IDU3ICIvPjwvc3ZnPg==);
+}
+.marquee-tile-p4p .tile-content-wrapper {
+  padding: 20px 10px;
+}
+.marquee-tile-p4p .header-text {
+  font-size: 18px;
+  color: #333;
+  text-transform: uppercase;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+.marquee-tile-p4p .dropdown-menu {
+  width: 80%;
+  border: none;
+  background-color: #fdda54;
+}
+.marquee-tile-p4p .dropdown-menu > li > a {
+  padding: 5px 10px;
+}
+.marquee-tile-p4p .dropdown-menu > li > a:hover,
+.marquee-tile-p4p .dropdown-menu > li > a:focus {
+  background-color: #fcc335;
+  color: #333;
+}
+.marquee-tile-p4p a.cta-link {
+  display: block;
+  font-size: 16px;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Walsheim-Black', 'Arial Black', sans-serif;
+  margin-top: 10px;
+}
+
+</style>
+<div data-url="[@T[link:<relative path='p4p/questions-config'><param name='ci' value='95742' /><param name='p4p' value='confusing' /></relative>]@T]" data-ci='95742' class="tile marquee-tile-p4p">
+  <div class="tile-content-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-9">
+          <div class="left-content-wrapper">
+            <div class="header-text walsheim-black">[@L[cds.sales/homepage/tile/marquee-tile-p4p:marquee-tile-p4p-header-text]@L]</div>
+            <div class="dropdown">
+              <button id="p4p-list" rule="button" data-toggle="dropdown" href="#" class="dropdown-toggle btn btn-xs walsheim-black">[@L[cds.sales/homepage/tile/marquee-tile-p4p:marquee-tile-p4p-confusing]@L]<b class="caret"></b></button>
+              <ul role="menu" aria-labelledby="p4p-list" class="dropdown-menu walsheim-black">
+                <li role="presentation"> <a data-ci="95743" role="menuitem" tabindex="-1" href="[@T[link:<relative path='p4p/questions-config'><param name='ci' value='95743' /><param name='p4p' value='intimidating' /></relative>]@T]">[@L[cds.sales/homepage/tile/marquee-tile-p4p:marquee-tile-p4p-intimidating]@L]</a></li>
+                <li role="presentation"> <a data-ci="95744" role="menuitem" tabindex="-1" href="[@T[link:<relative path='p4p/questions-config'><param name='ci' value='95744' /><param name='p4p' value='confusing' /></relative>]@T]">[@L[cds.sales/homepage/tile/marquee-tile-p4p:marquee-tile-p4p-confusing]@L]</a></li>
+                <li role="presentation"> <a data-ci="95745" role="menuitem" tabindex="-1" href="[@T[link:<relative path='p4p/questions-config'><param name='ci' value='95745' /><param name='p4p' value='annoying' /></relative>]@T]">[@L[cds.sales/homepage/tile/marquee-tile-p4p:marquee-tile-p4p-annoying]@L]</a></li>
+                <li role="presentation"> <a data-ci="95746" role="menuitem" tabindex="-1" href="[@T[link:<relative path='p4p/questions-config'><param name='ci' value='95746' /><param name='p4p' value='#&!$*%!' /></relative>]@T]">[@L[cds.sales/homepage/tile/marquee-tile-p4p:marquee-tile-p4p-frustration]@L]</a></li>
+              </ul>
+            </div><a href="[@T[link:&lt;relative path='p4p/questions-config'&gt;&lt;param name='ci' value='95742' /&gt;&lt;param name='p4p' value='confusing' /&gt;&lt;/relative&gt;]@T]" class="cta-link walsheim-black">[@L[cds.sales/homepage/tile/marquee-tile-p4p:marquee-tile-p4p-cta-text]@L]</a>
+          </div>
+        </div>
+        <div class="col-sm-3"></div>
+        <atlantis:webstash type="js">
+          <script src="[@T[link:&lt;js path='ux/test-brand/js/uxcontrols.min.js' namemode='explicit']@T]"></script>
+          <script>$(document).ready(function(){$('#p4p-list').dropdown();});</script>
+        </atlantis:webstash>
+      </div>
+    </div>
+  </div>
+</div>

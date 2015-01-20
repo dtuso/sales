@@ -182,8 +182,13 @@ $(document).ready(function() {
   $('#step2-choose-product').on('click','.btn-purchase', goToDppCheckoutPage);
 
   displayMoreResultsLinks();
+
   $('#show-more-section').on('click', '.clickable-show-more', displayMoreResultsArea);
   $('#domain-not-available-marquee-view').on('click', '.view-all-button', displayMoreResultsArea);
+
+
+  $('#default-marquee-view').find('.see-details-disclaimer-link').attr('data-ci', got1Page.canOfferOls ? "95734" : "95736");
+
 
 
 });
@@ -248,11 +253,11 @@ function tokenizeDisclaimerModals() {
 
 function wireupModals() {
 
-  // wire up see details links
-  var marqueeModalId = got1Page.canOfferOls ? "#default-marquee-details-modal" : "#default-marquee-details-modal-wsb-only";
+  // wire up see details links  
+
   $('#default-marquee-view').on('click', '.see-details-disclaimer-link', function(){
-    var $modal = $(marqueeModalId);
-    $modal.sfDialog({buttons: got1Page.sfDialogErrorButtons});
+    $(got1Page.canOfferOls ? "#default-marquee-details-modal" : "#default-marquee-details-modal-wsb-only")
+      .sfDialog({buttons: got1Page.sfDialogErrorButtons});
   });
 
   // product split modals
@@ -266,8 +271,6 @@ function wireupModals() {
     });
   }
 
-
-
   // choose product screen
   $('#step2-choose-product').on('click', '.see-wsb-disclaimer-link', function(){
     $("#step2-choose-product-wsb-modal").sfDialog({buttons: got1Page.sfDialogErrorButtons});
@@ -278,18 +281,17 @@ function wireupModals() {
     });
   }
 
-
   $('#wsb-video-btn, #wsb-only-video-btn').on('click', function(){
     $("#site-choice-wsb-video-modal").sfDialog({titleHidden:true, dialogWidthIdeal:840, buttons: []});
   });
-  $('#wsb-designs-btn, #wsb-only-designs-btn').on('click', function(){
+/*  $('#wsb-designs-btn, #wsb-only-designs-btn').on('click', function(){
     $("#site-choice-wsb-designs-modal").sfDialog({titleHidden:true, dialogWidthIdeal:1, buttons: []});
     $("#site-choice-wsb-designs-modal").sfDialog('cancel');
     $('.view-all').click();
   });
-
+*/
   if(got1Page.canOfferOls) {
-    $('#ols-video-btn').on('click', function(){
+    $('#ols-video-btn').on('click', function(){      
       $("#site-choice-ols-video-modal").sfDialog({titleHidden:true, dialogWidthIdeal:840, buttons: []});
     });
     $('#ols-stores-btn').on('click', function(){

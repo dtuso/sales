@@ -23,6 +23,7 @@ block append tileStyles
 block tileContent
   .clearfix
     .header-text.walsheim-black [@T[productprice:<current productid="#{tldSaleTileParam.pfid}" period="yearly" promocode="#{tldSaleTileParam.promo}" htmlsymbol="false" />]@T]
-    img(src!=tldSaleTileParam.logo class=tldSaleTileParam.logoClass)
+    if(tldSaleTileParam.logo)
+      img(src!=tldSaleTileParam.logo class=tldSaleTileParam.logoClass)
   .body.walsheim-medium #{tldSaleTileParam.bodyText}
   .restrictions-text.walsheim-regular #{tldSaleTileParam.restrictionsText}
