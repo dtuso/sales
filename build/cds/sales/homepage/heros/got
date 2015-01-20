@@ -8,9 +8,6 @@
   text-align: center;
   margin-top: 15%;
 }
-.hero.got .row {
-  padding-left: 20px;
-}
 .hero.got .product {
   font-size: 170%;
   max-width: 50%;
