@@ -1,11 +1,10 @@
 ---
 location: localization/sales/offers/online-business/en
-id:  54bac811f778fc23d00293a1
+id:  54bde011f778fc20785c544b
 name: GCE-32573
 comments: GOT rebrand 2015 SuperBowl
 ---
-{% include 'modules/doc-block.html' %}
-<phrase key="page-title" />
+{% include 'modules/doc-block.html' %}<phrase key="page-title" />
 Get Online | Business Email, Domain, and Web Builder Software
 <phrase key="meta-description" />
 Package Deal! Quickly setup your business online with a new domain, integrated email, and a powerful online web builder.
