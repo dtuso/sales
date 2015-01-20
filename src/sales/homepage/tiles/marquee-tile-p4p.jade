@@ -1,24 +1,23 @@
 extend ../_tile.jade
 
 block append vars
-  - ctaLink = "#";
-  - dataCi = "95729";
+  - ctaLink = "[@T[link:<relative path='p4p/questions-config'><param name='ci' value='11111' /><param name='p4p' value='confusing' /></relative>]@T]";
+  - dataCi = 95742;
   - containerClass = "marquee-tile-p4p";
 
 block append tileStyles
+  atlantis:webstash(type="css")
+    link(href="[@T[link:<css path='ux/test-brand/css/uxcontrols.min.css' namemode='explicit']@T]" rel="stylesheet" media="screen")
   style
     :less
+      #p4p-list{border-top-width:3px;border-bottom-width:1px;width:80%;text-align:left;text-transform:none;font-size:18px;padding-top:0;padding-bottom:0;color:#333;background-color:#fdda54;border-color:#fcc335}
+      #p4p-list .caret{float:right;margin-top:4px;}
       .marquee-tile-p4p{background-color:#77c043;background-repeat:no-repeat;background-position:95% 100%;background-size:120px 110px;background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDExMy4xIDExOCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTEzLjA1OCAxMTgiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwb2x5Z29uIGZpbGw9IiMzMzMzMzMiIHBvaW50cz0iMTUuNCA1OSA3LjcgNjMuNyAxNy40IDEwMi4xIDIyLjUgMTAyLjggNDQuOSA5MS44IDQyLjIgMTE4IDkwIDExOCA5Mi4zIDk0LjggOTkuNyAxMDYuNCA5NC43IDExOCAxMDUuNCAxMTggMTEzLjEgMTA0LjQgOTEuOSA2Ny43IDc1LjEgNjUuOCA3NC45IDY1LjkgNzQuNCA1NS45IDgyLjggNTAuOCA4NC42IDMzLjkgODQuNyAzMy45IDg5LjkgMTcuMSA4NS4yIDEwLjIgNzkuNiAwIDU3LjUgMy43IDQ5LjUgMTAgNDUuMyAyMS45IDUxIDM5LjQgNTIuNiA1MS45IDYxLjkgNTcuMiA2MS4zIDY1LjkgNjEuMiA2NS44IDQ1LjggNjkuOCA0My42IDcxLjcgNDIuOCA3MiA0MyA3Mi4zIDI0LjYgODguMSAiLz48cG9seWdvbiBmaWxsPSIjMzMzMzMzIiBwb2ludHM9IjE2LjcgNTEuOCAxNC40IDQ1IDEzLjQgNDUuOCAxMy4xIDQ5LjYgNyAzNi4xIDUuNyAzNi4zIDYuNSAzOS43IDMuOSAzNS4zIDIuNSAzNS41IDQuMiA0NC4xIDEuNyAzNy45IDAuOCAzOC43IDIuOCA0OC4xIDAuOCA0Mi40IDAgNDMuMSAyLjIgNTYuNSA2LjYgNjAuMyAxNC44IDU3ICIvPjwvc3ZnPg==)}
       .marquee-tile-p4p .tile-content-wrapper{padding:20px 10px;}
       .marquee-tile-p4p .header-text{font-size:18px;color:#333;text-transform:uppercase;line-height:20px;margin-bottom:10px;}
-      .marquee-tile-p4p .btn-group{width:100%;}
-      .marquee-tile-p4p button{font-family:'Walsheim-Black', 'Arial Black', sans-serif;width:80%;text-align:left;font-size:18px;text-transform:none;padding-top:0px;padding-bottom:0px;}
-      .marquee-tile-p4p .btn-warning{border-top-width:3px;border-bottom-width:1px;}
-      .marquee-tile-p4p .caret{float:right;margin-top:3px;}
-      .marquee-tile-p4p ul{width:80%;border:none;}
-      .marquee-tile-p4p ul li{font-family:'Walsheim-Black', 'Arial Black', sans-serif;}
-      .marquee-tile-p4p ul li a{font-family:'Walsheim-Black', 'Arial Black', sans-serif;font-size:18px;text-transform:none;padding:2px 10px;}
-      .marquee-tile-p4p ul li a:hover{background-color:#fcc335;color:#333;}
+      .marquee-tile-p4p .dropdown-menu{width:80%;border:none;background-color:#fdda54;}
+      .marquee-tile-p4p .dropdown-menu>li>a{padding:5px 10px;}
+      .marquee-tile-p4p .dropdown-menu>li>a:hover,.marquee-tile-p4p .dropdown-menu>li>a:focus{background-color:#fcc335;color:#333;}
       .marquee-tile-p4p a.cta-link{display:block;font-size:16px;color:#fff;text-transform:uppercase;font-family:'Walsheim-Black', 'Arial Black', sans-serif;margin-top:10px;}
 
 block tileContent
@@ -27,25 +26,21 @@ block tileContent
       .col-sm-9
         .left-content-wrapper
           .header-text.walsheim-black [@L[cds.sales/homepage/tile/marquee-tile-p4p:marquee-tile-p4p-header-text]@L]
-          //- .btn-group
-          //-   button.btn.btn-xs.dropdown-toggle.btn-warning(type="button" id=containerClass+"-dropdown" data-toggle="dropdown") [@L[cds.sales/homepage/tile/marquee-tile-p4p:marquee-tile-p4p-confusing]@L]
-          //-     span.caret
-          .sf-p4p-list
-            .sf-p4p-list-content [@L[cds.sales/homepage/tile/marquee-tile-p4p:marquee-tile-p4p-confusing]@L]
-              ul.p4p-list-content(style="display:none")
-                li.btn-warning(data-value="1")
-                  .p4p-li-content(data-main="true") [@L[cds.sales/homepage/tile/marquee-tile-p4p:marquee-tile-p4p-intimidating]@L]
-                li.btn-warning(data-value="2")
-                  .p4p-li-content(data-main="true") [@L[cds.sales/homepage/tile/marquee-tile-p4p:marquee-tile-p4p-confusing]@L]
-                li.btn-warning(data-value="3")
-                  .p4p-li-content(data-main="true") [@L[cds.sales/homepage/tile/marquee-tile-p4p:marquee-tile-p4p-annoying]@L]
-                li.btn-warning(data-value="4")
-                  .p4p-li-content(data-main="true") [@L[cds.sales/homepage/tile/marquee-tile-p4p:marquee-tile-p4p-frustration]@L]
+          .dropdown
+            button#p4p-list.dropdown-toggle.btn.btn-xs.walsheim-black(rule="button" data-toggle="dropdown" href="#") [@L[cds.sales/homepage/tile/marquee-tile-p4p:marquee-tile-p4p-confusing]@L]
+              b.caret
+            ul.dropdown-menu.walsheim-black(role="menu" aria-labelledby="p4p-list")
+              li(role="presentation") 
+                a(data-ci="95743" role="menuitem" tabindex="-1" href!="[@T[link:<relative path='p4p/questions-config'><param name='ci' value='95743' /><param name='p4p' value='intimidating' /></relative>]@T]") [@L[cds.sales/homepage/tile/marquee-tile-p4p:marquee-tile-p4p-intimidating]@L]
+              li(role="presentation") 
+                a(data-ci="95744" role="menuitem" tabindex="-1" href!="[@T[link:<relative path='p4p/questions-config'><param name='ci' value='95744' /><param name='p4p' value='confusing' /></relative>]@T]") [@L[cds.sales/homepage/tile/marquee-tile-p4p:marquee-tile-p4p-confusing]@L]
+              li(role="presentation") 
+                a(data-ci="95745" role="menuitem" tabindex="-1" href!="[@T[link:<relative path='p4p/questions-config'><param name='ci' value='95745' /><param name='p4p' value='annoying' /></relative>]@T]") [@L[cds.sales/homepage/tile/marquee-tile-p4p:marquee-tile-p4p-annoying]@L]
+              li(role="presentation") 
+                a(data-ci="95746" role="menuitem" tabindex="-1" href!="[@T[link:<relative path='p4p/questions-config'><param name='ci' value='95746' /><param name='p4p' value='#&!$*%!' /></relative>]@T]") [@L[cds.sales/homepage/tile/marquee-tile-p4p:marquee-tile-p4p-frustration]@L]
           a.cta-link.walsheim-black(href=ctaLink) [@L[cds.sales/homepage/tile/marquee-tile-p4p:marquee-tile-p4p-cta-text]@L]
       .col-sm-3
-        .right-content-wrapper
-  atlantis:webstash(type="js")
-    script(type="text/javascript").
-      $(document).ready(function(){
-        $(".sf-p4p-list").sfDropList({});
-      }
+      atlantis:webstash(type="js")
+        script(src="[@T[link:<js path='ux/test-brand/js/uxcontrols.min.js' namemode='explicit']@T]")
+        script.
+          $(document).ready(function(){$('#p4p-list').dropdown();});
