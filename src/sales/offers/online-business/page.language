@@ -4,7 +4,8 @@ id:  54bde011f778fc20785c544b
 name: GCE-32573
 comments: GOT rebrand 2015 SuperBowl
 ---
-{% include 'modules/doc-block.html' %}<phrase key="page-title" />
+{% include 'modules/doc-block.html' %}
+<phrase key="page-title" />
 Get Online | Business Email, Domain, and Web Builder Software
 <phrase key="meta-description" />
 Package Deal! Quickly setup your business online with a new domain, integrated email, and a powerful online web builder.
@@ -195,7 +196,7 @@ An address that makes you look like the pro you are.
 <phrase key="32573-pro-email-bullet-1" />
 <strong>Powered by</strong> the reliability of Microsoft Office 365
 <phrase key="32573-pro-email-bullet-2" />
-<strong>Backed by</strong> our free, [@T[support:<technicalSupportHours />]@T]
+<strong>Backed by</strong> our free, award-winning support
 <phrase key="32573-whats-a-domain-heading" />
 What's a domain?
 <phrase key="32573-whats-a-domain-text" />
