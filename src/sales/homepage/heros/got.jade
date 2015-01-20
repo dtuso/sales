@@ -1,16 +1,10 @@
-extends ../_hero.jade
-
-block append vars
-  - heroParams.ci = "95658";
-  - heroParams.ctaLink = "[@T[link:<relative path='/offers/online-business.aspx'><param name='ci' value='95658' /></relative>]@T]";
-  - heroParams.ctaText = "[@L[cds.sales/homepage/heros/got:cta]@L]";
-  - heroParams.price = "[@L[cds.sales/homepage/heros/got:price]@L]";
-  - heroParams.classes += " got"
-block append heroStyles
+- heroParams = heroParams || {};
+- heroParams.ci = "95658";
+//start got hero
+atlantis:webstash(type="css")
   style
     :less
-      #marquee,.hero{background-color:#ecedee}
-      .hero-wrapper{min-height:none}
+      #marquee{background-color: #ecedee;}
       .hero.got{
         .products{text-align:center;margin-top:15%}
         .row{padding-left:20px}
@@ -39,8 +33,7 @@ block append heroStyles
          .addition{font-size:550%;}
         }
       }
-
-block heroContent
+div(class="hero got", data-url!="[@T[link:<relative path='/offers/online-business.aspx'><param name='ci' value="+heroParams.ci+"/></relative>]@T]", data-ci=heroParams.ci)
   .products.walsheim-black
     .product.col-xs-2
       img(src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzOCIgaGVpZ2h0PSI0MyIgdmlld0JveD0iMCAwIDM4IDQzIj48ZyBmaWxsPSIjNzliZjRhIj48cGF0aCBkPSJNMjMgMkwyMiAwIDE5IDEgMTkgMTMgMjQgMTMgMjMgMk0yOSA3TDI3IDQgMjUgNSAyNSAxMyAyOSAxMyAyOSA3TTExIDdMOSA4IDggMTAgNyAxMyAxMiAxMyAxMSA3TTE3IDNMMTYgMyAxNCA0IDEzIDEzIDE4IDEzIDE3IDNNMTMgMTVMMTQgMjUgMTggMjUgMTkgMjAgMjAgMjUgMjQgMjUgMjUgMTUgMjYgMjAgMjcgMTYgMjkgMTcgMjkgMTQgMjIgMTQgMjIgMjAgMjEgMTQgMTcgMTQgMTcgMjEgMTYgMTQgOSAxNCA5IDIwIDggMTQgNSAxNCA0IDIxIDMgMTQgMCAxNCAyIDI1IDYgMjUgNiAyMCA3IDI1IDExIDI1IDEzIDE1TTM1IDE0TDM0IDIwIDMzIDE0IDMwIDE0IDMwIDE3IDMyIDE4IDMyIDI1IDMyIDI1IDM2IDI1IDM4IDE0IDM1IDE0TTI4IDE4TDI1IDI1IDIwIDI3IDE4IDMyIDE3IDI2IDcgMjYgNyAzMiAxMCAzOSAxOSA0MiAyNyA0MSAzMiAzMSAzMSAxOSAyOCAxOCIvPjwvZz48L3N2Zz4=").www
@@ -60,3 +53,4 @@ block heroContent
       .col-xs-11
         a.btn.btn-md.btn-purchase [@L[cds.sales/homepage/heros/got:cta]@L]
         .disclaimer [@L[cds.sales/homepage/heros/got:disclaimer]@L]
+//end got hero

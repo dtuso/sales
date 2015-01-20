@@ -1,18 +1,8 @@
 
-<!-- start hero section-->
+<!--start got hero-->
 <atlantis:webstash type="css">
-  <style>
-    .hero-wrapper{cursor:pointer;}
-    .hero{background: #fff; min-height:inherit}
-    .hero:hover{cursor:pointer}
-    .dash{letter-spacing:-.1rem}
-  </style>
-  <style>#marquee,
-.hero {
+  <style>#marquee {
   background-color: #ecedee;
-}
-.hero-wrapper {
-  min-height: none;
 }
 .hero.got .products {
   text-align: center;
@@ -87,7 +77,7 @@
 
   </style>
 </atlantis:webstash>
-<div data-url="[@T[link:<relative path='/offers/online-business.aspx'><param name='ci' value='95658' /></relative>]@T]" class="hero row got">
+<div data-url="[@T[link:<relative path='/offers/online-business.aspx'><param name='ci' value=95658/></relative>]@T]" data-ci="95658" class="hero got">
   <div class="products walsheim-black">
     <div class="product col-xs-2"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzOCIgaGVpZ2h0PSI0MyIgdmlld0JveD0iMCAwIDM4IDQzIj48ZyBmaWxsPSIjNzliZjRhIj48cGF0aCBkPSJNMjMgMkwyMiAwIDE5IDEgMTkgMTMgMjQgMTMgMjMgMk0yOSA3TDI3IDQgMjUgNSAyNSAxMyAyOSAxMyAyOSA3TTExIDdMOSA4IDggMTAgNyAxMyAxMiAxMyAxMSA3TTE3IDNMMTYgMyAxNCA0IDEzIDEzIDE4IDEzIDE3IDNNMTMgMTVMMTQgMjUgMTggMjUgMTkgMjAgMjAgMjUgMjQgMjUgMjUgMTUgMjYgMjAgMjcgMTYgMjkgMTcgMjkgMTQgMjIgMTQgMjIgMjAgMjEgMTQgMTcgMTQgMTcgMjEgMTYgMTQgOSAxNCA5IDIwIDggMTQgNSAxNCA0IDIxIDMgMTQgMCAxNCAyIDI1IDYgMjUgNiAyMCA3IDI1IDExIDI1IDEzIDE1TTM1IDE0TDM0IDIwIDMzIDE0IDMwIDE0IDMwIDE3IDMyIDE4IDMyIDI1IDMyIDI1IDM2IDI1IDM4IDE0IDM1IDE0TTI4IDE4TDI1IDI1IDIwIDI3IDE4IDMyIDE3IDI2IDcgMjYgNyAzMiAxMCAzOSAxOSA0MiAyNyA0MSAzMiAzMSAzMSAxOSAyOCAxOCIvPjwvZz48L3N2Zz4=" class="www"/>
       <div class="domain">[@L[cds.sales/homepage/heros/got:domain]@L]</div>
@@ -112,5 +102,4 @@
     </div>
   </div>
 </div>
-<atlantis:webstash type="js"></atlantis:webstash>
-<!--end hero section-->
+<!--end got hero-->
