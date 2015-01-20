@@ -245,7 +245,7 @@
   }
 }
 .domain-promo-text {
-  padding: 7% 2%;
+  padding: 7% 2% 1%;
 }
 #domain-promo .text-center {
   color: #333;
@@ -262,9 +262,17 @@
 }
 #domain-promo h3 {
   font-size: 3.4rem;
+  text-transform: uppercase;
 }
 #domain-promo .btn {
   margin-top: 20px;
+}
+#domain-promo .domain-promo-text div {
+  max-width: 360px;
+}
+#domain-promo .domain-promo-text .customer-website {
+  font-size: 12px;
+  margin-top: 40px;
 }
 #danica-puppy-play-button {
   cursor: pointer;
@@ -573,7 +581,7 @@ div.video-marquee {
                     </div>
                   </div>
                   <div class="price-wrapper">
-                    <div style="width:55%; display: inline-block;" class="bigtext"><span class="price walsheim-black">$1.00/MO</span></div><a class="btn btn-purchase">Get Started</a>
+                    <div style="width:55%; display: inline-block;" class="bigtext"><span class="price walsheim-black">$1.00/MO</span></div><a data-url="[@T[link:<relative path='/offers/online-business.aspx'><param name='ci' value='11111' /></relative>]@T]" class="btn btn-purchase">Get Started</a>
                   </div>
                   <div class="disclaimer">First year only. Other restrictions apply.</div>
                 </div>
@@ -904,6 +912,7 @@ text-transform: uppercase;
             <div class="col-sm-6 col-xs-8 domain-promo-text text-white">
               <h3>Find Your<br />Perfect Name</h3>
               <div>From classic <h1>domain names</h1> like <strong>.com</strong> and <strong>.org</strong> to new domain names like <strong>.menu</strong>, <strong>.repair</strong>, even <strong>.ninja</strong> (seriously), we can help you find the right name for your business.</div><a data-url="[@T[link:<relative path='/domains/domain-name-search.aspx'><param name='ci' value='11111' /></relative>]@T]" class="btn btn-default-light">Get Started</a>
+              <p class="customer-website"><b>Candis Jones</b>, Business Owner & GoDaddy Customer <span>TheJonesMarket.com</span></p>
             </div>
           </div>
         </div>
@@ -1374,7 +1383,7 @@ text-transform: uppercase;
           setTimeout( "$('.bigtext').bigtext().css('visibility', 'visible');",500 );
       });
       $('#danica-puppy-play-button').on('click', function(){
-         $("#danica-puppy-promo-video").sfDialog({titleHidden:true, dialogWidthIdeal:840, buttons: []});
+         $("#danica-puppy-promo-video").sfDialog({titleHidden:true, dialogWidthIdeal:840,destroyOnClose:true, buttons: []});
       });
     </script>
     <script src="[@T[link:<javascriptroot />]@T]fos/hp/rebrand/js/bigtext.min.js"></script>
