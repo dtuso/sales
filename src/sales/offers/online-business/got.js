@@ -283,7 +283,9 @@ function wireupModals() {
     $("#site-choice-wsb-video-modal").sfDialog({titleHidden:true, dialogWidthIdeal:840, buttons: []});
   });
   $('#wsb-designs-btn, #wsb-only-designs-btn').on('click', function(){
-    $("#site-choice-wsb-designs-modal").sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
+    $("#site-choice-wsb-designs-modal").sfDialog({titleHidden:true, dialogWidthIdeal:1, buttons: []});
+    $("#site-choice-wsb-designs-modal").sfDialog('cancel');
+    $('.view-all').click();
   });
 
   if(got1Page.canOfferOls) {
@@ -291,7 +293,7 @@ function wireupModals() {
       $("#site-choice-ols-video-modal").sfDialog({titleHidden:true, dialogWidthIdeal:840, buttons: []});
     });
     $('#ols-stores-btn').on('click', function(){
-      $("#site-choice-ols-stores-modal").sfDialog({titleHidden:true, buttons: [], dialogWidthIdeal:1230 });
+      $("#site-choice-ols-stores-modal").sfDialog({titleHidden:true, dialogWidthIdeal:1230, buttons: []});
     });
   }
 
