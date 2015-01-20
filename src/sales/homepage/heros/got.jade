@@ -1,11 +1,11 @@
-extends ../../_hero_base.jade
+extends ../_hero.jade
 
-block append heroVars
-  - ci = "95658";
-  - ctaLink = "[@T[link:<relative path='/offers/online-business.aspx'><param name='ci' value='95658' /></relative>]@T]";
-  - ctaText = "[@L[cds.sales/homepage/heros/got:cta]@L]";
-  - price = "[@L[cds.sales/homepage/heros/got:price]@L]";
-
+block append vars
+  - heroParams.ci = "95658";
+  - heroParams.ctaLink = "[@T[link:<relative path='/offers/online-business.aspx'><param name='ci' value='95658' /></relative>]@T]";
+  - heroParams.ctaText = "[@L[cds.sales/homepage/heros/got:cta]@L]";
+  - heroParams.price = "[@L[cds.sales/homepage/heros/got:price]@L]";
+  - heroParams.classes += " got"
 block append heroStyles
   style
     :less
@@ -39,7 +39,6 @@ block append heroStyles
          .addition{font-size:550%;}
         }
       }
-  +addHeroClasses("got")
 
 block heroContent
   .products.walsheim-black

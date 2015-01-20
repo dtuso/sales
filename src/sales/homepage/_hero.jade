@@ -1,0 +1,24 @@
+block vars
+  - heroParams = heroParams || {};
+  - heroParams.classes = heroParams.classes || "hero row";
+  - heroParams.ci = heroParams.ci || "";
+  - heroParams.headline = heroParams.bodyText || "";
+  - heroParams.image = heroParams.image || "";
+  - heroParams.price = heroParams.price || "";
+  - heroParams.ctaText = heroParams.ctaText || "";
+  - heroParams.ctaLink = heroParams.ctaLink || "";
+  - heroParams.disclaimer = heroParams.disclaimer || "";
+
+// start hero section
+atlantis:webstash(type="css")
+  block heroStyles
+    style.
+      .hero-wrapper{cursor:pointer;}
+      .hero{background: #fff; min-height:inherit}
+      .hero:hover{cursor:pointer}
+      .dash{letter-spacing:-.1rem}
+div(class=heroParams.classes, data-url!=heroParams.ctaLink)
+  block heroContent
+block heroScripts
+  atlantis:webstash(type="js")
+//end hero section
