@@ -390,8 +390,7 @@ function wireupModals() {
 
   // wire up see details links  
 
-  $('#default-marquee-view').on('click', '.see-details-disclaimer-link', function(e){
-    alert(e.which);
+  $('#default-marquee-view').on('click', '.see-details-disclaimer-link', function(){
     $(got1Page.canOfferOls ? "#default-marquee-details-modal" : "#default-marquee-details-modal-wsb-only")
       .sfDialog({buttons: got1Page.sfDialogErrorButtons});
   });
@@ -1329,6 +1328,7 @@ h2.api-error-header {
       @media (min-width: 1200px) { 
         .main-marquee .logo-wrapper .icon { min-height: 160px; }
       }
+      .bigtext {visibility: hidden;}
       
     </style><!--[if lt IE 9]>
     <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
@@ -1456,7 +1456,7 @@ h2.api-error-header {
               </div>
               <div data-tokenize="[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T]" class="header-text as-low-as-price">[@L[cds.sales/offers/online-business:32573-as-low-as]@L]</div>
               <div class="header-text disclaimers"><span class="text-disclaimers">[@L[cds.sales/offers/online-business:32573-top-small-disclaimer-text]@L] </span>
-                <button class="btn-link see-details-disclaimer-link">[@L[cds.sales/offers/online-business:32573-top-small-disclaimer-details-link]@L]</button> 
+                <button data-ci="dynamicJs" class="btn-link see-details-disclaimer-link">[@L[cds.sales/offers/online-business:32573-top-small-disclaimer-details-link]@L]</button> 
                 ##if(countrySiteAny(uk)) 
                 <div class="text-vat-disclaimer">[@L[cds.sales/offers/online-business:32573-price-does-not-include-taxes-vat]@L]</div> 
                 ##endif 
@@ -1465,15 +1465,15 @@ h2.api-error-header {
             <div class="col-md-6 col-xs-12">
               <div class="logo-wrapper">
                 <div class="column domain">
-                  <div class="icon"></div><span>DOMAIN</span>
+                  <div class="icon"></div><span>[@L[cds.sales/offers/online-business:32573-top-banner-image-domain]@L]</span>
                 </div>
                 <div class="plus">+</div>
                 <div class="column website">
-                  <div class="icon"></div><span>WEBSITE</span>
+                  <div class="icon"></div><span>[@L[cds.sales/offers/online-business:32573-top-banner-image-website]@L]</span>
                 </div>
                 <div class="plus">+</div>
                 <div class="column email">
-                  <div class="icon"></div><span>EMAIL</span><span class="office-365">Powered by Microsoft Office 365</span>
+                  <div class="icon"></div><span>[@L[cds.sales/offers/online-business:32573-top-banner-image-email]@L]</span><span class="office-365">[@L[cds.sales/offers/online-business:32573-powered-by-mso365]@L]</span>
                 </div>
               </div>
             </div>
@@ -1494,7 +1494,7 @@ h2.api-error-header {
             <div class="col-md-12 offer-search-box">
               <div class="input-group">
                 <input type="text" placeholder="[@L[cds.sales/offers/online-business:32573-domain-search-placeholder]@L]" name="domainToCheck" autocomplete="off" maxlength="63" class="form-control input-lg search-form-input searchInput helveticafont"/><span class="input-group-btn">
-                  <button type="button" name="searchButton" data-ci="12345" class="btn btn-primary btn-lg offer-search-btn">[@L[cds.sales/offers/online-business:32573-search]@L]</button></span>
+                  <button type="button" name="searchButton" data-ci="95738" class="btn btn-primary btn-lg offer-search-btn">[@L[cds.sales/offers/online-business:32573-search]@L]</button></span>
               </div>
             </div>
           </div>
@@ -1678,28 +1678,6 @@ h2.api-error-header {
     </section>
     <atlantis:webstash type="js">
       <script type="text/javascript" src="https://img1.wsimg.com/fos/hp/rebrand/js/bigtext.min.js"></script>
-      <script type="text/javascript">
-        <!-- $(window).load(function () {-->
-        <!--    $('.bigtext').bigtext().css('visibility', 'visible');-->
-        <!--      setTimeout( "$('.bigtext').bigtext().css('visibility', 'visible');",500 );-->
-        <!--  });
-        $(document).ready(function() {
-        
-          //- $('#default-marquee-view .offer-search-btn').on('click', function(){
-          //-   animateToAvailable();
-          //- });
-          //- $('#domain-available-marquee-view .offer-search-btn').on('click', function(){
-          //-   animateToNotAvailable();
-          //- });
-          //- $('#domain-not-available-marquee-view .offer-search-btn').on('click', function(){
-          //-   animateToDefault();
-          //- });
-        
-        
-        });
-        
-        -->
-      </script>
     </atlantis:webstash>
     <div id="api-failure" class="sf-dialog api-B-failure">
       <h2 class="api-error-header"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/WarningSign.png">
@@ -1711,8 +1689,18 @@ h2.api-error-header {
       <style>
         #products.tile-section{ padding-top: 0;padding-bottom: 0;}
         #products {padding-bottom:40px;}
-        #products.key-benefits-wrap h2.products-title-text {color:#333;}
+        #products.key-benefits-wrap h2.products-title-text {
+          color:#333;
+          font-family: "Walsheim-Bold";
+          font-size: 40px;
+        }
         #products.key-benefits-wrap div.features-text {color:#333;}
+        
+        #products.key-benefits-wrap h3.key-benefits-title {
+          color:#333;
+          font-family: "Walsheim-Regular";
+          font-size: 30px;
+        }
         
         /* KEY BENEFITS */
         .key-benefits-wrap[class*="bg-"]:not(.bg-gray-light) {
