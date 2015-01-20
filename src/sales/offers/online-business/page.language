@@ -1,6 +1,6 @@
 ---
 location: localization/sales/offers/online-business/en
-id:  54bac811f778fc23d00293a1
+id:  54bde011f778fc20785c544b
 name: GCE-32573
 comments: GOT rebrand 2015 SuperBowl
 ---
@@ -196,7 +196,7 @@ An address that makes you look like the pro you are.
 <phrase key="32573-pro-email-bullet-1" />
 <strong>Powered by</strong> the reliability of Microsoft Office 365
 <phrase key="32573-pro-email-bullet-2" />
-<strong>Backed by</strong> our free, [@T[support:<technicalSupportHours />]@T]
+<strong>Backed by</strong> our free, award-winning support
 <phrase key="32573-whats-a-domain-heading" />
 What's a domain?
 <phrase key="32573-whats-a-domain-text" />
