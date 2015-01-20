@@ -1,0 +1,63 @@
+extends ../../_hero_base.jade
+
+block append heroVars
+  - ci = "95658";
+  - ctaLink = "[@T[link:<relative path='/offers/online-business.aspx'><param name='ci' value='95658' /></relative>]@T]";
+  - ctaText = "[@L[cds.sales/homepage/heros/got:cta]@L]";
+  - price = "[@L[cds.sales/homepage/heros/got:price]@L]";
+
+block append heroStyles
+  style
+    :less
+      #marquee,.hero{background-color:#ecedee}
+      .hero-wrapper{min-height:none}
+      .hero.got{
+        .products{text-align:center;margin-top:15%}
+        .row{padding-left:20px}
+        .product{font-size:170%;max-width:50%;margin:auto}
+        .product div{font-size:50%}
+        img.www{width:100%}
+        img.pencil{padding: 4%;width:107%}
+        img.envelope{padding: 8% 0;width:115%}
+        .addition{text-align:center;font-size:200%;}
+        .cta{width:100%}
+        .pricing {font-size:150%}
+        .price-wrapper{width:30%;display:inline-block}
+        .disclaimer{font-size:55%;padding: 1% 0}
+        @media only screen and (min-width : 480px){
+         .addition{font-size:350%;}
+         .product div{font-size:70%;}
+        }
+        @media only screen and (min-width : 650px){
+         .products {margin-top:2%}
+        }
+        @media only screen and (min-width : 768px){
+         .addition{font-size:450%;}
+         .product div{font-size:100%;}
+        }
+        @media only screen and (min-width : 992px){
+         .addition{font-size:550%;}
+        }
+      }
+  +addHeroClasses("got")
+
+block heroContent
+  .products.walsheim-black
+    .product.col-xs-2
+      img(src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzOCIgaGVpZ2h0PSI0MyIgdmlld0JveD0iMCAwIDM4IDQzIj48ZyBmaWxsPSIjNzliZjRhIj48cGF0aCBkPSJNMjMgMkwyMiAwIDE5IDEgMTkgMTMgMjQgMTMgMjMgMk0yOSA3TDI3IDQgMjUgNSAyNSAxMyAyOSAxMyAyOSA3TTExIDdMOSA4IDggMTAgNyAxMyAxMiAxMyAxMSA3TTE3IDNMMTYgMyAxNCA0IDEzIDEzIDE4IDEzIDE3IDNNMTMgMTVMMTQgMjUgMTggMjUgMTkgMjAgMjAgMjUgMjQgMjUgMjUgMTUgMjYgMjAgMjcgMTYgMjkgMTcgMjkgMTQgMjIgMTQgMjIgMjAgMjEgMTQgMTcgMTQgMTcgMjEgMTYgMTQgOSAxNCA5IDIwIDggMTQgNSAxNCA0IDIxIDMgMTQgMCAxNCAyIDI1IDYgMjUgNiAyMCA3IDI1IDExIDI1IDEzIDE1TTM1IDE0TDM0IDIwIDMzIDE0IDMwIDE0IDMwIDE3IDMyIDE4IDMyIDI1IDMyIDI1IDM2IDI1IDM4IDE0IDM1IDE0TTI4IDE4TDI1IDI1IDIwIDI3IDE4IDMyIDE3IDI2IDcgMjYgNyAzMiAxMCAzOSAxOSA0MiAyNyA0MSAzMiAzMSAzMSAxOSAyOCAxOCIvPjwvZz48L3N2Zz4=").www
+      .domain [@L[cds.sales/homepage/heros/got:domain]@L]
+    .addition.col-xs-2.col-sm-2 [@L[cds.sales/homepage/heros/got:additionSign]@L]
+    .product.col-xs-2
+      img(src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNSIgaGVpZ2h0PSIzNyIgdmlld0JveD0iMCAwIDM1IDM3Ij48ZyBmaWxsPSIjNzliZjRhIj48cGF0aCBkPSJNMjMgMTZMMzIgMTcgMTQgMCA4IDAgMjMgMTZNMTYgMjJMMjMgMjIgMjMgMTcgNyAwIDEgNSAxNiAyMk0xNSAyOUwxNSAyMyAwIDYgMSAxNSAxNSAyOU0zMCAyOUwzMyAyOCAzMyAxOCAyNSAxNyAyNCAyNCAxNiAyNCAxNiAzMCAyNyAzMyAzMCAyOU0zMSAzMUwyOSAzNCAzNCAzNSAzMyAzMCAzMSAzMSIvPjwvZz48L3N2Zz4=").pencil
+      .website [@L[cds.sales/homepage/heros/got:website]@L]
+    .addition.col-xs-2.col-sm-2 [@L[cds.sales/homepage/heros/got:additionSign]@L]
+    .product.col-xs-2
+      img(src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MiIgaGVpZ2h0PSIzNSIgdmlld0JveD0iMCAwIDQyIDM1IiB2ZXJzaW9uPSIxIj48dGl0bGU+aWNuX2VtYWlsPC90aXRsZT48ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz48ZyBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48ZyBmaWxsPSIjNzliZjRhIj48cGF0aCBkPSJNMjQgMjZMMCA0IDEgMzUgNDAgMzIgNDIgMTEgMjQgMjZNNDEgOEwxIDAgMjQgMjQgNDEgOCIvPjwvZz48L2c+PC9zdmc+").envelope
+      .email [@L[cds.sales/homepage/heros/got:email]@L]
+  .pricing.walsheim-black
+    .col-xs-11
+      .priceText.bigtext [@L[cds.sales/homepage/heros/got:priceText]@L]
+  .cta
+      .col-xs-11
+        a.btn.btn-md.btn-purchase [@L[cds.sales/homepage/heros/got:cta]@L]
+        .disclaimer [@L[cds.sales/homepage/heros/got:disclaimer]@L]
