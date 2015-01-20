@@ -30,6 +30,9 @@
 .compare-table tr td:nth-child(3n+3) {
   background-color: #f3f3f3;
 }
+.compare-table tr td:nth-child(5n+5) {
+  background-color: #f3f3f3;
+}
 .compare-table thead tr:first-child td {
   border-style: none;
 }

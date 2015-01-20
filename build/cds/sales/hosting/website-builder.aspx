@@ -204,6 +204,39 @@
   white-space: nowrap !important;
   background-image: none !important;
 }
+.templates-chart {
+padding-top: 70px;
+padding-bottom: 70px;
+}
+.templates-container{
+background-color: #fff;
+-webkit-box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
+-moz-box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
+box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
+padding-top: 40px;
+padding-bottom: 50px;
+}
+.templates-image{
+  margin: 25px auto;
+  height: 200px;
+  width: 265px;
+}
+.templates-image-container{
+  margin: 30px 110px 40px 110px;
+}
+.templates-container .header-section{
+  margin: 30px 110px 0px 110px;
+
+}
+.view-all{
+  margin-top: 31px;
+}
+.condensed{
+  font-weight: bold;
+}
+.tlds-*{
+  display: none;
+}
     </style><!--[if lt IE 9]>
     <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
     <link href="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy.min.html" id="respond-proxy" rel="respond-proxy">
@@ -1529,8 +1562,29 @@ h2.marquee-product-name,
               <p class="plan-text">[@L[cds.sales/gd/hosting/website-builder:economy-description]@L]</p>
               <div class="plan-price-wrap"><span class="plan-price text-warning">[@T[productprice:<current productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
                 ##if(productHasSavingsMoreThan(7524, 7524, 0))
-                 <br><strong>[@L[cds.sales/_common:was]@L] 
-                  <strike>[@T[productprice:<list productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary">[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7524" secondaryproductid="7524" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span></strong> 
+                 <br><strong>
+                   
+                  ##if(splitTestingSideIsActive(1349, A))
+                   
+                  [@L[cds.sales/_common:was]@L] 
+                  <strike>[@T[productprice:<list productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7524" secondaryproductid="7524" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span> 
+                  ##else
+                   
+                  [@L[cds.sales/_common:onsale-all-cap]@L] -<span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7524" secondaryproductid="7524" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span> 
+                  ##endif
+                   </strong> 
+                ##endif
+                 
+                 
+                ##if(splitTestingSideIsActive(1349, B))
+                 
+                <p class="h6">[@T[productprice:<list productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:month]@L] [@L[cds.sales/gd/hosting/website-builder:renewal-text]@L]</p> 
+                ##endif
+                 
+                 
+                ##if(countrySiteAny(uk))
+                 
+                <p class="h6">[@L[cds.sales/_common:vat-price-uk]@L] </p> 
                 ##endif
                  
               </div>
@@ -1550,8 +1604,29 @@ h2.marquee-product-name,
               <p class="plan-text">[@L[cds.sales/gd/hosting/website-builder:personal-description]@L]</p>
               <div class="plan-price-wrap"><span class="plan-price text-warning">[@T[productprice:<current productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
                 ##if(productHasSavingsMoreThan(7524, 7524, 0))
-                 <br><strong>[@L[cds.sales/_common:was]@L] 
-                  <strike>[@T[productprice:<list productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary">[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7524" secondaryproductid="7524" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span></strong> 
+                 <br><strong>
+                   
+                  ##if(splitTestingSideIsActive(1349, A))
+                   
+                  [@L[cds.sales/_common:was]@L] 
+                  <strike>[@T[productprice:<list productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7524" secondaryproductid="7524" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span> 
+                  ##else
+                   
+                  [@L[cds.sales/_common:onsale-all-cap]@L] -<span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7524" secondaryproductid="7524" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span> 
+                  ##endif
+                   </strong> 
+                ##endif
+                 
+                 
+                ##if(splitTestingSideIsActive(1349, B))
+                 
+                <p class="h6">[@T[productprice:<list productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:month]@L] [@L[cds.sales/gd/hosting/website-builder:renewal-text]@L]</p> 
+                ##endif
+                 
+                 
+                ##if(countrySiteAny(uk))
+                 
+                <p class="h6">[@L[cds.sales/_common:vat-price-uk]@L] </p> 
                 ##endif
                  
               </div>
@@ -1572,8 +1647,29 @@ h2.marquee-product-name,
               <p class="plan-text">[@L[cds.sales/gd/hosting/website-builder:business-description]@L]</p>
               <div class="plan-price-wrap"><span class="plan-price text-warning">[@T[productprice:<current productid="7509" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
                 ##if(productHasSavingsMoreThan(7509, 7509, 0))
-                 <br><strong>[@L[cds.sales/_common:was]@L] 
-                  <strike>[@T[productprice:<list productid="7509" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary">[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7509" secondaryproductid="7509" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span></strong> 
+                 <br><strong>
+                   
+                  ##if(splitTestingSideIsActive(1349, A))
+                   
+                  [@L[cds.sales/_common:was]@L] 
+                  <strike>[@T[productprice:<list productid="7509" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7509" secondaryproductid="7509" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span> 
+                  ##else
+                   
+                  [@L[cds.sales/_common:onsale-all-cap]@L] -<span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7509" secondaryproductid="7509" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span> 
+                  ##endif
+                   </strong> 
+                ##endif
+                 
+                 
+                ##if(splitTestingSideIsActive(1349, B))
+                 
+                <p class="h6">[@T[productprice:<list productid="7509" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:month]@L] [@L[cds.sales/gd/hosting/website-builder:renewal-text]@L]</p> 
+                ##endif
+                 
+                 
+                ##if(countrySiteAny(uk))
+                 
+                <p class="h6">[@L[cds.sales/_common:vat-price-uk]@L] </p> 
                 ##endif
                  
               </div>
@@ -1592,14 +1688,35 @@ h2.marquee-product-name,
               <div class="plan-flag">[@L[cds.sales/gd/hosting/website-builder:wsb-plus-seo]@L]</div>
               <h2 class="plan-title">[@L[cds.sales/gd/hosting/website-builder:unlimited-plan-title]@L]</h2>
               <p class="plan-text">[@L[cds.sales/gd/hosting/website-builder:unlimited-description]@L]</p>
-              <div class="plan-price-wrap"><span class="plan-price text-warning">[@T[productprice:<current productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
-                ##if(productHasSavingsMoreThan(7514, 7514, 0))
-                 <br><strong>[@L[cds.sales/_common:was]@L] 
-                  <strike>[@T[productprice:<list productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary">[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7514" secondaryproductid="7514" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span></strong> 
+              <div class="plan-price-wrap"><span class="plan-price text-warning">[@T[productprice:<current productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
+                ##if(productHasSavingsMoreThan(7524, 7524, 0))
+                 <br><strong>
+                   
+                  ##if(splitTestingSideIsActive(1349, A))
+                   
+                  [@L[cds.sales/_common:was]@L] 
+                  <strike>[@T[productprice:<list productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7524" secondaryproductid="7524" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span> 
+                  ##else
+                   
+                  [@L[cds.sales/_common:onsale-all-cap]@L] -<span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7524" secondaryproductid="7524" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span> 
+                  ##endif
+                   </strong> 
+                ##endif
+                 
+                 
+                ##if(splitTestingSideIsActive(1349, B))
+                 
+                <p class="h6">[@T[productprice:<list productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:month]@L] [@L[cds.sales/gd/hosting/website-builder:renewal-text]@L]</p> 
+                ##endif
+                 
+                 
+                ##if(countrySiteAny(uk))
+                 
+                <p class="h6">[@L[cds.sales/_common:vat-price-uk]@L] </p> 
                 ##endif
                  
               </div>
-              <button id="product-C" data-tcode="undefined" data-plan="wsb_businessplus_12month" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+              <button id="product-C" data-tcode="undefined" data-plan="wsb_business_12month" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
               <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:plan-domain]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]'></span></div>
               <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:unlimited-themes]@L]</div>
               <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:unlimited-pages]@L]</div>
@@ -1852,9 +1969,15 @@ h2.marquee-product-name,
         });
         $(window).scroll(function () {
           var scroll = $(this).scrollTop();
-          var fix = ($(this).scrollTop() > pos) ? true : false;
+          var fix = ($(this).scrollTop()+2 > pos) ? true : false;
           nav.toggleClass("sticky", fix);
           $('body').toggleClass("fix-body", fix);
+          if(!fix){
+            $('.mid-page-nav a').each(function(){
+              $(this).blur();
+              $(this).toggleClass("active",fix);
+            });
+          }
       
           if(fix){
             $.each(sections,function(index,value){
@@ -1897,7 +2020,40 @@ h2.marquee-product-name,
       
       $("#midPageNav").on("click", "a", scroll_if_anchor);
     </script>
-    <section id="templates" class="tile-section"><style>
+    <section id="features" data-mid-nav-title="[@L[cds.sales/gd/hosting/website-builder:sb_nav_1]@L]">
+      <div class="templates-chart bg-gray-light">
+        <div class="container templates-container">
+          <div class="header-section text-center"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-tools.png" style="padding-bottom:25px"> 
+            ##if(countrySiteAny(www))
+             
+            <div class="h0 text-right">[@L[cds.sales/gd/hosting/website-builder:templates-desription]@L]<br>[@L[cds.sales/gd/hosting/website-builder:sb_templates_title_2]@L]</div> 
+            ##else
+             
+            <div class="h1">[@L[cds.sales/gd/hosting/website-builder:templates-desription]@L]<br>[@L[cds.sales/gd/hosting/website-builder:sb_templates_title_2]@L]</div> 
+            ##endif
+             
+            <div class="headline-primary">[@L[cds.sales/gd/hosting/website-builder:sb_templates_text]@L]</div>
+            <button data-toggle="bsModal" data-target="#g-modal" class="btn btn-default-dark view-all btn-md">[@L[cds.sales/gd/hosting/website-builder:sb_view_templates]@L]</button>
+          </div>
+          <div class="templates-image-container"> 
+            <div class="row">
+              <div class="col-md-4 text-center"><img src="//nebula.wsimg.com/97d611570df922cf947daef6ea7c720b?AccessKeyId=531592D248B589D87A56" class="templates-image"></div>
+              <div class="col-md-4 text-center"><img src="//nebula.wsimg.com/97d611570df922cf947daef6ea7c720b?AccessKeyId=531592D248B589D87A56" class="templates-image"></div>
+              <div class="col-md-4 text-center"><img src="//nebula.wsimg.com/97d611570df922cf947daef6ea7c720b?AccessKeyId=531592D248B589D87A56" class="templates-image"></div>
+            </div>
+            <div class="row">
+              <div class="col-md-4 text-center"><img src="//nebula.wsimg.com/97d611570df922cf947daef6ea7c720b?AccessKeyId=531592D248B589D87A56" class="templates-image"></div>
+              <div class="col-md-4 text-center"><img src="//nebula.wsimg.com/97d611570df922cf947daef6ea7c720b?AccessKeyId=531592D248B589D87A56" class="templates-image"></div>
+              <div class="col-md-4 text-center"><img src="//nebula.wsimg.com/97d611570df922cf947daef6ea7c720b?AccessKeyId=531592D248B589D87A56" class="templates-image"></div>
+            </div>
+            <div class="row">
+              <div class="col-md-4 text-center"><img src="//nebula.wsimg.com/97d611570df922cf947daef6ea7c720b?AccessKeyId=531592D248B589D87A56" class="templates-image"></div>
+              <div class="col-md-4 text-center"><img src="//nebula.wsimg.com/97d611570df922cf947daef6ea7c720b?AccessKeyId=531592D248B589D87A56" class="templates-image"></div>
+              <div class="col-md-4 text-center"><img src="//nebula.wsimg.com/97d611570df922cf947daef6ea7c720b?AccessKeyId=531592D248B589D87A56" class="templates-image"></div>
+            </div>
+          </div>
+        </div>
+      </div><style>
   #faqSlider{margin:20px 0}#faqSlider .gd-swipe{box-sizing:border-box;border:1px solid #ededed;background-color:#ededed;color:#595959;margin:0 auto;position:relative;width:1000px}#faqSlider .gd-swipe-wrap .gd-swipe-item{box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;padding:40px 70px 50px;line-height:1.5;*width:860px!important}
   #faqSlider .gd-swipe-head,#faqSlider .gd-swipe-head h1,#faqSlider .gd-swipe-head h2{color:#222;font-size:20px}#faqSlider .gd-swipe-body p{margin-bottom:15px;font-size:14px;line-height:24px}#faqSlider .gd-swipe-body p span{font-weight:700}.arrow-left:hover,.arrow-right:hover{background-color:#ededed;-webkit-transition:all .3s ease-in-out;-moz-transition:all .3s ease-in-out;-ms-transition:all .3s ease-in-out;-o-transition:all .3s ease-in-out;transition:all .3s ease-in-out}
   #faqSlider a.arrow-left,#faqSlider a.arrow-right,#templates .arrow-left,#templates .arrow-right{top:42%}#templates{position:relative;padding-top:35px;margin:40px auto 0;width:1000px;clear:both}#templates>h2{display:block;text-align:center;font-size:36px;color:#333;margin:0 auto}
@@ -1931,149 +2087,149 @@ h2.marquee-product-name,
     border: 0;
   }
 
-.modal-open {
-  overflow: hidden;
-}
+  .modal-open {
+    overflow: hidden;
+  }
 
-.modal {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1040;
-  display: none;
-  overflow: auto;
-  overflow-y: scroll;
-}
+  .modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1040;
+    display: none;
+    overflow: auto;
+    overflow-y: scroll;
+  }
 
-.modal.fade .modal-dialog {
-  -webkit-transform: translate(0, -25%);
-      -ms-transform: translate(0, -25%);
-          transform: translate(0, -25%);
-  -webkit-transition: -webkit-transform 0.3s ease-out;
-     -moz-transition: -moz-transform 0.3s ease-out;
-       -o-transition: -o-transform 0.3s ease-out;
-          transition: transform 0.3s ease-out;
-}
+  .modal.fade .modal-dialog {
+    -webkit-transform: translate(0, -25%);
+        -ms-transform: translate(0, -25%);
+            transform: translate(0, -25%);
+    -webkit-transition: -webkit-transform 0.3s ease-out;
+       -moz-transition: -moz-transform 0.3s ease-out;
+         -o-transition: -o-transform 0.3s ease-out;
+            transition: transform 0.3s ease-out;
+  }
 
-.modal.in .modal-dialog {
-  -webkit-transform: translate(0, 0);
-      -ms-transform: translate(0, 0);
-          transform: translate(0, 0);
-}
+  .modal.in .modal-dialog {
+    -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
 
-.modal-dialog {
-  position: relative;
-  z-index: 1050;
-  width: auto;
-  margin: 10px;
-}
-
-.modal-content {
-  position: relative;
-  background-color: #ffffff;
-  border: 1px solid #999999;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 6px;
-  outline: none;
-  -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
-  background-clip: padding-box;
-}
-
-.modal-backdrop {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1030;
-  background-color: #000000;
-}
-
-.modal-backdrop.fade {
-  opacity: 0;
-  filter: alpha(opacity=0);
-}
-
-.modal-backdrop.in {
-  opacity: 0.5;
-  filter: alpha(opacity=50);
-}
-
-.modal-header {
-  min-height: 16.428571429px;
-  padding: 15px;
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.modal-header .close {
-  margin-top: -2px;
-}
-
-.modal-title {
-  margin: 0;
-  line-height: 1.428571429;
-}
-
-.modal-body {
-  position: relative;
-  padding: 20px;
-}
-
-.modal-footer {
-  padding: 19px 20px 20px;
-  margin-top: 15px;
-  text-align: right;
-  border-top: 1px solid #e5e5e5;
-}
-
-.modal-footer:before,
-.modal-footer:after {
-  display: table;
-  content: " ";
-}
-
-.modal-footer:after {
-  clear: both;
-}
-
-.modal-footer:before,
-.modal-footer:after {
-  display: table;
-  content: " ";
-}
-
-.modal-footer:after {
-  clear: both;
-}
-
-.modal-footer .btn + .btn {
-  margin-bottom: 0;
-  margin-left: 5px;
-}
-
-.modal-footer .btn-group .btn + .btn {
-  margin-left: -1px;
-}
-
-.modal-footer .btn-block + .btn-block {
-  margin-left: 0;
-}
-
-@media screen and (min-width: 768px) {
   .modal-dialog {
-    width: 600px;
-    margin: 30px auto;
+    position: relative;
+    z-index: 1050;
+    width: auto;
+    margin: 10px;
   }
-  .modal-content {
-    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-  }
-}
 
+  .modal-content {
+    position: relative;
+    background-color: #ffffff;
+    border: 1px solid #999999;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    outline: none;
+    -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+    background-clip: padding-box;
+  }
+
+  .modal-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1030;
+    background-color: #000000;
+  }
+
+  .modal-backdrop.fade {
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+
+  .modal-backdrop.in {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+  }
+
+  .modal-header {
+    min-height: 16.428571429px;
+    padding: 15px;
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  .modal-header .close {
+    margin-top: -2px;
+  }
+
+  .modal-title {
+    margin: 0;
+    line-height: 1.428571429;
+  }
+
+  .modal-body {
+    position: relative;
+    padding: 20px;
+  }
+
+  .modal-footer {
+    padding: 19px 20px 20px;
+    margin-top: 15px;
+    text-align: right;
+    border-top: 1px solid #e5e5e5;
+  }
+
+  .modal-footer:before,
+  .modal-footer:after {
+    display: table;
+    content: " ";
+  }
+
+  .modal-footer:after {
+    clear: both;
+  }
+
+  .modal-footer:before,
+  .modal-footer:after {
+    display: table;
+    content: " ";
+  }
+
+  .modal-footer:after {
+    clear: both;
+  }
+
+  .modal-footer .btn + .btn {
+    margin-bottom: 0;
+    margin-left: 5px;
+  }
+
+  .modal-footer .btn-group .btn + .btn {
+    margin-left: -1px;
+  }
+
+  .modal-footer .btn-block + .btn-block {
+    margin-left: 0;
+  }
+
+  @media screen and (min-width: 768px) {
+    .modal-dialog {
+      width: 600px;
+      margin: 30px auto;
+    }
+    .modal-content {
+      -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    }
+  }
 </style>
+
 ##if(!activeLanguageAny([en-us]))
 <script>
 $(document).ready(function(){
@@ -4063,8 +4219,7 @@ var PlanBox6UI = {
         });
 });
 </script>
-    </section>
-        <style>.video-marquee {
+            <style>.video-marquee {
 	background-position: top center;
 }
 .video-marquee {
@@ -4096,112 +4251,113 @@ color: #fff;
 font-family: 'Walsheim-Black';
 text-transform: uppercase;
 }
-        </style>
-        <atlantis:webstash type="js">
-          <script>
-            // https://developers.google.com/youtube/player_parameters#IFrame_Player_API
-            $(document).ready(function(){
-              if(typeof youtubeVideo === 'undefined'){
-                window.youtubeVideo = {
-                  _src: 'https://www.youtube.com/embed/',
-                  loadVideo: function(videoId, height, width, callback, parameters, container, insertType){
-                    if(typeof parameters === 'object'){
-                      var paramString = '';
-                      
-                      // add origin to src
-                      parameters.origin = window.location.protocol+'//'+window.location.host
-            
-                      if(youtubeVideo._src.indexOf('?') === -1){
-                        paramString += '?';
-                      }else{
-                        paramString += '&';
-                      }
-            
-                      for(param in parameters){
-                        if(paramString.length > 2){
-                          paramString += '&';
+            </style>
+            <atlantis:webstash type="js">
+              <script>
+                // https://developers.google.com/youtube/player_parameters#IFrame_Player_API
+                $(document).ready(function(){
+                  if(typeof youtubeVideo === 'undefined'){
+                    window.youtubeVideo = {
+                      _src: 'https://www.youtube.com/embed/',
+                      loadVideo: function(videoId, height, width, callback, parameters, container, insertType){
+                        if(typeof parameters === 'object'){
+                          var paramString = '';
+                          
+                          // add origin to src
+                          parameters.origin = window.location.protocol+'//'+window.location.host
+                
+                          if(youtubeVideo._src.indexOf('?') === -1){
+                            paramString += '?';
+                          }else{
+                            paramString += '&';
+                          }
+                
+                          for(param in parameters){
+                            if(paramString.length > 2){
+                              paramString += '&';
+                            }
+                            paramString += param+'='+parameters[param];
+                          }
+                          parameters = paramString;
                         }
-                        paramString += param+'='+parameters[param];
-                      }
-                      parameters = paramString;
-                    }
-                    
-                    var $video = $('<iframe height="'+height+'" width="'+width+'" style="position:absolute" frameBorder="0" src="'+youtubeVideo._src+videoId+parameters+'" />');
-            
-                    // append/prepend to container
-                    if(typeof container === 'string'){
-                      container = $(container);
-                    }
-            
-                    if(typeof insertType === 'undefined' || insertType === 'append'){
-                      container.append($video);
-                    }else{
-                      container.prepend($video);
-                    }
-            
-                    if(typeof callback === 'function'){
-                      $video.load(function(){
-                        callback($video[0]);
-                      });
-                    }
-            
-                    return $video[0];
-                  }
-                };
-              }
-              
-              var $containers = $('[data-tile="wsbVideo"]');
-              $containers.each(function(){
-                var $this = $(this);
-                var videoId = $this.data('youtube-id');
-                $this.find('.play-button, .cta').bind('click.youtube',function(event){
-                  // remove this event
-                  $(event.target).unbind(event.type+'.'+event.handleObj.namespace);
-            
-                  // load the video
-                  youtubeVideo.loadVideo(
-                      videoId,
-                      '100%',
-                      '100%',
-                      function(video){
-                          var $videoInfo = $this.find('.video-info');
-                          $videoInfo.animate({'opacity':0.0},1000,function(){
-                              $videoInfo.css({'display':'none'});
+                        
+                        var $video = $('<iframe height="'+height+'" width="'+width+'" style="position:absolute" frameBorder="0" src="'+youtubeVideo._src+videoId+parameters+'" />');
+                
+                        // append/prepend to container
+                        if(typeof container === 'string'){
+                          container = $(container);
+                        }
+                
+                        if(typeof insertType === 'undefined' || insertType === 'append'){
+                          container.append($video);
+                        }else{
+                          container.prepend($video);
+                        }
+                
+                        if(typeof callback === 'function'){
+                          $video.load(function(){
+                            callback($video[0]);
                           });
-                          //$(video).css({'opacity':0.0}).animate({'opacity':1.0});
-                      },
-                      {'autoplay':1,'controls':0,'showinfo':0,'playsinline':1,'modestbranding':1,'rel':0},
-                      $this,
-                      'prepend'
-                  );
-                }).css({'cursor':'pointer'});
-              });
-            });
-          </script>
-        </atlantis:webstash>
-        <div style="background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-video.jpg);" data-lazy-load="" data-icode="code" data-tile="wsbVideo" data-youtube-id="-HtVJyxSQmw" class="video-marquee video-marquee-white full-video">
-          <div class="container relative-position video-info">
-            <div class="row">
-              <div class="col-sm-10 col-sm-offset-1 col-xs-12 video-marquee-all-centered"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rb-play-button.png" class="play-button">
-                <h4>Make it your way ---- Assuming you want it uncomplicated and gorgeous</h4><span class="cta">We give you intuitive design tools; you plug in some info and create the site you've always wanted easier than you ever imagined.</span>
+                        }
+                
+                        return $video[0];
+                      }
+                    };
+                  }
+                  
+                  var $containers = $('[data-tile="wsbVideo"]');
+                  $containers.each(function(){
+                    var $this = $(this);
+                    var videoId = $this.data('youtube-id');
+                    $this.find('.play-button, .cta').bind('click.youtube',function(event){
+                      // remove this event
+                      $(event.target).unbind(event.type+'.'+event.handleObj.namespace);
+                
+                      // load the video
+                      youtubeVideo.loadVideo(
+                          videoId,
+                          '100%',
+                          '100%',
+                          function(video){
+                              var $videoInfo = $this.find('.video-info');
+                              $videoInfo.animate({'opacity':0.0},1000,function(){
+                                  $videoInfo.css({'display':'none'});
+                              });
+                              //$(video).css({'opacity':0.0}).animate({'opacity':1.0});
+                          },
+                          {'autoplay':1,'controls':0,'showinfo':0,'playsinline':1,'modestbranding':1,'rel':0},
+                          $this,
+                          'prepend'
+                      );
+                    }).css({'cursor':'pointer'});
+                  });
+                });
+              </script>
+            </atlantis:webstash>
+            <div style="background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-video.jpg);" data-lazy-load="" data-icode="code" data-tile="wsbVideo" data-youtube-id="-HtVJyxSQmw" class="video-marquee video-marquee-white full-video">
+              <div class="container relative-position video-info">
+                <div class="row">
+                  <div class="col-sm-10 col-sm-offset-1 col-xs-12 video-marquee-all-centered"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rb-play-button.png" class="play-button">
+                    <h3 class="h1">[@L[cds.sales/gd/hosting/website-builder:testimony-title]@L]</h3><span class="cta">[@L[cds.sales/gd/hosting/website-builder:testimony-description]@L]</span>
+                  </div>
+                </div>
               </div>
+            </div>
+      <section id="social-media">
+         
+        ##if(countrySiteAny(www))
+         
+        <div data-icode="" class="carousel-panel container">
+          <div class="row">
+            <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+              <div></div>
             </div>
           </div>
         </div>
-    <section id="features" data-mid-nav-title="[@L[cds.sales/gd/hosting/website-builder:sb_nav_1]@L]">
-      <div data-icode="" class="carousel-panel container">
-        <div class="row">
-          <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-            <div></div>
-          </div>
-        </div>
-      </div>
-            <style>.features-tabbed-carousel-top {
+                <style>.features-tabbed-carousel-top {
   text-align: center;
 }
-.features-tabbed-carousel-top h2 {
-  margin-top: 0;
-}
+
 .features-tabbed-carousel-top .features-tabbed-carousel-icon {
   text-align: center;
   cursor: pointer;
@@ -4254,96 +4410,96 @@ text-transform: uppercase;
   left: 50%;
   }
 }
-            </style>
-            <div data-icode="" id="" class="features-tabbed-carousel-top ">
-              <div class="container">
-                <div class="row">
-                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                    <h1>[@L[cds.sales/gd/hosting/website-builder:apps-modal-header]@L]</h1>
-                    <h4 class="headline-primary">[@L[cds.sales/gd/hosting/website-builder:apps-modal-description]@L]</h4>
+                </style>
+                <div data-icode="" id="" class="features-tabbed-carousel-top ">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                        <h2 class="h1">[@L[cds.sales/gd/hosting/website-builder:apps-modal-header]@L]</h2>
+                        <h4 class="headline-primary">[@L[cds.sales/gd/hosting/website-builder:apps-modal-description]@L]</h4>
+                      </div>
+                    </div>
+                    <div class="row">
+                              <div data-begin="0" data-end="0" class="features-tabbed-carousel-icon col-md-2">
+                                <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                                  <div class="feature-carousel-icon"><span class="uxicon uxicon-facebook-box"></span></div>
+                                  <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-facebook-title]@L]</div>
+                                </div>
+                              </div>
+                              <div data-begin="1" data-end="1" class="features-tabbed-carousel-icon col-md-2">
+                                <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                                  <div class="feature-carousel-icon"><span class="uxicon uxicon-twitter"></span></div>
+                                  <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-twitter-title]@L]</div>
+                                </div>
+                              </div>
+                              <div data-begin="2" data-end="2" class="features-tabbed-carousel-icon col-md-2">
+                                <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                                  <div class="feature-carousel-icon"><span class="uxicon uxicon-youtube-box"></span></div>
+                                  <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-youtube-title]@L]</div>
+                                </div>
+                              </div>
+                              <div data-begin="3" data-end="3" class="features-tabbed-carousel-icon col-md-2">
+                                <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                                  <div class="feature-carousel-icon"><span class="uxicon uxicon-yelp"></span></div>
+                                  <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-yelp-title]@L]</div>
+                                </div>
+                              </div>
+                              <div data-begin="4" data-end="4" class="features-tabbed-carousel-icon col-md-2">
+                                <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                                  <div class="feature-carousel-icon"><span class="uxicon uxicon-paypal"></span></div>
+                                  <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-paypal-title]@L]</div>
+                                </div>
+                              </div>
+                              <div data-begin="5" data-end="5" class="features-tabbed-carousel-icon col-md-2">
+                                <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                                  <div class="feature-carousel-icon"><span class="uxicon uxicon-homefinder"></span></div>
+                                  <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-homefinder-title]@L]</div>
+                                </div>
+                              </div>
+                    </div>
                   </div>
                 </div>
-                <div class="row">
-                        <div data-begin="0" data-end="0" class="features-tabbed-carousel-icon col-md-2">
-                          <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
-                            <div class="feature-carousel-icon"><span class="uxicon uxicon-facebook-box"></span></div>
-                            <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-facebook-title]@L]</div>
-                          </div>
-                        </div>
-                        <div data-begin="1" data-end="1" class="features-tabbed-carousel-icon col-md-2">
-                          <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
-                            <div class="feature-carousel-icon"><span class="uxicon uxicon-twitter"></span></div>
-                            <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-twitter-title]@L]</div>
-                          </div>
-                        </div>
-                        <div data-begin="2" data-end="2" class="features-tabbed-carousel-icon col-md-2">
-                          <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
-                            <div class="feature-carousel-icon"><span class="uxicon uxicon-youtube-box"></span></div>
-                            <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-youtube-title]@L]</div>
-                          </div>
-                        </div>
-                        <div data-begin="3" data-end="3" class="features-tabbed-carousel-icon col-md-2">
-                          <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
-                            <div class="feature-carousel-icon"><span class="uxicon uxicon-yelp"></span></div>
-                            <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-yelp-title]@L]</div>
-                          </div>
-                        </div>
-                        <div data-begin="4" data-end="4" class="features-tabbed-carousel-icon col-md-2">
-                          <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
-                            <div class="feature-carousel-icon"><span class="uxicon uxicon-paypal"></span></div>
-                            <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-paypal-title]@L]</div>
-                          </div>
-                        </div>
-                        <div data-begin="5" data-end="5" class="features-tabbed-carousel-icon col-md-2">
-                          <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
-                            <div class="feature-carousel-icon"><span class="uxicon uxicon-homefinder"></span></div>
-                            <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-homefinder-title]@L]</div>
-                          </div>
-                        </div>
-                </div>
-              </div>
-            </div>
-            <atlantis:webstash type="js">
-              <script type="text/javascript">
-                $(window).load(function() {
-                  setTimeout(function() {
-                    $(".features-tabbed-carousel-icon:first").click();
-                  }, 500);
-                
-                  var maxTabHeight = 0;
-                  $(".features-tabbed-carousel-icon").each(function(index, tab) {
-                    maxTabHeight = $(tab).outerHeight() > maxTabHeight ? $(tab).outerHeight() : maxTabHeight;
-                  }).css("height", maxTabHeight);
-                
-                  var maxFeatureTextHeight = 0;
-                  $(".feature-text").each(function(index, featureText) {
-                    maxFeatureTextHeight = $(featureText).height() > maxFeatureTextHeight ? $(featureText).height() : maxFeatureTextHeight;
-                  }).css({height: maxFeatureTextHeight});
-                
-                });
-                
-                $(".features-tabbed-carousel-icon").click(function() {
-                  var slideNum = $(this).data("begin");
-                  $(".features-tabbed-carousel-icon").removeClass("active");
-                  $(this).addClass("active");
-                  $('#carousel-social-media').carousel(slideNum);
-                });
-                
-                $('#carousel-social-media').on('slid.bs.carousel', function () {
-                  var carouselData = $(this).data('bs.carousel');
-                  var currentIndex = carouselData.getActiveIndex();
-                  $(".features-tabbed-carousel-icon").each(function() {
-                    if (currentIndex >= parseInt($(this).data("begin")) && currentIndex <= parseInt($(this).data("end"))) {
+                <atlantis:webstash type="js">
+                  <script type="text/javascript">
+                    $(window).load(function() {
+                      setTimeout(function() {
+                        $(".features-tabbed-carousel-icon:first").click();
+                      }, 500);
+                    
+                      var maxTabHeight = 0;
+                      $(".features-tabbed-carousel-icon").each(function(index, tab) {
+                        maxTabHeight = $(tab).outerHeight() > maxTabHeight ? $(tab).outerHeight() : maxTabHeight;
+                      }).css("height", maxTabHeight);
+                    
+                      var maxFeatureTextHeight = 0;
+                      $(".feature-text").each(function(index, featureText) {
+                        maxFeatureTextHeight = $(featureText).height() > maxFeatureTextHeight ? $(featureText).height() : maxFeatureTextHeight;
+                      }).css({height: maxFeatureTextHeight});
+                    
+                    });
+                    
+                    $(".features-tabbed-carousel-icon").click(function() {
+                      var slideNum = $(this).data("begin");
                       $(".features-tabbed-carousel-icon").removeClass("active");
                       $(this).addClass("active");
-                    }
-                  });
-                });
-                
-                
-              </script>
-            </atlantis:webstash>
-            <style>.item-wrapper { padding: 35px 0 20px; }
+                      $('#carousel-social-media').carousel(slideNum);
+                    });
+                    
+                    $('#carousel-social-media').on('slid.bs.carousel', function () {
+                      var carouselData = $(this).data('bs.carousel');
+                      var currentIndex = carouselData.getActiveIndex();
+                      $(".features-tabbed-carousel-icon").each(function() {
+                        if (currentIndex >= parseInt($(this).data("begin")) && currentIndex <= parseInt($(this).data("end"))) {
+                          $(".features-tabbed-carousel-icon").removeClass("active");
+                          $(this).addClass("active");
+                        }
+                      });
+                    });
+                    
+                    
+                  </script>
+                </atlantis:webstash>
+                <style>.item-wrapper { padding: 35px 0 20px; }
 .carousel-wrap { padding-bottom: 70px; }
 
 @media only screen and (min-width: 768px){
@@ -4686,131 +4842,678 @@ position: absolute;
 left: 0;
 top: -6px;
 }
-            </style>
-            <div class="carousel-wrap">
-              <div class="carousel-container container">
-                <div id="carousel-social-media" data-ride="carousel" data-interval="false" class="carousel slide">
-                  <ol class="carousel-indicators">
-                    <li data-target="#carousel-social-media" data-slide-to="0"></li>
-                    <li data-target="#carousel-social-media" data-slide-to="1"></li>
-                    <li data-target="#carousel-social-media" data-slide-to="2"></li>
-                    <li data-target="#carousel-social-media" data-slide-to="3"></li>
-                    <li data-target="#carousel-social-media" data-slide-to="4"></li>
-                    <li data-target="#carousel-social-media" data-slide-to="5"></li>
-                  </ol>
-                  <div class="carousel-inner">
-                          <div class="item">
-                            <div class="item-wrapper text-center">
-                              <div data-icode="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-fb.png" class="img-responsive img-center">
-                                <div class="row">
-                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-facebook-title]@L]<sup class="supsymbol">&reg;</sup></h2>
+                </style>
+                <div class="carousel-wrap">
+                  <div class="carousel-container container">
+                    <div id="carousel-social-media" data-ride="carousel" data-interval="false" class="carousel slide">
+                      <ol class="carousel-indicators">
+                        <li data-target="#carousel-social-media" data-slide-to="0"></li>
+                        <li data-target="#carousel-social-media" data-slide-to="1"></li>
+                        <li data-target="#carousel-social-media" data-slide-to="2"></li>
+                        <li data-target="#carousel-social-media" data-slide-to="3"></li>
+                        <li data-target="#carousel-social-media" data-slide-to="4"></li>
+                        <li data-target="#carousel-social-media" data-slide-to="5"></li>
+                      </ol>
+                      <div class="carousel-inner">
+                                <div class="item">
+                                  <div class="item-wrapper text-center">
+                                    <div data-icode="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-fb.png" class="img-responsive img-center">
+                                      <div class="row">
+                                        <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                          <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-facebook-title]@L]<sup class="supsymbol">&reg;</sup></h2>
+                                        </div>
+                                      </div>
+                                      <div class="row">
+                                        <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                          <div class="carousel-panel-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-facebook-desc]@L]</div>
+                                        </div>
+                                      </div>
+                                    </div>
                                   </div>
                                 </div>
-                                <div class="row">
-                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <div class="carousel-panel-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-facebook-desc]@L]</div>
+                                <div class="item">
+                                  <div class="item-wrapper text-center">
+                                    <div data-icode="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-twitter.png" class="img-responsive img-center">
+                                      <div class="row">
+                                        <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                          <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-twitter-title]@L]<sup class="supsymbol">&reg;</sup></h2>
+                                        </div>
+                                      </div>
+                                      <div class="row">
+                                        <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                          <div class="carousel-panel-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-twitter-desc]@L]</div>
+                                        </div>
+                                      </div>
+                                    </div>
                                   </div>
                                 </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="item">
-                            <div class="item-wrapper text-center">
-                              <div data-icode="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-twitter.png" class="img-responsive img-center">
-                                <div class="row">
-                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-twitter-title]@L]<sup class="supsymbol">&reg;</sup></h2>
+                                <div class="item">
+                                  <div class="item-wrapper text-center">
+                                    <div data-icode="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-youtube.png" class="img-responsive img-center">
+                                      <div class="row">
+                                        <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                          <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-youtube-title]@L]<sup class="supsymbol">&reg;</sup></h2>
+                                        </div>
+                                      </div>
+                                      <div class="row">
+                                        <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                          <div class="carousel-panel-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-youtube-desc]@L]</div>
+                                        </div>
+                                      </div>
+                                    </div>
                                   </div>
                                 </div>
-                                <div class="row">
-                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <div class="carousel-panel-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-twitter-desc]@L]</div>
+                                <div class="item">
+                                  <div class="item-wrapper text-center">
+                                    <div data-icode="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-yelp.png" class="img-responsive img-center">
+                                      <div class="row">
+                                        <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                          <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-yelp-title]@L]<sup class="supsymbol">&reg;</sup></h2>
+                                        </div>
+                                      </div>
+                                      <div class="row">
+                                        <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                          <div class="carousel-panel-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-yelp-desc]@L]<sup class="supsymbol">&reg;</sup></div>
+                                        </div>
+                                      </div>
+                                    </div>
                                   </div>
                                 </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="item">
-                            <div class="item-wrapper text-center">
-                              <div data-icode="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-youtube.png" class="img-responsive img-center">
-                                <div class="row">
-                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-youtube-title]@L]<sup class="supsymbol">&reg;</sup></h2>
+                                <div class="item">
+                                  <div class="item-wrapper text-center">
+                                    <div data-icode="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-paypal.png" class="img-responsive img-center">
+                                      <div class="row">
+                                        <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                          <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-paypal-title]@L]<sup class="supsymbol">&reg;</sup></h2>
+                                        </div>
+                                      </div>
+                                      <div class="row">
+                                        <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                          <div class="carousel-panel-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-paypal-desc]@L]</div>
+                                        </div>
+                                      </div>
+                                    </div>
                                   </div>
                                 </div>
-                                <div class="row">
-                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <div class="carousel-panel-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-youtube-desc]@L]</div>
+                                <div class="item">
+                                  <div class="item-wrapper text-center">
+                                    <div data-icode="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-homeFinder.png" class="img-responsive img-center">
+                                      <div class="row">
+                                        <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                          <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-homefinder-title]@L]<sup class="supsymbol">&reg;</sup></h2>
+                                        </div>
+                                      </div>
+                                      <div class="row">
+                                        <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                          <div class="carousel-panel-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-homefinder-desc]@L]</div>
+                                        </div>
+                                      </div>
+                                    </div>
                                   </div>
                                 </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="item">
-                            <div class="item-wrapper text-center">
-                              <div data-icode="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-yelp.png" class="img-responsive img-center">
-                                <div class="row">
-                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-yelp-title]@L]<sup class="supsymbol">&reg;</sup></h2>
-                                  </div>
-                                </div>
-                                <div class="row">
-                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <div class="carousel-panel-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-yelp-desc]@L]<sup class="supsymbol">&reg;</sup></div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="item">
-                            <div class="item-wrapper text-center">
-                              <div data-icode="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-paypal.png" class="img-responsive img-center">
-                                <div class="row">
-                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-paypal-title]@L]<sup class="supsymbol">&reg;</sup></h2>
-                                  </div>
-                                </div>
-                                <div class="row">
-                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <div class="carousel-panel-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-paypal-desc]@L]</div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="item">
-                            <div class="item-wrapper text-center">
-                              <div data-icode="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-homeFinder.png" class="img-responsive img-center">
-                                <div class="row">
-                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-homefinder-title]@L]<sup class="supsymbol">&reg;</sup></h2>
-                                  </div>
-                                </div>
-                                <div class="row">
-                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <div class="carousel-panel-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-homefinder-desc]@L]</div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                  </div><a href="#carousel-social-media" data-slide="prev" class="left carousel-control"><span class="carousel-icon arrow-left-icon"></span></a><a href="#carousel-social-media" data-slide="next" class="right carousel-control"><span class="carousel-icon arrow-right-icon"></span></a>
-                </div>
-                <script>
-                  $('.carousel .carousel-indicators li:first-child').addClass("active");
-                  $('.carousel .carousel-inner .item:first-child').addClass("active");
-                </script>
-              </div>
+                      </div><a href="#carousel-social-media" data-slide="prev" class="left carousel-control"><span class="carousel-icon arrow-left-icon"></span></a><a href="#carousel-social-media" data-slide="next" class="right carousel-control"><span class="carousel-icon arrow-right-icon"></span></a>
+                    </div>
+                    <script>
+                      $('.carousel .carousel-indicators li:first-child').addClass("active");
+                      $('.carousel .carousel-inner .item:first-child').addClass("active");
+                    </script>
+                  </div>
+                </div> 
+        ##else
+         
+        <div data-icode="" class="carousel-panel container">
+          <div class="row">
+            <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+              <div></div>
             </div>
-      <div class="bg-pro-gray">
-                <style>
+          </div>
+        </div>
+                <style>.features-tabbed-carousel-top {
+  text-align: center;
+}
+
+.features-tabbed-carousel-top .features-tabbed-carousel-icon {
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.features-tabbed-carousel-top .features-tabbed-carousel-icon img {
+max-width: 70%;
+vertical-align: middle;
+display: inline-block;
+}
+.features-tabbed-carousel-top .features-tabbed-carousel-icon img {
+margin-bottom: 10px;
+}
+.img-center {
+margin: 0 auto;
+}
+
+.features-tabbed-carousel-top .features-tabbed-carousel-icon.active .feature-text {
+color: #008a32;
+font-family: 'Walsheim-Black';
+}
+.features-tabbed-carousel-top .features-tabbed-carousel-icon .feature-text {
+font-family: 'Walsheim-Bold';
+font-size: 18px;
+font-size: 1.8rem;
+line-height: 1.1;
+text-transform: uppercase;
+}
+.feature-carousel-icon {font-size: 36px;margin-bottom: 10px;}
+
+@media only screen and (min-width: 992px){
+  .features-tabbed-carousel-top .features-tabbed-carousel-icon:not(:first-child) {
+  border-left: 1px solid #808080;
+  }
+}
+@media only screen and (min-width: 992px){
+  .features-tabbed-carousel-top .features-tabbed-carousel-icon.active:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 15px solid #008a32;
+  border-right: 15px solid transparent;
+  border-left: 15px solid transparent;
+  position: absolute;
+  bottom: -15px;
+  margin-left: -20px;
+  left: 50%;
+  }
+}
+                </style>
+                <div data-icode="" id="" class="features-tabbed-carousel-top ">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                        <h2 class="h1">[@L[cds.sales/gd/hosting/website-builder:apps-modal-header]@L]</h2>
+                        <h4 class="headline-primary">[@L[cds.sales/gd/hosting/website-builder:apps-modal-description]@L]</h4>
+                      </div>
+                    </div>
+                    <div class="row">
+                              <div data-begin="0" data-end="0" class="features-tabbed-carousel-icon col-md-4">
+                                <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                                  <div class="feature-carousel-icon"><span class="uxicon uxicon-facebook-box"></span></div>
+                                  <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-facebook-title]@L]</div>
+                                </div>
+                              </div>
+                              <div data-begin="1" data-end="1" class="features-tabbed-carousel-icon col-md-4">
+                                <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                                  <div class="feature-carousel-icon"><span class="uxicon uxicon-twitter"></span></div>
+                                  <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-twitter-title]@L]</div>
+                                </div>
+                              </div>
+                              <div data-begin="2" data-end="2" class="features-tabbed-carousel-icon col-md-4">
+                                <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                                  <div class="feature-carousel-icon"><span class="uxicon uxicon-youtube-box"></span></div>
+                                  <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-youtube-title]@L]</div>
+                                </div>
+                              </div>
+                    </div>
+                  </div>
+                </div>
+                <atlantis:webstash type="js">
+                  <script type="text/javascript">
+                    $(window).load(function() {
+                      setTimeout(function() {
+                        $(".features-tabbed-carousel-icon:first").click();
+                      }, 500);
+                    
+                      var maxTabHeight = 0;
+                      $(".features-tabbed-carousel-icon").each(function(index, tab) {
+                        maxTabHeight = $(tab).outerHeight() > maxTabHeight ? $(tab).outerHeight() : maxTabHeight;
+                      }).css("height", maxTabHeight);
+                    
+                      var maxFeatureTextHeight = 0;
+                      $(".feature-text").each(function(index, featureText) {
+                        maxFeatureTextHeight = $(featureText).height() > maxFeatureTextHeight ? $(featureText).height() : maxFeatureTextHeight;
+                      }).css({height: maxFeatureTextHeight});
+                    
+                    });
+                    
+                    $(".features-tabbed-carousel-icon").click(function() {
+                      var slideNum = $(this).data("begin");
+                      $(".features-tabbed-carousel-icon").removeClass("active");
+                      $(this).addClass("active");
+                      $('#carousel-social-media').carousel(slideNum);
+                    });
+                    
+                    $('#carousel-social-media').on('slid.bs.carousel', function () {
+                      var carouselData = $(this).data('bs.carousel');
+                      var currentIndex = carouselData.getActiveIndex();
+                      $(".features-tabbed-carousel-icon").each(function() {
+                        if (currentIndex >= parseInt($(this).data("begin")) && currentIndex <= parseInt($(this).data("end"))) {
+                          $(".features-tabbed-carousel-icon").removeClass("active");
+                          $(this).addClass("active");
+                        }
+                      });
+                    });
+                    
+                    
+                  </script>
+                </atlantis:webstash>
+                <style>.item-wrapper { padding: 35px 0 20px; }
+.carousel-wrap { padding-bottom: 70px; }
+
+@media only screen and (min-width: 768px){
+  .carousel-container .carousel {
+    padding: 0 120px;
+  }
+}
+
+.carousel {
+  position: relative;
+  padding: 0 0 45px 0;
+}
+
+.carousel-container .carousel .carousel-indicators {
+  bottom: -35px;
+}
+
+@media screen and (min-width: 768px){
+  .carousel-indicators {
+    bottom: -5px;
+  }
+}
+.carousel-indicators {
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  z-index: 15;
+  width: 80%;
+  margin-left: -40%;
+  padding-left: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.carousel-container .carousel .carousel-indicators li.active {
+  background-color: #77c043;
+}
+
+.carousel-container .carousel .carousel-indicators li.active {
+  background-color: #77c043;
+}
+.carousel-container .carousel .carousel-indicators li {
+  width: 15px;
+  height: 15px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  margin: 5px;
+  background-color: #d9d9d9;
+}
+.carousel-indicators .active {
+  background-color: #008a32;
+}
+.carousel-indicators li {
+  display: inline-block;
+  width: 32px;
+  height: 10px;
+  margin: 8px;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: #d9d9d9;
+}
+.carousel-inner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+.carousel-inner > .active {
+  
+}
+.carousel-inner > .active, .carousel-inner > .next, .carousel-inner > .prev {
+  display: block;
+}
+.carousel-inner > .item {
+  display: none;
+  position: relative;
+  -webkit-transition: left 0.6s ease-in-out;
+  -moz-transition: left 0.6s ease-in-out;
+  transition: left 0.6s ease-in-out;
+  overflow: hidden;
+}
+.carousel-container .carousel-panel, .carousel-container .testimonial {
+  padding: 0;
+}
+.carousel-panel .img-center {
+  margin: 15px auto;
+}
+.carousel-panel .carousel-panel-text {
+  margin-bottom: 25px;
+}
+.carousel-panel h2 {
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+.carousel-container .carousel-control.left {
+  left: 0px;
+}
+.carousel-control {
+  position: absolute;
+  top: -11%;
+  bottom: 0;
+  color: #999999;
+  text-align: center;
+}
+.carousel-icon.arrow-left-icon {
+  background-position: 0 0;
+  width: 51px;
+  height: 50px;
+}
+
+.carousel-control .uxicon-chevron-left-lt, .carousel-control .arrow-left-icon, .carousel-control .arrow-left-white-icon {
+  left: 50%;
+}
+.carousel-control .arrow-left-white-icon, .carousel-control .arrow-right-white-icon, .carousel-control .arrow-left-icon, .carousel-control .arrow-right-icon {
+  position: absolute;
+  top: 50%;
+}
+.carousel-icon {
+  background-image: url('[@T[link:<imageroot />]@T]/fos/hp/sahara-rebrand-sprite-20141114.png');
+  display: inline-block;
+  background-size: 205px auto;
+}
+.carousel-container .carousel-control.right {
+  right: 0px;
+}
+.carousel-icon.arrow-right-icon {
+  background-position: 0 -52px;
+  width: 51px;
+  height: 50px;
+}
+.carousel-control .arrow-left-white-icon, .carousel-control .arrow-right-white-icon, .carousel-control .arrow-left-icon, .carousel-control .arrow-right-icon {
+  position: absolute;
+  top: 50%;
+}
+
+.carousel {
+    position: relative;
+    padding: 0 0 45px 0;
+}
+
+.carousel-inner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-inner > .item {
+    display: none;
+    position: relative;
+    -webkit-transition: left 0.6s ease-in-out;
+    -moz-transition: left 0.6s ease-in-out;
+    transition: left 0.6s ease-in-out;
+    overflow: hidden;
+}
+
+.carousel-inner > .item.show-item {
+    display: block;
+}
+
+.carousel-inner > .item > h1,
+.carousel-inner > .item > h2,
+.carousel-inner > .item > h3,
+.carousel-inner > .item > h4,
+.carousel-inner > .item > h5,
+.carousel-inner > .item > h6 {
+    margin-top: 0;
+}
+
+.carousel-inner > .active,
+.carousel-inner > .next,
+.carousel-inner > .prev {
+    display: block;
+}
+
+.carousel-inner > .active {
+    left: 0;
+}
+
+.carousel-inner > .next,
+.carousel-inner > .prev {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.carousel-inner > .next {
+    left: 100%;
+}
+
+.carousel-inner > .prev {
+    left: -100%;
+}
+
+.carousel-inner > .next.left,
+.carousel-inner > .prev.right {
+    left: 0;
+}
+
+.carousel-inner > .active.left {
+    left: -100%;
+}
+
+.carousel-inner > .active.right {
+    left: 100%;
+}
+
+.carousel-text-item {
+    margin-bottom: 20px;
+}
+
+.carousel-text-item h1 {
+    font-size: 14px;
+    display: inline;
+    margin: 0;
+    font-weight: bold;
+    font-weight: 600;
+}
+
+.carousel-control {
+    position: absolute;
+    top: -11%;
+    bottom: 0;
+    color: #999999;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .carousel-control {
+        top: -6%;
+    }
+}
+
+.carousel-control:hover,
+.carousel-control:focus {
+    outline: none;
+    color: #000;
+    text-decoration: none;
+}
+
+.carousel-control .uxicon-chevron-left-lt,
+.carousel-control .uxicon-chevron-right-lt {
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    font-size: 40px;
+    margin-top: -15px;
+}
+
+.carousel-control .arrow-left-white-icon,
+.carousel-control .arrow-right-white-icon,
+.carousel-control .arrow-left-icon,
+.carousel-control .arrow-right-icon {
+    position: absolute;
+    top: 50%;
+}
+
+.carousel-control .uxicon-chevron-left-lt,
+.carousel-control .arrow-left-icon {
+    left: 50%;
+}
+
+.carousel-control .uxicon-chevron-right-lt,
+.carousel-control .arrow-right-icon {
+    right: 50%;
+}
+
+.carousel-control.left {
+    left: -40px;
+}
+@media only screen and (max-width: 768px){
+  .carousel-container .carousel-control {
+    display: none;
+  }
+}
+@media only screen and (max-width: 768px) {
+    .carousel-control.left {
+        left: -10px;
+    }
+}
+
+.carousel-control.right {
+    right: -40px;
+}
+
+@media only screen and (max-width: 768px) {
+    .carousel-control.right {
+        right: -10px;
+    }
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    z-index: 15;
+    width: 80%;
+    margin-left: -40%;
+    padding-left: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.carousel-indicators li {
+    display: inline-block;
+    width: 32px;
+    height: 10px;
+    margin: 8px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #d9d9d9;
+}
+
+.carousel-indicators .active {
+    background-color: #008a32;
+}
+
+@media screen and (min-width: 768px) {
+    .carousel-indicators {
+        bottom: -5px;
+    }
+}
+.carousel-panel .include-check {
+position: relative;
+padding-left: 45px;
+margin-top: 20px;
+}
+.carousel-panel .include-check:before {
+content: "";
+background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
+background-position: 0 -668px;
+background-size: 205px auto;
+width: 25px;
+height: 27px;
+padding-right: 5px;
+position: absolute;
+left: 0;
+top: -6px;
+}
+                </style>
+                <div class="carousel-wrap">
+                  <div class="carousel-container container">
+                    <div id="carousel-social-media" data-ride="carousel" data-interval="false" class="carousel slide">
+                      <ol class="carousel-indicators">
+                        <li data-target="#carousel-social-media" data-slide-to="0"></li>
+                        <li data-target="#carousel-social-media" data-slide-to="1"></li>
+                        <li data-target="#carousel-social-media" data-slide-to="2"></li>
+                      </ol>
+                      <div class="carousel-inner">
+                                <div class="item">
+                                  <div class="item-wrapper text-center">
+                                    <div data-icode="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-fb.png" class="img-responsive img-center">
+                                      <div class="row">
+                                        <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                          <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-facebook-title]@L]<sup class="supsymbol">&reg;</sup></h2>
+                                        </div>
+                                      </div>
+                                      <div class="row">
+                                        <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                          <div class="carousel-panel-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-facebook-desc]@L]</div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="item">
+                                  <div class="item-wrapper text-center">
+                                    <div data-icode="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-twitter.png" class="img-responsive img-center">
+                                      <div class="row">
+                                        <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                          <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-twitter-title]@L]<sup class="supsymbol">&reg;</sup></h2>
+                                        </div>
+                                      </div>
+                                      <div class="row">
+                                        <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                          <div class="carousel-panel-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-twitter-desc]@L]</div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="item">
+                                  <div class="item-wrapper text-center">
+                                    <div data-icode="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-youtube.png" class="img-responsive img-center">
+                                      <div class="row">
+                                        <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                          <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-youtube-title]@L]<sup class="supsymbol">&reg;</sup></h2>
+                                        </div>
+                                      </div>
+                                      <div class="row">
+                                        <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                          <div class="carousel-panel-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-youtube-desc]@L]</div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                      </div><a href="#carousel-social-media" data-slide="prev" class="left carousel-control"><span class="carousel-icon arrow-left-icon"></span></a><a href="#carousel-social-media" data-slide="next" class="right carousel-control"><span class="carousel-icon arrow-right-icon"></span></a>
+                    </div>
+                    <script>
+                      $('.carousel .carousel-indicators li:first-child').addClass("active");
+                      $('.carousel .carousel-inner .item:first-child').addClass("active");
+                    </script>
+                  </div>
+                </div> 
+        ##endif
+         
+        <div class="bg-gray-light">
+                    <style>
 .features-two-up {
   min-height: 940px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
-  padding: 100px 0;
+  padding: 50px 0;
 }
 .features-two-up .feature-row-height {
 margin-top: 40px;
@@ -4831,68 +5534,73 @@ line-height: 1.1;
 .features-two-up .feature-row-text {
 margin-bottom: 20px;
 }
-                </style>
-                <div style="background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-computer-illustration.png);" data-lazy-load="" class="features-two-up   ">
-                  <div class="container">
-                    <div class="row">
-                      <div class="col-sm-12">
-                        <h1>[@L[cds.sales/gd/hosting/website-builder:business-plus-badge-2]@L]</h1>
+                    </style>
+                    <div style="background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-computer-illustration.png);" data-lazy-load="" class="features-two-up   ">
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-sm-12">
+                            <h2 class="h1">[@L[cds.sales/gd/hosting/website-builder:business-plus-badge-2]@L]</h2>
+                          </div>
+                                    <div class="row feature-row-height">
+                                      <div class="col-sm-7">
+                                        <div class="row feature-row">
+                                          <div class="col-sm-5"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-getAwebsite.png" data-lazy-load="" alt="" class="feature-image img-responsive">
+                                          </div>
+                                          <div class="col-sm-7">
+                                            <div class="feature-title">[@L[cds.sales/gd/hosting/website-builder:oneclick-header]@L]</div>
+                                            <div class="feature-row-text">[@L[cds.sales/gd/hosting/website-builder:oneclick-body-text]@L]</div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="row feature-row-height">
+                                      <div class="col-sm-7">
+                                        <div class="row feature-row">
+                                          <div class="col-sm-5"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-gettingGoogle.png" data-lazy-load="" alt="" class="feature-image img-responsive">
+                                          </div>
+                                          <div class="col-sm-7">
+                                            <div class="feature-title">[@L[cds.sales/gd/hosting/website-builder:seofs-header]@L]</div>
+                                            <div class="feature-row-text">[@L[cds.sales/gd/hosting/website-builder:seofs-body-text]@L]</div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                        </div>
                       </div>
-                              <div class="row feature-row-height">
-                                <div class="col-sm-7">
-                                  <div class="row feature-row">
-                                    <div class="col-sm-5"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-getAwebsite.png" data-lazy-load="" alt="" class="feature-image img-responsive">
-                                    </div>
-                                    <div class="col-sm-7">
-                                      <div class="feature-title">[@L[cds.sales/gd/hosting/website-builder:oneclick-header]@L]</div>
-                                      <div class="feature-row-text">[@L[cds.sales/gd/hosting/website-builder:oneclick-body-text]@L]</div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="row feature-row-height">
-                                <div class="col-sm-7">
-                                  <div class="row feature-row">
-                                    <div class="col-sm-5"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-gettingGoogle.png" data-lazy-load="" alt="" class="feature-image img-responsive">
-                                    </div>
-                                    <div class="col-sm-7">
-                                      <div class="feature-title">[@L[cds.sales/gd/hosting/website-builder:seofs-header]@L]</div>
-                                      <div class="feature-row-text">[@L[cds.sales/gd/hosting/website-builder:seofs-body-text]@L]</div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
                     </div>
-                  </div>
+        </div>
+        <div class="bg-black">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-9">
+                <h3 style="color:#FFF" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.bg-black&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="text-center">[@L[cds.sales/gd/hosting/website-builder:sb_bpp_starting_at]@L] [@T[productprice:<current productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:mo]@L]</h3>
+              </div>
+              <div class="col-sm-3">
+                <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.bg-black&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="right">
+                  <button data-tcode="" data-plan="wsb_businessplus_12month" class="btn btn-purchase btn-plan btn-md btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
                 </div>
-      </div>
-      <div class="bg-black">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-8">
-              <h3 class="text-center text-muted">[@L[cds.sales/gd/hosting/website-builder:sb_bpp_starting_at]@L] [@T[productprice:<current productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:mo]@L]</h3>
-            </div>
-            <div class="col-sm-4">
-              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.bg-black&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="right">
-                <button data-tcode="" data-plan="wsb_businessplus_12month" class="btn btn-purchase btn-plan btn-sm">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </section> 
+    ##if(activeLanguageAny([en-us]))
+     
     <section id="reviews" data-mid-nav-title="[@L[cds.sales/gd/hosting/website-builder:sb_nav_2]@L]">
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
             <div id="BVRRContainer">
-              <p class="bv-loading">Loading...</p>
+              <p class="bv-loading">[@L[cds.sales/_common:loading]@L]</p>
             </div>
             <div>[@P[userControl:<Data location="~/Shared/Tabs/controls/BVReviewsNoJS.ascx"><Parameters><Parameter key="ProductId" value="web_hosting" /><Parameter key="ReviewNumber" value="1" /></Parameters></Data>]@P]</div>
           </div>
         </div>
       </div>
-    </section>
+    </section> 
+    ##endif
+     
     <section id="faq" data-mid-nav-title="[@L[cds.sales/gd/hosting/website-builder:sb_nav_3]@L]">
       <style>.accordion-group {
   border-top: 2px solid #e8e8e8;
@@ -4976,8 +5684,8 @@ margin-bottom: 20px;
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
-            <ul id="test-faq" class="accordion-group ">
-              <h2>[@L[cds.sales/gd/hosting/website-builder:rb_your_question]@L]</h2>
+            <ul id="faq-accordion" class="accordion-group ">
+              <h2 class="h1">[@L[cds.sales/gd/hosting/website-builder:rb_your_question]@L]</h2>
               <li class="accordion-dropdown"><span class="carett caret-right"></span><span>[@L[cds.sales/gd/hosting/website-builder:faq-first-slide-title]@L]</span>
                 <ul class="dropdown">
                   <li>
@@ -5011,7 +5719,7 @@ margin-bottom: 20px;
                 </ul>
               </li>
               <div class="text-center">
-                <button id="test-button" class="btn btn-default-dark">[@L[cds.sales/gd/hosting/website-builder:sb_faq_see]@L]</button>
+                <button id="faq-button" class="btn btn-default-dark">[@L[cds.sales/gd/hosting/website-builder:sb_faq_see]@L]</button>
               </div>
             </ul>
           </div>
@@ -5038,14 +5746,14 @@ margin-bottom: 20px;
           }
         });
         $(window).load(function() {
-          $("#test-faq .accordion-dropdown:first").click();
+          $("#faq-accordion .accordion-dropdown:first").click();
         });
-        $("#test-button").click(function() {
-          $('#test-faq').find('.dropdown').slideDown();
-          $('#test-faq').find('.accordion-dropdown').find('.carett')
+        $("#faq-button").click(function() {
+          $('#faq-accordion').find('.dropdown').slideDown();
+          $('#faq-accordion').find('.accordion-dropdown').find('.carett')
                           .removeClass("caret-right")
                           .addClass("caret-down");
-          $('#test-faq').find('.accordion-dropdown').addClass("active");
+          $('#faq-accordion').find('.accordion-dropdown').addClass("active");
          });
       </script>
     </section>
@@ -5226,7 +5934,7 @@ margin-bottom: 20px;
   content: '';
   width: 94px;
   height: 94px;
-  background-image: url([@T[link:<imageroot />]@T]ffos/hp/sahara-rebrand-sprite-20141114.png);
+  background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
   background-size: 205px auto;
   background-position: 0 -896px;
   position: absolute;
@@ -5357,7 +6065,7 @@ margin-bottom: 20px;
                   <h2>[@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp_1]@L]</h2>
                   <div class="row">
                     <div class="col-sm-12">
-                      <p>[@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp_2]@L]</p><a class="btn btn-default-dark">[@L[cds.sales/gd/hosting/website-builder:learn-more]@L]</a>
+                      <p>[@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp_2]@L]</p><a href="[@T[link:<relative path="~/hosting/wordpress-hosting.aspx" />]@T]" class="btn btn-default-dark">[@L[cds.sales/gd/hosting/website-builder:learn-more]@L]</a>
                     </div>
                   </div>
                 </div>
@@ -5370,7 +6078,7 @@ margin-bottom: 20px;
                   <h2>[@L[cds.sales/gd/hosting/website-builder:sb_xsell_qs_1]@L]</h2>
                   <div class="row">
                     <div class="col-sm-12">
-                      <p>Perfect for: [@L[cds.sales/gd/hosting/website-builder:sb_qs_2]@L]</p><a class="btn btn-default-light">[@L[cds.sales/gd/hosting/website-builder:learn-more]@L]</a>
+                      <p>[@L[cds.sales/gd/hosting/website-builder:sb_qs_2]@L]</p><a href="[@T[link:<relative path="~/ecommerce/online-store.aspx" />]@T]" class="btn btn-default-light">[@L[cds.sales/gd/hosting/website-builder:learn-more]@L]</a>
                     </div>
                   </div>
                 </div>
@@ -5380,11 +6088,19 @@ margin-bottom: 20px;
         </div>
       </div>
     </section>
-    <section id="disclaimers"><a onClick="disclaimersModal()">disclaimers link</a>
-      <div id="disclaimersModal" data-title="Modal" style="display:none">
-        <p>hello</p>
-        <p>hide</p>
+    <section id="disclaimers">
+      <p> </p>
+      <p class="h5">[@L[cds.sales/gd/hosting/website-builder:rb_disclaimers]@L] <a onClick="disclaimersModal()">[@L[cds.sales/gd/hosting/website-builder:rb_disclaimers_view]@L]</a></p>
+      <div id="disclaimersModal" data-title="[@L[cds.sales/gd/hosting/website-builder:disclaimer-modal-header]@L]" style="display:none">
+        <p>[@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]</p>
+        <p>[@L[cds.sales/gd/hosting/website-builder:modal-disclaimer-5]@L]</p> 
+        ##if(splitTestingSideIsActive(1349, B))
+         
+        <p>[@L[cds.sales/gd/hosting/website-builder:renewal-disclaimer]@L]</p> 
+        ##endif
+         
       </div>
+      <p class="h5">[@L[cds.sales/gd/hosting/website-builder:rb_disclaimers_3p]@L]</p>
     </section>
     <!-- FOOTERBEGIN--> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
@@ -5398,8 +6114,30 @@ margin-bottom: 20px;
       
     </script>
     <script>
+      ##if(activeLanguageAny([en-au],[en-ca],[en-gb],[en-in],[en-us]))
+      $(document).ready(function(){
+        $("a[href='http://support.godaddy.com/help/article/5107']").text("How Do I Build a Website?");
+        $("a[href='http://support.godaddy.com/help/article/5107']").attr('data-ci','94986');
+        $("a[href='http://support.godaddy.com/help/article/5107']").removeAttr("target");
+        $("a[href='http://support.godaddy.com/help/article/5107']").attr('href','[@T[link:<relative path='~/hosting/website-builder/how-to-build-a-website' secure='true' />]@T]');
+      
+        $("a[href='http://support.godaddy.com/help/article/4026']").text("What are Website Templates?");
+        $("a[href='http://support.godaddy.com/help/article/4026']").attr('data-ci','94987');
+        $("a[href='http://support.godaddy.com/help/article/4026']").removeAttr("target");
+        $("a[href='http://support.godaddy.com/help/article/4026']").attr('href','[@T[link:<relative path='~/hosting/website-builder/website-template' secure='true' />]@T]');
+      
+        $("a[href='http://support.godaddy.com/help/article/3503?ci=75947']").text("Tips to Build a Website.");
+        $("a[href='http://support.godaddy.com/help/article/3503?ci=75947']").attr("data-ci","95153");
+        $("a[href='http://support.godaddy.com/help/article/3503?ci=75947']").removeAttr("target");
+        $("a[href='http://support.godaddy.com/help/article/3503?ci=75947']").attr("href","[@T[link:<relative path='~/hosting/website-builder/build-a-website' secure='true' />]@T]");
+      
+        $(".ep-wsb-how-to-publish-a-website-faq").html(
+          "Want to see how easy it is to get a website online? Check out <a href=\"[@T[link:<relative path='~/hosting/website-builder/how-to-publish-a-website' secure='true'><param name='ci' value='95087' /></relative>]@T]\">How to Publish a Website</a>."
+        );    
+      });
+      ##endif  
       function disclaimersModal() {
-        $('#disclaimersModal').sfDialog();
+        $('#disclaimersModal').sfDialog({buttons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }] });
       }
       ##if(activeLanguageAny([en-us]))
         var loadReviews = function(){

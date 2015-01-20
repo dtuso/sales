@@ -59,9 +59,15 @@ mixin renderMidPageNav(options)
       });
       $(window).scroll(function () {
         var scroll = $(this).scrollTop();
-        var fix = ($(this).scrollTop() > pos) ? true : false;
+        var fix = ($(this).scrollTop()+2 > pos) ? true : false;
         nav.toggleClass("sticky", fix);
         $('body').toggleClass("fix-body", fix);
+        if(!fix){
+          $('.mid-page-nav a').each(function(){
+            $(this).blur();
+            $(this).toggleClass("active",fix);
+          });
+        }
 
         if(fix){
           $.each(sections,function(index,value){

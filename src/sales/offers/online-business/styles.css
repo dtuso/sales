@@ -56,6 +56,13 @@
   color:#666;
 }
 
+.vat-price-disclaimer {
+  font-size: 14px;
+  font-weight: normal;
+  margin-top: -10px;
+  margin-bottom: -10px;
+}
+
 .bg-white {
     background-color: #fff;
 }
