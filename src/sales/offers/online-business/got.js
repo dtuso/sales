@@ -232,7 +232,7 @@ function tokenizeTheDataTokenizeAttribute() {
   });
 }
 
-function tokenizeDisclaimerModals() {git
+function tokenizeDisclaimerModals() {
 
   var tokenizeDisclaimerModal = function(selector, price0, price1) {
     $(selector).each(function(idx, modal) {
