@@ -116,24 +116,24 @@ block marquee
   section#marquee
     include ./web-hosting/_marquee-en-us.jade
   | 
-  |##elseif(activeLanguageAny(es))
+  |##elseif(countrySiteAny(ar,br,cl,co,mx,pe,ve))
   | 
   section#marquee 
     include ./web-hosting/_marquee-lam.jade
   | 
-  |##elseif(activeLanguageAny([en-GB]))
+  |##elseif(countrySiteAny(be,dk,de,es,fr,ie,it,nl,no,at,pl,pt,ch,za,fi,se,tr,uk,gr,ru,ua))
   | 
   section#marquee 
     include ./web-hosting/_marquee-emea.jade
   | 
-  |##elseif(activeLanguageAny([en-IN]))
+  |##elseif(countrySiteAny(in,pk))
   | 
   append vars
     -lightText = true;
   section#marquee 
     include ./web-hosting/_marquee-inpk.jade
   | 
-  |##elseif(activeLanguageAny([en-MY]))
+  |##elseif(countrySiteAny(my,ph,sg))
   | 
   section#marquee 
     include ./web-hosting/_marquee-asia.jade
@@ -251,6 +251,9 @@ block sections
   +renderMidPageNav
     +priceBlock('[@T[productprice:<current productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]', "month", "#planTileOne")
 
+  //- section#test
+  //-   button.btn.btn-default-dark.view-all.btn-md(data-toggle='bsModal', data-target='#g-modal') [@L[cds.sales/gd/hosting/website-builder:sb_view_templates]@L]
+  //-   include ../../templates/wsb-templates.html
   section#one-click-install.features.tile-section.one-click-wrapper
     .container
       .row

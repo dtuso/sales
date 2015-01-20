@@ -1462,7 +1462,7 @@ h2.marquee-product-name,
         </div>
       </div>
     </section> 
-    ##elseif(activeLanguageAny(es))
+    ##elseif(countrySiteAny(ar,br,cl,co,mx,pe,ve))
      
     <section id="marquee"> 
       <atlantis:webstash type="css">
@@ -2365,7 +2365,7 @@ h2.marquee-product-name,
         </div>
       </div>
     </section> 
-    ##elseif(activeLanguageAny([en-GB]))
+    ##elseif(countrySiteAny(be,dk,de,es,fr,ie,it,nl,no,at,pl,pt,ch,za,fi,se,tr,uk,gr,ru,ua))
      
     <section id="marquee"> 
       <atlantis:webstash type="css">
@@ -3268,7 +3268,7 @@ h2.marquee-product-name,
         </div>
       </div>
     </section> 
-    ##elseif(activeLanguageAny([en-IN]))
+    ##elseif(countrySiteAny(in,pk))
      
     <section id="marquee"> 
       <atlantis:webstash type="css">
@@ -4171,7 +4171,7 @@ h2.marquee-product-name,
         </div>
       </div>
     </section> 
-    ##elseif(activeLanguageAny([en-MY]))
+    ##elseif(countrySiteAny(my,ph,sg))
      
     <section id="marquee"> 
       <atlantis:webstash type="css">
