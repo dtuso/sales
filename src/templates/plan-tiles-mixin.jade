@@ -3,11 +3,7 @@
 - var plansPanelColumnsPopulated
 - var hasIncludedPlanTilesMixinCss = false
 
-if(hasIncludedPlanTilesMixinCss === false) 
-  - hasIncludedPlanTilesMixinCss = true
-  atlantis:webstash(type="css")
-    style
-      include:css ./styles/plan-tiles.css
+
 
 mixin planTile(planid)
   case plansPanelTotalColumns
@@ -49,6 +45,12 @@ mixin renderPlanTiles(columns, options)
     - containerClass = "plan-container"
   else
     - containerClass = "container"
+    
+  if(!hasIncludedPlanTilesMixinCss ) 
+    - hasIncludedPlanTilesMixinCss = true
+    atlantis:webstash(type="css")
+      style
+        include:css ./styles/plan-tiles.css
 
   div(class="pro-plans-wrap #{options.backgroundColor}")
     #plans(class="#{containerClass} pro-plans", data-icode="#{options.icode}")

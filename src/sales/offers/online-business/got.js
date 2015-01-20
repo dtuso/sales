@@ -250,6 +250,8 @@ function wireupModals() {
 
   // wire up see details links
   var marqueeModalId = got1Page.canOfferOls ? "#default-marquee-details-modal" : "#default-marquee-details-modal-wsb-only";
+  
+  $('#default-marquee-view').find('.see-details-disclaimer-link').attr('data-ci', got1Page.canOfferOls ? "95734" : "95736");
   $('#default-marquee-view').on('click', '.see-details-disclaimer-link', function(){
     var $modal = $(marqueeModalId);
     $modal.sfDialog({buttons: got1Page.sfDialogErrorButtons});
