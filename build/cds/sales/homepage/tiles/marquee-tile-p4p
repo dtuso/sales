@@ -59,7 +59,7 @@
 }
 
 </style>
-<div data-url="[@T[link:<relative path='p4p/questions-config'><param name='ci' value='11111' /><param name='p4p' value='confusing' /></relative>]@T]" data-ci='95742' class="tile marquee-tile-p4p">
+<div data-url="[@T[link:<relative path='p4p/questions-config'><param name='ci' value='11111' /><param name='p4p' value='confusing' /></relative>]@T]" data-ci='95742' data-svg-fallback="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/p4p-man.png" class="tile marquee-tile-p4p">
   <div class="tile-content-wrapper">
     <div class="container">
       <div class="row">

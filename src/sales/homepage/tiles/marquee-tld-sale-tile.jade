@@ -4,6 +4,7 @@ append vars
   - tldSaleTileParam = tldSaleTileParam || {};
   - tldSaleTileParam.tld = tld || "";
   - tldSaleTileParam.logo = logo || "";
+  - tldSaleTileParam.logoFallback = logoFallback || "";
   - tldSaleTileParam.pfid = pfid || "";
   - tldSaleTileParam.promo = promo || "";
   - tldSaleTileParam.bodyText = bodyText || "";
@@ -23,6 +24,7 @@ block append tileStyles
 block tileContent
   .clearfix
     .header-text.walsheim-black [@T[productprice:<current productid="#{tldSaleTileParam.pfid}" period="yearly" promocode="#{tldSaleTileParam.promo}" htmlsymbol="false" />]@T]
-    img(src!=tldSaleTileParam.logo class=tldSaleTileParam.logoClass)
+    if(tldSaleTileParam.logo)
+      img(src!=tldSaleTileParam.logo class=tldSaleTileParam.logoClass data-svg-fallback!=tldSaleTileParam.logoFallback)
   .body.walsheim-medium #{tldSaleTileParam.bodyText}
   .restrictions-text.walsheim-regular #{tldSaleTileParam.restrictionsText}

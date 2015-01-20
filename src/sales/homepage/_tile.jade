@@ -3,9 +3,10 @@ block vars
   - ctaText = ctaText || "";
   - dataCi = dataCi || "";
   - containerClass = containerClass || "";
+  - logoImageFallback = logoImageFallback || "";
 
 block tileStyles
 
-.tile(data-url!=ctaLink data-ci=dataCi class=containerClass)
+.tile(data-url!=ctaLink data-ci=dataCi class=containerClass data-svg-fallback!=logoImageFallback)
   .tile-content-wrapper
     block tileContent
