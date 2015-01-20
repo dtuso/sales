@@ -384,6 +384,8 @@ function wireupModals() {
 
   // wire up see details links
   var marqueeModalId = got1Page.canOfferOls ? "#default-marquee-details-modal" : "#default-marquee-details-modal-wsb-only";
+  
+  $('#default-marquee-view').find('.see-details-disclaimer-link').attr('data-ci', got1Page.canOfferOls ? "95734" : "95736");
   $('#default-marquee-view').on('click', '.see-details-disclaimer-link', function(){
     var $modal = $(marqueeModalId);
     $modal.sfDialog({buttons: got1Page.sfDialogErrorButtons});
@@ -856,7 +858,7 @@ function getParameterByName(name) {
 
 #marquee h3.get-a-domain-text,
 #step2-choose-product h3.choose-header {
-  font-family: "Walsheim";
+  font-family: "Walsheim-Regular";
   font-size: 24px; 
   color: #232323;
   font-weight: bold;
@@ -913,6 +915,387 @@ h2.api-error-header img {
 
 h2.api-error-header {
 
+}
+    </style>
+    <style>
+.plan-tile { 
+  margin-top: -145px; 
+  margin-bottom: 20px;
+}
+.sf-droplist-msg {
+  text-align: inherit;
+}
+.pro-plans {
+    margin-top: 0px;
+    padding-bottom: 80px;
+}
+
+.pro-plans .tld-col-title {
+    text-transform: uppercase;
+}
+
+.pro-plans .non-input-group {
+    margin-bottom: 10px;
+}
+
+.pro-plans .non-input-group .form-control {
+    border: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    font-family: 'Walsheim-Black';
+    font-size: 30px;
+    font-size: 3rem;
+    padding: 4px 20px;
+    height: 44px;
+    line-height: 1;
+    color: #333333;
+}
+
+.pro-plans .sub-plan-text {
+    margin-top: 30px;
+    margin-bottom: -30px;
+}
+
+.pro-plans h2 {
+    margin-top: 0;
+}
+
+.pro-plans h2.domains-plans-mid-title {
+    margin: 40px 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .pro-plans {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
+
+.pro-plans.plan-container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.pro-plans.plan-container:before,
+.pro-plans.plan-container:after {
+    content: " ";
+  /* 1 */
+    display: table;
+  /* 2 */
+}
+
+.pro-plans.plan-container:after {
+    clear: both;
+}
+
+@media only screen and (max-width: 1535px) {
+    .pro-plans.plan-container {
+        max-width: 1170px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .pro-plans.plan-container {
+        max-width: 970px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .pro-plans.plan-container {
+        max-width: 750px;
+    }
+}
+
+.pro-plans.plan-container .plan-col-15 {
+    width: 20%;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@media only screen and (max-width: 1535px) {
+    .pro-plans.plan-container .plan-col-15 {
+        width: 33.3333%;
+    }
+
+    .pro-plans.plan-container .plan-col-15:nth-child(4n) {
+        border: 0;
+        margin-left: 16.66666666667%;
+        clear: left;
+    }
+
+    .pro-plans.plan-container .plan-col-15:nth-child(1) {
+        border: 0;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .pro-plans.plan-container .plan-col-15 {
+        width: 50%;
+    }
+
+    .pro-plans.plan-container .plan-col-15:nth-child(4n) {
+        clear: none;
+        margin-left: 0;
+    }
+
+    .pro-plans.plan-container .plan-col-15:nth-child(3) {
+        clear: left;
+        border-left: 0;
+    }
+
+    .pro-plans.plan-container .plan-col-15:nth-child(5) {
+        clear: left;
+        border-left: 0;
+        margin-left: 25%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .pro-plans.plan-container .plan-col-15 {
+        width: 100%;
+        border: 0;
+        clear: none;
+        float: none;
+    }
+
+    .pro-plans.plan-container .plan-col-15:nth-child(5) {
+        margin-left: 0;
+    }
+}
+
+.pro-plans.plan-container .plan-col-2 {
+    width: 16.66666666667%;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@media only screen and (max-width: 1535px) {
+    .pro-plans.plan-container .plan-col-2 {
+        width: 33.3333%;
+    }
+
+    .pro-plans.plan-container .plan-col-2:nth-child(4n) {
+        border: 0;
+        clear: left;
+    }
+
+    .pro-plans.plan-container .plan-col-2:nth-child(1) {
+        border-left: 0;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .pro-plans.plan-container .plan-col-2 {
+        width: 50%;
+    }
+
+    .pro-plans.plan-container .plan-col-2:nth-child(4n) {
+        clear: none;
+    }
+
+    .pro-plans.plan-container .plan-col-2:nth-child(3) {
+        clear: left;
+        border-left: 0;
+    }
+
+    .pro-plans.plan-container .plan-col-2:nth-child(5) {
+        clear: left;
+        border-left: 0;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .pro-plans.plan-container .plan-col-2 {
+        width: 100%;
+        border: 0;
+        clear: none;
+        float: none;
+    }
+}
+
+.pro-plans .pro-plan-wrap {
+    border-top: 10px solid #008a32;
+    padding: 40px;
+    background-color: #fff;
+    -webkit-box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
+}
+
+@media only screen and (max-width: 992px) {
+    .pro-plans .pro-plan-wrap {
+        padding: 40px 30px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .pro-plans .pro-plan-wrap {
+        margin-bottom: 40px;
+    }
+}
+
+.pro-plans .pro-plan-wrap .features-row {
+    margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+    .pro-plans .pro-plan-wrap .features-row {
+        margin-bottom: 0;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .pro-plans .pro-plan-wrap .features-row .col-sm-6 {
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .pro-plans .pro-plan-wrap .features-row .col-sm-6 img {
+        margin: 0 auto 20px;
+    }
+}
+
+.pro-plans .pro-plan-wrap .plan-flag {
+    color: #000;
+    font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;
+    font-size: 28px;
+    font-size: 2.8rem;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    line-height: 1;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMTgxLjggNjQuMiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTgxLjggNjQuMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cG9seWdvbiBmaWxsPSIjRkVEQzQ1IiBwb2ludHM9IjE3LDAgMCwyNC4yIDMsNTYgMTY0LjUsNjQuMiAxODEuOCw0My44IDE4MSw0LjMgIi8+DQo8L3N2Zz4NCg==) no-repeat center center;
+    background-size: cover;
+    overflow: visible;
+}
+
+.pro-plans .pro-plan-wrap .plan-flag:before {
+    content: '';
+}
+
+.plan-tile .plan-flag {
+    position: absolute;
+    top: -20px;
+    right: 30px;
+    color: #fff;
+    display: inline-block;
+    padding: 0 15px;
+    line-height: 2.5;
+}
+
+.pro-plans .pro-plan-wrap h6 {
+    margin-top: 0;
+}
+
+.pro-plans .pro-plan-wrap h2 {
+    margin-bottom: 14px;
+}
+
+.pro-plans .pro-plan-wrap .plan-title {
+    font-size: 30px;
+    font-size: 3rem;
+    margin-top: 0;
+    font-family: 'Walsheim-Bold';
+    text-transform: none;
+    word-wrap: break-word;
+    word-break: break-word;
+    white-space: -moz-pre-wrap;
+}
+
+.pro-plans .pro-plan-wrap .plan-subtitle {
+    color: #000 !important;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.pro-plans .pro-plan-wrap .plan-text {
+    min-height: 44px;
+    margin-bottom: 5px;
+}
+
+.pro-plans .pro-plan-wrap .plan-tile-top {
+    padding: 0px;
+}
+
+.pro-plans .pro-plan-wrap .plan-disclaimers {
+    font-size: 14px;
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+}
+
+.pro-plans .pro-plan-wrap .plan-price-wrap {
+    min-height: 92px;
+}
+
+.pro-plans .pro-plan-wrap .plan-price-wrap .plan-price {
+    font-size: 45px;
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: #ef6c0f;
+    font-family: 'Walsheim-Bold';
+}
+
+.pro-plans .pro-plan-wrap .plan-price-wrap .plan-duration {
+    font-size: 24px;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #ef6c0f;
+}
+
+.pro-plans .pro-plan-wrap .btn {
+    margin-bottom: 20px;
+}
+
+.pro-plans .pro-plan-wrap .plan-item {
+    border-top: 0 none;
+    min-height: 0;
+    padding: 5px 0;
+    text-align: left;
+    font-size: 16px;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+}
+.pro-plans .pro-plan-wrap .check-item {
+    border-top: 0 none;
+    min-height: 0;
+    text-align: left;
+    font-size: 16px;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+}
+
+.pro-plans .include-check {
+    position: relative;
+    padding-left: 45px;
+    margin-top: 20px;
+}
+
+.pro-plans .include-check:before {
+    content: "";
+    background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
+    background-position: 0 -668px;
+    background-size: 205px auto;
+    width: 25px;
+    height: 27px;
+    padding-right: 5px;
+    position: absolute;
+    left: 0;
+    top: -6px;
+}
+
+.pro-plans .sf-tipper-target {
+    background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
+    background-position: 0 -864px;
+    width: 15px;
+    height: 17px;
+    display: inline-block;
+    background-size: 205px auto;
+    vertical-align: baseline;
 }
     </style>
     <style>
@@ -1178,7 +1561,7 @@ h2.api-error-header {
               <div class="col-md-12 offer-search-box">
                 <div class="input-group">
                   <input type="text" placeholder="[@L[cds.sales/offers/online-business:32573-try-a-different-domain-name-placeholder]@L]" name="domainToCheck" autocomplete="off" maxlength="63" class="form-control input-lg search-form-input searchInput helveticafont"/><span class="input-group-btn">
-                    <button type="button" name="searchButton" data-ci="12346" class="btn btn-primary btn-lg offer-search-btn">[@L[cds.sales/offers/online-business:32573-search]@L]</button></span>
+                    <button type="button" name="searchButton" data-ci="95737" class="btn btn-primary btn-lg offer-search-btn">[@L[cds.sales/offers/online-business:32573-search]@L]</button></span>
                 </div>
               </div>
             </div>
@@ -1247,7 +1630,7 @@ h2.api-error-header {
               <div class="col-md-12 offer-search-box">
                 <div class="input-group">
                   <input type="text" placeholder="[@L[cds.sales/offers/online-business:32573-try-a-different-domain-name-placeholder]@L]" name="domainToCheck" autocomplete="off" maxlength="63" class="form-control input-lg search-form-input searchInput helveticafont"/><span class="input-group-btn">
-                    <button type="button" name="searchButton" data-ci="12347" class="btn btn-primary btn-lg offer-search-btn">[@L[cds.sales/offers/online-business:32573-search]@L]</button></span>
+                    <button type="button" name="searchButton" data-ci="95736" class="btn btn-primary btn-lg offer-search-btn">[@L[cds.sales/offers/online-business:32573-search]@L]</button></span>
                 </div>
               </div>
             </div>
@@ -1261,7 +1644,7 @@ h2.api-error-header {
             <div class="row">
               <h4 class="other-domains-heading-text">[@L[cds.sales/offers/online-business:32573-here-are-some-others]@L]</h4>
               <h6 class="results-list-heading-text">[@L[cds.sales/offers/online-business:32573-number-of-number-results]@L] 
-                <button class="btn btn-link view-all-button">[@L[cds.sales/offers/online-business:32573-view-all-results]@L]</button>
+                <button data-ci="95269" class="btn btn-link view-all-button">[@L[cds.sales/offers/online-business:32573-view-all-results]@L]</button>
               </h6>
             </div>
             <div id="spin-results"></div>
@@ -1275,7 +1658,7 @@ h2.api-error-header {
                         <h2 class="domain-name-display-tld"></h2>
                       </div>
                       <div class="col-md-4 col-sm-12 text-right">
-                        <button class="btn btn-primary select-and-continue spin-results-message">[@L[cds.sales/offers/online-business:32573-select-and-continue-button]@L]</button>
+                        <button data-ci="95267" class="btn btn-primary select-and-continue spin-results-message">[@L[cds.sales/offers/online-business:32573-select-and-continue-button]@L]</button>
                         <div class="spin-results-message checking-availability">[@L[cds.sales/offers/online-business:32573-checking-availability]@L]</div>
                         <div class="spin-results-message now-unavailable">[@L[cds.sales/offers/online-business:32573-domain-no-longer-available]@L]</div>
                       </div>
@@ -1285,7 +1668,7 @@ h2.api-error-header {
               </div>
             </div>
             <div id="show-more-section">
-              <h6 class="text-center"><span class="clickable-show-more">[@L[cds.sales/offers/online-business:32573-see-more-results]@L]<span class="show-more-arrow"></span></span></h6>
+              <h6 class="text-center"><span data-ci="95268" class="clickable-show-more">[@L[cds.sales/offers/online-business:32573-see-more-results]@L]<span class="show-more-arrow"></span></span></h6>
             </div>
           </div>
         </div>
@@ -1841,14 +2224,14 @@ h2.api-error-header {
                 <h4 class="headline-primary">[@L[cds.sales/offers/online-business:32573-choose-wsb-all-this-for-just-text]@L]</h4>
                 <div data-tokenize="[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T]" class="plan-price-wrap">[@L[cds.sales/offers/online-business:32573-choose-wsb-all-this-for-just-price]@L]</div>
                 <div data-tokenize="[@T[multipleproductprice:<list productidlist="464069|101|7524" period="monthly" promocode="0" />]@T]" class="plan-inline-disclaimer">[@L[cds.sales/offers/online-business:32573-choose-wsb-text-price-disclaimer]@L] 
-                  <button class="btn-link see-wsb-disclaimer-link">[@L[cds.sales/offers/online-business:32573-choose-wsb-text-price-disclaimer-link]@L]</button> 
+                  <button data-ci="95736" class="btn-link see-wsb-disclaimer-link">[@L[cds.sales/offers/online-business:32573-choose-wsb-text-price-disclaimer-link]@L]</button> 
                   ##if(countrySiteAny(uk))
                    
                   <div>[@L[cds.sales/offers/online-business:32573-vat-excludes-price-percentage]@L]</div> 
                   ##endif
                    
                 </div>
-                <button class="btn btn-md btn-block btn-purchase product-wsb">[@L[cds.sales/offers/online-business:32573-choose-select-button]@L]</button>
+                <button data-ci="95741" class="btn btn-md btn-block btn-purchase product-wsb">[@L[cds.sales/offers/online-business:32573-choose-select-button]@L]</button>
                 <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-choose-wsb-bullet-1]@L]</div>
                 <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-choose-wsb-bullet-2]@L]</div>
                 <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-choose-wsb-bullet-3]@L]</div>
@@ -1862,14 +2245,14 @@ h2.api-error-header {
                 <h4 class="headline-primary">[@L[cds.sales/offers/online-business:32573-choose-ols-all-this-for-just-text]@L]</h4>
                 <div data-tokenize="[@T[multipleproductprice:<current productidlist="464069|101|40972" period="monthly" promocode="75315678" />]@T]" class="plan-price-wrap">[@L[cds.sales/offers/online-business:32573-choose-ols-all-this-for-just-price]@L]</div>
                 <div data-tokenize="[@T[multipleproductprice:<list productidlist="464069|101|40972" period="monthly" promocode="0" />]@T]" class="plan-inline-disclaimer">[@L[cds.sales/offers/online-business:32573-choose-ols-text-price-disclaimer]@L] 
-                  <button class="btn-link see-ols-disclaimer-link">[@L[cds.sales/offers/online-business:32573-choose-ols-text-price-disclaimer-link]@L]</button> 
+                  <button data-ci="95735" class="btn-link see-ols-disclaimer-link">[@L[cds.sales/offers/online-business:32573-choose-ols-text-price-disclaimer-link]@L]</button> 
                   ##if(countrySiteAny(uk))
                    
                   <div>[@L[cds.sales/offers/online-business:32573-vat-excludes-price-percentage]@L]</div> 
                   ##endif
                    
                 </div>
-                <button class="btn btn-md btn-block btn-purchase product-ols">[@L[cds.sales/offers/online-business:32573-choose-select-button]@L]</button>
+                <button data-ci="95740" class="btn btn-md btn-block btn-purchase product-ols">[@L[cds.sales/offers/online-business:32573-choose-select-button]@L]</button>
                 <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-choose-ols-bullet-1]@L]</div>
                 <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-choose-ols-bullet-2]@L]</div>
                 <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-choose-ols-bullet-3]@L]</div>
@@ -2011,7 +2394,7 @@ h2.api-error-header {
           <div class="col-sm-6 col-sm-push-3 text-center disclaimer-mark"> 
             <div data-tokenize="[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T]" class="headline-primary">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price]@L] </div>
             <p data-tokenize="[@T[multipleproductprice:<list productidlist="464069|101|7524" period="monthly" promocode="0" />]@T]" class="disclaimer">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price-disclaimer]@L] 
-              <button class="btn-link see-wsb-disclaimer-link">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price-disclaimer-link]@L]</a></button> 
+              <button data-ci="95736" class="btn-link see-wsb-disclaimer-link">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price-disclaimer-link]@L]</a></button> 
               ##if(countrySiteAny(uk))
                
               <div class="vat-price-disclaimer">[@L[cds.sales/offers/online-business:32573-vat-excludes-price-percentage]@L]</div> 
@@ -2022,12 +2405,12 @@ h2.api-error-header {
         </div>
         <div class="row">
           <div class="col-sm-12 button-margin">
-            <button id="wsb-only-video-btn" class="btn btn-md btn-block btn-primary"><img class="video-play-icon" src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_play_icon_small.png" /> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]</button>
+            <button id="wsb-only-video-btn" data-ci="95266" class="btn btn-md btn-block btn-primary"><img class="video-play-icon" src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_play_icon_small.png" /> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]</button>
           </div>
         </div>
         <div class="row">
           <div class="col-sm-12 button-margin">
-            <button id="wsb-only-designs-btn" data-toggle="bsModal" data-target="#g-modal" class="btn btn-md btn-block btn-primary">[@L[cds.sales/offers/online-business:32573-view-designs-button]@L]</button>
+            <button id="wsb-only-designs-btn" data-ci="95266" data-toggle="bsModal" data-target="#g-modal" class="btn btn-md btn-block btn-primary">[@L[cds.sales/offers/online-business:32573-view-designs-button]@L]</button>
             <button data-toggle="bsModal" data-target="#g-modal" style="display: none;" class="btn btn-primary view-all btn-lg">
               <p> <style>
   #faqSlider{margin:20px 0}#faqSlider .gd-swipe{box-sizing:border-box;border:1px solid #ededed;background-color:#ededed;color:#595959;margin:0 auto;position:relative;width:1000px}#faqSlider .gd-swipe-wrap .gd-swipe-item{box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;padding:40px 70px 50px;line-height:1.5;*width:860px!important}
@@ -4544,7 +4927,7 @@ var PlanBox6UI = {
                       <div class="row text-center disclaimer-mark"> 
                         <div data-tokenize="[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T]" class="headline-primary">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price]@L] </div>
                         <p data-tokenize="[@T[multipleproductprice:<list productidlist="464069|101|7524" period="monthly" promocode="0" />]@T]" class="disclaimer">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price-disclaimer]@L] 
-                          <button class="btn-link see-wsb-disclaimer-link">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price-disclaimer-link]@L]</a></button> 
+                          <button data-ci="95736" class="btn-link see-wsb-disclaimer-link">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price-disclaimer-link]@L]</a></button> 
                           ##if(countrySiteAny(uk))
                            
                           <div class="vat-price-disclaimer">[@L[cds.sales/offers/online-business:32573-vat-excludes-price-percentage]@L]</div> 
@@ -4554,12 +4937,12 @@ var PlanBox6UI = {
                       </div>
                       <div class="row">
                         <div class="col-sm-12 button-margin">
-                          <button id="wsb-video-btn" data-ci="95270" class="btn btn-md btn-block btn-primary"><img class="video-play-icon" src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_play_icon_small.png" /> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]</button>
+                          <button id="wsb-video-btn" data-ci="95266" class="btn btn-md btn-block btn-primary"><img class="video-play-icon" src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_play_icon_small.png" /> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]</button>
                         </div>
                       </div>
                       <div class="row">
                         <div class="col-sm-12 button-margin">
-                          <button id="wsb-designs-btn" data-toggle="bsModal" data-target="#g-modal" class="btn btn-md btn-block btn-primary">[@L[cds.sales/offers/online-business:32573-view-designs-button]@L]</button>
+                          <button id="wsb-designs-btn" data-ci="95266" data-toggle="bsModal" data-target="#g-modal" class="btn btn-md btn-block btn-primary">[@L[cds.sales/offers/online-business:32573-view-designs-button]@L]</button>
                           <button data-toggle="bsModal" data-target="#g-modal" style="display: none;" class="btn btn-primary view-all btn-lg"></button>
                           <p> <style>
   #faqSlider{margin:20px 0}#faqSlider .gd-swipe{box-sizing:border-box;border:1px solid #ededed;background-color:#ededed;color:#595959;margin:0 auto;position:relative;width:1000px}#faqSlider .gd-swipe-wrap .gd-swipe-item{box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;padding:40px 70px 50px;line-height:1.5;*width:860px!important}
@@ -6771,7 +7154,7 @@ var PlanBox6UI = {
                       <div class="row text-center disclaimer-mark"> 
                         <div data-tokenize="[@T[multipleproductprice:<current productidlist="464069|101|40972" period="monthly" promocode="75315678" />]@T]" class="headline-primary">[@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price]@L] </div>
                         <p data-tokenize="[@T[multipleproductprice:<list productidlist="464069|101|40972" period="monthly" promocode="0" />]@T]" class="disclaimer">[@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price-disclaimer]@L] 
-                          <button class="btn-link see-ols-disclaimer-link">[@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price-disclaimer-link]@L]</button> 
+                          <button data-ci="95735" class="btn-link see-ols-disclaimer-link">[@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price-disclaimer-link]@L]</button> 
                           ##if(countrySiteAny(uk))
                            
                           <div class="vat-price-disclaimer">[@L[cds.sales/offers/online-business:32573-vat-excludes-price-percentage]@L]</div> 
@@ -6781,12 +7164,12 @@ var PlanBox6UI = {
                       </div>
                       <div class="row">
                         <div class="col-sm-12 button-margin">
-                          <button id="ols-video-btn" class="btn btn-md btn-block btn-primary"><img class="video-play-icon" src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_play_icon_small.png" /> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]</button>
+                          <button id="ols-video-btn" data-ci="95266" class="btn btn-md btn-block btn-primary"><img class="video-play-icon" src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_play_icon_small.png" /> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]</button>
                         </div>
                       </div>
                       <div class="row">
                         <div class="col-sm-12 button-margin">
-                          <button id="ols-stores-btn" class="btn btn-md btn-block btn-primary">[@L[cds.sales/offers/online-business:32573-see-real-stores-button]@L]</button>
+                          <button id="ols-stores-btn" data-ci="95266" class="btn btn-md btn-block btn-primary">[@L[cds.sales/offers/online-business:32573-see-real-stores-button]@L]</button>
                         </div>
                       </div>
                       <div class="row">
@@ -7295,15 +7678,15 @@ top: -6px;
               <div class="carousel-container container">
                 <div id="carousel-ols-stores" data-ride="carousel" data-interval="false" class="carousel slide">
                   <ol class="carousel-indicators">
-                    <li data-target="#carousel-ols-stores" data-slide-to="0"></li>
-                    <li data-target="#carousel-ols-stores" data-slide-to="1"></li>
-                    <li data-target="#carousel-ols-stores" data-slide-to="2"></li>
-                    <li data-target="#carousel-ols-stores" data-slide-to="3"></li>
+                    <li data-target="#carousel-ols-stores" data-slide-to="0" data-ci="95263"></li>
+                    <li data-target="#carousel-ols-stores" data-slide-to="1" data-ci="95263"></li>
+                    <li data-target="#carousel-ols-stores" data-slide-to="2" data-ci="95263"></li>
+                    <li data-target="#carousel-ols-stores" data-slide-to="3" data-ci="95263"></li>
                   </ol>
                   <div class="carousel-inner">
                           <div class="item">
                             <div class="item-wrapper">
-                              <div data-icode="" class="carousel-panel container">
+                              <div data-icode="" data-ci="95265" class="carousel-panel container">
                                 <div class="row">
                                   <div class="col-sm-12">
                                     <div class="customer-slide slide-2"></div>
@@ -7325,7 +7708,7 @@ top: -6px;
                           </div>
                           <div class="item">
                             <div class="item-wrapper">
-                              <div data-icode="" class="carousel-panel container">
+                              <div data-icode="" data-ci="95265" class="carousel-panel container">
                                 <div class="row">
                                   <div class="col-sm-12">
                                     <div class="customer-slide slide-3"></div>
@@ -7347,7 +7730,7 @@ top: -6px;
                           </div>
                           <div class="item">
                             <div class="item-wrapper">
-                              <div data-icode="" class="carousel-panel container">
+                              <div data-icode="" data-ci="95265" class="carousel-panel container">
                                 <div class="row">
                                   <div class="col-sm-12">
                                     <div class="customer-slide slide-4"></div>
@@ -7369,7 +7752,7 @@ top: -6px;
                           </div>
                           <div class="item">
                             <div class="item-wrapper">
-                              <div data-icode="" class="carousel-panel container">
+                              <div data-icode="" data-ci="95265" class="carousel-panel container">
                                 <div class="row">
                                   <div class="col-sm-12">
                                     <div class="customer-slide slide-1"></div>
@@ -7385,7 +7768,7 @@ top: -6px;
                               </div>
                             </div>
                           </div>
-                  </div><a href="#carousel-ols-stores" data-slide="prev" class="left carousel-control"><span class="carousel-icon arrow-left-icon"></span></a><a href="#carousel-ols-stores" data-slide="next" class="right carousel-control"><span class="carousel-icon arrow-right-icon"></span></a>
+                  </div><a href="#carousel-ols-stores" data-slide="prev" data-ci="95262" class="left carousel-control"><span class="carousel-icon arrow-left-icon"></span></a><a href="#carousel-ols-stores" data-slide="next" class="right carousel-control"><span data-ci="95264" class="carousel-icon arrow-right-icon"></span></a>
                 </div>
                 <script>
                   $('.carousel .carousel-indicators li:first-child').addClass("active");

@@ -743,7 +743,7 @@ text-transform: uppercase;
               <div class="container relative-position video-info">
                 <div class="row">
                   <div class="col-sm-10 col-sm-offset-1 col-xs-12 video-marquee-all-centered"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rb-play-button.png" class="play-button"/>
-                    <h4>Will Buddy find his way home?</h4><span class="cta">WATCH VIDEO</span>
+                    <h3 class="h1">Will Buddy find his way home?</h3><span class="cta">WATCH VIDEO</span>
                   </div>
                 </div>
               </div>
