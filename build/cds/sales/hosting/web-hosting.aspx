@@ -6766,7 +6766,7 @@ h2.marquee-product-name,
                 ##endif
                  
               </div>
-              <button id="product-D" data-tcode="undefined" data-plan="host_GridHostEcoDiabloLin1Yr_us" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+              <button id="product-D" data-tcode="undefined" data-plan="host_GridHostStrDiabloLin1Yr_in" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
               <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:oneWeb]@L]</strong></div>
               <div class="plan-item"><strong>[@L[cds.sales/gd/hosting/web-hosting:starter-plan-storage]@L]</strong></div>
               <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedBand]@L]</strong></div>
