@@ -132,7 +132,14 @@
       
     </script>
     <link href="[@T[link:<cssroot />]@T]/fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css">
-    <style>h2{
+    <style>h1 {
+  text-transform: uppercase;
+  font-family: 'Walsheim-Black';
+  font-size: 20px;
+  color: #333;
+}
+
+h2{
   margin-bottom: 40px;
   margin-top: 0;
   font-size: 4rem;
@@ -458,6 +465,68 @@ cursor: pointer;
   cursor: pointer;
 }
 
+.compareButtons {
+  height: 54px;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 11px;
+}
+
+.compareButtons.leftActive {
+    background-image:url([@T[link:<imageroot />]@T]fos/mike/img/hosting/img-toggle-cpanel.png); 
+}
+
+.compareButtons.rightActive {
+    background-image:url([@T[link:<imageroot />]@T]fos/mike/img/hosting/img-toggle-parallels.png); 
+}
+
+.compareButtons a {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: 'Walsheim-Black';
+  font-size: 20px;
+}
+
+.compareButtons .activeButton a {
+  color: #088A44;
+}
+
+.compareButtons .inactiveButton a {
+  color: #666666;
+}
+
+.compareButtonsLeft {
+  width: 180px;
+}
+.compareButtonsRight {
+  width: 180px;
+}
+
+
+
+@media (min-width: 1200px) {
+  .compareButtons {
+    padding-left: 395px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .compareButtons {
+    padding-left: 290px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .compareButtons {
+    padding-left: 180px;
+  }
+}
+
+@media (max-width: 767px) {
+  .compareButtons {
+    padding-left: 25px;
+  }
+}
     </style><!--[if lt IE 9]>
     <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
     <link href="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy.min.html" id="respond-proxy" rel="respond-proxy">
@@ -484,6 +553,7 @@ cursor: pointer;
     <!-- HEADERBEGIN--> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- HEADEREND-->
+    <!-- nothing to see here-->
      
     ##if(activeLanguageAny([en-US]))
      
@@ -1376,6 +1446,7 @@ h2.marquee-product-name,
                 <div class="row">
                   <div class="col-md-7 col-sm-12">
                     <div class="marquee-pro-left-text">
+                            <h1 class="marquee-product-name">[@L[cds.sales/gd/hosting/web-hosting:web-hosting-11166]@L]</h1>
                             <h2 class="marquee-product-description">HOSTING THAT'S MORE RELIABLE THAN YOUR BEAN ROASTING <span style='letter-spacing:-.5rem;'>----------------</span> PLAID SHIRT</h2>
                             <div class="marquee-product-text">[@L[cds.sales/hosting/web-hosting-rebrand:guaranteeText1Rebrand]@L] [@L[cds.sales/hosting/web-hosting-rebrand:guaranteeText2Rebrand]@L] </br> [@L[cds.sales/hosting/web-hosting-rebrand:guaranteeText3Rebrand]@L]</div><a href="[@T[link:<relative path='~/hosting/web-hosting-config-new.aspx' secure='true'><param name='ci' value='89262' /><param name='plan' value='host_GridHostEcoDiabloLin1Yr_us' /></relative>]@T]" class="btn btn-primary jump-arrow-btn">[@L[cds.sales/hosting/web-hosting-rebrand:getstarted]@L]</a>
                     </div>
@@ -2278,6 +2349,7 @@ h2.marquee-product-name,
                 <div class="row">
                   <div class="col-md-7 col-sm-12">
                     <div class="marquee-pro-left-text">
+                            <h1 class="marquee-product-name">[@L[cds.sales/gd/hosting/web-hosting:web-hosting-11166]@L]</h1>
                             <h2 class="marquee-product-description">[@L[cds.sales/hosting/web-hosting-rebrand:marquee]@L]</h2>
                             <div class="marquee-product-text">[@L[cds.sales/hosting/web-hosting-rebrand:guaranteeText1]@L] [@L[cds.sales/hosting/web-hosting-rebrand:guaranteeText2]@L]</div><a href="[@T[link:<relative path='~/hosting/web-hosting-config-new.aspx' secure='true'><param name='ci' value='89262' /><param name='plan' value='host_GridHostEcoDiabloLin1Yr_us' /></relative>]@T]" class="btn btn-primary jump-arrow-btn">[@L[cds.sales/hosting/web-hosting-rebrand:getstarted]@L]</a>
                     </div>
@@ -2292,387 +2364,6 @@ h2.marquee-product-name,
     ##endif
      
     <section id="plans">
-      <style>
-.plan-tile { 
-  margin-top: -145px; 
-  margin-bottom: 20px;
-}
-.sf-droplist-msg {
-  text-align: inherit;
-}
-.pro-plans {
-    margin-top: 0px;
-    padding-bottom: 80px;
-}
-
-.pro-plans .tld-col-title {
-    text-transform: uppercase;
-}
-
-.pro-plans .non-input-group {
-    margin-bottom: 10px;
-}
-
-.pro-plans .non-input-group .form-control {
-    border: none;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-    font-family: 'Walsheim-Black';
-    font-size: 30px;
-    font-size: 3rem;
-    padding: 4px 20px;
-    height: 44px;
-    line-height: 1;
-    color: #333333;
-}
-
-.pro-plans .sub-plan-text {
-    margin-top: 30px;
-    margin-bottom: -30px;
-}
-
-.pro-plans h2 {
-    margin-top: 0;
-}
-
-.pro-plans h2.domains-plans-mid-title {
-    margin: 40px 0;
-}
-
-@media only screen and (max-width: 768px) {
-    .pro-plans {
-        padding-top: 40px;
-        padding-bottom: 40px;
-    }
-}
-
-.pro-plans.plan-container {
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-.pro-plans.plan-container:before,
-.pro-plans.plan-container:after {
-    content: " ";
-  /* 1 */
-    display: table;
-  /* 2 */
-}
-
-.pro-plans.plan-container:after {
-    clear: both;
-}
-
-@media only screen and (max-width: 1535px) {
-    .pro-plans.plan-container {
-        max-width: 1170px;
-    }
-}
-
-@media only screen and (max-width: 1200px) {
-    .pro-plans.plan-container {
-        max-width: 970px;
-    }
-}
-
-@media only screen and (max-width: 992px) {
-    .pro-plans.plan-container {
-        max-width: 750px;
-    }
-}
-
-.pro-plans.plan-container .plan-col-15 {
-    width: 20%;
-    float: left;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-@media only screen and (max-width: 1535px) {
-    .pro-plans.plan-container .plan-col-15 {
-        width: 33.3333%;
-    }
-
-    .pro-plans.plan-container .plan-col-15:nth-child(4n) {
-        border: 0;
-        margin-left: 16.66666666667%;
-        clear: left;
-    }
-
-    .pro-plans.plan-container .plan-col-15:nth-child(1) {
-        border: 0;
-    }
-}
-
-@media only screen and (max-width: 992px) {
-    .pro-plans.plan-container .plan-col-15 {
-        width: 50%;
-    }
-
-    .pro-plans.plan-container .plan-col-15:nth-child(4n) {
-        clear: none;
-        margin-left: 0;
-    }
-
-    .pro-plans.plan-container .plan-col-15:nth-child(3) {
-        clear: left;
-        border-left: 0;
-    }
-
-    .pro-plans.plan-container .plan-col-15:nth-child(5) {
-        clear: left;
-        border-left: 0;
-        margin-left: 25%;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .pro-plans.plan-container .plan-col-15 {
-        width: 100%;
-        border: 0;
-        clear: none;
-        float: none;
-    }
-
-    .pro-plans.plan-container .plan-col-15:nth-child(5) {
-        margin-left: 0;
-    }
-}
-
-.pro-plans.plan-container .plan-col-2 {
-    width: 16.66666666667%;
-    float: left;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-@media only screen and (max-width: 1535px) {
-    .pro-plans.plan-container .plan-col-2 {
-        width: 33.3333%;
-    }
-
-    .pro-plans.plan-container .plan-col-2:nth-child(4n) {
-        border: 0;
-        clear: left;
-    }
-
-    .pro-plans.plan-container .plan-col-2:nth-child(1) {
-        border-left: 0;
-    }
-}
-
-@media only screen and (max-width: 992px) {
-    .pro-plans.plan-container .plan-col-2 {
-        width: 50%;
-    }
-
-    .pro-plans.plan-container .plan-col-2:nth-child(4n) {
-        clear: none;
-    }
-
-    .pro-plans.plan-container .plan-col-2:nth-child(3) {
-        clear: left;
-        border-left: 0;
-    }
-
-    .pro-plans.plan-container .plan-col-2:nth-child(5) {
-        clear: left;
-        border-left: 0;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .pro-plans.plan-container .plan-col-2 {
-        width: 100%;
-        border: 0;
-        clear: none;
-        float: none;
-    }
-}
-
-.pro-plans .pro-plan-wrap {
-    border-top: 10px solid #008a32;
-    padding: 40px;
-    background-color: #fff;
-    -webkit-box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
-    -moz-box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
-    box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
-}
-
-@media only screen and (max-width: 992px) {
-    .pro-plans .pro-plan-wrap {
-        padding: 40px 30px;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .pro-plans .pro-plan-wrap {
-        margin-bottom: 40px;
-    }
-}
-
-.pro-plans .pro-plan-wrap .features-row {
-    margin-bottom: 30px;
-}
-
-@media only screen and (max-width: 768px) {
-    .pro-plans .pro-plan-wrap .features-row {
-        margin-bottom: 0;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .pro-plans .pro-plan-wrap .features-row .col-sm-6 {
-        margin-bottom: 20px;
-    }
-}
-
-@media only screen and (max-width: 992px) {
-    .pro-plans .pro-plan-wrap .features-row .col-sm-6 img {
-        margin: 0 auto 20px;
-    }
-}
-
-.pro-plans .pro-plan-wrap .plan-flag {
-    color: #000;
-    font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;
-    font-size: 28px;
-    font-size: 2.8rem;
-    padding: 10px 20px;
-    text-transform: uppercase;
-    line-height: 1;
-    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMTgxLjggNjQuMiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTgxLjggNjQuMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cG9seWdvbiBmaWxsPSIjRkVEQzQ1IiBwb2ludHM9IjE3LDAgMCwyNC4yIDMsNTYgMTY0LjUsNjQuMiAxODEuOCw0My44IDE4MSw0LjMgIi8+DQo8L3N2Zz4NCg==) no-repeat center center;
-    background-size: cover;
-    overflow: visible;
-}
-
-.pro-plans .pro-plan-wrap .plan-flag:before {
-    content: '';
-}
-
-.plan-tile .plan-flag {
-    position: absolute;
-    top: -20px;
-    right: 30px;
-    color: #fff;
-    display: inline-block;
-    padding: 0 15px;
-    line-height: 2.5;
-}
-
-.pro-plans .pro-plan-wrap h6 {
-    margin-top: 0;
-}
-
-.pro-plans .pro-plan-wrap h2 {
-    margin-bottom: 14px;
-}
-
-.pro-plans .pro-plan-wrap .plan-title {
-    font-size: 30px;
-    font-size: 3rem;
-    margin-top: 0;
-    font-family: 'Walsheim-Bold';
-    text-transform: none;
-    word-wrap: break-word;
-    word-break: break-word;
-    white-space: -moz-pre-wrap;
-}
-
-.pro-plans .pro-plan-wrap .plan-subtitle {
-    color: #000 !important;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-
-.pro-plans .pro-plan-wrap .plan-text {
-    min-height: 44px;
-    margin-bottom: 5px;
-}
-
-.pro-plans .pro-plan-wrap .plan-tile-top {
-    padding: 0px;
-}
-
-.pro-plans .pro-plan-wrap .plan-disclaimers {
-    font-size: 14px;
-    font-size: 1.4rem;
-    margin-bottom: 5px;
-}
-
-.pro-plans .pro-plan-wrap .plan-price-wrap {
-    min-height: 92px;
-}
-
-.pro-plans .pro-plan-wrap .plan-price-wrap .plan-price {
-    font-size: 45px;
-    font-size: 4.5rem;
-    font-weight: 700;
-    color: #ef6c0f;
-    font-family: 'Walsheim-Bold';
-}
-
-.pro-plans .pro-plan-wrap .plan-price-wrap .plan-duration {
-    font-size: 24px;
-    font-size: 2.4rem;
-    font-weight: 700;
-    color: #ef6c0f;
-}
-
-.pro-plans .pro-plan-wrap .btn {
-    margin-bottom: 20px;
-}
-
-.pro-plans .pro-plan-wrap .plan-item {
-    border-top: 0 none;
-    min-height: 0;
-    padding: 5px 0;
-    text-align: left;
-    font-size: 16px;
-    font-size: 1.6rem;
-    margin-bottom: 15px;
-}
-.pro-plans .pro-plan-wrap .check-item {
-    border-top: 0 none;
-    min-height: 0;
-    text-align: left;
-    font-size: 16px;
-    font-size: 1.6rem;
-    margin-bottom: 15px;
-}
-
-.pro-plans .include-check {
-    position: relative;
-    padding-left: 45px;
-    margin-top: 20px;
-}
-
-.pro-plans .include-check:before {
-    content: "";
-    background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
-    background-position: 0 -668px;
-    background-size: 205px auto;
-    width: 25px;
-    height: 27px;
-    padding-right: 5px;
-    position: absolute;
-    left: 0;
-    top: -6px;
-}
-
-.pro-plans .sf-tipper-target {
-    background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
-    background-position: 0 -864px;
-    width: 15px;
-    height: 17px;
-    display: inline-block;
-    background-size: 205px auto;
-    vertical-align: baseline;
-}
-      </style>
       <div class="pro-plans-wrap bg-gray-light">
         <div id="plans" data-icode="" class="container pro-plans"> 
           <div id="planTileOne" class="col-sm-4 plan-tile plan-pro">
@@ -2683,6 +2374,12 @@ h2.marquee-product-name,
                 ##if(productHasSavingsMoreThan(32051, 32051, 0))
                  <br><strong>[@L[cds.sales/_common:was]@L] 
                   <strike>[@T[productprice:<list productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary">[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="32051" secondaryproductid="32051" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span></strong> 
+                ##endif
+                 
+                 
+                ##if(countrySiteAny(uk))
+                 
+                <p>[@L[cds.sales/_common:vat-price]@L] </p> 
                 ##endif
                  
               </div>
@@ -2704,6 +2401,12 @@ h2.marquee-product-name,
                   <strike>[@T[productprice:<list productid="32059" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary">[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="32059" secondaryproductid="32059" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span></strong> 
                 ##endif
                  
+                 
+                ##if(countrySiteAny(uk))
+                 
+                <p>[@L[cds.sales/_common:vat-price]@L] </p> 
+                ##endif
+                 
               </div>
               <button id="product-B" data-tcode="undefined" data-plan="host_GridHostDlxDiabloLin1Yr_us" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
               <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedWeb]@L]</strong></div>
@@ -2722,6 +2425,12 @@ h2.marquee-product-name,
                 ##if(productHasSavingsMoreThan(32082, 32082, 0))
                  <br><strong>[@L[cds.sales/_common:was]@L] 
                   <strike>[@T[productprice:<list productid="32082" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary">[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="32082" secondaryproductid="32082" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</span></strong> 
+                ##endif
+                 
+                 
+                ##if(countrySiteAny(uk))
+                 
+                <p>[@L[cds.sales/_common:vat-price]@L] </p> 
                 ##endif
                  
               </div>
@@ -2793,7 +2502,7 @@ h2.marquee-product-name,
                       <p class="top-text">[@L[cds.sales/hosting/web-hosting-rebrand:proBannerTop]@L]</p>
                       <p class="bottom-text">[@L[cds.sales/hosting/web-hosting-rebrand:proBannerBottom]@L]</p>
                     </div>
-                    <div class="col-sm-2 pro-banner-button"><a class="btn btn-default-light">[@L[cds.sales/hosting/web-hosting-rebrand:learnMore]@L]</a></div>
+                    <div class="col-sm-2 pro-banner-button"><a href="[@T[link:<relative path='/pro/cpanel-hosting'>><param name='ci' value='93999' /></relative>]@T]" class="btn btn-default-light">[@L[cds.sales/hosting/web-hosting-rebrand:learnMore]@L]</a></div>
                   </div>
                   <div class="row">
                     <div class="col-sm-12">
@@ -3135,9 +2844,9 @@ h2.marquee-product-name,
           <div>
              
             ##if(activeLanguageAny([en-US]))
-             <a class="btn btn-default-dark">[@L[cds.sales/hosting/web-hosting-rebrand:seeWhatRebrand]@L]</a> 
+             <a data-ci="89591" href="http://webhosting.cloudspectator.com/summary" target="_BLANK" class="btn btn-default-dark">[@L[cds.sales/hosting/web-hosting-rebrand:seeWhatRebrand]@L]</a> 
             ##else
-             <a class="btn btn-default-dark">[@L[cds.sales/hosting/web-hosting-rebrand:learnMore]@L]</a> 
+             <a data-ci="89591" href="http://webhosting.cloudspectator.com/summary" target="_BLANK" class="btn btn-default-dark">[@L[cds.sales/hosting/web-hosting-rebrand:learnMore]@L]</a> 
             ##endif
              
           </div>
@@ -3211,7 +2920,11 @@ h2.marquee-product-name,
     <section id="compare" data-mid-nav-title="Compare" class="compare-chart-pro section-pro bg-pro-gray tile-section">
       <div style="background: #fff;" class="container">
         <div class="text-center">
-          <h2>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-tab-title-11166]@L]</h2><a href="javascript:comparePlans('cpanel-tab')" class="btn btn-default btn-lg">Cpanel</a><a href="javascript:comparePlans('parallels-tab')" class="btn btn-default btn-lg">Parallels</a>
+          <h2>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-tab-title-11166]@L]</h2>
+          <div class="compareButtons leftActive">
+            <div class="col-xs-6 compareButtonsLeft activeButton"><a href="javascript:comparePlans('cpanel-tab')">Cpanel</a></div>
+            <div class="col-xs-6 compareButtonsRight inactiveButton"><a href="javascript:comparePlans('parallels-tab')">Parallels</a></div>
+          </div>
         </div>
         <div id="cpanel-tab" class="table-responsive">
           <style>.compare-table {
@@ -4267,7 +3980,7 @@ height: 27px;
   content: '';
   width: 94px;
   height: 94px;
-  background-image: url([@T[link:<imageroot />]@T]ffos/hp/sahara-rebrand-sprite-20141114.png);
+  background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
   background-size: 205px auto;
   background-position: 0 -896px;
   position: absolute;
@@ -4387,7 +4100,7 @@ height: 27px;
             </div>
           </div>
         </div>
-        <div style="background-image: url('[@T[link:<imageroot />]@T]fos/mike/img/hosting/two-up-compare-bg-ph.png'); ;" class="two-up-wrap-compare bg-green-official">
+        <div style="background-image: url('[@T[link:<imageroot />]@T]fos/mike/img/hosting/linux-v-windows.png'); ;" class="two-up-wrap-compare bg-green-official">
           <div class="container">
             <div class="row">
               <div class="col-md-5 or-container col-sm-6  bg-green-official">
@@ -4634,7 +4347,7 @@ height: 27px;
             </div>
           </div>
         </div>
-        <div style="background-image: url('[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Sweet.jpg'); min-height: 580px;;" class="two-up-wrap-compare bg-green-official">
+        <div style="background-image: url('[@T[link:<imageroot />]@T]fos/mike/img/hosting/compare-bg.png'); min-height: 580px;;" class="two-up-wrap-compare bg-green-official">
           <div class="container">
             <div class="row">
               <div class="col-md-5 or-container-none col-sm-6  bg-green-official-light">
@@ -4689,7 +4402,7 @@ height: 27px;
             </div>
           </div>
         </div>
-        <div style="background-image: url('[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Sweet.jpg'); min-height: 580px;;" class="two-up-wrap-compare bg-green-official">
+        <div style="background-image: url('[@T[link:<imageroot />]@T]fos/mike/img/hosting/compare-bg.png'); min-height: 580px;;" class="two-up-wrap-compare bg-green-official">
           <div class="container">
             <div class="row">
               <div class="col-md-5 or-container-none col-sm-6  bg-green-official-light">
@@ -4733,6 +4446,34 @@ height: 27px;
     </section> 
     ##endif
      
+     
+    ##if(activeLanguageAny([en-US]))
+     
+    <section id="modals">
+      <div id="login-modal" class="modal fade">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <form method="POST" id="g-modal-loginAcct-form" action="[@T[link:<external parammode='explicit' linktype='SSOURL' secure='true' />]@T]/login.aspx?spkey=[@T[sso:spkey]@T]&target=[@T[link:<external linktype='siteurl' path='/hosting/web-hosting.aspx' secure='false' parammode='explicit'/>]@T]"></form>
+            <input type="hidden" value="LOGIN" name="LOGIN">
+            <input type="hidden" value="1" name="verifyShopper">
+            <div class="modal-header">
+              <button type="button" data-dismiss="modal" aria-hidden="true" class="close">&times;</button>
+              <h4 class="modal-title">Please login to access your account</h4>
+            </div>
+            <div class="modal-body">
+              <input type="text" id="loginName" name="loginName" autocomplete="off" placeholder="[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Headers.UtilityBar.Username]@L]">
+              <input type="password" id="password" name="password" autocomplete="off" placeholder="[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Headers.UtilityBar.Password]@L]"><a href="[@T[link:<external linktype='SSOURL' path='/account/accountRetrieval.aspx' secure='true'/>]@T]" class="forgot-pass">[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Headers.UtilityBar.ForgotPassword]@L]</a>
+            </div>
+            <div class="modal-footer">
+              <button type="button" data-dismiss="modal" class="btn btn-default">Cancel</button>
+              <input type="submit" value="[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Headers.UtilityBar.SignIn]@L]" class="btn btn-primary">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> 
+    ##endif
+     
     <section id="disclaimers" class="tile-section">
       <div class="container">
         <div>
@@ -4765,8 +4506,11 @@ height: 27px;
       function disclaimersModal() {
         $('#disclaimersModal').sfDialog();
       }
-    </script>
-    <script>
+      $("#alternate-products").find(".col-md-offset-2").find("h2").hover(function(){
+          $(this).hide().text("GET HOSTING THAT WILL GROOOW.").fadeIn("slow");
+      }, function() {
+          $(this).hide().text("[@L[cds.sales/hosting/web-hosting-rebrand:vpsGrow]@L]").fadeIn("slow");
+      });
       ##if(activeLanguageAny([en-us]))
         var loadReviews = function(){
           if (typeof $BV != "undefined") {
@@ -4805,9 +4549,15 @@ height: 27px;
         if(id=="cpanel-tab"){
           $("#parallels-tab").hide();
           $("#"+id).show();
+          $(".compareButtons").removeClass("rightActive").addClass("leftActive");
+          $(".compareButtonsRight").removeClass("activeButton").addClass("inactiveButton");
+          $(".compareButtonsLeft").removeClass("inactiveButton").addClass("activeButton");
          }else if(id =="parallels-tab"){
           $("#cpanel-tab").hide();
           $("#"+id).show();
+          $(".compareButtons").removeClass("leftActive").addClass("rightActive");
+          $(".compareButtonsLeft").removeClass("activeButton").addClass("inactiveButton");
+          $(".compareButtonsRight").removeClass("inactiveButton").addClass("activeButton");
          }
       }
       $('.dropdown-toggle').dropdown()

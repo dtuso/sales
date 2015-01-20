@@ -4,9 +4,51 @@ block vars
   - title = "[@L[cds.sales/gd/hosting/website-builder:unlimited-plan-title]@L]";
   - description = "[@L[cds.sales/gd/hosting/website-builder:unlimited-description]@L]"
   - features = ["[@L[cds.sales/gd/hosting/website-builder:plan-domain]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]'></span>","[@L[cds.sales/gd/hosting/website-builder:unlimited-themes]@L]","[@L[cds.sales/gd/hosting/website-builder:unlimited-pages]@L]","[@L[cds.sales/gd/hosting/website-builder:unlimited-diskspace]@L]","[@L[cds.sales/gd/hosting/website-builder:unlimited-bandwidth]@L]","[@L[cds.sales/gd/hosting/website-builder:rb_10_business_emails]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-content='[@L[cds.sales/gd/hosting/website-builder:rb_5_business_emails_tooltip]@L]'></span>","[@L[cds.sales/gd/hosting/website-builder:rb_mobile_site]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-content='[@L[cds.sales/gd/hosting/website-builder:rb_mobile_site_tooltip]@L]'></span>","[@L[cds.sales/gd/hosting/website-builder:rb_seo]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-content='[@L[cds.sales/gd/hosting/website-builder:rb_seo_tooltip]@L]'></span>","[@L[cds.sales/gd/hosting/website-builder:rb_oneclick]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-content='[@L[cds.sales/gd/hosting/website-builder:rb_oneclick_tooltip]@L]'></span>","[@L[cds.sales/gd/hosting/website-builder:rb_ssl]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-width='300' data-content='[@L[cds.sales/gd/hosting/website-builder:rb_ssl_tooltip]@L]'></span>"];
-  - pfid = "7514";
+  //- pfid = "7514";
   - buttonid="product-C";
   - buttonText = "[@L[cds.sales/_common:add-to-cart-cap]@L]";
   - flagText = "[@L[cds.sales/gd/hosting/website-builder:wsb-plus-seo]@L]";
-  - term ="/[@L[cds.sales/_common:month]@L]"
+ // - term ="/[@L[cds.sales/_common:month]@L]"
   - defaultPlan = "wsb_businessplus_12month";
+
+block price
+  .plan-price-wrap
+    span.plan-price.text-warning [@T[productprice:<current productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]
+    span.plan-duration.text-warning /[@L[cds.sales/_common:month]@L]
+    | 
+    |##if(productHasSavingsMoreThan(7524, 7524, 0))
+    | 
+    br
+    strong
+      | 
+      | ##if(splitTestingSideIsActive(1349, A))
+      | 
+      | [@L[cds.sales/_common:was]@L] 
+      strike [@T[productprice:<list productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]
+      |  
+      span.text-primary <mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7524" secondaryproductid="7524" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark>
+      | 
+      | ##else
+      | 
+      | [@L[cds.sales/_common:onsale-all-cap]@L] -
+      span.text-primary <mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7524" secondaryproductid="7524" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark>
+      | 
+      | ##endif
+      | 
+    | 
+    |##endif
+    | 
+    | 
+    | ##if(splitTestingSideIsActive(1349, B))
+    | 
+    p.h6 [@T[productprice:<list productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:month]@L] [@L[cds.sales/gd/hosting/website-builder:renewal-text]@L]
+    | 
+    | ##endif
+    | 
+    | 
+    |##if(countrySiteAny(uk))
+    | 
+    p.h6 [@L[cds.sales/_common:vat-price-uk]@L] 
+    | 
+    |##endif
+    | 

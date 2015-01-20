@@ -53,103 +53,158 @@ block sections
   +renderMidPageNav
     +priceBlock('[@T[productprice:<current productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]', "[@L[cds.sales/_common:month]@L]", "#plan-A")
 
-  section#templates-section
+  section#features(data-mid-nav-title="[@L[cds.sales/gd/hosting/website-builder:sb_nav_1]@L]")
     .templates-chart.bg-gray-light
       .container.templates-container
-        h2[@L[cds.sales/gd/hosting/website-builder:templates-desription]@L][@L[cds.sales/gd/hosting/website-builder:sb_templates_title_2]@L]
-        button.btn.btn-primary.view-all.btn-lg(data-toggle='bsModal', data-target='#g-modal') [@L[cds.sales/gd/hosting/website-builder:sb_view_templates]@L]
-        .row
-          .col-md-4
-            img(src="//nebula.wsimg.com/97d611570df922cf947daef6ea7c720b?AccessKeyId=531592D248B589D87A56")
-          .col-md-4
-            img(src="//nebula.wsimg.com/97d611570df922cf947daef6ea7c720b?AccessKeyId=531592D248B589D87A56")
-          .col-md-4
-            img(src="//nebula.wsimg.com/97d611570df922cf947daef6ea7c720b?AccessKeyId=531592D248B589D87A56")
+        .header-section.text-center
+          img(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-tools.png",style="padding-bottom:25px")
+          | 
+          | ##if(countrySiteAny(www))
+          | 
+          .h0.text-right
+            | [@L[cds.sales/gd/hosting/website-builder:templates-desription]@L]
+            br
+            | [@L[cds.sales/gd/hosting/website-builder:sb_templates_title_2]@L]
+          | 
+          | ##else
+          | 
+          .h1
+            | [@L[cds.sales/gd/hosting/website-builder:templates-desription]@L]
+            br
+            | [@L[cds.sales/gd/hosting/website-builder:sb_templates_title_2]@L]
+          | 
+          | ##endif
+          | 
+          .headline-primary [@L[cds.sales/gd/hosting/website-builder:sb_templates_text]@L]
+          button.btn.btn-default-dark.view-all.btn-md(data-toggle='bsModal', data-target='#g-modal') [@L[cds.sales/gd/hosting/website-builder:sb_view_templates]@L]
+        .templates-image-container  
+          .row
+            .col-md-4.text-center
+              img.templates-image(src="//nebula.wsimg.com/97d611570df922cf947daef6ea7c720b?AccessKeyId=531592D248B589D87A56")
+            .col-md-4.text-center
+              img.templates-image(src="//nebula.wsimg.com/97d611570df922cf947daef6ea7c720b?AccessKeyId=531592D248B589D87A56")
+            .col-md-4.text-center
+              img.templates-image(src="//nebula.wsimg.com/97d611570df922cf947daef6ea7c720b?AccessKeyId=531592D248B589D87A56")
 
-        .row
-          .col-md-4
-            img(src="//nebula.wsimg.com/97d611570df922cf947daef6ea7c720b?AccessKeyId=531592D248B589D87A56")
-          .col-md-4
-            img(src="//nebula.wsimg.com/97d611570df922cf947daef6ea7c720b?AccessKeyId=531592D248B589D87A56")
-          .col-md-4
-            img(src="//nebula.wsimg.com/97d611570df922cf947daef6ea7c720b?AccessKeyId=531592D248B589D87A56")
-        .row
-          .col-md-4
-            img(src="//nebula.wsimg.com/97d611570df922cf947daef6ea7c720b?AccessKeyId=531592D248B589D87A56")
-          .col-md-4
-            img(src="//nebula.wsimg.com/97d611570df922cf947daef6ea7c720b?AccessKeyId=531592D248B589D87A56")
-          .col-md-4
-            img(src="//nebula.wsimg.com/97d611570df922cf947daef6ea7c720b?AccessKeyId=531592D248B589D87A56")
+          .row
+            .col-md-4.text-center
+              img.templates-image(src="//nebula.wsimg.com/97d611570df922cf947daef6ea7c720b?AccessKeyId=531592D248B589D87A56")
+            .col-md-4.text-center
+              img.templates-image(src="//nebula.wsimg.com/97d611570df922cf947daef6ea7c720b?AccessKeyId=531592D248B589D87A56")
+            .col-md-4.text-center
+              img.templates-image(src="//nebula.wsimg.com/97d611570df922cf947daef6ea7c720b?AccessKeyId=531592D248B589D87A56")
+          .row
+            .col-md-4.text-center
+              img.templates-image(src="//nebula.wsimg.com/97d611570df922cf947daef6ea7c720b?AccessKeyId=531592D248B589D87A56")
+            .col-md-4.text-center
+              img.templates-image(src="//nebula.wsimg.com/97d611570df922cf947daef6ea7c720b?AccessKeyId=531592D248B589D87A56")
+            .col-md-4.text-center
+              img.templates-image(src="//nebula.wsimg.com/97d611570df922cf947daef6ea7c720b?AccessKeyId=531592D248B589D87A56")
 
     include ../../templates/wsb-templates.html
  
 
-  include ./website-builder/_fullVideo.jade
+    include ./website-builder/_fullVideo.jade
 
-  section#features(data-mid-nav-title="[@L[cds.sales/gd/hosting/website-builder:sb_nav_1]@L]")
-    | 
-    |##if(countrySiteAny(www))
-    | 
-    include ./website-builder/_tabbed-carousel.jade
-    | 
-    |##else
-    | 
-    include ./website-builder/_tabbed-carousel-nonUS.jade
-    | 
-    |##endif
-    | 
+    section#social-media
+      | 
+      |##if(countrySiteAny(www))
+      | 
+      include ./website-builder/_tabbed-carousel.jade
+      | 
+      |##else
+      | 
+      include ./website-builder/_tabbed-carousel-nonUS.jade
+      | 
+      |##endif
+      | 
 
-    .bg-pro-gray
-      include ./website-builder/_business-exclusives.jade
-    .bg-black
-        .container
-          .row
-            .col-sm-8
-              h3.text-center.text-muted [@L[cds.sales/gd/hosting/website-builder:sb_bpp_starting_at]@L] [@T[productprice:<current productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:mo]@L]
-            .col-sm-4
-              .right(data-center-element='{"vertical":{"target":{"method":"parents","selector":".bg-black"},"verticalStyle":"margin-top","elementHeightMethod":"outerHeight","targetWidthMethod":"height"}}')
-                button.btn.btn-purchase.btn-plan.btn-sm(data-tcode='', data-plan='wsb_businessplus_12month') [@L[cds.sales/_common:add-to-cart-cap]@L]
-
+      .bg-gray-light
+        include ./website-builder/_business-exclusives.jade
+      .bg-black
+          .container
+            .row
+              .col-sm-9
+                h3.text-center(style="color:#FFF",data-center-element='{"vertical":{"target":{"method":"parents","selector":".bg-black"},"verticalStyle":"margin-top","elementHeightMethod":"outerHeight","targetWidthMethod":"height"}}') [@L[cds.sales/gd/hosting/website-builder:sb_bpp_starting_at]@L] [@T[productprice:<current productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:mo]@L]
+              .col-sm-3
+                .right(data-center-element='{"vertical":{"target":{"method":"parents","selector":".bg-black"},"verticalStyle":"margin-top","elementHeightMethod":"outerHeight","targetWidthMethod":"height"}}')
+                  button.btn.btn-purchase.btn-plan.btn-md.btn-block(data-tcode='', data-plan='wsb_businessplus_12month') [@L[cds.sales/_common:add-to-cart-cap]@L]
+  | 
+  |##if(activeLanguageAny([en-us]))
+  | 
   section#reviews(data-mid-nav-title="[@L[cds.sales/gd/hosting/website-builder:sb_nav_2]@L]")
     .container
       .row
         .col-sm-12
           div#BVRRContainer
-            p.bv-loading Loading...
+            p.bv-loading [@L[cds.sales/_common:loading]@L]
           div [@P[userControl:<Data location="~/Shared/Tabs/controls/BVReviewsNoJS.ascx"><Parameters><Parameter key="ProductId" value="web_hosting" /><Parameter key="ReviewNumber" value="1" /></Parameters></Data>]@P]
+  | 
+  |##endif
+  | 
 
   section#faq(data-mid-nav-title="[@L[cds.sales/gd/hosting/website-builder:sb_nav_3]@L]")
-    +renderAccordion({id: "test-faq", buttonID: "test-button", buttonText: "[@L[cds.sales/gd/hosting/website-builder:sb_faq_see]@L]"})
-      h2 [@L[cds.sales/gd/hosting/website-builder:rb_your_question]@L]
+    +renderAccordion({id: "faq-accordion", buttonID: "faq-button", buttonText: "[@L[cds.sales/gd/hosting/website-builder:sb_faq_see]@L]"})
+      h2.h1 [@L[cds.sales/gd/hosting/website-builder:rb_your_question]@L]
       +accordionTab("[@L[cds.sales/gd/hosting/website-builder:faq-first-slide-title]@L]")
-        [@L[cds.sales/gd/hosting/website-builder:faq-first-slide-content]@L]
+        | [@L[cds.sales/gd/hosting/website-builder:faq-first-slide-content]@L]
       +accordionTab("[@L[cds.sales/gd/hosting/website-builder:faq-second-slide-title]@L]")
-        [@L[cds.sales/gd/hosting/website-builder:faq-second-slide-content]@L]
+        | [@L[cds.sales/gd/hosting/website-builder:faq-second-slide-content]@L]
       +accordionTab("[@L[cds.sales/gd/hosting/website-builder:faq-third-slide-title]@L]")
-        [@L[cds.sales/gd/hosting/website-builder:faq-third-slide-content]@L]
+        | [@L[cds.sales/gd/hosting/website-builder:faq-third-slide-content]@L]
       +accordionTab("[@L[cds.sales/gd/hosting/website-builder:faq-fourth-slide-title]@L]")
-        [@L[cds.sales/gd/hosting/website-builder:faq-fourth-slide-content]@L]
+        | [@L[cds.sales/gd/hosting/website-builder:faq-fourth-slide-content]@L]
   section#other-products
     +renderTwoUpCompare({title: "[@L[cds.sales/gd/hosting/website-builder:sb_xsell_title]@L]", twoUpCompareId: "two-up", titleBackgroundColor: "bg-white", backgroundColor: "bg-green-official", backgroundImage: "background-image: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/two-up-bg-wsb.jpg')", style: "min-height: 100%"})
       +twoUpCompareColumn({title: "[@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp_1]@L]", backgroundColor: "gb-green-official-light", shapeText: "[@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp]@L]", shapeColor: "orange"})
         p [@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp_2]@L]
-        a.btn.btn-default-dark [@L[cds.sales/gd/hosting/website-builder:learn-more]@L]
+        a.btn.btn-default-dark(href!='[@T[link:<relative path="~/hosting/wordpress-hosting.aspx" />]@T]') [@L[cds.sales/gd/hosting/website-builder:learn-more]@L]
       +twoUpCompareColumn({title: "[@L[cds.sales/gd/hosting/website-builder:sb_xsell_qs_1]@L]", backgroundColor: "bg-gray-darkest", shapeText: "[@L[cds.sales/gd/hosting/website-builder:sb_xsell_qs]@L]", shapeColor: "orange", whiteText: "white-text"})
-        p Perfect for: [@L[cds.sales/gd/hosting/website-builder:sb_qs_2]@L]
-        a.btn.btn-default-light [@L[cds.sales/gd/hosting/website-builder:learn-more]@L]
+        p [@L[cds.sales/gd/hosting/website-builder:sb_qs_2]@L]
+        a.btn.btn-default-light(href!='[@T[link:<relative path="~/ecommerce/online-store.aspx" />]@T]') [@L[cds.sales/gd/hosting/website-builder:learn-more]@L]
 
   section#disclaimers
-    div [@L[cds.sales/gd/hosting/website-builder:rb_disclaimers]@L] 
+    p 
+    p.h5[@L[cds.sales/gd/hosting/website-builder:rb_disclaimers]@L] 
       a(onClick="disclaimersModal()") [@L[cds.sales/gd/hosting/website-builder:rb_disclaimers_view]@L]
     #disclaimersModal(data-title="[@L[cds.sales/gd/hosting/website-builder:disclaimer-modal-header]@L]",style="display:none")
       p [@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]
       p [@L[cds.sales/gd/hosting/website-builder:modal-disclaimer-5]@L]
-    [@L[cds.sales/gd/hosting/website-builder:rb_disclaimers_3p]@L]
+      | 
+      |##if(splitTestingSideIsActive(1349, B))
+      | 
+      p [@L[cds.sales/gd/hosting/website-builder:renewal-disclaimer]@L]
+      | 
+      |##endif
+      | 
+    p.h5[@L[cds.sales/gd/hosting/website-builder:rb_disclaimers_3p]@L]
 
 prepend endOfPageScripts
   script.
+    ##if(activeLanguageAny([en-au],[en-ca],[en-gb],[en-in],[en-us]))
+    $(document).ready(function(){
+      $("a[href='http://support.godaddy.com/help/article/5107']").text("How Do I Build a Website?");
+      $("a[href='http://support.godaddy.com/help/article/5107']").attr('data-ci','94986');
+      $("a[href='http://support.godaddy.com/help/article/5107']").removeAttr("target");
+      $("a[href='http://support.godaddy.com/help/article/5107']").attr('href','[@T[link:<relative path='~/hosting/website-builder/how-to-build-a-website' secure='true' />]@T]');
+
+      $("a[href='http://support.godaddy.com/help/article/4026']").text("What are Website Templates?");
+      $("a[href='http://support.godaddy.com/help/article/4026']").attr('data-ci','94987');
+      $("a[href='http://support.godaddy.com/help/article/4026']").removeAttr("target");
+      $("a[href='http://support.godaddy.com/help/article/4026']").attr('href','[@T[link:<relative path='~/hosting/website-builder/website-template' secure='true' />]@T]');
+
+      $("a[href='http://support.godaddy.com/help/article/3503?ci=75947']").text("Tips to Build a Website.");
+      $("a[href='http://support.godaddy.com/help/article/3503?ci=75947']").attr("data-ci","95153");
+      $("a[href='http://support.godaddy.com/help/article/3503?ci=75947']").removeAttr("target");
+      $("a[href='http://support.godaddy.com/help/article/3503?ci=75947']").attr("href","[@T[link:<relative path='~/hosting/website-builder/build-a-website' secure='true' />]@T]");
+
+      $(".ep-wsb-how-to-publish-a-website-faq").html(
+        "Want to see how easy it is to get a website online? Check out <a href=\"[@T[link:<relative path='~/hosting/website-builder/how-to-publish-a-website' secure='true'><param name='ci' value='95087' /></relative>]@T]\">How to Publish a Website</a>."
+      );    
+    });
+    ##endif  
     function disclaimersModal() {
-      $('#disclaimersModal').sfDialog();
+      $('#disclaimersModal').sfDialog({buttons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }] });
     }
     ##if(activeLanguageAny([en-us]))
       var loadReviews = function(){
