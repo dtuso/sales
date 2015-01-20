@@ -31,7 +31,7 @@
 }
 
 </style>
-<div data-url="[@T[link:<relative path='/domains/domain-name-search.aspx'><param name='ci' value='95717' /></relative>]@T]" data-ci='95717' data-svg-fallback="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/gtld-tile-background.png" class="tile gtld-marquee-tile">
+<div data-url="[@T[link:<relative path='/domains/domain-name-search.aspx'><param name='ci' value='95717' /></relative>]@T]" data-ci='95717' class="tile gtld-marquee-tile">
   <div class="tile-content-wrapper">
     <div class="container">
       <div class="row">
