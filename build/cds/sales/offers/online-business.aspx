@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="[@T[localization:<language full='true' />]@T]">
+<html lang="[@T[localization:<language full='true' />]@T]" id="" ng-app="">
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta http-equiv="content-language" content="[@T[localization:<language full='true' />]@T]">
@@ -825,9 +825,7 @@ $(window).load(function () {
       
     </style>
     <link href="[@T[link:<cssroot />]@T]/fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css">
-    <style>
-
-.bg-gray-light {
+    <style>.bg-gray-light {
   background-color: #d9d9d9;
 }
 
@@ -1333,7 +1331,7 @@ h
       
     </script>
   </head>
-  <body>
+  <body ng-controller="" ng-cloak>
     <!-- HEADERBEGIN--> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- HEADEREND-->
@@ -1468,7 +1466,7 @@ h
           .main-marquee html[lang|="en"] .dash { background-size: contain; background-repeat: x; background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMTAwJyBoZWlnaHQ9JzEwMCcgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48Zz48cmVjdCBpZD0nc3ZnXzEnIGZpbGw9JyMzMzMnIHg9JzAnIHk9JzM5JyB3aWR0aD0nMTAwJyBoZWlnaHQ9JzIyJy8+PC9nPjwvc3ZnPg==); }
           .main-marquee .header-text { padding-left: 5%; line-height: 0.8; padding-right: 15%; }
           .main-marquee .header-text:first-child { padding-left: 0; line-height: 0.8; padding-right: 0; margin-left: 5%; margin-right: 15%; }
-          .main-marquee .header-text .get-online {  display: inline; background-color: #77c043; font-family:Tungsten, 'Tungsten A', 'Tungsten B', Impact, sans-serif; font-size: 3em; }
+          .main-marquee .header-text .get-online {  display: inline; background-color: #77c043; color: #333; font-family:Tungsten, 'Tungsten A', 'Tungsten B', Impact, sans-serif; font-size: 3em; }
           .main-marquee .header-text .today {  font-family:'Walsheim-Bold', 'Arial Black', sans-serif; font-size: 11.5em; }
           .main-marquee .header-text.as-low-as-price {  line-height: 1; padding-top: 60px; padding-bottom: 45px; margin-top: -45px; color: #fff; background-repeat: no-repeat; font-family:'Walsheim-Black', 'Arial Black', sans-serif; font-size: 2em; background-image: url(data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PScwLDAsNTUzLDEyNScgcHJlc2VydmVBc3BlY3RSYXRpbz0nbm9uZScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48cG9seWdvbiBwb2ludHM9JzAsMzggNDc5LDMxIDQ3OSwwIDU1Myw2OCA0NzksMTI1IDQ4MSw5OSAyMiwxMDEnIHN0eWxlPSdmaWxsOiMzZTk2MzU7IHN0cm9rZTojM2U5NjM1OycgLz48L3N2Zz4=);}
           .main-marquee .header-text.disclaimers { color: #00701D; font-size: 1em; margin-top: -14px; text-transform: none; }
@@ -1576,7 +1574,7 @@ h
           <div class="row">
             <div class="col-md-6 col-xs-12">
               <div class="header-text dash">
-                <div class="get-online">[@L[cds.sales/offers/online-business:32573-top-banner-headline]@L]</div>
+                <h1 class="get-online">[@L[cds.sales/offers/online-business:32573-top-banner-headline]@L]</h1>
               </div>
               <div class="header-text bigtext">
                 <div class="today">[@L[cds.sales/offers/online-business:32573-top-banner-subheadline]@L]</div>
