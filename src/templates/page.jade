@@ -174,7 +174,7 @@ html(lang!="[@T[localization:<language full='true' />]@T]")
     //- the delayed load can be overridden by appending the JS file to the headScripts block
     script(type='text/javascript').
       delayLoader.addScript('[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2')
-      //- delayLoader.addScript('[@T[link:<javascriptroot />]@T]/fastball/js_lib/Fastball.ChannelIntegration-2.0.6.min.js')
+      delayLoader.addScript('[@T[link:<javascriptroot />]@T]/fos/liveperson/js/liveperson_20150115.min.js')
 
     //- TODO: does PC load this?
     // Google Tag Manager
@@ -241,9 +241,6 @@ html(lang!="[@T[localization:<language full='true' />]@T]")
     | 
     | [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     // FOOTEREND
-
-    | 
-    | [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Bottom"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
 
     <!-- liveperson includes -->
     #lpButtonDiv
