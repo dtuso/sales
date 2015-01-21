@@ -90,6 +90,8 @@ h3 {
   font-size: 20px;
   text-transform: uppercase;
   font-family: 'Walsheim-Black';
+  margin-top: 11px;
+  margin-bottom: 0;
 }
 .pro-banner .bottom-text {
   font-size: 40px;
@@ -105,8 +107,9 @@ h3 {
 }
 
 @media (min-width: 1200px) {
-  .pro-banner .pro-banner-image {
-    
+  .pro-banner {
+    width: 1135px;
+    margin-left: 10px;
   }
   .pro-banner .pro-banner-text {
     width:55%;
@@ -117,6 +120,10 @@ h3 {
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
+  .pro-banner {
+    width: 925px;
+    margin-left: 10px;
+  }
   .pro-banner .pro-banner-image {
     width: 29%;
   }
@@ -133,6 +140,8 @@ h3 {
     background-image: none;
     background-color: #ef6b0d;
     box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
+    width: 700px;
+    margin-left: 10px;
   }
   .pro-banner .pro-banner-image {
     width: 38%;
@@ -143,6 +152,8 @@ h3 {
   .pro-banner .pro-banner-button {
     width: 100%;
     text-align: center;
+    padding-top: 0;
+    padding-bottom: 30px;
   }
 }
 
@@ -161,6 +172,8 @@ h3 {
   .pro-banner .pro-banner-button {
     width: 100%;
     text-align: center;
+    padding-top: 0;
+    padding-bottom: 30px;
   }
 }
 
@@ -322,6 +335,8 @@ cursor: pointer;
 #speed-chart img { 
   margin-bottom: 0;
   margin-top: 20px;
+  max-width: 100%;
+  height: auto;
 }
 
 #speed-chart p {text-align: right; }
