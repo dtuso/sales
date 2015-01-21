@@ -461,7 +461,21 @@ function showChoicesScreen(e){
   $('#step2-choose-product').find('.btn-purchase').data('domain', domain);
   $('#products, #domains').hide();
   var $thisSection = $this.closest('.js-marquee-section');
+
+
   animateMarquee($thisSection, $('#step2-choose-product') /*toView*/);
+
+  // FOR IE we need to resize the plan boxes that were previously hidden
+  // code taken from landing-page.jade to auto height these two modules  
+  var $proPlanWraps = $("#step2-choose-product").find(".pro-plans").find(".pro-plan-wrap"),
+    maxHeight = 0;
+  $proPlanWraps
+    .css({"height":"auto"})
+    .each(function(index, plan) {
+      maxHeight = $(plan).outerHeight() > maxHeight ? $(plan).outerHeight() : maxHeight;
+  });
+  if( maxHeight > 0 ) $proPlanWraps.find(".pro-plan-wrap").css("height", maxHeight);
+
 }
 
 function goToDppCheckoutPage(e) {
