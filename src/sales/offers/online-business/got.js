@@ -119,6 +119,8 @@ $(document).ready(function() {
   showTldImagesInDomainArea(); //- dynamically build the tld images in the #findYourPerfectDomain section
   
   //- fix up list of valid tlds from lang files
+  debugger;
+  showAndOrderDynamicTldsInList("#products .TLDtoken");
   showAndOrderDynamicTldsInList("#default-marquee-details-modal-wsb-only p");
   showAndOrderDynamicTldsInList("#default-marquee-details-modal p");
   showAndOrderDynamicTldsInList("#site-choice-wsb-modal p");
@@ -286,12 +288,7 @@ function wireupModals() {
   $('#wsb-video-btn, #wsb-only-video-btn').on('click', function(){
     $("#site-choice-wsb-video-modal").sfDialog({titleHidden:true, dialogWidthIdeal:840, buttons: []});
   });
-/*  $('#wsb-designs-btn, #wsb-only-designs-btn').on('click', function(){
-    $("#site-choice-wsb-designs-modal").sfDialog({titleHidden:true, dialogWidthIdeal:1, buttons: []});
-    $("#site-choice-wsb-designs-modal").sfDialog('cancel');
-    $('.view-all').click();
-  });
-*/
+
   if(got1Page.canOfferOls) {
     $('#ols-video-btn').on('click', function(){      
       $("#site-choice-ols-video-modal").sfDialog({titleHidden:true, dialogWidthIdeal:840, buttons: []});
