@@ -6289,7 +6289,7 @@ h2.marquee-product-name,
     font-size: 3rem;
     margin-top: 0;
     font-family: 'Walsheim-Bold';
-    text-transform: none;
+    text-transform: uppercase;
     word-wrap: break-word;
     word-break: break-word;
     white-space: -moz-pre-wrap;
@@ -6671,7 +6671,7 @@ h2.marquee-product-name,
     font-size: 3rem;
     margin-top: 0;
     font-family: 'Walsheim-Bold';
-    text-transform: none;
+    text-transform: uppercase;
     word-wrap: break-word;
     word-break: break-word;
     white-space: -moz-pre-wrap;
@@ -7253,7 +7253,7 @@ h2.marquee-product-name,
     font-size: 3rem;
     margin-top: 0;
     font-family: 'Walsheim-Bold';
-    text-transform: none;
+    text-transform: uppercase;
     word-wrap: break-word;
     word-break: break-word;
     white-space: -moz-pre-wrap;
