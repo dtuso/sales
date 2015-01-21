@@ -1203,7 +1203,7 @@ h
     font-size: 3rem;
     margin-top: 0;
     font-family: 'Walsheim-Bold';
-    text-transform: none;
+    text-transform: uppercase;
     word-wrap: break-word;
     word-break: break-word;
     white-space: -moz-pre-wrap;
@@ -1231,7 +1231,7 @@ h
 }
 
 .pro-plans .pro-plan-wrap .plan-price-wrap {
-    min-height: 92px;
+    padding-bottom: 30px;
 }
 
 .pro-plans .pro-plan-wrap .plan-price-wrap .plan-price {
@@ -1291,13 +1291,12 @@ h
 }
 
 .pro-plans .sf-tipper-target {
-    background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
-    background-position: 0 -864px;
-    width: 15px;
-    height: 17px;
-    display: inline-block;
-    background-size: 205px auto;
-    vertical-align: baseline;
+  background-image: url(https://img1.wsimg-com.ide/fos/mike/img/hosting/img-tootip-.png);
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  vertical-align: baseline;
+  cursor: pointer;
 }
     </style><!--[if lt IE 9]>
     <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
@@ -2708,6 +2707,29 @@ h
   margin-left: -50px;
   z-index: 1;
 }
+
+##if(activeLanguageAny([en-US]))
+.or-container:after {
+  content: '';
+  background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_or-shape_white_en.png);
+  width: 94px;
+  height: 98px;
+  background-position: 0 0;
+  background-size: auto auto;
+  position: absolute;
+  bottom: -50px;
+  margin: 0 auto;
+  display: block;
+  margin-left: -50px;
+  z-index: 1;
+}
+@media (max-width: 767px) {
+  .or-container:after {
+    display: block;
+    left: 50%
+  }
+}
+##else
 .or-container:after {
   content: '';
   width: 94px;
@@ -2731,6 +2753,8 @@ h
     left: 50%
   }
 }
+##endif
+
 @media (min-width: 768px) and (max-width: 991px) {
   .or-container:after {
     left: 101%;
