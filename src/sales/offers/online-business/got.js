@@ -674,3 +674,9 @@ function getParameterByName(name) {
       results = regex.exec(location.search);
   return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
+
+$(window).load(function () {
+  $('.bigtext').bigtext({maxfontsize: 160});
+  setTimeout( "$('.bigtext').bigtext().css('visibility', 'visible');",500 );
+});
+
