@@ -1373,13 +1373,13 @@ h
       <atlantis:webstash type="css">
         <style>
           /* marquee styling */
-          .main-marquee { color: #333; font-size: 12px; text-transform: uppercase; fill: #333; }
+          .main-marquee { color: #333; font-size: 12px; text-transform: uppercase;  fill: #333; }
           .main-marquee html[lang|="en"] .dash { background-size: contain; background-repeat: x; background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMTAwJyBoZWlnaHQ9JzEwMCcgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48Zz48cmVjdCBpZD0nc3ZnXzEnIGZpbGw9JyMzMzMnIHg9JzAnIHk9JzM5JyB3aWR0aD0nMTAwJyBoZWlnaHQ9JzIyJy8+PC9nPjwvc3ZnPg==); }
           .main-marquee .header-text { padding-left: 5%; line-height: 0.8; padding-right: 15%; }
           .main-marquee .header-text:first-child { padding-left: 0; line-height: 0.8; padding-right: 0; margin-left: 5%; margin-right: 15%; }
-          .main-marquee .header-text .get-online { display: inline; background-color: #77c043; font-family:Tungsten, 'Tungsten A', 'Tungsten B', Impact, sans-serif; font-size: 3em; }
-          .main-marquee .header-text .today { font-family:'Walsheim-Bold', 'Arial Black', sans-serif; font-size: 11.5em; }
-          .main-marquee .header-text.as-low-as-price { line-height: 1; padding-top: 60px; padding-bottom: 45px; margin-top: -45px; color: #fff; font-family:'Walsheim-Black', 'Arial Black', sans-serif; font-size: 2em; background-image: url(data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PScwLDAsNTUzLDEyNScgcHJlc2VydmVBc3BlY3RSYXRpbz0nbm9uZScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48cG9seWdvbiBwb2ludHM9JzAsMzggNDc5LDMxIDQ3OSwwIDU1Myw2OCA0NzksMTI1IDQ4MSw5OSAyMiwxMDEnIHN0eWxlPSdmaWxsOiMzZTk2MzU7IHN0cm9rZTojM2U5NjM1OycgLz48L3N2Zz4=);}
+          .main-marquee .header-text .get-online {  display: inline; background-color: #77c043; font-family:Tungsten, 'Tungsten A', 'Tungsten B', Impact, sans-serif; font-size: 3em; }
+          .main-marquee .header-text .today {  font-family:'Walsheim-Bold', 'Arial Black', sans-serif; font-size: 11.5em; }
+          .main-marquee .header-text.as-low-as-price {  line-height: 1; padding-top: 60px; padding-bottom: 45px; margin-top: -45px; color: #fff; background-repeat: no-repeat; font-family:'Walsheim-Black', 'Arial Black', sans-serif; font-size: 2em; background-image: url(data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PScwLDAsNTUzLDEyNScgcHJlc2VydmVBc3BlY3RSYXRpbz0nbm9uZScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48cG9seWdvbiBwb2ludHM9JzAsMzggNDc5LDMxIDQ3OSwwIDU1Myw2OCA0NzksMTI1IDQ4MSw5OSAyMiwxMDEnIHN0eWxlPSdmaWxsOiMzZTk2MzU7IHN0cm9rZTojM2U5NjM1OycgLz48L3N2Zz4=);}
           .main-marquee .header-text.disclaimers { color: #00701D; font-size: 1em; margin-top: -14px; text-transform: none; }
           .main-marquee .header-text.disclaimers .btn-link { color: #00701D; cursor: pointer; }
           .main-marquee .logo-wrapper { margin-top: 20px; }
@@ -1400,6 +1400,7 @@ h
           @media (min-width: 1200px) { 
             .main-marquee .logo-wrapper .icon { min-height: 160px; }
           }
+          #marquee .search-message {display: none; text-transform: none; }
           
           /*  speech */
           
@@ -1522,6 +1523,81 @@ h
               font-size:24px;
             }
             
+            /*  speech */
+            
+            .speech-shape-upsidedown {
+              line-height: 1.9em;
+              font-size: 18px;
+              padding: 5px 17px;
+              color: #fff;
+              display: inline-block;
+              position: relative;
+              margin-bottom: 20px;
+              z-index: 2;
+            }
+            .speech-shape-upsidedown .shape-text {
+              position: relative;
+              z-index: 40;
+            }
+            .speech-shape-upsidedown:before {
+              content: '';
+              position: absolute;
+              top: -15px;
+              left: 0;
+              border-bottom: 15px solid;
+              border-right: 15px solid transparent;
+            }
+            .speech-shape-upsidedown:after {
+              content: '';
+              position: absolute;
+              height: 100%;
+              width:20px;
+              right: -6px;
+              top: 0;
+              transform: skew(12deg, 0);
+              z-index: 1;
+            }
+            .speech-shape-upsidedown.speech-shape-upsidedown-green {
+              background-color: #008a32;
+            }
+            .speech-shape-upsidedown.speech-shape-upsidedown-green:before {
+              border-bottom-color: #008a32;
+            }
+            .speech-shape-upsidedown.speech-shape-upsidedown-green:after {
+              background-color: #008a32;
+            }
+            .speech-shape-upsidedown.speech-shape-upsidedown-orange {
+              background-color: #ef6c0f;
+            }
+            .speech-shape-upsidedown.speech-shape-upsidedown-orange:before {
+              border-bottom-color: #ef6c0f;
+            }
+            .speech-shape-upsidedown.speech-shape-upsidedown-orange:after {
+              background-color: #ef6c0f;
+            }
+            .speech-shape-upsidedown.speech-shape-upsidedown-white {
+              background-color: #fff;
+              color: #333;
+            }
+            .speech-shape-upsidedown.speech-shape-upsidedown-white:before {
+              border-bottom-color: #fff;
+            }
+            .speech-shape-upsidedown.speech-shape-upsidedown-white:after {
+              background-color: #fff;
+            }
+            .speech-shape-upsidedown.speech-shape-upsidedown-yellow {
+              background-color: #fedc45;
+              color: #333;
+            }
+            .speech-shape-upsidedown.speech-shape-upsidedown-yellow:before {
+              border-bottom-color: #fedc45;
+            }
+            .speech-shape-upsidedown.speech-shape-upsidedown-yellow:after {
+              background-color: #fedc45;
+            }
+            
+            /* (end) speech */
+            
           </style>
           <div class="row">
             <div class="col-md-12">
@@ -1537,7 +1613,7 @@ h
             </div>
           </div>
           <div class="row domain-search-messaging-row">
-            <div class="col-md-12"><span class="search-message speech-shape-upsidedown speech-shape-upsidedown-yellow type-your-business-name">[@L[cds.sales/offers/online-business:32573-type-your-business-placeholder]@L]</span><span class="search-message speech-shape-upsidedown speech-shape-upsidedown-orange domain-eligibility-fail">[@L[cds.sales/offers/online-business:32573-eligibility-error]@L]</span><span class="search-message speech-shape-upsidedown speech-shape-upsidedown-orange invalid-TLD-entered">[@L[cds.sales/offers/online-business:32573-offer-only-valid]@L]</span></div>
+            <div class="col-md-12"><span class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-yellow type-your-business-name">[@L[cds.sales/offers/online-business:32573-type-your-business-placeholder]@L]</span><span class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange domain-eligibility-fail">[@L[cds.sales/offers/online-business:32573-eligibility-error]@L]</span><span class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange invalid-TLD-entered">[@L[cds.sales/offers/online-business:32573-offer-only-valid]@L]</span></div>
           </div>
         </div>
       </section> 
@@ -1604,6 +1680,81 @@ h
                 font-size:24px;
               }
               
+              /*  speech */
+              
+              .speech-shape-upsidedown {
+                line-height: 1.9em;
+                font-size: 18px;
+                padding: 5px 17px;
+                color: #fff;
+                display: inline-block;
+                position: relative;
+                margin-bottom: 20px;
+                z-index: 2;
+              }
+              .speech-shape-upsidedown .shape-text {
+                position: relative;
+                z-index: 40;
+              }
+              .speech-shape-upsidedown:before {
+                content: '';
+                position: absolute;
+                top: -15px;
+                left: 0;
+                border-bottom: 15px solid;
+                border-right: 15px solid transparent;
+              }
+              .speech-shape-upsidedown:after {
+                content: '';
+                position: absolute;
+                height: 100%;
+                width:20px;
+                right: -6px;
+                top: 0;
+                transform: skew(12deg, 0);
+                z-index: 1;
+              }
+              .speech-shape-upsidedown.speech-shape-upsidedown-green {
+                background-color: #008a32;
+              }
+              .speech-shape-upsidedown.speech-shape-upsidedown-green:before {
+                border-bottom-color: #008a32;
+              }
+              .speech-shape-upsidedown.speech-shape-upsidedown-green:after {
+                background-color: #008a32;
+              }
+              .speech-shape-upsidedown.speech-shape-upsidedown-orange {
+                background-color: #ef6c0f;
+              }
+              .speech-shape-upsidedown.speech-shape-upsidedown-orange:before {
+                border-bottom-color: #ef6c0f;
+              }
+              .speech-shape-upsidedown.speech-shape-upsidedown-orange:after {
+                background-color: #ef6c0f;
+              }
+              .speech-shape-upsidedown.speech-shape-upsidedown-white {
+                background-color: #fff;
+                color: #333;
+              }
+              .speech-shape-upsidedown.speech-shape-upsidedown-white:before {
+                border-bottom-color: #fff;
+              }
+              .speech-shape-upsidedown.speech-shape-upsidedown-white:after {
+                background-color: #fff;
+              }
+              .speech-shape-upsidedown.speech-shape-upsidedown-yellow {
+                background-color: #fedc45;
+                color: #333;
+              }
+              .speech-shape-upsidedown.speech-shape-upsidedown-yellow:before {
+                border-bottom-color: #fedc45;
+              }
+              .speech-shape-upsidedown.speech-shape-upsidedown-yellow:after {
+                background-color: #fedc45;
+              }
+              
+              /* (end) speech */
+              
             </style>
             <div class="row">
               <div class="col-md-12">
@@ -1619,7 +1770,7 @@ h
               </div>
             </div>
             <div class="row domain-search-messaging-row">
-              <div class="col-md-12"><span class="search-message speech-shape-upsidedown speech-shape-upsidedown-yellow type-your-business-name">[@L[cds.sales/offers/online-business:32573-type-your-business-placeholder]@L]</span><span class="search-message speech-shape-upsidedown speech-shape-upsidedown-orange domain-eligibility-fail">[@L[cds.sales/offers/online-business:32573-eligibility-error]@L]</span><span class="search-message speech-shape-upsidedown speech-shape-upsidedown-orange invalid-TLD-entered">[@L[cds.sales/offers/online-business:32573-offer-only-valid]@L]</span></div>
+              <div class="col-md-12"><span class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-yellow type-your-business-name">[@L[cds.sales/offers/online-business:32573-type-your-business-placeholder]@L]</span><span class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange domain-eligibility-fail">[@L[cds.sales/offers/online-business:32573-eligibility-error]@L]</span><span class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange invalid-TLD-entered">[@L[cds.sales/offers/online-business:32573-offer-only-valid]@L]</span></div>
             </div>
           </div>
         </div>
@@ -1675,6 +1826,81 @@ h
                 font-size:24px;
               }
               
+              /*  speech */
+              
+              .speech-shape-upsidedown {
+                line-height: 1.9em;
+                font-size: 18px;
+                padding: 5px 17px;
+                color: #fff;
+                display: inline-block;
+                position: relative;
+                margin-bottom: 20px;
+                z-index: 2;
+              }
+              .speech-shape-upsidedown .shape-text {
+                position: relative;
+                z-index: 40;
+              }
+              .speech-shape-upsidedown:before {
+                content: '';
+                position: absolute;
+                top: -15px;
+                left: 0;
+                border-bottom: 15px solid;
+                border-right: 15px solid transparent;
+              }
+              .speech-shape-upsidedown:after {
+                content: '';
+                position: absolute;
+                height: 100%;
+                width:20px;
+                right: -6px;
+                top: 0;
+                transform: skew(12deg, 0);
+                z-index: 1;
+              }
+              .speech-shape-upsidedown.speech-shape-upsidedown-green {
+                background-color: #008a32;
+              }
+              .speech-shape-upsidedown.speech-shape-upsidedown-green:before {
+                border-bottom-color: #008a32;
+              }
+              .speech-shape-upsidedown.speech-shape-upsidedown-green:after {
+                background-color: #008a32;
+              }
+              .speech-shape-upsidedown.speech-shape-upsidedown-orange {
+                background-color: #ef6c0f;
+              }
+              .speech-shape-upsidedown.speech-shape-upsidedown-orange:before {
+                border-bottom-color: #ef6c0f;
+              }
+              .speech-shape-upsidedown.speech-shape-upsidedown-orange:after {
+                background-color: #ef6c0f;
+              }
+              .speech-shape-upsidedown.speech-shape-upsidedown-white {
+                background-color: #fff;
+                color: #333;
+              }
+              .speech-shape-upsidedown.speech-shape-upsidedown-white:before {
+                border-bottom-color: #fff;
+              }
+              .speech-shape-upsidedown.speech-shape-upsidedown-white:after {
+                background-color: #fff;
+              }
+              .speech-shape-upsidedown.speech-shape-upsidedown-yellow {
+                background-color: #fedc45;
+                color: #333;
+              }
+              .speech-shape-upsidedown.speech-shape-upsidedown-yellow:before {
+                border-bottom-color: #fedc45;
+              }
+              .speech-shape-upsidedown.speech-shape-upsidedown-yellow:after {
+                background-color: #fedc45;
+              }
+              
+              /* (end) speech */
+              
             </style>
             <div class="row">
               <div class="col-md-12">
@@ -1690,7 +1916,7 @@ h
               </div>
             </div>
             <div class="row domain-search-messaging-row">
-              <div class="col-md-12"><span class="search-message speech-shape-upsidedown speech-shape-upsidedown-yellow type-your-business-name">[@L[cds.sales/offers/online-business:32573-type-your-business-placeholder]@L]</span><span class="search-message speech-shape-upsidedown speech-shape-upsidedown-orange domain-eligibility-fail">[@L[cds.sales/offers/online-business:32573-eligibility-error]@L]</span><span class="search-message speech-shape-upsidedown speech-shape-upsidedown-orange invalid-TLD-entered">[@L[cds.sales/offers/online-business:32573-offer-only-valid]@L]</span></div>
+              <div class="col-md-12"><span class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-yellow type-your-business-name">[@L[cds.sales/offers/online-business:32573-type-your-business-placeholder]@L]</span><span class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange domain-eligibility-fail">[@L[cds.sales/offers/online-business:32573-eligibility-error]@L]</span><span class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange invalid-TLD-entered">[@L[cds.sales/offers/online-business:32573-offer-only-valid]@L]</span></div>
             </div>
           </div>
         </div>
@@ -1993,7 +2219,7 @@ h
             <h3 class="key-benefits-title">[@L[cds.sales/offers/online-business:32573-a-domain-heading]@L]</h3>
             <div class="key-benefits-text">[@L[cds.sales/offers/online-business:32573-a-domain-text]@L]</div>
             <div class="features-text">
-              <div class="include-check-green TLDtoken">[@L[cds.sales/offers/online-business:32573-a-domain-bullet-1]@L]</div>
+              <div class="include-check-green TLD-token">[@L[cds.sales/offers/online-business:32573-a-domain-bullet-1]@L]</div>
               <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-a-domain-bullet-2]@L]</div>
             </div>
           </div>
@@ -2001,13 +2227,9 @@ h
             <h3 class="key-benefits-title">[@L[cds.sales/offers/online-business:32573-a-website-heading]@L]</h3>
             <div class="key-benefits-text">[@L[cds.sales/offers/online-business:32573-a-website-text]@L]</div>
             <div class="features-text">
-              <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-a-website-bullet-1]@L]</div> 
-              ##if(productIsOffered(105))
-               
+              <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-a-website-bullet-1]@L]</div>
               <div class="include-check-none"><strong>[@L[cds.sales/offers/online-business:32573-or]@L]</strong></div>
-              <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-a-website-bullet-2]@L]</div>          
-              ##endif
-               
+              <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-a-website-bullet-2]@L]</div>
             </div>
           </div>
           <div class="col-sm-4 key-benefit">
@@ -5702,8 +5924,6 @@ var PlanBox6UI = {
     <!-- FOOTERBEGIN--> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- FOOTEREND-->
-     
-    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Bottom"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- liveperson includes -->
     <div id="lpButtonDiv"></div><!-- End Main Content -->
     <script type="text/javascript">
