@@ -41,13 +41,10 @@
 .tld-list { display: none;}
 
 
-#marquee h3.get-a-domain-text,
-#step2-choose-product h3.choose-header {
-  font-family: "Walsheim-Regular";
+#default-marquee-view h2.get-a-domain-text,
+#step2-choose-product h2.step-2-choose-header {
   font-size: 24px; 
-  color: #232323;
-  font-weight: bold;
-  text-transform: uppercase;
+  color: #333;
 }
 
 .disclaimers-row {
@@ -101,3 +98,7 @@ h2.api-error-header img {
 h2.api-error-header {
 
 }
+
+.bigtext {visibility: hidden;}
+
+h

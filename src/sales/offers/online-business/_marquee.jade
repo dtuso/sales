@@ -1,12 +1,42 @@
 atlantis:webstash(type="css")
   style.
-    #marquee {margin:0 auto; padding-top:15px;background-color: #77c043;}
-    #api-failure {display: none;}
+    #marquee {
+      margin:0 auto; 
+      padding-top:15px;
+      background-color: #77c043;
+    }
+
+    #api-failure,
+    #domain-available-marquee-view,
+    #domain-not-available-marquee-view,
+    #step2-choose-product {display: none; }
+
+
+    #marquee .domain-name-displayed {
+      font-size: 60px;
+      text-transform: lowercase; 
+      color: #333; 
+      background: #fedc45; 
+      padding: 0 5px;
+      line-height: 1.29em; /* to line up with the button height */
+      word-wrap: break-word; 
+      display: inline; 
+      margin: 0;
+    }
+
+    #marquee h2.availability-header {
+      color: #333333; 
+      margin: 20px 0 0; 
+      font-size: 40px;
+      color: #333; 
+    }
+
 
 section#marquee
   include ./_1_default-marquee-view.jade
   include ./_2_domain-available-marquee-view.jade
   include ./_3_domain-not-available-marquee-view.jade
+  include ./_4_step2-choose-product.jade
 
 atlantis:webstash(type="js")
   script(type="text/javascript", src="https://img1.wsimg.com/fos/hp/rebrand/js/bigtext.min.js")

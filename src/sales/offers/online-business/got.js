@@ -458,12 +458,10 @@ function showChoicesScreen(e){
   var $this = $(e.target),
     domain = $this.data('domain');
 
-  $('#marquee, #domains, #products').hide();
-  $('#step2-choose-product')
-    .show()
-    .find('.btn-purchase').data('domain', domain);
-
-  //- TODO: rerun the height alignment on the choose product screen
+  $('#step2-choose-product').find('.btn-purchase').data('domain', domain);
+  $('#products, #domains').hide();
+  var $thisSection = $this.closest('.js-marquee-section');
+  animateMarquee($thisSection, $('#step2-choose-product') /*toView*/);
 }
 
 function goToDppCheckoutPage(e) {
@@ -472,7 +470,6 @@ function goToDppCheckoutPage(e) {
     isOLS = $this.hasClass('product-ols'),
     apiEndpoint3,
     sourceurl = encodeURIComponent(got1Page.dppErrorReturnUrl.replace(/\{0\}/gi, '.' + domain.Extension));
-
 
   apiEndpoint3 = '[@T[link:<relative path="~/api/dpp/searchresultscart/11/"><param name="domain" value="domain" /><param name="packageid" value="packageid" /><param name="itc" value="itc" /><param name="sourceurl" value="sourceurl" /><param name="returnUrl" value="returnUrl" /></relative>]@T]';
   apiEndpoint3 = apiEndpoint3.replace('domain=domain', 'domain=' + domain.Fqdn);
@@ -597,7 +594,7 @@ function updateDomainCountText(initial) {
 
 
 function animateMarquee($currentView, $animateToView) {  
-  
+
   var currentViewHeight = $currentView.height(),
     windowWidth = $(window).width(),
     $marquee = $('#marquee'),
@@ -672,3 +669,9 @@ function getParameterByName(name) {
       results = regex.exec(location.search);
   return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
+
+$(window).load(function () {
+  $('.bigtext').bigtext({maxfontsize: 160});
+  setTimeout( "$('.bigtext').bigtext().css('visibility', 'visible');",500 );
+});
+
