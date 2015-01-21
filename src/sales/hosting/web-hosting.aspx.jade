@@ -75,18 +75,6 @@ prepend endOfPageScripts
         $("#"+id).show();
        }
     }
-    $("cpanelTab").onClick(function() {
-      $("#parallels-tab").hide();
-      $("#cpanel-tab").show();
-      $("cpanelTab").addClass("active");
-      $("parallelsTab").removeClass("active");
-      });
-    $("parallelsTab").onClick(function() {
-      $("#parallels-tab").hide();
-      $("#cpanel-tab").show();
-      $("cpanelTab").removeClass("active");
-      $("parallelsTab").addClass("active");
-      });
     function comparePlans(id){
       if(id=="cpanel-tab"){
         $("#parallels-tab").hide();
@@ -103,22 +91,6 @@ prepend endOfPageScripts
        }
     }
     $('.dropdown-toggle').dropdown()
-    $(function() {
-    $('.isToolTip').tooltip({
-        placement: 'bottom',
-        html: true
-    }).on('show.bs.tooltip', function() {
-        $('.tooltip-delay').tooltip('hide');
-    });
-    $('.tooltip-delay').tooltip({
-        placement: 'bottom',
-        html: true,
-        delay: {
-            hide: 3000
-        }
-    }).on('show.bs.tooltip', function() {
-        $('.tooltip-delay').tooltip('hide');
-    });});
 
 append pageStyles
   style
@@ -1733,18 +1705,18 @@ block sections
       div.modal-dialog
         div.modal-content
           form(method="POST" id="g-modal-loginAcct-form" action!="[@T[link:<external parammode='explicit' linktype='SSOURL' secure='true' />]@T]/login.aspx?spkey=[@T[sso:spkey]@T]&target=[@T[link:<external linktype='siteurl' path='/hosting/web-hosting.aspx' secure='false' parammode='explicit'/>]@T]")
-          input(type="hidden" value="LOGIN" name="LOGIN")
-          input(type="hidden" value="1" name="verifyShopper")
-          div.modal-header
-            button(type="button" class="close" data-dismiss="modal" aria-hidden="true") &times;
-            h4.modal-title Please login to access your account
-          div.modal-body
-            input(type="text" id="loginName" name="loginName" autocomplete="off" placeholder!="[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Headers.UtilityBar.Username]@L]")
-            input(type="password" id="password" name="password" autocomplete="off" placeholder!="[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Headers.UtilityBar.Password]@L]")
-            a(href!="[@T[link:<external linktype='SSOURL' path='/account/accountRetrieval.aspx' secure='true'/>]@T]" class="forgot-pass") [@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Headers.UtilityBar.ForgotPassword]@L]
-          div.modal-footer
-            button(type="button" class="btn btn-default" data-dismiss="modal") Cancel
-            input(class="btn btn-primary" type="submit" value!="[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Headers.UtilityBar.SignIn]@L]")
+            input(type="hidden" value="LOGIN" name="LOGIN")
+            input(type="hidden" value="1" name="verifyShopper")
+            div.modal-header
+              button(type="button" class="close" data-dismiss="modal" aria-hidden="true")
+              h4.modal-title Please login to access your account
+            div.modal-body
+              input(type="text" id="loginName" name="loginName" autocomplete="off" placeholder!="[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Headers.UtilityBar.Username]@L]")
+              input(type="password" id="password" name="password" autocomplete="off" placeholder!="[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Headers.UtilityBar.Password]@L]")
+              a(href!="[@T[link:<external linktype='SSOURL' path='/account/accountRetrieval.aspx' secure='true'/>]@T]" class="forgot-pass")</br> [@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Headers.UtilityBar.ForgotPassword]@L]
+            div.modal-footer
+              button(type="button" class="btn btn-default" data-dismiss="modal") Cancel
+              input(class="btn btn-primary" type="submit" value!="[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Headers.UtilityBar.SignIn]@L]")
   | 
   |##endif
   | 
@@ -1762,5 +1734,6 @@ block sections
           [@L[cds.sales/gd/hosting/web-hosting:modal-disclaimer-4]@L] </br></br>
           [@L[cds.sales/gd/hosting/web-hosting:modal-disclaimer-11166]@L] </br></br>
       p [@L[cds.sales/hosting/web-hosting-rebrand:trademark]@L]
-
-  script(type='text/javascript' src='./web-hosting/modal.js')
+  atlantis:webstash(type="js")
+      script(type="text/javascript")
+        include:js ./web-hosting/modal.js
