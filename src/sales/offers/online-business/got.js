@@ -246,9 +246,11 @@ function tokenizeDisclaimerModals() {
   
 
   if(got1Page.canOfferOls) tokenizeDisclaimerModal('#default-marquee-details-modal.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_wsb,got1Page.pricing.ols);
-  tokenizeDisclaimerModal('#default-marquee-details-modal-wsb-only-choice.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_wsb);
+  tokenizeDisclaimerModal('#default-marquee-details-modal-wsb-only-choice.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_wsb);  
   tokenizeDisclaimerModal('#site-choice-wsb-modal.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_wsb);  
   if(got1Page.canOfferOls) tokenizeDisclaimerModal('#site-choice-ols-modal.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_ols);
+  tokenizeDisclaimerModal('#step2-choose-product-wsb-modal.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_wsb);
+  if(got1Page.canOfferOls) tokenizeDisclaimerModal('#step2-choose-product-ols-modal.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_ols);
 }
 
 function wireupModals() {
