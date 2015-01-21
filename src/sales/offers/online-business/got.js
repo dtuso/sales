@@ -119,6 +119,7 @@ $(document).ready(function() {
   showTldImagesInDomainArea(); //- dynamically build the tld images in the #findYourPerfectDomain section
   
   //- fix up list of valid tlds from lang files
+  showAndOrderDynamicTldsInList("#products .TLD-token");
   showAndOrderDynamicTldsInList("#default-marquee-details-modal-wsb-only p");
   showAndOrderDynamicTldsInList("#default-marquee-details-modal p");
   showAndOrderDynamicTldsInList("#site-choice-wsb-modal p");
@@ -246,9 +247,11 @@ function tokenizeDisclaimerModals() {
   
 
   if(got1Page.canOfferOls) tokenizeDisclaimerModal('#default-marquee-details-modal.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_wsb,got1Page.pricing.ols);
-  tokenizeDisclaimerModal('#default-marquee-details-modal-wsb-only-choice.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_wsb);
+  tokenizeDisclaimerModal('#default-marquee-details-modal-wsb-only-choice.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_wsb);  
   tokenizeDisclaimerModal('#site-choice-wsb-modal.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_wsb);  
   if(got1Page.canOfferOls) tokenizeDisclaimerModal('#site-choice-ols-modal.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_ols);
+  tokenizeDisclaimerModal('#step2-choose-product-wsb-modal.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_wsb);
+  if(got1Page.canOfferOls) tokenizeDisclaimerModal('#step2-choose-product-ols-modal.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_ols);
 }
 
 function wireupModals() {
@@ -284,12 +287,7 @@ function wireupModals() {
   $('#wsb-video-btn, #wsb-only-video-btn').on('click', function(){
     $("#site-choice-wsb-video-modal").sfDialog({titleHidden:true, dialogWidthIdeal:840, buttons: []});
   });
-/*  $('#wsb-designs-btn, #wsb-only-designs-btn').on('click', function(){
-    $("#site-choice-wsb-designs-modal").sfDialog({titleHidden:true, dialogWidthIdeal:1, buttons: []});
-    $("#site-choice-wsb-designs-modal").sfDialog('cancel');
-    $('.view-all').click();
-  });
-*/
+
   if(got1Page.canOfferOls) {
     $('#ols-video-btn').on('click', function(){      
       $("#site-choice-ols-video-modal").sfDialog({titleHidden:true, dialogWidthIdeal:840, buttons: []});
@@ -460,12 +458,10 @@ function showChoicesScreen(e){
   var $this = $(e.target),
     domain = $this.data('domain');
 
-  $('#marquee, #domains, #products').hide();
-  $('#step2-choose-product')
-    .show()
-    .find('.btn-purchase').data('domain', domain);
-
-  //- TODO: rerun the height alignment on the choose product screen
+  $('#step2-choose-product').find('.btn-purchase').data('domain', domain);
+  $('#products, #domains').hide();
+  var $thisSection = $this.closest('.js-marquee-section');
+  animateMarquee($thisSection, $('#step2-choose-product') /*toView*/);
 }
 
 function goToDppCheckoutPage(e) {
@@ -474,7 +470,6 @@ function goToDppCheckoutPage(e) {
     isOLS = $this.hasClass('product-ols'),
     apiEndpoint3,
     sourceurl = encodeURIComponent(got1Page.dppErrorReturnUrl.replace(/\{0\}/gi, '.' + domain.Extension));
-
 
   apiEndpoint3 = '[@T[link:<relative path="~/api/dpp/searchresultscart/11/"><param name="domain" value="domain" /><param name="packageid" value="packageid" /><param name="itc" value="itc" /><param name="sourceurl" value="sourceurl" /><param name="returnUrl" value="returnUrl" /></relative>]@T]';
   apiEndpoint3 = apiEndpoint3.replace('domain=domain', 'domain=' + domain.Fqdn);
@@ -599,7 +594,7 @@ function updateDomainCountText(initial) {
 
 
 function animateMarquee($currentView, $animateToView) {  
-  
+
   var currentViewHeight = $currentView.height(),
     windowWidth = $(window).width(),
     $marquee = $('#marquee'),

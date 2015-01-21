@@ -128,9 +128,8 @@
           window._trfq.push(['cmdLogImpression', $(element).attr('data-icode'), null, element]);
         });
       }
-    </script><!--[if lt IE 9]>
-    <script type="text/javascript">$("[data-svg-fallback]").each(function() {if($(this).attr('background-image')){$(this).attr("background-image",$(this).attr("data-svg-fallback"));}else if($(this).attr('src')){$(this).attr("src",$(this).attr("data-svg-fallback"));}});</script>
-    <![endif]-->
+      
+    </script>
     <script type="text/javascript">
       delayLoader.addScript('[@T[link:<javascriptroot />]@T]/fos/liveperson/js/liveperson_20141013a.min.js')
       
@@ -257,6 +256,7 @@ $(document).ready(function() {
   showTldImagesInDomainArea(); //- dynamically build the tld images in the #findYourPerfectDomain section
   
   //- fix up list of valid tlds from lang files
+  showAndOrderDynamicTldsInList("#products .TLD-token");
   showAndOrderDynamicTldsInList("#default-marquee-details-modal-wsb-only p");
   showAndOrderDynamicTldsInList("#default-marquee-details-modal p");
   showAndOrderDynamicTldsInList("#site-choice-wsb-modal p");
@@ -384,9 +384,11 @@ function tokenizeDisclaimerModals() {
   
 
   if(got1Page.canOfferOls) tokenizeDisclaimerModal('#default-marquee-details-modal.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_wsb,got1Page.pricing.ols);
-  tokenizeDisclaimerModal('#default-marquee-details-modal-wsb-only-choice.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_wsb);
+  tokenizeDisclaimerModal('#default-marquee-details-modal-wsb-only-choice.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_wsb);  
   tokenizeDisclaimerModal('#site-choice-wsb-modal.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_wsb);  
   if(got1Page.canOfferOls) tokenizeDisclaimerModal('#site-choice-ols-modal.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_ols);
+  tokenizeDisclaimerModal('#step2-choose-product-wsb-modal.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_wsb);
+  if(got1Page.canOfferOls) tokenizeDisclaimerModal('#step2-choose-product-ols-modal.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_ols);
 }
 
 function wireupModals() {
@@ -422,12 +424,7 @@ function wireupModals() {
   $('#wsb-video-btn, #wsb-only-video-btn').on('click', function(){
     $("#site-choice-wsb-video-modal").sfDialog({titleHidden:true, dialogWidthIdeal:840, buttons: []});
   });
-/*  $('#wsb-designs-btn, #wsb-only-designs-btn').on('click', function(){
-    $("#site-choice-wsb-designs-modal").sfDialog({titleHidden:true, dialogWidthIdeal:1, buttons: []});
-    $("#site-choice-wsb-designs-modal").sfDialog('cancel');
-    $('.view-all').click();
-  });
-*/
+
   if(got1Page.canOfferOls) {
     $('#ols-video-btn').on('click', function(){      
       $("#site-choice-ols-video-modal").sfDialog({titleHidden:true, dialogWidthIdeal:840, buttons: []});
@@ -598,12 +595,10 @@ function showChoicesScreen(e){
   var $this = $(e.target),
     domain = $this.data('domain');
 
-  $('#marquee, #domains, #products').hide();
-  $('#step2-choose-product')
-    .show()
-    .find('.btn-purchase').data('domain', domain);
-
-  //- TODO: rerun the height alignment on the choose product screen
+  $('#step2-choose-product').find('.btn-purchase').data('domain', domain);
+  $('#products, #domains').hide();
+  var $thisSection = $this.closest('.js-marquee-section');
+  animateMarquee($thisSection, $('#step2-choose-product') /*toView*/);
 }
 
 function goToDppCheckoutPage(e) {
@@ -612,7 +607,6 @@ function goToDppCheckoutPage(e) {
     isOLS = $this.hasClass('product-ols'),
     apiEndpoint3,
     sourceurl = encodeURIComponent(got1Page.dppErrorReturnUrl.replace(/\{0\}/gi, '.' + domain.Extension));
-
 
   apiEndpoint3 = '[@T[link:<relative path="~/api/dpp/searchresultscart/11/"><param name="domain" value="domain" /><param name="packageid" value="packageid" /><param name="itc" value="itc" /><param name="sourceurl" value="sourceurl" /><param name="returnUrl" value="returnUrl" /></relative>]@T]';
   apiEndpoint3 = apiEndpoint3.replace('domain=domain', 'domain=' + domain.Fqdn);
@@ -737,7 +731,7 @@ function updateDomainCountText(initial) {
 
 
 function animateMarquee($currentView, $animateToView) {  
-  
+
   var currentViewHeight = $currentView.height(),
     windowWidth = $(window).width(),
     $marquee = $('#marquee'),
@@ -822,6 +816,11 @@ $(window).load(function () {
       </script>
       <script type="text/javascript" src="https://img1.wsimg.com/fos/hp/rebrand/js/bigtext.min.js"></script>
     </atlantis:webstash>
+    <style>
+      .svgfallback{display:none}
+      .svgfallback:not(old){display:block}
+      
+    </style>
     <link href="[@T[link:<cssroot />]@T]/fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css">
     <style>.bg-gray-light {
   background-color: #d9d9d9;
@@ -1356,7 +1355,7 @@ h
           padding: 0 5px;
           line-height: 1.29em; /* to line up with the button height */
           word-wrap: break-word; 
-          display: inline-block; 
+          display: inline; 
           margin: 0;
         }
         
@@ -1788,7 +1787,7 @@ h
           
         </style>
       </atlantis:webstash>
-      <section id="step2-choose-product">
+      <section id="step2-choose-product" class="js-marquee-section">
         <div class="bg-green-new">
           <div class="container">
             <div class="row">
@@ -1994,7 +1993,7 @@ h
             <h3 class="key-benefits-title">[@L[cds.sales/offers/online-business:32573-a-domain-heading]@L]</h3>
             <div class="key-benefits-text">[@L[cds.sales/offers/online-business:32573-a-domain-text]@L]</div>
             <div class="features-text">
-              <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-a-domain-bullet-1]@L]</div>
+              <div class="include-check-green TLDtoken">[@L[cds.sales/offers/online-business:32573-a-domain-bullet-1]@L]</div>
               <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-a-domain-bullet-2]@L]</div>
             </div>
           </div>
@@ -3018,7 +3017,7 @@ h
           .customer-quote {
             margin-top: 0px;
             margin-bottom: 10px;
-            min-height: 70px;
+            min-height: 90px;
           }
           .store-name {
             margin-top: 10px;
@@ -3398,20 +3397,26 @@ top: -6px;
                             <div class="item-wrapper">
                               <div data-icode="" data-ci="95265" class="carousel-panel container">
                                 <div class="row">
-                                  <div class="col-sm-12">
+                                  <div class="col-sm-1"></div>
+                                  <div class="col-sm-10 center-block">
                                     <div class="customer-slide slide-2"></div>
                                   </div>
+                                  <div class="col-sm-1"></div>
                                 </div>
                                 <div class="row">
-                                  <div class="col-sm-12 col-xs-12">
+                                  <div class="col-sm-1"></div>
+                                  <div class="col-sm-10 col-xs-10">
                                     <h2 class="store-name">[@L[cds.sales/offers/online-business:32573-ols-customerStoreName2]@L]</h2>
                                   </div>
+                                  <div class="col-sm-1"></div>
                                 </div>
                                 <div class="row">
-                                  <div class="col-sm-12 col-xs-12">
+                                  <div class="col-sm-1"></div>
+                                  <div class="col-sm-10 col-xs-10">
                                     <div class="customer-quote">[@L[cds.sales/offers/online-business:32573-ols-customerQuote2]@L]</div>
                                     <div class="customer-byline">&mdash; [@L[cds.sales/offers/online-business:32573-ols-customerByLine2]@L]</div><a href="http://www.glossandtoss.net" target="_blank" class="btn btn-default btn-default-black">[@L[cds.sales/offers/online-business:32573-see-it-in-action]@L]</a>
                                   </div>
+                                  <div class="col-sm-1"></div>
                                 </div>
                               </div>
                             </div>
@@ -3420,20 +3425,26 @@ top: -6px;
                             <div class="item-wrapper">
                               <div data-icode="" data-ci="95265" class="carousel-panel container">
                                 <div class="row">
-                                  <div class="col-sm-12">
+                                  <div class="col-sm-1"></div>
+                                  <div class="col-sm-10 center-block">
                                     <div class="customer-slide slide-3"></div>
                                   </div>
+                                  <div class="col-sm-1"></div>
                                 </div>
                                 <div class="row">
-                                  <div class="col-sm-12 col-xs-12">
+                                  <div class="col-sm-1"></div>
+                                  <div class="col-sm-10 col-xs-10">
                                     <h2 class="store-name">[@L[cds.sales/offers/online-business:32573-ols-customerStoreName3]@L]</h2>
                                   </div>
+                                  <div class="col-sm-1"></div>
                                 </div>
                                 <div class="row">
-                                  <div class="col-sm-12 col-xs-12">
+                                  <div class="col-sm-1"></div>
+                                  <div class="col-sm-10 col-xs-10">
                                     <div class="customer-quote">[@L[cds.sales/offers/online-business:32573-ols-customerQuote3]@L]</div>
                                     <div class="customer-byline">&mdash; [@L[cds.sales/offers/online-business:32573-ols-customerByLine3]@L]</div><a href="http://www.snap-bibs.com" target="_blank" class="btn btn-default btn-default-black">[@L[cds.sales/offers/online-business:32573-see-it-in-action]@L]</a>
                                   </div>
+                                  <div class="col-sm-1"></div>
                                 </div>
                               </div>
                             </div>
@@ -3442,20 +3453,26 @@ top: -6px;
                             <div class="item-wrapper">
                               <div data-icode="" data-ci="95265" class="carousel-panel container">
                                 <div class="row">
-                                  <div class="col-sm-12">
+                                  <div class="col-sm-1"></div>
+                                  <div class="col-sm-10 center-block">
                                     <div class="customer-slide slide-4"></div>
                                   </div>
+                                  <div class="col-sm-1"></div>
                                 </div>
                                 <div class="row">
-                                  <div class="col-sm-12 col-xs-12">
+                                  <div class="col-sm-1"></div>
+                                  <div class="col-sm-10 col-xs-10">
                                     <h2 class="store-name">[@L[cds.sales/offers/online-business:32573-ols-customerStoreName4]@L]</h2>
                                   </div>
+                                  <div class="col-sm-1"></div>
                                 </div>
                                 <div class="row">
-                                  <div class="col-sm-12 col-xs-12">
+                                  <div class="col-sm-1"></div>
+                                  <div class="col-sm-10 col-xs-10">
                                     <div class="customer-quote">[@L[cds.sales/offers/online-business:32573-ols-customerQuote4]@L]</div>
                                     <div class="customer-byline">&mdash; [@L[cds.sales/offers/online-business:32573-ols-customerByLine4]@L]</div><a href="http://www.theprincessexpress.com" target="_blank" class="btn btn-default btn-default-black">[@L[cds.sales/offers/online-business:32573-see-it-in-action]@L]</a>
                                   </div>
+                                  <div class="col-sm-1"></div>
                                 </div>
                               </div>
                             </div>
@@ -3464,16 +3481,20 @@ top: -6px;
                             <div class="item-wrapper">
                               <div data-icode="" data-ci="95265" class="carousel-panel container">
                                 <div class="row">
-                                  <div class="col-sm-12">
+                                  <div class="col-sm-1"></div>
+                                  <div class="col-sm-10 center-block">
                                     <div class="customer-slide slide-1"></div>
                                   </div>
+                                  <div class="col-sm-1"></div>
                                 </div>
                                 <div class="row">
-                                  <div class="col-sm-12 col-xs-12">
+                                  <div class="col-sm-1"></div>
+                                  <div class="col-sm-10 col-xs-10">
                                     <h2 class="store-name">[@L[cds.sales/offers/online-business:32573-ols-customerStoreName1]@L]</h2>
                                     <div class="customer-quote">[@L[cds.sales/offers/online-business:32573-ols-customerQuote1]@L]</div>
                                     <div class="customer-byline">&mdash; [@L[cds.sales/offers/online-business:32573-ols-customerByLine1]@L]</div><a href="http://www.thejonesmarket.com" target="_blank" class="btn btn-default btn-default-black">[@L[cds.sales/offers/online-business:32573-see-it-in-action]@L]</a>
                                   </div>
+                                  <div class="col-sm-1"></div>
                                 </div>
                               </div>
                             </div>
