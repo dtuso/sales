@@ -52,7 +52,7 @@ var got1Page = {
   sfDialogErrorButtons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }],
   maxNumberOfSpinsToShowByDefault: 3,
   lastSpinResultCount: 0,
-  dppErrorReturnUrl: '[@T[link:<relative path="~/offers/online-business.aspx"><param name="tldRegErr" value="{0}" /></relative>]@T]',
+  dppErrorReturnUrl: '[@T[link:<relative path="~/offers/online-business.aspx"><param name="tldRegErr" value="tldRegErr" /></relative>]@T]',
   offersCodes: {
     packageId_wsb: 'gybo_1email_1yr',
     packageId_ols: 'gybo_1email_1yr_ols',
@@ -483,7 +483,7 @@ function goToDppCheckoutPage(e) {
     domain = $this.data('domain'),
     isOLS = $this.hasClass('product-ols'),
     apiEndpoint3,
-    sourceurl = encodeURIComponent(got1Page.dppErrorReturnUrl.replace(/\{0\}/gi, '.' + domain.Extension));
+    sourceurl = encodeURIComponent(got1Page.dppErrorReturnUrl.replace('tldRegErr=tldRegErr', 'tldRegErr=.' + domain.Extension));
 
   apiEndpoint3 = '[@T[link:<relative path="~/api/dpp/searchresultscart/11/"><param name="domain" value="domain" /><param name="packageid" value="packageid" /><param name="itc" value="itc" /><param name="sourceurl" value="sourceurl" /><param name="returnUrl" value="returnUrl" /></relative>]@T]';
   apiEndpoint3 = apiEndpoint3.replace('domain=domain', 'domain=' + domain.Fqdn);
