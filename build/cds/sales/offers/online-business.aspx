@@ -595,7 +595,21 @@ function showChoicesScreen(e){
   $('#step2-choose-product').find('.btn-purchase').data('domain', domain);
   $('#products, #domains').hide();
   var $thisSection = $this.closest('.js-marquee-section');
+
+
   animateMarquee($thisSection, $('#step2-choose-product') /*toView*/);
+
+  // FOR IE we need to resize the plan boxes that were previously hidden
+  // code taken from landing-page.jade to auto height these two modules  
+  var $proPlanWraps = $("#step2-choose-product").find(".pro-plans").find(".pro-plan-wrap"),
+    maxHeight = 0;
+  $proPlanWraps
+    .css({"height":"auto"})
+    .each(function(index, plan) {
+      maxHeight = $(plan).outerHeight() > maxHeight ? $(plan).outerHeight() : maxHeight;
+  });
+  if( maxHeight > 0 ) $proPlanWraps.find(".pro-plan-wrap").css("height", maxHeight);
+
 }
 
 function goToDppCheckoutPage(e) {
@@ -1200,7 +1214,7 @@ h
     font-size: 3rem;
     margin-top: 0;
     font-family: 'Walsheim-Bold';
-    text-transform: none;
+    text-transform: uppercase;
     word-wrap: break-word;
     word-break: break-word;
     white-space: -moz-pre-wrap;
@@ -1228,7 +1242,7 @@ h
 }
 
 .pro-plans .pro-plan-wrap .plan-price-wrap {
-    min-height: 92px;
+    padding-bottom: 30px;
 }
 
 .pro-plans .pro-plan-wrap .plan-price-wrap .plan-price {
@@ -1288,13 +1302,12 @@ h
 }
 
 .pro-plans .sf-tipper-target {
-    background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
-    background-position: 0 -864px;
-    width: 15px;
-    height: 17px;
-    display: inline-block;
-    background-size: 205px auto;
-    vertical-align: baseline;
+  background-image: url(https://img1.wsimg-com.ide/fos/mike/img/hosting/img-tootip-.png);
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  vertical-align: baseline;
+  cursor: pointer;
 }
     </style><!--[if lt IE 9]>
     <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
