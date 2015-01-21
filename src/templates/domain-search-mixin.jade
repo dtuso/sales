@@ -1,3 +1,4 @@
+
 mixin domainSearchInput(domainSearchParams)
   - domainSearchParams                       = domainSearchParams || {};
   - domainSearchParams.actionUrl             = domainSearchParams.actionUrl || "[@T[link:<external linktype='siteurl' path='' parammode='explicit'/>]@T]/api/dpp/search/single?ci=54814&isc=gd41166r";
@@ -10,11 +11,11 @@ mixin domainSearchInput(domainSearchParams)
   atlantis:webstash(type="css")
     style
       :less
-        #domain-name-input { color: #008a32; font-family: 'Walsheim-Bold', 'Arial Black', sans-serif; }
-        #domain-name-input::-webkit-input-placeholder { color: #008a32; font-family: 'Walsheim-Bold', 'Arial Black', sans-serif; }
-        #domain-name-input:-moz-placeholder { color: #008a32; opacity: 1; font-family: 'Walsheim-Bold', 'Arial Black', sans-serif; }
-        #domain-name-input::-moz-placeholder { color: #008a32; opacity: 1; font-family: 'Walsheim-Bold', 'Arial Black', sans-serif; }
-        #domain-name-input:-ms-input-placeholder { color: #008a32; font-family: 'Walsheim-Bold', 'Arial Black', sans-serif; }
+        #domain-name-input { color: #008a32; }
+        #domain-name-input::-webkit-input-placeholder { color: #008a32; }
+        #domain-name-input:-moz-placeholder { color: #008a32; opacity: 1;  }
+        #domain-name-input::-moz-placeholder { color: #008a32; opacity: 1;  }
+        #domain-name-input:-ms-input-placeholder { color: #008a32; }
         .search-text { display: none; }
         .search-icon { font-size: 22px; }
         @media (min-width: 768px) {
@@ -25,7 +26,7 @@ mixin domainSearchInput(domainSearchParams)
   form(action!="#{domainSearchParams.actionUrl}", data-icode!="#{domainSearchParams.icode}", data-domainsearch!="{'search-element':'input.searchInput','placeholder-element':'input.searchInput','button':'button','empty-redirect':'[@T[link:<external linktype='siteurl' path='' parammode='explicit'/>]@T]/domains/domain-name-search.aspx'}" role='form')
     .input-group
       label.searchInput.sr-only(for='domain-name-input') !{domainSearchParams.placeholderText}
-      input#domain-name-input.searchInput.form-control(type='text', placeholder!='#{domainSearchParams.placeholderText}', name='domainToCheck' maxlength='63')
+      input#domain-name-input.headline-primary.searchInput.form-control(type='text', placeholder!='#{domainSearchParams.placeholderText}', name='domainToCheck' maxlength='63')
       span.input-group-btn
         button.btn.btn-primary(type='submit' data-ci='#{cicode}') 
           span.search-icon.uxicon.uxicon-magnifying-glass
@@ -33,14 +34,6 @@ mixin domainSearchInput(domainSearchParams)
 
 
 mixin domainSearchOffersInput(title, cicode, placeholderText, buttonText, infoTypeHere, infoErrorEligibility, infoInvalidTld)
-  style.
-    .offer-search-box { padding-bottom:20px;}
-    .search-message { display: none; margin-left:20px; margin-top:30px;width:65%;}
-    .domain-search-messaging-row {padding-bottom: 40px;}
-    h2.get-a-domain-text {
-      margin: 20px 0 5px;
-      font-size:24px;
-    }
     
   .row
     .col-md-12
@@ -54,7 +47,7 @@ mixin domainSearchOffersInput(title, cicode, placeholderText, buttonText, infoTy
           button.btn.btn-primary.btn-lg.offer-search-btn(type="button" name="searchButton" data-ci="#{cicode}") !{buttonText}
   .row.domain-search-messaging-row
     .col-md-12
-      span.search-message.speech-shape-upsidedown.speech-shape-upsidedown-yellow.type-your-business-name !{infoTypeHere}
-      span.search-message.speech-shape-upsidedown.speech-shape-upsidedown-orange.domain-eligibility-fail !{infoErrorEligibility}
-      span.search-message.speech-shape-upsidedown.speech-shape-upsidedown-orange.invalid-TLD-entered !{infoInvalidTld}
+      span.search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-yellow.type-your-business-name !{infoTypeHere}
+      span.search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-orange.domain-eligibility-fail !{infoErrorEligibility}
+      span.search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-orange.invalid-TLD-entered !{infoInvalidTld}
 
