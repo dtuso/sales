@@ -188,3 +188,20 @@ height: 27px;
 .bg-pro-gray {
   background-color: #e8e8e8;
 }
+
+.compare-nav-tabs {
+  margin-bottom: -16px;
+  color: #333;
+  font-size: 23px;
+  font-family: 'Walsheim-Black';
+}
+
+.compare-nav-tabs li {
+  text-align: center;
+}
+
+@media (min-width: 1200px) {
+  .compare-nav-tabs li {
+    width: 39%;
+  }
+}

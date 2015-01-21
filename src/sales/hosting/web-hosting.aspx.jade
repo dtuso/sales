@@ -66,6 +66,27 @@ prepend endOfPageScripts
         }
       });
     ##endif
+    function comparePlans2(id){
+      if(id=="cpanel-tab"){
+        $("#parallels-tab").hide();
+        $("#"+id).show();
+       }else if(id =="parallels-tab"){
+        $("#cpanel-tab").hide();
+        $("#"+id).show();
+       }
+    }
+    $("cpanelTab").onClick(function() {
+      $("#parallels-tab").hide();
+      $("#cpanel-tab").show();
+      $("cpanelTab").addClass("active");
+      $("parallelsTab").removeClass("active");
+      });
+    $("parallelsTab").onClick(function() {
+      $("#parallels-tab").hide();
+      $("#cpanel-tab").show();
+      $("cpanelTab").removeClass("active");
+      $("parallelsTab").addClass("active");
+      });
     function comparePlans(id){
       if(id=="cpanel-tab"){
         $("#parallels-tab").hide();
@@ -284,7 +305,7 @@ block sections
           | 
         .col-sm-6.one-click-right
           div.text-center
-            img.features-img.features-img-right(src!= "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img-feature1-logos.png")
+            img.features-img.features-img-right(style="height:auto; max-width:100%;" src!= "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img-feature1-logos.png")
 
   section#speed-chart.tile-section
     .container
@@ -410,17 +431,22 @@ block sections
     .container(style="background: #fff;")
       .text-center
         h2 [@L[cds.sales/gd/hosting/web-hosting:compare-plans-tab-title-11166]@L]
-        div.compareButtons.leftActive
-          div.col-xs-6.compareButtonsLeft.activeButton
-            a(href="javascript:comparePlans('cpanel-tab')") Cpanel
-          div.col-xs-6.compareButtonsRight.inactiveButton
-            a(href="javascript:comparePlans('parallels-tab')") Parallels
+        //- div.compareButtons.leftActive
+        //-   div.col-xs-6.compareButtonsLeft.activeButton
+        //-     a(href="javascript:comparePlans('cpanel-tab')") Cpanel
+        //-   div.col-xs-6.compareButtonsRight.inactiveButton
+        //-     a(href="javascript:comparePlans('parallels-tab')") Parallels
       #cpanel-tab.table-responsive
         +compareFeaturesTable({showViewAllButton: false, numberOfRowsNotHidden: 9, tableID: "cpanel-table"})
           thead
             tr
-              td(style="width: 40%;")
-                h2 [@L[cds.sales/hosting/web-hosting-rebrand:cPanelTitle]@L]
+              td(style="width: 40%;padding-left: 0;border-bottom: 1px solid #333;")
+                //h2 [@L[cds.sales/hosting/web-hosting-rebrand:cPanelTitle]@L]
+                ul.nav.nav-tabs.compare-nav-tabs
+                  li#cpanelTab.active
+                    a cPanel
+                  li#parallelsTab
+                    a(href="javascript:comparePlans2('parallels-tab')") Parallels
               td(style="width: 15%; border-bottom: 8px solid #a6a6a6;")
                 h4 [@L[cds.sales/gd/hosting/web-hosting:compare-plans-starter-11166]@L]
               td(style="width: 15%; border-bottom: 8px solid #f47f00; background-color: transparent;")
@@ -741,8 +767,13 @@ block sections
         +compareFeaturesTable({showViewAllButton: false, numberOfRowsNotHidden: 9, tableID: "parallels-table", includeStyles: false})
           thead
             tr
-              td(style="width: 40%;")
-                h2 [@L[cds.sales/hosting/web-hosting-rebrand:windowsTitle]@L]
+              td(style="width: 40%;padding-left: 0;border-bottom: 1px solid #333;")
+                //h2 [@L[cds.sales/hosting/web-hosting-rebrand:windowsTitle]@L]
+                ul.nav.nav-tabs.compare-nav-tabs
+                  li#cpanelTab
+                    a(href="javascript:comparePlans2('cpanel-tab')") cPanel
+                  li#parallelsTab.active
+                    a Parallels
               td(style="width: 20%; border-bottom: 8px solid #f47f00;")
                 h4 [@L[cds.sales/gd/hosting/web-hosting:compare-plans-economy-11166]@L]
               td(style="width: 20%; border-bottom: 8px solid #7abf4b; background-color: transparent;")
@@ -1018,17 +1049,22 @@ block sections
     .container(style="background: #fff;")
       .text-center
         h2 [@L[cds.sales/gd/hosting/web-hosting:compare-plans-tab-title-11166]@L]
-        div.compareButtons.leftActive
-          div.col-xs-6.compareButtonsLeft.activeButton
-            a(href="javascript:comparePlans('cpanel-tab')") Cpanel
-          div.col-xs-6.compareButtonsRight.inactiveButton
-            a(href="javascript:comparePlans('parallels-tab')") Parallels
+        //- div.compareButtons.leftActive
+        //-   div.col-xs-6.compareButtonsLeft.activeButton
+        //-     a(href="javascript:comparePlans('cpanel-tab')") Cpanel
+        //-   div.col-xs-6.compareButtonsRight.inactiveButton
+        //-     a(href="javascript:comparePlans('parallels-tab')") Parallels
       #cpanel-tab.table-responsive
         +compareFeaturesTable({showViewAllButton: false, numberOfRowsNotHidden: 9, tableID: "cpanel-table"})
           thead
             tr
-              td(style="width: 40%;")
-                h2 [@L[cds.sales/hosting/web-hosting-rebrand:cPanelTitle]@L]
+              td(style="width: 40%;padding-left: 0;border-bottom: 1px solid #333;")
+                //h2 [@L[cds.sales/hosting/web-hosting-rebrand:cPanelTitle]@L]
+                ul.nav.nav-tabs.compare-nav-tabs
+                  li#cpanelTab.active
+                    a cPanel
+                  li#parallelsTab
+                    a(href="javascript:comparePlans2('parallels-tab')") Parallels
               td(style="width: 20%; border-bottom: 8px solid #f47f00;")
                 h4 [@L[cds.sales/gd/hosting/web-hosting:compare-plans-economy-11166]@L]
               td(style="width: 20%; border-bottom: 8px solid #7abf4b; background-color: transparent;")
@@ -1296,8 +1332,13 @@ block sections
         +compareFeaturesTable({showViewAllButton: false, numberOfRowsNotHidden: 9, tableID: "parallels-table", includeStyles: false})
           thead
             tr
-              td(style="width: 40%;")
-                h2 [@L[cds.sales/hosting/web-hosting-rebrand:windowsTitle]@L]
+              td(style="width: 40%;padding-left: 0;border-bottom: 1px solid #333;")
+                //h2 [@L[cds.sales/hosting/web-hosting-rebrand:windowsTitle]@L]
+                ul.nav.nav-tabs.compare-nav-tabs
+                  li#cpanelTab
+                    a(href="javascript:comparePlans2('cpanel-tab')") cPanel
+                  li#parallelsTab.active
+                    a Parallels
               td(style="width: 20%; border-bottom: 8px solid #f47f00;")
                 h4 [@L[cds.sales/gd/hosting/web-hosting:compare-plans-economy-11166]@L]
               td(style="width: 20%; border-bottom: 8px solid #7abf4b; background-color: transparent;")
@@ -1721,3 +1762,5 @@ block sections
           [@L[cds.sales/gd/hosting/web-hosting:modal-disclaimer-4]@L] </br></br>
           [@L[cds.sales/gd/hosting/web-hosting:modal-disclaimer-11166]@L] </br></br>
       p [@L[cds.sales/hosting/web-hosting-rebrand:trademark]@L]
+
+  script(type='text/javascript' src='./web-hosting/modal.js')
