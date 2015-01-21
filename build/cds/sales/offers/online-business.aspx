@@ -125,9 +125,8 @@
           window._trfq.push(['cmdLogImpression', $(element).attr('data-icode'), null, element]);
         });
       }
-    </script><!--[if lt IE 9]>
-    <script type="text/javascript">$("[data-svg-fallback]").each(function() {if($(this).attr('background-image')){$(this).attr("background-image",$(this).attr("data-svg-fallback"));}else if($(this).attr('src')){$(this).attr("src",$(this).attr("data-svg-fallback"));}});</script>
-    <![endif]-->
+      
+    </script>
     <script type="text/javascript">
       delayLoader.addScript('[@T[link:<javascriptroot />]@T]/fos/liveperson/js/liveperson_20141013a.min.js')
       
@@ -813,6 +812,11 @@ function getParameterByName(name) {
       </script>
       <script type="text/javascript" src="https://img1.wsimg.com/fos/hp/rebrand/js/bigtext.min.js"></script>
     </atlantis:webstash>
+    <style>
+      .svgfallback{display:none}
+      .svgfallback:not(old){display:block}
+      
+    </style>
     <link href="[@T[link:<cssroot />]@T]/fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css">
     <style>.bg-gray-light {
   background-color: #d9d9d9;
@@ -2961,7 +2965,7 @@ h2.api-error-header {
           .customer-quote {
             margin-top: 0px;
             margin-bottom: 10px;
-            min-height: 70px;
+            min-height: 90px;
           }
           .store-name {
             margin-top: 10px;
@@ -3341,20 +3345,26 @@ top: -6px;
                             <div class="item-wrapper">
                               <div data-icode="" data-ci="95265" class="carousel-panel container">
                                 <div class="row">
-                                  <div class="col-sm-12">
+                                  <div class="col-sm-1"></div>
+                                  <div class="col-sm-10 center-block">
                                     <div class="customer-slide slide-2"></div>
                                   </div>
+                                  <div class="col-sm-1"></div>
                                 </div>
                                 <div class="row">
-                                  <div class="col-sm-12 col-xs-12">
+                                  <div class="col-sm-1"></div>
+                                  <div class="col-sm-10 col-xs-10">
                                     <h2 class="store-name">[@L[cds.sales/offers/online-business:32573-ols-customerStoreName2]@L]</h2>
                                   </div>
+                                  <div class="col-sm-1"></div>
                                 </div>
                                 <div class="row">
-                                  <div class="col-sm-12 col-xs-12">
+                                  <div class="col-sm-1"></div>
+                                  <div class="col-sm-10 col-xs-10">
                                     <div class="customer-quote">[@L[cds.sales/offers/online-business:32573-ols-customerQuote2]@L]</div>
                                     <div class="customer-byline">&mdash; [@L[cds.sales/offers/online-business:32573-ols-customerByLine2]@L]</div><a href="http://www.glossandtoss.net" target="_blank" class="btn btn-default btn-default-black">[@L[cds.sales/offers/online-business:32573-see-it-in-action]@L]</a>
                                   </div>
+                                  <div class="col-sm-1"></div>
                                 </div>
                               </div>
                             </div>
@@ -3363,20 +3373,26 @@ top: -6px;
                             <div class="item-wrapper">
                               <div data-icode="" data-ci="95265" class="carousel-panel container">
                                 <div class="row">
-                                  <div class="col-sm-12">
+                                  <div class="col-sm-1"></div>
+                                  <div class="col-sm-10 center-block">
                                     <div class="customer-slide slide-3"></div>
                                   </div>
+                                  <div class="col-sm-1"></div>
                                 </div>
                                 <div class="row">
-                                  <div class="col-sm-12 col-xs-12">
+                                  <div class="col-sm-1"></div>
+                                  <div class="col-sm-10 col-xs-10">
                                     <h2 class="store-name">[@L[cds.sales/offers/online-business:32573-ols-customerStoreName3]@L]</h2>
                                   </div>
+                                  <div class="col-sm-1"></div>
                                 </div>
                                 <div class="row">
-                                  <div class="col-sm-12 col-xs-12">
+                                  <div class="col-sm-1"></div>
+                                  <div class="col-sm-10 col-xs-10">
                                     <div class="customer-quote">[@L[cds.sales/offers/online-business:32573-ols-customerQuote3]@L]</div>
                                     <div class="customer-byline">&mdash; [@L[cds.sales/offers/online-business:32573-ols-customerByLine3]@L]</div><a href="http://www.snap-bibs.com" target="_blank" class="btn btn-default btn-default-black">[@L[cds.sales/offers/online-business:32573-see-it-in-action]@L]</a>
                                   </div>
+                                  <div class="col-sm-1"></div>
                                 </div>
                               </div>
                             </div>
@@ -3385,20 +3401,26 @@ top: -6px;
                             <div class="item-wrapper">
                               <div data-icode="" data-ci="95265" class="carousel-panel container">
                                 <div class="row">
-                                  <div class="col-sm-12">
+                                  <div class="col-sm-1"></div>
+                                  <div class="col-sm-10 center-block">
                                     <div class="customer-slide slide-4"></div>
                                   </div>
+                                  <div class="col-sm-1"></div>
                                 </div>
                                 <div class="row">
-                                  <div class="col-sm-12 col-xs-12">
+                                  <div class="col-sm-1"></div>
+                                  <div class="col-sm-10 col-xs-10">
                                     <h2 class="store-name">[@L[cds.sales/offers/online-business:32573-ols-customerStoreName4]@L]</h2>
                                   </div>
+                                  <div class="col-sm-1"></div>
                                 </div>
                                 <div class="row">
-                                  <div class="col-sm-12 col-xs-12">
+                                  <div class="col-sm-1"></div>
+                                  <div class="col-sm-10 col-xs-10">
                                     <div class="customer-quote">[@L[cds.sales/offers/online-business:32573-ols-customerQuote4]@L]</div>
                                     <div class="customer-byline">&mdash; [@L[cds.sales/offers/online-business:32573-ols-customerByLine4]@L]</div><a href="http://www.theprincessexpress.com" target="_blank" class="btn btn-default btn-default-black">[@L[cds.sales/offers/online-business:32573-see-it-in-action]@L]</a>
                                   </div>
+                                  <div class="col-sm-1"></div>
                                 </div>
                               </div>
                             </div>
@@ -3407,16 +3429,20 @@ top: -6px;
                             <div class="item-wrapper">
                               <div data-icode="" data-ci="95265" class="carousel-panel container">
                                 <div class="row">
-                                  <div class="col-sm-12">
+                                  <div class="col-sm-1"></div>
+                                  <div class="col-sm-10 center-block">
                                     <div class="customer-slide slide-1"></div>
                                   </div>
+                                  <div class="col-sm-1"></div>
                                 </div>
                                 <div class="row">
-                                  <div class="col-sm-12 col-xs-12">
+                                  <div class="col-sm-1"></div>
+                                  <div class="col-sm-10 col-xs-10">
                                     <h2 class="store-name">[@L[cds.sales/offers/online-business:32573-ols-customerStoreName1]@L]</h2>
                                     <div class="customer-quote">[@L[cds.sales/offers/online-business:32573-ols-customerQuote1]@L]</div>
                                     <div class="customer-byline">&mdash; [@L[cds.sales/offers/online-business:32573-ols-customerByLine1]@L]</div><a href="http://www.thejonesmarket.com" target="_blank" class="btn btn-default btn-default-black">[@L[cds.sales/offers/online-business:32573-see-it-in-action]@L]</a>
                                   </div>
+                                  <div class="col-sm-1"></div>
                                 </div>
                               </div>
                             </div>
