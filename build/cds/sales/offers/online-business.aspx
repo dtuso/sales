@@ -1366,6 +1366,88 @@ h
           color: #333; 
         }
         
+        .offer-search-box { padding-bottom:20px;}
+        .search-message { display: none; margin-left:20px; margin-top:30px;width:65%;}
+        .domain-search-messaging-row {padding-bottom: 40px;}
+        h2.get-a-domain-text {
+          margin: 20px 0 5px;
+          font-size:24px;
+        }
+        
+        /*  speech */
+        
+        .speech-shape-upsidedown {
+          line-height: 1.9em;
+          font-size: 18px;
+          padding: 5px 17px;
+          color: #fff;
+          display: inline-block;
+          position: relative;
+          margin-bottom: 20px;
+          z-index: 2;
+        }
+        .speech-shape-upsidedown .shape-text {
+          position: relative;
+          z-index: 40;
+        }
+        .speech-shape-upsidedown:before {
+          content: '';
+          position: absolute;
+          top: -15px;
+          left: 0;
+          border-bottom: 15px solid;
+          border-right: 15px solid transparent;
+        }
+        .speech-shape-upsidedown:after {
+          content: '';
+          position: absolute;
+          height: 100%;
+          width:20px;
+          right: -6px;
+          top: 0;
+          transform: skew(12deg, 0);
+          z-index: 1;
+        }
+        .speech-shape-upsidedown.speech-shape-upsidedown-green {
+          background-color: #008a32;
+        }
+        .speech-shape-upsidedown.speech-shape-upsidedown-green:before {
+          border-bottom-color: #008a32;
+        }
+        .speech-shape-upsidedown.speech-shape-upsidedown-green:after {
+          background-color: #008a32;
+        }
+        .speech-shape-upsidedown.speech-shape-upsidedown-orange {
+          background-color: #ef6c0f;
+        }
+        .speech-shape-upsidedown.speech-shape-upsidedown-orange:before {
+          border-bottom-color: #ef6c0f;
+        }
+        .speech-shape-upsidedown.speech-shape-upsidedown-orange:after {
+          background-color: #ef6c0f;
+        }
+        .speech-shape-upsidedown.speech-shape-upsidedown-white {
+          background-color: #fff;
+          color: #333;
+        }
+        .speech-shape-upsidedown.speech-shape-upsidedown-white:before {
+          border-bottom-color: #fff;
+        }
+        .speech-shape-upsidedown.speech-shape-upsidedown-white:after {
+          background-color: #fff;
+        }
+        .speech-shape-upsidedown.speech-shape-upsidedown-yellow {
+          background-color: #fedc45;
+          color: #333;
+        }
+        .speech-shape-upsidedown.speech-shape-upsidedown-yellow:before {
+          border-bottom-color: #fedc45;
+        }
+        .speech-shape-upsidedown.speech-shape-upsidedown-yellow:after {
+          background-color: #fedc45;
+        }
+        
+        /* (end) speech */
         
       </style>
     </atlantis:webstash>
@@ -1514,91 +1596,6 @@ h
               </div>
             </div>
           </div>
-          <style>
-            .offer-search-box { padding-bottom:20px;}
-            .search-message { display: none; margin-left:20px; margin-top:30px;width:65%;}
-            .domain-search-messaging-row {padding-bottom: 40px;}
-            h2.get-a-domain-text {
-              margin: 20px 0 5px;
-              font-size:24px;
-            }
-            
-            /*  speech */
-            
-            .speech-shape-upsidedown {
-              line-height: 1.9em;
-              font-size: 18px;
-              padding: 5px 17px;
-              color: #fff;
-              display: inline-block;
-              position: relative;
-              margin-bottom: 20px;
-              z-index: 2;
-            }
-            .speech-shape-upsidedown .shape-text {
-              position: relative;
-              z-index: 40;
-            }
-            .speech-shape-upsidedown:before {
-              content: '';
-              position: absolute;
-              top: -15px;
-              left: 0;
-              border-bottom: 15px solid;
-              border-right: 15px solid transparent;
-            }
-            .speech-shape-upsidedown:after {
-              content: '';
-              position: absolute;
-              height: 100%;
-              width:20px;
-              right: -6px;
-              top: 0;
-              transform: skew(12deg, 0);
-              z-index: 1;
-            }
-            .speech-shape-upsidedown.speech-shape-upsidedown-green {
-              background-color: #008a32;
-            }
-            .speech-shape-upsidedown.speech-shape-upsidedown-green:before {
-              border-bottom-color: #008a32;
-            }
-            .speech-shape-upsidedown.speech-shape-upsidedown-green:after {
-              background-color: #008a32;
-            }
-            .speech-shape-upsidedown.speech-shape-upsidedown-orange {
-              background-color: #ef6c0f;
-            }
-            .speech-shape-upsidedown.speech-shape-upsidedown-orange:before {
-              border-bottom-color: #ef6c0f;
-            }
-            .speech-shape-upsidedown.speech-shape-upsidedown-orange:after {
-              background-color: #ef6c0f;
-            }
-            .speech-shape-upsidedown.speech-shape-upsidedown-white {
-              background-color: #fff;
-              color: #333;
-            }
-            .speech-shape-upsidedown.speech-shape-upsidedown-white:before {
-              border-bottom-color: #fff;
-            }
-            .speech-shape-upsidedown.speech-shape-upsidedown-white:after {
-              background-color: #fff;
-            }
-            .speech-shape-upsidedown.speech-shape-upsidedown-yellow {
-              background-color: #fedc45;
-              color: #333;
-            }
-            .speech-shape-upsidedown.speech-shape-upsidedown-yellow:before {
-              border-bottom-color: #fedc45;
-            }
-            .speech-shape-upsidedown.speech-shape-upsidedown-yellow:after {
-              background-color: #fedc45;
-            }
-            
-            /* (end) speech */
-            
-          </style>
           <div class="row">
             <div class="col-md-12">
               <h2 class="headline-primary get-a-domain-text">[@L[cds.sales/offers/online-business:32573-step-1-get-a-domain]@L]</h2>
@@ -1671,91 +1668,6 @@ h
         </div>
         <div class="bg-white reseach-container">
           <div class="container">
-            <style>
-              .offer-search-box { padding-bottom:20px;}
-              .search-message { display: none; margin-left:20px; margin-top:30px;width:65%;}
-              .domain-search-messaging-row {padding-bottom: 40px;}
-              h2.get-a-domain-text {
-                margin: 20px 0 5px;
-                font-size:24px;
-              }
-              
-              /*  speech */
-              
-              .speech-shape-upsidedown {
-                line-height: 1.9em;
-                font-size: 18px;
-                padding: 5px 17px;
-                color: #fff;
-                display: inline-block;
-                position: relative;
-                margin-bottom: 20px;
-                z-index: 2;
-              }
-              .speech-shape-upsidedown .shape-text {
-                position: relative;
-                z-index: 40;
-              }
-              .speech-shape-upsidedown:before {
-                content: '';
-                position: absolute;
-                top: -15px;
-                left: 0;
-                border-bottom: 15px solid;
-                border-right: 15px solid transparent;
-              }
-              .speech-shape-upsidedown:after {
-                content: '';
-                position: absolute;
-                height: 100%;
-                width:20px;
-                right: -6px;
-                top: 0;
-                transform: skew(12deg, 0);
-                z-index: 1;
-              }
-              .speech-shape-upsidedown.speech-shape-upsidedown-green {
-                background-color: #008a32;
-              }
-              .speech-shape-upsidedown.speech-shape-upsidedown-green:before {
-                border-bottom-color: #008a32;
-              }
-              .speech-shape-upsidedown.speech-shape-upsidedown-green:after {
-                background-color: #008a32;
-              }
-              .speech-shape-upsidedown.speech-shape-upsidedown-orange {
-                background-color: #ef6c0f;
-              }
-              .speech-shape-upsidedown.speech-shape-upsidedown-orange:before {
-                border-bottom-color: #ef6c0f;
-              }
-              .speech-shape-upsidedown.speech-shape-upsidedown-orange:after {
-                background-color: #ef6c0f;
-              }
-              .speech-shape-upsidedown.speech-shape-upsidedown-white {
-                background-color: #fff;
-                color: #333;
-              }
-              .speech-shape-upsidedown.speech-shape-upsidedown-white:before {
-                border-bottom-color: #fff;
-              }
-              .speech-shape-upsidedown.speech-shape-upsidedown-white:after {
-                background-color: #fff;
-              }
-              .speech-shape-upsidedown.speech-shape-upsidedown-yellow {
-                background-color: #fedc45;
-                color: #333;
-              }
-              .speech-shape-upsidedown.speech-shape-upsidedown-yellow:before {
-                border-bottom-color: #fedc45;
-              }
-              .speech-shape-upsidedown.speech-shape-upsidedown-yellow:after {
-                background-color: #fedc45;
-              }
-              
-              /* (end) speech */
-              
-            </style>
             <div class="row">
               <div class="col-md-12">
                 <h2 class="headline-primary get-a-domain-text">[@L[cds.sales/offers/online-business:32573-or-search-for-a-new-one]@L]</h2>
@@ -1817,91 +1729,6 @@ h
                 <h2 class="not-available-domain-name-text domain-name-displayed"><span id="not-available-domain-name">not available</span></h2>
               </div>
             </div>
-            <style>
-              .offer-search-box { padding-bottom:20px;}
-              .search-message { display: none; margin-left:20px; margin-top:30px;width:65%;}
-              .domain-search-messaging-row {padding-bottom: 40px;}
-              h2.get-a-domain-text {
-                margin: 20px 0 5px;
-                font-size:24px;
-              }
-              
-              /*  speech */
-              
-              .speech-shape-upsidedown {
-                line-height: 1.9em;
-                font-size: 18px;
-                padding: 5px 17px;
-                color: #fff;
-                display: inline-block;
-                position: relative;
-                margin-bottom: 20px;
-                z-index: 2;
-              }
-              .speech-shape-upsidedown .shape-text {
-                position: relative;
-                z-index: 40;
-              }
-              .speech-shape-upsidedown:before {
-                content: '';
-                position: absolute;
-                top: -15px;
-                left: 0;
-                border-bottom: 15px solid;
-                border-right: 15px solid transparent;
-              }
-              .speech-shape-upsidedown:after {
-                content: '';
-                position: absolute;
-                height: 100%;
-                width:20px;
-                right: -6px;
-                top: 0;
-                transform: skew(12deg, 0);
-                z-index: 1;
-              }
-              .speech-shape-upsidedown.speech-shape-upsidedown-green {
-                background-color: #008a32;
-              }
-              .speech-shape-upsidedown.speech-shape-upsidedown-green:before {
-                border-bottom-color: #008a32;
-              }
-              .speech-shape-upsidedown.speech-shape-upsidedown-green:after {
-                background-color: #008a32;
-              }
-              .speech-shape-upsidedown.speech-shape-upsidedown-orange {
-                background-color: #ef6c0f;
-              }
-              .speech-shape-upsidedown.speech-shape-upsidedown-orange:before {
-                border-bottom-color: #ef6c0f;
-              }
-              .speech-shape-upsidedown.speech-shape-upsidedown-orange:after {
-                background-color: #ef6c0f;
-              }
-              .speech-shape-upsidedown.speech-shape-upsidedown-white {
-                background-color: #fff;
-                color: #333;
-              }
-              .speech-shape-upsidedown.speech-shape-upsidedown-white:before {
-                border-bottom-color: #fff;
-              }
-              .speech-shape-upsidedown.speech-shape-upsidedown-white:after {
-                background-color: #fff;
-              }
-              .speech-shape-upsidedown.speech-shape-upsidedown-yellow {
-                background-color: #fedc45;
-                color: #333;
-              }
-              .speech-shape-upsidedown.speech-shape-upsidedown-yellow:before {
-                border-bottom-color: #fedc45;
-              }
-              .speech-shape-upsidedown.speech-shape-upsidedown-yellow:after {
-                background-color: #fedc45;
-              }
-              
-              /* (end) speech */
-              
-            </style>
             <div class="row">
               <div class="col-md-12">
                 <h2 class="headline-primary get-a-domain-text">[@L[cds.sales/offers/online-business:32573-search-try-again]@L]</h2>
@@ -5923,7 +5750,9 @@ var PlanBox6UI = {
     </section>
     <!-- FOOTERBEGIN--> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
-    <!-- FOOTEREND-->
+    <!-- FOOTEREND-     -->
+     
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Bottom"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- liveperson includes -->
     <div id="lpButtonDiv"></div><!-- End Main Content -->
     <script type="text/javascript">
