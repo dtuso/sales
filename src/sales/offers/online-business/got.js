@@ -520,7 +520,7 @@ function showSearchSpins($this, domain, alternateDomains){
     $spinResults.append($newSpin);
   });
   got1Page.lastSpinResultCount = alternateDomains.length;
-  updateDomainCountText(true);
+  updateDomainCountText(got1Page.maxNumberOfSpinsToShowByDefault);
   $("#spin-results .spin-result:lt(" + got1Page.maxNumberOfSpinsToShowByDefault + ")").show(); // show first 3 results
 
   var $thisSection = $this.closest('.js-marquee-section');
@@ -573,25 +573,17 @@ function hideMoreResultsLinks() {
 function displayMoreResultsArea () {
   $("#spin-results .spin-result").slideDown(got1Page.animationTime);
   hideMoreResultsLinks();
-  updateDomainCountText(false);
+  updateDomainCountText(got1Page.lastSpinResultCount);
 }
 
-function updateDomainCountText(initial) {
-  var $header = $('#domain-not-available-marquee-view').find('.results-list-heading-text');
-  var numbersHtml = $header.html();
-  if (initial) {
-    numbersHtml = '[@L[cds.sales/offers/online-business:32573-number-of-number-results]@L]';
-    numbersHtml = numbersHtml.replace(/\{0\}/gi, got1Page.maxNumberOfSpinsToShowByDefault); 
-    numbersHtml = numbersHtml.replace(/\{1\}/gi, got1Page.lastSpinResultCount);
-  }
-  else {
-    numbersHtml = '[@L[cds.sales/offers/online-business:32573-number-of-number-results]@L]';
-    numbersHtml = numbersHtml.replace(/\{0\}/gi, got1Page.lastSpinResultCount); 
-    numbersHtml = numbersHtml.replace(/\{1\}/gi, got1Page.lastSpinResultCount);
-  }
-  $header.html(numbersHtml);
-}
+function updateDomainCountText(currentlyShown) {
 
+  var $spinCounts = $('#spin-counts');
+  var templateHtml = $spinCounts.data("result-count-template");
+  templateHtml = templateHtml.replace(/\{0\}/gi, currentlyShown); 
+  templateHtml = templateHtml.replace(/\{1\}/gi, got1Page.lastSpinResultCount);
+  $spinCounts.html(templateHtml);
+}
 
 function animateMarquee($currentView, $animateToView) {  
 

@@ -42,7 +42,8 @@ section#domain-not-available-marquee-view.js-marquee-section
     .container.pro-plans
       .row
         h4.other-domains-heading-text [@L[cds.sales/offers/online-business:32573-here-are-some-others]@L]
-        h6.results-list-heading-text [@L[cds.sales/offers/online-business:32573-number-of-number-results]@L] 
+        h6.results-list-heading-text 
+          span#spin-counts(data-result-count-template!="[@L[cds.sales/offers/online-business:32573-number-of-number-results]@L]")
           button.btn.btn-link.view-all-button(data-ci="95269") [@L[cds.sales/offers/online-business:32573-view-all-results]@L]
       #spin-results
       #spin-template-wrap

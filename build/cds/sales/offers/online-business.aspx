@@ -657,7 +657,7 @@ function showSearchSpins($this, domain, alternateDomains){
     $spinResults.append($newSpin);
   });
   got1Page.lastSpinResultCount = alternateDomains.length;
-  updateDomainCountText(true);
+  updateDomainCountText(got1Page.maxNumberOfSpinsToShowByDefault);
   $("#spin-results .spin-result:lt(" + got1Page.maxNumberOfSpinsToShowByDefault + ")").show(); // show first 3 results
 
   var $thisSection = $this.closest('.js-marquee-section');
@@ -710,25 +710,17 @@ function hideMoreResultsLinks() {
 function displayMoreResultsArea () {
   $("#spin-results .spin-result").slideDown(got1Page.animationTime);
   hideMoreResultsLinks();
-  updateDomainCountText(false);
+  updateDomainCountText(got1Page.lastSpinResultCount);
 }
 
-function updateDomainCountText(initial) {
-  var $header = $('#domain-not-available-marquee-view').find('.results-list-heading-text');
-  var numbersHtml = $header.html();
-  if (initial) {
-    numbersHtml = '[@L[cds.sales/offers/online-business:32573-number-of-number-results]@L]';
-    numbersHtml = numbersHtml.replace(/\{0\}/gi, got1Page.maxNumberOfSpinsToShowByDefault); 
-    numbersHtml = numbersHtml.replace(/\{1\}/gi, got1Page.lastSpinResultCount);
-  }
-  else {
-    numbersHtml = '[@L[cds.sales/offers/online-business:32573-number-of-number-results]@L]';
-    numbersHtml = numbersHtml.replace(/\{0\}/gi, got1Page.lastSpinResultCount); 
-    numbersHtml = numbersHtml.replace(/\{1\}/gi, got1Page.lastSpinResultCount);
-  }
-  $header.html(numbersHtml);
-}
+function updateDomainCountText(currentlyShown) {
 
+  var $spinCounts = $('#spin-counts');
+  var templateHtml = $spinCounts.data("result-count-template");
+  templateHtml = templateHtml.replace(/\{0\}/gi, currentlyShown); 
+  templateHtml = templateHtml.replace(/\{1\}/gi, got1Page.lastSpinResultCount);
+  $spinCounts.html(templateHtml);
+}
 
 function animateMarquee($currentView, $animateToView) {  
 
@@ -1698,7 +1690,7 @@ h
           <div class="container pro-plans">
             <div class="row">
               <h4 class="other-domains-heading-text">[@L[cds.sales/offers/online-business:32573-here-are-some-others]@L]</h4>
-              <h6 class="results-list-heading-text">[@L[cds.sales/offers/online-business:32573-number-of-number-results]@L] 
+              <h6 class="results-list-heading-text"> <span id="spin-counts" data-result-count-template="[@L[cds.sales/offers/online-business:32573-number-of-number-results]@L]"></span>
                 <button data-ci="95269" class="btn btn-link view-all-button">[@L[cds.sales/offers/online-business:32573-view-all-results]@L]</button>
               </h6>
             </div>
@@ -1993,7 +1985,7 @@ h
             <h3 class="key-benefits-title">[@L[cds.sales/offers/online-business:32573-a-domain-heading]@L]</h3>
             <div class="key-benefits-text">[@L[cds.sales/offers/online-business:32573-a-domain-text]@L]</div>
             <div class="features-text">
-              <div class="include-check-green TLDtoken">[@L[cds.sales/offers/online-business:32573-a-domain-bullet-1]@L]</div>
+              <div class="include-check-green TLD-token">[@L[cds.sales/offers/online-business:32573-a-domain-bullet-1]@L]</div>
               <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-a-domain-bullet-2]@L]</div>
             </div>
           </div>
@@ -2001,13 +1993,9 @@ h
             <h3 class="key-benefits-title">[@L[cds.sales/offers/online-business:32573-a-website-heading]@L]</h3>
             <div class="key-benefits-text">[@L[cds.sales/offers/online-business:32573-a-website-text]@L]</div>
             <div class="features-text">
-              <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-a-website-bullet-1]@L]</div> 
-              ##if(productIsOffered(105))
-               
+              <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-a-website-bullet-1]@L]</div>
               <div class="include-check-none"><strong>[@L[cds.sales/offers/online-business:32573-or]@L]</strong></div>
-              <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-a-website-bullet-2]@L]</div>          
-              ##endif
-               
+              <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-a-website-bullet-2]@L]</div>
             </div>
           </div>
           <div class="col-sm-4 key-benefit">
