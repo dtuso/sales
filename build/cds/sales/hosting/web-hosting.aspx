@@ -554,6 +554,149 @@ cursor: pointer;
     padding-left: 25px;
   }
 }
+
+
+.modal-open {
+  overflow: hidden;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  display: none;
+  overflow: auto;
+  overflow-y: scroll;
+}
+
+.modal.fade .modal-dialog {
+  -webkit-transform: translate(0, -25%);
+      -ms-transform: translate(0, -25%);
+          transform: translate(0, -25%);
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+     -moz-transition: -moz-transform 0.3s ease-out;
+       -o-transition: -o-transform 0.3s ease-out;
+          transition: transform 0.3s ease-out;
+}
+
+.modal.in .modal-dialog {
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+.modal-dialog {
+  position: relative;
+  z-index: 1050;
+  width: auto;
+  margin: 10px;
+}
+
+.modal-content {
+  position: relative;
+  background-color: #ffffff;
+  border: 1px solid #999999;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  outline: none;
+  -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  background-clip: padding-box;
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1030;
+  background-color: #000000;
+}
+
+.modal-backdrop.fade {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+.modal-backdrop.in {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+
+.modal-header {
+  min-height: 16.428571429px;
+  padding: 15px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.modal-header .close {
+  margin-top: -2px;
+}
+
+.modal-title {
+  margin: 0;
+  line-height: 1.428571429;
+}
+
+.modal-body {
+  position: relative;
+  padding: 20px;
+}
+
+.modal-footer {
+  padding: 19px 20px 20px;
+  margin-top: 15px;
+  text-align: right;
+  border-top: 1px solid #e5e5e5;
+}
+
+.modal-footer:before,
+.modal-footer:after {
+  display: table;
+  content: " ";
+}
+
+.modal-footer:after {
+  clear: both;
+}
+
+.modal-footer:before,
+.modal-footer:after {
+  display: table;
+  content: " ";
+}
+
+.modal-footer:after {
+  clear: both;
+}
+
+.modal-footer .btn + .btn {
+  margin-bottom: 0;
+  margin-left: 5px;
+}
+
+.modal-footer .btn-group .btn + .btn {
+  margin-left: -1px;
+}
+
+.modal-footer .btn-block + .btn-block {
+  margin-left: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .modal-dialog {
+    width: 600px;
+    margin: 30px auto;
+  }
+  .modal-content {
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
+}
     </style><!--[if lt IE 9]>
     <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
     <link href="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy.min.html" id="respond-proxy" rel="respond-proxy">
@@ -10489,21 +10632,22 @@ height: 27px;
       <div id="login-modal" class="modal fade">
         <div class="modal-dialog">
           <div class="modal-content">
-            <form method="POST" id="g-modal-loginAcct-form" action="[@T[link:<external parammode='explicit' linktype='SSOURL' secure='true' />]@T]/login.aspx?spkey=[@T[sso:spkey]@T]&target=[@T[link:<external linktype='siteurl' path='/hosting/web-hosting.aspx' secure='false' parammode='explicit'/>]@T]"></form>
-            <input type="hidden" value="LOGIN" name="LOGIN">
-            <input type="hidden" value="1" name="verifyShopper">
-            <div class="modal-header">
-              <button type="button" data-dismiss="modal" aria-hidden="true" class="close">&times;</button>
-              <h4 class="modal-title">Please login to access your account</h4>
-            </div>
-            <div class="modal-body">
-              <input type="text" id="loginName" name="loginName" autocomplete="off" placeholder="[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Headers.UtilityBar.Username]@L]">
-              <input type="password" id="password" name="password" autocomplete="off" placeholder="[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Headers.UtilityBar.Password]@L]"><a href="[@T[link:<external linktype='SSOURL' path='/account/accountRetrieval.aspx' secure='true'/>]@T]" class="forgot-pass">[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Headers.UtilityBar.ForgotPassword]@L]</a>
-            </div>
-            <div class="modal-footer">
-              <button type="button" data-dismiss="modal" class="btn btn-default">Cancel</button>
-              <input type="submit" value="[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Headers.UtilityBar.SignIn]@L]" class="btn btn-primary">
-            </div>
+            <form method="POST" id="g-modal-loginAcct-form" action="[@T[link:<external parammode='explicit' linktype='SSOURL' secure='true' />]@T]/login.aspx?spkey=[@T[sso:spkey]@T]&target=[@T[link:<external linktype='siteurl' path='/hosting/web-hosting.aspx' secure='false' parammode='explicit'/>]@T]">
+              <input type="hidden" value="LOGIN" name="LOGIN">
+              <input type="hidden" value="1" name="verifyShopper">
+              <div class="modal-header">
+                <button type="button" data-dismiss="modal" aria-hidden="true" class="close"></button>
+                <h4 class="modal-title">Please login to access your account</h4>
+              </div>
+              <div class="modal-body">
+                <input type="text" id="loginName" name="loginName" autocomplete="off" placeholder="[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Headers.UtilityBar.Username]@L]">
+                <input type="password" id="password" name="password" autocomplete="off" placeholder="[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Headers.UtilityBar.Password]@L]"><a href="[@T[link:<external linktype='SSOURL' path='/account/accountRetrieval.aspx' secure='true'/>]@T]" class="forgot-pass"></br> [@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Headers.UtilityBar.ForgotPassword]@L]</a>
+              </div>
+              <div class="modal-footer">
+                <button type="button" data-dismiss="modal" class="btn btn-default">Cancel</button>
+                <input type="submit" value="[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Headers.UtilityBar.SignIn]@L]" class="btn btn-primary">
+              </div>
+            </form>
           </div>
         </div>
       </div>
@@ -10856,22 +11000,6 @@ height: 27px;
          }
       }
       $('.dropdown-toggle').dropdown()
-      $(function() {
-      $('.isToolTip').tooltip({
-          placement: 'bottom',
-          html: true
-      }).on('show.bs.tooltip', function() {
-          $('.tooltip-delay').tooltip('hide');
-      });
-      $('.tooltip-delay').tooltip({
-          placement: 'bottom',
-          html: true,
-          delay: {
-              hide: 3000
-          }
-      }).on('show.bs.tooltip', function() {
-          $('.tooltip-delay').tooltip('hide');
-      });});
       
     </script>
     <script type="text/javascript">
