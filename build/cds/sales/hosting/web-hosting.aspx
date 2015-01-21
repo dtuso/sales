@@ -6317,7 +6317,7 @@ h2.marquee-product-name,
 }
 
 .pro-plans .pro-plan-wrap .plan-price-wrap {
-    min-height: 92px;
+    padding-bottom: 30px;
 }
 
 .pro-plans .pro-plan-wrap .plan-price-wrap .plan-price {
@@ -6377,13 +6377,12 @@ h2.marquee-product-name,
 }
 
 .pro-plans .sf-tipper-target {
-    background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
-    background-position: 0 -864px;
-    width: 15px;
-    height: 17px;
-    display: inline-block;
-    background-size: 205px auto;
-    vertical-align: baseline;
+  background-image: url(https://img1.wsimg-com.ide/fos/mike/img/hosting/img-tootip-.png);
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  vertical-align: baseline;
+  cursor: pointer;
 }
       </style>
       <atlantis:webstash type="css">
@@ -6699,7 +6698,7 @@ h2.marquee-product-name,
 }
 
 .pro-plans .pro-plan-wrap .plan-price-wrap {
-    min-height: 92px;
+    padding-bottom: 30px;
 }
 
 .pro-plans .pro-plan-wrap .plan-price-wrap .plan-price {
@@ -6759,13 +6758,12 @@ h2.marquee-product-name,
 }
 
 .pro-plans .sf-tipper-target {
-    background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
-    background-position: 0 -864px;
-    width: 15px;
-    height: 17px;
-    display: inline-block;
-    background-size: 205px auto;
-    vertical-align: baseline;
+  background-image: url(https://img1.wsimg-com.ide/fos/mike/img/hosting/img-tootip-.png);
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  vertical-align: baseline;
+  cursor: pointer;
 }
         </style>
       </atlantis:webstash>
@@ -7281,7 +7279,7 @@ h2.marquee-product-name,
 }
 
 .pro-plans .pro-plan-wrap .plan-price-wrap {
-    min-height: 92px;
+    padding-bottom: 30px;
 }
 
 .pro-plans .pro-plan-wrap .plan-price-wrap .plan-price {
@@ -7341,13 +7339,12 @@ h2.marquee-product-name,
 }
 
 .pro-plans .sf-tipper-target {
-    background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
-    background-position: 0 -864px;
-    width: 15px;
-    height: 17px;
-    display: inline-block;
-    background-size: 205px auto;
-    vertical-align: baseline;
+  background-image: url(https://img1.wsimg-com.ide/fos/mike/img/hosting/img-tootip-.png);
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  vertical-align: baseline;
+  cursor: pointer;
 }
       </style>
       <div class="pro-plans-wrap bg-gray-light">
