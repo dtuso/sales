@@ -170,6 +170,29 @@
   margin-left: -50px;
   z-index: 1;
 }
+
+##if(activeLanguageAny([en-US]))
+.or-container:after {
+  content: '';
+  background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_or-shape_white_en.png);
+  width: 94px;
+  height: 98px;
+  background-position: 0 0;
+  background-size: auto auto;
+  position: absolute;
+  bottom: -50px;
+  margin: 0 auto;
+  display: block;
+  margin-left: -50px;
+  z-index: 1;
+}
+@media (max-width: 767px) {
+  .or-container:after {
+    display: block;
+    left: 50%
+  }
+}
+##else
 .or-container:after {
   content: '';
   width: 94px;
@@ -193,6 +216,8 @@
     left: 50%
   }
 }
+##endif
+
 @media (min-width: 768px) and (max-width: 991px) {
   .or-container:after {
     left: 101%;
