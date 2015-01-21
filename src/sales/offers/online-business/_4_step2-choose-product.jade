@@ -1,0 +1,127 @@
+atlantis:webstash(type="css")
+  style.
+    #step2-choose-product .step-2-choose-header {
+      margin: 30px 0 40px;      
+    }
+
+    #step2-choose-product h2 {
+      margin: 30px 0;
+    }
+
+    #step2-choose-product .api-c-failure-modal {
+      /* display: none; */
+    }
+
+    #step2-choose-product .plan-pro {
+      margin-top:0px; /* override the -210px from sahara.css */
+    }
+    #step2-choose-product h2.h0 {
+      font-size: 30px;
+      font-color: #232323;
+    }
+    #step2-choose-product h4.headline-primary {
+      font-size: 20px;
+      color: #333;
+      margin: 15px 0 0;
+    }
+    #step2-choose-product .plan-price-wrap {
+      color: #EF6C0F;
+      font-family: "Walsheim-Bold";
+      font-size: 25px;
+    }
+    #step2-choose-product .plan-price-wrap .promo-price {
+      font-size: 45px;
+    }
+    #step2-choose-product .pro-plans .pro-plan-wrap .plan-price-wrap {
+      min-height: 12px;
+    }
+    #step2-choose-product .pro-plans .pro-plan-wrap .btn {
+        margin: 20px 0 30px;
+    }
+
+
+    #step2-choose-product .or-container:after {
+      width: 94px;
+      height: 98px;
+      background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_or-shape_green_int.png);
+      background-position: 0 0;
+      background-size: auto auto;
+    }
+    #step2-choose-product .or-container.or-container-en-us:after {
+      width: 94px;
+      height: 98px;
+      background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_or-shape_green_en.png);
+      background-position: 0 0;
+      background-size: auto auto;
+    }
+
+section#step2-choose-product.js-marquee-section
+
+  .bg-green-new
+    .container
+
+      .row
+        .col-sm-12
+          h2.h0 [@L[cds.sales/offers/online-business:32573-youve-got-your-domain]@L]
+
+  .bg-gray-light  
+    .container.pro-plans
+
+      .row
+        .col-sm-12
+          h2.step-2-choose-header [@L[cds.sales/offers/online-business:32573-step-2-choose-your-website]@L]
+
+      .row
+        .col-md-5.col-sm-6.plan-tile.plan-pro.or-container
+          .pro-plan-wrap
+            .plan-flag [@L[cds.sales/offers/online-business:32573-choose-wsb]@L]
+            h2.h0 [@L[cds.sales/offers/online-business:32573-choose-wsb-text]@L]
+            h4.headline-primary [@L[cds.sales/offers/online-business:32573-choose-wsb-all-this-for-just-text]@L]
+            .plan-price-wrap(data-tokenize!='[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T]') [@L[cds.sales/offers/online-business:32573-choose-wsb-all-this-for-just-price]@L]
+            .plan-inline-disclaimer(data-tokenize!='[@T[multipleproductprice:<list productidlist="464069|101|7524" period="monthly" promocode="0" />]@T]') [@L[cds.sales/offers/online-business:32573-choose-wsb-text-price-disclaimer]@L] 
+              button.btn-link.see-wsb-disclaimer-link(data-ci="95736") [@L[cds.sales/offers/online-business:32573-choose-wsb-text-price-disclaimer-link]@L]
+              | 
+              |##if(countrySiteAny(uk))
+              | 
+              div [@L[cds.sales/offers/online-business:32573-vat-excludes-price-percentage]@L]
+              | 
+              |##endif
+              | 
+            button.btn.btn-md.btn-block.btn-purchase.got-microsoft-clickable-package.product-wsb(data-ci="95741") [@L[cds.sales/offers/online-business:32573-choose-select-button]@L]
+            .include-check-green [@L[cds.sales/offers/online-business:32573-choose-wsb-bullet-1]@L]
+            .include-check-green [@L[cds.sales/offers/online-business:32573-choose-wsb-bullet-2]@L]
+            .include-check-green [@L[cds.sales/offers/online-business:32573-choose-wsb-bullet-3]@L]
+            .include-check-green [@L[cds.sales/offers/online-business:32573-choose-wsb-bullet-4]@L]
+              
+        .col-md-5.col-md-offset-2.col-sm-6.plan-tile.plan-pro
+          .pro-plan-wrap
+            .plan-flag [@L[cds.sales/offers/online-business:32573-choose-ols]@L]
+            h2.h0 [@L[cds.sales/offers/online-business:32573-choose-ols-text]@L]
+            h4.headline-primary [@L[cds.sales/offers/online-business:32573-choose-ols-all-this-for-just-text]@L]
+            .plan-price-wrap(data-tokenize!='[@T[multipleproductprice:<current productidlist="464069|101|40972" period="monthly" promocode="75315678" />]@T]') [@L[cds.sales/offers/online-business:32573-choose-ols-all-this-for-just-price]@L]
+            .plan-inline-disclaimer(data-tokenize!='[@T[multipleproductprice:<list productidlist="464069|101|40972" period="monthly" promocode="0" />]@T]') [@L[cds.sales/offers/online-business:32573-choose-ols-text-price-disclaimer]@L] 
+              button.btn-link.see-ols-disclaimer-link(data-ci="95735") [@L[cds.sales/offers/online-business:32573-choose-ols-text-price-disclaimer-link]@L]
+              | 
+              |##if(countrySiteAny(uk))
+              | 
+              div [@L[cds.sales/offers/online-business:32573-vat-excludes-price-percentage]@L]
+              | 
+              |##endif
+              | 
+            button.btn.btn-md.btn-block.btn-purchase.got-microsoft-clickable-package.product-ols(data-ci="95740") [@L[cds.sales/offers/online-business:32573-choose-select-button]@L]
+            .include-check-green [@L[cds.sales/offers/online-business:32573-choose-ols-bullet-1]@L]
+            .include-check-green [@L[cds.sales/offers/online-business:32573-choose-ols-bullet-2]@L]
+            .include-check-green [@L[cds.sales/offers/online-business:32573-choose-ols-bullet-3]@L]
+            .include-check-green [@L[cds.sales/offers/online-business:32573-choose-ols-bullet-4]@L]
+            .include-check-green [@L[cds.sales/offers/online-business:32573-choose-ols-bullet-5]@L]
+
+  .sf-dialog.api-c-failure-modal
+    h2.api-error-header
+      img(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/WarningSign.png")
+      div [@L[cds.sales/offers/online-business:32573-something-unexpected-happened]@L]
+    p [@L[cds.sales/offers/online-business:32573-get-it-now-error]@L]
+
+  #step2-choose-product-wsb-modal.tokenizable-disclaimer-modal.sf-dialog(data-title!='[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]')
+    p [@L[cds.sales/offers/online-business:32573-disclaimer-modal-wsb-content]@L]
+  #step2-choose-product-ols-modal.tokenizable-disclaimer-modal.sf-dialog(data-title!='[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]')
+    p [@L[cds.sales/offers/online-business:32573-disclaimer-modal-ols-content]@L]

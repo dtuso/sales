@@ -4,8 +4,18 @@ atlantis:webstash(type="css")
   style.
     #products.tile-section{ padding-top: 0;padding-bottom: 0;}
     #products {padding-bottom:40px;}
-    #products.key-benefits-wrap h2.products-title-text {color:#333;}
+    #products.key-benefits-wrap h2.products-title-text {
+      color:#333;
+      font-family: "Walsheim-Bold";
+      font-size: 40px;
+    }
     #products.key-benefits-wrap div.features-text {color:#333;}
+
+    #products.key-benefits-wrap h3.key-benefits-title {
+      color:#333;
+      font-family: "Walsheim-Regular";
+      font-size: 30px;
+    }
 
     /* KEY BENEFITS */
     .key-benefits-wrap[class*="bg-"]:not(.bg-gray-light) {
@@ -108,7 +118,7 @@ section#products.bg-gray-light.key-benefits-wrap
         h3.key-benefits-title [@L[cds.sales/offers/online-business:32573-a-domain-heading]@L]
         .key-benefits-text [@L[cds.sales/offers/online-business:32573-a-domain-text]@L]
         .features-text
-          .include-check-green [@L[cds.sales/offers/online-business:32573-a-domain-bullet-1]@L]
+          .include-check-green.TLD-token [@L[cds.sales/offers/online-business:32573-a-domain-bullet-1]@L]
           .include-check-green [@L[cds.sales/offers/online-business:32573-a-domain-bullet-2]@L]
       
       .col-sm-4.key-benefit

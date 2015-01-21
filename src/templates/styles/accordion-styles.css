@@ -44,7 +44,8 @@
   border-left: 8px solid;
   border-top: 8px solid transparent;
   border-bottom: 8px solid transparent;
-  margin-top: 4px;
+  margin-top: 1px;
+  margin-right: 18px;
 }
 
 .accordion-group li.accordion-dropdown.active > span:first-child {

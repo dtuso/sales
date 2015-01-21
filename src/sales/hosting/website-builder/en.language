@@ -52,7 +52,7 @@ Learn How to Make a Website in minutes with [@T[companyname:name]@T]'s Website B
 <phrase key="meta-description-uk" />
 Build a great feature loaded UK website with [@T[companyname:name]@T]'s Website Builder Program. You can't beat our world class Hosting & competitive prices.
 <phrase key="meta-keywords" />
-Website, templates, template, how to make a website, website templates, website builder, make your own website, create a website, creating a website, website template, website layout, site traffic, building your own website, advertise your business, money making website promote your business, promoting your website, do it yourself website builder, pre-built websites
+website builder, website creator, website templates, website template, how to make a website, make your own website, create a website, creating a website, do it yourself website builder, diy website, pre-built websites
 <phrase key="og-title" />
 Get online and grow your business with [@T[companyname:name]@T] Website Builder&trade;
 <phrase key="og-description" />
@@ -94,7 +94,7 @@ Starting at
 <phrase key="plan-domain" />
 <strong>Free Domain with annual plan</strong>
 <phrase key="restristions-apply-tooltip" />
-One FREE .COM,<span class="tlds-mx"> .COM.MX,</span><span class="tlds-br"> .COM.BR,</span><span class="tlds-ca"> .CA,</span><span class="tlds-uk"> .UK., .CO.UK,</span> .CO, .NET, or .ORG with purchase of a new 12-, 24- or 36-month plan. Plus ICANN fee of [@T[currencyprice:<price usdamount="18" dropdecimal="false" />]@T] per domain name per year. You must add the domain name into your cart before purchase, and you must select a domain term length equal to or less than the term length of your plan to qualify for the free domain offer. If you purchase a domain name for a term longer than the term of the plan, you will be charged for the additional registration term at the then-current rate. Cannot be used in conjunction with any other offer, sale, discount or promotion. Free domain offer applies only to the initial purchase term. After the initial purchase term, domains purchased through this offer will renew at the then-current renewal price.
+One FREE .COM,<span class="tlds-all tlds-mx"> .COM.MX,</span><span class="tlds-all tlds-br"> .COM.BR,</span><span class="tlds-all tlds-ca"> .CA,</span><span class="tlds-all tlds-uk"> .UK., .CO.UK,</span> .CO, .NET, or .ORG with purchase of a new 12-, 24- or 36-month plan. Plus ICANN fee of [@T[currencyprice:<price usdamount="18" dropdecimal="false" />]@T] per domain name per year. You must add the domain name into your cart before purchase, and you must select a domain term length equal to or less than the term length of your plan to qualify for the free domain offer. If you purchase a domain name for a term longer than the term of the plan, you'll be charged for the additional registration term at the then-current rate. This offer cannot be used in conjunction with any other offer, sale, discount, or promotion. Free domain offer applies only to the initial purchase term. After the initial purchase term, domains purchased through this offer renew at the then-current renewal price.
 <phrase key="personal-themes" />
 <strong>50</strong> Personal Themes
 <phrase key="economy-themes" />
@@ -212,7 +212,7 @@ With our One-Click Social Media Manager, we’ll instantly match your Facebook<s
 <phrase key="seofs-body-text" />
 See how the built-in Search Engine Optimization (SEO) tool in our Business Plus plan will help you show up on Google<sup>&reg;</sup>, Yahoo!<sup>&reg;</sup> and more.
 <phrase key="sb_faq_see" />
-See All Questions
+See All
 <phrase key="sb_bpp_starting_at" />
 <span class="condensed">Business Plus Plans</span> starting at
 <phrase key="learn-more" />
@@ -308,6 +308,8 @@ MANAGED WORDPRESS
 Get the power of WordPress with the ease of fully-managed hosting and security.
 <phrase key="sb_xsell_wp_2" />
 Perfect for: Bloggers, start-ups, small businesses, and designers
+<phrase key="sb_xsell_qs_qsc" />
+QUICK SHOPPING CART
 <phrase key="sb_xsell_qs" />
 ONLINE STORE
 <phrase key="sb_xsell_qs_1" />

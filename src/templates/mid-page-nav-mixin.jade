@@ -48,9 +48,12 @@ mixin renderMidPageNav(options)
       }).css("height", midPageMenuItem);
     });
     $(document).ready(function(){
-      // this sets the nav to fixed when scrolled past and fixes the body for the height of the nav
+      // this sets the nav to fixed when scrolled past and fixed the body for the height of the nav
+      organizeNavBar();
+
       var nav = $('.mid-page-nav');
-      var pos = nav.offset().top;
+      var navTop = nav.offset().top;
+      var footerBot = $('#footer').offset().top
       var sections = []
 
       $('[data-mid-nav-title]').each(function(){
@@ -59,17 +62,19 @@ mixin renderMidPageNav(options)
       });
       $(window).scroll(function () {
         var scroll = $(this).scrollTop();
-        var fix = ($(this).scrollTop()+2 > pos) ? true : false;
-        nav.toggleClass("sticky", fix);
-        $('body').toggleClass("fix-body", fix);
-        if(!fix){
+        var belowNavTop=(scroll+2 > navTop) ? true : false;
+        var aboveFooterTop=(scroll < footerBot) ? true : false;
+        var InNavZone = (belowNavTop && aboveFooterTop) ? true : false;
+        nav.toggleClass("sticky", InNavZone);
+        $('body').toggleClass("fix-body", InNavZone);
+        if(!InNavZone){
           $('.mid-page-nav a').each(function(){
             $(this).blur();
-            $(this).toggleClass("active",fix);
+            $(this).toggleClass("active",InNavZone);
           });
         }
 
-        if(fix){
+        if(InNavZone){
           $.each(sections,function(index,value){
               var top = ((scroll+131) > $('#'+value).offset().top) ? true : false;
               var bottom = ((scroll+131) < $('#'+value).offset().top + $('#'+value).outerHeight()) ? true : false;
@@ -82,10 +87,30 @@ mixin renderMidPageNav(options)
                 });
             });
         }
-
       });
-      $('#midPageNav .dropdown-toggle').dropdown()
+      $('.dropdown-menu').on("click",function(){
+        $('#midPageNav .dropdown-toggle').dropdown('toggle');
+      });
+      $('#midPageNav .dropdown-toggle').dropdown();
     });
+    function organizeNavBar(){
+      var linkArea = $('.navbar-nav').width();
+      var navBarArea = $('.navbar-collapse').width()-$('.navbar-right').width();
+      dropdownItem = "";
+      $dropdownMenu = "";
+      if(linkArea > navBarArea)
+      {
+        $dropdownMenu= $('<li class="dropdown"><a href="javascript:void(0)" role="button" data-toggle="dropdown" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.nav&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="dropdown-toggle"  style="margin-top: 0px;"><span>More<br><em>...</em></span></a><ul class="dropdown-menu">');
+      }
+      while($('.navbar-nav').width()+150 > $('.navbar-collapse').width()-$('.navbar-right').width()){
+        dropdownItem =$('.navbar-nav li').last().detach();
+        $dropdownMenu.find('.dropdown-menu').append(dropdownItem);
+      }
+      if(linkArea > navBarArea)
+      {
+        $dropdownMenu.appendTo('.navbar-nav');
+      }
+    }
     function scroll_if_anchor(href) {
       href = typeof(href) == "string" ? href : $(this).attr("href");
 

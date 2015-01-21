@@ -9,7 +9,10 @@ block append vars
 
 block tileContent
   .promo-logo-wrapper
-    img.promo-logo(src=logoImage data-fallback!=logoImageFallback)
+    <!--[if lt IE 9]>
+    img.promo-logo(src!=logoImageFallback)
+    <![endif]-->
+    img.promo-logo.svgfallback(src!=logoImage)
     if (logoText)
       .promo-logo-text #{logoText}
   .promo-text.walsheim-black #{promoText}

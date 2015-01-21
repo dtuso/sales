@@ -52,7 +52,7 @@ var got1Page = {
   sfDialogErrorButtons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }],
   maxNumberOfSpinsToShowByDefault: 3,
   lastSpinResultCount: 0,
-  dppErrorReturnUrl: '[@T[link:<relative path="~/offers/online-business.aspx"><param name="tldRegErr" value="{0}" /></relative>]@T]',
+  dppErrorReturnUrl: '[@T[link:<relative path="~/offers/online-business.aspx"><param name="tldRegErr" value="tldRegErr" /></relative>]@T]',
   offersCodes: {
     packageId_wsb: 'gybo_1email_1yr',
     packageId_ols: 'gybo_1email_1yr_ols',
@@ -119,6 +119,7 @@ $(document).ready(function() {
   showTldImagesInDomainArea(); //- dynamically build the tld images in the #findYourPerfectDomain section
   
   //- fix up list of valid tlds from lang files
+  showAndOrderDynamicTldsInList("#products .TLD-token");
   showAndOrderDynamicTldsInList("#default-marquee-details-modal-wsb-only p");
   showAndOrderDynamicTldsInList("#default-marquee-details-modal p");
   showAndOrderDynamicTldsInList("#site-choice-wsb-modal p");
@@ -182,8 +183,13 @@ $(document).ready(function() {
   $('#step2-choose-product').on('click','.btn-purchase', goToDppCheckoutPage);
 
   displayMoreResultsLinks();
+
   $('#show-more-section').on('click', '.clickable-show-more', displayMoreResultsArea);
   $('#domain-not-available-marquee-view').on('click', '.view-all-button', displayMoreResultsArea);
+
+
+  $('#default-marquee-view').find('.see-details-disclaimer-link').attr('data-ci', got1Page.canOfferOls ? "95734" : "95736");
+
 
 
 });
@@ -241,20 +247,20 @@ function tokenizeDisclaimerModals() {
   
 
   if(got1Page.canOfferOls) tokenizeDisclaimerModal('#default-marquee-details-modal.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_wsb,got1Page.pricing.ols);
-  tokenizeDisclaimerModal('#default-marquee-details-modal-wsb-only-choice.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_wsb);
+  tokenizeDisclaimerModal('#default-marquee-details-modal-wsb-only-choice.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_wsb);  
   tokenizeDisclaimerModal('#site-choice-wsb-modal.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_wsb);  
   if(got1Page.canOfferOls) tokenizeDisclaimerModal('#site-choice-ols-modal.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_ols);
+  tokenizeDisclaimerModal('#step2-choose-product-wsb-modal.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_wsb);
+  if(got1Page.canOfferOls) tokenizeDisclaimerModal('#step2-choose-product-ols-modal.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_ols);
 }
 
 function wireupModals() {
 
-  // wire up see details links
-  var marqueeModalId = got1Page.canOfferOls ? "#default-marquee-details-modal" : "#default-marquee-details-modal-wsb-only";
-  
-  $('#default-marquee-view').find('.see-details-disclaimer-link').attr('data-ci', got1Page.canOfferOls ? "95734" : "95736");
+  // wire up see details links  
+
   $('#default-marquee-view').on('click', '.see-details-disclaimer-link', function(){
-    var $modal = $(marqueeModalId);
-    $modal.sfDialog({buttons: got1Page.sfDialogErrorButtons});
+    $(got1Page.canOfferOls ? "#default-marquee-details-modal" : "#default-marquee-details-modal-wsb-only")
+      .sfDialog({buttons: got1Page.sfDialogErrorButtons});
   });
 
   // product split modals
@@ -268,8 +274,6 @@ function wireupModals() {
     });
   }
 
-
-
   // choose product screen
   $('#step2-choose-product').on('click', '.see-wsb-disclaimer-link', function(){
     $("#step2-choose-product-wsb-modal").sfDialog({buttons: got1Page.sfDialogErrorButtons});
@@ -280,18 +284,12 @@ function wireupModals() {
     });
   }
 
-
   $('#wsb-video-btn, #wsb-only-video-btn').on('click', function(){
     $("#site-choice-wsb-video-modal").sfDialog({titleHidden:true, dialogWidthIdeal:840, buttons: []});
   });
-  $('#wsb-designs-btn, #wsb-only-designs-btn').on('click', function(){
-    $("#site-choice-wsb-designs-modal").sfDialog({titleHidden:true, dialogWidthIdeal:1, buttons: []});
-    $("#site-choice-wsb-designs-modal").sfDialog('cancel');
-    $('.view-all').click();
-  });
 
   if(got1Page.canOfferOls) {
-    $('#ols-video-btn').on('click', function(){
+    $('#ols-video-btn').on('click', function(){      
       $("#site-choice-ols-video-modal").sfDialog({titleHidden:true, dialogWidthIdeal:840, buttons: []});
     });
     $('#ols-stores-btn').on('click', function(){
@@ -460,12 +458,24 @@ function showChoicesScreen(e){
   var $this = $(e.target),
     domain = $this.data('domain');
 
-  $('#marquee, #domains, #products').hide();
-  $('#step2-choose-product')
-    .show()
-    .find('.btn-purchase').data('domain', domain);
+  $('#step2-choose-product').find('.btn-purchase').data('domain', domain);
+  $('#products, #domains').hide();
+  var $thisSection = $this.closest('.js-marquee-section');
 
-  //- TODO: rerun the height alignment on the choose product screen
+
+  animateMarquee($thisSection, $('#step2-choose-product') /*toView*/);
+
+  // FOR IE we need to resize the plan boxes that were previously hidden
+  // code taken from landing-page.jade to auto height these two modules  
+  var $proPlanWraps = $("#step2-choose-product").find(".pro-plans").find(".pro-plan-wrap"),
+    maxHeight = 0;
+  $proPlanWraps
+    .css({"height":"auto"})
+    .each(function(index, plan) {
+      maxHeight = $(plan).outerHeight() > maxHeight ? $(plan).outerHeight() : maxHeight;
+  });
+  if( maxHeight > 0 ) $proPlanWraps.find(".pro-plan-wrap").css("height", maxHeight);
+
 }
 
 function goToDppCheckoutPage(e) {
@@ -473,8 +483,7 @@ function goToDppCheckoutPage(e) {
     domain = $this.data('domain'),
     isOLS = $this.hasClass('product-ols'),
     apiEndpoint3,
-    sourceurl = encodeURIComponent(got1Page.dppErrorReturnUrl.replace(/\{0\}/gi, '.' + domain.Extension));
-
+    sourceurl = encodeURIComponent(got1Page.dppErrorReturnUrl.replace('tldRegErr=tldRegErr', 'tldRegErr=.' + domain.Extension));
 
   apiEndpoint3 = '[@T[link:<relative path="~/api/dpp/searchresultscart/11/"><param name="domain" value="domain" /><param name="packageid" value="packageid" /><param name="itc" value="itc" /><param name="sourceurl" value="sourceurl" /><param name="returnUrl" value="returnUrl" /></relative>]@T]';
   apiEndpoint3 = apiEndpoint3.replace('domain=domain', 'domain=' + domain.Fqdn);
@@ -525,7 +534,7 @@ function showSearchSpins($this, domain, alternateDomains){
     $spinResults.append($newSpin);
   });
   got1Page.lastSpinResultCount = alternateDomains.length;
-  updateDomainCountText(true);
+  updateDomainCountText(got1Page.maxNumberOfSpinsToShowByDefault);
   $("#spin-results .spin-result:lt(" + got1Page.maxNumberOfSpinsToShowByDefault + ")").show(); // show first 3 results
 
   var $thisSection = $this.closest('.js-marquee-section');
@@ -578,28 +587,20 @@ function hideMoreResultsLinks() {
 function displayMoreResultsArea () {
   $("#spin-results .spin-result").slideDown(got1Page.animationTime);
   hideMoreResultsLinks();
-  updateDomainCountText(false);
+  updateDomainCountText(got1Page.lastSpinResultCount);
 }
 
-function updateDomainCountText(initial) {
-  var $header = $('#domain-not-available-marquee-view').find('.results-list-heading-text');
-  var numbersHtml = $header.html();
-  if (initial) {
-    numbersHtml = '[@L[cds.sales/offers/online-business:32573-number-of-number-results]@L]';
-    numbersHtml = numbersHtml.replace(/\{0\}/gi, got1Page.maxNumberOfSpinsToShowByDefault); 
-    numbersHtml = numbersHtml.replace(/\{1\}/gi, got1Page.lastSpinResultCount);
-  }
-  else {
-    numbersHtml = '[@L[cds.sales/offers/online-business:32573-number-of-number-results]@L]';
-    numbersHtml = numbersHtml.replace(/\{0\}/gi, got1Page.lastSpinResultCount); 
-    numbersHtml = numbersHtml.replace(/\{1\}/gi, got1Page.lastSpinResultCount);
-  }
-  $header.html(numbersHtml);
-}
+function updateDomainCountText(currentlyShown) {
 
+  var $spinCounts = $('#spin-counts');
+  var templateHtml = $spinCounts.data("result-count-template");
+  templateHtml = templateHtml.replace(/\{0\}/gi, currentlyShown); 
+  templateHtml = templateHtml.replace(/\{1\}/gi, got1Page.lastSpinResultCount);
+  $spinCounts.html(templateHtml);
+}
 
 function animateMarquee($currentView, $animateToView) {  
-  
+
   var currentViewHeight = $currentView.height(),
     windowWidth = $(window).width(),
     $marquee = $('#marquee'),
@@ -674,3 +675,9 @@ function getParameterByName(name) {
       results = regex.exec(location.search);
   return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
+
+$(window).load(function () {
+  $('.bigtext').bigtext({maxfontsize: 160});
+  setTimeout( "$('.bigtext').bigtext().css('visibility', 'visible');",500 );
+});
+

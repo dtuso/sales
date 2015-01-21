@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="[@T[localization:<language full='true' />]@T]">
+<html lang="[@T[localization:<language full='true' />]@T]" id="" ng-app="">
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta http-equiv="content-language" content="[@T[localization:<language full='true' />]@T]">
@@ -26,6 +26,8 @@
     <meta property="fb:app_id" content="115696031791232">
     <meta property="fb:admins" content="633356800"> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
+    <script>       (function(e){if(typeof lazyload=="undefined"){window.lazyload={version:"2.0.0",items:e(),__defaults:{updatePosition:true,checkHorizontal:false,scrollCheckDelay:300,loadBufferDistance:0,fadeInDelay:0,fadeInSpeed:500}};function t(e,t){if(typeof t=="undefined"){t={source:e.data("lazyload-source"),watch:e.data("lazyload-watch"),callback:e.data("lazyload-callback"),callbackAfter:e.data("lazyload-callbackAfter")}}if(typeof t.source!="undefined"){e[0].lazyload=t;lazyload.items=lazyload.items.add(e);i(e)}}function n(){i(e(window));lazyload.items.each(function(){r(e(this))})}function r(t){var n=t[0].lazyload.updatePosition||lazyload.__defaults.updatePosition;var r=r||lazyload.__defaults.updateWindowScroll;var s=t[0].lazyload.checkHorizontal||lazyload.__defaults.checkHorizontal;if(n){i(t)}i(e(window));var o=t[0].lazyload.positionTop;var a=t[0].lazyload.positionBottom;var f=lazyload.windowTop;var l=lazyload.windowBottom;if(o<l+lazyload.__defaults.loadBufferDistance&&a>f-lazyload.__defaults.loadBufferDistance){u(t)}}function i(e){var t=e[0];if(t==window){if(lazyload.updateWindowPosition){lazyload.windowTop=e.scrollTop();lazyload.windowLeft=e.scrollLeft();lazyload.windowRight=lazyload.windowLeft+e.width();lazyload.windowBottom=lazyload.windowTop+e.height();lazyload.updateWindowPosition=false;clearTimeout(lazyload.windowPositionDelayTimer);lazyload.windowPositionDelayTimer=setTimeout(function(){lazyload.updateWindowPosition=true},lazyload.__defaults.scrollCheckDelay)}}else{if(typeof t.lazyload.watch!="undefined"){var n=e.parents(t.lazyload.watch);if(n.length>=1){e=n}}t.lazyload.positionTop=e.offset().top;t.lazyload.positionLeft=e.offset().left;t.lazyload.positionRight=t.lazyload.positionLeft+e.width();t.lazyload.positionBottom=t.lazyload.positionTop+e.height()}}function s(e){function i(e,t,n){try{if(typeof t!="undefined"&&t.length>=1){e.apply(null,t)}else{e.call(null)}}catch(r){}}if(typeof e=="string"){var t=e.split(",");var n=t.shift();n=o(n);i(n,t,e)}else if(typeof e=="object"){for(var r=0;r<e.length;r++){(function(){var t=e[r].split(",");var n=t.shift();var s=n;n=o(n);i(n,t,s)})()}}}function o(e){var t=window;var n=e.split(".");var r=n.pop();var i=true;for(var s=0;s<n.length;s++){if(typeof t[n[s]]!="undefined"){t=t[n[s]]}else{i=false}}if(i){return t[r]}else{return null}}function u(e){var t=e[0].lazyload.src||e[0].lazyload.source;var n=e[0].lazyload.callback;var r=e[0].lazyload.callbackAfter;lazyload.items=lazyload.items.not(e);if(lazyload.loadedSrc.indexOf(t)==-1){lazyload.loadedSrc.push(t)}var i=new Image;i.onload=function(){if(typeof n!="undefined"){e.trigger("lazyloaded").addClass("lazyloaded");s(n)}if(e.is("img")){e.css({opacity:0}).attr("src",t).delay(lazyload.__defaults.fadeInDelay).animate({opacity:1},lazyload.__defaults.fadeInSpeed,function(){if(typeof r!="undefined"){setTimeout(function(){e.trigger("lazyloadedafter");s(r)},lazyload.__defaults.fadeInSpeed)}})}else{var o=200;try{var u="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";var a=new Image;a.src=u;a.height=i.height;a.width=i.width;function f(e){var t=document.createElement("canvas");t.width=e.width;t.height=e.height;var n=t.getContext("2d");n.drawImage(e,0,0);var r=t.toDataURL("image/png");return r.replace(/^data:image\/(png|jpg);base64,/,"")}var l=f(a);e.css({"background-image":"url(data:image/gif;base64,"+l+")","-moz-transition":"all "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out"})}catch(c){o=0}setTimeout(function(){e.css({"background-image":"url("+t+")","-webkit-transition":"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out","-moz-transition":"all "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out","-o-transition":"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out",transition:"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out"});if(typeof r!="undefined"){setTimeout(function(){e.trigger("lazyloadafter");s(r)},lazyload.__defaults.fadeInSpeed)}},o)}};i.src=t}e(document).ready(function(){lazyload.updateWindowPosition=true;lazyload.scrollCheck=true;lazyload.loadedSrc=[];$foundItems=e(".lazyload");if($foundItems.length>=1){lazyload.scrollElements=e("div,ul");lazyload.scrollElements.each(function(){var t=e(this);var n=t.css("overflow");var r=t.css("overflow-x");var i=t.css("overflow-y");var s=["hidden","scroll","auto"];if(t.find("[data-lazy-load]").length==0&&s.indexOf(n)==-1&&s.indexOf(i)==-1&&s.indexOf(r)==-1){lazyload.scrollElements=lazyload.scrollElements.not(t)}});lazyload.scrollElements=lazyload.scrollElements.add(window);lazyload.scrollElements.bind("scroll.lazyload",function(e){if(lazyload.scrollCheck){n();lazyload.scrollCheck=false;clearTimeout(lazyload.scrollCheckDelayTimer);lazyload.scrollCheckDelayTimer=setTimeout(function(){lazyload.scrollCheck=true},lazyload.__defaults.scrollCheckDelay)}});$foundItems.each(function(){t(e(this))});n()}});lazyload.check=function(){n()};lazyload.add=function(n,r){t(e(n),r)};lazyload.load=function(){u(e($item))}}})(jQuery);if(!Array.prototype.indexOf){Array.prototype.indexOf=function(e){var t=this.length>>>0;var n=Number(arguments[1])||0;n=n<0?Math.ceil(n):Math.floor(n);if(n<0)n+=t;for(;n<t;n++){if(n in this&&this[n]===e)return n}return-1}}
+    </script>
     <script>
       var head = (typeof document.head !== 'undefined' ? document.head : document.getElementsByTagName('head')[0]);
       var insertBefore = head.insertBefore;
@@ -89,8 +91,6 @@
         // jquery.domainscout.1.0.0.js
         if("undefined"==typeof domainscout){var domainscout={version:"1.0.2"};$(document).ready(function(){function b(a){var b=a,d=b.data("domainscout")||b.data("domainsearch");if(b[0]["ds-domain"]=b.find(d["search-element"]),b[0]["ds-placeholder"]=b.find(d["placeholder-element"]),b[0]["ds-button"]=b.find(d.button),b[0]["ds-url"]=d.url,b[0]["ds-ci"]=d.ci,b[0]["ds-hide-label"]=d["hide-label"],b[0]["ds-empty-redirect"]=d["empty-redirect"],"undefined"==typeof b[0]["ds-hide-label"]&&(b[0]["ds-hide-label"]=!0),1==b[0]["ds-domain"].length&&(b[0]["ds-domain"].is("input")||b[0]["ds-domain"].is("textarea"))){if(domainscout.items=domainscout.items.add(b),b[0]["ds-placeholder"].is("label")){var e=b[0]["ds-domain"].attr("id");"undefined"==typeof e&&(e="ds-"+domainscout.items.length,b[0]["ds-domain"].attr("id",e)),b[0]["ds-placeholder"].attr("for",e)}else b[0]["ds-placeholder"].bind("click",function(){b[0]["ds-domain"].focus()});b[0]["ds-domain"].val(""),b[0]["ds-domain"].bind("focus.ds-event",function(){b.addClass("ds-focus"),b[0]["ds-domain"].bind("keydown.ds-event",function(a){var d=[16,27,20,8,37,38,39,40];13==a.which?(c(b),a.preventDefault()):-1==d.indexOf(a.which)&&b[0]["ds-hide-label"]&&b[0]["ds-placeholder"].css("display","none")})}),b[0]["ds-domain"].bind("blur.ds-event",function(){b.removeClass("ds-focus"),b[0]["ds-domain"].unbind("keydown.ds-event"),b[0]["ds-hide-label"]&&""==b[0]["ds-domain"].val()&&"none"==b[0]["ds-placeholder"].css("display")&&b[0]["ds-placeholder"].css("display","block")})}b[0]["ds-button"].bind("click",function(a){a.stopPropagation(),a.preventDefault(),"undefined"!=typeof _trfq&&_trfq.push(["cmdLogPageEvent","click","","",b[0]]),c(b)})}function c(a){var b=$(a),c=!0,e=!1,g=b[0]["ds-url"];"undefined"==typeof b[0]["ds-url"]&&(g=b.attr("action"),("undefined"==typeof g||"#"==g)&&(c=!1));var h;c&&1==b[0]["ds-domain"].length?(h=b[0]["ds-domain"].val(),"undefined"!=typeof h&&""!=h?(g=g.split("?")[0],g=g+"?domainToCheck="+d(h)):(g=b[0]["ds-empty-redirect"],g.indexOf(location.protocol)&&(g=location.protocol+g),e=!0,"undefined"==typeof g&&(c=!1))):c=!1,c&&(e||(g+="&checkAvail=1","undefined"==b[0]["ds-ci"]&&(b[0]["ds-url"]=f("ci")),"undefined"!=b[0]["ds-ci"]&&(g=g+"&"+b[0]["ds-ci"])),window.location.href=g)}function d(a){return a}function e(a){return a instanceof $||(a=$(a)),a}function f(a){var b=decodeURI((RegExp(a+"="+"(.+?)(&|$)").exec(location.search)||[,null])[1]);return"null"==b&&(b=void 0),b}var a=$("[data-domainscout],[data-domainsearch]");domainscout.items=$(),a.each(function(){b($(this))}),domainscout.add=function(a){b(e(a))},domainscout.search=function(a){c(e(a))}})}
       
-        // jquery.lazyload.1.0.0.js
-        !function(a){function b(a,b){"undefined"==typeof b&&(b=a.data("lazy-load"));var c=b.src||b.source;"undefined"!=typeof c&&(a[0].lazyload=b,lazyload.items=lazyload.items.add(a),e(a))}function c(){e(a(window)),lazyload.items.each(function(){d(a(this))})}function d(b){var c=b[0].lazyload.updatePosition||lazyload.__defaults.updatePosition,d=d||lazyload.__defaults.updateWindowScroll;b[0].lazyload.checkHorizontal||lazyload.__defaults.checkHorizontal,c&&e(b),e(a(window));var g=b[0].lazyload.positionTop,i=b[0].lazyload.positionBottom,j=lazyload.windowTop,k=lazyload.windowBottom;g<k+lazyload.__defaults.loadBufferDistance&&i>j-lazyload.__defaults.loadBufferDistance&&h(b)}function e(a){var b=a[0];if(b==window)lazyload.updateWindowPosition&&(lazyload.windowTop=a.scrollTop(),lazyload.windowLeft=a.scrollLeft(),lazyload.windowRight=lazyload.windowLeft+a.width(),lazyload.windowBottom=lazyload.windowTop+a.height(),lazyload.updateWindowPosition=!1,clearTimeout(lazyload.windowPositionDelayTimer),lazyload.windowPositionDelayTimer=setTimeout(function(){lazyload.updateWindowPosition=!0},lazyload.__defaults.scrollCheckDelay));else{if("undefined"!=typeof b.lazyload.watch){var c=a.parents(b.lazyload.watch);c.length>=1&&(a=c)}b.lazyload.positionTop=a.offset().top,b.lazyload.positionLeft=a.offset().left,b.lazyload.positionRight=b.lazyload.positionLeft+a.width(),b.lazyload.positionBottom=b.lazyload.positionTop+a.height()}}function f(a){function e(a,b){try{"undefined"!=typeof b&&b.length>=1?a.apply(null,b):a.call(null)}catch(d){}}if("string"==typeof a){var b=a.split(","),c=b.shift();c=g(c),e(c,b,a)}else if("object"==typeof a)for(var d=0;d<a.length;d++)!function(){var b=a[d].split(","),c=b.shift(),f=c;c=g(c),e(c,b,f)}()}function g(a){for(var b=window,c=a.split("."),d=c.pop(),e=!0,f=0;f<c.length;f++)"undefined"!=typeof b[c[f]]?b=b[c[f]]:e=!1;return e?b[d]:null}function h(a){var b=a[0].lazyload.src||a[0].lazyload.source,c=a[0].lazyload.callback,d=a[0].lazyload.callbackAfter;lazyload.items=lazyload.items.not(a),-1==lazyload.loadedSrc.indexOf(b)&&lazyload.loadedSrc.push(b);var e=new Image;e.onload=function(){function j(a){var b=document.createElement("canvas");b.width=a.width,b.height=a.height;var c=b.getContext("2d");c.drawImage(a,0,0);var d=b.toDataURL("image/png");return d.replace(/^data:image\/(png|jpg);base64,/,"")}if("undefined"!=typeof c&&(a.trigger("lazyloaded").addClass("lazyloaded"),f(c)),a.is("img"))a.css({opacity:0}).attr("src",b).delay(lazyload.__defaults.fadeInDelay).animate({opacity:1},lazyload.__defaults.fadeInSpeed,function(){"undefined"!=typeof d&&setTimeout(function(){a.trigger("lazyloadedafter"),f(d)},lazyload.__defaults.fadeInSpeed)});else{var g=200;try{var h="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",i=new Image;i.src=h,i.height=e.height,i.width=e.width;var k=j(i);a.css({"background-image":"url(data:image/gif;base64,"+k+")","-moz-transition":"all "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out"})}catch(l){g=0}setTimeout(function(){a.css({"background-image":"url("+b+")","-webkit-transition":"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out","-moz-transition":"all "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out","-o-transition":"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out",transition:"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out"}),"undefined"!=typeof d&&setTimeout(function(){a.trigger("lazyloadafter"),f(d)},lazyload.__defaults.fadeInSpeed)},g)}},e.src=b}"undefined"==typeof lazyload&&(window.lazyload={version:"1.0.0",items:a(),__defaults:{updatePosition:!0,checkHorizontal:!1,scrollCheckDelay:300,loadBufferDistance:0,fadeInDelay:0,fadeInSpeed:500}},a(document).ready(function(){lazyload.updateWindowPosition=!0,lazyload.scrollCheck=!0,lazyload.loadedSrc=[],$foundItems=a("[data-lazy-load]"),$foundItems.length>=1&&(lazyload.scrollElements=a("div,ul"),lazyload.scrollElements.each(function(){var b=a(this),c=b.css("overflow"),d=b.css("overflow-x"),e=b.css("overflow-y"),f=["hidden","scroll","auto"];0==b.find("[data-lazy-load]").length&&-1==f.indexOf(c)&&-1==f.indexOf(e)&&-1==f.indexOf(d)&&(lazyload.scrollElements=lazyload.scrollElements.not(b))}),lazyload.scrollElements=lazyload.scrollElements.add(window),lazyload.scrollElements.bind("scroll.lazyload",function(){lazyload.scrollCheck&&(c(),lazyload.scrollCheck=!1,clearTimeout(lazyload.scrollCheckDelayTimer),lazyload.scrollCheckDelayTimer=setTimeout(function(){lazyload.scrollCheck=!0},lazyload.__defaults.scrollCheckDelay))}),$foundItems.each(function(){b(a(this))}),c())}),lazyload.check=function(){c()},lazyload.add=function(c,d){b(a(c),d)},lazyload.load=function(){h(a($item))})}(jQuery);
       
         $(document).ready(function(){
           // fix centering elements
@@ -122,6 +122,11 @@
       }
       
     </script>
+    <style>
+      .svgfallback{display:none}
+      .svgfallback:not(old){display:block}
+      
+    </style>
     <link href="[@T[link:<cssroot />]@T]/fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css">
     <style>
 .bg-black {
@@ -214,8 +219,10 @@ padding-bottom: 50px;
 }
 .templates-image{
   margin: 25px auto;
-  height: 200px;
-  width: 265px;
+  box-shadow: 0 3px 7px -3px #282828;
+  height: 260px;
+  width: 200px;
+  overflow: hidden;
 }
 .templates-image-container{
   margin: 30px 110px 40px 110px;
@@ -255,914 +262,13 @@ padding-bottom: 50px;
       
     </script>
   </head>
-  <body>
+  <body ng-controller="" ng-cloak>
     <!-- HEADERBEGIN--> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- HEADEREND-->
-    <section id="marquee"> 
-      <atlantis:webstash type="css">
-        <style>.white-text{
-    color: #FFFFFF;
-}
-.marquee {
-    background-position: top center;
-}
-
-.marquee .marquee-product-img {
-    margin-bottom: 10px;
-}
-
-.marquee .jump-arrow-btn {
-    margin-top: 10px;
-}
-
-.marquee .marquee-buttons a {
-    margin-right: 20px;
-}
-
-.marquee .marquee-buttons a:last-child {
-    margin-right: 0;
-}
-
-.marquee .marquee-product-review {
-    font-size: 18px;
-    font-size: 1.8rem;
-    line-height: 1;
-}
-
-.marquee .marquee-product-review a {
-    text-decoration: none;
-    padding-left: 10px;
-    color: #333333;
-    text-transform: uppercase;
-    font-size: 12px;
-    font-size: 1.2rem;
-}
-
-.marquee .marquee-product-review a:hover {
-    text-decoration: none;
-}
-
-.marquee.marquee-app-landing {
-    min-height: 655px;
-}
-
-.marquee.marquee-app-landing .marquee-product-name {
-    margin-top: 0;
-}
-
-.marquee.marquee-app-landing .marquee-check-bullets {
-    list-style: none;
-    margin-bottom: 20px;
-    padding-left: 0;
-    font-size: 16px;
-    font-size: 1.6rem;
-}
-
-.marquee.marquee-app-landing .marquee-check-bullets li {
-    position: relative;
-    padding-left: 35px;
-    margin-bottom: 20px;
-}
-
-.marquee.marquee-app-landing .marquee-check-bullets li:before {
-    content: "";
-    background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
-    background-position: 0 -668px;
-    background-size: 205px auto;
-    width: 25px;
-    height: 27px;
-    padding-right: 5px;
-    position: absolute;
-    left: 0;
-    top: -6px;
-}
-
-.marquee.marquee-app-landing .marquee-pro-left-text {
-    padding-top: 45px;
-}
-
-.marquee.marquee-app-landing .marquee-product-description {
-    font-family: 'Walsheim-Bold';
-    margin-top: 10px;
-}
-
-.marquee.marquee-app-landing .marquee-product-name {
-    font-size: 20px;
-    font-size: 2rem;
-    text-transform: uppercase;
-    font-family: 'Walsheim-Bold';
-    margin-bottom: 10px;
-}
-
-.marquee-pro-signup {
-    min-height: 584px;
-}
-
-.marquee-pro-signup .marquee-pro-signup-wrap {
-    margin-bottom: 75px;
-}
-
-@media only screen and (max-width: 992px) {
-    .marquee-pro-signup h2 {
-        font-size: 40px;
-        font-size: 4rem;
-    }
-}
-
-.marquee-pro-signup h3 {
-    margin-top: 0;
-}
-
-@media only screen and (max-width: 992px) {
-    .marquee-pro-signup .marquee-pro-signup-img img {
-        width: 50%;
-        margin: 30px 0;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .marquee-pro-signup .marquee-pro-signup-img img {
-        width: 80%;
-    }
-}
-
-.marquee-pro-signup .marquee-pro-signup-check-wrap {
-    margin-top: 30px;
-}
-
-.marquee-pro-signup .jump-to-plans {
-    position: absolute;
-    bottom: -60px;
-    margin: 0 auto;
-    text-align: center;
-    right: 0;
-    left: 0;
-}
-
-.marquee-pro-signup .jump-to-plans .marquee-jump-text {
-    font-weight: 700;
-    margin-bottom: 10px;
-    line-height: 1;
-    font-family: 'Walsheim-Bold';
-    font-size: 20px;
-    font-size: 2rem;
-}
-
-@media only screen and (max-width: 992px) {
-    .marquee-pro-signup .jump-to-plans .marquee-jump-text {
-        margin-bottom: 5px;
-    }
-}
-
-@media only screen and (max-width: 992px) {
-    .marquee-pro-signup .marquee-pro-signup-buttons {
-        text-align: center;
-        padding-bottom: 10px;
-    }
-}
-
-.marquee-pro-signup .marquee-pro-signup-buttons a:first-child {
-    margin-right: 20px;
-}
-
-.marquee-pro-signup .marquee-pro-signup-check {
-    padding-left: 35px;
-    font-family: 'Walsheim-Bold';
-    position: relative;
-    font-size: 18px;
-    font-size: 1.8rem;
-    margin-bottom: 30px;
-}
-
-.marquee-pro-signup .marquee-pro-signup-check:before {
-    content: '';
-    background-position: 0px -234px;
-    background-size: 205px auto;
-    width: 25px;
-    height: 27px;
-    display: block;
-    position: absolute;
-    left: 0;
-    top: -3px;
-}
-
-.marquee-pro-rebrand {
-    min-height: 378px;
-}
-
-@media only screen and (max-width: 992px) {
-    .marquee-pro-rebrand {
-        padding-bottom: 50px;
-    }
-}
-
-.marquee-pro-rebrand .marquee-pro-left-text {
-    margin-bottom: 65px;
-}
-
-.marquee-pro-rebrand .marquee-pro-left-text h1 {
-    font-size: 20px;
-    font-size: 2rem;
-    text-transform: uppercase;
-    color: #ef6c0f;
-    font-family: 'Walsheim-Bold';
-    margin-bottom: 10px;
-}
-
-.marquee-pro-rebrand .marquee-pro-left-text h2 {
-    font-size: 40px;
-    font-size: 4rem;
-    text-transform: uppercase;
-    font-family: 'Walsheim-Bold';
-    margin-top: 10px;
-    line-height: 1;
-}
-
-.marquee-pro {
-    min-height: 450px;
-}
-
-@media only screen and (max-width: 992px) {
-    .marquee-pro {
-        padding-bottom: 50px;
-    }
-}
-
-.marquee-pro .well {
-    background-color: rgba(239, 108, 15, 0.8);
-    border: none;
-    color: #fff;
-    padding: 30px;
-    min-height: 275px;
-}
-
-@media only screen and (max-width: 992px) {
-    .marquee-pro .well {
-        min-height: 0;
-        margin-top: 20px;
-    }
-}
-
-.marquee-pro .well .row {
-    min-height: 0 !important;
-}
-
-.marquee-pro .well .marquee-pro-icon-wrap {
-    border-left: 1px solid #fff;
-}
-
-@media only screen and (max-width: 768px) {
-    .marquee-pro .well .marquee-pro-icon-wrap {
-        border-left: 0;
-    }
-
-    .marquee-pro .well .marquee-pro-icon-wrap:not(:first-child) {
-        margin-top: 30px;
-    }
-}
-
-.marquee-pro .well .marquee-pro-icon-wrap .marquee-pro-icon-height {
-    height: 95px;
-}
-
-.marquee-pro .well .marquee-pro-icon-wrap .marquee-pro-icon-height img {
-    max-width: 75%;
-    max-height: 75%;
-    position: relative;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
-
-.marquee-pro .well .marquee-pro-icon-wrap h5 {
-    font-weight: 500;
-}
-
-.marquee-pro .well .marquee-pro-icon-wrap:first-child {
-    border-left: 0;
-}
-
-.marquee-pro .well .marquee-pro-icon-wrap .marquee-pro-icon {
-    margin: 0 auto 15px;
-    max-height: 85px;
-}
-
-.marquee-pro .well.marquee-pro-centered a {
-    font-weight: 500;
-}
-
-.marquee-pro .well.marquee-pro-centered h1 {
-    font-size: 20px;
-    font-size: 2rem;
-    font-family: 'Walsheim-Bold';
-    text-transform: uppercase;
-    margin: 0 0 10px 0;
-}
-
-.marquee-pro .well.marquee-pro-centered h2 {
-    margin-top: 0;
-    word-wrap: break-word;
-    word-break: break-word;
-    white-space: -moz-pre-wrap;
-}
-
-.marquee-pro .well.marquee-pro-centered .pro-marquee-home-deals {
-    border-top: 1px solid #fff;
-    font-weight: 700;
-}
-
-.marquee-pro .well.marquee-pro-centered .pro-marquee-home-deals .pro-marquee-deal {
-    margin-top: 20px;
-}
-
-.marquee-pro .well.marquee-pro-centered .pro-marquee-home-deals .pro-marquee-deal .pro-marquee-deal-text,
-.marquee-pro .well.marquee-pro-centered .pro-marquee-home-deals .pro-marquee-deal .pro-marquee-deal-savings {
-    font-size: 18px;
-    font-size: 1.8rem;
-}
-
-.marquee-pro .well.marquee-pro-centered .pro-marquee-home-deals .pro-marquee-deal-price {
-    margin-top: 15px;
-}
-
-.marquee-pro .well.marquee-pro-centered .pro-marquee-home-deals .pro-marquee-deal-price .marquee-price-small-text {
-    font-size: 15px;
-    font-size: 1.5rem;
-    font-weight: 500;
-}
-
-.marquee-pro .well.marquee-pro-centered .pro-marquee-home-deals .pro-marquee-deal-price .marquee-price {
-    font-size: 35px;
-    font-size: 3.5rem;
-    line-height: 1;
-    font-family: 'Walsheim-Bold';
-}
-
-.marquee-pro .well.marquee-pro-centered .search-template-box {
-    border: 3px solid #fff;
-    margin-top: 10px;
-}
-
-.marquee-pro .marquee-pro-first-area h1 {
-    font-size: 20px;
-    font-size: 2rem;
-    font-family: 'Walsheim-Bold';
-    margin: 0 0 10px 0;
-}
-
-.marquee-pro .marquee-pro-first-area h2 {
-    margin-top: 12px;
-}
-
-.marquee-pro .marquee-pro-first-area .marquee-pro-product-text {
-    padding-top: 10px;
-    border-top: 1px solid #fff;
-}
-
-.marquee-pro .marquee-product-text {
-    margin-bottom: 20px;
-}
-
-.marquee-pro .jump-to-plans {
-    position: absolute;
-    bottom: -60px;
-    margin: 0 auto;
-    text-align: center;
-    right: 0;
-    left: 0;
-}
-
-.marquee-pro .jump-to-plans .marquee-jump-text {
-    font-weight: 700;
-    margin-bottom: 10px;
-    line-height: 1;
-    color: #333333;
-    font-size: 20px;
-    font-size: 2rem;
-}
-
-@media only screen and (max-width: 992px) {
-    .marquee-pro .jump-to-plans .marquee-jump-text {
-        margin-bottom: 5px;
-    }
-}
-
-.marquee-table-grid > .row {
-    display: table;
-}
-
-@media only screen and (max-width: 768px) {
-    .marquee-table-grid > .row {
-        display: block;
-    }
-}
-
-.marquee-table-grid > .row > [class*="col-"] {
-    float: none;
-    display: table-cell;
-    vertical-align: top;
-}
-
-@media only screen and (max-width: 768px) {
-    .marquee-table-grid > .row > [class*="col-"] {
-        display: block;
-        float: none;
-        border-left: none;
-        border-right: none;
-        padding: 20px inherit;
-        border-top: 1px solid #fff;
-    }
-
-    .marquee-table-grid > .row > [class*="col-"]:first-child {
-        border-top: 0;
-    }
-}
-.marquee {
-    background-size: cover !important;
-    position: relative;
-    background-position: bottom center;
-    background-color: #fff;
-  /* Ribbon */
-}
-
-.marquee .relative-position {
-    position: relative;
-}
-
-.marquee .marquee-all-centered {
-    text-align: center;
-}
-
-.marquee .marquee-two-col-txt ul.marquee-product-bullets {
-    text-align: left;
-}
-
-.marquee.marquee-short {
-    min-height: 368px;
-}
-
-.marquee.marquee-short .container {
-    min-height: inherit;
-}
-
-.marquee.marquee-short .container .row {
-    min-height: inherit;
-}
-
-.marquee.marquee-short .container .row .col-sm-pull-6 {
-    min-height: inherit;
-}
-
-@media only screen and (max-width: 767px) {
-    .marquee.marquee-short .container .row .col-sm-pull-6 {
-        min-height: 100px;
-    }
-}
-
-@media only screen and (max-width: 992px) {
-    .marquee.marquee-short .vertical-height.marquee-sm-vertical-fix {
-        height: auto !important;
-    }
-}
-
-@media only screen and (max-width: 992px) {
-    .marquee.marquee-short .vertical-height.marquee-sm-vertical-fix .vertical-text {
-        -webkit-transform: translateY(0%);
-        -moz-transform: translateY(0%);
-        transform: translateY(0%);
-        top: 0%;
-    }
-}
-
-.marquee.marquee-tall {
-    min-height: 523px;
-}
-
-.marquee.marquee-tall .container {
-    min-height: inherit;
-}
-
-.marquee.marquee-tall .container .row {
-    min-height: inherit;
-}
-
-.marquee.marquee-tall .container .row .col-sm-pull-6 {
-    min-height: inherit;
-}
-
-@media only screen and (max-width: 767px) {
-    .marquee.marquee-tall .container .row .col-sm-pull-6 {
-        min-height: 100px;
-    }
-}
-
-@media only screen and (max-width: 992px) {
-    .marquee.marquee-tall {
-        min-height: 400px;
-    }
-}
-
-.marquee.marquee-img-tall-left-txt {
-    height: 523px;
-}
-
-@media only screen and (max-width: 1200px) {
-    .marquee.marquee-img-tall-left-txt {
-        height: 430px;
-    }
-}
-
-@media only screen and (max-width: 992px) {
-    .marquee.marquee-img-tall-left-txt {
-        height: 332px;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .marquee.marquee-img-tall-left-txt {
-        height: 332px;
-        background-position: -160px;
-    }
-}
-
-.marquee.marquee-img-short-left-txt {
-    height: 368px;
-}
-
-@media only screen and (max-width: 1200px) {
-    .marquee.marquee-img-short-left-txt {
-        height: 300px;
-    }
-}
-
-@media only screen and (max-width: 992px) {
-    .marquee.marquee-img-short-left-txt {
-        height: 234px;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .marquee.marquee-img-short-left-txt {
-        height: 234px;
-        background-position: -160px;
-    }
-}
-
-.marquee.marquee-white {
-    color: #fff;
-}
-
-.marquee.marquee-white h1,
-.marquee.marquee-white h2,
-.marquee.marquee-white h3,
-.marquee.marquee-white h4,
-.marquee.marquee-white h5,
-.marquee.marquee-white h6 {
-    color: #fff;
-}
-
-.marquee.marquee-white .dashed-underline {
-    border-bottom-color: #fff;
-}
-
-.marquee.marquee-white a:not(.btn) {
-    color: #fff;
-    text-decoration: underline;
-}
-
-.marquee.marquee-white a:not(.btn):hover {
-    text-decoration: none;
-}
-
-@media only screen and (max-width: 480px) {
-    .marquee .marquee-customer-wrap {
-        margin-bottom: 20px;
-    }
-}
-
-@media only screen and (max-width: 480px) {
-    .marquee .marquee-customer-wrap .vertical-height {
-        height: auto !important;
-    }
-}
-
-.marquee .img-center {
-    margin: 0 auto;
-}
-
-.marquee .marquee-corner-img {
-    background-repeat: no-repeat;
-    position: absolute;
-    left: 0;
-    top: 0;
-    min-width: 165px;
-    min-height: 169px;
-}
-
-.marquee .marquee-product-img {
-    max-width: 100%;
-}
-
-.marquee .marquee-product-review {
-    font-size: 18px;
-    font-size: 1.8rem;
-}
-
-.marquee .marquee-product-review a {
-    text-decoration: underline;
-    padding-left: 10px;
-    color: #808080;
-}
-
-.marquee .marquee-product-review a:hover {
-    text-decoration: none;
-}
-
-.marquee .marquee-product-description {
-    font-size: 56px;
-    font-size: 5.6rem;
-    font-weight: 100;
-    line-height: 1.1;
-    margin-bottom: 10px;
-}
-
-@media only screen and (max-width: 992px) {
-    .marquee .marquee-product-description {
-        font-size: 40px;
-        font-size: 4rem;
-    }
-}
-
-.marquee .marquee-product-text {
-    font-size: 18px;
-    font-size: 1.8rem;
-    padding: 0 0 14px;
-}
-
-.marquee ul.marquee-product-bullets {
-    font-size: 18px;
-    font-size: 1.8rem;
-    text-align: center;
-    list-style-position: inside;
-    padding: 0;
-}
-
-.marquee .marquee-restrictions-text {
-    font-size: 14px;
-    font-size: 1.4rem;
-    margin-bottom: 15px;
-}
-
-.marquee .marquee-ribbon {
-    width: 112px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-repeat: no-repeat;
-    z-index: 100;
-}
-
-@media only screen and (max-width: 992px) {
-    .marquee .marquee-ribbon {
-        position: relative;
-        margin: 0 auto;
-    }
-}
-
-.marquee .marquee-left-ribbon .marquee-ribbon {
-    left: 0;
-    right: auto;
-}
-
-.marquee .marquee-price-btn-wrap {
-    color: #ef6c0f;
-    line-height: 1;
-    font-weight: 400;
-    padding: 5px 0 20px;
-}
-
-@media only screen and (max-width: 768px) {
-    .marquee .marquee-price-btn-wrap {
-        line-height: 1.2;
-    }
-}
-
-.marquee .marquee-price-btn-wrap .btn {
-    margin-right: 10px;
-}
-
-.marquee .marquee-price-btn-wrap .marquee-price-text {
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.marquee .marquee-price-btn-wrap .marquee-price-small-text {
-    font-size: 18px;
-    font-size: 1.8rem;
-}
-
-@media only screen and (max-width: 768px) {
-    .marquee .marquee-price-btn-wrap .marquee-price-small-text {
-        font-size: 16px;
-        font-size: 1.6rem;
-    }
-}
-
-.marquee .marquee-price-btn-wrap .marquee-price {
-    font-size: 36px;
-    font-size: 3.6rem;
-}
-
-@media only screen and (max-width: 768px) {
-    .marquee .marquee-price-btn-wrap .marquee-price {
-        font-size: 30px;
-        font-size: 3rem;
-    }
-}
-
-.marquee .marquee-check-bullets {
-    list-style: none;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    padding-left: 0;
-    font-size: 18px;
-    font-size: 1.8rem;
-}
-
-.marquee .marquee-check-bullets span {
-    font-family: 'HelveticaNeue-CondensedBold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: 700;
-    font-stretch: condensed;
-    text-transform: uppercase;
-}
-
-.marquee .marquee-check-bullets li:before {
-    content: "\e207";
-    font-family: 'uxfont';
-    padding-right: 5px;
-}
-
-.marquee .marquee-btn-wrap {
-    margin-bottom: 20px;
-}
-
-.marquee .search-template .search-template-box {
-    border: 1px solid #cecece;
-}
-
-.marquee .marquee-customer-name-wrap {
-    position: absolute;
-    bottom: 10px;
-    font-size: 16px;
-    font-size: 1.6rem;
-}
-
-@media only screen and (max-width: 480px) {
-    .marquee .marquee-customer-name-wrap {
-        position: relative;
-        bottom: auto;
-    }
-}
-
-.marquee .marquee-customer-name-wrap .marquee-customer-name {
-    font-weight: bold;
-}
-
-.marquee .marquee-customer-name-wrap .marquee-customer-text {
-    font-weight: 100;
-}
-
-.marquee .marquee-customer-name-wrap .marquee-customer-website {
-    color: #008a32;
-    text-decoration: underline;
-}
-
-.marquee .marquee-two-col-abstract.left-column {
-    color: #fff;
-}
-
-.marquee .marquee-two-col-abstract.left-column .marquee-product-name {
-    color: #fff;
-    font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;
-    font-size: 46px;
-    margin: 34px 0 0 0;
-}
-
-.marquee .marquee-two-col-abstract.left-column .marquee-product-description {
-    font-family: "Walsheim-Bold";
-    font-size: 22px;
-}
-
-.marquee .marquee-two-col-abstract.left-column .marquee-product-text {
-    font-family: "Walsheim-Medium";
-    font-size: 18px;
-    margin-top: 18px;
-}
-
-.marquee .marquee-two-col-abstract.left-column .marquee-product-price {
-    display: block;
-    font-family: "Walsheim-Black";
-    font-size: 30px;
-    font-weight: 700;
-    margin-bottom: 10px;
-}
-
-.marquee .marquee-two-col-abstract.left-column .btn {
-    font-family: "Walsheim-Medium";
-    font-size: 24px;
-}
-
-.marquee .marquee-two-col-abstract.left-column .marquee-restrictions-text {
-    margin: 12px 0 24px;
-    font-family: "Walsheim-Regular";
-}
-
-.marquee .marquee-two-col-abstract.left-column .marquee-restrictions-text ul {
-    padding-left: 0;
-}
-
-.marquee .marquee-two-col-abstract.left-column .marquee-restrictions-text ul li {
-    list-style: none;
-}
-
-.marquee .marquee-two-col-abstract.right-column {
-    position: absolute;
-    right: 0;
-    height: 100%;
-    background-position: top center;
-    background-size: cover;
-}
-
-.marquee .marquee-two-col-abstract.right-column img.abstract-left {
-    position: absolute;
-    left: 0;
-    height: 100%;
-}
-
-.marquee .marquee-two-col-abstract.right-column img.abstract-right {
-    position: absolute;
-    right: 0;
-    height: 100%;
-}
-
-@media only screen and (max-width: 768px) {
-    .marquee .marquee-two-col-abstract.right-column {
-        position: relative;
-        min-height: 200px;
-    }
-}
-
-h1.marquee-product-name,
-h2.marquee-product-name,
-.marquee-product-name {
-    font-size: 24px;
-    font-size: 2.4rem;
-    font-family: 'HelveticaNeue-CondensedBold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: 700;
-    font-stretch: condensed;
-    text-transform: uppercase;
-}
-
-@media only screen and (max-width: 992px) {
-    h1.marquee-product-name,
-  h2.marquee-product-name,
-  .marquee-product-name {
-        font-size: 20px;
-        font-size: 2rem;
-        margin-top: 10px;
-    }
-}
-        </style>
-        <style>
-          .marquee { background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-marquee.jpg) no-repeat top center;); }
-          
-        </style>
-      </atlantis:webstash>
-      <div data-onclick="#" data-icode="" class="marquee marquee-app-landing marquee-white">
-        <div class="container relative-position">
-          <div class="row">
-            <div class="col-sm-12">
-              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.marquee-www-rebrand-wrap&quot;},&quot;verticalStyle&quot;:&quot;padding-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
-                <div class="row">
-                  <div class="col-md-7 col-sm-12">
-                    <div class="marquee-pro-left-text">
-                            <h1 class="marquee-product-name">[@L[cds.sales/gd/hosting/website-builder:main-banner-subtitle]@L]</h1>
-                            <h2 class="marquee-product-description">[@L[cds.sales/gd/hosting/website-builder:header_subtitle_1]@L]</br>[@L[cds.sales/gd/hosting/website-builder:header_subtitle_2]@L]</h2>
-                            <ul class="marquee-check-bullets">
-                              <li>[@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-1]@L]</li>
-                              <li>[@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-2]@L]</li>
-                              <li>[@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-3]@L]</li>
-                            </ul><a href="[@T[link:<relative path='~/hosting/website-builder-config.aspx' secure='true'><param name='ci' value='' /><param name='plan' value='wsb_personal_12month' /></relative>]@T]" class="btn btn-primary jump-arrow-btn">[@L[cds.sales/gd/hosting/website-builder:get-started-btn-general]@L]</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <section id="marquee">
+       
+      [@P[cdsDocument:<data app="sales" location="hosting/website-builder/marquees/marquee" /> ]@P]
     </section>
     <section id="plans">
       <style>
@@ -1449,7 +555,7 @@ h2.marquee-product-name,
     font-size: 3rem;
     margin-top: 0;
     font-family: 'Walsheim-Bold';
-    text-transform: none;
+    text-transform: uppercase;
     word-wrap: break-word;
     word-break: break-word;
     white-space: -moz-pre-wrap;
@@ -1477,7 +583,7 @@ h2.marquee-product-name,
 }
 
 .pro-plans .pro-plan-wrap .plan-price-wrap {
-    min-height: 92px;
+    padding-bottom: 30px;
 }
 
 .pro-plans .pro-plan-wrap .plan-price-wrap .plan-price {
@@ -1537,13 +643,12 @@ h2.marquee-product-name,
 }
 
 .pro-plans .sf-tipper-target {
-    background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
-    background-position: 0 -864px;
-    width: 15px;
-    height: 17px;
-    display: inline-block;
-    background-size: 205px auto;
-    vertical-align: baseline;
+  background-image: url(https://img1.wsimg-com.ide/fos/mike/img/hosting/img-tootip-.png);
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  vertical-align: baseline;
+  cursor: pointer;
 }
       </style>
       <atlantis:webstash type="css">
@@ -1831,7 +936,7 @@ h2.marquee-product-name,
     font-size: 3rem;
     margin-top: 0;
     font-family: 'Walsheim-Bold';
-    text-transform: none;
+    text-transform: uppercase;
     word-wrap: break-word;
     word-break: break-word;
     white-space: -moz-pre-wrap;
@@ -1859,7 +964,7 @@ h2.marquee-product-name,
 }
 
 .pro-plans .pro-plan-wrap .plan-price-wrap {
-    min-height: 92px;
+    padding-bottom: 30px;
 }
 
 .pro-plans .pro-plan-wrap .plan-price-wrap .plan-price {
@@ -1919,13 +1024,12 @@ h2.marquee-product-name,
 }
 
 .pro-plans .sf-tipper-target {
-    background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
-    background-position: 0 -864px;
-    width: 15px;
-    height: 17px;
-    display: inline-block;
-    background-size: 205px auto;
-    vertical-align: baseline;
+  background-image: url(https://img1.wsimg-com.ide/fos/mike/img/hosting/img-tootip-.png);
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  vertical-align: baseline;
+  cursor: pointer;
 }
         </style>
       </atlantis:webstash>
@@ -2067,17 +1171,17 @@ h2.marquee-product-name,
               <div class="plan-flag">[@L[cds.sales/gd/hosting/website-builder:wsb-plus-seo]@L]</div>
               <h2 class="plan-title">[@L[cds.sales/gd/hosting/website-builder:unlimited-plan-title]@L]</h2>
               <p class="plan-text">[@L[cds.sales/gd/hosting/website-builder:unlimited-description]@L]</p>
-              <div class="plan-price-wrap"><span class="plan-price text-warning">[@T[productprice:<current productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
-                ##if(productHasSavingsMoreThan(7524, 7524, 0))
+              <div class="plan-price-wrap"><span class="plan-price text-warning">[@T[productprice:<current productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
+                ##if(productHasSavingsMoreThan(7514, 7514, 0))
                  <br><strong>
                    
                   ##if(splitTestingSideIsActive(1349, A))
                    
                   [@L[cds.sales/_common:was]@L] 
-                  <strike>[@T[productprice:<list productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7524" secondaryproductid="7524" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span> 
+                  <strike>[@T[productprice:<list productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7514" secondaryproductid="7514" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span> 
                   ##else
                    
-                  [@L[cds.sales/_common:onsale-all-cap]@L] -<span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7524" secondaryproductid="7524" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span> 
+                  [@L[cds.sales/_common:onsale-all-cap]@L] -<span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7514" secondaryproductid="7514" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span> 
                   ##endif
                    </strong> 
                 ##endif
@@ -2085,7 +1189,7 @@ h2.marquee-product-name,
                  
                 ##if(splitTestingSideIsActive(1349, B))
                  
-                <p class="h6">[@T[productprice:<list productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:month]@L] [@L[cds.sales/gd/hosting/website-builder:renewal-text]@L]</p> 
+                <p class="h6">[@T[productprice:<list productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:month]@L] [@L[cds.sales/gd/hosting/website-builder:renewal-text]@L]</p> 
                 ##endif
                  
                  
@@ -2095,7 +1199,7 @@ h2.marquee-product-name,
                 ##endif
                  
               </div>
-              <button id="product-C" data-tcode="undefined" data-plan="wsb_business_12month" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+              <button id="product-C" data-tcode="undefined" data-plan="wsb_businessplus_12month" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
               <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:plan-domain]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]'></span></div>
               <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:unlimited-themes]@L]</div>
               <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:unlimited-pages]@L]</div>
@@ -2337,9 +1441,12 @@ h2.marquee-product-name,
         }).css("height", midPageMenuItem);
       });
       $(document).ready(function(){
-        // this sets the nav to fixed when scrolled past and fixes the body for the height of the nav
+        // this sets the nav to fixed when scrolled past and fixed the body for the height of the nav
+        organizeNavBar();
+      
         var nav = $('.mid-page-nav');
-        var pos = nav.offset().top;
+        var navTop = nav.offset().top;
+        var footerBot = $('#footer').offset().top
         var sections = []
       
         $('[data-mid-nav-title]').each(function(){
@@ -2348,17 +1455,19 @@ h2.marquee-product-name,
         });
         $(window).scroll(function () {
           var scroll = $(this).scrollTop();
-          var fix = ($(this).scrollTop()+2 > pos) ? true : false;
-          nav.toggleClass("sticky", fix);
-          $('body').toggleClass("fix-body", fix);
-          if(!fix){
+          var belowNavTop=(scroll+2 > navTop) ? true : false;
+          var aboveFooterTop=(scroll < footerBot) ? true : false;
+          var InNavZone = (belowNavTop && aboveFooterTop) ? true : false;
+          nav.toggleClass("sticky", InNavZone);
+          $('body').toggleClass("fix-body", InNavZone);
+          if(!InNavZone){
             $('.mid-page-nav a').each(function(){
               $(this).blur();
-              $(this).toggleClass("active",fix);
+              $(this).toggleClass("active",InNavZone);
             });
           }
       
-          if(fix){
+          if(InNavZone){
             $.each(sections,function(index,value){
                 var top = ((scroll+131) > $('#'+value).offset().top) ? true : false;
                 var bottom = ((scroll+131) < $('#'+value).offset().top + $('#'+value).outerHeight()) ? true : false;
@@ -2371,10 +1480,30 @@ h2.marquee-product-name,
                   });
               });
           }
-      
         });
-        $('#midPageNav .dropdown-toggle').dropdown()
+        $('.dropdown-menu').on("click",function(){
+          $('#midPageNav .dropdown-toggle').dropdown('toggle');
+        });
+        $('#midPageNav .dropdown-toggle').dropdown();
       });
+      function organizeNavBar(){
+        var linkArea = $('.navbar-nav').width();
+        var navBarArea = $('.navbar-collapse').width()-$('.navbar-right').width();
+        dropdownItem = "";
+        $dropdownMenu = "";
+        if(linkArea > navBarArea)
+        {
+          $dropdownMenu= $('<li class="dropdown"><a href="javascript:void(0)" role="button" data-toggle="dropdown" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.nav&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="dropdown-toggle"  style="margin-top: 0px;"><span>More<br><em>...</em></span></a><ul class="dropdown-menu">');
+        }
+        while($('.navbar-nav').width()+150 > $('.navbar-collapse').width()-$('.navbar-right').width()){
+          dropdownItem =$('.navbar-nav li').last().detach();
+          $dropdownMenu.find('.dropdown-menu').append(dropdownItem);
+        }
+        if(linkArea > navBarArea)
+        {
+          $dropdownMenu.appendTo('.navbar-nav');
+        }
+      }
       function scroll_if_anchor(href) {
         href = typeof(href) == "string" ? href : $(this).attr("href");
       
@@ -2414,21 +1543,41 @@ h2.marquee-product-name,
             <div class="headline-primary">[@L[cds.sales/gd/hosting/website-builder:sb_templates_text]@L]</div>
             <button data-toggle="bsModal" data-target="#g-modal" class="btn btn-default-dark view-all btn-md">[@L[cds.sales/gd/hosting/website-builder:sb_view_templates]@L]</button>
           </div>
-          <div class="templates-image-container"> 
+          <div class="templates-image-container">
+             
+             
+            ##if(countrySiteAny(ca))
+             
             <div class="row">
-              <div class="col-md-4 text-center"><img src="//nebula.wsimg.com/97d611570df922cf947daef6ea7c720b?AccessKeyId=531592D248B589D87A56" class="templates-image"></div>
-              <div class="col-md-4 text-center"><img src="//nebula.wsimg.com/97d611570df922cf947daef6ea7c720b?AccessKeyId=531592D248B589D87A56" class="templates-image"></div>
-              <div class="col-md-4 text-center"><img src="//nebula.wsimg.com/97d611570df922cf947daef6ea7c720b?AccessKeyId=531592D248B589D87A56" class="templates-image"></div>
+              <div class="col-md-4 text-center"><img src="https://nebula.wsimg.com/969c55de87f607d9e7c01079c3923192?AccessKeyId=531592D248B589D87A56" class="templates-image"></div>
+              <div class="col-md-4 text-center"><img src="https://nebula.wsimg.com/d7a3d52de03500dc212cbdd188ee4c76?AccessKeyId=531592D248B589D87A56" class="templates-image"></div>
+              <div class="col-md-4 text-center"><img src="https://nebula.wsimg.com/1c3f93e0921f7eb63f8557dbf04dcc5d?AccessKeyId=531592D248B589D87A56" class="templates-image"></div>
+            </div> 
+            ##elseif(countrySiteAny(uk))
+             
+            <div class="row">
+              <div class="col-md-4 text-center"><img src="https://nebula.wsimg.com/6fa416babb52bf03888cd67d49d7ddb0?AccessKeyId=531592D248B589D87A56" class="templates-image"></div>
+              <div class="col-md-4 text-center"><img src="https://nebula.wsimg.com/02aee5deba51271ae149ac610fb15d58?AccessKeyId=531592D248B589D87A56" class="templates-image"></div>
+              <div class="col-md-4 text-center"><img src="https://nebula.wsimg.com/4462d6ddb0a13e36e63847af8e922198?AccessKeyId=531592D248B589D87A56" class="templates-image"></div>
+            </div> 
+            ##else
+             
+            <div class="row">
+              <div class="col-md-4 text-center"><img src="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/auto.jpg" class="templates-image"></div>
+              <div class="col-md-4 text-center"><img src="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/photography.jpg" class="templates-image"></div>
+              <div class="col-md-4 text-center"><img src="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/education.jpg" class="templates-image"></div>
+            </div> 
+            ##endif
+             
+            <div class="row">
+              <div class="col-md-4 text-center"><img src="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/ecommerce.jpg" class="templates-image"></div>
+              <div class="col-md-4 text-center"><img src="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/travel.jpg" class="templates-image"></div>
+              <div class="col-md-4 text-center"><img src="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/non-profit.jpg" class="templates-image"></div>
             </div>
             <div class="row">
-              <div class="col-md-4 text-center"><img src="//nebula.wsimg.com/97d611570df922cf947daef6ea7c720b?AccessKeyId=531592D248B589D87A56" class="templates-image"></div>
-              <div class="col-md-4 text-center"><img src="//nebula.wsimg.com/97d611570df922cf947daef6ea7c720b?AccessKeyId=531592D248B589D87A56" class="templates-image"></div>
-              <div class="col-md-4 text-center"><img src="//nebula.wsimg.com/97d611570df922cf947daef6ea7c720b?AccessKeyId=531592D248B589D87A56" class="templates-image"></div>
-            </div>
-            <div class="row">
-              <div class="col-md-4 text-center"><img src="//nebula.wsimg.com/97d611570df922cf947daef6ea7c720b?AccessKeyId=531592D248B589D87A56" class="templates-image"></div>
-              <div class="col-md-4 text-center"><img src="//nebula.wsimg.com/97d611570df922cf947daef6ea7c720b?AccessKeyId=531592D248B589D87A56" class="templates-image"></div>
-              <div class="col-md-4 text-center"><img src="//nebula.wsimg.com/97d611570df922cf947daef6ea7c720b?AccessKeyId=531592D248B589D87A56" class="templates-image"></div>
+              <div class="col-md-4 text-center"><img src="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/business.jpg" class="templates-image"></div>
+              <div class="col-md-4 text-center"><img src="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/health-beauty.jpg" class="templates-image"></div>
+              <div class="col-md-4 text-center"><img src="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/creative-design.jpg " class="templates-image"></div>
             </div>
           </div>
         </div>
@@ -4082,6 +3231,7 @@ $(document).ready(function(){
 
 
 <!-- JavaScript Test -->
+<atlantis:webstash type="js">
 <script type="text/javascript">
  /* ========================================================================
  * Bootstrap: bsmodal.js v3.0.3
@@ -4598,6 +3748,8 @@ var PlanBox6UI = {
         });
 });
 </script>
+</atlantis:webstash>
+
             <style>.video-marquee {
 	background-position: top center;
 }
@@ -6027,7 +5179,8 @@ margin-bottom: 20px;
   border-left: 8px solid;
   border-top: 8px solid transparent;
   border-bottom: 8px solid transparent;
-  margin-top: 4px;
+  margin-top: 1px;
+  margin-right: 18px;
 }
 
 .accordion-group li.accordion-dropdown.active > span:first-child {
@@ -6098,7 +5251,7 @@ margin-bottom: 20px;
                 </ul>
               </li>
               <div class="text-center">
-                <button id="faq-button" class="btn btn-default-dark">[@L[cds.sales/gd/hosting/website-builder:sb_faq_see]@L]</button>
+                <button id="faq-button" class="btn btn-default-dark">[@L[cds.sales/hosting/web-hosting-rebrand:seeAllQuestions]@L]</button>
               </div>
             </ul>
           </div>
@@ -6309,6 +5462,29 @@ margin-bottom: 20px;
   margin-left: -50px;
   z-index: 1;
 }
+
+##if(activeLanguageAny([en-US]))
+.or-container:after {
+  content: '';
+  background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_or-shape_white_en.png);
+  width: 94px;
+  height: 98px;
+  background-position: 0 0;
+  background-size: auto auto;
+  position: absolute;
+  bottom: -50px;
+  margin: 0 auto;
+  display: block;
+  margin-left: -50px;
+  z-index: 1;
+}
+@media (max-width: 767px) {
+  .or-container:after {
+    display: block;
+    left: 50%
+  }
+}
+##else
 .or-container:after {
   content: '';
   width: 94px;
@@ -6332,6 +5508,8 @@ margin-bottom: 20px;
     left: 50%
   }
 }
+##endif
+
 @media (min-width: 768px) and (max-width: 991px) {
   .or-container:after {
     left: 101%;
@@ -6480,10 +5658,38 @@ margin-bottom: 20px;
          
       </div>
       <p class="h5">[@L[cds.sales/gd/hosting/website-builder:rb_disclaimers_3p]@L]</p>
-    </section>
+    </section> 
+    ##if(activeLanguageAny([en-US]))
+     
+    <section id="modals">
+      <div id="login-modal" class="modal fade">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <form method="POST" id="g-modal-loginAcct-form" action="[@T[link:<external parammode='explicit' linktype='SSOURL' secure='true' />]@T]/login.aspx?spkey=[@T[sso:spkey]@T]&target=[@T[link:<external linktype='siteurl' path='/hosting/web-hosting.aspx' secure='false' parammode='explicit'/>]@T]">
+              <input type="hidden" value="LOGIN" name="LOGIN">
+              <input type="hidden" value="1" name="verifyShopper">
+              <div class="modal-header">
+                <button type="button" data-dismiss="modal" aria-hidden="true" class="close"></button>
+                <h4 class="modal-title">Please login to access your account</h4>
+              </div>
+              <div class="modal-body">
+                <input type="text" id="loginName" name="loginName" autocomplete="off" placeholder="[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Headers.UtilityBar.Username]@L]">
+                <input type="password" id="password" name="password" autocomplete="off" placeholder="[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Headers.UtilityBar.Password]@L]"><a href="[@T[link:<external linktype='SSOURL' path='/account/accountRetrieval.aspx' secure='true'/>]@T]" class="forgot-pass"></br> [@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Headers.UtilityBar.ForgotPassword]@L]</a>
+              </div>
+              <div class="modal-footer">
+                <button type="button" data-dismiss="modal" class="btn btn-default">Cancel</button>
+                <input type="submit" value="[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Headers.UtilityBar.SignIn]@L]" class="btn btn-primary">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section> 
+    ##endif
+     
     <!-- FOOTERBEGIN--> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
-    <!-- FOOTEREND-->
+    <!-- FOOTEREND-     -->
     <!-- liveperson includes -->
     <div id="lpButtonDiv"></div><!-- End Main Content -->
     <script type="text/javascript">

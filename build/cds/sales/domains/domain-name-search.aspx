@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="[@T[localization:<language full='true' />]@T]">
+<html lang="[@T[localization:<language full='true' />]@T]" id="" ng-app="">
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta http-equiv="content-language" content="[@T[localization:<language full='true' />]@T]">
@@ -26,6 +26,8 @@
     <meta property="fb:app_id" content="115696031791232">
     <meta property="fb:admins" content="633356800"> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
+    <script>       (function(e){if(typeof lazyload=="undefined"){window.lazyload={version:"2.0.0",items:e(),__defaults:{updatePosition:true,checkHorizontal:false,scrollCheckDelay:300,loadBufferDistance:0,fadeInDelay:0,fadeInSpeed:500}};function t(e,t){if(typeof t=="undefined"){t={source:e.data("lazyload-source"),watch:e.data("lazyload-watch"),callback:e.data("lazyload-callback"),callbackAfter:e.data("lazyload-callbackAfter")}}if(typeof t.source!="undefined"){e[0].lazyload=t;lazyload.items=lazyload.items.add(e);i(e)}}function n(){i(e(window));lazyload.items.each(function(){r(e(this))})}function r(t){var n=t[0].lazyload.updatePosition||lazyload.__defaults.updatePosition;var r=r||lazyload.__defaults.updateWindowScroll;var s=t[0].lazyload.checkHorizontal||lazyload.__defaults.checkHorizontal;if(n){i(t)}i(e(window));var o=t[0].lazyload.positionTop;var a=t[0].lazyload.positionBottom;var f=lazyload.windowTop;var l=lazyload.windowBottom;if(o<l+lazyload.__defaults.loadBufferDistance&&a>f-lazyload.__defaults.loadBufferDistance){u(t)}}function i(e){var t=e[0];if(t==window){if(lazyload.updateWindowPosition){lazyload.windowTop=e.scrollTop();lazyload.windowLeft=e.scrollLeft();lazyload.windowRight=lazyload.windowLeft+e.width();lazyload.windowBottom=lazyload.windowTop+e.height();lazyload.updateWindowPosition=false;clearTimeout(lazyload.windowPositionDelayTimer);lazyload.windowPositionDelayTimer=setTimeout(function(){lazyload.updateWindowPosition=true},lazyload.__defaults.scrollCheckDelay)}}else{if(typeof t.lazyload.watch!="undefined"){var n=e.parents(t.lazyload.watch);if(n.length>=1){e=n}}t.lazyload.positionTop=e.offset().top;t.lazyload.positionLeft=e.offset().left;t.lazyload.positionRight=t.lazyload.positionLeft+e.width();t.lazyload.positionBottom=t.lazyload.positionTop+e.height()}}function s(e){function i(e,t,n){try{if(typeof t!="undefined"&&t.length>=1){e.apply(null,t)}else{e.call(null)}}catch(r){}}if(typeof e=="string"){var t=e.split(",");var n=t.shift();n=o(n);i(n,t,e)}else if(typeof e=="object"){for(var r=0;r<e.length;r++){(function(){var t=e[r].split(",");var n=t.shift();var s=n;n=o(n);i(n,t,s)})()}}}function o(e){var t=window;var n=e.split(".");var r=n.pop();var i=true;for(var s=0;s<n.length;s++){if(typeof t[n[s]]!="undefined"){t=t[n[s]]}else{i=false}}if(i){return t[r]}else{return null}}function u(e){var t=e[0].lazyload.src||e[0].lazyload.source;var n=e[0].lazyload.callback;var r=e[0].lazyload.callbackAfter;lazyload.items=lazyload.items.not(e);if(lazyload.loadedSrc.indexOf(t)==-1){lazyload.loadedSrc.push(t)}var i=new Image;i.onload=function(){if(typeof n!="undefined"){e.trigger("lazyloaded").addClass("lazyloaded");s(n)}if(e.is("img")){e.css({opacity:0}).attr("src",t).delay(lazyload.__defaults.fadeInDelay).animate({opacity:1},lazyload.__defaults.fadeInSpeed,function(){if(typeof r!="undefined"){setTimeout(function(){e.trigger("lazyloadedafter");s(r)},lazyload.__defaults.fadeInSpeed)}})}else{var o=200;try{var u="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";var a=new Image;a.src=u;a.height=i.height;a.width=i.width;function f(e){var t=document.createElement("canvas");t.width=e.width;t.height=e.height;var n=t.getContext("2d");n.drawImage(e,0,0);var r=t.toDataURL("image/png");return r.replace(/^data:image\/(png|jpg);base64,/,"")}var l=f(a);e.css({"background-image":"url(data:image/gif;base64,"+l+")","-moz-transition":"all "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out"})}catch(c){o=0}setTimeout(function(){e.css({"background-image":"url("+t+")","-webkit-transition":"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out","-moz-transition":"all "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out","-o-transition":"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out",transition:"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out"});if(typeof r!="undefined"){setTimeout(function(){e.trigger("lazyloadafter");s(r)},lazyload.__defaults.fadeInSpeed)}},o)}};i.src=t}e(document).ready(function(){lazyload.updateWindowPosition=true;lazyload.scrollCheck=true;lazyload.loadedSrc=[];$foundItems=e(".lazyload");if($foundItems.length>=1){lazyload.scrollElements=e("div,ul");lazyload.scrollElements.each(function(){var t=e(this);var n=t.css("overflow");var r=t.css("overflow-x");var i=t.css("overflow-y");var s=["hidden","scroll","auto"];if(t.find("[data-lazy-load]").length==0&&s.indexOf(n)==-1&&s.indexOf(i)==-1&&s.indexOf(r)==-1){lazyload.scrollElements=lazyload.scrollElements.not(t)}});lazyload.scrollElements=lazyload.scrollElements.add(window);lazyload.scrollElements.bind("scroll.lazyload",function(e){if(lazyload.scrollCheck){n();lazyload.scrollCheck=false;clearTimeout(lazyload.scrollCheckDelayTimer);lazyload.scrollCheckDelayTimer=setTimeout(function(){lazyload.scrollCheck=true},lazyload.__defaults.scrollCheckDelay)}});$foundItems.each(function(){t(e(this))});n()}});lazyload.check=function(){n()};lazyload.add=function(n,r){t(e(n),r)};lazyload.load=function(){u(e($item))}}})(jQuery);if(!Array.prototype.indexOf){Array.prototype.indexOf=function(e){var t=this.length>>>0;var n=Number(arguments[1])||0;n=n<0?Math.ceil(n):Math.floor(n);if(n<0)n+=t;for(;n<t;n++){if(n in this&&this[n]===e)return n}return-1}}
+    </script>
     <script>
       var head = (typeof document.head !== 'undefined' ? document.head : document.getElementsByTagName('head')[0]);
       var insertBefore = head.insertBefore;
@@ -89,8 +91,6 @@
         // jquery.domainscout.1.0.0.js
         if("undefined"==typeof domainscout){var domainscout={version:"1.0.2"};$(document).ready(function(){function b(a){var b=a,d=b.data("domainscout")||b.data("domainsearch");if(b[0]["ds-domain"]=b.find(d["search-element"]),b[0]["ds-placeholder"]=b.find(d["placeholder-element"]),b[0]["ds-button"]=b.find(d.button),b[0]["ds-url"]=d.url,b[0]["ds-ci"]=d.ci,b[0]["ds-hide-label"]=d["hide-label"],b[0]["ds-empty-redirect"]=d["empty-redirect"],"undefined"==typeof b[0]["ds-hide-label"]&&(b[0]["ds-hide-label"]=!0),1==b[0]["ds-domain"].length&&(b[0]["ds-domain"].is("input")||b[0]["ds-domain"].is("textarea"))){if(domainscout.items=domainscout.items.add(b),b[0]["ds-placeholder"].is("label")){var e=b[0]["ds-domain"].attr("id");"undefined"==typeof e&&(e="ds-"+domainscout.items.length,b[0]["ds-domain"].attr("id",e)),b[0]["ds-placeholder"].attr("for",e)}else b[0]["ds-placeholder"].bind("click",function(){b[0]["ds-domain"].focus()});b[0]["ds-domain"].val(""),b[0]["ds-domain"].bind("focus.ds-event",function(){b.addClass("ds-focus"),b[0]["ds-domain"].bind("keydown.ds-event",function(a){var d=[16,27,20,8,37,38,39,40];13==a.which?(c(b),a.preventDefault()):-1==d.indexOf(a.which)&&b[0]["ds-hide-label"]&&b[0]["ds-placeholder"].css("display","none")})}),b[0]["ds-domain"].bind("blur.ds-event",function(){b.removeClass("ds-focus"),b[0]["ds-domain"].unbind("keydown.ds-event"),b[0]["ds-hide-label"]&&""==b[0]["ds-domain"].val()&&"none"==b[0]["ds-placeholder"].css("display")&&b[0]["ds-placeholder"].css("display","block")})}b[0]["ds-button"].bind("click",function(a){a.stopPropagation(),a.preventDefault(),"undefined"!=typeof _trfq&&_trfq.push(["cmdLogPageEvent","click","","",b[0]]),c(b)})}function c(a){var b=$(a),c=!0,e=!1,g=b[0]["ds-url"];"undefined"==typeof b[0]["ds-url"]&&(g=b.attr("action"),("undefined"==typeof g||"#"==g)&&(c=!1));var h;c&&1==b[0]["ds-domain"].length?(h=b[0]["ds-domain"].val(),"undefined"!=typeof h&&""!=h?(g=g.split("?")[0],g=g+"?domainToCheck="+d(h)):(g=b[0]["ds-empty-redirect"],g.indexOf(location.protocol)&&(g=location.protocol+g),e=!0,"undefined"==typeof g&&(c=!1))):c=!1,c&&(e||(g+="&checkAvail=1","undefined"==b[0]["ds-ci"]&&(b[0]["ds-url"]=f("ci")),"undefined"!=b[0]["ds-ci"]&&(g=g+"&"+b[0]["ds-ci"])),window.location.href=g)}function d(a){return a}function e(a){return a instanceof $||(a=$(a)),a}function f(a){var b=decodeURI((RegExp(a+"="+"(.+?)(&|$)").exec(location.search)||[,null])[1]);return"null"==b&&(b=void 0),b}var a=$("[data-domainscout],[data-domainsearch]");domainscout.items=$(),a.each(function(){b($(this))}),domainscout.add=function(a){b(e(a))},domainscout.search=function(a){c(e(a))}})}
       
-        // jquery.lazyload.1.0.0.js
-        !function(a){function b(a,b){"undefined"==typeof b&&(b=a.data("lazy-load"));var c=b.src||b.source;"undefined"!=typeof c&&(a[0].lazyload=b,lazyload.items=lazyload.items.add(a),e(a))}function c(){e(a(window)),lazyload.items.each(function(){d(a(this))})}function d(b){var c=b[0].lazyload.updatePosition||lazyload.__defaults.updatePosition,d=d||lazyload.__defaults.updateWindowScroll;b[0].lazyload.checkHorizontal||lazyload.__defaults.checkHorizontal,c&&e(b),e(a(window));var g=b[0].lazyload.positionTop,i=b[0].lazyload.positionBottom,j=lazyload.windowTop,k=lazyload.windowBottom;g<k+lazyload.__defaults.loadBufferDistance&&i>j-lazyload.__defaults.loadBufferDistance&&h(b)}function e(a){var b=a[0];if(b==window)lazyload.updateWindowPosition&&(lazyload.windowTop=a.scrollTop(),lazyload.windowLeft=a.scrollLeft(),lazyload.windowRight=lazyload.windowLeft+a.width(),lazyload.windowBottom=lazyload.windowTop+a.height(),lazyload.updateWindowPosition=!1,clearTimeout(lazyload.windowPositionDelayTimer),lazyload.windowPositionDelayTimer=setTimeout(function(){lazyload.updateWindowPosition=!0},lazyload.__defaults.scrollCheckDelay));else{if("undefined"!=typeof b.lazyload.watch){var c=a.parents(b.lazyload.watch);c.length>=1&&(a=c)}b.lazyload.positionTop=a.offset().top,b.lazyload.positionLeft=a.offset().left,b.lazyload.positionRight=b.lazyload.positionLeft+a.width(),b.lazyload.positionBottom=b.lazyload.positionTop+a.height()}}function f(a){function e(a,b){try{"undefined"!=typeof b&&b.length>=1?a.apply(null,b):a.call(null)}catch(d){}}if("string"==typeof a){var b=a.split(","),c=b.shift();c=g(c),e(c,b,a)}else if("object"==typeof a)for(var d=0;d<a.length;d++)!function(){var b=a[d].split(","),c=b.shift(),f=c;c=g(c),e(c,b,f)}()}function g(a){for(var b=window,c=a.split("."),d=c.pop(),e=!0,f=0;f<c.length;f++)"undefined"!=typeof b[c[f]]?b=b[c[f]]:e=!1;return e?b[d]:null}function h(a){var b=a[0].lazyload.src||a[0].lazyload.source,c=a[0].lazyload.callback,d=a[0].lazyload.callbackAfter;lazyload.items=lazyload.items.not(a),-1==lazyload.loadedSrc.indexOf(b)&&lazyload.loadedSrc.push(b);var e=new Image;e.onload=function(){function j(a){var b=document.createElement("canvas");b.width=a.width,b.height=a.height;var c=b.getContext("2d");c.drawImage(a,0,0);var d=b.toDataURL("image/png");return d.replace(/^data:image\/(png|jpg);base64,/,"")}if("undefined"!=typeof c&&(a.trigger("lazyloaded").addClass("lazyloaded"),f(c)),a.is("img"))a.css({opacity:0}).attr("src",b).delay(lazyload.__defaults.fadeInDelay).animate({opacity:1},lazyload.__defaults.fadeInSpeed,function(){"undefined"!=typeof d&&setTimeout(function(){a.trigger("lazyloadedafter"),f(d)},lazyload.__defaults.fadeInSpeed)});else{var g=200;try{var h="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",i=new Image;i.src=h,i.height=e.height,i.width=e.width;var k=j(i);a.css({"background-image":"url(data:image/gif;base64,"+k+")","-moz-transition":"all "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out"})}catch(l){g=0}setTimeout(function(){a.css({"background-image":"url("+b+")","-webkit-transition":"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out","-moz-transition":"all "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out","-o-transition":"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out",transition:"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out"}),"undefined"!=typeof d&&setTimeout(function(){a.trigger("lazyloadafter"),f(d)},lazyload.__defaults.fadeInSpeed)},g)}},e.src=b}"undefined"==typeof lazyload&&(window.lazyload={version:"1.0.0",items:a(),__defaults:{updatePosition:!0,checkHorizontal:!1,scrollCheckDelay:300,loadBufferDistance:0,fadeInDelay:0,fadeInSpeed:500}},a(document).ready(function(){lazyload.updateWindowPosition=!0,lazyload.scrollCheck=!0,lazyload.loadedSrc=[],$foundItems=a("[data-lazy-load]"),$foundItems.length>=1&&(lazyload.scrollElements=a("div,ul"),lazyload.scrollElements.each(function(){var b=a(this),c=b.css("overflow"),d=b.css("overflow-x"),e=b.css("overflow-y"),f=["hidden","scroll","auto"];0==b.find("[data-lazy-load]").length&&-1==f.indexOf(c)&&-1==f.indexOf(e)&&-1==f.indexOf(d)&&(lazyload.scrollElements=lazyload.scrollElements.not(b))}),lazyload.scrollElements=lazyload.scrollElements.add(window),lazyload.scrollElements.bind("scroll.lazyload",function(){lazyload.scrollCheck&&(c(),lazyload.scrollCheck=!1,clearTimeout(lazyload.scrollCheckDelayTimer),lazyload.scrollCheckDelayTimer=setTimeout(function(){lazyload.scrollCheck=!0},lazyload.__defaults.scrollCheckDelay))}),$foundItems.each(function(){b(a(this))}),c())}),lazyload.check=function(){c()},lazyload.add=function(c,d){b(a(c),d)},lazyload.load=function(){h(a($item))})}(jQuery);
       
         $(document).ready(function(){
           // fix centering elements
@@ -122,6 +122,11 @@
       }
       
     </script>
+    <style>
+      .svgfallback{display:none}
+      .svgfallback:not(old){display:block}
+      
+    </style>
     <link href="[@T[link:<cssroot />]@T]/fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css">
     <atlantis:webstash type="css">
       <style>
@@ -153,7 +158,7 @@
       
     </script>
   </head>
-  <body>
+  <body ng-controller="" ng-cloak>
     <!-- HEADERBEGIN--> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- HEADEREND-->
@@ -274,25 +279,20 @@
             <atlantis:webstash type="css">
               <style>#domain-name-input {
   color: #008a32;
-  font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
 }
 #domain-name-input::-webkit-input-placeholder {
   color: #008a32;
-  font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
 }
 #domain-name-input:-moz-placeholder {
   color: #008a32;
   opacity: 1;
-  font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
 }
 #domain-name-input::-moz-placeholder {
   color: #008a32;
   opacity: 1;
-  font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
 }
 #domain-name-input:-ms-input-placeholder {
   color: #008a32;
-  font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
 }
 .search-text {
   display: none;
@@ -314,7 +314,7 @@
             <form action="[@T[link:<external linktype='siteurl' path='' parammode='explicit'/>]@T]/api/dpp/search/single?ci=54814&isc=gd41166r" data-icode="home:Domain Search:Domains:Domain Search" data-domainsearch="{'search-element':'input.searchInput','placeholder-element':'input.searchInput','button':'button','empty-redirect':'[@T[link:<external linktype='siteurl' path='' parammode='explicit'/>]@T]/domains/domain-name-search.aspx'}" role="form">
               <div class="input-group">
                 <label for="domain-name-input" class="searchInput sr-only">Type the one you  here</label>
-                <input id="domain-name-input" type="text" placeholder="Type the one you  here" name="domainToCheck" maxlength="63" class="searchInput form-control"/><span class="input-group-btn">
+                <input id="domain-name-input" type="text" placeholder="Type the one you  here" name="domainToCheck" maxlength="63" class="headline-primary searchInput form-control"/><span class="input-group-btn">
                   <button type="submit" data-ci="undefined" class="btn btn-primary"> <span class="search-icon uxicon uxicon-magnifying-glass"></span><span class="search-text">Search</span></button></span>
               </div>
             </form>
@@ -618,7 +618,7 @@
     font-size: 3rem;
     margin-top: 0;
     font-family: 'Walsheim-Bold';
-    text-transform: none;
+    text-transform: uppercase;
     word-wrap: break-word;
     word-break: break-word;
     white-space: -moz-pre-wrap;
@@ -646,7 +646,7 @@
 }
 
 .pro-plans .pro-plan-wrap .plan-price-wrap {
-    min-height: 92px;
+    padding-bottom: 30px;
 }
 
 .pro-plans .pro-plan-wrap .plan-price-wrap .plan-price {
@@ -706,13 +706,12 @@
 }
 
 .pro-plans .sf-tipper-target {
-    background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
-    background-position: 0 -864px;
-    width: 15px;
-    height: 17px;
-    display: inline-block;
-    background-size: 205px auto;
-    vertical-align: baseline;
+  background-image: url(https://img1.wsimg-com.ide/fos/mike/img/hosting/img-tootip-.png);
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  vertical-align: baseline;
+  cursor: pointer;
 }
             </style>
             <atlantis:webstash type="css">
@@ -1000,7 +999,7 @@
     font-size: 3rem;
     margin-top: 0;
     font-family: 'Walsheim-Bold';
-    text-transform: none;
+    text-transform: uppercase;
     word-wrap: break-word;
     word-break: break-word;
     white-space: -moz-pre-wrap;
@@ -1028,7 +1027,7 @@
 }
 
 .pro-plans .pro-plan-wrap .plan-price-wrap {
-    min-height: 92px;
+    padding-bottom: 30px;
 }
 
 .pro-plans .pro-plan-wrap .plan-price-wrap .plan-price {
@@ -1088,13 +1087,12 @@
 }
 
 .pro-plans .sf-tipper-target {
-    background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
-    background-position: 0 -864px;
-    width: 15px;
-    height: 17px;
-    display: inline-block;
-    background-size: 205px auto;
-    vertical-align: baseline;
+  background-image: url(https://img1.wsimg-com.ide/fos/mike/img/hosting/img-tootip-.png);
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  vertical-align: baseline;
+  cursor: pointer;
 }
               </style>
             </atlantis:webstash>
@@ -1452,7 +1450,7 @@
     font-size: 3rem;
     margin-top: 0;
     font-family: 'Walsheim-Bold';
-    text-transform: none;
+    text-transform: uppercase;
     word-wrap: break-word;
     word-break: break-word;
     white-space: -moz-pre-wrap;
@@ -1480,7 +1478,7 @@
 }
 
 .pro-plans .pro-plan-wrap .plan-price-wrap {
-    min-height: 92px;
+    padding-bottom: 30px;
 }
 
 .pro-plans .pro-plan-wrap .plan-price-wrap .plan-price {
@@ -1540,13 +1538,12 @@
 }
 
 .pro-plans .sf-tipper-target {
-    background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
-    background-position: 0 -864px;
-    width: 15px;
-    height: 17px;
-    display: inline-block;
-    background-size: 205px auto;
-    vertical-align: baseline;
+  background-image: url(https://img1.wsimg-com.ide/fos/mike/img/hosting/img-tootip-.png);
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  vertical-align: baseline;
+  cursor: pointer;
 }
               </style>
             </atlantis:webstash>
@@ -1846,9 +1843,12 @@
         }).css("height", midPageMenuItem);
       });
       $(document).ready(function(){
-        // this sets the nav to fixed when scrolled past and fixes the body for the height of the nav
+        // this sets the nav to fixed when scrolled past and fixed the body for the height of the nav
+        organizeNavBar();
+      
         var nav = $('.mid-page-nav');
-        var pos = nav.offset().top;
+        var navTop = nav.offset().top;
+        var footerBot = $('#footer').offset().top
         var sections = []
       
         $('[data-mid-nav-title]').each(function(){
@@ -1857,17 +1857,19 @@
         });
         $(window).scroll(function () {
           var scroll = $(this).scrollTop();
-          var fix = ($(this).scrollTop()+2 > pos) ? true : false;
-          nav.toggleClass("sticky", fix);
-          $('body').toggleClass("fix-body", fix);
-          if(!fix){
+          var belowNavTop=(scroll+2 > navTop) ? true : false;
+          var aboveFooterTop=(scroll < footerBot) ? true : false;
+          var InNavZone = (belowNavTop && aboveFooterTop) ? true : false;
+          nav.toggleClass("sticky", InNavZone);
+          $('body').toggleClass("fix-body", InNavZone);
+          if(!InNavZone){
             $('.mid-page-nav a').each(function(){
               $(this).blur();
-              $(this).toggleClass("active",fix);
+              $(this).toggleClass("active",InNavZone);
             });
           }
       
-          if(fix){
+          if(InNavZone){
             $.each(sections,function(index,value){
                 var top = ((scroll+131) > $('#'+value).offset().top) ? true : false;
                 var bottom = ((scroll+131) < $('#'+value).offset().top + $('#'+value).outerHeight()) ? true : false;
@@ -1880,10 +1882,30 @@
                   });
               });
           }
-      
         });
-        $('#midPageNav .dropdown-toggle').dropdown()
+        $('.dropdown-menu').on("click",function(){
+          $('#midPageNav .dropdown-toggle').dropdown('toggle');
+        });
+        $('#midPageNav .dropdown-toggle').dropdown();
       });
+      function organizeNavBar(){
+        var linkArea = $('.navbar-nav').width();
+        var navBarArea = $('.navbar-collapse').width()-$('.navbar-right').width();
+        dropdownItem = "";
+        $dropdownMenu = "";
+        if(linkArea > navBarArea)
+        {
+          $dropdownMenu= $('<li class="dropdown"><a href="javascript:void(0)" role="button" data-toggle="dropdown" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.nav&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="dropdown-toggle"  style="margin-top: 0px;"><span>More<br><em>...</em></span></a><ul class="dropdown-menu">');
+        }
+        while($('.navbar-nav').width()+150 > $('.navbar-collapse').width()-$('.navbar-right').width()){
+          dropdownItem =$('.navbar-nav li').last().detach();
+          $dropdownMenu.find('.dropdown-menu').append(dropdownItem);
+        }
+        if(linkArea > navBarArea)
+        {
+          $dropdownMenu.appendTo('.navbar-nav');
+        }
+      }
       function scroll_if_anchor(href) {
         href = typeof(href) == "string" ? href : $(this).attr("href");
       
@@ -2230,7 +2252,7 @@
     font-size: 3rem;
     margin-top: 0;
     font-family: 'Walsheim-Bold';
-    text-transform: none;
+    text-transform: uppercase;
     word-wrap: break-word;
     word-break: break-word;
     white-space: -moz-pre-wrap;
@@ -2258,7 +2280,7 @@
 }
 
 .pro-plans .pro-plan-wrap .plan-price-wrap {
-    min-height: 92px;
+    padding-bottom: 30px;
 }
 
 .pro-plans .pro-plan-wrap .plan-price-wrap .plan-price {
@@ -2318,13 +2340,12 @@
 }
 
 .pro-plans .sf-tipper-target {
-    background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
-    background-position: 0 -864px;
-    width: 15px;
-    height: 17px;
-    display: inline-block;
-    background-size: 205px auto;
-    vertical-align: baseline;
+  background-image: url(https://img1.wsimg-com.ide/fos/mike/img/hosting/img-tootip-.png);
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  vertical-align: baseline;
+  cursor: pointer;
 }
               </style>
             </atlantis:webstash>
@@ -2642,7 +2663,7 @@
     font-size: 3rem;
     margin-top: 0;
     font-family: 'Walsheim-Bold';
-    text-transform: none;
+    text-transform: uppercase;
     word-wrap: break-word;
     word-break: break-word;
     white-space: -moz-pre-wrap;
@@ -2670,7 +2691,7 @@
 }
 
 .pro-plans .pro-plan-wrap .plan-price-wrap {
-    min-height: 92px;
+    padding-bottom: 30px;
 }
 
 .pro-plans .pro-plan-wrap .plan-price-wrap .plan-price {
@@ -2730,13 +2751,12 @@
 }
 
 .pro-plans .sf-tipper-target {
-    background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
-    background-position: 0 -864px;
-    width: 15px;
-    height: 17px;
-    display: inline-block;
-    background-size: 205px auto;
-    vertical-align: baseline;
+  background-image: url(https://img1.wsimg-com.ide/fos/mike/img/hosting/img-tootip-.png);
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  vertical-align: baseline;
+  cursor: pointer;
 }
               </style>
             </atlantis:webstash>
@@ -2976,7 +2996,8 @@ text-transform: uppercase;
   border-left: 8px solid;
   border-top: 8px solid transparent;
   border-bottom: 8px solid transparent;
-  margin-top: 4px;
+  margin-top: 1px;
+  margin-right: 18px;
 }
 
 .accordion-group li.accordion-dropdown.active > span:first-child {
@@ -3090,7 +3111,7 @@ text-transform: uppercase;
     </section>
     <!-- FOOTERBEGIN--> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
-    <!-- FOOTEREND-->
+    <!-- FOOTEREND-     -->
     <!-- liveperson includes -->
     <div id="lpButtonDiv"></div><!-- End Main Content -->
     <script type="text/javascript">

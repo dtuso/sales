@@ -1,0 +1,102 @@
+
+<!--start got hero-->
+<atlantis:webstash type="css">
+  <style>#marquee {
+  background-color: #ecedee;
+}
+.hero.got .products {
+  text-align: center;
+  margin-top: 15%;
+}
+.hero.got .product {
+  font-size: 170%;
+  max-width: 50%;
+  margin: auto;
+}
+.hero.got .product div {
+  font-size: 50%;
+}
+.hero.got img.www {
+  width: 100%;
+}
+.hero.got img.pencil {
+  padding: 4%;
+  width: 107%;
+}
+.hero.got img.envelope {
+  padding: 8% 0;
+  width: 115%;
+}
+.hero.got .addition {
+  text-align: center;
+  font-size: 200%;
+}
+.hero.got .cta {
+  width: 100%;
+}
+.hero.got .pricing {
+  font-size: 150%;
+}
+.hero.got .price-wrapper {
+  width: 30%;
+  display: inline-block;
+}
+.hero.got .disclaimer {
+  font-size: 55%;
+  padding: 1% 0;
+}
+@media only screen and (min-width: 480px) {
+  .hero.got .addition {
+    font-size: 350%;
+  }
+  .hero.got .product div {
+    font-size: 70%;
+  }
+}
+@media only screen and (min-width: 650px) {
+  .hero.got .products {
+    margin-top: 2%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .hero.got .addition {
+    font-size: 450%;
+  }
+  .hero.got .product div {
+    font-size: 100%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .hero.got .addition {
+    font-size: 550%;
+  }
+}
+
+  </style>
+</atlantis:webstash>
+<div data-url="[@T[link:<relative path='/offers/online-business.aspx'><param name='ci' value=95658/></relative>]@T]" data-ci="95658" class="hero got">
+  <div class="products walsheim-black">
+    <div class="product col-xs-2"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzOCIgaGVpZ2h0PSI0MyIgdmlld0JveD0iMCAwIDM4IDQzIj48ZyBmaWxsPSIjNzliZjRhIj48cGF0aCBkPSJNMjMgMkwyMiAwIDE5IDEgMTkgMTMgMjQgMTMgMjMgMk0yOSA3TDI3IDQgMjUgNSAyNSAxMyAyOSAxMyAyOSA3TTExIDdMOSA4IDggMTAgNyAxMyAxMiAxMyAxMSA3TTE3IDNMMTYgMyAxNCA0IDEzIDEzIDE4IDEzIDE3IDNNMTMgMTVMMTQgMjUgMTggMjUgMTkgMjAgMjAgMjUgMjQgMjUgMjUgMTUgMjYgMjAgMjcgMTYgMjkgMTcgMjkgMTQgMjIgMTQgMjIgMjAgMjEgMTQgMTcgMTQgMTcgMjEgMTYgMTQgOSAxNCA5IDIwIDggMTQgNSAxNCA0IDIxIDMgMTQgMCAxNCAyIDI1IDYgMjUgNiAyMCA3IDI1IDExIDI1IDEzIDE1TTM1IDE0TDM0IDIwIDMzIDE0IDMwIDE0IDMwIDE3IDMyIDE4IDMyIDI1IDMyIDI1IDM2IDI1IDM4IDE0IDM1IDE0TTI4IDE4TDI1IDI1IDIwIDI3IDE4IDMyIDE3IDI2IDcgMjYgNyAzMiAxMCAzOSAxOSA0MiAyNyA0MSAzMiAzMSAzMSAxOSAyOCAxOCIvPjwvZz48L3N2Zz4=" class="www"/>
+      <div class="domain">[@L[cds.sales/homepage/heros/got:domain]@L]</div>
+    </div>
+    <div class="addition col-xs-2 col-sm-2">[@L[cds.sales/homepage/heros/got:additionSign]@L]</div>
+    <div class="product col-xs-2"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNSIgaGVpZ2h0PSIzNyIgdmlld0JveD0iMCAwIDM1IDM3Ij48ZyBmaWxsPSIjNzliZjRhIj48cGF0aCBkPSJNMjMgMTZMMzIgMTcgMTQgMCA4IDAgMjMgMTZNMTYgMjJMMjMgMjIgMjMgMTcgNyAwIDEgNSAxNiAyMk0xNSAyOUwxNSAyMyAwIDYgMSAxNSAxNSAyOU0zMCAyOUwzMyAyOCAzMyAxOCAyNSAxNyAyNCAyNCAxNiAyNCAxNiAzMCAyNyAzMyAzMCAyOU0zMSAzMUwyOSAzNCAzNCAzNSAzMyAzMCAzMSAzMSIvPjwvZz48L3N2Zz4=" class="pencil"/>
+      <div class="website">[@L[cds.sales/homepage/heros/got:website]@L]</div>
+    </div>
+    <div class="addition col-xs-2 col-sm-2">[@L[cds.sales/homepage/heros/got:additionSign]@L]</div>
+    <div class="product col-xs-2"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MiIgaGVpZ2h0PSIzNSIgdmlld0JveD0iMCAwIDQyIDM1IiB2ZXJzaW9uPSIxIj48dGl0bGU+aWNuX2VtYWlsPC90aXRsZT48ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz48ZyBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48ZyBmaWxsPSIjNzliZjRhIj48cGF0aCBkPSJNMjQgMjZMMCA0IDEgMzUgNDAgMzIgNDIgMTEgMjQgMjZNNDEgOEwxIDAgMjQgMjQgNDEgOCIvPjwvZz48L2c+PC9zdmc+" class="envelope"/>
+      <div class="email">[@L[cds.sales/homepage/heros/got:email]@L]</div>
+    </div>
+  </div>
+  <div class="pricing walsheim-black">
+    <div class="col-xs-11">
+      <div class="priceText bigtext">[@L[cds.sales/homepage/heros/got:priceText]@L]</div>
+    </div>
+  </div>
+  <div class="cta">
+    <div class="col-xs-11"><a class="btn btn-md btn-purchase">[@L[cds.sales/homepage/heros/got:cta]@L]</a>
+      <div class="disclaimer">[@L[cds.sales/homepage/heros/got:disclaimer]@L]</div>
+    </div>
+  </div>
+</div>
+<!--end got hero-->

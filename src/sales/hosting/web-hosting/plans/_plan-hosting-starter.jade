@@ -8,6 +8,9 @@ block vars
   - buttonid="product-D";
   - term ="/[@L[cds.sales/_common:month]@L]"
   - buttonText = "[@L[cds.sales/_common:add-to-cart-cap]@L]";
-  - defaultPlan = "host_GridHostEcoDiabloLin1Yr_us";
+  - defaultPlan = "host_GridHostStrDiabloLin1Yr_in";
   - vat = true
   - ciCode = "89269"
+
+append price
+  p.h6 [@T[productprice:<list productid="294057" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:month]@L] [@L[cds.sales/gd/hosting/website-builder:renewal-text]@L]
