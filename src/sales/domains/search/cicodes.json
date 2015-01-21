@@ -519,6 +519,12 @@
           { "ITC Code" : "ButtomPodPizza" },
           { "Description" : "Buttom TLD Pods - .PIZZA" }
         ]
+      },
+      { "Buttom TLD Pods - .ORG" : [
+          { "ITC ID" : "95405" },
+          { "ITC Code" : "ButtomPodOrg" },
+          { "Description" : "Buttom TLD Pods - .ORG" }
+        ]
       }
     ],
   "New Available Tlds" : [
