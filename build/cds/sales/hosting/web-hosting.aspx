@@ -1473,7 +1473,7 @@ h2.marquee-product-name,
                   <div class="col-md-7 col-sm-12">
                     <div class="marquee-pro-left-text">
                             <h1 class="marquee-product-name">[@L[cds.sales/gd/hosting/web-hosting:web-hosting-11166]@L]</h1>
-                            <h2 class="marquee-product-description">HOSTING THAT'S MORE RELIABLE THAN YOUR BEAN ROASTING <span style='letter-spacing:-.5rem;'>----------------</span> PLAID SHIRT</h2>
+                            <h2 class="marquee-product-description">HOSTING THAT'S MORE RELIABLE THAN YOUR BEAN ROASTING <span style='letter-spacing:-.5rem;'>----------------</span> PLAID SHIRT.</h2>
                             <div class="marquee-product-text">[@L[cds.sales/hosting/web-hosting-rebrand:guaranteeText1Rebrand]@L] [@L[cds.sales/hosting/web-hosting-rebrand:guaranteeText2Rebrand]@L] </br> [@L[cds.sales/hosting/web-hosting-rebrand:guaranteeText3Rebrand]@L]</div><a href="[@T[link:<relative path='~/hosting/web-hosting-config-new.aspx' secure='true'><param name='ci' value='89262' /><param name='plan' value='host_GridHostEcoDiabloLin1Yr_us' /></relative>]@T]" class="btn btn-primary jump-arrow-btn">[@L[cds.sales/hosting/web-hosting-rebrand:getstarted]@L]</a>
                     </div>
                   </div>
@@ -6289,7 +6289,7 @@ h2.marquee-product-name,
     font-size: 3rem;
     margin-top: 0;
     font-family: 'Walsheim-Bold';
-    text-transform: none;
+    text-transform: uppercase;
     word-wrap: break-word;
     word-break: break-word;
     white-space: -moz-pre-wrap;
@@ -6317,7 +6317,7 @@ h2.marquee-product-name,
 }
 
 .pro-plans .pro-plan-wrap .plan-price-wrap {
-    min-height: 92px;
+    padding-bottom: 30px;
 }
 
 .pro-plans .pro-plan-wrap .plan-price-wrap .plan-price {
@@ -6377,13 +6377,12 @@ h2.marquee-product-name,
 }
 
 .pro-plans .sf-tipper-target {
-    background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
-    background-position: 0 -864px;
-    width: 15px;
-    height: 17px;
-    display: inline-block;
-    background-size: 205px auto;
-    vertical-align: baseline;
+  background-image: url(https://img1.wsimg-com.ide/fos/mike/img/hosting/img-tootip-.png);
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  vertical-align: baseline;
+  cursor: pointer;
 }
       </style>
       <atlantis:webstash type="css">
@@ -6671,7 +6670,7 @@ h2.marquee-product-name,
     font-size: 3rem;
     margin-top: 0;
     font-family: 'Walsheim-Bold';
-    text-transform: none;
+    text-transform: uppercase;
     word-wrap: break-word;
     word-break: break-word;
     white-space: -moz-pre-wrap;
@@ -6699,7 +6698,7 @@ h2.marquee-product-name,
 }
 
 .pro-plans .pro-plan-wrap .plan-price-wrap {
-    min-height: 92px;
+    padding-bottom: 30px;
 }
 
 .pro-plans .pro-plan-wrap .plan-price-wrap .plan-price {
@@ -6759,13 +6758,12 @@ h2.marquee-product-name,
 }
 
 .pro-plans .sf-tipper-target {
-    background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
-    background-position: 0 -864px;
-    width: 15px;
-    height: 17px;
-    display: inline-block;
-    background-size: 205px auto;
-    vertical-align: baseline;
+  background-image: url(https://img1.wsimg-com.ide/fos/mike/img/hosting/img-tootip-.png);
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  vertical-align: baseline;
+  cursor: pointer;
 }
         </style>
       </atlantis:webstash>
@@ -6788,6 +6786,7 @@ h2.marquee-product-name,
                 ##endif
                  
               </div>
+              <p class="h6">[@T[productprice:<list productid="294057" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:month]@L] [@L[cds.sales/gd/hosting/website-builder:renewal-text]@L]</p>
               <button id="product-D" data-tcode="undefined" data-plan="host_GridHostStrDiabloLin1Yr_in" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
               <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:oneWeb]@L]</strong></div>
               <div class="plan-item"><strong>[@L[cds.sales/gd/hosting/web-hosting:starter-plan-storage]@L]</strong></div>
@@ -6812,6 +6811,7 @@ h2.marquee-product-name,
                 ##endif
                  
               </div>
+              <p class="h6">[@T[productprice:<list productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:month]@L] [@L[cds.sales/gd/hosting/website-builder:renewal-text]@L]</p>
               <button id="product-A" data-tcode="undefined" data-plan="host_GridHostEcoDiabloLin1Yr_us" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
               <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:oneWeb]@L]</strong></div>
               <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:oneHundredStorage]@L]</strong></div>
@@ -6837,6 +6837,7 @@ h2.marquee-product-name,
                 ##endif
                  
               </div>
+              <p class="h6">[@T[productprice:<list productid="32059" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:month]@L] [@L[cds.sales/gd/hosting/website-builder:renewal-text]@L]</p>
               <button id="product-B" data-tcode="undefined" data-plan="host_GridHostDlxDiabloLin1Yr_us" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
               <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedWeb]@L]</strong></div>
               <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedStorage]@L]</strong> <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedHostingToolTip]@L]'></span></div>
@@ -6863,6 +6864,7 @@ h2.marquee-product-name,
                 ##endif
                  
               </div>
+              <p class="h6">[@T[productprice:<list productid="32082" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:month]@L] [@L[cds.sales/gd/hosting/website-builder:renewal-text]@L]</p>
               <button id="product-C" data-tcode="undefined" data-plan="host_GridHostUnlDiabloLin1Yr_us" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
               <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedWeb]@L]</strong></div>
               <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedStorage]@L]</strong> <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedHostingToolTip]@L]'></span></div>
@@ -7253,7 +7255,7 @@ h2.marquee-product-name,
     font-size: 3rem;
     margin-top: 0;
     font-family: 'Walsheim-Bold';
-    text-transform: none;
+    text-transform: uppercase;
     word-wrap: break-word;
     word-break: break-word;
     white-space: -moz-pre-wrap;
@@ -7281,7 +7283,7 @@ h2.marquee-product-name,
 }
 
 .pro-plans .pro-plan-wrap .plan-price-wrap {
-    min-height: 92px;
+    padding-bottom: 30px;
 }
 
 .pro-plans .pro-plan-wrap .plan-price-wrap .plan-price {
@@ -7341,13 +7343,12 @@ h2.marquee-product-name,
 }
 
 .pro-plans .sf-tipper-target {
-    background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
-    background-position: 0 -864px;
-    width: 15px;
-    height: 17px;
-    display: inline-block;
-    background-size: 205px auto;
-    vertical-align: baseline;
+  background-image: url(https://img1.wsimg-com.ide/fos/mike/img/hosting/img-tootip-.png);
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  vertical-align: baseline;
+  cursor: pointer;
 }
       </style>
       <div class="pro-plans-wrap bg-gray-light">
@@ -7369,6 +7370,7 @@ h2.marquee-product-name,
                 ##endif
                  
               </div>
+              <p class="h6">[@T[productprice:<list productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:month]@L] [@L[cds.sales/gd/hosting/website-builder:renewal-text]@L]</p>
               <button id="product-A" data-tcode="undefined" data-plan="host_GridHostEcoDiabloLin1Yr_us" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
               <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:oneWeb]@L]</strong></div>
               <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:oneHundredStorage]@L]</strong></div>
@@ -7394,6 +7396,7 @@ h2.marquee-product-name,
                 ##endif
                  
               </div>
+              <p class="h6">[@T[productprice:<list productid="32059" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:month]@L] [@L[cds.sales/gd/hosting/website-builder:renewal-text]@L]</p>
               <button id="product-B" data-tcode="undefined" data-plan="host_GridHostDlxDiabloLin1Yr_us" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
               <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedWeb]@L]</strong></div>
               <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedStorage]@L]</strong> <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedHostingToolTip]@L]'></span></div>
@@ -7420,6 +7423,7 @@ h2.marquee-product-name,
                 ##endif
                  
               </div>
+              <p class="h6">[@T[productprice:<list productid="32082" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:month]@L] [@L[cds.sales/gd/hosting/website-builder:renewal-text]@L]</p>
               <button id="product-C" data-tcode="undefined" data-plan="host_GridHostUnlDiabloLin1Yr_us" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
               <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedWeb]@L]</strong></div>
               <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedStorage]@L]</strong> <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedHostingToolTip]@L]'></span></div>
@@ -8856,7 +8860,7 @@ height: 27px;
           </table>
         </div>
         <div class="compare-table-view-all">
-          <div><strong>View All</strong></div>
+          <div><strong>[@L[cds.sales/hosting/web-hosting-rebrand:viewAllButton]@L]</strong></div>
           <div class="icon arrow-down-icon"></div>
           <script type="text/javascript">
             $(".compare-table-view-all").click(function() {
@@ -9768,7 +9772,7 @@ height: 27px;
           </table>
         </div>
         <div class="compare-table-view-all">
-          <div><strong>View All</strong></div>
+          <div><strong>[@L[cds.sales/hosting/web-hosting-rebrand:viewAllButton]@L]</strong></div>
           <div class="icon arrow-down-icon"></div>
           <script type="text/javascript">
             $(".compare-table-view-all").click(function() {
@@ -10562,18 +10566,6 @@ height: 27px;
           $("#"+id).show();
          }
       }
-      $("cpanelTab").onClick(function() {
-        $("#parallels-tab").hide();
-        $("#cpanel-tab").show();
-        $("cpanelTab").addClass("active");
-        $("parallelsTab").removeClass("active");
-        });
-      $("parallelsTab").onClick(function() {
-        $("#parallels-tab").hide();
-        $("#cpanel-tab").show();
-        $("cpanelTab").removeClass("active");
-        $("parallelsTab").addClass("active");
-        });
       function comparePlans(id){
         if(id=="cpanel-tab"){
           $("#parallels-tab").hide();
