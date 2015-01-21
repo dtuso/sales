@@ -253,8 +253,7 @@ $(document).ready(function() {
   showTldImagesInDomainArea(); //- dynamically build the tld images in the #findYourPerfectDomain section
   
   //- fix up list of valid tlds from lang files
-  debugger;
-  showAndOrderDynamicTldsInList("#products .TLDtoken");
+  showAndOrderDynamicTldsInList("#products .TLD-token");
   showAndOrderDynamicTldsInList("#default-marquee-details-modal-wsb-only p");
   showAndOrderDynamicTldsInList("#default-marquee-details-modal p");
   showAndOrderDynamicTldsInList("#site-choice-wsb-modal p");
