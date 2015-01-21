@@ -5643,7 +5643,35 @@ margin-bottom: 20px;
          
       </div>
       <p class="h5">[@L[cds.sales/gd/hosting/website-builder:rb_disclaimers_3p]@L]</p>
-    </section>
+    </section> 
+    ##if(activeLanguageAny([en-US]))
+     
+    <section id="modals">
+      <div id="login-modal" class="modal fade">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <form method="POST" id="g-modal-loginAcct-form" action="[@T[link:<external parammode='explicit' linktype='SSOURL' secure='true' />]@T]/login.aspx?spkey=[@T[sso:spkey]@T]&target=[@T[link:<external linktype='siteurl' path='/hosting/web-hosting.aspx' secure='false' parammode='explicit'/>]@T]">
+              <input type="hidden" value="LOGIN" name="LOGIN">
+              <input type="hidden" value="1" name="verifyShopper">
+              <div class="modal-header">
+                <button type="button" data-dismiss="modal" aria-hidden="true" class="close"></button>
+                <h4 class="modal-title">Please login to access your account</h4>
+              </div>
+              <div class="modal-body">
+                <input type="text" id="loginName" name="loginName" autocomplete="off" placeholder="[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Headers.UtilityBar.Username]@L]">
+                <input type="password" id="password" name="password" autocomplete="off" placeholder="[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Headers.UtilityBar.Password]@L]"><a href="[@T[link:<external linktype='SSOURL' path='/account/accountRetrieval.aspx' secure='true'/>]@T]" class="forgot-pass"></br> [@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Headers.UtilityBar.ForgotPassword]@L]</a>
+              </div>
+              <div class="modal-footer">
+                <button type="button" data-dismiss="modal" class="btn btn-default">Cancel</button>
+                <input type="submit" value="[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Headers.UtilityBar.SignIn]@L]" class="btn btn-primary">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section> 
+    ##endif
+     
     <!-- FOOTERBEGIN--> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- FOOTEREND-     -->
