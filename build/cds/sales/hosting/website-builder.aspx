@@ -1175,17 +1175,17 @@ padding-bottom: 50px;
               <div class="plan-flag">[@L[cds.sales/gd/hosting/website-builder:wsb-plus-seo]@L]</div>
               <h2 class="plan-title">[@L[cds.sales/gd/hosting/website-builder:unlimited-plan-title]@L]</h2>
               <p class="plan-text">[@L[cds.sales/gd/hosting/website-builder:unlimited-description]@L]</p>
-              <div class="plan-price-wrap"><span class="plan-price text-warning">[@T[productprice:<current productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
-                ##if(productHasSavingsMoreThan(7524, 7524, 0))
+              <div class="plan-price-wrap"><span class="plan-price text-warning">[@T[productprice:<current productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
+                ##if(productHasSavingsMoreThan(7514, 7514, 0))
                  <br><strong>
                    
                   ##if(splitTestingSideIsActive(1349, A))
                    
                   [@L[cds.sales/_common:was]@L] 
-                  <strike>[@T[productprice:<list productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7524" secondaryproductid="7524" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span> 
+                  <strike>[@T[productprice:<list productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7514" secondaryproductid="7514" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span> 
                   ##else
                    
-                  [@L[cds.sales/_common:onsale-all-cap]@L] -<span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7524" secondaryproductid="7524" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span> 
+                  [@L[cds.sales/_common:onsale-all-cap]@L] -<span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7514" secondaryproductid="7514" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span> 
                   ##endif
                    </strong> 
                 ##endif
@@ -1193,7 +1193,7 @@ padding-bottom: 50px;
                  
                 ##if(splitTestingSideIsActive(1349, B))
                  
-                <p class="h6">[@T[productprice:<list productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:month]@L] [@L[cds.sales/gd/hosting/website-builder:renewal-text]@L]</p> 
+                <p class="h6">[@T[productprice:<list productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:month]@L] [@L[cds.sales/gd/hosting/website-builder:renewal-text]@L]</p> 
                 ##endif
                  
                  
@@ -1445,9 +1445,12 @@ padding-bottom: 50px;
         }).css("height", midPageMenuItem);
       });
       $(document).ready(function(){
-        // this sets the nav to fixed when scrolled past and fixes the body for the height of the nav
+        // this sets the nav to fixed when scrolled past and fixed the body for the height of the nav
+        organizeNavBar();
+      
         var nav = $('.mid-page-nav');
-        var pos = nav.offset().top;
+        var navTop = nav.offset().top;
+        var footerBot = $('#footer').offset().top
         var sections = []
       
         $('[data-mid-nav-title]').each(function(){
@@ -1456,17 +1459,19 @@ padding-bottom: 50px;
         });
         $(window).scroll(function () {
           var scroll = $(this).scrollTop();
-          var fix = ($(this).scrollTop()+2 > pos) ? true : false;
-          nav.toggleClass("sticky", fix);
-          $('body').toggleClass("fix-body", fix);
-          if(!fix){
+          var belowNavTop=(scroll+2 > navTop) ? true : false;
+          var aboveFooterTop=(scroll < footerBot) ? true : false;
+          var InNavZone = (belowNavTop && aboveFooterTop) ? true : false;
+          nav.toggleClass("sticky", InNavZone);
+          $('body').toggleClass("fix-body", InNavZone);
+          if(!InNavZone){
             $('.mid-page-nav a').each(function(){
               $(this).blur();
-              $(this).toggleClass("active",fix);
+              $(this).toggleClass("active",InNavZone);
             });
           }
       
-          if(fix){
+          if(InNavZone){
             $.each(sections,function(index,value){
                 var top = ((scroll+131) > $('#'+value).offset().top) ? true : false;
                 var bottom = ((scroll+131) < $('#'+value).offset().top + $('#'+value).outerHeight()) ? true : false;
@@ -1479,10 +1484,28 @@ padding-bottom: 50px;
                   });
               });
           }
-      
+        });
+        $('.dropdown-menu').on("click",function(){
+          $('#midPageNav .dropdown-toggle').dropdown('toggle');
         });
         $('#midPageNav .dropdown-toggle').dropdown()
       });
+      function organizeNavBar(){
+        var linkArea = $('.navbar-nav').width();
+        var navBarArea = $('.navbar-collapse').width()-$('.navbar-right').width();
+        dropdownItem = "";
+        $dropdownMenu = "";
+        if(linkArea > navBarArea)
+        {
+          $dropdownMenu= $('<li class="dropdown"><a href="javascript:void(0)" role="button" data-toggle="dropdown" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.nav&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="dropdown-toggle"  style="margin-top: 0px;"><span>More<br><em>...</em></span></a><ul class="dropdown-menu">');
+        }
+        while($('.navbar-nav').width()+150 > $('.navbar-collapse').width()-$('.navbar-right').width()){
+          dropdownItem =$('.navbar-nav li').last().detach();
+          $dropdownMenu.find('.dropdown-menu').append(dropdownItem);
+        }
+        $dropdownMenu.appendTo('.navbar-nav');
+      
+      }
       function scroll_if_anchor(href) {
         href = typeof(href) == "string" ? href : $(this).attr("href");
       
