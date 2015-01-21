@@ -75,18 +75,6 @@ prepend endOfPageScripts
         $("#"+id).show();
        }
     }
-    $("cpanelTab").onClick(function() {
-      $("#parallels-tab").hide();
-      $("#cpanel-tab").show();
-      $("cpanelTab").addClass("active");
-      $("parallelsTab").removeClass("active");
-      });
-    $("parallelsTab").onClick(function() {
-      $("#parallels-tab").hide();
-      $("#cpanel-tab").show();
-      $("cpanelTab").removeClass("active");
-      $("parallelsTab").addClass("active");
-      });
     function comparePlans(id){
       if(id=="cpanel-tab"){
         $("#parallels-tab").hide();
