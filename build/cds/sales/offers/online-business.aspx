@@ -1843,7 +1843,6 @@ h
               margin: 20px 0 30px;
           }
           
-          
           #step2-choose-product .or-container:after {
             width: 94px;
             height: 98px;
@@ -1851,6 +1850,7 @@ h
             background-position: 0 0;
             background-size: auto auto;
           }
+          
           #step2-choose-product .or-container.or-container-en-us:after {
             width: 94px;
             height: 98px;
@@ -1858,6 +1858,34 @@ h
             background-position: 0 0;
             background-size: auto auto;
           }
+          
+          #step2-choose-product .pro-plans .pro-plan-wrap {
+            padding: 40px 30px;
+          }
+          
+          @media (min-width: 768px) and (max-width: 991px) {
+            #step2-choose-product .or-container:after {
+              left: 122%;
+              bottom: 50%;
+            }
+            #step2-choose-product .pro-plans .pro-plan-wrap {
+              padding: 20px 15px;
+            }
+          }
+          
+          @media (max-width: 767px) {
+            #step2-choose-product .or-container.or-container-en-us:after {
+              bottom: -105px;
+            }
+            #step2-choose-product .pro-plans .pro-plan-wrap {
+              padding: 40px 30px;
+              margin-bottom: 70px;
+            }
+            #step2-choose-product .plan-pro:nth-of-type(1) {
+              margin-bottom: 110px;
+            }
+          }
+          
           
         </style>
       </atlantis:webstash>
@@ -1879,7 +1907,7 @@ h
               </div>
             </div>
             <div class="row">
-              <div class="col-md-5 col-sm-6 plan-tile plan-pro or-container">
+              <div class="col-md-5 col-sm-5 plan-tile plan-pro or-container">
                 <div class="pro-plan-wrap">
                   <div class="plan-flag">[@L[cds.sales/offers/online-business:32573-choose-wsb]@L]</div>
                   <h2 class="h0">[@L[cds.sales/offers/online-business:32573-choose-wsb-text]@L]</h2>
@@ -1900,7 +1928,7 @@ h
                   <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-choose-wsb-bullet-4]@L]</div>
                 </div>
               </div>
-              <div class="col-md-5 col-md-offset-2 col-sm-6 plan-tile plan-pro">
+              <div class="col-md-5 col-md-offset-2 col-sm-5 col-sm-offset-2 plan-tile plan-pro">
                 <div class="pro-plan-wrap">
                   <div class="plan-flag">[@L[cds.sales/offers/online-business:32573-choose-ols]@L]</div>
                   <h2 class="h0">[@L[cds.sales/offers/online-business:32573-choose-ols-text]@L]</h2>
