@@ -16,16 +16,13 @@ append vars
   - page.links.favicon = "[@T[link:<imageroot />]@T]assets/godaddy.ico";
 
 append seo
-  meta(name="twitter:card" content="summary")
-  meta(name="twitter:site" content="[@L[cds.sales/gd/hosting/web-hosting:stuff]@L]")
-  meta(name="twitter:title" content="[@L[cds.sales/gd/hosting/web-hosting:stuff]@L]")
   meta(name="twitter:description" content="[@L[cds.sales/gd/hosting/web-hosting:twitter-text]@L]")
   meta(name="twitter:image:src" content!="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/gd_rebrand_og.png")
 
 prepend endOfPageScripts
   script.
     function disclaimersModal() {
-      $('#disclaimersModal').sfDialog();
+      $('#disclaimersModal').sfDialog({buttons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }] });
     }
     $("#alternate-products").find(".col-md-offset-2").find("h2").hover(function(){
         $(this).hide().text("[@L[cds.sales/hosting/web-hosting-rebrand:vpsGrooow]@L]").fadeIn("slow");
@@ -75,18 +72,6 @@ prepend endOfPageScripts
         $("#"+id).show();
        }
     }
-    $("cpanelTab").onClick(function() {
-      $("#parallels-tab").hide();
-      $("#cpanel-tab").show();
-      $("cpanelTab").addClass("active");
-      $("parallelsTab").removeClass("active");
-      });
-    $("parallelsTab").onClick(function() {
-      $("#parallels-tab").hide();
-      $("#cpanel-tab").show();
-      $("cpanelTab").removeClass("active");
-      $("parallelsTab").addClass("active");
-      });
     function comparePlans(id){
       if(id=="cpanel-tab"){
         $("#parallels-tab").hide();
@@ -103,22 +88,6 @@ prepend endOfPageScripts
        }
     }
     $('.dropdown-toggle').dropdown()
-    $(function() {
-    $('.isToolTip').tooltip({
-        placement: 'bottom',
-        html: true
-    }).on('show.bs.tooltip', function() {
-        $('.tooltip-delay').tooltip('hide');
-    });
-    $('.tooltip-delay').tooltip({
-        placement: 'bottom',
-        html: true,
-        delay: {
-            hide: 3000
-        }
-    }).on('show.bs.tooltip', function() {
-        $('.tooltip-delay').tooltip('hide');
-    });});
 
 append pageStyles
   style
@@ -186,10 +155,11 @@ block plans
       +renderCartLogic("[@T[link:<relative path=\"~/hosting/web-hosting-config-new.aspx\" parammode=\"common\" />]@T]", "slp_hosting_4GH" )
       .tile-section
         +renderColumnList(3)
+          .row
           .row.pro-banner.white-text
             .col-sm-3.pro-banner-image
               div.text-center
-                img(src!= "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img-webpro-logo.png")
+                +lazyImg("", "", "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img-webpro-logo.png")
             .col-sm-6.pro-banner-text
               p.top-text [@L[cds.sales/hosting/web-hosting-rebrand:proBannerTop]@L]
               p.bottom-text [@L[cds.sales/hosting/web-hosting-rebrand:proBannerBottom]@L]
@@ -197,16 +167,9 @@ block plans
               a(class= "btn btn-default-light" href!="[@T[link:<relative path='/pro/cpanel-hosting'>><param name='ci' value='93999' /></relative>]@T]") [@L[cds.sales/hosting/web-hosting-rebrand:learnMore]@L]
           .row
             .col-sm-12
-              | 
-              |##if(activeLanguageAny([en-US]))
-              | 
-              h2.text-center(style="padding-top: 50px;") [@L[cds.sales/hosting/web-hosting-rebrand:theresMoreRebrand]@L]
-              | 
-              |##endif
-              | 
               h3.text-center [@L[cds.sales/hosting/web-hosting-rebrand:allPlans]@L]
           +columnListMember
-            .include-check [@L[cds.sales/hosting/web-hosting-rebrand:freeDomain]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:freeDomainRestrictions]@L]'></span>
+            .include-check [@L[cds.sales/hosting/web-hosting-rebrand:freeDomain]@L]. <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:freeDomainRestrictions]@L]'></span>
             .include-check [@L[cds.sales/hosting/web-hosting-rebrand:freeEmail]@L]
             .include-check [@L[cds.sales/hosting/web-hosting-rebrand:oneClick]@L]
           +columnListMember
@@ -233,10 +196,11 @@ block plans
       +renderCartLogic("[@T[link:<relative path=\"~/hosting/web-hosting-config-new.aspx\" parammode=\"common\" />]@T]", "slp_hosting_4GH" )
       .tile-section
         +renderColumnList(3)
+          .row
           .row.pro-banner.white-text
             .col-sm-3.pro-banner-image
               div.text-center
-                img(src!= "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img-webpro-logo.png")
+                +lazyImg("", "", "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img-webpro-logo.png")
             .col-sm-6.pro-banner-text
               p.top-text [@L[cds.sales/hosting/web-hosting-rebrand:proBannerTop]@L]
               p.bottom-text [@L[cds.sales/hosting/web-hosting-rebrand:proBannerBottom]@L]
@@ -253,7 +217,7 @@ block plans
               | 
               h3.text-center [@L[cds.sales/hosting/web-hosting-rebrand:allPlans]@L]
           +columnListMember
-            .include-check [@L[cds.sales/hosting/web-hosting-rebrand:freeDomain]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:freeDomainRestrictions]@L]'></span>
+            .include-check [@L[cds.sales/hosting/web-hosting-rebrand:freeDomain]@L]. <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:freeDomainRestrictions]@L]'></span>
             .include-check [@L[cds.sales/hosting/web-hosting-rebrand:freeEmail]@L]
             .include-check [@L[cds.sales/hosting/web-hosting-rebrand:oneClick]@L]
           +columnListMember
@@ -270,7 +234,7 @@ block plans
 
 block sections
   +renderMidPageNav
-    +priceBlock('[@T[productprice:<current productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]', "month", "#planTileOne")
+    +priceBlock('[@T[productprice:<current productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]', "[@L[cds.sales/_common:month]@L]", "#planTileOne")
 
   //- section#test
   //-   button.btn.btn-default-dark.view-all.btn-md(data-toggle='bsModal', data-target='#g-modal') [@L[cds.sales/gd/hosting/website-builder:sb_view_templates]@L]
@@ -305,7 +269,7 @@ block sections
           | 
         .col-sm-6.one-click-right
           div.text-center
-            img.features-img.features-img-right(style="height:auto; max-width:100%;" src!= "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img-feature1-logos.png")
+            +lazyImg("", "", "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img-feature1-logos.png")
 
   section#speed-chart.tile-section
     .container
@@ -321,12 +285,12 @@ block sections
         | 
         |##endif
         | 
-        img(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img-graph-chart.png")
+        +lazyImg("","","[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img-graph-chart.png")
         .speed-text
           img()
     .container
       .col-sm-2.text-center
-        img(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/GD_WebHosting_Chart_Polygon.png")
+        +lazyImg("","","[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/GD_WebHosting_Chart_Polygon.png")
       .col-sm-10
         div
           | 
@@ -353,11 +317,11 @@ block sections
           |##endif
           | 
 
-  section#features.key-benefits-wrap.tile-section(data-mid-nav-title="Features")
+  section#features.key-benefits-wrap.tile-section(data-mid-nav-title="[@L[cds.sales/hosting/web-hosting-rebrand:midpagefeatures]@L]")
     +renderColumnList(3, {backgroundColor: "#fff"})
       +columnListMember("key-benefit")
         .key-benefits-img-wrap
-          img.key-benefits-img(src != "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/GD_WebHosting_Module_Feature_Group_ScalableResources.png")
+          +lazyImg("","","[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/GD_WebHosting_Module_Feature_Group_ScalableResources.png")
         | 
         |##if(activeLanguageAny([en-US]))
         | 
@@ -381,7 +345,7 @@ block sections
         | 
       +columnListMember("key-benefit")
         .key-benefits-img-wrap
-          img.key-benefits-img(src != "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/GD_WebHosting_Module_Feature_Group_Security.png")
+          +lazyImg("","","[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/GD_WebHosting_Module_Feature_Group_Security.png")
         h3.key-benefits-title [@L[cds.sales/hosting/web-hosting-rebrand:awardSecurity]@L]
         | 
         |##if(activeLanguageAny([en-US]))
@@ -396,7 +360,7 @@ block sections
         | 
       +columnListMember("key-benefit")
         .key-benefits-img-wrap
-          img.key-benefits-img(src != "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/GD_WebHosting_Module_Feature_Group_WhatIsHosting.png")
+          +lazyImg("","","[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/GD_WebHosting_Module_Feature_Group_WhatIsHosting.png")
         | 
         |##if(activeLanguageAny([en-US]))
         | 
@@ -427,7 +391,7 @@ block sections
   | 
   |##if(activeLanguageAny([en-IN]))
   | 
-  section#compare(data-mid-nav-title="Compare").compare-chart-pro.section-pro.bg-pro-gray.tile-section
+  section#compare(data-mid-nav-title="[@L[cds.sales/hosting/web-hosting-rebrand:midpagecompare]@L]").compare-chart-pro.section-pro.bg-pro-gray.tile-section
     .container(style="background: #fff;")
       .text-center
         h2 [@L[cds.sales/gd/hosting/web-hosting:compare-plans-tab-title-11166]@L]
@@ -440,7 +404,7 @@ block sections
         +compareFeaturesTable({showViewAllButton: false, numberOfRowsNotHidden: 9, tableID: "cpanel-table"})
           thead
             tr
-              td(style="width: 40%;padding-left: 0;border-bottom: 1px solid #333;")
+              td(style="width: 40%;padding-left: 0;padding-bottom: 0;border-bottom: 1px solid #333;")
                 //h2 [@L[cds.sales/hosting/web-hosting-rebrand:cPanelTitle]@L]
                 ul.nav.nav-tabs.compare-nav-tabs
                   li#cpanelTab.active
@@ -767,7 +731,7 @@ block sections
         +compareFeaturesTable({showViewAllButton: false, numberOfRowsNotHidden: 9, tableID: "parallels-table", includeStyles: false})
           thead
             tr
-              td(style="width: 40%;padding-left: 0;border-bottom: 1px solid #333;")
+              td(style="width: 40%;padding-left: 0;padding-bottom: 0;border-bottom: 1px solid #333;")
                 //h2 [@L[cds.sales/hosting/web-hosting-rebrand:windowsTitle]@L]
                 ul.nav.nav-tabs.compare-nav-tabs
                   li#cpanelTab
@@ -1045,7 +1009,7 @@ block sections
   | 
   |##else
   | 
-  section#compare(data-mid-nav-title="Compare").compare-chart-pro.section-pro.bg-pro-gray.tile-section
+  section#compare(data-mid-nav-title="[@L[cds.sales/hosting/web-hosting-rebrand:midpagecompare]@L]").compare-chart-pro.section-pro.bg-pro-gray.tile-section
     .container(style="background: #fff;")
       .text-center
         h2 [@L[cds.sales/gd/hosting/web-hosting:compare-plans-tab-title-11166]@L]
@@ -1058,7 +1022,7 @@ block sections
         +compareFeaturesTable({showViewAllButton: false, numberOfRowsNotHidden: 9, tableID: "cpanel-table"})
           thead
             tr
-              td(style="width: 40%;padding-left: 0;border-bottom: 1px solid #333;")
+              td(style="width: 40%;padding-left: 0;padding-bottom: 0;border-bottom: 1px solid #333;")
                 //h2 [@L[cds.sales/hosting/web-hosting-rebrand:cPanelTitle]@L]
                 ul.nav.nav-tabs.compare-nav-tabs
                   li#cpanelTab.active
@@ -1332,7 +1296,7 @@ block sections
         +compareFeaturesTable({showViewAllButton: false, numberOfRowsNotHidden: 9, tableID: "parallels-table", includeStyles: false})
           thead
             tr
-              td(style="width: 40%;padding-left: 0;border-bottom: 1px solid #333;")
+              td(style="width: 40%;padding-left: 0;padding-bottom: 0;border-bottom: 1px solid #333;")
                 //h2 [@L[cds.sales/hosting/web-hosting-rebrand:windowsTitle]@L]
                 ul.nav.nav-tabs.compare-nav-tabs
                   li#cpanelTab
@@ -1611,8 +1575,8 @@ block sections
   |##endif
   | 
 
-  section#platforms(data-mid-nav-title="Platforms")
-    +renderTwoUpCompare({ title: "[@L[cds.sales/hosting/web-hosting-rebrand:choosePlatform]@L]", twoUpCompareId: "choose-platform", titleBackgroundColor: "bg-green-new", backgroundColor: "bg-green-official", backgroundImage: "background-image: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/linux-v-windows.png')"})
+  section#platforms(data-mid-nav-title="[@L[cds.sales/hosting/web-hosting-rebrand:midpageplatforms]@L]")
+    +renderTwoUpCompare({ title: "[@L[cds.sales/hosting/web-hosting-rebrand:choosePlatform]@L]", twoUpCompareId: "choose-platform", titleBackgroundColor: "bg-green-new", backgroundColor: "bg-green-official", backgroundImage: "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/linux-v-windows.png"})
       +twoUpCompareColumn({ orContainer: true, title: "[@L[cds.sales/hosting/web-hosting-rebrand:cPanelTitle2]@L]", backgroundColor: "bg-green-official", subtitle: "[@L[cds.sales/hosting/web-hosting-rebrand:linuxPlan]@L]", titleAlign: "center", subtitleAlign: "center", image: "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img-cpanel-linux.png"})
         .include-check-black <strong>[@L[cds.sales/hosting/web-hosting-rebrand:cPanelListItem]@L]</strong> </br> [@L[cds.sales/hosting/web-hosting-rebrand:cPanelListItemDesc]@L]
         .include-check-black <strong>[@L[cds.sales/hosting/web-hosting-rebrand:cloudLinuxListItem]@L]</strong> </br> [@L[cds.sales/hosting/web-hosting-rebrand:cloudLinuxListItemDesc]@L]
@@ -1632,7 +1596,7 @@ block sections
   | 
   |##if(activeLanguageAny([en-US]))
   | 
-  section#reviews.tile-section
+  section#reviews.tile-section(data-mid-nav-title="[@L[cds.sales/hosting/web-hosting-rebrand:midpagereviews]@L]")
     .container
       .row
         .col-sm-12
@@ -1669,7 +1633,7 @@ block sections
                           twoUpCompareId: "two-up", 
                           titleBackgroundColor: "bg-white", 
                           backgroundColor: "bg-green-official", 
-                          backgroundImage: "background-image: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/compare-bg.png')", 
+                          backgroundImage: "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/compare-bg.png", 
                           style: "min-height: 580px;", 
                           includeStyles: false})
       +twoUpCompareColumn({ title: "[@L[cds.sales/hosting/web-hosting-rebrand:wsbDoIt]@L] [@L[cds.sales/hosting/web-hosting-rebrand:wsbHosting]@L]", 
@@ -1680,7 +1644,7 @@ block sections
           li [@L[cds.sales/hosting/web-hosting-rebrand:wsbList1]@L]
           li [@L[cds.sales/hosting/web-hosting-rebrand:wsbList2]@L]
           li [@L[cds.sales/hosting/web-hosting-rebrand:wsbList3]@L]
-        a.btn.btn-default-dark [@L[cds.sales/hosting/web-hosting-rebrand:learnMore]@L]
+        a.btn.btn-default-dark(href!="[@T[link:<relative path='/hosting/website-builder.aspx'>><param name='ci' value='93999' /></relative>]@T]") [@L[cds.sales/hosting/web-hosting-rebrand:learnMore]@L]
       +twoUpCompareColumn({ title: "[@L[cds.sales/hosting/web-hosting-rebrand:vpsGrow]@L]", 
                             backgroundColor: "bg-gray-darkest", 
                             shapeText: "[@L[cds.sales/hosting/web-hosting-rebrand:vps]@L]", 
@@ -1690,7 +1654,7 @@ block sections
           li [@L[cds.sales/hosting/web-hosting-rebrand:vpsList1]@L]
           li [@L[cds.sales/hosting/web-hosting-rebrand:vpsList2]@L]
           li [@L[cds.sales/hosting/web-hosting-rebrand:vpsList3]@L]
-        a.btn.btn-default-light [@L[cds.sales/hosting/web-hosting-rebrand:learnMore]@L]
+        a.btn.btn-default-light(href!="[@T[link:<relative path='/hosting/vps-hosting.aspx'>><param name='ci' value='93999' /></relative>]@T]") [@L[cds.sales/hosting/web-hosting-rebrand:learnMore]@L]
   | 
   |##else
   | 
@@ -1699,7 +1663,7 @@ block sections
                           twoUpCompareId: "two-up", 
                           titleBackgroundColor: "bg-white", 
                           backgroundColor: "bg-green-official", 
-                          backgroundImage: "background-image: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/compare-bg.png')", 
+                          backgroundImage: "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/compare-bg.png", 
                           style: "min-height: 580px;", 
                           includeStyles: false})
       +twoUpCompareColumn({ title: "[@L[cds.sales/hosting/web-hosting-rebrand:wsbDoIt]@L] [@L[cds.sales/hosting/web-hosting-rebrand:wsbHosting]@L]", 
@@ -1728,23 +1692,23 @@ block sections
   | 
   |##if(activeLanguageAny([en-US]))
   | 
-  section#modals
+  section#bazaarvoicemodal
     div#login-modal.modal.fade
       div.modal-dialog
         div.modal-content
           form(method="POST" id="g-modal-loginAcct-form" action!="[@T[link:<external parammode='explicit' linktype='SSOURL' secure='true' />]@T]/login.aspx?spkey=[@T[sso:spkey]@T]&target=[@T[link:<external linktype='siteurl' path='/hosting/web-hosting.aspx' secure='false' parammode='explicit'/>]@T]")
-          input(type="hidden" value="LOGIN" name="LOGIN")
-          input(type="hidden" value="1" name="verifyShopper")
-          div.modal-header
-            button(type="button" class="close" data-dismiss="modal" aria-hidden="true") &times;
-            h4.modal-title Please login to access your account
-          div.modal-body
-            input(type="text" id="loginName" name="loginName" autocomplete="off" placeholder!="[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Headers.UtilityBar.Username]@L]")
-            input(type="password" id="password" name="password" autocomplete="off" placeholder!="[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Headers.UtilityBar.Password]@L]")
-            a(href!="[@T[link:<external linktype='SSOURL' path='/account/accountRetrieval.aspx' secure='true'/>]@T]" class="forgot-pass") [@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Headers.UtilityBar.ForgotPassword]@L]
-          div.modal-footer
-            button(type="button" class="btn btn-default" data-dismiss="modal") Cancel
-            input(class="btn btn-primary" type="submit" value!="[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Headers.UtilityBar.SignIn]@L]")
+            input(type="hidden" value="LOGIN" name="LOGIN")
+            input(type="hidden" value="1" name="verifyShopper")
+            div.modal-header
+              button(type="button" class="close" data-dismiss="modal" aria-hidden="true")
+              h4.modal-title Please login to access your account
+            div.modal-body
+              input(type="text" id="loginName" name="loginName" autocomplete="off" placeholder!="[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Headers.UtilityBar.Username]@L]")
+              input(type="password" id="password" name="password" autocomplete="off" placeholder!="[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Headers.UtilityBar.Password]@L]")
+              a(href!="[@T[link:<external linktype='SSOURL' path='/account/accountRetrieval.aspx' secure='true'/>]@T]" class="forgot-pass")</br> [@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Headers.UtilityBar.ForgotPassword]@L]
+            div.modal-footer
+              button(type="button" class="btn btn-default" data-dismiss="modal") Cancel
+              input(class="btn btn-primary" type="submit" value!="[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Headers.UtilityBar.SignIn]@L]")
   | 
   |##endif
   | 
@@ -1762,5 +1726,6 @@ block sections
           [@L[cds.sales/gd/hosting/web-hosting:modal-disclaimer-4]@L] </br></br>
           [@L[cds.sales/gd/hosting/web-hosting:modal-disclaimer-11166]@L] </br></br>
       p [@L[cds.sales/hosting/web-hosting-rebrand:trademark]@L]
-
-  script(type='text/javascript' src='./web-hosting/modal.js')
+  atlantis:webstash(type="js")
+      script(type="text/javascript")
+        include:js ./web-hosting/modal.js
