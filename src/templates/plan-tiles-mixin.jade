@@ -4,14 +4,14 @@
 - var hasIncludedPlanTilesMixinCss = false
 
 
-
 mixin planTile(planid)
   case plansPanelTotalColumns
     when 1
       div.col-sm-offset-4.col-sm-4.plan-tile.plan-pro(id=planid)
         block
     when 2
-      if (plansPanelColumnsPopulated === 0)      
+      if (plansPanelColumnsPopulated === 0)   
+        - plansPanelColumnsPopulated++   
         div.col-sm-offset-2.col-sm-4.plan-tile.plan-pro(id=planid)
           block
       else
@@ -35,26 +35,22 @@ mixin renderPlanTiles(columns, options)
   - plansPanelTotalColumns = columns
   - plansPanelColumnsPopulated = 0
   - options = options || {};
-  - options.backgroundColor = options.backgroundColor || "bg-gray-light";
+  - options.backgroundColor = options.backgroundColor || "";
   - options.icode = options.icode || "";
-  if(!hasIncludedCss) 
-    - hasIncludedCss = true
-    style
-      include:css ./styles/plan-tiles.css
+
   if (columns > 4)
     - containerClass = "plan-container"
   else
     - containerClass = "container"
-    
-  if(!hasIncludedPlanTilesMixinCss ) 
-    - hasIncludedPlanTilesMixinCss = true
-    atlantis:webstash(type="css")
-      style
-        include:css ./styles/plan-tiles.css
+
+  atlantis:webstash(type="css")
+    style
+      include:css ./styles/plan-tiles.css
 
   div(class="pro-plans-wrap #{options.backgroundColor}")
     #plans(class="#{containerClass} pro-plans", data-icode="#{options.icode}")
-      block
+      .row
+        block
 
 
 mixin renderCartLogic(url, itc, options)

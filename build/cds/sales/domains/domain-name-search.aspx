@@ -125,6 +125,10 @@
     <style>
       .svgfallback{display:none}
       .svgfallback:not(old){display:block}
+      ul.green-check li, li.green-check, ul.no-check li, li.no-check { padding: 0.4em 0 0.4em 35px; list-style: none; background-repeat: no-repeat; }
+      ul.green-check li, li.green-check { background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAcCAYAAACUJBTQAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wEUERcjd6fRgQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAACiElEQVRIx62WP0wTcRTHv+93tBIUaQwxKoOzGifj4mB+LT3AxUHD4uBgXDBR42BaiAFTEtufgw4OTsTg4oCJGuMf4I7r5KAmLkYJGgcFozYiRVBp6T0HrTalv7v+4ba79373yefee7/fEdbpiqWjdwHeB+AVQK8BfgNgWrjGO2r05YPjvcgHFjtcsTqrSXlB62RxG+CjmvBBatTCFfkt+cD3r5qUl0raexs2iTvRUSY+rgmbxMKiRiwAtK5smF+snEHvlbR2AoCoF5LoHkMu+O2KR8rZuGP+wdVr0bTa0ry8cfanxuKTktb24p2o1+JHy5yHBceKFnVB/tYCTNynSVlW0r6ZCk/+96pzLi4DfF4TPkksRkohTWBgYKqHCkb+EIAHAHUK13CSkXGuZJHoHoMHYEVJe2RNhS7d6wtk22a+AAiVPC8Qiz3Exkwy8pjLLIYAvqiBnCIW10stAEBk22YelgEAwGByp12R/xB3utoB4NyT/cWi6gBQ0l4DAAChpG0CWNKs62AqZGLp6POrB54hlo4OeA2/LkAA0D/VtcMVhTmferteHamkrW0iAQDJyMRHYuOwD0ToW56G/RYCAFLhifsAJeppaSWtweL8eEIGx3uhpDUEwKkNQaniLuALSXSPIe6YUNKOAJivwaLfy6LixJ9+uhuhhV2bc8GFbBWMa0raZ3xd9YeR2cPkPvJa3Pxr6yam1WWvT+W7d8XS0WGAL1RcyHQjFbZOVFU1/82w0wEgy58Hc20hYiPrZ+ELiTsmUuFJxNKdGQDtJRa3UmHrWNX9V4UJiI12pkLmX0u6gW2BfOvnaixqOk/ijimZXAegO0paR2qapBp/f4YBGg3mQm+rtQCA38MA8KA+FQdhAAAAAElFTkSuQmCC);  }
+      ul.green-check li:not(old), li.green-check:not(old) { background-image: url(data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjI4cHgiIHZpZXdCb3g9IjAgMCA1MCA1NSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pbllNaWQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBvbHlnb24gZmlsbD0iIzc3YzA0MyIgcG9pbnRzPSIzNywwIDQ5LDIgMjMsNTQgMCwyNSA3LDIyIDIyLDMwIi8+PC9zdmc+); }
+      ul li.no-check { background-image: none !important; }
       
     </style>
     <link href="[@T[link:<cssroot />]@T]/fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css">
@@ -334,386 +338,6 @@
         </style>
       </atlantis:webstash> 
       ##if(activeLanguageAny([en-ca]))
-            <style>
-.plan-tile { 
-  margin-top: -145px; 
-  margin-bottom: 20px;
-}
-.sf-droplist-msg {
-  text-align: inherit;
-}
-.pro-plans {
-    margin-top: 0px;
-    padding-bottom: 80px;
-}
-
-.pro-plans .tld-col-title {
-    text-transform: uppercase;
-}
-
-.pro-plans .non-input-group {
-    margin-bottom: 10px;
-}
-
-.pro-plans .non-input-group .form-control {
-    border: none;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-    font-family: 'Walsheim-Black';
-    font-size: 30px;
-    font-size: 3rem;
-    padding: 4px 20px;
-    height: 44px;
-    line-height: 1;
-    color: #333333;
-}
-
-.pro-plans .sub-plan-text {
-    margin-top: 30px;
-    margin-bottom: -30px;
-}
-
-.pro-plans h2 {
-    margin-top: 0;
-}
-
-.pro-plans h2.domains-plans-mid-title {
-    margin: 40px 0;
-}
-
-@media only screen and (max-width: 768px) {
-    .pro-plans {
-        padding-top: 40px;
-        padding-bottom: 40px;
-    }
-}
-
-.pro-plans.plan-container {
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-.pro-plans.plan-container:before,
-.pro-plans.plan-container:after {
-    content: " ";
-  /* 1 */
-    display: table;
-  /* 2 */
-}
-
-.pro-plans.plan-container:after {
-    clear: both;
-}
-
-@media only screen and (max-width: 1535px) {
-    .pro-plans.plan-container {
-        max-width: 1170px;
-    }
-}
-
-@media only screen and (max-width: 1200px) {
-    .pro-plans.plan-container {
-        max-width: 970px;
-    }
-}
-
-@media only screen and (max-width: 992px) {
-    .pro-plans.plan-container {
-        max-width: 750px;
-    }
-}
-
-.pro-plans.plan-container .plan-col-15 {
-    width: 20%;
-    float: left;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-@media only screen and (max-width: 1535px) {
-    .pro-plans.plan-container .plan-col-15 {
-        width: 33.3333%;
-    }
-
-    .pro-plans.plan-container .plan-col-15:nth-child(4n) {
-        border: 0;
-        margin-left: 16.66666666667%;
-        clear: left;
-    }
-
-    .pro-plans.plan-container .plan-col-15:nth-child(1) {
-        border: 0;
-    }
-}
-
-@media only screen and (max-width: 992px) {
-    .pro-plans.plan-container .plan-col-15 {
-        width: 50%;
-    }
-
-    .pro-plans.plan-container .plan-col-15:nth-child(4n) {
-        clear: none;
-        margin-left: 0;
-    }
-
-    .pro-plans.plan-container .plan-col-15:nth-child(3) {
-        clear: left;
-        border-left: 0;
-    }
-
-    .pro-plans.plan-container .plan-col-15:nth-child(5) {
-        clear: left;
-        border-left: 0;
-        margin-left: 25%;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .pro-plans.plan-container .plan-col-15 {
-        width: 100%;
-        border: 0;
-        clear: none;
-        float: none;
-    }
-
-    .pro-plans.plan-container .plan-col-15:nth-child(5) {
-        margin-left: 0;
-    }
-}
-
-.pro-plans.plan-container .plan-col-2 {
-    width: 16.66666666667%;
-    float: left;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-@media only screen and (max-width: 1535px) {
-    .pro-plans.plan-container .plan-col-2 {
-        width: 33.3333%;
-    }
-
-    .pro-plans.plan-container .plan-col-2:nth-child(4n) {
-        border: 0;
-        clear: left;
-    }
-
-    .pro-plans.plan-container .plan-col-2:nth-child(1) {
-        border-left: 0;
-    }
-}
-
-@media only screen and (max-width: 992px) {
-    .pro-plans.plan-container .plan-col-2 {
-        width: 50%;
-    }
-
-    .pro-plans.plan-container .plan-col-2:nth-child(4n) {
-        clear: none;
-    }
-
-    .pro-plans.plan-container .plan-col-2:nth-child(3) {
-        clear: left;
-        border-left: 0;
-    }
-
-    .pro-plans.plan-container .plan-col-2:nth-child(5) {
-        clear: left;
-        border-left: 0;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .pro-plans.plan-container .plan-col-2 {
-        width: 100%;
-        border: 0;
-        clear: none;
-        float: none;
-    }
-}
-
-.pro-plans .pro-plan-wrap {
-    border-top: 10px solid #008a32;
-    padding: 40px;
-    background-color: #fff;
-    -webkit-box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
-    -moz-box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
-    box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
-}
-
-@media only screen and (max-width: 992px) {
-    .pro-plans .pro-plan-wrap {
-        padding: 40px 30px;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .pro-plans .pro-plan-wrap {
-        margin-bottom: 40px;
-    }
-}
-
-.pro-plans .pro-plan-wrap .features-row {
-    margin-bottom: 30px;
-}
-
-@media only screen and (max-width: 768px) {
-    .pro-plans .pro-plan-wrap .features-row {
-        margin-bottom: 0;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .pro-plans .pro-plan-wrap .features-row .col-sm-6 {
-        margin-bottom: 20px;
-    }
-}
-
-@media only screen and (max-width: 992px) {
-    .pro-plans .pro-plan-wrap .features-row .col-sm-6 img {
-        margin: 0 auto 20px;
-    }
-}
-
-.pro-plans .pro-plan-wrap .plan-flag {
-    color: #000;
-    font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;
-    font-size: 28px;
-    font-size: 2.8rem;
-    padding: 10px 20px;
-    text-transform: uppercase;
-    line-height: 1;
-    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMTgxLjggNjQuMiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTgxLjggNjQuMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cG9seWdvbiBmaWxsPSIjRkVEQzQ1IiBwb2ludHM9IjE3LDAgMCwyNC4yIDMsNTYgMTY0LjUsNjQuMiAxODEuOCw0My44IDE4MSw0LjMgIi8+DQo8L3N2Zz4NCg==) no-repeat center center;
-    background-size: cover;
-    overflow: visible;
-}
-
-.pro-plans .pro-plan-wrap .plan-flag:before {
-    content: '';
-}
-
-.plan-tile .plan-flag {
-    position: absolute;
-    top: -20px;
-    right: 30px;
-    color: #fff;
-    display: inline-block;
-    padding: 0 15px;
-    line-height: 2.5;
-}
-
-.pro-plans .pro-plan-wrap h6 {
-    margin-top: 0;
-}
-
-.pro-plans .pro-plan-wrap h2 {
-    margin-bottom: 14px;
-}
-
-.pro-plans .pro-plan-wrap .plan-title {
-    font-size: 30px;
-    font-size: 3rem;
-    margin-top: 0;
-    font-family: 'Walsheim-Bold';
-    text-transform: uppercase;
-    word-wrap: break-word;
-    word-break: break-word;
-    white-space: -moz-pre-wrap;
-}
-
-.pro-plans .pro-plan-wrap .plan-subtitle {
-    color: #000 !important;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-
-.pro-plans .pro-plan-wrap .plan-text {
-    min-height: 44px;
-    margin-bottom: 5px;
-}
-
-.pro-plans .pro-plan-wrap .plan-tile-top {
-    padding: 0px;
-}
-
-.pro-plans .pro-plan-wrap .plan-disclaimers {
-    font-size: 14px;
-    font-size: 1.4rem;
-    margin-bottom: 5px;
-}
-
-.pro-plans .pro-plan-wrap .plan-price-wrap {
-    padding-bottom: 30px;
-}
-
-.pro-plans .pro-plan-wrap .plan-price-wrap .plan-price {
-    font-size: 45px;
-    font-size: 4.5rem;
-    font-weight: 700;
-    color: #ef6c0f;
-    font-family: 'Walsheim-Bold';
-}
-
-.pro-plans .pro-plan-wrap .plan-price-wrap .plan-duration {
-    font-size: 24px;
-    font-size: 2.4rem;
-    font-weight: 700;
-    color: #ef6c0f;
-}
-
-.pro-plans .pro-plan-wrap .btn {
-    margin-bottom: 20px;
-}
-
-.pro-plans .pro-plan-wrap .plan-item {
-    border-top: 0 none;
-    min-height: 0;
-    padding: 5px 0;
-    text-align: left;
-    font-size: 16px;
-    font-size: 1.6rem;
-    margin-bottom: 15px;
-}
-.pro-plans .pro-plan-wrap .check-item {
-    border-top: 0 none;
-    min-height: 0;
-    text-align: left;
-    font-size: 16px;
-    font-size: 1.6rem;
-    margin-bottom: 15px;
-}
-
-.pro-plans .include-check {
-    position: relative;
-    padding-left: 45px;
-    margin-top: 20px;
-}
-
-.pro-plans .include-check:before {
-    content: "";
-    background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
-    background-position: 0 -668px;
-    background-size: 205px auto;
-    width: 25px;
-    height: 27px;
-    padding-right: 5px;
-    position: absolute;
-    left: 0;
-    top: -6px;
-}
-
-.pro-plans .sf-tipper-target {
-  background-image: url(https://img1.wsimg-com.ide/fos/mike/img/hosting/img-tootip-.png);
-  width: 14px;
-  height: 14px;
-  display: inline-block;
-  vertical-align: baseline;
-  cursor: pointer;
-}
-            </style>
             <atlantis:webstash type="css">
               <style>
 .plan-tile { 
@@ -1096,69 +720,71 @@
 }
               </style>
             </atlantis:webstash>
-            <div class="pro-plans-wrap bg-gray-light">
+            <div class="pro-plans-wrap ">
               <div id="plans" data-icode="" class="container pro-plans">
-                      <div class="col-md-3 col-sm-6 plan-tile plan-pro">
-                        <div class="pro-plan-wrap">
-                          <style>
-                            .tldlogo-dot-com{background-position:-52px -676px; height:40px; width:101px; margin-bottom:10px;}
-                            .plan-text { height: 66px; }
-                          </style>
-                          <div class="tldlogo tldlogo-dot-com"></div>
-                          <p class="plan-text">Get the domain that will never go out of style.</p>
-                          <div class="plan-price-wrap">[@T[productprice:<template productid='101' period='yearly'><nostrike><![CDATA[<span class='plan-price text-warning'>{0}*</span>]]></nostrike><strike><![CDATA[<span class='plan-price text-warning'>{0}*</span><br /> <strong>was <strike>{1}</strike></strong>]]></strike></template>]@T]</div><a href="[@T[link:<relative path='/tlds/com.aspx'><param name='ci' value='xxxxx' /></relative>]@T]" data-index="1" class="btn btn-primary btn-plan btn-lg btn-block">REGISTER</a>
+                <div class="row">
+                        <div class="col-md-3 col-sm-6 plan-tile plan-pro">
+                          <div class="pro-plan-wrap">
+                            <style>
+                              .tldlogo-dot-com{background-position:-52px -676px; height:40px; width:101px; margin-bottom:10px;}
+                              .plan-text { height: 66px; }
+                            </style>
+                            <div class="tldlogo tldlogo-dot-com"></div>
+                            <p class="plan-text">Get the domain that will never go out of style.</p>
+                            <div class="plan-price-wrap">[@T[productprice:<template productid='101' period='yearly'><nostrike><![CDATA[<span class='plan-price text-warning'>{0}*</span>]]></nostrike><strike><![CDATA[<span class='plan-price text-warning'>{0}*</span><br /> <strong>was <strike>{1}</strike></strong>]]></strike></template>]@T]</div><a href="[@T[link:<relative path='/tlds/com.aspx'><param name='ci' value='xxxxx' /></relative>]@T]" data-index="1" class="btn btn-primary btn-plan btn-lg btn-block">REGISTER</a>
+                          </div>
                         </div>
+                  <div class="col-md-3 col-sm-6 plan-tile plan-pro">
+                    <div class="pro-plan-wrap">
+                      <style>
+                        .tldlogo-dot-ca{background-position:-51px -1277px; height:40px; width:49px; margin-bottom:10px;}
+                        .plan-text { height: 66px; }
+                      </style>
+                      <div class="tldlogo tldlogo-dot-ca"></div>
+                      <p class="plan-text">[@L[cds.sales/gd/domains/domain-name-search:PodDotCaText]@L]</p>
+                      <div class="plan-price-wrap">[@T[productprice:<template productid='9405' period='yearly'><nostrike><![CDATA[<span class='plan-price text-warning'>{0}*</span>]]></nostrike><strike><![CDATA[<span class='plan-price text-warning'>{0}*</span><br /> <strong>was <strike>{1}</strike></strong>]]></strike></template>]@T]</div><a href="[@T[link:<relative path='/tlds/ca.aspx'><param name='ci' value='xxxxx' /></relative>]@T]" data-index="1" class="btn btn-primary btn-plan btn-lg btn-block">REGISTER</a>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-6 plan-tile plan-pro">
+                    <div class="pro-plan-wrap">
+                      <style>
+                        .tldlogo-dot-quebec{background-position:-53px -597px; height:40px; width:102px; margin-bottom:10px;}
+                        .plan-text { height: 66px; }
+                      </style>
+                      <div class="tldlogo tldlogo-dot-quebec"></div>
+                      <p class="plan-text">[@L[cds.sales/gd/domains/domain-name-search:PodDotQuebecText]@L]</p>
+                      <div class="plan-price-wrap">[@T[productprice:<template productid='546605' period='yearly'><nostrike><![CDATA[<span class='plan-price text-warning'>{0}*</span>]]></nostrike><strike><![CDATA[<span class='plan-price text-warning'>{0}*</span><br /> <strong>was <strike>{1}</strike></strong>]]></strike></template>]@T]</div><a href="[@T[link:<relative path='/tlds/quebec'><param name='ci' value='xxxxx' /></relative>]@T]" data-index="1" class="btn btn-primary btn-plan btn-lg btn-block">REGISTER</a>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-6 plan-tile plan-pro">
+                    <div class="pro-plan-wrap">
+                      <style>
+                        .tldlogo-dot-website{background-position:0px -279px; height:40px; width:133px; margin-bottom:10px;}
+                        .plan-text { height: 66px; }
+                      </style>
+                      <div class="tldlogo tldlogo-dot-website"></div>
+                      <p class="plan-text">[@L[cds.sales/gd/domains/domain-name-search:PodDotWebsiteText]@L]</p>
+                      <div class="plan-price-wrap">[@T[productprice:<template productid='461465' period='yearly'><nostrike><![CDATA[<span class='plan-price text-warning'>{0}*</span>]]></nostrike><strike><![CDATA[<span class='plan-price text-warning'>{0}*</span><br /> <strong>was <strike>{1}</strike></strong>]]></strike></template>]@T]</div><a href="[@T[link:<relative path='/tlds/website'><param name='ci' value='xxxxx' /></relative>]@T]" data-index="1" class="btn btn-primary btn-plan btn-lg btn-block">REGISTER</a>
+                    </div>
+                  </div>
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <h3 class="text-center">So What All Do You Get?</h3>
                       </div>
-                <div class="col-md-3 col-sm-6 plan-tile plan-pro">
-                  <div class="pro-plan-wrap">
-                    <style>
-                      .tldlogo-dot-ca{background-position:-51px -1277px; height:40px; width:49px; margin-bottom:10px;}
-                      .plan-text { height: 66px; }
-                    </style>
-                    <div class="tldlogo tldlogo-dot-ca"></div>
-                    <p class="plan-text">[@L[cds.sales/gd/domains/domain-name-search:PodDotCaText]@L]</p>
-                    <div class="plan-price-wrap">[@T[productprice:<template productid='9405' period='yearly'><nostrike><![CDATA[<span class='plan-price text-warning'>{0}*</span>]]></nostrike><strike><![CDATA[<span class='plan-price text-warning'>{0}*</span><br /> <strong>was <strike>{1}</strike></strong>]]></strike></template>]@T]</div><a href="[@T[link:<relative path='/tlds/ca.aspx'><param name='ci' value='xxxxx' /></relative>]@T]" data-index="1" class="btn btn-primary btn-plan btn-lg btn-block">REGISTER</a>
-                  </div>
-                </div>
-                <div class="col-md-3 col-sm-6 plan-tile plan-pro">
-                  <div class="pro-plan-wrap">
-                    <style>
-                      .tldlogo-dot-quebec{background-position:-53px -597px; height:40px; width:102px; margin-bottom:10px;}
-                      .plan-text { height: 66px; }
-                    </style>
-                    <div class="tldlogo tldlogo-dot-quebec"></div>
-                    <p class="plan-text">[@L[cds.sales/gd/domains/domain-name-search:PodDotQuebecText]@L]</p>
-                    <div class="plan-price-wrap">[@T[productprice:<template productid='546605' period='yearly'><nostrike><![CDATA[<span class='plan-price text-warning'>{0}*</span>]]></nostrike><strike><![CDATA[<span class='plan-price text-warning'>{0}*</span><br /> <strong>was <strike>{1}</strike></strong>]]></strike></template>]@T]</div><a href="[@T[link:<relative path='/tlds/quebec'><param name='ci' value='xxxxx' /></relative>]@T]" data-index="1" class="btn btn-primary btn-plan btn-lg btn-block">REGISTER</a>
-                  </div>
-                </div>
-                <div class="col-md-3 col-sm-6 plan-tile plan-pro">
-                  <div class="pro-plan-wrap">
-                    <style>
-                      .tldlogo-dot-website{background-position:0px -279px; height:40px; width:133px; margin-bottom:10px;}
-                      .plan-text { height: 66px; }
-                    </style>
-                    <div class="tldlogo tldlogo-dot-website"></div>
-                    <p class="plan-text">[@L[cds.sales/gd/domains/domain-name-search:PodDotWebsiteText]@L]</p>
-                    <div class="plan-price-wrap">[@T[productprice:<template productid='461465' period='yearly'><nostrike><![CDATA[<span class='plan-price text-warning'>{0}*</span>]]></nostrike><strike><![CDATA[<span class='plan-price text-warning'>{0}*</span><br /> <strong>was <strike>{1}</strike></strong>]]></strike></template>]@T]</div><a href="[@T[link:<relative path='/tlds/website'><param name='ci' value='xxxxx' /></relative>]@T]" data-index="1" class="btn btn-primary btn-plan btn-lg btn-block">REGISTER</a>
-                  </div>
-                </div>
-                <div class="container">
-                  <div class="row">
-                    <div class="col-sm-12">
-                      <h3 class="text-center">So What All Do You Get?</h3>
                     </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-4 col-sm-6">
-                      <div class="include-check">Simple domain set up - no technical skills needed. Honest.</div>
-                      <div class="include-check">Quickly forward your domain to any existing website</div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                      <div class="include-check">Up to 100 subdomains (like pics.coolexample.com) to customize your site.</div>
-                      <div class="include-check">100 professional email aliases (like sales@coolexample.com).</div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                      <div class="include-check">Real-time monitoring to keep you up and running</div>
+                    <div class="row">
+                      <div class="col-md-4 col-sm-6">
+                        <div class="include-check">Simple domain set up - no technical skills needed. Honest.</div>
+                        <div class="include-check">Quickly forward your domain to any existing website</div>
+                      </div>
+                      <div class="col-md-4 col-sm-6">
+                        <div class="include-check">Up to 100 subdomains (like pics.coolexample.com) to customize your site.</div>
+                        <div class="include-check">100 professional email aliases (like sales@coolexample.com).</div>
+                      </div>
+                      <div class="col-md-4 col-sm-6">
+                        <div class="include-check">Real-time monitoring to keep you up and running</div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1547,69 +1173,71 @@
 }
               </style>
             </atlantis:webstash>
-            <div class="pro-plans-wrap bg-gray-light">
+            <div class="pro-plans-wrap ">
               <div id="plans" data-icode="" class="container pro-plans">
-                      <div class="col-md-3 col-sm-6 plan-tile plan-pro">
-                        <div class="pro-plan-wrap">
-                          <style>
-                            .tldlogo-dot-com{background-position:-52px -676px; height:40px; width:101px; margin-bottom:10px;}
-                            .plan-text { height: 66px; }
-                          </style>
-                          <div class="tldlogo tldlogo-dot-com"></div>
-                          <p class="plan-text">Get the domain that will never go out of style.</p>
-                          <div class="plan-price-wrap">[@T[productprice:<template productid='101' period='yearly'><nostrike><![CDATA[<span class='plan-price text-warning'>{0}*</span>]]></nostrike><strike><![CDATA[<span class='plan-price text-warning'>{0}*</span><br /> <strong>was <strike>{1}</strike></strong>]]></strike></template>]@T]</div><a href="[@T[link:<relative path='/tlds/com.aspx'><param name='ci' value='xxxxx' /></relative>]@T]" data-index="1" class="btn btn-primary btn-plan btn-lg btn-block">REGISTER</a>
+                <div class="row">
+                        <div class="col-md-3 col-sm-6 plan-tile plan-pro">
+                          <div class="pro-plan-wrap">
+                            <style>
+                              .tldlogo-dot-com{background-position:-52px -676px; height:40px; width:101px; margin-bottom:10px;}
+                              .plan-text { height: 66px; }
+                            </style>
+                            <div class="tldlogo tldlogo-dot-com"></div>
+                            <p class="plan-text">Get the domain that will never go out of style.</p>
+                            <div class="plan-price-wrap">[@T[productprice:<template productid='101' period='yearly'><nostrike><![CDATA[<span class='plan-price text-warning'>{0}*</span>]]></nostrike><strike><![CDATA[<span class='plan-price text-warning'>{0}*</span><br /> <strong>was <strike>{1}</strike></strong>]]></strike></template>]@T]</div><a href="[@T[link:<relative path='/tlds/com.aspx'><param name='ci' value='xxxxx' /></relative>]@T]" data-index="1" class="btn btn-primary btn-plan btn-lg btn-block">REGISTER</a>
+                          </div>
                         </div>
+                  <div class="col-md-3 col-sm-6 plan-tile plan-pro">
+                    <div class="pro-plan-wrap">
+                      <style>
+                        .tldlogo-dot-net{background-position:0px -36px; height:40px; width:74px; margin-bottom:10px;}
+                        .plan-text { height: 66px; }
+                      </style>
+                      <div class="tldlogo tldlogo-dot-net"></div>
+                      <p class="plan-text">The domain for entrepreneurs.</p>
+                      <div class="plan-price-wrap">[@T[productprice:<template productid='12001' period='yearly'><nostrike><![CDATA[<span class='plan-price text-warning'>{0}*</span>]]></nostrike><strike><![CDATA[<span class='plan-price text-warning'>{0}*</span><br /> <strong>was <strike>{1}</strike></strong>]]></strike></template>]@T]</div><a href="[@T[link:<relative path='/tlds/net.aspx'><param name='ci' value='xxxxx' /></relative>]@T]" data-index="1" class="btn btn-primary btn-plan btn-lg btn-block">REGISTER</a>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-6 plan-tile plan-pro">
+                    <div class="pro-plan-wrap">
+                      <style>
+                        .tldlogo-dot-org{background-position:-63px -960px; height:40px; width:76px; margin-bottom:10px;}
+                        .plan-text { height: 66px; }
+                      </style>
+                      <div class="tldlogo tldlogo-dot-org"></div>
+                      <p class="plan-text">Build trust with this well-known and respected domain.</p>
+                      <div class="plan-price-wrap">[@T[productprice:<template productid='12101' period='yearly'><nostrike><![CDATA[<span class='plan-price text-warning'>{0}*</span>]]></nostrike><strike><![CDATA[<span class='plan-price text-warning'>{0}*</span><br /> <strong>was <strike>{1}</strike></strong>]]></strike></template>]@T]</div><a href="[@T[link:<relative path='/tlds/org.aspx'><param name='ci' value='xxxxx' /></relative>]@T]" data-index="1" class="btn btn-primary btn-plan btn-lg btn-block">REGISTER</a>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-6 plan-tile plan-pro">
+                    <div class="pro-plan-wrap">
+                      <style>
+                        .tldlogo-dot-info{background-position:0px -1198px; height:40px; width:57px; margin-bottom:10px;}
+                        .plan-text { height: 66px; }
+                      </style>
+                      <div class="tldlogo tldlogo-dot-info"></div>
+                      <p class="plan-text">Share your info with the world.</p>
+                      <div class="plan-price-wrap">[@T[productprice:<template productid='201' period='yearly'><nostrike><![CDATA[<span class='plan-price text-warning'>{0}*</span>]]></nostrike><strike><![CDATA[<span class='plan-price text-warning'>{0}*</span><br /> <strong>was <strike>{1}</strike></strong>]]></strike></template>]@T]</div><a href="[@T[link:<relative path='/tlds/info.aspx'><param name='ci' value='xxxxx' /></relative>]@T]" data-index="1" class="btn btn-primary btn-plan btn-lg btn-block">REGISTER</a>
+                    </div>
+                  </div>
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <h3 class="text-center">So What All Do You Get?</h3>
                       </div>
-                <div class="col-md-3 col-sm-6 plan-tile plan-pro">
-                  <div class="pro-plan-wrap">
-                    <style>
-                      .tldlogo-dot-net{background-position:0px -36px; height:40px; width:74px; margin-bottom:10px;}
-                      .plan-text { height: 66px; }
-                    </style>
-                    <div class="tldlogo tldlogo-dot-net"></div>
-                    <p class="plan-text">The domain for entrepreneurs.</p>
-                    <div class="plan-price-wrap">[@T[productprice:<template productid='12001' period='yearly'><nostrike><![CDATA[<span class='plan-price text-warning'>{0}*</span>]]></nostrike><strike><![CDATA[<span class='plan-price text-warning'>{0}*</span><br /> <strong>was <strike>{1}</strike></strong>]]></strike></template>]@T]</div><a href="[@T[link:<relative path='/tlds/net.aspx'><param name='ci' value='xxxxx' /></relative>]@T]" data-index="1" class="btn btn-primary btn-plan btn-lg btn-block">REGISTER</a>
-                  </div>
-                </div>
-                <div class="col-md-3 col-sm-6 plan-tile plan-pro">
-                  <div class="pro-plan-wrap">
-                    <style>
-                      .tldlogo-dot-org{background-position:-63px -960px; height:40px; width:76px; margin-bottom:10px;}
-                      .plan-text { height: 66px; }
-                    </style>
-                    <div class="tldlogo tldlogo-dot-org"></div>
-                    <p class="plan-text">Build trust with this well-known and respected domain.</p>
-                    <div class="plan-price-wrap">[@T[productprice:<template productid='12101' period='yearly'><nostrike><![CDATA[<span class='plan-price text-warning'>{0}*</span>]]></nostrike><strike><![CDATA[<span class='plan-price text-warning'>{0}*</span><br /> <strong>was <strike>{1}</strike></strong>]]></strike></template>]@T]</div><a href="[@T[link:<relative path='/tlds/org.aspx'><param name='ci' value='xxxxx' /></relative>]@T]" data-index="1" class="btn btn-primary btn-plan btn-lg btn-block">REGISTER</a>
-                  </div>
-                </div>
-                <div class="col-md-3 col-sm-6 plan-tile plan-pro">
-                  <div class="pro-plan-wrap">
-                    <style>
-                      .tldlogo-dot-info{background-position:0px -1198px; height:40px; width:57px; margin-bottom:10px;}
-                      .plan-text { height: 66px; }
-                    </style>
-                    <div class="tldlogo tldlogo-dot-info"></div>
-                    <p class="plan-text">Share your info with the world.</p>
-                    <div class="plan-price-wrap">[@T[productprice:<template productid='201' period='yearly'><nostrike><![CDATA[<span class='plan-price text-warning'>{0}*</span>]]></nostrike><strike><![CDATA[<span class='plan-price text-warning'>{0}*</span><br /> <strong>was <strike>{1}</strike></strong>]]></strike></template>]@T]</div><a href="[@T[link:<relative path='/tlds/info.aspx'><param name='ci' value='xxxxx' /></relative>]@T]" data-index="1" class="btn btn-primary btn-plan btn-lg btn-block">REGISTER</a>
-                  </div>
-                </div>
-                <div class="container">
-                  <div class="row">
-                    <div class="col-sm-12">
-                      <h3 class="text-center">So What All Do You Get?</h3>
                     </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-4 col-sm-6">
-                      <div class="include-check">Simple domain set up - no technical skills needed. Honest.</div>
-                      <div class="include-check">Quickly forward your domain to any existing website</div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                      <div class="include-check">Up to 100 subdomains (like pics.coolexample.com) to customize your site.</div>
-                      <div class="include-check">100 professional email aliases (like sales@coolexample.com).</div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                      <div class="include-check">Real-time monitoring to keep you up and running</div>
+                    <div class="row">
+                      <div class="col-md-4 col-sm-6">
+                        <div class="include-check">Simple domain set up - no technical skills needed. Honest.</div>
+                        <div class="include-check">Quickly forward your domain to any existing website</div>
+                      </div>
+                      <div class="col-md-4 col-sm-6">
+                        <div class="include-check">Up to 100 subdomains (like pics.coolexample.com) to customize your site.</div>
+                        <div class="include-check">100 professional email aliases (like sales@coolexample.com).</div>
+                      </div>
+                      <div class="col-md-4 col-sm-6">
+                        <div class="include-check">Real-time monitoring to keep you up and running</div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -2351,28 +1979,30 @@
             </atlantis:webstash>
             <div class="pro-plans-wrap bg-green-official">
               <div id="plans" data-icode="" class="container pro-plans">
-                      <div class="col-sm-4 plan-tile plan-pro">
-                        <div class="pro-plan-wrap">
-                          <div class="plan-flag">NOW AVAILABLE</div>
-                          <h2 class="plan-title">.global</h2>
-                          <p class="plan-text">[@L[cds.sales/gd/domains/domain-name-search:PodDotGlobalText]@L]</p>
-                          <div class="plan-price-wrap">[@T[productprice:<template productid='483124' period='yearly'><nostrike><![CDATA[<span class='plan-price text-warning'>{0}*</span>]]></nostrike><strike><![CDATA[<span class='plan-price text-warning'>{0}*</span><br /> <strong>was <strike>{1}</strike></strong>]]></strike></template>]@T]</div><a href="[@T[link:<relative path='/tlds/global'><param name='ci' value='xxxxx' /></relative>]@T]" data-index="1" class="btn btn-primary btn-plan btn-lg btn-block">REGISTER</a>
+                <div class="row">
+                        <div class="col-sm-4 plan-tile plan-pro">
+                          <div class="pro-plan-wrap">
+                            <div class="plan-flag">NOW AVAILABLE</div>
+                            <h2 class="plan-title">.global</h2>
+                            <p class="plan-text">[@L[cds.sales/gd/domains/domain-name-search:PodDotGlobalText]@L]</p>
+                            <div class="plan-price-wrap">[@T[productprice:<template productid='483124' period='yearly'><nostrike><![CDATA[<span class='plan-price text-warning'>{0}*</span>]]></nostrike><strike><![CDATA[<span class='plan-price text-warning'>{0}*</span><br /> <strong>was <strike>{1}</strike></strong>]]></strike></template>]@T]</div><a href="[@T[link:<relative path='/tlds/global'><param name='ci' value='xxxxx' /></relative>]@T]" data-index="1" class="btn btn-primary btn-plan btn-lg btn-block">REGISTER</a>
+                          </div>
                         </div>
-                      </div>
-                <div class="col-sm-4 plan-tile plan-pro">
-                  <div class="pro-plan-wrap">
-                    <div class="plan-flag">NOW AVAILABLE</div>
-                    <h2 class="plan-title">.club</h2>
-                    <p class="plan-text">[@L[cds.sales/gd/domains/domain-name-search:PodDotClubText]@L]</p>
-                    <div class="plan-price-wrap">[@T[productprice:<template productid='172137' period='yearly'><nostrike><![CDATA[<span class='plan-price text-warning'>{0}*</span>]]></nostrike><strike><![CDATA[<span class='plan-price text-warning'>{0}*</span><br /> <strong>was <strike>{1}</strike></strong>]]></strike></template>]@T]</div><a href="[@T[link:<relative path='/tlds/club'><param name='ci' value='xxxxx' /></relative>]@T]" data-index="1" class="btn btn-primary btn-plan btn-lg btn-block">REGISTER</a>
+                  <div class="col-sm-4 plan-tile plan-pro">
+                    <div class="pro-plan-wrap">
+                      <div class="plan-flag">NOW AVAILABLE</div>
+                      <h2 class="plan-title">.club</h2>
+                      <p class="plan-text">[@L[cds.sales/gd/domains/domain-name-search:PodDotClubText]@L]</p>
+                      <div class="plan-price-wrap">[@T[productprice:<template productid='172137' period='yearly'><nostrike><![CDATA[<span class='plan-price text-warning'>{0}*</span>]]></nostrike><strike><![CDATA[<span class='plan-price text-warning'>{0}*</span><br /> <strong>was <strike>{1}</strike></strong>]]></strike></template>]@T]</div><a href="[@T[link:<relative path='/tlds/club'><param name='ci' value='xxxxx' /></relative>]@T]" data-index="1" class="btn btn-primary btn-plan btn-lg btn-block">REGISTER</a>
+                    </div>
                   </div>
-                </div>
-                <div class="col-sm-4 plan-tile plan-pro">
-                  <div class="pro-plan-wrap">
-                    <div class="plan-flag">NOW AVAILABLE</div>
-                    <h2 class="plan-title">.co</h2>
-                    <p class="plan-text">[@L[cds.sales/gd/domains/domain-name-search:PodDotCoText]@L]</p>
-                    <div class="plan-price-wrap">[@T[productprice:<template productid='56401' period='yearly'><nostrike><![CDATA[<span class='plan-price text-warning'>{0}*</span>]]></nostrike><strike><![CDATA[<span class='plan-price text-warning'>{0}*</span><br /> <strong>was <strike>{1}</strike></strong>]]></strike></template>]@T]</div><a href="[@T[link:<relative path='/tlds/co-domain.aspx'><param name='ci' value='xxxxx' /></relative>]@T]" data-index="1" class="btn btn-primary btn-plan btn-lg btn-block">REGISTER</a>
+                  <div class="col-sm-4 plan-tile plan-pro">
+                    <div class="pro-plan-wrap">
+                      <div class="plan-flag">NOW AVAILABLE</div>
+                      <h2 class="plan-title">.co</h2>
+                      <p class="plan-text">[@L[cds.sales/gd/domains/domain-name-search:PodDotCoText]@L]</p>
+                      <div class="plan-price-wrap">[@T[productprice:<template productid='56401' period='yearly'><nostrike><![CDATA[<span class='plan-price text-warning'>{0}*</span>]]></nostrike><strike><![CDATA[<span class='plan-price text-warning'>{0}*</span><br /> <strong>was <strike>{1}</strike></strong>]]></strike></template>]@T]</div><a href="[@T[link:<relative path='/tlds/co-domain.aspx'><param name='ci' value='xxxxx' /></relative>]@T]" data-index="1" class="btn btn-primary btn-plan btn-lg btn-block">REGISTER</a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -2762,28 +2392,30 @@
             </atlantis:webstash>
             <div class="pro-plans-wrap bg-green-official">
               <div id="plans" data-icode="" class="container pro-plans">
-                      <div class="col-sm-4 plan-tile plan-pro">
-                        <div class="pro-plan-wrap">
-                          <div class="plan-flag">NOW AVAILABLE</div>
-                          <h2 class="plan-title">.global</h2>
-                          <p class="plan-text">[@L[cds.sales/gd/domains/domain-name-search:PodDotGlobalText]@L]</p>
-                          <div class="plan-price-wrap">[@T[productprice:<template productid='483124' period='yearly'><nostrike><![CDATA[<span class='plan-price text-warning'>{0}*</span>]]></nostrike><strike><![CDATA[<span class='plan-price text-warning'>{0}*</span><br /> <strong>was <strike>{1}</strike></strong>]]></strike></template>]@T]</div><a href="[@T[link:<relative path='/tlds/global'><param name='ci' value='xxxxx' /></relative>]@T]" data-index="1" class="btn btn-primary btn-plan btn-lg btn-block">REGISTER</a>
+                <div class="row">
+                        <div class="col-sm-4 plan-tile plan-pro">
+                          <div class="pro-plan-wrap">
+                            <div class="plan-flag">NOW AVAILABLE</div>
+                            <h2 class="plan-title">.global</h2>
+                            <p class="plan-text">[@L[cds.sales/gd/domains/domain-name-search:PodDotGlobalText]@L]</p>
+                            <div class="plan-price-wrap">[@T[productprice:<template productid='483124' period='yearly'><nostrike><![CDATA[<span class='plan-price text-warning'>{0}*</span>]]></nostrike><strike><![CDATA[<span class='plan-price text-warning'>{0}*</span><br /> <strong>was <strike>{1}</strike></strong>]]></strike></template>]@T]</div><a href="[@T[link:<relative path='/tlds/global'><param name='ci' value='xxxxx' /></relative>]@T]" data-index="1" class="btn btn-primary btn-plan btn-lg btn-block">REGISTER</a>
+                          </div>
                         </div>
-                      </div>
-                <div class="col-sm-4 plan-tile plan-pro">
-                  <div class="pro-plan-wrap">
-                    <div class="plan-flag">NOW AVAILABLE</div>
-                    <h2 class="plan-title">.club</h2>
-                    <p class="plan-text">[@L[cds.sales/gd/domains/domain-name-search:PodDotClubText]@L]</p>
-                    <div class="plan-price-wrap">[@T[productprice:<template productid='172137' period='yearly'><nostrike><![CDATA[<span class='plan-price text-warning'>{0}*</span>]]></nostrike><strike><![CDATA[<span class='plan-price text-warning'>{0}*</span><br /> <strong>was <strike>{1}</strike></strong>]]></strike></template>]@T]</div><a href="[@T[link:<relative path='/tlds/club'><param name='ci' value='xxxxx' /></relative>]@T]" data-index="1" class="btn btn-primary btn-plan btn-lg btn-block">REGISTER</a>
+                  <div class="col-sm-4 plan-tile plan-pro">
+                    <div class="pro-plan-wrap">
+                      <div class="plan-flag">NOW AVAILABLE</div>
+                      <h2 class="plan-title">.club</h2>
+                      <p class="plan-text">[@L[cds.sales/gd/domains/domain-name-search:PodDotClubText]@L]</p>
+                      <div class="plan-price-wrap">[@T[productprice:<template productid='172137' period='yearly'><nostrike><![CDATA[<span class='plan-price text-warning'>{0}*</span>]]></nostrike><strike><![CDATA[<span class='plan-price text-warning'>{0}*</span><br /> <strong>was <strike>{1}</strike></strong>]]></strike></template>]@T]</div><a href="[@T[link:<relative path='/tlds/club'><param name='ci' value='xxxxx' /></relative>]@T]" data-index="1" class="btn btn-primary btn-plan btn-lg btn-block">REGISTER</a>
+                    </div>
                   </div>
-                </div>
-                <div class="col-sm-4 plan-tile plan-pro">
-                  <div class="pro-plan-wrap">
-                    <div class="plan-flag">NOW AVAILABLE</div>
-                    <h2 class="plan-title">.co</h2>
-                    <p class="plan-text">[@L[cds.sales/gd/domains/domain-name-search:PodDotCoText]@L]</p>
-                    <div class="plan-price-wrap">[@T[productprice:<template productid='56401' period='yearly'><nostrike><![CDATA[<span class='plan-price text-warning'>{0}*</span>]]></nostrike><strike><![CDATA[<span class='plan-price text-warning'>{0}*</span><br /> <strong>was <strike>{1}</strike></strong>]]></strike></template>]@T]</div><a href="[@T[link:<relative path='/tlds/co-domain.aspx'><param name='ci' value='xxxxx' /></relative>]@T]" data-index="1" class="btn btn-primary btn-plan btn-lg btn-block">REGISTER</a>
+                  <div class="col-sm-4 plan-tile plan-pro">
+                    <div class="pro-plan-wrap">
+                      <div class="plan-flag">NOW AVAILABLE</div>
+                      <h2 class="plan-title">.co</h2>
+                      <p class="plan-text">[@L[cds.sales/gd/domains/domain-name-search:PodDotCoText]@L]</p>
+                      <div class="plan-price-wrap">[@T[productprice:<template productid='56401' period='yearly'><nostrike><![CDATA[<span class='plan-price text-warning'>{0}*</span>]]></nostrike><strike><![CDATA[<span class='plan-price text-warning'>{0}*</span><br /> <strong>was <strike>{1}</strike></strong>]]></strike></template>]@T]</div><a href="[@T[link:<relative path='/tlds/co-domain.aspx'><param name='ci' value='xxxxx' /></relative>]@T]" data-index="1" class="btn btn-primary btn-plan btn-lg btn-block">REGISTER</a>
+                    </div>
                   </div>
                 </div>
               </div>
