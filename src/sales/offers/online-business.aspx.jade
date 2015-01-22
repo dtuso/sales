@@ -1,6 +1,6 @@
 ---
 location: sales/offers/online-business.aspx
-id: 54c07608f778fc07e885c0eb
+id: 54bfdab3f778fc07e885c04d
 name: GCE-32414-GOT-jmg
 comments: GOT rebrand 2015 SuperBowl
 ---
@@ -32,7 +32,7 @@ append headScripts
   atlantis:webstash(type="js")
     script
       include:js online-business/got.js
-    script(type="text/javascript", src="https://img1.wsimg.com/fos/hp/rebrand/js/bigtext.min.js")
+    script(type="text/javascript", src!="[@T[link:<javascriptroot />]@T]fos/hp/rebrand/js/bigtext.min.js")
 
 
 append pageStyles

@@ -436,9 +436,10 @@ function showTldImagesInDomainArea() {
   var $imageDiv = $('#findYourPerfectDomain').find(".features-img").parent().empty().addClass('tld-images');
   $.each(got1Page.tldInfo.tlds, function(idx, tld){
     var $img = $('<img>')
-      .addClass('tld-image')
-      .attr('src', got1Page.imagePath + 'tld-' + tld + '.png');
+      .addClass('tld-image lazyload')
+      .attr('data-lazyload-source', got1Page.imagePath + 'tld-' + tld + '.png');
     $imageDiv.append($img);
+    lazyload.add($img);
   });
 
   // rerun the height alignment
@@ -814,14 +815,14 @@ $(window).load(function () {
 
 
       </script>
-      <script type="text/javascript" src="https://img1.wsimg.com/fos/hp/rebrand/js/bigtext.min.js"></script>
+      <script type="text/javascript" src="[@T[link:<javascriptroot />]@T]fos/hp/rebrand/js/bigtext.min.js"></script>
     </atlantis:webstash>
     <style>
       .svgfallback{display:none}
       .svgfallback:not(old){display:block}
       
     </style>
-    <link href="[@T[link:<cssroot />]@T]/fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css">
+    <link href="[@T[link:<cssroot />]@T]fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css">
     <style>
 
 ##if(countrySiteAny(gr))
@@ -1938,9 +1939,6 @@ h
         </div>
       </section>
     </section>
-    <atlantis:webstash type="js">
-      <script type="text/javascript" src="https://img1.wsimg.com/fos/hp/rebrand/js/bigtext.min.js"></script>
-    </atlantis:webstash>
     <div id="api-failure" class="sf-dialog api-B-failure">
       <h2 class="api-error-header"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/WarningSign.png">
         <div>[@L[cds.sales/offers/online-business:32573-something-unexpected-happened]@L]</div>
@@ -2499,7 +2497,8 @@ h
      
     <section id="wsb-only-choice" class="bg-green-official-light">
       <div class="container">
-        <div class="row top-row text-center">       <img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_wsb_icon_large_feature.png"></div>
+        <div class="row top-row text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_wsb_icon_large_feature.png" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
+        </div>
         <div class="row text-center">     
           <h2 class="text-center">[@L[cds.sales/offers/online-business:32573-godaddy-wsb]@L]</h2>
           <h3 class="text-center">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text]@L]</h3>
@@ -2884,12 +2883,13 @@ h
             </div>
           </div>
         </div>
-        <div style="background-image: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/bg-WSB-Mod.jpg'); ;" class="two-up-wrap-compare ">
+        <div style=";" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/bg-WSB-Mod.jpg" class="two-up-wrap-compare  lazyload">
           <div class="container">
             <div class="row">
               <div class="col-md-5 or-container col-sm-6  bg-green-official">
                 <div style="" class="two-up-text-wrap ">
-                  <div class="text-center two-up-image"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-wsb-icon.png" alt=""/></div>
+                  <div class="text-center two-up-image"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-wsb-icon.png" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
+                  </div>
                   <h2 class="text-center">[@L[cds.sales/offers/online-business:32573-godaddy-wsb]@L]</h2>
                   <h3 class="text-center">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text]@L]</h3>
                   <div class="row">
@@ -2948,7 +2948,8 @@ h
               </div>
               <div class="col-md-5 col-md-offset-2 col-sm-6  bg-green-official-light">
                 <div style="" class="two-up-text-wrap ">
-                  <div class="text-center two-up-image"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-onlineStore.png" alt=""/></div>
+                  <div class="text-center two-up-image"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-onlineStore.png" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
+                  </div>
                   <h2 class="text-center">[@L[cds.sales/offers/online-business:32573-godaddy-ols]@L]</h2>
                   <h3 class="text-center">[@L[cds.sales/offers/online-business:32573-godaddy-ols-text]@L]</h3>
                   <div class="row">
