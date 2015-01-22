@@ -127,10 +127,6 @@
       }
       
     </script>
-    <script type="text/javascript">
-      delayLoader.addScript('[@T[link:<javascriptroot />]@T]/fos/liveperson/js/liveperson_20141013a.min.js')
-      
-    </script>
     <atlantis:webstash type="js">
       <script>// Array indexOf shim for IE9 and below
 if (!Array.prototype.indexOf){
@@ -1331,7 +1327,7 @@ h
     <script src="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy-combo.min.js"></script><![endif]-->
     <script type="text/javascript">
       delayLoader.addScript('[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2')
-      //- delayLoader.addScript('[@T[link:<javascriptroot />]@T]/fastball/js_lib/Fastball.ChannelIntegration-2.0.6.min.js')
+      delayLoader.addScript('[@T[link:<javascriptroot />]@T]/fos/liveperson/js/liveperson_20150115.min.js')
       
     </script>
     <!-- Google Tag Manager-->
@@ -5820,8 +5816,6 @@ var PlanBox6UI = {
     <!-- FOOTERBEGIN--> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- FOOTEREND-     -->
-     
-    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Bottom"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- liveperson includes -->
     <div id="lpButtonDiv"></div><!-- End Main Content -->
     <script type="text/javascript">

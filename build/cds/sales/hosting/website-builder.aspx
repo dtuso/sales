@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="[@T[localization:<language full='true' />]@T]">
+<html lang="[@T[localization:<language full='true' />]@T]" id="" ng-app="">
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta http-equiv="content-language" content="[@T[localization:<language full='true' />]@T]">
@@ -120,10 +120,6 @@
           window._trfq.push(['cmdLogImpression', $(element).attr('data-icode'), null, element]);
         });
       }
-      
-    </script>
-    <script type="text/javascript">
-      delayLoader.addScript('[@T[link:<javascriptroot />]@T]/fos/liveperson/js/liveperson_20141013a.min.js')
       
     </script>
     <style>
@@ -254,7 +250,7 @@ width: 50%;
     <script src="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy-combo.min.js"></script><![endif]-->
     <script type="text/javascript">
       delayLoader.addScript('[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2')
-      //- delayLoader.addScript('[@T[link:<javascriptroot />]@T]/fastball/js_lib/Fastball.ChannelIntegration-2.0.6.min.js')
+      delayLoader.addScript('[@T[link:<javascriptroot />]@T]/fos/liveperson/js/liveperson_20150115.min.js')
       
     </script>
     <!-- Google Tag Manager-->
@@ -270,7 +266,7 @@ width: 50%;
       
     </script>
   </head>
-  <body>
+  <body ng-controller="" ng-cloak>
     <!-- HEADERBEGIN--> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- HEADEREND-->
@@ -5739,8 +5735,6 @@ margin-bottom: 20px;
     <!-- FOOTERBEGIN--> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- FOOTEREND-     -->
-     
-    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Bottom"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- liveperson includes -->
     <div id="lpButtonDiv"></div><!-- End Main Content -->
     <script type="text/javascript">
