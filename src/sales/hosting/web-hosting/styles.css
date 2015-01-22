@@ -189,6 +189,11 @@ h3 {
   background-repeat: no-repeat; background-size: 100% 100%; 
 }
 
+.one-click-right img {
+  height:auto; 
+  max-width:100%;
+}
+
 @media (max-width: 767px) {
   #one-click-install {
     background-image: none !important;

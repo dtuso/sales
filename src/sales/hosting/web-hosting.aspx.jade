@@ -159,7 +159,7 @@ block plans
           .row.pro-banner.white-text
             .col-sm-3.pro-banner-image
               div.text-center
-                img(src!= "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img-webpro-logo.png")
+                +lazyImg("", "", "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img-webpro-logo.png")
             .col-sm-6.pro-banner-text
               p.top-text [@L[cds.sales/hosting/web-hosting-rebrand:proBannerTop]@L]
               p.bottom-text [@L[cds.sales/hosting/web-hosting-rebrand:proBannerBottom]@L]
@@ -167,13 +167,6 @@ block plans
               a(class= "btn btn-default-light" href!="[@T[link:<relative path='/pro/cpanel-hosting'>><param name='ci' value='93999' /></relative>]@T]") [@L[cds.sales/hosting/web-hosting-rebrand:learnMore]@L]
           .row
             .col-sm-12
-              | 
-              |##if(activeLanguageAny([en-US]))
-              | 
-              h2.text-center(style="padding-top: 50px;") [@L[cds.sales/hosting/web-hosting-rebrand:theresMoreRebrand]@L]
-              | 
-              |##endif
-              | 
               h3.text-center [@L[cds.sales/hosting/web-hosting-rebrand:allPlans]@L]
           +columnListMember
             .include-check [@L[cds.sales/hosting/web-hosting-rebrand:freeDomain]@L]. <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:freeDomainRestrictions]@L]'></span>
@@ -207,7 +200,7 @@ block plans
           .row.pro-banner.white-text
             .col-sm-3.pro-banner-image
               div.text-center
-                img(src!= "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img-webpro-logo.png")
+                +lazyImg("", "", "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img-webpro-logo.png")
             .col-sm-6.pro-banner-text
               p.top-text [@L[cds.sales/hosting/web-hosting-rebrand:proBannerTop]@L]
               p.bottom-text [@L[cds.sales/hosting/web-hosting-rebrand:proBannerBottom]@L]
@@ -276,7 +269,7 @@ block sections
           | 
         .col-sm-6.one-click-right
           div.text-center
-            img.features-img.features-img-right(style="height:auto; max-width:100%;" src!= "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img-feature1-logos.png")
+            +lazyImg("", "", "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img-feature1-logos.png")
 
   section#speed-chart.tile-section
     .container
@@ -292,12 +285,12 @@ block sections
         | 
         |##endif
         | 
-        img(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img-graph-chart.png")
+        +lazyImg("","","[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img-graph-chart.png")
         .speed-text
           img()
     .container
       .col-sm-2.text-center
-        img(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/GD_WebHosting_Chart_Polygon.png")
+        +lazyImg("","","[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/GD_WebHosting_Chart_Polygon.png")
       .col-sm-10
         div
           | 
@@ -328,7 +321,7 @@ block sections
     +renderColumnList(3, {backgroundColor: "#fff"})
       +columnListMember("key-benefit")
         .key-benefits-img-wrap
-          img.key-benefits-img(src != "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/GD_WebHosting_Module_Feature_Group_ScalableResources.png")
+          +lazyImg("","","[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/GD_WebHosting_Module_Feature_Group_ScalableResources.png")
         | 
         |##if(activeLanguageAny([en-US]))
         | 
@@ -352,7 +345,7 @@ block sections
         | 
       +columnListMember("key-benefit")
         .key-benefits-img-wrap
-          img.key-benefits-img(src != "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/GD_WebHosting_Module_Feature_Group_Security.png")
+          +lazyImg("","","[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/GD_WebHosting_Module_Feature_Group_Security.png")
         h3.key-benefits-title [@L[cds.sales/hosting/web-hosting-rebrand:awardSecurity]@L]
         | 
         |##if(activeLanguageAny([en-US]))
@@ -367,7 +360,7 @@ block sections
         | 
       +columnListMember("key-benefit")
         .key-benefits-img-wrap
-          img.key-benefits-img(src != "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/GD_WebHosting_Module_Feature_Group_WhatIsHosting.png")
+          +lazyImg("","","[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/GD_WebHosting_Module_Feature_Group_WhatIsHosting.png")
         | 
         |##if(activeLanguageAny([en-US]))
         | 
@@ -1583,7 +1576,7 @@ block sections
   | 
 
   section#platforms(data-mid-nav-title="[@L[cds.sales/hosting/web-hosting-rebrand:midpageplatforms]@L]")
-    +renderTwoUpCompare({ title: "[@L[cds.sales/hosting/web-hosting-rebrand:choosePlatform]@L]", twoUpCompareId: "choose-platform", titleBackgroundColor: "bg-green-new", backgroundColor: "bg-green-official", backgroundImage: "background-image: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/linux-v-windows.png')"})
+    +renderTwoUpCompare({ title: "[@L[cds.sales/hosting/web-hosting-rebrand:choosePlatform]@L]", twoUpCompareId: "choose-platform", titleBackgroundColor: "bg-green-new", backgroundColor: "bg-green-official", backgroundImage: "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/linux-v-windows.png"})
       +twoUpCompareColumn({ orContainer: true, title: "[@L[cds.sales/hosting/web-hosting-rebrand:cPanelTitle2]@L]", backgroundColor: "bg-green-official", subtitle: "[@L[cds.sales/hosting/web-hosting-rebrand:linuxPlan]@L]", titleAlign: "center", subtitleAlign: "center", image: "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img-cpanel-linux.png"})
         .include-check-black <strong>[@L[cds.sales/hosting/web-hosting-rebrand:cPanelListItem]@L]</strong> </br> [@L[cds.sales/hosting/web-hosting-rebrand:cPanelListItemDesc]@L]
         .include-check-black <strong>[@L[cds.sales/hosting/web-hosting-rebrand:cloudLinuxListItem]@L]</strong> </br> [@L[cds.sales/hosting/web-hosting-rebrand:cloudLinuxListItemDesc]@L]
@@ -1640,7 +1633,7 @@ block sections
                           twoUpCompareId: "two-up", 
                           titleBackgroundColor: "bg-white", 
                           backgroundColor: "bg-green-official", 
-                          backgroundImage: "background-image: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/compare-bg.png')", 
+                          backgroundImage: "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/compare-bg.png", 
                           style: "min-height: 580px;", 
                           includeStyles: false})
       +twoUpCompareColumn({ title: "[@L[cds.sales/hosting/web-hosting-rebrand:wsbDoIt]@L] [@L[cds.sales/hosting/web-hosting-rebrand:wsbHosting]@L]", 
@@ -1670,7 +1663,7 @@ block sections
                           twoUpCompareId: "two-up", 
                           titleBackgroundColor: "bg-white", 
                           backgroundColor: "bg-green-official", 
-                          backgroundImage: "background-image: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/compare-bg.png')", 
+                          backgroundImage: "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/compare-bg.png", 
                           style: "min-height: 580px;", 
                           includeStyles: false})
       +twoUpCompareColumn({ title: "[@L[cds.sales/hosting/web-hosting-rebrand:wsbDoIt]@L] [@L[cds.sales/hosting/web-hosting-rebrand:wsbHosting]@L]", 
