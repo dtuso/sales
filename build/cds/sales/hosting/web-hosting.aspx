@@ -140,6 +140,22 @@
       
     </style>
     <link href="[@T[link:<cssroot />]@T]/fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css">
+    <style>
+
+##if(countrySiteAny(gr))
+* {
+  font-family: arial !important;
+}
+.close {
+  font-family: uxfont !important;
+}
+.uxicon {
+  font-family: uxfont !important;
+}
+##endif
+
+
+    </style>
     <style>h1 {
   text-transform: uppercase;
   font-family: 'Walsheim-Black';
@@ -697,6 +713,8 @@ cursor: pointer;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
   }
 }
+
+
     </style><!--[if lt IE 9]>
     <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
     <link href="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy.min.html" id="respond-proxy" rel="respond-proxy">
@@ -6991,7 +7009,7 @@ h2.marquee-product-name,
           </div>
           <div class="col-md-3 col-sm-6 plan-tile plan-pro">
             <div class="pro-plan-wrap">
-              <div class="plan-flag">More power and security</div>
+              <div class="plan-flag">[@L[cds.sales/hosting/web-hosting-rebrand:ultFlag]@L]</div>
               <h2 class="plan-title">[@L[cds.sales/hosting/web-hosting-rebrand:ultimatePlan]@L]</h2>
               <p class="plan-text">[@L[cds.sales/hosting/web-hosting-rebrand:handlesMost]@L]</p>
               <div class="plan-price-wrap"><span class="plan-price text-warning">[@T[productprice:<current productid="32082" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
@@ -7068,6 +7086,7 @@ h2.marquee-product-name,
             <div style="background-image: url(); background-color: #d9d9d9;">
               <div class="container">
                 <div class="row">
+                  <div class="row"></div>
                   <div class="row pro-banner white-text">
                     <div class="col-sm-3 pro-banner-image">
                       <div class="text-center"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img-webpro-logo.png"></div>
@@ -7550,7 +7569,7 @@ h2.marquee-product-name,
           </div>
           <div class="col-sm-4 plan-tile plan-pro">
             <div class="pro-plan-wrap">
-              <div class="plan-flag">More power and security</div>
+              <div class="plan-flag">[@L[cds.sales/hosting/web-hosting-rebrand:ultFlag]@L]</div>
               <h2 class="plan-title">[@L[cds.sales/hosting/web-hosting-rebrand:ultimatePlan]@L]</h2>
               <p class="plan-text">[@L[cds.sales/hosting/web-hosting-rebrand:handlesMost]@L]</p>
               <div class="plan-price-wrap"><span class="plan-price text-warning">[@T[productprice:<current productid="32082" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
@@ -7627,6 +7646,7 @@ h2.marquee-product-name,
             <div style="background-image: url(); background-color: #d9d9d9;">
               <div class="container">
                 <div class="row">
+                  <div class="row"></div>
                   <div class="row pro-banner white-text">
                     <div class="col-sm-3 pro-banner-image">
                       <div class="text-center"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img-webpro-logo.png"></div>
@@ -8276,7 +8296,7 @@ height: 27px;
 }
 
 .compare-nav-tabs {
-  margin-bottom: -16px;
+  margin-bottom: -1px;
   color: #333;
   font-size: 23px;
   font-family: 'Walsheim-Black';
@@ -8295,7 +8315,7 @@ height: 27px;
           <table id="cpanel-table" class="compare-table">
             <thead>
               <tr>
-                <td style="width: 40%;padding-left: 0;border-bottom: 1px solid #333;">
+                <td style="width: 40%;padding-left: 0;padding-bottom: 0;border-bottom: 1px solid #333;">
                   <!--h2 [@L[cds.sales/hosting/web-hosting-rebrand:cPanelTitle]@L]-->
                   <ul class="nav nav-tabs compare-nav-tabs">
                     <li id="cpanelTab" class="active"><a>cPanel</a></li>
@@ -8687,7 +8707,7 @@ height: 27px;
           <table id="parallels-table" class="compare-table">
             <thead>
               <tr>
-                <td style="width: 40%;padding-left: 0;border-bottom: 1px solid #333;">
+                <td style="width: 40%;padding-left: 0;padding-bottom: 0;border-bottom: 1px solid #333;">
                   <!--h2 [@L[cds.sales/hosting/web-hosting-rebrand:windowsTitle]@L]-->
                   <ul class="nav nav-tabs compare-nav-tabs">
                     <li id="cpanelTab"><a href="javascript:comparePlans2('cpanel-tab')">cPanel</a></li>
@@ -9242,7 +9262,7 @@ height: 27px;
 }
 
 .compare-nav-tabs {
-  margin-bottom: -16px;
+  margin-bottom: -1px;
   color: #333;
   font-size: 23px;
   font-family: 'Walsheim-Black';
@@ -9261,7 +9281,7 @@ height: 27px;
           <table id="cpanel-table" class="compare-table">
             <thead>
               <tr>
-                <td style="width: 40%;padding-left: 0;border-bottom: 1px solid #333;">
+                <td style="width: 40%;padding-left: 0;padding-bottom: 0;border-bottom: 1px solid #333;">
                   <!--h2 [@L[cds.sales/hosting/web-hosting-rebrand:cPanelTitle]@L]-->
                   <ul class="nav nav-tabs compare-nav-tabs">
                     <li id="cpanelTab" class="active"><a>cPanel</a></li>
@@ -9599,7 +9619,7 @@ height: 27px;
           <table id="parallels-table" class="compare-table">
             <thead>
               <tr>
-                <td style="width: 40%;padding-left: 0;border-bottom: 1px solid #333;">
+                <td style="width: 40%;padding-left: 0;padding-bottom: 0;border-bottom: 1px solid #333;">
                   <!--h2 [@L[cds.sales/hosting/web-hosting-rebrand:windowsTitle]@L]-->
                   <ul class="nav nav-tabs compare-nav-tabs">
                     <li id="cpanelTab"><a href="javascript:comparePlans2('cpanel-tab')">cPanel</a></li>
