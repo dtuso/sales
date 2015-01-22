@@ -14,6 +14,7 @@ mixin twoUpCompareColumn(columnOptions)
   - columnOptions.subtitle = columnOptions.subtitle || "";
   - columnOptions.subtitleAlign = columnOptions.subtitleAlign || "";
   - columnOptions.orContainer = columnOptions.orContainer || false;
+  - columnOptions.lazyload = columnOptions.lazyload || false;
   - var offsetClass = ""
 
   if populatedColumns == 1
@@ -35,7 +36,10 @@ mixin twoUpCompareColumn(columnOptions)
 
       if (columnOptions.image)
         .text-center.two-up-image
-          img(src!="#{columnOptions.image}", alt="#{columnOptions.altText}")
+          if(columnOptions.lazyload) 
+            +lazyImg('', '', columnOptions.image, columnOptions.altText)
+          else 
+            img(src!="#{columnOptions.image}", alt="#{columnOptions.altText}")
 
       if (columnOptions.title)
         case columnOptions.titleAlign

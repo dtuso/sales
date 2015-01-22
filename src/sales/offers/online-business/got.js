@@ -304,9 +304,10 @@ function showTldImagesInDomainArea() {
   var $imageDiv = $('#findYourPerfectDomain').find(".features-img").parent().empty().addClass('tld-images');
   $.each(got1Page.tldInfo.tlds, function(idx, tld){
     var $img = $('<img>')
-      .addClass('tld-image')
-      .attr('src', got1Page.imagePath + 'tld-' + tld + '.png');
+      .addClass('tld-image lazyload')
+      .attr('data-lazyload-source', got1Page.imagePath + 'tld-' + tld + '.png');
     $imageDiv.append($img);
+    lazyload.add($img);
   });
 
   // rerun the height alignment
