@@ -129,7 +129,7 @@
       .svgfallback:not(old){display:block}
       
     </style>
-    <link href="[@T[link:<cssroot />]@T]/fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css">
+    <link href="[@T[link:<cssroot />]@T]fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css">
     <style>
 
 ##if(countrySiteAny(gr))
@@ -708,6 +708,7 @@ cursor: pointer;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
   }
 }
+
 
 
     </style><!--[if lt IE 9]>
@@ -10299,7 +10300,7 @@ height: 27px;
             <div class="row">
               <div class="col-md-5 or-container col-sm-6  bg-green-official">
                 <div style="" class="two-up-text-wrap ">
-                  <div class="text-center two-up-image"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img-cpanel-linux.png" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
+                  <div class="text-center two-up-image"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img-cpanel-linux.png" alt=""/>
                   </div>
                   <h2 class="text-center">[@L[cds.sales/hosting/web-hosting-rebrand:cPanelTitle2]@L]</h2>
                   <h3 class="text-center">[@L[cds.sales/hosting/web-hosting-rebrand:linuxPlan]@L]</h3>
@@ -10316,7 +10317,7 @@ height: 27px;
               </div>
               <div class="col-md-5 col-md-offset-2 col-sm-6  bg-green-official-light">
                 <div style="" class="two-up-text-wrap ">
-                  <div class="text-center two-up-image"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img-Windows8.png" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
+                  <div class="text-center two-up-image"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img-Windows8.png" alt=""/>
                   </div>
                   <h2 class="text-center">[@L[cds.sales/hosting/web-hosting-rebrand:windowsTitle2]@L]</h2>
                   <h3 class="text-center">[@L[cds.sales/hosting/web-hosting-rebrand:windowsPlan]@L]</h3>
@@ -10952,10 +10953,10 @@ height: 27px;
       function disclaimersModal() {
         $('#disclaimersModal').sfDialog({buttons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }] });
       }
-      $("#alternate-products").find(".col-md-offset-2").find("h2").hover(function(){
-          $(this).hide().text("[@L[cds.sales/hosting/web-hosting-rebrand:vpsGrooow]@L]").fadeIn("slow");
+      $("#alternate-products").find(".col-md-offset-2").hover(function(){
+          $("#alternate-products").find(".col-md-offset-2").find("h2").text("[@L[cds.sales/hosting/web-hosting-rebrand:vpsGrooow]@L]").fadeIn("slow");
       }, function() {
-          $(this).hide().text("[@L[cds.sales/hosting/web-hosting-rebrand:vpsGrow]@L]").fadeIn("slow");
+          $("#alternate-products").find(".col-md-offset-2").find("h2").text("[@L[cds.sales/hosting/web-hosting-rebrand:vpsGrow]@L]").fadeIn("slow");
       });
       ##if(activeLanguageAny([en-us]))
         var loadReviews = function(){
