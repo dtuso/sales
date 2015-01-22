@@ -5,10 +5,11 @@ atlantis:webstash(type="css")
       #website-promo ul{margin-left:-20px;}
       #website-promo li{width:125%}
       #website-promo .container>.row>div{margin-left:8.333333333333332%;}
-
+      .two-up-speech-shape.two-up-speech-shape-gold,.two-up-speech-shape.two-up-speech-shape-gold:after{background-color:#fedc45;}
+      .two-up-speech-shape.two-up-speech-shape-gold:before{border-top-color:#fedc45;}
 section#website-promo
   +renderTwoUpCompare({title: "Get Your Website Online Today.", twoUpCompareId: "website-promo", titleBackgroundColor: "bg-green-official", backgroundImage: "[@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/website_promo.jpg", style: "min-height: 100%;"})
-    +twoUpCompareColumn({title: "No Skills?<br />No Time?<br />No Problem.", backgroundColor: "bg-gray-darkest", shapeText: "WEBSITE BUILDER", shapeColor: "gold", whiteText:"WhiteText"})
+    +twoUpCompareColumn({title: "<br />No Time?<br />No Problem.", backgroundColor: "bg-gray-darkest", shapeText: "WEBSITE BUILDER", shapeColor: "gold", whiteText:"WhiteText"})
       ul
         li Start with your choice of 100s of professional designs.
         li Customize it with our simple drag-&-drop tools.
