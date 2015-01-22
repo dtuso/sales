@@ -337,6 +337,11 @@ h3 {
   background-repeat: no-repeat; background-size: 100% 100%; 
 }
 
+.one-click-right img {
+  height:auto; 
+  max-width:100%;
+}
+
 @media (max-width: 767px) {
   #one-click-install {
     background-image: none !important;
@@ -7079,7 +7084,8 @@ h2.marquee-product-name,
                   <div class="row"></div>
                   <div class="row pro-banner white-text">
                     <div class="col-sm-3 pro-banner-image">
-                      <div class="text-center"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img-webpro-logo.png"></div>
+                      <div class="text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img-webpro-logo.png" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
+                      </div>
                     </div>
                     <div class="col-sm-6 pro-banner-text">
                       <p class="top-text">[@L[cds.sales/hosting/web-hosting-rebrand:proBannerTop]@L]</p>
@@ -7089,12 +7095,6 @@ h2.marquee-product-name,
                   </div>
                   <div class="row">
                     <div class="col-sm-12">
-                       
-                      ##if(activeLanguageAny([en-US]))
-                       
-                      <h2 style="padding-top: 50px;" class="text-center">[@L[cds.sales/hosting/web-hosting-rebrand:theresMoreRebrand]@L]</h2> 
-                      ##endif
-                       
                       <h3 class="text-center">[@L[cds.sales/hosting/web-hosting-rebrand:allPlans]@L]</h3>
                     </div>
                   </div>
@@ -7639,7 +7639,8 @@ h2.marquee-product-name,
                   <div class="row"></div>
                   <div class="row pro-banner white-text">
                     <div class="col-sm-3 pro-banner-image">
-                      <div class="text-center"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img-webpro-logo.png"></div>
+                      <div class="text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img-webpro-logo.png" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
+                      </div>
                     </div>
                     <div class="col-sm-6 pro-banner-text">
                       <p class="top-text">[@L[cds.sales/hosting/web-hosting-rebrand:proBannerTop]@L]</p>
@@ -7868,8 +7869,8 @@ h2.marquee-product-name,
       
         var nav = $('.mid-page-nav');
         var navTop = nav.offset().top;
-        var footerBot = $('#footer').offset().top
-        var sections = []
+        var footerBot = $('#footer').offset().top;
+        var sections = [];
       
         $('[data-mid-nav-title]').each(function(){
           //titles.push($(this).data('mid-nav-title'));
@@ -7909,7 +7910,7 @@ h2.marquee-product-name,
         $('#midPageNav .dropdown-toggle').dropdown();
       });
       function organizeNavBar(){
-        var linkArea = $('.navbar-nav').width();
+        var linkArea = $('.navbar-nav').width()+ 150;
         var navBarArea = $('.navbar-collapse').width()-$('.navbar-right').width();
         dropdownItem = "";
         $dropdownMenu = "";
@@ -7976,7 +7977,8 @@ h2.marquee-product-name,
              
           </div>
           <div class="col-sm-6 one-click-right">
-            <div class="text-center"><img style="height:auto; max-width:100%;" src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img-feature1-logos.png" class="features-img features-img-right"></div>
+            <div class="text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img-feature1-logos.png" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
+            </div>
           </div>
         </div>
       </div>
@@ -7992,12 +7994,13 @@ h2.marquee-product-name,
            
           <h3>[@L[cds.sales/hosting/web-hosting-rebrand:fastWeb]@L]</h3> 
           ##endif
-           <img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img-graph-chart.png">
+           <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img-graph-chart.png" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
           <div class="speed-text"><img></div>
         </div>
       </div>
       <div class="container">
-        <div class="col-sm-2 text-center"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/GD_WebHosting_Chart_Polygon.png"></div>
+        <div class="col-sm-2 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/GD_WebHosting_Chart_Polygon.png" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
+        </div>
         <div class="col-sm-10">
           <div>
              
@@ -8027,7 +8030,8 @@ h2.marquee-product-name,
         <div class="container">
           <div class="row">
             <div class="col-sm-4 key-benefit">
-              <div class="key-benefits-img-wrap"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/GD_WebHosting_Module_Feature_Group_ScalableResources.png" class="key-benefits-img"></div> 
+              <div class="key-benefits-img-wrap"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/GD_WebHosting_Module_Feature_Group_ScalableResources.png" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
+              </div> 
               ##if(activeLanguageAny([en-US]))
                
               <h3 class="key-benefits-title">[@L[cds.sales/hosting/web-hosting-rebrand:moreResourcesRebrand]@L]</h3> 
@@ -8046,7 +8050,8 @@ h2.marquee-product-name,
                
             </div>
             <div class="col-sm-4 key-benefit">
-              <div class="key-benefits-img-wrap"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/GD_WebHosting_Module_Feature_Group_Security.png" class="key-benefits-img"></div>
+              <div class="key-benefits-img-wrap"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/GD_WebHosting_Module_Feature_Group_Security.png" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
+              </div>
               <h3 class="key-benefits-title">[@L[cds.sales/hosting/web-hosting-rebrand:awardSecurity]@L]</h3> 
               ##if(activeLanguageAny([en-US]))
                
@@ -8058,7 +8063,8 @@ h2.marquee-product-name,
                
             </div>
             <div class="col-sm-4 key-benefit">
-              <div class="key-benefits-img-wrap"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/GD_WebHosting_Module_Feature_Group_WhatIsHosting.png" class="key-benefits-img"></div> 
+              <div class="key-benefits-img-wrap"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/GD_WebHosting_Module_Feature_Group_WhatIsHosting.png" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
+              </div> 
               ##if(activeLanguageAny([en-US]))
                
               <h3 class="key-benefits-title">[@L[cds.sales/hosting/web-hosting-rebrand:hostingQuestionRebrand]@L]</h3> 
@@ -10288,12 +10294,13 @@ height: 27px;
             </div>
           </div>
         </div>
-        <div style="background-image: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/linux-v-windows.png'); ;" class="two-up-wrap-compare bg-green-official">
+        <div style=";" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/linux-v-windows.png" data-lazyload-callback="triggerResize" class="two-up-wrap-compare bg-green-official lazyload">
           <div class="container">
             <div class="row">
               <div class="col-md-5 or-container col-sm-6  bg-green-official">
                 <div style="" class="two-up-text-wrap ">
-                  <div class="text-center two-up-image"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img-cpanel-linux.png" alt=""/></div>
+                  <div class="text-center two-up-image"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img-cpanel-linux.png" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
+                  </div>
                   <h2 class="text-center">[@L[cds.sales/hosting/web-hosting-rebrand:cPanelTitle2]@L]</h2>
                   <h3 class="text-center">[@L[cds.sales/hosting/web-hosting-rebrand:linuxPlan]@L]</h3>
                   <div class="row">
@@ -10309,7 +10316,8 @@ height: 27px;
               </div>
               <div class="col-md-5 col-md-offset-2 col-sm-6  bg-green-official-light">
                 <div style="" class="two-up-text-wrap ">
-                  <div class="text-center two-up-image"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img-Windows8.png" alt=""/></div>
+                  <div class="text-center two-up-image"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img-Windows8.png" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
+                  </div>
                   <h2 class="text-center">[@L[cds.sales/hosting/web-hosting-rebrand:windowsTitle2]@L]</h2>
                   <h3 class="text-center">[@L[cds.sales/hosting/web-hosting-rebrand:windowsPlan]@L]</h3>
                   <div class="row">
@@ -10536,7 +10544,7 @@ height: 27px;
             </div>
           </div>
         </div>
-        <div style="background-image: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/compare-bg.png'); min-height: 580px;;" class="two-up-wrap-compare bg-green-official">
+        <div style="min-height: 580px;;" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/compare-bg.png" data-lazyload-callback="triggerResize" class="two-up-wrap-compare bg-green-official lazyload">
           <div class="container">
             <div class="row">
               <div class="col-md-5 or-container-none col-sm-6  bg-green-official-light">
@@ -10591,7 +10599,7 @@ height: 27px;
             </div>
           </div>
         </div>
-        <div style="background-image: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/compare-bg.png'); min-height: 580px;;" class="two-up-wrap-compare bg-green-official">
+        <div style="min-height: 580px;;" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/compare-bg.png" data-lazyload-callback="triggerResize" class="two-up-wrap-compare bg-green-official lazyload">
           <div class="container">
             <div class="row">
               <div class="col-md-5 or-container-none col-sm-6  bg-green-official-light">
