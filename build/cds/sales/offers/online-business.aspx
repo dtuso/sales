@@ -128,7 +128,7 @@
       
     </script>
     <script type="text/javascript">
-      delayLoader.addScript('[@T[link:<javascriptroot />]@T]/fos/liveperson/js/liveperson_20141013a.min.js')
+      delayLoader.addScript('[@T[link:<javascriptroot />]@T]fos/liveperson/js/liveperson_20141013a.min.js')
       
     </script>
     <atlantis:webstash type="js">
@@ -817,14 +817,30 @@ $(window).load(function () {
 
 
       </script>
-      <script type="text/javascript" src="https://img1.wsimg.com/fos/hp/rebrand/js/bigtext.min.js"></script>
+      <script type="text/javascript" src="[@T[link:<javascriptroot />]@T]fos/hp/rebrand/js/bigtext.min.js"></script>
     </atlantis:webstash>
     <style>
       .svgfallback{display:none}
       .svgfallback:not(old){display:block}
       
     </style>
-    <link href="[@T[link:<cssroot />]@T]/fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css">
+    <link href="[@T[link:<cssroot />]@T]fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css">
+    <style>
+
+##if(countrySiteAny(gr))
+* {
+  font-family: arial !important;
+}
+.close {
+  font-family: uxfont !important;
+}
+.uxicon {
+  font-family: uxfont !important;
+}
+##endif
+
+
+    </style>
     <style>.bg-gray-light {
   background-color: #d9d9d9;
 }
@@ -1925,9 +1941,6 @@ h
         </div>
       </section>
     </section>
-    <atlantis:webstash type="js">
-      <script type="text/javascript" src="https://img1.wsimg.com/fos/hp/rebrand/js/bigtext.min.js"></script>
-    </atlantis:webstash>
     <div id="api-failure" class="sf-dialog api-B-failure">
       <h2 class="api-error-header"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/WarningSign.png">
         <div>[@L[cds.sales/offers/online-business:32573-something-unexpected-happened]@L]</div>
