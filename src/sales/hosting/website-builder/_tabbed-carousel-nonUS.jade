@@ -15,7 +15,8 @@ include ../../../templates/carousel-mixin.jade
 
 +carousel(tabbedCarousel.id ,tabbedCarousel.numOfTabs,{css:true})
   +carouselItem(tabbedCarousel)
-    img.img-responsive.img-center(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-fb.png")
+    +lazyImg("img-responsive img-center",'.features-tabbed-carousel-top', "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-fb.png")
+    img.img-responsive.img-center(src!="")
     .row
       .col-sm-10.col-sm-offset-1.col-xs-12
         h2 [@L[cds.sales/gd/hosting/website-builder:apps-modal-facebook-title]@L]<sup class="supsymbol">&reg;</sup>
@@ -23,7 +24,7 @@ include ../../../templates/carousel-mixin.jade
       .col-sm-10.col-sm-offset-1.col-xs-12
           .carousel-panel-text [@L[cds.sales/gd/hosting/website-builder:apps-modal-facebook-desc]@L]
   +carouselItem(tabbedCarousel)
-    img.img-responsive.img-center(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-twitter.png")
+    +lazyImg("img-responsive img-center",'.features-tabbed-carousel-top', "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-twitter.png")
     .row
       .col-sm-10.col-sm-offset-1.col-xs-12
         h2 [@L[cds.sales/gd/hosting/website-builder:apps-modal-twitter-title]@L]<sup class="supsymbol">&reg;</sup>
@@ -31,7 +32,7 @@ include ../../../templates/carousel-mixin.jade
       .col-sm-10.col-sm-offset-1.col-xs-12
           .carousel-panel-text [@L[cds.sales/gd/hosting/website-builder:apps-modal-twitter-desc]@L]
   +carouselItem(tabbedCarousel)
-    img.img-responsive.img-center(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-youtube.png")
+    +lazyImg("img-responsive img-center",'.features-tabbed-carousel-top', "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-youtube.png")
     .row
       .col-sm-10.col-sm-offset-1.col-xs-12
         h2 [@L[cds.sales/gd/hosting/website-builder:apps-modal-youtube-title]@L]<sup class="supsymbol">&reg;</sup>

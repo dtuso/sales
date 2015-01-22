@@ -107,6 +107,9 @@ padding-bottom: 50px;
 .condensed{
   font-weight: bold;
 }
-.tlds-*{
+.tlds-all{
   display: none;
+}
+.carousel-panel .img-center {
+width: 50%;
 }
