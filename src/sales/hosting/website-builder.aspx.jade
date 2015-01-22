@@ -83,53 +83,55 @@ block sections
           | 
           .row
             .col-md-4.text-center
-              img.templates-image(src="https://nebula.wsimg.com/969c55de87f607d9e7c01079c3923192?AccessKeyId=531592D248B589D87A56")
+              +lazyImg("templates-image",'', "https://nebula.wsimg.com/969c55de87f607d9e7c01079c3923192?AccessKeyId=531592D248B589D87A56")
             .col-md-4.text-center
-              img.templates-image(src="https://nebula.wsimg.com/d7a3d52de03500dc212cbdd188ee4c76?AccessKeyId=531592D248B589D87A56")
+              +lazyImg("templates-image",'', "https://nebula.wsimg.com/d7a3d52de03500dc212cbdd188ee4c76?AccessKeyId=531592D248B589D87A56")
             .col-md-4.text-center
-              img.templates-image(src="https://nebula.wsimg.com/1c3f93e0921f7eb63f8557dbf04dcc5d?AccessKeyId=531592D248B589D87A56")
+              +lazyImg("templates-image",'', "https://nebula.wsimg.com/1c3f93e0921f7eb63f8557dbf04dcc5d?AccessKeyId=531592D248B589D87A56")
           | 
           | ##elseif(countrySiteAny(uk))
           | 
           .row
             .col-md-4.text-center
-              img.templates-image(src="https://nebula.wsimg.com/6fa416babb52bf03888cd67d49d7ddb0?AccessKeyId=531592D248B589D87A56")
+              +lazyImg("templates-image",'', "https://nebula.wsimg.com/6fa416babb52bf03888cd67d49d7ddb0?AccessKeyId=531592D248B589D87A56")
             .col-md-4.text-center
-              img.templates-image(src="https://nebula.wsimg.com/02aee5deba51271ae149ac610fb15d58?AccessKeyId=531592D248B589D87A56")
+              +lazyImg("templates-image",'', "https://nebula.wsimg.com/d7a3d52de03500dc212cbdd188ee4c76?AccessKeyId=531592D248B589D87A56")
             .col-md-4.text-center
-              img.templates-image(src="https://nebula.wsimg.com/4462d6ddb0a13e36e63847af8e922198?AccessKeyId=531592D248B589D87A56")
+              +lazyImg("templates-image",'', "https://nebula.wsimg.com/4462d6ddb0a13e36e63847af8e922198?AccessKeyId=531592D248B589D87A56")
+
           | 
           | ##else
           | 
           .row
             .col-md-4.text-center
-              img.templates-image(src="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/auto.jpg")
+              +lazyImg("templates-image",'', "https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/auto.jpg")
             .col-md-4.text-center
-              img.templates-image(src="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/photography.jpg")
+              +lazyImg("templates-image",'', "https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/photography.jpg")
             .col-md-4.text-center
-              img.templates-image(src="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/education.jpg")
+              +lazyImg("templates-image",'', "https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/education.jpg")
           | 
           | ##endif
           | 
           .row
             .col-md-4.text-center
-              img.templates-image(src="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/ecommerce.jpg")
+              +lazyImg("templates-image",'', "https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/ecommerce.jpg")
             .col-md-4.text-center
-              img.templates-image(src="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/travel.jpg")
+              +lazyImg("templates-image",'', "https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/travel.jpg")
             .col-md-4.text-center
-              img.templates-image(src="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/non-profit.jpg")
+              +lazyImg("templates-image",'', "https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/non-profit.jpg")
           .row
             .col-md-4.text-center
-              img.templates-image(src="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/business.jpg")
+              +lazyImg("templates-image",'', "https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/business.jpg")
             .col-md-4.text-center
-              img.templates-image(src="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/health-beauty.jpg")
+              +lazyImg("templates-image",'', "https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/health-beauty.jpg")
             .col-md-4.text-center
-              img.templates-image(src="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/creative-design.jpg ")
+              +lazyImg("templates-image",'', "https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/creative-design.jpg")
 
     include ../../templates/wsb-templates.html
  
 
-    include ./website-builder/_fullVideo.jade
+    +fullVideoModule({"icode":"code","backgroundImage":"[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-video.jpg","playButton":"[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rb-play-button.png","tagline":"[@L[cds.sales/gd/hosting/website-builder:testimony-title]@L]","lazyLoad":true,"cta":"[@L[cds.sales/gd/hosting/website-builder:testimony-description]@L]","youtubeId":"-HtVJyxSQmw","tileName":"wsbVideo"})
+
 
     section#social-media
       | 

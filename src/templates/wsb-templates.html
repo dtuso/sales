@@ -339,7 +339,7 @@ $(document).ready(function(){
           </div>
         <div class="modal-header g-modal-header templates-modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-          <h4 class="modal-title" id="myModalLabel">Website Builder Design Gallery</h4>
+          <h4 class="modal-title" id="myModalLabel">[@L[cds.sales/gd/hosting/website-builder:templates-modal-header]@L]</h4>
         </div>
         <div class="modal-body g-modal-content templates-modal-content" id="app-modal">
                 <a name="autotransportation"></a>
@@ -1631,7 +1631,7 @@ $(document).ready(function(){
                 </ul>
         </div>
         <div class="g-modal-footer">
-          <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal">[@L[cds.sales/_common:close-cap]@L]</button>
         </div>
 
       </div>
@@ -2104,12 +2104,12 @@ function onTemplateModalHidden (e) {
                 hash = hash.replace('#','');
                 setTimeout(function(){
                     var $targetElement = $('a[name="'+hash+'"]');
-                    $('.templates-modal-content').scrollTo($targetElement,1000,{/*offset:{top:-20},*/onAfter:function(){solazy.check();}});
+                    $('.templates-modal-content').scrollTo($targetElement,1000,{/*offset:{top:-20},*/onAfter:function(){wsbsolazy.check();}});
                 },500);
                 
             }else{
                 setTimeout(function(){
-                    solazy.check(true);
+                    wsbsolazy.check(true);
                 },500);
             }               
         });

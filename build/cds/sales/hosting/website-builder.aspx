@@ -241,9 +241,13 @@ padding-bottom: 50px;
 .condensed{
   font-weight: bold;
 }
-.tlds-*{
+.tlds-all{
   display: none;
 }
+.carousel-panel .img-center {
+width: 50%;
+}
+
     </style><!--[if lt IE 9]>
     <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
     <link href="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy.min.html" id="respond-proxy" rel="respond-proxy">
@@ -1450,8 +1454,8 @@ padding-bottom: 50px;
       
         var nav = $('.mid-page-nav');
         var navTop = nav.offset().top;
-        var footerBot = $('#footer').offset().top
-        var sections = []
+        var footerBot = $('#footer').offset().top;
+        var sections = [];
       
         $('[data-mid-nav-title]').each(function(){
           //titles.push($(this).data('mid-nav-title'));
@@ -1553,35 +1557,50 @@ padding-bottom: 50px;
             ##if(countrySiteAny(ca))
              
             <div class="row">
-              <div class="col-md-4 text-center"><img src="https://nebula.wsimg.com/969c55de87f607d9e7c01079c3923192?AccessKeyId=531592D248B589D87A56" class="templates-image"></div>
-              <div class="col-md-4 text-center"><img src="https://nebula.wsimg.com/d7a3d52de03500dc212cbdd188ee4c76?AccessKeyId=531592D248B589D87A56" class="templates-image"></div>
-              <div class="col-md-4 text-center"><img src="https://nebula.wsimg.com/1c3f93e0921f7eb63f8557dbf04dcc5d?AccessKeyId=531592D248B589D87A56" class="templates-image"></div>
+              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="https://nebula.wsimg.com/969c55de87f607d9e7c01079c3923192?AccessKeyId=531592D248B589D87A56" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
+              </div>
+              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="https://nebula.wsimg.com/d7a3d52de03500dc212cbdd188ee4c76?AccessKeyId=531592D248B589D87A56" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
+              </div>
+              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="https://nebula.wsimg.com/1c3f93e0921f7eb63f8557dbf04dcc5d?AccessKeyId=531592D248B589D87A56" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
+              </div>
             </div> 
             ##elseif(countrySiteAny(uk))
              
             <div class="row">
-              <div class="col-md-4 text-center"><img src="https://nebula.wsimg.com/6fa416babb52bf03888cd67d49d7ddb0?AccessKeyId=531592D248B589D87A56" class="templates-image"></div>
-              <div class="col-md-4 text-center"><img src="https://nebula.wsimg.com/02aee5deba51271ae149ac610fb15d58?AccessKeyId=531592D248B589D87A56" class="templates-image"></div>
-              <div class="col-md-4 text-center"><img src="https://nebula.wsimg.com/4462d6ddb0a13e36e63847af8e922198?AccessKeyId=531592D248B589D87A56" class="templates-image"></div>
+              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="https://nebula.wsimg.com/6fa416babb52bf03888cd67d49d7ddb0?AccessKeyId=531592D248B589D87A56" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
+              </div>
+              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="https://nebula.wsimg.com/d7a3d52de03500dc212cbdd188ee4c76?AccessKeyId=531592D248B589D87A56" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
+              </div>
+              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="https://nebula.wsimg.com/4462d6ddb0a13e36e63847af8e922198?AccessKeyId=531592D248B589D87A56" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
+              </div>
             </div> 
             ##else
              
             <div class="row">
-              <div class="col-md-4 text-center"><img src="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/auto.jpg" class="templates-image"></div>
-              <div class="col-md-4 text-center"><img src="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/photography.jpg" class="templates-image"></div>
-              <div class="col-md-4 text-center"><img src="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/education.jpg" class="templates-image"></div>
+              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/auto.jpg" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
+              </div>
+              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/photography.jpg" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
+              </div>
+              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/education.jpg" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
+              </div>
             </div> 
             ##endif
              
             <div class="row">
-              <div class="col-md-4 text-center"><img src="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/ecommerce.jpg" class="templates-image"></div>
-              <div class="col-md-4 text-center"><img src="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/travel.jpg" class="templates-image"></div>
-              <div class="col-md-4 text-center"><img src="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/non-profit.jpg" class="templates-image"></div>
+              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/ecommerce.jpg" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
+              </div>
+              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/travel.jpg" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
+              </div>
+              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/non-profit.jpg" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
+              </div>
             </div>
             <div class="row">
-              <div class="col-md-4 text-center"><img src="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/business.jpg" class="templates-image"></div>
-              <div class="col-md-4 text-center"><img src="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/health-beauty.jpg" class="templates-image"></div>
-              <div class="col-md-4 text-center"><img src="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/creative-design.jpg " class="templates-image"></div>
+              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/business.jpg" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
+              </div>
+              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/health-beauty.jpg" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
+              </div>
+              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/creative-design.jpg" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
+              </div>
             </div>
           </div>
         </div>
@@ -1926,7 +1945,7 @@ $(document).ready(function(){
           </div>
         <div class="modal-header g-modal-header templates-modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-          <h4 class="modal-title" id="myModalLabel">Website Builder Design Gallery</h4>
+          <h4 class="modal-title" id="myModalLabel">[@L[cds.sales/gd/hosting/website-builder:templates-modal-header]@L]</h4>
         </div>
         <div class="modal-body g-modal-content templates-modal-content" id="app-modal">
                 <a name="autotransportation"></a>
@@ -3218,14 +3237,14 @@ $(document).ready(function(){
                 </ul>
         </div>
         <div class="g-modal-footer">
-          <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal">[@L[cds.sales/_common:close-cap]@L]</button>
         </div>
 
       </div>
     </div>
   </div>
 <!-- How to Call it Modal
-  <button class="btn btn-primary view-all btn-lg" data-toggle="bsModal" data-target="#g-modal">
+  <button class="btn btn-primary view-all btn-lg" data-toggle="modal" data-target="#g-modal">
     View All Designs
   </button>
 
@@ -3691,12 +3710,12 @@ function onTemplateModalHidden (e) {
                 hash = hash.replace('#','');
                 setTimeout(function(){
                     var $targetElement = $('a[name="'+hash+'"]');
-                    $('.templates-modal-content').scrollTo($targetElement,1000,{/*offset:{top:-20},*/onAfter:function(){solazy.check();}});
+                    $('.templates-modal-content').scrollTo($targetElement,1000,{/*offset:{top:-20},*/onAfter:function(){wsbsolazy.check();}});
                 },500);
                 
             }else{
                 setTimeout(function(){
-                    solazy.check(true);
+                    wsbsolazy.check(true);
                 },500);
             }               
         });
@@ -3776,7 +3795,7 @@ var PlanBox6UI = {
 </script>
 </atlantis:webstash>
 
-            <style>.video-marquee {
+      <style>.video-marquee {
 	background-position: top center;
 }
 .video-marquee {
@@ -3808,98 +3827,98 @@ color: #fff;
 font-family: 'Walsheim-Black';
 text-transform: uppercase;
 }
-            </style>
-            <atlantis:webstash type="js">
-              <script>
-                // https://developers.google.com/youtube/player_parameters#IFrame_Player_API
-                $(document).ready(function(){
-                  if(typeof youtubeVideo === 'undefined'){
-                    window.youtubeVideo = {
-                      _src: 'https://www.youtube.com/embed/',
-                      loadVideo: function(videoId, height, width, callback, parameters, container, insertType){
-                        if(typeof parameters === 'object'){
-                          var paramString = '';
-                          
-                          // add origin to src
-                          parameters.origin = window.location.protocol+'//'+window.location.host
-                
-                          if(youtubeVideo._src.indexOf('?') === -1){
-                            paramString += '?';
-                          }else{
-                            paramString += '&';
-                          }
-                
-                          for(param in parameters){
-                            if(paramString.length > 2){
-                              paramString += '&';
-                            }
-                            paramString += param+'='+parameters[param];
-                          }
-                          parameters = paramString;
-                        }
-                        
-                        var $video = $('<iframe height="'+height+'" width="'+width+'" style="position:absolute" frameBorder="0" src="'+youtubeVideo._src+videoId+parameters+'" />');
-                
-                        // append/prepend to container
-                        if(typeof container === 'string'){
-                          container = $(container);
-                        }
-                
-                        if(typeof insertType === 'undefined' || insertType === 'append'){
-                          container.append($video);
-                        }else{
-                          container.prepend($video);
-                        }
-                
-                        if(typeof callback === 'function'){
-                          $video.load(function(){
-                            callback($video[0]);
-                          });
-                        }
-                
-                        return $video[0];
+      </style>
+      <atlantis:webstash type="js">
+        <script>
+          // https://developers.google.com/youtube/player_parameters#IFrame_Player_API
+          $(document).ready(function(){
+            if(typeof youtubeVideo === 'undefined'){
+              window.youtubeVideo = {
+                _src: 'https://www.youtube.com/embed/',
+                loadVideo: function(videoId, height, width, callback, parameters, container, insertType){
+                  if(typeof parameters === 'object'){
+                    var paramString = '';
+                    
+                    // add origin to src
+                    parameters.origin = window.location.protocol+'//'+window.location.host
+          
+                    if(youtubeVideo._src.indexOf('?') === -1){
+                      paramString += '?';
+                    }else{
+                      paramString += '&';
+                    }
+          
+                    for(param in parameters){
+                      if(paramString.length > 2){
+                        paramString += '&';
                       }
-                    };
+                      paramString += param+'='+parameters[param];
+                    }
+                    parameters = paramString;
                   }
                   
-                  var $containers = $('[data-tile="wsbVideo"]');
-                  $containers.each(function(){
-                    var $this = $(this);
-                    var videoId = $this.data('youtube-id');
-                    $this.find('.play-button, .cta').bind('click.youtube',function(event){
-                      // remove this event
-                      $(event.target).unbind(event.type+'.'+event.handleObj.namespace);
-                
-                      // load the video
-                      youtubeVideo.loadVideo(
-                          videoId,
-                          '100%',
-                          '100%',
-                          function(video){
-                              var $videoInfo = $this.find('.video-info');
-                              $videoInfo.animate({'opacity':0.0},1000,function(){
-                                  $videoInfo.css({'display':'none'});
-                              });
-                              //$(video).css({'opacity':0.0}).animate({'opacity':1.0});
-                          },
-                          {'autoplay':1,'controls':0,'showinfo':0,'playsinline':1,'modestbranding':1,'rel':0},
-                          $this,
-                          'prepend'
-                      );
-                    }).css({'cursor':'pointer'});
-                  });
-                });
-              </script>
-            </atlantis:webstash>
-            <div style="background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-video.jpg);" data-lazy-load="" data-icode="code" data-tile="wsbVideo" data-youtube-id="-HtVJyxSQmw" class="video-marquee video-marquee-white full-video">
-              <div class="container relative-position video-info">
-                <div class="row">
-                  <div class="col-sm-10 col-sm-offset-1 col-xs-12 video-marquee-all-centered"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rb-play-button.png" class="play-button">
-                    <h3 class="h1">[@L[cds.sales/gd/hosting/website-builder:testimony-title]@L]</h3><span class="cta">[@L[cds.sales/gd/hosting/website-builder:testimony-description]@L]</span>
-                  </div>
-                </div>
-              </div>
+                  var $video = $('<iframe height="'+height+'" width="'+width+'" style="position:absolute" frameBorder="0" src="'+youtubeVideo._src+videoId+parameters+'" />');
+          
+                  // append/prepend to container
+                  if(typeof container === 'string'){
+                    container = $(container);
+                  }
+          
+                  if(typeof insertType === 'undefined' || insertType === 'append'){
+                    container.append($video);
+                  }else{
+                    container.prepend($video);
+                  }
+          
+                  if(typeof callback === 'function'){
+                    $video.load(function(){
+                      callback($video[0]);
+                    });
+                  }
+          
+                  return $video[0];
+                }
+              };
+            }
+            
+            var $containers = $('[data-tile="wsbVideo"]');
+            $containers.each(function(){
+              var $this = $(this);
+              var videoId = $this.data('youtube-id');
+              $this.find('.play-button, .cta').bind('click.youtube',function(event){
+                // remove this event
+                $(event.target).unbind(event.type+'.'+event.handleObj.namespace);
+          
+                // load the video
+                youtubeVideo.loadVideo(
+                    videoId,
+                    '100%',
+                    '100%',
+                    function(video){
+                        var $videoInfo = $this.find('.video-info');
+                        $videoInfo.animate({'opacity':0.0},1000,function(){
+                            $videoInfo.css({'display':'none'});
+                        });
+                        //$(video).css({'opacity':0.0}).animate({'opacity':1.0});
+                    },
+                    {'autoplay':1,'controls':0,'showinfo':0,'playsinline':1,'modestbranding':1,'rel':0},
+                    $this,
+                    'prepend'
+                );
+              }).css({'cursor':'pointer'});
+            });
+          });
+        </script>
+      </atlantis:webstash>
+      <div style="" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-video.jpg" data-icode="code" data-tile="wsbVideo" data-youtube-id="-HtVJyxSQmw" class="lazyload video-marquee video-marquee-white full-video">
+        <div class="container relative-position video-info">
+          <div class="row">
+            <div class="col-sm-10 col-sm-offset-1 col-xs-12 video-marquee-all-centered"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rb-play-button.png" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload play-button"/>
+              <h3 class="h1">[@L[cds.sales/gd/hosting/website-builder:testimony-title]@L]</h3><span class="cta">[@L[cds.sales/gd/hosting/website-builder:testimony-description]@L]</span>
             </div>
+          </div>
+        </div>
+      </div>
       <section id="social-media">
          
         ##if(countrySiteAny(www))
@@ -4040,6 +4059,7 @@ text-transform: uppercase;
                       $(".features-tabbed-carousel-icon").removeClass("active");
                       $(this).addClass("active");
                       $('#carousel-social-media').carousel(slideNum);
+                      window.lazyLoad.check();
                     });
                     
                     $('#carousel-social-media').on('slid.bs.carousel', function () {
@@ -4051,6 +4071,7 @@ text-transform: uppercase;
                           $(this).addClass("active");
                         }
                       });
+                      window.lazyLoad.check();
                     });
                     
                     
@@ -4414,7 +4435,7 @@ top: -6px;
                       <div class="carousel-inner">
                                 <div class="item">
                                   <div class="item-wrapper text-center">
-                                    <div data-icode="" data-ci="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-fb.png" class="img-responsive img-center">
+                                    <div data-icode="" data-ci="" class="carousel-panel container"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-fb.png" data-lazyload-watch=".carousel-container " data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center"/><img src="" class="img-responsive img-center">
                                       <div class="row">
                                         <div class="col-sm-10 col-sm-offset-1 col-xs-12">
                                           <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-facebook-title]@L]<sup class="supsymbol">&reg;</sup></h2>
@@ -4430,7 +4451,7 @@ top: -6px;
                                 </div>
                                 <div class="item">
                                   <div class="item-wrapper text-center">
-                                    <div data-icode="" data-ci="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-twitter.png" class="img-responsive img-center">
+                                    <div data-icode="" data-ci="" class="carousel-panel container"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-twitter.png" data-lazyload-watch=".carousel-container " data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center"/>
                                       <div class="row">
                                         <div class="col-sm-10 col-sm-offset-1 col-xs-12">
                                           <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-twitter-title]@L]<sup class="supsymbol">&reg;</sup></h2>
@@ -4446,7 +4467,7 @@ top: -6px;
                                 </div>
                                 <div class="item">
                                   <div class="item-wrapper text-center">
-                                    <div data-icode="" data-ci="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-youtube.png" class="img-responsive img-center">
+                                    <div data-icode="" data-ci="" class="carousel-panel container"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-youtube.png" data-lazyload-watch=".carousel-container " data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center"/>
                                       <div class="row">
                                         <div class="col-sm-10 col-sm-offset-1 col-xs-12">
                                           <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-youtube-title]@L]<sup class="supsymbol">&reg;</sup></h2>
@@ -4462,7 +4483,7 @@ top: -6px;
                                 </div>
                                 <div class="item">
                                   <div class="item-wrapper text-center">
-                                    <div data-icode="" data-ci="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-yelp.png" class="img-responsive img-center">
+                                    <div data-icode="" data-ci="" class="carousel-panel container"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-yelp.png" data-lazyload-watch=".carousel-container " data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center"/>
                                       <div class="row">
                                         <div class="col-sm-10 col-sm-offset-1 col-xs-12">
                                           <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-yelp-title]@L]<sup class="supsymbol">&reg;</sup></h2>
@@ -4478,7 +4499,7 @@ top: -6px;
                                 </div>
                                 <div class="item">
                                   <div class="item-wrapper text-center">
-                                    <div data-icode="" data-ci="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-paypal.png" class="img-responsive img-center">
+                                    <div data-icode="" data-ci="" class="carousel-panel container"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-paypal.png" data-lazyload-watch=".carousel-container " data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center"/>
                                       <div class="row">
                                         <div class="col-sm-10 col-sm-offset-1 col-xs-12">
                                           <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-paypal-title]@L]<sup class="supsymbol">&reg;</sup></h2>
@@ -4494,7 +4515,7 @@ top: -6px;
                                 </div>
                                 <div class="item">
                                   <div class="item-wrapper text-center">
-                                    <div data-icode="" data-ci="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-homeFinder.png" class="img-responsive img-center">
+                                    <div data-icode="" data-ci="" class="carousel-panel container"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-homeFinder.png" data-lazyload-watch=".carousel-container " data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center"/>
                                       <div class="row">
                                         <div class="col-sm-10 col-sm-offset-1 col-xs-12">
                                           <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-homefinder-title]@L]<sup class="supsymbol">&reg;</sup></h2>
@@ -4636,6 +4657,7 @@ text-transform: uppercase;
                       $(".features-tabbed-carousel-icon").removeClass("active");
                       $(this).addClass("active");
                       $('#carousel-social-media').carousel(slideNum);
+                      window.lazyLoad.check();
                     });
                     
                     $('#carousel-social-media').on('slid.bs.carousel', function () {
@@ -4647,6 +4669,7 @@ text-transform: uppercase;
                           $(this).addClass("active");
                         }
                       });
+                      window.lazyLoad.check();
                     });
                     
                     
@@ -5007,7 +5030,7 @@ top: -6px;
                       <div class="carousel-inner">
                                 <div class="item">
                                   <div class="item-wrapper text-center">
-                                    <div data-icode="" data-ci="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-fb.png" class="img-responsive img-center">
+                                    <div data-icode="" data-ci="" class="carousel-panel container"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-fb.png" data-lazyload-watch=".features-tabbed-carousel-top" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center"/><img src="" class="img-responsive img-center">
                                       <div class="row">
                                         <div class="col-sm-10 col-sm-offset-1 col-xs-12">
                                           <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-facebook-title]@L]<sup class="supsymbol">&reg;</sup></h2>
@@ -5023,7 +5046,7 @@ top: -6px;
                                 </div>
                                 <div class="item">
                                   <div class="item-wrapper text-center">
-                                    <div data-icode="" data-ci="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-twitter.png" class="img-responsive img-center">
+                                    <div data-icode="" data-ci="" class="carousel-panel container"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-twitter.png" data-lazyload-watch=".features-tabbed-carousel-top" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center"/>
                                       <div class="row">
                                         <div class="col-sm-10 col-sm-offset-1 col-xs-12">
                                           <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-twitter-title]@L]<sup class="supsymbol">&reg;</sup></h2>
@@ -5039,7 +5062,7 @@ top: -6px;
                                 </div>
                                 <div class="item">
                                   <div class="item-wrapper text-center">
-                                    <div data-icode="" data-ci="" class="carousel-panel container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-youtube.png" class="img-responsive img-center">
+                                    <div data-icode="" data-ci="" class="carousel-panel container"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-youtube.png" data-lazyload-watch=".features-tabbed-carousel-top" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center"/>
                                       <div class="row">
                                         <div class="col-sm-10 col-sm-offset-1 col-xs-12">
                                           <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-youtube-title]@L]<sup class="supsymbol">&reg;</sup></h2>
