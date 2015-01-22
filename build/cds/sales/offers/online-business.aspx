@@ -127,10 +127,6 @@
       }
       
     </script>
-    <script type="text/javascript">
-      delayLoader.addScript('[@T[link:<javascriptroot />]@T]fos/liveperson/js/liveperson_20141013a.min.js')
-      
-    </script>
     <atlantis:webstash type="js">
       <script>// Array indexOf shim for IE9 and below
 if (!Array.prototype.indexOf){
@@ -380,6 +376,7 @@ function tokenizeDisclaimerModals() {
   };
   
   if(got1Page.canOfferOls) tokenizeDisclaimerModal('#default-marquee-details-modal.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_wsb,got1Page.pricing.bundleRenewal_ols);
+  tokenizeDisclaimerModal('#default-marquee-details-modal-wsb-only.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_wsb);
   tokenizeDisclaimerModal('#default-marquee-details-modal-wsb-only-choice.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_wsb);  
   tokenizeDisclaimerModal('#site-choice-wsb-modal.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_wsb);  
   if(got1Page.canOfferOls) tokenizeDisclaimerModal('#site-choice-ols-modal.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_ols);
@@ -427,6 +424,7 @@ function wireupModals() {
     });
     $('#ols-stores-btn').on('click', function(){
       $("#site-choice-ols-stores-modal").sfDialog({titleHidden:true, dialogWidthIdeal:1230, buttons: []});
+      $('#site-choice-ols-stores-modal').parent().css({ "overflow": "hidden" });
     });
   }
 
@@ -1331,7 +1329,7 @@ h
     <script src="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy-combo.min.js"></script><![endif]-->
     <script type="text/javascript">
       delayLoader.addScript('[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2')
-      //- delayLoader.addScript('[@T[link:<javascriptroot />]@T]/fastball/js_lib/Fastball.ChannelIntegration-2.0.6.min.js')
+      delayLoader.addScript('[@T[link:<javascriptroot />]@T]/fos/liveperson/js/liveperson_20150115.min.js')
       
     </script>
     <!-- Google Tag Manager-->
@@ -2525,7 +2523,7 @@ h
         </div>
         <div class="row">
           <div class="col-sm-6 col-sm-push-3 button-margin">
-            <button id="wsb-only-designs-btn" data-ci="95266" data-toggle="bsModal" data-target="#g-modal" class="btn btn-md btn-block view-all btn-primary">[@L[cds.sales/offers/online-business:32573-view-designs-button]@L]</button>
+            <button id="wsb-only-designs-btn" data-ci="95266" data-toggle="modal" data-target="#g-modal" class="btn btn-md btn-block view-all btn-primary">[@L[cds.sales/offers/online-business:32573-view-designs-button]@L]</button>
           </div>
         </div>
         <div class="row">
@@ -2885,7 +2883,7 @@ h
             </div>
           </div>
         </div>
-        <div style="background-image: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/bg-WSB-Mod.jpg'); ;" class="two-up-wrap-compare ">
+        <div style=";" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/bg-WSB-Mod.jpg" class="two-up-wrap-compare  lazyload">
           <div class="container">
             <div class="row">
               <div class="col-md-5 or-container col-sm-6  bg-green-official">
@@ -2914,7 +2912,7 @@ h
                       </div>
                       <div class="row">
                         <div class="col-sm-12 button-margin">
-                          <button id="wsb-designs-btn" data-ci="95266" data-toggle="bsModal" data-target="#g-modal" class="btn btn-md btn-block view-all btn-primary">[@L[cds.sales/offers/online-business:32573-view-designs-button]@L]</button>
+                          <button id="wsb-designs-btn" data-ci="95266" data-toggle="modal" data-target="#g-modal" class="btn btn-md btn-block view-all btn-primary">[@L[cds.sales/offers/online-business:32573-view-designs-button]@L]</button>
                         </div>
                       </div>
                       <div class="row">
@@ -3098,17 +3096,18 @@ h
             margin-bottom: 0px;
           }
           .carousel-wrap {
-            padding-bottom: 60px !important;
+            padding-bottom: 50px !important;
           }
           .carousel-container .carousel .carousel-indicators {
             bottom: -50px !important;
           }
           .main-heading {
             margin: 0px;
+            font-size: 30px;
           }
           .subheading {
-            margin-bottom: 5px;
-            margin-top: 5px;
+            margin-bottom: 0px;
+            margin-top: 0px;
           }
           .customer-quote {
             margin-top: 0px;
@@ -3133,8 +3132,14 @@ h
           </div>
         </div>
       </div>
-      <h1 class="main-heading text-center">[@L[cds.sales/offers/online-business:32573-real-customers-real-sites]@L]</h1>
-      <h3 class="subheading text-center">[@L[cds.sales/offers/online-business:32573-our-customers-love-ols]@L]</h3>
+      <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-10 center-block">
+          <h1 class="h0 main-heading text-center">[@L[cds.sales/offers/online-business:32573-real-customers-real-sites]@L]</h1>
+          <h3 class="subheading text-center">[@L[cds.sales/offers/online-business:32573-our-customers-love-ols]@L]</h3>
+        </div>
+      </div>
+      <div class="col-sm-1"></div>
             <style>.item-wrapper { padding: 35px 0 20px; }
 .carousel-wrap { padding-bottom: 70px; }
 
@@ -3640,7 +3645,7 @@ top: -6px;
   #g-modal .plan-droplist-select.droplist-open>ul{left:0;right:0;width:100%;top:100%}#g-modal .plan-droplist-select>ul>li{border-top:1px solid #bcbcbc;-ms-word-wrap:break-word;word-wrap:break-word;text-decoration:none;padding:0 10px;display:block;position:relative;_zoom:1;overflow:hidden}
   #g-modal .plan-droplist-select>ul>li>div{overflow:hidden}#g-modal .plan-droplist-select>ul>li:first-child{border-top:0 none}#g-modal .plan-droplist-select>ul>li:hover{background-color:#f5f5f5}#g-modal .plan-droplist-select>ul>li.selected,#g-modal .plan-droplist-select>ul>li.selected:hover{background-color:#e4efc7}
   #g-modal .plan-droplist-select>.plan-droplist-selected>span,#g-modal .plan-droplist-select>ul>li span{float:left;text-align:left;width:auto;height:35px}#g-modal-overlay{background-color:#000;opacity:.8;filter:alpha(opacity=80)}
-  button.close {
+  #g-modal button.close {
     -webkit-appearance: none;
     padding: 0;
     cursor: pointer;
@@ -3652,7 +3657,7 @@ top: -6px;
     overflow: hidden;
   }
 
-  .modal {
+  #g-modal.modal {
     position: fixed;
     top: 0;
     right: 0;
@@ -3664,7 +3669,7 @@ top: -6px;
     overflow-y: scroll;
   }
 
-  .modal.fade .modal-dialog {
+  #g-modal.modal.fade .modal-dialog {
     -webkit-transform: translate(0, -25%);
         -ms-transform: translate(0, -25%);
             transform: translate(0, -25%);
@@ -3674,20 +3679,20 @@ top: -6px;
             transition: transform 0.3s ease-out;
   }
 
-  .modal.in .modal-dialog {
+  #g-modal.modal.in .modal-dialog {
     -webkit-transform: translate(0, 0);
         -ms-transform: translate(0, 0);
             transform: translate(0, 0);
   }
 
-  .modal-dialog {
+  #g-modal .modal-dialog {
     position: relative;
     z-index: 1050;
     width: auto;
     margin: 10px;
   }
 
-  .modal-content {
+  #g-modal .modal-content {
     position: relative;
     background-color: #ffffff;
     border: 1px solid #999999;
@@ -3719,72 +3724,72 @@ top: -6px;
     filter: alpha(opacity=50);
   }
 
-  .modal-header {
+  #g-modal .modal-header {
     min-height: 16.428571429px;
     padding: 15px;
     border-bottom: 1px solid #e5e5e5;
   }
 
-  .modal-header .close {
+  #g-modal .modal-header .close {
     margin-top: -2px;
   }
 
-  .modal-title {
+  #g-modal .modal-title {
     margin: 0;
     line-height: 1.428571429;
   }
 
-  .modal-body {
+  #g-modal .modal-body {
     position: relative;
     padding: 20px;
   }
 
-  .modal-footer {
+  #g-modal .modal-footer {
     padding: 19px 20px 20px;
     margin-top: 15px;
     text-align: right;
     border-top: 1px solid #e5e5e5;
   }
 
-  .modal-footer:before,
-  .modal-footer:after {
-    display: table;
+  #g-modal .modal-footer:before,
+  #g-modal .modal-footer:after {
+    display: table ;
     content: " ";
   }
 
-  .modal-footer:after {
+  #g-modal .modal-footer:after {
     clear: both;
   }
 
-  .modal-footer:before,
-  .modal-footer:after {
-    display: table;
+  #g-modal .modal-footer:before,
+  #g-modal .modal-footer:after {
+    display: table ;
     content: " ";
   }
 
-  .modal-footer:after {
+  #g-modal .modal-footer:after {
     clear: both;
   }
 
-  .modal-footer .btn + .btn {
+  #g-modal .modal-footer .btn + .btn {
     margin-bottom: 0;
     margin-left: 5px;
   }
 
-  .modal-footer .btn-group .btn + .btn {
+  #g-modal .modal-footer .btn-group .btn + .btn {
     margin-left: -1px;
   }
 
-  .modal-footer .btn-block + .btn-block {
+  #g-modal .modal-footer .btn-block + .btn-block {
     margin-left: 0;
   }
 
   @media screen and (min-width: 768px) {
-    .modal-dialog {
+    #g-modal .modal-dialog {
       width: 600px;
       margin: 30px auto;
     }
-    .modal-content {
+    #g-modal .modal-content {
       -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
               box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
     }
@@ -3955,7 +3960,7 @@ $(document).ready(function(){
           </div>
         <div class="modal-header g-modal-header templates-modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-          <h4 class="modal-title" id="myModalLabel">Website Builder Design Gallery</h4>
+          <h4 class="modal-title" id="myModalLabel">[@L[cds.sales/gd/hosting/website-builder:templates-modal-header]@L]</h4>
         </div>
         <div class="modal-body g-modal-content templates-modal-content" id="app-modal">
                 <a name="autotransportation"></a>
@@ -5247,14 +5252,14 @@ $(document).ready(function(){
                 </ul>
         </div>
         <div class="g-modal-footer">
-          <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal">[@L[cds.sales/_common:close-cap]@L]</button>
         </div>
 
       </div>
     </div>
   </div>
 <!-- How to Call it Modal
-  <button class="btn btn-primary view-all btn-lg" data-toggle="bsModal" data-target="#g-modal">
+  <button class="btn btn-primary view-all btn-lg" data-toggle="modal" data-target="#g-modal">
     View All Designs
   </button>
 
@@ -5266,8 +5271,8 @@ $(document).ready(function(){
 <!-- JavaScript Test -->
 <atlantis:webstash type="js">
 <script type="text/javascript">
- /* ========================================================================
- * Bootstrap: bsmodal.js v3.0.3
+/* ========================================================================
+ * Bootstrap: modal.js v3.0.3
  * http://getbootstrap.com/javascript/#modals
  * ========================================================================
  * Copyright 2013 Twitter, Inc.
@@ -5311,7 +5316,6 @@ $(document).ready(function(){
   }
 
   Modal.prototype.show = function (_relatedTarget) {
-    console.log('something');
     var that = this
     var e    = $.Event('show.bs.modal', { relatedTarget: _relatedTarget })
 
@@ -5464,7 +5468,9 @@ $(document).ready(function(){
   // MODAL PLUGIN DEFINITION
   // =======================
 
-  $.fn.bsModal = function (option, _relatedTarget) {
+  var old = $.fn.modal
+
+  $.fn.modal = function (option, _relatedTarget) {
     return this.each(function () {
       var $this   = $(this)
       var data    = $this.data('bs.modal')
@@ -5476,15 +5482,22 @@ $(document).ready(function(){
     })
   }
 
-  $.fn.bsModal.Constructor = Modal
+  $.fn.modal.Constructor = Modal
 
 
   // MODAL NO CONFLICT
+  // =================
+
+  $.fn.modal.noConflict = function () {
+    $.fn.modal = old
+    return this
+  }
+
 
   // MODAL DATA-API
   // ==============
 
-  $(document).on('click.bs.modal.data-api', '[data-toggle="bsModal"]', function (e) {
+  $(document).on('click.bs.modal.data-api', '[data-toggle="modal"]', function (e) {
     var $this   = $(this)
     var href    = $this.attr('href')
     var $target = $($this.attr('data-target') || (href && href.replace(/.*(?=#[^\s]+$)/, ''))) //strip for ie7
@@ -5493,17 +5506,18 @@ $(document).ready(function(){
     e.preventDefault()
 
     $target
-      .bsModal(option, this)
+      .modal(option, this)
       .one('hide', function () {
         $this.is(':visible') && $this.focus()
       })
   })
 
   $(document)
-    .on('show.bs.modal',  '.modal', function (e) { $(document.body).addClass('modal-open'); onTemplateModalShown(e) })
-    .on('hidden.bs.modal', '.modal', function (e) { $(document.body).removeClass('modal-open');onTemplateModalHidden(e) })
+    .on('show.bs.modal',  '.modal', function () { $(document.body).addClass('modal-open') })
+    .on('hidden.bs.modal', '.modal', function () { $(document.body).removeClass('modal-open') })
 
 }(jQuery);
+
 
 /*! jQuery So Lazy (Loader)
  * Author: Dave Utley
@@ -5703,14 +5717,27 @@ function onTemplateModalHidden (e) {
   $('.templates-modal').hide();
 }
     $(document).ready(function () {
-        $('#template-select').on('click', 'a', function(e){
-            var hash = $(this).attr('href');
-                console.log($(this));
+         $('#g-modal').on('show.bs.modal', function (e) {
+            $('.templates-modal').show();
+            $this = $(e.relatedTarget);
+            if(!$this.hasClass('view-all')){
+                var hash = $this.find('a').attr('href');
                 hash = hash.replace('#','');
-                var $targetElement = $('a[name="'+hash+'"]');
-                console.log($targetElement);
-                $('.templates-modal-content').scrollTo($targetElement,1000,{offset:{top:-20},onAfter:function(){wsbsolazy.check();}});
-        });    
+                setTimeout(function(){
+                    var $targetElement = $('a[name="'+hash+'"]');
+                    $('.templates-modal-content').scrollTo($targetElement,1000,{/*offset:{top:-20},*/onAfter:function(){wsbsolazy.check();}});
+                },500);
+                
+            }else{
+                setTimeout(function(){
+                    wsbsolazy.check(true);
+                },500);
+            }               
+        });
+
+        $('#g-modal').on('hide.bs.modal', function(e){
+            $('.templates-modal').hide();
+        });
     });
 // planbox select boxes
 var PlanBox6UI = {
@@ -5798,8 +5825,6 @@ var PlanBox6UI = {
     <!-- FOOTERBEGIN--> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- FOOTEREND-     -->
-     
-    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Bottom"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- liveperson includes -->
     <div id="lpButtonDiv"></div><!-- End Main Content -->
     <script type="text/javascript">
