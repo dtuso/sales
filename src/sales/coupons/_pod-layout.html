@@ -1,0 +1,911 @@
+{% macro pod_1(pod_id) %}
+
+{% set thisPod = productOfferings[pod_id] %}
+
+{% if !thisPod.count > 0 %}{% set temp = 0 %}
+  {% else %}{% set temp = thisPod['count'] %}{% endif %}
+
+{% set thisPod['count'] = temp + 1 %}
+{% set productOfferings[pod_id] = thisPod %}
+
+{% if thisPod.pod_flag_text != '' %}{% set flag_active = " pod-flag-active" %}
+  {% else %}{% set flag_active = "" %}{% endif %}
+
+{% if thisPod.pod_period == 'monthly' %}{% set pod_period = "monthly" %}
+  {% else %}{% set pod_period = "yearly" %}{% endif %}
+
+{{ thisPod.rule|safe }}
+<div class="pod-outer-wrapper col-xs-4 hidden {{ thisPod.class }}" rel="{{ pod_id }}" id="{{ pod_id }}_{{ thisPod.count }}" data-pod-details='{"period":"{{pod_period}}"}'>
+  <div class="pod-flag-wrapper{{ flag_active }}" data-gd-sidebysidealign-row="1">
+    <img class="pod-flag-left" src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/coupons/img/yellow-shapes-left1.png">
+    <div class="pod-flag">
+      <img class="pod-flag-middle" src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/coupons/img/yellow-shapes-middle2.png">
+      <span class="pod-flag-text" data-gd-sidebysidealign-row="2">{{ thisPod.pod_flag_text | safe }}</span>
+    </div>
+    <img class="pod-flag-right" src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/coupons/img/yellow-shapes-right3.png">
+  </div>
+
+  <div class="pod-wrapper">
+    <div class="pod-content" data-gd-sidebysidealign-row="3">
+      <div class="pod-top-content" data-gd-sidebysidealign-row="4">
+        <div class="pod-title">{{ thisPod.pod_title | safe }}</div>
+        <div class="pod-subtitle">{{ thisPod.pod_subtitle | safe }}</div>
+        <div class="pod-description">{{ thisPod.pod_description | safe }}</div>
+      </div>
+      <div class="pod-price-wrapper" data-gd-sidebysidealign-row="5">
+        <div class="pod-price-prefix">{{ thisPod.pod_price_prefix | safe }}</div>
+        <div class="pod-price"><span class="currency-adjust">{{ thisPod.pod_price | safe }}</span></div>
+        <div class="pod-price-suffix">{{ thisPod.pod_price_suffix | safe }}</div>
+      </div>
+      <div class="pod-button" data-gd-sidebysidealign-row="6">
+        <a class="btn-lg btn-custom-green pod-button-text" href="{{ thisPod.a_href | safe }}" data-ci="{{ thisPod.ci_code | safe }}" rel="pod_button_{{ pod_id }}" id="pod_button_{{ pod_id }}_{{ thisPod.count }}">{{ thisPod.pod_button_text | safe }}</a>
+      </div>
+      <div class="pod-footer">{{ thisPod.pod_footer | safe }}</div>
+    </div>
+  </div>
+</div>
+{% if thisPod.rule != '' %}
+##endif
+{% endif %}
+
+{% endmacro %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% macro pod_2(pod_id) %}
+
+{% set thisPod = productOfferings[pod_id] %}
+
+{% if !thisPod.count > 0 %}{% set temp = 0 %}
+  {% else %}{% set temp = thisPod['count'] %}{% endif %}
+
+{% set thisPod['count'] = temp + 1 %}
+{% set productOfferings[pod_id] = thisPod %}
+
+{% if thisPod.pod_flag_text != '' %}{% set flag_active = " pod-flag-active" %}
+  {% else %}{% set flag_active = "" %}{% endif %}
+
+{% if thisPod.pod_period == 'monthly' %}{% set pod_period = "monthly" %}
+  {% else %}{% set pod_period = "yearly" %}{% endif %}
+
+{{ thisPod.rule|safe }}
+<div class="pod-outer-wrapper col-xs-4 hidden" rel="{{ pod_id }}" id="{{ pod_id }}_{{ thisPod.count }}" data-pod-details='{"period":"{{pod_period}}"}'>
+  <div class="pod-flag-wrapper{{ flag_active }}" data-gd-sidebysidealign-row="1">
+    <img class="pod-flag-left" src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/coupons/img/yellow-shapes-left1.png">
+    <div class="pod-flag">
+      <img class="pod-flag-middle" src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/coupons/img/yellow-shapes-middle2.png">
+      <span class="pod-flag-text" data-gd-sidebysidealign-row="2">{{ thisPod.pod_flag_text | safe }}</span>
+    </div>
+    <img class="pod-flag-right" src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/coupons/img/yellow-shapes-right3.png">
+  </div>
+
+  <div class="pod-wrapper">
+    <div class="pod-content" data-gd-sidebysidealign-row="3">
+      <div class="pod-top-content" data-gd-sidebysidealign-row="4">
+        <div class="pod-subtitle">{{ thisPod.pod_title | safe }}</div>
+        <div class="pod-title">{{ thisPod.pod_subtitle | safe }}</div>
+        <div class="pod-description">{{ thisPod.pod_description | safe }}</div>
+      </div>
+      <div class="pod-price-wrapper" data-gd-sidebysidealign-row="5">
+        <div class="pod-price-prefix">{{ thisPod.pod_price_prefix | safe }}</div>
+        <div class="pod-price"><span class="currency-adjust">{{ thisPod.pod_price | safe }}</span></div>
+        <div class="pod-price-suffix">{{ thisPod.pod_price_suffix | safe }}</div>
+      </div>
+      <div class="pod-button" data-gd-sidebysidealign-row="6">
+        <a class="btn-lg btn-custom-green pod-button-text" href="{{ thisPod.a_href | safe }}" data-ci="{{ thisPod.ci_code | safe }}" rel="pod_button_{{ pod_id }}" id="pod_button_{{ pod_id }}_{{ thisPod.count }}">{{ thisPod.pod_button_text | safe }}</a>
+      </div>
+      <div class="pod-footer">{{ thisPod.pod_footer | safe }}</div>
+    </div>
+  </div>
+</div>
+{% if thisPod.rule != '' %}
+##endif
+{% endif %}
+
+{% endmacro %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% macro product_pod_data(x) %}
+
+
+{% set default_text = {
+  "button_text": L1 + "get-it-now" + L2,
+  "price_prefix": L1 + "now-only" + L2,
+  "price":'<span class="price">{0}</span>/<span class="period">{1}</span>',
+  "price_suffix": L1 + "was-oringinal-price-str-esc" + L2,
+  "domain_price_asterisk": '<span class="price"></span><sup>*</sup>',
+  "domain_price_no_asterisk": '<span class="price"></span>'
+}
+%}
+
+
+
+{% set productOfferings = {
+  "got_bundle":{
+    "rule": "##if(productIsOffered(99) && !countrySiteAny(mx))",
+    "class":"",
+
+    "pod_flag_text":"",
+
+    "pod_title": L1 + "pod-title-got_bundle" + L2,
+    "pod_subtitle":"",
+    "pod_description":"",
+
+    "pod_price_prefix":  L1 + "as-low-as" + L2,
+    "pod_price": default_text.price,
+    "pod_price_suffix": L1 + "annual-plan-includes-a-free-domain" + L2 + "*",
+    "pod_period":"monthly",
+
+    "a_href":"[@T[link:<relative path='~/offers/online-business.aspx'><param name='ci' value='" + cicodes.pod_got_bundle + "' /></relative>]@T]",
+    "ci_code": cicodes.pod_got_bundle,
+    "pod_button_text": L1 + "learn-more" + L2,
+
+    "pod_footer":""
+  },
+  "o365":{
+    "rule": "##if(productIsOffered(99))",
+    "class":"",
+
+    "pod_flag_text":"",
+
+    "pod_title": L1 + "pod-title-o365-str-esc" + L2,
+    "pod_subtitle": "",
+    "pod_description":"",
+
+    "pod_price_prefix": default_text.price_prefix,
+    "pod_price":"<span class='price'></span>/<span class='period'></span> ",
+    "pod_price_suffix": default_text.price_suffix,
+    "pod_period":"monthly",
+    
+    "a_href":"[@T[link:<relative path='~/business/office-365.aspx'><param name='ci' value='" + cicodes.pod_o365 + "' /></relative>]@T]",
+    "ci_code": cicodes.pod_o365,
+    "pod_button_text": default_text.button_text,
+
+    "pod_footer":""
+  },
+  "domain_based_email":{
+    "rule": "##if(productIsOffered(99))",
+    "class":"",
+
+    "pod_flag_text":"",
+
+    "pod_title": "<span class='uppercase'>" + L1 + "up-to-percentage-off-str-esc" + L2 + "</span>",
+    "pod_subtitle": L1 + "pod-title-domain_based_email" + L2,
+    "pod_description":"",
+
+    "pod_price_prefix": default_text.price_prefix,
+    "pod_price":"<span class='price'></span>/<span class='period'></span> ",
+    "pod_price_suffix": default_text.price_suffix,
+    "pod_period":"monthly",
+
+    "a_href":"[@T[link:<relative path='~/email-account.aspx'><param name='ci' value='" + cicodes.pod_domain_based_email + "' /></relative>]@T]",
+    "ci_code": cicodes.pod_domain_based_email,
+    "pod_button_text": default_text.button_text,
+
+    "pod_footer":""
+  },
+  "o365_bundle":{
+    "rule": "##if(productIsOffered(99) && countrySiteAny(www))",
+    "class":"",
+
+    "pod_flag_text": L1 + "best-deal-anywhere" + L2,
+
+    "pod_title": L1 + "pod-title-o365_bundle" + L2,
+    "pod_subtitle":"",
+    "pod_description":"",
+
+    "pod_price_prefix":  L1 + "as-low-as" + L2,
+    "pod_price":  L1 + "price-per-user-per-period-str-esc" + L2,
+    "pod_price_suffix": L1 + "annual-plan-includes-a-free-domain" + L2 + "*",
+    "pod_period":"monthly",
+
+    "a_href":"[@T[link:<relative path='~/offers/office365-promo.aspx'><param name='ci' value='" + cicodes.pod_o365_bundle + "' /></relative>]@T]",
+    "ci_code": cicodes.pod_o365_bundle,
+    "pod_button_text": default_text.button_text,
+
+    "pod_footer":""
+  },
+  "premium_ssl":{
+    "rule": "##if(countrySiteAny(www,ar,au,at,be,br,ca,cl,co,dk,fi,fr,de,in,ie,it,my,mx,nl,nz,no,pk,pe,ph,pt,ru,sg,za,es,se,ch,uk))",
+    "class":"",
+
+    "pod_flag_text":"",
+ 
+    "pod_title": L1 + "pod-title-premium_ssl-str-esc" + L2,
+    "pod_subtitle":"",
+    "pod_description":"",
+    
+    "pod_price_prefix": default_text.price_prefix,
+    "pod_price":"<span class='price'></span>/<span class='period'></span> ",
+    "pod_price_suffix": default_text.price_suffix,
+    "pod_period": "yearly",
+    
+    "a_href":"[@T[link:<relative path='~/ssl/ssl-certificates.aspx'><param name='ci' value='" + cicodes.pod_premium_ssl + "' /></relative>]@T]",
+    "ci_code": cicodes.pod_premium_ssl,
+    "pod_button_text": default_text.button_text,
+    
+    "pod_footer":""
+  },
+  "domain_us":{
+    "rule": "##if(countrySiteAny(www))",
+    "class":"",
+
+    "pod_flag_text":"",
+    
+    "pod_title":"<span class='tldlogo-dot-us tldlogo'></span>",
+    "pod_subtitle":"",
+    "pod_description": L1 + "PodDotUsText" + L2,
+    
+    "pod_price_prefix": default_text.price_prefix,
+    "pod_price": default_text.domain_price_no_asterisk,
+    "pod_price_suffix": default_text.price_suffix,
+    "pod_period": "",
+    
+    "a_href":"[@T[link:<relative path='~/tlds/us.aspx'><param name='ci' value='" + cicodes.pod_dom_us + "' /></relative>]@T]",
+    "ci_code": cicodes.pod_dom_us,
+    "pod_button_text": default_text.button_text,
+    
+    "pod_footer":""
+  },
+  "domain_in":{
+    "rule": "##if(countrySiteAny(in))",
+    "class":"",
+
+    "pod_flag_text":"",
+
+    "pod_title":"<span class='tldlogo-dot-in tldlogo'></span>",
+    "pod_subtitle":"",
+    "pod_description":"[@L[cds.sales/gd/domains/domain-name-search:PodDotInText]@L]",
+
+    "pod_price_prefix": default_text.price_prefix,
+    "pod_price": default_text.domain_price_no_asterisk,
+    "pod_price_suffix": default_text.price_suffix,
+    "pod_period": "",
+    
+    "a_href":"[@T[link:<relative path='~/tlds/in.aspx'><param name='ci' value='" + cicodes.pod_dom_in + "' /></relative>]@T]",
+    "ci_code": cicodes.pod_dom_in,
+    "pod_button_text": default_text.button_text,
+
+    "pod_footer":""
+  },
+  "domain_ca":{
+    "rule": "##if(countrySiteAny(ca))",
+    "class":"ddchide",
+
+    "pod_flag_text":"",
+
+    "pod_title":"<span class='tldlogo-dot-ca tldlogo'></span>",
+    "pod_subtitle":"",
+    "pod_description":"[@L[cds.sales/gd/domains/domain-name-search:PodDotCaText]@L]",
+    
+    "pod_price_prefix": default_text.price_prefix,
+    "pod_price": default_text.domain_price_no_asterisk,
+    "pod_price_suffix": L1 + "when-you-register-2-years-or-more" + L2,
+    "pod_period": "",
+    
+    "a_href":"[@T[link:<relative path='~/tlds/ca.aspx'><param name='ci' value='" + cicodes.pod_dom_ca + "' /></relative>]@T]",
+    "ci_code": cicodes.pod_dom_ca,
+    "pod_button_text": default_text.button_text,
+    
+    "pod_footer": L1 + "1st-year-price-is-price-additional-years-are-original-price-str-esc" + L2
+  },
+  "domain_ca_no_promo":{
+    "rule": "##if(countrySiteAny(ca))",
+    "class":"ddcshow",
+
+    "pod_flag_text":"",
+
+    "pod_title":"<span class='tldlogo-dot-ca tldlogo'></span>",
+    "pod_subtitle":"",
+    "pod_description":"[@L[cds.sales/gd/domains/domain-name-search:PodDotCaText]@L]",
+    
+    "pod_price_prefix": default_text.price_prefix,
+    "pod_price": default_text.domain_price_no_asterisk,
+    "pod_price_suffix": default_text.price_suffix,
+    "pod_period": "",
+    
+    "a_href":"[@T[link:<relative path='~/tlds/ca.aspx'><param name='ci' value='" + cicodes.pod_dom_ca + "' /></relative>]@T]",
+    "ci_code": cicodes.pod_dom_ca,
+    "pod_button_text": default_text.button_text,
+    
+    "pod_footer": ""
+  },
+  "domain_co_uk":{
+    "rule": "##if(countrySiteAny(uk))",
+    "class":"ddchide",
+
+    "pod_flag_text":"",
+    
+    "pod_title":"<span class='tldlogo-dot-co-uk tldlogo'></span>",
+    "pod_subtitle":"",
+    "pod_description":"[@L[cds.sales/gd/domains/domain-name-search:PodDotCoUkText1]@L]",
+
+    "pod_price_prefix": default_text.price_prefix,
+    "pod_price": default_text.domain_price_no_asterisk,
+    "pod_price_suffix": L1 + "when-you-register-2-years-or-more" + L2,
+    "pod_period": "",
+
+    "a_href":"[@T[link:<relative path='~/tlds/co.uk'><param name='ci' value='" + cicodes.pod_dom_co_uk + "' /></relative>]@T]",
+    "ci_code": cicodes.pod_dom_co_uk,
+    "pod_button_text": default_text.button_text,
+
+    "pod_footer": L1 + "1st-year-price-is-price-additional-years-are-original-price-str-esc" + L2
+  },
+  "domain_co_uk_no_promo":{
+    "rule": "##if(countrySiteAny(uk))",
+    "class":"ddcshow",
+
+    "pod_flag_text":"",
+    
+    "pod_title":"<span class='tldlogo-dot-co-uk tldlogo'></span>",
+    "pod_subtitle":"",
+    "pod_description":"[@L[cds.sales/gd/domains/domain-name-search:PodDotCoUkText1]@L]",
+    
+    "pod_price_prefix": default_text.price_prefix,
+    "pod_price": default_text.domain_price_no_asterisk,
+    "pod_price_suffix": default_text.price_suffix,
+    "pod_period": "",
+
+    "a_href":"[@T[link:<relative path='~/tlds/co.uk'><param name='ci' value='" + cicodes.pod_dom_co_uk + "' /></relative>]@T]",
+    "ci_code": cicodes.pod_dom_co_uk,
+    "pod_button_text": default_text.button_text,
+
+    "pod_footer": ""
+  },
+  "domain_com_mx":{
+    "rule": "##if(countrySiteAny(mx))",
+    "class":"ddchide",
+
+    "pod_flag_text":"",
+    
+    "pod_title":"<span class='tldlogo-dot-com-mx tldlogo'></span>",
+    "pod_subtitle":"",
+    "pod_description":"[@L[cds.sales/gd/domains/domain-name-search:PodDotMxText]@L]",
+    
+    "pod_price_prefix": default_text.price_prefix,
+    "pod_price": default_text.domain_price_no_asterisk,
+    "pod_price_suffix": L1 + "when-you-register-2-years-or-more" + L2,
+    "pod_period": "",
+
+    "a_href":"[@T[link:<relative path='~/tlds/mx-domain'><param name='ci' value='" + cicodes.pod_dom_com_mx + "' /></relative>]@T]",
+    "ci_code": cicodes.pod_dom_com_mx,
+    "pod_button_text": default_text.button_text,
+
+    "pod_footer": L1 + "1st-year-price-is-price-additional-years-are-original-price-str-esc" + L2
+  },
+  "domain_com_mx_no_promo":{
+    "rule": "##if(countrySiteAny(mx))",
+    "class":"ddcshow",
+
+    "pod_flag_text":"",
+    
+    "pod_title":"<span class='tldlogo-dot-com-mx tldlogo'></span>",
+    "pod_subtitle":"",
+    "pod_description":"[@L[cds.sales/gd/domains/domain-name-search:PodDotMxText]@L]",
+    
+    "pod_price_prefix": default_text.price_prefix,
+    "pod_price": default_text.domain_price_no_asterisk,
+    "pod_price_suffix": default_text.price_suffix,
+    "pod_period": "",
+
+    "a_href":"[@T[link:<relative path='~/tlds/mx-domain'><param name='ci' value='" + cicodes.pod_dom_com_mx + "' /></relative>]@T]",
+    "ci_code": cicodes.pod_dom_com_mx,
+    "pod_button_text": default_text.button_text,
+
+    "pod_footer": ""
+  },
+
+
+
+  
+
+
+
+
+  "domain_com_top_deal":{
+    "rule": "",
+    "class":"ddchide",
+
+    "pod_flag_text":"",
+    
+    "pod_title": L1 + "pod-title-domain_com" + L2,
+    "pod_subtitle":"",
+    "pod_description":"",
+    
+    "pod_price_prefix":  L1 + "pod-price-prefix-domain_com" + L2,
+    "pod_price": default_text.domain_price_asterisk,
+    "pod_price_suffix": L1 + "when-you-register-2-years-or-more" + L2,
+    "pod_period": "",
+    
+    "a_href":"[@T[link:<relative path='~/tlds/com.aspx'><param name='ci' value='" + cicodes.pod_dom_com_topdeal + "' /></relative>]@T]",
+    "ci_code": cicodes.pod_dom_com_topdeal,
+    "pod_button_text": L1 + "find-your-dotcom" + L2,
+    
+    "pod_footer": L1 + "1st-year-price-is-price-additional-years-are-original-price-str-esc" + L2
+  },
+  "web_hosting":{
+    "rule": "",
+    "class":"",
+
+    "pod_flag_text":"",
+    
+    "pod_title": L1 + "pod-title-web_hosting" + L2,
+    "pod_subtitle": "<span class='uppercase'>" + L1 + "up-to-percentage-off-str-esc" + L2 + "</span>",
+    "pod_description":"",
+
+    "pod_price_prefix":  L1 + "starting-at" + L2,
+    "pod_price": default_text.price,
+    "pod_price_suffix": L1 + "annual-plan-includes-a-free-domain" + L2 + "*",
+    "pod_period":"monthly",
+    
+    "a_href":"[@T[link:<relative path='~/hosting/web-hosting.aspx'><param name='ci' value='" + cicodes.pod_web_hosting + "' /></relative>]@T]",
+    "ci_code": cicodes.pod_web_hosting,
+    "pod_button_text": default_text.button_text,
+    
+    "pod_footer":""
+  },
+  "mwp":{
+    "rule": "",
+    "class":"",
+
+    "pod_flag_text":"",
+    
+    "pod_title": L1 + "pod-title-mwp" + L2,
+    "pod_subtitle":"",
+    "pod_description":"",
+
+    "pod_price_prefix":  L1 + "starting-at-just" + L2,
+    "pod_price": default_text.price,
+    "pod_price_suffix": L1 + "annual-plan-includes-a-free-domain" + L2 + "*",
+    "pod_period":"monthly",
+    
+    "a_href":"[@T[link:<relative path='~/hosting/wordpress-hosting.aspx'><param name='ci' value='" + cicodes.pod_mwp + "' /></relative>]@T]",
+    "ci_code": cicodes.pod_mwp,
+    "pod_button_text": default_text.button_text,
+    
+    "pod_footer":""
+  },
+  "domain_new_extensions":{
+    "rule": "",
+    "class":"",
+
+    "pod_flag_text":"",
+    
+    "pod_title": L1 + "pod-title-domain_new_extensions" + L2,
+    "pod_subtitle":"",
+    "pod_description":"",
+
+    "pod_price_prefix": "&nbsp;",
+    "pod_price": L1 + "pod-subtitle-domain_new_extensions" + L2,
+    "pod_price_suffix":"",
+    "pod_period": "",
+    
+    "a_href":"[@T[link:<relative path='~/tlds/gtld.aspx'><param name='ci' value='" + cicodes.pod_dom_new_ext + "' /></relative>]@T]",
+    "ci_code": cicodes.pod_dom_new_ext,
+    "pod_button_text": L1 + "btn-view-all" + L2,
+    
+    "pod_footer":""
+  },
+  "wsb":{
+    "rule": "",
+    "class":"",
+
+    "pod_flag_text": L1 + "save-up-to-percentage-str-esc" + L2,
+
+    "pod_title": L1 + "pod-title-wsb" + L2,
+    "pod_description": L1 + "pod-description-wsb" + L2 + "*",
+
+    "pod_price_prefix": default_text.price_prefix,
+    "pod_price":"<span class='price'></span>/<span class='period'></span> ",
+    "pod_price_suffix": default_text.price_suffix,
+    "pod_period":"monthly",
+    
+    "a_href":"[@T[link:<relative path='~/hosting/website-builder.aspx'><param name='ci' value='" + cicodes.pod_wsb + "' /></relative>]@T]",
+    "ci_code": cicodes.pod_wsb,
+    "pod_button_text": default_text.button_text,
+    
+    "pod_footer":""
+  },
+  "domain_transfers":{
+    "rule": "",
+    "class":"",
+
+    "pod_flag_text":"",
+    
+    "pod_title": L1 + "pod-title-domain_transfers" + L2,
+    "pod_subtitle":"",
+    "pod_description":"",
+
+    "pod_price_prefix":  L1 + "product-from-price" + L2,
+    "pod_price": default_text.domain_price_asterisk,
+    "pod_price_suffix": L1 + "one-year-free-extension" + L2,
+    "pod_period": "",
+    
+    "a_href":"[@T[link:<relative path='~/domains/domain-transfer.aspx'><param name='ci' value='" + cicodes.pod_dom_transfers + "' /></relative>]@T]",
+    "ci_code": cicodes.pod_dom_transfers,
+    "pod_button_text": L1 + "learn-more" + L2,
+    
+    "pod_footer":""
+  },
+  "domain_com":{
+    "rule": "",
+    "class":"ddchide",
+
+    "pod_flag_text":"",
+    
+    "pod_title":"<span class='tldlogo-dot-com tldlogo'></span>",
+    "pod_subtitle":"",
+    "pod_description": L1 + "PodDotComText" + L2,
+    
+    "pod_price_prefix":  L1 + "pod-price-prefix-domain_com" + L2,
+    "pod_price": default_text.domain_price_asterisk,
+    "pod_price_suffix": L1 + "when-you-register-2-years-or-more" + L2,
+    "pod_period": "",
+    
+    "a_href":"[@T[link:<relative path='~/tlds/com.aspx'><param name='ci' value='" + cicodes.pod_dom_com + "' /></relative>]@T]",
+    "ci_code": cicodes.pod_dom_com,
+    "pod_button_text": L1 + "find-your-dotcom" + L2,
+    
+    "pod_footer": L1 + "1st-year-price-is-price-additional-years-are-original-price-str-esc" + L2
+  },
+  "domain_com_no_promo":{
+    "rule": "",
+    "class":"ddcshow",
+
+    "pod_flag_text":"",
+    
+    "pod_title":"<span class='tldlogo-dot-com tldlogo'></span>",
+    "pod_subtitle":"",
+    "pod_description": L1 + "PodDotComText" + L2,
+    
+    "pod_price_prefix": default_text.price_prefix,
+    "pod_price": default_text.domain_price_asterisk,
+    "pod_price_suffix": default_text.price_suffix,
+    "pod_period": "",
+    
+    "a_href":"[@T[link:<relative path='~/tlds/com.aspx'><param name='ci' value='" + cicodes.pod_dom_com + "' /></relative>]@T]",
+    "ci_code": cicodes.pod_dom_com,
+    "pod_button_text": L1 + "find-your-dotcom" + L2,
+    
+    "pod_footer": ""
+  },
+  "domain_biz":{
+    "rule": "",
+    "class":"",
+
+    "pod_flag_text":"",
+    
+    "pod_title":"<span class='tldlogo-dot-biz tldlogo'></span>",
+    "pod_subtitle":"",
+    "pod_description": L1 + "PodDotBizText" + L2,
+    
+    "pod_price_prefix": default_text.price_prefix,
+    "pod_price": default_text.domain_price_asterisk,
+    "pod_price_suffix": default_text.price_suffix,
+    "pod_period": "",
+    
+    "a_href":"[@T[link:<relative path='~/tlds/biz.aspx'><param name='ci' value='" + cicodes.pod_dom_biz + "' /></relative>]@T]",
+    "ci_code": cicodes.pod_dom_biz,
+    "pod_button_text": default_text.button_text,
+    
+    "pod_footer":""
+  },
+  "domain_net":{
+    "rule": "",
+    "class":"",
+
+    "pod_flag_text":"",
+    
+    "pod_title":"<span class='tldlogo-dot-net tldlogo'></span>",
+    "pod_subtitle":"",
+    "pod_description": L1 + "PodDotNetText" + L2,
+    
+    "pod_price_prefix": default_text.price_prefix,
+    "pod_price": default_text.domain_price_asterisk,
+    "pod_price_suffix": default_text.price_suffix,
+    "pod_period": "",
+    
+    "a_href":"[@T[link:<relative path='~/tlds/net.aspx'><param name='ci' value='" + cicodes.pod_dom_net + "' /></relative>]@T]",
+    "ci_code": cicodes.pod_dom_net,
+    "pod_button_text": default_text.button_text,
+    
+    "pod_footer":""
+  },
+  "domain_org":{
+    "rule": "",
+    "class":"",
+
+    "pod_flag_text":"",
+    
+    "pod_title":"<span class='tldlogo-dot-org tldlogo'></span>",
+    "pod_subtitle":"",
+    "pod_description": L1 + "PodDotOrgText" + L2,
+    
+    "pod_price_prefix": default_text.price_prefix,
+    "pod_price": default_text.domain_price_asterisk,
+    "pod_price_suffix": default_text.price_suffix,
+    "pod_period": "",
+    
+    "a_href":"[@T[link:<relative path='~/tlds/org.aspx'><param name='ci' value='" + cicodes.pod_dom_org + "' /></relative>]@T]",
+    "ci_code": cicodes.pod_dom_org,
+    "pod_button_text": default_text.button_text,
+    
+    "pod_footer":""
+  },
+  "domain_guru":{
+    "rule": "",
+    "class":"",
+
+    "pod_flag_text":"",
+    
+    "pod_title":"<span class='tldlogo-dot-guru tldlogo'></span>",
+    "pod_subtitle":"",
+    "pod_description": L1 + "PodDotGuruText" + L2,
+    
+    "pod_price_prefix": default_text.price_prefix,
+    "pod_price": default_text.domain_price_asterisk,
+    "pod_price_suffix": default_text.price_suffix,
+    "pod_period": "",
+    
+    "a_href":"[@T[link:<relative path='~/tlds/guru'><param name='ci' value='" + cicodes.pod_dom_guru + "' /></relative>]@T]",
+    "ci_code": cicodes.pod_dom_guru,
+    "pod_button_text": default_text.button_text,
+    
+    "pod_footer":""
+  },
+  "domain_photography":{
+    "rule": "",
+    "class":"",
+
+    "pod_flag_text":"",
+    
+    "pod_title":"<span class='tldlogo-dot-photography tldlogo'></span>",
+    "pod_subtitle":"",
+    "pod_description": L1 + "PodDotPhotographyText" + L2,
+    
+    "pod_price_prefix": default_text.price_prefix,
+    "pod_price": default_text.domain_price_asterisk,
+    "pod_price_suffix": default_text.price_suffix,
+    "pod_period": "",
+    
+    "a_href":"[@T[link:<relative path='~/tlds/photography'><param name='ci' value='" + cicodes.pod_dom_photography + "' /></relative>]@T]",
+    "ci_code": cicodes.pod_dom_photography,
+    "pod_button_text": default_text.button_text,
+    
+    "pod_footer":""
+  },
+  "domain_club":{
+    "rule": "",
+    "class":"",
+
+    "pod_flag_text":"",
+    
+    "pod_title":"<span class='tldlogo-dot-club tldlogo'></span>",
+    "pod_subtitle":"",
+    "pod_description": L1 + "PodDotClubRegisterText" + L2,
+    
+    "pod_price_prefix": default_text.price_prefix,
+    "pod_price": default_text.domain_price_asterisk,
+    "pod_price_suffix": default_text.price_suffix,
+    "pod_period": "",
+    
+    "a_href":"[@T[link:<relative path='~/tlds/club'><param name='ci' value='" + cicodes.pod_dom_club + "' /></relative>]@T]",
+    "ci_code": cicodes.pod_dom_club,
+    "pod_button_text": default_text.button_text,
+    
+    "pod_footer":""
+  },
+  "domain_company":{
+    "rule": "",
+    "class":"",
+
+    "pod_flag_text":"",
+    
+    "pod_title":"<span class='tldlogo-dot-company tldlogo'></span>",
+    "pod_subtitle":"",
+    "pod_description": L1 + "PodDotCompanyText" + L2,
+    
+    "pod_price_prefix": default_text.price_prefix,
+    "pod_price": default_text.domain_price_asterisk,
+    "pod_price_suffix": default_text.price_suffix,
+    "pod_period": "",
+    
+    "a_href":"[@T[link:<relative path='~/tlds/company'><param name='ci' value='" + cicodes.pod_dom_company + "' /></relative>]@T]",
+    "ci_code": cicodes.pod_dom_company,
+    "pod_button_text": default_text.button_text,
+    
+    "pod_footer":""
+  },
+  "domain_city":{
+    "rule": "",
+    "class":"",
+
+    "pod_flag_text":"",
+    
+    "pod_title":"<span class='tldlogo-dot-city tldlogo'></span>",
+    "pod_subtitle":"",
+    "pod_description": L1 + "PodDotCityText" + L2,
+    
+    "pod_price_prefix": default_text.price_prefix,
+    "pod_price": default_text.domain_price_asterisk,
+    "pod_price_suffix": default_text.price_suffix,
+    "pod_period": "",
+    
+    "a_href":"[@T[link:<relative path='~/tlds/city'><param name='ci' value='" + cicodes.pod_dom_city + "' /></relative>]@T]",
+    "ci_code": cicodes.pod_dom_city,
+    "pod_button_text": default_text.button_text,
+    
+    "pod_footer":""
+  },
+  "domain_rocks":{
+    "rule": "",
+    "class":"",
+
+    "pod_flag_text":"",
+    
+    "pod_title":"<span class='tldlogo-dot-rocks tldlogo'></span>",
+    "pod_subtitle":"",
+    "pod_description": L1 + "PodDotRocksText" + L2,
+    
+    "pod_price_prefix": default_text.price_prefix,
+    "pod_price": default_text.domain_price_asterisk,
+    "pod_price_suffix": default_text.price_suffix,
+    "pod_period": "",
+    
+    "a_href":"[@T[link:<relative path='~/tlds/rocks'><param name='ci' value='" + cicodes.pod_dom_rocks + "' /></relative>]@T]",
+    "ci_code": cicodes.pod_dom_rocks,
+    "pod_button_text": default_text.button_text,
+    
+    "pod_footer":""
+  },
+  "domain_business":{
+    "rule": "",
+    "class":"",
+
+    "pod_flag_text":"",
+    
+    "pod_title":"<span class='tldlogo-dot-business tldlogo'></span>",
+    "pod_subtitle":"",
+    "pod_description": L1 + "PodDotBusinessText" + L2,
+    
+    "pod_price_prefix": default_text.price_prefix,
+    "pod_price": default_text.domain_price_no_asterisk,
+    "pod_price_suffix": default_text.price_suffix,
+    "pod_period": "",
+    
+    "a_href":"[@T[link:<relative path='~/tlds/business'><param name='ci' value='" + cicodes.pod_dom_business + "' /></relative>]@T]",
+    "ci_code": cicodes.pod_dom_business,
+    "pod_button_text": default_text.button_text,
+    
+    "pod_footer":""
+  },
+  "domain_global":{
+    "rule": "",
+    "class":"",
+
+    "pod_flag_text":"",
+    
+    "pod_title":"<span class='tldlogo-dot-global tldlogo'></span>",
+    "pod_subtitle":"",
+    "pod_description": L1 + "PodDotGlobalText" + L2,
+    
+    "pod_price_prefix": default_text.price_prefix,
+    "pod_price": default_text.domain_price_asterisk,
+    "pod_price_suffix": default_text.price_suffix,
+    "pod_period": "",
+    
+    "a_href":"[@T[link:<relative path='~/tlds/global'><param name='ci' value='" + cicodes.pod_dom_global + "' /></relative>]@T]",
+    "ci_code": cicodes.pod_dom_global,
+    "pod_button_text": default_text.button_text,
+    
+    "pod_footer":""
+  },
+  "domain_property":{
+    "rule": "",
+    "class":"",
+
+    "pod_flag_text":"",
+    
+    "pod_title":"<span class='tldlogo-dot-property tldlogo'></span>",
+    "pod_subtitle":"",
+    "pod_description": L1 + "PodDotPropertyText" + L2,
+    
+    "pod_price_prefix": default_text.price_prefix,
+    "pod_price": default_text.domain_price_no_asterisk,
+    "pod_price_suffix": default_text.price_suffix,
+    "pod_period": "",
+    
+    "a_href":"[@T[link:<relative path='~/tlds/property'><param name='ci' value='" + cicodes.pod_dom_property + "' /></relative>]@T]",
+    "ci_code": cicodes.pod_dom_property,
+    "pod_button_text": default_text.button_text,
+    
+    "pod_footer":""
+  },
+  "domain_today":{
+    "rule": "",
+    "class":"",
+
+    "pod_flag_text":"",
+    
+    "pod_title":"<span class='tldlogo-dot-today tldlogo'></span>",
+    "pod_subtitle":"",
+    "pod_description": L1 + "PodDotTodayText" + L2,
+    
+    "pod_price_prefix": default_text.price_prefix,
+    "pod_price": default_text.domain_price_asterisk,
+    "pod_price_suffix": default_text.price_suffix,
+    "pod_period": "",
+    
+    "a_href":"[@T[link:<relative path='~/tlds/today'><param name='ci' value='" + cicodes.pod_dom_today + "' /></relative>]@T]",
+    "ci_code": cicodes.pod_dom_today,
+    "pod_button_text": default_text.button_text,
+    
+    "pod_footer":""
+  },
+  "domain_bargain_bin":{
+    "rule": "",
+    "class":"",
+
+    "pod_flag_text":"",
+    
+    "pod_title": L1 + "pod-title-domain_auctionbuyitnow" + L2,
+    "pod_subtitle":"",
+    "pod_description":"",
+    
+    "pod_price_prefix":  L1 + "as-low-as" + L2,
+    "pod_price": default_text.price,
+    "pod_price_suffix": L1 + "bargain-bin-disclaimer" + L2,
+    "pod_period": "",
+    
+    "a_href":"[@T[link:<external parammode='explicit' linktype='TDNAMURL' secure='true' path='/'><param name='t' value='23' /><param name='ci' value='" + cicodes.pod_dom_bargainbin + "' /></external>]@T]",
+    "ci_code": cicodes.pod_dom_bargainbin,
+    "pod_button_text": L1 + "godaddy-auctions" + L2,
+
+    "pod_footer":""
+  }
+}
+  
+
+
+
+
+%}
+
+
+
+
+{% endmacro %}

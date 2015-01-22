@@ -1,0 +1,22 @@
+{
+  "coupons.html": {
+    "cdsDetails": {
+      "draft": {
+        "url": "http://www.dev-godaddy.com/coupons.aspx",
+        "splitSide":"A"
+      }
+    },
+    "metaTitle": "[@L[cds.sales/coupons:page-title]@L]",
+    "metaDescription": "[@L[cds.sales/coupons:meta-description]@L]",
+    "metaKeywords": "[@L[cds.sales/coupons:meta-keywords]@L]",
+    "metaCanonicalPath": "/coupons.aspx",
+    "metaOgTitle": "[@L[cds.sales/coupons:page-title]@L]",
+    "metaOgImage": "fos/img/1/73229_gd_logo.jpg",
+    "metaOgDescription": "[@L[cds.sales/coupons:meta-og-description]@L]"
+  },
+  "coupons.language": {
+    "cdsDetails": {
+      
+    }
+  }
+}
