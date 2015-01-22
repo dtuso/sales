@@ -25,9 +25,6 @@
     <meta property="og:site_name" content="[@T[link:<relative parammode='explicit' />]@T]">
     <meta property="fb:app_id" content="115696031791232">
     <meta property="fb:admins" content="633356800">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="[@L[cds.sales/gd/hosting/web-hosting:stuff]@L]">
-    <meta name="twitter:title" content="[@L[cds.sales/gd/hosting/web-hosting:stuff]@L]">
     <meta name="twitter:description" content="[@L[cds.sales/gd/hosting/web-hosting:twitter-text]@L]">
     <meta name="twitter:image:src" content="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/gd_rebrand_og.png"> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
@@ -198,7 +195,7 @@ h3 {
 }
 .include-check-black:before {
   content: "";
-  background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+  background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
   background-position: 0 -700px;
   background-size: 205px auto;
   width: 25px;
@@ -471,7 +468,7 @@ cursor: pointer;
 }
 
 .heartIcon {
-  background-image: url(//img1.wsimg-com.ide/fos/mike/img/hosting/img-feature2-heart.png);
+  background-image: url([@T[link:<imageroot />]@T]fos/mike/img/hosting/img-feature2-heart.png);
   display: inline-block;
   width: 59px;
   height: 50px;
@@ -493,7 +490,7 @@ cursor: pointer;
 #speed-chart p {text-align: right; }
 
 .tool-tip-black {
-  background-image: url(https://img1.wsimg-com.ide/fos/mike/img/hosting/img-tootip-.png);
+  background-image: url([@T[link:<imageroot />]@T]fos/mike/img/hosting/img-tootip-.png);
   width: 14px;
   height: 14px;
   display: inline-block;
@@ -565,11 +562,11 @@ cursor: pointer;
 }
 
 
-.modal-open {
+#bazaarvoicemodal .modal-open {
   overflow: hidden;
 }
 
-.modal {
+#bazaarvoicemodal .modal {
   position: fixed;
   top: 0;
   right: 0;
@@ -581,7 +578,7 @@ cursor: pointer;
   overflow-y: scroll;
 }
 
-.modal.fade .modal-dialog {
+#bazaarvoicemodal .modal.fade .modal-dialog {
   -webkit-transform: translate(0, -25%);
       -ms-transform: translate(0, -25%);
           transform: translate(0, -25%);
@@ -591,20 +588,20 @@ cursor: pointer;
           transition: transform 0.3s ease-out;
 }
 
-.modal.in .modal-dialog {
+#bazaarvoicemodal .modal.in .modal-dialog {
   -webkit-transform: translate(0, 0);
       -ms-transform: translate(0, 0);
           transform: translate(0, 0);
 }
 
-.modal-dialog {
+#bazaarvoicemodal .modal-dialog {
   position: relative;
   z-index: 1050;
   width: auto;
   margin: 10px;
 }
 
-.modal-content {
+#bazaarvoicemodal .modal-content {
   position: relative;
   background-color: #ffffff;
   border: 1px solid #999999;
@@ -616,7 +613,7 @@ cursor: pointer;
   background-clip: padding-box;
 }
 
-.modal-backdrop {
+#bazaarvoicemodal .modal-backdrop {
   position: fixed;
   top: 0;
   right: 0;
@@ -626,82 +623,82 @@ cursor: pointer;
   background-color: #000000;
 }
 
-.modal-backdrop.fade {
+#bazaarvoicemodal .modal-backdrop.fade {
   opacity: 0;
   filter: alpha(opacity=0);
 }
 
-.modal-backdrop.in {
+#bazaarvoicemodal .modal-backdrop.in {
   opacity: 0.5;
   filter: alpha(opacity=50);
 }
 
-.modal-header {
+#bazaarvoicemodal .modal-header {
   min-height: 16.428571429px;
   padding: 15px;
   border-bottom: 1px solid #e5e5e5;
 }
 
-.modal-header .close {
+#bazaarvoicemodal .modal-header .close {
   margin-top: -2px;
 }
 
-.modal-title {
+#bazaarvoicemodal .modal-title {
   margin: 0;
   line-height: 1.428571429;
 }
 
-.modal-body {
+#bazaarvoicemodal .modal-body {
   position: relative;
   padding: 20px;
 }
 
-.modal-footer {
+#bazaarvoicemodal .modal-footer {
   padding: 19px 20px 20px;
   margin-top: 15px;
   text-align: right;
   border-top: 1px solid #e5e5e5;
 }
 
-.modal-footer:before,
-.modal-footer:after {
+#bazaarvoicemodal .modal-footer:before,
+#bazaarvoicemodal .modal-footer:after {
   display: table;
   content: " ";
 }
 
-.modal-footer:after {
+#bazaarvoicemodal .modal-footer:after {
   clear: both;
 }
 
-.modal-footer:before,
-.modal-footer:after {
+#bazaarvoicemodal .modal-footer:before,
+#bazaarvoicemodal .modal-footer:after {
   display: table;
   content: " ";
 }
 
-.modal-footer:after {
+#bazaarvoicemodal .modal-footer:after {
   clear: both;
 }
 
-.modal-footer .btn + .btn {
+#bazaarvoicemodal .modal-footer .btn + .btn {
   margin-bottom: 0;
   margin-left: 5px;
 }
 
-.modal-footer .btn-group .btn + .btn {
+#bazaarvoicemodal .modal-footer .btn-group .btn + .btn {
   margin-left: -1px;
 }
 
-.modal-footer .btn-block + .btn-block {
+#bazaarvoicemodal .modal-footer .btn-block + .btn-block {
   margin-left: 0;
 }
 
 @media screen and (min-width: 768px) {
-  .modal-dialog {
+  #bazaarvoicemodal .modal-dialog {
     width: 600px;
     margin: 30px auto;
   }
-  .modal-content {
+  #bazaarvoicemodal .modal-content {
     -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
   }
@@ -7102,7 +7099,7 @@ h2.marquee-product-name,
                     </div>
                   </div>
                   <div class="col-sm-4 ">
-                    <div class="include-check">[@L[cds.sales/hosting/web-hosting-rebrand:freeDomain]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:freeDomainRestrictions]@L]'></span></div>
+                    <div class="include-check">[@L[cds.sales/hosting/web-hosting-rebrand:freeDomain]@L]. <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:freeDomainRestrictions]@L]'></span></div>
                     <div class="include-check">[@L[cds.sales/hosting/web-hosting-rebrand:freeEmail]@L]</div>
                     <div class="include-check">[@L[cds.sales/hosting/web-hosting-rebrand:oneClick]@L]</div>
                   </div>
@@ -7662,7 +7659,7 @@ h2.marquee-product-name,
                     </div>
                   </div>
                   <div class="col-sm-4 ">
-                    <div class="include-check">[@L[cds.sales/hosting/web-hosting-rebrand:freeDomain]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:freeDomainRestrictions]@L]'></span></div>
+                    <div class="include-check">[@L[cds.sales/hosting/web-hosting-rebrand:freeDomain]@L]. <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:freeDomainRestrictions]@L]'></span></div>
                     <div class="include-check">[@L[cds.sales/hosting/web-hosting-rebrand:freeEmail]@L]</div>
                     <div class="include-check">[@L[cds.sales/hosting/web-hosting-rebrand:oneClick]@L]</div>
                   </div>
@@ -7845,7 +7842,7 @@ h2.marquee-product-name,
           <ul class="nav navbar-nav"></ul>
           <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.mid-page-nav&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="navbar-right">
             <div class="price-text">[@L[cds.sales/_common:plans-starting-at]@L]</div>
-            <div class="price">[@T[productprice:<current productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]<span>/month</span></div><a href="#planTileOne" class="btn-purchase btn btn-sm">[@L[cds.sales/_common:see-the-plans]@L]</a>
+            <div class="price">[@T[productprice:<current productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]<span>/[@L[cds.sales/_common:month]@L]</span></div><a href="#planTileOne" class="btn-purchase btn btn-sm">[@L[cds.sales/_common:see-the-plans]@L]</a>
           </div>
         </div>
       </div>
@@ -8025,7 +8022,7 @@ h2.marquee-product-name,
         </div>
       </div>
     </section>
-    <section id="features" data-mid-nav-title="Features" class="key-benefits-wrap tile-section">
+    <section id="features" data-mid-nav-title="[@L[cds.sales/hosting/web-hosting-rebrand:midpagefeatures]@L]" class="key-benefits-wrap tile-section">
       <div style="background-image: url(); background-color: #fff;">
         <div class="container">
           <div class="row">
@@ -8091,7 +8088,7 @@ h2.marquee-product-name,
     </section> 
     ##if(activeLanguageAny([en-IN]))
      
-    <section id="compare" data-mid-nav-title="Compare" class="compare-chart-pro section-pro bg-pro-gray tile-section">
+    <section id="compare" data-mid-nav-title="[@L[cds.sales/hosting/web-hosting-rebrand:midpagecompare]@L]" class="compare-chart-pro section-pro bg-pro-gray tile-section">
       <div style="background: #fff;" class="container">
         <div class="text-center">
           <h2>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-tab-title-11166]@L]</h2>
@@ -8219,7 +8216,7 @@ h2.marquee-product-name,
   text-align: center;
 }
 .compare-chart-pro .compare-chart-header .sf-tipper-target {
-  background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+  background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
   background-position: 0 -1069px;
   width: 14px;
   height: 14px;
@@ -8269,7 +8266,7 @@ h2.marquee-product-name,
 
 
 .icon {
-  background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+  background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
   display: inline-block;
   background-size: 205px auto;
 }
@@ -9057,7 +9054,7 @@ height: 27px;
     </section> 
     ##else
      
-    <section id="compare" data-mid-nav-title="Compare" class="compare-chart-pro section-pro bg-pro-gray tile-section">
+    <section id="compare" data-mid-nav-title="[@L[cds.sales/hosting/web-hosting-rebrand:midpagecompare]@L]" class="compare-chart-pro section-pro bg-pro-gray tile-section">
       <div style="background: #fff;" class="container">
         <div class="text-center">
           <h2>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-tab-title-11166]@L]</h2>
@@ -9185,7 +9182,7 @@ height: 27px;
   text-align: center;
 }
 .compare-chart-pro .compare-chart-header .sf-tipper-target {
-  background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+  background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
   background-position: 0 -1069px;
   width: 14px;
   height: 14px;
@@ -9235,7 +9232,7 @@ height: 27px;
 
 
 .icon {
-  background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+  background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
   display: inline-block;
   background-size: 205px auto;
 }
@@ -9969,7 +9966,7 @@ height: 27px;
     </section> 
     ##endif
      
-    <section id="platforms" data-mid-nav-title="Platforms">
+    <section id="platforms" data-mid-nav-title="[@L[cds.sales/hosting/web-hosting-rebrand:midpageplatforms]@L]">
       <style>
 .two-up-title-wrap.bg-white {
   background-color: #fff;
@@ -10331,7 +10328,7 @@ height: 27px;
     </section> 
     ##if(activeLanguageAny([en-US]))
      
-    <section id="reviews" class="tile-section">
+    <section id="reviews" data-mid-nav-title="[@L[cds.sales/hosting/web-hosting-rebrand:midpagereviews]@L]" class="tile-section">
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
@@ -10554,7 +10551,7 @@ height: 27px;
                         <li>[@L[cds.sales/hosting/web-hosting-rebrand:wsbList1]@L]</li>
                         <li>[@L[cds.sales/hosting/web-hosting-rebrand:wsbList2]@L]</li>
                         <li>[@L[cds.sales/hosting/web-hosting-rebrand:wsbList3]@L]</li>
-                      </ul><a class="btn btn-default-dark">[@L[cds.sales/hosting/web-hosting-rebrand:learnMore]@L]</a>
+                      </ul><a href="[@T[link:<relative path='/hosting/website-builder.aspx'>><param name='ci' value='93999' /></relative>]@T]" class="btn btn-default-dark">[@L[cds.sales/hosting/web-hosting-rebrand:learnMore]@L]</a>
                     </div>
                   </div>
                 </div>
@@ -10571,7 +10568,7 @@ height: 27px;
                         <li>[@L[cds.sales/hosting/web-hosting-rebrand:vpsList1]@L]</li>
                         <li>[@L[cds.sales/hosting/web-hosting-rebrand:vpsList2]@L]</li>
                         <li>[@L[cds.sales/hosting/web-hosting-rebrand:vpsList3]@L]</li>
-                      </ul><a class="btn btn-default-light">[@L[cds.sales/hosting/web-hosting-rebrand:learnMore]@L]</a>
+                      </ul><a href="[@T[link:<relative path='/hosting/vps-hosting.aspx'>><param name='ci' value='93999' /></relative>]@T]" class="btn btn-default-light">[@L[cds.sales/hosting/web-hosting-rebrand:learnMore]@L]</a>
                     </div>
                   </div>
                 </div>
@@ -10641,7 +10638,7 @@ height: 27px;
      
     ##if(activeLanguageAny([en-US]))
      
-    <section id="modals">
+    <section id="bazaarvoicemodal">
       <div id="login-modal" class="modal fade">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -10945,7 +10942,7 @@ height: 27px;
     </script>
     <script>
       function disclaimersModal() {
-        $('#disclaimersModal').sfDialog();
+        $('#disclaimersModal').sfDialog({buttons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }] });
       }
       $("#alternate-products").find(".col-md-offset-2").find("h2").hover(function(){
           $(this).hide().text("[@L[cds.sales/hosting/web-hosting-rebrand:vpsGrooow]@L]").fadeIn("slow");

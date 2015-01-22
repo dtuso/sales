@@ -129,6 +129,22 @@
     </style>
     <link href="[@T[link:<cssroot />]@T]/fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css">
     <style>
+
+##if(countrySiteAny(gr))
+* {
+  font-family: arial !important;
+}
+.close {
+  font-family: uxfont !important;
+}
+.uxicon {
+  font-family: uxfont !important;
+}
+##endif
+
+
+    </style>
+    <style>
 .bg-black {
   background-color: #333333;
 }
@@ -1491,7 +1507,7 @@ width: 50%;
         $('#midPageNav .dropdown-toggle').dropdown();
       });
       function organizeNavBar(){
-        var linkArea = $('.navbar-nav').width();
+        var linkArea = $('.navbar-nav').width()+ 150;
         var navBarArea = $('.navbar-collapse').width()-$('.navbar-right').width();
         dropdownItem = "";
         $dropdownMenu = "";
@@ -4055,7 +4071,6 @@ text-transform: uppercase;
                       $(".features-tabbed-carousel-icon").removeClass("active");
                       $(this).addClass("active");
                       $('#carousel-social-media').carousel(slideNum);
-                      window.lazyLoad.check();
                     });
                     
                     $('#carousel-social-media').on('slid.bs.carousel', function () {
@@ -4067,7 +4082,6 @@ text-transform: uppercase;
                           $(this).addClass("active");
                         }
                       });
-                      window.lazyLoad.check();
                     });
                     
                     
@@ -4653,7 +4667,6 @@ text-transform: uppercase;
                       $(".features-tabbed-carousel-icon").removeClass("active");
                       $(this).addClass("active");
                       $('#carousel-social-media').carousel(slideNum);
-                      window.lazyLoad.check();
                     });
                     
                     $('#carousel-social-media').on('slid.bs.carousel', function () {
@@ -4665,7 +4678,6 @@ text-transform: uppercase;
                           $(this).addClass("active");
                         }
                       });
-                      window.lazyLoad.check();
                     });
                     
                     
