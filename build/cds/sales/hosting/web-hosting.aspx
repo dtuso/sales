@@ -10294,7 +10294,7 @@ height: 27px;
             </div>
           </div>
         </div>
-        <div style=";" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/linux-v-windows.png" data-lazyload-callback="triggerResize" class="two-up-wrap-compare bg-green-official lazyload">
+        <div style=";" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/linux-v-windows.png" class="two-up-wrap-compare bg-green-official lazyload">
           <div class="container">
             <div class="row">
               <div class="col-md-5 or-container col-sm-6  bg-green-official">
@@ -10544,7 +10544,7 @@ height: 27px;
             </div>
           </div>
         </div>
-        <div style="min-height: 580px;;" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/compare-bg.png" data-lazyload-callback="triggerResize" class="two-up-wrap-compare bg-green-official lazyload">
+        <div style="min-height: 580px;;" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/compare-bg.png" class="two-up-wrap-compare bg-green-official lazyload">
           <div class="container">
             <div class="row">
               <div class="col-md-5 or-container-none col-sm-6  bg-green-official-light">
@@ -10599,7 +10599,7 @@ height: 27px;
             </div>
           </div>
         </div>
-        <div style="min-height: 580px;;" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/compare-bg.png" data-lazyload-callback="triggerResize" class="two-up-wrap-compare bg-green-official lazyload">
+        <div style="min-height: 580px;;" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/compare-bg.png" class="two-up-wrap-compare bg-green-official lazyload">
           <div class="container">
             <div class="row">
               <div class="col-md-5 or-container-none col-sm-6  bg-green-official-light">

@@ -85,8 +85,7 @@ mixin renderTwoUpCompare(twoUpOptions)
               h2.text-center.two-up-title !{twoUpOptions.title}
     div(class="two-up-wrap-compare #{twoUpOptions.backgroundColor} lazyload", 
         style!= "#{twoUpOptions.style ? twoUpOptions.style : ''};", 
-        data-lazyload-source!=("#{twoUpOptions.backgroundImage}"), 
-        data-lazyload-callback!=("triggerResize"))
+        data-lazyload-source!=("#{twoUpOptions.backgroundImage}"))
       .container
         .row
           block
