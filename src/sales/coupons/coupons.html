@@ -581,13 +581,13 @@ $(document).ready(function() {
 {#
 /*
   var shopperDataApiUrl = "[@T[link:<external parammode="explicit" linktype="GUIURL" secure="true" path="/pcjson/standardheaderfooter" />]@T]";
-      console.log(shopperDataApiUrl)
+      
   $.ajax({
     type: 'POST',
     url: shopperDataApiUrl
     ,complete: function (data) {
       var shopperData = $.parseJSON(data.responseText);
-      console.log(shopperData)
+      
     },
     dataType: 'json'
   });  
@@ -835,12 +835,12 @@ $(document).ready(function() {
         if(typeof pcIsDiscount !="undefined" && pcIsDiscount === true){
           $(".ddchide").remove();
           $(".ddcshow").removeClass('ddcshow');
-          //console.log("ddc customer")
+          
 
         } else {
           $(".ddcshow").remove();
           $(".ddchide").removeClass('ddchide');
-          //console.log("not ddc customer")
+          
 
         }
       }
