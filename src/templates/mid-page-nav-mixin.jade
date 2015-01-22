@@ -53,8 +53,8 @@ mixin renderMidPageNav(options)
 
       var nav = $('.mid-page-nav');
       var navTop = nav.offset().top;
-      var footerBot = $('#footer').offset().top
-      var sections = []
+      var footerBot = $('#footer').offset().top;
+      var sections = [];
 
       $('[data-mid-nav-title]').each(function(){
         //titles.push($(this).data('mid-nav-title'));
@@ -94,7 +94,7 @@ mixin renderMidPageNav(options)
       $('#midPageNav .dropdown-toggle').dropdown();
     });
     function organizeNavBar(){
-      var linkArea = $('.navbar-nav').width();
+      var linkArea = $('.navbar-nav').width()+ 150;
       var navBarArea = $('.navbar-collapse').width()-$('.navbar-right').width();
       dropdownItem = "";
       $dropdownMenu = "";
