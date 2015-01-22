@@ -380,6 +380,7 @@ function tokenizeDisclaimerModals() {
   };
   
   if(got1Page.canOfferOls) tokenizeDisclaimerModal('#default-marquee-details-modal.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_wsb,got1Page.pricing.bundleRenewal_ols);
+  tokenizeDisclaimerModal('#default-marquee-details-modal-wsb-only.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_wsb);
   tokenizeDisclaimerModal('#default-marquee-details-modal-wsb-only-choice.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_wsb);  
   tokenizeDisclaimerModal('#site-choice-wsb-modal.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_wsb);  
   if(got1Page.canOfferOls) tokenizeDisclaimerModal('#site-choice-ols-modal.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_ols);
@@ -824,6 +825,22 @@ $(window).load(function () {
       
     </style>
     <link href="[@T[link:<cssroot />]@T]/fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css">
+    <style>
+
+##if(countrySiteAny(gr))
+* {
+  font-family: arial !important;
+}
+.close {
+  font-family: uxfont !important;
+}
+.uxicon {
+  font-family: uxfont !important;
+}
+##endif
+
+
+    </style>
     <style>.bg-gray-light {
   background-color: #d9d9d9;
 }
