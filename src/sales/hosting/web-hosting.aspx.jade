@@ -24,10 +24,10 @@ prepend endOfPageScripts
     function disclaimersModal() {
       $('#disclaimersModal').sfDialog({buttons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }] });
     }
-    $("#alternate-products").find(".col-md-offset-2").find("h2").hover(function(){
-        $(this).hide().text("[@L[cds.sales/hosting/web-hosting-rebrand:vpsGrooow]@L]").fadeIn("slow");
+    $("#alternate-products").find(".col-md-offset-2").hover(function(){
+        $("#alternate-products").find(".col-md-offset-2").find("h2").text("[@L[cds.sales/hosting/web-hosting-rebrand:vpsGrooow]@L]").fadeIn("slow");
     }, function() {
-        $(this).hide().text("[@L[cds.sales/hosting/web-hosting-rebrand:vpsGrow]@L]").fadeIn("slow");
+        $("#alternate-products").find(".col-md-offset-2").find("h2").text("[@L[cds.sales/hosting/web-hosting-rebrand:vpsGrow]@L]").fadeIn("slow");
     });
     ##if(activeLanguageAny([en-us]))
       var loadReviews = function(){
