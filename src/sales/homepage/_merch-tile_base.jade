@@ -14,7 +14,7 @@ block tileContent
     <![endif]-->
     img.promo-logo.svgfallback(src!=logoImage)
     if (logoText)
-      .promo-logo-text #{logoText}
-  .promo-text.walsheim-black #{promoText}
+      .promo-logo-text !{logoText}
+  .promo-text.walsheim-black !{promoText}
   .promo-cta
-    a.walsheim-black(href!=ctaLink) #{ctaText} 
+    a.walsheim-black(href!=ctaLink) !{ctaText} 
