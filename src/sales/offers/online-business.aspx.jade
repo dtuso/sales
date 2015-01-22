@@ -4,70 +4,69 @@ id: 54beccb2f778fc1118b559d7
 name: GCE-32414-GOT-dom
 comments: GOT rebrand 2015 SuperBowl
 ---
-extends ../../templates/page
-//- extends ../../templates/pages/landing-page
+extends ../../templates/pages/landing-page
 
-//- append vars
-//-   - page.title = "[@L[cds.sales/offers/online-business:page-title]@L]";
-//-   - page.description = "[@L[cds.sales/offers/online-business:meta-description]@L]";
-//-   - page.keywords = "[@L[cds.sales/offers/online-business:meta-keywords]@L]"; 
-//-   - page.canonical = "[@T[link:<relative parammode='explicit' path='~/offers/online-business.aspx' />]@T]";
+append vars
+  - page.title = "[@L[cds.sales/offers/online-business:page-title]@L]";
+  - page.description = "[@L[cds.sales/offers/online-business:meta-description]@L]";
+  - page.keywords = "[@L[cds.sales/offers/online-business:meta-keywords]@L]"; 
+  - page.canonical = "[@T[link:<relative parammode='explicit' path='~/offers/online-business.aspx' />]@T]";
 
-//-   - page.openGraph = page.openGraph || {};
-//-   - page.openGraph.title = "[@L[cds.sales/offers/online-business:og-title]@L]";
-//-   - page.openGraph.description = "[@L[cds.sales/offers/online-business:og-description]@L]";
-//-   - page.openGraph.image = "[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/online-business/img/og_got_1200x630.jpg";
+  - page.openGraph = page.openGraph || {};
+  - page.openGraph.title = "[@L[cds.sales/offers/online-business:og-title]@L]";
+  - page.openGraph.description = "[@L[cds.sales/offers/online-business:og-description]@L]";
+  - page.openGraph.image = "[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/online-business/img/og_got_1200x630.jpg";
 
-//-   - page.links = page.links || {};
-//-   - page.links.canonical = "[@T[link:<relative parammode='explicit' />]@T]";
-//-   - page.links.favicon = "[@T[link:<imageroot />]@T]assets/godaddy.ico";
+  - page.links = page.links || {};
+  - page.links.canonical = "[@T[link:<relative parammode='explicit' />]@T]";
+  - page.links.favicon = "[@T[link:<imageroot />]@T]assets/godaddy.ico";
 
-//- append seo
-//-   meta(name="twitter:card" content="summary")
-//-   meta(name="twitter:site" content="[@L[cds.sales/offers/online-business:twitter-site]@L]")
-//-   meta(name="twitter:title" content="[@L[cds.sales/offers/online-business:twitter-title]@L]")
-//-   meta(name="twitter:description" content="[@L[cds.sales/offers/online-business:twitter-description]@L]")
-//-   meta(name="twitter:image:src" content!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/online-business/img/og_got_1200x630.jpg")
+append seo
+  meta(name="twitter:card" content="summary")
+  meta(name="twitter:site" content="[@L[cds.sales/offers/online-business:twitter-site]@L]")
+  meta(name="twitter:title" content="[@L[cds.sales/offers/online-business:twitter-title]@L]")
+  meta(name="twitter:description" content="[@L[cds.sales/offers/online-business:twitter-description]@L]")
+  meta(name="twitter:image:src" content!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/online-business/img/og_got_1200x630.jpg")
 
-//- append headScripts
-//-   atlantis:webstash(type="js")
-//-     script
-//-       include:js online-business/got.js
-//-     script(type="text/javascript", src!="[@T[link:<javascriptroot />]@T]fos/hp/rebrand/js/bigtext.min.js")
+append headScripts
+  atlantis:webstash(type="js")
+    script
+      include:js online-business/got.js
+    script(type="text/javascript", src!="[@T[link:<javascriptroot />]@T]fos/hp/rebrand/js/bigtext.min.js")
 
 
-//- append pageStyles
-//-   style
-//-     include:css ./online-business/styles.css
-//-   style
-//-     include:css ../../templates/styles/plan-tiles.css
+append pageStyles
+  style
+    include:css ./online-business/styles.css
+  style
+    include:css ../../templates/styles/plan-tiles.css
 
 block domainSearch
   //- nothing to see here
   //- override the landing-page.jade with a blank section
 
 
-//- //- top marquee
-//- block marquee
-//-   include ./online-business/_marquee.jade
+//- top marquee
+block marquee
+  include ./online-business/_marquee.jade
 
-//- //- side by side plan comparisons go here
-//- block plans
-//-   include ./online-business/_product-boxes.jade
+//- side by side plan comparisons go here
+block plans
+  include ./online-business/_product-boxes.jade
 
-//- //- horizontal nav with jumps to anchor tags (that affixes to top)
-//- block sections
-//-   include ./online-business/_domain-section.jade
+//- horizontal nav with jumps to anchor tags (that affixes to top)
+block sections
+  include ./online-business/_domain-section.jade
 
-//- //- suggested alternative products
-//- block alternatives
-//-   include ./online-business/_site-choice.jade
+//- suggested alternative products
+block alternatives
+  include ./online-business/_site-choice.jade
 
-//- //- there's always a catch... show it here.
-//- block disclaimers
-//-   section#disclaimers 
-//-     .disclaimers-row
-//-       .container
-//-         .row
-//-           .col-sm-12
-//-             .disclaimers-text [@L[cds.sales/offers/online-business:32573-third-party-logos-trademarks-disclaimer]@L]
+//- there's always a catch... show it here.
+block disclaimers
+  section#disclaimers 
+    .disclaimers-row
+      .container
+        .row
+          .col-sm-12
+            .disclaimers-text [@L[cds.sales/offers/online-business:32573-third-party-logos-trademarks-disclaimer]@L]

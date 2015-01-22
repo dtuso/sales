@@ -37,79 +37,82 @@ mixin lazyImg(addlClasses, watch, src, altText, callback, callbackAfter)
 //-     'test-modal-id', 
 //-     '')
 - var videoPlayerModal = videoPlayerModal || {};
-- videoPlayerModal.renderedCss = videoPlayerModal.renderedCss || false;
 - videoPlayerModal.renderedRezingCommonJs = videoPlayerModal.renderedRezingCommonJs || false;
 
 mixin videoPlayerModalAll(youtubeVideoId, buttonId, ci, imgInButton, imgAsButton, buttonText, addlBtnClasses, modalId, addlModalClasses)
 
-  //- +videoPlayerScriptsOnly(buttonId, modalId)
-  //- +videoPlayerStylesOnly()    
-  //- +videoPlayerButtonOnly(buttonId, ci, imgInButton, imgAsButton, buttonText, addlBtnClasses)
-  //- +videoPlayerModalOnly(youtubeVideoId, modalId, addlModalClasses)
+  +videoPlayerScriptsOnly(buttonId, modalId)
+  +videoPlayerStylesOnly()    
+  +videoPlayerButtonOnly(buttonId, ci, imgInButton, imgAsButton, buttonText, addlBtnClasses)
+  +videoPlayerModalOnly(youtubeVideoId, modalId, addlModalClasses)
 
-  //- mixin videoPlayerScriptsOnly(buttonId, modalId)
+mixin videoPlayerScriptsOnly(buttonId, modalId)
+  atlantis:webstash(type="js")
+    script.
+      $(document).ready(function(){
+        $('##{buttonId}').on('click', function(){
+          $("##{modalId}").sfDialog({titleHidden:true, dialogWidthIdeal:840, destroyOnClose:true, buttons: []});
+        });
+      });
 
-  //-   script.
-  //-     $(document).ready(function(){
-  //-       $('##{buttonId}').on('click', function(){
-  //-         $("##{modalId}").sfDialog({titleHidden:true, dialogWidthIdeal:840, destroyOnClose:true, buttons: []});
-  //-       });
-  //-     });
+  if(!videoPlayerModal.renderedRezingCommonJs)
+    - videoPlayerModal.renderedRezingCommonJs = true; /* keeps css from rendering multiple times per use on a page build */
+    atlantis:webstash(type="js")
+      script.
+        $(document).ready(function(){
+          /* see: http://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php */
+          var $allVideos = $("iframe[src^='http://www.youtube.com']"),/* Find all YouTube videos */    
+              $fluidEl = $("body"); /*The element that is fluid width*/      
+          $allVideos.each(function() {        
+            // Figure out and save aspect ratio for each video
+            // and remove the hard coded width/height
+            $(this).data('aspectRatio', this.height / this.width).removeAttr('height').removeAttr('width');
+          });
+          // When the window is resized
+          $(window).resize(function() {
+            var newWidth = $fluidEl.width();
+            // Resize all videos according to their own aspect ratio
+            $allVideos.each(function() {
+              var $el = $(this);
+              $el.width(newWidth).height(newWidth * $el.data('aspectRatio'));
+            });
+          // Kick off one resize to fix all videos on page load
+          }).resize();
+        });
 
-  //-   unless(videoPlayerModal.renderedRezingCommonJs)
-  //-     - videoPlayerModal.renderedRezingCommonJs = true; /* keeps css from rendering multiple times per use on a page build */
-  //-     script.
-  //-       $(document).ready(function(){
-  //-         /* see: http://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php */
-  //-         var $allVideos = $("iframe[src^='http://www.youtube.com']"),/* Find all YouTube videos */    
-  //-             $fluidEl = $("body"); /*The element that is fluid width*/      
-  //-         $allVideos.each(function() {        
-  //-           // Figure out and save aspect ratio for each video
-  //-           // and remove the hard coded width/height
-  //-           $(this).data('aspectRatio', this.height / this.width).removeAttr('height').removeAttr('width');
-  //-         });
-  //-         // When the window is resized
-  //-         $(window).resize(function() {
-  //-           var newWidth = $fluidEl.width();
-  //-           // Resize all videos according to their own aspect ratio
-  //-           $allVideos.each(function() {
-  //-             var $el = $(this);
-  //-             $el.width(newWidth).height(newWidth * $el.data('aspectRatio'));
-  //-           });
-  //-         // Kick off one resize to fix all videos on page load
-  //-         }).resize();
-  //-       });
+mixin videoPlayerStylesOnly()
+  atlantis:webstash(type="css")
+    style.
+      .video-modal {display: none;}
+      .videoWrapperInModal {position:relative;padding-bottom: 56.25%; /* 16:9 */padding-top:25px;height:0;}
+      .videoWrapperInModal iframe {position:absolute;top:0;left:0;width:100%;height:100%;z-index:2;}
+      img.video-play-icon {margin-right:10px;vertical-align:top;}
+      .video-modal-img-as-button {cursor: pointer;}
+      .video-iframe-underlay {position: absolute;z-index:1;top:150px;width:100%;}
+      .video-iframe-underlay  h2 {text-align:center;}
 
-  //- mixin videoPlayerStylesOnly()
+mixin videoPlayerButtonOnly(buttonId, ci, imgInButton, imgAsButton, buttonText, addlBtnClasses)
 
-  //-   unless(videoPlayerModal.renderedCss)
-  //-     - videoPlayerModal.renderedCss = true; /* keeps css from rendering multiple times per use on a page build */
-  //-     atlantis:webstash(type="css")
-  //-       style.
-  //-         .video-modal {display: none;}
-  //-         .videoWrapperInModal {position:relative;padding-bottom: 56.25%; /* 16:9 */padding-top:25px;height:0;}
-  //-         .videoWrapperInModal iframe {position:absolute;top:0;left:0;width:100%;height:100%;}    
-  //-         img.video-play-icon {margin-right:10px;vertical-align:top;}
+  if(imgAsButton)
+    img.video-modal-img-as-button(id="#{buttonId}", data-ci="#{ci}", class="#{addlBtnClasses}")
+  else
+    if(imgInButton)
+      button.btn(id="#{buttonId}", data-ci="#{ci}", class="#{addlBtnClasses}") <img src="!{imgInButton}" class="video-play-icon" /> #{buttonText}
+    else
+      button.btn(id="#{buttonId}", data-ci="#{ci}", class="#{addlBtnClasses}") #{buttonText}
 
-  //- mixin videoPlayerButtonOnly(buttonId, ci, imgInButton, imgAsButton, buttonText, addlBtnClasses)
+mixin videoPlayerModalOnly(youtubeVideoId, modalId, addlModalClasses)
 
-  //-   if(imgAsButton)
-  //-     img(id="#{buttonId}", data-ci="#{ci}", class="#{addlBtnClasses}")
-  //-   else
-  //-     if(imgInButton)
-  //-       button.btn(id="#{buttonId}", data-ci="#{ci}", class="#{addlBtnClasses}") <img src="!{imgInButton}" class="video-play-icon" /> #{buttonText}
-  //-     else
-  //-       button.btn(id="#{buttonId}", data-ci="#{ci}", class="#{addlBtnClasses}") #{buttonText}
-
-  //- mixin videoPlayerModalOnly(youtubeVideoId, modalId, addlModalClasses)
-
-  //-   div.sf-dialog.video-modal(id="#{modalId}", class="#{addlModalClasses}")
-  //-     .videoWrapperInModal
-  //-       iframe(width="640", height="390", src="//www.youtube.com/embed/#{youtubeVideoId}?html5=1&rel=0&iv_load_policy=3&modestbranding=1",autoplay, scrolling="no", frameborder="0", allowfullscreen)
+  div.sf-dialog.video-modal(id="#{modalId}", class="#{addlModalClasses}")
+    .videoWrapperInModal
+      .video-iframe-underlay
+        h2 [@L[cds.sales/gd/tlds/gtld:loading]@L]
+      iframe(width="640", height="390", src="//www.youtube.com/embed/#{youtubeVideoId}?html5=1&rel=0&iv_load_policy=3&modestbranding=1",autoplay, scrolling="no", frameborder="0", allowfullscreen)
 
 
-  //- =========================================================================
-  //- yet another common mixin goes below
-  //- =========================================================================
-  //- 
-  //- 
+
+//- =========================================================================
+//- yet another common mixin goes below
+//- =========================================================================
+//-
+//-
