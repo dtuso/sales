@@ -294,6 +294,7 @@ function wireupModals() {
     });
     $('#ols-stores-btn').on('click', function(){
       $("#site-choice-ols-stores-modal").sfDialog({titleHidden:true, dialogWidthIdeal:1230, buttons: []});
+      $('#site-choice-ols-stores-modal').parent().css({ "overflow": "hidden" });
     });
   }
 
