@@ -1603,15 +1603,15 @@ h
             </div>
             <div class="col-md-6 col-xs-12">
               <div class="logo-wrapper">
-                <div class="column domain">
+                <div class="column domain"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_got_domain.png" class="icon"><![endif]-->
                   <div class="icon"></div><span>[@L[cds.sales/offers/online-business:32573-top-banner-image-domain]@L]</span>
                 </div>
                 <div class="plus">+</div>
-                <div class="column website">
+                <div class="column website"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_got_website.png" class="icon"><![endif]-->
                   <div class="icon"></div><span>[@L[cds.sales/offers/online-business:32573-top-banner-image-website]@L]</span>
                 </div>
                 <div class="plus">+</div>
-                <div class="column email">
+                <div class="column email"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_got_email.png" class="icon"><![endif]-->
                   <div class="icon"></div><span>[@L[cds.sales/offers/online-business:32573-top-banner-image-email]@L]</span><span class="office-365">[@L[cds.sales/offers/online-business:32573-powered-by-mso365]@L]</span>
                 </div>
               </div>
