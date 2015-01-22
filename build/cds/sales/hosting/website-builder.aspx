@@ -226,8 +226,10 @@ padding-bottom: 50px;
 }
 .templates-image{
   margin: 25px auto;
-  height: 200px;
-  width: 265px;
+  box-shadow: 0 3px 7px -3px #282828;
+  height: 260px;
+  width: 200px;
+  overflow: hidden;
 }
 .templates-image-container{
   margin: 30px 110px 40px 110px;
@@ -1548,21 +1550,41 @@ padding-bottom: 50px;
             <div class="headline-primary">[@L[cds.sales/gd/hosting/website-builder:sb_templates_text]@L]</div>
             <button data-toggle="bsModal" data-target="#g-modal" class="btn btn-default-dark view-all btn-md">[@L[cds.sales/gd/hosting/website-builder:sb_view_templates]@L]</button>
           </div>
-          <div class="templates-image-container"> 
+          <div class="templates-image-container">
+             
+             
+            ##if(countrySiteAny(ca))
+             
             <div class="row">
-              <div class="col-md-4 text-center"><img src="//nebula.wsimg.com/97d611570df922cf947daef6ea7c720b?AccessKeyId=531592D248B589D87A56" class="templates-image"></div>
-              <div class="col-md-4 text-center"><img src="//nebula.wsimg.com/97d611570df922cf947daef6ea7c720b?AccessKeyId=531592D248B589D87A56" class="templates-image"></div>
-              <div class="col-md-4 text-center"><img src="//nebula.wsimg.com/97d611570df922cf947daef6ea7c720b?AccessKeyId=531592D248B589D87A56" class="templates-image"></div>
+              <div class="col-md-4 text-center"><img src="https://nebula.wsimg.com/969c55de87f607d9e7c01079c3923192?AccessKeyId=531592D248B589D87A56" class="templates-image"></div>
+              <div class="col-md-4 text-center"><img src="https://nebula.wsimg.com/d7a3d52de03500dc212cbdd188ee4c76?AccessKeyId=531592D248B589D87A56" class="templates-image"></div>
+              <div class="col-md-4 text-center"><img src="https://nebula.wsimg.com/1c3f93e0921f7eb63f8557dbf04dcc5d?AccessKeyId=531592D248B589D87A56" class="templates-image"></div>
+            </div> 
+            ##elseif(countrySiteAny(uk))
+             
+            <div class="row">
+              <div class="col-md-4 text-center"><img src="https://nebula.wsimg.com/6fa416babb52bf03888cd67d49d7ddb0?AccessKeyId=531592D248B589D87A56" class="templates-image"></div>
+              <div class="col-md-4 text-center"><img src="https://nebula.wsimg.com/02aee5deba51271ae149ac610fb15d58?AccessKeyId=531592D248B589D87A56" class="templates-image"></div>
+              <div class="col-md-4 text-center"><img src="https://nebula.wsimg.com/4462d6ddb0a13e36e63847af8e922198?AccessKeyId=531592D248B589D87A56" class="templates-image"></div>
+            </div> 
+            ##else
+             
+            <div class="row">
+              <div class="col-md-4 text-center"><img src="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/auto.jpg" class="templates-image"></div>
+              <div class="col-md-4 text-center"><img src="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/photography.jpg" class="templates-image"></div>
+              <div class="col-md-4 text-center"><img src="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/education.jpg" class="templates-image"></div>
+            </div> 
+            ##endif
+             
+            <div class="row">
+              <div class="col-md-4 text-center"><img src="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/ecommerce.jpg" class="templates-image"></div>
+              <div class="col-md-4 text-center"><img src="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/travel.jpg" class="templates-image"></div>
+              <div class="col-md-4 text-center"><img src="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/non-profit.jpg" class="templates-image"></div>
             </div>
             <div class="row">
-              <div class="col-md-4 text-center"><img src="//nebula.wsimg.com/97d611570df922cf947daef6ea7c720b?AccessKeyId=531592D248B589D87A56" class="templates-image"></div>
-              <div class="col-md-4 text-center"><img src="//nebula.wsimg.com/97d611570df922cf947daef6ea7c720b?AccessKeyId=531592D248B589D87A56" class="templates-image"></div>
-              <div class="col-md-4 text-center"><img src="//nebula.wsimg.com/97d611570df922cf947daef6ea7c720b?AccessKeyId=531592D248B589D87A56" class="templates-image"></div>
-            </div>
-            <div class="row">
-              <div class="col-md-4 text-center"><img src="//nebula.wsimg.com/97d611570df922cf947daef6ea7c720b?AccessKeyId=531592D248B589D87A56" class="templates-image"></div>
-              <div class="col-md-4 text-center"><img src="//nebula.wsimg.com/97d611570df922cf947daef6ea7c720b?AccessKeyId=531592D248B589D87A56" class="templates-image"></div>
-              <div class="col-md-4 text-center"><img src="//nebula.wsimg.com/97d611570df922cf947daef6ea7c720b?AccessKeyId=531592D248B589D87A56" class="templates-image"></div>
+              <div class="col-md-4 text-center"><img src="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/business.jpg" class="templates-image"></div>
+              <div class="col-md-4 text-center"><img src="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/health-beauty.jpg" class="templates-image"></div>
+              <div class="col-md-4 text-center"><img src="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/creative-design.jpg " class="templates-image"></div>
             </div>
           </div>
         </div>
@@ -5236,7 +5258,7 @@ margin-bottom: 20px;
                 </ul>
               </li>
               <div class="text-center">
-                <button id="faq-button" class="btn btn-default-dark">[@L[cds.sales/gd/hosting/website-builder:sb_faq_see]@L]</button>
+                <button id="faq-button" class="btn btn-default-dark">[@L[cds.sales/hosting/web-hosting-rebrand:seeAllQuestions]@L]</button>
               </div>
             </ul>
           </div>
@@ -5643,7 +5665,35 @@ margin-bottom: 20px;
          
       </div>
       <p class="h5">[@L[cds.sales/gd/hosting/website-builder:rb_disclaimers_3p]@L]</p>
-    </section>
+    </section> 
+    ##if(activeLanguageAny([en-US]))
+     
+    <section id="modals">
+      <div id="login-modal" class="modal fade">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <form method="POST" id="g-modal-loginAcct-form" action="[@T[link:<external parammode='explicit' linktype='SSOURL' secure='true' />]@T]/login.aspx?spkey=[@T[sso:spkey]@T]&target=[@T[link:<external linktype='siteurl' path='/hosting/web-hosting.aspx' secure='false' parammode='explicit'/>]@T]">
+              <input type="hidden" value="LOGIN" name="LOGIN">
+              <input type="hidden" value="1" name="verifyShopper">
+              <div class="modal-header">
+                <button type="button" data-dismiss="modal" aria-hidden="true" class="close"></button>
+                <h4 class="modal-title">Please login to access your account</h4>
+              </div>
+              <div class="modal-body">
+                <input type="text" id="loginName" name="loginName" autocomplete="off" placeholder="[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Headers.UtilityBar.Username]@L]">
+                <input type="password" id="password" name="password" autocomplete="off" placeholder="[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Headers.UtilityBar.Password]@L]"><a href="[@T[link:<external linktype='SSOURL' path='/account/accountRetrieval.aspx' secure='true'/>]@T]" class="forgot-pass"></br> [@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Headers.UtilityBar.ForgotPassword]@L]</a>
+              </div>
+              <div class="modal-footer">
+                <button type="button" data-dismiss="modal" class="btn btn-default">Cancel</button>
+                <input type="submit" value="[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Headers.UtilityBar.SignIn]@L]" class="btn btn-primary">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section> 
+    ##endif
+     
     <!-- FOOTERBEGIN--> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- FOOTEREND-     -->

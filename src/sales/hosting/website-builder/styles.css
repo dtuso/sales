@@ -89,8 +89,10 @@ padding-bottom: 50px;
 }
 .templates-image{
   margin: 25px auto;
-  height: 200px;
-  width: 265px;
+  box-shadow: 0 3px 7px -3px #282828;
+  height: 260px;
+  width: 200px;
+  overflow: hidden;
 }
 .templates-image-container{
   margin: 30px 110px 40px 110px;

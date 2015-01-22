@@ -1,6 +1,25 @@
-mixin lazyImage(src, altText)
-	img.key-benefits-img(
-	  src = "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-	  data-lazy-load != "{'src':'#{src}','watch':'.key-benefits-wrap'}"
-	  alt = (altText ? altText : "")
-	  )
+
+//- Examples: 
+//-    +lazyImg('additionalClass anotherClass','','[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/tld-ca.png','My Alt text')
+//-    +lazyImg('','#someRegion','[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/tld-in.png','another Alt text')
+
+mixin lazyImg(addlClasses, watch, src, altText, callback, callbackAfter)
+  if(src && watch)	
+    img.lazyload(
+      src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+      class="#{addlClasses}"
+  	  data-lazyload-source!="#{src}"
+      data-lazyload-watch!="#{watch}"
+      data-lazyload-callback!="#{callback}"
+      data-lazyload-callbackAfter!="#{callbackAfter}"
+  	  alt=(altText ? altText : "")
+  	  )
+  if(src && !watch)
+    img.lazyload(
+      src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+      class="#{addlClasses}"
+      data-lazyload-source!="#{src}"
+      data-lazyload-callback!="#{callback}"
+      data-lazyload-callbackAfter!="#{callbackAfter}"
+      alt=(altText ? altText : "")
+      )

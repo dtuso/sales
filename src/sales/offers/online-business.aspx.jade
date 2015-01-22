@@ -1,7 +1,7 @@
 ---
 location: sales/offers/online-business.aspx
-id: 54bf04d1f778fc1118b55a07
-name: GCE-32414-jmg
+id: 54bfdab3f778fc07e885c04d
+name: GCE-32414-lazyload
 comments: GOT rebrand 2015 SuperBowl
 ---
 extends ../../templates/pages/landing-page
@@ -34,6 +34,7 @@ append headScripts
       include:js online-business/got.js
     script(type="text/javascript", src="https://img1.wsimg.com/fos/hp/rebrand/js/bigtext.min.js")
 
+
 append pageStyles
   style
     include:css ./online-business/styles.css
@@ -62,7 +63,6 @@ block alternatives
 
 //- there's always a catch... show it here.
 block disclaimers
-
   section#disclaimers 
     .disclaimers-row
       .container

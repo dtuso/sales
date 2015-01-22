@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="[@T[localization:<language full='true' />]@T]">
+<html lang="[@T[localization:<language full='true' />]@T]" id="" ng-app="">
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta http-equiv="content-language" content="[@T[localization:<language full='true' />]@T]">
@@ -31,6 +31,8 @@
     <meta name="twitter:description" content="[@L[cds.sales/offers/online-business:twitter-description]@L]">
     <meta name="twitter:image:src" content="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/online-business/img/og_got_1200x630.jpg"> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
+    <script>       (function(e){if(typeof lazyload=="undefined"){window.lazyload={version:"2.0.0",items:e(),__defaults:{updatePosition:true,checkHorizontal:false,scrollCheckDelay:300,loadBufferDistance:0,fadeInDelay:0,fadeInSpeed:500}};function t(e,t){if(typeof t=="undefined"){t={source:e.data("lazyload-source"),watch:e.data("lazyload-watch"),callback:e.data("lazyload-callback"),callbackAfter:e.data("lazyload-callbackAfter")}}if(typeof t.source!="undefined"){e[0].lazyload=t;lazyload.items=lazyload.items.add(e);i(e)}}function n(){i(e(window));lazyload.items.each(function(){r(e(this))})}function r(t){var n=t[0].lazyload.updatePosition||lazyload.__defaults.updatePosition;var r=r||lazyload.__defaults.updateWindowScroll;var s=t[0].lazyload.checkHorizontal||lazyload.__defaults.checkHorizontal;if(n){i(t)}i(e(window));var o=t[0].lazyload.positionTop;var a=t[0].lazyload.positionBottom;var f=lazyload.windowTop;var l=lazyload.windowBottom;if(o<l+lazyload.__defaults.loadBufferDistance&&a>f-lazyload.__defaults.loadBufferDistance){u(t)}}function i(e){var t=e[0];if(t==window){if(lazyload.updateWindowPosition){lazyload.windowTop=e.scrollTop();lazyload.windowLeft=e.scrollLeft();lazyload.windowRight=lazyload.windowLeft+e.width();lazyload.windowBottom=lazyload.windowTop+e.height();lazyload.updateWindowPosition=false;clearTimeout(lazyload.windowPositionDelayTimer);lazyload.windowPositionDelayTimer=setTimeout(function(){lazyload.updateWindowPosition=true},lazyload.__defaults.scrollCheckDelay)}}else{if(typeof t.lazyload.watch!="undefined"){var n=e.parents(t.lazyload.watch);if(n.length>=1){e=n}}t.lazyload.positionTop=e.offset().top;t.lazyload.positionLeft=e.offset().left;t.lazyload.positionRight=t.lazyload.positionLeft+e.width();t.lazyload.positionBottom=t.lazyload.positionTop+e.height()}}function s(e){function i(e,t,n){try{if(typeof t!="undefined"&&t.length>=1){e.apply(null,t)}else{e.call(null)}}catch(r){}}if(typeof e=="string"){var t=e.split(",");var n=t.shift();n=o(n);i(n,t,e)}else if(typeof e=="object"){for(var r=0;r<e.length;r++){(function(){var t=e[r].split(",");var n=t.shift();var s=n;n=o(n);i(n,t,s)})()}}}function o(e){var t=window;var n=e.split(".");var r=n.pop();var i=true;for(var s=0;s<n.length;s++){if(typeof t[n[s]]!="undefined"){t=t[n[s]]}else{i=false}}if(i){return t[r]}else{return null}}function u(e){var t=e[0].lazyload.src||e[0].lazyload.source;var n=e[0].lazyload.callback;var r=e[0].lazyload.callbackAfter;lazyload.items=lazyload.items.not(e);if(lazyload.loadedSrc.indexOf(t)==-1){lazyload.loadedSrc.push(t)}var i=new Image;i.onload=function(){if(typeof n!="undefined"){e.trigger("lazyloaded").addClass("lazyloaded");s(n)}if(e.is("img")){e.css({opacity:0}).attr("src",t).delay(lazyload.__defaults.fadeInDelay).animate({opacity:1},lazyload.__defaults.fadeInSpeed,function(){if(typeof r!="undefined"){setTimeout(function(){e.trigger("lazyloadedafter");s(r)},lazyload.__defaults.fadeInSpeed)}})}else{var o=200;try{var u="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";var a=new Image;a.src=u;a.height=i.height;a.width=i.width;function f(e){var t=document.createElement("canvas");t.width=e.width;t.height=e.height;var n=t.getContext("2d");n.drawImage(e,0,0);var r=t.toDataURL("image/png");return r.replace(/^data:image\/(png|jpg);base64,/,"")}var l=f(a);e.css({"background-image":"url(data:image/gif;base64,"+l+")","-moz-transition":"all "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out"})}catch(c){o=0}setTimeout(function(){e.css({"background-image":"url("+t+")","-webkit-transition":"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out","-moz-transition":"all "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out","-o-transition":"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out",transition:"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out"});if(typeof r!="undefined"){setTimeout(function(){e.trigger("lazyloadafter");s(r)},lazyload.__defaults.fadeInSpeed)}},o)}};i.src=t}e(document).ready(function(){lazyload.updateWindowPosition=true;lazyload.scrollCheck=true;lazyload.loadedSrc=[];$foundItems=e(".lazyload");if($foundItems.length>=1){lazyload.scrollElements=e("div,ul");lazyload.scrollElements.each(function(){var t=e(this);var n=t.css("overflow");var r=t.css("overflow-x");var i=t.css("overflow-y");var s=["hidden","scroll","auto"];if(t.find("[data-lazy-load]").length==0&&s.indexOf(n)==-1&&s.indexOf(i)==-1&&s.indexOf(r)==-1){lazyload.scrollElements=lazyload.scrollElements.not(t)}});lazyload.scrollElements=lazyload.scrollElements.add(window);lazyload.scrollElements.bind("scroll.lazyload",function(e){if(lazyload.scrollCheck){n();lazyload.scrollCheck=false;clearTimeout(lazyload.scrollCheckDelayTimer);lazyload.scrollCheckDelayTimer=setTimeout(function(){lazyload.scrollCheck=true},lazyload.__defaults.scrollCheckDelay)}});$foundItems.each(function(){t(e(this))});n()}});lazyload.check=function(){n()};lazyload.add=function(n,r){t(e(n),r)};lazyload.load=function(){u(e($item))}}})(jQuery);if(!Array.prototype.indexOf){Array.prototype.indexOf=function(e){var t=this.length>>>0;var n=Number(arguments[1])||0;n=n<0?Math.ceil(n):Math.floor(n);if(n<0)n+=t;for(;n<t;n++){if(n in this&&this[n]===e)return n}return-1}}
+    </script>
     <script>
       var head = (typeof document.head !== 'undefined' ? document.head : document.getElementsByTagName('head')[0]);
       var insertBefore = head.insertBefore;
@@ -94,11 +96,6 @@
         // jquery.domainscout.1.0.0.js
         if("undefined"==typeof domainscout){var domainscout={version:"1.0.2"};$(document).ready(function(){function b(a){var b=a,d=b.data("domainscout")||b.data("domainsearch");if(b[0]["ds-domain"]=b.find(d["search-element"]),b[0]["ds-placeholder"]=b.find(d["placeholder-element"]),b[0]["ds-button"]=b.find(d.button),b[0]["ds-url"]=d.url,b[0]["ds-ci"]=d.ci,b[0]["ds-hide-label"]=d["hide-label"],b[0]["ds-empty-redirect"]=d["empty-redirect"],"undefined"==typeof b[0]["ds-hide-label"]&&(b[0]["ds-hide-label"]=!0),1==b[0]["ds-domain"].length&&(b[0]["ds-domain"].is("input")||b[0]["ds-domain"].is("textarea"))){if(domainscout.items=domainscout.items.add(b),b[0]["ds-placeholder"].is("label")){var e=b[0]["ds-domain"].attr("id");"undefined"==typeof e&&(e="ds-"+domainscout.items.length,b[0]["ds-domain"].attr("id",e)),b[0]["ds-placeholder"].attr("for",e)}else b[0]["ds-placeholder"].bind("click",function(){b[0]["ds-domain"].focus()});b[0]["ds-domain"].val(""),b[0]["ds-domain"].bind("focus.ds-event",function(){b.addClass("ds-focus"),b[0]["ds-domain"].bind("keydown.ds-event",function(a){var d=[16,27,20,8,37,38,39,40];13==a.which?(c(b),a.preventDefault()):-1==d.indexOf(a.which)&&b[0]["ds-hide-label"]&&b[0]["ds-placeholder"].css("display","none")})}),b[0]["ds-domain"].bind("blur.ds-event",function(){b.removeClass("ds-focus"),b[0]["ds-domain"].unbind("keydown.ds-event"),b[0]["ds-hide-label"]&&""==b[0]["ds-domain"].val()&&"none"==b[0]["ds-placeholder"].css("display")&&b[0]["ds-placeholder"].css("display","block")})}b[0]["ds-button"].bind("click",function(a){a.stopPropagation(),a.preventDefault(),"undefined"!=typeof _trfq&&_trfq.push(["cmdLogPageEvent","click","","",b[0]]),c(b)})}function c(a){var b=$(a),c=!0,e=!1,g=b[0]["ds-url"];"undefined"==typeof b[0]["ds-url"]&&(g=b.attr("action"),("undefined"==typeof g||"#"==g)&&(c=!1));var h;c&&1==b[0]["ds-domain"].length?(h=b[0]["ds-domain"].val(),"undefined"!=typeof h&&""!=h?(g=g.split("?")[0],g=g+"?domainToCheck="+d(h)):(g=b[0]["ds-empty-redirect"],g.indexOf(location.protocol)&&(g=location.protocol+g),e=!0,"undefined"==typeof g&&(c=!1))):c=!1,c&&(e||(g+="&checkAvail=1","undefined"==b[0]["ds-ci"]&&(b[0]["ds-url"]=f("ci")),"undefined"!=b[0]["ds-ci"]&&(g=g+"&"+b[0]["ds-ci"])),window.location.href=g)}function d(a){return a}function e(a){return a instanceof $||(a=$(a)),a}function f(a){var b=decodeURI((RegExp(a+"="+"(.+?)(&|$)").exec(location.search)||[,null])[1]);return"null"==b&&(b=void 0),b}var a=$("[data-domainscout],[data-domainsearch]");domainscout.items=$(),a.each(function(){b($(this))}),domainscout.add=function(a){b(e(a))},domainscout.search=function(a){c(e(a))}})}
       
-        //- example on how to lazyload an image
-        //- <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="test of lazy load" data-lazy-load='{"src":"[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/tld-in.png"}' >
-        //- NOTE!!!:  JADE doesn't like to play nice with the data-lazy-load attribute.  It requires double quotes for the JSON string, with single quotes around the that JSON string.  
-        // jquery.lazyload.1.0.0.js
-        !function(a){function b(a,b){"undefined"==typeof b&&(b=a.data("lazy-load"));var c=b.src||b.source;"undefined"!=typeof c&&(a[0].lazyload=b,lazyload.items=lazyload.items.add(a),e(a))}function c(){e(a(window)),lazyload.items.each(function(){d(a(this))})}function d(b){var c=b[0].lazyload.updatePosition||lazyload.__defaults.updatePosition,d=d||lazyload.__defaults.updateWindowScroll;b[0].lazyload.checkHorizontal||lazyload.__defaults.checkHorizontal,c&&e(b),e(a(window));var g=b[0].lazyload.positionTop,i=b[0].lazyload.positionBottom,j=lazyload.windowTop,k=lazyload.windowBottom;g<k+lazyload.__defaults.loadBufferDistance&&i>j-lazyload.__defaults.loadBufferDistance&&h(b)}function e(a){var b=a[0];if(b==window)lazyload.updateWindowPosition&&(lazyload.windowTop=a.scrollTop(),lazyload.windowLeft=a.scrollLeft(),lazyload.windowRight=lazyload.windowLeft+a.width(),lazyload.windowBottom=lazyload.windowTop+a.height(),lazyload.updateWindowPosition=!1,clearTimeout(lazyload.windowPositionDelayTimer),lazyload.windowPositionDelayTimer=setTimeout(function(){lazyload.updateWindowPosition=!0},lazyload.__defaults.scrollCheckDelay));else{if("undefined"!=typeof b.lazyload.watch){var c=a.parents(b.lazyload.watch);c.length>=1&&(a=c)}b.lazyload.positionTop=a.offset().top,b.lazyload.positionLeft=a.offset().left,b.lazyload.positionRight=b.lazyload.positionLeft+a.width(),b.lazyload.positionBottom=b.lazyload.positionTop+a.height()}}function f(a){function e(a,b){try{"undefined"!=typeof b&&b.length>=1?a.apply(null,b):a.call(null)}catch(d){}}if("string"==typeof a){var b=a.split(","),c=b.shift();c=g(c),e(c,b,a)}else if("object"==typeof a)for(var d=0;d<a.length;d++)!function(){var b=a[d].split(","),c=b.shift(),f=c;c=g(c),e(c,b,f)}()}function g(a){for(var b=window,c=a.split("."),d=c.pop(),e=!0,f=0;f<c.length;f++)"undefined"!=typeof b[c[f]]?b=b[c[f]]:e=!1;return e?b[d]:null}function h(a){var b=a[0].lazyload.src||a[0].lazyload.source,c=a[0].lazyload.callback,d=a[0].lazyload.callbackAfter;lazyload.items=lazyload.items.not(a),-1==lazyload.loadedSrc.indexOf(b)&&lazyload.loadedSrc.push(b);var e=new Image;e.onload=function(){function j(a){var b=document.createElement("canvas");b.width=a.width,b.height=a.height;var c=b.getContext("2d");c.drawImage(a,0,0);var d=b.toDataURL("image/png");return d.replace(/^data:image\/(png|jpg);base64,/,"")}if("undefined"!=typeof c&&(a.trigger("lazyloaded").addClass("lazyloaded"),f(c)),a.is("img"))a.css({opacity:0}).attr("src",b).delay(lazyload.__defaults.fadeInDelay).animate({opacity:1},lazyload.__defaults.fadeInSpeed,function(){"undefined"!=typeof d&&setTimeout(function(){a.trigger("lazyloadedafter"),f(d)},lazyload.__defaults.fadeInSpeed)});else{var g=200;try{var h="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",i=new Image;i.src=h,i.height=e.height,i.width=e.width;var k=j(i);a.css({"background-image":"url(data:image/gif;base64,"+k+")","-moz-transition":"all "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out"})}catch(l){g=0}setTimeout(function(){a.css({"background-image":"url("+b+")","-webkit-transition":"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out","-moz-transition":"all "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out","-o-transition":"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out",transition:"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out"}),"undefined"!=typeof d&&setTimeout(function(){a.trigger("lazyloadafter"),f(d)},lazyload.__defaults.fadeInSpeed)},g)}},e.src=b}"undefined"==typeof lazyload&&(window.lazyload={version:"1.0.0",items:a(),__defaults:{updatePosition:!0,checkHorizontal:!1,scrollCheckDelay:300,loadBufferDistance:0,fadeInDelay:0,fadeInSpeed:500}},a(document).ready(function(){lazyload.updateWindowPosition=!0,lazyload.scrollCheck=!0,lazyload.loadedSrc=[],$foundItems=a("[data-lazy-load]"),$foundItems.length>=1&&(lazyload.scrollElements=a("div,ul"),lazyload.scrollElements.each(function(){var b=a(this),c=b.css("overflow"),d=b.css("overflow-x"),e=b.css("overflow-y"),f=["hidden","scroll","auto"];0==b.find("[data-lazy-load]").length&&-1==f.indexOf(c)&&-1==f.indexOf(e)&&-1==f.indexOf(d)&&(lazyload.scrollElements=lazyload.scrollElements.not(b))}),lazyload.scrollElements=lazyload.scrollElements.add(window),lazyload.scrollElements.bind("scroll.lazyload",function(){lazyload.scrollCheck&&(c(),lazyload.scrollCheck=!1,clearTimeout(lazyload.scrollCheckDelayTimer),lazyload.scrollCheckDelayTimer=setTimeout(function(){lazyload.scrollCheck=!0},lazyload.__defaults.scrollCheckDelay))}),$foundItems.each(function(){b(a(this))}),c())}),lazyload.check=function(){c()},lazyload.add=function(c,d){b(a(c),d)},lazyload.load=function(){h(a($item))})}(jQuery);
       
         $(document).ready(function(){
           // fix centering elements
@@ -189,7 +186,7 @@ var got1Page = {
   sfDialogErrorButtons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }],
   maxNumberOfSpinsToShowByDefault: 3,
   lastSpinResultCount: 0,
-  dppErrorReturnUrl: '[@T[link:<relative path="~/offers/online-business.aspx"><param name="tldRegErr" value="{0}" /></relative>]@T]',
+  dppErrorReturnUrl: '[@T[link:<relative path="~/offers/online-business.aspx"><param name="tldRegErr" value="tldRegErr" /></relative>]@T]',
   offersCodes: {
     packageId_wsb: 'gybo_1email_1yr',
     packageId_ols: 'gybo_1email_1yr_ols',
@@ -597,7 +594,21 @@ function showChoicesScreen(e){
   $('#step2-choose-product').find('.btn-purchase').data('domain', domain);
   $('#products, #domains').hide();
   var $thisSection = $this.closest('.js-marquee-section');
+
+
   animateMarquee($thisSection, $('#step2-choose-product') /*toView*/);
+
+  // FOR IE we need to resize the plan boxes that were previously hidden
+  // code taken from landing-page.jade to auto height these two modules  
+  var $proPlanWraps = $("#step2-choose-product").find(".pro-plans").find(".pro-plan-wrap"),
+    maxHeight = 0;
+  $proPlanWraps
+    .css({"height":"auto"})
+    .each(function(index, plan) {
+      maxHeight = $(plan).outerHeight() > maxHeight ? $(plan).outerHeight() : maxHeight;
+  });
+  if( maxHeight > 0 ) $proPlanWraps.find(".pro-plan-wrap").css("height", maxHeight);
+
 }
 
 function goToDppCheckoutPage(e) {
@@ -605,7 +616,7 @@ function goToDppCheckoutPage(e) {
     domain = $this.data('domain'),
     isOLS = $this.hasClass('product-ols'),
     apiEndpoint3,
-    sourceurl = encodeURIComponent(got1Page.dppErrorReturnUrl.replace(/\{0\}/gi, '.' + domain.Extension));
+    sourceurl = encodeURIComponent(got1Page.dppErrorReturnUrl.replace('tldRegErr=tldRegErr', 'tldRegErr=.' + domain.Extension));
 
   apiEndpoint3 = '[@T[link:<relative path="~/api/dpp/searchresultscart/11/"><param name="domain" value="domain" /><param name="packageid" value="packageid" /><param name="itc" value="itc" /><param name="sourceurl" value="sourceurl" /><param name="returnUrl" value="returnUrl" /></relative>]@T]';
   apiEndpoint3 = apiEndpoint3.replace('domain=domain', 'domain=' + domain.Fqdn);
@@ -1319,7 +1330,7 @@ h
       
     </script>
   </head>
-  <body>
+  <body ng-controller="" ng-cloak>
     <!-- HEADERBEGIN--> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- HEADEREND-->
@@ -1327,8 +1338,13 @@ h
       <style>
         #marquee {
           margin:0 auto; 
-          padding-top:15px;
           background-color: #77c043;
+        }
+        
+        #default-marquee-view,
+        #domain-available-marquee-view,
+        #domain-not-available-marquee-view {
+          padding-top:15px;
         }
         
         #api-failure,
@@ -1449,7 +1465,7 @@ h
           .main-marquee html[lang|="en"] .dash { background-size: contain; background-repeat: x; background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMTAwJyBoZWlnaHQ9JzEwMCcgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48Zz48cmVjdCBpZD0nc3ZnXzEnIGZpbGw9JyMzMzMnIHg9JzAnIHk9JzM5JyB3aWR0aD0nMTAwJyBoZWlnaHQ9JzIyJy8+PC9nPjwvc3ZnPg==); }
           .main-marquee .header-text { padding-left: 5%; line-height: 0.8; padding-right: 15%; }
           .main-marquee .header-text:first-child { padding-left: 0; line-height: 0.8; padding-right: 0; margin-left: 5%; margin-right: 15%; }
-          .main-marquee .header-text .get-online {  display: inline; background-color: #77c043; font-family:Tungsten, 'Tungsten A', 'Tungsten B', Impact, sans-serif; font-size: 3em; }
+          .main-marquee .header-text .get-online {  display: inline; background-color: #77c043; color: #333; font-family:Tungsten, 'Tungsten A', 'Tungsten B', Impact, sans-serif; font-size: 3em; }
           .main-marquee .header-text .today {  font-family:'Walsheim-Bold', 'Arial Black', sans-serif; font-size: 11.5em; }
           .main-marquee .header-text.as-low-as-price {  line-height: 1; padding-top: 60px; padding-bottom: 45px; margin-top: -45px; color: #fff; background-repeat: no-repeat; font-family:'Walsheim-Black', 'Arial Black', sans-serif; font-size: 2em; background-image: url(data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PScwLDAsNTUzLDEyNScgcHJlc2VydmVBc3BlY3RSYXRpbz0nbm9uZScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48cG9seWdvbiBwb2ludHM9JzAsMzggNDc5LDMxIDQ3OSwwIDU1Myw2OCA0NzksMTI1IDQ4MSw5OSAyMiwxMDEnIHN0eWxlPSdmaWxsOiMzZTk2MzU7IHN0cm9rZTojM2U5NjM1OycgLz48L3N2Zz4=);}
           .main-marquee .header-text.disclaimers { color: #00701D; font-size: 1em; margin-top: -14px; text-transform: none; }
@@ -1557,7 +1573,7 @@ h
           <div class="row">
             <div class="col-md-6 col-xs-12">
               <div class="header-text dash">
-                <div class="get-online">[@L[cds.sales/offers/online-business:32573-top-banner-headline]@L]</div>
+                <h1 class="get-online">[@L[cds.sales/offers/online-business:32573-top-banner-headline]@L]</h1>
               </div>
               <div class="header-text bigtext">
                 <div class="today">[@L[cds.sales/offers/online-business:32573-top-banner-subheadline]@L]</div>
@@ -1648,7 +1664,7 @@ h
             </div>
             <div class="row available-domain-name-row">
               <div class="col-md-8 col-sm-12">
-                <h2 class="available-domain-name-text domain-name-displayed"><span id="available-domain-name">available</span></h2>
+                <h2 class="available-domain-name-text domain-name-displayed"><span id="available-domain-name"> </span></h2>
               </div>
               <div class="col-md-4 col-sm-12 get-it-now-btn">
                 <button class="btn btn-purchase purchase-btn">[@L[cds.sales/offers/online-business:32573-get-it-now-button]@L]</button>
@@ -1716,7 +1732,7 @@ h
             </div>
             <div class="row not-available-domain-name-row"> 
               <div class="col-md-8 col-sm-12">
-                <h2 class="not-available-domain-name-text domain-name-displayed"><span id="not-available-domain-name">not available</span></h2>
+                <h2 class="not-available-domain-name-text domain-name-displayed"><span id="not-available-domain-name"> </span></h2>
               </div>
             </div>
             <div class="row">
@@ -1862,7 +1878,7 @@ h
                     ##endif
                      
                   </div>
-                  <button data-ci="95741" class="btn btn-md btn-block btn-purchase product-wsb">[@L[cds.sales/offers/online-business:32573-choose-select-button]@L]</button>
+                  <button data-ci="95741" class="btn btn-md btn-block btn-purchase got-microsoft-clickable-package product-wsb">[@L[cds.sales/offers/online-business:32573-choose-select-button]@L]</button>
                   <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-choose-wsb-bullet-1]@L]</div>
                   <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-choose-wsb-bullet-2]@L]</div>
                   <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-choose-wsb-bullet-3]@L]</div>
@@ -1883,7 +1899,7 @@ h
                     ##endif
                      
                   </div>
-                  <button data-ci="95740" class="btn btn-md btn-block btn-purchase product-ols">[@L[cds.sales/offers/online-business:32573-choose-select-button]@L]</button>
+                  <button data-ci="95740" class="btn btn-md btn-block btn-purchase got-microsoft-clickable-package product-ols">[@L[cds.sales/offers/online-business:32573-choose-select-button]@L]</button>
                   <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-choose-ols-bullet-1]@L]</div>
                   <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-choose-ols-bullet-2]@L]</div>
                   <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-choose-ols-bullet-3]@L]</div>
@@ -2146,11 +2162,11 @@ h
           
         </style>
       </atlantis:webstash>
-      <div id="domainSection1What" style="background-image: url('null');" data-lazy-load="" class="features tile-section features-wrap  ">
+      <div id="domainSection1What" style="" data-lazyload-source="null" data-lazyload-callback="triggerResize" class="features tile-section features-wrap  lazyload">
         <div class="container">
           <div class="row">
             <div class="col-sm-6 col-sm-push-6">
-              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="text-center"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png" alt="" class="features-img features-img-right">
+              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png" data-lazyload-watch="features-img-left" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="null" alt="" class="lazyload features-img #{imgClass ? imgClass : ''}"/>
               </div>
             </div>
             <div class="col-sm-6 col-sm-pull-6">
@@ -2233,11 +2249,11 @@ h
           
         </style>
       </atlantis:webstash>
-      <div id="domainSection2Email" style="background-image: url('null');" data-lazy-load="" class="features tile-section features-wrap  ">
+      <div id="domainSection2Email" style="" data-lazyload-source="null" data-lazyload-callback="triggerResize" class="features tile-section features-wrap  lazyload">
         <div class="container">
           <div class="row">
             <div class="col-sm-6 col-sm-push-6">
-              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="text-center"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature2.png" alt="" class="features-img features-img-right">
+              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature2.png" data-lazyload-watch="features-img-left" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="null" alt="" class="lazyload features-img #{imgClass ? imgClass : ''}"/>
               </div>
             </div>
             <div class="col-sm-6 col-sm-pull-6">
@@ -2270,7 +2286,6 @@ h
           #findYourPerfectDomain {
             background-color: #F3F3F3;
           }
-          
           
         </style>
       </atlantis:webstash>
@@ -2344,17 +2359,17 @@ h
           
         </style>
       </atlantis:webstash>
-      <div id="findYourPerfectDomain" style="background-image: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/bg-shortMod.jpg');" data-lazy-load="" class="features tile-section features-slim  ">
+      <div id="findYourPerfectDomain" style="" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/bg-shortMod.jpg" data-lazyload-callback="triggerResize" class="features tile-section features-slim  lazyload">
         <div class="container">
           <div class="row">
-            <div class="col-sm-6 bg-slim-left">
+            <div class="col-sm-6 col-sm-push-6 bg-slim-left">
+              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/you-get.png" data-lazyload-watch="features-img-right-slim" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="null" alt="" class="lazyload features-img #{imgClass ? imgClass : ''}"/>
+              </div>
+            </div>
+            <div class="col-sm-6 col-sm-pull-6 bg-slim-right">
               <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
                 <h2>[@L[cds.sales/offers/online-business:32573-find-your-perfect-name-heading]@L]</h2>
                 <div class="features-text">[@L[cds.sales/offers/online-business:32573-find-your-perfect-name-text]@L]</div>
-              </div>
-            </div>
-            <div class="col-sm-6 bg-slim-right">
-              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="text-center"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/you-get.png" alt="" class="features-img features-img-right-slim">
               </div>
             </div>
           </div>
