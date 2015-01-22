@@ -47,7 +47,7 @@ h3 {
 }
 .include-check-black:before {
   content: "";
-  background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+  background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
   background-position: 0 -700px;
   background-size: 205px auto;
   width: 25px;
@@ -320,7 +320,7 @@ cursor: pointer;
 }
 
 .heartIcon {
-  background-image: url(//img1.wsimg-com.ide/fos/mike/img/hosting/img-feature2-heart.png);
+  background-image: url([@T[link:<imageroot />]@T]fos/mike/img/hosting/img-feature2-heart.png);
   display: inline-block;
   width: 59px;
   height: 50px;
@@ -342,7 +342,7 @@ cursor: pointer;
 #speed-chart p {text-align: right; }
 
 .tool-tip-black {
-  background-image: url(https://img1.wsimg-com.ide/fos/mike/img/hosting/img-tootip-.png);
+  background-image: url([@T[link:<imageroot />]@T]fos/mike/img/hosting/img-tootip-.png);
   width: 14px;
   height: 14px;
   display: inline-block;

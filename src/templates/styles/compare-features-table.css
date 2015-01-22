@@ -120,7 +120,7 @@
   text-align: center;
 }
 .compare-chart-pro .compare-chart-header .sf-tipper-target {
-  background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+  background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
   background-position: 0 -1069px;
   width: 14px;
   height: 14px;
@@ -170,7 +170,7 @@
 
 
 .icon {
-  background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+  background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
   display: inline-block;
   background-size: 205px auto;
 }

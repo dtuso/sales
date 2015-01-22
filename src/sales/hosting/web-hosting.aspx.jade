@@ -16,9 +16,6 @@ append vars
   - page.links.favicon = "[@T[link:<imageroot />]@T]assets/godaddy.ico";
 
 append seo
-  meta(name="twitter:card" content="summary")
-  meta(name="twitter:site" content="[@L[cds.sales/gd/hosting/web-hosting:stuff]@L]")
-  meta(name="twitter:title" content="[@L[cds.sales/gd/hosting/web-hosting:stuff]@L]")
   meta(name="twitter:description" content="[@L[cds.sales/gd/hosting/web-hosting:twitter-text]@L]")
   meta(name="twitter:image:src" content!="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/gd_rebrand_og.png")
 
@@ -327,7 +324,7 @@ block sections
           |##endif
           | 
 
-  section#features.key-benefits-wrap.tile-section(data-mid-nav-title="Features")
+  section#features.key-benefits-wrap.tile-section(data-mid-nav-title="[@L[cds.sales/hosting/web-hosting-rebrand:midpagefeatures]@L]")
     +renderColumnList(3, {backgroundColor: "#fff"})
       +columnListMember("key-benefit")
         .key-benefits-img-wrap
@@ -401,7 +398,7 @@ block sections
   | 
   |##if(activeLanguageAny([en-IN]))
   | 
-  section#compare(data-mid-nav-title="Compare").compare-chart-pro.section-pro.bg-pro-gray.tile-section
+  section#compare(data-mid-nav-title="[@L[cds.sales/hosting/web-hosting-rebrand:midpagecompare]@L]").compare-chart-pro.section-pro.bg-pro-gray.tile-section
     .container(style="background: #fff;")
       .text-center
         h2 [@L[cds.sales/gd/hosting/web-hosting:compare-plans-tab-title-11166]@L]
@@ -1019,7 +1016,7 @@ block sections
   | 
   |##else
   | 
-  section#compare(data-mid-nav-title="Compare").compare-chart-pro.section-pro.bg-pro-gray.tile-section
+  section#compare(data-mid-nav-title="[@L[cds.sales/hosting/web-hosting-rebrand:midpagecompare]@L]").compare-chart-pro.section-pro.bg-pro-gray.tile-section
     .container(style="background: #fff;")
       .text-center
         h2 [@L[cds.sales/gd/hosting/web-hosting:compare-plans-tab-title-11166]@L]
@@ -1585,7 +1582,7 @@ block sections
   |##endif
   | 
 
-  section#platforms(data-mid-nav-title="Platforms")
+  section#platforms(data-mid-nav-title="[@L[cds.sales/hosting/web-hosting-rebrand:midpageplatforms]@L]")
     +renderTwoUpCompare({ title: "[@L[cds.sales/hosting/web-hosting-rebrand:choosePlatform]@L]", twoUpCompareId: "choose-platform", titleBackgroundColor: "bg-green-new", backgroundColor: "bg-green-official", backgroundImage: "background-image: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/linux-v-windows.png')"})
       +twoUpCompareColumn({ orContainer: true, title: "[@L[cds.sales/hosting/web-hosting-rebrand:cPanelTitle2]@L]", backgroundColor: "bg-green-official", subtitle: "[@L[cds.sales/hosting/web-hosting-rebrand:linuxPlan]@L]", titleAlign: "center", subtitleAlign: "center", image: "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img-cpanel-linux.png"})
         .include-check-black <strong>[@L[cds.sales/hosting/web-hosting-rebrand:cPanelListItem]@L]</strong> </br> [@L[cds.sales/hosting/web-hosting-rebrand:cPanelListItemDesc]@L]
@@ -1606,7 +1603,7 @@ block sections
   | 
   |##if(activeLanguageAny([en-US]))
   | 
-  section#reviews.tile-section
+  section#reviews.tile-section(data-mid-nav-title="[@L[cds.sales/hosting/web-hosting-rebrand:midpagereviews]@L]")
     .container
       .row
         .col-sm-12

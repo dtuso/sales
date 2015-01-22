@@ -25,9 +25,6 @@
     <meta property="og:site_name" content="[@T[link:<relative parammode='explicit' />]@T]">
     <meta property="fb:app_id" content="115696031791232">
     <meta property="fb:admins" content="633356800">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="[@L[cds.sales/gd/hosting/web-hosting:stuff]@L]">
-    <meta name="twitter:title" content="[@L[cds.sales/gd/hosting/web-hosting:stuff]@L]">
     <meta name="twitter:description" content="[@L[cds.sales/gd/hosting/web-hosting:twitter-text]@L]">
     <meta name="twitter:image:src" content="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/gd_rebrand_og.png"> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
@@ -198,7 +195,7 @@ h3 {
 }
 .include-check-black:before {
   content: "";
-  background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+  background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
   background-position: 0 -700px;
   background-size: 205px auto;
   width: 25px;
@@ -471,7 +468,7 @@ cursor: pointer;
 }
 
 .heartIcon {
-  background-image: url(//img1.wsimg-com.ide/fos/mike/img/hosting/img-feature2-heart.png);
+  background-image: url([@T[link:<imageroot />]@T]fos/mike/img/hosting/img-feature2-heart.png);
   display: inline-block;
   width: 59px;
   height: 50px;
@@ -493,7 +490,7 @@ cursor: pointer;
 #speed-chart p {text-align: right; }
 
 .tool-tip-black {
-  background-image: url(https://img1.wsimg-com.ide/fos/mike/img/hosting/img-tootip-.png);
+  background-image: url([@T[link:<imageroot />]@T]fos/mike/img/hosting/img-tootip-.png);
   width: 14px;
   height: 14px;
   display: inline-block;
@@ -7845,7 +7842,7 @@ h2.marquee-product-name,
           <ul class="nav navbar-nav"></ul>
           <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.mid-page-nav&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="navbar-right">
             <div class="price-text">[@L[cds.sales/_common:plans-starting-at]@L]</div>
-            <div class="price">[@T[productprice:<current productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]<span>/month</span></div><a href="#planTileOne" class="btn-purchase btn btn-sm">[@L[cds.sales/_common:see-the-plans]@L]</a>
+            <div class="price">[@T[productprice:<current productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]<span>/[@L[cds.sales/_common:month]@L]</span></div><a href="#planTileOne" class="btn-purchase btn btn-sm">[@L[cds.sales/_common:see-the-plans]@L]</a>
           </div>
         </div>
       </div>
@@ -8025,7 +8022,7 @@ h2.marquee-product-name,
         </div>
       </div>
     </section>
-    <section id="features" data-mid-nav-title="Features" class="key-benefits-wrap tile-section">
+    <section id="features" data-mid-nav-title="[@L[cds.sales/hosting/web-hosting-rebrand:midpagefeatures]@L]" class="key-benefits-wrap tile-section">
       <div style="background-image: url(); background-color: #fff;">
         <div class="container">
           <div class="row">
@@ -8091,7 +8088,7 @@ h2.marquee-product-name,
     </section> 
     ##if(activeLanguageAny([en-IN]))
      
-    <section id="compare" data-mid-nav-title="Compare" class="compare-chart-pro section-pro bg-pro-gray tile-section">
+    <section id="compare" data-mid-nav-title="[@L[cds.sales/hosting/web-hosting-rebrand:midpagecompare]@L]" class="compare-chart-pro section-pro bg-pro-gray tile-section">
       <div style="background: #fff;" class="container">
         <div class="text-center">
           <h2>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-tab-title-11166]@L]</h2>
@@ -8219,7 +8216,7 @@ h2.marquee-product-name,
   text-align: center;
 }
 .compare-chart-pro .compare-chart-header .sf-tipper-target {
-  background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+  background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
   background-position: 0 -1069px;
   width: 14px;
   height: 14px;
@@ -8269,7 +8266,7 @@ h2.marquee-product-name,
 
 
 .icon {
-  background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+  background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
   display: inline-block;
   background-size: 205px auto;
 }
@@ -9057,7 +9054,7 @@ height: 27px;
     </section> 
     ##else
      
-    <section id="compare" data-mid-nav-title="Compare" class="compare-chart-pro section-pro bg-pro-gray tile-section">
+    <section id="compare" data-mid-nav-title="[@L[cds.sales/hosting/web-hosting-rebrand:midpagecompare]@L]" class="compare-chart-pro section-pro bg-pro-gray tile-section">
       <div style="background: #fff;" class="container">
         <div class="text-center">
           <h2>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-tab-title-11166]@L]</h2>
@@ -9185,7 +9182,7 @@ height: 27px;
   text-align: center;
 }
 .compare-chart-pro .compare-chart-header .sf-tipper-target {
-  background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+  background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
   background-position: 0 -1069px;
   width: 14px;
   height: 14px;
@@ -9235,7 +9232,7 @@ height: 27px;
 
 
 .icon {
-  background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+  background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
   display: inline-block;
   background-size: 205px auto;
 }
@@ -9969,7 +9966,7 @@ height: 27px;
     </section> 
     ##endif
      
-    <section id="platforms" data-mid-nav-title="Platforms">
+    <section id="platforms" data-mid-nav-title="[@L[cds.sales/hosting/web-hosting-rebrand:midpageplatforms]@L]">
       <style>
 .two-up-title-wrap.bg-white {
   background-color: #fff;
@@ -10331,7 +10328,7 @@ height: 27px;
     </section> 
     ##if(activeLanguageAny([en-US]))
      
-    <section id="reviews" class="tile-section">
+    <section id="reviews" data-mid-nav-title="[@L[cds.sales/hosting/web-hosting-rebrand:midpagereviews]@L]" class="tile-section">
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
