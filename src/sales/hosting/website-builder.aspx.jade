@@ -152,7 +152,7 @@ block sections
           .container
             .row
               .col-sm-9
-                h3.text-center(style="color:#FFF",data-center-element='{"vertical":{"target":{"method":"parents","selector":".bg-black"},"verticalStyle":"margin-top","elementHeightMethod":"outerHeight","targetWidthMethod":"height"}}') [@L[cds.sales/gd/hosting/website-builder:sb_bpp_starting_at]@L] [@T[productprice:<current productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:mo]@L]
+                h2.text-center.h3(style="color:#FFF",data-center-element='{"vertical":{"target":{"method":"parents","selector":".bg-black"},"verticalStyle":"margin-top","elementHeightMethod":"outerHeight","targetWidthMethod":"height"}}') [@L[cds.sales/gd/hosting/website-builder:sb_bpp_starting_at]@L] [@T[productprice:<current productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:mo]@L]
               .col-sm-3
                 .right(data-center-element='{"vertical":{"target":{"method":"parents","selector":".bg-black"},"verticalStyle":"margin-top","elementHeightMethod":"outerHeight","targetWidthMethod":"height"}}')
                   button.btn.btn-purchase.btn-plan.btn-md.btn-block(data-tcode='', data-plan='wsb_businessplus_12month') [@L[cds.sales/_common:add-to-cart-cap]@L]
@@ -165,7 +165,7 @@ block sections
         .col-sm-12
           div#BVRRContainer
             p.bv-loading [@L[cds.sales/_common:loading]@L]
-          div [@P[userControl:<Data location="~/Shared/Tabs/controls/BVReviewsNoJS.ascx"><Parameters><Parameter key="ProductId" value="web_hosting" /><Parameter key="ReviewNumber" value="1" /></Parameters></Data>]@P]
+          div [@P[userControl:<Data location="~/Shared/Tabs/controls/BVReviewsNoJS.ascx"><Parameters><Parameter key="ProductId" value="website_builder" /><Parameter key="ReviewNumber" value="1" /></Parameters></Data>]@P]
   | 
   |##endif
   | 
@@ -188,7 +188,7 @@ block sections
         a.btn.btn-default-dark(href!='[@T[link:<relative path="~/hosting/wordpress-hosting.aspx" />]@T]') [@L[cds.sales/gd/hosting/website-builder:learn-more]@L]
       +twoUpCompareColumn({title: "[@L[cds.sales/gd/hosting/website-builder:sb_xsell_qs_1]@L]", backgroundColor: "bg-gray-darkest", shapeText: "[@L[cds.sales/gd/hosting/website-builder:sb_xsell_qs]@L]", shapeColor: "orange", whiteText: "white-text"})
         p [@L[cds.sales/gd/hosting/website-builder:sb_qs_2]@L]
-        a.btn.btn-default-light(href!='[@T[link:<relative path="~/ecommerce/online-store.aspx" />]@T]') [@L[cds.sales/gd/hosting/website-builder:learn-more]@L]
+        a.btn.btn-default-light(href!='[@T[link:<relative path="~/ecommerce/shopping-cart.aspx" />]@T]') [@L[cds.sales/gd/hosting/website-builder:learn-more]@L]
 
   section#disclaimers
     p 
@@ -271,7 +271,7 @@ prepend endOfPageScripts
             }
           });
           $BV.ui("rr", "show_reviews", {
-            productId: "web_hosting",
+            productId: "website_builder",
             num: 1,
             doShowContent: function() {
               $('.bv-loading').hide();

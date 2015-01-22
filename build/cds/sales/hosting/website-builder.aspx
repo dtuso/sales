@@ -259,6 +259,155 @@ padding-bottom: 50px;
 .carousel-panel .img-center {
 width: 50%;
 }
+  #login-modal button.close {
+    -webkit-appearance: none;
+    padding: 0;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+  }
+
+  .modal-open {
+    overflow: hidden;
+  }
+
+  #login-modal.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1040;
+    display: none;
+    overflow: auto;
+    overflow-y: scroll;
+  }
+
+  #login-modal.modal.fade .modal-dialog {
+    -webkit-transform: translate(0, -25%);
+        -ms-transform: translate(0, -25%);
+            transform: translate(0, -25%);
+    -webkit-transition: -webkit-transform 0.3s ease-out;
+       -moz-transition: -moz-transform 0.3s ease-out;
+         -o-transition: -o-transform 0.3s ease-out;
+            transition: transform 0.3s ease-out;
+  }
+
+  #login-modal.modal.in .modal-dialog {
+    -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+
+  #login-modal .modal-dialog {
+    position: relative;
+    z-index: 1050;
+    width: auto;
+    margin: 10px;
+  }
+
+  #login-modal .modal-content {
+    position: relative;
+    background-color: #ffffff;
+    border: 1px solid #999999;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    outline: none;
+    -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+    background-clip: padding-box;
+  }
+
+  .modal-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1030;
+    background-color: #000000;
+  }
+
+  .modal-backdrop.fade {
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+
+  .modal-backdrop.in {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+  }
+
+  #login-modal .modal-header {
+    min-height: 16.428571429px;
+    padding: 15px;
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  #login-modal .modal-header .close {
+    margin-top: -2px;
+  }
+
+  #login-modal .modal-title {
+    margin: 0;
+    line-height: 1.428571429;
+  }
+
+  #login-modal .modal-body {
+    position: relative;
+    padding: 20px;
+  }
+
+  #login-modal .modal-footer {
+    padding: 19px 20px 20px;
+    margin-top: 15px;
+    text-align: right;
+    border-top: 1px solid #e5e5e5;
+  }
+
+  #login-modal .modal-footer:before,
+  #login-modal .modal-footer:after {
+    display: table ;
+    content: " ";
+  }
+
+  #login-modal .modal-footer:after {
+    clear: both;
+  }
+
+  #login-modal .modal-footer:before,
+  #login-modal .modal-footer:after {
+    display: table ;
+    content: " ";
+  }
+
+  #login-modal .modal-footer:after {
+    clear: both;
+  }
+
+  #login-modal .modal-footer .btn + .btn {
+    margin-bottom: 0;
+    margin-left: 5px;
+  }
+
+  #login-modal .modal-footer .btn-group .btn + .btn {
+    margin-left: -1px;
+  }
+
+  #login-modal .modal-footer .btn-block + .btn-block {
+    margin-left: 0;
+  }
+
+  @media screen and (min-width: 768px) {
+    #login-modal .modal-dialog {
+      width: 600px;
+      margin: 30px auto;
+    }
+    #login-modal .modal-content {
+      -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    }
+  }
 
     </style><!--[if lt IE 9]>
     <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
@@ -1642,7 +1791,7 @@ width: 50%;
   #g-modal .plan-droplist-select.droplist-open>ul{left:0;right:0;width:100%;top:100%}#g-modal .plan-droplist-select>ul>li{border-top:1px solid #bcbcbc;-ms-word-wrap:break-word;word-wrap:break-word;text-decoration:none;padding:0 10px;display:block;position:relative;_zoom:1;overflow:hidden}
   #g-modal .plan-droplist-select>ul>li>div{overflow:hidden}#g-modal .plan-droplist-select>ul>li:first-child{border-top:0 none}#g-modal .plan-droplist-select>ul>li:hover{background-color:#f5f5f5}#g-modal .plan-droplist-select>ul>li.selected,#g-modal .plan-droplist-select>ul>li.selected:hover{background-color:#e4efc7}
   #g-modal .plan-droplist-select>.plan-droplist-selected>span,#g-modal .plan-droplist-select>ul>li span{float:left;text-align:left;width:auto;height:35px}#g-modal-overlay{background-color:#000;opacity:.8;filter:alpha(opacity=80)}
-  button.close {
+  #g-modal button.close {
     -webkit-appearance: none;
     padding: 0;
     cursor: pointer;
@@ -1654,7 +1803,7 @@ width: 50%;
     overflow: hidden;
   }
 
-  .modal {
+  #g-modal.modal {
     position: fixed;
     top: 0;
     right: 0;
@@ -1666,7 +1815,7 @@ width: 50%;
     overflow-y: scroll;
   }
 
-  .modal.fade .modal-dialog {
+  #g-modal.modal.fade .modal-dialog {
     -webkit-transform: translate(0, -25%);
         -ms-transform: translate(0, -25%);
             transform: translate(0, -25%);
@@ -1676,20 +1825,20 @@ width: 50%;
             transition: transform 0.3s ease-out;
   }
 
-  .modal.in .modal-dialog {
+  #g-modal.modal.in .modal-dialog {
     -webkit-transform: translate(0, 0);
         -ms-transform: translate(0, 0);
             transform: translate(0, 0);
   }
 
-  .modal-dialog {
+  #g-modal .modal-dialog {
     position: relative;
     z-index: 1050;
     width: auto;
     margin: 10px;
   }
 
-  .modal-content {
+  #g-modal .modal-content {
     position: relative;
     background-color: #ffffff;
     border: 1px solid #999999;
@@ -1721,72 +1870,72 @@ width: 50%;
     filter: alpha(opacity=50);
   }
 
-  .modal-header {
+  #g-modal .modal-header {
     min-height: 16.428571429px;
     padding: 15px;
     border-bottom: 1px solid #e5e5e5;
   }
 
-  .modal-header .close {
+  #g-modal .modal-header .close {
     margin-top: -2px;
   }
 
-  .modal-title {
+  #g-modal .modal-title {
     margin: 0;
     line-height: 1.428571429;
   }
 
-  .modal-body {
+  #g-modal .modal-body {
     position: relative;
     padding: 20px;
   }
 
-  .modal-footer {
+  #g-modal .modal-footer {
     padding: 19px 20px 20px;
     margin-top: 15px;
     text-align: right;
     border-top: 1px solid #e5e5e5;
   }
 
-  .modal-footer:before,
-  .modal-footer:after {
-    display: table;
+  #g-modal .modal-footer:before,
+  #g-modal .modal-footer:after {
+    display: table ;
     content: " ";
   }
 
-  .modal-footer:after {
+  #g-modal .modal-footer:after {
     clear: both;
   }
 
-  .modal-footer:before,
-  .modal-footer:after {
-    display: table;
+  #g-modal .modal-footer:before,
+  #g-modal .modal-footer:after {
+    display: table ;
     content: " ";
   }
 
-  .modal-footer:after {
+  #g-modal .modal-footer:after {
     clear: both;
   }
 
-  .modal-footer .btn + .btn {
+  #g-modal .modal-footer .btn + .btn {
     margin-bottom: 0;
     margin-left: 5px;
   }
 
-  .modal-footer .btn-group .btn + .btn {
+  #g-modal .modal-footer .btn-group .btn + .btn {
     margin-left: -1px;
   }
 
-  .modal-footer .btn-block + .btn-block {
+  #g-modal .modal-footer .btn-block + .btn-block {
     margin-left: 0;
   }
 
   @media screen and (min-width: 768px) {
-    .modal-dialog {
+    #g-modal .modal-dialog {
       width: 600px;
       margin: 30px auto;
     }
-    .modal-content {
+    #g-modal .modal-content {
       -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
               box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
     }
@@ -5161,7 +5310,7 @@ margin-bottom: 20px;
           <div class="container">
             <div class="row">
               <div class="col-sm-9">
-                <h3 style="color:#FFF" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.bg-black&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="text-center">[@L[cds.sales/gd/hosting/website-builder:sb_bpp_starting_at]@L] [@T[productprice:<current productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:mo]@L]</h3>
+                <h2 style="color:#FFF" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.bg-black&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="text-center h3">[@L[cds.sales/gd/hosting/website-builder:sb_bpp_starting_at]@L] [@T[productprice:<current productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:mo]@L]</h2>
               </div>
               <div class="col-sm-3">
                 <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.bg-black&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="right">
@@ -5182,7 +5331,7 @@ margin-bottom: 20px;
             <div id="BVRRContainer">
               <p class="bv-loading">[@L[cds.sales/_common:loading]@L]</p>
             </div>
-            <div>[@P[userControl:<Data location="~/Shared/Tabs/controls/BVReviewsNoJS.ascx"><Parameters><Parameter key="ProductId" value="web_hosting" /><Parameter key="ReviewNumber" value="1" /></Parameters></Data>]@P]</div>
+            <div>[@P[userControl:<Data location="~/Shared/Tabs/controls/BVReviewsNoJS.ascx"><Parameters><Parameter key="ProductId" value="website_builder" /><Parameter key="ReviewNumber" value="1" /></Parameters></Data>]@P]</div>
           </div>
         </div>
       </div>
@@ -5692,7 +5841,7 @@ margin-bottom: 20px;
                   <h2>[@L[cds.sales/gd/hosting/website-builder:sb_xsell_qs_1]@L]</h2>
                   <div class="row">
                     <div class="col-sm-12">
-                      <p>[@L[cds.sales/gd/hosting/website-builder:sb_qs_2]@L]</p><a href="[@T[link:<relative path="~/ecommerce/online-store.aspx" />]@T]" class="btn btn-default-light">[@L[cds.sales/gd/hosting/website-builder:learn-more]@L]</a>
+                      <p>[@L[cds.sales/gd/hosting/website-builder:sb_qs_2]@L]</p><a href="[@T[link:<relative path="~/ecommerce/shopping-cart.aspx" />]@T]" class="btn btn-default-light">[@L[cds.sales/gd/hosting/website-builder:learn-more]@L]</a>
                     </div>
                   </div>
                 </div>
@@ -5793,7 +5942,7 @@ margin-bottom: 20px;
               }
             });
             $BV.ui("rr", "show_reviews", {
-              productId: "web_hosting",
+              productId: "website_builder",
               num: 1,
               doShowContent: function() {
                 $('.bv-loading').hide();
