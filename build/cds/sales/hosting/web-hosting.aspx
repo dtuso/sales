@@ -565,11 +565,11 @@ cursor: pointer;
 }
 
 
-.modal-open {
+#bazaarvoicemodal .modal-open {
   overflow: hidden;
 }
 
-.modal {
+#bazaarvoicemodal .modal {
   position: fixed;
   top: 0;
   right: 0;
@@ -581,7 +581,7 @@ cursor: pointer;
   overflow-y: scroll;
 }
 
-.modal.fade .modal-dialog {
+#bazaarvoicemodal .modal.fade .modal-dialog {
   -webkit-transform: translate(0, -25%);
       -ms-transform: translate(0, -25%);
           transform: translate(0, -25%);
@@ -591,20 +591,20 @@ cursor: pointer;
           transition: transform 0.3s ease-out;
 }
 
-.modal.in .modal-dialog {
+#bazaarvoicemodal .modal.in .modal-dialog {
   -webkit-transform: translate(0, 0);
       -ms-transform: translate(0, 0);
           transform: translate(0, 0);
 }
 
-.modal-dialog {
+#bazaarvoicemodal .modal-dialog {
   position: relative;
   z-index: 1050;
   width: auto;
   margin: 10px;
 }
 
-.modal-content {
+#bazaarvoicemodal .modal-content {
   position: relative;
   background-color: #ffffff;
   border: 1px solid #999999;
@@ -616,7 +616,7 @@ cursor: pointer;
   background-clip: padding-box;
 }
 
-.modal-backdrop {
+#bazaarvoicemodal .modal-backdrop {
   position: fixed;
   top: 0;
   right: 0;
@@ -626,82 +626,82 @@ cursor: pointer;
   background-color: #000000;
 }
 
-.modal-backdrop.fade {
+#bazaarvoicemodal .modal-backdrop.fade {
   opacity: 0;
   filter: alpha(opacity=0);
 }
 
-.modal-backdrop.in {
+#bazaarvoicemodal .modal-backdrop.in {
   opacity: 0.5;
   filter: alpha(opacity=50);
 }
 
-.modal-header {
+#bazaarvoicemodal .modal-header {
   min-height: 16.428571429px;
   padding: 15px;
   border-bottom: 1px solid #e5e5e5;
 }
 
-.modal-header .close {
+#bazaarvoicemodal .modal-header .close {
   margin-top: -2px;
 }
 
-.modal-title {
+#bazaarvoicemodal .modal-title {
   margin: 0;
   line-height: 1.428571429;
 }
 
-.modal-body {
+#bazaarvoicemodal .modal-body {
   position: relative;
   padding: 20px;
 }
 
-.modal-footer {
+#bazaarvoicemodal .modal-footer {
   padding: 19px 20px 20px;
   margin-top: 15px;
   text-align: right;
   border-top: 1px solid #e5e5e5;
 }
 
-.modal-footer:before,
-.modal-footer:after {
+#bazaarvoicemodal .modal-footer:before,
+#bazaarvoicemodal .modal-footer:after {
   display: table;
   content: " ";
 }
 
-.modal-footer:after {
+#bazaarvoicemodal .modal-footer:after {
   clear: both;
 }
 
-.modal-footer:before,
-.modal-footer:after {
+#bazaarvoicemodal .modal-footer:before,
+#bazaarvoicemodal .modal-footer:after {
   display: table;
   content: " ";
 }
 
-.modal-footer:after {
+#bazaarvoicemodal .modal-footer:after {
   clear: both;
 }
 
-.modal-footer .btn + .btn {
+#bazaarvoicemodal .modal-footer .btn + .btn {
   margin-bottom: 0;
   margin-left: 5px;
 }
 
-.modal-footer .btn-group .btn + .btn {
+#bazaarvoicemodal .modal-footer .btn-group .btn + .btn {
   margin-left: -1px;
 }
 
-.modal-footer .btn-block + .btn-block {
+#bazaarvoicemodal .modal-footer .btn-block + .btn-block {
   margin-left: 0;
 }
 
 @media screen and (min-width: 768px) {
-  .modal-dialog {
+  #bazaarvoicemodal .modal-dialog {
     width: 600px;
     margin: 30px auto;
   }
-  .modal-content {
+  #bazaarvoicemodal .modal-content {
     -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
   }
@@ -7102,7 +7102,7 @@ h2.marquee-product-name,
                     </div>
                   </div>
                   <div class="col-sm-4 ">
-                    <div class="include-check">[@L[cds.sales/hosting/web-hosting-rebrand:freeDomain]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:freeDomainRestrictions]@L]'></span></div>
+                    <div class="include-check">[@L[cds.sales/hosting/web-hosting-rebrand:freeDomain]@L]. <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:freeDomainRestrictions]@L]'></span></div>
                     <div class="include-check">[@L[cds.sales/hosting/web-hosting-rebrand:freeEmail]@L]</div>
                     <div class="include-check">[@L[cds.sales/hosting/web-hosting-rebrand:oneClick]@L]</div>
                   </div>
@@ -7662,7 +7662,7 @@ h2.marquee-product-name,
                     </div>
                   </div>
                   <div class="col-sm-4 ">
-                    <div class="include-check">[@L[cds.sales/hosting/web-hosting-rebrand:freeDomain]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:freeDomainRestrictions]@L]'></span></div>
+                    <div class="include-check">[@L[cds.sales/hosting/web-hosting-rebrand:freeDomain]@L]. <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:freeDomainRestrictions]@L]'></span></div>
                     <div class="include-check">[@L[cds.sales/hosting/web-hosting-rebrand:freeEmail]@L]</div>
                     <div class="include-check">[@L[cds.sales/hosting/web-hosting-rebrand:oneClick]@L]</div>
                   </div>
@@ -10554,7 +10554,7 @@ height: 27px;
                         <li>[@L[cds.sales/hosting/web-hosting-rebrand:wsbList1]@L]</li>
                         <li>[@L[cds.sales/hosting/web-hosting-rebrand:wsbList2]@L]</li>
                         <li>[@L[cds.sales/hosting/web-hosting-rebrand:wsbList3]@L]</li>
-                      </ul><a class="btn btn-default-dark">[@L[cds.sales/hosting/web-hosting-rebrand:learnMore]@L]</a>
+                      </ul><a href="[@T[link:<relative path='/hosting/website-builder.aspx'>><param name='ci' value='93999' /></relative>]@T]" class="btn btn-default-dark">[@L[cds.sales/hosting/web-hosting-rebrand:learnMore]@L]</a>
                     </div>
                   </div>
                 </div>
@@ -10571,7 +10571,7 @@ height: 27px;
                         <li>[@L[cds.sales/hosting/web-hosting-rebrand:vpsList1]@L]</li>
                         <li>[@L[cds.sales/hosting/web-hosting-rebrand:vpsList2]@L]</li>
                         <li>[@L[cds.sales/hosting/web-hosting-rebrand:vpsList3]@L]</li>
-                      </ul><a class="btn btn-default-light">[@L[cds.sales/hosting/web-hosting-rebrand:learnMore]@L]</a>
+                      </ul><a href="[@T[link:<relative path='/hosting/vps-hosting.aspx'>><param name='ci' value='93999' /></relative>]@T]" class="btn btn-default-light">[@L[cds.sales/hosting/web-hosting-rebrand:learnMore]@L]</a>
                     </div>
                   </div>
                 </div>
@@ -10641,7 +10641,7 @@ height: 27px;
      
     ##if(activeLanguageAny([en-US]))
      
-    <section id="modals">
+    <section id="bazaarvoicemodal">
       <div id="login-modal" class="modal fade">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -10945,7 +10945,7 @@ height: 27px;
     </script>
     <script>
       function disclaimersModal() {
-        $('#disclaimersModal').sfDialog();
+        $('#disclaimersModal').sfDialog({buttons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }] });
       }
       $("#alternate-products").find(".col-md-offset-2").find("h2").hover(function(){
           $(this).hide().text("[@L[cds.sales/hosting/web-hosting-rebrand:vpsGrooow]@L]").fadeIn("slow");
