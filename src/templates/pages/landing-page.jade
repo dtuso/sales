@@ -11,9 +11,13 @@ include ../accordion-mixin.jade
 include ../two-up-compare-mixin.jade
 include ../tabbed-carousel-mixin.jade
 include ../features-templates-mixin.jade
+include ../full-video-mixin.jade
+
 
 append pageStyles
-  link(href!="[@T[link:<cssroot />]@T]/fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css")
+  link(href!="[@T[link:<cssroot />]@T]fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css")
+  style
+    include ../styles/landing-page.css
 
 block endOfPageScripts
 

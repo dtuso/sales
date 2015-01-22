@@ -76,60 +76,62 @@ block sections
           | ##endif
           | 
           .headline-primary [@L[cds.sales/gd/hosting/website-builder:sb_templates_text]@L]
-          button.btn.btn-default-dark.view-all.btn-md(data-toggle='bsModal', data-target='#g-modal') [@L[cds.sales/gd/hosting/website-builder:sb_view_templates]@L]
+          button.btn.btn-default-dark.view-all.btn-md(data-toggle='modal', data-target='#g-modal') [@L[cds.sales/gd/hosting/website-builder:sb_view_templates]@L]
         .templates-image-container  
           | 
           | ##if(countrySiteAny(ca))
           | 
           .row
             .col-md-4.text-center
-              img.templates-image(src="https://nebula.wsimg.com/969c55de87f607d9e7c01079c3923192?AccessKeyId=531592D248B589D87A56")
+              +lazyImg("templates-image",'', "https://nebula.wsimg.com/969c55de87f607d9e7c01079c3923192?AccessKeyId=531592D248B589D87A56")
             .col-md-4.text-center
-              img.templates-image(src="https://nebula.wsimg.com/d7a3d52de03500dc212cbdd188ee4c76?AccessKeyId=531592D248B589D87A56")
+              +lazyImg("templates-image",'', "https://nebula.wsimg.com/d7a3d52de03500dc212cbdd188ee4c76?AccessKeyId=531592D248B589D87A56")
             .col-md-4.text-center
-              img.templates-image(src="https://nebula.wsimg.com/1c3f93e0921f7eb63f8557dbf04dcc5d?AccessKeyId=531592D248B589D87A56")
+              +lazyImg("templates-image",'', "https://nebula.wsimg.com/1c3f93e0921f7eb63f8557dbf04dcc5d?AccessKeyId=531592D248B589D87A56")
           | 
           | ##elseif(countrySiteAny(uk))
           | 
           .row
             .col-md-4.text-center
-              img.templates-image(src="https://nebula.wsimg.com/6fa416babb52bf03888cd67d49d7ddb0?AccessKeyId=531592D248B589D87A56")
+              +lazyImg("templates-image",'', "https://nebula.wsimg.com/6fa416babb52bf03888cd67d49d7ddb0?AccessKeyId=531592D248B589D87A56")
             .col-md-4.text-center
-              img.templates-image(src="https://nebula.wsimg.com/02aee5deba51271ae149ac610fb15d58?AccessKeyId=531592D248B589D87A56")
+              +lazyImg("templates-image",'', "https://nebula.wsimg.com/d7a3d52de03500dc212cbdd188ee4c76?AccessKeyId=531592D248B589D87A56")
             .col-md-4.text-center
-              img.templates-image(src="https://nebula.wsimg.com/4462d6ddb0a13e36e63847af8e922198?AccessKeyId=531592D248B589D87A56")
+              +lazyImg("templates-image",'', "https://nebula.wsimg.com/4462d6ddb0a13e36e63847af8e922198?AccessKeyId=531592D248B589D87A56")
+
           | 
           | ##else
           | 
           .row
             .col-md-4.text-center
-              img.templates-image(src="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/auto.jpg")
+              +lazyImg("templates-image",'', "https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/auto.jpg")
             .col-md-4.text-center
-              img.templates-image(src="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/photography.jpg")
+              +lazyImg("templates-image",'', "https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/photography.jpg")
             .col-md-4.text-center
-              img.templates-image(src="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/education.jpg")
+              +lazyImg("templates-image",'', "https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/education.jpg")
           | 
           | ##endif
           | 
           .row
             .col-md-4.text-center
-              img.templates-image(src="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/ecommerce.jpg")
+              +lazyImg("templates-image",'', "https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/ecommerce.jpg")
             .col-md-4.text-center
-              img.templates-image(src="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/travel.jpg")
+              +lazyImg("templates-image",'', "https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/travel.jpg")
             .col-md-4.text-center
-              img.templates-image(src="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/non-profit.jpg")
+              +lazyImg("templates-image",'', "https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/non-profit.jpg")
           .row
             .col-md-4.text-center
-              img.templates-image(src="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/business.jpg")
+              +lazyImg("templates-image",'', "https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/business.jpg")
             .col-md-4.text-center
-              img.templates-image(src="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/health-beauty.jpg")
+              +lazyImg("templates-image",'', "https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/health-beauty.jpg")
             .col-md-4.text-center
-              img.templates-image(src="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/creative-design.jpg ")
+              +lazyImg("templates-image",'', "https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/creative-design.jpg")
 
     include ../../templates/wsb-templates.html
  
 
-    include ./website-builder/_fullVideo.jade
+    +fullVideoModule({"icode":"code","backgroundImage":"[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-video.jpg","playButton":"[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rb-play-button.png","tagline":"[@L[cds.sales/gd/hosting/website-builder:testimony-title]@L]","lazyLoad":true,"cta":"[@L[cds.sales/gd/hosting/website-builder:testimony-description]@L]","youtubeId":"-HtVJyxSQmw","tileName":"wsbVideo"})
+
 
     section#social-media
       | 
@@ -150,7 +152,7 @@ block sections
           .container
             .row
               .col-sm-9
-                h3.text-center(style="color:#FFF",data-center-element='{"vertical":{"target":{"method":"parents","selector":".bg-black"},"verticalStyle":"margin-top","elementHeightMethod":"outerHeight","targetWidthMethod":"height"}}') [@L[cds.sales/gd/hosting/website-builder:sb_bpp_starting_at]@L] [@T[productprice:<current productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:mo]@L]
+                h2.text-center.h3(style="color:#FFF",data-center-element='{"vertical":{"target":{"method":"parents","selector":".bg-black"},"verticalStyle":"margin-top","elementHeightMethod":"outerHeight","targetWidthMethod":"height"}}') [@L[cds.sales/gd/hosting/website-builder:sb_bpp_starting_at]@L] [@T[productprice:<current productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:mo]@L]
               .col-sm-3
                 .right(data-center-element='{"vertical":{"target":{"method":"parents","selector":".bg-black"},"verticalStyle":"margin-top","elementHeightMethod":"outerHeight","targetWidthMethod":"height"}}')
                   button.btn.btn-purchase.btn-plan.btn-md.btn-block(data-tcode='', data-plan='wsb_businessplus_12month') [@L[cds.sales/_common:add-to-cart-cap]@L]
@@ -163,7 +165,7 @@ block sections
         .col-sm-12
           div#BVRRContainer
             p.bv-loading [@L[cds.sales/_common:loading]@L]
-          div [@P[userControl:<Data location="~/Shared/Tabs/controls/BVReviewsNoJS.ascx"><Parameters><Parameter key="ProductId" value="web_hosting" /><Parameter key="ReviewNumber" value="1" /></Parameters></Data>]@P]
+          div [@P[userControl:<Data location="~/Shared/Tabs/controls/BVReviewsNoJS.ascx"><Parameters><Parameter key="ProductId" value="website_builder" /><Parameter key="ReviewNumber" value="1" /></Parameters></Data>]@P]
   | 
   |##endif
   | 
@@ -180,13 +182,13 @@ block sections
       +accordionTab("[@L[cds.sales/gd/hosting/website-builder:faq-fourth-slide-title]@L]")
         | [@L[cds.sales/gd/hosting/website-builder:faq-fourth-slide-content]@L]
   section#other-products
-    +renderTwoUpCompare({title: "[@L[cds.sales/gd/hosting/website-builder:sb_xsell_title]@L]", twoUpCompareId: "two-up", titleBackgroundColor: "bg-white", backgroundColor: "bg-green-official", backgroundImage: "background-image: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/two-up-bg-wsb.jpg')", style: "min-height: 100%"})
+    +renderTwoUpCompare({title: "[@L[cds.sales/gd/hosting/website-builder:sb_xsell_title]@L]", twoUpCompareId: "two-up", titleBackgroundColor: "bg-white", backgroundColor: "bg-green-official", backgroundImage: "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/two-up-bg-wsb.jpg", style: "min-height: 100%"})
       +twoUpCompareColumn({title: "[@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp_1]@L]", backgroundColor: "gb-green-official-light", shapeText: "[@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp]@L]", shapeColor: "orange"})
         p [@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp_2]@L]
         a.btn.btn-default-dark(href!='[@T[link:<relative path="~/hosting/wordpress-hosting.aspx" />]@T]') [@L[cds.sales/gd/hosting/website-builder:learn-more]@L]
       +twoUpCompareColumn({title: "[@L[cds.sales/gd/hosting/website-builder:sb_xsell_qs_1]@L]", backgroundColor: "bg-gray-darkest", shapeText: "[@L[cds.sales/gd/hosting/website-builder:sb_xsell_qs]@L]", shapeColor: "orange", whiteText: "white-text"})
         p [@L[cds.sales/gd/hosting/website-builder:sb_qs_2]@L]
-        a.btn.btn-default-light(href!='[@T[link:<relative path="~/ecommerce/online-store.aspx" />]@T]') [@L[cds.sales/gd/hosting/website-builder:learn-more]@L]
+        a.btn.btn-default-light(href!='[@T[link:<relative path="~/ecommerce/shopping-cart.aspx" />]@T]') [@L[cds.sales/gd/hosting/website-builder:learn-more]@L]
 
   section#disclaimers
     p 
@@ -269,7 +271,7 @@ prepend endOfPageScripts
             }
           });
           $BV.ui("rr", "show_reviews", {
-            productId: "web_hosting",
+            productId: "website_builder",
             num: 1,
             doShowContent: function() {
               $('.bv-loading').hide();

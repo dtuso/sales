@@ -131,7 +131,23 @@
       ul li.no-check { background-image: none !important; }
       
     </style>
-    <link href="[@T[link:<cssroot />]@T]/fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css">
+    <link href="[@T[link:<cssroot />]@T]fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css">
+    <style>
+
+##if(countrySiteAny(gr))
+* {
+  font-family: arial !important;
+}
+.close {
+  font-family: uxfont !important;
+}
+.uxicon {
+  font-family: uxfont !important;
+}
+##endif
+
+
+    </style>
     <atlantis:webstash type="css">
       <style>
         .plan-tile { margin-top: 70px; }
@@ -1476,8 +1492,8 @@
       
         var nav = $('.mid-page-nav');
         var navTop = nav.offset().top;
-        var footerBot = $('#footer').offset().top
-        var sections = []
+        var footerBot = $('#footer').offset().top;
+        var sections = [];
       
         $('[data-mid-nav-title]').each(function(){
           //titles.push($(this).data('mid-nav-title'));
@@ -1517,7 +1533,7 @@
         $('#midPageNav .dropdown-toggle').dropdown();
       });
       function organizeNavBar(){
-        var linkArea = $('.navbar-nav').width();
+        var linkArea = $('.navbar-nav').width()+ 150;
         var navBarArea = $('.navbar-collapse').width()-$('.navbar-right').width();
         dropdownItem = "";
         $dropdownMenu = "";

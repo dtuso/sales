@@ -53,17 +53,18 @@ atlantis:webstash(type="css")
       margin-bottom: 0px;
     }
     .carousel-wrap {
-      padding-bottom: 60px !important;
+      padding-bottom: 50px !important;
     }
     .carousel-container .carousel .carousel-indicators {
       bottom: -50px !important;
     }
     .main-heading {
       margin: 0px;
+      font-size: 30px;
     }
     .subheading {
-      margin-bottom: 5px;
-      margin-top: 5px;
+      margin-bottom: 0px;
+      margin-top: 0px;
     }
     .customer-quote {
       margin-top: 0px;
@@ -89,9 +90,13 @@ include ../../../templates/carousel-mixin.jade
 - olsCarousel.ci = {panelContainer:'95265',carouselIndicator:'95263',prev:'95262', next:'95264'};
 
 block heading
-  h1.main-heading.text-center [@L[cds.sales/offers/online-business:32573-real-customers-real-sites]@L]
-  h3.subheading.text-center [@L[cds.sales/offers/online-business:32573-our-customers-love-ols]@L]
-
+  .row
+    .col-sm-1
+    .col-sm-10.center-block
+      h1.h0.main-heading.text-center [@L[cds.sales/offers/online-business:32573-real-customers-real-sites]@L]
+      h3.subheading.text-center [@L[cds.sales/offers/online-business:32573-our-customers-love-ols]@L]
+  .col-sm-1
+  
 +carousel(olsCarousel.id , olsCarousel.numOfTabs, olsCarousel)
   +carouselItem(olsCarousel)
     .row

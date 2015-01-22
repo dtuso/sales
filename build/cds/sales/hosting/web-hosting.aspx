@@ -25,9 +25,6 @@
     <meta property="og:site_name" content="[@T[link:<relative parammode='explicit' />]@T]">
     <meta property="fb:app_id" content="115696031791232">
     <meta property="fb:admins" content="633356800">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="[@L[cds.sales/gd/hosting/web-hosting:stuff]@L]">
-    <meta name="twitter:title" content="[@L[cds.sales/gd/hosting/web-hosting:stuff]@L]">
     <meta name="twitter:description" content="[@L[cds.sales/gd/hosting/web-hosting:twitter-text]@L]">
     <meta name="twitter:image:src" content="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/gd_rebrand_og.png"> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
@@ -136,7 +133,23 @@
       ul li.no-check { background-image: none !important; }
       
     </style>
-    <link href="[@T[link:<cssroot />]@T]/fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css">
+    <link href="[@T[link:<cssroot />]@T]fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css">
+    <style>
+
+##if(countrySiteAny(gr))
+* {
+  font-family: arial !important;
+}
+.close {
+  font-family: uxfont !important;
+}
+.uxicon {
+  font-family: uxfont !important;
+}
+##endif
+
+
+    </style>
     <style>
 .tile-section {
   padding-top: 50px;
@@ -159,7 +172,7 @@
 }
 .include-check-black:before {
   content: "";
-  background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+  background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
   background-position: 0 -700px;
   background-size: 205px auto;
   width: 25px;
@@ -301,6 +314,11 @@
   background-repeat: no-repeat; background-size: 100% 100%; 
 }
 
+.one-click-right img {
+  height:auto; 
+  max-width:100%;
+}
+
 @media (max-width: 767px) {
   #one-click-install {
     background-image: none !important;
@@ -433,7 +451,7 @@ cursor: pointer;
 }
 
 .heartIcon {
-  background-image: url(//img1.wsimg-com.ide/fos/mike/img/hosting/img-feature2-heart.png);
+  background-image: url([@T[link:<imageroot />]@T]fos/mike/img/hosting/img-feature2-heart.png);
   display: inline-block;
   width: 59px;
   height: 50px;
@@ -455,7 +473,7 @@ cursor: pointer;
 #speed-chart p {text-align: right; }
 
 .tool-tip-black {
-  background-image: url(https://img1.wsimg-com.ide/fos/mike/img/hosting/img-tootip-.png);
+  background-image: url([@T[link:<imageroot />]@T]fos/mike/img/hosting/img-tootip-.png);
   width: 14px;
   height: 14px;
   display: inline-block;
@@ -527,11 +545,11 @@ cursor: pointer;
 }
 
 
-.modal-open {
+#bazaarvoicemodal .modal-open {
   overflow: hidden;
 }
 
-.modal {
+#bazaarvoicemodal .modal {
   position: fixed;
   top: 0;
   right: 0;
@@ -543,7 +561,7 @@ cursor: pointer;
   overflow-y: scroll;
 }
 
-.modal.fade .modal-dialog {
+#bazaarvoicemodal .modal.fade .modal-dialog {
   -webkit-transform: translate(0, -25%);
       -ms-transform: translate(0, -25%);
           transform: translate(0, -25%);
@@ -553,20 +571,20 @@ cursor: pointer;
           transition: transform 0.3s ease-out;
 }
 
-.modal.in .modal-dialog {
+#bazaarvoicemodal .modal.in .modal-dialog {
   -webkit-transform: translate(0, 0);
       -ms-transform: translate(0, 0);
           transform: translate(0, 0);
 }
 
-.modal-dialog {
+#bazaarvoicemodal .modal-dialog {
   position: relative;
   z-index: 1050;
   width: auto;
   margin: 10px;
 }
 
-.modal-content {
+#bazaarvoicemodal .modal-content {
   position: relative;
   background-color: #ffffff;
   border: 1px solid #999999;
@@ -578,7 +596,7 @@ cursor: pointer;
   background-clip: padding-box;
 }
 
-.modal-backdrop {
+#bazaarvoicemodal .modal-backdrop {
   position: fixed;
   top: 0;
   right: 0;
@@ -588,86 +606,88 @@ cursor: pointer;
   background-color: #000000;
 }
 
-.modal-backdrop.fade {
+#bazaarvoicemodal .modal-backdrop.fade {
   opacity: 0;
   filter: alpha(opacity=0);
 }
 
-.modal-backdrop.in {
+#bazaarvoicemodal .modal-backdrop.in {
   opacity: 0.5;
   filter: alpha(opacity=50);
 }
 
-.modal-header {
+#bazaarvoicemodal .modal-header {
   min-height: 16.428571429px;
   padding: 15px;
   border-bottom: 1px solid #e5e5e5;
 }
 
-.modal-header .close {
+#bazaarvoicemodal .modal-header .close {
   margin-top: -2px;
 }
 
-.modal-title {
+#bazaarvoicemodal .modal-title {
   margin: 0;
   line-height: 1.428571429;
 }
 
-.modal-body {
+#bazaarvoicemodal .modal-body {
   position: relative;
   padding: 20px;
 }
 
-.modal-footer {
+#bazaarvoicemodal .modal-footer {
   padding: 19px 20px 20px;
   margin-top: 15px;
   text-align: right;
   border-top: 1px solid #e5e5e5;
 }
 
-.modal-footer:before,
-.modal-footer:after {
+#bazaarvoicemodal .modal-footer:before,
+#bazaarvoicemodal .modal-footer:after {
   display: table;
   content: " ";
 }
 
-.modal-footer:after {
+#bazaarvoicemodal .modal-footer:after {
   clear: both;
 }
 
-.modal-footer:before,
-.modal-footer:after {
+#bazaarvoicemodal .modal-footer:before,
+#bazaarvoicemodal .modal-footer:after {
   display: table;
   content: " ";
 }
 
-.modal-footer:after {
+#bazaarvoicemodal .modal-footer:after {
   clear: both;
 }
 
-.modal-footer .btn + .btn {
+#bazaarvoicemodal .modal-footer .btn + .btn {
   margin-bottom: 0;
   margin-left: 5px;
 }
 
-.modal-footer .btn-group .btn + .btn {
+#bazaarvoicemodal .modal-footer .btn-group .btn + .btn {
   margin-left: -1px;
 }
 
-.modal-footer .btn-block + .btn-block {
+#bazaarvoicemodal .modal-footer .btn-block + .btn-block {
   margin-left: 0;
 }
 
 @media screen and (min-width: 768px) {
-  .modal-dialog {
+  #bazaarvoicemodal .modal-dialog {
     width: 600px;
     margin: 30px auto;
   }
-  .modal-content {
+  #bazaarvoicemodal .modal-content {
     -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
   }
 }
+
+
     </style><!--[if lt IE 9]>
     <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
     <link href="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy.min.html" id="respond-proxy" rel="respond-proxy">
@@ -5729,7 +5749,7 @@ h2.marquee-product-name,
             </div>
             <div class="col-md-3 col-sm-6 plan-tile plan-pro">
               <div class="pro-plan-wrap">
-                <div class="plan-flag">More power and security</div>
+                <div class="plan-flag">[@L[cds.sales/hosting/web-hosting-rebrand:ultFlag]@L]</div>
                 <h2 class="plan-title">[@L[cds.sales/hosting/web-hosting-rebrand:ultimatePlan]@L]</h2>
                 <p class="plan-text">[@L[cds.sales/hosting/web-hosting-rebrand:handlesMost]@L]</p>
                 <div class="plan-price-wrap"><span class="plan-price text-warning">[@T[productprice:<current productid="32082" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
@@ -6201,7 +6221,7 @@ h2.marquee-product-name,
             </div>
             <div class="col-sm-4 plan-tile plan-pro">
               <div class="pro-plan-wrap">
-                <div class="plan-flag">More power and security</div>
+                <div class="plan-flag">[@L[cds.sales/hosting/web-hosting-rebrand:ultFlag]@L]</div>
                 <h2 class="plan-title">[@L[cds.sales/hosting/web-hosting-rebrand:ultimatePlan]@L]</h2>
                 <p class="plan-text">[@L[cds.sales/hosting/web-hosting-rebrand:handlesMost]@L]</p>
                 <div class="plan-price-wrap"><span class="plan-price text-warning">[@T[productprice:<current productid="32082" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
@@ -6282,7 +6302,8 @@ h2.marquee-product-name,
       <div class="container">
         <div class="row pro-banner white-text">
           <div class="col-sm-3 pro-banner-image">
-            <div class="text-center"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img-webpro-logo.png"></div>
+            <div class="text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img-webpro-logo.png" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
+            </div>
           </div>
           <div class="col-sm-6 pro-banner-text">
             <p class="top-text">[@L[cds.sales/hosting/web-hosting-rebrand:proBannerTop]@L]</p>
@@ -6486,7 +6507,7 @@ h2.marquee-product-name,
           <ul class="nav navbar-nav"></ul>
           <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.mid-page-nav&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="navbar-right">
             <div class="price-text">[@L[cds.sales/_common:plans-starting-at]@L]</div>
-            <div class="price">[@T[productprice:<current productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]<span>/month</span></div><a href="#planTileOne" class="btn-purchase btn btn-sm">[@L[cds.sales/_common:see-the-plans]@L]</a>
+            <div class="price">[@T[productprice:<current productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]<span>/[@L[cds.sales/_common:month]@L]</span></div><a href="#planTileOne" class="btn-purchase btn btn-sm">[@L[cds.sales/_common:see-the-plans]@L]</a>
           </div>
         </div>
       </div>
@@ -6512,8 +6533,8 @@ h2.marquee-product-name,
       
         var nav = $('.mid-page-nav');
         var navTop = nav.offset().top;
-        var footerBot = $('#footer').offset().top
-        var sections = []
+        var footerBot = $('#footer').offset().top;
+        var sections = [];
       
         $('[data-mid-nav-title]').each(function(){
           //titles.push($(this).data('mid-nav-title'));
@@ -6553,7 +6574,7 @@ h2.marquee-product-name,
         $('#midPageNav .dropdown-toggle').dropdown();
       });
       function organizeNavBar(){
-        var linkArea = $('.navbar-nav').width();
+        var linkArea = $('.navbar-nav').width()+ 150;
         var navBarArea = $('.navbar-collapse').width()-$('.navbar-right').width();
         dropdownItem = "";
         $dropdownMenu = "";
@@ -6620,7 +6641,8 @@ h2.marquee-product-name,
              
           </div>
           <div class="col-sm-6 one-click-right">
-            <div class="text-center"><img style="height:auto; max-width:100%;" src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img-feature1-logos.png" class="features-img features-img-right"></div>
+            <div class="text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img-feature1-logos.png" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
+            </div>
           </div>
         </div>
       </div>
@@ -6636,12 +6658,13 @@ h2.marquee-product-name,
            
           <h3>[@L[cds.sales/hosting/web-hosting-rebrand:fastWeb]@L]</h3> 
           ##endif
-           <img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img-graph-chart.png">
+           <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img-graph-chart.png" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
           <div class="speed-text"><img></div>
         </div>
       </div>
       <div class="container">
-        <div class="col-sm-2 text-center"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/GD_WebHosting_Chart_Polygon.png"></div>
+        <div class="col-sm-2 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/GD_WebHosting_Chart_Polygon.png" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
+        </div>
         <div class="col-sm-10">
           <div>
              
@@ -6666,12 +6689,13 @@ h2.marquee-product-name,
         </div>
       </div>
     </section>
-    <section id="features" data-mid-nav-title="Features" class="key-benefits-wrap tile-section">
+    <section id="features" data-mid-nav-title="[@L[cds.sales/hosting/web-hosting-rebrand:midpagefeatures]@L]" class="key-benefits-wrap tile-section">
       <div style="background-image: url(); background-color: #fff;">
         <div class="container">
           <div class="row">
             <div class="col-sm-4 key-benefit">
-              <div class="key-benefits-img-wrap"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/GD_WebHosting_Module_Feature_Group_ScalableResources.png" class="key-benefits-img"></div> 
+              <div class="key-benefits-img-wrap"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/GD_WebHosting_Module_Feature_Group_ScalableResources.png" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
+              </div> 
               ##if(activeLanguageAny([en-US]))
                
               <h3 class="key-benefits-title">[@L[cds.sales/hosting/web-hosting-rebrand:moreResourcesRebrand]@L]</h3> 
@@ -6690,7 +6714,8 @@ h2.marquee-product-name,
                
             </div>
             <div class="col-sm-4 key-benefit">
-              <div class="key-benefits-img-wrap"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/GD_WebHosting_Module_Feature_Group_Security.png" class="key-benefits-img"></div>
+              <div class="key-benefits-img-wrap"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/GD_WebHosting_Module_Feature_Group_Security.png" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
+              </div>
               <h3 class="key-benefits-title">[@L[cds.sales/hosting/web-hosting-rebrand:awardSecurity]@L]</h3> 
               ##if(activeLanguageAny([en-US]))
                
@@ -6702,7 +6727,8 @@ h2.marquee-product-name,
                
             </div>
             <div class="col-sm-4 key-benefit">
-              <div class="key-benefits-img-wrap"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/GD_WebHosting_Module_Feature_Group_WhatIsHosting.png" class="key-benefits-img"></div> 
+              <div class="key-benefits-img-wrap"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/GD_WebHosting_Module_Feature_Group_WhatIsHosting.png" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
+              </div> 
               ##if(activeLanguageAny([en-US]))
                
               <h3 class="key-benefits-title">[@L[cds.sales/hosting/web-hosting-rebrand:hostingQuestionRebrand]@L]</h3> 
@@ -6732,7 +6758,7 @@ h2.marquee-product-name,
     </section> 
     ##if(activeLanguageAny([en-IN]))
      
-    <section id="compare" data-mid-nav-title="Compare" class="compare-chart-pro section-pro bg-pro-gray tile-section">
+    <section id="compare" data-mid-nav-title="[@L[cds.sales/hosting/web-hosting-rebrand:midpagecompare]@L]" class="compare-chart-pro section-pro bg-pro-gray tile-section">
       <div style="background: #fff;" class="container">
         <div class="text-center">
           <h2>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-tab-title-11166]@L]</h2>
@@ -6860,7 +6886,7 @@ h2.marquee-product-name,
   text-align: center;
 }
 .compare-chart-pro .compare-chart-header .sf-tipper-target {
-  background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+  background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
   background-position: 0 -1069px;
   width: 14px;
   height: 14px;
@@ -6910,7 +6936,7 @@ h2.marquee-product-name,
 
 
 .icon {
-  background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+  background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
   display: inline-block;
   background-size: 205px auto;
 }
@@ -6930,7 +6956,7 @@ height: 27px;
 }
 
 .compare-nav-tabs {
-  margin-bottom: -16px;
+  margin-bottom: -1px;
   color: #333;
   font-size: 23px;
   font-family: 'Walsheim-Black';
@@ -6949,7 +6975,7 @@ height: 27px;
           <table id="cpanel-table" class="compare-table">
             <thead>
               <tr>
-                <td style="width: 40%;padding-left: 0;border-bottom: 1px solid #333;">
+                <td style="width: 40%;padding-left: 0;padding-bottom: 0;border-bottom: 1px solid #333;">
                   <!--h2 [@L[cds.sales/hosting/web-hosting-rebrand:cPanelTitle]@L]-->
                   <ul class="nav nav-tabs compare-nav-tabs">
                     <li id="cpanelTab" class="active"><a>cPanel</a></li>
@@ -7341,7 +7367,7 @@ height: 27px;
           <table id="parallels-table" class="compare-table">
             <thead>
               <tr>
-                <td style="width: 40%;padding-left: 0;border-bottom: 1px solid #333;">
+                <td style="width: 40%;padding-left: 0;padding-bottom: 0;border-bottom: 1px solid #333;">
                   <!--h2 [@L[cds.sales/hosting/web-hosting-rebrand:windowsTitle]@L]-->
                   <ul class="nav nav-tabs compare-nav-tabs">
                     <li id="cpanelTab"><a href="javascript:comparePlans2('cpanel-tab')">cPanel</a></li>
@@ -7698,7 +7724,7 @@ height: 27px;
     </section> 
     ##else
      
-    <section id="compare" data-mid-nav-title="Compare" class="compare-chart-pro section-pro bg-pro-gray tile-section">
+    <section id="compare" data-mid-nav-title="[@L[cds.sales/hosting/web-hosting-rebrand:midpagecompare]@L]" class="compare-chart-pro section-pro bg-pro-gray tile-section">
       <div style="background: #fff;" class="container">
         <div class="text-center">
           <h2>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-tab-title-11166]@L]</h2>
@@ -7826,7 +7852,7 @@ height: 27px;
   text-align: center;
 }
 .compare-chart-pro .compare-chart-header .sf-tipper-target {
-  background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+  background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
   background-position: 0 -1069px;
   width: 14px;
   height: 14px;
@@ -7876,7 +7902,7 @@ height: 27px;
 
 
 .icon {
-  background-image: url(//img1.wsimg-com.ide/fos/hp/sahara-rebrand-sprite-20141114.png);
+  background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
   display: inline-block;
   background-size: 205px auto;
 }
@@ -7896,7 +7922,7 @@ height: 27px;
 }
 
 .compare-nav-tabs {
-  margin-bottom: -16px;
+  margin-bottom: -1px;
   color: #333;
   font-size: 23px;
   font-family: 'Walsheim-Black';
@@ -7915,7 +7941,7 @@ height: 27px;
           <table id="cpanel-table" class="compare-table">
             <thead>
               <tr>
-                <td style="width: 40%;padding-left: 0;border-bottom: 1px solid #333;">
+                <td style="width: 40%;padding-left: 0;padding-bottom: 0;border-bottom: 1px solid #333;">
                   <!--h2 [@L[cds.sales/hosting/web-hosting-rebrand:cPanelTitle]@L]-->
                   <ul class="nav nav-tabs compare-nav-tabs">
                     <li id="cpanelTab" class="active"><a>cPanel</a></li>
@@ -8253,7 +8279,7 @@ height: 27px;
           <table id="parallels-table" class="compare-table">
             <thead>
               <tr>
-                <td style="width: 40%;padding-left: 0;border-bottom: 1px solid #333;">
+                <td style="width: 40%;padding-left: 0;padding-bottom: 0;border-bottom: 1px solid #333;">
                   <!--h2 [@L[cds.sales/hosting/web-hosting-rebrand:windowsTitle]@L]-->
                   <ul class="nav nav-tabs compare-nav-tabs">
                     <li id="cpanelTab"><a href="javascript:comparePlans2('cpanel-tab')">cPanel</a></li>
@@ -8610,7 +8636,7 @@ height: 27px;
     </section> 
     ##endif
      
-    <section id="platforms" data-mid-nav-title="Platforms">
+    <section id="platforms" data-mid-nav-title="[@L[cds.sales/hosting/web-hosting-rebrand:midpageplatforms]@L]">
       <style>
 .two-up-title-wrap.bg-white {
   background-color: #fff;
@@ -8932,12 +8958,13 @@ height: 27px;
             </div>
           </div>
         </div>
-        <div style="background-image: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/linux-v-windows.png'); ;" class="two-up-wrap-compare bg-green-official">
+        <div style=";" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/linux-v-windows.png" class="two-up-wrap-compare bg-green-official lazyload">
           <div class="container">
             <div class="row">
               <div class="col-md-5 or-container col-sm-6  bg-green-official">
                 <div style="" class="two-up-text-wrap ">
-                  <div class="text-center two-up-image"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img-cpanel-linux.png" alt=""/></div>
+                  <div class="text-center two-up-image"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img-cpanel-linux.png" alt=""/>
+                  </div>
                   <h2 class="text-center">[@L[cds.sales/hosting/web-hosting-rebrand:cPanelTitle2]@L]</h2>
                   <h3 class="text-center">[@L[cds.sales/hosting/web-hosting-rebrand:linuxPlan]@L]</h3>
                   <div class="row">
@@ -8953,7 +8980,8 @@ height: 27px;
               </div>
               <div class="col-md-5 col-md-offset-2 col-sm-6  bg-green-official-light">
                 <div style="" class="two-up-text-wrap ">
-                  <div class="text-center two-up-image"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img-Windows8.png" alt=""/></div>
+                  <div class="text-center two-up-image"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img-Windows8.png" alt=""/>
+                  </div>
                   <h2 class="text-center">[@L[cds.sales/hosting/web-hosting-rebrand:windowsTitle2]@L]</h2>
                   <h3 class="text-center">[@L[cds.sales/hosting/web-hosting-rebrand:windowsPlan]@L]</h3>
                   <div class="row">
@@ -8972,7 +9000,7 @@ height: 27px;
     </section> 
     ##if(activeLanguageAny([en-US]))
      
-    <section id="reviews" class="tile-section">
+    <section id="reviews" data-mid-nav-title="[@L[cds.sales/hosting/web-hosting-rebrand:midpagereviews]@L]" class="tile-section">
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
@@ -9180,7 +9208,7 @@ height: 27px;
             </div>
           </div>
         </div>
-        <div style="background-image: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/compare-bg.png'); min-height: 580px;;" class="two-up-wrap-compare bg-green-official">
+        <div style="min-height: 580px;;" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/compare-bg.png" class="two-up-wrap-compare bg-green-official lazyload">
           <div class="container">
             <div class="row">
               <div class="col-md-5 or-container-none col-sm-6  bg-green-official-light">
@@ -9195,7 +9223,7 @@ height: 27px;
                         <li>[@L[cds.sales/hosting/web-hosting-rebrand:wsbList1]@L]</li>
                         <li>[@L[cds.sales/hosting/web-hosting-rebrand:wsbList2]@L]</li>
                         <li>[@L[cds.sales/hosting/web-hosting-rebrand:wsbList3]@L]</li>
-                      </ul><a class="btn btn-default-dark">[@L[cds.sales/hosting/web-hosting-rebrand:learnMore]@L]</a>
+                      </ul><a href="[@T[link:<relative path='/hosting/website-builder.aspx'>><param name='ci' value='93999' /></relative>]@T]" class="btn btn-default-dark">[@L[cds.sales/hosting/web-hosting-rebrand:learnMore]@L]</a>
                     </div>
                   </div>
                 </div>
@@ -9212,7 +9240,7 @@ height: 27px;
                         <li>[@L[cds.sales/hosting/web-hosting-rebrand:vpsList1]@L]</li>
                         <li>[@L[cds.sales/hosting/web-hosting-rebrand:vpsList2]@L]</li>
                         <li>[@L[cds.sales/hosting/web-hosting-rebrand:vpsList3]@L]</li>
-                      </ul><a class="btn btn-default-light">[@L[cds.sales/hosting/web-hosting-rebrand:learnMore]@L]</a>
+                      </ul><a href="[@T[link:<relative path='/hosting/vps-hosting.aspx'>><param name='ci' value='93999' /></relative>]@T]" class="btn btn-default-light">[@L[cds.sales/hosting/web-hosting-rebrand:learnMore]@L]</a>
                     </div>
                   </div>
                 </div>
@@ -9235,7 +9263,7 @@ height: 27px;
             </div>
           </div>
         </div>
-        <div style="background-image: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/compare-bg.png'); min-height: 580px;;" class="two-up-wrap-compare bg-green-official">
+        <div style="min-height: 580px;;" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/compare-bg.png" class="two-up-wrap-compare bg-green-official lazyload">
           <div class="container">
             <div class="row">
               <div class="col-md-5 or-container-none col-sm-6  bg-green-official-light">
@@ -9282,7 +9310,7 @@ height: 27px;
      
     ##if(activeLanguageAny([en-US]))
      
-    <section id="modals">
+    <section id="bazaarvoicemodal">
       <div id="login-modal" class="modal fade">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -9586,7 +9614,7 @@ height: 27px;
     </script>
     <script>
       function disclaimersModal() {
-        $('#disclaimersModal').sfDialog();
+        $('#disclaimersModal').sfDialog({buttons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }] });
       }
       $("#alternate-products").find(".col-md-offset-2").find("h2").hover(function(){
           $(this).hide().text("[@L[cds.sales/hosting/web-hosting-rebrand:vpsGrooow]@L]").fadeIn("slow");

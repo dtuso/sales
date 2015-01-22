@@ -245,8 +245,8 @@ function tokenizeDisclaimerModals() {
     });
   };
   
-
-  if(got1Page.canOfferOls) tokenizeDisclaimerModal('#default-marquee-details-modal.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_wsb,got1Page.pricing.ols);
+  if(got1Page.canOfferOls) tokenizeDisclaimerModal('#default-marquee-details-modal.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_wsb,got1Page.pricing.bundleRenewal_ols);
+  tokenizeDisclaimerModal('#default-marquee-details-modal-wsb-only.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_wsb);
   tokenizeDisclaimerModal('#default-marquee-details-modal-wsb-only-choice.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_wsb);  
   tokenizeDisclaimerModal('#site-choice-wsb-modal.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_wsb);  
   if(got1Page.canOfferOls) tokenizeDisclaimerModal('#site-choice-ols-modal.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_ols);
@@ -294,6 +294,7 @@ function wireupModals() {
     });
     $('#ols-stores-btn').on('click', function(){
       $("#site-choice-ols-stores-modal").sfDialog({titleHidden:true, dialogWidthIdeal:1230, buttons: []});
+      $('#site-choice-ols-stores-modal').parent().css({ "overflow": "hidden" });
     });
   }
 
@@ -305,9 +306,10 @@ function showTldImagesInDomainArea() {
   var $imageDiv = $('#findYourPerfectDomain').find(".features-img").parent().empty().addClass('tld-images');
   $.each(got1Page.tldInfo.tlds, function(idx, tld){
     var $img = $('<img>')
-      .addClass('tld-image')
-      .attr('src', got1Page.imagePath + 'tld-' + tld + '.png');
+      .addClass('tld-image lazyload')
+      .attr('data-lazyload-source', got1Page.imagePath + 'tld-' + tld + '.png');
     $imageDiv.append($img);
+    lazyload.add($img);
   });
 
   // rerun the height alignment
