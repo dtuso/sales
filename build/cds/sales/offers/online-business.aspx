@@ -2527,7 +2527,7 @@ h
         </div>
         <div class="row">
           <div class="col-sm-6 col-sm-push-3 button-margin">
-            <button id="wsb-only-designs-btn" data-ci="95266" data-toggle="bsModal" data-target="#g-modal" class="btn btn-md btn-block view-all btn-primary">[@L[cds.sales/offers/online-business:32573-view-designs-button]@L]</button>
+            <button id="wsb-only-designs-btn" data-ci="95266" data-toggle="modal" data-target="#g-modal" class="btn btn-md btn-block view-all btn-primary">[@L[cds.sales/offers/online-business:32573-view-designs-button]@L]</button>
           </div>
         </div>
         <div class="row">
@@ -2915,7 +2915,7 @@ h
                       </div>
                       <div class="row">
                         <div class="col-sm-12 button-margin">
-                          <button id="wsb-designs-btn" data-ci="95266" data-toggle="bsModal" data-target="#g-modal" class="btn btn-md btn-block view-all btn-primary">[@L[cds.sales/offers/online-business:32573-view-designs-button]@L]</button>
+                          <button id="wsb-designs-btn" data-ci="95266" data-toggle="modal" data-target="#g-modal" class="btn btn-md btn-block view-all btn-primary">[@L[cds.sales/offers/online-business:32573-view-designs-button]@L]</button>
                         </div>
                       </div>
                       <div class="row">
@@ -5254,7 +5254,7 @@ $(document).ready(function(){
     </div>
   </div>
 <!-- How to Call it Modal
-  <button class="btn btn-primary view-all btn-lg" data-toggle="bsModal" data-target="#g-modal">
+  <button class="btn btn-primary view-all btn-lg" data-toggle="modal" data-target="#g-modal">
     View All Designs
   </button>
 
@@ -5266,8 +5266,8 @@ $(document).ready(function(){
 <!-- JavaScript Test -->
 <atlantis:webstash type="js">
 <script type="text/javascript">
- /* ========================================================================
- * Bootstrap: bsmodal.js v3.0.3
+/* ========================================================================
+ * Bootstrap: modal.js v3.0.3
  * http://getbootstrap.com/javascript/#modals
  * ========================================================================
  * Copyright 2013 Twitter, Inc.
@@ -5311,7 +5311,6 @@ $(document).ready(function(){
   }
 
   Modal.prototype.show = function (_relatedTarget) {
-    console.log('something');
     var that = this
     var e    = $.Event('show.bs.modal', { relatedTarget: _relatedTarget })
 
@@ -5464,7 +5463,9 @@ $(document).ready(function(){
   // MODAL PLUGIN DEFINITION
   // =======================
 
-  $.fn.bsModal = function (option, _relatedTarget) {
+  var old = $.fn.modal
+
+  $.fn.modal = function (option, _relatedTarget) {
     return this.each(function () {
       var $this   = $(this)
       var data    = $this.data('bs.modal')
@@ -5476,15 +5477,22 @@ $(document).ready(function(){
     })
   }
 
-  $.fn.bsModal.Constructor = Modal
+  $.fn.modal.Constructor = Modal
 
 
   // MODAL NO CONFLICT
+  // =================
+
+  $.fn.modal.noConflict = function () {
+    $.fn.modal = old
+    return this
+  }
+
 
   // MODAL DATA-API
   // ==============
 
-  $(document).on('click.bs.modal.data-api', '[data-toggle="bsModal"]', function (e) {
+  $(document).on('click.bs.modal.data-api', '[data-toggle="modal"]', function (e) {
     var $this   = $(this)
     var href    = $this.attr('href')
     var $target = $($this.attr('data-target') || (href && href.replace(/.*(?=#[^\s]+$)/, ''))) //strip for ie7
@@ -5493,17 +5501,18 @@ $(document).ready(function(){
     e.preventDefault()
 
     $target
-      .bsModal(option, this)
+      .modal(option, this)
       .one('hide', function () {
         $this.is(':visible') && $this.focus()
       })
   })
 
   $(document)
-    .on('show.bs.modal',  '.modal', function (e) { $(document.body).addClass('modal-open'); onTemplateModalShown(e) })
-    .on('hidden.bs.modal', '.modal', function (e) { $(document.body).removeClass('modal-open');onTemplateModalHidden(e) })
+    .on('show.bs.modal',  '.modal', function () { $(document.body).addClass('modal-open') })
+    .on('hidden.bs.modal', '.modal', function () { $(document.body).removeClass('modal-open') })
 
 }(jQuery);
+
 
 /*! jQuery So Lazy (Loader)
  * Author: Dave Utley
@@ -5703,14 +5712,27 @@ function onTemplateModalHidden (e) {
   $('.templates-modal').hide();
 }
     $(document).ready(function () {
-        $('#template-select').on('click', 'a', function(e){
-            var hash = $(this).attr('href');
-                console.log($(this));
+         $('#g-modal').on('show.bs.modal', function (e) {
+            $('.templates-modal').show();
+            $this = $(e.relatedTarget);
+            if(!$this.hasClass('view-all')){
+                var hash = $this.find('a').attr('href');
                 hash = hash.replace('#','');
-                var $targetElement = $('a[name="'+hash+'"]');
-                console.log($targetElement);
-                $('.templates-modal-content').scrollTo($targetElement,1000,{offset:{top:-20},onAfter:function(){wsbsolazy.check();}});
-        });    
+                setTimeout(function(){
+                    var $targetElement = $('a[name="'+hash+'"]');
+                    $('.templates-modal-content').scrollTo($targetElement,1000,{/*offset:{top:-20},*/onAfter:function(){solazy.check();}});
+                },500);
+                
+            }else{
+                setTimeout(function(){
+                    solazy.check(true);
+                },500);
+            }               
+        });
+
+        $('#g-modal').on('hide.bs.modal', function(e){
+            $('.templates-modal').hide();
+        });
     });
 // planbox select boxes
 var PlanBox6UI = {
