@@ -125,6 +125,12 @@
           { "ITC Code" : "GtldEoiWebsiteQuebec" },
           { "Description" : ".QUEBEC Slide Link" }
           ]
+      },
+      { ".REVIEWS Slide Link" : [
+          { "ITC ID" : "90921" },
+          { "ITC Code" : "GtldEoiWebsiteReviews" },
+          { "Description" : ".REVIEWS Slide Link" }
+          ]
       }
     ],
   "Everything Else" : [
