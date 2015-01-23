@@ -1,9 +1,9 @@
 ---
 location: sales/ssl/ssl-certificates-config.aspx
 url: http://www.dev-godaddy.com/ssl/ssl-certificates-config.aspx
-id:  123
-name: GCE-32751
-comments: updated workflow for one website to default 2yrs
+id:  54c1c306f778fc1dd09be010
+name: GCE-32525
+comments: Update javascript with 2 skills to implement Pro-Active Chat for Hosting LP - Pro pages
 assetPath: false
 ---
 ##if(false)
@@ -775,6 +775,27 @@ $('#termList ul li').attr("data-main","ssl_dlx_2").click();
 });
 });
 </script>
+
+<!-- liveperson includes -->
+<script>
+  // defer load liveperson
+  $(window).load(function(){
+      $('body').append($('<div id="lpButtonDiv"></div>'))
+      
+      var scriptResource = document.createElement('script');
+      scriptResource.src = "[@T[link:<external parammode="explicit" linktype="IMAGEURL" secure="true" path="fos/liveperson/js/liveperson_20150122.min.js"/>]@T]";
+
+      var styleResource = document.createElement('link');
+      styleResource.rel = "stylesheet";
+      styleResource.type = "text/css";
+      styleResource.href = "[@T[link:<external parammode="explicit" linktype="IMAGEURL" secure="true" path="fos/liveperson/css/chat-window_20140205.css"/>]@T]";
+      
+      var script = document.getElementsByTagName('script')[0];
+      script.parentNode.insertBefore(scriptResource, script);
+      script.parentNode.insertBefore(styleResource, script);
+  });
+</script>
+ 
 <script src="[@T[link:<javascriptroot />]@T]fos/script/atlantis_jquery14.min.js" type="text/javascript"></script>
 <script src="[@T[link:<javascriptroot />]@T]shared/js/jquery.plugins.min.20140925.js" type="text/javascript" ></script>
 <script src="[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2" type="text/javascript"></script>

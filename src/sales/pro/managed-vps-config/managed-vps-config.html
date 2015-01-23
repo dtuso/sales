@@ -1,8 +1,8 @@
 ---
 location: sales/pro/managed-vps-config
-id: 549dc685f778fc1018b13fe8
-name: GCE-33947
-comment: Fix addon discount calculation
+id: 54c1c38df778fc1dd09be011
+name: GCE-32525
+comment: Update javascript with 2 skills to implement Pro-Active Chat for Hosting LP - Pro pages
 configPage: true
 sitecore: true 
 cssVersionOverride: 2
@@ -455,4 +455,25 @@ cssVersionOverride: 2
       }
      
     </script>
+
+    <!-- liveperson includes -->
+    <script>
+      // defer load liveperson
+      $(window).load(function(){
+          $('body').append($('<div id="lpButtonDiv"></div>'))
+          
+          var scriptResource = document.createElement('script');
+          scriptResource.src = "[@T[link:<external parammode="explicit" linktype="IMAGEURL" secure="true" path="fos/liveperson/js/liveperson_20150122.min.js"/>]@T]";
+
+          var styleResource = document.createElement('link');
+          styleResource.rel = "stylesheet";
+          styleResource.type = "text/css";
+          styleResource.href = "[@T[link:<external parammode="explicit" linktype="IMAGEURL" secure="true" path="fos/liveperson/css/chat-window_20140205.css"/>]@T]";
+          
+          var script = document.getElementsByTagName('script')[0];
+          script.parentNode.insertBefore(scriptResource, script);
+          script.parentNode.insertBefore(styleResource, script);
+      });
+    </script>
+
 {% endblock %}
