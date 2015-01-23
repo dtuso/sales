@@ -12,34 +12,6 @@ if (!Array.prototype.indexOf){
   };
 }
 
-/* see: http://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php */
-
-var $allVideos = $("iframe[src^='http://www.youtube.com']"),/* Find all YouTube videos */    
-    $fluidEl = $("body"); /*The element that is fluid width*/
-
-// Figure out and save aspect ratio for each video
-$allVideos.each(function() {
-  $(this)
-    .data('aspectRatio', this.height / this.width)
-    // and remove the hard coded width/height
-    .removeAttr('height')
-    .removeAttr('width');
-});
-
-// When the window is resized
-$(window).resize(function() {
-  var newWidth = $fluidEl.width();
-  // Resize all videos according to their own aspect ratio
-  $allVideos.each(function() {
-    var $el = $(this);
-    $el
-      .width(newWidth)
-      .height(newWidth * $el.data('aspectRatio'));
-  });
-// Kick off one resize to fix all videos on page load
-}).resize();
-/* end import */
-
 var got1Page = {
   tldInfo: {
     defaultTld: 'com', 
@@ -280,14 +252,7 @@ function wireupModals() {
     });
   }
 
-  $('#wsb-video-btn, #wsb-only-video-btn').on('click', function(){
-    $("#site-choice-wsb-video-modal").sfDialog({titleHidden:true, dialogWidthIdeal:840, buttons: []});
-  });
-
   if(got1Page.canOfferOls) {
-    $('#ols-video-btn').on('click', function(){      
-      $("#site-choice-ols-video-modal").sfDialog({titleHidden:true, dialogWidthIdeal:840, buttons: []});
-    });
     $('#ols-stores-btn').on('click', function(){
       $("#site-choice-ols-stores-modal").sfDialog({titleHidden:true, dialogWidthIdeal:1230, buttons: []});
       $('#site-choice-ols-stores-modal').parent().css({ "overflow": "hidden" });
