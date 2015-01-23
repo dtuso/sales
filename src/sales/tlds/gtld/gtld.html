@@ -1,8 +1,8 @@
 ---
 location: sales/tlds/gtld.aspx
-id: 
-name: GCE-33979
-comments: GCE-33979 - Prepare for uxcore
+id: false
+name: GCE-34935
+comments: Prep for uxcore - css updates
 ---
 {% extends 'layouts/base.html' %}
 
@@ -11,19 +11,6 @@ comments: GCE-33979 - Prepare for uxcore
 
 <atlantis:webstash type="css">
   <style>
-    ##if(appSettingEnabled(UXCORE_ENABLED))
-    body {
-      font-size: 10px;
-      background: #d4d4d4;
-    }
-    h1 {
-      color:#FFFFFF;
-    }
-    #footer #footer-legal {
-      background: #fff;
-    }
-    ##endif
-    
     ##if(countrySiteAny(www, ca))
     .bg-images > .bg-slide1 {
       background-image: url("[@T[link:<cssroot />]@T]fos/sales/themes/scotty/tlds/gtld/img/bg-main-banner-club.jpg") !important;
@@ -61,6 +48,37 @@ comments: GCE-33979 - Prepare for uxcore
     ##endif
   </style>
 </atlantis:webstash>
+
+<style type="text/css">
+  .bg-images{height:100%;}
+  .bg-images > .bg-slide {height:100%;}
+  .idp-modal-wrap {top: 35%!important;}
+</style>
+
+##if(appSettingEnabled(UXCORE_ENABLED))
+  <style type="text/css">
+    body {
+      font-size: 10px;
+      background: #d4d4d4;
+    }
+    a, a:hover {
+      color: #7db701;
+    }
+    h1 {
+      font-size: 24;
+      color:#FFFFFF;
+    }
+    h1, h2, h3 {
+      margin-top: 0px;
+    }
+    .badge-important {
+      background-color: #F3514C;
+    }
+    #footer #footer-legal {
+      background: #fff;
+    }
+  </style>
+##endif
 
 {% endblock metahead %}
 
