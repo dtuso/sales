@@ -155,10 +155,13 @@ $(document).ready(function() {
   $('#show-more-section').on('click', '.clickable-show-more', displayMoreResultsArea);
   $('#domain-not-available-marquee-view').on('click', '.view-all-button', displayMoreResultsArea);
 
-
   $('#default-marquee-view').find('.see-details-disclaimer-link').attr('data-ci', got1Page.canOfferOls ? "95734" : "95736");
 
-
+  $("[data-ci-workaround]").click(function(a){
+    var $this=$(this);
+    FastballEvent_MouseClick(a,$this.attr("data-ci-workaround"),$(this)[0],"a");
+    fbiLibCheckQueue();
+  });
 
 });
 

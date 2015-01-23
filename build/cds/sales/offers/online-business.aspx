@@ -237,10 +237,13 @@ $(document).ready(function() {
   $('#show-more-section').on('click', '.clickable-show-more', displayMoreResultsArea);
   $('#domain-not-available-marquee-view').on('click', '.view-all-button', displayMoreResultsArea);
 
-
   $('#default-marquee-view').find('.see-details-disclaimer-link').attr('data-ci', got1Page.canOfferOls ? "95734" : "95736");
 
-
+  $("[data-ci-workaround]").click(function(a){
+    var $this=$(this);
+    FastballEvent_MouseClick(a,$this.attr("data-ci-workaround"),$(this)[0],"a");
+    fbiLibCheckQueue();
+  });
 
 });
 
@@ -2121,7 +2124,7 @@ h
           
         </style>
       </atlantis:webstash>
-      <div id="domainSection1What" style="" data-lazyload-source="null" data-lazyload-callback="triggerResize" class="features tile-section features-wrap  lazyload">
+      <div id="domainSection1What" style="" data-lazyload-source="" data-lazyload-callback="triggerResize" class="features tile-section features-wrap  lazyload">
         <div class="container">
           <div class="row">
             <div class="col-sm-6 col-sm-push-6">
@@ -2207,7 +2210,7 @@ h
           
         </style>
       </atlantis:webstash>
-      <div id="domainSection2Email" style="" data-lazyload-source="null" data-lazyload-callback="triggerResize" class="features tile-section features-wrap  lazyload">
+      <div id="domainSection2Email" style="" data-lazyload-source="" data-lazyload-callback="triggerResize" class="features tile-section features-wrap  lazyload">
         <div class="container">
           <div class="row">
             <div class="col-sm-6 col-sm-push-6">
@@ -2453,7 +2456,7 @@ h
           <div class="col-sm-6 col-sm-push-3 text-center disclaimer-mark"> 
             <div data-tokenize="[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T]" class="headline-primary">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price]@L] </div>
             <p data-tokenize="[@T[multipleproductprice:<list productidlist="464069|101|7524" period="monthly" promocode="0" />]@T]" class="disclaimer">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price-disclaimer]@L] 
-              <button data-ci="95736" class="btn-link see-wsb-disclaimer-link">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price-disclaimer-link]@L]</a></button> 
+              <button data-ci-workaround="95736" class="btn-link see-wsb-disclaimer-link">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price-disclaimer-link]@L]</a></button> 
               ##if(countrySiteAny(uk))
                
               <div class="vat-price-disclaimer">[@L[cds.sales/offers/online-business:32573-vat-excludes-price-percentage]@L]</div> 
@@ -2910,7 +2913,7 @@ h
                       <div class="row text-center disclaimer-mark"> 
                         <div data-tokenize="[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T]" class="headline-primary">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price]@L] </div>
                         <p data-tokenize="[@T[multipleproductprice:<list productidlist="464069|101|7524" period="monthly" promocode="0" />]@T]" class="disclaimer">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price-disclaimer]@L] 
-                          <button data-ci="95736" class="btn-link see-wsb-disclaimer-link">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price-disclaimer-link]@L]</a></button> 
+                          <button data-ci-workaround="95736" class="btn-link see-wsb-disclaimer-link">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price-disclaimer-link]@L]</a></button> 
                           ##if(countrySiteAny(uk))
                            
                           <div class="vat-price-disclaimer">[@L[cds.sales/offers/online-business:32573-vat-excludes-price-percentage]@L]</div> 
@@ -3014,7 +3017,7 @@ h
                       <div class="row text-center disclaimer-mark"> 
                         <div data-tokenize="[@T[multipleproductprice:<current productidlist="464069|101|40972" period="monthly" promocode="75315678" />]@T]" class="headline-primary">[@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price]@L] </div>
                         <p data-tokenize="[@T[multipleproductprice:<list productidlist="464069|101|40972" period="monthly" promocode="0" />]@T]" class="disclaimer">[@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price-disclaimer]@L] 
-                          <button data-ci="95735" class="btn-link see-ols-disclaimer-link">[@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price-disclaimer-link]@L]</button> 
+                          <button data-ci-workaround="95735" class="btn-link see-ols-disclaimer-link">[@L[cds.sales/offers/online-business:32573-godaddy-ols-text-price-disclaimer-link]@L]</button> 
                           ##if(countrySiteAny(uk))
                            
                           <div class="vat-price-disclaimer">[@L[cds.sales/offers/online-business:32573-vat-excludes-price-percentage]@L]</div> 
