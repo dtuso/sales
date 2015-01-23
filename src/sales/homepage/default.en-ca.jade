@@ -1,11 +1,11 @@
 extends ./_home-page.jade
 
 block hero  
-  include ./heros/got.jade
+  |[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="hero" rank="0" />]@P]
 block marquee-tile1
-  include ./tiles/marquee-com-tld-sale-tile.jade
+  |[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="marquee-tile" rank="1" />]@P]
 block marquee-tile2
-  include ./tiles/marquee-tile-gtld.jade
+  |[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="marquee-tile" rank="2" />]@P]
 block merch-tile1
   include ./tiles/gdpro-tile.jade
 block merch-tile2
