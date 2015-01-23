@@ -426,7 +426,7 @@ function isTldValid(domain) {
 
 function domainSearchFormSubmit(e) {
  
-
+debugger;
   var $this = $(e.target),
     $textInput = $this.closest('.offer-search-box').find('.search-form-input'),
     domain = $.trim($textInput.val()), 
@@ -1168,6 +1168,8 @@ h
     overflow: visible;
 }
 
+.Explorer8 .plan-flag {background-color:#fedc45}
+
 .pro-plans .pro-plan-wrap .plan-flag:before {
     content: '';
 }
@@ -1283,12 +1285,24 @@ h
 }
 
 .pro-plans .sf-tipper-target {
-  background-image: url(https://img1.wsimg-com.ide/fos/mike/img/hosting/img-tootip-.png);
+  background-image: url([@T[link:<imageroot />]@T]fos/mike/img/hosting/img-tootip-.png);
   width: 14px;
   height: 14px;
   display: inline-block;
   vertical-align: baseline;
   cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .four-columns {
+        font-size: 3.5rem !important;
+    }
+}
+
+@media (max-width: 991px) {
+    .plan-duration-div-four {
+        display: inline;
+    }
 }
     </style><!--[if lt IE 9]>
     <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
