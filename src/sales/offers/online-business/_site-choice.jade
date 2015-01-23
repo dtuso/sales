@@ -1,16 +1,16 @@
 atlantis:webstash(type="css")
   style.
 
-    #site-choice-compare h2,
-    #site-choice-compare h3,
-    #wsb-only-choice h2,
-    #wsb-only-choice h3  {
-      color: #232323!important;
+    #site-choice .disclaimer-mark .headline-primary,
+    #wsb-only-choice .disclaimer-mark .headline-primary{
+      text-transform: none;
     }
 
-    #site-choice-compare .disclaimer-mark div.headline-primary,
-    #wsb-only-choice .disclaimer-mark div.headline-primary {
-      color: #333;
+    #site-choice-compare div.disclaimer-mark div.headline-primary,
+    #wsb-only-choice div.disclaimer-mark div.headline-primary,
+    #site-choice-compare div.disclaimer-mark p.disclaimer,
+    #wsb-only-choice div.disclaimer-mark p.disclaimer {
+      color: #232323;
     }
 
     #site-choice-compare .button-margin,    
@@ -51,6 +51,7 @@ atlantis:webstash(type="css")
     #site-choice ul.check-bullets li h5,
     #wsb-only-choice ul.check-bullets li h5  {
       margin-bottom: 5px;
+      color: #232323;
     }
 
 
@@ -110,8 +111,8 @@ section#wsb-only-choice.bg-green-official-light
     .row.top-row.text-center
         +lazyImg('', '', "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_wsb_icon_large_feature.png")
     .row.text-center      
-        h2(class="text-center") [@L[cds.sales/offers/online-business:32573-godaddy-wsb]@L]
-        h3(class="text-center") [@L[cds.sales/offers/online-business:32573-godaddy-wsb-text]@L]
+        h2.h0.text-center [@L[cds.sales/offers/online-business:32573-godaddy-wsb]@L]
+        h3.headline-primary.text-center [@L[cds.sales/offers/online-business:32573-godaddy-wsb-text]@L]
     .row   
       .col-sm-6.col-sm-push-3.text-center.disclaimer-mark 
         div.headline-primary(data-tokenize!='[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T]') [@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price]@L] 
@@ -320,3 +321,4 @@ section#site-choice
 
 section
   include ../../../templates/wsb-templates.html
+
