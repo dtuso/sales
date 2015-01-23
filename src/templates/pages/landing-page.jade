@@ -14,10 +14,109 @@ include ../features-templates-mixin.jade
 include ../full-video-mixin.jade
 
 
-append pageStyles
+append head
   link(href!="[@T[link:<cssroot />]@T]fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css")
-  style
-    include ../styles/landing-page.css
+
+append pageStyles
+  style.
+    /* fix the greek font styling issue here */
+    ##if(countrySiteAny(gr))
+    * {
+      font-family: arial !important;
+    }
+    .close {
+      font-family: uxfont !important;
+    }
+    .uxicon {
+      font-family: uxfont !important;
+    }
+    ##endif
+
+    /* override UXCORE font settings for all LPs */
+    h2 {
+      margin-bottom: 40px;
+      margin-top: 0;
+      font-size: 4rem;
+      text-transform: uppercase;
+      font-family: 'Walsheim-Black';
+      font-weight: 300;
+      line-height: 1.1;
+      color: #333;
+    }
+    h3 {
+      font-size: 3rem;
+      text-transform: uppercase;
+      font-family: 'Walsheim-Black';
+      margin-top: 20px;
+      margin-bottom: 10px;
+      font-weight: 300;
+      line-height: 1.1;
+    }
+
+    /* default LP marquee styling */
+    .dash { 
+      letter-spacing: -10px; 
+      font-size: 1.5em; 
+      line-height: 0.6; 
+      vertical-align: -0.1em; 
+    }
+    .marquee-content-wrapper { 
+      padding: 40px; 
+      margin-left: 10px; 
+      margin-right: 10px; 
+      background-color: rgba(0,138,50,0.9); 
+      color: white; 
+    }
+    .marquee { 
+      padding-top: 40px; 
+      padding-bottom: 40px; 
+    }
+    .marquee.marquee-white {
+        color: #fff;
+    }
+    .marquee.marquee-white h1,
+    .marquee.marquee-white h2,
+    .marquee.marquee-white h3,
+    .marquee.marquee-white h4,
+    .marquee.marquee-white h5,
+    .marquee.marquee-white h6 {
+        color: #fff;
+    }
+    .marquee.marquee-white .dashed-underline {
+        border-bottom-color: #fff;
+    }
+    .marquee.marquee-white a:not(.btn) {
+        color: #fff;
+        text-decoration: underline;
+    }
+    .marquee.marquee-white a:not(.btn):hover {
+        text-decoration: none;
+    }
+    .marquee .jump-arrow-btn { margin-top:30px;}
+    .marquee h1 { 
+      font-size: 2rem;
+      text-transform: uppercase;
+      color: #ef6c0f;
+      font-family: 'Walsheim-Bold';
+      margin-bottom: 10px;
+      margin-top:0;
+    }
+    .marquee h2 { 
+      font-size: 4rem;
+      font-weight: 100;
+      line-height: 1.1;
+      margin-top:0;
+      margin-bottom: 20px;
+      font-family: 'Walsheim-Bold';
+    }
+    .sf-tipper-target {
+      background-image: url([@T[link:<imageroot />]@T]fos/mike/img/hosting/img-tootip-.png);
+      width: 14px;
+      height: 14px;
+      display: inline-block;
+      vertical-align: baseline;
+      cursor: pointer;
+    }
 
 block endOfPageScripts
 
@@ -80,6 +179,11 @@ block content
 
   //- top marquee
   block marquee
+    section#marquee
+      .container.marquee.marquee-white
+        .row
+          .col-sm-7.marquee-content-wrapper
+            block marqueeContent
 
   //- side by side plan comparisons go here
   block plans

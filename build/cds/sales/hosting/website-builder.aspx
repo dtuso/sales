@@ -73,28 +73,119 @@
         });
       }
       
+    </script><!--[if lt IE 9]>
+    <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
+    <link href="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy.min.html" id="respond-proxy" rel="respond-proxy">
+    <script src="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy-combo.min.js"></script><![endif]-->
+    <script type="text/javascript">
+      loadJsAsync("[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2", 'fastballLibrary');
+      loadJsAsync("[@T[link:<javascriptroot />]@T]fos/liveperson/js/liveperson_20150122.min.js", 'livepersonLibrary');
+      
     </script>
+    <link href="[@T[link:<cssroot />]@T]fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css">
+  </head>
+  <body ng-controller="" ng-cloak>
     <style>
       .svgfallback{display:none}
       .svgfallback:not(old){display:block}
+      ul.green-check li, li.green-check, ul.no-check li, li.no-check { padding: 0.4em 0 0.4em 35px; list-style: none; background-repeat: no-repeat; }
+      ul.green-check li, li.green-check { background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAcCAYAAACUJBTQAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wEUERcjd6fRgQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAACiElEQVRIx62WP0wTcRTHv+93tBIUaQwxKoOzGifj4mB+LT3AxUHD4uBgXDBR42BaiAFTEtufgw4OTsTg4oCJGuMf4I7r5KAmLkYJGgcFozYiRVBp6T0HrTalv7v+4ba79373yefee7/fEdbpiqWjdwHeB+AVQK8BfgNgWrjGO2r05YPjvcgHFjtcsTqrSXlB62RxG+CjmvBBatTCFfkt+cD3r5qUl0raexs2iTvRUSY+rgmbxMKiRiwAtK5smF+snEHvlbR2AoCoF5LoHkMu+O2KR8rZuGP+wdVr0bTa0ry8cfanxuKTktb24p2o1+JHy5yHBceKFnVB/tYCTNynSVlW0r6ZCk/+96pzLi4DfF4TPkksRkohTWBgYKqHCkb+EIAHAHUK13CSkXGuZJHoHoMHYEVJe2RNhS7d6wtk22a+AAiVPC8Qiz3Exkwy8pjLLIYAvqiBnCIW10stAEBk22YelgEAwGByp12R/xB3utoB4NyT/cWi6gBQ0l4DAAChpG0CWNKs62AqZGLp6POrB54hlo4OeA2/LkAA0D/VtcMVhTmferteHamkrW0iAQDJyMRHYuOwD0ToW56G/RYCAFLhifsAJeppaSWtweL8eEIGx3uhpDUEwKkNQaniLuALSXSPIe6YUNKOAJivwaLfy6LixJ9+uhuhhV2bc8GFbBWMa0raZ3xd9YeR2cPkPvJa3Pxr6yam1WWvT+W7d8XS0WGAL1RcyHQjFbZOVFU1/82w0wEgy58Hc20hYiPrZ+ELiTsmUuFJxNKdGQDtJRa3UmHrWNX9V4UJiI12pkLmX0u6gW2BfOvnaixqOk/ijimZXAegO0paR2qapBp/f4YBGg3mQm+rtQCA38MA8KA+FQdhAAAAAElFTkSuQmCC);  }
+      ul.green-check li:not(old), li.green-check:not(old) { background-image: url(data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjI4cHgiIHZpZXdCb3g9IjAgMCA1MCA1NSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pbllNaWQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBvbHlnb24gZmlsbD0iIzc3YzA0MyIgcG9pbnRzPSIzNywwIDQ5LDIgMjMsNTQgMCwyNSA3LDIyIDIyLDMwIi8+PC9zdmc+); }
+      ul li.no-check { background-image: none !important; }
       
     </style>
-    <link href="[@T[link:<cssroot />]@T]fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css">
     <style>
-
-##if(countrySiteAny(gr))
-* {
-  font-family: arial !important;
-}
-.close {
-  font-family: uxfont !important;
-}
-.uxicon {
-  font-family: uxfont !important;
-}
-##endif
-
-
+      /* fix the greek font styling issue here */
+      ##if(countrySiteAny(gr))
+      * {
+        font-family: arial !important;
+      }
+      .close {
+        font-family: uxfont !important;
+      }
+      .uxicon {
+        font-family: uxfont !important;
+      }
+      ##endif
+      
+      /* override UXCORE font settings for all LPs */
+      h2 {
+        margin-bottom: 40px;
+        margin-top: 0;
+        font-size: 4rem;
+        text-transform: uppercase;
+        font-family: 'Walsheim-Black';
+        font-weight: 300;
+        line-height: 1.1;
+        color: #333;
+      }
+      h3 {
+        font-size: 3rem;
+        text-transform: uppercase;
+        font-family: 'Walsheim-Black';
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-weight: 300;
+        line-height: 1.1;
+      }
+      
+      /* default LP marquee styling */
+      .dash { 
+        letter-spacing: -10px; 
+        font-size: 1.5em; 
+        line-height: 0.6; 
+        vertical-align: -0.1em; 
+      }
+      .marquee-content-wrapper { 
+        padding: 40px; 
+        margin-left: 10px; 
+        margin-right: 10px; 
+        background-color: rgba(0,138,50,0.9); 
+        color: white; 
+      }
+      .marquee { 
+        padding-top: 40px; 
+        padding-bottom: 40px; 
+      }
+      .marquee.marquee-white {
+          color: #fff;
+      }
+      .marquee.marquee-white h1,
+      .marquee.marquee-white h2,
+      .marquee.marquee-white h3,
+      .marquee.marquee-white h4,
+      .marquee.marquee-white h5,
+      .marquee.marquee-white h6 {
+          color: #fff;
+      }
+      .marquee.marquee-white .dashed-underline {
+          border-bottom-color: #fff;
+      }
+      .marquee.marquee-white a:not(.btn) {
+          color: #fff;
+          text-decoration: underline;
+      }
+      .marquee.marquee-white a:not(.btn):hover {
+          text-decoration: none;
+      }
+      .marquee .jump-arrow-btn { margin-top:30px;}
+      .marquee h1 { 
+        font-size: 2rem;
+        text-transform: uppercase;
+        color: #ef6c0f;
+        font-family: 'Walsheim-Bold';
+        margin-bottom: 10px;
+        margin-top:0;
+      }
+      .marquee h2 { 
+        font-size: 4rem;
+        font-weight: 100;
+        line-height: 1.1;
+        margin-top:0;
+        margin-bottom: 20px;
+        font-family: 'Walsheim-Bold';
+      }
+      
     </style>
     <style>
 .bg-black {
@@ -368,17 +459,7 @@ width: 50%;
     padding-top: 50px;
     padding-bottom: 50px;
   }
-    </style><!--[if lt IE 9]>
-    <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
-    <link href="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy.min.html" id="respond-proxy" rel="respond-proxy">
-    <script src="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy-combo.min.js"></script><![endif]-->
-    <script type="text/javascript">
-      loadJsAsync("[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2", 'fastballLibrary');
-      loadJsAsync("[@T[link:<javascriptroot />]@T]fos/liveperson/js/liveperson_20150122.min.js", 'livepersonLibrary');
-      
-    </script>
-  </head>
-  <body ng-controller="" ng-cloak>
+    </style>
     <!-- HEADERBEGIN--> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- HEADEREND-->
@@ -387,400 +468,6 @@ width: 50%;
       [@P[cdsDocument:<data app="sales" location="hosting/website-builder/marquees/marquee" /> ]@P]
     </section>
     <section id="plans">
-      <style>
-.plan-tile { 
-  margin-top: -145px; 
-  margin-bottom: 20px;
-}
-.sf-droplist-msg {
-  text-align: inherit;
-}
-.pro-plans {
-    margin-top: 0px;
-    padding-bottom: 80px;
-}
-
-.pro-plans .tld-col-title {
-    text-transform: uppercase;
-}
-
-.pro-plans .non-input-group {
-    margin-bottom: 10px;
-}
-
-.pro-plans .non-input-group .form-control {
-    border: none;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-    font-family: 'Walsheim-Black';
-    font-size: 30px;
-    font-size: 3rem;
-    padding: 4px 20px;
-    height: 44px;
-    line-height: 1;
-    color: #333333;
-}
-
-.pro-plans .sub-plan-text {
-    margin-top: 30px;
-    margin-bottom: -30px;
-}
-
-.pro-plans h2 {
-    margin-top: 0;
-}
-
-.pro-plans h2.domains-plans-mid-title {
-    margin: 40px 0;
-}
-
-@media only screen and (max-width: 768px) {
-    .pro-plans {
-        padding-top: 40px;
-        padding-bottom: 40px;
-    }
-}
-
-.pro-plans.plan-container {
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-.pro-plans.plan-container:before,
-.pro-plans.plan-container:after {
-    content: " ";
-  /* 1 */
-    display: table;
-  /* 2 */
-}
-
-.pro-plans.plan-container:after {
-    clear: both;
-}
-
-@media only screen and (max-width: 1535px) {
-    .pro-plans.plan-container {
-        max-width: 1170px;
-    }
-}
-
-@media only screen and (max-width: 1200px) {
-    .pro-plans.plan-container {
-        max-width: 970px;
-    }
-}
-
-@media only screen and (max-width: 992px) {
-    .pro-plans.plan-container {
-        max-width: 750px;
-    }
-}
-
-.pro-plans.plan-container .plan-col-15 {
-    width: 20%;
-    float: left;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-@media only screen and (max-width: 1535px) {
-    .pro-plans.plan-container .plan-col-15 {
-        width: 33.3333%;
-    }
-
-    .pro-plans.plan-container .plan-col-15:nth-child(4n) {
-        border: 0;
-        margin-left: 16.66666666667%;
-        clear: left;
-    }
-
-    .pro-plans.plan-container .plan-col-15:nth-child(1) {
-        border: 0;
-    }
-}
-
-@media only screen and (max-width: 992px) {
-    .pro-plans.plan-container .plan-col-15 {
-        width: 50%;
-    }
-
-    .pro-plans.plan-container .plan-col-15:nth-child(4n) {
-        clear: none;
-        margin-left: 0;
-    }
-
-    .pro-plans.plan-container .plan-col-15:nth-child(3) {
-        clear: left;
-        border-left: 0;
-    }
-
-    .pro-plans.plan-container .plan-col-15:nth-child(5) {
-        clear: left;
-        border-left: 0;
-        margin-left: 25%;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .pro-plans.plan-container .plan-col-15 {
-        width: 100%;
-        border: 0;
-        clear: none;
-        float: none;
-    }
-
-    .pro-plans.plan-container .plan-col-15:nth-child(5) {
-        margin-left: 0;
-    }
-}
-
-.pro-plans.plan-container .plan-col-2 {
-    width: 16.66666666667%;
-    float: left;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-@media only screen and (max-width: 1535px) {
-    .pro-plans.plan-container .plan-col-2 {
-        width: 33.3333%;
-    }
-
-    .pro-plans.plan-container .plan-col-2:nth-child(4n) {
-        border: 0;
-        clear: left;
-    }
-
-    .pro-plans.plan-container .plan-col-2:nth-child(1) {
-        border-left: 0;
-    }
-}
-
-@media only screen and (max-width: 992px) {
-    .pro-plans.plan-container .plan-col-2 {
-        width: 50%;
-    }
-
-    .pro-plans.plan-container .plan-col-2:nth-child(4n) {
-        clear: none;
-    }
-
-    .pro-plans.plan-container .plan-col-2:nth-child(3) {
-        clear: left;
-        border-left: 0;
-    }
-
-    .pro-plans.plan-container .plan-col-2:nth-child(5) {
-        clear: left;
-        border-left: 0;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .pro-plans.plan-container .plan-col-2 {
-        width: 100%;
-        border: 0;
-        clear: none;
-        float: none;
-    }
-}
-
-.pro-plans .pro-plan-wrap {
-    border-top: 10px solid #008a32;
-    padding: 40px;
-    background-color: #fff;
-    -webkit-box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
-    -moz-box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
-    box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
-}
-
-@media only screen and (max-width: 992px) {
-    .pro-plans .pro-plan-wrap {
-        padding: 40px 30px;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .pro-plans .pro-plan-wrap {
-        margin-bottom: 40px;
-    }
-}
-
-.pro-plans .pro-plan-wrap .features-row {
-    margin-bottom: 30px;
-}
-
-@media only screen and (max-width: 768px) {
-    .pro-plans .pro-plan-wrap .features-row {
-        margin-bottom: 0;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .pro-plans .pro-plan-wrap .features-row .col-sm-6 {
-        margin-bottom: 20px;
-    }
-}
-
-@media only screen and (max-width: 992px) {
-    .pro-plans .pro-plan-wrap .features-row .col-sm-6 img {
-        margin: 0 auto 20px;
-    }
-}
-
-.pro-plans .pro-plan-wrap .plan-flag {
-    color: #000;
-    font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;
-    font-size: 28px;
-    font-size: 2.8rem;
-    padding: 10px 20px;
-    text-transform: uppercase;
-    line-height: 1;
-    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE4LjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAxODEuOCA2NC4yIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxODEuOCA2NC4yIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHBvbHlnb24gZmlsbD0iI0ZFREM0NSIgcG9pbnRzPSIxNywwIDAsMjQuMiAzLDU2IDE2NC41LDY0LjIgMTgxLjgsNDMuOCAxODEsNC4zICIvPgo8L3N2Zz4=) no-repeat center center;
-    background-size: cover;
-    overflow: visible;
-}
-
-.Explorer8 .plan-flag {background-color:#fedc45}
-
-.pro-plans .pro-plan-wrap .plan-flag:before {
-    content: '';
-}
-
-.plan-tile .plan-flag {
-    position: absolute;
-    top: -20px;
-    right: 30px;
-    color: #fff;
-    display: inline-block;
-    padding: 0 15px;
-    line-height: 2.5;
-}
-
-.pro-plans .pro-plan-wrap h6 {
-    margin-top: 0;
-}
-
-.pro-plans .pro-plan-wrap h2 {
-    margin-bottom: 14px;
-}
-
-.pro-plans .pro-plan-wrap .plan-title {
-    font-size: 30px;
-    font-size: 3rem;
-    margin-top: 0;
-    font-family: 'Walsheim-Bold';
-    text-transform: uppercase;
-    word-wrap: break-word;
-    word-break: break-word;
-    white-space: -moz-pre-wrap;
-}
-
-.pro-plans .pro-plan-wrap .plan-subtitle {
-    color: #000 !important;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-
-.pro-plans .pro-plan-wrap .plan-text {
-    min-height: 44px;
-    margin-bottom: 5px;
-}
-
-.pro-plans .pro-plan-wrap .plan-tile-top {
-    padding: 0px;
-}
-
-.pro-plans .pro-plan-wrap .plan-disclaimers {
-    font-size: 14px;
-    font-size: 1.4rem;
-    margin-bottom: 5px;
-}
-
-.pro-plans .pro-plan-wrap .plan-price-wrap {
-    padding-bottom: 30px;
-}
-
-.pro-plans .pro-plan-wrap .plan-price-wrap .plan-price {
-    font-size: 45px;
-    font-size: 4.5rem;
-    font-weight: 700;
-    color: #ef6c0f;
-    font-family: 'Walsheim-Bold';
-}
-
-.pro-plans .pro-plan-wrap .plan-price-wrap .plan-duration {
-    font-size: 24px;
-    font-size: 2.4rem;
-    font-weight: 700;
-    color: #ef6c0f;
-}
-
-.pro-plans .pro-plan-wrap .btn {
-    margin-bottom: 20px;
-}
-
-.pro-plans .pro-plan-wrap .plan-item {
-    border-top: 0 none;
-    min-height: 0;
-    padding: 5px 0;
-    text-align: left;
-    font-size: 16px;
-    font-size: 1.6rem;
-    margin-bottom: 15px;
-}
-.pro-plans .pro-plan-wrap .check-item {
-    border-top: 0 none;
-    min-height: 0;
-    text-align: left;
-    font-size: 16px;
-    font-size: 1.6rem;
-    margin-bottom: 15px;
-}
-
-.pro-plans .include-check {
-    position: relative;
-    padding-left: 45px;
-    margin-top: 20px;
-}
-
-.pro-plans .include-check:before {
-    content: "";
-    background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
-    background-position: 0 -668px;
-    background-size: 205px auto;
-    width: 25px;
-    height: 27px;
-    padding-right: 5px;
-    position: absolute;
-    left: 0;
-    top: -6px;
-}
-
-.pro-plans .sf-tipper-target {
-  background-image: url([@T[link:<imageroot />]@T]fos/mike/img/hosting/img-tootip-.png);
-  width: 14px;
-  height: 14px;
-  display: inline-block;
-  vertical-align: baseline;
-  cursor: pointer;
-}
-
-@media (min-width: 768px) {
-    .four-columns {
-        font-size: 3.5rem !important;
-    }
-}
-
-@media (max-width: 991px) {
-    .plan-duration-div-four {
-        display: inline;
-    }
-}
-      </style>
       <atlantis:webstash type="css">
         <style>
 .plan-tile { 
@@ -1177,234 +864,236 @@ width: 50%;
 }
         </style>
       </atlantis:webstash>
-      <div class="pro-plans-wrap bg-gray-light">
+      <div class="pro-plans-wrap ">
         <div id="plans" data-icode="" class="container pro-plans">
-           
-           
-          ##if(countrySiteAny(uk))
-           
-          <div id="plan-A" class="col-sm-4 plan-tile plan-pro">
-            <div class="pro-plan-wrap">
-              <h2 class="plan-title">[@L[cds.sales/gd/hosting/website-builder:economy-title]@L]</h2>
-              <p class="plan-text">[@L[cds.sales/gd/hosting/website-builder:economy-description]@L]</p>
-              <div class="plan-price-wrap"><span class="plan-price text-warning">[@T[productprice:<current productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
-                ##if(productHasSavingsMoreThan(7524, 7524, 0))
-                 <br><strong>
-                   
-                  ##if(splitTestingSideIsActive(1349, A))
-                   
-                  [@L[cds.sales/_common:was]@L] 
-                  <strike>[@T[productprice:<list productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7524" secondaryproductid="7524" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span> 
-                  ##else
-                   
-                  [@L[cds.sales/_common:onsale-all-cap]@L] -<span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7524" secondaryproductid="7524" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span> 
+          <div class="row">
+             
+             
+            ##if(countrySiteAny(uk))
+             
+            <div id="plan-A" class="col-sm-4 plan-tile plan-pro">
+              <div class="pro-plan-wrap">
+                <h2 class="plan-title">[@L[cds.sales/gd/hosting/website-builder:economy-title]@L]</h2>
+                <p class="plan-text">[@L[cds.sales/gd/hosting/website-builder:economy-description]@L]</p>
+                <div class="plan-price-wrap"><span class="plan-price text-warning">[@T[productprice:<current productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
+                  ##if(productHasSavingsMoreThan(7524, 7524, 0))
+                   <br><strong>
+                     
+                    ##if(splitTestingSideIsActive(1349, A))
+                     
+                    [@L[cds.sales/_common:was]@L] 
+                    <strike>[@T[productprice:<list productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7524" secondaryproductid="7524" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span> 
+                    ##else
+                     
+                    [@L[cds.sales/_common:onsale-all-cap]@L] -<span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7524" secondaryproductid="7524" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span> 
+                    ##endif
+                     </strong> 
                   ##endif
-                   </strong> 
-                ##endif
-                 
-                 
-                ##if(splitTestingSideIsActive(1349, B))
-                 
-                <p class="h6">[@T[productprice:<list productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:month]@L] [@L[cds.sales/gd/hosting/website-builder:renewal-text]@L]</p> 
-                ##endif
-                 
-                 
-                ##if(countrySiteAny(uk))
-                 
-                <p class="h6">[@L[cds.sales/_common:vat-price-uk]@L] </p> 
-                ##endif
-                 
-              </div>
-              <button id="product-A" data-ci="87842" data-plan="wsb_personal_12month" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
-              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:plan-domain]@L] <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]"></span></div>
-              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:economy-themes]@L]</div>
-              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:economy-pages]@L]</div>
-              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:economy-diskspace]@L]</div>
-              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:economy-bandwidth]@L]</div>
-            </div>
-          </div> 
-          ##else
-           
-          <div id="plan-A" class="col-sm-4 plan-tile plan-pro">
-            <div class="pro-plan-wrap">
-              <h2 class="plan-title">[@L[cds.sales/gd/hosting/website-builder:personal-title]@L]</h2>
-              <p class="plan-text">[@L[cds.sales/gd/hosting/website-builder:personal-description]@L]</p>
-              <div class="plan-price-wrap"><span class="plan-price text-warning">[@T[productprice:<current productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
-                ##if(productHasSavingsMoreThan(7524, 7524, 0))
-                 <br><strong>
                    
-                  ##if(splitTestingSideIsActive(1349, A))
                    
-                  [@L[cds.sales/_common:was]@L] 
-                  <strike>[@T[productprice:<list productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7524" secondaryproductid="7524" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span> 
-                  ##else
+                  ##if(splitTestingSideIsActive(1349, B))
                    
-                  [@L[cds.sales/_common:onsale-all-cap]@L] -<span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7524" secondaryproductid="7524" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span> 
+                  <p class="h6">[@T[productprice:<list productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:month]@L] [@L[cds.sales/gd/hosting/website-builder:renewal-text]@L]</p> 
                   ##endif
-                   </strong> 
-                ##endif
-                 
-                 
-                ##if(splitTestingSideIsActive(1349, B))
-                 
-                <p class="h6">[@T[productprice:<list productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:month]@L] [@L[cds.sales/gd/hosting/website-builder:renewal-text]@L]</p> 
-                ##endif
-                 
-                 
-                ##if(countrySiteAny(uk))
-                 
-                <p class="h6">[@L[cds.sales/_common:vat-price-uk]@L] </p> 
-                ##endif
-                 
-              </div>
-              <button id="product-A" data-ci="87842" data-plan="wsb_personal_12month" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
-              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:plan-domain]@L] <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]"></span></div>
-              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:personal-themes]@L]</div>
-              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:economy-pages]@L]</div>
-              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:economy-diskspace]@L]</div>
-              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:economy-bandwidth]@L]</div>
-            </div>
-          </div> 
-          ##endif
-           
-          <div class="col-sm-4 plan-tile plan-pro">
-            <div class="pro-plan-wrap">
-              <div class="plan-flag">[@L[cds.sales/gd/hosting/website-builder:popular-tag]@L]</div>
-              <h2 class="plan-title">[@L[cds.sales/gd/hosting/website-builder:business-title]@L]</h2>
-              <p class="plan-text">[@L[cds.sales/gd/hosting/website-builder:business-description]@L]</p>
-              <div class="plan-price-wrap"><span class="plan-price text-warning">[@T[productprice:<current productid="7509" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
-                ##if(productHasSavingsMoreThan(7509, 7509, 0))
-                 <br><strong>
                    
-                  ##if(splitTestingSideIsActive(1349, A))
                    
-                  [@L[cds.sales/_common:was]@L] 
-                  <strike>[@T[productprice:<list productid="7509" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7509" secondaryproductid="7509" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span> 
-                  ##else
+                  ##if(countrySiteAny(uk))
                    
-                  [@L[cds.sales/_common:onsale-all-cap]@L] -<span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7509" secondaryproductid="7509" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span> 
+                  <p class="h6">[@L[cds.sales/_common:vat-price-uk]@L] </p> 
                   ##endif
-                   </strong> 
-                ##endif
-                 
-                 
-                ##if(splitTestingSideIsActive(1349, B))
-                 
-                <p class="h6">[@T[productprice:<list productid="7509" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:month]@L] [@L[cds.sales/gd/hosting/website-builder:renewal-text]@L]</p> 
-                ##endif
-                 
-                 
-                ##if(countrySiteAny(uk))
-                 
-                <p class="h6">[@L[cds.sales/_common:vat-price-uk]@L] </p> 
-                ##endif
-                 
+                   
+                </div>
+                <button id="product-A" data-ci="87842" data-plan="wsb_personal_12month" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:plan-domain]@L] <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]"></span></div>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:economy-themes]@L]</div>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:economy-pages]@L]</div>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:economy-diskspace]@L]</div>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:economy-bandwidth]@L]</div>
               </div>
-              <button id="product-B" data-ci="87843" data-plan="wsb_business_12month" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
-              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:plan-domain]@L] <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]"></span></div>
-              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:business-themes]@L]</div>
-              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:business-pages]@L]</div>
-              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:business-diskspace]@L]</div>
-              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:business-bandwidth]@L]</div>
-              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:rb_5_business_emails]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-content='[@L[cds.sales/gd/hosting/website-builder:rb_5_business_emails_tooltip]@L]'></span></div>
-              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:rb_mobile_site]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-content='[@L[cds.sales/gd/hosting/website-builder:rb_mobile_site_tooltip]@L]'></span></div>
-            </div>
-          </div>
-          <div class="col-sm-4 plan-tile plan-pro">
-            <div class="pro-plan-wrap">
-              <div class="plan-flag">[@L[cds.sales/gd/hosting/website-builder:wsb-plus-seo]@L]</div>
-              <h2 class="plan-title">[@L[cds.sales/gd/hosting/website-builder:unlimited-plan-title]@L]</h2>
-              <p class="plan-text">[@L[cds.sales/gd/hosting/website-builder:unlimited-description]@L]</p>
-              <div class="plan-price-wrap"><span class="plan-price text-warning">[@T[productprice:<current productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
-                ##if(productHasSavingsMoreThan(7514, 7514, 0))
-                 <br><strong>
-                   
-                  ##if(splitTestingSideIsActive(1349, A))
-                   
-                  [@L[cds.sales/_common:was]@L] 
-                  <strike>[@T[productprice:<list productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7514" secondaryproductid="7514" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span> 
-                  ##else
-                   
-                  [@L[cds.sales/_common:onsale-all-cap]@L] -<span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7514" secondaryproductid="7514" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span> 
+            </div> 
+            ##else
+             
+            <div id="plan-A" class="col-sm-4 plan-tile plan-pro">
+              <div class="pro-plan-wrap">
+                <h2 class="plan-title">[@L[cds.sales/gd/hosting/website-builder:personal-title]@L]</h2>
+                <p class="plan-text">[@L[cds.sales/gd/hosting/website-builder:personal-description]@L]</p>
+                <div class="plan-price-wrap"><span class="plan-price text-warning">[@T[productprice:<current productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
+                  ##if(productHasSavingsMoreThan(7524, 7524, 0))
+                   <br><strong>
+                     
+                    ##if(splitTestingSideIsActive(1349, A))
+                     
+                    [@L[cds.sales/_common:was]@L] 
+                    <strike>[@T[productprice:<list productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7524" secondaryproductid="7524" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span> 
+                    ##else
+                     
+                    [@L[cds.sales/_common:onsale-all-cap]@L] -<span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7524" secondaryproductid="7524" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span> 
+                    ##endif
+                     </strong> 
                   ##endif
-                   </strong> 
-                ##endif
-                 
-                 
-                ##if(splitTestingSideIsActive(1349, B))
-                 
-                <p class="h6">[@T[productprice:<list productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:month]@L] [@L[cds.sales/gd/hosting/website-builder:renewal-text]@L]</p> 
-                ##endif
-                 
-                 
-                ##if(countrySiteAny(uk))
-                 
-                <p class="h6">[@L[cds.sales/_common:vat-price-uk]@L] </p> 
-                ##endif
-                 
+                   
+                   
+                  ##if(splitTestingSideIsActive(1349, B))
+                   
+                  <p class="h6">[@T[productprice:<list productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:month]@L] [@L[cds.sales/gd/hosting/website-builder:renewal-text]@L]</p> 
+                  ##endif
+                   
+                   
+                  ##if(countrySiteAny(uk))
+                   
+                  <p class="h6">[@L[cds.sales/_common:vat-price-uk]@L] </p> 
+                  ##endif
+                   
+                </div>
+                <button id="product-A" data-ci="87842" data-plan="wsb_personal_12month" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:plan-domain]@L] <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]"></span></div>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:personal-themes]@L]</div>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:economy-pages]@L]</div>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:economy-diskspace]@L]</div>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:economy-bandwidth]@L]</div>
               </div>
-              <button id="product-C" data-ci="87844" data-plan="wsb_businessplus_12month" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
-              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:plan-domain]@L] <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]"></span></div>
-              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:unlimited-themes]@L]</div>
-              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:unlimited-pages]@L]</div>
-              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:unlimited-diskspace]@L]</div>
-              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:unlimited-bandwidth]@L]</div>
-              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:rb_10_business_emails]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-content='[@L[cds.sales/gd/hosting/website-builder:rb_5_business_emails_tooltip]@L]'></span></div>
-              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:rb_mobile_site]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-content='[@L[cds.sales/gd/hosting/website-builder:rb_mobile_site_tooltip]@L]'></span></div>
-              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:rb_seo]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-content='[@L[cds.sales/gd/hosting/website-builder:rb_seo_tooltip]@L]'></span></div>
-              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:rb_oneclick]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-content='[@L[cds.sales/gd/hosting/website-builder:rb_oneclick_tooltip]@L]'></span></div>
-              <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:rb_ssl]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-width='300' data-content='[@L[cds.sales/gd/hosting/website-builder:rb_ssl_tooltip]@L]'></span></div>
+            </div> 
+            ##endif
+             
+            <div class="col-sm-4 plan-tile plan-pro">
+              <div class="pro-plan-wrap">
+                <div class="plan-flag">[@L[cds.sales/gd/hosting/website-builder:popular-tag]@L]</div>
+                <h2 class="plan-title">[@L[cds.sales/gd/hosting/website-builder:business-title]@L]</h2>
+                <p class="plan-text">[@L[cds.sales/gd/hosting/website-builder:business-description]@L]</p>
+                <div class="plan-price-wrap"><span class="plan-price text-warning">[@T[productprice:<current productid="7509" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
+                  ##if(productHasSavingsMoreThan(7509, 7509, 0))
+                   <br><strong>
+                     
+                    ##if(splitTestingSideIsActive(1349, A))
+                     
+                    [@L[cds.sales/_common:was]@L] 
+                    <strike>[@T[productprice:<list productid="7509" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7509" secondaryproductid="7509" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span> 
+                    ##else
+                     
+                    [@L[cds.sales/_common:onsale-all-cap]@L] -<span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7509" secondaryproductid="7509" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span> 
+                    ##endif
+                     </strong> 
+                  ##endif
+                   
+                   
+                  ##if(splitTestingSideIsActive(1349, B))
+                   
+                  <p class="h6">[@T[productprice:<list productid="7509" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:month]@L] [@L[cds.sales/gd/hosting/website-builder:renewal-text]@L]</p> 
+                  ##endif
+                   
+                   
+                  ##if(countrySiteAny(uk))
+                   
+                  <p class="h6">[@L[cds.sales/_common:vat-price-uk]@L] </p> 
+                  ##endif
+                   
+                </div>
+                <button id="product-B" data-ci="87843" data-plan="wsb_business_12month" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:plan-domain]@L] <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]"></span></div>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:business-themes]@L]</div>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:business-pages]@L]</div>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:business-diskspace]@L]</div>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:business-bandwidth]@L]</div>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:rb_5_business_emails]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-content='[@L[cds.sales/gd/hosting/website-builder:rb_5_business_emails_tooltip]@L]'></span></div>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:rb_mobile_site]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-content='[@L[cds.sales/gd/hosting/website-builder:rb_mobile_site_tooltip]@L]'></span></div>
+              </div>
             </div>
-          </div>
-          <atlantis:webstash type="js">
-            <script type="text/javascript">
-              var itemTrackingCode = "slp_wst_3";
-              var ci = "0"
-              
-              $(".btn-plan").click(function() {
-              
-                if ("false" != "false"){
-                  var productTile = $(this).data("ul");
-              
-                  var productPackage = $("ul#"+productTile+" li").filter('[data-selected="true"]').attr('data-plan');
-                }
-                else{
-                  var productPackage = $(this).data("plan");
-                  if($(this).data("ci")!== undefined)
-                    ci = $(this).data("ci");
-                }
-              
-                var url = "[@T[link:<external linktype="SALESPRODUCTSURL" path="/v1/pl/1/cart/packages" />]@T]";
-              
-                $.ajax({
-                  type: "POST",
-                  url: url,
-                  contentType: "application/json",
-                  data: "requestData=" + JSON.stringify({
-                    pkgid: productPackage,
-                    qty: 1,
-                    itc: itemTrackingCode
-                  }),
-                  dataType: "jsonp"
-                })
-                .done(function(data) {
-                  var redirectUrl = "[@T[link:<relative path='~/hosting/website-builder-config.aspx'><param name='ci' value='{0}' /></relative>]@T]";
-                  redirectUrl = redirectUrl.replace('%7b0%7d',ci);
-                  if (redirectUrl.indexOf("?") === -1) {
-                    redirectUrl += "?plan=";
-                  } else {
-                    redirectUrl += "&plan=";
+            <div class="col-sm-4 plan-tile plan-pro">
+              <div class="pro-plan-wrap">
+                <div class="plan-flag">[@L[cds.sales/gd/hosting/website-builder:wsb-plus-seo]@L]</div>
+                <h2 class="plan-title">[@L[cds.sales/gd/hosting/website-builder:unlimited-plan-title]@L]</h2>
+                <p class="plan-text">[@L[cds.sales/gd/hosting/website-builder:unlimited-description]@L]</p>
+                <div class="plan-price-wrap"><span class="plan-price text-warning">[@T[productprice:<current productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
+                  ##if(productHasSavingsMoreThan(7514, 7514, 0))
+                   <br><strong>
+                     
+                    ##if(splitTestingSideIsActive(1349, A))
+                     
+                    [@L[cds.sales/_common:was]@L] 
+                    <strike>[@T[productprice:<list productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7514" secondaryproductid="7514" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span> 
+                    ##else
+                     
+                    [@L[cds.sales/_common:onsale-all-cap]@L] -<span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7514" secondaryproductid="7514" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span> 
+                    ##endif
+                     </strong> 
+                  ##endif
+                   
+                   
+                  ##if(splitTestingSideIsActive(1349, B))
+                   
+                  <p class="h6">[@T[productprice:<list productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:month]@L] [@L[cds.sales/gd/hosting/website-builder:renewal-text]@L]</p> 
+                  ##endif
+                   
+                   
+                  ##if(countrySiteAny(uk))
+                   
+                  <p class="h6">[@L[cds.sales/_common:vat-price-uk]@L] </p> 
+                  ##endif
+                   
+                </div>
+                <button id="product-C" data-ci="87844" data-plan="wsb_businessplus_12month" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:plan-domain]@L] <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]"></span></div>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:unlimited-themes]@L]</div>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:unlimited-pages]@L]</div>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:unlimited-diskspace]@L]</div>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:unlimited-bandwidth]@L]</div>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:rb_10_business_emails]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-content='[@L[cds.sales/gd/hosting/website-builder:rb_5_business_emails_tooltip]@L]'></span></div>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:rb_mobile_site]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-content='[@L[cds.sales/gd/hosting/website-builder:rb_mobile_site_tooltip]@L]'></span></div>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:rb_seo]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-content='[@L[cds.sales/gd/hosting/website-builder:rb_seo_tooltip]@L]'></span></div>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:rb_oneclick]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-content='[@L[cds.sales/gd/hosting/website-builder:rb_oneclick_tooltip]@L]'></span></div>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:rb_ssl]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-width='300' data-content='[@L[cds.sales/gd/hosting/website-builder:rb_ssl_tooltip]@L]'></span></div>
+              </div>
+            </div>
+            <atlantis:webstash type="js">
+              <script type="text/javascript">
+                var itemTrackingCode = "slp_wst_3";
+                var ci = "0"
+                
+                $(".btn-plan").click(function() {
+                
+                  if ("false" != "false"){
+                    var productTile = $(this).data("ul");
+                
+                    var productPackage = $("ul#"+productTile+" li").filter('[data-selected="true"]').attr('data-plan');
                   }
-                  redirectUrl += productPackage;
-              
-                  window.location.href = redirectUrl;
-                })
-                .fail(function(xhr, status, error) {
-                  alert('Failed to add to the cart. Please try again later.')
+                  else{
+                    var productPackage = $(this).data("plan");
+                    if($(this).data("ci")!== undefined)
+                      ci = $(this).data("ci");
+                  }
+                
+                  var url = "[@T[link:<external linktype="SALESPRODUCTSURL" path="/v1/pl/1/cart/packages" />]@T]";
+                
+                  $.ajax({
+                    type: "POST",
+                    url: url,
+                    contentType: "application/json",
+                    data: "requestData=" + JSON.stringify({
+                      pkgid: productPackage,
+                      qty: 1,
+                      itc: itemTrackingCode
+                    }),
+                    dataType: "jsonp"
+                  })
+                  .done(function(data) {
+                    var redirectUrl = "[@T[link:<relative path='~/hosting/website-builder-config.aspx'><param name='ci' value='{0}' /></relative>]@T]";
+                    redirectUrl = redirectUrl.replace('%7b0%7d',ci);
+                    if (redirectUrl.indexOf("?") === -1) {
+                      redirectUrl += "?plan=";
+                    } else {
+                      redirectUrl += "&plan=";
+                    }
+                    redirectUrl += productPackage;
+                
+                    window.location.href = redirectUrl;
+                  })
+                  .fail(function(xhr, status, error) {
+                    alert('Failed to add to the cart. Please try again later.')
+                  });
                 });
-              });
-            </script>
-          </atlantis:webstash>
+              </script>
+            </atlantis:webstash>
+          </div>
         </div>
       </div>
     </section>
