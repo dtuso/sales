@@ -422,7 +422,7 @@ width: 50%;
     <script src="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy-combo.min.js"></script><![endif]-->
     <script type="text/javascript">
       delayLoader.addScript('[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2')
-      delayLoader.addScript('[@T[link:<javascriptroot />]@T]/fos/liveperson/js/liveperson_20150115.min.js')
+      delayLoader.addScript('[@T[link:<javascriptroot />]@T]fos/liveperson/js/liveperson_20150122.min.js')
       
     </script>
     <!-- Google Tag Manager-->
@@ -819,12 +819,24 @@ width: 50%;
 }
 
 .pro-plans .sf-tipper-target {
-  background-image: url(https://img1.wsimg-com.ide/fos/mike/img/hosting/img-tootip-.png);
+  background-image: url([@T[link:<imageroot />]@T]fos/mike/img/hosting/img-tootip-.png);
   width: 14px;
   height: 14px;
   display: inline-block;
   vertical-align: baseline;
   cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .four-columns {
+        font-size: 3.5rem !important;
+    }
+}
+
+@media (max-width: 991px) {
+    .plan-duration-div-four {
+        display: inline;
+    }
 }
       </style>
       <atlantis:webstash type="css">
@@ -1200,12 +1212,24 @@ width: 50%;
 }
 
 .pro-plans .sf-tipper-target {
-  background-image: url(https://img1.wsimg-com.ide/fos/mike/img/hosting/img-tootip-.png);
+  background-image: url([@T[link:<imageroot />]@T]fos/mike/img/hosting/img-tootip-.png);
   width: 14px;
   height: 14px;
   display: inline-block;
   vertical-align: baseline;
   cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .four-columns {
+        font-size: 3.5rem !important;
+    }
+}
+
+@media (max-width: 991px) {
+    .plan-duration-div-four {
+        display: inline;
+    }
 }
         </style>
       </atlantis:webstash>
@@ -1247,7 +1271,7 @@ width: 50%;
                 ##endif
                  
               </div>
-              <button id="product-A" data-tcode="undefined" data-plan="wsb_personal_12month" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+              <button id="product-A" data-ci="87842" data-plan="wsb_personal_12month" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
               <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:plan-domain]@L] <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]"></span></div>
               <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:economy-themes]@L]</div>
               <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:economy-pages]@L]</div>
@@ -1289,7 +1313,7 @@ width: 50%;
                 ##endif
                  
               </div>
-              <button id="product-A" data-tcode="undefined" data-plan="wsb_personal_12month" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+              <button id="product-A" data-ci="87842" data-plan="wsb_personal_12month" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
               <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:plan-domain]@L] <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]"></span></div>
               <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:personal-themes]@L]</div>
               <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:economy-pages]@L]</div>
@@ -1332,7 +1356,7 @@ width: 50%;
                 ##endif
                  
               </div>
-              <button id="product-B" data-tcode="undefined" data-plan="wsb_business_12month" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+              <button id="product-B" data-ci="87843" data-plan="wsb_business_12month" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
               <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:plan-domain]@L] <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]"></span></div>
               <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:business-themes]@L]</div>
               <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:business-pages]@L]</div>
@@ -1375,7 +1399,7 @@ width: 50%;
                 ##endif
                  
               </div>
-              <button id="product-C" data-tcode="undefined" data-plan="wsb_businessplus_12month" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+              <button id="product-C" data-ci="87844" data-plan="wsb_businessplus_12month" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
               <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:plan-domain]@L] <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]"></span></div>
               <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:unlimited-themes]@L]</div>
               <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:unlimited-pages]@L]</div>
@@ -1391,6 +1415,7 @@ width: 50%;
           <atlantis:webstash type="js">
             <script type="text/javascript">
               var itemTrackingCode = "slp_wst_3";
+              var ci = "0"
               
               $(".btn-plan").click(function() {
               
@@ -1401,6 +1426,8 @@ width: 50%;
                 }
                 else{
                   var productPackage = $(this).data("plan");
+                  if($(this).data("ci")!== undefined)
+                    ci = $(this).data("ci");
                 }
               
                 var url = "[@T[link:<external linktype="SALESPRODUCTSURL" path="/v1/pl/1/cart/packages" />]@T]";
@@ -1417,7 +1444,8 @@ width: 50%;
                   dataType: "jsonp"
                 })
                 .done(function(data) {
-                  var redirectUrl = "[@T[link:<relative path='~/hosting/website-builder-config.aspx' />]@T]";
+                  var redirectUrl = "[@T[link:<relative path='~/hosting/website-builder-config.aspx'><param name='ci' value='{0}' /></relative>]@T]";
+                  redirectUrl = redirectUrl.replace('%7b0%7d',ci);
                   if (redirectUrl.indexOf("?") === -1) {
                     redirectUrl += "?plan=";
                   } else {
@@ -1603,9 +1631,9 @@ width: 50%;
     </div>
     <script>
       $(function(){ 
-        var midPageNavItemTemplate = _.template('<li><a href="#<%= url %>" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.nav&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" style="margin-top: 0px;"><span><%= text %></span></a></li>');
+        var midPageNavItemTemplate = _.template('<li><a href="#<%= url %>" data-ci="<%= ci %>"  data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.nav&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" style="margin-top: 0px;"><span><%= text %></span></a></li>');
         $('[data-mid-nav-title]').each(function(index) {
-          var itemData = { text: $(this).data('mid-nav-title'), url: this.id };
+          var itemData = { text: $(this).data('mid-nav-title'), url: this.id , ci: $(this).data('cicode') };
           var itemElement = midPageNavItemTemplate(itemData);
           $('#midPageNav ul.nav').append(itemElement);
         });
@@ -1656,6 +1684,13 @@ width: 50%;
                   });
               });
           }
+          if (typeof FastballEvent_MouseClick === 'function' && typeof fbiLibCheckQueue === 'function') {
+            $('[data-ci]').click(function(e){
+                $this = $(this);
+                FastballEvent_MouseClick(e,$this.attr('data-ci'),$(this)[0],'a');
+                fbiLibCheckQueue();
+            });
+          }
         });
         $('.dropdown-menu').on("click",function(){
           $('#midPageNav .dropdown-toggle').dropdown('toggle');
@@ -1704,7 +1739,7 @@ width: 50%;
       
       $("#midPageNav").on("click", "a", scroll_if_anchor);
     </script>
-    <section id="features" data-mid-nav-title="[@L[cds.sales/gd/hosting/website-builder:sb_nav_1]@L]">
+    <section id="features" data-mid-nav-title="[@L[cds.sales/gd/hosting/website-builder:sb_nav_1]@L]" data-ciCode="87758">
       <div class="templates-chart bg-gray-light">
         <div class="container templates-container">
           <div class="header-section text-center"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-tools.png" style="padding-bottom:25px"> 
@@ -1717,7 +1752,7 @@ width: 50%;
             ##endif
              
             <div class="headline-primary">[@L[cds.sales/gd/hosting/website-builder:sb_templates_text]@L]</div>
-            <button data-toggle="modal" data-target="#g-modal" class="btn btn-default-dark view-all btn-md">[@L[cds.sales/gd/hosting/website-builder:sb_view_templates]@L]</button>
+            <button data-toggle="modal" data-target="#g-modal" data-ci="84003" class="btn btn-default-dark view-all btn-md">[@L[cds.sales/gd/hosting/website-builder:sb_view_templates]@L]</button>
           </div>
           <div class="templates-image-container">
              
@@ -1725,49 +1760,49 @@ width: 50%;
             ##if(countrySiteAny(ca))
              
             <div class="row">
-              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="https://nebula.wsimg.com/969c55de87f607d9e7c01079c3923192?AccessKeyId=531592D248B589D87A56" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
+              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="https://nebula.wsimg.com/969c55de87f607d9e7c01079c3923192?AccessKeyId=531592D248B589D87A56" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
               </div>
-              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="https://nebula.wsimg.com/d7a3d52de03500dc212cbdd188ee4c76?AccessKeyId=531592D248B589D87A56" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
+              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="https://nebula.wsimg.com/d7a3d52de03500dc212cbdd188ee4c76?AccessKeyId=531592D248B589D87A56" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
               </div>
-              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="https://nebula.wsimg.com/1c3f93e0921f7eb63f8557dbf04dcc5d?AccessKeyId=531592D248B589D87A56" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
+              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="https://nebula.wsimg.com/1c3f93e0921f7eb63f8557dbf04dcc5d?AccessKeyId=531592D248B589D87A56" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
               </div>
             </div> 
             ##elseif(countrySiteAny(uk))
              
             <div class="row">
-              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="https://nebula.wsimg.com/6fa416babb52bf03888cd67d49d7ddb0?AccessKeyId=531592D248B589D87A56" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
+              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="https://nebula.wsimg.com/6fa416babb52bf03888cd67d49d7ddb0?AccessKeyId=531592D248B589D87A56" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
               </div>
-              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="https://nebula.wsimg.com/d7a3d52de03500dc212cbdd188ee4c76?AccessKeyId=531592D248B589D87A56" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
+              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="https://nebula.wsimg.com/d7a3d52de03500dc212cbdd188ee4c76?AccessKeyId=531592D248B589D87A56" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
               </div>
-              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="https://nebula.wsimg.com/4462d6ddb0a13e36e63847af8e922198?AccessKeyId=531592D248B589D87A56" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
+              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="https://nebula.wsimg.com/4462d6ddb0a13e36e63847af8e922198?AccessKeyId=531592D248B589D87A56" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
               </div>
             </div> 
             ##else
              
             <div class="row">
-              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/auto.jpg" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
+              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/auto.jpg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
               </div>
-              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/photography.jpg" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
+              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/photography.jpg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
               </div>
-              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/education.jpg" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
+              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/education.jpg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
               </div>
             </div> 
             ##endif
              
             <div class="row">
-              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/ecommerce.jpg" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
+              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/ecommerce.jpg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
               </div>
-              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/travel.jpg" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
+              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/travel.jpg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
               </div>
-              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/non-profit.jpg" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
+              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/non-profit.jpg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
               </div>
             </div>
             <div class="row">
-              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/business.jpg" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
+              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/business.jpg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
               </div>
-              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/health-beauty.jpg" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
+              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/health-beauty.jpg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
               </div>
-              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/creative-design.jpg" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
+              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/creative-design.jpg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
               </div>
             </div>
           </div>
@@ -4078,10 +4113,10 @@ text-transform: uppercase;
           });
         </script>
       </atlantis:webstash>
-      <div style="" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-video.jpg" data-icode="code" data-tile="wsbVideo" data-youtube-id="-HtVJyxSQmw" class="lazyload video-marquee video-marquee-white full-video">
+      <div style="" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-video.jpg" data-icode="87762" data-tile="wsbVideo" data-youtube-id="-HtVJyxSQmw" class="lazyload video-marquee video-marquee-white full-video">
         <div class="container relative-position video-info">
           <div class="row">
-            <div class="col-sm-10 col-sm-offset-1 col-xs-12 video-marquee-all-centered"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rb-play-button.png" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload play-button"/>
+            <div class="col-sm-10 col-sm-offset-1 col-xs-12 video-marquee-all-centered"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rb-play-button.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload play-button"/>
               <h3 class="h1">[@L[cds.sales/gd/hosting/website-builder:testimony-title]@L]</h3><span class="cta">[@L[cds.sales/gd/hosting/website-builder:testimony-description]@L]</span>
             </div>
           </div>
@@ -5280,7 +5315,7 @@ margin-top: 15px;
 margin-bottom: 20px;
 }
                     </style>
-                    <div style="background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rebrand-features-bg-ph_v2.png);" data-lazy-load="" class="features-two-up   ">
+                    <div style="" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rebrand-features-bg-ph_v2.png" class="features-two-up lazyload   ">
                       <div class="container">
                         <div class="row">
                           <div class="col-sm-12">
@@ -5289,7 +5324,7 @@ margin-bottom: 20px;
                                     <div class="row feature-row-height">
                                       <div class="col-sm-7">
                                         <div class="row feature-row">
-                                          <div class="col-sm-5"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-getAwebsite2.png" data-lazy-load="" alt="" class="feature-image img-responsive">
+                                          <div class="col-sm-5"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-getAwebsite2.png" alt="" class="lazyload feature-image img-responsive">
                                           </div>
                                           <div class="col-sm-7">
                                             <div class="feature-title">[@L[cds.sales/gd/hosting/website-builder:oneclick-header]@L]</div>
@@ -5301,7 +5336,7 @@ margin-bottom: 20px;
                                     <div class="row feature-row-height">
                                       <div class="col-sm-7">
                                         <div class="row feature-row">
-                                          <div class="col-sm-5"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-gettingGoogle2.png" data-lazy-load="" alt="" class="feature-image img-responsive">
+                                          <div class="col-sm-5"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-gettingGoogle2.png" alt="" class="lazyload feature-image img-responsive">
                                           </div>
                                           <div class="col-sm-7">
                                             <div class="feature-title">[@L[cds.sales/gd/hosting/website-builder:seofs-header]@L]</div>
@@ -5332,7 +5367,7 @@ margin-bottom: 20px;
     </section> 
     ##if(activeLanguageAny([en-us]))
      
-    <section id="reviews" data-mid-nav-title="[@L[cds.sales/gd/hosting/website-builder:sb_nav_2]@L]">
+    <section id="reviews" data-mid-nav-title="[@L[cds.sales/gd/hosting/website-builder:sb_nav_2]@L]" data-ciCode="87151">
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
@@ -5346,7 +5381,7 @@ margin-bottom: 20px;
     </section> 
     ##endif
      
-    <section id="faq" data-mid-nav-title="[@L[cds.sales/gd/hosting/website-builder:sb_nav_3]@L]">
+    <section id="faq" data-mid-nav-title="[@L[cds.sales/gd/hosting/website-builder:sb_nav_3]@L]" data-ciCode="87759">
       <style>.accordion-group {
   border-top: 2px solid #e8e8e8;
   border-bottom: 2px solid #e8e8e8;
@@ -5561,7 +5596,6 @@ margin-bottom: 20px;
           }
           .features.features-wrap h2,
           .features.features-slim h2 {
-            font-family: 'Walsheim-Black';
             margin: 0 0 20px;
             color: #333;
             font-size: 40px;
@@ -5570,7 +5604,7 @@ margin-bottom: 20px;
             color: #fff !important;
           }
           .features .features-subtitle {
-            font-family: 'Walsheim-Bold';
+            text-transform: none; /* override headline-primary */
             margin-top: 20px;
           }
           .features .features-text {
@@ -5592,8 +5626,8 @@ margin-bottom: 20px;
             </div>
             <div class="col-sm-6">
               <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
-                <h2>[@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp]@L]</h2>
-                <h4 class="features-subtitle">[@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp_1]@L]</h4>
+                <h2 class="h0">[@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp]@L]</h2>
+                <h4 class="headline-primary features-subtitle">[@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp_1]@L]</h4>
                 <div class="features-text">[@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp_2]@L]</div><a href="[@T[link:&lt;relative path=&quot;~/hosting/wordpress-hosting.aspx&quot; /&gt;]@T]" class="btn btn-default-dark">[@L[cds.sales/gd/hosting/website-builder:learn-more]@L]</a>
               </div>
             </div>
@@ -5719,21 +5753,20 @@ margin-bottom: 20px;
 .two-up-wrap-compare h2 {
   font-size: 4rem;
   text-transform: uppercase;
-  font-family: 'Walsheim-Black';
   margin-top: 20px;
   margin-bottom: 10px;
   font-weight: 300;
   line-height: 1.1;
-  color: #333;
+  color: #232323;
 }
-.two-up-wrap-compare h3 {
+.two-up-wrap-compare h3.headline-primary {
   font-size: 3rem;
-  text-transform: uppercase;
-  font-family: 'Walsheim-Black';
+  text-transform: none;
   margin-top: 20px;
   margin-bottom: 10px;
   font-weight: 300;
   line-height: 1.1;
+  color: #232323;
 }
 .two-up-wrap-compare .white-text {
   color: #fff;
@@ -5837,13 +5870,12 @@ margin-bottom: 20px;
   }
 }
 
-.two-up-title {
+.two-up-title.h0 {
   margin: 40px 0;
   line-height: 1;
   font-size: 4rem;
-  text-transform: uppercase;
-  font-family: 'Walsheim-Black';
   font-weight: 300;
+  color: #232323;
 }
 .two-up-speech-shape {
   font-family: 'Walsheim-Bold';
@@ -5920,7 +5952,7 @@ margin-bottom: 20px;
           <div class="container">
             <div class="row">
               <div class="col-sm-12">
-                <h2 class="text-center two-up-title">[@L[cds.sales/gd/hosting/website-builder:sb_xsell_title]@L]</h2>
+                <h2 class="h0 text-center two-up-title">[@L[cds.sales/gd/hosting/website-builder:sb_xsell_title]@L]</h2>
               </div>
             </div>
           </div>
@@ -5933,10 +5965,10 @@ margin-bottom: 20px;
                   <div class="two-up-speech-shape two-up-speech-shape-orange">
                     <div class="shape-text">[@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp]@L]</div>
                   </div>
-                  <h2>[@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp_1]@L]</h2>
+                  <h2 class="h0">[@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp_1]@L]</h2>
                   <div class="row">
                     <div class="col-sm-12">
-                      <p>[@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp_2]@L]</p><a href="[@T[link:<relative path="~/hosting/wordpress-hosting.aspx" />]@T]" class="btn btn-default-dark">[@L[cds.sales/gd/hosting/website-builder:learn-more]@L]</a> 
+                      <p>[@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp_2]@L]</p><a href="[@T[link:<relative path="~/hosting/wordpress-hosting.aspx"><param name="ci" value="88753" /></relative>]@T]" data-ci="88753" class="btn btn-default-dark">[@L[cds.sales/gd/hosting/website-builder:learn-more]@L]</a> 
                       ##if(activeLanguageAny([en-MY]) || activeLanguageAny([en-ZA]) || activeLanguageAny([es-us]))
                        
                     </div>
@@ -5948,7 +5980,7 @@ margin-bottom: 20px;
                   <div class="two-up-speech-shape two-up-speech-shape-orange">
                     <div class="shape-text">[@L[cds.sales/gd/hosting/website-builder:sb_xsell_qs_qsc]@L]</div>
                   </div>
-                  <h2>[@L[cds.sales/gd/hosting/website-builder:sb_xsell_qs_1]@L]</h2>
+                  <h2 class="h0">[@L[cds.sales/gd/hosting/website-builder:sb_xsell_qs_1]@L]</h2>
                   <div class="row">
                     <div class="col-sm-12">
                        
@@ -5963,13 +5995,13 @@ margin-bottom: 20px;
                   <div class="two-up-speech-shape two-up-speech-shape-orange">
                     <div class="shape-text">[@L[cds.sales/gd/hosting/website-builder:sb_xsell_qs]@L]</div>
                   </div>
-                  <h2>[@L[cds.sales/gd/hosting/website-builder:sb_xsell_qs_1]@L]</h2>
+                  <h2 class="h0">[@L[cds.sales/gd/hosting/website-builder:sb_xsell_qs_1]@L]</h2>
                   <div class="row">
                     <div class="col-sm-12">
                        
                       ##endif
                        
-                      <p>[@L[cds.sales/gd/hosting/website-builder:sb_qs_2]@L]</p><a href="[@T[link:<relative path="~/ecommerce/shopping-cart.aspx" />]@T]" class="btn btn-default-light">[@L[cds.sales/gd/hosting/website-builder:learn-more]@L]</a>
+                      <p>[@L[cds.sales/gd/hosting/website-builder:sb_qs_2]@L]</p><a href="[@T[link:<relative path="~/ecommerce/shopping-cart.aspx"><param name="ci" value="88754" /></relative>]@T]" data-ci="88754" class="btn btn-default-light">[@L[cds.sales/gd/hosting/website-builder:learn-more]@L]</a>
                     </div>
                   </div>
                 </div>
@@ -5984,6 +6016,13 @@ margin-bottom: 20px;
     <section id="disclaimers" class="disclaimers-section">
       <div class="container">
         <div>
+           
+          ##if(splitTestingSideIsActive(1349, B))
+           
+          4
+           
+          ##endif
+           
           <p class="h5">[@L[cds.sales/gd/hosting/website-builder:rb_disclaimers]@L] <a onClick="disclaimersModal()">[@L[cds.sales/gd/hosting/website-builder:rb_disclaimers_view]@L]</a></p>
           <div id="disclaimersModal" data-title="[@L[cds.sales/gd/hosting/website-builder:disclaimer-modal-header]@L]" style="display:none">
             <p>[@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]</p>
@@ -6036,65 +6075,111 @@ margin-bottom: 20px;
       
     </script>
     <script>
-      ##if(activeLanguageAny([en-au],[en-ca],[en-gb],[en-in],[en-us]))
-      $(document).ready(function(){
-        $("a[href='http://support.godaddy.com/help/article/5107']").text("How Do I Build a Website?");
-        $("a[href='http://support.godaddy.com/help/article/5107']").attr('data-ci','94986');
-        $("a[href='http://support.godaddy.com/help/article/5107']").removeAttr("target");
-        $("a[href='http://support.godaddy.com/help/article/5107']").attr('href','[@T[link:<relative path='~/hosting/website-builder/how-to-build-a-website' secure='true' />]@T]');
+      if (typeof FastballEvent_MouseClick === 'function' && typeof fbiLibCheckQueue === 'function') {
+         $('[data-ci]').click(function(e){
+             $this = $(this);
+             FastballEvent_MouseClick(e,$this.attr('data-ci'),$(this)[0],'a');
+             fbiLibCheckQueue();
+         });
+       }
+       var wsb = {
+        tldInfo: {
+           tlds: []
+         }
+       };
+       ##if(countrySiteAny(ca) || isManager())  
+           wsb.tldInfo.tlds.push('ca');
+       ##endif
+       ##if(countrySiteAny(br) || isManager())
+           wsb.tldInfo.tlds.push('br');
+       ##endif
+       ##if(countrySiteAny(in) || isManager())
+           wsb.tldInfo.tlds.push('in');
+       ##endif
+       ##if(countrySiteAny(uk) || isManager())
+           wsb.tldInfo.tlds.push('uk');
+       ##endif
       
-        $("a[href='http://support.godaddy.com/help/article/4026']").text("What are Website Templates?");
-        $("a[href='http://support.godaddy.com/help/article/4026']").attr('data-ci','94987');
-        $("a[href='http://support.godaddy.com/help/article/4026']").removeAttr("target");
-        $("a[href='http://support.godaddy.com/help/article/4026']").attr('href','[@T[link:<relative path='~/hosting/website-builder/website-template' secure='true' />]@T]');
+       $(document).ready(function(){
+          showTldsInList('#disclaimers');
       
-        $("a[href='http://support.godaddy.com/help/article/3503?ci=75947']").text("Tips to Build a Website.");
-        $("a[href='http://support.godaddy.com/help/article/3503?ci=75947']").attr("data-ci","95153");
-        $("a[href='http://support.godaddy.com/help/article/3503?ci=75947']").removeAttr("target");
-        $("a[href='http://support.godaddy.com/help/article/3503?ci=75947']").attr("href","[@T[link:<relative path='~/hosting/website-builder/build-a-website' secure='true' />]@T]");
+       });
       
-        $(".ep-wsb-how-to-publish-a-website-faq").html(
-          "Want to see how easy it is to get a website online? Check out <a href=\"[@T[link:<relative path='~/hosting/website-builder/how-to-publish-a-website' secure='true'><param name='ci' value='95087' /></relative>]@T]\">How to Publish a Website</a>."
-        );    
-      });
-      ##endif  
-      function disclaimersModal() {
-        $('#disclaimersModal').sfDialog({buttons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }] });
-      }
-      ##if(activeLanguageAny([en-us]))
-        var loadReviews = function(){
-          if (typeof $BV != "undefined") {
-            $BV.configure("global", {
-              allowSamePageSubmission: true,
-              userToken: "[@P[userControl:<Data location="~/Shared/BazaarVoice/SessionUserToken.ascx"></Data>]@P]",
-              doLogin: function(successCallback, successUrl) {
-                $('#login-modal').modal();
-              },
-              doScrollSubmission: function () {
-                return false;
-              }
-            });
-            $BV.ui("rr", "show_reviews", {
-              productId: "website_builder",
-              num: 1,
-              doShowContent: function() {
-                $('.bv-loading').hide();
-              }
-            });
-          }
-        };
-        $(window).load(function() {
-          if (!document.getElementById('bvapi')) {
-            var bv = document.createElement('script');
-            bv.type = 'text/javascript';
-            bv.id = 'bvapi';
-            bv.async = true;
-            bv.src = '[@P[userControl:<Data location="~/Scripts/BVScriptUrlOnly.ascx"></Data>]@P]';
-            bv.onload = loadReviews;
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(bv);
-          }
-        });
-      ##endif
+       function showTldsInList(selector) {
+         var $this = $(selector),
+         formatTldSelector = function(tld) { return '.tlds-' + tld.replace('.','-')},
+         tldList = wsb.tldInfo.tlds,
+         removedSpansArr = [];
+      
+         //- remove all dynamic tlds from this
+         $.each(tldList, function(idx, tld){
+           var $tldItem = $this.find(formatTldSelector(tld));
+           removedSpansArr.push($tldItem);
+         });
+         $.each(removedSpansArr, function(idx, tldSpan) {
+             //- show  list
+           $(tldSpan.selector).show();
+         });
+       }
+       ##if(activeLanguageAny([en-au],[en-ca],[en-gb],[en-in],[en-us]))
+       $(document).ready(function(){
+         $("a[href='http://support.godaddy.com/help/article/5107']").text("How Do I Build a Website?");
+         $("a[href='http://support.godaddy.com/help/article/5107']").attr('data-ci','94986');
+         $("a[href='http://support.godaddy.com/help/article/5107']").removeAttr("target");
+         $("a[href='http://support.godaddy.com/help/article/5107']").attr('href','[@T[link:<relative path='~/hosting/website-builder/how-to-build-a-website' secure='true' />]@T]');
+      
+         $("a[href='http://support.godaddy.com/help/article/4026']").text("What are Website Templates?");
+         $("a[href='http://support.godaddy.com/help/article/4026']").attr('data-ci','94987');
+         $("a[href='http://support.godaddy.com/help/article/4026']").removeAttr("target");
+         $("a[href='http://support.godaddy.com/help/article/4026']").attr('href','[@T[link:<relative path='~/hosting/website-builder/website-template' secure='true' />]@T]');
+      
+         $("a[href='http://support.godaddy.com/help/article/3503?ci=75947']").text("Tips to Build a Website.");
+         $("a[href='http://support.godaddy.com/help/article/3503?ci=75947']").attr("data-ci","95153");
+         $("a[href='http://support.godaddy.com/help/article/3503?ci=75947']").removeAttr("target");
+         $("a[href='http://support.godaddy.com/help/article/3503?ci=75947']").attr("href","[@T[link:<relative path='~/hosting/website-builder/build-a-website' secure='true' />]@T]");
+      
+         $(".ep-wsb-how-to-publish-a-website-faq").html(
+           "Want to see how easy it is to get a website online? Check out <a href=\"[@T[link:<relative path='~/hosting/website-builder/how-to-publish-a-website' secure='true'><param name='ci' value='95087' /></relative>]@T]\">How to Publish a Website</a>."
+         );    
+       });
+       ##endif  
+       function disclaimersModal() {
+         $('#disclaimersModal').sfDialog({buttons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }] });
+       }
+       ##if(activeLanguageAny([en-us]))
+         var loadReviews = function(){
+           if (typeof $BV != "undefined") {
+             $BV.configure("global", {
+               allowSamePageSubmission: true,
+               userToken: "[@P[userControl:<Data location="~/Shared/BazaarVoice/SessionUserToken.ascx"></Data>]@P]",
+               doLogin: function(successCallback, successUrl) {
+                 $('#login-modal').modal();
+               },
+               doScrollSubmission: function () {
+                 return false;
+               }
+             });
+             $BV.ui("rr", "show_reviews", {
+               productId: "website_builder",
+               num: 1,
+               doShowContent: function() {
+                 $('.bv-loading').hide();
+               }
+             });
+           }
+         };
+         $(window).load(function() {
+           if (!document.getElementById('bvapi')) {
+             var bv = document.createElement('script');
+             bv.type = 'text/javascript';
+             bv.id = 'bvapi';
+             bv.async = true;
+             bv.src = '[@P[userControl:<Data location="~/Scripts/BVScriptUrlOnly.ascx"></Data>]@P]';
+             bv.onload = loadReviews;
+             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(bv);
+           }
+         });
+       ##endif
     </script>
     <script type="text/javascript">
       $(window).load(function() {

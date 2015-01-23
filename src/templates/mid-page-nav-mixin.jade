@@ -34,9 +34,9 @@ mixin renderMidPageNav(options)
   
   script.
     $(function(){ 
-      var midPageNavItemTemplate = _.template('<li><a href="#<%= url %>" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.nav&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" style="margin-top: 0px;"><span><%= text %></span></a></li>');
+      var midPageNavItemTemplate = _.template('<li><a href="#<%= url %>" data-ci="<%= ci %>"  data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.nav&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" style="margin-top: 0px;"><span><%= text %></span></a></li>');
       $('[data-mid-nav-title]').each(function(index) {
-        var itemData = { text: $(this).data('mid-nav-title'), url: this.id };
+        var itemData = { text: $(this).data('mid-nav-title'), url: this.id , ci: $(this).data('cicode') };
         var itemElement = midPageNavItemTemplate(itemData);
         $('#midPageNav ul.nav').append(itemElement);
       });
