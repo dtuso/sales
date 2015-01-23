@@ -40,7 +40,6 @@ $(window).resize(function() {
 }).resize();
 /* end import */
 
-
 var got1Page = {
   tldInfo: {
     defaultTld: 'com', 
@@ -150,30 +149,27 @@ $(document).ready(function() {
   }
 
   //- set up domain search buttons to do a domain search
-  $('#marquee')
-    .on('keyup', '.search-form-input', function(e) { 
-      
-      if ( e.which == 13 ) {
-        // enter key!
-        e.preventDefault();
-        $('#marquee').find('.offer-search-btn').trigger('click');
-        return false;
-      } else {
-        // verify domain name has a good tld
-        var domain = $(e.target).val();
-        if(domain.indexOf('.') > 0 && !isTldValid(domain)) {
-          displayInvlidTldMessage();
-        } else {
-          showTypeYourDomain();
-        }
-      }
-
-    })
-    .on('click', '.offer-search-btn', function(e) {
+  $( "#marquee").keypress(function(e) {
+    if ( e.which == 13 ) {
+      // enter key!
       e.preventDefault();
-      domainSearchFormSubmit(e);
+      $('#marquee').find('.offer-search-btn').trigger('click');
       return false;
-    });
+    } else {
+      // verify domain name has a good tld
+      var domain = $(e.target).val();
+      if(domain.indexOf('.') > 0 && !isTldValid(domain)) {
+        displayInvlidTldMessage();
+      } else {
+        showTypeYourDomain();
+      }
+    }
+  })
+  .on('click', '.offer-search-btn', function(e) {
+    e.preventDefault();
+    domainSearchFormSubmit(e);
+    return false;
+  });
 
   // set up verify buttons on spin results to do validation before sending to DPP
   $('#domain-available-marquee-view').on('click', '.purchase-btn', showChoicesScreen);
@@ -306,9 +302,10 @@ function showTldImagesInDomainArea() {
   var $imageDiv = $('#findYourPerfectDomain').find(".features-img").parent().empty().addClass('tld-images');
   $.each(got1Page.tldInfo.tlds, function(idx, tld){
     var $img = $('<img>')
-      .addClass('tld-image')
-      .attr('src', got1Page.imagePath + 'tld-' + tld + '.png');
+      .addClass('tld-image lazyload')
+      .attr('data-lazyload-source', got1Page.imagePath + 'tld-' + tld + '.png');
     $imageDiv.append($img);
+    lazyload.add($img);
   });
 
   // rerun the height alignment
