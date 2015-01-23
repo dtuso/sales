@@ -16,6 +16,7 @@ mixin tldBugs(tlds)
 include ../../templates/domain-search-mixin.jade
 include ../../templates/two-up-compare-mixin.jade
 include ../../templates/full-video-mixin.jade
+include ../../templates/helper-mixin.jade
 extends ../../templates/page
 
 block vars
@@ -120,7 +121,6 @@ block endOfPageScripts
         setTimeout( "$('.bigtext').bigtext().css('visibility', 'visible');",500 );
     });
   script(src!="[@T[link:<javascriptroot />]@T]fos/hp/rebrand/js/bigtext.min.js")
-
   //-$ script(src="http://img2.wsimg.com/starfield/fos.share/v1.3/fos.share-20140213.min.js" id="fosShareScript")
   script(type="text/javascript").
     delayLoader.addScript("[@T[link:<javascriptroot />]@T]starfield/fos.share/v1.3/fos.share-20140505.min.js", { "id": "fosShareScript" });
@@ -206,13 +206,13 @@ block content
     section#limitations-social
       .container
         .row
-          .col-sm-8
+          .col-md-8.col-sm.12
             p ‡, *, ‡‡, ºº, †† Product limitations and legal policies, 
               a(onClick="limitationsModal()") View
              #limitationsModal(data-title="Limitations",style="display:none")
                 p One FREE .COM,<span class="tlds-all tlds-mx"> .COM.MX,</span><span class="tlds-all tlds-br"> .COM.BR,</span><span class="tlds-all tlds-ca"> .CA,</span><span class="tlds-all tlds-uk"> .UK., .CO.UK,</span> .CO, .NET, or .ORG with purchase of a new 12-, 24- or 36-month plan. Plus ICANN fee of [@T[currencyprice:<price usdamount="18" dropdecimal="false" />]@T] per domain name per year. You must add the domain name into your cart before purchase, and you must select a domain term length equal to or less than the term length of your plan to qualify for the free domain offer. If you purchase a domain name for a term longer than the term of the plan, you will be charged for the additional registration term at the then-current rate. Cannot be used in conjunction with any other offer, sale, discount or promotion. Free domain offer applies only to the initial purchase term. After the initial purchase term, domains purchased through this offer will renew at the then-current renewal price.
             span Third-party logos and marks are registered trademarks of their respective owners. All rights reserved.
-          .col-sm-4
+          .col-md-4.col-sm.12
             .gdhp-share
               block share
                 .fosshare(data-twshareurl!="[@T[link:<relative path=''></relative>]@T]" data-twtext!="[@L[cds.sales/homepage:twitter-text-gdbl]@L]" data-twrelated="GoDaddy" data-shareurl!="[@T[link:<relative path='/'/>]@T]" data-buttons="google,facebook,twitter")
